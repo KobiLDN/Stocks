@@ -187,8 +187,14 @@
   }
   .size-note em { color: var(--text); font-style: normal; }
 
+  .toolbar-ts {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--muted); white-space: nowrap; margin-left: auto;
+  }
+  .toolbar-ts span { color: var(--accent); }
+
   .legend {
-    display: flex; align-items: center; gap: 8px; margin-left: auto;
+    display: flex; align-items: center; gap: 8px;
   }
   .leg-label {
     font-family: 'IBM Plex Mono', monospace;
@@ -334,6 +340,7 @@
       <button class="metric-btn" data-metric="1y">1Y</button>
     </div>
     <span class="size-note">Size = <em id="size-label">|1D %|</em></span>
+    <span class="toolbar-ts">Prices: <span id="heatmap-ts">—</span></span>
     <div class="legend">
       <span class="leg-label r" id="leg-neg">−5%</span>
       <div class="leg-bar"></div>
@@ -702,6 +709,8 @@ function init() {
     return;
   }
   allStocks = stocks;
+  const tsEl = document.getElementById('heatmap-ts');
+  if (tsEl) tsEl.textContent = window.PRICES_DATA.updated || '—';
   renderAll2(activeMetric);
 
   let t;
