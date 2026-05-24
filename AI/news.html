@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Infrastructure — News</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="prices-data.js"></script>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0e1419;
+    --surface2: #141b22;
+    --border: #1e2d3d;
+    --accent: #00d4ff;
+    --accent2: #ff6b35;
+    --gold: #ffd700;
+    --text: #e0eaf5;
+    --muted: #5a7a9a;
+    --red: #ff4444;
+    --green: #00e676;
+    --purple: #c084fc;
+    --blue: #4488ff;
+    --indigo: #a78bfa;
+    --rose: #fb7185;
+    --teal: #2dd4bf;
+    --amber: #f59e0b;
+    --slate: #94a3b8;
+    --lime: #a3e635;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 36px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ticker tape */
+  #ticker-tape {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 36px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--accent);
+    z-index: 200;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .tape-track {
+    display: flex;
+    white-space: nowrap;
+    gap: 0;
+  }
+  .tape-track.running {
+    animation: scroll-tape linear infinite;
+  }
+  @keyframes scroll-tape {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  #ticker-tape:hover .tape-track { animation-play-state: paused; }
+  .tape-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 18px; border-right: 1px solid var(--border); }
+  .tape-t { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 1px; }
+  .tape-p { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .tape-r { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+  .tape-r.pos  { color: var(--green); }
+  .tape-r.neg  { color: var(--red); }
+  .tape-r.flat { color: var(--muted); }
+
+  /* Header */
+  header {
+    position: relative;
+    z-index: 10;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .header-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 24px 0 43px;
+    position: relative;
+  }
+  .header-inner::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+  }
+
+  /* Nav */
+  nav {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .nav-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    gap: 2px;
+  }
+  .nav-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .nav-link:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  /* Nav tooltips */
+  .nav-link { position: relative; }
+  .nav-link[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 200px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .nav-link[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .nav-link:hover[data-tooltip]::after,
+  .nav-link:hover[data-tooltip]::before { opacity: 1; }
+  a[href="index.html"].nav-link[data-tooltip]::after    { left: 0; transform: none; }
+  a[href="index.html"].nav-link[data-tooltip]::before   { left: 16px; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
+
+  /* Container */
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .header-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+  h1 span { color: var(--accent); }
+  .header-sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* Disclaimer */
+  .disclaimer {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+  }
+  .disclaimer span { color: var(--accent2); }
+
+  /* Category filter buttons */
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+  /* Toolbar: search + sort + count */
+  .toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  #news-search {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 14px;
+    width: 260px;
+    outline: none;
+    letter-spacing: 0.5px;
+  }
+  #news-search:focus { border-color: var(--accent); }
+  #news-search::placeholder { color: var(--muted); }
+  .sort-group { display: flex; gap: 4px; }
+  .sort-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    align-self: center;
+    margin-right: 4px;
+  }
+  .sort-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .sort-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .sort-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); margin-left: auto; }
+  .row-count span { color: var(--accent); font-weight: 700; }
+
+  /* News feed */
+  .news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .news-card {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .news-card:hover { border-color: var(--accent); background: var(--surface2); }
+  .sent-bar { width: 4px; flex-shrink: 0; }
+  .sent-pos  { background: var(--green); }
+  .sent-neg  { background: var(--red); }
+  .sent-neu  { background: var(--muted); }
+  .news-body { flex: 1; padding: 14px 18px; min-width: 0; }
+  .news-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .news-ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .news-ticker:hover { color: var(--accent); text-decoration: underline; }
+  .news-company { color: var(--muted); font-size: 12px; }
+  .cat-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  .cat-memory        { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
+  .cat-nuclear-ops   { background: rgba(255,107,53,0.1);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
+  .cat-smr           { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
+  .cat-uranium       { background: rgba(255,215,0,0.1);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.25); }
+  .cat-power-infra   { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+  .cat-dc-operators  { background: rgba(68,136,255,0.1);  color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
+  .cat-hyperscalers  { background: rgba(167,139,250,0.1); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
+  .cat-ai-compute    { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
+  .cat-fibre-optical { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
+  .cat-dsp-semi      { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  .cat-test-equip    { background: rgba(148,163,184,0.1); color: var(--slate);   border: 1px solid rgba(148,163,184,0.25); }
+  .cat-materials     { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
+  .news-time {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .news-headline {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--text);
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
+  .news-headline:hover { color: var(--accent); }
+  .news-meta-bot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .sent-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+  }
+  .sent-pill.sent-pos { background: rgba(0,230,118,0.12);  color: var(--green); border: 1px solid rgba(0,230,118,0.3); }
+  .sent-pill.sent-neg { background: rgba(255,68,68,0.12);  color: var(--red);   border: 1px solid rgba(255,68,68,0.3); }
+  .sent-pill.sent-neu { background: rgba(90,122,154,0.12); color: var(--muted); border: 1px solid rgba(90,122,154,0.3); }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    border: 1px solid var(--border);
+  }
+  .empty-state strong { color: var(--accent); }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 26px; }
+    .news-company { display: none; }
+    #news-search { width: 100%; }
+    .row-count { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<header>
+  <div class="header-inner">
+    <div class="header-label">// AI Infrastructure</div>
+    <h1>Stock <span>News</span></h1>
+    <div class="header-sub">Latest headlines across all tracked stocks · sentiment scored locally (VADER)</div>
+  </div>
+</header>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 48 AI infrastructure stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 48 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="AI top 10 picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="disclaimer">
+    <span>For research only.</span> Headlines from Yahoo Finance via yfinance. Sentiment is an automated VADER score on the headline text only — crude, not a trading signal. Not financial advice.
+  </div>
+
+  <div class="filter-bar" id="filter-bar"></div>
+
+  <div class="toolbar">
+    <input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
+    <span class="sort-label">Sort</span>
+    <div class="sort-group" id="sort-group">
+      <button class="sort-btn active" data-sort="newest" onclick="setSort('newest', this)">Newest</button>
+      <button class="sort-btn" data-sort="oldest" onclick="setSort('oldest', this)">Oldest</button>
+      <button class="sort-btn" data-sort="positive" onclick="setSort('positive', this)">Most Positive</button>
+      <button class="sort-btn" data-sort="negative" onclick="setSort('negative', this)">Most Negative</button>
+    </div>
+    <span class="sort-label">Period</span>
+    <div class="sort-group" id="window-group">
+      <button class="sort-btn active" data-window="all" onclick="setWindow('all', this)">All Time</button>
+      <button class="sort-btn" data-window="day" onclick="setWindow('day', this)">Last 24h</button>
+      <button class="sort-btn" data-window="week" onclick="setWindow('week', this)">Last Week</button>
+    </div>
+    <span class="row-count">Showing <span id="news-count">—</span> headlines</span>
+  </div>
+
+  <div class="news-feed" id="news-feed"></div>
+</div>
+
+<footer>AI Infrastructure Stock Dashboard · For educational and entertainment purposes only · Not financial advice</footer>
+
+<script>
+  /* ---- DATA ---- */
+  const NAMES = {
+    'SNDK': 'SanDisk Corporation',   'WDC':  'Western Digital',
+    '285A': 'Kioxia Holdings',       'MU':   'Micron Technology',
+    'STX':  'Seagate Technology',    'MRVL': 'Marvell Technology',
+    'PSTG': 'Everpure',              'RR.':  'Rolls-Royce',
+    'CEG':  'Constellation Energy',  'VST':  'Vistra Corp',
+    'TLN':  'Talen Energy',          'BEP':  'Brookfield Renewable',
+    'BEPC': 'Brookfield Renewable Corp', 'GEV': 'GE Vernova',
+    'BWXT': 'BWX Technologies',      'SMR':  'NuScale Power',
+    'OKLO': 'Oklo Inc',              'NNE':  'NANO Nuclear',
+    'CCJ':  'Cameco',                'UEC':  'Uranium Energy',
+    'LEU':  'Centrus Energy',        'VRT':  'Vertiv Holdings',
+    'ETN':  'Eaton Corporation',     'POWL': 'Powell Industries',
+    'EQIX': 'Equinix',               'DLR':  'Digital Realty',
+    'AMT':  'American Tower',        'GOOGL':'Alphabet',
+    'MSFT': 'Microsoft',             'AMZN': 'Amazon',
+    'META': 'Meta Platforms',        'IREN': 'Iris Energy',
+    'CORZ': 'Core Scientific',       'WULF': 'TeraWulf',
+    'HUT':  'Hut 8 Mining',          'SMCI': 'Super Micro Computer',
+    'DELL': 'Dell Technologies',     'COHR': 'Coherent Corp',
+    'LITE': 'Lumentum',              'AAOI': 'Applied Optoelectronics',
+    'FN':   'Fabrinet',              'MTSI': 'MACOM Technology',
+    'SMTC': 'Semtech',               'CRDO': 'Credo Technology',
+    'MXL':  'MaxLinear',             'KEYS': 'Keysight Technologies',
+    'VIAV': 'Viavi Solutions',       'AXTI': 'AXT Inc',
+  };
+
+  const CAT_LABELS = {
+    'memory':        'Memory',
+    'nuclear-ops':   'Nuclear',
+    'smr':           'SMR',
+    'uranium':       'Uranium',
+    'power-infra':   'Power',
+    'dc-operators':  'Data Centres',
+    'hyperscalers':  'Hyperscalers',
+    'ai-compute':    'AI Compute',
+    'fibre-optical': 'Fibre/Optical',
+    'dsp-semi':      'DSP/Semi',
+    'test-equip':    'Test Equip',
+    'materials':     'Materials',
+  };
+
+  /* Yahoo Finance URL suffix mapping */
+  const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
+  function yahooUrl(ticker) {
+    const sym = YAHOO_SUFFIX[ticker] || ticker;
+    return 'https://finance.yahoo.com/quote/' + sym + '/';
+  }
+
+  /* ---- HELPERS ---- */
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function sentClass(v) {
+    if (v === null || v === undefined) return 'sent-neu';
+    if (v >= 0.05) return 'sent-pos';
+    if (v <= -0.05) return 'sent-neg';
+    return 'sent-neu';
+  }
+
+  function sentLabel(v) {
+    if (v === null || v === undefined) return 'N/A';
+    return (v >= 0 ? '+' : '') + v.toFixed(2);
+  }
+
+  function timeAgo(unixSec) {
+    if (!unixSec) return '';
+    const diff = Date.now() / 1000 - unixSec;
+    if (diff < 0) return 'just now';
+    if (diff < 3600) return Math.max(1, Math.round(diff / 60)) + 'm ago';
+    if (diff < 86400) return Math.round(diff / 3600) + 'h ago';
+    if (diff < 86400 * 30) return Math.round(diff / 86400) + 'd ago';
+    return new Date(unixSec * 1000).toLocaleDateString();
+  }
+
+  /* ---- STATE ---- */
+  let sortMode = 'newest';
+  let activeCategory = 'all';
+  let searchQuery = '';
+  let timeWindow = 'all';
+
+  function setSort(mode, btn) {
+    sortMode = mode;
+    document.querySelectorAll('#sort-group .sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderFeed();
+  }
+
+  function setWindow(w, btn) {
+    timeWindow = w;
+    document.querySelectorAll('#window-group .sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderFeed();
+  }
+
+  function filterNews(q) {
+    searchQuery = q.toLowerCase().trim();
+    renderFeed();
+  }
+
+  function setCategory(cat) {
+    activeCategory = cat;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.cat === cat);
+    });
+    renderFeed();
+  }
+
+  /* ---- RENDER ---- */
+  function renderFeed() {
+    let items = window._newsItems || [];
+
+    if (activeCategory !== 'all') {
+      items = items.filter(n => n.category === activeCategory);
+    }
+    if (searchQuery) {
+      items = items.filter(n =>
+        n.ticker.toLowerCase().includes(searchQuery) ||
+        n.name.toLowerCase().includes(searchQuery) ||
+        (n.title || '').toLowerCase().includes(searchQuery)
+      );
+    }
+    if (timeWindow !== 'all') {
+      const span = timeWindow === 'day' ? 86400 : 604800;
+      const cutoff = Date.now() / 1000 - span;
+      items = items.filter(n => n.published && n.published >= cutoff);
+    }
+
+    const sorted = [...items].sort((a, b) => {
+      switch (sortMode) {
+        case 'oldest':   return (a.published || 0) - (b.published || 0);
+        case 'positive': return (b.sentiment ?? -2) - (a.sentiment ?? -2);
+        case 'negative': return (a.sentiment ??  2) - (b.sentiment ??  2);
+        case 'newest':
+        default:         return (b.published || 0) - (a.published || 0);
+      }
+    });
+
+    document.getElementById('news-count').textContent = sorted.length;
+
+    const feed = document.getElementById('news-feed');
+    if (!sorted.length) {
+      const anyNews = (window._newsItems || []).length > 0;
+      feed.innerHTML = '<div class="empty-state">' +
+        (anyNews
+          ? 'No headlines match the current filters.'
+          : 'No news data yet. The price/news bot needs to run on GitHub Actions to populate <strong>prices-data.js</strong> — headlines appear once the workflow regenerates the data file. (See AGENTS.md: prices-data.js deployment gap.)') +
+        '</div>';
+      return;
+    }
+
+    feed.innerHTML = sorted.map(n => {
+      const sc = sentClass(n.sentiment);
+      const catLabel = CAT_LABELS[n.category] || n.category;
+      const url = n.url || yahooUrl(n.ticker);
+      const headlineTag = n.url
+        ? '<a class="news-headline" href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener">' + escapeHtml(n.title) + '</a>'
+        : '<span class="news-headline">' + escapeHtml(n.title) + '</span>';
+      return '<div class="news-card">' +
+        '<div class="sent-bar ' + sc + '"></div>' +
+        '<div class="news-body">' +
+          '<div class="news-meta-top">' +
+            '<a class="news-ticker" href="' + yahooUrl(n.ticker) + '" target="_blank" rel="noopener">' + n.ticker + '</a>' +
+            '<span class="news-company">' + escapeHtml(n.name) + '</span>' +
+            '<span class="cat-badge cat-' + n.category + '">' + catLabel + '</span>' +
+            '<span class="news-time">' + timeAgo(n.published) + '</span>' +
+          '</div>' +
+          headlineTag +
+          '<div class="news-meta-bot">' +
+            '<span class="sent-pill ' + sc + '">' + sentLabel(n.sentiment) + '</span>' +
+            (n.publisher ? '<span>' + escapeHtml(n.publisher) + '</span>' : '') +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  /* ---- BUILD FILTER BUTTONS ---- */
+  function buildFilterBar() {
+    const cats = ['all', ...Object.keys(CAT_LABELS)];
+    const bar = document.getElementById('filter-bar');
+    bar.innerHTML = cats.map(cat => {
+      const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
+      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+    }).join('');
+  }
+
+  /* ---- INIT ---- */
+  function buildNews(stocks) {
+    const items = [];
+    stocks.forEach(s => {
+      const arr = Array.isArray(s.news) ? s.news : [];
+      arr.forEach(n => {
+        if (!n || !n.title) return;
+        items.push({
+          ticker:    s.ticker,
+          name:      NAMES[s.ticker] || s.ticker,
+          category:  s.category,
+          title:     n.title,
+          url:       n.url || null,
+          publisher: n.publisher || null,
+          published: (n.published !== undefined && n.published !== null) ? parseInt(n.published) : null,
+          sentiment: (n.sentiment !== undefined && n.sentiment !== null) ? parseFloat(n.sentiment) : null,
+        });
+      });
+    });
+    window._newsItems = items;
+    buildFilterBar();
+    renderFeed();
+  }
+
+  if (window.PRICES_DATA) {
+    buildNews(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json')
+      .then(r => r.json())
+      .then(data => buildNews(data.stocks))
+      .catch(() => {
+        document.getElementById('news-feed').innerHTML =
+          '<div class="empty-state">No data available — run the price/news bot first.</div>';
+      });
+  }
+
+  /* ---- TICKER TAPE ---- */
+  function buildTape(stocks) {
+    const track = document.getElementById('tape-track');
+    if (!track || !stocks.length) return;
+    const items = stocks.map(s => {
+      const change = s.change_1d || '+0.00%';
+      const val    = parseFloat(change);
+      const isNeg  = change.startsWith('-');
+      const isFlat = val === 0;
+      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
+      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
+      const price  = parseFloat(s.price_gbp) || 0;
+      const priceStr = price <= 0 ? '—' : price >= 10 ? '£' + Math.round(price) : price >= 1 ? '£' + price.toFixed(2) : '£' + price.toFixed(3);
+      return '<span class="tape-item"><span class="tape-t">' + s.ticker + '</span><span class="tape-p">' + priceStr + '</span><span class="tape-r ' + cls + '">' + arrow + ' ' + change + '</span></span>';
+    }).join('');
+    track.innerHTML = items + items;
+    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
+    track.classList.add('running');
+  }
+
+  if (window.PRICES_DATA) {
+    buildTape(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
+  }
+</script>
+</body>
+</html>

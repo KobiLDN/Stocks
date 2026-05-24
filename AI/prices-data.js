@@ -1,0 +1,3078 @@
+window.PRICES_DATA = {
+  "updated": "2026-05-22 23:36",
+  "fx_gbp_usd": 1.3433,
+  "stocks": [
+    {
+      "ticker": "SNDK",
+      "category": "memory",
+      "exchange": "NASDAQ",
+      "price_gbp": "1101",
+      "price_usd": 1478.69,
+      "change_1d": "-3.67%",
+      "change_1w": "+5.05%",
+      "change_1m": "+58.58%",
+      "change_ytd": "+437.24%",
+      "return_1yr": "+4032%",
+      "low_gbp": "27",
+      "high_gbp": "1191",
+      "bar_pct": 92,
+      "market_cap_gbp_b": 163.017,
+      "beta": null,
+      "pe_ratio": 50.47,
+      "avg_volume_m": 17.23,
+      "div_yield_pct": null,
+      "short_pct": 11.41,
+      "analyst": "buy",
+      "analyst_score": 1.59,
+      "vol_1d": 9524317,
+      "vol_1w": 59625317,
+      "vol_1m": 327175117,
+      "news": [
+        {
+          "title": "This Alphabet\u2011Heavy Fund Has a Front\u2011Row Seat to the AI Boom \u2014 and the Market Can See Why It\u2019s Suddenly a Top Performer",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/22/this-alphabet%e2%80%91heavy-fund-has-a-front%e2%80%91row-seat-to-the-ai-boom-and-the-market-can-see-why-its-suddenly-a-top-performer/",
+          "published": 1779460914,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Melius Research Raises Qualcomm (QCOM) Price Target, Sees More Upside in AI Semiconductor Stocks",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/melius-research-raises-qualcomm-qcom-142510158.html",
+          "published": 1779459910,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Up 550% YTD, SanDisk Stock at $1,540: Buy, Sell or Hold?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/22/up-550-ytd-sandisk-stock-at-1540-buy-sell-or-hold/",
+          "published": 1779458953,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Zacks Investment Ideas feature highlights: NVIDIA, QQQ, Micron, SanDisk, Cipher Mining and USO",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-130900288.html",
+          "published": 1779455340,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Memory Chip Maker Kioxia Is Preparing to Debut in the U.S. Kioxia Stock Could Offer a Cheaper, Better Play for Investors.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2084646/memory-chip-maker-kioxia-is-preparing-to-debut-in-the-u-s-kioxia-stock-could-offer-a-cheaper-better-play-for-investors",
+          "published": 1779454802,
+          "sentiment": 0.649
+        }
+      ],
+      "news_sentiment": 0.17
+    },
+    {
+      "ticker": "WDC",
+      "category": "memory",
+      "exchange": "NASDAQ",
+      "price_gbp": "361",
+      "price_usd": 484.28,
+      "change_1d": "-0.93%",
+      "change_1w": "+0.47%",
+      "change_1m": "+20.13%",
+      "change_ytd": "+158.13%",
+      "return_1yr": "+888%",
+      "low_gbp": "36",
+      "high_gbp": "391",
+      "bar_pct": 91,
+      "market_cap_gbp_b": 124.264,
+      "beta": 2.158,
+      "pe_ratio": 28.95,
+      "avg_volume_m": 8.21,
+      "div_yield_pct": 12.0,
+      "short_pct": 9.54,
+      "analyst": "strong_buy",
+      "analyst_score": 1.48,
+      "vol_1d": 3816774,
+      "vol_1w": 29063574,
+      "vol_1m": 171684574,
+      "news": [
+        {
+          "title": "Up 550% YTD, SanDisk Stock at $1,540: Buy, Sell or Hold?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/22/up-550-ytd-sandisk-stock-at-1540-buy-sell-or-hold/",
+          "published": 1779458953,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can Seagate Sustain Its Gross Margin Expansion Momentum?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/seagate-sustain-gross-margin-expansion-135900141.html",
+          "published": 1779458340,
+          "sentiment": -0.477
+        },
+        {
+          "title": "Western Digital PQC Hard Drives Put Long Term Data Security In Focus",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-pqc-hard-drives-132505882.html",
+          "published": 1779456305,
+          "sentiment": 0.25
+        },
+        {
+          "title": "DRAM, MU, SNDK: US Memory Stocks Pare Gains After Boost From Samsung Averting Major Worker Strike",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/dram-mu-sndk-us-memory-stocks-pare-gains-after-boost-from-samsung-averting-major-worker-strike/cZgR37gReo7",
+          "published": 1779441719,
+          "sentiment": 0.514
+        },
+        {
+          "title": "US stocks rebound, cybersecurity sector surges to record highs",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/us-stocks-rebound-cybersecurity-sector-surges-to-record-highs-200917094.html",
+          "published": 1779394157,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.057
+    },
+    {
+      "ticker": "285A",
+      "category": "memory",
+      "exchange": "TSE",
+      "price_gbp": "268",
+      "price_usd": 57400.0,
+      "change_1d": "+3.11%",
+      "change_1w": "+29.13%",
+      "change_1m": "+64.94%",
+      "change_ytd": "+405.73%",
+      "return_1yr": "+2844%",
+      "low_gbp": "9.12",
+      "high_gbp": "278",
+      "bar_pct": 96,
+      "market_cap_gbp_b": 146.612,
+      "beta": null,
+      "pe_ratio": 56.82,
+      "avg_volume_m": 34.42,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": "buy",
+      "analyst_score": 1.86,
+      "vol_1d": 25359700,
+      "vol_1w": 163270300,
+      "vol_1m": 583473800,
+      "news": [
+        {
+          "title": "Investors Look Beyond TSMC as AI Boom Spreads to New Winners",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-look-beyond-tsmc-ai-053002545.html",
+          "published": 1779427802,
+          "sentiment": 0.477
+        },
+        {
+          "title": "Lenovo Aims to Hit $100B in Annual Rev Within 2 Years, CEO Says",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/finance/stocks/nikkei-rises-1-3-led-by-chip-metals-stocks-fa71795a?siteid=yhoof2&yptr=yahoo",
+          "published": 1779418740,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Sandisk Stock Can Rise Another 52%, Says Citi. Why Investors Should Buy.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/sandisk-stock-price-buy-6709f126?siteid=yhoof2&yptr=yahoo",
+          "published": 1779214500,
+          "sentiment": 0.0
+        },
+        {
+          "title": "AI storage frenzy sends SanDisk target soaring 52%, Citi says",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/ai-storage-frenzy-sends-sandisk-135633753.html",
+          "published": 1779198993,
+          "sentiment": -0.318
+        },
+        {
+          "title": "Nintendo Shares Rebound as AI Fatigue Fuels Japan Stock Rotation",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nintendo-shares-rebound-ai-fatigue-062132637.html",
+          "published": 1779171692,
+          "sentiment": 0.052
+        }
+      ],
+      "news_sentiment": 0.042
+    },
+    {
+      "ticker": "MU",
+      "category": "memory",
+      "exchange": "NASDAQ",
+      "price_gbp": "559",
+      "price_usd": 751.0,
+      "change_1d": "-1.34%",
+      "change_1w": "+3.63%",
+      "change_1m": "+55.90%",
+      "change_ytd": "+138.20%",
+      "return_1yr": "+726%",
+      "low_gbp": "68",
+      "high_gbp": "609",
+      "bar_pct": 91,
+      "market_cap_gbp_b": 630.487,
+      "beta": 1.919,
+      "pe_ratio": 35.44,
+      "avg_volume_m": 45.51,
+      "div_yield_pct": 8.0,
+      "short_pct": 3.31,
+      "analyst": "strong_buy",
+      "analyst_score": 1.48,
+      "vol_1d": 35452282,
+      "vol_1w": 248575782,
+      "vol_1m": 1090216082,
+      "news": [
+        {
+          "title": "A Once-in-a-Generation Opportunity: 5 Artificial Intelligence (AI) Stocks Primed for Massive Upside",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/a-once-in-a-generation-opportunity-5-artificial-in/",
+          "published": 1779478980,
+          "sentiment": 0.71
+        },
+        {
+          "title": "Micron CEO Sees Memory Chip Shortage Lasting Beyond 2026",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/video/micron-ceo-sees-memory-chip-191155218.html",
+          "published": 1779477115,
+          "sentiment": -0.25
+        },
+        {
+          "title": "Micron & 2 Other Momentum Stocks to Buy Now for Big Upside",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-2-other-momentum-stocks-190000097.html",
+          "published": 1779476400,
+          "sentiment": 0.0
+        },
+        {
+          "title": "USTR Greer sees no immediate chip tariffs but says protection important for sector",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/economy/policy/articles/ustr-greer-sees-no-immediate-180552645.html",
+          "published": 1779473152,
+          "sentiment": 0.153
+        },
+        {
+          "title": "Micron Starts Making 1-Alpha DRAM Chips In The US, Says It Will \u2018Strengthen America\u2019s Domestic Memory Supply\u2019",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/micron-starts-making-1-alpha-dram-chips-in-the-us-says-it-will-strengthen-america-s-domestic-memory-supply/cZgRhTCReox",
+          "published": 1779463818,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.123
+    },
+    {
+      "ticker": "STX",
+      "category": "memory",
+      "exchange": "NASDAQ",
+      "price_gbp": "605",
+      "price_usd": 812.73,
+      "change_1d": "-0.41%",
+      "change_1w": "+2.17%",
+      "change_1m": "+38.31%",
+      "change_ytd": "+183.14%",
+      "return_1yr": "+651%",
+      "low_gbp": "81",
+      "high_gbp": "626",
+      "bar_pct": 96,
+      "market_cap_gbp_b": 135.665,
+      "beta": 2.009,
+      "pe_ratio": 77.11,
+      "avg_volume_m": 3.97,
+      "div_yield_pct": 37.0,
+      "short_pct": 4.41,
+      "analyst": "strong_buy",
+      "analyst_score": 1.5,
+      "vol_1d": 2529123,
+      "vol_1w": 16866823,
+      "vol_1m": 101805523,
+      "news": [
+        {
+          "title": "Seagate (STX) Enters Exchange Agreements for $185.9M Senior Notes",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/seagate-stx-enters-exchange-agreements-200844295.html",
+          "published": 1779480524,
+          "sentiment": 0.273
+        },
+        {
+          "title": "2 Semiconductor Stocks to Consider Right Now and 1 We Ignore",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/2-semiconductor-stocks-consider-now-170855769.html",
+          "published": 1779469735,
+          "sentiment": -0.361
+        },
+        {
+          "title": "Micron Slips. It Has Been a Busy Week for Memory-Chip Stocks.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/micron-stock-price-memory-chips-7b60813e?siteid=yhoof2&yptr=yahoo",
+          "published": 1779458580,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can Seagate Sustain Its Gross Margin Expansion Momentum?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/seagate-sustain-gross-margin-expansion-135900141.html",
+          "published": 1779458340,
+          "sentiment": -0.477
+        },
+        {
+          "title": "DRAM, MU, SNDK: US Memory Stocks Pare Gains After Boost From Samsung Averting Major Worker Strike",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/dram-mu-sndk-us-memory-stocks-pare-gains-after-boost-from-samsung-averting-major-worker-strike/cZgR37gReo7",
+          "published": 1779441719,
+          "sentiment": 0.514
+        }
+      ],
+      "news_sentiment": -0.01
+    },
+    {
+      "ticker": "MRVL",
+      "category": "memory",
+      "exchange": "NASDAQ",
+      "price_gbp": "146",
+      "price_usd": 196.33,
+      "change_1d": "+1.72%",
+      "change_1w": "+10.99%",
+      "change_1m": "+18.59%",
+      "change_ytd": "+119.90%",
+      "return_1yr": "+235%",
+      "low_gbp": "44",
+      "high_gbp": "145",
+      "bar_pct": 99,
+      "market_cap_gbp_b": 127.967,
+      "beta": 2.251,
+      "pe_ratio": 63.95,
+      "avg_volume_m": 25.07,
+      "div_yield_pct": 13.0,
+      "short_pct": 3.81,
+      "analyst": "strong_buy",
+      "analyst_score": 1.5,
+      "vol_1d": 19702156,
+      "vol_1w": 120458656,
+      "vol_1m": 544360356,
+      "news": [
+        {
+          "title": "Dow Jones Futures: Stock Market Rebounds To Highs; Tesla, These Five AI Plays Are At Buy Points",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-tesla-asml-ai-stocks-buy-points/?src=A00220&yptr=yahoo",
+          "published": 1779485081,
+          "sentiment": 0.25
+        },
+        {
+          "title": "Marvell shares jump on Stifel price target hike on AI demand outlook",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-shares-jump-stifel-price-173458839.html",
+          "published": 1779471298,
+          "sentiment": 0.178
+        },
+        {
+          "title": "Stock Market Week Ahead: Marvell, Dell And The Fed's Inflation Gauge",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/investing-action-plan/stock-market-week-ahead-marvell-dell-costco-earnings-fed-inflation-gauge/?src=A00220&yptr=yahoo",
+          "published": 1779464707,
+          "sentiment": 0.0
+        },
+        {
+          "title": "See How Big Money, AI Push Marvell Higher",
+          "publisher": "FX Empire",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/see-big-money-ai-push-152118811.html",
+          "published": 1779463278,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Stocks Climb on US-Iran Peace Hopes and Strength in Chipmakers",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2087619/stocks-climb-on-us-iran-peace-hopes-and-strength-in-chipmakers",
+          "published": 1779463205,
+          "sentiment": 0.859
+        }
+      ],
+      "news_sentiment": 0.257
+    },
+    {
+      "ticker": "PSTG",
+      "category": "memory",
+      "exchange": "NYSE",
+      "price_gbp": "50",
+      "price_usd": 67.8,
+      "change_1d": "+0.00%",
+      "change_1w": "-19.09%",
+      "change_1m": "-3.12%",
+      "change_ytd": "-1.75%",
+      "return_1yr": "+35%",
+      "low_gbp": "37",
+      "high_gbp": "75",
+      "bar_pct": 35,
+      "market_cap_gbp_b": 16.679,
+      "beta": 1.343,
+      "pe_ratio": 123.27,
+      "avg_volume_m": 2.89,
+      "div_yield_pct": null,
+      "short_pct": 3.71,
+      "analyst": "buy",
+      "analyst_score": 1.86,
+      "vol_1d": 2260321,
+      "vol_1w": 12422241,
+      "vol_1m": 61250842,
+      "news": [
+        {
+          "title": "VAST Data CEO discusses AI startup's new $30B valuation",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/vast-data-ceo-discusses-ai-startups-new-30b-valuation-204943144.html",
+          "published": 1777063783,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is Everpure, Inc. (PSTG) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/everpure-inc-pstg-good-stock-174842996.html",
+          "published": 1776966522,
+          "sentiment": 0.44
+        },
+        {
+          "title": "US High Growth Tech Stocks To Watch In April 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-high-growth-tech-stocks-113826649.html",
+          "published": 1776944306,
+          "sentiment": 0.382
+        },
+        {
+          "title": "2 Cash-Heavy Stocks with Impressive Fundamentals and 1 We Find Risky",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-heavy-stocks-impressive-191723760.html",
+          "published": 1776885443,
+          "sentiment": 0.361
+        },
+        {
+          "title": "Is Western Digital Stock a Buy, Sell, or Hold After Hitting a 52-Week High?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-stock-buy-sell-150300960.html",
+          "published": 1776870180,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.237
+    },
+    {
+      "ticker": "RR.",
+      "category": "nuclear-ops",
+      "exchange": "LSE",
+      "price_gbp": "12",
+      "price_usd": 1248.8,
+      "change_1d": "+3.36%",
+      "change_1w": "+9.54%",
+      "change_1m": "+9.68%",
+      "change_ytd": "+4.33%",
+      "return_1yr": "+53%",
+      "low_gbp": "8.18",
+      "high_gbp": "14",
+      "bar_pct": 72,
+      "market_cap_gbp_b": 1.036,
+      "beta": 1.2,
+      "pe_ratio": 18.1,
+      "avg_volume_m": 37.21,
+      "div_yield_pct": 79.0,
+      "short_pct": null,
+      "analyst": "buy",
+      "analyst_score": 1.68,
+      "vol_1d": 18513784,
+      "vol_1w": 107421518,
+      "vol_1m": 741350391,
+      "news": [
+        {
+          "title": "Is It Too Late To Consider Rolls-Royce Holdings (LSE:RR.) After Its Multi\u2011Year Surge?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/too-consider-rolls-royce-holdings-182336231.html",
+          "published": 1779301416,
+          "sentiment": 0.0
+        },
+        {
+          "title": "FTSE 100 Live: European stocks climb on Iran-US talks hopes",
+          "publisher": "Proactive",
+          "url": "https://www.proactiveinvestors.com/companies/news/1092439/ftse-100-live-negative-start-expected-with-weak-chinese-growth-to-hit-miners-1092439.html",
+          "published": 1779084900,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Rolls-Royce Euro Bonds And Defense Wins Reframe Funding And Cash Flows",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-euro-bonds-defense-011027626.html",
+          "published": 1778721027,
+          "sentiment": 0.637
+        },
+        {
+          "title": "Has Innovative Solutions and Support (ISSC) Outpaced Other Aerospace Stocks This Year?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/innovative-solutions-support-issc-outpaced-134005399.html",
+          "published": 1778593205,
+          "sentiment": 0.743
+        },
+        {
+          "title": "Rolls-Royce Returns To Euro Debt Market For First Time Since 2020",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-returns-euro-debt-212012809.html",
+          "published": 1778534412,
+          "sentiment": -0.361
+        }
+      ],
+      "news_sentiment": 0.288
+    },
+    {
+      "ticker": "CEG",
+      "category": "nuclear-ops",
+      "exchange": "NASDAQ",
+      "price_gbp": "219",
+      "price_usd": 294.07,
+      "change_1d": "+2.23%",
+      "change_1w": "+10.06%",
+      "change_1m": "+0.60%",
+      "change_ytd": "-19.48%",
+      "return_1yr": "+21%",
+      "low_gbp": "181",
+      "high_gbp": "307",
+      "bar_pct": 30,
+      "market_cap_gbp_b": 79.071,
+      "beta": 1.155,
+      "pe_ratio": 25.53,
+      "avg_volume_m": 3.17,
+      "div_yield_pct": 60.0,
+      "short_pct": 3.25,
+      "analyst": "buy",
+      "analyst_score": 1.76,
+      "vol_1d": 2709258,
+      "vol_1w": 16542458,
+      "vol_1m": 73216758,
+      "news": [
+        {
+          "title": "CEG Stock Underperforms Industry in Past 3 Months: How to Play?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ceg-stock-underperforms-industry-past-171200688.html",
+          "published": 1779469920,
+          "sentiment": 0.34
+        },
+        {
+          "title": "CEG Stock Rises Premarket: Trump Administration Delays Closure Of Two Pennsylvania Power Plants",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/ceg-stock-rises-premarket-trump-administration-delays-closure-of-two-pennsylvania-power-plants/cZgR5kPReoI",
+          "published": 1779440192,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Constellation (CEG) Starts Pin Oak Energy Facility",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/constellation-ceg-starts-pin-oak-211019886.html",
+          "published": 1779397819,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Constellation Energy (CEG) Eyes to Boost RNG Production with Pine Creek RNG",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/constellation-energy-ceg-eyes-boost-183704264.html",
+          "published": 1779302224,
+          "sentiment": 0.586
+        },
+        {
+          "title": "Constellation Energy (CEG) Is Down 12.6% After EPS Surges And Buyback Completion \u2013 Has The Bull Case Changed?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/constellation-energy-ceg-down-12-190731340.html",
+          "published": 1779217651,
+          "sentiment": 0.273
+        }
+      ],
+      "news_sentiment": 0.294
+    },
+    {
+      "ticker": "VST",
+      "category": "nuclear-ops",
+      "exchange": "NYSE",
+      "price_gbp": "116",
+      "price_usd": 156.27,
+      "change_1d": "+4.35%",
+      "change_1w": "+11.88%",
+      "change_1m": "-0.37%",
+      "change_ytd": "-5.29%",
+      "return_1yr": "+18%",
+      "low_gbp": "99",
+      "high_gbp": "164",
+      "bar_pct": 27,
+      "market_cap_gbp_b": 39.226,
+      "beta": 1.447,
+      "pe_ratio": 26.13,
+      "avg_volume_m": 4.68,
+      "div_yield_pct": 61.0,
+      "short_pct": 4.26,
+      "analyst": "strong_buy",
+      "analyst_score": 1.37,
+      "vol_1d": 5828563,
+      "vol_1w": 30534063,
+      "vol_1m": 120068863,
+      "news": [
+        {
+          "title": "CEG Stock Underperforms Industry in Past 3 Months: How to Play?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ceg-stock-underperforms-industry-past-171200688.html",
+          "published": 1779469920,
+          "sentiment": 0.34
+        },
+        {
+          "title": "The AI Data Center Buildout Is Accelerating, and Nuclear Could Be the Most Underowned Piece of the Puzzle",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/22/the-ai-data-center-buildout-is-accelerating-and-nuclear-could-be-the-most-underowned-piece-of-the-puzzle/",
+          "published": 1779465675,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Analysts See Vistra (VST) Among AI Stocks That Are About to Explode",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-see-vistra-vst-among-210902189.html",
+          "published": 1779397742,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Donald Trump and Nancy Pelosi Both Recently Bought the Same Underfollowed Stock. It Could Be a Massive AI Winner.",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/21/donald-trump-and-nancy-pelosi-both-recently-bought-the-same-underfollowed-stock-it-could-be-a-massive-ai-winner/",
+          "published": 1779370331,
+          "sentiment": 0.586
+        },
+        {
+          "title": "Did Vistra\u2019s (VST) Q1 Profit Surge and Completed Buyback Just Recast Its Capital Story?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/did-vistra-vst-q1-profit-020810647.html",
+          "published": 1779329290,
+          "sentiment": 0.44
+        }
+      ],
+      "news_sentiment": 0.273
+    },
+    {
+      "ticker": "TLN",
+      "category": "nuclear-ops",
+      "exchange": "NYSE",
+      "price_gbp": "277",
+      "price_usd": 372.45,
+      "change_1d": "+3.03%",
+      "change_1w": "+11.43%",
+      "change_1m": "+7.88%",
+      "change_ytd": "-6.12%",
+      "return_1yr": "+57%",
+      "low_gbp": "177",
+      "high_gbp": "336",
+      "bar_pct": 63,
+      "market_cap_gbp_b": 12.67,
+      "beta": 1.668,
+      "pe_ratio": null,
+      "avg_volume_m": 0.73,
+      "div_yield_pct": null,
+      "short_pct": 5.83,
+      "analyst": "strong_buy",
+      "analyst_score": 1.5,
+      "vol_1d": 839061,
+      "vol_1w": 4018761,
+      "vol_1m": 15490661,
+      "news": [
+        {
+          "title": "Talen Energy Appoints New General Counsel Amid Leadership Transition (TLN)",
+          "publisher": "InvestorsHub",
+          "url": "https://investorshub.advfn.com/market-news/article/28781/talen-energy-appoints-new-general-counsel-amid-leadership-transition-tln",
+          "published": 1779289838,
+          "sentiment": 0.273
+        },
+        {
+          "title": "The Long Regulatory Road Ahead for the NextEra-Dominion Deal",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/nextera-dominion-energy-merger-regulation-c223dbb0?siteid=yhoof2&yptr=yahoo",
+          "published": 1779123420,
+          "sentiment": 0.0
+        },
+        {
+          "title": "NextEra, Dominion Merger Reinforces Power Infrastructure Supercycle Thesis, Wedbush Says",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/nextera-dominion-merger-reinforces-power-145952615.html",
+          "published": 1779116392,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Weighing Talen Energy (TLN) Valuation After Weak Q1 2026 Earnings And Insider Selling",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/weighing-talen-energy-tln-valuation-101651208.html",
+          "published": 1778840211,
+          "sentiment": -0.202
+        },
+        {
+          "title": "Junk-Rated Firms Rush to Reprice Risky Debt as Demand Surges",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/junk-rated-firms-rush-reprice-173712539.html",
+          "published": 1778607432,
+          "sentiment": -0.586
+        }
+      ],
+      "news_sentiment": -0.103
+    },
+    {
+      "ticker": "BEP",
+      "category": "nuclear-ops",
+      "exchange": "NYSE",
+      "price_gbp": "26",
+      "price_usd": 35.52,
+      "change_1d": "+0.06%",
+      "change_1w": "+3.35%",
+      "change_1m": "+4.78%",
+      "change_ytd": "+28.73%",
+      "return_1yr": "+56%",
+      "low_gbp": "17",
+      "high_gbp": "27",
+      "bar_pct": 97,
+      "market_cap_gbp_b": 17.01,
+      "beta": 0.96,
+      "pe_ratio": null,
+      "avg_volume_m": 0.88,
+      "div_yield_pct": 444.0,
+      "short_pct": 0.36,
+      "analyst": "buy",
+      "analyst_score": 2.31,
+      "vol_1d": 1125270,
+      "vol_1w": 5578370,
+      "vol_1m": 22984270,
+      "news": [
+        {
+          "title": "The 3 Best Nuclear Energy Industry Stocks to Buy in 2026",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/10/the-3-best-nuclear-energy-industry-stocks-to-buy-i/",
+          "published": 1778420100,
+          "sentiment": 0.743
+        },
+        {
+          "title": "My Top 3 Green Energy Stocks for May 2026",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/02/my-top-3-green-energy-stocks-for-may-2026/",
+          "published": 1777764900,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Brookfield Renewable Partners LP (BEP) Q1 2026 Earnings Call Highlights: Record Growth and ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/brookfield-renewable-partners-lp-bep-070205870.html",
+          "published": 1777705325,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Brookfield Renewable Partners L.P. Q1 2026 Earnings Call Summary",
+          "publisher": "Moby",
+          "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-brookfield-renewable-partners-lp-q1-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss",
+          "published": 1777654073,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Brookfield Renewable Partners Q1 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/brookfield-renewable-partners-q1-earnings-call-highlights-2026-05-01/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1777649339,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.313
+    },
+    {
+      "ticker": "BEPC",
+      "category": "nuclear-ops",
+      "exchange": "NYSE",
+      "price_gbp": "28",
+      "price_usd": 37.5,
+      "change_1d": "-1.00%",
+      "change_1w": "+3.25%",
+      "change_1m": "-8.40%",
+      "change_ytd": "-5.15%",
+      "return_1yr": "+35%",
+      "low_gbp": "21",
+      "high_gbp": "34",
+      "bar_pct": 56,
+      "market_cap_gbp_b": 5.091,
+      "beta": 1.128,
+      "pe_ratio": null,
+      "avg_volume_m": 1.49,
+      "div_yield_pct": 417.0,
+      "short_pct": null,
+      "analyst": "hold",
+      "analyst_score": 2.83,
+      "vol_1d": 1340099,
+      "vol_1w": 5928699,
+      "vol_1m": 38127399,
+      "news": [
+        {
+          "title": "I'd Double My Position in These 3 Dividend Stocks Without Thinking Twice",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/19/id-double-my-position-in-these-3-dividend-stocks-w/",
+          "published": 1779204000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Brookfield Renewable Has Over 85,000 MW in Its Development Pipeline and Just Added Another 1,700 MW of Long-Term Contracts. Here's the Case for Owning It.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/18/brookfield-renewable-has-over-85000-mw-in-its-deve/",
+          "published": 1779109500,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Got $1,000? These 3 Energy Stocks Are Worth Every Penny.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/16/got-1000-these-3-energy-stocks-are-worth-every-pen/",
+          "published": 1778932200,
+          "sentiment": 0.459
+        },
+        {
+          "title": "3 Monster Energy Stocks to Hold for the Next 10 Years",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/16/x-monster-stocks-to-hold-for-the-next-10-years/",
+          "published": 1778930700,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Celebrate Earth With These 2 Unstoppable Green Energy Stocks",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/10/celebrate-earth-with-these-2-unstoppable-green-ene/",
+          "published": 1778448900,
+          "sentiment": 0.612
+        }
+      ],
+      "news_sentiment": 0.269
+    },
+    {
+      "ticker": "GEV",
+      "category": "smr",
+      "exchange": "NYSE",
+      "price_gbp": "773",
+      "price_usd": 1038.74,
+      "change_1d": "-0.99%",
+      "change_1w": "-1.00%",
+      "change_1m": "-9.64%",
+      "change_ytd": "+53.06%",
+      "return_1yr": "+126%",
+      "low_gbp": "341",
+      "high_gbp": "880",
+      "bar_pct": 80,
+      "market_cap_gbp_b": 207.796,
+      "beta": 1.313,
+      "pe_ratio": 30.34,
+      "avg_volume_m": 2.49,
+      "div_yield_pct": 19.0,
+      "short_pct": 2.9,
+      "analyst": "buy",
+      "analyst_score": 1.54,
+      "vol_1d": 1471350,
+      "vol_1w": 11032850,
+      "vol_1m": 55972550,
+      "news": [
+        {
+          "title": "Dow Jones Futures: Stock Market Rebounds To Highs; Tesla, These Five AI Plays Are At Buy Points",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-tesla-asml-ai-stocks-buy-points/?src=A00220&yptr=yahoo",
+          "published": 1779485081,
+          "sentiment": 0.25
+        },
+        {
+          "title": "GE Vernova Hydropower Win Highlights India Storage And Grid Reliability Theme",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/ge-vernova-hydropower-win-highlights-201633313.html",
+          "published": 1779480993,
+          "sentiment": 0.586
+        },
+        {
+          "title": "Is Caterpillar's Power & Energy Segment Its Next Big Growth Engine?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/caterpillars-power-energy-segment-next-172100479.html",
+          "published": 1779470460,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Stock Market Week Ahead: Marvell, Dell And The Fed's Inflation Gauge",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/investing-action-plan/stock-market-week-ahead-marvell-dell-costco-earnings-fed-inflation-gauge/?src=A00220&yptr=yahoo",
+          "published": 1779464707,
+          "sentiment": 0.0
+        },
+        {
+          "title": "2 Energy Stocks That Are the Smartest Long-Term Buys During the Energy Boom",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/2-energy-stocks-are-the-smartest-long-term-buys/",
+          "published": 1779462300,
+          "sentiment": 0.802
+        }
+      ],
+      "news_sentiment": 0.442
+    },
+    {
+      "ticker": "BWXT",
+      "category": "smr",
+      "exchange": "NYSE",
+      "price_gbp": "151",
+      "price_usd": 202.91,
+      "change_1d": "+0.21%",
+      "change_1w": "-0.75%",
+      "change_1m": "-9.90%",
+      "change_ytd": "+11.88%",
+      "return_1yr": "+86%",
+      "low_gbp": "81",
+      "high_gbp": "180",
+      "bar_pct": 71,
+      "market_cap_gbp_b": 13.839,
+      "beta": 0.778,
+      "pe_ratio": 54.11,
+      "avg_volume_m": 1.03,
+      "div_yield_pct": 51.0,
+      "short_pct": 4.0,
+      "analyst": "buy",
+      "analyst_score": 2.0,
+      "vol_1d": 456669,
+      "vol_1w": 3666969,
+      "vol_1m": 21565569,
+      "news": [
+        {
+          "title": "Nuclear Stock Face-Off: Is NuScale or BWX Technologies the Better Buy Right Now?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/nuclear-stock-face-off-is-smr-or-bwxt-the-better/",
+          "published": 1779479400,
+          "sentiment": 0.44
+        },
+        {
+          "title": "How Is BWXT Strengthening Revenue Visibility Through Backlog?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/bwxt-strengthening-revenue-visibility-backlog-144600268.html",
+          "published": 1779461160,
+          "sentiment": 0.494
+        },
+        {
+          "title": "The Top 2 Nuclear Energy Stocks to Buy Right Now",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/20/the-top-3-nuclear-energy-stocks-to-buy-right-now/",
+          "published": 1779312000,
+          "sentiment": 0.44
+        },
+        {
+          "title": "2 Nuclear Stocks That Are Quietly Becoming the Trade of the Year (and Beyond)",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/20/2-nuclear-stocks-are-quietly-becoming-the-trade/",
+          "published": 1779296700,
+          "sentiment": 0.0
+        },
+        {
+          "title": "2 Top Energy Growth Stocks to Buy Before It's Too Late",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/18/x-top-growth-stocks-to-buy-before-its-too-late/",
+          "published": 1779133800,
+          "sentiment": 0.67
+        }
+      ],
+      "news_sentiment": 0.409
+    },
+    {
+      "ticker": "SMR",
+      "category": "smr",
+      "exchange": "NYSE",
+      "price_gbp": "8.49",
+      "price_usd": 11.4,
+      "change_1d": "+0.18%",
+      "change_1w": "+1.51%",
+      "change_1m": "-10.38%",
+      "change_ytd": "-30.10%",
+      "return_1yr": "+29%*",
+      "low_gbp": "6.59",
+      "high_gbp": "43",
+      "bar_pct": 5,
+      "market_cap_gbp_b": 2.937,
+      "beta": 2.252,
+      "pe_ratio": null,
+      "avg_volume_m": 28.89,
+      "div_yield_pct": null,
+      "short_pct": 21.5,
+      "analyst": "hold",
+      "analyst_score": 2.53,
+      "vol_1d": 28065385,
+      "vol_1w": 141340685,
+      "vol_1m": 712908185,
+      "news": [
+        {
+          "title": "Nuclear Stock Face-Off: Is NuScale or BWX Technologies the Better Buy Right Now?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/nuclear-stock-face-off-is-smr-or-bwxt-the-better/",
+          "published": 1779479400,
+          "sentiment": 0.44
+        },
+        {
+          "title": "NuScale Power Stock Is Impossible to Ignore Right Now. Here's What to Do With It.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/nuscale-stock-impossible-ignore-right-now-smr/",
+          "published": 1779470460,
+          "sentiment": -0.361
+        },
+        {
+          "title": "BofA reinstates nuclear coverage with Buy on Oklo and Neutral on NuScale",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/bofa-reinstates-nuclear-coverage-buy-135118458.html",
+          "published": 1779457878,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Texas Instruments, Generac upgraded: Wall Street's top analyst calls",
+          "publisher": "The Fly",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-upgraded-qualcomm-downgraded-wall-133634577.html",
+          "published": 1779457126,
+          "sentiment": 0.202
+        },
+        {
+          "title": "NuScale Power Is Down 79% -- Here's Why That's Great News for Long-Term Investors",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/18/nuscale-power-is-down-79-heres-why-thats-great-new/",
+          "published": 1779150300,
+          "sentiment": 0.625
+        }
+      ],
+      "news_sentiment": 0.181
+    },
+    {
+      "ticker": "OKLO",
+      "category": "smr",
+      "exchange": "NYSE",
+      "price_gbp": "49",
+      "price_usd": 65.88,
+      "change_1d": "+0.27%",
+      "change_1w": "+5.83%",
+      "change_1m": "-13.84%",
+      "change_ytd": "-15.32%",
+      "return_1yr": "+51%*",
+      "low_gbp": "32",
+      "high_gbp": "144",
+      "bar_pct": 15,
+      "market_cap_gbp_b": 8.533,
+      "beta": 1.181,
+      "pe_ratio": null,
+      "avg_volume_m": 11.54,
+      "div_yield_pct": null,
+      "short_pct": 18.93,
+      "analyst": "buy",
+      "analyst_score": 1.96,
+      "vol_1d": 10545684,
+      "vol_1w": 61118484,
+      "vol_1m": 330165784,
+      "news": [
+        {
+          "title": "BofA reinstates nuclear coverage with Buy on Oklo and Neutral on NuScale",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/bofa-reinstates-nuclear-coverage-buy-135118458.html",
+          "published": 1779457878,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Texas Instruments, Generac upgraded: Wall Street's top analyst calls",
+          "publisher": "The Fly",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-upgraded-qualcomm-downgraded-wall-133634577.html",
+          "published": 1779457126,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Oklo AI Lab Partnership Adds New Angle To Volatile Valuation Story",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/oklo-ai-lab-partnership-adds-171508527.html",
+          "published": 1779383708,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Prediction: Oklo Stock Will Surge 75% This Year",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/21/prediction-oklo-stock-will-surge-75-this-year/",
+          "published": 1779374107,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can OKLO's $1.68B Fuel Recycling Push Turn Into a Growth Lever?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/oklos-1-68b-fuel-recycling-122700844.html",
+          "published": 1779366420,
+          "sentiment": 0.382
+        }
+      ],
+      "news_sentiment": 0.117
+    },
+    {
+      "ticker": "NNE",
+      "category": "smr",
+      "exchange": "NASDAQ",
+      "price_gbp": "20",
+      "price_usd": 26.73,
+      "change_1d": "+5.99%",
+      "change_1w": "+7.26%",
+      "change_1m": "+5.53%",
+      "change_ytd": "-3.19%",
+      "return_1yr": "+41%*",
+      "low_gbp": "14",
+      "high_gbp": "45",
+      "bar_pct": 19,
+      "market_cap_gbp_b": 1.036,
+      "beta": 5.144,
+      "pe_ratio": null,
+      "avg_volume_m": 2.09,
+      "div_yield_pct": null,
+      "short_pct": 23.25,
+      "analyst": "buy",
+      "analyst_score": 1.67,
+      "vol_1d": 2131446,
+      "vol_1w": 10642746,
+      "vol_1m": 53231646,
+      "news": [
+        {
+          "title": "NANO Nuclear\u2019s KRONOS Microreactor Hits NRC Milestone As Shares Soften",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nano-nuclear-kronos-microreactor-hits-191138109.html",
+          "published": 1779390698,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Nano Nuclear Energy Shares Advance After NRC Accepts Microreactor Permit Application (NNE)",
+          "publisher": "InvestorsHub",
+          "url": "https://investorshub.advfn.com/market-news/article/28751/nano-nuclear-energy-shares-advance-after-nrc-accepts-microreactor-permit-application-nne",
+          "published": 1779284920,
+          "sentiment": 0.681
+        },
+        {
+          "title": "Does Nano Nuclear Energy\u2019s New Deal Amp the Outlook?",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/originals/does-nano-nuclear-energys-new-deal-amp-the-outlook/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1779195000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can NuScale Power Stock Grow 10x?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/599646/can-nuscale-power-stock-grow-10x/2026-05-18",
+          "published": 1779123188,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Terrestrial Energy: Projects Progress & DOE Programs Strengthen Commercialization \u2013 Quarterly Update Report",
+          "publisher": "Exec Edge",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/terrestrial-energy-projects-progress-doe-143742654.html",
+          "published": 1779115062,
+          "sentiment": 0.735
+        }
+      ],
+      "news_sentiment": 0.342
+    },
+    {
+      "ticker": "CCJ",
+      "category": "uranium",
+      "exchange": "NYSE",
+      "price_gbp": "78",
+      "price_usd": 104.75,
+      "change_1d": "-1.16%",
+      "change_1w": "-2.57%",
+      "change_1m": "-15.42%",
+      "change_ytd": "+6.28%",
+      "return_1yr": "+90%",
+      "low_gbp": "41",
+      "high_gbp": "101",
+      "bar_pct": 62,
+      "market_cap_gbp_b": 33.963,
+      "beta": 1.03,
+      "pe_ratio": 96.99,
+      "avg_volume_m": 3.32,
+      "div_yield_pct": 17.0,
+      "short_pct": null,
+      "analyst": "buy",
+      "analyst_score": 1.74,
+      "vol_1d": 2515422,
+      "vol_1w": 14723522,
+      "vol_1m": 68550322,
+      "news": [
+        {
+          "title": "Investors Heavily Search Cameco Corporation (CCJ): Here is What You Need to Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-cameco-corporation-130002502.html",
+          "published": 1779368402,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The Top 2 Nuclear Energy Stocks to Buy Right Now",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/20/the-top-3-nuclear-energy-stocks-to-buy-right-now/",
+          "published": 1779312000,
+          "sentiment": 0.44
+        },
+        {
+          "title": "2 Nuclear Stocks That Are Quietly Becoming the Trade of the Year (and Beyond)",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/20/2-nuclear-stocks-are-quietly-becoming-the-trade/",
+          "published": 1779296700,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can Energy Fuels Maintain Its Strong Uranium Growth in 2026?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/energy-fuels-maintain-strong-uranium-154200198.html",
+          "published": 1779291720,
+          "sentiment": 0.791
+        },
+        {
+          "title": "DNN vs. CCJ: Which Uranium Stock Offers Better Opportunity Today?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dnn-vs-ccj-uranium-stock-153600741.html",
+          "published": 1779291360,
+          "sentiment": 0.691
+        }
+      ],
+      "news_sentiment": 0.384
+    },
+    {
+      "ticker": "UEC",
+      "category": "uranium",
+      "exchange": "NYSE",
+      "price_gbp": "9.69",
+      "price_usd": 13.02,
+      "change_1d": "-0.84%",
+      "change_1w": "-4.62%",
+      "change_1m": "-12.91%",
+      "change_ytd": "-0.69%",
+      "return_1yr": "+131%",
+      "low_gbp": "4.19",
+      "high_gbp": "15",
+      "bar_pct": 50,
+      "market_cap_gbp_b": 4.752,
+      "beta": 1.179,
+      "pe_ratio": null,
+      "avg_volume_m": 9.33,
+      "div_yield_pct": null,
+      "short_pct": 13.75,
+      "analyst": "strong_buy",
+      "analyst_score": 1.44,
+      "vol_1d": 7895757,
+      "vol_1w": 51879457,
+      "vol_1m": 207697657,
+      "news": [
+        {
+          "title": "Discover 3 Stocks Including CoStar Group Estimated Below Intrinsic Value",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/discover-3-stocks-including-costar-173802127.html",
+          "published": 1779212282,
+          "sentiment": 0.34
+        },
+        {
+          "title": "Uranium Energy Pursues Full US Fuel Cycle As Projects Ramp Up",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/uranium-energy-pursues-full-us-001641291.html",
+          "published": 1778977001,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Oklo vs. Uranium Energy: Both Are Volatile in 2026, but Only One Is Worth Buying Now",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/16/oklo-vs-uranium-energy-both-are-volatile-in-2026-b/",
+          "published": 1778933040,
+          "sentiment": 0.44
+        },
+        {
+          "title": "TD Securities Reiterates \u201cBuy\u201d Rating On Uranium Energy (UEC) Following Q2 Fiscal 2026 Results",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/td-securities-reiterates-buy-rating-173636888.html",
+          "published": 1778866596,
+          "sentiment": 0.511
+        },
+        {
+          "title": "Can Denison Mines Advance Phoenix With Uranium-Backed Funding Plan?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/denison-mines-advance-phoenix-uranium-160600959.html",
+          "published": 1778861160,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.313
+    },
+    {
+      "ticker": "LEU",
+      "category": "uranium",
+      "exchange": "NYSE",
+      "price_gbp": "134",
+      "price_usd": 179.36,
+      "change_1d": "+1.22%",
+      "change_1w": "-1.77%",
+      "change_1m": "-18.32%",
+      "change_ytd": "-34.18%",
+      "return_1yr": "+78%",
+      "low_gbp": "75",
+      "high_gbp": "346",
+      "bar_pct": 22,
+      "market_cap_gbp_b": 2.627,
+      "beta": 1.436,
+      "pe_ratio": 65.22,
+      "avg_volume_m": 0.83,
+      "div_yield_pct": null,
+      "short_pct": 22.04,
+      "analyst": "buy",
+      "analyst_score": 1.75,
+      "vol_1d": 666339,
+      "vol_1w": 4278239,
+      "vol_1m": 20424039,
+      "news": [
+        {
+          "title": "Stocks making big moves yesterday: Coursera, Micron, Zscaler, Salesforce, and Centrus Energy",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-093255832.html",
+          "published": 1779355975,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Why Centrus Energy (LEU) Shares Are Trading Lower Today",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-centrus-energy-leu-shares-150855984.html",
+          "published": 1779289735,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Why Centrus Energy (LEU) Is Down 11.9% After Raising 2026 Outlook And Winning Major HALEU Deal",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/why-centrus-energy-leu-down-161537548.html",
+          "published": 1778948137,
+          "sentiment": 0.67
+        },
+        {
+          "title": "Roth Capital Factors In Centrus Energy (LEU)\u2019s Long-Term Growth, Raises PT To $230",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/roth-capital-factors-centrus-energy-173631647.html",
+          "published": 1778866591,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Centrus Energy (LEU) Beats Q1 Non-GAAP EPS Estimates by Nearly 3xs",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/centrus-energy-leu-beats-q1-154441845.html",
+          "published": 1778859881,
+          "sentiment": 0.273
+        }
+      ],
+      "news_sentiment": 0.412
+    },
+    {
+      "ticker": "VRT",
+      "category": "power-infra",
+      "exchange": "NYSE",
+      "price_gbp": "244",
+      "price_usd": 327.46,
+      "change_1d": "-0.15%",
+      "change_1w": "-11.72%",
+      "change_1m": "+1.77%",
+      "change_ytd": "+86.51%",
+      "return_1yr": "+224%",
+      "low_gbp": "75",
+      "high_gbp": "283",
+      "bar_pct": 81,
+      "market_cap_gbp_b": 93.636,
+      "beta": 2.099,
+      "pe_ratio": 82.28,
+      "avg_volume_m": 7.57,
+      "div_yield_pct": 8.0,
+      "short_pct": 3.09,
+      "analyst": "buy",
+      "analyst_score": 1.54,
+      "vol_1d": 4782624,
+      "vol_1w": 33144124,
+      "vol_1m": 126651124,
+      "news": [
+        {
+          "title": "Top Research Reports for Texas Instruments, Linde & BHP",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-texas-instruments-205100621.html",
+          "published": 1779483060,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Vertiv (VRT) Launches Vertiv PowerUPS 100 Standby Series in North America",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/vertiv-vrt-launches-vertiv-powerups-201358721.html",
+          "published": 1779480838,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Micron & 2 Other Momentum Stocks to Buy Now for Big Upside",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-2-other-momentum-stocks-190000097.html",
+          "published": 1779476400,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is This AI Data Center Stock a Buy While the Market Panics About Oversupply?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/ai-data-center-stock-buy-oversupply-vrt/",
+          "published": 1779474060,
+          "sentiment": -0.44
+        },
+        {
+          "title": "Vertiv (VRT) Up 0.5% Since Last Earnings Report: Can It Continue?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/vertiv-vrt-0-5-since-153013085.html",
+          "published": 1779463813,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.048
+    },
+    {
+      "ticker": "ETN",
+      "category": "power-infra",
+      "exchange": "NYSE",
+      "price_gbp": "291",
+      "price_usd": 391.35,
+      "change_1d": "+2.45%",
+      "change_1w": "-2.03%",
+      "change_1m": "-7.55%",
+      "change_ytd": "+20.27%",
+      "return_1yr": "+25%",
+      "low_gbp": "232",
+      "high_gbp": "324",
+      "bar_pct": 64,
+      "market_cap_gbp_b": 113.126,
+      "beta": 1.24,
+      "pe_ratio": 38.29,
+      "avg_volume_m": 2.64,
+      "div_yield_pct": 115.0,
+      "short_pct": 2.06,
+      "analyst": "buy",
+      "analyst_score": 1.73,
+      "vol_1d": 2327691,
+      "vol_1w": 12760791,
+      "vol_1m": 64474291,
+      "news": [
+        {
+          "title": "Is It Too Late To Add Eaton (ETN) After Its Strong Multi Year Share Price Run?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/too-add-eaton-etn-strong-011541784.html",
+          "published": 1779412541,
+          "sentiment": 0.67
+        },
+        {
+          "title": "Why Eaton (ETN) Is Riding Data Center Demand Across Electrical Infrastructure",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-eaton-etn-riding-data-194151120.html",
+          "published": 1779392511,
+          "sentiment": -0.128
+        },
+        {
+          "title": "Is Eaton (ETN) The Best Pick-and-Shovel AI Stock?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/eaton-etn-best-pick-shovel-162023879.html",
+          "published": 1779380423,
+          "sentiment": 0.637
+        },
+        {
+          "title": "ENS vs. ETN: Which Stock Is the Better Value Option?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ens-vs-etn-stock-better-154002163.html",
+          "published": 1779378002,
+          "sentiment": 0.649
+        },
+        {
+          "title": "Here\u2019s Why TCW Concentrated Large Cap Growth Fund Maintains Conviction in Eaton Corporation plc (ETN)",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-tcw-concentrated-large-cap-132347361.html",
+          "published": 1779283427,
+          "sentiment": 0.382
+        }
+      ],
+      "news_sentiment": 0.442
+    },
+    {
+      "ticker": "POWL",
+      "category": "power-infra",
+      "exchange": "NASDAQ",
+      "price_gbp": "208",
+      "price_usd": 279.22,
+      "change_1d": "+2.89%",
+      "change_1w": "-4.56%",
+      "change_1m": "+10.76%",
+      "change_ytd": "+137.82%",
+      "return_1yr": "+410%",
+      "low_gbp": "41",
+      "high_gbp": "244",
+      "bar_pct": 82,
+      "market_cap_gbp_b": 7.573,
+      "beta": 1.144,
+      "pe_ratio": 54.54,
+      "avg_volume_m": 0.69,
+      "div_yield_pct": 13.0,
+      "short_pct": 14.09,
+      "analyst": "buy",
+      "analyst_score": 2.25,
+      "vol_1d": 401071,
+      "vol_1w": 2844971,
+      "vol_1m": 16234371,
+      "news": [
+        {
+          "title": "Powell Industries Backlog Surges On Mega Data Center And Utility Wins",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/powell-industries-backlog-surges-mega-082250357.html",
+          "published": 1779438170,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Strength in Electric Utility Drives Powell: Will the Momentum Last?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/strength-electric-utility-drives-powell-160200861.html",
+          "published": 1779206520,
+          "sentiment": 0.494
+        },
+        {
+          "title": "Powell Industries, Inc. (POWL) is Attracting Investor Attention: Here is What You Should Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/powell-industries-inc-powl-attracting-130005048.html",
+          "published": 1779195605,
+          "sentiment": 0.477
+        },
+        {
+          "title": "Powell, Array, Shoals, Advanced Energy, and American Superconductor Shares Are Falling, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/powell-array-shoals-advanced-energy-051655670.html",
+          "published": 1778908615,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Powell Rises 52.3% in Three Months: Should You Buy the Stock Now or Wait?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/powell-rises-52-3-three-161000984.html",
+          "published": 1778861400,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.423
+    },
+    {
+      "ticker": "EQIX",
+      "category": "dc-operators",
+      "exchange": "NASDAQ",
+      "price_gbp": "804",
+      "price_usd": 1079.79,
+      "change_1d": "-1.04%",
+      "change_1w": "+2.42%",
+      "change_1m": "-2.70%",
+      "change_ytd": "+42.79%",
+      "return_1yr": "+52%",
+      "low_gbp": "529",
+      "high_gbp": "840",
+      "bar_pct": 88,
+      "market_cap_gbp_b": 79.278,
+      "beta": 0.997,
+      "pe_ratio": 74.73,
+      "avg_volume_m": 0.58,
+      "div_yield_pct": 183.0,
+      "short_pct": 2.11,
+      "analyst": "buy",
+      "analyst_score": 1.58,
+      "vol_1d": 425927,
+      "vol_1w": 2363227,
+      "vol_1m": 12333927,
+      "news": [
+        {
+          "title": "Update: Rising US Borrowing Costs Won't Slow Massive AI Data-Center Buildout as Potential Profit Outweighs Spending",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/rising-us-borrowing-costs-won-193317691.html",
+          "published": 1779478397,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Rising US Borrowing Costs Won't Slow Massive AI Data-Center Buildout as Potential Profit Outweighs Spending",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/rising-us-borrowing-costs-won-164025729.html",
+          "published": 1779468025,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Prediction: Oklo Stock Will Surge 75% This Year",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/21/prediction-oklo-stock-will-surge-75-this-year/",
+          "published": 1779374107,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Equinix Expands Fabric Geo Zones To Deepen AI And Compliance Moat",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/equinix-expands-fabric-geo-zones-101758776.html",
+          "published": 1779358678,
+          "sentiment": 0.103
+        },
+        {
+          "title": "Equinix Stock Rises 38.9% in Six Months: Will the Momentum Last?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/equinix-stock-rises-38-9-145300866.html",
+          "published": 1779288780,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.197
+    },
+    {
+      "ticker": "DLR",
+      "category": "dc-operators",
+      "exchange": "NYSE",
+      "price_gbp": "143",
+      "price_usd": 192.03,
+      "change_1d": "-2.03%",
+      "change_1w": "+1.87%",
+      "change_1m": "-3.99%",
+      "change_ytd": "+24.71%",
+      "return_1yr": "+31%",
+      "low_gbp": "109",
+      "high_gbp": "155",
+      "bar_pct": 74,
+      "market_cap_gbp_b": 51.135,
+      "beta": 1.08,
+      "pe_ratio": 50.94,
+      "avg_volume_m": 2.01,
+      "div_yield_pct": 251.0,
+      "short_pct": null,
+      "analyst": "buy",
+      "analyst_score": 1.72,
+      "vol_1d": 1692472,
+      "vol_1w": 8235272,
+      "vol_1m": 46575072,
+      "news": [
+        {
+          "title": "Update: Rising US Borrowing Costs Won't Slow Massive AI Data-Center Buildout as Potential Profit Outweighs Spending",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/rising-us-borrowing-costs-won-193317691.html",
+          "published": 1779478397,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Rising US Borrowing Costs Won't Slow Massive AI Data-Center Buildout as Potential Profit Outweighs Spending",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/rising-us-borrowing-costs-won-164025729.html",
+          "published": 1779468025,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Is It Too Late To Consider Digital Realty Trust (DLR) After Its Strong Year To Date Run",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/too-consider-digital-realty-trust-011701892.html",
+          "published": 1779326221,
+          "sentiment": 0.765
+        },
+        {
+          "title": "DLR Opens First Data Center in Barcelona, Expands Mediterranean Reach",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dlr-opens-first-data-center-165900471.html",
+          "published": 1779209940,
+          "sentiment": 0.128
+        },
+        {
+          "title": "What a top-tier data center market looks like, according to Bernstein",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/top-tier-data-center-market-214011146.html",
+          "published": 1779054011,
+          "sentiment": 0.361
+        }
+      ],
+      "news_sentiment": 0.427
+    },
+    {
+      "ticker": "AMT",
+      "category": "dc-operators",
+      "exchange": "NYSE",
+      "price_gbp": "137",
+      "price_usd": 183.85,
+      "change_1d": "-0.22%",
+      "change_1w": "+7.75%",
+      "change_1m": "+2.70%",
+      "change_ytd": "+6.23%",
+      "return_1yr": "+11%",
+      "low_gbp": "123",
+      "high_gbp": "174",
+      "bar_pct": 27,
+      "market_cap_gbp_b": 63.765,
+      "beta": 0.9,
+      "pe_ratio": 29.7,
+      "avg_volume_m": 3.17,
+      "div_yield_pct": 375.0,
+      "short_pct": 1.99,
+      "analyst": "buy",
+      "analyst_score": 1.68,
+      "vol_1d": 2069878,
+      "vol_1w": 15713778,
+      "vol_1m": 65220278,
+      "news": [
+        {
+          "title": "AH Realty Closes Sale of 9 Multifamily Properties to Harbor Group",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ah-realty-closes-sale-9-171400301.html",
+          "published": 1779470040,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Gladstone Announces Acquisition for $22.75M in Newport News, VA",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/gladstone-announces-acquisition-22-75m-171200502.html",
+          "published": 1779469920,
+          "sentiment": 0.0
+        },
+        {
+          "title": "OUT Taps Into LA Union Station to Expand Experiential Ad Opportunities",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/taps-la-union-station-expand-145800635.html",
+          "published": 1779461880,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Is American Tower (AMT) Stock Outpacing Its Finance Peers This Year?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/american-tower-amt-stock-outpacing-134004338.html",
+          "published": 1779457204,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why AST SpaceMobile Is the Bigger Winner of the AT&T, T-Mobile, and Verizon Joint Venture",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/stock-ideas/why-ast-spacemobile-is-the-bigger-winner-of-the-at-and-t-t-mobile-and-verizon-joint-venture/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1779284400,
+          "sentiment": 0.586
+        }
+      ],
+      "news_sentiment": 0.237
+    },
+    {
+      "ticker": "GOOGL",
+      "category": "hyperscalers",
+      "exchange": "NASDAQ",
+      "price_gbp": "285",
+      "price_usd": 382.97,
+      "change_1d": "-1.62%",
+      "change_1w": "-3.48%",
+      "change_1m": "+13.01%",
+      "change_ytd": "+21.61%",
+      "return_1yr": "+136%",
+      "low_gbp": "121",
+      "high_gbp": "304",
+      "bar_pct": 90,
+      "market_cap_gbp_b": 3454.091,
+      "beta": 1.267,
+      "pe_ratio": 29.23,
+      "avg_volume_m": 28.74,
+      "div_yield_pct": 23.0,
+      "short_pct": 1.3,
+      "analyst": "strong_buy",
+      "analyst_score": 1.43,
+      "vol_1d": 19134802,
+      "vol_1w": 142114902,
+      "vol_1m": 634857002,
+      "news": [
+        {
+          "title": "Maybe investors can wait to buy SpaceX after IPO: Lee Munson",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/maybe-investors-wait-buy-spacex-150000900.html",
+          "published": 1779462000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "These Stocks Are Today\u2019s Movers: Dell, Apple, IBM, Est\u00e9e Lauder, Futu, Rocket Lab, Workday, and More",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stock-movers-9326f611?siteid=yhoof2&yptr=yahoo",
+          "published": 1779484200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is Snap (SNAP) Quietly Recasting Its Brand Strategy With Luke Wood\u2019s Board Appointment?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/snap-snap-quietly-recasting-brand-201611110.html",
+          "published": 1779480971,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The SpaceX Paradox: How Can a Money-Losing Company Be Worth $2 Trillion?",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/spacex-ipo-trillion-valuation-paradox-11b170c6?siteid=yhoof2&yptr=yahoo",
+          "published": 1779480840,
+          "sentiment": 0.128
+        },
+        {
+          "title": "Bank of America resets Amazon stock forecast on key product launch",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/bank-of-america-resets-amazon-stock-forecast-on-key-product-launch",
+          "published": 1779480240,
+          "sentiment": 0.178
+        }
+      ],
+      "news_sentiment": 0.061
+    },
+    {
+      "ticker": "MSFT",
+      "category": "hyperscalers",
+      "exchange": "NASDAQ",
+      "price_gbp": "312",
+      "price_usd": 418.57,
+      "change_1d": "-0.57%",
+      "change_1w": "-0.58%",
+      "change_1m": "+0.90%",
+      "change_ytd": "-11.10%",
+      "return_1yr": "+17%",
+      "low_gbp": "265",
+      "high_gbp": "413",
+      "bar_pct": 31,
+      "market_cap_gbp_b": 2314.702,
+      "beta": 1.093,
+      "pe_ratio": 24.9,
+      "avg_volume_m": 34.26,
+      "div_yield_pct": 87.0,
+      "short_pct": 1.07,
+      "analyst": "strong_buy",
+      "analyst_score": 1.31,
+      "vol_1d": 21911688,
+      "vol_1w": 146751988,
+      "vol_1m": 748540288,
+      "news": [
+        {
+          "title": "AI trade: Investors may want to look outside infrastructure, Nvidia",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/ai-trade-investors-may-want-to-look-outside-infrastructure-nvidia-202822905.html",
+          "published": 1779481702,
+          "sentiment": 0.077
+        },
+        {
+          "title": "SpaceX, OpenAI, Anthropic: Investors are 'better off' waiting for IPOs",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/spacex-openai-anthropic-investors-are-better-off-waiting-for-ipos-154306602.html",
+          "published": 1779464586,
+          "sentiment": 0.44
+        },
+        {
+          "title": "The Gates Foundation Sold All of Its Remaining Microsoft Stock. Should Investors Be Worried?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/the-gates-foundation-sold-msft-stock/",
+          "published": 1779484260,
+          "sentiment": -0.296
+        },
+        {
+          "title": "GlobalFoundries (GFS) Launches Dedicated Quantum Technology Solutions Unit",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/globalfoundries-gfs-launches-dedicated-quantum-200944118.html",
+          "published": 1779480584,
+          "sentiment": 0.572
+        },
+        {
+          "title": "As Meta Misfires And Apple Shines, Amazon Stock Has Wall Street Smiling. Here's Why.",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/ibd-stock-analysis/as-meta-misfires-and-nvidia-shines-amazon-stock-has-wall-street-smiling-heres-why/?src=A00220&yptr=yahoo",
+          "published": 1779480200,
+          "sentiment": 0.572
+        }
+      ],
+      "news_sentiment": 0.273
+    },
+    {
+      "ticker": "AMZN",
+      "category": "hyperscalers",
+      "exchange": "NASDAQ",
+      "price_gbp": "198",
+      "price_usd": 266.32,
+      "change_1d": "-1.01%",
+      "change_1w": "+0.83%",
+      "change_1m": "+4.41%",
+      "change_ytd": "+17.58%",
+      "return_1yr": "+36%",
+      "low_gbp": "146",
+      "high_gbp": "207",
+      "bar_pct": 85,
+      "market_cap_gbp_b": 2132.697,
+      "beta": 1.468,
+      "pe_ratio": 31.41,
+      "avg_volume_m": 45.53,
+      "div_yield_pct": null,
+      "short_pct": 0.93,
+      "analyst": "strong_buy",
+      "analyst_score": 1.35,
+      "vol_1d": 26386815,
+      "vol_1w": 171943215,
+      "vol_1m": 968993515,
+      "news": [
+        {
+          "title": "Maybe investors can wait to buy SpaceX after IPO: Lee Munson",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/maybe-investors-wait-buy-spacex-150000900.html",
+          "published": 1779462000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Amazon Could Lose Growth Stock Status as Russell Reconstitutes Indexes",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/amazon-stock-price-russell-reconstitution-growth-value-529b91e5?siteid=yhoof2&yptr=yahoo",
+          "published": 1779482100,
+          "sentiment": 0.153
+        },
+        {
+          "title": "The SpaceX Paradox: How Can a Money-Losing Company Be Worth $2 Trillion?",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/spacex-ipo-trillion-valuation-paradox-11b170c6?siteid=yhoof2&yptr=yahoo",
+          "published": 1779480840,
+          "sentiment": 0.128
+        },
+        {
+          "title": "Bank of America resets Amazon stock forecast on key product launch",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/bank-of-america-resets-amazon-stock-forecast-on-key-product-launch",
+          "published": 1779480240,
+          "sentiment": 0.178
+        },
+        {
+          "title": "As Meta Misfires And Apple Shines, Amazon Stock Has Wall Street Smiling. Here's Why.",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/ibd-stock-analysis/as-meta-misfires-and-nvidia-shines-amazon-stock-has-wall-street-smiling-heres-why/?src=A00220&yptr=yahoo",
+          "published": 1779480200,
+          "sentiment": 0.572
+        }
+      ],
+      "news_sentiment": 0.206
+    },
+    {
+      "ticker": "META",
+      "category": "hyperscalers",
+      "exchange": "NASDAQ",
+      "price_gbp": "454",
+      "price_usd": 610.26,
+      "change_1d": "+0.28%",
+      "change_1w": "-0.65%",
+      "change_1m": "-7.42%",
+      "change_ytd": "-6.09%",
+      "return_1yr": "+17%",
+      "low_gbp": "387",
+      "high_gbp": "593",
+      "bar_pct": 33,
+      "market_cap_gbp_b": 1153.211,
+      "beta": 1.243,
+      "pe_ratio": 22.18,
+      "avg_volume_m": 15.32,
+      "div_yield_pct": 35.0,
+      "short_pct": 1.32,
+      "analyst": "strong_buy",
+      "analyst_score": 1.35,
+      "vol_1d": 11103030,
+      "vol_1w": 61431130,
+      "vol_1m": 347980430,
+      "news": [
+        {
+          "title": "Maybe investors can wait to buy SpaceX after IPO: Lee Munson",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/maybe-investors-wait-buy-spacex-150000900.html",
+          "published": 1779462000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "'Not a cost-cutting exercise': How tech CEOs are framing AI-driven layoffs",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/sectors/technology/article/not-a-cost-cutting-exercise-how-tech-ceos-are-framing-ai-driven-layoffs-100000306.html",
+          "published": 1779444000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is Snap (SNAP) Quietly Recasting Its Brand Strategy With Luke Wood\u2019s Board Appointment?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/snap-snap-quietly-recasting-brand-201611110.html",
+          "published": 1779480971,
+          "sentiment": 0.0
+        },
+        {
+          "title": "As Meta Misfires And Apple Shines, Amazon Stock Has Wall Street Smiling. Here's Why.",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/ibd-stock-analysis/as-meta-misfires-and-nvidia-shines-amazon-stock-has-wall-street-smiling-heres-why/?src=A00220&yptr=yahoo",
+          "published": 1779480200,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Instacart (CART) Expands Self-Serve Ads Manager to Retail Partners",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/instacart-cart-expands-self-serve-192755290.html",
+          "published": 1779478075,
+          "sentiment": 0.103
+        }
+      ],
+      "news_sentiment": 0.135
+    },
+    {
+      "ticker": "IREN",
+      "category": "ai-compute",
+      "exchange": "NASDAQ",
+      "price_gbp": "42",
+      "price_usd": 56.83,
+      "change_1d": "-1.85%",
+      "change_1w": "+7.35%",
+      "change_1m": "+9.25%",
+      "change_ytd": "+33.09%",
+      "return_1yr": "+586%*",
+      "low_gbp": "6.16",
+      "high_gbp": "57",
+      "bar_pct": 71,
+      "market_cap_gbp_b": 15.119,
+      "beta": 4.179,
+      "pe_ratio": 73.81,
+      "avg_volume_m": 40.07,
+      "div_yield_pct": null,
+      "short_pct": 16.87,
+      "analyst": "buy",
+      "analyst_score": 1.86,
+      "vol_1d": 35498016,
+      "vol_1w": 210831116,
+      "vol_1m": 1155273816,
+      "news": [
+        {
+          "title": "This AI Stock Just Secured a Deal That Could Change Its Trajectory Forever",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/22/ai-stock-secured-deal-change-trajectory-iren/",
+          "published": 1779468600,
+          "sentiment": 0.402
+        },
+        {
+          "title": "IREN\u2019s $3.4 Billion NVIDIA Deal Points To Something Big Around The Corner",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/22/irens-3-4-billion-nvidia-deal-points-to-something-big-around-the-corner/",
+          "published": 1779459073,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dow Jones Futures Rise; Amazon, Credo Lead AI Stocks In Buy Areas",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-oil-prices-amazon-credo-ai-stocks-buy/?src=A00220&yptr=yahoo",
+          "published": 1779452430,
+          "sentiment": 0.178
+        },
+        {
+          "title": "Assessing IREN (IREN) Valuation After AI Cloud Pivot And Five Year NVIDIA Contract",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/assessing-iren-iren-valuation-ai-021540388.html",
+          "published": 1779416140,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Nvidia GPU Price Surge Sparks AI Stock Rally: Nebius, CoreWeave, IREN Jump",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-gpu-price-surge-sparks-190628777.html",
+          "published": 1779390388,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.116
+    },
+    {
+      "ticker": "CORZ",
+      "category": "ai-compute",
+      "exchange": "NASDAQ",
+      "price_gbp": "19",
+      "price_usd": 25.26,
+      "change_1d": "+1.04%",
+      "change_1w": "+4.34%",
+      "change_1m": "+21.38%",
+      "change_ytd": "+57.97%",
+      "return_1yr": "+143%*",
+      "low_gbp": "7.74",
+      "high_gbp": "19",
+      "bar_pct": 99,
+      "market_cap_gbp_b": 5.978,
+      "beta": 5.451,
+      "pe_ratio": null,
+      "avg_volume_m": 13.72,
+      "div_yield_pct": null,
+      "short_pct": 23.44,
+      "analyst": "strong_buy",
+      "analyst_score": 1.33,
+      "vol_1d": 11425740,
+      "vol_1w": 55551740,
+      "vol_1m": 349802940,
+      "news": [
+        {
+          "title": "Weekly Wrap: Bitcoin Treads Water As Stocks Rally",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/weekly-wrap-bitcoin-treads-water-as-stocks-rally-5639",
+          "published": 1779484800,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Core Scientific (CORZ) Announces Strategy to Expand Muskogee Campus to 1.5 GW of Gross Power",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/core-scientific-corz-announces-strategy-192655187.html",
+          "published": 1779478015,
+          "sentiment": -0.202
+        },
+        {
+          "title": "Core Scientific Refocuses On AI Data Centers With US$3.3b Backing",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/core-scientific-refocuses-ai-data-200758122.html",
+          "published": 1779394078,
+          "sentiment": 0.026
+        },
+        {
+          "title": "Bitcoin Miner Stocks Rise After Nvidia\u2019s Blockbuster Earnings",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/bitcoin-miner-stocks-rise-after-nvidias-blockbuster-earnings-5570",
+          "published": 1779369420,
+          "sentiment": 0.599
+        },
+        {
+          "title": "CleanSpark (CLSK) Climbs 9.3% as Analyst \u2018Highly Optimistic\u2019",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cleanspark-clsk-climbs-9-3-032548061.html",
+          "published": 1779247548,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.085
+    },
+    {
+      "ticker": "WULF",
+      "category": "ai-compute",
+      "exchange": "NASDAQ",
+      "price_gbp": "17",
+      "price_usd": 22.82,
+      "change_1d": "-1.13%",
+      "change_1w": "+2.24%",
+      "change_1m": "+12.03%",
+      "change_ytd": "+79.12%",
+      "return_1yr": "+571%*",
+      "low_gbp": "2.53",
+      "high_gbp": "19",
+      "bar_pct": 87,
+      "market_cap_gbp_b": 8.418,
+      "beta": 4.284,
+      "pe_ratio": null,
+      "avg_volume_m": 30.82,
+      "div_yield_pct": null,
+      "short_pct": 25.19,
+      "analyst": "strong_buy",
+      "analyst_score": 1.42,
+      "vol_1d": 19700639,
+      "vol_1w": 113857139,
+      "vol_1m": 630022739,
+      "news": [
+        {
+          "title": "Is TeraWulf (WULF) One of the Best Low Priced Stocks to Buy for the Next 3 Years?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/terawulf-wulf-one-best-low-133010030.html",
+          "published": 1779370210,
+          "sentiment": 0.477
+        },
+        {
+          "title": "Can IREN's Rising AI Cloud Revenues Offset Bitcoin Mining Weakness?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/irens-rising-ai-cloud-revenues-133100837.html",
+          "published": 1779283860,
+          "sentiment": -0.421
+        },
+        {
+          "title": "Bitcoin Miners Benefit as AI Firms Pay Premiums for Power Access, Morgan Stanley Says",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-miners-benefit-ai-firms-153446697.html",
+          "published": 1779204886,
+          "sentiment": 0.382
+        },
+        {
+          "title": "TeraWulf Refocuses On AI Data Centers As Institutions Weigh Upside",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/terawulf-refocuses-ai-data-centers-030734673.html",
+          "published": 1779160054,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Bitcoin Miners That Got Into AI Have Soaring Stocks. These Experts See More Gains Ahead",
+          "publisher": "Investopedia",
+          "url": "https://www.investopedia.com/bitcoin-miners-that-got-into-ai-have-soaring-stocks-these-experts-see-more-gains-ahead-11974824",
+          "published": 1778777231,
+          "sentiment": 0.401
+        }
+      ],
+      "news_sentiment": 0.168
+    },
+    {
+      "ticker": "HUT",
+      "category": "ai-compute",
+      "exchange": "NASDAQ",
+      "price_gbp": "79",
+      "price_usd": 105.9,
+      "change_1d": "+0.48%",
+      "change_1w": "+3.35%",
+      "change_1m": "+34.44%",
+      "change_ytd": "+106.55%",
+      "return_1yr": "+618%",
+      "low_gbp": "11",
+      "high_gbp": "84",
+      "bar_pct": 93,
+      "market_cap_gbp_b": 8.876,
+      "beta": 5.718,
+      "pe_ratio": null,
+      "avg_volume_m": 4.92,
+      "div_yield_pct": null,
+      "short_pct": 16.83,
+      "analyst": "strong_buy",
+      "analyst_score": 1.31,
+      "vol_1d": 3281855,
+      "vol_1w": 22671655,
+      "vol_1m": 113713455,
+      "news": [
+        {
+          "title": "Weekly Wrap: Bitcoin Treads Water As Stocks Rally",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/weekly-wrap-bitcoin-treads-water-as-stocks-rally-5639",
+          "published": 1779484800,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Bitcoin Miner Stocks Rise After Nvidia\u2019s Blockbuster Earnings",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/bitcoin-miner-stocks-rise-after-nvidias-blockbuster-earnings-5570",
+          "published": 1779369420,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Is Hut 8's (HUT) Self-Funded Water Project a Clue to Its Capital Allocation Playbook?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/hut-8s-hut-self-funded-081148555.html",
+          "published": 1779351108,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How Vertiv (VRT) Is Expanding Its Role in AI Data Center Power and Cooling",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/vertiv-vrt-expanding-role-ai-202523078.html",
+          "published": 1779222323,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Jacobs Growth Could Improve on Data Centers, Life Sciences Demand, RBC Says",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/jacobs-growth-could-improve-data-161323389.html",
+          "published": 1779207203,
+          "sentiment": 0.612
+        }
+      ],
+      "news_sentiment": 0.242
+    },
+    {
+      "ticker": "SMCI",
+      "category": "ai-compute",
+      "exchange": "NASDAQ",
+      "price_gbp": "26",
+      "price_usd": 35.58,
+      "change_1d": "+6.11%",
+      "change_1w": "+14.63%",
+      "change_1m": "+33.01%",
+      "change_ytd": "+14.92%",
+      "return_1yr": "+83%",
+      "low_gbp": "15",
+      "high_gbp": "46",
+      "bar_pct": 38,
+      "market_cap_gbp_b": 15.93,
+      "beta": 1.684,
+      "pe_ratio": 18.73,
+      "avg_volume_m": 37.66,
+      "div_yield_pct": null,
+      "short_pct": 17.94,
+      "analyst": "hold",
+      "analyst_score": 2.83,
+      "vol_1d": 38454885,
+      "vol_1w": 154480085,
+      "vol_1m": 848297385,
+      "news": [
+        {
+          "title": "Super Micro Computer (SMCI) Appoints Matthew Thauberger as Chief Revenue Officer",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-smci-appoints-192926768.html",
+          "published": 1779478166,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Super Micro\u2019s protracted internal control repairs draw scrutiny",
+          "publisher": "CFO Dive",
+          "url": "https://www.cfodive.com/news/super-micros-protracted-internal-control-repairs-draw-scrutiny-accounting/821042/",
+          "published": 1779465806,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Dell Surges 15% Leading AI Server Rally; HPE Pops 9%, Super Micro Rises 5% Ahead of Earnings Catalyst",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/22/dell-surges-15-leading-ai-server-rally-hpe-pops-9-super-micro-rises-5-ahead-of-earnings-catalyst/",
+          "published": 1779464638,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Super Micro Computer, Inc. (SMCI) Is a Trending Stock: Facts to Know Before Betting on It",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-computer-inc-smci-130008269.html",
+          "published": 1779454808,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Super Micro Faces Mounting Export Probes And Investor Questions On AI Growth",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-faces-mounting-export-180916838.html",
+          "published": 1779386956,
+          "sentiment": 0.758
+        }
+      ],
+      "news_sentiment": 0.631
+    },
+    {
+      "ticker": "DELL",
+      "category": "ai-compute",
+      "exchange": "NYSE",
+      "price_gbp": "220",
+      "price_usd": 295.19,
+      "change_1d": "+16.07%",
+      "change_1w": "+21.98%",
+      "change_1m": "+39.15%",
+      "change_ytd": "+132.71%",
+      "return_1yr": "+177%",
+      "low_gbp": "79",
+      "high_gbp": "197",
+      "bar_pct": 99,
+      "market_cap_gbp_b": 142.743,
+      "beta": 1.062,
+      "pe_ratio": 34.05,
+      "avg_volume_m": 8.03,
+      "div_yield_pct": 100.0,
+      "short_pct": 7.67,
+      "analyst": "buy",
+      "analyst_score": 2.0,
+      "vol_1d": 15237483,
+      "vol_1w": 33860683,
+      "vol_1m": 134602483,
+      "news": [
+        {
+          "title": "Stock Market Today, May 22: S&P 500 Posts Eighth Straight Week of Gains",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/05/22/stock-market-today-may-22-s-and-p-500-reaches-eighth-straight-week-of-gains/",
+          "published": 1779485442,
+          "sentiment": 0.511
+        },
+        {
+          "title": "Dow Jones Futures: Stock Market Rebounds To Highs; Tesla, These Five AI Plays Are At Buy Points",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-tesla-asml-ai-stocks-buy-points/?src=A00220&yptr=yahoo",
+          "published": 1779485081,
+          "sentiment": 0.25
+        },
+        {
+          "title": "These Stocks Are Today\u2019s Movers: Dell, Apple, IBM, Est\u00e9e Lauder, Futu, Rocket Lab, Workday, and More",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stock-movers-9326f611?siteid=yhoof2&yptr=yahoo",
+          "published": 1779484200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "S&P 500 Posts Eighth Consecutive Weekly Gain Led by Health Care, Utilities",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-posts-eighth-consecutive-204822784.html",
+          "published": 1779482902,
+          "sentiment": 0.765
+        },
+        {
+          "title": "Stock Market Today: S&P 500, Nasdaq Score Weekly Wins As Dow Logs Record High",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-inflation-survey-amd-stock/?src=A00220&yptr=yahoo",
+          "published": 1779482635,
+          "sentiment": 0.572
+        }
+      ],
+      "news_sentiment": 0.42
+    },
+    {
+      "ticker": "COHR",
+      "category": "fibre-optical",
+      "exchange": "NYSE",
+      "price_gbp": "281",
+      "price_usd": 377.57,
+      "change_1d": "-1.16%",
+      "change_1w": "-1.28%",
+      "change_1m": "+11.81%",
+      "change_ytd": "+94.29%",
+      "return_1yr": "+413%",
+      "low_gbp": "55",
+      "high_gbp": "307",
+      "bar_pct": 90,
+      "market_cap_gbp_b": 54.99,
+      "beta": 2.053,
+      "pe_ratio": 178.1,
+      "avg_volume_m": 7.56,
+      "div_yield_pct": null,
+      "short_pct": 4.59,
+      "analyst": "buy",
+      "analyst_score": 1.6,
+      "vol_1d": 3977750,
+      "vol_1w": 25530950,
+      "vol_1m": 143630150,
+      "news": [
+        {
+          "title": "Stock Market Leaders Respect The 21-Day Line. You Should Too.",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/how-to-invest/investors-corner/stock-market-leaders-respect-the-21-day-line-you-should-too/?src=A00220&yptr=yahoo",
+          "published": 1779460348,
+          "sentiment": 0.477
+        },
+        {
+          "title": "As Small-Cap Outperformance Continues, These 2 ETFs Provide Exposure",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/stock-ideas/as-small-cap-outperformance-continues-these-2-etfs-provide-exposure/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1779382200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Applied Optoelectronics Up 635.5% in 6 Months: How to Play the Stock",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/applied-optoelectronics-635-5-6-150100143.html",
+          "published": 1779375660,
+          "sentiment": 0.34
+        },
+        {
+          "title": "CRDO vs. COHR: Which AI Connectivity Stock Is the Better Buy?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/crdo-vs-cohr-ai-connectivity-134400067.html",
+          "published": 1779371040,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Astera Labs Stock Notches Record High. It\u2019s Up Double Digits for a Second Day.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/astera-labs-stock-record-high-nvidia-ai-4e10de1f?siteid=yhoof2&yptr=yahoo",
+          "published": 1779310620,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.251
+    },
+    {
+      "ticker": "LITE",
+      "category": "fibre-optical",
+      "exchange": "NASDAQ",
+      "price_gbp": "705",
+      "price_usd": 946.9,
+      "change_1d": "-2.42%",
+      "change_1w": "-2.45%",
+      "change_1m": "+11.81%",
+      "change_ytd": "+145.24%",
+      "return_1yr": "+1233%",
+      "low_gbp": "53",
+      "high_gbp": "808",
+      "bar_pct": 86,
+      "market_cap_gbp_b": 54.842,
+      "beta": 1.533,
+      "pe_ratio": 166.41,
+      "avg_volume_m": 6.52,
+      "div_yield_pct": null,
+      "short_pct": 13.42,
+      "analyst": "buy",
+      "analyst_score": 1.58,
+      "vol_1d": 3018401,
+      "vol_1w": 26218601,
+      "vol_1m": 133264101,
+      "news": [
+        {
+          "title": "Lumentum\u2019s AI Optics Expansion Meets New 2x Leveraged Trading Pressure",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lumentum-ai-optics-expansion-meets-221116330.html",
+          "published": 1779487876,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Dow Jones Futures: Stock Market Rebounds To Highs; Tesla, These Five AI Plays Are At Buy Points",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-tesla-asml-ai-stocks-buy-points/?src=A00220&yptr=yahoo",
+          "published": 1779485081,
+          "sentiment": 0.25
+        },
+        {
+          "title": "Lumentum, IBD Stock Of The Day, Focuses On 'Execution' Amid AI Optical Boom",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/ibd-stock-of-the-day/lumentum-stock-artificial-intelligence-optical-data-center-boom/?src=A00220&yptr=yahoo",
+          "published": 1779481474,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Lumentum's AI Connectivity Portfolio Expands: Is Growth Durable?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/lumentums-ai-connectivity-portfolio-expands-131300103.html",
+          "published": 1779455580,
+          "sentiment": 0.459
+        },
+        {
+          "title": "Zacks.com featured highlights include Dow, Arrow Electronics and Lumentum",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-com-featured-highlights-dow-145500627.html",
+          "published": 1779375300,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.083
+    },
+    {
+      "ticker": "AAOI",
+      "category": "fibre-optical",
+      "exchange": "NASDAQ",
+      "price_gbp": "135",
+      "price_usd": 181.49,
+      "change_1d": "+1.74%",
+      "change_1w": "-4.66%",
+      "change_1m": "+31.77%",
+      "change_ytd": "+358.31%",
+      "return_1yr": "+1105%",
+      "low_gbp": "11",
+      "high_gbp": "174",
+      "bar_pct": 76,
+      "market_cap_gbp_b": 10.841,
+      "beta": 3.759,
+      "pe_ratio": null,
+      "avg_volume_m": 12.42,
+      "div_yield_pct": null,
+      "short_pct": 13.14,
+      "analyst": "buy",
+      "analyst_score": 2.33,
+      "vol_1d": 10100188,
+      "vol_1w": 51952788,
+      "vol_1m": 256878188,
+      "news": [
+        {
+          "title": "Raymond James Raises the Firm\u2019s Price Target on nLIGHT (LASR)",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/raymond-james-raises-firm-price-164710364.html",
+          "published": 1779468430,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Applied Optoelectronics Up 635.5% in 6 Months: How to Play the Stock",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/applied-optoelectronics-635-5-6-150100143.html",
+          "published": 1779375660,
+          "sentiment": 0.34
+        },
+        {
+          "title": "Stock Market Today, May 19: Poet Technologies Falls After $400 Million Offering Sparks Dilution Concerns",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/05/19/stock-market-today-may-19-poet-technologies-falls-after-400-million-offering-sparks-dilution-concerns/",
+          "published": 1779225796,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dow Jones Futures: Trump Iran Delay Saves Dow, But Sandisk, Bloom Energy, AI Leaders Sell Off",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-trump-postpones-iran-attack-sandisk-bloom-energy-ai-sell-off/?src=A00220&yptr=yahoo",
+          "published": 1779193225,
+          "sentiment": 0.25
+        },
+        {
+          "title": "POET Technologies Secures US$400M Strategic Investment",
+          "publisher": "IPO-Edge.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/poet-technologies-secures-us-400m-211901619.html",
+          "published": 1779139141,
+          "sentiment": 0.318
+        }
+      ],
+      "news_sentiment": 0.182
+    },
+    {
+      "ticker": "FN",
+      "category": "fibre-optical",
+      "exchange": "NYSE",
+      "price_gbp": "524",
+      "price_usd": 703.86,
+      "change_1d": "-0.23%",
+      "change_1w": "-2.52%",
+      "change_1m": "+2.09%",
+      "change_ytd": "+46.81%",
+      "return_1yr": "+216%",
+      "low_gbp": "166",
+      "high_gbp": "558",
+      "bar_pct": 91,
+      "market_cap_gbp_b": 18.774,
+      "beta": 1.217,
+      "pe_ratio": 60.31,
+      "avg_volume_m": 0.76,
+      "div_yield_pct": null,
+      "short_pct": 7.86,
+      "analyst": "buy",
+      "analyst_score": 1.78,
+      "vol_1d": 483856,
+      "vol_1w": 3978756,
+      "vol_1m": 19384356,
+      "news": [
+        {
+          "title": "LPTH Surges 503% in the Past Year: Should You Stay Invested?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lpth-surges-503-past-stay-135700905.html",
+          "published": 1779458220,
+          "sentiment": 0.0
+        },
+        {
+          "title": "High Growth Tech Stocks To Watch In The US May 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/high-growth-tech-stocks-watch-113835757.html",
+          "published": 1779449915,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Is Genpact Stock a Buy After Hedge Fund Rice Hall James Raised Its Stake by $14 Million?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/filings/2026/05/19/is-genpact-stock-a-buy-after-hedge-fund-rice-hall-james-raised-its-stake-by-usd14-million/",
+          "published": 1779200281,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Fabrinet Rides on Automation Boom: A Case for More Upside?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/fabrinet-rides-automation-boom-case-130500884.html",
+          "published": 1779195900,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Forgent Rides AI Infrastructure Boom With Healthy Demand Trends",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/forgent-rides-ai-infrastructure-boom-134200136.html",
+          "published": 1779111720,
+          "sentiment": 0.296
+        }
+      ],
+      "news_sentiment": 0.136
+    },
+    {
+      "ticker": "MTSI",
+      "category": "dsp-semi",
+      "exchange": "NASDAQ",
+      "price_gbp": "287",
+      "price_usd": 385.98,
+      "change_1d": "+1.51%",
+      "change_1w": "+2.76%",
+      "change_1m": "+35.72%",
+      "change_ytd": "+120.61%",
+      "return_1yr": "+227%",
+      "low_gbp": "88",
+      "high_gbp": "299",
+      "bar_pct": 95,
+      "market_cap_gbp_b": 21.923,
+      "beta": 1.599,
+      "pe_ratio": 163.55,
+      "avg_volume_m": 1.24,
+      "div_yield_pct": null,
+      "short_pct": 4.19,
+      "analyst": "buy",
+      "analyst_score": 1.6,
+      "vol_1d": 947255,
+      "vol_1w": 7071155,
+      "vol_1m": 31304055,
+      "news": [
+        {
+          "title": "MACOM (MTSI) to Enter Long-Term Supply Agreements with IQE plc",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/macom-mtsi-enter-long-term-200959451.html",
+          "published": 1779480599,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Here\u2019s Why MACOM (MTSI) is Among the 8 High Return Semiconductor Stocks to Buy Now",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-macom-mtsi-among-8-164628884.html",
+          "published": 1779468388,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Photronics, IPG Photonics, AMD, KLA Corporation, and MACOM Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/photronics-ipg-photonics-amd-kla-090855975.html",
+          "published": 1779440935,
+          "sentiment": 0.0
+        },
+        {
+          "title": "2 High-Flying Stocks for Long-Term Investors and 1 Facing Challenges",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/2-high-flying-stocks-long-232455686.html",
+          "published": 1779405895,
+          "sentiment": 0.077
+        },
+        {
+          "title": "MACOM Technology Solutions (MTSI) Delivered Record Revenue and Profitability in Q1",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/macom-technology-solutions-mtsi-delivered-145232373.html",
+          "published": 1779375152,
+          "sentiment": 0.421
+        }
+      ],
+      "news_sentiment": 0.154
+    },
+    {
+      "ticker": "SMTC",
+      "category": "dsp-semi",
+      "exchange": "NASDAQ",
+      "price_gbp": "117",
+      "price_usd": 156.78,
+      "change_1d": "+4.35%",
+      "change_1w": "+13.91%",
+      "change_1m": "+48.83%",
+      "change_ytd": "+108.32%",
+      "return_1yr": "+353%",
+      "low_gbp": "26",
+      "high_gbp": "111",
+      "bar_pct": 99,
+      "market_cap_gbp_b": 10.868,
+      "beta": 2.22,
+      "pe_ratio": null,
+      "avg_volume_m": 2.52,
+      "div_yield_pct": null,
+      "short_pct": 7.85,
+      "analyst": "strong_buy",
+      "analyst_score": 1.21,
+      "vol_1d": 6358823,
+      "vol_1w": 17900923,
+      "vol_1m": 61929523,
+      "news": [
+        {
+          "title": "Semtech's AI Business Ramp Likely to Lift Fiscal Q1 Results, Oppenheimer Says",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/semtech-apos-ai-business-ramp-150950668.html",
+          "published": 1779462590,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dell Stock Cruises To New Highs; Earnings In Focus As AI Servers Reignite Growth",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/earnings-preview/dell-stock-new-highs-earnings-ai-servers-tech-growth-markets/?src=A00220&yptr=yahoo",
+          "published": 1779459702,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Teradyne, Monolithic Power Systems, Vishay Intertechnology, Lam Research, and Semtech Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/teradyne-monolithic-power-systems-vishay-102055071.html",
+          "published": 1779445255,
+          "sentiment": 0.0
+        },
+        {
+          "title": "SMTC Set to Report Q1 Earnings: What's in the Cards for the Stock?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/smtc-set-report-q1-earnings-152900978.html",
+          "published": 1779377340,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Unlocking Q1 Potential of Semtech (SMTC): Exploring Wall Street Estimates for Key Metrics",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/unlocking-q1-potential-semtech-smtc-131504033.html",
+          "published": 1779282904,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.076
+    },
+    {
+      "ticker": "CRDO",
+      "category": "dsp-semi",
+      "exchange": "NASDAQ",
+      "price_gbp": "163",
+      "price_usd": 218.41,
+      "change_1d": "+12.78%",
+      "change_1w": "+26.86%",
+      "change_1m": "+17.72%",
+      "change_ytd": "+52.50%",
+      "return_1yr": "+270%",
+      "low_gbp": "44",
+      "high_gbp": "159",
+      "bar_pct": 99,
+      "market_cap_gbp_b": 29.99,
+      "beta": 3.176,
+      "pe_ratio": 120.01,
+      "avg_volume_m": 7.19,
+      "div_yield_pct": null,
+      "short_pct": 5.78,
+      "analyst": "none",
+      "analyst_score": null,
+      "vol_1d": 8489375,
+      "vol_1w": 39648575,
+      "vol_1m": 136375475,
+      "news": [
+        {
+          "title": "Zacks Investment Ideas feature highlights: Nvidia, Innodata, Credo Technology and Qualcomm",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-131600391.html",
+          "published": 1779455760,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dow Jones Futures Rise; Amazon, Credo Lead AI Stocks In Buy Areas",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-oil-prices-amazon-credo-ai-stocks-buy/?src=A00220&yptr=yahoo",
+          "published": 1779452430,
+          "sentiment": 0.178
+        },
+        {
+          "title": "Has Nvidia Become Too Big? 3 Alternative AI Stocks",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-become-too-big-3-180300917.html",
+          "published": 1779386580,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Credo Technology and Birkenstock have been highlighted as Zacks Bull and Bear of the Day",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/credo-technology-birkenstock-highlighted-zacks-143100476.html",
+          "published": 1779373860,
+          "sentiment": 0.0
+        },
+        {
+          "title": "CRDO vs. COHR: Which AI Connectivity Stock Is the Better Buy?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/crdo-vs-cohr-ai-connectivity-134400067.html",
+          "published": 1779371040,
+          "sentiment": 0.44
+        }
+      ],
+      "news_sentiment": 0.124
+    },
+    {
+      "ticker": "MXL",
+      "category": "dsp-semi",
+      "exchange": "NASDAQ",
+      "price_gbp": "74",
+      "price_usd": 99.16,
+      "change_1d": "-0.99%",
+      "change_1w": "+7.39%",
+      "change_1m": "+189.52%",
+      "change_ytd": "+435.71%",
+      "return_1yr": "+805%",
+      "low_gbp": "8.16",
+      "high_gbp": "78",
+      "bar_pct": 95,
+      "market_cap_gbp_b": 6.61,
+      "beta": 3.964,
+      "pe_ratio": null,
+      "avg_volume_m": 3.55,
+      "div_yield_pct": null,
+      "short_pct": 6.12,
+      "analyst": "buy",
+      "analyst_score": 1.82,
+      "vol_1d": 4211161,
+      "vol_1w": 20129861,
+      "vol_1m": 160528361,
+      "news": [
+        {
+          "title": "MaxLinear Expands AI Data Center Connectivity As Investors Weigh Growth Story",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/maxlinear-expands-ai-data-center-120710399.html",
+          "published": 1779278830,
+          "sentiment": 0.459
+        },
+        {
+          "title": "Assessing MaxLinear (MXL) Valuation After New 5G AI And DOCSIS 4.0 Product Launches",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/assessing-maxlinear-mxl-valuation-5g-071240760.html",
+          "published": 1779261160,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Here is Why MaxLinear, Inc. (MXL) is Among the Best Rising Tech Stocks to Buy According to Hedge Funds",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/why-maxlinear-inc-mxl-among-105711828.html",
+          "published": 1779188231,
+          "sentiment": 0.637
+        },
+        {
+          "title": "MaxLinear (MXL) Announces Availability of Washington Transimpedance Amplifier for AI Data Centers",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/maxlinear-mxl-announces-availability-washington-144058635.html",
+          "published": 1779115258,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why This AI Stock Could Be the Easiest 10x Trade of 2026",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/12/why-this-ai-stock-could-be-the-easiest-10x-trade-of-2026/",
+          "published": 1778593749,
+          "sentiment": 0.421
+        }
+      ],
+      "news_sentiment": 0.303
+    },
+    {
+      "ticker": "KEYS",
+      "category": "test-equip",
+      "exchange": "NYSE",
+      "price_gbp": "258",
+      "price_usd": 346.56,
+      "change_1d": "+2.65%",
+      "change_1w": "-0.70%",
+      "change_1m": "+0.01%",
+      "change_ytd": "+67.75%",
+      "return_1yr": "+127%",
+      "low_gbp": "114",
+      "high_gbp": "276",
+      "bar_pct": 89,
+      "market_cap_gbp_b": 44.049,
+      "beta": 1.261,
+      "pe_ratio": 55.81,
+      "avg_volume_m": 1.61,
+      "div_yield_pct": null,
+      "short_pct": 1.44,
+      "analyst": "buy",
+      "analyst_score": 1.75,
+      "vol_1d": 1181280,
+      "vol_1w": 13131080,
+      "vol_1m": 34269880,
+      "news": [
+        {
+          "title": "3 Top-Rated Stocks to Buy After Crushing EPS Expectations: LION, KEYS, ROST",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-top-rated-stocks-buy-201300846.html",
+          "published": 1779480780,
+          "sentiment": -0.361
+        },
+        {
+          "title": "Keysight Technologies (KEYS) Is Down 6.6% After Record Q2 Results And Surging AI-Driven Revenue Growth",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/keysight-technologies-keys-down-6-132326629.html",
+          "published": 1779456206,
+          "sentiment": 0.382
+        },
+        {
+          "title": "KEYS Q2 Earnings Beat on Communications, Industrial Segment Growth",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/keys-q2-earnings-beat-communications-131400285.html",
+          "published": 1779455640,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Why UnitedHealth (UNH) Remains a Turnaround Bet Despite Policy and Cost Pressure",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/why-unitedhealth-unh-remains-turnaround-103530036.html",
+          "published": 1779446130,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Quantum Computing and Robotics Are Arriving Faster Than Most Investors Realize and After Years of Covering This Space These 3 ETFs Stand Out",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/21/quantum-computing-and-robotics-are-arriving-faster-than-most-investors-realize-and-after-years-of-covering-this-space-these-3-etfs-stand-out/",
+          "published": 1779383504,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.021
+    },
+    {
+      "ticker": "VIAV",
+      "category": "test-equip",
+      "exchange": "NASDAQ",
+      "price_gbp": "37",
+      "price_usd": 49.51,
+      "change_1d": "+0.55%",
+      "change_1w": "-3.73%",
+      "change_1m": "+7.28%",
+      "change_ytd": "+172.78%",
+      "return_1yr": "+458%",
+      "low_gbp": "6.60",
+      "high_gbp": "45",
+      "bar_pct": 79,
+      "market_cap_gbp_b": 9.031,
+      "beta": 1.233,
+      "pe_ratio": null,
+      "avg_volume_m": 6.53,
+      "div_yield_pct": null,
+      "short_pct": 8.63,
+      "analyst": "none",
+      "analyst_score": null,
+      "vol_1d": 4535338,
+      "vol_1w": 36106638,
+      "vol_1m": 152972338,
+      "news": [
+        {
+          "title": "Dow Jones Futures: Stock Market Rebounds To Highs; Tesla, These Five AI Plays Are At Buy Points",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-tesla-asml-ai-stocks-buy-points/?src=A00220&yptr=yahoo",
+          "published": 1779485081,
+          "sentiment": 0.25
+        },
+        {
+          "title": "VIAVI Solutions (VIAV) Launches CyberFlood CF1000 400G Security Test Platform",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/viavi-solutions-viav-launches-cyberflood-192813783.html",
+          "published": 1779478093,
+          "sentiment": 0.477
+        },
+        {
+          "title": "What Makes Viavi Solutions (VIAV) a Strong Momentum Stock: Buy Now?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/makes-viavi-solutions-viav-strong-160001781.html",
+          "published": 1779465601,
+          "sentiment": 0.612
+        },
+        {
+          "title": "KSCP Rides on Holistic Growth: Should You Stay Invested in the Stock?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/kscp-rides-holistic-growth-stay-135800420.html",
+          "published": 1779458280,
+          "sentiment": 0.382
+        },
+        {
+          "title": "America's Greatest Opportunities: JDS Uniphase's Incredible Run",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/how-to-invest/stock-market-america-greatest-opportunities-jds-uniphase-viavi-lumentum/?src=A00220&yptr=yahoo",
+          "published": 1779364838,
+          "sentiment": 0.778
+        }
+      ],
+      "news_sentiment": 0.5
+    },
+    {
+      "ticker": "AXTI",
+      "category": "materials",
+      "exchange": "NASDAQ",
+      "price_gbp": "105",
+      "price_usd": 140.83,
+      "change_1d": "+15.62%",
+      "change_1w": "+13.77%",
+      "change_1m": "+87.10%",
+      "change_ytd": "+740.27%",
+      "return_1yr": "+9612%",
+      "low_gbp": "1.08",
+      "high_gbp": "100",
+      "bar_pct": 99,
+      "market_cap_gbp_b": 6.859,
+      "beta": 1.757,
+      "pe_ratio": null,
+      "avg_volume_m": 11.98,
+      "div_yield_pct": null,
+      "short_pct": 12.05,
+      "analyst": "none",
+      "analyst_score": null,
+      "vol_1d": 10092687,
+      "vol_1w": 47941887,
+      "vol_1m": 242624687,
+      "news": [
+        {
+          "title": "AXT Inc. (AXTI) Soars 15.7% Ahead of Key Updates",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/axt-inc-axti-soars-15-002607400.html",
+          "published": 1779409567,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why AXT (AXTI) Is Down 14.2% After Betting Big On AI-Focused Indium Phosphide Expansion",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-axt-axti-down-14-231554413.html",
+          "published": 1779318954,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Assessing AXT (AXTI) Valuation As Analyst Targets Diverge From Recent Share Price Moves",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/assessing-axt-axti-valuation-analyst-221132444.html",
+          "published": 1779315092,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Can AXTI's Margins Continue to Improve as AXTI Nears Profitability in 2026?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/axtis-margins-continue-improve-axti-183300367.html",
+          "published": 1779301980,
+          "sentiment": 0.612
+        },
+        {
+          "title": "AXT Inc. (AXTI) Jumps 6.6%, Investors Gear Up for Business Updates",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/axt-inc-axti-jumps-6-031336743.html",
+          "published": 1779246816,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.182
+    }
+  ]
+};

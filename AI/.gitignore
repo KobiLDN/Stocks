@@ -1,0 +1,10 @@
+# Local server files — not needed for GitHub Pages
+server.py
+start.bat
+PROMPT.txt
+__pycache__/
+*.pyc
+
+# API key + test scripts — NEVER commit these
+key.txt
+test_openrouter.py
