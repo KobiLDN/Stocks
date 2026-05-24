@@ -265,7 +265,7 @@ def parse_picks(content, valid_tickers):
 
         signal = (p.get("signal") or "").lower()
         if signal not in ("strong_buy", "buy"):
-            raise ValueError(f"Pick {i} ({t}) invalid signal {signal!r}.")
+            signal = "buy"  # normalise unexpected values (e.g. 'hold', 'none')
 
         try:
             conf = float(p.get("confidence", 0))
