@@ -1,0 +1,8 @@
+# AI sector — local-only files
+AI/key.txt
+AI/test_openrouter.py
+AI/__pycache__/
+AI/*.pyc
+AI/server.py
+AI/start.bat
+AI/PROMPT.txt
