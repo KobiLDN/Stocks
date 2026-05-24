@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biotech — Signals</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="prices-data.js"></script>
+<script src="signals-local.js"></script>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0e1419;
+    --surface2: #141b22;
+    --border: #1e2d3d;
+    --accent: #00d4ff;
+    --accent2: #ff6b35;
+    --gold: #ffd700;
+    --text: #e0eaf5;
+    --muted: #5a7a9a;
+    --red: #ff4444;
+    --green: #00e676;
+    --purple: #c084fc;
+    --blue: #4488ff;
+    --indigo: #a78bfa;
+    --rose: #fb7185;
+    --teal: #2dd4bf;
+    --amber: #f59e0b;
+    --slate: #94a3b8;
+    --lime: #a3e635;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 36px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Ticker tape */
+  #ticker-tape {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 36px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--accent);
+    z-index: 200;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .tape-track { display: flex; white-space: nowrap; gap: 0; }
+  .tape-track.running { animation: scroll-tape linear infinite; }
+  @keyframes scroll-tape { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  #ticker-tape:hover .tape-track { animation-play-state: paused; }
+  .tape-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 18px; border-right: 1px solid var(--border); }
+  .tape-t { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 1px; }
+  .tape-p { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .tape-r { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+  .tape-r.pos  { color: var(--green); }
+  .tape-r.neg  { color: var(--red); }
+  .tape-r.flat { color: var(--muted); }
+
+  /* Header */
+  header {
+    position: relative;
+    z-index: 10;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .header-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 24px 0 43px;
+    position: relative;
+  }
+  .header-inner::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+  }
+
+  /* Nav */
+  nav {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .nav-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .nav-link:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .nav-link { position: relative; }
+  .nav-link[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 200px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .nav-link[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .nav-link:hover[data-tooltip]::after,
+  .nav-link:hover[data-tooltip]::before { opacity: 1; }
+  a[href="index.html"].nav-link[data-tooltip]::after    { left: 0; transform: none; }
+  a[href="index.html"].nav-link[data-tooltip]::before   { left: 16px; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
+
+  /* Container */
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .header-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  h1 { font-size: 36px; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 10px; }
+  h1 span { color: var(--accent); }
+  .header-sub { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
+  .header-sub .model { color: var(--text); }
+
+  /* Disclaimer */
+  .disclaimer {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+  }
+  .disclaimer span { color: var(--accent2); }
+
+  /* Refresh banner */
+  .refresh-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+  }
+  .refresh-banner .ts { color: var(--accent); }
+  .refresh-banner code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    font-size: 10px;
+  }
+
+  /* Signal cards */
+  .signals-feed { display: flex; flex-direction: column; gap: 12px; }
+  .signal-card {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .signal-card:hover { border-color: var(--accent); background: var(--surface2); }
+
+  .rank-rail {
+    width: 64px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .rank-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -1px;
+  }
+
+  .card-body { flex: 1; padding: 16px 22px; min-width: 0; }
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .ticker:hover { color: var(--accent); text-decoration: underline; }
+  .company { color: var(--muted); font-size: 13px; }
+
+  .cat-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  .cat-large-cap    { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+  .cat-uk-listed    { background: rgba(255,215,0,0.1);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.25); }
+  .cat-gene-editing { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
+  .cat-genomics     { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
+  .cat-oncology     { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
+  .cat-mrna         { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
+  .cat-rare-disease { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  .cat-metabolic    { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
+  .cat-neuroscience { background: rgba(167,139,250,0.1); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
+
+  .signal-pill {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+  .signal-strong_buy { background: rgba(0,230,118,0.18); color: var(--green); border: 1px solid rgba(0,230,118,0.45); }
+  .signal-buy        { background: rgba(163,230,53,0.15); color: var(--lime);  border: 1px solid rgba(163,230,53,0.4); }
+
+  .conf-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .conf-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .conf-bar {
+    flex: 1;
+    max-width: 240px;
+    height: 6px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .conf-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--green));
+  }
+  .conf-pct {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 36px;
+  }
+
+  .rationale {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .drivers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .driver-chip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    background: var(--bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    letter-spacing: 0.5px;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    border: 1px solid var(--border);
+  }
+  .empty-state strong { color: var(--accent); }
+  .empty-state code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    font-size: 12px;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 26px; }
+    .rank-rail { width: 48px; }
+    .rank-num { font-size: 22px; }
+    .card-body { padding: 14px 16px; }
+    .ticker { font-size: 14px; }
+    .company { display: none; }
+    .signal-pill { margin-left: 0; }
+    .rationale { font-size: 13px; }
+  }
+
+  .back-link {
+    display: block;
+    padding: 6px 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #6b8299;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  .back-link:hover { color: #00d4ff; }
+</style>
+</head>
+<body>
+
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<a class="back-link" href="../index.html">← All Sectors</a>
+<header>
+  <div class="header-inner">
+    <div class="header-label">// Biotech</div>
+    <h1>AI <span>Signals</span></h1>
+    <div class="header-sub">Top 10 ranked picks · generated locally by <span class="model" id="model-name">—</span></div>
+  </div>
+</header>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 29 biotech stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 29 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link active" data-tooltip="AI top 10 picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="disclaimer">
+    <span>For research only.</span> These picks are produced by a local large language model from the dashboard's own price, metrics and news data. The model can be wrong, biased toward momentum, or inconsistent. This is NOT financial advice. Always do your own research.
+  </div>
+
+  <div class="refresh-banner" id="refresh-banner">
+    <span>Last refreshed: <span class="ts" id="signals-ts">—</span></span>
+    <span>Auto-refreshed weekly by GitHub Actions · or run <code>python generate_signals_local.py</code> locally</span>
+  </div>
+
+  <div class="signals-feed" id="signals-feed"></div>
+</div>
+
+<footer>Biotech Stock Dashboard · For educational and entertainment purposes only · Not financial advice</footer>
+
+<script>
+  const NAMES = {
+    'AMGN': 'Amgen',                     'GILD': 'Gilead Sciences',
+    'REGN': 'Regeneron Pharmaceuticals', 'VRTX': 'Vertex Pharmaceuticals',
+    'BIIB': 'Biogen',                    'BMY':  'Bristol-Myers Squibb',
+    'AZN':  'AstraZeneca',               'GSK':  'GSK plc',
+    'CRSP': 'CRISPR Therapeutics',       'BEAM': 'Beam Therapeutics',
+    'NTLA': 'Intellia Therapeutics',     'EDIT': 'Editas Medicine',
+    'ILMN': 'Illumina',                  'PACB': 'Pacific Biosciences',
+    'NTRA': 'Natera',                    'RXRX': 'Recursion Pharmaceuticals',
+    'INCY': 'Incyte Corporation',        'EXEL': 'Exelixis',
+    'ALNY': 'Alnylam Pharmaceuticals',   'RCUS': 'Arcus Biosciences',
+    'MRNA': 'Moderna',                   'BNTX': 'BioNTech',
+    'NVAX': 'Novavax',                   'BMRN': 'BioMarin Pharmaceutical',
+    'SRPT': 'Sarepta Therapeutics',      'NVO':  'Novo Nordisk',
+    'LLY':  'Eli Lilly',                 'LEGN': 'Legend Biotech',
+    'IONS': 'Ionis Pharmaceuticals',
+  };
+
+  const CAT_LABELS = {
+    'large-cap':     'Large Cap',
+    'uk-listed':     'UK Listed',
+    'gene-editing':  'Gene Editing',
+    'genomics':      'Genomics',
+    'oncology':      'Oncology',
+    'mrna':          'mRNA',
+    'rare-disease':  'Rare Disease',
+    'metabolic':     'Metabolic',
+    'neuroscience':  'Neuroscience',
+  };
+
+  const YAHOO_SUFFIX = { 'AZN': 'AZN.L', 'GSK': 'GSK.L' };
+  function yahooUrl(ticker) {
+    return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[ticker] || ticker) + '/';
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function signalLabel(s) {
+    return (s || '').replace('_', ' ').toUpperCase();
+  }
+
+  function tickerCategoryMap() {
+    const map = {};
+    if (window.PRICES_DATA && Array.isArray(window.PRICES_DATA.stocks)) {
+      window.PRICES_DATA.stocks.forEach(s => { map[s.ticker] = s.category; });
+    }
+    return map;
+  }
+
+  function renderSignals(data) {
+    const tsEl   = document.getElementById('signals-ts');
+    const modelEl= document.getElementById('model-name');
+    const feed   = document.getElementById('signals-feed');
+
+    if (!data || !Array.isArray(data.picks) || !data.picks.length) {
+      tsEl.textContent    = '—';
+      modelEl.textContent = '—';
+      feed.innerHTML =
+        '<div class="empty-state">' +
+        'No signals data yet. Signals are generated weekly by <strong>GitHub Actions</strong> ' +
+        '(deepseek/deepseek-v4-flash via OpenRouter) or run ' +
+        '<code>python generate_signals_local.py</code> locally to generate them now.' +
+        '</div>';
+      return;
+    }
+
+    tsEl.textContent    = data.updated || '—';
+    modelEl.textContent = data.model   || 'local model';
+
+    const catFor = tickerCategoryMap();
+
+    feed.innerHTML = data.picks.map(p => {
+      const t = p.ticker || '';
+      const name = NAMES[t] || t;
+      const cat  = catFor[t] || '';
+      const catLabel = CAT_LABELS[cat] || cat;
+      const catBadge = cat
+        ? '<span class="cat-badge cat-' + cat + '">' + catLabel + '</span>'
+        : '';
+
+      const signalCls = 'signal-' + (p.signal || '');
+      const conf = Math.max(0, Math.min(1, Number(p.confidence) || 0));
+      const confPct = Math.round(conf * 100) + '%';
+
+      const drivers = (Array.isArray(p.drivers) ? p.drivers : [])
+        .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
+        .join('');
+
+      return '<div class="signal-card">' +
+        '<div class="rank-rail"><span class="rank-num">' + (p.rank || '') + '</span></div>' +
+        '<div class="card-body">' +
+          '<div class="card-top">' +
+            '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
+            '<span class="company">' + escapeHtml(name) + '</span>' +
+            catBadge +
+            '<span class="signal-pill ' + signalCls + '">' + escapeHtml(signalLabel(p.signal)) + '</span>' +
+          '</div>' +
+          '<div class="conf-wrap">' +
+            '<span class="conf-label">Confidence</span>' +
+            '<div class="conf-bar"><div class="conf-fill" style="width:' + confPct + '"></div></div>' +
+            '<span class="conf-pct">' + confPct + '</span>' +
+          '</div>' +
+          '<div class="rationale">' + escapeHtml(p.rationale || '') + '</div>' +
+          (drivers ? '<div class="drivers">' + drivers + '</div>' : '') +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  if (window.SIGNALS_DATA) {
+    renderSignals(window.SIGNALS_DATA);
+  } else {
+    fetch('signals-local.json')
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => renderSignals(data))
+      .catch(() => renderSignals(null));
+  }
+
+  /* ---- TICKER TAPE ---- */
+  function buildTape(stocks) {
+    const track = document.getElementById('tape-track');
+    if (!track || !stocks.length) return;
+    const items = stocks.map(s => {
+      const change = s.change_1d || '+0.00%';
+      const val    = parseFloat(change);
+      const isNeg  = change.startsWith('-');
+      const isFlat = val === 0;
+      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
+      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
+      const price  = parseFloat(s.price_gbp) || 0;
+      const priceStr = price <= 0 ? '—' : price >= 10 ? '£' + Math.round(price) : price >= 1 ? '£' + price.toFixed(2) : '£' + price.toFixed(3);
+      return '<span class="tape-item"><span class="tape-t">' + s.ticker + '</span><span class="tape-p">' + priceStr + '</span><span class="tape-r ' + cls + '">' + arrow + ' ' + change + '</span></span>';
+    }).join('');
+    track.innerHTML = items + items;
+    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
+    track.classList.add('running');
+  }
+
+  if (window.PRICES_DATA) {
+    buildTape(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
+  }
+</script>
+</body>
+</html>

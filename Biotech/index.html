@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<!--
+=============================================================
+  BIOTECH STOCK DASHBOARD
+  Last updated: 2026-05-24
+  FX Rate used: £1 = $1.3434
+
+  TICKERS:
+  LARGE CAP: AMGN, GILD, REGN, VRTX, BIIB, BMY
+  UK LISTED: AZN (AZN.L), GSK (GSK.L)
+  GENE EDITING: CRSP, BEAM, NTLA, EDIT
+  GENOMICS: ILMN, PACB, NTRA, RXRX
+  ONCOLOGY: INCY, EXEL, ALNY, RCUS
+  MRNA: MRNA, BNTX, NVAX
+  RARE DISEASE: BMRN, SRPT
+  METABOLIC: NVO, LLY
+  NEUROSCIENCE: LEGN, IONS
+=============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Biotech Stock Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<script src="prices-data.js"></script>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0e1419;
+    --surface2: #141b22;
+    --border: #1e2d3d;
+    --accent: #00d4ff;
+    --accent2: #ff6b35;
+    --gold: #ffd700;
+    --text: #e0eaf5;
+    --muted: #5a7a9a;
+    --red: #ff4444;
+    --green: #00e676;
+    --purple: #c084fc;
+    --blue: #4488ff;
+    --indigo: #a78bfa;
+    --rose: #fb7185;
+    --teal: #2dd4bf;
+    --amber: #f59e0b;
+    --lime: #a3e635;
+    --slate: #94a3b8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 36px;
+  }
+
+  /* Ticker tape */
+  #ticker-tape {
+    position: fixed; top: 0; left: 0; right: 0; height: 36px;
+    background: var(--bg); border-bottom: 1px solid var(--accent);
+    z-index: 200; overflow: hidden; display: flex; align-items: center;
+  }
+  .tape-track { display: flex; align-items: center; white-space: nowrap; will-change: transform; }
+  .tape-track.running { animation: tape-scroll linear infinite; }
+  .tape-track:hover { animation-play-state: paused; }
+  @keyframes tape-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tape-item {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 0 20px; display: inline-flex; align-items: center;
+    gap: 7px; height: 36px; border-right: 1px solid var(--border); cursor: default;
+  }
+  .tape-t { color: #fff; font-weight: 700; letter-spacing: 1px; }
+  .tape-p { color: var(--text); }
+  .tape-r { font-weight: 700; }
+  .tape-r.pos  { color: var(--green); }
+  .tape-r.neg  { color: var(--red); }
+  .tape-r.flat { color: var(--muted); }
+
+  /* Header */
+  header {
+    background: var(--bg); border-bottom: 1px solid var(--accent);
+    padding: 20px 24px 16px;
+  }
+  .header-inner { max-width: 1600px; margin: 0 auto; }
+  .header-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+  }
+  h1 { font-size: 28px; font-weight: 800; border-left: 3px solid var(--accent); padding-left: 10px; }
+  h1 span { color: var(--accent); }
+  .header-sub {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    color: var(--muted); margin-top: 4px; padding-left: 13px;
+  }
+
+  /* Nav */
+  nav { background: var(--bg); border-bottom: 1px solid var(--border); padding: 0 24px; }
+  .nav-inner { max-width: 1600px; margin: 0 auto; display: flex; gap: 4px; }
+  .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.05em; padding: 10px 14px; border: 1px solid transparent;
+    border-bottom: none; color: var(--muted); text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .nav-link:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+  /* Container */
+  .container { max-width: 1600px; margin: 0 auto; padding: 16px 24px; }
+
+  /* Filters */
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700;
+    padding: 5px 12px; border: 1px solid var(--border); background: transparent;
+    color: var(--muted); cursor: pointer; border-radius: 2px; transition: all 0.15s;
+  }
+  .filter-btn:hover { color: var(--text); border-color: var(--text); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+  .filter-btn[data-filter="large-cap"].active   { background: var(--accent);  border-color: var(--accent); color: var(--bg); }
+  .filter-btn[data-filter="uk-listed"].active   { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="gene-editing"].active{ background: var(--green);   border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="genomics"].active    { background: var(--teal);    border-color: var(--teal);   color: var(--bg); }
+  .filter-btn[data-filter="oncology"].active    { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-filter="mrna"].active        { background: var(--purple);  border-color: var(--purple); }
+  .filter-btn[data-filter="rare-disease"].active{ background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="metabolic"].active   { background: var(--lime);    border-color: var(--lime);   color: var(--bg); }
+  .filter-btn[data-filter="neuroscience"].active{ background: var(--indigo);  border-color: var(--indigo); }
+
+  /* Search */
+  .search-count-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  #stock-search {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    padding: 7px 12px; width: 280px; border-radius: 2px;
+  }
+  #stock-search:focus { outline: none; border-color: var(--accent); }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .row-count span { color: var(--accent); font-weight: 700; }
+
+  /* Table */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: var(--surface); border-bottom: 2px solid var(--accent); }
+  th {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.05em; text-transform: uppercase; padding: 10px 12px;
+    color: var(--muted); text-align: left; white-space: nowrap;
+  }
+  .sortable { cursor: pointer; user-select: none; }
+  .sortable:hover { color: var(--accent); }
+  .sort-asc::after  { content: ' ▲'; color: var(--accent); }
+  .sort-desc::after { content: ' ▼'; color: var(--accent); }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+  tbody tr:hover { background: var(--surface2); }
+  tbody tr.hidden { display: none; }
+  td { padding: 10px 12px; font-size: 13px; vertical-align: middle; }
+
+  /* Ticker cell */
+  .ticker-link { text-decoration: none; }
+  .ticker { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 13px; }
+  .exchange-badge { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); margin-top: 2px; }
+
+  /* Category badges */
+  .cat-badge {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700;
+    padding: 2px 7px; border-radius: 2px; white-space: nowrap;
+  }
+  .cat-large-cap    { background: rgba(0,212,255,0.12);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.3); }
+  .cat-uk-listed    { background: rgba(255,215,0,0.12);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.3); }
+  .cat-gene-editing { background: rgba(0,230,118,0.1);    color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
+  .cat-genomics     { background: rgba(45,212,191,0.1);   color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
+  .cat-oncology     { background: rgba(251,113,133,0.1);  color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
+  .cat-mrna         { background: rgba(192,132,252,0.12); color: var(--purple);  border: 1px solid rgba(192,132,252,0.3); }
+  .cat-rare-disease { background: rgba(245,158,11,0.1);   color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  .cat-metabolic    { background: rgba(163,230,53,0.1);   color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
+  .cat-neuroscience { background: rgba(167,139,250,0.12); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.3); }
+
+  /* Price & pills */
+  .price { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 14px; }
+  .change-pills { display: flex; gap: 4px; margin-top: 3px; flex-wrap: wrap; }
+  .cpill {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 700;
+    padding: 1px 5px; border-radius: 2px;
+  }
+  .cpill.pos  { background: rgba(0,230,118,0.12); color: var(--green); }
+  .cpill.neg  { background: rgba(255,68,68,0.12);  color: var(--red); }
+  .cpill.flat { background: rgba(90,122,154,0.12); color: var(--muted); }
+
+  /* Returns */
+  .return-mega     { color: var(--green); font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
+  .return-positive { color: var(--teal);  font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
+  .return-modest   { color: var(--muted); font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
+  .ytd-return { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 12px; }
+  .ytd-pos  { color: var(--green); }
+  .ytd-neg  { color: var(--red); }
+  .ytd-flat { color: var(--muted); }
+
+  /* Range bar */
+  .range-wrap { display: flex; align-items: center; gap: 6px; min-width: 160px; }
+  .range-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); min-width: 38px; }
+  .range-bar-bg { flex: 1; height: 4px; background: var(--border); border-radius: 2px; position: relative; }
+  .range-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+  .range-dot { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; background: #fff; border-radius: 50%; border: 2px solid var(--accent); }
+
+  /* Notes */
+  .notes-text { font-size: 11px; color: var(--muted); max-width: 260px; line-height: 1.4; }
+
+  /* Footer */
+  footer {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted);
+    padding: 16px 0; margin-top: 16px; border-top: 1px solid var(--border); line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .notes-text { display: none; }
+    .range-wrap { min-width: 120px; }
+    h1 { font-size: 22px; }
+  }
+  @media (max-width: 600px) {
+    td { padding: 8px 8px; }
+    footer { font-size: 10px; padding: 16px; }
+  }
+
+  .back-link {
+    display: block; padding: 6px 24px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    color: #6b8299; text-decoration: none; letter-spacing: 0.05em;
+  }
+  .back-link:hover { color: #00d4ff; }
+</style>
+</head>
+<body>
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<a class="back-link" href="../index.html">← All Sectors</a>
+<header>
+<div class="header-inner">
+<div class="header-label">// Biotech</div>
+<h1>Stock <span>Universe</span></h1>
+<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3434</span> · <span id="last-updated">Last updated: 2026-05-24</span> · <span id="version">v1</span></div>
+</div>
+</header>
+<nav>
+<div class="nav-inner">
+<a class="nav-link active" href="index.html">📊 Dashboard</a>
+<a class="nav-link" href="metrics.html">📋 Metrics</a>
+<a class="nav-link" href="news.html">📰 News</a>
+<a class="nav-link" href="signals.html">🎯 Signals</a>
+<a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
+<a class="nav-link" href="charts.html">📈 Charts</a>
+<a class="nav-link" href="calculator.html">🧮 What-If</a>
+</div>
+</nav>
+<div class="container">
+<div class="filters">
+<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
+<button class="filter-btn" data-filter="large-cap" onclick="filterTable('large-cap', this)">💊 Large Cap</button>
+<button class="filter-btn" data-filter="uk-listed" onclick="filterTable('uk-listed', this)">🇬🇧 UK Listed</button>
+<button class="filter-btn" data-filter="gene-editing" onclick="filterTable('gene-editing', this)">✂️ Gene Editing</button>
+<button class="filter-btn" data-filter="genomics" onclick="filterTable('genomics', this)">🧬 Genomics</button>
+<button class="filter-btn" data-filter="oncology" onclick="filterTable('oncology', this)">🎗️ Oncology</button>
+<button class="filter-btn" data-filter="mrna" onclick="filterTable('mrna', this)">💉 mRNA</button>
+<button class="filter-btn" data-filter="rare-disease" onclick="filterTable('rare-disease', this)">🔬 Rare Disease</button>
+<button class="filter-btn" data-filter="metabolic" onclick="filterTable('metabolic', this)">⚖️ Metabolic</button>
+<button class="filter-btn" data-filter="neuroscience" onclick="filterTable('neuroscience', this)">🧠 Neuroscience</button>
+</div>
+<div class="search-count-bar">
+<input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="visible-count">29</span> of 29 stocks</span>
+</div>
+<div class="table-wrap">
+<table id="stock-table">
+<thead>
+<tr>
+<th class="sortable" onclick="sortTable('ticker', this)">Ticker</th>
+<th class="sortable" onclick="sortTable('company', this)">Company</th>
+<th class="sortable" onclick="sortTable('cat', this)">Category</th>
+<th class="sortable" onclick="sortTable('price', this)">Price (£)</th>
+<th class="sortable" onclick="sortTable('return', this)">1yr Return</th>
+<th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
+<th>52-Week Range</th>
+<th>Key Angle</th>
+</tr>
+</thead>
+<tbody>
+<!-- ============================================================ -->
+<!-- LARGE CAP BIOTECH                                            -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="large-cap" data-change-1d="+0.43%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+5.06%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="253" data-price-usd="0" data-return="+27%" data-ticker="AMGN">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AMGN/" target="_blank"><div class="ticker" style="color:var(--accent)">AMGN</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Amgen</td>
+<td><span class="cat-badge cat-large-cap">Large Cap</span></td>
+<td><span class="price">£253</span><div class="change-pills"><span class="cpill pos">+0.43% 1D</span></div></td>
+<td><span class="return-positive">+27%</span></td><td><span class="ytd-return ytd-pos">+5.06%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Diversified biotech giant. Inflammation, oncology &amp; bone health. Strong cash generation.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="large-cap" data-change-1d="+2.17%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+11.12%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="100" data-price-usd="0" data-return="+29%" data-ticker="GILD">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/GILD/" target="_blank"><div class="ticker" style="color:var(--accent)">GILD</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Gilead Sciences</td>
+<td><span class="cat-badge cat-large-cap">Large Cap</span></td>
+<td><span class="price">£100</span><div class="change-pills"><span class="cpill pos">+2.17% 1D</span></div></td>
+<td><span class="return-positive">+29%</span></td><td><span class="ytd-return ytd-pos">+11.12%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">HIV/HBV dominance. Oncology pivot via Kite Pharma CAR-T. Lenacapavir long-acting HIV.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="large-cap" data-change-1d="-1.42%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-17.48%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="476" data-price-usd="0" data-return="+34%" data-ticker="REGN">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/REGN/" target="_blank"><div class="ticker" style="color:var(--accent)">REGN</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Regeneron Pharmaceuticals</td>
+<td><span class="cat-badge cat-large-cap">Large Cap</span></td>
+<td><span class="price">£476</span><div class="change-pills"><span class="cpill neg">-1.42% 1D</span></div></td>
+<td><span class="return-positive">+34%</span></td><td><span class="ytd-return ytd-neg">-17.48%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Dupixent blockbuster growing fast across 7 indications. Oncology &amp; eye disease pipeline.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="large-cap" data-change-1d="+0.13%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-3.89%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="323" data-price-usd="0" data-return="+20%" data-ticker="VRTX">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/VRTX/" target="_blank"><div class="ticker" style="color:var(--accent)">VRTX</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Vertex Pharmaceuticals</td>
+<td><span class="cat-badge cat-large-cap">Large Cap</span></td>
+<td><span class="price">£323</span><div class="change-pills"><span class="cpill pos">+0.13% 1D</span></div></td>
+<td><span class="return-positive">+20%</span></td><td><span class="ytd-return ytd-neg">-3.89%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">CF monopoly via Trikafta. Pain pipeline (VX-548) next major catalyst. High-margin business.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="large-cap" data-change-1d="+4.29%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+8.96%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="144" data-price-usd="0" data-return="+60%" data-ticker="BIIB">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BIIB/" target="_blank"><div class="ticker" style="color:var(--accent)">BIIB</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Biogen</td>
+<td><span class="cat-badge cat-large-cap">Large Cap</span></td>
+<td><span class="price">£144</span><div class="change-pills"><span class="cpill pos">+4.29% 1D</span></div></td>
+<td><span class="return-positive">+60%</span></td><td><span class="ytd-return ytd-pos">+8.96%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Leqembi (Alzheimer's) first mover. MS franchise. Acquired SAGE neuroscience portfolio.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="large-cap" data-change-1d="-0.46%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+12.37%" data-exchange="NYSE" data-high-gbp="0" data-low-gbp="0" data-price-gbp="44" data-price-usd="0" data-return="+40%" data-ticker="BMY">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BMY/" target="_blank"><div class="ticker" style="color:var(--accent)">BMY</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Bristol-Myers Squibb</td>
+<td><span class="cat-badge cat-large-cap">Large Cap</span></td>
+<td><span class="price">£44</span><div class="change-pills"><span class="cpill neg">-0.46% 1D</span></div></td>
+<td><span class="return-positive">+40%</span></td><td><span class="ytd-return ytd-pos">+12.37%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Revlimid cliff navigated. Opdivo/Eliquis franchise. Cardiovascular &amp; oncology pipeline strong.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- UK LISTED                                                     -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="uk-listed" data-change-1d="-0.64%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+2.39%" data-exchange="LSE" data-high-gbp="0" data-low-gbp="0" data-price-gbp="139" data-price-usd="0" data-return="+38%" data-ticker="AZN">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AZN.L/" target="_blank"><div class="ticker" style="color:var(--gold)">AZN</div></a><div class="exchange-badge">LSE</div></td>
+<td>AstraZeneca</td>
+<td><span class="cat-badge cat-uk-listed">UK Listed</span></td>
+<td><span class="price">£139</span><div class="change-pills"><span class="cpill neg">-0.64% 1D</span></div></td>
+<td><span class="return-positive">+38%</span></td><td><span class="ytd-return ytd-pos">+2.39%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Oncology powerhouse. Tagrisso, Lynparza &amp; Calquence driving double-digit sales growth.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="uk-listed" data-change-1d="+0.03%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+4.58%" data-exchange="LSE" data-high-gbp="0" data-low-gbp="0" data-price-gbp="19" data-price-usd="0" data-return="+49%" data-ticker="GSK">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/GSK.L/" target="_blank"><div class="ticker" style="color:var(--gold)">GSK</div></a><div class="exchange-badge">LSE</div></td>
+<td>GSK</td>
+<td><span class="cat-badge cat-uk-listed">UK Listed</span></td>
+<td><span class="price">£19</span><div class="change-pills"><span class="cpill pos">+0.03% 1D</span></div></td>
+<td><span class="return-positive">+49%</span></td><td><span class="ytd-return ytd-pos">+4.58%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Shingrix vaccine + RSV (Arexvy). Specialty medicines pivot. HIV franchise via ViiV.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- GENE EDITING                                                  -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="gene-editing" data-change-1d="+1.10%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-6.34%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="37" data-price-usd="0" data-return="+42%" data-ticker="CRSP">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/CRSP/" target="_blank"><div class="ticker" style="color:var(--green)">CRSP</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>CRISPR Therapeutics</td>
+<td><span class="cat-badge cat-gene-editing">Gene Editing</span></td>
+<td><span class="price">£37</span><div class="change-pills"><span class="cpill pos">+1.10% 1D</span></div></td>
+<td><span class="return-positive">+42%</span></td><td><span class="ytd-return ytd-neg">-6.34%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Casgevy — world's first approved CRISPR therapy (sickle cell &amp; beta-thal). Pure-play gene editing.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="gene-editing" data-change-1d="+2.73%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+5.53%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="21" data-price-usd="0" data-return="+87%" data-ticker="BEAM">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BEAM/" target="_blank"><div class="ticker" style="color:var(--green)">BEAM</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Beam Therapeutics</td>
+<td><span class="cat-badge cat-gene-editing">Gene Editing</span></td>
+<td><span class="price">£21</span><div class="change-pills"><span class="cpill pos">+2.73% 1D</span></div></td>
+<td><span class="return-positive">+87%</span></td><td><span class="ytd-return ytd-pos">+5.53%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Base editing pioneer — more precise than CRISPR. Blood disorders &amp; liver disease clinical stage.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="gene-editing" data-change-1d="+1.29%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+36.81%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="9.38" data-price-usd="0" data-return="+84%" data-ticker="NTLA">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/NTLA/" target="_blank"><div class="ticker" style="color:var(--green)">NTLA</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Intellia Therapeutics</td>
+<td><span class="cat-badge cat-gene-editing">Gene Editing</span></td>
+<td><span class="price">£9.38</span><div class="change-pills"><span class="cpill pos">+1.29% 1D</span></div></td>
+<td><span class="return-positive">+84%</span></td><td><span class="ytd-return ytd-pos">+36.81%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">In vivo CRISPR editing. TTR amyloidosis &amp; liver targets. Regeneron partnership validates platform.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="gene-editing" data-change-1d="+3.37%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+34.63%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="2.05" data-price-usd="0" data-return="+76%*" data-ticker="EDIT">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/EDIT/" target="_blank"><div class="ticker" style="color:var(--green)">EDIT</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Editas Medicine</td>
+<td><span class="cat-badge cat-gene-editing">Gene Editing</span></td>
+<td><span class="price">£2.05</span><div class="change-pills"><span class="cpill pos">+3.37% 1D</span></div></td>
+<td><span class="return-positive">+76%*</span></td><td><span class="ytd-return ytd-pos">+34.63%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Retinal disease (EDIT-301) focus. Lower-cost CRISPR approach. Speculative clinical stage.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- GENOMICS / TOOLS                                              -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="genomics" data-change-1d="-1.59%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+7.49%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="107" data-price-usd="0" data-return="+83%" data-ticker="ILMN">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/ILMN/" target="_blank"><div class="ticker" style="color:var(--teal)">ILMN</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Illumina</td>
+<td><span class="cat-badge cat-genomics">Genomics</span></td>
+<td><span class="price">£107</span><div class="change-pills"><span class="cpill neg">-1.59% 1D</span></div></td>
+<td><span class="return-positive">+83%</span></td><td><span class="ytd-return ytd-pos">+7.49%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Sequencing monopoly. NovaSeq X drives cost-per-genome down. AI integration accelerating.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="genomics" data-change-1d="-2.40%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-33.70%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="0.908" data-price-usd="0" data-return="+44%*" data-ticker="PACB">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/PACB/" target="_blank"><div class="ticker" style="color:var(--teal)">PACB</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Pacific Biosciences</td>
+<td><span class="cat-badge cat-genomics">Genomics</span></td>
+<td><span class="price">£0.908</span><div class="change-pills"><span class="cpill neg">-2.40% 1D</span></div></td>
+<td><span class="return-modest">+44%*</span></td><td><span class="ytd-return ytd-neg">-33.70%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Long-read HiFi sequencing complements short-read. Complex genomics &amp; rare disease niche.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="genomics" data-change-1d="-1.12%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-11.21%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="151" data-price-usd="0" data-return="+54%" data-ticker="NTRA">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/NTRA/" target="_blank"><div class="ticker" style="color:var(--teal)">NTRA</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Natera</td>
+<td><span class="cat-badge cat-genomics">Genomics</span></td>
+<td><span class="price">£151</span><div class="change-pills"><span class="cpill neg">-1.12% 1D</span></div></td>
+<td><span class="return-positive">+54%</span></td><td><span class="ytd-return ytd-neg">-11.21%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Liquid biopsy leader. Signatera MRD monitoring + Panorama NIPT. Oncology expansion.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="genomics" data-change-1d="-3.51%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-28.33%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="2.24" data-price-usd="0" data-return="+9%*" data-ticker="RXRX">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/RXRX/" target="_blank"><div class="ticker" style="color:var(--teal)">RXRX</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Recursion Pharmaceuticals</td>
+<td><span class="cat-badge cat-genomics">Genomics</span></td>
+<td><span class="price">£2.24</span><div class="change-pills"><span class="cpill neg">-3.51% 1D</span></div></td>
+<td><span class="return-modest">+9%*</span></td><td><span class="ytd-return ytd-neg">-28.33%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">AI-first drug discovery platform. NVIDIA partnership. Biological foundation model at scale.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- ONCOLOGY                                                      -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="oncology" data-change-1d="-0.66%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-4.20%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="72" data-price-usd="0" data-return="+52%" data-ticker="INCY">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/INCY/" target="_blank"><div class="ticker" style="color:var(--rose)">INCY</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Incyte</td>
+<td><span class="cat-badge cat-oncology">Oncology</span></td>
+<td><span class="price">£72</span><div class="change-pills"><span class="cpill neg">-0.66% 1D</span></div></td>
+<td><span class="return-positive">+52%</span></td><td><span class="ytd-return ytd-neg">-4.20%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Jakafi cash cow. Opzelura (atopic derm) growing fast. Deep oncology &amp; inflammation pipeline.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="oncology" data-change-1d="-0.20%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+15.08%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="37" data-price-usd="0" data-return="+49%" data-ticker="EXEL">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/EXEL/" target="_blank"><div class="ticker" style="color:var(--rose)">EXEL</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Exelixis</td>
+<td><span class="cat-badge cat-oncology">Oncology</span></td>
+<td><span class="price">£37</span><div class="change-pills"><span class="cpill neg">-0.20% 1D</span></div></td>
+<td><span class="return-positive">+49%</span></td><td><span class="ytd-return ytd-pos">+15.08%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Cabometyx for renal &amp; liver cancer. Profitability inflection. BMS partnership royalties growing.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="oncology" data-change-1d="-1.08%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-25.67%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="221" data-price-usd="0" data-return="+5%" data-ticker="ALNY">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/ALNY/" target="_blank"><div class="ticker" style="color:var(--rose)">ALNY</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Alnylam Pharmaceuticals</td>
+<td><span class="cat-badge cat-oncology">Oncology</span></td>
+<td><span class="price">£221</span><div class="change-pills"><span class="cpill neg">-1.08% 1D</span></div></td>
+<td><span class="return-modest">+5%</span></td><td><span class="ytd-return ytd-neg">-25.67%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">RNAi therapy pioneer. Leqvio (cholesterol, Novartis) + TTR franchise. Platform validated.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="oncology" data-change-1d="+0.17%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+0.60%" data-exchange="NYSE" data-high-gbp="0" data-low-gbp="0" data-price-gbp="17" data-price-usd="0" data-return="+196%*" data-ticker="RCUS">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/RCUS/" target="_blank"><div class="ticker" style="color:var(--rose)">RCUS</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Arcus Biosciences</td>
+<td><span class="cat-badge cat-oncology">Oncology</span></td>
+<td><span class="price">£17</span><div class="change-pills"><span class="cpill pos">+0.17% 1D</span></div></td>
+<td><span class="return-positive">+196%*</span></td><td><span class="ytd-return ytd-pos">+0.60%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">ARC-7 combo (zimberelimab + domvanalimab) Phase 3 pivotal data. Gilead partnership backing.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- MRNA / VACCINES                                               -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="mrna" data-change-1d="-0.89%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+51.91%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="35" data-price-usd="0" data-return="+110%" data-ticker="MRNA">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/MRNA/" target="_blank"><div class="ticker" style="color:var(--purple)">MRNA</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Moderna</td>
+<td><span class="cat-badge cat-mrna">mRNA</span></td>
+<td><span class="price">£35</span><div class="change-pills"><span class="cpill neg">-0.89% 1D</span></div></td>
+<td><span class="return-positive">+110%</span></td><td><span class="ytd-return ytd-pos">+51.91%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Post-COVID pivot. RSV mResvia approved. Personalised cancer vaccine (mRNA-4157) Phase 3.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="mrna" data-change-1d="-3.01%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-4.71%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="69" data-price-usd="0" data-return="+16%" data-ticker="BNTX">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BNTX/" target="_blank"><div class="ticker" style="color:var(--purple)">BNTX</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>BioNTech</td>
+<td><span class="cat-badge cat-mrna">mRNA</span></td>
+<td><span class="price">£69</span><div class="change-pills"><span class="cpill neg">-3.01% 1D</span></div></td>
+<td><span class="return-modest">+16%</span></td><td><span class="ytd-return ytd-neg">-4.71%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">BNT111 melanoma vaccine + oncology pipeline beyond COVID. EU-listed biotech platform.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="mrna" data-change-1d="+2.45%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+29.17%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="6.86" data-price-usd="0" data-return="+50%*" data-ticker="NVAX">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/NVAX/" target="_blank"><div class="ticker" style="color:var(--purple)">NVAX</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Novavax</td>
+<td><span class="cat-badge cat-mrna">mRNA</span></td>
+<td><span class="price">£6.86</span><div class="change-pills"><span class="cpill pos">+2.45% 1D</span></div></td>
+<td><span class="return-positive">+50%*</span></td><td><span class="ytd-return ytd-pos">+29.17%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Protein-subunit COVID + combo flu/COVID nuvaxovid. Sanofi partnership provides revenue floor.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- RARE DISEASE                                                  -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="rare-disease" data-change-1d="+0.11%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-9.02%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="40" data-price-usd="0" data-return="+10%" data-ticker="BMRN">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BMRN/" target="_blank"><div class="ticker" style="color:var(--amber)">BMRN</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>BioMarin Pharmaceutical</td>
+<td><span class="cat-badge cat-rare-disease">Rare Disease</span></td>
+<td><span class="price">£40</span><div class="change-pills"><span class="cpill pos">+0.11% 1D</span></div></td>
+<td><span class="return-modest">+10%</span></td><td><span class="ytd-return ytd-neg">-9.02%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">PKU, MPS &amp; achondroplasia. Voxzogo (dwarfism) growing. Steady orphan drug cash generation.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="rare-disease" data-change-1d="-1.74%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-21.16%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="13" data-price-usd="0" data-return="+61%" data-ticker="SRPT">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/SRPT/" target="_blank"><div class="ticker" style="color:var(--amber)">SRPT</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Sarepta Therapeutics</td>
+<td><span class="cat-badge cat-rare-disease">Rare Disease</span></td>
+<td><span class="price">£13</span><div class="change-pills"><span class="cpill neg">-1.74% 1D</span></div></td>
+<td><span class="return-positive">+61%</span></td><td><span class="ytd-return ytd-neg">-21.16%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Duchenne muscular dystrophy leader. Elevidys gene therapy approved. Exon-skipping franchise.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- METABOLIC                                                     -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="metabolic" data-change-1d="+1.24%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-11.03%" data-exchange="NYSE" data-high-gbp="0" data-low-gbp="0" data-price-gbp="33" data-price-usd="0" data-return="+28%" data-ticker="NVO">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/NVO/" target="_blank"><div class="ticker" style="color:var(--lime)">NVO</div></a><div class="exchange-badge">NYSE (ADR)</div></td>
+<td>Novo Nordisk</td>
+<td><span class="cat-badge cat-metabolic">Metabolic</span></td>
+<td><span class="price">£33</span><div class="change-pills"><span class="cpill pos">+1.24% 1D</span></div></td>
+<td><span class="return-positive">+28%</span></td><td><span class="ytd-return ytd-neg">-11.03%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Ozempic/Wegovy GLP-1 duopoly. Obesity mega-trend. CagriSema next-gen combination.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="metabolic" data-change-1d="+2.21%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-1.09%" data-exchange="NYSE" data-high-gbp="0" data-low-gbp="0" data-price-gbp="793" data-price-usd="0" data-return="+71%" data-ticker="LLY">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/LLY/" target="_blank"><div class="ticker" style="color:var(--lime)">LLY</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Eli Lilly</td>
+<td><span class="cat-badge cat-metabolic">Metabolic</span></td>
+<td><span class="price">£793</span><div class="change-pills"><span class="cpill pos">+2.21% 1D</span></div></td>
+<td><span class="return-positive">+71%</span></td><td><span class="ytd-return ytd-neg">-1.09%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Mounjaro/Zepbound GLP-1. Donanemab (Alzheimer's) approved. Most valuable pharma company.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- NEUROSCIENCE                                                  -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="neuroscience" data-change-1d="+2.76%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="+36.54%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="22" data-price-usd="0" data-return="+81%" data-ticker="LEGN">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/LEGN/" target="_blank"><div class="ticker" style="color:var(--indigo)">LEGN</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Legend Biotech</td>
+<td><span class="cat-badge cat-neuroscience">Neuroscience</span></td>
+<td><span class="price">£22</span><div class="change-pills"><span class="cpill pos">+2.76% 1D</span></div></td>
+<td><span class="return-positive">+81%</span></td><td><span class="ytd-return ytd-pos">+36.54%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Carvykti (myeloma CAR-T) with J&amp;J. Cell therapy pure-play. Best-in-class response rates.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="neuroscience" data-change-1d="-0.29%" data-change-1m="0.00%" data-change-1w="0.00%" data-change-ytd="-5.16%" data-exchange="NASDAQ" data-high-gbp="0" data-low-gbp="0" data-price-gbp="56" data-price-usd="0" data-return="+136%" data-ticker="IONS">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/IONS/" target="_blank"><div class="ticker" style="color:var(--indigo)">IONS</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Ionis Pharmaceuticals</td>
+<td><span class="cat-badge cat-neuroscience">Neuroscience</span></td>
+<td><span class="price">£56</span><div class="change-pills"><span class="cpill neg">-0.29% 1D</span></div></td>
+<td><span class="return-positive">+136%</span></td><td><span class="ytd-return ytd-neg">-5.16%</span></td>
+<td><div class="range-wrap"><span class="range-label">—</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">—</span></div></td>
+<td><span class="notes-text">Antisense oligonucleotide (ASO) platform. Spinraza (SMA) + 40-drug pipeline across CNS &amp; rare disease.</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<footer>
+<strong>⚠️ NOT FINANCIAL ADVICE.</strong> This dashboard is for informational and research purposes only. All prices approximate, converted at £1 = $1.3434 (2026-05-24). Past performance does not guarantee future results. 1yr returns are approximate based on 52-week data. *Speculative tickers (NVAX, EDIT, PACB, RXRX, RCUS) returns shown from 52-week low. Always do your own research and consult a financial adviser before investing.
+</footer>
+</div>
+<script>
+  let sortState = { col: null, dir: 1 };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const returnTh = document.querySelector('th[onclick*="\'return\'"]');
+    sortState.col = 'return';
+    sortTable('return', returnTh);
+  });
+
+  function sortTable(col, th) {
+    const tbody = document.querySelector('#stock-table tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    if (sortState.col === col) {
+      sortState.dir *= -1;
+    } else {
+      sortState.col = col;
+      sortState.dir = 1;
+    }
+
+    document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+    th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+
+    rows.sort((a, b) => {
+      let av, bv;
+      if (col === 'ticker')  { av = a.dataset.ticker;  bv = b.dataset.ticker; }
+      if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
+      if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
+      if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
+      if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
+      if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
+      return av.localeCompare(bv) * sortState.dir;
+    });
+
+    rows.forEach(r => tbody.appendChild(r));
+  }
+
+  let currentCat = 'all';
+
+  function applyFilters() {
+    const query = document.getElementById('stock-search').value.toLowerCase().trim();
+    const rows  = document.querySelectorAll('#stock-table tbody tr');
+    let visible = 0;
+    rows.forEach(row => {
+      const matchCat    = currentCat === 'all' || row.dataset.cat === currentCat;
+      const matchSearch = !query
+        || row.dataset.ticker.toLowerCase().includes(query)
+        || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
+      if (matchCat && matchSearch) {
+        row.classList.remove('hidden');
+        visible++;
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+    document.getElementById('visible-count').textContent = visible;
+  }
+
+  function filterTable(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = cat;
+    applyFilters();
+  }
+
+  function searchTable() {
+    applyFilters();
+  }
+
+  function buildTape(stocks) {
+    const track = document.getElementById('tape-track');
+    if (!track || !stocks.length) return;
+    const items = stocks.map(s => {
+      const change = s.change_1d || '+0.00%';
+      const val    = parseFloat(change);
+      const isNeg  = change.startsWith('-');
+      const isFlat = val === 0;
+      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
+      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
+      const price  = parseFloat(s.price_gbp) || 0;
+      const priceStr = price <= 0 ? '—' :
+                       price >= 10 ? '£' + Math.round(price) :
+                       price >= 1  ? '£' + price.toFixed(2) :
+                                     '£' + price.toFixed(3);
+      return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${priceStr}</span><span class="tape-r ${cls}">${arrow} ${change}</span></span>`;
+    }).join('');
+    track.innerHTML = items + items;
+    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
+    track.classList.add('running');
+  }
+
+  if (window.PRICES_DATA) {
+    buildTape(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json')
+      .then(r => r.json())
+      .then(data => buildTape(data.stocks))
+      .catch(() => {
+        const rows = Array.from(document.querySelectorAll('#stock-table tbody tr'));
+        buildTape(rows.map(row => ({
+          ticker:    row.dataset.ticker,
+          price_gbp: row.dataset.priceGbp || '0',
+          change_1d: row.dataset['change-1d'] || '+0.00%',
+        })));
+      });
+  }
+</script>
+</body>
+</html>

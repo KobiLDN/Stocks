@@ -27,22 +27,31 @@ jobs:
           python-version: '3.12'
           cache: pip
 
-      - name: Install deps
+      - name: Install deps (AI)
         working-directory: AI
         run: pip install -r requirements.txt
 
-      - name: Run price updater
+      - name: Run price updater (AI)
         working-directory: AI
+        run: python update_prices.py
+
+      - name: Install deps (Biotech)
+        working-directory: Biotech
+        run: pip install -r requirements.txt
+
+      - name: Run price updater (Biotech)
+        working-directory: Biotech
         run: python update_prices.py
 
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js; then
+          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js; then
             echo "No price changes."
           else
             git add AI/index.html AI/prices.json AI/prices-data.js
+            git add Biotech/index.html Biotech/prices.json Biotech/prices-data.js
             git commit -m "Update prices ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             git push
           fi

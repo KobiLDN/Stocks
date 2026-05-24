@@ -6,3 +6,12 @@ AI/*.pyc
 AI/server.py
 AI/start.bat
 AI/PROMPT.txt
+
+# Biotech sector — local-only files
+Biotech/key.txt
+Biotech/test_openrouter.py
+Biotech/__pycache__/
+Biotech/*.pyc
+Biotech/server.py
+Biotech/start.bat
+Biotech/PROMPT.txt
