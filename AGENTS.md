@@ -107,7 +107,7 @@ Workflow files must live at the **repo root** (`.github/workflows/`) — GitHub 
 **This project is keyless by default.** Any new feature must work with no-auth/free data sources. Adding a new secret requires an explicit user decision — do **not** silently add one.
 
 Current approved exceptions:
-- **`OPENROUTER_API_KEY`** (GitHub Actions secret) — used only by `AI/generate-signals.yml` to call `deepseek/deepseek-v4-flash` via OpenRouter. Cost: ~$0.004/run.
+- **`OPENROUTER_API_KEY`** (GitHub Actions secret) — used only by `.github/workflows/generate-signals.yml` to call `deepseek/deepseek-v4-flash` via OpenRouter. Cost: ~$0.004/run.
 
 Everything else remains keyless:
 - **News sentiment** → yfinance `.news` + local VADER scoring (no LLM, no Finnhub).
