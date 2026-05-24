@@ -1,4 +1,4 @@
-name: Generate AI Signals
+name: Generate Signals
 
 on:
   schedule:
@@ -24,12 +24,22 @@ jobs:
           python-version: '3.12'
           cache: pip
 
-      - name: Install deps
+      - name: Install deps (AI)
         working-directory: AI
         run: pip install -r requirements.txt
 
-      - name: Generate signals
+      - name: Generate signals (AI)
         working-directory: AI
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python generate_signals_local.py
+
+      - name: Install deps (Biotech)
+        working-directory: Biotech
+        run: pip install -r requirements.txt
+
+      - name: Generate signals (Biotech)
+        working-directory: Biotech
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python generate_signals_local.py
@@ -38,10 +48,11 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- AI/signals-local.json AI/signals-local.js; then
+          if git diff --quiet -- AI/signals-local.json AI/signals-local.js Biotech/signals-local.json Biotech/signals-local.js; then
             echo "No signal changes."
           else
             git add AI/signals-local.json AI/signals-local.js
-            git commit -m "Update AI signals ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git add Biotech/signals-local.json Biotech/signals-local.js
+            git commit -m "Update signals ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             git push
           fi

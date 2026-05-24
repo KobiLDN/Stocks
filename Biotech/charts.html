@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biotech — Charts</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="prices-data.js"></script>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0e1419;
+    --surface2: #141b22;
+    --border: #1e2d3d;
+    --accent: #00d4ff;
+    --accent2: #ff6b35;
+    --gold: #ffd700;
+    --text: #e0eaf5;
+    --muted: #5a7a9a;
+    --red: #ff4444;
+    --green: #00e676;
+    --purple: #c084fc;
+    --blue: #4488ff;
+    --indigo: #a78bfa;
+    --rose: #fb7185;
+    --teal: #2dd4bf;
+    --amber: #f59e0b;
+    --slate: #94a3b8;
+    --lime: #a3e635;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 36px;
+  }
+
+  /* Ticker tape */
+  #ticker-tape {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 36px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--accent);
+    z-index: 200;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .tape-track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  .tape-track.running { animation: tape-scroll linear infinite; }
+  .tape-track:hover { animation-play-state: paused; }
+  @keyframes tape-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tape-item {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 36px;
+    border-right: 1px solid var(--border);
+    cursor: default;
+  }
+  .tape-t { color: #fff; font-weight: 700; letter-spacing: 1px; }
+  .tape-p { color: var(--text); }
+  .tape-r { font-weight: 700; }
+  .tape-r.pos  { color: var(--green); }
+  .tape-r.neg  { color: var(--red); }
+  .tape-r.flat { color: var(--muted); }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .nav-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    gap: 2px;
+  }
+  .nav-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .nav-link:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .nav-link { position: relative; }
+  .nav-link[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 200px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .nav-link[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .nav-link:hover[data-tooltip]::after,
+  .nav-link:hover[data-tooltip]::before { opacity: 1; }
+  a[href="index.html"].nav-link[data-tooltip]::after    { left: 0; transform: none; }
+  a[href="index.html"].nav-link[data-tooltip]::before   { left: 16px; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
+
+  /* HEADER */
+  header {
+    position: relative;
+    z-index: 10;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .header-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 24px 0 43px;
+    position: relative;
+  }
+  .header-inner::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+  }
+  .header-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  h1 { font-size: 36px; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 10px; }
+  h1 span { color: var(--accent); }
+  .header-sub { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
+
+  /* TOOLBAR */
+  .toolbar {
+    position: relative;
+    z-index: 5;
+    padding: 12px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .toolbar-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .toolbar-group { display: flex; gap: 2px; align-items: center; }
+  .toolbar-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-right: 8px;
+  }
+  .tool-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    text-transform: uppercase;
+  }
+  .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .tool-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .divider { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
+
+  /* CAT BUTTONS in toolbar */
+  .cat-btn { text-transform: uppercase; }
+  .cat-btn.active-large-cap    { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }
+  .cat-btn.active-uk-listed    { background: var(--gold);    border-color: var(--gold);    color: var(--bg); }
+  .cat-btn.active-gene-editing { background: var(--green);   border-color: var(--green);   color: var(--bg); }
+  .cat-btn.active-genomics     { background: var(--teal);    border-color: var(--teal);    color: var(--bg); }
+  .cat-btn.active-oncology     { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }
+  .cat-btn.active-mrna         { background: var(--purple);  border-color: var(--purple);  color: #fff; }
+  .cat-btn.active-rare-disease { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }
+  .cat-btn.active-metabolic    { background: var(--lime);    border-color: var(--lime);    color: var(--bg); }
+  .cat-btn.active-neuroscience { background: var(--indigo);  border-color: var(--indigo);  color: #fff; }
+
+  /* SINGLE VIEW */
+  #single-view {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 24px;
+    align-items: start;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 24px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  .sidebar-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-left: 2px;
+  }
+
+  .cat-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 12px 4px;
+    display: block;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .cat-label.large-cap    { color: var(--accent); }
+  .cat-label.uk-listed    { color: var(--gold); }
+  .cat-label.gene-editing { color: var(--green); }
+  .cat-label.genomics     { color: var(--teal); }
+  .cat-label.oncology     { color: var(--rose); }
+  .cat-label.mrna         { color: var(--purple); }
+  .cat-label.rare-disease { color: var(--amber); }
+  .cat-label.metabolic    { color: var(--lime); }
+  .cat-label.neuroscience { color: var(--indigo); }
+
+  .stock-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    border-left: 2px solid transparent;
+    color: var(--muted);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s;
+  }
+  .stock-btn:hover { background: var(--surface); color: var(--text); }
+  .stock-btn.active { background: var(--surface2); border-left-color: var(--accent); color: #fff; }
+
+  .btn-ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    min-width: 52px;
+  }
+  .btn-name { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .stock-btn.active .btn-name { color: var(--text); }
+
+  .chart-area { min-width: 0; }
+  .chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .chart-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; color: #fff; }
+  .chart-name   { font-size: 15px; color: var(--muted); margin-left: 12px; }
+  .chart-widget { border: 1px solid var(--border); background: var(--surface); height: 580px; }
+
+  /* GRID VIEW */
+  #grid-view {
+    position: relative;
+    z-index: 1;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 24px;
+    display: none;
+  }
+  .grid-heading {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .grid-heading span { color: var(--accent); }
+  .chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 16px;
+  }
+  .grid-card { border: 1px solid var(--border); background: var(--surface); }
+  .grid-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .grid-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 700; }
+  .grid-name { font-size: 12px; color: var(--muted); }
+  .chart-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 8px; }
+
+  /* Mobile sidebar toggle */
+  .sidebar-toggle {
+    display: none;
+    width: 100%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 900px) {
+    #single-view { grid-template-columns: 1fr; padding: 16px 12px; gap: 12px; }
+    .sidebar { position: static; max-height: none; }
+    .chart-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .nav-inner { padding: 8px 12px; flex-wrap: wrap; }
+    .nav-link { font-size: 11px; padding: 7px 14px; letter-spacing: 1px; }
+    header { padding: 20px 0 16px; }
+    .header-inner { padding-left: 27px; }
+    .header-inner::before { left: 12px; }
+    .toolbar { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; }
+    .divider { display: none !important; }
+    .toolbar-label { font-size: 9px; }
+    .tool-btn { font-size: 10px; padding: 6px 10px; }
+    #cat-toolbar { flex-wrap: wrap; gap: 4px; }
+    .sidebar-toggle { display: block; }
+    .sidebar { display: none; max-height: 300px; overflow-y: auto; background: var(--surface); border: 1px solid var(--border); margin-bottom: 12px; }
+    .sidebar.open { display: block; }
+    .chart-widget, #single-widget { height: 380px !important; }
+    .chart-ticker { font-size: 20px; }
+    .chart-name { font-size: 13px; }
+    .grid-card > div[id^="grid-chart"] { height: 250px !important; }
+  }
+
+  .back-link {
+    display: block;
+    padding: 6px 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #6b8299;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  .back-link:hover { color: #00d4ff; }
+</style>
+</head>
+<body>
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<a class="back-link" href="../index.html">← All Sectors</a>
+<header>
+  <div class="header-inner">
+    <div class="header-label">// Biotech</div>
+    <h1>Price <span>Charts</span></h1>
+    <div class="header-sub">TradingView live charts · 29 stocks · single view or category grid</div>
+  </div>
+</header>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 29 biotech stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 29 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="AI top 10 picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link active" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
+</nav>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <!-- View toggle -->
+    <div class="toolbar-group">
+      <span class="toolbar-label">View</span>
+      <button class="tool-btn active" id="btn-single" onclick="setView('single')">Single</button>
+      <button class="tool-btn" id="btn-grid" onclick="setView('grid')">Category Grid</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Timeframe -->
+    <div class="toolbar-group">
+      <span class="toolbar-label">Period</span>
+      <button class="tool-btn" onclick="setTimeframe('1W', this)">1W</button>
+      <button class="tool-btn" onclick="setTimeframe('1M', this)">1M</button>
+      <button class="tool-btn active" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
+      <button class="tool-btn" onclick="setTimeframe('60M', this)">5Y</button>
+    </div>
+
+    <!-- Category buttons (grid mode only) -->
+    <div class="divider" id="cat-divider" style="display:none"></div>
+    <div class="toolbar-group" id="cat-toolbar" style="display:none">
+      <span class="toolbar-label">Category</span>
+      <button class="tool-btn cat-btn" onclick="setCategory('large-cap', this)">💊 Large Cap</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('uk-listed', this)">🇬🇧 UK Listed</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('gene-editing', this)">✂️ Gene Editing</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('genomics', this)">🔬 Genomics</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('oncology', this)">🎗️ Oncology</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('mrna', this)">💉 mRNA</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('rare-disease', this)">🧬 Rare Disease</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('metabolic', this)">⚖️ Metabolic</button>
+      <button class="tool-btn cat-btn" onclick="setCategory('neuroscience', this)">🧠 Neuroscience</button>
+    </div>
+  </div>
+</div>
+
+<!-- SINGLE VIEW -->
+<div id="single-view">
+  <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">☰ Select Stock ▾</button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-title">Select Stock</div>
+
+    <span class="cat-label large-cap">💊 Large Cap</span>
+    <button class="stock-btn" data-tv="NASDAQ:AMGN" data-name="Amgen" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">AMGN</span><span class="btn-name">Amgen</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:GILD" data-name="Gilead Sciences" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">GILD</span><span class="btn-name">Gilead Sciences</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:REGN" data-name="Regeneron" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">REGN</span><span class="btn-name">Regeneron Pharmaceuticals</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:VRTX" data-name="Vertex Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">VRTX</span><span class="btn-name">Vertex Pharmaceuticals</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:BIIB" data-name="Biogen" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">BIIB</span><span class="btn-name">Biogen</span></button>
+    <button class="stock-btn" data-tv="NYSE:BMY" data-name="Bristol-Myers Squibb" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">BMY</span><span class="btn-name">Bristol-Myers Squibb</span></button>
+
+    <span class="cat-label uk-listed">🇬🇧 UK Listed</span>
+    <button class="stock-btn" data-tv="LSE:AZN" data-name="AstraZeneca" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">AZN</span><span class="btn-name">AstraZeneca</span></button>
+    <button class="stock-btn" data-tv="LSE:GSK" data-name="GSK plc" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">GSK</span><span class="btn-name">GSK plc</span></button>
+
+    <span class="cat-label gene-editing">✂️ Gene Editing</span>
+    <button class="stock-btn" data-tv="NASDAQ:CRSP" data-name="CRISPR Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">CRSP</span><span class="btn-name">CRISPR Therapeutics</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:BEAM" data-name="Beam Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">BEAM</span><span class="btn-name">Beam Therapeutics</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:NTLA" data-name="Intellia Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">NTLA</span><span class="btn-name">Intellia Therapeutics</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:EDIT" data-name="Editas Medicine" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">EDIT</span><span class="btn-name">Editas Medicine</span></button>
+
+    <span class="cat-label genomics">🔬 Genomics / Tools</span>
+    <button class="stock-btn" data-tv="NASDAQ:ILMN" data-name="Illumina" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">ILMN</span><span class="btn-name">Illumina</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:PACB" data-name="Pacific Biosciences" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">PACB</span><span class="btn-name">Pacific Biosciences</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:NTRA" data-name="Natera" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">NTRA</span><span class="btn-name">Natera</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:RXRX" data-name="Recursion Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">RXRX</span><span class="btn-name">Recursion Pharmaceuticals</span></button>
+
+    <span class="cat-label oncology">🎗️ Oncology</span>
+    <button class="stock-btn" data-tv="NASDAQ:INCY" data-name="Incyte Corporation" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">INCY</span><span class="btn-name">Incyte Corporation</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:EXEL" data-name="Exelixis" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">EXEL</span><span class="btn-name">Exelixis</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:ALNY" data-name="Alnylam Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">ALNY</span><span class="btn-name">Alnylam Pharmaceuticals</span></button>
+    <button class="stock-btn" data-tv="NYSE:RCUS" data-name="Arcus Biosciences" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">RCUS</span><span class="btn-name">Arcus Biosciences</span></button>
+
+    <span class="cat-label mrna">💉 mRNA / Vaccines</span>
+    <button class="stock-btn" data-tv="NASDAQ:MRNA" data-name="Moderna" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">MRNA</span><span class="btn-name">Moderna</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:BNTX" data-name="BioNTech" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">BNTX</span><span class="btn-name">BioNTech</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:NVAX" data-name="Novavax" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">NVAX</span><span class="btn-name">Novavax</span></button>
+
+    <span class="cat-label rare-disease">🧬 Rare Disease</span>
+    <button class="stock-btn" data-tv="NASDAQ:BMRN" data-name="BioMarin Pharmaceutical" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">BMRN</span><span class="btn-name">BioMarin Pharmaceutical</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:SRPT" data-name="Sarepta Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">SRPT</span><span class="btn-name">Sarepta Therapeutics</span></button>
+
+    <span class="cat-label metabolic">⚖️ Metabolic</span>
+    <button class="stock-btn" data-tv="NYSE:NVO" data-name="Novo Nordisk" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--lime)">NVO</span><span class="btn-name">Novo Nordisk</span></button>
+    <button class="stock-btn" data-tv="NYSE:LLY" data-name="Eli Lilly" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--lime)">LLY</span><span class="btn-name">Eli Lilly</span></button>
+
+    <span class="cat-label neuroscience">🧠 Neuroscience</span>
+    <button class="stock-btn" data-tv="NASDAQ:LEGN" data-name="Legend Biotech" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">LEGN</span><span class="btn-name">Legend Biotech</span></button>
+    <button class="stock-btn" data-tv="NASDAQ:IONS" data-name="Ionis Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">IONS</span><span class="btn-name">Ionis Pharmaceuticals</span></button>
+  </aside>
+
+  <main class="chart-area">
+    <div class="chart-header">
+      <div style="display:flex;align-items:baseline;">
+        <span class="chart-ticker" id="chart-ticker">AMGN</span>
+        <span class="chart-name" id="chart-name">Amgen</span>
+      </div>
+    </div>
+    <div class="chart-widget" id="single-widget"></div>
+    <div class="chart-note">Charts powered by TradingView · requires internet connection</div>
+  </main>
+</div>
+
+<!-- GRID VIEW -->
+<div id="grid-view">
+  <div class="grid-heading" id="grid-heading">Select a category above</div>
+  <div class="chart-grid" id="chart-grid"></div>
+  <div class="chart-note" style="margin-top:16px;">Charts powered by TradingView · requires internet connection</div>
+</div>
+
+<script src="https://s3.tradingview.com/tv.js"></script>
+<script>
+  const CATEGORIES = {
+    'large-cap': {
+      label: '💊 Large Cap Biotech',
+      color: 'var(--accent)',
+      stocks: [
+        { tv: 'NASDAQ:AMGN', ticker: 'AMGN', name: 'Amgen' },
+        { tv: 'NASDAQ:GILD', ticker: 'GILD', name: 'Gilead Sciences' },
+        { tv: 'NASDAQ:REGN', ticker: 'REGN', name: 'Regeneron' },
+        { tv: 'NASDAQ:VRTX', ticker: 'VRTX', name: 'Vertex Pharmaceuticals' },
+        { tv: 'NASDAQ:BIIB', ticker: 'BIIB', name: 'Biogen' },
+        { tv: 'NYSE:BMY',    ticker: 'BMY',  name: 'Bristol-Myers Squibb' },
+      ]
+    },
+    'uk-listed': {
+      label: '🇬🇧 UK Listed',
+      color: 'var(--gold)',
+      stocks: [
+        { tv: 'LSE:AZN', ticker: 'AZN', name: 'AstraZeneca' },
+        { tv: 'LSE:GSK', ticker: 'GSK', name: 'GSK plc' },
+      ]
+    },
+    'gene-editing': {
+      label: '✂️ Gene Editing',
+      color: 'var(--green)',
+      stocks: [
+        { tv: 'NASDAQ:CRSP', ticker: 'CRSP', name: 'CRISPR Therapeutics' },
+        { tv: 'NASDAQ:BEAM', ticker: 'BEAM', name: 'Beam Therapeutics' },
+        { tv: 'NASDAQ:NTLA', ticker: 'NTLA', name: 'Intellia Therapeutics' },
+        { tv: 'NASDAQ:EDIT', ticker: 'EDIT', name: 'Editas Medicine' },
+      ]
+    },
+    'genomics': {
+      label: '🔬 Genomics / Tools',
+      color: 'var(--teal)',
+      stocks: [
+        { tv: 'NASDAQ:ILMN', ticker: 'ILMN', name: 'Illumina' },
+        { tv: 'NASDAQ:PACB', ticker: 'PACB', name: 'Pacific Biosciences' },
+        { tv: 'NASDAQ:NTRA', ticker: 'NTRA', name: 'Natera' },
+        { tv: 'NASDAQ:RXRX', ticker: 'RXRX', name: 'Recursion Pharmaceuticals' },
+      ]
+    },
+    'oncology': {
+      label: '🎗️ Oncology',
+      color: 'var(--rose)',
+      stocks: [
+        { tv: 'NASDAQ:INCY', ticker: 'INCY', name: 'Incyte Corporation' },
+        { tv: 'NASDAQ:EXEL', ticker: 'EXEL', name: 'Exelixis' },
+        { tv: 'NASDAQ:ALNY', ticker: 'ALNY', name: 'Alnylam Pharmaceuticals' },
+        { tv: 'NYSE:RCUS',   ticker: 'RCUS', name: 'Arcus Biosciences' },
+      ]
+    },
+    'mrna': {
+      label: '💉 mRNA / Vaccines',
+      color: 'var(--purple)',
+      stocks: [
+        { tv: 'NASDAQ:MRNA', ticker: 'MRNA', name: 'Moderna' },
+        { tv: 'NASDAQ:BNTX', ticker: 'BNTX', name: 'BioNTech' },
+        { tv: 'NASDAQ:NVAX', ticker: 'NVAX', name: 'Novavax' },
+      ]
+    },
+    'rare-disease': {
+      label: '🧬 Rare Disease',
+      color: 'var(--amber)',
+      stocks: [
+        { tv: 'NASDAQ:BMRN', ticker: 'BMRN', name: 'BioMarin Pharmaceutical' },
+        { tv: 'NASDAQ:SRPT', ticker: 'SRPT', name: 'Sarepta Therapeutics' },
+      ]
+    },
+    'metabolic': {
+      label: '⚖️ Metabolic',
+      color: 'var(--lime)',
+      stocks: [
+        { tv: 'NYSE:NVO', ticker: 'NVO', name: 'Novo Nordisk' },
+        { tv: 'NYSE:LLY', ticker: 'LLY', name: 'Eli Lilly' },
+      ]
+    },
+    'neuroscience': {
+      label: '🧠 Neuroscience',
+      color: 'var(--indigo)',
+      stocks: [
+        { tv: 'NASDAQ:LEGN', ticker: 'LEGN', name: 'Legend Biotech' },
+        { tv: 'NASDAQ:IONS', ticker: 'IONS', name: 'Ionis Pharmaceuticals' },
+      ]
+    },
+  };
+
+  const tfMap = {
+    '1W':  { interval: '60', range: '1W' },
+    '1M':  { interval: 'D',  range: '1M' },
+    '12M': { interval: 'W',  range: '12M' },
+    '60M': { interval: 'M',  range: '60M' },
+  };
+
+  let currentView      = 'single';
+  let currentSymbol    = 'NASDAQ:AMGN';
+  let currentName      = 'Amgen';
+  let currentTimeframe = '12M';
+  let currentCategory  = null;
+
+  /* ---- TIMEFRAME ---- */
+  function setTimeframe(tf, btn) {
+    document.querySelectorAll('.toolbar-group .tool-btn').forEach(b => {
+      if (['1W','1M','1Y','5Y'].includes(b.textContent)) b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    currentTimeframe = tf;
+    if (currentView === 'single') buildSingle();
+    else if (currentCategory)    buildGrid(currentCategory);
+  }
+
+  /* ---- VIEW TOGGLE ---- */
+  function setView(view) {
+    currentView = view;
+    document.getElementById('btn-single').classList.toggle('active', view === 'single');
+    document.getElementById('btn-grid').classList.toggle('active', view === 'grid');
+    document.getElementById('single-view').style.display = view === 'single' ? 'grid' : 'none';
+    document.getElementById('grid-view').style.display   = view === 'grid'   ? 'block' : 'none';
+    document.getElementById('cat-toolbar').style.display = view === 'grid'   ? 'flex' : 'none';
+    document.getElementById('cat-divider').style.display = view === 'grid'   ? 'block' : 'none';
+  }
+
+  /* ---- SINGLE CHART ---- */
+  function buildSingle() {
+    const widget = document.getElementById('single-widget');
+    widget.innerHTML = '';
+    const tf = tfMap[currentTimeframe];
+    new TradingView.widget({
+      container_id: 'single-widget',
+      symbol: currentSymbol,
+      interval: tf.interval,
+      range: tf.range,
+      timezone: 'Europe/London',
+      theme: 'dark',
+      style: '1',
+      locale: 'en',
+      enable_publishing: false,
+      hide_side_toolbar: false,
+      allow_symbol_change: false,
+      save_image: false,
+      height: 580,
+      width: '100%',
+      backgroundColor: '#000000',
+      gridColor: 'rgba(0,212,255,0.04)',
+    });
+  }
+
+  function loadSingle(btn) {
+    document.querySelectorAll('.stock-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentSymbol = btn.dataset.tv;
+    currentName   = btn.dataset.name;
+    document.getElementById('chart-ticker').textContent = btn.querySelector('.btn-ticker').textContent;
+    document.getElementById('chart-name').textContent   = btn.dataset.name;
+    buildSingle();
+    const sidebar = document.getElementById('sidebar');
+    const toggle  = document.getElementById('sidebar-toggle');
+    if (sidebar && window.innerWidth <= 768) {
+      sidebar.classList.remove('open');
+      toggle.textContent = '☰ Select Stock ▾';
+    }
+  }
+
+  /* ---- CATEGORY GRID ---- */
+  function setCategory(cat, btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => {
+      b.className = b.className.replace(/active-\S+/g, '').trim();
+    });
+    btn.classList.add('active-' + cat);
+    currentCategory = cat;
+    buildGrid(cat);
+  }
+
+  function buildGrid(cat) {
+    const data = CATEGORIES[cat];
+    const tf   = tfMap[currentTimeframe];
+    const grid = document.getElementById('chart-grid');
+    const heading = document.getElementById('grid-heading');
+
+    heading.innerHTML = `<span>${data.label}</span> — ${data.stocks.length} stocks`;
+    grid.innerHTML = '';
+
+    data.stocks.forEach((stock, i) => {
+      const containerId = `grid-chart-${i}`;
+      const card = document.createElement('div');
+      card.className = 'grid-card';
+      card.innerHTML = `
+        <div class="grid-card-header">
+          <span class="grid-ticker" style="color:${data.color}">${stock.ticker}</span>
+          <span class="grid-name">${stock.name}</span>
+        </div>
+        <div id="${containerId}" style="height:320px;"></div>
+      `;
+      grid.appendChild(card);
+
+      setTimeout(() => {
+        new TradingView.widget({
+          container_id: containerId,
+          symbol: stock.tv,
+          interval: tf.interval,
+          range: tf.range,
+          timezone: 'Europe/London',
+          theme: 'dark',
+          style: '1',
+          locale: 'en',
+          enable_publishing: false,
+          hide_top_bar: false,
+          hide_side_toolbar: true,
+          allow_symbol_change: false,
+          save_image: false,
+          height: 320,
+          width: '100%',
+          backgroundColor: '#000000',
+          gridColor: 'rgba(0,212,255,0.04)',
+        });
+      }, i * 150);
+    });
+  }
+
+  /* ---- MOBILE SIDEBAR TOGGLE ---- */
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const btn = document.getElementById('sidebar-toggle');
+    sidebar.classList.toggle('open');
+    btn.textContent = sidebar.classList.contains('open') ? '✕ Close ▴' : '☰ Select Stock ▾';
+  }
+
+  /* ---- INIT ---- */
+  window.addEventListener('load', () => {
+    document.querySelector('.stock-btn').classList.add('active');
+    buildSingle();
+  });
+
+  function buildTape(stocks) {
+    const track = document.getElementById('tape-track');
+    if (!track || !stocks.length) return;
+    const items = stocks.map(s => {
+      const change = s.change_1d || '+0.00%';
+      const val    = parseFloat(change);
+      const isNeg  = change.startsWith('-');
+      const isFlat = val === 0;
+      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
+      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
+      const price  = parseFloat(s.price_gbp) || 0;
+      const priceStr = price <= 0 ? '—' :
+                       price >= 10 ? '£' + Math.round(price) :
+                       price >= 1  ? '£' + price.toFixed(2) :
+                                     '£' + price.toFixed(3);
+      return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${priceStr}</span><span class="tape-r ${cls}">${arrow} ${change}</span></span>`;
+    }).join('');
+    track.innerHTML = items + items;
+    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
+    track.classList.add('running');
+  }
+
+  if (window.PRICES_DATA) {
+    buildTape(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
+  }
+</script>
+</body>
+</html>
