@@ -472,7 +472,7 @@
       <thead>
         <tr>
           <th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
-          <th>Company</th>
+          <th class="sortable" onclick="sortMetrics('name', this)">Company</th>
           <th class="sortable" onclick="sortMetrics('category', this)">Category</th>
           <th class="sortable num-col" onclick="sortMetrics('price', this)" data-tip-title="Price" data-tip="Current share price converted to GBP.">Price</th>
           <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP.">Market Cap</th>
@@ -600,7 +600,7 @@
     if (sortState.col === col) sortState.dir *= -1;
     else {
       sortState.col = col;
-      const textCols = ['ticker', 'category'];
+      const textCols = ['ticker', 'category', 'name'];
       sortState.dir = textCols.includes(col) ? 1 : -1;
     }
     document.querySelectorAll('#metrics-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
@@ -626,6 +626,7 @@
   function sortKey(s) {
     switch (sortState.col) {
       case 'ticker':       return s.ticker;
+      case 'name':         return s.name;
       case 'category':     return s.category;
       case 'ytd':          return s.ytd !== null ? s.ytd : -Infinity;
       case 'price':        return s.price !== null ? s.price : -Infinity;
