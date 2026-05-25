@@ -1,132 +1,137 @@
 {
-  "updated": "2026-05-24 15:09",
+  "updated": "2026-05-25 12:16",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
     {
       "rank": 1,
-      "ticker": "DELL",
-      "signal": "buy",
+      "ticker": "SMTC",
+      "signal": "strong_buy",
       "confidence": 0.85,
-      "rationale": "DELL is up 132.7% YTD with strong 1M (+39.1%) and 1W (+22.0%) momentum, P/E of 34 is reasonable, analyst buy rating, and news sentiment positive at 0.1.",
+      "rationale": "Analyst consensus is strong_buy with best an_score of 1.21, YTD up 108.32%, 1M +48.83%, 1W +13.91% and positive news sentiment 0.136.",
       "drivers": [
-        "+132.7% YTD",
-        "+39.1% 1M",
-        "P/E 34",
-        "buy rating"
+        "an_score 1.21",
+        "+48.83% 1M",
+        "strong_buy consensus",
+        "positive momentum"
       ]
     },
     {
       "rank": 2,
-      "ticker": "VIAV",
+      "ticker": "CORZ",
       "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "VIAV has surged 172.8% YTD, carries a strong_buy analyst consensus, and boasts the highest news sentiment in the universe at 0.597.",
+      "confidence": 0.8,
+      "rationale": "strong_buy analyst rating with an_score 1.33, YTD +57.97%, 1M +21.38%, 1W +4.34% and positive news sentiment 0.183.",
       "drivers": [
-        "+172.8% YTD",
-        "strong_buy",
-        "news_s 0.597"
+        "an_score 1.33",
+        "+57.97% YTD",
+        "strong_buy consensus",
+        "positive news"
       ]
     },
     {
       "rank": 3,
-      "ticker": "MRVL",
+      "ticker": "WDC",
       "signal": "strong_buy",
       "confidence": 0.8,
-      "rationale": "MRVL is up 119.9% YTD with 18.6% 1M gain, strong_buy rating, positive news sentiment 0.207, and low short interest of 3.81%.",
+      "rationale": "strong_buy rating with an_score 1.48, YTD +158.13%, P/E 28.98 reasonable, 1M +20.13%, positive news sentiment 0.117.",
       "drivers": [
-        "+119.9% YTD",
-        "+18.6% 1M",
-        "strong_buy",
-        "short 3.81%"
+        "strong_buy consensus",
+        "P/E 28.98",
+        "+158.13% YTD",
+        "positive news"
       ]
     },
     {
       "rank": 4,
-      "ticker": "WDC",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "WDC gained 158.1% YTD, trades at a low P/E of 28.98, and has a strong_buy analyst rating with positive news sentiment 0.117.",
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +132.71%, 1M +39.15%, 1W +21.98%, 1D +16.07% showing strong momentum, P/E 34.01, news sentiment positive 0.1.",
       "drivers": [
-        "+158.1% YTD",
-        "P/E 28.98",
-        "strong_buy"
+        "+132.71% YTD",
+        "+39.15% 1M",
+        "P/E 34.01",
+        "strong momentum"
       ]
     },
     {
       "rank": 5,
-      "ticker": "MU",
+      "ticker": "GOOGL",
       "signal": "strong_buy",
-      "confidence": 0.77,
-      "rationale": "MU is up 138.2% YTD with a massive 55.9% 1M gain, strong_buy consensus, low short interest of 3.31%, and a reasonable P/E of 35.46.",
+      "confidence": 0.75,
+      "rationale": "strong_buy analyst consensus with an_score 1.43, YTD +21.61%, 1M +13.01%, P/E 29.23 attractive, positive news sentiment 0.055.",
       "drivers": [
-        "+138.2% YTD",
-        "+55.9% 1M",
-        "strong_buy",
-        "short 3.31%"
+        "strong_buy consensus",
+        "P/E 29.23",
+        "+21.61% YTD",
+        "mega-cap stability"
       ]
     },
     {
       "rank": 6,
-      "ticker": "SMTC",
+      "ticker": "MU",
       "signal": "strong_buy",
-      "confidence": 0.76,
-      "rationale": "SMTC has rallied 108.3% YTD with 48.8% 1M and 13.9% 1W gains, strong_buy analyst rating, and positive news sentiment 0.136.",
+      "confidence": 0.7,
+      "rationale": "strong_buy rating an_score 1.48, YTD +138.20%, 1M +55.90%, P/E 35.46 reasonable, low short interest 3.31%.",
       "drivers": [
-        "+108.3% YTD",
-        "+48.8% 1M",
-        "strong_buy"
+        "strong_buy consensus",
+        "+138.20% YTD",
+        "P/E 35.46",
+        "low short interest"
       ]
     },
     {
       "rank": 7,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "GOOGL is up 21.6% YTD, has a low P/E of 29.23, strong_buy rating, and very low short interest of 1.3%.",
+      "ticker": "SMCI",
+      "signal": "buy",
+      "confidence": 0.3,
+      "rationale": "High momentum with 1D +6.11%, 1W +14.63%, 1M +33.01%, P/E 18.73 attractive, strong news sentiment 0.4, but analyst consensus is hold, capping conviction.",
       "drivers": [
-        "+21.6% YTD",
-        "P/E 29.23",
-        "strong_buy",
-        "short 1.3%"
+        "+14.63% 1W",
+        "P/E 18.73",
+        "news sentiment 0.4",
+        "hold consensus"
       ]
     },
     {
       "rank": 8,
       "ticker": "AMZN",
       "signal": "strong_buy",
-      "confidence": 0.73,
-      "rationale": "AMZN gained 17.6% YTD, P/E of 31.63, strong_buy consensus, and minimal short interest of 0.93%.",
+      "confidence": 0.7,
+      "rationale": "strong_buy with an_score 1.35, YTD +17.58%, 1M +4.41%, P/E 31.63 reasonable, mega-cap with AI hyperscaler tailwinds.",
       "drivers": [
-        "+17.6% YTD",
+        "strong_buy consensus",
         "P/E 31.63",
-        "strong_buy",
-        "short 0.93%"
+        "+17.58% YTD",
+        "hyperscaler AI exposure"
       ]
     },
     {
       "rank": 9,
-      "ticker": "ETN",
-      "signal": "buy",
+      "ticker": "MRVL",
+      "signal": "strong_buy",
       "confidence": 0.7,
-      "rationale": "ETN is up 20.3% YTD, P/E of 38.33, buy rating, very positive news sentiment of 0.442, and low short interest of 2.06%.",
+      "rationale": "strong_buy rating an_score 1.5, YTD +119.90%, 1W +10.99%, 1M +18.59%, news sentiment 0.207 positive.",
       "drivers": [
-        "+20.3% YTD",
-        "news_s 0.442",
-        "short 2.06%"
+        "strong_buy consensus",
+        "+119.90% YTD",
+        "+10.99% 1W",
+        "news sentiment 0.207"
       ]
     },
     {
       "rank": 10,
-      "ticker": "META",
+      "ticker": "VST",
       "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "META has a low P/E of 22.18, strong_buy rating, and short interest of 1.32%, offering value despite a -6.1% YTD.",
+      "confidence": 0.7,
+      "rationale": "strong_buy analyst consensus with best an_score of 1.37, 1W +11.88%, 1D +4.35%, positive news sentiment 0.185, P/E 26.09 reasonable.",
       "drivers": [
-        "P/E 22.18",
-        "strong_buy",
-        "short 1.32%"
+        "an_score 1.37",
+        "+11.88% 1W",
+        "P/E 26.09",
+        "strong_buy consensus"
       ]
     }
   ]
