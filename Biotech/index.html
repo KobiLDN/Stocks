@@ -284,8 +284,8 @@
 <th class="sortable" onclick="sortTable('price', this)">Price (£)</th>
 <th class="sortable" onclick="sortTable('return', this)">1yr Return</th>
 <th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
-<th>52-Week Range</th>
-<th>Key Angle</th>
+<th class="sortable" onclick="sortTable('range', this)">52-Week Range</th>
+<th class="sortable" onclick="sortTable('angle', this)">Key Angle</th>
 </tr>
 </thead>
 <tbody>
@@ -615,6 +615,8 @@
       if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
       if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
       if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
+      if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
+      if (col === 'angle')   { av = a.querySelector('td:nth-child(8)').textContent.trim(); bv = b.querySelector('td:nth-child(8)').textContent.trim(); }
       return av.localeCompare(bv) * sortState.dir;
     });
 
