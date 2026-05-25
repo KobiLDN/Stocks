@@ -58,6 +58,7 @@ STOCKS = {
     # Rare Disease
     "BMRN":  ("BMRN",  "rare-disease", "NASDAQ", None),
     "SRPT":  ("SRPT",  "rare-disease", "NASDAQ", None),
+    "COAG":  ("COAG",  "rare-disease", "NASDAQ", None),
     # Metabolic
     "NVO":   ("NVO",   "metabolic",    "NYSE",   None),
     "LLY":   ("LLY",   "metabolic",    "NYSE",   None),
