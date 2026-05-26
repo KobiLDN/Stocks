@@ -123,3 +123,24 @@ Everything else remains keyless:
 - Keep commits focused to one logical change.
 - Keep comments minimal — only add when intent is non-obvious.
 - Never force-push `main`.
+
+## UI Design Standards — Typography scale
+
+**`AI/index.html` is the canonical reference for all sector dashboards.** Every sector must match these font sizes exactly:
+
+| Element | Size | Notes |
+|---|---|---|
+| `h1` | 36px | Page title (26px at ≤900px breakpoint) |
+| `.header-sub` | 13px | Subtitle / last-updated line |
+| `.nav-link` | 12px | Navigation tab labels |
+| `.filter-btn` | 12px | Category filter buttons |
+| `th` (table header) | 11px | Column headers |
+| `td` (table rows) | 14px | General cell text |
+| `.ticker` | 15px | Stock ticker symbol in table |
+| `.price` | 17px | Price value in table |
+| `.ytd-return` | 13px | YTD % column |
+| `.exchange-badge` | 9px | Exchange label under ticker |
+| `.cat-badge` | 10px | Category pill badge |
+| Footer | 10px | Footer text |
+
+When creating or updating a sector dashboard, check all of these against `AI/index.html` before committing. If the sizes drift, bring them back to spec — do not invent new values.

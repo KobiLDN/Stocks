@@ -9,15 +9,20 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 | Sector | Status | URL |
 |---|---|---|
 | AI Infrastructure | Live | [/Stocks/AI/](https://kobildn.github.io/Stocks/AI/) |
+| Biotech | Live | [/Stocks/Biotech/](https://kobildn.github.io/Stocks/Biotech/) |
 | Defence | Coming Soon | — |
-| Biotech | Coming Soon | — |
 
 ## Repo structure
 
 ```
 ├── index.html              ← hub landing page
-├── AI/                     ← AI sector (48 stocks)
-│   ├── index.html
+├── AI/                     ← AI Infrastructure sector (48 stocks, 12 categories)
+│   ├── index.html          ← CANONICAL reference for typography/UI standards
+│   ├── update_prices.py
+│   ├── generate_signals_local.py
+│   └── ...
+├── Biotech/                ← Biotech sector (30 stocks, 9 categories)
+│   ├── index.html          ← mirrors AI/ structure and font sizes
 │   ├── update_prices.py
 │   ├── generate_signals_local.py
 │   └── ...
