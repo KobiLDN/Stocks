@@ -170,3 +170,9 @@ When designing a new feature that needs LLM-quality output: prefer CI-compatible
 - Keep commits focused to one logical change.
 - Keep comments minimal — only add when intent is non-obvious.
 - Never force-push `main`.
+
+## ⚠️ This sector is the canonical UI reference
+
+`AI/index.html` is the **reference implementation** for all sector dashboards in this repo. Font sizes, spacing, and component structure set here are the standard that all other sectors (Biotech, and any future sector) must match.
+
+See the **UI Design Standards — Typography scale** table in the root `../AGENTS.md` for the exact values. If you change any font size or layout metric in this file, update that table in `../AGENTS.md` too.
