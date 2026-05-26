@@ -119,9 +119,52 @@
     font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700;
     padding: 5px 12px; border: 1px solid var(--border); background: transparent;
     color: var(--muted); cursor: pointer; border-radius: 2px; transition: all 0.15s;
+    position: relative;
   }
   .filter-btn:hover { color: var(--text); border-color: var(--text); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+  /* Filter button tooltips */
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .filter-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .filter-btn:hover[data-tooltip]::after,
+  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
   .filter-btn[data-filter="large-cap"].active   { background: var(--accent);  border-color: var(--accent); color: var(--bg); }
   .filter-btn[data-filter="uk-listed"].active   { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
@@ -260,15 +303,15 @@
 <div class="container">
 <div class="filters">
 <button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
-<button class="filter-btn" data-filter="large-cap" onclick="filterTable('large-cap', this)">💊 Large Cap</button>
-<button class="filter-btn" data-filter="uk-listed" onclick="filterTable('uk-listed', this)">🇬🇧 UK Listed</button>
-<button class="filter-btn" data-filter="gene-editing" onclick="filterTable('gene-editing', this)">✂️ Gene Editing</button>
-<button class="filter-btn" data-filter="genomics" onclick="filterTable('genomics', this)">🧬 Genomics</button>
-<button class="filter-btn" data-filter="oncology" onclick="filterTable('oncology', this)">🎗️ Oncology</button>
-<button class="filter-btn" data-filter="mrna" onclick="filterTable('mrna', this)">💉 mRNA</button>
-<button class="filter-btn" data-filter="rare-disease" onclick="filterTable('rare-disease', this)">🔬 Rare Disease</button>
-<button class="filter-btn" data-filter="metabolic" onclick="filterTable('metabolic', this)">⚖️ Metabolic</button>
-<button class="filter-btn" data-filter="neuroscience" onclick="filterTable('neuroscience', this)">🧠 Neuroscience</button>
+<button class="filter-btn" data-filter="large-cap" data-tooltip="Established pharma/biotech giants with diversified pipelines and multi-billion market caps" onclick="filterTable('large-cap', this)">💊 Large Cap</button>
+<button class="filter-btn" data-filter="uk-listed" data-tooltip="UK-listed companies traded on the London Stock Exchange — prices shown in GBP" onclick="filterTable('uk-listed', this)">🇬🇧 UK Listed</button>
+<button class="filter-btn" data-filter="gene-editing" data-tooltip="Companies using CRISPR and base editing to directly modify DNA — high risk, high reward pipeline plays" onclick="filterTable('gene-editing', this)">✂️ Gene Editing</button>
+<button class="filter-btn" data-filter="genomics" data-tooltip="Genome sequencing platforms and bioinformatics — the tools that read and interpret DNA" onclick="filterTable('genomics', this)">🧬 Genomics</button>
+<button class="filter-btn" data-filter="oncology" data-tooltip="Cancer-focused biotechs — targeted therapies, immunotherapies and ADCs across tumour types" onclick="filterTable('oncology', this)">🎗️ Oncology</button>
+<button class="filter-btn" data-filter="mrna" data-tooltip="mRNA platform companies — technology that programs cells to produce therapeutic proteins or immune responses" onclick="filterTable('mrna', this)">💉 mRNA</button>
+<button class="filter-btn" data-filter="rare-disease" data-tooltip="Biotechs targeting rare (orphan) diseases — smaller patient populations but faster FDA pathways and pricing power" onclick="filterTable('rare-disease', this)">🔬 Rare Disease</button>
+<button class="filter-btn" data-filter="metabolic" data-tooltip="Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders" onclick="filterTable('metabolic', this)">⚖️ Metabolic</button>
+<button class="filter-btn" data-filter="neuroscience" data-tooltip="Neurology and CNS-focused biotechs — Alzheimer's, ALS, depression and other brain &amp; nervous system disorders" onclick="filterTable('neuroscience', this)">🧠 Neuroscience</button>
 </div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
