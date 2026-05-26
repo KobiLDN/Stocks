@@ -14,47 +14,47 @@ This file is for any AI or human contributor working in this repo.
 The project lives in a container folder with **two independent clones** (not git worktrees):
 
 ```
-G:\My Drive\coding\ai\aiStocks\        ← plain container (no .git)
-                          ├── aiStocksMAIN\   ← clone on `main` — the safe copy + what goes live
-                          └── aiStocksDEV\    ← clone on `dev`  — the workbench
+G:\My Drive\coding\ai\Stocks\        ← plain container (no .git)
+                       ├── STOCKSMain\   ← clone on `main` — the safe copy + what goes live
+                       └── STOCKSDev\    ← clone on `dev`  — the workbench
 ```
 
-- **`aiStocksDEV` = where all work happens.** Edit here. Break things freely.
-- **`aiStocksMAIN` = the safe copy.** Never edit directly. It is the restore point and the only branch GitHub Pages deploys.
+- **`STOCKSDev` = where all work happens.** Edit here. Break things freely.
+- **`STOCKSMain` = the safe copy.** Never edit directly. It is the restore point and the only branch GitHub Pages deploys.
 - **GitHub `origin` = the bridge** between the two clones.
 
 ### The 3-step workflow — always follow this order
 
-1. **Edit files in `aiStocksDEV`** — make changes, commit, `git push origin dev`.
-2. **Sync with `aiStocksMAIN`** — in the MAIN clone: `git fetch origin` then `git merge --ff-only origin/dev`.
-3. **Save to GitHub** — from `aiStocksMAIN`: `git push`. This is what updates the live site.
+1. **Edit files in `STOCKSDev`** — make changes, commit, `git push origin dev`.
+2. **Sync with `STOCKSMain`** — in the MAIN clone: `git fetch origin` then `git merge --ff-only origin/dev`.
+3. **Save to GitHub** — from `STOCKSMain`: `git push`. This is what updates the live site.
 
-Never edit in `aiStocksMAIN`. Never push to `main` until the user has approved the change ("go"). Step 3 (the live push) **requires explicit user approval every time.**
+Never edit in `STOCKSMain`. Never push to `main` until the user has approved the change ("go"). Step 3 (the live push) **requires explicit user approval every time.**
 
-### Safety net — if `aiStocksDEV` gets trashed
+### Safety net — if `STOCKSDev` gets trashed
 
 `main` always has a known-good copy, so dev is disposable:
 
 ```
-cd aiStocksDEV
+cd STOCKSDev
 git fetch origin
 git reset --hard origin/main     # discard local mess, back to known-good
 ```
 
-Or just delete the `aiStocksDEV` folder and re-clone — nothing is lost because `main` is the source of truth.
+Or just delete the `STOCKSDev` folder and re-clone — nothing is lost because `main` is the source of truth.
 
 ### If `git merge --ff-only` is refused in step 2
 
 Means `dev` and `main` diverged (usually the price bot committed to `main` in between). Fix:
 
 ```
-cd aiStocksDEV
+cd STOCKSDev
 git fetch origin
 git rebase origin/main
 git push --force-with-lease origin dev
 ```
 
-Then retry step 2 in `aiStocksMAIN`.
+Then retry step 2 in `STOCKSMain`.
 
 ## After every edit
 
@@ -64,8 +64,8 @@ When you make a change, update these in the same commit:
    - Bump version by `0.1` (example: `v1 → v1.1`)
    - The `last-updated` span is managed automatically by `update_prices.py` — do not manually change it unless updating structure
 2. **`CHANGELOG.md`**
-   - Prepend one new table row (immediately under the header) with **date and time** (`YYYY-MM-DD HH:MM BST`), AI Name, **Where** (`Desktop` or `Mobile` — which Claude client the change was made from), and what changed — **newest first**
-   - The `Where` column was added 2026-05-23. Past entries default to `Desktop`. If you're editing from a mobile Claude client, use `Mobile`.
+   - Prepend one new table row (immediately under the header) with **date and time** (`YYYY-MM-DD HH:MM BST`), AI Name, **Where** (`Desktop`, `Mobile`, or `Web` — which Claude client the change was made from), and what changed — **newest first**
+   - The `Where` column was added 2026-05-23. Past entries default to `Desktop`. Use `Web` for Claude Code on the web.
 
 ## Version scheme
 
