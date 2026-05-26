@@ -442,7 +442,7 @@ function parsePct(s) {
 function getVal(stock, metricId) {
   const cfg = METRICS_CFG[metricId];
   if (!cfg) return null;
-  return parsePct(stock[cfg.field] ?? stock['return_1yr'] ?? stock['return']);
+  return parsePct(stock[cfg.field]);
 }
 
 function fmtPct(val) {
