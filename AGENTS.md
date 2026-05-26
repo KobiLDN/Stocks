@@ -66,7 +66,7 @@ When you make a change, update these in the same commit:
    - Bump version by `0.1` (example: `v1 → v1.1`)
    - The `last-updated` span in `AI/index.html` is managed automatically by `update_prices.py` — do not manually change it unless updating structure
 2. **`CHANGELOG.md`**
-   - Prepend one new table row (immediately under the header) with **date and time** (`YYYY-MM-DD HH:MM BST`), AI Name, **Where** (`Desktop` or `Mobile`), and what changed — **newest first**
+   - Prepend one new table row (immediately under the header) with **date and time** (`YYYY-MM-DD HH:MM BST`), AI Name, **Where** (`Desktop`, `Mobile`, or `Web`), and what changed — **newest first**
 
 ## Version scheme
 
@@ -81,12 +81,16 @@ All sector files live in their own subfolder:
 
 ```
 STOCKSDev\
-├── index.html       ← hub landing page (links to all sectors)
-├── AI\              ← AI sector (migrated from KobiLDN/aiSTOCKS)
+├── index.html          ← hub landing page (links to all sectors)
+├── AI\                 ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html
 │   ├── update_prices.py
 │   └── ...
-└── (future sectors: Defence\, Biotech\, Energy\, Crypto\)
+├── Biotech\            ← Biotech sector (30 stocks, 9 categories)
+│   ├── index.html
+│   ├── update_prices.py
+│   └── ...
+└── (future sectors: Defence\, Energy\, Crypto\)
 ```
 
 When adding a new sector, create its subfolder and keep all sector-specific scripts inside it.
