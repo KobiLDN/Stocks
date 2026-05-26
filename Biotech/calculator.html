@@ -283,6 +283,19 @@
   .inv-pl.pos { color: rgba(0,230,118,0.6); }
   .inv-pl.neg { color: rgba(255,68,68,0.6); }
 
+  .mult-cell {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .mult-value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .mult-value.pos  { color: var(--green); }
+  .mult-value.neg  { color: var(--red); }
+  .mult-value.flat { color: var(--muted); }
+
   /* Totals row */
   .totals-row td { background: var(--surface2); border-top: 2px solid var(--accent); font-weight: 700; }
   .totals-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
@@ -359,6 +372,7 @@
           <th>Company</th>
           <th>Category</th>
           <th class="sortable sort-desc" onclick="sortCalc('ytd', this)">YTD %</th>
+          <th class="sortable" style="text-align:center" onclick="sortCalc('mult', this)">Multiplier</th>
           <th class="sortable inv-col" onclick="sortCalc('v100', this)">£100 invested</th>
           <th class="sortable inv-col" onclick="sortCalc('v1k', this)">£1,000 invested</th>
           <th class="sortable inv-col" onclick="sortCalc('v10k', this)">£10,000 invested</th>
@@ -432,12 +446,18 @@
     </td>`;
   }
 
+  function multCell(ytdPct) {
+    const m = 1 + ytdPct / 100;
+    const cls = ytdPct > 0 ? 'pos' : ytdPct < 0 ? 'neg' : 'flat';
+    return `<td class="mult-cell"><span class="mult-value ${cls}">${m.toFixed(2)}×</span></td>`;
+  }
+
   /* ---- SORT ---- */
   let sortState = { col: 'ytd', dir: -1 };
 
   function sortCalc(col, th) {
     if (sortState.col === col) sortState.dir *= -1;
-    else { sortState.col = col; sortState.dir = col === 'ytd' ? -1 : 1; }
+    else { sortState.col = col; sortState.dir = (col === 'ytd' || col === 'mult') ? -1 : 1; }
     document.querySelectorAll('#calc-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
     th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
     renderTable(window._calcData);
@@ -456,8 +476,7 @@
   function renderTable(data) {
     const sorted = [...data].sort((a, b) => {
       if (sortState.col === 'ticker') return a.ticker.localeCompare(b.ticker) * sortState.dir;
-      if (['ytd','v100','v1k','v10k'].includes(sortState.col)) return (a.ytdPct - b.ytdPct) * sortState.dir;
-      return 0;
+      return (a.ytdPct - b.ytdPct) * sortState.dir;
     });
 
     document.getElementById('calc-count').textContent = data.length;
@@ -470,6 +489,7 @@
         <td class="company-cell">${s.name}</td>
         <td><span class="cat-badge cat-${s.category}">${catLabel}</span></td>
         <td><span class="${ytdCls}">${s.ytdPct >= 0 ? '+' : ''}${s.ytdPct.toFixed(2)}%</span></td>
+        ${multCell(s.ytdPct)}
         ${invCell(100, s.ytdPct)}
         ${invCell(1000, s.ytdPct)}
         ${invCell(10000, s.ytdPct)}
@@ -489,7 +509,7 @@
 
     document.getElementById('calc-foot').innerHTML = `<tr class="totals-row">
       <td colspan="3"><span class="totals-label">Total (${data.length} stocks)</span></td>
-      <td></td>
+      <td></td><td></td>
       ${totals}
     </tr>`;
   }
