@@ -315,12 +315,23 @@ def parse_picks(content, valid_tickers):
 # ---- Write outputs --------------------------------------------------------
 
 def write_outputs(picks, now_str):
+    # Carry forward previous picks so the UI can show rank deltas
+    previous_picks = []
+    if os.path.exists(OUTPUT_JSON):
+        try:
+            with open(OUTPUT_JSON, "r", encoding="utf-8") as f:
+                old = json.load(f)
+                previous_picks = old.get("picks") or []
+        except Exception:
+            pass
+
     out = {
-        "updated":  now_str,
-        "model":    MODEL,
-        "endpoint": ENDPOINT,
-        "source":   "openrouter",
-        "picks":    picks,
+        "updated":        now_str,
+        "model":          MODEL,
+        "endpoint":       ENDPOINT,
+        "source":         "openrouter",
+        "picks":          picks,
+        "previous_picks": previous_picks,
     }
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2)

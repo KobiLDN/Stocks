@@ -246,8 +246,10 @@
     width: 64px;
     flex-shrink: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 3px;
     border-right: 1px solid var(--border);
     background: var(--bg);
   }
@@ -257,7 +259,18 @@
     font-weight: 800;
     color: var(--accent);
     letter-spacing: -1px;
+    line-height: 1;
   }
+  .rank-delta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .rank-delta-up   { color: var(--green); }
+  .rank-delta-down { color: var(--red); }
+  .rank-delta-new  { color: var(--accent); }
+  .rank-delta-same { color: var(--muted); }
 
   .card-body { flex: 1; padding: 16px 22px; min-width: 0; }
   .card-top {
@@ -413,6 +426,78 @@
     letter-spacing: 0.05em;
   }
   .back-link:hover { color: #00d4ff; }
+
+  /* How it works */
+  .how-it-works {
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .how-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+  .how-header:hover { background: var(--surface2); }
+  .how-chevron { transition: transform 0.2s; font-style: normal; }
+  .how-header.open .how-chevron { transform: rotate(180deg); }
+  .how-body {
+    display: none;
+    padding: 20px;
+    gap: 20px;
+  }
+  .how-body.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .how-step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .how-step-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 28px;
+  }
+  .how-step-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .how-step-text p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .how-step-text p code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 1px 5px;
+    border: 1px solid var(--border);
+    font-size: 11px;
+  }
+  .how-footer-note {
+    grid-column: 1 / -1;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .how-footer-note span { color: var(--accent2); }
 </style>
 </head>
 <body>
@@ -431,7 +516,7 @@
     <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 30 biotech stocks">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
     <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 30 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link active" data-tooltip="Top 10 biotech picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
+    <a href="signals.html" class="nav-link active" data-tooltip="Top 10 biotech picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
@@ -446,10 +531,57 @@
 
   <div class="refresh-banner" id="refresh-banner">
     <span>Last refreshed: <span class="ts" id="signals-ts">—</span></span>
-    <span>Auto-refreshed weekly by GitHub Actions · or run <code>python generate_signals_local.py</code> locally</span>
+    <span>Auto-refreshed Mon/Wed/Fri by GitHub Actions · or run <code>python generate_signals_local.py</code> locally</span>
   </div>
 
   <div class="signals-feed" id="signals-feed"></div>
+
+  <div class="how-it-works">
+    <div class="how-header" onclick="toggleHow(this)">
+      // How signals are generated
+      <i class="how-chevron">▼</i>
+    </div>
+    <div class="how-body">
+
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-text">
+          <h4>Live price &amp; news data</h4>
+          <p>GitHub Actions runs <code>update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all tracked biotech stocks via Yahoo Finance.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-text">
+          <h4>Web search for live catalysts</h4>
+          <p>Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing FDA decisions, clinical trial results, analyst upgrades, deal announcements and PDUFA dates that happened since the last data pull.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-text">
+          <h4>AI ranking via DeepSeek</h4>
+          <p><code>generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus, biotech-specific catalysts and live news, then returns a ranked top 10 in JSON.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">4</div>
+        <div class="how-step-text">
+          <h4>Mon/Wed/Fri refresh via GitHub Actions</h4>
+          <p>The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python generate_signals_local.py</code> locally to generate fresh signals on demand.</p>
+        </div>
+      </div>
+
+      <div class="how-footer-note">
+        <span>Not financial advice.</span> The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Biotech stocks carry binary event risk — FDA decisions and trial results can move prices dramatically in either direction. Signals are one input among many — always do your own research before making any investment decision.
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
 <footer>Biotech Stock Dashboard · For educational and entertainment purposes only · Not financial advice</footer>
@@ -531,6 +663,13 @@
 
     const catFor = tickerCategoryMap();
 
+    // Build previous rank lookup for delta badges
+    const prevRank = {};
+    const hasPrev = Array.isArray(data.previous_picks) && data.previous_picks.length > 0;
+    if (hasPrev) {
+      data.previous_picks.forEach(p => { prevRank[p.ticker] = p.rank; });
+    }
+
     feed.innerHTML = data.picks.map(p => {
       const t = p.ticker || '';
       const name = NAMES[t] || t;
@@ -548,8 +687,21 @@
         .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
         .join('');
 
+      // Rank delta badge
+      let deltaBadge = '';
+      if (hasPrev) {
+        if (!(t in prevRank)) {
+          deltaBadge = '<span class="rank-delta rank-delta-new">NEW</span>';
+        } else {
+          const diff = prevRank[t] - p.rank; // positive = moved up
+          if (diff > 0)       deltaBadge = '<span class="rank-delta rank-delta-up">↑' + diff + '</span>';
+          else if (diff < 0)  deltaBadge = '<span class="rank-delta rank-delta-down">↓' + Math.abs(diff) + '</span>';
+          else                deltaBadge = '<span class="rank-delta rank-delta-same">—</span>';
+        }
+      }
+
       return '<div class="signal-card">' +
-        '<div class="rank-rail"><span class="rank-num">' + (p.rank || '') + '</span></div>' +
+        '<div class="rank-rail"><span class="rank-num">' + (p.rank || '') + '</span>' + deltaBadge + '</div>' +
         '<div class="card-body">' +
           '<div class="card-top">' +
             '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
@@ -602,6 +754,12 @@
     buildTape(window.PRICES_DATA.stocks);
   } else {
     fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
+  }
+
+  /* ---- HOW IT WORKS TOGGLE ---- */
+  function toggleHow(header) {
+    header.classList.toggle('open');
+    header.nextElementSibling.classList.toggle('open');
   }
 </script>
 </body>
