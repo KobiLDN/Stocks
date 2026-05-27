@@ -106,9 +106,55 @@
     letter-spacing: 0.05em; padding: 10px 14px; border: 1px solid transparent;
     border-bottom: none; color: var(--muted); text-decoration: none;
     transition: color 0.15s, border-color 0.15s;
+    position: relative;
   }
   .nav-link:hover { color: var(--accent); border-color: var(--accent); }
   .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  /* Nav tooltips */
+  .nav-link[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 200px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .nav-link[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .nav-link:hover[data-tooltip]::after,
+  .nav-link:hover[data-tooltip]::before { opacity: 1; }
+  a[href="index.html"].nav-link[data-tooltip]::after   { left: 0; transform: none; }
+  a[href="index.html"].nav-link[data-tooltip]::before  { left: 16px; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
 
   /* Container */
   .container { max-width: 1600px; margin: 0 auto; padding: 16px 24px; }
@@ -291,13 +337,13 @@
 </header>
 <nav>
 <div class="nav-inner">
-<a class="nav-link active" href="index.html">📊 Dashboard</a>
-<a class="nav-link" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" href="news.html">📰 News</a>
-<a class="nav-link" href="signals.html">🎯 Signals</a>
-<a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
-<a class="nav-link" href="charts.html">📈 Charts</a>
-<a class="nav-link" href="calculator.html">🧮 What-If</a>
+<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 30 biotech stocks" href="index.html">📊 Dashboard</a>
+<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
+<a class="nav-link" data-tooltip="Latest headlines across all 30 stocks with news sentiment scoring" href="news.html">📰 News</a>
+<a class="nav-link" data-tooltip="Top 10 biotech picks ranked by momentum, fundamentals and sentiment — refreshed weekly" href="signals.html">🎯 Signals</a>
+<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
+<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
+<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today" href="calculator.html">🧮 What-If</a>
 </div>
 </nav>
 <div class="container">
