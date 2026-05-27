@@ -136,11 +136,13 @@ SYSTEM_PROMPT = """You are an investment research assistant analysing a curated 
 
 You will be given a JSON snapshot of every tracked stock: prices in GBP, year-to-date and 1-year returns, short-term momentum (1D/1W/1M %), fundamentals (market cap in £B, beta, P/E, dividend yield, short interest %, analyst recommendation and score), recent news headlines and an aggregate news sentiment score in [-1, +1].
 
+Before ranking, use web search to find the latest news, analyst upgrades, earnings surprises, or deal announcements for the highest-momentum stocks listed in the user prompt. Use what you find to enrich your rationale with live catalysts.
+
 Pick the 10 most attractive stocks RIGHT NOW based on a BALANCED view of:
   - Momentum (recent 1D/1W/1M moves, YTD)
   - Fundamentals (P/E, market cap, beta — avoid extreme over-extension)
   - Analyst consensus (strong_buy / buy weighted positively, sell weighted negatively)
-  - News sentiment (positive aggregate sentiment is a tailwind)
+  - News sentiment and any live catalysts found via web search
 
 Rank them 1 (best) to 10. Use the "signal" field to distinguish strong_buy from buy where appropriate. Confidence is your subjective certainty in [0, 1].
 
@@ -168,8 +170,23 @@ Hard rules:
 
 
 def build_user_prompt(stocks):
+    # Identify top 10 by 1M momentum for targeted web search
+    def parse_pct(v):
+        try:
+            return float(str(v).replace('%', '').replace('+', ''))
+        except Exception:
+            return 0.0
+
+    top_momentum = sorted(
+        stocks,
+        key=lambda s: parse_pct(s.get('change_1m', '0')),
+        reverse=True
+    )[:10]
+    search_tickers = ', '.join(s['ticker'] for s in top_momentum)
+
     payload = {"stocks": [compact_stock(s) for s in stocks]}
     return (
+        f"Search for the latest news on these high-momentum tickers before ranking: {search_tickers}.\n\n"
         "Stock universe snapshot follows as compact JSON. "
         "Field keys: cat=category, ret_1y=1-year return, ytd=YTD %, "
         "ch_1m/1w/1d=% change, mc_gbp_b=market cap in GBP billions, "
@@ -200,6 +217,7 @@ def call_api(api_key, system_prompt, user_prompt):
         "max_tokens":      MAX_TOKENS,
         "response_format": {"type": "json_object"},
         "stream":          False,
+        "plugins":         [{"id": "web", "max_results": 5}],
     }
 
     print(f"  POST {ENDPOINT}  ({MODEL})")
