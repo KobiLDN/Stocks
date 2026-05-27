@@ -247,7 +247,7 @@
   .filter-btn[data-tooltip]::after {
     content: attr(data-tooltip);
     position: absolute;
-    top: calc(100% + 10px);
+    bottom: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%);
     background: #0d1520;
@@ -272,11 +272,11 @@
   .filter-btn[data-tooltip]::before {
     content: '';
     position: absolute;
-    top: calc(100% + 4px);
+    bottom: calc(100% + 4px);
     left: 50%;
     transform: translateX(-50%);
     border: 5px solid transparent;
-    border-bottom-color: var(--accent);
+    border-top-color: var(--accent);
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.18s ease;
