@@ -1,9 +1,141 @@
 {
-  "updated": "2026-05-25 12:16",
+  "updated": "2026-05-28 00:21",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EDIT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Leading the universe with +74% YTD and +45% 1-week momentum, but carries negative sentiment -0.149 and analyst consensus is only 'buy'; explosive short-term move warrants caution.",
+      "drivers": [
+        "+74% YTD",
+        "+45% 1W return",
+        "negative news sentiment",
+        "speculative gene-editing space"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong +55% YTD, +40% 1-month momentum, and positive news sentiment 0.092; however high beta of 2.37 and 30% short interest add risk.",
+      "drivers": [
+        "+55% YTD",
+        "+40% 1M return",
+        "high short interest 30%",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Impressive +32.5% YTD, +21% 1-month return, low beta 0.30, positive news sentiment 0.129, and strong analyst consensus (score 1.6).",
+      "drivers": [
+        "+32.5% YTD",
+        "+21% 1M return",
+        "low beta 0.30",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Outstanding +108% 1-year return, +17.5% YTD, +21% 1-week momentum, strong buy analyst consensus (score 1.29), despite high short interest of 31.5%.",
+      "drivers": [
+        "+108% 1Y return",
+        "strong buy consensus",
+        "+21% 1W return",
+        "gene-editing catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Megacap leader up +24% in the last month, low beta 0.48, positive sentiment 0.104, P/E of 38.5 reflects premium for metabolic/GIP-1 pipeline strength.",
+      "drivers": [
+        "+24% 1M return",
+        "low beta 0.48",
+        "positive news sentiment",
+        "strong pipeline"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong +11.8% YTD, +18% 1-month momentum, reasonable P/E of 27.3, positive news sentiment 0.21, and solid analyst score of 2.25.",
+      "drivers": [
+        "+18% 1M return",
+        "P/E 27.3",
+        "positive news sentiment",
+        "genomics sector tailwind"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solid +10.8% YTD, +7.4% 1-month, low beta 0.20, P/E 21.2, but negative sentiment -0.154 and 3.4% short interest; balanced risk/reward.",
+      "drivers": [
+        "+7.4% 1M return",
+        "low beta 0.20",
+        "P/E 21.2",
+        "negative news sentiment"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong +14.8% YTD and +11.4% 1-month, reasonable P/E 16.6, low beta 0.39, but negative sentiment -0.049 and high short interest 16.2%.",
+      "drivers": [
+        "+14.8% YTD",
+        "+11.4% 1M return",
+        "P/E 16.6",
+        "low beta 0.39"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Down -11.9% YTD, but +8.2% 1-month bounce, very attractive P/E of 10.4, high dividend yield 4.1%, neutral sentiment 0.006, and low beta 0.35.",
+      "drivers": [
+        "P/E 10.4",
+        "high dividend yield 4.1%",
+        "low beta 0.35",
+        "1-month recovery +8.2%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "IONS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Stellar +139% 1-year return, up +6.6% in the last month, low beta 0.38, analyst score 1.73, but negative YTD -4% and neutral sentiment 0.003.",
+      "drivers": [
+        "+139% 1Y return",
+        "low beta 0.38",
+        "analyst consensus buy",
+        "neutral news sentiment"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "EXEL",
