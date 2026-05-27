@@ -215,9 +215,50 @@
     color: var(--muted);
     cursor: pointer;
     transition: all 0.15s;
+    position: relative;
   }
   .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .filter-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .filter-btn:hover[data-tooltip]::after,
+  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
   /* Toolbar */
   .toolbar {
@@ -478,6 +519,18 @@
     'neuroscience':  'Neuroscience',
   };
 
+  const CAT_TOOLTIPS = {
+    'large-cap':     'Established pharma/biotech giants with diversified pipelines and multi-billion market caps',
+    'uk-listed':     'UK-listed companies traded on the London Stock Exchange — prices shown in GBP',
+    'gene-editing':  'Companies using CRISPR and base editing to directly modify DNA — high risk, high reward pipeline plays',
+    'genomics':      'Genome sequencing platforms and bioinformatics — the tools that read and interpret DNA',
+    'oncology':      'Cancer-focused biotechs — targeted therapies, immunotherapies and ADCs across tumour types',
+    'mrna':          'mRNA platform companies — technology that programs cells to produce therapeutic proteins or immune responses',
+    'rare-disease':  'Biotechs targeting rare (orphan) diseases — smaller patient populations but faster FDA pathways and pricing power',
+    'metabolic':     'Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders',
+    'neuroscience':  'Neurology and CNS-focused biotechs — Alzheimer\'s, ALS, depression and other brain &amp; nervous system disorders',
+  };
+
   const YAHOO_SUFFIX = { 'AZN': 'AZN.L', 'GSK': 'GSK.L' };
   function yahooUrl(ticker) {
     const sym = YAHOO_SUFFIX[ticker] || ticker;
@@ -621,7 +674,8 @@
     const bar = document.getElementById('filter-bar');
     bar.innerHTML = cats.map(cat => {
       const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
-      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+      const tip   = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
+      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '"' + tip + ' onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
     }).join('');
   }
 
