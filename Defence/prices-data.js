@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-05-28 22:03",
-  "fx_gbp_usd": 1.3446,
+  "updated": "2026-05-28 23:58",
+  "fx_gbp_usd": 1.3443,
   "stocks": [
     {
       "ticker": "LMT",
@@ -16,7 +16,7 @@ window.PRICES_DATA = {
       "low_gbp": "305",
       "high_gbp": "515",
       "bar_pct": 45,
-      "market_cap_gbp_b": 92.115,
+      "market_cap_gbp_b": 92.139,
       "beta": 0.1,
       "pe_ratio": 26.0,
       "avg_volume_m": 1.53,
@@ -80,11 +80,11 @@ window.PRICES_DATA = {
       "low_gbp": "98",
       "high_gbp": "160",
       "bar_pct": 57,
-      "market_cap_gbp_b": 179.234,
+      "market_cap_gbp_b": 179.279,
       "beta": 0.301,
       "pe_ratio": 33.58,
       "avg_volume_m": 5.55,
-      "div_yield_pct": 157.0,
+      "div_yield_pct": null,
       "short_pct": 1.07,
       "analyst": "buy",
       "analyst_score": 1.91,
@@ -141,14 +141,14 @@ window.PRICES_DATA = {
       "change_1m": "-2.29%",
       "change_ytd": "-4.20%",
       "return_1yr": "+19%",
-      "low_gbp": "348",
+      "low_gbp": "349",
       "high_gbp": "576",
       "bar_pct": 30,
-      "market_cap_gbp_b": 59.078,
+      "market_cap_gbp_b": 59.093,
       "beta": -0.113,
       "pe_ratio": 17.52,
       "avg_volume_m": 0.81,
-      "div_yield_pct": 170.0,
+      "div_yield_pct": null,
       "short_pct": 1.23,
       "analyst": "buy",
       "analyst_score": 1.96,
@@ -208,7 +208,7 @@ window.PRICES_DATA = {
       "low_gbp": "199",
       "high_gbp": "275",
       "bar_pct": 80,
-      "market_cap_gbp_b": 70.182,
+      "market_cap_gbp_b": 70.2,
       "beta": 0.345,
       "pe_ratio": 21.95,
       "avg_volume_m": 1.36,
@@ -272,7 +272,7 @@ window.PRICES_DATA = {
       "low_gbp": "160",
       "high_gbp": "342",
       "bar_pct": 43,
-      "market_cap_gbp_b": 9.404,
+      "market_cap_gbp_b": 9.406,
       "beta": 0.287,
       "pe_ratio": 20.84,
       "avg_volume_m": 0.5,
@@ -336,7 +336,7 @@ window.PRICES_DATA = {
       "low_gbp": "177",
       "high_gbp": "282",
       "bar_pct": 55,
-      "market_cap_gbp_b": 43.612,
+      "market_cap_gbp_b": 43.623,
       "beta": 0.746,
       "pe_ratio": 34.18,
       "avg_volume_m": 1.41,
@@ -400,7 +400,7 @@ window.PRICES_DATA = {
       "low_gbp": "131",
       "high_gbp": "189",
       "bar_pct": 67,
-      "market_cap_gbp_b": 134.125,
+      "market_cap_gbp_b": 134.159,
       "beta": 1.207,
       "pe_ratio": 90.43,
       "avg_volume_m": 7.05,
@@ -412,6 +412,20 @@ window.PRICES_DATA = {
       "vol_1w": 33775356,
       "vol_1m": 148003256,
       "news": [
+        {
+          "title": "9 \u2018Hidden\u2019 Space Stocks Haven\u2019t Joined SpaceX IPO Bubble Yet",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/space-stocks-spacex-ipo-boeing-lockheed-airbus-a3190f30?siteid=yhoof2&yptr=yahoo",
+          "published": 1780002000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "China Doesn\u2019t Matter for Boeing. This Does.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/boeing-stock-plane-production-china-oil-prices-d64e2f99?siteid=yhoof2&yptr=yahoo",
+          "published": 1780000680,
+          "sentiment": 0.026
+        },
         {
           "title": "Boeing CEO signals massive new FAA move for 737 jets",
           "publisher": "TheStreet",
@@ -432,23 +446,9 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/news/boeing-ge-vernova-united-airlines-industrial-stocks-best-picks/?src=A00220&yptr=yahoo",
           "published": 1779996148,
           "sentiment": 0.637
-        },
-        {
-          "title": "Stifel Canada on Opportunities For CAE Under New Defence Industrial Strategy",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/stifel-canada-opportunities-cae-under-173722738.html",
-          "published": 1779989842,
-          "sentiment": 0.459
-        },
-        {
-          "title": "China Doesn\u2019t Matter for Boeing. This Does.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/boeing-stock-plane-production-china-oil-prices-d64e2f99?siteid=yhoof2&yptr=yahoo",
-          "published": 1779979380,
-          "sentiment": 0.026
         }
       ],
-      "news_sentiment": 0.312
+      "news_sentiment": 0.221
     },
     {
       "ticker": "BA.L",
@@ -468,7 +468,7 @@ window.PRICES_DATA = {
       "beta": -0.058,
       "pe_ratio": 29.69,
       "avg_volume_m": 7.19,
-      "div_yield_pct": 185.0,
+      "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.28,
@@ -532,7 +532,7 @@ window.PRICES_DATA = {
       "beta": 1.2,
       "pe_ratio": 19.05,
       "avg_volume_m": 36.88,
-      "div_yield_pct": 73.0,
+      "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.68,
@@ -596,7 +596,7 @@ window.PRICES_DATA = {
       "beta": 0.313,
       "pe_ratio": 25.05,
       "avg_volume_m": 2.04,
-      "div_yield_pct": 229.0,
+      "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
@@ -656,7 +656,7 @@ window.PRICES_DATA = {
       "low_gbp": "88",
       "high_gbp": "154",
       "bar_pct": 28,
-      "market_cap_gbp_b": 255.558,
+      "market_cap_gbp_b": 255.623,
       "beta": 1.521,
       "pe_ratio": 161.06,
       "avg_volume_m": 46.01,
@@ -676,6 +676,13 @@ window.PRICES_DATA = {
           "sentiment": -0.202
         },
         {
+          "title": "This Trump-Linked Drone Maker May Get a Pentagon Deal. The Stock Soars 57%.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/unusual-machines-stock-pentagon-funding-trump-7eb79459?siteid=yhoof2&yptr=yahoo",
+          "published": 1779999300,
+          "sentiment": 0.0
+        },
+        {
           "title": "Why Palantir Stock Is Soaring Today",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/05/28/why-palantir-stock-is-soaring-today/",
@@ -688,13 +695,6 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/05/28/palantir-is-down-20-in-2026-and-its-still-my-favorite-stock-idea-heres-why/",
           "published": 1779997098,
           "sentiment": 0.459
-        },
-        {
-          "title": "This Trump-Linked Drone Maker May Get a Pentagon Deal. The Stock Soars 60%.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/unusual-machines-stock-pentagon-funding-trump-7eb79459?siteid=yhoof2&yptr=yahoo",
-          "published": 1779993540,
-          "sentiment": 0.0
         },
         {
           "title": "Palantir vs. Oracle in 2026. Which One Is the Better Buy Right Now?",
@@ -720,11 +720,11 @@ window.PRICES_DATA = {
       "low_gbp": "90",
       "high_gbp": "153",
       "bar_pct": 12,
-      "market_cap_gbp_b": 12.31,
+      "market_cap_gbp_b": 12.313,
       "beta": 0.57,
       "pe_ratio": 12.04,
       "avg_volume_m": 1.15,
-      "div_yield_pct": 132.0,
+      "div_yield_pct": null,
       "short_pct": 4.04,
       "analyst": "buy",
       "analyst_score": 2.12,
@@ -732,6 +732,13 @@ window.PRICES_DATA = {
       "vol_1w": 5703956,
       "vol_1m": 29351756,
       "news": [
+        {
+          "title": "A Look At Leidos Holdings (LDOS) Valuation After New State Department Evolve Contract Awards",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/look-leidos-holdings-ldos-valuation-210822246.html",
+          "published": 1780002502,
+          "sentiment": 0.459
+        },
         {
           "title": "GM clinches NASA contract to build battery for moon-bound vehicle",
           "publisher": "Detroit Free Press",
@@ -759,16 +766,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2037631/what-are-wall-street-analysts-target-price-for-leidos-holdings-stock",
           "published": 1779280706,
           "sentiment": 0.0
-        },
-        {
-          "title": "1 Industrials Stock Worth Investigating and 2 That Underwhelm",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/1-industrials-stock-worth-investigating-062855414.html",
-          "published": 1779258535,
-          "sentiment": 0.226
         }
       ],
-      "news_sentiment": -0.043
+      "news_sentiment": 0.004
     },
     {
       "ticker": "CACI",
@@ -784,14 +784,14 @@ window.PRICES_DATA = {
       "low_gbp": "305",
       "high_gbp": "508",
       "bar_pct": 41,
-      "market_cap_gbp_b": 8.59,
+      "market_cap_gbp_b": 8.592,
       "beta": 0.538,
       "pe_ratio": 21.6,
       "avg_volume_m": 0.29,
       "div_yield_pct": null,
       "short_pct": 8.2,
-      "analyst": "strong_buy",
-      "analyst_score": 1.47,
+      "analyst": "buy",
+      "analyst_score": 1.56,
       "vol_1d": 349450,
       "vol_1w": 1205350,
       "vol_1m": 6700950,
@@ -848,11 +848,11 @@ window.PRICES_DATA = {
       "low_gbp": "60",
       "high_gbp": "90",
       "bar_pct": 57,
-      "market_cap_gbp_b": 3.324,
+      "market_cap_gbp_b": 3.325,
       "beta": 0.27,
       "pe_ratio": 13.47,
       "avg_volume_m": 0.57,
-      "div_yield_pct": 146.0,
+      "div_yield_pct": null,
       "short_pct": 7.5,
       "analyst": "hold",
       "analyst_score": 2.82,
@@ -912,11 +912,11 @@ window.PRICES_DATA = {
       "low_gbp": "51",
       "high_gbp": "89",
       "bar_pct": 24,
-      "market_cap_gbp_b": 7.218,
+      "market_cap_gbp_b": 7.22,
       "beta": 0.319,
       "pe_ratio": 11.75,
       "avg_volume_m": 1.77,
-      "div_yield_pct": 291.0,
+      "div_yield_pct": null,
       "short_pct": 7.39,
       "analyst": "hold",
       "analyst_score": 2.87,
@@ -976,7 +976,7 @@ window.PRICES_DATA = {
       "low_gbp": "116",
       "high_gbp": "311",
       "bar_pct": 22,
-      "market_cap_gbp_b": 8.069,
+      "market_cap_gbp_b": 8.071,
       "beta": 1.355,
       "pe_ratio": null,
       "avg_volume_m": 1.62,
@@ -988,6 +988,20 @@ window.PRICES_DATA = {
       "vol_1w": 8614739,
       "vol_1m": 26358139,
       "news": [
+        {
+          "title": "Stock Market Today, May 28: Ondas Surges As Trump Administration Considers Funding Deals With Drone Stocks",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/05/28/stock-market-today-may-28-ondas-surges-as-trump-administration-considers-funding-deals-with-drone-stocks/",
+          "published": 1780004283,
+          "sentiment": 0.0
+        },
+        {
+          "title": "This Trump-Linked Drone Maker May Get a Pentagon Deal. The Stock Soars 57%.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/unusual-machines-stock-pentagon-funding-trump-7eb79459?siteid=yhoof2&yptr=yahoo",
+          "published": 1779999300,
+          "sentiment": 0.0
+        },
         {
           "title": "Drone Stocks Jump As Trump Administration Pursues Funding Deals",
           "publisher": "Investor's Business Daily",
@@ -1003,24 +1017,10 @@ window.PRICES_DATA = {
           "sentiment": 0.421
         },
         {
-          "title": "This Trump-Linked Drone Maker May Get a Pentagon Deal. The Stock Soars 60%.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/unusual-machines-stock-pentagon-funding-trump-7eb79459?siteid=yhoof2&yptr=yahoo",
-          "published": 1779993540,
-          "sentiment": 0.0
-        },
-        {
           "title": "1 Unprofitable Stock to Own for Decades and 2 Facing Headwinds",
           "publisher": "StockStory",
           "url": "https://finance.yahoo.com/markets/stocks/articles/1-unprofitable-stock-own-decades-180627986.html",
           "published": 1779991587,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Trump Invested in Intel And it Soared 500%. Here\u2019s the Next Industry the Government is Buying.",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/28/trump-invested-in-intel-and-it-soared-500-heres-the-next-industry-the-government-is-buying/",
-          "published": 1779984570,
           "sentiment": 0.0
         }
       ],
@@ -1040,7 +1040,7 @@ window.PRICES_DATA = {
       "low_gbp": "27",
       "high_gbp": "100",
       "bar_pct": 30,
-      "market_cap_gbp_b": 9.091,
+      "market_cap_gbp_b": 9.094,
       "beta": 1.062,
       "pe_ratio": 383.47,
       "avg_volume_m": 4.3,
@@ -1081,14 +1081,14 @@ window.PRICES_DATA = {
           "sentiment": 0.128
         },
         {
-          "title": "Stocks Pressured as Oil Prices Climb on US-Iran Clashes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2178581/stocks-pressured-as-oil-prices-climb-on-us-iran-clashes",
-          "published": 1779977224,
-          "sentiment": -0.226
+          "title": "Cathie Wood Goes Bargain Hunting: 3 Stocks She Just Bought",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/28/cathie-wood-goes-bargain-hunting-3-stocks-she-just/",
+          "published": 1779975120,
+          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.065
+      "news_sentiment": 0.15
     },
     {
       "ticker": "RCAT",
@@ -1117,6 +1117,13 @@ window.PRICES_DATA = {
       "vol_1m": 293129180,
       "news": [
         {
+          "title": "This Trump-Linked Drone Maker May Get a Pentagon Deal. The Stock Soars 57%.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/unusual-machines-stock-pentagon-funding-trump-7eb79459?siteid=yhoof2&yptr=yahoo",
+          "published": 1779999300,
+          "sentiment": 0.0
+        },
+        {
           "title": "Drone Stocks Jump As Trump Administration Pursues Funding Deals",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/news/drone-stocks-funding-trump-administration-equity-stakes-umac-neros-pentagon-dod/?src=A00220&yptr=yahoo",
@@ -1135,13 +1142,6 @@ window.PRICES_DATA = {
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/05/28/why-red-cat-stock-is-skyrocketing-today/",
           "published": 1779993816,
-          "sentiment": 0.0
-        },
-        {
-          "title": "This Trump-Linked Drone Maker May Get a Pentagon Deal. The Stock Soars 60%.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/unusual-machines-stock-pentagon-funding-trump-7eb79459?siteid=yhoof2&yptr=yahoo",
-          "published": 1779993540,
           "sentiment": 0.0
         },
         {
@@ -1168,7 +1168,7 @@ window.PRICES_DATA = {
       "low_gbp": "54",
       "high_gbp": "76",
       "bar_pct": 67,
-      "market_cap_gbp_b": 11.887,
+      "market_cap_gbp_b": 11.89,
       "beta": 0.934,
       "pe_ratio": 17.54,
       "avg_volume_m": 1.39,
@@ -1232,7 +1232,7 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "112",
       "bar_pct": 98,
-      "market_cap_gbp_b": 63.727,
+      "market_cap_gbp_b": 63.744,
       "beta": 2.313,
       "pe_ratio": null,
       "avg_volume_m": 25.18,
@@ -1244,6 +1244,20 @@ window.PRICES_DATA = {
       "vol_1w": 146214467,
       "vol_1m": 604065167,
       "news": [
+        {
+          "title": "Planet Labs Awarded John Deere Sustainability Award",
+          "publisher": "IPO-Edge.com",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/planet-labs-awarded-john-deere-213423912.html",
+          "published": 1780004063,
+          "sentiment": 0.735
+        },
+        {
+          "title": "9 \u2018Hidden\u2019 Space Stocks Haven\u2019t Joined SpaceX IPO Bubble Yet",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/space-stocks-spacex-ipo-boeing-lockheed-airbus-a3190f30?siteid=yhoof2&yptr=yahoo",
+          "published": 1780002000,
+          "sentiment": 0.0
+        },
         {
           "title": "Elon Musk Clarifies SpaceX, Anthropic AI Deal. It's Not As Big As Expected.",
           "publisher": "Investor's Business Daily",
@@ -1259,28 +1273,14 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "9 \u2018Hidden\u2019 Space Stocks Haven\u2019t Joined SpaceX IPO Bubble Yet",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/space-stocks-spacex-ipo-boeing-lockheed-airbus-a3190f30?siteid=yhoof2&yptr=yahoo",
-          "published": 1779977640,
-          "sentiment": 0.0
-        },
-        {
           "title": "AI Has Caused a Software Winter for Markets. Snowflake\u2019s Success Won\u2019t End It.",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/snowflake-ai-stock-market-things-to-know-today-ecc864b6?siteid=yhoof2&yptr=yahoo",
           "published": 1779970020,
           "sentiment": 0.572
-        },
-        {
-          "title": "Is Rocket Lab Corporation (RKLB) Among the Best Space Stocks to Buy According to Reddit and Social Media?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-corporation-rklb-among-115128358.html",
-          "published": 1779969088,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.287
+      "news_sentiment": 0.307
     },
     {
       "ticker": "PL",
@@ -1296,7 +1296,7 @@ window.PRICES_DATA = {
       "low_gbp": "2.72",
       "high_gbp": "38",
       "bar_pct": 99,
-      "market_cap_gbp_b": 13.624,
+      "market_cap_gbp_b": 13.627,
       "beta": 1.914,
       "pe_ratio": null,
       "avg_volume_m": 13.31,
@@ -1308,6 +1308,13 @@ window.PRICES_DATA = {
       "vol_1w": 59899788,
       "vol_1m": 206955688,
       "news": [
+        {
+          "title": "Planet Labs Awarded John Deere Sustainability Award",
+          "publisher": "IPO-Edge.com",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/planet-labs-awarded-john-deere-213423912.html",
+          "published": 1780004063,
+          "sentiment": 0.735
+        },
         {
           "title": "Intuitive Machines Rallies 9%, Rocket Lab and Planet Labs Decline in Space Stock Divergence",
           "publisher": "24/7 Wall St.",
@@ -1335,16 +1342,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/05/27/2-space-stocks-that-are-quietly-becoming-some-of/",
           "published": 1779904200,
           "sentiment": 0.778
-        },
-        {
-          "title": "Space stocks surge after SpaceX IPO S-1 filing",
-          "publisher": "Quartz",
-          "url": "https://qz.com/space-stocks-surge-spacex-ipo-filing-052726",
-          "published": 1779882116,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.283
+      "news_sentiment": 0.43
     },
     {
       "ticker": "ASTS",
@@ -1360,7 +1360,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "98",
       "bar_pct": 99,
-      "market_cap_gbp_b": 38.416,
+      "market_cap_gbp_b": 38.426,
       "beta": 2.598,
       "pe_ratio": null,
       "avg_volume_m": 17.97,
@@ -1376,7 +1376,14 @@ window.PRICES_DATA = {
           "title": "9 \u2018Hidden\u2019 Space Stocks Haven\u2019t Joined SpaceX IPO Bubble Yet",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/space-stocks-spacex-ipo-boeing-lockheed-airbus-a3190f30?siteid=yhoof2&yptr=yahoo",
-          "published": 1779977640,
+          "published": 1780002000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Viasat Earnings Weren\u2019t Enough For Its Scorching Hot Stock",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/viasat-earnings-stock-ebitda-4e6db5db?siteid=yhoof2&yptr=yahoo",
+          "published": 1780000740,
           "sentiment": 0.0
         },
         {
@@ -1399,16 +1406,9 @@ window.PRICES_DATA = {
           "url": "https://stocktwits.com/news-articles/markets/equity/tesla-stock-spacex-merger-hype-2-trillion-valuation-warning/cZgie7qResJ",
           "published": 1779951477,
           "sentiment": -0.103
-        },
-        {
-          "title": "RKLB, ASTS Are Crushing Retail Space Trade On SpaceX IPO Buzz \u2014 But One Tiny Underdog Could Be The Real Moonshot",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/rklb-asts-sidu-bsky-stocks-retail-spacex-ipo-underdog/cZgiE2iRes3",
-          "published": 1779946609,
-          "sentiment": -0.19
         }
       ],
-      "news_sentiment": 0.033
+      "news_sentiment": 0.071
     },
     {
       "ticker": "TDG",
@@ -1424,7 +1424,7 @@ window.PRICES_DATA = {
       "low_gbp": "836",
       "high_gbp": "1208",
       "bar_pct": 28,
-      "market_cap_gbp_b": 52.624,
+      "market_cap_gbp_b": 52.637,
       "beta": 0.879,
       "pe_ratio": 39.51,
       "avg_volume_m": 0.4,
@@ -1485,10 +1485,10 @@ window.PRICES_DATA = {
       "change_1m": "+32.22%",
       "change_ytd": "+4.82%",
       "return_1yr": "+35%",
-      "low_gbp": "190",
+      "low_gbp": "191",
       "high_gbp": "269",
       "bar_pct": 84,
-      "market_cap_gbp_b": 35.804,
+      "market_cap_gbp_b": 35.814,
       "beta": 0.953,
       "pe_ratio": 68.47,
       "avg_volume_m": 0.69,
@@ -1522,21 +1522,21 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Stocks Pressured as Oil Prices Climb on US-Iran Clashes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2178581/stocks-pressured-as-oil-prices-climb-on-us-iran-clashes",
-          "published": 1779977224,
-          "sentiment": -0.226
-        },
-        {
           "title": "HEICO Q2 Earnings Beat Estimates, Sales Increase Year Over Year",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/heico-q2-earnings-beat-estimates-134900739.html",
           "published": 1779976140,
           "sentiment": 0.318
+        },
+        {
+          "title": "HEICO Corporation Q2 2026 Earnings Call Summary",
+          "publisher": "Moby",
+          "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-heico-corporation-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss",
+          "published": 1779971400,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.078
+      "news_sentiment": 0.123
     },
     {
       "ticker": "AXON",
@@ -1552,7 +1552,7 @@ window.PRICES_DATA = {
       "low_gbp": "252",
       "high_gbp": "659",
       "bar_pct": 18,
-      "market_cap_gbp_b": 26.334,
+      "market_cap_gbp_b": 26.341,
       "beta": 1.435,
       "pe_ratio": 177.86,
       "avg_volume_m": 1.07,
@@ -1680,7 +1680,7 @@ window.PRICES_DATA = {
       "low_gbp": "35",
       "high_gbp": "77",
       "bar_pct": 99,
-      "market_cap_gbp_b": 4.828,
+      "market_cap_gbp_b": 4.829,
       "beta": 0.83,
       "pe_ratio": null,
       "avg_volume_m": 0.57,
@@ -1744,11 +1744,11 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "37",
       "bar_pct": 95,
-      "market_cap_gbp_b": 9.604,
+      "market_cap_gbp_b": 9.607,
       "beta": 0.027,
       "pe_ratio": 45.24,
       "avg_volume_m": 1.05,
-      "div_yield_pct": 79.0,
+      "div_yield_pct": null,
       "short_pct": 1.29,
       "analyst": "strong_buy",
       "analyst_score": 1.5,

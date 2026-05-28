@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-05-28 22:02",
-  "fx_gbp_usd": 1.3444,
+  "updated": "2026-05-28 23:57",
+  "fx_gbp_usd": 1.3443,
   "stocks": [
     {
       "ticker": "SNDK",
@@ -16,14 +16,14 @@ window.PRICES_DATA = {
       "low_gbp": "27",
       "high_gbp": "1234",
       "bar_pct": 99,
-      "market_cap_gbp_b": 180.825,
+      "market_cap_gbp_b": 180.85,
       "beta": null,
       "pe_ratio": 56.12,
       "avg_volume_m": 16.54,
       "div_yield_pct": null,
       "short_pct": 9.63,
       "analyst": "buy",
-      "analyst_score": 1.59,
+      "analyst_score": 1.55,
       "vol_1d": 9879723,
       "vol_1w": 56596823,
       "vol_1m": 309462123,
@@ -80,7 +80,7 @@ window.PRICES_DATA = {
       "low_gbp": "38",
       "high_gbp": "407",
       "bar_pct": 97,
-      "market_cap_gbp_b": 136.181,
+      "market_cap_gbp_b": 136.199,
       "beta": 2.158,
       "pe_ratio": 31.79,
       "avg_volume_m": 7.98,
@@ -144,9 +144,9 @@ window.PRICES_DATA = {
       "low_gbp": "9.11",
       "high_gbp": "315",
       "bar_pct": 91,
-      "market_cap_gbp_b": 156.329,
+      "market_cap_gbp_b": 156.33,
       "beta": null,
-      "pe_ratio": 59.88,
+      "pe_ratio": 60.61,
       "avg_volume_m": 34.97,
       "div_yield_pct": null,
       "short_pct": null,
@@ -208,7 +208,7 @@ window.PRICES_DATA = {
       "low_gbp": "69",
       "high_gbp": "711",
       "bar_pct": 96,
-      "market_cap_gbp_b": 774.656,
+      "market_cap_gbp_b": 774.761,
       "beta": 1.919,
       "pe_ratio": 43.62,
       "avg_volume_m": 47.56,
@@ -235,28 +235,28 @@ window.PRICES_DATA = {
           "sentiment": -0.296
         },
         {
-          "title": "Nvidia's Next AI Wave Sparks Big Calls on Micron, Dell, Arm Stocks",
+          "title": "Micron Surges 850% As It Crosses $1 Trillion Valuation",
           "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/nvidias-next-ai-wave-sparks-205612672.html",
-          "published": 1780001772,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-surges-850-crosses-1-222321135.html",
+          "published": 1780007001,
           "sentiment": 0.0
         },
         {
-          "title": "Micron Technology (MU) \u2013 Among the 10 Best Reddit Stocks to Buy According to Billionaires",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-technology-mu-among-10-202730297.html",
-          "published": 1780000050,
-          "sentiment": 0.637
+          "title": "Micron Gets Higher Target From DA Davidson",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-gets-higher-target-da-221924075.html",
+          "published": 1780006764,
+          "sentiment": 0.0
         },
         {
-          "title": "Is AMD About to Pop Like Micron? Here\u2019s Why You Shouldn\u2019t Underestimate It",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/28/is-amd-about-to-pop-like-micron-heres-why-you-shouldnt-underestimate-it/",
-          "published": 1779999315,
-          "sentiment": 0.077
+          "title": "MUU Becomes the Fourth Single-Stock ETF to Cross $5 Billion",
+          "publisher": "etf.com",
+          "url": "http://www.etf.com/sections/features/muu-becomes-fourth-single-stock-etf-cross-5-billion?utm_source=yahoo-finance&utm_medium=rss&utm_campaign=yahoo-finance-rss",
+          "published": 1780005488,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.124
+      "news_sentiment": -0.019
     },
     {
       "ticker": "STX",
@@ -269,10 +269,10 @@ window.PRICES_DATA = {
       "change_1m": "+36.91%",
       "change_ytd": "+206.83%",
       "return_1yr": "+657%",
-      "low_gbp": "86",
+      "low_gbp": "87",
       "high_gbp": "661",
       "bar_pct": 99,
-      "market_cap_gbp_b": 146.888,
+      "market_cap_gbp_b": 146.908,
       "beta": 2.009,
       "pe_ratio": 83.64,
       "avg_volume_m": 4.0,
@@ -336,7 +336,7 @@ window.PRICES_DATA = {
       "low_gbp": "44",
       "high_gbp": "162",
       "bar_pct": 92,
-      "market_cap_gbp_b": 133.393,
+      "market_cap_gbp_b": 133.411,
       "beta": 2.251,
       "pe_ratio": 66.5,
       "avg_volume_m": 26.76,
@@ -400,7 +400,7 @@ window.PRICES_DATA = {
       "low_gbp": "37",
       "high_gbp": "75",
       "bar_pct": 35,
-      "market_cap_gbp_b": 16.665,
+      "market_cap_gbp_b": 16.667,
       "beta": 1.343,
       "pe_ratio": 123.27,
       "avg_volume_m": 2.89,
@@ -468,7 +468,7 @@ window.PRICES_DATA = {
       "beta": 1.2,
       "pe_ratio": 19.05,
       "avg_volume_m": 36.88,
-      "div_yield_pct": 73.0,
+      "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.68,
@@ -528,7 +528,7 @@ window.PRICES_DATA = {
       "low_gbp": "181",
       "high_gbp": "307",
       "bar_pct": 25,
-      "market_cap_gbp_b": 76.918,
+      "market_cap_gbp_b": 76.928,
       "beta": 1.155,
       "pe_ratio": 24.85,
       "avg_volume_m": 3.11,
@@ -592,7 +592,7 @@ window.PRICES_DATA = {
       "low_gbp": "99",
       "high_gbp": "164",
       "bar_pct": 32,
-      "market_cap_gbp_b": 40.198,
+      "market_cap_gbp_b": 40.203,
       "beta": 1.447,
       "pe_ratio": 26.85,
       "avg_volume_m": 4.75,
@@ -656,7 +656,7 @@ window.PRICES_DATA = {
       "low_gbp": "178",
       "high_gbp": "336",
       "bar_pct": 67,
-      "market_cap_gbp_b": 12.965,
+      "market_cap_gbp_b": 12.967,
       "beta": 1.668,
       "pe_ratio": null,
       "avg_volume_m": 0.75,
@@ -720,7 +720,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "28",
       "bar_pct": 99,
-      "market_cap_gbp_b": 17.852,
+      "market_cap_gbp_b": 17.854,
       "beta": 0.96,
       "pe_ratio": null,
       "avg_volume_m": 0.91,
@@ -784,7 +784,7 @@ window.PRICES_DATA = {
       "low_gbp": "21",
       "high_gbp": "34",
       "bar_pct": 68,
-      "market_cap_gbp_b": 5.407,
+      "market_cap_gbp_b": 5.408,
       "beta": 1.128,
       "pe_ratio": null,
       "avg_volume_m": 1.51,
@@ -848,7 +848,7 @@ window.PRICES_DATA = {
       "low_gbp": "341",
       "high_gbp": "879",
       "bar_pct": 74,
-      "market_cap_gbp_b": 199.074,
+      "market_cap_gbp_b": 199.101,
       "beta": 1.313,
       "pe_ratio": 29.07,
       "avg_volume_m": 2.48,
@@ -912,7 +912,7 @@ window.PRICES_DATA = {
       "low_gbp": "92",
       "high_gbp": "180",
       "bar_pct": 64,
-      "market_cap_gbp_b": 13.579,
+      "market_cap_gbp_b": 13.581,
       "beta": 0.778,
       "pe_ratio": 53.28,
       "avg_volume_m": 1.01,
@@ -976,7 +976,7 @@ window.PRICES_DATA = {
       "low_gbp": "6.58",
       "high_gbp": "43",
       "bar_pct": 7,
-      "market_cap_gbp_b": 3.138,
+      "market_cap_gbp_b": 3.139,
       "beta": 2.252,
       "pe_ratio": null,
       "avg_volume_m": 29.33,
@@ -1040,7 +1040,7 @@ window.PRICES_DATA = {
       "low_gbp": "33",
       "high_gbp": "144",
       "bar_pct": 16,
-      "market_cap_gbp_b": 8.812,
+      "market_cap_gbp_b": 8.813,
       "beta": 1.181,
       "pe_ratio": null,
       "avg_volume_m": 12.01,
@@ -1110,8 +1110,8 @@ window.PRICES_DATA = {
       "avg_volume_m": 2.21,
       "div_yield_pct": null,
       "short_pct": 21.77,
-      "analyst": "buy",
-      "analyst_score": 1.67,
+      "analyst": "strong_buy",
+      "analyst_score": 1.5,
       "vol_1d": 2132988,
       "vol_1w": 13651188,
       "vol_1m": 55145088,
@@ -1168,7 +1168,7 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "101",
       "bar_pct": 68,
-      "market_cap_gbp_b": 35.839,
+      "market_cap_gbp_b": 35.843,
       "beta": 1.03,
       "pe_ratio": 103.39,
       "avg_volume_m": 3.3,
@@ -1360,7 +1360,7 @@ window.PRICES_DATA = {
       "low_gbp": "78",
       "high_gbp": "283",
       "bar_pct": 76,
-      "market_cap_gbp_b": 89.761,
+      "market_cap_gbp_b": 89.773,
       "beta": 2.099,
       "pe_ratio": 79.14,
       "avg_volume_m": 7.58,
@@ -1424,11 +1424,11 @@ window.PRICES_DATA = {
       "low_gbp": "232",
       "high_gbp": "324",
       "bar_pct": 73,
-      "market_cap_gbp_b": 116.087,
+      "market_cap_gbp_b": 116.103,
       "beta": 1.24,
       "pe_ratio": 39.41,
       "avg_volume_m": 2.66,
-      "div_yield_pct": 108.0,
+      "div_yield_pct": null,
       "short_pct": 2.37,
       "analyst": "buy",
       "analyst_score": 1.72,
@@ -1488,11 +1488,11 @@ window.PRICES_DATA = {
       "low_gbp": "41",
       "high_gbp": "244",
       "bar_pct": 86,
-      "market_cap_gbp_b": 7.829,
+      "market_cap_gbp_b": 7.83,
       "beta": 1.144,
       "pe_ratio": 56.43,
       "avg_volume_m": 0.68,
-      "div_yield_pct": 12.0,
+      "div_yield_pct": null,
       "short_pct": 12.53,
       "analyst": "none",
       "analyst_score": null,
@@ -1542,21 +1542,21 @@ window.PRICES_DATA = {
       "ticker": "EQIX",
       "category": "dc-operators",
       "exchange": "NASDAQ",
-      "price_gbp": "795",
+      "price_gbp": "796",
       "price_usd": 1069.44,
       "change_1d": "-0.18%",
       "change_1w": "+0.41%",
       "change_1m": "-1.32%",
       "change_ytd": "+41.42%",
       "return_1yr": "+51%",
-      "low_gbp": "528",
+      "low_gbp": "529",
       "high_gbp": "840",
       "bar_pct": 86,
-      "market_cap_gbp_b": 78.451,
+      "market_cap_gbp_b": 78.461,
       "beta": 0.997,
       "pe_ratio": 74.01,
       "avg_volume_m": 0.57,
-      "div_yield_pct": 184.0,
+      "div_yield_pct": null,
       "short_pct": 2.2,
       "analyst": "buy",
       "analyst_score": 1.58,
@@ -1616,11 +1616,11 @@ window.PRICES_DATA = {
       "low_gbp": "109",
       "high_gbp": "155",
       "bar_pct": 73,
-      "market_cap_gbp_b": 50.931,
+      "market_cap_gbp_b": 50.938,
       "beta": 1.08,
       "pe_ratio": 50.64,
       "avg_volume_m": 2.0,
-      "div_yield_pct": 255.0,
+      "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.72,
@@ -1680,11 +1680,11 @@ window.PRICES_DATA = {
       "low_gbp": "123",
       "high_gbp": "174",
       "bar_pct": 31,
-      "market_cap_gbp_b": 64.69,
+      "market_cap_gbp_b": 64.699,
       "beta": 0.9,
       "pe_ratio": 30.11,
       "avg_volume_m": 3.11,
-      "div_yield_pct": 377.0,
+      "div_yield_pct": null,
       "short_pct": 2.22,
       "analyst": "buy",
       "analyst_score": 1.68,
@@ -1741,14 +1741,14 @@ window.PRICES_DATA = {
       "change_1m": "+11.48%",
       "change_ytd": "+23.88%",
       "return_1yr": "+141%",
-      "low_gbp": "120",
+      "low_gbp": "121",
       "high_gbp": "304",
       "bar_pct": 93,
-      "market_cap_gbp_b": 3515.643,
+      "market_cap_gbp_b": 3516.116,
       "beta": 1.267,
       "pe_ratio": 29.78,
       "avg_volume_m": 28.09,
-      "div_yield_pct": 23.0,
+      "div_yield_pct": null,
       "short_pct": 1.41,
       "analyst": "strong_buy",
       "analyst_score": 1.44,
@@ -1764,35 +1764,35 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Why Android takes a bigger hit than Apple from AI memory shortages",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/why-android-takes-a-bigger-hit-than-apple-from-ai-memory-shortages-212846995.html",
-          "published": 1779917326,
-          "sentiment": -0.153
+          "title": "'It's Time To Fire Google,' Urges Alphabet's Search Engine Rival As DuckDuckGo Blasts AI Overhaul: People Are 'Leaving'",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/time-fire-google-urges-alphabets-213131684.html",
+          "published": 1780003891,
+          "sentiment": -0.34
         },
         {
-          "title": "Google Engineer Charged After Alleged $1.2 Million Polymarket Bets",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/google-engineer-charged-alleged-1-205218460.html",
-          "published": 1780001538,
-          "sentiment": -0.202
-        },
-        {
-          "title": "Dell raises annual forecasts as AI data center buildout fuels demand",
+          "title": "Apollo, Blackstone work on $36 billion debt deal for Anthropic, Bloomberg News reports",
           "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/dell-raises-annual-forecasts-ai-200759927.html",
-          "published": 1779998879,
-          "sentiment": -0.128
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apollo-blackstone-36-billion-debt-212728374.html",
+          "published": 1780003648,
+          "sentiment": -0.361
         },
         {
-          "title": "Wealth Preservation Advisors Liquidates Peoples Bancorp Stake, According to Recent SEC Filing",
+          "title": "Famed Investor Stanley Druckenmiller Sold Every Share of Alphabet. He Just Bought 5 AI Hardware Stocks Instead.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/filings/2026/05/28/wealth-preservation-advisors-liquidates-peoples-bancorp-stake-according-to-recent-sec-filing/",
-          "published": 1779998811,
-          "sentiment": 0.494
+          "url": "https://www.fool.com/investing/2026/05/28/famed-investor-stanley-druckenmiller-sold-every-sh/",
+          "published": 1780003560,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Google employee lands in trouble over d4vd, Mamdani bets",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/crypto/markets/google-employee-lands-in-trouble-over-d4vd-mamdani-bets",
+          "published": 1780002111,
+          "sentiment": -0.402
         }
       ],
-      "news_sentiment": 0.002
+      "news_sentiment": -0.161
     },
     {
       "ticker": "MSFT",
@@ -1808,7 +1808,7 @@ window.PRICES_DATA = {
       "low_gbp": "265",
       "high_gbp": "413",
       "bar_pct": 36,
-      "market_cap_gbp_b": 2359.235,
+      "market_cap_gbp_b": 2359.552,
       "beta": 1.093,
       "pe_ratio": 25.42,
       "avg_volume_m": 33.34,
@@ -1821,42 +1821,42 @@ window.PRICES_DATA = {
       "vol_1m": 728024802,
       "news": [
         {
-          "title": "Dell Wins $9.7 Billion Pentagon Software Contract",
+          "title": "Wiwynn Warns AI Supply Crunch Could Last Until 2027-2028",
           "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/dell-wins-9-7-billion-205422468.html",
-          "published": 1780001662,
+          "url": "https://finance.yahoo.com/sectors/technology/articles/wiwynn-warns-ai-supply-crunch-221449458.html",
+          "published": 1780006489,
+          "sentiment": -0.103
+        },
+        {
+          "title": "Dell Stock Jumps on Multibillion-Dollar Pentagon Software Deal",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dell-stock-jumps-multibillion-dollar-221437678.html",
+          "published": 1780006477,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dell Soars on Raised Outlook for $60 Billion in AI Servers",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/dell-soars-raised-outlook-60-211324547.html",
+          "published": 1780006069,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Stock Market Today, May 28: Inflation Isn't Stopping This Stock Market Rally",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/05/28/stock-market-today-may-28-inflation-isn-t-stopping-this-stock-market-rally/",
+          "published": 1780005056,
+          "sentiment": 0.114
+        },
+        {
+          "title": "Dell Wins $9.69 Billion DoD Software Deal",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dell-wins-9-69-billion-210959405.html",
+          "published": 1780002599,
           "sentiment": 0.572
-        },
-        {
-          "title": "SentinelOne provides tepid quarterly forecast, to cut 8% jobs",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/sentinelone-provides-tepid-quarterly-forecast-205357520.html",
-          "published": 1780001637,
-          "sentiment": -0.273
-        },
-        {
-          "title": "Wealth Preservation Advisors Liquidates Peoples Bancorp Stake, According to Recent SEC Filing",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/filings/2026/05/28/wealth-preservation-advisors-liquidates-peoples-bancorp-stake-according-to-recent-sec-filing/",
-          "published": 1779998811,
-          "sentiment": 0.494
-        },
-        {
-          "title": "Sector Update: Tech Stocks Rise Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/sector-tech-stocks-rise-afternoon-194011270.html",
-          "published": 1779997211,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why Microsoft Stock Is Surging Today",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/28/why-microsoft-stock-is-surging-today/",
-          "published": 1779996482,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.159
+      "news_sentiment": 0.117
     },
     {
       "ticker": "AMZN",
@@ -1872,7 +1872,7 @@ window.PRICES_DATA = {
       "low_gbp": "146",
       "high_gbp": "207",
       "bar_pct": 94,
-      "market_cap_gbp_b": 2192.312,
+      "market_cap_gbp_b": 2192.607,
       "beta": 1.468,
       "pe_ratio": 31.9,
       "avg_volume_m": 44.8,
@@ -1899,28 +1899,28 @@ window.PRICES_DATA = {
           "sentiment": 0.34
         },
         {
-          "title": "Dell raises annual forecasts as AI data center buildout fuels demand",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/dell-raises-annual-forecasts-ai-200759927.html",
-          "published": 1779998879,
-          "sentiment": -0.128
+          "title": "Amazon Tariff Lawsuit Tests Pricing Practices And Investor Confidence",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-tariff-lawsuit-tests-pricing-220401949.html",
+          "published": 1780005841,
+          "sentiment": 0.477
         },
         {
-          "title": "Wealth Preservation Advisors Liquidates Peoples Bancorp Stake, According to Recent SEC Filing",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/filings/2026/05/28/wealth-preservation-advisors-liquidates-peoples-bancorp-stake-according-to-recent-sec-filing/",
-          "published": 1779998811,
-          "sentiment": 0.494
-        },
-        {
-          "title": "Snowflake Jumps 39% After Raising Outlook And Signing $6 Billion AWS Deal",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-jumps-39-raising-outlook-195747838.html",
-          "published": 1779998267,
+          "title": "Walmart is expanding 30-minute delivery service. See where",
+          "publisher": "USA TODAY",
+          "url": "https://www.usatoday.com/story/money/retail/2026/05/28/walmarts-30-minute-delivery-service-expands/90300285007/",
+          "published": 1780004262,
           "sentiment": 0.0
+        },
+        {
+          "title": "Famed Investor Stanley Druckenmiller Sold Every Share of Alphabet. He Just Bought 5 AI Hardware Stocks Instead.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/28/famed-investor-stanley-druckenmiller-sold-every-sh/",
+          "published": 1780003560,
+          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.152
+      "news_sentiment": 0.233
     },
     {
       "ticker": "META",
@@ -1936,11 +1936,11 @@ window.PRICES_DATA = {
       "low_gbp": "387",
       "high_gbp": "592",
       "bar_pct": 42,
-      "market_cap_gbp_b": 1199.478,
+      "market_cap_gbp_b": 1199.639,
       "beta": 1.243,
       "pe_ratio": 23.09,
       "avg_volume_m": 15.66,
-      "div_yield_pct": 33.0,
+      "div_yield_pct": null,
       "short_pct": 1.46,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
@@ -1963,28 +1963,28 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Zuck Says Meta Will Sell Its Excess Compute, Maybe",
-          "publisher": "Moby",
-          "url": "https://app.moby.co/home/news/news-zuck-says-meta-will-sell-its-excess-compute-maybe?utm_source=yahoo_finance&utm_medium=rss",
-          "published": 1780001412,
+          "title": "Wiwynn Warns AI Supply Crunch Could Last Until 2027-2028",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/wiwynn-warns-ai-supply-crunch-221449458.html",
+          "published": 1780006489,
+          "sentiment": -0.103
+        },
+        {
+          "title": "Apollo Shops $36 Billion Debt Deal to Buy Google Chips for Anthropic",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apollo-shops-36-billion-debt-210011269.html",
+          "published": 1780002011,
+          "sentiment": -0.361
+        },
+        {
+          "title": "Tech, Media & Telecom Roundup: Market Talk",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/tech-media-telecom-roundup-market-talk-02fe9317?siteid=yhoof2&yptr=yahoo",
+          "published": 1780001880,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is AMD About to Pop Like Micron? Here\u2019s Why You Shouldn\u2019t Underestimate It",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/28/is-amd-about-to-pop-like-micron-heres-why-you-shouldnt-underestimate-it/",
-          "published": 1779999315,
-          "sentiment": 0.077
-        },
-        {
-          "title": "Meta Expands Subscriptions And Eyes AI Cloud As Valuation Draws Scrutiny",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/meta-expands-subscriptions-eyes-ai-200453568.html",
-          "published": 1779998693,
-          "sentiment": 0.103
         }
       ],
-      "news_sentiment": 0.036
+      "news_sentiment": -0.093
     },
     {
       "ticker": "IREN",
@@ -2000,7 +2000,7 @@ window.PRICES_DATA = {
       "low_gbp": "6.16",
       "high_gbp": "57",
       "bar_pct": 81,
-      "market_cap_gbp_b": 17.026,
+      "market_cap_gbp_b": 17.028,
       "beta": 4.179,
       "pe_ratio": 83.18,
       "avg_volume_m": 41.11,
@@ -2013,10 +2013,17 @@ window.PRICES_DATA = {
       "vol_1m": 1156687322,
       "news": [
         {
+          "title": "Dell Technologies Q1 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/dell-technologies-q1-earnings-call-highlights-2026-05-28/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1780006030,
+          "sentiment": 0.0
+        },
+        {
           "title": "Everything to Know About the Big Investor Who Took a Massive Stake in Nebius Stock",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/nebius-stock-price-ai-aschenbrenner-situational-awareness-b005bfce?siteid=yhoof2&yptr=yahoo",
-          "published": 1779990720,
+          "published": 1780000980,
           "sentiment": 0.0
         },
         {
@@ -2039,13 +2046,6 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/05/28/the-bitcoin-miners-turned-ai-neocloud-plays-might-still-be-an-underappreciated-trade-in-ai/",
           "published": 1779970475,
           "sentiment": 0.25
-        },
-        {
-          "title": "Dow Jones Futures Fall, Snowflake Surges On Earnings; Fed Inflation Data Due",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-oil-prices-amazon-marvell-snowflake-earnings/?src=A00220&yptr=yahoo",
-          "published": 1779970096,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.05
@@ -2064,7 +2064,7 @@ window.PRICES_DATA = {
       "low_gbp": "7.78",
       "high_gbp": "21",
       "bar_pct": 99,
-      "market_cap_gbp_b": 6.564,
+      "market_cap_gbp_b": 6.565,
       "beta": 5.451,
       "pe_ratio": null,
       "avg_volume_m": 14.03,
@@ -2128,7 +2128,7 @@ window.PRICES_DATA = {
       "low_gbp": "2.53",
       "high_gbp": "20",
       "bar_pct": 98,
-      "market_cap_gbp_b": 9.729,
+      "market_cap_gbp_b": 9.73,
       "beta": 4.284,
       "pe_ratio": null,
       "avg_volume_m": 30.72,
@@ -2192,7 +2192,7 @@ window.PRICES_DATA = {
       "low_gbp": "11",
       "high_gbp": "89",
       "bar_pct": 99,
-      "market_cap_gbp_b": 10.405,
+      "market_cap_gbp_b": 10.406,
       "beta": 5.718,
       "pe_ratio": null,
       "avg_volume_m": 4.79,
@@ -2256,7 +2256,7 @@ window.PRICES_DATA = {
       "low_gbp": "14",
       "high_gbp": "46",
       "bar_pct": 51,
-      "market_cap_gbp_b": 18.475,
+      "market_cap_gbp_b": 18.477,
       "beta": 1.684,
       "pe_ratio": 21.74,
       "avg_volume_m": 38.75,
@@ -2269,6 +2269,20 @@ window.PRICES_DATA = {
       "vol_1m": 860421929,
       "news": [
         {
+          "title": "Why Super Micro Stock Popped Today",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-super-micro-stock-popped-221434194.html",
+          "published": 1780006474,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Stock Market Today, May 28: Super Micro Computer Jumps After Collaboration With Taiwanese Authorities Thwarts Illegal Export Attempt",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/05/28/stock-market-today-may-28-super-micro-computer-jumps-after-collaboration-with-taiwanese-authorities-thwarts-illegal-export-attempt/",
+          "published": 1780005397,
+          "sentiment": -0.026
+        },
+        {
           "title": "Super Micro Works With Taiwan in Smuggling Probe",
           "publisher": "GuruFocus.com",
           "url": "https://finance.yahoo.com/markets/stocks/articles/super-micro-works-taiwan-smuggling-205312564.html",
@@ -2276,11 +2290,11 @@ window.PRICES_DATA = {
           "sentiment": 0.202
         },
         {
-          "title": "Dell raises annual forecasts as AI data center buildout fuels demand",
+          "title": "Dell lifts forecasts as AI data center buildout fuels demand, shares soar",
           "publisher": "Reuters",
           "url": "https://finance.yahoo.com/sectors/technology/articles/dell-raises-annual-forecasts-ai-200759927.html",
           "published": 1779998879,
-          "sentiment": -0.128
+          "sentiment": 0.178
         },
         {
           "title": "Why Super Micro Computer Rallied Today",
@@ -2288,23 +2302,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/05/28/why-super-micro-computer-rallied-today/",
           "published": 1779994878,
           "sentiment": 0.599
-        },
-        {
-          "title": "Super Micro Computer Spikes 9%, SanDisk Climbs 4% as the AI Infrastructure Trade Heats Up",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/28/super-micro-computer-spikes-9-sandisk-climbs-4-as-the-ai-infrastructure-trade-heats-up/",
-          "published": 1779993522,
-          "sentiment": 0.599
-        },
-        {
-          "title": "SMCI's Collaboration With Taiwanese Authorities Leads To Arrests \u2014 A Look At Jensen Huang's Advice To Super Micro",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/smci-taiwan-three-arrests-what-nvidia-jensen-huang-adviced/cZgiVsjRes6",
-          "published": 1779986392,
-          "sentiment": 0.25
         }
       ],
-      "news_sentiment": 0.304
+      "news_sentiment": 0.31
     },
     {
       "ticker": "DELL",
@@ -2320,11 +2320,11 @@ window.PRICES_DATA = {
       "low_gbp": "79",
       "high_gbp": "232",
       "bar_pct": 99,
-      "market_cap_gbp_b": 153.182,
+      "market_cap_gbp_b": 153.203,
       "beta": 1.062,
       "pe_ratio": 36.57,
       "avg_volume_m": 7.73,
-      "div_yield_pct": 83.0,
+      "div_yield_pct": null,
       "short_pct": 7.08,
       "analyst": "buy",
       "analyst_score": 2.0,
@@ -2333,42 +2333,42 @@ window.PRICES_DATA = {
       "vol_1m": 147019795,
       "news": [
         {
-          "title": "Earnings live updates: Snowflake stock skyrockets on AWS deal, Kohl's pops",
+          "title": "Stock market today: Dow, S&P 500, Nasdaq futures edge up as Wall Street braces for US-Iran update",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/live/earnings-live-updates-snowflake-stock-skyrockets-on-aws-deal-kohls-pops-115127980.html",
-          "published": 1779882687,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Costco earnings, April inflation data, Fedspeak: What to Watch",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/costco-earnings-april-inflation-data-230000733.html",
-          "published": 1779922800,
+          "url": "https://finance.yahoo.com/news/live/stock-market-today-dow-sp-500-nasdaq-futures-edge-up-as-wall-street-braces-for-us-iran-update-222720596.html",
+          "published": 1780007240,
           "sentiment": 0.0
         },
         {
           "title": "Dow Jones Futures: Stock Market Hits Highs On U.S.-Iran Deal; Dell Surges On Earnings",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-u-s-iran-deal-dell-netapp-earnings/?src=A00220&yptr=yahoo",
-          "published": 1780001796,
+          "published": 1780007389,
           "sentiment": 0.0
         },
         {
-          "title": "Nvidia's Next AI Wave Sparks Big Calls on Micron, Dell, Arm Stocks",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/nvidias-next-ai-wave-sparks-205612672.html",
-          "published": 1780001772,
+          "title": "Dell (DELL) Q1 2027 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/05/28/dell-dell-q1-2027-earnings-call-transcript/",
+          "published": 1780006599,
           "sentiment": 0.0
         },
         {
-          "title": "Dell Wins $9.7 Billion Pentagon Software Contract",
+          "title": "Dell Stock Jumps on Multibillion-Dollar Pentagon Software Deal",
           "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/dell-wins-9-7-billion-205422468.html",
-          "published": 1780001662,
-          "sentiment": 0.572
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dell-stock-jumps-multibillion-dollar-221437678.html",
+          "published": 1780006477,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dell Soars on Raised Outlook for $60 Billion in AI Servers",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/dell-soars-raised-outlook-60-211324547.html",
+          "published": 1780006069,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.114
+      "news_sentiment": 0.0
     },
     {
       "ticker": "COHR",
@@ -2384,7 +2384,7 @@ window.PRICES_DATA = {
       "low_gbp": "55",
       "high_gbp": "307",
       "bar_pct": 89,
-      "market_cap_gbp_b": 54.852,
+      "market_cap_gbp_b": 54.86,
       "beta": 2.053,
       "pe_ratio": 180.36,
       "avg_volume_m": 7.36,
@@ -2448,7 +2448,7 @@ window.PRICES_DATA = {
       "low_gbp": "53",
       "high_gbp": "808",
       "bar_pct": 78,
-      "market_cap_gbp_b": 49.802,
+      "market_cap_gbp_b": 49.809,
       "beta": 1.533,
       "pe_ratio": 151.52,
       "avg_volume_m": 6.49,
@@ -2512,7 +2512,7 @@ window.PRICES_DATA = {
       "low_gbp": "11",
       "high_gbp": "174",
       "bar_pct": 70,
-      "market_cap_gbp_b": 10.088,
+      "market_cap_gbp_b": 10.089,
       "beta": 3.759,
       "pe_ratio": null,
       "avg_volume_m": 12.62,
@@ -2576,7 +2576,7 @@ window.PRICES_DATA = {
       "low_gbp": "167",
       "high_gbp": "557",
       "bar_pct": 85,
-      "market_cap_gbp_b": 17.801,
+      "market_cap_gbp_b": 17.803,
       "beta": 1.217,
       "pe_ratio": 57.53,
       "avg_volume_m": 0.75,
@@ -2640,7 +2640,7 @@ window.PRICES_DATA = {
       "low_gbp": "88",
       "high_gbp": "312",
       "bar_pct": 91,
-      "market_cap_gbp_b": 22.194,
+      "market_cap_gbp_b": 22.197,
       "beta": 1.599,
       "pe_ratio": 165.72,
       "avg_volume_m": 1.26,
@@ -2704,7 +2704,7 @@ window.PRICES_DATA = {
       "low_gbp": "26",
       "high_gbp": "128",
       "bar_pct": 96,
-      "market_cap_gbp_b": 11.52,
+      "market_cap_gbp_b": 11.521,
       "beta": 2.22,
       "pe_ratio": null,
       "avg_volume_m": 2.86,
@@ -2768,7 +2768,7 @@ window.PRICES_DATA = {
       "low_gbp": "44",
       "high_gbp": "174",
       "bar_pct": 93,
-      "market_cap_gbp_b": 30.505,
+      "market_cap_gbp_b": 30.509,
       "beta": 3.176,
       "pe_ratio": 122.85,
       "avg_volume_m": 7.32,
@@ -2832,7 +2832,7 @@ window.PRICES_DATA = {
       "low_gbp": "8.15",
       "high_gbp": "79",
       "bar_pct": 91,
-      "market_cap_gbp_b": 6.511,
+      "market_cap_gbp_b": 6.512,
       "beta": 3.964,
       "pe_ratio": null,
       "avg_volume_m": 3.83,
@@ -2896,7 +2896,7 @@ window.PRICES_DATA = {
       "low_gbp": "114",
       "high_gbp": "275",
       "bar_pct": 86,
-      "market_cap_gbp_b": 43.068,
+      "market_cap_gbp_b": 43.074,
       "beta": 1.261,
       "pe_ratio": 54.52,
       "avg_volume_m": 1.45,
@@ -2960,7 +2960,7 @@ window.PRICES_DATA = {
       "low_gbp": "6.60",
       "high_gbp": "45",
       "bar_pct": 77,
-      "market_cap_gbp_b": 8.897,
+      "market_cap_gbp_b": 8.898,
       "beta": 1.233,
       "pe_ratio": null,
       "avg_volume_m": 6.58,
@@ -3024,7 +3024,7 @@ window.PRICES_DATA = {
       "low_gbp": "1.08",
       "high_gbp": "106",
       "bar_pct": 81,
-      "market_cap_gbp_b": 5.63,
+      "market_cap_gbp_b": 5.631,
       "beta": 1.757,
       "pe_ratio": null,
       "avg_volume_m": 12.11,

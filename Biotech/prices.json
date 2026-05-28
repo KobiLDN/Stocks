@@ -1,6 +1,6 @@
 {
-  "updated": "2026-05-28 22:02",
-  "fx_gbp_usd": 1.3444,
+  "updated": "2026-05-28 23:58",
+  "fx_gbp_usd": 1.3443,
   "stocks": [
     {
       "ticker": "AMGN",
@@ -16,11 +16,11 @@
       "low_gbp": "199",
       "high_gbp": "291",
       "bar_pct": 56,
-      "market_cap_gbp_b": 135.075,
+      "market_cap_gbp_b": 135.091,
       "beta": 0.435,
       "pe_ratio": 23.4,
       "avg_volume_m": 2.62,
-      "div_yield_pct": 300.0,
+      "div_yield_pct": null,
       "short_pct": 2.28,
       "analyst": "buy",
       "analyst_score": 2.46,
@@ -80,11 +80,11 @@
       "low_gbp": "78",
       "high_gbp": "117",
       "bar_pct": 60,
-      "market_cap_gbp_b": 125.796,
+      "market_cap_gbp_b": 125.812,
       "beta": 0.332,
       "pe_ratio": 18.53,
       "avg_volume_m": 5.94,
-      "div_yield_pct": 245.0,
+      "div_yield_pct": null,
       "short_pct": 1.87,
       "analyst": "buy",
       "analyst_score": 1.65,
@@ -92,6 +92,13 @@
       "vol_1w": 27910072,
       "vol_1m": 127693372,
       "news": [
+        {
+          "title": "S&P 500, Nasdaq Rise to Another Record. Software Strikes Back.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-052826/card/s-p-500-nasdaq-rise-to-another-record-software-strikes-back--hLKkqDZUeKbgzaWFPeJK?siteid=yhoof2&yptr=yahoo",
+          "published": 1779998498,
+          "sentiment": -0.361
+        },
         {
           "title": "FDA accelerated approval of Hepcludex significant milestone for US HDV market",
           "publisher": "Clinical Trials Arena",
@@ -119,16 +126,9 @@
           "url": "https://www.biopharmadive.com/news/astellas-cuts-moderna-fda-datroway-tnbc-hepcludex-hepatitis/821055/",
           "published": 1779790617,
           "sentiment": -0.357
-        },
-        {
-          "title": "Gilead Sciences (GILD) Acquires Tubulis for $3.15B to Expand Oncology Portfolio",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/gilead-sciences-gild-acquires-tubulis-195442584.html",
-          "published": 1779738882,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.18
+      "news_sentiment": 0.044
     },
     {
       "ticker": "REGN",
@@ -144,11 +144,11 @@
       "low_gbp": "354",
       "high_gbp": "611",
       "bar_pct": 42,
-      "market_cap_gbp_b": 48.466,
+      "market_cap_gbp_b": 48.472,
       "beta": 0.296,
       "pe_ratio": 15.18,
       "avg_volume_m": 0.78,
-      "div_yield_pct": 60.0,
+      "div_yield_pct": null,
       "short_pct": 2.8,
       "analyst": "buy",
       "analyst_score": 1.72,
@@ -208,7 +208,7 @@
       "low_gbp": "270",
       "high_gbp": "378",
       "bar_pct": 59,
-      "market_cap_gbp_b": 84.568,
+      "market_cap_gbp_b": 84.578,
       "beta": 0.301,
       "pe_ratio": 26.62,
       "avg_volume_m": 1.29,
@@ -272,7 +272,7 @@
       "low_gbp": "90",
       "high_gbp": "153",
       "bar_pct": 89,
-      "market_cap_gbp_b": 21.566,
+      "market_cap_gbp_b": 21.569,
       "beta": 0.195,
       "pe_ratio": 21.12,
       "avg_volume_m": 1.15,
@@ -336,7 +336,7 @@
       "low_gbp": "32",
       "high_gbp": "47",
       "bar_pct": 71,
-      "market_cap_gbp_b": 86.44,
+      "market_cap_gbp_b": 86.451,
       "beta": 0.259,
       "pe_ratio": 15.94,
       "avg_volume_m": 11.25,
@@ -471,7 +471,7 @@
       "div_yield_pct": 351.0,
       "short_pct": null,
       "analyst": "hold",
-      "analyst_score": 2.82,
+      "analyst_score": 2.73,
       "vol_1d": 5805453,
       "vol_1w": 26284700,
       "vol_1m": 159879861,
@@ -718,7 +718,7 @@
       "change_ytd": "+67.32%",
       "return_1yr": "+107%*",
       "low_gbp": "1.23",
-      "high_gbp": "3.37",
+      "high_gbp": "3.38",
       "bar_pct": 62,
       "market_cap_gbp_b": 0.392,
       "beta": 2.138,
@@ -784,7 +784,7 @@
       "low_gbp": "59",
       "high_gbp": "116",
       "bar_pct": 99,
-      "market_cap_gbp_b": 17.86,
+      "market_cap_gbp_b": 17.862,
       "beta": 1.424,
       "pe_ratio": 28.85,
       "avg_volume_m": 1.55,
@@ -800,7 +800,7 @@
           "title": "Dow Jones Futures: Stock Market Hits Highs On U.S.-Iran Deal; Dell Surges On Earnings",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-u-s-iran-deal-dell-netapp-earnings/?src=A00220&yptr=yahoo",
-          "published": 1780001796,
+          "published": 1780007389,
           "sentiment": 0.0
         },
         {
@@ -912,7 +912,7 @@
       "low_gbp": "98",
       "high_gbp": "191",
       "bar_pct": 66,
-      "market_cap_gbp_b": 22.79,
+      "market_cap_gbp_b": 22.792,
       "beta": 1.567,
       "pe_ratio": null,
       "avg_volume_m": 1.41,
@@ -1040,7 +1040,7 @@
       "low_gbp": "48",
       "high_gbp": "84",
       "bar_pct": 69,
-      "market_cap_gbp_b": 14.488,
+      "market_cap_gbp_b": 14.49,
       "beta": 0.797,
       "pe_ratio": 13.77,
       "avg_volume_m": 1.45,
@@ -1104,7 +1104,7 @@
       "low_gbp": "25",
       "high_gbp": "38",
       "bar_pct": 99,
-      "market_cap_gbp_b": 9.619,
+      "market_cap_gbp_b": 9.62,
       "beta": 0.385,
       "pe_ratio": 17.04,
       "avg_volume_m": 2.74,
@@ -1116,6 +1116,13 @@
       "vol_1w": 10691193,
       "vol_1m": 59586393,
       "news": [
+        {
+          "title": "Dow Jones Futures: Stock Market Hits Highs On U.S.-Iran Deal; Dell Surges On Earnings",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-u-s-iran-deal-dell-netapp-earnings/?src=A00220&yptr=yahoo",
+          "published": 1780009035,
+          "sentiment": 0.0
+        },
         {
           "title": "If Decades of History Tell Us Anything, This Biotech Near $50 Is Primed to Skyrocket",
           "publisher": "24/7 Wall St.",
@@ -1143,13 +1150,6 @@
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/assessing-exelixis-exel-valuation-merck-161525616.html",
           "published": 1779380125,
           "sentiment": -0.66
-        },
-        {
-          "title": "GlobeFlex Exits NCR Atleos After Brink\u2019s Buyout Deal",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/filings/2026/05/20/globeflex-exits-ncr-atleos-after-brink-s-buyout-deal/",
-          "published": 1779314091,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.083
@@ -1168,7 +1168,7 @@
       "low_gbp": "211",
       "high_gbp": "369",
       "bar_pct": 10,
-      "market_cap_gbp_b": 30.294,
+      "market_cap_gbp_b": 30.298,
       "beta": 0.302,
       "pe_ratio": 76.46,
       "avg_volume_m": 1.08,
@@ -1296,7 +1296,7 @@
       "low_gbp": "17",
       "high_gbp": "44",
       "bar_pct": 68,
-      "market_cap_gbp_b": 14.039,
+      "market_cap_gbp_b": 14.041,
       "beta": 1.056,
       "pe_ratio": null,
       "avg_volume_m": 7.44,
@@ -1360,7 +1360,7 @@
       "low_gbp": "59",
       "high_gbp": "92",
       "bar_pct": 31,
-      "market_cap_gbp_b": 17.576,
+      "market_cap_gbp_b": 17.578,
       "beta": 1.371,
       "pe_ratio": null,
       "avg_volume_m": 1.2,
@@ -1488,7 +1488,7 @@
       "low_gbp": "37",
       "high_gbp": "49",
       "bar_pct": 20,
-      "market_cap_gbp_b": 7.582,
+      "market_cap_gbp_b": 7.583,
       "beta": 0.229,
       "pe_ratio": 37.94,
       "avg_volume_m": 1.96,
@@ -1652,7 +1652,7 @@
       "low_gbp": "26",
       "high_gbp": "61",
       "bar_pct": 22,
-      "market_cap_gbp_b": 149.983,
+      "market_cap_gbp_b": 150.001,
       "beta": 0.348,
       "pe_ratio": 10.66,
       "avg_volume_m": 17.22,
@@ -1664,6 +1664,27 @@
       "vol_1w": 57652638,
       "vol_1m": 332933538,
       "news": [
+        {
+          "title": "Eli Lilly Jumps as CVS Expands Weight-Loss Drug Coverage",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/eli-lilly-jumps-cvs-expands-221445298.html",
+          "published": 1780006485,
+          "sentiment": 0.103
+        },
+        {
+          "title": "CVS Restores Coverage for Lilly's Zepbound",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/cvs-restores-coverage-lillys-zepbound-220703093.html",
+          "published": 1780006023,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Eli Lilly Stock on Track for Record as Insurance Coverage Expands for Zepbound",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-05-28-2026/card/eli-lilly-back-in-1-trillion-club-as-insurance-coverage-expands-for-zepbound-vcfO0WlOdiC7Li988bBv?siteid=yhoof2&yptr=yahoo",
+          "published": 1779997288,
+          "sentiment": 0.103
+        },
         {
           "title": "CVS will add these weight-loss options to drug plans",
           "publisher": "USA TODAY",
@@ -1677,30 +1698,9 @@
           "url": "https://www.barrons.com/articles/eli-lilly-stock-cvs-weight-loss-drugs-9e061182?siteid=yhoof2&yptr=yahoo",
           "published": 1779986220,
           "sentiment": 0.0
-        },
-        {
-          "title": "Contrarian Opinion: Novo Nordisk Is A Better Buy Than Eli Lilly Right Now",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/28/contarian-opinion-novo-nordisk-is-a-better-buy-tha/",
-          "published": 1779986100,
-          "sentiment": 0.44
-        },
-        {
-          "title": "Novo Nordisk faces complex GLP-1 landscape as oral launch patterns diverge from injectables",
-          "publisher": "Proactive",
-          "url": "https://www.proactiveinvestors.com/companies/news/1093035/novo-nordisk-faces-complex-glp-1-landscape-as-oral-launch-patterns-diverge-from-injectables-1093035.html",
-          "published": 1779973380,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Small biotech firms quicker to 'latch onto' AI than big ones, says Tencent Healthcare President",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/small-biotech-firms-quicker-latch-113344052.html",
-          "published": 1779968024,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.088
+      "news_sentiment": 0.1
     },
     {
       "ticker": "LLY",
@@ -1714,9 +1714,9 @@
       "change_ytd": "+4.65%",
       "return_1yr": "+81%",
       "low_gbp": "464",
-      "high_gbp": "843",
+      "high_gbp": "844",
       "bar_pct": 99,
-      "market_cap_gbp_b": 747.381,
+      "market_cap_gbp_b": 747.471,
       "beta": 0.481,
       "pe_ratio": 40.01,
       "avg_volume_m": 3.06,
@@ -1729,42 +1729,42 @@
       "vol_1m": 73866731,
       "news": [
         {
+          "title": "Eli Lilly Jumps as CVS Expands Weight-Loss Drug Coverage",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/eli-lilly-jumps-cvs-expands-221445298.html",
+          "published": 1780006485,
+          "sentiment": 0.103
+        },
+        {
+          "title": "CVS Restores Coverage for Lilly's Zepbound",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/cvs-restores-coverage-lillys-zepbound-220703093.html",
+          "published": 1780006023,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Lilly Presses Ahead As $529 Billion Drug Pricing Fight Looms",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/lilly-presses-ahead-529-billion-211739443.html",
+          "published": 1780003059,
+          "sentiment": -0.494
+        },
+        {
+          "title": "S&P 500, Nasdaq And Dow Close At Record Highs Amid Positive Reports Of US-Iran Ceasefire Negotiations \u2014  IBM, SNOW, CZR, AKTX, LLY In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-and-dow-close-at-record-highs-amid-positive-reports-of-us-iran-ceasefire-negotiations-ibm-snow-czr-aktx-lly-in-focus/cZgiu45Ret7",
+          "published": 1780002965,
+          "sentiment": 0.557
+        },
+        {
           "title": "2 Mega-Cap Stocks on Our Buy List and 1 We Find Risky",
           "publisher": "StockStory",
           "url": "https://finance.yahoo.com/markets/stocks/articles/2-mega-cap-stocks-buy-205427489.html",
           "published": 1780001667,
           "sentiment": -0.202
-        },
-        {
-          "title": "Eli Lilly Expands Vaccine Push with Three Acquisitions, Reuters Reports",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/eli-lilly-expands-vaccine-push-201535863.html",
-          "published": 1779999335,
-          "sentiment": 0.103
-        },
-        {
-          "title": "Stock Market Today, May 28: Tech Stocks Rise as Snowflake Surges After $6 Billion Amazon Deal and Strong Earnings",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/05/28/stock-market-today-may-28-tech-stocks-rise-as-snowflake-surges-after-usd6-billion-amazon-deal-and-strong-earnings/",
-          "published": 1779992770,
-          "sentiment": 0.612
-        },
-        {
-          "title": "CVS will add these weight-loss options to drug plans",
-          "publisher": "USA TODAY",
-          "url": "https://www.usatoday.com/story/money/2026/05/28/cvs-zepbound-foundayo-drug-plans-weight-loss/90293671007/",
-          "published": 1779991662,
-          "sentiment": 0.0
-        },
-        {
-          "title": "LLY Stock Hits All-Time High \u2014 CVS Coverage Boost For Zepbound May Be Driving Gains",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/lly-eli-lilly-cvs-stocks-gain-cvs-health-coverage-obesity-drugs-zepbound-foundayo/cZginEWRetb",
-          "published": 1779987272,
-          "sentiment": 0.625
         }
       ],
-      "news_sentiment": 0.228
+      "news_sentiment": 0.052
     },
     {
       "ticker": "LEGN",
@@ -1780,7 +1780,7 @@
       "low_gbp": "12",
       "high_gbp": "34",
       "bar_pct": 41,
-      "market_cap_gbp_b": 3.904,
+      "market_cap_gbp_b": 3.905,
       "beta": 0.297,
       "pe_ratio": null,
       "avg_volume_m": 2.03,
@@ -1793,18 +1793,18 @@
       "vol_1m": 48989398,
       "news": [
         {
+          "title": "J&J Mastered Cancer Biotech Deals on the Cheap. Can It Stay on the Cutting Edge?",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/health/pharma/j-j-mastered-cancer-biotech-deals-on-the-cheap-can-it-stay-on-the-cutting-edge-bc1bab56?siteid=yhoof2&yptr=yahoo",
+          "published": 1780002660,
+          "sentiment": -0.71
+        },
+        {
           "title": "J&J\u2019s Strategy for Deals on the Cheap Faces a Big Test",
           "publisher": "The Wall Street Journal",
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-05-28-2026/card/j-j-s-strategy-for-deals-on-the-cheap-faces-a-big-test-HA0QMhOPEK8Fro7vfY53?siteid=yhoof2&yptr=yahoo",
           "published": 1779985803,
           "sentiment": 0.0
-        },
-        {
-          "title": "J&J Mastered Cancer Biotech Deals on the Cheap. Can It Stay on the Cutting Edge?",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/health/pharma/j-j-mastered-cancer-biotech-deals-on-the-cheap-can-it-stay-on-the-cutting-edge-bc1bab56?siteid=yhoof2&yptr=yahoo",
-          "published": 1779960600,
-          "sentiment": -0.71
         },
         {
           "title": "A China Tech Fund Opens a Biotech Position \u2014 Here's What That Actually Signals",
@@ -1844,7 +1844,7 @@
       "low_gbp": "24",
       "high_gbp": "65",
       "bar_pct": 83,
-      "market_cap_gbp_b": 9.506,
+      "market_cap_gbp_b": 9.507,
       "beta": 0.383,
       "pe_ratio": null,
       "avg_volume_m": 1.99,
