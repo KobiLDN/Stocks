@@ -220,23 +220,6 @@
     .company-cell { display: none; }
   }
 
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    margin-bottom: 14px;
-    background: var(--accent);
-    color: #000;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 3px;
-  }
-  .back-link:hover { background: #fff; color: #000; }
 </style>
 </head>
 <body>
@@ -244,11 +227,26 @@
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
   <div class="header-inner">
-  <a class="back-link" href="../index.html">← All Sectors</a>
+  <div class="header-left">
     <div class="header-label">// AI Infrastructure</div>
-    <h1>Stock <span>Metrics</span></h1>
-    <div class="header-sub">Market cap · Beta · P/E · Volume · Dividend · Short interest · Analyst rating</div>
+        <h1>Stock <span>Metrics</span></h1>
+        <div class="header-sub">Market cap · Beta · P/E · Volume · Dividend · Short interest · Analyst rating</div>
   </div>
+  <div class="sector-switcher">
+<a class="sector-card active" href="index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Biotech</div>
+</a>
+</div>
+</div>
 </header>
 <nav>
   <div class="nav-inner">

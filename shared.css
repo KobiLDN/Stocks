@@ -120,7 +120,12 @@ header {
   margin: 0 auto;
   padding: 0 24px 0 43px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
+
+.header-left { flex: 1; min-width: 0; }
 
 .header-inner::before {
   content: '';
@@ -157,24 +162,39 @@ h1 span { color: var(--accent); }
   font-family: 'IBM Plex Mono', monospace;
 }
 
-/* ---- Back link button ---- */
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 12px;
-  margin-bottom: 14px;
-  background: var(--accent);
-  color: #000;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 3px;
+/* ---- Sector switcher (header right side) ---- */
+.sector-switcher {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  width: 320px;
+  flex-shrink: 0;
+  align-self: center;
 }
-.back-link:hover { background: #fff; color: #000; }
+
+.sector-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  border-radius: 4px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+.sector-card:hover { background: var(--surface2); border-color: var(--accent); cursor: pointer; }
+.sector-card.active { border-top-color: var(--muted); border-color: var(--border); opacity: 0.45; cursor: default; pointer-events: none; }
+
+.sector-card-top { display: flex; align-items: center; justify-content: space-between; }
+.sector-card-icon { font-size: 18px; line-height: 1; }
+.sector-card-name { font-size: 13px; font-weight: 700; letter-spacing: -0.01em; }
+
+/* Badge (shared with root sectors page) */
+.badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 6px; border-radius: 2px; }
+.badge-live { background: rgba(0,230,118,0.12); color: var(--green); border: 1px solid rgba(0,230,118,0.3); }
 
 /* ---- Nav ---- */
 nav {
