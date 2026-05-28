@@ -38,6 +38,10 @@ Tracks 48 AI infrastructure stocks in GBP with live prices, fundamentals, news s
 - **Prices** — GitHub Actions twice daily on weekdays (13:00 UTC + 21:30 UTC) via `yfinance`. Writes `index.html`, `prices.json`, `prices-data.js`.
 - **Signals** — GitHub Actions weekly (Mondays 07:00 UTC) via OpenRouter (`deepseek/deepseek-v4-flash`). Writes `signals-local.json`, `signals-local.js`. Uses `OPENROUTER_API_KEY` repository secret.
 
+## Shared stylesheet
+
+All AI pages load `../shared.css` for shared styles (reset, body, ticker tape, header, nav, footer, sector switcher). Page-specific CSS lives in each page's own `<style>` block. Do not duplicate shared rules in page styles.
+
 ## Local development
 
 All work happens in the `STOCKSDev` clone. See [../AGENTS.md](../AGENTS.md) and [../WORKFLOW.md](../WORKFLOW.md).

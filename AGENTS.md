@@ -77,23 +77,31 @@ When you make a change, update these in the same commit:
 
 ## Sector structure
 
-All sector files live in their own subfolder:
+All sector files live in their own subfolder. One shared stylesheet covers all sectors:
 
 ```
 STOCKSDev\
 ├── index.html          ← hub landing page (links to all sectors)
+├── shared.css          ← shared stylesheet loaded by all 21 sector pages
 ├── AI\                 ← AI Infrastructure sector (48 stocks, 12 categories)
-│   ├── index.html
+│   ├── index.html      ← CANONICAL reference for typography/UI standards
 │   ├── update_prices.py
 │   └── ...
 ├── Biotech\            ← Biotech sector (30 stocks, 9 categories)
 │   ├── index.html
 │   ├── update_prices.py
 │   └── ...
-└── (future sectors: Defence\, Energy\, Crypto\)
+├── Defence\            ← Defence & Aerospace sector (28 stocks, 6 categories)
+│   ├── index.html
+│   ├── update_prices.py
+│   └── ...
+└── (future sectors: Energy\, Crypto\)
 ```
 
-When adding a new sector, create its subfolder and keep all sector-specific scripts inside it.
+When adding a new sector, create its subfolder and keep all sector-specific scripts inside it. Each page must include:
+1. Google Fonts `<link>` tag
+2. `<link rel="stylesheet" href="../shared.css">` — before the page `<style>` block
+3. A page-specific `<style>` block containing only CSS not already in `shared.css`
 
 ## GitHub Actions
 
@@ -119,10 +127,34 @@ Everything else remains keyless:
 
 ## Style and scope
 
-- Match the dark theme tokens in `:root` in `AI/index.html` for all sector pages and the hub.
+- Design tokens (`:root` variables) live in `shared.css` — use these for all sector pages and the hub. Do not redefine them per page.
+- Shared structural CSS (body, header, nav, ticker tape, footer, sector switcher) lives in `shared.css`. Page-specific CSS lives in each page's own `<style>` block.
 - Keep commits focused to one logical change.
 - Keep comments minimal — only add when intent is non-obvious.
 - Never force-push `main`.
+
+## Header structure — sector switcher
+
+The back-link (`← All Sectors`) has been replaced permanently by a **sector switcher panel** in the header right side. All 21 sector pages use this pattern:
+
+```html
+<div class="header-inner">
+  <div class="header-left">
+    <!-- header-label, h1, header-sub -->
+  </div>
+  <div class="sector-switcher">
+    <a class="sector-card hub-card" href="../index.html">...</a>
+    <a class="sector-card active" href="{page}.html">...</a>   <!-- current sector -->
+    <a class="sector-card" href="../{Sector2}/{page}.html">...</a>
+    <a class="sector-card" href="../{Sector3}/{page}.html">...</a>
+  </div>
+</div>
+```
+
+- Active card: full opacity, cyan top border (`border-top-color: var(--accent)`)
+- Inactive cards: 45% opacity, grey top border — styled in `shared.css`
+- Links are context-aware: switching sectors keeps you on the same page type (e.g. metrics → metrics)
+- When adding a new sector, run `add_sector_switcher.py` to update all existing pages
 
 ## UI Design Standards — Typography scale
 

@@ -31,9 +31,9 @@ setup on any new repo.
 For this repo:
 
 ```
-aiStocks/
-├── aiStocksMAIN/   (main)
-└── aiStocksDEV/    (dev)
+Stocks/
+├── STOCKSMain/   (main)
+└── STOCKSDev/    (dev)
 ```
 
 ---

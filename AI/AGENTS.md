@@ -166,13 +166,14 @@ When designing a new feature that needs LLM-quality output: prefer CI-compatible
 
 ## Style and scope
 
-- Match the dark theme tokens in `:root` in `index.html`.
+- Design tokens live in `../shared.css` (`:root` variables). Do not redefine them in page `<style>` blocks.
+- Shared structural CSS (body, header, nav, ticker tape, footer, sector switcher) lives in `../shared.css`. Only add page-specific CSS to this page's own `<style>` block.
 - Keep commits focused to one logical change.
 - Keep comments minimal — only add when intent is non-obvious.
 - Never force-push `main`.
 
 ## ⚠️ This sector is the canonical UI reference
 
-`AI/index.html` is the **reference implementation** for all sector dashboards in this repo. Font sizes, spacing, and component structure set here are the standard that all other sectors (Biotech, and any future sector) must match.
+`AI/index.html` is the **reference implementation** for all sector dashboards in this repo. Font sizes, spacing, and component structure set here are the standard that all other sectors must match.
 
-See the **UI Design Standards — Typography scale** table in the root `../AGENTS.md` for the exact values. If you change any font size or layout metric in this file, update that table in `../AGENTS.md` too.
+See the **UI Design Standards — Typography scale** table in `../AGENTS.md` for the exact values. If you change any font size or layout metric in this file, update that table in `../AGENTS.md` too.
