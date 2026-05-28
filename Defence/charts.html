@@ -12,8 +12,8 @@
     --surface: #0e1419;
     --surface2: #141b22;
     --border: #1e2d3d;
-    --accent: #ff6b35;
-    --accent2: #00d4ff;
+    --accent: #00d4ff;
+    --accent2: #ff6b35;
     --gold: #ffd700;
     --text: #e0eaf5;
     --muted: #5a7a9a;
@@ -52,7 +52,7 @@
   .tape-r.neg  { color: var(--red); }
   .tape-r.flat { color: var(--muted); }
 
-  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
+  body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events: none; z-index: 0; }
 
   nav { position: relative; z-index: 10; border-bottom: 1px solid var(--border); background: var(--bg); }
   .nav-inner { max-width: 1600px; margin: 0 auto; padding: 12px 24px; display: flex; gap: 2px; }
@@ -149,7 +149,7 @@
   }
 
   .back-link { display: block; padding: 6px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b8299; text-decoration: none; letter-spacing: 0.05em; }
-  .back-link:hover { color: #ff6b35; }
+  .back-link:hover { color: #00d4ff; }
 </style>
 </head>
 <body>
@@ -393,7 +393,7 @@
       height: 580,
       width: '100%',
       backgroundColor: '#000000',
-      gridColor: 'rgba(255,107,53,0.04)',
+      gridColor: 'rgba(0,212,255,0.04)',
     });
   }
 
@@ -462,7 +462,7 @@
           height: 320,
           width: '100%',
           backgroundColor: '#000000',
-          gridColor: 'rgba(255,107,53,0.04)',
+          gridColor: 'rgba(0,212,255,0.04)',
         });
       }, i * 150);
     });
