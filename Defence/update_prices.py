@@ -270,6 +270,102 @@ def return_class(pct):
         return "return-modest"
 
 
+def update_html(results, gbp_usd, today_str):
+    with open(HTML_FILE, "r", encoding="utf-8") as f:
+        html = f.read()
+
+    soup = BeautifulSoup(html, "html.parser")
+    table = soup.find("table", id="stock-table")
+    if not table:
+        print("  [update_html] WARNING: #stock-table not found — skipping HTML update")
+        return
+    rows = table.find("tbody").find_all("tr")
+
+    for row in rows:
+        ticker = row.get("data-ticker")
+        if ticker not in results:
+            continue
+
+        r = results[ticker]
+        ret_str = f"+{r['return_pct']}%"
+
+        # Update data attributes
+        row["data-price-usd"]  = f"{r['price_usd']:.2f}"
+        row["data-price-gbp"]  = fmt_gbp(r["price_gbp"])
+        row["data-return"]     = ret_str
+        row["data-low-gbp"]    = fmt_gbp(r["low_gbp"])
+        row["data-high-gbp"]   = fmt_gbp(r["high_gbp"])
+        row["data-bar-pct"]    = str(r["bar_pct"])
+        row["data-change-1d"]  = f"{r['change_1d']:+.2f}%"
+        row["data-change-1w"]  = f"{r['change_1w']:+.2f}%"
+        row["data-change-1m"]  = f"{r['change_1m']:+.2f}%"
+        row["data-change-ytd"] = f"{r['change_ytd']:+.2f}%"
+
+        # Price cell — rebuild with change pills
+        price_span = row.find("span", class_="price")
+        if price_span:
+            price_td = price_span.parent
+            price_td.clear()
+            new_price = soup.new_tag("span", attrs={"class": "price"})
+            new_price.string = f"£{fmt_gbp(r['price_gbp'])}"
+            price_td.append(new_price)
+            pills_div = soup.new_tag("div", attrs={"class": "change-pills"})
+            for label, val in [("1D", r["change_1d"]), ("1W", r["change_1w"]), ("1M", r["change_1m"])]:
+                cls = "flat" if val == 0 else ("pos" if val > 0 else "neg")
+                pill = soup.new_tag("span", attrs={"class": ["cpill", cls]})
+                pill.string = f"{val:+.2f}% {label}"
+                pills_div.append(pill)
+            price_td.append(pills_div)
+
+        # YTD cell
+        ytd_span = row.find("span", class_="ytd-return")
+        if ytd_span:
+            ytd_val = r["change_ytd"]
+            ytd_cls = "ytd-flat" if ytd_val == 0 else ("ytd-pos" if ytd_val > 0 else "ytd-neg")
+            ytd_span["class"] = ["ytd-return", ytd_cls]
+            ytd_span.string = f"{ytd_val:+.2f}%"
+
+        # Return cell
+        ret_span = row.find("span", class_=re.compile(r"return-"))
+        if ret_span:
+            ret_span["class"] = [return_class(r["return_pct"])]
+            ret_span.string = ret_str
+
+        # Range bar
+        range_fill = row.find("div", class_="range-fill")
+        range_dot  = row.find("div", class_="range-dot")
+        if range_fill:
+            range_fill["style"] = f"width:{r['bar_pct']}%"
+        if range_dot:
+            range_dot["style"] = f"left:{r['bar_pct']}%"
+
+        # 52wk labels
+        labels = row.find_all("span", class_="range-label")
+        if len(labels) >= 2:
+            labels[0].string = f"£{fmt_gbp(r['low_gbp'])}"
+            labels[1].string = f"£{fmt_gbp(r['high_gbp'])}"
+
+    # Update FX rate display
+    fx_span = soup.find("span", id="fx-rate")
+    if fx_span:
+        fx_span.string = f"£1 = ${gbp_usd:.4f}"
+
+    # Update last updated date
+    date_span = soup.find("span", id="last-updated")
+    if date_span:
+        date_span.string = f"Last updated: {today_str}"
+
+    updated_html = str(soup)
+    updated_html = re.sub(
+        r"FX Rate used: £1 = \$[\d.]+",
+        f"FX Rate used: £1 = ${gbp_usd:.4f}",
+        updated_html
+    )
+
+    with open(HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(updated_html)
+
+
 def write_json(results, gbp_usd, today_str):
     stocks = []
     for ticker, (yahoo_sym, cat, exchange, special) in STOCKS.items():
@@ -381,7 +477,8 @@ def main():
             errors.append(ticker)
 
     today_str = datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M")
-    print(f"\nWriting {JSON_FILE} and {JS_FILE}...")
+    print(f"\nUpdating {HTML_FILE}, {JSON_FILE} and {JS_FILE}...")
+    update_html(results, gbp_usd, today_str)
     write_json(results, gbp_usd, today_str)
 
     print(f"\nDone. {len(results)} stocks updated, {len(errors)} failed.")
