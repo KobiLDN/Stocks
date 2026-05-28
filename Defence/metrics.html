@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defence &amp; Aerospace — Stock Metrics</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="prices-data.js"></script>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0e1419;
+    --surface2: #141b22;
+    --border: #1e2d3d;
+    --accent: #ff6b35;
+    --accent2: #00d4ff;
+    --gold: #ffd700;
+    --text: #e0eaf5;
+    --muted: #5a7a9a;
+    --red: #ff4444;
+    --green: #00e676;
+    --purple: #c084fc;
+    --blue: #4488ff;
+    --indigo: #a78bfa;
+    --rose: #fb7185;
+    --teal: #2dd4bf;
+    --amber: #f59e0b;
+    --slate: #94a3b8;
+    --lime: #a3e635;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 36px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #ticker-tape {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 36px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--accent);
+    z-index: 200;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .tape-track { display: flex; white-space: nowrap; gap: 0; }
+  .tape-track.running { animation: scroll-tape linear infinite; }
+  @keyframes scroll-tape { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  #ticker-tape:hover .tape-track { animation-play-state: paused; }
+  .tape-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 18px; border-right: 1px solid var(--border); }
+  .tape-t { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 1px; }
+  .tape-p { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .tape-r { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+  .tape-r.pos  { color: var(--green); }
+  .tape-r.neg  { color: var(--red); }
+  .tape-r.flat { color: var(--muted); }
+
+  header { position: relative; z-index: 10; padding: 32px 0 24px; border-bottom: 1px solid var(--border); background: var(--bg); }
+  .header-inner { max-width: 1600px; margin: 0 auto; padding: 0 24px 0 43px; position: relative; }
+  .header-inner::before { content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+
+  nav { position: relative; z-index: 10; border-bottom: 1px solid var(--border); background: var(--bg); }
+  .nav-inner { max-width: 1600px; margin: 0 auto; padding: 12px 24px; display: flex; gap: 2px; }
+  .nav-link { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 20px; text-decoration: none; color: var(--muted); border: 1px solid var(--border); transition: all 0.2s; }
+  .nav-link:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .nav-link { position: relative; }
+  .nav-link[data-tooltip]::after { content: attr(data-tooltip); position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: #0d1520; color: var(--text); border: 1px solid var(--accent); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; line-height: 1.5; width: 200px; text-align: center; pointer-events: none; opacity: 0; transition: opacity 0.18s ease; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+  .nav-link[data-tooltip]::before { content: ''; position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: var(--accent); pointer-events: none; opacity: 0; transition: opacity 0.18s ease; z-index: 1001; }
+  .nav-link:hover[data-tooltip]::after, .nav-link:hover[data-tooltip]::before { opacity: 1; }
+  a[href="index.html"].nav-link[data-tooltip]::after    { left: 0; transform: none; }
+  a[href="index.html"].nav-link[data-tooltip]::before   { left: 16px; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
+
+  .container { position: relative; z-index: 1; max-width: 1600px; margin: 0 auto; padding: 40px 24px; }
+  .header-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; }
+  h1 { font-size: 36px; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 10px; }
+  h1 span { color: var(--accent); }
+  .header-sub { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
+
+  .disclaimer { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); border: 1px solid var(--border); padding: 10px 16px; margin-bottom: 20px; letter-spacing: 0.3px; }
+  .disclaimer span { color: var(--accent2); }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .filter-btn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+  #metrics-search { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 14px; width: 240px; outline: none; letter-spacing: 0.5px; }
+  #metrics-search:focus { border-color: var(--accent); }
+  #metrics-search::placeholder { color: var(--muted); }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
+  .row-count span { color: var(--accent); font-weight: 700; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead { background: var(--surface2); }
+  th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th.sortable { cursor: pointer; user-select: none; }
+  th.sortable:hover { color: var(--accent); }
+  th.sort-desc::after { content: ' \25BC'; color: var(--accent); }
+  th.sort-asc::after  { content: ' \25B2'; color: var(--accent); }
+  th.num-col { text-align: right; }
+
+  #col-tooltip { position: fixed; z-index: 999; max-width: 260px; background: var(--surface2); border: 1px solid var(--accent); padding: 12px 16px; pointer-events: none; opacity: 0; transform: translateY(6px); transition: opacity 0.15s ease, transform 0.15s ease; box-shadow: 0 0 24px rgba(255,107,53,0.15); }
+  #col-tooltip.visible { opacity: 1; transform: translateY(0); }
+  #col-tooltip .tip-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+  #col-tooltip .tip-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--surface); }
+
+  .ticker-cell { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
+  .ticker-link { text-decoration: none; color: inherit; }
+  .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
+  .company-cell { color: var(--muted); font-size: 12px; }
+
+  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .cat-us-primes   { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.35); }
+  .cat-uk-european { background: rgba(255,215,0,0.1);    color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
+  .cat-cyber-intel { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
+  .cat-drones      { background: rgba(45,212,191,0.1);   color: var(--teal);   border: 1px solid rgba(45,212,191,0.3); }
+  .cat-space       { background: rgba(68,136,255,0.1);   color: var(--blue);   border: 1px solid rgba(68,136,255,0.3); }
+  .cat-weapons     { background: rgba(251,113,133,0.1);  color: var(--rose);   border: 1px solid rgba(251,113,133,0.3); }
+
+  .num-cell { text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .null-val { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-flat { color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
+  .beta-high   { color: var(--red); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .beta-normal { color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
+  .beta-low    { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+
+  .analyst-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap; }
+  .analyst-strong-buy  { background: rgba(0,230,118,0.15);  color: var(--green);  border: 1px solid rgba(0,230,118,0.3); }
+  .analyst-buy         { background: rgba(163,230,53,0.12);  color: var(--lime);   border: 1px solid rgba(163,230,53,0.3); }
+  .analyst-hold        { background: rgba(245,158,11,0.12);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.3); }
+  .analyst-underperform{ background: rgba(255,107,53,0.12);  color: var(--accent); border: 1px solid rgba(255,107,53,0.3); }
+  .analyst-sell        { background: rgba(255,68,68,0.12);   color: var(--red);    border: 1px solid rgba(255,68,68,0.3); }
+  .analyst-missing     { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); margin-top: 48px; }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 26px; }
+    th, td { padding: 8px 10px; }
+    .company-cell { display: none; }
+  }
+
+  .back-link { display: block; padding: 6px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b8299; text-decoration: none; letter-spacing: 0.05em; }
+  .back-link:hover { color: #ff6b35; }
+</style>
+</head>
+<body>
+
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<a class="back-link" href="../index.html">← All Sectors</a>
+<header>
+  <div class="header-inner">
+    <div class="header-label">// Defence &amp; Aerospace</div>
+    <h1>Stock <span>Metrics</span></h1>
+    <div class="header-sub">Market cap · Beta · P/E · Volume · Dividend · Short interest · Analyst rating</div>
+  </div>
+</header>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 28 defence &amp; aerospace stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link active" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 28 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="Defence top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="disclaimer">
+    <span>For research only.</span> Metrics sourced from Yahoo Finance via yfinance. Data may be delayed or incomplete. This is not financial advice.
+  </div>
+
+  <div class="filter-bar" id="filter-bar"></div>
+
+  <div class="search-count-bar">
+    <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
+    <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
+  </div>
+
+  <div class="table-wrap">
+    <table id="metrics-table">
+      <thead>
+        <tr>
+          <th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
+          <th class="sortable" onclick="sortMetrics('name', this)">Company</th>
+          <th class="sortable" onclick="sortMetrics('category', this)">Category</th>
+          <th class="sortable num-col" onclick="sortMetrics('price', this)" data-tip-title="Price" data-tip="Current share price converted to GBP. LSE stocks (BA.L, RR.L, QQ.L) are converted from pence.">Price</th>
+          <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP. A rough measure of company size.">Market Cap</th>
+          <th class="sortable num-col" onclick="sortMetrics('ytd', this)" data-tip-title="YTD Return" data-tip="Year-to-date price change from the first trading day of 2026.">YTD</th>
+          <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta > 1 means it moves more than the market.">Beta</th>
+          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio. A high P/E means the market expects strong future growth. Loss-making companies show —.">P/E Ratio</th>
+          <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume" data-tip="Average number of shares traded per day over the past 3 months. Higher volume = better liquidity.">Avg Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Total shares traded in the most recent session. Compare to Avg Vol to spot unusual activity.">1D Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="1-Week Volume" data-tip="Total shares traded across the last 5 trading days.">1W Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('vol_1m', this)" data-tip-title="1-Month Volume" data-tip="Total shares traded over the past month (~20 trading days).">1M Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('div_yield', this)" data-tip-title="Dividend Yield" data-tip="Annual dividend as a percentage of share price. Defence primes and established contractors often pay dividends.">Div Yield</th>
+          <th class="sortable num-col" onclick="sortMetrics('short_pct', this)" data-tip-title="Short Interest" data-tip="Percentage of shares sold short. High short interest (above 10%) can signal bearish sentiment.">Short %</th>
+          <th class="sortable" onclick="sortMetrics('analyst_score', this)" data-tip-title="Analyst Rating" data-tip="Consensus recommendation from analysts, ranging from Strong Buy to Sell.">Analyst</th>
+        </tr>
+      </thead>
+      <tbody id="metrics-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<footer>Defence &amp; Aerospace Stock Dashboard · For educational and entertainment purposes only · Not financial advice</footer>
+
+<script>
+  const NAMES = {
+    'LMT':   'Lockheed Martin',       'RTX':   'RTX Corporation',
+    'NOC':   'Northrop Grumman',      'GD':    'General Dynamics',
+    'HII':   'Huntington Ingalls',    'LHX':   'L3Harris Technologies',
+    'BA':    'Boeing',                'BA.L':  'BAE Systems',
+    'RR.L':  'Rolls-Royce',           'QQ.L':  'QinetiQ Group',
+    'PLTR':  'Palantir Technologies', 'LDOS':  'Leidos Holdings',
+    'CACI':  'CACI International',    'SAIC':  'Science Applications Intl',
+    'BAH':   'Booz Allen Hamilton',   'AVAV':  'AeroVironment',
+    'KTOS':  'Kratos Defense',        'RCAT':  'Red Cat Holdings',
+    'TXT':   'Textron',               'RKLB':  'Rocket Lab',
+    'PL':    'Planet Labs',           'ASTS':  'AST SpaceMobile',
+    'TDG':   'TransDigm Group',       'HEICO': 'HEICO Corporation',
+    'AXON':  'Axon Enterprise',       'OLN':   'Olin Corporation',
+    'MRCY':  'Mercury Systems',       'DRS':   'Leonardo DRS',
+  };
+
+  const CAT_LABELS = {
+    'us-primes':   'US Prime',
+    'uk-european': 'UK/European',
+    'cyber-intel': 'Cyber/Intel',
+    'drones':      'Drones',
+    'space':       'Space',
+    'weapons':     'Weapons',
+  };
+
+  function yahooUrl(ticker) { return 'https://finance.yahoo.com/quote/' + ticker + '/'; }
+
+  function fmtMarketCap(gbpB) {
+    if (gbpB === null || gbpB === undefined) return null;
+    if (gbpB >= 1) return '£' + gbpB.toFixed(1) + 'B';
+    return '£' + (gbpB * 1000).toFixed(0) + 'M';
+  }
+  function fmtVolume(m) { return m === null || m === undefined ? null : m.toFixed(1) + 'M'; }
+  function fmtPct(v, d) { return v === null || v === undefined ? null : v.toFixed(d !== undefined ? d : 2) + '%'; }
+  function fmtNum(v, d) { return v === null || v === undefined ? null : v.toFixed(d !== undefined ? d : 2); }
+  function dash() { return '<span class="null-val">—</span>'; }
+
+  const ANALYST_MAP = {
+    'strong_buy':  { cls: 'analyst-strong-buy',   label: 'Strong Buy' },
+    'buy':         { cls: 'analyst-buy',           label: 'Buy' },
+    'hold':        { cls: 'analyst-hold',          label: 'Hold' },
+    'underperform':{ cls: 'analyst-underperform',  label: 'Underperform' },
+    'sell':        { cls: 'analyst-sell',          label: 'Sell' },
+  };
+  function analystBadge(key) {
+    if (!key) return dash();
+    const k = key.toLowerCase().replace(/[ -]/g, '_');
+    const info = ANALYST_MAP[k];
+    if (!info) return '<span class="analyst-missing">' + key + '</span>';
+    return '<span class="analyst-badge ' + info.cls + '">' + info.label + '</span>';
+  }
+  function betaCell(beta) {
+    if (beta === null || beta === undefined) return dash();
+    let cls = 'beta-normal';
+    if (beta > 1.5) cls = 'beta-high';
+    else if (beta < 0.8) cls = 'beta-low';
+    return '<span class="' + cls + '">' + beta.toFixed(2) + '</span>';
+  }
+
+  let sortState = { col: 'market_cap', dir: -1 };
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  function sortMetrics(col, th) {
+    if (sortState.col === col) sortState.dir *= -1;
+    else { sortState.col = col; const textCols = ['ticker', 'category', 'name']; sortState.dir = textCols.includes(col) ? 1 : -1; }
+    document.querySelectorAll('#metrics-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+    th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+    renderTable();
+  }
+  function filterMetrics(query) { searchQuery = query.toLowerCase().trim(); renderTable(); }
+  function setCategory(cat) {
+    activeCategory = cat;
+    document.querySelectorAll('.filter-btn').forEach(b => { b.classList.toggle('active', b.dataset.cat === cat); });
+    renderTable();
+  }
+  function sortKey(s) {
+    switch (sortState.col) {
+      case 'ticker':       return s.ticker;
+      case 'name':         return s.name;
+      case 'category':     return s.category;
+      case 'ytd':          return s.ytd !== null ? s.ytd : -Infinity;
+      case 'price':        return s.price !== null ? s.price : -Infinity;
+      case 'market_cap':   return s.market_cap_gbp_b !== null ? s.market_cap_gbp_b : -Infinity;
+      case 'beta':         return s.beta !== null ? s.beta : -Infinity;
+      case 'pe_ratio':     return s.pe_ratio !== null ? s.pe_ratio : -Infinity;
+      case 'avg_volume':   return s.avg_volume_m !== null ? s.avg_volume_m : -Infinity;
+      case 'vol_1d':       return s.vol_1d !== null ? s.vol_1d : -Infinity;
+      case 'vol_1w':       return s.vol_1w !== null ? s.vol_1w : -Infinity;
+      case 'vol_1m':       return s.vol_1m !== null ? s.vol_1m : -Infinity;
+      case 'div_yield':    return s.div_yield_pct !== null ? s.div_yield_pct : -Infinity;
+      case 'short_pct':    return s.short_pct !== null ? s.short_pct : -Infinity;
+      case 'analyst_score':return s.analyst_score !== null ? s.analyst_score : Infinity;
+      default:             return 0;
+    }
+  }
+
+  function renderTable() {
+    let data = window._metricsData || [];
+    if (activeCategory !== 'all') data = data.filter(s => s.category === activeCategory);
+    if (searchQuery) data = data.filter(s => s.ticker.toLowerCase().includes(searchQuery) || s.name.toLowerCase().includes(searchQuery));
+    const sorted = [...data].sort((a, b) => {
+      const ka = sortKey(a), kb = sortKey(b);
+      if (typeof ka === 'string') return ka.localeCompare(kb) * sortState.dir;
+      if (ka === kb) return 0;
+      if (ka === -Infinity || ka === Infinity) return 1;
+      if (kb === -Infinity || kb === Infinity) return -1;
+      return (ka - kb) * sortState.dir;
+    });
+    document.getElementById('metrics-count').textContent = sorted.length;
+    const body = document.getElementById('metrics-body');
+    body.innerHTML = sorted.map(s => {
+      const catLabel = CAT_LABELS[s.category] || s.category;
+      const ytdCls = s.ytd === null ? '' : s.ytd > 0 ? 'ytd-pos' : s.ytd < 0 ? 'ytd-neg' : 'ytd-flat';
+      const ytdCell = s.ytd !== null ? '<span class="' + ytdCls + '">' + (s.ytd >= 0 ? '+' : '') + s.ytd.toFixed(2) + '%</span>' : dash();
+      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">£' + s.priceStr + '</span>' : dash();
+      const mcCell = s.market_cap_gbp_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_gbp_b) + '</span>' : dash();
+      const peCell = s.pe_ratio !== null ? '<span class="num-cell">' + fmtNum(s.pe_ratio, 1) + '</span>' : dash();
+      const volCell = s.avg_volume_m !== null ? '<span class="num-cell">' + fmtVolume(s.avg_volume_m) + '</span>' : dash();
+      const vol1dCell = s.vol_1d !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1d / 1e6) + '</span>' : dash();
+      const vol1wCell = s.vol_1w !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1w / 1e6) + '</span>' : dash();
+      const vol1mCell = s.vol_1m !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1m / 1e6) + '</span>' : dash();
+      const divCell = s.div_yield_pct !== null ? '<span class="num-cell">' + fmtPct(s.div_yield_pct, 2) + '</span>' : dash();
+      const shortCell = s.short_pct !== null ? '<span class="num-cell">' + fmtPct(s.short_pct, 1) + '</span>' : dash();
+      return '<tr>' +
+        '<td class="ticker-cell"><a href="' + yahooUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
+        '<td class="company-cell">' + s.name + '</td>' +
+        '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
+        '<td class="num-cell" style="text-align:right">' + priceCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + mcCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + ytdCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + betaCell(s.beta) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + peCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + volCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + vol1dCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + vol1wCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + vol1mCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + divCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + shortCell + '</td>' +
+        '<td>' + analystBadge(s.analyst) + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function buildFilterBar(stocks) {
+    const cats = ['all', ...Object.keys(CAT_LABELS)];
+    const bar = document.getElementById('filter-bar');
+    bar.innerHTML = cats.map(cat => {
+      const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
+      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+    }).join('');
+  }
+
+  function buildMetrics(stocks) {
+    window._metricsData = stocks.map(s => ({
+      ticker:           s.ticker,
+      name:             NAMES[s.ticker] || s.ticker,
+      category:         s.category,
+      priceStr:         (s.price_gbp !== undefined && s.price_gbp !== null) ? String(s.price_gbp) : null,
+      price:            (s.price_gbp !== undefined && s.price_gbp !== null && !isNaN(parseFloat(s.price_gbp))) ? parseFloat(s.price_gbp) : null,
+      market_cap_gbp_b: (s.market_cap_gbp_b !== undefined && s.market_cap_gbp_b !== null) ? parseFloat(s.market_cap_gbp_b) : null,
+      beta:             (s.beta !== undefined && s.beta !== null) ? parseFloat(s.beta) : null,
+      pe_ratio:         (s.pe_ratio !== undefined && s.pe_ratio !== null) ? parseFloat(s.pe_ratio) : null,
+      avg_volume_m:     (s.avg_volume_m !== undefined && s.avg_volume_m !== null) ? parseFloat(s.avg_volume_m) : null,
+      vol_1d:           (s.vol_1d !== undefined && s.vol_1d !== null) ? parseInt(s.vol_1d) : null,
+      vol_1w:           (s.vol_1w !== undefined && s.vol_1w !== null) ? parseInt(s.vol_1w) : null,
+      vol_1m:           (s.vol_1m !== undefined && s.vol_1m !== null) ? parseInt(s.vol_1m) : null,
+      div_yield_pct:    (s.div_yield_pct !== undefined && s.div_yield_pct !== null) ? parseFloat(s.div_yield_pct) : null,
+      short_pct:        (s.short_pct !== undefined && s.short_pct !== null) ? parseFloat(s.short_pct) : null,
+      ytd:              s.change_ytd ? parseFloat(s.change_ytd) : null,
+      analyst:          s.analyst || null,
+      analyst_score:    (s.analyst_score !== undefined && s.analyst_score !== null) ? parseFloat(s.analyst_score) : null,
+    }));
+    buildFilterBar(stocks);
+    renderTable();
+  }
+
+  if (window.PRICES_DATA) {
+    buildMetrics(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json')
+      .then(r => r.json())
+      .then(data => buildMetrics(data.stocks))
+      .catch(() => {
+        document.getElementById('metrics-body').innerHTML =
+          '<tr><td colspan="15" style="text-align:center;padding:40px;color:var(--muted);font-family:\'IBM Plex Mono\',monospace;">No data available — run the price bot first.</td></tr>';
+      });
+  }
+
+  function buildTape(stocks) {
+    const track = document.getElementById('tape-track');
+    if (!track || !stocks.length) return;
+    const items = stocks.map(s => {
+      const change = s.change_1d || '+0.00%';
+      const val    = parseFloat(change);
+      const isNeg  = change.startsWith('-');
+      const isFlat = val === 0;
+      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
+      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
+      const price  = parseFloat(s.price_gbp) || 0;
+      const priceStr = price <= 0 ? '—' : price >= 10 ? '£' + Math.round(price) : price >= 1 ? '£' + price.toFixed(2) : '£' + price.toFixed(3);
+      return '<span class="tape-item"><span class="tape-t">' + s.ticker + '</span><span class="tape-p">' + priceStr + '</span><span class="tape-r ' + cls + '">' + arrow + ' ' + change + '</span></span>';
+    }).join('');
+    track.innerHTML = items + items;
+    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
+    track.classList.add('running');
+  }
+
+  if (window.PRICES_DATA) {
+    buildTape(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
+  }
+</script>
+
+<div id="col-tooltip"><div class="tip-title"></div><div class="tip-body"></div></div>
+<script>
+  const tooltip = document.getElementById('col-tooltip');
+  const tipTitle = tooltip.querySelector('.tip-title');
+  const tipBody  = tooltip.querySelector('.tip-body');
+
+  document.querySelectorAll('th[data-tip]').forEach(th => {
+    th.addEventListener('mouseenter', e => {
+      tipTitle.textContent = th.dataset.tipTitle || '';
+      tipBody.textContent  = th.dataset.tip || '';
+      tooltip.classList.add('visible');
+    });
+    th.addEventListener('mousemove', e => {
+      const x = e.clientX;
+      const y = e.clientY;
+      const tw = tooltip.offsetWidth;
+      const th_h = tooltip.offsetHeight;
+      let left = x - tw / 2;
+      let top  = y - th_h - 14;
+      left = Math.max(8, Math.min(left, window.innerWidth - tw - 8));
+      if (top < 8) top = y + 20;
+      tooltip.style.left = left + 'px';
+      tooltip.style.top  = top  + 'px';
+    });
+    th.addEventListener('mouseleave', () => { tooltip.classList.remove('visible'); });
+  });
+</script>
+</body>
+</html>

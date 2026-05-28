@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Defence &amp; Aerospace — Heatmap</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="prices-data.js"></script>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0e1419;
+    --surface2: #141b22;
+    --border: #1e2d3d;
+    --accent: #ff6b35;
+    --text: #e0eaf5;
+    --muted: #5a7a9a;
+    --red: #ff4444;
+    --green: #00e676;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 36px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #ticker-tape { position: fixed; top: 0; left: 0; right: 0; height: 36px; background: var(--bg); border-bottom: 1px solid var(--accent); z-index: 200; overflow: hidden; display: flex; align-items: center; }
+  .tape-track { display: flex; white-space: nowrap; }
+  .tape-track.running { animation: scroll-tape linear infinite; }
+  @keyframes scroll-tape { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  #ticker-tape:hover .tape-track { animation-play-state: paused; }
+  .tape-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 18px; border-right: 1px solid var(--border); }
+  .tape-t  { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 1px; }
+  .tape-p  { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .tape-r  { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; }
+  .tape-r.pos  { color: var(--green); }
+  .tape-r.neg  { color: var(--red); }
+  .tape-r.flat { color: var(--muted); }
+
+  header { position: relative; z-index: 10; padding: 32px 0 24px; border-bottom: 1px solid var(--border); background: var(--bg); }
+  .header-inner { max-width: 1600px; margin: 0 auto; padding: 0 24px 0 43px; position: relative; }
+  .header-inner::before { content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+  .header-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; }
+  h1 { font-size: 36px; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 10px; }
+  h1 span { color: var(--accent); }
+  .header-sub { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
+
+  nav { position: relative; z-index: 10; border-bottom: 1px solid var(--border); background: var(--bg); }
+  .nav-inner { max-width: 1600px; margin: 0 auto; padding: 12px 24px; display: flex; gap: 2px; flex-wrap: wrap; }
+  .nav-link { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 20px; text-decoration: none; color: var(--muted); border: 1px solid var(--border); transition: all 0.2s; }
+  .nav-link:hover  { color: var(--accent); border-color: var(--accent); }
+  .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .nav-link { position: relative; }
+  .nav-link[data-tooltip]::after { content: attr(data-tooltip); position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: #0d1520; color: var(--text); border: 1px solid var(--accent); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-family: 'IBM Plex Sans', sans-serif; font-weight: 400; line-height: 1.5; width: 200px; text-align: center; pointer-events: none; opacity: 0; transition: opacity 0.18s ease; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+  .nav-link[data-tooltip]::before { content: ''; position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); border: 5px solid transparent; border-top-color: var(--accent); pointer-events: none; opacity: 0; transition: opacity 0.18s ease; z-index: 1001; }
+  .nav-link:hover[data-tooltip]::after, .nav-link:hover[data-tooltip]::before { opacity: 1; }
+  a[href="index.html"].nav-link[data-tooltip]::after    { left: 0; transform: none; }
+  a[href="index.html"].nav-link[data-tooltip]::before   { left: 16px; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
+
+  .container { position: relative; z-index: 1; max-width: 1600px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  .toolbar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); position: sticky; top: 36px; z-index: 50; }
+  .toolbar-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
+  .metric-group { display: flex; gap: 2px; }
+  .metric-btn { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; background: transparent; color: var(--muted); border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; }
+  .metric-btn:hover  { color: var(--accent); border-color: var(--accent); }
+  .metric-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .size-note { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
+  .size-note em { color: var(--text); font-style: normal; }
+  .toolbar-ts { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; margin-left: auto; }
+  .toolbar-ts span { color: var(--accent); }
+  .legend { display: flex; align-items: center; gap: 8px; }
+  .leg-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; min-width: 28px; }
+  .leg-label.r { text-align: right; }
+  .leg-bar { width: 90px; height: 8px; background: linear-gradient(90deg, #ef5350, #1a2535, #4caf50); border: 1px solid var(--border); flex-shrink: 0; }
+
+  .section-hdr { display: flex; align-items: center; gap: 16px; margin: 32px 0 10px; }
+  .section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
+  .section-hdr-line { flex: 1; height: 1px; background: var(--border); }
+  .section-hdr-count { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
+
+  .map-wrap { width: 100%; border: 1px solid var(--border); background: var(--surface); overflow: hidden; margin-bottom: 4px; }
+  .map-wrap svg { display: block; }
+
+  .sector-block { margin-bottom: 24px; }
+  .sector-name { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; font-weight: 700; color: var(--muted); text-transform: uppercase; padding: 8px 12px; background: var(--surface2); border: 1px solid var(--border); border-bottom: none; display: flex; align-items: center; gap: 10px; }
+  .sector-name .sc { color: var(--muted); font-weight: 400; font-size: 10px; }
+
+  .tooltip { position: fixed; z-index: 500; background: var(--surface2); border: 1px solid var(--accent); padding: 14px 18px; pointer-events: none; min-width: 200px; max-width: 260px; }
+  .tooltip.hidden { display: none; }
+  .tt-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+  .tt-company { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .tt-grid { display: grid; grid-template-columns: 1fr auto; gap: 5px 20px; }
+  .tt-key { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.5px; align-self: center; }
+  .tt-val { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; text-align: right; }
+  .tt-val.pos { color: #00cc44; }
+  .tt-val.neg { color: #dd3322; }
+  .tt-val.neu { color: var(--muted); }
+  .tt-divider { grid-column: 1/-1; height: 1px; background: var(--border); margin: 4px 0; }
+  .tt-price { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: var(--accent); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+
+  .empty-state { text-align: center; padding: 60px 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.7; border: 1px solid var(--border); }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); }
+
+  @media (max-width: 900px) { h1 { font-size: 26px; } .legend { display: none; } }
+  @media (max-width: 600px) { .metric-btn { padding: 5px 10px; font-size: 10px; } .size-note { display: none; } }
+
+  .back-link { display: block; padding: 6px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6b8299; text-decoration: none; letter-spacing: 0.05em; }
+  .back-link:hover { color: #ff6b35; }
+</style>
+</head>
+<body>
+
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<a class="back-link" href="../index.html">← All Sectors</a>
+<header>
+  <div class="header-inner">
+    <div class="header-label">// Defence &amp; Aerospace</div>
+    <h1>Market <span>Heatmap</span></h1>
+    <div class="header-sub">28 stocks · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 28 defence &amp; aerospace stocks">📊 Dashboard</a>
+    <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 28 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html"    class="nav-link" data-tooltip="Defence top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="heatmap.html"    class="nav-link active" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="toolbar">
+    <span class="toolbar-label">Colour by</span>
+    <div class="metric-group" id="metric-group">
+      <button class="metric-btn active" data-metric="1d">1D</button>
+      <button class="metric-btn" data-metric="1w">1W</button>
+      <button class="metric-btn" data-metric="1m">1M</button>
+      <button class="metric-btn" data-metric="ytd">YTD</button>
+      <button class="metric-btn" data-metric="1y">1Y</button>
+    </div>
+    <span class="size-note">Size = <em id="size-label">|1D %|</em></span>
+    <span class="toolbar-ts">Prices: <span id="heatmap-ts">—</span></span>
+    <div class="legend">
+      <span class="leg-label r" id="leg-neg">−5%</span>
+      <div class="leg-bar"></div>
+      <span class="leg-label" id="leg-pos">+5%</span>
+    </div>
+  </div>
+
+  <div class="section-hdr">
+    <span class="section-hdr-label">All Stocks</span>
+    <div class="section-hdr-line"></div>
+    <span class="section-hdr-count">28 stocks</span>
+  </div>
+  <div class="map-wrap" id="map-all"></div>
+
+  <div class="section-hdr" style="margin-top:48px;">
+    <span class="section-hdr-label">By Sector</span>
+    <div class="section-hdr-line"></div>
+    <span class="section-hdr-count">6 categories</span>
+  </div>
+  <div id="sectors-container"></div>
+
+</div>
+
+<div id="tooltip" class="tooltip hidden"></div>
+
+<footer>Defence &amp; Aerospace Stock Dashboard · For educational and entertainment purposes only · Not financial advice</footer>
+
+<script>
+const NAMES = {
+  'LMT':   'Lockheed Martin',       'RTX':   'RTX Corporation',
+  'NOC':   'Northrop Grumman',      'GD':    'General Dynamics',
+  'HII':   'Huntington Ingalls',    'LHX':   'L3Harris Technologies',
+  'BA':    'Boeing',                'BA.L':  'BAE Systems',
+  'RR.L':  'Rolls-Royce',           'QQ.L':  'QinetiQ Group',
+  'PLTR':  'Palantir Technologies', 'LDOS':  'Leidos Holdings',
+  'CACI':  'CACI International',    'SAIC':  'Science Applications Intl',
+  'BAH':   'Booz Allen Hamilton',   'AVAV':  'AeroVironment',
+  'KTOS':  'Kratos Defense',        'RCAT':  'Red Cat Holdings',
+  'TXT':   'Textron',               'RKLB':  'Rocket Lab',
+  'PL':    'Planet Labs',           'ASTS':  'AST SpaceMobile',
+  'TDG':   'TransDigm Group',       'HEICO': 'HEICO Corporation',
+  'AXON':  'Axon Enterprise',       'OLN':   'Olin Corporation',
+  'MRCY':  'Mercury Systems',       'DRS':   'Leonardo DRS',
+};
+
+const CAT_LABELS = {
+  'us-primes':   'US Prime Contractors',
+  'uk-european': 'UK / European',
+  'cyber-intel': 'Cyber / Intelligence',
+  'drones':      'Drones / Autonomy',
+  'space':       'Space Defence',
+  'weapons':     'Weapons / Systems',
+};
+
+const CAT_ORDER = ['us-primes', 'uk-european', 'cyber-intel', 'drones', 'space', 'weapons'];
+
+const METRICS_CFG = {
+  '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },
+  '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },
+  '1m':  { field: 'change_1m',  label: '1M',  threshold: 20 },
+  'ytd': { field: 'change_ytd', label: 'YTD', threshold: 40 },
+  '1y':  { field: 'return_1y',  label: '1Y',  threshold: 60 },
+};
+
+function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + t + '/'; }
+
+function parsePct(s) {
+  if (s == null || s === '' || s === '—' || s === 'N/A') return null;
+  const n = parseFloat(String(s).replace(/[%,\s]/g, ''));
+  return isNaN(n) ? null : n;
+}
+
+function getVal(stock, metricId) {
+  const cfg = METRICS_CFG[metricId];
+  if (!cfg) return null;
+  return parsePct(stock[cfg.field]);
+}
+
+function fmtPct(val) {
+  if (val === null) return '—';
+  return (val >= 0 ? '+' : '') + val.toFixed(2) + '%';
+}
+
+function valCls(val) {
+  if (val === null) return 'neu';
+  return val > 0.049 ? 'pos' : val < -0.049 ? 'neg' : 'neu';
+}
+
+function tileSize(stock, metricId) {
+  const v = getVal(stock, metricId);
+  return v === null ? 0.05 : Math.max(0.05, Math.abs(v));
+}
+
+const colorNeg = d3.interpolateRgb('#1b2535', '#ef5350');
+const colorPos = d3.interpolateRgb('#1b2535', '#4caf50');
+
+function tileColor(val, threshold) {
+  if (val === null) return '#1e2733';
+  const t = Math.max(-1, Math.min(1, val / threshold));
+  if (t < 0) return colorNeg(-t);
+  if (t > 0) return colorPos(t);
+  return '#1b2535';
+}
+
+let activeMetric = '1d';
+let allStocks    = [];
+
+function drawTreemap(containerEl, stocks, metricId, height) {
+  containerEl.innerHTML = '';
+  if (!stocks.length) return;
+
+  const cfg = METRICS_CFG[metricId];
+  const W = containerEl.clientWidth || 1200;
+  const H = height;
+
+  const root = d3.hierarchy({ children: stocks.map(s => ({ ...s })) })
+    .sum(d => tileSize(d, metricId))
+    .sort((a, b) => b.value - a.value);
+
+  d3.treemap().size([W, H]).paddingInner(1).paddingOuter(0).round(true)(root);
+
+  const leaves = root.leaves();
+
+  const svg = d3.select(containerEl).append('svg').attr('width', W).attr('height', H);
+
+  const tileG = svg.selectAll('.tile')
+    .data(leaves)
+    .enter()
+    .append('g')
+    .attr('class', 'tile')
+    .attr('transform', d => `translate(${d.x0},${d.y0})`)
+    .style('cursor', 'pointer')
+    .on('click',      (ev, d) => window.open(yahooUrl(d.data.ticker), '_blank', 'noopener'))
+    .on('mousemove',  (ev, d) => showTooltip(ev, d.data))
+    .on('mouseleave', hideTooltip);
+
+  tileG.append('clipPath')
+    .attr('id', (d, i) => `c${containerEl.id}-${i}`)
+    .append('rect')
+    .attr('width',  d => Math.max(0, d.x1 - d.x0 - 2))
+    .attr('height', d => Math.max(0, d.y1 - d.y0 - 2))
+    .attr('x', 1).attr('y', 1);
+
+  tileG.append('rect')
+    .attr('width',  d => Math.max(0, d.x1 - d.x0))
+    .attr('height', d => Math.max(0, d.y1 - d.y0))
+    .attr('fill',   d => tileColor(getVal(d.data, metricId), cfg.threshold))
+    .attr('stroke', '#000')
+    .attr('stroke-width', 0.5)
+    .on('mouseover', function() { d3.select(this).attr('filter', 'brightness(1.3)'); })
+    .on('mouseout',  function() { d3.select(this).attr('filter', null); });
+
+  const CW = 0.62;
+  leaves.forEach(d => {
+    const w = d.x1 - d.x0, h = d.y1 - d.y0;
+    const vs = fmtPct(getVal(d.data, metricId));
+    const tRaw = Math.min((w * 0.60) / (d.data.ticker.length * CW), h * 0.30, 30);
+    const vRaw = Math.min((w * 0.60) / (vs.length * CW),            h * 0.22, 18);
+    d._tfs = (tRaw >= 8  && w >= 26 && h >= 18) ? tRaw : 0;
+    d._vfs = (d._tfs > 0 && vRaw >= 7 && h >= 32) ? vRaw : 0;
+    d._vs  = vs;
+    d._ty  = (d._tfs > 0 && d._vfs > 0) ? h * 0.37 : h * 0.50;
+    d._vy  = h * 0.64;
+  });
+
+  tileG.append('text')
+    .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
+    .attr('x', d => (d.x1-d.x0)/2).attr('y', d => d._ty)
+    .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+    .attr('font-family', 'IBM Plex Sans, sans-serif').attr('font-weight', '400')
+    .attr('font-size', d => d._tfs || 0)
+    .attr('fill', d => d._tfs ? '#ffffff' : 'transparent')
+    .attr('stroke', 'rgba(0,0,0,0.5)').attr('stroke-width', 4)
+    .attr('stroke-linejoin', 'round').attr('paint-order', 'stroke')
+    .text(d => d.data.ticker);
+
+  tileG.append('text')
+    .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
+    .attr('x', d => (d.x1-d.x0)/2).attr('y', d => d._vy)
+    .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+    .attr('font-family', 'IBM Plex Sans, sans-serif')
+    .attr('font-size', d => d._vfs || 0)
+    .attr('fill', d => d._vfs ? '#ffffff' : 'transparent')
+    .attr('stroke', 'rgba(0,0,0,0.5)').attr('stroke-width', 4)
+    .attr('stroke-linejoin', 'round').attr('paint-order', 'stroke')
+    .text(d => d._vfs ? d._vs : '');
+}
+
+function renderAll(stocks, metricId) {
+  const el = document.getElementById('map-all');
+  const H  = Math.max(480, Math.min(660, Math.round(window.innerHeight * 0.58)));
+  el.style.height = H + 'px';
+  drawTreemap(el, stocks, metricId, H);
+}
+
+function renderSectors(stocks, metricId) {
+  const container = document.getElementById('sectors-container');
+  container.innerHTML = '';
+
+  const groups = {};
+  stocks.forEach(s => {
+    const cat = s.category || 'other';
+    if (!groups[cat]) groups[cat] = [];
+    groups[cat].push(s);
+  });
+
+  const orderedSlugs = [
+    ...CAT_ORDER.filter(c => groups[c]),
+    ...Object.keys(groups).filter(c => !CAT_ORDER.includes(c))
+  ];
+
+  orderedSlugs.forEach(slug => {
+    const ss = groups[slug];
+    const name = CAT_LABELS[slug] || slug;
+    const H = Math.max(180, Math.min(340, ss.length * 52));
+
+    const block = document.createElement('div');
+    block.className = 'sector-block';
+
+    const label = document.createElement('div');
+    label.className = 'sector-name';
+    label.innerHTML = name.toUpperCase() + ' <span class="sc">· ' + ss.length + ' stock' + (ss.length !== 1 ? 's' : '') + '</span>';
+
+    const mapEl = document.createElement('div');
+    mapEl.className = 'map-wrap';
+    mapEl.id = 'sec-' + slug;
+    mapEl.style.height = H + 'px';
+
+    block.appendChild(label);
+    block.appendChild(mapEl);
+    container.appendChild(block);
+
+    drawTreemap(mapEl, ss, metricId, H);
+  });
+}
+
+function renderAll2(metricId) {
+  renderAll(allStocks, metricId);
+  renderSectors(allStocks, metricId);
+  updateLegend(metricId);
+}
+
+function updateLegend(metricId) {
+  const cfg = METRICS_CFG[metricId];
+  document.getElementById('leg-neg').textContent  = '−' + cfg.threshold + '%';
+  document.getElementById('leg-pos').textContent  = '+' + cfg.threshold + '%';
+  document.getElementById('size-label').textContent = '|' + cfg.label + ' %|';
+}
+
+const ttEl = document.getElementById('tooltip');
+
+function showTooltip(event, stock) {
+  const rows = Object.entries(METRICS_CFG).map(([id, cfg]) => {
+    const val = getVal(stock, id);
+    return `<div class="tt-key">${cfg.label} %</div><div class="tt-val ${valCls(val)}">${fmtPct(val)}</div>`;
+  }).join('');
+
+  const price = parseFloat(stock.price_gbp);
+  const priceStr = !price || price <= 0 ? '—'
+    : price >= 100 ? '£' + price.toFixed(0)
+    : price >= 10  ? '£' + price.toFixed(2)
+    : price >= 1   ? '£' + price.toFixed(3)
+    : '£' + price.toFixed(4);
+
+  const mcap = parseFloat(stock.market_cap_gbp_b);
+  const mcapStr = (!mcap || mcap <= 0) ? ''
+    : `<div class="tt-divider"></div><div class="tt-key">Mkt Cap</div><div class="tt-val neu">£${mcap.toFixed(1)}B</div>`;
+
+  ttEl.innerHTML =
+    `<div class="tt-ticker">${stock.ticker}</div>` +
+    `<div class="tt-company">${NAMES[stock.ticker] || stock.ticker}</div>` +
+    `<div class="tt-grid">${rows}${mcapStr}</div>` +
+    `<div class="tt-price">${priceStr}</div>`;
+
+  ttEl.classList.remove('hidden');
+  positionTooltip(event);
+}
+
+function positionTooltip(ev) {
+  const pad = 14, tw = ttEl.offsetWidth, th = ttEl.offsetHeight;
+  let x = ev.clientX + pad, y = ev.clientY - th / 2;
+  if (x + tw > window.innerWidth  - 8) x = ev.clientX - tw - pad;
+  if (y < 8) y = 8;
+  if (y + th > window.innerHeight - 8) y = window.innerHeight - th - 8;
+  ttEl.style.left = x + 'px';
+  ttEl.style.top  = y + 'px';
+}
+
+function hideTooltip() { ttEl.classList.add('hidden'); }
+document.addEventListener('mousemove', ev => {
+  if (!ttEl.classList.contains('hidden')) positionTooltip(ev);
+});
+
+document.getElementById('metric-group').addEventListener('click', ev => {
+  const btn = ev.target.closest('.metric-btn');
+  if (!btn) return;
+  const m = btn.dataset.metric;
+  if (m === activeMetric) return;
+  activeMetric = m;
+  document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderAll2(m);
+});
+
+function init() {
+  const stocks = window.PRICES_DATA && window.PRICES_DATA.stocks;
+  if (!stocks || !stocks.length) {
+    document.getElementById('map-all').innerHTML =
+      '<div class="empty-state">No data — prices-data.js not loaded or empty.</div>';
+    return;
+  }
+  allStocks = stocks;
+  const tsEl = document.getElementById('heatmap-ts');
+  if (tsEl) tsEl.textContent = window.PRICES_DATA.updated || '—';
+  renderAll2(activeMetric);
+
+  let t;
+  window.addEventListener('resize', () => {
+    clearTimeout(t);
+    t = setTimeout(() => renderAll2(activeMetric), 280);
+  });
+}
+
+init();
+
+function buildTape(stocks) {
+  const track = document.getElementById('tape-track');
+  if (!track || !stocks.length) return;
+  const items = stocks.map(s => {
+    const ch = s.change_1d || '+0.00%';
+    const v  = parseFloat(ch);
+    const cls = v === 0 ? 'flat' : ch.startsWith('-') ? 'neg' : 'pos';
+    const arr = v === 0 ? '—'   : ch.startsWith('-') ? '▼'   : '▲';
+    const p   = parseFloat(s.price_gbp) || 0;
+    const ps  = p <= 0 ? '—' : p >= 10 ? '£'+Math.round(p) : p >= 1 ? '£'+p.toFixed(2) : '£'+p.toFixed(3);
+    return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${ps}</span><span class="tape-r ${cls}">${arr} ${ch}</span></span>`;
+  }).join('');
+  track.innerHTML = items + items;
+  track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
+  track.classList.add('running');
+}
+
+if (window.PRICES_DATA) {
+  buildTape(window.PRICES_DATA.stocks);
+} else {
+  fetch('prices.json').then(r => r.json()).then(d => buildTape(d.stocks)).catch(() => {});
+}
+</script>
+</body>
+</html>

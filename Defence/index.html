@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--
+=============================================================
+  DEFENCE & AEROSPACE STOCK DASHBOARD
+  Last updated: 2026-01-01
+  FX Rate used: £1 = $1.2500
+
+  TICKERS TO FETCH (with Yahoo Finance symbols):
+  US PRIMES:
+    LMT    → LMT        (NYSE)
+    RTX    → RTX        (NYSE)
+    NOC    → NOC        (NYSE)
+    GD     → GD         (NYSE)
+    HII    → HII        (NYSE)
+    LHX    → LHX        (NYSE)
+    BA     → BA         (NYSE)
+
+  UK/EUROPEAN:
+    BA.L   → BA.L       (LSE — already in GBp, divide by 100 for £)
+    RR.L   → RR.L       (LSE — already in GBp, divide by 100 for £)
+    QQ.L   → QQ.L       (LSE — already in GBp, divide by 100 for £)
+
+  CYBER/INTEL:
+    PLTR   → PLTR       (NYSE)
+    LDOS   → LDOS       (NYSE)
+    CACI   → CACI       (NYSE)
+    SAIC   → SAIC       (NYSE)
+    BAH    → BAH        (NYSE)
+
+  DRONES:
+    AVAV   → AVAV       (NASDAQ)
+    KTOS   → KTOS       (NASDAQ)
+    RCAT   → RCAT       (NASDAQ)
+    TXT    → TXT        (NYSE)
+
+  SPACE:
+    RKLB   → RKLB       (NASDAQ)
+    PL     → PL         (NYSE)
+    ASTS   → ASTS       (NASDAQ)
+
+  WEAPONS/SYSTEMS:
+    TDG    → TDG        (NYSE)
+    HEICO  → HEICO      (NYSE)
+    AXON   → AXON       (NASDAQ)
+    OLN    → OLN        (NYSE)
+    MRCY   → MRCY       (NASDAQ)
+    DRS    → DRS        (NYSE)
+=============================================================
+-->
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Defence &amp; Aerospace — Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="prices-data.js"></script>
+<style>
+  :root {
+    --bg: #000000;
+    --surface: #0e1419;
+    --surface2: #141b22;
+    --border: #1e2d3d;
+    --accent: #ff6b35;
+    --accent2: #00d4ff;
+    --accent3: #39ff14;
+    --gold: #ffd700;
+    --text: #e0eaf5;
+    --muted: #5a7a9a;
+    --red: #ff4444;
+    --green: #00e676;
+    --purple: #c084fc;
+  --blue: #4488ff;
+  --indigo: #a78bfa;
+  --rose: #fb7185;
+  --teal: #2dd4bf;
+  --amber: #f59e0b;
+  --slate: #94a3b8;
+  --lime: #a3e635;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 36px;
+  }
+
+  /* Ticker tape */
+  #ticker-tape {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--accent);
+    z-index: 200;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .tape-track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  .tape-track.running {
+    animation: tape-scroll linear infinite;
+  }
+
+  .tape-track:hover { animation-play-state: paused; }
+
+  @keyframes tape-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .tape-item {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 36px;
+    border-right: 1px solid var(--border);
+    cursor: default;
+  }
+
+  .tape-t { color: #fff; font-weight: 700; letter-spacing: 1px; }
+  .tape-p { color: var(--text); }
+  .tape-r { font-weight: 700; }
+  .tape-r.pos  { color: var(--green); }
+  .tape-r.neg  { color: var(--red); }
+  .tape-r.flat { color: var(--muted); }
+
+  /* Header */
+  header {
+    position: relative;
+    z-index: 10;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .header-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 24px 0 43px;
+    position: relative;
+  }
+  .header-inner::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+  }
+
+  /* Nav */
+  nav {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .nav-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    gap: 2px;
+  }
+  .nav-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .nav-link:hover { color: var(--accent); border-color: var(--accent); }
+  .nav-link.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  /* Nav tooltips */
+  .nav-link { position: relative; }
+  .nav-link[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 200px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .nav-link[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .nav-link:hover[data-tooltip]::after,
+  .nav-link:hover[data-tooltip]::before { opacity: 1; }
+  a[href="index.html"].nav-link[data-tooltip]::after    { left: 0; transform: none; }
+  a[href="index.html"].nav-link[data-tooltip]::before   { left: 16px; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
+  a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
+
+  /* Animated background grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,107,53,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,107,53,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  .header-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+
+  h1 span {
+    color: var(--accent);
+  }
+
+  .header-sub {
+    color: var(--muted);
+    font-size: 13px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* Filter tabs */
+  .filters {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  /* Filter button tooltips */
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1520;
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .filter-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .filter-btn:hover[data-tooltip]::after,
+  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
+
+  .filter-btn[data-filter="us-primes"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="uk-european"].active { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="cyber-intel"].active { background: var(--purple); border-color: var(--purple); color: #fff; }
+  .filter-btn[data-filter="drones"].active      { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .filter-btn[data-filter="space"].active       { background: var(--blue);   border-color: var(--blue);   color: #fff; }
+  .filter-btn[data-filter="weapons"].active     { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
+
+  /* Section headers */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 36px 0 16px;
+  }
+
+  .section-title {
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Table */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    white-space: nowrap;
+  }
+
+  thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  thead th.sortable:hover { color: var(--accent); }
+
+  thead th.sort-asc::after  { content: ' ▲'; color: var(--accent); }
+  thead th.sort-desc::after { content: ' ▼'; color: var(--accent); }
+
+  tbody tr {
+    border-bottom: 1px solid rgba(30,45,61,0.5);
+    transition: background 0.15s;
+    cursor: default;
+  }
+
+  tbody tr:hover { background: var(--surface2); }
+
+  tbody tr.hidden { display: none; }
+
+  td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  /* Ticker */
+  .ticker-link { text-decoration: none; color: inherit; }
+  .ticker-link:hover .ticker { text-decoration: underline; opacity: 0.85; }
+
+  .ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .exchange-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* Category badge */
+  .cat-badge {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .cat-us-primes   { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.3); }
+  .cat-uk-european { background: rgba(255,215,0,0.1);    color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
+  .cat-cyber-intel { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
+  .cat-drones      { background: rgba(45,212,191,0.1);   color: var(--teal);   border: 1px solid rgba(45,212,191,0.25); }
+  .cat-space       { background: rgba(68,136,255,0.1);   color: var(--blue);   border: 1px solid rgba(68,136,255,0.25); }
+  .cat-weapons     { background: rgba(251,113,133,0.1);  color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+
+  /* Price */
+  .price {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+
+  /* Change pills (1D / 1W / 1M under price) */
+  .change-pills { display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap; }
+  .cpill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 2px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .cpill.pos  { background: rgba(0,230,118,0.12); color: var(--green); }
+  .cpill.neg  { background: rgba(255,68,68,0.12);  color: var(--red); }
+  .cpill.flat { background: rgba(90,122,154,0.12); color: var(--muted); }
+
+  /* Return */
+  .return-positive { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .return-mega { color: var(--gold); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .return-modest { color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+
+  /* 52w range bar */
+  .range-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 160px;
+  }
+
+  .range-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    width: 36px;
+  }
+
+  .range-bar-bg {
+    flex: 1;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    position: relative;
+    min-width: 80px;
+  }
+
+  .range-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+
+  .range-dot {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--accent);
+  }
+
+  /* YTD return column */
+  .ytd-return { font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-pos  { color: var(--green); }
+  .ytd-neg  { color: var(--red); }
+  .ytd-flat { color: var(--muted); }
+
+  /* Notes col */
+  .notes-text {
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 260px;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 48px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  footer strong { color: var(--accent2); }
+
+  /* Animate rows in */
+  @keyframes rowIn {
+    from { opacity: 0; transform: translateX(-8px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  tbody tr { animation: rowIn 0.3s ease both; }
+  tbody tr:nth-child(1) { animation-delay: 0.05s; }
+  tbody tr:nth-child(2) { animation-delay: 0.08s; }
+  tbody tr:nth-child(3) { animation-delay: 0.11s; }
+  tbody tr:nth-child(4) { animation-delay: 0.14s; }
+  tbody tr:nth-child(5) { animation-delay: 0.17s; }
+  tbody tr:nth-child(6) { animation-delay: 0.20s; }
+  tbody tr:nth-child(7) { animation-delay: 0.23s; }
+  tbody tr:nth-child(8) { animation-delay: 0.26s; }
+  tbody tr:nth-child(9) { animation-delay: 0.29s; }
+  tbody tr:nth-child(10) { animation-delay: 0.32s; }
+  tbody tr:nth-child(n+11) { animation-delay: 0.35s; }
+
+  /* Search + count bar */
+  .search-count-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  #stock-search {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 14px;
+    width: 240px;
+    outline: none;
+    letter-spacing: 0.5px;
+  }
+  #stock-search:focus { border-color: var(--accent); }
+  #stock-search::placeholder { color: var(--muted); }
+
+  /* Count display */
+  .row-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    padding-left: 2px;
+  }
+
+  .row-count span { color: var(--accent); font-weight: 700; }
+
+  @media (max-width: 768px) {
+    .container { padding: 16px 12px; }
+    .nav-inner { padding: 8px 12px; flex-wrap: wrap; }
+    header { padding: 20px 0 16px; }
+    .header-inner { padding-left: 27px; }
+    .header-inner::before { left: 12px; }
+    h1 { font-size: 26px; }
+    .header-sub { font-size: 12px; }
+
+    .filter-btn { font-size: 10px; padding: 6px 10px; letter-spacing: 0; }
+
+    table { font-size: 12px; }
+    thead th { padding: 10px 8px; font-size: 10px; }
+    td { padding: 10px 8px; }
+    .ticker { font-size: 13px; }
+    .price { font-size: 14px; }
+    .exchange-badge { font-size: 9px; }
+
+    table th:nth-child(6), table td:nth-child(6) { display: none; }
+    table th:nth-child(7), table td:nth-child(7) { display: none; }
+    table th:nth-child(8), table td:nth-child(8) { display: none; }
+
+    .notes-text { max-width: 140px; font-size: 11px; }
+    .row-count { font-size: 11px; }
+
+    footer { font-size: 10px; padding: 16px; }
+  }
+
+  .back-link {
+    display: block;
+    padding: 6px 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #6b8299;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  .back-link:hover { color: #ff6b35; }
+</style>
+</head>
+<body>
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<a class="back-link" href="../index.html">← All Sectors</a>
+<header>
+<div class="header-inner">
+<div class="header-label">// Defence &amp; Aerospace</div>
+<h1>Defence <span>Dashboard</span></h1>
+<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.2500</span> · <span id="last-updated">Last updated: —</span> · <span id="version">v1.0</span></div>
+</div>
+</header>
+<nav>
+<div class="nav-inner">
+<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 28 defence &amp; aerospace stocks" href="index.html">📊 Dashboard</a>
+<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
+<a class="nav-link" data-tooltip="Latest headlines across all 28 stocks with news sentiment scoring" href="news.html">📰 News</a>
+<a class="nav-link" data-tooltip="Defence top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri" href="signals.html">🎯 Signals</a>
+<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
+<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
+<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today" href="calculator.html">🧮 What-If</a>
+</div>
+</nav>
+<div class="container">
+<div class="filters">
+<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
+<button class="filter-btn" data-filter="us-primes" data-tooltip="Major US defence prime contractors — Lockheed, RTX, Northrop, General Dynamics, Huntington Ingalls, L3Harris, Boeing" onclick="filterTable('us-primes', this)">🏭 US Primes</button>
+<button class="filter-btn" data-filter="uk-european" data-tooltip="UK and European defence majors — BAE Systems, Rolls-Royce, QinetiQ" onclick="filterTable('uk-european', this)">🇬🇧 UK/European</button>
+<button class="filter-btn" data-filter="cyber-intel" data-tooltip="Cyber, intelligence and government IT services — Palantir, Leidos, CACI, SAIC, Booz Allen Hamilton" onclick="filterTable('cyber-intel', this)">🔐 Cyber/Intel</button>
+<button class="filter-btn" data-filter="drones" data-tooltip="Drone and autonomous systems manufacturers — AeroVironment, Kratos, Red Cat, Textron" onclick="filterTable('drones', this)">🚁 Drones</button>
+<button class="filter-btn" data-filter="space" data-tooltip="Space and satellite defence plays — Rocket Lab, Planet Labs, AST SpaceMobile" onclick="filterTable('space', this)">🛰️ Space</button>
+<button class="filter-btn" data-filter="weapons" data-tooltip="Weapons, defence electronics and systems — TransDigm, HEICO, Axon, Olin, Mercury Systems, Leonardo DRS" onclick="filterTable('weapons', this)">💥 Weapons</button>
+</div>
+<div class="search-count-bar">
+<input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="visible-count">28</span> of 28 stocks</span>
+</div>
+<div class="table-wrap">
+<table id="stock-table">
+<thead>
+<tr>
+<th class="sortable" onclick="sortTable('ticker', this)">Ticker</th>
+<th class="sortable" onclick="sortTable('company', this)">Company</th>
+<th class="sortable" onclick="sortTable('cat', this)">Category</th>
+<th class="sortable" onclick="sortTable('price', this)">Price (£)</th>
+<th class="sortable" onclick="sortTable('return', this)">1yr Return</th><th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
+<th class="sortable" onclick="sortTable('range', this)">52-Week Range</th>
+<th class="sortable" onclick="sortTable('angle', this)">Key Angle</th>
+</tr>
+</thead>
+<tbody>
+<!-- ============================================================ -->
+<!-- US PRIMES                                                     -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="us-primes" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="400" data-low-gbp="300" data-price-gbp="350" data-price-usd="437.50" data-return="+0%" data-ticker="LMT">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/LMT/" target="_blank"><div class="ticker" style="color:var(--amber)">LMT</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Lockheed Martin</td>
+<td><span class="cat-badge cat-us-primes">US Prime</span></td>
+<td><span class="price">£350</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£300</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£400</span></div></td>
+<td><span class="notes-text">F-35 programme, classified US government contracts, space systems.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="us-primes" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="130" data-low-gbp="90" data-price-gbp="110" data-price-usd="137.50" data-return="+0%" data-ticker="RTX">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/RTX/" target="_blank"><div class="ticker" style="color:var(--amber)">RTX</div></a><div class="exchange-badge">NYSE</div></td>
+<td>RTX Corporation</td>
+<td><span class="cat-badge cat-us-primes">US Prime</span></td>
+<td><span class="price">£110</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£90</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£130</span></div></td>
+<td><span class="notes-text">Missiles, radar, jet engines (Pratt &amp; Whitney). Patriot air defence beneficiary.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="us-primes" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="600" data-low-gbp="450" data-price-gbp="525" data-price-usd="656.25" data-return="+0%" data-ticker="NOC">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/NOC/" target="_blank"><div class="ticker" style="color:var(--amber)">NOC</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Northrop Grumman</td>
+<td><span class="cat-badge cat-us-primes">US Prime</span></td>
+<td><span class="price">£525</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£450</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£600</span></div></td>
+<td><span class="notes-text">B-21 Raider stealth bomber, space systems, electronic warfare.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="us-primes" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="350" data-low-gbp="250" data-price-gbp="300" data-price-usd="375.00" data-return="+0%" data-ticker="GD">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/GD/" target="_blank"><div class="ticker" style="color:var(--amber)">GD</div></a><div class="exchange-badge">NYSE</div></td>
+<td>General Dynamics</td>
+<td><span class="cat-badge cat-us-primes">US Prime</span></td>
+<td><span class="price">£300</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£250</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£350</span></div></td>
+<td><span class="notes-text">Gulfstream jets, submarines, combat vehicles, IT services.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="us-primes" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="350" data-low-gbp="220" data-price-gbp="285" data-price-usd="356.25" data-return="+0%" data-ticker="HII">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/HII/" target="_blank"><div class="ticker" style="color:var(--amber)">HII</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Huntington Ingalls</td>
+<td><span class="cat-badge cat-us-primes">US Prime</span></td>
+<td><span class="price">£285</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£220</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£350</span></div></td>
+<td><span class="notes-text">US Navy's only nuclear-powered aircraft carrier builder.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="us-primes" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="280" data-low-gbp="190" data-price-gbp="235" data-price-usd="293.75" data-return="+0%" data-ticker="LHX">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/LHX/" target="_blank"><div class="ticker" style="color:var(--amber)">LHX</div></a><div class="exchange-badge">NYSE</div></td>
+<td>L3Harris Technologies</td>
+<td><span class="cat-badge cat-us-primes">US Prime</span></td>
+<td><span class="price">£235</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£190</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£280</span></div></td>
+<td><span class="notes-text">Communications, electronic warfare, sensor systems.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="us-primes" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="220" data-low-gbp="130" data-price-gbp="175" data-price-usd="218.75" data-return="+0%" data-ticker="BA">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BA/" target="_blank"><div class="ticker" style="color:var(--amber)">BA</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Boeing</td>
+<td><span class="cat-badge cat-us-primes">US Prime</span></td>
+<td><span class="price">£175</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£130</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£220</span></div></td>
+<td><span class="notes-text">F-15/F-18 jets, KC-46 tanker, Space Launch System. Turnaround story.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- UK/EUROPEAN                                                   -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="uk-european" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="LSE" data-high-gbp="14" data-low-gbp="10" data-price-gbp="12" data-price-usd="15.00" data-return="+0%" data-ticker="BA.L">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BA.L/" target="_blank"><div class="ticker" style="color:var(--gold)">BA.L</div></a><div class="exchange-badge">LSE</div></td>
+<td>BAE Systems</td>
+<td><span class="cat-badge cat-uk-european">UK/European</span></td>
+<td><span class="price">£12</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£10</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£14</span></div></td>
+<td><span class="notes-text">Europe's largest defence company. Ships, aircraft, cyber. NATO spending tailwind.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="uk-european" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="LSE" data-high-gbp="7" data-low-gbp="4" data-price-gbp="5.50" data-price-usd="6.88" data-return="+0%" data-ticker="RR.L">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/RR.L/" target="_blank"><div class="ticker" style="color:var(--gold)">RR.L</div></a><div class="exchange-badge">LSE</div></td>
+<td>Rolls-Royce</td>
+<td><span class="cat-badge cat-uk-european">UK/European</span></td>
+<td><span class="price">£5.50</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£4</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£7</span></div></td>
+<td><span class="notes-text">Defence jet engines (Typhoon, F-35B), SMR developer, naval propulsion.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="uk-european" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="LSE" data-high-gbp="4.50" data-low-gbp="3.00" data-price-gbp="3.75" data-price-usd="4.69" data-return="+0%" data-ticker="QQ.L">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/QQ.L/" target="_blank"><div class="ticker" style="color:var(--gold)">QQ.L</div></a><div class="exchange-badge">LSE</div></td>
+<td>QinetiQ Group</td>
+<td><span class="cat-badge cat-uk-european">UK/European</span></td>
+<td><span class="price">£3.75</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£3.00</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£4.50</span></div></td>
+<td><span class="notes-text">UK/US defence R&amp;D, test &amp; evaluation, autonomous systems.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- CYBER/INTEL                                                   -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="cyber-intel" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="140" data-low-gbp="60" data-price-gbp="100" data-price-usd="125.00" data-return="+0%" data-ticker="PLTR">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/PLTR/" target="_blank"><div class="ticker" style="color:var(--purple)">PLTR</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Palantir Technologies</td>
+<td><span class="cat-badge cat-cyber-intel">Cyber/Intel</span></td>
+<td><span class="price">£100</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£60</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£140</span></div></td>
+<td><span class="notes-text">AI-powered data analytics for US/UK military and intelligence agencies.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="cyber-intel" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="130" data-low-gbp="90" data-price-gbp="110" data-price-usd="137.50" data-return="+0%" data-ticker="LDOS">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/LDOS/" target="_blank"><div class="ticker" style="color:var(--purple)">LDOS</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Leidos Holdings</td>
+<td><span class="cat-badge cat-cyber-intel">Cyber/Intel</span></td>
+<td><span class="price">£110</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£90</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£130</span></div></td>
+<td><span class="notes-text">US federal IT, cybersecurity, health IT. Large Pentagon contract base.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="cyber-intel" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="600" data-low-gbp="420" data-price-gbp="510" data-price-usd="637.50" data-return="+0%" data-ticker="CACI">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/CACI/" target="_blank"><div class="ticker" style="color:var(--purple)">CACI</div></a><div class="exchange-badge">NYSE</div></td>
+<td>CACI International</td>
+<td><span class="cat-badge cat-cyber-intel">Cyber/Intel</span></td>
+<td><span class="price">£510</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£420</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£600</span></div></td>
+<td><span class="notes-text">Intelligence community IT, cyber, enterprise IT for US DoD.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="cyber-intel" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="130" data-low-gbp="90" data-price-gbp="110" data-price-usd="137.50" data-return="+0%" data-ticker="SAIC">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/SAIC/" target="_blank"><div class="ticker" style="color:var(--purple)">SAIC</div></a><div class="exchange-badge">NYSE</div></td>
+<td>SAIC</td>
+<td><span class="cat-badge cat-cyber-intel">Cyber/Intel</span></td>
+<td><span class="price">£110</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£90</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£130</span></div></td>
+<td><span class="notes-text">Defence IT and engineering services, C4ISR systems integration.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="cyber-intel" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="160" data-low-gbp="110" data-price-gbp="135" data-price-usd="168.75" data-return="+0%" data-ticker="BAH">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BAH/" target="_blank"><div class="ticker" style="color:var(--purple)">BAH</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Booz Allen Hamilton</td>
+<td><span class="cat-badge cat-cyber-intel">Cyber/Intel</span></td>
+<td><span class="price">£135</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£110</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£160</span></div></td>
+<td><span class="notes-text">Government consulting, cyber, AI for US national security agencies.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- DRONES                                                        -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="drones" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NASDAQ" data-high-gbp="280" data-low-gbp="160" data-price-gbp="220" data-price-usd="275.00" data-return="+0%" data-ticker="AVAV">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AVAV/" target="_blank"><div class="ticker" style="color:var(--teal)">AVAV</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>AeroVironment</td>
+<td><span class="cat-badge cat-drones">Drones</span></td>
+<td><span class="price">£220</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£160</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£280</span></div></td>
+<td><span class="notes-text">Switchblade loitering munitions, Puma &amp; Raven tactical UAS. Ukraine demand.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="drones" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NASDAQ" data-high-gbp="30" data-low-gbp="15" data-price-gbp="22" data-price-usd="27.50" data-return="+0%" data-ticker="KTOS">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/KTOS/" target="_blank"><div class="ticker" style="color:var(--teal)">KTOS</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Kratos Defense</td>
+<td><span class="cat-badge cat-drones">Drones</span></td>
+<td><span class="price">£22</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£15</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£30</span></div></td>
+<td><span class="notes-text">Affordable unmanned combat aerial vehicles (UCAV), hypersonic targets.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="drones" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NASDAQ" data-high-gbp="8" data-low-gbp="3" data-price-gbp="5" data-price-usd="6.25" data-return="+0%" data-ticker="RCAT">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/RCAT/" target="_blank"><div class="ticker" style="color:var(--teal)">RCAT</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Red Cat Holdings</td>
+<td><span class="cat-badge cat-drones">Drones</span></td>
+<td><span class="price">£5</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£3</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£8</span></div></td>
+<td><span class="notes-text">Small attack drones (Black Widow), counter-drone systems for US Army.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="drones" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="85" data-low-gbp="55" data-price-gbp="70" data-price-usd="87.50" data-return="+0%" data-ticker="TXT">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/TXT/" target="_blank"><div class="ticker" style="color:var(--teal)">TXT</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Textron</td>
+<td><span class="cat-badge cat-drones">Drones</span></td>
+<td><span class="price">£70</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£55</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£85</span></div></td>
+<td><span class="notes-text">Bell helicopters, Cessna aircraft, armed drones, combat vehicles.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- SPACE                                                         -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="space" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NASDAQ" data-high-gbp="25" data-low-gbp="10" data-price-gbp="17" data-price-usd="21.25" data-return="+0%" data-ticker="RKLB">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/RKLB/" target="_blank"><div class="ticker" style="color:var(--blue)">RKLB</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Rocket Lab</td>
+<td><span class="cat-badge cat-space">Space</span></td>
+<td><span class="price">£17</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£10</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£25</span></div></td>
+<td><span class="notes-text">Electron small-sat launcher, Neutron medium-lift, space systems for DoD/NRO.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="space" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="5" data-low-gbp="2" data-price-gbp="3.50" data-price-usd="4.38" data-return="+0%" data-ticker="PL">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/PL/" target="_blank"><div class="ticker" style="color:var(--blue)">PL</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Planet Labs</td>
+<td><span class="cat-badge cat-space">Space</span></td>
+<td><span class="price">£3.50</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£2</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£5</span></div></td>
+<td><span class="notes-text">Daily earth imagery constellation. Intelligence and defence earth observation contracts.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="space" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NASDAQ" data-high-gbp="35" data-low-gbp="10" data-price-gbp="22" data-price-usd="27.50" data-return="+0%" data-ticker="ASTS">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/ASTS/" target="_blank"><div class="ticker" style="color:var(--blue)">ASTS</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>AST SpaceMobile</td>
+<td><span class="cat-badge cat-space">Space</span></td>
+<td><span class="price">£22</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£10</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£35</span></div></td>
+<td><span class="notes-text">Space-based broadband direct-to-device. US government communications contracts.</span></td>
+</tr>
+<!-- ============================================================ -->
+<!-- WEAPONS/SYSTEMS                                               -->
+<!-- ============================================================ -->
+<tr data-bar-pct="50" data-cat="weapons" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="1400" data-low-gbp="1100" data-price-gbp="1250" data-price-usd="1562.50" data-return="+0%" data-ticker="TDG">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/TDG/" target="_blank"><div class="ticker" style="color:var(--rose)">TDG</div></a><div class="exchange-badge">NYSE</div></td>
+<td>TransDigm Group</td>
+<td><span class="cat-badge cat-weapons">Weapons</span></td>
+<td><span class="price">£1250</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£1100</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£1400</span></div></td>
+<td><span class="notes-text">Proprietary aerospace components. Near-monopoly aftermarket pricing power.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="weapons" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="280" data-low-gbp="190" data-price-gbp="235" data-price-usd="293.75" data-return="+0%" data-ticker="HEICO">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/HEICO/" target="_blank"><div class="ticker" style="color:var(--rose)">HEICO</div></a><div class="exchange-badge">NYSE</div></td>
+<td>HEICO Corporation</td>
+<td><span class="cat-badge cat-weapons">Weapons</span></td>
+<td><span class="price">£235</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£190</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£280</span></div></td>
+<td><span class="notes-text">FAA-approved aerospace parts. Military/commercial MRO compound compounder.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="weapons" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NASDAQ" data-high-gbp="750" data-low-gbp="450" data-price-gbp="600" data-price-usd="750.00" data-return="+0%" data-ticker="AXON">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AXON/" target="_blank"><div class="ticker" style="color:var(--rose)">AXON</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Axon Enterprise</td>
+<td><span class="cat-badge cat-weapons">Weapons</span></td>
+<td><span class="price">£600</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£450</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£750</span></div></td>
+<td><span class="notes-text">Tasers, bodycams, AI-powered public safety platform. Growing military/border use.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="weapons" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="50" data-low-gbp="25" data-price-gbp="37" data-price-usd="46.25" data-return="+0%" data-ticker="OLN">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/OLN/" target="_blank"><div class="ticker" style="color:var(--rose)">OLN</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Olin Corporation</td>
+<td><span class="cat-badge cat-weapons">Weapons</span></td>
+<td><span class="price">£37</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£25</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£50</span></div></td>
+<td><span class="notes-text">Winchester Ammunition — small-calibre military and commercial rounds supplier.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="weapons" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NASDAQ" data-high-gbp="55" data-low-gbp="30" data-price-gbp="42" data-price-usd="52.50" data-return="+0%" data-ticker="MRCY">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/MRCY/" target="_blank"><div class="ticker" style="color:var(--rose)">MRCY</div></a><div class="exchange-badge">NASDAQ</div></td>
+<td>Mercury Systems</td>
+<td><span class="cat-badge cat-weapons">Weapons</span></td>
+<td><span class="price">£42</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£30</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£55</span></div></td>
+<td><span class="notes-text">Mission-critical processing for radar, EW, sensor fusion in US military platforms.</span></td>
+</tr>
+<tr data-bar-pct="50" data-cat="weapons" data-change-1d="+0.00%" data-change-1m="+0.00%" data-change-1w="+0.00%" data-change-ytd="+0.00%" data-exchange="NYSE" data-high-gbp="30" data-low-gbp="18" data-price-gbp="24" data-price-usd="30.00" data-return="+0%" data-ticker="DRS">
+<td><a class="ticker-link" href="https://finance.yahoo.com/quote/DRS/" target="_blank"><div class="ticker" style="color:var(--rose)">DRS</div></a><div class="exchange-badge">NYSE</div></td>
+<td>Leonardo DRS</td>
+<td><span class="cat-badge cat-weapons">Weapons</span></td>
+<td><span class="price">£24</span><div class="change-pills"><span class="cpill flat">+0.00% 1D</span><span class="cpill flat">+0.00% 1W</span><span class="cpill flat">+0.00% 1M</span></div></td>
+<td><span class="return-modest">+0%</span></td><td><span class="ytd-return ytd-flat">+0.00%</span></td>
+<td><div class="range-wrap"><span class="range-label">£18</span><div class="range-bar-bg"><div class="range-fill" style="width:50%"></div><div class="range-dot" style="left:50%"></div></div><span class="range-label" style="text-align:right">£30</span></div></td>
+<td><span class="notes-text">US Army ground vehicle electronics, thermal imaging, naval power systems.</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<footer>
+<strong>⚠️ NOT FINANCIAL ADVICE.</strong> This dashboard is for informational and research purposes only. All prices approximate, converted at £1 = $1.2500. Past performance does not guarantee future results. 1yr returns are approximate based on available 52-week data. Always do your own research and consult a financial adviser before investing.
+  </footer>
+</div>
+<script>
+  let sortState = { col: null, dir: 1 };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const returnTh = document.querySelector('th[onclick*="\'return\'"]');
+    sortState.col = 'return'; // pre-set so toggle flips to descending (-1)
+    sortTable('return', returnTh);
+  });
+
+  function sortTable(col, th) {
+    const tbody = document.querySelector('#stock-table tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+
+    if (sortState.col === col) {
+      sortState.dir *= -1;
+    } else {
+      sortState.col = col;
+      sortState.dir = 1;
+    }
+
+    document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+    th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+
+    rows.sort((a, b) => {
+      let av, bv;
+      if (col === 'ticker')  { av = a.dataset.ticker;  bv = b.dataset.ticker; }
+      if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
+      if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
+      if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
+      if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
+      if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
+      if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
+      if (col === 'angle')   { av = a.querySelector('td:nth-child(8)').textContent.trim(); bv = b.querySelector('td:nth-child(8)').textContent.trim(); }
+      return av.localeCompare(bv) * sortState.dir;
+    });
+
+    rows.forEach(r => tbody.appendChild(r));
+  }
+
+  let currentCat = 'all';
+
+  function applyFilters() {
+    const query = document.getElementById('stock-search').value.toLowerCase().trim();
+    const rows  = document.querySelectorAll('#stock-table tbody tr');
+    let visible = 0;
+    rows.forEach(row => {
+      const matchCat    = currentCat === 'all' || row.dataset.cat === currentCat;
+      const matchSearch = !query
+        || row.dataset.ticker.toLowerCase().includes(query)
+        || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
+      if (matchCat && matchSearch) {
+        row.classList.remove('hidden');
+        visible++;
+      } else {
+        row.classList.add('hidden');
+      }
+    });
+    document.getElementById('visible-count').textContent = visible;
+  }
+
+  function filterTable(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = cat;
+    applyFilters();
+  }
+
+  function searchTable() {
+    applyFilters();
+  }
+
+  function buildTape(stocks) {
+    const track = document.getElementById('tape-track');
+    if (!track || !stocks.length) return;
+
+    const items = stocks.map(s => {
+      const change = s.change_1d || '+0.00%';
+      const val    = parseFloat(change);
+      const isNeg  = change.startsWith('-');
+      const isFlat = val === 0;
+      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
+      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
+      const price  = parseFloat(s.price_gbp) || 0;
+      const priceStr = price <= 0 ? '—' :
+                       price >= 10 ? '£' + Math.round(price) :
+                       price >= 1  ? '£' + price.toFixed(2) :
+                                     '£' + price.toFixed(3);
+      return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${priceStr}</span><span class="tape-r ${cls}">${arrow} ${change}</span></span>`;
+    }).join('');
+
+    track.innerHTML = items + items;
+    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
+    track.classList.add('running');
+  }
+
+  if (window.PRICES_DATA) {
+    buildTape(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json')
+      .then(r => r.json())
+      .then(data => buildTape(data.stocks))
+      .catch(() => {
+        const rows = Array.from(document.querySelectorAll('#stock-table tbody tr'));
+        buildTape(rows.map(row => ({
+          ticker:    row.dataset.ticker,
+          price_gbp: row.dataset.priceGbp || '0',
+          change_1d: row.dataset['change-1d'] || '+0.00%',
+        })));
+      });
+  }
+</script>
+</body>
+</html>
