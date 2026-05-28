@@ -4,22 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biotech — Signals</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script src="prices-data.js"></script>
 <script src="signals-local.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <style>
-              .tape-track { display: flex; white-space: nowrap; gap: 0; }
-    @keyframes scroll-tape { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  #ticker-tape:hover .tape-track { animation-play-state: paused; }
-                  
-  /* Container */
-      h1 { font-size: 36px; font-weight: 800; line-height: 1.1; letter-spacing: -1px; margin-bottom: 10px; }
-    .header-sub { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
-  .header-sub .model { color: var(--text); }
-
-  /* Disclaimer */
   .disclaimer {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
@@ -219,7 +208,19 @@
     font-size: 12px;
   }
 
-    @media (max-width: 768px) {
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  @media (max-width: 768px) {
     h1 { font-size: 26px; }
     .rank-rail { width: 48px; }
     .rank-num { font-size: 22px; }
@@ -230,16 +231,95 @@
     .rationale { font-size: 13px; }
   }
 
-      /* How it works */
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+    background: var(--accent);
+    color: #000;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+  .back-link:hover { background: #fff; color: #000; }
+
+  /* How it works */
   .how-it-works {
     margin-top: 48px;
     border: 1px solid var(--border);
     background: var(--surface);
   }
-  .how-  .how-header:hover { background: var(--surface2); }
+  .how-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+  .how-header:hover { background: var(--surface2); }
   .how-chevron { transition: transform 0.2s; font-style: normal; }
   .how-header.open .how-chevron { transform: rotate(180deg); }
-  .how-  .how-footer-note span { color: var(--accent2); }
+  .how-body {
+    display: none;
+    padding: 20px;
+    gap: 20px;
+  }
+  .how-body.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .how-step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .how-step-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 28px;
+  }
+  .how-step-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .how-step-text p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .how-step-text p code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 1px 5px;
+    border: 1px solid var(--border);
+    font-size: 11px;
+  }
+  .how-footer-note {
+    grid-column: 1 / -1;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .how-footer-note span { color: var(--accent2); }
 </style>
 </head>
 <body>
