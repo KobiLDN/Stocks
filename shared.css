@@ -175,7 +175,7 @@ h1 span { color: var(--accent); }
   min-width: 110px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-top: 2px solid var(--accent);
+  border-top: 2px solid var(--muted);
   border-radius: 4px;
   padding: 10px 14px;
   display: flex;
@@ -183,10 +183,11 @@ h1 span { color: var(--accent); }
   gap: 6px;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s, background 0.15s;
+  opacity: 0.45;
+  transition: border-color 0.15s, background 0.15s, opacity 0.15s;
 }
-.sector-card:hover { background: var(--surface2); border-color: var(--accent); cursor: pointer; }
-.sector-card.active { border-top-color: var(--muted); border-color: var(--border); opacity: 0.45; cursor: default; pointer-events: none; }
+.sector-card:hover { background: var(--surface2); border-top-color: var(--accent); border-color: var(--accent); opacity: 1; cursor: pointer; }
+.sector-card.active { border-top-color: var(--accent); border-color: var(--border); background: var(--surface2); opacity: 1; cursor: default; pointer-events: none; }
 
 .sector-card-top { display: flex; align-items: center; justify-content: space-between; }
 .sector-card-icon { font-size: 18px; line-height: 1; }
