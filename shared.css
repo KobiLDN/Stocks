@@ -262,6 +262,34 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
   padding: 40px 24px;
 }
 
+/* ---- Dashboard: price change pills ---- */
+.change-pills {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  flex-wrap: nowrap;
+}
+.cpill {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.cpill.pos  { background: rgba(0,230,118,0.12);  color: var(--green); }
+.cpill.neg  { background: rgba(255,68,68,0.12);   color: var(--red); }
+.cpill.flat { background: rgba(90,122,154,0.12);  color: var(--muted); }
+
+/* ---- Dashboard: notes / key angle column ---- */
+.notes-text {
+  color: var(--muted);
+  font-size: 13px;
+  max-width: 260px;
+  white-space: normal;
+  line-height: 1.4;
+}
+
 /* ---- Footer ---- */
 footer {
   margin-top: 48px;

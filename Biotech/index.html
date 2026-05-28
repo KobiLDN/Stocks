@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <!--
 =============================================================
@@ -141,14 +141,7 @@
 
   /* Price & pills */
   .price { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 17px; }
-  .change-pills { display: flex; gap: 4px; margin-top: 3px; flex-wrap: wrap; }
-  .cpill {
-    font-family: 'IBM Plex Mono', monospace; font-size: 9px; font-weight: 700;
-    padding: 1px 5px; border-radius: 2px;
-  }
-  .cpill.pos  { background: rgba(0,230,118,0.12); color: var(--green); }
-  .cpill.neg  { background: rgba(255,68,68,0.12);  color: var(--red); }
-  .cpill.flat { background: rgba(90,122,154,0.12); color: var(--muted); }
+
 
   /* Returns */
   .return-mega     { color: var(--green); font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
@@ -167,8 +160,6 @@
   .range-dot { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; background: #fff; border-radius: 50%; border: 2px solid var(--accent); }
 
   /* Notes */
-  .notes-text { font-size: 11px; color: var(--muted); max-width: 260px; line-height: 1.4; }
-
   /* Footer */
   footer {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted);
@@ -176,7 +167,6 @@
   }
 
   @media (max-width: 900px) {
-    .notes-text { display: none; }
     .range-wrap { min-width: 120px; }
     h1 { font-size: 26px; }
   }
