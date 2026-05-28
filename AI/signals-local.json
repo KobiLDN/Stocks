@@ -1,9 +1,141 @@
 {
-  "updated": "2026-05-28 00:20",
+  "updated": "2026-05-28 22:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Micron shows explosive momentum (+78% 1M, +26% 1W) with strong_buy consensus (an_score 1.48), P/E 43.6, and positive news sentiment 0.124; recent web search confirms AI memory demand driving climactic moves.",
+      "drivers": [
+        "+78% 1-month momentum",
+        "strong_buy analyst consensus",
+        "P/E 43.6",
+        "AI memory demand catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Hut 8 surges +75% 1M and +29% 1W with strong_buy consensus (an_score 1.31), though high beta 5.7 and no P/E; web search shows AI compute pivot fueling massive rally.",
+      "drivers": [
+        "+75% 1-month momentum",
+        "strong_buy consensus",
+        "AI compute pivot",
+        "high beta 5.7"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Semtech gains +69% 1M and +17% 1W with strong_buy consensus (an_score 1.36), no P/E but low short interest 6.8%; web search reveals AI hardware demand concerns but strong momentum persists.",
+      "drivers": [
+        "+69% 1-month momentum",
+        "strong_buy consensus",
+        "short interest 6.8%",
+        "AI hardware demand catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "285A",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Stock soars +69% 1M and +11% 1W with buy consensus (an_score 1.86), P/E 59.9, and positive news sentiment 0.168; memory chip ETF surge supports momentum.",
+      "drivers": [
+        "+69% 1-month momentum",
+        "buy consensus",
+        "P/E 59.9",
+        "memory ETF catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AXTI",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AXTI rockets +63% 1M and +591% YTD with no analyst coverage but positive news sentiment 0.0; web search highlights indium phosphide AI boom as key driver.",
+      "drivers": [
+        "+63% 1-month momentum",
+        "+591% YTD",
+        "indium phosphide AI boom",
+        "no analyst coverage"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SMCI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Super Micro jumps +57% 1M and +23% 1W with hold consensus (an_score 2.83) but attractive P/E 21.7 and positive news sentiment 0.304; web search shows smuggling probe but strong AI demand.",
+      "drivers": [
+        "+57% 1-month momentum",
+        "P/E 21.7",
+        "positive news sentiment 0.304",
+        "AI demand catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Sandisk gains +54% 1M and +496% YTD with buy consensus (an_score 1.59), P/E 56.1, and positive news sentiment 0.248; memory chip 'climactic top' headline signals caution but momentum strong.",
+      "drivers": [
+        "+54% 1-month momentum",
+        "+496% YTD",
+        "buy consensus",
+        "memory chip top caution"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Dell surges +54% 1M and +30% 1W with buy consensus (an_score 2.0), P/E 36.6, and positive news sentiment 0.114; web search confirms $9.7B Pentagon contract win as catalyst.",
+      "drivers": [
+        "+54% 1-month momentum",
+        "P/E 36.6",
+        "buy consensus",
+        "$9.7B Pentagon contract"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "IREN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Iris Energy climbs +49% 1M and +22% 1W with buy consensus (an_score 1.87), P/E 83.2, and positive news sentiment 0.05; web search shows massive investor stake in Nebius stock as catalyst.",
+      "drivers": [
+        "+49% 1-month momentum",
+        "buy consensus",
+        "P/E 83.2",
+        "investor stake catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "MTSI",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "MACOM advances +45% 1M and +124% YTD with buy consensus (an_score 1.6), P/E 165.7, and positive news sentiment 0.158; web search confirms long-term supply agreements with IQE.",
+      "drivers": [
+        "+45% 1-month momentum",
+        "+124% YTD",
+        "buy consensus",
+        "IQE supply agreement"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MU",
@@ -132,138 +264,6 @@
         "1M +78.68%",
         "extreme momentum",
         "high volatility risk"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Analyst consensus is strong_buy with best an_score of 1.21, YTD up 108.32%, 1M +48.83%, 1W +13.91% and positive news sentiment 0.136.",
-      "drivers": [
-        "an_score 1.21",
-        "+48.83% 1M",
-        "strong_buy consensus",
-        "positive momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CORZ",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "strong_buy analyst rating with an_score 1.33, YTD +57.97%, 1M +21.38%, 1W +4.34% and positive news sentiment 0.183.",
-      "drivers": [
-        "an_score 1.33",
-        "+57.97% YTD",
-        "strong_buy consensus",
-        "positive news"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "WDC",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "strong_buy rating with an_score 1.48, YTD +158.13%, P/E 28.98 reasonable, 1M +20.13%, positive news sentiment 0.117.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 28.98",
-        "+158.13% YTD",
-        "positive news"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "DELL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +132.71%, 1M +39.15%, 1W +21.98%, 1D +16.07% showing strong momentum, P/E 34.01, news sentiment positive 0.1.",
-      "drivers": [
-        "+132.71% YTD",
-        "+39.15% 1M",
-        "P/E 34.01",
-        "strong momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "strong_buy analyst consensus with an_score 1.43, YTD +21.61%, 1M +13.01%, P/E 29.23 attractive, positive news sentiment 0.055.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 29.23",
-        "+21.61% YTD",
-        "mega-cap stability"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "strong_buy rating an_score 1.48, YTD +138.20%, 1M +55.90%, P/E 35.46 reasonable, low short interest 3.31%.",
-      "drivers": [
-        "strong_buy consensus",
-        "+138.20% YTD",
-        "P/E 35.46",
-        "low short interest"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SMCI",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "High momentum with 1D +6.11%, 1W +14.63%, 1M +33.01%, P/E 18.73 attractive, strong news sentiment 0.4, but analyst consensus is hold, capping conviction.",
-      "drivers": [
-        "+14.63% 1W",
-        "P/E 18.73",
-        "news sentiment 0.4",
-        "hold consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "strong_buy with an_score 1.35, YTD +17.58%, 1M +4.41%, P/E 31.63 reasonable, mega-cap with AI hyperscaler tailwinds.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 31.63",
-        "+17.58% YTD",
-        "hyperscaler AI exposure"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "strong_buy rating an_score 1.5, YTD +119.90%, 1W +10.99%, 1M +18.59%, news sentiment 0.207 positive.",
-      "drivers": [
-        "strong_buy consensus",
-        "+119.90% YTD",
-        "+10.99% 1W",
-        "news sentiment 0.207"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "VST",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "strong_buy analyst consensus with best an_score of 1.37, 1W +11.88%, 1D +4.35%, positive news sentiment 0.185, P/E 26.09 reasonable.",
-      "drivers": [
-        "an_score 1.37",
-        "+11.88% 1W",
-        "P/E 26.09",
-        "strong_buy consensus"
       ]
     }
   ]
