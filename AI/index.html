@@ -703,22 +703,30 @@
   }
 
   .back-link {
-    display: block;
-    padding: 6px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+    background: var(--accent);
+    color: #000;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
-    color: #6b8299;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.05em;
+    border-radius: 3px;
   }
-  .back-link:hover { color: #00d4ff; }
+  .back-link:hover { background: #fff; color: #000; }
 </style>
 </head>
 <body>
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
-  <a class="back-link" href="../index.html">← All Sectors</a>
 <div class="header-inner">
+
+  <a class="back-link" href="../index.html">← All Sectors</a>
 <div class="header-label">// AI Infrastructure</div>
 <h1>Stock <span>Universe</span></h1>
 <div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3429</span> · <span id="last-updated">Last updated: 2026-05-27 17:33</span> · <span id="version">v2.4</span></div>
