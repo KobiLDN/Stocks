@@ -12,6 +12,10 @@ _(no open items)_
 
 ## Done
 
+- **Sector switcher** — replaces back-link; mini cards for all sectors + Stock Hub in header; context-aware navigation; active sector bright, others dim (`index.html` and all AI pages, `../shared.css`).
+- **Web search plugin for signals** — DeepSeek pulls live news during signal generation via OpenRouter web search tool (`generate_signals_local.py`).
+- **Rank delta badges on signals** — ▲↑↓▼ badges showing movement since last run; Mon/Wed/Fri schedule; How It Works section (`signals.html`).
+- **Category filter tooltips** on news page; nav link tooltips on dashboard (`news.html`, `index.html`).
 - **Default sort by 1yr Return (high → low)** — table loads pre-sorted on page open (`index.html`).
 - **1D / 1W / 1M change pills** — coloured pills under each price showing daily, weekly, and monthly % change; populated by price bot (`update_prices.py`, `index.html`).
 - **YTD sortable column** — year-to-date % change as its own column beside 1yr Return; colour-coded green/red; sortable; Risk and Revenue columns removed (`index.html`, `update_prices.py`).

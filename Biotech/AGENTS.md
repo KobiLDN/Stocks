@@ -1,6 +1,6 @@
 # Biotech Sector — Agent Guide
 
-Read the **root `../AGENTS.md` first** — it contains the full workflow, git rules, architecture decisions, and UI design standards. This file covers Biotech-specific details only.
+Read the **root `../AGENTS.md` first** — it contains the full workflow, git rules, architecture decisions, UI design standards, and sector switcher structure. This file covers Biotech-specific details only.
 
 ## Structure
 
@@ -16,7 +16,7 @@ Read the **root `../AGENTS.md` first** — it contains the full workflow, git ru
 | mRNA | `mrna` | `--purple` | MRNA, BNTX, NVAX |
 | Rare Disease | `rare-disease` | `--amber` | BMRN, SRPT, COAG, ALNY, IONS |
 | Metabolic | `metabolic` | `--lime` | NVO, LLY |
-| Neuroscience | `neuroscience` | `--indigo` | — |
+| Neuroscience | `neuroscience` | `--indigo` | (see `index.html` for current tickers) |
 
 ## UK-listed stocks (AZN, GSK)
 
@@ -37,23 +37,27 @@ Read the **root `../AGENTS.md` first** — it contains the full workflow, git ru
 | Charts | `charts.html` | TradingView embeds, single-stock and category grid views |
 | What-If | `calculator.html` | Jan 2026 investment simulator |
 
+## Shared stylesheet
+
+All Biotech pages load `../shared.css` for shared styles (reset, body, ticker tape, header, nav, footer, sector switcher). Page-specific CSS lives in each page's `<style>` block only. Do not duplicate shared rules.
+
 ## UI standards — follow AI sector exactly
 
 `AI/index.html` is the canonical reference. Biotech must match all font sizes and layout tokens. See the **UI Design Standards** table in `../AGENTS.md`.
 
 Current typography (must stay in sync with `AI/`):
 
-| Element | Size |
-|---|---|
-| `h1` | 36px (26px mobile) |
-| `.header-sub` | 13px |
-| `.nav-link` | 12px |
-| `.filter-btn` | 12px |
-| `th` | 11px |
-| `td` | 14px |
-| `.ticker` | 15px |
-| `.price` | 17px |
-| `.ytd-return` | 13px |
+| Element | Size | Notes |
+|---|---|---|
+| `h1` | 36px | 26px at ≤900px breakpoint |
+| `.header-sub` | 13px | |
+| `.nav-link` | 12px | |
+| `.filter-btn` | 12px | `letter-spacing: 1px`, `text-transform: uppercase`, `padding: 8px 16px`; responsive: 10px/6px 10px |
+| `th` | 11px | |
+| `td` | 14px | |
+| `.ticker` | 15px | |
+| `.price` | 17px | |
+| `.ytd-return` | 13px | |
 
 ## Automated updates
 
