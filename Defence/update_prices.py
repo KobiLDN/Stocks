@@ -58,7 +58,7 @@ STOCKS = {
     "ASTS":  ("ASTS",  "space",        "NASDAQ", None),
     # weapons
     "TDG":   ("TDG",   "weapons",      "NYSE",   None),
-    "HEICO": ("HEICO", "weapons",      "NYSE",   None),
+    "HEI":   ("HEI",   "weapons",      "NYSE",   None),
     "AXON":  ("AXON",  "weapons",      "NASDAQ", None),
     "OLN":   ("OLN",   "weapons",      "NYSE",   None),
     "MRCY":  ("MRCY",  "weapons",      "NASDAQ", None),
