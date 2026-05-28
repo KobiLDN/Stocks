@@ -4,8 +4,6 @@
    Page-specific and sector-specific CSS lives in each page's own <style> block.
    ============================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap');
-
 /* ---- CSS Reset ---- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
