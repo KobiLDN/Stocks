@@ -8,6 +8,7 @@
 <script src="prices-data.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
   .toolbar {
     position: relative;
@@ -61,13 +62,13 @@
 
   /* CAT BUTTONS in toolbar */
   .cat-btn { text-transform: uppercase; }
-  .cat-btn.active-memory     { background: var(--purple);  border-color: var(--purple);  color: #fff; }
-  .cat-btn.active-nuclear    { background: var(--accent2); border-color: var(--accent2); color: #fff; }
+  .cat-btn.active-memory     { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }
+  .cat-btn.active-nuclear    { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
   .cat-btn.active-smr        { background: var(--green);   border-color: var(--green);   color: var(--bg); }
   .cat-btn.active-uranium    { background: var(--gold);    border-color: var(--gold);    color: var(--bg); }
   .cat-btn.active-power      { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }
-  .cat-btn.active-dc         { background: var(--blue);    border-color: var(--blue);    color: #fff; }
-  .cat-btn.active-hyperscalers { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+  .cat-btn.active-dc         { background: var(--blue);    border-color: var(--blue);    color: var(--bg); }
+  .cat-btn.active-hyperscalers { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
   .cat-btn.active-compute    { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }
   .cat-btn.active-fibre      { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
   .cat-btn.active-dsp        { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
@@ -788,54 +789,6 @@
     buildSingle();
   });
 
-  function buildTape(stocks) {
-    const track = document.getElementById('tape-track');
-    if (!track || !stocks.length) return;
 
-    const items = stocks.map(s => {
-      const change = s.change_1d || '+0.00%';
-      const val    = parseFloat(change);
-      const isNeg  = change.startsWith('-');
-      const isFlat = val === 0;
-      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
-      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
-      const price  = parseFloat(s.price_gbp) || 0;
-      const priceStr = price <= 0 ? '—' :
-                       price >= 10 ? '£' + Math.round(price) :
-                       price >= 1  ? '£' + price.toFixed(2) :
-                                     '£' + price.toFixed(3);
-      return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${priceStr}</span><span class="tape-r ${cls}">${arrow} ${change}</span></span>`;
-    }).join('');
-
-    track.innerHTML = items + items;
-    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
-    track.classList.add('running');
-  }
-
-  if (window.PRICES_DATA) {
-    buildTape(window.PRICES_DATA.stocks);
-  } else {
-    fetch('prices.json')
-      .then(r => r.json())
-      .then(data => buildTape(data.stocks))
-      .catch(() => {});
-  }
-</script>
-<script>
-function toggleTheme() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('theme', 'light');
-    document.getElementById('theme-toggle').textContent = '☾';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    document.getElementById('theme-toggle').textContent = '☀';
-  }
-}
-document.getElementById('theme-toggle').textContent =
-  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
-</script>
 </body>
 </html>

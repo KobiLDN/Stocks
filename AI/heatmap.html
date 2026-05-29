@@ -9,6 +9,7 @@
 <script src="prices-data.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
   .toolbar {
     display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
@@ -583,47 +584,7 @@ function init() {
 }
 
 init();
-
-/* ── Ticker tape ── */
-function buildTape(stocks) {
-  const track = document.getElementById('tape-track');
-  if (!track || !stocks.length) return;
-  const items = stocks.map(s => {
-    const ch = s.change_1d || '+0.00%';
-    const v  = parseFloat(ch);
-    const cls = v === 0 ? 'flat' : ch.startsWith('-') ? 'neg' : 'pos';
-    const arr = v === 0 ? '—'   : ch.startsWith('-') ? '▼'   : '▲';
-    const p   = parseFloat(s.price_gbp) || 0;
-    const ps  = p <= 0 ? '—' : p >= 10 ? '£'+Math.round(p) : p >= 1 ? '£'+p.toFixed(2) : '£'+p.toFixed(3);
-    return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${ps}</span><span class="tape-r ${cls}">${arr} ${ch}</span></span>`;
-  }).join('');
-  track.innerHTML = items + items;
-  track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
-  track.classList.add('running');
-}
-
-if (window.PRICES_DATA) {
-  buildTape(window.PRICES_DATA.stocks);
-} else {
-  fetch('prices.json').then(r => r.json()).then(d => buildTape(d.stocks)).catch(() => {});
-}
-</script>
-<script>
-function toggleTheme() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('theme', 'light');
-    document.getElementById('theme-toggle').textContent = '☾';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    document.getElementById('theme-toggle').textContent = '☀';
-  }
-  renderAll2(activeMetric);
-}
-document.getElementById('theme-toggle').textContent =
-  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
+window._onThemeChange = () => renderAll2(activeMetric);
 </script>
 </body>
 </html>

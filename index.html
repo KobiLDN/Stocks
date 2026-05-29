@@ -197,6 +197,7 @@
       color: var(--dim);
     }
   </style>
+<script src="shared.js" defer></script>
 </head>
 <body>
 
@@ -245,21 +246,6 @@
     kobildn.github.io/Stocks &nbsp;·&nbsp; prices in GBP
   </footer>
 
-<script>
-function toggleTheme() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('theme', 'light');
-    document.getElementById('theme-toggle').textContent = '☾';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    document.getElementById('theme-toggle').textContent = '☀';
-  }
-}
-document.getElementById('theme-toggle').textContent =
-  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
-</script>
+
 </body>
 </html>

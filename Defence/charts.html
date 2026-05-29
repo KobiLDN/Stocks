@@ -8,6 +8,7 @@
 <script src="prices-data.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
   .toolbar { position: relative; z-index: 5; padding: 12px 24px; border-bottom: 1px solid var(--border); background: var(--bg); }
   .toolbar-inner { max-width: 1600px; margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
@@ -431,46 +432,6 @@
     buildSingle();
   });
 
-  function buildTape(stocks) {
-    const track = document.getElementById('tape-track');
-    if (!track || !stocks.length) return;
-    const items = stocks.map(s => {
-      const change = s.change_1d || '+0.00%';
-      const val    = parseFloat(change);
-      const isNeg  = change.startsWith('-');
-      const isFlat = val === 0;
-      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
-      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
-      const price  = parseFloat(s.price_gbp) || 0;
-      const priceStr = price <= 0 ? '—' : price >= 10 ? '£' + Math.round(price) : price >= 1 ? '£' + price.toFixed(2) : '£' + price.toFixed(3);
-      return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${priceStr}</span><span class="tape-r ${cls}">${arrow} ${change}</span></span>`;
-    }).join('');
-    track.innerHTML = items + items;
-    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
-    track.classList.add('running');
-  }
 
-  if (window.PRICES_DATA) {
-    buildTape(window.PRICES_DATA.stocks);
-  } else {
-    fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
-  }
-</script>
-<script>
-function toggleTheme() {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (isDark) {
-    document.documentElement.removeAttribute('data-theme');
-    localStorage.setItem('theme', 'light');
-    document.getElementById('theme-toggle').textContent = '☾';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    localStorage.setItem('theme', 'dark');
-    document.getElementById('theme-toggle').textContent = '☀';
-  }
-}
-document.getElementById('theme-toggle').textContent =
-  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
-</script>
 </body>
 </html>
