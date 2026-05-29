@@ -23,6 +23,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Biotech Stock Dashboard</title>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="prices-data.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../shared.css" rel="stylesheet"/>
@@ -46,7 +47,7 @@
     bottom: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%);
-    background: #0d1520;
+    background: var(--surface);
     color: var(--text);
     border: 1px solid var(--accent);
     border-radius: 6px;
@@ -189,6 +190,7 @@
 <div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3468</span> · <span id="last-updated">Last updated: 2026-05-29 17:37</span> · <span id="version">v1</span></div>
 </div>
 <div class="sector-switcher">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 <a class="sector-card hub-card" href="../index.html">
 <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
 <div class="sector-card-name">Stock Hub</div>
@@ -654,6 +656,22 @@
         })));
       });
   }
+</script>
+<script>
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+    document.getElementById('theme-toggle').textContent = '☾';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    document.getElementById('theme-toggle').textContent = '☀';
+  }
+}
+document.getElementById('theme-toggle').textContent =
+  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
 </script>
 </body>
 </html>

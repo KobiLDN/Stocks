@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Defence &amp; Aerospace — Charts</title>
@@ -20,9 +21,9 @@
   /* Category button active states */
   .cat-btn.active-primes   { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
   .cat-btn.active-uk       { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .cat-btn.active-cyber    { background: var(--purple); border-color: var(--purple); color: #fff; }
+  .cat-btn.active-cyber    { background: var(--purple); border-color: var(--purple); color: var(--text); }
   .cat-btn.active-drones   { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
-  .cat-btn.active-space    { background: var(--blue);   border-color: var(--blue);   color: #fff; }
+  .cat-btn.active-space    { background: var(--blue);   border-color: var(--blue);   color: var(--text); }
   .cat-btn.active-weapons  { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
 
   #single-view { position: relative; z-index: 1; display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1600px; margin: 0 auto; padding: 24px; align-items: start; }
@@ -39,14 +40,14 @@
 
   .stock-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 12px; background: transparent; border: none; border-left: 2px solid transparent; color: var(--muted); cursor: pointer; text-align: left; transition: all 0.15s; }
   .stock-btn:hover { background: var(--surface); color: var(--text); }
-  .stock-btn.active { background: var(--surface2); border-left-color: var(--accent); color: #fff; }
+  .stock-btn.active { background: var(--surface2); border-left-color: var(--accent); color: var(--text); }
   .btn-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; min-width: 52px; }
   .btn-name { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .stock-btn.active .btn-name { color: var(--text); }
 
   .chart-area { min-width: 0; }
   .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
-  .chart-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; color: #fff; }
+  .chart-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; color: var(--text); }
   .chart-name   { font-size: 15px; color: var(--muted); margin-left: 12px; }
   .chart-widget { border: 1px solid var(--border); background: var(--surface); height: 580px; }
   .chart-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 8px; }
@@ -92,6 +93,7 @@
         <div class="header-sub">TradingView live charts · 28 stocks · single view or category grid</div>
   </div>
   <div class="sector-switcher">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 <a class="sector-card hub-card" href="../index.html">
   <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
   <div class="sector-card-name">Stock Hub</div>
@@ -453,6 +455,22 @@
   } else {
     fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
   }
+</script>
+<script>
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+    document.getElementById('theme-toggle').textContent = '☾';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    document.getElementById('theme-toggle').textContent = '☀';
+  }
+}
+document.getElementById('theme-toggle').textContent =
+  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
 </script>
 </body>
 </html>

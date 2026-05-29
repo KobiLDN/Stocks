@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Defence &amp; Aerospace — What-If Calculator</title>
@@ -89,8 +90,8 @@
   .inv-value.pos { color: var(--green); }
   .inv-value.neg { color: var(--red); }
   .inv-pl { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); display: block; margin-top: 2px; }
-  .inv-pl.pos { color: rgba(0,230,118,0.6); }
-  .inv-pl.neg { color: rgba(255,68,68,0.6); }
+  .inv-pl.pos { color: var(--green); }
+  .inv-pl.neg { color: var(--red); }
 
   .mult-cell { text-align: center; white-space: nowrap; }
   .mult-value { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 15px; }
@@ -126,6 +127,7 @@
         <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
   </div>
   <div class="sector-switcher">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 <a class="sector-card hub-card" href="../index.html">
   <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
   <div class="sector-card-name">Stock Hub</div>
@@ -358,6 +360,22 @@
   } else {
     fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
   }
+</script>
+<script>
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+    document.getElementById('theme-toggle').textContent = '☾';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    document.getElementById('theme-toggle').textContent = '☀';
+  }
+}
+document.getElementById('theme-toggle').textContent =
+  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
 </script>
 </body>
 </html>

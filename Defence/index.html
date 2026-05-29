@@ -50,6 +50,7 @@
 =============================================================
 -->
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Defence &amp; Aerospace — Dashboard</title>
@@ -129,9 +130,9 @@
 
   .filter-btn[data-filter="us-primes"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
   .filter-btn[data-filter="uk-european"].active { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .filter-btn[data-filter="cyber-intel"].active { background: var(--purple); border-color: var(--purple); color: #fff; }
+  .filter-btn[data-filter="cyber-intel"].active { background: var(--purple); border-color: var(--purple); color: var(--text); }
   .filter-btn[data-filter="drones"].active      { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
-  .filter-btn[data-filter="space"].active       { background: var(--blue);   border-color: var(--blue);   color: #fff; }
+  .filter-btn[data-filter="space"].active       { background: var(--blue);   border-color: var(--blue);   color: var(--text); }
   .filter-btn[data-filter="weapons"].active     { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
 
   /* Section headers */
@@ -257,7 +258,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
     font-size: 17px;
-    color: #fff;
+    color: var(--text);
     letter-spacing: 0.5px;
   }
 
@@ -309,7 +310,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #fff;
+    background: var(--text);
     border: 2px solid var(--accent);
   }
 
@@ -423,6 +424,7 @@
 <div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3468</span> · <span id="last-updated">Last updated: 2026-05-29 17:37</span> · <span id="version">v1.0</span></div>
 </div>
 <div class="sector-switcher">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 <a class="sector-card hub-card" href="../index.html">
 <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
 <div class="sector-card-name">Stock Hub</div>
@@ -868,6 +870,22 @@
         })));
       });
   }
+</script>
+<script>
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+    document.getElementById('theme-toggle').textContent = '☾';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    document.getElementById('theme-toggle').textContent = '☀';
+  }
+}
+document.getElementById('theme-toggle').textContent =
+  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
 </script>
 </body>
 </html>

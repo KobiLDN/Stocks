@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Infrastructure — Charts</title>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="prices-data.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
@@ -146,7 +147,7 @@
   }
 
   .stock-btn:hover { background: var(--surface); color: var(--text); }
-  .stock-btn.active { background: var(--surface2); border-left-color: var(--accent); color: #fff; }
+  .stock-btn.active { background: var(--surface2); border-left-color: var(--accent); color: var(--text); }
 
   .btn-ticker {
     font-family: 'IBM Plex Mono', monospace;
@@ -169,7 +170,7 @@
     gap: 12px;
   }
 
-  .chart-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; color: #fff; }
+  .chart-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; color: var(--text); }
   .chart-name   { font-size: 15px; color: var(--muted); margin-left: 12px; }
 
   .chart-widget {
@@ -327,6 +328,7 @@
         <div class="header-sub">TradingView live charts · 48 stocks · single view or category grid</div>
   </div>
   <div class="sector-switcher">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 <a class="sector-card hub-card" href="../index.html">
   <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
   <div class="sector-card-name">Stock Hub</div>
@@ -818,6 +820,22 @@
       .then(data => buildTape(data.stocks))
       .catch(() => {});
   }
+</script>
+<script>
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+    document.getElementById('theme-toggle').textContent = '☾';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    document.getElementById('theme-toggle').textContent = '☀';
+  }
+}
+document.getElementById('theme-toggle').textContent =
+  document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
 </script>
 </body>
 </html>
