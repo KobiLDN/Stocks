@@ -6,6 +6,7 @@ All notable changes to this repository are documented here — **newest first**.
 
 | Date · time (BST) | AI Name | Where | Changed |
 |---|---|---|---|
+| 2026-05-29 | Claude Sonnet 4.6 (Claude Code) | Web | **Light/dark mode toggle** — ☾/☀ button in header sector-switcher on all 7 AI pages; light mode default; `localStorage` persistence; flash-prevention in `<head>`; heatmap D3 colours CSS-var-driven with re-render on toggle; `--muted`/`--slate` darkened so no grey text in light mode; hardcoded colour fixes (`#fff` text, `rgba` gain/loss, tooltip bg) across all pages (`shared.css`, all `AI/*.html`). |
 | 2026-05-28 21:23 | Claude Sonnet 4.6 (Claude Code) | Web | **Sector switcher** replaces back-link in header — mini cards for all 3 sectors + Stock Hub; active sector bright/cyan, others dim; links context-aware (stays on same page type); `shared.css` carries all switcher styles (`index.html`, all AI pages). |
 | 2026-05-28 20:35 | Claude Sonnet 4.6 (Claude Code) | Web | **shared.css** — all shared CSS extracted out of every AI page into `../shared.css`; Google Fonts via `<link>` tag; each page now has a page-specific `<style>` block only (all 7 AI pages, `../shared.css`). |
 | 2026-05-27 23:29 | Claude Sonnet 4.6 (Claude Code) | Web | **Rank delta badges** on signals page — show ▲↑↓▼ movement since last run; signals schedule updated Mon/Wed/Fri; "How It Works" section added (`signals.html`). |
