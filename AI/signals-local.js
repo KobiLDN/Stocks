@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-05-28 22:05",
+  "updated": "2026-05-29 11:45",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "HUT has surged +142% YTD, +75% 1M, with strong momentum (+29% 1W) and a strong_buy analyst consensus. Live catalysts include AI compute pivot and Bitcoin mining tailwinds.",
+      "drivers": [
+        "YTD +142%",
+        "1M +75%",
+        "strong_buy consensus",
+        "AI pivot catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "MU rallied +193% YTD and +78% 1M, with a strong_buy rating, P/E 44, and low short interest of 3.1%. News confirms AI memory demand is driving the uptrend.",
+      "drivers": [
+        "YTD +193%",
+        "1M +78%",
+        "strong_buy",
+        "P/E 44"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SMCI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SMCI is up +112% 1Y, +57% 1M, +8.9% 1D, with a low P/E of 22 and positive news sentiment of 0.31. Recent news cites AI demand surge as catalyst.",
+      "drivers": [
+        "1M +57%",
+        "P/E 22 very attractive",
+        "news_s 0.31",
+        "AI demand catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "DELL gained +150% YTD, +54% 1M, and +31% 1W, with P/E 37 and buy consensus. AI server demand and recent earnings call highlight continued growth.",
+      "drivers": [
+        "YTD +150%",
+        "1M +54%",
+        "P/E 37",
+        "AI server catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "rationale": "SMTC rallied +121% YTD, +69% 1M, +5.9% 1D, with strong_buy consensus (score 1.36) and low short interest of 6.8%. DSP semi demand is a key driver.",
+      "drivers": [
+        "YTD +121%",
+        "1M +69%",
+        "strong_buy",
+        "short 6.8%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "IREN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "IREN is up +674% 1Y, +50% YTD, +49% 1M, with high beta of 4.2 and buy consensus. AI compute pivot underpins the strong momentum.",
+      "drivers": [
+        "1Y +674%",
+        "1M +49%",
+        "buy consensus",
+        "AI pivot catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "MTSI",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "MTSI gained +124% YTD, +45% 1M, with positive news sentiment 0.16 and buy rating. Long-term supply agreements with IQE are a catalyst for DSP semi growth.",
+      "drivers": [
+        "YTD +124%",
+        "1M +45%",
+        "buy consensus",
+        "supply agreement catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "285A",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "285A surged +440% YTD, +69% 1M, +10.7% 1W, with buy rating and strong news sentiment 0.17. Memory chip ETF driver reinforces the momentum.",
+      "drivers": [
+        "YTD +440%",
+        "1M +69%",
+        "buy rating",
+        "news_s 0.17"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AXTI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AXTI is up +590% YTD, +63% 1M, with huge 1Y return of +7879%. Indium phosphide boom is the live catalyst, though no analyst coverage limits confidence.",
+      "drivers": [
+        "YTD +590%",
+        "1Y +7879%",
+        "InP AI catalyst",
+        "strong momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SNDK rallied +496% YTD, +54% 1M, +17.9% 1W, with P/E 56 and buy rating. AI memory boom headline confirms catalyst though short interest is 9.6%.",
+      "drivers": [
+        "YTD +496%",
+        "1M +54%",
+        "buy rating",
+        "AI memory catalyst"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MU",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "+124% YTD",
         "buy consensus",
         "IQE supply agreement"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "MU has strong momentum with +84.10% 1M and +194.46% YTD, a solid P/E of 43.73, and a strong_buy analyst consensus (score 1.48). News sentiment is positive at 0.21, driven by AI memory demand.",
-      "drivers": [
-        "1M +84.10%",
-        "YTD +194.46%",
-        "P/E 43.73",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "SMTC shows strong momentum (+66.53% 1M, +108.88% YTD) with a strong_buy analyst rating (1.36). The recent 1D dip of -9.24% may offer an entry point, and news sentiment is positive at 0.198 with Morgan Stanley highlighting AI optical momentum.",
-      "drivers": [
-        "1M +66.53%",
-        "strong_buy consensus",
-        "positive news sentiment 0.198",
-        "1D dip buying opportunity"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "HUT has impressive momentum (+63.14% 1M, +129.45% YTD) and a strong_buy analyst consensus (1.31). Despite high beta (5.718), news sentiment is positive at 0.12, supported by AI compute demand.",
-      "drivers": [
-        "1M +63.14%",
-        "YTD +129.45%",
-        "strong_buy consensus",
-        "AI compute catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MXL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "MXL surged +94.39% in 1M and +446.19% YTD, with positive news sentiment of 0.303 on AI connectivity expansion. Although P/E is null, the buy analyst rating (1.82) supports momentum.",
-      "drivers": [
-        "1M +94.39%",
-        "YTD +446.19%",
-        "positive news sentiment 0.303",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SNDK has strong gains (+58.62% 1M, +477.66% YTD) with a reasonable P/E of 54.36 and a buy rating (1.59). News sentiment is positive at 0.143, reflecting AI memory boom.",
-      "drivers": [
-        "1M +58.62%",
-        "YTD +477.66%",
-        "P/E 54.36",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "STX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "STX rose +50.37% in 1M and +203.32% YTD, with a buy analyst rating (1.54). High P/E of 82.37 is offset by positive news sentiment 0.161 and strong memory sector momentum.",
-      "drivers": [
-        "1M +50.37%",
-        "YTD +203.32%",
-        "buy consensus",
-        "positive news sentiment 0.161"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "285A",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "285A gained +70.71% in 1M and +433.48% YTD, with a buy rating (1.86) and positive news sentiment 0.168. P/E of 59.88 is high but reflects AI memory growth.",
-      "drivers": [
-        "1M +70.71%",
-        "YTD +433.48%",
-        "buy consensus",
-        "news sentiment 0.168"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MTSI",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "MTSI has strong momentum (+50.85% 1M, +129.00% YTD) with a buy rating (1.6) and positive news sentiment 0.158 from long-term supply agreements. High P/E of 171.22 is a risk.",
-      "drivers": [
-        "1M +50.85%",
-        "YTD +129.00%",
-        "buy consensus",
-        "positive news sentiment 0.158"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "IREN",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "IREN surged +42.10% in 1W and +52.66% in 1M, with +58.88% YTD. Despite high P/E of 88.1 and high beta (4.179), the buy rating (1.93) and AI compute growth support the pick.",
-      "drivers": [
-        "1W +42.10%",
-        "1M +52.66%",
-        "buy consensus",
-        "AI compute sector"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AXTI",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "AXTI has extraordinary YTD return of +632.52% and 1M +78.68%, but lacks analyst coverage and has null P/E. News sentiment is neutral (0.0), and the 1D drop of -7.62% signals volatility.",
-      "drivers": [
-        "YTD +632.52%",
-        "1M +78.68%",
-        "extreme momentum",
-        "high volatility risk"
       ]
     }
   ]
