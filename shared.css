@@ -8,7 +8,32 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* ---- Design tokens ---- */
+/* Light mode (default) */
 :root {
+  --bg:       #f8fafc;
+  --surface:  #ffffff;
+  --surface2: #f1f5f9;
+  --border:   #cbd5e1;
+  --accent:   #0284c7;
+  --accent2:  #ea580c;
+  --accent3:  #65a30d;
+  --gold:     #b45309;
+  --text:     #0f172a;
+  --muted:    #64748b;
+  --red:      #dc2626;
+  --green:    #16a34a;
+  --purple:   #7c3aed;
+  --blue:     #2563eb;
+  --indigo:   #4f46e5;
+  --rose:     #e11d48;
+  --teal:     #0d9488;
+  --amber:    #d97706;
+  --slate:    #475569;
+  --lime:     #65a30d;
+}
+
+/* Dark mode */
+html[data-theme="dark"] {
   --bg:       #000000;
   --surface:  #0e1419;
   --surface2: #141b22;
@@ -47,11 +72,17 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(2,132,199,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(2,132,199,0.04) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
+}
+
+html[data-theme="dark"] body::before {
+  background-image:
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
 }
 
 /* ---- Ticker tape ---- */
@@ -99,7 +130,7 @@ body::before {
   cursor: default;
 }
 
-.tape-t  { color: #fff; font-weight: 700; letter-spacing: 1px; }
+.tape-t  { color: var(--text); font-weight: 700; letter-spacing: 1px; }
 .tape-p  { color: var(--text); }
 .tape-r  { font-weight: 700; }
 .tape-r.pos  { color: var(--green); }
@@ -214,6 +245,7 @@ nav {
   padding: 12px 24px;
   display: flex;
   gap: 2px;
+  align-items: center;
 }
 
 .nav-link {
@@ -238,7 +270,7 @@ nav {
   bottom: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
-  background: #0d1520;
+  background: var(--surface2);
   color: var(--text);
   border: 1px solid var(--accent);
   border-radius: 6px;
@@ -253,7 +285,7 @@ nav {
   opacity: 0;
   transition: opacity 0.18s ease;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 .nav-link[data-tooltip]::before {
   content: '';
@@ -276,6 +308,22 @@ a[href="index.html"].nav-link[data-tooltip]::after    { left: 0; transform: none
 a[href="index.html"].nav-link[data-tooltip]::before   { left: 16px; transform: none; }
 a[href="calculator.html"].nav-link[data-tooltip]::after  { left: auto; right: 0; transform: none; }
 a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16px; transform: none; }
+
+/* ---- Theme toggle ---- */
+.theme-toggle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
 /* ---- Content container ---- */
 .container {
@@ -301,9 +349,13 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
   border-radius: 2px;
   white-space: nowrap;
 }
-.cpill.pos  { background: rgba(0,230,118,0.12);  color: var(--green); }
-.cpill.neg  { background: rgba(255,68,68,0.12);   color: var(--red); }
-.cpill.flat { background: rgba(90,122,154,0.12);  color: var(--muted); }
+.cpill.pos  { background: rgba(22,163,74,0.12);   color: var(--green); }
+.cpill.neg  { background: rgba(220,38,38,0.12);   color: var(--red); }
+.cpill.flat { background: rgba(100,116,139,0.12); color: var(--muted); }
+
+html[data-theme="dark"] .cpill.pos  { background: rgba(0,230,118,0.12); }
+html[data-theme="dark"] .cpill.neg  { background: rgba(255,68,68,0.12); }
+html[data-theme="dark"] .cpill.flat { background: rgba(90,122,154,0.12); }
 
 /* ---- Dashboard: notes / key angle column ---- */
 .notes-text {
