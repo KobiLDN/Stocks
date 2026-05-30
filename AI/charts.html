@@ -375,9 +375,9 @@
     <!-- Timeframe -->
     <div class="toolbar-group">
       <span class="toolbar-label">Period</span>
-      <button class="tool-btn" onclick="setTimeframe('1W', this)">1W</button>
+      <button class="tool-btn active" onclick="setTimeframe('1W', this)">1W</button>
       <button class="tool-btn" onclick="setTimeframe('1M', this)">1M</button>
-      <button class="tool-btn active" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
+      <button class="tool-btn" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
       <button class="tool-btn" onclick="setTimeframe('60M', this)">5Y</button>
     </div>
 
@@ -632,10 +632,10 @@
     '60M': { interval: 'M',  range: '60M' },
   };
 
-  let currentView      = 'single';
+  let currentView      = 'grid';
   let currentSymbol    = 'NASDAQ:SNDK';
   let currentName      = 'SanDisk Corporation';
-  let currentTimeframe = '12M';
+  let currentTimeframe = '1W';
   let currentCategory  = null;
 
   /* ---- TIMEFRAME ---- */
@@ -786,8 +786,9 @@
 
   /* ---- INIT ---- */
   window.addEventListener('load', () => {
-    document.querySelector('.stock-btn').classList.add('active');
-    buildSingle();
+    setView('grid');
+    const firstCatBtn = document.querySelector('.cat-btn');
+    setCategory('memory', firstCatBtn);
   });
 
 </script>
