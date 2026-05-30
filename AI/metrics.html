@@ -3,22 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI infrastructure stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 48 stocks.">
 <title>AI Infrastructure — Stock Metrics</title>
-<script src="prices-data.js"></script>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
-  .disclaimer {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    border: 1px solid var(--border);
-    padding: 10px 16px;
-    margin-bottom: 20px;
-    letter-spacing: 0.3px;
-  }
-  .disclaimer span { color: var(--accent2); }
-
   /* Category filter buttons */
   .filter-bar {
     display: flex;
@@ -233,6 +224,7 @@
         <div class="header-sub">Market cap · Beta · P/E · Volume · Dividend · Short interest · Analyst rating</div>
   </div>
   <div class="sector-switcher">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 <a class="sector-card hub-card" href="../index.html">
   <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
   <div class="sector-card-name">Stock Hub</div>
@@ -305,13 +297,14 @@
 
 <footer>AI Infrastructure Stock Dashboard · For educational and entertainment purposes only · Not financial advice</footer>
 
+<script src="prices-data.js"></script>
 <script>
   /* ---- DATA ---- */
   const NAMES = {
     'SNDK': 'SanDisk Corporation',   'WDC':  'Western Digital',
     '285A': 'Kioxia Holdings',       'MU':   'Micron Technology',
     'STX':  'Seagate Technology',    'MRVL': 'Marvell Technology',
-    'PSTG': 'Everpure',              'RR.':  'Rolls-Royce',
+    'P':    'Everpure',              'RR.':  'Rolls-Royce',
     'CEG':  'Constellation Energy',  'VST':  'Vistra Corp',
     'TLN':  'Talen Energy',          'BEP':  'Brookfield Renewable',
     'BEPC': 'Brookfield Renewable Corp', 'GEV': 'GE Vernova',
@@ -611,33 +604,7 @@
       });
   }
 
-  /* ---- TICKER TAPE ---- */
-  function buildTape(stocks) {
-    const track = document.getElementById('tape-track');
-    if (!track || !stocks.length) return;
-    const items = stocks.map(s => {
-      const change = s.change_1d || '+0.00%';
-      const val    = parseFloat(change);
-      const isNeg  = change.startsWith('-');
-      const isFlat = val === 0;
-      const cls    = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
-      const arrow  = isFlat ? '—' : isNeg ? '▼' : '▲';
-      const price  = parseFloat(s.price_gbp) || 0;
-      const priceStr = price <= 0 ? '—' : price >= 10 ? '£' + Math.round(price) : price >= 1 ? '£' + price.toFixed(2) : '£' + price.toFixed(3);
-      return '<span class="tape-item"><span class="tape-t">' + s.ticker + '</span><span class="tape-p">' + priceStr + '</span><span class="tape-r ' + cls + '">' + arrow + ' ' + change + '</span></span>';
-    }).join('');
-    track.innerHTML = items + items;
-    track.style.animationDuration = Math.max(30, stocks.length * 1.6) + 's';
-    track.classList.add('running');
-  }
-
-  if (window.PRICES_DATA) {
-    buildTape(window.PRICES_DATA.stocks);
-  } else {
-    fetch('prices.json').then(r => r.json()).then(data => buildTape(data.stocks)).catch(() => {});
-  }
 </script>
-
 <!-- Column header tooltips -->
 <div id="col-tooltip"><div class="tip-title"></div><div class="tip-body"></div></div>
 <script>
@@ -669,5 +636,6 @@
     });
   });
 </script>
+
 </body>
 </html>
