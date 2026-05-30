@@ -152,6 +152,8 @@
   .return-positive { color: #16a34a; font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
   .return-modest   { color: #0284c7; font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
   .return-negative { color: #dc2626; font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
+  tr[data-return^="-"] .return-modest,
+  tr[data-return^="-"] .return-positive { color: #dc2626; }
   .ytd-return { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 13px; }
   .ytd-pos  { color: var(--green); }
   .ytd-neg  { color: var(--red); }
