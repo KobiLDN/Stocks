@@ -338,7 +338,7 @@ function tileColor(val, threshold) {
 }
 
 /* ── State ── */
-let activeMetric = '1d';
+let activeMetric = localStorage.getItem('heatmap-metric') || '1d';
 let allStocks    = [];
 
 /* ── Draw a single flat treemap into a container div ── */
@@ -558,6 +558,7 @@ document.getElementById('metric-group').addEventListener('click', ev => {
   const m = btn.dataset.metric;
   if (m === activeMetric) return;
   activeMetric = m;
+  localStorage.setItem('heatmap-metric', m);
   document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderAll2(m);
@@ -575,6 +576,7 @@ function init() {
   allStocks = stocks;
   const tsEl = document.getElementById('heatmap-ts');
   if (tsEl) tsEl.textContent = window.PRICES_DATA.updated || '—';
+  document.querySelectorAll('.metric-btn').forEach(b => b.classList.toggle('active', b.dataset.metric === activeMetric));
   renderAll2(activeMetric);
 
   let t;
