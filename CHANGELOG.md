@@ -6,6 +6,8 @@ All notable changes to this repository are documented here — **newest first**.
 
 | Date · time (BST) | AI Name | Where | Changed |
 |---|---|---|---|
+| 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | Fix: **signals API timeout** — changed from single 180s value to tuple `(15s connect, 120s read)` so hung TCP connections (provider accepts but never responds) now time out correctly; `python -u` flag added to both bat files for unbuffered live output (`AI/generate_signals_local.py`, `Biotech/generate_signals_local.py`, `Defence/generate_signals_local.py`, `update_all_prices.bat`, `generate_all_signals.bat`). |
+| 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | **`generate_all_signals.bat`** — root-level script runs all 3 sector signal generators in sequence; output streams live and saves to `signals_log.txt` (overwritten each run) (`generate_all_signals.bat`). |
 | 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | Fix: **TradingView range `'1W'` → `'5D'`** — `'1W'` is not a valid TradingView widget range; caused "Something went wrong" on all charts grids; fixed in all 3 sectors (`AI/charts.html`, `Biotech/charts.html`, `Defence/charts.html`). |
 | 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | **Charts default to Category Grid / 1W / first category** — all 3 charts pages now open on grid view, 1-week timeframe, first category pre-selected (AI=Memory, Biotech=Large Cap, Defence=US Primes) (`AI/charts.html`, `Biotech/charts.html`, `Defence/charts.html`). |
 | 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | Fix: **missing `</script>` tags** across 14 pages — agent that removed `buildTape()` stripped closing script tags from metrics×3, news×3, charts×3, calculator×3, index×2; caused blank pages on all affected views. |

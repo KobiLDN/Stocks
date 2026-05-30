@@ -6,6 +6,7 @@ All notable changes to this repository are documented here — **newest first**.
 
 | Date · time (BST) | AI Name | Where | Changed |
 |---|---|---|---|
+| 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | Fix: **signals API timeout** — `(15s connect, 120s read)` tuple prevents hung provider connections from blocking indefinitely (`generate_signals_local.py`). |
 | 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | Fix: **TradingView range `'1W'` → `'5D'`** — `'1W'` is not a valid TradingView range; caused "Something went wrong" on grid view; fixed (`charts.html`). |
 | 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | **Charts default to Category Grid / 1W / Memory** — opens on grid view, 1-week period, Memory category pre-selected (`charts.html`). |
 | 2026-05-30 | Claude Sonnet 4.6 (Claude Code) | Web | Fix: **missing `</script>` tags** on `metrics.html`, `news.html`, `charts.html`, `calculator.html` — caused blank pages; agent that removed `buildTape()` stripped the closing tags. |
