@@ -12,6 +12,8 @@ _(no open items)_
 
 ## Done
 
+- **Charts default: Category Grid / 1W / Memory** — charts page opens on grid view, 1-week period, Memory category pre-selected (`charts.html`).
+- **shared.js** — `toggleTheme()` and `buildTape()` in one shared file; no inline duplicates across pages (`../shared.js`).
 - **Light/dark mode toggle** — ☾/☀ button in every page's header sector-switcher; light mode default; dark via `html[data-theme="dark"]`; `localStorage` persistence; flash-prevention in `<head>`; heatmap D3 colours CSS-var-driven with re-render on toggle; all 7 AI pages (`../shared.css`, all `AI/*.html`).
 - **Sector switcher** — replaces back-link; mini cards for all sectors + Stock Hub in header; context-aware navigation; active sector bright, others dim (`index.html` and all AI pages, `../shared.css`).
 - **Web search plugin for signals** — DeepSeek pulls live news during signal generation via OpenRouter web search tool (`generate_signals_local.py`).
