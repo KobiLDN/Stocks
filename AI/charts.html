@@ -62,18 +62,18 @@
 
   /* CAT BUTTONS in toolbar */
   .cat-btn { text-transform: uppercase; }
-  .cat-btn.active-memory     { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }
-  .cat-btn.active-nuclear    { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
-  .cat-btn.active-smr        { background: var(--green);   border-color: var(--green);   color: var(--bg); }
-  .cat-btn.active-uranium    { background: var(--gold);    border-color: var(--gold);    color: var(--bg); }
-  .cat-btn.active-power      { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }
-  .cat-btn.active-dc         { background: var(--blue);    border-color: var(--blue);    color: var(--bg); }
-  .cat-btn.active-hyperscalers { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
-  .cat-btn.active-compute    { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }
-  .cat-btn.active-fibre      { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
-  .cat-btn.active-dsp        { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
-  .cat-btn.active-test       { background: var(--slate);  border-color: var(--slate);  color: var(--bg); }
-  .cat-btn.active-materials  { background: var(--lime);   border-color: var(--lime);   color: var(--bg); }
+  .cat-btn.active-memory        { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }
+  .cat-btn.active-nuclear-ops   { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
+  .cat-btn.active-smr           { background: var(--green);   border-color: var(--green);   color: var(--bg); }
+  .cat-btn.active-uranium       { background: var(--gold);    border-color: var(--gold);    color: var(--bg); }
+  .cat-btn.active-power-infra   { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }
+  .cat-btn.active-dc-operators  { background: var(--blue);    border-color: var(--blue);    color: var(--bg); }
+  .cat-btn.active-hyperscalers  { background: var(--indigo);  border-color: var(--indigo);  color: var(--bg); }
+  .cat-btn.active-ai-compute    { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }
+  .cat-btn.active-fibre-optical { background: var(--teal);    border-color: var(--teal);    color: var(--bg); }
+  .cat-btn.active-dsp-semi      { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }
+  .cat-btn.active-test-equip    { background: var(--slate);   border-color: var(--slate);   color: var(--bg); }
+  .cat-btn.active-materials     { background: var(--lime);    border-color: var(--lime);    color: var(--bg); }
 
   /* SINGLE VIEW */
   #single-view {
@@ -385,18 +385,7 @@
     <div class="divider" id="cat-divider" style="display:none"></div>
     <div class="toolbar-group" id="cat-toolbar" style="display:none">
       <span class="toolbar-label">Category</span>
-      <button class="tool-btn cat-btn" onclick="setCategory('memory', this)">🧠 Memory</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('nuclear', this)">⚡ Nuclear</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('smr', this)">⚛️ SMR</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('uranium', this)">☢️ Uranium</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('power', this)">🔋 Power</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('dc', this)">🏢 Data Centres</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('hyperscalers', this)">☁️ Hyperscalers</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('compute', this)">🖥️ AI Compute</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('fibre', this)">🌐 Fibre / Optical</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('dsp', this)">🔌 DSP / Semi</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('test', this)">🔬 Test Equipment</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('materials', this)">⚗️ Materials</button>
+      <div id="cat-toolbar-btns"></div>
     </div>
   </div>
 </div>
@@ -406,78 +395,7 @@
   <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">☰ Select Stock ▾</button>
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-title">Select Stock</div>
-
-    <span class="cat-label memory">🧠 Memory / Storage</span>
-    <button class="stock-btn" data-tv="NASDAQ:SNDK" data-name="SanDisk" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">SNDK</span><span class="btn-name">SanDisk</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:WDC"  data-name="Western Digital" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">WDC</span><span class="btn-name">Western Digital</span></button>
-    <button class="stock-btn" data-tv="TSE:285A"    data-name="Kioxia" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">285A</span><span class="btn-name">Kioxia</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:MU"   data-name="Micron" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">MU</span><span class="btn-name">Micron Technology</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:STX"  data-name="Seagate" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">STX</span><span class="btn-name">Seagate</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:MRVL" data-name="Marvell" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">MRVL</span><span class="btn-name">Marvell Technology</span></button>
-    <button class="stock-btn" data-tv="NYSE:P"     data-name="Everpure" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">P</span><span class="btn-name">Everpure</span></button>
-
-    <span class="cat-label nuclear">⚡ Nuclear Operators</span>
-    <button class="stock-btn" data-tv="LSE:RR."     data-name="Rolls-Royce" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent2)">RR.</span><span class="btn-name">Rolls-Royce</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:CEG" data-name="Constellation Energy" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent2)">CEG</span><span class="btn-name">Constellation Energy</span></button>
-    <button class="stock-btn" data-tv="NYSE:VST"   data-name="Vistra" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent2)">VST</span><span class="btn-name">Vistra Corp</span></button>
-    <button class="stock-btn" data-tv="NYSE:TLN"   data-name="Talen Energy" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent2)">TLN</span><span class="btn-name">Talen Energy</span></button>
-    <button class="stock-btn" data-tv="NYSE:BEP"   data-name="Brookfield Renewable" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent2)">BEP</span><span class="btn-name">Brookfield Renewable</span></button>
-    <button class="stock-btn" data-tv="NYSE:BEPC"  data-name="Brookfield Renewable Corp" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent2)">BEPC</span><span class="btn-name">Brookfield Renewable Corp</span></button>
-
-    <span class="cat-label smr">⚛️ SMR Builders</span>
-    <button class="stock-btn" data-tv="NYSE:GEV"   data-name="GE Vernova" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">GEV</span><span class="btn-name">GE Vernova</span></button>
-    <button class="stock-btn" data-tv="NYSE:BWXT"  data-name="BWX Technologies" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">BWXT</span><span class="btn-name">BWX Technologies</span></button>
-    <button class="stock-btn" data-tv="NYSE:SMR"   data-name="NuScale" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">SMR</span><span class="btn-name">NuScale Power</span></button>
-    <button class="stock-btn" data-tv="NYSE:OKLO"  data-name="Oklo" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">OKLO</span><span class="btn-name">Oklo Inc</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:NNE" data-name="NANO Nuclear" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">NNE</span><span class="btn-name">NANO Nuclear</span></button>
-
-    <span class="cat-label uranium">☢️ Uranium</span>
-    <button class="stock-btn" data-tv="NYSE:CCJ" data-name="Cameco" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">CCJ</span><span class="btn-name">Cameco</span></button>
-    <button class="stock-btn" data-tv="AMEX:UEC" data-name="Uranium Energy" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">UEC</span><span class="btn-name">Uranium Energy</span></button>
-    <button class="stock-btn" data-tv="NYSE:LEU" data-name="Centrus Energy" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">LEU</span><span class="btn-name">Centrus Energy</span></button>
-
-    <span class="cat-label power">🔋 Power Infra</span>
-    <button class="stock-btn" data-tv="NYSE:VRT"    data-name="Vertiv" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">VRT</span><span class="btn-name">Vertiv Holdings</span></button>
-    <button class="stock-btn" data-tv="NYSE:ETN"    data-name="Eaton" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">ETN</span><span class="btn-name">Eaton Corporation</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:POWL" data-name="Powell" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">POWL</span><span class="btn-name">Powell Industries</span></button>
-
-    <span class="cat-label dc">🏢 Data Centres</span>
-    <button class="stock-btn" data-tv="NASDAQ:EQIX" data-name="Equinix" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--blue)">EQIX</span><span class="btn-name">Equinix</span></button>
-    <button class="stock-btn" data-tv="NYSE:DLR"    data-name="Digital Realty" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--blue)">DLR</span><span class="btn-name">Digital Realty</span></button>
-    <button class="stock-btn" data-tv="NYSE:AMT"    data-name="American Tower" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--blue)">AMT</span><span class="btn-name">American Tower</span></button>
-
-    <span class="cat-label hyper">☁️ Hyperscalers</span>
-    <button class="stock-btn" data-tv="NASDAQ:GOOGL" data-name="Alphabet" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">GOOGL</span><span class="btn-name">Alphabet</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:MSFT"  data-name="Microsoft" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">MSFT</span><span class="btn-name">Microsoft</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:AMZN"  data-name="Amazon" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">AMZN</span><span class="btn-name">Amazon</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:META"  data-name="Meta" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">META</span><span class="btn-name">Meta Platforms</span></button>
-
-    <span class="cat-label compute">🖥️ AI Compute</span>
-    <button class="stock-btn" data-tv="NASDAQ:IREN" data-name="Iris Energy" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">IREN</span><span class="btn-name">Iris Energy</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:CORZ" data-name="Core Scientific" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">CORZ</span><span class="btn-name">Core Scientific</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:WULF" data-name="TeraWulf" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">WULF</span><span class="btn-name">TeraWulf</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:HUT"  data-name="Hut 8 Mining" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">HUT</span><span class="btn-name">Hut 8 Mining</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:SMCI" data-name="Super Micro Computer" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">SMCI</span><span class="btn-name">Super Micro Computer</span></button>
-    <button class="stock-btn" data-tv="NYSE:DELL"   data-name="Dell Technologies" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">DELL</span><span class="btn-name">Dell Technologies</span></button>
-
-    <span class="cat-label fibre">🌐 Fibre / Optical</span>
-    <button class="stock-btn" data-tv="NYSE:COHR"    data-name="Coherent Corp" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">COHR</span><span class="btn-name">Coherent Corp</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:LITE"  data-name="Lumentum" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">LITE</span><span class="btn-name">Lumentum</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:AAOI"  data-name="Applied Optoelectronics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">AAOI</span><span class="btn-name">Applied Optoelectronics</span></button>
-    <button class="stock-btn" data-tv="NYSE:FN"      data-name="Fabrinet" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">FN</span><span class="btn-name">Fabrinet</span></button>
-
-    <span class="cat-label dsp">🔌 DSP / Semiconductor</span>
-    <button class="stock-btn" data-tv="NASDAQ:MTSI"  data-name="MACOM Technology" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">MTSI</span><span class="btn-name">MACOM Technology</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:SMTC"  data-name="Semtech" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">SMTC</span><span class="btn-name">Semtech</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:CRDO"  data-name="Credo Technology" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">CRDO</span><span class="btn-name">Credo Technology</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:MXL"   data-name="MaxLinear" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">MXL</span><span class="btn-name">MaxLinear</span></button>
-
-    <span class="cat-label test">🔬 Test Equipment</span>
-    <button class="stock-btn" data-tv="NYSE:KEYS"    data-name="Keysight Technologies" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--slate)">KEYS</span><span class="btn-name">Keysight Technologies</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:VIAV"  data-name="Viavi Solutions" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--slate)">VIAV</span><span class="btn-name">Viavi Solutions</span></button>
-
-    <span class="cat-label materials">⚗️ Materials</span>
-    <button class="stock-btn" data-tv="NASDAQ:AXTI"  data-name="AXT Inc" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--lime)">AXTI</span><span class="btn-name">AXT Inc</span></button>
+    <div id="sidebar-stocks"></div>
   </aside>
 
   <main class="chart-area">
@@ -502,128 +420,87 @@
 <script src="https://s3.tradingview.com/tv.js"></script>
 <script src="prices-data.js"></script>
 <script>
-  const CATEGORIES = {
-    memory: {
-      label: '🧠 Memory / Storage',
-      color: 'var(--purple)',
-      stocks: [
-        { tv: 'NASDAQ:SNDK', ticker: 'SNDK', name: 'SanDisk' },
-        { tv: 'NASDAQ:WDC',  ticker: 'WDC',  name: 'Western Digital' },
-        { tv: 'TSE:285A',    ticker: '285A',  name: 'Kioxia' },
-        { tv: 'NASDAQ:MU',   ticker: 'MU',    name: 'Micron' },
-        { tv: 'NASDAQ:STX',  ticker: 'STX',   name: 'Seagate' },
-        { tv: 'NASDAQ:MRVL', ticker: 'MRVL',  name: 'Marvell' },
-        { tv: 'NYSE:P',      ticker: 'P',     name: 'Everpure', noEmbed: true },
-      ]
-    },
-    nuclear: {
-      label: '⚡ Nuclear Operators',
-      color: 'var(--accent2)',
-      stocks: [
-        { tv: 'LSE:RR.',    ticker: 'RR.',  name: 'Rolls-Royce' },
-        { tv: 'NASDAQ:CEG', ticker: 'CEG',  name: 'Constellation Energy' },
-        { tv: 'NYSE:VST',   ticker: 'VST',  name: 'Vistra Corp' },
-        { tv: 'NYSE:TLN',   ticker: 'TLN',  name: 'Talen Energy' },
-        { tv: 'NYSE:BEP',   ticker: 'BEP',  name: 'Brookfield Renewable' },
-        { tv: 'NYSE:BEPC',  ticker: 'BEPC', name: 'Brookfield Renewable Corp' },
-      ]
-    },
-    smr: {
-      label: '⚛️ SMR Builders',
-      color: 'var(--green)',
-      stocks: [
-        { tv: 'NYSE:GEV',   ticker: 'GEV',  name: 'GE Vernova' },
-        { tv: 'NYSE:BWXT',  ticker: 'BWXT', name: 'BWX Technologies' },
-        { tv: 'NYSE:SMR',   ticker: 'SMR',  name: 'NuScale Power' },
-        { tv: 'NYSE:OKLO',  ticker: 'OKLO', name: 'Oklo Inc' },
-        { tv: 'NASDAQ:NNE', ticker: 'NNE',  name: 'NANO Nuclear' },
-      ]
-    },
-    uranium: {
-      label: '☢️ Uranium',
-      color: 'var(--gold)',
-      stocks: [
-        { tv: 'NYSE:CCJ', ticker: 'CCJ', name: 'Cameco' },
-        { tv: 'AMEX:UEC', ticker: 'UEC', name: 'Uranium Energy' },
-        { tv: 'NYSE:LEU', ticker: 'LEU', name: 'Centrus Energy' },
-      ]
-    },
-    power: {
-      label: '🔋 Power Infra',
-      color: 'var(--accent)',
-      stocks: [
-        { tv: 'NYSE:VRT',    ticker: 'VRT',  name: 'Vertiv' },
-        { tv: 'NYSE:ETN',    ticker: 'ETN',  name: 'Eaton' },
-        { tv: 'NASDAQ:POWL', ticker: 'POWL', name: 'Powell Industries' },
-      ]
-    },
-    dc: {
-      label: '🏢 Data Centres',
-      color: 'var(--blue)',
-      stocks: [
-        { tv: 'NASDAQ:EQIX', ticker: 'EQIX', name: 'Equinix' },
-        { tv: 'NYSE:DLR',    ticker: 'DLR',  name: 'Digital Realty' },
-        { tv: 'NYSE:AMT',    ticker: 'AMT',  name: 'American Tower' },
-      ]
-    },
-    hyperscalers: {
-      label: '☁️ Hyperscalers',
-      color: 'var(--indigo)',
-      stocks: [
-        { tv: 'NASDAQ:GOOGL', ticker: 'GOOGL', name: 'Alphabet' },
-        { tv: 'NASDAQ:MSFT',  ticker: 'MSFT',  name: 'Microsoft' },
-        { tv: 'NASDAQ:AMZN',  ticker: 'AMZN',  name: 'Amazon' },
-        { tv: 'NASDAQ:META',  ticker: 'META',  name: 'Meta' },
-      ]
-    },
-    compute: {
-      label: '🖥️ AI Compute',
-      color: 'var(--rose)',
-      stocks: [
-        { tv: 'NASDAQ:IREN', ticker: 'IREN', name: 'Iris Energy' },
-        { tv: 'NASDAQ:CORZ', ticker: 'CORZ', name: 'Core Scientific' },
-        { tv: 'NASDAQ:WULF', ticker: 'WULF', name: 'TeraWulf' },
-        { tv: 'NASDAQ:HUT',  ticker: 'HUT',  name: 'Hut 8 Mining' },
-        { tv: 'NASDAQ:SMCI', ticker: 'SMCI', name: 'Super Micro Computer' },
-        { tv: 'NYSE:DELL',   ticker: 'DELL', name: 'Dell Technologies' },
-      ]
-    },
-    fibre: {
-      label: '🌐 Fibre / Optical',
-      color: 'var(--teal)',
-      stocks: [
-        { tv: 'NYSE:COHR',   ticker: 'COHR', name: 'Coherent Corp' },
-        { tv: 'NASDAQ:LITE', ticker: 'LITE', name: 'Lumentum' },
-        { tv: 'NASDAQ:AAOI', ticker: 'AAOI', name: 'Applied Optoelectronics' },
-        { tv: 'NYSE:FN',     ticker: 'FN',   name: 'Fabrinet' },
-      ]
-    },
-    dsp: {
-      label: '🔌 DSP / Semiconductor',
-      color: 'var(--amber)',
-      stocks: [
-        { tv: 'NASDAQ:MTSI', ticker: 'MTSI', name: 'MACOM Technology' },
-        { tv: 'NASDAQ:SMTC', ticker: 'SMTC', name: 'Semtech' },
-        { tv: 'NASDAQ:CRDO', ticker: 'CRDO', name: 'Credo Technology' },
-        { tv: 'NASDAQ:MXL',  ticker: 'MXL',  name: 'MaxLinear' },
-      ]
-    },
-    test: {
-      label: '🔬 Test Equipment',
-      color: 'var(--slate)',
-      stocks: [
-        { tv: 'NYSE:KEYS',   ticker: 'KEYS', name: 'Keysight Technologies' },
-        { tv: 'NASDAQ:VIAV', ticker: 'VIAV', name: 'Viavi Solutions' },
-      ]
-    },
-    materials: {
-      label: '⚗️ Materials',
-      color: 'var(--lime)',
-      stocks: [
-        { tv: 'NASDAQ:AXTI', ticker: 'AXTI', name: 'AXT Inc' },
-      ]
-    },
+  /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
+  const TV_MAP = {
+    '285A': 'TSE:285A',
+    'RR.':  'LSE:RR.',
+    'UEC':  'AMEX:UEC',
+    'P':    'NYSE:P',
   };
+
+  /* Category display config for charts */
+  const CHART_CATS = {
+    'memory':        { key: 'memory',        label: '🧠 Memory / Storage',   color: 'var(--purple)',  btnLabel: '🧠 Memory' },
+    'nuclear-ops':   { key: 'nuclear-ops',   label: '⚡ Nuclear Operators',   color: 'var(--accent2)', btnLabel: '⚡ Nuclear' },
+    'smr':           { key: 'smr',           label: '⚛️ SMR Builders',        color: 'var(--green)',   btnLabel: '⚛️ SMR' },
+    'uranium':       { key: 'uranium',       label: '☢️ Uranium',             color: 'var(--gold)',    btnLabel: '☢️ Uranium' },
+    'power-infra':   { key: 'power-infra',   label: '🔋 Power Infra',         color: 'var(--accent)',  btnLabel: '🔋 Power' },
+    'dc-operators':  { key: 'dc-operators',  label: '🏢 Data Centres',        color: 'var(--blue)',    btnLabel: '🏢 Data Centres' },
+    'hyperscalers':  { key: 'hyperscalers',  label: '☁️ Hyperscalers',        color: 'var(--indigo)',  btnLabel: '☁️ Hyperscalers' },
+    'ai-compute':    { key: 'ai-compute',    label: '🖥️ AI Compute',          color: 'var(--rose)',    btnLabel: '🖥️ AI Compute' },
+    'fibre-optical': { key: 'fibre-optical', label: '🌐 Fibre / Optical',     color: 'var(--teal)',    btnLabel: '🌐 Fibre / Optical' },
+    'dsp-semi':      { key: 'dsp-semi',      label: '🔌 DSP / Semi',          color: 'var(--amber)',   btnLabel: '🔌 DSP / Semi' },
+    'test-equip':    { key: 'test-equip',    label: '🔬 Test Equipment',      color: 'var(--slate)',   btnLabel: '🔬 Test Equipment' },
+    'materials':     { key: 'materials',     label: '⚗️ Materials',           color: 'var(--lime)',    btnLabel: '⚗️ Materials' },
+  };
+
+  function buildSidebar(stocks) {
+    if (!stocks || !stocks.length) return;
+
+    /* Build _chartCats from prices-data */
+    window._chartCats = {};
+    const catOrder = Object.keys(CHART_CATS);
+    catOrder.forEach(catKey => {
+      const cfg = CHART_CATS[catKey];
+      const catStocks = stocks.filter(s => s.category === catKey);
+      if (!catStocks.length) return;
+      window._chartCats[catKey] = {
+        label:  cfg.label,
+        color:  cfg.color,
+        stocks: catStocks.map(s => {
+          const exchange = s.exchange === 'TSE' ? 'TSE' : s.exchange;
+          const tvSym = TV_MAP[s.ticker] || (exchange + ':' + s.ticker);
+          return { tv: tvSym, ticker: s.ticker, name: s.company_name || s.ticker };
+        }),
+      };
+    });
+
+    /* Populate sidebar */
+    const container = document.getElementById('sidebar-stocks');
+    container.innerHTML = '';
+    catOrder.forEach(catKey => {
+      const cat = window._chartCats[catKey];
+      if (!cat) return;
+      const cfg = CHART_CATS[catKey];
+      const clsSuffix = catKey.replace('nuclear-ops','nuclear').replace('power-infra','power').replace('dc-operators','dc').replace('hyperscalers','hyper').replace('ai-compute','compute').replace('fibre-optical','fibre').replace('dsp-semi','dsp').replace('test-equip','test');
+      const label = document.createElement('span');
+      label.className = 'cat-label ' + clsSuffix;
+      label.textContent = cfg.label;
+      container.appendChild(label);
+      cat.stocks.forEach(st => {
+        const btn = document.createElement('button');
+        btn.className = 'stock-btn';
+        btn.dataset.tv   = st.tv;
+        btn.dataset.name = st.name;
+        btn.onclick = function() { loadSingle(this); };
+        btn.innerHTML = '<span class="btn-ticker" style="color:' + cfg.color + '">' + st.ticker + '</span><span class="btn-name">' + st.name + '</span>';
+        container.appendChild(btn);
+      });
+    });
+
+    /* Populate category toolbar */
+    const toolbar = document.getElementById('cat-toolbar-btns');
+    toolbar.innerHTML = '';
+    catOrder.forEach(catKey => {
+      if (!window._chartCats[catKey]) return;
+      const cfg = CHART_CATS[catKey];
+      const btn = document.createElement('button');
+      btn.className = 'tool-btn cat-btn';
+      btn.textContent = cfg.btnLabel;
+      btn.onclick = function() { setCategory(catKey, this); };
+      toolbar.appendChild(btn);
+    });
+  }
 
   const tfMap = {
     '1W':  { interval: '60', range: '5D' },
@@ -725,7 +602,7 @@
   }
 
   function buildGrid(cat) {
-    const data = CATEGORIES[cat];
+    const data = window._chartCats[cat];
     const tf   = tfMap[currentTimeframe];
     const grid = document.getElementById('chart-grid');
     const heading = document.getElementById('grid-heading');
@@ -746,7 +623,7 @@
       `;
       grid.appendChild(card);
 
-      if (stock.noEmbed) {
+      if (NO_EMBED[stock.tv]) {
         document.getElementById(containerId).innerHTML = fallbackHtml(stock.tv);
         return;
       }
@@ -786,9 +663,15 @@
 
   /* ---- INIT ---- */
   window.addEventListener('load', () => {
+    if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
+      buildSidebar(window.PRICES_DATA.stocks);
+    }
     setView('grid');
     const firstCatBtn = document.querySelector('.cat-btn');
-    setCategory('memory', firstCatBtn);
+    if (firstCatBtn) {
+      const firstCatKey = Object.keys(window._chartCats || {})[0] || 'memory';
+      setCategory(firstCatKey, firstCatBtn);
+    }
   });
 
 </script>

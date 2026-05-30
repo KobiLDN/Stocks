@@ -6,11 +6,9 @@ Requires: pip install yfinance beautifulsoup4 vaderSentiment
 """
 
 import yfinance as yf
-import re
 import json
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
-from bs4 import BeautifulSoup
 
 # News sentiment is keyless (VADER, local). It is strictly secondary —
 # a missing/broken VADER must never break the price update, so the import
@@ -21,61 +19,60 @@ try:
 except ImportError:
     _VADER_OK = False
 
-HTML_FILE = "index.html"
 JSON_FILE = "prices.json"
 JS_FILE   = "prices-data.js"
 
-# ticker → (yahoo_symbol, category, exchange, special)
+# ticker → (yahoo_symbol, category, exchange, special, company_name)
 # special: None | "lse_pence" | "jpy"
 STOCKS = {
-    "SNDK":  ("SNDK",   "memory",      "NASDAQ", None),
-    "WDC":   ("WDC",    "memory",      "NASDAQ", None),
-    "285A":  ("285A.T", "memory",      "TSE",    "jpy"),
-    "MU":    ("MU",     "memory",      "NASDAQ", None),
-    "STX":   ("STX",    "memory",      "NASDAQ", None),
-    "MRVL":  ("MRVL",   "memory",      "NASDAQ", None),
-    "P":     ("P",      "memory",      "NYSE",   None),
-    "RR.":   ("RR.L",   "nuclear-ops", "LSE",    "lse_pence"),
-    "CEG":   ("CEG",    "nuclear-ops", "NASDAQ", None),
-    "VST":   ("VST",    "nuclear-ops", "NYSE",   None),
-    "TLN":   ("TLN",    "nuclear-ops", "NYSE",   None),
-    "BEP":   ("BEP",    "nuclear-ops", "NYSE",   None),
-    "BEPC":  ("BEPC",   "nuclear-ops", "NYSE",   None),
-    "GEV":   ("GEV",    "smr",         "NYSE",   None),
-    "BWXT":  ("BWXT",   "smr",         "NYSE",   None),
-    "SMR":   ("SMR",    "smr",         "NYSE",   None),
-    "OKLO":  ("OKLO",   "smr",         "NYSE",   None),
-    "NNE":   ("NNE",    "smr",         "NASDAQ", None),
-    "CCJ":   ("CCJ",    "uranium",     "NYSE",   None),
-    "UEC":   ("UEC",    "uranium",     "NYSE",   None),
-    "LEU":   ("LEU",    "uranium",     "NYSE",   None),
-    "VRT":   ("VRT",    "power-infra",  "NYSE",   None),
-    "ETN":   ("ETN",    "power-infra",  "NYSE",   None),
-    "POWL":  ("POWL",   "power-infra",  "NASDAQ", None),
-    "EQIX":  ("EQIX",   "dc-operators", "NASDAQ", None),
-    "DLR":   ("DLR",    "dc-operators", "NYSE",   None),
-    "AMT":   ("AMT",    "dc-operators", "NYSE",   None),
-    "GOOGL": ("GOOGL",  "hyperscalers", "NASDAQ", None),
-    "MSFT":  ("MSFT",   "hyperscalers", "NASDAQ", None),
-    "AMZN":  ("AMZN",   "hyperscalers", "NASDAQ", None),
-    "META":  ("META",   "hyperscalers", "NASDAQ", None),
-    "IREN":  ("IREN",   "ai-compute",   "NASDAQ", None),
-    "CORZ":  ("CORZ",   "ai-compute",   "NASDAQ", None),
-    "WULF":  ("WULF",   "ai-compute",   "NASDAQ", None),
-    "HUT":   ("HUT",    "ai-compute",   "NASDAQ", None),
-    "SMCI":  ("SMCI",   "ai-compute",    "NASDAQ", None),
-    "DELL":  ("DELL",   "ai-compute",    "NYSE",   None),
-    "COHR":  ("COHR",   "fibre-optical", "NYSE",   None),
-    "LITE":  ("LITE",   "fibre-optical", "NASDAQ", None),
-    "AAOI":  ("AAOI",   "fibre-optical", "NASDAQ", None),
-    "FN":    ("FN",     "fibre-optical", "NYSE",   None),
-    "MTSI":  ("MTSI",   "dsp-semi",      "NASDAQ", None),
-    "SMTC":  ("SMTC",   "dsp-semi",      "NASDAQ", None),
-    "CRDO":  ("CRDO",   "dsp-semi",      "NASDAQ", None),
-    "MXL":   ("MXL",    "dsp-semi",      "NASDAQ", None),
-    "KEYS":  ("KEYS",   "test-equip",    "NYSE",   None),
-    "VIAV":  ("VIAV",   "test-equip",    "NASDAQ", None),
-    "AXTI":  ("AXTI",   "materials",     "NASDAQ", None),
+    "SNDK":  ("SNDK",   "memory",        "NASDAQ", None,        "SanDisk Corporation"),
+    "WDC":   ("WDC",    "memory",        "NASDAQ", None,        "Western Digital"),
+    "285A":  ("285A.T", "memory",        "TSE",    "jpy",       "Kioxia Holdings"),
+    "MU":    ("MU",     "memory",        "NASDAQ", None,        "Micron Technology"),
+    "STX":   ("STX",    "memory",        "NASDAQ", None,        "Seagate Technology"),
+    "MRVL":  ("MRVL",   "memory",        "NASDAQ", None,        "Marvell Technology"),
+    "P":     ("P",      "memory",        "NYSE",   None,        "Everpure"),
+    "RR.":   ("RR.L",   "nuclear-ops",   "LSE",    "lse_pence", "Rolls-Royce Holdings"),
+    "CEG":   ("CEG",    "nuclear-ops",   "NASDAQ", None,        "Constellation Energy"),
+    "VST":   ("VST",    "nuclear-ops",   "NYSE",   None,        "Vistra Corp"),
+    "TLN":   ("TLN",    "nuclear-ops",   "NYSE",   None,        "Talen Energy"),
+    "BEP":   ("BEP",    "nuclear-ops",   "NYSE",   None,        "Brookfield Renewable"),
+    "BEPC":  ("BEPC",   "nuclear-ops",   "NYSE",   None,        "Brookfield Renewable Corp"),
+    "GEV":   ("GEV",    "smr",           "NYSE",   None,        "GE Vernova"),
+    "BWXT":  ("BWXT",   "smr",           "NYSE",   None,        "BWX Technologies"),
+    "SMR":   ("SMR",    "smr",           "NYSE",   None,        "NuScale Power"),
+    "OKLO":  ("OKLO",   "smr",           "NYSE",   None,        "Oklo Inc"),
+    "NNE":   ("NNE",    "smr",           "NASDAQ", None,        "NANO Nuclear Energy"),
+    "CCJ":   ("CCJ",    "uranium",       "NYSE",   None,        "Cameco Corporation"),
+    "UEC":   ("UEC",    "uranium",       "NYSE",   None,        "Uranium Energy Corp"),
+    "LEU":   ("LEU",    "uranium",       "NYSE",   None,        "Centrus Energy"),
+    "VRT":   ("VRT",    "power-infra",   "NYSE",   None,        "Vertiv Holdings"),
+    "ETN":   ("ETN",    "power-infra",   "NYSE",   None,        "Eaton Corporation"),
+    "POWL":  ("POWL",   "power-infra",   "NASDAQ", None,        "Powell Industries"),
+    "EQIX":  ("EQIX",   "dc-operators",  "NASDAQ", None,        "Equinix"),
+    "DLR":   ("DLR",    "dc-operators",  "NYSE",   None,        "Digital Realty"),
+    "AMT":   ("AMT",    "dc-operators",  "NYSE",   None,        "American Tower"),
+    "GOOGL": ("GOOGL",  "hyperscalers",  "NASDAQ", None,        "Alphabet (Google)"),
+    "MSFT":  ("MSFT",   "hyperscalers",  "NASDAQ", None,        "Microsoft"),
+    "AMZN":  ("AMZN",   "hyperscalers",  "NASDAQ", None,        "Amazon"),
+    "META":  ("META",   "hyperscalers",  "NASDAQ", None,        "Meta Platforms"),
+    "IREN":  ("IREN",   "ai-compute",    "NASDAQ", None,        "Iris Energy"),
+    "CORZ":  ("CORZ",   "ai-compute",    "NASDAQ", None,        "Core Scientific"),
+    "WULF":  ("WULF",   "ai-compute",    "NASDAQ", None,        "TeraWulf"),
+    "HUT":   ("HUT",    "ai-compute",    "NASDAQ", None,        "Hut 8 Mining"),
+    "SMCI":  ("SMCI",   "ai-compute",    "NASDAQ", None,        "Super Micro Computer"),
+    "DELL":  ("DELL",   "ai-compute",    "NYSE",   None,        "Dell Technologies"),
+    "COHR":  ("COHR",   "fibre-optical", "NYSE",   None,        "Coherent Corp"),
+    "LITE":  ("LITE",   "fibre-optical", "NASDAQ", None,        "Lumentum Holdings"),
+    "AAOI":  ("AAOI",   "fibre-optical", "NASDAQ", None,        "Applied Optoelectronics"),
+    "FN":    ("FN",     "fibre-optical", "NYSE",   None,        "Fabrinet"),
+    "MTSI":  ("MTSI",   "dsp-semi",      "NASDAQ", None,        "MACOM Technology"),
+    "SMTC":  ("SMTC",   "dsp-semi",      "NASDAQ", None,        "Semtech"),
+    "CRDO":  ("CRDO",   "dsp-semi",      "NASDAQ", None,        "Credo Technology"),
+    "MXL":   ("MXL",    "dsp-semi",      "NASDAQ", None,        "MaxLinear"),
+    "KEYS":  ("KEYS",   "test-equip",    "NYSE",   None,        "Keysight Technologies"),
+    "VIAV":  ("VIAV",   "test-equip",    "NASDAQ", None,        "Viavi Solutions"),
+    "AXTI":  ("AXTI",   "materials",     "NASDAQ", None,        "AXT Inc"),
 }
 
 # Speculative tickers — show return from 52wk low with asterisk
@@ -296,123 +293,16 @@ def return_class(pct, speculative=False):
         return "return-negative"
 
 
-def update_html(results, gbp_usd, today_str):
-    with open(HTML_FILE, "r", encoding="utf-8") as f:
-        html = f.read()
-
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.find("table", id="stock-table")
-    rows = table.find("tbody").find_all("tr")
-
-    for row in rows:
-        ticker = row.get("data-ticker")
-        if ticker not in results:
-            continue
-
-        r = results[ticker]
-        is_spec = ticker in SPECULATIVE
-        ret_str = f"{r['return_pct']:+}%{'*' if is_spec else ''}"
-
-        # Update data attributes
-        row["data-price-usd"]  = f"{r['price_usd']:.2f}"
-        row["data-price-gbp"]  = fmt_gbp(r["price_gbp"])
-        row["data-return"]     = ret_str
-        row["data-low-gbp"]    = fmt_gbp(r["low_gbp"])
-        row["data-high-gbp"]   = fmt_gbp(r["high_gbp"])
-        row["data-bar-pct"]    = str(r["bar_pct"])
-        row["data-change-1d"]  = f"{r['change_1d']:+.2f}%"
-        row["data-change-1w"]  = f"{r['change_1w']:+.2f}%"
-        row["data-change-1m"]  = f"{r['change_1m']:+.2f}%"
-        row["data-change-ytd"] = f"{r['change_ytd']:+.2f}%"
-
-        # Price cell — rebuild with change pills
-        price_span = row.find("span", class_="price")
-        if price_span:
-            prefix = "~£" if ticker == "285A" else "£"
-            price_td = price_span.parent
-            price_td.clear()
-            new_price = soup.new_tag("span", attrs={"class": "price"})
-            new_price.string = f"{prefix}{fmt_gbp(r['price_gbp'])}"
-            price_td.append(new_price)
-            pills_div = soup.new_tag("div", attrs={"class": "change-pills"})
-            for label, val in [("1D", r["change_1d"]), ("1W", r["change_1w"]), ("1M", r["change_1m"])]:
-                cls = "flat" if val == 0 else ("pos" if val > 0 else "neg")
-                pill = soup.new_tag("span", attrs={"class": ["cpill", cls]})
-                pill.string = f"{val:+.2f}% {label}"
-                pills_div.append(pill)
-            price_td.append(pills_div)
-
-        # YTD cell
-        ytd_span = row.find("span", class_="ytd-return")
-        if ytd_span:
-            ytd_val = r["change_ytd"]
-            ytd_cls = "ytd-flat" if ytd_val == 0 else ("ytd-pos" if ytd_val > 0 else "ytd-neg")
-            ytd_span["class"] = ["ytd-return", ytd_cls]
-            ytd_span.string = f"{ytd_val:+.2f}%"
-
-        # Return cell
-        ret_span = row.find("span", class_=re.compile(r"return-"))
-        if ret_span:
-            ret_span["class"] = [return_class(r["return_pct"], is_spec)]
-            ret_span.string = ret_str
-
-        # Range bar
-        range_fill = row.find("div", class_="range-fill")
-        range_dot  = row.find("div", class_="range-dot")
-        if range_fill:
-            range_fill["style"] = f"width:{r['bar_pct']}%"
-        if range_dot:
-            range_dot["style"] = f"left:{r['bar_pct']}%"
-
-        # 52wk labels
-        labels = row.find_all("span", class_="range-label")
-        if len(labels) >= 2:
-            labels[0].string = f"£{fmt_gbp(r['low_gbp'])}"
-            labels[1].string = f"£{fmt_gbp(r['high_gbp'])}"
-
-    # Update FX rate display
-    fx_span = soup.find("span", id="fx-rate")
-    if fx_span:
-        fx_span.string = f"£1 = ${gbp_usd:.4f}"
-
-    # Update last updated date
-    date_span = soup.find("span", id="last-updated")
-    if date_span:
-        date_span.string = f"Last updated: {today_str}"
-
-    # Update comment block
-    updated_html = str(soup)
-    updated_html = re.sub(
-        r"FX Rate used: £1 = \$[\d.]+",
-        f"FX Rate used: £1 = ${gbp_usd:.4f}",
-        updated_html
-    )
-    updated_html = re.sub(
-        r"Prices as of: [\d\- :]+",
-        f"Prices as of: {today_str}",
-        updated_html
-    )
-
-    # Update footer FX note
-    updated_html = re.sub(
-        r"converted at £1 = \$[\d.]+ \([^)]+\)",
-        f"converted at £1 = ${gbp_usd:.4f} ({today_str})",
-        updated_html
-    )
-
-    with open(HTML_FILE, "w", encoding="utf-8") as f:
-        f.write(updated_html)
-
-
 def write_json(results, gbp_usd, today_str):
     stocks = []
-    for ticker, (yahoo_sym, cat, exchange, special) in STOCKS.items():
+    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
         if ticker not in results:
             continue
         r = results[ticker]
         is_spec = ticker in SPECULATIVE
         stocks.append({
             "ticker":           ticker,
+            "company_name":     company_name,
             "category":         cat,
             "exchange":         exchange,
             "price_gbp":        fmt_gbp(r["price_gbp"]),
@@ -467,7 +357,7 @@ def main():
     results = {}
     errors  = []
 
-    for ticker, (yahoo_sym, cat, exchange, special) in STOCKS.items():
+    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
         try:
             print(f"  {ticker:<6} ({yahoo_sym})... ", end="", flush=True)
             price_raw, low_raw, high_raw, prev_close_raw, price_1w_raw, price_1m_raw, price_ytd_raw, vol_1d_raw, vol_1w_raw, vol_1m_raw = get_stock_data(yahoo_sym)
@@ -518,8 +408,7 @@ def main():
             errors.append(ticker)
 
     today_str = datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M")
-    print(f"\nUpdating {HTML_FILE}, {JSON_FILE} and {JS_FILE}...")
-    update_html(results, gbp_usd, today_str)
+    print(f"\nUpdating {JSON_FILE} and {JS_FILE}...")
     write_json(results, gbp_usd, today_str)
 
     print(f"\nDone. {len(results)} stocks updated, {len(errors)} failed.")
