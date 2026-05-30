@@ -773,6 +773,7 @@
     const returnTh = document.querySelector('th[onclick*="\'return\'"]');
     sortState.col = 'return'; // pre-set so toggle flips to descending (-1)
     sortTable('return', returnTh);
+    applyFilters();
   });
 
   function sortTable(col, th) {
