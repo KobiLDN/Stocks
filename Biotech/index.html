@@ -570,6 +570,7 @@
     const returnTh = document.querySelector('th[onclick*="\'return\'"]');
     sortState.col = 'return';
     sortTable('return', returnTh);
+    applyFilters();
   });
 
   function sortTable(col, th) {
