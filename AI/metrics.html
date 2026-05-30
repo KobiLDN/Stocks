@@ -19,10 +19,10 @@
   }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 5px 12px;
+    padding: 8px 20px;
     border: 1px solid var(--border);
     background: transparent;
     color: var(--muted);
@@ -258,10 +258,6 @@
 
 <div class="container">
 
-  <div class="disclaimer">
-    <span>For research only.</span> Metrics sourced from Yahoo Finance via yfinance. Data may be delayed or incomplete. This is not financial advice.
-  </div>
-
   <div class="filter-bar" id="filter-bar"></div>
 
   <div class="search-count-bar">
@@ -292,6 +288,10 @@
       </thead>
       <tbody id="metrics-body"></tbody>
     </table>
+  </div>
+
+  <div class="disclaimer">
+    <span>For research only.</span> Metrics sourced from Yahoo Finance via yfinance. Data may be delayed or incomplete. This is not financial advice.
   </div>
 </div>
 
