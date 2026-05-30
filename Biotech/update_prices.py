@@ -158,6 +158,9 @@ def get_metrics(yahoo_symbol, special, gbp_usd):
         score_raw = info.get('recommendationMean')
         analyst_score = round(float(score_raw), 2) if score_raw else None
 
+        week52_raw = info.get('52WeekChange')
+        week52_pct = round(float(week52_raw) * 100) if week52_raw is not None else None
+
         return {
             'market_cap_gbp_b': mc_gbp_b,
             'beta':             beta,
@@ -167,6 +170,7 @@ def get_metrics(yahoo_symbol, special, gbp_usd):
             'short_pct':        short_pct,
             'analyst':          analyst,
             'analyst_score':    analyst_score,
+            'week52_pct':       week52_pct,
         }
     except Exception as e:
         print(f"[metrics error: {e}]", end=" ")
@@ -259,8 +263,7 @@ def bar_pct(current_gbp, low_gbp, high_gbp):
 
 
 def return_class(pct, speculative=False):
-    if speculative:
-        return "return-positive"
+    # speculative param kept for signature compatibility; no longer caps colour
     if pct >= 200:
         return "return-mega"
     elif pct >= 50:
@@ -437,7 +440,6 @@ def main():
             low_gbp   = to_gbp(low_raw,   special, gbp_usd) if low_raw  else None
             high_gbp  = to_gbp(high_raw,  special, gbp_usd) if high_raw else None
 
-            ret = calc_return(price_gbp, low_gbp) or 0
             bp  = bar_pct(price_gbp, low_gbp, high_gbp)
 
             change_1d = round((price_raw - prev_close_raw) / prev_close_raw * 100, 2) \
@@ -450,6 +452,8 @@ def main():
                          if price_ytd_raw and price_ytd_raw > 0 else 0.0
 
             metrics = get_metrics(yahoo_sym, special, gbp_usd)
+            w52 = metrics.get('week52_pct')
+            ret = w52 if w52 is not None else (calc_return(price_gbp, low_gbp) or 0)
             news_items, news_agg = get_news(yahoo_sym, analyzer)
 
             results[ticker] = {
