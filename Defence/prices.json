@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30 06:28",
+  "updated": "2026-05-30 14:41",
   "fx_gbp_usd": 1.3457,
   "stocks": [
     {
@@ -12,7 +12,7 @@
       "change_1w": "+1.47%",
       "change_1m": "+2.41%",
       "change_ytd": "+7.28%",
-      "return_1yr": "+29%",
+      "return_1yr": "+11%",
       "low_gbp": "305",
       "high_gbp": "514",
       "bar_pct": 43,
@@ -76,13 +76,13 @@
       "change_1w": "+2.52%",
       "change_1m": "+2.46%",
       "change_ytd": "-3.33%",
-      "return_1yr": "+33%",
+      "return_1yr": "+31%",
       "low_gbp": "101",
       "high_gbp": "159",
       "bar_pct": 56,
       "market_cap_gbp_b": 179.792,
       "beta": 0.301,
-      "pe_ratio": 33.71,
+      "pe_ratio": 33.64,
       "avg_volume_m": 5.6,
       "div_yield_pct": 154.0,
       "short_pct": 1.07,
@@ -140,13 +140,13 @@
       "change_1w": "+2.19%",
       "change_1m": "-2.73%",
       "change_ytd": "-3.44%",
-      "return_1yr": "+19%",
+      "return_1yr": "+17%",
       "low_gbp": "351",
       "high_gbp": "575",
       "bar_pct": 30,
       "market_cap_gbp_b": 59.494,
       "beta": -0.113,
-      "pe_ratio": 17.66,
+      "pe_ratio": 17.67,
       "avg_volume_m": 0.83,
       "div_yield_pct": 167.0,
       "short_pct": 1.23,
@@ -156,6 +156,13 @@
       "vol_1w": 4814300,
       "vol_1m": 17073700,
       "news": [
+        {
+          "title": "NATO military chief says alliance on track to meet spending goals",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/nato-military-chief-says-alliance-062754763.html",
+          "published": 1780122474,
+          "sentiment": 0.0
+        },
         {
           "title": "Hegseth praises Asian allies, warns Europe on defense spending",
           "publisher": "Investing.com",
@@ -183,13 +190,6 @@
           "url": "https://www.barchart.com/story/news/2163761/this-high-yield-defense-stock-just-hiked-its-dividend-nearly-7",
           "published": 1779924602,
           "sentiment": 0.128
-        },
-        {
-          "title": "The SpaceX Halo Effect: What\u2019s Next For Sky-High Redwire Stock?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/600530/the-spacex-halo-effect-whats-next-for-sky-high-redwire-stock/2026-05-27",
-          "published": 1779893840,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.134
@@ -204,7 +204,7 @@
       "change_1w": "+2.39%",
       "change_1m": "+0.73%",
       "change_ytd": "+1.88%",
-      "return_1yr": "+29%",
+      "return_1yr": "+26%",
       "low_gbp": "199",
       "high_gbp": "275",
       "bar_pct": 77,
@@ -220,6 +220,13 @@
       "vol_1w": 5055100,
       "vol_1m": 25060800,
       "news": [
+        {
+          "title": "NATO military chief says alliance on track to meet spending goals",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/nato-military-chief-says-alliance-062754763.html",
+          "published": 1780122474,
+          "sentiment": 0.0
+        },
         {
           "title": "Hegseth praises Asian allies, warns Europe on defense spending",
           "publisher": "Investing.com",
@@ -247,16 +254,9 @@
           "url": "https://www.marketbeat.com/originals/rtx-corp-is-set-to-revolutionize-munitions-manufacturing/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1779984600,
           "sentiment": 0.0
-        },
-        {
-          "title": "Kyiv struck by large-scale Russian attack after warning of Oreshnik launch",
-          "publisher": "Investing.com",
-          "url": "https://www.yahoo.com/news/world/articles/kyiv-struck-large-scale-russian-013159603.html",
-          "published": 1779586319,
-          "sentiment": -0.758
         }
       ],
-      "news_sentiment": 0.134
+      "news_sentiment": 0.285
     },
     {
       "ticker": "HII",
@@ -268,7 +268,7 @@
       "change_1w": "-2.53%",
       "change_1m": "-15.04%",
       "change_ytd": "-11.23%",
-      "return_1yr": "+43%",
+      "return_1yr": "+38%",
       "low_gbp": "160",
       "high_gbp": "342",
       "bar_pct": 38,
@@ -332,7 +332,7 @@
       "change_1w": "+2.89%",
       "change_1m": "-1.68%",
       "change_ytd": "+3.87%",
-      "return_1yr": "+33%",
+      "return_1yr": "+30%",
       "low_gbp": "177",
       "high_gbp": "282",
       "bar_pct": 55,
@@ -396,7 +396,7 @@
       "change_1w": "+5.25%",
       "change_1m": "+0.93%",
       "change_ytd": "+1.48%",
-      "return_1yr": "+31%",
+      "return_1yr": "+9%",
       "low_gbp": "131",
       "high_gbp": "189",
       "bar_pct": 70,
@@ -412,6 +412,13 @@
       "vol_1w": 35068700,
       "vol_1m": 149331700,
       "news": [
+        {
+          "title": "Boeing Ramps 737 MAX Output As China Order And Defense Wins Build",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/boeing-ramps-737-max-output-130551110.html",
+          "published": 1780146351,
+          "sentiment": 0.637
+        },
         {
           "title": "Susquehanna Bullish on Woodward (WWD) as Aerospace Demand Supports Long-Term Growth",
           "publisher": "Insider Monkey",
@@ -439,16 +446,9 @@
           "url": "https://finance.yahoo.com/video/tema-etfs-launches-nasa-first-130243134.html",
           "published": 1780059763,
           "sentiment": 0.0
-        },
-        {
-          "title": "Park Aerospace Corp (PKE) Q4 2026 Earnings Call Highlights: Strong Partnerships and Financial ...",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/park-aerospace-corp-pke-q4-050111609.html",
-          "published": 1780030871,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.4
+      "news_sentiment": 0.425
     },
     {
       "ticker": "BA.L",
@@ -460,15 +460,15 @@
       "change_1w": "+3.58%",
       "change_1m": "+1.10%",
       "change_ytd": "+15.35%",
-      "return_1yr": "+27%",
+      "return_1yr": "+5%",
       "low_gbp": "16",
       "high_gbp": "24",
       "bar_pct": 56,
       "market_cap_gbp_b": 0.594,
       "beta": -0.058,
       "pe_ratio": 29.75,
-      "avg_volume_m": 7.19,
-      "div_yield_pct": 180.0,
+      "avg_volume_m": 7.26,
+      "div_yield_pct": 179.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.28,
@@ -524,14 +524,14 @@
       "change_1w": "+10.69%",
       "change_1m": "+21.74%",
       "change_ytd": "+11.73%",
-      "return_1yr": "+57%",
+      "return_1yr": "+54%",
       "low_gbp": "8.54",
       "high_gbp": "14",
       "bar_pct": 85,
       "market_cap_gbp_b": 1.109,
       "beta": 1.2,
       "pe_ratio": 19.38,
-      "avg_volume_m": 36.87,
+      "avg_volume_m": 37.42,
       "div_yield_pct": 71.0,
       "short_pct": null,
       "analyst": "none",
@@ -540,6 +540,13 @@
       "vol_1w": 183501150,
       "vol_1m": 643384156,
       "news": [
+        {
+          "title": "Erewhon sued in Culver City over a rent dispute",
+          "publisher": "LA Times",
+          "url": "https://finance.yahoo.com/economy/policy/articles/erewhon-sued-culver-city-over-100000566.html",
+          "published": 1780135200,
+          "sentiment": -0.402
+        },
         {
           "title": "European Stocks Close Lower in Thursday Trading; Defense Stocks Rally as US-Iran Tensions Persist",
           "publisher": "MT Newswires",
@@ -567,16 +574,9 @@
           "url": "https://finance.yahoo.com/sectors/technology/articles/huawei-backed-maextro-delivers-17-164736478.html",
           "published": 1779814056,
           "sentiment": 0.0
-        },
-        {
-          "title": "BAESY vs. RYCEY: Which Stock Is the Better Value Option?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/baesy-vs-rycey-stock-better-154002084.html",
-          "published": 1779810002,
-          "sentiment": 0.649
         }
       ],
-      "news_sentiment": 0.158
+      "news_sentiment": -0.052
     },
     {
       "ticker": "QQ.L",
@@ -588,15 +588,15 @@
       "change_1w": "+8.14%",
       "change_1m": "+15.59%",
       "change_ytd": "+13.31%",
-      "return_1yr": "+26%",
+      "return_1yr": "-3%",
       "low_gbp": "3.98",
       "high_gbp": "5.79",
       "bar_pct": 58,
       "market_cap_gbp_b": 0.026,
       "beta": 0.313,
       "pe_ratio": 25.18,
-      "avg_volume_m": 2.03,
-      "div_yield_pct": 220.0,
+      "avg_volume_m": 2.07,
+      "div_yield_pct": 218.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.82,
@@ -652,13 +652,13 @@
       "change_1w": "+13.92%",
       "change_1m": "+12.53%",
       "change_ytd": "-6.74%",
-      "return_1yr": "+32%",
+      "return_1yr": "+19%",
       "low_gbp": "88",
       "high_gbp": "154",
       "bar_pct": 42,
       "market_cap_gbp_b": 278.871,
       "beta": 1.521,
-      "pe_ratio": 163.06,
+      "pe_ratio": 175.89,
       "avg_volume_m": 46.84,
       "div_yield_pct": null,
       "short_pct": 3.31,
@@ -668,6 +668,13 @@
       "vol_1w": 237571500,
       "vol_1m": 933541900,
       "news": [
+        {
+          "title": "Forget SaaS: Why AI Agents Could Make ServiceNow and Palantir Technologies the Next Trillion-Dollar Platforms",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/30/forget-saas-why-ai-agents-could-make-servicenow-an/",
+          "published": 1780128300,
+          "sentiment": -0.226
+        },
         {
           "title": "Palantir Vatican AI Clash Puts Defense Focus And Investor Risks In Focus",
           "publisher": "Simply Wall St.",
@@ -695,16 +702,9 @@
           "url": "https://www.barrons.com/articles/stock-movers-a16036be?siteid=yhoof2&yptr=yahoo",
           "published": 1780089540,
           "sentiment": 0.0
-        },
-        {
-          "title": "Highlights: The 5% Debate \u2013 Endowments & Long-Term Investing: 2nd Princeton CorpGov Forum",
-          "publisher": "CorpGov.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/highlights-5-debate-endowments-long-200824516.html",
-          "published": 1780085304,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.085
+      "news_sentiment": -0.13
     },
     {
       "ticker": "LDOS",
@@ -716,7 +716,7 @@
       "change_1w": "+3.87%",
       "change_1m": "-14.35%",
       "change_ytd": "-30.17%",
-      "return_1yr": "+5%",
+      "return_1yr": "-10%",
       "low_gbp": "90",
       "high_gbp": "153",
       "bar_pct": 8,
@@ -780,7 +780,7 @@
       "change_1w": "+4.78%",
       "change_1m": "-1.16%",
       "change_ytd": "-4.45%",
-      "return_1yr": "+25%",
+      "return_1yr": "+23%",
       "low_gbp": "304",
       "high_gbp": "508",
       "bar_pct": 38,
@@ -844,7 +844,7 @@
       "change_1w": "+8.35%",
       "change_1m": "+7.68%",
       "change_ytd": "+3.69%",
-      "return_1yr": "+29%",
+      "return_1yr": "+4%",
       "low_gbp": "60",
       "high_gbp": "90",
       "bar_pct": 58,
@@ -908,7 +908,7 @@
       "change_1w": "+3.71%",
       "change_1m": "+1.81%",
       "change_ytd": "-6.01%",
-      "return_1yr": "+15%",
+      "return_1yr": "-23%",
       "low_gbp": "51",
       "high_gbp": "89",
       "bar_pct": 20,
@@ -972,7 +972,7 @@
       "change_1w": "+27.07%",
       "change_1m": "+6.27%",
       "change_ytd": "-19.11%",
-      "return_1yr": "+33%",
+      "return_1yr": "+15%",
       "low_gbp": "116",
       "high_gbp": "311",
       "bar_pct": 20,
@@ -1036,7 +1036,7 @@
       "change_1w": "+17.30%",
       "change_1m": "+1.71%",
       "change_ytd": "-19.12%",
-      "return_1yr": "+72%",
+      "return_1yr": "+69%",
       "low_gbp": "28",
       "high_gbp": "100",
       "bar_pct": 28,
@@ -1100,7 +1100,7 @@
       "change_1w": "+60.58%",
       "change_1m": "+23.72%",
       "change_ytd": "+58.30%",
-      "return_1yr": "+151%",
+      "return_1yr": "+124%",
       "low_gbp": "4.29",
       "high_gbp": "14",
       "bar_pct": 67,
@@ -1164,7 +1164,7 @@
       "change_1w": "+1.68%",
       "change_1m": "-4.38%",
       "change_ytd": "+5.43%",
-      "return_1yr": "+26%",
+      "return_1yr": "+25%",
       "low_gbp": "54",
       "high_gbp": "75",
       "bar_pct": 66,
@@ -1228,7 +1228,7 @@
       "change_1w": "+14.37%",
       "change_1m": "+73.89%",
       "change_ytd": "+88.81%",
-      "return_1yr": "+468%",
+      "return_1yr": "+439%",
       "low_gbp": "19",
       "high_gbp": "112",
       "bar_pct": 94,
@@ -1292,7 +1292,7 @@
       "change_1w": "+20.39%",
       "change_1m": "+38.33%",
       "change_ytd": "+150.56%",
-      "return_1yr": "+1297%",
+      "return_1yr": "+1249%",
       "low_gbp": "2.72",
       "high_gbp": "38",
       "bar_pct": 99,
@@ -1356,7 +1356,7 @@
       "change_1w": "+17.85%",
       "change_1m": "+53.46%",
       "change_ytd": "+35.87%",
-      "return_1yr": "+399%",
+      "return_1yr": "+370%",
       "low_gbp": "17",
       "high_gbp": "99",
       "bar_pct": 82,
@@ -1420,7 +1420,7 @@
       "change_1w": "+4.05%",
       "change_1m": "+8.48%",
       "change_ytd": "-7.38%",
-      "return_1yr": "+12%",
+      "return_1yr": "-13%",
       "low_gbp": "835",
       "high_gbp": "1207",
       "bar_pct": 27,
@@ -1484,7 +1484,7 @@
       "change_1w": "+15.60%",
       "change_1m": "+28.99%",
       "change_ytd": "+5.77%",
-      "return_1yr": "+36%",
+      "return_1yr": "+16%",
       "low_gbp": "190",
       "high_gbp": "269",
       "bar_pct": 87,
@@ -1548,7 +1548,7 @@
       "change_1w": "+15.10%",
       "change_1m": "+11.69%",
       "change_ytd": "-20.36%",
-      "return_1yr": "+32%",
+      "return_1yr": "-41%",
       "low_gbp": "252",
       "high_gbp": "658",
       "bar_pct": 20,
@@ -1612,7 +1612,7 @@
       "change_1w": "-0.58%",
       "change_1m": "-8.52%",
       "change_ytd": "+21.86%",
-      "return_1yr": "+43%",
+      "return_1yr": "+35%",
       "low_gbp": "13",
       "high_gbp": "23",
       "bar_pct": 63,
@@ -1676,7 +1676,7 @@
       "change_1w": "+15.92%",
       "change_1m": "+41.55%",
       "change_ytd": "+46.92%",
-      "return_1yr": "+129%",
+      "return_1yr": "+122%",
       "low_gbp": "36",
       "high_gbp": "84",
       "bar_pct": 97,
@@ -1740,7 +1740,7 @@
       "change_1w": "+9.45%",
       "change_1m": "+20.26%",
       "change_ytd": "+40.76%",
-      "return_1yr": "+50%",
+      "return_1yr": "+11%",
       "low_gbp": "24",
       "high_gbp": "37",
       "bar_pct": 97,
