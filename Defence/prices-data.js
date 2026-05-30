@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-05-30 06:14",
+  "updated": "2026-05-30 06:28",
   "fx_gbp_usd": 1.3457,
   "stocks": [
     {
@@ -697,14 +697,14 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "PLTR Stock Alert: Why Palantir Is Getting a Boost from Dell Earnings",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2207954/pltr-stock-alert-why-palantir-is-getting-a-boost-from-dell-earnings",
-          "published": 1780087448,
-          "sentiment": 0.599
+          "title": "Highlights: The 5% Debate \u2013 Endowments & Long-Term Investing: 2nd Princeton CorpGov Forum",
+          "publisher": "CorpGov.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/highlights-5-debate-endowments-long-200824516.html",
+          "published": 1780085304,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.035
+      "news_sentiment": -0.085
     },
     {
       "ticker": "LDOS",

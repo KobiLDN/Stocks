@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30 06:14",
+  "updated": "2026-05-30 06:27",
   "fx_gbp_usd": 1.3457,
   "stocks": [
     {
@@ -404,7 +404,7 @@
       "beta": 0.223,
       "pe_ratio": 27.94,
       "avg_volume_m": 2.32,
-      "div_yield_pct": 172.0,
+      "div_yield_pct": 171.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.58,

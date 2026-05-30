@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-05-30 06:18",
+  "updated": "2026-05-30 06:27",
   "fx_gbp_usd": 1.3457,
   "stocks": [
     {
@@ -36,20 +36,6 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Stocks Rally on Easing Geopolitical Tensions and AI Enthusiasm",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2207673/stocks-rally-on-easing-geopolitical-tensions-and-ai-enthusiasm",
-          "published": 1780086841,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Western Digital Is Making the Right Moves Amid Fierce Momentum for Memory Stocks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2207471/western-digital-is-making-the-right-moves-amid-fierce-momentum-for-memory-stocks",
-          "published": 1780085896,
-          "sentiment": 0.0
-        },
-        {
           "title": "Micron Joined The $1 Trillion Club With Its Blistering Rally This Week. Here's How Much Traders See It Moving Next Week",
           "publisher": "Investopedia",
           "url": "https://www.investopedia.com/micron-joined-the-usd1-trillion-club-with-a-blistering-rally-this-week-here-is-how-much-traders-see-it-moving-next-week-mu-11985655",
@@ -62,9 +48,23 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/livecoverage/stock-market-news-today-052926/card/this-risk-etf-is-riding-best-seven-days-in-a-year-3BM96yzPYwUQnFT5vwgF?siteid=yhoof2&yptr=yahoo",
           "published": 1780083688,
           "sentiment": 0.477
+        },
+        {
+          "title": "Is Sandisk a Millionaire-Maker Stock?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/29/is-sandisk-a-millionaire-maker-stock/",
+          "published": 1780080600,
+          "sentiment": 0.0
+        },
+        {
+          "title": "High Growth Tech Stocks in US for May 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/high-growth-tech-stocks-us-173831186.html",
+          "published": 1780076311,
+          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.155
+      "news_sentiment": 0.172
     },
     {
       "ticker": "WDC",
@@ -242,21 +242,21 @@ window.PRICES_DATA = {
           "sentiment": -0.649
         },
         {
-          "title": "Stocks Rally on Easing Geopolitical Tensions and AI Enthusiasm",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2207673/stocks-rally-on-easing-geopolitical-tensions-and-ai-enthusiasm",
-          "published": 1780086841,
-          "sentiment": 0.296
-        },
-        {
           "title": "Dell Technologies Crushes Earnings: AI Buildout Remains Robust",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/dell-technologies-crushes-earnings-ai-203100192.html",
           "published": 1780086660,
           "sentiment": -0.128
+        },
+        {
+          "title": "US Equity Indexes Break Records This Week as Mega-Cap Tech Soars, Trump Close to Announcing Decision on Iran",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-break-records-203047572.html",
+          "published": 1780086647,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.096
+      "news_sentiment": -0.155
     },
     {
       "ticker": "STX",

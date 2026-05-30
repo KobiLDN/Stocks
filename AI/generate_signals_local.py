@@ -37,7 +37,7 @@ OUTPUT_JS         = "signals-local.js"
 
 TEMPERATURE       = 0.3
 MAX_TOKENS        = 8192
-REQUEST_TIMEOUT_S = 180       # OpenRouter / DeepSeek can take ~90-120s
+REQUEST_TIMEOUT_S = (15, 120) # (connect_s, read_s) — 15s to connect, 120s to read
 MAX_HEADLINES     = 1
 TOP_N             = 10
 RETRY_ON_BAD_JSON = 1
@@ -232,7 +232,7 @@ def call_api(api_key, system_prompt, user_prompt):
     except requests.exceptions.ConnectionError:
         fail("Could not connect to OpenRouter. Check internet connection.")
     except requests.exceptions.Timeout:
-        fail(f"Request timed out after {REQUEST_TIMEOUT_S}s.")
+        fail(f"Request timed out after {REQUEST_TIMEOUT_S[1]}s read / {REQUEST_TIMEOUT_S[0]}s connect.")
 
     dt = time.time() - t0
     print(f"  HTTP {r.status_code}  ({dt:.1f}s)")
