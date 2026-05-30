@@ -414,7 +414,7 @@
     <button class="stock-btn" data-tv="NASDAQ:MU"   data-name="Micron" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">MU</span><span class="btn-name">Micron Technology</span></button>
     <button class="stock-btn" data-tv="NASDAQ:STX"  data-name="Seagate" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">STX</span><span class="btn-name">Seagate</span></button>
     <button class="stock-btn" data-tv="NASDAQ:MRVL" data-name="Marvell" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">MRVL</span><span class="btn-name">Marvell Technology</span></button>
-    <button class="stock-btn" data-tv="NYSE:PSTG"   data-name="Everpure (fka Pure Storage)" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">PSTG</span><span class="btn-name">Everpure</span></button>
+    <button class="stock-btn" data-tv="NYSE:P"     data-name="Everpure" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">P</span><span class="btn-name">Everpure</span></button>
 
     <span class="cat-label nuclear">⚡ Nuclear Operators</span>
     <button class="stock-btn" data-tv="LSE:RR."     data-name="Rolls-Royce" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent2)">RR.</span><span class="btn-name">Rolls-Royce</span></button>
@@ -513,7 +513,7 @@
         { tv: 'NASDAQ:MU',   ticker: 'MU',    name: 'Micron' },
         { tv: 'NASDAQ:STX',  ticker: 'STX',   name: 'Seagate' },
         { tv: 'NASDAQ:MRVL', ticker: 'MRVL',  name: 'Marvell' },
-        { tv: 'NYSE:PSTG',   ticker: 'PSTG',  name: 'Everpure (fka Pure Storage)', noEmbed: true },
+        { tv: 'NYSE:P',      ticker: 'P',     name: 'Everpure', noEmbed: true },
       ]
     },
     nuclear: {
@@ -662,7 +662,7 @@
 
   /* ---- SINGLE CHART ---- */
   const NO_EMBED = {
-    'NYSE:PSTG': 'https://www.tradingview.com/symbols/NYSE-PSTG/',
+    'NYSE:P': 'https://www.tradingview.com/symbols/NYSE-P/',
   };
 
   function fallbackHtml(tv) {
