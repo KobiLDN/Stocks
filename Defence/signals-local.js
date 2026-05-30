@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-05-29 11:48",
+  "updated": "2026-05-30 06:57",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RKLB",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "RKLB has surged +468% over 1 year and +88.81% YTD with +73.89% 1-month momentum, driven by strong launch cadence and government contracts; news sentiment is positive at 0.089 despite a recent pullback.",
+      "drivers": [
+        "+468% 1-year return",
+        "+88.81% YTD",
+        "+73.89% 1-month",
+        "positive news sentiment 0.089"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PL",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "PL has delivered a staggering +1297% 1-year return and +150.56% YTD with +38.33% 1-month momentum, supported by strong news sentiment of 0.162 and growing demand for satellite imagery.",
+      "drivers": [
+        "+1297% 1-year return",
+        "+150.56% YTD",
+        "+38.33% 1-month",
+        "positive news sentiment 0.162"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ASTS shows +399% 1-year return and +35.87% YTD with +53.46% 1-month momentum, but high short interest of 17.6% and negative news sentiment of -0.119 warrant caution; recent Blue Origin explosion is a near-term headwind.",
+      "drivers": [
+        "+399% 1-year return",
+        "+53.46% 1-month",
+        "high short interest 17.6%",
+        "negative news sentiment -0.119"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "MRCY has gained +129% over 1 year and +46.92% YTD with +41.55% 1-month momentum, and recently announced its largest-ever order for Common Processing Architecture servers, driving strong news sentiment of 0.128.",
+      "drivers": [
+        "+129% 1-year return",
+        "+46.92% YTD",
+        "+41.55% 1-month",
+        "largest-ever order announced"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "HEI has +36% 1-year return and +5.77% YTD with +28.99% 1-month momentum, supported by a P/E of 62.06 and positive news sentiment of 0.169; Q2 earnings beat estimates.",
+      "drivers": [
+        "+36% 1-year return",
+        "+28.99% 1-month",
+        "positive news sentiment 0.169",
+        "Q2 earnings beat"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "RCAT has soared +151% over 1 year and +58.30% YTD with +60.58% 1-week momentum, but high short interest of 21.01% and no P/E indicate high risk; analyst consensus is strong_buy with score 1.2.",
+      "drivers": [
+        "+151% 1-year return",
+        "+58.30% YTD",
+        "+60.58% 1-week",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "RR.L has +57% 1-year return and +11.73% YTD with +21.74% 1-month momentum, a reasonable P/E of 19.38, and positive news sentiment of 0.158; defense stocks rallying on US-Iran tensions.",
+      "drivers": [
+        "+57% 1-year return",
+        "+21.74% 1-month",
+        "P/E 19.38",
+        "positive news sentiment 0.158"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "DRS has +50% 1-year return and +40.76% YTD with +20.26% 1-month momentum, a low beta of 0.027, and positive news sentiment of 0.18; recently unveiled a new thermal drone camera.",
+      "drivers": [
+        "+50% 1-year return",
+        "+40.76% YTD",
+        "+20.26% 1-month",
+        "new product launch"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "QQ.L has +26% 1-year return and +13.31% YTD with +15.59% 1-month momentum, a P/E of 25.18, and strong news sentiment of 0.307; high insider ownership is a positive signal.",
+      "drivers": [
+        "+26% 1-year return",
+        "+13.31% YTD",
+        "+15.59% 1-month",
+        "high insider ownership"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "PLTR has +32% 1-year return but -6.74% YTD, with strong +12.53% 1-month and +13.92% 1-week momentum; high P/E of 163.06 and negative news sentiment of -0.085 are offset by buy consensus and defense AI focus.",
+      "drivers": [
+        "+32% 1-year return",
+        "+12.53% 1-month",
+        "buy consensus",
+        "defense AI focus"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "DRS",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "P/E 21.6",
         "+6.07% 1W",
         "cyber-intel"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RKLB",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Explosive momentum (+92% 1M, +95% YTD, +486% 1Y) driven by repeated launch successes and growing government/defence backlog; analyst consensus bullish (buy, 1.61) despite high beta 2.3.",
-      "drivers": [
-        "+92% 1M momentum",
-        "buy consensus 1.61",
-        "defence launch demand",
-        "positive news sentiment 0.29"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Exceptional 1M rally of +91% and 1W +49% as space-based direct-to-cell network progresses on defence/spectrum partnerships, though short interest 17.6% and hold consensus (2.64) temper conviction.",
-      "drivers": [
-        "+91% 1M surge",
-        "defence space partnership",
-        "high short 17.6% risk",
-        "NATO/comms catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Skyrocketing +152% YTD and +51% 1M as Planet Labs wins recurring satellite imagery contracts for defence agencies; strong buyer conviction with buy consensus (2.0) and positive news sentiment 0.28.",
-      "drivers": [
-        "+152% YTD return",
-        "defence imagery demand",
-        "buy consensus 2.0",
-        "contract win momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong 1M bounce of +32% after Q2 earnings beat and raised guidance, with positive news sentiment on aerospace aftermarket growth; P/E 68 is elevated but backed by buy consensus (1.87).",
-      "drivers": [
-        "+32% 1M rally",
-        "Q2 earnings beat",
-        "buy consensus 1.87",
-        "aerospace aftermarket strength"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Impressive +45% 1M and +127% 1Y as Mercury Systems benefits from sensor/processing orders for US defence programmes; analyst consensus at buy (2.0) and low beta 0.83 add stability.",
-      "drivers": [
-        "+45% 1M momentum",
-        "+127% 1Y return",
-        "defence sensor demand",
-        "low beta 0.83"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "Explosive short-term momentum (+58% 1W, +32% 1D) on Trump administration drone funding deals, though no analyst rating and 21% short interest signal high risk/reward.",
-      "drivers": [
-        "+58% 1W surge",
-        "drone funding catalyst",
-        "high short 21% squeeze",
-        "defence budget focus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strongest analyst consensus in the universe (strong_buy, 1.5) with solid +40% YTD and +23% 1M, supported by new thermal drone camera launch and low beta 0.03.",
-      "drivers": [
-        "strong_buy 1.5 consensus",
-        "+40% YTD",
-        "drone camera product",
-        "low volatility"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Massive 1D (+20%) and 1W (+31%) spike on drone funding headlines, but -16% YTD and high short interest 12.1% add caution; analyst buy (1.63) supports a tactical play.",
-      "drivers": [
-        "+31% 1W momentum",
-        "drone funding news",
-        "buy consensus 1.63",
-        "high short 12%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Steady upward momentum (+16% 1M, +55% 1Y) underpinned by strong defence engine aftermarket and nuclear/SMR optionality, with buy consensus (1.68) and reasonable P/E 19.",
-      "drivers": [
-        "+16% 1M gain",
-        "defence engine demand",
-        "buy consensus 1.68",
-        "P/E 19"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Impressive +16% 1W and +13% 1M momentum driven by UK defence budget upside for sensor/electronic warfare, though tiny market cap \u00a326m carries liquidity risk.",
-      "drivers": [
-        "+16% 1W surge",
-        "UK defence budget",
-        "high insider ownership",
-        "positive news 0.31"
       ]
     }
   ]

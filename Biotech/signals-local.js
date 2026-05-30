@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-05-29 11:46",
+  "updated": "2026-05-30 06:56",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Strong YTD +2.63%, 1M +18.44%, P/E 39.21, analyst consensus buy, positive news sentiment 0.304, and recent expanded approval for Zepbound in sleep apnea.",
+      "drivers": [
+        "strong 1M momentum",
+        "positive news sentiment",
+        "analyst buy consensus",
+        "low short interest 0.95%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +21.30%, 1M +28.58%, P/E 29.58, analyst buy, news sentiment 0.218, driven by new sequencing platform launch and FDA cancer test approval.",
+      "drivers": [
+        "strong 1M momentum",
+        "reasonable P/E",
+        "positive news sentiment",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +21.33%, 1W +19.01%, analyst strong_buy (score 1.29), news sentiment 0.26, with BEAM-302 advancing in AATD and FDA IND clearance.",
+      "drivers": [
+        "strong_buy analyst consensus",
+        "positive news sentiment",
+        "catalyst: BEAM-302 progress",
+        "high short interest 39.93% (potential squeeze)"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +53.86%, 1M +38.34%, 1W +22.16%, news sentiment 0.092, recent Q1 beat and combined COVID-flu vaccine progress, but high beta 2.369 and no analyst rating.",
+      "drivers": [
+        "explosive 1M momentum",
+        "high beta",
+        "no analyst coverage",
+        "high short interest 27.71%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +15.83%, 1M +13.54%, P/E 16.72, analyst buy, news sentiment 0.143, strong cabozantinib sales and combination therapy data.",
+      "drivers": [
+        "positive P/E",
+        "solid 1M momentum",
+        "analyst buy",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "1M +8.35%, 1W +9.66%, analyst strong_buy (score 1.42), news sentiment 0.134, strong Q1 earnings and Signatera adoption, but no P/E and negative YTD -2.39%.",
+      "drivers": [
+        "strong_buy analyst consensus",
+        "positive 1W momentum",
+        "catalyst: Signatera growth",
+        "no P/E (high growth)"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "P/E 10.67, dividend yield 395bps, analyst buy, news sentiment 0.197, but YTD -9.81%; Wegovy sales strong and oral semaglutide progress.",
+      "drivers": [
+        "attractive P/E",
+        "high dividend yield",
+        "low short interest 0.68%",
+        "catalyst: oral semaglutide"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +26.27%, 1M +15.48%, analyst buy (score 1.6), news sentiment 0.071, CARVYKTI sales growth and potential earlier line approval, but high short 19.64%.",
+      "drivers": [
+        "strong YTD",
+        "positive 1M momentum",
+        "analyst buy",
+        "catalyst: CARVYKTI expansion"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CRSP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +4.48%, 1W +12.59%, analyst buy, news sentiment 0.19, positive CTX001 data in sickle cell, but no P/E and high short 32.41%.",
+      "drivers": [
+        "positive 1W momentum",
+        "analyst buy",
+        "catalyst: CTX001 progress",
+        "high short interest"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "EDIT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +68.78%, 1M +15.33%, 1W +29.59%, analyst buy, but negative news sentiment -0.149, analyst cuts, and small market cap \u00a30.395B.",
+      "drivers": [
+        "very high YTD and 1W momentum",
+        "analyst buy",
+        "negative news sentiment",
+        "small cap risk"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BEAM",
@@ -132,130 +264,6 @@ window.SIGNALS_DATA = {
         "positive news sentiment",
         "very high short interest risk",
         "gene editing leader"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "LLY shows strong momentum (+32.60% 1M, +10.59% 1W, +81% 1Y), a massive \u00a3747B market cap, low short interest of 0.95%, very positive news sentiment of 0.228, and a strong Buy analyst consensus (score 1.74). Recent news of CVS adding weight-loss options to drug plans reinforces the GLP-1 growth story.",
-      "drivers": [
-        "Strong 1M momentum (+32.60%)",
-        "Massive market cap \u00a3747B",
-        "Low short interest 0.95%",
-        "Positive news sentiment 0.228"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.88,
-      "rationale": "NVO displays attractive valuation (P/E 10.66, dividend yield 4.04%), strong 1M rebound (+12.96%), very low short interest (0.68%), and positive news sentiment (0.088) on weight-loss drug plan inclusion by CVS.",
-      "drivers": [
-        "Low P/E of 10.66",
-        "High dividend yield 4.04%",
-        "Low short interest 0.68%",
-        "Positive sentiment 0.088"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "ILMN has exceptional momentum with +31.84% 1M, +11.82% 1W, +7.08% 1D, +101% 1Y and +18.12% YTD, supported by a P/E of 28.85 and a Buy analyst consensus (score 2.25).",
-      "drivers": [
-        "Strong 1M momentum (+31.84%)",
-        "Strong 1Y return (+101%)",
-        "Reasonable P/E of 28.85"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "BEAM shows powerful momentum (+20.99% 1W, +11.64% 1M, +114% 1Y, +20.85% YTD) with the strongest analyst consensus (strong_buy, score 1.29) and positive news sentiment (0.26) on BEAM-302 advancing toward accelerated approval in AATD.",
-      "drivers": [
-        "Top analyst consensus strong_buy score 1.29",
-        "Strong 1Y return (+114%)",
-        "Positive news sentiment 0.26"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NTLA",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "NTLA has outstanding momentum (+48.53% YTD, +100% 1Y, +11.58% 1W, +9.92% 1M) and the highest news sentiment in the universe (0.317), but carries high short interest (46.78%) reflecting binary clinical event risk.",
-      "drivers": [
-        "Exceptional YTD return (+48.53%)",
-        "Highest news sentiment 0.317",
-        "High short interest 46.78% (risk)"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "NVAX has strong momentum across timeframes (+44.74% YTD, +68% 1Y, +29.49% 1M, +11.33% 1W) with positive news sentiment (0.092), but its high beta (2.369) and elevated short interest (27.71%) add risk.",
-      "drivers": [
-        "Strong YTD return (+44.74%)",
-        "Strong 1M momentum (+29.49%)",
-        "High short interest 27.71% (risk)"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "EDIT exhibits the strongest 1W momentum (+31.92%) and strong YTD (+67.32%) and 1Y (+107%) returns, with moderate short interest (9.79%), though negative news sentiment (-0.149) tempers conviction.",
-      "drivers": [
-        "Top 1W momentum (+31.92%)",
-        "Strong YTD return (+67.32%)",
-        "Moderate short interest 9.79%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "EXEL offers solid momentum (+18.06% YTD, +15.13% 1M, +52% 1Y) with a reasonable P/E of 17.04, low beta of 0.385, and Buy analyst consensus (score 2.1), supported by favourable analyst commentary.",
-      "drivers": [
-        "Strong 1M momentum (+15.13%)",
-        "Reasonable P/E of 17.04",
-        "Low beta 0.385"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "CRSP has strong short-term momentum (+16.13% 1W, +11.18% 1M) with a positive news sentiment (0.285) and a Buy analyst consensus (score 2.04), but a high short interest (32.41%) and no earnings (P/E null) increase risk.",
-      "drivers": [
-        "Strong 1W momentum (+16.13%)",
-        "Positive news sentiment 0.285",
-        "High short interest 32.41% (risk)"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LEGN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "LEGN has strong YTD (+31.38%) and 1M (+24.11%) momentum, a low beta of 0.297, and a strong Buy analyst consensus (score 1.6), but carries high short interest (19.64%) and a negative news sentiment (-0.043).",
-      "drivers": [
-        "Strong YTD return (+31.38%)",
-        "Strong analyst consensus score 1.6",
-        "Low beta 0.297"
       ]
     }
   ]
