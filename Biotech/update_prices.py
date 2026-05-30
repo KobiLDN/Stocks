@@ -268,8 +268,10 @@ def return_class(pct, speculative=False):
         return "return-mega"
     elif pct >= 50:
         return "return-positive"
-    else:
+    elif pct >= 0:
         return "return-modest"
+    else:
+        return "return-negative"
 
 
 def update_html(results, gbp_usd, today_str):
