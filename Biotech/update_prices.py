@@ -294,7 +294,7 @@ def update_html(results, gbp_usd, today_str):
 
         r = results[ticker]
         is_spec = ticker in SPECULATIVE
-        ret_str = f"+{r['return_pct']}%{'*' if is_spec else ''}"
+        ret_str = f"{r['return_pct']:+}%{'*' if is_spec else ''}"
 
         row["data-price-usd"]  = f"{r['price_usd']:.2f}"
         row["data-price-gbp"]  = fmt_gbp(r["price_gbp"])
@@ -387,7 +387,7 @@ def write_json(results, gbp_usd, today_str):
             "change_1w":        f"{r['change_1w']:+.2f}%",
             "change_1m":        f"{r['change_1m']:+.2f}%",
             "change_ytd":       f"{r['change_ytd']:+.2f}%",
-            "return_1yr":       f"+{r['return_pct']}%{'*' if is_spec else ''}",
+            "return_1yr":       f"{r['return_pct']:+}%{'*' if is_spec else ''}",
             "low_gbp":          fmt_gbp(r["low_gbp"]),
             "high_gbp":         fmt_gbp(r["high_gbp"]),
             "bar_pct":          r["bar_pct"],
@@ -475,7 +475,7 @@ def main():
                 **metrics,
             }
             news_note = f"  (news: {len(news_items)}" + (f", sent {news_agg:+.2f})" if news_agg is not None else ")")
-            print(f"£{fmt_gbp(price_gbp)}  (1yr: +{ret}%)  (1d: {change_1d:+.2f}%)  (ytd: {change_ytd:+.2f}%){news_note}")
+            print(f"£{fmt_gbp(price_gbp)}  (1yr: {ret:+}%)  (1d: {change_1d:+.2f}%)  (ytd: {change_ytd:+.2f}%){news_note}")
         except Exception as e:
             print(f"ERROR: {e}")
             errors.append(ticker)
