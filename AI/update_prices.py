@@ -34,7 +34,7 @@ STOCKS = {
     "MU":    ("MU",     "memory",      "NASDAQ", None),
     "STX":   ("STX",    "memory",      "NASDAQ", None),
     "MRVL":  ("MRVL",   "memory",      "NASDAQ", None),
-    "PSTG":  ("PSTG",   "memory",      "NYSE",   None),
+    "P":     ("P",      "memory",      "NYSE",   None),
     "RR.":   ("RR.L",   "nuclear-ops", "LSE",    "lse_pence"),
     "CEG":   ("CEG",    "nuclear-ops", "NASDAQ", None),
     "VST":   ("VST",    "nuclear-ops", "NYSE",   None),

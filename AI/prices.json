@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30 06:13",
+  "updated": "2026-05-30 06:18",
   "fx_gbp_usd": 1.3457,
   "stocks": [
     {
@@ -387,12 +387,12 @@
       "news_sentiment": 0.016
     },
     {
-      "ticker": "PSTG",
+      "ticker": "P",
       "category": "memory",
       "exchange": "NYSE",
       "price_gbp": "59",
       "price_usd": 79.51,
-      "change_1d": "+0.00%",
+      "change_1d": "+7.79%",
       "change_1w": "+0.65%",
       "change_1m": "+11.28%",
       "change_ytd": "+15.22%",
@@ -400,55 +400,55 @@
       "low_gbp": "37",
       "high_gbp": "75",
       "bar_pct": 58,
-      "market_cap_gbp_b": 16.65,
-      "beta": 1.343,
-      "pe_ratio": 123.27,
-      "avg_volume_m": 2.89,
+      "market_cap_gbp_b": 19.625,
+      "beta": 1.438,
+      "pe_ratio": 120.47,
+      "avg_volume_m": 3.14,
       "div_yield_pct": null,
-      "short_pct": 3.71,
+      "short_pct": 4.36,
       "analyst": "buy",
-      "analyst_score": 1.86,
-      "vol_1d": 7647753,
-      "vol_1w": 35999003,
-      "vol_1m": 85338085,
+      "analyst_score": 1.9,
+      "vol_1d": 7694800,
+      "vol_1w": 36040000,
+      "vol_1m": 85378400,
       "news": [
         {
-          "title": "VAST Data CEO discusses AI startup's new $30B valuation",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/vast-data-ceo-discusses-ai-startups-new-30b-valuation-204943144.html",
-          "published": 1777063783,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Is Everpure, Inc. (PSTG) A Good Stock To Buy Now?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/everpure-inc-pstg-good-stock-174842996.html",
-          "published": 1776966522,
-          "sentiment": 0.44
-        },
-        {
-          "title": "US High Growth Tech Stocks To Watch In April 2026",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-high-growth-tech-stocks-113826649.html",
-          "published": 1776944306,
-          "sentiment": 0.382
-        },
-        {
-          "title": "2 Cash-Heavy Stocks with Impressive Fundamentals and 1 We Find Risky",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-heavy-stocks-impressive-191723760.html",
-          "published": 1776885443,
-          "sentiment": 0.361
-        },
-        {
-          "title": "Is Western Digital Stock a Buy, Sell, or Hold After Hitting a 52-Week High?",
+          "title": "Here's What Key Metrics Tell Us About Everpure (P) Q1 Earnings",
           "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-stock-buy-sell-150300960.html",
-          "published": 1776870180,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-key-metrics-tell-us-133002678.html",
+          "published": 1780061402,
           "sentiment": 0.0
+        },
+        {
+          "title": "Everpure Q1 Earnings Beat on Strong AI-Led Storage Demand, Sales Jump Y/Y",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/everpure-q1-earnings-beat-strong-155300114.html",
+          "published": 1779983580,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Everpure Stock Tumbles Despite Earnings Beat. Here's What To Know.",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/news/technology/everpure-stock-earnings-2026-april-pure-storage/?src=A00220&yptr=yahoo",
+          "published": 1779981067,
+          "sentiment": 0.0
+        },
+        {
+          "title": "P Q1 Deep Dive: Supply Chain Dynamics and Pricing Power Shape Results and Guidance",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/p-q1-deep-dive-supply-075510069.html",
+          "published": 1779954910,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Everpure Inc (P) Q1 2027 Earnings Call Highlights: Record Revenue Growth and Strategic Expansions",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/everpure-inc-p-q1-2027-050034451.html",
+          "published": 1779944434,
+          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.237
+      "news_sentiment": 0.215
     },
     {
       "ticker": "RR.",
