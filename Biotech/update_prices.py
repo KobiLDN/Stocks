@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 """
-Update index.html with live prices from Yahoo Finance.
+Update prices-data.js with live prices from Yahoo Finance.
 Run: python update_prices.py  (from inside the Biotech/ folder)
-Requires: pip install yfinance beautifulsoup4 vaderSentiment
+Requires: pip install yfinance vaderSentiment
 """
 
 import yfinance as yf
-import re
 import json
-import os
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
-from bs4 import BeautifulSoup
 
 try:
     from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -19,52 +16,51 @@ try:
 except ImportError:
     _VADER_OK = False
 
-HTML_FILE = "index.html"
 JSON_FILE = "prices.json"
 JS_FILE   = "prices-data.js"
 
-# ticker → (yahoo_symbol, category, exchange, special)
-# special: None | "lse_pence" | "jpy"
+# ticker → (yahoo_symbol, category, exchange, special, company_name)
+# special: None | "lse_pence"
 STOCKS = {
     # Large Cap Biotech
-    "AMGN":  ("AMGN",  "large-cap",    "NASDAQ", None),
-    "GILD":  ("GILD",  "large-cap",    "NASDAQ", None),
-    "REGN":  ("REGN",  "large-cap",    "NASDAQ", None),
-    "VRTX":  ("VRTX",  "large-cap",    "NASDAQ", None),
-    "BIIB":  ("BIIB",  "large-cap",    "NASDAQ", None),
-    "BMY":   ("BMY",   "large-cap",    "NYSE",   None),
+    "AMGN":  ("AMGN",  "large-cap",    "NASDAQ", None,        "Amgen"),
+    "GILD":  ("GILD",  "large-cap",    "NASDAQ", None,        "Gilead Sciences"),
+    "REGN":  ("REGN",  "large-cap",    "NASDAQ", None,        "Regeneron Pharmaceuticals"),
+    "VRTX":  ("VRTX",  "large-cap",    "NASDAQ", None,        "Vertex Pharmaceuticals"),
+    "BIIB":  ("BIIB",  "large-cap",    "NASDAQ", None,        "Biogen"),
+    "BMY":   ("BMY",   "large-cap",    "NYSE",   None,        "Bristol-Myers Squibb"),
     # UK Listed
-    "AZN":   ("AZN.L", "uk-listed",    "LSE",    "lse_pence"),
-    "GSK":   ("GSK.L", "uk-listed",    "LSE",    "lse_pence"),
+    "AZN":   ("AZN.L", "uk-listed",    "LSE",    "lse_pence", "AstraZeneca"),
+    "GSK":   ("GSK.L", "uk-listed",    "LSE",    "lse_pence", "GSK"),
     # Gene Editing
-    "CRSP":  ("CRSP",  "gene-editing", "NASDAQ", None),
-    "BEAM":  ("BEAM",  "gene-editing", "NASDAQ", None),
-    "NTLA":  ("NTLA",  "gene-editing", "NASDAQ", None),
-    "EDIT":  ("EDIT",  "gene-editing", "NASDAQ", None),
+    "CRSP":  ("CRSP",  "gene-editing", "NASDAQ", None,        "CRISPR Therapeutics"),
+    "BEAM":  ("BEAM",  "gene-editing", "NASDAQ", None,        "Beam Therapeutics"),
+    "NTLA":  ("NTLA",  "gene-editing", "NASDAQ", None,        "Intellia Therapeutics"),
+    "EDIT":  ("EDIT",  "gene-editing", "NASDAQ", None,        "Editas Medicine"),
     # Genomics / Tools
-    "ILMN":  ("ILMN",  "genomics",     "NASDAQ", None),
-    "PACB":  ("PACB",  "genomics",     "NASDAQ", None),
-    "NTRA":  ("NTRA",  "genomics",     "NASDAQ", None),
-    "RXRX":  ("RXRX",  "genomics",     "NASDAQ", None),
+    "ILMN":  ("ILMN",  "genomics",     "NASDAQ", None,        "Illumina"),
+    "PACB":  ("PACB",  "genomics",     "NASDAQ", None,        "Pacific Biosciences"),
+    "NTRA":  ("NTRA",  "genomics",     "NASDAQ", None,        "Natera"),
+    "RXRX":  ("RXRX",  "genomics",     "NASDAQ", None,        "Recursion Pharmaceuticals"),
     # Oncology
-    "INCY":  ("INCY",  "oncology",     "NASDAQ", None),
-    "EXEL":  ("EXEL",  "oncology",     "NASDAQ", None),
-    "ALNY":  ("ALNY",  "oncology",     "NASDAQ", None),
-    "RCUS":  ("RCUS",  "oncology",     "NYSE",   None),
+    "INCY":  ("INCY",  "oncology",     "NASDAQ", None,        "Incyte"),
+    "EXEL":  ("EXEL",  "oncology",     "NASDAQ", None,        "Exelixis"),
+    "ALNY":  ("ALNY",  "oncology",     "NASDAQ", None,        "Alnylam Pharmaceuticals"),
+    "RCUS":  ("RCUS",  "oncology",     "NYSE",   None,        "Arcus Biosciences"),
     # mRNA / Vaccines
-    "MRNA":  ("MRNA",  "mrna",         "NASDAQ", None),
-    "BNTX":  ("BNTX",  "mrna",         "NASDAQ", None),
-    "NVAX":  ("NVAX",  "mrna",         "NASDAQ", None),
+    "MRNA":  ("MRNA",  "mrna",         "NASDAQ", None,        "Moderna"),
+    "BNTX":  ("BNTX",  "mrna",         "NASDAQ", None,        "BioNTech"),
+    "NVAX":  ("NVAX",  "mrna",         "NASDAQ", None,        "Novavax"),
     # Rare Disease
-    "BMRN":  ("BMRN",  "rare-disease", "NASDAQ", None),
-    "SRPT":  ("SRPT",  "rare-disease", "NASDAQ", None),
-    "COAG":  ("COAG",  "rare-disease", "NASDAQ", None),
+    "BMRN":  ("BMRN",  "rare-disease", "NASDAQ", None,        "BioMarin Pharmaceutical"),
+    "SRPT":  ("SRPT",  "rare-disease", "NASDAQ", None,        "Sarepta Therapeutics"),
+    "COAG":  ("COAG",  "rare-disease", "NASDAQ", None,        "Hemab Therapeutics"),
     # Metabolic
-    "NVO":   ("NVO",   "metabolic",    "NYSE",   None),
-    "LLY":   ("LLY",   "metabolic",    "NYSE",   None),
+    "NVO":   ("NVO",   "metabolic",    "NYSE",   None,        "Novo Nordisk"),
+    "LLY":   ("LLY",   "metabolic",    "NYSE",   None,        "Eli Lilly"),
     # Neuroscience
-    "LEGN":  ("LEGN",  "neuroscience", "NASDAQ", None),
-    "IONS":  ("IONS",  "neuroscience", "NASDAQ", None),
+    "LEGN":  ("LEGN",  "neuroscience", "NASDAQ", None,        "Legend Biotech"),
+    "IONS":  ("IONS",  "neuroscience", "NASDAQ", None,        "Ionis Pharmaceuticals"),
 }
 
 # Speculative tickers — show return from 52wk low with asterisk
@@ -123,7 +119,7 @@ def get_stock_data(yahoo_symbol):
     return price, low52, high52, prev_close, price_1w, price_1m, price_ytd, vol_1d, vol_1w, vol_1m
 
 
-def get_metrics(yahoo_symbol, special, gbp_usd):
+def get_metrics(yahoo_symbol, special, gbp_usd, gbp_jpy=None):
     """Fetch fundamental metrics from ticker.info. Returns dict or {} on failure."""
     try:
         info = yf.Ticker(yahoo_symbol).info
@@ -274,113 +270,16 @@ def return_class(pct, speculative=False):
         return "return-negative"
 
 
-def update_html(results, gbp_usd, today_str):
-    if not os.path.exists(HTML_FILE):
-        print(f"  [skipping HTML update — {HTML_FILE} not found yet]")
-        return
-
-    with open(HTML_FILE, "r", encoding="utf-8") as f:
-        html = f.read()
-
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.find("table", id="stock-table")
-    if not table:
-        print("  [skipping HTML update — stock-table not found]")
-        return
-    rows = table.find("tbody").find_all("tr")
-
-    for row in rows:
-        ticker = row.get("data-ticker")
-        if ticker not in results:
-            continue
-
-        r = results[ticker]
-        is_spec = ticker in SPECULATIVE
-        ret_str = f"{r['return_pct']:+}%{'*' if is_spec else ''}"
-
-        row["data-price-usd"]  = f"{r['price_usd']:.2f}"
-        row["data-price-gbp"]  = fmt_gbp(r["price_gbp"])
-        row["data-return"]     = ret_str
-        row["data-low-gbp"]    = fmt_gbp(r["low_gbp"])
-        row["data-high-gbp"]   = fmt_gbp(r["high_gbp"])
-        row["data-bar-pct"]    = str(r["bar_pct"])
-        row["data-change-1d"]  = f"{r['change_1d']:+.2f}%"
-        row["data-change-1w"]  = f"{r['change_1w']:+.2f}%"
-        row["data-change-1m"]  = f"{r['change_1m']:+.2f}%"
-        row["data-change-ytd"] = f"{r['change_ytd']:+.2f}%"
-
-        price_span = row.find("span", class_="price")
-        if price_span:
-            price_td = price_span.parent
-            price_td.clear()
-            new_price = soup.new_tag("span", attrs={"class": "price"})
-            new_price.string = f"£{fmt_gbp(r['price_gbp'])}"
-            price_td.append(new_price)
-            pills_div = soup.new_tag("div", attrs={"class": "change-pills"})
-            for label, val in [("1D", r["change_1d"]), ("1W", r["change_1w"]), ("1M", r["change_1m"])]:
-                cls = "flat" if val == 0 else ("pos" if val > 0 else "neg")
-                pill = soup.new_tag("span", attrs={"class": ["cpill", cls]})
-                pill.string = f"{val:+.2f}% {label}"
-                pills_div.append(pill)
-            price_td.append(pills_div)
-
-        ytd_span = row.find("span", class_="ytd-return")
-        if ytd_span:
-            ytd_val = r["change_ytd"]
-            ytd_cls = "ytd-flat" if ytd_val == 0 else ("ytd-pos" if ytd_val > 0 else "ytd-neg")
-            ytd_span["class"] = ["ytd-return", ytd_cls]
-            ytd_span.string = f"{ytd_val:+.2f}%"
-
-        ret_span = row.find("span", class_=re.compile(r"return-"))
-        if ret_span:
-            ret_span["class"] = [return_class(r["return_pct"], is_spec)]
-            ret_span.string = ret_str
-
-        range_fill = row.find("div", class_="range-fill")
-        range_dot  = row.find("div", class_="range-dot")
-        if range_fill:
-            range_fill["style"] = f"width:{r['bar_pct']}%"
-        if range_dot:
-            range_dot["style"] = f"left:{r['bar_pct']}%"
-
-        labels = row.find_all("span", class_="range-label")
-        if len(labels) >= 2:
-            labels[0].string = f"£{fmt_gbp(r['low_gbp'])}"
-            labels[1].string = f"£{fmt_gbp(r['high_gbp'])}"
-
-    fx_span = soup.find("span", id="fx-rate")
-    if fx_span:
-        fx_span.string = f"£1 = ${gbp_usd:.4f}"
-
-    date_span = soup.find("span", id="last-updated")
-    if date_span:
-        date_span.string = f"Last updated: {today_str}"
-
-    updated_html = str(soup)
-    updated_html = re.sub(
-        r"FX Rate used: £1 = \$[\d.]+",
-        f"FX Rate used: £1 = ${gbp_usd:.4f}",
-        updated_html
-    )
-    updated_html = re.sub(
-        r"Prices as of: [\d\- :]+",
-        f"Prices as of: {today_str}",
-        updated_html
-    )
-
-    with open(HTML_FILE, "w", encoding="utf-8") as f:
-        f.write(updated_html)
-
-
 def write_json(results, gbp_usd, today_str):
     stocks = []
-    for ticker, (yahoo_sym, cat, exchange, special) in STOCKS.items():
+    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
         if ticker not in results:
             continue
         r = results[ticker]
         is_spec = ticker in SPECULATIVE
         stocks.append({
             "ticker":           ticker,
+            "company_name":     company_name,
             "category":         cat,
             "exchange":         exchange,
             "price_gbp":        fmt_gbp(r["price_gbp"]),
@@ -433,7 +332,7 @@ def main():
     results = {}
     errors  = []
 
-    for ticker, (yahoo_sym, cat, exchange, special) in STOCKS.items():
+    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
         try:
             print(f"  {ticker:<6} ({yahoo_sym})... ", end="", flush=True)
             price_raw, low_raw, high_raw, prev_close_raw, price_1w_raw, price_1m_raw, price_ytd_raw, vol_1d_raw, vol_1w_raw, vol_1m_raw = get_stock_data(yahoo_sym)
@@ -477,14 +376,13 @@ def main():
                 **metrics,
             }
             news_note = f"  (news: {len(news_items)}" + (f", sent {news_agg:+.2f})" if news_agg is not None else ")")
-            print(f"£{fmt_gbp(price_gbp)}  (1yr: {ret:+}%)  (1d: {change_1d:+.2f}%)  (ytd: {change_ytd:+.2f}%){news_note}")
+            print(f"£{fmt_gbp(price_gbp)}  (1yr: {ret:+}%)  (1d: {change_1d:+.2f}%)  (1w: {change_1w:+.2f}%)  (1m: {change_1m:+.2f}%)  (ytd: {change_ytd:+.2f}%){news_note}")
         except Exception as e:
             print(f"ERROR: {e}")
             errors.append(ticker)
 
     today_str = datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M")
-    print(f"\nUpdating {HTML_FILE}, {JSON_FILE} and {JS_FILE}...")
-    update_html(results, gbp_usd, today_str)
+    print(f"\nUpdating {JSON_FILE} and {JS_FILE}...")
     write_json(results, gbp_usd, today_str)
 
     print(f"\nDone. {len(results)} stocks updated, {len(errors)} failed.")

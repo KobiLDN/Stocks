@@ -6,11 +6,9 @@ Requires: pip install yfinance beautifulsoup4 vaderSentiment
 """
 
 import yfinance as yf
-import re
 import json
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
-from bs4 import BeautifulSoup
 
 # News sentiment is keyless (VADER, local). It is strictly secondary —
 # a missing/broken VADER must never break the price update, so the import
@@ -21,48 +19,47 @@ try:
 except ImportError:
     _VADER_OK = False
 
-HTML_FILE = "index.html"
 JSON_FILE = "prices.json"
 JS_FILE   = "prices-data.js"
 DASHBOARD_TITLE = "Defence Stock Dashboard"
 
-# ticker → (yahoo_symbol, category, exchange, special)
+# ticker → (yahoo_symbol, category, exchange, special, company_name)
 # special: None | "lse_pence"
 STOCKS = {
     # us-primes
-    "LMT":   ("LMT",   "us-primes",    "NYSE",   None),
-    "RTX":   ("RTX",   "us-primes",    "NYSE",   None),
-    "NOC":   ("NOC",   "us-primes",    "NYSE",   None),
-    "GD":    ("GD",    "us-primes",    "NYSE",   None),
-    "HII":   ("HII",   "us-primes",    "NYSE",   None),
-    "LHX":   ("LHX",   "us-primes",    "NYSE",   None),
-    "BA":    ("BA",    "us-primes",    "NYSE",   None),
+    "LMT":   ("LMT",   "us-primes",   "NYSE",   None,        "Lockheed Martin"),
+    "RTX":   ("RTX",   "us-primes",   "NYSE",   None,        "RTX Corporation"),
+    "NOC":   ("NOC",   "us-primes",   "NYSE",   None,        "Northrop Grumman"),
+    "GD":    ("GD",    "us-primes",   "NYSE",   None,        "General Dynamics"),
+    "HII":   ("HII",   "us-primes",   "NYSE",   None,        "Huntington Ingalls Industries"),
+    "LHX":   ("LHX",   "us-primes",   "NYSE",   None,        "L3Harris Technologies"),
+    "BA":    ("BA",    "us-primes",   "NYSE",   None,        "Boeing"),
     # uk-european
-    "BA.L":  ("BA.L",  "uk-european",  "LSE",    "lse_pence"),
-    "RR.L":  ("RR.L",  "uk-european",  "LSE",    "lse_pence"),
-    "QQ.L":  ("QQ.L",  "uk-european",  "LSE",    "lse_pence"),
+    "BA.L":  ("BA.L",  "uk-european", "LSE",    "lse_pence", "BAE Systems"),
+    "RR.L":  ("RR.L",  "uk-european", "LSE",    "lse_pence", "Rolls-Royce Holdings"),
+    "QQ.L":  ("QQ.L",  "uk-european", "LSE",    "lse_pence", "QinetiQ Group"),
     # cyber-intel
-    "PLTR":  ("PLTR",  "cyber-intel",  "NYSE",   None),
-    "LDOS":  ("LDOS",  "cyber-intel",  "NYSE",   None),
-    "CACI":  ("CACI",  "cyber-intel",  "NYSE",   None),
-    "SAIC":  ("SAIC",  "cyber-intel",  "NYSE",   None),
-    "BAH":   ("BAH",   "cyber-intel",  "NYSE",   None),
+    "PLTR":  ("PLTR",  "cyber-intel", "NYSE",   None,        "Palantir Technologies"),
+    "LDOS":  ("LDOS",  "cyber-intel", "NYSE",   None,        "Leidos Holdings"),
+    "CACI":  ("CACI",  "cyber-intel", "NYSE",   None,        "CACI International"),
+    "SAIC":  ("SAIC",  "cyber-intel", "NYSE",   None,        "Science Applications International"),
+    "BAH":   ("BAH",   "cyber-intel", "NYSE",   None,        "Booz Allen Hamilton"),
     # drones
-    "AVAV":  ("AVAV",  "drones",       "NASDAQ", None),
-    "KTOS":  ("KTOS",  "drones",       "NASDAQ", None),
-    "RCAT":  ("RCAT",  "drones",       "NASDAQ", None),
-    "TXT":   ("TXT",   "drones",       "NYSE",   None),
+    "AVAV":  ("AVAV",  "drones",      "NASDAQ", None,        "AeroVironment"),
+    "KTOS":  ("KTOS",  "drones",      "NASDAQ", None,        "Kratos Defense"),
+    "RCAT":  ("RCAT",  "drones",      "NASDAQ", None,        "Red Cat Holdings"),
+    "TXT":   ("TXT",   "drones",      "NYSE",   None,        "Textron"),
     # space
-    "RKLB":  ("RKLB",  "space",        "NASDAQ", None),
-    "PL":    ("PL",    "space",        "NYSE",   None),
-    "ASTS":  ("ASTS",  "space",        "NASDAQ", None),
+    "RKLB":  ("RKLB",  "space",       "NASDAQ", None,        "Rocket Lab USA"),
+    "PL":    ("PL",    "space",       "NYSE",   None,        "Planet Labs"),
+    "ASTS":  ("ASTS",  "space",       "NASDAQ", None,        "AST SpaceMobile"),
     # weapons
-    "TDG":   ("TDG",   "weapons",      "NYSE",   None),
-    "HEI":   ("HEI",   "weapons",      "NYSE",   None),
-    "AXON":  ("AXON",  "weapons",      "NASDAQ", None),
-    "OLN":   ("OLN",   "weapons",      "NYSE",   None),
-    "MRCY":  ("MRCY",  "weapons",      "NASDAQ", None),
-    "DRS":   ("DRS",   "weapons",      "NYSE",   None),
+    "TDG":   ("TDG",   "weapons",     "NYSE",   None,        "TransDigm Group"),
+    "HEI":   ("HEI",   "weapons",     "NYSE",   None,        "HEICO Corporation"),
+    "AXON":  ("AXON",  "weapons",     "NASDAQ", None,        "Axon Enterprise"),
+    "OLN":   ("OLN",   "weapons",     "NYSE",   None,        "Olin Corporation"),
+    "MRCY":  ("MRCY",  "weapons",     "NASDAQ", None,        "Mercury Systems"),
+    "DRS":   ("DRS",   "weapons",     "NYSE",   None,        "Leonardo DRS"),
 }
 
 
@@ -276,110 +273,15 @@ def return_class(pct):
         return "return-negative"
 
 
-def update_html(results, gbp_usd, today_str):
-    with open(HTML_FILE, "r", encoding="utf-8") as f:
-        html = f.read()
-
-    soup = BeautifulSoup(html, "html.parser")
-    table = soup.find("table", id="stock-table")
-    if not table:
-        print("  [update_html] WARNING: #stock-table not found — skipping HTML update")
-        return
-    rows = table.find("tbody").find_all("tr")
-
-    for row in rows:
-        ticker = row.get("data-ticker")
-        if ticker not in results:
-            continue
-
-        r = results[ticker]
-        ret_str = f"{r['return_pct']:+}%"
-
-        # Update data attributes
-        row["data-price-usd"]  = f"{r['price_usd']:.2f}"
-        row["data-price-gbp"]  = fmt_gbp(r["price_gbp"])
-        row["data-return"]     = ret_str
-        row["data-low-gbp"]    = fmt_gbp(r["low_gbp"])
-        row["data-high-gbp"]   = fmt_gbp(r["high_gbp"])
-        row["data-bar-pct"]    = str(r["bar_pct"])
-        row["data-change-1d"]  = f"{r['change_1d']:+.2f}%"
-        row["data-change-1w"]  = f"{r['change_1w']:+.2f}%"
-        row["data-change-1m"]  = f"{r['change_1m']:+.2f}%"
-        row["data-change-ytd"] = f"{r['change_ytd']:+.2f}%"
-
-        # Price cell — rebuild with change pills
-        price_span = row.find("span", class_="price")
-        if price_span:
-            price_td = price_span.parent
-            price_td.clear()
-            new_price = soup.new_tag("span", attrs={"class": "price"})
-            new_price.string = f"£{fmt_gbp(r['price_gbp'])}"
-            price_td.append(new_price)
-            pills_div = soup.new_tag("div", attrs={"class": "change-pills"})
-            for label, val in [("1D", r["change_1d"]), ("1W", r["change_1w"]), ("1M", r["change_1m"])]:
-                cls = "flat" if val == 0 else ("pos" if val > 0 else "neg")
-                pill = soup.new_tag("span", attrs={"class": ["cpill", cls]})
-                pill.string = f"{val:+.2f}% {label}"
-                pills_div.append(pill)
-            price_td.append(pills_div)
-
-        # YTD cell
-        ytd_span = row.find("span", class_="ytd-return")
-        if ytd_span:
-            ytd_val = r["change_ytd"]
-            ytd_cls = "ytd-flat" if ytd_val == 0 else ("ytd-pos" if ytd_val > 0 else "ytd-neg")
-            ytd_span["class"] = ["ytd-return", ytd_cls]
-            ytd_span.string = f"{ytd_val:+.2f}%"
-
-        # Return cell
-        ret_span = row.find("span", class_=re.compile(r"return-"))
-        if ret_span:
-            ret_span["class"] = [return_class(r["return_pct"])]
-            ret_span.string = ret_str
-
-        # Range bar
-        range_fill = row.find("div", class_="range-fill")
-        range_dot  = row.find("div", class_="range-dot")
-        if range_fill:
-            range_fill["style"] = f"width:{r['bar_pct']}%"
-        if range_dot:
-            range_dot["style"] = f"left:{r['bar_pct']}%"
-
-        # 52wk labels
-        labels = row.find_all("span", class_="range-label")
-        if len(labels) >= 2:
-            labels[0].string = f"£{fmt_gbp(r['low_gbp'])}"
-            labels[1].string = f"£{fmt_gbp(r['high_gbp'])}"
-
-    # Update FX rate display
-    fx_span = soup.find("span", id="fx-rate")
-    if fx_span:
-        fx_span.string = f"£1 = ${gbp_usd:.4f}"
-
-    # Update last updated date
-    date_span = soup.find("span", id="last-updated")
-    if date_span:
-        date_span.string = f"Last updated: {today_str}"
-
-    updated_html = str(soup)
-    updated_html = re.sub(
-        r"FX Rate used: £1 = \$[\d.]+",
-        f"FX Rate used: £1 = ${gbp_usd:.4f}",
-        updated_html
-    )
-
-    with open(HTML_FILE, "w", encoding="utf-8") as f:
-        f.write(updated_html)
-
-
 def write_json(results, gbp_usd, today_str):
     stocks = []
-    for ticker, (yahoo_sym, cat, exchange, special) in STOCKS.items():
+    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
         if ticker not in results:
             continue
         r = results[ticker]
         stocks.append({
             "ticker":           ticker,
+            "company_name":     company_name,
             "category":         cat,
             "exchange":         exchange,
             "price_gbp":        fmt_gbp(r["price_gbp"]),
@@ -434,7 +336,7 @@ def main():
     results = {}
     errors  = []
 
-    for ticker, (yahoo_sym, cat, exchange, special) in STOCKS.items():
+    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
         try:
             print(f"  {ticker:<6} ({yahoo_sym})... ", end="", flush=True)
             price_raw, low_raw, high_raw, prev_close_raw, price_1w_raw, price_1m_raw, price_ytd_raw, vol_1d_raw, vol_1w_raw, vol_1m_raw = get_stock_data(yahoo_sym)
@@ -484,8 +386,7 @@ def main():
             errors.append(ticker)
 
     today_str = datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M")
-    print(f"\nUpdating {HTML_FILE}, {JSON_FILE} and {JS_FILE}...")
-    update_html(results, gbp_usd, today_str)
+    print(f"\nUpdating {JSON_FILE} and {JS_FILE}...")
     write_json(results, gbp_usd, today_str)
 
     print(f"\nDone. {len(results)} stocks updated, {len(errors)} failed.")

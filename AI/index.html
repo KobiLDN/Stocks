@@ -519,7 +519,7 @@
 </div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
-<span class="row-count">Showing <span id="visible-count">48</span> of 48 stocks</span>
+<span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
 <div class="table-wrap">
 <table id="stock-table">
@@ -535,591 +535,229 @@
 </tr>
 </thead>
 <tbody>
-<!-- ============================================================ -->
-<!-- MEMORY / STORAGE                                             -->
-<!-- ============================================================ -->
-<!-- STOCK:SNDK | USD_PRICE:921.00 | GBP_PRICE:681 | RETURN_1YR:+2440% | 52WK_LOW_GBP:21 | 52WK_HIGH_GBP:714 | BAR_PCT:97 -->
-<tr data-bar-pct="99" data-cat="memory" data-change-1d="+2.85%" data-change-1m="+54.58%" data-change-1w="+9.90%" data-change-ytd="+515.82%" data-exchange="NASDAQ" data-high-gbp="1270" data-low-gbp="27" data-price-gbp="1260" data-price-usd="1694.98" data-return="+4441%" data-ticker="SNDK">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/SNDK/" target="_blank"><div class="ticker" style="color:var(--purple)">SNDK</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>SanDisk Corporation</td>
-<td><span class="cat-badge cat-memory">Memory</span></td>
-<td><span class="price">£1260</span><div class="change-pills"><span class="cpill pos">+2.85% 1D</span><span class="cpill pos">+9.90% 1W</span><span class="cpill pos">+54.58% 1M</span></div></td>
-<td><span class="return-mega">+4441%</span></td><td><span class="ytd-return ytd-pos">+515.82%</span></td>
-<td><div class="range-wrap"><span class="range-label">£27</span><div class="range-bar-bg"><div class="range-fill" style="width:99%"></div><div class="range-dot" style="left:99%"></div></div><span class="range-label" style="text-align:right">£1270</span></div></td>
-<td><span class="notes-text">NAND pure-play. AI storage supercycle. Spun off WDC 2025.</span></td>
-</tr>
-<!-- STOCK:WDC | USD_PRICE:362.00 | GBP_PRICE:268 | RETURN_1YR:+930% | 52WK_LOW_GBP:26 | 52WK_HIGH_GBP:271 | BAR_PCT:93 -->
-<tr data-bar-pct="96" data-cat="memory" data-change-1d="-0.70%" data-change-1m="+22.25%" data-change-1w="+9.20%" data-change-ytd="+183.15%" data-exchange="NASDAQ" data-high-gbp="411" data-low-gbp="38" data-price-gbp="395" data-price-usd="531.21" data-return="+918%" data-ticker="WDC">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/WDC/" target="_blank"><div class="ticker" style="color:var(--purple)">WDC</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Western Digital</td>
-<td><span class="cat-badge cat-memory">Memory</span></td>
-<td><span class="price">£395</span><div class="change-pills"><span class="cpill neg">-0.70% 1D</span><span class="cpill pos">+9.20% 1W</span><span class="cpill pos">+22.25% 1M</span></div></td>
-<td><span class="return-mega">+918%</span></td><td><span class="ytd-return ytd-pos">+183.15%</span></td>
-<td><div class="range-wrap"><span class="range-label">£38</span><div class="range-bar-bg"><div class="range-fill" style="width:96%"></div><div class="range-dot" style="left:96%"></div></div><span class="range-label" style="text-align:right">£411</span></div></td>
-<td><span class="notes-text">HDD duopoly. Fully committed to hyperscalers through FY end.</span></td>
-</tr>
-<!-- STOCK:285A | JPY_PRICE:30530 | GBP_PRICE:152 | RETURN_1YR:+1540% | 52WK_LOW_GBP:7 | 52WK_HIGH_GBP:152 | BAR_PCT:95 -->
-<tr data-bar-pct="98" data-cat="memory" data-change-1d="+7.76%" data-change-1m="+75.32%" data-change-1w="+14.72%" data-change-ytd="+480.18%" data-exchange="TSE" data-high-gbp="314" data-low-gbp="9.10" data-price-gbp="307" data-price-usd="65850.00" data-return="+3201%" data-ticker="285A">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/285A.T/" target="_blank"><div class="ticker" style="color:var(--purple)">285A</div></a><div class="exchange-badge">TSE (Tokyo)</div></td>
-<td>Kioxia Holdings</td>
-<td><span class="cat-badge cat-memory">Memory</span></td>
-<td><span class="price">~£307</span><div class="change-pills"><span class="cpill pos">+7.76% 1D</span><span class="cpill pos">+14.72% 1W</span><span class="cpill pos">+75.32% 1M</span></div></td>
-<td><span class="return-mega">+3201%</span></td><td><span class="ytd-return ytd-pos">+480.18%</span></td>
-<td><div class="range-wrap"><span class="range-label">£9.10</span><div class="range-bar-bg"><div class="range-fill" style="width:98%"></div><div class="range-dot" style="left:98%"></div></div><span class="range-label" style="text-align:right">£314</span></div></td>
-<td><span class="notes-text">SNDK's JV partner. Pure NAND play. Japan listed — needs specialist broker.</span></td>
-</tr>
-<!-- STOCK:MU | USD_PRICE:458.00 | GBP_PRICE:339 | RETURN_1YR:+300% | 52WK_LOW_GBP:63 | 52WK_HIGH_GBP:344 | BAR_PCT:88 -->
-<tr data-bar-pct="99" data-cat="memory" data-change-1d="+3.75%" data-change-1m="+87.76%" data-change-1w="+27.41%" data-change-ytd="+207.97%" data-exchange="NASDAQ" data-high-gbp="729" data-low-gbp="70" data-price-gbp="722" data-price-usd="971.00" data-return="+889%" data-ticker="MU">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/MU/" target="_blank"><div class="ticker" style="color:var(--purple)">MU</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Micron Technology</td>
-<td><span class="cat-badge cat-memory">Memory</span></td>
-<td><span class="price">£722</span><div class="change-pills"><span class="cpill pos">+3.75% 1D</span><span class="cpill pos">+27.41% 1W</span><span class="cpill pos">+87.76% 1M</span></div></td>
-<td><span class="return-mega">+889%</span></td><td><span class="ytd-return ytd-pos">+207.97%</span></td>
-<td><div class="range-wrap"><span class="range-label">£70</span><div class="range-bar-bg"><div class="range-fill" style="width:99%"></div><div class="range-dot" style="left:99%"></div></div><span class="range-label" style="text-align:right">£729</span></div></td>
-<td><span class="notes-text">DRAM + NAND + HBM. Sold out of HBM for all of 2026. 11.5x fwd P/E.</span></td>
-</tr>
-<!-- STOCK:STX | USD_PRICE:514.00 | GBP_PRICE:380 | RETURN_1YR:+470% | 52WK_LOW_GBP:67 | 52WK_HIGH_GBP:392 | BAR_PCT:90 -->
-<tr data-bar-pct="97" data-cat="memory" data-change-1d="-0.73%" data-change-1m="+30.60%" data-change-1w="+8.56%" data-change-ytd="+206.51%" data-exchange="NASDAQ" data-high-gbp="673" data-low-gbp="87" data-price-gbp="654" data-price-usd="879.80" data-return="+638%" data-ticker="STX">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/STX/" target="_blank"><div class="ticker" style="color:var(--purple)">STX</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Seagate Technology</td>
-<td><span class="cat-badge cat-memory">Memory</span></td>
-<td><span class="price">£654</span><div class="change-pills"><span class="cpill neg">-0.73% 1D</span><span class="cpill pos">+8.56% 1W</span><span class="cpill pos">+30.60% 1M</span></div></td>
-<td><span class="return-mega">+638%</span></td><td><span class="ytd-return ytd-pos">+206.51%</span></td>
-<td><div class="range-wrap"><span class="range-label">£87</span><div class="range-bar-bg"><div class="range-fill" style="width:97%"></div><div class="range-dot" style="left:97%"></div></div><span class="range-label" style="text-align:right">£673</span></div></td>
-<td><span class="notes-text">HDD duopoly with WDC. AI data centre mass storage.</span></td>
-</tr>
-<!-- STOCK:MRVL | USD_PRICE:107.00 | GBP_PRICE:79 | RETURN_1YR:+127% | 52WK_LOW_GBP:35 | 52WK_HIGH_GBP:80 | BAR_PCT:74 -->
-<tr data-bar-pct="92" data-cat="memory" data-change-1d="+0.81%" data-change-1m="+24.13%" data-change-1w="+7.50%" data-change-ytd="+129.61%" data-exchange="NASDAQ" data-high-gbp="162" data-low-gbp="44" data-price-gbp="152" data-price-usd="205.00" data-return="+233%" data-ticker="MRVL">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/MRVL/" target="_blank"><div class="ticker" style="color:var(--purple)">MRVL</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Marvell Technology</td>
-<td><span class="cat-badge cat-memory">Memory</span></td>
-<td><span class="price">£152</span><div class="change-pills"><span class="cpill pos">+0.81% 1D</span><span class="cpill pos">+7.50% 1W</span><span class="cpill pos">+24.13% 1M</span></div></td>
-<td><span class="return-mega">+233%</span></td><td><span class="ytd-return ytd-pos">+129.61%</span></td>
-<td><div class="range-wrap"><span class="range-label">£44</span><div class="range-bar-bg"><div class="range-fill" style="width:92%"></div><div class="range-dot" style="left:92%"></div></div><span class="range-label" style="text-align:right">£162</span></div></td>
-<td><span class="notes-text">Custom silicon + AI networking. 800G/1.6T optical interconnects.</span></td>
-</tr>
-<!-- STOCK:P | USD_PRICE:65.00 | GBP_PRICE:48 | RETURN_1YR:+15% | 52WK_LOW_GBP:37 | 52WK_HIGH_GBP:53 | BAR_PCT:48 -->
-<tr data-bar-pct="58" data-cat="memory" data-change-1d="+7.79%" data-change-1m="+11.28%" data-change-1w="+0.65%" data-change-ytd="+15.22%" data-exchange="NYSE" data-high-gbp="75" data-low-gbp="37" data-price-gbp="59" data-price-usd="79.51" data-return="+48%" data-ticker="P">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/P/" target="_blank"><div class="ticker" style="color:var(--purple)">P</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Everpure</td>
-<td><span class="cat-badge cat-memory">Memory</span></td>
-<td><span class="price">£59</span><div class="change-pills"><span class="cpill pos">+7.79% 1D</span><span class="cpill pos">+0.65% 1W</span><span class="cpill pos">+11.28% 1M</span></div></td>
-<td><span class="return-modest">+48%</span></td><td><span class="ytd-return ytd-pos">+15.22%</span></td>
-<td><div class="range-wrap"><span class="range-label">£37</span><div class="range-bar-bg"><div class="range-fill" style="width:58%"></div><div class="range-dot" style="left:58%"></div></div><span class="range-label" style="text-align:right">£75</span></div></td>
-<td><span class="notes-text">Formerly Pure Storage (PSTG). Rebranded to Everpure, ticker changed to P, Apr 2026. AI data management platform.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- NUCLEAR OPERATORS                                            -->
-<!-- ============================================================ -->
-<!-- STOCK:RR. | GBP_PRICE:13.10 | NOTE:LSE price in pence (GBp) — Yahoo symbol RR.L, divide by 100 for £ | RETURN_1YR:+80% | 52WK_LOW_GBP:6.98 | 52WK_HIGH_GBP:14.20 | BAR_PCT:87 -->
-<tr data-bar-pct="85" data-cat="nuclear-ops" data-change-1d="+1.73%" data-change-1m="+21.74%" data-change-1w="+10.69%" data-change-ytd="+11.73%" data-exchange="LSE" data-high-gbp="14" data-low-gbp="8.54" data-price-gbp="13" data-price-usd="1337.40" data-return="+54%" data-ticker="RR.">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/RR.L/" target="_blank"><div class="ticker" style="color:var(--accent2)">RR.</div></a><div class="exchange-badge">LSE</div></td>
-<td>Rolls-Royce Holdings</td>
-<td><span class="cat-badge cat-nuclear-ops">Nuclear Ops</span></td>
-<td><span class="price">£13</span><div class="change-pills"><span class="cpill pos">+1.73% 1D</span><span class="cpill pos">+10.69% 1W</span><span class="cpill pos">+21.74% 1M</span></div></td>
-<td><span class="return-positive">+54%</span></td><td><span class="ytd-return ytd-pos">+11.73%</span></td>
-<td><div class="range-wrap"><span class="range-label">£8.54</span><div class="range-bar-bg"><div class="range-fill" style="width:85%"></div><div class="range-dot" style="left:85%"></div></div><span class="range-label" style="text-align:right">£14</span></div></td>
-<td><span class="notes-text">UK SMR contract signed Apr 2026. Wylfa, Anglesey — 3 units. Also jets + defence.</span></td>
-</tr>
-<!-- STOCK:CEG | USD_PRICE:334.00 | GBP_PRICE:247 | RETURN_1YR:+36% | 52WK_LOW_GBP:120 | 52WK_HIGH_GBP:286 | BAR_PCT:67 -->
-<tr data-bar-pct="26" data-cat="nuclear-ops" data-change-1d="+0.40%" data-change-1m="-7.92%" data-change-1w="+0.67%" data-change-ytd="-21.21%" data-exchange="NASDAQ" data-high-gbp="307" data-low-gbp="181" data-price-gbp="214" data-price-usd="287.75" data-return="-8%" data-ticker="CEG">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/CEG/" target="_blank"><div class="ticker" style="color:var(--accent2)">CEG</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Constellation Energy</td>
-<td><span class="cat-badge cat-nuclear-ops">Nuclear Ops</span></td>
-<td><span class="price">£214</span><div class="change-pills"><span class="cpill pos">+0.40% 1D</span><span class="cpill pos">+0.67% 1W</span><span class="cpill neg">-7.92% 1M</span></div></td>
-<td><span class="return-modest">-8%</span></td><td><span class="ytd-return ytd-neg">-21.21%</span></td>
-<td><div class="range-wrap"><span class="range-label">£181</span><div class="range-bar-bg"><div class="range-fill" style="width:26%"></div><div class="range-dot" style="left:26%"></div></div><span class="range-label" style="text-align:right">£307</span></div></td>
-<td><span class="notes-text">Largest US nuclear operator. 21 reactors. 20yr deals with Meta &amp; Microsoft.</span></td>
-</tr>
-<!-- STOCK:VST | USD_PRICE:163.00 | GBP_PRICE:121 | RETURN_1YR:+58% | 52WK_LOW_GBP:76 | 52WK_HIGH_GBP:163 | BAR_PCT:60 -->
-<tr data-bar-pct="32" data-cat="nuclear-ops" data-change-1d="-0.47%" data-change-1m="+1.51%" data-change-1w="+7.48%" data-change-ytd="-2.89%" data-exchange="NYSE" data-high-gbp="163" data-low-gbp="99" data-price-gbp="119" data-price-usd="160.23" data-return="-4%" data-ticker="VST">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/VST/" target="_blank"><div class="ticker" style="color:var(--accent2)">VST</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Vistra Corp</td>
-<td><span class="cat-badge cat-nuclear-ops">Nuclear Ops</span></td>
-<td><span class="price">£119</span><div class="change-pills"><span class="cpill neg">-0.47% 1D</span><span class="cpill pos">+7.48% 1W</span><span class="cpill pos">+1.51% 1M</span></div></td>
-<td><span class="return-modest">-4%</span></td><td><span class="ytd-return ytd-neg">-2.89%</span></td>
-<td><div class="range-wrap"><span class="range-label">£99</span><div class="range-bar-bg"><div class="range-fill" style="width:32%"></div><div class="range-dot" style="left:32%"></div></div><span class="range-label" style="text-align:right">£163</span></div></td>
-<td><span class="notes-text">Nuclear + gas + retail. 6.5GW nuclear capacity. 5M retail customers.</span></td>
-</tr>
-<!-- STOCK:TLN | USD_PRICE:321.00 | GBP_PRICE:238 | RETURN_1YR:+280% | 52WK_LOW_GBP:44 | 52WK_HIGH_GBP:280 | BAR_PCT:90 -->
-<tr data-bar-pct="69" data-cat="nuclear-ops" data-change-1d="+1.55%" data-change-1m="+3.86%" data-change-1w="+7.30%" data-change-ytd="-2.50%" data-exchange="NYSE" data-high-gbp="335" data-low-gbp="179" data-price-gbp="287" data-price-usd="386.80" data-return="+56%" data-ticker="TLN">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/TLN/" target="_blank"><div class="ticker" style="color:var(--accent2)">TLN</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Talen Energy</td>
-<td><span class="cat-badge cat-nuclear-ops">Nuclear Ops</span></td>
-<td><span class="price">£287</span><div class="change-pills"><span class="cpill pos">+1.55% 1D</span><span class="cpill pos">+7.30% 1W</span><span class="cpill pos">+3.86% 1M</span></div></td>
-<td><span class="return-positive">+56%</span></td><td><span class="ytd-return ytd-neg">-2.50%</span></td>
-<td><div class="range-wrap"><span class="range-label">£179</span><div class="range-bar-bg"><div class="range-fill" style="width:69%"></div><div class="range-dot" style="left:69%"></div></div><span class="range-label" style="text-align:right">£335</span></div></td>
-<td><span class="notes-text">1,920MW to AWS through 2042. Data centre campus on-site.</span></td>
-</tr>
-<!-- STOCK:BEP | USD_PRICE:30.00 | GBP_PRICE:22 | RETURN_1YR:+30% | 52WK_LOW_GBP:14 | 52WK_HIGH_GBP:26 | BAR_PCT:65 -->
-<tr data-bar-pct="96" data-cat="nuclear-ops" data-change-1d="+0.51%" data-change-1m="+13.21%" data-change-1w="+6.04%" data-change-ytd="+35.85%" data-exchange="NYSE" data-high-gbp="28" data-low-gbp="17" data-price-gbp="28" data-price-usd="37.09" data-return="+56%" data-ticker="BEP">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BEP/" target="_blank"><div class="ticker" style="color:var(--accent2)">BEP</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Brookfield Renewable</td>
-<td><span class="cat-badge cat-nuclear-ops">Nuclear Ops</span></td>
-<td><span class="price">£28</span><div class="change-pills"><span class="cpill pos">+0.51% 1D</span><span class="cpill pos">+6.04% 1W</span><span class="cpill pos">+13.21% 1M</span></div></td>
-<td><span class="return-positive">+56%</span></td><td><span class="ytd-return ytd-pos">+35.85%</span></td>
-<td><div class="range-wrap"><span class="range-label">£17</span><div class="range-bar-bg"><div class="range-fill" style="width:96%"></div><div class="range-dot" style="left:96%"></div></div><span class="range-label" style="text-align:right">£28</span></div></td>
-<td><span class="notes-text">51% owner of Westinghouse — services 50% of world's nuclear plants.</span></td>
-</tr>
-<!-- STOCK:BEPC | USD_PRICE:24.00 | GBP_PRICE:18 | RETURN_1YR:+30% | 52WK_LOW_GBP:12 | 52WK_HIGH_GBP:22 | BAR_PCT:75 -->
-<tr data-bar-pct="68" data-cat="nuclear-ops" data-change-1d="-0.05%" data-change-1m="+11.35%" data-change-1w="+7.33%" data-change-ytd="+2.13%" data-exchange="NYSE" data-high-gbp="34" data-low-gbp="21" data-price-gbp="30" data-price-usd="39.98" data-return="+38%" data-ticker="BEPC">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BEPC/" target="_blank"><div class="ticker" style="color:var(--accent2)">BEPC</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Brookfield Renewable Corp</td>
-<td><span class="cat-badge cat-nuclear-ops">Nuclear Ops</span></td>
-<td><span class="price">£30</span><div class="change-pills"><span class="cpill neg">-0.05% 1D</span><span class="cpill pos">+7.33% 1W</span><span class="cpill pos">+11.35% 1M</span></div></td>
-<td><span class="return-modest">+38%</span></td><td><span class="ytd-return ytd-pos">+2.13%</span></td>
-<td><div class="range-wrap"><span class="range-label">£21</span><div class="range-bar-bg"><div class="range-fill" style="width:68%"></div><div class="range-dot" style="left:68%"></div></div><span class="range-label" style="text-align:right">£34</span></div></td>
-<td><span class="notes-text">Corporate share class of BEP. Same Westinghouse exposure. More liquid than LP units.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- SMR BUILDERS                                                 -->
-<!-- ============================================================ -->
-<!-- STOCK:GEV | USD_PRICE:991.00 | GBP_PRICE:733 | RETURN_1YR:+213% | 52WK_LOW_GBP:163 | 52WK_HIGH_GBP:750 | BAR_PCT:95 -->
-<tr data-bar-pct="70" data-cat="smr" data-change-1d="-3.11%" data-change-1m="-10.63%" data-change-1w="-7.23%" data-change-ytd="+42.69%" data-exchange="NYSE" data-high-gbp="878" data-low-gbp="341" data-price-gbp="720" data-price-usd="968.32" data-return="+100%" data-ticker="GEV">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/GEV/" target="_blank"><div class="ticker" style="color:var(--green)">GEV</div></a><div class="exchange-badge">NYSE</div></td>
-<td>GE Vernova</td>
-<td><span class="cat-badge cat-smr">SMR Builder</span></td>
-<td><span class="price">£720</span><div class="change-pills"><span class="cpill neg">-3.11% 1D</span><span class="cpill neg">-7.23% 1W</span><span class="cpill neg">-10.63% 1M</span></div></td>
-<td><span class="return-positive">+100%</span></td><td><span class="ytd-return ytd-pos">+42.69%</span></td>
-<td><div class="range-wrap"><span class="range-label">£341</span><div class="range-bar-bg"><div class="range-fill" style="width:70%"></div><div class="range-dot" style="left:70%"></div></div><span class="range-label" style="text-align:right">£878</span></div></td>
-<td><span class="notes-text">BWRX-300 SMR — first in Western hemisphere (Ontario). GE Hitachi JV.</span></td>
-</tr>
-<!-- STOCK:BWXT | USD_PRICE:162.00 | GBP_PRICE:120 | RETURN_1YR:+80% | 52WK_LOW_GBP:48 | 52WK_HIGH_GBP:130 | BAR_PCT:80 -->
-<tr data-bar-pct="61" data-cat="smr" data-change-1d="-2.55%" data-change-1m="-9.36%" data-change-1w="-3.28%" data-change-ytd="+8.01%" data-exchange="NYSE" data-high-gbp="180" data-low-gbp="92" data-price-gbp="146" data-price-usd="195.88" data-return="+55%" data-ticker="BWXT">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/BWXT/" target="_blank"><div class="ticker" style="color:var(--green)">BWXT</div></a><div class="exchange-badge">NYSE</div></td>
-<td>BWX Technologies</td>
-<td><span class="cat-badge cat-smr">SMR Builder</span></td>
-<td><span class="price">£146</span><div class="change-pills"><span class="cpill neg">-2.55% 1D</span><span class="cpill neg">-3.28% 1W</span><span class="cpill neg">-9.36% 1M</span></div></td>
-<td><span class="return-positive">+55%</span></td><td><span class="ytd-return ytd-pos">+8.01%</span></td>
-<td><div class="range-wrap"><span class="range-label">£92</span><div class="range-bar-bg"><div class="range-fill" style="width:61%"></div><div class="range-dot" style="left:61%"></div></div><span class="range-label" style="text-align:right">£180</span></div></td>
-<td><span class="notes-text">Sole US Navy reactor maker. "Foundry for SMRs." $7.3B backlog, +50% YoY.</span></td>
-</tr>
-<!-- STOCK:SMR | USD_PRICE:11.78 | GBP_PRICE:9 | RETURN_1YR:+150% | 52WK_LOW_GBP:3 | 52WK_HIGH_GBP:10 | BAR_PCT:60 -->
-<tr data-bar-pct="8" data-cat="smr" data-change-1d="+2.68%" data-change-1m="+1.69%" data-change-1w="+11.83%" data-change-ytd="-22.32%" data-exchange="NYSE" data-high-gbp="43" data-low-gbp="6.58" data-price-gbp="9.42" data-price-usd="12.67" data-return="-60%*" data-ticker="SMR">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/SMR/" target="_blank"><div class="ticker" style="color:var(--green)">SMR</div></a><div class="exchange-badge">NYSE</div></td>
-<td>NuScale Power</td>
-<td><span class="cat-badge cat-smr">SMR Builder</span></td>
-<td><span class="price">£9.42</span><div class="change-pills"><span class="cpill pos">+2.68% 1D</span><span class="cpill pos">+11.83% 1W</span><span class="cpill pos">+1.69% 1M</span></div></td>
-<td><span class="return-modest">-60%*</span></td><td><span class="ytd-return ytd-neg">-22.32%</span></td>
-<td><div class="range-wrap"><span class="range-label">£6.58</span><div class="range-bar-bg"><div class="range-fill" style="width:8%"></div><div class="range-dot" style="left:8%"></div></div><span class="range-label" style="text-align:right">£43</span></div></td>
-<td><span class="notes-text">Only NRC-certified SMR design. 77MWe modules. TVA 6GW deal. Speculative.</span></td>
-</tr>
-<!-- STOCK:OKLO | USD_PRICE:50.25 | GBP_PRICE:37 | RETURN_1YR:+150% | 52WK_LOW_GBP:15 | 52WK_HIGH_GBP:143 | BAR_PCT:35 | NOTE:Down ~75% from ATH -->
-<tr data-bar-pct="15" data-cat="smr" data-change-1d="-2.74%" data-change-1m="-7.75%" data-change-1w="+2.75%" data-change-ytd="-14.04%" data-exchange="NYSE" data-high-gbp="144" data-low-gbp="33" data-price-gbp="50" data-price-usd="66.88" data-return="+28%*" data-ticker="OKLO">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/OKLO/" target="_blank"><div class="ticker" style="color:var(--green)">OKLO</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Oklo Inc</td>
-<td><span class="cat-badge cat-smr">SMR Builder</span></td>
-<td><span class="price">£50</span><div class="change-pills"><span class="cpill neg">-2.74% 1D</span><span class="cpill pos">+2.75% 1W</span><span class="cpill neg">-7.75% 1M</span></div></td>
-<td><span class="return-modest">+28%*</span></td><td><span class="ytd-return ytd-neg">-14.04%</span></td>
-<td><div class="range-wrap"><span class="range-label">£33</span><div class="range-bar-bg"><div class="range-fill" style="width:15%"></div><div class="range-dot" style="left:15%"></div></div><span class="range-label" style="text-align:right">£144</span></div></td>
-<td><span class="notes-text">Sam Altman-backed. Fast-fission + waste recycling. -75% from ATH of £143.</span></td>
-</tr>
-<!-- STOCK:NNE | USD_PRICE:25.99 | GBP_PRICE:19 | RETURN_1YR:+50% | 52WK_LOW_GBP:13 | 52WK_HIGH_GBP:45 | BAR_PCT:30 | NOTE:Down ~57% from ATH -->
-<tr data-bar-pct="24" data-cat="smr" data-change-1d="+0.28%" data-change-1m="+23.52%" data-change-1w="+15.15%" data-change-ytd="+4.60%" data-exchange="NASDAQ" data-high-gbp="45" data-low-gbp="14" data-price-gbp="21" data-price-usd="28.88" data-return="-7%*" data-ticker="NNE">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/NNE/" target="_blank"><div class="ticker" style="color:var(--green)">NNE</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>NANO Nuclear Energy</td>
-<td><span class="cat-badge cat-smr">SMR Builder</span></td>
-<td><span class="price">£21</span><div class="change-pills"><span class="cpill pos">+0.28% 1D</span><span class="cpill pos">+15.15% 1W</span><span class="cpill pos">+23.52% 1M</span></div></td>
-<td><span class="return-modest">-7%*</span></td><td><span class="ytd-return ytd-pos">+4.60%</span></td>
-<td><div class="range-wrap"><span class="range-label">£14</span><div class="range-bar-bg"><div class="range-fill" style="width:24%"></div><div class="range-dot" style="left:24%"></div></div><span class="range-label" style="text-align:right">£45</span></div></td>
-<td><span class="notes-text">Microreactors: KRONOS, ZEUS, LOKI. Space nuclear mandate catalyst. Pre-revenue.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- URANIUM                                                      -->
-<!-- ============================================================ -->
-<!-- STOCK:CCJ | USD_PRICE:112.00 | GBP_PRICE:83 | RETURN_1YR:+181% | 52WK_LOW_GBP:26 | 52WK_HIGH_GBP:100 | BAR_PCT:74 -->
-<tr data-bar-pct="71" data-cat="uranium" data-change-1d="+1.35%" data-change-1m="-8.40%" data-change-1w="+7.00%" data-change-ytd="+14.35%" data-exchange="NYSE" data-high-gbp="100" data-low-gbp="43" data-price-gbp="84" data-price-usd="112.70" data-return="+94%" data-ticker="CCJ">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/CCJ/" target="_blank"><div class="ticker" style="color:var(--gold)">CCJ</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Cameco Corporation</td>
-<td><span class="cat-badge cat-uranium">Uranium</span></td>
-<td><span class="price">£84</span><div class="change-pills"><span class="cpill pos">+1.35% 1D</span><span class="cpill pos">+7.00% 1W</span><span class="cpill neg">-8.40% 1M</span></div></td>
-<td><span class="return-positive">+94%</span></td><td><span class="ytd-return ytd-pos">+14.35%</span></td>
-<td><div class="range-wrap"><span class="range-label">£43</span><div class="range-bar-bg"><div class="range-fill" style="width:71%"></div><div class="range-dot" style="left:71%"></div></div><span class="range-label" style="text-align:right">£100</span></div></td>
-<td><span class="notes-text">World's largest uranium miner. Also 49% owner of Westinghouse.</span></td>
-</tr>
-<!-- STOCK:UEC | USD_PRICE:15.04 | GBP_PRICE:11 | RETURN_1YR:+225% | 52WK_LOW_GBP:3 | 52WK_HIGH_GBP:15 | BAR_PCT:65 -->
-<tr data-bar-pct="55" data-cat="uranium" data-change-1d="+1.29%" data-change-1m="-7.52%" data-change-1w="+5.11%" data-change-ytd="+5.03%" data-exchange="NYSE" data-high-gbp="15" data-low-gbp="4.18" data-price-gbp="10" data-price-usd="13.77" data-return="+142%" data-ticker="UEC">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/UEC/" target="_blank"><div class="ticker" style="color:var(--gold)">UEC</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Uranium Energy Corp</td>
-<td><span class="cat-badge cat-uranium">Uranium</span></td>
-<td><span class="price">£10</span><div class="change-pills"><span class="cpill pos">+1.29% 1D</span><span class="cpill pos">+5.11% 1W</span><span class="cpill neg">-7.52% 1M</span></div></td>
-<td><span class="return-positive">+142%</span></td><td><span class="ytd-return ytd-pos">+5.03%</span></td>
-<td><div class="range-wrap"><span class="range-label">£4.18</span><div class="range-bar-bg"><div class="range-fill" style="width:55%"></div><div class="range-dot" style="left:55%"></div></div><span class="range-label" style="text-align:right">£15</span></div></td>
-<td><span class="notes-text">US-focused uranium miner. Lower entry price. Higher volatility.</span></td>
-</tr>
-<!-- STOCK:LEU | USD_PRICE:202.00 | GBP_PRICE:149 | RETURN_1YR:+170% | 52WK_LOW_GBP:41 | 52WK_HIGH_GBP:133 | BAR_PCT:80 -->
-<tr data-bar-pct="17" data-cat="uranium" data-change-1d="-1.63%" data-change-1m="-13.50%" data-change-1w="+3.00%" data-change-ytd="-33.04%" data-exchange="NYSE" data-high-gbp="345" data-low-gbp="92" data-price-gbp="136" data-price-usd="182.47" data-return="+46%" data-ticker="LEU">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/LEU/" target="_blank"><div class="ticker" style="color:var(--gold)">LEU</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Centrus Energy</td>
-<td><span class="cat-badge cat-uranium">Uranium</span></td>
-<td><span class="price">£136</span><div class="change-pills"><span class="cpill neg">-1.63% 1D</span><span class="cpill pos">+3.00% 1W</span><span class="cpill neg">-13.50% 1M</span></div></td>
-<td><span class="return-modest">+46%</span></td><td><span class="ytd-return ytd-neg">-33.04%</span></td>
-<td><div class="range-wrap"><span class="range-label">£92</span><div class="range-bar-bg"><div class="range-fill" style="width:17%"></div><div class="range-dot" style="left:17%"></div></div><span class="range-label" style="text-align:right">£345</span></div></td>
-<td><span class="notes-text">Only licensed US supplier of HALEU fuel for advanced reactors. Strategic monopoly.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- POWER INFRASTRUCTURE                                         -->
-<!-- ============================================================ -->
-<!-- STOCK:VRT | USD_PRICE:295.00 | GBP_PRICE:218 | RETURN_1YR:+200% | 52WK_LOW_GBP:55 | 52WK_HIGH_GBP:225 | BAR_PCT:88 -->
-<tr data-bar-pct="77" data-cat="power-infra" data-change-1d="-0.25%" data-change-1m="-3.89%" data-change-1w="-2.38%" data-change-ytd="+79.82%" data-exchange="NYSE" data-high-gbp="282" data-low-gbp="79" data-price-gbp="235" data-price-usd="315.71" data-return="+189%" data-ticker="VRT">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/VRT/" target="_blank"><div class="ticker" style="color:var(--accent)">VRT</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Vertiv Holdings</td>
-<td><span class="cat-badge cat-power-infra">Power Infra</span></td>
-<td><span class="price">£235</span><div class="change-pills"><span class="cpill neg">-0.25% 1D</span><span class="cpill neg">-2.38% 1W</span><span class="cpill neg">-3.89% 1M</span></div></td>
-<td><span class="return-positive">+189%</span></td><td><span class="ytd-return ytd-pos">+79.82%</span></td>
-<td><div class="range-wrap"><span class="range-label">£79</span><div class="range-bar-bg"><div class="range-fill" style="width:77%"></div><div class="range-dot" style="left:77%"></div></div><span class="range-label" style="text-align:right">£282</span></div></td>
-<td><span class="notes-text">Data centre cooling &amp; power management. Every AI data centre needs this.</span></td>
-</tr>
-<!-- STOCK:ETN | USD_PRICE:392.00 | GBP_PRICE:290 | RETURN_1YR:+60% | 52WK_LOW_GBP:140 | 52WK_HIGH_GBP:310 | BAR_PCT:80 -->
-<tr data-bar-pct="72" data-cat="power-infra" data-change-1d="-0.60%" data-change-1m="-7.23%" data-change-1w="+5.00%" data-change-ytd="+23.11%" data-exchange="NYSE" data-high-gbp="324" data-low-gbp="232" data-price-gbp="298" data-price-usd="400.60" data-return="+26%" data-ticker="ETN">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/ETN/" target="_blank"><div class="ticker" style="color:var(--accent)">ETN</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Eaton Corporation</td>
-<td><span class="cat-badge cat-power-infra">Power Infra</span></td>
-<td><span class="price">£298</span><div class="change-pills"><span class="cpill neg">-0.60% 1D</span><span class="cpill pos">+5.00% 1W</span><span class="cpill neg">-7.23% 1M</span></div></td>
-<td><span class="return-modest">+26%</span></td><td><span class="ytd-return ytd-pos">+23.11%</span></td>
-<td><div class="range-wrap"><span class="range-label">£232</span><div class="range-bar-bg"><div class="range-fill" style="width:72%"></div><div class="range-dot" style="left:72%"></div></div><span class="range-label" style="text-align:right">£324</span></div></td>
-<td><span class="notes-text">Electrical components &amp; transformers. Grid infrastructure backbone.</span></td>
-</tr>
-<!-- STOCK:POWL | USD_PRICE:311.00 | GBP_PRICE:230 | RETURN_1YR:+180% | 52WK_LOW_GBP:60 | 52WK_HIGH_GBP:240 | BAR_PCT:88 -->
-<tr data-bar-pct="84" data-cat="power-infra" data-change-1d="-1.92%" data-change-1m="+2.61%" data-change-1w="+5.05%" data-change-ytd="+142.25%" data-exchange="NASDAQ" data-high-gbp="244" data-low-gbp="41" data-price-gbp="211" data-price-usd="284.42" data-return="+394%" data-ticker="POWL">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/POWL/" target="_blank"><div class="ticker" style="color:var(--accent)">POWL</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Powell Industries</td>
-<td><span class="cat-badge cat-power-infra">Power Infra</span></td>
-<td><span class="price">£211</span><div class="change-pills"><span class="cpill neg">-1.92% 1D</span><span class="cpill pos">+5.05% 1W</span><span class="cpill pos">+2.61% 1M</span></div></td>
-<td><span class="return-mega">+394%</span></td><td><span class="ytd-return ytd-pos">+142.25%</span></td>
-<td><div class="range-wrap"><span class="range-label">£41</span><div class="range-bar-bg"><div class="range-fill" style="width:84%"></div><div class="range-dot" style="left:84%"></div></div><span class="range-label" style="text-align:right">£244</span></div></td>
-<td><span class="notes-text">Switchgear &amp; electrical infrastructure. Less-known but strong AI tailwind.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- DATA CENTRE OPERATORS                                        -->
-<!-- ============================================================ -->
-<!-- STOCK:EQIX | USD_PRICE:950.00 | GBP_PRICE:703 | RETURN_1YR:+25% | 52WK_LOW_GBP:530 | 52WK_HIGH_GBP:720 | BAR_PCT:91 -->
-<tr data-bar-pct="85" data-cat="dc-operators" data-change-1d="-0.26%" data-change-1m="-0.88%" data-change-1w="-0.96%" data-change-ytd="+41.23%" data-exchange="NASDAQ" data-high-gbp="839" data-low-gbp="528" data-price-gbp="794" data-price-usd="1068.04" data-return="+20%" data-ticker="EQIX">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/EQIX/" target="_blank"><div class="ticker" style="color:var(--blue)">EQIX</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Equinix</td>
-<td><span class="cat-badge cat-dc-operators">DC Operator</span></td>
-<td><span class="price">£794</span><div class="change-pills"><span class="cpill neg">-0.26% 1D</span><span class="cpill neg">-0.96% 1W</span><span class="cpill neg">-0.88% 1M</span></div></td>
-<td><span class="return-modest">+20%</span></td><td><span class="ytd-return ytd-pos">+41.23%</span></td>
-<td><div class="range-wrap"><span class="range-label">£528</span><div class="range-bar-bg"><div class="range-fill" style="width:85%"></div><div class="range-dot" style="left:85%"></div></div><span class="range-label" style="text-align:right">£839</span></div></td>
-<td><span class="notes-text">Largest global colocation provider. 260+ data centres, 70 metros worldwide.</span></td>
-</tr>
-<!-- STOCK:DLR | USD_PRICE:160.00 | GBP_PRICE:118 | RETURN_1YR:+40% | 52WK_LOW_GBP:80 | 52WK_HIGH_GBP:125 | BAR_PCT:86 -->
-<tr data-bar-pct="71" data-cat="dc-operators" data-change-1d="-1.10%" data-change-1m="-5.44%" data-change-1w="-2.20%" data-change-ytd="+23.39%" data-exchange="NYSE" data-high-gbp="155" data-low-gbp="109" data-price-gbp="141" data-price-usd="190.00" data-return="+10%" data-ticker="DLR">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/DLR/" target="_blank"><div class="ticker" style="color:var(--blue)">DLR</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Digital Realty</td>
-<td><span class="cat-badge cat-dc-operators">DC Operator</span></td>
-<td><span class="price">£141</span><div class="change-pills"><span class="cpill neg">-1.10% 1D</span><span class="cpill neg">-2.20% 1W</span><span class="cpill neg">-5.44% 1M</span></div></td>
-<td><span class="return-modest">+10%</span></td><td><span class="ytd-return ytd-pos">+23.39%</span></td>
-<td><div class="range-wrap"><span class="range-label">£109</span><div class="range-bar-bg"><div class="range-fill" style="width:71%"></div><div class="range-dot" style="left:71%"></div></div><span class="range-label" style="text-align:right">£155</span></div></td>
-<td><span class="notes-text">Major DC REIT. 300+ facilities across 25 countries. AI demand driving occupancy.</span></td>
-</tr>
-<!-- STOCK:AMT | USD_PRICE:190.00 | GBP_PRICE:141 | RETURN_1YR:+15% | 52WK_LOW_GBP:95 | 52WK_HIGH_GBP:155 | BAR_PCT:77 -->
-<tr data-bar-pct="32" data-cat="dc-operators" data-change-1d="-0.28%" data-change-1m="+2.33%" data-change-1w="+1.73%" data-change-ytd="+8.03%" data-exchange="NYSE" data-high-gbp="174" data-low-gbp="123" data-price-gbp="139" data-price-usd="186.96" data-return="-13%" data-ticker="AMT">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AMT/" target="_blank"><div class="ticker" style="color:var(--blue)">AMT</div></a><div class="exchange-badge">NYSE</div></td>
-<td>American Tower</td>
-<td><span class="cat-badge cat-dc-operators">DC Operator</span></td>
-<td><span class="price">£139</span><div class="change-pills"><span class="cpill neg">-0.28% 1D</span><span class="cpill pos">+1.73% 1W</span><span class="cpill pos">+2.33% 1M</span></div></td>
-<td><span class="return-modest">-13%</span></td><td><span class="ytd-return ytd-pos">+8.03%</span></td>
-<td><div class="range-wrap"><span class="range-label">£123</span><div class="range-bar-bg"><div class="range-fill" style="width:32%"></div><div class="range-dot" style="left:32%"></div></div><span class="range-label" style="text-align:right">£174</span></div></td>
-<td><span class="notes-text">Tower REIT expanding into edge compute. 220,000+ sites globally.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- HYPERSCALERS                                                  -->
-<!-- ============================================================ -->
-<!-- STOCK:GOOGL | USD_PRICE:175.00 | GBP_PRICE:129 | RETURN_1YR:+35% | 52WK_LOW_GBP:95 | 52WK_HIGH_GBP:135 | BAR_PCT:80 -->
-<tr data-bar-pct="89" data-cat="hyperscalers" data-change-1d="-2.30%" data-change-1m="-1.16%" data-change-1w="-1.89%" data-change-ytd="+20.77%" data-exchange="NASDAQ" data-high-gbp="304" data-low-gbp="120" data-price-gbp="283" data-price-usd="380.34" data-return="+125%" data-ticker="GOOGL">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/GOOGL/" target="_blank"><div class="ticker" style="color:var(--indigo)">GOOGL</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Alphabet (Google)</td>
-<td><span class="cat-badge cat-hyperscalers">Hyperscaler</span></td>
-<td><span class="price">£283</span><div class="change-pills"><span class="cpill neg">-2.30% 1D</span><span class="cpill neg">-1.89% 1W</span><span class="cpill neg">-1.16% 1M</span></div></td>
-<td><span class="return-positive">+125%</span></td><td><span class="ytd-return ytd-pos">+20.77%</span></td>
-<td><div class="range-wrap"><span class="range-label">£120</span><div class="range-bar-bg"><div class="range-fill" style="width:89%"></div><div class="range-dot" style="left:89%"></div></div><span class="range-label" style="text-align:right">£304</span></div></td>
-<td><span class="notes-text">Google Cloud + TPU AI chips. $75B capex planned for 2026 data centres.</span></td>
-</tr>
-<!-- STOCK:MSFT | USD_PRICE:400.00 | GBP_PRICE:296 | RETURN_1YR:+20% | 52WK_LOW_GBP:200 | 52WK_HIGH_GBP:310 | BAR_PCT:98 -->
-<tr data-bar-pct="47" data-cat="hyperscalers" data-change-1d="+5.27%" data-change-1m="+10.65%" data-change-1w="+7.43%" data-change-ytd="-4.38%" data-exchange="NASDAQ" data-high-gbp="413" data-low-gbp="265" data-price-gbp="335" data-price-usd="450.24" data-return="-3%" data-ticker="MSFT">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/MSFT/" target="_blank"><div class="ticker" style="color:var(--indigo)">MSFT</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Microsoft</td>
-<td><span class="cat-badge cat-hyperscalers">Hyperscaler</span></td>
-<td><span class="price">£335</span><div class="change-pills"><span class="cpill pos">+5.27% 1D</span><span class="cpill pos">+7.43% 1W</span><span class="cpill pos">+10.65% 1M</span></div></td>
-<td><span class="return-modest">-3%</span></td><td><span class="ytd-return ytd-neg">-4.38%</span></td>
-<td><div class="range-wrap"><span class="range-label">£265</span><div class="range-bar-bg"><div class="range-fill" style="width:47%"></div><div class="range-dot" style="left:47%"></div></div><span class="range-label" style="text-align:right">£413</span></div></td>
-<td><span class="notes-text">Azure + OpenAI partnership. $80B data centre capex in 2026. Copilot monetisation.</span></td>
-</tr>
-<!-- STOCK:AMZN | USD_PRICE:210.00 | GBP_PRICE:155 | RETURN_1YR:+45% | 52WK_LOW_GBP:105 | 52WK_HIGH_GBP:160 | BAR_PCT:94 -->
-<tr data-bar-pct="90" data-cat="hyperscalers" data-change-1d="-0.71%" data-change-1m="+2.11%" data-change-1w="+0.81%" data-change-ytd="+19.49%" data-exchange="NASDAQ" data-high-gbp="207" data-low-gbp="146" data-price-gbp="201" data-price-usd="270.64" data-return="+31%" data-ticker="AMZN">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AMZN/" target="_blank"><div class="ticker" style="color:var(--indigo)">AMZN</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Amazon</td>
-<td><span class="cat-badge cat-hyperscalers">Hyperscaler</span></td>
-<td><span class="price">£201</span><div class="change-pills"><span class="cpill neg">-0.71% 1D</span><span class="cpill pos">+0.81% 1W</span><span class="cpill pos">+2.11% 1M</span></div></td>
-<td><span class="return-modest">+31%</span></td><td><span class="ytd-return ytd-pos">+19.49%</span></td>
-<td><div class="range-wrap"><span class="range-label">£146</span><div class="range-bar-bg"><div class="range-fill" style="width:90%"></div><div class="range-dot" style="left:90%"></div></div><span class="range-label" style="text-align:right">£207</span></div></td>
-<td><span class="notes-text">AWS dominates cloud AI infra. Trainium &amp; Inferentia custom AI chips. Bedrock platform.</span></td>
-</tr>
-<!-- STOCK:META | USD_PRICE:580.00 | GBP_PRICE:429 | RETURN_1YR:+60% | 52WK_LOW_GBP:260 | 52WK_HIGH_GBP:440 | BAR_PCT:92 -->
-<tr data-bar-pct="41" data-cat="hyperscalers" data-change-1d="-0.08%" data-change-1m="+3.37%" data-change-1w="+4.14%" data-change-ytd="-2.67%" data-exchange="NASDAQ" data-high-gbp="592" data-low-gbp="387" data-price-gbp="470" data-price-usd="632.51" data-return="-6%" data-ticker="META">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/META/" target="_blank"><div class="ticker" style="color:var(--indigo)">META</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Meta Platforms</td>
-<td><span class="cat-badge cat-hyperscalers">Hyperscaler</span></td>
-<td><span class="price">£470</span><div class="change-pills"><span class="cpill neg">-0.08% 1D</span><span class="cpill pos">+4.14% 1W</span><span class="cpill pos">+3.37% 1M</span></div></td>
-<td><span class="return-modest">-6%</span></td><td><span class="ytd-return ytd-neg">-2.67%</span></td>
-<td><div class="range-wrap"><span class="range-label">£387</span><div class="range-bar-bg"><div class="range-fill" style="width:41%"></div><div class="range-dot" style="left:41%"></div></div><span class="range-label" style="text-align:right">£592</span></div></td>
-<td><span class="notes-text">$65B AI capex 2026. Llama open-source models. Building 2GW data centre campus.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- AI COMPUTE                                                    -->
-<!-- ============================================================ -->
-<!-- STOCK:IREN | USD_PRICE:10.00 | GBP_PRICE:7 | RETURN_1YR:+200% | 52WK_LOW_GBP:3 | 52WK_HIGH_GBP:12 | BAR_PCT:44 -->
-<tr data-bar-pct="81" data-cat="ai-compute" data-change-1d="-1.73%" data-change-1m="+39.62%" data-change-1w="+9.44%" data-change-ytd="+48.81%" data-exchange="NASDAQ" data-high-gbp="57" data-low-gbp="6.18" data-price-gbp="47" data-price-usd="63.54" data-return="+628%*" data-ticker="IREN">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/IREN/" target="_blank"><div class="ticker" style="color:var(--rose)">IREN</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Iris Energy</td>
-<td><span class="cat-badge cat-ai-compute">AI Compute</span></td>
-<td><span class="price">£47</span><div class="change-pills"><span class="cpill neg">-1.73% 1D</span><span class="cpill pos">+9.44% 1W</span><span class="cpill pos">+39.62% 1M</span></div></td>
-<td><span class="return-mega">+628%*</span></td><td><span class="ytd-return ytd-pos">+48.81%</span></td>
-<td><div class="range-wrap"><span class="range-label">£6.18</span><div class="range-bar-bg"><div class="range-fill" style="width:81%"></div><div class="range-dot" style="left:81%"></div></div><span class="range-label" style="text-align:right">£57</span></div></td>
-<td><span class="notes-text">Pivoting from Bitcoin mining to AI GPU compute. Renewable-powered data centres.</span></td>
-</tr>
-<!-- STOCK:CORZ | USD_PRICE:18.00 | GBP_PRICE:13 | RETURN_1YR:+350% | 52WK_LOW_GBP:3 | 52WK_HIGH_GBP:20 | BAR_PCT:59 -->
-<tr data-bar-pct="92" data-cat="ai-compute" data-change-1d="-3.97%" data-change-1m="+34.25%" data-change-1w="+8.18%" data-change-ytd="+67.92%" data-exchange="NASDAQ" data-high-gbp="21" data-low-gbp="7.80" data-price-gbp="20" data-price-usd="26.85" data-return="+146%*" data-ticker="CORZ">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/CORZ/" target="_blank"><div class="ticker" style="color:var(--rose)">CORZ</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Core Scientific</td>
-<td><span class="cat-badge cat-ai-compute">AI Compute</span></td>
-<td><span class="price">£20</span><div class="change-pills"><span class="cpill neg">-3.97% 1D</span><span class="cpill pos">+8.18% 1W</span><span class="cpill pos">+34.25% 1M</span></div></td>
-<td><span class="return-positive">+146%*</span></td><td><span class="ytd-return ytd-pos">+67.92%</span></td>
-<td><div class="range-wrap"><span class="range-label">£7.80</span><div class="range-bar-bg"><div class="range-fill" style="width:92%"></div><div class="range-dot" style="left:92%"></div></div><span class="range-label" style="text-align:right">£21</span></div></td>
-<td><span class="notes-text">Crypto→AI pivot. 200MW CoreWeave HPC deal. Emerged from bankruptcy 2023.</span></td>
-</tr>
-<!-- STOCK:WULF | USD_PRICE:6.00 | GBP_PRICE:4 | RETURN_1YR:+180% | 52WK_LOW_GBP:2 | 52WK_HIGH_GBP:8 | BAR_PCT:50 -->
-<tr data-bar-pct="93" data-cat="ai-compute" data-change-1d="-3.03%" data-change-1m="+17.63%" data-change-1w="+11.52%" data-change-ytd="+100.63%" data-exchange="NASDAQ" data-high-gbp="20" data-low-gbp="2.53" data-price-gbp="19" data-price-usd="25.56" data-return="+608%*" data-ticker="WULF">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/WULF/" target="_blank"><div class="ticker" style="color:var(--rose)">WULF</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>TeraWulf</td>
-<td><span class="cat-badge cat-ai-compute">AI Compute</span></td>
-<td><span class="price">£19</span><div class="change-pills"><span class="cpill neg">-3.03% 1D</span><span class="cpill pos">+11.52% 1W</span><span class="cpill pos">+17.63% 1M</span></div></td>
-<td><span class="return-mega">+608%*</span></td><td><span class="ytd-return ytd-pos">+100.63%</span></td>
-<td><div class="range-wrap"><span class="range-label">£2.53</span><div class="range-bar-bg"><div class="range-fill" style="width:93%"></div><div class="range-dot" style="left:93%"></div></div><span class="range-label" style="text-align:right">£20</span></div></td>
-<td><span class="notes-text">Nuclear-powered Bitcoin/AI compute. 95% zero-carbon. Building HPC capacity.</span></td>
-</tr>
-<!-- STOCK:HUT | USD_PRICE:18.00 | GBP_PRICE:13 | RETURN_1YR:+300% | 52WK_LOW_GBP:4 | 52WK_HIGH_GBP:22 | BAR_PCT:50 -->
-<tr data-bar-pct="98" data-cat="ai-compute" data-change-1d="-0.13%" data-change-1m="+64.73%" data-change-1w="+18.59%" data-change-ytd="+143.48%" data-exchange="NASDAQ" data-high-gbp="94" data-low-gbp="11" data-price-gbp="93" data-price-usd="124.83" data-return="+721%" data-ticker="HUT">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/HUT/" target="_blank"><div class="ticker" style="color:var(--rose)">HUT</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Hut 8 Mining</td>
-<td><span class="cat-badge cat-ai-compute">AI Compute</span></td>
-<td><span class="price">£93</span><div class="change-pills"><span class="cpill neg">-0.13% 1D</span><span class="cpill pos">+18.59% 1W</span><span class="cpill pos">+64.73% 1M</span></div></td>
-<td><span class="return-mega">+721%</span></td><td><span class="ytd-return ytd-pos">+143.48%</span></td>
-<td><div class="range-wrap"><span class="range-label">£11</span><div class="range-bar-bg"><div class="range-fill" style="width:98%"></div><div class="range-dot" style="left:98%"></div></div><span class="range-label" style="text-align:right">£94</span></div></td>
-<td><span class="notes-text">Bitcoin mining + AI compute pivot. US HPC expansion. High volatility.</span></td>
-</tr>
-<!-- STOCK:SMCI | USD_PRICE:40.00 | GBP_PRICE:30 | RETURN_1YR:+80% | 52WK_LOW_GBP:15 | 52WK_HIGH_GBP:70 | BAR_PCT:27 -->
-<tr data-bar-pct="62" data-cat="ai-compute" data-change-1d="+1.97%" data-change-1m="+68.21%" data-change-1w="+37.75%" data-change-ytd="+48.87%" data-exchange="NASDAQ" data-high-gbp="46" data-low-gbp="14" data-price-gbp="34" data-price-usd="46.09" data-return="+12%" data-ticker="SMCI">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/SMCI/" target="_blank"><div class="ticker" style="color:var(--rose)">SMCI</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Super Micro Computer</td>
-<td><span class="cat-badge cat-ai-compute">AI Compute</span></td>
-<td><span class="price">£34</span><div class="change-pills"><span class="cpill pos">+1.97% 1D</span><span class="cpill pos">+37.75% 1W</span><span class="cpill pos">+68.21% 1M</span></div></td>
-<td><span class="return-modest">+12%</span></td><td><span class="ytd-return ytd-pos">+48.87%</span></td>
-<td><div class="range-wrap"><span class="range-label">£14</span><div class="range-bar-bg"><div class="range-fill" style="width:62%"></div><div class="range-dot" style="left:62%"></div></div><span class="range-label" style="text-align:right">£46</span></div></td>
-<td><span class="notes-text">AI server manufacturer. Top Nvidia GPU server integrator. Accounting controversy overhang.</span></td>
-</tr>
-<!-- STOCK:DELL | USD_PRICE:115.00 | GBP_PRICE:85 | RETURN_1YR:+50% | 52WK_LOW_GBP:60 | 52WK_HIGH_GBP:130 | BAR_PCT:36 -->
-<tr data-bar-pct="97" data-cat="ai-compute" data-change-1d="-4.56%" data-change-1m="+101.44%" data-change-1w="+66.50%" data-change-ytd="+231.81%" data-exchange="NYSE" data-high-gbp="319" data-low-gbp="79" data-price-gbp="313" data-price-usd="420.91" data-return="+289%" data-ticker="DELL">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/DELL/" target="_blank"><div class="ticker" style="color:var(--rose)">DELL</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Dell Technologies</td>
-<td><span class="cat-badge cat-ai-compute">AI Compute</span></td>
-<td><span class="price">£313</span><div class="change-pills"><span class="cpill neg">-4.56% 1D</span><span class="cpill pos">+66.50% 1W</span><span class="cpill pos">+101.44% 1M</span></div></td>
-<td><span class="return-mega">+289%</span></td><td><span class="ytd-return ytd-pos">+231.81%</span></td>
-<td><div class="range-wrap"><span class="range-label">£79</span><div class="range-bar-bg"><div class="range-fill" style="width:97%"></div><div class="range-dot" style="left:97%"></div></div><span class="range-label" style="text-align:right">£319</span></div></td>
-<td><span class="notes-text">AI server &amp; storage giant. PowerEdge AI servers. $10B+ AI infrastructure backlog.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- FIBRE / OPTICAL                                              -->
-<!-- ============================================================ -->
-<tr data-bar-pct="85" data-cat="fibre-optical" data-change-1d="-4.88%" data-change-1m="+13.06%" data-change-1w="-4.37%" data-change-ytd="+86.01%" data-exchange="NYSE" data-high-gbp="307" data-low-gbp="55" data-price-gbp="269" data-price-usd="361.47" data-return="+371%" data-ticker="COHR">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/COHR/" target="_blank"><div class="ticker" style="color:var(--teal)">COHR</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Coherent Corp</td>
-<td><span class="cat-badge cat-fibre-optical">Fibre / Optical</span></td>
-<td><span class="price">£269</span><div class="change-pills"><span class="cpill neg">-4.88% 1D</span><span class="cpill neg">-4.37% 1W</span><span class="cpill pos">+13.06% 1M</span></div></td>
-<td><span class="return-mega">+371%</span></td><td><span class="ytd-return ytd-pos">+86.01%</span></td>
-<td><div class="range-wrap"><span class="range-label">£55</span><div class="range-bar-bg"><div class="range-fill" style="width:85%"></div><div class="range-dot" style="left:85%"></div></div><span class="range-label" style="text-align:right">£307</span></div></td>
-<td><span class="notes-text">800G/1.6T optical transceivers &amp; components. Largest vertically integrated photonics vendor.</span></td>
-</tr>
-<tr data-bar-pct="77" data-cat="fibre-optical" data-change-1d="-1.39%" data-change-1m="-5.25%" data-change-1w="-11.36%" data-change-ytd="+121.43%" data-exchange="NASDAQ" data-high-gbp="807" data-low-gbp="54" data-price-gbp="635" data-price-usd="854.96" data-return="+1027%" data-ticker="LITE">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/LITE/" target="_blank"><div class="ticker" style="color:var(--teal)">LITE</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Lumentum Holdings</td>
-<td><span class="cat-badge cat-fibre-optical">Fibre / Optical</span></td>
-<td><span class="price">£635</span><div class="change-pills"><span class="cpill neg">-1.39% 1D</span><span class="cpill neg">-11.36% 1W</span><span class="cpill neg">-5.25% 1M</span></div></td>
-<td><span class="return-mega">+1027%</span></td><td><span class="ytd-return ytd-pos">+121.43%</span></td>
-<td><div class="range-wrap"><span class="range-label">£54</span><div class="range-bar-bg"><div class="range-fill" style="width:77%"></div><div class="range-dot" style="left:77%"></div></div><span class="range-label" style="text-align:right">£807</span></div></td>
-<td><span class="notes-text">High-power lasers &amp; optical components. 3D sensing + datacoms lasers for AI hyperscaler buildout.</span></td>
-</tr>
-<tr data-bar-pct="66" data-cat="fibre-optical" data-change-1d="-6.82%" data-change-1m="-3.62%" data-change-1w="-10.41%" data-change-ytd="+300.03%" data-exchange="NASDAQ" data-high-gbp="174" data-low-gbp="11" data-price-gbp="118" data-price-usd="158.41" data-return="+921%" data-ticker="AAOI">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AAOI/" target="_blank"><div class="ticker" style="color:var(--teal)">AAOI</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Applied Optoelectronics</td>
-<td><span class="cat-badge cat-fibre-optical">Fibre / Optical</span></td>
-<td><span class="price">£118</span><div class="change-pills"><span class="cpill neg">-6.82% 1D</span><span class="cpill neg">-10.41% 1W</span><span class="cpill neg">-3.62% 1M</span></div></td>
-<td><span class="return-mega">+921%</span></td><td><span class="ytd-return ytd-pos">+300.03%</span></td>
-<td><div class="range-wrap"><span class="range-label">£11</span><div class="range-bar-bg"><div class="range-fill" style="width:66%"></div><div class="range-dot" style="left:66%"></div></div><span class="range-label" style="text-align:right">£174</span></div></td>
-<td><span class="notes-text">Pure-play 400G/800G datacenter transceivers. Small-cap with high AI data centre concentration.</span></td>
-</tr>
-<tr data-bar-pct="82" data-cat="fibre-optical" data-change-1d="-2.91%" data-change-1m="-4.29%" data-change-1w="-6.98%" data-change-ytd="+36.45%" data-exchange="NYSE" data-high-gbp="557" data-low-gbp="171" data-price-gbp="486" data-price-usd="654.16" data-return="+180%" data-ticker="FN">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/FN/" target="_blank"><div class="ticker" style="color:var(--teal)">FN</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Fabrinet</td>
-<td><span class="cat-badge cat-fibre-optical">Fibre / Optical</span></td>
-<td><span class="price">£486</span><div class="change-pills"><span class="cpill neg">-2.91% 1D</span><span class="cpill neg">-6.98% 1W</span><span class="cpill neg">-4.29% 1M</span></div></td>
-<td><span class="return-positive">+180%</span></td><td><span class="ytd-return ytd-pos">+36.45%</span></td>
-<td><div class="range-wrap"><span class="range-label">£171</span><div class="range-bar-bg"><div class="range-fill" style="width:82%"></div><div class="range-dot" style="left:82%"></div></div><span class="range-label" style="text-align:right">£557</span></div></td>
-<td><span class="notes-text">Contract manufacturer of optical/photonic products. Makes 800G modules for Nvidia, Cisco, Ciena.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- DSP / SEMICONDUCTOR                                          -->
-<!-- ============================================================ -->
-<tr data-bar-pct="82" data-cat="dsp-semi" data-change-1d="-7.19%" data-change-1m="+29.48%" data-change-1w="-4.16%" data-change-ytd="+108.41%" data-exchange="NASDAQ" data-high-gbp="311" data-low-gbp="88" data-price-gbp="271" data-price-usd="364.64" data-return="+195%" data-ticker="MTSI">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/MTSI/" target="_blank"><div class="ticker" style="color:var(--amber)">MTSI</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>MACOM Technology</td>
-<td><span class="cat-badge cat-dsp-semi">DSP / Semi</span></td>
-<td><span class="price">£271</span><div class="change-pills"><span class="cpill neg">-7.19% 1D</span><span class="cpill neg">-4.16% 1W</span><span class="cpill pos">+29.48% 1M</span></div></td>
-<td><span class="return-positive">+195%</span></td><td><span class="ytd-return ytd-pos">+108.41%</span></td>
-<td><div class="range-wrap"><span class="range-label">£88</span><div class="range-bar-bg"><div class="range-fill" style="width:82%"></div><div class="range-dot" style="left:82%"></div></div><span class="range-label" style="text-align:right">£311</span></div></td>
-<td><span class="notes-text">RF &amp; microwave ICs. 800G/1.6T PAM4 DSPs enabling high-speed data centre optical interconnects.</span></td>
-</tr>
-<tr data-bar-pct="85" data-cat="dsp-semi" data-change-1d="-8.56%" data-change-1m="+45.21%" data-change-1w="+4.10%" data-change-ytd="+102.68%" data-exchange="NASDAQ" data-high-gbp="128" data-low-gbp="27" data-price-gbp="113" data-price-usd="152.54" data-return="+307%" data-ticker="SMTC">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/SMTC/" target="_blank"><div class="ticker" style="color:var(--amber)">SMTC</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Semtech</td>
-<td><span class="cat-badge cat-dsp-semi">DSP / Semi</span></td>
-<td><span class="price">£113</span><div class="change-pills"><span class="cpill neg">-8.56% 1D</span><span class="cpill pos">+4.10% 1W</span><span class="cpill pos">+45.21% 1M</span></div></td>
-<td><span class="return-mega">+307%</span></td><td><span class="ytd-return ytd-pos">+102.68%</span></td>
-<td><div class="range-wrap"><span class="range-label">£27</span><div class="range-bar-bg"><div class="range-fill" style="width:85%"></div><div class="range-dot" style="left:85%"></div></div><span class="range-label" style="text-align:right">£128</span></div></td>
-<td><span class="notes-text">ClearEdge DSP for 100G–400G optical links + LoRa IoT. Data centre signal processing silicon.</span></td>
-</tr>
-<tr data-bar-pct="97" data-cat="dsp-semi" data-change-1d="+3.25%" data-change-1m="+35.64%" data-change-1w="+22.05%" data-change-ytd="+64.80%" data-exchange="NASDAQ" data-high-gbp="179" data-low-gbp="44" data-price-gbp="175" data-price-usd="236.03" data-return="+277%" data-ticker="CRDO">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/CRDO/" target="_blank"><div class="ticker" style="color:var(--amber)">CRDO</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Credo Technology</td>
-<td><span class="cat-badge cat-dsp-semi">DSP / Semi</span></td>
-<td><span class="price">£175</span><div class="change-pills"><span class="cpill pos">+3.25% 1D</span><span class="cpill pos">+22.05% 1W</span><span class="cpill pos">+35.64% 1M</span></div></td>
-<td><span class="return-mega">+277%</span></td><td><span class="ytd-return ytd-pos">+64.80%</span></td>
-<td><div class="range-wrap"><span class="range-label">£44</span><div class="range-bar-bg"><div class="range-fill" style="width:97%"></div><div class="range-dot" style="left:97%"></div></div><span class="range-label" style="text-align:right">£179</span></div></td>
-<td><span class="notes-text">High-speed SerDes &amp; Active Electrical Cables for AI cluster interconnects. 800G/1.6T pure-play semi.</span></td>
-</tr>
-<tr data-bar-pct="86" data-cat="dsp-semi" data-change-1d="-3.45%" data-change-1m="+31.35%" data-change-1w="-6.76%" data-change-ytd="+402.05%" data-exchange="NASDAQ" data-high-gbp="79" data-low-gbp="8.37" data-price-gbp="69" data-price-usd="92.93" data-return="+692%" data-ticker="MXL">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/MXL/" target="_blank"><div class="ticker" style="color:var(--amber)">MXL</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>MaxLinear</td>
-<td><span class="cat-badge cat-dsp-semi">DSP / Semi</span></td>
-<td><span class="price">£69</span><div class="change-pills"><span class="cpill neg">-3.45% 1D</span><span class="cpill neg">-6.76% 1W</span><span class="cpill pos">+31.35% 1M</span></div></td>
-<td><span class="return-mega">+692%</span></td><td><span class="ytd-return ytd-pos">+402.05%</span></td>
-<td><div class="range-wrap"><span class="range-label">£8.37</span><div class="range-bar-bg"><div class="range-fill" style="width:86%"></div><div class="range-dot" style="left:86%"></div></div><span class="range-label" style="text-align:right">£79</span></div></td>
-<td><span class="notes-text">High-speed broadband &amp; data centre connectivity ICs. Restructuring with AI optics tailwind.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- TEST EQUIPMENT                                               -->
-<!-- ============================================================ -->
-<tr data-bar-pct="85" data-cat="test-equip" data-change-1d="+0.02%" data-change-1m="-3.31%" data-change-1w="+0.23%" data-change-ytd="+63.77%" data-exchange="NYSE" data-high-gbp="275" data-low-gbp="114" data-price-gbp="251" data-price-usd="338.33" data-return="+114%" data-ticker="KEYS">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/KEYS/" target="_blank"><div class="ticker" style="color:var(--slate)">KEYS</div></a><div class="exchange-badge">NYSE</div></td>
-<td>Keysight Technologies</td>
-<td><span class="cat-badge cat-test-equip">Test Equipment</span></td>
-<td><span class="price">£251</span><div class="change-pills"><span class="cpill pos">+0.02% 1D</span><span class="cpill pos">+0.23% 1W</span><span class="cpill neg">-3.31% 1M</span></div></td>
-<td><span class="return-positive">+114%</span></td><td><span class="ytd-return ytd-pos">+63.77%</span></td>
-<td><div class="range-wrap"><span class="range-label">£114</span><div class="range-bar-bg"><div class="range-fill" style="width:85%"></div><div class="range-dot" style="left:85%"></div></div><span class="range-label" style="text-align:right">£275</span></div></td>
-<td><span class="notes-text">Electronic test &amp; measurement leader. Hyperscaler R&amp;D and 800G/1.6T network buildout drives demand.</span></td>
-</tr>
-<tr data-bar-pct="77" data-cat="test-equip" data-change-1d="+0.08%" data-change-1m="-7.33%" data-change-1w="-0.86%" data-change-ytd="+167.55%" data-exchange="NASDAQ" data-high-gbp="45" data-low-gbp="6.64" data-price-gbp="36" data-price-usd="48.56" data-return="+431%" data-ticker="VIAV">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/VIAV/" target="_blank"><div class="ticker" style="color:var(--slate)">VIAV</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>Viavi Solutions</td>
-<td><span class="cat-badge cat-test-equip">Test Equipment</span></td>
-<td><span class="price">£36</span><div class="change-pills"><span class="cpill pos">+0.08% 1D</span><span class="cpill neg">-0.86% 1W</span><span class="cpill neg">-7.33% 1M</span></div></td>
-<td><span class="return-mega">+431%</span></td><td><span class="ytd-return ytd-pos">+167.55%</span></td>
-<td><div class="range-wrap"><span class="range-label">£6.64</span><div class="range-bar-bg"><div class="range-fill" style="width:77%"></div><div class="range-dot" style="left:77%"></div></div><span class="range-label" style="text-align:right">£45</span></div></td>
-<td><span class="notes-text">Fibre optic test, inspection &amp; network instruments. Deployed in all major 400G/800G rollouts globally.</span></td>
-</tr>
-<!-- ============================================================ -->
-<!-- MATERIALS                                                    -->
-<!-- ============================================================ -->
-<tr data-bar-pct="72" data-cat="materials" data-change-1d="-11.07%" data-change-1m="+30.22%" data-change-1w="-14.76%" data-change-ytd="+515.51%" data-exchange="NASDAQ" data-high-gbp="106" data-low-gbp="1.09" data-price-gbp="77" data-price-usd="103.16" data-return="+6471%" data-ticker="AXTI">
-<td><a class="ticker-link" href="https://finance.yahoo.com/quote/AXTI/" target="_blank"><div class="ticker" style="color:var(--lime)">AXTI</div></a><div class="exchange-badge">NASDAQ</div></td>
-<td>AXT Inc</td>
-<td><span class="cat-badge cat-materials">Materials</span></td>
-<td><span class="price">£77</span><div class="change-pills"><span class="cpill neg">-11.07% 1D</span><span class="cpill neg">-14.76% 1W</span><span class="cpill pos">+30.22% 1M</span></div></td>
-<td><span class="return-mega">+6471%</span></td><td><span class="ytd-return ytd-pos">+515.51%</span></td>
-<td><div class="range-wrap"><span class="range-label">£1.09</span><div class="range-bar-bg"><div class="range-fill" style="width:72%"></div><div class="range-dot" style="left:72%"></div></div><span class="range-label" style="text-align:right">£106</span></div></td>
-<td><span class="notes-text">InP &amp; GaAs compound semiconductor substrates. Critical raw material for optical transceivers &amp; photonics.</span></td>
-</tr>
 </tbody>
 </table>
 </div>
 <footer>
-<strong>⚠️ NOT FINANCIAL ADVICE.</strong> This dashboard is for informational and research purposes only. All prices approximate, converted at £1 = $1.3457 (2026-05-30 14:41). Past performance does not guarantee future results. 1yr return = Yahoo Finance 52-week price change. * = speculative / high-volatility stock. Always do your own research and consult a financial adviser before investing. Kioxia (285A) requires a broker with Tokyo Stock Exchange access.
+<strong>⚠️ NOT FINANCIAL ADVICE.</strong> This dashboard is for informational and research purposes only. All prices approximate in GBP. Past performance does not guarantee future results. 1yr return = Yahoo Finance 52-week price change. * = speculative / high-volatility stock. Always do your own research and consult a financial adviser before investing. Kioxia (285A) requires a broker with Tokyo Stock Exchange access.
   </footer>
 </div>
 <script src="prices-data.js"></script>
 <script>
-  let sortState = { col: null, dir: 1 };
+/* ── Stock data dictionaries ── */
+const NOTES = {
+  'SNDK': 'NAND pure-play. AI storage supercycle. Spun off WDC 2025.',
+  'WDC':  'HDD duopoly. Fully committed to hyperscalers through FY end.',
+  '285A': "SNDK's JV partner. Pure NAND play. Japan listed — needs specialist broker.",
+  'MU':   'DRAM + NAND + HBM. Sold out of HBM for all of 2026. 11.5x fwd P/E.',
+  'STX':  'HDD duopoly with WDC. AI data centre mass storage.',
+  'MRVL': 'Custom silicon + AI networking. 800G/1.6T optical interconnects.',
+  'P':    'Formerly Pure Storage (PSTG). Rebranded to Everpure, ticker changed to P, Apr 2026. AI data management platform.',
+  'RR.':  'UK SMR contract signed Apr 2026. Wylfa, Anglesey — 3 units. Also jets + defence.',
+  'CEG':  'Largest US nuclear operator. 21 reactors. 20yr deals with Meta & Microsoft.',
+  'VST':  'Nuclear + gas + retail. 6.5GW nuclear capacity. 5M retail customers.',
+  'TLN':  '1,920MW to AWS through 2042. Data centre campus on-site.',
+  'BEP':  "51% owner of Westinghouse — services 50% of world's nuclear plants.",
+  'BEPC': 'Corporate share class of BEP. Same Westinghouse exposure. More liquid than LP units.',
+  'GEV':  'BWRX-300 SMR — first in Western hemisphere (Ontario). GE Hitachi JV.',
+  'BWXT': 'Sole US Navy reactor maker. "Foundry for SMRs." $7.3B backlog, +50% YoY.',
+  'SMR':  'Only NRC-certified SMR design. 77MWe modules. TVA 6GW deal. Speculative.',
+  'OKLO': 'Sam Altman-backed. Fast-fission + waste recycling. -75% from ATH of £143.',
+  'NNE':  'Microreactors: KRONOS, ZEUS, LOKI. Space nuclear mandate catalyst. Pre-revenue.',
+  'CCJ':  "World's largest uranium miner. Also 49% owner of Westinghouse.",
+  'UEC':  'US-focused uranium miner. Lower entry price. Higher volatility.',
+  'LEU':  'Only licensed US supplier of HALEU fuel for advanced reactors. Strategic monopoly.',
+  'VRT':  'Data centre cooling & power management. Every AI data centre needs this.',
+  'ETN':  'Electrical components & transformers. Grid infrastructure backbone.',
+  'POWL': 'Switchgear & electrical infrastructure. Less-known but strong AI tailwind.',
+  'EQIX': 'Largest global colocation provider. 260+ data centres, 70 metros worldwide.',
+  'DLR':  'Major DC REIT. 300+ facilities across 25 countries. AI demand driving occupancy.',
+  'AMT':  'Tower REIT expanding into edge compute. 220,000+ sites globally.',
+  'GOOGL':'Google Cloud + TPU AI chips. $75B capex planned for 2026 data centres.',
+  'MSFT': 'Azure + OpenAI partnership. $80B data centre capex in 2026. Copilot monetisation.',
+  'AMZN': 'AWS dominates cloud AI infra. Trainium & Inferentia custom AI chips. Bedrock platform.',
+  'META': '$65B AI capex 2026. Llama open-source models. Building 2GW data centre campus.',
+  'IREN': 'Pivoting from Bitcoin mining to AI GPU compute. Renewable-powered data centres.',
+  'CORZ': 'Crypto→AI pivot. 200MW CoreWeave HPC deal. Emerged from bankruptcy 2023.',
+  'WULF': 'Nuclear-powered Bitcoin/AI compute. 95% zero-carbon. Building HPC capacity.',
+  'HUT':  'Bitcoin mining + AI compute pivot. US HPC expansion. High volatility.',
+  'SMCI': 'AI server manufacturer. Top Nvidia GPU server integrator. Accounting controversy overhang.',
+  'DELL': 'AI server & storage giant. PowerEdge AI servers. $10B+ AI infrastructure backlog.',
+  'COHR': '800G/1.6T optical transceivers & components. Largest vertically integrated photonics vendor.',
+  'LITE': 'High-power lasers & optical components. 3D sensing + datacoms lasers for AI hyperscaler buildout.',
+  'AAOI': 'Pure-play 400G/800G datacenter transceivers. Small-cap with high AI data centre concentration.',
+  'FN':   'Contract manufacturer of optical/photonic products. Makes 800G modules for Nvidia, Cisco, Ciena.',
+  'MTSI': 'RF & microwave ICs. 800G/1.6T PAM4 DSPs enabling high-speed data centre optical interconnects.',
+  'SMTC': 'ClearEdge DSP for 100G–400G optical links + LoRa IoT. Data centre signal processing silicon.',
+  'CRDO': 'High-speed SerDes & Active Electrical Cables for AI cluster interconnects. 800G/1.6T pure-play semi.',
+  'MXL':  'High-speed broadband & data centre connectivity ICs. Restructuring with AI optics tailwind.',
+  'KEYS': 'Electronic test & measurement leader. Hyperscaler R&D and 800G/1.6T network buildout drives demand.',
+  'VIAV': 'Fibre optic test, inspection & network instruments. Deployed in all major 400G/800G rollouts globally.',
+  'AXTI': 'InP & GaAs compound semiconductor substrates. Critical raw material for optical transceivers & photonics.',
+};
 
-  window.addEventListener('DOMContentLoaded', () => {
-    const returnTh = document.querySelector('th[onclick*="\'return\'"]');
-    sortState.col = 'return'; // pre-set so toggle flips to descending (-1)
-    sortTable('return', returnTh);
-    applyFilters();
+const CAT_COLORS = {
+  'memory':        'var(--purple)',
+  'nuclear-ops':   'var(--accent2)',
+  'smr':           'var(--green)',
+  'uranium':       'var(--gold)',
+  'power-infra':   'var(--accent)',
+  'dc-operators':  'var(--blue)',
+  'hyperscalers':  'var(--indigo)',
+  'ai-compute':    'var(--rose)',
+  'fibre-optical': 'var(--teal)',
+  'dsp-semi':      'var(--amber)',
+  'test-equip':    'var(--slate)',
+  'materials':     'var(--lime)',
+};
+
+const CAT_LABELS = {
+  'memory':        'Memory',
+  'nuclear-ops':   'Nuclear Ops',
+  'smr':           'SMR Builder',
+  'uranium':       'Uranium',
+  'power-infra':   'Power Infra',
+  'dc-operators':  'DC Operator',
+  'hyperscalers':  'Hyperscaler',
+  'ai-compute':    'AI Compute',
+  'fibre-optical': 'Fibre / Optical',
+  'dsp-semi':      'DSP / Semi',
+  'test-equip':    'Test Equipment',
+  'materials':     'Materials',
+};
+
+const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
+function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
+
+function returnClass(retStr) {
+  const n = parseFloat(String(retStr).replace(/[^0-9.-]/g, ''));
+  if (isNaN(n)) return 'return-modest';
+  if (n >= 200) return 'return-mega';
+  if (n >= 50)  return 'return-positive';
+  return 'return-modest';
+}
+
+function pillClass(v) {
+  const n = parseFloat(v); return n > 0 ? 'pos' : n < 0 ? 'neg' : 'flat';
+}
+
+function ytdClass(v) {
+  const n = parseFloat(v); return n > 0 ? 'ytd-pos' : n < 0 ? 'ytd-neg' : 'ytd-flat';
+}
+
+function buildTable(stocks) {
+  const tbody = document.querySelector('#stock-table tbody');
+  tbody.innerHTML = '';
+  stocks.forEach(s => {
+    const color    = CAT_COLORS[s.category] || 'var(--text)';
+    const catLabel = CAT_LABELS[s.category] || s.category;
+    const retCls   = returnClass(s.return_1yr);
+    const prefix   = s.ticker === '285A' ? '~£' : '£';
+    const exDisp   = s.exchange === 'TSE' ? 'TSE (Tokyo)' : s.exchange;
+    const tr = document.createElement('tr');
+    tr.dataset.ticker    = s.ticker;
+    tr.dataset.cat       = s.category;
+    tr.dataset.exchange  = s.exchange;
+    tr.dataset.priceGbp  = s.price_gbp;
+    tr.dataset.priceUsd  = s.price_usd;
+    tr.dataset.return    = s.return_1yr;
+    tr.dataset.changeYtd = s.change_ytd;
+    tr.dataset.barPct    = s.bar_pct;
+    tr.innerHTML =
+      '<td><a class="ticker-link" href="' + yahooUrl(s.ticker) + '" target="_blank">' +
+        '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
+        '<div class="exchange-badge">' + exDisp + '</div></td>' +
+      '<td>' + (s.company_name || s.ticker) + '</td>' +
+      '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
+      '<td><span class="price">' + prefix + s.price_gbp + '</span>' +
+        '<div class="change-pills">' +
+          '<span class="cpill ' + pillClass(s.change_1d) + '">' + s.change_1d + ' 1D</span>' +
+          '<span class="cpill ' + pillClass(s.change_1w) + '">' + s.change_1w + ' 1W</span>' +
+          '<span class="cpill ' + pillClass(s.change_1m) + '">' + s.change_1m + ' 1M</span>' +
+        '</div></td>' +
+      '<td><span class="' + retCls + '">' + s.return_1yr + '</span></td>' +
+      '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + s.change_ytd + '</span></td>' +
+      '<td><div class="range-wrap">' +
+        '<span class="range-label">£' + s.low_gbp + '</span>' +
+        '<div class="range-bar-bg">' +
+          '<div class="range-fill" style="width:' + s.bar_pct + '%"></div>' +
+          '<div class="range-dot" style="left:' + s.bar_pct + '%"></div>' +
+        '</div>' +
+        '<span class="range-label" style="text-align:right">£' + s.high_gbp + '</span>' +
+      '</div></td>' +
+      '<td><span class="notes-text">' + (NOTES[s.ticker] || '') + '</span></td>';
+    tbody.appendChild(tr);
   });
-
-  function sortTable(col, th) {
-    const tbody = document.querySelector('#stock-table tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
-
-    if (sortState.col === col) {
-      sortState.dir *= -1;
-    } else {
-      sortState.col = col;
-      sortState.dir = 1;
-    }
-
-    document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
-    th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-
-    rows.sort((a, b) => {
-      let av, bv;
-      if (col === 'ticker')  { av = a.dataset.ticker;  bv = b.dataset.ticker; }
-      if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
-      if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
-      if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
-      if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
-      if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
-      if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
-      if (col === 'angle')   { av = a.querySelector('td:nth-child(8)').textContent.trim(); bv = b.querySelector('td:nth-child(8)').textContent.trim(); }
-      return av.localeCompare(bv) * sortState.dir;
-    });
-
-    rows.forEach(r => tbody.appendChild(r));
+  // Update header + count from prices-data.js
+  if (window.PRICES_DATA) {
+    const fxEl = document.getElementById('fx-rate');
+    const tsEl = document.getElementById('last-updated');
+    if (fxEl) fxEl.textContent = '£1 = $' + window.PRICES_DATA.fx_gbp_usd;
+    if (tsEl) tsEl.textContent = 'Last updated: ' + window.PRICES_DATA.updated;
+    const tot = document.getElementById('total-count');
+    if (tot) tot.textContent = stocks.length;
   }
+}
 
-  let currentCat = 'all';
+/* ── Sort + filter (unchanged) ── */
+let sortState = { col: null, dir: 1 };
 
-  function applyFilters() {
-    const query = document.getElementById('stock-search').value.toLowerCase().trim();
-    const rows  = document.querySelectorAll('#stock-table tbody tr');
-    let visible = 0;
-    rows.forEach(row => {
-      const matchCat    = currentCat === 'all' || row.dataset.cat === currentCat;
-      const matchSearch = !query
-        || row.dataset.ticker.toLowerCase().includes(query)
-        || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
-      if (matchCat && matchSearch) {
-        row.classList.remove('hidden');
-        visible++;
-      } else {
-        row.classList.add('hidden');
-      }
-    });
-    document.getElementById('visible-count').textContent = visible;
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
+    buildTable(window.PRICES_DATA.stocks);
   }
+  const returnTh = document.querySelector('th[onclick*="\'return\'"]');
+  sortState.col = 'return';
+  sortTable('return', returnTh);
+  applyFilters();
+});
 
-  function filterTable(cat, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentCat = cat;
-    applyFilters();
-  }
+function sortTable(col, th) {
+  const tbody = document.querySelector('#stock-table tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  if (sortState.col === col) { sortState.dir *= -1; } else { sortState.col = col; sortState.dir = 1; }
+  document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+  th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+  rows.sort((a, b) => {
+    let av, bv;
+    if (col === 'ticker')  { av = a.dataset.ticker;  bv = b.dataset.ticker; }
+    if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
+    if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
+    if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
+    if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
+    if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
+    if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
+    if (col === 'angle')   { av = a.querySelector('td:nth-child(8)').textContent.trim(); bv = b.querySelector('td:nth-child(8)').textContent.trim(); }
+    return av.localeCompare(bv) * sortState.dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
 
-  function searchTable() {
-    applyFilters();
-  }
+let currentCat = 'all';
 
+function applyFilters() {
+  const query = document.getElementById('stock-search').value.toLowerCase().trim();
+  const rows  = document.querySelectorAll('#stock-table tbody tr');
+  let visible = 0;
+  rows.forEach(row => {
+    const matchCat    = currentCat === 'all' || row.dataset.cat === currentCat;
+    const matchSearch = !query
+      || row.dataset.ticker.toLowerCase().includes(query)
+      || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
+    if (matchCat && matchSearch) { row.classList.remove('hidden'); visible++; }
+    else { row.classList.add('hidden'); }
+  });
+  document.getElementById('visible-count').textContent = visible;
+}
+
+function filterTable(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentCat = cat;
+  applyFilters();
+}
+
+function searchTable() { applyFilters(); }
 </script>
 </body>
 </html>

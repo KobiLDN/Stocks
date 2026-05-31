@@ -300,15 +300,7 @@
     <div class="divider" id="cat-divider" style="display:none"></div>
     <div class="toolbar-group" id="cat-toolbar" style="display:none">
       <span class="toolbar-label">Category</span>
-      <button class="tool-btn cat-btn" onclick="setCategory('large-cap', this)">💊 Large Cap</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('uk-listed', this)">🇬🇧 UK Listed</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('gene-editing', this)">✂️ Gene Editing</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('genomics', this)">🔬 Genomics</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('oncology', this)">🎗️ Oncology</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('mrna', this)">💉 mRNA</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('rare-disease', this)">🧬 Rare Disease</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('metabolic', this)">⚖️ Metabolic</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('neuroscience', this)">🧠 Neuroscience</button>
+      <div id="cat-toolbar-btns"></div>
     </div>
   </div>
 </div>
@@ -318,54 +310,7 @@
   <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">☰ Select Stock ▾</button>
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-title">Select Stock</div>
-
-    <span class="cat-label large-cap">💊 Large Cap</span>
-    <button class="stock-btn" data-tv="NASDAQ:AMGN" data-name="Amgen" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">AMGN</span><span class="btn-name">Amgen</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:GILD" data-name="Gilead Sciences" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">GILD</span><span class="btn-name">Gilead Sciences</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:REGN" data-name="Regeneron" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">REGN</span><span class="btn-name">Regeneron Pharmaceuticals</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:VRTX" data-name="Vertex Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">VRTX</span><span class="btn-name">Vertex Pharmaceuticals</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:BIIB" data-name="Biogen" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">BIIB</span><span class="btn-name">Biogen</span></button>
-    <button class="stock-btn" data-tv="NYSE:BMY" data-name="Bristol-Myers Squibb" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--accent)">BMY</span><span class="btn-name">Bristol-Myers Squibb</span></button>
-
-    <span class="cat-label uk-listed">🇬🇧 UK Listed</span>
-    <button class="stock-btn" data-tv="LSE:AZN" data-name="AstraZeneca" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">AZN</span><span class="btn-name">AstraZeneca</span></button>
-    <button class="stock-btn" data-tv="LSE:GSK" data-name="GSK plc" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">GSK</span><span class="btn-name">GSK plc</span></button>
-
-    <span class="cat-label gene-editing">✂️ Gene Editing</span>
-    <button class="stock-btn" data-tv="NASDAQ:CRSP" data-name="CRISPR Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">CRSP</span><span class="btn-name">CRISPR Therapeutics</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:BEAM" data-name="Beam Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">BEAM</span><span class="btn-name">Beam Therapeutics</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:NTLA" data-name="Intellia Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">NTLA</span><span class="btn-name">Intellia Therapeutics</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:EDIT" data-name="Editas Medicine" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--green)">EDIT</span><span class="btn-name">Editas Medicine</span></button>
-
-    <span class="cat-label genomics">🔬 Genomics / Tools</span>
-    <button class="stock-btn" data-tv="NASDAQ:ILMN" data-name="Illumina" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">ILMN</span><span class="btn-name">Illumina</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:PACB" data-name="Pacific Biosciences" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">PACB</span><span class="btn-name">Pacific Biosciences</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:NTRA" data-name="Natera" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">NTRA</span><span class="btn-name">Natera</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:RXRX" data-name="Recursion Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">RXRX</span><span class="btn-name">Recursion Pharmaceuticals</span></button>
-
-    <span class="cat-label oncology">🎗️ Oncology</span>
-    <button class="stock-btn" data-tv="NASDAQ:INCY" data-name="Incyte Corporation" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">INCY</span><span class="btn-name">Incyte Corporation</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:EXEL" data-name="Exelixis" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">EXEL</span><span class="btn-name">Exelixis</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:ALNY" data-name="Alnylam Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">ALNY</span><span class="btn-name">Alnylam Pharmaceuticals</span></button>
-    <button class="stock-btn" data-tv="NYSE:RCUS" data-name="Arcus Biosciences" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">RCUS</span><span class="btn-name">Arcus Biosciences</span></button>
-
-    <span class="cat-label mrna">💉 mRNA / Vaccines</span>
-    <button class="stock-btn" data-tv="NASDAQ:MRNA" data-name="Moderna" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">MRNA</span><span class="btn-name">Moderna</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:BNTX" data-name="BioNTech" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">BNTX</span><span class="btn-name">BioNTech</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:NVAX" data-name="Novavax" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">NVAX</span><span class="btn-name">Novavax</span></button>
-
-    <span class="cat-label rare-disease">🧬 Rare Disease</span>
-    <button class="stock-btn" data-tv="NASDAQ:BMRN" data-name="BioMarin Pharmaceutical" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">BMRN</span><span class="btn-name">BioMarin Pharmaceutical</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:SRPT" data-name="Sarepta Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">SRPT</span><span class="btn-name">Sarepta Therapeutics</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:COAG" data-name="Hemab Therapeutics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">COAG</span><span class="btn-name">Hemab Therapeutics</span></button>
-
-    <span class="cat-label metabolic">⚖️ Metabolic</span>
-    <button class="stock-btn" data-tv="NYSE:NVO" data-name="Novo Nordisk" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--lime)">NVO</span><span class="btn-name">Novo Nordisk</span></button>
-    <button class="stock-btn" data-tv="NYSE:LLY" data-name="Eli Lilly" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--lime)">LLY</span><span class="btn-name">Eli Lilly</span></button>
-
-    <span class="cat-label neuroscience">🧠 Neuroscience</span>
-    <button class="stock-btn" data-tv="NASDAQ:LEGN" data-name="Legend Biotech" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">LEGN</span><span class="btn-name">Legend Biotech</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:IONS" data-name="Ionis Pharmaceuticals" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--indigo)">IONS</span><span class="btn-name">Ionis Pharmaceuticals</span></button>
+    <div id="sidebar-stocks"></div>
   </aside>
 
   <main class="chart-area">
@@ -390,92 +335,72 @@
 <script src="https://s3.tradingview.com/tv.js"></script>
 <script src="prices-data.js"></script>
 <script>
-  const CATEGORIES = {
-    'large-cap': {
-      label: '💊 Large Cap Biotech',
-      color: 'var(--accent)',
-      stocks: [
-        { tv: 'NASDAQ:AMGN', ticker: 'AMGN', name: 'Amgen' },
-        { tv: 'NASDAQ:GILD', ticker: 'GILD', name: 'Gilead Sciences' },
-        { tv: 'NASDAQ:REGN', ticker: 'REGN', name: 'Regeneron' },
-        { tv: 'NASDAQ:VRTX', ticker: 'VRTX', name: 'Vertex Pharmaceuticals' },
-        { tv: 'NASDAQ:BIIB', ticker: 'BIIB', name: 'Biogen' },
-        { tv: 'NYSE:BMY',    ticker: 'BMY',  name: 'Bristol-Myers Squibb' },
-      ]
-    },
-    'uk-listed': {
-      label: '🇬🇧 UK Listed',
-      color: 'var(--gold)',
-      stocks: [
-        { tv: 'LSE:AZN', ticker: 'AZN', name: 'AstraZeneca' },
-        { tv: 'LSE:GSK', ticker: 'GSK', name: 'GSK plc' },
-      ]
-    },
-    'gene-editing': {
-      label: '✂️ Gene Editing',
-      color: 'var(--green)',
-      stocks: [
-        { tv: 'NASDAQ:CRSP', ticker: 'CRSP', name: 'CRISPR Therapeutics' },
-        { tv: 'NASDAQ:BEAM', ticker: 'BEAM', name: 'Beam Therapeutics' },
-        { tv: 'NASDAQ:NTLA', ticker: 'NTLA', name: 'Intellia Therapeutics' },
-        { tv: 'NASDAQ:EDIT', ticker: 'EDIT', name: 'Editas Medicine' },
-      ]
-    },
-    'genomics': {
-      label: '🔬 Genomics / Tools',
-      color: 'var(--teal)',
-      stocks: [
-        { tv: 'NASDAQ:ILMN', ticker: 'ILMN', name: 'Illumina' },
-        { tv: 'NASDAQ:PACB', ticker: 'PACB', name: 'Pacific Biosciences' },
-        { tv: 'NASDAQ:NTRA', ticker: 'NTRA', name: 'Natera' },
-        { tv: 'NASDAQ:RXRX', ticker: 'RXRX', name: 'Recursion Pharmaceuticals' },
-      ]
-    },
-    'oncology': {
-      label: '🎗️ Oncology',
-      color: 'var(--rose)',
-      stocks: [
-        { tv: 'NASDAQ:INCY', ticker: 'INCY', name: 'Incyte Corporation' },
-        { tv: 'NASDAQ:EXEL', ticker: 'EXEL', name: 'Exelixis' },
-        { tv: 'NASDAQ:ALNY', ticker: 'ALNY', name: 'Alnylam Pharmaceuticals' },
-        { tv: 'NYSE:RCUS',   ticker: 'RCUS', name: 'Arcus Biosciences' },
-      ]
-    },
-    'mrna': {
-      label: '💉 mRNA / Vaccines',
-      color: 'var(--purple)',
-      stocks: [
-        { tv: 'NASDAQ:MRNA', ticker: 'MRNA', name: 'Moderna' },
-        { tv: 'NASDAQ:BNTX', ticker: 'BNTX', name: 'BioNTech' },
-        { tv: 'NASDAQ:NVAX', ticker: 'NVAX', name: 'Novavax' },
-      ]
-    },
-    'rare-disease': {
-      label: '🧬 Rare Disease',
-      color: 'var(--amber)',
-      stocks: [
-        { tv: 'NASDAQ:BMRN', ticker: 'BMRN', name: 'BioMarin Pharmaceutical' },
-        { tv: 'NASDAQ:SRPT', ticker: 'SRPT', name: 'Sarepta Therapeutics' },
-        { tv: 'NASDAQ:COAG', ticker: 'COAG', name: 'Hemab Therapeutics' },
-      ]
-    },
-    'metabolic': {
-      label: '⚖️ Metabolic',
-      color: 'var(--lime)',
-      stocks: [
-        { tv: 'NYSE:NVO', ticker: 'NVO', name: 'Novo Nordisk' },
-        { tv: 'NYSE:LLY', ticker: 'LLY', name: 'Eli Lilly' },
-      ]
-    },
-    'neuroscience': {
-      label: '🧠 Neuroscience',
-      color: 'var(--indigo)',
-      stocks: [
-        { tv: 'NASDAQ:LEGN', ticker: 'LEGN', name: 'Legend Biotech' },
-        { tv: 'NASDAQ:IONS', ticker: 'IONS', name: 'Ionis Pharmaceuticals' },
-      ]
-    },
+  const TV_MAP = {
+    'AZN': 'LSE:AZN',
+    'GSK': 'LSE:GSK',
   };
+
+  const CHART_CATS = {
+    'large-cap':    { label: '💊 Large Cap Biotech',  color: 'var(--accent)',  btnLabel: '💊 Large Cap' },
+    'uk-listed':    { label: '🇬🇧 UK Listed',          color: 'var(--gold)',    btnLabel: '🇬🇧 UK Listed' },
+    'gene-editing': { label: '✂️ Gene Editing',        color: 'var(--green)',   btnLabel: '✂️ Gene Editing' },
+    'genomics':     { label: '🧬 Genomics / Tools',    color: 'var(--teal)',    btnLabel: '🧬 Genomics' },
+    'oncology':     { label: '🎯 Oncology',            color: 'var(--rose)',    btnLabel: '🎯 Oncology' },
+    'mrna':         { label: '💉 mRNA / Vaccines',     color: 'var(--purple)',  btnLabel: '💉 mRNA' },
+    'rare-disease': { label: '🔬 Rare Disease',        color: 'var(--amber)',   btnLabel: '🔬 Rare Disease' },
+    'metabolic':    { label: '⚖️ Metabolic',           color: 'var(--lime)',    btnLabel: '⚖️ Metabolic' },
+    'neuroscience': { label: '🧠 Neuroscience',        color: 'var(--indigo)',  btnLabel: '🧠 Neuroscience' },
+  };
+
+  function buildSidebar(stocks) {
+    if (!stocks || !stocks.length) return;
+    window._chartCats = {};
+    const catOrder = Object.keys(CHART_CATS);
+    catOrder.forEach(catKey => {
+      const cfg = CHART_CATS[catKey];
+      const catStocks = stocks.filter(s => s.category === catKey);
+      if (!catStocks.length) return;
+      window._chartCats[catKey] = {
+        label:  cfg.label,
+        color:  cfg.color,
+        stocks: catStocks.map(s => {
+          const tvSym = TV_MAP[s.ticker] || (s.exchange + ':' + s.ticker);
+          return { tv: tvSym, ticker: s.ticker, name: s.company_name || s.ticker };
+        }),
+      };
+    });
+    const container = document.getElementById('sidebar-stocks');
+    container.innerHTML = '';
+    catOrder.forEach(catKey => {
+      const cat = window._chartCats[catKey];
+      if (!cat) return;
+      const cfg = CHART_CATS[catKey];
+      const label = document.createElement('span');
+      label.className = 'cat-label ' + catKey;
+      label.textContent = cfg.label;
+      container.appendChild(label);
+      cat.stocks.forEach(st => {
+        const btn = document.createElement('button');
+        btn.className = 'stock-btn';
+        btn.dataset.tv   = st.tv;
+        btn.dataset.name = st.name;
+        btn.onclick = function() { loadSingle(this); };
+        btn.innerHTML = '<span class="btn-ticker" style="color:' + cfg.color + '">' + st.ticker + '</span><span class="btn-name">' + st.name + '</span>';
+        container.appendChild(btn);
+      });
+    });
+    const toolbar = document.getElementById('cat-toolbar-btns');
+    toolbar.innerHTML = '';
+    catOrder.forEach(catKey => {
+      if (!window._chartCats[catKey]) return;
+      const cfg = CHART_CATS[catKey];
+      const btn = document.createElement('button');
+      btn.className = 'tool-btn cat-btn';
+      btn.textContent = cfg.btnLabel;
+      btn.onclick = function() { setCategory(catKey, this); };
+      toolbar.appendChild(btn);
+    });
+  }
 
   const tfMap = {
     '1W':  { interval: '60', range: '5D' },
@@ -564,7 +489,7 @@
   }
 
   function buildGrid(cat) {
-    const data = CATEGORIES[cat];
+    const data = window._chartCats[cat];
     const tf   = tfMap[currentTimeframe];
     const grid = document.getElementById('chart-grid');
     const heading = document.getElementById('grid-heading');
@@ -619,9 +544,23 @@
 
   /* ---- INIT ---- */
   window.addEventListener('load', () => {
+    if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
+      buildSidebar(window.PRICES_DATA.stocks);
+      const firstStock = window.PRICES_DATA.stocks[0];
+      if (firstStock) {
+        const tvSym = TV_MAP[firstStock.ticker] || (firstStock.exchange + ':' + firstStock.ticker);
+        currentSymbol = tvSym;
+        currentName   = firstStock.company_name || firstStock.ticker;
+        document.getElementById('chart-ticker').textContent = firstStock.ticker;
+        document.getElementById('chart-name').textContent   = currentName;
+      }
+    }
     setView('grid');
     const firstCatBtn = document.querySelector('.cat-btn');
-    setCategory('large-cap', firstCatBtn);
+    if (firstCatBtn) {
+      const firstCatKey = Object.keys(window._chartCats || {})[0] || 'large-cap';
+      setCategory(firstCatKey, firstCatBtn);
+    }
   });
 
 </script>

@@ -20,12 +20,12 @@
   .divider { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
 
   /* Category button active states */
-  .cat-btn.active-primes   { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
-  .cat-btn.active-uk       { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .cat-btn.active-cyber    { background: var(--purple); border-color: var(--purple); color: var(--text); }
-  .cat-btn.active-drones   { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
-  .cat-btn.active-space    { background: var(--blue);   border-color: var(--blue);   color: var(--text); }
-  .cat-btn.active-weapons  { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
+  .cat-btn.active-us-primes   { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .cat-btn.active-uk-european { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
+  .cat-btn.active-cyber-intel { background: var(--purple); border-color: var(--purple); color: var(--text); }
+  .cat-btn.active-drones      { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .cat-btn.active-space       { background: var(--blue);   border-color: var(--blue);   color: var(--text); }
+  .cat-btn.active-weapons     { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
 
   #single-view { position: relative; z-index: 1; display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1600px; margin: 0 auto; padding: 24px; align-items: start; }
   .sidebar { position: sticky; top: 24px; max-height: calc(100vh - 120px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
@@ -147,12 +147,7 @@
     <div class="divider" id="cat-divider" style="display:none"></div>
     <div class="toolbar-group" id="cat-toolbar" style="display:none">
       <span class="toolbar-label">Category</span>
-      <button class="tool-btn cat-btn" onclick="setCategory('primes', this)">🎖️ US Primes</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('uk', this)">🇬🇧 UK/European</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('cyber', this)">🔐 Cyber/Intel</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('drones', this)">🚁 Drones</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('space', this)">🛰️ Space</button>
-      <button class="tool-btn cat-btn" onclick="setCategory('weapons', this)">⚔️ Weapons</button>
+      <div id="cat-toolbar-btns"></div>
     </div>
   </div>
 </div>
@@ -162,46 +157,7 @@
   <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">☰ Select Stock ▾</button>
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-title">Select Stock</div>
-
-    <span class="cat-label primes">🎖️ US Prime Contractors</span>
-    <button class="stock-btn" data-tv="NYSE:LMT"  data-name="Lockheed Martin" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">LMT</span><span class="btn-name">Lockheed Martin</span></button>
-    <button class="stock-btn" data-tv="NYSE:RTX"  data-name="RTX Corporation" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">RTX</span><span class="btn-name">RTX Corporation</span></button>
-    <button class="stock-btn" data-tv="NYSE:NOC"  data-name="Northrop Grumman" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">NOC</span><span class="btn-name">Northrop Grumman</span></button>
-    <button class="stock-btn" data-tv="NYSE:GD"   data-name="General Dynamics" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">GD</span><span class="btn-name">General Dynamics</span></button>
-    <button class="stock-btn" data-tv="NYSE:HII"  data-name="Huntington Ingalls" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">HII</span><span class="btn-name">Huntington Ingalls</span></button>
-    <button class="stock-btn" data-tv="NYSE:LHX"  data-name="L3Harris Technologies" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">LHX</span><span class="btn-name">L3Harris Technologies</span></button>
-    <button class="stock-btn" data-tv="NYSE:BA"   data-name="Boeing" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--amber)">BA</span><span class="btn-name">Boeing</span></button>
-
-    <span class="cat-label uk">🇬🇧 UK / European</span>
-    <button class="stock-btn" data-tv="LSE:BA."   data-name="BAE Systems" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">BA.L</span><span class="btn-name">BAE Systems</span></button>
-    <button class="stock-btn" data-tv="LSE:RR."   data-name="Rolls-Royce" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">RR.L</span><span class="btn-name">Rolls-Royce</span></button>
-    <button class="stock-btn" data-tv="LSE:QQ."   data-name="QinetiQ" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--gold)">QQ.L</span><span class="btn-name">QinetiQ Group</span></button>
-
-    <span class="cat-label cyber">🔐 Cyber / Intelligence</span>
-    <button class="stock-btn" data-tv="NYSE:PLTR"  data-name="Palantir" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">PLTR</span><span class="btn-name">Palantir Technologies</span></button>
-    <button class="stock-btn" data-tv="NYSE:LDOS"  data-name="Leidos" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">LDOS</span><span class="btn-name">Leidos Holdings</span></button>
-    <button class="stock-btn" data-tv="NYSE:CACI"  data-name="CACI International" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">CACI</span><span class="btn-name">CACI International</span></button>
-    <button class="stock-btn" data-tv="NYSE:SAIC"  data-name="SAIC" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">SAIC</span><span class="btn-name">Science Applications Intl</span></button>
-    <button class="stock-btn" data-tv="NYSE:BAH"   data-name="Booz Allen Hamilton" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--purple)">BAH</span><span class="btn-name">Booz Allen Hamilton</span></button>
-
-    <span class="cat-label drones">🚁 Drones / Autonomy</span>
-    <button class="stock-btn" data-tv="NASDAQ:AVAV" data-name="AeroVironment" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">AVAV</span><span class="btn-name">AeroVironment</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:KTOS" data-name="Kratos Defense" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">KTOS</span><span class="btn-name">Kratos Defense</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:RCAT" data-name="Red Cat Holdings" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">RCAT</span><span class="btn-name">Red Cat Holdings</span></button>
-    <button class="stock-btn" data-tv="NYSE:TXT"    data-name="Textron" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--teal)">TXT</span><span class="btn-name">Textron</span></button>
-
-    <span class="cat-label space">🛰️ Space Defence</span>
-    <button class="stock-btn" data-tv="NASDAQ:RKLB" data-name="Rocket Lab" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--blue)">RKLB</span><span class="btn-name">Rocket Lab</span></button>
-    <button class="stock-btn" data-tv="NYSE:PL"     data-name="Planet Labs" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--blue)">PL</span><span class="btn-name">Planet Labs</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:ASTS" data-name="AST SpaceMobile" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--blue)">ASTS</span><span class="btn-name">AST SpaceMobile</span></button>
-
-    <span class="cat-label weapons">⚔️ Weapons / Systems</span>
-    <button class="stock-btn" data-tv="NYSE:TDG"    data-name="TransDigm Group" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">TDG</span><span class="btn-name">TransDigm Group</span></button>
-    <button class="stock-btn" data-tv="NYSE:HEICO"  data-name="HEICO Corporation" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">HEICO</span><span class="btn-name">HEICO Corporation</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:AXON" data-name="Axon Enterprise" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">AXON</span><span class="btn-name">Axon Enterprise</span></button>
-    <button class="stock-btn" data-tv="NYSE:OLN"    data-name="Olin Corporation" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">OLN</span><span class="btn-name">Olin Corporation</span></button>
-    <button class="stock-btn" data-tv="NASDAQ:MRCY" data-name="Mercury Systems" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">MRCY</span><span class="btn-name">Mercury Systems</span></button>
-    <button class="stock-btn" data-tv="NYSE:DRS"    data-name="Leonardo DRS" onclick="loadSingle(this)"><span class="btn-ticker" style="color:var(--rose)">DRS</span><span class="btn-name">Leonardo DRS</span></button>
+    <div id="sidebar-stocks"></div>
   </aside>
 
   <main class="chart-area">
@@ -226,72 +182,70 @@
 <script src="https://s3.tradingview.com/tv.js"></script>
 <script src="prices-data.js"></script>
 <script>
-  const CATEGORIES = {
-    primes: {
-      label: '🎖️ US Prime Contractors',
-      color: 'var(--amber)',
-      stocks: [
-        { tv: 'NYSE:LMT',  ticker: 'LMT',  name: 'Lockheed Martin' },
-        { tv: 'NYSE:RTX',  ticker: 'RTX',  name: 'RTX Corporation' },
-        { tv: 'NYSE:NOC',  ticker: 'NOC',  name: 'Northrop Grumman' },
-        { tv: 'NYSE:GD',   ticker: 'GD',   name: 'General Dynamics' },
-        { tv: 'NYSE:HII',  ticker: 'HII',  name: 'Huntington Ingalls' },
-        { tv: 'NYSE:LHX',  ticker: 'LHX',  name: 'L3Harris Technologies' },
-        { tv: 'NYSE:BA',   ticker: 'BA',   name: 'Boeing' },
-      ]
-    },
-    uk: {
-      label: '🇬🇧 UK / European',
-      color: 'var(--gold)',
-      stocks: [
-        { tv: 'LSE:BA.',   ticker: 'BA.L',  name: 'BAE Systems' },
-        { tv: 'LSE:RR.',   ticker: 'RR.L',  name: 'Rolls-Royce' },
-        { tv: 'LSE:QQ.',   ticker: 'QQ.L',  name: 'QinetiQ Group' },
-      ]
-    },
-    cyber: {
-      label: '🔐 Cyber / Intelligence',
-      color: 'var(--purple)',
-      stocks: [
-        { tv: 'NYSE:PLTR',  ticker: 'PLTR', name: 'Palantir Technologies' },
-        { tv: 'NYSE:LDOS',  ticker: 'LDOS', name: 'Leidos Holdings' },
-        { tv: 'NYSE:CACI',  ticker: 'CACI', name: 'CACI International' },
-        { tv: 'NYSE:SAIC',  ticker: 'SAIC', name: 'Science Applications Intl' },
-        { tv: 'NYSE:BAH',   ticker: 'BAH',  name: 'Booz Allen Hamilton' },
-      ]
-    },
-    drones: {
-      label: '🚁 Drones / Autonomy',
-      color: 'var(--teal)',
-      stocks: [
-        { tv: 'NASDAQ:AVAV', ticker: 'AVAV', name: 'AeroVironment' },
-        { tv: 'NASDAQ:KTOS', ticker: 'KTOS', name: 'Kratos Defense' },
-        { tv: 'NASDAQ:RCAT', ticker: 'RCAT', name: 'Red Cat Holdings' },
-        { tv: 'NYSE:TXT',    ticker: 'TXT',  name: 'Textron' },
-      ]
-    },
-    space: {
-      label: '🛰️ Space Defence',
-      color: 'var(--blue)',
-      stocks: [
-        { tv: 'NASDAQ:RKLB', ticker: 'RKLB', name: 'Rocket Lab' },
-        { tv: 'NYSE:PL',     ticker: 'PL',   name: 'Planet Labs' },
-        { tv: 'NASDAQ:ASTS', ticker: 'ASTS', name: 'AST SpaceMobile' },
-      ]
-    },
-    weapons: {
-      label: '⚔️ Weapons / Systems',
-      color: 'var(--rose)',
-      stocks: [
-        { tv: 'NYSE:TDG',    ticker: 'TDG',   name: 'TransDigm Group' },
-        { tv: 'NYSE:HEICO',  ticker: 'HEI', name: 'HEICO Corporation' },
-        { tv: 'NASDAQ:AXON', ticker: 'AXON',  name: 'Axon Enterprise' },
-        { tv: 'NYSE:OLN',    ticker: 'OLN',   name: 'Olin Corporation' },
-        { tv: 'NASDAQ:MRCY', ticker: 'MRCY',  name: 'Mercury Systems' },
-        { tv: 'NYSE:DRS',    ticker: 'DRS',   name: 'Leonardo DRS' },
-      ]
-    },
+  const TV_MAP = {
+    'BA.L': 'LSE:BA.',
+    'RR.L': 'LSE:RR.',
+    'QQ.L': 'LSE:QQ.',
   };
+
+  const CHART_CATS = {
+    'us-primes':   { label: '🇺🇸 US Primes',      color: 'var(--amber)',  btnLabel: '🇺🇸 US Primes' },
+    'uk-european': { label: '🇬🇧 UK / European',   color: 'var(--gold)',   btnLabel: '🇬🇧 UK/European' },
+    'cyber-intel': { label: '🔐 Cyber / Intel',    color: 'var(--purple)', btnLabel: '🔐 Cyber / Intel' },
+    'drones':      { label: '🚁 Drones / UAS',     color: 'var(--teal)',   btnLabel: '🚁 Drones' },
+    'space':       { label: '🚀 Space',            color: 'var(--blue)',   btnLabel: '🚀 Space' },
+    'weapons':     { label: '🎯 Weapons / Systems', color: 'var(--rose)',   btnLabel: '🎯 Weapons' },
+  };
+
+  function buildSidebar(stocks) {
+    if (!stocks || !stocks.length) return;
+    window._chartCats = {};
+    const catOrder = Object.keys(CHART_CATS);
+    catOrder.forEach(catKey => {
+      const cfg = CHART_CATS[catKey];
+      const catStocks = stocks.filter(s => s.category === catKey);
+      if (!catStocks.length) return;
+      window._chartCats[catKey] = {
+        label:  cfg.label,
+        color:  cfg.color,
+        stocks: catStocks.map(s => {
+          const tvSym = TV_MAP[s.ticker] || (s.exchange + ':' + s.ticker);
+          return { tv: tvSym, ticker: s.ticker, name: s.company_name || s.ticker };
+        }),
+      };
+    });
+    const container = document.getElementById('sidebar-stocks');
+    container.innerHTML = '';
+    catOrder.forEach(catKey => {
+      const cat = window._chartCats[catKey];
+      if (!cat) return;
+      const cfg = CHART_CATS[catKey];
+      const label = document.createElement('span');
+      label.className = 'cat-label ' + catKey.replace('us-primes','primes').replace('uk-european','uk').replace('cyber-intel','cyber');
+      label.textContent = cfg.label;
+      container.appendChild(label);
+      cat.stocks.forEach(st => {
+        const btn = document.createElement('button');
+        btn.className = 'stock-btn';
+        btn.dataset.tv   = st.tv;
+        btn.dataset.name = st.name;
+        btn.onclick = function() { loadSingle(this); };
+        btn.innerHTML = '<span class="btn-ticker" style="color:' + cfg.color + '">' + st.ticker + '</span><span class="btn-name">' + st.name + '</span>';
+        container.appendChild(btn);
+      });
+    });
+    const toolbar = document.getElementById('cat-toolbar-btns');
+    toolbar.innerHTML = '';
+    catOrder.forEach(catKey => {
+      if (!window._chartCats[catKey]) return;
+      const cfg = CHART_CATS[catKey];
+      const btn = document.createElement('button');
+      btn.className = 'tool-btn cat-btn';
+      btn.textContent = cfg.btnLabel;
+      btn.onclick = function() { setCategory(catKey, this); };
+      toolbar.appendChild(btn);
+    });
+  }
 
   const tfMap = {
     '1W':  { interval: '60', range: '5D' },
@@ -376,7 +330,7 @@
   }
 
   function buildGrid(cat) {
-    const data = CATEGORIES[cat];
+    const data = window._chartCats[cat];
     const tf   = tfMap[currentTimeframe];
     const grid = document.getElementById('chart-grid');
     const heading = document.getElementById('grid-heading');
@@ -429,9 +383,22 @@
   }
 
   window.addEventListener('load', () => {
+    if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
+      buildSidebar(window.PRICES_DATA.stocks);
+      const firstStock = window.PRICES_DATA.stocks[0];
+      if (firstStock) {
+        currentSymbol = TV_MAP[firstStock.ticker] || (firstStock.exchange + ':' + firstStock.ticker);
+        currentName   = firstStock.company_name || firstStock.ticker;
+        document.getElementById('chart-ticker').textContent = firstStock.ticker;
+        document.getElementById('chart-name').textContent   = currentName;
+      }
+    }
     setView('grid');
-    const firstCatBtn = document.querySelector('.cat-btn');
-    setCategory('primes', firstCatBtn);
+    const firstCatBtn = document.querySelector('#cat-toolbar-btns .cat-btn');
+    if (firstCatBtn) {
+      const firstCatKey = Object.keys(CHART_CATS)[0];
+      setCategory(firstCatKey, firstCatBtn);
+    }
   });
 
 </script>
