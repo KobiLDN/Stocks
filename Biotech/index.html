@@ -30,16 +30,16 @@
 <script defer="" src="../shared.js"></script>
 <style>
   /* Filters */
-  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px;
-    letter-spacing: 1px; text-transform: uppercase;
+    letter-spacing: 2px; text-transform: uppercase;
     padding: 5px 12px; border: 1px solid var(--border); background: transparent;
-    color: var(--muted); cursor: pointer; transition: all 0.2s;
+    color: var(--muted); cursor: pointer; transition: all 0.15s;
     position: relative;
   }
-  .filter-btn:hover { color: var(--text); border-color: var(--text); }
-  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
 
   /* Filter button tooltips */
   .filter-btn[data-tooltip]::after {
@@ -48,7 +48,7 @@
     bottom: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%);
-    background: var(--surface);
+    background: var(--surface2);
     color: var(--text);
     border: 1px solid var(--accent);
     border-radius: 6px;
@@ -228,7 +228,7 @@
 </div>
 </nav>
 <div class="container">
-<div class="filters">
+<div class="filter-bar">
 <button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
 <button class="filter-btn" data-filter="large-cap" data-tooltip="Established pharma/biotech giants with diversified pipelines and multi-billion market caps" onclick="filterTable('large-cap', this)">💊 Large Cap</button>
 <button class="filter-btn" data-filter="uk-listed" data-tooltip="UK-listed companies traded on the London Stock Exchange — prices shown in GBP" onclick="filterTable('uk-listed', this)">🇬🇧 UK Listed</button>

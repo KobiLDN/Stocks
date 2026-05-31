@@ -84,32 +84,29 @@
 <script defer="" src="../shared.js"></script>
 <style>
   /* Filter tabs */
-  .filters {
+  .filter-bar {
     display: flex;
-    gap: 4px;
-    margin-bottom: 24px;
+    gap: 6px;
+    margin-bottom: 16px;
     flex-wrap: wrap;
   }
 
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding: 5px 12px;
     border: 1px solid var(--border);
     background: transparent;
     color: var(--muted);
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.15s;
     text-transform: uppercase;
     position: relative;
   }
 
-  .filter-btn:hover, .filter-btn.active {
-    background: var(--accent);
-    color: var(--bg);
-    border-color: var(--accent);
-  }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
 
   /* Filter button tooltips */
   .filter-btn[data-tooltip]::after {
@@ -503,7 +500,7 @@
 </div>
 </nav>
 <div class="container">
-<div class="filters">
+<div class="filter-bar">
 <button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
 <button class="filter-btn" data-filter="memory" data-tooltip="DRAM, NAND flash &amp; storage hardware — the memory layer that feeds AI accelerators" onclick="filterTable('memory', this)">🧠 Memory / Storage</button>
 <button class="filter-btn" data-filter="nuclear-ops" data-tooltip="Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres" onclick="filterTable('nuclear-ops', this)">⚡ Nuclear Operators</button>
