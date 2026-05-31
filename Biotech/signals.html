@@ -468,6 +468,14 @@
     return map;
   }
 
+  function tickerNameMap() {
+    const map = {};
+    if (window.PRICES_DATA && Array.isArray(window.PRICES_DATA.stocks)) {
+      window.PRICES_DATA.stocks.forEach(s => { map[s.ticker] = s.company_name || NAMES[s.ticker] || s.ticker; });
+    }
+    return map;
+  }
+
   function renderSignals(data) {
     const tsEl   = document.getElementById('signals-ts');
     const modelEl= document.getElementById('model-name');
@@ -488,7 +496,8 @@
     tsEl.textContent    = data.updated || '—';
     modelEl.textContent = data.model   || 'local model';
 
-    const catFor = tickerCategoryMap();
+    const catFor  = tickerCategoryMap();
+    const nameFor = tickerNameMap();
 
     // Build previous rank lookup for delta badges
     const prevRank = {};
@@ -499,7 +508,7 @@
 
     feed.innerHTML = data.picks.map(p => {
       const t = p.ticker || '';
-      const name = NAMES[t] || t;
+      const name = nameFor[t] || NAMES[t] || t;
       const cat  = catFor[t] || '';
       const catLabel = CAT_LABELS[cat] || cat;
       const catBadge = cat

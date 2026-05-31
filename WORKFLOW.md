@@ -13,8 +13,8 @@ G:\My Drive\coding\ai\Stocks\
 ## The 3-step workflow
 
 1. **Edit in `STOCKSDev`** — make changes, commit, `git push origin dev`
-2. **Sync `STOCKSMain`** — `git fetch origin` then `git merge --ff-only origin/dev`
-3. **Go live** — from `STOCKSMain`: `git push` — **requires explicit user "go" every time**
+2. **Preview** — Netlify auto-deploys `dev` in ~30–60s → https://lovely-sfogliatella-7fc9f7.netlify.app/ (viewable from any device). Local `file://` still works instantly for quick checks without pushing.
+3. **Go live** — from `STOCKSMain`: `git pull && git merge origin/dev --no-edit && git push` — **requires explicit user "go" every time**
 
 `main` = sacred: always working, always deployable.
 `dev` = disposable: break it freely.
