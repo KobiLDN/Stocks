@@ -361,14 +361,13 @@
   .ytd-neg  { color: var(--red); }
   .ytd-flat { color: var(--muted); }
 
-  /* Header note (disclaimer under header-sub) */
+  /* Header note (disclaimer below header-inner, full width) */
   .header-note {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.2px;
-    margin-top: 6px;
-    max-width: 560px;
+    padding: 8px 24px 0;
     line-height: 1.5;
     opacity: 0.75;
   }
@@ -480,7 +479,6 @@
 <div class="header-label">// Stock Universe</div>
 <h1>AI <span>Infrastructure</span></h1>
 <div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3457</span> · <span id="last-updated">Last updated: 2026-05-30 14:41</span> · <span id="version">v2.4</span></div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE. For informational and research purposes only. Past performance does not guarantee future results. Always do your own research and consult a financial adviser before investing.</div>
 </div>
 <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -502,6 +500,7 @@
 </a>
 </div>
 </div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE. For informational and research purposes only. Past performance does not guarantee future results. Always do your own research and consult a financial adviser before investing.</div>
 </header>
 <nav>
 <div class="nav-inner">
