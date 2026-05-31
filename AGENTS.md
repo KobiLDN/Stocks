@@ -28,7 +28,7 @@ G:\My Drive\coding\ai\Stocks\        ← plain container (no .git)
 ### The 3-step workflow — always follow this order
 
 1. **Edit files in `STOCKSDev`** — make changes, commit, `git push origin dev`.
-2. **Preview** — Netlify auto-deploys `dev` in ~30–60s → https://lovely-sfogliatella-7fc9f7.netlify.app/ (viewable from any device). Local `file://` still works instantly without a push.
+2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → preview URL appears in Cloudflare Pages → Deployments (viewable from any device). Local `file://` still works instantly without a push.
 3. **Go live** — from `STOCKSMain`: `git pull && git merge origin/dev --no-edit && git push`. This is what updates the live site.
 
 Never edit in `STOCKSMain`. Never push to `main` until the user has approved the change ("go"). Step 3 (the live push) **requires explicit user approval every time.**
