@@ -473,18 +473,18 @@
 
   /* Category display config for charts */
   const CHART_CATS = {
-    'memory':        { key: 'memory',        label: '🧠 Memory / Storage',   color: 'var(--purple)',  btnLabel: '🧠 Memory',          tooltip: 'DRAM, NAND flash & storage hardware — the memory layer that feeds AI accelerators' },
-    'nuclear-ops':   { key: 'nuclear-ops',   label: '⚡ Nuclear Operators',   color: 'var(--accent2)', btnLabel: '⚡ Nuclear',          tooltip: 'Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres' },
-    'smr':           { key: 'smr',           label: '⚛️ SMR Builders',        color: 'var(--green)',   btnLabel: '⚛️ SMR',              tooltip: 'Small Modular Reactor developers — compact next-gen nuclear designed for on-site data centre power' },
-    'uranium':       { key: 'uranium',       label: '☢️ Uranium',             color: 'var(--gold)',    btnLabel: '☢️ Uranium',          tooltip: 'Uranium miners & enrichers — upstream fuel supply benefiting from the nuclear power revival' },
-    'power-infra':   { key: 'power-infra',   label: '🔋 Power Infra',         color: 'var(--accent)',  btnLabel: '🔋 Power',            tooltip: 'Switchgear, transformers & power management — the grid buildout infrastructure behind every data centre' },
-    'dc-operators':  { key: 'dc-operators',  label: '🏢 Data Centres',        color: 'var(--blue)',    btnLabel: '🏢 Data Centres',     tooltip: 'Companies that own and operate the physical data centre facilities where AI compute is housed' },
-    'hyperscalers':  { key: 'hyperscalers',  label: '☁️ Hyperscalers',        color: 'var(--indigo)',  btnLabel: '☁️ Hyperscalers',     tooltip: 'Mega cloud platforms (AWS, Azure, Google) building AI infrastructure at planetary scale' },
-    'ai-compute':    { key: 'ai-compute',    label: '🖥️ AI Compute',          color: 'var(--rose)',    btnLabel: '🖥️ AI Compute',       tooltip: 'GPU and AI accelerator makers — the silicon that runs AI training and inference workloads' },
-    'fibre-optical': { key: 'fibre-optical', label: '🌐 Fibre / Optical',     color: 'var(--teal)',    btnLabel: '🌐 Fibre / Optical',  tooltip: 'High-speed optical networking and fibre interconnects — the data links between and within data centres' },
-    'dsp-semi':      { key: 'dsp-semi',      label: '🔌 DSP / Semi',          color: 'var(--amber)',   btnLabel: '🔌 DSP / Semi',       tooltip: 'Specialised semiconductors for digital signal processing and high-speed networking silicon' },
-    'test-equip':    { key: 'test-equip',    label: '🔬 Test Equipment',      color: 'var(--slate)',   btnLabel: '🔬 Test Equipment',   tooltip: 'Electronic test & measurement gear used to validate chips, networks and power systems' },
-    'materials':     { key: 'materials',     label: '⚗️ Materials',           color: 'var(--lime)',    btnLabel: '⚗️ Materials',        tooltip: 'Specialty substrates and compound semiconductors used in chip and optical component manufacturing' },
+    'memory':        { key: 'memory',        label: '🧠 Memory / Storage',   color: 'var(--purple)',  btnLabel: 'Memory',          tooltip: 'DRAM, NAND flash & storage hardware — the memory layer that feeds AI accelerators' },
+    'nuclear-ops':   { key: 'nuclear-ops',   label: '⚡ Nuclear Operators',   color: 'var(--accent2)', btnLabel: 'Nuclear',         tooltip: 'Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres' },
+    'smr':           { key: 'smr',           label: '⚛️ SMR Builders',        color: 'var(--green)',   btnLabel: 'SMR',             tooltip: 'Small Modular Reactor developers — compact next-gen nuclear designed for on-site data centre power' },
+    'uranium':       { key: 'uranium',       label: '☢️ Uranium',             color: 'var(--gold)',    btnLabel: 'Uranium',         tooltip: 'Uranium miners & enrichers — upstream fuel supply benefiting from the nuclear power revival' },
+    'power-infra':   { key: 'power-infra',   label: '🔋 Power Infra',         color: 'var(--accent)',  btnLabel: 'Power',           tooltip: 'Switchgear, transformers & power management — the grid buildout infrastructure behind every data centre' },
+    'dc-operators':  { key: 'dc-operators',  label: '🏢 Data Centres',        color: 'var(--blue)',    btnLabel: 'Data Centres',    tooltip: 'Companies that own and operate the physical data centre facilities where AI compute is housed' },
+    'hyperscalers':  { key: 'hyperscalers',  label: '☁️ Hyperscalers',        color: 'var(--indigo)',  btnLabel: 'Hyperscalers',    tooltip: 'Mega cloud platforms (AWS, Azure, Google) building AI infrastructure at planetary scale' },
+    'ai-compute':    { key: 'ai-compute',    label: '🖥️ AI Compute',          color: 'var(--rose)',    btnLabel: 'AI Compute',      tooltip: 'GPU and AI accelerator makers — the silicon that runs AI training and inference workloads' },
+    'fibre-optical': { key: 'fibre-optical', label: '🌐 Fibre / Optical',     color: 'var(--teal)',    btnLabel: 'Fibre/Optical',   tooltip: 'High-speed optical networking and fibre interconnects — the data links between and within data centres' },
+    'dsp-semi':      { key: 'dsp-semi',      label: '🔌 DSP / Semi',          color: 'var(--amber)',   btnLabel: 'DSP/Semi',        tooltip: 'Specialised semiconductors for digital signal processing and high-speed networking silicon' },
+    'test-equip':    { key: 'test-equip',    label: '🔬 Test Equipment',      color: 'var(--slate)',   btnLabel: 'Test Equip',      tooltip: 'Electronic test & measurement gear used to validate chips, networks and power systems' },
+    'materials':     { key: 'materials',     label: '⚗️ Materials',           color: 'var(--lime)',    btnLabel: 'Materials',       tooltip: 'Specialty substrates and compound semiconductors used in chip and optical component manufacturing' },
   };
 
   function buildSidebar(stocks) {
