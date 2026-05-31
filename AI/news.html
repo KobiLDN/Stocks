@@ -535,7 +535,7 @@
         if (!n || !n.title) return;
         items.push({
           ticker:    s.ticker,
-          name:      NAMES[s.ticker] || s.ticker,
+          name:      s.company_name || NAMES[s.ticker] || s.ticker,
           category:  s.category,
           title:     n.title,
           url:       n.url || null,

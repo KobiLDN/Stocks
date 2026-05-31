@@ -398,7 +398,7 @@
     const data = stocks
       .map(s => ({
         ticker:   s.ticker,
-        name:     NAMES[s.ticker] || s.ticker,
+        name:     s.company_name || NAMES[s.ticker] || s.ticker,
         category: s.category,
         ytdPct:   parseFloat(s.change_ytd) || 0,
       }))
