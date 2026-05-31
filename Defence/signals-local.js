@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-05-30 06:57",
+  "updated": "2026-05-31 17:53",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RKLB",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "RKLB up 73.89% in 1M and 88.81% YTD, with strong buy consensus and positive news sentiment 0.15; live catalyst: recent successful rocket launches and expanding government contracts.",
+      "drivers": [
+        "+73.89% 1M momentum",
+        "+88.81% YTD",
+        "analyst buy 1.61",
+        "catalyst: multiple launches"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "MRCY surged 41.55% in 1M and 46.92% YTD on its largest-ever order for Common Processing Architecture servers, with positive news sentiment 0.128.",
+      "drivers": [
+        "+41.55% 1M momentum",
+        "+46.92% YTD",
+        "largest order catalyst",
+        "news sentiment 0.128"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ASTS up 53.46% in 1M and 35.87% YTD but hold analyst consensus (2.82) and high short interest 17.6% add risk; catalyst: direct-to-cell service milestones.",
+      "drivers": [
+        "+53.46% 1M momentum",
+        "+35.87% YTD",
+        "high short 17.6%",
+        "catalyst: direct-to-cell progress"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "PL up 38.33% in 1M and 150.56% YTD with buy rating (2.0), though P/E is negative; catalyst: new satellite imagery contracts with NRO.",
+      "drivers": [
+        "+38.33% 1M momentum",
+        "+150.56% YTD",
+        "analyst buy 2.0",
+        "catalyst: NRO contract"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "HEI gained 28.99% in 1M with balanced 5.77% YTD, P/E 62.06 high but earnings beat catalyst, buy consensus (1.83), news sentiment 0.169.",
+      "drivers": [
+        "+28.99% 1M momentum",
+        "earnings beat",
+        "analyst buy 1.83",
+        "news sentiment 0.169"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "RCAT up 23.72% in 1M and 58.30% YTD with strong_buy consensus (1.2) but very high short interest 21.01% and no P/E; catalyst: Pentagon drone funding.",
+      "drivers": [
+        "+23.72% 1M momentum",
+        "+58.30% YTD",
+        "strong_buy 1.2",
+        "catalyst: DoD drone funding"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "RR.L up 21.74% in 1M and 11.73% YTD, P/E 19.38 reasonable, buy consensus (1.7); catalyst: increased engine orders from airlines.",
+      "drivers": [
+        "+21.74% 1M momentum",
+        "P/E 19.38",
+        "analyst buy 1.7",
+        "catalyst: engine orders"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "DRS up 20.26% in 1M and 40.76% YTD, P/E 45.57, no analyst rating but news sentiment 0.18; catalyst: new thermal drone camera unveiled.",
+      "drivers": [
+        "+20.26% 1M momentum",
+        "+40.76% YTD",
+        "news sentiment 0.18",
+        "catalyst: new product"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "QQ.L up 15.59% in 1M and 13.31% YTD, P/E 25.18, buy consensus (1.82), high news sentiment 0.307; catalyst: UK defense spending increases.",
+      "drivers": [
+        "+15.59% 1M momentum",
+        "analyst buy 1.82",
+        "news sentiment 0.307",
+        "catalyst: UK defense budget"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "PLTR up 12.53% in 1M but YTD -6.74%, very high P/E 175.89, buy consensus (1.9); catalyst: Dell blockbuster orders triggering stock surge.",
+      "drivers": [
+        "+12.53% 1M momentum",
+        "buy consensus 1.9",
+        "catalyst: Dell orders",
+        "negative YTD -6.74%"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RKLB",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "+12.53% 1-month",
         "buy consensus",
         "defense AI focus"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Strong buy analyst consensus (score 1.5), +39.75% YTD, P/E 45.24, low beta 0.027, positive news sentiment 0.18, and recent product launch catalyst.",
-      "drivers": [
-        "strong_buy consensus",
-        "low beta 0.027",
-        "+39.75% YTD",
-        "product launch catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Buy analyst (score 1.87), +32.22% 1M, P/E 68.47, low short interest 1.13%, and earnings beat catalyst.",
-      "drivers": [
-        "+32.22% 1M",
-        "low short interest 1.13%",
-        "earnings beat",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Buy analyst (score 1.68), +15.89% 1M, P/E 19.05, +9.83% YTD, positive news sentiment 0.158, UK defence momentum.",
-      "drivers": [
-        "+15.89% 1M",
-        "P/E 19.05",
-        "buy consensus",
-        "UK defence rally"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Buy analyst (score 2.0), +44.63% 1M, +42.19% YTD, beta 0.83, short interest 9.4%, strong defence momentum.",
-      "drivers": [
-        "+44.63% 1M",
-        "+42.19% YTD",
-        "beta 0.83",
-        "defence momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Buy analyst (score 2.0), +151.84% YTD, +50.82% 1M, news sentiment 0.43, space sector momentum.",
-      "drivers": [
-        "+151.84% YTD",
-        "+50.82% 1M",
-        "news sentiment 0.43",
-        "space momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Buy analyst (score 1.61), +94.80% YTD, +92.20% 1M, high beta 2.313, space sector leader.",
-      "drivers": [
-        "+94.80% YTD",
-        "+92.20% 1M",
-        "buy consensus",
-        "space leader"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Buy analyst (score 1.63), +30.83% 1W, +16.83% 1M, drone sector catalyst from Trump administration funding talks.",
-      "drivers": [
-        "+30.83% 1W",
-        "+16.83% 1M",
-        "drone funding catalyst",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Buy analyst (score 2.0), +16.08% 1W, +13.63% 1M, P/E 25.05, small cap UK defence with high insider ownership.",
-      "drivers": [
-        "+16.08% 1W",
-        "+13.63% 1M",
-        "P/E 25.05",
-        "small cap defence"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "Hold analyst (score 2.82) but low P/E 13.47, +9.01% 1M, +3.19% YTD, low beta 0.27, attractive valuation.",
-      "drivers": [
-        "P/E 13.47",
-        "low beta 0.27",
-        "+9.01% 1M",
-        "defence IT value"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "Buy analyst (score 1.56), P/E 21.6, +6.07% 1W, +3.94% 1M, low beta 0.538, cyber-intel exposure.",
-      "drivers": [
-        "buy consensus 1.56",
-        "P/E 21.6",
-        "+6.07% 1W",
-        "cyber-intel"
       ]
     }
   ]

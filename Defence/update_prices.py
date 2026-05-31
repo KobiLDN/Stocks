@@ -7,6 +7,8 @@ Requires: pip install yfinance beautifulsoup4 vaderSentiment
 
 import yfinance as yf
 import json
+import contextlib
+import io
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
@@ -107,7 +109,8 @@ def get_stock_data(yahoo_symbol):
         pass
     try:
         year = datetime.now().year
-        ytd_hist = t.history(start=f'{year}-01-02', end=f'{year}-01-10')
+        with contextlib.redirect_stderr(io.StringIO()):
+            ytd_hist = t.history(period='ytd', raise_errors=False)
         if len(ytd_hist) >= 1:
             price_ytd = float(ytd_hist['Close'].iloc[0])
     except Exception:

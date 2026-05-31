@@ -1,9 +1,10 @@
 window.PRICES_DATA = {
-  "updated": "2026-05-30 14:41",
-  "fx_gbp_usd": 1.3457,
+  "updated": "2026-05-31 17:42",
+  "fx_gbp_usd": 1.3452,
   "stocks": [
     {
       "ticker": "AMGN",
+      "company_name": "Amgen",
       "category": "large-cap",
       "exchange": "NASDAQ",
       "price_gbp": "250",
@@ -16,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "199",
       "high_gbp": "291",
       "bar_pct": 56,
-      "market_cap_gbp_b": 135.074,
+      "market_cap_gbp_b": 135.128,
       "beta": 0.435,
       "pe_ratio": 23.42,
       "avg_volume_m": 2.62,
@@ -28,6 +29,13 @@ window.PRICES_DATA = {
       "vol_1w": 10468700,
       "vol_1m": 57156200,
       "news": [
+        {
+          "title": "Amgen Stock: Is AMGN Outperforming the Healthcare Sector?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2221670/amgen-stock-is-amgn-outperforming-the-healthcare-sector",
+          "published": 1780212328,
+          "sentiment": 0.0
+        },
         {
           "title": "Is Merck & Co. Stock Outperforming the S&P 500?",
           "publisher": "Barchart",
@@ -55,19 +63,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/novo-nordisk-vs-amgen-pharma-143200820.html",
           "published": 1779892320,
           "sentiment": 0.44
-        },
-        {
-          "title": "Top Stock Reports for RTX, Wells Fargo & Amgen",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-stock-reports-rtx-wells-204500132.html",
-          "published": 1779828300,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.256
+      "news_sentiment": 0.172
     },
     {
       "ticker": "GILD",
+      "company_name": "Gilead Sciences",
       "category": "large-cap",
       "exchange": "NASDAQ",
       "price_gbp": "100",
@@ -80,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "78",
       "high_gbp": "117",
       "bar_pct": 57,
-      "market_cap_gbp_b": 124.028,
+      "market_cap_gbp_b": 124.078,
       "beta": 0.332,
       "pe_ratio": 18.29,
       "avg_volume_m": 6.12,
@@ -92,6 +94,13 @@ window.PRICES_DATA = {
       "vol_1w": 40534100,
       "vol_1m": 140189900,
       "news": [
+        {
+          "title": "Amgen Stock: Is AMGN Outperforming the Healthcare Sector?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2221670/amgen-stock-is-amgn-outperforming-the-healthcare-sector",
+          "published": 1780212328,
+          "sentiment": 0.0
+        },
         {
           "title": "Three Stocks That May Be Trading Below Estimated Value In May 2026",
           "publisher": "Simply Wall St.",
@@ -119,19 +128,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/gilead-gild-wins-fda-approval-060454532.html",
           "published": 1780034694,
           "sentiment": 0.778
-        },
-        {
-          "title": "S&P 500, Nasdaq Rise to Another Record. Software Strikes Back.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-052826/card/s-p-500-nasdaq-rise-to-another-record-software-strikes-back--hLKkqDZUeKbgzaWFPeJK?siteid=yhoof2&yptr=yahoo",
-          "published": 1779998498,
-          "sentiment": -0.361
         }
       ],
-      "news_sentiment": 0.135
+      "news_sentiment": 0.207
     },
     {
       "ticker": "REGN",
+      "company_name": "Regeneron Pharmaceuticals",
       "category": "large-cap",
       "exchange": "NASDAQ",
       "price_gbp": "457",
@@ -144,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "354",
       "high_gbp": "610",
       "bar_pct": 40,
-      "market_cap_gbp_b": 47.896,
+      "market_cap_gbp_b": 47.915,
       "beta": 0.296,
       "pe_ratio": 15.02,
       "avg_volume_m": 0.81,
@@ -156,6 +159,13 @@ window.PRICES_DATA = {
       "vol_1w": 7220100,
       "vol_1m": 23557800,
       "news": [
+        {
+          "title": "Regeneron (REGN) Says EMA Accepted Review for Otarmeni Application",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/regeneron-regn-says-ema-accepted-082359200.html",
+          "published": 1780215839,
+          "sentiment": 0.273
+        },
         {
           "title": "Regeneron (REGN) Down 12.1% Since Last Earnings Report: Can It Rebound?",
           "publisher": "Zacks",
@@ -183,19 +193,13 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/news/technology/apogee-therapeutics-stock-eczema-treatment-dupixent-eblgyss/?src=A00220&yptr=yahoo",
           "published": 1779912325,
           "sentiment": 0.0
-        },
-        {
-          "title": "Investment Firm Closes Out Entire $18.1 Million Position in Biotech Stock, According to Latest SEC Filing",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/filings/2026/05/26/investment-firm-closes-out-entire-usd18-1-million-position-in-biotech-stock-according-to-latest-sec-filing/",
-          "published": 1779821382,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.168
+      "news_sentiment": 0.223
     },
     {
       "ticker": "VRTX",
+      "company_name": "Vertex Pharmaceuticals",
       "category": "large-cap",
       "exchange": "NASDAQ",
       "price_gbp": "333",
@@ -206,9 +210,9 @@ window.PRICES_DATA = {
       "change_ytd": "-1.02%",
       "return_1yr": "+0%",
       "low_gbp": "269",
-      "high_gbp": "377",
+      "high_gbp": "378",
       "bar_pct": 58,
-      "market_cap_gbp_b": 84.408,
+      "market_cap_gbp_b": 84.443,
       "beta": 0.301,
       "pe_ratio": 26.53,
       "avg_volume_m": 1.3,
@@ -220,6 +224,13 @@ window.PRICES_DATA = {
       "vol_1w": 7027800,
       "vol_1m": 27623400,
       "news": [
+        {
+          "title": "CRISPR Therapeutics vs. Editas Medicine: Which Gene Editing Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/05/31/crispr-therapeutics-vs-editas-medicine-which-gene-editing-stock-is-a-better-buy-in-2026/",
+          "published": 1780245108,
+          "sentiment": 0.44
+        },
         {
           "title": "2 Healthcare Stocks with Exciting Potential and 1 Facing Challenges",
           "publisher": "StockStory",
@@ -247,19 +258,13 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/05/28/these-2-cheap-biotech-stocks-offer-potential-for-low-beta-growth/",
           "published": 1779980640,
           "sentiment": 0.382
-        },
-        {
-          "title": "Vertex\u2019s Journavx made history, but left a void in the pain space",
-          "publisher": "Pharma Voice",
-          "url": "https://www.pharmavoice.com/news/vertex-jounavx-history-pain-drug-pharma-tris/821309/",
-          "published": 1779957271,
-          "sentiment": -0.665
         }
       ],
-      "news_sentiment": 0.232
+      "news_sentiment": 0.453
     },
     {
       "ticker": "BIIB",
+      "company_name": "Biogen",
       "category": "large-cap",
       "exchange": "NASDAQ",
       "price_gbp": "146",
@@ -272,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "90",
       "high_gbp": "153",
       "bar_pct": 88,
-      "market_cap_gbp_b": 21.503,
+      "market_cap_gbp_b": 21.512,
       "beta": 0.195,
       "pe_ratio": 21.1,
       "avg_volume_m": 1.15,
@@ -324,9 +329,10 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "BMY",
+      "company_name": "Bristol-Myers Squibb",
       "category": "large-cap",
       "exchange": "NYSE",
-      "price_gbp": "42",
+      "price_gbp": "43",
       "price_usd": 57.18,
       "change_1d": "+0.47%",
       "change_1w": "-3.98%",
@@ -336,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "32",
       "high_gbp": "47",
       "bar_pct": 72,
-      "market_cap_gbp_b": 86.77,
+      "market_cap_gbp_b": 86.805,
       "beta": 0.259,
       "pe_ratio": 16.02,
       "avg_volume_m": 11.52,
@@ -348,6 +354,20 @@ window.PRICES_DATA = {
       "vol_1w": 63637100,
       "vol_1m": 239371900,
       "news": [
+        {
+          "title": "How Is Pfizer's Stock Performance Compared to Other Healthcare Stocks?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2221816/how-is-pfizer-s-stock-performance-compared-to-other-healthcare-stocks",
+          "published": 1780216018,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Illumina Oncology Launches Put Product Depth Against Rapid Share Price Gains",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/illumina-oncology-launches-put-product-160513872.html",
+          "published": 1780157113,
+          "sentiment": 0.557
+        },
         {
           "title": "This Biotech Stock Is Up 85%. FDA Has Agreed to Review a Skin Cancer Drug.",
           "publisher": "Barrons.com",
@@ -368,26 +388,13 @@ window.PRICES_DATA = {
           "url": "https://www.biopharmadive.com/news/replimune-fda-approval-application-talks-stock-biotech-melanoma/821496/",
           "published": 1780056892,
           "sentiment": -0.318
-        },
-        {
-          "title": "How Bristol Is Building On Its $74 Billion Celgene Buyout With New 'Molecular Glue'",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/technology/bristol-myers-squibb-stock-celmods-multiple-myeloma-treatment/?src=A00220&yptr=yahoo",
-          "published": 1780056020,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Bristol-Myers Squibb (BMY) Partners with Anthropic",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/bristol-myers-squibb-bmy-partners-053740926.html",
-          "published": 1780033060,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.089
+      "news_sentiment": 0.022
     },
     {
       "ticker": "AZN",
+      "company_name": "AstraZeneca",
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "138",
@@ -452,6 +459,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "GSK",
+      "company_name": "GSK",
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "19",
@@ -516,6 +524,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "CRSP",
+      "company_name": "CRISPR Therapeutics",
       "category": "gene-editing",
       "exchange": "NASDAQ",
       "price_gbp": "42",
@@ -528,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "27",
       "high_gbp": "58",
       "bar_pct": 47,
-      "market_cap_gbp_b": 4.027,
+      "market_cap_gbp_b": 4.028,
       "beta": 1.74,
       "pe_ratio": null,
       "avg_volume_m": 1.91,
@@ -540,6 +549,13 @@ window.PRICES_DATA = {
       "vol_1w": 9434100,
       "vol_1m": 35865600,
       "news": [
+        {
+          "title": "CRISPR Therapeutics vs. Editas Medicine: Which Gene Editing Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/05/31/crispr-therapeutics-vs-editas-medicine-which-gene-editing-stock-is-a-better-buy-in-2026/",
+          "published": 1780245108,
+          "sentiment": 0.44
+        },
         {
           "title": "Is CRISPR Therapeutics (CRSP) One Of The Under-The-Radar Stocks With Massive Upside For 2026?",
           "publisher": "Insider Monkey",
@@ -567,19 +583,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/crispr-therapeutics-ag-crsp-reports-044903897.html",
           "published": 1779511743,
           "sentiment": 0.0
-        },
-        {
-          "title": "Can Intellia's Pipeline Push Drive Long-Term Growth Amid Rivalry?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/intellias-pipeline-push-drive-long-155300020.html",
-          "published": 1779205980,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.19
+      "news_sentiment": 0.202
     },
     {
       "ticker": "BEAM",
+      "company_name": "Beam Therapeutics",
       "category": "gene-editing",
       "exchange": "NASDAQ",
       "price_gbp": "24",
@@ -592,7 +602,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "27",
       "bar_pct": 83,
-      "market_cap_gbp_b": 2.518,
+      "market_cap_gbp_b": 2.519,
       "beta": 2.262,
       "pe_ratio": null,
       "avg_volume_m": 2.1,
@@ -644,6 +654,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "NTLA",
+      "company_name": "Intellia Therapeutics",
       "category": "gene-editing",
       "exchange": "NASDAQ",
       "price_gbp": "10",
@@ -708,6 +719,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "EDIT",
+      "company_name": "Editas Medicine",
       "category": "gene-editing",
       "exchange": "NASDAQ",
       "price_gbp": "2.57",
@@ -732,6 +744,13 @@ window.PRICES_DATA = {
       "vol_1w": 36494700,
       "vol_1m": 54616300,
       "news": [
+        {
+          "title": "CRISPR Therapeutics vs. Editas Medicine: Which Gene Editing Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/05/31/crispr-therapeutics-vs-editas-medicine-which-gene-editing-stock-is-a-better-buy-in-2026/",
+          "published": 1780245108,
+          "sentiment": 0.44
+        },
         {
           "title": "Some Analysts Just Cut Their Editas Medicine, Inc. (NASDAQ:EDIT) Estimates",
           "publisher": "Simply Wall St.",
@@ -759,19 +778,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/editas-medicine-edit-reports-q1-122504632.html",
           "published": 1777983904,
           "sentiment": -0.494
-        },
-        {
-          "title": "Why Is Black Diamond (BDTX) Up 19.3% Since Last Earnings Report?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-black-diamond-bdtx-19-153002971.html",
-          "published": 1776267002,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": -0.149
+      "news_sentiment": -0.129
     },
     {
       "ticker": "ILMN",
+      "company_name": "Illumina",
       "category": "genomics",
       "exchange": "NASDAQ",
       "price_gbp": "121",
@@ -784,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "59",
       "high_gbp": "123",
       "bar_pct": 97,
-      "market_cap_gbp_b": 18.322,
+      "market_cap_gbp_b": 18.329,
       "beta": 1.424,
       "pe_ratio": 29.58,
       "avg_volume_m": 1.57,
@@ -796,6 +809,13 @@ window.PRICES_DATA = {
       "vol_1w": 9271900,
       "vol_1m": 38374600,
       "news": [
+        {
+          "title": "Illumina Oncology Launches Put Product Depth Against Rapid Share Price Gains",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/illumina-oncology-launches-put-product-160513872.html",
+          "published": 1780157113,
+          "sentiment": 0.557
+        },
         {
           "title": "Dow Jones Futures Rise As Dell, NetApp Surge On Earnings; Oil Falls On U.S.-Iran Deal Hopes",
           "publisher": "Investor's Business Daily",
@@ -823,19 +843,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-sell-ilmn-1-125255554.html",
           "published": 1779281575,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is This the Right Time to Retain ILMN Stock in Your Portfolio?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/time-retain-ilmn-stock-portfolio-123900113.html",
-          "published": 1779280740,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.218
+      "news_sentiment": 0.33
     },
     {
       "ticker": "PACB",
+      "company_name": "Pacific Biosciences",
       "category": "genomics",
       "exchange": "NASDAQ",
       "price_gbp": "1.11",
@@ -845,7 +859,7 @@ window.PRICES_DATA = {
       "change_1m": "-6.29%",
       "change_ytd": "-19.02%",
       "return_1yr": "+51%*",
-      "low_gbp": "0.713",
+      "low_gbp": "0.714",
       "high_gbp": "2.03",
       "bar_pct": 30,
       "market_cap_gbp_b": 0.344,
@@ -900,6 +914,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "NTRA",
+      "company_name": "Natera",
       "category": "genomics",
       "exchange": "NASDAQ",
       "price_gbp": "166",
@@ -912,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "98",
       "high_gbp": "191",
       "bar_pct": 74,
-      "market_cap_gbp_b": 23.772,
+      "market_cap_gbp_b": 23.782,
       "beta": 1.567,
       "pe_ratio": null,
       "avg_volume_m": 1.44,
@@ -924,6 +939,13 @@ window.PRICES_DATA = {
       "vol_1w": 8328200,
       "vol_1m": 37553000,
       "news": [
+        {
+          "title": "NWI Management Dumps 42,700 MercadoLibre Shares Worth $82.4 Million",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/filings/2026/05/30/nwi-management-dumps-42-700-mercadolibre-shares-worth-usd82-4-million/",
+          "published": 1780148177,
+          "sentiment": 0.103
+        },
         {
           "title": "Is Natera (NTRA) Quietly Redefining Its Moat With MRD Trials And Sequencing Scale-Up?",
           "publisher": "Simply Wall St.",
@@ -951,19 +973,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/natera-launch-enhanced-panorama-nipt-150400532.html",
           "published": 1779980640,
           "sentiment": -0.273
-        },
-        {
-          "title": "Natera Expands Austin Operations With New Sequencing Facility",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/natera-expands-austin-operations-sequencing-145800968.html",
-          "published": 1779807480,
-          "sentiment": 0.103
         }
       ],
       "news_sentiment": 0.134
     },
     {
       "ticker": "RXRX",
+      "company_name": "Recursion Pharmaceuticals",
       "category": "genomics",
       "exchange": "NASDAQ",
       "price_gbp": "2.67",
@@ -976,14 +992,14 @@ window.PRICES_DATA = {
       "low_gbp": "2.06",
       "high_gbp": "5.34",
       "bar_pct": 19,
-      "market_cap_gbp_b": 1.416,
+      "market_cap_gbp_b": 1.417,
       "beta": 1.047,
       "pe_ratio": null,
       "avg_volume_m": 13.99,
       "div_yield_pct": null,
       "short_pct": 36.84,
-      "analyst": "buy",
-      "analyst_score": 2.5,
+      "analyst": "none",
+      "analyst_score": null,
       "vol_1d": 29274800,
       "vol_1w": 124104300,
       "vol_1m": 353043200,
@@ -1028,6 +1044,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "INCY",
+      "company_name": "Incyte",
       "category": "oncology",
       "exchange": "NASDAQ",
       "price_gbp": "72",
@@ -1040,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "48",
       "high_gbp": "83",
       "bar_pct": 68,
-      "market_cap_gbp_b": 14.362,
+      "market_cap_gbp_b": 14.368,
       "beta": 0.797,
       "pe_ratio": 13.66,
       "avg_volume_m": 1.47,
@@ -1092,6 +1109,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "EXEL",
+      "company_name": "Exelixis",
       "category": "oncology",
       "exchange": "NASDAQ",
       "price_gbp": "38",
@@ -1104,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "25",
       "high_gbp": "39",
       "bar_pct": 87,
-      "market_cap_gbp_b": 9.429,
+      "market_cap_gbp_b": 9.433,
       "beta": 0.385,
       "pe_ratio": 16.72,
       "avg_volume_m": 2.76,
@@ -1116,6 +1134,13 @@ window.PRICES_DATA = {
       "vol_1w": 12605100,
       "vol_1m": 61130800,
       "news": [
+        {
+          "title": "Exelixis, Inc. (EXEL): Renaissance Technologies Likes This Stock",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/exelixis-inc-exel-renaissance-technologies-155441763.html",
+          "published": 1780156481,
+          "sentiment": 0.421
+        },
         {
           "title": "How The Exelixis (EXEL) Story Is Shifting As Wall Street Reworks Fair Value Targets",
           "publisher": "Simply Wall St.",
@@ -1143,19 +1168,13 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/05/28/if-decades-of-history-tell-us-anything-this-biotech-near-50-is-primed-to-skyrocket/",
           "published": 1779978193,
           "sentiment": 0.0
-        },
-        {
-          "title": "Exelixis Eyes CABO Growth as Zanzalintinib Readouts and Potential CRC Launch Near",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/exelixis-eyes-cabo-growth-as-zanzalintinib-readouts-and-potential-crc-launch-near-2026-05-23/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1779527054,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.143
+      "news_sentiment": 0.151
     },
     {
       "ticker": "ALNY",
+      "company_name": "Alnylam Pharmaceuticals",
       "category": "oncology",
       "exchange": "NASDAQ",
       "price_gbp": "224",
@@ -1168,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "211",
       "high_gbp": "368",
       "bar_pct": 8,
-      "market_cap_gbp_b": 29.961,
+      "market_cap_gbp_b": 29.973,
       "beta": 0.302,
       "pe_ratio": 75.68,
       "avg_volume_m": 1.1,
@@ -1180,6 +1199,13 @@ window.PRICES_DATA = {
       "vol_1w": 5259200,
       "vol_1m": 22303000,
       "news": [
+        {
+          "title": "Are Options Traders Betting on a Big Move in Alnylam Stock?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/options/articles/options-traders-betting-big-move-185500974.html",
+          "published": 1780167300,
+          "sentiment": 0.0
+        },
         {
           "title": "JPMorgan says large-cap biotech is back as profits and pipelines fuel upside",
           "publisher": "Investing.com",
@@ -1207,19 +1233,13 @@ window.PRICES_DATA = {
           "url": "https://www.proactiveinvestors.com/companies/news/1092532/immunic-appoints-biogen-cubist-veteran-mike-bonney-as-board-chair-ahead-of-key-ms-trial-readout-1092532.html",
           "published": 1779197580,
           "sentiment": 0.0
-        },
-        {
-          "title": "How Investors Are Reacting To Alnylam Pharmaceuticals (ALNY) New HELIOS-B Vutrisiran Data And Real-World Study",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/investors-reacting-alnylam-pharmaceuticals-alny-181419488.html",
-          "published": 1779128059,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.128
     },
     {
       "ticker": "RCUS",
+      "company_name": "Arcus Biosciences",
       "category": "oncology",
       "exchange": "NYSE",
       "price_gbp": "19",
@@ -1232,7 +1252,7 @@ window.PRICES_DATA = {
       "low_gbp": "5.88",
       "high_gbp": "21",
       "bar_pct": 84,
-      "market_cap_gbp_b": 2.368,
+      "market_cap_gbp_b": 2.369,
       "beta": 0.874,
       "pe_ratio": null,
       "avg_volume_m": 1.19,
@@ -1284,6 +1304,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "MRNA",
+      "company_name": "Moderna",
       "category": "mrna",
       "exchange": "NASDAQ",
       "price_gbp": "35",
@@ -1296,7 +1317,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "44",
       "bar_pct": 67,
-      "market_cap_gbp_b": 13.914,
+      "market_cap_gbp_b": 13.92,
       "beta": 1.056,
       "pe_ratio": null,
       "avg_volume_m": 7.38,
@@ -1348,6 +1369,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "BNTX",
+      "company_name": "BioNTech",
       "category": "mrna",
       "exchange": "NASDAQ",
       "price_gbp": "71",
@@ -1360,7 +1382,7 @@ window.PRICES_DATA = {
       "low_gbp": "59",
       "high_gbp": "92",
       "bar_pct": 37,
-      "market_cap_gbp_b": 18.031,
+      "market_cap_gbp_b": 18.038,
       "beta": 1.371,
       "pe_ratio": null,
       "avg_volume_m": 1.2,
@@ -1412,9 +1434,10 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "NVAX",
+      "company_name": "Novavax",
       "category": "mrna",
       "exchange": "NASDAQ",
-      "price_gbp": "8.15",
+      "price_gbp": "8.16",
       "price_usd": 10.97,
       "change_1d": "+6.61%",
       "change_1w": "+22.16%",
@@ -1424,14 +1447,14 @@ window.PRICES_DATA = {
       "low_gbp": "4.56",
       "high_gbp": "8.90",
       "bar_pct": 83,
-      "market_cap_gbp_b": 1.34,
+      "market_cap_gbp_b": 1.341,
       "beta": 2.369,
       "pe_ratio": null,
       "avg_volume_m": 4.62,
       "div_yield_pct": null,
       "short_pct": 27.71,
-      "analyst": "none",
-      "analyst_score": null,
+      "analyst": "buy",
+      "analyst_score": 2.33,
       "vol_1d": 7154000,
       "vol_1w": 37144900,
       "vol_1m": 135946400,
@@ -1476,6 +1499,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "BMRN",
+      "company_name": "BioMarin Pharmaceutical",
       "category": "rare-disease",
       "exchange": "NASDAQ",
       "price_gbp": "43",
@@ -1488,7 +1512,7 @@ window.PRICES_DATA = {
       "low_gbp": "37",
       "high_gbp": "49",
       "bar_pct": 47,
-      "market_cap_gbp_b": 8.229,
+      "market_cap_gbp_b": 8.232,
       "beta": 0.229,
       "pe_ratio": 41.22,
       "avg_volume_m": 2.01,
@@ -1500,6 +1524,20 @@ window.PRICES_DATA = {
       "vol_1w": 13861900,
       "vol_1m": 51680200,
       "news": [
+        {
+          "title": "What to Know About This Fund's $5.4 Million Ultragenyx Purchase as Shares Slip 30% in One Year",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/filings/2026/05/30/what-to-know-about-this-fund-s-usd5-4-million-ultragenyx-purchase-as-shares-slip-30-in-one-year/",
+          "published": 1780163761,
+          "sentiment": 0.296
+        },
+        {
+          "title": "BioMarin Pharmaceutical Inc. (BMRN) A Stock that Could 10x by 2030 on Pipeline Development",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/biomarin-pharmaceutical-inc-bmrn-stock-164306433.html",
+          "published": 1780159386,
+          "sentiment": 0.0
+        },
         {
           "title": "JPMorgan says large-cap biotech is back as profits and pipelines fuel upside",
           "publisher": "Investing.com",
@@ -1520,26 +1558,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/1-small-cap-stock-solid-184455361.html",
           "published": 1779475495,
           "sentiment": -0.052
-        },
-        {
-          "title": "BioMarin\u2019s (BMRN) Phase 3 Trial of BMN 401 for ENPP1 Deficiency Meets One Co-Primary Endpoint",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/biomarin-bmrn-phase-3-trial-132921475.html",
-          "published": 1779370161,
-          "sentiment": 0.0
-        },
-        {
-          "title": "BioMarin (BMRN) Is Down 6.3% After Mixed Phase 3 BMN 401 Results in ENPP1 Deficiency",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/biomarin-bmrn-down-6-3-231246610.html",
-          "published": 1779318766,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.078
+      "news_sentiment": 0.137
     },
     {
       "ticker": "SRPT",
+      "company_name": "Sarepta Therapeutics",
       "category": "rare-disease",
       "exchange": "NASDAQ",
       "price_gbp": "13",
@@ -1549,10 +1574,10 @@ window.PRICES_DATA = {
       "change_1m": "-14.42%",
       "change_ytd": "-16.14%",
       "return_1yr": "-53%",
-      "low_gbp": "7.74",
+      "low_gbp": "7.75",
       "high_gbp": "33",
       "bar_pct": 22,
-      "market_cap_gbp_b": 1.402,
+      "market_cap_gbp_b": 1.403,
       "beta": 0.255,
       "pe_ratio": 51.06,
       "avg_volume_m": 3.02,
@@ -1604,6 +1629,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "COAG",
+      "company_name": "Hemab Therapeutics",
       "category": "rare-disease",
       "exchange": "NASDAQ",
       "price_gbp": "21",
@@ -1611,12 +1637,12 @@ window.PRICES_DATA = {
       "change_1d": "+1.79%",
       "change_1w": "+8.37%",
       "change_1m": "-16.18%",
-      "change_ytd": "+0.00%",
+      "change_ytd": "-16.18%",
       "return_1yr": "-16%",
       "low_gbp": "17",
       "high_gbp": "27",
       "bar_pct": 40,
-      "market_cap_gbp_b": 0.989,
+      "market_cap_gbp_b": 0.99,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 0.42,
@@ -1640,6 +1666,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "NVO",
+      "company_name": "Novo Nordisk",
       "category": "metabolic",
       "exchange": "NYSE",
       "price_gbp": "34",
@@ -1652,7 +1679,7 @@ window.PRICES_DATA = {
       "low_gbp": "26",
       "high_gbp": "61",
       "bar_pct": 23,
-      "market_cap_gbp_b": 150.074,
+      "market_cap_gbp_b": 150.135,
       "beta": 0.348,
       "pe_ratio": 10.7,
       "avg_volume_m": 17.08,
@@ -1704,6 +1731,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "LLY",
+      "company_name": "Eli Lilly",
       "category": "metabolic",
       "exchange": "NYSE",
       "price_gbp": "821",
@@ -1716,7 +1744,7 @@ window.PRICES_DATA = {
       "low_gbp": "464",
       "high_gbp": "854",
       "bar_pct": 92,
-      "market_cap_gbp_b": 732.241,
+      "market_cap_gbp_b": 732.537,
       "beta": 0.481,
       "pe_ratio": 39.21,
       "avg_volume_m": 3.11,
@@ -1729,45 +1757,46 @@ window.PRICES_DATA = {
       "vol_1m": 74582700,
       "news": [
         {
+          "title": "DRAM Memory Boom: Why Micron Stock Could Still Double",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/31/dram-memory-boom-why-micron-stock-could-double/",
+          "published": 1780242600,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dow Jones Futures Loom As Trump Makes This Iran Move; Nvidia, Tesla Lead 5 Titans Near Buy Points",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-iran-hopes-nvidia-tesla-stocks-near-buy-points/?src=A00220&yptr=yahoo",
+          "published": 1780228970,
+          "sentiment": -0.226
+        },
+        {
+          "title": "Eli Lilly and Company (LLY): A Long Term Stock to Buy",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/eli-lilly-company-lly-long-164030753.html",
+          "published": 1780159230,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Prediction: After Micron and AMD, This Will Be the Next Tech Stock to Join the $1 Trillion Club",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/30/micron-amd-asml-stock-1-trillion-club/",
+          "published": 1780150800,
+          "sentiment": 0.296
+        },
+        {
           "title": "Lilly's New Drug Just Delivered the Largest Weight Loss Ever Seen in a Clinical Trial -- Here's What It Means for Investors",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/05/30/lillys-new-drug-just-delivered-the-largest-weight/",
           "published": 1780144500,
           "sentiment": -0.318
-        },
-        {
-          "title": "Dow Jones Futures: Market Hits Highs On Iran Hopes; Nvidia, Tesla Lead 5 Trillion-Dollar Stocks Near Buy Points",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-iran-hopes-nvidia-tesla-stocks-near-buy-points/?src=A00220&yptr=yahoo",
-          "published": 1780142990,
-          "sentiment": 0.421
-        },
-        {
-          "title": "CVS Decision Tests Novo Nordisk Wegovy Edge And Valuation Story",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/cvs-decision-tests-novo-nordisk-110621754.html",
-          "published": 1780139181,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Stock Split Watch: Is Eli Lilly Next?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/30/stock-split-watch-is-eli-lilly-next/",
-          "published": 1780128600,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Supreme Court Verdict Tests Eli Lilly Valuation And Legal Risk Outlook",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/supreme-court-verdict-tests-eli-211045860.html",
-          "published": 1780089045,
-          "sentiment": 0.557
         }
       ],
-      "news_sentiment": 0.132
+      "news_sentiment": -0.05
     },
     {
       "ticker": "LEGN",
+      "company_name": "Legend Biotech",
       "category": "neuroscience",
       "exchange": "NASDAQ",
       "price_gbp": "20",
@@ -1780,7 +1809,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "34",
       "bar_pct": 38,
-      "market_cap_gbp_b": 3.749,
+      "market_cap_gbp_b": 3.75,
       "beta": 0.297,
       "pe_ratio": null,
       "avg_volume_m": 2.03,
@@ -1832,6 +1861,7 @@ window.PRICES_DATA = {
     },
     {
       "ticker": "IONS",
+      "company_name": "Ionis Pharmaceuticals",
       "category": "neuroscience",
       "exchange": "NASDAQ",
       "price_gbp": "57",
@@ -1844,7 +1874,7 @@ window.PRICES_DATA = {
       "low_gbp": "25",
       "high_gbp": "64",
       "bar_pct": 81,
-      "market_cap_gbp_b": 9.395,
+      "market_cap_gbp_b": 9.399,
       "beta": 0.383,
       "pe_ratio": null,
       "avg_volume_m": 1.98,
