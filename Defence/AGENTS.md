@@ -47,7 +47,7 @@ All Defence pages load `../shared.css` for shared styles (reset, body, ticker ta
 | `h1` | 36px | 26px at ≤900px breakpoint |
 | `.header-sub` | 13px | |
 | `.nav-link` | 12px | |
-| `.filter-btn` | 12px | `letter-spacing: 1px`, `text-transform: uppercase`, `padding: 8px 16px` |
+| `.filter-btn` | 10px | `padding: 5px 12px` |
 | `th` | 11px | |
 | `td` | 14px | |
 | `.ticker` | 15px | |
