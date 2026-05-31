@@ -14,10 +14,51 @@
   .toolbar-inner { max-width: 1600px; margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .toolbar-group { display: flex; gap: 2px; align-items: center; }
   .toolbar-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-right: 8px; }
-  .tool-btn { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; padding: 7px 14px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; text-transform: uppercase; }
+  .tool-btn { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; padding: 7px 14px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; text-transform: uppercase; position: relative; }
   .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
   .tool-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
   .divider { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
+
+  .cat-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .cat-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .cat-btn:hover[data-tooltip]::after,
+  .cat-btn:hover[data-tooltip]::before { opacity: 1; }
 
   /* Category button active states */
   .cat-btn.active-us-primes   { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
@@ -190,12 +231,12 @@
   };
 
   const CHART_CATS = {
-    'us-primes':   { label: '🇺🇸 US Primes',      color: 'var(--amber)',  btnLabel: '🇺🇸 US Primes' },
-    'uk-european': { label: '🇬🇧 UK / European',   color: 'var(--gold)',   btnLabel: '🇬🇧 UK/European' },
-    'cyber-intel': { label: '🔐 Cyber / Intel',    color: 'var(--purple)', btnLabel: '🔐 Cyber / Intel' },
-    'drones':      { label: '🚁 Drones / UAS',     color: 'var(--teal)',   btnLabel: '🚁 Drones' },
-    'space':       { label: '🚀 Space',            color: 'var(--blue)',   btnLabel: '🚀 Space' },
-    'weapons':     { label: '🎯 Weapons / Systems', color: 'var(--rose)',   btnLabel: '🎯 Weapons' },
+    'us-primes':   { label: '🇺🇸 US Primes',       color: 'var(--amber)',  btnLabel: '🇺🇸 US Primes',      tooltip: 'Major US defence prime contractors — Lockheed, RTX, Northrop, General Dynamics, Huntington Ingalls, L3Harris, Boeing' },
+    'uk-european': { label: '🇬🇧 UK / European',    color: 'var(--gold)',   btnLabel: '🇬🇧 UK/European',    tooltip: 'UK and European defence majors — BAE Systems, Rolls-Royce, QinetiQ' },
+    'cyber-intel': { label: '🔐 Cyber / Intel',     color: 'var(--purple)', btnLabel: '🔐 Cyber / Intel',   tooltip: 'Cyber, intelligence and government IT services — Palantir, Leidos, CACI, SAIC, Booz Allen Hamilton' },
+    'drones':      { label: '🚁 Drones / UAS',      color: 'var(--teal)',   btnLabel: '🚁 Drones',          tooltip: 'Drone and autonomous systems manufacturers — AeroVironment, Kratos, Red Cat, Textron' },
+    'space':       { label: '🚀 Space',             color: 'var(--blue)',   btnLabel: '🚀 Space',           tooltip: 'Space and satellite defence plays — Rocket Lab, Planet Labs, AST SpaceMobile' },
+    'weapons':     { label: '🎯 Weapons / Systems', color: 'var(--rose)',   btnLabel: '🎯 Weapons',         tooltip: 'Weapons, defence electronics and systems — TransDigm, HEICO, Axon, Olin, Mercury Systems, Leonardo DRS' },
   };
 
   function buildSidebar(stocks) {
@@ -243,6 +284,7 @@
       const btn = document.createElement('button');
       btn.className = 'tool-btn cat-btn';
       btn.textContent = cfg.btnLabel;
+      if (cfg.tooltip) btn.setAttribute('data-tooltip', cfg.tooltip);
       btn.onclick = function() { setCategory(catKey, this); };
       toolbar.appendChild(btn);
     });

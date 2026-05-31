@@ -53,7 +53,49 @@
     cursor: pointer;
     transition: all 0.15s;
     text-transform: uppercase;
+    position: relative;
   }
+
+  .cat-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .cat-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .cat-btn:hover[data-tooltip]::after,
+  .cat-btn:hover[data-tooltip]::before { opacity: 1; }
 
   .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
   .tool-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
@@ -431,18 +473,18 @@
 
   /* Category display config for charts */
   const CHART_CATS = {
-    'memory':        { key: 'memory',        label: '🧠 Memory / Storage',   color: 'var(--purple)',  btnLabel: '🧠 Memory' },
-    'nuclear-ops':   { key: 'nuclear-ops',   label: '⚡ Nuclear Operators',   color: 'var(--accent2)', btnLabel: '⚡ Nuclear' },
-    'smr':           { key: 'smr',           label: '⚛️ SMR Builders',        color: 'var(--green)',   btnLabel: '⚛️ SMR' },
-    'uranium':       { key: 'uranium',       label: '☢️ Uranium',             color: 'var(--gold)',    btnLabel: '☢️ Uranium' },
-    'power-infra':   { key: 'power-infra',   label: '🔋 Power Infra',         color: 'var(--accent)',  btnLabel: '🔋 Power' },
-    'dc-operators':  { key: 'dc-operators',  label: '🏢 Data Centres',        color: 'var(--blue)',    btnLabel: '🏢 Data Centres' },
-    'hyperscalers':  { key: 'hyperscalers',  label: '☁️ Hyperscalers',        color: 'var(--indigo)',  btnLabel: '☁️ Hyperscalers' },
-    'ai-compute':    { key: 'ai-compute',    label: '🖥️ AI Compute',          color: 'var(--rose)',    btnLabel: '🖥️ AI Compute' },
-    'fibre-optical': { key: 'fibre-optical', label: '🌐 Fibre / Optical',     color: 'var(--teal)',    btnLabel: '🌐 Fibre / Optical' },
-    'dsp-semi':      { key: 'dsp-semi',      label: '🔌 DSP / Semi',          color: 'var(--amber)',   btnLabel: '🔌 DSP / Semi' },
-    'test-equip':    { key: 'test-equip',    label: '🔬 Test Equipment',      color: 'var(--slate)',   btnLabel: '🔬 Test Equipment' },
-    'materials':     { key: 'materials',     label: '⚗️ Materials',           color: 'var(--lime)',    btnLabel: '⚗️ Materials' },
+    'memory':        { key: 'memory',        label: '🧠 Memory / Storage',   color: 'var(--purple)',  btnLabel: '🧠 Memory',          tooltip: 'DRAM, NAND flash & storage hardware — the memory layer that feeds AI accelerators' },
+    'nuclear-ops':   { key: 'nuclear-ops',   label: '⚡ Nuclear Operators',   color: 'var(--accent2)', btnLabel: '⚡ Nuclear',          tooltip: 'Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres' },
+    'smr':           { key: 'smr',           label: '⚛️ SMR Builders',        color: 'var(--green)',   btnLabel: '⚛️ SMR',              tooltip: 'Small Modular Reactor developers — compact next-gen nuclear designed for on-site data centre power' },
+    'uranium':       { key: 'uranium',       label: '☢️ Uranium',             color: 'var(--gold)',    btnLabel: '☢️ Uranium',          tooltip: 'Uranium miners & enrichers — upstream fuel supply benefiting from the nuclear power revival' },
+    'power-infra':   { key: 'power-infra',   label: '🔋 Power Infra',         color: 'var(--accent)',  btnLabel: '🔋 Power',            tooltip: 'Switchgear, transformers & power management — the grid buildout infrastructure behind every data centre' },
+    'dc-operators':  { key: 'dc-operators',  label: '🏢 Data Centres',        color: 'var(--blue)',    btnLabel: '🏢 Data Centres',     tooltip: 'Companies that own and operate the physical data centre facilities where AI compute is housed' },
+    'hyperscalers':  { key: 'hyperscalers',  label: '☁️ Hyperscalers',        color: 'var(--indigo)',  btnLabel: '☁️ Hyperscalers',     tooltip: 'Mega cloud platforms (AWS, Azure, Google) building AI infrastructure at planetary scale' },
+    'ai-compute':    { key: 'ai-compute',    label: '🖥️ AI Compute',          color: 'var(--rose)',    btnLabel: '🖥️ AI Compute',       tooltip: 'GPU and AI accelerator makers — the silicon that runs AI training and inference workloads' },
+    'fibre-optical': { key: 'fibre-optical', label: '🌐 Fibre / Optical',     color: 'var(--teal)',    btnLabel: '🌐 Fibre / Optical',  tooltip: 'High-speed optical networking and fibre interconnects — the data links between and within data centres' },
+    'dsp-semi':      { key: 'dsp-semi',      label: '🔌 DSP / Semi',          color: 'var(--amber)',   btnLabel: '🔌 DSP / Semi',       tooltip: 'Specialised semiconductors for digital signal processing and high-speed networking silicon' },
+    'test-equip':    { key: 'test-equip',    label: '🔬 Test Equipment',      color: 'var(--slate)',   btnLabel: '🔬 Test Equipment',   tooltip: 'Electronic test & measurement gear used to validate chips, networks and power systems' },
+    'materials':     { key: 'materials',     label: '⚗️ Materials',           color: 'var(--lime)',    btnLabel: '⚗️ Materials',        tooltip: 'Specialty substrates and compound semiconductors used in chip and optical component manufacturing' },
   };
 
   function buildSidebar(stocks) {
@@ -498,6 +540,7 @@
       const btn = document.createElement('button');
       btn.className = 'tool-btn cat-btn';
       btn.textContent = cfg.btnLabel;
+      if (cfg.tooltip) btn.setAttribute('data-tooltip', cfg.tooltip);
       btn.onclick = function() { setCategory(catKey, this); };
       toolbar.appendChild(btn);
     });

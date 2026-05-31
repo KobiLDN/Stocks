@@ -11,9 +11,50 @@
 <script src="../shared.js" defer></script>
 <style>
   .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-  .filter-btn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; }
+  .filter-btn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; position: relative; }
   .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .filter-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .filter-btn:hover[data-tooltip]::after,
+  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
   .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
   #metrics-search { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 14px; width: 240px; outline: none; letter-spacing: 0.5px; }
@@ -193,6 +234,15 @@
     'weapons':     'Weapons',
   };
 
+  const CAT_TOOLTIPS = {
+    'us-primes':   'Major US defence prime contractors — Lockheed, RTX, Northrop, General Dynamics, Huntington Ingalls, L3Harris, Boeing',
+    'uk-european': 'UK and European defence majors — BAE Systems, Rolls-Royce, QinetiQ',
+    'cyber-intel': 'Cyber, intelligence and government IT services — Palantir, Leidos, CACI, SAIC, Booz Allen Hamilton',
+    'drones':      'Drone and autonomous systems manufacturers — AeroVironment, Kratos, Red Cat, Textron',
+    'space':       'Space and satellite defence plays — Rocket Lab, Planet Labs, AST SpaceMobile',
+    'weapons':     'Weapons, defence electronics and systems — TransDigm, HEICO, Axon, Olin, Mercury Systems, Leonardo DRS',
+  };
+
   function yahooUrl(ticker) { return 'https://finance.yahoo.com/quote/' + ticker + '/'; }
 
   function fmtMarketCap(gbpB) {
@@ -317,7 +367,8 @@
     const bar = document.getElementById('filter-bar');
     bar.innerHTML = cats.map(cat => {
       const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
-      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+      const tip   = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
+      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '"' + tip + ' onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
     }).join('');
   }
 

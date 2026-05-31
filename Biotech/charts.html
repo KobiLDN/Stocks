@@ -45,6 +45,7 @@
     cursor: pointer;
     transition: all 0.15s;
     text-transform: uppercase;
+    position: relative;
   }
   .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
   .tool-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
@@ -52,6 +53,47 @@
 
   /* CAT BUTTONS in toolbar */
   .cat-btn { text-transform: uppercase; }
+
+  .cat-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .cat-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .cat-btn:hover[data-tooltip]::after,
+  .cat-btn:hover[data-tooltip]::before { opacity: 1; }
   .cat-btn.active-large-cap    { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }
   .cat-btn.active-uk-listed    { background: var(--gold);    border-color: var(--gold);    color: var(--bg); }
   .cat-btn.active-gene-editing { background: var(--green);   border-color: var(--green);   color: var(--bg); }
@@ -342,15 +384,15 @@
   };
 
   const CHART_CATS = {
-    'large-cap':    { label: '💊 Large Cap Biotech',  color: 'var(--accent)',  btnLabel: '💊 Large Cap' },
-    'uk-listed':    { label: '🇬🇧 UK Listed',          color: 'var(--gold)',    btnLabel: '🇬🇧 UK Listed' },
-    'gene-editing': { label: '✂️ Gene Editing',        color: 'var(--green)',   btnLabel: '✂️ Gene Editing' },
-    'genomics':     { label: '🧬 Genomics / Tools',    color: 'var(--teal)',    btnLabel: '🧬 Genomics' },
-    'oncology':     { label: '🎯 Oncology',            color: 'var(--rose)',    btnLabel: '🎯 Oncology' },
-    'mrna':         { label: '💉 mRNA / Vaccines',     color: 'var(--purple)',  btnLabel: '💉 mRNA' },
-    'rare-disease': { label: '🔬 Rare Disease',        color: 'var(--amber)',   btnLabel: '🔬 Rare Disease' },
-    'metabolic':    { label: '⚖️ Metabolic',           color: 'var(--lime)',    btnLabel: '⚖️ Metabolic' },
-    'neuroscience': { label: '🧠 Neuroscience',        color: 'var(--indigo)',  btnLabel: '🧠 Neuroscience' },
+    'large-cap':    { label: '💊 Large Cap Biotech',  color: 'var(--accent)',  btnLabel: '💊 Large Cap',     tooltip: 'Established pharma/biotech giants with diversified pipelines and multi-billion market caps' },
+    'uk-listed':    { label: '🇬🇧 UK Listed',          color: 'var(--gold)',    btnLabel: '🇬🇧 UK Listed',    tooltip: 'UK-listed companies traded on the London Stock Exchange — prices shown in GBP' },
+    'gene-editing': { label: '✂️ Gene Editing',        color: 'var(--green)',   btnLabel: '✂️ Gene Editing',  tooltip: 'Companies using CRISPR and base editing to directly modify DNA — high risk, high reward pipeline plays' },
+    'genomics':     { label: '🧬 Genomics / Tools',    color: 'var(--teal)',    btnLabel: '🧬 Genomics',      tooltip: 'Genome sequencing platforms and bioinformatics — the tools that read and interpret DNA' },
+    'oncology':     { label: '🎯 Oncology',            color: 'var(--rose)',    btnLabel: '🎯 Oncology',      tooltip: 'Cancer-focused biotechs — targeted therapies, immunotherapies and ADCs across tumour types' },
+    'mrna':         { label: '💉 mRNA / Vaccines',     color: 'var(--purple)',  btnLabel: '💉 mRNA',          tooltip: 'mRNA platform companies — technology that programs cells to produce therapeutic proteins or immune responses' },
+    'rare-disease': { label: '🔬 Rare Disease',        color: 'var(--amber)',   btnLabel: '🔬 Rare Disease',  tooltip: 'Biotechs targeting rare (orphan) diseases — smaller patient populations but faster FDA pathways and pricing power' },
+    'metabolic':    { label: '⚖️ Metabolic',           color: 'var(--lime)',    btnLabel: '⚖️ Metabolic',     tooltip: 'Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders' },
+    'neuroscience': { label: '🧠 Neuroscience',        color: 'var(--indigo)',  btnLabel: '🧠 Neuroscience',  tooltip: 'Neurology and CNS-focused biotechs — Alzheimer\'s, ALS, depression and other brain & nervous system disorders' },
   };
 
   function buildSidebar(stocks) {
@@ -398,6 +440,7 @@
       const btn = document.createElement('button');
       btn.className = 'tool-btn cat-btn';
       btn.textContent = cfg.btnLabel;
+      if (cfg.tooltip) btn.setAttribute('data-tooltip', cfg.tooltip);
       btn.onclick = function() { setCategory(catKey, this); };
       toolbar.appendChild(btn);
     });

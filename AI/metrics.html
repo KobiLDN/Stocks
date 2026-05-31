@@ -28,9 +28,51 @@
     color: var(--muted);
     cursor: pointer;
     transition: all 0.15s;
+    position: relative;
   }
   .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .filter-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .filter-btn:hover[data-tooltip]::after,
+  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
   /* Search + count bar */
   .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
@@ -342,6 +384,21 @@
     'materials':     'Materials',
   };
 
+  const CAT_TOOLTIPS = {
+    'memory':        'DRAM, NAND flash & storage hardware — the memory layer that feeds AI accelerators',
+    'nuclear-ops':   'Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres',
+    'smr':           'Small Modular Reactor developers — compact next-gen nuclear designed for on-site data centre power',
+    'uranium':       'Uranium miners & enrichers — upstream fuel supply benefiting from the nuclear power revival',
+    'power-infra':   'Switchgear, transformers & power management — the grid buildout infrastructure behind every data centre',
+    'dc-operators':  'Companies that own and operate the physical data centre facilities where AI compute is housed',
+    'hyperscalers':  'Mega cloud platforms (AWS, Azure, Google) building AI infrastructure at planetary scale',
+    'ai-compute':    'GPU and AI accelerator makers — the silicon that runs AI training and inference workloads',
+    'fibre-optical': 'High-speed optical networking and fibre interconnects — the data links between and within data centres',
+    'dsp-semi':      'Specialised semiconductors for digital signal processing and high-speed networking silicon',
+    'test-equip':    'Electronic test & measurement gear used to validate chips, networks and power systems',
+    'materials':     'Specialty substrates and compound semiconductors used in chip and optical component manufacturing',
+  };
+
   /* Yahoo Finance URL suffix mapping */
   const YAHOO_SUFFIX = {
     'RR.':  'RR.L',
@@ -562,7 +619,8 @@
     const bar = document.getElementById('filter-bar');
     bar.innerHTML = cats.map(cat => {
       const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
-      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+      const tip   = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
+      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '"' + tip + ' onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
     }).join('');
   }
 
