@@ -111,7 +111,7 @@ def get_stock_data(yahoo_symbol):
         pass
     try:
         year = datetime.now().year
-        ytd_hist = t.history(start=f'{year}-01-01', end=f'{year}-01-08')
+        ytd_hist = t.history(start=f'{year}-01-02', end=f'{year}-01-10')
         if len(ytd_hist) >= 1:
             price_ytd = float(ytd_hist['Close'].iloc[0])
     except Exception:
