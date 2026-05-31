@@ -361,15 +361,16 @@
   .ytd-neg  { color: var(--red); }
   .ytd-flat { color: var(--muted); }
 
-  /* Header note (disclaimer below header-inner, full width) */
+  /* Header note (disclaimer below header-inner, matches table width) */
   .header-note {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     color: var(--muted);
     letter-spacing: 0.2px;
-    max-width: 1600px;
+    width: calc(100% - 48px);
+    max-width: 1552px;
     margin: 8px auto 0;
-    padding: 8px 24px 8px 43px;
+    padding: 8px 16px;
     line-height: 1.5;
     border: 1px solid var(--border);
   }
