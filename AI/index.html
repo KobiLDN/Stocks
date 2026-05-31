@@ -361,6 +361,18 @@
   .ytd-neg  { color: var(--red); }
   .ytd-flat { color: var(--muted); }
 
+  /* Header note (disclaimer under header-sub) */
+  .header-note {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.2px;
+    margin-top: 6px;
+    max-width: 560px;
+    line-height: 1.5;
+    opacity: 0.75;
+  }
+
   /* Notes col */
   /* Footer */
   footer {
@@ -468,6 +480,7 @@
 <div class="header-label">// Stock Universe</div>
 <h1>AI <span>Infrastructure</span></h1>
 <div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3457</span> · <span id="last-updated">Last updated: 2026-05-30 14:41</span> · <span id="version">v2.4</span></div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE. For informational and research purposes only. Past performance does not guarantee future results. Always do your own research and consult a financial adviser before investing.</div>
 </div>
 <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -538,9 +551,7 @@
 </tbody>
 </table>
 </div>
-<footer>
-<strong>⚠️ NOT FINANCIAL ADVICE.</strong> This dashboard is for informational and research purposes only. All prices approximate in GBP. Past performance does not guarantee future results. 1yr return = Yahoo Finance 52-week price change. * = speculative / high-volatility stock. Always do your own research and consult a financial adviser before investing. Kioxia (285A) requires a broker with Tokyo Stock Exchange access.
-  </footer>
+<footer>AI Infrastructure Stock Dashboard · For educational and entertainment purposes only · Not financial advice</footer>
 </div>
 <script src="prices-data.js"></script>
 <script>
