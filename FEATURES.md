@@ -12,6 +12,9 @@
 - **Defence & Aerospace sector** — 28 stocks across 6 categories (US Primes, UK/European, Cyber/Intel, Drones, Space, Weapons/Systems); full 7-page suite; prices and signals via GitHub Actions
 - **`generate_all_signals.bat`** — single root-level script runs all 3 sector signal generators; output streams live and saves to `signals_log.txt` (overwritten each run)
 - **`update_all_prices.bat`** — single root-level script runs all 3 sector price updates; output streams live and saves to `update_log.txt` (overwritten each run)
+- **Consistent page headers** — all 18 sub-pages use `// Stock Universe` label + sector-prefixed h1 (e.g. "AI Metrics", "Biotech News", "Defence Charts") matching the index.html pattern; eliminates generic "Stock Metrics", "Market Heatmap", "Price Charts" etc
+- **Charts toolbar layout** — category filter row sits above view/period controls; category buttons styled to match metrics filter-btn spec (10px / 2px letter-spacing / 5px 12px); row only appears in grid view
+- **Filter button standard** — all `.filter-btn` and `.cat-btn` across index, news, metrics and charts pages (all 3 sectors) use identical spec: 10px / letter-spacing 2px / padding 5px 12px / hover = accent colour only / active = full fill + bold / tooltip bg `var(--surface2)`; no emoji icons on any filter button
 - **Category filter tooltips everywhere** — all filter/category buttons across dashboard, metrics, news, and charts pages (all 3 sectors) have hover tooltip popups; tooltip CSS in each page, data in `CAT_TOOLTIPS` / `CHART_CATS` dicts
 - **Financial advice header-note** — `.header-note` bordered strip below the sector switcher on all 21 sector pages; defined once in `shared.css`; old footer disclaimer blocks removed
 - **Dynamic dashboard + charts** — `index.html` and `charts.html` across all 3 sectors build content from `prices-data.js` at runtime; adding a stock requires only one entry in `update_prices.py` + one note in `index.html` NOTES dict
