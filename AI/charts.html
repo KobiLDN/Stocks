@@ -22,8 +22,15 @@
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .toolbar-row {
+    display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 6px;
     flex-wrap: wrap;
   }
 
@@ -102,8 +109,21 @@
 
   .divider { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
 
-  /* CAT BUTTONS in toolbar */
-  .cat-btn { text-transform: uppercase; }
+  /* CAT BUTTONS in toolbar — match metrics filter-btn spec */
+  .cat-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+  }
+  .cat-btn:hover { color: var(--accent); border-color: var(--accent); }
   .cat-btn.active-memory        { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }
   .cat-btn.active-nuclear-ops   { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
   .cat-btn.active-smr           { background: var(--green);   border-color: var(--green);   color: var(--bg); }
@@ -406,29 +426,26 @@
 
 <div class="toolbar">
   <div class="toolbar-inner">
-    <!-- View toggle -->
-    <div class="toolbar-group">
-      <span class="toolbar-label">View</span>
-      <button class="tool-btn active" id="btn-single" onclick="setView('single')">Single</button>
-      <button class="tool-btn" id="btn-grid" onclick="setView('grid')">Category Grid</button>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Timeframe -->
-    <div class="toolbar-group">
-      <span class="toolbar-label">Period</span>
-      <button class="tool-btn active" onclick="setTimeframe('1W', this)">1W</button>
-      <button class="tool-btn" onclick="setTimeframe('1M', this)">1M</button>
-      <button class="tool-btn" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
-      <button class="tool-btn" onclick="setTimeframe('60M', this)">5Y</button>
-    </div>
-
-    <!-- Category buttons (grid mode only) -->
-    <div class="divider" id="cat-divider" style="display:none"></div>
-    <div class="toolbar-group" id="cat-toolbar" style="display:none">
+    <!-- Category row (grid mode only) -->
+    <div class="toolbar-row" id="cat-row" style="display:none">
       <span class="toolbar-label">Category</span>
-      <div id="cat-toolbar-btns"></div>
+      <div id="cat-toolbar-btns" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+    </div>
+    <!-- Controls row -->
+    <div class="toolbar-row">
+      <div class="toolbar-group">
+        <span class="toolbar-label">View</span>
+        <button class="tool-btn active" id="btn-single" onclick="setView('single')">Single</button>
+        <button class="tool-btn" id="btn-grid" onclick="setView('grid')">Category Grid</button>
+      </div>
+      <div class="divider"></div>
+      <div class="toolbar-group">
+        <span class="toolbar-label">Period</span>
+        <button class="tool-btn active" onclick="setTimeframe('1W', this)">1W</button>
+        <button class="tool-btn" onclick="setTimeframe('1M', this)">1M</button>
+        <button class="tool-btn" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
+        <button class="tool-btn" onclick="setTimeframe('60M', this)">5Y</button>
+      </div>
     </div>
   </div>
 </div>
@@ -538,7 +555,7 @@
       if (!window._chartCats[catKey]) return;
       const cfg = CHART_CATS[catKey];
       const btn = document.createElement('button');
-      btn.className = 'tool-btn cat-btn';
+      btn.className = 'cat-btn';
       btn.textContent = cfg.btnLabel;
       if (cfg.tooltip) btn.setAttribute('data-tooltip', cfg.tooltip);
       btn.onclick = function() { setCategory(catKey, this); };
@@ -577,8 +594,7 @@
     document.getElementById('btn-grid').classList.toggle('active', view === 'grid');
     document.getElementById('single-view').style.display = view === 'single' ? 'grid' : 'none';
     document.getElementById('grid-view').style.display   = view === 'grid'   ? 'block' : 'none';
-    document.getElementById('cat-toolbar').style.display = view === 'grid'   ? 'flex' : 'none';
-    document.getElementById('cat-divider').style.display = view === 'grid'   ? 'block' : 'none';
+    document.getElementById('cat-row').style.display     = view === 'grid'   ? 'flex' : 'none';
   }
 
   /* ---- SINGLE CHART ---- */
