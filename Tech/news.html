@@ -1,16 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment analysis across 28 Defence &amp; Aerospace stocks. Filter by category and sort by recency or sentiment score.">
-<title>Defence &amp; Aerospace — News</title>
+<meta name="description" content="Latest news and sentiment analysis across 31 technology stocks. Filter by category and sort by recency or sentiment score.">
+<title>Technology — News</title>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -67,7 +72,13 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  .toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
   #news-search {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -82,7 +93,15 @@
   #news-search:focus { border-color: var(--accent); }
   #news-search::placeholder { color: var(--muted); }
   .sort-group { display: flex; gap: 4px; }
-  .sort-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); align-self: center; margin-right: 4px; }
+  .sort-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    align-self: center;
+    margin-right: 4px;
+  }
   .sort-btn {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -100,7 +119,12 @@
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); margin-left: auto; }
   .row-count span { color: var(--accent); font-weight: 700; }
 
-  .news-feed { display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px; }
+  .news-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
   .news-card {
     display: flex;
     align-items: stretch;
@@ -114,30 +138,92 @@
   .sent-neg  { background: var(--red); }
   .sent-neu  { background: var(--muted); }
   .news-body { flex: 1; padding: 14px 18px; min-width: 0; }
-  .news-meta-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
-  .news-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; text-decoration: none; color: var(--text); }
+  .news-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .news-ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+  }
   .news-ticker:hover { color: var(--accent); text-decoration: underline; }
   .news-company { color: var(--muted); font-size: 12px; }
-  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
-  .cat-us-primes   { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.35); }
-  .cat-uk-european { background: rgba(255,215,0,0.1);    color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
-  .cat-cyber-intel { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
-  .cat-drones      { background: rgba(45,212,191,0.1);   color: var(--teal);   border: 1px solid rgba(45,212,191,0.3); }
-  .cat-space       { background: rgba(68,136,255,0.1);   color: var(--blue);   border: 1px solid rgba(68,136,255,0.3); }
-  .cat-weapons     { background: rgba(251,113,133,0.1);  color: var(--rose);   border: 1px solid rgba(251,113,133,0.3); }
-  .news-time { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-left: auto; }
-  .news-headline { display: block; font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); text-decoration: none; margin-bottom: 8px; }
+  .cat-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  .cat-mega-cap            { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-semiconductors      { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
+  .cat-enterprise-software { background: rgba(45,212,191,0.1);  color: var(--teal);   border: 1px solid rgba(45,212,191,0.25); }
+  .cat-cybersecurity       { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+  .cat-consumer-platform   { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
+  .cat-hardware-infra      { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .news-time {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .news-headline {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--text);
+    text-decoration: none;
+    margin-bottom: 8px;
+  }
   .news-headline:hover { color: var(--accent); }
-  .news-meta-bot { display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
-  .sent-pill { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; padding: 2px 7px; letter-spacing: 0.5px; }
+  .news-meta-bot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .sent-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+  }
   .sent-pill.sent-pos { background: rgba(0,230,118,0.12);  color: var(--green); border: 1px solid rgba(0,230,118,0.3); }
   .sent-pill.sent-neg { background: rgba(255,68,68,0.12);  color: var(--red);   border: 1px solid rgba(255,68,68,0.3); }
   .sent-pill.sent-neu { background: rgba(90,122,154,0.12); color: var(--muted); border: 1px solid rgba(90,122,154,0.3); }
 
-  .empty-state { text-align: center; padding: 60px 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.7; border: 1px solid var(--border); }
+  .empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    border: 1px solid var(--border);
+  }
   .empty-state strong { color: var(--accent); }
 
-  footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); margin-top: 48px; }
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
 
   @media (max-width: 768px) {
     h1 { font-size: 26px; }
@@ -145,7 +231,6 @@
     #news-search { width: 100%; }
     .row-count { margin-left: 0; }
   }
-
 </style>
 </head>
 <body>
@@ -155,8 +240,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-        <h1>Defence <span>News</span></h1>
-        <div class="header-sub">Latest headlines across all 28 tracked stocks · sentiment scored locally (VADER)</div>
+    <h1>Technology <span>News</span></h1>
+    <div class="header-sub">Latest headlines across all tracked stocks · sentiment scored locally (VADER)</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -168,7 +253,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">AI Infrastructure</div>
 </a>
-<a class="sector-card active" href="news.html">
+<a class="sector-card" href="../Defence/news.html">
   <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Defence</div>
 </a>
@@ -176,7 +261,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card" href="../Tech/news.html">
+<a class="sector-card active" href="news.html">
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
@@ -186,10 +271,10 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 28 defence &amp; aerospace stocks">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 28 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="Defence top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
@@ -225,42 +310,38 @@
   </div>
 </div>
 
-
 <script src="prices-data.js"></script>
 <script>
   const NAMES = {
-    'LMT':   'Lockheed Martin',       'RTX':   'RTX Corporation',
-    'NOC':   'Northrop Grumman',      'GD':    'General Dynamics',
-    'HII':   'Huntington Ingalls',    'LHX':   'L3Harris Technologies',
-    'BA':    'Boeing',                'BA.L':  'BAE Systems',
-    'RR.L':  'Rolls-Royce',           'QQ.L':  'QinetiQ Group',
-    'PLTR':  'Palantir Technologies', 'LDOS':  'Leidos Holdings',
-    'CACI':  'CACI International',    'SAIC':  'Science Applications Intl',
-    'BAH':   'Booz Allen Hamilton',   'AVAV':  'AeroVironment',
-    'KTOS':  'Kratos Defense',        'RCAT':  'Red Cat Holdings',
-    'TXT':   'Textron',               'RKLB':  'Rocket Lab',
-    'PL':    'Planet Labs',           'ASTS':  'AST SpaceMobile',
-    'TDG':   'TransDigm Group',       'HEI':   'HEICO Corporation',
-    'AXON':  'Axon Enterprise',       'OLN':   'Olin Corporation',
-    'MRCY':  'Mercury Systems',       'DRS':   'Leonardo DRS',
+    'AAPL': 'Apple', 'MSFT': 'Microsoft', 'GOOGL': 'Alphabet (Google)',
+    'AMZN': 'Amazon', 'META': 'Meta Platforms', 'NVDA': 'NVIDIA',
+    'AMD': 'Advanced Micro Devices', 'INTC': 'Intel', 'TSM': 'Taiwan Semiconductor',
+    'AVGO': 'Broadcom', 'QCOM': 'Qualcomm', 'ARM': 'Arm Holdings',
+    'ASML': 'ASML Holding', 'MU': 'Micron Technology', 'AMAT': 'Applied Materials',
+    'ORCL': 'Oracle', 'CRM': 'Salesforce', 'ADBE': 'Adobe',
+    'NOW': 'ServiceNow', 'SNOW': 'Snowflake', 'INTU': 'Intuit',
+    'CRWD': 'CrowdStrike', 'PANW': 'Palo Alto Networks', 'NET': 'Cloudflare',
+    'FTNT': 'Fortinet', 'NFLX': 'Netflix', 'SHOP': 'Shopify',
+    'SPOT': 'Spotify', 'UBER': 'Uber', 'CSCO': 'Cisco Systems',
+    'PLTR': 'Palantir Technologies',
   };
 
   const CAT_LABELS = {
-    'us-primes':   'US Prime',
-    'uk-european': 'UK/European',
-    'cyber-intel': 'Cyber/Intel',
-    'drones':      'Drones',
-    'space':       'Space',
-    'weapons':     'Weapons',
+    'mega-cap':            'Mega Cap',
+    'semiconductors':      'Semiconductors',
+    'enterprise-software': 'Enterprise SW',
+    'cybersecurity':       'Cybersecurity',
+    'consumer-platform':   'Consumer/Platform',
+    'hardware-infra':      'Hardware/Infra',
   };
 
   const CAT_TOOLTIPS = {
-    'us-primes':   'Major US defence prime contractors — Lockheed, RTX, Northrop, General Dynamics, HII, L3Harris, Boeing',
-    'uk-european': 'UK and European defence companies — BAE Systems, Rolls-Royce, QinetiQ',
-    'cyber-intel': 'Cyber security and intelligence analytics — Palantir, Leidos, CACI, SAIC, Booz Allen Hamilton',
-    'drones':      'Unmanned systems and autonomous platforms — AeroVironment, Kratos, Red Cat, Textron',
-    'space':       'Space and satellite defence — Rocket Lab, Planet Labs, AST SpaceMobile',
-    'weapons':     'Weapons systems and defence components — TransDigm, HEICO, Axon, Olin, Mercury Systems, Leonardo DRS',
+    'mega-cap':            'The 5 largest tech companies by market cap: Apple, Microsoft, Alphabet, Amazon, Meta',
+    'semiconductors':      'Chip designers and equipment makers powering AI and consumer tech',
+    'enterprise-software': 'Cloud SaaS platforms transforming how businesses operate',
+    'cybersecurity':       'Platforms protecting enterprises from modern cyber threats',
+    'consumer-platform':   'Consumer-facing tech platforms with massive user bases',
+    'hardware-infra':      'Networking hardware and AI platform infrastructure',
   };
 
   function yahooUrl(ticker) {
@@ -372,6 +453,7 @@
     feed.innerHTML = sorted.map(n => {
       const sc = sentClass(n.sentiment);
       const catLabel = CAT_LABELS[n.category] || n.category;
+      const url = n.url || yahooUrl(n.ticker);
       const headlineTag = n.url
         ? '<a class="news-headline" href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener">' + escapeHtml(n.title) + '</a>'
         : '<span class="news-headline">' + escapeHtml(n.title) + '</span>';
@@ -398,8 +480,8 @@
     const cats = ['all', ...Object.keys(CAT_LABELS)];
     const bar = document.getElementById('filter-bar');
     bar.innerHTML = cats.map(cat => {
-      const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
-      const tip = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
+      const label   = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
+      const tip     = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
       return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '"' + tip + ' onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
     }).join('');
   }
@@ -438,7 +520,6 @@
           '<div class="empty-state">No data available — run the price/news bot first.</div>';
       });
   }
-
 </script>
 </body>
 </html>

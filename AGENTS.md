@@ -81,7 +81,7 @@ All sector files live in their own subfolder. One shared stylesheet covers all s
 ```
 STOCKSDev\
 ├── index.html          ← hub landing page (links to all sectors)
-├── shared.css          ← shared stylesheet loaded by all 21 sector pages
+├── shared.css          ← shared stylesheet loaded by all 28 sector pages
 ├── shared.js           ← shared JS (toggleTheme, buildTape)
 ├── AI\                 ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html      ← CANONICAL reference for typography/UI standards
@@ -90,6 +90,7 @@ STOCKSDev\
 │   └── ...
 ├── Biotech\            ← Biotech sector (30 stocks, 9 categories)
 ├── Defence\            ← Defence & Aerospace sector (28 stocks, 6 categories)
+├── Tech\               ← Technology sector (31 stocks, 6 categories)
 └── (future sectors: Energy\, Crypto\)
 ```
 
@@ -153,7 +154,7 @@ Everything else remains keyless:
 
 ## Header structure — sector switcher
 
-The back-link (`← All Sectors`) has been replaced permanently by a **sector switcher panel** in the header right side. All 21 sector pages use this pattern:
+The back-link (`← All Sectors`) has been replaced permanently by a **sector switcher panel** in the header right side. All 28 sector pages use this pattern:
 
 ```html
 <div class="header-inner">

@@ -38,16 +38,24 @@ cd Defence
 powershell -Command "python -u update_prices.py 2>&1 | Tee-Object -FilePath '..\update_all_prices_log.txt' -Append"
 cd ..
 echo. >> "%LOG%"
+echo.
+
+echo [4/4] Technology...
+echo [4/4] Technology... >> "%LOG%"
+cd Tech
+powershell -Command "python -u update_prices.py 2>&1 | Tee-Object -FilePath '..\update_all_prices_log.txt' -Append"
+cd ..
+echo. >> "%LOG%"
 
 (
   echo ============================================================
-  echo  Done. All 3 sectors updated.
+  echo  Done. All 4 sectors updated.
   echo  Log: %LOG%
   echo ============================================================
 ) >> "%LOG%"
 
 echo ============================================================
-echo  Done. All 3 sectors updated.
+echo  Done. All 4 sectors updated.
 echo  Log saved to: %LOG%
 echo ============================================================
 pause
