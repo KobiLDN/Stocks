@@ -33,7 +33,7 @@ jobs:
 
       - name: Run price updater (AI)
         working-directory: AI
-        run: python update_prices.py
+        run: python AI_update_prices.py
 
       - name: Install deps (Biotech)
         working-directory: Biotech
@@ -41,7 +41,7 @@ jobs:
 
       - name: Run price updater (Biotech)
         working-directory: Biotech
-        run: python update_prices.py
+        run: python Biotech_update_prices.py
 
       - name: Install deps (Defence)
         working-directory: Defence
@@ -49,7 +49,7 @@ jobs:
 
       - name: Run price updater (Defence)
         working-directory: Defence
-        run: python update_prices.py
+        run: python Defence_update_prices.py
 
       - name: Install deps (Tech)
         working-directory: Tech
@@ -57,7 +57,7 @@ jobs:
 
       - name: Run price updater (Tech)
         working-directory: Tech
-        run: python update_prices.py
+        run: python Tech_update_prices.py
 
       - name: Commit and push if changed
         run: |
