@@ -5,6 +5,18 @@ on:
     # Mon/Wed/Fri at 07:00 UTC (08:00 BST / 03:00 ET)
     - cron: '0 7 * * 1,3,5'
   workflow_dispatch:
+    inputs:
+      sector:
+        description: 'Sector to generate signals for'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - AI
+          - Biotech
+          - Defence
+          - Tech
 
 permissions:
   contents: write
@@ -25,40 +37,48 @@ jobs:
           cache: pip
 
       - name: Install deps (AI)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
         working-directory: AI
         run: pip install -r requirements.txt
 
       - name: Generate signals (AI)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
         working-directory: AI
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python AI_generate_signals_local.py
 
       - name: Install deps (Biotech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
         working-directory: Biotech
         run: pip install -r requirements.txt
 
       - name: Generate signals (Biotech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
         working-directory: Biotech
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python Biotech_generate_signals_local.py
 
       - name: Install deps (Defence)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
         working-directory: Defence
         run: pip install -r requirements.txt
 
       - name: Generate signals (Defence)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
         working-directory: Defence
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python Defence_generate_signals_local.py
 
       - name: Install deps (Tech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
         working-directory: Tech
         run: pip install -r requirements.txt
 
       - name: Generate signals (Tech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
         working-directory: Tech
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -68,6 +88,8 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          SECTOR="${{ inputs.sector }}"
+          LABEL="${SECTOR:-all sectors}"
           if git diff --quiet -- AI/signals-local.json AI/signals-local.js Biotech/signals-local.json Biotech/signals-local.js Defence/signals-local.json Defence/signals-local.js Tech/signals-local.json Tech/signals-local.js; then
             echo "No signal changes."
           else
@@ -75,7 +97,7 @@ jobs:
             git add Biotech/signals-local.json Biotech/signals-local.js
             git add Defence/signals-local.json Defence/signals-local.js
             git add Tech/signals-local.json Tech/signals-local.js
-            git commit -m "Update signals — all sectors ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             git pull --rebase
             git push
           fi
