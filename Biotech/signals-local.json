@@ -1,9 +1,141 @@
 {
-  "updated": "2026-05-31 17:52",
+  "updated": "2026-06-01 13:37",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EDIT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +68.78%, 1W +29.59%, 1M +15.33%, analyst consensus buy with score 2.08, but news sentiment negative -0.129 and no P/E (pre-revenue).",
+      "drivers": [
+        "YTD +68.78%",
+        "1W +29.59%",
+        "analyst buy",
+        "no P/E risk"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +53.86%, 1M +38.34%, 1W +22.16%, 1D +6.61%, analyst buy (score 2.33), news sentiment slightly positive 0.092, but high short interest 27.71% and no P/E.",
+      "drivers": [
+        "YTD +53.86%",
+        "1M +38.34%",
+        "high short interest 27.71%",
+        "no P/E"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "1Y +101%, YTD +21.30%, 1M +28.58%, 1W +12.52%, P/E 29.58, analyst buy (score 2.25), positive news sentiment 0.33.",
+      "drivers": [
+        "1Y +101%",
+        "1M +28.58%",
+        "P/E 29.58",
+        "positive news sentiment 0.33"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "1Y +103%, YTD +21.33%, 1W +19.01%, 1M +8.57%, analyst strong_buy (score 1.29), positive news sentiment 0.26, advancing BEAM-302 toward accelerated approval.",
+      "drivers": [
+        "1Y +103%",
+        "analyst strong_buy 1.29",
+        "BEAM-302 catalyst",
+        "positive news sentiment 0.26"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "1Y +48%, 1M +18.44%, 1W +6.08%, P/E 39.21, analyst buy (score 1.74), massive market cap \u00a3732.5B, low short interest 0.95%, dividend yield 63.0.",
+      "drivers": [
+        "1M +18.44%",
+        "P/E 39.21",
+        "low short interest 0.95%",
+        "dividend yield 63.0"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +26.27%, 1M +15.48%, analyst buy (score 1.60), news sentiment positive 0.071, nearing adjusted profitability with CARVYKTI growth.",
+      "drivers": [
+        "YTD +26.27%",
+        "1M +15.48%",
+        "analyst buy 1.60",
+        "CARVYKTI growth catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "YTD +15.83%, 1M +13.54%, P/E 16.72, analyst buy (score 2.10), positive news sentiment 0.151, low beta 0.385.",
+      "drivers": [
+        "YTD +15.83%",
+        "1M +13.54%",
+        "P/E 16.72",
+        "low beta 0.385"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "1W +9.66%, 1M +8.35%, analyst strong_buy (score 1.42), positive news sentiment 0.134, low short interest 2.72%, but no P/E and YTD -2.39%.",
+      "drivers": [
+        "analyst strong_buy 1.42",
+        "1W +9.66%",
+        "low short interest 2.72%",
+        "no P/E"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +7.96%, P/E 10.7, analyst buy (score 2.36), low short interest 0.68%, dividend yield 395.0, massive market cap \u00a3150.1B, but 1Y -37% and YTD -9.81%.",
+      "drivers": [
+        "P/E 10.7",
+        "low short interest 0.68%",
+        "dividend yield 395.0",
+        "1M +7.96%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CRSP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1Y +52%, YTD +4.48%, 1W +12.59%, 1M +7.34%, analyst buy (score 2.04), positive news sentiment 0.202, but no P/E and high short interest 32.41%.",
+      "drivers": [
+        "1Y +52%",
+        "1W +12.59%",
+        "analyst buy 2.04",
+        "high short interest 32.41%"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -122,138 +254,6 @@
         "extreme momentum",
         "negative sentiment risk",
         "low market cap"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Strong YTD +2.63%, 1M +18.44%, P/E 39.21, analyst consensus buy, positive news sentiment 0.304, and recent expanded approval for Zepbound in sleep apnea.",
-      "drivers": [
-        "strong 1M momentum",
-        "positive news sentiment",
-        "analyst buy consensus",
-        "low short interest 0.95%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +21.30%, 1M +28.58%, P/E 29.58, analyst buy, news sentiment 0.218, driven by new sequencing platform launch and FDA cancer test approval.",
-      "drivers": [
-        "strong 1M momentum",
-        "reasonable P/E",
-        "positive news sentiment",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +21.33%, 1W +19.01%, analyst strong_buy (score 1.29), news sentiment 0.26, with BEAM-302 advancing in AATD and FDA IND clearance.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "positive news sentiment",
-        "catalyst: BEAM-302 progress",
-        "high short interest 39.93% (potential squeeze)"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +53.86%, 1M +38.34%, 1W +22.16%, news sentiment 0.092, recent Q1 beat and combined COVID-flu vaccine progress, but high beta 2.369 and no analyst rating.",
-      "drivers": [
-        "explosive 1M momentum",
-        "high beta",
-        "no analyst coverage",
-        "high short interest 27.71%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +15.83%, 1M +13.54%, P/E 16.72, analyst buy, news sentiment 0.143, strong cabozantinib sales and combination therapy data.",
-      "drivers": [
-        "positive P/E",
-        "solid 1M momentum",
-        "analyst buy",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "1M +8.35%, 1W +9.66%, analyst strong_buy (score 1.42), news sentiment 0.134, strong Q1 earnings and Signatera adoption, but no P/E and negative YTD -2.39%.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "positive 1W momentum",
-        "catalyst: Signatera growth",
-        "no P/E (high growth)"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "P/E 10.67, dividend yield 395bps, analyst buy, news sentiment 0.197, but YTD -9.81%; Wegovy sales strong and oral semaglutide progress.",
-      "drivers": [
-        "attractive P/E",
-        "high dividend yield",
-        "low short interest 0.68%",
-        "catalyst: oral semaglutide"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "LEGN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +26.27%, 1M +15.48%, analyst buy (score 1.6), news sentiment 0.071, CARVYKTI sales growth and potential earlier line approval, but high short 19.64%.",
-      "drivers": [
-        "strong YTD",
-        "positive 1M momentum",
-        "analyst buy",
-        "catalyst: CARVYKTI expansion"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +4.48%, 1W +12.59%, analyst buy, news sentiment 0.19, positive CTX001 data in sickle cell, but no P/E and high short 32.41%.",
-      "drivers": [
-        "positive 1W momentum",
-        "analyst buy",
-        "catalyst: CTX001 progress",
-        "high short interest"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +68.78%, 1M +15.33%, 1W +29.59%, analyst buy, but negative news sentiment -0.149, analyst cuts, and small market cap \u00a30.395B.",
-      "drivers": [
-        "very high YTD and 1W momentum",
-        "analyst buy",
-        "negative news sentiment",
-        "small cap risk"
       ]
     }
   ]

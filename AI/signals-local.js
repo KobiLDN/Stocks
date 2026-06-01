@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-05-31 17:52",
+  "updated": "2026-06-01 13:36",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "DELL",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Explosive 1M +101.44% and 1W +66.50% momentum, +231.81% YTD, P/E 48.55 is elevated but supported by strong AI server demand and a $9.7B Pentagon deal; news sentiment positive at 0.122. Live search confirmed Dell's AI server backlog and robust enterprise spending.",
+      "drivers": [
+        "1M return +101.44%",
+        "YTD +231.81%",
+        "P/E 48.55",
+        "Pentagon deal catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Superb 1M +87.76% and 1W +27.41%, YTD +207.97%, strong_buy analyst consensus with low short interest of 3.13%; P/E 45.87 is reasonable for HBM/DDR5 ramp. Search confirms strong demand from AI memory and data centre buildouts.",
+      "drivers": [
+        "1M return +87.76%",
+        "Analyst strong_buy",
+        "Short interest 3.13%",
+        "P/E 45.87"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SMCI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Massive 1M +68.21% and 1W +37.75%, YTD +48.87%, P/E 24.26 offers value among AI peers; hold rating (2.83) tempers conviction but strong demand for AI servers is a catalyst. News search indicates Nvidia GPU supply easing supports SMCI's growth.",
+      "drivers": [
+        "1M return +68.21%",
+        "P/E 24.26",
+        "YTD +48.87%",
+        "Nvidia GPU supply catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong 1M +45.21%, YTD +102.68%, strong_buy analyst consensus (an_score 1.36) with low short interest 6.8%; P/E not available, but revenue momentum from AI optical/connectivity is robust. Search highlights Semtech's data centre wins and upbeat guidance.",
+      "drivers": [
+        "YTD +102.68%",
+        "Analyst strong_buy",
+        "Short interest 6.8%",
+        "Data centre wins catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CRDO",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "rationale": "Excellent 1W +22.05% and 1M +35.64%, YTD +64.80%, strong_buy consensus (an_score 1.33); P/E 129.69 is high but justified by rapid AI connectivity revenue growth. News search confirms large hyperscaler orders for Credo's Ethernet solutions.",
+      "drivers": [
+        "1W return +22.05%",
+        "Analyst strong_buy",
+        "YTD +64.80%",
+        "Hyperscaler orders catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "285A",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Exceptional 1M +75.32% and 1W +14.72%, YTD +480.18%, strong news sentiment 0.168; P/E 65.36 elevated but reflects HBM leader status. Search confirms SK Hynix's HBM dominance and massive AI memory demand.",
+      "drivers": [
+        "YTD +480.18%",
+        "1M return +75.32%",
+        "News sentiment 0.168",
+        "HBM dominance catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Remarkable 1M +64.73% and 1W +18.59%, YTD +143.48%, strong_buy consensus (an_score 1.31) with high beta of 5.718 reflecting leveraged AI compute exposure. Search reveals Hut 8's expansion into AI cloud services and strategic partnerships.",
+      "drivers": [
+        "1M return +64.73%",
+        "Analyst strong_buy",
+        "YTD +143.48%",
+        "AI cloud expansion catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "IREN",
+      "signal": "buy",
+      "confidence": 0.66,
+      "rationale": "Strong 1M +39.62% and 1W +9.44%, YTD +48.81%, P/E 82.52 high but supported by AI compute transition; news sentiment neutral but search shows growing AI hosting contracts and data centre capacity expansion.",
+      "drivers": [
+        "1M return +39.62%",
+        "YTD +48.81%",
+        "AI compute pivot catalyst",
+        "Data centre expansion"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CORZ",
+      "signal": "strong_buy",
+      "confidence": 0.69,
+      "rationale": "Solid 1M +34.25% and 1W +8.18%, YTD +67.92%, strong_buy consensus (an_score 1.33) with positive news sentiment 0.183; high short interest 22.82% suggests potential squeeze. Search confirms Core Scientific's AI hosting wins and institutional interest.",
+      "drivers": [
+        "YTD +67.92%",
+        "Analyst strong_buy",
+        "Short interest 22.82%",
+        "AI hosting wins catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Stellar YTD +515.82% and 1M +54.58%, 1W +9.90%, buy rating (an_score 1.55) with P/E 57.81 reflecting solid demand for flash/AI storage. Search indicates strong enterprise SSD shipments and data centre upgrades boosting Sandisk's revenue.",
+      "drivers": [
+        "YTD +515.82%",
+        "1M return +54.58%",
+        "P/E 57.81",
+        "Enterprise SSD demand catalyst"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "DELL",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "YTD +48.81%",
         "P/E 82.52",
         "buy analyst"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "DELL has +231.81% YTD, +101.44% 1M, and +66.50% 1W momentum driven by AI server sales; P/E 48.55 is reasonable for the growth trajectory, with analyst buy consensus and positive news sentiment 0.044.",
-      "drivers": [
-        "+231.81% YTD",
-        "+101.44% 1M",
-        "P/E 48.55",
-        "AI server sales catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "MU surged +87.76% 1M and +27.41% 1W, with strong_buy analyst consensus (score 1.48) and a P/E of 45.87; memory demand from AI is a key catalyst.",
-      "drivers": [
-        "+87.76% 1M",
-        "strong_buy consensus",
-        "P/E 45.87",
-        "memory AI demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SMCI",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "SMCI gained +68.21% 1M and +37.75% 1W, with a P/E of 24.26 (attractive for AI compute); news sentiment is positive at 0.393, and a European AI cloud partnership was announced.",
-      "drivers": [
-        "+68.21% 1M",
-        "P/E 24.26",
-        "news sentiment 0.393",
-        "European AI cloud deal"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.76,
-      "rationale": "HUT has +143.48% YTD and +64.73% 1M momentum, with strong_buy analyst consensus (score 1.31); KBW raised price target to $138 on Beacon Point lease momentum.",
-      "drivers": [
-        "+143.48% YTD",
-        "+64.73% 1M",
-        "strong_buy consensus",
-        "price target raised"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CRDO",
-      "signal": "strong_buy",
-      "confidence": 0.74,
-      "rationale": "CRDO shows +64.80% YTD, +35.64% 1M, and +22.05% 1W, with strong_buy analyst consensus (score 1.33); P/E 130.4 is high but justified by DSP semi growth in AI.",
-      "drivers": [
-        "+64.80% YTD",
-        "+35.64% 1M",
-        "strong_buy consensus",
-        "DSP semi AI growth"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CORZ",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "CORZ has +67.92% YTD and +34.25% 1M, with strong_buy analyst consensus (score 1.33); targeting AI data center deals despite high short interest of 22.82%.",
-      "drivers": [
-        "+67.92% YTD",
-        "+34.25% 1M",
-        "strong_buy consensus",
-        "AI data center deals"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "IREN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "IREN gained +48.81% YTD and +39.62% 1M, with buy analyst consensus; P/E 82.52 reflects AI compute growth, though beta is high at 4.179.",
-      "drivers": [
-        "+48.81% YTD",
-        "+39.62% 1M",
-        "buy consensus",
-        "AI compute growth"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "SMTC has +102.68% YTD and +45.21% 1M, with strong_buy analyst consensus (score 1.36); DSP semi exposure to AI is a key driver despite recent -8.56% 1D pullback.",
-      "drivers": [
-        "+102.68% YTD",
-        "+45.21% 1M",
-        "strong_buy consensus",
-        "DSP semi AI exposure"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "285A",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "285A soared +480.18% YTD and +75.32% 1M, with buy analyst consensus (score 1.8); memory chip ETF momentum is a catalyst, though P/E 65.36 is elevated.",
-      "drivers": [
-        "+480.18% YTD",
-        "+75.32% 1M",
-        "buy consensus",
-        "memory ETF momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "SNDK has +515.82% YTD and +54.58% 1M, with buy analyst consensus (score 1.55); a 5-star analyst set a jaw-dropping price target, but P/E 57.81 and short interest 9.63% add risk.",
-      "drivers": [
-        "+515.82% YTD",
-        "+54.58% 1M",
-        "buy consensus",
-        "analyst price target"
       ]
     }
   ]
