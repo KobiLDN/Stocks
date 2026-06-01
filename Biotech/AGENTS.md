@@ -76,4 +76,4 @@ python Biotech_generate_signals_local.py # refresh signals (requires key.txt)
 
 ## Biotech-specific signal prompt context
 
-The signals generator (`generate_signals_local.py`) includes biotech-specific instructions: pipeline progress, FDA PDUFA dates, clinical trial binary event risk, patent cliffs, competitive pipeline threats, and orphan drug pricing dynamics. The system prompt is tailored for the 9-category biotech universe.
+The signals generator (`Biotech_generate_signals_local.py`) includes biotech-specific instructions: pipeline progress, FDA PDUFA dates, clinical trial binary event risk, patent cliffs, competitive pipeline threats, and orphan drug pricing dynamics. The system prompt is tailored for the 9-category biotech universe.

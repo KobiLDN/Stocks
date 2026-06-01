@@ -11,6 +11,10 @@
 - **Biotech sector** — 30 stocks across 9 categories (large-cap, UK listed, gene editing, genomics, oncology, mRNA, rare disease, metabolic, neuroscience); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Technology sector** — 31 stocks across 6 categories (mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, hardware/infra); full 7-page suite; prices and signals via GitHub Actions
 - **Defence & Aerospace sector** — 28 stocks across 6 categories (US Primes, UK/European, Cyber/Intel, Drones, Space, Weapons/Systems); full 7-page suite; prices and signals via GitHub Actions
+- **Sector selector on generate-signals workflow** — `workflow_dispatch` dropdown (all / AI / Biotech / Defence / Tech) lets you refresh a single sector's signals on demand; scheduled runs always run all sectors (`.github/workflows/generate-signals.yml`)
+- **Sector-prefixed script names** — `update_prices.py` → `[Sector]_update_prices.py`; `generate_signals_local.py` → `[Sector]_generate_signals_local.py`; workflows, bat files, and all docs updated
+- **Bot push-rejection fix** — `git pull --rebase` before `git push` in both workflows prevents push failures when new commits land while the bot job is running
+- **Bot commit messages** — both workflows now commit as "Update prices — all sectors" / "Update signals — all sectors (or sector name)" for clarity
 - **`generate_all_signals.bat`** — single root-level script runs all 4 sector signal generators; output streams live and saves to `generate_all_signals_log.txt` (overwritten each run)
 - **`update_all_prices.bat`** — single root-level script runs all 4 sector price updates; output streams live and saves to `update_all_prices_log.txt` (overwritten each run)
 - **Consistent page headers** — all 18 sub-pages use `// Stock Universe` label + sector-prefixed h1 (e.g. "AI Metrics", "Biotech News", "Defence Charts") matching the index.html pattern; eliminates generic "Stock Metrics", "Market Heatmap", "Price Charts" etc
