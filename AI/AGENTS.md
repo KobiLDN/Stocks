@@ -158,9 +158,9 @@ The repo has two classes of generator scripts. Filename suffix and workflow indi
 | Pattern              | Runs where              | Refreshed how                                | Example                       |
 |----------------------|-------------------------|----------------------------------------------|-------------------------------|
 | `update_*.py`        | GitHub Actions (CI)     | Cron schedule (e.g. twice daily on weekdays) | `AI_update_prices.py`            |
-| `generate_*_local.py`| GitHub Actions **and** user's PC | Cron or `workflow_dispatch`; or run manually | `generate_signals_local.py`   |
+| `generate_*_local.py`| GitHub Actions **and** user's PC | Cron or `workflow_dispatch`; or run manually | `AI_generate_signals_local.py`   |
 
-`generate_signals_local.py` runs in CI via `generate-signals.yml` (weekly, Mondays 07:00 UTC) using the `OPENROUTER_API_KEY` secret. It can also be run locally using `key.txt` for on-demand refreshes. Output files (`signals-local.json`, `signals-local.js`) are committed to the repo so the live site always has data.
+`AI_generate_signals_local.py` runs in CI via `generate-signals.yml` (weekly, Mondays 07:00 UTC) using the `OPENROUTER_API_KEY` secret. It can also be run locally using `key.txt` for on-demand refreshes. Output files (`signals-local.json`, `signals-local.js`) are committed to the repo so the live site always has data.
 
 When designing a new feature that needs LLM-quality output: prefer CI-compatible pipelines where possible. If it truly needs local-only infra, document that clearly in the script docstring and this section.
 

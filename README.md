@@ -21,22 +21,22 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 ├── AI/                     ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html          ← CANONICAL reference for typography/UI standards
 │   ├── AI_update_prices.py
-│   ├── generate_signals_local.py
+│   ├── AI_generate_signals_local.py
 │   └── ...
 ├── Biotech/                ← Biotech sector (30 stocks, 9 categories)
 │   ├── index.html
 │   ├── Biotech_update_prices.py
-│   ├── generate_signals_local.py
+│   ├── Biotech_generate_signals_local.py
 │   └── ...
 ├── Defence/                ← Defence & Aerospace sector (28 stocks, 6 categories)
 │   ├── index.html
 │   ├── Defence_update_prices.py
-│   ├── generate_signals_local.py
+│   ├── Defence_generate_signals_local.py
 │   └── ...
 ├── Tech/                   ← Technology sector (31 stocks, 6 categories)
 │   ├── index.html
 │   ├── Tech_update_prices.py
-│   ├── generate_signals_local.py
+│   ├── Tech_generate_signals_local.py
 │   └── ...
 ├── .github/workflows/      ← GitHub Actions (must be at repo root)
 │   ├── update-prices.yml

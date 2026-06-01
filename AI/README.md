@@ -55,7 +55,7 @@ python AI_update_prices.py
 To run signal generation locally (requires `key.txt` with your OpenRouter key in the `AI/` folder):
 ```
 cd AI
-python generate_signals_local.py
+python AI_generate_signals_local.py
 ```
 
 ## Notes

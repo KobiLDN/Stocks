@@ -32,7 +32,7 @@ jobs:
         working-directory: AI
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python generate_signals_local.py
+        run: python AI_generate_signals_local.py
 
       - name: Install deps (Biotech)
         working-directory: Biotech
@@ -42,7 +42,7 @@ jobs:
         working-directory: Biotech
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python generate_signals_local.py
+        run: python Biotech_generate_signals_local.py
 
       - name: Install deps (Defence)
         working-directory: Defence
@@ -52,7 +52,7 @@ jobs:
         working-directory: Defence
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python generate_signals_local.py
+        run: python Defence_generate_signals_local.py
 
       - name: Install deps (Tech)
         working-directory: Tech
@@ -62,7 +62,7 @@ jobs:
         working-directory: Tech
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python generate_signals_local.py
+        run: python Tech_generate_signals_local.py
 
       - name: Commit and push if changed
         run: |
@@ -75,6 +75,7 @@ jobs:
             git add Biotech/signals-local.json Biotech/signals-local.js
             git add Defence/signals-local.json Defence/signals-local.js
             git add Tech/signals-local.json Tech/signals-local.js
-            git commit -m "Update signals ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git commit -m "Update signals — all sectors ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git pull --rebase
             git push
           fi

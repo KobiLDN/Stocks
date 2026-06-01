@@ -63,7 +63,7 @@ All Defence pages load `../shared.css` for shared styles (reset, body, ticker ta
 ```
 cd Defence
 python Defence_update_prices.py  # refresh prices
-python generate_signals_local.py # refresh signals (requires key.txt)
+python Defence_generate_signals_local.py # refresh signals (requires key.txt)
 ```
 
 `key.txt` (your OpenRouter key) is gitignored — never commit it.

@@ -69,7 +69,7 @@ Current typography (must stay in sync with `AI/`):
 ```
 cd Biotech
 python Biotech_update_prices.py  # refresh prices
-python generate_signals_local.py # refresh signals (requires key.txt)
+python Biotech_generate_signals_local.py # refresh signals (requires key.txt)
 ```
 
 `key.txt` (your OpenRouter key) is gitignored — never commit it.
