@@ -2,22 +2,22 @@
 
 A multi-sector stock research platform. Each sector tracks a curated universe of stocks in GBP with live prices, fundamentals, news sentiment, and AI-generated signals.
 
-**Live site: [kobildn.github.io/Stocks](https://kobildn.github.io/Stocks/)**
+**Live: [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/)** &nbsp;·&nbsp; **Dev preview: [dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev/)**
 
 ## Sectors
 
 | Sector | Status | URL |
 |---|---|---|
-| AI Infrastructure | Live | [/Stocks/AI/](https://kobildn.github.io/Stocks/AI/) |
-| Biotech | Live | [/Stocks/Biotech/](https://kobildn.github.io/Stocks/Biotech/) |
-| Defence | Live | [/Stocks/Defence/](https://kobildn.github.io/Stocks/Defence/) |
-| Technology | Live | [/Stocks/Tech/](https://kobildn.github.io/Stocks/Tech/) |
+| AI Infrastructure | Live | [stocks-4qw.pages.dev/AI/](https://stocks-4qw.pages.dev/AI/) |
+| Biotech | Live | [stocks-4qw.pages.dev/Biotech/](https://stocks-4qw.pages.dev/Biotech/) |
+| Defence | Live | [stocks-4qw.pages.dev/Defence/](https://stocks-4qw.pages.dev/Defence/) |
+| Technology | Live | [stocks-4qw.pages.dev/Tech/](https://stocks-4qw.pages.dev/Tech/) |
 
 ## Repo structure
 
 ```
 ├── index.html              ← hub landing page
-├── shared.css              ← shared stylesheet loaded by all 21 sector pages
+├── shared.css              ← shared stylesheet loaded by all 28 sector pages
 ├── AI/                     ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html          ← CANONICAL reference for typography/UI standards
 │   ├── AI_update_prices.py
