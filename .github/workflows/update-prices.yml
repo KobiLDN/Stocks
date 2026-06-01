@@ -70,7 +70,7 @@ jobs:
             git add Biotech/index.html Biotech/prices.json Biotech/prices-data.js
             git add Defence/index.html Defence/prices.json Defence/prices-data.js
             git add Tech/prices.json Tech/prices-data.js
-            git commit -m "Update prices ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git commit -m "Update prices — all sectors ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             git pull --rebase
             git push
           fi
