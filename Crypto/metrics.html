@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Biotech stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 30 stocks.">
-<title>Biotech — Stock Metrics</title>
+<meta name="description" content="Crypto stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 16 stocks across Bitcoin ETFs, Ethereum ETFs, exchanges, treasuries, and miners.">
+<title>Crypto — Stock Metrics</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  /* Category filter buttons */
   .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +73,6 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  /* Search + count bar */
   .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
   #metrics-search {
     font-family: 'IBM Plex Mono', monospace;
@@ -92,7 +90,6 @@
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
   .row-count span { color: var(--accent); font-weight: 700; }
 
-  /* Table */
   .table-wrap {
     overflow-x: auto;
     border: 1px solid var(--border);
@@ -126,7 +123,6 @@
 
   th.num-col { text-align: right; }
 
-  /* Column tooltips */
   #col-tooltip {
     position: fixed;
     z-index: 999;
@@ -184,17 +180,12 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-large-cap    { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
-  .cat-uk-listed    { background: rgba(255,215,0,0.1);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.25); }
-  .cat-gene-editing { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
-  .cat-genomics     { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
-  .cat-oncology     { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
-  .cat-mrna         { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
-  .cat-rare-disease { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
-  .cat-metabolic    { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
-  .cat-neuroscience { background: rgba(167,139,250,0.1); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
+  .cat-btc-etf  { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
+  .cat-eth-etf  { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
+  .cat-exchange { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
+  .cat-treasury { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
+  .cat-miner    { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
 
-  /* Numeric cells */
   .num-cell {
     text-align: right;
     font-family: 'IBM Plex Mono', monospace;
@@ -206,17 +197,14 @@
     font-size: 12px;
   }
 
-  /* YTD colouring */
   .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-flat { color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
 
-  /* Beta colouring */
   .beta-high   { color: var(--red); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .beta-normal { color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
   .beta-low    { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
 
-  /* Analyst badge */
   .analyst-badge {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -249,7 +237,6 @@
     th, td { padding: 8px 10px; }
     .company-cell { display: none; }
   }
-
 </style>
 </head>
 <body>
@@ -259,8 +246,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-        <h1>Biotech <span>Metrics</span></h1>
-        <div class="header-sub">Market cap · Beta · P/E · Volume · Dividend · Short interest · Analyst rating</div>
+    <h1>Crypto <span>Metrics</span></h1>
+    <div class="header-sub">Market cap · Beta · P/E · Volume · Dividend · Short interest · Analyst rating</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -276,7 +263,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Defence</div>
 </a>
-<a class="sector-card active" href="metrics.html">
+<a class="sector-card" href="../Biotech/metrics.html">
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
@@ -284,7 +271,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
-<a class="sector-card" href="../Crypto/metrics.html">
+<a class="sector-card active" href="metrics.html">
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
@@ -294,10 +281,10 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 30 biotech stocks">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 16 crypto stocks">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link active" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 30 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="Top 10 biotech picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 16 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
@@ -321,16 +308,16 @@
           <th class="sortable" onclick="sortMetrics('name', this)">Company</th>
           <th class="sortable" onclick="sortMetrics('category', this)">Category</th>
           <th class="sortable num-col" onclick="sortMetrics('price', this)" data-tip-title="Price" data-tip="Current share price converted to GBP.">Price</th>
-          <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP.">Market Cap</th>
+          <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP billions.">Market Cap</th>
           <th class="sortable num-col" onclick="sortMetrics('ytd', this)" data-tip-title="YTD Return" data-tip="Year-to-date price change from the first trading day of 2026.">YTD</th>
           <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market.">Beta</th>
-          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio. Many biotech companies are pre-profit, so this will show — for those.">P/E Ratio</th>
+          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio — how much investors pay per £1 of profit.">P/E Ratio</th>
           <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume" data-tip="Average number of shares traded per day over the past 3 months.">Avg Vol</th>
           <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Total number of shares traded in the most recent trading session.">1D Vol</th>
           <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="1-Week Volume" data-tip="Total shares traded across the last 5 trading days.">1W Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1m', this)" data-tip-title="1-Month Volume" data-tip="Total shares traded over the past month (approx. 20 trading days).">1M Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('div_yield', this)" data-tip-title="Dividend Yield" data-tip="Annual dividend paid as a percentage of the current share price. Most biotech companies do not pay dividends.">Div Yield</th>
-          <th class="sortable num-col" onclick="sortMetrics('short_pct', this)" data-tip-title="Short Interest" data-tip="Percentage of available shares currently sold short. High short interest is common in speculative biotech names.">Short %</th>
+          <th class="sortable num-col" onclick="sortMetrics('vol_1m', this)" data-tip-title="1-Month Volume" data-tip="Total shares traded over the past month.">1M Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('div_yield', this)" data-tip-title="Dividend Yield" data-tip="Annual dividend paid as a percentage of the current share price.">Div Yield</th>
+          <th class="sortable num-col" onclick="sortMetrics('short_pct', this)" data-tip-title="Short Interest" data-tip="Percentage of available shares currently sold short.">Short %</th>
           <th class="sortable" onclick="sortMetrics('analyst_score', this)" data-tip-title="Analyst Rating" data-tip="Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell.">Analyst</th>
         </tr>
       </thead>
@@ -341,64 +328,47 @@
 
 </div>
 
-
 <script src="prices-data.js"></script>
 <script>
-  /* ---- DATA ---- */
   const NAMES = {
-    'AMGN': 'Amgen',                     'GILD': 'Gilead Sciences',
-    'REGN': 'Regeneron Pharmaceuticals', 'VRTX': 'Vertex Pharmaceuticals',
-    'BIIB': 'Biogen',                    'BMY':  'Bristol-Myers Squibb',
-    'AZN':  'AstraZeneca',               'GSK':  'GSK plc',
-    'CRSP': 'CRISPR Therapeutics',       'BEAM': 'Beam Therapeutics',
-    'NTLA': 'Intellia Therapeutics',     'EDIT': 'Editas Medicine',
-    'ILMN': 'Illumina',                  'PACB': 'Pacific Biosciences',
-    'NTRA': 'Natera',                    'RXRX': 'Recursion Pharmaceuticals',
-    'INCY': 'Incyte Corporation',        'EXEL': 'Exelixis',
-    'ALNY': 'Alnylam Pharmaceuticals',   'RCUS': 'Arcus Biosciences',
-    'MRNA': 'Moderna',                   'BNTX': 'BioNTech',
-    'NVAX': 'Novavax',                   'BMRN': 'BioMarin Pharmaceutical',
-    'SRPT': 'Sarepta Therapeutics',      'COAG': 'Hemab Therapeutics',
-    'NVO':  'Novo Nordisk',
-    'LLY':  'Eli Lilly',                 'LEGN': 'Legend Biotech',
-    'IONS': 'Ionis Pharmaceuticals',
+    'IBIT': 'iShares Bitcoin Trust',
+    'FBTC': 'Fidelity Wise Origin Bitcoin Fund',
+    'ARKB': 'ARK 21Shares Bitcoin ETF',
+    'GBTC': 'Grayscale Bitcoin Trust',
+    'BITO': 'ProShares Bitcoin Strategy ETF',
+    'ETHA': 'iShares Ethereum Trust',
+    'FETH': 'Fidelity Ethereum Fund',
+    'COIN': 'Coinbase Global',
+    'HOOD': 'Robinhood Markets',
+    'MSTR': 'Strategy (MicroStrategy)',
+    'MARA': 'MARA Holdings',
+    'RIOT': 'Riot Platforms',
+    'CLSK': 'CleanSpark',
+    'HUT':  'Hut 8 Corp',
+    'IREN': 'IREN Limited',
+    'CIFR': 'Cipher Mining',
   };
 
   const CAT_LABELS = {
-    'large-cap':     'Large Cap',
-    'uk-listed':     'UK Listed',
-    'gene-editing':  'Gene Editing',
-    'genomics':      'Genomics',
-    'oncology':      'Oncology',
-    'mrna':          'mRNA',
-    'rare-disease':  'Rare Disease',
-    'metabolic':     'Metabolic',
-    'neuroscience':  'Neuroscience',
+    'btc-etf':  'BTC ETF',
+    'eth-etf':  'ETH ETF',
+    'exchange': 'Exchange',
+    'treasury': 'Treasury',
+    'miner':    'Miner',
   };
 
   const CAT_TOOLTIPS = {
-    'large-cap':     'Established pharma/biotech giants with diversified pipelines and multi-billion market caps',
-    'uk-listed':     'UK-listed companies traded on the London Stock Exchange — prices shown in GBP',
-    'gene-editing':  'Companies using CRISPR and base editing to directly modify DNA — high risk, high reward pipeline plays',
-    'genomics':      'Genome sequencing platforms and bioinformatics — the tools that read and interpret DNA',
-    'oncology':      'Cancer-focused biotechs — targeted therapies, immunotherapies and ADCs across tumour types',
-    'mrna':          'mRNA platform companies — technology that programs cells to produce therapeutic proteins or immune responses',
-    'rare-disease':  'Biotechs targeting rare (orphan) diseases — smaller patient populations but faster FDA pathways and pricing power',
-    'metabolic':     'Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders',
-    'neuroscience':  'Neurology and CNS-focused biotechs — Alzheimer\'s, ALS, depression and other brain & nervous system disorders',
+    'btc-etf':  'Bitcoin ETFs: IBIT, FBTC, ARKB, GBTC, BITO — spot and futures Bitcoin funds',
+    'eth-etf':  'Ethereum ETFs: ETHA, FETH — spot Ethereum funds',
+    'exchange': 'Crypto exchanges: COIN (Coinbase), HOOD (Robinhood) — platforms enabling crypto trading',
+    'treasury': 'Corporate Bitcoin treasury: MSTR (Strategy / MicroStrategy) — largest corporate BTC holder',
+    'miner':    'Bitcoin miners: MARA, RIOT, CLSK, HUT, IREN, CIFR — companies mining BTC using specialised hardware',
   };
 
-  /* Yahoo Finance URL suffix mapping */
-  const YAHOO_SUFFIX = {
-    'AZN': 'AZN.L',
-    'GSK': 'GSK.L',
-  };
   function yahooUrl(ticker) {
-    const sym = YAHOO_SUFFIX[ticker] || ticker;
-    return 'https://finance.yahoo.com/quote/' + sym + '/';
+    return 'https://finance.yahoo.com/quote/' + ticker + '/';
   }
 
-  /* ---- FORMAT HELPERS ---- */
   function fmtMarketCap(gbpB) {
     if (gbpB === null || gbpB === undefined) return null;
     if (gbpB >= 1) return '£' + gbpB.toFixed(1) + 'B';
@@ -424,7 +394,6 @@
     return '<span class="null-val">—</span>';
   }
 
-  /* ---- ANALYST BADGE ---- */
   const ANALYST_MAP = {
     'strong_buy':  { cls: 'analyst-strong-buy',   label: 'Strong Buy' },
     'buy':         { cls: 'analyst-buy',           label: 'Buy' },
@@ -441,7 +410,6 @@
     return '<span class="analyst-badge ' + info.cls + '">' + info.label + '</span>';
   }
 
-  /* ---- BETA CELL ---- */
   function betaCell(beta) {
     if (beta === null || beta === undefined) return dash();
     let cls = 'beta-normal';
@@ -450,12 +418,10 @@
     return '<span class="' + cls + '">' + beta.toFixed(2) + '</span>';
   }
 
-  /* ---- SORT STATE ---- */
   let sortState = { col: 'market_cap', dir: -1 };
   let activeCategory = 'all';
   let searchQuery = '';
 
-  /* ---- SORT ---- */
   function sortMetrics(col, th) {
     if (sortState.col === col) sortState.dir *= -1;
     else {
@@ -468,7 +434,6 @@
     renderTable();
   }
 
-  /* ---- FILTER ---- */
   function filterMetrics(query) {
     searchQuery = query.toLowerCase().trim();
     renderTable();
@@ -482,7 +447,6 @@
     renderTable();
   }
 
-  /* ---- SORT KEY ---- */
   function sortKey(s) {
     switch (sortState.col) {
       case 'ticker':       return s.ticker;
@@ -504,7 +468,6 @@
     }
   }
 
-  /* ---- RENDER ---- */
   function renderTable() {
     let data = window._metricsData || [];
 
@@ -597,7 +560,6 @@
     }).join('');
   }
 
-  /* ---- BUILD FILTER BUTTONS ---- */
   function buildFilterBar(stocks) {
     const cats = ['all', ...Object.keys(CAT_LABELS)];
     const bar = document.getElementById('filter-bar');
@@ -608,11 +570,10 @@
     }).join('');
   }
 
-  /* ---- INIT ---- */
   function buildMetrics(stocks) {
     window._metricsData = stocks.map(s => ({
       ticker:           s.ticker,
-      name:             NAMES[s.ticker] || s.ticker,
+      name:             NAMES[s.ticker] || s.company_name || s.ticker,
       category:         s.category,
       priceStr:         (s.price_gbp !== undefined && s.price_gbp !== null) ? String(s.price_gbp) : null,
       price:            (s.price_gbp !== undefined && s.price_gbp !== null && !isNaN(parseFloat(s.price_gbp))) ? parseFloat(s.price_gbp) : null,
@@ -645,7 +606,6 @@
           '<tr><td colspan="15" style="text-align:center;padding:40px;color:var(--muted);font-family:\'IBM Plex Mono\',monospace;">No data available — run the price bot first.</td></tr>';
       });
   }
-
 </script>
 <!-- Column header tooltips -->
 <div id="col-tooltip"><div class="tip-title"></div><div class="tip-body"></div></div>

@@ -3,10 +3,10 @@
 ## Backlog
 
 - **Energy sector** — dedicated `Energy\` subfolder and sector card on hub
-- **Crypto sector** — dedicated `Crypto\` subfolder and sector card on hub
 
 ## Done
 
+- **Crypto sector** — 16 stocks across 5 categories (Bitcoin ETFs, Ethereum ETFs, exchanges, corporate treasury, miners); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **AI sector** — 48 stocks across 12 categories; metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Biotech sector** — 30 stocks across 9 categories (large-cap, UK listed, gene editing, genomics, oncology, mRNA, rare disease, metabolic, neuroscience); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Technology sector** — 31 stocks across 6 categories (mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, hardware/infra); full 7-page suite; prices and signals via GitHub Actions

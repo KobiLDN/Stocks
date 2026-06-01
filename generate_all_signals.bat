@@ -46,16 +46,24 @@ cd Tech
 powershell -Command "python -u Tech_generate_signals_local.py 2>&1 | Tee-Object -FilePath '..\generate_all_signals_log.txt' -Append"
 cd ..
 echo. >> "%LOG%"
+echo.
+
+echo [5/5] Crypto...
+echo [5/5] Crypto... >> "%LOG%"
+cd Crypto
+powershell -Command "python -u Crypto_generate_signals_local.py 2>&1 | Tee-Object -FilePath '..\generate_all_signals_log.txt' -Append"
+cd ..
+echo. >> "%LOG%"
 
 (
   echo ============================================================
-  echo  Done. All 4 sector signals generated.
+  echo  Done. All 5 sector signals generated.
   echo  Log: %LOG%
   echo ============================================================
 ) >> "%LOG%"
 
 echo ============================================================
-echo  Done. All 4 sector signals generated.
+echo  Done. All 5 sector signals generated.
 echo  Log saved to: %LOG%
 echo ============================================================
 pause

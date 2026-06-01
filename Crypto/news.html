@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment analysis across 31 technology stocks. Filter by category and sort by recency or sentiment score.">
-<title>Technology — News</title>
+<meta name="description" content="Latest news and sentiment analysis across 16 crypto stocks including Bitcoin ETFs, Ethereum ETFs, exchanges, treasuries, and miners. Filter by category and sort by recency or sentiment score.">
+<title>Crypto — News</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
@@ -161,12 +161,11 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-mega-cap            { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .cat-semiconductors      { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
-  .cat-enterprise-software { background: rgba(45,212,191,0.1);  color: var(--teal);   border: 1px solid rgba(45,212,191,0.25); }
-  .cat-cybersecurity       { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
-  .cat-consumer-platform   { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
-  .cat-hardware-infra      { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .cat-btc-etf  { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
+  .cat-eth-etf  { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
+  .cat-exchange { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
+  .cat-treasury { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
+  .cat-miner    { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
   .news-time {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
@@ -240,7 +239,7 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>Technology <span>News</span></h1>
+    <h1>Crypto <span>News</span></h1>
     <div class="header-sub">Latest headlines across all tracked stocks · sentiment scored locally (VADER)</div>
   </div>
   <div class="sector-switcher">
@@ -261,11 +260,11 @@
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card active" href="news.html">
+<a class="sector-card" href="../Tech/news.html">
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
-<a class="sector-card" href="../Crypto/news.html">
+<a class="sector-card active" href="news.html">
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
@@ -275,10 +274,10 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 16 crypto stocks">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 16 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
@@ -315,35 +314,38 @@
 <script src="prices-data.js"></script>
 <script>
   const NAMES = {
-    'AAPL': 'Apple', 'MSFT': 'Microsoft', 'GOOGL': 'Alphabet (Google)',
-    'AMZN': 'Amazon', 'META': 'Meta Platforms', 'NVDA': 'NVIDIA',
-    'AMD': 'Advanced Micro Devices', 'INTC': 'Intel', 'TSM': 'Taiwan Semiconductor',
-    'AVGO': 'Broadcom', 'QCOM': 'Qualcomm', 'ARM': 'Arm Holdings',
-    'ASML': 'ASML Holding', 'MU': 'Micron Technology', 'AMAT': 'Applied Materials',
-    'ORCL': 'Oracle', 'CRM': 'Salesforce', 'ADBE': 'Adobe',
-    'NOW': 'ServiceNow', 'SNOW': 'Snowflake', 'INTU': 'Intuit',
-    'CRWD': 'CrowdStrike', 'PANW': 'Palo Alto Networks', 'NET': 'Cloudflare',
-    'FTNT': 'Fortinet', 'NFLX': 'Netflix', 'SHOP': 'Shopify',
-    'SPOT': 'Spotify', 'UBER': 'Uber', 'CSCO': 'Cisco Systems',
-    'PLTR': 'Palantir Technologies',
+    'IBIT': 'iShares Bitcoin Trust',
+    'FBTC': 'Fidelity Wise Origin Bitcoin Fund',
+    'ARKB': 'ARK 21Shares Bitcoin ETF',
+    'GBTC': 'Grayscale Bitcoin Trust',
+    'BITO': 'ProShares Bitcoin Strategy ETF',
+    'ETHA': 'iShares Ethereum Trust',
+    'FETH': 'Fidelity Ethereum Fund',
+    'COIN': 'Coinbase Global',
+    'HOOD': 'Robinhood Markets',
+    'MSTR': 'Strategy (MicroStrategy)',
+    'MARA': 'MARA Holdings',
+    'RIOT': 'Riot Platforms',
+    'CLSK': 'CleanSpark',
+    'HUT':  'Hut 8 Corp',
+    'IREN': 'IREN Limited',
+    'CIFR': 'Cipher Mining',
   };
 
   const CAT_LABELS = {
-    'mega-cap':            'Mega Cap',
-    'semiconductors':      'Semiconductors',
-    'enterprise-software': 'Enterprise SW',
-    'cybersecurity':       'Cybersecurity',
-    'consumer-platform':   'Consumer/Platform',
-    'hardware-infra':      'Hardware/Infra',
+    'btc-etf':  'BTC ETF',
+    'eth-etf':  'ETH ETF',
+    'exchange': 'Exchange',
+    'treasury': 'Treasury',
+    'miner':    'Miner',
   };
 
   const CAT_TOOLTIPS = {
-    'mega-cap':            'The 5 largest tech companies by market cap: Apple, Microsoft, Alphabet, Amazon, Meta',
-    'semiconductors':      'Chip designers and equipment makers powering AI and consumer tech',
-    'enterprise-software': 'Cloud SaaS platforms transforming how businesses operate',
-    'cybersecurity':       'Platforms protecting enterprises from modern cyber threats',
-    'consumer-platform':   'Consumer-facing tech platforms with massive user bases',
-    'hardware-infra':      'Networking hardware and AI platform infrastructure',
+    'btc-etf':  'Bitcoin ETFs: IBIT, FBTC, ARKB, GBTC, BITO — spot and futures Bitcoin funds',
+    'eth-etf':  'Ethereum ETFs: ETHA, FETH — spot Ethereum funds',
+    'exchange': 'Crypto exchanges: COIN (Coinbase), HOOD (Robinhood) — platforms enabling crypto trading',
+    'treasury': 'Corporate Bitcoin treasury: MSTR (Strategy / MicroStrategy) — largest corporate BTC holder',
+    'miner':    'Bitcoin miners: MARA, RIOT, CLSK, HUT, IREN, CIFR — companies mining BTC using specialised hardware',
   };
 
   function yahooUrl(ticker) {

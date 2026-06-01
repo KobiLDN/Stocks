@@ -1,0 +1,8 @@
+window.SIGNALS_DATA = {
+  "updated": null,
+  "model": null,
+  "endpoint": null,
+  "source": null,
+  "picks": [],
+  "previous_picks": []
+};

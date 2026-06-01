@@ -413,14 +413,24 @@
         </div>
       </a>
 
-      <div class="card soon">
+      <a class="card live" href="Crypto/index.html">
         <div class="card-top">
           <div class="card-icon">₿</div>
-          <span class="badge badge-soon">Coming Soon</span>
+          <span class="badge badge-live">Live</span>
         </div>
         <div class="card-name">Crypto</div>
-        <div class="card-desc">Top cryptocurrencies and crypto-adjacent equities. Prices, metrics, signals, and heatmap — coming soon.</div>
-      </div>
+        <div class="card-desc">16 stocks across Bitcoin ETFs, Ethereum ETFs, crypto exchanges, corporate treasury, and miners.</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Crypto/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-Crypto"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </a>
 
     </div>
   </main>
@@ -435,6 +445,7 @@
       { id: 'Defence', signals: 'Defence/signals-local.json', prices: 'Defence/prices-data.js' },
       { id: 'Biotech', signals: 'Biotech/signals-local.json', prices: 'Biotech/prices-data.js' },
       { id: 'Tech',    signals: 'Tech/signals-local.json',    prices: 'Tech/prices-data.js' },
+      { id: 'Crypto',  signals: 'Crypto/signals-local.json',  prices: 'Crypto/prices-data.js' },
     ];
 
     async function fetchPriceMap(path) {
