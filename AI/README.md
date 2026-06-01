@@ -49,7 +49,7 @@ All work happens in the `STOCKSDev` clone. See [../AGENTS.md](../AGENTS.md) and 
 To run the price updater locally:
 ```
 cd AI
-python update_prices.py
+python AI_update_prices.py
 ```
 
 To run signal generation locally (requires `key.txt` with your OpenRouter key in the `AI/` folder):

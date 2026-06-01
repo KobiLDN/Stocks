@@ -68,7 +68,7 @@ Current typography (must stay in sync with `AI/`):
 
 ```
 cd Biotech
-python update_prices.py          # refresh prices
+python Biotech_update_prices.py  # refresh prices
 python generate_signals_local.py # refresh signals (requires key.txt)
 ```
 

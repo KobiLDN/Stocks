@@ -62,7 +62,7 @@ When you make a change, update these in the same commit:
 
 1. **`index.html` version + timestamp**
    - Bump version by `0.1` (example: `v1 → v1.1`)
-   - The `last-updated` span is managed automatically by `update_prices.py` — do not manually change it unless updating structure
+   - The `last-updated` span is managed automatically by `AI_update_prices.py` — do not manually change it unless updating structure
 2. **`CHANGELOG.md`**
    - Prepend one new table row (immediately under the header) with **date and time** (`YYYY-MM-DD HH:MM BST`), AI Name, **Where** (`Desktop`, `Mobile`, or `Web` — which Claude client the change was made from), and what changed — **newest first**
    - The `Where` column was added 2026-05-23. Past entries default to `Desktop`. Use `Web` for Claude Code on the web.
@@ -76,11 +76,11 @@ When you make a change, update these in the same commit:
 
 ## Price updater bot
 
-- `update_prices.py` runs automatically via GitHub Actions **twice daily on weekdays** (13:00 UTC and 21:30 UTC).
+- `AI_update_prices.py` runs automatically via GitHub Actions **twice daily on weekdays** (13:00 UTC and 21:30 UTC).
 - It fetches live prices from Yahoo Finance, converts to GBP, and writes three files: `index.html` (data-* attributes), `prices.json` (JSON snapshot), and `prices-data.js` (`window.PRICES_DATA` global for file:// compatibility).
 - It commits and pushes all three files to `main` if prices changed.
 - **Do not manually edit price data in `index.html`** — the bot will overwrite it on the next run.
-- To add a new stock: add it to the `STOCKS` dict in `update_prices.py` and add the corresponding `<tr>` row in `index.html`. Placeholder prices (`£0`) are fine — the bot fills them on next run.
+- To add a new stock: add it to the `STOCKS` dict in `AI_update_prices.py` and add the corresponding `<tr>` row in `index.html`. Placeholder prices (`£0`) are fine — the bot fills them on next run.
 - The bot relies on `data-ticker` attributes to match rows. Never remove or rename these.
 - **Ticker tape** on all pages loads `prices-data.js` via a `<script>` tag and reads `window.PRICES_DATA` directly — works with file:// and HTTP. Falls back to `fetch('prices.json')` if the global isn't set, then to DOM rows on `index.html`. New pages only need the tape HTML, CSS, `<script src="prices-data.js">`, and the shared `buildTape()` JS block.
 
@@ -88,13 +88,13 @@ When you make a change, update these in the same commit:
 
 **The committed `prices-data.js` / `prices.json` are only as fresh as the last GitHub Actions run.** Pages like `metrics.html` render entirely from `window.PRICES_DATA` at runtime — they do not embed their own data.
 
-This means: **if you add a new field to the bot output (`update_prices.py` → `write_json()`), the live site will show blank/dashes for that field until the workflow runs on GitHub and regenerates `prices-data.js`.** Running the bot locally only fixes *your* local copy — the committed file on `main` still has the old shape.
+This means: **if you add a new field to the bot output (`AI_update_prices.py` → `write_json()`), the live site will show blank/dashes for that field until the workflow runs on GitHub and regenerates `prices-data.js`.** Running the bot locally only fixes *your* local copy — the committed file on `main` still has the old shape.
 
 **Rule when adding/changing bot output fields:**
 
-1. Add the field to `update_prices.py` (`get_*` + `write_json`).
+1. Add the field to `AI_update_prices.py` (`get_*` + `write_json`).
 2. Update the consuming page(s) to read the new field.
-3. **Either** run `python update_prices.py` locally and commit the regenerated `prices-data.js` + `prices.json` alongside the code change, **or** explicitly trigger the GitHub workflow (`workflow_dispatch`) immediately after pushing so live data matches the new code.
+3. **Either** run `python AI_update_prices.py` locally and commit the regenerated `prices-data.js` + `prices.json` alongside the code change, **or** explicitly trigger the GitHub workflow (`workflow_dispatch`) immediately after pushing so live data matches the new code.
 4. Never push new-field code expecting the live page to "just work" — it won't until the data file is regenerated *on GitHub*.
 
 Symptom of forgetting this: page works locally, all columns blank on `kobildn.github.io`. The fix is always "run the workflow", not a code change.
@@ -127,7 +127,7 @@ The bot also rebuilds the price `<td>` on each run, inserting three coloured `.c
 2. Add a `.filter-btn[data-filter="slug"].active` style
 3. Add a `.cat-slug` badge style
 4. Add a filter button in the `.filters` div
-5. Add the tickers to `STOCKS` in `update_prices.py`
+5. Add the tickers to `STOCKS` in `AI_update_prices.py`
 6. Add `<tr>` rows to `index.html` with correct `data-cat` slug
 7. The row-count display (`visible-count` span) is updated dynamically by JS — no manual change needed
 8. Update the ticker list in the HTML header comment block
@@ -157,7 +157,7 @@ The repo has two classes of generator scripts. Filename suffix and workflow indi
 
 | Pattern              | Runs where              | Refreshed how                                | Example                       |
 |----------------------|-------------------------|----------------------------------------------|-------------------------------|
-| `update_*.py`        | GitHub Actions (CI)     | Cron schedule (e.g. twice daily on weekdays) | `update_prices.py`            |
+| `update_*.py`        | GitHub Actions (CI)     | Cron schedule (e.g. twice daily on weekdays) | `AI_update_prices.py`            |
 | `generate_*_local.py`| GitHub Actions **and** user's PC | Cron or `workflow_dispatch`; or run manually | `generate_signals_local.py`   |
 
 `generate_signals_local.py` runs in CI via `generate-signals.yml` (weekly, Mondays 07:00 UTC) using the `OPENROUTER_API_KEY` secret. It can also be run locally using `key.txt` for on-demand refreshes. Output files (`signals-local.json`, `signals-local.js`) are committed to the repo so the live site always has data.

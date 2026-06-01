@@ -62,7 +62,7 @@ All Defence pages load `../shared.css` for shared styles (reset, body, ticker ta
 
 ```
 cd Defence
-python update_prices.py          # refresh prices
+python Defence_update_prices.py  # refresh prices
 python generate_signals_local.py # refresh signals (requires key.txt)
 ```
 
