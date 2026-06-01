@@ -6,6 +6,7 @@ All notable changes to this repository are documented here — **newest first**.
 
 | Date · time (BST) | AI Name | Where | Changed |
 |---|---|---|---|
+| 2026-06-01 | Claude Sonnet 4.6 (Claude Code) | Desktop | Infra: **branch cleanup + dev workflow established** — deleted stale `cloudflare/workers-autoconfig` and `claude/magical-davinci-zYLYI` remote branches; `dev` branch synced to `main`; confirmed workflow: all changes pushed to `dev` → auto-deploys to `https://dev.stocks-4qw.pages.dev` for remote preview → `main` only updated on explicit "go". |
 | 2026-06-01 | Claude Sonnet 4.6 (Claude Code) | Web | UX: **disclaimer consolidation** — all page-specific `.disclaimer` divs removed from `metrics.html`, `news.html`, `calculator.html`, and `signals.html` across all 4 sectors (16 pages); page-specific caveats (data delays, VADER scoring, YTD methodology, AI-generated signals) folded into the `header-note` at the top of each page; no duplicate warnings anywhere. |
 | 2026-06-01 | Claude Sonnet 4.6 (Claude Code) | Web | Infra: **sector selector on generate-signals workflow** — `workflow_dispatch` now has a dropdown (all / AI / Biotech / Defence / Tech) so a single sector can be refreshed; scheduled runs unchanged (`generate-signals.yml`). |
 | 2026-06-01 | Claude Sonnet 4.6 (Claude Code) | Web | Infra: **sector-prefixed script names** — `update_prices.py` → `[Sector]_update_prices.py`; `generate_signals_local.py` → `[Sector]_generate_signals_local.py` across all 4 sectors; workflows, bat files, and all docs updated. |
