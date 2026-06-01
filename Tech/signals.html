@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI-generated weekly top 10 buy signals for Defence &amp; Aerospace stocks, ranked by momentum, fundamentals, and news sentiment.">
-<title>Defence &amp; Aerospace — Signals</title>
+<meta name="description" content="AI-generated top 10 buy signals for technology stocks, ranked by momentum, fundamentals, and news sentiment.">
+<title>Technology — Signals</title>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="signals-local.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
@@ -23,7 +23,6 @@
   }
   .disclaimer span { color: var(--accent2); }
 
-  /* Refresh banner */
   .refresh-banner {
     display: flex;
     align-items: center;
@@ -48,7 +47,6 @@
     font-size: 10px;
   }
 
-  /* Signal cards */
   .signals-feed {
     display: flex;
     flex-direction: column;
@@ -118,12 +116,12 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-us-primes   { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.35); }
-  .cat-uk-european { background: rgba(255,215,0,0.1);    color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
-  .cat-cyber-intel { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
-  .cat-drones      { background: rgba(45,212,191,0.1);   color: var(--teal);   border: 1px solid rgba(45,212,191,0.3); }
-  .cat-space       { background: rgba(68,136,255,0.1);   color: var(--blue);   border: 1px solid rgba(68,136,255,0.3); }
-  .cat-weapons     { background: rgba(251,113,133,0.1);  color: var(--rose);   border: 1px solid rgba(251,113,133,0.3); }
+  .cat-mega-cap            { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-semiconductors      { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
+  .cat-enterprise-software { background: rgba(45,212,191,0.1);  color: var(--teal);   border: 1px solid rgba(45,212,191,0.25); }
+  .cat-cybersecurity       { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+  .cat-consumer-platform   { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
+  .cat-hardware-infra      { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
 
   .signal-pill {
     margin-left: auto;
@@ -234,7 +232,6 @@
     .rationale { font-size: 13px; }
   }
 
-/* How it works */
   .how-it-works {
     margin-top: 48px;
     border: 1px solid var(--border);
@@ -314,8 +311,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-        <h1>Defence <span>Signals</span></h1>
-        <div class="header-sub">Top 10 ranked picks · generated locally by <span class="model" id="model-name">—</span></div>
+    <h1>Technology <span>Signals</span></h1>
+    <div class="header-sub">Top 10 ranked picks · generated locally by <span class="model" id="model-name">—</span></div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -327,7 +324,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">AI Infrastructure</div>
 </a>
-<a class="sector-card active" href="signals.html">
+<a class="sector-card" href="../Defence/signals.html">
   <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Defence</div>
 </a>
@@ -335,7 +332,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card" href="../Tech/signals.html">
+<a class="sector-card active" href="signals.html">
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
@@ -345,10 +342,10 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 28 defence &amp; aerospace stocks">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 28 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link active" data-tooltip="Defence top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link active" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
@@ -375,7 +372,7 @@
         <div class="how-step-num">1</div>
         <div class="how-step-text">
           <h4>Live price &amp; news data</h4>
-          <p>GitHub Actions runs <code>update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 28 stocks via Yahoo Finance.</p>
+          <p>GitHub Actions runs <code>update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 31 stocks via Yahoo Finance.</p>
         </div>
       </div>
 
@@ -383,7 +380,7 @@
         <div class="how-step-num">2</div>
         <div class="how-step-text">
           <h4>Web search for live catalysts</h4>
-          <p>Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing contract wins, government budget announcements, geopolitical escalation events, export licence approvals and earnings beats on defence revenues.</p>
+          <p>Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing deal announcements, analyst upgrades, earnings surprises and price target changes that happened since the last data pull.</p>
         </div>
       </div>
 
@@ -404,7 +401,7 @@
       </div>
 
       <div class="how-footer-note">
-        <span>Not financial advice.</span> Defence stocks can be sensitive to geopolitical events, government budget cycles and export licence decisions — always do your own research before making any investment decision. The model can be wrong, biased toward recent momentum, or inconsistent run-to-run.
+        <span>Not financial advice.</span> The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
       </div>
 
     </div>
@@ -416,36 +413,31 @@
 
 </div>
 
-
 <script src="prices-data.js"></script>
 <script>
   const NAMES = {
-    'LMT':   'Lockheed Martin',       'RTX':   'RTX Corporation',
-    'NOC':   'Northrop Grumman',      'GD':    'General Dynamics',
-    'HII':   'Huntington Ingalls',    'LHX':   'L3Harris Technologies',
-    'BA':    'Boeing',                'BA.L':  'BAE Systems',
-    'RR.L':  'Rolls-Royce',           'QQ.L':  'QinetiQ Group',
-    'PLTR':  'Palantir Technologies', 'LDOS':  'Leidos Holdings',
-    'CACI':  'CACI International',    'SAIC':  'Science Applications Intl',
-    'BAH':   'Booz Allen Hamilton',   'AVAV':  'AeroVironment',
-    'KTOS':  'Kratos Defense',        'RCAT':  'Red Cat Holdings',
-    'TXT':   'Textron',               'RKLB':  'Rocket Lab',
-    'PL':    'Planet Labs',           'ASTS':  'AST SpaceMobile',
-    'TDG':   'TransDigm Group',       'HEI':   'HEICO Corporation',
-    'AXON':  'Axon Enterprise',       'OLN':   'Olin Corporation',
-    'MRCY':  'Mercury Systems',       'DRS':   'Leonardo DRS',
+    'AAPL': 'Apple', 'MSFT': 'Microsoft', 'GOOGL': 'Alphabet (Google)',
+    'AMZN': 'Amazon', 'META': 'Meta Platforms', 'NVDA': 'NVIDIA',
+    'AMD': 'Advanced Micro Devices', 'INTC': 'Intel', 'TSM': 'Taiwan Semiconductor',
+    'AVGO': 'Broadcom', 'QCOM': 'Qualcomm', 'ARM': 'Arm Holdings',
+    'ASML': 'ASML Holding', 'MU': 'Micron Technology', 'AMAT': 'Applied Materials',
+    'ORCL': 'Oracle', 'CRM': 'Salesforce', 'ADBE': 'Adobe',
+    'NOW': 'ServiceNow', 'SNOW': 'Snowflake', 'INTU': 'Intuit',
+    'CRWD': 'CrowdStrike', 'PANW': 'Palo Alto Networks', 'NET': 'Cloudflare',
+    'FTNT': 'Fortinet', 'NFLX': 'Netflix', 'SHOP': 'Shopify',
+    'SPOT': 'Spotify', 'UBER': 'Uber', 'CSCO': 'Cisco Systems',
+    'PLTR': 'Palantir Technologies',
   };
 
   const CAT_LABELS = {
-    'us-primes':   'US Prime',
-    'uk-european': 'UK/European',
-    'cyber-intel': 'Cyber/Intel',
-    'drones':      'Drones',
-    'space':       'Space',
-    'weapons':     'Weapons',
+    'mega-cap':            'Mega Cap',
+    'semiconductors':      'Semiconductors',
+    'enterprise-software': 'Enterprise SW',
+    'cybersecurity':       'Cybersecurity',
+    'consumer-platform':   'Consumer/Platform',
+    'hardware-infra':      'Hardware/Infra',
   };
 
-  /* BA.L, RR.L, QQ.L already have the correct Yahoo Finance suffix */
   function yahooUrl(ticker) {
     return 'https://finance.yahoo.com/quote/' + ticker + '/';
   }
@@ -460,7 +452,6 @@
     return (s || '').replace('_', ' ').toUpperCase();
   }
 
-  /* Build a ticker -> category map from prices-data.js */
   function tickerCategoryMap() {
     const map = {};
     if (window.PRICES_DATA && Array.isArray(window.PRICES_DATA.stocks)) {
@@ -487,7 +478,7 @@
       modelEl.textContent = '—';
       feed.innerHTML =
         '<div class="empty-state">' +
-        'No signals data yet. Signals are generated on Mon/Wed/Fri by <strong>GitHub Actions</strong> ' +
+        'No signals data yet. Signals are generated weekly by <strong>GitHub Actions</strong> ' +
         '(deepseek/deepseek-v4-flash via OpenRouter) or run ' +
         '<code>python generate_signals_local.py</code> locally to generate them now.' +
         '</div>';
@@ -500,7 +491,6 @@
     const catFor  = tickerCategoryMap();
     const nameFor = tickerNameMap();
 
-    // Build previous rank lookup for delta badges
     const prevRank = {};
     const hasPrev = Array.isArray(data.previous_picks) && data.previous_picks.length > 0;
     if (hasPrev) {
@@ -524,13 +514,12 @@
         .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
         .join('');
 
-      // Rank delta badge
       let deltaBadge = '';
       if (hasPrev) {
         if (!(t in prevRank)) {
           deltaBadge = '<span class="rank-delta rank-delta-new">NEW</span>';
         } else {
-          const diff = prevRank[t] - p.rank; // positive = moved up
+          const diff = prevRank[t] - p.rank;
           if (diff > 0)       deltaBadge = '<span class="rank-delta rank-delta-up">↑' + diff + '</span>';
           else if (diff < 0)  deltaBadge = '<span class="rank-delta rank-delta-down">↓' + Math.abs(diff) + '</span>';
           else                deltaBadge = '<span class="rank-delta rank-delta-same">—</span>';
@@ -567,7 +556,6 @@
       .catch(() => renderSignals(null));
   }
 
-  /* ---- HOW IT WORKS TOGGLE ---- */
   function toggleHow(header) {
     header.classList.toggle('open');
     header.nextElementSibling.classList.toggle('open');

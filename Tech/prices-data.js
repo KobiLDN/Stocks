@@ -1,0 +1,1 @@
+window.PRICES_DATA = {"updated": "2026-06-01 00:00", "fx_gbp_usd": 1.27, "stocks": []};

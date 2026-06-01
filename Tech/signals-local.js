@@ -1,0 +1,1 @@
+window.SIGNALS_DATA = {"updated": "2026-06-01 00:00", "model": "deepseek/deepseek-v4-flash", "picks": [], "previous_picks": []};

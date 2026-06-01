@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="What-If investment calculator — see what £100 to £10,000 invested in AI infrastructure stocks at the start of 2026 is worth today.">
-<title>AI Infrastructure — What-If Calculator</title>
+<meta name="description" content="What-If investment calculator — see what £100 to £10,000 invested in technology stocks at the start of 2026 is worth today.">
+<title>Technology — What-If Calculator</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
@@ -99,18 +99,12 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-memory        { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
-  .cat-nuclear-ops   { background: rgba(255,107,53,0.1);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
-  .cat-smr           { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
-  .cat-uranium       { background: rgba(255,215,0,0.1);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.25); }
-  .cat-power-infra   { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
-  .cat-dc-operators  { background: rgba(68,136,255,0.1);  color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
-  .cat-hyperscalers  { background: rgba(167,139,250,0.1); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
-  .cat-ai-compute    { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
-  .cat-fibre-optical { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
-  .cat-dsp-semi      { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
-  .cat-test-equip    { background: rgba(148,163,184,0.1); color: var(--slate);   border: 1px solid rgba(148,163,184,0.25); }
-  .cat-materials     { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
+  .cat-mega-cap            { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+  .cat-semiconductors      { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
+  .cat-enterprise-software { background: rgba(68,136,255,0.1);  color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
+  .cat-cybersecurity       { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
+  .cat-consumer-platform   { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
+  .cat-hardware-infra      { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
 
   .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
@@ -189,8 +183,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-        <h1>AI <span>Calculator</span></h1>
-        <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
+    <h1>Technology <span>Calculator</span></h1>
+    <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -198,7 +192,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
   <div class="sector-card-name">Stock Hub</div>
 </a>
-<a class="sector-card active" href="calculator.html">
+<a class="sector-card" href="../AI/calculator.html">
   <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">AI Infrastructure</div>
 </a>
@@ -210,7 +204,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card" href="../Tech/calculator.html">
+<a class="sector-card active" href="calculator.html">
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
@@ -220,12 +214,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 48 AI infrastructure stocks">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 48 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="AI top 10 picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks">📊 Dashboard</a>
+    <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html"    class="nav-link" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="heatmap.html"    class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link active" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -266,45 +260,46 @@
 <script>
   /* ---- DATA ---- */
   const NAMES = {
-    'SNDK': 'SanDisk Corporation',   'WDC':  'Western Digital',
-    '285A': 'Kioxia Holdings',       'MU':   'Micron Technology',
-    'STX':  'Seagate Technology',    'MRVL': 'Marvell Technology',
-    'PSTG': 'Everpure',              'RR.':  'Rolls-Royce',
-    'CEG':  'Constellation Energy',  'VST':  'Vistra Corp',
-    'TLN':  'Talen Energy',          'BEP':  'Brookfield Renewable',
-    'BEPC': 'Brookfield Renewable Corp', 'GEV': 'GE Vernova',
-    'BWXT': 'BWX Technologies',      'SMR':  'NuScale Power',
-    'OKLO': 'Oklo Inc',              'NNE':  'NANO Nuclear',
-    'CCJ':  'Cameco',                'UEC':  'Uranium Energy',
-    'LEU':  'Centrus Energy',        'VRT':  'Vertiv Holdings',
-    'ETN':  'Eaton Corporation',     'POWL': 'Powell Industries',
-    'EQIX': 'Equinix',               'DLR':  'Digital Realty',
-    'AMT':  'American Tower',        'GOOGL':'Alphabet',
-    'MSFT': 'Microsoft',             'AMZN': 'Amazon',
-    'META': 'Meta Platforms',        'IREN': 'Iris Energy',
-    'CORZ': 'Core Scientific',       'WULF': 'TeraWulf',
-    'HUT':  'Hut 8 Mining',          'SMCI': 'Super Micro Computer',
-    'DELL': 'Dell Technologies',     'COHR': 'Coherent Corp',
-    'LITE': 'Lumentum',              'AAOI': 'Applied Optoelectronics',
-    'FN':   'Fabrinet',              'MTSI': 'MACOM Technology',
-    'SMTC': 'Semtech',               'CRDO': 'Credo Technology',
-    'MXL':  'MaxLinear',             'KEYS': 'Keysight Technologies',
-    'VIAV': 'Viavi Solutions',       'AXTI': 'AXT Inc',
+    'AAPL':  'Apple',
+    'MSFT':  'Microsoft',
+    'GOOGL': 'Alphabet (Google)',
+    'AMZN':  'Amazon',
+    'META':  'Meta Platforms',
+    'NVDA':  'NVIDIA',
+    'AMD':   'Advanced Micro Devices',
+    'INTC':  'Intel',
+    'TSM':   'Taiwan Semiconductor',
+    'AVGO':  'Broadcom',
+    'QCOM':  'Qualcomm',
+    'ARM':   'Arm Holdings',
+    'ASML':  'ASML Holding',
+    'MU':    'Micron Technology',
+    'AMAT':  'Applied Materials',
+    'ORCL':  'Oracle',
+    'CRM':   'Salesforce',
+    'ADBE':  'Adobe',
+    'NOW':   'ServiceNow',
+    'SNOW':  'Snowflake',
+    'INTU':  'Intuit',
+    'CRWD':  'CrowdStrike',
+    'PANW':  'Palo Alto Networks',
+    'NET':   'Cloudflare',
+    'FTNT':  'Fortinet',
+    'NFLX':  'Netflix',
+    'SHOP':  'Shopify',
+    'SPOT':  'Spotify',
+    'UBER':  'Uber',
+    'CSCO':  'Cisco Systems',
+    'PLTR':  'Palantir Technologies',
   };
 
   const CAT_LABELS = {
-    'memory':        'Memory',
-    'nuclear-ops':   'Nuclear',
-    'smr':           'SMR',
-    'uranium':       'Uranium',
-    'power-infra':   'Power',
-    'dc-operators':  'Data Centres',
-    'hyperscalers':  'Hyperscalers',
-    'ai-compute':    'AI Compute',
-    'fibre-optical': 'Fibre/Optical',
-    'dsp-semi':      'DSP/Semi',
-    'test-equip':    'Test Equip',
-    'materials':     'Materials',
+    'mega-cap':            'Mega Cap',
+    'semiconductors':      'Semiconductors',
+    'enterprise-software': 'Enterprise SW',
+    'cybersecurity':       'Cybersecurity',
+    'consumer-platform':   'Consumer',
+    'hardware-infra':      'Hardware',
   };
 
   function fmtGbp(val) {
