@@ -71,5 +71,6 @@ jobs:
             git add Defence/index.html Defence/prices.json Defence/prices-data.js
             git add Tech/prices.json Tech/prices-data.js
             git commit -m "Update prices ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git pull --rebase
             git push
           fi
