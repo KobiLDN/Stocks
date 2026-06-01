@@ -16,24 +16,24 @@ echo  STOCKS -- Generate All Sector Signals
 echo ============================================================
 echo.
 
-echo [1/3] AI Infrastructure...
-echo [1/3] AI Infrastructure... >> "%LOG%"
+echo [1/4] AI Infrastructure...
+echo [1/4] AI Infrastructure... >> "%LOG%"
 cd AI
 powershell -Command "python -u AI_generate_signals_local.py 2>&1 | Tee-Object -FilePath '..\generate_all_signals_log.txt' -Append"
 cd ..
 echo. >> "%LOG%"
 echo.
 
-echo [2/3] Biotech...
-echo [2/3] Biotech... >> "%LOG%"
+echo [2/4] Biotech...
+echo [2/4] Biotech... >> "%LOG%"
 cd Biotech
 powershell -Command "python -u Biotech_generate_signals_local.py 2>&1 | Tee-Object -FilePath '..\generate_all_signals_log.txt' -Append"
 cd ..
 echo. >> "%LOG%"
 echo.
 
-echo [3/3] Defence ^& Aerospace...
-echo [3/3] Defence ^& Aerospace... >> "%LOG%"
+echo [3/4] Defence ^& Aerospace...
+echo [3/4] Defence ^& Aerospace... >> "%LOG%"
 cd Defence
 powershell -Command "python -u Defence_generate_signals_local.py 2>&1 | Tee-Object -FilePath '..\generate_all_signals_log.txt' -Append"
 cd ..
