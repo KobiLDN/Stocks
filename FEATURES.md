@@ -11,6 +11,8 @@
 - **Biotech sector** — 30 stocks across 9 categories (large-cap, UK listed, gene editing, genomics, oncology, mRNA, rare disease, metabolic, neuroscience); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Technology sector** — 31 stocks across 6 categories (mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, hardware/infra); full 7-page suite; prices and signals via GitHub Actions
 - **Defence & Aerospace sector** — 28 stocks across 6 categories (US Primes, UK/European, Cyber/Intel, Drones, Space, Weapons/Systems); full 7-page suite; prices and signals via GitHub Actions
+- **Hub signals picks** — each sector card on the hub shows the top 5 AI signal picks fetched live from `signals-local.json` + `prices-data.js`; metrics-style full-bleed table (ticker, signal badge, 1D/1W/YTD, confidence); clicking the table navigates to that sector's signals page
+- **Crypto coming soon card** — placeholder card on the hub with `Coming Soon` badge; no link, dimmed styling
 - **Sector selector on generate-signals workflow** — `workflow_dispatch` dropdown (all / AI / Biotech / Defence / Tech) lets you refresh a single sector's signals on demand; scheduled runs always run all sectors (`.github/workflows/generate-signals.yml`)
 - **Sector-prefixed script names** — `update_prices.py` → `[Sector]_update_prices.py`; `generate_signals_local.py` → `[Sector]_generate_signals_local.py`; workflows, bat files, and all docs updated
 - **Bot push-rejection fix** — `git pull --rebase` before `git push` in both workflows prevents push failures when new commits land while the bot job is running

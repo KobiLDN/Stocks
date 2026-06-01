@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stock market dashboard covering AI infrastructure, Biotech, and Defence &amp; Aerospace sectors. Live prices, metrics, news, signals, heatmaps, and investment calculators.">
+  <meta name="description" content="Stock market dashboard covering AI infrastructure, Biotech, Defence and Technology sectors. Live prices, metrics, news, signals, heatmaps, and investment calculators.">
   <title>Stocks Hub</title>
   <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +37,8 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { background: var(--bg); }
 
     body {
       background: var(--bg);
@@ -108,7 +110,7 @@
     /* ── Card grid ── */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
@@ -123,11 +125,10 @@
       transition: border-color 0.15s, background 0.15s;
       text-decoration: none;
       color: inherit;
+      overflow: hidden;
     }
 
-    .card.live {
-      border-top: 2px solid var(--accent);
-    }
+    .card.live { border-top: 2px solid var(--accent); }
 
     .card.live:hover {
       background: var(--surface2);
@@ -147,10 +148,7 @@
       justify-content: space-between;
     }
 
-    .card-icon {
-      font-size: 28px;
-      line-height: 1;
-    }
+    .card-icon { font-size: 28px; line-height: 1; }
 
     .badge {
       font-family: 'IBM Plex Mono', monospace;
@@ -186,6 +184,126 @@
       line-height: 1.5;
     }
 
+    /* ── Top Signals table (full-bleed) ── */
+    .picks-section {
+      margin-top: auto;
+      margin-left: -28px;
+      margin-right: -28px;
+      margin-bottom: -28px;
+      border-top: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    .picks-section:hover .picks-header { color: var(--accent); }
+
+    .picks-header {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--dim);
+      padding: 7px 14px 5px;
+      transition: color 0.15s;
+    }
+
+    .picks-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .picks-table thead { background: var(--surface2); }
+
+    .picks-table th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dim);
+      padding: 5px 10px;
+      text-align: left;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .picks-table th.r { text-align: right; }
+
+    .picks-table td {
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .picks-table tbody tr:last-child td { border-bottom: none; }
+    .picks-table tbody tr:hover { background: var(--surface2); }
+
+    .pt-rank {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--dim);
+      width: 18px;
+    }
+
+    .pt-ticker {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .pt-name {
+      font-size: 10px;
+      color: var(--dim);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+    }
+
+    .pt-num {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .pt-pos { color: var(--green); }
+    .pt-neg { color: var(--accent2); }
+    .pt-flat { color: var(--dim); }
+
+    .pt-sig {
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 1px 4px;
+      border-radius: 2px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .pt-sig.strong-buy {
+      background: rgba(234, 88, 12, 0.1);
+      color: var(--accent2);
+      border: 1px solid rgba(234, 88, 12, 0.25);
+    }
+
+    .pt-sig.buy {
+      background: rgba(22, 163, 74, 0.1);
+      color: var(--green);
+      border: 1px solid rgba(22, 163, 74, 0.25);
+    }
+
+    .pt-empty {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--dim);
+      text-align: center;
+      padding: 14px;
+    }
+
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
@@ -196,6 +314,12 @@
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
       color: var(--dim);
+    }
+
+    @media (max-width: 640px) {
+      main { padding: 24px 16px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .pt-name { display: none; }
     }
   </style>
 <script src="shared.js" defer></script>
@@ -219,7 +343,17 @@
           <span class="badge badge-live">Live</span>
         </div>
         <div class="card-name">AI Infrastructure</div>
-        <div class="card-desc">48 stocks across compute, memory, power, optical, and semiconductor categories. Prices updated twice daily.</div>
+        <div class="card-desc">48 stocks across compute, memory, power, optical, and semiconductor categories.</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='AI/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-AI"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
       </a>
 
       <a class="card live" href="Defence/index.html">
@@ -228,7 +362,17 @@
           <span class="badge badge-live">Live</span>
         </div>
         <div class="card-name">Defence</div>
-        <div class="card-desc">28 stocks across US primes, UK/European, cyber/intel, drones, space and weapons systems. Prices updated twice daily.</div>
+        <div class="card-desc">28 stocks across US primes, UK/European, cyber/intel, drones, space and weapons systems.</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Defence/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-Defence"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
       </a>
 
       <a class="card live" href="Biotech/index.html">
@@ -237,7 +381,17 @@
           <span class="badge badge-live">Live</span>
         </div>
         <div class="card-name">Biotech</div>
-        <div class="card-desc">30 stocks across large-cap pharma, gene editing, genomics, oncology, mRNA, rare disease, metabolic, and neuroscience. Prices updated twice daily.</div>
+        <div class="card-desc">30 stocks across large-cap pharma, gene editing, genomics, oncology, mRNA, rare disease, metabolic, and neuroscience.</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Biotech/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-Biotech"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
       </a>
 
       <a class="card live" href="Tech/index.html">
@@ -246,7 +400,17 @@
           <span class="badge badge-live">Live</span>
         </div>
         <div class="card-name">Technology</div>
-        <div class="card-desc">31 stocks across mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, and hardware/infra. Prices updated twice daily.</div>
+        <div class="card-desc">31 stocks across mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, and hardware/infra.</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Tech/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-Tech"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
       </a>
 
       <div class="card soon">
@@ -262,9 +426,71 @@
   </main>
 
   <footer>
-    kobildn.github.io/Stocks &nbsp;·&nbsp; prices in GBP
+    stocks-4qw.pages.dev &nbsp;·&nbsp; prices in GBP
   </footer>
 
+  <script>
+    const SECTORS = [
+      { id: 'AI',      signals: 'AI/signals-local.json',      prices: 'AI/prices-data.js' },
+      { id: 'Defence', signals: 'Defence/signals-local.json', prices: 'Defence/prices-data.js' },
+      { id: 'Biotech', signals: 'Biotech/signals-local.json', prices: 'Biotech/prices-data.js' },
+      { id: 'Tech',    signals: 'Tech/signals-local.json',    prices: 'Tech/prices-data.js' },
+    ];
+
+    async function fetchPriceMap(path) {
+      try {
+        const text = await fetch(path).then(r => r.text());
+        const json = text.replace(/^\s*window\.PRICES_DATA\s*=\s*/, '').replace(/\s*;\s*$/, '');
+        const data = JSON.parse(json);
+        const map = {};
+        (data.stocks || []).forEach(s => { map[s.ticker] = s; });
+        return map;
+      } catch(e) { return {}; }
+    }
+
+    function numCell(val) {
+      if (!val) return '<td class="pt-num pt-flat">—</td>';
+      const cls = val.startsWith('+') ? 'pt-pos' : val.startsWith('-') ? 'pt-neg' : 'pt-flat';
+      return `<td class="pt-num ${cls}">${val}</td>`;
+    }
+
+    async function loadPicks(id, sigPath, pricePath) {
+      const el = document.getElementById('picks-' + id);
+      if (!el) return;
+      try {
+        const [sigData, priceMap] = await Promise.all([
+          fetch(sigPath).then(r => r.json()),
+          fetchPriceMap(pricePath)
+        ]);
+        const picks = (sigData.picks || []).slice(0, 5);
+        if (!picks.length) {
+          el.innerHTML = '<tr><td colspan="6" class="pt-empty">No signals yet</td></tr>';
+          return;
+        }
+        el.innerHTML = picks.map(p => {
+          const s = priceMap[p.ticker] || {};
+          const sigClass = p.signal === 'strong_buy' ? 'strong-buy' : 'buy';
+          const sigLabel = p.signal === 'strong_buy' ? 'SB' : 'B';
+          const pct = Math.round(p.confidence * 100);
+          return `<tr>
+            <td class="pt-rank">${p.rank}</td>
+            <td>
+              <div class="pt-ticker">${p.ticker} <span class="pt-sig ${sigClass}">${sigLabel}</span></div>
+              <div class="pt-name">${s.company_name || ''}</div>
+            </td>
+            ${numCell(s.change_1d)}
+            ${numCell(s.change_1w)}
+            ${numCell(s.change_ytd)}
+            <td class="pt-num">${pct}%</td>
+          </tr>`;
+        }).join('');
+      } catch(e) {
+        el.innerHTML = '<tr><td colspan="6" class="pt-empty">—</td></tr>';
+      }
+    }
+
+    SECTORS.forEach(s => loadPicks(s.id, s.signals, s.prices));
+  </script>
 
 </body>
 </html>
