@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price history charts for all 16 crypto stocks. Filter by category.">
+<meta name="description" content="1-year price history charts for all 16 crypto stocks including Bitcoin ETFs, Ethereum ETFs, exchanges, corporate treasuries, and miners. Filter by category.">
 <title>Crypto — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -469,45 +469,45 @@
 <script src="https://s3.tradingview.com/tv.js"></script>
 <script src="prices-data.js"></script>
 <script>
-  /* All Crypto stocks are on NASDAQ or NYSE — no special TV symbol overrides needed */
+  /* All Crypto stocks are on NASDAQ — no special TV symbol overrides needed */
   const TV_MAP = {};
 
   /* Category display config for charts */
   const CHART_CATS = {
     'btc-etf': {
       key: 'btc-etf',
-      label: '₿ BTC ETFs',
+      label: '₿ BTC ETF',
       color: 'var(--amber)',
       btnLabel: 'BTC ETF',
-      tooltip: 'US spot Bitcoin ETFs — IBIT, FBTC, ARKB, GBTC, BITO tracking BTC price directly',
+      tooltip: 'Bitcoin ETFs — IBIT, FBTC, ARKB, GBTC, BITO: spot and futures Bitcoin funds giving regulated BTC exposure',
     },
     'eth-etf': {
       key: 'eth-etf',
-      label: 'Ξ ETH ETFs',
+      label: 'Ξ ETH ETF',
       color: 'var(--indigo)',
       btnLabel: 'ETH ETF',
-      tooltip: 'US spot Ethereum ETFs — ETHA and FETH tracking ETH price directly',
+      tooltip: 'Ethereum ETFs — ETHA, FETH: spot Ethereum funds giving regulated ETH exposure',
     },
     'exchange': {
       key: 'exchange',
-      label: '🏛 Exchanges',
+      label: '🏦 Exchange',
       color: 'var(--accent)',
-      btnLabel: 'Exchanges',
-      tooltip: 'Crypto exchange and brokerage platforms — Coinbase (COIN) and Robinhood (HOOD)',
+      btnLabel: 'Exchange',
+      tooltip: 'Crypto exchanges — COIN (Coinbase), HOOD (Robinhood): platforms enabling crypto trading and custody',
     },
     'treasury': {
       key: 'treasury',
-      label: '🏦 Treasury',
+      label: '🏛️ Treasury',
       color: 'var(--gold)',
       btnLabel: 'Treasury',
-      tooltip: 'Corporate Bitcoin treasury — Strategy (MSTR) holds >500,000 BTC on balance sheet',
+      tooltip: 'Corporate Bitcoin treasury — MSTR (Strategy / MicroStrategy): the largest corporate Bitcoin holder',
     },
     'miner': {
       key: 'miner',
-      label: '⛏ Miners',
+      label: '⛏️ Miner',
       color: 'var(--teal)',
       btnLabel: 'Miners',
-      tooltip: 'Bitcoin mining companies — MARA, RIOT, CLSK, HUT, IREN, CIFR operate large-scale mining infrastructure',
+      tooltip: 'Bitcoin miners — MARA, RIOT, CLSK, HUT, IREN, CIFR: companies mining BTC using specialised ASIC hardware',
     },
   };
 
