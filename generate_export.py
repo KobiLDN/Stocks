@@ -160,47 +160,90 @@ csv_fields = PRICE_FIELDS + whatsit_fields + [
 
 os.makedirs(os.path.join(BASE, "exports"), exist_ok=True)
 
-now       = datetime.now(tz=timezone.utc)
-date_str  = now.strftime("%Y-%m-%d")
-gen_str   = now.strftime("%Y-%m-%d %H:%M UTC")
-out_json  = os.path.join(BASE, "exports", f"{date_str}.json")
-out_csv   = os.path.join(BASE, "exports", f"{date_str}.csv")
+now      = datetime.now(tz=timezone.utc)
+date_str = now.strftime("%Y-%m-%d")
+gen_str  = now.strftime("%Y-%m-%d %H:%M UTC")
 
+# ── Optional T212 portfolio fetch ─────────────────────────────────────────────
+t212_data, held_tickers = fetch_t212_portfolio()
+
+# Annotate each stock row with portfolio position if held
+if t212_data:
+    held_map = {p["ticker"]: p for p in t212_data["positions"]}
+    for row in all_stocks:
+        pos = held_map.get(row["ticker"])
+        row["portfolio_held"]        = True if pos else False
+        row["portfolio_quantity"]    = pos["quantity"]    if pos else None
+        row["portfolio_avg_price"]   = pos["avg_price"]   if pos else None
+        row["portfolio_ppl"]         = pos["ppl"]         if pos else None
+        row["portfolio_total_value"] = pos["total_value"] if pos else None
+else:
+    for row in all_stocks:
+        row["portfolio_held"] = row["portfolio_quantity"] = None
+        row["portfolio_avg_price"] = row["portfolio_ppl"] = row["portfolio_total_value"] = None
+
+# ── Output filenames ──────────────────────────────────────────────────────────
+# Local runs with T212 key → separate portfolio-enriched file, never committed
+if t212_data:
+    out_json = os.path.join(BASE, "exports", f"{date_str}-portfolio.json")
+    out_csv  = os.path.join(BASE, "exports", f"{date_str}-portfolio.csv")
+    update_manifest = False
+else:
+    out_json = os.path.join(BASE, "exports", f"{date_str}.json")
+    out_csv  = os.path.join(BASE, "exports", f"{date_str}.csv")
+    update_manifest = True
+
+# ── Write JSON ────────────────────────────────────────────────────────────────
 payload = {
-    "generated": gen_str,
-    "total":     len(all_stocks),
-    "sectors":   meta,
-    "stocks":    all_stocks,
+    "generated":        gen_str,
+    "total":            len(all_stocks),
+    "has_portfolio":    t212_data is not None,
+    "sectors":          meta,
+    "stocks":           all_stocks,
 }
+if t212_data:
+    payload["portfolio"] = t212_data
 
 with open(out_json, "w", encoding="utf-8") as f:
     json.dump(payload, f, indent=2)
 
+# ── Write CSV ─────────────────────────────────────────────────────────────────
+portfolio_fields = [
+    "portfolio_held", "portfolio_quantity",
+    "portfolio_avg_price", "portfolio_ppl", "portfolio_total_value",
+]
+all_csv_fields = csv_fields + portfolio_fields
+
 with open(out_csv, "w", newline="", encoding="utf-8") as f:
-    w = csv.DictWriter(f, fieldnames=csv_fields, extrasaction="ignore")
+    w = csv.DictWriter(f, fieldnames=all_csv_fields, extrasaction="ignore")
     w.writeheader()
     w.writerows(all_stocks)
 
-# Update manifest — newest first, deduplicated by date
-manifest_path = os.path.join(BASE, "exports", "manifest.json")
-try:
-    manifest = json.load(open(manifest_path, encoding="utf-8"))
-except Exception:
-    manifest = {"snapshots": []}
+# ── Update manifest (market-data snapshots only, not portfolio runs) ──────────
+if update_manifest:
+    manifest_path = os.path.join(BASE, "exports", "manifest.json")
+    try:
+        manifest = json.load(open(manifest_path, encoding="utf-8"))
+    except Exception:
+        manifest = {"snapshots": []}
 
-entry = {
-    "date":      date_str,
-    "generated": gen_str,
-    "total":     len(all_stocks),
-    "json":      f"{date_str}.json",
-    "csv":       f"{date_str}.csv",
-}
-snapshots = [s for s in manifest["snapshots"] if s["date"] != date_str]
-snapshots.insert(0, entry)
-manifest["snapshots"] = snapshots
+    entry = {
+        "date":      date_str,
+        "generated": gen_str,
+        "total":     len(all_stocks),
+        "json":      f"{date_str}.json",
+        "csv":       f"{date_str}.csv",
+    }
+    snapshots = [s for s in manifest["snapshots"] if s["date"] != date_str]
+    snapshots.insert(0, entry)
+    manifest["snapshots"] = snapshots
 
-with open(manifest_path, "w", encoding="utf-8") as f:
-    json.dump(manifest, f, indent=2)
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
 
-print(f"Exported {len(all_stocks)} stocks → {date_str}.json ({os.path.getsize(out_json)//1024} KB)  {date_str}.csv ({os.path.getsize(out_csv)//1024} KB)")
-print(f"Manifest updated — {len(snapshots)} snapshot(s)")
+    print(f"Manifest updated — {len(snapshots)} snapshot(s)")
+
+suffix = "-portfolio" if t212_data else ""
+print(f"Exported {len(all_stocks)} stocks → {date_str}{suffix}.json ({os.path.getsize(out_json)//1024} KB)  {date_str}{suffix}.csv ({os.path.getsize(out_csv)//1024} KB)")
+if t212_data:
+    print(f"Portfolio: {len(t212_data['positions'])} positions · total £{t212_data['summary']['total_value']}")
