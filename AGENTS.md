@@ -163,7 +163,7 @@ Everything else remains keyless:
 
 ## Header structure — sector switcher
 
-The back-link (`← All Sectors`) has been replaced permanently by a **sector switcher panel** in the header right side. All 28 sector pages use this pattern:
+The back-link (`← All Sectors`) has been replaced permanently by a **sector switcher panel** in the header right side. All 35 sector pages use this pattern:
 
 ```html
 <div class="header-inner">
