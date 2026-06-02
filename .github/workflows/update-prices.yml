@@ -8,6 +8,19 @@ on:
     - cron: '0 13 * * 1-5'
     - cron: '30 21 * * 1-5'
   workflow_dispatch:
+    inputs:
+      sector:
+        description: 'Sector to update prices for'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - AI
+          - Biotech
+          - Defence
+          - Tech
+          - Crypto
 
 permissions:
   contents: write
@@ -28,42 +41,52 @@ jobs:
           cache: pip
 
       - name: Install deps (AI)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
         working-directory: AI
         run: pip install -r requirements.txt
 
       - name: Run price updater (AI)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
         working-directory: AI
         run: python AI_update_prices.py
 
       - name: Install deps (Biotech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
         working-directory: Biotech
         run: pip install -r requirements.txt
 
       - name: Run price updater (Biotech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
         working-directory: Biotech
         run: python Biotech_update_prices.py
 
       - name: Install deps (Defence)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
         working-directory: Defence
         run: pip install -r requirements.txt
 
       - name: Run price updater (Defence)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
         working-directory: Defence
         run: python Defence_update_prices.py
 
       - name: Install deps (Tech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
         working-directory: Tech
         run: pip install -r requirements.txt
 
       - name: Run price updater (Tech)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
         working-directory: Tech
         run: python Tech_update_prices.py
 
       - name: Install deps (Crypto)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Crypto'
         working-directory: Crypto
         run: pip install -r requirements.txt
 
       - name: Run price updater (Crypto)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Crypto'
         working-directory: Crypto
         run: python Crypto_update_prices.py
 
@@ -71,6 +94,8 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          SECTOR="${{ inputs.sector }}"
+          LABEL="${SECTOR:-all sectors}"
           if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js; then
             echo "No price changes."
           else
@@ -79,7 +104,7 @@ jobs:
             git add Defence/index.html Defence/prices.json Defence/prices-data.js
             git add Tech/prices.json Tech/prices-data.js
             git add Crypto/prices.json Crypto/prices-data.js
-            git commit -m "Update prices — all sectors ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             git pull --rebase
             git push
           fi
