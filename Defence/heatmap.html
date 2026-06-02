@@ -302,8 +302,6 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .attr('font-family', 'IBM Plex Sans, sans-serif').attr('font-weight', '400')
     .attr('font-size', d => d._tfs || 0)
     .attr('fill', d => d._tfs ? '#ffffff' : 'transparent')
-    .attr('stroke', 'rgba(0,0,0,0.5)').attr('stroke-width', 4)
-    .attr('stroke-linejoin', 'round').attr('paint-order', 'stroke')
     .text(d => d.data.ticker);
 
   tileG.append('text')
@@ -313,8 +311,6 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .attr('font-family', 'IBM Plex Sans, sans-serif')
     .attr('font-size', d => d._vfs || 0)
     .attr('fill', d => d._vfs ? '#ffffff' : 'transparent')
-    .attr('stroke', 'rgba(0,0,0,0.5)').attr('stroke-width', 4)
-    .attr('stroke-linejoin', 'round').attr('paint-order', 'stroke')
     .text(d => d._vfs ? d._vs : '');
 }
 
