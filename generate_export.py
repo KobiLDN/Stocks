@@ -96,7 +96,8 @@ PRICE_FIELDS = [
     "price_usd", "change_1d", "change_1w", "change_1m",
     "change_ytd", "return_1yr",
     "market_cap_gbp_b", "beta", "pe_ratio",
-    "avg_volume_m", "div_yield_pct", "short_pct",
+    "avg_volume_m", "vol_1d", "vol_1w", "vol_1m",
+    "div_yield_pct", "short_pct",
     "analyst", "analyst_score",
 ]
 
