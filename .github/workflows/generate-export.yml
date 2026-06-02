@@ -30,10 +30,10 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- all_stocks.csv all_stocks.json; then
+          if git diff --quiet -- exports/all_stocks.csv exports/all_stocks.json; then
             echo "No changes to export files."
           else
-            git add all_stocks.csv all_stocks.json
+            git add exports/all_stocks.csv exports/all_stocks.json
             git commit -m "Update export — $(date -u '+%Y-%m-%d %H:%M UTC')"
             git pull --rebase
             git push

@@ -116,8 +116,9 @@ csv_fields = PRICE_FIELDS + whatsit_fields + [
     "signal_rank", "signal", "signal_confidence", "signal_rationale", "signal_drivers",
 ]
 
-out_json = os.path.join(BASE, "all_stocks.json")
-out_csv  = os.path.join(BASE, "all_stocks.csv")
+os.makedirs(os.path.join(BASE, "exports"), exist_ok=True)
+out_json = os.path.join(BASE, "exports", "all_stocks.json")
+out_csv  = os.path.join(BASE, "exports", "all_stocks.csv")
 
 with open(out_json, "w", encoding="utf-8") as f:
     json.dump({
