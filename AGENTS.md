@@ -117,10 +117,29 @@ STOCKSDev\
 
 Everything else (metrics, news, heatmap, calculator, signals) picks up the new stock automatically from `prices-data.js`.
 
-When adding a new sector, create its subfolder and keep all sector-specific scripts inside it. Each page must include:
-1. Google Fonts `<link>` tag
-2. `<link rel="stylesheet" href="../shared.css">` — before the page `<style>` block
-3. A page-specific `<style>` block containing only CSS not already in `shared.css`
+When adding a new sector, complete every item in this checklist — in order:
+
+**Sector files**
+1. Create `SectorName/` subfolder with 7 pages (`index.html`, `metrics.html`, `news.html`, `signals.html`, `heatmap.html`, `charts.html`, `calculator.html`), `[Sector]_update_prices.py`, `[Sector]_generate_signals_local.py`, `requirements.txt`, placeholder `prices.json`, `prices-data.js`, `signals-local.json`, `signals-local.js`
+2. Each HTML page must include Google Fonts `<link>`, `<link rel="stylesheet" href="../shared.css">`, and a page-specific `<style>` block
+
+**Hub (`index.html` at repo root) — always update both of these:**
+3. **Sector card** — change the `<div class="card soon">` placeholder to `<a class="card live" href="SectorName/index.html">` and update `card-desc` to describe the new sector (stock count, categories)
+4. **SECTORS array** — add `{ id: 'SectorName', signals: 'SectorName/signals-local.json', prices: 'SectorName/prices-data.js' }` so the hub loads picks and prices for the new sector
+
+**Workflows**
+5. **`update-prices.yml`** — add sector to `workflow_dispatch` dropdown options; add `Install deps` and `Run price updater` steps with `if:` condition; add files to `git add` and `git diff` in the commit step
+6. **`generate-signals.yml`** — same: dropdown option, steps with `if:` condition, git add/diff paths
+
+**Bat files**
+7. **`update_all_prices.bat`** — add `[N/N]` entry for new sector
+8. **`generate_all_signals.bat`** — add `[N/N]` entry for new sector
+
+**Sector switcher on existing pages**
+9. Run `add_sector_switcher.py` (or equivalent batch edit) to add the new sector's card to all existing sector pages
+
+**Docs**
+10. Add row to `CHANGELOG.md`; update `FEATURES.md` (move from Backlog → Done, update description)
 
 ## GitHub Actions
 
