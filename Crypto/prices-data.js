@@ -1,11 +1,1174 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-02 07:07",
-  "fx_gbp_usd": 1.3466,
+  "updated": "2026-06-02 08:07",
+  "fx_gbp_usd": 1.3477,
   "stocks": [
+    {
+      "ticker": "BTC",
+      "company_name": "Bitcoin",
+      "category": "bitcoin",
+      "exchange": "Crypto",
+      "price_gbp": "51769",
+      "price_usd": 69770.81,
+      "change_1d": "-2.15%",
+      "change_1w": "-5.12%",
+      "change_1m": "-11.30%",
+      "change_ytd": "-21.37%",
+      "return_1yr": "+16%",
+      "low_gbp": "44574",
+      "high_gbp": "93636",
+      "bar_pct": 15,
+      "market_cap_gbp_b": 1036.859,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 35779.78,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 47889489920,
+      "vol_1w": 162735280132,
+      "vol_1m": 1008514805930,
+      "news": [
+        {
+          "title": "Why Michael Saylor's $2.5M bitcoin sale is turning heads",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/why-michael-saylors-2-5m-203414845.html",
+          "published": 1780346054,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Strategy sells $2.5M in bitcoin, Berkshire to acquire Taylor Morrison",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/strategy-sells-2-5m-bitcoin-144943493.html",
+          "published": 1780325383,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Bitcoin and ethereum prices today, Monday, June 1, 2026: Prices falling this morning",
+          "publisher": "Yahoo Personal Finance",
+          "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-june-1-2026-prices-falling-this-morning-141555512.html",
+          "published": 1780323355,
+          "sentiment": -0.153
+        },
+        {
+          "title": "A Whale Just Opened a $44 Million ETH Short: Why Hyperliquid Traders Are Moving Against It",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/ethereum-price-whale-short-hyperliquid-divergence/",
+          "published": 1780380044,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why Is The Crypto Market Down Today?",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/why-is-the-crypto-market-down-today/",
+          "published": 1780378219,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.031
+    },
+    {
+      "ticker": "ETH",
+      "company_name": "Ethereum",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "1465",
+      "price_usd": 1974.53,
+      "change_1d": "-1.47%",
+      "change_1w": "-1.64%",
+      "change_1m": "-14.75%",
+      "change_ytd": "-34.19%",
+      "return_1yr": "+13%",
+      "low_gbp": "1297",
+      "high_gbp": "3676",
+      "bar_pct": 7,
+      "market_cap_gbp_b": 176.571,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 17315.49,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 18966562816,
+      "vol_1w": 70098488139,
+      "vol_1m": 489806237906,
+      "news": [
+        {
+          "title": "Bitcoin and ethereum prices today, Monday, June 1, 2026: Prices falling this morning",
+          "publisher": "Yahoo Personal Finance",
+          "url": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-june-1-2026-prices-falling-this-morning-141555512.html",
+          "published": 1780323355,
+          "sentiment": -0.153
+        },
+        {
+          "title": "A Whale Just Opened a $44 Million ETH Short: Why Hyperliquid Traders Are Moving Against It",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/ethereum-price-whale-short-hyperliquid-divergence/",
+          "published": 1780380044,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Bitcoin, XRP Fall, Ethereum, Dogecoin Flat As Israel-Hezbollah War Threatens Iran Deal: 'Critical' Cluster Could Decide BTC's Next Move, Says Analyst",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-xrp-fall-ethereum-dogecoin-020459739.html",
+          "published": 1780365899,
+          "sentiment": -0.832
+        },
+        {
+          "title": "Was Bankless Founder Right to Sell His Ethereum? On-Chain Data Reveals",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/bankless-founder-ethereum-sale-analysis-on-chain-data/",
+          "published": 1780356600,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Arch Lending co-founder says Bitcoin holders should borrow against it, never spend it",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/crypto/markets/arch-lending-co-founder-says-bitcoin-holders-should-borrow-against-it",
+          "published": 1780355277,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.197
+    },
+    {
+      "ticker": "SOL",
+      "company_name": "Solana",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "59",
+      "price_usd": 79.2,
+      "change_1d": "-2.39%",
+      "change_1w": "-3.40%",
+      "change_1m": "-6.02%",
+      "change_ytd": "-37.52%",
+      "return_1yr": "+15%",
+      "low_gbp": "51",
+      "high_gbp": "188",
+      "bar_pct": 6,
+      "market_cap_gbp_b": 33.964,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 4139.54,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 3849970944,
+      "vol_1w": 15420911252,
+      "vol_1m": 119901046254,
+      "news": [
+        {
+          "title": "Bitcoin, XRP Fall, Ethereum, Dogecoin Flat As Israel-Hezbollah War Threatens Iran Deal: 'Critical' Cluster Could Decide BTC's Next Move, Says Analyst",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-xrp-fall-ethereum-dogecoin-020459739.html",
+          "published": 1780365899,
+          "sentiment": -0.832
+        },
+        {
+          "title": "Arch Lending co-founder says Bitcoin holders should borrow against it, never spend it",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/crypto/markets/arch-lending-co-founder-says-bitcoin-holders-should-borrow-against-it",
+          "published": 1780355277,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Top Cryptocurrencies Mixed; Bitcoin Drops Below $72,000",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/top-cryptocurrencies-mixed-bitcoin-drops-201826879.html",
+          "published": 1780345106,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is Solana About to Have Its Biggest Year Yet?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/01/is-solana-about-to-have-its-biggest-year-yet/",
+          "published": 1780334177,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.126
+    },
+    {
+      "ticker": "BNB",
+      "company_name": "BNB",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "505",
+      "price_usd": 680.16,
+      "change_1d": "-1.74%",
+      "change_1w": "+6.69%",
+      "change_1m": "+10.09%",
+      "change_ytd": "-21.19%",
+      "return_1yr": "+19%",
+      "low_gbp": "423",
+      "high_gbp": "1017",
+      "bar_pct": 14,
+      "market_cap_gbp_b": 68.057,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 1598.6,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 3173011456,
+      "vol_1w": 14607739603,
+      "vol_1m": 53608813115,
+      "news": [
+        {
+          "title": "Top Cryptocurrencies Mixed; Bitcoin Drops Below $72,000",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/top-cryptocurrencies-mixed-bitcoin-drops-201826879.html",
+          "published": 1780345106,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Binance Opens Access to 7,000 US Stocks, Prepares Tokenized 'bStocks' Rollout",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369603/binance-opens-access-to-7000-us-stocks-prepares-tokenized-bstocks-rollout",
+          "published": 1780324429,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Binance to Offer 7,000 US Stocks and ETFs, Unveils Plans for Tokenized bStocks",
+          "publisher": "CCN",
+          "url": "https://www.ccn.com/news/crypto/binance-us-stocks-etfs-tokenized-bstocks-bnb-chain/",
+          "published": 1780321247,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Binance Is Reportedly The Latest To Join The Race Toward Tokenized Market \u2013 Citi Predicts $5.5T Boom By 2030",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/binance-us-stocks-tokenized-shares-citi-5-5-trillion-market/cZ0gYvXReHO",
+          "published": 1780312720,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Wave of Leveraged ETFs Targets Bitcoin, Ethereum, BNB",
+          "publisher": "The Daily Upside",
+          "url": "https://www.thedailyupside.com/etf/investing-strategies-etf/wave-of-leveraged-etfs-targets-bitcoin-ethereum-bnb/",
+          "published": 1780286460,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.1
+    },
+    {
+      "ticker": "XRP",
+      "company_name": "XRP",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "0.9357",
+      "price_usd": 1.26,
+      "change_1d": "-2.66%",
+      "change_1w": "-3.99%",
+      "change_1m": "-9.48%",
+      "change_ytd": "-32.85%",
+      "return_1yr": "+11%",
+      "low_gbp": "0.8410",
+      "high_gbp": "2.71",
+      "bar_pct": 5,
+      "market_cap_gbp_b": 57.939,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 2218.94,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 2322106624,
+      "vol_1w": 9652819374,
+      "vol_1m": 64815141527,
+      "news": [
+        {
+          "title": "Bitcoin, XRP Fall, Ethereum, Dogecoin Flat As Israel-Hezbollah War Threatens Iran Deal: 'Critical' Cluster Could Decide BTC's Next Move, Says Analyst",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-xrp-fall-ethereum-dogecoin-020459739.html",
+          "published": 1780365899,
+          "sentiment": -0.832
+        },
+        {
+          "title": "Top Cryptocurrencies Mixed; Bitcoin Drops Below $72,000",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/top-cryptocurrencies-mixed-bitcoin-drops-201826879.html",
+          "published": 1780345106,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "'The Anti-Crypto Army Was Defeated,' Says Ripple CEO Brad Garlinghouse, Credits Trump For The Win",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/anti-crypto-army-defeated-says-193105003.html",
+          "published": 1780342265,
+          "sentiment": 0.494
+        },
+        {
+          "title": "XRP vs Hyperliquid: Which Should You Hold Through the Next Cycle?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/01/xrp-vs-hyperliquid-which-should-you-hold-through-the-next-cycle/",
+          "published": 1780321446,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.027
+    },
+    {
+      "ticker": "ADA",
+      "company_name": "Cardano",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "0.1656",
+      "price_usd": 0.22,
+      "change_1d": "-3.29%",
+      "change_1w": "-4.78%",
+      "change_1m": "-10.75%",
+      "change_ytd": "-37.34%",
+      "return_1yr": "-1%",
+      "low_gbp": "0.1673",
+      "high_gbp": "0.7542",
+      "bar_pct": 1,
+      "market_cap_gbp_b": 5.989,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 468.5,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 526711008,
+      "vol_1w": 2023257559,
+      "vol_1m": 13753150726,
+      "news": [
+        {
+          "title": "Top Cryptocurrencies Mixed; Bitcoin Drops Below $72,000",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/top-cryptocurrencies-mixed-bitcoin-drops-201826879.html",
+          "published": 1780345106,
+          "sentiment": 0.202
+        },
+        {
+          "title": "ADA Holders Just Voted to Cancel the Cardano Summit Proposal, Self-Sabotage?",
+          "publisher": "99bitcoins",
+          "url": "https://99bitcoins.com/news/altcoins/cardano-ada-holders-reject-2m-governance-proposal/",
+          "published": 1780321589,
+          "sentiment": -0.25
+        },
+        {
+          "title": "Cardano Summit Canceled After Community Votes Against It",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/cardano-summit-canceled-after-community-votes-against-it-5727",
+          "published": 1780321500,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Cardano Summit 2026 Cancelled After Community Vote Rejects Treasury Proposal",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/cardano-summit-2026-singapore-cancelled-governance-vote/",
+          "published": 1780306426,
+          "sentiment": -0.527
+        },
+        {
+          "title": "Cardano Leaders Rally Last-Minute Support for $2 Million Singapore Summit Vote",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/cardano-singapore-summit-treasury-vote/",
+          "published": 1780092000,
+          "sentiment": 0.402
+        }
+      ],
+      "news_sentiment": -0.035
+    },
+    {
+      "ticker": "AVAX",
+      "company_name": "Avalanche",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "6.44",
+      "price_usd": 8.68,
+      "change_1d": "-2.58%",
+      "change_1w": "-2.61%",
+      "change_1m": "-5.45%",
+      "change_ytd": "-35.94%",
+      "return_1yr": "+13%",
+      "low_gbp": "5.71",
+      "high_gbp": "27",
+      "bar_pct": 3,
+      "market_cap_gbp_b": 2.78,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 260.84,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 299969024,
+      "vol_1w": 1301968279,
+      "vol_1m": 7891492547,
+      "news": [
+        {
+          "title": "Does CME Group\u2019s 24/7 Crypto Derivatives Push Reveal a Deeper Innovation Strategy for CME?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/does-cme-group-24-7-071115143.html",
+          "published": 1780297875,
+          "sentiment": 0.382
+        },
+        {
+          "title": "XRP Leads Crypto Rebound, Outperforming Bitcoin Before The Weekend 'CME Gap' Gets Eliminated",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/xrp-price-outperforms-bitcoin-cme-crypto-futures/cZgSoPTReMP",
+          "published": 1780059607,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Best Crypto To Buy With $100 Right Now",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/28/best-crypto-to-buy-with-100-right-now/",
+          "published": 1779948315,
+          "sentiment": 0.637
+        },
+        {
+          "title": "Most Undervalued Major Cryptos Heading Into Mid-2026",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/25/most-undervalued-major-cryptos-heading-into-mid-2026/",
+          "published": 1779735808,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Introducing Avalanche and Sui Futures",
+          "publisher": "CME Group",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/introducing-avalanche-sui-futures-170000707.html",
+          "published": 1779469200,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.204
+    },
+    {
+      "ticker": "DOT",
+      "company_name": "Polkadot",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "0.8347",
+      "price_usd": 1.12,
+      "change_1d": "-2.77%",
+      "change_1w": "-7.24%",
+      "change_1m": "-8.30%",
+      "change_ytd": "-43.64%",
+      "return_1yr": "+0%",
+      "low_gbp": "0.8357",
+      "high_gbp": "3.62",
+      "bar_pct": 1,
+      "market_cap_gbp_b": 1.408,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 159.61,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 207636240,
+      "vol_1w": 854536323,
+      "vol_1m": 4930182724,
+      "news": [
+        {
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is It Too Late to Buy Polkadot?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/30/is-it-too-late-to-buy-crypto/",
+          "published": 1780159673,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Polkadot Change Could Strip Two Largest Barriers Facing DOT Stakers",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/polkadot-referendum-1890-validator-self-stake/",
+          "published": 1779701596,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Tired of Being Burned by Crypto? Chainlink Actually Powers Real\u2011World Finance.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/09/tired-of-being-burned-by-crypto-chainlink-actually/",
+          "published": 1778342700,
+          "sentiment": -0.44
+        },
+        {
+          "title": "What Is Polkadot Actually Used For -- and Does It Justify the Investment?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/04/25/what-is-polkadot-actually-used-for-and-does-it-jus/",
+          "published": 1777126320,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.088
+    },
+    {
+      "ticker": "TRX",
+      "company_name": "TRON",
+      "category": "layer1",
+      "exchange": "Crypto",
+      "price_gbp": "0.2520",
+      "price_usd": 0.34,
+      "change_1d": "-1.03%",
+      "change_1w": "-3.65%",
+      "change_1m": "+2.87%",
+      "change_ytd": "+18.55%",
+      "return_1yr": "+31%",
+      "low_gbp": "0.1923",
+      "high_gbp": "0.2792",
+      "bar_pct": 69,
+      "market_cap_gbp_b": 23.896,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 662.48,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 824714816,
+      "vol_1w": 4100151338,
+      "vol_1m": 24984574008,
+      "news": [
+        {
+          "title": "US Reaches $1 Billion Seized Iran Crypto to Date: Bessent\u2019s Big Update",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/us-1-billion-seized-iran-crypto/",
+          "published": 1780082540,
+          "sentiment": 0.052
+        },
+        {
+          "title": "UK Sanctions the Justin Sun HTX Exchange: What Next?",
+          "publisher": "99bitcoins",
+          "url": "https://99bitcoins.com/news/altcoins/uk-sanctions-justin-sun-htx-exchange-user-funds-safe/",
+          "published": 1779898223,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Arthur Hayes Is Betting Bigger On Zcash Than NEAR \u2014 Even As He Sees 20x Upside In NEAR",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/why-arthur-hayes-prefers-zcash-over-near/cZgay2rRepF",
+          "published": 1779787949,
+          "sentiment": 0.0
+        },
+        {
+          "title": "3 Altcoins Within Striking Distance of New All-Time Highs This Week",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/3-altcoins-within-striking-distance-of-new-all-time-highs/",
+          "published": 1779732000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Internet Computer Beats Solana and BNB Chain in 30-Day Activity Race",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/icp-tops-solana-30-day-transactions/",
+          "published": 1779699018,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.01
+    },
+    {
+      "ticker": "LINK",
+      "company_name": "Chainlink",
+      "category": "defi",
+      "exchange": "Crypto",
+      "price_gbp": "6.53",
+      "price_usd": 8.8,
+      "change_1d": "-2.73%",
+      "change_1w": "-2.10%",
+      "change_1m": "-4.08%",
+      "change_ytd": "-30.08%",
+      "return_1yr": "+20%",
+      "low_gbp": "5.43",
+      "high_gbp": "21",
+      "bar_pct": 7,
+      "market_cap_gbp_b": 4.743,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 550.99,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 368888384,
+      "vol_1w": 1640568294,
+      "vol_1m": 16472017222,
+      "news": [
+        {
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "1 Reason to Buy Chainlink (LINK) Right Now -- and 1 Reason to Wait",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/01/1-reason-to-buy-link-right-now-and-1-reason-to-w/",
+          "published": 1780338113,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Chainlink News: Institutional Catalysts Pushing LINK to $10",
+          "publisher": "Coinspeaker",
+          "url": "https://www.coinspeaker.com/chainlink-news-link-price-analysis-tokenized-finance/",
+          "published": 1780246515,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Top 3 RWA Tokens for June 2026: One Breakout, One Accumulation, One Warning",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/top-rwa-tokens-june-2026/",
+          "published": 1780095600,
+          "sentiment": -0.153
+        },
+        {
+          "title": "Best Cryptos to Hold for the Next 5 Years",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/05/26/best-cryptos-to-hold-for-the-next-5-years/",
+          "published": 1779794576,
+          "sentiment": 0.637
+        }
+      ],
+      "news_sentiment": 0.097
+    },
+    {
+      "ticker": "UNI",
+      "company_name": "Uniswap",
+      "category": "defi",
+      "exchange": "Crypto",
+      "price_gbp": "0.00012068",
+      "price_usd": 0.0,
+      "change_1d": "+0.00%",
+      "change_1w": "+0.00%",
+      "change_1m": "+0.00%",
+      "change_ytd": "+0.00%",
+      "return_1yr": "+0%",
+      "low_gbp": "nan",
+      "high_gbp": "nan",
+      "bar_pct": 50,
+      "market_cap_gbp_b": 0.0,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 0.0,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": null,
+      "vol_1w": null,
+      "vol_1m": 0,
+      "news": [],
+      "news_sentiment": null
+    },
+    {
+      "ticker": "AAVE",
+      "company_name": "Aave",
+      "category": "defi",
+      "exchange": "Crypto",
+      "price_gbp": "58",
+      "price_usd": 77.58,
+      "change_1d": "-3.27%",
+      "change_1w": "-3.85%",
+      "change_1m": "-16.71%",
+      "change_ytd": "-47.82%",
+      "return_1yr": "-1%",
+      "low_gbp": "58",
+      "high_gbp": "284",
+      "bar_pct": 1,
+      "market_cap_gbp_b": 0.886,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 313.99,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 295304928,
+      "vol_1w": 1153074606,
+      "vol_1m": 8346226414,
+      "news": [
+        {
+          "title": "No DeFi Is Safe Anymore, Warns Top Crypto Security Executive \u2014 Why Is He Urging Everyone To Exit Positions?",
+          "publisher": "CCN",
+          "url": "https://www.ccn.com/news/crypto/no-defi-safe-anymore-top-crypto-security-executive-why/",
+          "published": 1779896535,
+          "sentiment": 0.542
+        },
+        {
+          "title": "Coinbase-backed super app shuts down",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/crypto/bankruptcy/coinbase-backed-crypto-super-app-shuts-down",
+          "published": 1778781858,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Arbitrum DAO Granted Liability Reprieve in North Korea Asset Forfeiture Case",
+          "publisher": "Bankless",
+          "url": "https://www.bankless.com/read/news/arbitrum-dao-granted-liability-reprieve-in-north-korea-asset-forfeiture-case",
+          "published": 1778533308,
+          "sentiment": 0.402
+        },
+        {
+          "title": "Arbitrum DAO Votes to Unlock $70 Million for Kelp DAO Exploit Relief",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/367238/arbitrum-dao-votes-to-unlock-70-million-for-kelp-dao-exploit-relief",
+          "published": 1778239297,
+          "sentiment": 0.402
+        },
+        {
+          "title": "Aave Fights to Unfreeze $71 Million as Kelp DAO Hack Spills Into Court",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/366744/aave-unfreeze-71m-arbitrum-kelp-dao-hack",
+          "published": 1777931763,
+          "sentiment": -0.402
+        }
+      ],
+      "news_sentiment": 0.309
+    },
+    {
+      "ticker": "MATIC",
+      "company_name": "Polygon",
+      "category": "layer2",
+      "exchange": "Crypto",
+      "price_gbp": "0.1619",
+      "price_usd": 0.22,
+      "change_1d": "+0.00%",
+      "change_1w": "+0.00%",
+      "change_1m": "+0.00%",
+      "change_ytd": "+0.00%",
+      "return_1yr": "+0%",
+      "low_gbp": "nan",
+      "high_gbp": "nan",
+      "bar_pct": 50,
+      "market_cap_gbp_b": null,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 6.83,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": null,
+      "vol_1w": null,
+      "vol_1m": 0,
+      "news": [
+        {
+          "title": "Why Meta is paying some creators in stablecoins \u2014 not cash",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/why-meta-is-paying-some-creators-in-stablecoins--not-cash-163413439.html",
+          "published": 1777566853,
+          "sentiment": 0.0
+        },
+        {
+          "title": "U.S. seizes $500M in Iranian crypto",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/us-seizes-500m-in-iranian-crypto-162755639.html",
+          "published": 1777566475,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Mastercard Recruits Binance, Ripple and PayPal for Crypto Partner Program",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/360715/mastercard-recruits-binance-ripple-paypal-crypto-partner-program",
+          "published": 1773243078,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Grant Cardone To Tokenize $5B Of Real Estate, But XRP Is Not On His Partner Shortlist",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/news/grant-cardone-tokenize-5b-real-110050546.html",
+          "published": 1772362850,
+          "sentiment": 0.19
+        },
+        {
+          "title": "Magic Eden Pulls Plug on Bitcoin and Ethereum Support, Doubles Down on Solana",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/359422/magic-eden-pulls-plug-bitcoin-ethereum-doubles-down-solana",
+          "published": 1772218702,
+          "sentiment": 0.402
+        }
+      ],
+      "news_sentiment": 0.118
+    },
+    {
+      "ticker": "ARB",
+      "company_name": "Arbitrum",
+      "category": "layer2",
+      "exchange": "Crypto",
+      "price_gbp": "0.00056172",
+      "price_usd": 0.0,
+      "change_1d": "+0.00%",
+      "change_1w": "+0.01%",
+      "change_1m": "+0.01%",
+      "change_ytd": "-35.57%",
+      "return_1yr": "+3%",
+      "low_gbp": "0.00054536",
+      "high_gbp": "0.00087405",
+      "bar_pct": 5,
+      "market_cap_gbp_b": null,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": null,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 2,
+      "vol_1w": 2,
+      "vol_1m": 2,
+      "news": [],
+      "news_sentiment": null
+    },
+    {
+      "ticker": "OP",
+      "company_name": "Optimism",
+      "category": "layer2",
+      "exchange": "Crypto",
+      "price_gbp": "0.0898",
+      "price_usd": 0.12,
+      "change_1d": "-2.42%",
+      "change_1w": "+1.91%",
+      "change_1m": "-3.51%",
+      "change_ytd": "-59.16%",
+      "return_1yr": "+21%",
+      "low_gbp": "0.0742",
+      "high_gbp": "0.6538",
+      "bar_pct": 3,
+      "market_cap_gbp_b": 0.194,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 68.48,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 76143616,
+      "vol_1w": 288851915,
+      "vol_1m": 2335045435,
+      "news": [
+        {
+          "title": "Optimism token price plunges 25% as Coinbase cuts off DAO from millions in revenue",
+          "publisher": "DLNews",
+          "url": "https://www.dlnews.com/articles/defi/optimism-token-price-plunges-as-base-leaves-superchain/",
+          "published": 1771534345,
+          "sentiment": 0.318
+        },
+        {
+          "title": "Coinbase\u2019s Base Exits Optimism, Triggers 23% Crash To New All-Time Low",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/coinbases-base-exit-triggers-optimism-price-crash/",
+          "published": 1771504165,
+          "sentiment": -0.077
+        },
+        {
+          "title": "Optimism DAO Passes OP Buyback Proposal With 84% Approval \u2013 What\u2019s Next?",
+          "publisher": "Cryptonews",
+          "url": "https://cryptonews.com/news/optimism-dao-passes-op-buyback-proposal-with-84-approval-whats-next/",
+          "published": 1769682906,
+          "sentiment": 0.765
+        },
+        {
+          "title": "Delegates clash as Optimism token buyback proposal goes to a DAO vote",
+          "publisher": "DLNews",
+          "url": "https://www.dlnews.com/articles/defi/delegates-clash-as-optimism-token-buyback-proposal-goes-to-a-dao-vote/",
+          "published": 1769182286,
+          "sentiment": 0.542
+        },
+        {
+          "title": "Powell criminal probe upends Trump's search for a new Fed chair",
+          "publisher": "Business Insider",
+          "url": "https://www.businessinsider.com/trump-fed-shortlist-jerome-powell-replacement-2025-11",
+          "published": 1768327741,
+          "sentiment": -0.527
+        }
+      ],
+      "news_sentiment": 0.204
+    },
+    {
+      "ticker": "DOGE",
+      "company_name": "Dogecoin",
+      "category": "meme",
+      "exchange": "Crypto",
+      "price_gbp": "0.0732",
+      "price_usd": 0.1,
+      "change_1d": "-2.30%",
+      "change_1w": "-0.79%",
+      "change_1m": "-9.05%",
+      "change_ytd": "-22.14%",
+      "return_1yr": "+21%",
+      "low_gbp": "0.0605",
+      "high_gbp": "0.2268",
+      "bar_pct": 8,
+      "market_cap_gbp_b": 12.473,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 1351.31,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 1106098432,
+      "vol_1w": 3997287322,
+      "vol_1m": 38799000233,
+      "news": [
+        {
+          "title": "Bitcoin, XRP Fall, Ethereum, Dogecoin Flat As Israel-Hezbollah War Threatens Iran Deal: 'Critical' Cluster Could Decide BTC's Next Move, Says Analyst",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-xrp-fall-ethereum-dogecoin-020459739.html",
+          "published": 1780365899,
+          "sentiment": -0.832
+        },
+        {
+          "title": "Top Cryptocurrencies Mixed; Bitcoin Drops Below $72,000",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/top-cryptocurrencies-mixed-bitcoin-drops-201826879.html",
+          "published": 1780345106,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "House of Doge and Paxos Partner to Expand Regulated Access to Dogecoin",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/house-of-doge-and-paxos-partner-to-expand-regulated-access-to-dogecoin-5728",
+          "published": 1780327320,
+          "sentiment": 0.318
+        },
+        {
+          "title": "TBH Stock Climbs On House Of Doge-Paxos Dogecoin Deal, But Reverse Split Muddies The Retail Sentiment",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/tbh-stock-house-of-doge-paxos-dogecoin-reverse-split/cZ0gvMKReHM",
+          "published": 1780326061,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.062
+    },
+    {
+      "ticker": "SHIB",
+      "company_name": "Shiba Inu",
+      "category": "meme",
+      "exchange": "Crypto",
+      "price_gbp": "0.00000403",
+      "price_usd": 0.0,
+      "change_1d": "-1.63%",
+      "change_1w": "+8.60%",
+      "change_1m": "-9.50%",
+      "change_ytd": "-22.43%",
+      "return_1yr": "+9%",
+      "low_gbp": "0.00000371",
+      "high_gbp": "0.00001187",
+      "bar_pct": 4,
+      "market_cap_gbp_b": 2.38,
+      "beta": null,
+      "pe_ratio": null,
+      "avg_volume_m": 116.33,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 131806112,
+      "vol_1w": 550028600,
+      "vol_1m": 3637416445,
+      "news": [
+        {
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Should You Buy Shiba Inu Before the Next Crypto Bull Run?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/21/should-you-buy-shib-before-the-next-crypto-bull/",
+          "published": 1779379500,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can Shiba Inu Reach $1 in 2026? The Answer Will Make Your Head Spin.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/20/can-shiba-inu-reach-1-in-2026-the-answer-head-spin/",
+          "published": 1779268800,
+          "sentiment": 0.026
+        },
+        {
+          "title": "MemeCore Eats SHIB's Lunch as AI Agents Land on BNB Chain",
+          "publisher": "CoinMarketCap",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/memecore-eats-shibs-lunch-ai-161336881.html",
+          "published": 1779207216,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Mysterious SHIB whale turns $13K into $660M after latest sale",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/crypto/markets/mysterious-shib-whale-turns-13k-into-660m-after-latest-sale",
+          "published": 1777642200,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.005
+    },
+    {
+      "ticker": "COIN",
+      "company_name": "Coinbase Global",
+      "category": "equity",
+      "exchange": "NASDAQ",
+      "price_gbp": "135",
+      "price_usd": 182.61,
+      "change_1d": "-3.18%",
+      "change_1w": "-1.29%",
+      "change_1m": "-10.04%",
+      "change_ytd": "-22.80%",
+      "return_1yr": "-29%",
+      "low_gbp": "103",
+      "high_gbp": "330",
+      "bar_pct": 14,
+      "market_cap_gbp_b": 35.697,
+      "beta": 3.381,
+      "pe_ratio": 67.14,
+      "avg_volume_m": 10.74,
+      "div_yield_pct": null,
+      "short_pct": 11.66,
+      "analyst": "buy",
+      "analyst_score": 2.0,
+      "vol_1d": 9044100,
+      "vol_1w": 44288600,
+      "vol_1m": 196118900,
+      "news": [
+        {
+          "title": "Grayscale Investments Sets 0.29% Fee For Hyperliquid ETF",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/grayscale-investments-sets-029-fee-for-hyperliquid-etf-5736",
+          "published": 1780343760,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Binance Adds 7,000 U.S. Stocks and ETFs as Crypto Platforms Push Into Brokerage Territory",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/binance-adds-7000-us-stocks-and-etfs-as-crypto-platforms-push-into-brokerage-territory-5734",
+          "published": 1780343280,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Strategy Slides 6%, Coinbase Drops 5% as Saylor\u2019s First Bitcoin Sale in Nearly 4 Years Triggers Crypto Selloff",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/01/strategy-slides-6-coinbase-drops-5-as-saylors-first-bitcoin-sale-in-nearly-4-years-triggers-crypto-selloff/",
+          "published": 1780323136,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-130310190.html",
+          "published": 1780318990,
+          "sentiment": 0.34
+        },
+        {
+          "title": "A Look At Coinbase Global (COIN) Valuation As New Paycheck Splitting Feature Expands Its Super App Ambitions",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/look-coinbase-global-coin-valuation-100417391.html",
+          "published": 1780135457,
+          "sentiment": 0.649
+        }
+      ],
+      "news_sentiment": 0.198
+    },
+    {
+      "ticker": "MSTR",
+      "company_name": "Strategy (MicroStrategy)",
+      "category": "equity",
+      "exchange": "NASDAQ",
+      "price_gbp": "111",
+      "price_usd": 149.78,
+      "change_1d": "-5.77%",
+      "change_1w": "-6.32%",
+      "change_1m": "-18.51%",
+      "change_ytd": "-4.70%",
+      "return_1yr": "-61%",
+      "low_gbp": "77",
+      "high_gbp": "339",
+      "bar_pct": 13,
+      "market_cap_gbp_b": 39.109,
+      "beta": 3.595,
+      "pe_ratio": null,
+      "avg_volume_m": 18.2,
+      "div_yield_pct": null,
+      "short_pct": 11.96,
+      "analyst": "strong_buy",
+      "analyst_score": 1.27,
+      "vol_1d": 17693000,
+      "vol_1w": 76898200,
+      "vol_1m": 298099700,
+      "news": [
+        {
+          "title": "Why Michael Saylor's $2.5M bitcoin sale is turning heads",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/why-michael-saylors-2-5m-203414845.html",
+          "published": 1780346054,
+          "sentiment": 0.0
+        },
+        {
+          "title": "A Whale Just Opened a $44 Million ETH Short: Why Hyperliquid Traders Are Moving Against It",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/ethereum-price-whale-short-hyperliquid-divergence/",
+          "published": 1780380044,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why Is The Crypto Market Down Today?",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/why-is-the-crypto-market-down-today/",
+          "published": 1780378219,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Bitcoin, XRP Fall, Ethereum, Dogecoin Flat As Israel-Hezbollah War Threatens Iran Deal: 'Critical' Cluster Could Decide BTC's Next Move, Says Analyst",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-xrp-fall-ethereum-dogecoin-020459739.html",
+          "published": 1780365899,
+          "sentiment": -0.832
+        },
+        {
+          "title": "Polymarket Faces Backlash Over MicroStrategy Bitcoin Sale Dispute",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/polymarket-microstrategy-bitcoin-sale-dispute/",
+          "published": 1780350646,
+          "sentiment": -0.402
+        }
+      ],
+      "news_sentiment": -0.247
+    },
     {
       "ticker": "IBIT",
       "company_name": "iShares Bitcoin Trust",
-      "category": "btc-etf",
+      "category": "equity",
       "exchange": "NASDAQ",
       "price_gbp": "30",
       "price_usd": 40.49,
@@ -66,981 +1229,6 @@ window.PRICES_DATA = {
         }
       ],
       "news_sentiment": 0.045
-    },
-    {
-      "ticker": "FBTC",
-      "company_name": "Fidelity Wise Origin Bitcoin Fund",
-      "category": "btc-etf",
-      "exchange": "NASDAQ",
-      "price_gbp": "46",
-      "price_usd": 62.2,
-      "change_1d": "-3.31%",
-      "change_1w": "-5.73%",
-      "change_1m": "-10.79%",
-      "change_ytd": "-20.45%",
-      "return_1yr": "+15%",
-      "low_gbp": "40",
-      "high_gbp": "82",
-      "bar_pct": 14,
-      "market_cap_gbp_b": null,
-      "beta": null,
-      "pe_ratio": null,
-      "avg_volume_m": 4.26,
-      "div_yield_pct": null,
-      "short_pct": null,
-      "analyst": null,
-      "analyst_score": null,
-      "vol_1d": 5150200,
-      "vol_1w": 19620600,
-      "vol_1m": 66687600,
-      "news": [
-        {
-          "title": "Bitcoin Spot ETFs Have Fundamentally Shifted: These 3 Now Hold Over 1.5 Million BTC Combined",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/01/bitcoin-spot-etfs-have-fundamentally-shifted-these-3-now-hold-over-1-5-million-btc-combined/",
-          "published": 1780326693,
-          "sentiment": 0.0
-        },
-        {
-          "title": "FBTC Holds $12 Billion in Bitcoin But Spot ETF Holders Pay Ordinary Income Tax on Forced Distributions Most Have Never Considered",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/27/fbtc-holds-12-billion-in-bitcoin-but-spot-etf-holders-pay-ordinary-income-tax-on-forced-distributions-most-have-never-considered/",
-          "published": 1779914067,
-          "sentiment": -0.681
-        },
-        {
-          "title": "FBTC Has $12.3 Billion in Assets but a 76% Chance Bitcoin Falls Further This Year",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/04/03/fbtc-has-12-3-billion-in-assets-but-a-76-chance-bitcoin-falls-further-this-year/",
-          "published": 1775209555,
-          "sentiment": 0.431
-        },
-        {
-          "title": "These 2 Bitcoin ETFs Are Seeing Inflows for the First Time in Months",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/stock-ideas/these-2-bitcoin-etfs-are-seeing-inflows-for-the-first-time-in-months/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1774273080,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Should You Bet on the Recent Rally in Bitcoin & Ethereum ETFs?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/news/bet-recent-rally-bitcoin-ethereum-140000310.html",
-          "published": 1773842400,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": -0.05
-    },
-    {
-      "ticker": "ARKB",
-      "company_name": "ARK 21Shares Bitcoin ETF",
-      "category": "btc-etf",
-      "exchange": "NASDAQ",
-      "price_gbp": "18",
-      "price_usd": 23.71,
-      "change_1d": "-2.95%",
-      "change_1w": "-5.67%",
-      "change_1m": "-10.76%",
-      "change_ytd": "-20.41%",
-      "return_1yr": "+15%",
-      "low_gbp": "15",
-      "high_gbp": "31",
-      "bar_pct": 14,
-      "market_cap_gbp_b": null,
-      "beta": null,
-      "pe_ratio": null,
-      "avg_volume_m": 3.34,
-      "div_yield_pct": null,
-      "short_pct": null,
-      "analyst": null,
-      "analyst_score": null,
-      "vol_1d": 2212300,
-      "vol_1w": 10850100,
-      "vol_1m": 36704700,
-      "news": [
-        {
-          "title": "Bitcoin Spot ETFs Have Fundamentally Shifted: These 3 Now Hold Over 1.5 Million BTC Combined",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/01/bitcoin-spot-etfs-have-fundamentally-shifted-these-3-now-hold-over-1-5-million-btc-combined/",
-          "published": 1780326693,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Which Bitcoin ETF Wins: Grayscale\u2019s Scale, ProShares\u2019 Yield, or ARK\u2019s Low Cost",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/04/16/which-bitcoin-etf-wins-grayscales-scale-proshares-yield-or-arks-low-cost/",
-          "published": 1776358624,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Bitcoin Skids, $14 Bil In Options Due; Cathie Wood Raises Cash",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/bitcoin-price-options-expire-14-billion-liquidations-cathie-wood-ark-invest/?src=A00220&yptr=yahoo",
-          "published": 1774645900,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Vanguard\u2019s Brokerage Arm Is Now Offering Crypto ETFs. They\u2019ve Been Tanking.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/vanguard-crypto-etfs-tanking-bitcoin-13ffa22d?siteid=yhoof2&yptr=yahoo",
-          "published": 1774418400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Bitcoin\u2019s Brutal Pullback Has ARKB Investors Searching for Answers",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/02/25/bitcoins-brutal-pullback-has-arkb-investors-searching-for-answers/",
-          "published": 1772042587,
-          "sentiment": -0.625
-        }
-      ],
-      "news_sentiment": -0.049
-    },
-    {
-      "ticker": "GBTC",
-      "company_name": "Grayscale Bitcoin Trust",
-      "category": "btc-etf",
-      "exchange": "NYSE",
-      "price_gbp": "41",
-      "price_usd": 55.48,
-      "change_1d": "-2.55%",
-      "change_1w": "-5.73%",
-      "change_1m": "-10.85%",
-      "change_ytd": "-20.90%",
-      "return_1yr": "+14%",
-      "low_gbp": "36",
-      "high_gbp": "74",
-      "bar_pct": 14,
-      "market_cap_gbp_b": null,
-      "beta": null,
-      "pe_ratio": null,
-      "avg_volume_m": 2.6,
-      "div_yield_pct": null,
-      "short_pct": null,
-      "analyst": null,
-      "analyst_score": null,
-      "vol_1d": 2809800,
-      "vol_1w": 11599000,
-      "vol_1m": 36571400,
-      "news": [
-        {
-          "title": "Morgan Stanley reveals surprising asset exposure",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/crypto/markets/morgan-stanley-discloses-bitcoin-xrp-sol-holdings",
-          "published": 1780088400,
-          "sentiment": 0.557
-        },
-        {
-          "title": "FBTC Holds $12 Billion in Bitcoin But Spot ETF Holders Pay Ordinary Income Tax on Forced Distributions Most Have Never Considered",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/27/fbtc-holds-12-billion-in-bitcoin-but-spot-etf-holders-pay-ordinary-income-tax-on-forced-distributions-most-have-never-considered/",
-          "published": 1779914067,
-          "sentiment": -0.681
-        },
-        {
-          "title": "Morgan Stanley\u2019s $269M Spot Bitcoin ETF Bet: Why Wall Street is Buying Even if Your Advisor Isn\u2019t",
-          "publisher": "99bitcoins",
-          "url": "https://99bitcoins.com/news/bitcoin-btc/morgan-stanley-spot-bitcoin-etf-bet-explained/",
-          "published": 1778150278,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Bitcoin ETFs Have Fundamentally Shifted: Here\u2019s Which 3 to Own Before Year-End",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/06/bitcoin-etfs-have-fundamentally-shifted-heres-which-3-to-own-before-year-end/",
-          "published": 1778080070,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Which Bitcoin ETF Wins: Grayscale\u2019s Scale, ProShares\u2019 Yield, or ARK\u2019s Low Cost",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/04/16/which-bitcoin-etf-wins-grayscales-scale-proshares-yield-or-arks-low-cost/",
-          "published": 1776358624,
-          "sentiment": 0.382
-        }
-      ],
-      "news_sentiment": 0.052
-    },
-    {
-      "ticker": "BITO",
-      "company_name": "ProShares Bitcoin Strategy ETF",
-      "category": "btc-etf",
-      "exchange": "NYSE",
-      "price_gbp": "7.23",
-      "price_usd": 9.74,
-      "change_1d": "-2.31%",
-      "change_1w": "-5.76%",
-      "change_1m": "+0.00%",
-      "change_ytd": "-21.42%",
-      "return_1yr": "+13%",
-      "low_gbp": "6.39",
-      "high_gbp": "17",
-      "bar_pct": 8,
-      "market_cap_gbp_b": null,
-      "beta": null,
-      "pe_ratio": null,
-      "avg_volume_m": 120.74,
-      "div_yield_pct": 7192.0,
-      "short_pct": null,
-      "analyst": null,
-      "analyst_score": null,
-      "vol_1d": 158458200,
-      "vol_1w": 698635500,
-      "vol_1m": 2659123100,
-      "news": [
-        {
-          "title": "Exchange-Traded Funds, US Equities Mixed After Midday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/articles/exchange-traded-funds-us-equities-170743073.html",
-          "published": 1780333663,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-130310190.html",
-          "published": 1780318990,
-          "sentiment": 0.34
-        },
-        {
-          "title": "Exchange-Traded Funds Mixed, US Equities Advance After Midday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-mixed-us-171015878.html",
-          "published": 1780074615,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Rise Pre-Bell Friday Amid US-Iran Deal Hopes",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131630396.html",
-          "published": 1780060590,
-          "sentiment": 0.421
-        },
-        {
-          "title": "Exchange-Traded Funds Rise as US Equities Advance After Midday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-rise-us-171636371.html",
-          "published": 1779988596,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": 0.152
-    },
-    {
-      "ticker": "ETHA",
-      "company_name": "iShares Ethereum Trust",
-      "category": "eth-etf",
-      "exchange": "NASDAQ",
-      "price_gbp": "11",
-      "price_usd": 15.11,
-      "change_1d": "-0.26%",
-      "change_1w": "-2.95%",
-      "change_1m": "-14.97%",
-      "change_ytd": "-35.92%",
-      "return_1yr": "+11%",
-      "low_gbp": "10",
-      "high_gbp": "27",
-      "bar_pct": 6,
-      "market_cap_gbp_b": null,
-      "beta": null,
-      "pe_ratio": null,
-      "avg_volume_m": 31.55,
-      "div_yield_pct": null,
-      "short_pct": null,
-      "analyst": null,
-      "analyst_score": null,
-      "vol_1d": 34135400,
-      "vol_1w": 147764700,
-      "vol_1m": 455969700,
-      "news": [
-        {
-          "title": "ETHA\u2019s Spot Ethereum Promise Hides a Staking Yield It Cannot Pass Through to Holders",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/27/ethas-spot-ethereum-promise-hides-a-staking-yield-it-cannot-pass-through-to-holders/",
-          "published": 1779928408,
-          "sentiment": 0.153
-        },
-        {
-          "title": "Ethereum ETFs On Six-Day Win Streak",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/ethereum-etfs-on-six-day-win-streak-4198",
-          "published": 1776431400,
-          "sentiment": 0.586
-        },
-        {
-          "title": "Beyond Bitcoin: Crypto ETFs to Watch Amid Ethereum's Momentum",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/beyond-bitcoin-crypto-etfs-watch-192600261.html",
-          "published": 1775503560,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Should You Bet on the Recent Rally in Bitcoin & Ethereum ETFs?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/news/bet-recent-rally-bitcoin-ethereum-140000310.html",
-          "published": 1773842400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "What\u2019s at Stake for BlackRock\u2019s Ethereum ETFs?",
-          "publisher": "The Daily Upside",
-          "url": "https://www.thedailyupside.com/etf/thematics-sectors/whats-at-stake-for-blackrocks-ethereum-etfs/",
-          "published": 1773633720,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": 0.148
-    },
-    {
-      "ticker": "FETH",
-      "company_name": "Fidelity Ethereum Fund",
-      "category": "eth-etf",
-      "exchange": "NASDAQ",
-      "price_gbp": "15",
-      "price_usd": 19.95,
-      "change_1d": "-2.92%",
-      "change_1w": "-2.92%",
-      "change_1m": "-15.07%",
-      "change_ytd": "-35.89%",
-      "return_1yr": "+11%",
-      "low_gbp": "13",
-      "high_gbp": "36",
-      "bar_pct": 6,
-      "market_cap_gbp_b": null,
-      "beta": null,
-      "pe_ratio": null,
-      "avg_volume_m": 3.26,
-      "div_yield_pct": null,
-      "short_pct": null,
-      "analyst": null,
-      "analyst_score": null,
-      "vol_1d": 2350300,
-      "vol_1w": 9859400,
-      "vol_1m": 33994400,
-      "news": [
-        {
-          "title": "ETHA\u2019s Spot Ethereum Promise Hides a Staking Yield It Cannot Pass Through to Holders",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/27/ethas-spot-ethereum-promise-hides-a-staking-yield-it-cannot-pass-through-to-holders/",
-          "published": 1779928408,
-          "sentiment": 0.153
-        },
-        {
-          "title": "Beyond Bitcoin: Crypto ETFs to Watch Amid Ethereum's Momentum",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/beyond-bitcoin-crypto-etfs-watch-192600261.html",
-          "published": 1775503560,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Should You Bet on the Recent Rally in Bitcoin & Ethereum ETFs?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/news/bet-recent-rally-bitcoin-ethereum-140000310.html",
-          "published": 1773842400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Fidelity Let\u2019s You Go Full YOLO On Ethereum, but Should You?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/01/08/fidelity-lets-you-go-full-yolo-on-ethereum-but-should-you/",
-          "published": 1767900392,
-          "sentiment": 0.23
-        },
-        {
-          "title": "Bitcoin, gold, AI were key drivers of 2025's record ETF inflows",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/bitcoin-gold-ai-were-key-200000651.html",
-          "published": 1766001600,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": 0.077
-    },
-    {
-      "ticker": "COIN",
-      "company_name": "Coinbase Global",
-      "category": "exchange",
-      "exchange": "NASDAQ",
-      "price_gbp": "136",
-      "price_usd": 182.61,
-      "change_1d": "-3.18%",
-      "change_1w": "-1.29%",
-      "change_1m": "-10.04%",
-      "change_ytd": "-22.80%",
-      "return_1yr": "-29%",
-      "low_gbp": "103",
-      "high_gbp": "330",
-      "bar_pct": 14,
-      "market_cap_gbp_b": 35.726,
-      "beta": 3.381,
-      "pe_ratio": 67.14,
-      "avg_volume_m": 10.74,
-      "div_yield_pct": null,
-      "short_pct": 11.66,
-      "analyst": "buy",
-      "analyst_score": 2.0,
-      "vol_1d": 9044100,
-      "vol_1w": 44288600,
-      "vol_1m": 196118900,
-      "news": [
-        {
-          "title": "Grayscale Investments Sets 0.29% Fee For Hyperliquid ETF",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/grayscale-investments-sets-029-fee-for-hyperliquid-etf-5736",
-          "published": 1780343760,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Binance Adds 7,000 U.S. Stocks and ETFs as Crypto Platforms Push Into Brokerage Territory",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/binance-adds-7000-us-stocks-and-etfs-as-crypto-platforms-push-into-brokerage-territory-5734",
-          "published": 1780343280,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Strategy Slides 6%, Coinbase Drops 5% as Saylor\u2019s First Bitcoin Sale in Nearly 4 Years Triggers Crypto Selloff",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/01/strategy-slides-6-coinbase-drops-5-as-saylors-first-bitcoin-sale-in-nearly-4-years-triggers-crypto-selloff/",
-          "published": 1780323136,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-130310190.html",
-          "published": 1780318990,
-          "sentiment": 0.34
-        },
-        {
-          "title": "A Look At Coinbase Global (COIN) Valuation As New Paycheck Splitting Feature Expands Its Super App Ambitions",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/look-coinbase-global-coin-valuation-100417391.html",
-          "published": 1780135457,
-          "sentiment": 0.649
-        }
-      ],
-      "news_sentiment": 0.198
-    },
-    {
-      "ticker": "HOOD",
-      "company_name": "Robinhood Markets",
-      "category": "exchange",
-      "exchange": "NASDAQ",
-      "price_gbp": "67",
-      "price_usd": 90.73,
-      "change_1d": "-3.48%",
-      "change_1w": "+23.21%",
-      "change_1m": "+18.52%",
-      "change_ytd": "-21.25%",
-      "return_1yr": "+27%",
-      "low_gbp": "47",
-      "high_gbp": "114",
-      "bar_pct": 30,
-      "market_cap_gbp_b": 60.672,
-      "beta": 2.294,
-      "pe_ratio": 44.04,
-      "avg_volume_m": 29.44,
-      "div_yield_pct": null,
-      "short_pct": 4.82,
-      "analyst": "buy",
-      "analyst_score": 1.96,
-      "vol_1d": 42451800,
-      "vol_1w": 196458500,
-      "vol_1m": 516131700,
-      "news": [
-        {
-          "title": "Binance Adds 7,000 U.S. Stocks and ETFs as Crypto Platforms Push Into Brokerage Territory",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/binance-adds-7000-us-stocks-and-etfs-as-crypto-platforms-push-into-brokerage-territory-5734",
-          "published": 1780343280,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Robinhood Markets (HOOD) Is Up 28.1% After Launching Agentic AI Trading And Credit Card Tools",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/robinhood-markets-hood-28-1-171324250.html",
-          "published": 1780334004,
-          "sentiment": 0.382
-        },
-        {
-          "title": "IBM Shares Surge as Old Clip of Trump\u2019s Praise Recirculates",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ibm-shares-surge-old-clip-141836172.html",
-          "published": 1780333154,
-          "sentiment": 0.7
-        },
-        {
-          "title": "NMR or HOOD: Which Is the Better Value Stock Right Now?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nmr-hood-better-value-stock-154002976.html",
-          "published": 1780328402,
-          "sentiment": 0.649
-        },
-        {
-          "title": "Robinhood Seeks Supreme Court Intervention in IPO Investor Lawsuit (HOOD)",
-          "publisher": "InvestorsHub",
-          "url": "https://investorshub.advfn.com/market-news/article/29453/robinhood-seeks-supreme-court-intervention-in-ipo-investor-lawsuit-hood",
-          "published": 1780325190,
-          "sentiment": 0.402
-        }
-      ],
-      "news_sentiment": 0.427
-    },
-    {
-      "ticker": "MSTR",
-      "company_name": "Strategy (MicroStrategy)",
-      "category": "treasury",
-      "exchange": "NASDAQ",
-      "price_gbp": "111",
-      "price_usd": 149.78,
-      "change_1d": "-5.77%",
-      "change_1w": "-6.32%",
-      "change_1m": "-18.51%",
-      "change_ytd": "-4.70%",
-      "return_1yr": "-61%",
-      "low_gbp": "77",
-      "high_gbp": "340",
-      "bar_pct": 13,
-      "market_cap_gbp_b": 39.141,
-      "beta": 3.595,
-      "pe_ratio": null,
-      "avg_volume_m": 18.2,
-      "div_yield_pct": null,
-      "short_pct": 11.96,
-      "analyst": "strong_buy",
-      "analyst_score": 1.27,
-      "vol_1d": 17693000,
-      "vol_1w": 76898200,
-      "vol_1m": 298099700,
-      "news": [
-        {
-          "title": "Why Michael Saylor's $2.5M bitcoin sale is turning heads",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/why-michael-saylors-2-5m-203414845.html",
-          "published": 1780346054,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why Is The Crypto Market Down Today?",
-          "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/why-is-the-crypto-market-down-today/",
-          "published": 1780378219,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Bitcoin, XRP Fall, Ethereum, Dogecoin Flat As Israel-Hezbollah War Threatens Iran Deal: 'Critical' Cluster Could Decide BTC's Next Move, Says Analyst",
-          "publisher": "Benzinga",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-xrp-fall-ethereum-dogecoin-020459739.html",
-          "published": 1780365899,
-          "sentiment": -0.832
-        },
-        {
-          "title": "Polymarket Faces Backlash Over MicroStrategy Bitcoin Sale Dispute",
-          "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/polymarket-microstrategy-bitcoin-sale-dispute/",
-          "published": 1780350646,
-          "sentiment": -0.402
-        },
-        {
-          "title": "Strategy Sells Bitcoin for First Time Since 2022. The Stock Is Sliding.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/strategy-stock-bitcoin-2b079994?siteid=yhoof2&yptr=yahoo",
-          "published": 1780350120,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": -0.247
-    },
-    {
-      "ticker": "MARA",
-      "company_name": "MARA Holdings",
-      "category": "miner",
-      "exchange": "NASDAQ",
-      "price_gbp": "11",
-      "price_usd": 14.85,
-      "change_1d": "+3.27%",
-      "change_1w": "+7.53%",
-      "change_1m": "+25.53%",
-      "change_ytd": "+49.85%",
-      "return_1yr": "-3%",
-      "low_gbp": "4.95",
-      "high_gbp": "17",
-      "bar_pct": 49,
-      "market_cap_gbp_b": 4.204,
-      "beta": 5.428,
-      "pe_ratio": null,
-      "avg_volume_m": 45.62,
-      "div_yield_pct": null,
-      "short_pct": 29.86,
-      "analyst": "buy",
-      "analyst_score": 2.23,
-      "vol_1d": 51279600,
-      "vol_1w": 213084300,
-      "vol_1m": 856056800,
-      "news": [
-        {
-          "title": "Stock Market Today, June 1: HIVE Digital Rises Ahead of Results as Analyst Backs AI Data Center Push",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/01/stock-market-today-june-1-hive-digital-rises-ahead-of-results-as-analyst-backs-ai-data-center-push/",
-          "published": 1780352909,
-          "sentiment": -0.052
-        },
-        {
-          "title": "PJM monitor urges FERC to condition Mara power plant buy for data center complex",
-          "publisher": "Utility Dive",
-          "url": "https://www.utilitydive.com/news/pjm-market-monitor-mara-data-center-long-ridge/821574/",
-          "published": 1780304177,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Marathon Digital Bets Its Bitcoin Mining Power Assets Can Fuel AI Data Center Growth",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/marathon-digital-bets-its-bitcoin-mining-power-assets-can-fuel-ai-data-center-growth-2026-05-30/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1780182145,
-          "sentiment": 0.511
-        },
-        {
-          "title": "MARA Holdings Security Spend Reframes Crypto Executive Risk For Investors",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/mara-holdings-security-spend-reframes-190301681.html",
-          "published": 1780167781,
-          "sentiment": 0.077
-        },
-        {
-          "title": "Evaluating MARA Holdings (MARA) Valuation After A Strong Short-Term Share Price Rally",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/evaluating-mara-holdings-mara-valuation-130651166.html",
-          "published": 1780146411,
-          "sentiment": 0.67
-        }
-      ],
-      "news_sentiment": 0.241
-    },
-    {
-      "ticker": "RIOT",
-      "company_name": "Riot Platforms",
-      "category": "miner",
-      "exchange": "NASDAQ",
-      "price_gbp": "21",
-      "price_usd": 28.25,
-      "change_1d": "+4.01%",
-      "change_1w": "+15.35%",
-      "change_1m": "+51.23%",
-      "change_ytd": "+99.51%",
-      "return_1yr": "+213%",
-      "low_gbp": "6.30",
-      "high_gbp": "21",
-      "bar_pct": 97,
-      "market_cap_gbp_b": 7.933,
-      "beta": 3.737,
-      "pe_ratio": null,
-      "avg_volume_m": 18.22,
-      "div_yield_pct": null,
-      "short_pct": 18.5,
-      "analyst": "strong_buy",
-      "analyst_score": 1.5,
-      "vol_1d": 18928000,
-      "vol_1w": 90310300,
-      "vol_1m": 359993800,
-      "news": [
-        {
-          "title": "Riot Platforms (RIOT) Is Up 15.4% After Unveiling AI\u2011Focused Data Center Expansion Strategy",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/riot-platforms-riot-15-4-231114175.html",
-          "published": 1780355474,
-          "sentiment": -0.837
-        },
-        {
-          "title": "Stock Market Today, June 1: HIVE Digital Rises Ahead of Results as Analyst Backs AI Data Center Push",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/01/stock-market-today-june-1-hive-digital-rises-ahead-of-results-as-analyst-backs-ai-data-center-push/",
-          "published": 1780352909,
-          "sentiment": -0.052
-        },
-        {
-          "title": "Riot Platforms (RIOT) Valuation Check After Data Center Breakout And Corsicana AI Expansion",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/riot-platforms-riot-valuation-check-131632512.html",
-          "published": 1780319792,
-          "sentiment": -0.837
-        },
-        {
-          "title": "Riot Platforms Inc. (RIOT): Leopold Aschenbrenner Reaffirms Bullish Stance",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/riot-platforms-inc-riot-leopold-213535503.html",
-          "published": 1780263335,
-          "sentiment": -0.837
-        },
-        {
-          "title": "AI Boom Fuels Massive Rally in Bitcoin Mining Stocks as Hut 8 and Cipher Surge",
-          "publisher": "CCN",
-          "url": "https://www.ccn.com/news/crypto/ai-boom-bitcoin-mining-stocks-hut8-cipher-iren-surge/",
-          "published": 1779976935,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": -0.513
-    },
-    {
-      "ticker": "CLSK",
-      "company_name": "CleanSpark",
-      "category": "miner",
-      "exchange": "NASDAQ",
-      "price_gbp": "14",
-      "price_usd": 18.81,
-      "change_1d": "+3.41%",
-      "change_1w": "+17.78%",
-      "change_1m": "+46.72%",
-      "change_ytd": "+62.86%",
-      "return_1yr": "+104%",
-      "low_gbp": "5.94",
-      "high_gbp": "18",
-      "bar_pct": 69,
-      "market_cap_gbp_b": 3.584,
-      "beta": 3.72,
-      "pe_ratio": null,
-      "avg_volume_m": 20.9,
-      "div_yield_pct": null,
-      "short_pct": 45.84,
-      "analyst": "none",
-      "analyst_score": null,
-      "vol_1d": 25124400,
-      "vol_1w": 126807700,
-      "vol_1m": 480493100,
-      "news": [
-        {
-          "title": "Should You Invest in CleanSpark (CLSK) Based on Bullish Wall Street Views?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/invest-cleanspark-clsk-based-bullish-133005594.html",
-          "published": 1780320605,
-          "sentiment": 0.0
-        },
-        {
-          "title": "CleanSpark Inc. (CLSK): Leopold Aschenbrenner Is Loading Up on This AI Stock",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/cleanspark-inc-clsk-leopold-aschenbrenner-213631557.html",
-          "published": 1780263391,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Texas Appoints Crypto Executives To Bitcoin Reserve Committee",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/texas-appoints-crypto-executives-to-bitcoin-reserve-committee-5717",
-          "published": 1780085520,
-          "sentiment": 0.0
-        },
-        {
-          "title": "The Best 2 Renewable Energy Stocks to Buy and Hold for Decades",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/24/the-best-2-renewable-energy-stocks-to-buy-and-hold/",
-          "published": 1779644400,
-          "sentiment": 0.743
-        },
-        {
-          "title": "Can CleanSpark\u2019s (CLSK) New Finance Chief Reframe Its Transition From Bitcoin Miner To AI Infrastructure Player?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/cleanspark-clsk-finance-chief-reframe-121037539.html",
-          "published": 1779624637,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": 0.149
-    },
-    {
-      "ticker": "HUT",
-      "company_name": "Hut 8 Corp",
-      "category": "miner",
-      "exchange": "NASDAQ",
-      "price_gbp": "98",
-      "price_usd": 132.38,
-      "change_1d": "+6.07%",
-      "change_1w": "+25.00%",
-      "change_1m": "+69.54%",
-      "change_ytd": "+158.20%",
-      "return_1yr": "+724%",
-      "low_gbp": "11",
-      "high_gbp": "100",
-      "bar_pct": 98,
-      "market_cap_gbp_b": 11.068,
-      "beta": 5.718,
-      "pe_ratio": null,
-      "avg_volume_m": 4.78,
-      "div_yield_pct": null,
-      "short_pct": 15.32,
-      "analyst": "strong_buy",
-      "analyst_score": 1.31,
-      "vol_1d": 4306700,
-      "vol_1w": 22215800,
-      "vol_1m": 110379800,
-      "news": [
-        {
-          "title": "Hut 8 Corp. (HUT): Leopold Aschenbrenner Sells Holding",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/hut-8-corp-hut-leopold-195346935.html",
-          "published": 1780170826,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Nvidia chip smuggling, ETH\u2019s sentiment check and AI\u2019s infrastructure squeeze: Podcast Recap",
-          "publisher": "Blockspace",
-          "url": "https://blockspace.media/insight/nvidia-smuggling-eth-sentiment-blockspace-recap/",
-          "published": 1780153114,
-          "sentiment": -0.477
-        },
-        {
-          "title": "KBW raises Hut 8 price target to $138 from $89 on Beacon Point lease momentum",
-          "publisher": "Blockspace",
-          "url": "https://blockspace.media/insight/kbw-raises-hut-8-price-target-analysis-2026/",
-          "published": 1780059610,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Popular Bitcoin miner insider dumps $2 million in shares near all-time high",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/crypto/markets/hut-8-director-dumps-2-million-in-shares",
-          "published": 1780013186,
-          "sentiment": 0.318
-        },
-        {
-          "title": "Hut 8 Board Member Sells Company Stock",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/hut-8-board-member-sells-company-stock-5703",
-          "published": 1779995640,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": -0.032
-    },
-    {
-      "ticker": "IREN",
-      "company_name": "IREN Limited",
-      "category": "miner",
-      "exchange": "NASDAQ",
-      "price_gbp": "49",
-      "price_usd": 65.33,
-      "change_1d": "+3.30%",
-      "change_1w": "+14.96%",
-      "change_1m": "+32.03%",
-      "change_ytd": "+53.00%",
-      "return_1yr": "+635%",
-      "low_gbp": "6.39",
-      "high_gbp": "57",
-      "bar_pct": 83,
-      "market_cap_gbp_b": 17.338,
-      "beta": 4.179,
-      "pe_ratio": 84.84,
-      "avg_volume_m": 41.81,
-      "div_yield_pct": null,
-      "short_pct": 14.72,
-      "analyst": "buy",
-      "analyst_score": 1.87,
-      "vol_1d": 56242300,
-      "vol_1w": 280821000,
-      "vol_1m": 1183261900,
-      "news": [
-        {
-          "title": "Anthropic\u2019s IPO, IREN\u2019s $3.65B GPU Financing, Strategy Sells BTC, DMG\u2019s 50 MW AI Data Center",
-          "publisher": "Blockspace",
-          "url": "https://blockspace.media/podcast/anthropics-ipo-irens-3-65b-gpu-financing-strategy-sells-btc-dmgs-50-mw-ai-data-center/",
-          "published": 1780346961,
-          "sentiment": 0.0
-        },
-        {
-          "title": "IREN\u2019s Massive GPU Bet And Digital Twin Raise Execution Questions For Investors",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/iren-massive-gpu-bet-digital-171159629.html",
-          "published": 1780333919,
-          "sentiment": 0.0
-        },
-        {
-          "title": "IREN closes $3.65 billion GPU financing to back Microsoft AI cloud contract",
-          "publisher": "Blockspace",
-          "url": "https://blockspace.media/insight/iren-closes-gpu-financing-microsoft-ai/",
-          "published": 1780318902,
-          "sentiment": 0.0
-        },
-        {
-          "title": "IREN Limited (IREN): Leopold Aschenbrenner Has a Bullish View on This Stock",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/iren-limited-iren-leopold-aschenbrenner-213145746.html",
-          "published": 1780263105,
-          "sentiment": -0.226
-        },
-        {
-          "title": "Is Iren the Next Winner of Nvidia's Neocloud Spending Spree?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/31/is-iren-the-next-winner-of-nvidias-neocloud-spendi/",
-          "published": 1780252320,
-          "sentiment": 0.586
-        }
-      ],
-      "news_sentiment": 0.072
-    },
-    {
-      "ticker": "CIFR",
-      "company_name": "Cipher Mining",
-      "category": "miner",
-      "exchange": "NASDAQ",
-      "price_gbp": "18",
-      "price_usd": 24.01,
-      "change_1d": "+1.95%",
-      "change_1w": "+9.29%",
-      "change_1m": "+34.21%",
-      "change_ytd": "+48.21%",
-      "return_1yr": "+599%",
-      "low_gbp": "2.42",
-      "high_gbp": "19",
-      "bar_pct": 93,
-      "market_cap_gbp_b": 7.293,
-      "beta": 3.148,
-      "pe_ratio": null,
-      "avg_volume_m": 25.29,
-      "div_yield_pct": null,
-      "short_pct": 16.35,
-      "analyst": "strong_buy",
-      "analyst_score": 1.33,
-      "vol_1d": 23330400,
-      "vol_1w": 119673000,
-      "vol_1m": 544867600,
-      "news": [
-        {
-          "title": "For Goldman\u2019s Top Bankers, It\u2019s All AI Data Centers All the Time",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/goldman-top-bankers-ai-data-184807086.html",
-          "published": 1780339687,
-          "sentiment": 0.202
-        },
-        {
-          "title": "Cipher Digital Inc. (CIFR): Leopold Aschenbrenner Sells Stake in Data Center Stock",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/cipher-digital-inc-cifr-leopold-194150376.html",
-          "published": 1780170110,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Nvidia chip smuggling, ETH\u2019s sentiment check and AI\u2019s infrastructure squeeze: Podcast Recap",
-          "publisher": "Blockspace",
-          "url": "https://blockspace.media/insight/nvidia-smuggling-eth-sentiment-blockspace-recap/",
-          "published": 1780153114,
-          "sentiment": -0.477
-        },
-        {
-          "title": "The Secret Energy Play Overlooked by AI Investors That Is Set to Soar",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/05/29/the-secret-energy-play-overlooked-by-ai-investors-that-is-set-to-soar/",
-          "published": 1780063822,
-          "sentiment": 0.527
-        },
-        {
-          "title": "5 Bitcoin Miner Stocks Crushing BTC as AI Infrastructure Spending Explodes",
-          "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/bitcoin-miner-stocks-ai-infrastructure-boom/",
-          "published": 1779991200,
-          "sentiment": -0.361
-        }
-      ],
-      "news_sentiment": -0.022
     }
   ]
 };
