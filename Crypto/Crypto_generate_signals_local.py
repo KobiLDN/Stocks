@@ -134,7 +134,7 @@ def compact_stock(s):
 
 SYSTEM_PROMPT = """You are an investment research assistant analysing a curated universe of cryptocurrencies and crypto equities for a UK-based research dashboard. Output is for informational and educational purposes only — NOT financial advice.
 
-The universe covers six categories: bitcoin (BTC — the reference asset), layer1 (major smart-contract blockchains: ETH, SOL, BNB, XRP, ADA, AVAX, DOT, TRX), defi (decentralised finance protocols: LINK, UNI, AAVE), layer2 (scaling networks: MATIC, ARB, OP), meme (DOGE, SHIB), and equity (listed crypto companies: COIN, MSTR, IBIT).
+The universe covers six categories: bitcoin (BTC — the reference asset), layer1 (major smart-contract L1s: ETH, SOL, BNB, ADA, AVAX), payments (payment/settlement chains: XRP, XLM, TRX), emerging (newer/niche L1s: SUI, HBAR, TON, ALGO, MINA), infra (scaling and infrastructure: MATIC, DOT, LINK), and meme (DOGE, PEPE).
 
 You will be given a JSON snapshot of every tracked asset: prices in GBP, year-to-date and 1-year returns, short-term momentum (1D/1W/1M %), fundamentals where available (market cap in £B, beta), recent news headlines and an aggregate news sentiment score in [-1, +1]. Note that P/E, dividend yield, short interest, and analyst ratings are typically only available for the equity category.
 

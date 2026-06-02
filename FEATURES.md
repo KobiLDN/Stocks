@@ -6,7 +6,7 @@
 
 ## Done
 
-- **Crypto sector** — 20 assets across 6 categories (Bitcoin; Layer 1: ETH/SOL/BNB/XRP/ADA/AVAX/DOT/TRX; DeFi: LINK/UNI/AAVE; Layer 2: MATIC/ARB/OP; Meme: DOGE/SHIB; Equities: COIN/MSTR/IBIT); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
+- **Crypto sector** — 19 coins across 6 categories (Bitcoin; Layer 1: ETH/SOL/BNB/ADA/AVAX; Payments: XRP/XLM/TRX; Emerging: SUI/HBAR/TON/ALGO/MINA; Infra: MATIC/DOT/LINK; Meme: DOGE/PEPE); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **AI sector** — 48 stocks across 12 categories; metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Biotech sector** — 30 stocks across 9 categories (large-cap, UK listed, gene editing, genomics, oncology, mRNA, rare disease, metabolic, neuroscience); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Technology sector** — 31 stocks across 6 categories (mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, hardware/infra); full 7-page suite; prices and signals via GitHub Actions

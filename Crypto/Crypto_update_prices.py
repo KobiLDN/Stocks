@@ -26,31 +26,30 @@ DASHBOARD_TITLE = "Crypto"
 # ticker (display) → (yahoo_symbol, category, exchange, special, company_name)
 STOCKS = {
     # ── Bitcoin ───────────────────────────────────────────────────────────────
-    "BTC":  ("BTC-USD",  "bitcoin", "Crypto", None, "Bitcoin"),
+    "BTC":  ("BTC-USD",  "bitcoin",  "Crypto", None, "Bitcoin"),
     # ── Layer 1 ───────────────────────────────────────────────────────────────
-    "ETH":  ("ETH-USD",  "layer1",  "Crypto", None, "Ethereum"),
-    "SOL":  ("SOL-USD",  "layer1",  "Crypto", None, "Solana"),
-    "BNB":  ("BNB-USD",  "layer1",  "Crypto", None, "BNB"),
-    "XRP":  ("XRP-USD",  "layer1",  "Crypto", None, "XRP"),
-    "ADA":  ("ADA-USD",  "layer1",  "Crypto", None, "Cardano"),
-    "AVAX": ("AVAX-USD", "layer1",  "Crypto", None, "Avalanche"),
-    "DOT":  ("DOT-USD",  "layer1",  "Crypto", None, "Polkadot"),
-    "TRX":  ("TRX-USD",  "layer1",  "Crypto", None, "TRON"),
-    # ── DeFi ──────────────────────────────────────────────────────────────────
-    "LINK": ("LINK-USD", "defi",    "Crypto", None, "Chainlink"),
-    "UNI":  ("UNI-USD",  "defi",    "Crypto", None, "Uniswap"),
-    "AAVE": ("AAVE-USD", "defi",    "Crypto", None, "Aave"),
-    # ── Layer 2 / Scaling ─────────────────────────────────────────────────────
-    "MATIC":("MATIC-USD","layer2",  "Crypto", None, "Polygon"),
-    "ARB":  ("ARB-USD",  "layer2",  "Crypto", None, "Arbitrum"),
-    "OP":   ("OP-USD",   "layer2",  "Crypto", None, "Optimism"),
+    "ETH":  ("ETH-USD",  "layer1",   "Crypto", None, "Ethereum"),
+    "SOL":  ("SOL-USD",  "layer1",   "Crypto", None, "Solana"),
+    "BNB":  ("BNB-USD",  "layer1",   "Crypto", None, "BNB"),
+    "ADA":  ("ADA-USD",  "layer1",   "Crypto", None, "Cardano"),
+    "AVAX": ("AVAX-USD", "layer1",   "Crypto", None, "Avalanche"),
+    # ── Payments ──────────────────────────────────────────────────────────────
+    "XRP":  ("XRP-USD",  "payments", "Crypto", None, "XRP"),
+    "XLM":  ("XLM-USD",  "payments", "Crypto", None, "Stellar"),
+    "TRX":  ("TRX-USD",  "payments", "Crypto", None, "TRON"),
+    # ── Emerging ──────────────────────────────────────────────────────────────
+    "SUI":  ("SUI-USD",  "emerging", "Crypto", None, "Sui"),
+    "HBAR": ("HBAR-USD", "emerging", "Crypto", None, "Hedera"),
+    "TON":  ("TON-USD",  "emerging", "Crypto", None, "Toncoin"),
+    "ALGO": ("ALGO-USD", "emerging", "Crypto", None, "Algorand"),
+    "MINA": ("MINA-USD", "emerging", "Crypto", None, "Mina"),
+    # ── Infrastructure ────────────────────────────────────────────────────────
+    "MATIC":("MATIC-USD","infra",    "Crypto", None, "Polygon"),
+    "DOT":  ("DOT-USD",  "infra",    "Crypto", None, "Polkadot"),
+    "LINK": ("LINK-USD", "infra",    "Crypto", None, "Chainlink"),
     # ── Meme ──────────────────────────────────────────────────────────────────
-    "DOGE": ("DOGE-USD", "meme",    "Crypto", None, "Dogecoin"),
-    "SHIB": ("SHIB-USD", "meme",    "Crypto", None, "Shiba Inu"),
-    # ── Equities ──────────────────────────────────────────────────────────────
-    "COIN": ("COIN",     "equity",  "NASDAQ", None, "Coinbase Global"),
-    "MSTR": ("MSTR",     "equity",  "NASDAQ", None, "Strategy (MicroStrategy)"),
-    "IBIT": ("IBIT",     "equity",  "NASDAQ", None, "iShares Bitcoin Trust"),
+    "DOGE": ("DOGE-USD", "meme",     "Crypto", None, "Dogecoin"),
+    "PEPE": ("PEPE-USD", "meme",     "Crypto", None, "Pepe"),
 }
 
 
