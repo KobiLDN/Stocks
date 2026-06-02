@@ -153,7 +153,7 @@
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
     <h1>Crypto <span>Heatmap</span></h1>
-    <div class="header-sub"><span id="hm-stock-count">20</span> assets · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
+    <div class="header-sub"><span id="hm-stock-count">19</span> coins · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -188,12 +188,12 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 crypto assets">📊 Dashboard</a>
+    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 19 coins">📊 Dashboard</a>
     <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 20 assets with news sentiment scoring">📰 News</a>
+    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 19 coins with news sentiment scoring">📰 News</a>
     <a href="signals.html"    class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html"    class="nav-link active" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every asset">📈 Charts</a>
+    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every coin">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -223,7 +223,7 @@
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">20 assets</span>
+    <span class="section-hdr-count" id="hm-all-count">19 coins</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
@@ -248,41 +248,40 @@ const NAMES = {
   'ETH':  'Ethereum',
   'SOL':  'Solana',
   'BNB':  'BNB',
-  'XRP':  'XRP',
   'ADA':  'Cardano',
   'AVAX': 'Avalanche',
-  'DOT':  'Polkadot',
+  'XRP':  'XRP',
+  'XLM':  'Stellar',
   'TRX':  'TRON',
-  'LINK': 'Chainlink',
-  'UNI':  'Uniswap',
-  'AAVE': 'Aave',
+  'SUI':  'Sui',
+  'HBAR': 'Hedera',
+  'TON':  'Toncoin',
+  'ALGO': 'Algorand',
+  'MINA': 'Mina',
   'MATIC':'Polygon',
-  'ARB':  'Arbitrum',
-  'OP':   'Optimism',
+  'DOT':  'Polkadot',
+  'LINK': 'Chainlink',
   'DOGE': 'Dogecoin',
-  'SHIB': 'Shiba Inu',
-  'COIN': 'Coinbase Global',
-  'MSTR': 'Strategy (MicroStrategy)',
-  'IBIT': 'iShares Bitcoin Trust',
+  'PEPE': 'Pepe',
 };
 
 const CAT_LABELS = {
-  'bitcoin': 'Bitcoin',
-  'layer1':  'Layer 1',
-  'defi':    'DeFi',
-  'layer2':  'Layer 2',
-  'meme':    'Meme',
-  'equity':  'Equity',
+  'bitcoin':  'Bitcoin',
+  'layer1':   'Layer 1',
+  'payments': 'Payments',
+  'emerging': 'Emerging',
+  'infra':    'Infra',
+  'meme':     'Meme',
 };
 
 /* Category display order */
 const CAT_ORDER = [
   'bitcoin',
   'layer1',
-  'defi',
-  'layer2',
+  'payments',
+  'emerging',
+  'infra',
   'meme',
-  'equity',
 ];
 
 const METRICS_CFG = {

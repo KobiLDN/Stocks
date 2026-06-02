@@ -336,12 +336,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 crypto assets">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 19 coins">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 20 assets with news sentiment scoring">📰 News</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 19 coins with news sentiment scoring">📰 News</a>
     <a href="signals.html" class="nav-link active" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every asset">📈 Charts</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every coin">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -366,7 +366,7 @@
         <div class="how-step-num">1</div>
         <div class="how-step-text">
           <h4>Live price &amp; news data</h4>
-          <p>GitHub Actions runs <code>update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 20 crypto assets via Yahoo Finance.</p>
+          <p>GitHub Actions runs <code>update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 19 coins via Yahoo Finance.</p>
         </div>
       </div>
 
@@ -374,7 +374,7 @@
         <div class="how-step-num">2</div>
         <div class="how-step-text">
           <h4>Web search for live catalysts</h4>
-          <p>Before ranking, the model is directed to search online for the latest news on the top highest-momentum assets — surfacing Bitcoin price moves, Layer 1 ecosystem news, DeFi protocol updates, regulatory developments, and exchange volume shifts.</p>
+          <p>Before ranking, the model is directed to search online for the latest news on the top highest-momentum assets — surfacing Bitcoin price moves, Layer 1 ecosystem news, Payments network updates, Emerging L1 developments, regulatory news, and exchange volume shifts.</p>
         </div>
       </div>
 
@@ -382,7 +382,7 @@
         <div class="how-step-num">3</div>
         <div class="how-step-text">
           <h4>AI ranking via DeepSeek</h4>
-          <p><code>generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.</p>
+          <p><code>generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each coin across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.</p>
         </div>
       </div>
 
@@ -411,7 +411,6 @@
     'ETH':  'Ethereum',
     'SOL':  'Solana',
     'BNB':  'BNB',
-    'XRP':  'XRP',
     'ADA':  'Cardano',
     'AVAX': 'Avalanche',
     'XRP':  'XRP',
