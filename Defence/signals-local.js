@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-01 13:37",
+  "updated": "2026-06-02 15:42",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +67.69%, 1M momentum +39.64% and 1W +57.22% with analyst consensus 'strong_buy' (score 1.17) and positive news sentiment 0.258.",
+      "drivers": [
+        "1M momentum +39.64%",
+        "1W momentum +57.22%",
+        "strong_buy consensus score 1.17",
+        "positive news sentiment 0.258"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "YTD +45.13% and 1M momentum +40.51% with the company landing its largest-ever order for Common Processing Architecture servers (news sentiment 0.128).",
+      "drivers": [
+        "1M momentum +40.51%",
+        "largest-ever order catalyst",
+        "YTD +45.13%",
+        "1W momentum +11.10%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RKLB",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "1Y return +358% and YTD +66.52% with 1M momentum +57.56%, driven by SpaceX IPO frenzy boosting space stocks; analyst score 1.61 (buy), beta 2.313.",
+      "drivers": [
+        "1M momentum +57.56%",
+        "1Y return +358%",
+        "SpaceX IPO catalyst",
+        "analyst score 1.61 (buy)"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1Y return +1110% and YTD +146.15% with 1D momentum +8.04% and 1M +30.36%; analyst consensus 'buy' (score 2.0) though high short interest at 11.35%.",
+      "drivers": [
+        "1Y return +1110%",
+        "YTD +146.15%",
+        "1D momentum +8.04%",
+        "news sentiment 0.064"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "1Y return +320% and 1M momentum +69.21% despite negative news sentiment -0.258 and high short interest 17.6%, but analyst score suggests caution (2.82 hold).",
+      "drivers": [
+        "1M momentum +69.21%",
+        "1Y return +320%",
+        "YTD +38.72%",
+        "SpaceX IPO space stock catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +11.52% with 1M momentum +15.70% and 1W +10.57%; P/E of 12.59 is attractively low, though analyst consensus is 'hold' (score 2.82) and short interest 7.5%.",
+      "drivers": [
+        "1M momentum +15.70%",
+        "1W momentum +10.57%",
+        "low P/E 12.59",
+        "YTD +11.52%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M momentum +20.90% and 1W +23.55% with positive news sentiment 0.293, but YTD -15.51% and high P/E of 191.95 limit upside conviction.",
+      "drivers": [
+        "1W momentum +23.55%",
+        "1M momentum +20.90%",
+        "positive news sentiment 0.293",
+        "analyst score 1.6 (buy)"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +37.78% with 1M momentum +19.58% and 1D +1.55%; news sentiment 0.256 and very low beta of 0.027, though P/E of 44.61 is elevated.",
+      "drivers": [
+        "YTD +37.78%",
+        "1M momentum +19.58%",
+        "low beta 0.027",
+        "positive news sentiment 0.256"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.73,
+      "rationale": "1M momentum +22.34% and 1W +6.76% with analyst score 1.83 ('buy') and positive news sentiment 0.245, though P/E of 58.88 and low dividend yield of 0.07%.",
+      "drivers": [
+        "1M momentum +22.34%",
+        "1W momentum +6.76%",
+        "analyst score 1.83 (buy)",
+        "positive news sentiment 0.245"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M momentum +10.56% and 1W +9.34% with analyst score 1.63 ('buy') and positive news sentiment 0.199, but YTD -22.21% and short interest of 12.11% are risks.",
+      "drivers": [
+        "1M momentum +10.56%",
+        "1W momentum +9.34%",
+        "analyst score 1.63 (buy)",
+        "positive news sentiment 0.199"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RKLB",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "+13.92% 1W",
         "buy consensus 1.9",
         "Dell order catalyst"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RKLB",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "RKLB up 73.89% in 1M and 88.81% YTD, with strong buy consensus and positive news sentiment 0.15; live catalyst: recent successful rocket launches and expanding government contracts.",
-      "drivers": [
-        "+73.89% 1M momentum",
-        "+88.81% YTD",
-        "analyst buy 1.61",
-        "catalyst: multiple launches"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRCY",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "MRCY surged 41.55% in 1M and 46.92% YTD on its largest-ever order for Common Processing Architecture servers, with positive news sentiment 0.128.",
-      "drivers": [
-        "+41.55% 1M momentum",
-        "+46.92% YTD",
-        "largest order catalyst",
-        "news sentiment 0.128"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "ASTS up 53.46% in 1M and 35.87% YTD but hold analyst consensus (2.82) and high short interest 17.6% add risk; catalyst: direct-to-cell service milestones.",
-      "drivers": [
-        "+53.46% 1M momentum",
-        "+35.87% YTD",
-        "high short 17.6%",
-        "catalyst: direct-to-cell progress"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "PL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "PL up 38.33% in 1M and 150.56% YTD with buy rating (2.0), though P/E is negative; catalyst: new satellite imagery contracts with NRO.",
-      "drivers": [
-        "+38.33% 1M momentum",
-        "+150.56% YTD",
-        "analyst buy 2.0",
-        "catalyst: NRO contract"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "HEI gained 28.99% in 1M with balanced 5.77% YTD, P/E 62.06 high but earnings beat catalyst, buy consensus (1.83), news sentiment 0.169.",
-      "drivers": [
-        "+28.99% 1M momentum",
-        "earnings beat",
-        "analyst buy 1.83",
-        "news sentiment 0.169"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "RCAT up 23.72% in 1M and 58.30% YTD with strong_buy consensus (1.2) but very high short interest 21.01% and no P/E; catalyst: Pentagon drone funding.",
-      "drivers": [
-        "+23.72% 1M momentum",
-        "+58.30% YTD",
-        "strong_buy 1.2",
-        "catalyst: DoD drone funding"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "RR.L up 21.74% in 1M and 11.73% YTD, P/E 19.38 reasonable, buy consensus (1.7); catalyst: increased engine orders from airlines.",
-      "drivers": [
-        "+21.74% 1M momentum",
-        "P/E 19.38",
-        "analyst buy 1.7",
-        "catalyst: engine orders"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "DRS up 20.26% in 1M and 40.76% YTD, P/E 45.57, no analyst rating but news sentiment 0.18; catalyst: new thermal drone camera unveiled.",
-      "drivers": [
-        "+20.26% 1M momentum",
-        "+40.76% YTD",
-        "news sentiment 0.18",
-        "catalyst: new product"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "QQ.L up 15.59% in 1M and 13.31% YTD, P/E 25.18, buy consensus (1.82), high news sentiment 0.307; catalyst: UK defense spending increases.",
-      "drivers": [
-        "+15.59% 1M momentum",
-        "analyst buy 1.82",
-        "news sentiment 0.307",
-        "catalyst: UK defense budget"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "PLTR up 12.53% in 1M but YTD -6.74%, very high P/E 175.89, buy consensus (1.9); catalyst: Dell blockbuster orders triggering stock surge.",
-      "drivers": [
-        "+12.53% 1M momentum",
-        "buy consensus 1.9",
-        "catalyst: Dell orders",
-        "negative YTD -6.74%"
       ]
     }
   ]
