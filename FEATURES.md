@@ -2,7 +2,22 @@
 
 ## Backlog
 
-- **Energy sector** — dedicated `Energy\` subfolder and sector card on hub
+- **Energy sector** — 20 stocks across 5 categories; full 7-page suite + hub card + workflows
+  - Oil Majors (6): XOM, CVX, SHEL, BP, TTE, EQNR
+  - E&P & Refining (5): COP, OXY, EOG, MPC, VLO
+  - Oilfield Services (3): SLB, HAL, BKR
+  - Utilities (2): NEE, SSE.L (LSE — divide by 100)
+  - Clean Energy (4): ENPH, FSLR, BEPC, DNNGY (Ørsted OTC)
+
+- **Global Mega-Cap Leaders sector** — 50 stocks across 6–7 categories; full 7-page suite + hub card + workflows
+  - Big Tech (6): MSFT, AAPL, AMZN, GOOGL, META, NVDA
+  - Financials (6): BRK-B, JPM, V, MA, BAC, MS
+  - Healthcare (6): LLY, JNJ, UNH, ABBV, NVO, TMO
+  - Consumer (7): WMT, COST, KO, PEP, HD, MCD, PG
+  - Energy & Industrials (6): XOM, CVX, SHEL, TM, NESN (NSRGY), 2222.SR
+  - Tech & Semis (12): AVGO, TSM, ASML, QCOM, ORCL, SAP, CRM, ADBE, CSCO, IBM, ACN, AMD
+  - Global & Growth (7): BABA, TCEHY, SSNLF, LVMUY, TSLA, NFLX, PLTR
+  - Notes: Samsung (SSNLF) + Tencent (TCEHY) + Saudi Aramco (2222.SR) kept in — expect some N/A on return fields; #50 Netflix duplicate replaced with Thermo Fisher (TMO)
 
 ## Done
 
