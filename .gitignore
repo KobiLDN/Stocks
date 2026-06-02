@@ -15,3 +15,6 @@ Biotech/*.pyc
 Biotech/server.py
 Biotech/start.bat
 Biotech/PROMPT.txt
+
+# Claude Code config
+.claude/
