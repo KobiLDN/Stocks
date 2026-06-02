@@ -16,7 +16,11 @@ Biotech/server.py
 Biotech/start.bat
 Biotech/PROMPT.txt
 
-# Claude Code config
-.claude/
+# Claude Code config — ignore everything except MCP server settings
+.claude/*
+!.claude/settings.json
+
+# T212 API key — never commit
+t212_mcp/.key
 
 # generate_export.py outputs — committed by GitHub Actions, not manually

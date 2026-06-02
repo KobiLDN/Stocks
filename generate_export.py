@@ -2,12 +2,58 @@
 generate_export.py — combines all sector data into a dated snapshot + updates manifest
 Run: python generate_export.py  (from repo root)
 Also called by .github/workflows/generate-export.yml after each evening price update.
+If T212_API_KEY env var is set, portfolio positions are fetched and merged in.
 """
 import json, re, csv, os
 from datetime import datetime, timezone
+from pathlib import Path
 
 SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "Tech"]
 BASE    = os.path.dirname(os.path.abspath(__file__))
+
+# ── T212 portfolio fetch (optional) ──────────────────────────────────────────
+def fetch_t212_portfolio():
+    key_file = Path(BASE) / "t212_mcp" / ".key"
+    api_key  = key_file.read_text().strip() if key_file.exists() else os.getenv("T212_API_KEY", "")
+    if not api_key:
+        return None, None
+    try:
+        import httpx
+        headers = {"Authorization": api_key}
+        base    = "https://live.trading212.com/api/v0"
+        pos_r   = httpx.get(f"{base}/equity/portfolio",      headers=headers, timeout=15)
+        cash_r  = httpx.get(f"{base}/equity/account/cash",   headers=headers, timeout=15)
+        pos_r.raise_for_status(); cash_r.raise_for_status()
+
+        def clean(t): return re.split(r'_', t)[0]
+
+        positions = []
+        held_set  = set()
+        for p in pos_r.json():
+            ticker = clean(p.get("ticker", ""))
+            held_set.add(ticker)
+            positions.append({
+                "ticker":      ticker,
+                "t212_ticker": p.get("ticker"),
+                "quantity":    p.get("quantity"),
+                "avg_price":   p.get("averagePrice"),
+                "ppl":         p.get("ppl"),
+                "total_value": round((p.get("quantity") or 0) * (p.get("currentPrice") or 0), 2),
+            })
+        positions.sort(key=lambda x: x["total_value"] or 0, reverse=True)
+
+        c = cash_r.json()
+        summary = {
+            "total_value": c.get("total"),
+            "invested":    c.get("invested"),
+            "free_cash":   c.get("free"),
+            "total_ppl":   c.get("result"),
+        }
+        print(f"  T212: fetched {len(positions)} positions, total £{summary['total_value']}")
+        return {"summary": summary, "positions": positions}, held_set
+    except Exception as e:
+        print(f"  T212: fetch failed — {e}")
+        return None, None
 
 def parse_prices(path):
     raw = open(path, encoding="utf-8").read()
