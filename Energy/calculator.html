@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="What-If investment calculator — see what £100 to £10,000 invested in technology stocks at the start of 2026 is worth today.">
-<title>Technology — What-If Calculator</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="What-If investment calculator — see what £100 to £10,000 invested in Energy stocks at the start of 2026 is worth today.">
+<title>Energy — What-If Calculator</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-
 
   /* Search + count bar */
   .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
@@ -31,20 +30,9 @@
   .row-count span { color: var(--accent); font-weight: 700; }
 
   /* Table */
-  .table-wrap {
-    overflow-x: auto;
-    border: 1px solid var(--border);
-    margin-bottom: 4px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
   thead { background: var(--surface2); }
-
   th {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -56,31 +44,18 @@
     border-bottom: 1px solid var(--border);
     white-space: nowrap;
   }
-
   th.sortable { cursor: pointer; user-select: none; }
   th.sortable:hover { color: var(--accent); }
   th.sort-desc::after { content: ' ▼'; color: var(--accent); }
   th.sort-asc::after  { content: ' ▲'; color: var(--accent); }
-
   th.inv-col { text-align: right; }
-
-  td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-    vertical-align: middle;
-  }
-
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
   tr:last-child td { border-bottom: none; }
   tbody tr:hover { background: var(--surface); }
 
-  .ticker-cell {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    font-weight: 700;
-  }
+  .ticker-cell { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
   .ticker-link { text-decoration: none; color: inherit; }
   .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
-
   .company-cell { color: var(--muted); font-size: 12px; }
 
   .cat-badge {
@@ -90,73 +65,38 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-mega-cap            { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
-  .cat-semiconductors      { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
-  .cat-enterprise-software { background: rgba(68,136,255,0.1);  color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
-  .cat-cybersecurity       { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
-  .cat-consumer-platform   { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
-  .cat-hardware-infra      { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  /* Energy category badge colours */
+  .cat-oil-majors        { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  .cat-ep-refining       { background: rgba(0,212,255,0.08);  color: var(--accent2); border: 1px solid rgba(0,212,255,0.2); }
+  .cat-oilfield-services { background: rgba(0,212,255,0.08);  color: var(--accent);  border: 1px solid rgba(0,212,255,0.2); }
+  .cat-utilities         { background: rgba(34,197,94,0.1);   color: var(--green);   border: 1px solid rgba(34,197,94,0.25); }
+  .cat-clean-energy      { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
 
   .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-flat { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
 
   .inv-cell { text-align: right; }
-  .inv-value {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 700;
-    font-size: 13px;
-    display: block;
-  }
+  .inv-value { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 13px; display: block; }
   .inv-value.pos { color: var(--green); }
   .inv-value.neg { color: var(--red); }
-  .inv-pl {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
-    display: block;
-    margin-top: 2px;
-  }
+  .inv-pl { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); display: block; margin-top: 2px; }
   .inv-pl.pos { color: var(--green); }
   .inv-pl.neg { color: var(--red); }
 
-  .mult-cell {
-    text-align: center;
-    white-space: nowrap;
-  }
-  .mult-value {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 700;
-    font-size: 15px;
-  }
+  .mult-cell { text-align: center; white-space: nowrap; }
+  .mult-value { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 15px; }
   .mult-value.pos  { color: var(--green); }
   .mult-value.neg  { color: var(--red); }
   .mult-value.flat { color: var(--muted); }
 
-  /* Totals row */
-  .totals-row td {
-    background: var(--surface2);
-    border-top: 2px solid var(--accent);
-    font-weight: 700;
-  }
-  .totals-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
+  .totals-row td { background: var(--surface2); border-top: 2px solid var(--accent); font-weight: 700; }
+  .totals-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
 
   footer {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 24px;
-    color: var(--muted);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    border-top: 1px solid var(--border);
-    margin-top: 48px;
+    position: relative; z-index: 1; text-align: center; padding: 24px;
+    color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    border-top: 1px solid var(--border); margin-top: 48px;
   }
 
   @media (max-width: 768px) {
@@ -174,8 +114,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>Technology <span>Calculator</span></h1>
-    <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
+        <h1>Energy <span>Calculator</span></h1>
+        <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -195,7 +135,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card active" href="calculator.html">
+<a class="sector-card" href="../Tech/calculator.html">
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
@@ -203,7 +143,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
-<a class="sector-card" href="../Energy/calculator.html">
+<a class="sector-card active" href="calculator.html">
   <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Energy</div>
 </a>
@@ -213,12 +153,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks">📊 Dashboard</a>
-    <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html"    class="nav-link" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
-    <a href="heatmap.html"    class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 energy stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 20 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="Energy top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="Price history charts for every energy stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link active" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -227,7 +167,7 @@
 
   <div class="search-count-bar">
     <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
-    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
+    <span class="row-count">Showing <span id="calc-count">—</span> of 20 energy stocks</span>
   </div>
 
   <div class="table-wrap">
@@ -249,55 +189,44 @@
     </table>
   </div>
 
-
 </div>
-
 
 <script src="prices-data.js"></script>
 <script>
-  /* ---- DATA ---- */
   const NAMES = {
-    'AAPL':  'Apple',
-    'MSFT':  'Microsoft',
-    'GOOGL': 'Alphabet (Google)',
-    'AMZN':  'Amazon',
-    'META':  'Meta Platforms',
-    'NVDA':  'NVIDIA',
-    'AMD':   'Advanced Micro Devices',
-    'INTC':  'Intel',
-    'TSM':   'Taiwan Semiconductor',
-    'AVGO':  'Broadcom',
-    'QCOM':  'Qualcomm',
-    'ARM':   'Arm Holdings',
-    'ASML':  'ASML Holding',
-    'MU':    'Micron Technology',
-    'AMAT':  'Applied Materials',
-    'ORCL':  'Oracle',
-    'CRM':   'Salesforce',
-    'ADBE':  'Adobe',
-    'NOW':   'ServiceNow',
-    'SNOW':  'Snowflake',
-    'INTU':  'Intuit',
-    'CRWD':  'CrowdStrike',
-    'PANW':  'Palo Alto Networks',
-    'NET':   'Cloudflare',
-    'FTNT':  'Fortinet',
-    'NFLX':  'Netflix',
-    'SHOP':  'Shopify',
-    'SPOT':  'Spotify',
-    'UBER':  'Uber',
-    'CSCO':  'Cisco Systems',
-    'PLTR':  'Palantir Technologies',
+    'XOM':   'ExxonMobil',
+    'CVX':   'Chevron',
+    'SHEL':  'Shell',
+    'BP':    'BP p.l.c.',
+    'TTE':   'TotalEnergies',
+    'EQNR':  'Equinor',
+    'COP':   'ConocoPhillips',
+    'OXY':   'Occidental Petroleum',
+    'EOG':   'EOG Resources',
+    'MPC':   'Marathon Petroleum',
+    'VLO':   'Valero Energy',
+    'SLB':   'SLB (Schlumberger)',
+    'HAL':   'Halliburton',
+    'BKR':   'Baker Hughes',
+    'NEE':   'NextEra Energy',
+    'SSE.L': 'SSE plc',
+    'ENPH':  'Enphase Energy',
+    'FSLR':  'First Solar',
+    'BEPC':  'Brookfield Renewable Corp',
+    'DNNGY': 'Ørsted',
   };
 
   const CAT_LABELS = {
-    'mega-cap':            'Mega Cap',
-    'semiconductors':      'Semiconductors',
-    'enterprise-software': 'Enterprise SW',
-    'cybersecurity':       'Cybersecurity',
-    'consumer-platform':   'Consumer',
-    'hardware-infra':      'Hardware',
+    'oil-majors':        'Oil Majors',
+    'ep-refining':       'E&P/Refining',
+    'oilfield-services': 'Oilfield Svcs',
+    'utilities':         'Utilities',
+    'clean-energy':      'Clean Energy',
   };
+
+  function yahooUrl(ticker) {
+    return 'https://finance.yahoo.com/quote/' + ticker + '/';
+  }
 
   function fmtGbp(val) {
     if (val >= 1000) return '£' + val.toLocaleString('en-GB', { maximumFractionDigits: 0 });
@@ -321,7 +250,6 @@
     </td>`;
   }
 
-  /* ---- SORT ---- */
   let sortState = { col: 'ytd', dir: -1 };
 
   function multCell(ytdPct) {
@@ -338,7 +266,6 @@
     renderTable(window._calcData);
   }
 
-  /* ---- FILTER ---- */
   function filterCalc(query) {
     const q = query.toLowerCase().trim();
     const filtered = q
@@ -347,7 +274,6 @@
     renderTable(filtered);
   }
 
-  /* ---- RENDER ---- */
   function renderTable(data) {
     const sorted = [...data].sort((a, b) => {
       if (sortState.col === 'ticker') return a.ticker.localeCompare(b.ticker) * sortState.dir;
@@ -360,7 +286,7 @@
       const ytdCls = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
       const catLabel = CAT_LABELS[s.category] || s.category;
       return `<tr>
-        <td class="ticker-cell"><a href="https://finance.yahoo.com/quote/${s.ticker}/" target="_blank" class="ticker-link">${s.ticker}</a></td>
+        <td class="ticker-cell"><a href="${yahooUrl(s.ticker)}" target="_blank" class="ticker-link">${s.ticker}</a></td>
         <td class="company-cell">${s.name}</td>
         <td><span class="cat-badge cat-${s.category}">${catLabel}</span></td>
         <td><span class="${ytdCls}">${s.ytdPct >= 0 ? '+' : ''}${s.ytdPct.toFixed(2)}%</span></td>
@@ -371,7 +297,6 @@
       </tr>`;
     }).join('');
 
-    // Totals
     const totals = [100, 1000, 10000].map(inv => {
       const total = data.reduce((sum, s) => sum + inv * (1 + s.ytdPct / 100), 0);
       const pl = total - inv * data.length;
@@ -389,7 +314,6 @@
     </tr>`;
   }
 
-  /* ---- INIT ---- */
   function buildCalc(stocks) {
     const data = stocks
       .map(s => ({
@@ -399,7 +323,6 @@
         ytdPct:   parseFloat(s.change_ytd) || 0,
       }))
       .filter(s => s.ytdPct !== 0);
-
     window._calcData = data;
     renderTable(data);
   }

@@ -432,6 +432,25 @@
         </div>
       </a>
 
+      <a class="card live" href="Energy/index.html">
+        <div class="card-top">
+          <div class="card-icon">⚡</div>
+          <span class="badge badge-live">Live</span>
+        </div>
+        <div class="card-name">Energy</div>
+        <div class="card-desc">20 stocks across Oil Majors (XOM/CVX/SHEL/BP), E&amp;P/Refining (COP/OXY/EOG), Oilfield Services (SLB/HAL/BKR), Utilities (NEE/SSE), and Clean Energy (ENPH/FSLR/BEPC/DNNGY).</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Energy/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-Energy"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </a>
+
     </div>
   </main>
 
@@ -446,6 +465,7 @@
       { id: 'Biotech', signals: 'Biotech/signals-local.json', prices: 'Biotech/prices-data.js' },
       { id: 'Tech',    signals: 'Tech/signals-local.json',    prices: 'Tech/prices-data.js' },
       { id: 'Crypto',  signals: 'Crypto/signals-local.json',  prices: 'Crypto/prices-data.js' },
+      { id: 'Energy',  signals: 'Energy/signals-local.json',  prices: 'Energy/prices-data.js' },
     ];
 
     async function fetchPriceMap(path) {

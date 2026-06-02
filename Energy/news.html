@@ -1,16 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment analysis across 30 biotech stocks. Filter by category and sort by recency or sentiment score.">
-<title>Biotech — News</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="Latest news and sentiment analysis across 20 Energy stocks. Filter by category and sort by recency or sentiment score.">
+<title>Energy — News</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  /* Filter bar */
   .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
@@ -68,14 +67,7 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  /* Toolbar */
-  .toolbar {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
+  .toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
   #news-search {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -90,15 +82,7 @@
   #news-search:focus { border-color: var(--accent); }
   #news-search::placeholder { color: var(--muted); }
   .sort-group { display: flex; gap: 4px; }
-  .sort-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--muted);
-    align-self: center;
-    margin-right: 4px;
-  }
+  .sort-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); align-self: center; margin-right: 4px; }
   .sort-btn {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
@@ -116,7 +100,6 @@
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); margin-left: auto; }
   .row-count span { color: var(--accent); font-weight: 700; }
 
-  /* News feed */
   .news-feed { display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px; }
   .news-card {
     display: flex;
@@ -131,95 +114,29 @@
   .sent-neg  { background: var(--red); }
   .sent-neu  { background: var(--muted); }
   .news-body { flex: 1; padding: 14px 18px; min-width: 0; }
-  .news-meta-top {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 8px;
-  }
-  .news-ticker {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--text);
-  }
+  .news-meta-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .news-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; text-decoration: none; color: var(--text); }
   .news-ticker:hover { color: var(--accent); text-decoration: underline; }
   .news-company { color: var(--muted); font-size: 12px; }
-  .cat-badge {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    padding: 2px 7px;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-  }
-  .cat-large-cap    { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
-  .cat-uk-listed    { background: rgba(255,215,0,0.1);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.25); }
-  .cat-gene-editing { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
-  .cat-genomics     { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
-  .cat-oncology     { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
-  .cat-mrna         { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
-  .cat-rare-disease { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
-  .cat-metabolic    { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
-  .cat-neuroscience { background: rgba(167,139,250,0.1); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
-  .news-time {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    margin-left: auto;
-  }
-  .news-headline {
-    display: block;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1.45;
-    color: var(--text);
-    text-decoration: none;
-    margin-bottom: 8px;
-  }
+  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .cat-oil-majors        { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.35); }
+  .cat-ep-refining       { background: rgba(255,107,53,0.15);  color: var(--accent2);border: 1px solid rgba(255,107,53,0.35); }
+  .cat-oilfield-services { background: rgba(0,212,255,0.1);    color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-utilities         { background: rgba(0,230,118,0.1);    color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+  .cat-clean-energy      { background: rgba(163,230,53,0.12);  color: var(--lime);   border: 1px solid rgba(163,230,53,0.3); }
+  .news-time { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-left: auto; }
+  .news-headline { display: block; font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); text-decoration: none; margin-bottom: 8px; }
   .news-headline:hover { color: var(--accent); }
-  .news-meta-bot {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-  }
-  .sent-pill {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 2px 7px;
-    letter-spacing: 0.5px;
-  }
+  .news-meta-bot { display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .sent-pill { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; padding: 2px 7px; letter-spacing: 0.5px; }
   .sent-pill.sent-pos { background: rgba(0,230,118,0.12);  color: var(--green); border: 1px solid rgba(0,230,118,0.3); }
   .sent-pill.sent-neg { background: rgba(255,68,68,0.12);  color: var(--red);   border: 1px solid rgba(255,68,68,0.3); }
   .sent-pill.sent-neu { background: rgba(90,122,154,0.12); color: var(--muted); border: 1px solid rgba(90,122,154,0.3); }
 
-  .empty-state {
-    text-align: center;
-    padding: 60px 24px;
-    color: var(--muted);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    line-height: 1.7;
-    border: 1px solid var(--border);
-  }
+  .empty-state { text-align: center; padding: 60px 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.7; border: 1px solid var(--border); }
   .empty-state strong { color: var(--accent); }
 
-  footer {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    padding: 24px;
-    color: var(--muted);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    border-top: 1px solid var(--border);
-    margin-top: 48px;
-  }
+  footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); margin-top: 48px; }
 
   @media (max-width: 768px) {
     h1 { font-size: 26px; }
@@ -237,8 +154,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-        <h1>Biotech <span>News</span></h1>
-        <div class="header-sub">Latest headlines across all tracked stocks · sentiment scored locally (VADER)</div>
+        <h1>Energy <span>News</span></h1>
+        <div class="header-sub">Latest headlines across all 20 tracked stocks · sentiment scored locally (VADER)</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -254,7 +171,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Defence</div>
 </a>
-<a class="sector-card active" href="news.html">
+<a class="sector-card" href="../Biotech/news.html">
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
@@ -266,7 +183,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
-<a class="sector-card" href="../Energy/news.html">
+<a class="sector-card active" href="news.html">
   <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Energy</div>
 </a>
@@ -276,12 +193,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 30 biotech stocks">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 energy stocks">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 30 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="Top 10 biotech picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
+    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 20 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="Energy top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="charts.html" class="nav-link" data-tooltip="Price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -316,57 +233,39 @@
 
 <script src="prices-data.js"></script>
 <script>
-  /* ---- DATA ---- */
   const NAMES = {
-    'AMGN': 'Amgen',                     'GILD': 'Gilead Sciences',
-    'REGN': 'Regeneron Pharmaceuticals', 'VRTX': 'Vertex Pharmaceuticals',
-    'BIIB': 'Biogen',                    'BMY':  'Bristol-Myers Squibb',
-    'AZN':  'AstraZeneca',               'GSK':  'GSK plc',
-    'CRSP': 'CRISPR Therapeutics',       'BEAM': 'Beam Therapeutics',
-    'NTLA': 'Intellia Therapeutics',     'EDIT': 'Editas Medicine',
-    'ILMN': 'Illumina',                  'PACB': 'Pacific Biosciences',
-    'NTRA': 'Natera',                    'RXRX': 'Recursion Pharmaceuticals',
-    'INCY': 'Incyte Corporation',        'EXEL': 'Exelixis',
-    'ALNY': 'Alnylam Pharmaceuticals',   'RCUS': 'Arcus Biosciences',
-    'MRNA': 'Moderna',                   'BNTX': 'BioNTech',
-    'NVAX': 'Novavax',                   'BMRN': 'BioMarin Pharmaceutical',
-    'SRPT': 'Sarepta Therapeutics',
-    'COAG': 'Hemab Therapeutics',      'NVO':  'Novo Nordisk',
-    'LLY':  'Eli Lilly',                 'LEGN': 'Legend Biotech',
-    'IONS': 'Ionis Pharmaceuticals',
+    'XOM':   'ExxonMobil',            'CVX':   'Chevron',
+    'SHEL':  'Shell',                 'BP':    'BP p.l.c.',
+    'TTE':   'TotalEnergies',         'EQNR':  'Equinor',
+    'COP':   'ConocoPhillips',        'OXY':   'Occidental Petroleum',
+    'EOG':   'EOG Resources',         'MPC':   'Marathon Petroleum',
+    'VLO':   'Valero Energy',         'SLB':   'SLB (Schlumberger)',
+    'HAL':   'Halliburton',           'BKR':   'Baker Hughes',
+    'NEE':   'NextEra Energy',        'SSE.L': 'SSE plc',
+    'ENPH':  'Enphase Energy',        'FSLR':  'First Solar',
+    'BEPC':  'Brookfield Renewable',  'DNNGY': 'Ørsted',
   };
 
   const CAT_LABELS = {
-    'large-cap':     'Large Cap',
-    'uk-listed':     'UK Listed',
-    'gene-editing':  'Gene Editing',
-    'genomics':      'Genomics',
-    'oncology':      'Oncology',
-    'mrna':          'mRNA',
-    'rare-disease':  'Rare Disease',
-    'metabolic':     'Metabolic',
-    'neuroscience':  'Neuroscience',
+    'oil-majors':        'Oil Majors',
+    'ep-refining':       'E&P / Refining',
+    'oilfield-services': 'Oilfield Svcs',
+    'utilities':         'Utilities',
+    'clean-energy':      'Clean Energy',
   };
 
   const CAT_TOOLTIPS = {
-    'large-cap':     'Established pharma/biotech giants with diversified pipelines and multi-billion market caps',
-    'uk-listed':     'UK-listed companies traded on the London Stock Exchange — prices shown in GBP',
-    'gene-editing':  'Companies using CRISPR and base editing to directly modify DNA — high risk, high reward pipeline plays',
-    'genomics':      'Genome sequencing platforms and bioinformatics — the tools that read and interpret DNA',
-    'oncology':      'Cancer-focused biotechs — targeted therapies, immunotherapies and ADCs across tumour types',
-    'mrna':          'mRNA platform companies — technology that programs cells to produce therapeutic proteins or immune responses',
-    'rare-disease':  'Biotechs targeting rare (orphan) diseases — smaller patient populations but faster FDA pathways and pricing power',
-    'metabolic':     'Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders',
-    'neuroscience':  'Neurology and CNS-focused biotechs — Alzheimer\'s, ALS, depression and other brain &amp; nervous system disorders',
+    'oil-majors':        'Vertically integrated supermajors — ExxonMobil, Chevron, Shell, BP, TotalEnergies, Equinor',
+    'ep-refining':       'Exploration, production and refining companies — ConocoPhillips, OXY, EOG, Marathon, Valero',
+    'oilfield-services': 'Equipment and services for oil and gas drilling — SLB, Halliburton, Baker Hughes',
+    'utilities':         'Power generation and grid utilities — NextEra Energy (US) and SSE (UK)',
+    'clean-energy':      'Renewable energy developers and equipment — Enphase, First Solar, Brookfield Renewable, Ørsted',
   };
 
-  const YAHOO_SUFFIX = { 'AZN': 'AZN.L', 'GSK': 'GSK.L' };
   function yahooUrl(ticker) {
-    const sym = YAHOO_SUFFIX[ticker] || ticker;
-    return 'https://finance.yahoo.com/quote/' + sym + '/';
+    return 'https://finance.yahoo.com/quote/' + ticker + '/';
   }
 
-  /* ---- HELPERS ---- */
   function escapeHtml(s) {
     return String(s == null ? '' : s)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -395,7 +294,6 @@
     return new Date(unixSec * 1000).toLocaleDateString();
   }
 
-  /* ---- STATE ---- */
   let sortMode = 'newest';
   let activeCategory = 'all';
   let searchQuery = '';
@@ -428,7 +326,6 @@
     renderFeed();
   }
 
-  /* ---- RENDER ---- */
   function renderFeed() {
     let items = window._newsItems || [];
 
@@ -474,7 +371,6 @@
     feed.innerHTML = sorted.map(n => {
       const sc = sentClass(n.sentiment);
       const catLabel = CAT_LABELS[n.category] || n.category;
-      const url = n.url || yahooUrl(n.ticker);
       const headlineTag = n.url
         ? '<a class="news-headline" href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener">' + escapeHtml(n.title) + '</a>'
         : '<span class="news-headline">' + escapeHtml(n.title) + '</span>';
@@ -497,18 +393,16 @@
     }).join('');
   }
 
-  /* ---- BUILD FILTER BUTTONS ---- */
   function buildFilterBar() {
     const cats = ['all', ...Object.keys(CAT_LABELS)];
     const bar = document.getElementById('filter-bar');
     bar.innerHTML = cats.map(cat => {
       const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
-      const tip   = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
+      const tip = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
       return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '"' + tip + ' onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
     }).join('');
   }
 
-  /* ---- INIT ---- */
   function buildNews(stocks) {
     const items = [];
     stocks.forEach(s => {

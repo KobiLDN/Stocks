@@ -1,67 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price history charts for all 31 technology stocks. Filter by category.">
-<title>Technology — Charts</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="Price history charts for all 20 Energy stocks. Filter by category.">
+<title>Energy — Charts</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  .toolbar {
-    position: relative;
-    z-index: 25;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-  }
-  .toolbar-inner {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .toolbar-row {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-
-  .toolbar-group {
-    display: flex;
-    gap: 2px;
-    align-items: center;
-  }
-
-  .toolbar-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-right: 8px;
-  }
-
-  .tool-btn {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 1px;
-    padding: 7px 14px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.15s;
-    text-transform: uppercase;
-    position: relative;
-  }
+  .toolbar { position: relative; z-index: 25; padding: 12px 0; border-bottom: 1px solid var(--border); background: var(--bg); }
+  .toolbar-inner { max-width: 1600px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .toolbar-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .toolbar-group { display: flex; gap: 2px; align-items: center; }
+  .toolbar-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-right: 8px; }
+  .tool-btn { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; padding: 7px 14px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; text-transform: uppercase; position: relative; }
+  .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .tool-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .divider { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
 
   .cat-btn[data-tooltip]::after {
     content: attr(data-tooltip);
@@ -104,264 +61,70 @@
   .cat-btn:hover[data-tooltip]::after,
   .cat-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .tool-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
-
-  .divider { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
-
   /* CAT BUTTONS in toolbar */
-  .cat-btn {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.15s;
-    position: relative;
-  }
+  .cat-btn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; position: relative; }
   .cat-btn:hover { color: var(--accent); border-color: var(--accent); }
-  .cat-btn.active-mega-cap            { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }
-  .cat-btn.active-semiconductors      { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }
-  .cat-btn.active-enterprise-software { background: var(--blue);    border-color: var(--blue);    color: var(--bg); }
-  .cat-btn.active-cybersecurity       { background: var(--green);   border-color: var(--green);   color: var(--bg); }
-  .cat-btn.active-consumer-platform   { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }
-  .cat-btn.active-hardware-infra      { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }
 
-  /* SINGLE VIEW */
-  #single-view {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 0;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 24px;
-    gap: 24px;
-    align-items: start;
-  }
+  /* Category button active states — Energy colours */
+  .cat-btn.active-oil-majors       { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .cat-btn.active-ep-refining      { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
+  .cat-btn.active-oilfield-services{ background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .cat-btn.active-utilities        { background: var(--green);  border-color: var(--green);  color: var(--bg); }
+  .cat-btn.active-clean-energy     { background: var(--lime);   border-color: var(--lime);   color: var(--bg); }
 
-  .sidebar {
-    position: sticky;
-    top: 24px;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
-  }
+  #single-view { position: relative; z-index: 1; display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1600px; margin: 0 auto; padding: 24px; align-items: start; }
+  .sidebar { position: sticky; top: 24px; max-height: calc(100vh - 120px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+  .sidebar-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; padding-left: 2px; }
 
-  .sidebar-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    padding-left: 2px;
-  }
+  .cat-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 12px 4px; display: block; font-weight: 700; margin-top: 8px; }
+  .cat-label.oil-majors        { color: var(--amber); }
+  .cat-label.ep-refining       { color: var(--accent2); }
+  .cat-label.oilfield-services { color: var(--accent); }
+  .cat-label.utilities         { color: var(--green); }
+  .cat-label.clean-energy      { color: var(--lime); }
 
-  .cat-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 8px 12px 4px;
-    display: block;
-    font-weight: 700;
-    margin-top: 8px;
-  }
-
-  .cat-label.mega-cap            { color: var(--accent); }
-  .cat-label.semiconductors      { color: var(--rose); }
-  .cat-label.enterprise-software { color: var(--blue); }
-  .cat-label.cybersecurity       { color: var(--green); }
-  .cat-label.consumer-platform   { color: var(--purple); }
-  .cat-label.hardware-infra      { color: var(--amber); }
-
-  .stock-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 8px 12px;
-    background: transparent;
-    border: none;
-    border-left: 2px solid transparent;
-    color: var(--muted);
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.15s;
-  }
-
+  .stock-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 12px; background: transparent; border: none; border-left: 2px solid transparent; color: var(--muted); cursor: pointer; text-align: left; transition: all 0.15s; }
   .stock-btn:hover { background: var(--surface); color: var(--text); }
   .stock-btn.active { background: var(--surface2); border-left-color: var(--accent); color: var(--text); }
-
-  .btn-ticker {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    font-weight: 700;
-    min-width: 52px;
-  }
-
+  .btn-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; min-width: 52px; }
   .btn-name { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .stock-btn.active .btn-name { color: var(--text); }
 
   .chart-area { min-width: 0; }
-
-  .chart-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
+  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
   .chart-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; color: var(--text); }
   .chart-name   { font-size: 15px; color: var(--muted); margin-left: 12px; }
+  .chart-widget { border: 1px solid var(--border); background: var(--surface); height: 580px; }
+  .chart-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 8px; }
 
-  .chart-widget {
-    border: 1px solid var(--border);
-    background: var(--surface);
-    height: 580px;
-  }
-
-  /* GRID VIEW */
-  #grid-view {
-    position: relative;
-    z-index: 1;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 24px;
-    display: none;
-  }
-
-  .grid-heading {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-  }
-
+  #grid-view { position: relative; z-index: 1; max-width: 1600px; margin: 0 auto; padding: 24px; display: none; }
+  .grid-heading { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
   .grid-heading span { color: var(--accent); }
+  .chart-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 16px; }
+  .grid-card { border: 1px solid var(--border); background: var(--surface); }
+  .grid-card-header { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  .grid-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 700; }
+  .grid-name { font-size: 12px; color: var(--muted); }
 
-  .chart-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
-    gap: 16px;
-  }
-
-  .grid-card {
-    border: 1px solid var(--border);
-    background: var(--surface);
-  }
-
-  .grid-card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .grid-ticker {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 15px;
-    font-weight: 700;
-  }
-
-  .grid-name {
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  .chart-note {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 8px;
-  }
-
-  /* Mobile sidebar toggle button */
-  .sidebar-toggle {
-    display: none;
-    width: 100%;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 10px 16px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--accent);
-    cursor: pointer;
-    text-align: left;
-    margin-bottom: 12px;
-  }
+  .sidebar-toggle { display: none; width: 100%; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 10px 16px; background: var(--surface); border: 1px solid var(--border); color: var(--accent); cursor: pointer; text-align: left; margin-bottom: 12px; }
 
   @media (max-width: 900px) {
-    #single-view {
-      grid-template-columns: 1fr;
-      padding: 16px 12px;
-      gap: 12px;
-    }
-
-    .sidebar {
-      position: static;
-      max-height: none;
-    }
-
+    #single-view { grid-template-columns: 1fr; padding: 16px 12px; gap: 12px; }
+    .sidebar { position: static; max-height: none; }
     .chart-grid { grid-template-columns: 1fr; }
   }
-
   @media (max-width: 768px) {
     .nav-inner { padding: 8px 12px; flex-wrap: wrap; }
     .nav-link { font-size: 11px; padding: 7px 14px; letter-spacing: 1px; }
     header { padding: 20px 0 16px; }
-    .header-inner { padding-left: 27px; }
-    .header-inner::before { left: 12px; }
-
-    .toolbar {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 12px;
-    }
-
+    .toolbar { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; }
     .divider { display: none !important; }
-    .toolbar-label { font-size: 9px; }
-    .tool-btn { font-size: 10px; padding: 6px 10px; }
-
     #cat-toolbar { flex-wrap: wrap; gap: 4px; }
-
     .sidebar-toggle { display: block; }
-
-    .sidebar {
-      display: none;
-      max-height: 300px;
-      overflow-y: auto;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      margin-bottom: 12px;
-    }
-
+    .sidebar { display: none; max-height: 300px; overflow-y: auto; background: var(--surface); border: 1px solid var(--border); margin-bottom: 12px; }
     .sidebar.open { display: block; }
-
     .chart-widget, #single-widget { height: 380px !important; }
-    .chart-ticker { font-size: 20px; }
-    .chart-name { font-size: 13px; }
-
-    .grid-card > div[id^="grid-chart"] { height: 250px !important; }
   }
-
 </style>
 </head>
 <body>
@@ -370,8 +133,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>Technology <span>Charts</span></h1>
-    <div class="header-sub">TradingView live charts · 31 stocks · single view or category grid</div>
+        <h1>Energy <span>Charts</span></h1>
+        <div class="header-sub">TradingView live charts · 20 stocks · single view or category grid</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -391,7 +154,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card active" href="charts.html">
+<a class="sector-card" href="../Tech/charts.html">
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
@@ -399,7 +162,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
-<a class="sector-card" href="../Energy/charts.html">
+<a class="sector-card active" href="charts.html">
   <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Energy</div>
 </a>
@@ -409,12 +172,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks">📊 Dashboard</a>
-    <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html"    class="nav-link" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
-    <a href="heatmap.html"    class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html"     class="nav-link active" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 energy stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 20 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="Energy top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link active" data-tooltip="Price history charts for every energy stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -436,9 +199,9 @@
       <div class="divider"></div>
       <div class="toolbar-group">
         <span class="toolbar-label">Period</span>
-        <button class="tool-btn active" onclick="setTimeframe('1W', this)">1W</button>
+        <button class="tool-btn" onclick="setTimeframe('1W', this)">1W</button>
         <button class="tool-btn" onclick="setTimeframe('1M', this)">1M</button>
-        <button class="tool-btn" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
+        <button class="tool-btn active" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
         <button class="tool-btn" onclick="setTimeframe('60M', this)">5Y</button>
       </div>
     </div>
@@ -456,12 +219,12 @@
   <main class="chart-area">
     <div class="chart-header">
       <div style="display:flex;align-items:baseline;">
-        <span class="chart-ticker" id="chart-ticker">AAPL</span>
-        <span class="chart-name" id="chart-name">Apple</span>
+        <span class="chart-ticker" id="chart-ticker">XOM</span>
+        <span class="chart-name" id="chart-name">ExxonMobil</span>
       </div>
     </div>
     <div class="chart-widget" id="single-widget"></div>
-    <div class="chart-note">Charts powered by TradingView · requires internet connection</div>
+    <div class="chart-note">Charts powered by TradingView · requires internet connection · date range from Jan 2026</div>
   </main>
 </div>
 
@@ -469,65 +232,26 @@
 <div id="grid-view">
   <div class="grid-heading" id="grid-heading">Select a category above</div>
   <div class="chart-grid" id="chart-grid"></div>
-  <div class="chart-note" style="margin-top:16px;">Charts powered by TradingView · requires internet connection</div>
+  <div class="chart-note" style="margin-top:16px;">Charts powered by TradingView · requires internet connection · date range from Jan 2026</div>
 </div>
 
 <script src="https://s3.tradingview.com/tv.js"></script>
 <script src="prices-data.js"></script>
 <script>
-  /* All Tech stocks are on NASDAQ or NYSE — no special TV symbol overrides needed */
-  const TV_MAP = {};
+  const TV_MAP = {
+    'SSE.L': 'LSE:SSE.',
+  };
 
-  /* Category display config for charts */
   const CHART_CATS = {
-    'mega-cap': {
-      key: 'mega-cap',
-      label: '🏆 Mega Cap',
-      color: 'var(--accent)',
-      btnLabel: 'Mega Cap',
-      tooltip: 'The five largest US technology companies by market cap — Apple, Microsoft, Alphabet, Amazon, Meta',
-    },
-    'semiconductors': {
-      key: 'semiconductors',
-      label: '🔬 Semiconductors',
-      color: 'var(--rose)',
-      btnLabel: 'Semiconductors',
-      tooltip: 'Chip designers and manufacturers powering AI, mobile, networking and data centre workloads',
-    },
-    'enterprise-software': {
-      key: 'enterprise-software',
-      label: '🖥️ Enterprise Software',
-      color: 'var(--blue)',
-      btnLabel: 'Enterprise SW',
-      tooltip: 'Cloud and SaaS platforms serving enterprise customers — databases, CRM, ERP and analytics',
-    },
-    'cybersecurity': {
-      key: 'cybersecurity',
-      label: '🔒 Cybersecurity',
-      color: 'var(--green)',
-      btnLabel: 'Cybersecurity',
-      tooltip: 'Next-generation security platforms protecting endpoints, networks and cloud infrastructure',
-    },
-    'consumer-platform': {
-      key: 'consumer-platform',
-      label: '📱 Consumer / Platform',
-      color: 'var(--purple)',
-      btnLabel: 'Consumer',
-      tooltip: 'Consumer-facing tech platforms — streaming, e-commerce, ride-sharing and music',
-    },
-    'hardware-infra': {
-      key: 'hardware-infra',
-      label: '🏗️ Hardware / Infra',
-      color: 'var(--amber)',
-      btnLabel: 'Hardware',
-      tooltip: 'Networking hardware and data infrastructure — Cisco and Palantir serving enterprise and government',
-    },
+    'oil-majors':        { label: '🛢️ Oil Majors',          color: 'var(--amber)',   btnLabel: 'Oil Majors',       tooltip: 'Major integrated oil & gas companies — ExxonMobil, Chevron, Shell, BP, TotalEnergies, Equinor' },
+    'ep-refining':       { label: '⛽ E&P / Refining',       color: 'var(--accent2)', btnLabel: 'E&P/Refining',     tooltip: 'Exploration, production and refining companies — ConocoPhillips, Occidental, EOG Resources, Marathon Petroleum, Valero Energy' },
+    'oilfield-services': { label: '🔧 Oilfield Services',    color: 'var(--accent)',  btnLabel: 'Oilfield Svcs',    tooltip: 'Oilfield services and equipment providers — SLB, Halliburton, Baker Hughes' },
+    'utilities':         { label: '⚡ Utilities',            color: 'var(--green)',   btnLabel: 'Utilities',        tooltip: 'Electric and gas utility companies — NextEra Energy, SSE plc' },
+    'clean-energy':      { label: '🌱 Clean Energy',         color: 'var(--lime)',    btnLabel: 'Clean Energy',     tooltip: 'Renewable and clean energy companies — Enphase Energy, First Solar, Brookfield Renewable, Ørsted' },
   };
 
   function buildSidebar(stocks) {
     if (!stocks || !stocks.length) return;
-
-    /* Build _chartCats from prices-data */
     window._chartCats = {};
     const catOrder = Object.keys(CHART_CATS);
     catOrder.forEach(catKey => {
@@ -538,23 +262,19 @@
         label:  cfg.label,
         color:  cfg.color,
         stocks: catStocks.map(s => {
-          const exchange = s.exchange || 'NASDAQ';
-          const tvSym = TV_MAP[s.ticker] || (exchange + ':' + s.ticker);
+          const tvSym = TV_MAP[s.ticker] || (s.exchange + ':' + s.ticker);
           return { tv: tvSym, ticker: s.ticker, name: s.company_name || s.ticker };
         }),
       };
     });
-
-    /* Populate sidebar */
     const container = document.getElementById('sidebar-stocks');
     container.innerHTML = '';
     catOrder.forEach(catKey => {
       const cat = window._chartCats[catKey];
       if (!cat) return;
       const cfg = CHART_CATS[catKey];
-      const clsSuffix = catKey;
       const label = document.createElement('span');
-      label.className = 'cat-label ' + clsSuffix;
+      label.className = 'cat-label ' + catKey;
       label.textContent = cfg.label;
       container.appendChild(label);
       cat.stocks.forEach(st => {
@@ -567,8 +287,6 @@
         container.appendChild(btn);
       });
     });
-
-    /* Populate category toolbar */
     const toolbar = document.getElementById('cat-toolbar-btns');
     toolbar.innerHTML = '';
     catOrder.forEach(catKey => {
@@ -591,12 +309,11 @@
   };
 
   let currentView      = 'grid';
-  let currentSymbol    = 'NASDAQ:AAPL';
-  let currentName      = 'Apple';
-  let currentTimeframe = '1W';
+  let currentSymbol    = 'NYSE:XOM';
+  let currentName      = 'ExxonMobil';
+  let currentTimeframe = '12M';
   let currentCategory  = null;
 
-  /* ---- TIMEFRAME ---- */
   function setTimeframe(tf, btn) {
     document.querySelectorAll('.toolbar-group .tool-btn').forEach(b => {
       if (['1W','1M','1Y','5Y'].includes(b.textContent)) b.classList.remove('active');
@@ -607,7 +324,6 @@
     else if (currentCategory)    buildGrid(currentCategory);
   }
 
-  /* ---- VIEW TOGGLE ---- */
   function setView(view) {
     currentView = view;
     document.getElementById('btn-single').classList.toggle('active', view === 'single');
@@ -617,7 +333,6 @@
     document.getElementById('cat-row').style.display     = view === 'grid'   ? 'flex' : 'none';
   }
 
-  /* ---- SINGLE CHART ---- */
   function buildSingle() {
     const widget = document.getElementById('single-widget');
     widget.innerHTML = '';
@@ -658,7 +373,6 @@
     }
   }
 
-  /* ---- CATEGORY GRID ---- */
   function setCategory(cat, btn) {
     document.querySelectorAll('.cat-btn').forEach(b => {
       b.className = b.className.replace(/active-\S+/g, '').trim();
@@ -714,7 +428,6 @@
     });
   }
 
-  /* ---- MOBILE SIDEBAR TOGGLE ---- */
   function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     const btn = document.getElementById('sidebar-toggle');
@@ -722,15 +435,21 @@
     btn.textContent = sidebar.classList.contains('open') ? '✕ Close ▴' : '☰ Select Stock ▾';
   }
 
-  /* ---- INIT ---- */
   window.addEventListener('load', () => {
     if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
       buildSidebar(window.PRICES_DATA.stocks);
+      const firstStock = window.PRICES_DATA.stocks[0];
+      if (firstStock) {
+        currentSymbol = TV_MAP[firstStock.ticker] || (firstStock.exchange + ':' + firstStock.ticker);
+        currentName   = firstStock.company_name || firstStock.ticker;
+        document.getElementById('chart-ticker').textContent = firstStock.ticker;
+        document.getElementById('chart-name').textContent   = currentName;
+      }
     }
     setView('grid');
-    const firstCatBtn = document.querySelector('.cat-btn');
+    const firstCatBtn = document.querySelector('#cat-toolbar-btns .cat-btn');
     if (firstCatBtn) {
-      const firstCatKey = Object.keys(window._chartCats || {})[0] || 'mega-cap';
+      const firstCatKey = Object.keys(CHART_CATS)[0];
       setCategory(firstCatKey, firstCatBtn);
     }
   });

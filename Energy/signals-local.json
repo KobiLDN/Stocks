@@ -1,0 +1,89 @@
+{
+  "updated": "2026-06-02 00:00",
+  "model": "deepseek/deepseek-v4-flash",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "source": "stub",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 2,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 3,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 4,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 5,
+      "ticker": "ENPH",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 6,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 7,
+      "ticker": "FSLR",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 8,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 9,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    },
+    {
+      "rank": 10,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0,
+      "rationale": "pending — run Generate Signals workflow",
+      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+    }
+  ],
+  "previous_picks": []
+}

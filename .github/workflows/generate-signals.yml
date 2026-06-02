@@ -18,6 +18,7 @@ on:
           - Defence
           - Tech
           - Crypto
+          - Energy
 
 permissions:
   contents: write
@@ -97,13 +98,25 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python Crypto_generate_signals_local.py
 
+      - name: Install deps (Energy)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
+        working-directory: Energy
+        run: pip install -r requirements.txt
+
+      - name: Generate signals (Energy)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
+        working-directory: Energy
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python Energy_generate_signals_local.py
+
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           SECTOR="${{ inputs.sector }}"
           LABEL="${SECTOR:-all sectors}"
-          if git diff --quiet -- AI/signals-local.json AI/signals-local.js Biotech/signals-local.json Biotech/signals-local.js Defence/signals-local.json Defence/signals-local.js Tech/signals-local.json Tech/signals-local.js Crypto/signals-local.json Crypto/signals-local.js; then
+          if git diff --quiet -- AI/signals-local.json AI/signals-local.js Biotech/signals-local.json Biotech/signals-local.js Defence/signals-local.json Defence/signals-local.js Tech/signals-local.json Tech/signals-local.js Crypto/signals-local.json Crypto/signals-local.js Energy/signals-local.json Energy/signals-local.js; then
             echo "No signal changes."
           else
             git add AI/signals-local.json AI/signals-local.js
@@ -111,6 +124,7 @@ jobs:
             git add Defence/signals-local.json Defence/signals-local.js
             git add Tech/signals-local.json Tech/signals-local.js
             git add Crypto/signals-local.json Crypto/signals-local.js
+            git add Energy/signals-local.json Energy/signals-local.js
             git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             git pull --rebase
             git push

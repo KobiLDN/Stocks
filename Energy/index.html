@@ -1,15 +1,54 @@
 <!DOCTYPE html>
+
 <html lang="en">
+<!--
+=============================================================
+  ENERGY STOCK DASHBOARD
+  Last updated: 2026-01-01
+
+  TICKERS TO FETCH (with Yahoo Finance symbols):
+  OIL MAJORS:
+    XOM    → XOM        (NYSE)
+    CVX    → CVX        (NYSE)
+    SHEL   → SHEL       (NYSE)
+    BP     → BP         (NYSE)
+    TTE    → TTE        (NYSE)
+    EQNR   → EQNR       (NYSE)
+
+  E&P / REFINING:
+    COP    → COP        (NYSE)
+    OXY    → OXY        (NYSE)
+    EOG    → EOG        (NYSE)
+    MPC    → MPC        (NYSE)
+    VLO    → VLO        (NYSE)
+
+  OILFIELD SERVICES:
+    SLB    → SLB        (NYSE)
+    HAL    → HAL        (NYSE)
+    BKR    → BKR        (NASDAQ)
+
+  UTILITIES:
+    NEE    → NEE        (NYSE)
+    SSE.L  → SSE.L      (LSE — already in GBp, divide by 100 for £)
+
+  CLEAN ENERGY:
+    ENPH   → ENPH       (NASDAQ)
+    FSLR   → FSLR       (NASDAQ)
+    BEPC   → BEPC       (NYSE)
+    DNNGY  → DNNGY      (NASDAQ)
+=============================================================
+-->
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Technology stock dashboard — live prices, 52-week range, and momentum for 31 stocks across mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, and hardware/infrastructure." name="description"/>
-<title>Technology — Dashboard</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta content="Energy stock dashboard — live prices, 52-week range, and momentum for 20 stocks across 5 categories including oil majors, E&amp;P, oilfield services, utilities and clean energy." name="description"/>
+<title>Energy — Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../shared.css" rel="stylesheet"/>
 <script defer="" src="../shared.js"></script>
 <style>
+  /* Filter tabs */
   .filter-bar {
     display: flex;
     gap: 6px;
@@ -34,6 +73,7 @@
   .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
 
+  /* Filter button tooltips */
   .filter-btn[data-tooltip]::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -75,13 +115,31 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  .filter-btn[data-filter="mega-cap"].active            { background: var(--accent);  border-color: var(--accent); }
-  .filter-btn[data-filter="semiconductors"].active      { background: var(--purple);  border-color: var(--purple); }
-  .filter-btn[data-filter="enterprise-software"].active { background: var(--teal);    border-color: var(--teal); color: var(--bg); }
-  .filter-btn[data-filter="cybersecurity"].active       { background: var(--rose);    border-color: var(--rose); color: var(--bg); }
-  .filter-btn[data-filter="consumer-platform"].active   { background: var(--gold);    border-color: var(--gold); color: var(--bg); }
-  .filter-btn[data-filter="hardware-infra"].active      { background: var(--amber);   border-color: var(--amber); color: var(--bg); }
+  .filter-btn[data-filter="oil-majors"].active        { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="ep-refining"].active       { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
+  .filter-btn[data-filter="oilfield-services"].active { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .filter-btn[data-filter="utilities"].active         { background: var(--green);  border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="clean-energy"].active      { background: var(--lime);   border-color: var(--lime);   color: var(--bg); }
 
+  /* Category badge */
+  .cat-badge {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .cat-oil-majors        { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.35); }
+  .cat-ep-refining       { background: rgba(255,107,53,0.15);  color: var(--accent2);border: 1px solid rgba(255,107,53,0.35); }
+  .cat-oilfield-services { background: rgba(0,212,255,0.1);    color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-utilities         { background: rgba(0,230,118,0.1);    color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+  .cat-clean-energy      { background: rgba(163,230,53,0.12);  color: var(--lime);   border: 1px solid rgba(163,230,53,0.3); }
+
+  /* Section headers */
   .section-header {
     display: flex;
     align-items: center;
@@ -109,6 +167,7 @@
     flex-shrink: 0;
   }
 
+  /* Table */
   .table-wrap {
     overflow-x: auto;
     border: 1px solid var(--border);
@@ -145,7 +204,7 @@
   thead th.sort-desc::after { content: ' ▼'; color: var(--accent); }
 
   tbody tr {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(30,45,61,0.5);
     transition: background 0.15s;
     cursor: default;
   }
@@ -160,6 +219,7 @@
     white-space: nowrap;
   }
 
+  /* Ticker */
   .ticker-link { text-decoration: none; color: inherit; }
   .ticker-link:hover .ticker { text-decoration: underline; opacity: 0.85; }
 
@@ -178,24 +238,7 @@
     margin-top: 2px;
   }
 
-  .cat-badge {
-    display: inline-block;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
-    padding: 3px 8px;
-    border-radius: 2px;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
-  .cat-mega-cap            { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .cat-semiconductors      { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
-  .cat-enterprise-software { background: rgba(45,212,191,0.1);  color: var(--teal);   border: 1px solid rgba(45,212,191,0.25); }
-  .cat-cybersecurity       { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
-  .cat-consumer-platform   { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
-  .cat-hardware-infra      { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
-
+  /* Price */
   .price {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 700;
@@ -204,6 +247,7 @@
     letter-spacing: 0.5px;
   }
 
+  /* Return */
   .return-positive { color: #16a34a; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .return-mega     { color: #0284c7; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   html[data-theme="dark"] .return-mega { color: #ffd700; }
@@ -212,6 +256,7 @@
   tr[data-return^="-"] .return-modest,
   tr[data-return^="-"] .return-positive { color: #dc2626; }
 
+  /* 52w range bar */
   .range-wrap {
     display: flex;
     align-items: center;
@@ -251,15 +296,17 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--bg);
+    background: var(--text);
     border: 2px solid var(--accent);
   }
 
+  /* YTD return column */
   .ytd-return { font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-pos  { color: var(--green); }
   .ytd-neg  { color: var(--red); }
   .ytd-flat { color: var(--muted); }
 
+  /* Footer */
   footer {
     margin-top: 48px;
     padding: 24px;
@@ -273,6 +320,7 @@
 
   footer strong { color: var(--accent2); }
 
+  /* Animate rows in */
   @keyframes rowIn {
     from { opacity: 0; transform: translateX(-8px); }
     to { opacity: 1; transform: translateX(0); }
@@ -291,6 +339,7 @@
   tbody tr:nth-child(10) { animation-delay: 0.32s; }
   tbody tr:nth-child(n+11) { animation-delay: 0.35s; }
 
+  /* Search + count bar */
   .search-count-bar {
     display: flex;
     align-items: center;
@@ -311,6 +360,7 @@
   #stock-search:focus { border-color: var(--accent); }
   #stock-search::placeholder { color: var(--muted); }
 
+  /* Count display */
   .row-count {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
@@ -328,19 +378,25 @@
     .header-inner::before { left: 12px; }
     h1 { font-size: 26px; }
     .header-sub { font-size: 12px; }
+
     .filter-btn { font-size: 10px; padding: 6px 10px; letter-spacing: 0; }
+
     table { font-size: 12px; }
     thead th { padding: 10px 8px; font-size: 10px; }
     td { padding: 10px 8px; }
     .ticker { font-size: 13px; }
     .price { font-size: 14px; }
     .exchange-badge { font-size: 9px; }
+
     table th:nth-child(6), table td:nth-child(6) { display: none; }
     table th:nth-child(7), table td:nth-child(7) { display: none; }
     table th:nth-child(8), table td:nth-child(8) { display: none; }
+
     .row-count { font-size: 11px; }
+
     footer { font-size: 10px; padding: 16px; }
   }
+
 </style>
 </head>
 <body>
@@ -349,8 +405,8 @@
 <div class="header-inner">
 <div class="header-left">
 <div class="header-label">// Stock Universe</div>
-<h1>Technology <span>Stocks</span></h1>
-<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.27</span> · <span id="last-updated">Last updated: —</span> · <span id="version">v1.0</span></div>
+<h1>Energy <span>Dashboard</span></h1>
+<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.2700</span> · <span id="last-updated">Last updated: —</span> · <span id="version">v1.0</span></div>
 </div>
 <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -370,15 +426,15 @@
 <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
 <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card active" href="index.html">
-<div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">Technology</div>
+<a class="sector-card" href="../Tech/index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Technology</div>
 </a>
 <a class="sector-card" href="../Crypto/index.html">
-<div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">Crypto</div>
+  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Crypto</div>
 </a>
-<a class="sector-card" href="../Energy/index.html">
+<a class="sector-card active" href="index.html">
   <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Energy</div>
 </a>
@@ -388,24 +444,23 @@
 </header>
 <nav>
 <div class="nav-inner">
-<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks" href="index.html">📊 Dashboard</a>
+<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 20 energy stocks" href="index.html">📊 Dashboard</a>
 <a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring" href="news.html">📰 News</a>
-<a class="nav-link" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri" href="signals.html">🎯 Signals</a>
+<a class="nav-link" data-tooltip="Latest headlines across all 20 stocks with news sentiment scoring" href="news.html">📰 News</a>
+<a class="nav-link" data-tooltip="Energy top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri" href="signals.html">🎯 Signals</a>
 <a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
-<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
+<a class="nav-link" data-tooltip="Price history charts for every stock" href="charts.html">📈 Charts</a>
 <a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today" href="calculator.html">🧮 What-If</a>
 </div>
 </nav>
 <div class="container">
 <div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)" data-tooltip="Show all 31 stocks">All</button>
-<button class="filter-btn" data-filter="mega-cap" data-tooltip="The 5 largest tech companies by market cap: Apple, Microsoft, Alphabet, Amazon, Meta" onclick="filterTable('mega-cap', this)">Mega Cap</button>
-<button class="filter-btn" data-filter="semiconductors" data-tooltip="Chip designers and equipment makers powering AI and consumer tech" onclick="filterTable('semiconductors', this)">Semiconductors</button>
-<button class="filter-btn" data-filter="enterprise-software" data-tooltip="Cloud SaaS platforms transforming how businesses operate" onclick="filterTable('enterprise-software', this)">Enterprise SW</button>
-<button class="filter-btn" data-filter="cybersecurity" data-tooltip="Platforms protecting enterprises from modern cyber threats" onclick="filterTable('cybersecurity', this)">Cybersecurity</button>
-<button class="filter-btn" data-filter="consumer-platform" data-tooltip="Consumer-facing tech platforms with massive user bases" onclick="filterTable('consumer-platform', this)">Consumer/Platform</button>
-<button class="filter-btn" data-filter="hardware-infra" data-tooltip="Networking hardware and AI platform infrastructure" onclick="filterTable('hardware-infra', this)">Hardware/Infra</button>
+<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
+<button class="filter-btn" data-filter="oil-majors" data-tooltip="Vertically integrated supermajors — ExxonMobil, Chevron, Shell, BP, TotalEnergies, Equinor" onclick="filterTable('oil-majors', this)">Oil Majors</button>
+<button class="filter-btn" data-filter="ep-refining" data-tooltip="Exploration, production and refining companies — ConocoPhillips, OXY, EOG, Marathon, Valero" onclick="filterTable('ep-refining', this)">E&amp;P / Refining</button>
+<button class="filter-btn" data-filter="oilfield-services" data-tooltip="Equipment and services for oil and gas drilling — SLB, Halliburton, Baker Hughes" onclick="filterTable('oilfield-services', this)">Oilfield Services</button>
+<button class="filter-btn" data-filter="utilities" data-tooltip="Power generation and grid utilities — NextEra Energy (US) and SSE (UK)" onclick="filterTable('utilities', this)">Utilities</button>
+<button class="filter-btn" data-filter="clean-energy" data-tooltip="Renewable energy developers and equipment — Enphase, First Solar, Brookfield Renewable, Ørsted" onclick="filterTable('clean-energy', this)">Clean Energy</button>
 </div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
@@ -419,8 +474,7 @@
 <th class="sortable" onclick="sortTable('company', this)">Company</th>
 <th class="sortable" onclick="sortTable('cat', this)">Category</th>
 <th class="sortable" onclick="sortTable('price', this)">Price (£)</th>
-<th class="sortable" onclick="sortTable('return', this)">1yr Return</th>
-<th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
+<th class="sortable" onclick="sortTable('return', this)">1yr Return</th><th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
 <th class="sortable" onclick="sortTable('range', this)">52-Week Range</th>
 <th class="sortable" onclick="sortTable('angle', this)">Key Angle</th>
 </tr>
@@ -433,55 +487,42 @@
 <script src="prices-data.js"></script>
 <script>
 const NOTES = {
-  'AAPL':  'iPhone, Mac, Services. Largest company by market cap. AI features rolling into iOS.',
-  'MSFT':  'Azure cloud + OpenAI partnership. $80B data centre capex in 2026. Copilot monetisation.',
-  'GOOGL': 'Google Search + YouTube + Cloud. TPU AI chips. $75B capex planned for 2026.',
-  'AMZN':  'AWS dominates cloud AI infra. Trainium & Inferentia custom chips. Bedrock platform.',
-  'META':  '$65B AI capex 2026. Llama open-source models. 3.2B daily active users across apps.',
-  'NVDA':  'Dominant GPU maker for AI training & inference. Blackwell architecture. H100/H200/B200.',
-  'AMD':   'MI300X AI accelerator competing with NVDA. EPYC server CPUs gaining data centre share.',
-  'INTC':  'Foundry turnaround story. Gaudi AI chips. 18A process node for 2025. Deep value/high risk.',
-  'TSM':   "Manufactures 90%+ of world's advanced chips. Sole fab for Apple, NVDA, AMD, ARM.",
-  'AVGO':  'Custom AI silicon (XPUs) for Google & Meta. Networking ASICs. VMware acquisition.',
-  'QCOM':  'Mobile SoC leader (Snapdragon). On-device AI chips. Automotive & IoT expansion.',
-  'ARM':   'CPU architecture licensor. Every smartphone and most data centre CPUs use ARM designs.',
-  'ASML':  'Only maker of EUV lithography machines. Monopoly on cutting-edge chipmaking equipment.',
-  'MU':    'DRAM + NAND + HBM. Sold out of HBM for all of 2026. Critical AI memory supplier.',
-  'AMAT':  'Semiconductor process equipment. Deposition, etch, metrology. AI chip capex tailwind.',
-  'ORCL':  'Cloud database & ERP. Multi-cloud AI infrastructure. 70+ data centres. $100B+ backlog.',
-  'CRM':   'Salesforce AI CRM platform. Agentforce AI agents. $50B ARR target. Enterprise SaaS.',
-  'ADBE':  'Creative Cloud + Document Cloud. Firefly generative AI. PDF/document AI dominance.',
-  'NOW':   'AI-native enterprise workflow automation. Platform of record for IT, HR, finance.',
-  'SNOW':  'Data cloud platform. Cortex AI for enterprise data. Marketplace ecosystem.',
-  'INTU':  'TurboTax, QuickBooks, Credit Karma. AI-driven financial management for SMBs & consumers.',
-  'CRWD':  'Falcon platform AI-native cybersecurity. 29,000+ customers. ~18% endpoint market share.',
-  'PANW':  'Platformisation of enterprise security. SASE + XDR + cloud security. $15B+ ARR.',
-  'NET':   'Edge cloud platform. Zero Trust security + CDN + AI Gateway. 20% of internet traffic.',
-  'FTNT':  'FortiGate firewall leader. Full security stack from SASE to OT/IoT. 700,000+ customers.',
-  'NFLX':  '300M+ subscribers. AI-driven content recommendations. Ad-supported tier growing fast.',
-  'SHOP':  'E-commerce platform for 5M+ merchants. Shopify Payments + Fulfillment + AI tools.',
-  'SPOT':  '600M+ users. Podcast + audiobook expansion. AI DJ and personalisation features.',
-  'UBER':  'Rides + delivery + freight. Path to profitability. Autonomous vehicle partnerships.',
-  'CSCO':  'Enterprise networking + security. AI data centre switching (Silicon One). Splunk acquisition.',
-  'PLTR':  'AI-powered data analytics for US/UK military, intelligence, and commercial clients.',
+  'XOM':   'World\'s largest publicly traded oil company. Permian Basin growth, LNG expansion, chemical diversification.',
+  'CVX':   'Major US oil & gas supermajor. Strong Permian Basin position, Tengiz project in Kazakhstan.',
+  'SHEL':  'Global LNG leader and integrated energy major. Transitioning toward gas and low-carbon energy.',
+  'BP':    'UK-based oil major. High dividend yield, restructuring toward cleaner energy and gas.',
+  'TTE':   'French supermajor with strong LNG, offshore deepwater, and growing renewables portfolio.',
+  'EQNR':  'Norwegian state-controlled energy company. North Sea operator, growing offshore wind.',
+  'COP':   'Pure-play E&P company. Low-cost Permian and Alaskan assets, disciplined capital returns.',
+  'OXY':   'Permian Basin pure-play E&P backed by Berkshire Hathaway. Carbon capture initiatives.',
+  'EOG':   'Top-tier US shale E&P. Premium drilling inventory, high returns, growing dividends.',
+  'MPC':   'Leading US petroleum refiner. Gulf Coast and Midwest assets. MPLX MLP distribution.',
+  'VLO':   'Largest US independent refiner. Diversified refinery footprint, renewable diesel growth.',
+  'SLB':   'World\'s largest oilfield services company. Digital solutions, reservoir characterisation.',
+  'HAL':   'Second-largest oilfield services firm. Completion and production services, digital.',
+  'BKR':   'Diversified energy tech and oilfield services. LNG and industrial energy solutions.',
+  'NEE':   'World\'s largest renewable energy company. Florida utility plus vast wind and solar portfolio.',
+  'SSE.L': 'UK integrated energy company. Networks, renewables (wind), and electricity transmission.',
+  'ENPH':  'Leading microinverter maker for residential solar. IQ system, battery storage expansion.',
+  'FSLR':  'US-based thin-film solar panel manufacturer. Beneficiary of US IRA incentives.',
+  'BEPC':  'Brookfield Renewable Corp — global hydro, wind, solar and battery storage operator.',
+  'DNNGY': 'Danish offshore wind giant (Ørsted). Pioneer in large-scale offshore wind development.',
 };
 
 const CAT_COLORS = {
-  'mega-cap':            'var(--accent)',
-  'semiconductors':      'var(--purple)',
-  'enterprise-software': 'var(--teal)',
-  'cybersecurity':       'var(--rose)',
-  'consumer-platform':   'var(--gold)',
-  'hardware-infra':      'var(--amber)',
+  'oil-majors':        'var(--amber)',
+  'ep-refining':       'var(--accent2)',
+  'oilfield-services': 'var(--accent)',
+  'utilities':         'var(--green)',
+  'clean-energy':      'var(--lime)',
 };
 
 const CAT_LABELS = {
-  'mega-cap':            'Mega Cap',
-  'semiconductors':      'Semiconductors',
-  'enterprise-software': 'Enterprise SW',
-  'cybersecurity':       'Cybersecurity',
-  'consumer-platform':   'Consumer / Platform',
-  'hardware-infra':      'Hardware / Infra',
+  'oil-majors':        'Oil Majors',
+  'ep-refining':       'E&P / Refining',
+  'oilfield-services': 'Oilfield Services',
+  'utilities':         'Utilities',
+  'clean-energy':      'Clean Energy',
 };
 
 function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + t + '/'; }
@@ -494,13 +535,8 @@ function returnClass(retStr) {
   return 'return-modest';
 }
 
-function pillClass(v) {
-  const n = parseFloat(v); return n > 0 ? 'pos' : n < 0 ? 'neg' : 'flat';
-}
-
-function ytdClass(v) {
-  const n = parseFloat(v); return n > 0 ? 'ytd-pos' : n < 0 ? 'ytd-neg' : 'ytd-flat';
-}
+function pillClass(v) { const n = parseFloat(v); return n > 0 ? 'pos' : n < 0 ? 'neg' : 'flat'; }
+function ytdClass(v)  { const n = parseFloat(v); return n > 0 ? 'ytd-pos' : n < 0 ? 'ytd-neg' : 'ytd-flat'; }
 
 function buildTable(stocks) {
   const tbody = document.querySelector('#stock-table tbody');
@@ -509,6 +545,7 @@ function buildTable(stocks) {
     const color    = CAT_COLORS[s.category] || 'var(--text)';
     const catLabel = CAT_LABELS[s.category] || s.category;
     const retCls   = returnClass(s.return_1yr);
+    const exDisp   = s.exchange;
     const tr = document.createElement('tr');
     tr.dataset.ticker    = s.ticker;
     tr.dataset.cat       = s.category;
@@ -521,7 +558,7 @@ function buildTable(stocks) {
     tr.innerHTML =
       '<td><a class="ticker-link" href="' + yahooUrl(s.ticker) + '" target="_blank">' +
         '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
-        '<div class="exchange-badge">' + s.exchange + '</div></td>' +
+        '<div class="exchange-badge">' + exDisp + '</div></td>' +
       '<td>' + (s.company_name || s.ticker) + '</td>' +
       '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
       '<td><span class="price">£' + s.price_gbp + '</span>' +

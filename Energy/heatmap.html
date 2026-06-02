@@ -1,114 +1,44 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI infrastructure stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 48 stocks at a glance.">
-<title>AI Infrastructure — Heatmap</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="Energy stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 20 stocks at a glance.">
+<title>Energy — Heatmap</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  .toolbar {
-    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-    margin-bottom: 16px; padding: 12px 16px;
-    background: var(--surface); border: 1px solid var(--border);
-    position: sticky; top: 36px; z-index: 50;
-  }
-  .toolbar-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; letter-spacing: 2px; color: var(--muted);
-    text-transform: uppercase; white-space: nowrap;
-  }
+  .toolbar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); position: sticky; top: 36px; z-index: 50; }
+  .toolbar-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
   .metric-group { display: flex; gap: 2px; }
-  .metric-btn {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
-    padding: 6px 14px; background: transparent;
-    color: var(--muted); border: 1px solid var(--border);
-    cursor: pointer; transition: all 0.2s;
-  }
+  .metric-btn { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; background: transparent; color: var(--muted); border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; }
   .metric-btn:hover  { color: var(--accent); border-color: var(--accent); }
   .metric-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
-
-  .size-note {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; color: var(--muted); white-space: nowrap;
-  }
+  .size-note { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
   .size-note em { color: var(--text); font-style: normal; }
-
-  .toolbar-ts {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; color: var(--muted); white-space: nowrap; margin-left: auto;
-  }
+  .toolbar-ts { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; margin-left: auto; }
   .toolbar-ts span { color: var(--accent); }
-
-  .legend {
-    display: flex; align-items: center; gap: 8px;
-  }
-  .leg-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; color: var(--muted); white-space: nowrap; min-width: 28px;
-  }
+  .legend { display: flex; align-items: center; gap: 8px; }
+  .leg-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; min-width: 28px; }
   .leg-label.r { text-align: right; }
-  .leg-bar {
-    width: 90px; height: 8px;
-    background: linear-gradient(90deg, var(--red), var(--surface2), var(--green));
-    border: 1px solid var(--border); flex-shrink: 0;
-  }
+  .leg-bar { width: 90px; height: 8px; background: linear-gradient(90deg, var(--red), var(--surface2), var(--green)); border: 1px solid var(--border); flex-shrink: 0; }
 
-  /* ── Section headers ── */
-  .section-hdr {
-    display: flex; align-items: center; gap: 16px;
-    margin: 32px 0 10px;
-  }
-  .section-hdr-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px; letter-spacing: 3px; color: var(--accent);
-    text-transform: uppercase; white-space: nowrap;
-  }
+  .section-hdr { display: flex; align-items: center; gap: 16px; margin: 32px 0 10px; }
+  .section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
   .section-hdr-line { flex: 1; height: 1px; background: var(--border); }
-  .section-hdr-count {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; color: var(--muted); white-space: nowrap;
-  }
+  .section-hdr-count { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
 
-  /* ── Map containers ── */
-  .map-wrap {
-    width: 100%; border: 1px solid var(--border);
-    background: var(--surface); overflow: hidden; margin-bottom: 4px;
-  }
+  .map-wrap { width: 100%; border: 1px solid var(--border); background: var(--surface); overflow: hidden; margin-bottom: 4px; }
   .map-wrap svg { display: block; }
 
-  /* ── Sector blocks ── */
   .sector-block { margin-bottom: 24px; }
-  .sector-name {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px; letter-spacing: 2px; font-weight: 700;
-    color: var(--muted); text-transform: uppercase;
-    padding: 8px 12px;
-    background: var(--surface2); border: 1px solid var(--border);
-    border-bottom: none;
-    display: flex; align-items: center; gap: 10px;
-  }
+  .sector-name { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; font-weight: 700; color: var(--muted); text-transform: uppercase; padding: 8px 12px; background: var(--surface2); border: 1px solid var(--border); border-bottom: none; display: flex; align-items: center; gap: 10px; }
   .sector-name .sc { color: var(--muted); font-weight: 400; font-size: 10px; }
 
-  /* ── SVG text styles ── */
-  .cat-label-text {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; font-weight: 700; fill: var(--muted);
-    letter-spacing: 1.5px; pointer-events: none;
-  }
-
-  /* ── Tooltip ── */
-  .tooltip {
-    position: fixed; z-index: 500;
-    background: var(--surface2); border: 1px solid var(--accent);
-    padding: 14px 18px; pointer-events: none;
-    min-width: 200px; max-width: 260px;
-  }
+  .tooltip { position: fixed; z-index: 500; background: var(--surface2); border: 1px solid var(--accent); padding: 14px 18px; pointer-events: none; min-width: 200px; max-width: 260px; }
   .tooltip.hidden { display: none; }
   .tt-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
   .tt-company { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
@@ -121,27 +51,12 @@
   .tt-divider { grid-column: 1/-1; height: 1px; background: var(--border); margin: 4px 0; }
   .tt-price { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: var(--accent); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
 
-  /* ── Empty state ── */
-  .empty-state {
-    text-align: center; padding: 60px 24px;
-    color: var(--muted); font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px; line-height: 1.7; border: 1px solid var(--border);
-  }
+  .empty-state { text-align: center; padding: 60px 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.7; border: 1px solid var(--border); }
 
-  footer {
-    position: relative; z-index: 1; text-align: center; padding: 24px;
-    color: var(--muted); font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px; border-top: 1px solid var(--border);
-  }
+  footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); }
 
-  @media (max-width: 900px) {
-    h1 { font-size: 26px; }
-    .legend { display: none; }
-  }
-  @media (max-width: 600px) {
-    .metric-btn { padding: 5px 10px; font-size: 10px; }
-    .size-note { display: none; }
-  }
+  @media (max-width: 900px) { h1 { font-size: 26px; } .legend { display: none; } }
+  @media (max-width: 600px) { .metric-btn { padding: 5px 10px; font-size: 10px; } .size-note { display: none; } }
 
 </style>
 </head>
@@ -152,8 +67,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-        <h1>AI <span>Heatmap</span></h1>
-        <div class="header-sub"><span id="hm-stock-count">48</span> stocks · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
+        <h1>Energy <span>Heatmap</span></h1>
+        <div class="header-sub"><span id="hm-stock-count">20</span> stocks · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -161,7 +76,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
   <div class="sector-card-name">Stock Hub</div>
 </a>
-<a class="sector-card active" href="heatmap.html">
+<a class="sector-card" href="../AI/heatmap.html">
   <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">AI Infrastructure</div>
 </a>
@@ -181,7 +96,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
-<a class="sector-card" href="../Energy/heatmap.html">
+<a class="sector-card active" href="heatmap.html">
   <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Energy</div>
 </a>
@@ -192,19 +107,18 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 48 AI infrastructure stocks">📊 Dashboard</a>
+    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 energy stocks">📊 Dashboard</a>
     <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 48 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html"    class="nav-link" data-tooltip="AI top 10 picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
+    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 20 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html"    class="nav-link" data-tooltip="Energy top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html"    class="nav-link active" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="charts.html"     class="nav-link" data-tooltip="Price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
 
 <div class="container">
 
-  <!-- Sticky toolbar -->
   <div class="toolbar">
     <span class="toolbar-label">Colour by</span>
     <div class="metric-group" id="metric-group">
@@ -223,19 +137,17 @@
     </div>
   </div>
 
-  <!-- All stocks -->
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">48 stocks</span>
+    <span class="section-hdr-count" id="hm-all-count">20 stocks</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
-  <!-- By sector -->
   <div class="section-hdr" style="margin-top:48px;">
     <span class="section-hdr-label">By Sector</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-cat-count">12 categories</span>
+    <span class="section-hdr-count" id="hm-cat-count">5 categories</span>
   </div>
   <div id="sectors-container"></div>
 
@@ -246,68 +158,43 @@
 
 <script src="prices-data.js"></script>
 <script>
-/* ── Lookups ── */
+function getCssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
 const NAMES = {
-  'SNDK': 'SanDisk Corporation',       'WDC':  'Western Digital',
-  '285A': 'Kioxia Holdings',           'MU':   'Micron Technology',
-  'STX':  'Seagate Technology',        'MRVL': 'Marvell Technology',
-  'P':    'Everpure',              'RR.':  'Rolls-Royce',
-  'CEG':  'Constellation Energy',      'VST':  'Vistra Corp',
-  'TLN':  'Talen Energy',              'BEP':  'Brookfield Renewable',
-  'BEPC': 'Brookfield Renewable Corp', 'GEV':  'GE Vernova',
-  'BWXT': 'BWX Technologies',          'SMR':  'NuScale Power',
-  'OKLO': 'Oklo Inc',                  'NNE':  'NANO Nuclear',
-  'CCJ':  'Cameco',                    'UEC':  'Uranium Energy',
-  'LEU':  'Centrus Energy',            'VRT':  'Vertiv Holdings',
-  'ETN':  'Eaton Corporation',         'POWL': 'Powell Industries',
-  'EQIX': 'Equinix',                   'DLR':  'Digital Realty',
-  'AMT':  'American Tower',            'GOOGL':'Alphabet',
-  'MSFT': 'Microsoft',                 'AMZN': 'Amazon',
-  'META': 'Meta Platforms',            'IREN': 'Iris Energy',
-  'CORZ': 'Core Scientific',           'WULF': 'TeraWulf',
-  'HUT':  'Hut 8 Mining',              'SMCI': 'Super Micro Computer',
-  'DELL': 'Dell Technologies',         'COHR': 'Coherent Corp',
-  'LITE': 'Lumentum',                  'AAOI': 'Applied Optoelectronics',
-  'FN':   'Fabrinet',                  'MTSI': 'MACOM Technology',
-  'SMTC': 'Semtech',                   'CRDO': 'Credo Technology',
-  'MXL':  'MaxLinear',                 'KEYS': 'Keysight Technologies',
-  'VIAV': 'Viavi Solutions',           'AXTI': 'AXT Inc',
+  'XOM':   'ExxonMobil',            'CVX':   'Chevron',
+  'SHEL':  'Shell',                 'BP':    'BP p.l.c.',
+  'TTE':   'TotalEnergies',         'EQNR':  'Equinor',
+  'COP':   'ConocoPhillips',        'OXY':   'Occidental Petroleum',
+  'EOG':   'EOG Resources',         'MPC':   'Marathon Petroleum',
+  'VLO':   'Valero Energy',         'SLB':   'SLB (Schlumberger)',
+  'HAL':   'Halliburton',           'BKR':   'Baker Hughes',
+  'NEE':   'NextEra Energy',        'SSE.L': 'SSE plc',
+  'ENPH':  'Enphase Energy',        'FSLR':  'First Solar',
+  'BEPC':  'Brookfield Renewable',  'DNNGY': 'Ørsted',
 };
 
 const CAT_LABELS = {
-  'memory':        'Memory / Storage',
-  'nuclear-ops':   'Nuclear Operators',
-  'smr':           'SMR Builders',
-  'uranium':       'Uranium',
-  'power-infra':   'Power Infrastructure',
-  'dc-operators':  'Data Centre Ops',
-  'hyperscalers':  'Hyperscalers',
-  'ai-compute':    'AI Compute',
-  'fibre-optical': 'Fibre / Optical',
-  'dsp-semi':      'DSP / Semi',
-  'test-equip':    'Test Equipment',
-  'materials':     'Materials',
+  'oil-majors':        'Oil Majors',
+  'ep-refining':       'E&P / Refining',
+  'oilfield-services': 'Oilfield Services',
+  'utilities':         'Utilities',
+  'clean-energy':      'Clean Energy',
 };
 
-/* Category display order */
-const CAT_ORDER = [
-  'hyperscalers','ai-compute','memory','dc-operators',
-  'nuclear-ops','smr','power-infra','uranium',
-  'fibre-optical','dsp-semi','test-equip','materials'
-];
+const CAT_ORDER = ['oil-majors', 'ep-refining', 'oilfield-services', 'utilities', 'clean-energy'];
 
 const METRICS_CFG = {
-  '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },
-  '1w':  { field: 'change_1w',  label: '1W',    threshold: 10 },
-  '1m':  { field: 'change_1m',  label: '1M',    threshold: 20 },
-  'ytd': { field: 'change_ytd', label: 'YTD',   threshold: 40 },
-  '1y':  { field: 'return_1yr', label: '1Y',    threshold: 60 },
+  '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },
+  '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },
+  '1m':  { field: 'change_1m',  label: '1M',  threshold: 20 },
+  'ytd': { field: 'change_ytd', label: 'YTD', threshold: 40 },
+  '1y':  { field: 'return_1yr', label: '1Y',  threshold: 60 },
 };
 
-const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
+function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + t + '/'; }
 
-/* ── Helpers ── */
 function parsePct(s) {
   if (s == null || s === '' || s === '—' || s === 'N/A') return null;
   const n = parseFloat(String(s).replace(/[%,\s]/g, ''));
@@ -330,30 +217,25 @@ function valCls(val) {
   return val > 0.049 ? 'pos' : val < -0.049 ? 'neg' : 'neu';
 }
 
-/* Tile size = absolute value of the metric (bigger move = bigger tile) */
 function tileSize(stock, metricId) {
   const v = getVal(stock, metricId);
   return v === null ? 0.05 : Math.max(0.05, Math.abs(v));
 }
 
-/* Color: diverging red → dark navy → green */
-function getCssVar(name) {
-  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-}
+function colorNeg(t) { return d3.interpolateRgb(getCssVar('--surface2'), getCssVar('--red'))(t); }
+function colorPos(t) { return d3.interpolateRgb(getCssVar('--surface2'), getCssVar('--green'))(t); }
 
 function tileColor(val, threshold) {
   if (val === null) return getCssVar('--surface');
   const t = Math.max(-1, Math.min(1, val / threshold));
-  if (t < 0) return d3.interpolateRgb(getCssVar('--surface2'), getCssVar('--red'))(-t);
-  if (t > 0) return d3.interpolateRgb(getCssVar('--surface2'), getCssVar('--green'))(t);
+  if (t < 0) return colorNeg(-t);
+  if (t > 0) return colorPos(t);
   return getCssVar('--surface2');
 }
 
-/* ── State ── */
 let activeMetric = localStorage.getItem('heatmap-metric') || '1d';
 let allStocks    = [];
 
-/* ── Draw a single flat treemap into a container div ── */
 function drawTreemap(containerEl, stocks, metricId, height) {
   containerEl.innerHTML = '';
   if (!stocks.length) return;
@@ -366,18 +248,11 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .sum(d => tileSize(d, metricId))
     .sort((a, b) => b.value - a.value);
 
-  d3.treemap()
-    .size([W, H])
-    .paddingInner(1)
-    .paddingOuter(0)
-    .round(true)(root);
+  d3.treemap().size([W, H]).paddingInner(1).paddingOuter(0).round(true)(root);
 
   const leaves = root.leaves();
 
-  const svg = d3.select(containerEl)
-    .append('svg')
-    .attr('width', W)
-    .attr('height', H);
+  const svg = d3.select(containerEl).append('svg').attr('width', W).attr('height', H);
 
   const tileG = svg.selectAll('.tile')
     .data(leaves)
@@ -390,7 +265,6 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .on('mousemove',  (ev, d) => showTooltip(ev, d.data))
     .on('mouseleave', hideTooltip);
 
-  /* Clip paths */
   tileG.append('clipPath')
     .attr('id', (d, i) => `c${containerEl.id}-${i}`)
     .append('rect')
@@ -398,7 +272,6 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .attr('height', d => Math.max(0, d.y1 - d.y0 - 2))
     .attr('x', 1).attr('y', 1);
 
-  /* Coloured rect */
   tileG.append('rect')
     .attr('width',  d => Math.max(0, d.x1 - d.x0))
     .attr('height', d => Math.max(0, d.y1 - d.y0))
@@ -408,10 +281,7 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .on('mouseover', function() { d3.select(this).attr('filter', 'brightness(1.3)'); })
     .on('mouseout',  function() { d3.select(this).attr('filter', null); });
 
-  /* ── Dynamic text sizing ── */
-  /* IBM Plex Mono character width ≈ fontSize × 0.62              */
-  /* Font fills ~60% of tile width; capped and min-gated          */
-  const CW = 0.62, PAD = 8;
+  const CW = 0.62;
   leaves.forEach(d => {
     const w = d.x1 - d.x0, h = d.y1 - d.y0;
     const vs = fmtPct(getVal(d.data, metricId));
@@ -424,7 +294,6 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     d._vy  = h * 0.64;
   });
 
-  /* Ticker text */
   tileG.append('text')
     .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
     .attr('x', d => (d.x1-d.x0)/2).attr('y', d => d._ty)
@@ -434,7 +303,6 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .attr('fill', d => d._tfs ? '#ffffff' : 'transparent')
     .text(d => d.data.ticker);
 
-  /* Value text */
   tileG.append('text')
     .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
     .attr('x', d => (d.x1-d.x0)/2).attr('y', d => d._vy)
@@ -445,7 +313,6 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .text(d => d._vfs ? d._vs : '');
 }
 
-/* ── Render all-stocks map ── */
 function renderAll(stocks, metricId) {
   const el = document.getElementById('map-all');
   const H  = Math.max(480, Math.min(660, Math.round(window.innerHeight * 0.58)));
@@ -453,12 +320,10 @@ function renderAll(stocks, metricId) {
   drawTreemap(el, stocks, metricId, H);
 }
 
-/* ── Render per-sector maps ── */
 function renderSectors(stocks, metricId) {
   const container = document.getElementById('sectors-container');
   container.innerHTML = '';
 
-  /* Group by category */
   const groups = {};
   stocks.forEach(s => {
     const cat = s.category || 'other';
@@ -466,7 +331,6 @@ function renderSectors(stocks, metricId) {
     groups[cat].push(s);
   });
 
-  /* Render in defined order, then any extras */
   const orderedSlugs = [
     ...CAT_ORDER.filter(c => groups[c]),
     ...Object.keys(groups).filter(c => !CAT_ORDER.includes(c))
@@ -475,8 +339,6 @@ function renderSectors(stocks, metricId) {
   orderedSlugs.forEach(slug => {
     const ss = groups[slug];
     const name = CAT_LABELS[slug] || slug;
-
-    /* Height: proportional to stock count, with sensible min/max */
     const H = Math.max(180, Math.min(340, ss.length * 52));
 
     const block = document.createElement('div');
@@ -484,8 +346,7 @@ function renderSectors(stocks, metricId) {
 
     const label = document.createElement('div');
     label.className = 'sector-name';
-    label.innerHTML = name.toUpperCase() +
-      ' <span class="sc">· ' + ss.length + ' stock' + (ss.length !== 1 ? 's' : '') + '</span>';
+    label.innerHTML = name.toUpperCase() + ' <span class="sc">· ' + ss.length + ' stock' + (ss.length !== 1 ? 's' : '') + '</span>';
 
     const mapEl = document.createElement('div');
     mapEl.className = 'map-wrap';
@@ -500,7 +361,6 @@ function renderSectors(stocks, metricId) {
   });
 }
 
-/* ── Full re-render (metric or resize) ── */
 function renderAll2(metricId) {
   renderAll(allStocks, metricId);
   renderSectors(allStocks, metricId);
@@ -514,7 +374,6 @@ function updateLegend(metricId) {
   document.getElementById('size-label').textContent = '|' + cfg.label + ' %|';
 }
 
-/* ── Tooltip ── */
 const ttEl = document.getElementById('tooltip');
 
 function showTooltip(event, stock) {
@@ -559,7 +418,6 @@ document.addEventListener('mousemove', ev => {
   if (!ttEl.classList.contains('hidden')) positionTooltip(ev);
 });
 
-/* ── Metric buttons ── */
 document.getElementById('metric-group').addEventListener('click', ev => {
   const btn = ev.target.closest('.metric-btn');
   if (!btn) return;
@@ -572,13 +430,11 @@ document.getElementById('metric-group').addEventListener('click', ev => {
   renderAll2(m);
 });
 
-/* ── Init ── */
 function init() {
   const stocks = window.PRICES_DATA && window.PRICES_DATA.stocks;
   if (!stocks || !stocks.length) {
     document.getElementById('map-all').innerHTML =
-      '<div class="empty-state">No data — prices-data.js not loaded or empty.<br>' +
-      'Serve over HTTP or check prices-data.js is present.</div>';
+      '<div class="empty-state">No data — prices-data.js not loaded or empty.</div>';
     return;
   }
   allStocks = stocks;

@@ -1,17 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI-generated weekly top 10 buy signals for biotech stocks, ranked by momentum, fundamentals, and news sentiment.">
-<title>Biotech — Signals</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="AI-generated weekly top 10 buy signals for Energy stocks, ranked by momentum, fundamentals, and news sentiment.">
+<title>Energy — Signals</title>
 <script src="signals-local.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-
 
   /* Refresh banner */
   .refresh-banner {
@@ -39,7 +38,11 @@
   }
 
   /* Signal cards */
-  .signals-feed { display: flex; flex-direction: column; gap: 12px; }
+  .signals-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
   .signal-card {
     display: flex;
     align-items: stretch;
@@ -104,15 +107,11 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-large-cap    { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
-  .cat-uk-listed    { background: rgba(255,215,0,0.1);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.25); }
-  .cat-gene-editing { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
-  .cat-genomics     { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
-  .cat-oncology     { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
-  .cat-mrna         { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
-  .cat-rare-disease { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
-  .cat-metabolic    { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
-  .cat-neuroscience { background: rgba(167,139,250,0.1); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
+  .cat-oil-majors        { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.35); }
+  .cat-ep-refining       { background: rgba(255,107,53,0.15);  color: var(--accent2);border: 1px solid rgba(255,107,53,0.35); }
+  .cat-oilfield-services { background: rgba(0,212,255,0.1);    color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-utilities         { background: rgba(0,230,118,0.1);    color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+  .cat-clean-energy      { background: rgba(163,230,53,0.12);  color: var(--lime);   border: 1px solid rgba(163,230,53,0.3); }
 
   .signal-pill {
     margin-left: auto;
@@ -303,7 +302,7 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-        <h1>Biotech <span>Signals</span></h1>
+        <h1>Energy <span>Signals</span></h1>
         <div class="header-sub">Top 10 ranked picks · generated locally by <span class="model" id="model-name">—</span></div>
   </div>
   <div class="sector-switcher">
@@ -320,7 +319,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Defence</div>
 </a>
-<a class="sector-card active" href="signals.html">
+<a class="sector-card" href="../Biotech/signals.html">
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
@@ -332,7 +331,7 @@
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
-<a class="sector-card" href="../Energy/signals.html">
+<a class="sector-card active" href="signals.html">
   <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Energy</div>
 </a>
@@ -342,12 +341,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 30 biotech stocks">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 energy stocks">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 30 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link active" data-tooltip="Top 10 biotech picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 20 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link active" data-tooltip="Energy top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="charts.html" class="nav-link" data-tooltip="Price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -356,7 +355,7 @@
 
   <div class="refresh-banner" id="refresh-banner">
     <span>Last refreshed: <span class="ts" id="signals-ts">—</span></span>
-    <span>Auto-refreshed Mon/Wed/Fri by GitHub Actions · or run <code>python generate_signals_local.py</code> locally</span>
+    <span>Auto-refreshed Mon/Wed/Fri by GitHub Actions · or run <code>python Energy_generate_signals_local.py</code> locally</span>
   </div>
 
   <div class="signals-feed" id="signals-feed"></div>
@@ -372,7 +371,7 @@
         <div class="how-step-num">1</div>
         <div class="how-step-text">
           <h4>Live price &amp; news data</h4>
-          <p>GitHub Actions runs <code>update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all tracked biotech stocks via Yahoo Finance.</p>
+          <p>GitHub Actions runs <code>Energy_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 20 energy stocks via Yahoo Finance.</p>
         </div>
       </div>
 
@@ -380,7 +379,7 @@
         <div class="how-step-num">2</div>
         <div class="how-step-text">
           <h4>Web search for live catalysts</h4>
-          <p>Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing FDA decisions, clinical trial results, analyst upgrades, deal announcements and PDUFA dates that happened since the last data pull.</p>
+          <p>Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing oil price moves, OPEC+ decisions, LNG contract wins, refining margin data, renewable energy capacity additions and earnings beats.</p>
         </div>
       </div>
 
@@ -388,7 +387,7 @@
         <div class="how-step-num">3</div>
         <div class="how-step-text">
           <h4>AI ranking via DeepSeek</h4>
-          <p><code>generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus, biotech-specific catalysts and live news, then returns a ranked top 10 in JSON.</p>
+          <p><code>Energy_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.</p>
         </div>
       </div>
 
@@ -396,12 +395,12 @@
         <div class="how-step-num">4</div>
         <div class="how-step-text">
           <h4>Mon/Wed/Fri refresh via GitHub Actions</h4>
-          <p>The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python generate_signals_local.py</code> locally to generate fresh signals on demand.</p>
+          <p>The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Energy_generate_signals_local.py</code> locally to generate fresh signals on demand.</p>
         </div>
       </div>
 
       <div class="how-footer-note">
-        <span>Not financial advice.</span> The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Biotech stocks carry binary event risk — FDA decisions and trial results can move prices dramatically in either direction. Signals are one input among many — always do your own research before making any investment decision.
+        <span>Not financial advice.</span> Energy stocks are highly sensitive to crude oil and natural gas prices, OPEC+ decisions, refining margins, and the energy transition — always do your own research before making any investment decision. The model can be wrong, biased toward recent momentum, or inconsistent run-to-run.
       </div>
 
     </div>
@@ -414,39 +413,28 @@
 <script src="prices-data.js"></script>
 <script>
   const NAMES = {
-    'AMGN': 'Amgen',                     'GILD': 'Gilead Sciences',
-    'REGN': 'Regeneron Pharmaceuticals', 'VRTX': 'Vertex Pharmaceuticals',
-    'BIIB': 'Biogen',                    'BMY':  'Bristol-Myers Squibb',
-    'AZN':  'AstraZeneca',               'GSK':  'GSK plc',
-    'CRSP': 'CRISPR Therapeutics',       'BEAM': 'Beam Therapeutics',
-    'NTLA': 'Intellia Therapeutics',     'EDIT': 'Editas Medicine',
-    'ILMN': 'Illumina',                  'PACB': 'Pacific Biosciences',
-    'NTRA': 'Natera',                    'RXRX': 'Recursion Pharmaceuticals',
-    'INCY': 'Incyte Corporation',        'EXEL': 'Exelixis',
-    'ALNY': 'Alnylam Pharmaceuticals',   'RCUS': 'Arcus Biosciences',
-    'MRNA': 'Moderna',                   'BNTX': 'BioNTech',
-    'NVAX': 'Novavax',                   'BMRN': 'BioMarin Pharmaceutical',
-    'SRPT': 'Sarepta Therapeutics',      'COAG': 'Hemab Therapeutics',
-    'NVO':  'Novo Nordisk',
-    'LLY':  'Eli Lilly',                 'LEGN': 'Legend Biotech',
-    'IONS': 'Ionis Pharmaceuticals',
+    'XOM':   'ExxonMobil',            'CVX':   'Chevron',
+    'SHEL':  'Shell',                 'BP':    'BP p.l.c.',
+    'TTE':   'TotalEnergies',         'EQNR':  'Equinor',
+    'COP':   'ConocoPhillips',        'OXY':   'Occidental Petroleum',
+    'EOG':   'EOG Resources',         'MPC':   'Marathon Petroleum',
+    'VLO':   'Valero Energy',         'SLB':   'SLB (Schlumberger)',
+    'HAL':   'Halliburton',           'BKR':   'Baker Hughes',
+    'NEE':   'NextEra Energy',        'SSE.L': 'SSE plc',
+    'ENPH':  'Enphase Energy',        'FSLR':  'First Solar',
+    'BEPC':  'Brookfield Renewable',  'DNNGY': 'Ørsted',
   };
 
   const CAT_LABELS = {
-    'large-cap':     'Large Cap',
-    'uk-listed':     'UK Listed',
-    'gene-editing':  'Gene Editing',
-    'genomics':      'Genomics',
-    'oncology':      'Oncology',
-    'mrna':          'mRNA',
-    'rare-disease':  'Rare Disease',
-    'metabolic':     'Metabolic',
-    'neuroscience':  'Neuroscience',
+    'oil-majors':        'Oil Majors',
+    'ep-refining':       'E&P / Refining',
+    'oilfield-services': 'Oilfield Svcs',
+    'utilities':         'Utilities',
+    'clean-energy':      'Clean Energy',
   };
 
-  const YAHOO_SUFFIX = { 'AZN': 'AZN.L', 'GSK': 'GSK.L' };
   function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[ticker] || ticker) + '/';
+    return 'https://finance.yahoo.com/quote/' + ticker + '/';
   }
 
   function escapeHtml(s) {
@@ -459,6 +447,7 @@
     return (s || '').replace('_', ' ').toUpperCase();
   }
 
+  /* Build a ticker -> category map from prices-data.js */
   function tickerCategoryMap() {
     const map = {};
     if (window.PRICES_DATA && Array.isArray(window.PRICES_DATA.stocks)) {
@@ -485,9 +474,9 @@
       modelEl.textContent = '—';
       feed.innerHTML =
         '<div class="empty-state">' +
-        'No signals data yet. Signals are generated weekly by <strong>GitHub Actions</strong> ' +
+        'No signals data yet. Signals are generated on Mon/Wed/Fri by <strong>GitHub Actions</strong> ' +
         '(deepseek/deepseek-v4-flash via OpenRouter) or run ' +
-        '<code>python generate_signals_local.py</code> locally to generate them now.' +
+        '<code>python Energy_generate_signals_local.py</code> locally to generate them now.' +
         '</div>';
       return;
     }

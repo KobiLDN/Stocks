@@ -21,6 +21,7 @@ on:
           - Defence
           - Tech
           - Crypto
+          - Energy
 
 permissions:
   contents: write
@@ -90,13 +91,23 @@ jobs:
         working-directory: Crypto
         run: python Crypto_update_prices.py
 
+      - name: Install deps (Energy)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
+        working-directory: Energy
+        run: pip install -r requirements.txt
+
+      - name: Run price updater (Energy)
+        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
+        working-directory: Energy
+        run: python Energy_update_prices.py
+
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           SECTOR="${{ inputs.sector }}"
           LABEL="${SECTOR:-all sectors}"
-          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js; then
+          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js Energy/prices.json Energy/prices-data.js; then
             echo "No price changes."
           else
             git add AI/index.html AI/prices.json AI/prices-data.js
@@ -104,6 +115,7 @@ jobs:
             git add Defence/index.html Defence/prices.json Defence/prices-data.js
             git add Tech/prices.json Tech/prices-data.js
             git add Crypto/prices.json Crypto/prices-data.js
+            git add Energy/prices.json Energy/prices-data.js
             git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             git pull --rebase
             git push
