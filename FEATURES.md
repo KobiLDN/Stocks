@@ -2,6 +2,8 @@
 
 ## Backlog
 
+- **Crypto: trigger GitHub Actions** — run "Update Prices → Crypto" then "Generate Signals → Crypto" to replace stub prices (XLM, SUI, HBAR, TON, ALGO, MINA, PEPE show N/A) and placeholder signal picks with real data
+
 - **Energy sector** — 20 stocks across 5 categories; full 7-page suite + hub card + workflows
   - Oil Majors (6): XOM, CVX, SHEL, BP, TTE, EQNR
   - E&P & Refining (5): COP, OXY, EOG, MPC, VLO
