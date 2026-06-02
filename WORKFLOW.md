@@ -1,5 +1,15 @@
 # Workflow
 
+## BRANCH RULES
+
+> **ALL changes go to `dev` only. Never push to `main` without explicit user instruction.**
+
+- Every commit gets pushed to `origin/dev`.
+- `main` is the live site — only merge `dev → main` when the user explicitly says "go live".
+- Always ask before pushing to `main`. Never assume.
+
+---
+
 ## Two-clone setup
 
 The repo lives in a plain container folder with two independent clones (not git worktrees). Worktrees use absolute-path pointer files that break when folders are moved or synced by Google Drive / OneDrive — two clones avoids this entirely.

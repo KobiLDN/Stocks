@@ -2,6 +2,22 @@
 
 This file is for any AI or human contributor working in this repo.
 
+## BRANCH RULES — READ BEFORE TOUCHING ANYTHING
+
+> **ALL changes go to `dev` only. Never push to `main` without explicit user instruction.**
+
+| Branch | Purpose | Who pushes |
+|---|---|---|
+| `dev` | All development work — push here after every change | Agent / contributor |
+| `main` | Live production site — **never push directly** | User only, after explicit "go live" |
+
+- Push every commit to `origin/dev`.
+- When the user says "go live" / "push to live" / "merge to main", only then merge `dev → main`.
+- If unsure whether to go live, **ask first**.
+- Never create or push to feature branches unless the user explicitly asks.
+
+---
+
 ## Read order before editing
 
 1. `AGENTS.md` (this file)
