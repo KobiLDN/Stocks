@@ -1,5 +1,5 @@
 """
-generate_export.py — combines all sector data into all_stocks.csv + all_stocks.json
+generate_export.py — combines all sector data into a dated snapshot + updates manifest
 Run: python generate_export.py  (from repo root)
 Also called by .github/workflows/generate-export.yml after each evening price update.
 """
@@ -71,7 +71,6 @@ for sector in SECTORS:
             if k != "sector":
                 row[k] = s.get(k)
 
-        # What-if: value + profit for each period × amount
         for label, field in PERIODS:
             pct = to_pct(s.get(field))
             row[f"pct_{label}"] = pct
@@ -80,7 +79,6 @@ for sector in SECTORS:
                 row[f"val_{amt}_{label}"]    = val
                 row[f"profit_{amt}_{label}"] = profit
 
-        # News: top 3 articles
         for i, n in enumerate(s.get("news", [])[:3], 1):
             ts = n.get("published", 0)
             date = datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d") if ts else ""
@@ -92,7 +90,6 @@ for sector in SECTORS:
             row[f"news{i}_title"] = row[f"news{i}_publisher"] = row[f"news{i}_date"] = ""
             row[f"news{i}_sentiment"] = None
 
-        # Signals
         sig = signals.get(s["ticker"], {})
         row["signal_rank"]       = sig.get("rank")
         row["signal"]            = sig.get("signal")
@@ -102,7 +99,6 @@ for sector in SECTORS:
 
         all_stocks.append(row)
 
-# Build field list for CSV
 whatsit_fields = []
 for label, _ in PERIODS:
     whatsit_fields.append(f"pct_{label}")
@@ -117,20 +113,48 @@ csv_fields = PRICE_FIELDS + whatsit_fields + [
 ]
 
 os.makedirs(os.path.join(BASE, "exports"), exist_ok=True)
-out_json = os.path.join(BASE, "exports", "all_stocks.json")
-out_csv  = os.path.join(BASE, "exports", "all_stocks.csv")
+
+now       = datetime.now(tz=timezone.utc)
+date_str  = now.strftime("%Y-%m-%d")
+gen_str   = now.strftime("%Y-%m-%d %H:%M UTC")
+out_json  = os.path.join(BASE, "exports", f"{date_str}.json")
+out_csv   = os.path.join(BASE, "exports", f"{date_str}.csv")
+
+payload = {
+    "generated": gen_str,
+    "total":     len(all_stocks),
+    "sectors":   meta,
+    "stocks":    all_stocks,
+}
 
 with open(out_json, "w", encoding="utf-8") as f:
-    json.dump({
-        "generated": datetime.now(tz=timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-        "total":     len(all_stocks),
-        "sectors":   meta,
-        "stocks":    all_stocks,
-    }, f, indent=2)
+    json.dump(payload, f, indent=2)
 
 with open(out_csv, "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=csv_fields, extrasaction="ignore")
     w.writeheader()
     w.writerows(all_stocks)
 
-print(f"Exported {len(all_stocks)} stocks → all_stocks.csv ({os.path.getsize(out_csv)//1024} KB)  all_stocks.json ({os.path.getsize(out_json)//1024} KB)")
+# Update manifest — newest first, deduplicated by date
+manifest_path = os.path.join(BASE, "exports", "manifest.json")
+try:
+    manifest = json.load(open(manifest_path, encoding="utf-8"))
+except Exception:
+    manifest = {"snapshots": []}
+
+entry = {
+    "date":      date_str,
+    "generated": gen_str,
+    "total":     len(all_stocks),
+    "json":      f"{date_str}.json",
+    "csv":       f"{date_str}.csv",
+}
+snapshots = [s for s in manifest["snapshots"] if s["date"] != date_str]
+snapshots.insert(0, entry)
+manifest["snapshots"] = snapshots
+
+with open(manifest_path, "w", encoding="utf-8") as f:
+    json.dump(manifest, f, indent=2)
+
+print(f"Exported {len(all_stocks)} stocks → {date_str}.json ({os.path.getsize(out_json)//1024} KB)  {date_str}.csv ({os.path.getsize(out_csv)//1024} KB)")
+print(f"Manifest updated — {len(snapshots)} snapshot(s)")

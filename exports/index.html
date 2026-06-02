@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Daily export of all stock data — copy JSON or download CSV for AI analysis.">
+<meta name="description" content="Daily stock data export — select a date, copy JSON or download CSV for AI analysis.">
 <title>Data Export — Stocks Hub</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -11,11 +11,43 @@
 <script src="../shared.js" defer></script>
 <style>
 
+.snapshot-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.snapshot-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+#snapshot-select {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  padding: 8px 14px;
+  cursor: pointer;
+  outline: none;
+  min-width: 260px;
+}
+#snapshot-select:focus { border-color: var(--accent); }
+#snapshot-select option { background: var(--surface); color: var(--text); }
+
 .meta-bar {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
 }
@@ -27,7 +59,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  margin-bottom: 28px;
 }
 @media (max-width: 800px) { .export-grid { grid-template-columns: 1fr; } }
 
@@ -42,11 +73,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
+  padding: 12px 18px;
   border-bottom: 1px solid var(--border);
   background: var(--surface2);
 }
-
 .export-card-title {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
@@ -55,11 +85,17 @@
   text-transform: uppercase;
   color: var(--accent);
 }
-
 .export-card-size {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
   color: var(--muted);
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
 }
 
 .copy-btn, .dl-btn {
@@ -75,21 +111,13 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 .copy-btn { background: var(--accent); color: var(--bg); }
 .copy-btn:hover { background: transparent; color: var(--accent); }
 .copy-btn.copied { background: var(--green); border-color: var(--green); color: var(--bg); }
 .dl-btn { background: transparent; color: var(--accent); }
 .dl-btn:hover { background: var(--accent); color: var(--bg); }
-
-.btn-row {
-  display: flex;
-  gap: 10px;
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--border);
-  flex-wrap: wrap;
-}
 
 .data-area {
   font-family: 'IBM Plex Mono', monospace;
@@ -100,7 +128,7 @@
   border: none;
   resize: none;
   width: 100%;
-  height: 420px;
+  height: 440px;
   padding: 14px 18px;
   outline: none;
   overflow-y: auto;
@@ -108,11 +136,11 @@
   overflow-x: auto;
 }
 
-.loading {
+.loading-state {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 420px;
+  height: 440px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   color: var(--muted);
@@ -125,10 +153,8 @@
   border: 1px solid var(--border);
   padding: 10px 16px;
   line-height: 1.6;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
-.note-strip a { color: var(--accent); text-decoration: none; }
-.note-strip a:hover { text-decoration: underline; }
 
 </style>
 </head>
@@ -140,7 +166,7 @@
     <div class="header-left">
       <div class="header-label">// DATA EXPORT</div>
       <h1>Daily <span>Export</span></h1>
-      <div class="header-sub" id="meta-updated">Loading…</div>
+      <div class="header-sub">176 stocks · metrics · what-if · news sentiment · AI signals</div>
     </div>
     <div class="sector-switcher">
       <a class="sector-card hub-card" href="../index.html">
@@ -155,45 +181,53 @@
 <div class="container">
 
   <div class="note-strip">
-    All 176 stocks across 6 sectors — metrics, what-if returns (£100 / £1,000 / £10,000 × 5 timeframes), top-3 news headlines with sentiment, and AI signals.
-    Updated automatically every weekday at 22:00 UTC by GitHub Actions.
-    Direct file links: <a href="all_stocks.json" download>all_stocks.json</a> &nbsp;·&nbsp; <a href="all_stocks.csv" download>all_stocks.csv</a>
+    Updated automatically every weekday at 22:00 UTC by GitHub Actions — 30 min after evening prices.
+    Each snapshot is a full extract: all 6 sectors, all metrics, what-if returns (£100/£1k/£10k × 5 timeframes), top-3 news with sentiment, and AI signals.
   </div>
 
-  <div class="meta-bar" id="meta-bar">
+  <!-- Date selector -->
+  <div class="snapshot-bar">
+    <span class="snapshot-label">Snapshot</span>
+    <select id="snapshot-select" onchange="loadSnapshot(this.value)">
+      <option value="">Loading…</option>
+    </select>
+    <span class="snapshot-label" id="snap-count"></span>
+  </div>
+
+  <!-- Meta row -->
+  <div class="meta-bar">
     <div class="meta-item"><span class="meta-label">Generated</span><span class="meta-value" id="m-generated">—</span></div>
     <div class="meta-item"><span class="meta-label">Stocks</span><span class="meta-value" id="m-total">—</span></div>
-    <div class="meta-item"><span class="meta-label">Sectors</span><span class="meta-value" id="m-sectors">—</span></div>
-    <div class="meta-item"><span class="meta-label">JSON size</span><span class="meta-value" id="m-size">—</span></div>
+    <div class="meta-item"><span class="meta-label">JSON size</span><span class="meta-value" id="m-json-size">—</span></div>
+    <div class="meta-item"><span class="meta-label">CSV size</span><span class="meta-value" id="m-csv-size">—</span></div>
   </div>
 
+  <!-- Export cards -->
   <div class="export-grid">
 
-    <!-- JSON card -->
     <div class="export-card">
       <div class="export-card-header">
         <span class="export-card-title">JSON</span>
         <span class="export-card-size" id="json-size-label">—</span>
       </div>
       <div class="btn-row">
-        <button class="copy-btn" id="copy-json-btn" onclick="copyJson()">Copy JSON</button>
-        <a class="dl-btn" href="all_stocks.json" download>↓ Download</a>
+        <button class="copy-btn" id="copy-json-btn" onclick="copyData('json')">Copy JSON</button>
+        <a class="dl-btn" id="dl-json" href="#" download>↓ Download</a>
       </div>
-      <div class="loading" id="json-loading">Loading…</div>
+      <div class="loading-state" id="json-loading">Select a snapshot above</div>
       <textarea class="data-area" id="json-area" style="display:none" readonly spellcheck="false"></textarea>
     </div>
 
-    <!-- CSV card -->
     <div class="export-card">
       <div class="export-card-header">
         <span class="export-card-title">CSV</span>
         <span class="export-card-size" id="csv-size-label">—</span>
       </div>
       <div class="btn-row">
-        <button class="copy-btn" id="copy-csv-btn" onclick="copyCsv()">Copy CSV</button>
-        <a class="dl-btn" href="all_stocks.csv" download>↓ Download</a>
+        <button class="copy-btn" id="copy-csv-btn" onclick="copyData('csv')">Copy CSV</button>
+        <a class="dl-btn" id="dl-csv" href="#" download>↓ Download</a>
       </div>
-      <div class="loading" id="csv-loading">Loading…</div>
+      <div class="loading-state" id="csv-loading">Select a snapshot above</div>
       <textarea class="data-area" id="csv-area" style="display:none" readonly spellcheck="false"></textarea>
     </div>
 
@@ -206,70 +240,119 @@
 </footer>
 
 <script>
-let jsonText = '', csvText = '';
+const cache = {};
+let currentJson = '', currentCsv = '';
 
 function fmt(bytes) {
-  if (bytes > 1048576) return (bytes/1048576).toFixed(1) + ' MB';
-  return Math.round(bytes/1024) + ' KB';
+  return bytes > 1048576 ? (bytes/1048576).toFixed(1)+' MB' : Math.round(bytes/1024)+' KB';
 }
 
-async function loadExports() {
-  try {
-    const [jsonResp, csvResp] = await Promise.all([
-      fetch('all_stocks.json'),
-      fetch('all_stocks.csv'),
-    ]);
+function fmtDate(dateStr) {
+  const d = new Date(dateStr + 'T00:00:00Z');
+  return d.toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short', year:'numeric', timeZone:'UTC' });
+}
 
-    jsonText = await jsonResp.text();
-    csvText  = await csvResp.text();
+function setLoading(msg) {
+  ['json','csv'].forEach(t => {
+    document.getElementById(`${t}-loading`).textContent = msg;
+    document.getElementById(`${t}-loading`).style.display = 'flex';
+    document.getElementById(`${t}-area`).style.display = 'none';
+  });
+  document.getElementById('m-generated').textContent = '—';
+  document.getElementById('m-total').textContent = '—';
+  document.getElementById('m-json-size').textContent = '—';
+  document.getElementById('m-csv-size').textContent = '—';
+}
+
+async function loadSnapshot(date) {
+  if (!date) return;
+  setLoading('Loading…');
+
+  try {
+    let jsonText, csvText;
+
+    if (cache[date]) {
+      ({ jsonText, csvText } = cache[date]);
+    } else {
+      [jsonText, csvText] = await Promise.all([
+        fetch(`${date}.json`).then(r => { if (!r.ok) throw new Error(); return r.text(); }),
+        fetch(`${date}.csv`).then(r => { if (!r.ok) throw new Error(); return r.text(); }),
+      ]);
+      cache[date] = { jsonText, csvText };
+    }
+
+    currentJson = jsonText;
+    currentCsv  = csvText;
 
     const data = JSON.parse(jsonText);
 
-    // Meta bar
-    document.getElementById('m-generated').textContent = data.generated || '—';
+    document.getElementById('m-generated').textContent = data.generated || date;
     document.getElementById('m-total').textContent     = data.total + ' stocks';
-    document.getElementById('m-sectors').textContent   = Object.keys(data.sectors || {}).join(', ');
-    document.getElementById('m-size').textContent      = fmt(jsonText.length);
-    document.getElementById('meta-updated').textContent = 'Generated ' + (data.generated || '—');
+    document.getElementById('m-json-size').textContent = fmt(jsonText.length);
+    document.getElementById('m-csv-size').textContent  = fmt(csvText.length);
     document.getElementById('json-size-label').textContent = fmt(jsonText.length);
     document.getElementById('csv-size-label').textContent  = fmt(csvText.length);
 
-    // Show text areas
-    const ja = document.getElementById('json-area');
-    ja.value = jsonText;
-    document.getElementById('json-loading').style.display = 'none';
-    ja.style.display = 'block';
+    document.getElementById('dl-json').href = `${date}.json`;
+    document.getElementById('dl-json').download = `stocks-${date}.json`;
+    document.getElementById('dl-csv').href  = `${date}.csv`;
+    document.getElementById('dl-csv').download  = `stocks-${date}.csv`;
 
-    const ca = document.getElementById('csv-area');
-    ca.value = csvText;
-    document.getElementById('csv-loading').style.display = 'none';
-    ca.style.display = 'block';
+    ['json','csv'].forEach(t => {
+      const text = t === 'json' ? jsonText : csvText;
+      document.getElementById(`${t}-loading`).style.display = 'none';
+      const area = document.getElementById(`${t}-area`);
+      area.value = text;
+      area.style.display = 'block';
+    });
 
   } catch(e) {
-    document.getElementById('json-loading').textContent = 'Failed to load — run the GitHub Actions workflow first.';
-    document.getElementById('csv-loading').textContent  = 'Failed to load — run the GitHub Actions workflow first.';
+    ['json','csv'].forEach(t => {
+      document.getElementById(`${t}-loading`).textContent = 'Failed to load snapshot.';
+    });
   }
 }
 
-function flashCopied(btnId) {
-  const btn = document.getElementById(btnId);
-  const orig = btn.textContent;
-  btn.textContent = 'Copied ✓';
-  btn.classList.add('copied');
-  setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+function copyData(type) {
+  const text = type === 'json' ? currentJson : currentCsv;
+  if (!text) return;
+  const btnId = `copy-${type}-btn`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById(btnId);
+    const orig = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+  });
 }
 
-function copyJson() {
-  if (!jsonText) return;
-  navigator.clipboard.writeText(jsonText).then(() => flashCopied('copy-json-btn'));
+async function init() {
+  try {
+    const manifest = await fetch('manifest.json').then(r => r.json());
+    const snaps = manifest.snapshots || [];
+    const sel = document.getElementById('snapshot-select');
+    sel.innerHTML = '';
+
+    snaps.forEach((s, i) => {
+      const opt = document.createElement('option');
+      opt.value = s.date;
+      const label = fmtDate(s.date) + ' — ' + s.total + ' stocks';
+      opt.textContent = i === 0 ? label + '  ← latest' : label;
+      sel.appendChild(opt);
+    });
+
+    document.getElementById('snap-count').textContent =
+      snaps.length + ' snapshot' + (snaps.length !== 1 ? 's' : '');
+
+    if (snaps.length > 0) loadSnapshot(snaps[0].date);
+
+  } catch(e) {
+    document.getElementById('snapshot-select').innerHTML = '<option>No snapshots yet</option>';
+    setLoading('No snapshots found — run the GitHub Actions workflow first.');
+  }
 }
 
-function copyCsv() {
-  if (!csvText) return;
-  navigator.clipboard.writeText(csvText).then(() => flashCopied('copy-csv-btn'));
-}
-
-loadExports();
+init();
 </script>
 </body>
 </html>
