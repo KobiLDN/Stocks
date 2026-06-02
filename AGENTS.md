@@ -157,13 +157,30 @@ When adding a new sector, complete every item in this checklist — in order:
 - `get_orders` — last 50 executed orders
 - `get_portfolio_vs_signals` — cross-references holdings against all sector signal picks
 
-**API key — two options (both gitignored):**
-1. Drop key in `t212_mcp/.key` (one-time local setup)
-2. Set `T212_API_KEY` environment variable in Claude Code session settings at code.claude.com → project → Environment variables
+**API key — HTTP Basic Authentication:**
+T212 uses Basic Auth (`KEY_ID:SECRET_KEY` base64 encoded). Put both on one line in `t212_mcp/.key`:
+```
+YOUR_API_KEY_ID:YOUR_SECRET_KEY
+```
+Generate the key pair from **T212 app → Settings → API (Beta)**. The secret is shown only once at generation time. The `.key` file is gitignored — never committed. The safest location is the **container-level** folder outside any git repo: `G:\My Drive\coding\ai\Stocks\t212_mcp\.key`.
 
 **MCP config** lives in `.claude/settings.json` (committed — no key stored there). The server starts automatically when a Claude Code session opens in this repo.
 
 **Privacy guarantee:** `exports/*-portfolio.json` and `exports/*-portfolio.csv` are in `.gitignore`. Portfolio data is fetched locally, used locally, and never reaches GitHub or Cloudflare Pages.
+
+## Local portfolio snapshot (container-level — never in git)
+
+`G:\My Drive\coding\ai\Stocks\t212_mcp\` is outside both git repos — nothing here can ever be committed or reach GitHub.
+
+| File | Purpose |
+|---|---|
+| `.key` | `KEY_ID:SECRET_KEY` — T212 Basic auth credentials |
+| `portfolio.py` | Fetches live T212 positions + loads latest export from STOCKSMain; merges and writes snapshot |
+| `run.bat` | Double-click to run `portfolio.py` |
+| `snapshot.json` | Output — full merged data (paste to Claude for analysis) |
+| `snapshot.txt` | Output — compact table (paste to DeepSeek or any AI) |
+
+**Workflow:** run `run.bat` after 22:00 UTC (export is fresh) → snapshot merges your live T212 positions with all 176 stocks data + signal picks → paste output to any AI for analysis.
 
 ## GitHub Actions
 
@@ -182,7 +199,7 @@ Workflow files must live at the **repo root** (`.github/workflows/`) — GitHub 
 
 Current approved exceptions:
 - **`OPENROUTER_API_KEY`** (GitHub Actions secret) — used only by `.github/workflows/generate-signals.yml` to call `deepseek/deepseek-v4-flash` via OpenRouter. Cost: ~$0.004/run.
-- **`T212_API_KEY`** (local only — **never a GitHub secret**) — used by `t212_mcp/server.py` and `generate_export.py` to fetch the user's Trading 212 portfolio. Stored in `t212_mcp/.key` or as a local env var. Never committed, never used in CI, never goes online.
+- **T212 credentials** (local only — **never a GitHub secret**) — used by `t212_mcp/server.py`, `generate_export.py`, and `G:\My Drive\coding\ai\Stocks\t212_mcp\portfolio.py`. Stored as `KEY_ID:SECRET_KEY` in `t212_mcp/.key` (gitignored) or preferably in the container-level folder outside any repo. Never committed, never used in CI, never goes online.
 
 Everything else remains keyless:
 - **News sentiment** → yfinance `.news` + local VADER scoring (no LLM, no Finnhub).

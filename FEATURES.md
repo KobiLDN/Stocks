@@ -14,7 +14,7 @@
 
 ## Done
 
-- **T212 MCP server + local portfolio export** — `t212_mcp/server.py` (FastMCP); 4 tools: `get_positions`, `get_account_summary`, `get_orders`, `get_portfolio_vs_signals` (cross-refs holdings vs signal picks); `.claude/settings.json` wires it into Claude Code automatically; `generate_export.py` merges T212 positions into `exports/YYYY-MM-DD-portfolio.json` when `T212_API_KEY` is set or `t212_mcp/.key` exists — gitignored, local only, never committed
+- **T212 MCP server + local portfolio snapshot** — `t212_mcp/server.py` (FastMCP); 4 tools: `get_positions`, `get_account_summary`, `get_orders`, `get_portfolio_vs_signals`; `.claude/settings.json` wires it into Claude Code automatically; `generate_export.py` merges T212 positions into `exports/YYYY-MM-DD-portfolio.json` (gitignored, local only). Container-level `G:\My Drive\coding\ai\Stocks\t212_mcp\portfolio.py` + `run.bat` — fetches live T212 positions, merges with latest export from STOCKSMain, writes `snapshot.json` (paste to Claude) + `snapshot.txt` (paste to DeepSeek); key stored as `KEY_ID:SECRET_KEY` in `.key` outside any git repo
 
 - **Daily export pipeline** — `generate_export.py` builds `exports/YYYY-MM-DD.json+csv` (176 stocks; metrics, what-if £100/£1k/£10k × 5 timeframes, top-3 news + sentiment, AI signals); `exports/manifest.json` tracks all snapshots; `generate-export.yml` runs at 22:00 UTC weekdays; `exports/index.html` shows date dropdown, loads selected snapshot, one-click Copy JSON/CSV; served at `stocks-4qw.pages.dev/exports/`
 
