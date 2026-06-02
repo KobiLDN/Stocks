@@ -5,58 +5,38 @@
 > **ALL changes go to `dev` only. Never push to `main` without explicit user instruction.**
 
 - Every commit gets pushed to `origin/dev`.
-- `main` is the live site — only merge `dev → main` when the user explicitly says "go live".
+- `main` is the live site — only push `dev → main` when the user explicitly says "go live".
 - Always ask before pushing to `main`. Never assume.
 
 ---
 
-## Two-clone setup
+## How it works
 
-The repo lives in a plain container folder with two independent clones (not git worktrees). Worktrees use absolute-path pointer files that break when folders are moved or synced by Google Drive / OneDrive — two clones avoids this entirely.
+All editing happens in the web Claude container. The user reviews changes on the dev preview site. No local clones needed.
 
-```
-G:\My Drive\coding\ai\Stocks\
-├── STOCKSMain\   ← clone on `main` — safe copy, never edit directly
-└── STOCKSDev\    ← clone on `dev`  ← all work happens here
-```
+### The 3-step workflow
 
-## The 3-step workflow
+1. **Make changes** — edit files, commit, `git push origin dev`
+2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → **https://dev.stocks-4qw.pages.dev**
+3. **Go live** — user says "go live" → `git push origin dev:main`
 
-1. **Edit in `STOCKSDev`** — make changes, commit, `git push origin dev`
-2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → stable preview URL: **https://dev.stocks-4qw.pages.dev** (viewable from any device). Local `file://` still works instantly for quick checks without pushing.
-3. **Go live** — from `STOCKSMain`: `git pull && git merge origin/dev --no-edit && git push` — **requires explicit user "go" every time**
+`main` = live production site. Always working, always deployable.
+`dev` = preview. Break it freely.
 
-`main` = sacred: always working, always deployable.
-`dev` = disposable: break it freely.
+### If dev and main diverge
 
-## Safety net
-
-If `STOCKSDev` gets trashed:
+Usually caused by GitHub Actions (price bot) committing directly to `main`. Fix:
 
 ```
-cd STOCKSDev
-git fetch origin
-git reset --hard origin/main
-```
-
-Or delete the folder and re-clone — `main` is always the source of truth.
-
-## If `--ff-only` is refused
-
-The price bot may have committed directly to `main` since your last sync. Fix:
-
-```
-cd STOCKSDev
 git fetch origin
 git rebase origin/main
-git push --force-with-lease origin dev
+git push origin dev
 ```
-
-Then retry step 2.
 
 ## Branch hygiene
 
-- All feature work on `dev`
+- All work on `dev`
 - `main` only ever receives fast-forward merges from `dev`
 - Never commit directly to `main`
 - Never force-push `main`
+- No feature branches unless user asks

@@ -21,58 +21,31 @@ This file is for any AI or human contributor working in this repo.
 ## Read order before editing
 
 1. `AGENTS.md` (this file)
-2. `WORKFLOW.md` (repo structure + DEV→MAIN→GitHub shipping process)
+2. `WORKFLOW.md` (repo structure + DEV→MAIN shipping process)
 3. `CHANGELOG.md` (newest entry is first row under the header)
 4. `FEATURES.md` (backlog of planned work)
 
-## Repo structure & workflow (READ THIS)
+## Workflow
 
-The project lives in a container folder with **two independent clones** (not git worktrees):
+All editing happens in the web Claude container. There are no local clones to manage.
 
-```
-G:\My Drive\coding\ai\Stocks\        ← plain container (no .git)
-                       ├── STOCKSMain\   ← clone on `main` — the safe copy + what goes live
-                       └── STOCKSDev\    ← clone on `dev`  ← all work happens here
-                             ├── index.html      ← hub landing page
-                             └── AI\             ← AI sector dashboard
-```
+### The 3-step workflow
 
-- **`STOCKSDev` = where all work happens.** Edit here. Break things freely.
-- **`STOCKSMain` = the safe copy.** Never edit directly. It is the restore point and the only branch GitHub Pages deploys.
-- **GitHub `origin` = the bridge** between the two clones.
+1. **Make changes** — edit files in the container, commit, `git push origin dev`.
+2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → **https://dev.stocks-4qw.pages.dev**
+3. **Go live** — only when the user explicitly says so. Push `dev → main`: `git push origin dev:main`.
 
-### The 3-step workflow — always follow this order
+Step 3 requires explicit user approval every time. If unsure, ask.
 
-1. **Edit files in `STOCKSDev`** — make changes, commit, `git push origin dev`.
-2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → stable preview URL: **https://dev.stocks-4qw.pages.dev** (viewable from any device). Local `file://` still works instantly without a push.
-3. **Go live** — from `STOCKSMain`: `git pull && git merge origin/dev --no-edit && git push`. This is what updates the live site.
+### If dev and main diverge
 
-Never edit in `STOCKSMain`. Never push to `main` until the user has approved the change ("go"). Step 3 (the live push) **requires explicit user approval every time.**
-
-### Safety net — if `STOCKSDev` gets trashed
-
-`main` always has a known-good copy, so dev is disposable:
+Usually caused by the price bot committing directly to `main`. Fix:
 
 ```
-cd STOCKSDev
-git fetch origin
-git reset --hard origin/main     # discard local mess, back to known-good
-```
-
-Or just delete the `STOCKSDev` folder and re-clone — nothing is lost because `main` is the source of truth.
-
-### If `git merge --ff-only` is refused in step 2
-
-Means `dev` and `main` diverged (usually the price bot committed to `main` in between). Fix:
-
-```
-cd STOCKSDev
 git fetch origin
 git rebase origin/main
-git push --force-with-lease origin dev
+git push origin dev
 ```
-
-Then retry step 2 in `STOCKSMain`.
 
 ## After every edit
 
@@ -95,9 +68,9 @@ Note: `last-updated` and `fx-rate` in `index.html` are now set dynamically from 
 All sector files live in their own subfolder. One shared stylesheet covers all sectors:
 
 ```
-STOCKSDev\
+Stocks/
 ├── index.html          ← hub landing page (links to all sectors)
-├── shared.css          ← shared stylesheet loaded by all 28 sector pages
+├── shared.css          ← shared stylesheet loaded by all sector pages
 ├── shared.js           ← shared JS (toggleTheme, buildTape)
 ├── AI\                 ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html      ← CANONICAL reference for typography/UI standards
@@ -107,7 +80,8 @@ STOCKSDev\
 ├── Biotech\            ← Biotech sector (30 stocks, 9 categories)
 ├── Defence\            ← Defence & Aerospace sector (28 stocks, 6 categories)
 ├── Tech\               ← Technology sector (31 stocks, 6 categories)
-└── (future sectors: Energy\, Crypto\)
+├── Crypto\             ← Crypto sector (19 coins, 6 categories)
+└── (future sectors: Energy\)
 ```
 
 ## Data architecture — how pages get their data
