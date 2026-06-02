@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price history charts for all 16 crypto stocks including Bitcoin ETFs, Ethereum ETFs, exchanges, corporate treasuries, and miners. Filter by category.">
+<meta name="description" content="1-year price history charts for 20 crypto assets including Bitcoin, Layer 1 blockchains, DeFi protocols, Layer 2 networks, meme coins, and crypto equities. Filter by category.">
 <title>Crypto — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -124,11 +124,12 @@
     position: relative;
   }
   .cat-btn:hover { color: var(--accent); border-color: var(--accent); }
-  .cat-btn.active-btc-etf  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
-  .cat-btn.active-eth-etf  { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
-  .cat-btn.active-exchange { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-  .cat-btn.active-treasury { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .cat-btn.active-miner    { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .cat-btn.active-bitcoin { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .cat-btn.active-layer1  { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .cat-btn.active-defi    { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
+  .cat-btn.active-layer2  { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .cat-btn.active-meme    { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
+  .cat-btn.active-equity  { background: var(--green);  border-color: var(--green);  color: var(--bg); }
 
   /* SINGLE VIEW */
   #single-view {
@@ -174,11 +175,12 @@
     margin-top: 8px;
   }
 
-  .cat-label.btc-etf  { color: var(--amber); }
-  .cat-label.eth-etf  { color: var(--indigo); }
-  .cat-label.exchange { color: var(--accent); }
-  .cat-label.treasury { color: var(--gold); }
-  .cat-label.miner    { color: var(--teal); }
+  .cat-label.bitcoin { color: var(--amber); }
+  .cat-label.layer1  { color: var(--accent); }
+  .cat-label.defi    { color: var(--indigo); }
+  .cat-label.layer2  { color: var(--teal); }
+  .cat-label.meme    { color: var(--gold); }
+  .cat-label.equity  { color: var(--green); }
 
   .stock-btn {
     display: flex;
@@ -369,7 +371,7 @@
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
     <h1>Crypto <span>Charts</span></h1>
-    <div class="header-sub">TradingView live charts · 16 stocks · single view or category grid</div>
+    <div class="header-sub">TradingView live charts · 20 assets · single view or category grid</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -403,12 +405,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 16 crypto stocks">📊 Dashboard</a>
+    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 crypto assets">📊 Dashboard</a>
     <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 16 stocks with news sentiment scoring">📰 News</a>
+    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 20 assets with news sentiment scoring">📰 News</a>
     <a href="signals.html"    class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html"    class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html"     class="nav-link active" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="charts.html"     class="nav-link active" data-tooltip="1-year price history charts for every asset">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -469,45 +471,69 @@
 <script src="https://s3.tradingview.com/tv.js"></script>
 <script src="prices-data.js"></script>
 <script>
-  /* All Crypto stocks are on NASDAQ — no special TV symbol overrides needed */
-  const TV_MAP = {};
+  const TV_MAP = {
+    'BTC':  'CRYPTO:BTCUSD',
+    'ETH':  'CRYPTO:ETHUSD',
+    'SOL':  'CRYPTO:SOLUSD',
+    'BNB':  'CRYPTO:BNBUSD',
+    'XRP':  'CRYPTO:XRPUSD',
+    'ADA':  'CRYPTO:ADAUSD',
+    'AVAX': 'CRYPTO:AVAXUSD',
+    'DOT':  'CRYPTO:DOTUSD',
+    'TRX':  'CRYPTO:TRXUSD',
+    'LINK': 'CRYPTO:LINKUSD',
+    'UNI':  'CRYPTO:UNIUSD',
+    'AAVE': 'CRYPTO:AAVEUSD',
+    'MATIC':'CRYPTO:MATICUSD',
+    'ARB':  'CRYPTO:ARBUSD',
+    'OP':   'CRYPTO:OPUSD',
+    'DOGE': 'CRYPTO:DOGEUSD',
+    'SHIB': 'CRYPTO:SHIBUSD',
+  };
 
   /* Category display config for charts */
   const CHART_CATS = {
-    'btc-etf': {
-      key: 'btc-etf',
-      label: '₿ BTC ETF',
+    'bitcoin': {
+      key: 'bitcoin',
+      label: '₿ Bitcoin',
       color: 'var(--amber)',
-      btnLabel: 'BTC ETF',
-      tooltip: 'Bitcoin ETFs — IBIT, FBTC, ARKB, GBTC, BITO: spot and futures Bitcoin funds giving regulated BTC exposure',
+      btnLabel: 'Bitcoin',
+      tooltip: 'Bitcoin — BTC: the original and largest cryptocurrency by market cap',
     },
-    'eth-etf': {
-      key: 'eth-etf',
-      label: 'Ξ ETH ETF',
-      color: 'var(--indigo)',
-      btnLabel: 'ETH ETF',
-      tooltip: 'Ethereum ETFs — ETHA, FETH: spot Ethereum funds giving regulated ETH exposure',
-    },
-    'exchange': {
-      key: 'exchange',
-      label: '🏦 Exchange',
+    'layer1': {
+      key: 'layer1',
+      label: '⛓️ Layer 1',
       color: 'var(--accent)',
-      btnLabel: 'Exchange',
-      tooltip: 'Crypto exchanges — COIN (Coinbase), HOOD (Robinhood): platforms enabling crypto trading and custody',
+      btnLabel: 'Layer 1',
+      tooltip: 'Layer 1 blockchains — ETH, SOL, BNB, XRP, ADA, AVAX, DOT, TRX: major smart-contract platforms',
     },
-    'treasury': {
-      key: 'treasury',
-      label: '🏛️ Treasury',
-      color: 'var(--gold)',
-      btnLabel: 'Treasury',
-      tooltip: 'Corporate Bitcoin treasury — MSTR (Strategy / MicroStrategy): the largest corporate Bitcoin holder',
+    'defi': {
+      key: 'defi',
+      label: '🔮 DeFi',
+      color: 'var(--indigo)',
+      btnLabel: 'DeFi',
+      tooltip: 'DeFi protocols — LINK (Chainlink), UNI (Uniswap), AAVE: decentralised finance infrastructure',
     },
-    'miner': {
-      key: 'miner',
-      label: '⛏️ Miner',
+    'layer2': {
+      key: 'layer2',
+      label: '⚡ Layer 2',
       color: 'var(--teal)',
-      btnLabel: 'Miners',
-      tooltip: 'Bitcoin miners — MARA, RIOT, CLSK, HUT, IREN, CIFR: companies mining BTC using specialised ASIC hardware',
+      btnLabel: 'Layer 2',
+      tooltip: 'Layer 2 scaling — MATIC (Polygon), ARB (Arbitrum), OP (Optimism): Ethereum scaling solutions',
+    },
+    'meme': {
+      key: 'meme',
+      label: '🐕 Meme',
+      color: 'var(--gold)',
+      btnLabel: 'Meme',
+      tooltip: 'Meme coins — DOGE (Dogecoin), SHIB (Shiba Inu): community-driven high-volatility tokens',
+    },
+    'equity': {
+      key: 'equity',
+      label: '📊 Equities',
+      color: 'var(--green)',
+      btnLabel: 'Equities',
+      tooltip: 'Crypto equities — COIN (Coinbase), MSTR (Strategy / MicroStrategy), IBIT (iShares Bitcoin Trust)',
     },
   };
 
@@ -717,7 +743,7 @@
     setView('grid');
     const firstCatBtn = document.querySelector('.cat-btn');
     if (firstCatBtn) {
-      const firstCatKey = Object.keys(window._chartCats || {})[0] || 'btc-etf';
+      const firstCatKey = Object.keys(window._chartCats || {})[0] || 'bitcoin';
       setCategory(firstCatKey, firstCatBtn);
     }
   });

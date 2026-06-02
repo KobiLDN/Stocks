@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Crypto stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 16 stocks across Bitcoin ETFs, Ethereum ETFs, exchanges, treasuries, and miners.">
+<meta name="description" content="Crypto fundamentals — market cap, beta, volume data for 20 assets across Bitcoin, Layer 1 blockchains, DeFi, Layer 2 networks, meme coins, and crypto equities. P/E and analyst data for listed equities.">
 <title>Crypto — Stock Metrics</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -180,11 +180,12 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-btc-etf  { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
-  .cat-eth-etf  { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
-  .cat-exchange { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
-  .cat-treasury { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
-  .cat-miner    { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
+  .cat-bitcoin { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
+  .cat-layer1  { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
+  .cat-defi    { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
+  .cat-layer2  { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
+  .cat-meme    { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
+  .cat-equity  { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
 
   .num-cell {
     text-align: right;
@@ -281,12 +282,12 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 16 crypto stocks">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 crypto assets">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link active" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 16 stocks with news sentiment scoring">📰 News</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 20 assets with news sentiment scoring">📰 News</a>
     <a href="signals.html" class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every asset">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
@@ -331,38 +332,44 @@
 <script src="prices-data.js"></script>
 <script>
   const NAMES = {
-    'IBIT': 'iShares Bitcoin Trust',
-    'FBTC': 'Fidelity Wise Origin Bitcoin Fund',
-    'ARKB': 'ARK 21Shares Bitcoin ETF',
-    'GBTC': 'Grayscale Bitcoin Trust',
-    'BITO': 'ProShares Bitcoin Strategy ETF',
-    'ETHA': 'iShares Ethereum Trust',
-    'FETH': 'Fidelity Ethereum Fund',
+    'BTC':  'Bitcoin',
+    'ETH':  'Ethereum',
+    'SOL':  'Solana',
+    'BNB':  'BNB',
+    'XRP':  'XRP',
+    'ADA':  'Cardano',
+    'AVAX': 'Avalanche',
+    'DOT':  'Polkadot',
+    'TRX':  'TRON',
+    'LINK': 'Chainlink',
+    'UNI':  'Uniswap',
+    'AAVE': 'Aave',
+    'MATIC':'Polygon',
+    'ARB':  'Arbitrum',
+    'OP':   'Optimism',
+    'DOGE': 'Dogecoin',
+    'SHIB': 'Shiba Inu',
     'COIN': 'Coinbase Global',
-    'HOOD': 'Robinhood Markets',
     'MSTR': 'Strategy (MicroStrategy)',
-    'MARA': 'MARA Holdings',
-    'RIOT': 'Riot Platforms',
-    'CLSK': 'CleanSpark',
-    'HUT':  'Hut 8 Corp',
-    'IREN': 'IREN Limited',
-    'CIFR': 'Cipher Mining',
+    'IBIT': 'iShares Bitcoin Trust',
   };
 
   const CAT_LABELS = {
-    'btc-etf':  'BTC ETF',
-    'eth-etf':  'ETH ETF',
-    'exchange': 'Exchange',
-    'treasury': 'Treasury',
-    'miner':    'Miner',
+    'bitcoin': 'Bitcoin',
+    'layer1':  'Layer 1',
+    'defi':    'DeFi',
+    'layer2':  'Layer 2',
+    'meme':    'Meme',
+    'equity':  'Equity',
   };
 
   const CAT_TOOLTIPS = {
-    'btc-etf':  'Bitcoin ETFs: IBIT, FBTC, ARKB, GBTC, BITO — spot and futures Bitcoin funds',
-    'eth-etf':  'Ethereum ETFs: ETHA, FETH — spot Ethereum funds',
-    'exchange': 'Crypto exchanges: COIN (Coinbase), HOOD (Robinhood) — platforms enabling crypto trading',
-    'treasury': 'Corporate Bitcoin treasury: MSTR (Strategy / MicroStrategy) — largest corporate BTC holder',
-    'miner':    'Bitcoin miners: MARA, RIOT, CLSK, HUT, IREN, CIFR — companies mining BTC using specialised hardware',
+    'bitcoin': 'Bitcoin — BTC: the original and largest cryptocurrency by market cap',
+    'layer1':  'Layer 1 blockchains — ETH, SOL, BNB, XRP, ADA, AVAX, DOT, TRX: smart-contract platforms',
+    'defi':    'DeFi protocols — LINK (Chainlink), UNI (Uniswap), AAVE: decentralised finance infrastructure',
+    'layer2':  'Layer 2 scaling — MATIC (Polygon), ARB (Arbitrum), OP (Optimism): Ethereum scaling solutions',
+    'meme':    'Meme coins — DOGE (Dogecoin), SHIB (Shiba Inu): community-driven high-volatility tokens',
+    'equity':  'Crypto equities — COIN (Coinbase), MSTR (Strategy), IBIT (BlackRock Bitcoin ETF)',
   };
 
   function yahooUrl(ticker) {
