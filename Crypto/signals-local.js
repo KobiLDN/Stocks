@@ -1,137 +1,107 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-02 07:41",
+  "updated": "pending \u2014 run Generate Signals workflow",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
     {
       "rank": 1,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "HUT has +724% 1Y, +158.2% YTD, +69.54% 1M momentum, beta 5.718, strong_buy analyst consensus with score 1.31, and recent AI data center expansion catalysts align with institutional demand.",
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Pending re-generation \u2014 run GitHub Actions Generate Signals workflow.",
       "drivers": [
-        "+158.2% YTD",
-        "beta 5.718",
-        "strong_buy (1.31)",
-        "AI data center catalyst"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 2,
-      "ticker": "RIOT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "RIOT shows +213% 1Y, +99.51% YTD, +51.23% 1M momentum, beta 3.737, strong_buy consensus (1.5), and an AI-focused data center expansion unveiled, driving the recent +15.4% weekly surge.",
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "+99.51% YTD",
-        "+51.23% 1M",
-        "strong_buy (1.5)",
-        "AI data center expansion"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 3,
-      "ticker": "CLSK",
+      "ticker": "SOL",
       "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "CLSK has +104% 1Y, +62.86% YTD, +46.72% 1M momentum, beta 3.72, but high short interest of 45.84% presents squeeze potential alongside bullish Wall Street views.",
+      "confidence": 0.68,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "+62.86% YTD",
-        "+46.72% 1M",
-        "beta 3.72",
-        "short squeeze potential 45.84%"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 4,
-      "ticker": "IREN",
-      "signal": "buy",
-      "confidence": 0.71,
-      "rationale": "IREN posted +635% 1Y, +53% YTD, +32.03% 1M, beta 4.179, with a $3.65B GPU financing deal and AI data center pivot, driving positive news sentiment.",
+      "ticker": "XRP",
+      "signal": "hold",
+      "confidence": 0.6,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "+635% 1Y",
-        "+53% YTD",
-        "beta 4.179",
-        "$3.65B GPU financing"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 5,
-      "ticker": "CIFR",
-      "signal": "strong_buy",
-      "confidence": 0.69,
-      "rationale": "CIFR has +599% 1Y, +48.21% YTD, +34.21% 1M momentum, strong_buy consensus (1.33), and Goldman's focus on AI data centers supports the mining-to-AI thesis.",
+      "ticker": "BNB",
+      "signal": "hold",
+      "confidence": 0.58,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "+599% 1Y",
-        "+48.21% YTD",
-        "strong_buy (1.33)",
-        "Goldman AI data center focus"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 6,
-      "ticker": "MARA",
-      "signal": "buy",
-      "confidence": 0.67,
-      "rationale": "MARA shows +49.85% YTD, +25.53% 1M, beta 5.428, and positive news sentiment 0.241, but a high short interest of 29.86% may fuel further upside on positioning.",
+      "ticker": "AVAX",
+      "signal": "hold",
+      "confidence": 0.55,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "+49.85% YTD",
-        "beta 5.428",
-        "news sentiment 0.241",
-        "short interest 29.86%"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 7,
-      "ticker": "HOOD",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "HOOD has +27% 1Y but -21.25% YTD; however, recent 1M +18.52% and 1W +23.21% momentum with news sentiment 0.427 on crypto-brokerage expansion are strong near-term catalysts.",
+      "ticker": "ADA",
+      "signal": "hold",
+      "confidence": 0.52,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "+18.52% 1M",
-        "+23.21% 1W",
-        "news sentiment 0.427",
-        "crypto-brokerage expansion"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 8,
-      "ticker": "BITO",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BITO is flat in 1M (0.00%) vs peers, but has a high dividend yield of 7192% and positive news sentiment 0.152, offering income exposure to BTC with no single-stock risk.",
+      "ticker": "DOGE",
+      "signal": "hold",
+      "confidence": 0.5,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "flat 1M",
-        "dividend yield 7192%",
-        "news sentiment 0.152",
-        "BTC ETF proxy"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 9,
-      "ticker": "COIN",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "COIN has -29% 1Y and -22.8% YTD, but beta 3.381, buy consensus (2.0), news sentiment 0.198, and low 11.66% short interest imply resilience as the leading exchange.",
+      "ticker": "LINK",
+      "signal": "hold",
+      "confidence": 0.48,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "beta 3.381",
-        "buy consensus 2.0",
-        "news sentiment 0.198",
-        "leading exchange"
+        "Awaiting refresh"
       ]
     },
     {
       "rank": 10,
-      "ticker": "ARKB",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "ARKB has -20.41% YTD and -10.76% 1M, but as a spot BTC ETF it mirrors Bitcoin price with massive institutional holdings (1.5M BTC for top 3 ETFs) and low expense ratio appeal.",
+      "ticker": "DOT",
+      "signal": "hold",
+      "confidence": 0.45,
+      "rationale": "Pending re-generation.",
       "drivers": [
-        "spot BTC ETF",
-        "institutional holdings scale",
-        "low expense ratio",
-        "BTC recovery proxy"
+        "Awaiting refresh"
       ]
     }
   ],
