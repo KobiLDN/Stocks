@@ -23,24 +23,34 @@ JS_FILE   = "prices-data.js"
 
 DASHBOARD_TITLE = "Crypto"
 
-# ticker → (yahoo_symbol, category, exchange, special, company_name)
+# ticker (display) → (yahoo_symbol, category, exchange, special, company_name)
 STOCKS = {
-    "IBIT": ("IBIT", "btc-etf",  "NASDAQ", None, "iShares Bitcoin Trust"),
-    "FBTC": ("FBTC", "btc-etf",  "NASDAQ", None, "Fidelity Wise Origin Bitcoin Fund"),
-    "ARKB": ("ARKB", "btc-etf",  "NASDAQ", None, "ARK 21Shares Bitcoin ETF"),
-    "GBTC": ("GBTC", "btc-etf",  "NYSE",   None, "Grayscale Bitcoin Trust"),
-    "BITO": ("BITO", "btc-etf",  "NYSE",   None, "ProShares Bitcoin Strategy ETF"),
-    "ETHA": ("ETHA", "eth-etf",  "NASDAQ", None, "iShares Ethereum Trust"),
-    "FETH": ("FETH", "eth-etf",  "NASDAQ", None, "Fidelity Ethereum Fund"),
-    "COIN": ("COIN", "exchange", "NASDAQ", None, "Coinbase Global"),
-    "HOOD": ("HOOD", "exchange", "NASDAQ", None, "Robinhood Markets"),
-    "MSTR": ("MSTR", "treasury", "NASDAQ", None, "Strategy (MicroStrategy)"),
-    "MARA": ("MARA", "miner",    "NASDAQ", None, "MARA Holdings"),
-    "RIOT": ("RIOT", "miner",    "NASDAQ", None, "Riot Platforms"),
-    "CLSK": ("CLSK", "miner",    "NASDAQ", None, "CleanSpark"),
-    "HUT":  ("HUT",  "miner",    "NASDAQ", None, "Hut 8 Corp"),
-    "IREN": ("IREN", "miner",    "NASDAQ", None, "IREN Limited"),
-    "CIFR": ("CIFR", "miner",    "NASDAQ", None, "Cipher Mining"),
+    # ── Bitcoin ───────────────────────────────────────────────────────────────
+    "BTC":  ("BTC-USD",  "bitcoin", "Crypto", None, "Bitcoin"),
+    # ── Layer 1 ───────────────────────────────────────────────────────────────
+    "ETH":  ("ETH-USD",  "layer1",  "Crypto", None, "Ethereum"),
+    "SOL":  ("SOL-USD",  "layer1",  "Crypto", None, "Solana"),
+    "BNB":  ("BNB-USD",  "layer1",  "Crypto", None, "BNB"),
+    "XRP":  ("XRP-USD",  "layer1",  "Crypto", None, "XRP"),
+    "ADA":  ("ADA-USD",  "layer1",  "Crypto", None, "Cardano"),
+    "AVAX": ("AVAX-USD", "layer1",  "Crypto", None, "Avalanche"),
+    "DOT":  ("DOT-USD",  "layer1",  "Crypto", None, "Polkadot"),
+    "TRX":  ("TRX-USD",  "layer1",  "Crypto", None, "TRON"),
+    # ── DeFi ──────────────────────────────────────────────────────────────────
+    "LINK": ("LINK-USD", "defi",    "Crypto", None, "Chainlink"),
+    "UNI":  ("UNI-USD",  "defi",    "Crypto", None, "Uniswap"),
+    "AAVE": ("AAVE-USD", "defi",    "Crypto", None, "Aave"),
+    # ── Layer 2 / Scaling ─────────────────────────────────────────────────────
+    "MATIC":("MATIC-USD","layer2",  "Crypto", None, "Polygon"),
+    "ARB":  ("ARB-USD",  "layer2",  "Crypto", None, "Arbitrum"),
+    "OP":   ("OP-USD",   "layer2",  "Crypto", None, "Optimism"),
+    # ── Meme ──────────────────────────────────────────────────────────────────
+    "DOGE": ("DOGE-USD", "meme",    "Crypto", None, "Dogecoin"),
+    "SHIB": ("SHIB-USD", "meme",    "Crypto", None, "Shiba Inu"),
+    # ── Equities ──────────────────────────────────────────────────────────────
+    "COIN": ("COIN",     "equity",  "NASDAQ", None, "Coinbase Global"),
+    "MSTR": ("MSTR",     "equity",  "NASDAQ", None, "Strategy (MicroStrategy)"),
+    "IBIT": ("IBIT",     "equity",  "NASDAQ", None, "iShares Bitcoin Trust"),
 }
 
 
@@ -217,8 +227,12 @@ def fmt_gbp(val):
         return str(round(val))
     elif val >= 1:
         return f"{val:.2f}"
+    elif val >= 0.01:
+        return f"{val:.4f}"
+    elif val >= 0.000001:
+        return f"{val:.8f}"
     else:
-        return f"{val:.3f}"
+        return f"{val:.10f}"
 
 
 def calc_return(current_gbp, low_gbp):

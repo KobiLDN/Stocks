@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Crypto stock dashboard — live prices, 52-week range, and momentum for 16 stocks across Bitcoin ETFs, Ethereum ETFs, exchanges, corporate treasuries, and miners." name="description"/>
+<meta content="Crypto dashboard — live prices, 52-week range, and momentum for 20 assets across Bitcoin, Layer 1 blockchains, DeFi, Layer 2 networks, meme coins, and crypto equities." name="description"/>
 <title>Crypto — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -75,11 +75,12 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  .filter-btn[data-filter="btc-etf"].active   { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
-  .filter-btn[data-filter="eth-etf"].active   { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
-  .filter-btn[data-filter="exchange"].active  { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-  .filter-btn[data-filter="treasury"].active  { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .filter-btn[data-filter="miner"].active     { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .filter-btn[data-filter="bitcoin"].active { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="layer1"].active  { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .filter-btn[data-filter="defi"].active    { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
+  .filter-btn[data-filter="layer2"].active  { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .filter-btn[data-filter="meme"].active    { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="equity"].active  { background: var(--green);  border-color: var(--green);  color: var(--bg); }
 
   .section-header {
     display: flex;
@@ -188,11 +189,12 @@
     font-weight: 700;
   }
 
-  .cat-btc-etf  { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
-  .cat-eth-etf  { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
-  .cat-exchange { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
-  .cat-treasury { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
-  .cat-miner    { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
+  .cat-bitcoin { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
+  .cat-layer1  { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
+  .cat-defi    { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
+  .cat-layer2  { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
+  .cat-meme    { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
+  .cat-equity  { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
 
   .price {
     font-family: 'IBM Plex Mono', monospace;
@@ -382,23 +384,24 @@
 </header>
 <nav>
 <div class="nav-inner">
-<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 16 crypto stocks" href="index.html">📊 Dashboard</a>
+<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 20 crypto assets" href="index.html">📊 Dashboard</a>
 <a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" data-tooltip="Latest headlines across all 16 stocks with news sentiment scoring" href="news.html">📰 News</a>
+<a class="nav-link" data-tooltip="Latest headlines across all 20 assets with news sentiment scoring" href="news.html">📰 News</a>
 <a class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri" href="signals.html">🎯 Signals</a>
 <a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
-<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
+<a class="nav-link" data-tooltip="1-year price history charts for every asset" href="charts.html">📈 Charts</a>
 <a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today" href="calculator.html">🧮 What-If</a>
 </div>
 </nav>
 <div class="container">
 <div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)" data-tooltip="Show all 16 crypto stocks">All</button>
-<button class="filter-btn" data-filter="btc-etf" data-tooltip="Bitcoin ETFs: IBIT, FBTC, ARKB, GBTC, BITO — spot and futures Bitcoin funds" onclick="filterTable('btc-etf', this)">BTC ETF</button>
-<button class="filter-btn" data-filter="eth-etf" data-tooltip="Ethereum ETFs: ETHA, FETH — spot Ethereum funds" onclick="filterTable('eth-etf', this)">ETH ETF</button>
-<button class="filter-btn" data-filter="exchange" data-tooltip="Crypto exchanges: COIN (Coinbase), HOOD (Robinhood) — platforms enabling crypto trading" onclick="filterTable('exchange', this)">Exchange</button>
-<button class="filter-btn" data-filter="treasury" data-tooltip="Corporate Bitcoin treasury: MSTR (Strategy / MicroStrategy) — largest corporate BTC holder" onclick="filterTable('treasury', this)">Treasury</button>
-<button class="filter-btn" data-filter="miner" data-tooltip="Bitcoin miners: MARA, RIOT, CLSK, HUT, IREN, CIFR — companies mining BTC using specialised hardware" onclick="filterTable('miner', this)">Miners</button>
+<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)" data-tooltip="Show all 20 crypto assets">All</button>
+<button class="filter-btn" data-filter="bitcoin" data-tooltip="Bitcoin — the original and largest cryptocurrency by market cap" onclick="filterTable('bitcoin', this)">Bitcoin</button>
+<button class="filter-btn" data-filter="layer1" data-tooltip="Layer 1 blockchains — ETH, SOL, BNB, XRP, ADA, AVAX, DOT, TRX: smart-contract platforms competing with Ethereum" onclick="filterTable('layer1', this)">Layer 1</button>
+<button class="filter-btn" data-filter="defi" data-tooltip="DeFi protocols — LINK (Chainlink oracle), UNI (Uniswap DEX), AAVE (lending): decentralised finance infrastructure" onclick="filterTable('defi', this)">DeFi</button>
+<button class="filter-btn" data-filter="layer2" data-tooltip="Layer 2 scaling — MATIC (Polygon), ARB (Arbitrum), OP (Optimism): Ethereum scaling solutions" onclick="filterTable('layer2', this)">Layer 2</button>
+<button class="filter-btn" data-filter="meme" data-tooltip="Meme coins — DOGE (Dogecoin), SHIB (Shiba Inu): community-driven tokens with high volatility" onclick="filterTable('meme', this)">Meme</button>
+<button class="filter-btn" data-filter="equity" data-tooltip="Crypto equities — COIN (Coinbase), MSTR (Strategy / MicroStrategy), IBIT (BlackRock Bitcoin ETF): listed companies with crypto exposure" onclick="filterTable('equity', this)">Equities</button>
 </div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
@@ -426,38 +429,44 @@
 <script src="prices-data.js"></script>
 <script>
 const NOTES = {
-  'IBIT':  'iShares Bitcoin Trust — BlackRock spot Bitcoin ETF. Largest Bitcoin ETF by AUM. Direct BTC exposure via regulated fund structure.',
-  'FBTC':  'Fidelity Wise Origin Bitcoin Fund — spot Bitcoin ETF from Fidelity. Low fees, custodied by Fidelity Digital Assets.',
-  'ARKB':  'ARK 21Shares Bitcoin ETF — spot Bitcoin ETF from ARK Invest and 21Shares. Innovation-focused Bitcoin exposure.',
-  'GBTC':  'Grayscale Bitcoin Trust — converted from closed-end fund to spot ETF. Higher fees but established track record and deep liquidity.',
-  'BITO':  'ProShares Bitcoin Strategy ETF — first US Bitcoin ETF, uses CME Bitcoin futures. No direct BTC custody; subject to futures roll costs.',
-  'ETHA':  'iShares Ethereum Trust — BlackRock spot Ethereum ETF. Direct ETH exposure for institutional and retail investors.',
-  'FETH':  'Fidelity Ethereum Fund — spot Ethereum ETF from Fidelity. Low fees, custodied by Fidelity Digital Assets.',
-  'COIN':  'Coinbase Global — largest US regulated crypto exchange. Revenue tied to crypto trading volumes. Custodian for multiple spot ETFs.',
-  'HOOD':  'Robinhood Markets — retail brokerage expanding into crypto. Commission-free crypto trading. Growing crypto wallet and staking products.',
-  'MSTR':  'Strategy (formerly MicroStrategy) — largest corporate Bitcoin holder. Bitcoin acquisition strategy using equity and debt issuance. High BTC beta play.',
-  'MARA':  'MARA Holdings — one of the largest publicly listed Bitcoin miners. Hash rate expansion and energy diversification strategy.',
-  'RIOT':  'Riot Platforms — major Bitcoin mining company. Low-cost power in Texas. Expanding data centre capacity for AI/HPC hosting.',
-  'CLSK':  'CleanSpark — Bitcoin miner focused on sustainable energy. Rapidly scaling hash rate via acquisitions. US-based operations.',
-  'HUT':   'Hut 8 Corp — diversified Bitcoin miner and digital infrastructure company. Merged with US Bitcoin Corp. AI/HPC data centre pivot.',
-  'IREN':  'IREN Limited — Bitcoin miner and data centre operator. Australian-founded, US operations. Expanding into AI cloud computing.',
-  'CIFR':  'Cipher Mining — Bitcoin mining company using low-cost renewable energy. Texas-based operations. Pure-play BTC miner.',
+  'BTC':  'Bitcoin — the original decentralised digital currency. Largest crypto asset by market cap. Deflationary supply cap of 21 million coins.',
+  'ETH':  'Ethereum — the leading smart-contract platform. Proof-of-stake since the Merge (2022). Home to the vast majority of DeFi and NFT activity.',
+  'SOL':  'Solana — high-throughput Layer 1 blockchain. Fast, low-cost transactions. Growing DeFi and consumer app ecosystem.',
+  'BNB':  'BNB — native token of the BNB Chain (Binance Smart Chain). Used for trading fee discounts on Binance and powering BSC ecosystem.',
+  'XRP':  'XRP — Ripple Labs digital payment token. Fast cross-border settlement. Ongoing regulatory clarity following SEC lawsuit resolution.',
+  'ADA':  'Cardano — proof-of-stake Layer 1 blockchain. Academic, peer-reviewed approach to development. Growing DeFi ecosystem.',
+  'AVAX': 'Avalanche — high-speed Layer 1 with subnet architecture. Sub-second finality. Competing with Ethereum for institutional DeFi adoption.',
+  'DOT':  'Polkadot — multi-chain protocol enabling interoperability between blockchains. Parachain architecture. Web3 Foundation-backed.',
+  'TRX':  'TRON — high-throughput blockchain focused on digital content and stablecoin payments. Among the largest stablecoin settlement networks.',
+  'LINK': 'Chainlink — the leading decentralised oracle network. Provides real-world data to smart contracts. Critical DeFi infrastructure.',
+  'UNI':  'Uniswap — the largest decentralised exchange (DEX) by trading volume. AMM-based token swaps on Ethereum and L2 networks.',
+  'AAVE': 'Aave — leading decentralised lending and borrowing protocol. Multi-chain deployment. Governance via AAVE token.',
+  'MATIC':'Polygon — Ethereum Layer 2 scaling network using zkEVM and PoS chains. Rebranded token to POL. Large enterprise adoption.',
+  'ARB':  'Arbitrum — largest Ethereum Layer 2 by TVL. Optimistic rollup technology. Native token ARB used for governance.',
+  'OP':   'Optimism — Ethereum Layer 2 optimistic rollup. OP Stack powers multiple chains including Coinbase\'s Base. OP token governance.',
+  'DOGE': 'Dogecoin — the original meme coin. Strong retail community and social media presence. Used by Tesla and SpaceX for payments.',
+  'SHIB': 'Shiba Inu — Ethereum-based meme token with an ecosystem including ShibaSwap DEX and Shibarium Layer 2.',
+  'COIN': 'Coinbase Global — largest US regulated crypto exchange. Revenue tied to crypto trading volumes. Custodian for BlackRock and Fidelity Bitcoin ETFs.',
+  'MSTR': 'Strategy (formerly MicroStrategy) — largest corporate Bitcoin holder. Bitcoin acquisition strategy using equity and debt issuance. High BTC beta play.',
+  'IBIT': 'iShares Bitcoin Trust — BlackRock spot Bitcoin ETF. The world\'s largest Bitcoin ETF by AUM. Direct BTC exposure via regulated fund structure.',
 };
 
 const CAT_COLORS = {
-  'btc-etf':  'var(--amber)',
-  'eth-etf':  'var(--indigo)',
-  'exchange': 'var(--accent)',
-  'treasury': 'var(--gold)',
-  'miner':    'var(--teal)',
+  'bitcoin': 'var(--amber)',
+  'layer1':  'var(--accent)',
+  'defi':    'var(--indigo)',
+  'layer2':  'var(--teal)',
+  'meme':    'var(--gold)',
+  'equity':  'var(--green)',
 };
 
 const CAT_LABELS = {
-  'btc-etf':  'BTC ETF',
-  'eth-etf':  'ETH ETF',
-  'exchange': 'Exchange',
-  'treasury': 'Treasury',
-  'miner':    'Miner',
+  'bitcoin': 'Bitcoin',
+  'layer1':  'Layer 1',
+  'defi':    'DeFi',
+  'layer2':  'Layer 2',
+  'meme':    'Meme',
+  'equity':  'Equity',
 };
 
 function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + t + '/'; }
