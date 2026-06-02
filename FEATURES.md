@@ -14,6 +14,10 @@
 
 ## Done
 
+- **T212 MCP server + local portfolio export** — `t212_mcp/server.py` (FastMCP); 4 tools: `get_positions`, `get_account_summary`, `get_orders`, `get_portfolio_vs_signals` (cross-refs holdings vs signal picks); `.claude/settings.json` wires it into Claude Code automatically; `generate_export.py` merges T212 positions into `exports/YYYY-MM-DD-portfolio.json` when `T212_API_KEY` is set or `t212_mcp/.key` exists — gitignored, local only, never committed
+
+- **Daily export pipeline** — `generate_export.py` builds `exports/YYYY-MM-DD.json+csv` (176 stocks; metrics, what-if £100/£1k/£10k × 5 timeframes, top-3 news + sentiment, AI signals); `exports/manifest.json` tracks all snapshots; `generate-export.yml` runs at 22:00 UTC weekdays; `exports/index.html` shows date dropdown, loads selected snapshot, one-click Copy JSON/CSV; served at `stocks-4qw.pages.dev/exports/`
+
 - **Site max-width 1920px** — `.header-inner`, `.nav-inner`, `.container` in `shared.css` widened from 1600px to 1920px; no layout changes, just allows the content to spread wider on large monitors (`shared.css`)
 
 - **Heatmap text stroke removed** — SVG `stroke`/`stroke-width`/`stroke-linejoin`/`paint-order` attributes removed from ticker and value text on all 5 sector heatmaps; tile border stroke (0.5px) retained (`AI/heatmap.html`, `Biotech/heatmap.html`, `Defence/heatmap.html`, `Tech/heatmap.html`, `Crypto/heatmap.html`)

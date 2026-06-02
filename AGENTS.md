@@ -131,6 +131,40 @@ When adding a new sector, complete every item in this checklist — in order:
 **Docs**
 10. Add row to `CHANGELOG.md`; update `FEATURES.md` (move from Backlog → Done, update description)
 
+## Data export pipeline
+
+`generate_export.py` (repo root) builds a full cross-sector snapshot and must be kept in sync with `prices-data.js` field names.
+
+| File | Purpose |
+|---|---|
+| `generate_export.py` | Reads all 6 `prices-data.js` + `signals-local.json` files; writes dated snapshot + updates manifest; optionally merges T212 portfolio |
+| `exports/YYYY-MM-DD.json` | Daily market snapshot — committed by GitHub Actions, served via Cloudflare Pages |
+| `exports/YYYY-MM-DD.csv` | Same data in CSV format |
+| `exports/manifest.json` | List of all available snapshots (newest first); loaded by the export page to build the date dropdown |
+| `exports/index.html` | Export page — loads manifest, date selector, Copy JSON/CSV buttons |
+| `exports/YYYY-MM-DD-portfolio.json` | **LOCAL ONLY** — market data + T212 positions merged; gitignored, never committed |
+| `.github/workflows/generate-export.yml` | Runs `generate_export.py` at 22:00 UTC weekdays (30 min after evening price update) |
+
+**Adding new fields to the export:** edit the `PRICE_FIELDS` list and/or `csv_fields` list in `generate_export.py`. The manifest entry only needs `date`, `generated`, `total`, `json`, `csv`.
+
+## T212 MCP server
+
+`t212_mcp/server.py` is a FastMCP server that gives Claude Code live access to the user's Trading 212 portfolio.
+
+**Tools:**
+- `get_positions` — all open positions with quantity, avg price, P&L
+- `get_account_summary` — total value, free cash, invested amount, overall P&L
+- `get_orders` — last 50 executed orders
+- `get_portfolio_vs_signals` — cross-references holdings against all sector signal picks
+
+**API key — two options (both gitignored):**
+1. Drop key in `t212_mcp/.key` (one-time local setup)
+2. Set `T212_API_KEY` environment variable in Claude Code session settings at code.claude.com → project → Environment variables
+
+**MCP config** lives in `.claude/settings.json` (committed — no key stored there). The server starts automatically when a Claude Code session opens in this repo.
+
+**Privacy guarantee:** `exports/*-portfolio.json` and `exports/*-portfolio.csv` are in `.gitignore`. Portfolio data is fetched locally, used locally, and never reaches GitHub or Cloudflare Pages.
+
 ## GitHub Actions
 
 Workflow files must live at the **repo root** (`.github/workflows/`) — GitHub Actions will not find them inside a sector subfolder. All workflow steps that run sector scripts must use `working-directory: AI` (or the relevant sector folder). Git add paths in workflows must include the sector prefix (e.g. `git add AI/prices.json AI/prices-data.js`).
@@ -142,12 +176,13 @@ Workflow files must live at the **repo root** (`.github/workflows/`) — GitHub 
 - The price-updater workflow uses no external secrets — Yahoo Finance via `yfinance` requires no API key.
 - The signals workflow uses **one** secret: `OPENROUTER_API_KEY` — see exception below.
 
-## Architectural rule: keyless by default (EXCEPTION: OPENROUTER_API_KEY)
+## Architectural rule: keyless by default (EXCEPTIONS: OPENROUTER_API_KEY, T212_API_KEY)
 
 **This project is keyless by default.** Any new feature must work with no-auth/free data sources. Adding a new secret requires an explicit user decision — do **not** silently add one.
 
 Current approved exceptions:
 - **`OPENROUTER_API_KEY`** (GitHub Actions secret) — used only by `.github/workflows/generate-signals.yml` to call `deepseek/deepseek-v4-flash` via OpenRouter. Cost: ~$0.004/run.
+- **`T212_API_KEY`** (local only — **never a GitHub secret**) — used by `t212_mcp/server.py` and `generate_export.py` to fetch the user's Trading 212 portfolio. Stored in `t212_mcp/.key` or as a local env var. Never committed, never used in CI, never goes online.
 
 Everything else remains keyless:
 - **News sentiment** → yfinance `.news` + local VADER scoring (no LLM, no Finnhub).
