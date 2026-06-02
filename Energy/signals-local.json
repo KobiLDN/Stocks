@@ -1,89 +1,250 @@
 {
-  "updated": "2026-06-02 00:00",
+  "updated": "2026-06-02 18:38",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
-  "source": "stub",
+  "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ENPH",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +100.71%, 1M +108.17%, 1D +7.10% with strong momentum and positive news sentiment 0.194, though high short interest 27.43% and P/E 67.07 indicate elevated risk.",
+      "drivers": [
+        "YTD +100.71%",
+        "1M +108.17%",
+        "1D +7.10%",
+        "news sentiment 0.194"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "FSLR",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "1Y +90%, 1M +45.07%, 1W +13.60%, P/E 19.81 attractive for clean energy, news sentiment 0.25, analyst buy consensus.",
+      "drivers": [
+        "1Y +90%",
+        "1M +45.07%",
+        "P/E 19.81",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "1Y +93%, YTD +58.53%, 1W +7.37%, 1D +2.66%, P/E 18.94, dividend yield 1.90%, strong refining momentum with positive news sentiment 0.167.",
+      "drivers": [
+        "1Y +93%",
+        "YTD +58.53%",
+        "1W +7.37%",
+        "P/E 18.94"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +61.29%, 1Y +60%, 1M +4.95%, 1W +6.44%, 1D +2.00%, P/E 17.39, strong refining margins and positive momentum.",
+      "drivers": [
+        "YTD +61.29%",
+        "1M +4.95%",
+        "1W +6.44%",
+        "P/E 17.39"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +40.85%, 1Y +61%, 1D +2.46%, P/E 24.8, analyst score 1.62 (strong buy), news on digital acquisition Tachyus, though short interest 4.7%.",
+      "drivers": [
+        "YTD +40.85%",
+        "1Y +61%",
+        "analyst score 1.62",
+        "digital acquisition catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +40.61%, 1W +3.22%, 1D +0.36%, low short interest 0.02%, but P/E 80.15 high and analyst hold consensus.",
+      "drivers": [
+        "YTD +40.61%",
+        "1W +3.22%",
+        "short interest 0.02%",
+        "low beta 0.172"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +22.93%, 1W +1.82%, 1D +1.20%, dividend yield 3.83%, analyst score 1.84 (buy), news sentiment 0.238.",
+      "drivers": [
+        "YTD +22.93%",
+        "dividend yield 3.83%",
+        "analyst score 1.84",
+        "news sentiment 0.238"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +24.21%, 1Y +44%, dividend yield 2.76%, low beta 0.183, analyst buy consensus, but P/E 25.26 elevated.",
+      "drivers": [
+        "YTD +24.21%",
+        "dividend yield 2.76%",
+        "analyst buy",
+        "low beta 0.183"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +17.24%, 1W +2.13%, 1D +0.94%, P/E 13.53 attractive, dividend yield 3.66%, LNG Canada expansion catalyst.",
+      "drivers": [
+        "P/E 13.53",
+        "dividend yield 3.66%",
+        "LNG Canada catalyst",
+        "1W +2.13%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +12.28%, 1W +2.08%, dividend yield 4.03%, news sentiment 0.255, but YTD only +0.85% and no P/E.",
+      "drivers": [
+        "1M +12.28%",
+        "dividend yield 4.03%",
+        "news sentiment 0.255",
+        "clean energy momentum"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "XOM",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 2,
       "ticker": "SHEL",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 3,
       "ticker": "CVX",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 4,
       "ticker": "NEE",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 5,
       "ticker": "ENPH",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 6,
       "ticker": "COP",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 7,
       "ticker": "FSLR",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 8,
       "ticker": "SLB",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 9,
       "ticker": "TTE",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     },
     {
       "rank": 10,
       "ticker": "EOG",
       "signal": "buy",
       "confidence": 0,
-      "rationale": "pending — run Generate Signals workflow",
-      "drivers": ["stub data", "run Energy_generate_signals_local.py"]
+      "rationale": "pending \u2014 run Generate Signals workflow",
+      "drivers": [
+        "stub data",
+        "run Energy_generate_signals_local.py"
+      ]
     }
-  ],
-  "previous_picks": []
+  ]
 }
