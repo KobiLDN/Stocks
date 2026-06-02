@@ -77,10 +77,10 @@
 
   .filter-btn[data-filter="bitcoin"].active { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
   .filter-btn[data-filter="layer1"].active  { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-  .filter-btn[data-filter="defi"].active    { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
-  .filter-btn[data-filter="layer2"].active  { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .filter-btn[data-filter="payments"].active{ background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
+  .filter-btn[data-filter="emerging"].active{ background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
   .filter-btn[data-filter="meme"].active    { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .filter-btn[data-filter="equity"].active  { background: var(--green);  border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="infra"].active   { background: var(--green);  border-color: var(--green);  color: var(--bg); }
 
   .section-header {
     display: flex;
@@ -191,10 +191,10 @@
 
   .cat-bitcoin { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
   .cat-layer1  { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
-  .cat-defi    { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
-  .cat-layer2  { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
+  .cat-payments{ background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
+  .cat-emerging{ background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
   .cat-meme    { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
-  .cat-equity  { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
+  .cat-infra   { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
 
   .price {
     font-family: 'IBM Plex Mono', monospace;
@@ -384,9 +384,9 @@
 </header>
 <nav>
 <div class="nav-inner">
-<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 20 crypto assets" href="index.html">📊 Dashboard</a>
+<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 19 coins" href="index.html">📊 Dashboard</a>
 <a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" data-tooltip="Latest headlines across all 20 assets with news sentiment scoring" href="news.html">📰 News</a>
+<a class="nav-link" data-tooltip="Latest headlines across all 19 coins with news sentiment scoring" href="news.html">📰 News</a>
 <a class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri" href="signals.html">🎯 Signals</a>
 <a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
 <a class="nav-link" data-tooltip="1-year price history charts for every asset" href="charts.html">📈 Charts</a>
@@ -395,13 +395,13 @@
 </nav>
 <div class="container">
 <div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)" data-tooltip="Show all 20 crypto assets">All</button>
+<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)" data-tooltip="Show all 19 coins">All</button>
 <button class="filter-btn" data-filter="bitcoin" data-tooltip="Bitcoin — the original and largest cryptocurrency by market cap" onclick="filterTable('bitcoin', this)">Bitcoin</button>
-<button class="filter-btn" data-filter="layer1" data-tooltip="Layer 1 blockchains — ETH, SOL, BNB, XRP, ADA, AVAX, DOT, TRX: smart-contract platforms competing with Ethereum" onclick="filterTable('layer1', this)">Layer 1</button>
-<button class="filter-btn" data-filter="defi" data-tooltip="DeFi protocols — LINK (Chainlink oracle), UNI (Uniswap DEX), AAVE (lending): decentralised finance infrastructure" onclick="filterTable('defi', this)">DeFi</button>
-<button class="filter-btn" data-filter="layer2" data-tooltip="Layer 2 scaling — MATIC (Polygon), ARB (Arbitrum), OP (Optimism): Ethereum scaling solutions" onclick="filterTable('layer2', this)">Layer 2</button>
-<button class="filter-btn" data-filter="meme" data-tooltip="Meme coins — DOGE (Dogecoin), SHIB (Shiba Inu): community-driven tokens with high volatility" onclick="filterTable('meme', this)">Meme</button>
-<button class="filter-btn" data-filter="equity" data-tooltip="Crypto equities — COIN (Coinbase), MSTR (Strategy / MicroStrategy), IBIT (BlackRock Bitcoin ETF): listed companies with crypto exposure" onclick="filterTable('equity', this)">Equities</button>
+<button class="filter-btn" data-filter="layer1" data-tooltip="Layer 1 blockchains — ETH, SOL, BNB, ADA, AVAX: major smart-contract platforms" onclick="filterTable('layer1', this)">Layer 1</button>
+<button class="filter-btn" data-filter="payments" data-tooltip="Payments — XRP, XLM (Stellar), TRX (TRON): fast, low-cost cross-border settlement networks" onclick="filterTable('payments', this)">Payments</button>
+<button class="filter-btn" data-filter="emerging" data-tooltip="Emerging L1s — SUI, HBAR (Hedera), TON (Toncoin), ALGO (Algorand), MINA: newer and niche blockchains" onclick="filterTable('emerging', this)">Emerging</button>
+<button class="filter-btn" data-filter="infra" data-tooltip="Infrastructure — MATIC (Polygon), DOT (Polkadot), LINK (Chainlink): scaling, interoperability, and oracle infrastructure" onclick="filterTable('infra', this)">Infra</button>
+<button class="filter-btn" data-filter="meme" data-tooltip="Meme coins — DOGE (Dogecoin), PEPE: community-driven high-volatility tokens" onclick="filterTable('meme', this)">Meme</button>
 </div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
@@ -429,44 +429,43 @@
 <script src="prices-data.js"></script>
 <script>
 const NOTES = {
-  'BTC':  'Bitcoin — the original decentralised digital currency. Largest crypto asset by market cap. Deflationary supply cap of 21 million coins.',
-  'ETH':  'Ethereum — the leading smart-contract platform. Proof-of-stake since the Merge (2022). Home to the vast majority of DeFi and NFT activity.',
-  'SOL':  'Solana — high-throughput Layer 1 blockchain. Fast, low-cost transactions. Growing DeFi and consumer app ecosystem.',
-  'BNB':  'BNB — native token of the BNB Chain (Binance Smart Chain). Used for trading fee discounts on Binance and powering BSC ecosystem.',
-  'XRP':  'XRP — Ripple Labs digital payment token. Fast cross-border settlement. Ongoing regulatory clarity following SEC lawsuit resolution.',
-  'ADA':  'Cardano — proof-of-stake Layer 1 blockchain. Academic, peer-reviewed approach to development. Growing DeFi ecosystem.',
-  'AVAX': 'Avalanche — high-speed Layer 1 with subnet architecture. Sub-second finality. Competing with Ethereum for institutional DeFi adoption.',
-  'DOT':  'Polkadot — multi-chain protocol enabling interoperability between blockchains. Parachain architecture. Web3 Foundation-backed.',
-  'TRX':  'TRON — high-throughput blockchain focused on digital content and stablecoin payments. Among the largest stablecoin settlement networks.',
-  'LINK': 'Chainlink — the leading decentralised oracle network. Provides real-world data to smart contracts. Critical DeFi infrastructure.',
-  'UNI':  'Uniswap — the largest decentralised exchange (DEX) by trading volume. AMM-based token swaps on Ethereum and L2 networks.',
-  'AAVE': 'Aave — leading decentralised lending and borrowing protocol. Multi-chain deployment. Governance via AAVE token.',
-  'MATIC':'Polygon — Ethereum Layer 2 scaling network using zkEVM and PoS chains. Rebranded token to POL. Large enterprise adoption.',
-  'ARB':  'Arbitrum — largest Ethereum Layer 2 by TVL. Optimistic rollup technology. Native token ARB used for governance.',
-  'OP':   'Optimism — Ethereum Layer 2 optimistic rollup. OP Stack powers multiple chains including Coinbase\'s Base. OP token governance.',
-  'DOGE': 'Dogecoin — the original meme coin. Strong retail community and social media presence. Used by Tesla and SpaceX for payments.',
-  'SHIB': 'Shiba Inu — Ethereum-based meme token with an ecosystem including ShibaSwap DEX and Shibarium Layer 2.',
-  'COIN': 'Coinbase Global — largest US regulated crypto exchange. Revenue tied to crypto trading volumes. Custodian for BlackRock and Fidelity Bitcoin ETFs.',
-  'MSTR': 'Strategy (formerly MicroStrategy) — largest corporate Bitcoin holder. Bitcoin acquisition strategy using equity and debt issuance. High BTC beta play.',
-  'IBIT': 'iShares Bitcoin Trust — BlackRock spot Bitcoin ETF. The world\'s largest Bitcoin ETF by AUM. Direct BTC exposure via regulated fund structure.',
+  'BTC':  'Bitcoin — the original decentralised digital currency. Largest crypto asset by market cap. Hard-capped at 21 million coins.',
+  'ETH':  'Ethereum — the leading smart-contract platform. Proof-of-stake since the Merge (2022). Home to the majority of DeFi, NFT, and L2 activity.',
+  'SOL':  'Solana — high-throughput L1. Fast, low-cost transactions via proof-of-history. Growing DeFi and consumer app ecosystem.',
+  'BNB':  'BNB — native token of BNB Chain. Used for trading fee discounts on Binance and powering the BSC DeFi ecosystem.',
+  'ADA':  'Cardano — peer-reviewed proof-of-stake L1. Academic, rigorous development approach. Growing DeFi ecosystem via Plutus smart contracts.',
+  'AVAX': 'Avalanche — high-speed L1 with subnet architecture. Sub-second finality. Competing with Ethereum for institutional DeFi and gaming.',
+  'XRP':  'XRP — Ripple Labs payment token. Designed for fast, low-cost cross-border settlement. SEC lawsuit resolved; growing institutional adoption.',
+  'XLM':  'Stellar — open-source payment network for cross-border transactions. XLM token. Backed by Stellar Development Foundation; IBM World Wire partner.',
+  'TRX':  'TRON — high-throughput blockchain. Largest USDT settlement network by volume. Focus on digital content, DeFi, and stablecoin payments.',
+  'SUI':  'Sui — Move-based L1 from Mysten Labs (ex-Diem/Facebook). Parallel transaction execution for high throughput. Focus on gaming and consumer apps.',
+  'HBAR': 'Hedera — enterprise-grade public ledger using hashgraph consensus. Governed by Google, IBM, Boeing and others. Fast, energy-efficient, low fees.',
+  'TON':  'Toncoin — The Open Network. Telegram-backed blockchain with 900M+ Telegram users as potential on-ramp. Native payments and mini-apps in Telegram.',
+  'ALGO': 'Algorand — pure proof-of-stake L1. Instant finality, carbon-negative. Used for CBDC pilots and real-world asset tokenisation. Academic origins.',
+  'MINA': 'Mina Protocol — the world\'s lightest blockchain (~22KB constant size). ZK-proofs maintain chain state. Focus on privacy and decentralised identity.',
+  'MATIC':'Polygon — Ethereum L2 and scaling network. PoS chain and zkEVM rollup. Rebranded token to POL. Large enterprise and gaming adoption.',
+  'DOT':  'Polkadot — multi-chain relay network enabling blockchain interoperability. Parachain architecture. Web3 Foundation-backed. Substrate framework.',
+  'LINK': 'Chainlink — the leading decentralised oracle network. Connects smart contracts to real-world data, APIs, and off-chain computation. Critical DeFi infrastructure.',
+  'DOGE': 'Dogecoin — the original meme coin. Strong retail community. Accepted by Tesla and SpaceX. Elon Musk endorsements drive recurring price action.',
+  'PEPE': 'Pepe — Ethereum-based meme token inspired by Pepe the Frog. Launched April 2023. No utility — pure community and speculative momentum play.',
 };
 
 const CAT_COLORS = {
-  'bitcoin': 'var(--amber)',
-  'layer1':  'var(--accent)',
-  'defi':    'var(--indigo)',
-  'layer2':  'var(--teal)',
-  'meme':    'var(--gold)',
-  'equity':  'var(--green)',
+  'bitcoin':  'var(--amber)',
+  'layer1':   'var(--accent)',
+  'payments': 'var(--indigo)',
+  'emerging': 'var(--teal)',
+  'infra':    'var(--green)',
+  'meme':     'var(--gold)',
 };
 
 const CAT_LABELS = {
-  'bitcoin': 'Bitcoin',
-  'layer1':  'Layer 1',
-  'defi':    'DeFi',
-  'layer2':  'Layer 2',
-  'meme':    'Meme',
-  'equity':  'Equity',
+  'bitcoin':  'Bitcoin',
+  'layer1':   'Layer 1',
+  'payments': 'Payments',
+  'emerging': 'Emerging',
+  'infra':    'Infra',
+  'meme':     'Meme',
 };
 
 function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + t + '/'; }

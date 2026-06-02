@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment analysis across 20 crypto assets including Bitcoin, Layer 1 blockchains, DeFi protocols, Layer 2 networks, meme coins, and crypto equities. Filter by category and sort by recency or sentiment score.">
+<meta name="description" content="Latest news and sentiment analysis across 19 coins including Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins. Filter by category and sort by recency or sentiment score.">
 <title>Crypto — News</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -163,10 +163,10 @@
   }
   .cat-bitcoin { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
   .cat-layer1  { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
-  .cat-defi    { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
-  .cat-layer2  { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
+  .cat-payments{ background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
+  .cat-emerging{ background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
   .cat-meme    { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
-  .cat-equity  { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
+  .cat-infra   { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
   .news-time {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
@@ -275,9 +275,9 @@
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 20 crypto assets">📊 Dashboard</a>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 19 coins">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 20 assets with news sentiment scoring">📰 News</a>
+    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 19 coins with news sentiment scoring">📰 News</a>
     <a href="signals.html" class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every asset">📈 Charts</a>
@@ -320,39 +320,38 @@
     'SOL':  'Solana',
     'BNB':  'BNB',
     'XRP':  'XRP',
+    'XLM':  'Stellar',
+    'TRX':  'TRON',
+    'SUI':  'Sui',
+    'HBAR': 'Hedera',
+    'TON':  'Toncoin',
+    'ALGO': 'Algorand',
+    'MINA': 'Mina',
     'ADA':  'Cardano',
     'AVAX': 'Avalanche',
-    'DOT':  'Polkadot',
-    'TRX':  'TRON',
-    'LINK': 'Chainlink',
-    'UNI':  'Uniswap',
-    'AAVE': 'Aave',
     'MATIC':'Polygon',
-    'ARB':  'Arbitrum',
-    'OP':   'Optimism',
+    'DOT':  'Polkadot',
+    'LINK': 'Chainlink',
     'DOGE': 'Dogecoin',
-    'SHIB': 'Shiba Inu',
-    'COIN': 'Coinbase Global',
-    'MSTR': 'Strategy (MicroStrategy)',
-    'IBIT': 'iShares Bitcoin Trust',
+    'PEPE': 'Pepe',
   };
 
   const CAT_LABELS = {
-    'bitcoin': 'Bitcoin',
-    'layer1':  'Layer 1',
-    'defi':    'DeFi',
-    'layer2':  'Layer 2',
-    'meme':    'Meme',
-    'equity':  'Equity',
+    'bitcoin':  'Bitcoin',
+    'layer1':   'Layer 1',
+    'payments': 'Payments',
+    'emerging': 'Emerging',
+    'infra':    'Infra',
+    'meme':     'Meme',
   };
 
   const CAT_TOOLTIPS = {
-    'bitcoin': 'Bitcoin — BTC: the original and largest cryptocurrency by market cap',
-    'layer1':  'Layer 1 blockchains — ETH, SOL, BNB, XRP, ADA, AVAX, DOT, TRX: smart-contract platforms',
-    'defi':    'DeFi protocols — LINK (Chainlink), UNI (Uniswap), AAVE: decentralised finance infrastructure',
-    'layer2':  'Layer 2 scaling — MATIC (Polygon), ARB (Arbitrum), OP (Optimism): Ethereum scaling solutions',
-    'meme':    'Meme coins — DOGE (Dogecoin), SHIB (Shiba Inu): community-driven high-volatility tokens',
-    'equity':  'Crypto equities — COIN (Coinbase), MSTR (Strategy), IBIT (BlackRock Bitcoin ETF)',
+    'bitcoin':  'Bitcoin — BTC: the original and largest cryptocurrency',
+    'layer1':   'Layer 1 — ETH, SOL, BNB, ADA, AVAX: major smart-contract platforms',
+    'payments': 'Payments — XRP, XLM (Stellar), TRX (TRON): fast cross-border settlement networks',
+    'emerging': 'Emerging — SUI, HBAR, TON, ALGO, MINA: newer and niche blockchain platforms',
+    'infra':    'Infrastructure — MATIC (Polygon), DOT (Polkadot), LINK (Chainlink): scaling, interoperability, oracle',
+    'meme':     'Meme — DOGE, PEPE: community-driven high-volatility tokens',
   };
 
   function yahooUrl(ticker) {

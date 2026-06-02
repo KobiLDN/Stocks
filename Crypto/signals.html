@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI-generated top 10 buy signals for crypto assets, ranked by momentum, fundamentals, and news sentiment across Bitcoin, Layer 1 blockchains, DeFi protocols, Layer 2 networks, meme coins, and crypto equities.">
+<meta name="description" content="AI-generated top 10 buy signals for crypto coins, ranked by momentum, fundamentals, and news sentiment across Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins.">
 <title>Crypto — Signals</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="signals-local.js"></script>
@@ -108,10 +108,10 @@
   }
   .cat-bitcoin { background: rgba(251,146,60,0.15);  color: var(--amber);  border: 1px solid rgba(251,146,60,0.35); }
   .cat-layer1  { background: rgba(2,132,199,0.12);   color: var(--accent); border: 1px solid rgba(2,132,199,0.3); }
-  .cat-defi    { background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
-  .cat-layer2  { background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
+  .cat-payments{ background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
+  .cat-emerging{ background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
   .cat-meme    { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
-  .cat-equity  { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
+  .cat-infra   { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
 
   .signal-pill {
     margin-left: auto;
@@ -414,28 +414,28 @@
     'XRP':  'XRP',
     'ADA':  'Cardano',
     'AVAX': 'Avalanche',
-    'DOT':  'Polkadot',
+    'XRP':  'XRP',
+    'XLM':  'Stellar',
     'TRX':  'TRON',
-    'LINK': 'Chainlink',
-    'UNI':  'Uniswap',
-    'AAVE': 'Aave',
+    'SUI':  'Sui',
+    'HBAR': 'Hedera',
+    'TON':  'Toncoin',
+    'ALGO': 'Algorand',
+    'MINA': 'Mina',
     'MATIC':'Polygon',
-    'ARB':  'Arbitrum',
-    'OP':   'Optimism',
+    'DOT':  'Polkadot',
+    'LINK': 'Chainlink',
     'DOGE': 'Dogecoin',
-    'SHIB': 'Shiba Inu',
-    'COIN': 'Coinbase Global',
-    'MSTR': 'Strategy (MicroStrategy)',
-    'IBIT': 'iShares Bitcoin Trust',
+    'PEPE': 'Pepe',
   };
 
   const CAT_LABELS = {
-    'bitcoin': 'Bitcoin',
-    'layer1':  'Layer 1',
-    'defi':    'DeFi',
-    'layer2':  'Layer 2',
-    'meme':    'Meme',
-    'equity':  'Equity',
+    'bitcoin':  'Bitcoin',
+    'layer1':   'Layer 1',
+    'payments': 'Payments',
+    'emerging': 'Emerging',
+    'infra':    'Infra',
+    'meme':     'Meme',
   };
 
   function yahooUrl(ticker) {

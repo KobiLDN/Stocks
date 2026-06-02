@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price history charts for 20 crypto assets including Bitcoin, Layer 1 blockchains, DeFi protocols, Layer 2 networks, meme coins, and crypto equities. Filter by category.">
+<meta name="description" content="1-year price history charts for 19 coins including Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins. Filter by category.">
 <title>Crypto — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -126,10 +126,10 @@
   .cat-btn:hover { color: var(--accent); border-color: var(--accent); }
   .cat-btn.active-bitcoin { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
   .cat-btn.active-layer1  { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-  .cat-btn.active-defi    { background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
-  .cat-btn.active-layer2  { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
+  .cat-btn.active-payments{ background: var(--indigo); border-color: var(--indigo); color: var(--bg); }
+  .cat-btn.active-emerging{ background: var(--teal);   border-color: var(--teal);   color: var(--bg); }
   .cat-btn.active-meme    { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .cat-btn.active-equity  { background: var(--green);  border-color: var(--green);  color: var(--bg); }
+  .cat-btn.active-infra   { background: var(--green);  border-color: var(--green);  color: var(--bg); }
 
   /* SINGLE VIEW */
   #single-view {
@@ -177,10 +177,10 @@
 
   .cat-label.bitcoin { color: var(--amber); }
   .cat-label.layer1  { color: var(--accent); }
-  .cat-label.defi    { color: var(--indigo); }
-  .cat-label.layer2  { color: var(--teal); }
+  .cat-label.payments{ color: var(--indigo); }
+  .cat-label.emerging{ color: var(--teal); }
   .cat-label.meme    { color: var(--gold); }
-  .cat-label.equity  { color: var(--green); }
+  .cat-label.infra   { color: var(--green); }
 
   .stock-btn {
     display: flex;
@@ -476,19 +476,21 @@
     'ETH':  'CRYPTO:ETHUSD',
     'SOL':  'CRYPTO:SOLUSD',
     'BNB':  'CRYPTO:BNBUSD',
-    'XRP':  'CRYPTO:XRPUSD',
     'ADA':  'CRYPTO:ADAUSD',
     'AVAX': 'CRYPTO:AVAXUSD',
-    'DOT':  'CRYPTO:DOTUSD',
+    'XRP':  'CRYPTO:XRPUSD',
+    'XLM':  'CRYPTO:XLMUSD',
     'TRX':  'CRYPTO:TRXUSD',
-    'LINK': 'CRYPTO:LINKUSD',
-    'UNI':  'CRYPTO:UNIUSD',
-    'AAVE': 'CRYPTO:AAVEUSD',
+    'SUI':  'CRYPTO:SUIUSD',
+    'HBAR': 'CRYPTO:HBARUSD',
+    'TON':  'CRYPTO:TONUSD',
+    'ALGO': 'CRYPTO:ALGOUSD',
+    'MINA': 'CRYPTO:MINAUSD',
     'MATIC':'CRYPTO:MATICUSD',
-    'ARB':  'CRYPTO:ARBUSD',
-    'OP':   'CRYPTO:OPUSD',
+    'DOT':  'CRYPTO:DOTUSD',
+    'LINK': 'CRYPTO:LINKUSD',
     'DOGE': 'CRYPTO:DOGEUSD',
-    'SHIB': 'CRYPTO:SHIBUSD',
+    'PEPE': 'CRYPTO:PEPEUSD',
   };
 
   /* Category display config for charts */
@@ -500,41 +502,11 @@
       btnLabel: 'Bitcoin',
       tooltip: 'Bitcoin — BTC: the original and largest cryptocurrency by market cap',
     },
-    'layer1': {
-      key: 'layer1',
-      label: '⛓️ Layer 1',
-      color: 'var(--accent)',
-      btnLabel: 'Layer 1',
-      tooltip: 'Layer 1 blockchains — ETH, SOL, BNB, XRP, ADA, AVAX, DOT, TRX: major smart-contract platforms',
-    },
-    'defi': {
-      key: 'defi',
-      label: '🔮 DeFi',
-      color: 'var(--indigo)',
-      btnLabel: 'DeFi',
-      tooltip: 'DeFi protocols — LINK (Chainlink), UNI (Uniswap), AAVE: decentralised finance infrastructure',
-    },
-    'layer2': {
-      key: 'layer2',
-      label: '⚡ Layer 2',
-      color: 'var(--teal)',
-      btnLabel: 'Layer 2',
-      tooltip: 'Layer 2 scaling — MATIC (Polygon), ARB (Arbitrum), OP (Optimism): Ethereum scaling solutions',
-    },
-    'meme': {
-      key: 'meme',
-      label: '🐕 Meme',
-      color: 'var(--gold)',
-      btnLabel: 'Meme',
-      tooltip: 'Meme coins — DOGE (Dogecoin), SHIB (Shiba Inu): community-driven high-volatility tokens',
-    },
-    'equity': {
-      key: 'equity',
-      label: '📊 Equities',
-      color: 'var(--green)',
-      btnLabel: 'Equities',
-      tooltip: 'Crypto equities — COIN (Coinbase), MSTR (Strategy / MicroStrategy), IBIT (iShares Bitcoin Trust)',
-    },
+    'layer1':   { key: 'layer1',   label: '⛓️ Layer 1',  color: 'var(--accent)', btnLabel: 'Layer 1',  tooltip: 'Layer 1 — ETH, SOL, BNB, ADA, AVAX: major smart-contract platforms', },
+    'payments': { key: 'payments', label: '💸 Payments', color: 'var(--indigo)', btnLabel: 'Payments', tooltip: 'Payments — XRP, XLM (Stellar), TRX (TRON): fast cross-border settlement networks', },
+    'emerging': { key: 'emerging', label: '🚀 Emerging', color: 'var(--teal)',   btnLabel: 'Emerging', tooltip: 'Emerging — SUI, HBAR, TON, ALGO, MINA: newer and niche blockchain platforms', },
+    'infra':    { key: 'infra',    label: '🔧 Infra',    color: 'var(--green)',  btnLabel: 'Infra',    tooltip: 'Infrastructure — MATIC (Polygon), DOT (Polkadot), LINK (Chainlink): scaling, interoperability, oracle', },
+    'meme':     { key: 'meme',     label: '🐕 Meme',     color: 'var(--gold)',   btnLabel: 'Meme',     tooltip: 'Meme coins — DOGE, PEPE: community-driven high-volatility tokens', },
   };
 
   function buildSidebar(stocks) {
