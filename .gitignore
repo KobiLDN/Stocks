@@ -19,6 +19,4 @@ Biotech/PROMPT.txt
 # Claude Code config
 .claude/
 
-# One-off exports (generated on demand, not committed)
-all_stocks.csv
-all_stocks.json
+# generate_export.py outputs — committed by GitHub Actions, not manually
