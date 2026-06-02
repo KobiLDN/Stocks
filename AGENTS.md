@@ -81,7 +81,7 @@ Stocks/
 ├── Defence\            ← Defence & Aerospace sector (28 stocks, 6 categories)
 ├── Tech\               ← Technology sector (31 stocks, 6 categories)
 ├── Crypto\             ← Crypto sector (19 coins, 6 categories)
-└── (future sectors: Energy\)
+└── Energy\             ← Energy sector (20 stocks, 5 categories)
 ```
 
 ## Data architecture — how pages get their data
@@ -163,7 +163,7 @@ Everything else remains keyless:
 
 ## Header structure — sector switcher
 
-The back-link (`← All Sectors`) has been replaced permanently by a **sector switcher panel** in the header right side. All 35 sector pages use this pattern:
+The back-link (`← All Sectors`) has been replaced permanently by a **sector switcher panel** in the header right side. All 42 sector pages use this pattern:
 
 ```html
 <div class="header-inner">
