@@ -147,7 +147,7 @@ header {
 }
 
 .header-inner {
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 0 24px 0 43px;
   position: relative;
@@ -240,7 +240,7 @@ nav {
 }
 
 .nav-inner {
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 12px 24px;
   display: flex;
@@ -337,7 +337,7 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
 .container {
   position: relative;
   z-index: 20;
-  max-width: 1600px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 40px 24px;
 }
