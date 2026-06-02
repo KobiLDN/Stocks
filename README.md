@@ -12,12 +12,14 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 | Biotech | Live | [stocks-4qw.pages.dev/Biotech/](https://stocks-4qw.pages.dev/Biotech/) |
 | Defence | Live | [stocks-4qw.pages.dev/Defence/](https://stocks-4qw.pages.dev/Defence/) |
 | Technology | Live | [stocks-4qw.pages.dev/Tech/](https://stocks-4qw.pages.dev/Tech/) |
+| Crypto | Live | [stocks-4qw.pages.dev/Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
+| Energy | Live | [stocks-4qw.pages.dev/Energy/](https://stocks-4qw.pages.dev/Energy/) |
 
 ## Repo structure
 
 ```
 ├── index.html              ← hub landing page
-├── shared.css              ← shared stylesheet loaded by all 28 sector pages
+├── shared.css              ← shared stylesheet loaded by all 42 sector pages
 ├── AI/                     ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html          ← CANONICAL reference for typography/UI standards
 │   ├── AI_update_prices.py
@@ -38,11 +40,21 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 │   ├── Tech_update_prices.py
 │   ├── Tech_generate_signals_local.py
 │   └── ...
+├── Crypto/                 ← Crypto sector (19 coins, 6 categories)
+│   ├── index.html
+│   ├── Crypto_update_prices.py
+│   ├── Crypto_generate_signals_local.py
+│   └── ...
+├── Energy/                 ← Energy sector (20 stocks, 5 categories)
+│   ├── index.html
+│   ├── Energy_update_prices.py
+│   ├── Energy_generate_signals_local.py
+│   └── ...
 ├── .github/workflows/      ← GitHub Actions (must be at repo root)
 │   ├── update-prices.yml
 │   └── generate-signals.yml
 ├── AGENTS.md               ← contributor guide (read first)
-├── WORKFLOW.md             ← two-clone dev workflow
+├── WORKFLOW.md             ← dev → main shipping process
 ├── CHANGELOG.md            ← change history
 └── FEATURES.md             ← backlog
 ```

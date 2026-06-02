@@ -2,15 +2,6 @@
 
 ## Backlog
 
-- **Crypto: trigger GitHub Actions** — run "Update Prices → Crypto" then "Generate Signals → Crypto" to replace stub prices (XLM, SUI, HBAR, TON, ALGO, MINA, PEPE show N/A) and placeholder signal picks with real data
-
-- **Energy sector** — 20 stocks across 5 categories; full 7-page suite + hub card + workflows
-  - Oil Majors (6): XOM, CVX, SHEL, BP, TTE, EQNR
-  - E&P & Refining (5): COP, OXY, EOG, MPC, VLO
-  - Oilfield Services (3): SLB, HAL, BKR
-  - Utilities (2): NEE, SSE.L (LSE — divide by 100)
-  - Clean Energy (4): ENPH, FSLR, BEPC, DNNGY (Ørsted OTC)
-
 - **Global Mega-Cap Leaders sector** — 50 stocks across 6–7 categories; full 7-page suite + hub card + workflows
   - Big Tech (6): MSFT, AAPL, AMZN, GOOGL, META, NVDA
   - Financials (6): BRK-B, JPM, V, MA, BAC, MS
@@ -22,6 +13,14 @@
   - Notes: Samsung (SSNLF) + Tencent (TCEHY) + Saudi Aramco (2222.SR) kept in — expect some N/A on return fields; #50 Netflix duplicate replaced with Thermo Fisher (TMO)
 
 ## Done
+
+- **Site max-width 1920px** — `.header-inner`, `.nav-inner`, `.container` in `shared.css` widened from 1600px to 1920px; no layout changes, just allows the content to spread wider on large monitors (`shared.css`)
+
+- **Heatmap text stroke removed** — SVG `stroke`/`stroke-width`/`stroke-linejoin`/`paint-order` attributes removed from ticker and value text on all 5 sector heatmaps; tile border stroke (0.5px) retained (`AI/heatmap.html`, `Biotech/heatmap.html`, `Defence/heatmap.html`, `Tech/heatmap.html`, `Crypto/heatmap.html`)
+
+- **1D / 1W / 1M return columns on metrics** — three sortable columns added between YTD and Beta on all 4 equity metrics pages; data sourced from `change_1d`/`change_1w`/`change_1m` fields in `prices-data.js`; colour-coded like YTD (`AI/metrics.html`, `Biotech/metrics.html`, `Defence/metrics.html`, `Tech/metrics.html`)
+
+- **Energy sector** — 20 stocks across 5 categories (Oil Majors: XOM/CVX/SHEL/BP/TTE/EQNR; E&P/Refining: COP/OXY/EOG/MPC/VLO; Oilfield Services: SLB/HAL/BKR; Utilities: NEE/SSE.L; Clean Energy: ENPH/FSLR/BEPC/DNNGY); full 7-page suite; Energy card added to all 35 existing sector pages; hub card + SECTORS array entry; both GitHub Actions workflows updated (`Energy/`, `index.html`, `.github/workflows/update-prices.yml`, `.github/workflows/generate-signals.yml`)
 
 - **Crypto sector** — 19 coins across 6 categories (Bitcoin; Layer 1: ETH/SOL/BNB/ADA/AVAX; Payments: XRP/XLM/TRX; Emerging: SUI/HBAR/TON/ALGO/MINA; Infra: MATIC/DOT/LINK; Meme: DOGE/PEPE); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **AI sector** — 48 stocks across 12 categories; metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
