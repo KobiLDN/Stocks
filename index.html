@@ -339,8 +339,13 @@
       font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--dim); padding: 6px 12px;
       text-align: left; border-bottom: 1px solid var(--border);
-      white-space: nowrap;
+      white-space: nowrap; cursor: pointer; user-select: none;
+      transition: color 0.15s;
     }
+    .top-table th:hover { color: var(--accent); }
+    .top-table th.sorted { color: var(--accent); }
+    .top-table th.sorted::after { content: ' ▼'; font-size: 7px; }
+    .top-table th.sorted.asc::after { content: ' ▲'; }
     .top-table th.r { text-align: right; }
     .top-table td {
       padding: 7px 12px; border-bottom: 1px solid var(--border);
@@ -583,9 +588,10 @@
     }
 
     function numCell(val, cls = 'pt-num') {
-      if (!val) return `<td class="${cls} pt-flat">—</td>`;
+      if (!val) return `<td class="${cls} pt-flat" data-val="-9999">—</td>`;
+      const num = parseFloat(val.replace('%','').replace('+','')) || -9999;
       const c = val.startsWith('+') ? 'pt-pos' : val.startsWith('-') ? 'pt-neg' : 'pt-flat';
-      return `<td class="${cls} ${c}">${val}</td>`;
+      return `<td class="${cls} ${c}" data-val="${num}">${val}</td>`;
     }
 
     function renderCardPicks(id, picks, priceMap) {
@@ -629,26 +635,53 @@
         const sigClass = p.signal === 'strong_buy' ? 'strong-buy' : 'buy';
         const sigLabel = p.signal === 'strong_buy' ? 'STRONG BUY' : 'BUY';
         const sectorLink = `${sector}/signals.html`;
+        const conf = Math.round(p.confidence * 100);
+        const sigSort = p.signal === 'strong_buy' ? 2 : 1;
         return `<tr onclick="location.href='${sectorLink}'" style="cursor:pointer">
-          <td class="top-rank">${i + 1}</td>
-          <td>
+          <td class="top-rank" data-val="${i + 1}">${i + 1}</td>
+          <td data-val="${p.ticker}">
             <div class="pt-ticker">${p.ticker} <span class="pt-sig ${sigClass}">${p.signal === 'strong_buy' ? 'SB' : 'B'}</span></div>
           </td>
-          <td style="font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px">${s.company_name || '—'}</td>
-          <td><span class="sector-badge">${sector}</span></td>
-          <td><span class="pt-sig ${sigClass}" style="font-size:9px">${sigLabel}</span></td>
+          <td data-val="${s.company_name || ''}" style="font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px">${s.company_name || '—'}</td>
+          <td data-val="${sector}"><span class="sector-badge">${sector}</span></td>
+          <td data-val="${sigSort}"><span class="pt-sig ${sigClass}" style="font-size:9px">${sigLabel}</span></td>
           ${numCell(s.change_1d)}
           ${numCell(s.change_1w)}
           ${numCell(s.change_ytd)}
-          <td class="pt-num" style="font-weight:700;color:var(--accent)">${Math.round(p.confidence * 100)}%</td>
+          <td class="pt-num" data-val="${conf}" style="font-weight:700;color:var(--accent)">${conf}%</td>
         </tr>`;
       }).join('');
+    }
+
+    function initTopSort() {
+      let lastCol = -1, lastAsc = false;
+      document.querySelectorAll('.top-table th').forEach((th, i) => {
+        th.addEventListener('click', () => {
+          const asc = lastCol === i ? !lastAsc : false;
+          lastCol = i; lastAsc = asc;
+          const tbody = document.getElementById('top-picks');
+          const rows = Array.from(tbody.querySelectorAll('tr'));
+          rows.sort((a, b) => {
+            const av = a.cells[i]?.dataset.val ?? a.cells[i]?.textContent.trim() ?? '';
+            const bv = b.cells[i]?.dataset.val ?? b.cells[i]?.textContent.trim() ?? '';
+            const an = parseFloat(av), bn = parseFloat(bv);
+            if (!isNaN(an) && !isNaN(bn)) return asc ? an - bn : bn - an;
+            return asc ? av.localeCompare(bv) : bv.localeCompare(av);
+          });
+          rows.forEach(r => tbody.appendChild(r));
+          document.querySelectorAll('.top-table th').forEach((h, j) => {
+            h.classList.toggle('sorted', j === i);
+            h.classList.toggle('asc', j === i && asc);
+          });
+        });
+      });
     }
 
     async function init() {
       const results = await Promise.all(SECTORS.map(fetchSector));
       results.forEach(({ id, picks, priceMap }) => renderCardPicks(id, picks, priceMap));
       renderTop20(results);
+      initTopSort();
     }
 
     init();
