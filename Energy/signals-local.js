@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-02 18:38",
+  "updated": "2026-06-03 12:59",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ENPH",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "ENPH has surged +114% YTD and +122% in the last month, with a +14% one-day move, driven by strong clean energy momentum and a 27% short interest that could fuel further squeezes.",
+      "drivers": [
+        "+114% YTD",
+        "+122% 1M momentum",
+        "27% short interest",
+        "clean energy tailwinds"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "FSLR",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "FSLR shows +90% 1-year return, +47% 1-month momentum, and a P/E of 20 with strong analyst buy consensus and positive news sentiment, benefiting from solar demand and policy support.",
+      "drivers": [
+        "+90% 1Y return",
+        "+47% 1M momentum",
+        "P/E 20",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "VLO has +93% 1-year return, +58% YTD, and strong 1W/1D momentum of +7%/+2.3%, with a P/E of 18.9 and positive news sentiment, driven by robust refining margins.",
+      "drivers": [
+        "+93% 1Y return",
+        "+58% YTD",
+        "strong 1W/1D momentum",
+        "refining margin tailwinds"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "MPC has +61% YTD, +60% 1-year return, and strong 1W/1D momentum of +6%/+1.6%, with a P/E of 17.3 and buy analyst consensus, benefiting from high refining margins.",
+      "drivers": [
+        "+61% YTD",
+        "+60% 1Y return",
+        "P/E 17.3",
+        "refining margin tailwinds"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "SLB has +62% 1-year return, +42% YTD, and a strong analyst score of 1.62 (buy), with recent digital acquisition Tachyus expanding its portfolio, despite slightly negative news sentiment.",
+      "drivers": [
+        "+62% 1Y return",
+        "+42% YTD",
+        "analyst score 1.62",
+        "digital acquisition catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CVX has +23% YTD, +33% 1-year return, a P/E of 32.7, dividend yield of 3.8%, and strong analyst score of 1.84, with positive news sentiment and stable oil major fundamentals.",
+      "drivers": [
+        "+23% YTD",
+        "dividend yield 3.8%",
+        "analyst score 1.84",
+        "stable oil major"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SHEL has +17% YTD, +26% 1-year return, a P/E of 13.5, dividend yield of 3.7%, and buy analyst consensus, with LNG Canada Phase Two expansion approval as a catalyst.",
+      "drivers": [
+        "P/E 13.5",
+        "dividend yield 3.7%",
+        "LNG Canada expansion",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "OXY has +40% YTD, +38% 1-year return, and strong 1W momentum of +2.8%, with low short interest of 0.02%, though P/E is high at 79.9 and analyst consensus is hold.",
+      "drivers": [
+        "+40% YTD",
+        "+38% 1Y return",
+        "low short interest 0.02%",
+        "strong 1W momentum"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BEPC has +12% 1-month momentum, a dividend yield of 4.0%, and positive news sentiment, though YTD is flat at +0.6% and analyst consensus is hold with a score of 2.83.",
+      "drivers": [
+        "+12% 1M momentum",
+        "dividend yield 4.0%",
+        "positive news sentiment",
+        "clean energy exposure"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DNNGY",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "DNNGY has +29% YTD recovery from a -35% 1-year decline, with a beta of 0.64 and positive news on offshore wind projects, though fundamentals are weak with no P/E or dividend.",
+      "drivers": [
+        "+29% YTD recovery",
+        "offshore wind catalyst",
+        "low beta 0.64",
+        "positive news sentiment"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ENPH",
@@ -132,118 +264,6 @@ window.SIGNALS_DATA = {
         "dividend yield 4.03%",
         "news sentiment 0.255",
         "clean energy momentum"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ENPH",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0,
-      "rationale": "pending \u2014 run Generate Signals workflow",
-      "drivers": [
-        "stub data",
-        "run Energy_generate_signals_local.py"
       ]
     }
   ]

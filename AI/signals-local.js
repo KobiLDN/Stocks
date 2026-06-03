@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-02 15:41",
+  "updated": "2026-06-03 12:56",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "DELL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "DELL has +243% YTD, +105.68% 1M momentum, P/E 50.21, and analyst consensus is buy with a score of 1.88; recent news highlights AI server demand and a massive 1M surge, though a -8.5% 1D dip offers a pullback entry.",
+      "drivers": [
+        "+243% YTD",
+        "+105.68% 1M",
+        "P/E 50.21",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "MU has +237.5% YTD, +84.6% 1M, strong_buy consensus with an_score 1.48, P/E 50.12, and positive news sentiment 0.31; memory cycle tailwinds and AI demand are key catalysts.",
+      "drivers": [
+        "+237.5% YTD",
+        "+84.6% 1M",
+        "strong_buy consensus",
+        "P/E 50.12"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "MRVL has +225.7% YTD, +77.68% 1M, +32.48% 1D, strong_buy consensus with an_score 1.41, and Nvidia CEO endorsement; P/E 99.59 is elevated but justified by AI networking growth.",
+      "drivers": [
+        "+225.7% YTD",
+        "+32.48% 1D",
+        "strong_buy consensus",
+        "Nvidia endorsement"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SMCI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SMCI has +62.05% YTD, +79.69% 1M, +35.23% 1W, P/E 26.41 (reasonable), and positive news sentiment 0.404; analyst consensus is hold (2.83) but strong momentum and AI server demand are catalysts.",
+      "drivers": [
+        "+79.69% 1M",
+        "+35.23% 1W",
+        "P/E 26.41",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "285A",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "285A has +583.17% YTD, +78.62% 1M, +24.14% 1W, buy consensus with an_score 1.62, and P/E 76.92; SK Hynix's $1T market cap milestone underscores memory sector strength.",
+      "drivers": [
+        "+583.17% YTD",
+        "+78.62% 1M",
+        "buy consensus",
+        "memory sector strength"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "HUT has +159.45% YTD, +70.36% 1M, +18.2% 1W, strong_buy consensus with an_score 1.31; high beta 5.718 and short interest 15.32% add risk but AI compute pivot is a catalyst.",
+      "drivers": [
+        "+159.45% YTD",
+        "+70.36% 1M",
+        "strong_buy consensus",
+        "AI compute pivot"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "SMTC has +121.41% YTD, +55.58% 1M, +10.88% 1D, strong_buy consensus with an_score 1.36; upcoming Q1 earnings call is a catalyst, though P/E is not available.",
+      "drivers": [
+        "+121.41% YTD",
+        "+55.58% 1M",
+        "strong_buy consensus",
+        "Q1 earnings catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CORZ",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "CORZ has +81.68% YTD, +37.68% 1M, +10.16% 1W, strong_buy consensus with an_score 1.33; high short interest 22.82% and beta 5.451 indicate volatility, but AI data center demand is a catalyst.",
+      "drivers": [
+        "+81.68% YTD",
+        "+37.68% 1M",
+        "strong_buy consensus",
+        "AI data center demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SNDK has +523.59% YTD, +36.67% 1M, buy consensus with an_score 1.55, P/E 58.7, and positive news sentiment 0.379; memory sector momentum supports continued upside.",
+      "drivers": [
+        "+523.59% YTD",
+        "+36.67% 1M",
+        "buy consensus",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "IREN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "IREN has +55.97% YTD, +34.6% 1M, +11.41% 1W, buy consensus with an_score 1.87, P/E 86.49; high beta 4.179 and short interest 14.72% add risk, but AI compute pivot is a catalyst.",
+      "drivers": [
+        "+55.97% YTD",
+        "+34.6% 1M",
+        "buy consensus",
+        "AI compute pivot"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "DELL",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "+57.86% YTD",
         "$3.65B GPU financing catalyst",
         "AI compute growth"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Explosive 1M +101.44% and 1W +66.50% momentum, +231.81% YTD, P/E 48.55 is elevated but supported by strong AI server demand and a $9.7B Pentagon deal; news sentiment positive at 0.122. Live search confirmed Dell's AI server backlog and robust enterprise spending.",
-      "drivers": [
-        "1M return +101.44%",
-        "YTD +231.81%",
-        "P/E 48.55",
-        "Pentagon deal catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Superb 1M +87.76% and 1W +27.41%, YTD +207.97%, strong_buy analyst consensus with low short interest of 3.13%; P/E 45.87 is reasonable for HBM/DDR5 ramp. Search confirms strong demand from AI memory and data centre buildouts.",
-      "drivers": [
-        "1M return +87.76%",
-        "Analyst strong_buy",
-        "Short interest 3.13%",
-        "P/E 45.87"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SMCI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Massive 1M +68.21% and 1W +37.75%, YTD +48.87%, P/E 24.26 offers value among AI peers; hold rating (2.83) tempers conviction but strong demand for AI servers is a catalyst. News search indicates Nvidia GPU supply easing supports SMCI's growth.",
-      "drivers": [
-        "1M return +68.21%",
-        "P/E 24.26",
-        "YTD +48.87%",
-        "Nvidia GPU supply catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong 1M +45.21%, YTD +102.68%, strong_buy analyst consensus (an_score 1.36) with low short interest 6.8%; P/E not available, but revenue momentum from AI optical/connectivity is robust. Search highlights Semtech's data centre wins and upbeat guidance.",
-      "drivers": [
-        "YTD +102.68%",
-        "Analyst strong_buy",
-        "Short interest 6.8%",
-        "Data centre wins catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CRDO",
-      "signal": "strong_buy",
-      "confidence": 0.73,
-      "rationale": "Excellent 1W +22.05% and 1M +35.64%, YTD +64.80%, strong_buy consensus (an_score 1.33); P/E 129.69 is high but justified by rapid AI connectivity revenue growth. News search confirms large hyperscaler orders for Credo's Ethernet solutions.",
-      "drivers": [
-        "1W return +22.05%",
-        "Analyst strong_buy",
-        "YTD +64.80%",
-        "Hyperscaler orders catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "285A",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Exceptional 1M +75.32% and 1W +14.72%, YTD +480.18%, strong news sentiment 0.168; P/E 65.36 elevated but reflects HBM leader status. Search confirms SK Hynix's HBM dominance and massive AI memory demand.",
-      "drivers": [
-        "YTD +480.18%",
-        "1M return +75.32%",
-        "News sentiment 0.168",
-        "HBM dominance catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "Remarkable 1M +64.73% and 1W +18.59%, YTD +143.48%, strong_buy consensus (an_score 1.31) with high beta of 5.718 reflecting leveraged AI compute exposure. Search reveals Hut 8's expansion into AI cloud services and strategic partnerships.",
-      "drivers": [
-        "1M return +64.73%",
-        "Analyst strong_buy",
-        "YTD +143.48%",
-        "AI cloud expansion catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "IREN",
-      "signal": "buy",
-      "confidence": 0.66,
-      "rationale": "Strong 1M +39.62% and 1W +9.44%, YTD +48.81%, P/E 82.52 high but supported by AI compute transition; news sentiment neutral but search shows growing AI hosting contracts and data centre capacity expansion.",
-      "drivers": [
-        "1M return +39.62%",
-        "YTD +48.81%",
-        "AI compute pivot catalyst",
-        "Data centre expansion"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CORZ",
-      "signal": "strong_buy",
-      "confidence": 0.69,
-      "rationale": "Solid 1M +34.25% and 1W +8.18%, YTD +67.92%, strong_buy consensus (an_score 1.33) with positive news sentiment 0.183; high short interest 22.82% suggests potential squeeze. Search confirms Core Scientific's AI hosting wins and institutional interest.",
-      "drivers": [
-        "YTD +67.92%",
-        "Analyst strong_buy",
-        "Short interest 22.82%",
-        "AI hosting wins catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Stellar YTD +515.82% and 1M +54.58%, 1W +9.90%, buy rating (an_score 1.55) with P/E 57.81 reflecting solid demand for flash/AI storage. Search indicates strong enterprise SSD shipments and data centre upgrades boosting Sandisk's revenue.",
-      "drivers": [
-        "YTD +515.82%",
-        "1M return +54.58%",
-        "P/E 57.81",
-        "Enterprise SSD demand catalyst"
       ]
     }
   ]
