@@ -307,6 +307,59 @@
       padding: 14px;
     }
 
+    /* ── Top 20 panel ── */
+    .top-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--accent);
+      border-radius: 4px;
+      margin-bottom: 28px;
+      overflow: hidden;
+    }
+    .top-panel-header {
+      display: flex; align-items: baseline; gap: 16px;
+      padding: 18px 24px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .top-panel-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .top-panel-sub {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; color: var(--dim);
+    }
+    .top-table {
+      width: 100%; border-collapse: collapse;
+    }
+    .top-table thead { background: var(--surface2); }
+    .top-table th {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--dim); padding: 6px 12px;
+      text-align: left; border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .top-table th.r { text-align: right; }
+    .top-table td {
+      padding: 7px 12px; border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .top-table tbody tr:last-child td { border-bottom: none; }
+    .top-table tbody tr:hover { background: var(--surface2); cursor: pointer; }
+    .sector-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 8px; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 2px 6px; border-radius: 2px;
+      background: var(--surface2); color: var(--dim);
+      border: 1px solid var(--border); white-space: nowrap;
+    }
+    .top-rank {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px; color: var(--dim); width: 24px;
+    }
+
     /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
@@ -337,6 +390,28 @@
   </header>
 
   <main>
+
+    <div class="top-panel">
+      <div class="top-panel-header">
+        <span class="top-panel-title">// Top 20 Signals</span>
+        <span class="top-panel-sub">Ranked by confidence across all sectors</span>
+      </div>
+      <table class="top-table">
+        <thead><tr>
+          <th>#</th>
+          <th>Ticker</th>
+          <th>Company</th>
+          <th>Sector</th>
+          <th>Signal</th>
+          <th class="r">1D</th>
+          <th class="r">1W</th>
+          <th class="r">YTD</th>
+          <th class="r">Conf</th>
+        </tr></thead>
+        <tbody id="top-picks"><tr><td colspan="9" class="pt-empty">Loading…</td></tr></tbody>
+      </table>
+    </div>
+
     <div class="section-label">// Sectors</div>
     <div class="card-grid">
 
@@ -497,48 +572,86 @@
       } catch(e) { return {}; }
     }
 
-    function numCell(val) {
-      if (!val) return '<td class="pt-num pt-flat">—</td>';
-      const cls = val.startsWith('+') ? 'pt-pos' : val.startsWith('-') ? 'pt-neg' : 'pt-flat';
-      return `<td class="pt-num ${cls}">${val}</td>`;
-    }
-
-    async function loadPicks(id, sigPath, pricePath) {
-      const el = document.getElementById('picks-' + id);
-      if (!el) return;
+    async function fetchSector(s) {
       try {
         const [sigData, priceMap] = await Promise.all([
-          fetch(sigPath).then(r => r.json()),
-          fetchPriceMap(pricePath)
+          fetch(s.signals).then(r => r.json()),
+          fetchPriceMap(s.prices)
         ]);
-        const picks = (sigData.picks || []).slice(0, 5);
-        if (!picks.length) {
-          el.innerHTML = '<tr><td colspan="6" class="pt-empty">No signals yet</td></tr>';
-          return;
-        }
-        el.innerHTML = picks.map(p => {
-          const s = priceMap[p.ticker] || {};
-          const sigClass = p.signal === 'strong_buy' ? 'strong-buy' : 'buy';
-          const sigLabel = p.signal === 'strong_buy' ? 'SB' : 'B';
-          const pct = Math.round(p.confidence * 100);
-          return `<tr>
-            <td class="pt-rank">${p.rank}</td>
-            <td>
-              <div class="pt-ticker">${p.ticker} <span class="pt-sig ${sigClass}">${sigLabel}</span></div>
-              <div class="pt-name">${s.company_name || ''}</div>
-            </td>
-            ${numCell(s.change_1d)}
-            ${numCell(s.change_1w)}
-            ${numCell(s.change_ytd)}
-            <td class="pt-num">${pct}%</td>
-          </tr>`;
-        }).join('');
-      } catch(e) {
-        el.innerHTML = '<tr><td colspan="6" class="pt-empty">—</td></tr>';
-      }
+        return { id: s.id, picks: sigData.picks || [], priceMap };
+      } catch(e) { return { id: s.id, picks: [], priceMap: {} }; }
     }
 
-    SECTORS.forEach(s => loadPicks(s.id, s.signals, s.prices));
+    function numCell(val, cls = 'pt-num') {
+      if (!val) return `<td class="${cls} pt-flat">—</td>`;
+      const c = val.startsWith('+') ? 'pt-pos' : val.startsWith('-') ? 'pt-neg' : 'pt-flat';
+      return `<td class="${cls} ${c}">${val}</td>`;
+    }
+
+    function renderCardPicks(id, picks, priceMap) {
+      const el = document.getElementById('picks-' + id);
+      if (!el) return;
+      const top5 = picks.slice(0, 5);
+      if (!top5.length) { el.innerHTML = '<tr><td colspan="6" class="pt-empty">No signals yet</td></tr>'; return; }
+      el.innerHTML = top5.map(p => {
+        const s = priceMap[p.ticker] || {};
+        const sigClass = p.signal === 'strong_buy' ? 'strong-buy' : 'buy';
+        const sigLabel = p.signal === 'strong_buy' ? 'SB' : 'B';
+        return `<tr>
+          <td class="pt-rank">${p.rank}</td>
+          <td>
+            <div class="pt-ticker">${p.ticker} <span class="pt-sig ${sigClass}">${sigLabel}</span></div>
+            <div class="pt-name">${s.company_name || ''}</div>
+          </td>
+          ${numCell(s.change_1d)}
+          ${numCell(s.change_1w)}
+          ${numCell(s.change_ytd)}
+          <td class="pt-num">${Math.round(p.confidence * 100)}%</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function renderTop20(allSectors) {
+      const el = document.getElementById('top-picks');
+      if (!el) return;
+      // Flatten all picks with sector + price data, sort by confidence desc
+      const all = [];
+      allSectors.forEach(({ id, picks, priceMap }) => {
+        picks.forEach(p => {
+          all.push({ sector: id, pick: p, stock: priceMap[p.ticker] || {} });
+        });
+      });
+      all.sort((a, b) => (b.pick.confidence || 0) - (a.pick.confidence || 0));
+      const top20 = all.slice(0, 20);
+      if (!top20.length) { el.innerHTML = '<tr><td colspan="9" class="pt-empty">No signals yet</td></tr>'; return; }
+      el.innerHTML = top20.map((item, i) => {
+        const { sector, pick: p, stock: s } = item;
+        const sigClass = p.signal === 'strong_buy' ? 'strong-buy' : 'buy';
+        const sigLabel = p.signal === 'strong_buy' ? 'STRONG BUY' : 'BUY';
+        const sectorLink = `${sector}/signals.html`;
+        return `<tr onclick="location.href='${sectorLink}'" style="cursor:pointer">
+          <td class="top-rank">${i + 1}</td>
+          <td>
+            <div class="pt-ticker">${p.ticker} <span class="pt-sig ${sigClass}">${p.signal === 'strong_buy' ? 'SB' : 'B'}</span></div>
+          </td>
+          <td style="font-size:12px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px">${s.company_name || '—'}</td>
+          <td><span class="sector-badge">${sector}</span></td>
+          <td><span class="pt-sig ${sigClass}" style="font-size:9px">${sigLabel}</span></td>
+          ${numCell(s.change_1d)}
+          ${numCell(s.change_1w)}
+          ${numCell(s.change_ytd)}
+          <td class="pt-num" style="font-weight:700;color:var(--accent)">${Math.round(p.confidence * 100)}%</td>
+        </tr>`;
+      }).join('');
+    }
+
+    async function init() {
+      const results = await Promise.all(SECTORS.map(fetchSector));
+      results.forEach(({ id, picks, priceMap }) => renderCardPicks(id, picks, priceMap));
+      renderTop20(results);
+    }
+
+    init();
   </script>
 
 </body>
