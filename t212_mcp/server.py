@@ -3,8 +3,8 @@ Trading 212 MCP Server — exposes T212 portfolio as tools for Claude Code.
 
 Setup:
   1. pip install -r t212_mcp/requirements.txt
-  2. Put your T212 API key in t212_mcp/.key  (gitignored)
-     OR set env var T212_API_KEY
+  2. Put your T212 key in t212_mcp/.key as KEY_ID:SECRET_KEY  (gitignored)
+     OR set env var T212_API_KEY=KEY_ID:SECRET_KEY
   3. MCP server is configured in .claude/settings.json — reload the session.
 
 Tools exposed:
@@ -20,8 +20,15 @@ from mcp.server.fastmcp import FastMCP
 import httpx
 
 # ── API key resolution ────────────────────────────────────────────────────────
+# Key format in .key file or env var: KEY_ID:SECRET_KEY  (Basic auth)
 _KEY_FILE = Path(__file__).parent / ".key"
-API_KEY   = _KEY_FILE.read_text().strip() if _KEY_FILE.exists() else os.getenv("T212_API_KEY", "")
+_raw_key  = _KEY_FILE.read_text().strip() if _KEY_FILE.exists() else os.getenv("T212_API_KEY", "")
+if ":" in _raw_key:
+    _key_id, _secret = _raw_key.split(":", 1)
+    T212_AUTH = (_key_id, _secret)
+else:
+    T212_AUTH = None  # key not configured
+
 BASE_URL  = "https://live.trading212.com/api/v0"
 REPO_ROOT = Path(__file__).parent.parent
 
@@ -29,9 +36,9 @@ mcp = FastMCP("Trading 212")
 
 # ── HTTP helper ───────────────────────────────────────────────────────────────
 def t212(endpoint: str):
-    if not API_KEY:
-        raise RuntimeError("T212_API_KEY not set. Add it to t212_mcp/.key or set the env var.")
-    r = httpx.get(f"{BASE_URL}{endpoint}", headers={"Authorization": API_KEY}, timeout=15)
+    if not T212_AUTH:
+        raise RuntimeError("T212 key not configured. Add KEY_ID:SECRET_KEY to t212_mcp/.key or set T212_API_KEY env var.")
+    r = httpx.get(f"{BASE_URL}{endpoint}", auth=T212_AUTH, timeout=15)
     r.raise_for_status()
     return r.json()
 

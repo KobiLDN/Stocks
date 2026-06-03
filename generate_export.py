@@ -14,15 +14,16 @@ BASE    = os.path.dirname(os.path.abspath(__file__))
 # ── T212 portfolio fetch (optional) ──────────────────────────────────────────
 def fetch_t212_portfolio():
     key_file = Path(BASE) / "t212_mcp" / ".key"
-    api_key  = key_file.read_text().strip() if key_file.exists() else os.getenv("T212_API_KEY", "")
-    if not api_key:
+    raw_key  = key_file.read_text().strip() if key_file.exists() else os.getenv("T212_API_KEY", "")
+    if not raw_key or ":" not in raw_key:
         return None, None
+    key_id, secret = raw_key.split(":", 1)
+    auth = (key_id, secret)
     try:
         import httpx
-        headers = {"Authorization": api_key}
-        base    = "https://live.trading212.com/api/v0"
-        pos_r   = httpx.get(f"{base}/equity/portfolio",      headers=headers, timeout=15)
-        cash_r  = httpx.get(f"{base}/equity/account/cash",   headers=headers, timeout=15)
+        base   = "https://live.trading212.com/api/v0"
+        pos_r  = httpx.get(f"{base}/equity/portfolio",    auth=auth, timeout=15)
+        cash_r = httpx.get(f"{base}/equity/account/cash", auth=auth, timeout=15)
         pos_r.raise_for_status(); cash_r.raise_for_status()
 
         def clean(t): return re.split(r'_', t)[0]
