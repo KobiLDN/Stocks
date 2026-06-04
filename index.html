@@ -383,6 +383,37 @@
       .pt-name { display: none; }
     }
   </style>
+<!-- Preload all sector data as scripts so index.html works on file:// -->
+<script src="AI/prices-data.js"></script>
+<script>window.__pd_AI = window.PRICES_DATA;</script>
+<script src="AI/signals-local.js"></script>
+<script>window.__sd_AI = window.SIGNALS_DATA;</script>
+
+<script src="Defence/prices-data.js"></script>
+<script>window.__pd_Defence = window.PRICES_DATA;</script>
+<script src="Defence/signals-local.js"></script>
+<script>window.__sd_Defence = window.SIGNALS_DATA;</script>
+
+<script src="Biotech/prices-data.js"></script>
+<script>window.__pd_Biotech = window.PRICES_DATA;</script>
+<script src="Biotech/signals-local.js"></script>
+<script>window.__sd_Biotech = window.SIGNALS_DATA;</script>
+
+<script src="Tech/prices-data.js"></script>
+<script>window.__pd_Tech = window.PRICES_DATA;</script>
+<script src="Tech/signals-local.js"></script>
+<script>window.__sd_Tech = window.SIGNALS_DATA;</script>
+
+<script src="Crypto/prices-data.js"></script>
+<script>window.__pd_Crypto = window.PRICES_DATA;</script>
+<script src="Crypto/signals-local.js"></script>
+<script>window.__sd_Crypto = window.SIGNALS_DATA;</script>
+
+<script src="Energy/prices-data.js"></script>
+<script>window.__pd_Energy = window.PRICES_DATA;</script>
+<script src="Energy/signals-local.js"></script>
+<script>window.__sd_Energy = window.SIGNALS_DATA;</script>
+
 <script src="shared.js" defer></script>
 </head>
 <body>
@@ -566,22 +597,35 @@
       { id: 'Energy',  signals: 'Energy/signals-local.json',  prices: 'Energy/prices-data.js' },
     ];
 
-    async function fetchPriceMap(path) {
+    function priceMapFromData(data) {
+      const map = {};
+      (data.stocks || []).forEach(s => { map[s.ticker] = s; });
+      return { map, updated: data.updated || null };
+    }
+
+    async function fetchPriceMap(sectorId, path) {
+      // Preloaded via <script> tag — works on file://
+      if (window['__pd_' + sectorId]) return priceMapFromData(window['__pd_' + sectorId]);
+      // Fallback: fetch over HTTP
       try {
         const text = await fetch(path).then(r => r.text());
         const json = text.replace(/^\s*window\.PRICES_DATA\s*=\s*/, '').replace(/\s*;\s*$/, '');
-        const data = JSON.parse(json);
-        const map = {};
-        (data.stocks || []).forEach(s => { map[s.ticker] = s; });
-        return { map, updated: data.updated || null };
+        return priceMapFromData(JSON.parse(json));
       } catch(e) { return { map: {}, updated: null }; }
     }
 
     async function fetchSector(s) {
+      // Preloaded via <script> tags — works on file://
+      const preloadedSig = window['__sd_' + s.id];
+      if (preloadedSig) {
+        const priceData = await fetchPriceMap(s.id, s.prices);
+        return { id: s.id, picks: preloadedSig.picks || [], priceMap: priceData.map, updated: priceData.updated };
+      }
+      // Fallback: fetch over HTTP
       try {
         const [sigData, priceData] = await Promise.all([
           fetch(s.signals).then(r => r.json()),
-          fetchPriceMap(s.prices)
+          fetchPriceMap(s.id, s.prices)
         ]);
         return { id: s.id, picks: sigData.picks || [], priceMap: priceData.map, updated: priceData.updated };
       } catch(e) { return { id: s.id, picks: [], priceMap: {}, updated: null }; }
