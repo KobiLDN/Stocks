@@ -51,13 +51,13 @@ function buildDataBar() {
   if (window.SIGNALS_DATA && window.SIGNALS_DATA.generated) {
     ts    = window.SIGNALS_DATA.generated;
     label = 'Signals generated';
-    sched = 'Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions';
+    sched = 'Auto-refreshed Mon / Wed / Fri · 08:00 BST';
   }
   // All other pages — read from PRICES_DATA (prices-data.js)
   else if (window.PRICES_DATA && window.PRICES_DATA.updated) {
     ts    = window.PRICES_DATA.updated;
     label = 'Prices updated';
-    sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST · GitHub Actions + cron-job.org';
+    sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST';
   } else {
     // Hub page: find first available sector snapshot global
     for (const s of ['AI', 'Defence', 'Biotech', 'Tech', 'Crypto', 'Energy']) {
@@ -65,7 +65,7 @@ function buildDataBar() {
       if (pd && pd.updated) {
         ts    = pd.updated;
         label = 'Prices updated';
-        sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST · GitHub Actions + cron-job.org';
+        sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST';
         break;
       }
     }
