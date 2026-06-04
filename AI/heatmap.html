@@ -445,12 +445,36 @@ function drawTreemap(containerEl, stocks, metricId, height) {
     .text(d => d._vfs ? d._vs : '');
 }
 
-/* ── Render all-stocks map ── */
+/* ── Render all-stocks map — gainers left, losers right ── */
 function renderAll(stocks, metricId) {
   const el = document.getElementById('map-all');
   const H  = Math.max(480, Math.min(660, Math.round(window.innerHeight * 0.58)));
   el.style.height = H + 'px';
-  drawTreemap(el, stocks, metricId, H);
+  el.innerHTML = '';
+
+  const gainers = stocks.filter(s => (getVal(s, metricId) ?? 0) >= 0);
+  const losers  = stocks.filter(s => (getVal(s, metricId) ?? 0) <  0);
+  const total   = gainers.length + losers.length || 1;
+  const W       = el.clientWidth || 1200;
+  const gW      = gainers.length ? Math.round(W * gainers.length / total) : 0;
+  const lW      = losers.length  ? W - gW : 0;
+
+  const wrap = document.createElement('div');
+  wrap.style.cssText = 'display:flex;gap:3px;height:' + H + 'px;';
+  el.appendChild(wrap);
+
+  if (gW > 0) {
+    const gDiv = document.createElement('div');
+    gDiv.style.cssText = 'width:' + gW + 'px;flex-shrink:0;';
+    wrap.appendChild(gDiv);
+    drawTreemap(gDiv, gainers, metricId, H);
+  }
+  if (lW > 0) {
+    const lDiv = document.createElement('div');
+    lDiv.style.cssText = 'width:' + lW + 'px;flex-shrink:0;';
+    wrap.appendChild(lDiv);
+    drawTreemap(lDiv, losers, metricId, H);
+  }
 }
 
 /* ── Render per-sector maps ── */
