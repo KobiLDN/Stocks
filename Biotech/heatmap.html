@@ -431,12 +431,14 @@ function drawSplit(el, stocks, metricId, H) {
   el.appendChild(wrap);
   if (gW > 0) {
     const gDiv = document.createElement('div');
+    gDiv.id = (el.id || 'sp') + '-g';
     gDiv.style.cssText = 'width:' + gW + 'px;flex-shrink:0;';
     wrap.appendChild(gDiv);
     drawTreemap(gDiv, gainers, metricId, H, gW);
   }
   if (lW > 0) {
     const lDiv = document.createElement('div');
+    lDiv.id = (el.id || 'sp') + '-l';
     lDiv.style.cssText = 'width:' + lW + 'px;flex-shrink:0;';
     wrap.appendChild(lDiv);
     drawTreemap(lDiv, losers, metricId, H, lW);
