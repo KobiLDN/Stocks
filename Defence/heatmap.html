@@ -227,14 +227,11 @@ function tileSize(stock, metricId) {
   return v === null ? 0.05 : Math.max(0.05, Math.abs(v));
 }
 
-function colorNeg(t) { return d3.interpolateRgb(getCssVar('--surface2'), getCssVar('--red'))(t); }
-function colorPos(t) { return d3.interpolateRgb(getCssVar('--surface2'), getCssVar('--green'))(t); }
-
+/* Color: flat green (gainers) or flat red (losers) */
 function tileColor(val, threshold) {
   if (val === null) return getCssVar('--surface');
-  const t = Math.max(-1, Math.min(1, val / threshold));
-  if (t < 0) return colorNeg(-t);
-  if (t > 0) return colorPos(t);
+  if (val > 0) return getCssVar('--green');
+  if (val < 0) return getCssVar('--red');
   return getCssVar('--surface2');
 }
 
