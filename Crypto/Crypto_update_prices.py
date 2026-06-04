@@ -38,7 +38,7 @@ STOCKS = {
     "XLM":  ("XLM-USD",  "payments", "Crypto", None, "Stellar"),
     "TRX":  ("TRX-USD",  "payments", "Crypto", None, "TRON"),
     # ── Emerging ──────────────────────────────────────────────────────────────
-    "SUI":  ("SUI-USD",  "emerging", "Crypto", None, "Sui"),
+    "SUI":  ("SUI20947-USD",  "emerging", "Crypto", None, "Sui"),
     "HBAR": ("HBAR-USD", "emerging", "Crypto", None, "Hedera"),
     "TON":  ("TON11419-USD", "emerging", "Crypto", None, "Toncoin"),
     "ALGO": ("ALGO-USD", "emerging", "Crypto", None, "Algorand"),
@@ -49,7 +49,7 @@ STOCKS = {
     "LINK": ("LINK-USD", "infra",    "Crypto", None, "Chainlink"),
     # ── Meme ──────────────────────────────────────────────────────────────────
     "DOGE": ("DOGE-USD", "meme",     "Crypto", None, "Dogecoin"),
-    "PEPE": ("PEPE-USD", "meme",     "Crypto", None, "Pepe"),
+    "PEPE": ("PEPE24478-USD", "meme",     "Crypto", None, "Pepe"),
 }
 
 
