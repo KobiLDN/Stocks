@@ -6,6 +6,7 @@ All notable changes to this repository are documented here — **newest first**.
 
 | Date · time (BST) | AI Name | Where | Changed |
 |---|---|---|---|
+| 2026-06-04 | Claude Sonnet 4.6 (Claude Code) | Desktop | Fix: **Crypto Yahoo Finance links** — all pages now use `ticker-USD` format (e.g. `XRP-USD` not `XRP`); special cases hardcoded: `TON→TON11419-USD`, `SUI→SUI20947-USD`, `PEPE→PEPE24478-USD`; `Crypto_update_prices.py` yfinance tickers corrected for TON, SUI, PEPE; `CRYPTO_YF` map in `index.html`, `metrics.html`, `news.html`, `heatmap.html`. |
 | 2026-06-04 | Claude Sonnet 4.6 (Claude Code) | Desktop | UX: **header-sub standardised** — removed `Last updated` from all 6 sector dashboard header-sub lines (now in data bar only); removed local `font-size: 12px` overrides from `AI/index.html` + `Defence/index.html`; all sector pages now use shared.css `header-sub` (13px IBM Plex Mono) consistently. |
 | 2026-06-04 | Claude Sonnet 4.6 (Claude Code) | Desktop | Fix: **charts pages max-width 1600px → 1920px** — `.toolbar-inner` and grid containers were 1600px while nav is 1920px; toolbar/chart grid now align with nav buttons on wide screens. All 6 `charts.html` files. |
 | 2026-06-04 | Claude Sonnet 4.6 (Claude Code) | Desktop | UX: **compact header-note disclaimers** — all 42 pages reduced to single-line variants: general · metrics (Yahoo Finance/yfinance) · news (VADER headline scoring) · signals (AI-generated) · calculator (YTD from 1 Jan 2026). |

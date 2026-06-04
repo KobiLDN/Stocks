@@ -14,6 +14,8 @@
 
 ## Done
 
+- **Crypto Yahoo Finance links corrected** — all 4 Crypto pages link to `ticker-USD` quote pages; special tickers `TON→TON11419-USD`, `SUI→SUI20947-USD`, `PEPE→PEPE24478-USD` hardcoded in `CRYPTO_YF` map; yfinance tickers in `Crypto_update_prices.py` corrected to match
+
 - **Auto-refresh data bar on every page** — `buildDataBar()` in `shared.js` injects a status strip at the top of every page's content area showing last updated timestamp + schedule; prices pages show "Mon–Fri · 09:00, 15:30, 21:30 BST"; signals pages show their own refresh-banner with "Mon / Wed / Fri · 08:00 BST"; header-note disclaimers compacted to single line across all 42 pages; charts pages max-width fixed 1600→1920px; "Last updated" removed from dashboard header-sub (now in data bar only) (`shared.js`, `shared.css`, all sector pages)
 
 - **External cron trigger for price updates** — 3 cron-job.org jobs (08:00, 14:30, 20:30 UTC weekdays) trigger `update-prices.yml` via GitHub API `workflow_dispatch`; bypasses GitHub's unreliable native scheduler (was delaying runs 2–3h); GitHub cron entries kept as fallback
