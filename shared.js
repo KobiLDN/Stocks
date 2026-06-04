@@ -42,7 +42,8 @@ function buildTape(stocks) {
 
 // ── Data bar (injected after <nav> on every page) ─────────────────────────────
 function buildDataBar() {
-  if (document.querySelector('.data-bar')) return;
+  // Skip if already present, or if page has its own refresh-banner (signals pages)
+  if (document.querySelector('.data-bar') || document.querySelector('.refresh-banner')) return;
   const nav = document.querySelector('nav');
   if (!nav) return;
 
