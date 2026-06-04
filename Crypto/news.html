@@ -358,8 +358,12 @@
     'meme':     'Meme — DOGE, PEPE: community-driven high-volatility tokens',
   };
 
+  const YF_MAP = {};
+  if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
+    window.PRICES_DATA.stocks.forEach(s => { YF_MAP[s.ticker] = s.yf_ticker || s.ticker + '-USD'; });
+  }
   function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + ticker + '/';
+    return 'https://finance.yahoo.com/quote/' + (YF_MAP[ticker] || ticker + '-USD') + '/';
   }
 
   function escapeHtml(s) {

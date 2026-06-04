@@ -40,7 +40,7 @@ STOCKS = {
     # ── Emerging ──────────────────────────────────────────────────────────────
     "SUI":  ("SUI-USD",  "emerging", "Crypto", None, "Sui"),
     "HBAR": ("HBAR-USD", "emerging", "Crypto", None, "Hedera"),
-    "TON":  ("TON-USD",  "emerging", "Crypto", None, "Toncoin"),
+    "TON":  ("TON11419-USD", "emerging", "Crypto", None, "Toncoin"),
     "ALGO": ("ALGO-USD", "emerging", "Crypto", None, "Algorand"),
     "MINA": ("MINA-USD", "emerging", "Crypto", None, "Mina"),
     # ── Infrastructure ────────────────────────────────────────────────────────
@@ -267,6 +267,7 @@ def write_json(results, gbp_usd, today_str):
         r = results[ticker]
         stocks.append({
             "ticker":           ticker,
+            "yf_ticker":        yahoo_sym,
             "company_name":     company_name,
             "category":         cat,
             "exchange":         exchange,
