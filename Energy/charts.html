@@ -11,7 +11,7 @@
 <script src="../shared.js" defer></script>
 <style>
   .toolbar { position: relative; z-index: 25; padding: 12px 0; border-bottom: 1px solid var(--border); background: var(--bg); }
-  .toolbar-inner { max-width: 1600px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .toolbar-inner { max-width: 1920px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
   .toolbar-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .toolbar-group { display: flex; gap: 2px; align-items: center; }
   .toolbar-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-right: 8px; }
@@ -72,7 +72,7 @@
   .cat-btn.active-utilities        { background: var(--green);  border-color: var(--green);  color: var(--bg); }
   .cat-btn.active-clean-energy     { background: var(--lime);   border-color: var(--lime);   color: var(--bg); }
 
-  #single-view { position: relative; z-index: 1; display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1600px; margin: 0 auto; padding: 24px; align-items: start; }
+  #single-view { position: relative; z-index: 1; display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1920px; margin: 0 auto; padding: 24px; align-items: start; }
   .sidebar { position: sticky; top: 24px; max-height: calc(100vh - 120px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
   .sidebar-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; padding-left: 2px; }
 
@@ -97,7 +97,7 @@
   .chart-widget { border: 1px solid var(--border); background: var(--surface); height: 580px; }
   .chart-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 8px; }
 
-  #grid-view { position: relative; z-index: 1; max-width: 1600px; margin: 0 auto; padding: 24px; display: none; }
+  #grid-view { position: relative; z-index: 1; max-width: 1920px; margin: 0 auto; padding: 24px; display: none; }
   .grid-heading { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
   .grid-heading span { color: var(--accent); }
   .chart-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 16px; }
