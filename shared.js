@@ -81,16 +81,14 @@ function buildDataBar() {
     '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
     '<span class="data-bar-sched">' + sched + '</span>';
 
-  // Inject just BEFORE .container — steal its padding-top for the gap above the bar,
-  // then reduce container padding-top to a small gap between bar and content.
+  // Inject inside .container (afterbegin) — naturally inherits container alignment.
+  // Reduce container padding-top to match the gap below the bar (16px each side).
   // Charts pages use <main> — inject inside that instead.
   const container = document.querySelector('.container');
   const main      = document.querySelector('main');
   if (container) {
-    const topPad = parseFloat(getComputedStyle(container).paddingTop);
-    bar.style.marginTop = topPad + 'px';
     container.style.paddingTop = '16px';
-    container.insertAdjacentElement('beforebegin', bar);
+    container.insertAdjacentElement('afterbegin', bar);
   } else if (main) {
     main.insertAdjacentElement('afterbegin', bar);
   } else {
