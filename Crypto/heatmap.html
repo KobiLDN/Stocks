@@ -296,11 +296,8 @@ const METRICS_CFG = {
   '1y':  { field: 'return_1yr', label: '1Y',    threshold: 60 },
 };
 
-const YF_MAP = {};
-if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
-  window.PRICES_DATA.stocks.forEach(s => { YF_MAP[s.ticker] = s.yf_ticker || s.ticker + '-USD'; });
-}
-function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YF_MAP[t] || t + '-USD') + '/'; }
+const CRYPTO_YF = { 'TON': 'TON11419-USD' };
+function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (CRYPTO_YF[t] || t + '-USD') + '/'; }
 
 /* ── Helpers ── */
 function parsePct(s) {
