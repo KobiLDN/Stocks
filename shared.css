@@ -342,15 +342,16 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
   padding: 40px 24px;
 }
 
-/* Header note — disclaimer strip below sector switcher, matches table width */
+/* Header note — disclaimer strip below sector switcher */
 .header-note {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10px;
   color: var(--muted);
   letter-spacing: 0.2px;
-  max-width: 1920px;
+  width: calc(100% - 48px);
+  max-width: 1872px;
   margin: 8px auto 0;
-  padding: 8px 24px;
+  padding: 8px;
   line-height: 1.5;
   border: 1px solid var(--border);
 }
