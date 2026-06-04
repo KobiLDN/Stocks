@@ -40,11 +40,55 @@ function buildTape(stocks) {
   track.classList.add('running');
 }
 
+// ── Data bar (injected after <nav> on every page) ─────────────────────────────
+function buildDataBar() {
+  const nav = document.querySelector('nav');
+  if (!nav || document.querySelector('.data-bar')) return;
+
+  let ts = null, label = 'Last updated', sched = '';
+
+  // Signals pages — read from SIGNALS_DATA global (signals-local.js)
+  if (window.SIGNALS_DATA && window.SIGNALS_DATA.generated) {
+    ts    = window.SIGNALS_DATA.generated;
+    label = 'Signals generated';
+    sched = 'Auto-refreshed Mon / Wed / Fri · GitHub Actions';
+  }
+  // All other pages — read from PRICES_DATA (prices-data.js)
+  else if (window.PRICES_DATA && window.PRICES_DATA.updated) {
+    ts    = window.PRICES_DATA.updated;
+    label = 'Prices updated';
+    sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST · GitHub Actions + cron-job.org';
+  } else {
+    // Hub page: find first available sector snapshot global
+    for (const s of ['AI', 'Defence', 'Biotech', 'Tech', 'Crypto', 'Energy']) {
+      const pd = window['__pd_' + s];
+      if (pd && pd.updated) {
+        ts    = pd.updated;
+        label = 'Prices updated';
+        sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST · GitHub Actions + cron-job.org';
+        break;
+      }
+    }
+  }
+
+  if (!ts) return;
+
+  const bar = document.createElement('div');
+  bar.className = 'data-bar';
+  bar.innerHTML =
+    '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
+    '<span class="data-bar-sched">' + sched + '</span>';
+  nav.insertAdjacentElement('afterend', bar);
+}
+
 // ── Initialise on DOMContentLoaded ───────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Set correct theme icon
   const btn = document.getElementById('theme-toggle');
   if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
+
+  // Inject data bar below nav
+  buildDataBar();
 
   // Populate ticker tape
   if (window.PRICES_DATA) {
