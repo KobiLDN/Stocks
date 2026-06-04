@@ -573,18 +573,18 @@
         const data = JSON.parse(json);
         const map = {};
         (data.stocks || []).forEach(s => { map[s.ticker] = s; });
-        return map;
-      } catch(e) { return {}; }
+        return { map, updated: data.updated || null };
+      } catch(e) { return { map: {}, updated: null }; }
     }
 
     async function fetchSector(s) {
       try {
-        const [sigData, priceMap] = await Promise.all([
+        const [sigData, priceData] = await Promise.all([
           fetch(s.signals).then(r => r.json()),
           fetchPriceMap(s.prices)
         ]);
-        return { id: s.id, picks: sigData.picks || [], priceMap };
-      } catch(e) { return { id: s.id, picks: [], priceMap: {} }; }
+        return { id: s.id, picks: sigData.picks || [], priceMap: priceData.map, updated: priceData.updated };
+      } catch(e) { return { id: s.id, picks: [], priceMap: {}, updated: null }; }
     }
 
     function numCell(val, cls = 'pt-num') {
@@ -682,6 +682,13 @@
       results.forEach(({ id, picks, priceMap }) => renderCardPicks(id, picks, priceMap));
       renderTop20(results);
       initTopSort();
+      // Stamp the last refresh date from the most recent prices-data.js
+      const dates = results.map(r => r.updated).filter(Boolean).sort();
+      const latest = dates[dates.length - 1];
+      if (latest) {
+        const sub = document.querySelector('.top-panel-sub');
+        if (sub) sub.textContent = `Ranked by confidence across all sectors · Last updated ${latest}`;
+      }
     }
 
     init();
