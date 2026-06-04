@@ -2,11 +2,13 @@ name: Update Prices
 
 on:
   schedule:
-    # Twice daily on weekdays (UTC)
-    # 13:00 UTC — pre-US-open snapshot (~09:00 ET / 14:00 BST)
-    # 21:30 UTC — 30 min after US close (~17:30 ET / 22:30 BST)
-    - cron: '0 13 * * 1-5'
-    - cron: '30 21 * * 1-5'
+    # Three times daily on weekdays (UTC)
+    # 08:00 UTC — 1h after UK open (08:00 BST → 09:00 BST)
+    # 14:30 UTC — 1h after US open (09:30 EDT → 15:30 BST)
+    # 20:30 UTC — after US close  (16:30 EDT → 21:30 BST)
+    - cron: '0 8 * * 1-5'
+    - cron: '30 14 * * 1-5'
+    - cron: '30 20 * * 1-5'
   workflow_dispatch:
     inputs:
       sector:
