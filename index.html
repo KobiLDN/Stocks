@@ -620,13 +620,17 @@
     function renderTop20(allSectors) {
       const el = document.getElementById('top-picks');
       if (!el) return;
-      // Flatten all picks with sector + price data, sort by confidence desc
-      const all = [];
+      // Flatten all picks, deduplicate by ticker (keep highest confidence), sort, take 20
+      const byTicker = {};
       allSectors.forEach(({ id, picks, priceMap }) => {
         picks.forEach(p => {
-          all.push({ sector: id, pick: p, stock: priceMap[p.ticker] || {} });
+          const existing = byTicker[p.ticker];
+          if (!existing || (p.confidence || 0) > (existing.pick.confidence || 0)) {
+            byTicker[p.ticker] = { sector: id, pick: p, stock: priceMap[p.ticker] || {} };
+          }
         });
       });
+      const all = Object.values(byTicker);
       all.sort((a, b) => (b.pick.confidence || 0) - (a.pick.confidence || 0));
       const top20 = all.slice(0, 20);
       if (!top20.length) { el.innerHTML = '<tr><td colspan="9" class="pt-empty">No signals yet</td></tr>'; return; }
