@@ -345,7 +345,7 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
 /* Data bar — auto-refresh status strip injected below <nav> on every page */
 .data-bar {
   max-width: 1920px;
-  margin: 0 auto 16px;
+  margin: 0 auto 0;
   padding: 10px 24px;
   display: flex;
   align-items: center;

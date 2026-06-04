@@ -81,11 +81,15 @@ function buildDataBar() {
     '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
     '<span class="data-bar-sched">' + sched + '</span>';
 
-  // Inject just BEFORE .container to avoid container padding-top gap
-  // Charts pages use <main> — inject inside that instead (no large padding-top)
+  // Inject just BEFORE .container — steal its padding-top for the gap above the bar,
+  // then reduce container padding-top to a small gap between bar and content.
+  // Charts pages use <main> — inject inside that instead.
   const container = document.querySelector('.container');
   const main      = document.querySelector('main');
   if (container) {
+    const topPad = parseFloat(getComputedStyle(container).paddingTop);
+    bar.style.marginTop = topPad + 'px';
+    container.style.paddingTop = '16px';
     container.insertAdjacentElement('beforebegin', bar);
   } else if (main) {
     main.insertAdjacentElement('afterbegin', bar);
