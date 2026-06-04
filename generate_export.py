@@ -5,7 +5,7 @@ Also called by .github/workflows/generate-export.yml after each evening price up
 If T212_API_KEY env var is set, portfolio positions are fetched and merged in.
 """
 import json, re, csv, os
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "Tech"]
@@ -162,9 +162,12 @@ csv_fields = PRICE_FIELDS + whatsit_fields + [
 
 os.makedirs(os.path.join(BASE, "exports"), exist_ok=True)
 
-now      = datetime.now(tz=timezone.utc)
-date_str = now.strftime("%Y-%m-%d")
-gen_str  = now.strftime("%Y-%m-%d %H:%M UTC")
+now_utc  = datetime.now(tz=timezone.utc)
+uk_off   = timedelta(hours=1) if 3 < now_utc.month < 11 else timedelta(0)
+now_uk   = now_utc + uk_off
+tz_label = "BST" if uk_off else "GMT"
+date_str = now_utc.strftime("%Y-%m-%d")           # file names stay UTC date
+gen_str  = now_uk.strftime(f"%Y-%m-%d %H:%M {tz_label}")
 
 # ── Optional T212 portfolio fetch ─────────────────────────────────────────────
 t212_data, held_tickers = fetch_t212_portfolio()
