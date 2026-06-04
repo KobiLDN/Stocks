@@ -192,7 +192,7 @@
 <div class="header-left">
 <div class="header-label">// Stock Universe</div>
 <h1>Bio<span>tech</span></h1>
-<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3457</span> · <span id="last-updated">Last updated: 2026-05-30 14:41</span> · <span id="version">v1</span></div>
+<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3457</span> · <span id="version">v1</span></div>
 </div>
 <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -393,9 +393,7 @@ function buildTable(stocks) {
   });
   if (window.PRICES_DATA) {
     const fxEl = document.getElementById('fx-rate');
-    const tsEl = document.getElementById('last-updated');
     if (fxEl) fxEl.textContent = '£1 = $' + window.PRICES_DATA.fx_gbp_usd;
-    if (tsEl) tsEl.textContent = 'Last updated: ' + window.PRICES_DATA.updated;
     const tot = document.getElementById('total-count');
     if (tot) tot.textContent = stocks.length;
   }

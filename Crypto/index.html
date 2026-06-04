@@ -327,7 +327,6 @@
     .header-inner { padding-left: 27px; }
     .header-inner::before { left: 12px; }
     h1 { font-size: 26px; }
-    .header-sub { font-size: 12px; }
     .filter-btn { font-size: 10px; padding: 6px 10px; letter-spacing: 0; }
     table { font-size: 12px; }
     thead th { padding: 10px 8px; font-size: 10px; }
@@ -350,7 +349,7 @@
 <div class="header-left">
 <div class="header-label">// Stock Universe</div>
 <h1>Crypto <span>Markets</span></h1>
-<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.27</span> · <span id="last-updated">Last updated: —</span> · <span id="version">v1.0</span></div>
+<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.27</span> · <span id="version">v1.0</span></div>
 </div>
 <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -533,9 +532,7 @@ function buildTable(stocks) {
   });
   if (window.PRICES_DATA) {
     const fxEl = document.getElementById('fx-rate');
-    const tsEl = document.getElementById('last-updated');
     if (fxEl) fxEl.textContent = '£1 = $' + window.PRICES_DATA.fx_gbp_usd;
-    if (tsEl) tsEl.textContent = 'Last updated: ' + window.PRICES_DATA.updated;
     const tot = document.getElementById('total-count');
     if (tot) tot.textContent = stocks.length;
   }
