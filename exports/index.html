@@ -247,6 +247,21 @@ function fmt(bytes) {
   return bytes > 1048576 ? (bytes/1048576).toFixed(1)+' MB' : Math.round(bytes/1024)+' KB';
 }
 
+function utcToBST(str) {
+  // Converts "2026-06-03 22:00 UTC" → "2026-06-03 23:00 BST"
+  // Works on both old UTC-labelled strings and already-converted BST/GMT strings
+  if (!str || str.includes('BST') || str.includes('GMT')) return str;
+  const m = str.match(/(\d{4}-\d{2}-\d{2})\s+(\d{2}):(\d{2})/);
+  if (!m) return str;
+  const d = new Date(`${m[1]}T${m[2]}:${m[3]}:00Z`);
+  const month = d.getUTCMonth() + 1; // 1-12
+  const isBST = month > 3 && month < 11;
+  if (isBST) d.setUTCHours(d.getUTCHours() + 1);
+  const hh = String(d.getUTCHours()).padStart(2, '0');
+  const mm = String(d.getUTCMinutes()).padStart(2, '0');
+  return `${m[1]} ${hh}:${mm} ${isBST ? 'BST' : 'GMT'}`;
+}
+
 function fmtDate(dateStr) {
   const d = new Date(dateStr + 'T00:00:00Z');
   return d.toLocaleDateString('en-GB', { weekday:'short', day:'numeric', month:'short', year:'numeric', timeZone:'UTC' });
@@ -286,7 +301,7 @@ async function loadSnapshot(date) {
 
     const data = JSON.parse(jsonText);
 
-    document.getElementById('m-generated').textContent = data.generated || date;
+    document.getElementById('m-generated').textContent = utcToBST(data.generated || date);
     document.getElementById('m-total').textContent     = data.total + ' stocks';
     document.getElementById('m-json-size').textContent = fmt(jsonText.length);
     document.getElementById('m-csv-size').textContent  = fmt(csvText.length);
