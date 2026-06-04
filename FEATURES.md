@@ -14,6 +14,8 @@
 
 ## Done
 
+- **Heatmap gainers/losers split + flat colours** — all 6 heatmap pages: "All Stocks" and every By Sector/Category block groups green (gainers) tiles on the left and red (losers) tiles on the right, sized proportionally by count; solid `var(--green)` / `var(--red)` colours, no gradient shading; `header-note` banner aligned to match the blue accent bar and nav content (`shared.css`, all 6 `heatmap.html` files)
+
 - **Price updates 3× daily** — `update-prices.yml` runs at 09:00 BST (1h after UK open), 15:30 BST (1h after US open), 21:30 BST (after US close); weekdays only; $0 cost (yfinance + public repo Actions free tier)
 
 - **Hub Top 20 Signals panel + 1920px layout** — full-width panel above sector cards shows top 20 unique picks across all 6 sectors ranked by confidence (deduplicated by ticker); all 9 columns sortable; last-updated date in page header; sector grid 3-col (3+3); header/main/footer 1920px; responsive 2-col ≤ 1100px; BST timestamps on exports page (`index.html`, `exports/index.html`, `generate_export.py`)
