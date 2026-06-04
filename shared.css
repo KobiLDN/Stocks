@@ -344,10 +344,6 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
 
 /* Data bar — auto-refresh status strip injected below <nav> on every page */
 .data-bar {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-}
-.data-bar-inner {
   max-width: 1920px;
   margin: 0 auto;
   padding: 7px 24px;
@@ -360,6 +356,8 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
   font-size: 11px;
   color: var(--muted);
   letter-spacing: 0.3px;
+  border: 1px solid var(--border);
+  background: var(--surface);
 }
 .data-bar .data-bar-ts    { color: var(--accent); font-weight: 600; }
 .data-bar .data-bar-sched { opacity: 0.75; }
