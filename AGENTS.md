@@ -143,7 +143,7 @@ When adding a new sector, complete every item in this checklist — in order:
 | `exports/manifest.json` | List of all available snapshots (newest first); loaded by the export page to build the date dropdown |
 | `exports/index.html` | Export page — loads manifest, date selector, Copy JSON/CSV buttons |
 | `exports/YYYY-MM-DD-portfolio.json` | **LOCAL ONLY** — market data + T212 positions merged; gitignored, never committed |
-| `.github/workflows/generate-export.yml` | Runs `generate_export.py` at 22:00 UTC weekdays (30 min after evening price update) |
+| `.github/workflows/generate-export.yml` | Runs `generate_export.py` at 22:00 UTC (23:00 BST) weekdays — 30 min after evening price update |
 
 **Adding new fields to the export:** edit the `PRICE_FIELDS` list and/or `csv_fields` list in `generate_export.py`. The manifest entry only needs `date`, `generated`, `total`, `json`, `csv`.
 
@@ -197,7 +197,7 @@ TICKER_ALIASES = {
 }
 ```
 
-**Workflow:** run `run.bat` after 22:00 UTC (export is fresh) → snapshot merges your live T212 positions with all 176 stocks data + signal picks → open `snapshot.html` in browser, or paste `snapshot.json`/`snapshot.txt` to any AI for analysis.
+**Workflow:** run `run.bat` after 21:30 BST / 20:30 UTC (evening price update is fresh, export runs at 22:00 UTC / 23:00 BST) → snapshot merges your live T212 positions with all 176 stocks data + signal picks → open `snapshot.html` in browser, or paste `snapshot.json`/`snapshot.txt` to any AI for analysis.
 
 ## GitHub Actions
 
