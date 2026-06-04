@@ -51,7 +51,7 @@ function buildDataBar() {
   if (window.SIGNALS_DATA && window.SIGNALS_DATA.generated) {
     ts    = window.SIGNALS_DATA.generated;
     label = 'Signals generated';
-    sched = 'Auto-refreshed Mon / Wed / Fri · GitHub Actions';
+    sched = 'Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions';
   }
   // All other pages — read from PRICES_DATA (prices-data.js)
   else if (window.PRICES_DATA && window.PRICES_DATA.updated) {
