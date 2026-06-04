@@ -42,8 +42,9 @@ function buildTape(stocks) {
 
 // ── Data bar (injected after <nav> on every page) ─────────────────────────────
 function buildDataBar() {
+  if (document.querySelector('.data-bar')) return;
   const nav = document.querySelector('nav');
-  if (!nav || document.querySelector('.data-bar')) return;
+  if (!nav) return;
 
   let ts = null, label = 'Last updated', sched = '';
 
@@ -78,7 +79,14 @@ function buildDataBar() {
   bar.innerHTML =
     '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
     '<span class="data-bar-sched">' + sched + '</span>';
-  nav.insertAdjacentElement('afterend', bar);
+
+  // Inject at top of .container so it aligns with page content
+  const container = document.querySelector('.container');
+  if (container) {
+    container.insertAdjacentElement('afterbegin', bar);
+  } else {
+    nav.insertAdjacentElement('afterend', bar);
+  }
 }
 
 // ── Initialise on DOMContentLoaded ───────────────────────────────────────────
