@@ -14,6 +14,8 @@
 
 ## Done
 
+- **Auto-refresh data bar on every page** — `buildDataBar()` in `shared.js` injects a status strip at the top of every page's content area showing last updated timestamp + schedule; prices pages show "Mon–Fri · 09:00, 15:30, 21:30 BST"; signals pages show their own refresh-banner with "Mon / Wed / Fri · 08:00 BST"; header-note disclaimers compacted to single line across all 42 pages; charts pages max-width fixed 1600→1920px; "Last updated" removed from dashboard header-sub (now in data bar only) (`shared.js`, `shared.css`, all sector pages)
+
 - **External cron trigger for price updates** — 3 cron-job.org jobs (08:00, 14:30, 20:30 UTC weekdays) trigger `update-prices.yml` via GitHub API `workflow_dispatch`; bypasses GitHub's unreliable native scheduler (was delaying runs 2–3h); GitHub cron entries kept as fallback
 
 - **Hub index.html works on `file://`** — all 6 sector `prices-data.js` + `signals-local.js` preloaded as `<script>` tags at the top of `index.html`; snapshotted to `window.__pd_*` / `window.__sd_*`; JS checks preloaded globals first so the page fully populates when opened as a local file without a web server (`index.html`)
