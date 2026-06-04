@@ -342,6 +342,24 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
   padding: 40px 24px;
 }
 
+/* Data bar — auto-refresh status strip injected below <nav> on every page */
+.data-bar {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 7px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  letter-spacing: 0.3px;
+}
+.data-bar .data-bar-ts  { color: var(--accent); font-weight: 600; }
+.data-bar .data-bar-sched { opacity: 0.75; }
+
 /* Header note — disclaimer strip below sector switcher */
 .header-note {
   font-family: 'IBM Plex Mono', monospace;
