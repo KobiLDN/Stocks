@@ -391,7 +391,7 @@
     <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="position:absolute;top:28px;right:40px;">☾</button>
     <div class="header-label">// Market Intelligence</div>
     <h1>Stocks <span>Hub</span></h1>
-    <div class="header-sub">v1 &nbsp;·&nbsp; Select a sector</div>
+    <div class="header-sub">v1 &nbsp;·&nbsp; Select a sector<span id="last-updated-label"></span></div>
   </header>
 
   <main>
@@ -686,12 +686,12 @@
       results.forEach(({ id, picks, priceMap }) => renderCardPicks(id, picks, priceMap));
       renderTop20(results);
       initTopSort();
-      // Stamp the last refresh date from the most recent prices-data.js
+      // Stamp the last refresh date in the page header
       const dates = results.map(r => r.updated).filter(Boolean).sort();
       const latest = dates[dates.length - 1];
       if (latest) {
-        const sub = document.querySelector('.top-panel-sub');
-        if (sub) sub.textContent = `Ranked by confidence across all sectors · Last updated ${latest}`;
+        const el = document.getElementById('last-updated-label');
+        if (el) el.innerHTML = ` &nbsp;·&nbsp; Last updated ${latest}`;
       }
     }
 
