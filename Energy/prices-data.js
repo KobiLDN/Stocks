@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-04 22:02",
-  "fx_gbp_usd": 1.3425,
+  "updated": "2026-06-04 23:01",
+  "fx_gbp_usd": 1.3427,
   "stocks": [
     {
       "ticker": "XOM",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "131",
       "bar_pct": 67,
-      "market_cap_gbp_b": 469.415,
+      "market_cap_gbp_b": 469.346,
       "beta": 0.183,
       "pe_ratio": 25.64,
       "avg_volume_m": 20.49,
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "102",
       "high_gbp": "160",
       "bar_pct": 66,
-      "market_cap_gbp_b": 279.414,
+      "market_cap_gbp_b": 279.372,
       "beta": 0.501,
       "pe_ratio": 32.76,
       "avg_volume_m": 12.05,
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "71",
       "bar_pct": 70,
-      "market_cap_gbp_b": 179.445,
+      "market_cap_gbp_b": 179.419,
       "beta": -0.24,
       "pe_ratio": 13.51,
       "avg_volume_m": 8.07,
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 78,
-      "market_cap_gbp_b": 84.473,
+      "market_cap_gbp_b": 84.46,
       "beta": -0.219,
       "pe_ratio": 35.52,
       "avg_volume_m": 13.91,
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "70",
       "bar_pct": 89,
-      "market_cap_gbp_b": 149.186,
+      "market_cap_gbp_b": 149.164,
       "beta": 0.059,
       "pe_ratio": 13.38,
       "avg_volume_m": 1.94,
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "32",
       "bar_pct": 73,
-      "market_cap_gbp_b": 69.861,
+      "market_cap_gbp_b": 69.851,
       "beta": -0.723,
       "pe_ratio": 17.04,
       "avg_volume_m": 6.82,
@@ -407,7 +407,7 @@ window.PRICES_DATA = {
       "low_gbp": "63",
       "high_gbp": "101",
       "bar_pct": 67,
-      "market_cap_gbp_b": 108.198,
+      "market_cap_gbp_b": 108.182,
       "beta": 0.149,
       "pe_ratio": 20.21,
       "avg_volume_m": 9.11,
@@ -472,7 +472,7 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "50",
       "bar_pct": 69,
-      "market_cap_gbp_b": 43.467,
+      "market_cap_gbp_b": 43.461,
       "beta": 0.172,
       "pe_ratio": 79.28,
       "avg_volume_m": 16.1,
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "113",
       "bar_pct": 78,
-      "market_cap_gbp_b": 55.893,
+      "market_cap_gbp_b": 55.884,
       "beta": 0.279,
       "pe_ratio": 13.85,
       "avg_volume_m": 4.39,
@@ -602,7 +602,7 @@ window.PRICES_DATA = {
       "low_gbp": "116",
       "high_gbp": "203",
       "bar_pct": 95,
-      "market_cap_gbp_b": 58.071,
+      "market_cap_gbp_b": 58.063,
       "beta": 0.53,
       "pe_ratio": 17.59,
       "avg_volume_m": 2.55,
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "94",
       "high_gbp": "198",
       "bar_pct": 95,
-      "market_cap_gbp_b": 57.251,
+      "market_cap_gbp_b": 57.243,
       "beta": 0.571,
       "pe_ratio": 18.89,
       "avg_volume_m": 3.65,
@@ -685,6 +685,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/subsea7-secures-string-music-development-155600929.html",
           "published": 1780588560,
           "sentiment": 0.318
+        },
+        {
+          "title": "Phillips 66 Stock: Is PSX Outperforming the Energy Sector?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2307387/phillips-66-stock-is-psx-outperforming-the-energy-sector",
+          "published": 1780586151,
+          "sentiment": 0.273
         },
         {
           "title": "Possible Bearish Signals With Valero Energy Insiders Disposing Stock",
@@ -706,16 +713,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/heres-much-youd-invested-1000-123002501.html",
           "published": 1780576202,
           "sentiment": 0.273
-        },
-        {
-          "title": "Best Growth Stocks to Buy for June 4th",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-093400795.html",
-          "published": 1780565640,
-          "sentiment": 0.778
         }
       ],
-      "news_sentiment": 0.383
+      "news_sentiment": 0.282
     },
     {
       "ticker": "SLB",
@@ -732,7 +732,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 97,
-      "market_cap_gbp_b": 64.601,
+      "market_cap_gbp_b": 64.592,
       "beta": 0.731,
       "pe_ratio": 25.56,
       "avg_volume_m": 16.27,
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "15",
       "high_gbp": "32",
       "bar_pct": 90,
-      "market_cap_gbp_b": 25.65,
+      "market_cap_gbp_b": 25.646,
       "beta": 0.742,
       "pe_ratio": 22.77,
       "avg_volume_m": 14.57,
@@ -862,7 +862,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "52",
       "bar_pct": 87,
-      "market_cap_gbp_b": 48.853,
+      "market_cap_gbp_b": 48.846,
       "beta": 0.97,
       "pe_ratio": 21.12,
       "avg_volume_m": 9.11,
@@ -873,44 +873,8 @@ window.PRICES_DATA = {
       "vol_1d": 5921197,
       "vol_1w": 37801197,
       "vol_1m": 172545297,
-      "news": [
-        {
-          "title": "This Baker Hughes Insider Reduced Their Stake By 100%",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/baker-hughes-insider-reduced-stake-120008925.html",
-          "published": 1780574408,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Oil Services Are Setting Up to Do It Again, But There\u2019s a Catch the Strait of Hormuz Trade Can\u2019t Ignore",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/04/oil-services-are-setting-up-to-do-it-again-but-theres-a-catch-the-strait-of-hormuz-trade-cant-ignore/",
-          "published": 1780571702,
-          "sentiment": -0.502
-        },
-        {
-          "title": "North America Adds 28 Rigs Week on Week",
-          "publisher": "Rigzone.com",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/north-america-adds-28-rigs-173644261.html",
-          "published": 1780421804,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Baker Hughes Secures Long-Term Contract Extensions With Equinor",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/baker-hughes-secures-long-term-130500193.html",
-          "published": 1780319100,
-          "sentiment": 0.318
-        },
-        {
-          "title": "New Strong Sell Stocks for June 1st",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-june-1st-085700599.html",
-          "published": 1780304220,
-          "sentiment": 0.511
-        }
-      ],
-      "news_sentiment": 0.065
+      "news": [],
+      "news_sentiment": null
     },
     {
       "ticker": "NEE",
@@ -927,7 +891,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "74",
       "bar_pct": 59,
-      "market_cap_gbp_b": 133.104,
+      "market_cap_gbp_b": 133.085,
       "beta": 0.721,
       "pe_ratio": 21.75,
       "avg_volume_m": 10.38,
@@ -1057,7 +1021,7 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 89,
-      "market_cap_gbp_b": 6.714,
+      "market_cap_gbp_b": 6.713,
       "beta": 1.254,
       "pe_ratio": 67.71,
       "avg_volume_m": 7.34,
@@ -1069,6 +1033,13 @@ window.PRICES_DATA = {
       "vol_1w": 35440513,
       "vol_1m": 207784013,
       "news": [
+        {
+          "title": "This Boring Electrical Device Is the Next Hot Data Center Play. Some Stocks Have Doubled.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/solaredge-enphase-energy-ai-date-center-5faf3453?siteid=yhoof2&yptr=yahoo",
+          "published": 1780604040,
+          "sentiment": 0.026
+        },
         {
           "title": "Enphase Energy (ENPH) Registers a Bigger Fall Than the Market: Important Facts to Note",
           "publisher": "Zacks",
@@ -1096,16 +1067,9 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/news/first-solar-nextpower-enphase-solar-power-energy-demand-renewables/?src=A00220&yptr=yahoo",
           "published": 1779988943,
           "sentiment": 0.153
-        },
-        {
-          "title": "Enphase Energy (ENPH) Up 125.3% Since Last Earnings Report: Can It Continue?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-enph-125-3-153007859.html",
-          "published": 1779982207,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.228
+      "news_sentiment": 0.178
     },
     {
       "ticker": "FSLR",
@@ -1122,7 +1086,7 @@ window.PRICES_DATA = {
       "low_gbp": "101",
       "high_gbp": "239",
       "bar_pct": 97,
-      "market_cap_gbp_b": 25.208,
+      "market_cap_gbp_b": 25.204,
       "beta": 1.564,
       "pe_ratio": 20.36,
       "avg_volume_m": 2.34,
@@ -1187,7 +1151,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "34",
       "bar_pct": 60,
-      "market_cap_gbp_b": 5.275,
+      "market_cap_gbp_b": 5.274,
       "beta": 1.128,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1252,7 +1216,7 @@ window.PRICES_DATA = {
       "low_gbp": "4.28",
       "high_gbp": "25",
       "bar_pct": 9,
-      "market_cap_gbp_b": 24.591,
+      "market_cap_gbp_b": 24.587,
       "beta": 0.644,
       "pe_ratio": null,
       "avg_volume_m": 0.15,

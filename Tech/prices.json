@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04 22:01",
+  "updated": "2026-06-04 23:01",
   "fx_gbp_usd": 1.3427,
   "stocks": [
     {
@@ -44,6 +44,13 @@
           "sentiment": 0.0
         },
         {
+          "title": "NVIDIA Could Seal a Major Alliance With Apple After Launching Nemotron 3 Ultra AI model",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/nvidia-apple-ai-alliance-nemotron-siri/",
+          "published": 1780606800,
+          "sentiment": 0.0
+        },
+        {
           "title": "TSMC Forecasts Sustained AI Chip Demand",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/news/technology/tsm-stock-chipmaker-tsmc-forecasts-sustained-demand/?src=A00220&yptr=yahoo",
@@ -51,21 +58,14 @@
           "sentiment": -0.128
         },
         {
-          "title": "Huge News For Apple and Nvidia Stock Investors",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/huge-news-apple-nvidia-stock-192254243.html",
-          "published": 1780600974,
-          "sentiment": 0.318
-        },
-        {
-          "title": "Apple Stock And The Intelligence Test",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/601409/apple-stock-and-the-intelligence-test/2026-06-04",
-          "published": 1780597523,
-          "sentiment": 0.477
+          "title": "Intel Stock Drops After It Scores AI Partnership With Apple Supplier Foxconn",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/intel-stock-apple-foxconn-ai-996af601?siteid=yhoof2&yptr=yahoo",
+          "published": 1780604520,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.133
+      "news_sentiment": -0.026
     },
     {
       "ticker": "MSFT",
@@ -181,18 +181,18 @@
           "sentiment": 0.0
         },
         {
+          "title": "Stock Market Today, June 4: Dow Hits Record as Tech Stocks Falter",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/",
+          "published": 1780608516,
+          "sentiment": 0.0
+        },
+        {
           "title": "Dow Jones Hits High, AI Stocks Shrug Off Broadcom, Ciena Sell-Offs; Jobs Report Looms",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-stocks-broadcom-ciena-jobs-report/?src=A00220&yptr=yahoo",
-          "published": 1780605919,
+          "published": 1780608463,
           "sentiment": -0.153
-        },
-        {
-          "title": "Palantir Stock Dips Amid Google Cloud Deal, AIPCon 10 Announcements",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/technology/palantir-stock-rises-amid-google-cloud-deal-aipcon-10-announcements/?src=A00220&yptr=yahoo",
-          "published": 1780605350,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.107
@@ -292,8 +292,22 @@
         {
           "title": "Why Meta is delaying its latest AI model release",
           "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/why-meta-is-delaying-its-latest-ai-model-release-201621039.html",
+          "url": "https://finance.yahoo.com/video/why-meta-delaying-latest-ai-201621155.html",
           "published": 1780604181,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Vistra Reshapes Growth With Cogentrix Deal And AI Data Center Power",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/vistra-reshapes-growth-cogentrix-deal-211930921.html",
+          "published": 1780607970,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Ciena Corporation Q2 2026 Earnings Call Summary",
+          "publisher": "Moby",
+          "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-ciena-corporation-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss",
+          "published": 1780606276,
           "sentiment": 0.0
         },
         {
@@ -309,23 +323,9 @@
           "url": "https://finance.yahoo.com/sectors/technology/articles/sector-tech-stocks-fall-afternoon-195023232.html",
           "published": 1780602623,
           "sentiment": 0.0
-        },
-        {
-          "title": "AI Power Boom Revives Natural Gas as Infrastructure Bet",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/ai-power-boom-revives-natural-190819348.html",
-          "published": 1780600099,
-          "sentiment": 0.625
-        },
-        {
-          "title": "AMD Is Up 55% in a Month and Trouncing Intel. Should Intel Stockholders Switch to AMD Now?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/04/amd-is-up-55-in-a-month-and-trouncing-intel-should-intel-stockholders-switch-to-amd-now/",
-          "published": 1780599410,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.08
+      "news_sentiment": 0.031
     },
     {
       "ticker": "NVDA",
@@ -376,21 +376,21 @@
           "sentiment": 0.0
         },
         {
-          "title": "Wall Street Is Wrong About This Quantum Computing Stock for 2026 -- Here's the Proof",
+          "title": "3 Magnificent Artificial Intelligence (AI) Stocks to Buy and Hold for the Next Decade",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/04/wall-street-wrong-quantum-computing-stock-infq/",
-          "published": 1780606380,
-          "sentiment": -0.477
+          "url": "https://www.fool.com/investing/2026/06/04/3-magnificent-artificial-intelligence-ai-stocks-to/",
+          "published": 1780609020,
+          "sentiment": 0.791
         },
         {
-          "title": "Why Netskope Stock Crashed Today",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/04/why-netskope-stock-crashed-today/",
-          "published": 1780605996,
+          "title": "This Chip Stock Made a Comeback After Broadcom Earnings",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-04-2026/card/chip-stocks-slide-after-broadcom-earnings-yIHjFm9DoKsa1MqIeBHS?siteid=yhoof2&yptr=yahoo",
+          "published": 1780608592,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.095
+      "news_sentiment": 0.158
     },
     {
       "ticker": "AMD",
@@ -434,6 +434,13 @@
           "sentiment": -0.226
         },
         {
+          "title": "US Equity Indexes Mixed as Sliding Technology Pulls Nasdaq Composite Lower, Crude Oil Sinks",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-sliding-205433109.html",
+          "published": 1780606473,
+          "sentiment": -0.71
+        },
+        {
           "title": "TSMC Forecasts Sustained AI Chip Demand",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/news/technology/tsm-stock-chipmaker-tsmc-forecasts-sustained-demand/?src=A00220&yptr=yahoo",
@@ -441,21 +448,14 @@
           "sentiment": -0.128
         },
         {
-          "title": "Stocks to Watch: Broadcom, Universal Music,  Quantinuum",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-04-2026/card/stocks-to-watch-broadcom-universal-music-quantinuum-UKeBXRmgidWt9Va3pJyW?siteid=yhoof2&yptr=yahoo",
-          "published": 1780602935,
-          "sentiment": 0.0
-        },
-        {
-          "title": "US Equity Indexes Rise Amid Broad-Based Rally in Final Leg of Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rise-amid-195019544.html",
-          "published": 1780602619,
+          "title": "Markets Rally, But Tech Stocks Get Left Behind as the AI Trade Falters",
+          "publisher": "Investopedia",
+          "url": "https://www.investopedia.com/markets-are-rallying-but-tech-stocks-get-left-behind-as-the-ai-trade-falters-11990912",
+          "published": 1780603570,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.05
+      "news_sentiment": -0.192
     },
     {
       "ticker": "INTC",
@@ -492,35 +492,35 @@
           "sentiment": 0.103
         },
         {
+          "title": "Broadcom Could Be The Biggest AI Winner Nobody Is Talking About",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/04/why-broadcom-could-be-the-biggest-ai-winner-nobody/",
+          "published": 1780607700,
+          "sentiment": 0.586
+        },
+        {
+          "title": "Tesla\u2019s Robo-Taxis Are Finally Driving Themselves\u2014but Not the Stock",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/tesla-stock-price-robo-taxi-77832f00?siteid=yhoof2&yptr=yahoo",
+          "published": 1780605060,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Intel Stock Drops After It Scores AI Partnership With Apple Supplier Foxconn",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/intel-stock-apple-foxconn-ai-996af601?siteid=yhoof2&yptr=yahoo",
+          "published": 1780604520,
+          "sentiment": 0.0
+        },
+        {
           "title": "Why Five Below Stock Fell Today",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/06/04/why-five-below-stock-fell-today/",
           "published": 1780603920,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks to Watch: Broadcom, Universal Music,  Quantinuum",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-04-2026/card/stocks-to-watch-broadcom-universal-music-quantinuum-UKeBXRmgidWt9Va3pJyW?siteid=yhoof2&yptr=yahoo",
-          "published": 1780602935,
-          "sentiment": 0.0
-        },
-        {
-          "title": "The Smartest $500 You Can Put to Work in AI Right Now Isn't Going Into Nvidia",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/04/the-smartest-500-you-can-put-to-work-in-ai-right-n/",
-          "published": 1780600800,
-          "sentiment": 0.612
-        },
-        {
-          "title": "AMD Is Up 55% in a Month and Trouncing Intel. Should Intel Stockholders Switch to AMD Now?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/04/amd-is-up-55-in-a-month-and-trouncing-intel-should-intel-stockholders-switch-to-amd-now/",
-          "published": 1780599410,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.143
+      "news_sentiment": 0.138
     },
     {
       "ticker": "TSM",
@@ -636,21 +636,21 @@
           "sentiment": 0.25
         },
         {
-          "title": "Broadcom miss sparks fears around AI margin pressure, investor says",
-          "publisher": "Reuters Videos",
-          "url": "https://finance.yahoo.com/video/broadcom-miss-sparks-fears-around-205607748.html",
-          "published": 1780606567,
-          "sentiment": -0.681
+          "title": "Oil drops, stocks mostly higher despite AI concerns",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-drop-ai-rate-hike-030621040.html",
+          "published": 1780609016,
+          "sentiment": 0.0
         },
         {
-          "title": "Stock Market Today: Dow Jumps 875 Points; Ciena Slammed Yet Holds Key Mark; These 2 Areas Shine (Live Coverage)",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-broadcom-avgo-crowdstrike-crwd/?src=A00220&yptr=yahoo",
-          "published": 1780606015,
+          "title": "This Chip Stock Made a Comeback After Broadcom Earnings",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-04-2026/card/chip-stocks-slide-after-broadcom-earnings-yIHjFm9DoKsa1MqIeBHS?siteid=yhoof2&yptr=yahoo",
+          "published": 1780608592,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.086
+      "news_sentiment": 0.05
     },
     {
       "ticker": "QCOM",
@@ -752,6 +752,20 @@
           "sentiment": 0.103
         },
         {
+          "title": "Dow Hits Record High And S&P 500 Gains As Oil Slides, While Chip Weakness Weighs On Nasdaq \u2014 AVGO, UNH, META, PINS, RUM In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/dow-hits-record-high-and-s-and-p-500-gains-as-oil-slides-while-chip-weakness-weighs-on-nasdaq-avgo-unh-meta-pins-rum-in-focus/cZ0ZpheRezJ",
+          "published": 1780608123,
+          "sentiment": -0.103
+        },
+        {
+          "title": "US Equity Indexes Mixed as Sliding Technology Pulls Nasdaq Composite Lower, Crude Oil Sinks",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-sliding-205433109.html",
+          "published": 1780606473,
+          "sentiment": -0.71
+        },
+        {
           "title": "US Equity Indexes Rise Amid Broad-Based Rally in Final Leg of Trading",
           "publisher": "MT Newswires",
           "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rise-amid-195019544.html",
@@ -764,23 +778,9 @@
           "url": "https://www.fool.com/investing/2026/06/04/arm-holdings-surged-15-on-nvidias-new-chip-announc/",
           "published": 1780597800,
           "sentiment": 0.0
-        },
-        {
-          "title": "SoftBank Shares Plunge 10% Amid Global AI Sector Selloff",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/softbank-shares-plunge-10-amid-165103018.html",
-          "published": 1780591863,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Broadcom's Stock Sinks Despite Solid Earnings. Other Chip Stocks Are Sliding Too.",
-          "publisher": "Investopedia",
-          "url": "https://www.investopedia.com/broadcom-stock-sinks-despite-solid-earnings-leading-chip-stocks-lower-avgo-11990737",
-          "published": 1780585058,
-          "sentiment": -0.114
         }
       ],
-      "news_sentiment": 0.057
+      "news_sentiment": -0.142
     },
     {
       "ticker": "ASML",
@@ -810,13 +810,6 @@
       "vol_1m": 36394401,
       "news": [
         {
-          "title": "Weakness in Technology Stocks Pressures Stock Indexes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2306224/weakness-in-technology-stocks-pressures-stock-indexes",
-          "published": 1780582239,
-          "sentiment": -0.625
-        },
-        {
           "title": "Assessing ASML Holding (ENXTAM:ASML) Valuation After Strong Short Term Share Price Momentum",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/assessing-asml-holding-enxtam-asml-100940967.html",
@@ -843,9 +836,16 @@
           "url": "https://www.wsj.com/tech/tsmc-not-at-risk-of-losing-competitive-edge-ceo-says-b1faf8f3?siteid=yhoof2&yptr=yahoo",
           "published": 1780546440,
           "sentiment": -0.022
+        },
+        {
+          "title": "ASML Becomes Biggest Company in European History",
+          "publisher": "The Daily Upside",
+          "url": "https://www.thedailyupside.com/technology/semiconductors/asml-becomes-biggest-company-in-european-history/",
+          "published": 1780545660,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.082
+      "news_sentiment": 0.207
     },
     {
       "ticker": "MU",
@@ -889,28 +889,28 @@
           "sentiment": -0.226
         },
         {
-          "title": "SanDisk Just Tried To Break The Memory Cycle",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/601395/sandisk-just-tried-to-break-the-memory-cycle/2026-06-04",
-          "published": 1780603082,
+          "title": "Stock Market Today, June 4: Dow Hits Record as Tech Stocks Falter",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/",
+          "published": 1780608516,
           "sentiment": 0.0
         },
         {
-          "title": "US Equity Indexes Rise Amid Broad-Based Rally in Final Leg of Trading",
+          "title": "Dow Hits Record High And S&P 500 Gains As Oil Slides, While Chip Weakness Weighs On Nasdaq \u2014 AVGO, UNH, META, PINS, RUM In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/dow-hits-record-high-and-s-and-p-500-gains-as-oil-slides-while-chip-weakness-weighs-on-nasdaq-avgo-unh-meta-pins-rum-in-focus/cZ0ZpheRezJ",
+          "published": 1780608123,
+          "sentiment": -0.103
+        },
+        {
+          "title": "US Equity Indexes Mixed as Sliding Technology Pulls Nasdaq Composite Lower, Crude Oil Sinks",
           "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rise-amid-195019544.html",
-          "published": 1780602619,
-          "sentiment": 0.0
-        },
-        {
-          "title": "What's Going On With Micron Stock Today",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/whats-going-micron-stock-today-192040673.html",
-          "published": 1780600840,
-          "sentiment": 0.0
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-sliding-205433109.html",
+          "published": 1780606473,
+          "sentiment": -0.71
         }
       ],
-      "news_sentiment": -0.025
+      "news_sentiment": -0.187
     },
     {
       "ticker": "AMAT",
@@ -954,13 +954,6 @@
           "sentiment": 0.0
         },
         {
-          "title": "Weakness in Technology Stocks Pressures Stock Indexes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2306224/weakness-in-technology-stocks-pressures-stock-indexes",
-          "published": 1780582239,
-          "sentiment": -0.625
-        },
-        {
           "title": "How The Applied Materials (AMAT) Narrative Is Evolving Without New Analyst Price Target Changes",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/applied-materials-amat-narrative-evolving-121207608.html",
@@ -973,9 +966,16 @@
           "url": "https://www.barchart.com/story/news/2290872/stocks-retreat-as-us-iran-peace-hopes-in-doubt",
           "published": 1780518946,
           "sentiment": 0.681
+        },
+        {
+          "title": "AXTI's Capacity Expansion: Will It Cement AI Supply-Chain Leadership?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/axtis-capacity-expansion-cement-ai-152000604.html",
+          "published": 1780500000,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.011
+      "news_sentiment": 0.136
     },
     {
       "ticker": "ORCL",
@@ -1402,17 +1402,17 @@
           "sentiment": -0.226
         },
         {
-          "title": "Stock Market Today: Dow Jumps 875 Points; Ciena Slammed Yet Holds Key Mark; These 2 Areas Shine (Live Coverage)",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-broadcom-avgo-crowdstrike-crwd/?src=A00220&yptr=yahoo",
-          "published": 1780606015,
+          "title": "Stock Market Today, June 4: Dow Hits Record as Tech Stocks Falter",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/",
+          "published": 1780608516,
           "sentiment": 0.0
         },
         {
           "title": "Dow Jones Hits High, AI Stocks Shrug Off Broadcom, Ciena Sell-Offs; Jobs Report Looms",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-stocks-broadcom-ciena-jobs-report/?src=A00220&yptr=yahoo",
-          "published": 1780605919,
+          "published": 1780608463,
           "sentiment": -0.153
         },
         {
@@ -1488,14 +1488,14 @@
           "sentiment": 0.0
         },
         {
-          "title": "Weakness in Technology Stocks Pressures Stock Indexes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2306224/weakness-in-technology-stocks-pressures-stock-indexes",
-          "published": 1780582239,
-          "sentiment": -0.625
+          "title": "Is CrowdStrike Stock A Great Business At A Dangerous Price?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/601369/is-crowdstrike-stock-a-great-business-at-a-dangerous-price/2026-06-04",
+          "published": 1780578583,
+          "sentiment": 0.25
         }
       ],
-      "news_sentiment": 0.025
+      "news_sentiment": 0.2
     },
     {
       "ticker": "NET",
@@ -1532,13 +1532,6 @@
           "sentiment": 0.649
         },
         {
-          "title": "Weakness in Technology Stocks Pressures Stock Indexes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2306224/weakness-in-technology-stocks-pressures-stock-indexes",
-          "published": 1780582239,
-          "sentiment": -0.625
-        },
-        {
           "title": "How The Cloudflare (NET) Investment Story Is Evolving As Analyst Targets Stay Unchanged",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/cloudflare-net-investment-story-evolving-131509801.html",
@@ -1558,9 +1551,16 @@
           "url": "https://www.barchart.com/story/news/2290872/stocks-retreat-as-us-iran-peace-hopes-in-doubt",
           "published": 1780518946,
           "sentiment": 0.681
+        },
+        {
+          "title": "Palantir, Axon, Crowdstrike, and Cloudflare: New age defense stocks",
+          "publisher": "Stocktwits",
+          "url": "https://finance.yahoo.com/video/palantir-axon-crowdstrike-cloudflare-age-164450500.html",
+          "published": 1780505090,
+          "sentiment": 0.128
         }
       ],
-      "news_sentiment": 0.141
+      "news_sentiment": 0.292
     },
     {
       "ticker": "FTNT",
@@ -1850,6 +1850,13 @@
       "vol_1m": 462618444,
       "news": [
         {
+          "title": "Now You Can Get a Subway Sandwich With Your Walmart Delivery",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/retail/now-you-can-get-a-subway-sandwich-with-your-walmart-delivery-5a003b24?siteid=yhoof2&yptr=yahoo",
+          "published": 1780606800,
+          "sentiment": 0.0
+        },
+        {
           "title": "GM Stock Climbs As Former Cruise Team Reportedly Returns To Build Hands-Free Consumer Vehicles",
           "publisher": "Stocktwits",
           "url": "https://stocktwits.com/news-articles/markets/equity/gm-stock-climbs-as-former-cruise-team-reportedly-returns-to-build-hands-free-consumer-vehicles/cZ0ZZ0PRez5",
@@ -1876,16 +1883,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/uber-stock-price-decreases-12-155800065.html",
           "published": 1780588680,
           "sentiment": 0.0
-        },
-        {
-          "title": "Ramp raises $750M at $44B valuation as investors hunger for fintechs with an AI story",
-          "publisher": "TechCrunch",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ramp-raises-750m-44b-valuation-150834012.html",
-          "published": 1780585714,
-          "sentiment": -0.25
         }
       ],
-      "news_sentiment": -0.118
+      "news_sentiment": -0.068
     },
     {
       "ticker": "CSCO",
