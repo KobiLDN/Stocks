@@ -126,6 +126,11 @@ jobs:
             git add Crypto/signals-local.json Crypto/signals-local.js
             git add Energy/signals-local.json Energy/signals-local.js
             git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
-            git pull --rebase
-            git push
+            for i in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main
+              git push origin HEAD:main && break
+              echo "Push attempt $i failed, retrying..."
+              sleep 10
+            done
           fi

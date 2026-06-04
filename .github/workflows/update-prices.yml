@@ -119,6 +119,11 @@ jobs:
             git add Crypto/prices.json Crypto/prices-data.js
             git add Energy/prices.json Energy/prices-data.js
             git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
-            git pull --rebase
-            git push
+            for i in 1 2 3; do
+              git fetch origin main
+              git rebase origin/main
+              git push origin HEAD:main && break
+              echo "Push attempt $i failed, retrying..."
+              sleep 10
+            done
           fi
