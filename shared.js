@@ -76,8 +76,10 @@ function buildDataBar() {
   const bar = document.createElement('div');
   bar.className = 'data-bar';
   bar.innerHTML =
-    '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
-    '<span class="data-bar-sched">' + sched + '</span>';
+    '<div class="data-bar-inner">' +
+      '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
+      '<span class="data-bar-sched">' + sched + '</span>' +
+    '</div>';
   nav.insertAdjacentElement('afterend', bar);
 }
 
