@@ -344,12 +344,12 @@ let activeMetric = localStorage.getItem('heatmap-metric') || '1d';
 let allStocks    = [];
 
 /* ── Draw a single flat treemap into a container div ── */
-function drawTreemap(containerEl, stocks, metricId, height) {
+function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
   containerEl.innerHTML = '';
   if (!stocks.length) return;
 
   const cfg = METRICS_CFG[metricId];
-  const W = containerEl.clientWidth || 1200;
+  const W = explicitWidth || containerEl.clientWidth || 1200;
   const H = height;
 
   const root = d3.hierarchy({ children: stocks.map(s => ({ ...s })) })
@@ -449,13 +449,13 @@ function drawSplit(el, stocks, metricId, H) {
     const gDiv = document.createElement('div');
     gDiv.style.cssText = 'width:' + gW + 'px;flex-shrink:0;';
     wrap.appendChild(gDiv);
-    drawTreemap(gDiv, gainers, metricId, H);
+    drawTreemap(gDiv, gainers, metricId, H, gW);
   }
   if (lW > 0) {
     const lDiv = document.createElement('div');
     lDiv.style.cssText = 'width:' + lW + 'px;flex-shrink:0;';
     wrap.appendChild(lDiv);
-    drawTreemap(lDiv, losers, metricId, H);
+    drawTreemap(lDiv, losers, metricId, H, lW);
   }
 }
 
