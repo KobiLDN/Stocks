@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-03 12:57",
+  "updated": "2026-06-04 19:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +62.30%, 1M +31.74%, analyst buy (score 1.6), news sentiment 0.016, catalyst: early in vivo CAR-T success in B-cell lymphoma.",
+      "drivers": [
+        "YTD +62.3%",
+        "1M +31.7%",
+        "CAR-T catalyst",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "1M +17.20%, PE 40.16, analyst buy (score 1.74), Q1 revenue up 56% to $19.8B, FDA approval of Foundayo for obesity, raised full-year guidance.",
+      "drivers": [
+        "1M +17.2%",
+        "Q1 revenue +56%",
+        "Foundayo FDA approval",
+        "raised guidance"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +20.26%, 1M +18.66%, PE 17.35, analyst buy (score 2.1), news sentiment 0.151.",
+      "drivers": [
+        "YTD +20.3%",
+        "1M +18.7%",
+        "PE 17.35",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +24.81%, 1M +20.31%, PE 30.49, analyst buy (score 2.37), genomics leader.",
+      "drivers": [
+        "YTD +24.8%",
+        "1M +20.3%",
+        "PE 30.49",
+        "genomics leader"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +19.34%, 1M +7.68%, strong_buy (score 1.29), news sentiment 0.264, short interest 39.93%.",
+      "drivers": [
+        "strong_buy rating",
+        "YTD +19.3%",
+        "high short interest",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NTLA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +61.13%, 1M +6.99%, 1W +8.48%, analyst buy (score 2.13), news sentiment 0.317, short interest 46.78%.",
+      "drivers": [
+        "YTD +61.1%",
+        "1W +8.5%",
+        "high short interest",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +43.55%, 1M +27.46%, analyst buy (score 2.33), short interest 27.71%, but cash-burning risk.",
+      "drivers": [
+        "YTD +43.6%",
+        "1M +27.5%",
+        "high short interest",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +64.89%, 1M +7.58%, 1W +6.97%, but hold rating (score 2.96) and no positive news.",
+      "drivers": [
+        "YTD +64.9%",
+        "1M +7.6%",
+        "hold rating",
+        "no catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +6.28%, 1M +6.78%, PE 23.88, dividend yield 2.98%, Q1 revenues up 6% to $8.6B, 16 brands double-digit growth.",
+      "drivers": [
+        "stable large-cap",
+        "PE 23.88",
+        "dividend 2.98%",
+        "Q1 revenue growth"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "RXRX",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "1M +9.80%, 1W +12.35%, news sentiment 0.185, AI pipeline progress, but YTD -7.98% and no analyst rating.",
+      "drivers": [
+        "1W +12.4%",
+        "AI pipeline progress",
+        "positive sentiment",
+        "speculative"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "1D +5.61%",
         "analyst score 1.0",
         "pipeline catalyst"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LEGN",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "LEGN has strong momentum with +49.19% YTD and +21.09% 1M, plus a positive catalyst from a 100% success rate in a cancer trial; analyst consensus is buy with an_score 1.6.",
-      "drivers": [
-        "+49.19% YTD",
-        "+21.09% 1M",
-        "100% trial success",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "ILMN shows robust momentum (+20.60% YTD, +16.26% 1M, +11.56% 1W), strong news sentiment of 0.368, and a reasonable P/E of 29.41; analyst consensus is buy.",
-      "drivers": [
-        "+20.60% YTD",
-        "+16.26% 1M",
-        "news sentiment 0.368",
-        "P/E 29.41"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "NTRA has a strong_buy analyst consensus (an_score 1.42), positive news sentiment 0.165, and a recent partnership with Diakonos; 1W momentum is +6.21% despite a YTD decline, offering a good entry.",
-      "drivers": [
-        "strong_buy consensus",
-        "news sentiment 0.165",
-        "1W +6.21%",
-        "Diakonos partnership"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "EXEL has solid momentum (+13.77% YTD, +12.25% 1M), a low beta of 0.385, reasonable P/E of 16.42, and positive news sentiment 0.151; analyst consensus is buy.",
-      "drivers": [
-        "+13.77% YTD",
-        "+12.25% 1M",
-        "P/E 16.42",
-        "beta 0.385"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "BEAM has a strong_buy analyst consensus (an_score 1.29), positive news sentiment 0.26, and advancing pipeline (BEAM-302 for AATD); YTD is +9.55% with potential for accelerated approval.",
-      "drivers": [
-        "strong_buy consensus",
-        "news sentiment 0.26",
-        "BEAM-302 pipeline",
-        "YTD +9.55%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "LLY has strong 1M momentum (+10.08%), a solid P/E of 37.8 for its growth in obesity/diabetes, and positive news sentiment 0.099; analyst consensus is buy with an_score 1.74.",
-      "drivers": [
-        "1M +10.08%",
-        "P/E 37.8",
-        "obesity portfolio",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "NVAX has exceptional momentum (+40.18% YTD, +24.47% 1M) and positive news sentiment 0.092, but high short interest (27.71%) and no P/E add risk; recent catalyst from stock price increase.",
-      "drivers": [
-        "+40.18% YTD",
-        "+24.47% 1M",
-        "news sentiment 0.092",
-        "short interest 27.71%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "AMGN is a large-cap with low beta (0.435), reasonable P/E of 22.68, and positive news sentiment 0.04; analyst consensus is buy, and it offers stability with modest YTD +0.98%.",
-      "drivers": [
-        "low beta 0.435",
-        "P/E 22.68",
-        "buy consensus",
-        "YTD +0.98%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NTLA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "NTLA has strong YTD momentum (+40.93%) and positive news sentiment 0.317, with a buy consensus; but high short interest (46.78%) and no P/E add risk, though it has gene-editing catalysts.",
-      "drivers": [
-        "YTD +40.93%",
-        "news sentiment 0.317",
-        "buy consensus",
-        "short interest 46.78%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "MRNA has high YTD (+43.97%) and a potential catalyst from UBS upgrade, but negative 1M (-6.07%), hold rating (an_score 2.96), and negative news sentiment -0.021; risky momentum play.",
-      "drivers": [
-        "YTD +43.97%",
-        "hold rating 2.96",
-        "1M -6.07%",
-        "news sentiment -0.021"
       ]
     }
   ]

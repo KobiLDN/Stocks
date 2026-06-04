@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-03 12:58",
+  "updated": "2026-06-04 19:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ARM has surged +244% YTD and +94% in the last month, driven by Nvidia's launch of Arm-based RTX Spark and Vera chips at Computex, with Mizuho raising its price target to $425. The stock jumped 14% on the news, and Arm's Q4 FY2026 revenue hit a record $1.49B (+20% YoY) with data center royalties more than doubling.",
+      "drivers": [
+        "+244% YTD",
+        "+94% 1M momentum",
+        "Nvidia Arm chip catalyst",
+        "record revenue $1.49B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Micron has delivered a staggering +916% 1-year return and +225% YTD, with +78% in the last month, supported by strong analyst consensus (strong_buy, an_score 1.48) and a reasonable P/E of 48.43 for a memory leader riding the AI boom.",
+      "drivers": [
+        "+916% 1Y return",
+        "+225% YTD",
+        "strong_buy consensus",
+        "P/E 48.43"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Snowflake has rallied +71% in the last month and +14% YTD, with a strong_buy analyst consensus (an_score 1.49) and positive news sentiment of 0.241, reflecting robust cloud data platform demand amid AI adoption.",
+      "drivers": [
+        "+71% 1M momentum",
+        "strong_buy consensus",
+        "news sentiment 0.241",
+        "cloud AI tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Fortinet has surged +92% YTD and +68% in the last month, with a low beta of 0.919 and positive news sentiment 0.104, though analyst consensus is hold (an_score 2.72) due to valuation concerns at P/E 58.09.",
+      "drivers": [
+        "+92% YTD",
+        "+68% 1M momentum",
+        "low beta 0.919",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "AMD has posted a massive +369% 1-year return and +136% YTD, with +55% in the last month, backed by a strong_buy consensus (an_score 1.49), though the P/E of 177.29 is elevated and short interest is 2.75%.",
+      "drivers": [
+        "+369% 1Y return",
+        "+136% YTD",
+        "strong_buy consensus",
+        "AI chip demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CrowdStrike has gained +57% YTD and +52% in the last month, with a low beta of 1.06 and buy consensus (an_score 1.68), though it lacks a P/E and has slightly negative news sentiment of -0.058.",
+      "drivers": [
+        "+57% YTD",
+        "+52% 1M momentum",
+        "low beta 1.06",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Palo Alto Networks has rallied +53% YTD and +49% in the last month, with a low beta of 0.942 and buy consensus (an_score 1.59), though the P/E of 239.31 is very high and news sentiment is neutral at 0.055.",
+      "drivers": [
+        "+53% YTD",
+        "+49% 1M momentum",
+        "low beta 0.942",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Qualcomm has gained +41% YTD and +44% in the last month, with a reasonable P/E of 26.1 and positive news sentiment of 0.169, but analyst consensus is hold (an_score 2.62) and short interest is elevated at 5.36%.",
+      "drivers": [
+        "+41% YTD",
+        "+44% 1M momentum",
+        "P/E 26.1",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Cisco has surged +71% YTD and +40% in the last month, with a low beta of 0.912 and a dividend yield of 1.33%, though analyst consensus is buy (an_score 1.88) and news sentiment is slightly negative at -0.035.",
+      "drivers": [
+        "+71% YTD",
+        "+40% 1M momentum",
+        "low beta 0.912",
+        "dividend yield 1.33%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "ServiceNow has rallied +32% in the last month despite a -18% YTD, with a strong_buy consensus (an_score 1.44) and the highest news sentiment in the universe at 0.314, though the P/E of 72.44 is elevated.",
+      "drivers": [
+        "+32% 1M momentum",
+        "strong_buy consensus",
+        "news sentiment 0.314",
+        "low beta 0.819"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SNOW",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "low beta 0.912",
         "+69% YTD",
         "AI cybersecurity platform launch"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "Fortinet has +85.24% YTD, +61.66% 1M, strong news sentiment 0.33, and analysts highlight cybersecurity tailwinds from AI-driven threats; P/E of 56.13 is elevated but supported by recent live catalyst 'AI is multiplying the cybersecurity threat'.",
-      "drivers": [
-        "+85% YTD",
-        "+62% 1M momentum",
-        "news_s 0.33",
-        "cybersecurity AI catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Snowflake surged +78.34% 1M and +44.81% 1W, with strong_buy analyst consensus (an_score 1.49) and positive news sentiment 0.155 reinforced by CEO's 'AI must accelerate the core' message.",
-      "drivers": [
-        "+78% 1M momentum",
-        "strong_buy consensus",
-        "positive news sentiment",
-        "AI platform catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.79,
-      "rationale": "Micron shows +226.05% YTD, +78.33% 1M, strong_buy analyst consensus (an_score 1.48), and highest news sentiment of 0.519 among peers, driven by memory demand for AI.",
-      "drivers": [
-        "+226% YTD",
-        "+78% 1M",
-        "news_s 0.52",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Palo Alto Networks has +64.08% YTD and +59.46% 1M, with low beta 0.77 and buy consensus; the headline 'AI is multiplying the cybersecurity threat' reinforces demand for its platform.",
-      "drivers": [
-        "+64% YTD",
-        "+59% 1M",
-        "low beta 0.77",
-        "cybersecurity AI tailwind"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "ServiceNow surged +35.79% 1M and +24.99% 1W, with strong_buy analyst consensus (an_score 1.44) and a low beta of 0.819 offering downside protection while capitalizing on AI workflow adoption.",
-      "drivers": [
-        "+36% 1M momentum",
-        "strong_buy consensus",
-        "low beta 0.82",
-        "AI workflow catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.71,
-      "rationale": "CrowdStrike gained +66.30% YTD and +60.75% 1M, with buy consensus (an_score 1.69), positive news sentiment 0.149, and is a direct beneficiary of AI-driven cybersecurity demand.",
-      "drivers": [
-        "+66% YTD",
-        "+61% 1M",
-        "buy consensus",
-        "cybersecurity AI catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Cisco has +68.31% YTD, +37.42% 1M, low beta 0.912, buy consensus, and its Cisco Live Protect launch directly addresses AI-powered cyberattacks, supported by news sentiment 0.103.",
-      "drivers": [
-        "+68% YTD",
-        "+37% 1M",
-        "low beta 0.91",
-        "Cisco Live catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Qualcomm has +37.28% YTD and +40.14% 1M, with a reasonable P/E of 25.37 and dividend yield of 1.61%, but high short interest 5.36%, hold consensus (an_score 2.64), and negative news sentiment -0.125 warrant caution.",
-      "drivers": [
-        "+37% YTD",
-        "+40% 1M",
-        "P/E 25.4",
-        "high short interest 5.4%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.52,
-      "rationale": "AMD has explosive +126.86% YTD and +48.44% 1M, with strong_buy consensus (an_score 1.49), but its P/E of 168.46 and high beta 2.399 suggest over-extension; recent AMD-related news lacks a fresh positive catalyst.",
-      "drivers": [
-        "+127% YTD",
-        "+48% 1M",
-        "strong_buy consensus",
-        "very high P/E 168"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.48,
-      "rationale": "ARM has +249.83% YTD and +97.46% 1M, with buy consensus (an_score 1.88), but extreme over-valuation (P/E 467), high beta 3.406, low short float 13.29%, and negative news sentiment -0.244 limit confidence.",
-      "drivers": [
-        "+250% YTD",
-        "+97% 1M",
-        "buy consensus",
-        "extreme P/E 467"
       ]
     }
   ]
