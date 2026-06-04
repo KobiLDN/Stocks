@@ -182,13 +182,13 @@ Generate the key pair from **T212 app → Settings → API (Beta)**. The secret 
 | `snapshot.txt` | Output — compact table (paste to DeepSeek or any AI) |
 | `portfolio_history.json` | Cumulative value history — one record appended per run; powers the chart |
 
-**`snapshot.html` dashboard layout** (1920px max-width, responsive flex row):
-- Account cards (Total Value / Invested / Free Cash / P&L / Today's Movers)
-- Sector allocation donut — Chart.js doughnut; per-sector colours (AI=green, Biotech=purple, Crypto=orange, Defence=red, Energy=yellow, Tech=blue)
-- Portfolio value chart — line chart of `total_value` + `invested` over time from `portfolio_history.json`
-- Holdings heatmap — squarified treemap (`chartjs-chart-treemap`); tiles sized by 1D% magnitude, coloured by 1D direction
-- Holdings table — Qty / Avg £ / Bought (cost basis) / Current / P&L / 1D–YTD / Vol / Signal — sortable, pinnable rows
-- Picks table — signal picks not held; filter by sector + signal; pinnable rows; STRONG BUY auto-sorts to top
+**`snapshot.html` dashboard layout** (1920px max-width):
+- **Cards column** — Total Value / Invested / Free Cash / T212 P&L (USD-based) / Real P&L GBP (incl. FX drag = `total_value − free_cash − invested`) / Today's Movers
+- **Sector allocation blocks** — equal-width variable-height bar blocks; biggest sector tallest; 1D weighted-avg return floats above each block in green/red; sorted biggest→smallest; per-sector colours (AI=green, Biotech=purple, Crypto=orange, Defence=red, Energy=yellow, Tech=blue)
+- **Portfolio value chart** — line chart of `total_value` + `invested` over time from `portfolio_history.json`
+- **Holdings heatmap** — squarified treemap (`chartjs-chart-treemap`); tiles sized by 1D% magnitude, coloured by 1D direction
+- **Holdings table** — Qty / Avg £ / Bought (cost basis) / Current / P&L / 1D–YTD / Vol / Signal — sortable, pinnable rows
+- **Picks table** — signal picks not held; filter by sector + signal; pinnable rows; STRONG BUY auto-sorts to top
 
 **T212 ticker aliases:** T212's API sometimes returns non-standard tickers (e.g. `HUTMF` for NYSE-listed `HUT`). The `TICKER_ALIASES` dict in `portfolio.py` remaps these before the universe lookup. Add entries here whenever T212's API ticker differs from the STOCKSMain export ticker:
 ```python
