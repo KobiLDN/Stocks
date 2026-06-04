@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-04 22:00",
-  "fx_gbp_usd": 1.3423,
+  "updated": "2026-06-04 23:00",
+  "fx_gbp_usd": 1.3425,
   "stocks": [
     {
       "ticker": "SNDK",
@@ -17,7 +17,7 @@
       "low_gbp": "28",
       "high_gbp": "1386",
       "bar_pct": 94,
-      "market_cap_gbp_b": 194.132,
+      "market_cap_gbp_b": 194.106,
       "beta": null,
       "pe_ratio": 60.06,
       "avg_volume_m": 15.91,
@@ -35,6 +35,13 @@
           "url": "https://finance.yahoo.com/markets/stocks/article/intel-amd-micron-shares-trim-losses-after-broadcom-results-spark-semiconductor-sector-sell-off-130128361.html",
           "published": 1780578088,
           "sentiment": 0.103
+        },
+        {
+          "title": "Stock Market Today, June 4: Dow Hits Record as Tech Stocks Falter",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/",
+          "published": 1780608516,
+          "sentiment": 0.0
         },
         {
           "title": "SanDisk Just Tried To Break The Memory Cycle",
@@ -56,16 +63,9 @@
           "url": "https://www.fool.com/investing/2026/06/04/why-sandisk-stock-dropped-today/",
           "published": 1780592473,
           "sentiment": 0.0
-        },
-        {
-          "title": "Micron Drops 7% as Broadcom\u2019s Disappointing AI Outlook Triggers a Semiconductor Selloff",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/04/micron-drops-7-as-broadcoms-disappointing-ai-outlook-triggers-a-semiconductor-selloff/",
-          "published": 1780586144,
-          "sentiment": -0.494
         }
       ],
-      "news_sentiment": -0.015
+      "news_sentiment": 0.084
     },
     {
       "ticker": "WDC",
@@ -82,7 +82,7 @@
       "low_gbp": "40",
       "high_gbp": "449",
       "bar_pct": 95,
-      "market_cap_gbp_b": 147.776,
+      "market_cap_gbp_b": 147.756,
       "beta": 2.158,
       "pe_ratio": 34.48,
       "avg_volume_m": 7.83,
@@ -90,9 +90,9 @@
       "short_pct": 9.74,
       "analyst": "buy",
       "analyst_score": 1.52,
-      "vol_1d": 6312870,
-      "vol_1w": 33812470,
-      "vol_1m": 152720370,
+      "vol_1d": 6435164,
+      "vol_1w": 33934764,
+      "vol_1m": 152842664,
       "news": [
         {
           "title": "SanDisk Just Tried To Break The Memory Cycle",
@@ -116,21 +116,21 @@
           "sentiment": -0.494
         },
         {
+          "title": "Honeywell Stock Is Likely to Reward Shareholders Following Quantinuum IPO, Split",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2305189/honeywell-stock-is-likely-to-reward-shareholders-following-quantinuum-ipo-split",
+          "published": 1780580102,
+          "sentiment": 0.572
+        },
+        {
           "title": "Western Digital (WDC) Hits All-Time High as Citi Hikes PT by 37%",
           "publisher": "Insider Monkey",
           "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-wdc-hits-time-023005049.html",
           "published": 1780540205,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sandisk Spin Off And AI Deals Test Lofty Valuation And Momentum",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/sandisk-spin-off-ai-deals-010728849.html",
-          "published": 1780535248,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.021
+      "news_sentiment": 0.135
     },
     {
       "ticker": "285A",
@@ -147,9 +147,9 @@
       "low_gbp": "9.08",
       "high_gbp": "387",
       "bar_pct": 92,
-      "market_cap_gbp_b": 195.559,
+      "market_cap_gbp_b": 195.664,
       "beta": null,
-      "pe_ratio": 76.37,
+      "pe_ratio": 76.34,
       "avg_volume_m": 35.71,
       "div_yield_pct": null,
       "short_pct": null,
@@ -212,7 +212,7 @@
       "low_gbp": "77",
       "high_gbp": "811",
       "bar_pct": 91,
-      "market_cap_gbp_b": 836.767,
+      "market_cap_gbp_b": 836.655,
       "beta": 2.173,
       "pe_ratio": 47.07,
       "avg_volume_m": 48.32,
@@ -220,9 +220,9 @@
       "short_pct": 3.13,
       "analyst": "strong_buy",
       "analyst_score": 1.48,
-      "vol_1d": 52385678,
-      "vol_1w": 247315978,
-      "vol_1m": 1217898578,
+      "vol_1d": 53659458,
+      "vol_1w": 248589758,
+      "vol_1m": 1219172358,
       "news": [
         {
           "title": "Intel, AMD, Micron shares trim losses after Broadcom results spark semiconductor sector sell-off",
@@ -239,28 +239,28 @@
           "sentiment": -0.226
         },
         {
-          "title": "SanDisk Just Tried To Break The Memory Cycle",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/601395/sandisk-just-tried-to-break-the-memory-cycle/2026-06-04",
-          "published": 1780603082,
+          "title": "Stock Market Today, June 4: Dow Hits Record as Tech Stocks Falter",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/",
+          "published": 1780608516,
           "sentiment": 0.0
         },
         {
-          "title": "US Equity Indexes Rise Amid Broad-Based Rally in Final Leg of Trading",
+          "title": "Dow Hits Record High And S&P 500 Gains As Oil Slides, While Chip Weakness Weighs On Nasdaq \u2014 AVGO, UNH, META, PINS, RUM In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/dow-hits-record-high-and-s-and-p-500-gains-as-oil-slides-while-chip-weakness-weighs-on-nasdaq-avgo-unh-meta-pins-rum-in-focus/cZ0ZpheRezJ",
+          "published": 1780608123,
+          "sentiment": -0.103
+        },
+        {
+          "title": "US Equity Indexes Mixed as Sliding Technology Pulls Nasdaq Composite Lower, Crude Oil Sinks",
           "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-rise-amid-195019544.html",
-          "published": 1780602619,
-          "sentiment": 0.0
-        },
-        {
-          "title": "What's Going On With Micron Stock Today",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/whats-going-micron-stock-today-192040673.html",
-          "published": 1780600840,
-          "sentiment": 0.0
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-sliding-205433109.html",
+          "published": 1780606473,
+          "sentiment": -0.71
         }
       ],
-      "news_sentiment": -0.025
+      "news_sentiment": -0.187
     },
     {
       "ticker": "STX",
@@ -277,7 +277,7 @@
       "low_gbp": "93",
       "high_gbp": "720",
       "bar_pct": 95,
-      "market_cap_gbp_b": 156.077,
+      "market_cap_gbp_b": 156.056,
       "beta": 2.009,
       "pe_ratio": 87.85,
       "avg_volume_m": 3.92,
@@ -340,9 +340,9 @@
       "change_ytd": "+254.42%",
       "return_1yr": "+363%",
       "low_gbp": "46",
-      "high_gbp": "242",
+      "high_gbp": "241",
       "bar_pct": 97,
-      "market_cap_gbp_b": 206.217,
+      "market_cap_gbp_b": 206.19,
       "beta": 2.251,
       "pe_ratio": 109.11,
       "avg_volume_m": 30.69,
@@ -350,9 +350,9 @@
       "short_pct": 4.31,
       "analyst": "strong_buy",
       "analyst_score": 1.43,
-      "vol_1d": 85181436,
-      "vol_1w": 380322036,
-      "vol_1m": 873642036,
+      "vol_1d": 85668645,
+      "vol_1w": 380809245,
+      "vol_1m": 874129245,
       "news": [
         {
           "title": "Intel, AMD, Micron shares trim losses after Broadcom results spark semiconductor sector sell-off",
@@ -360,6 +360,20 @@
           "url": "https://finance.yahoo.com/markets/stocks/article/intel-amd-micron-shares-trim-losses-after-broadcom-results-spark-semiconductor-sector-sell-off-130128361.html",
           "published": 1780578088,
           "sentiment": 0.103
+        },
+        {
+          "title": "This Chip Stock Made a Comeback After Broadcom Earnings",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-04-2026/card/chip-stocks-slide-after-broadcom-earnings-yIHjFm9DoKsa1MqIeBHS?siteid=yhoof2&yptr=yahoo",
+          "published": 1780608592,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Quantinuum, Broadcom, UnitedHealth, and More Stocks That Explain Today\u2019s Market",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stock-movers-ee8a7eba?siteid=yhoof2&yptr=yahoo",
+          "published": 1780605780,
+          "sentiment": 0.0
         },
         {
           "title": "Nvidia\u2019s CEO Sees Marvell Becoming the Next $1 Trillion Company. Shares Gained Another 5% Today.",
@@ -373,20 +387,6 @@
           "publisher": "GuruFocus.com",
           "url": "https://finance.yahoo.com/markets/stocks/articles/broadcoms-13-slide-puts-ai-191457169.html",
           "published": 1780600497,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Quantinuum, Broadcom, UnitedHealth, and More Stocks That Explain Today\u2019s Market",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/stock-movers-ee8a7eba?siteid=yhoof2&yptr=yahoo",
-          "published": 1780597440,
-          "sentiment": 0.0
-        },
-        {
-          "title": "NVIDIA Stock and the Hundred-Fold Compute Whisper",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/601407/nvidia-stock-and-the-hundred-fold-compute-whisper/2026-06-04",
-          "published": 1780596877,
           "sentiment": 0.0
         }
       ],
@@ -407,7 +407,7 @@
       "low_gbp": "37",
       "high_gbp": "75",
       "bar_pct": 56,
-      "market_cap_gbp_b": 19.427,
+      "market_cap_gbp_b": 19.424,
       "beta": 1.438,
       "pe_ratio": 118.95,
       "avg_volume_m": 3.13,
@@ -537,7 +537,7 @@
       "low_gbp": "181",
       "high_gbp": "307",
       "bar_pct": 13,
-      "market_cap_gbp_b": 70.389,
+      "market_cap_gbp_b": 70.38,
       "beta": 1.155,
       "pe_ratio": 22.97,
       "avg_volume_m": 3.3,
@@ -592,7 +592,7 @@
       "company_name": "Vistra Corp",
       "category": "nuclear-ops",
       "exchange": "NYSE",
-      "price_gbp": "115",
+      "price_gbp": "114",
       "price_usd": 153.7,
       "change_1d": "+1.05%",
       "change_1w": "-4.11%",
@@ -602,7 +602,7 @@
       "low_gbp": "99",
       "high_gbp": "164",
       "bar_pct": 24,
-      "market_cap_gbp_b": 38.608,
+      "market_cap_gbp_b": 38.603,
       "beta": 1.447,
       "pe_ratio": 25.7,
       "avg_volume_m": 4.66,
@@ -614,6 +614,20 @@
       "vol_1w": 19104339,
       "vol_1m": 125575739,
       "news": [
+        {
+          "title": "Vistra Reshapes Growth With Cogentrix Deal And AI Data Center Power",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/vistra-reshapes-growth-cogentrix-deal-211930921.html",
+          "published": 1780607970,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Top Analyst Reports for Berkshire Hathaway, Eli Lilly & Walmart",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/top-analyst-reports-berkshire-hathaway-202100807.html",
+          "published": 1780604460,
+          "sentiment": 0.202
+        },
         {
           "title": "AI Power Boom Revives Natural Gas as Infrastructure Bet",
           "publisher": "Bloomberg",
@@ -634,23 +648,9 @@
           "url": "https://finance.yahoo.com/sectors/energy/articles/ge-vernova-benefit-global-gas-120800782.html",
           "published": 1780488480,
           "sentiment": 0.459
-        },
-        {
-          "title": "Vistra (VST) Valuation Check After Recent Share Price Pullback",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/vistra-vst-valuation-check-recent-111421732.html",
-          "published": 1780398861,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Vistra vs. Constellation Energy: The Big Revenue Face-Off",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/charts/2026/06/01/vistra-vs-constellation-energy-the-big-revenue-face-off/",
-          "published": 1780349809,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.455
+      "news_sentiment": 0.458
     },
     {
       "ticker": "TLN",
@@ -667,7 +667,7 @@
       "low_gbp": "184",
       "high_gbp": "336",
       "bar_pct": 64,
-      "market_cap_gbp_b": 12.87,
+      "market_cap_gbp_b": 12.869,
       "beta": 1.668,
       "pe_ratio": null,
       "avg_volume_m": 0.73,
@@ -732,7 +732,7 @@
       "low_gbp": "18",
       "high_gbp": "28",
       "bar_pct": 90,
-      "market_cap_gbp_b": 17.549,
+      "market_cap_gbp_b": 17.547,
       "beta": 0.96,
       "pe_ratio": null,
       "avg_volume_m": 0.91,
@@ -797,7 +797,7 @@
       "low_gbp": "22",
       "high_gbp": "34",
       "bar_pct": 60,
-      "market_cap_gbp_b": 5.276,
+      "market_cap_gbp_b": 5.275,
       "beta": 1.128,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -805,9 +805,9 @@
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.83,
-      "vol_1d": 1143781,
-      "vol_1w": 8158781,
-      "vol_1m": 32761481,
+      "vol_1d": 1290702,
+      "vol_1w": 8305702,
+      "vol_1m": 32908402,
       "news": [
         {
           "title": "Brookfield Renewable Holdings Corp (BEPC) is Powering AI Growth with Operational Strength",
@@ -860,9 +860,9 @@
       "change_ytd": "+41.95%",
       "return_1yr": "+98%",
       "low_gbp": "342",
-      "high_gbp": "881",
+      "high_gbp": "880",
       "bar_pct": 70,
-      "market_cap_gbp_b": 192.847,
+      "market_cap_gbp_b": 192.822,
       "beta": 1.313,
       "pe_ratio": 28.13,
       "avg_volume_m": 2.52,
@@ -870,9 +870,9 @@
       "short_pct": 3.3,
       "analyst": "buy",
       "analyst_score": 1.59,
-      "vol_1d": 1859062,
-      "vol_1w": 14142862,
-      "vol_1m": 51438762,
+      "vol_1d": 2177824,
+      "vol_1w": 14461624,
+      "vol_1m": 51757524,
       "news": [
         {
           "title": "GE Vernova Lands 100 MW India Wind Deal",
@@ -896,21 +896,21 @@
           "sentiment": 0.572
         },
         {
+          "title": "Honeywell Stock Is Likely to Reward Shareholders Following Quantinuum IPO, Split",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2305189/honeywell-stock-is-likely-to-reward-shareholders-following-quantinuum-ipo-split",
+          "published": 1780580102,
+          "sentiment": 0.572
+        },
+        {
           "title": "This Week In Energy Transition - SunPower's Strategic Share Move Fuels Financial Flexibility",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/sectors/energy/articles/week-energy-transition-sunpowers-strategic-113727085.html",
           "published": 1780573047,
           "sentiment": 0.691
-        },
-        {
-          "title": "The Zacks Analyst Blog Highlights Mirion, BWX and GE Vernova",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-mirion-090600843.html",
-          "published": 1780563960,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.253
+      "news_sentiment": 0.367
     },
     {
       "ticker": "BWXT",
@@ -927,7 +927,7 @@
       "low_gbp": "95",
       "high_gbp": "180",
       "bar_pct": 55,
-      "market_cap_gbp_b": 13.019,
+      "market_cap_gbp_b": 13.018,
       "beta": 0.778,
       "pe_ratio": 50.87,
       "avg_volume_m": 1.03,
@@ -1057,7 +1057,7 @@
       "low_gbp": "33",
       "high_gbp": "144",
       "bar_pct": 14,
-      "market_cap_gbp_b": 8.476,
+      "market_cap_gbp_b": 8.475,
       "beta": 1.181,
       "pe_ratio": null,
       "avg_volume_m": 12.99,
@@ -1065,9 +1065,9 @@
       "short_pct": 23.09,
       "analyst": "buy",
       "analyst_score": 1.96,
-      "vol_1d": 11361898,
-      "vol_1w": 104727898,
-      "vol_1m": 337841598,
+      "vol_1d": 11582401,
+      "vol_1w": 104948401,
+      "vol_1m": 338062101,
       "news": [
         {
           "title": "Amazon-Backed X-Energy Dives To A Post-IPO Low. Here's Why.",
@@ -1130,9 +1130,9 @@
       "short_pct": 21.77,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 2192565,
-      "vol_1w": 18676865,
-      "vol_1m": 65794065,
+      "vol_1d": 2357363,
+      "vol_1w": 18841663,
+      "vol_1m": 65958863,
       "news": [
         {
           "title": "Amazon-Backed X-Energy Dives To A Post-IPO Low. Here's Why.",
@@ -1187,7 +1187,7 @@
       "low_gbp": "44",
       "high_gbp": "101",
       "bar_pct": 72,
-      "market_cap_gbp_b": 36.995,
+      "market_cap_gbp_b": 36.99,
       "beta": 1.03,
       "pe_ratio": 105.57,
       "avg_volume_m": 3.27,
@@ -1249,10 +1249,10 @@
       "change_1m": "-2.48%",
       "change_ytd": "+7.86%",
       "return_1yr": "+130%",
-      "low_gbp": "4.40",
+      "low_gbp": "4.39",
       "high_gbp": "15",
       "bar_pct": 57,
-      "market_cap_gbp_b": 5.164,
+      "market_cap_gbp_b": 5.163,
       "beta": 1.179,
       "pe_ratio": null,
       "avg_volume_m": 9.42,
@@ -1325,9 +1325,9 @@
       "short_pct": 22.57,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 536158,
-      "vol_1w": 4671958,
-      "vol_1m": 19816858,
+      "vol_1d": 540017,
+      "vol_1w": 4675817,
+      "vol_1m": 19820717,
       "news": [
         {
           "title": "Centrus Energy (LEU) Down 21.5% Since Last Earnings Report: Can It Rebound?",
@@ -1382,7 +1382,7 @@
       "low_gbp": "80",
       "high_gbp": "283",
       "bar_pct": 79,
-      "market_cap_gbp_b": 92.69,
+      "market_cap_gbp_b": 92.677,
       "beta": 2.099,
       "pe_ratio": 81.39,
       "avg_volume_m": 7.51,
@@ -1390,9 +1390,9 @@
       "short_pct": 3.54,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 5571304,
-      "vol_1w": 27957204,
-      "vol_1m": 125678704,
+      "vol_1d": 6057957,
+      "vol_1w": 28443857,
+      "vol_1m": 126165357,
       "news": [
         {
           "title": "Should You Buy, Sell, or Hold VRT Stock After a 195% Rise in One Year?",
@@ -1447,7 +1447,7 @@
       "low_gbp": "232",
       "high_gbp": "324",
       "bar_pct": 86,
-      "market_cap_gbp_b": 121.092,
+      "market_cap_gbp_b": 121.076,
       "beta": 1.24,
       "pe_ratio": 40.88,
       "avg_volume_m": 2.66,
@@ -1455,9 +1455,9 @@
       "short_pct": 2.37,
       "analyst": "buy",
       "analyst_score": 1.72,
-      "vol_1d": 1853237,
-      "vol_1w": 11770137,
-      "vol_1m": 62979237,
+      "vol_1d": 1859048,
+      "vol_1w": 11775948,
+      "vol_1m": 62985048,
       "news": [
         {
           "title": "Eaton Rallies 32% YTD: Should Investors Bet on the Stock Now?",
@@ -1512,7 +1512,7 @@
       "low_gbp": "42",
       "high_gbp": "244",
       "bar_pct": 90,
-      "market_cap_gbp_b": 8.144,
+      "market_cap_gbp_b": 8.143,
       "beta": 1.144,
       "pe_ratio": 58.49,
       "avg_volume_m": 0.67,
@@ -1520,9 +1520,9 @@
       "short_pct": 12.53,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 409494,
-      "vol_1w": 2949594,
-      "vol_1m": 14742394,
+      "vol_1d": 417450,
+      "vol_1w": 2957550,
+      "vol_1m": 14750350,
       "news": [
         {
           "title": "Why Is Powell Industries (POWL) Up 1.5% Since Last Earnings Report?",
@@ -1577,7 +1577,7 @@
       "low_gbp": "529",
       "high_gbp": "841",
       "bar_pct": 91,
-      "market_cap_gbp_b": 80.022,
+      "market_cap_gbp_b": 80.011,
       "beta": 0.997,
       "pe_ratio": 75.48,
       "avg_volume_m": 0.57,
@@ -1642,7 +1642,7 @@
       "low_gbp": "109",
       "high_gbp": "155",
       "bar_pct": 69,
-      "market_cap_gbp_b": 50.284,
+      "market_cap_gbp_b": 50.277,
       "beta": 1.08,
       "pe_ratio": 50.19,
       "avg_volume_m": 2.03,
@@ -1707,7 +1707,7 @@
       "low_gbp": "123",
       "high_gbp": "175",
       "bar_pct": 42,
-      "market_cap_gbp_b": 67.302,
+      "market_cap_gbp_b": 67.293,
       "beta": 0.9,
       "pe_ratio": 31.28,
       "avg_volume_m": 3.15,
@@ -1772,7 +1772,7 @@
       "low_gbp": "121",
       "high_gbp": "304",
       "bar_pct": 85,
-      "market_cap_gbp_b": 3359.254,
+      "market_cap_gbp_b": 3358.803,
       "beta": 1.267,
       "pe_ratio": 28.41,
       "avg_volume_m": 28.84,
@@ -1780,9 +1780,9 @@
       "short_pct": 1.41,
       "analyst": "strong_buy",
       "analyst_score": 1.46,
-      "vol_1d": 41615349,
-      "vol_1w": 220557149,
-      "vol_1m": 666616149,
+      "vol_1d": 42891063,
+      "vol_1w": 221832863,
+      "vol_1m": 667891863,
       "news": [
         {
           "title": "Broadcom stock sinks 12% as AI chip forecast disappoints",
@@ -1806,18 +1806,18 @@
           "sentiment": 0.0
         },
         {
+          "title": "Stock Market Today, June 4: Dow Hits Record as Tech Stocks Falter",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/",
+          "published": 1780608516,
+          "sentiment": 0.0
+        },
+        {
           "title": "Dow Jones Hits High, AI Stocks Shrug Off Broadcom, Ciena Sell-Offs; Jobs Report Looms",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-stocks-broadcom-ciena-jobs-report/?src=A00220&yptr=yahoo",
-          "published": 1780605919,
+          "published": 1780608463,
           "sentiment": -0.153
-        },
-        {
-          "title": "Palantir Stock Dips Amid Google Cloud Deal, AIPCon 10 Announcements",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/technology/palantir-stock-rises-amid-google-cloud-deal-aipcon-10-announcements/?src=A00220&yptr=yahoo",
-          "published": 1780605350,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.107
@@ -1837,7 +1837,7 @@
       "low_gbp": "265",
       "high_gbp": "414",
       "bar_pct": 36,
-      "market_cap_gbp_b": 2368.812,
+      "market_cap_gbp_b": 2368.494,
       "beta": 1.093,
       "pe_ratio": 25.49,
       "avg_volume_m": 34.62,
@@ -1900,9 +1900,9 @@
       "change_ytd": "+12.05%",
       "return_1yr": "+20%",
       "low_gbp": "146",
-      "high_gbp": "208",
+      "high_gbp": "207",
       "bar_pct": 70,
-      "market_cap_gbp_b": 2033.803,
+      "market_cap_gbp_b": 2033.53,
       "beta": 1.468,
       "pe_ratio": 32.13,
       "avg_volume_m": 44.93,
@@ -1910,9 +1910,9 @@
       "short_pct": 1.06,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 35436833,
-      "vol_1w": 236996033,
-      "vol_1m": 872626933,
+      "vol_1d": 35528228,
+      "vol_1w": 237087428,
+      "vol_1m": 872718328,
       "news": [
         {
           "title": "Alphabet and Nvidia reveal a surprising truth about the 'Magnificent 7' stocks",
@@ -1957,7 +1957,7 @@
       "company_name": "Meta Platforms",
       "category": "hyperscalers",
       "exchange": "NASDAQ",
-      "price_gbp": "468",
+      "price_gbp": "467",
       "price_usd": 627.57,
       "change_1d": "+1.33%",
       "change_1w": "-1.22%",
@@ -1967,7 +1967,7 @@
       "low_gbp": "388",
       "high_gbp": "593",
       "bar_pct": 39,
-      "market_cap_gbp_b": 1186.766,
+      "market_cap_gbp_b": 1186.606,
       "beta": 1.243,
       "pe_ratio": 22.85,
       "avg_volume_m": 16.34,
@@ -1975,15 +1975,29 @@
       "short_pct": 1.46,
       "analyst": "strong_buy",
       "analyst_score": 1.31,
-      "vol_1d": 20134942,
-      "vol_1w": 110352342,
-      "vol_1m": 353320842,
+      "vol_1d": 20953095,
+      "vol_1w": 111170495,
+      "vol_1m": 354138995,
       "news": [
         {
           "title": "Why Meta is delaying its latest AI model release",
           "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/why-meta-is-delaying-its-latest-ai-model-release-201621039.html",
+          "url": "https://finance.yahoo.com/video/why-meta-delaying-latest-ai-201621155.html",
           "published": 1780604181,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Vistra Reshapes Growth With Cogentrix Deal And AI Data Center Power",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/vistra-reshapes-growth-cogentrix-deal-211930921.html",
+          "published": 1780607970,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Ciena Corporation Q2 2026 Earnings Call Summary",
+          "publisher": "Moby",
+          "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-ciena-corporation-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss",
+          "published": 1780606276,
           "sentiment": 0.0
         },
         {
@@ -1999,23 +2013,9 @@
           "url": "https://finance.yahoo.com/sectors/technology/articles/sector-tech-stocks-fall-afternoon-195023232.html",
           "published": 1780602623,
           "sentiment": 0.0
-        },
-        {
-          "title": "AI Power Boom Revives Natural Gas as Infrastructure Bet",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/ai-power-boom-revives-natural-190819348.html",
-          "published": 1780600099,
-          "sentiment": 0.625
-        },
-        {
-          "title": "AMD Is Up 55% in a Month and Trouncing Intel. Should Intel Stockholders Switch to AMD Now?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/04/amd-is-up-55-in-a-month-and-trouncing-intel-should-intel-stockholders-switch-to-amd-now/",
-          "published": 1780599410,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.08
+      "news_sentiment": 0.031
     },
     {
       "ticker": "IREN",
@@ -2032,7 +2032,7 @@
       "low_gbp": "6.57",
       "high_gbp": "57",
       "bar_pct": 78,
-      "market_cap_gbp_b": 16.469,
+      "market_cap_gbp_b": 16.467,
       "beta": 4.179,
       "pe_ratio": 80.34,
       "avg_volume_m": 42.45,
@@ -2040,9 +2040,9 @@
       "short_pct": 14.72,
       "analyst": "buy",
       "analyst_score": 1.87,
-      "vol_1d": 43948199,
-      "vol_1w": 261744199,
-      "vol_1m": 1296021399,
+      "vol_1d": 46925924,
+      "vol_1w": 264721924,
+      "vol_1m": 1298999124,
       "news": [
         {
           "title": "B. Riley raises IREN price target to $96 after 800 MW South Australia data center agreement",
@@ -2097,7 +2097,7 @@
       "low_gbp": "8.14",
       "high_gbp": "23",
       "bar_pct": 87,
-      "market_cap_gbp_b": 6.61,
+      "market_cap_gbp_b": 6.609,
       "beta": 5.451,
       "pe_ratio": null,
       "avg_volume_m": 14.04,
@@ -2105,9 +2105,9 @@
       "short_pct": 22.82,
       "analyst": "strong_buy",
       "analyst_score": 1.31,
-      "vol_1d": 7808960,
-      "vol_1w": 72964060,
-      "vol_1m": 352885760,
+      "vol_1d": 8814776,
+      "vol_1w": 73969876,
+      "vol_1m": 353891576,
       "news": [
         {
           "title": "Crypto stocks sink as Bitcoin hits a 4-month low",
@@ -2162,7 +2162,7 @@
       "low_gbp": "2.53",
       "high_gbp": "20",
       "bar_pct": 95,
-      "market_cap_gbp_b": 9.668,
+      "market_cap_gbp_b": 9.667,
       "beta": 4.284,
       "pe_ratio": null,
       "avg_volume_m": 30.44,
@@ -2227,7 +2227,7 @@
       "low_gbp": "11",
       "high_gbp": "105",
       "bar_pct": 90,
-      "market_cap_gbp_b": 10.716,
+      "market_cap_gbp_b": 10.715,
       "beta": 5.718,
       "pe_ratio": null,
       "avg_volume_m": 4.75,
@@ -2238,44 +2238,8 @@
       "vol_1d": 3524344,
       "vol_1w": 18718244,
       "vol_1m": 117805144,
-      "news": [
-        {
-          "title": "Hut 8 hires former NextEra Energy IR lead Mark Eidelman as it pursues investment-grade rating",
-          "publisher": "Blockspace",
-          "url": "https://blockspace.media/insight/hut-8-hires-mark-eidelman-investment-grade-rating/",
-          "published": 1780583980,
-          "sentiment": 0.273
-        },
-        {
-          "title": "IREN Stock Rises 60% in 3 Months: Time to Hold or Book Profits?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/iren-stock-rises-60-3-124400213.html",
-          "published": 1780577040,
-          "sentiment": 0.44
-        },
-        {
-          "title": "Crypto stocks sink as Bitcoin hits a 4-month low",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-stocks-sink-bitcoin-hits-110352763.html",
-          "published": 1780571032,
-          "sentiment": -0.273
-        },
-        {
-          "title": "Why the CEO of this $15 billion data center builder wants his data centers to look like museums",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/why-the-ceo-of-this-15-billion-data-center-builder-wants-his-data-centers-to-look-like-museums-180227601.html",
-          "published": 1780509747,
-          "sentiment": 0.361
-        },
-        {
-          "title": "Crypto Slide Worsens As Bitcoin Falls 6% To $67,000",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/crypto-slide-worsens-as-bitcoin-falls-6-to-67000-5749",
-          "published": 1780425480,
-          "sentiment": -0.477
-        }
-      ],
-      "news_sentiment": 0.065
+      "news": [],
+      "news_sentiment": null
     },
     {
       "ticker": "SMCI",
@@ -2292,7 +2256,7 @@
       "low_gbp": "15",
       "high_gbp": "46",
       "bar_pct": 64,
-      "market_cap_gbp_b": 21.013,
+      "market_cap_gbp_b": 21.01,
       "beta": 1.684,
       "pe_ratio": 24.68,
       "avg_volume_m": 41.28,
@@ -2305,17 +2269,17 @@
       "vol_1m": 1045110250,
       "news": [
         {
+          "title": "Quantinuum, Broadcom, UnitedHealth, and More Stocks That Explain Today\u2019s Market",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stock-movers-ee8a7eba?siteid=yhoof2&yptr=yahoo",
+          "published": 1780605780,
+          "sentiment": 0.0
+        },
+        {
           "title": "Stocks to Watch: Broadcom, Universal Music,  Quantinuum",
           "publisher": "The Wall Street Journal",
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-04-2026/card/stocks-to-watch-broadcom-universal-music-quantinuum-UKeBXRmgidWt9Va3pJyW?siteid=yhoof2&yptr=yahoo",
           "published": 1780602935,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Quantinuum, Broadcom, UnitedHealth, and More Stocks That Explain Today\u2019s Market",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/stock-movers-ee8a7eba?siteid=yhoof2&yptr=yahoo",
-          "published": 1780597440,
           "sentiment": 0.0
         },
         {
@@ -2357,7 +2321,7 @@
       "low_gbp": "81",
       "high_gbp": "350",
       "bar_pct": 87,
-      "market_cap_gbp_b": 204.234,
+      "market_cap_gbp_b": 204.206,
       "beta": 1.062,
       "pe_ratio": 48.68,
       "avg_volume_m": 8.81,
@@ -2365,9 +2329,9 @@
       "short_pct": 7.08,
       "analyst": "buy",
       "analyst_score": 1.78,
-      "vol_1d": 12235665,
-      "vol_1w": 105167465,
-      "vol_1m": 249577265,
+      "vol_1d": 12261715,
+      "vol_1w": 105193515,
+      "vol_1m": 249603315,
       "news": [
         {
           "title": "AI trade is taking a 'healthy' pause amid Broadcom speed bump",
@@ -2422,7 +2386,7 @@
       "low_gbp": "57",
       "high_gbp": "328",
       "bar_pct": 95,
-      "market_cap_gbp_b": 61.49,
+      "market_cap_gbp_b": 61.482,
       "beta": 2.053,
       "pe_ratio": 201.87,
       "avg_volume_m": 7.23,
@@ -2487,7 +2451,7 @@
       "low_gbp": "60",
       "high_gbp": "809",
       "bar_pct": 86,
-      "market_cap_gbp_b": 54.776,
+      "market_cap_gbp_b": 54.768,
       "beta": 1.533,
       "pe_ratio": 165.22,
       "avg_volume_m": 6.49,
@@ -2495,9 +2459,9 @@
       "short_pct": 13.02,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 5989655,
-      "vol_1w": 34643155,
-      "vol_1m": 142194055,
+      "vol_1d": 6005503,
+      "vol_1w": 34659003,
+      "vol_1m": 142209903,
       "news": [
         {
           "title": "Lumentum Holdings (LITE) Announces $650.4 Million Private Share Exchange Transaction",
@@ -2552,7 +2516,7 @@
       "low_gbp": "11",
       "high_gbp": "174",
       "bar_pct": 86,
-      "market_cap_gbp_b": 12.128,
+      "market_cap_gbp_b": 12.127,
       "beta": 3.759,
       "pe_ratio": null,
       "avg_volume_m": 12.31,
@@ -2560,9 +2524,9 @@
       "short_pct": 12.07,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 13216826,
-      "vol_1w": 63857726,
-      "vol_1m": 272046526,
+      "vol_1d": 14399786,
+      "vol_1w": 65040686,
+      "vol_1m": 273229486,
       "news": [
         {
           "title": "How Investors May Respond To Applied Optoelectronics (AAOI) Doubling Texas Capex Amid Major AI And DOCSIS Wins",
@@ -2617,7 +2581,7 @@
       "low_gbp": "172",
       "high_gbp": "558",
       "bar_pct": 93,
-      "market_cap_gbp_b": 19.079,
+      "market_cap_gbp_b": 19.076,
       "beta": 1.217,
       "pe_ratio": 61.25,
       "avg_volume_m": 0.8,
@@ -2682,7 +2646,7 @@
       "low_gbp": "88",
       "high_gbp": "312",
       "bar_pct": 88,
-      "market_cap_gbp_b": 21.754,
+      "market_cap_gbp_b": 21.751,
       "beta": 1.599,
       "pe_ratio": 163.56,
       "avg_volume_m": 1.32,
@@ -2747,7 +2711,7 @@
       "low_gbp": "28",
       "high_gbp": "128",
       "bar_pct": 98,
-      "market_cap_gbp_b": 11.752,
+      "market_cap_gbp_b": 11.75,
       "beta": 2.22,
       "pe_ratio": null,
       "avg_volume_m": 2.99,
@@ -2812,7 +2776,7 @@
       "low_gbp": "50",
       "high_gbp": "183",
       "bar_pct": 84,
-      "market_cap_gbp_b": 29.887,
+      "market_cap_gbp_b": 29.883,
       "beta": 3.176,
       "pe_ratio": 119.51,
       "avg_volume_m": 7.25,
@@ -2820,9 +2784,9 @@
       "short_pct": 6.83,
       "analyst": "strong_buy",
       "analyst_score": 1.33,
-      "vol_1d": 7386007,
-      "vol_1w": 53971507,
-      "vol_1m": 166451707,
+      "vol_1d": 7420666,
+      "vol_1w": 54006166,
+      "vol_1m": 166486366,
       "news": [
         {
           "title": "Wall Street delivers a surprising verdict on Credo stock",
@@ -2877,7 +2841,7 @@
       "low_gbp": "8.66",
       "high_gbp": "79",
       "bar_pct": 87,
-      "market_cap_gbp_b": 6.285,
+      "market_cap_gbp_b": 6.284,
       "beta": 3.964,
       "pe_ratio": null,
       "avg_volume_m": 4.14,
@@ -2885,9 +2849,9 @@
       "short_pct": 4.7,
       "analyst": "buy",
       "analyst_score": 1.82,
-      "vol_1d": 3466729,
-      "vol_1w": 30395629,
-      "vol_1m": 115575929,
+      "vol_1d": 3558864,
+      "vol_1w": 30487764,
+      "vol_1m": 115668064,
       "news": [
         {
           "title": "MaxLinear (MXL) Valuation Check After New AI Networking And 5G Collaboration Announcements",
@@ -2942,7 +2906,7 @@
       "low_gbp": "114",
       "high_gbp": "276",
       "bar_pct": 88,
-      "market_cap_gbp_b": 43.642,
+      "market_cap_gbp_b": 43.636,
       "beta": 1.261,
       "pe_ratio": 55.34,
       "avg_volume_m": 1.48,
@@ -3007,7 +2971,7 @@
       "low_gbp": "6.76",
       "high_gbp": "45",
       "bar_pct": 86,
-      "market_cap_gbp_b": 9.779,
+      "market_cap_gbp_b": 9.777,
       "beta": 1.233,
       "pe_ratio": null,
       "avg_volume_m": 6.48,
@@ -3072,7 +3036,7 @@
       "low_gbp": "1.24",
       "high_gbp": "107",
       "bar_pct": 74,
-      "market_cap_gbp_b": 5.166,
+      "market_cap_gbp_b": 5.165,
       "beta": 1.757,
       "pe_ratio": null,
       "avg_volume_m": 11.84,

@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-04 22:00",
-  "fx_gbp_usd": 1.3424,
+  "updated": "2026-06-04 23:00",
+  "fx_gbp_usd": 1.3426,
   "stocks": [
     {
       "ticker": "AMGN",
@@ -14,10 +14,10 @@ window.PRICES_DATA = {
       "change_1m": "+5.65%",
       "change_ytd": "+7.01%",
       "return_1yr": "+18%",
-      "low_gbp": "200",
+      "low_gbp": "199",
       "high_gbp": "291",
       "bar_pct": 63,
-      "market_cap_gbp_b": 138.943,
+      "market_cap_gbp_b": 138.932,
       "beta": 0.435,
       "pe_ratio": 24.05,
       "avg_volume_m": 2.59,
@@ -51,21 +51,21 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Honeywell Stock Is Likely to Reward Shareholders Following Quantinuum IPO, Split",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2305189/honeywell-stock-is-likely-to-reward-shareholders-following-quantinuum-ipo-split",
+          "published": 1780580102,
+          "sentiment": 0.572
+        },
+        {
           "title": "Dear Future Quantinuum Stock Investors, Mark Your Calendars for June 3",
           "publisher": "Barchart",
           "url": "https://www.barchart.com/story/news/2262493/dear-future-quantinuum-stock-investors-mark-your-calendars-for-june-3",
           "published": 1780414899,
           "sentiment": 0.382
-        },
-        {
-          "title": "ASCO 2026: Mixed SCLC result for Legend\u2019s LB2102, Novartis expedites manufacture",
-          "publisher": "Pharmaceutical Technology",
-          "url": "https://www.pharmaceutical-technology.com/analyst-comment/asco-2026-mixed-sclc-result-for-legends-lb2102-novartis-expedites-manufacture/",
-          "published": 1780414086,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.188
+      "news_sentiment": 0.302
     },
     {
       "ticker": "GILD",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "78",
       "high_gbp": "117",
       "bar_pct": 47,
-      "market_cap_gbp_b": 119.473,
+      "market_cap_gbp_b": 119.464,
       "beta": 0.332,
       "pe_ratio": 17.58,
       "avg_volume_m": 6.12,
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "355",
       "high_gbp": "612",
       "bar_pct": 44,
-      "market_cap_gbp_b": 49.101,
+      "market_cap_gbp_b": 49.097,
       "beta": 0.296,
       "pe_ratio": 15.35,
       "avg_volume_m": 0.83,
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "270",
       "high_gbp": "378",
       "bar_pct": 54,
-      "market_cap_gbp_b": 83.516,
+      "market_cap_gbp_b": 83.51,
       "beta": 0.301,
       "pe_ratio": 26.25,
       "avg_volume_m": 1.31,
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "90",
       "high_gbp": "153",
       "bar_pct": 89,
-      "market_cap_gbp_b": 21.605,
+      "market_cap_gbp_b": 21.603,
       "beta": 0.195,
       "pe_ratio": 21.1,
       "avg_volume_m": 1.16,
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "32",
       "high_gbp": "47",
       "bar_pct": 69,
-      "market_cap_gbp_b": 86.098,
+      "market_cap_gbp_b": 86.091,
       "beta": 0.259,
       "pe_ratio": 15.85,
       "avg_volume_m": 11.57,
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "58",
       "bar_pct": 48,
-      "market_cap_gbp_b": 4.092,
+      "market_cap_gbp_b": 4.091,
       "beta": 1.74,
       "pe_ratio": null,
       "avg_volume_m": 1.92,
@@ -664,7 +664,7 @@ window.PRICES_DATA = {
       "change_1m": "+10.82%",
       "change_ytd": "+60.15%",
       "return_1yr": "+72%",
-      "low_gbp": "5.45",
+      "low_gbp": "5.44",
       "high_gbp": "21",
       "bar_pct": 36,
       "market_cap_gbp_b": 1.535,
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "61",
       "high_gbp": "128",
       "bar_pct": 95,
-      "market_cap_gbp_b": 18.941,
+      "market_cap_gbp_b": 18.94,
       "beta": 1.424,
       "pe_ratio": 30.56,
       "avg_volume_m": 1.61,
@@ -824,6 +824,13 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Honeywell Stock Is Likely to Reward Shareholders Following Quantinuum IPO, Split",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2305189/honeywell-stock-is-likely-to-reward-shareholders-following-quantinuum-ipo-split",
+          "published": 1780580102,
+          "sentiment": 0.572
+        },
+        {
           "title": "Is Illumina\u2019s (ILMN) Deeper IDT DRAGEN Tie-Up Quietly Rewriting Its Oncology Software Edge?",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/illumina-ilmn-deeper-idt-dragen-191328386.html",
@@ -836,16 +843,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/biomarin-bmrn-0-2-since-153005342.html",
           "published": 1780500605,
           "sentiment": 0.0
-        },
-        {
-          "title": "ILMN Stock Jumps 98.7% in a Year: What's Powering the Surge?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/ilmn-stock-jumps-98-7-145200538.html",
-          "published": 1780498320,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.114
     },
     {
       "ticker": "PACB",
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "98",
       "high_gbp": "191",
       "bar_pct": 72,
-      "market_cap_gbp_b": 23.694,
+      "market_cap_gbp_b": 23.692,
       "beta": 1.567,
       "pe_ratio": null,
       "avg_volume_m": 1.44,
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "84",
       "bar_pct": 76,
-      "market_cap_gbp_b": 15.067,
+      "market_cap_gbp_b": 15.065,
       "beta": 0.797,
       "pe_ratio": 14.3,
       "avg_volume_m": 1.49,
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "25",
       "high_gbp": "39",
       "bar_pct": 98,
-      "market_cap_gbp_b": 9.828,
+      "market_cap_gbp_b": 9.827,
       "beta": 0.385,
       "pe_ratio": 17.38,
       "avg_volume_m": 2.65,
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "211",
       "high_gbp": "369",
       "bar_pct": 10,
-      "market_cap_gbp_b": 30.198,
+      "market_cap_gbp_b": 30.196,
       "beta": 0.302,
       "pe_ratio": 76.29,
       "avg_volume_m": 1.1,
@@ -1214,13 +1214,6 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Weakness in Technology Stocks Pressures Stock Indexes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2306224/weakness-in-technology-stocks-pressures-stock-indexes",
-          "published": 1780582239,
-          "sentiment": -0.625
-        },
-        {
           "title": "Alnylam, Inceptive ink AI deal potentially worth $2B",
           "publisher": "BioPharma Dive",
           "url": "https://www.biopharmadive.com/news/alnylam-inceptive-ai-drug-discovery-rna-deal-artificial-intelligence/822008/",
@@ -1233,9 +1226,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/options/articles/options-traders-betting-big-move-185500974.html",
           "published": 1780167300,
           "sentiment": 0.0
+        },
+        {
+          "title": "JPMorgan says large-cap biotech is back as profits and pipelines fuel upside",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/sectors/healthcare/articles/jpmorgan-says-large-cap-biotech-202717913.html",
+          "published": 1780000037,
+          "sentiment": 0.44
         }
       ],
-      "news_sentiment": -0.08
+      "news_sentiment": 0.133
     },
     {
       "ticker": "RCUS",
@@ -1317,7 +1317,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "44",
       "bar_pct": 79,
-      "market_cap_gbp_b": 15.248,
+      "market_cap_gbp_b": 15.247,
       "beta": 1.056,
       "pe_ratio": null,
       "avg_volume_m": 7.02,
@@ -1382,7 +1382,7 @@ window.PRICES_DATA = {
       "low_gbp": "59",
       "high_gbp": "92",
       "bar_pct": 23,
-      "market_cap_gbp_b": 16.877,
+      "market_cap_gbp_b": 16.875,
       "beta": 1.371,
       "pe_ratio": null,
       "avg_volume_m": 1.2,
@@ -1512,7 +1512,7 @@ window.PRICES_DATA = {
       "low_gbp": "37",
       "high_gbp": "49",
       "bar_pct": 42,
-      "market_cap_gbp_b": 8.131,
+      "market_cap_gbp_b": 8.13,
       "beta": 0.229,
       "pe_ratio": 40.63,
       "avg_volume_m": 2.05,
@@ -1679,7 +1679,7 @@ window.PRICES_DATA = {
       "low_gbp": "26",
       "high_gbp": "61",
       "bar_pct": 19,
-      "market_cap_gbp_b": 144.37,
+      "market_cap_gbp_b": 144.359,
       "beta": 0.348,
       "pe_ratio": 10.25,
       "avg_volume_m": 16.42,
@@ -1744,7 +1744,7 @@ window.PRICES_DATA = {
       "low_gbp": "465",
       "high_gbp": "856",
       "bar_pct": 95,
-      "market_cap_gbp_b": 747.48,
+      "market_cap_gbp_b": 747.42,
       "beta": 0.481,
       "pe_ratio": 39.96,
       "avg_volume_m": 3.1,
@@ -1760,7 +1760,7 @@ window.PRICES_DATA = {
           "title": "Dow Jones Hits High, AI Stocks Shrug Off Broadcom, Ciena Sell-Offs; Jobs Report Looms",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-stocks-broadcom-ciena-jobs-report/?src=A00220&yptr=yahoo",
-          "published": 1780605919,
+          "published": 1780608463,
           "sentiment": -0.153
         },
         {
@@ -1769,6 +1769,13 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/601404/lly-stock-where-compounding-could-take-the-price/2026-06-04",
           "published": 1780604608,
           "sentiment": 0.0
+        },
+        {
+          "title": "Top Analyst Reports for Berkshire Hathaway, Eli Lilly & Walmart",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/top-analyst-reports-berkshire-hathaway-202100807.html",
+          "published": 1780604460,
+          "sentiment": 0.202
         },
         {
           "title": "Sector Update: Healthcare Stocks Climb Late Afternoon",
@@ -1783,16 +1790,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-broadcom-drags-on-nasdaq-at-midday/",
           "published": 1780592355,
           "sentiment": -0.178
-        },
-        {
-          "title": "Eli Lilly, IBD Stock Of The Day, Flashes Two Buy Signals",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/research/ibd-stock-of-the-day/eli-lilly-stock-buy-point-weight-loss-drugs-gene-editing-vaccines-cancer-drugs/?src=A00220&yptr=yahoo",
-          "published": 1780588624,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.066
+      "news_sentiment": -0.026
     },
     {
       "ticker": "LEGN",
@@ -1874,7 +1874,7 @@ window.PRICES_DATA = {
       "low_gbp": "26",
       "high_gbp": "65",
       "bar_pct": 78,
-      "market_cap_gbp_b": 9.249,
+      "market_cap_gbp_b": 9.248,
       "beta": 0.383,
       "pe_ratio": null,
       "avg_volume_m": 1.94,

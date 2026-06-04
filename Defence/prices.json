@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-04 22:01",
-  "fx_gbp_usd": 1.3424,
+  "updated": "2026-06-04 23:00",
+  "fx_gbp_usd": 1.3426,
   "stocks": [
     {
       "ticker": "LMT",
@@ -17,7 +17,7 @@
       "low_gbp": "305",
       "high_gbp": "515",
       "bar_pct": 39,
-      "market_cap_gbp_b": 89.146,
+      "market_cap_gbp_b": 89.139,
       "beta": 0.1,
       "pe_ratio": 25.16,
       "avg_volume_m": 1.48,
@@ -82,7 +82,7 @@
       "low_gbp": "101",
       "high_gbp": "160",
       "bar_pct": 56,
-      "market_cap_gbp_b": 179.977,
+      "market_cap_gbp_b": 179.962,
       "beta": 0.301,
       "pe_ratio": 33.66,
       "avg_volume_m": 5.38,
@@ -94,6 +94,13 @@
       "vol_1w": 26468263,
       "vol_1m": 123877563,
       "news": [
+        {
+          "title": "RTX Stock Rises After Catching an Upgrade. Why This Analyst Is Bullish.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/rtx-stock-price-upgrade-jefferies-44ba79f0?siteid=yhoof2&yptr=yahoo",
+          "published": 1780605840,
+          "sentiment": 0.0
+        },
         {
           "title": "RTX SPY-6 Radar Win Expands Naval Role And Long Term Appeal",
           "publisher": "Simply Wall St.",
@@ -109,28 +116,21 @@
           "sentiment": 0.494
         },
         {
-          "title": "Weakness in Technology Stocks Pressures Stock Indexes",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2306224/weakness-in-technology-stocks-pressures-stock-indexes",
-          "published": 1780582239,
-          "sentiment": -0.625
-        },
-        {
-          "title": "RTX Stock Rises After Catching an Upgrade. Why This Analyst Is Bullish.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/rtx-stock-price-upgrade-jefferies-44ba79f0?siteid=yhoof2&yptr=yahoo",
-          "published": 1780581900,
-          "sentiment": 0.0
-        },
-        {
           "title": "Broadcom downgraded, UnitedHealth upgraded: Wall Street's top analyst calls",
           "publisher": "The Fly",
           "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-downgraded-unitedhealth-upgraded-wall-135834606.html",
           "published": 1780581514,
           "sentiment": 0.202
+        },
+        {
+          "title": "How Is RTX Expanding Landing Gear Production to Support Growth?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/technology/articles/rtx-expanding-landing-gear-production-133800845.html",
+          "published": 1780580280,
+          "sentiment": 0.649
         }
       ],
-      "news_sentiment": 0.142
+      "news_sentiment": 0.396
     },
     {
       "ticker": "NOC",
@@ -147,7 +147,7 @@
       "low_gbp": "352",
       "high_gbp": "577",
       "bar_pct": 24,
-      "market_cap_gbp_b": 57.68,
+      "market_cap_gbp_b": 57.676,
       "beta": -0.113,
       "pe_ratio": 17.1,
       "avg_volume_m": 0.83,
@@ -212,7 +212,7 @@
       "low_gbp": "200",
       "high_gbp": "275",
       "bar_pct": 72,
-      "market_cap_gbp_b": 68.794,
+      "market_cap_gbp_b": 68.788,
       "beta": 0.345,
       "pe_ratio": 21.52,
       "avg_volume_m": 1.32,
@@ -277,7 +277,7 @@
       "low_gbp": "160",
       "high_gbp": "343",
       "bar_pct": 32,
-      "market_cap_gbp_b": 8.645,
+      "market_cap_gbp_b": 8.644,
       "beta": 0.287,
       "pe_ratio": 19.15,
       "avg_volume_m": 0.52,
@@ -342,7 +342,7 @@
       "low_gbp": "177",
       "high_gbp": "282",
       "bar_pct": 51,
-      "market_cap_gbp_b": 42.989,
+      "market_cap_gbp_b": 42.986,
       "beta": 0.746,
       "pe_ratio": 33.6,
       "avg_volume_m": 1.37,
@@ -407,7 +407,7 @@
       "low_gbp": "132",
       "high_gbp": "189",
       "bar_pct": 52,
-      "market_cap_gbp_b": 127.672,
+      "market_cap_gbp_b": 127.662,
       "beta": 1.207,
       "pe_ratio": 85.94,
       "avg_volume_m": 7.15,
@@ -667,7 +667,7 @@
       "low_gbp": "89",
       "high_gbp": "155",
       "bar_pct": 26,
-      "market_cap_gbp_b": 253.045,
+      "market_cap_gbp_b": 253.025,
       "beta": 1.521,
       "pe_ratio": 157.44,
       "avg_volume_m": 45.91,
@@ -732,7 +732,7 @@
       "low_gbp": "90",
       "high_gbp": "153",
       "bar_pct": 4,
-      "market_cap_gbp_b": 11.672,
+      "market_cap_gbp_b": 11.671,
       "beta": 0.57,
       "pe_ratio": 11.4,
       "avg_volume_m": 1.17,
@@ -797,7 +797,7 @@
       "low_gbp": "314",
       "high_gbp": "509",
       "bar_pct": 42,
-      "market_cap_gbp_b": 8.757,
+      "market_cap_gbp_b": 8.756,
       "beta": 0.538,
       "pe_ratio": 21.95,
       "avg_volume_m": 0.29,
@@ -927,7 +927,7 @@
       "low_gbp": "51",
       "high_gbp": "89",
       "bar_pct": 22,
-      "market_cap_gbp_b": 7.137,
+      "market_cap_gbp_b": 7.136,
       "beta": 0.319,
       "pe_ratio": 11.6,
       "avg_volume_m": 1.79,
@@ -992,7 +992,7 @@
       "low_gbp": "116",
       "high_gbp": "311",
       "bar_pct": 18,
-      "market_cap_gbp_b": 7.705,
+      "market_cap_gbp_b": 7.704,
       "beta": 1.355,
       "pe_ratio": null,
       "avg_volume_m": 1.41,
@@ -1057,7 +1057,7 @@
       "low_gbp": "28",
       "high_gbp": "100",
       "bar_pct": 27,
-      "market_cap_gbp_b": 8.856,
+      "market_cap_gbp_b": 8.855,
       "beta": 1.062,
       "pe_ratio": 372.94,
       "avg_volume_m": 4.26,
@@ -1187,7 +1187,7 @@
       "low_gbp": "55",
       "high_gbp": "76",
       "bar_pct": 62,
-      "market_cap_gbp_b": 11.799,
+      "market_cap_gbp_b": 11.798,
       "beta": 0.934,
       "pe_ratio": 17.38,
       "avg_volume_m": 1.4,
@@ -1252,7 +1252,7 @@
       "low_gbp": "19",
       "high_gbp": "112",
       "bar_pct": 75,
-      "market_cap_gbp_b": 51.723,
+      "market_cap_gbp_b": 51.719,
       "beta": 2.313,
       "pe_ratio": null,
       "avg_volume_m": 25.66,
@@ -1265,18 +1265,18 @@
       "vol_1m": 674139721,
       "news": [
         {
+          "title": "Redwire Has a Contract to Grow Strawberries in Space\u2014and Space Stocks Are Soaring Yet Again",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/redwire-stock-price-strawberries-space-1e3fb48b?siteid=yhoof2&yptr=yahoo",
+          "published": 1780605000,
+          "sentiment": 0.0
+        },
+        {
           "title": "Virgin Galactic Surges 14%, Rocket Lab Gains 6% as SpaceX IPO Roadshow Fuels the Space Trade",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/06/04/virgin-galactic-surges-14-rocket-lab-gains-6-as-spacex-ipo-roadshow-fuels-the-space-trade/",
           "published": 1780597155,
           "sentiment": 0.34
-        },
-        {
-          "title": "Redwire Has a Contract to Grow Strawberries in Space\u2014and Space Stocks Are Soaring Yet Again",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/redwire-stock-price-strawberries-space-1e3fb48b?siteid=yhoof2&yptr=yahoo",
-          "published": 1780595580,
-          "sentiment": 0.0
         },
         {
           "title": "Rocket Lab Stock Pops as Stifel Lifts Price Target to $132",
@@ -1317,7 +1317,7 @@
       "low_gbp": "3.65",
       "high_gbp": "39",
       "bar_pct": 82,
-      "market_cap_gbp_b": 11.556,
+      "market_cap_gbp_b": 11.555,
       "beta": 1.914,
       "pe_ratio": null,
       "avg_volume_m": 13.51,
@@ -1329,6 +1329,13 @@
       "vol_1w": 76732606,
       "vol_1m": 251211906,
       "news": [
+        {
+          "title": "Even a Rock-Solid Quarter Can\u2019t Keep Planet Labs Stock in Orbit",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/planet-labs-earnings-stock-price-2515677b?siteid=yhoof2&yptr=yahoo",
+          "published": 1780607220,
+          "sentiment": 0.0
+        },
         {
           "title": "Planet Labs (NYSE:PL) Delivers Impressive Q1 CY2026",
           "publisher": "StockStory",
@@ -1356,13 +1363,6 @@
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-04-2026/card/jobs-report-what-to-watch-the-rest-of-the-week-5aENcMb3yj8ewphdxf9H?siteid=yhoof2&yptr=yahoo",
           "published": 1780559641,
           "sentiment": 0.0
-        },
-        {
-          "title": "Planet Labs (PL) To Report Earnings Tomorrow: Here Is What To Expect",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pl-report-earnings-042058344.html",
-          "published": 1780460458,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.128
@@ -1382,7 +1382,7 @@
       "low_gbp": "21",
       "high_gbp": "100",
       "bar_pct": 75,
-      "market_cap_gbp_b": 31.019,
+      "market_cap_gbp_b": 31.017,
       "beta": 2.598,
       "pe_ratio": null,
       "avg_volume_m": 18.78,
@@ -1398,7 +1398,7 @@
           "title": "Redwire Has a Contract to Grow Strawberries in Space\u2014and Space Stocks Are Soaring Yet Again",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/redwire-stock-price-strawberries-space-1e3fb48b?siteid=yhoof2&yptr=yahoo",
-          "published": 1780595580,
+          "published": 1780605000,
           "sentiment": 0.0
         },
         {
@@ -1447,7 +1447,7 @@
       "low_gbp": "837",
       "high_gbp": "1210",
       "bar_pct": 21,
-      "market_cap_gbp_b": 51.169,
+      "market_cap_gbp_b": 51.165,
       "beta": 0.879,
       "pe_ratio": 38.39,
       "avg_volume_m": 0.41,
@@ -1512,7 +1512,7 @@
       "low_gbp": "191",
       "high_gbp": "269",
       "bar_pct": 73,
-      "market_cap_gbp_b": 34.64,
+      "market_cap_gbp_b": 34.637,
       "beta": 0.953,
       "pe_ratio": 59.57,
       "avg_volume_m": 0.7,
@@ -1577,7 +1577,7 @@
       "low_gbp": "253",
       "high_gbp": "660",
       "bar_pct": 32,
-      "market_cap_gbp_b": 30.813,
+      "market_cap_gbp_b": 30.811,
       "beta": 1.435,
       "pe_ratio": 205.28,
       "avg_volume_m": 1.1,
@@ -1707,7 +1707,7 @@
       "low_gbp": "36",
       "high_gbp": "86",
       "bar_pct": 99,
-      "market_cap_gbp_b": 5.27,
+      "market_cap_gbp_b": 5.269,
       "beta": 0.83,
       "pe_ratio": null,
       "avg_volume_m": 0.6,
@@ -1719,6 +1719,13 @@
       "vol_1w": 4981396,
       "vol_1m": 15290596,
       "news": [
+        {
+          "title": "3 Russell 2000 Stocks We Think Twice About",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-russell-2000-stocks-think-214130925.html",
+          "published": 1780609290,
+          "sentiment": 0.0
+        },
         {
           "title": "Mercury Systems (MRCY) Up 21.7% Since Last Earnings Report: Can It Continue?",
           "publisher": "Zacks",
@@ -1746,13 +1753,6 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-revise-price-targets-mercury-061947044.html",
           "published": 1779862787,
           "sentiment": 0.0
-        },
-        {
-          "title": "Investment Advisor Trims Position in Financial Stock, According to Latest SEC Filing",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/filings/2026/05/20/investment-advisor-trims-position-in-financial-stock-according-to-latest-sec-filing/",
-          "published": 1779289132,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.102
@@ -1772,7 +1772,7 @@
       "low_gbp": "24",
       "high_gbp": "37",
       "bar_pct": 85,
-      "market_cap_gbp_b": 9.282,
+      "market_cap_gbp_b": 9.281,
       "beta": 0.027,
       "pe_ratio": 43.65,
       "avg_volume_m": 1.02,
