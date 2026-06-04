@@ -80,8 +80,8 @@ function buildDataBar() {
     '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
     '<span class="data-bar-sched">' + sched + '</span>';
 
-  // Inject at top of .container so it aligns with page content
-  const container = document.querySelector('.container');
+  // Inject at top of .container (or <main> on charts pages) so it aligns with page content
+  const container = document.querySelector('.container') || document.querySelector('main');
   if (container) {
     container.insertAdjacentElement('afterbegin', bar);
   } else {
