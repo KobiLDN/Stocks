@@ -6,6 +6,7 @@ All notable changes to this repository are documented here — **newest first**.
 
 | Date · time (BST) | AI Name | Where | Changed |
 |---|---|---|---|
+| 2026-06-05 | Claude Sonnet 4.6 (Claude Code) | Web | UX: **portfolio heatmap split — gainers left, losers right (local)** — holdings treemap replaced with two side-by-side Chart.js treemap instances; gainers sorted by 1D% desc (highest first), losers sorted by 1D% asc (worst on far right); halves sized proportionally by holding count; each half hidden if empty (`portfolio.py`). |
 | 2026-06-05 | Claude Sonnet 4.6 (Claude Code) | Web | UX: **portfolio.html light mode + dark toggle (local)** — light mode is now the default; `html[data-theme="dark"]` overrides to dark palette; flash-prevention script in `<head>`; ☾ Dark / ☀ Light button top-right; preference persisted in `localStorage` (`portfolio.py`). |
 | 2026-06-05 | Claude Sonnet 4.6 (Claude Code) | Web | UX: **portfolio chart shows positions value (local)** — "Portfolio Value Over Time" now plots `total_value − free_cash` (stock holdings only) vs cost basis; excludes idle cash so the gap = unrealised P&L (`portfolio.py`). |
 | 2026-06-05 | Claude Sonnet 4.6 (Claude Code) | Web | Fix: **portfolio ppl frozen across history records (local)** — `total_ppl` was sourced from `cash.get("result")` (T212 cash endpoint, appears static); now summed from per-position `ppl` values in `/equity/portfolio` response so it updates live each run (`portfolio.py`). |
