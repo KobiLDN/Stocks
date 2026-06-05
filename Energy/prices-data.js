@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-05 08:02",
-  "fx_gbp_usd": 1.3436,
+  "updated": "2026-06-05 12:33",
+  "fx_gbp_usd": 1.3473,
   "stocks": [
     {
       "ticker": "XOM",
@@ -9,7 +9,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "113",
       "price_usd": 152.04,
-      "change_1d": "-1.10%",
+      "change_1d": "+0.03%",
       "change_1w": "+3.46%",
       "change_1m": "-1.17%",
       "change_ytd": "+25.64%",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "131",
       "bar_pct": 67,
-      "market_cap_gbp_b": 469.037,
+      "market_cap_gbp_b": 467.758,
       "beta": 0.149,
       "pe_ratio": 25.6,
       "avg_volume_m": 20.49,
@@ -29,6 +29,13 @@ window.PRICES_DATA = {
       "vol_1w": 81324000,
       "vol_1m": 375296500,
       "news": [
+        {
+          "title": "A Post-Iran War View on Energy Investing",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/energy-investing-postwar-iran-oil-gas-outlook-and-stocks-strait-of-hormuz-edfc7346?siteid=yhoof2&yptr=yahoo",
+          "published": 1780644600,
+          "sentiment": -0.421
+        },
         {
           "title": "Brazil, Guyana, Venezuela Fuel South America\u2019s Oil Export Boom",
           "publisher": "Oilprice.com",
@@ -56,16 +63,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/601415/decoupling-exxons-production-growth-from-market-reality/2026-06-04",
           "published": 1780593936,
           "sentiment": 0.382
-        },
-        {
-          "title": "California loses Fortune 500 crown to Texas as billionaire tax threat looms",
-          "publisher": "Fox Business",
-          "url": "https://www.foxbusiness.com/economy/california-loses-fortune-500-crown-texas-billionaire-tax-threat-looms",
-          "published": 1780585951,
-          "sentiment": -0.743
         }
       ],
-      "news_sentiment": 0.028
+      "news_sentiment": 0.093
     },
     {
       "ticker": "CVX",
@@ -74,15 +74,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "140",
       "price_usd": 188.35,
-      "change_1d": "-0.87%",
+      "change_1d": "-0.29%",
       "change_1w": "+2.91%",
       "change_1m": "-1.33%",
       "change_ytd": "+23.11%",
       "return_1yr": "+39%",
-      "low_gbp": "103",
-      "high_gbp": "160",
+      "low_gbp": "102",
+      "high_gbp": "159",
       "bar_pct": 66,
-      "market_cap_gbp_b": 279.189,
+      "market_cap_gbp_b": 278.427,
       "beta": 0.472,
       "pe_ratio": 32.81,
       "avg_volume_m": 12.05,
@@ -94,6 +94,13 @@ window.PRICES_DATA = {
       "vol_1w": 42429000,
       "vol_1m": 215374200,
       "news": [
+        {
+          "title": "A Post-Iran War View on Energy Investing",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/energy-investing-postwar-iran-oil-gas-outlook-and-stocks-strait-of-hormuz-edfc7346?siteid=yhoof2&yptr=yahoo",
+          "published": 1780644600,
+          "sentiment": -0.421
+        },
         {
           "title": "How The Chevron (CVX) Story Is Shifting With New Analyst Targets And Oil Market Risks",
           "publisher": "Simply Wall St.",
@@ -121,33 +128,26 @@ window.PRICES_DATA = {
           "url": "https://www.foxbusiness.com/economy/california-loses-fortune-500-crown-texas-billionaire-tax-threat-looms",
           "published": 1780585951,
           "sentiment": -0.743
-        },
-        {
-          "title": "Chevron CEO sends blunt message on oil, the economy",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/economy/chevron-ceo-on-disciplined-oil-investment-prices-economy",
-          "published": 1780543020,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.122
+      "news_sentiment": -0.206
     },
     {
       "ticker": "SHEL",
       "company_name": "Shell",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "65",
+      "price_gbp": "64",
       "price_usd": 86.73,
-      "change_1d": "+0.03%",
+      "change_1d": "+2.04%",
       "change_1w": "+3.46%",
       "change_1m": "-2.45%",
       "change_ytd": "+17.09%",
       "return_1yr": "+28%",
       "low_gbp": "50",
-      "high_gbp": "71",
+      "high_gbp": "70",
       "bar_pct": 70,
-      "market_cap_gbp_b": 179.256,
+      "market_cap_gbp_b": 178.767,
       "beta": -0.248,
       "pe_ratio": 13.51,
       "avg_volume_m": 8.07,
@@ -204,7 +204,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "33",
       "price_usd": 44.04,
-      "change_1d": "+0.82%",
+      "change_1d": "+0.41%",
       "change_1w": "+5.89%",
       "change_1m": "-4.21%",
       "change_ytd": "+25.93%",
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 78,
-      "market_cap_gbp_b": 84.405,
+      "market_cap_gbp_b": 84.174,
       "beta": -0.239,
       "pe_ratio": 35.52,
       "avg_volume_m": 13.91,
@@ -224,6 +224,20 @@ window.PRICES_DATA = {
       "vol_1w": 39882500,
       "vol_1m": 192925400,
       "news": [
+        {
+          "title": "The Iran War Has Created Investing Opportunities. What the Pros Are Doing.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/advisor/articles/pros-energy-investments-oil-gas-renewables-in-wake-of-iran-war-strait-of-hormuz-closure-d7f372ac?siteid=yhoof2&yptr=yahoo",
+          "published": 1780644600,
+          "sentiment": -0.077
+        },
+        {
+          "title": "Did BP miss CRH warning signs before hiring Albert Manifold?",
+          "publisher": "Financial Times",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/did-bp-miss-crh-warning-040016191.html",
+          "published": 1780632016,
+          "sentiment": -0.459
+        },
         {
           "title": "BP Restructuring Under Meg O\u2019Neill Tests Valuation And Dividend Appeal",
           "publisher": "Simply Wall St.",
@@ -244,23 +258,9 @@ window.PRICES_DATA = {
           "url": "https://www.proactiveinvestors.com/companies/news/1093455/shell-bp-and-other-oil-giants-vulnerable-to-ceasefire-deal-says-jpmorgan-1093455.html",
           "published": 1780572420,
           "sentiment": -0.226
-        },
-        {
-          "title": "First Non-Associated Gas Flows at BP's ACG Field in the Caspian Sea",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/first-non-associated-gas-flows-145200166.html",
-          "published": 1780498320,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Mixed Pre-Bell Wednesday Amid Fresh Economic Signals",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131043541.html",
-          "published": 1780492243,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.018
+      "news_sentiment": -0.152
     },
     {
       "ticker": "TTE",
@@ -269,7 +269,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "67",
       "price_usd": 90.17,
-      "change_1d": "+1.30%",
+      "change_1d": "+1.12%",
       "change_1w": "+3.44%",
       "change_1m": "-3.66%",
       "change_ytd": "+37.03%",
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "70",
       "bar_pct": 89,
-      "market_cap_gbp_b": 149.066,
+      "market_cap_gbp_b": 148.659,
       "beta": 0.045,
       "pe_ratio": 13.38,
       "avg_volume_m": 1.94,
@@ -290,10 +290,10 @@ window.PRICES_DATA = {
       "vol_1m": 24653100,
       "news": [
         {
-          "title": "Main Oman Oil Terminal Has Resumed Operations After Blast",
+          "title": "Oman\u2019s Main Oil Terminal Resumes Operations After Explosion",
           "publisher": "Bloomberg",
           "url": "https://finance.yahoo.com/sectors/energy/articles/main-oman-oil-terminal-delays-034627875.html",
-          "published": 1780639254,
+          "published": 1780646161,
           "sentiment": 0.0
         },
         {
@@ -334,7 +334,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "28",
       "price_usd": 37.65,
-      "change_1d": "-0.37%",
+      "change_1d": "+0.13%",
       "change_1w": "+3.01%",
       "change_1m": "-8.04%",
       "change_ytd": "+57.00%",
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "32",
       "bar_pct": 73,
-      "market_cap_gbp_b": 69.805,
+      "market_cap_gbp_b": 69.614,
       "beta": -0.752,
       "pe_ratio": 17.04,
       "avg_volume_m": 6.82,
@@ -397,9 +397,9 @@ window.PRICES_DATA = {
       "company_name": "ConocoPhillips",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "89",
+      "price_gbp": "88",
       "price_usd": 119.23,
-      "change_1d": "-0.43%",
+      "change_1d": "+0.19%",
       "change_1w": "+3.69%",
       "change_1m": "-2.60%",
       "change_ytd": "+25.18%",
@@ -407,7 +407,7 @@ window.PRICES_DATA = {
       "low_gbp": "64",
       "high_gbp": "101",
       "bar_pct": 67,
-      "market_cap_gbp_b": 108.111,
+      "market_cap_gbp_b": 107.816,
       "beta": 0.106,
       "pe_ratio": 20.21,
       "avg_volume_m": 9.11,
@@ -464,7 +464,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "44",
       "price_usd": 58.67,
-      "change_1d": "-1.89%",
+      "change_1d": "-0.02%",
       "change_1w": "+2.36%",
       "change_1m": "-1.13%",
       "change_ytd": "+39.10%",
@@ -472,7 +472,7 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "50",
       "bar_pct": 69,
-      "market_cap_gbp_b": 43.432,
+      "market_cap_gbp_b": 43.314,
       "beta": 0.124,
       "pe_ratio": 79.28,
       "avg_volume_m": 16.1,
@@ -529,15 +529,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "105",
       "price_usd": 140.88,
-      "change_1d": "-0.75%",
+      "change_1d": "-0.01%",
       "change_1w": "+4.68%",
       "change_1m": "+0.04%",
       "change_ytd": "+33.61%",
       "return_1yr": "+27%",
-      "low_gbp": "76",
+      "low_gbp": "75",
       "high_gbp": "113",
       "bar_pct": 78,
-      "market_cap_gbp_b": 55.848,
+      "market_cap_gbp_b": 55.695,
       "beta": 0.256,
       "pe_ratio": 13.85,
       "avg_volume_m": 4.39,
@@ -592,17 +592,17 @@ window.PRICES_DATA = {
       "company_name": "Marathon Petroleum",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "199",
+      "price_gbp": "198",
       "price_usd": 267.05,
-      "change_1d": "-1.13%",
+      "change_1d": "-0.53%",
       "change_1w": "+6.25%",
       "change_1m": "+2.90%",
       "change_ytd": "+63.14%",
       "return_1yr": "+69%",
-      "low_gbp": "118",
-      "high_gbp": "203",
+      "low_gbp": "117",
+      "high_gbp": "202",
       "bar_pct": 95,
-      "market_cap_gbp_b": 58.025,
+      "market_cap_gbp_b": 57.866,
       "beta": 0.522,
       "pe_ratio": 17.57,
       "avg_volume_m": 2.55,
@@ -614,6 +614,20 @@ window.PRICES_DATA = {
       "vol_1w": 12096300,
       "vol_1m": 53505000,
       "news": [
+        {
+          "title": "Marathon Petroleum and DAQO New Energy have been highlighted as Zacks Bull and Bear of the Day",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/marathon-petroleum-daqo-energy-highlighted-093000692.html",
+          "published": 1780651800,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Bull of the Day: Marathon Petroleum (MPC)",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/bull-day-marathon-petroleum-mpc-083000468.html",
+          "published": 1780648200,
+          "sentiment": 0.0
+        },
         {
           "title": "How Is Marathon Petroleum's Stock Performance Compared to Other Oil Refiner Stocks?",
           "publisher": "Barchart",
@@ -634,40 +648,26 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-corporation-vlo-hit-131501259.html",
           "published": 1780578901,
           "sentiment": 0.273
-        },
-        {
-          "title": "Marathon Petroleum (MPC) Valuation Check After Strong Multi\u2011Month Share Price Gains",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-valuation-check-131253168.html",
-          "published": 1780492373,
-          "sentiment": 0.784
-        },
-        {
-          "title": "Can MPC's West Coast Assets Become a Bigger Earnings Driver?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/mpcs-west-coast-assets-become-130300868.html",
-          "published": 1780491780,
-          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.247
+      "news_sentiment": 0.109
     },
     {
       "ticker": "VLO",
       "company_name": "Valero Energy",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "193",
+      "price_gbp": "192",
       "price_usd": 258.85,
-      "change_1d": "-1.09%",
+      "change_1d": "+0.12%",
       "change_1w": "+5.72%",
       "change_1m": "+2.62%",
       "change_ytd": "+58.29%",
       "return_1yr": "+106%",
       "low_gbp": "95",
-      "high_gbp": "198",
+      "high_gbp": "197",
       "bar_pct": 95,
-      "market_cap_gbp_b": 57.205,
+      "market_cap_gbp_b": 57.049,
       "beta": 0.553,
       "pe_ratio": 18.91,
       "avg_volume_m": 3.65,
@@ -679,6 +679,13 @@ window.PRICES_DATA = {
       "vol_1w": 13717000,
       "vol_1m": 66075300,
       "news": [
+        {
+          "title": "Marathon Petroleum and DAQO New Energy have been highlighted as Zacks Bull and Bear of the Day",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/marathon-petroleum-daqo-energy-highlighted-093000692.html",
+          "published": 1780651800,
+          "sentiment": 0.273
+        },
         {
           "title": "Subsea7 Secures String Music Development Contract in the U.S. Gulf",
           "publisher": "Zacks",
@@ -706,13 +713,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-corporation-vlo-hit-131501259.html",
           "published": 1780578901,
           "sentiment": 0.273
-        },
-        {
-          "title": "Here's How Much You'd Have If You Invested $1000 in Valero Energy a Decade Ago",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-much-youd-invested-1000-123002501.html",
-          "published": 1780576202,
-          "sentiment": 0.273
         }
       ],
       "news_sentiment": 0.282
@@ -724,15 +724,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "43",
       "price_usd": 58.01,
-      "change_1d": "+1.77%",
+      "change_1d": "+0.50%",
       "change_1w": "+5.79%",
       "change_1m": "+4.13%",
       "change_ytd": "+45.92%",
       "return_1yr": "+72%",
-      "low_gbp": "24",
+      "low_gbp": "23",
       "high_gbp": "44",
       "bar_pct": 97,
-      "market_cap_gbp_b": 64.549,
+      "market_cap_gbp_b": 64.373,
       "beta": 0.708,
       "pe_ratio": 25.56,
       "avg_volume_m": 16.27,
@@ -744,6 +744,13 @@ window.PRICES_DATA = {
       "vol_1w": 77548900,
       "vol_1m": 280354000,
       "news": [
+        {
+          "title": "A Post-Iran War View on Energy Investing",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/energy-investing-postwar-iran-oil-gas-outlook-and-stocks-strait-of-hormuz-edfc7346?siteid=yhoof2&yptr=yahoo",
+          "published": 1780644600,
+          "sentiment": -0.421
+        },
         {
           "title": "SLB (SLB) Outpaces Stock Market Gains: What You Should Know",
           "publisher": "Zacks",
@@ -771,16 +778,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2298272/how-is-slb-n-v-s-stock-performance-compared-to-other-energy-stocks",
           "published": 1780564584,
           "sentiment": 0.273
-        },
-        {
-          "title": "Duolingo (DUOL) Up 5.7% Since Last Earnings Report: Can It Continue?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/duolingo-duol-5-7-since-153006591.html",
-          "published": 1780500606,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.022
+      "news_sentiment": -0.062
     },
     {
       "ticker": "HAL",
@@ -789,7 +789,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "31",
       "price_usd": 41.22,
-      "change_1d": "+1.33%",
+      "change_1d": "-0.01%",
       "change_1w": "+5.25%",
       "change_1m": "-0.78%",
       "change_ytd": "+40.53%",
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "15",
       "high_gbp": "32",
       "bar_pct": 90,
-      "market_cap_gbp_b": 25.629,
+      "market_cap_gbp_b": 25.559,
       "beta": 0.704,
       "pe_ratio": 22.77,
       "avg_volume_m": 14.57,
@@ -854,7 +854,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "49",
       "price_usd": 66.11,
-      "change_1d": "+1.72%",
+      "change_1d": "+0.17%",
       "change_1w": "+2.16%",
       "change_1m": "-2.46%",
       "change_ytd": "+41.24%",
@@ -862,7 +862,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "52",
       "bar_pct": 87,
-      "market_cap_gbp_b": 48.813,
+      "market_cap_gbp_b": 48.68,
       "beta": 0.938,
       "pe_ratio": 21.12,
       "avg_volume_m": 9.11,
@@ -874,6 +874,13 @@ window.PRICES_DATA = {
       "vol_1w": 38284300,
       "vol_1m": 173028400,
       "news": [
+        {
+          "title": "A Post-Iran War View on Energy Investing",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/energy-investing-postwar-iran-oil-gas-outlook-and-stocks-strait-of-hormuz-edfc7346?siteid=yhoof2&yptr=yahoo",
+          "published": 1780644600,
+          "sentiment": -0.421
+        },
         {
           "title": "This Baker Hughes Insider Reduced Their Stake By 100%",
           "publisher": "Simply Wall St.",
@@ -901,16 +908,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/baker-hughes-secures-long-term-130500193.html",
           "published": 1780319100,
           "sentiment": 0.318
-        },
-        {
-          "title": "New Strong Sell Stocks for June 1st",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-june-1st-085700599.html",
-          "published": 1780304220,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.065
+      "news_sentiment": -0.121
     },
     {
       "ticker": "NEE",
@@ -919,7 +919,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "64",
       "price_usd": 85.68,
-      "change_1d": "+0.84%",
+      "change_1d": "-0.21%",
       "change_1w": "-1.80%",
       "change_1m": "-11.01%",
       "change_ytd": "+6.59%",
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "73",
       "bar_pct": 59,
-      "market_cap_gbp_b": 132.997,
+      "market_cap_gbp_b": 132.634,
       "beta": 0.671,
       "pe_ratio": 21.75,
       "avg_volume_m": 10.38,
@@ -983,26 +983,26 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2388.0,
-      "change_1d": "+2.23%",
-      "change_1w": "-0.71%",
-      "change_1m": "-6.44%",
-      "change_ytd": "+7.04%",
+      "price_usd": 2403.0,
+      "change_1d": "+1.52%",
+      "change_1w": "+3.09%",
+      "change_1m": "-5.86%",
+      "change_ytd": "+7.71%",
       "return_1yr": "+35%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 68,
-      "market_cap_gbp_b": 0.288,
+      "bar_pct": 69,
+      "market_cap_gbp_b": 0.29,
       "beta": 0.596,
-      "pe_ratio": 22.74,
+      "pe_ratio": 22.89,
       "avg_volume_m": 4.1,
       "div_yield_pct": 288.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 7883312,
-      "vol_1w": 30067441,
-      "vol_1m": 112720824,
+      "vol_1d": 337360,
+      "vol_1w": 21199606,
+      "vol_1m": 113058184,
       "news": [
         {
           "title": "SSE PLC (SSEZF) Full Year 2026 Earnings Call Highlights: Record CapEx and Strategic Investments ...",
@@ -1049,7 +1049,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "51",
       "price_usd": 68.39,
-      "change_1d": "+0.66%",
+      "change_1d": "+0.41%",
       "change_1w": "-1.60%",
       "change_1m": "+89.87%",
       "change_ytd": "+102.64%",
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 89,
-      "market_cap_gbp_b": 6.709,
+      "market_cap_gbp_b": 6.69,
       "beta": 1.572,
       "pe_ratio": 67.71,
       "avg_volume_m": 7.34,
@@ -1114,15 +1114,15 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "234",
       "price_usd": 314.95,
-      "change_1d": "-0.33%",
+      "change_1d": "-0.04%",
       "change_1w": "+3.81%",
       "change_1m": "+43.56%",
       "change_ytd": "+14.80%",
       "return_1yr": "+94%",
       "low_gbp": "101",
-      "high_gbp": "239",
+      "high_gbp": "238",
       "bar_pct": 97,
-      "market_cap_gbp_b": 25.188,
+      "market_cap_gbp_b": 25.119,
       "beta": 1.692,
       "pe_ratio": 20.32,
       "avg_volume_m": 2.34,
@@ -1179,7 +1179,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "29",
       "price_usd": 38.83,
-      "change_1d": "+0.86%",
+      "change_1d": "-1.15%",
       "change_1w": "-1.62%",
       "change_1m": "+6.88%",
       "change_ytd": "-0.81%",
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "34",
       "bar_pct": 60,
-      "market_cap_gbp_b": 5.271,
+      "market_cap_gbp_b": 5.256,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1242,17 +1242,17 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "6.20",
+      "price_gbp": "6.18",
       "price_usd": 8.33,
       "change_1d": "-2.57%",
       "change_1w": "-1.54%",
       "change_1m": "-4.91%",
       "change_ytd": "+24.98%",
       "return_1yr": "-37%",
-      "low_gbp": "4.28",
+      "low_gbp": "4.27",
       "high_gbp": "25",
       "bar_pct": 9,
-      "market_cap_gbp_b": 24.571,
+      "market_cap_gbp_b": 24.504,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.15,
