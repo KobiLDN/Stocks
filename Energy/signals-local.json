@@ -1,9 +1,141 @@
 {
-  "updated": "2026-06-04 19:08",
+  "updated": "2026-06-05 11:49",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Massive YTD run of +63.14%, 1W +6.25%, low P/E of 17.6, positive news sentiment 0.247, and strong refining margins driven by oil supply tightness. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+63% YTD",
+        "P/E 17.6",
+        "+6.25% 1W",
+        "news sentiment 0.25"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Valero surged +106% over 1Y and +58% YTD with 1W momentum of +5.72%, low P/E 18.9, very positive news sentiment of 0.282, benefiting from elevated crack spreads. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+106% 1Y",
+        "+58% YTD",
+        "P/E 18.9",
+        "news sentiment 0.28"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SLB",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "SLB up +72% 1Y and +46% YTD, with strong 1M +4.13% and 1W +5.79%; analyst consensus is a buy with a low an_score of 1.62, and tight oil supply boosts demand for oilfield services. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+72% 1Y",
+        "an_score 1.62",
+        "+4.1% 1M",
+        "tight oil market catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Halliburton returned +106% over 1Y and +41% YTD, P/E 22.8, with a 1W gain of +5.25% and a low analyst score of 1.85; rising drilling activity supports further upside. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+106% 1Y",
+        "+5.25% 1W",
+        "P/E 22.8",
+        "oilfield services demand"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ENPH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Enphase up +102.6% YTD, +89.9% in the last month, with a recently doubled price target from TD Cowen; high short interest of 27.4% suggests further squeeze potential but high risk. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+103% YTD",
+        "+90% 1M",
+        "short interest 27.4%",
+        "price target doubled"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "FSLR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "First Solar up +94% 1Y and +14.8% YTD, with a strong 1M gain of +43.6%, P/E 20.3, positive news sentiment 0.285, and a beneficiary of clean energy demand and solar PPAs. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+94% 1Y",
+        "+43.6% 1M",
+        "P/E 20.3",
+        "clean energy tailwinds"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Exxon up +50% 1Y and +25.6% YTD, with a strong 1W bounce of +3.46%; Barclays raised target to $182 and Mizuho to $175, supported by warnings of oil hitting $160 on record-low inventories. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+50% 1Y",
+        "analyst target raised to $182",
+        "inventory shortage warning",
+        "P/E 25.6"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "EOG up +33.6% YTD, +4.68% 1W, with an attractive P/E of 13.9 and a buy consensus; positive news sentiment 0.131, benefiting from tight crude supply and low-cost production. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+33.6% YTD",
+        "P/E 13.9",
+        "+4.7% 1W",
+        "low-cost producer"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Occidental up +43% 1Y and +39.1% YTD, with a high P/E of 79.3 but low short interest of 0.02%; recent 8% post-earnings pop and positive news sentiment 0.095 support continued momentum. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+39% YTD",
+        "post-earnings +8.2%",
+        "low short 0.02%",
+        "oil price tailwind"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Brookfield Renewable, up +30% 1Y with a recent price target raise and strong news sentiment of 0.351, is supported by renewable energy tailwinds and its high 4% dividend yield. [fxleaders.com](https://www.fxleaders.com/news/2026/06/01/exxon-mobil-warns-oil-could-hit-160-as-global-inventories-near-unheard-of-lows/)",
+      "drivers": [
+        "+30% 1Y",
+        "dividend yield 4.0%",
+        "target raised",
+        "news sentiment 0.35"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,138 +264,6 @@
         "+10.72% 1M",
         "News sentiment 0.34",
         "AI power demand catalyst"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "ENPH",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "ENPH has surged +114% YTD and +122% in the last month, with a +14% one-day move, driven by strong clean energy momentum and a 27% short interest that could fuel further squeezes.",
-      "drivers": [
-        "+114% YTD",
-        "+122% 1M momentum",
-        "27% short interest",
-        "clean energy tailwinds"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "FSLR",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "FSLR shows +90% 1-year return, +47% 1-month momentum, and a P/E of 20 with strong analyst buy consensus and positive news sentiment, benefiting from solar demand and policy support.",
-      "drivers": [
-        "+90% 1Y return",
-        "+47% 1M momentum",
-        "P/E 20",
-        "analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "VLO has +93% 1-year return, +58% YTD, and strong 1W/1D momentum of +7%/+2.3%, with a P/E of 18.9 and positive news sentiment, driven by robust refining margins.",
-      "drivers": [
-        "+93% 1Y return",
-        "+58% YTD",
-        "strong 1W/1D momentum",
-        "refining margin tailwinds"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "MPC has +61% YTD, +60% 1-year return, and strong 1W/1D momentum of +6%/+1.6%, with a P/E of 17.3 and buy analyst consensus, benefiting from high refining margins.",
-      "drivers": [
-        "+61% YTD",
-        "+60% 1Y return",
-        "P/E 17.3",
-        "refining margin tailwinds"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "SLB has +62% 1-year return, +42% YTD, and a strong analyst score of 1.62 (buy), with recent digital acquisition Tachyus expanding its portfolio, despite slightly negative news sentiment.",
-      "drivers": [
-        "+62% 1Y return",
-        "+42% YTD",
-        "analyst score 1.62",
-        "digital acquisition catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "CVX has +23% YTD, +33% 1-year return, a P/E of 32.7, dividend yield of 3.8%, and strong analyst score of 1.84, with positive news sentiment and stable oil major fundamentals.",
-      "drivers": [
-        "+23% YTD",
-        "dividend yield 3.8%",
-        "analyst score 1.84",
-        "stable oil major"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SHEL has +17% YTD, +26% 1-year return, a P/E of 13.5, dividend yield of 3.7%, and buy analyst consensus, with LNG Canada Phase Two expansion approval as a catalyst.",
-      "drivers": [
-        "P/E 13.5",
-        "dividend yield 3.7%",
-        "LNG Canada expansion",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "OXY has +40% YTD, +38% 1-year return, and strong 1W momentum of +2.8%, with low short interest of 0.02%, though P/E is high at 79.9 and analyst consensus is hold.",
-      "drivers": [
-        "+40% YTD",
-        "+38% 1Y return",
-        "low short interest 0.02%",
-        "strong 1W momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BEPC has +12% 1-month momentum, a dividend yield of 4.0%, and positive news sentiment, though YTD is flat at +0.6% and analyst consensus is hold with a score of 2.83.",
-      "drivers": [
-        "+12% 1M momentum",
-        "dividend yield 4.0%",
-        "positive news sentiment",
-        "clean energy exposure"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DNNGY",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "DNNGY has +29% YTD recovery from a -35% 1-year decline, with a beta of 0.64 and positive news on offshore wind projects, though fundamentals are weak with no P/E or dividend.",
-      "drivers": [
-        "+29% YTD recovery",
-        "offshore wind catalyst",
-        "low beta 0.64",
-        "positive news sentiment"
       ]
     }
   ]

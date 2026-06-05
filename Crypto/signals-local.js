@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-04 19:07",
+  "updated": "2026-06-05 11:48",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "TRX is the only asset in the universe with positive YTD (+13.19%) and a 1Y return of +25%, with the shallowest 1D drawdown (-2.32%) and positive news sentiment (0.098) driven by a new gold-backed Visa card offering 6% cashback.",
+      "drivers": [
+        "+13.19% YTD",
+        "+25% 1Y return",
+        "lowest 1D decline",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "XLM has a strong 1Y return of +38% and positive 1M momentum (+19.01%), with MoneyGram's MGUSD stablecoin launch providing a live catalyst; the -26.59% 1W pullback is a buying opportunity in a risk-off market.",
+      "drivers": [
+        "+38% 1Y return",
+        "+19.01% 1M gain",
+        "MoneyGram stablecoin catalyst",
+        "positive news sentiment 0.036"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TON",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TON boasts a massive +130% 1Y return and positive news sentiment (0.191) from its Gram rebranding, though the -20.56% 1M decline reflects broad market weakness; its strong long-term trend makes it a high-conviction pick.",
+      "drivers": [
+        "+130% 1Y return",
+        "positive news sentiment 0.191",
+        "Gram rebrand catalyst",
+        "YTD -8.47% resilient"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "HBAR",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "HBAR has a +11% 1Y return and relatively mild 1D decline (-3.02%) amid the selloff, with Kalshi filing for HBAR perpetual futures as a catalyst; its -28.92% YTD is less severe than most altcoins.",
+      "drivers": [
+        "+11% 1Y return",
+        "Kalshi perp futures filing",
+        "moderate 1D decline",
+        "positive news sentiment 0.005"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BTC is the reference asset with the largest market cap (\u00a3922B) and positive news sentiment (0.084) from Coinbase crypto-backed mortgages; despite -30.56% YTD and -23.86% 1M, it is near key support at $60K-$62K with ETF outflows potentially reversing.",
+      "drivers": [
+        "largest market cap \u00a3922B",
+        "positive news sentiment 0.084",
+        "near $60K support",
+        "ETF outflow streak may end"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BNB has a flat 1Y return (+1%) and the shallowest 1M decline (-8.44%) among major L1s, with neutral news sentiment (0.0) and a large market cap (\u00a358B), offering relative stability in a downturn.",
+      "drivers": [
+        "shallowest 1M decline -8.44%",
+        "large market cap \u00a358B",
+        "neutral news sentiment",
+        "YTD -33.12% less severe"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "XRP has a -2% 1Y return and -40.73% YTD, but its 1D decline (-4.68%) is moderate and news sentiment (-0.12) is slightly negative; the Kalshi perpetual futures filing and Dave Portnoy commentary add speculative interest.",
+      "drivers": [
+        "moderate 1D decline",
+        "Kalshi perp futures filing",
+        "large market cap \u00a351.5B",
+        "speculative catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MATIC",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "MATIC shows flat returns across all timeframes (0.00% 1M/1W/1D) with positive news sentiment (0.118) from Meta paying creators in stablecoins, suggesting a stable base with potential for upside if market recovers.",
+      "drivers": [
+        "flat price action (0% changes)",
+        "positive news sentiment 0.118",
+        "Meta stablecoin catalyst",
+        "no downside momentum"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "LINK has a +2% 1Y return and a market cap of \u00a34B, with news sentiment (-0.031) near neutral; the Kalshi perp futures filing provides a catalyst, though -40.74% YTD and -23.62% 1M reflect broad weakness.",
+      "drivers": [
+        "+2% 1Y return",
+        "Kalshi perp futures filing",
+        "neutral news sentiment",
+        "\u00a34B market cap"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ALGO",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "ALGO has a +17% 1Y return and positive catalyst from its Robinhood US debut, but -21.76% YTD and -26.19% 1W show significant recent weakness; its small market cap (\u00a30.63B) offers high beta potential.",
+      "drivers": [
+        "+17% 1Y return",
+        "Robinhood US listing catalyst",
+        "small market cap high beta",
+        "positive long-term trend"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TON",
@@ -126,138 +258,6 @@ window.SIGNALS_DATA = {
         "moderate 1M -14.02% decline",
         "Kalshi futures catalyst",
         "contrarian high-risk entry"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "XLM",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "XLM shows exceptional momentum with +59% 1-year return, +5.16% YTD and +37.12% 1-month gain; MoneyGram's new stablecoin launch directly boosts Stellar's payments narrative.",
-      "drivers": [
-        "+59% 1y return",
-        "+37.12% 1m momentum",
-        "MoneyGram stablecoin launch",
-        "Payments network adoption"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BNB",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "BNB is the only top-10 asset with positive 1-month (+4.80%) and 1-week (+1.57%%) momentum; combined with +13% 1-year gain and neutral news sentiment (0.0) it stands out as a relative safe haven.",
-      "drivers": [
-        "+4.80% 1m gain",
-        "+1.57% 1w up",
-        "+13% 1y return",
-        "Low volatility"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "TRX has +28% 1-year return and +16.01% YTD\u2014the best YTD of any asset; positive news sentiment 0.098 with Securitize launching tokenized funds on TRON supports fundamentals.",
-      "drivers": [
-        "+16.01% YTD",
-        "+28% 1y return",
-        "Positive news sentiment 0.098",
-        "Institutional tokenization use case"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.66,
-      "rationale": "ALGO returned +40% over the past year and has relatively mild drawdowns with -6.76% YTD; Robinhood US listing significantly increases retail accessibility and trading volumes.",
-      "drivers": [
-        "+40% 1y return",
-        "Robinhood US listing",
-        "Resilient YTD -6.76%",
-        "Retail accessibility boost"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "LINK has a +14% 1-year return and \u00a34.5B market cap; Kalshi filing for perpetual futures including LINK adds speculative interest despite -7.17% 1w pullback.",
-      "drivers": [
-        "+14% 1y return",
-        "\u00a34.5B market cap",
-        "Kalshi perp futures filing",
-        "News sentiment -0.031 neutral"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TON has strong +47% 1-year return despite -13.06% YTD and negative news sentiment -0.542; its cost-effective, fast transaction execution is gaining traction in emerging markets and gaming.",
-      "drivers": [
-        "+47% 1y return",
-        "Emerging market adoption",
-        "Scalable L1 with low fees",
-        "Telegram integration catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HBAR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "HBAR returned +18% over the past year; Kalshi filing for HBAR perpetual futures may attract speculative capital despite -24.27% YTD and neutral news sentiment 0.005.",
-      "drivers": [
-        "+18% 1y return",
-        "Kalshi perp futures filing",
-        "Enterprise-grade DLT network",
-        "Low correlation to BTC"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "PEPE is a high-beta meme with zero price changes YTD/1m/1w due to stale data; any fresh catalyst could trigger outsized moves given its nil market cap baseline.",
-      "drivers": [
-        "Zero returns hysteresis",
-        "High-beta meme play",
-        "Potential catalyst dependency",
-        "Retail speculative asset"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SUI",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "SUI shows nil price history but has strong on-chain activity growth and developer VC backing; its innovative object-centric L1 design may lead to a rebound if market sentiment improves.",
-      "drivers": [
-        "Zero returns baseline",
-        "Object-centric L1 innovation",
-        "VC-backed development",
-        "Potential for strong recovery"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MATIC",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "MATIC's price data is stale but news sentiment is positive at 0.118; Meta paying creators in stablecoins via Polygon signals real enterprise adoption potential.",
-      "drivers": [
-        "Positive news sentiment 0.118",
-        "Meta creators stablecoin use",
-        "L2 scaling solution",
-        "Enterprise adoption catalyst"
       ]
     }
   ]

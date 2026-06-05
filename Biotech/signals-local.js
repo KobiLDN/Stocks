@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-04 19:05",
+  "updated": "2026-06-05 11:46",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Lilly posted a massive +56% revenue growth in Q1 2026, raised FY guidance to $82-85B, and launched Foundayo \u2014 the only approved GLP-1 pill without food/water restrictions \u2014 adding a potent near-term catalyst. +14% 1M, P/E 40, analyst consensus 'buy', fundamentals supported by broad pipeline progress.",
+      "drivers": [
+        "+56% Q1 revenue growth",
+        "Foundayo FDA approval",
+        "FY guidance raised by $2B",
+        "14% 1-month momentum"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Moderna has surged +67% YTD and +10.5% in the past month, driven by pipeline and respiratory vaccine momentum. Despite hold-rated analyst consensus (score 2.96), the momentum and news sentiment (0.19) are strong, and the stock is not overextended on beta (1.06).",
+      "drivers": [
+        "+67% YTD return",
+        "+10.5% 1-month gain",
+        "Resurgent vaccine pipeline",
+        "Low beta (1.06) for momentum"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NTLA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Intellia rocketed +15.2% on the day and +60% YTD ahead of its Phase 3 lonvo-Z study update, with positive news sentiment of 0.32 and a strong 'buy' consensus. High short interest (46.8%) adds squeeze potential, but the binary catalyst risk is significant.",
+      "drivers": [
+        "+60% YTD + Phase 3 catalyst",
+        "+15.2% one-day surge",
+        "Positive news sentiment (0.32)",
+        "High short interest (46.8%)"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Legend Biotech jumped +21% in the past week and +59% YTD following early in vivo CAR-T success in B-cell lymphoma. 'Buy' analyst consensus with a score of 1.60; the strong clinical catalyst supports continued momentum despite the -3.2% daily pullback.",
+      "drivers": [
+        "+21% weekly gain",
+        "+59% YTD",
+        "In vivo CAR-T catalyst",
+        "Strong buy consensus score (1.60)"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Illumina has rallied +108% over the past year and +25% YTD, with a +21% one-month gain reflecting robust sequencing demand. P/E of 30.6 reflects premium growth expectations; analyst consensus 'buy' at 2.37. Strong fundamentals in the genomics leader.",
+      "drivers": [
+        "+108% 1-year return",
+        "+21% monthly momentum",
+        "P/E 30.6 growth justified",
+        "Buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Beam Therapeutics soars +74% over 1 year and +21% YTD, with a strong_buy analyst score of 1.29 (best among gene-editing peers). +13.6% in the past month, positive news sentiment (0.26), and base editing platform optionality support a highly attractive risk/reward.",
+      "drivers": [
+        "+74% 1-year return",
+        "Strong_buy consensus (1.29)",
+        "+13.6% monthly momentum",
+        "Base editing platform"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "Novavax is up +43% YTD and +26% in the past month, driven by a revived vaccine franchise and new COVID/flu combination prospects. High short interest (27.7%) and no P/E reflect binary risk, but momentum and recent news point to operational improvement.",
+      "drivers": [
+        "+43% YTD",
+        "+26% monthly rally",
+        "High short interest (27.7%)",
+        "Vaccine pipeline momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.64,
+      "rationale": "Exelixis is up +20.5% YTD and +18.2% in the past month, underpinned by solid oncology pipeline execution. Attractive P/E of 17.4 with low beta (0.39) provides a defensive growth profile; analyst 'buy' consensus at 2.10 suggests continued upside.",
+      "drivers": [
+        "+20% YTD",
+        "+18% monthly growth",
+        "Low P/E (17.4) + low beta",
+        "Oncology franchise strength"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "RXRX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Recursion climbed +12.8% in the past month and +11.4% in a single day ahead of business updates, with positive news sentiment of 0.15. The AI-driven drug discovery platform has high optionality; lack of analyst consensus is a risk, but momentum is strong.",
+      "drivers": [
+        "+12.8% monthly momentum",
+        "+11.4% one-day surge",
+        "AI platform catalyst",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Regeneron delivered a positive Q1 beat ($9.47 EPS vs $8.52 est) with 19% revenue growth, Dupixent sales up 33%, and positive Phase 3 cemdisiran data in gMG. Trading at 15.4x P/E with 'buy' consensus (1.72); tariff deal removal and Eylea HD momentum de-risk valuation.",
+      "drivers": [
+        "Q1 earnings beat +19% rev growth",
+        "Cemdisiran Phase 3 win",
+        "Low P/E (15.4)",
+        "Tariff overhang removed"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LEGN",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "AI pipeline progress",
         "positive sentiment",
         "speculative"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Strong 1M momentum (+10.13%), massive \u00a3704bn market cap, low short interest (0.95%), 'buy' consensus (score 1.74). Recent news highlights potential competitive risk from Viking Therapeutics in weight loss, but LLY's dominant metabolic pipeline and '44%' 1-year return underscore resilience.",
-      "drivers": [
-        "1M +10.13%",
-        "market cap \u00a3704bn",
-        "short interest 0.95%",
-        "buy consensus 1.74"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M momentum (+27.15%) and YTD (+43.20%) very strong, notable news 'Why Novavax Stock Is Trading Up Today' suggests positive catalyst. High short interest (27.71%) adds squeeze potential, but beta 2.369 and no P/E reflect binary risk.",
-      "drivers": [
-        "1M +27.15%",
-        "YTD +43.20%",
-        "short interest 27.71%",
-        "positive news catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LEGN",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Exceptional short-term momentum: 1M +36.91%, 1W +22.86%, 1D +1.55%. YTD +68.67% driven by 100% success rate in cancer trial. Analyst consensus 'buy' with score 1.6, and low beta 0.297. High short interest (19.64%) may amplify upside.",
-      "drivers": [
-        "1M +36.91%",
-        "1W +22.86%",
-        "YTD +68.67%",
-        "100% cancer trial success"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +16.63%, 1W +11.93%, YTD +20.99% with 1-year return +101%. Positive news sentiment 0.449, P/E 29.5 sustainable. Analyst 'buy' consensus (score 2.3). Genomics category leader.",
-      "drivers": [
-        "1M +16.63%",
-        "YTD +20.99%",
-        "news sentiment 0.449",
-        "1-year return +101%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +11.38% and 1M +9.89% momentum, attractively valued with P/E 16.07. 'Buy' consensus (score 2.1) and low beta 0.385. Short interest 16.38% is elevated but manageable. News sentiment positive at 0.151.",
-      "drivers": [
-        "1M +9.89%",
-        "YTD +11.38%",
-        "P/E 16.07",
-        "beta 0.385"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Large-cap with \u00a3131bn cap, YTD +1.65% and 1M +2.13%. P/E 22.83 reasonable, dividend yield 306p. Analyst 'buy' consensus (score 2.46) and low beta 0.435. News sentiment slightly positive 0.021.",
-      "drivers": [
-        "market cap \u00a3131bn",
-        "P/E 22.83",
-        "analyst buy consensus",
-        "low beta 0.435"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1-year return +46%, YTD +6.19%, 1M +0.87%. Despite ending BIIB122 trial, refocus on neurodegeneration pipeline is positive. Analyst 'buy' consensus (score 2.0), P/E 20.3, beta 0.195 provides stability.",
-      "drivers": [
-        "1-year return +46%",
-        "YTD +6.19%",
-        "P/E 20.3",
-        "analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Strong 1W momentum +21.55% and 1M +2.56%. Beta 1.047 moderate for AI-driven biotech. News sentiment positive 0.079. High short interest (36.84%) could create squeeze potential. No analyst score yet reflects early stage.",
-      "drivers": [
-        "1W +21.55%",
-        "short interest 36.84%",
-        "beta 1.047",
-        "news sentiment 0.079"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "PACB",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1W momentum +25.40%, 1D +1.90%. 1-year return +50%. Beta 2.4 indicates high volatility. Analyst 'buy' consensus (score 2.0). Short interest 22.18% provides squeeze risk/reward. YTD -14.13% but weekly recovery notable.",
-      "drivers": [
-        "1W +25.40%",
-        "beta 2.4",
-        "analyst buy consensus",
-        "short interest 22.18%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "COAG",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "1M momentum +8.41% and 1D +5.61%. Strongest analyst consensus 'strong_buy' with score 1.0. Low market cap \u00a30.95bn small-cap. News sentiment -0.273 but IPO-related risks may be priced in. Pipeline-focused rare disease play.",
-      "drivers": [
-        "1M +8.41%",
-        "1D +5.61%",
-        "analyst score 1.0",
-        "pipeline catalyst"
       ]
     }
   ]
