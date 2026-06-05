@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-04 23:01",
-  "fx_gbp_usd": 1.3427,
+  "updated": "2026-06-05 08:02",
+  "fx_gbp_usd": 1.3436,
   "stocks": [
     {
       "ticker": "XOM",
@@ -17,18 +17,25 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "131",
       "bar_pct": 67,
-      "market_cap_gbp_b": 469.346,
-      "beta": 0.183,
-      "pe_ratio": 25.64,
+      "market_cap_gbp_b": 469.037,
+      "beta": 0.149,
+      "pe_ratio": 25.6,
       "avg_volume_m": 20.49,
-      "div_yield_pct": 270.0,
+      "div_yield_pct": 271.0,
       "short_pct": 1.1,
       "analyst": "buy",
       "analyst_score": 2.36,
-      "vol_1d": 11767814,
-      "vol_1w": 81295214,
-      "vol_1m": 375267714,
+      "vol_1d": 11796600,
+      "vol_1w": 81324000,
+      "vol_1m": 375296500,
       "news": [
+        {
+          "title": "Brazil, Guyana, Venezuela Fuel South America\u2019s Oil Export Boom",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/brazil-guyana-venezuela-fuel-south-230000460.html",
+          "published": 1780614000,
+          "sentiment": 0.0
+        },
         {
           "title": "Exxon Mobil Corporation (XOM) Among the Best Low Cost Stocks to Buy Now",
           "publisher": "Insider Monkey",
@@ -56,13 +63,6 @@ window.PRICES_DATA = {
           "url": "https://www.foxbusiness.com/economy/california-loses-fortune-500-crown-texas-billionaire-tax-threat-looms",
           "published": 1780585951,
           "sentiment": -0.743
-        },
-        {
-          "title": "Is $150 Oil Really Possible in Two or Three Weeks?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/04/is-150-oil-possible-in-two-or-three-weeks/",
-          "published": 1780579959,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.028
@@ -79,21 +79,28 @@ window.PRICES_DATA = {
       "change_1m": "-1.33%",
       "change_ytd": "+23.11%",
       "return_1yr": "+39%",
-      "low_gbp": "102",
+      "low_gbp": "103",
       "high_gbp": "160",
       "bar_pct": 66,
-      "market_cap_gbp_b": 279.372,
-      "beta": 0.501,
-      "pe_ratio": 32.76,
+      "market_cap_gbp_b": 279.189,
+      "beta": 0.472,
+      "pe_ratio": 32.81,
       "avg_volume_m": 12.05,
-      "div_yield_pct": 375.0,
+      "div_yield_pct": 378.0,
       "short_pct": 1.01,
       "analyst": "buy",
       "analyst_score": 1.84,
-      "vol_1d": 5153211,
-      "vol_1w": 42423711,
-      "vol_1m": 215368911,
+      "vol_1d": 5158500,
+      "vol_1w": 42429000,
+      "vol_1m": 215374200,
       "news": [
+        {
+          "title": "How The Chevron (CVX) Story Is Shifting With New Analyst Targets And Oil Market Risks",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/chevron-cvx-story-shifting-analyst-060816756.html",
+          "published": 1780639696,
+          "sentiment": -0.273
+        },
         {
           "title": "Chevron (CVX)\u2019s CEO Say\u2019s Venezuela Needs to Lower Taxes For the Company Invests Fresh Capital",
           "publisher": "Insider Monkey",
@@ -121,16 +128,9 @@ window.PRICES_DATA = {
           "url": "https://www.thestreet.com/economy/chevron-ceo-on-disciplined-oil-investment-prices-economy",
           "published": 1780543020,
           "sentiment": 0.0
-        },
-        {
-          "title": "Wall Street ends lower as Middle East tensions escalate",
-          "publisher": "Reuters Videos",
-          "url": "https://finance.yahoo.com/video/wall-street-ends-lower-middle-230740370.html",
-          "published": 1780528060,
-          "sentiment": -0.599
         }
       ],
-      "news_sentiment": -0.187
+      "news_sentiment": -0.122
     },
     {
       "ticker": "SHEL",
@@ -147,17 +147,17 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "71",
       "bar_pct": 70,
-      "market_cap_gbp_b": 179.419,
-      "beta": -0.24,
+      "market_cap_gbp_b": 179.256,
+      "beta": -0.248,
       "pe_ratio": 13.51,
       "avg_volume_m": 8.07,
       "div_yield_pct": 360.0,
       "short_pct": 1.83,
       "analyst": "buy",
       "analyst_score": 2.06,
-      "vol_1d": 7532361,
-      "vol_1w": 36557980,
-      "vol_1m": 166306689,
+      "vol_1d": 8666992,
+      "vol_1w": 37922513,
+      "vol_1m": 167671222,
       "news": [
         {
           "title": "Here\u2019s What Piper Sandler\u2019s Note Means for Shell Plc (SHEL)",
@@ -212,18 +212,25 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 78,
-      "market_cap_gbp_b": 84.46,
-      "beta": -0.219,
+      "market_cap_gbp_b": 84.405,
+      "beta": -0.239,
       "pe_ratio": 35.52,
       "avg_volume_m": 13.91,
-      "div_yield_pct": 457.0,
+      "div_yield_pct": 453.0,
       "short_pct": 0.67,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 5294850,
-      "vol_1w": 39498050,
-      "vol_1m": 192540950,
+      "vol_1d": 5679300,
+      "vol_1w": 39882500,
+      "vol_1m": 192925400,
       "news": [
+        {
+          "title": "BP Restructuring Under Meg O\u2019Neill Tests Valuation And Dividend Appeal",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/bp-restructuring-under-meg-o-221057635.html",
+          "published": 1780611057,
+          "sentiment": 0.0
+        },
         {
           "title": "Here is What to Know Beyond Why BP p.l.c. (BP) is a Trending Stock",
           "publisher": "Zacks",
@@ -251,16 +258,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131043541.html",
           "published": 1780492243,
           "sentiment": 0.318
-        },
-        {
-          "title": "US Equity Futures Mixed Pre-Bell as US, Iran Continue Military Strikes in Middle East",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-mixed-pre-130425715.html",
-          "published": 1780491865,
-          "sentiment": -0.361
         }
       ],
-      "news_sentiment": -0.054
+      "news_sentiment": 0.018
     },
     {
       "ticker": "TTE",
@@ -277,18 +277,25 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "70",
       "bar_pct": 89,
-      "market_cap_gbp_b": 149.164,
-      "beta": 0.059,
+      "market_cap_gbp_b": 149.066,
+      "beta": 0.045,
       "pe_ratio": 13.38,
       "avg_volume_m": 1.94,
-      "div_yield_pct": 471.0,
+      "div_yield_pct": 468.0,
       "short_pct": 0.19,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 993438,
-      "vol_1w": 6189338,
-      "vol_1m": 24421238,
+      "vol_1d": 1225300,
+      "vol_1w": 6421200,
+      "vol_1m": 24653100,
       "news": [
+        {
+          "title": "Main Oman Oil Terminal Has Resumed Operations After Blast",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/main-oman-oil-terminal-delays-034627875.html",
+          "published": 1780639254,
+          "sentiment": 0.0
+        },
         {
           "title": "TotalEnergies SE (TTE) Files for Authorization to Build 1.5 GW Offshore Wind Farm in France",
           "publisher": "Insider Monkey",
@@ -316,16 +323,9 @@ window.PRICES_DATA = {
           "url": "https://app.moby.co/home/news/news-blue-states-are-suing-trump-for-blowing-off-wind-projects?utm_source=yahoo_finance&utm_medium=rss",
           "published": 1780513287,
           "sentiment": -0.273
-        },
-        {
-          "title": "TotalEnergies Wins Approval To Exit 10% Arctic LNG 2 Stake",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/totalenergies-wins-approval-exit-10-161036636.html",
-          "published": 1780503036,
-          "sentiment": 0.778
         }
       ],
-      "news_sentiment": 0.231
+      "news_sentiment": 0.075
     },
     {
       "ticker": "EQNR",
@@ -342,17 +342,17 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "32",
       "bar_pct": 73,
-      "market_cap_gbp_b": 69.851,
-      "beta": -0.723,
+      "market_cap_gbp_b": 69.805,
+      "beta": -0.752,
       "pe_ratio": 17.04,
       "avg_volume_m": 6.82,
-      "div_yield_pct": 401.0,
+      "div_yield_pct": 404.0,
       "short_pct": 2.92,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 2640137,
-      "vol_1w": 15719137,
-      "vol_1m": 84776437,
+      "vol_1d": 2874100,
+      "vol_1w": 15953100,
+      "vol_1m": 85010400,
       "news": [
         {
           "title": "This Week In Energy Transition - SunPower's Strategic Share Move Fuels Financial Flexibility",
@@ -404,21 +404,28 @@ window.PRICES_DATA = {
       "change_1m": "-2.60%",
       "change_ytd": "+25.18%",
       "return_1yr": "+39%",
-      "low_gbp": "63",
+      "low_gbp": "64",
       "high_gbp": "101",
       "bar_pct": 67,
-      "market_cap_gbp_b": 108.182,
-      "beta": 0.149,
+      "market_cap_gbp_b": 108.111,
+      "beta": 0.106,
       "pe_ratio": 20.21,
       "avg_volume_m": 9.11,
       "div_yield_pct": 282.0,
       "short_pct": 2.29,
       "analyst": "buy",
       "analyst_score": 1.85,
-      "vol_1d": 4811325,
-      "vol_1w": 37867925,
-      "vol_1m": 155300225,
+      "vol_1d": 4812100,
+      "vol_1w": 37868700,
+      "vol_1m": 155301000,
       "news": [
+        {
+          "title": "A Look At ConocoPhillips (COP) Valuation As Shares Show Mixed Short Term Performance",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/look-conocophillips-cop-valuation-shares-043907920.html",
+          "published": 1780634347,
+          "sentiment": 0.296
+        },
         {
           "title": "Chevron (CVX)\u2019s CEO Say\u2019s Venezuela Needs to Lower Taxes For the Company Invests Fresh Capital",
           "publisher": "Insider Monkey",
@@ -446,16 +453,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/heres-permian-basin-fueling-exxonmobils-134400165.html",
           "published": 1780407840,
           "sentiment": 0.382
-        },
-        {
-          "title": "Pantheon Resources advocates alongside Alaska's major North Slope producers",
-          "publisher": "Proactive",
-          "url": "https://www.proactiveinvestors.com/companies/news/1093270/pantheon-resources-advocates-alongside-alaska-s-major-north-slope-producers-1093270.html",
-          "published": 1780381020,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.158
+      "news_sentiment": 0.217
     },
     {
       "ticker": "OXY",
@@ -472,17 +472,17 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "50",
       "bar_pct": 69,
-      "market_cap_gbp_b": 43.461,
-      "beta": 0.172,
+      "market_cap_gbp_b": 43.432,
+      "beta": 0.124,
       "pe_ratio": 79.28,
       "avg_volume_m": 16.1,
-      "div_yield_pct": 174.0,
+      "div_yield_pct": 177.0,
       "short_pct": 0.02,
       "analyst": "hold",
       "analyst_score": 2.56,
-      "vol_1d": 7440997,
-      "vol_1w": 52473997,
-      "vol_1m": 262777697,
+      "vol_1d": 8534200,
+      "vol_1w": 53567200,
+      "vol_1m": 263870900,
       "news": [
         {
           "title": "Why Is Occidental (OXY) Up 8.2% Since Last Earnings Report?",
@@ -537,17 +537,17 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "113",
       "bar_pct": 78,
-      "market_cap_gbp_b": 55.884,
-      "beta": 0.279,
+      "market_cap_gbp_b": 55.848,
+      "beta": 0.256,
       "pe_ratio": 13.85,
       "avg_volume_m": 4.39,
-      "div_yield_pct": 288.0,
+      "div_yield_pct": 290.0,
       "short_pct": 3.76,
       "analyst": "buy",
       "analyst_score": 2.19,
-      "vol_1d": 1641566,
-      "vol_1w": 18345166,
-      "vol_1m": 76808266,
+      "vol_1d": 2107100,
+      "vol_1w": 18810700,
+      "vol_1m": 77273800,
       "news": [
         {
           "title": "Decoupling Exxon's Production Growth From Market Reality",
@@ -599,21 +599,28 @@ window.PRICES_DATA = {
       "change_1m": "+2.90%",
       "change_ytd": "+63.14%",
       "return_1yr": "+69%",
-      "low_gbp": "116",
+      "low_gbp": "118",
       "high_gbp": "203",
       "bar_pct": 95,
-      "market_cap_gbp_b": 58.063,
-      "beta": 0.53,
-      "pe_ratio": 17.59,
+      "market_cap_gbp_b": 58.025,
+      "beta": 0.522,
+      "pe_ratio": 17.57,
       "avg_volume_m": 2.55,
       "div_yield_pct": 146.0,
       "short_pct": 2.35,
       "analyst": "buy",
       "analyst_score": 2.32,
-      "vol_1d": 1785390,
-      "vol_1w": 11758390,
-      "vol_1m": 53167090,
+      "vol_1d": 2123300,
+      "vol_1w": 12096300,
+      "vol_1m": 53505000,
       "news": [
+        {
+          "title": "How Is Marathon Petroleum's Stock Performance Compared to Other Oil Refiner Stocks?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2311964/how-is-marathon-petroleum-s-stock-performance-compared-to-other-oil-refiner-stocks",
+          "published": 1780602722,
+          "sentiment": 0.0
+        },
         {
           "title": "Why Is Marathon Petroleum (MPC) Up 8.7% Since Last Earnings Report?",
           "publisher": "Zacks",
@@ -641,16 +648,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/mpcs-west-coast-assets-become-130300868.html",
           "published": 1780491780,
           "sentiment": 0.178
-        },
-        {
-          "title": "PBR Strengthens Its Presence in Sergipe With Major Investments",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/pbr-strengthens-presence-sergipe-major-130200415.html",
-          "published": 1780491720,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.339
+      "news_sentiment": 0.247
     },
     {
       "ticker": "VLO",
@@ -664,20 +664,20 @@ window.PRICES_DATA = {
       "change_1m": "+2.62%",
       "change_ytd": "+58.29%",
       "return_1yr": "+106%",
-      "low_gbp": "94",
+      "low_gbp": "95",
       "high_gbp": "198",
       "bar_pct": 95,
-      "market_cap_gbp_b": 57.243,
-      "beta": 0.571,
-      "pe_ratio": 18.89,
+      "market_cap_gbp_b": 57.205,
+      "beta": 0.553,
+      "pe_ratio": 18.91,
       "avg_volume_m": 3.65,
-      "div_yield_pct": 184.0,
+      "div_yield_pct": 185.0,
       "short_pct": 3.3,
       "analyst": "buy",
       "analyst_score": 2.4,
-      "vol_1d": 1860750,
-      "vol_1w": 13289450,
-      "vol_1m": 65647750,
+      "vol_1d": 2288300,
+      "vol_1w": 13717000,
+      "vol_1m": 66075300,
       "news": [
         {
           "title": "Subsea7 Secures String Music Development Contract in the U.S. Gulf",
@@ -732,18 +732,25 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 97,
-      "market_cap_gbp_b": 64.592,
-      "beta": 0.731,
+      "market_cap_gbp_b": 64.549,
+      "beta": 0.708,
       "pe_ratio": 25.56,
       "avg_volume_m": 16.27,
-      "div_yield_pct": 208.0,
+      "div_yield_pct": 203.0,
       "short_pct": 4.7,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 9944613,
-      "vol_1w": 77511113,
-      "vol_1m": 280316213,
+      "vol_1d": 9982400,
+      "vol_1w": 77548900,
+      "vol_1m": 280354000,
       "news": [
+        {
+          "title": "SLB (SLB) Outpaces Stock Market Gains: What You Should Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-outpaces-stock-market-215003198.html",
+          "published": 1780609803,
+          "sentiment": 0.34
+        },
         {
           "title": "Assessing SLB (SLB) Valuation After Tachyus Deal And AI Leadership Recognition",
           "publisher": "Simply Wall St.",
@@ -771,16 +778,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/duolingo-duol-5-7-since-153006591.html",
           "published": 1780500606,
           "sentiment": 0.0
-        },
-        {
-          "title": "SLB Limited (SLB) is Attracting Investor Attention: Here is What You Should Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/slb-limited-slb-attracting-investor-130003035.html",
-          "published": 1780491603,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.013
+      "news_sentiment": 0.022
     },
     {
       "ticker": "HAL",
@@ -797,17 +797,17 @@ window.PRICES_DATA = {
       "low_gbp": "15",
       "high_gbp": "32",
       "bar_pct": 90,
-      "market_cap_gbp_b": 25.646,
-      "beta": 0.742,
+      "market_cap_gbp_b": 25.629,
+      "beta": 0.704,
       "pe_ratio": 22.77,
       "avg_volume_m": 14.57,
-      "div_yield_pct": 166.0,
+      "div_yield_pct": 165.0,
       "short_pct": 5.19,
       "analyst": "buy",
       "analyst_score": 1.85,
-      "vol_1d": 9179288,
-      "vol_1w": 57596288,
-      "vol_1m": 237518788,
+      "vol_1d": 9379800,
+      "vol_1w": 57796800,
+      "vol_1m": 237719300,
       "news": [
         {
           "title": "Oil Services Are Setting Up to Do It Again, But There\u2019s a Catch the Strait of Hormuz Trade Can\u2019t Ignore",
@@ -862,19 +862,55 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "52",
       "bar_pct": 87,
-      "market_cap_gbp_b": 48.846,
-      "beta": 0.97,
+      "market_cap_gbp_b": 48.813,
+      "beta": 0.938,
       "pe_ratio": 21.12,
       "avg_volume_m": 9.11,
-      "div_yield_pct": 143.0,
+      "div_yield_pct": 139.0,
       "short_pct": 2.58,
       "analyst": "buy",
       "analyst_score": 1.77,
-      "vol_1d": 5921197,
-      "vol_1w": 37801197,
-      "vol_1m": 172545297,
-      "news": [],
-      "news_sentiment": null
+      "vol_1d": 6404300,
+      "vol_1w": 38284300,
+      "vol_1m": 173028400,
+      "news": [
+        {
+          "title": "This Baker Hughes Insider Reduced Their Stake By 100%",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/baker-hughes-insider-reduced-stake-120008925.html",
+          "published": 1780574408,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Oil Services Are Setting Up to Do It Again, But There\u2019s a Catch the Strait of Hormuz Trade Can\u2019t Ignore",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/04/oil-services-are-setting-up-to-do-it-again-but-theres-a-catch-the-strait-of-hormuz-trade-cant-ignore/",
+          "published": 1780571702,
+          "sentiment": -0.502
+        },
+        {
+          "title": "North America Adds 28 Rigs Week on Week",
+          "publisher": "Rigzone.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/north-america-adds-28-rigs-173644261.html",
+          "published": 1780421804,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Baker Hughes Secures Long-Term Contract Extensions With Equinor",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/baker-hughes-secures-long-term-130500193.html",
+          "published": 1780319100,
+          "sentiment": 0.318
+        },
+        {
+          "title": "New Strong Sell Stocks for June 1st",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/strong-sell-stocks-june-1st-085700599.html",
+          "published": 1780304220,
+          "sentiment": 0.511
+        }
+      ],
+      "news_sentiment": 0.065
     },
     {
       "ticker": "NEE",
@@ -889,20 +925,34 @@ window.PRICES_DATA = {
       "change_ytd": "+6.59%",
       "return_1yr": "+18%",
       "low_gbp": "50",
-      "high_gbp": "74",
+      "high_gbp": "73",
       "bar_pct": 59,
-      "market_cap_gbp_b": 133.085,
-      "beta": 0.721,
+      "market_cap_gbp_b": 132.997,
+      "beta": 0.671,
       "pe_ratio": 21.75,
       "avg_volume_m": 10.38,
-      "div_yield_pct": 295.0,
+      "div_yield_pct": 291.0,
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 7425891,
-      "vol_1w": 70577891,
-      "vol_1m": 279987291,
+      "vol_1d": 9482900,
+      "vol_1w": 72634900,
+      "vol_1m": 282044300,
       "news": [
+        {
+          "title": "Analyst Upgrades Dominion Energy (D) Following NextEra Deal Announcement",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/analyst-upgrades-dominion-energy-d-033128489.html",
+          "published": 1780630288,
+          "sentiment": 0.273
+        },
+        {
+          "title": "NextEra Energy (NEE) \u2013 Among the 10 Best Renewable Energy Stocks to Buy According to Billionaires",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/nextera-energy-nee-among-10-032805700.html",
+          "published": 1780630085,
+          "sentiment": 0.813
+        },
         {
           "title": "NextEra Energy Outpaces Industry in YTD: How to Play the Stock?",
           "publisher": "Zacks",
@@ -923,23 +973,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/assessing-nextera-energy-nee-valuation-191224336.html",
           "published": 1780427544,
           "sentiment": 0.128
-        },
-        {
-          "title": "Beyond the AI Boom: 3 Forgotten Sectors to Buy Amid Historic Market Disconnect",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/forgotten-stock-market-sectors-buy-ai-boom-9daee75f?siteid=yhoof2&yptr=yahoo",
-          "published": 1780405980,
-          "sentiment": -0.226
-        },
-        {
-          "title": "NextEra Energy (NEE) Stock Declines While Market Improves: Some Information for Investors",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nextera-energy-nee-stock-declines-214503878.html",
-          "published": 1780350303,
-          "sentiment": 0.599
         }
       ],
-      "news_sentiment": 0.263
+      "news_sentiment": 0.406
     },
     {
       "ticker": "SSE.L",
@@ -957,16 +993,16 @@ window.PRICES_DATA = {
       "high_gbp": "28",
       "bar_pct": 68,
       "market_cap_gbp_b": 0.288,
-      "beta": 0.624,
+      "beta": 0.596,
       "pe_ratio": 22.74,
       "avg_volume_m": 4.1,
-      "div_yield_pct": 294.0,
+      "div_yield_pct": 288.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 6893056,
-      "vol_1w": 29077185,
-      "vol_1m": 111730568,
+      "vol_1d": 7883312,
+      "vol_1w": 30067441,
+      "vol_1m": 112720824,
       "news": [
         {
           "title": "SSE PLC (SSEZF) Full Year 2026 Earnings Call Highlights: Record CapEx and Strategic Investments ...",
@@ -1021,8 +1057,8 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 89,
-      "market_cap_gbp_b": 6.713,
-      "beta": 1.254,
+      "market_cap_gbp_b": 6.709,
+      "beta": 1.572,
       "pe_ratio": 67.71,
       "avg_volume_m": 7.34,
       "div_yield_pct": null,
@@ -1033,6 +1069,13 @@ window.PRICES_DATA = {
       "vol_1w": 35440513,
       "vol_1m": 207784013,
       "news": [
+        {
+          "title": "Enphase Energy (ENPH) Price Target Doubled at TD Cowen",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/enphase-energy-enph-price-target-032930553.html",
+          "published": 1780630170,
+          "sentiment": 0.273
+        },
         {
           "title": "This Boring Electrical Device Is the Next Hot Data Center Play. Some Stocks Have Doubled.",
           "publisher": "Barrons.com",
@@ -1060,23 +1103,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/assessing-enphase-energy-enph-valuation-130623397.html",
           "published": 1780232783,
           "sentiment": 0.273
-        },
-        {
-          "title": "Solar Stocks To Watch As AI Drives Energy Demand",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/first-solar-nextpower-enphase-solar-power-energy-demand-renewables/?src=A00220&yptr=yahoo",
-          "published": 1779988943,
-          "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.178
+      "news_sentiment": 0.202
     },
     {
       "ticker": "FSLR",
       "company_name": "First Solar",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "235",
+      "price_gbp": "234",
       "price_usd": 314.95,
       "change_1d": "-0.33%",
       "change_1w": "+3.81%",
@@ -1086,17 +1122,17 @@ window.PRICES_DATA = {
       "low_gbp": "101",
       "high_gbp": "239",
       "bar_pct": 97,
-      "market_cap_gbp_b": 25.204,
-      "beta": 1.564,
-      "pe_ratio": 20.36,
+      "market_cap_gbp_b": 25.188,
+      "beta": 1.692,
+      "pe_ratio": 20.32,
       "avg_volume_m": 2.34,
       "div_yield_pct": null,
       "short_pct": 10.53,
       "analyst": "buy",
       "analyst_score": 2.12,
-      "vol_1d": 2717185,
-      "vol_1w": 17746885,
-      "vol_1m": 66555485,
+      "vol_1d": 2717800,
+      "vol_1w": 17747500,
+      "vol_1m": 66556100,
       "news": [
         {
           "title": "Here is What to Know Beyond Why First Solar, Inc. (FSLR) is a Trending Stock",
@@ -1151,11 +1187,11 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "34",
       "bar_pct": 60,
-      "market_cap_gbp_b": 5.274,
-      "beta": 1.128,
+      "market_cap_gbp_b": 5.271,
+      "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
-      "div_yield_pct": 407.0,
+      "div_yield_pct": 404.0,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.83,
@@ -1163,6 +1199,13 @@ window.PRICES_DATA = {
       "vol_1w": 8305702,
       "vol_1m": 32908402,
       "news": [
+        {
+          "title": "Brookfield Renewable Partners (BEP) Price Target Raised Amid \u201cNumerous Strong Tailwinds\u201d",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/brookfield-renewable-partners-bep-price-033218898.html",
+          "published": 1780630338,
+          "sentiment": 0.511
+        },
         {
           "title": "Brookfield Renewable Holdings Corp (BEPC) is Powering AI Growth with Operational Strength",
           "publisher": "Insider Monkey",
@@ -1190,16 +1233,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/05/18/brookfield-renewable-has-over-85000-mw-in-its-deve/",
           "published": 1779109500,
           "sentiment": 0.0
-        },
-        {
-          "title": "Got $1,000? These 3 Energy Stocks Are Worth Every Penny.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/16/got-1000-these-3-energy-stocks-are-worth-every-pen/",
-          "published": 1778932200,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.34
+      "news_sentiment": 0.351
     },
     {
       "ticker": "DNNGY",
@@ -1216,8 +1252,8 @@ window.PRICES_DATA = {
       "low_gbp": "4.28",
       "high_gbp": "25",
       "bar_pct": 9,
-      "market_cap_gbp_b": 24.587,
-      "beta": 0.644,
+      "market_cap_gbp_b": 24.571,
+      "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.15,
       "div_yield_pct": null,
