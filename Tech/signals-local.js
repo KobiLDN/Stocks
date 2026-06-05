@@ -1,9 +1,138 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-04 19:05",
+  "updated": "2026-06-05 11:47",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Record Q4 revenue $1.49B, Arm AGI CPU demand exceeds $2B; +242.93% YTD, P/E 452 but high growth.",
+      "drivers": [
+        "+242.93% YTD",
+        "record revenue and EPS",
+        "Arm AGI CPU catalyst",
+        "50% hyperscaler share"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+72.31% 1M momentum, strong_buy consensus, positive news sentiment 0.259.",
+      "drivers": [
+        "+72.31% 1M",
+        "strong_buy analyst consensus",
+        "positive news sentiment 0.259"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "+215.90% YTD, strong_buy consensus, P/E 47 reasonable for memory cycle; Broadcom sell-off presents dip.",
+      "drivers": [
+        "+215.90% YTD",
+        "strong_buy consensus",
+        "P/E 47",
+        "memory cycle tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+55.68% YTD, +51.78% 1M, positive sentiment 0.159, AI security catalyst.",
+      "drivers": [
+        "+55.68% YTD",
+        "+51.78% 1M",
+        "positive news sentiment 0.159",
+        "AI security catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+58.54% YTD, +50.90% 1M, buy consensus, but high short interest 11.99%.",
+      "drivers": [
+        "+58.54% YTD",
+        "+50.90% 1M",
+        "buy consensus",
+        "high short interest 11.99%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "+29.73% 1M, strong_buy consensus, positive sentiment 0.249, P/E 71 but growth justifies.",
+      "drivers": [
+        "+29.73% 1M",
+        "strong_buy consensus",
+        "positive news sentiment 0.249"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+92.18% YTD, +66.45% 1M, hold consensus offsets with strong momentum.",
+      "drivers": [
+        "+92.18% YTD",
+        "+66.45% 1M",
+        "hold analyst consensus but strong momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+71.89% YTD, +37.86% 1M, buy consensus, positive sentiment 0.105, P/E 43 reasonable.",
+      "drivers": [
+        "+71.89% YTD",
+        "+37.86% 1M",
+        "buy consensus",
+        "P/E 43"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+41.65% YTD, +30.51% 1M, P/E 26 attractive, but hold consensus and negative sentiment -0.034.",
+      "drivers": [
+        "+41.65% YTD",
+        "+30.51% 1M",
+        "P/E 26",
+        "hold consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.45,
+      "rationale": "+134.13% YTD, +47.27% 1M, strong_buy consensus, but P/E 176 and negative sentiment -0.272.",
+      "drivers": [
+        "+134.13% YTD",
+        "+47.27% 1M",
+        "strong_buy consensus",
+        "high P/E 176"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ARM",
@@ -132,138 +261,6 @@ window.SIGNALS_DATA = {
         "strong_buy consensus",
         "news sentiment 0.314",
         "low beta 0.819"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+81% 1M, +47% 1W, YTD +20.5%, strong buy consensus at 1.49, news sentiment +0.207 with CEO citing investments coming together",
-      "drivers": [
-        "+81% 1M momentum",
-        "strong_buy consensus",
-        "positive CEO commentary",
-        "low 67B market cap growth runway"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "+237% YTD, +85% 1M, +19% 1W, strong_buy analyst score 1.48, highest news sentiment in universe at 0.31",
-      "drivers": [
-        "record YTD return +237%",
-        "strong_buy analyst rating",
-        "high positive news sentiment 0.31",
-        "semiconductor AI memory demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+70% YTD, +64% 1M, +15% 1W, strong buy consensus, low beta 1.06, despite negative news sentiment -0.163",
-      "drivers": [
-        "+64% 1M momentum",
-        "strong buy consensus",
-        "low beta 1.06",
-        "cybersecurity AI tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+91% YTD, +67% 1M, +11% 1W, highest news sentiment among cybersecurity at 0.307, though analyst consensus is hold",
-      "drivers": [
-        "+91% YTD",
-        "highest news sentiment 0.307",
-        "low beta 0.919",
-        "cybersecurity demand"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+66% YTD, +61% 1M, +16% 1W, large cap 179B, buy consensus with low beta 0.77, negative news sentiment -0.042",
-      "drivers": [
-        "+61% 1M momentum",
-        "low beta 0.77",
-        "large cap stability",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "+133% YTD, +53% 1M, strong_buy consensus 1.49, high news sentiment 0.237, but elevated P/E 173 and short interest 2.75%",
-      "drivers": [
-        "+133% YTD momentum",
-        "strong_buy rating",
-        "positive news sentiment",
-        "AI GPU market share gains"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+40% YTD, +43% 1M, attractive P/E 25.9, dividend yield 1.61%, but analyst hold consensus and elevated short interest 5.36%",
-      "drivers": [
-        "attractive P/E 25.9",
-        "1.61% dividend yield",
-        "+43% 1M momentum",
-        "mobile AI expansion"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "+39% 1M, +28% 1W, strong_buy consensus 1.44, low beta 0.819, but negative YTD -13% and high P/E 76",
-      "drivers": [
-        "strong_buy consensus",
-        "+39% 1M momentum",
-        "low beta 0.819",
-        "enterprise AI workflow adoption"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+251% YTD, +98% 1M, +25% 1W, buy consensus, but extreme P/E 468 and highest short interest 13.29%",
-      "drivers": [
-        "+251% YTD momentum",
-        "AI chip architecture",
-        "high short interest 13.29%",
-        "extreme valuation risk"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+69% YTD, +38% 1M, +8% 1W, buy consensus 1.88, attractive dividend yield 1.38%, low beta 0.912, AI cybersecurity product launch",
-      "drivers": [
-        "1.38% dividend yield",
-        "low beta 0.912",
-        "+69% YTD",
-        "AI cybersecurity platform launch"
       ]
     }
   ]

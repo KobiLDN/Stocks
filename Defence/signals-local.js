@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-04 19:05",
+  "updated": "2026-06-05 11:47",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "RCAT has surged +60.92% YTD and +41.32% in the last month, with a strong_buy analyst consensus (score 1.17) and positive news sentiment of 0.272, reflecting strong momentum in the drone/counter-drone space.",
+      "drivers": [
+        "+60.92% YTD",
+        "+41.32% 1M",
+        "strong_buy consensus",
+        "positive news sentiment 0.272"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "MRCY has rallied +54.97% YTD and +42.02% in the last month, with a buy consensus and positive news sentiment 0.102, driven by demand for its advanced electronic warfare and sensor systems.",
+      "drivers": [
+        "+54.97% YTD",
+        "+42.02% 1M",
+        "buy consensus",
+        "positive news sentiment 0.102"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RKLB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Rocket Lab is up +57.85% YTD and +52.30% in the last month, with a buy consensus and positive news sentiment 0.017, supported by its Neutron launch vehicle catalyst and Space Force contract momentum.",
+      "drivers": [
+        "+57.85% YTD",
+        "+52.30% 1M",
+        "buy consensus",
+        "Neutron launch catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ASTS has gained +28.54% YTD and +67.98% in the last month, with a hold consensus but strong momentum from its direct-to-device satellite network and recent price swings creating opportunity.",
+      "drivers": [
+        "+28.54% YTD",
+        "+67.98% 1M",
+        "strong momentum",
+        "satellite network catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "AXON is up +34.84% in the last month and +16.82% in the last week, with a buy consensus (score 1.6) and strong momentum in its public safety technology segment, despite a -39% 1-year return.",
+      "drivers": [
+        "+34.84% 1M",
+        "+16.82% 1W",
+        "buy consensus",
+        "public safety tech momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "SAIC has surged +16.00% YTD, +21.95% in the last month, and +12.41% in the last week, with a low P/E of 13.11 and positive news sentiment 0.217, reflecting strong fundamentals and contract wins.",
+      "drivers": [
+        "+16.00% YTD",
+        "+21.95% 1M",
+        "P/E 13.11",
+        "positive news sentiment 0.217"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "HEICO is up +20.06% in the last month, with a buy consensus (score 1.83) and the highest news sentiment in the universe at 0.351, driven by its aerospace and defense aftermarket growth.",
+      "drivers": [
+        "+20.06% 1M",
+        "buy consensus",
+        "news sentiment 0.351",
+        "defense aftermarket growth"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Leonardo DRS is up +34.84% YTD and +17.91% in the last month, with a low beta of 0.121 and positive news sentiment 0.168, benefiting from its advanced sensing and power systems for defense.",
+      "drivers": [
+        "+34.84% YTD",
+        "+17.91% 1M",
+        "low beta 0.121",
+        "positive news sentiment 0.168"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "PL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Planet Labs is up +113.28% YTD and +17.24% in the last month, with a buy consensus and positive news sentiment 0.013, driven by its Earth observation data contracts and space-based intelligence demand.",
+      "drivers": [
+        "+113.28% YTD",
+        "+17.24% 1M",
+        "buy consensus",
+        "space intelligence demand"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AeroVironment is up +22.62% in the last month, with a buy consensus (score 1.63) and positive news sentiment 0.105, supported by its Switchblade loitering munition franchise and Ukraine-driven demand.",
+      "drivers": [
+        "+22.62% 1M",
+        "buy consensus",
+        "positive news sentiment 0.105",
+        "Switchblade munition demand"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RKLB",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "buy consensus",
         "Switchblade demand catalyst",
         "Ukraine order book pull-forward"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "RCAT has +63.21% YTD, +35.91% 1M, +53.02% 1W momentum, a strong_buy analyst consensus (score 1.17), and positive news sentiment 0.304 driven by multi-domain defense expansion and AI swarm integration.",
-      "drivers": [
-        "+63% YTD",
-        "strong_buy consensus",
-        "positive news sentiment 0.30",
-        "AI swarm integration"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "PL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "PL shows exceptional momentum with +135.62% YTD, +24.78% 1M, and a buy analyst consensus (score 2.0), supported by positive news sentiment 0.048 and strong space sector tailwinds.",
-      "drivers": [
-        "+136% YTD",
-        "buy consensus",
-        "space sector momentum",
-        "positive news"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "RKLB has +358% 1Y, +62.28% YTD, +53.55% 1M momentum, a buy analyst consensus (score 1.61), and is benefiting from SpaceX IPO frenzy driving space stocks.",
-      "drivers": [
-        "+358% 1Y",
-        "+62% YTD",
-        "buy consensus",
-        "SpaceX IPO catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ASTS has +320% 1Y, +41.57% YTD, +72.69% 1M momentum, and a hold analyst consensus (score 2.82) with negative news sentiment -0.211, but strong short-term momentum and space sector catalysts.",
-      "drivers": [
-        "+73% 1M",
-        "+320% 1Y",
-        "space sector catalyst",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "MRCY has +119% 1Y, +48.45% YTD, +43.73% 1M momentum, and positive news sentiment 0.128 driven by its largest-ever order for Common Processing Architecture servers.",
-      "drivers": [
-        "+48% YTD",
-        "largest-ever order",
-        "positive news",
-        "defence tech"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "DRS has +36.80% YTD, +18.72% 1M momentum, a low beta of 0.027, and positive news sentiment 0.256, with a P/E of 44.29 reflecting growth expectations.",
-      "drivers": [
-        "+37% YTD",
-        "low beta 0.03",
-        "positive news",
-        "defence growth"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "HEI has +23.23% 1M, +7.54% 1W momentum, a buy analyst consensus (score 1.83), and positive news sentiment 0.311 after strong Q2 growth in sales and net income.",
-      "drivers": [
-        "+23% 1M",
-        "buy consensus",
-        "strong Q2 growth",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "AXON has +24.47% 1M, +27.20% 1W momentum, a buy analyst consensus (score 1.6), and positive news sentiment 0.223 driven by software & services segment momentum.",
-      "drivers": [
-        "+27% 1W",
-        "buy consensus",
-        "software momentum",
-        "positive news"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "SAIC has +12.80% YTD, +17.03% 1M, +11.84% 1W momentum, a low P/E of 12.74, and a hold analyst consensus (score 2.82) with positive news sentiment 0.082.",
-      "drivers": [
-        "+17% 1M",
-        "low P/E 12.7",
-        "positive momentum",
-        "defence IT"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "AVAV has +13.36% 1M, +12.12% 1W momentum, a buy analyst consensus (score 1.63), and positive news sentiment 0.199 from the Silicon Valley defense tech surge.",
-      "drivers": [
-        "+13% 1M",
-        "buy consensus",
-        "defence tech surge",
-        "positive sentiment"
       ]
     }
   ]
