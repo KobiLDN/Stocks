@@ -524,6 +524,16 @@ def main():
             if not news_items:  # yfinance missed — try CoinStats (no key, no sentiment)
                 news_items, news_agg = get_news_coinstats(ticker, analyzer)
 
+            # Drop articles older than 7 days — yfinance often returns years-old stale data
+            MAX_NEWS_AGE = 7 * 86400
+            now_ts = time.time()
+            news_items = [n for n in news_items if n.get("published") and (now_ts - n["published"]) <= MAX_NEWS_AGE]
+            if news_items:
+                scored = [n["sentiment"] for n in news_items if n.get("sentiment") is not None]
+                news_agg = round(sum(scored) / len(scored), 3) if scored else None
+            else:
+                news_agg = None
+
             results[ticker] = {
                 "price_usd":      price_usd,
                 "price_gbp":      price_gbp,

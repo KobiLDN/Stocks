@@ -305,8 +305,8 @@
     <span class="sort-label">Period</span>
     <div class="sort-group" id="window-group">
       <button class="sort-btn" data-window="all" onclick="setWindow('all', this)">All Time</button>
-      <button class="sort-btn active" data-window="day" onclick="setWindow('day', this)">Last 24h</button>
-      <button class="sort-btn" data-window="week" onclick="setWindow('week', this)">Last Week</button>
+      <button class="sort-btn" data-window="day" onclick="setWindow('day', this)">Last 24h</button>
+      <button class="sort-btn active" data-window="week" onclick="setWindow('week', this)">Last Week</button>
     </div>
     <span class="row-count">Showing <span id="news-count">—</span> headlines</span>
   </div>
@@ -398,7 +398,7 @@
   let sortMode = 'newest';
   let activeCategory = 'all';
   let searchQuery = '';
-  let timeWindow = 'day';
+  let timeWindow = 'week';
 
   function setSort(mode, btn) {
     sortMode = mode;
