@@ -205,7 +205,7 @@ def fetch_coingecko_data(current_prices_usd):
 
     for i, (ticker, cg_id) in enumerate(COINGECKO_IDS.items()):
         if i > 0:
-            time.sleep(3)  # stay within CoinGecko rate limit — 3s gives buffer vs 30 req/min
+            time.sleep(5)  # CoinGecko Demo rate limit — 5s gives comfortable buffer (19 coins × 5s ≈ 95s)
         try:
             data    = _cg_get(f"/coins/{cg_id}/market_chart/range",
                               {"vs_currency": "usd", "from": from_ts, "to": to_ts})
