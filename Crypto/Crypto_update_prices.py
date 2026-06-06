@@ -181,30 +181,40 @@ def _cg_get(path, params):
 def fetch_coingecko_data(current_prices_usd):
     """
     Single CoinGecko market_chart/range call per coin (365-day window).
-    Returns: (ytd_map, low_map, high_map) — all keyed by display ticker.
-    - YTD:  Jan 1 price → current CMC price
-    - Low/High: min/max over the full 365-day range (true 52-week range)
+    Returns: (ytd_map, low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map)
+    All dicts keyed by display ticker.
+    - YTD:      Jan 1 price → current CMC price
+    - Low/High: min/max over the full 365-day price range (true 52-week range)
+    - vol_1d:   most recent day's trading volume (USD)
+    - vol_1w:   7-day cumulative volume (USD)
+    - vol_1m:   30-day cumulative volume (USD)
+    - avg_vol:  7-day average daily volume (USD) — used as 'Avg Vol' on metrics page
     """
     today   = dt.datetime.utcnow()
     from_ts = int((today - dt.timedelta(days=365)).timestamp())
     to_ts   = int(today.timestamp())
     jan1_ms = int(dt.datetime(today.year, 1, 1).timestamp() * 1000)  # CoinGecko uses ms
 
-    ytd_map  = {}
-    low_map  = {}
-    high_map = {}
+    ytd_map     = {}
+    low_map     = {}
+    high_map    = {}
+    vol_1d_map  = {}
+    vol_1w_map  = {}
+    vol_1m_map  = {}
+    avg_vol_map = {}
 
     for i, (ticker, cg_id) in enumerate(COINGECKO_IDS.items()):
         if i > 0:
             time.sleep(3)  # stay within CoinGecko rate limit — 3s gives buffer vs 30 req/min
         try:
-            data   = _cg_get(f"/coins/{cg_id}/market_chart/range",
-                             {"vs_currency": "usd", "from": from_ts, "to": to_ts})
-            prices = data.get("prices", [])  # [[timestamp_ms, price], ...]
+            data    = _cg_get(f"/coins/{cg_id}/market_chart/range",
+                              {"vs_currency": "usd", "from": from_ts, "to": to_ts})
+            prices  = data.get("prices", [])       # [[timestamp_ms, price], ...]
+            volumes = data.get("total_volumes", []) # [[timestamp_ms, volume_usd], ...]
 
             if len(prices) >= 2:
                 # 52-week high/low
-                vals     = [p[1] for p in prices]
+                vals             = [p[1] for p in prices]
                 low_map[ticker]  = min(vals)
                 high_map[ticker] = max(vals)
 
@@ -219,11 +229,23 @@ def fetch_coingecko_data(current_prices_usd):
             else:
                 ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
 
+            # Volume (daily granularity for 365-day range)
+            if len(volumes) >= 7:
+                vol_1d_map[ticker]  = volumes[-1][1]
+                last_7              = [v[1] for v in volumes[-7:]]
+                vol_1w_map[ticker]  = sum(last_7)
+                avg_vol_map[ticker] = sum(last_7) / len(last_7)
+                last_30             = [v[1] for v in volumes[-30:]] if len(volumes) >= 30 else [v[1] for v in volumes]
+                vol_1m_map[ticker]  = sum(last_30)
+            else:
+                vol_1d_map[ticker] = vol_1w_map[ticker] = vol_1m_map[ticker] = avg_vol_map[ticker] = None
+
         except Exception as e:
             print(f"    [CoinGecko {ticker}: {e}]", end=" ")
             ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
+            vol_1d_map[ticker] = vol_1w_map[ticker] = vol_1m_map[ticker] = avg_vol_map[ticker] = None
 
-    return ytd_map, low_map, high_map
+    return ytd_map, low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map
 
 
 
@@ -406,8 +428,14 @@ def write_json(results, gbp_usd, today_str):
         r = results[ticker]
         mc_usd     = r.get("market_cap")
         mc_gbp_b   = round(mc_usd / gbp_usd / 1e9, 3) if mc_usd else None
-        vol_24h    = r.get("volume_24h")
-        avg_vol_m  = round(vol_24h / 1e6, 2) if vol_24h else None
+        # Volume: prefer CoinGecko (daily from 365-day chart), fall back to CMC for 1d only
+        vol_1d_cg  = r.get("vol_1d_cg")
+        vol_1w_cg  = r.get("vol_1w_cg")
+        vol_1m_cg  = r.get("vol_1m_cg")
+        avg_vol_cg = r.get("avg_vol_cg")
+        vol_1d_raw = vol_1d_cg if vol_1d_cg is not None else r.get("volume_24h_cmc")
+        avg_vol_m  = round(avg_vol_cg / 1e6, 2) if avg_vol_cg else (
+                     round(vol_1d_raw / 1e6, 2) if vol_1d_raw else None)
 
         stocks.append({
             "ticker":           ticker,
@@ -435,9 +463,10 @@ def write_json(results, gbp_usd, today_str):
             "short_pct":        None,
             "analyst":          None,
             "analyst_score":    None,
-            "vol_1d":           round(vol_24h) if vol_24h else None,
-            "vol_1w":           None,
-            "vol_1m":           None,
+            # volume from CoinGecko (USD); 1d falls back to CMC if CG unavailable
+            "vol_1d":           round(vol_1d_raw)  if vol_1d_raw  is not None else None,
+            "vol_1w":           round(vol_1w_cg)   if vol_1w_cg   is not None else None,
+            "vol_1m":           round(vol_1m_cg)   if vol_1m_cg   is not None else None,
             "news":             r.get("news", []),
             "news_sentiment":   r.get("news_sentiment"),
         })
@@ -477,13 +506,14 @@ def main():
         if v[0] in cmc_quotes
     }
 
-    print("Fetching YTD + 52-week range from CoinGecko (365-day window)...")
+    print("Fetching YTD + 52-week range + volume from CoinGecko (365-day window)...")
     try:
-        ytd_map, low_map, high_map = fetch_coingecko_data(current_prices_usd)
+        ytd_map, low_map, high_map, vol_1d_cg, vol_1w_cg, vol_1m_cg, avg_vol_cg = fetch_coingecko_data(current_prices_usd)
         print(f"  Fetched for {sum(1 for v in ytd_map.values() if v is not None)}/{len(ytd_map)} coins")
     except Exception as e:
-        print(f"  CoinGecko unavailable ({e}) — falling back to 90d proxy, no 52w range")
+        print(f"  CoinGecko unavailable ({e}) — no YTD / 52w range / CG volume")
         ytd_map, low_map, high_map = {}, {}, {}
+        vol_1d_cg, vol_1w_cg, vol_1m_cg, avg_vol_cg = {}, {}, {}, {}
 
     analyzer = SentimentIntensityAnalyzer() if _VADER_OK else None
     if analyzer is None:
@@ -541,7 +571,12 @@ def main():
                 "high_gbp":       high_gbp,
                 "bar_pct":        bp,
                 "market_cap":     q.get("market_cap"),
-                "volume_24h":     q.get("volume_24h"),
+                # Volume: CoinGecko (daily from 365-day chart) preferred; CMC fallback for vol_1d only
+                "vol_1d_cg":      vol_1d_cg.get(ticker),    # CoinGecko latest day USD volume
+                "vol_1w_cg":      vol_1w_cg.get(ticker),    # CoinGecko 7-day cumulative USD
+                "vol_1m_cg":      vol_1m_cg.get(ticker),    # CoinGecko 30-day cumulative USD
+                "avg_vol_cg":     avg_vol_cg.get(ticker),   # CoinGecko 7-day average daily USD
+                "volume_24h_cmc": q.get("volume_24h"),      # CMC 24h rolling — fallback only
                 "cmc_rank":       q.get("cmc_rank"),
                 "news":           news_items,
                 "news_sentiment": news_agg,
