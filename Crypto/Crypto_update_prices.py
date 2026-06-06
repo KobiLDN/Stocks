@@ -112,7 +112,7 @@ STOCKS = {
     # ── AI Tokens ─────────────────────────────────────────────────────────────
     "TAO":     ("TAO",     "TAO-USD",     "ai", "Crypto", "Bittensor"),
     "FET":     ("FET",     "FET-USD",     "ai", "Crypto", "ASI Alliance"),
-    "RNDR":    ("RNDR",    "RNDR-USD",    "ai", "Crypto", "Render"),
+    "RNDR":    ("RENDER",  "RNDR-USD",    "ai", "Crypto", "Render"),  # CMC symbol is RENDER post-rebrand
     "OCEAN":   ("OCEAN",   "OCEAN-USD",   "ai", "Crypto", "Ocean Protocol"),
     "GRT":     ("GRT",     "GRT-USD",     "ai", "Crypto", "The Graph"),
     "AGIX":    ("AGIX",    "AGIX-USD",    "ai", "Crypto", "SingularityNET"),
@@ -235,7 +235,7 @@ def fetch_coingecko_data(current_prices_usd):
 
     for i, (ticker, cg_id) in enumerate(COINGECKO_IDS.items()):
         if i > 0:
-            time.sleep(5)  # CoinGecko Demo rate limit — 5s gives comfortable buffer (19 coins × 5s ≈ 95s)
+            time.sleep(8)  # CoinGecko Demo rate limit — 8s buffer for 34 coins (≈ 272s); 5s caused 429s
         try:
             data    = _cg_get(f"/coins/{cg_id}/market_chart/range",
                               {"vs_currency": "usd", "from": from_ts, "to": to_ts})
@@ -274,6 +274,9 @@ def fetch_coingecko_data(current_prices_usd):
             print(f"    [CoinGecko {ticker}: {e}]", end=" ")
             ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
             vol_1d_map[ticker] = vol_1w_map[ticker] = vol_1m_map[ticker] = avg_vol_map[ticker] = None
+            # After exhausting all retries the burst window is saturated — wait 60s to clear it
+            print(f"    [CoinGecko rate-limit cooldown 60s]", end=" ")
+            time.sleep(60)
 
     return ytd_map, low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map
 
