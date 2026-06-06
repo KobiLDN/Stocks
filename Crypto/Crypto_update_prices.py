@@ -132,7 +132,7 @@ def fetch_cmc_quotes():
             "change_1d":  q.get("percent_change_24h") or 0.0,
             "change_1w":  q.get("percent_change_7d")  or 0.0,
             "change_1m":  q.get("percent_change_30d") or 0.0,
-            "change_ytd": q.get("percent_change_90d") or None,  # 90d proxy; 1y not on free plan
+            # note: percent_change_90d NOT stored — it's not YTD, CoinGecko provides true YTD
             "market_cap": q.get("market_cap"),
             "volume_24h": q.get("volume_24h"),
             "cmc_rank":   entry.get("cmc_rank"),
@@ -196,7 +196,7 @@ def fetch_coingecko_data(current_prices_usd):
 
     for i, (ticker, cg_id) in enumerate(COINGECKO_IDS.items()):
         if i > 0:
-            time.sleep(2)  # stay within CoinGecko rate limit (≤30 req/min)
+            time.sleep(3)  # stay within CoinGecko rate limit — 3s gives buffer vs 30 req/min
         try:
             data   = _cg_get(f"/coins/{cg_id}/market_chart/range",
                              {"vs_currency": "usd", "from": from_ts, "to": to_ts})
@@ -510,13 +510,9 @@ def main():
             high_gbp = to_gbp(high_raw, gbp_usd) if high_raw else price_gbp * 1.5
             bp = bar_pct(price_gbp, low_gbp, high_gbp)
 
-            # YTD: true Jan 1 → today from OHLCV; fall back to 90d proxy if unavailable
-            if ticker in ytd_map and ytd_map[ticker] is not None:
-                change_ytd = ytd_map[ticker]
-            elif q["change_ytd"] is not None:
-                change_ytd = round(q["change_ytd"], 2)
-            else:
-                change_ytd = None
+            # YTD: true Jan 1 → today via CoinGecko. No CMC fallback — CMC's
+            # percent_change_90d is a 90-day return, not YTD, and would mislead.
+            change_ytd = ytd_map.get(ticker)  # None if CoinGecko failed for this coin
 
             news_items, news_agg = get_news_stockdata(ticker, analyzer)
             if not news_items:  # StockData missed — try yfinance
