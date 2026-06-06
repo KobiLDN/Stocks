@@ -8,6 +8,8 @@ CMC key: set CMC_API_KEY environment variable (GitHub Secret or local env)
 
 import os
 import json
+import time
+import datetime as dt
 import requests
 import yfinance as yf
 from datetime import datetime
@@ -27,6 +29,43 @@ DASHBOARD_TITLE = "Crypto"
 # ── CoinMarketCap API ─────────────────────────────────────────────────────────
 CMC_API_KEY = os.environ.get("CMC_API_KEY", "")
 CMC_URL     = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
+
+COINGECKO_API_KEY = os.environ.get("COINGECKO_API_KEY", "")
+# Demo keys → api.coingecko.com + x-cg-demo-api-key
+# Pro keys  → pro-api.coingecko.com + x-cg-pro-api-key
+# We try Pro first; if 401/403, fall back to Demo endpoint automatically per-request
+COINGECKO_PRO_URL  = "https://pro-api.coingecko.com/api/v3"
+COINGECKO_DEMO_URL = "https://api.coingecko.com/api/v3"
+
+STOCKDATA_API_KEY = os.environ.get("STOCKDATA_API_KEY", "")
+STOCKDATA_URL     = "https://api.stockdata.org/v1/news/all"
+# StockData crypto symbol format: ticker + "USD". Overrides for rebrands/specials.
+STOCKDATA_SYMBOLS = {
+    "POL":  "MATICUSD",  # rebranded from MATIC; StockData likely still uses MATIC
+    "PEPE": "PEPEUSD",
+}
+
+# CoinGecko IDs — used for true YTD (Jan 1 → today) via /coins/{id}/history
+COINGECKO_IDS = {
+    "BTC":  "bitcoin",                  "ETH":  "ethereum",
+    "SOL":  "solana",                   "BNB":  "binancecoin",
+    "ADA":  "cardano",                  "AVAX": "avalanche-2",
+    "XRP":  "ripple",                   "XLM":  "stellar",
+    "TRX":  "tron",                     "SUI":  "sui",
+    "HBAR": "hedera-hashgraph",         "TON":  "the-open-network",
+    "ALGO": "algorand",                 "MINA": "mina-protocol",
+    "POL":  "polygon-ecosystem-token",  "DOT":  "polkadot",
+    "LINK": "chainlink",                "DOGE": "dogecoin",
+    "PEPE": "pepe",
+}
+
+# CMC numeric IDs — used for OHLCV historical YTD fetch (avoids symbol ambiguity)
+CMC_IDS = {
+    "BTC": 1,     "ETH": 1027,  "SOL": 5426,  "BNB": 1839,  "ADA": 2010,
+    "AVAX": 5805, "XRP": 52,    "XLM": 512,   "TRX": 1958,  "SUI": 20947,
+    "HBAR": 4642, "TON": 11419, "ALGO": 4031, "MINA": 20804,"POL": 28321,
+    "DOT": 6636,  "LINK": 1975, "DOGE": 74,   "PEPE": 24478,
+}
 
 # display ticker → (cmc_symbol, yf_symbol, category, exchange, company_name)
 # cmc_symbol: what CMC knows it as (MATIC rebranded to POL on CMC)
@@ -50,7 +89,7 @@ STOCKS = {
     "ALGO": ("ALGO", "ALGO-USD",      "emerging", "Crypto", "Algorand"),
     "MINA": ("MINA", "MINA-USD",      "emerging", "Crypto", "Mina"),
     # ── Infrastructure ────────────────────────────────────────────────────────
-    "MATIC":("POL",  "MATIC-USD",     "infra",    "Crypto", "Polygon"),
+    "POL":  ("POL",  "POL-USD",       "infra",    "Crypto", "Polygon (MATIC)"),
     "DOT":  ("DOT",  "DOT-USD",       "infra",    "Crypto", "Polkadot"),
     "LINK": ("LINK", "LINK-USD",      "infra",    "Crypto", "Chainlink"),
     # ── Meme ──────────────────────────────────────────────────────────────────
@@ -93,7 +132,7 @@ def fetch_cmc_quotes():
             "change_1d":  q.get("percent_change_24h") or 0.0,
             "change_1w":  q.get("percent_change_7d")  or 0.0,
             "change_1m":  q.get("percent_change_30d") or 0.0,
-            "change_ytd": q.get("percent_change_1y")  or 0.0,
+            "change_ytd": q.get("percent_change_90d") or None,  # 90d proxy; 1y not on free plan
             "market_cap": q.get("market_cap"),
             "volume_24h": q.get("volume_24h"),
             "cmc_rank":   entry.get("cmc_rank"),
@@ -101,22 +140,181 @@ def fetch_cmc_quotes():
     return quotes
 
 
-def get_yf_supplemental(yf_symbol):
-    """Fetch 52-week high/low and YTD start price from yfinance (single Ticker object)."""
-    year_low = year_high = price_ytd = None
+def _cg_get(path, params):
+    """
+    CoinGecko request with automatic Pro → Demo → public fallback.
+    Returns parsed JSON or raises on final failure.
+    """
+    candidates = []
+    if COINGECKO_API_KEY:
+        candidates += [
+            (COINGECKO_PRO_URL,  {"x-cg-pro-api-key":  COINGECKO_API_KEY}),
+            (COINGECKO_DEMO_URL, {"x-cg-demo-api-key": COINGECKO_API_KEY}),
+        ]
+    candidates.append((COINGECKO_DEMO_URL, {}))  # public fallback
+
+    last_err = None
+    for base, headers in candidates:
+        for attempt in range(3):
+            try:
+                resp = requests.get(f"{base}{path}", headers=headers,
+                                    params=params, timeout=15)
+                if resp.status_code == 429:
+                    wait = 10 * (attempt + 1)
+                    print(f"    [CoinGecko 429 — waiting {wait}s]", end=" ")
+                    time.sleep(wait)
+                    continue
+                if resp.status_code in (401, 403):
+                    break  # wrong key type — try next candidate
+                resp.raise_for_status()
+                return resp.json()
+            except requests.HTTPError as e:
+                last_err = e
+                break
+            except Exception as e:
+                last_err = e
+                if attempt == 2:
+                    break
+    raise RuntimeError(f"CoinGecko request failed: {last_err}")
+
+
+def fetch_coingecko_data(current_prices_usd):
+    """
+    Single CoinGecko market_chart/range call per coin (365-day window).
+    Returns: (ytd_map, low_map, high_map) — all keyed by display ticker.
+    - YTD:  Jan 1 price → current CMC price
+    - Low/High: min/max over the full 365-day range (true 52-week range)
+    """
+    today   = dt.datetime.utcnow()
+    from_ts = int((today - dt.timedelta(days=365)).timestamp())
+    to_ts   = int(today.timestamp())
+    jan1_ms = int(dt.datetime(today.year, 1, 1).timestamp() * 1000)  # CoinGecko uses ms
+
+    ytd_map  = {}
+    low_map  = {}
+    high_map = {}
+
+    for ticker, cg_id in COINGECKO_IDS.items():
+        try:
+            data   = _cg_get(f"/coins/{cg_id}/market_chart/range",
+                             {"vs_currency": "usd", "from": from_ts, "to": to_ts})
+            prices = data.get("prices", [])  # [[timestamp_ms, price], ...]
+
+            if len(prices) >= 2:
+                # 52-week high/low
+                vals     = [p[1] for p in prices]
+                low_map[ticker]  = min(vals)
+                high_map[ticker] = max(vals)
+
+                # YTD: first price on or after Jan 1
+                ytd_pts    = [p for p in prices if p[0] >= jan1_ms]
+                jan1_price = ytd_pts[0][1] if ytd_pts else prices[0][1]
+                current    = current_prices_usd.get(ticker)
+                if jan1_price and jan1_price > 0 and current:
+                    ytd_map[ticker] = round((current - jan1_price) / jan1_price * 100, 2)
+                else:
+                    ytd_map[ticker] = None
+            else:
+                ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
+
+        except Exception as e:
+            print(f"    [CoinGecko {ticker}: {e}]", end=" ")
+            ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
+
+    return ytd_map, low_map, high_map
+
+
+
+def get_news_stockdata(ticker, analyzer, max_items=5):
+    """
+    StockData.org news with built-in entity sentiment (500 req/day free).
+    Sentiment lives in entities[0].sentiment_score (-1 to +1).
+    Falls back to VADER if no entity sentiment available.
+    """
+    if not STOCKDATA_API_KEY:
+        return [], None
+    sym = STOCKDATA_SYMBOLS.get(ticker, ticker + "USD")
     try:
-        t  = yf.Ticker(yf_symbol)
-        fi = t.fast_info
-        year_low  = fi.get("year_low")
-        year_high = fi.get("year_high")
-        import contextlib, io as _io
-        with contextlib.redirect_stderr(_io.StringIO()):
-            ytd_hist = t.history(period="ytd", raise_errors=False)
-        if len(ytd_hist) >= 1:
-            price_ytd = float(ytd_hist["Close"].iloc[0])
+        resp = requests.get(
+            STOCKDATA_URL,
+            params={"symbols": sym, "api_token": STOCKDATA_API_KEY,
+                    "limit": max_items, "language": "en"},
+            timeout=15,
+        )
+        if resp.status_code != 200:
+            return [], None
+        articles = resp.json().get("data", [])
+        items = []
+        for a in articles[:max_items]:
+            title = a.get("title")
+            if not title:
+                continue
+            # Sentiment from first matched entity, else VADER
+            entities = a.get("entities") or []
+            score = entities[0].get("sentiment_score") if entities else None
+            if score is None and analyzer:
+                try:
+                    score = round(analyzer.polarity_scores(title)["compound"], 3)
+                except Exception:
+                    pass
+            pub_ts = None
+            if a.get("published_at"):
+                try:
+                    pub_ts = int(datetime.fromisoformat(
+                        a["published_at"].replace("Z", "+00:00")).timestamp())
+                except Exception:
+                    pass
+            items.append({
+                "title":     title,
+                "publisher": a.get("source"),
+                "url":       a.get("url"),
+                "published": pub_ts,
+                "sentiment": round(float(score), 3) if score is not None else None,
+            })
+        scored = [i["sentiment"] for i in items if i["sentiment"] is not None]
+        agg    = round(sum(scored) / len(scored), 3) if scored else None
+        return items, agg
     except Exception:
-        pass
-    return year_low, year_high, price_ytd
+        return [], None
+
+
+def get_news_coinstats(ticker, analyzer, max_items=5):
+    """
+    CoinStats public API — free, no key, crypto-specific news.
+    Used as fallback when yfinance returns 0 headlines (e.g. POL, MINA, HBAR).
+    """
+    try:
+        resp = requests.get(
+            "https://api.coinstats.app/public/v1/news",
+            params={"coin": ticker, "limit": max_items},
+            timeout=10,
+        )
+        if resp.status_code != 200:
+            return [], None
+        articles = resp.json().get("news", [])
+        items = []
+        for a in articles[:max_items]:
+            title = a.get("title")
+            if not title:
+                continue
+            score = None
+            if analyzer:
+                try:
+                    score = round(analyzer.polarity_scores(title)["compound"], 3)
+                except Exception:
+                    pass
+            items.append({
+                "title":     title,
+                "publisher": a.get("source"),
+                "url":       a.get("link") or a.get("url"),
+                "published": a.get("date"),
+                "sentiment": score,
+            })
+        scored = [i["sentiment"] for i in items if i["sentiment"] is not None]
+        agg    = round(sum(scored) / len(scored), 3) if scored else None
+        return items, agg
+    except Exception:
+        return [], None
 
 
 def get_news(yf_symbol, analyzer, max_items=5):
@@ -220,8 +418,8 @@ def write_json(results, gbp_usd, today_str):
             "change_1d":        f"{r['change_1d']:+.2f}%",
             "change_1w":        f"{r['change_1w']:+.2f}%",
             "change_1m":        f"{r['change_1m']:+.2f}%",
-            "change_ytd":       f"{r['change_ytd']:+.2f}%",
-            "return_1yr":       f"{r['change_ytd']:+.0f}%",
+            "change_ytd":       f"{r['change_ytd']:+.2f}%" if r['change_ytd'] is not None else None,
+            "return_1yr":       f"{r['change_ytd']:+.0f}%" if r['change_ytd'] is not None else None,
             "low_gbp":          fmt_gbp(r["low_gbp"]),
             "high_gbp":         fmt_gbp(r["high_gbp"]),
             "bar_pct":          r["bar_pct"],
@@ -270,6 +468,21 @@ def main():
     cmc_quotes = fetch_cmc_quotes()
     print(f"  Got {len(cmc_quotes)} quotes from CMC")
 
+    # Build current USD price map for CoinGecko YTD calculation
+    current_prices_usd = {
+        ticker: cmc_quotes[v[0]]["price_usd"]
+        for ticker, v in STOCKS.items()
+        if v[0] in cmc_quotes
+    }
+
+    print("Fetching YTD + 52-week range from CoinGecko (365-day window)...")
+    try:
+        ytd_map, low_map, high_map = fetch_coingecko_data(current_prices_usd)
+        print(f"  Fetched for {sum(1 for v in ytd_map.values() if v is not None)}/{len(ytd_map)} coins")
+    except Exception as e:
+        print(f"  CoinGecko unavailable ({e}) — falling back to 90d proxy, no 52w range")
+        ytd_map, low_map, high_map = {}, {}, {}
+
     analyzer = SentimentIntensityAnalyzer() if _VADER_OK else None
     if analyzer is None:
         print("  [vaderSentiment not installed — news skipped]")
@@ -288,19 +501,26 @@ def main():
             price_usd = q["price_usd"]
             price_gbp = to_gbp(price_usd, gbp_usd)
 
-            # 52-week range + YTD start price from yfinance (single Ticker object)
-            low_raw, high_raw, price_ytd = get_yf_supplemental(yf_sym)
+            # 52-week range from CoinGecko (min/max of 365-day price series)
+            low_raw  = low_map.get(ticker)
+            high_raw = high_map.get(ticker)
             low_gbp  = to_gbp(low_raw,  gbp_usd) if low_raw  else price_gbp * 0.5
             high_gbp = to_gbp(high_raw, gbp_usd) if high_raw else price_gbp * 1.5
             bp = bar_pct(price_gbp, low_gbp, high_gbp)
 
-            # YTD: compute from yfinance Jan-1 close; fall back to CMC 1y (may be 0 on free plan)
-            if price_ytd and price_ytd > 0:
-                change_ytd = round((price_usd - price_ytd) / price_ytd * 100, 2)
-            else:
+            # YTD: true Jan 1 → today from OHLCV; fall back to 90d proxy if unavailable
+            if ticker in ytd_map and ytd_map[ticker] is not None:
+                change_ytd = ytd_map[ticker]
+            elif q["change_ytd"] is not None:
                 change_ytd = round(q["change_ytd"], 2)
+            else:
+                change_ytd = None
 
-            news_items, news_agg = get_news(yf_sym, analyzer)
+            news_items, news_agg = get_news_stockdata(ticker, analyzer)
+            if not news_items:  # StockData missed — try yfinance
+                news_items, news_agg = get_news(yf_sym, analyzer)
+            if not news_items:  # yfinance missed — try CoinStats (no key, no sentiment)
+                news_items, news_agg = get_news_coinstats(ticker, analyzer)
 
             results[ticker] = {
                 "price_usd":      price_usd,
@@ -326,7 +546,7 @@ def main():
                 f"(1d: {q['change_1d']:+.2f}%)  "
                 f"(1w: {q['change_1w']:+.2f}%)  "
                 f"(1m: {q['change_1m']:+.2f}%)  "
-                f"(ytd: {change_ytd:+.2f}%)"
+                f"(ytd: {change_ytd:+.2f}%)" if change_ytd is not None else "(ytd: N/A)"
                 f"{news_note}"
             )
 

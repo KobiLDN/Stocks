@@ -215,15 +215,19 @@
   .range-wrap {
     display: flex;
     align-items: center;
-    gap: 8px;
-    min-width: 160px;
+    gap: 6px;
+    min-width: 180px;
+    max-width: 220px;
   }
 
   .range-label {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
+    font-size: 10px;
     color: var(--muted);
-    width: 36px;
+    width: 56px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .range-bar-bg {
@@ -232,7 +236,7 @@
     background: var(--border);
     border-radius: 2px;
     position: relative;
-    min-width: 80px;
+    min-width: 60px;
   }
 
   .range-fill {
@@ -471,7 +475,7 @@ const CAT_LABELS = {
   'meme':     'Meme',
 };
 
-const CRYPTO_YF = { 'TON': 'TON11419-USD', 'SUI': 'SUI20947-USD', 'PEPE': 'PEPE24478-USD' };
+const CRYPTO_YF = { 'TON': 'TON11419-USD', 'SUI': 'SUI20947-USD', 'PEPE': 'PEPE24478-USD', 'POL': 'POL-USD' };
 function yahooUrl(ticker) { return 'https://finance.yahoo.com/quote/' + (CRYPTO_YF[ticker] || ticker + '-USD') + '/'; }
 
 function returnClass(retStr) {
