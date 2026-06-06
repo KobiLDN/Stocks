@@ -267,6 +267,11 @@ const NAMES = {
   'LINK': 'Chainlink',
   'DOGE': 'Dogecoin',
   'PEPE': 'Pepe',
+  'TAO': 'Bittensor', 'FET': 'ASI Alliance', 'RNDR': 'Render',
+  'OCEAN': 'Ocean Protocol', 'GRT': 'The Graph', 'AGIX': 'SingularityNET',
+  'NMR': 'Numeraire', 'ALT': 'AltLayer', 'AIOZ': 'AIOZ Network',
+  'ARKM': 'Arkham', 'WLD': 'Worldcoin', 'NEAR': 'NEAR Protocol',
+  'ICP': 'Internet Computer', 'KAITO': 'Kaito', 'VIRTUAL': 'Virtuals Protocol',
 };
 
 const CAT_LABELS = {
@@ -276,6 +281,7 @@ const CAT_LABELS = {
   'emerging': 'Emerging',
   'infra':    'Infra',
   'meme':     'Meme',
+  'ai':       'AI Tokens',
 };
 
 /* Category display order */
@@ -286,6 +292,7 @@ const CAT_ORDER = [
   'emerging',
   'infra',
   'meme',
+  'ai',
 ];
 
 const METRICS_CFG = {
@@ -302,6 +309,11 @@ const COINGECKO_IDS = {
   'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
   'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
   'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+  'TAO': 'bittensor', 'FET': 'fetch-ai', 'RNDR': 'render-token',
+  'OCEAN': 'ocean-protocol', 'GRT': 'the-graph', 'AGIX': 'singularitynet',
+  'NMR': 'numeraire', 'ALT': 'altlayer', 'AIOZ': 'aioz-network',
+  'ARKM': 'arkham', 'WLD': 'worldcoin-wld', 'NEAR': 'near',
+  'ICP': 'internet-computer', 'KAITO': 'kaito', 'VIRTUAL': 'virtual-protocol',
 };
 function cgUrl(t) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[t] || t.toLowerCase()); }
 

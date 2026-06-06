@@ -194,6 +194,8 @@
   .cat-payments{ background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
   .cat-emerging{ background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
   .cat-meme    { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
+  .cat-ai      { background: rgba(139,92,246,0.12);  color: #a78bfa;       border: 1px solid rgba(139,92,246,0.3); }
+  .filter-btn[data-filter="ai"].active { background: #a78bfa; border-color: #a78bfa; color: var(--bg); }
   .cat-infra   { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
 
   .price {
@@ -409,6 +411,7 @@
 <button class="filter-btn" data-filter="emerging" data-tooltip="Emerging L1s — SUI, HBAR (Hedera), TON (Toncoin), ALGO (Algorand), MINA: newer and niche blockchains" onclick="filterTable('emerging', this)">Emerging</button>
 <button class="filter-btn" data-filter="infra" data-tooltip="Infrastructure — POL (Polygon), DOT (Polkadot), LINK (Chainlink): scaling, interoperability, and oracle infrastructure" onclick="filterTable('infra', this)">Infra</button>
 <button class="filter-btn" data-filter="meme" data-tooltip="Meme coins — DOGE (Dogecoin), PEPE: community-driven high-volatility tokens" onclick="filterTable('meme', this)">Meme</button>
+<button class="filter-btn" data-filter="ai" data-tooltip="AI Tokens — TAO (Bittensor), FET (ASI Alliance), RNDR (Render), NEAR, ICP, GRT, OCEAN, AGIX, NMR, ALT, AIOZ, ARKM, WLD, KAITO, VIRTUAL: decentralised AI infrastructure and intelligence networks" onclick="filterTable('ai', this)">AI Tokens</button>
 </div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
@@ -455,6 +458,22 @@ const NOTES = {
   'LINK': 'Chainlink — the leading decentralised oracle network. Connects smart contracts to real-world data, APIs, and off-chain computation. Critical DeFi infrastructure.',
   'DOGE': 'Dogecoin — the original meme coin. Strong retail community. Accepted by Tesla and SpaceX. Elon Musk endorsements drive recurring price action.',
   'PEPE': 'Pepe — Ethereum-based meme token inspired by Pepe the Frog. Launched April 2023. No utility — pure community and speculative momentum play.',
+  // AI Tokens
+  'TAO':     'Bittensor — decentralised AI/ML marketplace where models compete and earn TAO for providing intelligence. Largest AI crypto by market cap (~$3.4B).',
+  'FET':     'Artificial Superintelligence Alliance (ASI) — merger of Fetch.ai, SingularityNET, and Ocean Protocol. Autonomous AI agents for DeFi, data markets, and automation.',
+  'RNDR':    'Render Network — decentralised GPU marketplace for AI rendering, inference, and 3D visual compute. Artists and AI workloads rent GPU power from node operators.',
+  'OCEAN':   'Ocean Protocol — data marketplace enabling secure sharing and monetisation of datasets. Critical infrastructure for training AI models at scale.',
+  'GRT':     'The Graph — "Google for Web3". Decentralised indexing protocol providing structured on-chain data essential for AI analytics and on-chain intelligence.',
+  'AGIX':    'SingularityNET — AGI research and AI services marketplace co-founded by Ben Goertzel. Developers publish and monetise AI algorithms as microservices.',
+  'NMR':     'Numeraire — Numerai hedge fund token. Data scientists stake NMR when submitting AI predictions to a global tournament; correct predictions earn returns.',
+  'ALT':     'AltLayer — AI-powered rollup infrastructure using restaking. Enables one-click deployment of verifiable rollup networks for developers and enterprises.',
+  'AIOZ':    'AIOZ Network — decentralised AI and media streaming CDN. GPU node operators earn AIOZ for streaming video and handling AI compute workloads.',
+  'ARKM':    'Arkham Intelligence — on-chain analytics and intelligence exchange. ARKM tokens used to buy and sell intelligence on crypto wallets and entities.',
+  'WLD':     'Worldcoin — Sam Altman\'s identity and AI project. Uses iris biometrics (the Orb device) to verify humanhood as AI becomes indistinguishable from people.',
+  'NEAR':    'NEAR Protocol — AI-ready Layer 1 with chain abstraction. Positions itself as the execution layer for autonomous AI agents operating across multiple blockchains.',
+  'ICP':     'Internet Computer — Dfinity\'s blockchain that runs AI models and smart contracts directly on-chain without traditional cloud infrastructure.',
+  'KAITO':   'Kaito — AI-powered crypto research and intelligence platform. Aggregates and ranks the most relevant information across Web3 using AI.',
+  'VIRTUAL': 'Virtuals Protocol — tokenised AI agent economies. Each AI agent has an economic identity, can earn revenue, and is co-owned by its community via token.',
 };
 
 const CAT_COLORS = {
@@ -464,6 +483,7 @@ const CAT_COLORS = {
   'emerging': 'var(--teal)',
   'infra':    'var(--green)',
   'meme':     'var(--gold)',
+  'ai':       '#a78bfa',
 };
 
 const CAT_LABELS = {
@@ -473,6 +493,7 @@ const CAT_LABELS = {
   'emerging': 'Emerging',
   'infra':    'Infra',
   'meme':     'Meme',
+  'ai':       'AI Tokens',
 };
 
 const COINGECKO_IDS = {
@@ -481,6 +502,11 @@ const COINGECKO_IDS = {
   'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
   'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
   'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+  'TAO': 'bittensor', 'FET': 'fetch-ai', 'RNDR': 'render-token',
+  'OCEAN': 'ocean-protocol', 'GRT': 'the-graph', 'AGIX': 'singularitynet',
+  'NMR': 'numeraire', 'ALT': 'altlayer', 'AIOZ': 'aioz-network',
+  'ARKM': 'arkham', 'WLD': 'worldcoin-wld', 'NEAR': 'near',
+  'ICP': 'internet-computer', 'KAITO': 'kaito', 'VIRTUAL': 'virtual-protocol',
 };
 function cgUrl(ticker) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[ticker] || ticker.toLowerCase()); }
 

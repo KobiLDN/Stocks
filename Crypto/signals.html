@@ -111,6 +111,7 @@
   .cat-payments{ background: rgba(79,70,229,0.15);   color: var(--indigo); border: 1px solid rgba(79,70,229,0.35); }
   .cat-emerging{ background: rgba(13,148,136,0.12);  color: var(--teal);   border: 1px solid rgba(13,148,136,0.3); }
   .cat-meme    { background: rgba(180,83,9,0.12);    color: var(--gold);   border: 1px solid rgba(180,83,9,0.3); }
+  .cat-ai      { background: rgba(139,92,246,0.12);  color: #a78bfa;       border: 1px solid rgba(139,92,246,0.3); }
   .cat-infra   { background: rgba(22,163,74,0.12);   color: var(--green);  border: 1px solid rgba(22,163,74,0.3); }
 
   .signal-pill {
@@ -430,6 +431,11 @@
     'LINK': 'Chainlink',
     'DOGE': 'Dogecoin',
     'PEPE': 'Pepe',
+    'TAO': 'Bittensor', 'FET': 'ASI Alliance', 'RNDR': 'Render',
+    'OCEAN': 'Ocean Protocol', 'GRT': 'The Graph', 'AGIX': 'SingularityNET',
+    'NMR': 'Numeraire', 'ALT': 'AltLayer', 'AIOZ': 'AIOZ Network',
+    'ARKM': 'Arkham', 'WLD': 'Worldcoin', 'NEAR': 'NEAR Protocol',
+    'ICP': 'Internet Computer', 'KAITO': 'Kaito', 'VIRTUAL': 'Virtuals Protocol',
   };
 
   const CAT_LABELS = {
@@ -439,6 +445,7 @@
     'emerging': 'Emerging',
     'infra':    'Infra',
     'meme':     'Meme',
+    'ai':       'AI Tokens',
   };
 
   const COINGECKO_IDS = {
@@ -447,6 +454,11 @@
     'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
     'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
     'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+    'TAO': 'bittensor', 'FET': 'fetch-ai', 'RNDR': 'render-token',
+    'OCEAN': 'ocean-protocol', 'GRT': 'the-graph', 'AGIX': 'singularitynet',
+    'NMR': 'numeraire', 'ALT': 'altlayer', 'AIOZ': 'aioz-network',
+    'ARKM': 'arkham', 'WLD': 'worldcoin-wld', 'NEAR': 'near',
+    'ICP': 'internet-computer', 'KAITO': 'kaito', 'VIRTUAL': 'virtual-protocol',
   };
   function cgUrl(ticker) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[ticker] || ticker.toLowerCase()); }
 

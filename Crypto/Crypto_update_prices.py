@@ -57,6 +57,15 @@ COINGECKO_IDS = {
     "POL":  "polygon-ecosystem-token",  "DOT":  "polkadot",
     "LINK": "chainlink",                "DOGE": "dogecoin",
     "PEPE": "pepe",
+    # ── AI Tokens ─────────────────────────────────────────────────────────────
+    "TAO":     "bittensor",             "FET":     "fetch-ai",
+    "RNDR":    "render-token",          "OCEAN":   "ocean-protocol",
+    "GRT":     "the-graph",            "AGIX":    "singularitynet",
+    "NMR":     "numeraire",            "ALT":     "altlayer",
+    "AIOZ":    "aioz-network",         "ARKM":    "arkham",
+    "WLD":     "worldcoin-wld",        "NEAR":    "near",
+    "ICP":     "internet-computer",    "KAITO":   "kaito",
+    "VIRTUAL": "virtual-protocol",
 }
 
 # CMC numeric IDs — used for OHLCV historical YTD fetch (avoids symbol ambiguity)
@@ -65,6 +74,11 @@ CMC_IDS = {
     "AVAX": 5805, "XRP": 52,    "XLM": 512,   "TRX": 1958,  "SUI": 20947,
     "HBAR": 4642, "TON": 11419, "ALGO": 4031, "MINA": 20804,"POL": 28321,
     "DOT": 6636,  "LINK": 1975, "DOGE": 74,   "PEPE": 24478,
+    # AI Tokens
+    "TAO": 22974, "FET": 3773,  "RNDR": 5690,  "OCEAN": 3911,
+    "GRT": 6719,  "AGIX": 6945, "NMR": 1732,   "ALT": 28067,
+    "AIOZ": 9444, "ARKM": 25691,"WLD": 13502,  "NEAR": 6535,
+    "ICP": 8916,  "KAITO": 30999, "VIRTUAL": 29420,
 }
 
 # display ticker → (cmc_symbol, yf_symbol, category, exchange, company_name)
@@ -95,6 +109,22 @@ STOCKS = {
     # ── Meme ──────────────────────────────────────────────────────────────────
     "DOGE": ("DOGE", "DOGE-USD",      "meme",     "Crypto", "Dogecoin"),
     "PEPE": ("PEPE", "PEPE24478-USD", "meme",     "Crypto", "Pepe"),
+    # ── AI Tokens ─────────────────────────────────────────────────────────────
+    "TAO":     ("TAO",     "TAO-USD",     "ai", "Crypto", "Bittensor"),
+    "FET":     ("FET",     "FET-USD",     "ai", "Crypto", "ASI Alliance"),
+    "RNDR":    ("RNDR",    "RNDR-USD",    "ai", "Crypto", "Render"),
+    "OCEAN":   ("OCEAN",   "OCEAN-USD",   "ai", "Crypto", "Ocean Protocol"),
+    "GRT":     ("GRT",     "GRT-USD",     "ai", "Crypto", "The Graph"),
+    "AGIX":    ("AGIX",    "AGIX-USD",    "ai", "Crypto", "SingularityNET"),
+    "NMR":     ("NMR",     "NMR-USD",     "ai", "Crypto", "Numeraire"),
+    "ALT":     ("ALT",     "ALT-USD",     "ai", "Crypto", "AltLayer"),
+    "AIOZ":    ("AIOZ",    "AIOZ-USD",    "ai", "Crypto", "AIOZ Network"),
+    "ARKM":    ("ARKM",    "ARKM-USD",    "ai", "Crypto", "Arkham"),
+    "WLD":     ("WLD",     "WLD-USD",     "ai", "Crypto", "Worldcoin"),
+    "NEAR":    ("NEAR",    "NEAR-USD",    "ai", "Crypto", "NEAR Protocol"),
+    "ICP":     ("ICP",     "ICP-USD",     "ai", "Crypto", "Internet Computer"),
+    "KAITO":   ("KAITO",   "KAITO-USD",   "ai", "Crypto", "Kaito"),
+    "VIRTUAL": ("VIRTUAL", "VIRTUAL-USD", "ai", "Crypto", "Virtuals Protocol"),
 }
 
 
