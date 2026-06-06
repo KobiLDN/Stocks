@@ -441,9 +441,14 @@
     'meme':     'Meme',
   };
 
-  function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + ticker + '/';
-  }
+  const COINGECKO_IDS = {
+    'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+    'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+    'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+    'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+    'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+  };
+  function cgUrl(ticker) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[ticker] || ticker.toLowerCase()); }
 
   function escapeHtml(s) {
     return String(s == null ? '' : s)
@@ -533,7 +538,7 @@
         '<div class="rank-rail"><span class="rank-num">' + (p.rank || '') + '</span>' + deltaBadge + '</div>' +
         '<div class="card-body">' +
           '<div class="card-top">' +
-            '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
+            '<a class="ticker" href="' + cgUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
             '<span class="company">' + escapeHtml(name) + '</span>' +
             catBadge +
             '<span class="signal-pill ' + signalCls + '">' + escapeHtml(signalLabel(p.signal)) + '</span>' +

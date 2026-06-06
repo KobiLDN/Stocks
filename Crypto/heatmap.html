@@ -296,8 +296,14 @@ const METRICS_CFG = {
   '1y':  { field: 'return_1yr', label: '1Y',    threshold: 60 },
 };
 
-const CRYPTO_YF = { 'TON': 'TON11419-USD', 'SUI': 'SUI20947-USD', 'PEPE': 'PEPE24478-USD', 'POL': 'POL-USD' };
-function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (CRYPTO_YF[t] || t + '-USD') + '/'; }
+const COINGECKO_IDS = {
+  'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+  'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+  'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+  'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+  'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+};
+function cgUrl(t) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[t] || t.toLowerCase()); }
 
 /* ── Helpers ── */
 function parsePct(s) {
@@ -377,7 +383,7 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
     .attr('class', 'tile')
     .attr('transform', d => `translate(${d.x0},${d.y0})`)
     .style('cursor', 'pointer')
-    .on('click',      (ev, d) => window.open(yahooUrl(d.data.ticker), '_blank', 'noopener'))
+    .on('click',      (ev, d) => window.open(cgUrl(d.data.ticker), '_blank', 'noopener'))
     .on('mousemove',  (ev, d) => showTooltip(ev, d.data))
     .on('mouseleave', hideTooltip);
 

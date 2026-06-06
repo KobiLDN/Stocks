@@ -282,7 +282,7 @@
 </a>
 </div>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · data from Yahoo Finance (yfinance), may be delayed · for research only · always consult a financial adviser</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · prices from CoinMarketCap · historical data from CoinGecko · may be delayed · for research only · always consult a financial adviser</div>
 </header>
 <nav>
   <div class="nav-inner">
@@ -378,10 +378,14 @@
     'meme':     'Meme — DOGE, PEPE: community-driven high-volatility tokens',
   };
 
-  const CRYPTO_YF = { 'TON': 'TON11419-USD', 'SUI': 'SUI20947-USD', 'PEPE': 'PEPE24478-USD', 'POL': 'POL-USD' };
-  function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + (CRYPTO_YF[ticker] || ticker + '-USD') + '/';
-  }
+  const COINGECKO_IDS = {
+    'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+    'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+    'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+    'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+    'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+  };
+  function cgUrl(ticker) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[ticker] || ticker.toLowerCase()); }
 
   function fmtMarketCap(gbpB) {
     if (gbpB === null || gbpB === undefined) return null;
@@ -567,7 +571,7 @@
         : dash();
 
       return '<tr>' +
-        '<td class="ticker-cell"><a href="' + yahooUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
+        '<td class="ticker-cell"><a href="' + cgUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
         '<td class="company-cell">' + s.name + '</td>' +
         '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
         '<td class="num-cell" style="text-align:right">' + priceCell + '</td>' +

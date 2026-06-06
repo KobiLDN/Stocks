@@ -475,8 +475,14 @@ const CAT_LABELS = {
   'meme':     'Meme',
 };
 
-const CRYPTO_YF = { 'TON': 'TON11419-USD', 'SUI': 'SUI20947-USD', 'PEPE': 'PEPE24478-USD', 'POL': 'POL-USD' };
-function yahooUrl(ticker) { return 'https://finance.yahoo.com/quote/' + (CRYPTO_YF[ticker] || ticker + '-USD') + '/'; }
+const COINGECKO_IDS = {
+  'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+  'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+  'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+  'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+  'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+};
+function cgUrl(ticker) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[ticker] || ticker.toLowerCase()); }
 
 function returnClass(retStr) {
   const n = parseFloat(String(retStr).replace(/[^0-9.-]/g, ''));
@@ -511,7 +517,7 @@ function buildTable(stocks) {
     tr.dataset.changeYtd = s.change_ytd;
     tr.dataset.barPct    = s.bar_pct;
     tr.innerHTML =
-      '<td><a class="ticker-link" href="' + yahooUrl(s.ticker) + '" target="_blank">' +
+      '<td><a class="ticker-link" href="' + cgUrl(s.ticker) + '" target="_blank">' +
         '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
         '<div class="exchange-badge">' + s.exchange + '</div></td>' +
       '<td>' + (s.company_name || s.ticker) + '</td>' +

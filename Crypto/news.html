@@ -358,10 +358,14 @@
     'meme':     'Meme — DOGE, PEPE: community-driven high-volatility tokens',
   };
 
-  const CRYPTO_YF = { 'TON': 'TON11419-USD', 'SUI': 'SUI20947-USD', 'PEPE': 'PEPE24478-USD', 'POL': 'POL-USD' };
-  function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + (CRYPTO_YF[ticker] || ticker + '-USD') + '/';
-  }
+  const COINGECKO_IDS = {
+    'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+    'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+    'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+    'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+    'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+  };
+  function cgUrl(ticker) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[ticker] || ticker.toLowerCase()); }
 
   function escapeHtml(s) {
     return String(s == null ? '' : s)
@@ -468,7 +472,7 @@
     feed.innerHTML = sorted.map(n => {
       const sc = sentClass(n.sentiment);
       const catLabel = CAT_LABELS[n.category] || n.category;
-      const url = n.url || yahooUrl(n.ticker);
+      const url = n.url || cgUrl(n.ticker);
       const headlineTag = n.url
         ? '<a class="news-headline" href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener">' + escapeHtml(n.title) + '</a>'
         : '<span class="news-headline">' + escapeHtml(n.title) + '</span>';
@@ -476,7 +480,7 @@
         '<div class="sent-bar ' + sc + '"></div>' +
         '<div class="news-body">' +
           '<div class="news-meta-top">' +
-            '<a class="news-ticker" href="' + yahooUrl(n.ticker) + '" target="_blank" rel="noopener">' + n.ticker + '</a>' +
+            '<a class="news-ticker" href="' + cgUrl(n.ticker) + '" target="_blank" rel="noopener">' + n.ticker + '</a>' +
             '<span class="news-company">' + escapeHtml(n.name) + '</span>' +
             '<span class="cat-badge cat-' + n.category + '">' + catLabel + '</span>' +
             '<span class="news-time">' + timeAgo(n.published) + '</span>' +

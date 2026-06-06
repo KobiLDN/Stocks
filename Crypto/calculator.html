@@ -256,6 +256,15 @@
 <script src="prices-data.js"></script>
 <script>
   /* ---- DATA ---- */
+  const COINGECKO_IDS = {
+    'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+    'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+    'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+    'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+    'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+  };
+  function cgUrl(ticker) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[ticker] || ticker.toLowerCase()); }
+
   const NAMES = {
     'BTC':  'Bitcoin',
     'ETH':  'Ethereum',
@@ -348,7 +357,7 @@
       const ytdCls = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
       const catLabel = CAT_LABELS[s.category] || s.category;
       return `<tr>
-        <td class="ticker-cell"><a href="https://finance.yahoo.com/quote/${s.ticker}/" target="_blank" class="ticker-link">${s.ticker}</a></td>
+        <td class="ticker-cell"><a href="${cgUrl(s.ticker)}" target="_blank" class="ticker-link">${s.ticker}</a></td>
         <td class="company-cell">${s.name}</td>
         <td><span class="cat-badge cat-${s.category}">${catLabel}</span></td>
         <td><span class="${ytdCls}">${s.ytdPct >= 0 ? '+' : ''}${s.ytdPct.toFixed(2)}%</span></td>
