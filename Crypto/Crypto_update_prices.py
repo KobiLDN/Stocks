@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Update prices for the Crypto sector.
+Update prices for the Crypto sector — uses CoinMarketCap API for price data.
 Run: python Crypto_update_prices.py
-Requires: pip install yfinance beautifulsoup4 vaderSentiment
+Requires: pip install yfinance requests tzdata vaderSentiment
+CMC key: set CMC_API_KEY environment variable (GitHub Secret or local env)
 """
 
-import yfinance as yf
+import os
 import json
-import contextlib
-import io
-from datetime import datetime, timezone
+import requests
+import yfinance as yf
+from datetime import datetime
 from zoneinfo import ZoneInfo
 
 try:
@@ -23,146 +24,105 @@ JS_FILE   = "prices-data.js"
 
 DASHBOARD_TITLE = "Crypto"
 
-# ticker (display) → (yahoo_symbol, category, exchange, special, company_name)
+# ── CoinMarketCap API ─────────────────────────────────────────────────────────
+CMC_API_KEY = os.environ.get("CMC_API_KEY", "")
+CMC_URL     = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
+
+# display ticker → (cmc_symbol, yf_symbol, category, exchange, company_name)
+# cmc_symbol: what CMC knows it as (MATIC rebranded to POL on CMC)
 STOCKS = {
     # ── Bitcoin ───────────────────────────────────────────────────────────────
-    "BTC":  ("BTC-USD",  "bitcoin",  "Crypto", None, "Bitcoin"),
+    "BTC":  ("BTC",  "BTC-USD",       "bitcoin",  "Crypto", "Bitcoin"),
     # ── Layer 1 ───────────────────────────────────────────────────────────────
-    "ETH":  ("ETH-USD",  "layer1",   "Crypto", None, "Ethereum"),
-    "SOL":  ("SOL-USD",  "layer1",   "Crypto", None, "Solana"),
-    "BNB":  ("BNB-USD",  "layer1",   "Crypto", None, "BNB"),
-    "ADA":  ("ADA-USD",  "layer1",   "Crypto", None, "Cardano"),
-    "AVAX": ("AVAX-USD", "layer1",   "Crypto", None, "Avalanche"),
+    "ETH":  ("ETH",  "ETH-USD",       "layer1",   "Crypto", "Ethereum"),
+    "SOL":  ("SOL",  "SOL-USD",       "layer1",   "Crypto", "Solana"),
+    "BNB":  ("BNB",  "BNB-USD",       "layer1",   "Crypto", "BNB"),
+    "ADA":  ("ADA",  "ADA-USD",       "layer1",   "Crypto", "Cardano"),
+    "AVAX": ("AVAX", "AVAX-USD",      "layer1",   "Crypto", "Avalanche"),
     # ── Payments ──────────────────────────────────────────────────────────────
-    "XRP":  ("XRP-USD",  "payments", "Crypto", None, "XRP"),
-    "XLM":  ("XLM-USD",  "payments", "Crypto", None, "Stellar"),
-    "TRX":  ("TRX-USD",  "payments", "Crypto", None, "TRON"),
+    "XRP":  ("XRP",  "XRP-USD",       "payments", "Crypto", "XRP"),
+    "XLM":  ("XLM",  "XLM-USD",       "payments", "Crypto", "Stellar"),
+    "TRX":  ("TRX",  "TRX-USD",       "payments", "Crypto", "TRON"),
     # ── Emerging ──────────────────────────────────────────────────────────────
-    "SUI":  ("SUI20947-USD",  "emerging", "Crypto", None, "Sui"),
-    "HBAR": ("HBAR-USD", "emerging", "Crypto", None, "Hedera"),
-    "TON":  ("TON11419-USD", "emerging", "Crypto", None, "Toncoin"),
-    "ALGO": ("ALGO-USD", "emerging", "Crypto", None, "Algorand"),
-    "MINA": ("MINA-USD", "emerging", "Crypto", None, "Mina"),
+    "SUI":  ("SUI",  "SUI20947-USD",  "emerging", "Crypto", "Sui"),
+    "HBAR": ("HBAR", "HBAR-USD",      "emerging", "Crypto", "Hedera"),
+    "TON":  ("TON",  "TON11419-USD",  "emerging", "Crypto", "Toncoin"),
+    "ALGO": ("ALGO", "ALGO-USD",      "emerging", "Crypto", "Algorand"),
+    "MINA": ("MINA", "MINA-USD",      "emerging", "Crypto", "Mina"),
     # ── Infrastructure ────────────────────────────────────────────────────────
-    "MATIC":("MATIC-USD","infra",    "Crypto", None, "Polygon"),
-    "DOT":  ("DOT-USD",  "infra",    "Crypto", None, "Polkadot"),
-    "LINK": ("LINK-USD", "infra",    "Crypto", None, "Chainlink"),
+    "MATIC":("POL",  "MATIC-USD",     "infra",    "Crypto", "Polygon"),
+    "DOT":  ("DOT",  "DOT-USD",       "infra",    "Crypto", "Polkadot"),
+    "LINK": ("LINK", "LINK-USD",      "infra",    "Crypto", "Chainlink"),
     # ── Meme ──────────────────────────────────────────────────────────────────
-    "DOGE": ("DOGE-USD", "meme",     "Crypto", None, "Dogecoin"),
-    "PEPE": ("PEPE24478-USD", "meme",     "Crypto", None, "Pepe"),
+    "DOGE": ("DOGE", "DOGE-USD",      "meme",     "Crypto", "Dogecoin"),
+    "PEPE": ("PEPE", "PEPE24478-USD", "meme",     "Crypto", "Pepe"),
 }
 
 
 def get_fx_rates():
-    """Fetch GBP/USD rate."""
+    """Fetch GBP/USD rate via yfinance."""
     gbp_usd = yf.Ticker("GBPUSD=X").fast_info["last_price"]
     return gbp_usd
 
 
-def get_stock_data(yahoo_symbol):
-    t = yf.Ticker(yahoo_symbol)
-    fi = t.fast_info
-    price = fi.last_price
-    try:
-        low52 = fi.year_low
-    except Exception:
-        low52 = None
-    try:
-        high52 = fi.year_high
-    except Exception:
-        high52 = None
-    try:
-        prev_close = fi.previous_close
-    except Exception:
-        prev_close = None
-    price_1w = None
-    price_1m = None
-    price_ytd = None
-    vol_1d = None
-    vol_1w = None
-    vol_1m = None
-    try:
-        hist = t.history(period='1mo')
-        if len(hist) >= 6:
-            price_1w = float(hist['Close'].iloc[-6])
-        if len(hist) >= 1:
-            price_1m = float(hist['Close'].iloc[0])
-        if 'Volume' in hist.columns:
-            if len(hist) >= 1:
-                vol_1d = int(hist['Volume'].iloc[-1])
-            if len(hist) >= 5:
-                vol_1w = int(hist['Volume'].iloc[-5:].sum())
-            vol_1m = int(hist['Volume'].sum())
-    except Exception:
-        pass
-    try:
-        with contextlib.redirect_stderr(io.StringIO()):
-            ytd_hist = t.history(period='ytd', raise_errors=False)
-        if len(ytd_hist) >= 1:
-            price_ytd = float(ytd_hist['Close'].iloc[0])
-    except Exception:
-        pass
-    return price, low52, high52, prev_close, price_1w, price_1m, price_ytd, vol_1d, vol_1w, vol_1m
+def fetch_cmc_quotes():
+    """
+    Single bulk call to CMC for all coins.
+    Returns dict: cmc_symbol → quote dict (price, changes, market_cap, volume).
+    """
+    cmc_symbols = list({v[0] for v in STOCKS.values()})
+    resp = requests.get(
+        CMC_URL,
+        headers={"X-CMC_PRO_API_KEY": CMC_API_KEY, "Accept": "application/json"},
+        params={"symbol": ",".join(cmc_symbols), "convert": "USD"},
+        timeout=20,
+    )
+    resp.raise_for_status()
+    data = resp.json()
 
+    if data.get("status", {}).get("error_code", 0) != 0:
+        raise RuntimeError(f"CMC API error: {data['status']}")
 
-def get_metrics(yahoo_symbol, special, gbp_usd):
-    """Fetch fundamental metrics from ticker.info. Returns dict or {} on failure."""
-    try:
-        info = yf.Ticker(yahoo_symbol).info
-
-        mc_raw = info.get('marketCap')
-        if mc_raw and mc_raw > 0:
-            mc_gbp = to_gbp(mc_raw, special, gbp_usd)
-            mc_gbp_b = round(mc_gbp / 1e9, 3)
-        else:
-            mc_gbp_b = None
-
-        beta = info.get('beta')
-        if beta is not None:
-            beta = round(float(beta), 3)
-
-        pe_raw = info.get('trailingPE')
-        pe_ratio = round(float(pe_raw), 2) if pe_raw and float(pe_raw) > 0 else None
-
-        avg_vol = info.get('averageVolume')
-        avg_volume_m = round(avg_vol / 1e6, 2) if avg_vol and avg_vol > 0 else None
-
-        dy_raw = info.get('dividendYield')
-        div_yield_pct = round(float(dy_raw) * 100, 3) if dy_raw and float(dy_raw) > 0 else None
-
-        sp_raw = info.get('shortPercentOfFloat')
-        short_pct = round(float(sp_raw) * 100, 2) if sp_raw and float(sp_raw) > 0 else None
-
-        analyst = info.get('recommendationKey') or None
-        if analyst:
-            analyst = analyst.lower()
-
-        score_raw = info.get('recommendationMean')
-        analyst_score = round(float(score_raw), 2) if score_raw else None
-
-        week52_raw = info.get('52WeekChange')
-        week52_pct = round(float(week52_raw) * 100) if week52_raw is not None else None
-
-        return {
-            'market_cap_gbp_b': mc_gbp_b,
-            'beta':             beta,
-            'pe_ratio':         pe_ratio,
-            'avg_volume_m':     avg_volume_m,
-            'div_yield_pct':    div_yield_pct,
-            'short_pct':        short_pct,
-            'analyst':          analyst,
-            'analyst_score':    analyst_score,
-            'week52_pct':       week52_pct,
+    quotes = {}
+    for sym, entries in data["data"].items():
+        # CMC returns a list when a symbol is ambiguous; take first entry
+        entry = entries[0] if isinstance(entries, list) else entries
+        q = entry["quote"]["USD"]
+        quotes[sym] = {
+            "price_usd":  q["price"],
+            "change_1d":  q.get("percent_change_24h") or 0.0,
+            "change_1w":  q.get("percent_change_7d")  or 0.0,
+            "change_1m":  q.get("percent_change_30d") or 0.0,
+            "change_ytd": q.get("percent_change_1y")  or 0.0,
+            "market_cap": q.get("market_cap"),
+            "volume_24h": q.get("volume_24h"),
+            "cmc_rank":   entry.get("cmc_rank"),
         }
-    except Exception as e:
-        print(f"[metrics error: {e}]", end=" ")
-        return {}
+    return quotes
 
 
-def get_news(yahoo_symbol, analyzer, max_items=5):
-    """Fetch recent headlines via yfinance and score each with VADER."""
+def get_yf_supplemental(yf_symbol):
+    """Fetch 52-week high/low and YTD start price from yfinance (single Ticker object)."""
+    year_low = year_high = price_ytd = None
     try:
-        raw = yf.Ticker(yahoo_symbol).news or []
+        t  = yf.Ticker(yf_symbol)
+        fi = t.fast_info
+        year_low  = fi.get("year_low")
+        year_high = fi.get("year_high")
+        import contextlib, io as _io
+        with contextlib.redirect_stderr(_io.StringIO()):
+            ytd_hist = t.history(period="ytd", raise_errors=False)
+        if len(ytd_hist) >= 1:
+            price_ytd = float(ytd_hist["Close"].iloc[0])
+    except Exception:
+        pass
+    return year_low, year_high, price_ytd
+
+
+def get_news(yf_symbol, analyzer, max_items=5):
+    """Fetch recent headlines via yfinance and score with VADER."""
+    try:
+        raw = yf.Ticker(yf_symbol).news or []
     except Exception as e:
         print(f"[news error: {e}]", end=" ")
         return [], None
@@ -173,11 +133,11 @@ def get_news(yahoo_symbol, analyzer, max_items=5):
             continue
         content = n.get("content")
         if isinstance(content, dict):
-            title = content.get("title")
-            pub = (content.get("provider") or {}).get("displayName")
-            url = ((content.get("canonicalUrl") or {}).get("url")
-                   or (content.get("clickThroughUrl") or {}).get("url"))
-            ts = content.get("pubDate") or content.get("displayTime")
+            title  = content.get("title")
+            pub    = (content.get("provider") or {}).get("displayName")
+            url    = ((content.get("canonicalUrl") or {}).get("url")
+                      or (content.get("clickThroughUrl") or {}).get("url"))
+            ts     = content.get("pubDate") or content.get("displayTime")
             pub_ts = None
             if ts:
                 try:
@@ -186,9 +146,9 @@ def get_news(yahoo_symbol, analyzer, max_items=5):
                 except Exception:
                     pub_ts = None
         else:
-            title = n.get("title")
-            pub = n.get("publisher")
-            url = n.get("link")
+            title  = n.get("title")
+            pub    = n.get("publisher")
+            url    = n.get("link")
             pub_ts = n.get("providerPublishTime")
 
         if not title:
@@ -214,11 +174,8 @@ def get_news(yahoo_symbol, analyzer, max_items=5):
     return items, agg
 
 
-def to_gbp(price, special, gbp_usd):
-    if special == "lse_pence":
-        return price / 100
-    else:
-        return price / gbp_usd
+def to_gbp(price_usd, gbp_usd):
+    return price_usd / gbp_usd
 
 
 def fmt_gbp(val):
@@ -234,64 +191,53 @@ def fmt_gbp(val):
         return f"{val:.10f}"
 
 
-def calc_return(current_gbp, low_gbp):
-    if low_gbp and low_gbp > 0:
-        pct = ((current_gbp - low_gbp) / low_gbp) * 100
-        return round(pct)
-    return None
-
-
-def bar_pct(current_gbp, low_gbp, high_gbp):
-    if low_gbp and high_gbp and high_gbp > low_gbp:
-        pct = (current_gbp - low_gbp) / (high_gbp - low_gbp) * 100
+def bar_pct(current, low, high):
+    if low and high and high > low:
+        pct = (current - low) / (high - low) * 100
         return min(99, max(1, round(pct)))
     return 50
 
 
-def return_class(pct):
-    if pct >= 200:
-        return "return-mega"
-    elif pct >= 50:
-        return "return-positive"
-    elif pct >= 0:
-        return "return-modest"
-    else:
-        return "return-negative"
-
-
 def write_json(results, gbp_usd, today_str):
     stocks = []
-    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
+    for ticker, (cmc_sym, yf_sym, cat, exchange, company_name) in STOCKS.items():
         if ticker not in results:
             continue
         r = results[ticker]
+        mc_usd     = r.get("market_cap")
+        mc_gbp_b   = round(mc_usd / gbp_usd / 1e9, 3) if mc_usd else None
+        vol_24h    = r.get("volume_24h")
+        avg_vol_m  = round(vol_24h / 1e6, 2) if vol_24h else None
+
         stocks.append({
             "ticker":           ticker,
-            "yf_ticker":        yahoo_sym,
+            "yf_ticker":        yf_sym,
             "company_name":     company_name,
             "category":         cat,
             "exchange":         exchange,
             "price_gbp":        fmt_gbp(r["price_gbp"]),
-            "price_usd":        round(r["price_usd"], 2),
+            "price_usd":        round(r["price_usd"], 6),
             "change_1d":        f"{r['change_1d']:+.2f}%",
             "change_1w":        f"{r['change_1w']:+.2f}%",
             "change_1m":        f"{r['change_1m']:+.2f}%",
             "change_ytd":       f"{r['change_ytd']:+.2f}%",
-            "return_1yr":       f"{r['return_pct']:+}%",
+            "return_1yr":       f"{r['change_ytd']:+.0f}%",
             "low_gbp":          fmt_gbp(r["low_gbp"]),
             "high_gbp":         fmt_gbp(r["high_gbp"]),
             "bar_pct":          r["bar_pct"],
-            "market_cap_gbp_b": r.get("market_cap_gbp_b"),
-            "beta":             r.get("beta"),
-            "pe_ratio":         r.get("pe_ratio"),
-            "avg_volume_m":     r.get("avg_volume_m"),
-            "div_yield_pct":    r.get("div_yield_pct"),
-            "short_pct":        r.get("short_pct"),
-            "analyst":          r.get("analyst"),
-            "analyst_score":    r.get("analyst_score"),
-            "vol_1d":           r.get("vol_1d"),
-            "vol_1w":           r.get("vol_1w"),
-            "vol_1m":           r.get("vol_1m"),
+            "market_cap_gbp_b": mc_gbp_b,
+            "avg_volume_m":     avg_vol_m,
+            "cmc_rank":         r.get("cmc_rank"),
+            # not applicable for crypto — kept for schema compatibility
+            "beta":             None,
+            "pe_ratio":         None,
+            "div_yield_pct":    None,
+            "short_pct":        None,
+            "analyst":          None,
+            "analyst_score":    None,
+            "vol_1d":           round(vol_24h) if vol_24h else None,
+            "vol_1w":           None,
+            "vol_1m":           None,
             "news":             r.get("news", []),
             "news_sentiment":   r.get("news_sentiment"),
         })
@@ -310,62 +256,80 @@ def write_json(results, gbp_usd, today_str):
 
 
 def main():
+    if not CMC_API_KEY:
+        print("ERROR: CMC_API_KEY environment variable not set.")
+        print("  Windows: set CMC_API_KEY=your_key")
+        print("  Linux:   export CMC_API_KEY=your_key")
+        raise SystemExit(1)
+
     print("Fetching FX rates...")
     gbp_usd = get_fx_rates()
     print(f"  £1 = ${gbp_usd:.4f}")
 
+    print("Fetching all crypto prices from CoinMarketCap (1 bulk call)...")
+    cmc_quotes = fetch_cmc_quotes()
+    print(f"  Got {len(cmc_quotes)} quotes from CMC")
+
     analyzer = SentimentIntensityAnalyzer() if _VADER_OK else None
     if analyzer is None:
-        print("  [vaderSentiment not installed — news headlines kept, sentiment skipped]")
+        print("  [vaderSentiment not installed — news skipped]")
 
     results = {}
     errors  = []
 
-    for ticker, (yahoo_sym, cat, exchange, special, company_name) in STOCKS.items():
+    for ticker, (cmc_sym, yf_sym, cat, exchange, company_name) in STOCKS.items():
         try:
-            print(f"  {ticker:<6} ({yahoo_sym})... ", end="", flush=True)
-            price_raw, low_raw, high_raw, prev_close_raw, price_1w_raw, price_1m_raw, price_ytd_raw, vol_1d_raw, vol_1w_raw, vol_1m_raw = get_stock_data(yahoo_sym)
+            print(f"  {ticker:<6} ({cmc_sym})... ", end="", flush=True)
 
-            price_gbp = to_gbp(price_raw, special, gbp_usd)
-            low_gbp   = to_gbp(low_raw,   special, gbp_usd) if low_raw       else None
-            high_gbp  = to_gbp(high_raw,  special, gbp_usd) if high_raw      else None
+            q = cmc_quotes.get(cmc_sym)
+            if not q:
+                raise ValueError(f"No CMC data for symbol '{cmc_sym}'")
 
-            bp  = bar_pct(price_gbp, low_gbp, high_gbp)
+            price_usd = q["price_usd"]
+            price_gbp = to_gbp(price_usd, gbp_usd)
 
-            change_1d = round((price_raw - prev_close_raw) / prev_close_raw * 100, 2) \
-                        if prev_close_raw and prev_close_raw > 0 else 0.0
-            change_1w = round((price_raw - price_1w_raw) / price_1w_raw * 100, 2) \
-                        if price_1w_raw and price_1w_raw > 0 else 0.0
-            change_1m = round((price_raw - price_1m_raw) / price_1m_raw * 100, 2) \
-                        if price_1m_raw and price_1m_raw > 0 else 0.0
-            change_ytd = round((price_raw - price_ytd_raw) / price_ytd_raw * 100, 2) \
-                         if price_ytd_raw and price_ytd_raw > 0 else 0.0
+            # 52-week range + YTD start price from yfinance (single Ticker object)
+            low_raw, high_raw, price_ytd = get_yf_supplemental(yf_sym)
+            low_gbp  = to_gbp(low_raw,  gbp_usd) if low_raw  else price_gbp * 0.5
+            high_gbp = to_gbp(high_raw, gbp_usd) if high_raw else price_gbp * 1.5
+            bp = bar_pct(price_gbp, low_gbp, high_gbp)
 
-            metrics = get_metrics(yahoo_sym, special, gbp_usd)
-            w52 = metrics.get('week52_pct')
-            ret = w52 if w52 is not None else (calc_return(price_gbp, low_gbp) or 0)
-            news_items, news_agg = get_news(yahoo_sym, analyzer)
+            # YTD: compute from yfinance Jan-1 close; fall back to CMC 1y (may be 0 on free plan)
+            if price_ytd and price_ytd > 0:
+                change_ytd = round((price_usd - price_ytd) / price_ytd * 100, 2)
+            else:
+                change_ytd = round(q["change_ytd"], 2)
+
+            news_items, news_agg = get_news(yf_sym, analyzer)
 
             results[ticker] = {
-                "price_usd":  price_raw,
-                "price_gbp":  price_gbp,
-                "low_gbp":    low_gbp or price_gbp * 0.7,
-                "high_gbp":   high_gbp or price_gbp * 1.1,
-                "return_pct": ret,
-                "bar_pct":    bp,
-                "change_1d":  change_1d,
-                "change_1w":  change_1w,
-                "change_1m":  change_1m,
-                "change_ytd": change_ytd,
-                "vol_1d":     vol_1d_raw,
-                "vol_1w":     vol_1w_raw,
-                "vol_1m":     vol_1m_raw,
-                "news":          news_items,
+                "price_usd":      price_usd,
+                "price_gbp":      price_gbp,
+                "change_1d":      round(q["change_1d"], 2),
+                "change_1w":      round(q["change_1w"], 2),
+                "change_1m":      round(q["change_1m"], 2),
+                "change_ytd":     change_ytd,
+                "low_gbp":        low_gbp,
+                "high_gbp":       high_gbp,
+                "bar_pct":        bp,
+                "market_cap":     q.get("market_cap"),
+                "volume_24h":     q.get("volume_24h"),
+                "cmc_rank":       q.get("cmc_rank"),
+                "news":           news_items,
                 "news_sentiment": news_agg,
-                **metrics,
             }
-            news_note = f"  (news: {len(news_items)}" + (f", sent {news_agg:+.2f})" if news_agg is not None else ")")
-            print(f"£{fmt_gbp(price_gbp)}  (1yr: {ret:+}%)  (1d: {change_1d:+.2f}%)  (1w: {change_1w:+.2f}%)  (1m: {change_1m:+.2f}%)  (ytd: {change_ytd:+.2f}%){news_note}")
+
+            news_note = f"  (news: {len(news_items)}" + (
+                f", sent {news_agg:+.2f})" if news_agg is not None else ")")
+            print(
+                f"£{fmt_gbp(price_gbp)}  "
+                f"(1d: {q['change_1d']:+.2f}%)  "
+                f"(1w: {q['change_1w']:+.2f}%)  "
+                f"(1m: {q['change_1m']:+.2f}%)  "
+                f"(ytd: {change_ytd:+.2f}%)"
+                f"{news_note}"
+            )
+
         except Exception as e:
             print(f"ERROR: {e}")
             errors.append(ticker)
@@ -374,7 +338,7 @@ def main():
     print(f"\nUpdating {JSON_FILE} and {JS_FILE}...")
     write_json(results, gbp_usd, today_str)
 
-    print(f"\nDone. {len(results)} stocks updated, {len(errors)} failed.")
+    print(f"\nDone. {len(results)} coins updated, {len(errors)} failed.")
     if errors:
         print(f"Failed tickers: {', '.join(errors)}")
 
