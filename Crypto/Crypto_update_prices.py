@@ -194,7 +194,9 @@ def fetch_coingecko_data(current_prices_usd):
     low_map  = {}
     high_map = {}
 
-    for ticker, cg_id in COINGECKO_IDS.items():
+    for i, (ticker, cg_id) in enumerate(COINGECKO_IDS.items()):
+        if i > 0:
+            time.sleep(2)  # stay within CoinGecko rate limit (≤30 req/min)
         try:
             data   = _cg_get(f"/coins/{cg_id}/market_chart/range",
                              {"vs_currency": "usd", "from": from_ts, "to": to_ts})
@@ -541,13 +543,13 @@ def main():
 
             news_note = f"  (news: {len(news_items)}" + (
                 f", sent {news_agg:+.2f})" if news_agg is not None else ")")
+            ytd_str = f"(ytd: {change_ytd:+.2f}%)" if change_ytd is not None else "(ytd: N/A)"
             print(
                 f"£{fmt_gbp(price_gbp)}  "
                 f"(1d: {q['change_1d']:+.2f}%)  "
                 f"(1w: {q['change_1w']:+.2f}%)  "
                 f"(1m: {q['change_1m']:+.2f}%)  "
-                f"(ytd: {change_ytd:+.2f}%)" if change_ytd is not None else "(ytd: N/A)"
-                f"{news_note}"
+                + ytd_str + news_note
             )
 
         except Exception as e:
