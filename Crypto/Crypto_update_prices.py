@@ -57,6 +57,15 @@ COINGECKO_IDS = {
     "POL":  "polygon-ecosystem-token",  "DOT":  "polkadot",
     "LINK": "chainlink",                "DOGE": "dogecoin",
     "PEPE": "pepe",
+    # ── AI Tokens ─────────────────────────────────────────────────────────────
+    "TAO":     "bittensor",             "FET":     "fetch-ai",
+    "RNDR":    "render-token",          "OCEAN":   "ocean-protocol",
+    "GRT":     "the-graph",            "AGIX":    "singularitynet",
+    "NMR":     "numeraire",            "ALT":     "altlayer",
+    "AIOZ":    "aioz-network",         "ARKM":    "arkham",
+    "WLD":     "worldcoin-wld",        "NEAR":    "near",
+    "ICP":     "internet-computer",    "KAITO":   "kaito",
+    "VIRTUAL": "virtual-protocol",
 }
 
 # CMC numeric IDs — used for OHLCV historical YTD fetch (avoids symbol ambiguity)
@@ -65,6 +74,11 @@ CMC_IDS = {
     "AVAX": 5805, "XRP": 52,    "XLM": 512,   "TRX": 1958,  "SUI": 20947,
     "HBAR": 4642, "TON": 11419, "ALGO": 4031, "MINA": 20804,"POL": 28321,
     "DOT": 6636,  "LINK": 1975, "DOGE": 74,   "PEPE": 24478,
+    # AI Tokens
+    "TAO": 22974, "FET": 3773,  "RNDR": 5690,  "OCEAN": 3911,
+    "GRT": 6719,  "AGIX": 6945, "NMR": 1732,   "ALT": 28067,
+    "AIOZ": 9444, "ARKM": 25691,"WLD": 13502,  "NEAR": 6535,
+    "ICP": 8916,  "KAITO": 30999, "VIRTUAL": 29420,
 }
 
 # display ticker → (cmc_symbol, yf_symbol, category, exchange, company_name)
@@ -95,6 +109,22 @@ STOCKS = {
     # ── Meme ──────────────────────────────────────────────────────────────────
     "DOGE": ("DOGE", "DOGE-USD",      "meme",     "Crypto", "Dogecoin"),
     "PEPE": ("PEPE", "PEPE24478-USD", "meme",     "Crypto", "Pepe"),
+    # ── AI Tokens ─────────────────────────────────────────────────────────────
+    "TAO":     ("TAO",     "TAO-USD",     "ai", "Crypto", "Bittensor"),
+    "FET":     ("FET",     "FET-USD",     "ai", "Crypto", "ASI Alliance"),
+    "RNDR":    ("RENDER",  "RNDR-USD",    "ai", "Crypto", "Render"),  # CMC symbol is RENDER post-rebrand
+    "OCEAN":   ("OCEAN",   "OCEAN-USD",   "ai", "Crypto", "Ocean Protocol"),
+    "GRT":     ("GRT",     "GRT-USD",     "ai", "Crypto", "The Graph"),
+    "AGIX":    ("AGIX",    "AGIX-USD",    "ai", "Crypto", "SingularityNET"),
+    "NMR":     ("NMR",     "NMR-USD",     "ai", "Crypto", "Numeraire"),
+    "ALT":     ("ALT",     "ALT-USD",     "ai", "Crypto", "AltLayer"),
+    "AIOZ":    ("AIOZ",    "AIOZ-USD",    "ai", "Crypto", "AIOZ Network"),
+    "ARKM":    ("ARKM",    "ARKM-USD",    "ai", "Crypto", "Arkham"),
+    "WLD":     ("WLD",     "WLD-USD",     "ai", "Crypto", "Worldcoin"),
+    "NEAR":    ("NEAR",    "NEAR-USD",    "ai", "Crypto", "NEAR Protocol"),
+    "ICP":     ("ICP",     "ICP-USD",     "ai", "Crypto", "Internet Computer"),
+    "KAITO":   ("KAITO",   "KAITO-USD",   "ai", "Crypto", "Kaito"),
+    "VIRTUAL": ("VIRTUAL", "VIRTUAL-USD", "ai", "Crypto", "Virtuals Protocol"),
 }
 
 
@@ -205,7 +235,7 @@ def fetch_coingecko_data(current_prices_usd):
 
     for i, (ticker, cg_id) in enumerate(COINGECKO_IDS.items()):
         if i > 0:
-            time.sleep(5)  # CoinGecko Demo rate limit — 5s gives comfortable buffer (19 coins × 5s ≈ 95s)
+            time.sleep(8)  # CoinGecko Demo rate limit — 8s buffer for 34 coins (≈ 272s); 5s caused 429s
         try:
             data    = _cg_get(f"/coins/{cg_id}/market_chart/range",
                               {"vs_currency": "usd", "from": from_ts, "to": to_ts})
@@ -244,6 +274,9 @@ def fetch_coingecko_data(current_prices_usd):
             print(f"    [CoinGecko {ticker}: {e}]", end=" ")
             ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
             vol_1d_map[ticker] = vol_1w_map[ticker] = vol_1m_map[ticker] = avg_vol_map[ticker] = None
+            # After exhausting all retries the burst window is saturated — wait 60s to clear it
+            print(f"    [CoinGecko rate-limit cooldown 60s]", end=" ")
+            time.sleep(60)
 
     return ytd_map, low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map
 

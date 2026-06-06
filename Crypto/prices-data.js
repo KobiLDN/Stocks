@@ -571,30 +571,9 @@ window.PRICES_DATA = {
           "url": "https://99bitcoins.com/news/altcoins/sui-network-halts-48-hours-sui-safe/",
           "published": 1780309215,
           "sentiment": 0.44
-        },
-        {
-          "title": "Sui Network Goes Down for Second Straight Day as Weekly Token Slide Hits 20%",
-          "publisher": "decrypt",
-          "url": "https://decrypt.co/369464/sui-network-goes-down-second-straight-day-weekly-token-slide",
-          "published": 1780065721,
-          "sentiment": 0.226
-        },
-        {
-          "title": "Sui Network Goes Down for Hours, Just Months After the Last Downtime",
-          "publisher": "decrypt",
-          "url": "https://decrypt.co/369414/sui-network-down-hours-months-after-last-downtime",
-          "published": 1779998981,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Sui Network Stalls: Price Drops 8% as Mainnet Halts",
-          "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/sui-network-stalls-price-drops/",
-          "published": 1779980982,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.133
+      "news_sentiment": 0.22
     },
     {
       "ticker": "HBAR",
@@ -624,21 +603,21 @@ window.PRICES_DATA = {
       "vol_1m": 3395629177,
       "news": [
         {
-          "title": "Ripple's Renewed Trajectory (Cryptocurrency:XRP-USD)",
-          "publisher": "seekingalpha.com",
-          "url": "https://seekingalpha.com/article/4629703-ripple-renewed-trajectory",
-          "published": 1692399763,
+          "title": "Kalshi Files for XRP, XLM, SOL, SHIB, HBAR, DOGE, & 6 Other Altcoins Perp Futures",
+          "publisher": "CoinGape",
+          "url": "https://coingape.com/kalshi-files-for-xrp-xlm-sol-shib-hbar-doge-altcoins-perp-futures/",
+          "published": 1780381079,
           "sentiment": 0.0
         },
         {
-          "title": "My Portfolio February Update: 4 Buys, 1 Sale",
-          "publisher": "seekingalpha.com",
-          "url": "https://seekingalpha.com/article/4585892-my-portfolio-february-update-4-buys-1-sale",
-          "published": 1678350530,
-          "sentiment": -0.009
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.004
+      "news_sentiment": 0.0
     },
     {
       "ticker": "TON",
@@ -801,26 +780,11 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": null,
       "analyst_score": null,
-      "vol_1d": 94529343,
-      "vol_1w": null,
-      "vol_1m": null,
-      "news": [
-        {
-          "title": "Gemini Credit Card review: Earn crypto rewards by making eligible purchases",
-          "publisher": "finance.yahoo.com",
-          "url": "https://finance.yahoo.com/personal-finance/credit-cards/review/gemini-credit-card-165405338.html",
-          "published": 1747155245,
-          "sentiment": 0.919
-        },
-        {
-          "title": "Warren Buffett Openly Called Bitcoin A 'Rat Poison' In 2018. 7 Years Later, He Is Invested In This Crypto-Linked Stock Which Soared 27% In 2024 - Grayscale Bitcoin Mini Trust (BTC) Common units of fra",
-          "publisher": "benzinga.com",
-          "url": "https://www.benzinga.com/news/management/25/01/43073354/warren-buffett-openly-called-bitcoin-a-rat-poison-in-2018-7-years-later-he-is-invested-in-this-cr",
-          "published": 1737198017,
-          "sentiment": 0.66
-        }
-      ],
-      "news_sentiment": 0.79
+      "vol_1d": 87762802,
+      "vol_1w": 471209029,
+      "vol_1m": 1438929747,
+      "news": [],
+      "news_sentiment": null
     },
     {
       "ticker": "DOT",
@@ -850,21 +814,28 @@ window.PRICES_DATA = {
       "vol_1m": 5121101146,
       "news": [
         {
-          "title": "What is crypto staking? A beginner's guide to earning rewards on your crypto.",
-          "publisher": "finance.yahoo.com",
-          "url": "https://finance.yahoo.com/personal-finance/investing/article/what-is-crypto-staking-a-beginners-guide-to-earning-rewards-on-your-crypto-130000122.html",
-          "published": 1775653200,
-          "sentiment": -0.737
+          "title": "Kalshi Files for XRP, XLM, SOL, SHIB, HBAR, DOGE, & 6 Other Altcoins Perp Futures",
+          "publisher": "CoinGape",
+          "url": "https://coingape.com/kalshi-files-for-xrp-xlm-sol-shib-hbar-doge-altcoins-perp-futures/",
+          "published": 1780381079,
+          "sentiment": 0.0
         },
         {
-          "title": "Will Crypto ETFs Have Lasting Appeal? (BTC-USD)",
-          "publisher": "seekingalpha.com",
-          "url": "https://seekingalpha.com/article/4869904-will-crypto-etfs-have-lasting-appeal",
-          "published": 1770955800,
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is It Too Late to Buy Polkadot?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/05/30/is-it-too-late-to-buy-crypto/",
+          "published": 1780159673,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.368
+      "news_sentiment": 0.0
     },
     {
       "ticker": "LINK",
@@ -894,21 +865,35 @@ window.PRICES_DATA = {
       "vol_1m": 16738582029,
       "news": [
         {
-          "title": "How to invest in cryptocurrency: A beginner's guide",
-          "publisher": "finance.yahoo.com",
-          "url": "https://finance.yahoo.com/personal-finance/investing/article/how-to-invest-in-cryptocurrency-for-beginners-155910593.html",
-          "published": 1773676750,
-          "sentiment": 0.361
+          "title": "Kalshi Files for XRP, XLM, SOL, SHIB, HBAR, DOGE, & 6 Other Altcoins Perp Futures",
+          "publisher": "CoinGape",
+          "url": "https://coingape.com/kalshi-files-for-xrp-xlm-sol-shib-hbar-doge-altcoins-perp-futures/",
+          "published": 1780381079,
+          "sentiment": 0.0
         },
         {
-          "title": "Is Bitcoin\u2019s 'Digital Gold' Narrative Losing Its Shine? (BTC-USD)",
-          "publisher": "seekingalpha.com",
-          "url": "https://seekingalpha.com/article/4876093-is-bitcoins-digital-gold-narrative-losing-its-shine",
-          "published": 1772177400,
-          "sentiment": 0.255
+          "title": "Kalshi Eyes Perpetual Futures for XRP, Solana, Dogecoin\u2014And These Altcoins",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369665/kalshi-eyes-perpetual-futures-xrp-solana-dogecoin-altcoins",
+          "published": 1780342433,
+          "sentiment": 0.0
+        },
+        {
+          "title": "1 Reason to Buy Chainlink (LINK) Right Now -- and 1 Reason to Wait",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/01/1-reason-to-buy-link-right-now-and-1-reason-to-w/",
+          "published": 1780338113,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Chainlink News: Institutional Catalysts Pushing LINK to $10",
+          "publisher": "Coinspeaker",
+          "url": "https://www.coinspeaker.com/chainlink-news-link-price-analysis-tokenized-finance/",
+          "published": 1780246515,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.308
+      "news_sentiment": 0.0
     },
     {
       "ticker": "DOGE",
@@ -1003,42 +988,202 @@ window.PRICES_DATA = {
       "vol_1m": 8568838808,
       "news": [
         {
-          "title": "Better Meme Coin: Dogecoin vs. Pepe",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/07/better-meme-coin-dogecoin-vs-pepe/",
-          "published": 1778146500,
-          "sentiment": 0.44
-        },
-        {
-          "title": "Canary Capital Pioneers Meme Coin Finance with Spot PEPE ETF Filing",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/canary-capital-pioneers-meme-coin-finance-with-spot-pepe-etf-filing-4105",
-          "published": 1775740020,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Canary Capital Pushes Crypto ETF Frontier Further With PEPE Filing",
+          "title": "Arthur Hayes Sparks Fury After Abrupt Worldcoin Exit, WLD Price Falls 10%",
           "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/canary-capital-pepe-etf-sec-filing/",
-          "published": 1775710400,
-          "sentiment": 0.0
+          "url": "https://beincrypto.com/arthur-hayes-worldcoin-wld-exit-backlash/",
+          "published": 1780736909,
+          "sentiment": -0.572
         },
         {
-          "title": "Murad Says SPX6900 (SPX) Is Primed for a Rally \u2014 Is He Right This Time?",
+          "title": "Fresh Wallets Flood 5 Altcoins as the Market Keeps Sliding",
           "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/murad-spx6900-doge-pepe-pattern/",
-          "published": 1775425014,
+          "url": "https://beincrypto.com/altcoins-fresh-wallets-network-growth-dip/",
+          "published": 1780643576,
+          "sentiment": 0.318
+        },
+        {
+          "title": "Arthur Hayes Puts A $10 Price Target On Sam Altman\u2019s Worldcoin \u2013 WLD Token Rallies To 4-Month High",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/arthur-hayes-10-price-target-sam-altman-worldcoin-wld-4-month-high/cZ0jXenReUX",
+          "published": 1780508165,
           "sentiment": 0.0
         },
         {
-          "title": "Pepe Price Analysis: Why April Could See a 200% ROI (And the Risks)",
-          "publisher": "99bitcoins",
-          "url": "https://99bitcoins.com/news/altcoins/pepe-price-prediction-april-roi-risks/",
-          "published": 1773269846,
-          "sentiment": -0.273
+          "title": "NEAR, Worldcoin Post Double-Digit Gains as Market Sees $714M in Liquidations",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369708/near-worldcoin-post-double-digit-gains-as-market-sees-714m-in-liquidations",
+          "published": 1780404772,
+          "sentiment": 0.34
+        },
+        {
+          "title": "After NEAR, HYPE, and ZEC, Arthur Hayes Calls A Bull Market For Sam Altman's WLD Token Ahead Of OpenAI IPO",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/cryptocurrency/arthur-hayes-worldcoin-wld-bull-market-sam-altman-openai-ipo/cZ0ixuLRewL",
+          "published": 1780401004,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.033
+      "news_sentiment": 0.017
+    },
+    {
+      "ticker": "NEAR",
+      "yf_ticker": "NEAR-USD",
+      "company_name": "NEAR Protocol",
+      "category": "ai",
+      "exchange": "Crypto",
+      "price_gbp": "1.39",
+      "price_usd": 1.857017,
+      "change_1d": "-8.24%",
+      "change_1w": "-22.52%",
+      "change_1m": "+25.77%",
+      "change_ytd": "+22.79%",
+      "return_1yr": "+23%",
+      "low_gbp": "0.7202",
+      "high_gbp": "2.40",
+      "bar_pct": 40,
+      "market_cap_gbp_b": 1.807,
+      "avg_volume_m": 1018.26,
+      "cmc_rank": 33,
+      "beta": null,
+      "pe_ratio": null,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 1027654228,
+      "vol_1w": 7127810278,
+      "vol_1m": 19159864238,
+      "news": [
+        {
+          "title": "Arthur Hayes Just Dumped His Entire Zcash Position After a Bug That Could Have Allowed Counterfeit ZEC for 4 Years",
+          "publisher": "Cryptonews",
+          "url": "https://cryptonews.com/news/arthur-hayes-dumps-zcash-orchard-pool-bug/",
+          "published": 1780651330,
+          "sentiment": -0.402
+        },
+        {
+          "title": "Arthur Hayes HYPE and NEAR Offloading: Why Did He Dump?",
+          "publisher": "99bitcoins",
+          "url": "https://99bitcoins.com/news/altcoins/arthur-hayes-hype-near-offloading-why/",
+          "published": 1780575396,
+          "sentiment": -0.382
+        },
+        {
+          "title": "Arthur Hayes Dumps Entire HYPE and NEAR Stack Days After $100,000 HYPE Bet",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/arthur-hayes-dumps-hype-near-reversal/",
+          "published": 1780560342,
+          "sentiment": -0.402
+        },
+        {
+          "title": "Morning Minute: Bitcoin Falls Below $67k as MSTR Plummets",
+          "publisher": "decrypt",
+          "url": "https://decrypt.co/369839/morning-minute-bitcoin-falls-below-67k-as-mstr-plummets",
+          "published": 1780490863,
+          "sentiment": 0.0
+        },
+        {
+          "title": "AI Tokens are Outperforming Bitcoin, But For How Long?",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/near-icp-render-outperform-bitcoin-ai-tokens/",
+          "published": 1780431900,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": -0.237
+    },
+    {
+      "ticker": "ICP",
+      "yf_ticker": "ICP-USD",
+      "company_name": "Internet Computer",
+      "category": "ai",
+      "exchange": "Crypto",
+      "price_gbp": "1.74",
+      "price_usd": 2.315805,
+      "change_1d": "-0.47%",
+      "change_1w": "-14.80%",
+      "change_1m": "-23.21%",
+      "change_ytd": "-18.31%",
+      "return_1yr": "-18%",
+      "low_gbp": "1.56",
+      "high_gbp": "6.74",
+      "bar_pct": 3,
+      "market_cap_gbp_b": 0.961,
+      "avg_volume_m": 125.98,
+      "cmc_rank": 51,
+      "beta": null,
+      "pe_ratio": null,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 150128805,
+      "vol_1w": 881888538,
+      "vol_1m": 3209687085,
+      "news": [],
+      "news_sentiment": null
+    },
+    {
+      "ticker": "KAITO",
+      "yf_ticker": "KAITO-USD",
+      "company_name": "Kaito",
+      "category": "ai",
+      "exchange": "Crypto",
+      "price_gbp": "0.3361",
+      "price_usd": 0.448277,
+      "change_1d": "-1.28%",
+      "change_1w": "-2.30%",
+      "change_1m": "-11.74%",
+      "change_ytd": "-11.44%",
+      "return_1yr": "-11%",
+      "low_gbp": "0.2183",
+      "high_gbp": "1.34",
+      "bar_pct": 11,
+      "market_cap_gbp_b": 0.081,
+      "avg_volume_m": 13.34,
+      "cmc_rank": 172,
+      "beta": null,
+      "pe_ratio": null,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 15897911,
+      "vol_1w": 93392849,
+      "vol_1m": 506103339,
+      "news": [],
+      "news_sentiment": null
+    },
+    {
+      "ticker": "VIRTUAL",
+      "yf_ticker": "VIRTUAL-USD",
+      "company_name": "Virtuals Protocol",
+      "category": "ai",
+      "exchange": "Crypto",
+      "price_gbp": "0.4123",
+      "price_usd": 0.549784,
+      "change_1d": "-4.55%",
+      "change_1w": "-24.42%",
+      "change_1m": "-38.63%",
+      "change_ytd": "-14.94%",
+      "return_1yr": "-15%",
+      "low_gbp": "0.3889",
+      "high_gbp": "1.58",
+      "bar_pct": 2,
+      "market_cap_gbp_b": 0.271,
+      "avg_volume_m": 108.02,
+      "cmc_rank": 92,
+      "beta": null,
+      "pe_ratio": null,
+      "div_yield_pct": null,
+      "short_pct": null,
+      "analyst": null,
+      "analyst_score": null,
+      "vol_1d": 133860913,
+      "vol_1w": 756117432,
+      "vol_1m": 2915225648,
+      "news": [],
+      "news_sentiment": null
     }
   ]
 };
