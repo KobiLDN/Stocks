@@ -16,7 +16,7 @@
 
 - **Portfolio output files renamed** — `snapshot.html` → `portfolio.html`, `analysis.json` → `portfolio_analysis.json`; local-only files, not committed
 
-- **Crypto Yahoo Finance links corrected** — all 4 Crypto pages link to `ticker-USD` quote pages; special tickers `TON→TON11419-USD`, `SUI→SUI20947-USD`, `PEPE→PEPE24478-USD` hardcoded in `CRYPTO_YF` map; yfinance tickers in `Crypto_update_prices.py` corrected to match
+- **Crypto ticker links → CoinGecko** — all 6 Crypto pages link tickers to `coingecko.com/en/coins/{id}` using a full `COINGECKO_IDS` map (19 coins, correct IDs); `CRYPTO_YF` map removed; metrics.html data attribution updated
 
 - **Auto-refresh data bar on every page** — `buildDataBar()` in `shared.js` injects a status strip at the top of every page's content area showing last updated timestamp + schedule; prices pages show "Mon–Fri · 09:00, 15:30, 21:30 BST"; signals pages show their own refresh-banner with "Mon / Wed / Fri · 08:00 BST"; header-note disclaimers compacted to single line across all 42 pages; charts pages max-width fixed 1600→1920px; "Last updated" removed from dashboard header-sub (now in data bar only) (`shared.js`, `shared.css`, all sector pages)
 
@@ -44,7 +44,7 @@
 
 - **Energy sector** — 20 stocks across 5 categories (Oil Majors: XOM/CVX/SHEL/BP/TTE/EQNR; E&P/Refining: COP/OXY/EOG/MPC/VLO; Oilfield Services: SLB/HAL/BKR; Utilities: NEE/SSE.L; Clean Energy: ENPH/FSLR/BEPC/DNNGY); full 7-page suite; Energy card added to all 35 existing sector pages; hub card + SECTORS array entry; both GitHub Actions workflows updated (`Energy/`, `index.html`, `.github/workflows/update-prices.yml`, `.github/workflows/generate-signals.yml`)
 
-- **Crypto sector** — 19 coins across 6 categories (Bitcoin; Layer 1: ETH/SOL/BNB/ADA/AVAX; Payments: XRP/XLM/TRX; Emerging: SUI/HBAR/TON/ALGO/MINA; Infra: MATIC/DOT/LINK; Meme: DOGE/PEPE); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
+- **Crypto sector** — 19 coins across 6 categories (Bitcoin; Layer 1: ETH/SOL/BNB/ADA/AVAX; Payments: XRP/XLM/TRX; Emerging: SUI/HBAR/TON/ALGO/MINA; Infra: POL/DOT/LINK; Meme: DOGE/PEPE); full 7-page suite; price pipeline: CoinMarketCap API (real-time, 1 bulk call) + CoinGecko (true Jan-1 YTD + 52-week range, 365-day market_chart/range); news cascade: StockData.org → yfinance → CoinStats; 7-day staleness filter drops old articles; ticker links → CoinGecko coin pages; prices updated 3× daily via GitHub Actions
 - **AI sector** — 48 stocks across 12 categories; metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Biotech sector** — 30 stocks across 9 categories (large-cap, UK listed, gene editing, genomics, oncology, mRNA, rare disease, metabolic, neuroscience); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
 - **Technology sector** — 31 stocks across 6 categories (mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, hardware/infra); full 7-page suite; prices and signals via GitHub Actions
