@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-05 11:48",
+  "updated": "2026-06-08 12:59",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "XLM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "XLM surged +40.4% in 24h and +20.53% over 1M, driven by the DTCC deal making it the first public blockchain in Wall Street's tokenization strategy \u2014 backed by $2.3B spot volume and fresh long positioning.",
+      "drivers": [
+        "DTCC partnership for tokenized securities",
+        "+20.53% 1M momentum",
+        "$2.3B spot volume surge",
+        "Fresh long OI of $361M"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "NEAR shows exceptional 1D gain of +11.86%, 1M return of +36.67%, and YTD of +42.70% \u2014 the strongest absolute momentum in the AI category with a solid market cap of \u00a32.1B.",
+      "drivers": [
+        "+36.67% 1M return",
+        "+11.86% 1D gain",
+        "+42.70% YTD",
+        "Strong AI narrative"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "WLD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "WLD delivered a massive +74.95% 1M return and +7.04% 1D, despite Arthur Hayes cashing out \u2014 momentum remains extremely strong, with positive news_s of 0.022 and market cap of \u00a31.2B.",
+      "drivers": [
+        "+74.95% 1M return",
+        "+23.62% 1W gain",
+        "+7.04% 1D",
+        "Positive news sentiment 0.022"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "TRX is the only asset in the universe with positive YTD (+15.04%) and positive 1Y return (+15%), with a relatively mild 1M drawdown of -7.29% compared to peers.",
+      "drivers": [
+        "+15.04% YTD",
+        "+15% 1Y return",
+        "-7.29% 1M (best relative)",
+        "Market cap \u00a323.3B"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BNB shows resilience with a -8.54% 1M return, the least negative among large-cap L1s, and a large market cap of \u00a360.2B providing relative stability in a downtrending market.",
+      "drivers": [
+        "-8.54% 1M (least negative L1)",
+        "Market cap \u00a360.2B",
+        "Stable in volatile market",
+        "Category leader"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "FET has a positive YTD of +4.54% and 1Y return of +5%, with a 1D dip of -0.99% showing relative strength against a negative market backdrop.",
+      "drivers": [
+        "+4.54% YTD",
+        "+5% 1Y return",
+        "AI category exposure",
+        "Small market cap \u00a30.35B (high beta)"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AGIX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "AGIX mirrors FET with a positive YTD of +5.98% and 1Y of +6%, despite a sharp 1W drawdown of -24.62% \u2014 near-term bounce potential given the AI sentiment.",
+      "drivers": [
+        "+5.98% YTD",
+        "+6% 1Y return",
+        "+0.52% 1D",
+        "AI sector momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "NMR shows relative stability with a -3.21% 1W (best in AI), -10.71% 1M, and a 1D gain of +1.59%, suggesting selling exhaustion in a small-cap AI name.",
+      "drivers": [
+        "-3.21% 1W (strongest in AI)",
+        "+1.59% 1D",
+        "Small market cap \u00a30.046B",
+        "Low volatility relative to peers"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "BTC at \u00a347K is showing a +1.51% 1D bounce, news sentiment remains positive at 0.339, and NYDIG notes MVRV at 1.2 near historical bottoms \u2014 potential for mean reversion.",
+      "drivers": [
+        "+1.51% 1D bounce",
+        "Positive news sentiment 0.339",
+        "MVRV near 1.2 (bottom zone)",
+        "Upside recovery potential"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "HBAR",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "HBAR was the second-best performer in the CoinDesk 20 after XLM with -1.7% in a down market, and has a 1D decline of only -0.16% \u2014 resilience in a selloff.",
+      "drivers": [
+        "-1.7% in CD20 (only down ~1%)",
+        "-0.16% 1D (near flat)",
+        "Relative strength vs. peers",
+        "Market cap \u00a32.66B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TRX",
@@ -132,132 +264,6 @@ window.SIGNALS_DATA = {
         "Robinhood US listing catalyst",
         "small market cap high beta",
         "positive long-term trend"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TON",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "TON shows exceptional momentum with +24.69% 1W, +24.23% 1D, +18.13% 1M returns, and YTD +7.47% despite a broad market downturn; 1Y return of +82% highlights strong relative strength.",
-      "drivers": [
-        "+24.69% 1W momentum",
-        "+82% 1Y return",
-        "YTD +7.47% vs market",
-        "high short-term outperformance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XLM",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "XLM surged +30.51% in the past month and +49% over 1Y, with YTD only -1.43% showing resilience; news of MoneyGram's stablecoin launch and Kalshi altcoin futures filing are positive catalysts.",
-      "drivers": [
-        "+30.51% 1M gain",
-        "+49% 1Y return",
-        "near-flat YTD -1.43%",
-        "MoneyGram stablecoin catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TRX",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "TRX is the strongest YTD performer at +15.36% with a 1Y return of +28%, and minimal 1D decline of -0.72% during a market rout; new gold-backed Visa card with 6% cashback adds positive narrative.",
-      "drivers": [
-        "+15.36% YTD leader",
-        "+28% 1Y return",
-        "resilient -0.72% 1D dip",
-        "positive news sentiment 0.098"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BNB shows relative strength with only -3.11% 1M loss versus peers deep in double-digit declines, and YTD -30.10% is less severe than many large-caps; its large market cap of \u00a360.4B provides stability.",
-      "drivers": [
-        "only -3.11% 1M loss",
-        "high \u00a360.4B market cap",
-        "relative outperformance",
-        "low volatility vs peers"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "PEPE recently surged +4.21% driven by whale leveraged longs worth ~$4.62 million, remaining resilient as Bitcoin tumbled, and memecoin speculative interest persists despite flat headline data.",
-      "drivers": [
-        "whale leveraged long catalyst",
-        "resilient during BTC selloff",
-        "memecoin narrative active"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HBAR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "HBAR has +16% 1Y return and minimal -2.92% 1M decline, showcasing resilience; Kalshi filing for HBAR perpetual futures signals growing institutional interest, though weak YTD -25.48% is a concern.",
-      "drivers": [
-        "+16% 1Y return",
-        "resilient -2.92% 1M",
-        "Kalshi futures filing catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Bitcoin offers a value entry near $63k amid broad selloff, with +6% 1Y return and positive news sentiment 0.093; ETF outflows and liquidation cascade are short-term drags but historically are buying opportunities.",
-      "drivers": [
-        "value entry near $63k",
-        "largest \u00a3946.8B market cap",
-        "positive news sentiment 0.093"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "Ethereum at \u00a31,314 is cheap relative to historical levels with a large \u00a3159.3B market cap; although YTD -41.21% is severe, the broad market liquidation is creating a potential bottom-fishing opportunity.",
-      "drivers": [
-        "low price relative to history",
-        "large \u00a3159.3B market cap",
-        "potential bottom-fishing entry"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "ALGO has a +28% 1Y return and just debuted on Robinhood US, boosting retail accessibility; YTD -14.34% is moderate versus peers, though recent 1W -17.10% shows ongoing weakness.",
-      "drivers": [
-        "+28% 1Y return",
-        "Robinhood listing catalyst",
-        "moderate YTD -14.34%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DOT",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "DOT has a moderate 1M decline of -14.02% versus deeper losses in many altcoins, and Kalshi's altcoin futures filing adds potential speculative interest; YTD -47.09% makes it a high-risk contrarian pick.",
-      "drivers": [
-        "moderate 1M -14.02% decline",
-        "Kalshi futures catalyst",
-        "contrarian high-risk entry"
       ]
     }
   ]

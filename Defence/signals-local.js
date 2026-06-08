@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-05 11:47",
+  "updated": "2026-06-08 12:58",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SAIC is up +21.18% in 1 month and +13.79% YTD, with a P/E of 12.86, positive news sentiment 0.217, and a record Q1 FY27 with $2.1B in bookings (book-to-bill 1.1) and raised guidance per [sec.gov](https://www.sec.gov/Archives/edgar/data/1571123/000157112326000077/saic06012026ex991earningsr.htm).",
+      "drivers": [
+        "+21% 1M momentum",
+        "P/E 12.86 value",
+        "record Q1 earnings beat",
+        "raised FY27 guidance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "HEI",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "HEICO reported record Q2 FY26 net income up 49%, net sales up 25%, and operating income up 41% with 18% organic growth per [accessnewswire.com](https://www.accessnewswire.com/newsroom/en/aerospace-and-defense/heico-corporation-reports-record-net-income-up-49-on-record-operating-income-1170682), while the stock is up +11.83% in 1 month with P/E 59.18 and low short interest 1.13%.",
+      "drivers": [
+        "record Q2 earnings beat",
+        "49% net income growth",
+        "18% organic sales growth",
+        "low short interest 1.13%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Mercury Systems is up +46.35% YTD and +21.39% in 1 month, with a beta of 0.949 and positive news sentiment 0.102, driven by strong defence electronics demand and a low P/E relative to growth.",
+      "drivers": [
+        "+46% YTD momentum",
+        "+21% 1M momentum",
+        "low beta 0.949",
+        "defence electronics tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RKLB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Rocket Lab is up +334% over 1 year and +44.86% YTD with +30% 1M momentum, targeting Neutron flight readiness in late 2026 per [heygotrade.com](https://www.heygotrade.com/en/blog/defense-stocks-outlook-2026/), though high beta 2.499 and negative 1W momentum (-23.28%) warrant caution.",
+      "drivers": [
+        "+334% 1Y return",
+        "+45% YTD",
+        "Neutron catalyst late 2026",
+        "high beta 2.5"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Leonardo DRS is up +33.22% YTD and +10.67% in 1 month, with a low beta of 0.121, positive news sentiment 0.168, and a P/E of 43.13 reflecting strong defence electronics growth.",
+      "drivers": [
+        "+33% YTD",
+        "+11% 1M momentum",
+        "low beta 0.12",
+        "defence electronics growth"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Axon is up +25.98% in 1 month and +8.33% in 1 week, with positive news sentiment 0.192 and strong Q1 growth in AI and counter-drone segments, though P/E of 196 is elevated.",
+      "drivers": [
+        "+26% 1M momentum",
+        "Q1 AI/counter-drone growth",
+        "positive news sentiment 0.19",
+        "high P/E 196"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RCAT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Red Cat is up +88% over 1 year and +38.43% YTD with +19.4% 1M momentum, strong_buy analyst consensus (score 1.17), and positive news sentiment 0.351, but high short interest 21% and -14% 1D drop add risk.",
+      "drivers": [
+        "+88% 1Y return",
+        "+38% YTD",
+        "strong_buy consensus",
+        "high short interest 21%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "AST SpaceMobile is up +249% over 1 year and +32.43% in 1 month, with positive news sentiment 0.196, but high beta 2.634, short interest 17.6%, and hold analyst consensus (score 2.82) temper conviction.",
+      "drivers": [
+        "+249% 1Y return",
+        "+32% 1M momentum",
+        "high beta 2.6",
+        "high short interest 17.6%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "AeroVironment is up +6.62% in 1 month with buy analyst consensus (score 1.63) and positive news sentiment 0.08, but -27.43% YTD, high short interest 12.11%, and negative 1W/1D momentum reflect Ukraine demand pull-forward risks per [heygotrade.com](https://www.heygotrade.com/en/blog/defense-stocks-outlook-2026/).",
+      "drivers": [
+        "+7% 1M momentum",
+        "buy consensus",
+        "Switchblade franchise",
+        "high short interest 12%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "QinetiQ is up +11.7% in 1 month and +5.9% YTD, with a P/E of 23.53, positive news sentiment 0.345, and buy analyst consensus (score 1.82), though small market cap (\u00a324M) and negative 1W momentum (-6.53%) limit upside.",
+      "drivers": [
+        "+12% 1M momentum",
+        "positive news sentiment 0.35",
+        "buy consensus",
+        "small cap risk"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RCAT",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "buy consensus",
         "positive news sentiment 0.105",
         "Switchblade munition demand"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "RKLB has surged +334% over one year and +60.49% YTD with +51.86% in the last month; analyst price target raised to $132 by Stifel and Neutron launch catalyst targeted for late 2026 [heygotrade.com](https://www.heygotrade.com/en/blog/defense-stocks-outlook-2026/).",
-      "drivers": [
-        "+334% 1-year return",
-        "+60.49% YTD",
-        "Neutron launch catalyst",
-        "analyst price target $132"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "MRCY has gained +115% over one year, +53.44% YTD, and +48.55% in the last month; positive news sentiment 0.102 and strong momentum driven by earnings beat.",
-      "drivers": [
-        "+115% 1-year return",
-        "+53.44% YTD",
-        "+48.55% 1-month momentum",
-        "positive earnings momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "RCAT has +88% 1-year return, +57.42% YTD, +31.09% 1-month gain, and a strong_buy analyst consensus (score 1.17); Pentagon exploring equity stakes in drone makers provides a live catalyst [market-pulse.co](https://market-pulse.co/article/12783/trump-s-1-5t-defense-gambit-why-lmt-noc-rtx-may-be-poised-for-long-term-gains).",
-      "drivers": [
-        "+88% 1-year return",
-        "+57.42% YTD",
-        "strong_buy consensus",
-        "Pentagon drone equity catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ASTS has +249% 1-year return, +32.78% YTD, and +61.96% 1-month momentum; high short interest (17.6%) adds squeeze potential, though analyst consensus is hold.",
-      "drivers": [
-        "+249% 1-year return",
-        "+61.96% 1-month momentum",
-        "high short interest 17.6%",
-        "space sector tailwind"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "PL has +624% 1-year return and +119.67% YTD, with a $22M maritime surveillance contract extension from NGA; positive news sentiment 0.026 and strong space defence exposure.",
-      "drivers": [
-        "+624% 1-year return",
-        "+119.67% YTD",
-        "NGA contract win $22M",
-        "space defence exposure"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SAIC has +16.02% YTD, +20.37% 1-month gain, and +12.43% 1-week gain; low P/E of 13.11 and positive news sentiment 0.217 with strong fundamentals.",
-      "drivers": [
-        "+20.37% 1-month momentum",
-        "low P/E 13.11",
-        "positive news sentiment 0.217",
-        "strong fundamentals"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "AXON has +25.31% 1-month and +12.31% 1-week momentum; analyst consensus is buy (score 1.6) and new drone radar partnership strengthens defensive moat.",
-      "drivers": [
-        "+25.31% 1-month momentum",
-        "buy consensus",
-        "drone radar partnership",
-        "defensive moat"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "HEI has +23.77% 1-month gain, low short interest (1.13%), and very positive news sentiment 0.351; analyst consensus is buy with strong earnings call interest.",
-      "drivers": [
-        "+23.77% 1-month momentum",
-        "low short interest 1.13%",
-        "positive news sentiment 0.351",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "DRS has +35.17% YTD and +17.31% 1-month momentum; low beta (0.027) and positive news sentiment 0.168 with strong defence exposure.",
-      "drivers": [
-        "+35.17% YTD",
-        "+17.31% 1-month momentum",
-        "low beta 0.027",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "AVAV has +12.07% 1-month momentum and a buy consensus (score 1.63); Ukraine demand pulled forward the order book for Switchblade loitering munitions [heygotrade.com](https://www.heygotrade.com/en/blog/defense-stocks-outlook-2026/).",
-      "drivers": [
-        "+12.07% 1-month momentum",
-        "buy consensus",
-        "Switchblade demand catalyst",
-        "Ukraine order book pull-forward"
       ]
     }
   ]

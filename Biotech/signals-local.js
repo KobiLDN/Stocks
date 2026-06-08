@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-05 11:46",
+  "updated": "2026-06-08 12:57",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +51.65%, 1W +20.10%, 1M +12.64%; positive news sentiment 0.016 with early in vivo CAR-T success in B-cell lymphoma as a key catalyst.",
+      "drivers": [
+        "YTD +51.65%",
+        "1W +20.10%",
+        "CAR-T catalyst",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +20.93%, 1M +8.21%, 1W +4.40%; P/E 17.45, analyst buy, positive news sentiment 0.151 with recent earnings beat.",
+      "drivers": [
+        "YTD +20.93%",
+        "P/E 17.45",
+        "positive momentum",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1Y +108%, YTD +20.82%, 1M +13.84%; P/E 29.51, analyst buy, news sentiment 0.114 with new oncology collaborations.",
+      "drivers": [
+        "1Y +108%",
+        "1M +13.84%",
+        "oncology collaborations",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +8.25%, 1M +6.38%, 1W +3.80%; P/E 24.33, dividend yield 2.88%, analyst buy, news sentiment 0.457, Q1 revenue +6% to $8.6B with MariTide Phase 3 progress.",
+      "drivers": [
+        "Q1 revenue +6%",
+        "MariTide Phase 3",
+        "dividend yield 2.88%",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1Y +41%, 1M +14.82%, YTD +5.08%; P/E 40.16, analyst buy, despite negative news sentiment -0.148, strong obesity drug momentum.",
+      "drivers": [
+        "1M +14.82%",
+        "obesity drug momentum",
+        "analyst buy",
+        "1Y +41%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "GSK",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +5.83%, 1M +5.16%, 1W +3.00%; P/E 13.65, dividend yield 3.51%, news sentiment 0.376, but analyst hold with score 2.73.",
+      "drivers": [
+        "P/E 13.65",
+        "dividend yield 3.51%",
+        "positive sentiment",
+        "analyst hold"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1Y +23%, 1M +3.73%, 1D +2.24%; P/E 28.0, dividend yield 1.70%, analyst buy, news sentiment 0.327 with regulatory catalysts.",
+      "drivers": [
+        "1Y +23%",
+        "analyst buy",
+        "regulatory catalysts",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1Y +46%, 1W +5.83%, 1M +2.53%; P/E 14.46, analyst buy, news sentiment 0.205, attractive valuation.",
+      "drivers": [
+        "1Y +46%",
+        "P/E 14.46",
+        "analyst buy",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +4.48%, P/E 26.52, analyst buy, news sentiment 0.195, despite flat YTD -1.17%.",
+      "drivers": [
+        "1M +4.48%",
+        "analyst buy",
+        "positive sentiment",
+        "P/E 26.52"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "1M +3.97%, analyst buy, news sentiment 0.209 with VOXZOGO win in hypochondroplasia, despite YTD -4.51%.",
+      "drivers": [
+        "VOXZOGO catalyst",
+        "analyst buy",
+        "positive sentiment",
+        "1M +3.97%"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "Cemdisiran Phase 3 win",
         "Low P/E (15.4)",
         "Tariff overhang removed"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LEGN",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +62.30%, 1M +31.74%, analyst buy (score 1.6), news sentiment 0.016, catalyst: early in vivo CAR-T success in B-cell lymphoma.",
-      "drivers": [
-        "YTD +62.3%",
-        "1M +31.7%",
-        "CAR-T catalyst",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "1M +17.20%, PE 40.16, analyst buy (score 1.74), Q1 revenue up 56% to $19.8B, FDA approval of Foundayo for obesity, raised full-year guidance.",
-      "drivers": [
-        "1M +17.2%",
-        "Q1 revenue +56%",
-        "Foundayo FDA approval",
-        "raised guidance"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +20.26%, 1M +18.66%, PE 17.35, analyst buy (score 2.1), news sentiment 0.151.",
-      "drivers": [
-        "YTD +20.3%",
-        "1M +18.7%",
-        "PE 17.35",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +24.81%, 1M +20.31%, PE 30.49, analyst buy (score 2.37), genomics leader.",
-      "drivers": [
-        "YTD +24.8%",
-        "1M +20.3%",
-        "PE 30.49",
-        "genomics leader"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +19.34%, 1M +7.68%, strong_buy (score 1.29), news sentiment 0.264, short interest 39.93%.",
-      "drivers": [
-        "strong_buy rating",
-        "YTD +19.3%",
-        "high short interest",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NTLA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +61.13%, 1M +6.99%, 1W +8.48%, analyst buy (score 2.13), news sentiment 0.317, short interest 46.78%.",
-      "drivers": [
-        "YTD +61.1%",
-        "1W +8.5%",
-        "high short interest",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +43.55%, 1M +27.46%, analyst buy (score 2.33), short interest 27.71%, but cash-burning risk.",
-      "drivers": [
-        "YTD +43.6%",
-        "1M +27.5%",
-        "high short interest",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "YTD +64.89%, 1M +7.58%, 1W +6.97%, but hold rating (score 2.96) and no positive news.",
-      "drivers": [
-        "YTD +64.9%",
-        "1M +7.6%",
-        "hold rating",
-        "no catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +6.28%, 1M +6.78%, PE 23.88, dividend yield 2.98%, Q1 revenues up 6% to $8.6B, 16 brands double-digit growth.",
-      "drivers": [
-        "stable large-cap",
-        "PE 23.88",
-        "dividend 2.98%",
-        "Q1 revenue growth"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "1M +9.80%, 1W +12.35%, news sentiment 0.185, AI pipeline progress, but YTD -7.98% and no analyst rating.",
-      "drivers": [
-        "1W +12.4%",
-        "AI pipeline progress",
-        "positive sentiment",
-        "speculative"
       ]
     }
   ]
