@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-08 08:08",
-  "fx_gbp_usd": 1.3326,
+  "updated": "2026-06-08 13:43",
+  "fx_gbp_usd": 1.3358,
   "stocks": [
     {
       "ticker": "XOM",
@@ -9,7 +9,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "112",
       "price_usd": 149.92,
-      "change_1d": "-1.37%",
+      "change_1d": "-0.20%",
       "change_1w": "+3.21%",
       "change_1m": "+1.51%",
       "change_ytd": "+23.88%",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "78",
       "high_gbp": "132",
       "bar_pct": 64,
-      "market_cap_gbp_b": 466.306,
+      "market_cap_gbp_b": 465.2,
       "beta": 0.149,
       "pe_ratio": 25.24,
       "avg_volume_m": 20.49,
@@ -29,6 +29,13 @@ window.PRICES_DATA = {
       "vol_1w": 69947200,
       "vol_1m": 379385000,
       "news": [
+        {
+          "title": "Should You Buy Exxon Mobil Corporation (XOM)?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/buy-exxon-mobil-corporation-xom-105729204.html",
+          "published": 1780916249,
+          "sentiment": 0.0
+        },
         {
           "title": "Why Are BATL, INDO, XOM, CVX, USO, UCO Rising Overnight?",
           "publisher": "Stocktwits",
@@ -56,25 +63,18 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/exxon-move-texas-shareholder-votes-100530453.html",
           "published": 1780826730,
           "sentiment": 0.0
-        },
-        {
-          "title": "3 Unstoppable Energy Stocks on Washington's Short List as Trump Rewrites U.S. Oil and Gas Strategy",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/06/3-energy-stocks-on-washington-oil-gas-strategy/",
-          "published": 1780749600,
-          "sentiment": 0.077
         }
       ],
-      "news_sentiment": 0.092
+      "news_sentiment": 0.076
     },
     {
       "ticker": "CVX",
       "company_name": "Chevron",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "141",
+      "price_gbp": "140",
       "price_usd": 187.31,
-      "change_1d": "-0.84%",
+      "change_1d": "-0.37%",
       "change_1w": "+2.66%",
       "change_1m": "+2.09%",
       "change_ytd": "+22.43%",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "105",
       "high_gbp": "161",
       "bar_pct": 63,
-      "market_cap_gbp_b": 279.934,
+      "market_cap_gbp_b": 279.27,
       "beta": 0.472,
       "pe_ratio": 32.69,
       "avg_volume_m": 12.05,
@@ -94,6 +94,13 @@ window.PRICES_DATA = {
       "vol_1w": 34855900,
       "vol_1m": 216044800,
       "news": [
+        {
+          "title": "How DLE is turning oilfield wastewater into a valuable lithium source",
+          "publisher": "Mining Technology",
+          "url": "https://www.mining-technology.com/features/dle-lithium-oilfield-brine/",
+          "published": 1780905600,
+          "sentiment": 0.477
+        },
         {
           "title": "Why Are BATL, INDO, XOM, CVX, USO, UCO Rising Overnight?",
           "publisher": "Stocktwits",
@@ -121,16 +128,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2341785/the-dow-s-split-personality-why-some-winners-soar-while-others-drag-down-the-dow",
           "published": 1780765202,
           "sentiment": 0.296
-        },
-        {
-          "title": "SCHD\u2019s $85 Billion Strategy Now Concentrates 41 Percent of Your Money in Just Ten Stocks",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/06/schds-85-billion-strategy-now-concentrates-41-percent-of-your-money-in-just-ten-stocks/",
-          "published": 1780762305,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.219
+      "news_sentiment": 0.315
     },
     {
       "ticker": "SHEL",
@@ -139,7 +139,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "64",
       "price_usd": 85.4,
-      "change_1d": "+0.47%",
+      "change_1d": "+0.35%",
       "change_1w": "+1.52%",
       "change_1m": "-1.18%",
       "change_ytd": "+15.30%",
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "71",
       "bar_pct": 66,
-      "market_cap_gbp_b": 177.921,
+      "market_cap_gbp_b": 177.499,
       "beta": -0.248,
       "pe_ratio": 13.3,
       "avg_volume_m": 8.07,
@@ -204,7 +204,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "32",
       "price_usd": 42.97,
-      "change_1d": "-2.03%",
+      "change_1d": "+0.16%",
       "change_1w": "+2.63%",
       "change_1m": "-2.62%",
       "change_ytd": "+22.87%",
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 72,
-      "market_cap_gbp_b": 83.032,
+      "market_cap_gbp_b": 82.835,
       "beta": -0.239,
       "pe_ratio": 34.65,
       "avg_volume_m": 13.91,
@@ -224,6 +224,13 @@ window.PRICES_DATA = {
       "vol_1w": 35041200,
       "vol_1m": 192399600,
       "news": [
+        {
+          "title": "BP says it paid \u00a31.2bn in UK taxes last year amid Government plans to raise more",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/bp-says-paid-1-2bn-111204257.html",
+          "published": 1780917124,
+          "sentiment": 0.0
+        },
         {
           "title": "Ousted BP chairman gears up for legal battle with oil giant",
           "publisher": "The Telegraph",
@@ -251,33 +258,26 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-advance-pre-132928079.html",
           "published": 1780666168,
           "sentiment": 0.273
-        },
-        {
-          "title": "Here's How Cleaner Transportation Fuels Are Powering Valero's Growth",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/heres-cleaner-transportation-fuels-powering-130900897.html",
-          "published": 1780664940,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.233
+      "news_sentiment": 0.131
     },
     {
       "ticker": "TTE",
       "company_name": "TotalEnergies",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "67",
+      "price_gbp": "66",
       "price_usd": 88.71,
-      "change_1d": "-0.52%",
+      "change_1d": "+0.46%",
       "change_1w": "+1.59%",
       "change_1m": "-1.39%",
       "change_ytd": "+34.81%",
       "return_1yr": "+51%",
       "low_gbp": "43",
-      "high_gbp": "71",
+      "high_gbp": "70",
       "bar_pct": 85,
-      "market_cap_gbp_b": 147.86,
+      "market_cap_gbp_b": 147.51,
       "beta": 0.045,
       "pe_ratio": 13.16,
       "avg_volume_m": 1.94,
@@ -334,7 +334,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "28",
       "price_usd": 36.94,
-      "change_1d": "-1.76%",
+      "change_1d": "-1.95%",
       "change_1w": "+2.64%",
       "change_1m": "-1.87%",
       "change_ytd": "+54.04%",
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "33",
       "bar_pct": 69,
-      "market_cap_gbp_b": 69.052,
+      "market_cap_gbp_b": 68.889,
       "beta": -0.752,
       "pe_ratio": 16.71,
       "avg_volume_m": 6.82,
@@ -354,6 +354,13 @@ window.PRICES_DATA = {
       "vol_1w": 15000700,
       "vol_1m": 84607300,
       "news": [
+        {
+          "title": "How DLE is turning oilfield wastewater into a valuable lithium source",
+          "publisher": "Mining Technology",
+          "url": "https://www.mining-technology.com/features/dle-lithium-oilfield-brine/",
+          "published": 1780905600,
+          "sentiment": 0.477
+        },
         {
           "title": "Did New Equinor and Petrobras Deals Just Shift Baker Hughes' (BKR) Investment Narrative?",
           "publisher": "Simply Wall St.",
@@ -381,16 +388,9 @@ window.PRICES_DATA = {
           "url": "https://www.offshore-technology.com/news/equinor-ocean-installer-bacalhau-well-deal/",
           "published": 1780498086,
           "sentiment": 0.625
-        },
-        {
-          "title": "Energy Transition Today - Innovative Solar Tracker Tackles Challenging Terrains Efficiently",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/energy-transition-today-innovative-solar-113742408.html",
-          "published": 1780400262,
-          "sentiment": 0.807
         }
       ],
-      "news_sentiment": 0.365
+      "news_sentiment": 0.299
     },
     {
       "ticker": "COP",
@@ -399,7 +399,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "88",
       "price_usd": 117.14,
-      "change_1d": "-1.56%",
+      "change_1d": "-0.36%",
       "change_1w": "+2.77%",
       "change_1m": "-0.75%",
       "change_ytd": "+22.99%",
@@ -407,7 +407,7 @@ window.PRICES_DATA = {
       "low_gbp": "64",
       "high_gbp": "102",
       "bar_pct": 63,
-      "market_cap_gbp_b": 107.09,
+      "market_cap_gbp_b": 106.836,
       "beta": 0.106,
       "pe_ratio": 19.85,
       "avg_volume_m": 9.11,
@@ -464,15 +464,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "43",
       "price_usd": 56.93,
-      "change_1d": "-2.98%",
+      "change_1d": "-0.19%",
       "change_1w": "+0.53%",
       "change_1m": "+3.28%",
       "change_ytd": "+34.97%",
       "return_1yr": "+43%",
       "low_gbp": "29",
-      "high_gbp": "51",
+      "high_gbp": "50",
       "bar_pct": 63,
-      "market_cap_gbp_b": 42.491,
+      "market_cap_gbp_b": 42.39,
       "beta": 0.124,
       "pe_ratio": 76.93,
       "avg_volume_m": 16.1,
@@ -484,6 +484,13 @@ window.PRICES_DATA = {
       "vol_1w": 47364600,
       "vol_1m": 262628300,
       "news": [
+        {
+          "title": "Stocks to Watch: Marvell Technology, Broadcom, Strategy",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-08-2026/card/stocks-to-watch-marvell-technology-broadcom-strategy-TrCmO4Vya85LY4bC0hMM?siteid=yhoof2&yptr=yahoo",
+          "published": 1780911338,
+          "sentiment": 0.0
+        },
         {
           "title": "Selling Short 1-Month Occidental Petroleum Put Options Is Still Working",
           "publisher": "Barchart",
@@ -511,13 +518,6 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2286110/eog-resources-stock-is-eog-underperforming-the-energy-sector",
           "published": 1780502586,
           "sentiment": 0.273
-        },
-        {
-          "title": "Here is What to Know Beyond Why Occidental Petroleum Corporation (OXY) is a Trending Stock",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-occidental-petroleum-130004753.html",
-          "published": 1780405204,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.182
@@ -529,7 +529,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "103",
       "price_usd": 137.78,
-      "change_1d": "-2.21%",
+      "change_1d": "-1.32%",
       "change_1w": "+3.30%",
       "change_1m": "+2.29%",
       "change_ytd": "+30.67%",
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "114",
       "bar_pct": 72,
-      "market_cap_gbp_b": 55.069,
+      "market_cap_gbp_b": 54.938,
       "beta": 0.256,
       "pe_ratio": 13.55,
       "avg_volume_m": 4.39,
@@ -578,31 +578,31 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Decoupling Exxon's Production Growth From Market Reality",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/601415/decoupling-exxons-production-growth-from-market-reality/2026-06-04",
-          "published": 1780593936,
-          "sentiment": 0.382
+          "title": "Here's Why EOG Resources (EOG) is a Strong Momentum Stock",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-eog-resources-eog-135003979.html",
+          "published": 1780667403,
+          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.224
+      "news_sentiment": 0.25
     },
     {
       "ticker": "MPC",
       "company_name": "Marathon Petroleum",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "197",
+      "price_gbp": "196",
       "price_usd": 262.01,
-      "change_1d": "-2.41%",
+      "change_1d": "-0.35%",
       "change_1w": "+5.32%",
       "change_1m": "+7.01%",
       "change_ytd": "+60.06%",
       "return_1yr": "+69%",
-      "low_gbp": "119",
+      "low_gbp": "118",
       "high_gbp": "204",
       "bar_pct": 91,
-      "market_cap_gbp_b": 57.398,
+      "market_cap_gbp_b": 57.262,
       "beta": 0.522,
       "pe_ratio": 17.24,
       "avg_volume_m": 2.55,
@@ -614,6 +614,13 @@ window.PRICES_DATA = {
       "vol_1w": 11394300,
       "vol_1m": 53164700,
       "news": [
+        {
+          "title": "Best Growth Stocks to Buy for June 8th",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-105800036.html",
+          "published": 1780916280,
+          "sentiment": 0.778
+        },
         {
           "title": "What Energy Markets Got Right\u2014and Wrong\u2014100 Days Into the Iran War",
           "publisher": "Barrons.com",
@@ -641,16 +648,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/marathon-petroleum-daqo-energy-highlighted-093000692.html",
           "published": 1780651800,
           "sentiment": 0.273
-        },
-        {
-          "title": "Bull of the Day: Marathon Petroleum (MPC)",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/bull-day-marathon-petroleum-mpc-083000468.html",
-          "published": 1780648200,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.008
+      "news_sentiment": 0.164
     },
     {
       "ticker": "VLO",
@@ -659,7 +659,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "192",
       "price_usd": 255.82,
-      "change_1d": "-1.06%",
+      "change_1d": "-0.06%",
       "change_1w": "+4.49%",
       "change_1m": "+8.60%",
       "change_ytd": "+56.44%",
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "96",
       "high_gbp": "199",
       "bar_pct": 93,
-      "market_cap_gbp_b": 57.001,
+      "market_cap_gbp_b": 56.866,
       "beta": 0.553,
       "pe_ratio": 18.69,
       "avg_volume_m": 3.65,
@@ -679,6 +679,13 @@ window.PRICES_DATA = {
       "vol_1w": 12145300,
       "vol_1m": 65669900,
       "news": [
+        {
+          "title": "Best Growth Stocks to Buy for June 8th",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-105800036.html",
+          "published": 1780916280,
+          "sentiment": 0.778
+        },
         {
           "title": "Is Darling Ingredients Inc. (DAR) A Good Stock To Buy Now?",
           "publisher": "Insider Monkey",
@@ -706,16 +713,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/surging-earnings-expectations-insider-selling-180723829.html",
           "published": 1780769243,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why Oil\u2019s Not at $200 After the Biggest Supply Shock in History",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/why-oil-not-200-biggest-120000278.html",
-          "published": 1780747200,
-          "sentiment": -0.382
         }
       ],
-      "news_sentiment": 0.154
+      "news_sentiment": 0.386
     },
     {
       "ticker": "SLB",
@@ -724,7 +724,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "41",
       "price_usd": 54.87,
-      "change_1d": "-4.94%",
+      "change_1d": "-0.24%",
       "change_1w": "+1.11%",
       "change_1m": "-0.00%",
       "change_ytd": "+38.02%",
@@ -732,7 +732,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 85,
-      "market_cap_gbp_b": 61.558,
+      "market_cap_gbp_b": 61.412,
       "beta": 0.708,
       "pe_ratio": 24.17,
       "avg_volume_m": 16.27,
@@ -789,7 +789,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "29",
       "price_usd": 39.18,
-      "change_1d": "-4.96%",
+      "change_1d": "-0.43%",
       "change_1w": "+1.28%",
       "change_1m": "-2.61%",
       "change_ytd": "+33.57%",
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 81,
-      "market_cap_gbp_b": 24.561,
+      "market_cap_gbp_b": 24.503,
       "beta": 0.704,
       "pe_ratio": 21.65,
       "avg_volume_m": 14.57,
@@ -854,7 +854,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "47",
       "price_usd": 62.59,
-      "change_1d": "-5.17%",
+      "change_1d": "-0.16%",
       "change_1w": "-2.02%",
       "change_1m": "+0.00%",
       "change_ytd": "+33.72%",
@@ -862,7 +862,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 76,
-      "market_cap_gbp_b": 46.595,
+      "market_cap_gbp_b": 46.484,
       "beta": 0.938,
       "pe_ratio": 20.0,
       "avg_volume_m": 9.11,
@@ -874,6 +874,13 @@ window.PRICES_DATA = {
       "vol_1w": 31096400,
       "vol_1m": 174374900,
       "news": [
+        {
+          "title": "The Energy Trade Is Bigger Than Oil Prices: 3 Stocks to Buy and 2 to Sell",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/articles/the-energy-trade-is-bigger-than-oil-prices-3-stocks-to-buy-and-2-to-sell/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1780833300,
+          "sentiment": 0.273
+        },
         {
           "title": "Did New Equinor and Petrobras Deals Just Shift Baker Hughes' (BKR) Investment Narrative?",
           "publisher": "Simply Wall St.",
@@ -901,16 +908,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-lower-equity-130325951.html",
           "published": 1780664605,
           "sentiment": -0.296
-        },
-        {
-          "title": "A Post-Iran War View on Energy Investing",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/energy-investing-postwar-iran-oil-gas-outlook-and-stocks-strait-of-hormuz-edfc7346?siteid=yhoof2&yptr=yahoo",
-          "published": 1780644600,
-          "sentiment": -0.421
         }
       ],
-      "news_sentiment": -0.169
+      "news_sentiment": -0.03
     },
     {
       "ticker": "NEE",
@@ -919,7 +919,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "64",
       "price_usd": 85.84,
-      "change_1d": "-0.02%",
+      "change_1d": "+0.26%",
       "change_1w": "-0.62%",
       "change_1m": "-9.35%",
       "change_ytd": "+7.57%",
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "74",
       "bar_pct": 59,
-      "market_cap_gbp_b": 134.343,
+      "market_cap_gbp_b": 134.024,
       "beta": 0.671,
       "pe_ratio": 21.79,
       "avg_volume_m": 10.38,
@@ -939,6 +939,13 @@ window.PRICES_DATA = {
       "vol_1w": 59126100,
       "vol_1m": 286695100,
       "news": [
+        {
+          "title": "AI Needs Power: 5 Dividend Stocks Quietly Funding the Datacenter Boom",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/08/ai-needs-power-5-dividend-stocks-quietly-funding-the-datacenter-boom/",
+          "published": 1780916640,
+          "sentiment": 0.0
+        },
         {
           "title": "NextEra Energy (NEE) Offers Potential Following Dominion Acquisition Announcement",
           "publisher": "Insider Monkey",
@@ -966,16 +973,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/nextera-dominion-deal-links-scale-221204908.html",
           "published": 1780697524,
           "sentiment": 0.0
-        },
-        {
-          "title": "Analyst Upgrades Dominion Energy (D) Following NextEra Deal Announcement",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/analyst-upgrades-dominion-energy-d-033128489.html",
-          "published": 1780630288,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.284
+      "news_sentiment": 0.229
     },
     {
       "ticker": "SSE.L",
@@ -983,26 +983,26 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2400.0,
-      "change_1d": "+0.50%",
-      "change_1w": "+2.96%",
-      "change_1m": "-4.19%",
-      "change_ytd": "+7.58%",
+      "price_usd": 2384.0,
+      "change_1d": "-0.42%",
+      "change_1w": "+3.29%",
+      "change_1m": "-4.83%",
+      "change_ytd": "+6.86%",
       "return_1yr": "+35%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 69,
-      "market_cap_gbp_b": 0.289,
+      "bar_pct": 67,
+      "market_cap_gbp_b": 0.288,
       "beta": 0.596,
-      "pe_ratio": 22.86,
+      "pe_ratio": 22.7,
       "avg_volume_m": 4.1,
       "div_yield_pct": 286.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 3150707,
-      "vol_1w": 24012953,
-      "vol_1m": 101911962,
+      "vol_1d": 818673,
+      "vol_1w": 18817737,
+      "vol_1m": 102730635,
       "news": [
         {
           "title": "Are heat pumps an underappreciated lever of power demand growth?",
@@ -1049,7 +1049,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "42",
       "price_usd": 56.07,
-      "change_1d": "-17.68%",
+      "change_1d": "+0.85%",
       "change_1w": "-17.98%",
       "change_1m": "+56.62%",
       "change_ytd": "+66.13%",
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 63,
-      "market_cap_gbp_b": 5.545,
+      "market_cap_gbp_b": 5.532,
       "beta": 1.572,
       "pe_ratio": 55.51,
       "avg_volume_m": 7.34,
@@ -1114,15 +1114,15 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "209",
       "price_usd": 279.01,
-      "change_1d": "-11.45%",
+      "change_1d": "+0.74%",
       "change_1w": "-9.06%",
       "change_1m": "+27.99%",
       "change_ytd": "+1.70%",
       "return_1yr": "+94%",
-      "low_gbp": "102",
-      "high_gbp": "241",
+      "low_gbp": "101",
+      "high_gbp": "240",
       "bar_pct": 77,
-      "market_cap_gbp_b": 22.497,
+      "market_cap_gbp_b": 22.444,
       "beta": 1.692,
       "pe_ratio": 18.01,
       "avg_volume_m": 2.34,
@@ -1134,6 +1134,13 @@ window.PRICES_DATA = {
       "vol_1w": 15657000,
       "vol_1m": 67293900,
       "news": [
+        {
+          "title": "2 Surging  Stocks to Own for Decades and 1 We Find Risky",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/2-surging-stocks-own-decades-092550586.html",
+          "published": 1780910750,
+          "sentiment": -0.202
+        },
         {
           "title": "PBW\u2019s 34% Year-to-Date Gain Masks a Brutal Five-Year Pattern Every Rate Cycle Repeats",
           "publisher": "24/7 Wall St.",
@@ -1161,16 +1168,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-first-solar-130005972.html",
           "published": 1780491605,
           "sentiment": 0.0
-        },
-        {
-          "title": "Selling US$8.5m Of First Solar Stock Rewarded Insiders",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/selling-us-8-5m-first-110015123.html",
-          "published": 1780484415,
-          "sentiment": 0.494
         }
       ],
-      "news_sentiment": 0.063
+      "news_sentiment": -0.076
     },
     {
       "ticker": "BEPC",
@@ -1179,7 +1179,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "29",
       "price_usd": 38.72,
-      "change_1d": "-1.43%",
+      "change_1d": "-0.21%",
       "change_1w": "-3.15%",
       "change_1m": "+4.56%",
       "change_ytd": "-1.09%",
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "23",
       "high_gbp": "34",
       "bar_pct": 56,
-      "market_cap_gbp_b": 5.299,
+      "market_cap_gbp_b": 5.287,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1242,17 +1242,17 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "6.13",
+      "price_gbp": "6.12",
       "price_usd": 8.17,
       "change_1d": "-2.04%",
       "change_1w": "-3.66%",
       "change_1m": "-5.33%",
       "change_ytd": "+22.58%",
       "return_1yr": "-37%",
-      "low_gbp": "4.31",
+      "low_gbp": "4.30",
       "high_gbp": "25",
       "bar_pct": 9,
-      "market_cap_gbp_b": 24.298,
+      "market_cap_gbp_b": 24.24,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.15,
