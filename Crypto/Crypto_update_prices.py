@@ -30,7 +30,8 @@ DASHBOARD_TITLE = "Crypto"
 CMC_API_KEY = os.environ.get("CMC_API_KEY", "")
 CMC_URL     = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 
-COINGECKO_API_KEY = os.environ.get("COINGECKO_API_KEY", "")
+COINGECKO_API_KEY  = os.environ.get("COINGECKO_API_KEY", "")
+COINSTATS_API_KEY  = os.environ.get("COINSTATS_API_KEY", "")
 
 # CoinGecko IDs — used for true YTD (Jan 1 → today) via /coins/{id}/history
 COINGECKO_IDS = {
@@ -271,13 +272,15 @@ def fetch_coingecko_data(current_prices_usd):
 
 def get_news_coinstats(ticker, analyzer, max_items=5):
     """
-    CoinStats public API — free, no key, crypto-specific news.
-    Used as fallback when yfinance returns 0 headlines (e.g. POL, MINA, HBAR).
+    CoinStats API — crypto-specific news fallback when yfinance returns 0 headlines.
+    Uses authenticated endpoint if COINSTATS_API_KEY is set, else public endpoint.
     """
     try:
+        headers = {"X-API-KEY": COINSTATS_API_KEY} if COINSTATS_API_KEY else {}
         resp = requests.get(
             "https://api.coinstats.app/public/v1/news",
             params={"coin": ticker, "limit": max_items},
+            headers=headers,
             timeout=10,
         )
         if resp.status_code != 200:

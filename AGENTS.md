@@ -219,6 +219,7 @@ Current approved exceptions:
 - **`OPENROUTER_API_KEY`** (GitHub Actions secret) — used only by `.github/workflows/generate-signals.yml` to call `deepseek/deepseek-v4-flash` via OpenRouter. Cost: ~$0.004/run.
 - **`CMC_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinMarketCap free tier for real-time prices (bulk call, all 34 coins in one request).
 - **`COINGECKO_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinGecko Demo/Pro for true YTD (Jan 1 → today) + 52-week high/low + volume. Falls back to public endpoint if key absent.
+- **`COINSTATS_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinStats API for news fallback when yfinance returns 0 headlines (e.g. POL, MINA, HBAR). Free tier, credit-based. Falls back to unauthenticated public endpoint if key absent.
 - **T212 credentials** (local only — **never a GitHub secret**) — used by `t212_mcp/server.py`, `generate_export.py`, and `G:\My Drive\coding\ai\Stocks\t212_mcp\portfolio.py`. Stored as `KEY_ID:SECRET_KEY` in `t212_mcp/.key` (gitignored) or preferably in the container-level folder outside any repo. Never committed, never used in CI, never goes online.
 
 **Removed exception (2026-06-06):** `STOCKDATA_API_KEY` — StockData.org was added as Crypto primary news source but hit its 500 req/day free cap immediately with 34 coins. CryptoPanic moved to paid-only. Reverted to **yfinance → CoinStats** cascade (both free, no key).
