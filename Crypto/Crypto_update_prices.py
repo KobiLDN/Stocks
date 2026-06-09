@@ -31,19 +31,6 @@ CMC_API_KEY = os.environ.get("CMC_API_KEY", "")
 CMC_URL     = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 
 COINGECKO_API_KEY = os.environ.get("COINGECKO_API_KEY", "")
-# Demo keys → api.coingecko.com + x-cg-demo-api-key
-# Pro keys  → pro-api.coingecko.com + x-cg-pro-api-key
-# We try Pro first; if 401/403, fall back to Demo endpoint automatically per-request
-COINGECKO_PRO_URL  = "https://pro-api.coingecko.com/api/v3"
-COINGECKO_DEMO_URL = "https://api.coingecko.com/api/v3"
-
-STOCKDATA_API_KEY = os.environ.get("STOCKDATA_API_KEY", "")
-STOCKDATA_URL     = "https://api.stockdata.org/v1/news/all"
-# StockData crypto symbol format: ticker + "USD". Overrides for rebrands/specials.
-STOCKDATA_SYMBOLS = {
-    "POL":  "MATICUSD",  # rebranded from MATIC; StockData likely still uses MATIC
-    "PEPE": "PEPEUSD",
-}
 
 # CoinGecko IDs — used for true YTD (Jan 1 → today) via /coins/{id}/history
 COINGECKO_IDS = {
@@ -280,59 +267,6 @@ def fetch_coingecko_data(current_prices_usd):
 
     return ytd_map, low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map
 
-
-
-def get_news_stockdata(ticker, analyzer, max_items=5):
-    """
-    StockData.org news with built-in entity sentiment (500 req/day free).
-    Sentiment lives in entities[0].sentiment_score (-1 to +1).
-    Falls back to VADER if no entity sentiment available.
-    """
-    if not STOCKDATA_API_KEY:
-        return [], None
-    sym = STOCKDATA_SYMBOLS.get(ticker, ticker + "USD")
-    try:
-        resp = requests.get(
-            STOCKDATA_URL,
-            params={"symbols": sym, "api_token": STOCKDATA_API_KEY,
-                    "limit": max_items, "language": "en"},
-            timeout=15,
-        )
-        if resp.status_code != 200:
-            return [], None
-        articles = resp.json().get("data", [])
-        items = []
-        for a in articles[:max_items]:
-            title = a.get("title")
-            if not title:
-                continue
-            # Sentiment from first matched entity, else VADER
-            entities = a.get("entities") or []
-            score = entities[0].get("sentiment_score") if entities else None
-            if score is None and analyzer:
-                try:
-                    score = round(analyzer.polarity_scores(title)["compound"], 3)
-                except Exception:
-                    pass
-            pub_ts = None
-            if a.get("published_at"):
-                try:
-                    pub_ts = int(datetime.fromisoformat(
-                        a["published_at"].replace("Z", "+00:00")).timestamp())
-                except Exception:
-                    pass
-            items.append({
-                "title":     title,
-                "publisher": a.get("source"),
-                "url":       a.get("url"),
-                "published": pub_ts,
-                "sentiment": round(float(score), 3) if score is not None else None,
-            })
-        scored = [i["sentiment"] for i in items if i["sentiment"] is not None]
-        agg    = round(sum(scored) / len(scored), 3) if scored else None
-        return items, agg
-    except Exception:
-        return [], None
 
 
 def get_news_coinstats(ticker, analyzer, max_items=5):
@@ -577,10 +511,8 @@ def main():
             # percent_change_90d is a 90-day return, not YTD, and would mislead.
             change_ytd = ytd_map.get(ticker)  # None if CoinGecko failed for this coin
 
-            news_items, news_agg = get_news_stockdata(ticker, analyzer)
-            if not news_items:  # StockData missed — try yfinance
-                news_items, news_agg = get_news(yf_sym, analyzer)
-            if not news_items:  # yfinance missed — try CoinStats (no key, no sentiment)
+            news_items, news_agg = get_news(yf_sym, analyzer)
+            if not news_items:  # yfinance missed — try CoinStats (no key, VADER sentiment)
                 news_items, news_agg = get_news_coinstats(ticker, analyzer)
 
             # Drop articles older than 7 days — yfinance often returns years-old stale data

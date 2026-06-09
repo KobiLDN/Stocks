@@ -94,7 +94,6 @@ jobs:
         env:
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
-          STOCKDATA_API_KEY: ${{ secrets.STOCKDATA_API_KEY }}
         run: python Crypto_update_prices.py
 
       - name: Install deps (Energy)

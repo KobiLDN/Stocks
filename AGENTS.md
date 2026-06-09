@@ -207,20 +207,26 @@ Workflow files must live at the **repo root** (`.github/workflows/`) — GitHub 
 
 - Never commit API keys or secrets.
 - `AI/key.txt` and `AI/test_openrouter.py` are gitignored — never commit them.
-- The price-updater workflow uses no external secrets — Yahoo Finance via `yfinance` requires no API key.
+- The price-updater workflow uses no external secrets for equity sectors — Yahoo Finance via `yfinance` requires no API key.
 - The signals workflow uses **one** secret: `OPENROUTER_API_KEY` — see exception below.
+- The Crypto workflow uses `CMC_API_KEY` + `COINGECKO_API_KEY` — see exception below.
 
-## Architectural rule: keyless by default (EXCEPTIONS: OPENROUTER_API_KEY, T212_API_KEY)
+## Architectural rule: keyless by default (EXCEPTIONS: OPENROUTER_API_KEY, T212_API_KEY, CMC_API_KEY, COINGECKO_API_KEY)
 
 **This project is keyless by default.** Any new feature must work with no-auth/free data sources. Adding a new secret requires an explicit user decision — do **not** silently add one.
 
 Current approved exceptions:
 - **`OPENROUTER_API_KEY`** (GitHub Actions secret) — used only by `.github/workflows/generate-signals.yml` to call `deepseek/deepseek-v4-flash` via OpenRouter. Cost: ~$0.004/run.
+- **`CMC_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinMarketCap free tier for real-time prices (bulk call, all 34 coins in one request).
+- **`COINGECKO_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinGecko Demo/Pro for true YTD (Jan 1 → today) + 52-week high/low + volume. Falls back to public endpoint if key absent.
 - **T212 credentials** (local only — **never a GitHub secret**) — used by `t212_mcp/server.py`, `generate_export.py`, and `G:\My Drive\coding\ai\Stocks\t212_mcp\portfolio.py`. Stored as `KEY_ID:SECRET_KEY` in `t212_mcp/.key` (gitignored) or preferably in the container-level folder outside any repo. Never committed, never used in CI, never goes online.
 
+**Removed exception (2026-06-06):** `STOCKDATA_API_KEY` — StockData.org was added as Crypto primary news source but hit its 500 req/day free cap immediately with 34 coins. CryptoPanic moved to paid-only. Reverted to **yfinance → CoinStats** cascade (both free, no key).
+
 Everything else remains keyless:
-- **News sentiment** → yfinance `.news` + local VADER scoring (no LLM, no Finnhub).
-- **Price data** → yfinance (no key).
+- **Crypto news** → yfinance `.news` (primary) → CoinStats public API (fallback) + VADER sentiment scoring.
+- **Equity news sentiment** → yfinance `.news` + local VADER scoring (no LLM, no Finnhub).
+- **Equity price data** → yfinance (no key).
 
 ## Style and scope
 
