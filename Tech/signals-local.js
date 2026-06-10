@@ -1,9 +1,140 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-08 12:59",
+  "updated": "2026-06-10 11:58",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PANW",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +45.24%, 1M +21.93%, P/E 232.6 (elevated but justified by 31% revenue growth and 60% NGS ARR growth); recent Q3 beat and raised guidance driven by AI threat urgency. [cnbc.com](https://www.cnbc.com/2026/06/02/palo-alto-networks-panw-q3-earnings-2026.html)",
+      "drivers": [
+        "+45% YTD",
+        "+22% 1M momentum",
+        "31% revenue growth, raised guidance",
+        "AI cyber threat catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +42.19%, 1M +18.93%, strong news sentiment 0.142; Q1 revenue beat ($1.39B vs $1.36B) and raised full-year guidance amid AI-driven demand inflection and warning on Chinese AI cyberattacks. [cnbc.com](https://www.cnbc.com/2026/06/10/crowdstrike-warns-of-increasing-chinese-ai-cyberattacks-on-us-tech.html)",
+      "drivers": [
+        "+42% YTD",
+        "+18.9% 1M momentum",
+        "Q1 revenue beat, raised guidance",
+        "AI cyber demand catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +86.13%, 1M +12.67%, 1D +1.37% positive momentum; P/E 46.96 reasonable for growth, analyst strong_buy consensus 1.50, with record margins and AI demand visibility.",
+      "drivers": [
+        "+86% YTD",
+        "+12.7% 1M momentum",
+        "P/E 47, strong buy consensus",
+        "AI demand, Singapore expansion"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +53.29%, 1M +13.54%, 1W +4.25%, 1D +1.85% \u2014 very strong recent momentum; P/E 59.5 reasonable for a lithography monopoly, analyst strong_buy, news sentiment positive 0.054.",
+      "drivers": [
+        "+53% YTD",
+        "+13.5% 1M momentum",
+        "P/E 59.5, monopoly position",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +59.14%, 1M +21.92%, P/E 40.12 with a 1.4% dividend yield; strong infrastructure demand and AI networking catalyst, buy consensus with scope for upside.",
+      "drivers": [
+        "+59% YTD",
+        "+21.9% 1M momentum",
+        "P/E 40, 1.4% dividend yield",
+        "AI infrastructure demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +34.27%, 1M +5.78%, P/E 36.8, beta 1.25; semiconductor foundry leader benefitting from AI chip demand, analyst consensus strong_buy 1.47, low short interest 0.58%.",
+      "drivers": [
+        "+34% YTD",
+        "+5.8% 1M momentum",
+        "P/E 36.8, low short interest",
+        "AI chip foundry leader"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SNOW",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +10.59%, 1M +58.19% explosive momentum despite 1W pullback of -8.23%; strong_buy analyst consensus 1.49, news sentiment 0.136 positive, AI data cloud catalyst intact.",
+      "drivers": [
+        "+58% 1M momentum",
+        "Strong buy consensus",
+        "AI data cloud catalyst",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +20.46%, 1M +22.02%, news sentiment positive 0.184; Cloudflare's AI reset and focus on new share class could unlock value; buy consensus 1.97, high beta 1.67.",
+      "drivers": [
+        "+22% 1M momentum",
+        "+20.5% YTD",
+        "Positive news sentiment",
+        "AI focus reset"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +77.70%, 1M +19.88%, P/E 53.85; cybersecurity tailwind from AI threats, though consensus hold (2.72) caps near-term upside. Strong momentum makes it a tactical pick.",
+      "drivers": [
+        "+77.7% YTD",
+        "+19.9% 1M momentum",
+        "AI cybersecurity tailwind"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1M +18.29%, news sentiment 0.334 strong; YTD -13.70% offers turnaround potential; P/E 33.4, buy consensus 1.59, but negative 1Y return (-29%) warrants caution.",
+      "drivers": [
+        "+18.3% 1M momentum",
+        "Strong news sentiment",
+        "Buy consensus",
+        "Turnaround potential"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PANW",
@@ -132,135 +263,6 @@ window.SIGNALS_DATA = {
         "Low P/E (23.2)",
         "Positive news sentiment 0.27",
         "AI PC & automotive expansion"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Record Q4 revenue $1.49B, Arm AGI CPU demand exceeds $2B; +242.93% YTD, P/E 452 but high growth.",
-      "drivers": [
-        "+242.93% YTD",
-        "record revenue and EPS",
-        "Arm AGI CPU catalyst",
-        "50% hyperscaler share"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "+72.31% 1M momentum, strong_buy consensus, positive news sentiment 0.259.",
-      "drivers": [
-        "+72.31% 1M",
-        "strong_buy analyst consensus",
-        "positive news sentiment 0.259"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "+215.90% YTD, strong_buy consensus, P/E 47 reasonable for memory cycle; Broadcom sell-off presents dip.",
-      "drivers": [
-        "+215.90% YTD",
-        "strong_buy consensus",
-        "P/E 47",
-        "memory cycle tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+55.68% YTD, +51.78% 1M, positive sentiment 0.159, AI security catalyst.",
-      "drivers": [
-        "+55.68% YTD",
-        "+51.78% 1M",
-        "positive news sentiment 0.159",
-        "AI security catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+58.54% YTD, +50.90% 1M, buy consensus, but high short interest 11.99%.",
-      "drivers": [
-        "+58.54% YTD",
-        "+50.90% 1M",
-        "buy consensus",
-        "high short interest 11.99%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "+29.73% 1M, strong_buy consensus, positive sentiment 0.249, P/E 71 but growth justifies.",
-      "drivers": [
-        "+29.73% 1M",
-        "strong_buy consensus",
-        "positive news sentiment 0.249"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "+92.18% YTD, +66.45% 1M, hold consensus offsets with strong momentum.",
-      "drivers": [
-        "+92.18% YTD",
-        "+66.45% 1M",
-        "hold analyst consensus but strong momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+71.89% YTD, +37.86% 1M, buy consensus, positive sentiment 0.105, P/E 43 reasonable.",
-      "drivers": [
-        "+71.89% YTD",
-        "+37.86% 1M",
-        "buy consensus",
-        "P/E 43"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "+41.65% YTD, +30.51% 1M, P/E 26 attractive, but hold consensus and negative sentiment -0.034.",
-      "drivers": [
-        "+41.65% YTD",
-        "+30.51% 1M",
-        "P/E 26",
-        "hold consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.45,
-      "rationale": "+134.13% YTD, +47.27% 1M, strong_buy consensus, but P/E 176 and negative sentiment -0.272.",
-      "drivers": [
-        "+134.13% YTD",
-        "+47.27% 1M",
-        "strong_buy consensus",
-        "high P/E 176"
       ]
     }
   ]

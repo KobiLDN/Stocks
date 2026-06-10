@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-08 12:56",
+  "updated": "2026-06-10 11:55",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +196.84%, P/E 44.25, analyst strong_buy, and web catalysts highlight multi-year memory shortage and HBM4 certification for Nvidia (247wallst.com).",
+      "drivers": [
+        "+196.84% YTD",
+        "P/E 44.25",
+        "strong_buy consensus",
+        "multi-year memory shortage catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +109.30%, 1M +15.37%, analyst strong_buy and positive news sentiment 0.206 with web-reported upside potential of ~29%.",
+      "drivers": [
+        "+109.30% YTD",
+        "+15.37% 1M",
+        "strong_buy consensus",
+        "analyst upside target"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CRDO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +63.61%, 1M +11.46%, 1D +5.72% momentum, analyst strong_buy, news sentiment 0.315, and web reports of continued advances.",
+      "drivers": [
+        "+63.61% YTD",
+        "+11.46% 1M",
+        "strong_buy consensus",
+        "positive news sentiment 0.315"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +200.97%, 1M +54.54% momentum, reasonable P/E 30.4, and buy analyst rating despite recent weekly pullback.",
+      "drivers": [
+        "+200.97% YTD",
+        "+54.54% 1M",
+        "P/E 30.4",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +198.92%, 1M +56.22%, strong_buy consensus; web catalysts include Nvidia CEO calling it a potential trillion-dollar company and S&P 500 inclusion.",
+      "drivers": [
+        "+198.92% YTD",
+        "+56.22% 1M",
+        "strong_buy consensus",
+        "Nvidia CEO endorsement"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "285A",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +521.15%, 1M +53.46% huge momentum, P/E 69.86, buy consensus, but elevated valuation and weekly pullback require caution.",
+      "drivers": [
+        "+521.15% YTD",
+        "+53.46% 1M",
+        "buy consensus",
+        "P/E 69.86"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "WULF",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "YTD +98.59%, 1M +8.26%, strong_buy consensus, positive news sentiment 0.349, but lacks earnings and carries high short interest 25.85%.",
+      "drivers": [
+        "+98.59% YTD",
+        "strong_buy consensus",
+        "positive news sentiment 0.349",
+        "high short interest 25.85%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CORZ",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "YTD +68.92%, 1M +17.69%, strong_buy consensus, B. Riley PT raise, but no trailing P/E and short interest 25.59% increase risk.",
+      "drivers": [
+        "+68.92% YTD",
+        "+17.69% 1M",
+        "strong_buy consensus",
+        "B. Riley PT raise"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.45,
+      "rationale": "YTD +119.72%, 1M +10.24%, strong_buy consensus, but negative news sentiment -0.008 and high beta 6.044 indicate elevated risk.",
+      "drivers": [
+        "+119.72% YTD",
+        "+10.24% 1M",
+        "strong_buy consensus",
+        "high beta 6.044"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +498.22%, P/E 56.18, buy consensus; web catalysts cite multi-year memory shortage and analyst target hikes (247wallst.com).",
+      "drivers": [
+        "+498.22% YTD",
+        "P/E 56.18",
+        "buy consensus",
+        "multi-year memory shortage catalyst"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "DELL",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "+20.14% 1M momentum",
         "news sentiment +0.306",
         "P/E 21.92"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "DELL has surged +95.10% in the past month and +232.71% YTD, with a P/E of 33.68 and positive news sentiment of 0.256. The upcoming fiscal Q1 2027 results are a key catalyst, with the market watching for margin expansion beyond the already-priced revenue beat.",
-      "drivers": [
-        "+95.10% 1M momentum",
-        "P/E 33.68",
-        "positive news sentiment 0.256",
-        "earnings catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "MRVL has gained +87.51% in the past month and +254.42% YTD, with a strong_buy analyst consensus (score 1.43) and positive news sentiment of 0.173. The stock has extended its run to ten consecutive weeks of gains, driven by AI optical-networking demand and NVIDIA tailwinds.",
-      "drivers": [
-        "+87.51% 1M momentum",
-        "strong_buy consensus",
-        "AI optical-networking catalyst",
-        "10-week winning streak"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "285A",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "285A has surged +80.00% in the past month and +588.46% YTD, with a P/E of 77.55 and positive news sentiment of 0.131. The stock benefits from the broader memory melt-up driven by AI datacenter demand, though valuation is elevated.",
-      "drivers": [
-        "+80.00% 1M momentum",
-        "+588.46% YTD",
-        "AI memory supercycle",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SMCI",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "SMCI has rallied +68.52% in the past month and +51.49% YTD, with a reasonable P/E of 24.68 and positive news sentiment of 0.222. The stock is recovering as AI server demand remains robust, though analyst consensus is hold (score 2.83).",
-      "drivers": [
-        "+68.52% 1M momentum",
-        "P/E 24.68",
-        "AI server demand",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.73,
-      "rationale": "HUT has surged +58.69% in the past month and +149.19% YTD, with a strong_buy analyst consensus (score 1.31) and positive news sentiment of 0.16. The company is seeking $4.25B project financing for its Beacon Point AI data center, signaling major expansion.",
-      "drivers": [
-        "+58.69% 1M momentum",
-        "strong_buy consensus",
-        "$4.25B financing catalyst",
-        "AI data center expansion"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "MU has gained +55.58% in the past month and +215.90% YTD, with a strong_buy analyst consensus (score 1.48) and a P/E of 46.96. The stock hit $1 trillion market cap after a UBS price target hike to $1,625, driven by HBM supply constraints and sold-out 2026 capacity.",
-      "drivers": [
-        "+55.58% 1M momentum",
-        "strong_buy consensus",
-        "HBM supply constraints",
-        "UBS $1,625 target"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "SMTC has rallied +49.89% in the past month and +125.02% YTD, with a strong_buy analyst consensus (score 1.36) and a beta of 2.324. The stock is benefiting from AI networking demand, though news sentiment is slightly negative at -0.007.",
-      "drivers": [
-        "+49.89% 1M momentum",
-        "strong_buy consensus",
-        "AI networking demand",
-        "high beta 2.324"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MTSI",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "MTSI has gained +26.08% in the past month and +118.76% YTD, with a buy analyst consensus (score 1.6) and positive news sentiment of 0.097. The stock is a key player in DSP semiconductors for AI infrastructure, though its P/E of 164.27 is elevated.",
-      "drivers": [
-        "+26.08% 1M momentum",
-        "+118.76% YTD",
-        "buy consensus",
-        "DSP semi AI play"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CORZ",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "CORZ has surged +25.78% in the past month and +74.55% YTD, with a strong_buy analyst consensus (score 1.31) and a beta of 5.484. The stock benefits from AI compute demand as a 'power landlord', though short interest is high at 22.82% and news sentiment is slightly negative.",
-      "drivers": [
-        "+25.78% 1M momentum",
-        "strong_buy consensus",
-        "AI compute demand",
-        "high beta 5.484"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "COHR",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "COHR has gained +25.67% in the past month and +117.10% YTD, with a beta of 2.054 and positive news sentiment of 0.101. The stock is a leader in fibre optics for AI data centers, though its P/E of 199.95 is very high and analyst consensus is not available.",
-      "drivers": [
-        "+25.67% 1M momentum",
-        "+117.10% YTD",
-        "fibre optics AI play",
-        "high beta 2.054"
       ]
     }
   ]

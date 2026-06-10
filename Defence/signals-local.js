@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-08 12:58",
+  "updated": "2026-06-10 11:57",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SAIC has strong momentum (+23.13% 1M, +13.52% YTD), a low P/E of 12.83, and positive news sentiment of 0.244. It was awarded a leading position on a $192M ABMS contract and reported Q1 FY27 revenue of $1.9B, beating estimates and raising FY27 guidance [web3wire.org](https://web3wire.org/web3/u-s-air-force-awards-saic-leading-position-on-192m-abms-digital-infrastructure-network-developer-contract/).",
+      "drivers": [
+        "+23.13% 1M momentum",
+        "P/E 12.83",
+        "$192M ABMS contract win",
+        "Q1 revenue beat & raised guidance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Mercury Systems shows exceptional momentum (+18.35% 1M, +43.13% YTD, +112% 1Y) with a beta of 0.949 and positive news sentiment of 0.102, though P/E is not available.",
+      "drivers": [
+        "+18.35% 1M momentum",
+        "+43.13% YTD",
+        "beta 0.949",
+        "positive news sentiment 0.102"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Leonardo DRS has strong YTD performance (+36.69%) and 1M momentum (+14.36%), with a low beta of 0.121 and positive news sentiment of 0.168, though P/E is elevated at 44.25.",
+      "drivers": [
+        "+36.69% YTD",
+        "+14.36% 1M",
+        "beta 0.121",
+        "positive news sentiment 0.168"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "QinetiQ has strong 1M momentum (+13.78%) and positive YTD (+6.31%), with a reasonable P/E of 23.62, a dividend yield of 2.33%, and high news sentiment of 0.345.",
+      "drivers": [
+        "+13.78% 1M momentum",
+        "P/E 23.62",
+        "dividend yield 2.33%",
+        "news sentiment 0.345"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "HEICO has strong 1M momentum (+12.65%) and positive news sentiment of 0.147, though P/E is high at 58.19 and YTD is slightly negative (-0.84%).",
+      "drivers": [
+        "+12.65% 1M momentum",
+        "news sentiment 0.147",
+        "beta 1.035",
+        "analyst consensus buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "CACI has strong 1M momentum (+8.80%) and a low P/E of 21.7, with a strong analyst score of 1.56 (buy) and positive news sentiment of 0.132.",
+      "drivers": [
+        "+8.80% 1M momentum",
+        "P/E 21.7",
+        "analyst score 1.56",
+        "news sentiment 0.132"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "AST SpaceMobile has strong 1M momentum (+7.46%) and impressive 1Y return (+152%), though YTD is modest (+6.28%) and short interest is high at 18.39%.",
+      "drivers": [
+        "+7.46% 1M momentum",
+        "+152% 1Y return",
+        "high short interest 18.39%",
+        "beta 2.634"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "AeroVironment has positive 1M momentum (+6.04%) and a strong analyst score of 1.63 (buy), though YTD is weak (-31.10%) and short interest is high at 12.07%.",
+      "drivers": [
+        "+6.04% 1M momentum",
+        "analyst score 1.63",
+        "high short interest 12.07%",
+        "beta 1.361"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Booz Allen Hamilton has positive 1M momentum (+5.32%) and a low P/E of 11.44, with a high dividend yield of 2.99% and positive news sentiment of 0.166.",
+      "drivers": [
+        "+5.32% 1M momentum",
+        "P/E 11.44",
+        "dividend yield 2.99%",
+        "news sentiment 0.166"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "Axon has strong 1M momentum (+14.75%) and a strong analyst score of 1.6 (buy), though YTD is weak (-19.69%) and P/E is very high at 181.73.",
+      "drivers": [
+        "+14.75% 1M momentum",
+        "analyst score 1.6",
+        "high P/E 181.73",
+        "beta 1.422"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "positive news sentiment 0.35",
         "buy consensus",
         "small cap risk"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "RCAT has surged +60.92% YTD and +41.32% in the last month, with a strong_buy analyst consensus (score 1.17) and positive news sentiment of 0.272, reflecting strong momentum in the drone/counter-drone space.",
-      "drivers": [
-        "+60.92% YTD",
-        "+41.32% 1M",
-        "strong_buy consensus",
-        "positive news sentiment 0.272"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "MRCY has rallied +54.97% YTD and +42.02% in the last month, with a buy consensus and positive news sentiment 0.102, driven by demand for its advanced electronic warfare and sensor systems.",
-      "drivers": [
-        "+54.97% YTD",
-        "+42.02% 1M",
-        "buy consensus",
-        "positive news sentiment 0.102"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Rocket Lab is up +57.85% YTD and +52.30% in the last month, with a buy consensus and positive news sentiment 0.017, supported by its Neutron launch vehicle catalyst and Space Force contract momentum.",
-      "drivers": [
-        "+57.85% YTD",
-        "+52.30% 1M",
-        "buy consensus",
-        "Neutron launch catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ASTS has gained +28.54% YTD and +67.98% in the last month, with a hold consensus but strong momentum from its direct-to-device satellite network and recent price swings creating opportunity.",
-      "drivers": [
-        "+28.54% YTD",
-        "+67.98% 1M",
-        "strong momentum",
-        "satellite network catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "AXON is up +34.84% in the last month and +16.82% in the last week, with a buy consensus (score 1.6) and strong momentum in its public safety technology segment, despite a -39% 1-year return.",
-      "drivers": [
-        "+34.84% 1M",
-        "+16.82% 1W",
-        "buy consensus",
-        "public safety tech momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SAIC has surged +16.00% YTD, +21.95% in the last month, and +12.41% in the last week, with a low P/E of 13.11 and positive news sentiment 0.217, reflecting strong fundamentals and contract wins.",
-      "drivers": [
-        "+16.00% YTD",
-        "+21.95% 1M",
-        "P/E 13.11",
-        "positive news sentiment 0.217"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "HEICO is up +20.06% in the last month, with a buy consensus (score 1.83) and the highest news sentiment in the universe at 0.351, driven by its aerospace and defense aftermarket growth.",
-      "drivers": [
-        "+20.06% 1M",
-        "buy consensus",
-        "news sentiment 0.351",
-        "defense aftermarket growth"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Leonardo DRS is up +34.84% YTD and +17.91% in the last month, with a low beta of 0.121 and positive news sentiment 0.168, benefiting from its advanced sensing and power systems for defense.",
-      "drivers": [
-        "+34.84% YTD",
-        "+17.91% 1M",
-        "low beta 0.121",
-        "positive news sentiment 0.168"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "PL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Planet Labs is up +113.28% YTD and +17.24% in the last month, with a buy consensus and positive news sentiment 0.013, driven by its Earth observation data contracts and space-based intelligence demand.",
-      "drivers": [
-        "+113.28% YTD",
-        "+17.24% 1M",
-        "buy consensus",
-        "space intelligence demand"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "AeroVironment is up +22.62% in the last month, with a buy consensus (score 1.63) and positive news sentiment 0.105, supported by its Switchblade loitering munition franchise and Ukraine-driven demand.",
-      "drivers": [
-        "+22.62% 1M",
-        "buy consensus",
-        "positive news sentiment 0.105",
-        "Switchblade munition demand"
       ]
     }
   ]

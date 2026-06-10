@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-08 12:57",
+  "updated": "2026-06-10 11:56",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "LLY has strong momentum (+18.58% 1M, +42% 1Y) and positive news sentiment (0.165). Recent Phase 3 retatrutide data showed 28% weight loss at 12 mg, and Foundayo (orforglipron) is being submitted for diabetes approval, reinforcing its leadership in the $200B obesity market [fool.com](https://www.fool.com/investing/2026/06/08/why-eli-lilly-stock-rose-new-all-time-high-today/).",
+      "drivers": [
+        "+18.58% 1M momentum",
+        "retatrutide Phase 3 success",
+        "Foundayo diabetes submission",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMGN",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "AMGN shows solid momentum (+5.33% 1M, +6.69% YTD) with strong fundamentals (P/E 23.98, beta 0.416). Q1 revenue of $8.6B beat estimates, growth drivers up 24% YoY, and MariTide Phase 3 program advancing, positioning 2026 as a 'springboard year' [marketbeat.com](https://www.marketbeat.com/instant-alerts/amgen-eyes-2026-springboard-as-growth-drugs-offset-patent-pressure-2026-06-09/).",
+      "drivers": [
+        "+5.33% 1M momentum",
+        "Q1 revenue beat $8.6B",
+        "MariTide Phase 3 progress",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "LEGN has exceptional YTD momentum (+55.70%) and strong 1M performance (+30.92%), driven by early in vivo CAR-T success in B-cell lymphoma. Despite a high short interest (17.1%), the analyst consensus is buy with a score of 1.6, and the stock has significant upside potential.",
+      "drivers": [
+        "+55.70% YTD momentum",
+        "+30.92% 1M momentum",
+        "in vivo CAR-T catalyst",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "ILMN has strong 1Y return (+81%) and 1M momentum (+12.29%), with a P/E of 29.04. The recent $175M investment from Samsung Electronics in Element Biosciences highlights sector interest, though ILMN's own fundamentals remain solid with a buy analyst consensus.",
+      "drivers": [
+        "+81% 1Y return",
+        "+12.29% 1M momentum",
+        "Samsung investment catalyst",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "EXEL shows strong momentum (+21.59% YTD, +9.17% 1W) with attractive valuation (P/E 17.55, beta 0.435). News sentiment is positive (0.151), and the analyst consensus is buy. The stock has been resilient and continues to gain.",
+      "drivers": [
+        "+21.59% YTD momentum",
+        "+9.17% 1W momentum",
+        "low P/E 17.55",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "rationale": "NTRA has strong 1M momentum (+11.89%) and a strong_buy analyst consensus (score 1.5). The recent partnership with CytoDyn for ctDNA-guided development in mCRC adds a catalyst, and the stock has low short interest (2.6%).",
+      "drivers": [
+        "+11.89% 1M momentum",
+        "strong_buy analyst consensus",
+        "CytoDyn partnership",
+        "low short interest 2.6%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "BMRN has strong recent momentum (+10.14% 1M, +8.61% 1W) and positive news sentiment (0.209). The analyst consensus is buy with a score of 1.69, and the stock is considered undervalued by some analysts. P/E of 41.66 reflects rare-disease premium.",
+      "drivers": [
+        "+10.14% 1M momentum",
+        "+8.61% 1W momentum",
+        "analyst buy consensus",
+        "positive news sentiment 0.209"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "GSK",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "GSK has solid momentum (+3.95% YTD, +4.56% 1W) and a low P/E of 13.4. The $10.6B acquisition of Nuvalent adds a targeted oncology pipeline with near-FDA decision catalysts for zidesamtinib and neladalkib in lung cancer [pharmadevicenews.com](https://pharmadevicenews.com/why-gsk-is-paying-10-6bn-for-nuvalent-as-targeted-lung-cancer-drugs-near-fda-decisions/).",
+      "drivers": [
+        "low P/E 13.4",
+        "Nuvalent acquisition catalyst",
+        "+4.56% 1W momentum",
+        "FDA decisions expected 2026"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ALNY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ALNY has positive 1M momentum (+4.51%) and a buy analyst consensus (score 1.77). The company unveiled 2030 targets betting on AMVUTTRA and pipeline readouts, with positive news sentiment (0.221). P/E of 74.61 is high but reflects growth expectations.",
+      "drivers": [
+        "+4.51% 1M momentum",
+        "2030 targets catalyst",
+        "analyst buy consensus",
+        "positive news sentiment 0.221"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "COAG has a strong_buy analyst consensus (score 1.0) and strong 1D momentum (+7.78%) with 1M momentum (+8.00%). The company is advancing sutacimig Phase III plans, providing a near-term catalyst despite negative YTD performance.",
+      "drivers": [
+        "strong_buy analyst consensus",
+        "+7.78% 1D momentum",
+        "+8.00% 1M momentum",
+        "sutacimig Phase III catalyst"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LEGN",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "analyst buy",
         "positive sentiment",
         "1M +3.97%"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Lilly posted a massive +56% revenue growth in Q1 2026, raised FY guidance to $82-85B, and launched Foundayo \u2014 the only approved GLP-1 pill without food/water restrictions \u2014 adding a potent near-term catalyst. +14% 1M, P/E 40, analyst consensus 'buy', fundamentals supported by broad pipeline progress.",
-      "drivers": [
-        "+56% Q1 revenue growth",
-        "Foundayo FDA approval",
-        "FY guidance raised by $2B",
-        "14% 1-month momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Moderna has surged +67% YTD and +10.5% in the past month, driven by pipeline and respiratory vaccine momentum. Despite hold-rated analyst consensus (score 2.96), the momentum and news sentiment (0.19) are strong, and the stock is not overextended on beta (1.06).",
-      "drivers": [
-        "+67% YTD return",
-        "+10.5% 1-month gain",
-        "Resurgent vaccine pipeline",
-        "Low beta (1.06) for momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NTLA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Intellia rocketed +15.2% on the day and +60% YTD ahead of its Phase 3 lonvo-Z study update, with positive news sentiment of 0.32 and a strong 'buy' consensus. High short interest (46.8%) adds squeeze potential, but the binary catalyst risk is significant.",
-      "drivers": [
-        "+60% YTD + Phase 3 catalyst",
-        "+15.2% one-day surge",
-        "Positive news sentiment (0.32)",
-        "High short interest (46.8%)"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "LEGN",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Legend Biotech jumped +21% in the past week and +59% YTD following early in vivo CAR-T success in B-cell lymphoma. 'Buy' analyst consensus with a score of 1.60; the strong clinical catalyst supports continued momentum despite the -3.2% daily pullback.",
-      "drivers": [
-        "+21% weekly gain",
-        "+59% YTD",
-        "In vivo CAR-T catalyst",
-        "Strong buy consensus score (1.60)"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Illumina has rallied +108% over the past year and +25% YTD, with a +21% one-month gain reflecting robust sequencing demand. P/E of 30.6 reflects premium growth expectations; analyst consensus 'buy' at 2.37. Strong fundamentals in the genomics leader.",
-      "drivers": [
-        "+108% 1-year return",
-        "+21% monthly momentum",
-        "P/E 30.6 growth justified",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "Beam Therapeutics soars +74% over 1 year and +21% YTD, with a strong_buy analyst score of 1.29 (best among gene-editing peers). +13.6% in the past month, positive news sentiment (0.26), and base editing platform optionality support a highly attractive risk/reward.",
-      "drivers": [
-        "+74% 1-year return",
-        "Strong_buy consensus (1.29)",
-        "+13.6% monthly momentum",
-        "Base editing platform"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.58,
-      "rationale": "Novavax is up +43% YTD and +26% in the past month, driven by a revived vaccine franchise and new COVID/flu combination prospects. High short interest (27.7%) and no P/E reflect binary risk, but momentum and recent news point to operational improvement.",
-      "drivers": [
-        "+43% YTD",
-        "+26% monthly rally",
-        "High short interest (27.7%)",
-        "Vaccine pipeline momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.64,
-      "rationale": "Exelixis is up +20.5% YTD and +18.2% in the past month, underpinned by solid oncology pipeline execution. Attractive P/E of 17.4 with low beta (0.39) provides a defensive growth profile; analyst 'buy' consensus at 2.10 suggests continued upside.",
-      "drivers": [
-        "+20% YTD",
-        "+18% monthly growth",
-        "Low P/E (17.4) + low beta",
-        "Oncology franchise strength"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Recursion climbed +12.8% in the past month and +11.4% in a single day ahead of business updates, with positive news sentiment of 0.15. The AI-driven drug discovery platform has high optionality; lack of analyst consensus is a risk, but momentum is strong.",
-      "drivers": [
-        "+12.8% monthly momentum",
-        "+11.4% one-day surge",
-        "AI platform catalyst",
-        "Positive news sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Regeneron delivered a positive Q1 beat ($9.47 EPS vs $8.52 est) with 19% revenue growth, Dupixent sales up 33%, and positive Phase 3 cemdisiran data in gMG. Trading at 15.4x P/E with 'buy' consensus (1.72); tariff deal removal and Eylea HD momentum de-risk valuation.",
-      "drivers": [
-        "Q1 earnings beat +19% rev growth",
-        "Cemdisiran Phase 3 win",
-        "Low P/E (15.4)",
-        "Tariff overhang removed"
       ]
     }
   ]
