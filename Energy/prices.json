@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-11 00:05",
-  "fx_gbp_usd": 1.3353,
+  "updated": "2026-06-11 08:41",
+  "fx_gbp_usd": 1.3385,
   "stocks": [
     {
       "ticker": "XOM",
@@ -13,15 +13,15 @@
       "change_1w": "-1.25%",
       "change_1m": "+1.31%",
       "change_ytd": "+24.46%",
-      "return_1yr": "+39%",
+      "return_1yr": "+36%",
       "low_gbp": "79",
       "high_gbp": "132",
       "bar_pct": 64,
-      "market_cap_gbp_b": 467.547,
+      "market_cap_gbp_b": 466.436,
       "beta": 0.149,
-      "pe_ratio": 25.36,
-      "avg_volume_m": 20.06,
-      "div_yield_pct": 277.0,
+      "pe_ratio": 25.4,
+      "avg_volume_m": 20.11,
+      "div_yield_pct": 274.0,
       "short_pct": 1.14,
       "analyst": "buy",
       "analyst_score": 2.36,
@@ -44,6 +44,13 @@
           "sentiment": 0.0
         },
         {
+          "title": "Stocks Settle Sharply Lower on Escalating Middle East Tensions",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2408795/stocks-settle-sharply-lower-on-escalating-middle-east-tensions",
+          "published": 1781123897,
+          "sentiment": -0.599
+        },
+        {
           "title": "ExxonMobil and Chevron Reported a Combined $7.6 Billion Profit in Guyana Last Year. What Energy Investors Need to Know.",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/06/10/exxonmobil-and-chevron-reported-a-combined-usd7-6-billion-profit-in-guyana-last-year-what-energy-investors-need-to-know/",
@@ -56,16 +63,9 @@
           "url": "https://www.barchart.com/story/news/2403295/stocks-resume-decline-as-chipmakers-and-ai-companies-fall",
           "published": 1781104905,
           "sentiment": 0.0
-        },
-        {
-          "title": "Likely Sector ETF & Stock Winners From May Jobs Report",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/likely-sector-etf-stock-winners-140000180.html",
-          "published": 1781100000,
-          "sentiment": 0.477
         }
       ],
-      "news_sentiment": 0.218
+      "news_sentiment": 0.003
     },
     {
       "ticker": "CVX",
@@ -78,15 +78,15 @@
       "change_1w": "+0.05%",
       "change_1m": "+3.68%",
       "change_ytd": "+24.06%",
-      "return_1yr": "+31%",
-      "low_gbp": "107",
-      "high_gbp": "161",
+      "return_1yr": "+29%",
+      "low_gbp": "106",
+      "high_gbp": "160",
       "bar_pct": 66,
-      "market_cap_gbp_b": 283.088,
+      "market_cap_gbp_b": 282.415,
       "beta": 0.472,
       "pe_ratio": 33.12,
-      "avg_volume_m": 11.65,
-      "div_yield_pct": 381.0,
+      "avg_volume_m": 11.6,
+      "div_yield_pct": 375.0,
       "short_pct": 1.16,
       "analyst": "buy",
       "analyst_score": 1.84,
@@ -94,6 +94,13 @@
       "vol_1w": 33361022,
       "vol_1m": 201604022,
       "news": [
+        {
+          "title": "Stocks Settle Sharply Lower on Escalating Middle East Tensions",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2408795/stocks-settle-sharply-lower-on-escalating-middle-east-tensions",
+          "published": 1781123897,
+          "sentiment": -0.599
+        },
         {
           "title": "ExxonMobil and Chevron Reported a Combined $7.6 Billion Profit in Guyana Last Year. What Energy Investors Need to Know.",
           "publisher": "Motley Fool",
@@ -121,16 +128,9 @@
           "url": "https://www.barchart.com/story/news/2403295/stocks-resume-decline-as-chipmakers-and-ai-companies-fall",
           "published": 1781104905,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Fall on Weakness in Tech and Trucking Companies",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2401843/stocks-fall-on-weakness-in-tech-and-trucking-companies",
-          "published": 1781100544,
-          "sentiment": -0.421
         }
       ],
-      "news_sentiment": 0.083
+      "news_sentiment": 0.048
     },
     {
       "ticker": "SHEL",
@@ -147,17 +147,17 @@
       "low_gbp": "50",
       "high_gbp": "71",
       "bar_pct": 68,
-      "market_cap_gbp_b": 178.838,
+      "market_cap_gbp_b": 178.373,
       "beta": -0.248,
       "pe_ratio": 13.4,
       "avg_volume_m": 7.92,
-      "div_yield_pct": 366.0,
+      "div_yield_pct": 363.0,
       "short_pct": 1.89,
       "analyst": "buy",
       "analyst_score": 2.06,
-      "vol_1d": 4957479,
-      "vol_1w": 30518100,
-      "vol_1m": 152185843,
+      "vol_1d": 5379409,
+      "vol_1w": 30940862,
+      "vol_1m": 152608605,
       "news": [
         {
           "title": "Shell CEO Sees Oil Prices Moving Higher",
@@ -208,15 +208,15 @@
       "change_1w": "-1.67%",
       "change_1m": "-1.76%",
       "change_ytd": "+22.81%",
-      "return_1yr": "+42%",
+      "return_1yr": "+38%",
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 72,
-      "market_cap_gbp_b": 82.828,
+      "market_cap_gbp_b": 82.631,
       "beta": -0.239,
       "pe_ratio": 34.64,
-      "avg_volume_m": 13.2,
-      "div_yield_pct": 468.0,
+      "avg_volume_m": 13.07,
+      "div_yield_pct": 465.0,
       "short_pct": 0.4,
       "analyst": "buy",
       "analyst_score": 2.5,
@@ -273,14 +273,14 @@
       "change_1w": "-1.31%",
       "change_1m": "-2.51%",
       "change_ytd": "+34.36%",
-      "return_1yr": "+43%",
+      "return_1yr": "+40%",
       "low_gbp": "43",
-      "high_gbp": "71",
+      "high_gbp": "70",
       "bar_pct": 84,
-      "market_cap_gbp_b": 147.066,
+      "market_cap_gbp_b": 146.716,
       "beta": 0.045,
       "pe_ratio": 13.12,
-      "avg_volume_m": 1.82,
+      "avg_volume_m": 1.81,
       "div_yield_pct": 477.0,
       "short_pct": 0.2,
       "analyst": "none",
@@ -289,6 +289,13 @@
       "vol_1w": 5948037,
       "vol_1m": 25184237,
       "news": [
+        {
+          "title": "Algeria\u2019s Gas Advantage Is Real. So Are Its Production Problems.",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/algeria-gas-advantage-real-production-230000627.html",
+          "published": 1781132400,
+          "sentiment": -0.178
+        },
         {
           "title": "SOCAR, TotalEnergies and ADNOC lock in Caspian gas supply deal",
           "publisher": "Euronews",
@@ -316,16 +323,9 @@
           "url": "https://finance.yahoo.com/sectors/energy/articles/main-oman-oil-terminal-delays-034627875.html",
           "published": 1780646161,
           "sentiment": 0.0
-        },
-        {
-          "title": "TotalEnergies SE (TTE) Files for Authorization to Build 1.5 GW Offshore Wind Farm in France",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/totalenergies-se-tte-files-authorization-181203814.html",
-          "published": 1780596723,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.055
+      "news_sentiment": 0.019
     },
     {
       "ticker": "EQNR",
@@ -338,15 +338,15 @@
       "change_1w": "-1.21%",
       "change_1m": "-0.91%",
       "change_ytd": "+56.33%",
-      "return_1yr": "+45%",
+      "return_1yr": "+39%",
       "low_gbp": "17",
-      "high_gbp": "33",
+      "high_gbp": "32",
       "bar_pct": 72,
-      "market_cap_gbp_b": 69.929,
+      "market_cap_gbp_b": 69.763,
       "beta": -0.752,
-      "pe_ratio": 16.96,
-      "avg_volume_m": 6.25,
-      "div_yield_pct": 415.0,
+      "pe_ratio": 16.59,
+      "avg_volume_m": 6.21,
+      "div_yield_pct": 405.0,
       "short_pct": 2.85,
       "analyst": "hold",
       "analyst_score": 3.33,
@@ -354,6 +354,13 @@
       "vol_1w": 14729434,
       "vol_1m": 75747834,
       "news": [
+        {
+          "title": "Petrobras Buys 50% Stake in Campos Basin Exploration Block",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/petrobras-buys-50-stake-campos-030321004.html",
+          "published": 1781147001,
+          "sentiment": -0.25
+        },
         {
           "title": "Sector Update: Energy Stocks Rise Late Afternoon",
           "publisher": "MT Newswires",
@@ -381,16 +388,9 @@
           "url": "https://finance.yahoo.com/markets/world-indices/articles/european-equities-traded-us-american-151139092.html",
           "published": 1781017899,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Lean Lower Premarket Tuesday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-lean-lower-132737518.html",
-          "published": 1781011657,
-          "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.159
+      "news_sentiment": 0.114
     },
     {
       "ticker": "COP",
@@ -403,15 +403,15 @@
       "change_1w": "+0.73%",
       "change_1m": "+3.78%",
       "change_ytd": "+25.91%",
-      "return_1yr": "+27%",
+      "return_1yr": "+23%",
       "low_gbp": "64",
       "high_gbp": "102",
       "bar_pct": 68,
-      "market_cap_gbp_b": 109.413,
+      "market_cap_gbp_b": 109.153,
       "beta": 0.106,
       "pe_ratio": 20.33,
-      "avg_volume_m": 8.71,
-      "div_yield_pct": 288.0,
+      "avg_volume_m": 8.66,
+      "div_yield_pct": 280.0,
       "short_pct": 1.83,
       "analyst": "buy",
       "analyst_score": 1.85,
@@ -419,6 +419,20 @@
       "vol_1w": 30543597,
       "vol_1m": 142227297,
       "news": [
+        {
+          "title": "ConocoPhillips (COP) A Deep Value Stock To Buy Following Long-Term LNG Deal",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/conocophillips-cop-deep-value-stock-010015882.html",
+          "published": 1781139615,
+          "sentiment": 0.34
+        },
+        {
+          "title": "Stocks Settle Sharply Lower on Escalating Middle East Tensions",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2408795/stocks-settle-sharply-lower-on-escalating-middle-east-tensions",
+          "published": 1781123897,
+          "sentiment": -0.599
+        },
         {
           "title": "Stocks Resume Decline as Chipmakers and AI Companies Fall",
           "publisher": "Barchart",
@@ -439,23 +453,9 @@
           "url": "https://www.barchart.com/story/news/2401843/stocks-fall-on-weakness-in-tech-and-trucking-companies",
           "published": 1781100544,
           "sentiment": -0.421
-        },
-        {
-          "title": "Zacks Industry Outlook Highlights ConocoPhillips, Occidental and National Fuel Gas Company",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/zacks-industry-outlook-highlights-conocophillips-130600712.html",
-          "published": 1781096760,
-          "sentiment": 0.0
-        },
-        {
-          "title": "2 of Wall Street\u2019s Favorite Stocks with Exciting Potential and 1 We Question",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/2-wall-street-favorite-stocks-101728108.html",
-          "published": 1781086648,
-          "sentiment": 0.735
         }
       ],
-      "news_sentiment": 0.117
+      "news_sentiment": -0.081
     },
     {
       "ticker": "OXY",
@@ -468,15 +468,15 @@
       "change_1w": "-4.26%",
       "change_1m": "+3.55%",
       "change_ytd": "+35.37%",
-      "return_1yr": "+28%",
+      "return_1yr": "+26%",
       "low_gbp": "29",
-      "high_gbp": "51",
+      "high_gbp": "50",
       "bar_pct": 64,
-      "market_cap_gbp_b": 42.533,
+      "market_cap_gbp_b": 42.432,
       "beta": 0.124,
       "pe_ratio": 77.16,
-      "avg_volume_m": 15.06,
-      "div_yield_pct": 184.0,
+      "avg_volume_m": 14.9,
+      "div_yield_pct": 182.0,
       "short_pct": 0.02,
       "analyst": "hold",
       "analyst_score": 2.56,
@@ -533,15 +533,15 @@
       "change_1w": "-0.86%",
       "change_1m": "+5.23%",
       "change_ytd": "+33.04%",
-      "return_1yr": "+17%",
+      "return_1yr": "+14%",
       "low_gbp": "76",
-      "high_gbp": "114",
+      "high_gbp": "113",
       "bar_pct": 77,
-      "market_cap_gbp_b": 55.956,
+      "market_cap_gbp_b": 55.823,
       "beta": 0.256,
-      "pe_ratio": 13.78,
-      "avg_volume_m": 4.13,
-      "div_yield_pct": 297.0,
+      "pe_ratio": 13.79,
+      "avg_volume_m": 4.1,
+      "div_yield_pct": 291.0,
       "short_pct": 4.11,
       "analyst": "buy",
       "analyst_score": 2.19,
@@ -598,15 +598,15 @@
       "change_1w": "-1.47%",
       "change_1m": "+4.68%",
       "change_ytd": "+60.84%",
-      "return_1yr": "+62%",
+      "return_1yr": "+56%",
       "low_gbp": "118",
       "high_gbp": "204",
       "bar_pct": 92,
-      "market_cap_gbp_b": 57.561,
+      "market_cap_gbp_b": 57.424,
       "beta": 0.522,
-      "pe_ratio": 17.34,
-      "avg_volume_m": 2.47,
-      "div_yield_pct": 151.0,
+      "pe_ratio": 17.33,
+      "avg_volume_m": 2.49,
+      "div_yield_pct": 149.0,
       "short_pct": 2.5,
       "analyst": "buy",
       "analyst_score": 2.32,
@@ -620,6 +620,13 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-advances-while-214503233.html",
           "published": 1781127903,
           "sentiment": 0.0
+        },
+        {
+          "title": "Stocks Settle Sharply Lower on Escalating Middle East Tensions",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2408795/stocks-settle-sharply-lower-on-escalating-middle-east-tensions",
+          "published": 1781123897,
+          "sentiment": -0.599
         },
         {
           "title": "Micron & 2 Momentum Stocks to Buy Now for Explosive Upside",
@@ -641,16 +648,9 @@
           "url": "https://finance.yahoo.com/sectors/energy/articles/2-refining-stocks-35-upside-152900908.html",
           "published": 1781105340,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Resume Decline as Chipmakers and AI Companies Fall",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2403295/stocks-resume-decline-as-chipmakers-and-ai-companies-fall",
-          "published": 1781104905,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.108
+      "news_sentiment": -0.228
     },
     {
       "ticker": "VLO",
@@ -663,15 +663,15 @@
       "change_1w": "-1.32%",
       "change_1m": "+4.47%",
       "change_ytd": "+57.76%",
-      "return_1yr": "+93%",
+      "return_1yr": "+90%",
       "low_gbp": "98",
-      "high_gbp": "199",
+      "high_gbp": "198",
       "bar_pct": 94,
-      "market_cap_gbp_b": 57.37,
+      "market_cap_gbp_b": 57.234,
       "beta": 0.553,
-      "pe_ratio": 18.86,
-      "avg_volume_m": 3.5,
-      "div_yield_pct": 189.0,
+      "pe_ratio": 18.83,
+      "avg_volume_m": 3.48,
+      "div_yield_pct": 186.0,
       "short_pct": 3.6,
       "analyst": "buy",
       "analyst_score": 2.4,
@@ -679,6 +679,13 @@
       "vol_1w": 12588363,
       "vol_1m": 61866563,
       "news": [
+        {
+          "title": "Stocks Settle Sharply Lower on Escalating Middle East Tensions",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2408795/stocks-settle-sharply-lower-on-escalating-middle-east-tensions",
+          "published": 1781123897,
+          "sentiment": -0.599
+        },
         {
           "title": "2 Refining Stocks With 35%+ Upside in 6 Months Despite High Oil Prices",
           "publisher": "Zacks",
@@ -706,37 +713,30 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-stock-near-52-133800090.html",
           "published": 1781098680,
           "sentiment": 0.0
-        },
-        {
-          "title": "Best Growth Stocks to Buy for June 10th",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-074700156.html",
-          "published": 1781077620,
-          "sentiment": 0.778
         }
       ],
-      "news_sentiment": 0.071
+      "news_sentiment": -0.204
     },
     {
       "ticker": "SLB",
       "company_name": "SLB (Schlumberger)",
       "category": "oilfield-services",
       "exchange": "NYSE",
-      "price_gbp": "42",
+      "price_gbp": "41",
       "price_usd": 55.51,
       "change_1d": "-0.48%",
       "change_1w": "-2.36%",
       "change_1m": "+1.59%",
       "change_ytd": "+39.63%",
-      "return_1yr": "+58%",
+      "return_1yr": "+57%",
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 88,
-      "market_cap_gbp_b": 62.152,
+      "market_cap_gbp_b": 62.004,
       "beta": 0.708,
       "pe_ratio": 24.45,
-      "avg_volume_m": 15.91,
-      "div_yield_pct": 211.0,
+      "avg_volume_m": 15.82,
+      "div_yield_pct": 213.0,
       "short_pct": 4.24,
       "analyst": "buy",
       "analyst_score": 1.62,
@@ -744,6 +744,13 @@
       "vol_1w": 57685179,
       "vol_1m": 280422679,
       "news": [
+        {
+          "title": "SLB Qualcomm Edge AI Pact Adds New Angle To Valuation Story",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/slb-qualcomm-edge-ai-pact-011450043.html",
+          "published": 1781140490,
+          "sentiment": 0.0
+        },
         {
           "title": "SLB & Qualcomm Team Up to Advance Edge AI in the Energy Sector",
           "publisher": "Zacks",
@@ -771,16 +778,9 @@
           "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-decline-afternoon-192612214.html",
           "published": 1781033172,
           "sentiment": 0.273
-        },
-        {
-          "title": "SLB OneSubsea Wins Contract for BP's Thunder Horse Deepwater Project",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/slb-onesubsea-wins-contract-bps-121300708.html",
-          "published": 1781007180,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.164
+      "news_sentiment": 0.05
     },
     {
       "ticker": "HAL",
@@ -793,15 +793,15 @@
       "change_1w": "-3.17%",
       "change_1m": "-0.90%",
       "change_ytd": "+35.45%",
-      "return_1yr": "+83%",
+      "return_1yr": "+80%",
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 84,
-      "market_cap_gbp_b": 24.856,
+      "market_cap_gbp_b": 24.797,
       "beta": 0.704,
       "pe_ratio": 21.95,
-      "avg_volume_m": 14.04,
-      "div_yield_pct": 172.0,
+      "avg_volume_m": 13.98,
+      "div_yield_pct": 171.0,
       "short_pct": 5.22,
       "analyst": "buy",
       "analyst_score": 1.85,
@@ -858,15 +858,15 @@
       "change_1w": "-1.94%",
       "change_1m": "-2.45%",
       "change_ytd": "+34.64%",
-      "return_1yr": "+66%",
+      "return_1yr": "+65%",
       "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 78,
-      "market_cap_gbp_b": 46.821,
+      "market_cap_gbp_b": 46.71,
       "beta": 0.938,
       "pe_ratio": 20.13,
-      "avg_volume_m": 8.87,
-      "div_yield_pct": 145.0,
+      "avg_volume_m": 8.8,
+      "div_yield_pct": 146.0,
       "short_pct": 2.91,
       "analyst": "buy",
       "analyst_score": 1.77,
@@ -927,11 +927,11 @@
       "low_gbp": "50",
       "high_gbp": "74",
       "bar_pct": 57,
-      "market_cap_gbp_b": 132.95,
+      "market_cap_gbp_b": 132.634,
       "beta": 0.671,
       "pe_ratio": 21.6,
-      "avg_volume_m": 10.42,
-      "div_yield_pct": 294.0,
+      "avg_volume_m": 10.46,
+      "div_yield_pct": 293.0,
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 2.0,
@@ -939,6 +939,20 @@
       "vol_1w": 50802866,
       "vol_1m": 292022066,
       "news": [
+        {
+          "title": "Is NextEra Energy (NEE) Priced Right After Mixed Signals From Dividends And Earnings Multiples",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/nextera-energy-nee-priced-mixed-061406222.html",
+          "published": 1781158446,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Escalating Iran War Tensions and Rising Fuel Costs Just Sent These 2 Stocks to New Lows. 1 Is a Better Buy on the Dip.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2406975/escalating-iran-war-tensions-and-rising-fuel-costs-just-sent-these-2-stocks-to-new-lows-1-is-a-better-buy-on-the-dip",
+          "published": 1781117297,
+          "sentiment": -0.67
+        },
         {
           "title": "NextEra Energy, Inc. (NEE) Is a Trending Stock: Facts to Know Before Betting on It",
           "publisher": "Zacks",
@@ -959,23 +973,9 @@
           "url": "https://www.trefis.com/articles/602048/is-constellation-energy-an-undervalued-stock-or-a-value-trap/2026-06-09",
           "published": 1781049782,
           "sentiment": 0.296
-        },
-        {
-          "title": "NextEra Dominion Deal Reshapes Regulated Utilities And Clean Energy Scale",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/nextera-dominion-deal-reshapes-regulated-171043411.html",
-          "published": 1781025043,
-          "sentiment": 0.586
-        },
-        {
-          "title": "NextEra Energy (NEE) Stock Sinks As Market Gains: What You Should Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nextera-energy-nee-stock-sinks-214503018.html",
-          "published": 1780955103,
-          "sentiment": 0.542
         }
       ],
-      "news_sentiment": 0.427
+      "news_sentiment": 0.122
     },
     {
       "ticker": "SSE.L",
@@ -983,26 +983,26 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2360.0,
+      "price_usd": 2367.0,
       "change_1d": "+0.08%",
-      "change_1w": "+1.03%",
-      "change_1m": "-5.71%",
-      "change_ytd": "+5.78%",
-      "return_1yr": "+31%",
+      "change_1w": "-0.88%",
+      "change_1m": "-5.43%",
+      "change_ytd": "+6.10%",
+      "return_1yr": "+30%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 65,
+      "bar_pct": 66,
       "market_cap_gbp_b": 0.285,
       "beta": 0.596,
-      "pe_ratio": 22.48,
-      "avg_volume_m": 4.2,
+      "pe_ratio": 22.54,
+      "avg_volume_m": 4.21,
       "div_yield_pct": 291.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2422391,
-      "vol_1w": 19283985,
-      "vol_1m": 107901322,
+      "vol_1d": 68997,
+      "vol_1w": 11469824,
+      "vol_1m": 107970473,
       "news": [
         {
           "title": "Bears are Losing Control Over SSE (SSEZY), Here's Why It's a 'Buy' Now",
@@ -1053,14 +1053,14 @@
       "change_1w": "-26.73%",
       "change_1m": "+34.32%",
       "change_ytd": "+49.84%",
-      "return_1yr": "+26%",
+      "return_1yr": "+20%",
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 52,
-      "market_cap_gbp_b": 4.991,
+      "market_cap_gbp_b": 4.98,
       "beta": 1.572,
       "pe_ratio": 50.07,
-      "avg_volume_m": 7.4,
+      "avg_volume_m": 7.56,
       "div_yield_pct": null,
       "short_pct": 24.43,
       "analyst": "hold",
@@ -1112,20 +1112,20 @@
       "company_name": "First Solar",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "187",
+      "price_gbp": "186",
       "price_usd": 249.27,
       "change_1d": "-4.59%",
       "change_1w": "-21.67%",
       "change_1m": "+6.86%",
       "change_ytd": "-9.14%",
-      "return_1yr": "+64%",
+      "return_1yr": "+56%",
       "low_gbp": "101",
       "high_gbp": "240",
       "bar_pct": 61,
-      "market_cap_gbp_b": 20.059,
+      "market_cap_gbp_b": 20.012,
       "beta": 1.692,
-      "pe_ratio": 16.11,
-      "avg_volume_m": 2.4,
+      "pe_ratio": 16.1,
+      "avg_volume_m": 2.42,
       "div_yield_pct": null,
       "short_pct": 10.39,
       "analyst": "buy",
@@ -1187,11 +1187,11 @@
       "low_gbp": "23",
       "high_gbp": "34",
       "bar_pct": 45,
-      "market_cap_gbp_b": 5.121,
+      "market_cap_gbp_b": 5.108,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.56,
-      "div_yield_pct": 403.0,
+      "div_yield_pct": 418.0,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.83,
@@ -1242,17 +1242,17 @@
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.95",
-      "price_usd": 7.94,
-      "change_1d": "-2.93%",
-      "change_1w": "-7.13%",
-      "change_1m": "-9.15%",
-      "change_ytd": "+19.13%",
+      "price_gbp": "6.11",
+      "price_usd": 8.18,
+      "change_1d": "-0.00%",
+      "change_1w": "-4.64%",
+      "change_1m": "-6.41%",
+      "change_ytd": "+22.73%",
       "return_1yr": "-43%",
-      "low_gbp": "4.31",
+      "low_gbp": "4.30",
       "high_gbp": "25",
-      "bar_pct": 8,
-      "market_cap_gbp_b": 23.566,
+      "bar_pct": 9,
+      "market_cap_gbp_b": 24.221,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,
@@ -1260,9 +1260,9 @@
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 47360,
-      "vol_1w": 499060,
-      "vol_1m": 2287660,
+      "vol_1d": 128100,
+      "vol_1w": 504700,
+      "vol_1m": 2240300,
       "news": [
         {
           "title": "Energy & Utilities Roundup: Market Talk",
