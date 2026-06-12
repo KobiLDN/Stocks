@@ -1,15 +1,15 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-12 08:41",
-  "fx_gbp_usd": 1.3386,
+  "updated": "2026-06-12 13:25",
+  "fx_gbp_usd": 1.3396,
   "stocks": [
     {
       "ticker": "XOM",
       "company_name": "ExxonMobil",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "110",
+      "price_gbp": "109",
       "price_usd": 146.6,
-      "change_1d": "-3.65%",
+      "change_1d": "-0.05%",
       "change_1w": "-3.58%",
       "change_1m": "-2.01%",
       "change_ytd": "+21.14%",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "79",
       "high_gbp": "132",
       "bar_pct": 58,
-      "market_cap_gbp_b": 453.944,
+      "market_cap_gbp_b": 453.61,
       "beta": 0.149,
       "pe_ratio": 24.68,
       "avg_volume_m": 19.88,
@@ -74,7 +74,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "139",
       "price_usd": 185.82,
-      "change_1d": "-3.00%",
+      "change_1d": "+0.03%",
       "change_1w": "-1.34%",
       "change_1m": "+0.85%",
       "change_ytd": "+21.46%",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "106",
       "high_gbp": "160",
       "bar_pct": 60,
-      "market_cap_gbp_b": 276.467,
+      "market_cap_gbp_b": 276.264,
       "beta": 0.472,
       "pe_ratio": 32.37,
       "avg_volume_m": 11.29,
@@ -94,6 +94,13 @@ window.PRICES_DATA = {
       "vol_1w": 40192100,
       "vol_1m": 201556200,
       "news": [
+        {
+          "title": "3 Market-Beating Stocks with Exciting Potential",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-market-beating-stocks-exciting-082256059.html",
+          "published": 1781252576,
+          "sentiment": 0.494
+        },
         {
           "title": "Here is Why Chevron (CVX) is among the 10 High Yield Crude Oil Stocks to Buy Now",
           "publisher": "Insider Monkey",
@@ -121,16 +128,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/investment-tco-powering-chevrons-next-142700211.html",
           "published": 1781188020,
           "sentiment": 0.382
-        },
-        {
-          "title": "How XOM Navigates Business Uncertainty Better Than Many Peers",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/xom-navigates-business-uncertainty-better-133900566.html",
-          "published": 1781185140,
-          "sentiment": 0.128
         }
       ],
-      "news_sentiment": 0.136
+      "news_sentiment": 0.209
     },
     {
       "ticker": "SHEL",
@@ -139,7 +139,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "64",
       "price_usd": 85.85,
-      "change_1d": "-0.81%",
+      "change_1d": "-0.00%",
       "change_1w": "-1.01%",
       "change_1m": "+1.50%",
       "change_ytd": "+15.90%",
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "71",
       "bar_pct": 67,
-      "market_cap_gbp_b": 177.881,
+      "market_cap_gbp_b": 177.75,
       "beta": -0.248,
       "pe_ratio": 13.37,
       "avg_volume_m": 7.92,
@@ -160,7 +160,14 @@ window.PRICES_DATA = {
       "vol_1m": 151141907,
       "news": [
         {
-          "title": "FTSE 100 Live: Stocks bounce at the open on peace deal hopes; oil retreats below $90",
+          "title": "Shell Moves Early Into Venezuela's Comeback",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/shell-moves-early-venezuelas-comeback-121220041.html",
+          "published": 1781266340,
+          "sentiment": 0.0
+        },
+        {
+          "title": "FTSE 100 Live: Stocks jump over 100 points on peace deal hopes, sending oil below $87",
           "publisher": "Proactive",
           "url": "https://www.proactiveinvestors.com/companies/news/1093813/ftse-100-live-stocks-bounce-at-the-open-on-peace-deal-hopes-oil-retreats-below-90-1093813.html",
           "published": 1781244480,
@@ -186,13 +193,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/commodities/articles/oil-climbs-fresh-us-strikes-000410367.html",
           "published": 1781118705,
           "sentiment": -0.382
-        },
-        {
-          "title": "Shell Balances Namibia Oil Find With Major Ra\u00edzen Restructuring Bet",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/shell-balances-namibia-oil-major-181024445.html",
-          "published": 1781115024,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.058
@@ -204,7 +204,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "32",
       "price_usd": 42.68,
-      "change_1d": "-1.20%",
+      "change_1d": "-0.12%",
       "change_1w": "-3.09%",
       "change_1m": "-2.77%",
       "change_ytd": "+22.04%",
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 70,
-      "market_cap_gbp_b": 82.104,
+      "market_cap_gbp_b": 82.043,
       "beta": -0.239,
       "pe_ratio": 34.42,
       "avg_volume_m": 12.86,
@@ -225,7 +225,14 @@ window.PRICES_DATA = {
       "vol_1m": 182093800,
       "news": [
         {
-          "title": "FTSE 100 Live: Stocks bounce at the open on peace deal hopes; oil retreats below $90",
+          "title": "European Indexes Follow U.S., Asian Peers Higher After Trump Cancels Iran Strikes",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-061226/card/european-indexes-follow-u-s-asian-peers-higher-after-trump-cancels-iran-strikes-NQEOPdKEYtejw1ZAyah5?siteid=yhoof2&yptr=yahoo",
+          "published": 1781250991,
+          "sentiment": -0.527
+        },
+        {
+          "title": "FTSE 100 Live: Stocks jump over 100 points on peace deal hopes, sending oil below $87",
           "publisher": "Proactive",
           "url": "https://www.proactiveinvestors.com/companies/news/1093813/ftse-100-live-stocks-bounce-at-the-open-on-peace-deal-hopes-oil-retreats-below-90-1093813.html",
           "published": 1781244480,
@@ -251,25 +258,18 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-mixed-thursday-174324313.html",
           "published": 1781199804,
           "sentiment": 0.273
-        },
-        {
-          "title": "BP Needs to Show Clarity, Deliver on Medium-Term Targets Amid Boardroom Drama, RBC Says",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/bp-needs-show-clarity-deliver-153102096.html",
-          "published": 1781191862,
-          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.338
+      "news_sentiment": 0.152
     },
     {
       "ticker": "TTE",
       "company_name": "TotalEnergies",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "66",
+      "price_gbp": "65",
       "price_usd": 87.72,
-      "change_1d": "+0.00%",
+      "change_1d": "+0.42%",
       "change_1w": "-2.72%",
       "change_1m": "-4.40%",
       "change_ytd": "+33.31%",
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "70",
       "bar_pct": 82,
-      "market_cap_gbp_b": 145.557,
+      "market_cap_gbp_b": 145.45,
       "beta": 0.045,
       "pe_ratio": 13.01,
       "avg_volume_m": 1.76,
@@ -289,6 +289,13 @@ window.PRICES_DATA = {
       "vol_1w": 5992500,
       "vol_1m": 25560700,
       "news": [
+        {
+          "title": "European Indexes Follow U.S., Asian Peers Higher After Trump Cancels Iran Strikes",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-061226/card/european-indexes-follow-u-s-asian-peers-higher-after-trump-cancels-iran-strikes-NQEOPdKEYtejw1ZAyah5?siteid=yhoof2&yptr=yahoo",
+          "published": 1781250991,
+          "sentiment": -0.527
+        },
         {
           "title": "Putin Approves Sale of TotalEnergies\u2019 Stake in US-Sanctioned LNG Project",
           "publisher": "Insider Monkey",
@@ -316,16 +323,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/algeria-gas-advantage-real-production-230000627.html",
           "published": 1781132400,
           "sentiment": -0.178
-        },
-        {
-          "title": "SOCAR, TotalEnergies and ADNOC lock in Caspian gas supply deal",
-          "publisher": "Euronews",
-          "url": "https://www.euronews.com/2026/06/03/socar-totalenergies-and-adnoc-lock-in-caspian-gas-supply-deal?utm_source=yahoo&utm_campaign=feeds_business_articles_2024&utm_medium=referral",
-          "published": 1781091224,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.033
+      "news_sentiment": -0.072
     },
     {
       "ticker": "EQNR",
@@ -334,7 +334,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "27",
       "price_usd": 36.75,
-      "change_1d": "-4.07%",
+      "change_1d": "-0.68%",
       "change_1w": "-2.39%",
       "change_1m": "-3.62%",
       "change_ytd": "+53.24%",
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "32",
       "bar_pct": 68,
-      "market_cap_gbp_b": 68.379,
+      "market_cap_gbp_b": 68.34,
       "beta": -0.752,
       "pe_ratio": 16.63,
       "avg_volume_m": 6.1,
@@ -399,15 +399,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "86",
       "price_usd": 115.36,
-      "change_1d": "-4.98%",
+      "change_1d": "+0.00%",
       "change_1w": "-3.25%",
       "change_1m": "+0.00%",
       "change_ytd": "+21.12%",
       "return_1yr": "+19%",
       "low_gbp": "64",
-      "high_gbp": "102",
+      "high_gbp": "101",
       "bar_pct": 59,
-      "market_cap_gbp_b": 104.992,
+      "market_cap_gbp_b": 104.915,
       "beta": 0.106,
       "pe_ratio": 19.59,
       "avg_volume_m": 8.57,
@@ -464,7 +464,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "41",
       "price_usd": 55.47,
-      "change_1d": "-4.48%",
+      "change_1d": "+0.05%",
       "change_1w": "-5.02%",
       "change_1m": "-0.97%",
       "change_ytd": "+32.12%",
@@ -472,7 +472,7 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "50",
       "bar_pct": 58,
-      "market_cap_gbp_b": 41.217,
+      "market_cap_gbp_b": 41.186,
       "beta": 0.124,
       "pe_ratio": 74.96,
       "avg_volume_m": 14.37,
@@ -484,6 +484,13 @@ window.PRICES_DATA = {
       "vol_1w": 49121500,
       "vol_1m": 237960600,
       "news": [
+        {
+          "title": "1 Cash-Producing Stock with Exciting Potential and 2 We Brush Off",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-producing-stock-exciting-110120607.html",
+          "published": 1781262080,
+          "sentiment": 0.494
+        },
         {
           "title": "Occidental Petroleum (OXY) Stock Sinks As Market Gains: What You Should Know",
           "publisher": "Zacks",
@@ -511,16 +518,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/06/10/brent-oil-just-hitfell-below-x-a-barrel-3-top-oil/",
           "published": 1781113800,
           "sentiment": 0.202
-        },
-        {
-          "title": "Halliburton Powers Pampa Energia's Vaca Muerta Digital Expansion",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/halliburton-powers-pampa-energias-vaca-142700627.html",
-          "published": 1781101620,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.257
+      "news_sentiment": 0.356
     },
     {
       "ticker": "EOG",
@@ -529,7 +529,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "102",
       "price_usd": 136.53,
-      "change_1d": "-3.85%",
+      "change_1d": "+0.02%",
       "change_1w": "-3.09%",
       "change_1m": "+1.79%",
       "change_ytd": "+29.49%",
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "113",
       "bar_pct": 69,
-      "market_cap_gbp_b": 54.325,
+      "market_cap_gbp_b": 54.285,
       "beta": 0.256,
       "pe_ratio": 13.42,
       "avg_volume_m": 4.04,
@@ -594,15 +594,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "195",
       "price_usd": 260.81,
-      "change_1d": "-3.40%",
+      "change_1d": "+0.27%",
       "change_1w": "-2.34%",
       "change_1m": "+3.90%",
       "change_ytd": "+59.33%",
       "return_1yr": "+57%",
       "low_gbp": "118",
-      "high_gbp": "204",
+      "high_gbp": "203",
       "bar_pct": 90,
-      "market_cap_gbp_b": 56.88,
+      "market_cap_gbp_b": 56.839,
       "beta": 0.522,
       "pe_ratio": 17.18,
       "avg_volume_m": 2.45,
@@ -614,6 +614,13 @@ window.PRICES_DATA = {
       "vol_1w": 11390100,
       "vol_1m": 52268300,
       "news": [
+        {
+          "title": "Best Growth Stocks to Buy for June 12th",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-090500366.html",
+          "published": 1781255100,
+          "sentiment": 0.778
+        },
         {
           "title": "The Hidden Engine That Could Power Exxon Mobil Stock Higher",
           "publisher": "Trefis",
@@ -641,16 +648,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/makes-marathon-petroleum-mpc-strong-160003253.html",
           "published": 1781193603,
           "sentiment": 0.511
-        },
-        {
-          "title": "Zacks.com featured highlights include Micron Technology, Five Below and Marathon Petroleum",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-com-featured-highlights-micron-144800861.html",
-          "published": 1781189280,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.282
+      "news_sentiment": 0.438
     },
     {
       "ticker": "VLO",
@@ -659,7 +659,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "191",
       "price_usd": 255.6,
-      "change_1d": "-2.40%",
+      "change_1d": "+0.00%",
       "change_1w": "-1.26%",
       "change_1m": "+3.92%",
       "change_ytd": "+56.30%",
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "98",
       "high_gbp": "198",
       "bar_pct": 93,
-      "market_cap_gbp_b": 56.698,
+      "market_cap_gbp_b": 56.656,
       "beta": 0.553,
       "pe_ratio": 18.66,
       "avg_volume_m": 3.44,
@@ -679,6 +679,13 @@ window.PRICES_DATA = {
       "vol_1w": 14083600,
       "vol_1m": 62604600,
       "news": [
+        {
+          "title": "Best Growth Stocks to Buy for June 12th",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-090500366.html",
+          "published": 1781255100,
+          "sentiment": 0.778
+        },
         {
           "title": "The Hidden Engine That Could Power Exxon Mobil Stock Higher",
           "publisher": "Trefis",
@@ -706,16 +713,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2408795/stocks-settle-sharply-lower-on-escalating-middle-east-tensions",
           "published": 1781123897,
           "sentiment": -0.599
-        },
-        {
-          "title": "2 Refining Stocks With 35%+ Upside in 6 Months Despite High Oil Prices",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/2-refining-stocks-35-upside-152900908.html",
-          "published": 1781105340,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.12
+      "news_sentiment": 0.036
     },
     {
       "ticker": "SLB",
@@ -724,7 +724,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "42",
       "price_usd": 56.0,
-      "change_1d": "+0.18%",
+      "change_1d": "+0.92%",
       "change_1w": "-3.46%",
       "change_1m": "+1.17%",
       "change_ytd": "+40.86%",
@@ -732,7 +732,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 90,
-      "market_cap_gbp_b": 62.545,
+      "market_cap_gbp_b": 62.499,
       "beta": 0.708,
       "pe_ratio": 24.67,
       "avg_volume_m": 15.51,
@@ -789,7 +789,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "30",
       "price_usd": 39.76,
-      "change_1d": "-1.56%",
+      "change_1d": "-0.23%",
       "change_1w": "-3.54%",
       "change_1m": "-4.25%",
       "change_ytd": "+35.55%",
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 84,
-      "market_cap_gbp_b": 24.814,
+      "market_cap_gbp_b": 24.795,
       "beta": 0.704,
       "pe_ratio": 21.97,
       "avg_volume_m": 13.94,
@@ -854,7 +854,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "47",
       "price_usd": 63.48,
-      "change_1d": "+1.16%",
+      "change_1d": "+0.68%",
       "change_1w": "-3.98%",
       "change_1m": "-2.70%",
       "change_ytd": "+35.62%",
@@ -862,7 +862,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 79,
-      "market_cap_gbp_b": 47.047,
+      "market_cap_gbp_b": 47.012,
       "beta": 0.938,
       "pe_ratio": 20.28,
       "avg_volume_m": 8.62,
@@ -919,7 +919,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "63",
       "price_usd": 84.84,
-      "change_1d": "-0.27%",
+      "change_1d": "-0.00%",
       "change_1w": "-0.26%",
       "change_1m": "-9.65%",
       "change_ytd": "+6.32%",
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "74",
       "bar_pct": 56,
-      "market_cap_gbp_b": 132.185,
+      "market_cap_gbp_b": 132.088,
       "beta": 0.671,
       "pe_ratio": 21.53,
       "avg_volume_m": 10.44,
@@ -983,26 +983,26 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2401.0,
-      "change_1d": "+0.59%",
-      "change_1w": "+0.04%",
-      "change_1m": "-3.19%",
-      "change_ytd": "+7.62%",
-      "return_1yr": "+30%",
+      "price_usd": 2371.0,
+      "change_1d": "-0.67%",
+      "change_1w": "-1.21%",
+      "change_1m": "-4.40%",
+      "change_ytd": "+6.28%",
+      "return_1yr": "+32%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 69,
-      "market_cap_gbp_b": 0.29,
+      "bar_pct": 66,
+      "market_cap_gbp_b": 0.286,
       "beta": 0.596,
-      "pe_ratio": 22.87,
-      "avg_volume_m": 4.19,
+      "pe_ratio": 22.58,
+      "avg_volume_m": 4.16,
       "div_yield_pct": 287.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 62388,
-      "vol_1w": 10574929,
-      "vol_1m": 105290104,
+      "vol_1d": 357007,
+      "vol_1w": 10869548,
+      "vol_1m": 105584723,
       "news": [
         {
           "title": "Bears are Losing Control Over SSE (SSEZY), Here's Why It's a 'Buy' Now",
@@ -1049,7 +1049,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "41",
       "price_usd": 54.93,
-      "change_1d": "+9.46%",
+      "change_1d": "-1.91%",
       "change_1w": "-19.68%",
       "change_1m": "+46.56%",
       "change_ytd": "+62.76%",
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 61,
-      "market_cap_gbp_b": 5.408,
+      "market_cap_gbp_b": 5.404,
       "beta": 1.572,
       "pe_ratio": 54.39,
       "avg_volume_m": 7.55,
@@ -1069,6 +1069,20 @@ window.PRICES_DATA = {
       "vol_1w": 39667000,
       "vol_1m": 219157100,
       "news": [
+        {
+          "title": "1 Industrials Stock to Own for Decades and 2 That Underwhelm",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/1-industrials-stock-own-decades-090256318.html",
+          "published": 1781254976,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can Enphase (ENPH) Turn High\u2011Efficiency IQ9N Gains Into Strength Amid Softer Solar Demand?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/enphase-enph-turn-high-efficiency-081746370.html",
+          "published": 1781252266,
+          "sentiment": 0.625
+        },
         {
           "title": "Corning, Enphase, and Plug Power Stocks Trade Down, What You Need To Know",
           "publisher": "StockStory",
@@ -1089,32 +1103,18 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-hillman-herc-shares-skyrocket-005350544.html",
           "published": 1780966430,
           "sentiment": 0.296
-        },
-        {
-          "title": "This Analyst Just Upped Their Price Target on Enphase Energy. Here's Why.",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2363097/this-analyst-just-upped-their-price-target-on-enphase-energy-here-s-why",
-          "published": 1780942749,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Investors Heavily Search Enphase Energy, Inc. (ENPH): Here is What You Need to Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-enphase-energy-130004498.html",
-          "published": 1780923604,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.223
+      "news_sentiment": 0.239
     },
     {
       "ticker": "FSLR",
       "company_name": "First Solar",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "203",
+      "price_gbp": "202",
       "price_usd": 271.17,
-      "change_1d": "+8.64%",
+      "change_1d": "-0.36%",
       "change_1w": "-13.90%",
       "change_1m": "+18.90%",
       "change_ytd": "-1.16%",
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "101",
       "high_gbp": "240",
       "bar_pct": 73,
-      "market_cap_gbp_b": 21.768,
+      "market_cap_gbp_b": 21.752,
       "beta": 1.692,
       "pe_ratio": 17.52,
       "avg_volume_m": 2.44,
@@ -1179,7 +1179,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "28",
       "price_usd": 37.68,
-      "change_1d": "+1.84%",
+      "change_1d": "+0.69%",
       "change_1w": "-2.96%",
       "change_1m": "+3.04%",
       "change_ytd": "-3.75%",
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "23",
       "high_gbp": "34",
       "bar_pct": 46,
-      "market_cap_gbp_b": 5.134,
+      "market_cap_gbp_b": 5.13,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1249,10 +1249,10 @@ window.PRICES_DATA = {
       "change_1m": "-4.24%",
       "change_ytd": "+21.98%",
       "return_1yr": "-42%",
-      "low_gbp": "4.30",
+      "low_gbp": "4.29",
       "high_gbp": "25",
       "bar_pct": 9,
-      "market_cap_gbp_b": 24.071,
+      "market_cap_gbp_b": 24.053,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,
