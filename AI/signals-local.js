@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-10 11:55",
+  "updated": "2026-06-12 12:00",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Up 16.5% in a day and ~584% YTD, Bank of America raised PT to $2,100 citing strong AI-driven memory demand; NVDA CEO expects shortage to last years [247wallst.com](https://247wallst.com/investing/2026/06/08/nvidia-ceo-has-good-news-for-micron-and-sandisk-investors-the-memory-shortage-to-continue-for-several-years/).",
+      "drivers": [
+        "+16.5% 1D momentum",
+        "+584% YTD",
+        "PT raised to $2,100",
+        "multi-year memory shortage catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Massive +76.1% 1-month surge and +615% YTD with a P/E of 80, strong analyst buy consensus and low negative news bias (0.059).",
+      "drivers": [
+        "+76.1% 1M momentum",
+        "+615% YTD",
+        "low news sentiment (-0.059)",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Strong buy with P/E 47, +215% YTD and a 0.224 news sentiment; UBS and Cantor remain bullish on tight DRAM/NAND supply through 2027\u20132028 [invezz.com](https://invezz.com/news/2026/06/11/micron-stock-plunges-12-in-a-week-why-investors-are-booking-profits/).",
+      "drivers": [
+        "+13.5% 1D bounce",
+        "strong_buy consensus",
+        "supply tightness through 2028",
+        "positive news sentiment 0.224"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Up 14.4% today despite -11.3% on the week, P/E 96 reflects premium AI valuation; Jensen Huang called Marvell a potential trillion-dollar company [seekingalpha.com](https://seekingalpha.com/article/4914411-marvell-might-be-next-trillion-dollar-company-you-should-not-buy-stock).",
+      "drivers": [
+        "+70.6% 1M momentum",
+        "NVDA CEO endorsement",
+        "strong_buy consensus",
+        "optical DSP AI data center exposure"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CRDO",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Exceptional +21.7% 1-week and +33.3% 1-month momentum, P/E 145; completed DustPhotonics acquisition to expand optical connectivity portfolio.",
+      "drivers": [
+        "+21.7% 1W momentum",
+        "+33.3% 1M momentum",
+        "DustPhotonics acquisition",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Stellar +63.8% 1-month rise, +208% YTD, P/E 31, low short interest at 6.28%; signs $1.6B AI systems agreement with IREN.",
+      "drivers": [
+        "+63.8% 1M momentum",
+        "P/E 31 attractive for growth",
+        "low short interest 6.28%",
+        "$1.6B AI deal with IREN"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SMTC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Strong +23.8% 1-month gain and +117% YTD, P/E expansion story; low short interest 7.92% and positive news sentiment 0.206.",
+      "drivers": [
+        "+23.8% 1M momentum",
+        "+117% YTD",
+        "low short interest 7.92%",
+        "positive news sentiment 0.206"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CORZ",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Up 19.4% in the last month, +70% YTD, strong_buy consensus (an_score 1.31); credit rebound enables cheaper data center funding for AI workloads.",
+      "drivers": [
+        "+19.4% 1M momentum",
+        "strong_buy consensus",
+        "credit rebound catalyst",
+        "AI compute infrastructure exposure"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "WULF",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "+99% YTD, +11.2% 1M, strong_buy consensus with 0.084 news sentiment; 24/7 construction at Lake Mariner site signals rapid AI data center expansion.",
+      "drivers": [
+        "+99% YTD",
+        "+11.2% 1M",
+        "strong_buy consensus",
+        "Lake Mariner construction ramp"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "Massive +565% 1-year gain and +127% YTD, strong_buy consensus rating, +11.6% 1D rebound despite -8.96% 1W pullback.",
+      "drivers": [
+        "+127% YTD",
+        "strong_buy consensus",
+        "+11.6% 1D bounce",
+        "AI compute infrastructure play"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MU",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "P/E 56.18",
         "buy consensus",
         "multi-year memory shortage catalyst"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DELL",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "DELL has surged +65.15% in the past month and +210.91% YTD, with a P/E of 31.45 and positive news sentiment 0.106. The stock benefits from the broader AI server buildout and its leading position in AI-optimized infrastructure.",
-      "drivers": [
-        "+65.15% 1M momentum",
-        "+210.91% YTD",
-        "P/E 31.45",
-        "AI server demand catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "MRVL shows explosive +53.05% 1M and +195.10% YTD gains, benefits from analyst strong_buy consensus (score 1.43), and is positioned as a key custom AI chipmaker. News sentiment at 0.082 remains muted but the fundamental AI tailwind is intact.",
-      "drivers": [
-        "+53.05% 1M momentum",
-        "strong_buy consensus",
-        "AI chipmaker catalyst",
-        "+195.10% YTD"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "285A",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "285A (Kioxia) has posted a massive +61.56% 1M return and +533.30% YTD, supported by the multi-year memory shortage narrative from NVIDIA CEO Jensen Huang. News sentiment is +0.131 with analyst buy consensus.",
-      "drivers": [
-        "+61.56% 1M momentum",
-        "+533.30% YTD",
-        "memory shortage catalyst",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "MU dropped -11.09% on the day but has +29.62% 1M and +174.04% YTD gains. Analyst consensus is strong_buy (score 1.48) and Huang's memory shortage comments are a direct catalyst. Recent pullback is valuation-driven, not fundamental.",
-      "drivers": [
-        "+29.62% 1M momentum",
-        "strong_buy consensus",
-        "AI memory shortage catalyst",
-        "P/E 40.81"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.74,
-      "rationale": "SMTC has gained +26.71% in the past month and +100.66% YTD, with a strong_buy analyst consensus (score 1.36) and positive news sentiment 0.195. The stock is riding the AI semi cycle with DSP exposure.",
-      "drivers": [
-        "+26.71% 1M momentum",
-        "+100.66% YTD",
-        "strong_buy consensus",
-        "DSP AI cycle"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MTSI",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "MTSI shows +11.49% 1M and +97.42% YTD gains, with a buy rating (score 1.60) and positive news sentiment 0.269. The company's aerospace/defense moat provides diversification within the AI infrastructure theme.",
-      "drivers": [
-        "+97.42% YTD",
-        "buy consensus",
-        "news sentiment +0.269",
-        "defense moat"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SNDK has a massive +466.53% YTD and +10.59% 1M, with news sentiment +0.274 and Huang's memory shortage comments as a live catalyst. The -9.92% 1D drop is a pullback in a strong trend. Analyst buy consensus (1.59) supports the view.",
-      "drivers": [
-        "+466.53% YTD",
-        "memory shortage catalyst",
-        "buy consensus",
-        "news sentiment +0.274"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "COHR",
-      "signal": "buy",
-      "confidence": 0.67,
-      "rationale": "COHR is up +93.99% YTD and +9.38% 1M, with positive news sentiment 0.278. The stock benefits from fibre-optic demand in AI data centers. The P/E of 178.67 is elevated but supported by growth.",
-      "drivers": [
-        "+93.99% YTD",
-        "+9.38% 1M momentum",
-        "news sentiment +0.278",
-        "fibre-optical AI demand"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "STX",
-      "signal": "buy",
-      "confidence": 0.66,
-      "rationale": "STX has +195.25% YTD and +7.76% 1M gains, with a buy analyst consensus (score 1.54). The stock is a direct beneficiary of the memory shortage cycle and data center HDD demand.",
-      "drivers": [
-        "+195.25% YTD",
-        "+7.76% 1M momentum",
-        "memory shortage catalyst",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SMCI",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "SMCI has +34.50% YTD and +20.14% 1M with a Mizuho price target raise. News sentiment is +0.306. The stock trades at a reasonable P/E of 21.92 but the analyst consensus is hold (2.83), limiting conviction.",
-      "drivers": [
-        "+34.50% YTD",
-        "+20.14% 1M momentum",
-        "news sentiment +0.306",
-        "P/E 21.92"
       ]
     }
   ]

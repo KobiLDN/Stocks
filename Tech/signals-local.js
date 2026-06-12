@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-10 11:58",
+  "updated": "2026-06-12 12:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "SNOW surged +58.17% in 1M and +10.93% YTD, with strong_buy analyst consensus (score 1.49) and a 34% product revenue beat; the $6B AWS deal and AI data hub pivot provide live catalysts.",
+      "drivers": [
+        "+58% 1M momentum",
+        "strong_buy consensus",
+        "34% product revenue growth",
+        "$6B AWS deal"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ASML gained +24.89% in 1M and +63.79% YTD, strong_buy consensus (score 1.48), P/E 63.7, and a major catalyst from Musk's $55B Terafab plan exclusively using ASML EUV lithography.",
+      "drivers": [
+        "+24.9% 1M momentum",
+        "strong_buy consensus",
+        "Musk Terafab catalyst",
+        "low short interest 0.27%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "MU is up +29.91% in 1M and +215.86% YTD, strong_buy consensus (score 1.48), P/E 46.95 but forward P/E ~9-11x, with HBM sold out through 2026 and earnings catalyst on June 24.",
+      "drivers": [
+        "+29.9% 1M momentum",
+        "strong_buy consensus",
+        "HBM supply tight through 2026",
+        "forward P/E ~10x"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "AMAT rallied +28.32% in 1M and +106.05% YTD, strong_buy consensus (score 1.50), P/E 52.09, and very positive news sentiment of 0.555, benefiting from AI infrastructure buildout.",
+      "drivers": [
+        "+28.3% 1M momentum",
+        "strong_buy consensus",
+        "news sentiment 0.555",
+        "AI equipment demand"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "PANW gained +29.65% in 1M and +55.84% YTD, buy consensus (score 1.60), P/E 243 but strong growth, and a live catalyst from the Deutsche Telekom AI security partnership.",
+      "drivers": [
+        "+29.7% 1M momentum",
+        "buy consensus",
+        "Deutsche Telekom deal",
+        "AI security expansion"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "CRWD rose +26.61% in 1M and +52.46% YTD, buy consensus (score 1.65), with strong momentum despite slightly negative news sentiment (-0.06), driven by AI-powered cybersecurity demand.",
+      "drivers": [
+        "+26.6% 1M momentum",
+        "buy consensus",
+        "AI cybersecurity tailwind",
+        "high YTD return"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "CSCO advanced +22.70% in 1M and +61.09% YTD, buy consensus (score 1.88), P/E 40.61, with a 1.38% dividend yield and positive news sentiment 0.215, benefiting from networking demand.",
+      "drivers": [
+        "+22.7% 1M momentum",
+        "buy consensus",
+        "dividend yield 1.38%",
+        "positive sentiment 0.215"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "FTNT surged +27.39% in 1M and +86.26% YTD, but analyst consensus is hold (score 2.72) and news sentiment slightly negative (-0.003); momentum is strong but conviction is lower.",
+      "drivers": [
+        "+27.4% 1M momentum",
+        "high YTD return 86.26%",
+        "P/E 56.22",
+        "hold consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "NET gained +21.76% in 1M and +16.03% YTD, buy consensus (score 1.97), but fell -15.34% in the last week; positive sentiment 0.094 and AI edge computing growth story.",
+      "drivers": [
+        "+21.8% 1M momentum",
+        "buy consensus",
+        "AI edge computing",
+        "recent weekly pullback"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "ARM soared +64.60% in 1M and +198.29% YTD, buy consensus (score 1.88), but P/E is extremely high at 397.94 and beta 3.786; the AGI CPU adoption by ByteDance and Oracle is a live catalyst.",
+      "drivers": [
+        "+64.6% 1M momentum",
+        "AGI CPU customer wins",
+        "high short interest 12.74%",
+        "extreme valuation"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PANW",
@@ -131,138 +263,6 @@ window.SIGNALS_DATA = {
         "Strong news sentiment",
         "Buy consensus",
         "Turnaround potential"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PANW",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Record Q3 FY2026 revenue of $3.0B (+31% YoY), NGS ARR surged 60% to $8.13B, and EPS of $0.85 beat guidance by $0.05 \u2014 all fuelled by AI-driven demand and platformization. The stock has +48% 1M momentum, +51.7% YTD, positive news sentiment 0.20, and strong analyst buy consensus.",
-      "drivers": [
-        "+48% 1M momentum",
-        "Record $3B quarterly revenue (+31% YoY)",
-        "60% NGS ARR growth to $8.13B",
-        "Positive news sentiment 0.20"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Fortinet surged +60.8% in the last month and is up +85.8% YTD, with a P/E of 56 and positive news sentiment 0.31. The network security tailwind from AI and platformization supports continued momentum, though the analyst consensus is a hold, warranting a buy rather than strong_buy.",
-      "drivers": [
-        "+60.8% 1M momentum",
-        "+85.8% YTD return",
-        "Positive news sentiment 0.31",
-        "P/E 56, reasonable for growth"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "Snowflake has surged +70.5% over the past month and +9.9% YTD on strong enterprise AI data platform demand. The headline 'Snowflake Has a Hot New Product' and positive news sentiment 0.28 support the momentum. Analyst score is a strong_buy (1.49), and the company is not yet profitable on a P/E basis, reflecting high future growth expectations.",
-      "drivers": [
-        "+70.5% 1M momentum",
-        "Positive news sentiment 0.28",
-        "Strong_buy analyst consensus",
-        "Hot new AI product catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CrowdStrike has gained +43.4% in the last month and +47.9% YTD, with a strong buy analyst consensus (score 1.67). The negative news sentiment (-0.02) and high short interest (12%) are tempered by the ongoing AI-driven cybersecurity demand wave. Momentum remains powerful.",
-      "drivers": [
-        "+43.4% 1M momentum",
-        "+47.9% YTD return",
-        "Strong_buy analyst consensus",
-        "High short interest (12%): potential squeeze"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "ARM has surged +44.5% in the past month and +198.9% YTD after Nvidia launched Arm-based chips (RTX Spark, Vera) at Computex, with Mizuho raising its price target to $425. The stock has a high beta (3.79) and P/E of 399, but the AI chip licensing opportunity is vast. News sentiment is negative (-0.17) and short interest is elevated (13.3%), capping confidence.",
-      "drivers": [
-        "+44.5% 1M momentum",
-        "+198.9% YTD return",
-        "Nvidia Arm-based chip catalyst",
-        "Mizuho PT raise to $425"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "ServiceNow has rallied +26.3% in the last month despite a -23.7% YTD drawdown. It has a strong_buy analyst consensus (1.44) and positive news sentiment 0.12. The low beta (0.93) and AI-driven workflow platformization provide defensive growth characteristics.",
-      "drivers": [
-        "+26.3% 1M momentum",
-        "Strong_buy analyst consensus (1.44)",
-        "Low beta (0.93)",
-        "Positive news sentiment 0.12"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "Cisco has strong momentum with +32.7% 1M, +60.8% YTD, and a +96% 1-year return. It offers a dividend yield of 1.38% and a P/E of 40.6, with positive news sentiment 0.23. The company is benefiting from AI infrastructure build-outs. Analyst consensus is a buy (1.88).",
-      "drivers": [
-        "+32.7% 1M momentum",
-        "+60.8% YTD return",
-        "Dividend yield 1.38%",
-        "Positive news sentiment 0.23"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Micron has massive YTD momentum (+174%) and a +29.6% 1M gain, driven by AI memory demand. The P/E of 40.8 is reasonable for the growth, and the strong_buy analyst consensus (1.48) supports the name. However, the stock is down -11% in the last week and has high beta (2.17), showing some technical weakness.",
-      "drivers": [
-        "+174% YTD return",
-        "+29.6% 1M momentum",
-        "Strong_buy analyst consensus",
-        "P/E 40.8, reasonable for cycle"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Spotify has rallied +16.9% in the last month despite a -13.6% YTD decline. It has a buy analyst consensus (1.59), positive news sentiment 0.33, and a reasonable P/E of 33.2. The audio and podcast platform benefits from AI personalization and international expansion.",
-      "drivers": [
-        "+16.9% 1M momentum",
-        "Positive news sentiment 0.33",
-        "Buy analyst consensus",
-        "P/E 33.2"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Qualcomm has +26.1% YTD and +12.5% 1M momentum with a P/E of 23.2, the lowest in the semiconductor cohort. The company is expanding into AI PCs and automotive, with positive news sentiment 0.27. High short interest (5.4%) and a hold analyst consensus (2.62) reduce confidence to a lower buy.",
-      "drivers": [
-        "+12.5% 1M momentum",
-        "Low P/E (23.2)",
-        "Positive news sentiment 0.27",
-        "AI PC & automotive expansion"
       ]
     }
   ]

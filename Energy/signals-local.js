@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-10 12:02",
+  "updated": "2026-06-12 12:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Valero leads the universe with a +91% 1-year return, +56.3% YTD, and +3.92% one-month momentum. P/E of 18.7x is reasonable versus peers, and strong refining margins supported by elevated crude and Middle East disruptions drive cash flows.",
+      "drivers": [
+        "+91% 1-year return",
+        "+56.3% YTD",
+        "1-month momentum +3.92%",
+        "P/E 18.7x"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Marathon Petroleum shows exceptional momentum with +57% annual return, +59.3% YTD, and +3.90% one-month gain. P/E 17.2x is attractive for a refiner benefiting from wide crack spreads due to geopolitical supply tightness.",
+      "drivers": [
+        "+59.3% YTD",
+        "+57% 1-year return",
+        "1-month momentum +3.90%",
+        "P/E 17.2x"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "EOG Resources delivers strong momentum (+29.5% YTD) with a low P/E of 13.4x and a solid 3.0% dividend yield. Its low-cost inventory and disciplined capital spending make it resilient even if oil prices cool, while analyst consensus is 'buy'.",
+      "drivers": [
+        "+29.5% YTD",
+        "P/E 13.4x",
+        "dividend yield 3.0%",
+        "analyst consensus 'buy'"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SLB",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Schlumberger gains +54% over 1 year and +40.9% YTD with a best-in-class analyst score of 1.62 (strong buy). Its recent Edge AI partnership with Qualcomm and exposure to global drilling demand support continued international activity growth.",
+      "drivers": [
+        "+40.9% YTD",
+        "analyst score 1.62 'buy'",
+        "1-year return +54%",
+        "AI/tech catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Shell offers a compelling value play at P/E 13.4x (lowest among peers) with a 3.6% dividend yield. CEO Wael Sawan sees oil prices rising structurally over 5-10 years, and the company aims to add 1 million BOE/day by 2030, underpinning long-term growth.",
+      "drivers": [
+        "P/E 13.4x (peer-low)",
+        "dividend yield 3.6%",
+        "CEO bullish long-term oil view",
+        "+15.9% YTD"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "Chevron is up +27% in 1 year and +21.5% YTD, with a low beta of 0.47 providing downside protection. It offers a robust 3.8% dividend yield and benefits from integrated operations and sub-$50 breakeven, making it a quality holding in any oil price scenario.",
+      "drivers": [
+        "dividend yield 3.8%",
+        "beta 0.47",
+        "+21.5% YTD",
+        "sub-$50/bbl breakeven"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "ConocoPhillips has gained +21.1% YTD and trades at a low P/E of 19.6x with a 2.9% dividend yield. Strong cash flow generation and a low-cost upstream portfolio make it well-positioned to return capital to shareholders even as oil volatility persists.",
+      "drivers": [
+        "+21.1% YTD",
+        "P/E 19.6x",
+        "dividend yield 2.9%",
+        "analyst consensus 'buy'"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ENPH",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Enphase Energy has explosive 1-month momentum at +46.6% and +62.8% YTD, but high short interest (24.4%) and extreme volatility (beta 1.57) create risk. The clean-energy tailwind and strong sentiment (news_s 0.223) support a cautious buy for momentum-tolerant investors.",
+      "drivers": [
+        "+62.8% YTD",
+        "1-month momentum +46.6%",
+        "strong news sentiment 0.223",
+        "P/E 54.4x (expensive)"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "FSLR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "First Solar shows strong one-month momentum of +18.9% and a reasonable P/E of 17.5x for a solar leader. Despite YTD flatness (-1.2%), the company benefits from growing utility-scale solar demand and US manufacturing tailwinds.",
+      "drivers": [
+        "1-month momentum +18.9%",
+        "P/E 17.5x",
+        "1-year return +55%",
+        "US solar policy tailwinds"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Brookfield Renewable Corp offers a high dividend yield of 4.2% and the highest news sentiment in the universe (0.557). It has moderate upside potential (+17% 1-year) but a negative YTD and a hold consensus (an_score 2.83), making it a lower-conviction pick.",
+      "drivers": [
+        "dividend yield 4.2%",
+        "news sentiment 0.557",
+        "1-year return +17%",
+        "hold analyst consensus"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -128,138 +260,6 @@ window.SIGNALS_DATA = {
         "dividend yield 4.03%",
         "news sentiment +0.543 (best in cohort)",
         "5% 1-month return"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "XOM",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "XOM is up 23.88% YTD and 50% over 1 year, with a 2.75% dividend yield and an Exxon SVP warning oil could spike to $150-160/barrel, directly benefiting the integrated giant. [247wallst.com](https://247wallst.com/investing/2026/06/03/exxon-svp-warns-oil-could-spike-to-150-160-per-barrel-in-coming-weeks/)",
-      "drivers": [
-        "+23.88% YTD",
-        "P/E 25.24",
-        "dividend yield 2.75%",
-        "oil spike catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "MPC has surged 60.06% YTD and 69% over 1 year, with strong 1-month (+7.01%) and 1-week (+5.32%) momentum, benefiting from elevated refining margins amid the Iran conflict. [drillr.ai](https://drillr.ai/article/xom-stagflation-trade-oecd-dark-scenario-2026-06)",
-      "drivers": [
-        "+60.06% YTD",
-        "P/E 17.24",
-        "1M momentum +7.01%",
-        "refining margin catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.87,
-      "rationale": "VLO is up 56.44% YTD and 106% over 1 year, with the strongest 1-month momentum (+8.60%) among refiners, directly leveraged to product margin elevation from the supply squeeze. [drillr.ai](https://drillr.ai/article/xom-stagflation-trade-oecd-dark-scenario-2026-06)",
-      "drivers": [
-        "+56.44% YTD",
-        "P/E 18.69",
-        "1M momentum +8.60%",
-        "refining margin catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "OXY is up 34.97% YTD and 43% over 1 year, with a 1.83% dividend yield and a delevered balance sheet after the OxyChem sale, making it a clean Permian beta play on the oil spike. [247wallst.com](https://247wallst.com/investing/2026/06/03/exxon-svp-warns-oil-could-spike-to-150-160-per-barrel-in-coming-weeks/)",
-      "drivers": [
-        "+34.97% YTD",
-        "P/E 76.93",
-        "dividend yield 1.83%",
-        "Permian beta catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.84,
-      "rationale": "EOG is up 30.67% YTD and 27% over 1 year, with a 2.96% dividend yield and a low P/E of 13.55, offering direct exposure to sustained $90+ WTI. [drillr.ai](https://drillr.ai/article/xom-stagflation-trade-oecd-dark-scenario-2026-06)",
-      "drivers": [
-        "+30.67% YTD",
-        "P/E 13.55",
-        "dividend yield 2.96%",
-        "low P/E value"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.83,
-      "rationale": "SLB is up 38.02% YTD and 72% over 1 year, with a 2.15% dividend yield and strong analyst consensus (score 1.62), benefiting from increased drilling activity as producers scramble to add capacity. [247wallst.com](https://247wallst.com/investing/2026/06/03/exxon-svp-warns-oil-could-spike-to-150-160-per-barrel-in-coming-weeks/)",
-      "drivers": [
-        "+38.02% YTD",
-        "P/E 24.17",
-        "dividend yield 2.15%",
-        "oilfield services catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "CVX is up 22.43% YTD and 39% over 1 year, with a 3.80% dividend yield and technical analysis suggesting a move toward $200, supported by the Strait of Hormuz closure. [fxempire.com](https://www.fxempire.com/forecasts/article/cvx-xom-and-shel-forecasts-oil-stocks-in-focus-as-conflict-continues-1602702)",
-      "drivers": [
-        "+22.43% YTD",
-        "P/E 32.69",
-        "dividend yield 3.80%",
-        "Hormuz closure catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ENPH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ENPH is up 66.13% YTD and 67% over 1 year, with massive 1-month momentum (+56.62%) despite a 1-week pullback, though high short interest (27.43%) and a P/E of 55.51 add risk.",
-      "drivers": [
-        "+66.13% YTD",
-        "1M momentum +56.62%",
-        "short interest 27.43%",
-        "high P/E risk"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "FSLR is up 1.70% YTD but 94% over 1 year, with a 1-month surge of +27.99% and a reasonable P/E of 18.01, though high short interest (10.53%) and a 1-week pullback (-9.06%) temper conviction.",
-      "drivers": [
-        "+94% 1-year return",
-        "P/E 18.01",
-        "1M momentum +27.99%",
-        "short interest 10.53%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BEPC is down 1.09% YTD but up 30% over 1 year, with a 4.05% dividend yield and positive 1-month momentum (+4.56%), offering a defensive renewable play with a strong news sentiment score of 0.47.",
-      "drivers": [
-        "dividend yield 4.05%",
-        "news sentiment 0.47",
-        "1M momentum +4.56%",
-        "defensive renewable play"
       ]
     }
   ]

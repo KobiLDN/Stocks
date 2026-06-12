@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-10 11:57",
+  "updated": "2026-06-12 12:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +43.44%, 1M +16.15%, beta 0.12, P/E 46.44 \u2014 strong momentum with low valuation risk; recent Pentagon autonomous warfare budget tailwinds benefit Leonardo DRS directly.",
+      "drivers": [
+        "+43.4% YTD",
+        "+16.2% 1M",
+        "beta 0.12",
+        "Pentagon $55B drone request"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "1-year return +125%, YTD +56.94%, 1M +29.25%, P/E undefined but revenue growth accelerating; analog/mixed-signal defence content gains from platform upgrades and electronic warfare demand.",
+      "drivers": [
+        "+125% 1Y",
+        "+56.9% YTD",
+        "+29.3% 1M",
+        "defence electronics demand"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Upgraded to Buy, ~$10B in recent contracts (PAC-3 $4.8B, F-35 $879M), P/E 26.6, beta 0.11, 19% upside to $621 target; Trump $1.5T defence budget proposal is a structural catalyst.",
+      "drivers": [
+        "~$10B new contracts",
+        "P/E 26.6",
+        "19% upside to PT",
+        "Trump $1.5T budget"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "1M +17.92%, recent CalRamic acquisition adds high-voltage capacitor capability, P/E 60.6 but supported by consistent M&A-driven compounding; news sentiment 0.48, defence/aerospace aftermarket exposure.",
+      "drivers": [
+        "+17.9% 1M",
+        "news sentiment 0.48",
+        "CalRamic acquisition",
+        "P/E 60.6"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +33.72%, YTD +16.88%, FCC approval for direct-to-device, first prime government contract, BlueBird launch June 17; valuation high but catalysts are tangible and near-term.",
+      "drivers": [
+        "+33.7% 1M",
+        "FCC approval",
+        "first govt contract",
+        "BlueBird launch June 17"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "1M +8.78%, $1.12B funded backlog, counter-drone production ramp 500%, P/E negative but FY26 revenue guidance $1.85-1.95B; Pentagon $55B drone request is a massive demand signal.",
+      "drivers": [
+        "$1.12B funded backlog",
+        "500% production ramp",
+        "Pentagon $55B drone request",
+        "counter-drone edge"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RCAT",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "YTD +31.11%, 1M +8.88%, strong_buy consensus with best an_score 1.17, Q1 revenue +849% YoY; although loss-making, the drone thematic and Pentagon budget provide speculative upside.",
+      "drivers": [
+        "+31.1% YTD",
+        "strong_buy consensus",
+        "revenue +849% YoY",
+        "Pentagon drone budget"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +14.36%, 1M +22.27%, P/E 12.93 \u2014 cheapest in cyber-intel group, dividend yield 1.29%, news sentiment 0.25; contract wins and IT modernisation for defence agencies support re-rating.",
+      "drivers": [
+        "+22.3% 1M",
+        "P/E 12.9",
+        "YTD +14.4%",
+        "cyber/IT demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.63,
+      "rationale": "1Y +27%, YTD +5.42%, 1W +5.08%, P/E 22.57, beta 0.34 \u2014 steady defence prime with naval/land systems exposure; Trump budget proposal and global rearmament support backlog growth.",
+      "drivers": [
+        "+27% 1Y",
+        "P/E 22.6",
+        "Trump $1.5T budget",
+        "naval/land systems"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +7.72%, P/E 17.89, news sentiment 0.31 \u2014 trades at 14x forward P/E vs sector 39x, Pentagon $55B drone request is a catalyst for Textron's autonomous systems (Textron eAviation, shadow drones).",
+      "drivers": [
+        "P/E 17.9",
+        "14x forward P/E",
+        "Pentagon $55B drone request",
+        "news sentiment 0.31"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "analyst score 1.6",
         "high P/E 181.73",
         "beta 1.422"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SAIC is up +21.18% in 1 month and +13.79% YTD, with a P/E of 12.86, positive news sentiment 0.217, and a record Q1 FY27 with $2.1B in bookings (book-to-bill 1.1) and raised guidance per [sec.gov](https://www.sec.gov/Archives/edgar/data/1571123/000157112326000077/saic06012026ex991earningsr.htm).",
-      "drivers": [
-        "+21% 1M momentum",
-        "P/E 12.86 value",
-        "record Q1 earnings beat",
-        "raised FY27 guidance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "HEI",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "HEICO reported record Q2 FY26 net income up 49%, net sales up 25%, and operating income up 41% with 18% organic growth per [accessnewswire.com](https://www.accessnewswire.com/newsroom/en/aerospace-and-defense/heico-corporation-reports-record-net-income-up-49-on-record-operating-income-1170682), while the stock is up +11.83% in 1 month with P/E 59.18 and low short interest 1.13%.",
-      "drivers": [
-        "record Q2 earnings beat",
-        "49% net income growth",
-        "18% organic sales growth",
-        "low short interest 1.13%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Mercury Systems is up +46.35% YTD and +21.39% in 1 month, with a beta of 0.949 and positive news sentiment 0.102, driven by strong defence electronics demand and a low P/E relative to growth.",
-      "drivers": [
-        "+46% YTD momentum",
-        "+21% 1M momentum",
-        "low beta 0.949",
-        "defence electronics tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Rocket Lab is up +334% over 1 year and +44.86% YTD with +30% 1M momentum, targeting Neutron flight readiness in late 2026 per [heygotrade.com](https://www.heygotrade.com/en/blog/defense-stocks-outlook-2026/), though high beta 2.499 and negative 1W momentum (-23.28%) warrant caution.",
-      "drivers": [
-        "+334% 1Y return",
-        "+45% YTD",
-        "Neutron catalyst late 2026",
-        "high beta 2.5"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Leonardo DRS is up +33.22% YTD and +10.67% in 1 month, with a low beta of 0.121, positive news sentiment 0.168, and a P/E of 43.13 reflecting strong defence electronics growth.",
-      "drivers": [
-        "+33% YTD",
-        "+11% 1M momentum",
-        "low beta 0.12",
-        "defence electronics growth"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Axon is up +25.98% in 1 month and +8.33% in 1 week, with positive news sentiment 0.192 and strong Q1 growth in AI and counter-drone segments, though P/E of 196 is elevated.",
-      "drivers": [
-        "+26% 1M momentum",
-        "Q1 AI/counter-drone growth",
-        "positive news sentiment 0.19",
-        "high P/E 196"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RCAT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Red Cat is up +88% over 1 year and +38.43% YTD with +19.4% 1M momentum, strong_buy analyst consensus (score 1.17), and positive news sentiment 0.351, but high short interest 21% and -14% 1D drop add risk.",
-      "drivers": [
-        "+88% 1Y return",
-        "+38% YTD",
-        "strong_buy consensus",
-        "high short interest 21%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "AST SpaceMobile is up +249% over 1 year and +32.43% in 1 month, with positive news sentiment 0.196, but high beta 2.634, short interest 17.6%, and hold analyst consensus (score 2.82) temper conviction.",
-      "drivers": [
-        "+249% 1Y return",
-        "+32% 1M momentum",
-        "high beta 2.6",
-        "high short interest 17.6%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "AeroVironment is up +6.62% in 1 month with buy analyst consensus (score 1.63) and positive news sentiment 0.08, but -27.43% YTD, high short interest 12.11%, and negative 1W/1D momentum reflect Ukraine demand pull-forward risks per [heygotrade.com](https://www.heygotrade.com/en/blog/defense-stocks-outlook-2026/).",
-      "drivers": [
-        "+7% 1M momentum",
-        "buy consensus",
-        "Switchblade franchise",
-        "high short interest 12%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "QinetiQ is up +11.7% in 1 month and +5.9% YTD, with a P/E of 23.53, positive news sentiment 0.345, and buy analyst consensus (score 1.82), though small market cap (\u00a324M) and negative 1W momentum (-6.53%) limit upside.",
-      "drivers": [
-        "+12% 1M momentum",
-        "positive news sentiment 0.35",
-        "buy consensus",
-        "small cap risk"
       ]
     }
   ]
