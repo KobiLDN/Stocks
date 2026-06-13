@@ -52,6 +52,7 @@ STOCKS = {
     "RCAT":  ("RCAT",  "drones",      "NASDAQ", None,        "Red Cat Holdings"),
     "TXT":   ("TXT",   "drones",      "NYSE",   None,        "Textron"),
     # space
+    "SPCX":  ("SPCX",  "space",       "NASDAQ", None,        "SpaceX"),
     "RKLB":  ("RKLB",  "space",       "NASDAQ", None,        "Rocket Lab USA"),
     "PL":    ("PL",    "space",       "NYSE",   None,        "Planet Labs"),
     "ASTS":  ("ASTS",  "space",       "NASDAQ", None,        "AST SpaceMobile"),
