@@ -32,6 +32,8 @@ CMC_API_KEY = os.environ.get("CMC_API_KEY", "")
 CMC_URL     = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 
 COINGECKO_API_KEY  = os.environ.get("COINGECKO_API_KEY", "")
+COINGECKO_PRO_URL  = "https://pro-api.coingecko.com/api/v3"
+COINGECKO_DEMO_URL = "https://api.coingecko.com/api/v3"
 COINSTATS_API_KEY  = os.environ.get("COINSTATS_API_KEY", "")
 
 # CoinGecko IDs — used for true YTD (Jan 1 → today) via /coins/{id}/history
