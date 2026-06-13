@@ -21,8 +21,9 @@ try:
 except ImportError:
     _VADER_OK = False
 
-JSON_FILE = "prices.json"
-JS_FILE   = "prices-data.js"
+JSON_FILE      = "prices.json"
+JS_FILE        = "prices-data.js"
+YTD_CACHE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ytd_cache.json")
 
 DASHBOARD_TITLE = "Crypto"
 
@@ -196,24 +197,69 @@ def _cg_get(path, params):
     raise RuntimeError(f"CoinGecko request failed: {last_err}")
 
 
-def fetch_coingecko_data(current_prices_usd):
+def load_ytd_cache():
+    """Return cached Jan 1 USD prices for the current year, or None if missing/stale."""
+    try:
+        with open(YTD_CACHE_PATH) as f:
+            cache = json.load(f)
+        if cache.get("year") == dt.datetime.utcnow().year:
+            return cache["jan1_prices_usd"]
+    except Exception:
+        pass
+    return None
+
+def save_ytd_cache(jan1_prices_usd):
+    with open(YTD_CACHE_PATH, "w") as f:
+        json.dump({"year": dt.datetime.utcnow().year, "jan1_prices_usd": jan1_prices_usd}, f, indent=2)
+
+def fetch_jan1_prices():
+    """Fetch the Jan 1 USD price for each coin via CoinGecko /coins/{id}/history.
+    One call per coin — runs once per year, result saved to ytd_cache.json."""
+    year  = dt.datetime.utcnow().year
+    date  = f"01-01-{year}"   # CoinGecko DD-MM-YYYY format
+    jan1  = {}
+    for i, (ticker, cg_id) in enumerate(COINGECKO_IDS.items()):
+        if i > 0:
+            time.sleep(8)
+        try:
+            data  = _cg_get(f"/coins/{cg_id}/history", {"date": date, "localization": "false"})
+            price = data.get("market_data", {}).get("current_price", {}).get("usd")
+            jan1[ticker] = price
+            print(f"    {ticker}: ${price:,.2f}" if price else f"    {ticker}: N/A")
+        except Exception as e:
+            print(f"    {ticker}: error — {e}")
+            jan1[ticker] = None
+    return jan1
+
+def compute_ytd(jan1_prices_usd, current_prices_usd):
+    """Calculate YTD % from cached Jan 1 prices and today's CMC prices."""
+    ytd_map = {}
+    for ticker in COINGECKO_IDS:
+        jan1    = jan1_prices_usd.get(ticker)
+        current = current_prices_usd.get(ticker)
+        if jan1 and jan1 > 0 and current:
+            ytd_map[ticker] = round((current - jan1) / jan1 * 100, 2)
+        else:
+            ytd_map[ticker] = None
+    return ytd_map
+
+
+def fetch_coingecko_data():
     """
     Single CoinGecko market_chart/range call per coin (365-day window).
-    Returns: (ytd_map, low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map)
+    Returns: (low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map)
     All dicts keyed by display ticker.
-    - YTD:      Jan 1 price → current CMC price
     - Low/High: min/max over the full 365-day price range (true 52-week range)
     - vol_1d:   most recent day's trading volume (USD)
     - vol_1w:   7-day cumulative volume (USD)
     - vol_1m:   30-day cumulative volume (USD)
     - avg_vol:  7-day average daily volume (USD) — used as 'Avg Vol' on metrics page
+    YTD is now handled separately via ytd_cache.json (see compute_ytd).
     """
     today   = dt.datetime.utcnow()
     from_ts = int((today - dt.timedelta(days=365)).timestamp())
     to_ts   = int(today.timestamp())
-    jan1_ms = int(dt.datetime(today.year, 1, 1).timestamp() * 1000)  # CoinGecko uses ms
 
-    ytd_map     = {}
     low_map     = {}
     high_map    = {}
     vol_1d_map  = {}
@@ -231,23 +277,12 @@ def fetch_coingecko_data(current_prices_usd):
             volumes = data.get("total_volumes", []) # [[timestamp_ms, volume_usd], ...]
 
             if len(prices) >= 2:
-                # 52-week high/low
                 vals             = [p[1] for p in prices]
                 low_map[ticker]  = min(vals)
                 high_map[ticker] = max(vals)
-
-                # YTD: first price on or after Jan 1
-                ytd_pts    = [p for p in prices if p[0] >= jan1_ms]
-                jan1_price = ytd_pts[0][1] if ytd_pts else prices[0][1]
-                current    = current_prices_usd.get(ticker)
-                if jan1_price and jan1_price > 0 and current:
-                    ytd_map[ticker] = round((current - jan1_price) / jan1_price * 100, 2)
-                else:
-                    ytd_map[ticker] = None
             else:
-                ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
+                low_map[ticker] = high_map[ticker] = None
 
-            # Volume (daily granularity for 365-day range)
             if len(volumes) >= 7:
                 vol_1d_map[ticker]  = volumes[-1][1]
                 last_7              = [v[1] for v in volumes[-7:]]
@@ -260,13 +295,12 @@ def fetch_coingecko_data(current_prices_usd):
 
         except Exception as e:
             print(f"    [CoinGecko {ticker}: {e}]", end=" ")
-            ytd_map[ticker] = low_map[ticker] = high_map[ticker] = None
+            low_map[ticker] = high_map[ticker] = None
             vol_1d_map[ticker] = vol_1w_map[ticker] = vol_1m_map[ticker] = avg_vol_map[ticker] = None
-            # After exhausting all retries the burst window is saturated — wait 60s to clear it
             print(f"    [CoinGecko rate-limit cooldown 60s]", end=" ")
             time.sleep(60)
 
-    return ytd_map, low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map
+    return low_map, high_map, vol_1d_map, vol_1w_map, vol_1m_map, avg_vol_map
 
 
 
@@ -469,20 +503,33 @@ def main():
     cmc_quotes = fetch_cmc_quotes()
     print(f"  Got {len(cmc_quotes)} quotes from CMC")
 
-    # Build current USD price map for CoinGecko YTD calculation
+    # Build current USD price map
     current_prices_usd = {
         ticker: cmc_quotes[v[0]]["price_usd"]
         for ticker, v in STOCKS.items()
         if v[0] in cmc_quotes
     }
 
-    print("Fetching YTD + 52-week range + volume from CoinGecko (365-day window)...")
+    # ── YTD: load from cache, fetch Jan 1 prices once if missing/stale ──────────
+    jan1_prices = load_ytd_cache()
+    if jan1_prices is None:
+        print(f"Fetching Jan 1 {dt.datetime.utcnow().year} prices from CoinGecko (YTD cache)...")
+        jan1_prices = fetch_jan1_prices()
+        save_ytd_cache(jan1_prices)
+        print(f"  Cached {sum(1 for v in jan1_prices.values() if v is not None)}/{len(jan1_prices)} prices")
+    else:
+        print(f"  YTD cache hit ({dt.datetime.utcnow().year}) — skipping Jan 1 fetch")
+    ytd_map = compute_ytd(jan1_prices, current_prices_usd)
+    print(f"  YTD computed for {sum(1 for v in ytd_map.values() if v is not None)}/{len(ytd_map)} coins")
+
+    # ── 52-week range + volume from CoinGecko (365-day chart) ───────────────────
+    print("Fetching 52-week range + volume from CoinGecko (365-day window)...")
     try:
-        ytd_map, low_map, high_map, vol_1d_cg, vol_1w_cg, vol_1m_cg, avg_vol_cg = fetch_coingecko_data(current_prices_usd)
-        print(f"  Fetched for {sum(1 for v in ytd_map.values() if v is not None)}/{len(ytd_map)} coins")
+        low_map, high_map, vol_1d_cg, vol_1w_cg, vol_1m_cg, avg_vol_cg = fetch_coingecko_data()
+        print(f"  Fetched range/volume for {sum(1 for v in low_map.values() if v is not None)}/{len(low_map)} coins")
     except Exception as e:
-        print(f"  CoinGecko unavailable ({e}) — no YTD / 52w range / CG volume")
-        ytd_map, low_map, high_map = {}, {}, {}
+        print(f"  CoinGecko unavailable ({e}) — no 52w range / CG volume")
+        low_map, high_map = {}, {}
         vol_1d_cg, vol_1w_cg, vol_1m_cg, avg_vol_cg = {}, {}, {}, {}
 
     analyzer = SentimentIntensityAnalyzer() if _VADER_OK else None

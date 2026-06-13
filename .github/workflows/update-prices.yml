@@ -113,14 +113,14 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           SECTOR="${{ inputs.sector }}"
           LABEL="${SECTOR:-all sectors}"
-          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js Energy/prices.json Energy/prices-data.js; then
+          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json Energy/prices.json Energy/prices-data.js; then
             echo "No price changes."
           else
             git add AI/index.html AI/prices.json AI/prices-data.js
             git add Biotech/index.html Biotech/prices.json Biotech/prices-data.js
             git add Defence/index.html Defence/prices.json Defence/prices-data.js
             git add Tech/prices.json Tech/prices-data.js
-            git add Crypto/prices.json Crypto/prices-data.js
+            git add Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json
             git add Energy/prices.json Energy/prices-data.js
             git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
