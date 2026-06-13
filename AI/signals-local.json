@@ -1,9 +1,141 @@
 {
-  "updated": "2026-06-12 12:00",
+  "updated": "2026-06-13 09:52",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SNDK has surged +619% YTD and +36.82% in the last month, with a positive news sentiment of 0.172. Web search confirms a structural NAND shortage driven by AI demand, with Mizuho raising its price target to $2,200 and the stock approaching $2,000 [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/261964556-sandisk-nvidia-dram-nand-chip-essd-spacex-ipo-2000-price-tradingkey).",
+      "drivers": [
+        "+619% YTD",
+        "+36.82% 1M",
+        "Mizuho $2,200 PT",
+        "NAND supply shortage"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Kioxia (285A) is up +615% YTD and +76.14% in the last month, with a positive news sentiment of 0.164. The stock is Japan's most valuable firm as AI memory demand surges, mirroring the broader memory rally.",
+      "drivers": [
+        "+615% YTD",
+        "+76.14% 1M",
+        "Japan's most valuable firm",
+        "AI memory demand"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "WDC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "WDC is up +200% YTD and +13.96% in the last month, with a positive news sentiment of 0.092. Web search highlights a 6% jump on Friday amid the AI storage melt-up, with strong Q3 FY2026 earnings beating estimates [247wallst.com](https://247wallst.com/investing/2026/06/12/sandisk-and-western-digital-jump-6-as-traders-battle-over-the-ai-storage-stock-melt-up/).",
+      "drivers": [
+        "+200% YTD",
+        "+13.96% 1M",
+        "Q3 earnings beat",
+        "AI storage tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "MU is up +211% YTD and +22.15% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.124. Web search shows memory stocks rallying on AI demand and a potential Iran peace deal, with MU surging 11.7% [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/mu-stx-wdc-dram-memory-stocks-rally-amid-hopes-of-iran-peace-deal-sndk-hits-fresh-high/cZK51IQR7P4).",
+      "drivers": [
+        "+211% YTD",
+        "+22.15% 1M",
+        "Strong_buy consensus",
+        "Memory sector rally"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "STX",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "STX is up +224% YTD and +13.91% in the last month, with the highest news sentiment in the memory group at 0.439. Web search confirms a 5.25% rise on AI-driven HDD demand and structural undersupply [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/261964556-sandisk-nvidia-dram-nand-chip-essd-spacex-ipo-2000-price-tradingkey).",
+      "drivers": [
+        "+224% YTD",
+        "+13.91% 1M",
+        "News sentiment 0.439",
+        "HDD AI demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "MRVL is up +213% YTD and +57.18% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.114. The stock benefits from AI-driven data center demand for custom silicon and networking.",
+      "drivers": [
+        "+213% YTD",
+        "+57.18% 1M",
+        "Strong_buy consensus",
+        "AI data center demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "DELL is up +212% YTD and +62.21% in the last month, with a positive news sentiment of 0.001. Web search highlights a $1.6B agreement with IREN for Blackwell AI systems, reinforcing its AI infrastructure play.",
+      "drivers": [
+        "+212% YTD",
+        "+62.21% 1M",
+        "$1.6B IREN deal",
+        "AI infrastructure play"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CRDO",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "CRDO is up +75% YTD and +32.45% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.093. The stock is a key player in high-speed connectivity for AI data centers.",
+      "drivers": [
+        "+75% YTD",
+        "+32.45% 1M",
+        "Strong_buy consensus",
+        "AI connectivity play"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SMTC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SMTC is up +122% YTD and +19.30% in the last month, with a positive news sentiment of 0.206. The stock benefits from AI-driven demand for analog and mixed-signal semiconductors.",
+      "drivers": [
+        "+122% YTD",
+        "+19.30% 1M",
+        "News sentiment 0.206",
+        "AI semiconductor demand"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CORZ",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "CORZ is up +73% YTD and +15% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.277. The stock is a high-beta AI compute play with strong momentum.",
+      "drivers": [
+        "+73% YTD",
+        "+15% 1M",
+        "Strong_buy consensus",
+        "AI compute play"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SNDK",
@@ -132,138 +264,6 @@
         "strong_buy consensus",
         "+11.6% 1D bounce",
         "AI compute infrastructure play"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +196.84%, P/E 44.25, analyst strong_buy, and web catalysts highlight multi-year memory shortage and HBM4 certification for Nvidia (247wallst.com).",
-      "drivers": [
-        "+196.84% YTD",
-        "P/E 44.25",
-        "strong_buy consensus",
-        "multi-year memory shortage catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +109.30%, 1M +15.37%, analyst strong_buy and positive news sentiment 0.206 with web-reported upside potential of ~29%.",
-      "drivers": [
-        "+109.30% YTD",
-        "+15.37% 1M",
-        "strong_buy consensus",
-        "analyst upside target"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CRDO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +63.61%, 1M +11.46%, 1D +5.72% momentum, analyst strong_buy, news sentiment 0.315, and web reports of continued advances.",
-      "drivers": [
-        "+63.61% YTD",
-        "+11.46% 1M",
-        "strong_buy consensus",
-        "positive news sentiment 0.315"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "DELL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +200.97%, 1M +54.54% momentum, reasonable P/E 30.4, and buy analyst rating despite recent weekly pullback.",
-      "drivers": [
-        "+200.97% YTD",
-        "+54.54% 1M",
-        "P/E 30.4",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +198.92%, 1M +56.22%, strong_buy consensus; web catalysts include Nvidia CEO calling it a potential trillion-dollar company and S&P 500 inclusion.",
-      "drivers": [
-        "+198.92% YTD",
-        "+56.22% 1M",
-        "strong_buy consensus",
-        "Nvidia CEO endorsement"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "285A",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +521.15%, 1M +53.46% huge momentum, P/E 69.86, buy consensus, but elevated valuation and weekly pullback require caution.",
-      "drivers": [
-        "+521.15% YTD",
-        "+53.46% 1M",
-        "buy consensus",
-        "P/E 69.86"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "WULF",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "YTD +98.59%, 1M +8.26%, strong_buy consensus, positive news sentiment 0.349, but lacks earnings and carries high short interest 25.85%.",
-      "drivers": [
-        "+98.59% YTD",
-        "strong_buy consensus",
-        "positive news sentiment 0.349",
-        "high short interest 25.85%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CORZ",
-      "signal": "strong_buy",
-      "confidence": 0.5,
-      "rationale": "YTD +68.92%, 1M +17.69%, strong_buy consensus, B. Riley PT raise, but no trailing P/E and short interest 25.59% increase risk.",
-      "drivers": [
-        "+68.92% YTD",
-        "+17.69% 1M",
-        "strong_buy consensus",
-        "B. Riley PT raise"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.45,
-      "rationale": "YTD +119.72%, 1M +10.24%, strong_buy consensus, but negative news sentiment -0.008 and high beta 6.044 indicate elevated risk.",
-      "drivers": [
-        "+119.72% YTD",
-        "+10.24% 1M",
-        "strong_buy consensus",
-        "high beta 6.044"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +498.22%, P/E 56.18, buy consensus; web catalysts cite multi-year memory shortage and analyst target hikes (247wallst.com).",
-      "drivers": [
-        "+498.22% YTD",
-        "P/E 56.18",
-        "buy consensus",
-        "multi-year memory shortage catalyst"
       ]
     }
   ]
