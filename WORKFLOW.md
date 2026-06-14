@@ -33,6 +33,10 @@ git rebase origin/main
 git push origin dev
 ```
 
+## Push to all branches
+
+When the user says **"check branches.md and push to all"**: read `branches.md` and push the current commit to **every branch listed** — including `main`, `dev`, `claude/magical-davinci-zYLYI`, and any active Claude worktree branch.
+
 ## Branch hygiene
 
 - All work on `dev`

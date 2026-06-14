@@ -40,7 +40,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 │   ├── Tech_update_prices.py
 │   ├── Tech_generate_signals_local.py
 │   └── ...
-├── Crypto/                 ← Crypto sector (19 coins, 6 categories)
+├── Crypto/                 ← Crypto sector (34 coins, 7 categories)
 │   ├── index.html
 │   ├── Crypto_update_prices.py
 │   ├── Crypto_generate_signals_local.py
@@ -56,7 +56,8 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 ├── AGENTS.md               ← contributor guide (read first)
 ├── WORKFLOW.md             ← dev → main shipping process
 ├── CHANGELOG.md            ← change history
-└── FEATURES.md             ← backlog
+├── FEATURES.md             ← backlog
+└── branches.md             ← branch map + "push to all" convention
 ```
 
 ## Development

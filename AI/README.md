@@ -2,7 +2,7 @@
 
 Tracks 48 AI infrastructure stocks in GBP with live prices, fundamentals, news sentiment, and AI-generated signals.
 
-**Live: [kobildn.github.io/Stocks/AI/](https://kobildn.github.io/Stocks/AI/)**
+**Live: [stocks-4qw.pages.dev/AI/](https://stocks-4qw.pages.dev/AI/)**
 
 ## Pages
 
@@ -35,7 +35,7 @@ Tracks 48 AI infrastructure stocks in GBP with live prices, fundamentals, news s
 
 ## Automated updates
 
-- **Prices** — GitHub Actions twice daily on weekdays (13:00 UTC + 21:30 UTC) via `yfinance`. Writes `index.html`, `prices.json`, `prices-data.js`.
+- **Prices** — GitHub Actions three times daily on weekdays (08:00, 14:30, 20:30 UTC) via `yfinance`. Writes `index.html`, `prices.json`, `prices-data.js`.
 - **Signals** — GitHub Actions weekly (Mondays 07:00 UTC) via OpenRouter (`deepseek/deepseek-v4-flash`). Writes `signals-local.json`, `signals-local.js`. Uses `OPENROUTER_API_KEY` repository secret.
 
 ## Shared stylesheet

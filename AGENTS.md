@@ -78,9 +78,9 @@ Stocks/
 │   ├── AI_update_prices.py ← fetches prices from Yahoo Finance → writes prices-data.js
 │   └── ...
 ├── Biotech\            ← Biotech sector (30 stocks, 9 categories)
-├── Defence\            ← Defence & Aerospace sector (28 stocks, 6 categories)
+├── Defence\            ← Defence & Aerospace sector (29 stocks, 6 categories)
 ├── Tech\               ← Technology sector (31 stocks, 6 categories)
-├── Crypto\             ← Crypto sector (19 coins, 6 categories)
+├── Crypto\             ← Crypto sector (34 coins, 7 categories)
 └── Energy\             ← Energy sector (20 stocks, 5 categories)
 ```
 
@@ -170,19 +170,18 @@ Generate the key pair from **T212 app → Settings → API (Beta)**. The secret 
 
 ## Local portfolio snapshot (container-level — never in git)
 
-`G:\My Drive\coding\ai\Stocks\t212_mcp\` is outside both git repos — nothing here can ever be committed or reach GitHub.
+`G:\My Drive\coding\ai\Stocks\Portfolio-Local\` is outside both git repos — nothing here can ever be committed or reach GitHub.
 
 | File | Purpose |
 |---|---|
 | `.key` | `KEY_ID:SECRET_KEY` — T212 Basic auth credentials |
 | `portfolio.py` | Fetches live T212 positions + loads latest export from STOCKSMain; merges and writes all outputs |
 | `run.bat` | Double-click to run `portfolio.py` |
-| `snapshot.html` | Output — full dashboard (open in browser); 1920px max-width |
-| `snapshot.json` | Output — full merged data (paste to Claude for analysis) |
-| `snapshot.txt` | Output — compact table (paste to DeepSeek or any AI) |
+| `portfolio.html` | Output — full dashboard (open in browser); 1920px max-width |
+| `portfolio_analysis.json` | Output — AI prompt data (also embedded in HTML for Copy AI Prompt button) |
 | `portfolio_history.json` | Cumulative value history — one record appended per run; powers the chart |
 
-**`snapshot.html` dashboard layout** (1920px max-width):
+**`portfolio.html` dashboard layout** (1920px max-width):
 - **Cards column** — Total Value / Invested / Free Cash / T212 P&L (USD-based) / Real P&L GBP (incl. FX drag = `total_value − free_cash − invested`) / Today's Movers
 - **Sector allocation blocks** — equal-width variable-height bar blocks; biggest sector tallest; 1D weighted-avg return floats above each block in green/red; sorted biggest→smallest; per-sector colours (AI=green, Biotech=purple, Crypto=orange, Defence=red, Energy=yellow, Tech=blue)
 - **Portfolio value chart** — line chart of `total_value` + `invested` over time from `portfolio_history.json`
