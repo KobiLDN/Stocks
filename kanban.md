@@ -2,7 +2,15 @@
 
 ## Backlog
 
-- [ ] **Global Mega-Cap Leaders sector** — 50 stocks, 7 categories (Big Tech, Financials, Healthcare, Consumer, Energy & Industrials, Tech & Semis, Global & Growth); full 7-page suite + hub card + workflows
+- [ ] **Global Mega-Cap Leaders sector** — 50 stocks across 6–7 categories; full 7-page suite + hub card + workflows
+  - Big Tech (6): MSFT, AAPL, AMZN, GOOGL, META, NVDA
+  - Financials (6): BRK-B, JPM, V, MA, BAC, MS
+  - Healthcare (6): LLY, JNJ, UNH, ABBV, NVO, TMO
+  - Consumer (7): WMT, COST, KO, PEP, HD, MCD, PG
+  - Energy & Industrials (6): XOM, CVX, SHEL, TM, NESN (NSRGY), 2222.SR
+  - Tech & Semis (12): AVGO, TSM, ASML, QCOM, ORCL, SAP, CRM, ADBE, CSCO, IBM, ACN, AMD
+  - Global & Growth (7): BABA, TCEHY, SSNLF, LVMUY, TSLA, NFLX, PLTR
+  - Note: Samsung/Tencent/Saudi Aramco kept in — expect some N/A on return fields
 - [ ] **Crypto signals generator** — `Crypto_generate_signals_local.py` + `generate-signals.yml` entry; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle)
 - [ ] **Verify Crypto YTD cache on live** — confirm GitHub Actions run picks up `ytd_cache.json` and YTD column populates correctly on `stocks-4qw.pages.dev/Crypto/`
 

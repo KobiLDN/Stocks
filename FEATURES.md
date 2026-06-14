@@ -3,6 +3,8 @@
 ## Backlog
 
 - **Global Mega-Cap Leaders sector** — 50 stocks across 6–7 categories; full 7-page suite + hub card + workflows
+
+- **Crypto signals generator** — `Crypto_generate_signals_local.py` + entry in `generate-signals.yml`; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle, category rotation)
   - Big Tech (6): MSFT, AAPL, AMZN, GOOGL, META, NVDA
   - Financials (6): BRK-B, JPM, V, MA, BAC, MS
   - Healthcare (6): LLY, JNJ, UNH, ABBV, NVO, TMO
@@ -45,8 +47,8 @@
 - **Energy sector** — 20 stocks across 5 categories (Oil Majors: XOM/CVX/SHEL/BP/TTE/EQNR; E&P/Refining: COP/OXY/EOG/MPC/VLO; Oilfield Services: SLB/HAL/BKR; Utilities: NEE/SSE.L; Clean Energy: ENPH/FSLR/BEPC/DNNGY); full 7-page suite; Energy card added to all 35 existing sector pages; hub card + SECTORS array entry; both GitHub Actions workflows updated (`Energy/`, `index.html`, `.github/workflows/update-prices.yml`, `.github/workflows/generate-signals.yml`)
 
 - **Crypto sector** — 34 coins across 7 categories (Bitcoin; Layer 1: ETH/SOL/BNB/ADA/AVAX; Payments: XRP/XLM/TRX; Emerging: SUI/HBAR/TON/ALGO/MINA; Infra: POL/DOT/LINK; Meme: DOGE/PEPE; AI Tokens: TAO/FET/RNDR/OCEAN/GRT/AGIX/NMR/ALT/AIOZ/ARKM/WLD/NEAR/ICP/KAITO/VIRTUAL); full 7-page suite; price pipeline: CoinMarketCap API (real-time, 1 bulk call; RNDR symbol "RENDER" post-rebrand) + CoinGecko (true Jan-1 YTD + 52-week range + vol_1d/vol_1w/vol_1m/avg_vol from total_volumes — all from one 365-day market_chart/range call per coin, 8s sleep, 60s post-failure cooldown); news cascade: StockData.org → yfinance → CoinStats; 7-day staleness filter; ticker links → CoinGecko coin pages; CMC 90d fallback removed; prices updated 3× daily via GitHub Actions
-- **AI sector** — 48 stocks across 12 categories; metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
-- **Biotech sector** — 30 stocks across 9 categories (large-cap, UK listed, gene editing, genomics, oncology, mRNA, rare disease, metabolic, neuroscience); metrics, news, signals, heatmap, charts, calculator; prices updated twice daily via GitHub Actions
+- **AI sector** — 48 stocks across 12 categories; metrics, news, signals, heatmap, charts, calculator; prices updated 3× daily via GitHub Actions
+- **Biotech sector** — 30 stocks across 9 categories (large-cap, UK listed, gene editing, genomics, oncology, mRNA, rare disease, metabolic, neuroscience); metrics, news, signals, heatmap, charts, calculator; prices updated 3× daily via GitHub Actions
 - **Technology sector** — 31 stocks across 6 categories (mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, hardware/infra); full 7-page suite; prices and signals via GitHub Actions
 - **Defence & Aerospace sector** — 29 stocks across 6 categories (US Primes, UK/European, Cyber/Intel, Drones: Space: SPCX/RKLB/PL/ASTS, Weapons/Systems); full 7-page suite; prices and signals via GitHub Actions
 - **Hub signals picks** — each sector card on the hub shows the top 5 AI signal picks fetched live from `signals-local.json` + `prices-data.js`; metrics-style full-bleed table (ticker, signal badge, 1D/1W/YTD, confidence); clicking the table navigates to that sector's signals page
