@@ -16,7 +16,7 @@ Same GitHub remote for all: `https://github.com/KobiLDN/Stocks.git`
 | `main` | Auto (cron, 3×/day on weekdays) | Live site — GitHub Actions pushes prices here, Cloudflare Pages deploys from it |
 | `dev` | Manual (local work) | Development branch — merge to main when ready to go live |
 | `claude/magical-davinci-zYLYI` | On demand | Cross-device branch — used from work PC or mobile |
-| `claude/agitated-elgamal-9e6c49` | This session | Claude worktree for this cloud session |
+| `claude/agitated-elgamal-9e6c49` | 2026-06-14 | Last Claude worktree session (worktrees now disabled) |
 
 ## Workflow
 

@@ -2,6 +2,12 @@
 
 This file is for any AI or human contributor working in this repo.
 
+## Session role
+
+This session manages **Stocks only** (`STOCKSDev` / `STOCKSMain`). Portfolio is a separate Claude session at `G:\My Drive\coding\ai\portfolio\`.
+
+Worktrees are disabled (`"worktree": false` in `.claude/settings.json`) — sessions open directly in `STOCKSDev/`.
+
 ## BRANCH RULES — READ BEFORE TOUCHING ANYTHING
 
 > **ALL changes go to `dev` only. Never push to `main` without explicit user instruction.**
