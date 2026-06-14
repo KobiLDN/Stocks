@@ -170,7 +170,7 @@ Generate the key pair from **T212 app → Settings → API (Beta)**. The secret 
 
 ## Local portfolio snapshot (container-level — never in git)
 
-`G:\My Drive\coding\ai\Stocks\Portfolio-Local\` is outside both git repos — nothing here can ever be committed or reach GitHub.
+`G:\My Drive\coding\ai\portfolio\Portfolio-Local\` is outside both git repos — nothing here can ever be committed or reach GitHub.
 
 | File | Purpose |
 |---|---|
