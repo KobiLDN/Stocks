@@ -1,40 +1,47 @@
 {
-  "updated": "2026-06-13 09:52",
-  "fx_gbp_usd": 1.3407,
+  "updated": "2026-06-15 08:02",
+  "fx_gbp_usd": 1.3442,
   "stocks": [
     {
       "ticker": "LMT",
       "company_name": "Lockheed Martin",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "403",
+      "price_gbp": "402",
       "price_usd": 540.33,
       "change_1d": "-1.40%",
       "change_1w": "+3.16%",
       "change_1m": "+4.60%",
       "change_ytd": "+9.99%",
       "return_1yr": "+16%",
-      "low_gbp": "306",
-      "high_gbp": "516",
+      "low_gbp": "305",
+      "high_gbp": "515",
       "bar_pct": 46,
-      "market_cap_gbp_b": 92.92,
+      "market_cap_gbp_b": 92.682,
       "beta": 0.106,
       "pe_ratio": 26.18,
       "avg_volume_m": 1.41,
       "div_yield_pct": 255.0,
       "short_pct": 1.37,
-      "analyst": "none",
-      "analyst_score": null,
+      "analyst": "hold",
+      "analyst_score": 2.62,
       "vol_1d": 1028800,
       "vol_1w": 5209500,
       "vol_1m": 25417700,
       "news": [
         {
-          "title": "SpaceX stock gains, space companies fall, chips mixed on IPO news",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/spacex-stock-gains-space-companies-fall-chips-mixed-on-ipo-news-195735942.html",
-          "published": 1781294255,
-          "sentiment": 0.34
+          "title": "Lockheed Martin (LMT) Stock After New US$10b Defense Awards Is The Undervaluation Case Intact",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-stock-us-211612837.html",
+          "published": 1781385372,
+          "sentiment": 0.649
+        },
+        {
+          "title": "3 High Backlog Defense Stocks to Buy in June",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/13/3-high-backlog-defense-stocks-to-buy-in-june/",
+          "published": 1781353810,
+          "sentiment": 0.128
         },
         {
           "title": "Lockheed Martin (LMT) Stock Drops Despite Market Gains: Important Facts to Note",
@@ -44,28 +51,21 @@
           "sentiment": -0.388
         },
         {
+          "title": "SpaceX stock gains, space companies fall, chips mixed on IPO news",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/spacex-stock-gains-space-companies-fall-chips-mixed-on-ipo-news-195735942.html",
+          "published": 1781294255,
+          "sentiment": 0.34
+        },
+        {
           "title": "2 Turnaround Defense Stocks Hiding in the ITA ETF Tell a Very Clear Story: The Iran War May Not Be Over",
           "publisher": "Barchart",
           "url": "https://www.barchart.com/story/news/2441801/2-turnaround-defense-stocks-hiding-in-the-ita-etf-tell-a-very-clear-story-the-iran-war-may-not-be-over",
           "published": 1781273637,
           "sentiment": -0.403
-        },
-        {
-          "title": "3 S&P 500 Stocks Walking a Fine Line",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-p-500-stocks-walking-135720757.html",
-          "published": 1781272640,
-          "sentiment": 0.202
-        },
-        {
-          "title": "Acquisition Odds: How These 4 Cult Stocks Stack Up as Buyout Targets",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/12/acquisition-odds-how-these-4-cult-stocks-stack-up-as-buyout-targets/",
-          "published": 1781270153,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.05
+      "news_sentiment": 0.065
     },
     {
       "ticker": "RTX",
@@ -82,7 +82,7 @@
       "low_gbp": "105",
       "high_gbp": "160",
       "bar_pct": 58,
-      "market_cap_gbp_b": 184.344,
+      "market_cap_gbp_b": 183.872,
       "beta": 0.306,
       "pe_ratio": 34.5,
       "avg_volume_m": 5.3,
@@ -94,6 +94,13 @@
       "vol_1w": 28014500,
       "vol_1m": 124452000,
       "news": [
+        {
+          "title": "3 High Backlog Defense Stocks to Buy in June",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/13/3-high-backlog-defense-stocks-to-buy-in-june/",
+          "published": 1781353810,
+          "sentiment": 0.128
+        },
         {
           "title": "2 Turnaround Defense Stocks Hiding in the ITA ETF Tell a Very Clear Story: The Iran War May Not Be Over",
           "publisher": "Barchart",
@@ -121,33 +128,26 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/boeings-global-services-business-become-171100009.html",
           "published": 1781197860,
           "sentiment": 0.382
-        },
-        {
-          "title": "L3Harris Secures VAMPIRE Order to Strengthen Counter-Drone Defense",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/l3harris-secures-vampire-order-strengthen-152500768.html",
-          "published": 1781191500,
-          "sentiment": 0.625
         }
       ],
-      "news_sentiment": 0.25
+      "news_sentiment": 0.151
     },
     {
       "ticker": "NOC",
       "company_name": "Northrop Grumman",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "410",
+      "price_gbp": "409",
       "price_usd": 550.33,
       "change_1d": "-0.34%",
       "change_1w": "+1.09%",
       "change_1m": "+0.17%",
       "change_ytd": "-5.32%",
       "return_1yr": "+11%",
-      "low_gbp": "359",
-      "high_gbp": "577",
+      "low_gbp": "358",
+      "high_gbp": "576",
       "bar_pct": 24,
-      "market_cap_gbp_b": 58.3,
+      "market_cap_gbp_b": 58.151,
       "beta": -0.121,
       "pe_ratio": 17.24,
       "avg_volume_m": 0.85,
@@ -159,6 +159,13 @@
       "vol_1w": 4450200,
       "vol_1m": 20846500,
       "news": [
+        {
+          "title": "3 High Backlog Defense Stocks to Buy in June",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/13/3-high-backlog-defense-stocks-to-buy-in-june/",
+          "published": 1781353810,
+          "sentiment": 0.128
+        },
         {
           "title": "Will Jackal Missile Test Progress and Softer Growth Expectations Change Northrop Grumman's (NOC) Narrative?",
           "publisher": "Simply Wall St.",
@@ -186,13 +193,6 @@
           "url": "https://finance.yahoo.com/news/brink-ipo-musks-spacex-already-100308599.html",
           "published": 1781172188,
           "sentiment": 0.0
-        },
-        {
-          "title": "Update: Trump Administration Reportedly to Meet Defense Companies on Ramping Up Production",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/economy/policy/articles/trump-administration-reportedly-meet-defense-205740222.html",
-          "published": 1781125060,
-          "sentiment": 0.128
         }
       ],
       "news_sentiment": 0.243
@@ -202,7 +202,7 @@
       "company_name": "General Dynamics",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "269",
+      "price_gbp": "268",
       "price_usd": 360.22,
       "change_1d": "+0.45%",
       "change_1w": "+3.98%",
@@ -210,9 +210,9 @@
       "change_ytd": "+5.82%",
       "return_1yr": "+29%",
       "low_gbp": "205",
-      "high_gbp": "276",
+      "high_gbp": "275",
       "bar_pct": 90,
-      "market_cap_gbp_b": 72.657,
+      "market_cap_gbp_b": 72.471,
       "beta": 0.341,
       "pe_ratio": 22.67,
       "avg_volume_m": 1.32,
@@ -225,6 +225,13 @@
       "vol_1m": 22314800,
       "news": [
         {
+          "title": "Street Calls of the Week",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/street-calls-week-103002882.html",
+          "published": 1781433002,
+          "sentiment": 0.0
+        },
+        {
           "title": "General Dynamics (GD) Stock After Strong Multi\u2011Year Run Are Recent Gains Justified By Cash Flows",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-gd-stock-strong-080622646.html",
@@ -232,14 +239,14 @@
           "sentiment": 0.859
         },
         {
-          "title": "Forget AI Software, The Smart Money is Betting Billions on Autonomous Weapons Now",
+          "title": "Forget AI Software: Why the Smart Money is Betting Billions on Autonomous Weapons",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/06/11/forget-ai-software-why-the-smart-money-is-betting-billions-on-autonomous-weapons/",
           "published": 1781187385,
           "sentiment": -0.273
         },
         {
-          "title": "Forget AI Software: Why the Smart Money is Betting Billions on Autonomous Weapons",
+          "title": "Forget AI Software, The Smart Money is Betting Billions on Autonomous Weapons Now",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/06/11/forget-ai-software-why-the-smart-money-is-betting-billions-on-autonomous-weapons/",
           "published": 1781187385,
@@ -251,23 +258,16 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/intel-upgraded-reddit-initiated-wall-140337510.html",
           "published": 1781185111,
           "sentiment": 0.202
-        },
-        {
-          "title": "General Dynamics upgraded to Buy as submarine boom fuels growth outlook",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-upgraded-buy-submarine-133555977.html",
-          "published": 1781184955,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.217
+      "news_sentiment": 0.103
     },
     {
       "ticker": "HII",
       "company_name": "Huntington Ingalls Industries",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "222",
+      "price_gbp": "221",
       "price_usd": 297.68,
       "change_1d": "-0.44%",
       "change_1w": "+1.58%",
@@ -275,9 +275,9 @@
       "change_ytd": "-14.25%",
       "return_1yr": "+30%",
       "low_gbp": "169",
-      "high_gbp": "343",
+      "high_gbp": "342",
       "bar_pct": 30,
-      "market_cap_gbp_b": 8.749,
+      "market_cap_gbp_b": 8.726,
       "beta": 0.232,
       "pe_ratio": 19.34,
       "avg_volume_m": 0.52,
@@ -332,28 +332,35 @@
       "company_name": "L3Harris Technologies",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "230",
+      "price_gbp": "229",
       "price_usd": 307.79,
       "change_1d": "-1.44%",
       "change_1w": "-0.01%",
       "change_1m": "+1.35%",
       "change_ytd": "+1.85%",
       "return_1yr": "+24%",
-      "low_gbp": "182",
-      "high_gbp": "283",
+      "low_gbp": "181",
+      "high_gbp": "282",
       "bar_pct": 47,
-      "market_cap_gbp_b": 42.767,
+      "market_cap_gbp_b": 42.658,
       "beta": 0.746,
       "pe_ratio": 33.46,
       "avg_volume_m": 1.32,
       "div_yield_pct": 162.0,
       "short_pct": 1.47,
-      "analyst": "buy",
-      "analyst_score": 1.62,
+      "analyst": "none",
+      "analyst_score": null,
       "vol_1d": 878300,
       "vol_1w": 4784400,
       "vol_1m": 23427000,
       "news": [
+        {
+          "title": "With EPS Growth And More, L3Harris Technologies (NYSE:LHX) Makes An Interesting Case",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/eps-growth-more-l3harris-technologies-130006610.html",
+          "published": 1781442006,
+          "sentiment": 0.649
+        },
         {
           "title": "L3Harris Secures VAMPIRE Order to Strengthen Counter-Drone Defense",
           "publisher": "Zacks",
@@ -381,16 +388,9 @@
           "url": "https://www.barrons.com/articles/defense-stocks-today-trump-iran-8a0302f6?siteid=yhoof2&yptr=yahoo",
           "published": 1781113800,
           "sentiment": -0.501
-        },
-        {
-          "title": "Is L3Harris Technologies, Inc. (LHX) A Good Stock To Buy Now?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/l3harris-technologies-inc-lhx-good-164727388.html",
-          "published": 1781110047,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.241
+      "news_sentiment": 0.282
     },
     {
       "ticker": "BA",
@@ -405,9 +405,9 @@
       "change_ytd": "-3.83%",
       "return_1yr": "+9%",
       "low_gbp": "132",
-      "high_gbp": "190",
+      "high_gbp": "189",
       "bar_pct": 54,
-      "market_cap_gbp_b": 128.793,
+      "market_cap_gbp_b": 128.464,
       "beta": 1.198,
       "pe_ratio": 86.92,
       "avg_volume_m": 6.8,
@@ -419,6 +419,13 @@
       "vol_1w": 28254900,
       "vol_1m": 160069500,
       "news": [
+        {
+          "title": "Boeing Updates Capacity And Defense Progress As Shares Trade Below Targets",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/boeing-updates-capacity-defense-progress-010925885.html",
+          "published": 1781485765,
+          "sentiment": 0.67
+        },
         {
           "title": "SpaceX stock gains, space companies fall, chips mixed on IPO news",
           "publisher": "Yahoo Finance Video",
@@ -446,16 +453,9 @@
           "url": "https://247wallst.com/investing/2026/06/12/acquisition-odds-how-these-4-cult-stocks-stack-up-as-buyout-targets/",
           "published": 1781270153,
           "sentiment": 0.0
-        },
-        {
-          "title": "3 Stocks That Might Be Up To 39.8% Below Their Estimated Intrinsic Value",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-might-39-8-113802585.html",
-          "published": 1781264282,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.215
+      "news_sentiment": 0.281
     },
     {
       "ticker": "BA.L",
@@ -466,9 +466,9 @@
       "price_usd": 1911.0,
       "change_1d": "-1.62%",
       "change_1w": "-1.01%",
-      "change_1m": "-0.78%",
+      "change_1m": "+3.27%",
       "change_ytd": "+8.96%",
-      "return_1yr": "+1%",
+      "return_1yr": "-1%",
       "low_gbp": "16",
       "high_gbp": "24",
       "bar_pct": 42,
@@ -482,7 +482,7 @@
       "analyst_score": 2.28,
       "vol_1d": 6628210,
       "vol_1w": 27125604,
-      "vol_1m": 123191271,
+      "vol_1m": 107423874,
       "news": [
         {
           "title": "BAE Systems (LSE:BA.) Stock Valuation After Recent Pullback And Order Backlog Growth",
@@ -531,24 +531,31 @@
       "price_usd": 1308.0,
       "change_1d": "+4.41%",
       "change_1w": "+3.81%",
-      "change_1m": "+9.82%",
+      "change_1m": "+14.74%",
       "change_ytd": "+9.28%",
-      "return_1yr": "+41%",
+      "return_1yr": "+48%",
       "low_gbp": "8.68",
       "high_gbp": "14",
       "bar_pct": 80,
       "market_cap_gbp_b": 1.084,
       "beta": 1.22,
       "pe_ratio": 18.96,
-      "avg_volume_m": 34.97,
+      "avg_volume_m": 34.81,
       "div_yield_pct": 73.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.6,
       "vol_1d": 25448702,
       "vol_1w": 146686594,
-      "vol_1m": 684530733,
+      "vol_1m": 632764004,
       "news": [
+        {
+          "title": "London, Tokyo agree $24-bn investment deal",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/economy/policy/articles/london-tokyo-agree-24-bn-141028287.html",
+          "published": 1781446228,
+          "sentiment": 0.361
+        },
         {
           "title": "BAESY or RYCEY: Which Is the Better Value Stock Right Now?",
           "publisher": "Zacks",
@@ -576,16 +583,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/aerospace-stocks-lagging-rollsroyce-rycey-134003679.html",
           "published": 1780926003,
           "sentiment": -0.273
-        },
-        {
-          "title": "United Airlines boss puts Rolls-Royce \u2018in the doghouse\u2019 over contract spat",
-          "publisher": "Financial Times",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/united-airlines-boss-puts-rolls-040026016.html",
-          "published": 1780891226,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.274
+      "news_sentiment": 0.262
     },
     {
       "ticker": "QQ.L",
@@ -596,23 +596,23 @@
       "price_usd": 473.6,
       "change_1d": "-1.95%",
       "change_1w": "+0.64%",
-      "change_1m": "+16.65%",
+      "change_1m": "+14.67%",
       "change_ytd": "+6.58%",
-      "return_1yr": "-6%",
+      "return_1yr": "-8%",
       "low_gbp": "3.98",
       "high_gbp": "5.51",
       "bar_pct": 49,
       "market_cap_gbp_b": 0.024,
       "beta": 0.322,
       "pe_ratio": 23.68,
-      "avg_volume_m": 2.06,
+      "avg_volume_m": 2.05,
       "div_yield_pct": 232.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.82,
       "vol_1d": 1097324,
       "vol_1w": 6175154,
-      "vol_1m": 43469963,
+      "vol_1m": 36174120,
       "news": [
         {
           "title": "3 UK Penny Stocks With Market Caps Over \u00a3300M To Consider",
@@ -664,12 +664,12 @@
       "change_1m": "-1.58%",
       "change_ytd": "-23.75%",
       "return_1yr": "-9%",
-      "low_gbp": "92",
-      "high_gbp": "155",
+      "low_gbp": "91",
+      "high_gbp": "154",
       "bar_pct": 6,
-      "market_cap_gbp_b": 228.854,
+      "market_cap_gbp_b": 228.268,
       "beta": 1.515,
-      "pe_ratio": 143.81,
+      "pe_ratio": 142.21,
       "avg_volume_m": 44.12,
       "div_yield_pct": null,
       "short_pct": 3.23,
@@ -680,42 +680,42 @@
       "vol_1m": 860257800,
       "news": [
         {
-          "title": "Oracle Is an AI Success. It May Not Be Enough.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/oracle-stock-price-ai-agents-software-e9b44234?siteid=yhoof2&yptr=yahoo",
-          "published": 1781294640,
-          "sentiment": 0.572
+          "title": "Palantir Swiss Court Defeat Raises European Data Sovereignty And Contract Risks",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-swiss-court-defeat-raises-231649047.html",
+          "published": 1781479009,
+          "sentiment": -0.625
         },
         {
-          "title": "Most Palantir Shareholders Vote for Human Rights Probe. Why It Won\u2019t Happen.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/palantir-stock-human-rights-5d29ccc8?siteid=yhoof2&yptr=yahoo",
-          "published": 1781288520,
+          "title": "Palantir (PLTR): Debt-Free AI Growth Shows Why Its Software Story Still Has Financial Firepower",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-pltr-debt-free-ai-194437119.html",
+          "published": 1781466277,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Is Palantir Stock Ripe for a Rebound?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/13/is-palantir-stock-ripe-for-a-rebound/",
+          "published": 1781389800,
           "sentiment": 0.0
         },
         {
-          "title": "Palantir Tests Key Support After Breakout Fails",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-tests-key-support-breakout-181909745.html",
-          "published": 1781288349,
-          "sentiment": -0.026
-        },
-        {
-          "title": "Palantir CEO Warns AI Could Supercharge Wealth Inequality",
+          "title": "Palantir CEO Alex Karp Is 'Rooting For Elon'\u2014And Has Clients 'Screaming' About OpenAI, Anthropic",
           "publisher": "Benzinga",
-          "url": "https://finance.yahoo.com/sectors/technology/articles/palantir-ceo-warns-ai-could-173122682.html",
-          "published": 1781285482,
-          "sentiment": 0.421
+          "url": "https://finance.yahoo.com/sectors/technology/articles/palantir-ceo-alex-karp-rooting-153125935.html",
+          "published": 1781364685,
+          "sentiment": -0.382
         },
         {
-          "title": "Revisiting SpaceX Fundamentals",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/spacex-ipo-stock-price-spcx-elon-musk/card/revisiting-spacex-fundamentals-oOS1ub1mHQ2f312ZqAMZ?siteid=yhoof2&yptr=yahoo",
-          "published": 1781284603,
-          "sentiment": 0.0
+          "title": "Is Rackspace Technology, Inc. (RXT) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rackspace-technology-inc-rxt-good-134040954.html",
+          "published": 1781358040,
+          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.193
+      "news_sentiment": -0.037
     },
     {
       "ticker": "LDOS",
@@ -732,7 +732,7 @@
       "low_gbp": "90",
       "high_gbp": "153",
       "bar_pct": 1,
-      "market_cap_gbp_b": 11.461,
+      "market_cap_gbp_b": 11.432,
       "beta": 0.515,
       "pe_ratio": 11.18,
       "avg_volume_m": 1.18,
@@ -787,17 +787,17 @@
       "company_name": "CACI International",
       "category": "cyber-intel",
       "exchange": "NYSE",
-      "price_gbp": "387",
+      "price_gbp": "386",
       "price_usd": 519.4,
       "change_1d": "-1.45%",
       "change_1w": "-2.26%",
       "change_1m": "+3.08%",
       "change_ytd": "-3.35%",
       "return_1yr": "+16%",
-      "low_gbp": "328",
-      "high_gbp": "510",
+      "low_gbp": "327",
+      "high_gbp": "508",
       "bar_pct": 33,
-      "market_cap_gbp_b": 8.558,
+      "market_cap_gbp_b": 8.536,
       "beta": 0.523,
       "pe_ratio": 21.46,
       "avg_volume_m": 0.29,
@@ -862,7 +862,7 @@
       "low_gbp": "60",
       "high_gbp": "92",
       "bar_pct": 77,
-      "market_cap_gbp_b": 3.589,
+      "market_cap_gbp_b": 3.58,
       "beta": 0.293,
       "pe_ratio": 12.8,
       "avg_volume_m": 0.58,
@@ -925,9 +925,9 @@
       "change_ytd": "-7.42%",
       "return_1yr": "-24%",
       "low_gbp": "51",
-      "high_gbp": "90",
+      "high_gbp": "89",
       "bar_pct": 17,
-      "market_cap_gbp_b": 6.925,
+      "market_cap_gbp_b": 6.907,
       "beta": 0.322,
       "pe_ratio": 11.22,
       "avg_volume_m": 1.72,
@@ -990,9 +990,9 @@
       "change_ytd": "-33.42%",
       "return_1yr": "-9%",
       "low_gbp": "116",
-      "high_gbp": "312",
+      "high_gbp": "311",
       "bar_pct": 6,
-      "market_cap_gbp_b": 6.438,
+      "market_cap_gbp_b": 6.422,
       "beta": 1.361,
       "pe_ratio": null,
       "avg_volume_m": 1.23,
@@ -1004,6 +1004,13 @@
       "vol_1w": 4556400,
       "vol_1m": 27614100,
       "news": [
+        {
+          "title": "AeroVironment (AVAV) Invests $15M to Expand Advanced Production in Ohio",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/aerovironment-avav-invests-15m-expand-193441936.html",
+          "published": 1781379281,
+          "sentiment": 0.511
+        },
         {
           "title": "Is AeroVironment (AVAV) Quietly Repositioning Its Software Core in Taiwan\u2019s Drone Defense Buildout?",
           "publisher": "Simply Wall St.",
@@ -1031,16 +1038,9 @@
           "url": "https://247wallst.com/investing/2026/06/11/forget-ai-software-why-the-smart-money-is-betting-billions-on-autonomous-weapons/",
           "published": 1781187385,
           "sentiment": -0.273
-        },
-        {
-          "title": "Forget AI Software, The Smart Money is Betting Billions on Autonomous Weapons Now",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/11/forget-ai-software-why-the-smart-money-is-betting-billions-on-autonomous-weapons/",
-          "published": 1781187385,
-          "sentiment": -0.273
         }
       ],
-      "news_sentiment": -0.116
+      "news_sentiment": 0.041
     },
     {
       "ticker": "KTOS",
@@ -1057,7 +1057,7 @@
       "low_gbp": "29",
       "high_gbp": "100",
       "bar_pct": 20,
-      "market_cap_gbp_b": 8.077,
+      "market_cap_gbp_b": 8.056,
       "beta": 1.032,
       "pe_ratio": 339.71,
       "avg_volume_m": 4.24,
@@ -1069,6 +1069,20 @@
       "vol_1w": 18011200,
       "vol_1m": 105563100,
       "news": [
+        {
+          "title": "KTOS Stock Gains Overnight: Why JPMorgan Thinks Kratos Could Be Ready For A Comeback",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/ktos-stock-gains-overnight-jp-morgan-upgrade-ready-for-a-comeback/cZKfRnkR7d3",
+          "published": 1781488051,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Kratos Space Surveillance Win Ties Into SpaceX IPO Spending Story",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/kratos-space-surveillance-win-ties-211641004.html",
+          "published": 1781385401,
+          "sentiment": 0.586
+        },
         {
           "title": "AMD upgraded, Adobe downgraded: Wall Street's top analyst calls",
           "publisher": "The Fly",
@@ -1089,40 +1103,26 @@
           "url": "https://247wallst.com/investing/2026/06/11/forget-ai-software-why-the-smart-money-is-betting-billions-on-autonomous-weapons/",
           "published": 1781187385,
           "sentiment": -0.273
-        },
-        {
-          "title": "Is Kratos Defense & Security Solutions, Inc. (KTOS) A Good Stock To Buy Now?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-security-solutions-inc-135930604.html",
-          "published": 1781186370,
-          "sentiment": 0.758
-        },
-        {
-          "title": "Kratos Turbojet Expansion Tests Valuation As Missile Demand Builds",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/kratos-turbojet-expansion-tests-valuation-221403737.html",
-          "published": 1781129643,
-          "sentiment": -0.128
         }
       ],
-      "news_sentiment": 0.289
+      "news_sentiment": 0.4
     },
     {
       "ticker": "RCAT",
       "company_name": "Red Cat Holdings",
       "category": "drones",
       "exchange": "NASDAQ",
-      "price_gbp": "8.34",
+      "price_gbp": "8.32",
       "price_usd": 11.18,
       "change_1d": "-7.68%",
       "change_1w": "-11.83%",
       "change_1m": "+18.94%",
       "change_ytd": "+22.05%",
       "return_1yr": "+22%",
-      "low_gbp": "4.30",
+      "low_gbp": "4.29",
       "high_gbp": "14",
       "bar_pct": 42,
-      "market_cap_gbp_b": 1.269,
+      "market_cap_gbp_b": 1.266,
       "beta": 1.242,
       "pe_ratio": null,
       "avg_volume_m": 14.71,
@@ -1184,10 +1184,10 @@
       "change_1m": "+1.60%",
       "change_ytd": "+6.67%",
       "return_1yr": "+20%",
-      "low_gbp": "57",
+      "low_gbp": "56",
       "high_gbp": "76",
       "bar_pct": 66,
-      "market_cap_gbp_b": 12.038,
+      "market_cap_gbp_b": 12.008,
       "beta": 0.907,
       "pe_ratio": 17.71,
       "avg_volume_m": 1.37,
@@ -1248,14 +1248,14 @@
       "change_1w": "+0.00%",
       "change_1m": "+0.00%",
       "change_ytd": "+0.00%",
-      "return_1yr": "+19%",
+      "return_1yr": "+0%",
       "low_gbp": "111",
-      "high_gbp": "132",
+      "high_gbp": "131",
       "bar_pct": 43,
-      "market_cap_gbp_b": 1571.507,
+      "market_cap_gbp_b": 1567.483,
       "beta": null,
       "pe_ratio": null,
-      "avg_volume_m": 255.74,
+      "avg_volume_m": 519.23,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
@@ -1265,42 +1265,42 @@
       "vol_1m": 519234800,
       "news": [
         {
-          "title": "3 things investors Need to watch next week",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/3-things-investors-watch-next-220000352.html",
-          "published": 1781301600,
-          "sentiment": 0.0
-        },
-        {
-          "title": "SpaceX is public: What investors should watch next",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/spacex-is-public-what-investors-should-watch-next-205218224.html",
-          "published": 1781297538,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Space stocks drop as SpaceX soars in debut",
+          "title": "SpaceX IPO afterglow, Kevin Warsh's first Fed meeting, and a potential US-Iran deal: What to watch this week",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/space-stocks-drop-as-spacex-soars-in-debut-122907387.html",
-          "published": 1781267347,
-          "sentiment": -0.273
+          "url": "https://finance.yahoo.com/markets/article/spacex-ipo-afterglow-kevin-warshs-first-fed-meeting-and-a-potential-us-iran-deal-what-to-watch-this-week-142500418.html",
+          "published": 1781447100,
+          "sentiment": 0.0
         },
         {
-          "title": "SpaceX stock gains, space companies fall, chips mixed on IPO news",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/spacex-stock-gains-space-companies-fall-chips-mixed-on-ipo-news-195735942.html",
-          "published": 1781294255,
-          "sentiment": 0.34
+          "title": "Dow Jones Futures Rise, Oil Prices Dive As Trump Announces Iran Deal; SpaceX's Next Test",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-trump-iran-deal-spacex/?src=A00220&yptr=yahoo",
+          "published": 1781506156,
+          "sentiment": 0.0
         },
         {
-          "title": "Tom Sosnoff: Why SpaceX's IPO is a success and who benefits most",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/tom-sosnoff-why-spacexs-ipo-is-a-success-and-who-benefits-most-153959219.html",
-          "published": 1781278799,
-          "sentiment": 0.743
+          "title": "Satellite Stocks Are Flying on SpaceX, Spectrum-Sale Hopes. Time Is Running Out.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/viasat-echostar-iridium-stocks-satellite-spectrum-d0eb1f9a?siteid=yhoof2&yptr=yahoo",
+          "published": 1781503200,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Musk says SpaceX could bring $1 trillion in revenue by 2030",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/musk-says-spacex-could-bring-054636977.html",
+          "published": 1781502396,
+          "sentiment": 0.0
+        },
+        {
+          "title": "ASTS Stock Jumps Overnight: Retail Eyes Potential Win As Japan's $1B 'Starlink' Award Nears Decision",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-retail-eyes-win-japans-1b-starlink-award/cZKf4wOR7di",
+          "published": 1781499763,
+          "sentiment": 0.807
         }
       ],
-      "news_sentiment": 0.162
+      "news_sentiment": 0.246
     },
     {
       "ticker": "RKLB",
@@ -1315,9 +1315,9 @@
       "change_ytd": "+34.74%",
       "return_1yr": "+286%",
       "low_gbp": "19",
-      "high_gbp": "113",
+      "high_gbp": "112",
       "bar_pct": 61,
-      "market_cap_gbp_b": 47.717,
+      "market_cap_gbp_b": 47.594,
       "beta": 2.499,
       "pe_ratio": null,
       "avg_volume_m": 26.62,
@@ -1330,42 +1330,42 @@
       "vol_1m": 606319500,
       "news": [
         {
-          "title": "Space stocks drop as SpaceX soars in debut",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/space-stocks-drop-as-spacex-soars-in-debut-122907387.html",
-          "published": 1781267347,
-          "sentiment": -0.273
+          "title": "RKLB Stock Jumps Overnight: Rocket Lab Lines Up Record Launch Blitz After Nasdaq-100 Entry",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/rklb-stock-record-launch-blitz-after-nasdaq-100-entry/cZKf5pTR7df",
+          "published": 1781494951,
+          "sentiment": 0.0
         },
         {
-          "title": "SpaceX stock gains, space companies fall, chips mixed on IPO news",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/spacex-stock-gains-space-companies-fall-chips-mixed-on-ipo-news-195735942.html",
-          "published": 1781294255,
-          "sentiment": 0.34
+          "title": "Why Rocket Lab stock tumbled on Nasdaq-100 news",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/why-rocket-lab-stock-tumbled-on-nasdaq-100-news",
+          "published": 1781472780,
+          "sentiment": 0.0
         },
         {
-          "title": "Rocket Lab Corporation (RKLB) Stock Drops Despite Market Gains: Important Facts to Note",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-corporation-rklb-stock-221502136.html",
-          "published": 1781302502,
-          "sentiment": -0.388
+          "title": "SpaceX\u2019s IPO Was Enormously Successful, but Did It Break the Rest of the Space Industry?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/14/spacexs-ipo-was-enormously-successful-but-did-it-break-the-rest-of-the-space-industry/",
+          "published": 1781439947,
+          "sentiment": 0.371
         },
         {
-          "title": "Why Rocket Lab (RKLB) Stock Is Trading Lower Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-rocket-lab-rklb-stock-213320263.html",
-          "published": 1781300000,
-          "sentiment": -0.296
+          "title": "Space Stocks Got Crushed on SpaceX's Big Day. Is the Sell-Off a Warning or a Buying Opportunity?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/13/space-stocks-got-crushed-on-spacexs-big-day-is-the/",
+          "published": 1781371560,
+          "sentiment": -0.34
         },
         {
-          "title": "Why EchoStar (SATS) Stock Is Falling Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-echostar-sats-stock-falling-212520804.html",
-          "published": 1781299520,
-          "sentiment": -0.153
+          "title": "A Star Trek nerd put his savings into Rocket Lab years ago \u2014 he's now semi-retired with $3 million in gains",
+          "publisher": "Moneywise",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/star-trek-nerd-put-savings-153000511.html",
+          "published": 1781364600,
+          "sentiment": 0.052
         }
       ],
-      "news_sentiment": -0.154
+      "news_sentiment": 0.017
     },
     {
       "ticker": "PL",
@@ -1382,7 +1382,7 @@
       "low_gbp": "3.65",
       "high_gbp": "39",
       "bar_pct": 56,
-      "market_cap_gbp_b": 8.28,
+      "market_cap_gbp_b": 8.259,
       "beta": 2.005,
       "pe_ratio": null,
       "avg_volume_m": 14.81,
@@ -1394,6 +1394,20 @@
       "vol_1w": 89767900,
       "vol_1m": 323018000,
       "news": [
+        {
+          "title": "Planet Labs Stock Plunged Following Its Recent Earnings Call. Should Investors Buy the Dip?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/13/planet-labs-stock-plunged-following-earnings-call/",
+          "published": 1781371200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "MarketBeat Week in Review \u2013 06/08 - 06/12",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/articles/marketbeat-week-in-review-06-08-06-12/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1781348400,
+          "sentiment": 0.0
+        },
         {
           "title": "Why Planet Labs (PL) Shares Are Falling Today",
           "publisher": "StockStory",
@@ -1414,20 +1428,6 @@
           "url": "https://www.fool.com/investing/2026/06/12/why-planet-labs-stock-crashed-today/",
           "published": 1781284846,
           "sentiment": 0.0
-        },
-        {
-          "title": "2 Cash-Producing Stocks on Our Buy List and 1 That Underwhelm",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-producing-stocks-buy-095056857.html",
-          "published": 1781257856,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why Rocket Lab (RKLB) Stock Is Up Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-rocket-lab-rklb-stock-214537385.html",
-          "published": 1781214337,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.081
@@ -1447,7 +1447,7 @@
       "low_gbp": "27",
       "high_gbp": "100",
       "bar_pct": 47,
-      "market_cap_gbp_b": 23.857,
+      "market_cap_gbp_b": 23.796,
       "beta": 2.634,
       "pe_ratio": null,
       "avg_volume_m": 20.33,
@@ -1460,59 +1460,59 @@
       "vol_1m": 591497900,
       "news": [
         {
-          "title": "Space stocks drop as SpaceX soars in debut",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/space-stocks-drop-as-spacex-soars-in-debut-122907387.html",
-          "published": 1781267347,
-          "sentiment": -0.273
+          "title": "Satellite Stocks Are Flying on SpaceX, Spectrum-Sale Hopes. Time Is Running Out.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/viasat-echostar-iridium-stocks-satellite-spectrum-d0eb1f9a?siteid=yhoof2&yptr=yahoo",
+          "published": 1781503200,
+          "sentiment": 0.421
         },
         {
-          "title": "Stock Market Today, June 12: AST SpaceMobile Drops on Space Stock Shakeout After SpaceX Debut",
+          "title": "ASTS Stock Jumps Overnight: Retail Eyes Potential Win As Japan's $1B 'Starlink' Award Nears Decision",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-retail-eyes-win-japans-1b-starlink-award/cZKf4wOR7di",
+          "published": 1781499763,
+          "sentiment": 0.807
+        },
+        {
+          "title": "Space Stocks Got Crushed on SpaceX's Big Day. Is the Sell-Off a Warning or a Buying Opportunity?",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/06/12/stock-market-today-june-12-ast-spacemobile-drops-on-space-stock-shakeout-after-spacex-debut/",
-          "published": 1781299776,
-          "sentiment": -0.318
+          "url": "https://www.fool.com/investing/2026/06/13/space-stocks-got-crushed-on-spacexs-big-day-is-the/",
+          "published": 1781371560,
+          "sentiment": -0.34
         },
         {
-          "title": "Why EchoStar (SATS) Stock Is Falling Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-echostar-sats-stock-falling-212520804.html",
-          "published": 1781299520,
-          "sentiment": -0.153
-        },
-        {
-          "title": "SpaceX Stock Rose. Space-Related Stocks Did Not.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/spacex-ipo-stock-price-spcx-elon-musk/card/spacex-stock-rose-space-related-stocks-did-not--CpdjI75YR2k1y22i0A7g?siteid=yhoof2&yptr=yahoo",
-          "published": 1781297757,
+          "title": "AST SpaceMobile Faces Capital Rotation Test After SpaceX IPO And Short Report",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ast-spacemobile-faces-capital-rotation-161145382.html",
+          "published": 1781367105,
           "sentiment": 0.0
         },
         {
-          "title": "SpaceX, Tesla, EchoStar, and More Stocks That Explain Today\u2019s Market",
+          "title": "The Great, Big, Boring SpaceX IPO",
           "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/stock-movers-b8f16fc5?siteid=yhoof2&yptr=yahoo",
-          "published": 1781297520,
-          "sentiment": 0.0
+          "url": "https://www.barrons.com/articles/spacex-ipo-stock-price-spcx-494b9186?siteid=yhoof2&yptr=yahoo",
+          "published": 1781361600,
+          "sentiment": 0.421
         }
       ],
-      "news_sentiment": -0.149
+      "news_sentiment": 0.262
     },
     {
       "ticker": "TDG",
       "company_name": "TransDigm Group",
       "category": "weapons",
       "exchange": "NYSE",
-      "price_gbp": "937",
+      "price_gbp": "934",
       "price_usd": 1256.05,
       "change_1d": "+1.29%",
       "change_1w": "+1.40%",
       "change_1m": "+4.55%",
       "change_ytd": "-7.54%",
       "return_1yr": "-12%",
-      "low_gbp": "838",
-      "high_gbp": "1211",
+      "low_gbp": "836",
+      "high_gbp": "1208",
       "bar_pct": 26,
-      "market_cap_gbp_b": 52.401,
+      "market_cap_gbp_b": 52.266,
       "beta": 0.895,
       "pe_ratio": 39.21,
       "avg_volume_m": 0.4,
@@ -1524,6 +1524,20 @@
       "vol_1w": 1493700,
       "vol_1m": 8272800,
       "news": [
+        {
+          "title": "Is TransDigm\u2019s Aftermarket Pricing Power Reshaping Its Core Investment Narrative (TDG)?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/transdigm-aftermarket-pricing-power-reshaping-001614772.html",
+          "published": 1781396174,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is TransDigm Group Incorporated (TDG) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/transdigm-group-incorporated-tdg-good-204329985.html",
+          "published": 1781383409,
+          "sentiment": 0.44
+        },
         {
           "title": "3 Market-Beating Stocks with Solid Fundamentals",
           "publisher": "StockStory",
@@ -1544,23 +1558,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-must-add-transdigm-140400864.html",
           "published": 1780927440,
           "sentiment": 0.0
-        },
-        {
-          "title": "A Look At TransDigm Group (TDG) Valuation After Recent Share Price Cooldown",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/look-transdigm-group-tdg-valuation-021339607.html",
-          "published": 1780625619,
-          "sentiment": 0.296
-        },
-        {
-          "title": "TransDigm (TDG) Down 1.8% Since Last Earnings Report: Can It Rebound?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/transdigm-tdg-down-1-8-153028032.html",
-          "published": 1780587028,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.204
+      "news_sentiment": 0.233
     },
     {
       "ticker": "HEI",
@@ -1575,9 +1575,9 @@
       "change_ytd": "+0.74%",
       "return_1yr": "+9%",
       "low_gbp": "191",
-      "high_gbp": "270",
+      "high_gbp": "269",
       "bar_pct": 72,
-      "market_cap_gbp_b": 34.543,
+      "market_cap_gbp_b": 34.454,
       "beta": 1.035,
       "pe_ratio": 59.22,
       "avg_volume_m": 0.69,
@@ -1639,10 +1639,10 @@
       "change_1m": "+17.23%",
       "change_ytd": "-21.60%",
       "return_1yr": "-43%",
-      "low_gbp": "253",
-      "high_gbp": "661",
+      "low_gbp": "252",
+      "high_gbp": "659",
       "bar_pct": 19,
-      "market_cap_gbp_b": 26.556,
+      "market_cap_gbp_b": 26.488,
       "beta": 1.422,
       "pe_ratio": 178.84,
       "avg_volume_m": 1.13,
@@ -1707,7 +1707,7 @@
       "low_gbp": "13",
       "high_gbp": "23",
       "bar_pct": 57,
-      "market_cap_gbp_b": 2.135,
+      "market_cap_gbp_b": 2.129,
       "beta": 1.171,
       "pe_ratio": null,
       "avg_volume_m": 2.32,
@@ -1762,7 +1762,7 @@
       "company_name": "Mercury Systems",
       "category": "weapons",
       "exchange": "NASDAQ",
-      "price_gbp": "90",
+      "price_gbp": "89",
       "price_usd": 120.3,
       "change_1d": "-1.15%",
       "change_1w": "+8.12%",
@@ -1770,9 +1770,9 @@
       "change_ytd": "+58.23%",
       "return_1yr": "+143%",
       "low_gbp": "36",
-      "high_gbp": "91",
+      "high_gbp": "90",
       "bar_pct": 99,
-      "market_cap_gbp_b": 5.388,
+      "market_cap_gbp_b": 5.374,
       "beta": 0.949,
       "pe_ratio": null,
       "avg_volume_m": 0.61,
@@ -1837,7 +1837,7 @@
       "low_gbp": "24",
       "high_gbp": "38",
       "bar_pct": 89,
-      "market_cap_gbp_b": 9.656,
+      "market_cap_gbp_b": 9.631,
       "beta": 0.121,
       "pe_ratio": 45.36,
       "avg_volume_m": 0.98,
