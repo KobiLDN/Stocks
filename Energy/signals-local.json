@@ -1,9 +1,141 @@
 {
-  "updated": "2026-06-13 09:57",
+  "updated": "2026-06-15 14:15",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "MPC has surged +61% YTD and +58% 1-year with strong 1M/+6.22% momentum after a Morgan Stanley PT raise. Its P/E of 17.36 is reasonable for the refining sector, with news sentiment very positive at 0.485 and a buy consensus.",
+      "drivers": [
+        "YTD +61.02%",
+        "1M +6.22% momentum",
+        "news sentiment 0.485",
+        "PT raised by Morgan Stanley"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.87,
+      "rationale": "VLO leads the refining peer group with +88% 1-year and +58% YTD returns, positive 1M/+6.47% momentum, and the highest news sentiment (0.554) in the universe after a Morgan Stanley PT raise. P/E of 18.91 is attractive given strong earnings momentum.",
+      "drivers": [
+        "1Y +88.18%",
+        "momentum +6.47% 1M",
+        "news sentiment 0.554",
+        "Morgan Stanley PT raise"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SLB",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SLB has excellent momentum across all timeframes (1D/+1.24%, 1W/+2.39%, 1M/+1.98%) with +41% YTD and a best-in-class analyst score of 1.62 (strong buy consensus). The oilfield services leader benefits directly from sustained upstream capex amid rising oil prices.",
+      "drivers": [
+        "an_score 1.62 strong buy",
+        "YTD +41.31%",
+        "1W momentum +2.39%",
+        "beta 0.708"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "SHEL has +15.65% YTD with a P/E of 13.34, a solid 3.65% dividend yield, and positive news sentiment of 0.265. The CEO forecasts rising oil prices over 5-10 years, while the current buyback pause for the ARC acquisition supports a long-term growth narrative.",
+      "drivers": [
+        "P/E 13.34 cheap",
+        "dividend 3.65%",
+        "news sentiment 0.265",
+        "ARC acquisition catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ENPH",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "ENPH has exploded +61.75% YTD with stunning 1M/+29.98% momentum, driven by surging solar demand as ARRAY Technologies hits 100GW. Despite a high P/E of 54 and 24.43% short interest, momentum and a buyable pullback make it a compelling high-risk/high-reward pick.",
+      "drivers": [
+        "YTD +61.75%",
+        "1M momentum +29.98%",
+        "solar demand catalyst",
+        "high short interest 24.43%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "EOG shows +29.6% YTD and +1.27% 1M momentum with an attractive P/E of 13.44 and a 2.99% dividend yield. The pure-play E&P benefits from ongoing Middle East turmoil \u2014 the latest Israel-Iran strikes sent Brent +3% and create a direct earnings catalyst for upstream producers.",
+      "drivers": [
+        "P/E 13.44 attractive",
+        "YTD +29.60%",
+        "Brent spike catalyst",
+        "dividend yield 2.99%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "CVX has +22.38% YTD with positive 1M/+1.58% momentum and a buy consensus (an_score 1.84). The oil major offers direct Brent leverage amid escalating Israel-Iran conflict, though a relatively high P/E of 32.56 tempers confidence. Its 3.8% dividend adds defensiveness.",
+      "drivers": [
+        "YTD +22.38%",
+        "dividend 3.80%",
+        "geopolitical oil catalyst",
+        "analyst score 1.84 buy"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "FSLR",
+      "signal": "buy",
+      "confidence": 0.73,
+      "rationale": "FSLR trades at a reasonable P/E of 17.27 and has rebounded +13.94% over 1M after a weak YTD. Its buy consensus and 0.246 news sentiment reflect strong solar demand tailwinds, though 10.39% short interest warrants caution.",
+      "drivers": [
+        "P/E 17.27 reasonable",
+        "1M momentum +13.94%",
+        "solar demand tailwinds",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SSE.L has +7.58% YTD and strong 1M/+5.68% momentum with a 2.86% dividend yield. The UK-Japan \u00a318bn investment agreement and SSE's positioning in UK power grids and renewables provide steady, rate-sensitive upside with a buy consensus.",
+      "drivers": [
+        "1M momentum +5.68%",
+        "dividend yield 2.86%",
+        "UK-Japan investment deal",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "OXY has strong YTD growth (+34.66%) with very high news sentiment (0.478) and a positive 1D/+1.98% move. The company is partnering with Exxon in Trinidad and has Gulf of Mexico discoveries. However, a high P/E of 76.41 limits upside relative to peers.",
+      "drivers": [
+        "YTD +34.66%",
+        "news sentiment 0.478",
+        "Trinidad & GOM discoveries",
+        "strong short-term momentum"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,138 +264,6 @@
         "news sentiment 0.48",
         "1M +1.1%",
         "high momentum"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Valero leads the universe with a +91% 1-year return, +56.3% YTD, and +3.92% one-month momentum. P/E of 18.7x is reasonable versus peers, and strong refining margins supported by elevated crude and Middle East disruptions drive cash flows.",
-      "drivers": [
-        "+91% 1-year return",
-        "+56.3% YTD",
-        "1-month momentum +3.92%",
-        "P/E 18.7x"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Marathon Petroleum shows exceptional momentum with +57% annual return, +59.3% YTD, and +3.90% one-month gain. P/E 17.2x is attractive for a refiner benefiting from wide crack spreads due to geopolitical supply tightness.",
-      "drivers": [
-        "+59.3% YTD",
-        "+57% 1-year return",
-        "1-month momentum +3.90%",
-        "P/E 17.2x"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "EOG Resources delivers strong momentum (+29.5% YTD) with a low P/E of 13.4x and a solid 3.0% dividend yield. Its low-cost inventory and disciplined capital spending make it resilient even if oil prices cool, while analyst consensus is 'buy'.",
-      "drivers": [
-        "+29.5% YTD",
-        "P/E 13.4x",
-        "dividend yield 3.0%",
-        "analyst consensus 'buy'"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SLB",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Schlumberger gains +54% over 1 year and +40.9% YTD with a best-in-class analyst score of 1.62 (strong buy). Its recent Edge AI partnership with Qualcomm and exposure to global drilling demand support continued international activity growth.",
-      "drivers": [
-        "+40.9% YTD",
-        "analyst score 1.62 'buy'",
-        "1-year return +54%",
-        "AI/tech catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "Shell offers a compelling value play at P/E 13.4x (lowest among peers) with a 3.6% dividend yield. CEO Wael Sawan sees oil prices rising structurally over 5-10 years, and the company aims to add 1 million BOE/day by 2030, underpinning long-term growth.",
-      "drivers": [
-        "P/E 13.4x (peer-low)",
-        "dividend yield 3.6%",
-        "CEO bullish long-term oil view",
-        "+15.9% YTD"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Chevron is up +27% in 1 year and +21.5% YTD, with a low beta of 0.47 providing downside protection. It offers a robust 3.8% dividend yield and benefits from integrated operations and sub-$50 breakeven, making it a quality holding in any oil price scenario.",
-      "drivers": [
-        "dividend yield 3.8%",
-        "beta 0.47",
-        "+21.5% YTD",
-        "sub-$50/bbl breakeven"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "ConocoPhillips has gained +21.1% YTD and trades at a low P/E of 19.6x with a 2.9% dividend yield. Strong cash flow generation and a low-cost upstream portfolio make it well-positioned to return capital to shareholders even as oil volatility persists.",
-      "drivers": [
-        "+21.1% YTD",
-        "P/E 19.6x",
-        "dividend yield 2.9%",
-        "analyst consensus 'buy'"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ENPH",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Enphase Energy has explosive 1-month momentum at +46.6% and +62.8% YTD, but high short interest (24.4%) and extreme volatility (beta 1.57) create risk. The clean-energy tailwind and strong sentiment (news_s 0.223) support a cautious buy for momentum-tolerant investors.",
-      "drivers": [
-        "+62.8% YTD",
-        "1-month momentum +46.6%",
-        "strong news sentiment 0.223",
-        "P/E 54.4x (expensive)"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "First Solar shows strong one-month momentum of +18.9% and a reasonable P/E of 17.5x for a solar leader. Despite YTD flatness (-1.2%), the company benefits from growing utility-scale solar demand and US manufacturing tailwinds.",
-      "drivers": [
-        "1-month momentum +18.9%",
-        "P/E 17.5x",
-        "1-year return +55%",
-        "US solar policy tailwinds"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Brookfield Renewable Corp offers a high dividend yield of 4.2% and the highest news sentiment in the universe (0.557). It has moderate upside potential (+17% 1-year) but a negative YTD and a hold consensus (an_score 2.83), making it a lower-conviction pick.",
-      "drivers": [
-        "dividend yield 4.2%",
-        "news sentiment 0.557",
-        "1-year return +17%",
-        "hold analyst consensus"
       ]
     }
   ]

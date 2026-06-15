@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-13 09:56",
+  "updated": "2026-06-15 14:15",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "NEAR is up +57.95% over 1M and +57.33% YTD, with momentum driven by the NEAR Intents cross-chain system processing over $19B in volume and $32M in fees, an upcoming June network upgrade with dynamic resharding, and surging retail demand shown by a 16% rise in futures OI to $658M [coindesk.com](https://www.coindesk.com/markets/2026/05/25/near-price-rally-gains-momentum-as-cross-chain-product-activity-fuels-further-15-jump/). Despite a news sentiment of -0.394, the price action and on-chain volume (>$1B in 24h) confirm strong institutional and retail conviction.",
+      "drivers": [
+        "+57.95% 1M return",
+        "+16% futures OI in 24h",
+        "NEAR Intents $19B cumulative volume",
+        "Dynamic resharding upgrade June 2026"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "WLD",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "WLD has surged +144.89% over 1M and +15.05% in the last day, fueled by the AI mega-IPO narrative and Worldcoin's connection to OpenAI CEO Sam Altman. Despite Arthur Hayes selling his position, WLD still trades near $0.49 with a $1.69B market cap, and a scheduled 43% reduction in daily token unlocks from July 24 provides a near-term supply catalyst [thedefiant.io](https://thedefiant.io/news/people/arthur-hayes-dumps-worldcoin-days-after-maelstrom-pitched-ai-ipo-trade).",
+      "drivers": [
+        "+144.89% 1M return",
+        "AI IPO narrative (Anthropic, SpaceX)",
+        "43% unlock reduction from July 24",
+        "Market cap \u00a31.5B GBP"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TAO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "TAO shows exceptional weekly momentum at +34.04% 1W, +2.81% 1M, and +28.84% YTD, supported by a market cap of \u00a32.31B GBP. As a leading decentralised AI compute protocol, TAO benefits directly from the AI IPO wave and Nvidia's chip announcements, attracting capital rotating into AI infrastructure.",
+      "drivers": [
+        "+34.04% 1W return",
+        "+28.84% YTD",
+        "AI compute narrative",
+        "Market cap \u00a32.31B GBP"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RNDR",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "RNDR is up +42.61% YTD and +11.04% over the last week, with a market cap of \u00a30.71B GBP. Its role in decentralised GPU rendering for AI and 3D applications aligns with the broader AI boom triggered by the Anthropic IPO and Nvidia's new chip launches.",
+      "drivers": [
+        "+42.61% YTD",
+        "+11.04% 1W return",
+        "Decentralised GPU + AI narrative",
+        "Market cap \u00a30.71B GBP"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ARKM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ARKM has strong short-term momentum: +8.42% 1D, +17.91% 1W, and +12.21% 1M, though its market cap is small at \u00a30.023B GBP. The token benefits from its role as an AI-driven on-chain data platform capitalising on the AI coin rally.",
+      "drivers": [
+        "+17.91% 1W return",
+        "+12.21% 1M return",
+        "AI data platform narrative",
+        "Positive momentum carry"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "FET is up +9.18% YTD and +9.08% 1M, with a market cap of \u00a30.365B GBP. As a leading AI agent token, it is riding the same AI-IPO rotation that boosted NEAR and WLD, benefiting from the ecosystem activity around the Fetch.ai network.",
+      "drivers": [
+        "+9.08% 1M return",
+        "+9.18% YTD",
+        "AI agent ecosystem",
+        "Market cap \u00a30.37B GBP"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "KAITO shows positive momentum: +2.15% 1D, +5.53% 1W, and +9.27% 1M, with a market cap of \u00a30.086B GBP. The token is part of the emerging AI category, benefiting from the same thematic tailwinds as other AI tokens, though with lower liquidity.",
+      "drivers": [
+        "+9.27% 1M return",
+        "+5.53% 1W return",
+        "AI category momentum",
+        "Small cap growth potential"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "XLM is up +24.77% over the last month despite a -5.03% weekly pullback, and is nearly flat YTD at -5.38%, with a market cap of \u00a34.77B GBP. Its payment/settlement use case and relative strength versus XRP make it a recovery play if broader market sentiment improves.",
+      "drivers": [
+        "+24.77% 1M return",
+        "Market cap \u00a34.77B GBP",
+        "Stable YTD performance",
+        "Payments infrastructure"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AGIX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AGIX is up +9.39% YTD and +5.26% 1M, with positive short-term momentum at +2.21% 1D. The token is tied to the SingularityNET decentralised AI marketplace, making it a leveraged play on the AI coin narrative, though liquidity is modest.",
+      "drivers": [
+        "+9.39% YTD",
+        "+5.26% 1M return",
+        "Decentralised AI marketplace",
+        "AI narrative carry"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ICP is down -10.57% YTD but has shown recent recovery: +5.15% 1D, +8.49% 1W, and -2.58% 1M, with a market cap of \u00a31.05B GBP. As an AI-focused L1 blockchain, ICP is a lower-beta way to play the AI theme, offering potential upside if its web3 AI integrations gain traction.",
+      "drivers": [
+        "+8.49% 1W return",
+        "+5.15% 1D return",
+        "AI L1 infrastructure",
+        "Market cap \u00a31.05B GBP"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BNB",
@@ -126,138 +258,6 @@ window.SIGNALS_DATA = {
         "+3.36% 1w",
         "options bias to $75k",
         "reference asset stability"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "WLD",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "WLD shows exceptional 1M momentum at +79.79% and a 1D bounce of +5.68%, with technicals suggesting a bullish continuation pattern and smart money accumulation targeting $0.65 by August [blockchain.news](https://blockchain.news/news/20260611-price-prediction-target-wld-bulls-eye-065-as-smart-money).",
-      "drivers": [
-        "+79.79% 1M return",
-        "smart money long positioning",
-        "bullish technical setup",
-        "AI narrative catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "NEAR has surged +25.87% in the last month driven by the dynamic resharding upgrade and Hyperliquid perps integration, positioning it for Visa-level scalability and AI workloads [ainvest.com](https://www.ainvest.com/news/protocol-implements-dynamic-resharding-upgrade-june-2026-2606/) [tekedia.com](https://www.tekedia.com/why-traders-are-flocking-to-hyperliquid-perps-for-spacex-exposure-on-near-protocol/).",
-      "drivers": [
-        "+25.87% 1M return",
-        "dynamic resharding upgrade",
-        "Hyperliquid perps integration",
-        "AI infrastructure narrative"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "XLM stands out with a +15.66% 1M return, the second-best in the universe, and a \u00a34.8B market cap, benefiting from payment/settlement narrative resilience despite a slight weekly dip.",
-      "drivers": [
-        "+15.66% 1M return",
-        "payment/settlement category",
-        "resilient momentum",
-        "moderate market cap"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "NMR shows strong weekly momentum at +9.09% and a 1M return of -9.30% (least negative among AI tokens), with a small \u00a347M market cap offering high beta potential in a recovery.",
-      "drivers": [
-        "+9.09% 1W return",
-        "least negative 1M in AI",
-        "small cap high beta",
-        "AI sector recovery play"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "TRX has a positive news sentiment of 0.34, a relatively mild 1M decline of -10.61%, and is only 25% off its all-time high, showing relative strength versus peers [coindesk.com](https://www.coindesk.com/markets/2026/06/11/bitcoin-has-reached-a-deep-bear-market-valuation-zone-the-hard-part-may-come-next).",
-      "drivers": [
-        "positive news sentiment 0.34",
-        "only 25% off ATH",
-        "resilient 1M performance",
-        "large cap \u00a322.1B"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BNB has the best 1M return among large-cap L1s at -11.61%, a 1W gain of +3.15%, and positive news sentiment of 0.093, supported by its \u00a360B market cap and ecosystem strength.",
-      "drivers": [
-        "best 1M among large L1s",
-        "+3.15% 1W gain",
-        "positive news sentiment",
-        "large cap stability"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "KAITO has a 1M return of -13.11% (less severe than most AI tokens) and a small \u00a373M market cap, but recent sharp 1W/1D declines (-11.67%, -6.33%) suggest a potential oversold bounce opportunity.",
-      "drivers": [
-        "-13.11% 1M (less severe)",
-        "small cap high beta",
-        "oversold bounce potential",
-        "AI narrative"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "OCEAN shows a 1M return of -13.57% (relatively mild for AI) and a 1D gain of +0.08%, with a small market cap offering asymmetric upside if AI tokens lead a broader recovery [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/ai-crypto-forecast-bittensor-near-protocol-internet-computer-rebound-gains-traction-202606111630).",
-      "drivers": [
-        "-13.57% 1M (mild)",
-        "AI sector recovery",
-        "small cap asymmetry",
-        "data economy narrative"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AGIX",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "AGIX has a 1M return of -13.97% (among the best in AI) and a 1D bounce of +1.18%, with a small market cap and positive AI narrative momentum from the broader AI token recovery.",
-      "drivers": [
-        "-13.97% 1M (resilient)",
-        "AI narrative",
-        "small cap high beta",
-        "positive 1D momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "HBAR",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "HBAR has a 1M return of -16.35% (better than most emerging L1s) and a neutral news sentiment of 0.0, with a \u00a32.55B market cap and enterprise-grade Hashgraph technology offering long-term value.",
-      "drivers": [
-        "-16.35% 1M (relative strength)",
-        "enterprise Hashgraph tech",
-        "neutral sentiment",
-        "moderate market cap"
       ]
     }
   ]

@@ -1,9 +1,141 @@
 {
-  "updated": "2026-06-13 09:54",
+  "updated": "2026-06-15 14:14",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Top momentum (+58.23% YTD, +30.05% 1M, +8.12% 1W) with no P/E drag and strong analyst buy consensus; defense electronics demand and budget tailwinds support sustained outperformance.",
+      "drivers": [
+        "+58% YTD momentum",
+        "1M +30%",
+        "buy consensus",
+        "defense electronics exposure"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Q1 FY27 revenue $1.9B with record margins, raised FY27 EPS guidance to $9.90-$10.10, and $2.1B bookings (book-to-bill 1.1x); pipeline $85B supports +25.88% 1M surge at P/E 12.8 \u2013 deeply undervalued.",
+      "drivers": [
+        "+25.88% 1M",
+        "P/E 12.8",
+        "record margin and raised guidance",
+        "$85B qualified pipeline"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +40.09%, 1M +14.43%, 1W +5.16% with low beta 0.121 and positive news sentiment 0.343; recent spin-off purity and defence modernisation contracts are strong catalysts.",
+      "drivers": [
+        "+40% YTD",
+        "low beta 0.12",
+        "positive sentiment 0.34",
+        "defence modernisation tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +22.05%, 1M +18.94% with strong_buy analyst consensus (score 1.17); tactical robotics consolidation and U.S. Army/Japan GSDF contracts accelerating production \u2013 web search confirms 70%+ recent rally and $22 price target.",
+      "drivers": [
+        "strong_buy consensus 1.17",
+        "1M +18.94%",
+        "U.S. Army/Japan contracts",
+        "$22 analyst target"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "KTOS",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Cathie Wood's ARK Invest bought 252K shares, Valkyrie/Skyborg drone programs, and $886B defence budget tailwinds drive 1M +10.02% despite -27.17% YTD; P/E 339 high but AI combat drone moat justifies premium.",
+      "drivers": [
+        "ARK Invest purchase",
+        "1M +10%",
+        "AI combat drone moat",
+        "defence budget tailwind"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "1Y +48%, YTD +9.28%, 1M +14.74%, 1D +4.41% driven by \u00a324bn UK-Japan investment deal; P/E 19 is reasonable, analyst consensus buy at 1.6, and news sentiment positive 0.262.",
+      "drivers": [
+        "1M +14.74%",
+        "P/E 19",
+        "UK-Japan \u00a324bn deal",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +13.64% on strong aerospace demand and defence exposure, low beta 1.035, and highest news sentiment in universe (0.543); P/E 59 high but justified by consistent growth profile.",
+      "drivers": [
+        "1M +13.64%",
+        "news sentiment 0.54",
+        "defence exposure",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +14.67% with YTD +6.58%, low beta 0.322, reasonable P/E 23.68, and positive news sentiment 0.296; UK penny stock with defence exposure and dividend yield 2.3%.",
+      "drivers": [
+        "1M +14.67%",
+        "P/E 23.7",
+        "positive sentiment 0.3",
+        "dividend 2.3%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +17.23% recovery from YTD -21.60%, analyst buy consensus (1.6) and public safety AI platform momentum; P/E 179 elevated but web search highlights recurring software growth catalysts.",
+      "drivers": [
+        "1M +17.23%",
+        "buy consensus 1.6",
+        "public safety AI",
+        "recurring software growth"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1M +10.16%, YTD -1.27%, 1Y +97% driven by direct-to-cell satellite momentum and spectrum sale hopes; high beta 2.634 and 18.39% short interest add risk but news sentiment 0.262 is positive.",
+      "drivers": [
+        "1M +10.16%",
+        "1Y +97%",
+        "spectrum sale narrative",
+        "positive sentiment 0.26"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRCY",
@@ -132,138 +264,6 @@
         "analyst consensus Buy",
         "positive news sentiment",
         "drone/autonomy catalyst"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +43.44%, 1M +16.15%, beta 0.12, P/E 46.44 \u2014 strong momentum with low valuation risk; recent Pentagon autonomous warfare budget tailwinds benefit Leonardo DRS directly.",
-      "drivers": [
-        "+43.4% YTD",
-        "+16.2% 1M",
-        "beta 0.12",
-        "Pentagon $55B drone request"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRCY",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "1-year return +125%, YTD +56.94%, 1M +29.25%, P/E undefined but revenue growth accelerating; analog/mixed-signal defence content gains from platform upgrades and electronic warfare demand.",
-      "drivers": [
-        "+125% 1Y",
-        "+56.9% YTD",
-        "+29.3% 1M",
-        "defence electronics demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Upgraded to Buy, ~$10B in recent contracts (PAC-3 $4.8B, F-35 $879M), P/E 26.6, beta 0.11, 19% upside to $621 target; Trump $1.5T defence budget proposal is a structural catalyst.",
-      "drivers": [
-        "~$10B new contracts",
-        "P/E 26.6",
-        "19% upside to PT",
-        "Trump $1.5T budget"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "1M +17.92%, recent CalRamic acquisition adds high-voltage capacitor capability, P/E 60.6 but supported by consistent M&A-driven compounding; news sentiment 0.48, defence/aerospace aftermarket exposure.",
-      "drivers": [
-        "+17.9% 1M",
-        "news sentiment 0.48",
-        "CalRamic acquisition",
-        "P/E 60.6"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +33.72%, YTD +16.88%, FCC approval for direct-to-device, first prime government contract, BlueBird launch June 17; valuation high but catalysts are tangible and near-term.",
-      "drivers": [
-        "+33.7% 1M",
-        "FCC approval",
-        "first govt contract",
-        "BlueBird launch June 17"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "1M +8.78%, $1.12B funded backlog, counter-drone production ramp 500%, P/E negative but FY26 revenue guidance $1.85-1.95B; Pentagon $55B drone request is a massive demand signal.",
-      "drivers": [
-        "$1.12B funded backlog",
-        "500% production ramp",
-        "Pentagon $55B drone request",
-        "counter-drone edge"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RCAT",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "YTD +31.11%, 1M +8.88%, strong_buy consensus with best an_score 1.17, Q1 revenue +849% YoY; although loss-making, the drone thematic and Pentagon budget provide speculative upside.",
-      "drivers": [
-        "+31.1% YTD",
-        "strong_buy consensus",
-        "revenue +849% YoY",
-        "Pentagon drone budget"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +14.36%, 1M +22.27%, P/E 12.93 \u2014 cheapest in cyber-intel group, dividend yield 1.29%, news sentiment 0.25; contract wins and IT modernisation for defence agencies support re-rating.",
-      "drivers": [
-        "+22.3% 1M",
-        "P/E 12.9",
-        "YTD +14.4%",
-        "cyber/IT demand"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.63,
-      "rationale": "1Y +27%, YTD +5.42%, 1W +5.08%, P/E 22.57, beta 0.34 \u2014 steady defence prime with naval/land systems exposure; Trump budget proposal and global rearmament support backlog growth.",
-      "drivers": [
-        "+27% 1Y",
-        "P/E 22.6",
-        "Trump $1.5T budget",
-        "naval/land systems"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +7.72%, P/E 17.89, news sentiment 0.31 \u2014 trades at 14x forward P/E vs sector 39x, Pentagon $55B drone request is a catalyst for Textron's autonomous systems (Textron eAviation, shadow drones).",
-      "drivers": [
-        "P/E 17.9",
-        "14x forward P/E",
-        "Pentagon $55B drone request",
-        "news sentiment 0.31"
       ]
     }
   ]

@@ -1,9 +1,126 @@
 {
-  "updated": "2026-06-13 09:54",
+  "updated": "2026-06-15 14:15",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "ARM is up +231.92% YTD, +72.15% in 1M, and +11.05% in 1W, driven by AGI CPU wins at ByteDance/Oracle and RTX Spark validation [thenextweb.com](https://thenextweb.com/news/arm-agi-cpu-bytedance-oracle-data-centre); BofA raised PT 37% [247wallst.com](https://247wallst.com/investing/2026/06/01/arm-holdings-rockets-18-microsoft-dell-rise-on-rtx-spark-ai-pc-launch/).",
+      "drivers": [
+        "AGI CPU wins Meta, ByteDance, Oracle",
+        "RTX Spark AI PC catalyst",
+        "BofA 37% PT upgrade"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "AMAT is up +111.5% YTD, +30.08% in 1M, +25.22% in 1W, with Barclays/Cantor raising price targets and news sentiment of 0.268; P/E of 53.46 is reasonable given growth trajectory.",
+      "drivers": [
+        "+111.5% YTD",
+        "Barclays/Cantor price target hikes",
+        "Positive news sentiment 0.268"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "MU is up +211.34% YTD, +22.15% in 1M, +13.61% in 1W, with analyst consensus strong_buy and news sentiment 0.259; P/E of 46.3 reflects strong memory demand.",
+      "drivers": [
+        "+211.34% YTD",
+        "Strong_buy analyst consensus",
+        "Memory demand catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "SNOW is up +52.77% in 1M and +7.42% YTD, with strong_buy analyst consensus; news sentiment 0.262 and $6bn AWS Graviton commitment [thenextweb.com](https://thenextweb.com/news/arm-agi-cpu-bytedance-oracle-data-centre).",
+      "drivers": [
+        "+52.77% 1M momentum",
+        "AWS Graviton $6bn deal"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.71,
+      "rationale": "ASML is up +60.69% YTD, +17.83% in 1M, +13.51% in 1W, with strong_buy consensus and low short interest 0.27%; Mistral AI stake adds growth angle.",
+      "drivers": [
+        "+60.69% YTD",
+        "Low short interest 0.27%",
+        "Mistral AI investment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "FTNT is up +87.85% YTD, +24.31% in 1M, +1.12% in 1W, with manageable P/E of 56.93; momentum is strong but analyst consensus is hold, so buy signal is cautious.",
+      "drivers": [
+        "+87.85% YTD",
+        "Strong 1M momentum"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "PANW is up +55.89% YTD, +22.75% in 1M, +2.78% in 1W, with buy analyst consensus; beta of 0.942 indicates low volatility, though P/E of 243 is high.",
+      "drivers": [
+        "+55.89% YTD",
+        "Low beta 0.942"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.63,
+      "rationale": "CRWD is up +50.54% YTD, +21.37% in 1M, +1.76% in 1W, with buy analyst consensus; ARR growth shows room for expansion [crowdstrike.com].",
+      "drivers": [
+        "+50.54% YTD",
+        "ARR growth catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "CSCO is up +60.12% YTD, +18.88% in 1M, with beta just 1.004, low short interest 1.57%, and dividend yield 1.39%; news sentiment 0.266 supports stable growth.",
+      "drivers": [
+        "+60.12% YTD",
+        "Low short interest 1.57%",
+        "Dividend yield 1.39%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "NET is up +16.56% YTD, +18.62% in 1M, with news sentiment 0.317; Arm AGI CPU deployment across Cloudflare network is a catalyst [thenextweb.com](https://thenextweb.com/news/arm-agi-cpu-bytedance-oracle-data-centre).",
+      "drivers": [
+        "Arm AGI deployment catalyst",
+        "Positive news sentiment 0.317"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMAT",
@@ -131,138 +248,6 @@
         "18.6% 1-month momentum",
         "0.49 news sentiment",
         "buy consensus"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "SNOW surged +58.17% in 1M and +10.93% YTD, with strong_buy analyst consensus (score 1.49) and a 34% product revenue beat; the $6B AWS deal and AI data hub pivot provide live catalysts.",
-      "drivers": [
-        "+58% 1M momentum",
-        "strong_buy consensus",
-        "34% product revenue growth",
-        "$6B AWS deal"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "ASML gained +24.89% in 1M and +63.79% YTD, strong_buy consensus (score 1.48), P/E 63.7, and a major catalyst from Musk's $55B Terafab plan exclusively using ASML EUV lithography.",
-      "drivers": [
-        "+24.9% 1M momentum",
-        "strong_buy consensus",
-        "Musk Terafab catalyst",
-        "low short interest 0.27%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "MU is up +29.91% in 1M and +215.86% YTD, strong_buy consensus (score 1.48), P/E 46.95 but forward P/E ~9-11x, with HBM sold out through 2026 and earnings catalyst on June 24.",
-      "drivers": [
-        "+29.9% 1M momentum",
-        "strong_buy consensus",
-        "HBM supply tight through 2026",
-        "forward P/E ~10x"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "AMAT rallied +28.32% in 1M and +106.05% YTD, strong_buy consensus (score 1.50), P/E 52.09, and very positive news sentiment of 0.555, benefiting from AI infrastructure buildout.",
-      "drivers": [
-        "+28.3% 1M momentum",
-        "strong_buy consensus",
-        "news sentiment 0.555",
-        "AI equipment demand"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "PANW gained +29.65% in 1M and +55.84% YTD, buy consensus (score 1.60), P/E 243 but strong growth, and a live catalyst from the Deutsche Telekom AI security partnership.",
-      "drivers": [
-        "+29.7% 1M momentum",
-        "buy consensus",
-        "Deutsche Telekom deal",
-        "AI security expansion"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "CRWD rose +26.61% in 1M and +52.46% YTD, buy consensus (score 1.65), with strong momentum despite slightly negative news sentiment (-0.06), driven by AI-powered cybersecurity demand.",
-      "drivers": [
-        "+26.6% 1M momentum",
-        "buy consensus",
-        "AI cybersecurity tailwind",
-        "high YTD return"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "CSCO advanced +22.70% in 1M and +61.09% YTD, buy consensus (score 1.88), P/E 40.61, with a 1.38% dividend yield and positive news sentiment 0.215, benefiting from networking demand.",
-      "drivers": [
-        "+22.7% 1M momentum",
-        "buy consensus",
-        "dividend yield 1.38%",
-        "positive sentiment 0.215"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "FTNT surged +27.39% in 1M and +86.26% YTD, but analyst consensus is hold (score 2.72) and news sentiment slightly negative (-0.003); momentum is strong but conviction is lower.",
-      "drivers": [
-        "+27.4% 1M momentum",
-        "high YTD return 86.26%",
-        "P/E 56.22",
-        "hold consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "NET gained +21.76% in 1M and +16.03% YTD, buy consensus (score 1.97), but fell -15.34% in the last week; positive sentiment 0.094 and AI edge computing growth story.",
-      "drivers": [
-        "+21.8% 1M momentum",
-        "buy consensus",
-        "AI edge computing",
-        "recent weekly pullback"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "ARM soared +64.60% in 1M and +198.29% YTD, buy consensus (score 1.88), but P/E is extremely high at 397.94 and beta 3.786; the AGI CPU adoption by ByteDance and Oracle is a live catalyst.",
-      "drivers": [
-        "+64.6% 1M momentum",
-        "AGI CPU customer wins",
-        "high short interest 12.74%",
-        "extreme valuation"
       ]
     }
   ]
