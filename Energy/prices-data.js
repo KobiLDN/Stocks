@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-16 08:11",
-  "fx_gbp_usd": 1.341,
+  "updated": "2026-06-16 14:02",
+  "fx_gbp_usd": 1.3417,
   "stocks": [
     {
       "ticker": "XOM",
@@ -9,15 +9,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "105",
       "price_usd": 140.92,
-      "change_1d": "-4.14%",
+      "change_1d": "-0.47%",
       "change_1w": "-7.14%",
       "change_1m": "+0.00%",
       "change_ytd": "+16.45%",
       "return_1yr": "+24%",
       "low_gbp": "79",
-      "high_gbp": "132",
+      "high_gbp": "131",
       "bar_pct": 50,
-      "market_cap_gbp_b": 435.568,
+      "market_cap_gbp_b": 435.34,
       "beta": 0.149,
       "pe_ratio": 23.68,
       "avg_volume_m": 19.82,
@@ -37,44 +37,44 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Exxon Mobil Mulling Acquisition of Australia\u2019s Woodside Energy, Bloomberg Reports",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/energy/articles/exxon-mobil-mulling-acquisition-australia-020559736.html",
-          "published": 1781575559,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Exxon Mobil (XOM) Stock Falls Amid Market Uptick: What Investors Need to Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exxon-mobil-xom-stock-falls-214504163.html",
-          "published": 1781559904,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Settle Sharply Higher as US-Iran Peace Deal Spurs Optimism",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2480274/stocks-settle-sharply-higher-as-us-iran-peace-deal-spurs-optimism",
-          "published": 1781555816,
+          "title": "Here Are Tuesday\u2019s Best Wall Street Analyst Research Calls: Dynatrace, Emerson Electric, Exxon Mobil, Flutter Entertainment, Genuine Parts, nVent Electric, Palantir Technologies, Roku, and More",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/16/here-are-tuesdays-best-wall-street-analyst-research-calls-dynatrace-emerson-electric-exxon-mobil-flutter-entertainment-genuine-parts-nvent-electric-palantir-technologies-roku-and-mor/",
+          "published": 1781610747,
           "sentiment": 0.791
         },
         {
-          "title": "Oil Prices Slump, Exxon and Valero Stocks Drop on Deal Between the U.S. and Iran",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/oil-prices-energy-stocks-trump-iran-8f14bc75?siteid=yhoof2&yptr=yahoo",
-          "published": 1781554200,
-          "sentiment": -0.273
+          "title": "Company News for Jun 16, 2026",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/company-news-jun-16-2026-114400255.html",
+          "published": 1781610240,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Exxon Mobil (XOM) Faces New Questions As Strait Of Hormuz Reopens",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/exxon-mobil-xom-faces-questions-090849317.html",
+          "published": 1781600929,
+          "sentiment": 0.0
+        },
+        {
+          "title": "BofA upgrades Exxon to Buy as shares lag despite war-driven upside",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/energy/articles/bofa-upgrades-exxon-buy-shares-075637194.html",
+          "published": 1781596597,
+          "sentiment": -0.052
         }
       ],
-      "news_sentiment": 0.158
+      "news_sentiment": 0.148
     },
     {
       "ticker": "CVX",
       "company_name": "Chevron",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "135",
+      "price_gbp": "134",
       "price_usd": 180.4,
-      "change_1d": "-3.58%",
+      "change_1d": "-0.11%",
       "change_1w": "-4.67%",
       "change_1m": "-7.17%",
       "change_ytd": "+17.92%",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "106",
       "high_gbp": "160",
       "bar_pct": 53,
-      "market_cap_gbp_b": 267.918,
+      "market_cap_gbp_b": 267.778,
       "beta": 0.472,
       "pe_ratio": 31.43,
       "avg_volume_m": 11.19,
@@ -102,6 +102,20 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "How Investors Are Reacting To Chevron (CVX) Oil-Price Slide And Argentina Gas Bet After U.S.-Iran Deal",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/investors-reacting-chevron-cvx-oil-120740972.html",
+          "published": 1781611660,
+          "sentiment": 0.0
+        },
+        {
+          "title": "SCHD Now Concentrates 42 Percent of Your Money in Just 10 Stocks. Here Is Who Should Still Own It",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/16/schd-now-concentrates-42-percent-of-your-money-in-just-10-stocks-here-is-who-should-still-own-it/",
+          "published": 1781604773,
+          "sentiment": 0.0
+        },
+        {
           "title": "Chevron (CVX) Stock Sinks As Market Gains: Here's Why",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/chevron-cvx-stock-sinks-market-214503498.html",
@@ -114,23 +128,9 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-us-iran-deal-oil-prices/?src=A00220&yptr=yahoo",
           "published": 1781556196,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Settle Sharply Higher as US-Iran Peace Deal Spurs Optimism",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2480274/stocks-settle-sharply-higher-as-us-iran-peace-deal-spurs-optimism",
-          "published": 1781555816,
-          "sentiment": 0.791
-        },
-        {
-          "title": "Exxon, Chevron Lead Energy Stocks Sell-off as Crude Prices Sink 5%",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/exxon-chevron-lead-energy-stocks-200644706.html",
-          "published": 1781554004,
-          "sentiment": -0.382
         }
       ],
-      "news_sentiment": 0.15
+      "news_sentiment": 0.068
     },
     {
       "ticker": "SHEL",
@@ -139,7 +139,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "62",
       "price_usd": 82.61,
-      "change_1d": "-2.93%",
+      "change_1d": "-0.21%",
       "change_1w": "-4.66%",
       "change_1m": "-5.90%",
       "change_ytd": "+11.53%",
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "71",
       "bar_pct": 56,
-      "market_cap_gbp_b": 170.762,
+      "market_cap_gbp_b": 170.673,
       "beta": -0.248,
       "pe_ratio": 12.87,
       "avg_volume_m": 7.94,
@@ -204,7 +204,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "31",
       "price_usd": 41.59,
-      "change_1d": "-2.70%",
+      "change_1d": "-0.41%",
       "change_1w": "-4.87%",
       "change_1m": "+0.00%",
       "change_ytd": "+18.92%",
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 64,
-      "market_cap_gbp_b": 79.862,
+      "market_cap_gbp_b": 79.82,
       "beta": -0.239,
       "pe_ratio": 33.54,
       "avg_volume_m": 12.62,
@@ -269,7 +269,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "63",
       "price_usd": 84.07,
-      "change_1d": "-4.25%",
+      "change_1d": "-0.86%",
       "change_1w": "-5.14%",
       "change_1m": "-10.02%",
       "change_ytd": "+27.76%",
@@ -277,9 +277,9 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "70",
       "bar_pct": 73,
-      "market_cap_gbp_b": 139.48,
+      "market_cap_gbp_b": 139.407,
       "beta": 0.045,
-      "pe_ratio": 13.05,
+      "pe_ratio": 12.47,
       "avg_volume_m": 1.75,
       "div_yield_pct": 502.0,
       "short_pct": 0.2,
@@ -289,6 +289,20 @@ window.PRICES_DATA = {
       "vol_1w": 6526362,
       "vol_1m": 25210462,
       "news": [
+        {
+          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Tuesday Ahead of Fed Policy Meeting",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-123451429.html",
+          "published": 1781613291,
+          "sentiment": 0.0
+        },
+        {
+          "title": "EU approves $2.2bn TotalEnergies and Masdar renewables JV",
+          "publisher": "Power Technology",
+          "url": "https://www.power-technology.com/news/eu-approves-totalenergies-masdar-jv/",
+          "published": 1781600361,
+          "sentiment": 0.402
+        },
         {
           "title": "Sector Update: Energy Stocks Fall Late Afternoon",
           "publisher": "MT Newswires",
@@ -309,23 +323,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-close-mixed-monday-154316666.html",
           "published": 1781538196,
           "sentiment": 0.542
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Premarket Monday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-fall-premarket-132224513.html",
-          "published": 1781529744,
-          "sentiment": 0.273
-        },
-        {
-          "title": "TotalEnergies Refocuses LNG Exposure From Sanctioned Russia To Mediterranean Growth",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/totalenergies-refocuses-lng-exposure-sanctioned-170550823.html",
-          "published": 1781283950,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.349
+      "news_sentiment": 0.298
     },
     {
       "ticker": "EQNR",
@@ -334,7 +334,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "26",
       "price_usd": 34.26,
-      "change_1d": "-5.88%",
+      "change_1d": "-0.15%",
       "change_1w": "-8.88%",
       "change_1m": "+0.00%",
       "change_ytd": "+42.86%",
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "32",
       "bar_pct": 57,
-      "market_cap_gbp_b": 63.631,
+      "market_cap_gbp_b": 63.598,
       "beta": -0.752,
       "pe_ratio": 15.5,
       "avg_volume_m": 6.02,
@@ -354,6 +354,20 @@ window.PRICES_DATA = {
       "vol_1w": 23396815,
       "vol_1m": 77768415,
       "news": [
+        {
+          "title": "This Week In Energy Transition - Norway Amplifies Hydropower with Statkraft's New Bl\u00e5fjell Pump",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/week-energy-transition-norway-amplifies-113737962.html",
+          "published": 1781609857,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Equinor Doubles Share Buyback to $3 Billion Under New Plan Targeting Fossil Fuel Growth",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/energy-oil/equinor-doubles-share-buyback-to-3-billion-under-new-plan-targeting-fossil-fuel-growth-1577b179?siteid=yhoof2&yptr=yahoo",
+          "published": 1781606880,
+          "sentiment": 0.586
+        },
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Surge in Monday Trading",
           "publisher": "MT Newswires",
@@ -374,23 +388,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-fall-premarket-132224513.html",
           "published": 1781529744,
           "sentiment": 0.273
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday Amid US-Iran Ceasefire",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-125654489.html",
-          "published": 1781528214,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Equinor Advances Johan Sverdrup Phase 4 After New Oil Discoveries",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/equinor-advances-johan-sverdrup-phase-094627065.html",
-          "published": 1781516787,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.055
+      "news_sentiment": 0.226
     },
     {
       "ticker": "COP",
@@ -399,7 +399,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "84",
       "price_usd": 112.26,
-      "change_1d": "-4.03%",
+      "change_1d": "+0.00%",
       "change_1w": "-5.58%",
       "change_1m": "-9.86%",
       "change_ytd": "+17.86%",
@@ -407,7 +407,7 @@ window.PRICES_DATA = {
       "low_gbp": "64",
       "high_gbp": "101",
       "bar_pct": 53,
-      "market_cap_gbp_b": 101.986,
+      "market_cap_gbp_b": 101.933,
       "beta": 0.106,
       "pe_ratio": 19.03,
       "avg_volume_m": 8.55,
@@ -419,6 +419,13 @@ window.PRICES_DATA = {
       "vol_1w": 36289597,
       "vol_1m": 132107097,
       "news": [
+        {
+          "title": "SCHD Now Concentrates 42 Percent of Your Money in Just 10 Stocks. Here Is Who Should Still Own It",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/16/schd-now-concentrates-42-percent-of-your-money-in-just-10-stocks-here-is-who-should-still-own-it/",
+          "published": 1781604773,
+          "sentiment": 0.0
+        },
         {
           "title": "This Top Oil Stock Expects an Unlikely Source to Help It Double Its Free Cash Flow by 2029.",
           "publisher": "Motley Fool",
@@ -432,13 +439,6 @@ window.PRICES_DATA = {
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-15-2026/card/stocks-to-watch-spacex-micron-technology-remy-cointreau-I52ZlHTefBMgyZlLA2cF?siteid=yhoof2&yptr=yahoo",
           "published": 1781556377,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Settle Sharply Higher as US-Iran Peace Deal Spurs Optimism",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2480274/stocks-settle-sharply-higher-as-us-iran-peace-deal-spurs-optimism",
-          "published": 1781555816,
-          "sentiment": 0.791
         },
         {
           "title": "Stocks Rally as US-Iran Peace Deal Sinks Oil and Bond Yields",
@@ -455,7 +455,7 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.422
+      "news_sentiment": 0.264
     },
     {
       "ticker": "OXY",
@@ -464,7 +464,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "41",
       "price_usd": 54.46,
-      "change_1d": "-3.46%",
+      "change_1d": "-0.16%",
       "change_1w": "-4.82%",
       "change_1m": "-8.36%",
       "change_ytd": "+29.71%",
@@ -472,7 +472,7 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "50",
       "bar_pct": 55,
-      "market_cap_gbp_b": 40.393,
+      "market_cap_gbp_b": 40.372,
       "beta": 0.124,
       "pe_ratio": 73.59,
       "avg_volume_m": 14.21,
@@ -490,13 +490,6 @@ window.PRICES_DATA = {
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-15-2026/card/stocks-to-watch-spacex-micron-technology-remy-cointreau-I52ZlHTefBMgyZlLA2cF?siteid=yhoof2&yptr=yahoo",
           "published": 1781556377,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Settle Sharply Higher as US-Iran Peace Deal Spurs Optimism",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2480274/stocks-settle-sharply-higher-as-us-iran-peace-deal-spurs-optimism",
-          "published": 1781555816,
-          "sentiment": 0.791
         },
         {
           "title": "Stocks Rally as US-Iran Peace Deal Sinks Oil and Bond Yields",
@@ -518,9 +511,16 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2473927/stocks-soar-on-us-iran-peace-agreement",
           "published": 1781532930,
           "sentiment": 0.772
+        },
+        {
+          "title": "Investors Heavily Search Occidental Petroleum Corporation (OXY): Here is What You Need to Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-occidental-petroleum-130002435.html",
+          "published": 1781528402,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.421
+      "news_sentiment": 0.263
     },
     {
       "ticker": "EOG",
@@ -529,7 +529,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "98",
       "price_usd": 131.98,
-      "change_1d": "-3.27%",
+      "change_1d": "-1.64%",
       "change_1w": "-5.83%",
       "change_1m": "-7.70%",
       "change_ytd": "+25.17%",
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "76",
       "high_gbp": "113",
       "bar_pct": 60,
-      "market_cap_gbp_b": 52.42,
+      "market_cap_gbp_b": 52.393,
       "beta": 0.256,
       "pe_ratio": 12.96,
       "avg_volume_m": 4.05,
@@ -594,7 +594,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "187",
       "price_usd": 250.86,
-      "change_1d": "-4.62%",
+      "change_1d": "-1.20%",
       "change_1w": "-5.75%",
       "change_1m": "-2.97%",
       "change_ytd": "+53.25%",
@@ -602,7 +602,7 @@ window.PRICES_DATA = {
       "low_gbp": "118",
       "high_gbp": "203",
       "bar_pct": 81,
-      "market_cap_gbp_b": 54.612,
+      "market_cap_gbp_b": 54.583,
       "beta": 0.522,
       "pe_ratio": 16.5,
       "avg_volume_m": 2.44,
@@ -615,18 +615,18 @@ window.PRICES_DATA = {
       "vol_1m": 46415133,
       "news": [
         {
+          "title": "Best Growth Stocks to Buy for June 16th",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-071600851.html",
+          "published": 1781594160,
+          "sentiment": 0.778
+        },
+        {
           "title": "Stocks to Watch Recap: SpaceX, Micron Technology, Remy Cointreau",
           "publisher": "The Wall Street Journal",
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-15-2026/card/stocks-to-watch-spacex-micron-technology-remy-cointreau-I52ZlHTefBMgyZlLA2cF?siteid=yhoof2&yptr=yahoo",
           "published": 1781556377,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Settle Sharply Higher as US-Iran Peace Deal Spurs Optimism",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2480274/stocks-settle-sharply-higher-as-us-iran-peace-deal-spurs-optimism",
-          "published": 1781555816,
-          "sentiment": 0.791
         },
         {
           "title": "Oil Prices Slump, Exxon and Valero Stocks Drop on Deal Between the U.S. and Iran",
@@ -650,7 +650,7 @@ window.PRICES_DATA = {
           "sentiment": 0.649
         }
       ],
-      "news_sentiment": 0.157
+      "news_sentiment": 0.154
     },
     {
       "ticker": "VLO",
@@ -659,15 +659,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "184",
       "price_usd": 247.16,
-      "change_1d": "-4.41%",
+      "change_1d": "-0.34%",
       "change_1w": "-4.35%",
       "change_1m": "-3.94%",
       "change_ytd": "+51.14%",
       "return_1yr": "+74%",
-      "low_gbp": "98",
+      "low_gbp": "97",
       "high_gbp": "198",
       "bar_pct": 86,
-      "market_cap_gbp_b": 54.727,
+      "market_cap_gbp_b": 54.698,
       "beta": 0.553,
       "pe_ratio": 18.05,
       "avg_volume_m": 3.44,
@@ -687,11 +687,11 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Stocks Settle Sharply Higher as US-Iran Peace Deal Spurs Optimism",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2480274/stocks-settle-sharply-higher-as-us-iran-peace-deal-spurs-optimism",
-          "published": 1781555816,
-          "sentiment": 0.791
+          "title": "Best Growth Stocks to Buy for June 16th",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-june-071600851.html",
+          "published": 1781594160,
+          "sentiment": 0.778
         },
         {
           "title": "Oil Prices Slump, Exxon and Valero Stocks Drop on Deal Between the U.S. and Iran",
@@ -715,7 +715,7 @@ window.PRICES_DATA = {
           "sentiment": 0.649
         }
       ],
-      "news_sentiment": 0.157
+      "news_sentiment": 0.154
     },
     {
       "ticker": "SLB",
@@ -724,7 +724,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "40",
       "price_usd": 53.71,
-      "change_1d": "-4.38%",
+      "change_1d": "-0.50%",
       "change_1w": "-5.02%",
       "change_1m": "-5.53%",
       "change_ytd": "+35.10%",
@@ -732,7 +732,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 81,
-      "market_cap_gbp_b": 59.879,
+      "market_cap_gbp_b": 59.848,
       "beta": 0.708,
       "pe_ratio": 23.66,
       "avg_volume_m": 15.48,
@@ -759,13 +759,6 @@ window.PRICES_DATA = {
           "sentiment": 0.34
         },
         {
-          "title": "Stocks Settle Sharply Higher as US-Iran Peace Deal Spurs Optimism",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2480274/stocks-settle-sharply-higher-as-us-iran-peace-deal-spurs-optimism",
-          "published": 1781555816,
-          "sentiment": 0.791
-        },
-        {
           "title": "Is SLB (SLB) the Best Turnaround Stock to Buy in 2026?",
           "publisher": "Insider Monkey",
           "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-best-turnaround-stock-165319679.html",
@@ -778,9 +771,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/slb-qualcomm-edge-ai-pact-011450043.html",
           "published": 1781140490,
           "sentiment": 0.0
+        },
+        {
+          "title": "SLB & Qualcomm Team Up to Advance Edge AI in the Energy Sector",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/slb-qualcomm-team-advance-edge-122400776.html",
+          "published": 1781094240,
+          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.354
+      "news_sentiment": 0.25
     },
     {
       "ticker": "HAL",
@@ -789,15 +789,15 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "28",
       "price_usd": 38.18,
-      "change_1d": "-2.48%",
+      "change_1d": "-0.08%",
       "change_1w": "-5.73%",
       "change_1m": "-10.37%",
       "change_ytd": "+30.16%",
       "return_1yr": "+66%",
       "low_gbp": "15",
-      "high_gbp": "33",
+      "high_gbp": "32",
       "bar_pct": 77,
-      "market_cap_gbp_b": 23.784,
+      "market_cap_gbp_b": 23.772,
       "beta": 0.704,
       "pe_ratio": 21.09,
       "avg_volume_m": 13.7,
@@ -854,15 +854,15 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "47",
       "price_usd": 62.46,
-      "change_1d": "-1.08%",
+      "change_1d": "+0.34%",
       "change_1w": "-3.67%",
       "change_1m": "-5.66%",
       "change_ytd": "+33.44%",
       "return_1yr": "+58%",
       "low_gbp": "28",
-      "high_gbp": "53",
+      "high_gbp": "52",
       "bar_pct": 76,
-      "market_cap_gbp_b": 46.207,
+      "market_cap_gbp_b": 46.183,
       "beta": 0.938,
       "pe_ratio": 19.96,
       "avg_volume_m": 8.41,
@@ -919,7 +919,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "64",
       "price_usd": 86.12,
-      "change_1d": "+0.19%",
+      "change_1d": "-0.53%",
       "change_1w": "+2.51%",
       "change_1m": "-2.57%",
       "change_ytd": "+7.92%",
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "74",
       "bar_pct": 60,
-      "market_cap_gbp_b": 133.937,
+      "market_cap_gbp_b": 133.867,
       "beta": 0.671,
       "pe_ratio": 21.86,
       "avg_volume_m": 10.51,
@@ -983,26 +983,26 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2376.0,
-      "change_1d": "-1.00%",
-      "change_1w": "-0.21%",
-      "change_1m": "+1.32%",
-      "change_ytd": "+6.50%",
-      "return_1yr": "+32%",
+      "price_usd": 2358.0,
+      "change_1d": "-0.46%",
+      "change_1w": "+0.00%",
+      "change_1m": "+0.55%",
+      "change_ytd": "+5.69%",
+      "return_1yr": "+31%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 67,
-      "market_cap_gbp_b": 0.287,
+      "bar_pct": 65,
+      "market_cap_gbp_b": 0.284,
       "beta": 0.596,
-      "pe_ratio": 22.63,
-      "avg_volume_m": 4.23,
+      "pe_ratio": 22.46,
+      "avg_volume_m": 4.2,
       "div_yield_pct": 289.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2483975,
-      "vol_1w": 13841937,
-      "vol_1m": 86032172,
+      "vol_1d": 651197,
+      "vol_1w": 11168542,
+      "vol_1m": 86683369,
       "news": [
         {
           "title": "UK, Japan to deepen ties with \u00a318 billion investment agreement",
@@ -1049,7 +1049,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "39",
       "price_usd": 52.4,
-      "change_1d": "-4.27%",
+      "change_1d": "-0.63%",
       "change_1w": "-7.88%",
       "change_1m": "+5.45%",
       "change_ytd": "+55.26%",
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 56,
-      "market_cap_gbp_b": 5.149,
+      "market_cap_gbp_b": 5.147,
       "beta": 1.572,
       "pe_ratio": 51.88,
       "avg_volume_m": 7.61,
@@ -1114,7 +1114,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "204",
       "price_usd": 273.51,
-      "change_1d": "+2.06%",
+      "change_1d": "-0.27%",
       "change_1w": "-0.68%",
       "change_1m": "+17.06%",
       "change_ytd": "-0.30%",
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "101",
       "high_gbp": "239",
       "bar_pct": 74,
-      "market_cap_gbp_b": 21.916,
+      "market_cap_gbp_b": 21.904,
       "beta": 1.692,
       "pe_ratio": 17.67,
       "avg_volume_m": 2.47,
@@ -1179,7 +1179,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "27",
       "price_usd": 36.63,
-      "change_1d": "-1.24%",
+      "change_1d": "-1.95%",
       "change_1w": "-5.03%",
       "change_1m": "+1.74%",
       "change_ytd": "-6.43%",
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "23",
       "high_gbp": "34",
       "bar_pct": 39,
-      "market_cap_gbp_b": 4.982,
+      "market_cap_gbp_b": 4.979,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1252,7 +1252,7 @@ window.PRICES_DATA = {
       "low_gbp": "4.29",
       "high_gbp": "25",
       "bar_pct": 8,
-      "market_cap_gbp_b": 23.495,
+      "market_cap_gbp_b": 23.483,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,
