@@ -27,3 +27,7 @@ t212_mcp/.key
 # portfolio-enriched files are LOCAL ONLY, never committed
 exports/*-portfolio.json
 exports/*-portfolio.csv
+
+# Local batch-run console logs — regenerated each run, never committed
+update_all_prices_log.txt
+generate_all_signals_log.txt
