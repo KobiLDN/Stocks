@@ -1,0 +1,53 @@
+name: Generate RSS News Feed
+
+on:
+  schedule:
+    # Mon–Fri: 08:05, 14:35, 20:35 UTC
+    - cron: '5 8 * * 1-5'
+    - cron: '35 14 * * 1-5'
+    - cron: '35 20 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-news-feed
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install deps
+        working-directory: News
+        run: pip install -r requirements.txt
+
+      - name: Generate feed
+        working-directory: News
+        run: python generate_news_feed.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- News/news-feed.json rss-data.js; then
+            echo "No changes to RSS feed."
+          else
+            git add News/news-feed.json rss-data.js
+            git commit -m "Update RSS feed — $(date -u '+%Y-%m-%d %H:%M UTC')"
+            for i in 1 2 3 4; do
+              git fetch origin main
+              git rebase origin/main
+              git push origin HEAD:main && break
+              echo "Push attempt $i failed, retrying..."
+              sleep $((2 ** i))
+            done
+          fi
