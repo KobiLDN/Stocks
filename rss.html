@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment analysis across 31 technology stocks. Filter by category and sort by recency or sentiment score.">
-<title>Technology — News</title>
+<meta name="description" content="Business news from FT, Reuters, BBC and The Guardian — aggregated and sentiment scored 3× daily.">
+<title>Business RSS Feed</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../shared.css">
-<script src="../shared.js" defer></script>
+<link rel="stylesheet" href="shared.css">
+<script src="shared.js" defer></script>
 <style>
   .filter-bar {
     display: flex;
@@ -27,50 +27,9 @@
     color: var(--muted);
     cursor: pointer;
     transition: all 0.15s;
-    position: relative;
   }
   .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
-  .filter-btn[data-tooltip]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--surface2);
-    color: var(--text);
-    border: 1px solid var(--accent);
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 12px;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    width: 220px;
-    text-align: center;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.18s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    text-transform: none;
-    letter-spacing: 0;
-  }
-  .filter-btn[data-tooltip]::before {
-    content: '';
-    position: absolute;
-    bottom: calc(100% + 4px);
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid transparent;
-    border-top-color: var(--accent);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.18s ease;
-    z-index: 1001;
-  }
-  .filter-btn:hover[data-tooltip]::after,
-  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
   .toolbar {
     display: flex;
@@ -145,28 +104,17 @@
     flex-wrap: wrap;
     margin-bottom: 8px;
   }
-  .news-ticker {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--text);
-  }
-  .news-ticker:hover { color: var(--accent); text-decoration: underline; }
-  .news-company { color: var(--muted); font-size: 12px; }
-  .cat-badge {
+  .src-badge {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px;
     padding: 2px 7px;
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-mega-cap            { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .cat-semiconductors      { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
-  .cat-enterprise-software { background: rgba(45,212,191,0.1);  color: var(--teal);   border: 1px solid rgba(45,212,191,0.25); }
-  .cat-cybersecurity       { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
-  .cat-consumer-platform   { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
-  .cat-hardware-infra      { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .src-ft       { background: rgba(255,107,53,0.1);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
+  .src-reuters  { background: rgba(68,136,255,0.1);  color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
+  .src-bbc      { background: rgba(255,68,68,0.1);   color: var(--red);     border: 1px solid rgba(255,68,68,0.25); }
+  .src-guardian { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
   .news-time {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
@@ -183,6 +131,12 @@
     margin-bottom: 8px;
   }
   .news-headline:hover { color: var(--accent); }
+  .news-summary {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
   .news-meta-bot {
     display: flex;
     align-items: center;
@@ -227,7 +181,6 @@
 
   @media (max-width: 768px) {
     h1 { font-size: 26px; }
-    .news-company { display: none; }
     #news-search { width: 100%; }
     .row-count { margin-left: 0; }
   }
@@ -240,40 +193,40 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>Technology <span>News</span></h1>
-    <div class="header-sub">Latest headlines across all tracked stocks · sentiment scored locally (VADER)</div>
+    <h1>Business <span>RSS</span></h1>
+    <div class="header-sub">FT · Reuters · BBC · Guardian — aggregated and sentiment scored, refreshed 3× daily</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-<a class="sector-card hub-card" href="../index.html">
+<a class="sector-card hub-card" href="index.html">
   <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
   <div class="sector-card-name">Stock Hub</div>
 </a>
-<a class="sector-card" href="../rss.html">
+<a class="sector-card active" href="rss.html">
   <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
   <div class="sector-card-name">RSS</div>
 </a>
-<a class="sector-card" href="../AI/news.html">
+<a class="sector-card" href="AI/index.html">
   <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">AI Infrastructure</div>
 </a>
-<a class="sector-card" href="../Defence/news.html">
+<a class="sector-card" href="Defence/index.html">
   <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Defence</div>
 </a>
-<a class="sector-card" href="../Biotech/news.html">
+<a class="sector-card" href="Biotech/index.html">
   <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Biotech</div>
 </a>
-<a class="sector-card active" href="news.html">
+<a class="sector-card" href="Tech/index.html">
   <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Technology</div>
 </a>
-<a class="sector-card" href="../Crypto/news.html">
+<a class="sector-card" href="Crypto/index.html">
   <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Crypto</div>
 </a>
-<a class="sector-card" href="../Energy/news.html">
+<a class="sector-card" href="Energy/index.html">
   <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
   <div class="sector-card-name">Energy</div>
 </a>
@@ -281,24 +234,13 @@
 </div>
 <div class="header-note">⚠️ NOT FINANCIAL ADVICE · VADER sentiment is automated headline scoring only, not a trading signal · for research purposes only</div>
 </header>
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 31 technology stocks">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 31 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="Technology top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
-    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-  </div>
-</nav>
 
 <div class="container">
 
   <div class="filter-bar" id="filter-bar"></div>
 
   <div class="toolbar">
-    <input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
+    <input type="text" id="news-search" placeholder="Search headline or source..." oninput="filterNews(this.value)">
     <span class="sort-label">Sort</span>
     <div class="sort-group" id="sort-group">
       <button class="sort-btn active" data-sort="newest" onclick="setSort('newest', this)">Newest</button>
@@ -308,55 +250,29 @@
     </div>
     <span class="sort-label">Period</span>
     <div class="sort-group" id="window-group">
-      <button class="sort-btn" data-window="all" onclick="setWindow('all', this)">All Time</button>
-      <button class="sort-btn active" data-window="day" onclick="setWindow('day', this)">Last 24h</button>
+      <button class="sort-btn active" data-window="all" onclick="setWindow('all', this)">All Time</button>
+      <button class="sort-btn" data-window="day" onclick="setWindow('day', this)">Last 24h</button>
       <button class="sort-btn" data-window="week" onclick="setWindow('week', this)">Last Week</button>
     </div>
-    <span class="row-count">Showing <span id="news-count">—</span> headlines</span>
+    <span class="row-count">Showing <span id="news-count">—</span> articles</span>
   </div>
 
   <div class="news-feed" id="news-feed"></div>
 
-
 </div>
 
-<script src="prices-data.js"></script>
+<footer>
+  Business RSS · FT · Reuters · BBC · Guardian · Sentiment: VADER · Updated <span id="feed-updated">—</span>
+</footer>
+
+<script src="rss-data.js"></script>
 <script>
-  const NAMES = {
-    'AAPL': 'Apple', 'MSFT': 'Microsoft', 'GOOGL': 'Alphabet (Google)',
-    'AMZN': 'Amazon', 'META': 'Meta Platforms', 'NVDA': 'NVIDIA',
-    'AMD': 'Advanced Micro Devices', 'INTC': 'Intel', 'TSM': 'Taiwan Semiconductor',
-    'AVGO': 'Broadcom', 'QCOM': 'Qualcomm', 'ARM': 'Arm Holdings',
-    'ASML': 'ASML Holding', 'MU': 'Micron Technology', 'AMAT': 'Applied Materials',
-    'ORCL': 'Oracle', 'CRM': 'Salesforce', 'ADBE': 'Adobe',
-    'NOW': 'ServiceNow', 'SNOW': 'Snowflake', 'INTU': 'Intuit',
-    'CRWD': 'CrowdStrike', 'PANW': 'Palo Alto Networks', 'NET': 'Cloudflare',
-    'FTNT': 'Fortinet', 'NFLX': 'Netflix', 'SHOP': 'Shopify',
-    'SPOT': 'Spotify', 'UBER': 'Uber', 'CSCO': 'Cisco Systems',
-    'PLTR': 'Palantir Technologies',
+  const SOURCE_LABELS = {
+    ft:       'Financial Times',
+    reuters:  'Reuters',
+    bbc:      'BBC Business',
+    guardian: 'Guardian Business',
   };
-
-  const CAT_LABELS = {
-    'mega-cap':            'Mega Cap',
-    'semiconductors':      'Semiconductors',
-    'enterprise-software': 'Enterprise SW',
-    'cybersecurity':       'Cybersecurity',
-    'consumer-platform':   'Consumer/Platform',
-    'hardware-infra':      'Hardware/Infra',
-  };
-
-  const CAT_TOOLTIPS = {
-    'mega-cap':            'The 5 largest tech companies by market cap: Apple, Microsoft, Alphabet, Amazon, Meta',
-    'semiconductors':      'Chip designers and equipment makers powering AI and consumer tech',
-    'enterprise-software': 'Cloud SaaS platforms transforming how businesses operate',
-    'cybersecurity':       'Platforms protecting enterprises from modern cyber threats',
-    'consumer-platform':   'Consumer-facing tech platforms with massive user bases',
-    'hardware-infra':      'Networking hardware and AI platform infrastructure',
-  };
-
-  function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + ticker + '/';
-  }
 
   function escapeHtml(s) {
     return String(s == null ? '' : s)
@@ -386,10 +302,10 @@
     return new Date(unixSec * 1000).toLocaleDateString();
   }
 
-  let sortMode = 'newest';
-  let activeCategory = 'all';
+  let sortMode    = 'newest';
+  let activeSource = 'all';
   let searchQuery = '';
-  let timeWindow = 'day';
+  let timeWindow  = 'all';
 
   function setSort(mode, btn) {
     sortMode = mode;
@@ -410,25 +326,25 @@
     renderFeed();
   }
 
-  function setCategory(cat) {
-    activeCategory = cat;
+  function setSource(src) {
+    activeSource = src;
     document.querySelectorAll('.filter-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.cat === cat);
+      b.classList.toggle('active', b.dataset.src === src);
     });
     renderFeed();
   }
 
   function renderFeed() {
-    let items = window._newsItems || [];
+    let items = window._rssItems || [];
 
-    if (activeCategory !== 'all') {
-      items = items.filter(n => n.category === activeCategory);
+    if (activeSource !== 'all') {
+      items = items.filter(n => n.source === activeSource);
     }
     if (searchQuery) {
       items = items.filter(n =>
-        n.ticker.toLowerCase().includes(searchQuery) ||
-        n.name.toLowerCase().includes(searchQuery) ||
-        (n.title || '').toLowerCase().includes(searchQuery)
+        (n.title || '').toLowerCase().includes(searchQuery) ||
+        (n.summary || '').toLowerCase().includes(searchQuery) ||
+        (n.label || '').toLowerCase().includes(searchQuery)
       );
     }
     if (timeWindow !== 'all') {
@@ -442,7 +358,6 @@
         case 'oldest':   return (a.published || 0) - (b.published || 0);
         case 'positive': return (b.sentiment ?? -2) - (a.sentiment ?? -2);
         case 'negative': return (a.sentiment ??  2) - (b.sentiment ??  2);
-        case 'newest':
         default:         return (b.published || 0) - (a.published || 0);
       }
     });
@@ -451,35 +366,27 @@
 
     const feed = document.getElementById('news-feed');
     if (!sorted.length) {
-      const anyNews = (window._newsItems || []).length > 0;
       feed.innerHTML = '<div class="empty-state">' +
-        (anyNews
-          ? 'No headlines match the current filters.'
-          : 'No news data yet. The price/news bot needs to run on GitHub Actions to populate <strong>prices-data.js</strong>.') +
+        ((window._rssItems || []).length > 0
+          ? 'No articles match the current filters.'
+          : 'No RSS data yet. Run <strong>News/generate_news_feed.py</strong> via GitHub Actions to populate <strong>rss-data.js</strong>.') +
         '</div>';
       return;
     }
 
     feed.innerHTML = sorted.map(n => {
       const sc = sentClass(n.sentiment);
-      const catLabel = CAT_LABELS[n.category] || n.category;
-      const url = n.url || yahooUrl(n.ticker);
-      const headlineTag = n.url
-        ? '<a class="news-headline" href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener">' + escapeHtml(n.title) + '</a>'
-        : '<span class="news-headline">' + escapeHtml(n.title) + '</span>';
       return '<div class="news-card">' +
         '<div class="sent-bar ' + sc + '"></div>' +
         '<div class="news-body">' +
           '<div class="news-meta-top">' +
-            '<a class="news-ticker" href="' + yahooUrl(n.ticker) + '" target="_blank" rel="noopener">' + n.ticker + '</a>' +
-            '<span class="news-company">' + escapeHtml(n.name) + '</span>' +
-            '<span class="cat-badge cat-' + n.category + '">' + catLabel + '</span>' +
+            '<span class="src-badge src-' + n.source + '">' + escapeHtml(n.label) + '</span>' +
             '<span class="news-time">' + timeAgo(n.published) + '</span>' +
           '</div>' +
-          headlineTag +
+          '<a class="news-headline" href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener">' + escapeHtml(n.title) + '</a>' +
+          (n.summary ? '<div class="news-summary">' + escapeHtml(n.summary) + '</div>' : '') +
           '<div class="news-meta-bot">' +
             '<span class="sent-pill ' + sc + '">' + sentLabel(n.sentiment) + '</span>' +
-            (n.publisher ? '<span>' + escapeHtml(n.publisher) + '</span>' : '') +
           '</div>' +
         '</div>' +
       '</div>';
@@ -487,47 +394,39 @@
   }
 
   function buildFilterBar() {
-    const cats = ['all', ...Object.keys(CAT_LABELS)];
-    const bar = document.getElementById('filter-bar');
-    bar.innerHTML = cats.map(cat => {
-      const label   = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
-      const tip     = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
-      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '"' + tip + ' onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
-    }).join('');
+    const sources = [
+      { key: 'all',     label: 'All Sources' },
+      { key: 'ft',      label: 'Financial Times' },
+      { key: 'reuters', label: 'Reuters' },
+      { key: 'bbc',     label: 'BBC Business' },
+      { key: 'guardian',label: 'Guardian Business' },
+    ];
+    document.getElementById('filter-bar').innerHTML = sources.map(s =>
+      '<button class="filter-btn' + (s.key === 'all' ? ' active' : '') + '" data-src="' + s.key + '" onclick="setSource(\'' + s.key + '\')">' + s.label + '</button>'
+    ).join('');
   }
 
-  function buildNews(stocks) {
-    const items = [];
-    stocks.forEach(s => {
-      const arr = Array.isArray(s.news) ? s.news : [];
-      arr.forEach(n => {
-        if (!n || !n.title) return;
-        items.push({
-          ticker:    s.ticker,
-          name:      s.company_name || NAMES[s.ticker] || s.ticker,
-          category:  s.category,
-          title:     n.title,
-          url:       n.url || null,
-          publisher: n.publisher || null,
-          published: (n.published !== undefined && n.published !== null) ? parseInt(n.published) : null,
-          sentiment: (n.sentiment !== undefined && n.sentiment !== null) ? parseFloat(n.sentiment) : null,
-        });
-      });
-    });
-    window._newsItems = items;
+  function init(data) {
+    window._rssItems = data.articles || [];
+    if (data.generated_utc) {
+      document.getElementById('feed-updated').textContent = data.generated_utc;
+    }
+    if (window.PRICES_DATA === undefined) {
+      window.PRICES_DATA = { updated: data.generated, stocks: [] };
+    }
     buildFilterBar();
     renderFeed();
   }
 
-  if (window.PRICES_DATA) {
-    buildNews(window.PRICES_DATA.stocks);
+  if (window.NEWS_FEED_DATA) {
+    init(window.NEWS_FEED_DATA);
   } else {
-    fetch('prices.json')
+    fetch('News/news-feed.json')
       .then(r => r.json())
-      .then(data => buildNews(data.stocks))
+      .then(data => init(data))
       .catch(() => {
         document.getElementById('news-feed').innerHTML =
-          '<div class="empty-state">No data available — run the price/news bot first.</div>';
+          '<div class="empty-state">No data available — run <strong>News/generate_news_feed.py</strong> first.</div>';
       });
   }
 </script>
