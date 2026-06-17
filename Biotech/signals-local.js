@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-15 14:13",
+  "updated": "2026-06-17 12:48",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NTLA",
+      "signal": "strong_buy",
+      "confidence": 0.99,
+      "rationale": "YTD +57.98%, Phase 3 HAELO met all key secondary endpoints showing 89% reduction in attacks requiring on-demand treatment and 91% reduction in moderate/severe attacks. Rolling BLA initiated, potential FDA approval and U.S. launch H1 2027. News sentiment positive at 0.317.",
+      "drivers": [
+        "Phase 3 HAELO all endpoints met",
+        "Rolling BLA initiated",
+        "Paradigm-shifting one-time gene editing",
+        "YTD +58% with strong momentum"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "YTD +79.52%, 1W +16.07%, 1D +6.56%. FDA staff review says data for mRNA flu shot 'may support effectiveness', positive AdComm readout June 18. Potential first mRNA seasonal flu shot, supported by Jefferies' $750M sales estimate. 17.82% short interest adds squeeze potential.",
+      "drivers": [
+        "FDA review favorable for mRNA flu shot",
+        "YTD +80% momentum",
+        "Potential first mRNA flu vaccine approval",
+        "Jefferies $750M peak sales view"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +14.19%, 1M +15.59%, highest analyst score of 1.29 (strong_buy), news sentiment 0.391. Base editing platform uniquely positioned in gene-editing space with strong pipeline catalysts approaching.",
+      "drivers": [
+        "Best analyst score 1.29 (strong_buy)",
+        "Positive news sentiment 0.391",
+        "1M momentum +15.6%",
+        "Differentiated base editing platform"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +22.28%, 1M +16.09%, P/E 29.87 reasonable for growth, market cap \u00a318.5B provides liquidity. Genomics sequencing leader with strong 1-year return of +82%.",
+      "drivers": [
+        "1M momentum +16.1%",
+        "YTD +22.3%",
+        "Reasonable P/E 29.87",
+        "Genomics market leader"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +4.25%, 1M +13.60%, market cap \u00a3746B. Metabolic leader with Zepbound/Mounjaro franchise, P/E 39.85 premium justified by massive growth trajectory in obesity market.",
+      "drivers": [
+        "1M momentum +13.6%",
+        "Obesity market leader",
+        "Large-cap stability",
+        "1-year return +43%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +55.18%, 1M +23.72%, analyst consensus buy at 1.6. Strong momentum driven by Carvykti sales growth and expanded label in earlier-line multiple myeloma. News sentiment 0.148.",
+      "drivers": [
+        "YTD +55% momentum",
+        "1M +23.7% momentum",
+        "Carvykti launch momentum",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NTRA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +14.32%, analyst score 1.52 (strong buy consensus), market cap \u00a323.5B. Leading liquid biopsy company with multi-cancer screening, short interest low at 2.6%.",
+      "drivers": [
+        "1M momentum +14.3%",
+        "Strong analyst score 1.52",
+        "Liquid biopsy leader",
+        "Multi-cancer screening catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PACB",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1M +17.39%, beta 2.323 high. Short-term momentum strong, but YTD -26.63%. Analyst consensus buy at 2.0. High-risk/high-reward genomics play with micro-cap \u00a30.31B market cap.",
+      "drivers": [
+        "1M momentum +17.4%",
+        "Buy analyst consensus",
+        "Positive news sentiment 0.115",
+        "Genomics sequencing platform"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +10.97%, YTD -7.28%, P/E 39.65. Rare disease leader with Vimizim/Aldurazyme franchise. News sentiment positive 0.242 and analyst consensus buy at 1.69. Beta 0.24 provides downside protection.",
+      "drivers": [
+        "1M momentum +11%",
+        "Positive news sentiment 0.242",
+        "Low beta defensive profile",
+        "Established rare disease portfolio"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "RXRX",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "1M +10.03%, but YTD -24.29%, high short interest 32.82%, no analyst coverage (news_s -0.08). AI-driven drug discovery platform with pipeline potential offset by binary risk.",
+      "drivers": [
+        "1M momentum +10%",
+        "AI drug discovery platform",
+        "High short interest squeeze potential",
+        "Early-stage pipeline catalysts"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMGN",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "YTD +12.50%",
         "positive news sentiment",
         "P/E 21.51"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Retatrutide Phase 3 data showed 28.3% weight loss, driving LLY to an all-time high near $1,226; YTD +5.23%, 1M +11.74%, P/E 40.33, positive news sentiment 0.097, and Goldman Sachs reiterated Buy with $1,283 PT citing an expanding obesity pipeline.",
-      "drivers": [
-        "Retatrutide Phase 3 success",
-        "All-time high price",
-        "Goldman Sachs Buy rating",
-        "Strong 1M momentum +11.74%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LEGN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +66.76%, 1M +25.11%, 1W +9.96%, analyst consensus buy with score 1.60, and positive news sentiment 0.148; recent EHA 2026 leukemia data with 86% response rates provides a strong near-term catalyst.",
-      "drivers": [
-        "YTD +66.76%",
-        "1M +25.11% momentum",
-        "EHA 2026 leukemia data 86% response",
-        "Analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +21.91%, 1M +3.59%, P/E 17.59, beta 0.435, analyst buy with score 2.16, and positive news sentiment 0.234; strong fundamentals with reasonable valuation and low beta.",
-      "drivers": [
-        "YTD +21.91%",
-        "P/E 17.59 attractive",
-        "Low beta 0.435",
-        "Positive news sentiment 0.234"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +9.99%, 1M +6.37%, P/E 24.72, analyst buy with score 2.46, positive news sentiment 0.216; Q1 revenue $8.6B beat estimates, UPLIZNA surged 188% YoY, and MariTide Phase 3 studies initiated.",
-      "drivers": [
-        "Q1 revenue beat $8.6B",
-        "UPLIZNA +188% YoY",
-        "MariTide Phase 3 start",
-        "Positive news sentiment 0.216"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +7.01%, 1M +9.83%, 1W +6.01%, P/E 15.31, analyst buy with score 2.41, positive news sentiment 0.105; recent acquisition of Vega adds late-stage von Willebrand disease opportunity.",
-      "drivers": [
-        "1M +9.83% momentum",
-        "P/E 15.31 attractive",
-        "Vega acquisition catalyst",
-        "Positive news sentiment 0.105"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +19.81%, 1M +11.01%, P/E 29.27, analyst buy with score 2.32; strong genomics momentum despite negative news sentiment -0.255, driven by sequencing market leadership.",
-      "drivers": [
-        "YTD +19.81%",
-        "1M +11.01% momentum",
-        "Genomics market leader",
-        "Analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "GSK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +8.34%, 1M +4.90%, 1W +2.37%, P/E 13.97, low beta 0.294, positive news sentiment 0.06; momelotinib orphan tag for rare hemato-inflammatory disorder adds pipeline value.",
-      "drivers": [
-        "YTD +8.34%",
-        "P/E 13.97 low valuation",
-        "Momelotinib orphan tag",
-        "Low beta 0.294"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1M +4.48%, P/E 40.25, analyst buy with score 1.69, positive news sentiment 0.242; rare-disease leader with stable fundamentals and low beta 0.24.",
-      "drivers": [
-        "1M +4.48% momentum",
-        "Analyst buy score 1.69",
-        "Positive news sentiment 0.242",
-        "Low beta 0.24"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NTRA",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1M +8.58%, analyst strong buy with score 1.52, low short interest 2.6%; RBC highlights durable MRD leadership in high-value market, though YTD -7.33% and negative 1D momentum.",
-      "drivers": [
-        "1M +8.58% momentum",
-        "Analyst strong buy score 1.52",
-        "Low short interest 2.6%",
-        "MRD market leadership"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "1M +3.28%, beta 1.004, positive news sentiment 0.084; despite YTD -25.00% and high short interest 32.82%, the stock shows early signs of stabilization and potential for a turnaround.",
-      "drivers": [
-        "1M +3.28% stabilization",
-        "Beta 1.004 neutral",
-        "Positive news sentiment 0.084",
-        "Potential turnaround play"
       ]
     }
   ]

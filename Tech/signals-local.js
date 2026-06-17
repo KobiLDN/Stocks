@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-15 14:15",
+  "updated": "2026-06-17 12:50",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "MU is up +223.76% YTD with +49.77% 1-month momentum, strong_buy consensus (1.48), and positive news sentiment 0.057; recently raised dividend 30% after record AI-driven results and fully contracted 2026 HBM supply. Micron's 30% dividend hike and full HBM4 certification for Nvidia's Vera Rubin architecture [simplywall.st](https://simplywall.st/stocks/us/semiconductors/nasdaq-mu/micron-technology/news/micron-mu-just-raised-its-dividend-30-after-record-ai-driven) [investmenthouse.com](https://www.investmenthouse.com/2026/06/16/micron-just-became-the-most-interesting-stock-on-wall-street/) support this rank.",
+      "drivers": [
+        "+223.76% YTD",
+        "+49.77% 1M",
+        "strong_buy consensus 1.48",
+        "fully contracted HBM through 2026"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ARM has surged +245.45% YTD with +84.24% 1-month momentum and a buy consensus (1.88), but carries elevated risk from a P/E of 477.52 and high short interest of 12.74%; short-term momentum is extreme but valuation warrants caution.",
+      "drivers": [
+        "+245.45% YTD",
+        "+84.24% 1M",
+        "buy consensus 1.88",
+        "P/E 477.52, high short interest"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AMD is up +127.01% YTD with +20.50% 1M momentum, strong_buy consensus (1.45), driven by the Meta MI450 megadeal (6-gigawatt partnership) and acquisition of MEXT for AI memory optimisation; valuation is high at P/E 169.66. [tradingnews.com](https://www.tradingnews.com/news/amd-stock-print-redotd-549-usd-on-the-meta-mi450-deal)",
+      "drivers": [
+        "+127.01% YTD",
+        "+20.50% 1M",
+        "strong_buy consensus 1.45",
+        "Meta MI450 6GW AI deal"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMAT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AMAT is up +111.87% YTD with +37.57% 1M momentum, buy consensus (1.52), positive news sentiment 0.10, and a reasonable P/E of 53.46 for a semiconductor equipment leader in the AI build-out.",
+      "drivers": [
+        "+111.87% YTD",
+        "+37.57% 1M",
+        "buy consensus 1.52",
+        "positive news sentiment 0.10"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "ASML is up +55.55% YTD with +22.51% 1M momentum, strong_buy consensus (1.48), positive news sentiment 0.131, low short interest 0.27% and a moderate P/E of 60.25 \u2014 the critical lithography monopoly for advanced AI chip manufacturing.",
+      "drivers": [
+        "+55.55% YTD",
+        "+22.51% 1M",
+        "strong_buy consensus 1.48",
+        "low short 0.27%, positive sentiment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "FTNT is up +88.78% YTD with +16.22% 1M momentum, hold consensus (2.70) and negative news sentiment -0.142, but strong price appreciation driven by enterprise firewall and SASE demand; P/E of 57.21 is reasonable for cybersecurity growth.",
+      "drivers": [
+        "+88.78% YTD",
+        "+16.22% 1M",
+        "P/E 57.21",
+        "strong price momentum despite hold consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "PANW is up +56.05% YTD with +13.07% 1M momentum, buy consensus (1.60), and low beta of 0.942, though P/E of 243.39 and negative news sentiment -0.097 are concerning; platform expansion offsets valuation risk.",
+      "drivers": [
+        "+56.05% YTD",
+        "+13.07% 1M",
+        "buy consensus 1.60",
+        "low beta 0.942"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "SNOW is up +9.97% YTD but surged +45.10% in 1M, strong_buy consensus (1.49), positive news sentiment 0.131; Databricks competition is a risk but rising AI workload migration to the data cloud is a strong tailwind.",
+      "drivers": [
+        "+45.10% 1M",
+        "strong_buy consensus 1.49",
+        "positive news sentiment 0.131",
+        "AI data cloud tailwind"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "SHOP is up +10.59% in 1M, buy consensus (1.75), with a $5B buyback and AI commerce push; YTD is -27.97% but short interest is low at 1.78% and recent momentum is recovering from oversold levels.",
+      "drivers": [
+        "+10.59% 1M",
+        "buy consensus 1.75",
+        "low short interest 1.78%",
+        "$5B buyback + AI commerce"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "NET is up +17.83% YTD with +14.48% 1M momentum, buy consensus (1.97), positive news sentiment 0.082; though no P/E (non-GAAP unprofitable) and analyst score is less bullish, the edge AI and SASE growth story is intact.",
+      "drivers": [
+        "+14.48% 1M",
+        "buy consensus 1.97",
+        "positive news sentiment 0.082",
+        "edge AI / SASE growth"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ARM",
@@ -117,137 +249,6 @@ window.SIGNALS_DATA = {
       "drivers": [
         "Arm AGI deployment catalyst",
         "Positive news sentiment 0.317"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+111% YTD, +30% 1m, P/E 53, analyst strong_buy score 1.5, news sentiment 0.47, low short interest 2.5%",
-      "drivers": [
-        "111.5% YTD return",
-        "30% 1-month momentum",
-        "strong_buy analyst consensus",
-        "0.47 news sentiment score"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "+211% YTD, +22% 1m, P/E 46, strong_buy analyst (score 1.48), news sentiment 0.12, low short 3.3%",
-      "drivers": [
-        "211% YTD return",
-        "22% 1-month momentum",
-        "strong_buy consensus",
-        "P/E 46.28"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "+61% YTD, +18% 1m, P/E 62, strong_buy analyst (1.48), news sentiment 0.19, lowest short 0.27%",
-      "drivers": [
-        "60.7% YTD return",
-        "17.8% 1-month gain",
-        "strong_buy rating",
-        "0.27% short interest"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+232% YTD, +72% 1m, buy analyst, news sentiment 0.37, catalysts: BofA target $335 and Mizuho $500, AGI CPU deals with ByteDance/Oracle [fool.com][stockstotrade.com][thenextweb.com], but high P/E 443 and short 12.7%",
-      "drivers": [
-        "231.9% YTD",
-        "72% 1-month surge",
-        "AGI CPU customer wins",
-        "bullish analyst PT hikes"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "+129% YTD, +15% 1m, strong_buy analyst (1.49), news sentiment 0.15, high P/E 172 but growth justified",
-      "drivers": [
-        "128.9% YTD return",
-        "14.8% 1-month gain",
-        "strong_buy consensus",
-        "AI compute demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+56% YTD, +23% 1m, buy analyst (1.6), news sentiment 0.07, high P/E 243 but cybersecurity tailwinds",
-      "drivers": [
-        "55.9% YTD",
-        "22.8% 1-month momentum",
-        "buy consensus",
-        "low beta 0.94"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "+51% YTD, +21% 1m, buy analyst (1.65), news sentiment 0.14, no P/E but strong growth narrative",
-      "drivers": [
-        "50.5% YTD",
-        "21.4% 1-month gain",
-        "buy rating",
-        "cybersecurity sector strength"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "+7% YTD, +53% 1m, strong_buy analyst (1.49), news sentiment 0.03, no P/E but AWS Graviton commitment is positive",
-      "drivers": [
-        "52.8% 1-month surge",
-        "strong_buy consensus",
-        "cloud data platform momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "+60% YTD, +19% 1m, buy analyst (1.88), P/E 40, news sentiment -0.19, AI infrastructure play",
-      "drivers": [
-        "60.1% YTD",
-        "18.9% 1-month gain",
-        "P/E 40.4",
-        "AI networking demand"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+17% YTD, +19% 1m, buy analyst (1.97), news sentiment 0.49 (highest in top picks), no P/E",
-      "drivers": [
-        "16.6% YTD",
-        "18.6% 1-month momentum",
-        "0.49 news sentiment",
-        "buy consensus"
       ]
     }
   ]

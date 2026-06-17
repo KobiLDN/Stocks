@@ -1,9 +1,134 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-15 14:15",
+  "updated": "2026-06-17 12:51",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "WLD",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Up +190.63% in 1M, +37.77% in 1W, and +13.57% in 1D; news sentiment strongly positive at 0.165 on headline 'Worldcoin Jumps 20% After Treasury Reveals Massive Stake in WLD'. Web search confirms a further 26% weekly rally driven by the US-Iran peace deal and surge in risk appetite [livebitcoinnews.com](https://www.livebitcoinnews.com/near-and-worldcoin-surge-after-iran-breakthrough-sparks-crypto-rally/).",
+      "drivers": [
+        "+190.63% 1M momentum",
+        "positive news sentiment 0.165",
+        "geopolitical risk-on catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Up +53.06% YTD, +54.58% 1M, +12.28% 1W, with strong technical upgrades (Dynamic Resharding v2.13) and institutional inflows post Iran peace deal [chainreport.co](https://chainreport.co/near-and-bittensor-lead-market-gains-following-technical-upgrades-and-ai-narrative-shifts/). \u00a32.24B market cap provides liquidity for continued momentum.",
+      "drivers": [
+        "+53.06% YTD return",
+        "Dynamic Resharding v2.13 upgrade",
+        "AI narrative + risk-on catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TAO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Up +16.72% YTD and +24.54% 1W, outperforming peers on the decentralized AI narrative. Web search confirms a 30% surge after the US government directive on Anthropic, driving demand for censorship-resistant AI [blockchain.news](https://blockchain.news/news/us-order-anthropic-ai-decentralized-tokens). Fundamentals supported by growing subnet ecosystem and EVM integration.",
+      "drivers": [
+        "+16.72% YTD",
+        "+24.54% 1W momentum",
+        "US Anthropic order catalyst",
+        "decentralized AI demand surge"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XLM",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Up +11.07% YTD and +50.39% in 1M on strong PayFi buzz, with network volume surging from ~$153M to ~$880M [invezz.com](https://invezz.com/in/news/2026/06/16/stellar-price-surges-14percent-as-xlm-rally-gains-steam-on-payfi-buzz/). The DTCC tokenization deal provides a transformative institutional catalyst [crypto.news](https://crypto.news/dtcc-stellar-tokenization-explained/).",
+      "drivers": [
+        "+50.39% 1M return",
+        "DTCC tokenization deal",
+        "network volume surge to $880M",
+        "PayFi narrative"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ARKM",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Up +21.07% 1M and +21.21% 1W with strong on-chain intelligence demand amid the AI narrative rotation. Tiny \u00a30.023B market cap offers high-beta exposure to the AI intelligence sector. Momentum accelerating into the macro risk-on shift.",
+      "drivers": [
+        "+21.21% 1W momentum",
+        "tiny market cap high beta",
+        "AI on-chain intelligence narrative"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RNDR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Up +36.08% YTD and +10.58% 1W, with strong decentralized GPU compute demand. The AI narrative shift benefits RNDR as a key render infrastructure provider. Positive YTD performance relative to most peers.",
+      "drivers": [
+        "+36.08% YTD",
+        "+10.58% 1W",
+        "decentralized compute demand",
+        "AI infrastructure catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Up +4.83% YTD and +10.53% 1M, showing steady accumulation in the AI agent space. The broader AI token rotation and macro de-escalation support continued upside. Market cap of \u00a30.351B provides scaling potential.",
+      "drivers": [
+        "+10.53% 1M momentum",
+        "AI agent narrative",
+        "steady YTD outperformance"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AGIX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Up +5.28% YTD and +8.63% 1M, benefiting from the broad AI narrative rotation. Positive YTD return stands out in a down market. SingularityNET's decentralized AI services remain relevant to the censorship-resistant AI theme.",
+      "drivers": [
+        "+8.63% 1M gain",
+        "decentralized AI services",
+        "positive YTD amidst bearish market"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ALT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Up +1.29% 1M and +2.79% 1D, reversing recent downtrend. The tiny \u00a30.032B market cap makes it a high-beta AI infrastructure play. Recent positive daily momentum suggests accumulation ahead of potential AI narrative tailwinds.",
+      "drivers": [
+        "+2.79% 1D momentum",
+        "high beta small cap",
+        "AI infrastructure narrative"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Up +12.40% 1W despite a slightly negative YTD of -5.71%. Strong weekly momentum driven by token unlock news and growing interest in AI-data verification protocols. Low market cap provides asymmetric upside if narrative gains traction.",
+      "drivers": [
+        "+12.40% 1W momentum",
+        "AI data narrative",
+        "low market cap high upside"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NEAR",
@@ -132,132 +257,6 @@ window.SIGNALS_DATA = {
         "+5.15% 1D return",
         "AI L1 infrastructure",
         "Market cap \u00a31.05B GBP"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "BNB",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "BNB shows resilience with -9.88% 1m (best among large caps), +4.85% 1w, positive sentiment 0.248, and VanEck's ETF bet [coindesk.com](https://www.coindesk.com/markets/2026/06/12/while-bitcoin-holds-near-usd63-000-some-data-points-to-pain-ahead-for-bulls/).",
-      "drivers": [
-        "-9.88% 1m (least negative large cap)",
-        "+4.85% 1w",
-        "positive news sentiment 0.248",
-        "VanEck ETF catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "NMR has the least negative 1m return at -5.10% and strong +9.97% 1w, indicating relative strength in a weak market.",
-      "drivers": [
-        "-5.10% 1m (best 1m in universe)",
-        "+9.97% 1w",
-        "small-cap momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "WLD",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "WLD surged +80.24% 1m but pulled back -12.87% 1w; high momentum with potential rebound despite negative sentiment -0.221 and Arthur Hayes selling [crypto.news](https://crypto.news/zachxbt-links-wallet-to-xmr-surge-as-tether-freezes-72m-usdt/).",
-      "drivers": [
-        "+80.24% 1m (highest momentum)",
-        "-12.87% 1w pullback",
-        "negative sentiment -0.221",
-        "Arthur Hayes dump overhang"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "DOGE",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "DOGE has positive 1w +4.63% and 1d +0.38%, bullish futures open interest, and high sentiment 0.376 [coindesk.com](https://www.coindesk.com/markets/2026/06/12/while-bitcoin-holds-near-usd63-000-some-data-points-to-pain-ahead-for-bulls/).",
-      "drivers": [
-        "+4.63% 1w",
-        "+0.38% 1d",
-        "bullish DOGE futures OI",
-        "high news sentiment 0.376"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NEAR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "NEAR gained +27.16% 1m but flat 1w +0.09% and negative sentiment -0.289; analyst expects rebound once Bitcoin breaks [blockchain.news](https://blockchain.news/flashnews/near-range-bound-bitcoin-awaits-direction).",
-      "drivers": [
-        "+27.16% 1m",
-        "flat 1w +0.09%",
-        "negative sentiment -0.289",
-        "range-bound awaiting BTC direction"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "LINK up +4.80% 1w with positive sentiment 0.115 and FIFA World Cup catalyst [coindesk.com](https://www.coindesk.com/markets/2026/06/12/while-bitcoin-holds-near-usd63-000-some-data-points-to-pain-ahead-for-bulls/).",
-      "drivers": [
-        "+4.80% 1w",
-        "positive sentiment 0.115",
-        "FIFA World Cup 2026 catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TON rose +8.89% 1w with positive sentiment 0.159 and Apple ecosystem boost [coindesk.com](https://www.coindesk.com/markets/2026/06/12/while-bitcoin-holds-near-usd63-000-some-data-points-to-pain-ahead-for-bulls/).",
-      "drivers": [
-        "+8.89% 1w",
-        "positive sentiment 0.159",
-        "Apple ecosystem boost"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "XLM has strong +18.78% 1m but weak 1w -7.83%; no news but momentum may continue.",
-      "drivers": [
-        "+18.78% 1m",
-        "-7.83% 1w pullback",
-        "no news catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ARKM",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "ARKM shows relatively mild -7.88% 1m and positive +1.85% 1w, small-cap AI play.",
-      "drivers": [
-        "-7.88% 1m (mild)",
-        "+1.85% 1w",
-        "small-cap AI"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BTC holds near $63k with +3.36% 1w; options imply bounce to $75k by late July [coindesk.com](https://www.coindesk.com/markets/2026/06/12/while-bitcoin-holds-near-usd63-000-some-data-points-to-pain-ahead-for-bulls/).",
-      "drivers": [
-        "+3.36% 1w",
-        "options bias to $75k",
-        "reference asset stability"
       ]
     }
   ]

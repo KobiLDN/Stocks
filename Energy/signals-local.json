@@ -1,9 +1,141 @@
 {
-  "updated": "2026-06-15 14:15",
+  "updated": "2026-06-17 12:51",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "VLO is up 49% YTD and 75% over 1 year, with a P/E of 17.8 and a dividend yield of 1.97%, and refining margins are surging as crude slides faster than products, with Q2 USGC indicator running $30/bbl vs Q1's $14/bbl [aol.com](https://www.aol.com/articles/valero-energy-vlo-baker-hughes-144739631.html).",
+      "drivers": [
+        "+49% YTD",
+        "widening crack spreads",
+        "P/E 17.8",
+        "strong refining margin outlook"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "MPC has surged 53% YTD and 50% over 1 year, with a P/E of 16.5 and a dividend yield of 1.56%, and Q1 2026 adjusted EPS of $1.65 beat consensus by 51% with refineries running at 89% utilization [cascademacro.substack.com](https://cascademacro.substack.com/p/oil-is-fading-time-to-go-long-refiners).",
+      "drivers": [
+        "+53% YTD",
+        "EPS beat of 51%",
+        "P/E 16.5",
+        "high refinery utilization"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BKR",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "BKR is up 31% YTD and 58% over 1 year, with a P/E of 19.7 and a dividend yield of 1.50%, and is entering its 'Horizon Two' strategic phase targeting reduced cyclicality and more durable cash flows [aol.com](https://www.aol.com/articles/valero-energy-vlo-baker-hughes-144739631.html).",
+      "drivers": [
+        "+31% YTD",
+        "P/E 19.7",
+        "Horizon Two strategy",
+        "strong YTD momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "SLB is up 33% YTD and 48% over 1 year, with a P/E of 23.4, a dividend yield of 2.22%, and a strong analyst consensus score of 1.62 (buy) with positive news sentiment of 0.354.",
+      "drivers": [
+        "+33% YTD",
+        "P/E 23.4",
+        "analyst score 1.62",
+        "news sentiment 0.354"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ENPH",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "ENPH is up 49% YTD and 38% over 1 year, with a P/E of 51.8, and despite high short interest of 24.4%, the strong YTD momentum and positive news sentiment of 0.154 suggest continued upside.",
+      "drivers": [
+        "+49% YTD",
+        "strong YTD momentum",
+        "news sentiment 0.154",
+        "high short interest as contrarian"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "FSLR",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "FSLR is down 3.6% YTD but up 84% over 1 year, with a P/E of 17.1 and a recent 13% 1-month gain, and while policy uncertainty weighs, a new $1.5B credit facility provides flexibility [aol.com](https://www.aol.com/articles/valero-energy-vlo-baker-hughes-144739631.html).",
+      "drivers": [
+        "+84% 1-year",
+        "P/E 17.1",
+        "+13% 1-month",
+        "new credit facility"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "NEE is up 8% YTD and 20% over 1 year, with a P/E of 21.9, a dividend yield of 2.89%, and very low short interest of 0.01%, supported by stable utility operations and positive news sentiment of 0.325.",
+      "drivers": [
+        "P/E 21.9",
+        "dividend yield 2.89%",
+        "low short interest 0.01%",
+        "news sentiment 0.325"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "SHEL is up 11% YTD and 14% over 1 year, with a P/E of 12.8 and a dividend yield of 3.80%, and while a buyback pause and falling oil prices weigh, the stock remains attractively valued with a pending ARC deal catalyst [ts2.tech](https://ts2.tech/en/shell-drops-after-oil-slides-and-buyback-halt-hits-sentiment/).",
+      "drivers": [
+        "P/E 12.8",
+        "dividend yield 3.80%",
+        "ARC deal catalyst",
+        "attractive valuation"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "SSE.L is up 5.7% YTD and 31% over 1 year, with a P/E of 22.5 and a dividend yield of 2.91%, and benefits from a UK-Japan \u00a318 billion investment agreement supporting clean energy infrastructure.",
+      "drivers": [
+        "+31% 1-year",
+        "dividend yield 2.91%",
+        "UK-Japan investment deal",
+        "stable utility"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "BEPC is down 7.2% YTD but up 14% over 1 year, with a dividend yield of 4.32% and the highest news sentiment in the universe at 0.557, offering a defensive yield play in clean energy.",
+      "drivers": [
+        "dividend yield 4.32%",
+        "news sentiment 0.557",
+        "defensive yield",
+        "clean energy exposure"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,138 +264,6 @@
         "news sentiment 0.478",
         "Trinidad & GOM discoveries",
         "strong short-term momentum"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +58.18%, 1M +6.47%, P/E 18.88, dividend 1.88%, analyst buy, news sentiment 0.499 \u2014 refining margins benefit from lower crude on US-Iran ceasefire hopes as Brent falls to $87 [reuters.com]",
-      "drivers": [
-        "YTD +58%",
-        "1M +6.5% momentum",
-        "low P/E",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +61.02%, 1M +6.22%, P/E 17.36, dividend 1.50%, analyst buy, news sentiment 0.485 \u2014 top YTD return in the universe with strong refining cash flows and shareholder returns",
-      "drivers": [
-        "YTD +61%",
-        "1M +6.2% momentum",
-        "P/E 17.4",
-        "high news sentiment"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SLB",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +41.31%, 1W +2.39%, P/E 24.75, analyst strong buy (an_score 1.62 best in group), dividend 2.11% \u2014 Edge AI deal adds growth angle; oilfield services resilient amid supply tightness",
-      "drivers": [
-        "analyst score 1.62 (strong buy)",
-        "1W +2.4%",
-        "YTD +41%",
-        "AI innovation catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +29.60%, 1M +1.27%, P/E 13.44, dividend 2.99%, analyst buy \u2014 low valuation and strong momentum with ample free cash flow at elevated oil prices despite ceasefire risk",
-      "drivers": [
-        "P/E 13.4",
-        "YTD +30%",
-        "dividend 3%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +15.65%, P/E 13.34, dividend 3.64%, analyst buy, news sentiment 0.333 \u2014 resilient integrated model and low valuation, though exposed to Hormuz reopening risk as JPMorgan flags [proactiveinvestors.com]",
-      "drivers": [
-        "P/E 13.3 low",
-        "dividend 3.6%",
-        "YTD +16%",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +22.38%, 1M +1.58%, dividend 3.83%, analyst buy (an_score 1.84), news sentiment 0.136 \u2014 fortress balance sheet and Permian/Tengiz assets provide downside protection as Saudi cut tightens supply [drillr.ai]",
-      "drivers": [
-        "dividend 3.8%",
-        "YTD +22%",
-        "analyst score 1.84",
-        "strong balance sheet"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +22.82%, P/E 19.86, dividend 2.91%, analyst buy (an_score 1.85), 1D +1.40% \u2014 strong buy consensus with zero sell ratings, though 1M slightly negative; long-term beneficiary of supply tightness",
-      "drivers": [
-        "YTD +23%",
-        "P/E 19.9",
-        "analyst score 1.85",
-        "zero sell ratings"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD -2.56% but 1M +13.94%, P/E 17.27, analyst buy \u2014 solar demand surges with Array 100 GW milestone; valuation attractive relative to clean energy peers, though short interest 10.4% warrants caution",
-      "drivers": [
-        "1M +14% momentum",
-        "P/E 17.3 low",
-        "solar demand catalyst",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +21.48%, P/E 24.75, dividend 2.81%, analyst buy, news sentiment 0.265 \u2014 largest oil major by market cap benefitting from Saudi 600k bpd capacity cut and Permian growth, though 1M -2.35% reflects ceasefire headwinds",
-      "drivers": [
-        "YTD +21%",
-        "dividend 2.8%",
-        "Saudi supply cut catalyst",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "YTD +34.66%, 1M +1.11%, news sentiment 0.478 (highest in E&P), analyst hold \u2014 high P/E 76.4 is a concern but momentum and news flow strong; potential Berkshire premium; risky but compelling for short-term upside",
-      "drivers": [
-        "YTD +35%",
-        "news sentiment 0.48",
-        "1M +1.1%",
-        "high momentum"
       ]
     }
   ]

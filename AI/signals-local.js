@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-15 14:12",
+  "updated": "2026-06-17 12:47",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "Up +745.81% YTD and +86.59% 1M with a P/E of 94.72, driven by the AI memory boom and positive news sentiment of 0.164. [fxleaders.com]",
+      "drivers": [
+        "+745.81% YTD",
+        "+86.59% 1M",
+        "AI memory boom",
+        "news_s +0.164"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "DELL",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Up +218.55% YTD with a 1M surge of +69.76%, supported by a P/E of 32.15 and a dividend yield of 0.62%, as AI server demand continues to accelerate. [simplywall.st]",
+      "drivers": [
+        "+218.55% YTD",
+        "+69.76% 1M",
+        "P/E 32.15",
+        "AI server demand"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Massive +623.57% YTD on AI memory tailwinds; 1W/1M gains of +20.95%/+49.40% and analyst buy consensus (score 1.59) support continued upside despite elevated P/E of 68.02. [247wallst.com]",
+      "drivers": [
+        "+623.57% YTD",
+        "+20.95% 1W",
+        "analyst buy",
+        "AI memory demand"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "WDC",
+      "signal": "strong_buy",
+      "confidence": 0.69,
+      "rationale": "Up +263.12% YTD and +31.55% 1W on Morgan Stanley price-target hike; P/E of 40.81 provides reasonable valuation for the AI storage super-cycle. [247wallst.com]",
+      "drivers": [
+        "+263.12% YTD",
+        "+31.55% 1W",
+        "P/E 40.81",
+        "AI storage boom"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "STX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Seagate +259.30% YTD and +21.91% 1W with strong analyst support (buy consensus, score 1.54), riding the same AI HDD demand wave as WDC. [247wallst.com]",
+      "drivers": [
+        "+259.30% YTD",
+        "+21.91% 1W",
+        "analyst buy",
+        "AI HDD demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "rationale": "Micron up +223.76% YTD with a strong_buy consensus (score 1.48), 3.34% short interest, and upcoming earnings catalyst on June 24 after raising dividend 30%. [wallstreettimes.com]",
+      "drivers": [
+        "+223.76% YTD",
+        "strong_buy consensus",
+        "dividend +30%",
+        "earnings catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CRDO",
+      "signal": "strong_buy",
+      "confidence": 0.66,
+      "rationale": "Up +67.00% YTD and +53.06% 1M with a strong_buy analyst score of 1.33; P/E of 95.29 reflects premium for data-center connectivity plays. [tradingview.com]",
+      "drivers": [
+        "+67.00% YTD",
+        "+53.06% 1M",
+        "strong_buy consensus",
+        "data-center connectivity"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 0.64,
+      "rationale": "Marvell +212.13% YTD and +64.96% 1M; strong_buy consensus (score 1.45) and news sentiment of -0.163 partially offset by AI photonics momentum. [247wallst.com]",
+      "drivers": [
+        "+212.13% YTD",
+        "+64.96% 1M",
+        "strong_buy consensus",
+        "AI photonics"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "WULF",
+      "signal": "strong_buy",
+      "confidence": 0.62,
+      "rationale": "TeraWulf +119.86% YTD and +32.50% 1M with strong_buy analyst score of 1.36 and highest news sentiment in the universe at 0.428. [247wallst.com]",
+      "drivers": [
+        "+119.86% YTD",
+        "+32.50% 1M",
+        "strong_buy consensus",
+        "news_s +0.428"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.61,
+      "rationale": "Hut 8 +136.94% YTD and +26.28% 1M, strong_buy consensus (score 1.31) despite elevated short interest of 15.7%, driven by AI compute demand. [simplywall.st]",
+      "drivers": [
+        "+136.94% YTD",
+        "+26.28% 1M",
+        "strong_buy consensus",
+        "AI compute demand"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SNDK",
@@ -132,138 +264,6 @@ window.SIGNALS_DATA = {
         "Mizuho PT raised to $1,090",
         "HDD structural undersupply",
         "1W +10% momentum"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SNDK",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SNDK has surged +619% YTD and +36.82% in the last month, with a positive news sentiment of 0.172. Web search confirms a structural NAND shortage driven by AI demand, with Mizuho raising its price target to $2,200 and the stock approaching $2,000 [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/261964556-sandisk-nvidia-dram-nand-chip-essd-spacex-ipo-2000-price-tradingkey).",
-      "drivers": [
-        "+619% YTD",
-        "+36.82% 1M",
-        "Mizuho $2,200 PT",
-        "NAND supply shortage"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "285A",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Kioxia (285A) is up +615% YTD and +76.14% in the last month, with a positive news sentiment of 0.164. The stock is Japan's most valuable firm as AI memory demand surges, mirroring the broader memory rally.",
-      "drivers": [
-        "+615% YTD",
-        "+76.14% 1M",
-        "Japan's most valuable firm",
-        "AI memory demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "WDC",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "WDC is up +200% YTD and +13.96% in the last month, with a positive news sentiment of 0.092. Web search highlights a 6% jump on Friday amid the AI storage melt-up, with strong Q3 FY2026 earnings beating estimates [247wallst.com](https://247wallst.com/investing/2026/06/12/sandisk-and-western-digital-jump-6-as-traders-battle-over-the-ai-storage-stock-melt-up/).",
-      "drivers": [
-        "+200% YTD",
-        "+13.96% 1M",
-        "Q3 earnings beat",
-        "AI storage tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "MU is up +211% YTD and +22.15% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.124. Web search shows memory stocks rallying on AI demand and a potential Iran peace deal, with MU surging 11.7% [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/mu-stx-wdc-dram-memory-stocks-rally-amid-hopes-of-iran-peace-deal-sndk-hits-fresh-high/cZK51IQR7P4).",
-      "drivers": [
-        "+211% YTD",
-        "+22.15% 1M",
-        "Strong_buy consensus",
-        "Memory sector rally"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "STX",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "STX is up +224% YTD and +13.91% in the last month, with the highest news sentiment in the memory group at 0.439. Web search confirms a 5.25% rise on AI-driven HDD demand and structural undersupply [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/261964556-sandisk-nvidia-dram-nand-chip-essd-spacex-ipo-2000-price-tradingkey).",
-      "drivers": [
-        "+224% YTD",
-        "+13.91% 1M",
-        "News sentiment 0.439",
-        "HDD AI demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "MRVL is up +213% YTD and +57.18% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.114. The stock benefits from AI-driven data center demand for custom silicon and networking.",
-      "drivers": [
-        "+213% YTD",
-        "+57.18% 1M",
-        "Strong_buy consensus",
-        "AI data center demand"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "DELL",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "DELL is up +212% YTD and +62.21% in the last month, with a positive news sentiment of 0.001. Web search highlights a $1.6B agreement with IREN for Blackwell AI systems, reinforcing its AI infrastructure play.",
-      "drivers": [
-        "+212% YTD",
-        "+62.21% 1M",
-        "$1.6B IREN deal",
-        "AI infrastructure play"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CRDO",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "CRDO is up +75% YTD and +32.45% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.093. The stock is a key player in high-speed connectivity for AI data centers.",
-      "drivers": [
-        "+75% YTD",
-        "+32.45% 1M",
-        "Strong_buy consensus",
-        "AI connectivity play"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SMTC",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SMTC is up +122% YTD and +19.30% in the last month, with a positive news sentiment of 0.206. The stock benefits from AI-driven demand for analog and mixed-signal semiconductors.",
-      "drivers": [
-        "+122% YTD",
-        "+19.30% 1M",
-        "News sentiment 0.206",
-        "AI semiconductor demand"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CORZ",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "CORZ is up +73% YTD and +15% in the last month, with a strong_buy analyst consensus and a positive news sentiment of 0.277. The stock is a high-beta AI compute play with strong momentum.",
-      "drivers": [
-        "+73% YTD",
-        "+15% 1M",
-        "Strong_buy consensus",
-        "AI compute play"
       ]
     }
   ]
