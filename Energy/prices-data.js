@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-16 23:35",
-  "fx_gbp_usd": 1.3427,
+  "updated": "2026-06-17 08:09",
+  "fx_gbp_usd": 1.3416,
   "stocks": [
     {
       "ticker": "XOM",
@@ -13,22 +13,29 @@ window.PRICES_DATA = {
       "change_1w": "-4.73%",
       "change_1m": "-11.61%",
       "change_ytd": "+17.22%",
-      "return_1yr": "+24%",
+      "return_1yr": "+25%",
       "low_gbp": "79",
       "high_gbp": "131",
       "bar_pct": 51,
-      "market_cap_gbp_b": 437.921,
+      "market_cap_gbp_b": 438.297,
       "beta": 0.149,
-      "pe_ratio": 23.84,
-      "avg_volume_m": 19.82,
-      "div_yield_pct": 292.0,
+      "pe_ratio": 23.88,
+      "avg_volume_m": 19.78,
+      "div_yield_pct": 290.0,
       "short_pct": 1.14,
       "analyst": "buy",
       "analyst_score": 2.36,
-      "vol_1d": 13997250,
-      "vol_1w": 87224050,
-      "vol_1m": 349781350,
+      "vol_1d": 18917400,
+      "vol_1w": 92144200,
+      "vol_1m": 354701500,
       "news": [
+        {
+          "title": "The Best Energy ETFs to Buy",
+          "publisher": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/etfs/604248/energy-etfs-to-buy",
+          "published": 1781643750,
+          "sentiment": 0.743
+        },
         {
           "title": "The Number That Could Test Exxon Mobil Stock",
           "publisher": "Trefis",
@@ -56,16 +63,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-pre-132917670.html",
           "published": 1781616557,
           "sentiment": 0.273
-        },
-        {
-          "title": "Here Are Tuesday\u2019s Best Wall Street Analyst Research Calls: Dynatrace, Emerson Electric, Exxon Mobil, Flutter Entertainment, Genuine Parts, nVent Electric, Palantir Technologies, Roku, and More",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/16/here-are-tuesdays-best-wall-street-analyst-research-calls-dynatrace-emerson-electric-exxon-mobil-flutter-entertainment-genuine-parts-nvent-electric-palantir-technologies-roku-and-mor/",
-          "published": 1781610747,
-          "sentiment": 0.791
         }
       ],
-      "news_sentiment": 0.269
+      "news_sentiment": 0.259
     },
     {
       "ticker": "CVX",
@@ -78,22 +78,36 @@ window.PRICES_DATA = {
       "change_1w": "-3.56%",
       "change_1m": "-7.32%",
       "change_ytd": "+17.73%",
-      "return_1yr": "+21%",
+      "return_1yr": "+22%",
       "low_gbp": "106",
       "high_gbp": "160",
       "bar_pct": 52,
-      "market_cap_gbp_b": 267.15,
+      "market_cap_gbp_b": 267.38,
       "beta": 0.472,
-      "pe_ratio": 31.38,
-      "avg_volume_m": 11.19,
+      "pe_ratio": 31.32,
+      "avg_volume_m": 11.07,
       "div_yield_pct": 395.0,
       "short_pct": 1.16,
       "analyst": "buy",
       "analyst_score": 1.84,
-      "vol_1d": 5272439,
-      "vol_1w": 43476639,
-      "vol_1m": 191751539,
+      "vol_1d": 6660200,
+      "vol_1w": 44864400,
+      "vol_1m": 193139300,
       "news": [
+        {
+          "title": "Chevron CEO to investors: It\u2019s not just about oil prices",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/chevron-ceo-look-beyond-oil-prices-investors-dividends",
+          "published": 1781666220,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The Best Energy ETFs to Buy",
+          "publisher": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/etfs/604248/energy-etfs-to-buy",
+          "published": 1781643750,
+          "sentiment": 0.743
+        },
         {
           "title": "The Number That Could Test Exxon Mobil Stock",
           "publisher": "Trefis",
@@ -114,23 +128,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/chevron-takes-70-interest-greek-150205376.html",
           "published": 1781622125,
           "sentiment": 0.25
-        },
-        {
-          "title": "Chevron Secures Strategic Entry Into Greece's Offshore Block 10",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/chevron-secures-strategic-entry-greeces-141900418.html",
-          "published": 1781619540,
-          "sentiment": -0.153
-        },
-        {
-          "title": "Chevron to partner with HelleniQ Energy on Block 10 in Greece",
-          "publisher": "Offshore Technology",
-          "url": "https://www.offshore-technology.com/news/chevron-partner-helleniq-energy-block-10/",
-          "published": 1781618293,
-          "sentiment": -0.202
         }
       ],
-      "news_sentiment": -0.006
+      "news_sentiment": 0.214
     },
     {
       "ticker": "SHEL",
@@ -147,17 +147,17 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "71",
       "bar_pct": 54,
-      "market_cap_gbp_b": 169.803,
+      "market_cap_gbp_b": 169.949,
       "beta": -0.248,
       "pe_ratio": 12.81,
       "avg_volume_m": 7.94,
-      "div_yield_pct": 378.0,
+      "div_yield_pct": 380.0,
       "short_pct": 1.89,
       "analyst": "buy",
       "analyst_score": 2.13,
-      "vol_1d": 5318991,
-      "vol_1w": 32211300,
-      "vol_1m": 144913496,
+      "vol_1d": 6009123,
+      "vol_1w": 32948244,
+      "vol_1m": 145650440,
       "news": [
         {
           "title": "Shell (LSE:SHEL) Plans $1 Billion Wind Exit While Backing EV Charging",
@@ -212,18 +212,25 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 62,
-      "market_cap_gbp_b": 78.918,
+      "market_cap_gbp_b": 78.985,
       "beta": -0.239,
-      "pe_ratio": 33.19,
-      "avg_volume_m": 12.62,
-      "div_yield_pct": 480.0,
+      "pe_ratio": 33.46,
+      "avg_volume_m": 12.43,
+      "div_yield_pct": 485.0,
       "short_pct": 0.4,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 6280284,
-      "vol_1w": 36182084,
-      "vol_1m": 183426084,
+      "vol_1d": 6546000,
+      "vol_1w": 36447800,
+      "vol_1m": 183691800,
       "news": [
+        {
+          "title": "The Best Energy ETFs to Buy",
+          "publisher": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/etfs/604248/energy-etfs-to-buy",
+          "published": 1781643750,
+          "sentiment": 0.743
+        },
         {
           "title": "BP (BP) Stock Drops Despite Market Gains: Important Facts to Note",
           "publisher": "Zacks",
@@ -251,16 +258,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/bp-resets-structure-upstream-downstream-191204340.html",
           "published": 1781377924,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Higher Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-higher-afternoon-200008889.html",
-          "published": 1781294408,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.069
+      "news_sentiment": 0.163
     },
     {
       "ticker": "TTE",
@@ -273,22 +273,29 @@ window.PRICES_DATA = {
       "change_1w": "-4.87%",
       "change_1m": "-9.91%",
       "change_ytd": "+27.91%",
-      "return_1yr": "+31%",
+      "return_1yr": "+36%",
       "low_gbp": "43",
       "high_gbp": "70",
       "bar_pct": 73,
-      "market_cap_gbp_b": 139.47,
+      "market_cap_gbp_b": 139.59,
       "beta": 0.045,
       "pe_ratio": 12.49,
-      "avg_volume_m": 1.75,
-      "div_yield_pct": 502.0,
+      "avg_volume_m": 1.74,
+      "div_yield_pct": 501.0,
       "short_pct": 0.2,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 1382183,
-      "vol_1w": 6886283,
-      "vol_1m": 26931383,
+      "vol_1d": 1470100,
+      "vol_1w": 6974200,
+      "vol_1m": 27019300,
       "news": [
+        {
+          "title": "ConocoPhillips (COP) Joins TotalEnergies And QatarEnergy For Mediterranean Block 3 Exploration",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/conocophillips-cop-joins-totalenergies-qatarenergy-231931058.html",
+          "published": 1781651971,
+          "sentiment": -0.25
+        },
         {
           "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Tuesday Ahead of Fed Policy Meeting",
           "publisher": "MT Newswires",
@@ -316,16 +323,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/energy/articles/sector-energy-stocks-fall-monday-175104858.html",
           "published": 1781545864,
           "sentiment": 0.273
-        },
-        {
-          "title": "European Stocks Close Mixed Monday Trading; Strait of Hormuz to Reopen Under US, Iran Peace Deal",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-close-mixed-monday-154316666.html",
-          "published": 1781538196,
-          "sentiment": 0.542
         }
       ],
-      "news_sentiment": 0.298
+      "news_sentiment": 0.14
     },
     {
       "ticker": "EQNR",
@@ -342,18 +342,25 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "32",
       "bar_pct": 55,
-      "market_cap_gbp_b": 62.772,
+      "market_cap_gbp_b": 62.815,
       "beta": -0.752,
       "pe_ratio": 15.31,
-      "avg_volume_m": 6.02,
-      "div_yield_pct": 444.0,
+      "avg_volume_m": 6.01,
+      "div_yield_pct": 449.0,
       "short_pct": 2.85,
       "analyst": "hold",
       "analyst_score": 3.33,
-      "vol_1d": 4900064,
-      "vol_1w": 24353264,
-      "vol_1m": 83006864,
+      "vol_1d": 5298600,
+      "vol_1w": 24751800,
+      "vol_1m": 83405400,
       "news": [
+        {
+          "title": "Equinor Doubles 2026 Buyback and Bets on Higher Oil and Gas Demand",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-doubles-2026-buyback-bets-035500029.html",
+          "published": 1781668500,
+          "sentiment": -0.128
+        },
         {
           "title": "Energy & Utilities Roundup: Market Talk",
           "publisher": "The Wall Street Journal",
@@ -381,16 +388,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-tuesday-173950073.html",
           "published": 1781631590,
           "sentiment": 0.273
-        },
-        {
-          "title": "Equinor Advances Johan Sverdrup Phase 4 With Latest Oil Finds",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/equinor-advances-johan-sverdrup-phase-140600647.html",
-          "published": 1781618760,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.248
+      "news_sentiment": 0.222
     },
     {
       "ticker": "COP",
@@ -403,22 +403,36 @@ window.PRICES_DATA = {
       "change_1w": "-4.67%",
       "change_1m": "-10.60%",
       "change_ytd": "+16.90%",
-      "return_1yr": "+18%",
+      "return_1yr": "+19%",
       "low_gbp": "64",
       "high_gbp": "101",
       "bar_pct": 51,
-      "market_cap_gbp_b": 101.023,
+      "market_cap_gbp_b": 101.11,
       "beta": 0.106,
       "pe_ratio": 18.87,
       "avg_volume_m": 8.55,
-      "div_yield_pct": 299.0,
+      "div_yield_pct": 302.0,
       "short_pct": 1.83,
       "analyst": "buy",
       "analyst_score": 1.85,
-      "vol_1d": 6194208,
-      "vol_1w": 39099008,
-      "vol_1m": 141205508,
+      "vol_1d": 8196700,
+      "vol_1w": 41101500,
+      "vol_1m": 143208000,
       "news": [
+        {
+          "title": "How A U.S.\u2013Iran Peace Deal And Syrian Gas Restart At ConocoPhillips (COP) Has Changed Its Investment Story",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/u-iran-peace-deal-syrian-001837911.html",
+          "published": 1781655517,
+          "sentiment": 0.542
+        },
+        {
+          "title": "ConocoPhillips (COP) Joins TotalEnergies And QatarEnergy For Mediterranean Block 3 Exploration",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/conocophillips-cop-joins-totalenergies-qatarenergy-231931058.html",
+          "published": 1781651971,
+          "sentiment": -0.25
+        },
         {
           "title": "The Number That Could Test Exxon Mobil Stock",
           "publisher": "Trefis",
@@ -427,35 +441,21 @@ window.PRICES_DATA = {
           "sentiment": 0.077
         },
         {
+          "title": "Stocks Indexes Finish Mostly Lower as Chipmakers Retreat",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2502375/stocks-indexes-finish-mostly-lower-as-chipmakers-retreat",
+          "published": 1781642036,
+          "sentiment": -0.103
+        },
+        {
           "title": "Sector Update: Energy Stocks Decline Late Afternoon",
           "publisher": "MT Newswires",
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-afternoon-195408537.html",
           "published": 1781639648,
           "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy Stocks Decline Tuesday Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-tuesday-173950073.html",
-          "published": 1781631590,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Broader Market Weakens as Energy and Software Stocks Fall",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2496862/broader-market-weakens-as-energy-and-software-stocks-fall",
-          "published": 1781622938,
-          "sentiment": -0.052
-        },
-        {
-          "title": "Sector Update: Energy Stocks Decline Pre-Bell Tuesday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-pre-132917670.html",
-          "published": 1781616557,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.169
+      "news_sentiment": 0.108
     },
     {
       "ticker": "OXY",
@@ -472,17 +472,17 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "50",
       "bar_pct": 52,
-      "market_cap_gbp_b": 39.757,
+      "market_cap_gbp_b": 39.791,
       "beta": 0.124,
       "pe_ratio": 72.53,
-      "avg_volume_m": 14.21,
-      "div_yield_pct": 191.0,
+      "avg_volume_m": 14.16,
+      "div_yield_pct": 194.0,
       "short_pct": 0.02,
       "analyst": "hold",
       "analyst_score": 2.56,
-      "vol_1d": 8436923,
-      "vol_1w": 50623723,
-      "vol_1m": 224495423,
+      "vol_1d": 9743700,
+      "vol_1w": 51930500,
+      "vol_1m": 225802200,
       "news": [
         {
           "title": "Stocks to Watch: Snap, JPMorgan, AMD, SpaceX",
@@ -499,6 +499,13 @@ window.PRICES_DATA = {
           "sentiment": 0.077
         },
         {
+          "title": "Stocks Indexes Finish Mostly Lower as Chipmakers Retreat",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2502375/stocks-indexes-finish-mostly-lower-as-chipmakers-retreat",
+          "published": 1781642036,
+          "sentiment": -0.103
+        },
+        {
           "title": "Shell Signals Strategic Reset With $1 Billion Wind Asset Sale",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/energy/articles/shell-signals-strategic-reset-1-160300867.html",
@@ -511,16 +518,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2496862/broader-market-weakens-as-energy-and-software-stocks-fall",
           "published": 1781622938,
           "sentiment": -0.052
-        },
-        {
-          "title": "Should Value Investors Buy Occidental Petroleum (OXY) Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/value-investors-buy-occidental-petroleum-134003648.html",
-          "published": 1781617203,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.145
+      "news_sentiment": 0.057
     },
     {
       "ticker": "EOG",
@@ -533,21 +533,21 @@ window.PRICES_DATA = {
       "change_1w": "-3.84%",
       "change_1m": "-7.65%",
       "change_ytd": "+25.24%",
-      "return_1yr": "+6%",
+      "return_1yr": "+7%",
       "low_gbp": "76",
       "high_gbp": "113",
       "bar_pct": 61,
-      "market_cap_gbp_b": 52.382,
+      "market_cap_gbp_b": 52.427,
       "beta": 0.256,
-      "pe_ratio": 12.97,
-      "avg_volume_m": 4.05,
+      "pe_ratio": 12.98,
+      "avg_volume_m": 4.04,
       "div_yield_pct": 309.0,
       "short_pct": 4.11,
       "analyst": "buy",
       "analyst_score": 2.19,
-      "vol_1d": 2928132,
-      "vol_1w": 17856732,
-      "vol_1m": 69436232,
+      "vol_1d": 3571900,
+      "vol_1w": 18500500,
+      "vol_1m": 70080000,
       "news": [
         {
           "title": "Why Crescent Energy's Improved FCF Outlook Deserves Attention",
@@ -598,22 +598,36 @@ window.PRICES_DATA = {
       "change_1w": "-2.98%",
       "change_1m": "-3.12%",
       "change_ytd": "+53.01%",
-      "return_1yr": "+47%",
+      "return_1yr": "+50%",
       "low_gbp": "118",
       "high_gbp": "203",
       "bar_pct": 81,
-      "market_cap_gbp_b": 54.458,
+      "market_cap_gbp_b": 54.505,
       "beta": 0.522,
-      "pe_ratio": 16.48,
-      "avg_volume_m": 2.44,
+      "pe_ratio": 16.5,
+      "avg_volume_m": 2.45,
       "div_yield_pct": 156.0,
       "short_pct": 2.5,
       "analyst": "buy",
       "analyst_score": 2.32,
-      "vol_1d": 2604267,
-      "vol_1w": 11944767,
-      "vol_1m": 49038767,
+      "vol_1d": 2687400,
+      "vol_1w": 12027900,
+      "vol_1m": 49121900,
       "news": [
+        {
+          "title": "Marathon Petroleum (MPC) Faces A New Oil Reality As The Strait Of Hormuz Reopens",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/marathon-petroleum-mpc-faces-oil-050940937.html",
+          "published": 1781672980,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The Best Energy ETFs to Buy",
+          "publisher": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/etfs/604248/energy-etfs-to-buy",
+          "published": 1781643750,
+          "sentiment": 0.743
+        },
         {
           "title": "The Number That Could Test Exxon Mobil Stock",
           "publisher": "Trefis",
@@ -634,23 +648,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/shell-signals-strategic-reset-1-160300867.html",
           "published": 1781625780,
           "sentiment": 0.361
-        },
-        {
-          "title": "Petrobras Signs R$443.7M Decommissioning Contract With OceanPact",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/petrobras-signs-r-443-7m-142300628.html",
-          "published": 1781619780,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Chevron Secures Strategic Entry Into Greece's Offshore Block 10",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/chevron-secures-strategic-entry-greeces-141900418.html",
-          "published": 1781619540,
-          "sentiment": -0.153
         }
       ],
-      "news_sentiment": 0.057
+      "news_sentiment": 0.236
     },
     {
       "ticker": "VLO",
@@ -663,21 +663,21 @@ window.PRICES_DATA = {
       "change_1w": "-3.80%",
       "change_1m": "-5.12%",
       "change_ytd": "+49.29%",
-      "return_1yr": "+74%",
+      "return_1yr": "+75%",
       "low_gbp": "97",
       "high_gbp": "198",
       "bar_pct": 84,
-      "market_cap_gbp_b": 53.988,
+      "market_cap_gbp_b": 54.034,
       "beta": 0.553,
-      "pe_ratio": 17.83,
-      "avg_volume_m": 3.44,
-      "div_yield_pct": 194.0,
+      "pe_ratio": 17.82,
+      "avg_volume_m": 3.45,
+      "div_yield_pct": 197.0,
       "short_pct": 3.6,
       "analyst": "buy",
       "analyst_score": 2.4,
-      "vol_1d": 2291479,
-      "vol_1w": 14730879,
-      "vol_1m": 60500779,
+      "vol_1d": 2975200,
+      "vol_1w": 15414600,
+      "vol_1m": 61184500,
       "news": [
         {
           "title": "The Number That Could Test Exxon Mobil Stock",
@@ -685,6 +685,13 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/603113/the-number-that-could-test-exxon-mobil-stock/2026-06-16",
           "published": 1781642877,
           "sentiment": 0.077
+        },
+        {
+          "title": "Stocks Indexes Finish Mostly Lower as Chipmakers Retreat",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2502375/stocks-indexes-finish-mostly-lower-as-chipmakers-retreat",
+          "published": 1781642036,
+          "sentiment": -0.103
         },
         {
           "title": "Oppenheimer Picks Alphabet, Dumps Meta in Highest-Conviction Stock Picks",
@@ -701,21 +708,14 @@ window.PRICES_DATA = {
           "sentiment": -0.052
         },
         {
-          "title": "Are Oils-Energy Stocks Lagging  Valero Energy (VLO) This Year?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/oils-energy-stocks-lagging-valero-134004165.html",
-          "published": 1781617204,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Hewlett Packard and M-tron have been highlighted as Zacks Bull and Bear of the Day",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/hewlett-packard-m-tron-highlighted-123400005.html",
-          "published": 1781613240,
-          "sentiment": 0.0
+          "title": "Stocks Supported by Lower Crude Oil Prices and Bond Yields",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2495519/stocks-supported-by-lower-crude-oil-prices-and-bond-yields",
+          "published": 1781619490,
+          "sentiment": -0.557
         }
       ],
-      "news_sentiment": -0.075
+      "news_sentiment": -0.207
     },
     {
       "ticker": "SLB",
@@ -728,21 +728,21 @@ window.PRICES_DATA = {
       "change_1w": "-4.98%",
       "change_1m": "-6.65%",
       "change_ytd": "+33.49%",
-      "return_1yr": "+49%",
+      "return_1yr": "+48%",
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 79,
-      "market_cap_gbp_b": 59.091,
+      "market_cap_gbp_b": 59.142,
       "beta": 0.708,
       "pe_ratio": 23.38,
-      "avg_volume_m": 15.48,
-      "div_yield_pct": 220.0,
+      "avg_volume_m": 15.49,
+      "div_yield_pct": 222.0,
       "short_pct": 4.24,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 12766753,
-      "vol_1w": 62404253,
-      "vol_1m": 283492953,
+      "vol_1d": 15336500,
+      "vol_1w": 64974000,
+      "vol_1m": 286062700,
       "news": [
         {
           "title": "Why SLB (SLB) Stock Is Down Today",
@@ -793,22 +793,36 @@ window.PRICES_DATA = {
       "change_1w": "-6.11%",
       "change_1m": "-12.67%",
       "change_ytd": "+26.82%",
-      "return_1yr": "+66%",
+      "return_1yr": "+67%",
       "low_gbp": "15",
       "high_gbp": "32",
       "bar_pct": 73,
-      "market_cap_gbp_b": 23.145,
+      "market_cap_gbp_b": 23.165,
       "beta": 0.704,
       "pe_ratio": 20.55,
-      "avg_volume_m": 13.7,
-      "div_yield_pct": 178.0,
+      "avg_volume_m": 13.55,
+      "div_yield_pct": 183.0,
       "short_pct": 5.22,
       "analyst": "buy",
       "analyst_score": 1.85,
-      "vol_1d": 10631770,
-      "vol_1w": 64435570,
-      "vol_1m": 249276170,
+      "vol_1d": 10632100,
+      "vol_1w": 64435900,
+      "vol_1m": 249276500,
       "news": [
+        {
+          "title": "Halliburton (HAL) Stock Sees Modest Fair Value Lift As Analysts Rework Price Targets",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/halliburton-hal-stock-sees-modest-043512224.html",
+          "published": 1781670912,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Stocks Indexes Finish Mostly Lower as Chipmakers Retreat",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2502375/stocks-indexes-finish-mostly-lower-as-chipmakers-retreat",
+          "published": 1781642036,
+          "sentiment": -0.103
+        },
         {
           "title": "Broader Market Weakens as Energy and Software Stocks Fall",
           "publisher": "Barchart",
@@ -817,35 +831,21 @@ window.PRICES_DATA = {
           "sentiment": -0.052
         },
         {
+          "title": "Stocks Supported by Lower Crude Oil Prices and Bond Yields",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2495519/stocks-supported-by-lower-crude-oil-prices-and-bond-yields",
+          "published": 1781619490,
+          "sentiment": -0.557
+        },
+        {
           "title": "Halliburton (HAL) Stock After 70% One-Year Surge Is There Still Value Here",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/halliburton-hal-stock-70-one-141216305.html",
           "published": 1781619136,
           "sentiment": 0.34
-        },
-        {
-          "title": "Patterson-UTI, ProFrac, and ProPetro Shares Are Falling, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/patterson-uti-profrac-propetro-shares-011607756.html",
-          "published": 1781572567,
-          "sentiment": 0.153
-        },
-        {
-          "title": "Select Water Solutions and Core Laboratories Shares Plummet, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/select-water-solutions-core-laboratories-010807910.html",
-          "published": 1781572087,
-          "sentiment": 0.44
-        },
-        {
-          "title": "Valaris, Transocean, and Helmerich & Payne Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/valaris-transocean-helmerich-payne-stocks-010007700.html",
-          "published": 1781571607,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.176
+      "news_sentiment": 0.04
     },
     {
       "ticker": "BKR",
@@ -862,18 +862,25 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "52",
       "bar_pct": 73,
-      "market_cap_gbp_b": 45.454,
+      "market_cap_gbp_b": 45.493,
       "beta": 0.938,
       "pe_ratio": 19.65,
-      "avg_volume_m": 8.41,
-      "div_yield_pct": 147.0,
+      "avg_volume_m": 8.32,
+      "div_yield_pct": 150.0,
       "short_pct": 2.91,
       "analyst": "buy",
       "analyst_score": 1.77,
-      "vol_1d": 6100362,
-      "vol_1w": 32966562,
-      "vol_1m": 157410262,
+      "vol_1d": 6106100,
+      "vol_1w": 32972300,
+      "vol_1m": 157416000,
       "news": [
+        {
+          "title": "Stocks Indexes Finish Mostly Lower as Chipmakers Retreat",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2502375/stocks-indexes-finish-mostly-lower-as-chipmakers-retreat",
+          "published": 1781642036,
+          "sentiment": -0.103
+        },
         {
           "title": "Broader Market Weakens as Energy and Software Stocks Fall",
           "publisher": "Barchart",
@@ -901,16 +908,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/valaris-transocean-helmerich-payne-stocks-010007700.html",
           "published": 1781571607,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why Halliburton (HAL) Stock Is Down Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-halliburton-hal-stock-down-005207035.html",
-          "published": 1781571127,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.108
+      "news_sentiment": 0.088
     },
     {
       "ticker": "NEE",
@@ -927,17 +927,17 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "74",
       "bar_pct": 60,
-      "market_cap_gbp_b": 133.939,
+      "market_cap_gbp_b": 134.054,
       "beta": 0.671,
       "pe_ratio": 21.89,
-      "avg_volume_m": 10.51,
+      "avg_volume_m": 10.58,
       "div_yield_pct": 289.0,
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 10336072,
-      "vol_1w": 48375972,
-      "vol_1m": 294897772,
+      "vol_1d": 10339100,
+      "vol_1w": 48379000,
+      "vol_1m": 294900800,
       "news": [
         {
           "title": "PEG Benefits From Stable Utility Operations and Strategic Investments",
@@ -984,7 +984,7 @@ window.PRICES_DATA = {
       "exchange": "LSE",
       "price_gbp": "24",
       "price_usd": 2358.0,
-      "change_1d": "-0.76%",
+      "change_1d": "-0.46%",
       "change_1w": "+0.00%",
       "change_1m": "+0.55%",
       "change_ytd": "+5.69%",
@@ -995,14 +995,14 @@ window.PRICES_DATA = {
       "market_cap_gbp_b": 0.284,
       "beta": 0.596,
       "pe_ratio": 22.46,
-      "avg_volume_m": 4.2,
-      "div_yield_pct": 289.0,
+      "avg_volume_m": 4.24,
+      "div_yield_pct": 291.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2587039,
-      "vol_1w": 13104384,
-      "vol_1m": 88619211,
+      "vol_1d": 2587203,
+      "vol_1w": 13104548,
+      "vol_1m": 88619375,
       "news": [
         {
           "title": "UK, Japan to deepen ties with \u00a318 billion investment agreement",
@@ -1053,21 +1053,21 @@ window.PRICES_DATA = {
       "change_1w": "-6.07%",
       "change_1m": "+1.15%",
       "change_ytd": "+48.92%",
-      "return_1yr": "+50%",
+      "return_1yr": "+38%",
       "low_gbp": "19",
       "high_gbp": "55",
       "bar_pct": 51,
-      "market_cap_gbp_b": 4.933,
+      "market_cap_gbp_b": 4.938,
       "beta": 1.572,
-      "pe_ratio": 49.76,
-      "avg_volume_m": 7.61,
+      "pe_ratio": 51.81,
+      "avg_volume_m": 7.64,
       "div_yield_pct": null,
       "short_pct": 24.43,
       "analyst": "hold",
       "analyst_score": 2.53,
-      "vol_1d": 6007768,
-      "vol_1w": 28756468,
-      "vol_1m": 183569168,
+      "vol_1d": 6460600,
+      "vol_1w": 29209300,
+      "vol_1m": 184022000,
       "news": [
         {
           "title": "Enphase Energy (ENPH) Stock Falls Amid Market Uptick: What Investors Need to Know",
@@ -1118,21 +1118,21 @@ window.PRICES_DATA = {
       "change_1w": "+0.83%",
       "change_1m": "+13.15%",
       "change_ytd": "-3.64%",
-      "return_1yr": "+90%",
-      "low_gbp": "101",
+      "return_1yr": "+84%",
+      "low_gbp": "104",
       "high_gbp": "239",
       "bar_pct": 69,
-      "market_cap_gbp_b": 21.156,
+      "market_cap_gbp_b": 21.174,
       "beta": 1.692,
-      "pe_ratio": 17.08,
-      "avg_volume_m": 2.47,
+      "pe_ratio": 17.07,
+      "avg_volume_m": 2.48,
       "div_yield_pct": null,
       "short_pct": 10.39,
       "analyst": "buy",
       "analyst_score": 2.12,
-      "vol_1d": 1835817,
-      "vol_1w": 10781517,
-      "vol_1m": 62125017,
+      "vol_1d": 1896000,
+      "vol_1w": 10841700,
+      "vol_1m": 62185200,
       "news": [
         {
           "title": "First Solar (FSLR) Stock Valuation Check After Strong Recent Share Price Gains",
@@ -1183,15 +1183,15 @@ window.PRICES_DATA = {
       "change_1w": "-6.56%",
       "change_1m": "+0.85%",
       "change_ytd": "-7.24%",
-      "return_1yr": "+15%",
+      "return_1yr": "+14%",
       "low_gbp": "23",
       "high_gbp": "34",
       "bar_pct": 37,
-      "market_cap_gbp_b": 4.932,
+      "market_cap_gbp_b": 4.936,
       "beta": 1.15,
       "pe_ratio": null,
-      "avg_volume_m": 1.55,
-      "div_yield_pct": 428.0,
+      "avg_volume_m": 1.56,
+      "div_yield_pct": 432.0,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.83,
@@ -1242,17 +1242,17 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.67",
-      "price_usd": 7.61,
-      "change_1d": "-4.28%",
-      "change_1w": "-6.97%",
-      "change_1m": "-11.41%",
-      "change_ytd": "+14.18%",
-      "return_1yr": "-44%",
-      "low_gbp": "4.28",
+      "price_gbp": "5.68",
+      "price_usd": 7.62,
+      "change_1d": "-4.09%",
+      "change_1w": "-6.78%",
+      "change_1m": "-11.23%",
+      "change_ytd": "+14.40%",
+      "return_1yr": "-45%",
+      "low_gbp": "4.29",
       "high_gbp": "25",
       "bar_pct": 7,
-      "market_cap_gbp_b": 22.462,
+      "market_cap_gbp_b": 22.526,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,
