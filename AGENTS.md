@@ -53,6 +53,19 @@ git rebase origin/main
 git push origin dev
 ```
 
+### After pushing to main (CCR / feature-branch sessions)
+
+When working on a feature branch (e.g. `claude/magical-davinci-zYLYI`) and pushing
+to main via `git push origin <branch>:main`, the remote tracking ref for the feature
+branch goes stale. The stop hook checks `origin/<branch>..HEAD` and flags the
+divergence as unverified commits. Fix — run this immediately after every push to main:
+
+```
+git push --force-with-lease -u origin <current-branch>
+```
+
+This syncs the remote feature branch to HEAD so the hook range is empty and exits 0.
+
 ## After every edit
 
 When you make a change, update these in the same commit:
