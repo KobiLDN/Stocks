@@ -1,9 +1,135 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-17 12:51",
+  "updated": "2026-06-18 22:36",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "WLD",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "WLD surged +158.68% in 1 month and +23.85% in 1 week, breaking above key resistance at $0.6331 with strong AI narrative and positive news sentiment of 0.165, though profit-taking has pulled back 5.25% in 1 day.",
+      "drivers": [
+        "+158.68% 1M momentum",
+        "AI narrative catalyst",
+        "positive news sentiment 0.165",
+        "breakout above $0.6331 resistance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "XLM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "XLM is up +62.74% in 1 month and +22.20% in 1 week, with positive funding rates and rising open interest (+10% in 24h), holding above key moving averages at $0.18-$0.20.",
+      "drivers": [
+        "+62.74% 1M momentum",
+        "positive funding rate 0.0065%",
+        "rising open interest +10%",
+        "holding above $0.18-$0.20 MA cluster"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "NEAR is up +43.70% YTD and +32.76% in 1 month, breaking above a multi-year descending trendline near $1.90, with open interest hitting fresh highs of $473M and strong AI narrative driving the rally.",
+      "drivers": [
+        "+43.70% YTD",
+        "multi-year descending trendline breakout",
+        "open interest $473M",
+        "AI narrative catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "KAITO gained +12.06% in 1 week and +3.56% in 1 month, benefiting from AI token unlock narratives and positive market structure, though YTD is slightly negative at -8.04%.",
+      "drivers": [
+        "+12.06% 1W momentum",
+        "AI token unlock catalyst",
+        "positive market structure"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ARKM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ARKM is up +10.74% in 1 month and +5.44% in 1 week, showing consistent short-term momentum with a market cap of \u00a30.022B, though YTD is -26.48%.",
+      "drivers": [
+        "+10.74% 1M momentum",
+        "+5.44% 1W momentum",
+        "AI sector tailwind"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ALGO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ALGO gained +14.28% in 1 week and +2.67% in 1 day, showing a strong short-term reversal despite a -9.21% YTD and -10.33% 1M decline, with a small market cap of \u00a30.677B.",
+      "drivers": [
+        "+14.28% 1W momentum",
+        "short-term reversal",
+        "low market cap \u00a30.677B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ALT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "ALT is up +5.46% in 1 week and +0.41% in 1 day, showing modest short-term momentum with a tiny market cap of \u00a30.032B, though YTD is -42.15%.",
+      "drivers": [
+        "+5.46% 1W momentum",
+        "low market cap \u00a30.032B",
+        "AI sector"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "NMR is flat in 1D (+0.10%) and up +0.84% in 1W, with a small market cap of \u00a30.048B and YTD of -10.81%, showing minimal momentum but low downside risk.",
+      "drivers": [
+        "+0.84% 1W",
+        "low volatility",
+        "small market cap \u00a30.048B"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HBAR",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "HBAR is up +0.50% in 1W and -0.48% in 1D, with a market cap of \u00a32.628B and YTD of -24.87%, showing a slight positive short-term bias in a downtrend.",
+      "drivers": [
+        "+0.50% 1W",
+        "market cap \u00a32.628B",
+        "emerging category"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "FET is up +0.47% in 1M and -0.67% in 1W, with a market cap of \u00a30.328B and YTD of -3.63%, showing very weak momentum but a relatively stable YTD.",
+      "drivers": [
+        "+0.47% 1M",
+        "market cap \u00a30.328B",
+        "AI sector"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "WLD",
@@ -125,138 +251,6 @@ window.SIGNALS_DATA = {
         "+12.40% 1W momentum",
         "AI data narrative",
         "low market cap high upside"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "NEAR is up +57.95% over 1M and +57.33% YTD, with momentum driven by the NEAR Intents cross-chain system processing over $19B in volume and $32M in fees, an upcoming June network upgrade with dynamic resharding, and surging retail demand shown by a 16% rise in futures OI to $658M [coindesk.com](https://www.coindesk.com/markets/2026/05/25/near-price-rally-gains-momentum-as-cross-chain-product-activity-fuels-further-15-jump/). Despite a news sentiment of -0.394, the price action and on-chain volume (>$1B in 24h) confirm strong institutional and retail conviction.",
-      "drivers": [
-        "+57.95% 1M return",
-        "+16% futures OI in 24h",
-        "NEAR Intents $19B cumulative volume",
-        "Dynamic resharding upgrade June 2026"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "WLD",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "WLD has surged +144.89% over 1M and +15.05% in the last day, fueled by the AI mega-IPO narrative and Worldcoin's connection to OpenAI CEO Sam Altman. Despite Arthur Hayes selling his position, WLD still trades near $0.49 with a $1.69B market cap, and a scheduled 43% reduction in daily token unlocks from July 24 provides a near-term supply catalyst [thedefiant.io](https://thedefiant.io/news/people/arthur-hayes-dumps-worldcoin-days-after-maelstrom-pitched-ai-ipo-trade).",
-      "drivers": [
-        "+144.89% 1M return",
-        "AI IPO narrative (Anthropic, SpaceX)",
-        "43% unlock reduction from July 24",
-        "Market cap \u00a31.5B GBP"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TAO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "TAO shows exceptional weekly momentum at +34.04% 1W, +2.81% 1M, and +28.84% YTD, supported by a market cap of \u00a32.31B GBP. As a leading decentralised AI compute protocol, TAO benefits directly from the AI IPO wave and Nvidia's chip announcements, attracting capital rotating into AI infrastructure.",
-      "drivers": [
-        "+34.04% 1W return",
-        "+28.84% YTD",
-        "AI compute narrative",
-        "Market cap \u00a32.31B GBP"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "RNDR is up +42.61% YTD and +11.04% over the last week, with a market cap of \u00a30.71B GBP. Its role in decentralised GPU rendering for AI and 3D applications aligns with the broader AI boom triggered by the Anthropic IPO and Nvidia's new chip launches.",
-      "drivers": [
-        "+42.61% YTD",
-        "+11.04% 1W return",
-        "Decentralised GPU + AI narrative",
-        "Market cap \u00a30.71B GBP"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ARKM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "ARKM has strong short-term momentum: +8.42% 1D, +17.91% 1W, and +12.21% 1M, though its market cap is small at \u00a30.023B GBP. The token benefits from its role as an AI-driven on-chain data platform capitalising on the AI coin rally.",
-      "drivers": [
-        "+17.91% 1W return",
-        "+12.21% 1M return",
-        "AI data platform narrative",
-        "Positive momentum carry"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "FET",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "FET is up +9.18% YTD and +9.08% 1M, with a market cap of \u00a30.365B GBP. As a leading AI agent token, it is riding the same AI-IPO rotation that boosted NEAR and WLD, benefiting from the ecosystem activity around the Fetch.ai network.",
-      "drivers": [
-        "+9.08% 1M return",
-        "+9.18% YTD",
-        "AI agent ecosystem",
-        "Market cap \u00a30.37B GBP"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "KAITO shows positive momentum: +2.15% 1D, +5.53% 1W, and +9.27% 1M, with a market cap of \u00a30.086B GBP. The token is part of the emerging AI category, benefiting from the same thematic tailwinds as other AI tokens, though with lower liquidity.",
-      "drivers": [
-        "+9.27% 1M return",
-        "+5.53% 1W return",
-        "AI category momentum",
-        "Small cap growth potential"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "XLM is up +24.77% over the last month despite a -5.03% weekly pullback, and is nearly flat YTD at -5.38%, with a market cap of \u00a34.77B GBP. Its payment/settlement use case and relative strength versus XRP make it a recovery play if broader market sentiment improves.",
-      "drivers": [
-        "+24.77% 1M return",
-        "Market cap \u00a34.77B GBP",
-        "Stable YTD performance",
-        "Payments infrastructure"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AGIX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "AGIX is up +9.39% YTD and +5.26% 1M, with positive short-term momentum at +2.21% 1D. The token is tied to the SingularityNET decentralised AI marketplace, making it a leveraged play on the AI coin narrative, though liquidity is modest.",
-      "drivers": [
-        "+9.39% YTD",
-        "+5.26% 1M return",
-        "Decentralised AI marketplace",
-        "AI narrative carry"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ICP is down -10.57% YTD but has shown recent recovery: +5.15% 1D, +8.49% 1W, and -2.58% 1M, with a market cap of \u00a31.05B GBP. As an AI-focused L1 blockchain, ICP is a lower-beta way to play the AI theme, offering potential upside if its web3 AI integrations gain traction.",
-      "drivers": [
-        "+8.49% 1W return",
-        "+5.15% 1D return",
-        "AI L1 infrastructure",
-        "Market cap \u00a31.05B GBP"
       ]
     }
   ]

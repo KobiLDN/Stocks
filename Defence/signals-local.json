@@ -1,9 +1,142 @@
 {
-  "updated": "2026-06-17 12:48",
+  "updated": "2026-06-18 22:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Mercury Systems has surged +127% over one year and +48.91% YTD, with +21.23% in the past month, driven by a strong backlog and a P/E of 42.71; news sentiment is positive at 0.138, and the company is a key beneficiary of rising missile and radar demand.",
+      "drivers": [
+        "+127% 1-year return",
+        "+48.91% YTD",
+        "+21.23% 1-month momentum",
+        "positive news sentiment 0.138"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RR.L",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Rolls-Royce has rallied +57% over one year and +17.77% YTD, with +21.77% in the past month, driven by strong defence engine demand and a low P/E of 20.43; news sentiment is positive at 0.242, and it benefits from UK/European defence spending tailwinds.",
+      "drivers": [
+        "+57% 1-year return",
+        "+17.77% YTD",
+        "+21.77% 1-month momentum",
+        "low P/E 20.43"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RCAT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Red Cat Holdings has gained +63% over one year and +21.40% YTD, with +24.52% in the past month, reflecting strong drone demand; news sentiment is positive at 0.284, and it is a key player in the growing autonomous systems market.",
+      "drivers": [
+        "+63% 1-year return",
+        "+21.40% YTD",
+        "+24.52% 1-month momentum",
+        "positive news sentiment 0.284"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "RTX has +31% one-year return and +5.80% in the past month, with a record $271 billion backlog and strong defence demand; news sentiment is positive at 0.14, and it benefits from capacity expansion and missile production push in Europe/Ukraine.",
+      "drivers": [
+        "+31% 1-year return",
+        "+5.80% 1-month momentum",
+        "record $271B backlog",
+        "positive news sentiment 0.14"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "HEICO has +7% one-year return and +14.65% in the past month, with a P/E of 60.1 and strong aftermarket demand; news sentiment is positive at 0.27, and it benefits from commercial aerospace recovery and defence electronics.",
+      "drivers": [
+        "+14.65% 1-month momentum",
+        "P/E 60.1",
+        "positive news sentiment 0.27",
+        "strong aftermarket demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TransDigm has -9% one-year return but +12.06% in the past month, with a P/E of 41.39 and strong aerospace aftermarket; news sentiment is positive at 0.244, and it benefits from defence and commercial aerospace demand.",
+      "drivers": [
+        "+12.06% 1-month momentum",
+        "P/E 41.39",
+        "positive news sentiment 0.244",
+        "strong aerospace aftermarket"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Leonardo DRS has +31.92% YTD and +6.90% in the past month, with a P/E of 42.71 and strong defence electronics demand; news sentiment is positive at 0.343, and it benefits from growing defence budgets.",
+      "drivers": [
+        "+31.92% YTD",
+        "+6.90% 1-month momentum",
+        "P/E 42.71",
+        "positive news sentiment 0.343"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SpaceX has +13.23% YTD and +13.23% in the past month, with strong space demand and positive news sentiment at 0.267; it benefits from the space launch and satellite market.",
+      "drivers": [
+        "+13.23% YTD",
+        "+13.23% 1-month momentum",
+        "positive news sentiment 0.267",
+        "strong space demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SAIC has +1.68% YTD and +6.43% in the past month, with a low P/E of 11.49 and strong cyber/intel demand; news sentiment is positive at 0.249, and it benefits from government IT spending.",
+      "drivers": [
+        "+6.43% 1-month momentum",
+        "low P/E 11.49",
+        "positive news sentiment 0.249",
+        "strong government IT demand"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "QinetiQ has -12% one-year return but +5.98% in the past month, with a P/E of 21.99 and positive news sentiment at 0.296; it benefits from UK defence spending and cyber/space demand.",
+      "drivers": [
+        "+5.98% 1-month momentum",
+        "P/E 21.99",
+        "positive news sentiment 0.296",
+        "UK defence spending"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RR.L",
@@ -132,138 +265,6 @@
         "buy consensus 1.83",
         "news sentiment 0.338",
         "defence prime"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRCY",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Top momentum (+58.23% YTD, +30.05% 1M, +8.12% 1W) with no P/E drag and strong analyst buy consensus; defense electronics demand and budget tailwinds support sustained outperformance.",
-      "drivers": [
-        "+58% YTD momentum",
-        "1M +30%",
-        "buy consensus",
-        "defense electronics exposure"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Q1 FY27 revenue $1.9B with record margins, raised FY27 EPS guidance to $9.90-$10.10, and $2.1B bookings (book-to-bill 1.1x); pipeline $85B supports +25.88% 1M surge at P/E 12.8 \u2013 deeply undervalued.",
-      "drivers": [
-        "+25.88% 1M",
-        "P/E 12.8",
-        "record margin and raised guidance",
-        "$85B qualified pipeline"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +40.09%, 1M +14.43%, 1W +5.16% with low beta 0.121 and positive news sentiment 0.343; recent spin-off purity and defence modernisation contracts are strong catalysts.",
-      "drivers": [
-        "+40% YTD",
-        "low beta 0.12",
-        "positive sentiment 0.34",
-        "defence modernisation tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +22.05%, 1M +18.94% with strong_buy analyst consensus (score 1.17); tactical robotics consolidation and U.S. Army/Japan GSDF contracts accelerating production \u2013 web search confirms 70%+ recent rally and $22 price target.",
-      "drivers": [
-        "strong_buy consensus 1.17",
-        "1M +18.94%",
-        "U.S. Army/Japan contracts",
-        "$22 analyst target"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "KTOS",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Cathie Wood's ARK Invest bought 252K shares, Valkyrie/Skyborg drone programs, and $886B defence budget tailwinds drive 1M +10.02% despite -27.17% YTD; P/E 339 high but AI combat drone moat justifies premium.",
-      "drivers": [
-        "ARK Invest purchase",
-        "1M +10%",
-        "AI combat drone moat",
-        "defence budget tailwind"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "1Y +48%, YTD +9.28%, 1M +14.74%, 1D +4.41% driven by \u00a324bn UK-Japan investment deal; P/E 19 is reasonable, analyst consensus buy at 1.6, and news sentiment positive 0.262.",
-      "drivers": [
-        "1M +14.74%",
-        "P/E 19",
-        "UK-Japan \u00a324bn deal",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +13.64% on strong aerospace demand and defence exposure, low beta 1.035, and highest news sentiment in universe (0.543); P/E 59 high but justified by consistent growth profile.",
-      "drivers": [
-        "1M +13.64%",
-        "news sentiment 0.54",
-        "defence exposure",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +14.67% with YTD +6.58%, low beta 0.322, reasonable P/E 23.68, and positive news sentiment 0.296; UK penny stock with defence exposure and dividend yield 2.3%.",
-      "drivers": [
-        "1M +14.67%",
-        "P/E 23.7",
-        "positive sentiment 0.3",
-        "dividend 2.3%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +17.23% recovery from YTD -21.60%, analyst buy consensus (1.6) and public safety AI platform momentum; P/E 179 elevated but web search highlights recurring software growth catalysts.",
-      "drivers": [
-        "1M +17.23%",
-        "buy consensus 1.6",
-        "public safety AI",
-        "recurring software growth"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1M +10.16%, YTD -1.27%, 1Y +97% driven by direct-to-cell satellite momentum and spectrum sale hopes; high beta 2.634 and 18.39% short interest add risk but news sentiment 0.262 is positive.",
-      "drivers": [
-        "1M +10.16%",
-        "1Y +97%",
-        "spectrum sale narrative",
-        "positive sentiment 0.26"
       ]
     }
   ]
