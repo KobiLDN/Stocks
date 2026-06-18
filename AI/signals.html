@@ -599,7 +599,7 @@
     const momPicks = Array.isArray(data.momentum_picks) ? data.momentum_picks : [];
     if (momPicks.length) {
       html += '<div class="momentum-divider">// Momentum Screener</div>';
-      html += momPicks.map(p => {
+      html += momPicks.map((p, i) => {
         const t = p.ticker || '';
         const name = nameFor[t] || NAMES[t] || t;
         const cat  = catFor[t] || '';
@@ -614,7 +614,7 @@
           .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
           .join('');
         return '<div class="signal-card">' +
-          '<div class="rank-rail"><span class="rank-mom">◈</span></div>' +
+          '<div class="rank-rail"><span class="rank-num">' + (i + 1) + '</span></div>' +
           '<div class="card-body">' +
             '<div class="card-top">' +
               '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
