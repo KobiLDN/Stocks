@@ -16,6 +16,20 @@ Biotech/server.py
 Biotech/start.bat
 Biotech/PROMPT.txt
 
+# Other sector __pycache__ dirs
+Tech/__pycache__/
+Tech/*.pyc
+Defence/__pycache__/
+Defence/*.pyc
+Energy/__pycache__/
+Energy/*.pyc
+Crypto/__pycache__/
+Crypto/*.pyc
+
+# Root-level Python cache
+__pycache__/
+*.pyc
+
 # Claude Code config — ignore everything except MCP server settings
 .claude/*
 !.claude/settings.json
