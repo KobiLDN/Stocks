@@ -27,6 +27,10 @@ from zoneinfo import ZoneInfo
 
 import requests
 
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+from momentum_screener import compute_momentum_picks
+
 # ---- Configuration --------------------------------------------------------
 
 ENDPOINT          = "https://openrouter.ai/api/v1/chat/completions"
@@ -310,7 +314,7 @@ def parse_picks(content, valid_tickers):
 
 # ---- Write outputs --------------------------------------------------------
 
-def write_outputs(picks, now_str):
+def write_outputs(picks, stocks, now_str):
     # Carry forward previous picks so the UI can show rank deltas
     previous_picks = []
     if os.path.exists(OUTPUT_JSON):
@@ -321,12 +325,24 @@ def write_outputs(picks, now_str):
         except Exception:
             pass
 
+    # --- momentum post-processing (additive — never downgrades AI signals) ---
+    existing_tickers = {p['ticker'] for p in picks}
+    momentum_picks, upgrades = compute_momentum_picks(stocks, existing_tickers)
+    for p in picks:
+        if p['ticker'] in upgrades:
+            m_signal, m_conf = upgrades[p['ticker']]
+            if m_conf > p['confidence']:
+                p['confidence'] = m_conf
+            if m_signal == 'strong_buy' and p['signal'] == 'buy':
+                p['signal'] = 'strong_buy'
+
     out = {
         "updated":        now_str,
         "model":          MODEL,
         "endpoint":       ENDPOINT,
         "source":         "openrouter",
         "picks":          picks,
+        "momentum_picks": momentum_picks,
         "previous_picks": previous_picks,
     }
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
@@ -372,7 +388,7 @@ def main():
              f"Last error: {last_err}")
 
     now_str = datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M")
-    write_outputs(picks, now_str)
+    write_outputs(picks, stocks, now_str)
 
     print("\nTop 10 picks:")
     for p in picks:
