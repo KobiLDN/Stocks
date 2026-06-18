@@ -293,6 +293,22 @@
     line-height: 1.7;
   }
   .how-footer-note span { color: var(--accent2); }
+  .momentum-divider {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 20px 0 8px;
+    margin-top: 4px;
+  }
+  .rank-mom {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--amber);
+    line-height: 1;
+  }
 </style>
 </head>
 <body>
@@ -498,7 +514,7 @@
       data.previous_picks.forEach(p => { prevRank[p.ticker] = p.rank; });
     }
 
-    feed.innerHTML = data.picks.map(p => {
+    let html = data.picks.map(p => {
       const t = p.ticker || '';
       const name = nameFor[t] || NAMES[t] || t;
       const cat  = catFor[t] || '';
@@ -547,6 +563,46 @@
         '</div>' +
       '</div>';
     }).join('');
+
+    const momPicks = Array.isArray(data.momentum_picks) ? data.momentum_picks : [];
+    if (momPicks.length) {
+      html += '<div class="momentum-divider">// Momentum Screener</div>';
+      html += momPicks.map(p => {
+        const t = p.ticker || '';
+        const name = nameFor[t] || NAMES[t] || t;
+        const cat  = catFor[t] || '';
+        const catLabel = CAT_LABELS[cat] || cat;
+        const catBadge = cat
+          ? '<span class="cat-badge cat-' + cat + '">' + catLabel + '</span>'
+          : '';
+        const signalCls = 'signal-' + (p.signal || '');
+        const conf = Math.max(0, Math.min(1, Number(p.confidence) || 0));
+        const confPct = Math.round(conf * 100) + '%';
+        const drivers = (Array.isArray(p.drivers) ? p.drivers : [])
+          .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
+          .join('');
+        return '<div class="signal-card">' +
+          '<div class="rank-rail"><span class="rank-mom">◈</span></div>' +
+          '<div class="card-body">' +
+            '<div class="card-top">' +
+              '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
+              '<span class="company">' + escapeHtml(name) + '</span>' +
+              catBadge +
+              '<span class="signal-pill ' + signalCls + '">' + escapeHtml(signalLabel(p.signal)) + '</span>' +
+            '</div>' +
+            '<div class="conf-wrap">' +
+              '<span class="conf-label">Confidence</span>' +
+              '<div class="conf-bar"><div class="conf-fill" style="width:' + confPct + '"></div></div>' +
+              '<span class="conf-pct">' + confPct + '</span>' +
+            '</div>' +
+            '<div class="rationale">' + escapeHtml(p.rationale || '') + '</div>' +
+            (drivers ? '<div class="drivers">' + drivers + '</div>' : '') +
+          '</div>' +
+        '</div>';
+      }).join('');
+    }
+
+    feed.innerHTML = html;
   }
 
   if (window.SIGNALS_DATA) {
