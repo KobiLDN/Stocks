@@ -1,9 +1,297 @@
 {
-  "updated": "2026-06-18 22:33",
+  "updated": "2026-06-19 01:29",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "MU has strong_buy consensus, forward P/E of just 9x, and surged 5.22% today after Apple's CEO warned of memory price hikes; multiple analysts raised targets to $1,300-$1,500 [247wallst.com](https://247wallst.com/investing/2026/06/18/wall-street-just-put-a-monster-target-on-micron-is-the-stock-still-too-cheap-2/).",
+      "drivers": [
+        "forward P/E 9x",
+        "analyst target hikes to $1,500",
+        "Apple memory price warning",
+        "+259% YTD momentum"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "MRVL has strong_buy consensus, surged 4.33% today on a price target hike, with 1-month momentum of +76.20% and positive news sentiment of 0.101.",
+      "drivers": [
+        "strong_buy consensus",
+        "+76% 1-month return",
+        "price target hike catalyst",
+        "P/E 107x but high growth"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CRDO",
+      "signal": "strong_buy",
+      "confidence": 0.897,
+      "rationale": "CRDO has strong_buy consensus, reported record FY26 results with triple-digit revenue growth, and gained 6.09% today with 1-month momentum of +60.86%.",
+      "drivers": [
+        "record FY26 results",
+        "strong_buy consensus",
+        "+60.86% 1-month",
+        "P/E 108x justified by growth"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "WDC",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "WDC gained 1.24% today, has 1-month momentum of +63.76%, P/E of 44.7x, and analysts raised targets to $650 after Apple's memory warning [invezz.com](https://invezz.com/in/news/2026/06/18/mu-sndk-stx-wdc-stocks-rise-after-apple-chief-warns-of-memory-driven-price-hikes/).",
+      "drivers": [
+        "P/E 44.7x",
+        "analyst target hike to $650",
+        "Apple memory price warning",
+        "+297% YTD"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "STX",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "STX has 1-month momentum of +45.94%, positive news sentiment of 0.22, and analysts raised targets to $1,035 on storage shortages driven by AI [invezz.com](https://invezz.com/in/news/2026/06/18/mu-sndk-stx-wdc-stocks-rise-after-apple-chief-warns-of-memory-driven-price-hikes/).",
+      "drivers": [
+        "analyst target hike to $1,035",
+        "storage shortage catalyst",
+        "+45.94% 1-month",
+        "P/E 101x but strong demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DELL",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "DELL has strong YTD return of +222.82%, P/E of 32.6x, and very positive news sentiment of 0.481, despite a -4.40% 1-day dip.",
+      "drivers": [
+        "P/E 32.6x",
+        "+222% YTD",
+        "news sentiment 0.481",
+        "AI server demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TLN",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "TLN has 1-month momentum of +38.69%, 1-week gain of +26.53%, and positive news sentiment of 0.119, riding nuclear energy demand for AI data centers.",
+      "drivers": [
+        "+38.69% 1-month",
+        "+26.53% 1-week",
+        "nuclear AI catalyst",
+        "no P/E but strong momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "WULF",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "WULF has strong_buy consensus, YTD return of +127.47%, 1-month momentum of +35.80%, and positive news sentiment of 0.15, though short interest is high at 25.85%.",
+      "drivers": [
+        "strong_buy consensus",
+        "+127% YTD",
+        "+35.80% 1-month",
+        "high short interest 25.85%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "285A has extreme 1-year return of +4465% and YTD of +753.74%, with 1-month momentum of +88.34%, but P/E of 95.6x and no beta data suggest high risk.",
+      "drivers": [
+        "+4465% 1-year",
+        "+88.34% 1-month",
+        "P/E 95.6x",
+        "memory supercycle exposure"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "SNDK has YTD return of +693.76% and 1-month momentum of +57.94%, but a technician labeled it the 'most overbought stock ever' and it trades above the average analyst target [247wallst.com](https://247wallst.com/investing/2026/06/17/take-profits-now-famous-chart-technician-says-sandisk-is-the-most-overbought-stock-ever/).",
+      "drivers": [
+        "+693% YTD",
+        "overbought warning",
+        "P/E 74.6x",
+        "NAND shortage catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AAOI",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+308.71%",
+      "rationale": "Momentum screener: +308.71% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +308.71%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+379.52%",
+      "rationale": "Momentum screener: +379.52% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +379.52%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "AXTI",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+404.59%",
+      "rationale": "Momentum screener: +404.59% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +404.59%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "signal": "buy",
+      "confidence": 0.896,
+      "ytd": "+89.74%",
+      "rationale": "Momentum screener: +89.74% YTD exceeds buy threshold (50.1%).",
+      "drivers": [
+        "YTD +89.74%",
+        "Threshold 50.1%"
+      ]
+    },
+    {
+      "ticker": "CORZ",
+      "signal": "buy",
+      "confidence": 0.822,
+      "ytd": "+82.36%",
+      "rationale": "Momentum screener: +82.36% YTD exceeds buy threshold (50.1%).",
+      "drivers": [
+        "YTD +82.36%",
+        "Threshold 50.1%"
+      ]
+    },
+    {
+      "ticker": "VIAV",
+      "signal": "strong_buy",
+      "confidence": 0.799,
+      "ytd": "+159.89%",
+      "rationale": "Momentum screener: +159.89% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +159.89%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "POWL",
+      "signal": "strong_buy",
+      "confidence": 0.765,
+      "ytd": "+153.13%",
+      "rationale": "Momentum screener: +153.13% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +153.13%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "KEYS",
+      "signal": "buy",
+      "confidence": 0.759,
+      "ytd": "+76.03%",
+      "rationale": "Momentum screener: +76.03% YTD exceeds buy threshold (50.1%).",
+      "drivers": [
+        "YTD +76.03%",
+        "Threshold 50.1%"
+      ]
+    },
+    {
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.713,
+      "ytd": "+142.72%",
+      "rationale": "Momentum screener: +142.72% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +142.72%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "GEV",
+      "signal": "buy",
+      "confidence": 0.635,
+      "ytd": "+63.61%",
+      "rationale": "Momentum screener: +63.61% YTD exceeds buy threshold (50.1%).",
+      "drivers": [
+        "YTD +63.61%",
+        "Threshold 50.1%"
+      ]
+    },
+    {
+      "ticker": "MTSI",
+      "signal": "strong_buy",
+      "confidence": 0.618,
+      "ytd": "+123.71%",
+      "rationale": "Momentum screener: +123.71% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +123.71%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "ytd": "+120.14%",
+      "rationale": "Momentum screener: +120.14% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +120.14%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.551,
+      "ytd": "+110.24%",
+      "rationale": "Momentum screener: +110.24% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +110.24%",
+        "Threshold 100.0%"
+      ]
+    },
+    {
+      "ticker": "COHR",
+      "signal": "strong_buy",
+      "confidence": 0.502,
+      "ytd": "+100.47%",
+      "rationale": "Momentum screener: +100.47% YTD exceeds strong buy threshold (100.0%).",
+      "drivers": [
+        "YTD +100.47%",
+        "Threshold 100.0%"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SNDK",
@@ -132,294 +420,6 @@
         "+88% 1M momentum",
         "Japanese memory exposure",
         "high P/E 95.6 risk"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AAOI",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+303.84%",
-      "rationale": "Momentum screener: +303.84% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +303.84%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "MXL",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+377.58%",
-      "rationale": "Momentum screener: +377.58% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +377.58%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "AXTI",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+394.69%",
-      "rationale": "Momentum screener: +394.69% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +394.69%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "VRT",
-      "signal": "buy",
-      "confidence": 0.889,
-      "ytd": "+89.01%",
-      "rationale": "Momentum screener: +89.01% YTD exceeds buy threshold (50.1%).",
-      "drivers": [
-        "YTD +89.01%",
-        "Threshold 50.1%"
-      ]
-    },
-    {
-      "ticker": "VIAV",
-      "signal": "strong_buy",
-      "confidence": 0.851,
-      "ytd": "+170.33%",
-      "rationale": "Momentum screener: +170.33% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +170.33%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "CORZ",
-      "signal": "buy",
-      "confidence": 0.822,
-      "ytd": "+82.30%",
-      "rationale": "Momentum screener: +82.30% YTD exceeds buy threshold (50.1%).",
-      "drivers": [
-        "YTD +82.30%",
-        "Threshold 50.1%"
-      ]
-    },
-    {
-      "ticker": "POWL",
-      "signal": "strong_buy",
-      "confidence": 0.762,
-      "ytd": "+152.44%",
-      "rationale": "Momentum screener: +152.44% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +152.44%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "KEYS",
-      "signal": "buy",
-      "confidence": 0.76,
-      "ytd": "+76.09%",
-      "rationale": "Momentum screener: +76.09% YTD exceeds buy threshold (50.1%).",
-      "drivers": [
-        "YTD +76.09%",
-        "Threshold 50.1%"
-      ]
-    },
-    {
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.716,
-      "ytd": "+143.34%",
-      "rationale": "Momentum screener: +143.34% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +143.34%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "GEV",
-      "signal": "buy",
-      "confidence": 0.625,
-      "ytd": "+62.55%",
-      "rationale": "Momentum screener: +62.55% YTD exceeds buy threshold (50.1%).",
-      "drivers": [
-        "YTD +62.55%",
-        "Threshold 50.1%"
-      ]
-    },
-    {
-      "ticker": "MTSI",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "ytd": "+120.14%",
-      "rationale": "Momentum screener: +120.14% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +120.14%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "signal": "strong_buy",
-      "confidence": 0.585,
-      "ytd": "+117.01%",
-      "rationale": "Momentum screener: +117.01% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +117.01%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.567,
-      "ytd": "+113.41%",
-      "rationale": "Momentum screener: +113.41% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +113.41%",
-        "Threshold 100.0%"
-      ]
-    },
-    {
-      "ticker": "COHR",
-      "signal": "strong_buy",
-      "confidence": 0.5,
-      "ytd": "+100.08%",
-      "rationale": "Momentum screener: +100.08% YTD exceeds strong buy threshold (100.0%).",
-      "drivers": [
-        "YTD +100.08%",
-        "Threshold 100.0%"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "285A",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "Up +745.81% YTD and +86.59% 1M with a P/E of 94.72, driven by the AI memory boom and positive news sentiment of 0.164. [fxleaders.com]",
-      "drivers": [
-        "+745.81% YTD",
-        "+86.59% 1M",
-        "AI memory boom",
-        "news_s +0.164"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "Up +218.55% YTD with a 1M surge of +69.76%, supported by a P/E of 32.15 and a dividend yield of 0.62%, as AI server demand continues to accelerate. [simplywall.st]",
-      "drivers": [
-        "+218.55% YTD",
-        "+69.76% 1M",
-        "P/E 32.15",
-        "AI server demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SNDK",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Massive +623.57% YTD on AI memory tailwinds; 1W/1M gains of +20.95%/+49.40% and analyst buy consensus (score 1.59) support continued upside despite elevated P/E of 68.02. [247wallst.com]",
-      "drivers": [
-        "+623.57% YTD",
-        "+20.95% 1W",
-        "analyst buy",
-        "AI memory demand"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "WDC",
-      "signal": "strong_buy",
-      "confidence": 0.69,
-      "rationale": "Up +263.12% YTD and +31.55% 1W on Morgan Stanley price-target hike; P/E of 40.81 provides reasonable valuation for the AI storage super-cycle. [247wallst.com]",
-      "drivers": [
-        "+263.12% YTD",
-        "+31.55% 1W",
-        "P/E 40.81",
-        "AI storage boom"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "STX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Seagate +259.30% YTD and +21.91% 1W with strong analyst support (buy consensus, score 1.54), riding the same AI HDD demand wave as WDC. [247wallst.com]",
-      "drivers": [
-        "+259.30% YTD",
-        "+21.91% 1W",
-        "analyst buy",
-        "AI HDD demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.73,
-      "rationale": "Micron up +223.76% YTD with a strong_buy consensus (score 1.48), 3.34% short interest, and upcoming earnings catalyst on June 24 after raising dividend 30%. [wallstreettimes.com]",
-      "drivers": [
-        "+223.76% YTD",
-        "strong_buy consensus",
-        "dividend +30%",
-        "earnings catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CRDO",
-      "signal": "strong_buy",
-      "confidence": 0.66,
-      "rationale": "Up +67.00% YTD and +53.06% 1M with a strong_buy analyst score of 1.33; P/E of 95.29 reflects premium for data-center connectivity plays. [tradingview.com]",
-      "drivers": [
-        "+67.00% YTD",
-        "+53.06% 1M",
-        "strong_buy consensus",
-        "data-center connectivity"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.64,
-      "rationale": "Marvell +212.13% YTD and +64.96% 1M; strong_buy consensus (score 1.45) and news sentiment of -0.163 partially offset by AI photonics momentum. [247wallst.com]",
-      "drivers": [
-        "+212.13% YTD",
-        "+64.96% 1M",
-        "strong_buy consensus",
-        "AI photonics"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "WULF",
-      "signal": "strong_buy",
-      "confidence": 0.62,
-      "rationale": "TeraWulf +119.86% YTD and +32.50% 1M with strong_buy analyst score of 1.36 and highest news sentiment in the universe at 0.428. [247wallst.com]",
-      "drivers": [
-        "+119.86% YTD",
-        "+32.50% 1M",
-        "strong_buy consensus",
-        "news_s +0.428"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.61,
-      "rationale": "Hut 8 +136.94% YTD and +26.28% 1M, strong_buy consensus (score 1.31) despite elevated short interest of 15.7%, driven by AI compute demand. [simplywall.st]",
-      "drivers": [
-        "+136.94% YTD",
-        "+26.28% 1M",
-        "strong_buy consensus",
-        "AI compute demand"
       ]
     }
   ]

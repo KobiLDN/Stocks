@@ -1,9 +1,140 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-18 22:33",
+  "updated": "2026-06-19 01:30",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "MRNA has surged +107% YTD and +40% in the past month with a key FDA VRBPAC endorsement for its flu vaccine mFlusiva, renewed cancer vaccine data, and a strategic restructuring targeting launches in 2027-2028. [247wallst.com](https://247wallst.com/investing/2026/06/16/moderna-is-up-94-this-year-is-it-outperforming-other-vaccine-stocks-like-pfizer-and-novavax/) reports the stock up 94% YTD, while [timothysykes.com](https://www.timothysykes.com/news/moderna-inc-mrna-news-2026_06_17/) notes the FDA catalyst.",
+      "drivers": [
+        "YTD +107%",
+        "1M +40%",
+        "FDA flu vaccine catalyst",
+        "strategic restructuring"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTLA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "NTLA has soared +70% YTD and +31% in the past month after Phase 3 HAELO data for lonvo-z showed an 87% reduction in HAE attacks; a rolling BLA is underway targeting a 1H 2027 launch. [timothysykes.com](https://www.timothysykes.com/news/intellia-therapeutics-inc-ntla-news-2026_06_17/) highlights the stock surging 11.75% on the data, and [insidermonkey.com](https://www.insidermonkey.com/blog/intellia-therapeutics-ntla-skyrockets-23-on-encouraging-lonvo-z-results-1782337/) reports a 23% climb.",
+      "drivers": [
+        "YTD +70%",
+        "Phase 3 HAE success",
+        "BLA submission",
+        "high short % 43.78"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "BEAM has gained +26% YTD and +30% in the past month with a strong buy analyst rating (score 1.29), positive news sentiment (0.39), and a high short interest (32.3%) that could fuel further momentum.",
+      "drivers": [
+        "strong buy analyst rating",
+        "1M +30%",
+        "positive news sentiment 0.39",
+        "high short interest 32.3%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CRSP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "CRSP is up +14% in the past month with a buy analyst rating, positive news sentiment (0.29), and a beta of 1.7, benefiting from the gene-editing tailwind from NTLA's HAE data.",
+      "drivers": [
+        "1M +14%",
+        "buy analyst rating",
+        "positive news sentiment 0.29",
+        "high beta 1.7"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NTRA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "NTRA has gained +18% in the past month with a strong buy analyst rating (score 1.52) and beta of 1.54, supported by a strategic collaboration with CytoDyn in ctDNA-guided trials for mCRC.",
+      "drivers": [
+        "1M +18%",
+        "buy analyst rating",
+        "strategic collaboration",
+        "revenue growth in genomics"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ILMN is up +21% YTD and +14% in the past month with a buy analyst rating, despite a slightly negative news sentiment (-0.16), but its beta of 1.49 and market cap of \u00a318.6B provide stability.",
+      "drivers": [
+        "YTD +21%",
+        "1M +14%",
+        "buy analyst rating",
+        "market cap \u00a318.6B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COAG",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "COAG has a strong buy analyst rating (score 1.0) and has gained +15% in the past month, with positive momentum from Hemab's pipeline update and Phase III plans.",
+      "drivers": [
+        "strong buy analyst rating (1.0)",
+        "1M +15%",
+        "positive pipeline update"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RXRX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "RXRX has gained +13% in the past month despite a YTD loss of -23%, with a low beta of 1.0 and high short interest (32.8%) that could create a squeeze opportunity, though news sentiment is negative (-0.08).",
+      "drivers": [
+        "1M +13%",
+        "low beta 1.0",
+        "high short interest 32.8%",
+        "potential squeeze catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BMRN has a buy analyst rating (score 1.69) and positive news sentiment (0.242), with a +10% gain in the past month, though its YTD of -8% and high P/E (39.35) temper enthusiasm.",
+      "drivers": [
+        "buy analyst rating",
+        "positive news sentiment 0.242",
+        "1M +10%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PACB",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "PACB has gained +22% in the past month despite a YTD loss of -24%, with a very high beta (2.32) and high short interest (18.0%), indicating speculative momentum potential.",
+      "drivers": [
+        "1M +22%",
+        "high beta 2.32",
+        "high short interest 18.0%",
+        "speculative momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTLA",
@@ -132,139 +263,6 @@ window.SIGNALS_DATA = {
         "positive news sentiment +0.115",
         "high beta 2.323 momentum",
         "genomics sector tailwind"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTLA",
-      "signal": "strong_buy",
-      "confidence": 0.99,
-      "rationale": "YTD +57.98%, Phase 3 HAELO met all key secondary endpoints showing 89% reduction in attacks requiring on-demand treatment and 91% reduction in moderate/severe attacks. Rolling BLA initiated, potential FDA approval and U.S. launch H1 2027. News sentiment positive at 0.317.",
-      "drivers": [
-        "Phase 3 HAELO all endpoints met",
-        "Rolling BLA initiated",
-        "Paradigm-shifting one-time gene editing",
-        "YTD +58% with strong momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "YTD +79.52%, 1W +16.07%, 1D +6.56%. FDA staff review says data for mRNA flu shot 'may support effectiveness', positive AdComm readout June 18. Potential first mRNA seasonal flu shot, supported by Jefferies' $750M sales estimate. 17.82% short interest adds squeeze potential.",
-      "drivers": [
-        "FDA review favorable for mRNA flu shot",
-        "YTD +80% momentum",
-        "Potential first mRNA flu vaccine approval",
-        "Jefferies $750M peak sales view"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +14.19%, 1M +15.59%, highest analyst score of 1.29 (strong_buy), news sentiment 0.391. Base editing platform uniquely positioned in gene-editing space with strong pipeline catalysts approaching.",
-      "drivers": [
-        "Best analyst score 1.29 (strong_buy)",
-        "Positive news sentiment 0.391",
-        "1M momentum +15.6%",
-        "Differentiated base editing platform"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +22.28%, 1M +16.09%, P/E 29.87 reasonable for growth, market cap \u00a318.5B provides liquidity. Genomics sequencing leader with strong 1-year return of +82%.",
-      "drivers": [
-        "1M momentum +16.1%",
-        "YTD +22.3%",
-        "Reasonable P/E 29.87",
-        "Genomics market leader"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +4.25%, 1M +13.60%, market cap \u00a3746B. Metabolic leader with Zepbound/Mounjaro franchise, P/E 39.85 premium justified by massive growth trajectory in obesity market.",
-      "drivers": [
-        "1M momentum +13.6%",
-        "Obesity market leader",
-        "Large-cap stability",
-        "1-year return +43%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "LEGN",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +55.18%, 1M +23.72%, analyst consensus buy at 1.6. Strong momentum driven by Carvykti sales growth and expanded label in earlier-line multiple myeloma. News sentiment 0.148.",
-      "drivers": [
-        "YTD +55% momentum",
-        "1M +23.7% momentum",
-        "Carvykti launch momentum",
-        "Buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NTRA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +14.32%, analyst score 1.52 (strong buy consensus), market cap \u00a323.5B. Leading liquid biopsy company with multi-cancer screening, short interest low at 2.6%.",
-      "drivers": [
-        "1M momentum +14.3%",
-        "Strong analyst score 1.52",
-        "Liquid biopsy leader",
-        "Multi-cancer screening catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PACB",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1M +17.39%, beta 2.323 high. Short-term momentum strong, but YTD -26.63%. Analyst consensus buy at 2.0. High-risk/high-reward genomics play with micro-cap \u00a30.31B market cap.",
-      "drivers": [
-        "1M momentum +17.4%",
-        "Buy analyst consensus",
-        "Positive news sentiment 0.115",
-        "Genomics sequencing platform"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1M +10.97%, YTD -7.28%, P/E 39.65. Rare disease leader with Vimizim/Aldurazyme franchise. News sentiment positive 0.242 and analyst consensus buy at 1.69. Beta 0.24 provides downside protection.",
-      "drivers": [
-        "1M momentum +11%",
-        "Positive news sentiment 0.242",
-        "Low beta defensive profile",
-        "Established rare disease portfolio"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "1M +10.03%, but YTD -24.29%, high short interest 32.82%, no analyst coverage (news_s -0.08). AI-driven drug discovery platform with pipeline potential offset by binary risk.",
-      "drivers": [
-        "1M momentum +10%",
-        "AI drug discovery platform",
-        "High short interest squeeze potential",
-        "Early-stage pipeline catalysts"
       ]
     }
   ]

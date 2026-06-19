@@ -1,9 +1,142 @@
 {
-  "updated": "2026-06-18 22:34",
+  "updated": "2026-06-19 01:30",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RR.L",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Exceptional momentum (+57% 1Y, +22% 1M, +12.5% 1W), low P/E of 20.4, and strong analyst consensus (score 1.60) as Rolls-Royce continues to benefit from booming defence engine demand and commercial aerospace recovery.",
+      "drivers": [
+        "+57% 1Y return",
+        "+21.8% 1-month momentum",
+        "P/E 20.4",
+        "Analyst score 1.60 (buy)"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Powerful YTD surge of +49.8% with +22.8% 1M gain, low beta of 0.95, and positive news sentiment of 0.14. Mercury Systems benefits from high backlog expectations and its niche in defence electronics.",
+      "drivers": [
+        "+49.8% YTD",
+        "+22.8% 1-month momentum",
+        "Beta 0.95",
+        "Positive news sentiment 0.14"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "RTX's recent $515M SPY-6 radar contract and $100M Portsmouth facility expansion support record $271B backlog. With a 17% EPS beat and raised FY2026 guidance to $6.60, the stock offers strong upside despite near-term execution risks.",
+      "drivers": [
+        "Record $271B backlog",
+        "17% Q1 EPS beat",
+        "Buy analyst consensus (1.87)",
+        "Positive news sentiment 0.14"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RCAT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Surging +24.9% YTD and +33.8% in the last month with a beta of 1.24, Red Cat is riding drone warfare demand. However, high short interest of 20.6% and negative earnings warrant caution.",
+      "drivers": [
+        "+33.8% 1-month momentum",
+        "+24.9% YTD gain",
+        "Drone warfare catalyst",
+        "20.6% short interest"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SpaceX derivative SPCX shows +14.9% YTD and +14.9% 1M gains, benefiting from the broader space defense theme and recent analyst upgrades for space stocks despite slightly negative news sentiment.",
+      "drivers": [
+        "+14.9% YTD",
+        "+14.9% 1-month gain",
+        "Space defence catalyst",
+        "Buy analyst consensus (1.83)"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "HEICO has strong 1M momentum of +15.3% and a decent YTD of +2.4%. With a buy analyst score of 1.83 and beta of 1.04, its commercial and defense aftermarket parts business offers steady demand.",
+      "drivers": [
+        "+15.3% 1-month gain",
+        "Beta 1.04",
+        "Buy analyst consensus (1.83)",
+        "Positive news sentiment 0.27"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TransDigm\u2019s +12.7% 1M gain and solid buy analyst score of 1.82 reflect its pricing power in highly engineered aerospace components. However, its elevated P/E of 41.5 tempers upside.",
+      "drivers": [
+        "+12.7% 1-month momentum",
+        "Buy analyst consensus (1.82)",
+        "Pricing power",
+        "Positive news sentiment 0.24"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "SAIC has +7.4% 1M momentum and an attractive P/E of 11.5 with a 1.36% dividend yield. However, a recent -11% weekly drop and analyst hold (score 2.82) suggest near-term caution.",
+      "drivers": [
+        "+7.4% 1-month gain",
+        "P/E 11.5",
+        "1.36% dividend yield",
+        "Short interest 7.7%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Leonardo DRS has a strong YTD gain of +33% with low beta of 0.12. Positive news sentiment of 0.34 supports demand for its defense electronics, but P/E of 43 limits further re-rating.",
+      "drivers": [
+        "+33% YTD",
+        "Beta 0.12",
+        "Positive news sentiment 0.34",
+        "Defence electronics catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "AXON's 1M recovery of +7.9% follows a steep -46% 1Y decline. P/E of 171 is extremely rich, but its dominant position in law enforcement tech and buy analyst score of 1.60 support a contrarian pick.",
+      "drivers": [
+        "+7.9% 1-month bounce",
+        "Buy analyst consensus (1.60)",
+        "Law enforcement dominance",
+        "1.42 beta \u2013 recovery potential"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRCY",
@@ -132,139 +265,6 @@
         "P/E 21.99",
         "positive news sentiment 0.296",
         "UK defence spending"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +16.38%, 1M +20.34%, P/E 20.19, analyst buy (score 1.6) with positive news sentiment 0.199 and a multibillion-pound Swedish SMR deal catalyst driving defence/nuclear momentum.",
-      "drivers": [
-        "YTD +16.38%",
-        "1M +20.34%",
-        "P/E 20.19",
-        "SMR deal catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +47.89%, 1M +20.40%, analyst buy consensus, positive news sentiment 0.138, and strong backlog expectations in defence electronics despite high short interest of 9.15%.",
-      "drivers": [
-        "YTD +47.89%",
-        "1M +20.40%",
-        "defence electronics backlog",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +31.61%, 1M +6.64%, P/E 42.61, low short interest 1.31%, and strong news sentiment 0.343 reflecting solid defence demand and multi-year returns.",
-      "drivers": [
-        "YTD +31.61%",
-        "1M +6.64%",
-        "low short 1.31%",
-        "news sentiment 0.343"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +6.96%, 1M +6.12%, P/E 22.63, buy consensus, dividend yield 1.75%, and strong news sentiment 0.439 supported by rising European defence budgets.",
-      "drivers": [
-        "1M +6.12%",
-        "P/E 22.63",
-        "news sentiment 0.439",
-        "European defence spending"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +14.29%, YTD +1.93%, highest news sentiment 0.543 in the universe, buy consensus, and strong aerospace/defence demand driving aftermarket growth.",
-      "drivers": [
-        "1M +14.29%",
-        "news sentiment 0.543",
-        "buy consensus",
-        "aerospace demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +8.33%, 1M +13.39%, low P/E 12.29, modest yield 1.36%, and positive news sentiment 0.249; cheap valuation with strong short-term momentum.",
-      "drivers": [
-        "1M +13.39%",
-        "P/E 12.29",
-        "YTD +8.33%",
-        "low valuation"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +10.05%, YTD -4.22%, P/E 40.65, buy consensus (score 1.82), news sentiment 0.233, and aftermarket pricing power in defence components.",
-      "drivers": [
-        "1M +10.05%",
-        "buy consensus 1.82",
-        "aftermarket pricing",
-        "news sentiment 0.233"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "YTD +19.00%, 1M +22.06%, strongest analyst consensus (strong_buy, score 1.17), but high short interest 20.56% and no P/E; extreme momentum with elevated risk.",
-      "drivers": [
-        "1M +22.06%",
-        "strong_buy consensus 1.17",
-        "YTD +19%",
-        "high short 20.56%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SPCX",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "YTD +19.60%, 1M +19.60%, buy consensus, news sentiment 0.351, and massive IPO momentum; however, P/E not applicable and Morningstar flags extreme overvaluation with 69% downside risk.",
-      "drivers": [
-        "YTD +19.60%",
-        "IPO momentum",
-        "news sentiment 0.351",
-        "valuation risk"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +6.59%, YTD +0.49%, P/E 35.11, buy consensus (score 1.83), news sentiment 0.338, and solid defence prime exposure with expanding margins.",
-      "drivers": [
-        "1M +6.59%",
-        "buy consensus 1.83",
-        "news sentiment 0.338",
-        "defence prime"
       ]
     }
   ]
