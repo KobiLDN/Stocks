@@ -1,9 +1,142 @@
 {
-  "updated": "2026-06-19 01:32",
+  "updated": "2026-06-19 12:25",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ENPH",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +54.9%, 1M +11.8%, and a 1D surge of +8.2% driven by an AI data center upgrade, with strong positive news sentiment at 0.19.",
+      "drivers": [
+        "YTD +54.9%",
+        "1D +8.2% on AI catalyst",
+        "1M +11.8% momentum",
+        "Positive news sentiment 0.19"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "FSLR",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "1M +16.2% momentum, P/E 16.6, and a buy rating with 0.281 news sentiment; YTD -6.1% offers a dip entry.",
+      "drivers": [
+        "1M +16.2%",
+        "P/E 16.6 attractive",
+        "Buy rating",
+        "News sentiment 0.281"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Highest news sentiment in the universe at 0.501 on Brookfield launching a new renewable company, dividend yield 4.32%, and 1M +4.6%.",
+      "drivers": [
+        "News sentiment 0.501",
+        "Dividend yield 4.32%",
+        "1M +4.6%",
+        "New renewable venture catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +48.4%, 1Y +44%, P/E 16.0, and refiners benefit from declining crude prices (Brent below $78).",
+      "drivers": [
+        "YTD +48.4%",
+        "1Y +44%",
+        "P/E 16.0",
+        "Benefiting from lower crude"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +44.5%, 1Y +67%, P/E 17.3, dividend yield 1.97%, and a headline highlighting declining crude benefits.",
+      "drivers": [
+        "YTD +44.5%",
+        "1Y +67%",
+        "P/E 17.3",
+        "Dividend yield 1.97%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +23.3%, P/E 12.8 with a 3.09% dividend yield, low beta 0.256, and news sentiment 0.344.",
+      "drivers": [
+        "YTD +23.3%",
+        "P/E 12.8",
+        "Dividend yield 3.09%",
+        "News sentiment 0.344"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1W +2.3%, 1D +1.2%\u2014positive momentum in a falling oil market, with low short interest 0.01% and strong news sentiment 0.412.",
+      "drivers": [
+        "1W +2.3%",
+        "Short interest 0.01%",
+        "News sentiment 0.412",
+        "P/E 22.0"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BKR",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "YTD +24.8%, 1Y +50%, P/E 18.7, and dividend yield 1.5%; oilfield services stand to gain from the Iran peace deal reopening the Strait of Hormuz.",
+      "drivers": [
+        "YTD +24.8%",
+        "1Y +50%",
+        "P/E 18.7",
+        "Dividend yield 1.5%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "P/E 12.3 is cheap, dividend yield 3.8%, but 1W -8.2% and buyback pause until July 14 weigh; news shows slip under \u00a330 on Iran deal.",
+      "drivers": [
+        "P/E 12.3",
+        "Dividend yield 3.8%",
+        "Buy rating",
+        "1W -8.2% correction"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "1M -0.6% holds relatively stable; P/E 22.0 and 0.077 news sentiment. UK-Japan investment agreement provides a supportive backdrop.",
+      "drivers": [
+        "1M -0.6% stable",
+        "P/E 22.0",
+        "Buy rating",
+        "UK-Japan deal catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ENPH",
@@ -132,139 +265,6 @@
         "P/E 22.02",
         "UK-Japan investment deal",
         "stable utility"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Marathon Petroleum shows exceptional YTD return of +48.17%, a 1-year return of +45%, a P/E of 15.98, and a very modest 1-day decline of -0.63% in a broad energy selloff driven by a peace deal that is pressuring crude prices but benefiting refiners through lower feedstock costs.",
-      "drivers": [
-        "+48.17% YTD",
-        "P/E 15.98",
-        "-0.63% 1D vs sector",
-        "beneficiary of lower crude prices"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Valero Energy has a stellar +70% 1-year return and +44.68% YTD, with a P/E of 17.27 and a dividend yield of 197p, while the peace-driven decline in crude oil prices benefits its refining margins as highlighted by the headline 'Here's How Declining Crude Oil Prices are Benefiting Valero Energy'.",
-      "drivers": [
-        "+70% 1Y return",
-        "+44.68% YTD",
-        "P/E 17.27",
-        "benefits from declining crude"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "EOG Resources has a strong YTD return of +23.68%, a P/E of 12.83, a dividend yield of 309p, and positive news sentiment of +0.344, with Morgan Stanley maintaining an Overweight rating on the stock and citing its ability to sustain dividends even in a lower oil price scenario per the bank's sensitivity analysis.",
-      "drivers": [
-        "+23.68% YTD",
-        "P/E 12.83",
-        "div yield 309p",
-        "Overweight at MS"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Chevron has a YTD return of +13.39%, a dividend yield of 395p, a strong 'buy' analyst consensus with an average score of 1.84, and is Overweight-rated by Morgan Stanley with strong balance sheet resilience (0.2x net debt-to-EBITDAX) to sustain shareholder returns even if oil prices fall further.",
-      "drivers": [
-        "+13.39% YTD",
-        "div yield 395p",
-        "an_score 1.84",
-        "MS Overweight"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Shell has a P/E of just 12.27, a dividend yield of 380p, positive news sentiment of +0.128, and recent Q1 results beat expectations with underlying net profit up 24% to $6.9bn, though the buyback was trimmed; the deal with ARC Resources is timely to offset Middle East gas disruption.",
-      "drivers": [
-        "P/E 12.27",
-        "div yield 380p",
-        "Q1 earnings beat",
-        "ARC deal supportive"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "First Solar has a compelling P/E of 16.63 despite being a clean energy growth stock, positive news sentiment of +0.256, and 1-month momentum of +10.28%, with the peace deal potentially reducing risk premiums for renewable project developers.",
-      "drivers": [
-        "P/E 16.63",
-        "1M +10.28%",
-        "news_s +0.256",
-        "clean energy catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "NextEra Energy has a positive 1-week return of +1.92%, a 1-day gain of +0.83% in a down market, the highest news sentiment score in the universe at +0.358, a dividend yield of 289p, and is a defensive utility that benefits from falling energy prices reducing input costs.",
-      "drivers": [
-        "+1.92% 1W",
-        "news_s +0.358",
-        "div yield 289p",
-        "defensive in weak market"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ENPH",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Enphase Energy has a strong YTD return of +52.47%, 1-month momentum of +3.56%, and a positive 1-day move of +6.50% driven by AI data center upgrade catalysts, though a high short interest of 24.43% and a P/E of 50.96 add risk.",
-      "drivers": [
-        "+52.47% YTD",
-        "1M +3.56%",
-        "1D +6.50%",
-        "AI data center catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Brookfield Renewable has a very high dividend yield of 432p, the highest news sentiment in the clean energy category at +0.549, and positive 1-day and 1-month momentum (+1.53% and +3.49% respectively), with renewable assets benefiting from lower input costs post-peace deal.",
-      "drivers": [
-        "div yield 432p",
-        "news_s +0.549",
-        "1M +3.49%",
-        "renewable demand tailwind"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "SSE has a 1-year return of +29%, a modest YTD decline of -3.63%, a P/E of 22.02, and a 'buy' analyst consensus with a score of 2.0, serving as a stable UK utility with limited downside exposure to the oil price rout.",
-      "drivers": [
-        "1Y +29%",
-        "an_score 2.0",
-        "stable UK utility",
-        "limited oil exposure"
       ]
     }
   ]

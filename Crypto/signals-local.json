@@ -1,9 +1,142 @@
 {
-  "updated": "2026-06-19 01:32",
+  "updated": "2026-06-19 12:24",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "WLD",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+174.80% 1-month, +37.14% YTD, news_s 0.165, and breakout above resistance with Treasury stake catalyst per web analysis.",
+      "drivers": [
+        "+174.80% 1-month",
+        "+37.14% YTD",
+        "news_s 0.165",
+        "Treasury stake catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+42.03% YTD, +29.77% 1-month, AI rotation and short squeeze catalyst per web, strong post-FOMC altcoin setup.",
+      "drivers": [
+        "+42.03% YTD",
+        "+29.77% 1-month",
+        "AI rotation",
+        "short squeeze"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+54.25% 1-month, +17.21% 1-week, DTCC tokenization partnership for U.S. equities/ETFs, institutional adoption catalyst.",
+      "drivers": [
+        "+54.25% 1-month",
+        "+17.21% 1-week",
+        "DTCC tokenization",
+        "institutional adoption"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RNDR",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "+31.67% YTD, +5.08% 1-week, real revenue from decentralized rendering, mentioned as top altcoin pick by analysts.",
+      "drivers": [
+        "+31.67% YTD",
+        "+5.08% 1-week",
+        "real revenue",
+        "analyst pick"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+21.01% 1-week, +6.29% 1-month, small cap with strong short-term momentum, token unlock event ahead.",
+      "drivers": [
+        "+21.01% 1-week",
+        "+6.29% 1-month",
+        "small cap momentum",
+        "token unlock"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ARKM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+10.43% 1-week, +9.28% 1-month, recovering from YTD lows, on-chain data AI narrative.",
+      "drivers": [
+        "+10.43% 1-week",
+        "+9.28% 1-month",
+        "recovery",
+        "AI narrative"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ALT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+13.01% 1-week, +7.13% 1-day, very small cap with explosive short-term momentum despite poor YTD.",
+      "drivers": [
+        "+13.01% 1-week",
+        "+7.13% 1-day",
+        "short-term momentum",
+        "small cap"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TAO",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+9.29% 1-week, +4.62% YTD, decentralized AI compute, positive weekly momentum.",
+      "drivers": [
+        "+9.29% 1-week",
+        "+4.62% YTD",
+        "AI compute",
+        "positive weekly"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+3.22% 1-week, +1.60% 1-month, slight positive momentum in AI agent token, low market cap.",
+      "drivers": [
+        "+3.22% 1-week",
+        "+1.60% 1-month",
+        "AI agent",
+        "low cap"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AGIX",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "+2.12% 1-month, -1.95% YTD, marginal positive in AI token, small cap rebound potential.",
+      "drivers": [
+        "+2.12% 1-month",
+        "-1.95% YTD",
+        "AI token",
+        "small cap rebound"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "WLD",
@@ -132,132 +265,6 @@
         "negative YTD -10.7%",
         "AI narrative tailwind",
         "small market cap \u00a30.048B"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "WLD",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "WLD surged +158.68% in 1 month and +23.85% in 1 week, breaking above key resistance at $0.6331 with strong AI narrative and positive news sentiment of 0.165, though profit-taking has pulled back 5.25% in 1 day.",
-      "drivers": [
-        "+158.68% 1M momentum",
-        "AI narrative catalyst",
-        "positive news sentiment 0.165",
-        "breakout above $0.6331 resistance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XLM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "XLM is up +62.74% in 1 month and +22.20% in 1 week, with positive funding rates and rising open interest (+10% in 24h), holding above key moving averages at $0.18-$0.20.",
-      "drivers": [
-        "+62.74% 1M momentum",
-        "positive funding rate 0.0065%",
-        "rising open interest +10%",
-        "holding above $0.18-$0.20 MA cluster"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "NEAR is up +43.70% YTD and +32.76% in 1 month, breaking above a multi-year descending trendline near $1.90, with open interest hitting fresh highs of $473M and strong AI narrative driving the rally.",
-      "drivers": [
-        "+43.70% YTD",
-        "multi-year descending trendline breakout",
-        "open interest $473M",
-        "AI narrative catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "KAITO gained +12.06% in 1 week and +3.56% in 1 month, benefiting from AI token unlock narratives and positive market structure, though YTD is slightly negative at -8.04%.",
-      "drivers": [
-        "+12.06% 1W momentum",
-        "AI token unlock catalyst",
-        "positive market structure"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ARKM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ARKM is up +10.74% in 1 month and +5.44% in 1 week, showing consistent short-term momentum with a market cap of \u00a30.022B, though YTD is -26.48%.",
-      "drivers": [
-        "+10.74% 1M momentum",
-        "+5.44% 1W momentum",
-        "AI sector tailwind"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ALGO gained +14.28% in 1 week and +2.67% in 1 day, showing a strong short-term reversal despite a -9.21% YTD and -10.33% 1M decline, with a small market cap of \u00a30.677B.",
-      "drivers": [
-        "+14.28% 1W momentum",
-        "short-term reversal",
-        "low market cap \u00a30.677B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ALT",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "ALT is up +5.46% in 1 week and +0.41% in 1 day, showing modest short-term momentum with a tiny market cap of \u00a30.032B, though YTD is -42.15%.",
-      "drivers": [
-        "+5.46% 1W momentum",
-        "low market cap \u00a30.032B",
-        "AI sector"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "NMR is flat in 1D (+0.10%) and up +0.84% in 1W, with a small market cap of \u00a30.048B and YTD of -10.81%, showing minimal momentum but low downside risk.",
-      "drivers": [
-        "+0.84% 1W",
-        "low volatility",
-        "small market cap \u00a30.048B"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HBAR",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "HBAR is up +0.50% in 1W and -0.48% in 1D, with a market cap of \u00a32.628B and YTD of -24.87%, showing a slight positive short-term bias in a downtrend.",
-      "drivers": [
-        "+0.50% 1W",
-        "market cap \u00a32.628B",
-        "emerging category"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "FET",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "FET is up +0.47% in 1M and -0.67% in 1W, with a market cap of \u00a30.328B and YTD of -3.63%, showing very weak momentum but a relatively stable YTD.",
-      "drivers": [
-        "+0.47% 1M",
-        "market cap \u00a30.328B",
-        "AI sector"
       ]
     }
   ]
