@@ -102,6 +102,59 @@ PRICE_FIELDS = [
     "analyst", "analyst_score",
 ]
 
+def compute_export_momentum(stocks):
+    """Cross-sector momentum picks using both YTD and 1Y thresholds."""
+    month  = datetime.now(tz=timezone.utc).month
+    sb_ytd = (1.1225 ** month - 1) * 100
+    b_ytd  = (1.07   ** month - 1) * 100
+    SB_1Y, B_1Y = 500.0, 200.0
+
+    picks = []
+    for s in stocks:
+        ytd = s.get("pct_ytd") or 0.0
+        y1  = s.get("pct_1y")  or 0.0
+
+        is_sb = ytd >= sb_ytd or y1 >= SB_1Y
+        is_b  = ytd >= b_ytd  or y1 >= B_1Y
+        if not (is_sb or is_b):
+            continue
+
+        if is_sb:
+            signal = "strong_buy"
+            confs  = []
+            if ytd >= sb_ytd: confs.append(ytd / sb_ytd / 2)
+            if y1  >= SB_1Y:  confs.append(y1  / SB_1Y  / 2)
+        else:
+            signal = "buy"
+            confs  = []
+            if ytd >= b_ytd: confs.append(ytd / b_ytd / 2)
+            if y1  >= B_1Y:  confs.append(y1  / B_1Y  / 2)
+
+        drivers = []
+        if ytd >= sb_ytd:
+            drivers.append(f"YTD {s.get('change_ytd', '') or f'+{ytd:.1f}%'} ≥ {round(sb_ytd, 1)}%")
+        elif ytd >= b_ytd:
+            drivers.append(f"YTD {s.get('change_ytd', '') or f'+{ytd:.1f}%'} ≥ {round(b_ytd, 1)}%")
+        if y1 >= SB_1Y:
+            drivers.append(f"1Y {s.get('return_1yr', '') or f'+{y1:.1f}%'} ≥ {SB_1Y:.0f}%")
+        elif y1 >= B_1Y:
+            drivers.append(f"1Y {s.get('return_1yr', '') or f'+{y1:.1f}%'} ≥ {B_1Y:.0f}%")
+
+        picks.append({
+            "ticker":     s["ticker"],
+            "sector":     s["sector"],
+            "signal":     signal,
+            "confidence": round(min(max(confs), 1.0), 3),
+            "change_ytd": s.get("change_ytd", ""),
+            "change_1y":  s.get("return_1yr", ""),
+            "rationale":  "Momentum screener: " + "; ".join(drivers) + ".",
+            "drivers":    drivers,
+        })
+
+    picks.sort(key=lambda x: x["confidence"], reverse=True)
+    return picks
+
+
 all_stocks, meta = [], {}
 
 for sector in SECTORS:
@@ -118,6 +171,7 @@ for sector in SECTORS:
         for k in PRICE_FIELDS:
             if k != "sector":
                 row[k] = s.get(k)
+        row["change_1y"] = s.get("return_1yr")  # alias expected by portfolio session
 
         for label, field in PERIODS:
             pct = to_pct(s.get(field))
@@ -204,6 +258,7 @@ payload = {
     "total":            len(all_stocks),
     "has_portfolio":    t212_data is not None,
     "sectors":          meta,
+    "momentum_picks":   compute_export_momentum(all_stocks),
     "stocks":           all_stocks,
 }
 if t212_data:
