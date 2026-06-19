@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19 20:32",
-  "fx_gbp_usd": 1.3236,
+  "updated": "2026-06-19 22:45",
+  "fx_gbp_usd": 1.3237,
   "stocks": [
     {
       "ticker": "LMT",
@@ -17,7 +17,7 @@
       "low_gbp": "310",
       "high_gbp": "523",
       "bar_pct": 36,
-      "market_cap_gbp_b": 89.004,
+      "market_cap_gbp_b": 88.997,
       "beta": 0.106,
       "pe_ratio": 24.77,
       "avg_volume_m": 1.44,
@@ -82,7 +82,7 @@
       "low_gbp": "106",
       "high_gbp": "162",
       "bar_pct": 61,
-      "market_cap_gbp_b": 188.836,
+      "market_cap_gbp_b": 188.821,
       "beta": 0.306,
       "pe_ratio": 34.89,
       "avg_volume_m": 5.46,
@@ -94,6 +94,13 @@
       "vol_1w": 30922400,
       "vol_1m": 126139400,
       "news": [
+        {
+          "title": "MDA Space to buy U.S. peer for $874 million to pry open American market",
+          "publisher": "Financial Post",
+          "url": "https://financialpost.com/technology/mda-space-to-buy-u-s-peer-open-american-market",
+          "published": 1781897691,
+          "sentiment": 0.0
+        },
         {
           "title": "U.S. Military Expert Issues Grave Warning: \u2018We Need More Munitions, and Deliveries Are Years Behind.\u2019 What Stocks Can Benefit?",
           "publisher": "24/7 Wall St.",
@@ -121,16 +128,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-stock-declines-while-215006484.html",
           "published": 1781819406,
           "sentiment": 0.421
-        },
-        {
-          "title": "The Overlooked Signal In GE Stock's Shipping Delays",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/603583/the-overlooked-signal-in-ge-stocks-shipping-delays/2026-06-18",
-          "published": 1781800930,
-          "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.17
+      "news_sentiment": 0.175
     },
     {
       "ticker": "NOC",
@@ -147,7 +147,7 @@
       "low_gbp": "364",
       "high_gbp": "585",
       "bar_pct": 14,
-      "market_cap_gbp_b": 55.961,
+      "market_cap_gbp_b": 55.957,
       "beta": -0.121,
       "pe_ratio": 16.34,
       "avg_volume_m": 0.89,
@@ -212,7 +212,7 @@
       "low_gbp": "208",
       "high_gbp": "279",
       "bar_pct": 79,
-      "market_cap_gbp_b": 71.511,
+      "market_cap_gbp_b": 71.506,
       "beta": 0.341,
       "pe_ratio": 21.75,
       "avg_volume_m": 1.38,
@@ -340,9 +340,9 @@
       "change_ytd": "-2.44%",
       "return_1yr": "+18%",
       "low_gbp": "184",
-      "high_gbp": "287",
+      "high_gbp": "286",
       "bar_pct": 38,
-      "market_cap_gbp_b": 41.495,
+      "market_cap_gbp_b": 41.492,
       "beta": 0.746,
       "pe_ratio": 31.98,
       "avg_volume_m": 1.35,
@@ -407,7 +407,7 @@
       "low_gbp": "134",
       "high_gbp": "192",
       "bar_pct": 59,
-      "market_cap_gbp_b": 132.645,
+      "market_cap_gbp_b": 132.635,
       "beta": 1.198,
       "pe_ratio": 88.03,
       "avg_volume_m": 6.73,
@@ -419,6 +419,13 @@
       "vol_1w": 31797000,
       "vol_1m": 144963800,
       "news": [
+        {
+          "title": "Trump Displays Refitted Qatar-Gifted Jet to Be Air Force One",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/technology/articles/trump-displays-refitted-qatar-gifted-202859813.html",
+          "published": 1781900939,
+          "sentiment": 0.0
+        },
         {
           "title": "Boeing's Quantum Space Bet Moves Forward",
           "publisher": "GuruFocus.com",
@@ -446,13 +453,6 @@
           "url": "https://www.trefis.com/articles/603583/the-overlooked-signal-in-ge-stocks-shipping-delays/2026-06-18",
           "published": 1781800930,
           "sentiment": -0.026
-        },
-        {
-          "title": "Is GE Stock's Large Backlog Enough To Out-Fly a Slowdown?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/603566/is-ge-stocks-large-backlog-enough-to-out-fly-a-slowdown/2026-06-18",
-          "published": 1781791344,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.079
@@ -667,7 +667,7 @@
       "low_gbp": "93",
       "high_gbp": "157",
       "bar_pct": 7,
-      "market_cap_gbp_b": 232.684,
+      "market_cap_gbp_b": 232.665,
       "beta": 1.515,
       "pe_ratio": 144.35,
       "avg_volume_m": 44.48,
@@ -732,7 +732,7 @@
       "low_gbp": "80",
       "high_gbp": "155",
       "bar_pct": 1,
-      "market_cap_gbp_b": 10.18,
+      "market_cap_gbp_b": 10.179,
       "beta": 0.515,
       "pe_ratio": 9.8,
       "avg_volume_m": 1.33,
@@ -797,7 +797,7 @@
       "low_gbp": "337",
       "high_gbp": "516",
       "bar_pct": 9,
-      "market_cap_gbp_b": 7.785,
+      "market_cap_gbp_b": 7.784,
       "beta": 0.523,
       "pe_ratio": 19.27,
       "avg_volume_m": 0.29,
@@ -875,6 +875,13 @@
       "vol_1m": 14325400,
       "news": [
         {
+          "title": "Unpacking Q1 Earnings: SAIC (NASDAQ:SAIC) In The Context Of Other Government & Technical Consulting Stocks",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/unpacking-q1-earnings-saic-nasdaq-194058217.html",
+          "published": 1781898058,
+          "sentiment": 0.0
+        },
+        {
           "title": "1 Small-Cap Stock for Long-Term Investors and 2 That Underwhelm",
           "publisher": "StockStory",
           "url": "https://finance.yahoo.com/markets/stocks/articles/1-small-cap-stock-long-145207053.html",
@@ -901,16 +908,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/5-insightful-analyst-questions-saic-090150770.html",
           "published": 1780909310,
           "sentiment": 0.0
-        },
-        {
-          "title": "1 Profitable Stock with Impressive Fundamentals and 2 We Ignore",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-impressive-fundamentals-170930099.html",
-          "published": 1780592970,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.249
+      "news_sentiment": 0.135
     },
     {
       "ticker": "BAH",
@@ -927,7 +927,7 @@
       "low_gbp": "50",
       "high_gbp": "91",
       "bar_pct": 1,
-      "market_cap_gbp_b": 6.013,
+      "market_cap_gbp_b": 6.012,
       "beta": 0.322,
       "pe_ratio": 9.62,
       "avg_volume_m": 1.79,
@@ -992,7 +992,7 @@
       "low_gbp": "118",
       "high_gbp": "316",
       "bar_pct": 5,
-      "market_cap_gbp_b": 6.485,
+      "market_cap_gbp_b": 6.484,
       "beta": 1.361,
       "pe_ratio": null,
       "avg_volume_m": 1.19,
@@ -1057,7 +1057,7 @@
       "low_gbp": "29",
       "high_gbp": "101",
       "bar_pct": 16,
-      "market_cap_gbp_b": 7.68,
+      "market_cap_gbp_b": 7.679,
       "beta": 1.032,
       "pe_ratio": 318.88,
       "avg_volume_m": 4.34,
@@ -1187,7 +1187,7 @@
       "low_gbp": "57",
       "high_gbp": "77",
       "bar_pct": 53,
-      "market_cap_gbp_b": 11.754,
+      "market_cap_gbp_b": 11.753,
       "beta": 0.907,
       "pe_ratio": 17.07,
       "avg_volume_m": 1.38,
@@ -1252,7 +1252,7 @@
       "low_gbp": "113",
       "high_gbp": "170",
       "bar_pct": 47,
-      "market_cap_gbp_b": 1841.348,
+      "market_cap_gbp_b": 1841.201,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 288.72,
@@ -1272,11 +1272,18 @@
           "sentiment": 0.382
         },
         {
-          "title": "SpaceX stock drops after breaking 3-day winning streak",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/spacex-stock-drops-after-breaking-3-day-winning-streak-124809291.html",
-          "published": 1781786889,
-          "sentiment": 0.527
+          "title": "Dow Jones Futures Fall; Nvidia Leads 5 Stocks Near Buy Points, SpaceX Needs This",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-5-chips-buy-points-spacex-stock/?src=A00220&yptr=yahoo",
+          "published": 1781902805,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Stocks Stall as Iran Nuclear Talks Hit Early Snag: Markets Wrap",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-slide-focus-shifts-iran-080450531.html",
+          "published": 1781899755,
+          "sentiment": -0.202
         },
         {
           "title": "SpaceX stock joins AI bond frenzy",
@@ -1291,16 +1298,9 @@
           "url": "https://www.fool.com/investing/2026/06/19/ethereums-new-tech-upgrade-is-coming-soon-is-it-ti/",
           "published": 1781895180,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Stall as Iran Nuclear Talks Hit Early Snag: Markets Wrap",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-slide-focus-shifts-iran-080450531.html",
-          "published": 1781894960,
-          "sentiment": -0.202
         }
       ],
-      "news_sentiment": 0.078
+      "news_sentiment": -0.028
     },
     {
       "ticker": "RKLB",
@@ -1317,7 +1317,7 @@
       "low_gbp": "21",
       "high_gbp": "114",
       "bar_pct": 64,
-      "market_cap_gbp_b": 50.623,
+      "market_cap_gbp_b": 50.619,
       "beta": 2.499,
       "pe_ratio": null,
       "avg_volume_m": 27.36,
@@ -1447,7 +1447,7 @@
       "low_gbp": "27",
       "high_gbp": "101",
       "bar_pct": 46,
-      "market_cap_gbp_b": 23.652,
+      "market_cap_gbp_b": 23.65,
       "beta": 2.634,
       "pe_ratio": null,
       "avg_volume_m": 21.36,
@@ -1502,7 +1502,7 @@
       "company_name": "TransDigm Group",
       "category": "weapons",
       "exchange": "NYSE",
-      "price_gbp": "1004",
+      "price_gbp": "1003",
       "price_usd": 1328.31,
       "change_1d": "-1.59%",
       "change_1w": "+5.62%",
@@ -1512,7 +1512,7 @@
       "low_gbp": "849",
       "high_gbp": "1227",
       "bar_pct": 41,
-      "market_cap_gbp_b": 56.132,
+      "market_cap_gbp_b": 56.128,
       "beta": 0.895,
       "pe_ratio": 41.5,
       "avg_volume_m": 0.4,
@@ -1577,7 +1577,7 @@
       "low_gbp": "193",
       "high_gbp": "273",
       "bar_pct": 77,
-      "market_cap_gbp_b": 35.569,
+      "market_cap_gbp_b": 35.566,
       "beta": 1.035,
       "pe_ratio": 60.2,
       "avg_volume_m": 0.69,
@@ -1642,7 +1642,7 @@
       "low_gbp": "256",
       "high_gbp": "669",
       "bar_pct": 15,
-      "market_cap_gbp_b": 25.783,
+      "market_cap_gbp_b": 25.781,
       "beta": 1.422,
       "pe_ratio": 170.73,
       "avg_volume_m": 1.16,
@@ -1654,6 +1654,13 @@
       "vol_1w": 5289400,
       "vol_1m": 25556800,
       "news": [
+        {
+          "title": "AppLovin Could Hit $600+ With 28% Upside as AI Ad-Tech Story Rebounds",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/applovin-could-hit-600-with-28-upside-as-ai-ad-tech-story-rebounds/",
+          "published": 1781898007,
+          "sentiment": 0.0
+        },
         {
           "title": "1 Industrials Stock for Long-Term Investors and 2 We Turn Down",
           "publisher": "StockStory",
@@ -1681,13 +1688,6 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/axon-enterprise-axon-registers-bigger-220005036.html",
           "published": 1781647205,
           "sentiment": 0.202
-        },
-        {
-          "title": "From TASER to the Skies. Buy Axon Stock While It's Still Down 49%",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/16/from-taser-to-skies-buy-axon-stock-while-down/",
-          "published": 1781627700,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.0
@@ -1834,10 +1834,10 @@
       "change_1m": "+7.64%",
       "change_ytd": "+33.02%",
       "return_1yr": "+5%",
-      "low_gbp": "25",
+      "low_gbp": "24",
       "high_gbp": "38",
       "bar_pct": 75,
-      "market_cap_gbp_b": 9.287,
+      "market_cap_gbp_b": 9.286,
       "beta": 0.121,
       "pe_ratio": 43.07,
       "avg_volume_m": 1.0,

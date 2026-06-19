@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19 20:32",
-  "fx_gbp_usd": 1.3235,
+  "updated": "2026-06-19 22:45",
+  "fx_gbp_usd": 1.3237,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -17,7 +17,7 @@
       "low_gbp": "149",
       "high_gbp": "240",
       "bar_pct": 84,
-      "market_cap_gbp_b": 3307.027,
+      "market_cap_gbp_b": 3306.589,
       "beta": 1.086,
       "pe_ratio": 36.08,
       "avg_volume_m": 47.95,
@@ -30,18 +30,18 @@
       "vol_1m": 1134668300,
       "news": [
         {
-          "title": "Tech stocks today: Uber and Lucid expanding in Houston,  Intel's latest chip moves",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/technology/live/tech-stocks-today-uber-and-lucid-expanding-in-houston-intels-latest-chip-moves-100000021.html",
-          "published": 1781517600,
-          "sentiment": 0.0
+          "title": "Making Six Figures but Betting Everything on U.S. Stocks? AVUV Fixes That Problem",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/making-six-figures-but-betting-everything-on-u-s-stocks-avuv-fixes-that-problem/",
+          "published": 1781904635,
+          "sentiment": -0.55
         },
         {
-          "title": "Apple CEO confirms price hikes, Take Two announces GTA 6 preorder date",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/apple-ceo-confirms-price-hikes-take-two-announces-gta-6-preorder-date-194755984.html",
-          "published": 1781812075,
-          "sentiment": 0.0
+          "title": "If You\u2019re 38 With $500K Saved, AVUV Fixes Your Tech-Heavy Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/if-youre-38-with-500k-saved-avuv-fixes-your-tech-heavy-portfolio/",
+          "published": 1781903412,
+          "sentiment": 0.421
         },
         {
           "title": "ASML Faces Fresh China Export Scrutiny",
@@ -65,7 +65,7 @@
           "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.107
+      "news_sentiment": 0.081
     },
     {
       "ticker": "MSFT",
@@ -82,7 +82,7 @@
       "low_gbp": "269",
       "high_gbp": "420",
       "bar_pct": 12,
-      "market_cap_gbp_b": 2129.403,
+      "market_cap_gbp_b": 2129.121,
       "beta": 1.103,
       "pe_ratio": 22.61,
       "avg_volume_m": 36.09,
@@ -95,11 +95,18 @@
       "vol_1m": 839800400,
       "news": [
         {
-          "title": "SpaceX stock drops after breaking 3-day winning streak",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/spacex-stock-drops-after-breaking-3-day-winning-streak-124809291.html",
-          "published": 1781786889,
-          "sentiment": 0.527
+          "title": "Making Six Figures but Betting Everything on U.S. Stocks? AVUV Fixes That Problem",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/making-six-figures-but-betting-everything-on-u-s-stocks-avuv-fixes-that-problem/",
+          "published": 1781904635,
+          "sentiment": -0.55
+        },
+        {
+          "title": "If You\u2019re 38 With $500K Saved, AVUV Fixes Your Tech-Heavy Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/if-youre-38-with-500k-saved-avuv-fixes-your-tech-heavy-portfolio/",
+          "published": 1781903412,
+          "sentiment": 0.421
         },
         {
           "title": "Amazon's Quantum Bet Nears Reality",
@@ -121,16 +128,9 @@
           "url": "https://www.thestreet.com/investing/allbirds-exposes-a-new-test-for-the-ai-trade",
           "published": 1781885820,
           "sentiment": -0.128
-        },
-        {
-          "title": "Bank of America predicts a major pricing shift for Apple",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/bank-of-america-predicts-a-major-pricing-shift-for-apple-stock",
-          "published": 1781884980,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.139
+      "news_sentiment": 0.008
     },
     {
       "ticker": "GOOGL",
@@ -147,7 +147,7 @@
       "low_gbp": "122",
       "high_gbp": "309",
       "bar_pct": 84,
-      "market_cap_gbp_b": 3393.109,
+      "market_cap_gbp_b": 3392.66,
       "beta": 1.237,
       "pe_ratio": 28.09,
       "avg_volume_m": 30.05,
@@ -167,6 +167,20 @@
           "sentiment": 0.382
         },
         {
+          "title": "Making Six Figures but Betting Everything on U.S. Stocks? AVUV Fixes That Problem",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/making-six-figures-but-betting-everything-on-u-s-stocks-avuv-fixes-that-problem/",
+          "published": 1781904635,
+          "sentiment": -0.55
+        },
+        {
+          "title": "If You\u2019re 38 With $500K Saved, AVUV Fixes Your Tech-Heavy Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/if-youre-38-with-500k-saved-avuv-fixes-your-tech-heavy-portfolio/",
+          "published": 1781903412,
+          "sentiment": 0.421
+        },
+        {
           "title": "SpaceX stock joins AI bond frenzy",
           "publisher": "TheStreet",
           "url": "https://www.thestreet.com/investing/stocks/spcx-spacex-stock-ai-bond-offering",
@@ -179,23 +193,9 @@
           "url": "https://247wallst.com/investing/2026/06/19/nearing-52-week-high-this-is-where-dte-energy-will-end-the-year/",
           "published": 1781893828,
           "sentiment": 0.273
-        },
-        {
-          "title": "Amazon's Quantum Bet Nears Reality",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/amazons-quantum-bet-nears-reality-181107077.html",
-          "published": 1781892667,
-          "sentiment": 0.0
-        },
-        {
-          "title": "This Metal is Crucial for AI, Yet in Short Supply. Here Are 3 Top Mining Stocks to Buy to Capitalize on the Looming Deficit.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/this-metal-is-crucial-for-ai-yet-in-short-supply/",
-          "published": 1781892000,
-          "sentiment": -0.34
         }
       ],
-      "news_sentiment": -0.001
+      "news_sentiment": 0.042
     },
     {
       "ticker": "AMZN",
@@ -212,7 +212,7 @@
       "low_gbp": "148",
       "high_gbp": "210",
       "bar_pct": 59,
-      "market_cap_gbp_b": 1986.288,
+      "market_cap_gbp_b": 1986.025,
       "beta": 1.444,
       "pe_ratio": 31.45,
       "avg_volume_m": 45.25,
@@ -225,11 +225,25 @@
       "vol_1m": 957639600,
       "news": [
         {
-          "title": "SpaceX stock drops after breaking 3-day winning streak",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/spacex-stock-drops-after-breaking-3-day-winning-streak-124809291.html",
-          "published": 1781786889,
-          "sentiment": 0.527
+          "title": "Making Six Figures but Betting Everything on U.S. Stocks? AVUV Fixes That Problem",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/making-six-figures-but-betting-everything-on-u-s-stocks-avuv-fixes-that-problem/",
+          "published": 1781904635,
+          "sentiment": -0.55
+        },
+        {
+          "title": "If You\u2019re 38 With $500K Saved, AVUV Fixes Your Tech-Heavy Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/if-youre-38-with-500k-saved-avuv-fixes-your-tech-heavy-portfolio/",
+          "published": 1781903412,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Is Plug Power Inc. (PLUG) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/plug-power-inc-plug-good-194003920.html",
+          "published": 1781898003,
+          "sentiment": 0.44
         },
         {
           "title": "SpaceX stock joins AI bond frenzy",
@@ -244,23 +258,9 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/amazons-quantum-bet-nears-reality-181107077.html",
           "published": 1781892667,
           "sentiment": 0.0
-        },
-        {
-          "title": "Novo Nordisk Stock Rally as Owner Unveils $69 Million Obesity Research Push",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/novo-nordisk-stock-rally-owner-180142118.html",
-          "published": 1781892102,
-          "sentiment": 0.0
-        },
-        {
-          "title": "This Metal is Crucial for AI, Yet in Short Supply. Here Are 3 Top Mining Stocks to Buy to Capitalize on the Looming Deficit.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/this-metal-is-crucial-for-ai-yet-in-short-supply/",
-          "published": 1781892000,
-          "sentiment": -0.34
         }
       ],
-      "news_sentiment": -0.026
+      "news_sentiment": -0.001
     },
     {
       "ticker": "META",
@@ -277,7 +277,7 @@
       "low_gbp": "393",
       "high_gbp": "602",
       "bar_pct": 21,
-      "market_cap_gbp_b": 1107.053,
+      "market_cap_gbp_b": 1106.907,
       "beta": 1.229,
       "pe_ratio": 21.0,
       "avg_volume_m": 17.54,
@@ -289,6 +289,27 @@
       "vol_1w": 92627000,
       "vol_1m": 405981500,
       "news": [
+        {
+          "title": "Making Six Figures but Betting Everything on U.S. Stocks? AVUV Fixes That Problem",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/making-six-figures-but-betting-everything-on-u-s-stocks-avuv-fixes-that-problem/",
+          "published": 1781904635,
+          "sentiment": -0.55
+        },
+        {
+          "title": "If You\u2019re 38 With $500K Saved, AVUV Fixes Your Tech-Heavy Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/if-youre-38-with-500k-saved-avuv-fixes-your-tech-heavy-portfolio/",
+          "published": 1781903412,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Prediction: Meta's AI Spending Will Pay Off Bigger Than Wall Street Expects",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/19/prediction-metas-ai-spending-will-pay-off-bigger-t/",
+          "published": 1781902860,
+          "sentiment": -0.103
+        },
         {
           "title": "Oklo Locks In Domestic Nuclear Fuel Supply for Its Ohio Gigawatt Campus",
           "publisher": "GuruFocus.com",
@@ -302,30 +323,9 @@
           "url": "https://www.fool.com/investing/2026/06/19/this-metal-is-crucial-for-ai-yet-in-short-supply/",
           "published": 1781892000,
           "sentiment": -0.34
-        },
-        {
-          "title": "Jim Cramer: CoreWeave\u2019s Backlog \u2018May Be Much Greater\u2019 Than Wall Street Thinks",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/19/jim-cramer-coreweaves-backlog-may-be-much-greater-than-wall-street-thinks/",
-          "published": 1781889699,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Google, SpaceX, Microsoft, and Amazon Are About to Spend \u2018Twice the Entire U.S. Defense Budget\u2019 on AI",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/19/google-spacex-microsoft-and-amazon-are-about-to-spend-twice-the-entire-u-s-defense-budget-on-ai/",
-          "published": 1781889542,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Famous Wall Street Tech Analyst Names Meta and Amazon the Best Magnificent 7 Stock Buys Today",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/19/famous-wall-street-tech-analyst-names-meta-and-amazon-the-best-magnificent-7-stock-buys-today/",
-          "published": 1781887922,
-          "sentiment": 0.869
         }
       ],
-      "news_sentiment": 0.165
+      "news_sentiment": -0.114
     },
     {
       "ticker": "NVDA",
@@ -342,7 +342,7 @@
       "low_gbp": "107",
       "high_gbp": "179",
       "bar_pct": 73,
-      "market_cap_gbp_b": 3855.664,
+      "market_cap_gbp_b": 3855.154,
       "beta": 2.202,
       "pe_ratio": 32.26,
       "avg_volume_m": 164.05,
@@ -355,42 +355,42 @@
       "vol_1m": 3838809200,
       "news": [
         {
-          "title": "Prediction: Eli Lilly Will Trade at $1,200 on This Date",
+          "title": "Making Six Figures but Betting Everything on U.S. Stocks? AVUV Fixes That Problem",
           "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/19/prediction-eli-lilly-will-trade-at-1200-on-this-date/",
-          "published": 1781896548,
+          "url": "https://247wallst.com/investing/2026/06/19/making-six-figures-but-betting-everything-on-u-s-stocks-avuv-fixes-that-problem/",
+          "published": 1781904635,
+          "sentiment": -0.55
+        },
+        {
+          "title": "After Being Called the Next Trillion-Dollar AI Stock and Joining the S&P 500, Marvell's CFO Just Filed to Dump $65 Million of Stock. Here's Why.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/19/marvells-cfo-just-sold-65-million-of-stock-right-a/",
+          "published": 1781904420,
+          "sentiment": -0.382
+        },
+        {
+          "title": "If You\u2019re 38 With $500K Saved, AVUV Fixes Your Tech-Heavy Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/if-youre-38-with-500k-saved-avuv-fixes-your-tech-heavy-portfolio/",
+          "published": 1781903412,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Why Alight Stock Withered This Week",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/19/why-alight-stock-withered-this-week/",
+          "published": 1781903215,
           "sentiment": 0.0
         },
         {
-          "title": "Archer Aviation Stock: Buy, Sell, or Hold?",
+          "title": "Prediction: Meta's AI Spending Will Pay Off Bigger Than Wall Street Expects",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/archer-achr-stock-buy-sell-or-hold/",
-          "published": 1781896500,
-          "sentiment": 0.0
-        },
-        {
-          "title": "SpaceX stock joins AI bond frenzy",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/spcx-spacex-stock-ai-bond-offering",
-          "published": 1781896380,
-          "sentiment": -0.318
-        },
-        {
-          "title": "Optical Networking Is AI's Most Overlooked Bottleneck. Here's Why This Nvidia-Backed Company Is the Stock to Own.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/optical-networking-is-ais-most-overlooked-bottlene/",
-          "published": 1781895360,
-          "sentiment": -0.101
-        },
-        {
-          "title": "Ethereum's New Tech Upgrade Is Coming Soon. Is It Time to Buy ETH?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/ethereums-new-tech-upgrade-is-coming-soon-is-it-ti/",
-          "published": 1781895180,
-          "sentiment": 0.0
+          "url": "https://www.fool.com/investing/2026/06/19/prediction-metas-ai-spending-will-pay-off-bigger-t/",
+          "published": 1781902860,
+          "sentiment": -0.103
         }
       ],
-      "news_sentiment": -0.084
+      "news_sentiment": -0.123
     },
     {
       "ticker": "AMD",
@@ -407,7 +407,7 @@
       "low_gbp": "96",
       "high_gbp": "422",
       "bar_pct": 95,
-      "market_cap_gbp_b": 662.04,
+      "market_cap_gbp_b": 661.952,
       "beta": 2.492,
       "pe_ratio": 179.72,
       "avg_volume_m": 37.95,
@@ -472,7 +472,7 @@
       "low_gbp": "14",
       "high_gbp": "102",
       "bar_pct": 99,
-      "market_cap_gbp_b": 508.813,
+      "market_cap_gbp_b": 508.746,
       "beta": 2.228,
       "pe_ratio": null,
       "avg_volume_m": 133.41,
@@ -506,21 +506,21 @@
           "sentiment": 0.382
         },
         {
+          "title": "Record AI Backlog and Swelling Cash Flows Make HP Enterprise Stock Attractive",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2557067/record-ai-backlog-and-swelling-cash-flows-make-hp-enterprise-stock-attractive",
+          "published": 1781881203,
+          "sentiment": 0.44
+        },
+        {
           "title": "How Astera Labs (ALAB) Is Using Taiwan Expansion to Speed Rack-Scale AI Deployment",
           "publisher": "Insider Monkey",
           "url": "https://finance.yahoo.com/technology/ai/articles/astera-labs-alab-using-taiwan-143418833.html",
           "published": 1781879658,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why Intel Hired the Former CEO of Micron\u2019s Big Rival SK Hynix",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/intel-stock-price-micron-sk-hynix-af7e7f81?siteid=yhoof2&yptr=yahoo",
-          "published": 1781878620,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.056
+      "news_sentiment": 0.144
     },
     {
       "ticker": "TSM",
@@ -537,7 +537,7 @@
       "low_gbp": "156",
       "high_gbp": "351",
       "bar_pct": 99,
-      "market_cap_gbp_b": 1810.882,
+      "market_cap_gbp_b": 1810.642,
       "beta": 1.25,
       "pe_ratio": 39.74,
       "avg_volume_m": 13.62,
@@ -602,7 +602,7 @@
       "low_gbp": "184",
       "high_gbp": "374",
       "bar_pct": 67,
-      "market_cap_gbp_b": 1478.635,
+      "market_cap_gbp_b": 1478.439,
       "beta": 1.433,
       "pe_ratio": 68.22,
       "avg_volume_m": 25.97,
@@ -667,7 +667,7 @@
       "low_gbp": "92",
       "high_gbp": "196",
       "bar_pct": 75,
-      "market_cap_gbp_b": 180.063,
+      "market_cap_gbp_b": 180.039,
       "beta": 1.596,
       "pe_ratio": 24.34,
       "avg_volume_m": 21.64,
@@ -732,7 +732,7 @@
       "low_gbp": "76",
       "high_gbp": "342",
       "bar_pct": 96,
-      "market_cap_gbp_b": 354.638,
+      "market_cap_gbp_b": 354.592,
       "beta": 3.786,
       "pe_ratio": 529.47,
       "avg_volume_m": 11.62,
@@ -797,7 +797,7 @@
       "low_gbp": "516",
       "high_gbp": "1468",
       "bar_pct": 99,
-      "market_cap_gbp_b": 561.927,
+      "market_cap_gbp_b": 561.853,
       "beta": 1.396,
       "pe_ratio": 64.45,
       "avg_volume_m": 1.87,
@@ -813,7 +813,7 @@
           "title": "Stocks Stall as Iran Nuclear Talks Hit Early Snag: Markets Wrap",
           "publisher": "Bloomberg",
           "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-slide-focus-shifts-iran-080450531.html",
-          "published": 1781894960,
+          "published": 1781899755,
           "sentiment": -0.202
         },
         {
@@ -862,7 +862,7 @@
       "low_gbp": "78",
       "high_gbp": "868",
       "bar_pct": 99,
-      "market_cap_gbp_b": 966.227,
+      "market_cap_gbp_b": 966.099,
       "beta": 2.173,
       "pe_ratio": 53.41,
       "avg_volume_m": 50.9,
@@ -874,6 +874,20 @@
       "vol_1w": 242071300,
       "vol_1m": 1199481900,
       "news": [
+        {
+          "title": "Dow Jones Futures Fall; Nvidia Leads 5 Stocks Near Buy Points, SpaceX Needs This",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-5-chips-buy-points-spacex-stock/?src=A00220&yptr=yahoo",
+          "published": 1781902805,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Micron Gets the Headlines, But Sandisk Could Offer More Upside",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-gets-headlines-sandisk-could-190000313.html",
+          "published": 1781895600,
+          "sentiment": 0.0
+        },
         {
           "title": "Everything Could Change for Micron Stock on June 24",
           "publisher": "Motley Fool",
@@ -894,23 +908,9 @@
           "url": "https://247wallst.com/investing/2026/06/19/analyst-warns-intel-valuation-doesnt-make-sense-suggests-nvidia-amd-micron-and-broadcom-as-alternatives/",
           "published": 1781890608,
           "sentiment": -0.103
-        },
-        {
-          "title": "Dow Jones Futures Fall With U.S. Markets Shut; Nvidia Leads 5 Stocks Near Buy Points, SpaceX Needs This",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-5-chips-buy-points-spacex-stock/?src=A00220&yptr=yahoo",
-          "published": 1781889138,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Micron Stock Gets Stunning Double Upgrade -- Analysts Predict Triple-Digit DRAM Surge",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-stock-gets-stunning-double-170307553.html",
-          "published": 1781888587,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.056
+      "news_sentiment": -0.021
     },
     {
       "ticker": "AMAT",
@@ -927,7 +927,7 @@
       "low_gbp": "117",
       "high_gbp": "483",
       "bar_pct": 96,
-      "market_cap_gbp_b": 370.189,
+      "market_cap_gbp_b": 370.14,
       "beta": 1.672,
       "pe_ratio": 58.05,
       "avg_volume_m": 7.7,
@@ -992,7 +992,7 @@
       "low_gbp": "102",
       "high_gbp": "261",
       "bar_pct": 24,
-      "market_cap_gbp_b": 400.462,
+      "market_cap_gbp_b": 400.409,
       "beta": 1.655,
       "pe_ratio": 31.56,
       "avg_volume_m": 26.64,
@@ -1004,6 +1004,13 @@
       "vol_1w": 114830400,
       "vol_1m": 566862900,
       "news": [
+        {
+          "title": "CPI FIM (BDL:ORCL) Stock Looks Cheap With A 9.7x P E But Is The Market Right",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cpi-fim-bdl-orcl-stock-211306643.html",
+          "published": 1781903586,
+          "sentiment": 0.0
+        },
         {
           "title": "SpaceX stock joins AI bond frenzy",
           "publisher": "TheStreet",
@@ -1031,16 +1038,9 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/06/18/gitlab-vs-oracle-which-technology-stock-is-a-better-buy-in-2026/",
           "published": 1781837267,
           "sentiment": 0.44
-        },
-        {
-          "title": "Meta Strikes New AI Computing Deals With Data Center Firm Crusoe",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/technology/ai/articles/meta-strikes-ai-computing-deals-201346076.html",
-          "published": 1781813626,
-          "sentiment": -0.361
         }
       ],
-      "news_sentiment": -0.014
+      "news_sentiment": 0.058
     },
     {
       "ticker": "CRM",
@@ -1057,7 +1057,7 @@
       "low_gbp": "113",
       "high_gbp": "209",
       "bar_pct": 2,
-      "market_cap_gbp_b": 93.921,
+      "market_cap_gbp_b": 93.908,
       "beta": 1.151,
       "pe_ratio": 17.57,
       "avg_volume_m": 14.94,
@@ -1122,7 +1122,7 @@
       "low_gbp": "144",
       "high_gbp": "297",
       "bar_pct": 2,
-      "market_cap_gbp_b": 58.613,
+      "market_cap_gbp_b": 58.605,
       "beta": 1.404,
       "pe_ratio": 11.16,
       "avg_volume_m": 6.05,
@@ -1187,7 +1187,7 @@
       "low_gbp": "61",
       "high_gbp": "160",
       "bar_pct": 11,
-      "market_cap_gbp_b": 74.056,
+      "market_cap_gbp_b": 74.046,
       "beta": 0.927,
       "pe_ratio": 56.57,
       "avg_volume_m": 28.23,
@@ -1242,7 +1242,7 @@
       "company_name": "Snowflake",
       "category": "enterprise-software",
       "exchange": "NYSE",
-      "price_gbp": "176",
+      "price_gbp": "175",
       "price_usd": 232.29,
       "change_1d": "-1.02%",
       "change_1w": "-3.37%",
@@ -1252,7 +1252,7 @@
       "low_gbp": "89",
       "high_gbp": "215",
       "bar_pct": 68,
-      "market_cap_gbp_b": 60.831,
+      "market_cap_gbp_b": 60.823,
       "beta": 1.355,
       "pe_ratio": null,
       "avg_volume_m": 8.53,
@@ -1317,7 +1317,7 @@
       "low_gbp": "196",
       "high_gbp": "615",
       "bar_pct": 1,
-      "market_cap_gbp_b": 55.181,
+      "market_cap_gbp_b": 55.174,
       "beta": 0.964,
       "pe_ratio": 16.3,
       "avg_volume_m": 4.56,
@@ -1382,7 +1382,7 @@
       "low_gbp": "259",
       "high_gbp": "594",
       "bar_pct": 77,
-      "market_cap_gbp_b": 131.724,
+      "market_cap_gbp_b": 131.706,
       "beta": 1.244,
       "pe_ratio": null,
       "avg_volume_m": 3.55,
@@ -1447,7 +1447,7 @@
       "low_gbp": "105",
       "high_gbp": "229",
       "bar_pct": 91,
-      "market_cap_gbp_b": 177.207,
+      "market_cap_gbp_b": 177.184,
       "beta": 0.942,
       "pe_ratio": 250.24,
       "avg_volume_m": 8.48,
@@ -1512,7 +1512,7 @@
       "low_gbp": "120",
       "high_gbp": "209",
       "bar_pct": 55,
-      "market_cap_gbp_b": 60.087,
+      "market_cap_gbp_b": 60.079,
       "beta": 1.674,
       "pe_ratio": null,
       "avg_volume_m": 4.43,
@@ -1577,7 +1577,7 @@
       "low_gbp": "53",
       "high_gbp": "113",
       "bar_pct": 93,
-      "market_cap_gbp_b": 80.116,
+      "market_cap_gbp_b": 80.105,
       "beta": 1.109,
       "pe_ratio": 56.32,
       "avg_volume_m": 6.56,
@@ -1642,7 +1642,7 @@
       "low_gbp": "57",
       "high_gbp": "101",
       "bar_pct": 4,
-      "market_cap_gbp_b": 246.182,
+      "market_cap_gbp_b": 246.149,
       "beta": 1.491,
       "pe_ratio": 24.96,
       "avg_volume_m": 39.64,
@@ -1659,6 +1659,13 @@
           "publisher": "GuruFocus.com",
           "url": "https://finance.yahoo.com/real-estate/articles/netflix-moves-radford-studio-400-175046324.html",
           "published": 1781891446,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Lionsgate Is Likely to Eventually Become a Takeover Target. What That Means for LION Stock.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2556305/lionsgate-is-likely-to-eventually-become-a-takeover-target-what-that-means-for-lion-stock",
+          "published": 1781877602,
           "sentiment": 0.0
         },
         {
@@ -1681,16 +1688,9 @@
           "url": "https://www.trefis.com/articles/603569/google-has-the-best-problem-money-cant-quite-buy/2026-06-18",
           "published": 1781832124,
           "sentiment": 0.361
-        },
-        {
-          "title": "Netflix (NFLX) Secures Ryan Coogler TV Deal For Exclusive New Series",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/netflix-nflx-secures-ryan-coogler-232038757.html",
-          "published": 1781824838,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.339
+      "news_sentiment": 0.255
     },
     {
       "ticker": "SHOP",
@@ -1707,7 +1707,7 @@
       "low_gbp": "71",
       "high_gbp": "138",
       "bar_pct": 17,
-      "market_cap_gbp_b": 106.721,
+      "market_cap_gbp_b": 106.707,
       "beta": 2.587,
       "pe_ratio": 106.72,
       "avg_volume_m": 10.12,
@@ -1772,7 +1772,7 @@
       "low_gbp": "306",
       "high_gbp": "593",
       "bar_pct": 17,
-      "market_cap_gbp_b": 72.719,
+      "market_cap_gbp_b": 72.71,
       "beta": 1.553,
       "pe_ratio": 31.33,
       "avg_volume_m": 2.12,
@@ -1837,7 +1837,7 @@
       "low_gbp": "51",
       "high_gbp": "77",
       "bar_pct": 13,
-      "market_cap_gbp_b": 110.182,
+      "market_cap_gbp_b": 110.168,
       "beta": 1.12,
       "pe_ratio": 17.78,
       "avg_volume_m": 17.65,
@@ -1900,9 +1900,9 @@
       "change_ytd": "+58.06%",
       "return_1yr": "+80%",
       "low_gbp": "50",
-      "high_gbp": "99",
+      "high_gbp": "98",
       "bar_pct": 83,
-      "market_cap_gbp_b": 355.984,
+      "market_cap_gbp_b": 355.937,
       "beta": 1.004,
       "pe_ratio": 39.85,
       "avg_volume_m": 24.5,
@@ -1967,7 +1967,7 @@
       "low_gbp": "93",
       "high_gbp": "157",
       "bar_pct": 7,
-      "market_cap_gbp_b": 232.696,
+      "market_cap_gbp_b": 232.665,
       "beta": 1.515,
       "pe_ratio": 144.35,
       "avg_volume_m": 44.48,
