@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-19 17:50",
-  "fx_gbp_usd": 1.3226,
+  "updated": "2026-06-19 20:37",
+  "fx_gbp_usd": 1.3234,
   "stocks": [
     {
       "ticker": "XOM",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "80",
       "high_gbp": "133",
       "bar_pct": 46,
-      "market_cap_gbp_b": 431.884,
+      "market_cap_gbp_b": 431.627,
       "beta": 0.149,
       "pe_ratio": 23.2,
       "avg_volume_m": 20.07,
@@ -25,9 +25,9 @@ window.PRICES_DATA = {
       "short_pct": 1.14,
       "analyst": "buy",
       "analyst_score": 2.28,
-      "vol_1d": 48054600,
-      "vol_1w": 124987700,
-      "vol_1m": 399362100,
+      "vol_1d": 48063400,
+      "vol_1w": 124996500,
+      "vol_1m": 399370900,
       "news": [
         {
           "title": "Expert Warns: California Taxes Harming \u201cBig Wealth Driver in the State\u201d as Billionaires Flee",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "108",
       "high_gbp": "162",
       "bar_pct": 43,
-      "market_cap_gbp_b": 261.453,
+      "market_cap_gbp_b": 261.298,
       "beta": 0.472,
       "pe_ratio": 30.2,
       "avg_volume_m": 11.03,
@@ -90,9 +90,9 @@ window.PRICES_DATA = {
       "short_pct": 1.16,
       "analyst": "buy",
       "analyst_score": 1.84,
-      "vol_1d": 19140400,
-      "vol_1w": 53122200,
-      "vol_1m": 210843300,
+      "vol_1d": 19146100,
+      "vol_1w": 53127900,
+      "vol_1m": 210849000,
       "news": [
         {
           "title": "Expert Warns: California Taxes Harming \u201cBig Wealth Driver in the State\u201d as Billionaires Flee",
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "51",
       "high_gbp": "72",
       "bar_pct": 42,
-      "market_cap_gbp_b": 165.175,
+      "market_cap_gbp_b": 165.076,
       "beta": -0.248,
       "pe_ratio": 12.28,
       "avg_volume_m": 7.85,
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "22",
       "high_gbp": "36",
       "bar_pct": 51,
-      "market_cap_gbp_b": 76.126,
+      "market_cap_gbp_b": 76.081,
       "beta": -0.239,
       "pe_ratio": 31.79,
       "avg_volume_m": 11.96,
@@ -220,9 +220,9 @@ window.PRICES_DATA = {
       "short_pct": 0.4,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 14303200,
-      "vol_1w": 45916100,
-      "vol_1m": 199894500,
+      "vol_1d": 14304700,
+      "vol_1w": 45917600,
+      "vol_1m": 199896000,
       "news": [
         {
           "title": "BP taps DeepOcean for Foinaven subsea recycling project",
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "71",
       "bar_pct": 63,
-      "market_cap_gbp_b": 135.299,
+      "market_cap_gbp_b": 135.218,
       "beta": 0.045,
       "pe_ratio": 11.93,
       "avg_volume_m": 1.72,
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "33",
       "bar_pct": 48,
-      "market_cap_gbp_b": 60.966,
+      "market_cap_gbp_b": 60.93,
       "beta": -0.752,
       "pe_ratio": 14.65,
       "avg_volume_m": 5.64,
@@ -407,7 +407,7 @@ window.PRICES_DATA = {
       "low_gbp": "65",
       "high_gbp": "103",
       "bar_pct": 44,
-      "market_cap_gbp_b": 99.242,
+      "market_cap_gbp_b": 99.183,
       "beta": 0.106,
       "pe_ratio": 18.26,
       "avg_volume_m": 8.69,
@@ -472,7 +472,7 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "51",
       "bar_pct": 45,
-      "market_cap_gbp_b": 38.97,
+      "market_cap_gbp_b": 38.947,
       "beta": 0.124,
       "pe_ratio": 70.03,
       "avg_volume_m": 13.86,
@@ -480,9 +480,9 @@ window.PRICES_DATA = {
       "short_pct": 0.02,
       "analyst": "hold",
       "analyst_score": 2.56,
-      "vol_1d": 13856900,
-      "vol_1w": 52981100,
-      "vol_1m": 235645000,
+      "vol_1d": 13871800,
+      "vol_1w": 52996000,
+      "vol_1m": 235659900,
       "news": [
         {
           "title": "ExxonMobil and Occidental Petroleum Stocks Trade Down, What You Need To Know",
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "77",
       "high_gbp": "115",
       "bar_pct": 56,
-      "market_cap_gbp_b": 52.344,
+      "market_cap_gbp_b": 52.313,
       "beta": 0.256,
       "pe_ratio": 12.78,
       "avg_volume_m": 4.17,
@@ -545,9 +545,9 @@ window.PRICES_DATA = {
       "short_pct": 4.11,
       "analyst": "buy",
       "analyst_score": 2.19,
-      "vol_1d": 12211400,
-      "vol_1w": 30554100,
-      "vol_1m": 85385300,
+      "vol_1d": 12213400,
+      "vol_1w": 30556100,
+      "vol_1m": 85387300,
       "news": [
         {
           "title": "Can Devon's Multi-Basin Assets Sustain Growth for Years to Come?",
@@ -602,7 +602,7 @@ window.PRICES_DATA = {
       "low_gbp": "119",
       "high_gbp": "206",
       "bar_pct": 74,
-      "market_cap_gbp_b": 53.617,
+      "market_cap_gbp_b": 53.585,
       "beta": 0.522,
       "pe_ratio": 16.0,
       "avg_volume_m": 2.46,
@@ -614,6 +614,13 @@ window.PRICES_DATA = {
       "vol_1w": 15189500,
       "vol_1m": 54433200,
       "news": [
+        {
+          "title": "Will UK interest rates fall in 2026?",
+          "publisher": "Moneyweek",
+          "url": "https://moneyweek.com/economy/uk-economy/605427/when-will-interest-rates-go-up",
+          "published": 1781883368,
+          "sentiment": 0.459
+        },
         {
           "title": "Here's How Declining Crude Oil Prices are Benefiting Valero Energy",
           "publisher": "Zacks",
@@ -641,16 +648,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-sees-more-214502410.html",
           "published": 1781732702,
           "sentiment": 0.272
-        },
-        {
-          "title": "Marathon Petroleum (MPC) Stock Could Be 5.5% Undervalued Despite Its Strong Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-stock-could-161138713.html",
-          "published": 1781712698,
-          "sentiment": -0.402
         }
       ],
-      "news_sentiment": -0.052
+      "news_sentiment": 0.12
     },
     {
       "ticker": "VLO",
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "99",
       "high_gbp": "201",
       "bar_pct": 78,
-      "market_cap_gbp_b": 53.051,
+      "market_cap_gbp_b": 53.019,
       "beta": 0.553,
       "pe_ratio": 17.25,
       "avg_volume_m": 3.47,
@@ -675,9 +675,9 @@ window.PRICES_DATA = {
       "short_pct": 3.6,
       "analyst": "buy",
       "analyst_score": 2.4,
-      "vol_1d": 6140600,
-      "vol_1w": 18421700,
-      "vol_1m": 66824100,
+      "vol_1d": 6141200,
+      "vol_1w": 18422300,
+      "vol_1m": 66824700,
       "news": [
         {
           "title": "Valero Energy (VLO) Stock Sinks As Market Gains: What You Should Know",
@@ -732,7 +732,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 61,
-      "market_cap_gbp_b": 54.36,
+      "market_cap_gbp_b": 54.328,
       "beta": 0.708,
       "pe_ratio": 21.19,
       "avg_volume_m": 15.81,
@@ -740,9 +740,9 @@ window.PRICES_DATA = {
       "short_pct": 4.24,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 41853700,
-      "vol_1w": 104183400,
-      "vol_1m": 336227100,
+      "vol_1d": 41856500,
+      "vol_1w": 104186200,
+      "vol_1m": 336229900,
       "news": [
         {
           "title": "SLB (SLB) Stock After Recent Pullback Could The Valuation Gap Be An Opportunity",
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 63,
-      "market_cap_gbp_b": 22.063,
+      "market_cap_gbp_b": 22.05,
       "beta": 0.704,
       "pe_ratio": 19.3,
       "avg_volume_m": 13.59,
@@ -805,9 +805,9 @@ window.PRICES_DATA = {
       "short_pct": 5.22,
       "analyst": "buy",
       "analyst_score": 1.81,
-      "vol_1d": 24607300,
-      "vol_1w": 72619900,
-      "vol_1m": 274064600,
+      "vol_1d": 24608800,
+      "vol_1w": 72621400,
+      "vol_1m": 274066100,
       "news": [
         {
           "title": "S&P 500 Posts Weekly Gain Amid US-Iran Memorandum of Understanding",
@@ -862,7 +862,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 64,
-      "market_cap_gbp_b": 43.812,
+      "market_cap_gbp_b": 43.786,
       "beta": 0.938,
       "pe_ratio": 18.66,
       "avg_volume_m": 8.34,
@@ -870,9 +870,9 @@ window.PRICES_DATA = {
       "short_pct": 2.91,
       "analyst": "buy",
       "analyst_score": 1.77,
-      "vol_1d": 17605100,
-      "vol_1w": 44405100,
-      "vol_1m": 173638300,
+      "vol_1d": 17607100,
+      "vol_1w": 44407100,
+      "vol_1m": 173640300,
       "news": [
         {
           "title": "Stocks Supported as Geopolitical Risks Recede",
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "51",
       "high_gbp": "75",
       "bar_pct": 62,
-      "market_cap_gbp_b": 136.795,
+      "market_cap_gbp_b": 136.713,
       "beta": 0.671,
       "pe_ratio": 22.02,
       "avg_volume_m": 10.76,
@@ -935,10 +935,17 @@ window.PRICES_DATA = {
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 1.95,
-      "vol_1d": 19303400,
-      "vol_1w": 59507300,
-      "vol_1m": 283860500,
+      "vol_1d": 19306600,
+      "vol_1w": 59510500,
+      "vol_1m": 283863700,
       "news": [
+        {
+          "title": "Expanding Customer Base and Investments Support LNT's Growth",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/energy/articles/expanding-customer-investments-support-lnts-173900681.html",
+          "published": 1781890740,
+          "sentiment": 0.649
+        },
         {
           "title": "Can Vistra Unlock More Value for Investors Through Share Buybacks?",
           "publisher": "Zacks",
@@ -966,16 +973,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/nextera-energy-nee-laps-stock-214502192.html",
           "published": 1781819102,
           "sentiment": 0.273
-        },
-        {
-          "title": "In 10 Years, Will You Wish You'd Bought NextEra Energy Right Now?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/18/in-10-years-will-you-wish-youd-bought-stock-right/",
-          "published": 1781805000,
-          "sentiment": 0.586
         }
       ],
-      "news_sentiment": 0.49
+      "news_sentiment": 0.502
     },
     {
       "ticker": "SSE.L",
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "19",
       "high_gbp": "56",
       "bar_pct": 55,
-      "market_cap_gbp_b": 5.21,
+      "market_cap_gbp_b": 5.207,
       "beta": 1.572,
       "pe_ratio": 51.76,
       "avg_volume_m": 7.83,
@@ -1065,9 +1065,9 @@ window.PRICES_DATA = {
       "short_pct": 24.43,
       "analyst": "hold",
       "analyst_score": 2.52,
-      "vol_1d": 13965600,
-      "vol_1w": 38916500,
-      "vol_1m": 192903200,
+      "vol_1d": 13979200,
+      "vol_1w": 38930100,
+      "vol_1m": 192916800,
       "news": [
         {
           "title": "Enphase Energy, Inc. (ENPH) Is a Trending Stock: Facts to Know Before Betting on It",
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "105",
       "high_gbp": "243",
       "bar_pct": 65,
-      "market_cap_gbp_b": 20.936,
+      "market_cap_gbp_b": 20.924,
       "beta": 1.692,
       "pe_ratio": 16.64,
       "avg_volume_m": 2.52,
@@ -1134,6 +1134,13 @@ window.PRICES_DATA = {
       "vol_1w": 11177300,
       "vol_1m": 65610300,
       "news": [
+        {
+          "title": "Renewable Energy Stocks Q1 Results: Benchmarking First Solar (NASDAQ:FSLR)",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/energy/articles/renewable-energy-stocks-q1-results-174058685.html",
+          "published": 1781890858,
+          "sentiment": 0.273
+        },
         {
           "title": "Why First Solar (FSLR) Outpaced the Stock Market Today",
           "publisher": "Zacks",
@@ -1161,16 +1168,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-stock-valuation-101011169.html",
           "published": 1781431811,
           "sentiment": 0.784
-        },
-        {
-          "title": "First Solar (FSLR) Stock Declines While Market Improves: Some Information for Investors",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-stock-declines-214505664.html",
-          "published": 1781300705,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.281
+      "news_sentiment": 0.252
     },
     {
       "ticker": "BEPC",
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "34",
       "bar_pct": 45,
-      "market_cap_gbp_b": 5.16,
+      "market_cap_gbp_b": 5.157,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1242,17 +1242,17 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.59",
+      "price_gbp": "5.58",
       "price_usd": 7.39,
       "change_1d": "-1.60%",
       "change_1w": "-9.10%",
       "change_1m": "-12.44%",
       "change_ytd": "+10.88%",
       "return_1yr": "-47%",
-      "low_gbp": "4.35",
+      "low_gbp": "4.34",
       "high_gbp": "25",
       "bar_pct": 6,
-      "market_cap_gbp_b": 22.144,
+      "market_cap_gbp_b": 22.131,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,

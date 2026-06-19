@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-19 17:45",
-  "fx_gbp_usd": 1.3225,
+  "updated": "2026-06-19 20:32",
+  "fx_gbp_usd": 1.3236,
   "stocks": [
     {
       "ticker": "LMT",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "310",
       "high_gbp": "523",
       "bar_pct": 36,
-      "market_cap_gbp_b": 89.077,
+      "market_cap_gbp_b": 89.004,
       "beta": 0.106,
       "pe_ratio": 24.77,
       "avg_volume_m": 1.44,
@@ -25,9 +25,9 @@ window.PRICES_DATA = {
       "short_pct": 1.37,
       "analyst": "hold",
       "analyst_score": 2.62,
-      "vol_1d": 3977200,
-      "vol_1w": 8193500,
-      "vol_1m": 28219200,
+      "vol_1d": 3978800,
+      "vol_1w": 8195100,
+      "vol_1m": 28220800,
       "news": [
         {
           "title": "U.S. Military Expert Issues Grave Warning: \u2018We Need More Munitions, and Deliveries Are Years Behind.\u2019 What Stocks Can Benefit?",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "106",
       "high_gbp": "162",
       "bar_pct": 61,
-      "market_cap_gbp_b": 188.99,
+      "market_cap_gbp_b": 188.836,
       "beta": 0.306,
       "pe_ratio": 34.89,
       "avg_volume_m": 5.46,
@@ -90,9 +90,9 @@ window.PRICES_DATA = {
       "short_pct": 1.23,
       "analyst": "buy",
       "analyst_score": 1.87,
-      "vol_1d": 8864700,
-      "vol_1w": 30920700,
-      "vol_1m": 126137700,
+      "vol_1d": 8866400,
+      "vol_1w": 30922400,
+      "vol_1m": 126139400,
       "news": [
         {
           "title": "U.S. Military Expert Issues Grave Warning: \u2018We Need More Munitions, and Deliveries Are Years Behind.\u2019 What Stocks Can Benefit?",
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "364",
       "high_gbp": "585",
       "bar_pct": 14,
-      "market_cap_gbp_b": 56.007,
+      "market_cap_gbp_b": 55.961,
       "beta": -0.121,
       "pe_ratio": 16.34,
       "avg_volume_m": 0.89,
@@ -155,9 +155,9 @@ window.PRICES_DATA = {
       "short_pct": 1.28,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 2402000,
-      "vol_1w": 5726600,
-      "vol_1m": 22744600,
+      "vol_1d": 2402900,
+      "vol_1w": 5727500,
+      "vol_1m": 22745500,
       "news": [
         {
           "title": "U.S. Military Expert Issues Grave Warning: \u2018We Need More Munitions, and Deliveries Are Years Behind.\u2019 What Stocks Can Benefit?",
@@ -202,7 +202,7 @@ window.PRICES_DATA = {
       "company_name": "General Dynamics",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "265",
+      "price_gbp": "264",
       "price_usd": 350.01,
       "change_1d": "-4.10%",
       "change_1w": "-2.47%",
@@ -210,9 +210,9 @@ window.PRICES_DATA = {
       "change_ytd": "+2.82%",
       "return_1yr": "+26%",
       "low_gbp": "208",
-      "high_gbp": "280",
+      "high_gbp": "279",
       "bar_pct": 79,
-      "market_cap_gbp_b": 71.57,
+      "market_cap_gbp_b": 71.511,
       "beta": 0.341,
       "pe_ratio": 21.75,
       "avg_volume_m": 1.38,
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "173",
       "high_gbp": "348",
       "bar_pct": 25,
-      "market_cap_gbp_b": 8.504,
+      "market_cap_gbp_b": 8.497,
       "beta": 0.232,
       "pe_ratio": 18.53,
       "avg_volume_m": 0.53,
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "184",
       "high_gbp": "287",
       "bar_pct": 38,
-      "market_cap_gbp_b": 41.529,
+      "market_cap_gbp_b": 41.495,
       "beta": 0.746,
       "pe_ratio": 31.98,
       "avg_volume_m": 1.35,
@@ -350,9 +350,9 @@ window.PRICES_DATA = {
       "short_pct": 1.47,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 2710900,
-      "vol_1w": 7882000,
-      "vol_1m": 26199500,
+      "vol_1d": 2711400,
+      "vol_1w": 7882500,
+      "vol_1m": 26200000,
       "news": [
         {
           "title": "U.S. Military Expert Issues Grave Warning: \u2018We Need More Munitions, and Deliveries Are Years Behind.\u2019 What Stocks Can Benefit?",
@@ -407,7 +407,7 @@ window.PRICES_DATA = {
       "low_gbp": "134",
       "high_gbp": "192",
       "bar_pct": 59,
-      "market_cap_gbp_b": 132.754,
+      "market_cap_gbp_b": 132.645,
       "beta": 1.198,
       "pe_ratio": 88.03,
       "avg_volume_m": 6.73,
@@ -415,10 +415,17 @@ window.PRICES_DATA = {
       "short_pct": 0.07,
       "analyst": "buy",
       "analyst_score": 1.63,
-      "vol_1d": 8818300,
-      "vol_1w": 31792800,
-      "vol_1m": 144959600,
+      "vol_1d": 8822500,
+      "vol_1w": 31797000,
+      "vol_1m": 144963800,
       "news": [
+        {
+          "title": "Boeing's Quantum Space Bet Moves Forward",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/boeings-quantum-space-bet-moves-170204471.html",
+          "published": 1781888524,
+          "sentiment": 0.0
+        },
         {
           "title": "Jim Cramer Believes \u201cGE Aerospace Is Fantastic\u201d",
           "publisher": "Insider Monkey",
@@ -446,16 +453,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/603566/is-ge-stocks-large-backlog-enough-to-out-fly-a-slowdown/2026-06-18",
           "published": 1781791344,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is Boeing (BA) a Buy as Wall Street Analysts Look Optimistic?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/boeing-ba-buy-wall-street-133004162.html",
-          "published": 1781789404,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.143
+      "news_sentiment": 0.079
     },
     {
       "ticker": "BA.L",
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "93",
       "high_gbp": "157",
       "bar_pct": 7,
-      "market_cap_gbp_b": 232.875,
+      "market_cap_gbp_b": 232.684,
       "beta": 1.515,
       "pe_ratio": 144.35,
       "avg_volume_m": 44.48,
@@ -675,9 +675,9 @@ window.PRICES_DATA = {
       "short_pct": 3.23,
       "analyst": "buy",
       "analyst_score": 1.94,
-      "vol_1d": 55183100,
-      "vol_1w": 195010000,
-      "vol_1m": 862983500,
+      "vol_1d": 55338000,
+      "vol_1w": 195164900,
+      "vol_1m": 863138400,
       "news": [
         {
           "title": "Palantir (PLTR) Partners with Google Cloud to Integrate AIP and Foundry Platforms",
@@ -730,9 +730,9 @@ window.PRICES_DATA = {
       "change_ytd": "-41.26%",
       "return_1yr": "-28%",
       "low_gbp": "80",
-      "high_gbp": "156",
+      "high_gbp": "155",
       "bar_pct": 1,
-      "market_cap_gbp_b": 10.188,
+      "market_cap_gbp_b": 10.18,
       "beta": 0.515,
       "pe_ratio": 9.8,
       "avg_volume_m": 1.33,
@@ -740,9 +740,9 @@ window.PRICES_DATA = {
       "short_pct": 4.31,
       "analyst": "buy",
       "analyst_score": 2.35,
-      "vol_1d": 6872100,
-      "vol_1w": 15046600,
-      "vol_1m": 35726200,
+      "vol_1d": 6872600,
+      "vol_1w": 15047100,
+      "vol_1m": 35726700,
       "news": [
         {
           "title": "Why Leidos Stock Plummeted This Week",
@@ -787,7 +787,7 @@ window.PRICES_DATA = {
       "company_name": "CACI International",
       "category": "cyber-intel",
       "exchange": "NYSE",
-      "price_gbp": "353",
+      "price_gbp": "352",
       "price_usd": 466.42,
       "change_1d": "-7.68%",
       "change_1w": "-11.23%",
@@ -795,9 +795,9 @@ window.PRICES_DATA = {
       "change_ytd": "-13.21%",
       "return_1yr": "+3%",
       "low_gbp": "337",
-      "high_gbp": "517",
+      "high_gbp": "516",
       "bar_pct": 9,
-      "market_cap_gbp_b": 7.791,
+      "market_cap_gbp_b": 7.785,
       "beta": 0.523,
       "pe_ratio": 19.27,
       "avg_volume_m": 0.29,
@@ -862,7 +862,7 @@ window.PRICES_DATA = {
       "low_gbp": "61",
       "high_gbp": "93",
       "bar_pct": 50,
-      "market_cap_gbp_b": 3.273,
+      "market_cap_gbp_b": 3.27,
       "beta": 0.293,
       "pe_ratio": 11.52,
       "avg_volume_m": 0.58,
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "91",
       "bar_pct": 1,
-      "market_cap_gbp_b": 6.018,
+      "market_cap_gbp_b": 6.013,
       "beta": 0.322,
       "pe_ratio": 9.62,
       "avg_volume_m": 1.79,
@@ -992,7 +992,7 @@ window.PRICES_DATA = {
       "low_gbp": "118",
       "high_gbp": "316",
       "bar_pct": 5,
-      "market_cap_gbp_b": 6.49,
+      "market_cap_gbp_b": 6.485,
       "beta": 1.361,
       "pe_ratio": null,
       "avg_volume_m": 1.19,
@@ -1000,9 +1000,9 @@ window.PRICES_DATA = {
       "short_pct": 12.07,
       "analyst": "buy",
       "analyst_score": 1.67,
-      "vol_1d": 1558700,
-      "vol_1w": 5380000,
-      "vol_1m": 27749600,
+      "vol_1d": 1560100,
+      "vol_1w": 5381400,
+      "vol_1m": 27751000,
       "news": [
         {
           "title": "AeroVironment (AVAV) Rises Higher Than Market: Key Facts",
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "101",
       "bar_pct": 16,
-      "market_cap_gbp_b": 7.686,
+      "market_cap_gbp_b": 7.68,
       "beta": 1.032,
       "pe_ratio": 318.88,
       "avg_volume_m": 4.34,
@@ -1065,9 +1065,9 @@ window.PRICES_DATA = {
       "short_pct": 7.14,
       "analyst": "buy",
       "analyst_score": 1.53,
-      "vol_1d": 6955900,
-      "vol_1w": 21854000,
-      "vol_1m": 100037900,
+      "vol_1d": 6964900,
+      "vol_1w": 21863000,
+      "vol_1m": 100046900,
       "news": [
         {
           "title": "U.S. Military Expert Issues Grave Warning: \u2018We Need More Munitions, and Deliveries Are Years Behind.\u2019 What Stocks Can Benefit?",
@@ -1112,7 +1112,7 @@ window.PRICES_DATA = {
       "company_name": "Red Cat Holdings",
       "category": "drones",
       "exchange": "NASDAQ",
-      "price_gbp": "8.65",
+      "price_gbp": "8.64",
       "price_usd": 11.44,
       "change_1d": "+0.20%",
       "change_1w": "-4.75%",
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "4.36",
       "high_gbp": "14",
       "bar_pct": 44,
-      "market_cap_gbp_b": 1.316,
+      "market_cap_gbp_b": 1.315,
       "beta": 1.242,
       "pe_ratio": null,
       "avg_volume_m": 14.29,
@@ -1130,9 +1130,9 @@ window.PRICES_DATA = {
       "short_pct": 20.56,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 22935000,
-      "vol_1w": 69819100,
-      "vol_1m": 395221400,
+      "vol_1d": 22981900,
+      "vol_1w": 69866000,
+      "vol_1m": 395268300,
       "news": [
         {
           "title": "Is Red Cat Holdings, Inc. (RCAT) A Good Stock To Buy Now?",
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "57",
       "high_gbp": "77",
       "bar_pct": 53,
-      "market_cap_gbp_b": 11.764,
+      "market_cap_gbp_b": 11.754,
       "beta": 0.907,
       "pe_ratio": 17.07,
       "avg_volume_m": 1.38,
@@ -1250,9 +1250,9 @@ window.PRICES_DATA = {
       "change_ytd": "+14.94%",
       "return_1yr": "+15%",
       "low_gbp": "113",
-      "high_gbp": "171",
+      "high_gbp": "170",
       "bar_pct": 47,
-      "market_cap_gbp_b": 1842.859,
+      "market_cap_gbp_b": 1841.348,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 288.72,
@@ -1260,9 +1260,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 271028500,
-      "vol_1w": 1443611000,
-      "vol_1m": 1443611000,
+      "vol_1d": 272126800,
+      "vol_1w": 1444709300,
+      "vol_1m": 1444709300,
       "news": [
         {
           "title": "How SpaceX benefits from its Cursor acquisition",
@@ -1279,28 +1279,28 @@ window.PRICES_DATA = {
           "sentiment": 0.527
         },
         {
-          "title": "4 Space Stocks to Load Up On While SpaceX Gets All the Attention",
+          "title": "SpaceX stock joins AI bond frenzy",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/spcx-spacex-stock-ai-bond-offering",
+          "published": 1781896380,
+          "sentiment": -0.318
+        },
+        {
+          "title": "Ethereum's New Tech Upgrade Is Coming Soon. Is It Time to Buy ETH?",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/4-ai-space-stocks-to-load-up-on-while-spacex-gets/",
-          "published": 1781886900,
+          "url": "https://www.fool.com/investing/2026/06/19/ethereums-new-tech-upgrade-is-coming-soon-is-it-ti/",
+          "published": 1781895180,
           "sentiment": 0.0
         },
         {
-          "title": "Dow Jones Futures Fall With U.S. Markets Shut; Nvidia Leads 5 Stocks Near Buy Points, SpaceX Needs This",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-5-chips-buy-points-spacex-stock/?src=A00220&yptr=yahoo",
-          "published": 1781884840,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Investing in an S&P 500 ETF? You May Want to Think Twice Starting in 2027",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/investing-in-sp-500-etf-think-twice-in-2027/",
-          "published": 1781883300,
-          "sentiment": 0.077
+          "title": "Stocks Stall as Iran Nuclear Talks Hit Early Snag: Markets Wrap",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-slide-focus-shifts-iran-080450531.html",
+          "published": 1781894960,
+          "sentiment": -0.202
         }
       ],
-      "news_sentiment": 0.197
+      "news_sentiment": 0.078
     },
     {
       "ticker": "RKLB",
@@ -1317,7 +1317,7 @@ window.PRICES_DATA = {
       "low_gbp": "21",
       "high_gbp": "114",
       "bar_pct": 64,
-      "market_cap_gbp_b": 50.665,
+      "market_cap_gbp_b": 50.623,
       "beta": 2.499,
       "pe_ratio": null,
       "avg_volume_m": 27.36,
@@ -1325,10 +1325,24 @@ window.PRICES_DATA = {
       "short_pct": 5.51,
       "analyst": "buy",
       "analyst_score": 1.58,
-      "vol_1d": 70251900,
-      "vol_1w": 218775800,
-      "vol_1m": 655407600,
+      "vol_1d": 70326000,
+      "vol_1w": 218849900,
+      "vol_1m": 655481700,
       "news": [
+        {
+          "title": "Price Prediction: Rocket Lab Will Hit $150 on This Date",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/price-prediction-rocket-lab-will-hit-150-on-this-date/",
+          "published": 1781892313,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How Rocket Lab (RKLB) Is Pairing Repeat Launch Demand With a Larger Space Systems Platform",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-pairing-repeat-171835630.html",
+          "published": 1781889515,
+          "sentiment": -0.128
+        },
         {
           "title": "4 Space Stocks to Load Up On While SpaceX Gets All the Attention",
           "publisher": "Motley Fool",
@@ -1349,23 +1363,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/rocket-lab-firefly-stock-price-upgrade-db4af93c?siteid=yhoof2&yptr=yahoo",
           "published": 1781802960,
           "sentiment": 0.0
-        },
-        {
-          "title": "SpaceX shares fall as post-IPO frenzy loses steam",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-shares-tumble-post-ipo-170153850.html",
-          "published": 1781802113,
-          "sentiment": -0.34
-        },
-        {
-          "title": "3 Space ETFs for a Timely Investment",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/articles/3-space-etfs-for-a-timely-investment/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1781797800,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.068
+      "news_sentiment": -0.026
     },
     {
       "ticker": "PL",
@@ -1379,10 +1379,10 @@ window.PRICES_DATA = {
       "change_1m": "-32.12%",
       "change_ytd": "+38.31%",
       "return_1yr": "+461%",
-      "low_gbp": "3.71",
+      "low_gbp": "3.70",
       "high_gbp": "39",
       "bar_pct": 50,
-      "market_cap_gbp_b": 7.608,
+      "market_cap_gbp_b": 7.601,
       "beta": 2.005,
       "pe_ratio": null,
       "avg_volume_m": 14.82,
@@ -1390,10 +1390,24 @@ window.PRICES_DATA = {
       "short_pct": 11.63,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 17206800,
-      "vol_1w": 86012400,
-      "vol_1m": 352427000,
+      "vol_1d": 17232400,
+      "vol_1w": 86038000,
+      "vol_1m": 352452600,
       "news": [
+        {
+          "title": "Planet Labs Stock Has Quickly Fallen 40%. Time to Buy the Dip?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/06/19/planet-labs-stock-has-fallen-40-time-to-buy/",
+          "published": 1781889600,
+          "sentiment": -0.361
+        },
+        {
+          "title": "Why Planet Labs (PL) Is Building a Higher-Value Space Data Story Around NGA Demand",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-planet-labs-pl-building-171904673.html",
+          "published": 1781889544,
+          "sentiment": -0.128
+        },
         {
           "title": "SpaceX shares fall as post-IPO frenzy loses steam",
           "publisher": "Reuters",
@@ -1414,23 +1428,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-yesterday-174051937.html",
           "published": 1781718051,
           "sentiment": 0.273
-        },
-        {
-          "title": "SpaceX is sucking the oxygen out of the new space trade",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/spacex-is-sucking-the-oxygen-out-of-the-new-space-trade-170815543.html",
-          "published": 1781716095,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Jim Cramer on Planet Labs: \u201cIt\u2019s Not a Stock You Should Chase Blindly at These Levels\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-planet-labs-not-163828126.html",
-          "published": 1781714308,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.075
+      "news_sentiment": -0.023
     },
     {
       "ticker": "ASTS",
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "low_gbp": "27",
       "high_gbp": "101",
       "bar_pct": 46,
-      "market_cap_gbp_b": 23.672,
+      "market_cap_gbp_b": 23.652,
       "beta": 2.634,
       "pe_ratio": null,
       "avg_volume_m": 21.36,
@@ -1455,10 +1455,17 @@ window.PRICES_DATA = {
       "short_pct": 18.39,
       "analyst": "hold",
       "analyst_score": 2.82,
-      "vol_1d": 31565800,
-      "vol_1w": 161063500,
-      "vol_1m": 608615400,
+      "vol_1d": 31679200,
+      "vol_1w": 161176900,
+      "vol_1m": 608728800,
       "news": [
+        {
+          "title": "Why AST SpaceMobile\u2019s (ASTS) BlueBird Launch Matters for Its Direct-to-Device Growth Test",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-ast-spacemobile-asts-bluebird-171522628.html",
+          "published": 1781889322,
+          "sentiment": 0.402
+        },
         {
           "title": "Is AST SpaceMobile, Inc. (ASTS) A Good Stock To Buy Now?",
           "publisher": "Insider Monkey",
@@ -1486,16 +1493,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/rocket-lab-firefly-stock-price-upgrade-db4af93c?siteid=yhoof2&yptr=yahoo",
           "published": 1781802960,
           "sentiment": 0.0
-        },
-        {
-          "title": "AST SpaceMobile Shares Rise on Successful Bluebird Satellite Launches. What This Means for ASTS Stock.",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2540842/ast-spacemobile-shares-rise-on-successful-bluebird-satellite-launches-what-this-means-for-asts-stock",
-          "published": 1781798804,
-          "sentiment": 0.718
         }
       ],
-      "news_sentiment": 0.34
+      "news_sentiment": 0.277
     },
     {
       "ticker": "TDG",
@@ -1509,10 +1509,10 @@ window.PRICES_DATA = {
       "change_1m": "+12.66%",
       "change_ytd": "-2.23%",
       "return_1yr": "-8%",
-      "low_gbp": "850",
-      "high_gbp": "1228",
+      "low_gbp": "849",
+      "high_gbp": "1227",
       "bar_pct": 41,
-      "market_cap_gbp_b": 56.178,
+      "market_cap_gbp_b": 56.132,
       "beta": 0.895,
       "pe_ratio": 41.5,
       "avg_volume_m": 0.4,
@@ -1574,10 +1574,10 @@ window.PRICES_DATA = {
       "change_1m": "+15.30%",
       "change_ytd": "+2.40%",
       "return_1yr": "+7%",
-      "low_gbp": "194",
+      "low_gbp": "193",
       "high_gbp": "273",
       "bar_pct": 77,
-      "market_cap_gbp_b": 35.598,
+      "market_cap_gbp_b": 35.569,
       "beta": 1.035,
       "pe_ratio": 60.2,
       "avg_volume_m": 0.69,
@@ -1640,9 +1640,9 @@ window.PRICES_DATA = {
       "change_ytd": "-24.86%",
       "return_1yr": "-46%",
       "low_gbp": "256",
-      "high_gbp": "670",
+      "high_gbp": "669",
       "bar_pct": 15,
-      "market_cap_gbp_b": 25.804,
+      "market_cap_gbp_b": 25.783,
       "beta": 1.422,
       "pe_ratio": 170.73,
       "avg_volume_m": 1.16,
@@ -1650,9 +1650,9 @@ window.PRICES_DATA = {
       "short_pct": 4.85,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 1918400,
-      "vol_1w": 5288600,
-      "vol_1m": 25556000,
+      "vol_1d": 1919200,
+      "vol_1w": 5289400,
+      "vol_1m": 25556800,
       "news": [
         {
           "title": "1 Industrials Stock for Long-Term Investors and 2 We Turn Down",
@@ -1707,7 +1707,7 @@ window.PRICES_DATA = {
       "low_gbp": "14",
       "high_gbp": "23",
       "bar_pct": 32,
-      "market_cap_gbp_b": 1.896,
+      "market_cap_gbp_b": 1.894,
       "beta": 1.171,
       "pe_ratio": null,
       "avg_volume_m": 2.5,
@@ -1772,7 +1772,7 @@ window.PRICES_DATA = {
       "low_gbp": "37",
       "high_gbp": "92",
       "bar_pct": 89,
-      "market_cap_gbp_b": 5.172,
+      "market_cap_gbp_b": 5.167,
       "beta": 0.949,
       "pe_ratio": null,
       "avg_volume_m": 0.63,
@@ -1837,7 +1837,7 @@ window.PRICES_DATA = {
       "low_gbp": "25",
       "high_gbp": "38",
       "bar_pct": 75,
-      "market_cap_gbp_b": 9.295,
+      "market_cap_gbp_b": 9.287,
       "beta": 0.121,
       "pe_ratio": 43.07,
       "avg_volume_m": 1.0,

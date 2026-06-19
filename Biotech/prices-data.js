@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-19 17:45",
-  "fx_gbp_usd": 1.3224,
+  "updated": "2026-06-19 20:31",
+  "fx_gbp_usd": 1.3236,
   "stocks": [
     {
       "ticker": "AMGN",
@@ -14,10 +14,10 @@ window.PRICES_DATA = {
       "change_1m": "+2.07%",
       "change_ytd": "+4.54%",
       "return_1yr": "+17%",
-      "low_gbp": "203",
+      "low_gbp": "202",
       "high_gbp": "296",
       "bar_pct": 57,
-      "market_cap_gbp_b": 137.784,
+      "market_cap_gbp_b": 137.658,
       "beta": 0.416,
       "pe_ratio": 23.49,
       "avg_volume_m": 2.85,
@@ -25,10 +25,17 @@ window.PRICES_DATA = {
       "short_pct": 2.2,
       "analyst": "buy",
       "analyst_score": 2.46,
-      "vol_1d": 8150600,
-      "vol_1w": 22238800,
-      "vol_1m": 67753700,
+      "vol_1d": 8151100,
+      "vol_1w": 22239300,
+      "vol_1m": 67754200,
       "news": [
+        {
+          "title": "Amgen vs. NovoCure: Which Health Care Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/06/19/amgen-vs-novocure-which-health-care-stock-is-a-better-buy-in-2026/",
+          "published": 1781889034,
+          "sentiment": 0.727
+        },
         {
           "title": "Amgen Inc. (AMGN) is Attracting Investor Attention: Here is What You Should Know",
           "publisher": "Zacks",
@@ -56,16 +63,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/amgen-apos-diversified-business-emerging-193557091.html",
           "published": 1781811357,
           "sentiment": 0.557
-        },
-        {
-          "title": "Amgen (AMGN) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amgen-amgn-sees-more-significant-215002640.html",
-          "published": 1781733002,
-          "sentiment": 0.272
         }
       ],
-      "news_sentiment": 0.281
+      "news_sentiment": 0.372
     },
     {
       "ticker": "GILD",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "79",
       "high_gbp": "119",
       "bar_pct": 37,
-      "market_cap_gbp_b": 116.195,
+      "market_cap_gbp_b": 116.089,
       "beta": 0.331,
       "pe_ratio": 16.84,
       "avg_volume_m": 6.89,
@@ -90,9 +90,9 @@ window.PRICES_DATA = {
       "short_pct": 2.07,
       "analyst": "buy",
       "analyst_score": 1.67,
-      "vol_1d": 14347800,
-      "vol_1w": 43323900,
-      "vol_1m": 186335200,
+      "vol_1d": 14348300,
+      "vol_1w": 43324400,
+      "vol_1m": 186335700,
       "news": [
         {
           "title": "VERAXA Unveils Cancer Therapy Platform, Sparks Partnering Talks at BIO 2026",
@@ -145,9 +145,9 @@ window.PRICES_DATA = {
       "change_ytd": "-21.22%",
       "return_1yr": "+20%",
       "low_gbp": "383",
-      "high_gbp": "621",
+      "high_gbp": "620",
       "bar_pct": 33,
-      "market_cap_gbp_b": 48.356,
+      "market_cap_gbp_b": 48.311,
       "beta": 0.238,
       "pe_ratio": 14.9,
       "avg_volume_m": 0.94,
@@ -202,7 +202,7 @@ window.PRICES_DATA = {
       "company_name": "Vertex Pharmaceuticals",
       "category": "large-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "342",
+      "price_gbp": "341",
       "price_usd": 451.63,
       "change_1d": "-0.96%",
       "change_1w": "+1.48%",
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "274",
       "high_gbp": "384",
       "bar_pct": 61,
-      "market_cap_gbp_b": 86.68,
+      "market_cap_gbp_b": 86.601,
       "beta": 0.31,
       "pe_ratio": 26.79,
       "avg_volume_m": 1.28,
@@ -274,10 +274,10 @@ window.PRICES_DATA = {
       "change_1m": "+3.16%",
       "change_ytd": "+10.55%",
       "return_1yr": "+55%",
-      "low_gbp": "92",
+      "low_gbp": "91",
       "high_gbp": "156",
       "bar_pct": 89,
-      "market_cap_gbp_b": 21.947,
+      "market_cap_gbp_b": 21.927,
       "beta": 0.177,
       "pe_ratio": 21.16,
       "avg_volume_m": 1.19,
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "32",
       "high_gbp": "48",
       "bar_pct": 56,
-      "market_cap_gbp_b": 83.388,
+      "market_cap_gbp_b": 83.311,
       "beta": 0.238,
       "pe_ratio": 15.13,
       "avg_volume_m": 11.8,
@@ -350,9 +350,9 @@ window.PRICES_DATA = {
       "short_pct": 1.89,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 31697200,
-      "vol_1w": 74013300,
-      "vol_1m": 272087900,
+      "vol_1d": 31700400,
+      "vol_1w": 74016500,
+      "vol_1m": 272091100,
       "news": [
         {
           "title": "Improve Your Retirement Income with These 3 Top-Ranked Dividend Stocks",
@@ -420,6 +420,13 @@ window.PRICES_DATA = {
       "vol_1m": 49032571,
       "news": [
         {
+          "title": "AstraZeneca (LSE:AZN) Takes Oral GLP 1 Drug Elecoglipron Into Phase III",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/healthcare/articles/astrazeneca-lse-azn-takes-oral-170935835.html",
+          "published": 1781888975,
+          "sentiment": 0.0
+        },
+        {
           "title": "AstraZeneca (LSE:AZN) Stock Could Be 20.2% Undervalued After Recent Pullback",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/astrazeneca-lse-azn-stock-could-130958574.html",
@@ -432,13 +439,6 @@ window.PRICES_DATA = {
           "url": "https://www.pharmaceutical-technology.com/features/asco26-rlts-bring-the-buzz-but-commercial-tolerability-qualms-remain/",
           "published": 1781860431,
           "sentiment": 0.0
-        },
-        {
-          "title": "European stocks edge higher, helped by energy and healthcare",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-muted-us-iran-072457742.html",
-          "published": 1781858947,
-          "sentiment": 0.273
         },
         {
           "title": "Astrazeneca (AZN) Stock Drops Despite Market Gains: Important Facts to Note",
@@ -455,7 +455,7 @@ window.PRICES_DATA = {
           "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.036
+      "news_sentiment": -0.018
     },
     {
       "ticker": "GSK",
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "33",
       "high_gbp": "59",
       "bar_pct": 31,
-      "market_cap_gbp_b": 4.028,
+      "market_cap_gbp_b": 4.025,
       "beta": 1.704,
       "pe_ratio": null,
       "avg_volume_m": 1.7,
@@ -545,9 +545,9 @@ window.PRICES_DATA = {
       "short_pct": 25.74,
       "analyst": "buy",
       "analyst_score": 1.96,
-      "vol_1d": 1940700,
-      "vol_1w": 8119300,
-      "vol_1m": 37601800,
+      "vol_1d": 1941400,
+      "vol_1w": 8120000,
+      "vol_1m": 37602500,
       "news": [
         {
           "title": "Why CRISPR Therapeutics Stock Has Been on a Roller-Coaster Ride This Year",
@@ -602,7 +602,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "28",
       "bar_pct": 89,
-      "market_cap_gbp_b": 2.656,
+      "market_cap_gbp_b": 2.654,
       "beta": 2.198,
       "pe_ratio": null,
       "avg_volume_m": 2.15,
@@ -610,9 +610,9 @@ window.PRICES_DATA = {
       "short_pct": 32.31,
       "analyst": "strong_buy",
       "analyst_score": 1.29,
-      "vol_1d": 3506400,
-      "vol_1w": 11378500,
-      "vol_1m": 43722600,
+      "vol_1d": 3509500,
+      "vol_1w": 11381600,
+      "vol_1m": 43725700,
       "news": [
         {
           "title": "BEAM Stock Gains 5% as FDA Clears BEAM-304 IND for Phenylketonuria",
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "6.01",
       "high_gbp": "21",
       "bar_pct": 38,
-      "market_cap_gbp_b": 1.656,
+      "market_cap_gbp_b": 1.654,
       "beta": 1.815,
       "pe_ratio": null,
       "avg_volume_m": 6.36,
@@ -675,9 +675,9 @@ window.PRICES_DATA = {
       "short_pct": 43.78,
       "analyst": "buy",
       "analyst_score": 2.14,
-      "vol_1d": 8845600,
-      "vol_1w": 56556600,
-      "vol_1m": 143495000,
+      "vol_1d": 8849200,
+      "vol_1w": 56560200,
+      "vol_1m": 143498600,
       "news": [
         {
           "title": "This Stock Is Up 58% This Year. Is It too Late to Buy?",
@@ -729,7 +729,7 @@ window.PRICES_DATA = {
       "change_1m": "+9.35%",
       "change_ytd": "+31.22%",
       "return_1yr": "+21%*",
-      "low_gbp": "1.26",
+      "low_gbp": "1.25",
       "high_gbp": "3.43",
       "bar_pct": 36,
       "market_cap_gbp_b": 0.312,
@@ -740,9 +740,9 @@ window.PRICES_DATA = {
       "short_pct": 9.83,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 3279500,
-      "vol_1w": 13142200,
-      "vol_1m": 75168100,
+      "vol_1d": 3286400,
+      "vol_1w": 13149100,
+      "vol_1m": 75175000,
       "news": [
         {
           "title": "Why Is Editas (EDIT) Down 12.4% Since Last Earnings Report?",
@@ -794,10 +794,10 @@ window.PRICES_DATA = {
       "change_1m": "+14.29%",
       "change_ytd": "+20.53%",
       "return_1yr": "+79%",
-      "low_gbp": "67",
+      "low_gbp": "66",
       "high_gbp": "134",
       "bar_pct": 83,
-      "market_cap_gbp_b": 18.527,
+      "market_cap_gbp_b": 18.51,
       "beta": 1.49,
       "pe_ratio": 29.44,
       "avg_volume_m": 1.67,
@@ -870,9 +870,9 @@ window.PRICES_DATA = {
       "short_pct": 18.03,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 4315800,
-      "vol_1w": 23131200,
-      "vol_1m": 122510300,
+      "vol_1d": 4318200,
+      "vol_1w": 23133600,
+      "vol_1m": 122512700,
       "news": [
         {
           "title": "Is Pacific Biosciences of California, Inc. (PACB) One of the Best Genomics Stocks to Buy According to Wall Street?",
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "100",
       "high_gbp": "194",
       "bar_pct": 80,
-      "market_cap_gbp_b": 25.062,
+      "market_cap_gbp_b": 25.039,
       "beta": 1.544,
       "pe_ratio": null,
       "avg_volume_m": 1.43,
@@ -935,9 +935,9 @@ window.PRICES_DATA = {
       "short_pct": 2.6,
       "analyst": "buy",
       "analyst_score": 1.52,
-      "vol_1d": 2630300,
-      "vol_1w": 7615300,
-      "vol_1m": 30401000,
+      "vol_1d": 2630800,
+      "vol_1w": 7615800,
+      "vol_1m": 30401500,
       "news": [
         {
           "title": "Natera (NTRA), CytoDyn Announce Strategic Collaboration for ctDNA-Guided mCRC Clinical Trials",
@@ -990,9 +990,9 @@ window.PRICES_DATA = {
       "change_ytd": "-23.10%",
       "return_1yr": "-36%*",
       "low_gbp": "2.09",
-      "high_gbp": "5.43",
+      "high_gbp": "5.42",
       "bar_pct": 10,
-      "market_cap_gbp_b": 1.296,
+      "market_cap_gbp_b": 1.295,
       "beta": 1.004,
       "pe_ratio": null,
       "avg_volume_m": 15.93,
@@ -1000,9 +1000,9 @@ window.PRICES_DATA = {
       "short_pct": 32.82,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 24750300,
-      "vol_1w": 92598700,
-      "vol_1m": 474587000,
+      "vol_1d": 24853700,
+      "vol_1w": 92702100,
+      "vol_1m": 474690400,
       "news": [
         {
           "title": "Why Recursion Pharmaceuticals (RXRX) Dipped More Than Broader Market Today",
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "85",
       "bar_pct": 69,
-      "market_cap_gbp_b": 14.839,
+      "market_cap_gbp_b": 14.825,
       "beta": 0.79,
       "pe_ratio": 13.87,
       "avg_volume_m": 1.63,
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "26",
       "high_gbp": "41",
       "bar_pct": 90,
-      "market_cap_gbp_b": 9.867,
+      "market_cap_gbp_b": 9.858,
       "beta": 0.435,
       "pe_ratio": 17.19,
       "avg_volume_m": 2.61,
@@ -1184,10 +1184,10 @@ window.PRICES_DATA = {
       "change_1m": "-5.51%",
       "change_ytd": "-30.51%",
       "return_1yr": "-10%",
-      "low_gbp": "207",
-      "high_gbp": "375",
+      "low_gbp": "206",
+      "high_gbp": "374",
       "bar_pct": 2,
-      "market_cap_gbp_b": 28.077,
+      "market_cap_gbp_b": 28.051,
       "beta": 0.267,
       "pe_ratio": 70.05,
       "avg_volume_m": 1.13,
@@ -1252,7 +1252,7 @@ window.PRICES_DATA = {
       "low_gbp": "5.98",
       "high_gbp": "22",
       "bar_pct": 79,
-      "market_cap_gbp_b": 2.312,
+      "market_cap_gbp_b": 2.31,
       "beta": 0.837,
       "pe_ratio": null,
       "avg_volume_m": 1.19,
@@ -1317,7 +1317,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "51",
       "bar_pct": 92,
-      "market_cap_gbp_b": 19.191,
+      "market_cap_gbp_b": 19.174,
       "beta": 1.03,
       "pe_ratio": null,
       "avg_volume_m": 7.01,
@@ -1325,9 +1325,9 @@ window.PRICES_DATA = {
       "short_pct": 17.82,
       "analyst": "hold",
       "analyst_score": 3.09,
-      "vol_1d": 24065200,
-      "vol_1w": 60985900,
-      "vol_1m": 149939700,
+      "vol_1d": 24078800,
+      "vol_1w": 60999500,
+      "vol_1m": 149953300,
       "news": [
         {
           "title": "MRNA Up as Influenza Vaccine Wins Unanimous FDA Advisory Panel Backing",
@@ -1382,7 +1382,7 @@ window.PRICES_DATA = {
       "low_gbp": "60",
       "high_gbp": "94",
       "bar_pct": 26,
-      "market_cap_gbp_b": 17.381,
+      "market_cap_gbp_b": 17.365,
       "beta": 1.324,
       "pe_ratio": null,
       "avg_volume_m": 0.96,
@@ -1444,10 +1444,10 @@ window.PRICES_DATA = {
       "change_1m": "+2.58%",
       "change_ytd": "+28.05%",
       "return_1yr": "+42%*",
-      "low_gbp": "4.64",
-      "high_gbp": "9.05",
+      "low_gbp": "4.63",
+      "high_gbp": "9.04",
       "bar_pct": 51,
-      "market_cap_gbp_b": 1.135,
+      "market_cap_gbp_b": 1.134,
       "beta": 2.414,
       "pe_ratio": null,
       "avg_volume_m": 4.67,
@@ -1455,9 +1455,9 @@ window.PRICES_DATA = {
       "short_pct": 28.13,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 9439200,
-      "vol_1w": 23673900,
-      "vol_1m": 112735000,
+      "vol_1d": 9458300,
+      "vol_1w": 23693000,
+      "vol_1m": 112754100,
       "news": [
         {
           "title": "Novavax (NVAX) Stock Falls Amid Market Uptick: What Investors Need to Know",
@@ -1512,7 +1512,7 @@ window.PRICES_DATA = {
       "low_gbp": "37",
       "high_gbp": "50",
       "bar_pct": 32,
-      "market_cap_gbp_b": 7.994,
+      "market_cap_gbp_b": 7.986,
       "beta": 0.24,
       "pe_ratio": 39.35,
       "avg_volume_m": 2.03,
@@ -1574,10 +1574,10 @@ window.PRICES_DATA = {
       "change_1m": "+5.35%",
       "change_ytd": "-17.74%",
       "return_1yr": "-13%",
-      "low_gbp": "7.88",
+      "low_gbp": "7.87",
       "high_gbp": "19",
       "bar_pct": 48,
-      "market_cap_gbp_b": 1.4,
+      "market_cap_gbp_b": 1.398,
       "beta": 0.205,
       "pe_ratio": 50.09,
       "avg_volume_m": 3.17,
@@ -1585,9 +1585,9 @@ window.PRICES_DATA = {
       "short_pct": 28.53,
       "analyst": "hold",
       "analyst_score": 2.83,
-      "vol_1d": 5608800,
-      "vol_1w": 16899500,
-      "vol_1m": 63614200,
+      "vol_1d": 5610400,
+      "vol_1w": 16901100,
+      "vol_1m": 63615800,
       "news": [
         {
           "title": "Sarepta's Elevidys Showing Signs of Stabilization as siRNA Pipeline Gains Importance, RBC Says",
@@ -1642,7 +1642,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "28",
       "bar_pct": 46,
-      "market_cap_gbp_b": 1.033,
+      "market_cap_gbp_b": 1.032,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 0.37,
@@ -1686,7 +1686,7 @@ window.PRICES_DATA = {
       "low_gbp": "27",
       "high_gbp": "56",
       "bar_pct": 21,
-      "market_cap_gbp_b": 144.617,
+      "market_cap_gbp_b": 144.485,
       "beta": 0.349,
       "pe_ratio": 10.16,
       "avg_volume_m": 15.59,
@@ -1694,10 +1694,24 @@ window.PRICES_DATA = {
       "short_pct": 0.71,
       "analyst": "buy",
       "analyst_score": 2.36,
-      "vol_1d": 8991300,
-      "vol_1w": 51023200,
-      "vol_1m": 273672400,
+      "vol_1d": 8996700,
+      "vol_1w": 51028600,
+      "vol_1m": 273677800,
       "news": [
+        {
+          "title": "Novo Nordisk Stock Rally as Owner Unveils $69 Million Obesity Research Push",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/healthcare/articles/novo-nordisk-stock-rally-owner-180142118.html",
+          "published": 1781892102,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Novo Nordisk Rises as Foundation Launches EUR 60 Million Incubator",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/healthcare/articles/novo-nordisk-rises-foundation-launches-174603316.html",
+          "published": 1781891163,
+          "sentiment": 0.0
+        },
         {
           "title": "Novo Nordisk faces limited upside from ZEUS trial as patent cliff looms, Deutsche Bank warns",
           "publisher": "Proactive",
@@ -1713,45 +1727,31 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "European stocks edge higher, helped by energy and healthcare",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-muted-us-iran-072457742.html",
-          "published": 1781858947,
-          "sentiment": 0.273
-        },
-        {
           "title": "Hims & Hers Rallies With a July FDA Decision Looming",
           "publisher": "GuruFocus.com",
           "url": "https://finance.yahoo.com/healthcare/articles/hims-hers-rallies-july-fda-175902441.html",
           "published": 1781805542,
           "sentiment": -0.128
-        },
-        {
-          "title": "FDA Accepts Roche's Filing for Lunsumio VELO-Polivy in LBCL",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/fda-accepts-roches-filing-lunsumio-164900760.html",
-          "published": 1781801340,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.005
+      "news_sentiment": -0.114
     },
     {
       "ticker": "LLY",
       "company_name": "Eli Lilly",
       "category": "metabolic",
       "exchange": "NYSE",
-      "price_gbp": "831",
+      "price_gbp": "830",
       "price_usd": 1098.57,
       "change_1d": "-1.28%",
       "change_1w": "-5.37%",
       "change_1m": "+7.55%",
       "change_ytd": "+2.03%",
       "return_1yr": "+44%",
-      "low_gbp": "472",
+      "low_gbp": "471",
       "high_gbp": "894",
       "bar_pct": 85,
-      "market_cap_gbp_b": 740.804,
+      "market_cap_gbp_b": 740.128,
       "beta": 0.517,
       "pe_ratio": 39.0,
       "avg_volume_m": 3.2,
@@ -1759,10 +1759,24 @@ window.PRICES_DATA = {
       "short_pct": 1.1,
       "analyst": "buy",
       "analyst_score": 1.74,
-      "vol_1d": 4468200,
-      "vol_1w": 14717800,
-      "vol_1m": 72176200,
+      "vol_1d": 4470500,
+      "vol_1w": 14720100,
+      "vol_1m": 72178500,
       "news": [
+        {
+          "title": "Prediction: Eli Lilly Will Trade at $1,200 on This Date",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/prediction-eli-lilly-will-trade-at-1200-on-this-date/",
+          "published": 1781896548,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Cathie Wood Makes Bold Tesla Bet, Dumps $77 Million in Roku Shares",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-makes-bold-tesla-175813012.html",
+          "published": 1781891893,
+          "sentiment": 0.273
+        },
         {
           "title": "Cathie Wood Rotates Into Tesla and Snowflake",
           "publisher": "GuruFocus.com",
@@ -1783,23 +1797,9 @@ window.PRICES_DATA = {
           "url": "https://www.hospitalmanagement.net/news/charles-river-lilly-tunelab-platform/",
           "published": 1781863663,
           "sentiment": 0.0
-        },
-        {
-          "title": "ASCO26: RLTs bring the buzz, but commercial and tolerability qualms remain",
-          "publisher": "Pharmaceutical Technology",
-          "url": "https://www.pharmaceutical-technology.com/features/asco26-rlts-bring-the-buzz-but-commercial-tolerability-qualms-remain/",
-          "published": 1781860431,
-          "sentiment": 0.0
-        },
-        {
-          "title": "The Next Wave of Medical AI Could Mint More Millionaires Than the First -- Here Are the Stocks to Own",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/19/the-next-wave-of-medical-ai-could-mint-more-millio/",
-          "published": 1781859000,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.055
     },
     {
       "ticker": "LEGN",
@@ -1816,7 +1816,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "34",
       "bar_pct": 40,
-      "market_cap_gbp_b": 3.923,
+      "market_cap_gbp_b": 3.919,
       "beta": 0.352,
       "pe_ratio": null,
       "avg_volume_m": 2.61,
@@ -1824,9 +1824,9 @@ window.PRICES_DATA = {
       "short_pct": 17.1,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 13604200,
-      "vol_1w": 19818100,
-      "vol_1m": 70155200,
+      "vol_1d": 13608400,
+      "vol_1w": 19822300,
+      "vol_1m": 70159400,
       "news": [
         {
           "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Thursday as Interim US-Iran Deal Lifts Risk Sentiment",
@@ -1881,7 +1881,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "66",
       "bar_pct": 75,
-      "market_cap_gbp_b": 9.263,
+      "market_cap_gbp_b": 9.254,
       "beta": 0.37,
       "pe_ratio": null,
       "avg_volume_m": 1.83,
