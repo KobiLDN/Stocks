@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19 08:07",
-  "fx_gbp_usd": 1.3205,
+  "updated": "2026-06-19 13:14",
+  "fx_gbp_usd": 1.3233,
   "stocks": [
     {
       "ticker": "XOM",
@@ -15,9 +15,9 @@
       "change_ytd": "+13.88%",
       "return_1yr": "+20%",
       "low_gbp": "80",
-      "high_gbp": "134",
+      "high_gbp": "133",
       "bar_pct": 46,
-      "market_cap_gbp_b": 432.587,
+      "market_cap_gbp_b": 431.667,
       "beta": 0.149,
       "pe_ratio": 23.2,
       "avg_volume_m": 20.07,
@@ -51,21 +51,21 @@
           "sentiment": 0.226
         },
         {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
-        },
-        {
           "title": "ExxonMobil and Occidental Petroleum Stocks Trade Down, What You Need To Know",
           "publisher": "StockStory",
           "url": "https://finance.yahoo.com/energy/articles/exxonmobil-occidental-petroleum-stocks-trade-194128116.html",
           "published": 1781811688,
           "sentiment": 0.0
+        },
+        {
+          "title": "The SLB Paradox: Short-Term Friction, Long-Cycle Fuel",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/603545/the-slb-paradox-short-term-friction-long-cycle-fuel/2026-06-18",
+          "published": 1781802122,
+          "sentiment": -0.103
         }
       ],
-      "news_sentiment": 0.16
+      "news_sentiment": 0.025
     },
     {
       "ticker": "CVX",
@@ -80,9 +80,9 @@
       "change_ytd": "+13.49%",
       "return_1yr": "+16%",
       "low_gbp": "108",
-      "high_gbp": "163",
+      "high_gbp": "162",
       "bar_pct": 43,
-      "market_cap_gbp_b": 261.879,
+      "market_cap_gbp_b": 261.322,
       "beta": 0.472,
       "pe_ratio": 30.2,
       "avg_volume_m": 11.03,
@@ -94,13 +94,6 @@
       "vol_1w": 53122200,
       "vol_1m": 210843300,
       "news": [
-        {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
-        },
         {
           "title": "The SLB Paradox: Short-Term Friction, Long-Cycle Fuel",
           "publisher": "Trefis",
@@ -128,9 +121,16 @@
           "url": "https://finance.yahoo.com/energy/articles/chevron-cvx-buys-70-greece-081718426.html",
           "published": 1781770638,
           "sentiment": -0.017
+        },
+        {
+          "title": "Western Midstream Expands Permian Water Recycling With New Treatment Plant",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/western-midstream-expands-permian-water-031500372.html",
+          "published": 1781752500,
+          "sentiment": 0.103
         }
       ],
-      "news_sentiment": 0.111
+      "news_sentiment": 0.017
     },
     {
       "ticker": "SHEL",
@@ -147,7 +147,7 @@
       "low_gbp": "51",
       "high_gbp": "72",
       "bar_pct": 42,
-      "market_cap_gbp_b": 165.443,
+      "market_cap_gbp_b": 165.092,
       "beta": -0.248,
       "pe_ratio": 12.28,
       "avg_volume_m": 7.85,
@@ -210,9 +210,9 @@
       "change_ytd": "+11.80%",
       "return_1yr": "+25%",
       "low_gbp": "22",
-      "high_gbp": "37",
+      "high_gbp": "36",
       "bar_pct": 51,
-      "market_cap_gbp_b": 76.25,
+      "market_cap_gbp_b": 76.088,
       "beta": -0.239,
       "pe_ratio": 31.79,
       "avg_volume_m": 11.96,
@@ -224,6 +224,13 @@
       "vol_1w": 45916100,
       "vol_1m": 199894500,
       "news": [
+        {
+          "title": "BP taps DeepOcean for Foinaven subsea recycling project",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/bp-taps-deepocean-foinaven-subsea-recycling/",
+          "published": 1781865289,
+          "sentiment": 0.0
+        },
         {
           "title": "Investors Heavily Search BP p.l.c. (BP): Here is What You Need to Know",
           "publisher": "Zacks",
@@ -251,16 +258,9 @@
           "url": "https://www.kiplinger.com/investing/etfs/604248/energy-etfs-to-buy",
           "published": 1781643750,
           "sentiment": 0.743
-        },
-        {
-          "title": "BP (BP) Stock Drops Despite Market Gains: Important Facts to Note",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bp-bp-stock-drops-despite-220003971.html",
-          "published": 1781560803,
-          "sentiment": -0.388
         }
       ],
-      "news_sentiment": 0.071
+      "news_sentiment": 0.149
     },
     {
       "ticker": "TTE",
@@ -277,7 +277,7 @@
       "low_gbp": "43",
       "high_gbp": "71",
       "bar_pct": 63,
-      "market_cap_gbp_b": 135.519,
+      "market_cap_gbp_b": 135.231,
       "beta": 0.045,
       "pe_ratio": 11.93,
       "avg_volume_m": 1.72,
@@ -289,6 +289,13 @@
       "vol_1w": 10018300,
       "vol_1m": 31312800,
       "news": [
+        {
+          "title": "Hormuz Reopening to Spark Oil Field Restart Visible From Space",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/energy/articles/hormuz-reopening-spark-oil-field-220015679.html",
+          "published": 1781864383,
+          "sentiment": 0.226
+        },
         {
           "title": "How the Oil Sands Became the Lowest-Cost North American Producer",
           "publisher": "Oilprice.com",
@@ -316,23 +323,16 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-123451429.html",
           "published": 1781613291,
           "sentiment": 0.0
-        },
-        {
-          "title": "EU approves $2.2bn TotalEnergies and Masdar renewables JV",
-          "publisher": "Power Technology",
-          "url": "https://www.power-technology.com/news/eu-approves-totalenergies-masdar-jv/",
-          "published": 1781600361,
-          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.03
+      "news_sentiment": -0.005
     },
     {
       "ticker": "EQNR",
       "company_name": "Equinor",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "25",
+      "price_gbp": "24",
       "price_usd": 32.38,
       "change_1d": "-3.86%",
       "change_1w": "-11.89%",
@@ -342,7 +342,7 @@
       "low_gbp": "17",
       "high_gbp": "33",
       "bar_pct": 48,
-      "market_cap_gbp_b": 61.065,
+      "market_cap_gbp_b": 60.936,
       "beta": -0.752,
       "pe_ratio": 14.65,
       "avg_volume_m": 5.64,
@@ -354,6 +354,13 @@
       "vol_1w": 25943700,
       "vol_1m": 88509800,
       "news": [
+        {
+          "title": "Equinor and partners agree Ringvei Vest subsea development plan",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/equinor-partners-ringvei-vest-subsea-development/",
+          "published": 1781859170,
+          "sentiment": 0.361
+        },
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Little Changed in Thursday Trading",
           "publisher": "MT Newswires",
@@ -381,23 +388,16 @@
           "url": "https://finance.yahoo.com/energy/articles/week-energy-transition-p-moller-113729410.html",
           "published": 1781782649,
           "sentiment": 0.273
-        },
-        {
-          "title": "Top Analyst Reports for NVIDIA, Oracle & Home Depot",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-analyst-reports-nvidia-oracle-210200457.html",
-          "published": 1781730120,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.095
+      "news_sentiment": 0.127
     },
     {
       "ticker": "COP",
       "company_name": "ConocoPhillips",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "82",
+      "price_gbp": "81",
       "price_usd": 107.74,
       "change_1d": "-2.51%",
       "change_1w": "-6.61%",
@@ -407,7 +407,7 @@
       "low_gbp": "65",
       "high_gbp": "103",
       "bar_pct": 44,
-      "market_cap_gbp_b": 99.404,
+      "market_cap_gbp_b": 99.192,
       "beta": 0.106,
       "pe_ratio": 18.26,
       "avg_volume_m": 8.69,
@@ -425,13 +425,6 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/conocophillips-cop-stock-slides-market-220005909.html",
           "published": 1781820005,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
         },
         {
           "title": "The 25 Biggest U.S. IPOs of All Time",
@@ -453,9 +446,16 @@
           "url": "https://finance.yahoo.com/energy/articles/zacks-analyst-blog-highlights-exxon-065100767.html",
           "published": 1781765460,
           "sentiment": 0.0
+        },
+        {
+          "title": "Western Midstream Expands Permian Water Recycling With New Treatment Plant",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/western-midstream-expands-permian-water-031500372.html",
+          "published": 1781752500,
+          "sentiment": 0.103
         }
       ],
-      "news_sentiment": 0.125
+      "news_sentiment": 0.031
     },
     {
       "ticker": "OXY",
@@ -472,7 +472,7 @@
       "low_gbp": "29",
       "high_gbp": "51",
       "bar_pct": 45,
-      "market_cap_gbp_b": 39.033,
+      "market_cap_gbp_b": 38.95,
       "beta": 0.124,
       "pe_ratio": 70.03,
       "avg_volume_m": 13.86,
@@ -484,13 +484,6 @@
       "vol_1w": 52981100,
       "vol_1m": 235645000,
       "news": [
-        {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
-        },
         {
           "title": "ExxonMobil and Occidental Petroleum Stocks Trade Down, What You Need To Know",
           "publisher": "StockStory",
@@ -518,9 +511,16 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/06/18/eqt-vs-occidental-petroleum-which-energy-stock-is-a-better-buy-in-2026/",
           "published": 1781799126,
           "sentiment": 0.612
+        },
+        {
+          "title": "Stocks Supported as Geopolitical Risks Recede",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2539862/stocks-supported-as-geopolitical-risks-recede",
+          "published": 1781795829,
+          "sentiment": 0.052
         }
       ],
-      "news_sentiment": 0.384
+      "news_sentiment": 0.28
     },
     {
       "ticker": "EOG",
@@ -537,7 +537,7 @@
       "low_gbp": "77",
       "high_gbp": "115",
       "bar_pct": 56,
-      "market_cap_gbp_b": 52.429,
+      "market_cap_gbp_b": 52.318,
       "beta": 0.256,
       "pe_ratio": 12.78,
       "avg_volume_m": 4.17,
@@ -599,10 +599,10 @@
       "change_1m": "-7.29%",
       "change_ytd": "+48.39%",
       "return_1yr": "+44%",
-      "low_gbp": "120",
+      "low_gbp": "119",
       "high_gbp": "206",
       "bar_pct": 74,
-      "market_cap_gbp_b": 53.704,
+      "market_cap_gbp_b": 53.59,
       "beta": 0.522,
       "pe_ratio": 16.0,
       "avg_volume_m": 2.46,
@@ -667,7 +667,7 @@
       "low_gbp": "99",
       "high_gbp": "201",
       "bar_pct": 78,
-      "market_cap_gbp_b": 53.137,
+      "market_cap_gbp_b": 53.024,
       "beta": 0.553,
       "pe_ratio": 17.25,
       "avg_volume_m": 3.47,
@@ -685,13 +685,6 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-vlo-stock-sinks-220007375.html",
           "published": 1781820007,
           "sentiment": 0.542
-        },
-        {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
         },
         {
           "title": "Here's How Declining Crude Oil Prices are Benefiting Valero Energy",
@@ -713,9 +706,16 @@
           "url": "https://finance.yahoo.com/energy/articles/vlo-vs-kmi-energy-pick-151300891.html",
           "published": 1781795580,
           "sentiment": 0.778
+        },
+        {
+          "title": "Is Valero Energy (VLO) a Buy as Wall Street Analysts Look Optimistic?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-vlo-buy-wall-133003509.html",
+          "published": 1781789403,
+          "sentiment": 0.527
         }
       ],
-      "news_sentiment": 0.312
+      "news_sentiment": 0.303
     },
     {
       "ticker": "SLB",
@@ -730,9 +730,9 @@
       "change_ytd": "+20.96%",
       "return_1yr": "+34%",
       "low_gbp": "24",
-      "high_gbp": "45",
+      "high_gbp": "44",
       "bar_pct": 61,
-      "market_cap_gbp_b": 54.449,
+      "market_cap_gbp_b": 54.333,
       "beta": 0.708,
       "pe_ratio": 21.19,
       "avg_volume_m": 15.81,
@@ -745,18 +745,18 @@
       "vol_1m": 336227100,
       "news": [
         {
+          "title": "SLB (SLB) Stock Could Be 21.7% Undervalued After Digital Marketplace Launch",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-stock-could-21-071343829.html",
+          "published": 1781853223,
+          "sentiment": 0.0
+        },
+        {
           "title": "S&P 500 Posts Weekly Gain Amid US-Iran Memorandum of Understanding",
           "publisher": "MT Newswires",
           "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-posts-weekly-gain-204129247.html",
           "published": 1781815289,
           "sentiment": 0.527
-        },
-        {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
         },
         {
           "title": "Nvidia\u2019s Next Huge Bet: Drill, Baby, Drill!",
@@ -780,7 +780,7 @@
           "sentiment": 0.052
         }
       ],
-      "news_sentiment": 0.286
+      "news_sentiment": 0.171
     },
     {
       "ticker": "HAL",
@@ -797,7 +797,7 @@
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 63,
-      "market_cap_gbp_b": 22.099,
+      "market_cap_gbp_b": 22.052,
       "beta": 0.704,
       "pe_ratio": 19.3,
       "avg_volume_m": 13.59,
@@ -815,13 +815,6 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-posts-weekly-gain-204129247.html",
           "published": 1781815289,
           "sentiment": 0.527
-        },
-        {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
         },
         {
           "title": "Halliburton, Patterson-UTI, and Talos Energy Shares Plummet, What You Need To Know",
@@ -843,6 +836,13 @@
           "url": "https://www.barchart.com/story/news/2539862/stocks-supported-as-geopolitical-risks-recede",
           "published": 1781795829,
           "sentiment": 0.052
+        },
+        {
+          "title": "Halliburton (HAL) Stock Sees Modest Fair Value Lift As Analysts Rework Price Targets",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/halliburton-hal-stock-sees-modest-043512224.html",
+          "published": 1781670912,
+          "sentiment": 0.572
         }
       ],
       "news_sentiment": 0.312
@@ -862,7 +862,7 @@
       "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 64,
-      "market_cap_gbp_b": 43.884,
+      "market_cap_gbp_b": 43.79,
       "beta": 0.938,
       "pe_ratio": 18.66,
       "avg_volume_m": 8.34,
@@ -874,13 +874,6 @@
       "vol_1w": 44405100,
       "vol_1m": 173638300,
       "news": [
-        {
-          "title": "Stocks Sharply Higher as US-Iran Peace Deal Eases Inflation Risks",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2545263/stocks-sharply-higher-as-us-iran-peace-deal-eases-inflation-risks",
-          "published": 1781814863,
-          "sentiment": 0.572
-        },
         {
           "title": "Stocks Supported as Geopolitical Risks Recede",
           "publisher": "Barchart",
@@ -908,9 +901,16 @@
           "url": "https://www.barchart.com/story/news/2496862/broader-market-weakens-as-energy-and-software-stocks-fall",
           "published": 1781622938,
           "sentiment": -0.052
+        },
+        {
+          "title": "Patterson-UTI, ProFrac, and ProPetro Shares Are Falling, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/patterson-uti-profrac-propetro-shares-011607756.html",
+          "published": 1781572567,
+          "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.094
+      "news_sentiment": 0.01
     },
     {
       "ticker": "NEE",
@@ -927,7 +927,7 @@
       "low_gbp": "51",
       "high_gbp": "75",
       "bar_pct": 62,
-      "market_cap_gbp_b": 137.017,
+      "market_cap_gbp_b": 136.726,
       "beta": 0.671,
       "pe_ratio": 22.02,
       "avg_volume_m": 10.76,
@@ -983,26 +983,26 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "23",
-      "price_usd": 2312.0,
-      "change_1d": "-1.83%",
-      "change_1w": "-3.51%",
-      "change_1m": "-0.56%",
-      "change_ytd": "+3.63%",
-      "return_1yr": "+30%",
+      "price_usd": 2315.0,
+      "change_1d": "-0.64%",
+      "change_1w": "-3.54%",
+      "change_1m": "-0.43%",
+      "change_ytd": "+3.77%",
+      "return_1yr": "+28%",
       "low_gbp": "16",
       "high_gbp": "28",
       "bar_pct": 61,
       "market_cap_gbp_b": 0.279,
       "beta": 0.596,
-      "pe_ratio": 22.02,
-      "avg_volume_m": 4.21,
+      "pe_ratio": 22.05,
+      "avg_volume_m": 4.25,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 6806448,
-      "vol_1w": 17332617,
-      "vol_1m": 93746976,
+      "vol_1d": 1758310,
+      "vol_1w": 15742523,
+      "vol_1m": 95505286,
       "news": [
         {
           "title": "UK, Japan to deepen ties with \u00a318 billion investment agreement",
@@ -1054,17 +1054,17 @@
       "change_1m": "+11.80%",
       "change_ytd": "+54.90%",
       "return_1yr": "+46%",
-      "low_gbp": "20",
+      "low_gbp": "19",
       "high_gbp": "56",
       "bar_pct": 55,
-      "market_cap_gbp_b": 5.218,
+      "market_cap_gbp_b": 5.207,
       "beta": 1.572,
       "pe_ratio": 51.76,
       "avg_volume_m": 7.83,
       "div_yield_pct": null,
       "short_pct": 24.43,
       "analyst": "hold",
-      "analyst_score": 2.55,
+      "analyst_score": 2.52,
       "vol_1d": 13965600,
       "vol_1w": 38916500,
       "vol_1m": 192903200,
@@ -1122,7 +1122,7 @@
       "low_gbp": "105",
       "high_gbp": "243",
       "bar_pct": 65,
-      "market_cap_gbp_b": 20.97,
+      "market_cap_gbp_b": 20.926,
       "beta": 1.692,
       "pe_ratio": 16.64,
       "avg_volume_m": 2.52,
@@ -1187,7 +1187,7 @@
       "low_gbp": "24",
       "high_gbp": "34",
       "bar_pct": 45,
-      "market_cap_gbp_b": 5.168,
+      "market_cap_gbp_b": 5.157,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1242,7 +1242,7 @@
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.60",
+      "price_gbp": "5.58",
       "price_usd": 7.39,
       "change_1d": "-1.60%",
       "change_1w": "-9.10%",
@@ -1252,7 +1252,7 @@
       "low_gbp": "4.35",
       "high_gbp": "25",
       "bar_pct": 6,
-      "market_cap_gbp_b": 22.18,
+      "market_cap_gbp_b": 22.133,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,
