@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-19 13:14",
-  "fx_gbp_usd": 1.3233,
+  "updated": "2026-06-19 14:37",
+  "fx_gbp_usd": 1.322,
   "stocks": [
     {
       "ticker": "XOM",
@@ -17,7 +17,7 @@
       "low_gbp": "80",
       "high_gbp": "133",
       "bar_pct": 46,
-      "market_cap_gbp_b": 431.667,
+      "market_cap_gbp_b": 432.096,
       "beta": 0.149,
       "pe_ratio": 23.2,
       "avg_volume_m": 20.07,
@@ -29,6 +29,13 @@
       "vol_1w": 124987700,
       "vol_1m": 399362100,
       "news": [
+        {
+          "title": "Expert Warns: California Taxes Harming \u201cBig Wealth Driver in the State\u201d as Billionaires Flee",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/expert-warns-california-taxes-harming-big-wealth-driver-in-the-state-as-billionaires-flee/",
+          "published": 1781873185,
+          "sentiment": -0.202
+        },
         {
           "title": "Darren Woods\u2019 Game Plan at Exxon Mobil: Produce More Oil for Less Money",
           "publisher": "Barrons.com",
@@ -56,16 +63,9 @@
           "url": "https://finance.yahoo.com/energy/articles/exxonmobil-occidental-petroleum-stocks-trade-194128116.html",
           "published": 1781811688,
           "sentiment": 0.0
-        },
-        {
-          "title": "The SLB Paradox: Short-Term Friction, Long-Cycle Fuel",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/603545/the-slb-paradox-short-term-friction-long-cycle-fuel/2026-06-18",
-          "published": 1781802122,
-          "sentiment": -0.103
         }
       ],
-      "news_sentiment": 0.025
+      "news_sentiment": 0.005
     },
     {
       "ticker": "CVX",
@@ -82,7 +82,7 @@
       "low_gbp": "108",
       "high_gbp": "162",
       "bar_pct": 43,
-      "market_cap_gbp_b": 261.322,
+      "market_cap_gbp_b": 261.581,
       "beta": 0.472,
       "pe_ratio": 30.2,
       "avg_volume_m": 11.03,
@@ -94,6 +94,13 @@
       "vol_1w": 53122200,
       "vol_1m": 210843300,
       "news": [
+        {
+          "title": "Expert Warns: California Taxes Harming \u201cBig Wealth Driver in the State\u201d as Billionaires Flee",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/19/expert-warns-california-taxes-harming-big-wealth-driver-in-the-state-as-billionaires-flee/",
+          "published": 1781873185,
+          "sentiment": -0.202
+        },
         {
           "title": "The SLB Paradox: Short-Term Friction, Long-Cycle Fuel",
           "publisher": "Trefis",
@@ -121,16 +128,9 @@
           "url": "https://finance.yahoo.com/energy/articles/chevron-cvx-buys-70-greece-081718426.html",
           "published": 1781770638,
           "sentiment": -0.017
-        },
-        {
-          "title": "Western Midstream Expands Permian Water Recycling With New Treatment Plant",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/western-midstream-expands-permian-water-031500372.html",
-          "published": 1781752500,
-          "sentiment": 0.103
         }
       ],
-      "news_sentiment": 0.017
+      "news_sentiment": -0.044
     },
     {
       "ticker": "SHEL",
@@ -147,7 +147,7 @@
       "low_gbp": "51",
       "high_gbp": "72",
       "bar_pct": 42,
-      "market_cap_gbp_b": 165.092,
+      "market_cap_gbp_b": 165.255,
       "beta": -0.248,
       "pe_ratio": 12.28,
       "avg_volume_m": 7.85,
@@ -210,9 +210,9 @@
       "change_ytd": "+11.80%",
       "return_1yr": "+25%",
       "low_gbp": "22",
-      "high_gbp": "36",
+      "high_gbp": "37",
       "bar_pct": 51,
-      "market_cap_gbp_b": 76.088,
+      "market_cap_gbp_b": 76.163,
       "beta": -0.239,
       "pe_ratio": 31.79,
       "avg_volume_m": 11.96,
@@ -277,7 +277,7 @@
       "low_gbp": "43",
       "high_gbp": "71",
       "bar_pct": 63,
-      "market_cap_gbp_b": 135.231,
+      "market_cap_gbp_b": 135.365,
       "beta": 0.045,
       "pe_ratio": 11.93,
       "avg_volume_m": 1.72,
@@ -342,7 +342,7 @@
       "low_gbp": "17",
       "high_gbp": "33",
       "bar_pct": 48,
-      "market_cap_gbp_b": 60.936,
+      "market_cap_gbp_b": 60.996,
       "beta": -0.752,
       "pe_ratio": 14.65,
       "avg_volume_m": 5.64,
@@ -407,7 +407,7 @@
       "low_gbp": "65",
       "high_gbp": "103",
       "bar_pct": 44,
-      "market_cap_gbp_b": 99.192,
+      "market_cap_gbp_b": 99.291,
       "beta": 0.106,
       "pe_ratio": 18.26,
       "avg_volume_m": 8.69,
@@ -472,7 +472,7 @@
       "low_gbp": "29",
       "high_gbp": "51",
       "bar_pct": 45,
-      "market_cap_gbp_b": 38.95,
+      "market_cap_gbp_b": 38.989,
       "beta": 0.124,
       "pe_ratio": 70.03,
       "avg_volume_m": 13.86,
@@ -537,7 +537,7 @@
       "low_gbp": "77",
       "high_gbp": "115",
       "bar_pct": 56,
-      "market_cap_gbp_b": 52.318,
+      "market_cap_gbp_b": 52.37,
       "beta": 0.256,
       "pe_ratio": 12.78,
       "avg_volume_m": 4.17,
@@ -599,10 +599,10 @@
       "change_1m": "-7.29%",
       "change_ytd": "+48.39%",
       "return_1yr": "+44%",
-      "low_gbp": "119",
+      "low_gbp": "120",
       "high_gbp": "206",
       "bar_pct": 74,
-      "market_cap_gbp_b": 53.59,
+      "market_cap_gbp_b": 53.643,
       "beta": 0.522,
       "pe_ratio": 16.0,
       "avg_volume_m": 2.46,
@@ -667,7 +667,7 @@
       "low_gbp": "99",
       "high_gbp": "201",
       "bar_pct": 78,
-      "market_cap_gbp_b": 53.024,
+      "market_cap_gbp_b": 53.076,
       "beta": 0.553,
       "pe_ratio": 17.25,
       "avg_volume_m": 3.47,
@@ -732,7 +732,7 @@
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 61,
-      "market_cap_gbp_b": 54.333,
+      "market_cap_gbp_b": 54.387,
       "beta": 0.708,
       "pe_ratio": 21.19,
       "avg_volume_m": 15.81,
@@ -744,6 +744,13 @@
       "vol_1w": 104183400,
       "vol_1m": 336227100,
       "news": [
+        {
+          "title": "SLB (SLB) Stock After Recent Pullback Could The Valuation Gap Be An Opportunity",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-stock-recent-pullback-131028217.html",
+          "published": 1781874628,
+          "sentiment": 0.421
+        },
         {
           "title": "SLB (SLB) Stock Could Be 21.7% Undervalued After Digital Marketplace Launch",
           "publisher": "Simply Wall St.",
@@ -771,16 +778,9 @@
           "url": "https://www.trefis.com/articles/603545/the-slb-paradox-short-term-friction-long-cycle-fuel/2026-06-18",
           "published": 1781802122,
           "sentiment": -0.103
-        },
-        {
-          "title": "Stocks Supported as Geopolitical Risks Recede",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/2539862/stocks-supported-as-geopolitical-risks-recede",
-          "published": 1781795829,
-          "sentiment": 0.052
         }
       ],
-      "news_sentiment": 0.171
+      "news_sentiment": 0.245
     },
     {
       "ticker": "HAL",
@@ -797,7 +797,7 @@
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 63,
-      "market_cap_gbp_b": 22.052,
+      "market_cap_gbp_b": 22.074,
       "beta": 0.704,
       "pe_ratio": 19.3,
       "avg_volume_m": 13.59,
@@ -862,7 +862,7 @@
       "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 64,
-      "market_cap_gbp_b": 43.79,
+      "market_cap_gbp_b": 43.834,
       "beta": 0.938,
       "pe_ratio": 18.66,
       "avg_volume_m": 8.34,
@@ -927,7 +927,7 @@
       "low_gbp": "51",
       "high_gbp": "75",
       "bar_pct": 62,
-      "market_cap_gbp_b": 136.726,
+      "market_cap_gbp_b": 136.862,
       "beta": 0.671,
       "pe_ratio": 22.02,
       "avg_volume_m": 10.76,
@@ -939,6 +939,13 @@
       "vol_1w": 59507300,
       "vol_1m": 283860500,
       "news": [
+        {
+          "title": "AES Boosts Growth Through Renewable Energy and LNG Investments",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/energy/articles/aes-boosts-growth-renewable-energy-122200860.html",
+          "published": 1781871720,
+          "sentiment": 0.718
+        },
         {
           "title": "Does Constellation Energy Stock's Surge Broaden Your Portfolio Or Just Amplify It?",
           "publisher": "Trefis",
@@ -966,16 +973,9 @@
           "url": "https://247wallst.com/investing/2026/06/18/3-utility-stocks-for-years-of-passive-income/",
           "published": 1781801484,
           "sentiment": 0.202
-        },
-        {
-          "title": "Will NextEra Gain by Generating Power From Multiple Clean Sources?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/nextera-gain-generating-power-multiple-163100081.html",
-          "published": 1781800260,
-          "sentiment": 0.727
         }
       ],
-      "news_sentiment": 0.412
+      "news_sentiment": 0.41
     },
     {
       "ticker": "SSE.L",
@@ -983,26 +983,26 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "23",
-      "price_usd": 2315.0,
-      "change_1d": "-0.64%",
-      "change_1w": "-3.54%",
-      "change_1m": "-0.43%",
-      "change_ytd": "+3.77%",
+      "price_usd": 2311.0,
+      "change_1d": "-0.82%",
+      "change_1w": "-3.71%",
+      "change_1m": "-0.60%",
+      "change_ytd": "+3.59%",
       "return_1yr": "+28%",
       "low_gbp": "16",
       "high_gbp": "28",
       "bar_pct": 61,
       "market_cap_gbp_b": 0.279,
       "beta": 0.596,
-      "pe_ratio": 22.05,
+      "pe_ratio": 22.01,
       "avg_volume_m": 4.25,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 1758310,
-      "vol_1w": 15742523,
-      "vol_1m": 95505286,
+      "vol_1d": 2405393,
+      "vol_1w": 16389606,
+      "vol_1m": 96152369,
       "news": [
         {
           "title": "UK, Japan to deepen ties with \u00a318 billion investment agreement",
@@ -1054,10 +1054,10 @@
       "change_1m": "+11.80%",
       "change_ytd": "+54.90%",
       "return_1yr": "+46%",
-      "low_gbp": "19",
+      "low_gbp": "20",
       "high_gbp": "56",
       "bar_pct": 55,
-      "market_cap_gbp_b": 5.207,
+      "market_cap_gbp_b": 5.212,
       "beta": 1.572,
       "pe_ratio": 51.76,
       "avg_volume_m": 7.83,
@@ -1122,7 +1122,7 @@
       "low_gbp": "105",
       "high_gbp": "243",
       "bar_pct": 65,
-      "market_cap_gbp_b": 20.926,
+      "market_cap_gbp_b": 20.947,
       "beta": 1.692,
       "pe_ratio": 16.64,
       "avg_volume_m": 2.52,
@@ -1187,7 +1187,7 @@
       "low_gbp": "24",
       "high_gbp": "34",
       "bar_pct": 45,
-      "market_cap_gbp_b": 5.157,
+      "market_cap_gbp_b": 5.163,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1242,7 +1242,7 @@
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.58",
+      "price_gbp": "5.59",
       "price_usd": 7.39,
       "change_1d": "-1.60%",
       "change_1w": "-9.10%",
@@ -1252,7 +1252,7 @@
       "low_gbp": "4.35",
       "high_gbp": "25",
       "bar_pct": 6,
-      "market_cap_gbp_b": 22.133,
+      "market_cap_gbp_b": 22.155,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,

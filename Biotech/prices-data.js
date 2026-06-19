@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-19 13:09",
-  "fx_gbp_usd": 1.3232,
+  "updated": "2026-06-19 14:32",
+  "fx_gbp_usd": 1.3227,
   "stocks": [
     {
       "ticker": "AMGN",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "202",
       "high_gbp": "296",
       "bar_pct": 57,
-      "market_cap_gbp_b": 137.7,
+      "market_cap_gbp_b": 137.756,
       "beta": 0.416,
       "pe_ratio": 23.49,
       "avg_volume_m": 2.85,
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "79",
       "high_gbp": "119",
       "bar_pct": 37,
-      "market_cap_gbp_b": 116.125,
+      "market_cap_gbp_b": 116.172,
       "beta": 0.331,
       "pe_ratio": 16.84,
       "avg_volume_m": 6.89,
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "383",
       "high_gbp": "621",
       "bar_pct": 33,
-      "market_cap_gbp_b": 48.326,
+      "market_cap_gbp_b": 48.346,
       "beta": 0.238,
       "pe_ratio": 14.9,
       "avg_volume_m": 0.94,
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "274",
       "high_gbp": "384",
       "bar_pct": 61,
-      "market_cap_gbp_b": 86.628,
+      "market_cap_gbp_b": 86.663,
       "beta": 0.31,
       "pe_ratio": 26.79,
       "avg_volume_m": 1.28,
@@ -224,6 +224,13 @@ window.PRICES_DATA = {
       "vol_1w": 8410500,
       "vol_1m": 30914300,
       "news": [
+        {
+          "title": "Can Vertex's Kidney Pipeline Power Its Next Growth Phase?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/healthcare/articles/vertexs-kidney-pipeline-power-next-121400140.html",
+          "published": 1781871240,
+          "sentiment": 0.382
+        },
         {
           "title": "Vertex Pharmaceuticals (VRTX) Stock Sinks As Market Gains: Here's Why",
           "publisher": "Zacks",
@@ -251,16 +258,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-market-dipped-vertex-pharmaceuticals-220006810.html",
           "published": 1781733606,
           "sentiment": 0.527
-        },
-        {
-          "title": "The Best Biotech Stocks to Buy in 2026",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/17/the-best-biotech-stocks-to-buy-in-2026/",
-          "published": 1781727600,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.346
+      "news_sentiment": 0.295
     },
     {
       "ticker": "BIIB",
@@ -274,10 +274,10 @@ window.PRICES_DATA = {
       "change_1m": "+3.16%",
       "change_ytd": "+10.55%",
       "return_1yr": "+55%",
-      "low_gbp": "91",
+      "low_gbp": "92",
       "high_gbp": "156",
       "bar_pct": 89,
-      "market_cap_gbp_b": 21.933,
+      "market_cap_gbp_b": 21.942,
       "beta": 0.177,
       "pe_ratio": 21.16,
       "avg_volume_m": 1.19,
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "32",
       "high_gbp": "48",
       "bar_pct": 56,
-      "market_cap_gbp_b": 83.337,
+      "market_cap_gbp_b": 83.371,
       "beta": 0.238,
       "pe_ratio": 15.13,
       "avg_volume_m": 11.8,
@@ -354,6 +354,13 @@ window.PRICES_DATA = {
       "vol_1w": 74013300,
       "vol_1m": 272087900,
       "news": [
+        {
+          "title": "NeoGenomics (NEO) Soars 7.2%: Is Further Upside Left in the Stock?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/neogenomics-neo-soars-7-2-110900118.html",
+          "published": 1781867340,
+          "sentiment": 0.0
+        },
         {
           "title": "ASCO26: RLTs bring the buzz, but commercial and tolerability qualms remain",
           "publisher": "Pharmaceutical Technology",
@@ -381,16 +388,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/603589/what-if-amgen-stocks-patent-worries-are-hiding-its-real-growth-engine/2026-06-18",
           "published": 1781816249,
           "sentiment": -0.34
-        },
-        {
-          "title": "Kardigan shares soar after Nasdaq debut",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/kardigan-shares-soar-nasdaq-debut-180332003.html",
-          "published": 1781805812,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.181
+      "news_sentiment": 0.122
     },
     {
       "ticker": "AZN",
@@ -398,27 +398,34 @@ window.PRICES_DATA = {
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "133",
-      "price_usd": 13290.0,
-      "change_1d": "+1.08%",
-      "change_1w": "-1.28%",
-      "change_1m": "-4.25%",
-      "change_ytd": "-2.21%",
+      "price_usd": 13286.0,
+      "change_1d": "+1.05%",
+      "change_1w": "-1.31%",
+      "change_1m": "-4.28%",
+      "change_ytd": "-2.24%",
       "return_1yr": "+27%",
       "low_gbp": "101",
       "high_gbp": "157",
       "bar_pct": 57,
-      "market_cap_gbp_b": 2.061,
+      "market_cap_gbp_b": 2.06,
       "beta": 0.214,
-      "pe_ratio": 26.85,
+      "pe_ratio": 26.84,
       "avg_volume_m": 2.12,
       "div_yield_pct": 178.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.61,
-      "vol_1d": 1238674,
-      "vol_1w": 10329739,
-      "vol_1m": 45816614,
+      "vol_1d": 1428563,
+      "vol_1w": 10519628,
+      "vol_1m": 46006503,
       "news": [
+        {
+          "title": "AstraZeneca (LSE:AZN) Stock Could Be 20.2% Undervalued After Recent Pullback",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/astrazeneca-lse-azn-stock-could-130958574.html",
+          "published": 1781874598,
+          "sentiment": 0.0
+        },
         {
           "title": "ASCO26: RLTs bring the buzz, but commercial and tolerability qualms remain",
           "publisher": "Pharmaceutical Technology",
@@ -446,13 +453,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/pfizer-share-lilly-novo-nordisk-141100162.html",
           "published": 1781791860,
           "sentiment": 0.296
-        },
-        {
-          "title": "AstraZeneca (AZN) Advances Oral GLP-1 Receptor Agonist Elecoglipron to Phase III Trials",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/healthcare/articles/astrazeneca-azn-advances-oral-glp-134627439.html",
-          "published": 1781703987,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.036
@@ -463,26 +463,26 @@ window.PRICES_DATA = {
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "19",
-      "price_usd": 1931.13,
-      "change_1d": "+0.61%",
-      "change_1w": "-2.66%",
-      "change_1m": "+1.53%",
-      "change_ytd": "+5.46%",
+      "price_usd": 1933.5,
+      "change_1d": "+0.73%",
+      "change_1w": "-2.55%",
+      "change_1m": "+1.66%",
+      "change_ytd": "+5.59%",
       "return_1yr": "+37%",
       "low_gbp": "13",
       "high_gbp": "23",
       "bar_pct": 65,
-      "market_cap_gbp_b": 0.774,
+      "market_cap_gbp_b": 0.775,
       "beta": 0.294,
-      "pe_ratio": 13.6,
+      "pe_ratio": 13.62,
       "avg_volume_m": 7.92,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.81,
-      "vol_1d": 3418082,
-      "vol_1w": 29511228,
-      "vol_1m": 158794501,
+      "vol_1d": 5144830,
+      "vol_1w": 31237976,
+      "vol_1m": 160521249,
       "news": [
         {
           "title": "Biogen to Strengthen Immunology Pipeline With $1B RayThera Buyout",
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "33",
       "high_gbp": "59",
       "bar_pct": 31,
-      "market_cap_gbp_b": 4.026,
+      "market_cap_gbp_b": 4.027,
       "beta": 1.704,
       "pe_ratio": null,
       "avg_volume_m": 1.7,
@@ -602,7 +602,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "28",
       "bar_pct": 89,
-      "market_cap_gbp_b": 2.654,
+      "market_cap_gbp_b": 2.655,
       "beta": 2.198,
       "pe_ratio": null,
       "avg_volume_m": 2.15,
@@ -729,7 +729,7 @@ window.PRICES_DATA = {
       "change_1m": "+9.35%",
       "change_ytd": "+31.22%",
       "return_1yr": "+21%*",
-      "low_gbp": "1.25",
+      "low_gbp": "1.26",
       "high_gbp": "3.43",
       "bar_pct": 36,
       "market_cap_gbp_b": 0.312,
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "67",
       "high_gbp": "134",
       "bar_pct": 83,
-      "market_cap_gbp_b": 18.516,
+      "market_cap_gbp_b": 18.523,
       "beta": 1.49,
       "pe_ratio": 29.44,
       "avg_volume_m": 1.67,
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "100",
       "high_gbp": "194",
       "bar_pct": 80,
-      "market_cap_gbp_b": 25.046,
+      "market_cap_gbp_b": 25.057,
       "beta": 1.544,
       "pe_ratio": null,
       "avg_volume_m": 1.43,
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "85",
       "bar_pct": 69,
-      "market_cap_gbp_b": 14.83,
+      "market_cap_gbp_b": 14.836,
       "beta": 0.79,
       "pe_ratio": 13.87,
       "avg_volume_m": 1.63,
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "26",
       "high_gbp": "41",
       "bar_pct": 90,
-      "market_cap_gbp_b": 9.861,
+      "market_cap_gbp_b": 9.865,
       "beta": 0.435,
       "pe_ratio": 17.19,
       "avg_volume_m": 2.61,
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "206",
       "high_gbp": "375",
       "bar_pct": 2,
-      "market_cap_gbp_b": 28.06,
+      "market_cap_gbp_b": 28.071,
       "beta": 0.267,
       "pe_ratio": 70.05,
       "avg_volume_m": 1.13,
@@ -1252,7 +1252,7 @@ window.PRICES_DATA = {
       "low_gbp": "5.98",
       "high_gbp": "22",
       "bar_pct": 79,
-      "market_cap_gbp_b": 2.311,
+      "market_cap_gbp_b": 2.312,
       "beta": 0.837,
       "pe_ratio": null,
       "avg_volume_m": 1.19,
@@ -1317,7 +1317,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "51",
       "bar_pct": 92,
-      "market_cap_gbp_b": 19.18,
+      "market_cap_gbp_b": 19.187,
       "beta": 1.03,
       "pe_ratio": null,
       "avg_volume_m": 7.01,
@@ -1329,6 +1329,13 @@ window.PRICES_DATA = {
       "vol_1w": 60985900,
       "vol_1m": 149939700,
       "news": [
+        {
+          "title": "MRNA Up as Influenza Vaccine Wins Unanimous FDA Advisory Panel Backing",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/healthcare/articles/mrna-influenza-vaccine-wins-unanimous-120400660.html",
+          "published": 1781870640,
+          "sentiment": 0.586
+        },
         {
           "title": "MRNA Stock Clocks Best Week In Over 4 Years On FDA Advisory Committee Endorsement For Flu Vaccine",
           "publisher": "Stocktwits",
@@ -1356,16 +1363,9 @@ window.PRICES_DATA = {
           "url": "https://www.wsj.com/health/pharma/fda-votes-in-favor-of-benefit-risk-profile-for-modernas-flu-vaccine-11821d88?siteid=yhoof2&yptr=yahoo",
           "published": 1781814180,
           "sentiment": 0.026
-        },
-        {
-          "title": "Moderna just got a signal investors can\u2019t ignore",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/health/moderna-fda-evaluate-mflusiva-flu-shot",
-          "published": 1781801365,
-          "sentiment": -0.361
         }
       ],
-      "news_sentiment": 0.053
+      "news_sentiment": 0.242
     },
     {
       "ticker": "BNTX",
@@ -1382,7 +1382,7 @@ window.PRICES_DATA = {
       "low_gbp": "60",
       "high_gbp": "94",
       "bar_pct": 26,
-      "market_cap_gbp_b": 17.37,
+      "market_cap_gbp_b": 17.378,
       "beta": 1.324,
       "pe_ratio": null,
       "avg_volume_m": 0.96,
@@ -1512,7 +1512,7 @@ window.PRICES_DATA = {
       "low_gbp": "37",
       "high_gbp": "50",
       "bar_pct": 32,
-      "market_cap_gbp_b": 7.989,
+      "market_cap_gbp_b": 7.992,
       "beta": 0.24,
       "pe_ratio": 39.35,
       "avg_volume_m": 2.03,
@@ -1574,7 +1574,7 @@ window.PRICES_DATA = {
       "change_1m": "+5.35%",
       "change_ytd": "-17.74%",
       "return_1yr": "-13%",
-      "low_gbp": "7.87",
+      "low_gbp": "7.88",
       "high_gbp": "19",
       "bar_pct": 48,
       "market_cap_gbp_b": 1.399,
@@ -1642,7 +1642,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "28",
       "bar_pct": 46,
-      "market_cap_gbp_b": 1.032,
+      "market_cap_gbp_b": 1.033,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 0.37,
@@ -1686,7 +1686,7 @@ window.PRICES_DATA = {
       "low_gbp": "27",
       "high_gbp": "56",
       "bar_pct": 21,
-      "market_cap_gbp_b": 144.529,
+      "market_cap_gbp_b": 144.589,
       "beta": 0.349,
       "pe_ratio": 10.16,
       "avg_volume_m": 15.59,
@@ -1698,6 +1698,13 @@ window.PRICES_DATA = {
       "vol_1w": 51023200,
       "vol_1m": 273672400,
       "news": [
+        {
+          "title": "Novo Nordisk faces limited upside from ZEUS trial as patent cliff looms, Deutsche Bank warns",
+          "publisher": "Proactive",
+          "url": "https://www.proactiveinvestors.com/companies/news/1094182/novo-nordisk-faces-limited-upside-from-zeus-trial-as-patent-cliff-looms-deutsche-bank-warns-1094182.html",
+          "published": 1781872320,
+          "sentiment": -0.44
+        },
         {
           "title": "Novo Bets Bigger on Obesity Research",
           "publisher": "GuruFocus.com",
@@ -1725,33 +1732,26 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/hims-hers-rallies-july-fda-175902441.html",
           "published": 1781805542,
           "sentiment": -0.128
-        },
-        {
-          "title": "FDA Accepts Roche's Filing for Lunsumio VELO-Polivy in LBCL",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/fda-accepts-roches-filing-lunsumio-164900760.html",
-          "published": 1781801340,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.113
+      "news_sentiment": -0.038
     },
     {
       "ticker": "LLY",
       "company_name": "Eli Lilly",
       "category": "metabolic",
       "exchange": "NYSE",
-      "price_gbp": "830",
+      "price_gbp": "831",
       "price_usd": 1098.57,
       "change_1d": "-1.28%",
       "change_1w": "-5.37%",
       "change_1m": "+7.55%",
       "change_ytd": "+2.03%",
       "return_1yr": "+44%",
-      "low_gbp": "471",
+      "low_gbp": "472",
       "high_gbp": "894",
       "bar_pct": 85,
-      "market_cap_gbp_b": 740.353,
+      "market_cap_gbp_b": 740.657,
       "beta": 0.517,
       "pe_ratio": 39.0,
       "avg_volume_m": 3.2,
@@ -1816,7 +1816,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "34",
       "bar_pct": 40,
-      "market_cap_gbp_b": 3.921,
+      "market_cap_gbp_b": 3.922,
       "beta": 0.352,
       "pe_ratio": null,
       "avg_volume_m": 2.61,
@@ -1881,7 +1881,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "66",
       "bar_pct": 75,
-      "market_cap_gbp_b": 9.257,
+      "market_cap_gbp_b": 9.261,
       "beta": 0.37,
       "pe_ratio": null,
       "avg_volume_m": 1.83,
