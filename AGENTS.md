@@ -157,7 +157,7 @@ When adding a new sector, complete every item in this checklist — in order:
 | File | Purpose |
 |---|---|
 | `generate_export.py` | Reads all 6 `prices-data.js` + `signals-local.json` files; writes dated snapshot + updates manifest; optionally merges T212 portfolio |
-| `exports/YYYY-MM-DD.json` | Daily market snapshot — committed by GitHub Actions, served via Cloudflare Pages |
+| `exports/YYYY-MM-DD.json` | Daily market snapshot — `stocks[]` includes `change_1y` (1-year price change %); top-level `momentum_picks[]` lists cross-sector momentum screener picks |
 | `exports/YYYY-MM-DD.csv` | Same data in CSV format |
 | `exports/manifest.json` | List of all available snapshots (newest first); loaded by the export page to build the date dropdown |
 | `exports/index.html` | Export page — loads manifest, date selector, Copy JSON/CSV buttons |
@@ -165,6 +165,23 @@ When adding a new sector, complete every item in this checklist — in order:
 | `.github/workflows/generate-export.yml` | Runs `generate_export.py` at 22:00 UTC (23:00 BST) weekdays — 30 min after evening price update |
 
 **Adding new fields to the export:** edit the `PRICE_FIELDS` list and/or `csv_fields` list in `generate_export.py`. The manifest entry only needs `date`, `generated`, `total`, `json`, `csv`.
+
+**Top-level export keys:** in addition to `stocks[]`, the export JSON has a `momentum_picks[]` array built by `compute_export_momentum()` in `generate_export.py`. This mirrors the per-sector `momentum_screener.py` logic but runs cross-sector over all 6 sectors at export time.
+
+## Momentum screener
+
+`momentum_screener.py` lives at the repo root and is imported by each sector's `[Sector]_generate_signals_local.py` via `from momentum_screener import momentum_signal`.
+
+**Thresholds (as of 2026-06-19):**
+
+| Signal | YTD | 1Y |
+|---|---|---|
+| STRONG BUY | ≥ 100% | ≥ 500% |
+| BUY | ≥ 50% | ≥ 200% |
+
+`momentum_signal(ytd_pct, y1_pct)` returns `"STRONG BUY"`, `"BUY"`, or `None`. Both YTD and 1Y are checked; the stronger signal wins.
+
+Results appear in `signals-local.json` per sector under the `momentum` key and are displayed inline on each sector's `signals.html` below the AI picks, labelled `// Momentum Screener`.
 
 ## T212 MCP server
 
