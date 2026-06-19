@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-19 14:37",
-  "fx_gbp_usd": 1.322,
+  "updated": "2026-06-19 17:50",
+  "fx_gbp_usd": 1.3226,
   "stocks": [
     {
       "ticker": "XOM",
@@ -17,7 +17,7 @@ window.PRICES_DATA = {
       "low_gbp": "80",
       "high_gbp": "133",
       "bar_pct": 46,
-      "market_cap_gbp_b": 432.096,
+      "market_cap_gbp_b": 431.884,
       "beta": 0.149,
       "pe_ratio": 23.2,
       "avg_volume_m": 20.07,
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "108",
       "high_gbp": "162",
       "bar_pct": 43,
-      "market_cap_gbp_b": 261.581,
+      "market_cap_gbp_b": 261.453,
       "beta": 0.472,
       "pe_ratio": 30.2,
       "avg_volume_m": 11.03,
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "51",
       "high_gbp": "72",
       "bar_pct": 42,
-      "market_cap_gbp_b": 165.255,
+      "market_cap_gbp_b": 165.175,
       "beta": -0.248,
       "pe_ratio": 12.28,
       "avg_volume_m": 7.85,
@@ -159,6 +159,20 @@ window.PRICES_DATA = {
       "vol_1w": 35089378,
       "vol_1m": 154234069,
       "news": [
+        {
+          "title": "Equinor to Boost Troll Gas Output with $412 Million Subsea Development",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-boost-troll-gas-output-153000121.html",
+          "published": 1781883000,
+          "sentiment": 0.402
+        },
+        {
+          "title": "ConocoPhillips vs. Viper Energy: Which Energy Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/06/19/conocophillips-vs-viper-energy-which-energy-stock-is-a-better-buy-in-2026/",
+          "published": 1781879579,
+          "sentiment": 0.727
+        },
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Rise in Wednesday Trading",
           "publisher": "MT Newswires",
@@ -179,23 +193,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-top-dividend-stocks-maximize-131003812.html",
           "published": 1781701803,
           "sentiment": 0.202
-        },
-        {
-          "title": "Shell (LSE:SHEL) Plans $1 Billion Wind Exit While Backing EV Charging",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/shell-lse-shel-plans-1-221321141.html",
-          "published": 1781648001,
-          "sentiment": 0.026
-        },
-        {
-          "title": "C3.ai (AI) Expands Shell Partnership For Agent Based Asset Management",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/c3-ai-ai-expands-shell-190815669.html",
-          "published": 1781636895,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.128
+      "news_sentiment": 0.261
     },
     {
       "ticker": "BP",
@@ -210,9 +210,9 @@ window.PRICES_DATA = {
       "change_ytd": "+11.80%",
       "return_1yr": "+25%",
       "low_gbp": "22",
-      "high_gbp": "37",
+      "high_gbp": "36",
       "bar_pct": 51,
-      "market_cap_gbp_b": 76.163,
+      "market_cap_gbp_b": 76.126,
       "beta": -0.239,
       "pe_ratio": 31.79,
       "avg_volume_m": 11.96,
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "43",
       "high_gbp": "71",
       "bar_pct": 63,
-      "market_cap_gbp_b": 135.365,
+      "market_cap_gbp_b": 135.299,
       "beta": 0.045,
       "pe_ratio": 11.93,
       "avg_volume_m": 1.72,
@@ -289,6 +289,13 @@ window.PRICES_DATA = {
       "vol_1w": 10018300,
       "vol_1m": 31312800,
       "news": [
+        {
+          "title": "Equinor to Boost Troll Gas Output with $412 Million Subsea Development",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-boost-troll-gas-output-153000121.html",
+          "published": 1781883000,
+          "sentiment": 0.402
+        },
         {
           "title": "Hormuz Reopening to Spark Oil Field Restart Visible From Space",
           "publisher": "Bloomberg",
@@ -316,16 +323,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/conocophillips-cop-joins-totalenergies-qatarenergy-231931058.html",
           "published": 1781651971,
           "sentiment": -0.25
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Tuesday Ahead of Fed Policy Meeting",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-123451429.html",
-          "published": 1781613291,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.005
+      "news_sentiment": 0.076
     },
     {
       "ticker": "EQNR",
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "33",
       "bar_pct": 48,
-      "market_cap_gbp_b": 60.996,
+      "market_cap_gbp_b": 60.966,
       "beta": -0.752,
       "pe_ratio": 14.65,
       "avg_volume_m": 5.64,
@@ -354,6 +354,20 @@ window.PRICES_DATA = {
       "vol_1w": 25943700,
       "vol_1m": 88509800,
       "news": [
+        {
+          "title": "Equinor to Boost Troll Gas Output with $412 Million Subsea Development",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-boost-troll-gas-output-153000121.html",
+          "published": 1781883000,
+          "sentiment": 0.402
+        },
+        {
+          "title": "Equinor Unveils Production Growth & Buyback Strategy Through 2030",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-unveils-production-growth-buyback-142700768.html",
+          "published": 1781879220,
+          "sentiment": 0.382
+        },
         {
           "title": "Equinor and partners agree Ringvei Vest subsea development plan",
           "publisher": "Offshore Technology",
@@ -374,23 +388,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-premarket-132516729.html",
           "published": 1781789116,
           "sentiment": 0.273
-        },
-        {
-          "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Thursday as Interim US-Iran Deal Lifts Risk Sentiment",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-125723601.html",
-          "published": 1781787443,
-          "sentiment": -0.273
-        },
-        {
-          "title": "This Week In Energy Transition - A P Moller Capital Acquires Mainstream Renewable Power South Africa",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/week-energy-transition-p-moller-113729410.html",
-          "published": 1781782649,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": 0.284
     },
     {
       "ticker": "COP",
@@ -407,7 +407,7 @@ window.PRICES_DATA = {
       "low_gbp": "65",
       "high_gbp": "103",
       "bar_pct": 44,
-      "market_cap_gbp_b": 99.291,
+      "market_cap_gbp_b": 99.242,
       "beta": 0.106,
       "pe_ratio": 18.26,
       "avg_volume_m": 8.69,
@@ -419,6 +419,20 @@ window.PRICES_DATA = {
       "vol_1w": 55569500,
       "vol_1m": 167298800,
       "news": [
+        {
+          "title": "Equinor to Boost Troll Gas Output with $412 Million Subsea Development",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-boost-troll-gas-output-153000121.html",
+          "published": 1781883000,
+          "sentiment": 0.402
+        },
+        {
+          "title": "ConocoPhillips vs. Viper Energy: Which Energy Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/06/19/conocophillips-vs-viper-energy-which-energy-stock-is-a-better-buy-in-2026/",
+          "published": 1781879579,
+          "sentiment": 0.727
+        },
         {
           "title": "ConocoPhillips (COP) Stock Slides as Market Rises: Facts to Know Before You Trade",
           "publisher": "Zacks",
@@ -439,23 +453,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/2539862/stocks-supported-as-geopolitical-risks-recede",
           "published": 1781795829,
           "sentiment": 0.052
-        },
-        {
-          "title": "The Zacks Analyst Blog Highlights Exxon Mobil, ConocoPhillips and EOG Resources",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/zacks-analyst-blog-highlights-exxon-065100767.html",
-          "published": 1781765460,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Western Midstream Expands Permian Water Recycling With New Treatment Plant",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/western-midstream-expands-permian-water-031500372.html",
-          "published": 1781752500,
-          "sentiment": 0.103
         }
       ],
-      "news_sentiment": 0.031
+      "news_sentiment": 0.236
     },
     {
       "ticker": "OXY",
@@ -472,7 +472,7 @@ window.PRICES_DATA = {
       "low_gbp": "29",
       "high_gbp": "51",
       "bar_pct": 45,
-      "market_cap_gbp_b": 38.989,
+      "market_cap_gbp_b": 38.97,
       "beta": 0.124,
       "pe_ratio": 70.03,
       "avg_volume_m": 13.86,
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "77",
       "high_gbp": "115",
       "bar_pct": 56,
-      "market_cap_gbp_b": 52.37,
+      "market_cap_gbp_b": 52.344,
       "beta": 0.256,
       "pe_ratio": 12.78,
       "avg_volume_m": 4.17,
@@ -599,10 +599,10 @@ window.PRICES_DATA = {
       "change_1m": "-7.29%",
       "change_ytd": "+48.39%",
       "return_1yr": "+44%",
-      "low_gbp": "120",
+      "low_gbp": "119",
       "high_gbp": "206",
       "bar_pct": 74,
-      "market_cap_gbp_b": 53.643,
+      "market_cap_gbp_b": 53.617,
       "beta": 0.522,
       "pe_ratio": 16.0,
       "avg_volume_m": 2.46,
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "99",
       "high_gbp": "201",
       "bar_pct": 78,
-      "market_cap_gbp_b": 53.076,
+      "market_cap_gbp_b": 53.051,
       "beta": 0.553,
       "pe_ratio": 17.25,
       "avg_volume_m": 3.47,
@@ -732,7 +732,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 61,
-      "market_cap_gbp_b": 54.387,
+      "market_cap_gbp_b": 54.36,
       "beta": 0.708,
       "pe_ratio": 21.19,
       "avg_volume_m": 15.81,
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 63,
-      "market_cap_gbp_b": 22.074,
+      "market_cap_gbp_b": 22.063,
       "beta": 0.704,
       "pe_ratio": 19.3,
       "avg_volume_m": 13.59,
@@ -862,7 +862,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 64,
-      "market_cap_gbp_b": 43.834,
+      "market_cap_gbp_b": 43.812,
       "beta": 0.938,
       "pe_ratio": 18.66,
       "avg_volume_m": 8.34,
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "51",
       "high_gbp": "75",
       "bar_pct": 62,
-      "market_cap_gbp_b": 136.862,
+      "market_cap_gbp_b": 136.795,
       "beta": 0.671,
       "pe_ratio": 22.02,
       "avg_volume_m": 10.76,
@@ -939,6 +939,13 @@ window.PRICES_DATA = {
       "vol_1w": 59507300,
       "vol_1m": 283860500,
       "news": [
+        {
+          "title": "Can Vistra Unlock More Value for Investors Through Share Buybacks?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/vistra-unlock-more-value-investors-134000183.html",
+          "published": 1781876400,
+          "sentiment": 0.598
+        },
         {
           "title": "AES Boosts Growth Through Renewable Energy and LNG Investments",
           "publisher": "Zacks",
@@ -966,16 +973,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/06/18/in-10-years-will-you-wish-youd-bought-stock-right/",
           "published": 1781805000,
           "sentiment": 0.586
-        },
-        {
-          "title": "3 Utility Stocks For Years of Passive Income",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/18/3-utility-stocks-for-years-of-passive-income/",
-          "published": 1781801484,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.41
+      "news_sentiment": 0.49
     },
     {
       "ticker": "SSE.L",
@@ -983,26 +983,26 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "23",
-      "price_usd": 2311.0,
-      "change_1d": "-0.82%",
-      "change_1w": "-3.71%",
-      "change_1m": "-0.60%",
-      "change_ytd": "+3.59%",
+      "price_usd": 2325.0,
+      "change_1d": "+0.56%",
+      "change_1w": "-3.12%",
+      "change_1m": "+0.00%",
+      "change_ytd": "+4.21%",
       "return_1yr": "+28%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 61,
-      "market_cap_gbp_b": 0.279,
+      "bar_pct": 62,
+      "market_cap_gbp_b": 0.28,
       "beta": 0.596,
-      "pe_ratio": 22.01,
+      "pe_ratio": 22.14,
       "avg_volume_m": 4.25,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2405393,
-      "vol_1w": 16389606,
-      "vol_1m": 96152369,
+      "vol_1d": 7564829,
+      "vol_1w": 21549042,
+      "vol_1m": 101311805,
       "news": [
         {
           "title": "UK, Japan to deepen ties with \u00a318 billion investment agreement",
@@ -1054,10 +1054,10 @@ window.PRICES_DATA = {
       "change_1m": "+11.80%",
       "change_ytd": "+54.90%",
       "return_1yr": "+46%",
-      "low_gbp": "20",
+      "low_gbp": "19",
       "high_gbp": "56",
       "bar_pct": 55,
-      "market_cap_gbp_b": 5.212,
+      "market_cap_gbp_b": 5.21,
       "beta": 1.572,
       "pe_ratio": 51.76,
       "avg_volume_m": 7.83,
@@ -1069,6 +1069,13 @@ window.PRICES_DATA = {
       "vol_1w": 38916500,
       "vol_1m": 192903200,
       "news": [
+        {
+          "title": "Enphase Energy, Inc. (ENPH) Is a Trending Stock: Facts to Know Before Betting on It",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-inc-enph-trending-130005646.html",
+          "published": 1781874005,
+          "sentiment": 0.273
+        },
         {
           "title": "Enphase Stock Rises on AI Data Center Upgrade",
           "publisher": "Barrons.com",
@@ -1096,13 +1103,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/lyft-upgraded-leidos-downgraded-wall-134756673.html",
           "published": 1781704076,
           "sentiment": 0.202
-        },
-        {
-          "title": "Enphase Energy (ENPH) Stock Falls Amid Market Uptick: What Investors Need to Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-enph-stock-falls-215005271.html",
-          "published": 1781560205,
-          "sentiment": 0.273
         }
       ],
       "news_sentiment": 0.19
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "105",
       "high_gbp": "243",
       "bar_pct": 65,
-      "market_cap_gbp_b": 20.947,
+      "market_cap_gbp_b": 20.936,
       "beta": 1.692,
       "pe_ratio": 16.64,
       "avg_volume_m": 2.52,
@@ -1187,7 +1187,7 @@ window.PRICES_DATA = {
       "low_gbp": "24",
       "high_gbp": "34",
       "bar_pct": 45,
-      "market_cap_gbp_b": 5.163,
+      "market_cap_gbp_b": 5.16,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.55,
@@ -1252,7 +1252,7 @@ window.PRICES_DATA = {
       "low_gbp": "4.35",
       "high_gbp": "25",
       "bar_pct": 6,
-      "market_cap_gbp_b": 22.155,
+      "market_cap_gbp_b": 22.144,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.14,

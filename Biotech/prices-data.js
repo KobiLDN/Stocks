@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-06-19 14:32",
-  "fx_gbp_usd": 1.3227,
+  "updated": "2026-06-19 17:45",
+  "fx_gbp_usd": 1.3224,
   "stocks": [
     {
       "ticker": "AMGN",
@@ -14,10 +14,10 @@ window.PRICES_DATA = {
       "change_1m": "+2.07%",
       "change_ytd": "+4.54%",
       "return_1yr": "+17%",
-      "low_gbp": "202",
+      "low_gbp": "203",
       "high_gbp": "296",
       "bar_pct": 57,
-      "market_cap_gbp_b": 137.756,
+      "market_cap_gbp_b": 137.784,
       "beta": 0.416,
       "pe_ratio": 23.49,
       "avg_volume_m": 2.85,
@@ -29,6 +29,13 @@ window.PRICES_DATA = {
       "vol_1w": 22238800,
       "vol_1m": 67753700,
       "news": [
+        {
+          "title": "Amgen Inc. (AMGN) is Attracting Investor Attention: Here is What You Should Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amgen-inc-amgn-attracting-investor-130003498.html",
+          "published": 1781874003,
+          "sentiment": 0.477
+        },
         {
           "title": "How One Partnership Profit Line Reframes The Regeneron Pharmaceuticals Stock Story",
           "publisher": "Trefis",
@@ -56,16 +63,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/amgen-amgn-sees-more-significant-215002640.html",
           "published": 1781733002,
           "sentiment": 0.272
-        },
-        {
-          "title": "Eli Lilly Stock's Trillion-Dollar Question",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/603350/eli-lilly-stocks-trillion-dollar-question/2026-06-17",
-          "published": 1781720514,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.186
+      "news_sentiment": 0.281
     },
     {
       "ticker": "GILD",
@@ -82,7 +82,7 @@ window.PRICES_DATA = {
       "low_gbp": "79",
       "high_gbp": "119",
       "bar_pct": 37,
-      "market_cap_gbp_b": 116.172,
+      "market_cap_gbp_b": 116.195,
       "beta": 0.331,
       "pe_ratio": 16.84,
       "avg_volume_m": 6.89,
@@ -147,7 +147,7 @@ window.PRICES_DATA = {
       "low_gbp": "383",
       "high_gbp": "621",
       "bar_pct": 33,
-      "market_cap_gbp_b": 48.346,
+      "market_cap_gbp_b": 48.356,
       "beta": 0.238,
       "pe_ratio": 14.9,
       "avg_volume_m": 0.94,
@@ -159,6 +159,13 @@ window.PRICES_DATA = {
       "vol_1w": 6449700,
       "vol_1m": 26751800,
       "news": [
+        {
+          "title": "Is Sanofi (SNY) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/sanofi-sny-good-stock-buy-145651611.html",
+          "published": 1781881011,
+          "sentiment": 0.44
+        },
         {
           "title": "Is CytomX (CTMX) One of the Best Growth Stocks Under $30 to Buy Now?",
           "publisher": "Insider Monkey",
@@ -186,23 +193,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/regeneron-broadens-pipeline-ebola-antibody-031053240.html",
           "published": 1781320253,
           "sentiment": -0.66
-        },
-        {
-          "title": "IMRX Begins Dosing in Phase III Pancreatic Cancer Study, Stock Up",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/imrx-begins-dosing-phase-iii-134800817.html",
-          "published": 1781272080,
-          "sentiment": -0.66
         }
       ],
-      "news_sentiment": 0.068
+      "news_sentiment": 0.288
     },
     {
       "ticker": "VRTX",
       "company_name": "Vertex Pharmaceuticals",
       "category": "large-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "341",
+      "price_gbp": "342",
       "price_usd": 451.63,
       "change_1d": "-0.96%",
       "change_1w": "+1.48%",
@@ -212,7 +212,7 @@ window.PRICES_DATA = {
       "low_gbp": "274",
       "high_gbp": "384",
       "bar_pct": 61,
-      "market_cap_gbp_b": 86.663,
+      "market_cap_gbp_b": 86.68,
       "beta": 0.31,
       "pe_ratio": 26.79,
       "avg_volume_m": 1.28,
@@ -277,7 +277,7 @@ window.PRICES_DATA = {
       "low_gbp": "92",
       "high_gbp": "156",
       "bar_pct": 89,
-      "market_cap_gbp_b": 21.942,
+      "market_cap_gbp_b": 21.947,
       "beta": 0.177,
       "pe_ratio": 21.16,
       "avg_volume_m": 1.19,
@@ -342,7 +342,7 @@ window.PRICES_DATA = {
       "low_gbp": "32",
       "high_gbp": "48",
       "bar_pct": 56,
-      "market_cap_gbp_b": 83.371,
+      "market_cap_gbp_b": 83.388,
       "beta": 0.238,
       "pe_ratio": 15.13,
       "avg_volume_m": 11.8,
@@ -354,6 +354,13 @@ window.PRICES_DATA = {
       "vol_1w": 74013300,
       "vol_1m": 272087900,
       "news": [
+        {
+          "title": "Improve Your Retirement Income with These 3 Top-Ranked Dividend Stocks",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/improve-retirement-income-3-top-131002002.html",
+          "published": 1781874602,
+          "sentiment": 0.44
+        },
         {
           "title": "NeoGenomics (NEO) Soars 7.2%: Is Further Upside Left in the Stock?",
           "publisher": "Zacks",
@@ -381,43 +388,36 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/coverage/stock-market-today/2026/06/18/stock-market-today-june-18-pfizer-falls-as-cfo-transition-tests-confidence-in-2026-outlook/",
           "published": 1781825349,
           "sentiment": 0.511
-        },
-        {
-          "title": "What If Amgen Stock's Patent Worries Are Hiding Its Real Growth Engine?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/603589/what-if-amgen-stocks-patent-worries-are-hiding-its-real-growth-engine/2026-06-18",
-          "published": 1781816249,
-          "sentiment": -0.34
         }
       ],
-      "news_sentiment": 0.122
+      "news_sentiment": 0.278
     },
     {
       "ticker": "AZN",
       "company_name": "AstraZeneca",
       "category": "uk-listed",
       "exchange": "LSE",
-      "price_gbp": "133",
-      "price_usd": 13286.0,
-      "change_1d": "+1.05%",
-      "change_1w": "-1.31%",
-      "change_1m": "-4.28%",
-      "change_ytd": "-2.24%",
+      "price_gbp": "132",
+      "price_usd": 13234.0,
+      "change_1d": "+0.61%",
+      "change_1w": "-1.69%",
+      "change_1m": "-4.65%",
+      "change_ytd": "-2.62%",
       "return_1yr": "+27%",
       "low_gbp": "101",
       "high_gbp": "157",
-      "bar_pct": 57,
-      "market_cap_gbp_b": 2.06,
+      "bar_pct": 56,
+      "market_cap_gbp_b": 2.052,
       "beta": 0.214,
-      "pe_ratio": 26.84,
+      "pe_ratio": 26.74,
       "avg_volume_m": 2.12,
       "div_yield_pct": 178.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.61,
-      "vol_1d": 1428563,
-      "vol_1w": 10519628,
-      "vol_1m": 46006503,
+      "vol_1d": 4454631,
+      "vol_1w": 13545696,
+      "vol_1m": 49032571,
       "news": [
         {
           "title": "AstraZeneca (LSE:AZN) Stock Could Be 20.2% Undervalued After Recent Pullback",
@@ -463,26 +463,26 @@ window.PRICES_DATA = {
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "19",
-      "price_usd": 1933.5,
-      "change_1d": "+0.73%",
-      "change_1w": "-2.55%",
-      "change_1m": "+1.66%",
-      "change_ytd": "+5.59%",
+      "price_usd": 1925.5,
+      "change_1d": "+0.31%",
+      "change_1w": "-2.95%",
+      "change_1m": "+1.24%",
+      "change_ytd": "+5.15%",
       "return_1yr": "+37%",
       "low_gbp": "13",
       "high_gbp": "23",
-      "bar_pct": 65,
-      "market_cap_gbp_b": 0.775,
+      "bar_pct": 64,
+      "market_cap_gbp_b": 0.772,
       "beta": 0.294,
-      "pe_ratio": 13.62,
+      "pe_ratio": 13.56,
       "avg_volume_m": 7.92,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.81,
-      "vol_1d": 5144830,
-      "vol_1w": 31237976,
-      "vol_1m": 160521249,
+      "vol_1d": 15135962,
+      "vol_1w": 41229108,
+      "vol_1m": 170512381,
       "news": [
         {
           "title": "Biogen to Strengthen Immunology Pipeline With $1B RayThera Buyout",
@@ -537,7 +537,7 @@ window.PRICES_DATA = {
       "low_gbp": "33",
       "high_gbp": "59",
       "bar_pct": 31,
-      "market_cap_gbp_b": 4.027,
+      "market_cap_gbp_b": 4.028,
       "beta": 1.704,
       "pe_ratio": null,
       "avg_volume_m": 1.7,
@@ -602,7 +602,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "28",
       "bar_pct": 89,
-      "market_cap_gbp_b": 2.655,
+      "market_cap_gbp_b": 2.656,
       "beta": 2.198,
       "pe_ratio": null,
       "avg_volume_m": 2.15,
@@ -614,6 +614,13 @@ window.PRICES_DATA = {
       "vol_1w": 11378500,
       "vol_1m": 43722600,
       "news": [
+        {
+          "title": "BEAM Stock Gains 5% as FDA Clears BEAM-304 IND for Phenylketonuria",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/healthcare/articles/beam-stock-gains-5-fda-143500589.html",
+          "published": 1781879700,
+          "sentiment": 0.402
+        },
         {
           "title": "Is Beam Therapeutics Inc. (BEAM) One of the Best Genomics Stocks to Buy According to Analysts?",
           "publisher": "Insider Monkey",
@@ -641,16 +648,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/beam-therapeutics-beam-17-6-031516690.html",
           "published": 1779938116,
           "sentiment": 0.477
-        },
-        {
-          "title": "Better Gene-Editing Stock: CRISPR Therapeutics or Beam Therapeutics?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/05/25/better-gene-editing-stock-crispr-therapeutics-or-b/",
-          "published": 1779756900,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.391
+      "news_sentiment": 0.384
     },
     {
       "ticker": "NTLA",
@@ -667,7 +667,7 @@ window.PRICES_DATA = {
       "low_gbp": "6.01",
       "high_gbp": "21",
       "bar_pct": 38,
-      "market_cap_gbp_b": 1.655,
+      "market_cap_gbp_b": 1.656,
       "beta": 1.815,
       "pe_ratio": null,
       "avg_volume_m": 6.36,
@@ -797,7 +797,7 @@ window.PRICES_DATA = {
       "low_gbp": "67",
       "high_gbp": "134",
       "bar_pct": 83,
-      "market_cap_gbp_b": 18.523,
+      "market_cap_gbp_b": 18.527,
       "beta": 1.49,
       "pe_ratio": 29.44,
       "avg_volume_m": 1.67,
@@ -927,7 +927,7 @@ window.PRICES_DATA = {
       "low_gbp": "100",
       "high_gbp": "194",
       "bar_pct": 80,
-      "market_cap_gbp_b": 25.057,
+      "market_cap_gbp_b": 25.062,
       "beta": 1.544,
       "pe_ratio": null,
       "avg_volume_m": 1.43,
@@ -1057,7 +1057,7 @@ window.PRICES_DATA = {
       "low_gbp": "50",
       "high_gbp": "85",
       "bar_pct": 69,
-      "market_cap_gbp_b": 14.836,
+      "market_cap_gbp_b": 14.839,
       "beta": 0.79,
       "pe_ratio": 13.87,
       "avg_volume_m": 1.63,
@@ -1122,7 +1122,7 @@ window.PRICES_DATA = {
       "low_gbp": "26",
       "high_gbp": "41",
       "bar_pct": 90,
-      "market_cap_gbp_b": 9.865,
+      "market_cap_gbp_b": 9.867,
       "beta": 0.435,
       "pe_ratio": 17.19,
       "avg_volume_m": 2.61,
@@ -1184,10 +1184,10 @@ window.PRICES_DATA = {
       "change_1m": "-5.51%",
       "change_ytd": "-30.51%",
       "return_1yr": "-10%",
-      "low_gbp": "206",
+      "low_gbp": "207",
       "high_gbp": "375",
       "bar_pct": 2,
-      "market_cap_gbp_b": 28.071,
+      "market_cap_gbp_b": 28.077,
       "beta": 0.267,
       "pe_ratio": 70.05,
       "avg_volume_m": 1.13,
@@ -1317,7 +1317,7 @@ window.PRICES_DATA = {
       "low_gbp": "17",
       "high_gbp": "51",
       "bar_pct": 92,
-      "market_cap_gbp_b": 19.187,
+      "market_cap_gbp_b": 19.191,
       "beta": 1.03,
       "pe_ratio": null,
       "avg_volume_m": 7.01,
@@ -1382,7 +1382,7 @@ window.PRICES_DATA = {
       "low_gbp": "60",
       "high_gbp": "94",
       "bar_pct": 26,
-      "market_cap_gbp_b": 17.378,
+      "market_cap_gbp_b": 17.381,
       "beta": 1.324,
       "pe_ratio": null,
       "avg_volume_m": 0.96,
@@ -1444,7 +1444,7 @@ window.PRICES_DATA = {
       "change_1m": "+2.58%",
       "change_ytd": "+28.05%",
       "return_1yr": "+42%*",
-      "low_gbp": "4.63",
+      "low_gbp": "4.64",
       "high_gbp": "9.05",
       "bar_pct": 51,
       "market_cap_gbp_b": 1.135,
@@ -1512,7 +1512,7 @@ window.PRICES_DATA = {
       "low_gbp": "37",
       "high_gbp": "50",
       "bar_pct": 32,
-      "market_cap_gbp_b": 7.992,
+      "market_cap_gbp_b": 7.994,
       "beta": 0.24,
       "pe_ratio": 39.35,
       "avg_volume_m": 2.03,
@@ -1577,7 +1577,7 @@ window.PRICES_DATA = {
       "low_gbp": "7.88",
       "high_gbp": "19",
       "bar_pct": 48,
-      "market_cap_gbp_b": 1.399,
+      "market_cap_gbp_b": 1.4,
       "beta": 0.205,
       "pe_ratio": 50.09,
       "avg_volume_m": 3.17,
@@ -1686,7 +1686,7 @@ window.PRICES_DATA = {
       "low_gbp": "27",
       "high_gbp": "56",
       "bar_pct": 21,
-      "market_cap_gbp_b": 144.589,
+      "market_cap_gbp_b": 144.617,
       "beta": 0.349,
       "pe_ratio": 10.16,
       "avg_volume_m": 15.59,
@@ -1713,13 +1713,6 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Stocks dip after US-Iran peace talks delay; yen hovers near 40-year lows",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/stocks-set-records-japan-south-034723062.html",
-          "published": 1781869277,
-          "sentiment": 0.103
-        },
-        {
           "title": "European stocks edge higher, helped by energy and healthcare",
           "publisher": "Reuters",
           "url": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-muted-us-iran-072457742.html",
@@ -1732,9 +1725,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/hims-hers-rallies-july-fda-175902441.html",
           "published": 1781805542,
           "sentiment": -0.128
+        },
+        {
+          "title": "FDA Accepts Roche's Filing for Lunsumio VELO-Polivy in LBCL",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/healthcare/articles/fda-accepts-roches-filing-lunsumio-164900760.html",
+          "published": 1781801340,
+          "sentiment": 0.318
         }
       ],
-      "news_sentiment": -0.038
+      "news_sentiment": 0.005
     },
     {
       "ticker": "LLY",
@@ -1751,7 +1751,7 @@ window.PRICES_DATA = {
       "low_gbp": "472",
       "high_gbp": "894",
       "bar_pct": 85,
-      "market_cap_gbp_b": 740.657,
+      "market_cap_gbp_b": 740.804,
       "beta": 0.517,
       "pe_ratio": 39.0,
       "avg_volume_m": 3.2,
@@ -1816,7 +1816,7 @@ window.PRICES_DATA = {
       "low_gbp": "12",
       "high_gbp": "34",
       "bar_pct": 40,
-      "market_cap_gbp_b": 3.922,
+      "market_cap_gbp_b": 3.923,
       "beta": 0.352,
       "pe_ratio": null,
       "avg_volume_m": 2.61,
@@ -1881,7 +1881,7 @@ window.PRICES_DATA = {
       "low_gbp": "28",
       "high_gbp": "66",
       "bar_pct": 75,
-      "market_cap_gbp_b": 9.261,
+      "market_cap_gbp_b": 9.263,
       "beta": 0.37,
       "pe_ratio": null,
       "avg_volume_m": 1.83,
