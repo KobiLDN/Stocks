@@ -14,6 +14,18 @@
 - [ ] **Crypto signals generator** — `Crypto_generate_signals_local.py` + `generate-signals.yml` entry; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle)
 - [ ] **Verify Crypto YTD cache on live** — confirm GitHub Actions run picks up `ytd_cache.json` and YTD column populates correctly on `stocks-4qw.pages.dev/Crypto/`
 
+### GitHub best-practices (from 2026-06-21 review)
+
+- [ ] **Shared concurrency group across push-workflows** (HIGH) — `update-prices`, `generate-export`, `generate-news-feed`, `generate-signals` each use a *separate* concurrency group, so they collide on `main` (root cause of the rebase-race dance). Give all four the same `concurrency: group: push-to-main` to serialize pushes
+- [ ] **Add a LICENSE** (HIGH) — repo is PUBLIC with no license = "all rights reserved" + fully visible. Decide intent: add MIT (open) or flip repo to private
+- [ ] **Branch protection on `main`** (HIGH) — add a ruleset blocking force-push + deletion (do NOT require PRs — bot needs direct push). Cheap insurance against accidental history rewrite on the live branch
+- [ ] **DRY the workflows with a matrix** (MED) — `update-prices.yml` repeats install+run 6× per sector; collapse to `strategy.matrix` over the 6 sectors; same for signals
+- [ ] **`exports/` retention** (MED) — dated JSON+CSV grow unbounded (29 files, 8.7 MB; `.git` 23 MB). Add a keep-last-~30 prune step or move snapshots to a `data` branch
+- [ ] **Add Dependabot** (MED) — `.github/dependabot.yml` for `pip` (per-sector `requirements.txt`) + `github-actions`
+- [ ] **`[skip ci]` on bot commits** (LOW) — 491 commits/30d, mostly bot; stop bot price/news commits from needlessly triggering other workflows
+- [ ] **CI lint gate** (LOW) — tiny workflow on push to validate Python syntax + JSON validity before it reaches live (no gate today)
+- [ ] **Reduce dev/main drift** (LOW) — bot only pushes `main`, so `dev` constantly drifts; every session starts with a reconcile
+
 ## In Progress
 
 _(nothing active right now)_
