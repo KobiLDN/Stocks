@@ -1,6 +1,6 @@
 # Migration plan — collapse to a single local folder
 
-**Status:** Not started (drafted 2026-06-21). Decision pending: model **(A) light** vs **(B) GitHub Flow**.
+**Status:** ✅ DONE 2026-06-21 — migrated to **Model (A) LIGHT**. Single folder `STOCKSDev/` on `dev`; `main` is remote-only; `STOCKSMain/` clone removed. Cross-device branch `claude/magical-davinci-zYLYI` kept. The plan/prompt below is retained for reference (and for the football-analyser migration).
 
 ## Why
 

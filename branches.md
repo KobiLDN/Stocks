@@ -4,10 +4,13 @@ Same GitHub remote for all: `https://github.com/KobiLDN/Stocks.git`
 
 ## Local folders
 
+Single-folder setup since **2026-06-21** — one local clone only.
+
 | Folder | Branch | Purpose |
 |---|---|---|
-| `STOCKSMain/` | `main` | Live read — tracks what's deployed on Cloudflare Pages |
-| `STOCKSDev/` | `dev` | Working branch — where changes are made before going live |
+| `STOCKSDev/` | `dev` | The only local folder. All work happens here. |
+
+`main` is **remote-only** — never checked out locally. Read live via the Cloudflare URL, `git show origin/main:<path>`, or `git diff origin/main`. Deploy with `git push origin dev:main`. (The old `STOCKSMain/` clone was removed in the single-folder migration — see `MIGRATION.md`.)
 
 ## Branches
 

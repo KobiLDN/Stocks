@@ -4,7 +4,9 @@ This file is for any AI or human contributor working in this repo.
 
 ## Session role
 
-This session manages **Stocks only** (`STOCKSDev` / `STOCKSMain`). Portfolio is a separate Claude session at `G:\My Drive\coding\ai\portfolio\`.
+This session manages **Stocks only**. Portfolio is a separate Claude session at `G:\My Drive\coding\ai\portfolio\`.
+
+**Single-folder setup (migrated 2026-06-21):** there is now ONE local folder — `STOCKSDev/`, working on `dev`. `main` is a **remote-only** branch (the live site); it is never checked out locally. Deploy with `git push origin dev:main` only on explicit "go" / "push to all". The old `STOCKSMain/` clone has been removed — to read live without checking it out, use the Cloudflare URL, `git show origin/main:<path>`, or `git diff origin/main`.
 
 Worktrees are disabled (`"worktree": false` in `.claude/settings.json`) — sessions open directly in `STOCKSDev/`.
 

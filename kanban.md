@@ -14,7 +14,6 @@
 - [ ] **Crypto signals generator** — `Crypto_generate_signals_local.py` + `generate-signals.yml` entry; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle)
 - [ ] **Verify Crypto YTD cache on live** — confirm GitHub Actions run picks up `ytd_cache.json` and YTD column populates correctly on `stocks-4qw.pages.dev/Crypto/`
 
-- [ ] **Collapse to single local folder** — migrate off the two-folder (STOCKSDev/STOCKSMain) setup; plan + paste-ready prompt in `MIGRATION.md`. Test on football-analyser first; decide model (A) light vs (B) GitHub Flow
 
 ### GitHub best-practices (from 2026-06-21 review)
 
@@ -34,6 +33,7 @@ _(nothing active right now)_
 
 ## Done (recent)
 
+- [x] **Single-folder migration (Model A)** — removed `STOCKSMain/` clone; one local folder `STOCKSDev/` on `dev`; `main` is remote-only; preview deploy preserved; docs updated (`AGENTS.md`, `branches.md`, `MIGRATION.md`)
 - [x] **Crypto YTD cache** — `ytd_cache.json` stores Jan 1 USD prices; fetched once per year, reused every daily run; eliminates 34 extra CoinGecko calls and rate-limit cascades that were causing YTD nulls
 - [x] **Crypto CoinGecko constants** — `COINGECKO_PRO_URL` + `COINGECKO_DEMO_URL` declared (were referenced but never defined)
 - [x] **branches.md** — repo branch map + "check branches.md and push to all" convention documented
