@@ -14,6 +14,8 @@
 - [ ] **Crypto signals generator** — `Crypto_generate_signals_local.py` + `generate-signals.yml` entry; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle)
 - [ ] **Verify Crypto YTD cache on live** — confirm GitHub Actions run picks up `ytd_cache.json` and YTD column populates correctly on `stocks-4qw.pages.dev/Crypto/`
 
+- [ ] **Collapse to single local folder** — migrate off the two-folder (STOCKSDev/STOCKSMain) setup; plan + paste-ready prompt in `MIGRATION.md`. Test on football-analyser first; decide model (A) light vs (B) GitHub Flow
+
 ### GitHub best-practices (from 2026-06-21 review)
 
 - [ ] **Shared concurrency group across push-workflows** (HIGH) — `update-prices`, `generate-export`, `generate-news-feed`, `generate-signals` each use a *separate* concurrency group, so they collide on `main` (root cause of the rebase-race dance). Give all four the same `concurrency: group: push-to-main` to serialize pushes
