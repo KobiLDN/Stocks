@@ -213,7 +213,7 @@ Generate the key pair from **T212 app → Settings → API (Beta)**. The secret 
 | File | Purpose |
 |---|---|
 | `.key` | `KEY_ID:SECRET_KEY` — T212 Basic auth credentials |
-| `portfolio.py` | Fetches live T212 positions + loads latest export from STOCKSMain; merges and writes all outputs |
+| `portfolio.py` | Fetches live T212 positions + loads the latest export (from the live site / repo); merges and writes all outputs |
 | `run.bat` | Double-click to run `portfolio.py` |
 | `portfolio.html` | Output — full dashboard (open in browser); 1920px max-width |
 | `portfolio_analysis.json` | Output — AI prompt data (also embedded in HTML for Copy AI Prompt button) |
@@ -227,7 +227,7 @@ Generate the key pair from **T212 app → Settings → API (Beta)**. The secret 
 - **Holdings table** — Qty / Avg £ / Bought (cost basis) / Current / P&L / 1D–YTD / Vol / Signal — sortable, pinnable rows
 - **Picks table** — signal picks not held; filter by sector + signal; pinnable rows; STRONG BUY auto-sorts to top
 
-**T212 ticker aliases:** T212's API sometimes returns non-standard tickers (e.g. `HUTMF` for NYSE-listed `HUT`). The `TICKER_ALIASES` dict in `portfolio.py` remaps these before the universe lookup. Add entries here whenever T212's API ticker differs from the STOCKSMain export ticker:
+**T212 ticker aliases:** T212's API sometimes returns non-standard tickers (e.g. `HUTMF` for NYSE-listed `HUT`). The `TICKER_ALIASES` dict in `portfolio.py` remaps these before the universe lookup. Add entries here whenever T212's API ticker differs from the live export ticker:
 ```python
 TICKER_ALIASES = {
     "HUTMF": "HUT",   # T212 returns HUTMF; tracked in export as HUT (NASDAQ)

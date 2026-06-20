@@ -35,7 +35,7 @@ git push origin dev
 
 ## Push to all branches
 
-When the user says **"check branches.md and push to all"**: read `branches.md` and push the current commit to **every branch listed** — including `main`, `dev`, `claude/magical-davinci-zYLYI`, and any active Claude worktree branch.
+When the user says **"check branches.md and push to all"** (or just **"push to all"**): read `branches.md` and push the current commit to **every branch listed** — `main`, `dev`, and `claude/magical-davinci-zYLYI`. Worktrees are disabled, so there are no `claude/...` worktree branches.
 
 ## Branch hygiene
 

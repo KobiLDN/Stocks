@@ -5,56 +5,34 @@ This file is for any AI or human contributor working in this repo.
 ## Read order before editing
 
 1. `AGENTS.md` (this file)
-2. `WORKFLOW.md` (repo structure + DEV→MAIN→GitHub shipping process)
+2. `../WORKFLOW.md` (repo structure + single-folder shipping process)
 3. `CHANGELOG.md` (newest entry is first row under the header)
 4. `FEATURES.md` (backlog of planned work)
 
 ## Repo structure & workflow (READ THIS)
 
-The project lives in a container folder with **two independent clones** (not git worktrees):
+**Single-folder setup since 2026-06-21.** The root `../AGENTS.md`, `../WORKFLOW.md`, and `../branches.md` are canonical — read those. Summary:
 
 ```
 G:\My Drive\coding\ai\Stocks\        ← plain container (no .git)
-                       ├── STOCKSMain\   ← clone on `main` — the safe copy + what goes live
-                       └── STOCKSDev\    ← clone on `dev`  — the workbench
+                       └── STOCKSDev\    ← the ONLY local folder, works on `dev`
 ```
 
-- **`STOCKSDev` = where all work happens.** Edit here. Break things freely.
-- **`STOCKSMain` = the safe copy.** Never edit directly. It is the restore point and the only branch GitHub Pages deploys.
-- **GitHub `origin` = the bridge** between the two clones.
+- **`STOCKSDev` (on `dev`) = where all work happens.** Edit here, commit, `git push origin dev`.
+- **`main` is remote-only** — the live site, never checked out locally. Read it via the Cloudflare URL, `git show origin/main:<path>`, or `git diff origin/main`.
+- **Deploy:** `git push origin dev:main` — only on explicit "go" / "push to all".
 
-### The 3-step workflow — always follow this order
+`dev` auto-deploys a preview to **https://dev.stocks-4qw.pages.dev** (~30–60s).
 
-1. **Edit files in `STOCKSDev`** — make changes, commit, `git push origin dev`.
-2. **Sync with `STOCKSMain`** — in the MAIN clone: `git fetch origin` then `git merge --ff-only origin/dev`.
-3. **Save to GitHub** — from `STOCKSMain`: `git push`. This is what updates the live site.
+### If dev and main diverge
 
-Never edit in `STOCKSMain`. Never push to `main` until the user has approved the change ("go"). Step 3 (the live push) **requires explicit user approval every time.**
-
-### Safety net — if `STOCKSDev` gets trashed
-
-`main` always has a known-good copy, so dev is disposable:
+Usually the price bot committed to `main` in between. Fix:
 
 ```
-cd STOCKSDev
-git fetch origin
-git reset --hard origin/main     # discard local mess, back to known-good
-```
-
-Or just delete the `STOCKSDev` folder and re-clone — nothing is lost because `main` is the source of truth.
-
-### If `git merge --ff-only` is refused in step 2
-
-Means `dev` and `main` diverged (usually the price bot committed to `main` in between). Fix:
-
-```
-cd STOCKSDev
 git fetch origin
 git rebase origin/main
-git push --force-with-lease origin dev
+git push origin dev
 ```
-
-Then retry step 2 in `STOCKSMain`.
 
 ## After every edit
 
@@ -76,7 +54,7 @@ When you make a change, update these in the same commit:
 
 ## Price updater bot
 
-- `AI_update_prices.py` runs automatically via GitHub Actions **twice daily on weekdays** (13:00 UTC and 21:30 UTC).
+- `AI_update_prices.py` runs automatically via GitHub Actions **3× daily on weekdays** (08:00, 14:30, 20:30 UTC).
 - It fetches live prices from Yahoo Finance, converts to GBP, and writes three files: `index.html` (data-* attributes), `prices.json` (JSON snapshot), and `prices-data.js` (`window.PRICES_DATA` global for file:// compatibility).
 - It commits and pushes all three files to `main` if prices changed.
 - **Do not manually edit price data in `index.html`** — the bot will overwrite it on the next run.
@@ -97,7 +75,7 @@ This means: **if you add a new field to the bot output (`AI_update_prices.py` �
 3. **Either** run `python AI_update_prices.py` locally and commit the regenerated `prices-data.js` + `prices.json` alongside the code change, **or** explicitly trigger the GitHub workflow (`workflow_dispatch`) immediately after pushing so live data matches the new code.
 4. Never push new-field code expecting the live page to "just work" — it won't until the data file is regenerated *on GitHub*.
 
-Symptom of forgetting this: page works locally, all columns blank on `kobildn.github.io`. The fix is always "run the workflow", not a code change.
+Symptom of forgetting this: page works locally, all columns blank on the live site (`stocks-4qw.pages.dev`). The fix is always "run the workflow", not a code change.
 
 ## Stock row structure
 
@@ -157,7 +135,7 @@ The repo has two classes of generator scripts. Filename suffix and workflow indi
 
 | Pattern              | Runs where              | Refreshed how                                | Example                       |
 |----------------------|-------------------------|----------------------------------------------|-------------------------------|
-| `update_*.py`        | GitHub Actions (CI)     | Cron schedule (e.g. twice daily on weekdays) | `AI_update_prices.py`            |
+| `update_*.py`        | GitHub Actions (CI)     | Cron schedule (3× daily on weekdays)         | `AI_update_prices.py`            |
 | `generate_*_local.py`| GitHub Actions **and** user's PC | Cron or `workflow_dispatch`; or run manually | `AI_generate_signals_local.py`   |
 
 `AI_generate_signals_local.py` runs in CI via `generate-signals.yml` (Mon/Wed/Fri 07:00 UTC) using the `OPENROUTER_API_KEY` secret. It can also be run locally using `key.txt` for on-demand refreshes. The workflow supports `workflow_dispatch` with a sector dropdown (all / AI / Biotech / Defence / Tech) so a single sector can be refreshed without running the others. Output files (`signals-local.json`, `signals-local.js`) are committed to the repo so the live site always has data.
