@@ -10,7 +10,15 @@
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  .controls-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; align-items: center; }
+  .news-controls {
+    display: flex; align-items: center; gap: 0;
+    padding: 6px 16px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .news-controls::-webkit-scrollbar { display: none; }
+  .news-sector, .news-sort { display: flex; align-items: center; gap: 4px; }
+  .news-period { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+  .controls-sep { width: 1px; height: 20px; background: var(--border); margin: 0 10px; flex-shrink: 0; }
 
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px;
@@ -115,8 +123,8 @@
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
 </nav>
-
-<div class="controls-row">
+<div class="news-controls">
+  <div class="news-sector">
     <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
     <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
     <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
@@ -125,12 +133,21 @@
     <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
     <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
   </div>
-<div class="controls-row">
+  <span class="controls-sep"></span>
+  <div class="news-sort">
     <button class="sort-btn active" onclick="setSort('newest',this)">Newest</button>
     <button class="sort-btn" onclick="setSort('oldest',this)">Oldest</button>
     <button class="sort-btn" onclick="setSort('pos',this)">Most Positive</button>
     <button class="sort-btn" onclick="setSort('neg',this)">Most Negative</button>
-    <div class="divider"></div>
+  </div>
+  <span class="controls-sep"></span>
+  <div class="news-period">
+    <button class="period-btn" onclick="setPeriod('24h',this)">Last 24h</button>
+    <button class="period-btn active" onclick="setPeriod('week',this)">Last Week</button>
+    <button class="period-btn" onclick="setPeriod('all',this)">All Time</button>
+    <span id="news-count"></span>
+  </div>
+</div>
 </header>
 <div class="page-body">
 
@@ -182,17 +199,8 @@
 
 <div class="page-main">
 <div class="container">
-
-  
-
-  
-    <button class="period-btn" onclick="setPeriod('24h',this)">Last 24h</button>
     <button class="period-btn active" onclick="setPeriod('week',this)">Last Week</button>
-    <button class="period-btn" onclick="setPeriod('all',this)">All Time</button>
-    <span id="news-count">Loading…</span>
-  </div>
-
-  <div class="news-list" id="news-list">
+<div class="news-list" id="news-list">
     <div class="no-news">Loading all sectors…</div>
   </div>
 </div>
