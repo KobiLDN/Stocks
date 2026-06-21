@@ -350,7 +350,11 @@
       const data  = JSON.parse(match[1]);
       return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
     } catch(e) { return []; }
-  })).then(results => buildCalc(results.flat()));
+  })).then(results => {
+  const stocks = results.flat();
+  const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(stocks.map(s => s.ticker)).size;
+  buildCalc(stocks);
+});
 </script>
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->

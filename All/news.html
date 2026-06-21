@@ -100,7 +100,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>News</span></h1>
-    <div class="header-sub">Latest headlines across 192 stocks · AI-scored sentiment · Newest first</div>
+    <div class="header-sub">Latest headlines across <span id="all-stock-count">—</span> stocks · AI-scored sentiment · Newest first</div>
 </div>
   
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -314,6 +314,7 @@
     } catch(e) { return []; }
   })).then(results => {
     allNews = results.flat();
+    const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(allNews.map(n => n.ticker).filter(Boolean)).size;
     renderNews();
   });
 </script>

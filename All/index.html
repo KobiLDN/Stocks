@@ -333,7 +333,7 @@
 <div class="header-left">
 <div class="header-label">// Market Intelligence</div>
 <h1>All <span>Sectors</span></h1>
-<div class="header-sub">v1 &nbsp;·&nbsp; Select a sector<span id="last-updated-label"></span></div>
+<div class="header-sub"><span id="all-stock-count">—</span> stocks &nbsp;·&nbsp; v1<span id="last-updated-label"></span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -678,6 +678,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const tsEl = document.getElementById('last-updated-label');
     if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + data.updated;
     document.getElementById('total-count').textContent = data.stocks.length;
+    const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(data.stocks.map(s => s.ticker)).size;
     buildTable(data.stocks);
     const returnTh = document.querySelector('th[onclick*="\'return\'"]');
     sortState.col = 'return';
