@@ -7,8 +7,6 @@ All pages must conform to these rules. When in doubt, match the hub exactly.
 
 ## Spacing Reference
 
-Exact pixel values for every zone. Do not deviate.
-
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  TICKER TAPE  h=36px  │ item pad: 0 20px │ gap: 7px     │
@@ -17,10 +15,10 @@ Exact pixel values for every zone. Do not deviate.
 ├─────────────────────────────────────────────────────────┤
 │  HEADER ROW 2   nav tabs         pad: 0 16px            │
 ├─────────────────────────────────────────────────────────┤
-│  HEADER ROW 3   filter bar       pad: 8px 16px          │
-│                 (only on pages that have filters)        │
+│  HEADER ROW 3+  page controls    pad: 6–8px 16px        │
+│  (filters / toolbar / chart-controls — page-specific)   │
 ├────────┬────────────────────────────────────────────────┤
-│  RAIL  │  CONTENT   pad: 20px 24px                      │
+│  RAIL  │  CONTENT   pad: 20px 24px  (overflow-y: auto)  │
 │ w=92px │                                                 │
 │pad:    │                                                 │
 │8px 6px │                                                 │
@@ -32,55 +30,44 @@ Exact pixel values for every zone. Do not deviate.
 |---|---|---|
 | Ticker tape | height | `36px` |
 | Ticker tape | item padding | `0 20px` |
-| Ticker tape | item gap (ticker · price · change) | `7px` |
 | Ticker tape | font size | `11px` IBM Plex Mono |
 | Body | padding-top (clears tape) | `36px` |
 | Header row 1 | padding | `12px 20px` |
 | Header row 2 (nav) | padding | `0 16px` |
-| Header row 3 (filters) | padding | `8px 16px` |
+| Header row 3+ (controls) | padding | `6–8px 16px` |
 | Nav tab | padding | `10px 16px` |
-| Nav tab | active underline | `border-bottom: 2px solid var(--accent)` |
-| Filter button | padding | `6px 10px` (via `.filter-btn`) |
+| Nav tab active | style | `border-bottom: 2px solid var(--accent)` |
 | Left rail | width | `92px` |
 | Left rail | padding | `8px 6px` |
 | Left rail | gap between pills | `4px` |
 | Sector pill | padding | `8px 6px` |
-| Sector pill | internal gap (icon · name · badge) | `3px` |
-| Sector pill icon | font-size | `18px` |
-| Sector pill name | font-size | `8px` |
-| Sector pill badge | font-size | `7px`, padding `1px 4px` |
 | Content area | padding | `20px 24px` |
-| Info block (each) | padding | `6px 24px` |
-| Info block (each) | internal gap (label → value) | `4px` |
-| Info blocks group | margin-right (before toggle) | `16px` |
-| Info block label | font-size | `9px` |
-| Info block value | font-size | `13px` |
 | Theme toggle | size | `44×44px` |
 
 ---
 
-## Layout: Layer Stack (top → bottom)
+## Layout: Layer Stack
 
 ```
 ┌──────────────────────────────────────────┐
 │  TICKER TAPE   position: fixed  h=36px   │  z-index: 200
 ├──────────────────────────────────────────┤
-│  HEADER ROW 1  brand + toggle  sticky    │  z-index: 100
+│  HEADER ROW 1  brand + toggle  sticky    │
 │  HEADER ROW 2  nav tabs                  │
-│  HEADER ROW 3  filter bar (if present)   │
+│  HEADER ROW 3+ page controls             │
 ├─────────┬────────────────────────────────┤
 │         │                                │
 │  LEFT   │  CONTENT  overflow-y: auto     │
-│  RAIL   │  padding: 20px 24px            │
+│  RAIL   │                                │
 │  w=92px │                                │
 └─────────┴────────────────────────────────┘
 ```
 
-- `html, body { height: 100%; }` — full viewport height, no scroll on the page itself
-- `body { overflow: hidden; padding-top: 36px; }` — clears the fixed ticker tape
-- `body[data-layout="rail"] { display: flex; flex-direction: column; }` — stacks header → page-body
-- Only the content area (`.page-main`) scrolls internally
-- The entire `<header>` (all 3 rows) is sticky — no separate sticky-top wrapper needed on rail pages
+- `html:has(body[data-layout="rail"]) { height: 100%; }` — required for scroll to work
+- `body[data-layout="rail"] { height: 100%; overflow: hidden; display: flex; flex-direction: column; }`
+- `body { padding-top: 36px; }` — clears the fixed ticker tape
+- The entire `<header>` is sticky — contains all rows above the content
+- Only `.page-main` scrolls internally
 
 ---
 
@@ -121,44 +108,34 @@ Theme toggled via `html[data-theme="dark"]`. Persisted in `localStorage('theme')
 #ticker-tape {
   position: fixed; top: 0; left: 0; right: 0;
   height: 36px; z-index: 200;
-  background: var(--bg);
-  border-bottom: 1px solid var(--accent);
+  background: var(--bg); border-bottom: 1px solid var(--accent);
   overflow: hidden;
 }
 ```
 
 - Always the **topmost element** in `<body>`
 - Populated by `buildTape()` from `shared.js`
-- Pauses on hover
-- On the hub: aggregates stocks across all 6 sector `__pd_*` globals (deduplicated by ticker)
 
 ---
 
 ## 2 · Header
 
-The header contains **all three sticky rows** for rail pages. It is a flex column:
+The `<header>` contains **all sticky rows** for a page. It is a flex column:
 
 ```css
 body[data-layout="rail"] header {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  border-bottom: 1px solid var(--accent);
-  background: var(--bg);
+  padding: 0; display: flex; flex-direction: column; flex-shrink: 0;
+  border-bottom: 1px solid var(--accent); background: var(--bg);
 }
 ```
 
-### Row 1 — Brand + Toggle
+Every row after the first uses `border-top: 1px solid var(--border)` to separate.
+
+### Row 1 — Brand + Toggle (every page)
 
 ```css
 body[data-layout="rail"] .header-inner {
-  display: flex;
-  align-items: center;
-  padding: 12px 20px;
-  max-width: none;
-  margin: 0;
-  gap: 20px;
+  display: flex; align-items: center; padding: 12px 20px; gap: 20px; max-width: none; margin: 0;
 }
 body[data-layout="rail"] .header-left { margin-right: auto; }
 ```
@@ -168,54 +145,72 @@ body[data-layout="rail"] .header-left { margin-right: auto; }
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Page <span>Title</span></h1>
-    <div class="header-sub">— · — · —</div>
+    <div class="header-sub">— stocks · v1 · Last updated —</div>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 ```
 
-- `header-label`: always `// Market Intelligence`, `color: var(--accent)`
-- `h1`: page name — second word/phrase in `<span>` to get accent colour
-- `header-sub`: page-specific descriptor — include dynamic `<span id="...">` for live values
-- **Info blocks** (hub only): go between `.header-left` and the toggle. See hub inline CSS.
+Info blocks (Universe / Prices / Last Updated) go between `.header-left` and the toggle — **hub only**.
 
-### Row 2 — Nav Tabs
+### Row 2 — Nav Tabs (every page)
 
 ```css
 body[data-layout="rail"] header nav {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  padding: 0 16px;
-  border-top: 1px solid var(--border);
-  background: var(--bg);
-  overflow-x: auto;
-  scrollbar-width: none;
+  display: flex; align-items: center; gap: 2px; padding: 0 16px;
+  border-top: 1px solid var(--border); background: var(--bg); overflow-x: auto;
 }
-.nav-link {
-  font-family: 'IBM Plex Mono'; font-size: 11px; letter-spacing: 1.5px;
-  text-transform: uppercase; padding: 10px 16px;
-  color: var(--dim); border-bottom: 2px solid transparent;
-  text-decoration: none; white-space: nowrap;
-}
+.nav-link { font-family: 'IBM Plex Mono'; font-size: 11px; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 10px 16px; color: var(--dim);
+  border-bottom: 2px solid transparent; text-decoration: none; white-space: nowrap; }
 .nav-link.active { color: var(--accent); border-bottom-color: var(--accent); }
 ```
 
-### Row 3 — Filter Bar (pages that have filters)
+### Row 3+ — Page Controls (page-specific)
 
+Each control row shares this pattern:
 ```css
-body[data-layout="rail"] header .filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 8px 16px;
-  border-top: 1px solid var(--border);
-  margin-bottom: 0;
-}
+border-top: 1px solid var(--border);
+padding: 6–8px 16px;
+display: flex; align-items: center; gap: …;
 ```
 
-Pages with filter bar: Dashboard, Metrics, Signals, Calculator  
-Pages without: News, Heatmap, Charts
+| Page | Row 3 class | Contents |
+|---|---|---|
+| Dashboard | `.filter-bar` | Sector filter buttons (All · AI Infra · Biotech · Defence · Tech · Crypto · Energy) |
+| Metrics | `.filter-bar` | Same sector filters |
+| News | `.news-controls` | Sector group · separator · Sort group · separator · Period group + count |
+| Signals | `.filter-bar` | Sector filters |
+| Heatmap | `.toolbar` | Colour By · timeframe buttons · Prices timestamp · gradient legend |
+| Charts | `.chart-controls` | Ticker label · 1W/1Y/5Y buttons · Single/Grid toggle (right) |
+| Calculator | `.filter-bar` | Sector filters |
+
+**Filter buttons** (shared, in `shared.css`):
+```css
+.filter-btn { font-family: 'IBM Plex Mono'; font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted); cursor: pointer; }
+.filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+.filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+```
+
+Sector-colour active states (in each page's inline `<style>`):
+```css
+.filter-btn[data-filter="biotech"].active { background: var(--green); ... }
+.filter-btn[data-filter="defence"].active { background: var(--rose);  ... }
+/* etc. */
+```
+
+**News controls** (single row, three groups with separators):
+```html
+<div class="news-controls">
+  <div class="news-sector"><!-- filter-btn × 7 --></div>
+  <span class="controls-sep"></span>
+  <div class="news-sort"><!-- sort-btn × 4 --></div>
+  <span class="controls-sep"></span>
+  <div class="news-period"><!-- period-btn × 3 + #news-count --></div>
+</div>
+```
 
 ---
 
@@ -223,18 +218,17 @@ Pages without: News, Heatmap, Charts
 
 ```css
 .left-rail {
-  width: 92px; flex-shrink: 0;
-  border-right: 1px solid var(--border);
-  background: var(--bg);
-  display: flex; flex-direction: column;
-  padding: 8px 6px; gap: 4px;
-  overflow-y: auto; scrollbar-width: none;
+  width: 92px; flex-shrink: 0; border-right: 1px solid var(--border);
+  background: var(--bg); display: flex; flex-direction: column;
+  padding: 8px 6px; gap: 4px; overflow-y: auto; scrollbar-width: none;
 }
 ```
 
-- Always **9 pills** in order: Stock Hub · All Sectors · AI Infra · Biotech · Defence · Technology · Crypto · Energy · RSS Feed
-- Active pill gets `class="... active"` — `border-color: var(--accent); color: var(--accent); background: var(--surface2)`
-- Each pill links to the **same page type** across sectors (e.g. if on metrics, links go to each sector's `metrics.html`)
+Always **9 pills** in order: Stock Hub · All Sectors · AI Infra · Biotech · Defence · Technology · Crypto · Energy · RSS Feed
+
+Active pill: `border-color: var(--accent); color: var(--accent); background: var(--surface2)`
+
+Each pill links to the **same page type** across sectors (e.g. on metrics → each sector's `metrics.html`).
 
 **Pill HTML:**
 ```html
@@ -244,22 +238,6 @@ Pages without: News, Heatmap, Charts
   <span class="sector-pill-badge">Live</span>  <!-- omit if not live -->
 </a>
 ```
-
-```css
-.sector-pill {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 3px; padding: 8px 6px;
-  background: var(--surface); border: 1px solid var(--border); border-radius: 2px;
-  font-family: 'IBM Plex Mono'; font-size: 8px; letter-spacing: 1.2px;
-  text-transform: uppercase; color: var(--dim); text-decoration: none;
-}
-.sector-pill-icon  { font-size: 18px; line-height: 1; }
-.sector-pill-badge { font-size: 7px; padding: 1px 4px;
-                     background: rgba(0,230,118,0.1); color: var(--green);
-                     border: 1px solid rgba(0,230,118,0.25); }
-```
-
-### Sector pill reference
 
 | Pill | Icon | href (from root) | Badge |
 |---|---|---|---|
@@ -278,38 +256,23 @@ Pages without: News, Heatmap, Charts
 ## 4 · Content Area
 
 ```css
-body[data-layout="rail"] .page-main {
-  flex: 1;
-  overflow-y: auto;
-  min-width: 0;
-}
-body[data-layout="rail"] .container {
-  padding: 20px 24px;
-  margin: 0;
-  max-width: none;
-}
+body[data-layout="rail"] .page-main { flex: 1; overflow-y: auto; min-width: 0; }
+body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: none; }
 ```
 
 - `.page-main` is the scroll container — same pattern as hub's `<main>`
-- Only this element scrolls — everything above (header with all 3 rows, left rail) is fixed
-- `data-bar` (last updated / schedule info) injected here by `shared.js` at `afterbegin`
+- Only this element scrolls — everything in `<header>` and `.left-rail` is fixed
+- `data-bar` (last updated / schedule info) injected at `afterbegin` of `.container` by `shared.js`
+
+**Container overrides by page:**
+| Page | Override |
+|---|---|
+| Heatmap | `style="padding-top: 8px;"` (toolbar is in header, less gap needed) |
+| Charts | `style="padding-left:0; padding-right:0; max-width:100%;"` (full-width charts layout) |
 
 ---
 
-## 5 · Rail Page Setup (`data-layout="rail"`)
-
-All `All/` sub-pages and their sector equivalents use the rail layout.
-
-```css
-body[data-layout="rail"] {
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-```
-
-**Full HTML skeleton for every rail page:**
+## 5 · Rail Page HTML Skeleton
 
 ```html
 <body data-layout="rail">
@@ -335,15 +298,10 @@ body[data-layout="rail"] {
       <a class="nav-link" href="charts.html">📈 Charts</a>
       <a class="nav-link" href="calculator.html">🧮 What-If</a>
     </nav>
-    <!-- Row 3: filter bar (omit if page has no filters) -->
+    <!-- Row 3: page controls (use appropriate class per page — see table above) -->
     <div class="filter-bar">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="ai">AI Infra</button>
-      <button class="filter-btn" data-filter="biotech">Biotech</button>
-      <button class="filter-btn" data-filter="defence">Defence</button>
-      <button class="filter-btn" data-filter="tech">Tech</button>
-      <button class="filter-btn" data-filter="crypto">Crypto</button>
-      <button class="filter-btn" data-filter="energy">Energy</button>
+      <!-- sector buttons… -->
     </div>
   </header>
 
@@ -353,15 +311,12 @@ body[data-layout="rail"] {
       <div class="container"><!-- page content --></div>
     </div>
   </div>
-
 </body>
 ```
 
 ---
 
 ## 6 · Dynamic Values
-
-All stock counts and timestamps must be **live from data** — never hardcoded.
 
 | Element | Source |
 |---|---|
@@ -370,29 +325,30 @@ All stock counts and timestamps must be **live from data** — never hardcoded.
 | Ticker tape | `buildTape(stocks)` via shared.js |
 | Hub info blocks | Aggregated from `window.__pd_*` globals |
 
+Never hardcode stock counts or timestamps.
+
 ---
 
 ## 7 · Shared Files
 
 | File | Purpose |
 |---|---|
-| `shared.css` | Ticker tape, sector-card pills, rail layout, sticky-top, data-bar |
-| `shared.js` | `toggleTheme()`, `buildTape()`, `buildStickyTop()`, `buildDataBar()` |
+| `shared.css` | Rail layout, ticker tape, nav, filter-btn, sector-pill |
+| `shared.js` | `toggleTheme()`, `buildTape()`, `buildStickyTop()` (skipped on rail), `buildDataBar()` |
 
-- Hub (`index.html`) has its own inline `<style>` — it does **not** load `shared.css`
-- All other pages load `shared.css` and `shared.js`
-- `shared.js` is always loaded with `defer`
-- `buildStickyTop()` is skipped on rail pages — the header handles its own stickiness
+- Hub (`index.html`) uses inline `<style>` only — does **not** load `shared.css`
+- All other pages: `<link href="../shared.css">` + `<script src="../shared.js" defer>`
+- `buildStickyTop()` is skipped on rail pages — `<header>` handles stickiness directly
 
 ---
 
-## Rules Summary
+## 8 · Rules Summary
 
 1. **Ticker tape** is always first in `<body>`, always fixed at top
-2. **Header** contains all 3 rows (brand · nav · filters) and is always sticky — no separate sticky-top wrapper
-3. **Header row 1**: Brand (left, `margin-right: auto`) → Toggle (right). Info blocks in middle on hub only.
-4. **Nav and filter bar** live inside `<header>` — they are part of the sticky chrome, not page content
+2. **Header** contains all sticky chrome: brand row → nav row → page control row(s)
+3. **Brand row**: `header-left` (with `margin-right: auto`) + theme toggle — brand always left
+4. **Nav and all controls live inside `<header>`** — they are sticky chrome, not page content
 5. **Left rail** always has all 9 pills; active pill matches the current page's sector
-6. **Stock counts are always dynamic** — never write a hardcoded number into HTML
+6. **Stock counts are always dynamic** — never hardcode numbers in HTML
 7. **Only `.page-main` scrolls** — header and rail are fixed
-8. **Colours come from CSS tokens only** — never hardcode hex values in HTML or JS
+8. **Colours from CSS tokens only** — never hardcode hex in HTML or JS
