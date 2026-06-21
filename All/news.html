@@ -115,6 +115,22 @@
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
 </nav>
+
+<div class="controls-row">
+    <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
+    <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
+    <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
+    <button class="filter-btn" data-filter="defence" onclick="setSector('defence',this)">Defence</button>
+    <button class="filter-btn" data-filter="tech" onclick="setSector('tech',this)">Tech</button>
+    <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
+    <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
+  </div>
+<div class="controls-row">
+    <button class="sort-btn active" onclick="setSort('newest',this)">Newest</button>
+    <button class="sort-btn" onclick="setSort('oldest',this)">Oldest</button>
+    <button class="sort-btn" onclick="setSort('pos',this)">Most Positive</button>
+    <button class="sort-btn" onclick="setSort('neg',this)">Most Negative</button>
+    <div class="divider"></div>
 </header>
 <div class="page-body">
 
@@ -167,22 +183,9 @@
 <div class="page-main">
 <div class="container">
 
-  <div class="controls-row">
-    <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
-    <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
-    <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
-    <button class="filter-btn" data-filter="defence" onclick="setSector('defence',this)">Defence</button>
-    <button class="filter-btn" data-filter="tech" onclick="setSector('tech',this)">Tech</button>
-    <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
-    <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
-  </div>
+  
 
-  <div class="controls-row">
-    <button class="sort-btn active" onclick="setSort('newest',this)">Newest</button>
-    <button class="sort-btn" onclick="setSort('oldest',this)">Oldest</button>
-    <button class="sort-btn" onclick="setSort('pos',this)">Most Positive</button>
-    <button class="sort-btn" onclick="setSort('neg',this)">Most Negative</button>
-    <div class="divider"></div>
+  
     <button class="period-btn" onclick="setPeriod('24h',this)">Last 24h</button>
     <button class="period-btn active" onclick="setPeriod('week',this)">Last Week</button>
     <button class="period-btn" onclick="setPeriod('all',this)">All Time</button>

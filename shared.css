@@ -413,8 +413,9 @@ body[data-layout="rail"] header nav {
   scrollbar-width: none;
 }
 
-/* Filter bar sits inside header, below nav */
-body[data-layout="rail"] header .filter-bar {
+/* Filter/control rows sit inside header, below nav — shared rules */
+body[data-layout="rail"] header .filter-bar,
+body[data-layout="rail"] header .controls-row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
