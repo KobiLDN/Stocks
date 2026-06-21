@@ -98,6 +98,7 @@ function buildDataBar() {
 
 // ── Sticky header+nav wrapper ─────────────────────────────────────────────────
 function buildStickyTop() {
+  if (document.body.dataset.layout === 'rail') return; // rail pages handle their own layout
   const header = document.querySelector('header');
   const nav    = document.querySelector('nav');
   if (!header || header.closest('.sticky-top')) return; // already wrapped or no header

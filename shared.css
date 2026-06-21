@@ -350,6 +350,61 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
 }
 .theme-toggle:hover { color: var(--accent); border-color: var(--accent); border-top-color: var(--accent); opacity: 1; background: var(--surface2); }
 
+/* ---- Left-rail layout (opt-in: <body data-layout="rail">) ---- */
+body[data-layout="rail"] { height: 100%; overflow: hidden; }
+
+body[data-layout="rail"] .sticky-top { position: static; }
+
+body[data-layout="rail"] header { padding: 12px 20px; }
+
+body[data-layout="rail"] .header-inner {
+  padding: 0;
+  max-width: none;
+  justify-content: space-between;
+}
+body[data-layout="rail"] .header-inner::before { display: none; }
+body[data-layout="rail"] .header-label { color: var(--accent); }
+
+body[data-layout="rail"] .page-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+body[data-layout="rail"] .left-rail {
+  width: 92px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 6px;
+  gap: 4px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+body[data-layout="rail"] .left-rail::-webkit-scrollbar { display: none; }
+
+body[data-layout="rail"] .page-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+body[data-layout="rail"] nav {
+  flex-shrink: 0;
+  position: static;
+}
+
+body[data-layout="rail"] .container {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 16px;
+}
+
 /* ---- Content container ---- */
 .container {
   position: relative;
