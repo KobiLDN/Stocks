@@ -918,7 +918,7 @@
       // Populate header blocks
       const dates = results.map(r => r.updated).filter(Boolean).sort();
       const latest = dates[dates.length - 1];
-      const totalStocks = results.reduce((n, r) => n + Object.keys(r.priceMap).length, 0);
+      const totalStocks = new Set(results.flatMap(r => Object.keys(r.priceMap))).size;
       const el = document.getElementById('hb-universe');
       if (el) el.innerHTML = `<span class="accent">${totalStocks}</span> stocks · <span class="accent">${results.length}</span> sectors`;
       const elUp = document.getElementById('hb-updated');
