@@ -29,9 +29,10 @@ Worktrees are disabled (`"worktree": false` in `.claude/settings.json`) — sess
 ## Read order before editing
 
 1. `AGENTS.md` (this file)
-2. `WORKFLOW.md` (repo structure + DEV→MAIN shipping process)
+2. `WORKFLOW.md` (repo structure + single-folder shipping process)
 3. `CHANGELOG.md` (newest entry is first row under the header)
 4. `FEATURES.md` (backlog of planned work)
+5. **GitHub Project board** — [github.com/KobiLDN/Stocks/projects](https://github.com/KobiLDN/Stocks/projects) (issues + task tracking)
 
 ## Workflow
 
