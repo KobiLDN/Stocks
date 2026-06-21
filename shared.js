@@ -96,11 +96,26 @@ function buildDataBar() {
   }
 }
 
+// ── Sticky header+nav wrapper ─────────────────────────────────────────────────
+function buildStickyTop() {
+  const header = document.querySelector('header');
+  const nav    = document.querySelector('nav');
+  if (!header || header.closest('.sticky-top')) return; // already wrapped or no header
+  const wrapper = document.createElement('div');
+  wrapper.className = 'sticky-top';
+  header.parentNode.insertBefore(wrapper, header);
+  wrapper.appendChild(header);
+  if (nav) wrapper.appendChild(nav);
+}
+
 // ── Initialise on DOMContentLoaded ───────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Set correct theme icon
   const btn = document.getElementById('theme-toggle');
   if (btn) btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '☾';
+
+  // Wrap header+nav in sticky shell
+  buildStickyTop();
 
   // Inject data bar below nav
   buildDataBar();
