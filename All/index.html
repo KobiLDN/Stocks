@@ -3,106 +3,328 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All Sectors dashboard — live prices and momentum for 192 stocks and coins across AI, Biotech, Defence, Technology, Crypto, and Energy." name="description"/>
+<meta content="All sectors combined stock dashboard — live prices, 52-week range, and momentum for 192 stocks across AI Infrastructure, Biotech, Defence, Tech, Crypto, and Energy." name="description"/>
 <title>All Sectors — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../shared.css" rel="stylesheet"/>
-<script defer src="../shared.js"></script>
+<script defer="" src="../shared.js"></script>
 <style>
-  .filter-bar { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
-  .filter-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
-    padding:5px 12px; border:1px solid var(--border); background:transparent;
-    color:var(--muted); cursor:pointer; transition:all 0.15s; text-transform:uppercase;
+  .filter-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
   }
-  .filter-btn:hover { color:var(--accent); border-color:var(--accent); }
-  .filter-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-  .filter-btn[data-sector="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
-  .filter-btn[data-sector="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
-  .filter-btn[data-sector="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
-  .filter-btn[data-sector="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
-  .filter-btn[data-sector="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
-  .filter-btn[data-sector="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
+
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .filter-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .filter-btn:hover[data-tooltip]::after,
+  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
+
+  .filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
+  .filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead th {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    white-space: nowrap;
+  }
+
+  thead th.sortable { cursor: pointer; user-select: none; }
+  thead th.sortable:hover { color: var(--accent); }
+  thead th.sort-asc::after  { content: ' ▲'; color: var(--accent); }
+  thead th.sort-desc::after { content: ' ▼'; color: var(--accent); }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+    cursor: default;
+  }
+
+  tbody tr:hover { background: var(--surface2); }
+  tbody tr.hidden { display: none; }
+
+  td {
+    padding: 14px 16px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .ticker-link { text-decoration: none; color: inherit; }
+  .ticker-link:hover .ticker { text-decoration: underline; opacity: 0.85; }
+
+  .ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .exchange-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  .cat-badge {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .cat-memory        { background: rgba(192,132,252,0.15); color: var(--purple);  border: 1px solid rgba(192,132,252,0.3); }
+  .cat-nuclear-ops   { background: rgba(255,107,53,0.15);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.3); }
+  .cat-smr           { background: rgba(57,255,20,0.1);    color: var(--green);   border: 1px solid rgba(57,255,20,0.25); }
+  .cat-uranium       { background: rgba(255,215,0,0.1);    color: var(--gold);    border: 1px solid rgba(255,215,0,0.3); }
+  .cat-power-infra   { background: rgba(0,212,255,0.1);    color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+  .cat-dc-operators  { background: rgba(68,136,255,0.1);   color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
+  .cat-hyperscalers  { background: rgba(167,139,250,0.1);  color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
+  .cat-ai-compute    { background: rgba(251,113,133,0.1);  color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
+  .cat-fibre-optical { background: rgba(45,212,191,0.1);   color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
+  .cat-dsp-semi      { background: rgba(245,158,11,0.1);   color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  .cat-test-equip    { background: rgba(148,163,184,0.1);  color: var(--slate);   border: 1px solid rgba(148,163,184,0.25); }
+  .cat-materials     { background: rgba(163,230,53,0.1);   color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
 
   .sector-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9px;
-    letter-spacing:1px; padding:2px 7px; border-radius:2px; text-transform:uppercase;
-    font-weight:700; white-space:nowrap;
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
   }
-  .sector-AI      { background:rgba(0,212,255,0.12); color:#00d4ff; border:1px solid rgba(0,212,255,0.3); }
-  .sector-Biotech { background:rgba(167,139,250,0.12); color:#a78bfa; border:1px solid rgba(167,139,250,0.3); }
-  .sector-Defence { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.3); }
-  .sector-Tech    { background:rgba(96,165,250,0.12); color:#60a5fa; border:1px solid rgba(96,165,250,0.3); }
-  .sector-Crypto  { background:rgba(251,146,60,0.12); color:#fb923c; border:1px solid rgba(251,146,60,0.3); }
-  .sector-Energy  { background:rgba(250,204,21,0.12); color:#b45309; border:1px solid rgba(250,204,21,0.3); }
-  html[data-theme="dark"] .sector-Energy { color:#facc15; }
+  .sector-ai      { background: rgba(0,212,255,0.15);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.3); }
+  .sector-biotech { background: rgba(0,230,118,0.15);   color: var(--green);   border: 1px solid rgba(0,230,118,0.3); }
+  .sector-defence { background: rgba(251,113,133,0.15); color: var(--rose);    border: 1px solid rgba(251,113,133,0.3); }
+  .sector-tech    { background: rgba(167,139,250,0.15); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.3); }
+  .sector-crypto  { background: rgba(255,215,0,0.15);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.3); }
+  .sector-energy  { background: rgba(245,158,11,0.15);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.3); }
 
-  .table-wrap { overflow-x:auto; border:1px solid var(--border); margin-bottom:4px; }
-  table { width:100%; border-collapse:collapse; font-size:14px; }
-  thead th {
-    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:2px;
-    text-transform:uppercase; color:var(--muted); padding:14px 16px;
-    text-align:left; border-bottom:1px solid var(--border); background:var(--surface); white-space:nowrap;
+  .price {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--text);
+    letter-spacing: 0.5px;
   }
-  thead th.sortable { cursor:pointer; user-select:none; }
-  thead th.sortable:hover { color:var(--accent); }
-  thead th.sort-asc::after  { content:' ▲'; color:var(--accent); }
-  thead th.sort-desc::after { content:' ▼'; color:var(--accent); }
-  tbody tr { border-bottom:1px solid var(--border); transition:background 0.15s; }
-  tbody tr:hover { background:var(--surface2); }
-  tbody tr.hidden { display:none; }
-  td { padding:14px 16px; vertical-align:middle; white-space:nowrap; }
 
-  .ticker { font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:15px; letter-spacing:1px; }
-  .ticker-link { text-decoration:none; color:inherit; }
-  .ticker-link:hover .ticker { text-decoration:underline; opacity:0.85; }
-  .exchange-badge { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); letter-spacing:1px; margin-top:2px; }
-  .cat-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10px;
-    letter-spacing:1px; padding:3px 8px; border-radius:2px; text-transform:uppercase;
-    font-weight:700; background:rgba(148,163,184,0.1); color:var(--muted); border:1px solid rgba(148,163,184,0.25);
+  .return-positive { color: #16a34a; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .return-mega     { color: #0284c7; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  html[data-theme="dark"] .return-mega { color: #ffd700; }
+  .return-modest   { color: #0284c7; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .return-negative { color: #dc2626; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  tr[data-return^="-"] .return-modest,
+  tr[data-return^="-"] .return-positive { color: #dc2626; }
+
+  .range-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 160px;
   }
-  .price { font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:17px; color:var(--text); letter-spacing:0.5px; }
-  .return-positive { color:#16a34a; font-family:'IBM Plex Mono',monospace; font-weight:700; }
-  .return-mega     { color:#0284c7; font-family:'IBM Plex Mono',monospace; font-weight:700; }
-  html[data-theme="dark"] .return-mega { color:#ffd700; }
-  .return-negative { color:#dc2626; font-family:'IBM Plex Mono',monospace; font-weight:700; }
-  .return-modest   { color:#0284c7; font-family:'IBM Plex Mono',monospace; font-weight:700; }
-  .ytd-return { font-family:'IBM Plex Mono',monospace; font-weight:700; }
-  .ytd-pos { color:var(--green); } .ytd-neg { color:var(--red); } .ytd-flat { color:var(--muted); }
 
-  .range-wrap { display:flex; align-items:center; gap:8px; min-width:160px; }
-  .range-label { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); width:36px; }
-  .range-bar-bg { flex:1; height:4px; background:var(--border); border-radius:2px; position:relative; min-width:80px; }
-  .range-fill { position:absolute; left:0; top:0; height:100%; border-radius:2px; background:linear-gradient(90deg,var(--accent),var(--accent2)); }
-  .range-dot { position:absolute; top:50%; transform:translate(-50%,-50%); width:8px; height:8px; border-radius:50%; background:var(--bg); border:2px solid var(--accent); }
+  .range-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    width: 36px;
+  }
 
-  .search-count-bar { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
+  .range-bar-bg {
+    flex: 1;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    position: relative;
+    min-width: 80px;
+  }
+
+  .range-fill {
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+
+  .range-dot {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+  }
+
+  .ytd-return { font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-pos  { color: var(--green); }
+  .ytd-neg  { color: var(--red); }
+  .ytd-flat { color: var(--muted); }
+
+  footer {
+    margin-top: 48px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  footer strong { color: var(--accent2); }
+
+  @keyframes rowIn {
+    from { opacity: 0; transform: translateX(-8px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  tbody tr { animation: rowIn 0.3s ease both; }
+  tbody tr:nth-child(1)  { animation-delay: 0.05s; }
+  tbody tr:nth-child(2)  { animation-delay: 0.08s; }
+  tbody tr:nth-child(3)  { animation-delay: 0.11s; }
+  tbody tr:nth-child(4)  { animation-delay: 0.14s; }
+  tbody tr:nth-child(5)  { animation-delay: 0.17s; }
+  tbody tr:nth-child(6)  { animation-delay: 0.20s; }
+  tbody tr:nth-child(7)  { animation-delay: 0.23s; }
+  tbody tr:nth-child(8)  { animation-delay: 0.26s; }
+  tbody tr:nth-child(9)  { animation-delay: 0.29s; }
+  tbody tr:nth-child(10) { animation-delay: 0.32s; }
+  tbody tr:nth-child(n+11) { animation-delay: 0.35s; }
+
+  .search-count-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
   #stock-search {
-    font-family:'IBM Plex Mono',monospace; font-size:12px; background:var(--surface);
-    border:1px solid var(--border); color:var(--text); padding:6px 14px; width:240px; outline:none; letter-spacing:0.5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 14px;
+    width: 240px;
+    outline: none;
+    letter-spacing: 0.5px;
   }
-  #stock-search:focus { border-color:var(--accent); }
-  #stock-search::placeholder { color:var(--muted); }
-  .row-count { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
-  .row-count span { color:var(--accent); font-weight:700; }
+  #stock-search:focus { border-color: var(--accent); }
+  #stock-search::placeholder { color: var(--muted); }
 
-  .loading { padding:48px; text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--muted); font-size:13px; letter-spacing:2px; }
+  .row-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    padding-left: 2px;
+  }
+  .row-count span { color: var(--accent); font-weight: 700; }
 
-  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
-  footer strong { color:var(--accent2); }
-
-  @media (max-width:768px) {
-    .container { padding:16px 12px; }
-    h1 { font-size:26px; }
-    table { font-size:12px; }
-    thead th { padding:10px 8px; font-size:10px; }
-    td { padding:10px 8px; }
-    .ticker { font-size:13px; } .price { font-size:14px; }
-    table th:nth-child(6), table td:nth-child(6),
-    table th:nth-child(7), table td:nth-child(7),
-    table th:nth-child(8), table td:nth-child(8) { display:none; }
+  @media (max-width: 768px) {
+    .container { padding: 16px 12px; }
+    .nav-inner { padding: 8px 12px; flex-wrap: wrap; }
+    header { padding: 20px 0 16px; }
+    .header-inner { padding-left: 27px; }
+    .header-inner::before { left: 12px; }
+    h1 { font-size: 26px; }
+    .filter-btn { font-size: 10px; padding: 6px 10px; letter-spacing: 0; }
+    table { font-size: 12px; }
+    thead th { padding: 10px 8px; font-size: 10px; }
+    td { padding: 10px 8px; }
+    .ticker { font-size: 13px; }
+    .price  { font-size: 14px; }
+    .exchange-badge { font-size: 9px; }
+    table th:nth-child(7), table td:nth-child(7) { display: none; }
+    table th:nth-child(8), table td:nth-child(8) { display: none; }
+    table th:nth-child(9), table td:nth-child(9) { display: none; }
+    .row-count { font-size: 11px; }
+    footer { font-size: 10px; padding: 16px; }
   }
 </style>
 </head>
@@ -110,233 +332,357 @@
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
 <div class="header-inner">
-  <div class="header-left">
-    <div class="header-label">// Stock Universe</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub" id="header-sub">Loading… · <span id="version">v1.0</span></div>
-  </div>
-  <div class="sector-switcher">
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-    <a class="sector-card hub-card" href="../index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
-      <div class="sector-card-name">Stock Hub</div>
-    </a>
-    <a class="sector-card" href="../rss.html">
-      <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
-      <div class="sector-card-name">RSS</div>
-    </a>
-    <a class="sector-card active" href="index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
-      <div class="sector-card-name">All Sectors</div>
-    </a>
-    <a class="sector-card" href="../AI/index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
-      <div class="sector-card-name">AI Infrastructure</div>
-    </a>
-    <a class="sector-card" href="../Defence/index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
-      <div class="sector-card-name">Defence</div>
-    </a>
-    <a class="sector-card" href="../Biotech/index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
-      <div class="sector-card-name">Biotech</div>
-    </a>
-    <a class="sector-card" href="../Tech/index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
-      <div class="sector-card-name">Technology</div>
-    </a>
-    <a class="sector-card" href="../Crypto/index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
-      <div class="sector-card-name">Crypto</div>
-    </a>
-    <a class="sector-card" href="../Energy/index.html">
-      <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
-      <div class="sector-card-name">Energy</div>
-    </a>
-  </div>
+<div class="header-left">
+<div class="header-label">// Stock Universe</div>
+<h1>All <span>Sectors</span></h1>
+<div class="header-sub">192 stocks · AI, Biotech, Defence, Tech, Crypto &amp; Energy · GBP prices @ <span id="fx-rate">loading…</span></div>
+</div>
+<div class="sector-switcher">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+<a class="sector-card hub-card" href="../index.html">
+<div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+<div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card" href="../rss.html">
+<div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+<div class="sector-card-name">RSS</div>
+</a>
+<a class="sector-card active" href="index.html">
+<div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/index.html">
+<div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/index.html">
+<div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/index.html">
+<div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Tech/index.html">
+<div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/index.html">
+<div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/index.html">
+<div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Energy</div>
+</a>
+</div>
 </div>
 <div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
 </header>
 <nav>
 <div class="nav-inner">
-  <a class="nav-link active" href="index.html">📊 Dashboard</a>
-  <a class="nav-link" href="metrics.html">📋 Metrics</a>
-  <a class="nav-link" href="news.html">📰 News</a>
-  <a class="nav-link" href="signals.html">🎯 Signals</a>
-  <a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
-  <a class="nav-link" href="charts.html">📈 Charts</a>
-  <a class="nav-link" href="calculator.html">🧮 What-If</a>
+<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks across every sector" href="index.html">📊 Dashboard</a>
+<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
+<a class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring" href="news.html">📰 News</a>
+<a class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined" href="signals.html">🎯 Signals</a>
+<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
+<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
+<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today across all sectors" href="calculator.html">🧮 What-If</a>
 </div>
 </nav>
 <div class="container">
-  <div class="filter-bar" id="sector-filters">
-    <button class="filter-btn active" data-sector="all" onclick="filterSector('all',this)">All</button>
-    <button class="filter-btn" data-sector="AI"      onclick="filterSector('AI',this)">AI</button>
-    <button class="filter-btn" data-sector="Biotech" onclick="filterSector('Biotech',this)">Biotech</button>
-    <button class="filter-btn" data-sector="Defence" onclick="filterSector('Defence',this)">Defence</button>
-    <button class="filter-btn" data-sector="Tech"    onclick="filterSector('Tech',this)">Tech</button>
-    <button class="filter-btn" data-sector="Crypto"  onclick="filterSector('Crypto',this)">Crypto</button>
-    <button class="filter-btn" data-sector="Energy"  onclick="filterSector('Energy',this)">Energy</button>
-  </div>
-  <div class="search-count-bar">
-    <input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company…" type="text"/>
-    <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span></span>
-  </div>
-  <div class="table-wrap">
-    <table id="stock-table">
-      <thead>
-        <tr>
-          <th class="sortable" onclick="sortTable('ticker',this)">Ticker</th>
-          <th class="sortable" onclick="sortTable('company',this)">Company</th>
-          <th class="sortable" onclick="sortTable('sector',this)">Sector</th>
-          <th class="sortable" onclick="sortTable('cat',this)">Category</th>
-          <th class="sortable" onclick="sortTable('price',this)">Price (£)</th>
-          <th class="sortable" onclick="sortTable('return',this)">1yr Return</th>
-          <th class="sortable" onclick="sortTable('ytd',this)">YTD</th>
-          <th class="sortable" onclick="sortTable('range',this)">52-Week Range</th>
-        </tr>
-      </thead>
-      <tbody><tr><td colspan="8" class="loading">Loading all sectors…</td></tr></tbody>
-    </table>
-  </div>
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
+<button class="filter-btn" data-filter="ai" data-tooltip="Semiconductors, nuclear power, data centres and AI infrastructure — 48 stocks" onclick="filterTable('ai', this)">AI Infra</button>
+<button class="filter-btn" data-filter="biotech" data-tooltip="Biotechnology, genomics and pharmaceutical companies" onclick="filterTable('biotech', this)">Biotech</button>
+<button class="filter-btn" data-filter="defence" data-tooltip="Defence, aerospace and security companies" onclick="filterTable('defence', this)">Defence</button>
+<button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="filterTable('tech', this)">Tech</button>
+<button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency, blockchain and digital asset companies" onclick="filterTable('crypto', this)">Crypto</button>
+<button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
 </div>
-<footer>
-  <strong>Data sources:</strong> Yahoo Finance (equity prices) · CoinMarketCap + CoinGecko (crypto) · prices auto-updated 3× daily on weekdays. GBP prices shown. <strong>Not financial advice.</strong>
-</footer>
+<div class="search-count-bar">
+<input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
+</div>
+<div class="table-wrap">
+<table id="stock-table">
+<thead>
+<tr>
+<th class="sortable" onclick="sortTable('ticker', this)">Ticker</th>
+<th class="sortable" onclick="sortTable('company', this)">Company</th>
+<th class="sortable" onclick="sortTable('cat', this)">Category</th>
+<th class="sortable" onclick="sortTable('sector', this)">Sector</th>
+<th class="sortable" onclick="sortTable('price', this)">Price (£)</th>
+<th class="sortable" onclick="sortTable('return', this)">1yr Return</th>
+<th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
+<th class="sortable" onclick="sortTable('range', this)">52-Week Range</th>
+<th class="sortable" onclick="sortTable('angle', this)">Key Angle</th>
+</tr>
+</thead>
+<tbody id="stock-tbody">
+<tr><td colspan="9" style="text-align:center;padding:40px;color:var(--muted);font-family:'IBM Plex Mono',monospace;">Loading all sectors…</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
 <script>
-const SECTORS = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
-let allStocks = [];
-let sortState = { col: 'return', dir: -1 };
-let currentSector = 'all';
+const NOTES = {
+  'SNDK': 'NAND pure-play. AI storage supercycle. Spun off WDC 2025.',
+  'WDC':  'HDD duopoly. Fully committed to hyperscalers through FY end.',
+  '285A': "SNDK's JV partner. Pure NAND play. Japan listed — needs specialist broker.",
+  'MU':   'DRAM + NAND + HBM. Sold out of HBM for all of 2026. 11.5x fwd P/E.',
+  'STX':  'HDD duopoly with WDC. AI data centre mass storage.',
+  'MRVL': 'Custom silicon + AI networking. 800G/1.6T optical interconnects.',
+  'P':    'Formerly Pure Storage (PSTG). Rebranded to Everpure, ticker changed to P, Apr 2026.',
+  'RR.':  'UK SMR contract signed Apr 2026. Wylfa, Anglesey — 3 units. Also jets + defence.',
+  'CEG':  'Largest US nuclear operator. 21 reactors. 20yr deals with Meta & Microsoft.',
+  'VST':  'Nuclear + gas + retail. 6.5GW nuclear capacity. 5M retail customers.',
+  'TLN':  '1,920MW to AWS through 2042. Data centre campus on-site.',
+  'BEP':  "51% owner of Westinghouse — services 50% of world's nuclear plants.",
+  'BEPC': 'Corporate share class of BEP. Same Westinghouse exposure.',
+  'GEV':  'BWRX-300 SMR — first in Western hemisphere (Ontario). GE Hitachi JV.',
+  'BWXT': 'Sole US Navy reactor maker. "Foundry for SMRs." $7.3B backlog, +50% YoY.',
+  'SMR':  'Only NRC-certified SMR design. 77MWe modules. TVA 6GW deal. Speculative.',
+  'OKLO': 'Sam Altman-backed. Fast-fission + waste recycling.',
+  'NNE':  'Microreactors: KRONOS, ZEUS, LOKI. Space nuclear mandate catalyst. Pre-revenue.',
+  'CCJ':  "World's largest uranium miner. Also 49% owner of Westinghouse.",
+  'UEC':  'US-focused uranium miner. Lower entry price. Higher volatility.',
+  'LEU':  'Only licensed US supplier of HALEU fuel for advanced reactors. Strategic monopoly.',
+  'VRT':  'Data centre cooling & power management. Every AI data centre needs this.',
+  'ETN':  'Electrical components & transformers. Grid infrastructure backbone.',
+  'POWL': 'Switchgear & electrical infrastructure. Less-known but strong AI tailwind.',
+  'EQIX': 'Largest global colocation provider. 260+ data centres, 70 metros worldwide.',
+  'DLR':  'Major DC REIT. 300+ facilities across 25 countries.',
+  'AMT':  'Tower REIT expanding into edge compute. 220,000+ sites globally.',
+  'GOOGL':'Google Cloud + TPU AI chips. $75B capex planned for 2026 data centres.',
+  'MSFT': 'Azure + OpenAI partnership. $80B data centre capex in 2026.',
+  'AMZN': 'AWS dominates cloud AI infra. Trainium & Inferentia custom AI chips.',
+  'META': '$65B AI capex 2026. Llama open-source models. Building 2GW data centre campus.',
+  'IREN': 'Pivoting from Bitcoin mining to AI GPU compute. Renewable-powered data centres.',
+  'CORZ': 'Crypto→AI pivot. 200MW CoreWeave HPC deal. Emerged from bankruptcy 2023.',
+  'WULF': 'Nuclear-powered Bitcoin/AI compute. 95% zero-carbon. Building HPC capacity.',
+  'HUT':  'Bitcoin mining + AI compute pivot. US HPC expansion. High volatility.',
+  'SMCI': 'AI server manufacturer. Top Nvidia GPU server integrator.',
+  'DELL': 'AI server & storage giant. PowerEdge AI servers. $10B+ AI infrastructure backlog.',
+  'COHR': '800G/1.6T optical transceivers & components. Largest vertically integrated photonics vendor.',
+  'LITE': 'High-power lasers & optical components. 3D sensing + datacoms lasers.',
+  'AAOI': 'Pure-play 400G/800G datacenter transceivers. Small-cap AI data centre concentration.',
+  'FN':   'Contract manufacturer of optical/photonic products. Makes 800G modules for Nvidia, Cisco.',
+  'MTSI': 'RF & microwave ICs. 800G/1.6T PAM4 DSPs enabling high-speed data centre interconnects.',
+  'SMTC': 'ClearEdge DSP for 100G–400G optical links + LoRa IoT.',
+  'CRDO': 'High-speed SerDes & Active Electrical Cables for AI cluster interconnects.',
+  'MXL':  'High-speed broadband & data centre connectivity ICs.',
+  'KEYS': 'Electronic test & measurement leader. Hyperscaler R&D and 800G/1.6T buildout.',
+  'VIAV': 'Fibre optic test, inspection & network instruments.',
+  'AXTI': 'InP & GaAs compound semiconductor substrates. Critical raw material for photonics.',
+};
 
-async function loadAllSectors() {
-  const results = await Promise.all(SECTORS.map(async s => {
-    try {
-      const res = await fetch('../' + s + '/prices-data.js');
-      const text = await res.text();
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
-      if (!match) return [];
-      const data = JSON.parse(match[1]);
-      return (data.stocks || []).map(st => ({ ...st, sector: s, fx: data.fx_gbp_usd, updated: data.updated }));
-    } catch { return []; }
-  }));
+const CAT_COLORS = {
+  'memory':        'var(--purple)',
+  'nuclear-ops':   'var(--accent2)',
+  'smr':           'var(--green)',
+  'uranium':       'var(--gold)',
+  'power-infra':   'var(--accent)',
+  'dc-operators':  'var(--blue)',
+  'hyperscalers':  'var(--indigo)',
+  'ai-compute':    'var(--rose)',
+  'fibre-optical': 'var(--teal)',
+  'dsp-semi':      'var(--amber)',
+  'test-equip':    'var(--slate)',
+  'materials':     'var(--lime)',
+};
 
-  allStocks = results.flat();
+const CAT_LABELS = {
+  'memory':        'Memory',
+  'nuclear-ops':   'Nuclear Ops',
+  'smr':           'SMR Builder',
+  'uranium':       'Uranium',
+  'power-infra':   'Power Infra',
+  'dc-operators':  'DC Operator',
+  'hyperscalers':  'Hyperscaler',
+  'ai-compute':    'AI Compute',
+  'fibre-optical': 'Fibre / Optical',
+  'dsp-semi':      'DSP / Semi',
+  'test-equip':    'Test Equipment',
+  'materials':     'Materials',
+};
 
-  // Update header
-  const totals = allStocks.length;
-  const latestUpdated = allStocks.map(s => s.updated).filter(Boolean).sort().pop() || '';
-  document.getElementById('total-count').textContent = totals;
-  document.getElementById('header-sub').innerHTML =
-    'GBP prices · <span id="version">v1.0</span>' +
-    (latestUpdated ? ' · Updated ' + latestUpdated : '');
+const SECTOR_LABELS = {
+  'ai':      'AI Infra',
+  'biotech': 'Biotech',
+  'defence': 'Defence',
+  'tech':    'Tech',
+  'crypto':  'Crypto',
+  'energy':  'Energy',
+};
 
-  // Build ticker tape data
-  if (window.buildTape && allStocks.length) window.buildTape(allStocks.slice(0,40));
+const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
+function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
-  buildTable(allStocks);
-  sortTable('return', document.querySelector('th[onclick*="\'return\'"]'));
-}
-
-function returnClass(v) {
-  const n = parseFloat(String(v).replace(/[^0-9.-]/g,''));
+function returnClass(retStr) {
+  const n = parseFloat(String(retStr).replace(/[^0-9.-]/g, ''));
   if (isNaN(n)) return 'return-modest';
-  if (n >= 200)  return 'return-mega';
-  if (n >= 50)   return 'return-positive';
-  if (n < 0)     return 'return-negative';
+  if (n >= 200) return 'return-mega';
+  if (n >= 50)  return 'return-positive';
   return 'return-modest';
 }
-function ytdClass(v) { const n=parseFloat(v); return n>0?'ytd-pos':n<0?'ytd-neg':'ytd-flat'; }
-function pillClass(v) { const n=parseFloat(v); return n>0?'pos':n<0?'neg':'flat'; }
-function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + t + '/'; }
 
-function buildTable(stocks) {
-  const tbody = document.querySelector('#stock-table tbody');
-  tbody.innerHTML = '';
-  stocks.forEach(s => {
-    const prefix = s.ticker === '285A' ? '~£' : '£';
-    const tr = document.createElement('tr');
-    tr.dataset.ticker   = s.ticker;
-    tr.dataset.sector   = s.sector;
-    tr.dataset.cat      = s.category || '';
-    tr.dataset.priceGbp = s.price_gbp;
-    tr.dataset.return   = s.return_1yr || '0';
-    tr.dataset.changeYtd = s.change_ytd || '0';
-    tr.dataset.barPct   = s.bar_pct || 0;
-    tr.innerHTML =
-      '<td><a class="ticker-link" href="' + yahooUrl(s.ticker) + '" target="_blank">' +
-        '<div class="ticker">' + s.ticker + '</div></a>' +
-        '<div class="exchange-badge">' + (s.exchange || '') + '</div></td>' +
-      '<td>' + (s.company_name || s.ticker) + '</td>' +
-      '<td><span class="sector-badge sector-' + s.sector + '">' + s.sector + '</span></td>' +
-      '<td><span class="cat-badge">' + (s.category || '—') + '</span></td>' +
-      '<td><span class="price">' + prefix + s.price_gbp + '</span>' +
-        '<div class="change-pills">' +
-          '<span class="cpill ' + pillClass(s.change_1d) + '">' + (s.change_1d||'—') + ' 1D</span>' +
-          '<span class="cpill ' + pillClass(s.change_1w) + '">' + (s.change_1w||'—') + ' 1W</span>' +
-          '<span class="cpill ' + pillClass(s.change_1m) + '">' + (s.change_1m||'—') + ' 1M</span>' +
-        '</div></td>' +
-      '<td><span class="' + returnClass(s.return_1yr) + '">' + (s.return_1yr||'—') + '</span></td>' +
-      '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + (s.change_ytd||'—') + '</span></td>' +
-      '<td><div class="range-wrap">' +
-        '<span class="range-label">£' + (s.low_gbp||'—') + '</span>' +
-        '<div class="range-bar-bg">' +
-          '<div class="range-fill" style="width:' + (s.bar_pct||0) + '%"></div>' +
-          '<div class="range-dot" style="left:' + (s.bar_pct||0) + '%"></div>' +
-        '</div>' +
-        '<span class="range-label" style="text-align:right">£' + (s.high_gbp||'—') + '</span>' +
-      '</div></td>';
-    tbody.appendChild(tr);
-  });
-  applyFilters();
+function pillClass(v) {
+  const n = parseFloat(v); return n > 0 ? 'pos' : n < 0 ? 'neg' : 'flat';
 }
 
+function ytdClass(v) {
+  const n = parseFloat(v); return n > 0 ? 'ytd-pos' : n < 0 ? 'ytd-neg' : 'ytd-flat';
+}
+
+function buildTable(stocks) {
+  const tbody = document.getElementById('stock-tbody');
+  tbody.innerHTML = '';
+  stocks.forEach(s => {
+    const color    = CAT_COLORS[s.category] || (s.sectorColor || 'var(--text)');
+    const catLabel = CAT_LABELS[s.category] || s.category;
+    const retCls   = returnClass(s.return_1yr);
+    const prefix   = s.ticker === '285A' ? '~£' : '£';
+    const exDisp   = s.exchange === 'TSE' ? 'TSE (Tokyo)' : (s.exchange || '');
+    const tr = document.createElement('tr');
+    tr.dataset.ticker    = s.ticker;
+    tr.dataset.cat       = s.category;
+    tr.dataset.sector    = s.sector || '';
+    tr.dataset.exchange  = s.exchange || '';
+    tr.dataset.priceGbp  = s.price_gbp;
+    tr.dataset.priceUsd  = s.price_usd;
+    tr.dataset.return    = s.return_1yr;
+    tr.dataset.changeYtd = s.change_ytd;
+    tr.dataset.barPct    = s.bar_pct;
+    tr.innerHTML =
+      '<td><a class="ticker-link" href="' + yahooUrl(s.ticker) + '" target="_blank">' +
+        '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
+        '<div class="exchange-badge">' + exDisp + '</div></td>' +
+      '<td>' + (s.company_name || s.ticker) + '</td>' +
+      '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
+      '<td><span class="sector-badge sector-' + (s.sector || '') + '">' + (SECTOR_LABELS[s.sector] || s.sector || '—') + '</span></td>' +
+      '<td><span class="price">' + prefix + s.price_gbp + '</span>' +
+        '<div class="change-pills">' +
+          '<span class="cpill ' + pillClass(s.change_1d) + '">' + s.change_1d + ' 1D</span>' +
+          '<span class="cpill ' + pillClass(s.change_1w) + '">' + s.change_1w + ' 1W</span>' +
+          '<span class="cpill ' + pillClass(s.change_1m) + '">' + s.change_1m + ' 1M</span>' +
+        '</div></td>' +
+      '<td><span class="' + retCls + '">' + s.return_1yr + '</span></td>' +
+      '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + s.change_ytd + '</span></td>' +
+      '<td><div class="range-wrap">' +
+        '<span class="range-label">£' + s.low_gbp + '</span>' +
+        '<div class="range-bar-bg">' +
+          '<div class="range-fill" style="width:' + s.bar_pct + '%"></div>' +
+          '<div class="range-dot" style="left:' + s.bar_pct + '%"></div>' +
+        '</div>' +
+        '<span class="range-label" style="text-align:right">£' + s.high_gbp + '</span>' +
+      '</div></td>' +
+      '<td><span class="notes-text">' + (NOTES[s.ticker] || '') + '</span></td>';
+    tbody.appendChild(tr);
+  });
+}
+
+let sortState = { col: null, dir: 1 };
+
+function sortTable(col, th) {
+  const tbody = document.getElementById('stock-tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  if (sortState.col === col) { sortState.dir *= -1; } else { sortState.col = col; sortState.dir = 1; }
+  document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+  if (th) th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+  rows.sort((a, b) => {
+    let av, bv;
+    if (col === 'ticker')  { av = a.dataset.ticker;  bv = b.dataset.ticker; }
+    if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
+    if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
+    if (col === 'sector')  { av = a.dataset.sector;  bv = b.dataset.sector; }
+    if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
+    if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
+    if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
+    if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
+    if (col === 'angle')   { av = a.querySelector('td:nth-child(9)').textContent.trim(); bv = b.querySelector('td:nth-child(9)').textContent.trim(); }
+    if (typeof av === 'string') return av.localeCompare(bv) * sortState.dir;
+    return 0;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+
+let currentSector = 'all';
+
 function applyFilters() {
-  const query = (document.getElementById('stock-search').value || '').toLowerCase().trim();
-  const rows = document.querySelectorAll('#stock-table tbody tr');
+  const query = document.getElementById('stock-search').value.toLowerCase().trim();
+  const rows  = document.querySelectorAll('#stock-table tbody tr');
   let visible = 0;
   rows.forEach(row => {
-    if (!row.dataset.ticker) { row.classList.add('hidden'); return; }
+    if (!row.dataset.ticker) return;
     const matchSector = currentSector === 'all' || row.dataset.sector === currentSector;
     const matchSearch = !query
       || row.dataset.ticker.toLowerCase().includes(query)
       || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
     if (matchSector && matchSearch) { row.classList.remove('hidden'); visible++; }
-    else row.classList.add('hidden');
+    else { row.classList.add('hidden'); }
   });
   document.getElementById('visible-count').textContent = visible;
 }
 
-function filterSector(sector, btn) {
+function filterTable(sector, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   currentSector = sector;
   applyFilters();
 }
 
-function sortTable(col, th) {
-  const tbody = document.querySelector('#stock-table tbody');
-  const rows = Array.from(tbody.querySelectorAll('tr')).filter(r => r.dataset.ticker);
-  if (sortState.col === col) sortState.dir *= -1;
-  else { sortState.col = col; sortState.dir = col === 'return' ? -1 : 1; }
-  document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
-  if (th) th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-  rows.sort((a, b) => {
-    if (col === 'ticker')  return a.dataset.ticker.localeCompare(b.dataset.ticker) * sortState.dir;
-    if (col === 'sector')  return a.dataset.sector.localeCompare(b.dataset.sector) * sortState.dir;
-    if (col === 'cat')     return a.dataset.cat.localeCompare(b.dataset.cat) * sortState.dir;
-    if (col === 'company') return a.querySelector('td:nth-child(2)').textContent.trim().localeCompare(b.querySelector('td:nth-child(2)').textContent.trim()) * sortState.dir;
-    if (col === 'price')   return (parseFloat(a.dataset.priceGbp) - parseFloat(b.dataset.priceGbp)) * sortState.dir;
-    if (col === 'return')  return (parseFloat(String(a.dataset.return).replace(/[^0-9.-]/g,'')) - parseFloat(String(b.dataset.return).replace(/[^0-9.-]/g,''))) * sortState.dir;
-    if (col === 'ytd')     return (parseFloat(a.dataset.changeYtd) - parseFloat(b.dataset.changeYtd)) * sortState.dir;
-    if (col === 'range')   return (parseFloat(a.dataset.barPct) - parseFloat(b.dataset.barPct)) * sortState.dir;
-    return 0;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-  applyFilters();
+/* ── Multi-sector data loading ── */
+const SECTORS = [
+  { key: 'ai',      label: 'AI Infrastructure', color: 'var(--accent)',  path: '../AI/prices-data.js'      },
+  { key: 'biotech', label: 'Biotech',            color: 'var(--green)',   path: '../Biotech/prices-data.js'  },
+  { key: 'defence', label: 'Defence',            color: 'var(--rose)',    path: '../Defence/prices-data.js'  },
+  { key: 'tech',    label: 'Technology',         color: 'var(--indigo)',  path: '../Tech/prices-data.js'     },
+  { key: 'crypto',  label: 'Crypto',             color: 'var(--gold)',    path: '../Crypto/prices-data.js'   },
+  { key: 'energy',  label: 'Energy',             color: 'var(--amber)',   path: '../Energy/prices-data.js'   },
+];
+
+async function loadAllSectors() {
+  const results = await Promise.all(SECTORS.map(async sd => {
+    try {
+      const text = await fetch(sd.path).then(r => r.text());
+      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+      if (!match) return { ...sd, stocks: [], updated: null, fx: null };
+      const data = JSON.parse(match[1]);
+      return {
+        ...sd,
+        stocks: (data.stocks || []).map(s => ({
+          ...s,
+          sector: sd.key,
+          sectorLabel: sd.label,
+          sectorColor: sd.color,
+        })),
+        updated: data.updated,
+        fx: data.fx_gbp_usd,
+      };
+    } catch(e) {
+      return { ...sd, stocks: [], updated: null, fx: null };
+    }
+  }));
+  const allStocks = results.flatMap(r => r.stocks);
+  const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
+  const fx = results.find(r => r.fx)?.fx || 1.32;
+  return { stocks: allStocks, updated, fx_gbp_usd: fx };
 }
 
-loadAllSectors();
+window.addEventListener('DOMContentLoaded', () => {
+  loadAllSectors().then(data => {
+    const fxEl = document.getElementById('fx-rate');
+    if (fxEl) fxEl.textContent = '£1 = $' + data.fx_gbp_usd;
+    document.getElementById('total-count').textContent = data.stocks.length;
+    buildTable(data.stocks);
+    const returnTh = document.querySelector('th[onclick*="\'return\'"]');
+    sortState.col = 'return';
+    sortTable('return', returnTh);
+    applyFilters();
+  });
+});
 </script>
 </body>
 </html>

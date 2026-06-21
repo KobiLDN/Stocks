@@ -1,284 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All Sectors stock metrics — P/E, market cap, beta, analyst ratings, short interest and volume for 192 stocks across AI, Biotech, Defence, Tech, Crypto, and Energy." name="description"/>
-<title>All Sectors — Metrics</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="All sectors stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 192 stocks across AI, Biotech, Defence, Tech, Crypto, and Energy.">
+<title>All Sectors — Stock Metrics</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="../shared.css" rel="stylesheet"/>
-<script defer src="../shared.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
-  .filter-bar { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
   .filter-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
-    padding:5px 12px; border:1px solid var(--border); background:transparent;
-    color:var(--muted); cursor:pointer; transition:all 0.15s; text-transform:uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer;
+    transition: all 0.15s; position: relative;
   }
-  .filter-btn:hover { color:var(--accent); border-color:var(--accent); }
-  .filter-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-  .filter-btn[data-sector="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
-  .filter-btn[data-sector="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
-  .filter-btn[data-sector="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
-  .filter-btn[data-sector="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
-  .filter-btn[data-sector="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
-  .filter-btn[data-sector="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
-
-  .sector-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9px;
-    letter-spacing:1px; padding:2px 7px; border-radius:2px; text-transform:uppercase; font-weight:700;
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip); position: absolute; bottom: calc(100% + 10px);
+    left: 50%; transform: translateX(-50%); background: var(--surface2); color: var(--text);
+    border: 1px solid var(--accent); border-radius: 6px; padding: 8px 12px;
+    font-size: 12px; font-family: 'IBM Plex Sans', sans-serif; font-weight: 400;
+    line-height: 1.5; width: 220px; text-align: center; pointer-events: none;
+    opacity: 0; transition: opacity 0.18s ease; z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5); text-transform: none; letter-spacing: 0;
   }
-  .sector-AI      { background:rgba(0,212,255,0.12); color:#00d4ff; border:1px solid rgba(0,212,255,0.3); }
-  .sector-Biotech { background:rgba(167,139,250,0.12); color:#a78bfa; border:1px solid rgba(167,139,250,0.3); }
-  .sector-Defence { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.3); }
-  .sector-Tech    { background:rgba(96,165,250,0.12); color:#60a5fa; border:1px solid rgba(96,165,250,0.3); }
-  .sector-Crypto  { background:rgba(251,146,60,0.12); color:#fb923c; border:1px solid rgba(251,146,60,0.3); }
-  .sector-Energy  { background:rgba(250,204,21,0.12); color:#b45309; border:1px solid rgba(250,204,21,0.3); }
-  html[data-theme="dark"] .sector-Energy { color:#facc15; }
-
-  .table-wrap { overflow-x:auto; border:1px solid var(--border); margin-bottom:4px; }
-  table { width:100%; border-collapse:collapse; font-size:13px; }
-  thead th {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
-    text-transform:uppercase; color:var(--muted); padding:12px 14px;
-    text-align:left; border-bottom:1px solid var(--border); background:var(--surface); white-space:nowrap;
+  .filter-btn[data-tooltip]::before {
+    content: ''; position: absolute; bottom: calc(100% + 4px); left: 50%;
+    transform: translateX(-50%); border: 5px solid transparent;
+    border-top-color: var(--accent); pointer-events: none; opacity: 0;
+    transition: opacity 0.18s ease; z-index: 1001;
   }
-  thead th.sortable { cursor:pointer; user-select:none; }
-  thead th.sortable:hover { color:var(--accent); }
-  thead th.sort-asc::after  { content:' ▲'; color:var(--accent); }
-  thead th.sort-desc::after { content:' ▼'; color:var(--accent); }
-  tbody tr { border-bottom:1px solid var(--border); transition:background 0.15s; }
-  tbody tr:hover { background:var(--surface2); }
-  tbody tr.hidden { display:none; }
-  td { padding:12px 14px; vertical-align:middle; white-space:nowrap; }
+  .filter-btn:hover[data-tooltip]::after, .filter-btn:hover[data-tooltip]::before { opacity: 1; }
+  .filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
+  .filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
 
-  .ticker { font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:14px; letter-spacing:1px; }
-  .ticker-link { text-decoration:none; color:inherit; }
-  .ticker-link:hover .ticker { text-decoration:underline; opacity:0.85; }
-
-  .val { font-family:'IBM Plex Mono',monospace; font-size:13px; }
-  .val-good { color:var(--green); font-weight:700; }
-  .val-warn { color:var(--gold); }
-  .val-bad  { color:var(--red); }
-  .val-na   { color:var(--muted); }
-
-  .analyst-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9px;
-    letter-spacing:1px; padding:2px 7px; border-radius:2px; text-transform:uppercase; font-weight:700;
+  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+  #metrics-search {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); padding: 6px 14px; width: 240px; outline: none; letter-spacing: 0.5px;
   }
-  .analyst-strong_buy  { background:rgba(22,163,74,0.15); color:#16a34a; border:1px solid rgba(22,163,74,0.3); }
-  .analyst-buy         { background:rgba(0,212,255,0.1); color:var(--accent); border:1px solid rgba(0,212,255,0.25); }
-  .analyst-hold        { background:rgba(148,163,184,0.1); color:var(--muted); border:1px solid rgba(148,163,184,0.25); }
-  .analyst-sell        { background:rgba(220,38,38,0.1); color:var(--red); border:1px solid rgba(220,38,38,0.25); }
-  .analyst-strong_sell { background:rgba(220,38,38,0.15); color:var(--red); border:1px solid rgba(220,38,38,0.3); }
+  #metrics-search:focus { border-color: var(--accent); }
+  #metrics-search::placeholder { color: var(--muted); }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
+  .row-count span { color: var(--accent); font-weight: 700; }
 
-  .search-count-bar { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
-  #stock-search {
-    font-family:'IBM Plex Mono',monospace; font-size:12px; background:var(--surface);
-    border:1px solid var(--border); color:var(--text); padding:6px 14px; width:240px; outline:none;
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead { background: var(--surface2); }
+  th {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap;
   }
-  #stock-search:focus { border-color:var(--accent); }
-  #stock-search::placeholder { color:var(--muted); }
-  .row-count { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
-  .row-count span { color:var(--accent); font-weight:700; }
-  .loading { padding:48px; text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--muted); font-size:13px; letter-spacing:2px; }
-  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
-  footer strong { color:var(--accent2); }
+  th.sortable { cursor: pointer; user-select: none; }
+  th.sortable:hover { color: var(--accent); }
+  th.sort-desc::after { content: ' \25BC'; color: var(--accent); }
+  th.sort-asc::after  { content: ' \25B2'; color: var(--accent); }
+  th.num-col { text-align: right; }
+
+  #col-tooltip {
+    position: fixed; z-index: 999; max-width: 260px;
+    background: var(--surface2); border: 1px solid var(--accent);
+    padding: 12px 16px; pointer-events: none; opacity: 0;
+    transform: translateY(6px); transition: opacity 0.15s ease, transform 0.15s ease;
+    box-shadow: 0 0 24px rgba(0,212,255,0.15);
+  }
+  #col-tooltip.visible { opacity: 1; transform: translateY(0); }
+  #col-tooltip .tip-title {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 6px;
+  }
+  #col-tooltip .tip-body { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--surface); }
+
+  .ticker-cell { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
+  .ticker-link { text-decoration: none; color: inherit; }
+  .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
+  .company-cell { color: var(--muted); font-size: 12px; }
+
+  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .cat-memory        { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
+  .cat-nuclear-ops   { background: rgba(255,107,53,0.1);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
+  .cat-smr           { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
+  .cat-uranium       { background: rgba(255,215,0,0.1);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.25); }
+  .cat-power-infra   { background: rgba(0,212,255,0.1);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+  .cat-dc-operators  { background: rgba(68,136,255,0.1);  color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
+  .cat-hyperscalers  { background: rgba(167,139,250,0.1); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
+  .cat-ai-compute    { background: rgba(251,113,133,0.1); color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
+  .cat-fibre-optical { background: rgba(45,212,191,0.1);  color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
+  .cat-dsp-semi      { background: rgba(245,158,11,0.1);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  .cat-test-equip    { background: rgba(148,163,184,0.1); color: var(--slate);   border: 1px solid rgba(148,163,184,0.25); }
+  .cat-materials     { background: rgba(163,230,53,0.1);  color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
+
+  .sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .sector-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .sector-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+  .sector-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+  .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
+  .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
+  .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+
+  .num-cell { text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .null-val { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-flat { color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
+  .beta-high   { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .beta-normal { color: var(--muted); font-family: 'IBM Plex Mono', monospace; }
+  .beta-low    { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .analyst-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap; }
+  .analyst-strong-buy  { background: rgba(0,230,118,0.15);  color: var(--green);  border: 1px solid rgba(0,230,118,0.3); }
+  .analyst-buy         { background: rgba(163,230,53,0.12); color: var(--lime);   border: 1px solid rgba(163,230,53,0.3); }
+  .analyst-hold        { background: rgba(245,158,11,0.12); color: var(--amber);  border: 1px solid rgba(245,158,11,0.3); }
+  .analyst-underperform{ background: rgba(255,107,53,0.12); color: var(--accent2);border: 1px solid rgba(255,107,53,0.3); }
+  .analyst-sell        { background: rgba(255,68,68,0.12);  color: var(--red);    border: 1px solid rgba(255,68,68,0.3); }
+  .analyst-missing     { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); margin-top: 48px; }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 26px; }
+    th, td { padding: 8px 10px; }
+    .company-cell { display: none; }
+  }
 </style>
 </head>
 <body>
+
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
-<div class="header-inner">
+  <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub">Fundamentals · <span id="version">v1.0</span></div>
+    <h1>All <span>Metrics</span></h1>
+    <div class="header-sub">192 stocks · Market cap · 1D / 1W / 1M / YTD returns · Beta · Volume · Analyst rating</div>
   </div>
   <div class="sector-switcher">
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-    <a class="sector-card hub-card" href="../index.html"><div class="sector-card-top"><span class="sector-card-icon">⊞</span></div><div class="sector-card-name">Stock Hub</div></a>
-    <a class="sector-card" href="../rss.html"><div class="sector-card-top"><span class="sector-card-icon">📰</span></div><div class="sector-card-name">RSS</div></a>
-    <a class="sector-card active" href="index.html"><div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">All Sectors</div></a>
-    <a class="sector-card" href="../AI/index.html"><div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">AI Infrastructure</div></a>
-    <a class="sector-card" href="../Defence/index.html"><div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Defence</div></a>
-    <a class="sector-card" href="../Biotech/index.html"><div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Biotech</div></a>
-    <a class="sector-card" href="../Tech/index.html"><div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Technology</div></a>
-    <a class="sector-card" href="../Crypto/index.html"><div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Crypto</div></a>
-    <a class="sector-card" href="../Energy/index.html"><div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Energy</div></a>
-  </div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+<a class="sector-card hub-card" href="../index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+  <div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card" href="../rss.html">
+  <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+  <div class="sector-card-name">RSS</div>
+</a>
+<a class="sector-card active" href="index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/metrics.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/metrics.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/metrics.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Tech/metrics.html">
+  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/metrics.html">
+  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/metrics.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Energy</div>
+</a>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
+</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · data from Yahoo Finance (yfinance), may be delayed · for research only · always consult a financial adviser</div>
 </header>
 <nav>
-<div class="nav-inner">
-  <a class="nav-link" href="index.html">📊 Dashboard</a>
-  <a class="nav-link active" href="metrics.html">📋 Metrics</a>
-  <a class="nav-link" href="news.html">📰 News</a>
-  <a class="nav-link" href="signals.html">🎯 Signals</a>
-  <a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
-  <a class="nav-link" href="charts.html">📈 Charts</a>
-  <a class="nav-link" href="calculator.html">🧮 What-If</a>
-</div>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link active" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
 </nav>
+
 <div class="container">
+
   <div class="filter-bar">
-    <button class="filter-btn active" data-sector="all" onclick="filterSector('all',this)">All</button>
-    <button class="filter-btn" data-sector="AI"      onclick="filterSector('AI',this)">AI</button>
-    <button class="filter-btn" data-sector="Biotech" onclick="filterSector('Biotech',this)">Biotech</button>
-    <button class="filter-btn" data-sector="Defence" onclick="filterSector('Defence',this)">Defence</button>
-    <button class="filter-btn" data-sector="Tech"    onclick="filterSector('Tech',this)">Tech</button>
-    <button class="filter-btn" data-sector="Crypto"  onclick="filterSector('Crypto',this)">Crypto</button>
-    <button class="filter-btn" data-sector="Energy"  onclick="filterSector('Energy',this)">Energy</button>
+    <button class="filter-btn active" data-filter="all" onclick="setSector('all', this)">All</button>
+    <button class="filter-btn" data-filter="ai" data-tooltip="AI Infrastructure — semiconductors, nuclear, data centres" onclick="setSector('ai', this)">AI Infra</button>
+    <button class="filter-btn" data-filter="biotech" data-tooltip="Biotechnology and pharmaceutical stocks" onclick="setSector('biotech', this)">Biotech</button>
+    <button class="filter-btn" data-filter="defence" data-tooltip="Defence, aerospace and security companies" onclick="setSector('defence', this)">Defence</button>
+    <button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="setSector('tech', this)">Tech</button>
+    <button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency and blockchain companies" onclick="setSector('crypto', this)">Crypto</button>
+    <button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="setSector('energy', this)">Energy</button>
   </div>
+
   <div class="search-count-bar">
-    <input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company…" type="text"/>
-    <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span></span>
+    <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
+    <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
   </div>
+
   <div class="table-wrap">
     <table id="metrics-table">
       <thead>
         <tr>
-          <th class="sortable" onclick="sortTable('ticker',this)">Ticker</th>
-          <th class="sortable" onclick="sortTable('company',this)">Company</th>
-          <th class="sortable" onclick="sortTable('sector',this)">Sector</th>
-          <th class="sortable" onclick="sortTable('mcap',this)">Mkt Cap</th>
-          <th class="sortable" onclick="sortTable('pe',this)">P/E</th>
-          <th class="sortable" onclick="sortTable('beta',this)">Beta</th>
-          <th class="sortable" onclick="sortTable('div',this)">Div Yield</th>
-          <th class="sortable" onclick="sortTable('short',this)">Short %</th>
-          <th class="sortable" onclick="sortTable('analyst',this)">Analyst</th>
+          <th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
+          <th class="sortable" onclick="sortMetrics('name', this)">Company</th>
+          <th class="sortable" onclick="sortMetrics('category', this)">Category</th>
+          <th class="sortable" onclick="sortMetrics('sector', this)">Sector</th>
+          <th class="sortable num-col" onclick="sortMetrics('price', this)" data-tip-title="Price" data-tip="Current share price converted to GBP.">Price</th>
+          <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP. A rough measure of company size.">Market Cap</th>
+          <th class="sortable num-col" onclick="sortMetrics('ytd', this)" data-tip-title="YTD Return" data-tip="Year-to-date price change from the first trading day of 2026.">YTD</th>
+          <th class="sortable num-col" onclick="sortMetrics('change_1d', this)" data-tip-title="1-Day Return" data-tip="Price change over the last trading session.">1D</th>
+          <th class="sortable num-col" onclick="sortMetrics('change_1w', this)" data-tip-title="1-Week Return" data-tip="Price change over the last 5 trading days.">1W</th>
+          <th class="sortable num-col" onclick="sortMetrics('change_1m', this)" data-tip-title="1-Month Return" data-tip="Price change over the last month.">1M</th>
+          <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta > 1 means it moves more than the market.">Beta</th>
+          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio — how much investors pay per £1 of profit.">P/E Ratio</th>
+          <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume" data-tip="Average number of shares traded per day over the past 3 months.">Avg Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Total number of shares traded in the most recent trading session.">1D Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="1-Week Volume" data-tip="Total shares traded across the last 5 trading days.">1W Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('vol_1m', this)" data-tip-title="1-Month Volume" data-tip="Total shares traded over the past month (approx. 20 trading days).">1M Vol</th>
+          <th class="sortable num-col" onclick="sortMetrics('div_yield', this)" data-tip-title="Dividend Yield" data-tip="Annual dividend paid as a percentage of the current share price.">Div Yield</th>
+          <th class="sortable num-col" onclick="sortMetrics('short_pct', this)" data-tip-title="Short Interest" data-tip="Percentage of available shares currently sold short.">Short %</th>
+          <th class="sortable" onclick="sortMetrics('analyst_score', this)" data-tip-title="Analyst Rating" data-tip="Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell.">Analyst</th>
         </tr>
       </thead>
-      <tbody><tr><td colspan="9" class="loading">Loading all sectors…</td></tr></tbody>
+      <tbody id="metrics-body">
+        <tr><td colspan="19" style="text-align:center;padding:40px;color:var(--muted);font-family:'IBM Plex Mono',monospace;">Loading all sectors…</td></tr>
+      </tbody>
     </table>
   </div>
-</div>
-<footer><strong>Fundamentals:</strong> market cap, P/E ratio, beta, dividend yield, short interest, analyst consensus — sourced from Yahoo Finance. Updated 3× daily. <strong>Not financial advice.</strong></footer>
-<script>
-const SECTORS = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
-let allStocks = [];
-let sortState = { col: 'mcap', dir: -1 };
-let currentSector = 'all';
 
-async function loadAllSectors() {
-  const results = await Promise.all(SECTORS.map(async s => {
+</div>
+
+<div id="col-tooltip"><div class="tip-title"></div><div class="tip-body"></div></div>
+
+<script>
+  const CAT_LABELS = {
+    'memory':'Memory','nuclear-ops':'Nuclear','smr':'SMR','uranium':'Uranium',
+    'power-infra':'Power','dc-operators':'Data Centres','hyperscalers':'Hyperscalers',
+    'ai-compute':'AI Compute','fibre-optical':'Fibre/Optical','dsp-semi':'DSP/Semi',
+    'test-equip':'Test Equip','materials':'Materials',
+  };
+
+  const SECTOR_LABELS = {
+    'ai':'AI Infra','biotech':'Biotech','defence':'Defence',
+    'tech':'Tech','crypto':'Crypto','energy':'Energy',
+  };
+
+  const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
+  function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
+
+  function fmtMarketCap(v) {
+    if (v === null || v === undefined) return null;
+    if (v >= 1) return '£' + v.toFixed(1) + 'B';
+    return '£' + (v * 1000).toFixed(0) + 'M';
+  }
+  function fmtVolume(m) { if (m === null || m === undefined) return null; return m.toFixed(1) + 'M'; }
+  function fmtPct(v, d) { if (v === null || v === undefined) return null; return v.toFixed(d !== undefined ? d : 2) + '%'; }
+  function fmtNum(v, d) { if (v === null || v === undefined) return null; return v.toFixed(d !== undefined ? d : 2); }
+  function dash() { return '<span class="null-val">—</span>'; }
+
+  const ANALYST_MAP = {
+    'strong_buy': { cls: 'analyst-strong-buy',  label: 'Strong Buy' },
+    'buy':        { cls: 'analyst-buy',          label: 'Buy' },
+    'hold':       { cls: 'analyst-hold',         label: 'Hold' },
+    'underperform':{ cls:'analyst-underperform', label: 'Underperform' },
+    'sell':       { cls: 'analyst-sell',         label: 'Sell' },
+  };
+
+  function analystBadge(key) {
+    if (!key) return dash();
+    const k = key.toLowerCase().replace(/[ -]/g, '_');
+    const info = ANALYST_MAP[k];
+    if (!info) return '<span class="analyst-missing">' + key + '</span>';
+    return '<span class="analyst-badge ' + info.cls + '">' + info.label + '</span>';
+  }
+
+  function betaCell(beta) {
+    if (beta === null || beta === undefined) return dash();
+    const cls = beta > 1.5 ? 'beta-high' : beta < 0.8 ? 'beta-low' : 'beta-normal';
+    return '<span class="' + cls + '">' + beta.toFixed(2) + '</span>';
+  }
+
+  let sortState = { col: 'market_cap', dir: -1 };
+  let activeSector = 'all';
+  let searchQuery = '';
+
+  function sortMetrics(col, th) {
+    if (sortState.col === col) sortState.dir *= -1;
+    else { sortState.col = col; sortState.dir = ['ticker','category','sector','name'].includes(col) ? 1 : -1; }
+    document.querySelectorAll('#metrics-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+    th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+    renderTable();
+  }
+
+  function filterMetrics(query) { searchQuery = query.toLowerCase().trim(); renderTable(); }
+
+  function setSector(sector, btn) {
+    activeSector = sector;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderTable();
+  }
+
+  function sortKey(s) {
+    switch (sortState.col) {
+      case 'ticker':       return s.ticker;
+      case 'name':         return s.name;
+      case 'category':     return s.category;
+      case 'sector':       return s.sector;
+      case 'ytd':          return s.ytd !== null ? s.ytd : -Infinity;
+      case 'price':        return s.price !== null ? s.price : -Infinity;
+      case 'market_cap':   return s.market_cap_gbp_b !== null ? s.market_cap_gbp_b : -Infinity;
+      case 'beta':         return s.beta !== null ? s.beta : -Infinity;
+      case 'pe_ratio':     return s.pe_ratio !== null ? s.pe_ratio : -Infinity;
+      case 'avg_volume':   return s.avg_volume_m !== null ? s.avg_volume_m : -Infinity;
+      case 'change_1d':    return s.change_1d !== null ? s.change_1d : -Infinity;
+      case 'change_1w':    return s.change_1w !== null ? s.change_1w : -Infinity;
+      case 'change_1m':    return s.change_1m !== null ? s.change_1m : -Infinity;
+      case 'vol_1d':       return s.vol_1d !== null ? s.vol_1d : -Infinity;
+      case 'vol_1w':       return s.vol_1w !== null ? s.vol_1w : -Infinity;
+      case 'vol_1m':       return s.vol_1m !== null ? s.vol_1m : -Infinity;
+      case 'div_yield':    return s.div_yield_pct !== null ? s.div_yield_pct : -Infinity;
+      case 'short_pct':    return s.short_pct !== null ? s.short_pct : -Infinity;
+      case 'analyst_score':return s.analyst_score !== null ? s.analyst_score : Infinity;
+      default:             return 0;
+    }
+  }
+
+  function renderTable() {
+    let data = window._metricsData || [];
+    if (activeSector !== 'all') data = data.filter(s => s.sector === activeSector);
+    if (searchQuery) data = data.filter(s => s.ticker.toLowerCase().includes(searchQuery) || s.name.toLowerCase().includes(searchQuery));
+    const sorted = [...data].sort((a, b) => {
+      const ka = sortKey(a), kb = sortKey(b);
+      if (typeof ka === 'string') return ka.localeCompare(kb) * sortState.dir;
+      if (ka === kb) return 0;
+      if (ka === -Infinity || ka === Infinity) return 1;
+      if (kb === -Infinity || kb === Infinity) return -1;
+      return (ka - kb) * sortState.dir;
+    });
+    document.getElementById('metrics-count').textContent = sorted.length;
+    const body = document.getElementById('metrics-body');
+    body.innerHTML = sorted.map(s => {
+      const catLabel = CAT_LABELS[s.category] || s.category;
+      const sectorLabel = SECTOR_LABELS[s.sector] || s.sector;
+      const ytdCls = s.ytd === null ? '' : s.ytd > 0 ? 'ytd-pos' : s.ytd < 0 ? 'ytd-neg' : 'ytd-flat';
+      const ytdCell = s.ytd !== null ? '<span class="' + ytdCls + '">' + (s.ytd >= 0 ? '+' : '') + s.ytd.toFixed(2) + '%</span>' : dash();
+      function changePct(val) {
+        if (val === null) return dash();
+        const cls = val > 0 ? 'ytd-pos' : val < 0 ? 'ytd-neg' : 'ytd-flat';
+        return '<span class="' + cls + '">' + (val >= 0 ? '+' : '') + val.toFixed(2) + '%</span>';
+      }
+      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">£' + s.priceStr + '</span>' : dash();
+      const mcCell    = s.market_cap_gbp_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_gbp_b) + '</span>' : dash();
+      const peCell    = s.pe_ratio !== null ? '<span class="num-cell">' + fmtNum(s.pe_ratio, 1) + '</span>' : dash();
+      const volCell   = s.avg_volume_m !== null ? '<span class="num-cell">' + fmtVolume(s.avg_volume_m) + '</span>' : dash();
+      const vol1dCell = s.vol_1d !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1d / 1e6) + '</span>' : dash();
+      const vol1wCell = s.vol_1w !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1w / 1e6) + '</span>' : dash();
+      const vol1mCell = s.vol_1m !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1m / 1e6) + '</span>' : dash();
+      const divCell   = s.div_yield_pct !== null ? '<span class="num-cell">' + fmtPct(s.div_yield_pct, 2) + '</span>' : dash();
+      const shortCell = s.short_pct !== null ? '<span class="num-cell">' + fmtPct(s.short_pct, 1) + '</span>' : dash();
+      return '<tr>' +
+        '<td class="ticker-cell"><a href="' + yahooUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
+        '<td class="company-cell">' + s.name + '</td>' +
+        '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
+        '<td><span class="sector-badge sector-' + s.sector + '">' + sectorLabel + '</span></td>' +
+        '<td class="num-cell" style="text-align:right">' + priceCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + mcCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + ytdCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + changePct(s.change_1d) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + changePct(s.change_1w) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + changePct(s.change_1m) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + betaCell(s.beta) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + peCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + volCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + vol1dCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + vol1wCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + vol1mCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + divCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + shortCell + '</td>' +
+        '<td>' + analystBadge(s.analyst) + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function buildMetrics(stocks) {
+    window._metricsData = stocks.map(s => ({
+      ticker:           s.ticker,
+      name:             s.company_name || s.ticker,
+      category:         s.category,
+      sector:           s.sector || '',
+      priceStr:         (s.price_gbp != null) ? String(s.price_gbp) : null,
+      price:            (s.price_gbp != null && !isNaN(parseFloat(s.price_gbp))) ? parseFloat(s.price_gbp) : null,
+      market_cap_gbp_b: s.market_cap_gbp_b != null ? parseFloat(s.market_cap_gbp_b) : null,
+      beta:             s.beta != null ? parseFloat(s.beta) : null,
+      pe_ratio:         s.pe_ratio != null ? parseFloat(s.pe_ratio) : null,
+      avg_volume_m:     s.avg_volume_m != null ? parseFloat(s.avg_volume_m) : null,
+      vol_1d:           s.vol_1d != null ? parseInt(s.vol_1d) : null,
+      vol_1w:           s.vol_1w != null ? parseInt(s.vol_1w) : null,
+      vol_1m:           s.vol_1m != null ? parseInt(s.vol_1m) : null,
+      div_yield_pct:    s.div_yield_pct != null ? parseFloat(s.div_yield_pct) : null,
+      short_pct:        s.short_pct != null ? parseFloat(s.short_pct) : null,
+      ytd:              s.change_ytd ? parseFloat(s.change_ytd) : null,
+      change_1d:        s.change_1d && !isNaN(parseFloat(s.change_1d)) ? parseFloat(s.change_1d) : null,
+      change_1w:        s.change_1w && !isNaN(parseFloat(s.change_1w)) ? parseFloat(s.change_1w) : null,
+      change_1m:        s.change_1m && !isNaN(parseFloat(s.change_1m)) ? parseFloat(s.change_1m) : null,
+      analyst:          s.analyst || null,
+      analyst_score:    s.analyst_score != null ? parseFloat(s.analyst_score) : null,
+    }));
+    renderTable();
+  }
+
+  const SECTORS = [
+    { key: 'ai',      path: '../AI/prices-data.js'      },
+    { key: 'biotech', path: '../Biotech/prices-data.js'  },
+    { key: 'defence', path: '../Defence/prices-data.js'  },
+    { key: 'tech',    path: '../Tech/prices-data.js'     },
+    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
+    { key: 'energy',  path: '../Energy/prices-data.js'   },
+  ];
+
+  Promise.all(SECTORS.map(async sd => {
     try {
-      const res = await fetch('../' + s + '/prices-data.js');
-      const text = await res.text();
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
+      const text = await fetch(sd.path).then(r => r.text());
+      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (!match) return [];
       const data = JSON.parse(match[1]);
-      return (data.stocks || []).map(st => ({ ...st, sector: s }));
-    } catch { return []; }
-  }));
-  allStocks = results.flat();
-  document.getElementById('total-count').textContent = allStocks.length;
-  buildTable(allStocks);
-  sortTable('mcap', document.querySelector('th[onclick*="\'mcap\'"]'));
-}
+      return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
+    } catch(e) { return []; }
+  })).then(results => buildMetrics(results.flat()));
 
-function fmt(v, suffix='') {
-  if (v == null || v === '' || isNaN(parseFloat(v))) return '<span class="val val-na">—</span>';
-  return '<span class="val">' + v + suffix + '</span>';
-}
-function fmtMcap(v) {
-  if (v == null) return '<span class="val val-na">—</span>';
-  const n = parseFloat(v);
-  if (isNaN(n)) return '<span class="val val-na">—</span>';
-  return '<span class="val">£' + (n >= 1000 ? (n/1000).toFixed(1) + 'T' : n.toFixed(1) + 'B') + '</span>';
-}
-function fmtPE(v) {
-  if (v == null) return '<span class="val val-na">—</span>';
-  const n = parseFloat(v);
-  if (isNaN(n)) return '<span class="val val-na">—</span>';
-  const cls = n < 15 ? 'val-good' : n > 80 ? 'val-warn' : 'val';
-  return '<span class="val ' + cls + '">' + n.toFixed(1) + '</span>';
-}
-function fmtBeta(v) {
-  if (v == null) return '<span class="val val-na">—</span>';
-  const n = parseFloat(v);
-  if (isNaN(n)) return '<span class="val val-na">—</span>';
-  const cls = n > 2 ? 'val-warn' : n < 0.5 ? 'val-good' : 'val';
-  return '<span class="val ' + cls + '">' + n.toFixed(2) + '</span>';
-}
-function fmtAnalyst(v) {
-  if (!v) return '<span class="val val-na">—</span>';
-  return '<span class="analyst-badge analyst-' + v + '">' + v.replace('_',' ') + '</span>';
-}
-
-function buildTable(stocks) {
-  const tbody = document.querySelector('#metrics-table tbody');
-  tbody.innerHTML = '';
-  stocks.forEach(s => {
-    const tr = document.createElement('tr');
-    tr.dataset.ticker   = s.ticker;
-    tr.dataset.sector   = s.sector;
-    tr.dataset.company  = s.company_name || s.ticker;
-    tr.dataset.mcap     = s.market_cap_gbp_b != null ? s.market_cap_gbp_b : -1;
-    tr.dataset.pe       = s.pe_ratio != null ? s.pe_ratio : 9999;
-    tr.dataset.beta     = s.beta != null ? s.beta : 9999;
-    tr.dataset.div      = s.div_yield_pct != null ? s.div_yield_pct : -1;
-    tr.dataset.short    = s.short_pct != null ? s.short_pct : -1;
-    tr.dataset.analyst  = s.analyst || '';
-    tr.innerHTML =
-      '<td><a class="ticker-link" href="https://finance.yahoo.com/quote/' + s.ticker + '/" target="_blank">' +
-        '<span class="ticker">' + s.ticker + '</span></a></td>' +
-      '<td>' + (s.company_name || s.ticker) + '</td>' +
-      '<td><span class="sector-badge sector-' + s.sector + '">' + s.sector + '</span></td>' +
-      '<td>' + fmtMcap(s.market_cap_gbp_b) + '</td>' +
-      '<td>' + fmtPE(s.pe_ratio) + '</td>' +
-      '<td>' + fmtBeta(s.beta) + '</td>' +
-      '<td>' + fmt(s.div_yield_pct, '%') + '</td>' +
-      '<td>' + fmt(s.short_pct, '%') + '</td>' +
-      '<td>' + fmtAnalyst(s.analyst) + '</td>';
-    tbody.appendChild(tr);
+  const tooltip = document.getElementById('col-tooltip');
+  const tipTitle = tooltip.querySelector('.tip-title');
+  const tipBody  = tooltip.querySelector('.tip-body');
+  document.querySelectorAll('th[data-tip]').forEach(th => {
+    th.addEventListener('mouseenter', () => {
+      tipTitle.textContent = th.dataset.tipTitle || '';
+      tipBody.textContent  = th.dataset.tip || '';
+      tooltip.classList.add('visible');
+    });
+    th.addEventListener('mousemove', e => {
+      const tw = tooltip.offsetWidth, tH = tooltip.offsetHeight;
+      let left = e.clientX - tw / 2, top = e.clientY - tH - 14;
+      left = Math.max(8, Math.min(left, window.innerWidth - tw - 8));
+      if (top < 8) top = e.clientY + 20;
+      tooltip.style.left = left + 'px'; tooltip.style.top = top + 'px';
+    });
+    th.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
   });
-  applyFilters();
-}
-
-function applyFilters() {
-  const query = (document.getElementById('stock-search').value || '').toLowerCase().trim();
-  const rows = document.querySelectorAll('#metrics-table tbody tr');
-  let visible = 0;
-  rows.forEach(row => {
-    if (!row.dataset.ticker) { row.classList.add('hidden'); return; }
-    const matchSector = currentSector === 'all' || row.dataset.sector === currentSector;
-    const matchSearch = !query || row.dataset.ticker.toLowerCase().includes(query) || row.dataset.company.toLowerCase().includes(query);
-    if (matchSector && matchSearch) { row.classList.remove('hidden'); visible++; }
-    else row.classList.add('hidden');
-  });
-  document.getElementById('visible-count').textContent = visible;
-}
-
-function filterSector(sector, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentSector = sector;
-  applyFilters();
-}
-
-const ANALYST_ORDER = { strong_buy:0, buy:1, hold:2, sell:3, strong_sell:4, '':5 };
-function sortTable(col, th) {
-  const tbody = document.querySelector('#metrics-table tbody');
-  const rows = Array.from(tbody.querySelectorAll('tr')).filter(r => r.dataset.ticker);
-  if (sortState.col === col) sortState.dir *= -1;
-  else { sortState.col = col; sortState.dir = -1; }
-  document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
-  if (th) th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-  rows.sort((a, b) => {
-    if (col === 'ticker')   return a.dataset.ticker.localeCompare(b.dataset.ticker) * sortState.dir;
-    if (col === 'company')  return a.dataset.company.localeCompare(b.dataset.company) * sortState.dir;
-    if (col === 'sector')   return a.dataset.sector.localeCompare(b.dataset.sector) * sortState.dir;
-    if (col === 'analyst')  return ((ANALYST_ORDER[a.dataset.analyst]||5) - (ANALYST_ORDER[b.dataset.analyst]||5)) * sortState.dir;
-    return (parseFloat(a.dataset[col]) - parseFloat(b.dataset[col])) * sortState.dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-  applyFilters();
-}
-
-loadAllSectors();
 </script>
+
 </body>
 </html>

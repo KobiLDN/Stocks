@@ -1,297 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All Sectors news — latest headlines across AI, Biotech, Defence, Technology, Crypto, and Energy stocks." name="description"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Latest news and sentiment across 192 stocks — AI, Biotech, Defence, Tech, Crypto, and Energy sectors.">
 <title>All Sectors — News</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="../shared.css" rel="stylesheet"/>
-<script defer src="../shared.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
-  .filter-bar { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
+  .controls-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; align-items: center; }
+
   .filter-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
-    padding:5px 12px; border:1px solid var(--border); background:transparent;
-    color:var(--muted); cursor:pointer; transition:all 0.15s; text-transform:uppercase;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .filter-btn:hover { color:var(--accent); border-color:var(--accent); }
-  .filter-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-  .filter-btn[data-sector="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
-  .filter-btn[data-sector="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
-  .filter-btn[data-sector="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
-  .filter-btn[data-sector="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
-  .filter-btn[data-sector="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
-  .filter-btn[data-sector="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
+  .filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
 
-  .sector-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9px;
-    letter-spacing:1px; padding:2px 7px; border-radius:2px; text-transform:uppercase; font-weight:700;
+  .sort-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .sector-AI      { background:rgba(0,212,255,0.12); color:#00d4ff; border:1px solid rgba(0,212,255,0.3); }
-  .sector-Biotech { background:rgba(167,139,250,0.12); color:#a78bfa; border:1px solid rgba(167,139,250,0.3); }
-  .sector-Defence { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.3); }
-  .sector-Tech    { background:rgba(96,165,250,0.12); color:#60a5fa; border:1px solid rgba(96,165,250,0.3); }
-  .sector-Crypto  { background:rgba(251,146,60,0.12); color:#fb923c; border:1px solid rgba(251,146,60,0.3); }
-  .sector-Energy  { background:rgba(250,204,21,0.12); color:#b45309; border:1px solid rgba(250,204,21,0.3); }
-  html[data-theme="dark"] .sector-Energy { color:#facc15; }
+  .sort-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .sort-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 700; }
 
-  .info-box {
-    border:1px solid var(--border); background:var(--surface); padding:20px 24px;
-    font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.7;
-    margin-bottom:24px;
+  .period-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .info-box a { color:var(--accent); text-decoration:none; }
-  .info-box a:hover { text-decoration:underline; }
-  .info-box strong { color:var(--text); }
+  .period-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .period-btn.active { background: var(--surface2); color: var(--text); border-color: var(--accent); font-weight: 700; }
 
-  .news-grid { display:flex; flex-direction:column; gap:0; border:1px solid var(--border); }
-  .news-item {
-    display:flex; align-items:flex-start; gap:16px; padding:16px 20px;
-    border-bottom:1px solid var(--border); transition:background 0.15s;
-  }
-  .news-item:last-child { border-bottom:none; }
-  .news-item:hover { background:var(--surface2); }
-  .news-item.hidden { display:none; }
+  .divider { width: 1px; height: 28px; background: var(--border); margin: 0 4px; }
 
-  .news-sector { flex-shrink:0; padding-top:2px; }
-  .news-body { flex:1; min-width:0; }
-  .news-ticker {
-    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:13px; letter-spacing:1px;
-    color:var(--accent); margin-bottom:4px;
-  }
-  .news-headline { font-size:14px; font-weight:600; line-height:1.4; margin-bottom:6px; }
-  .news-headline a { color:var(--text); text-decoration:none; }
-  .news-headline a:hover { color:var(--accent); }
-  .news-meta { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-  .news-source { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); }
-  .news-time { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); }
-  .sentiment-pill {
-    font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:1px;
-    padding:2px 6px; border-radius:2px; text-transform:uppercase; font-weight:700;
-  }
-  .sent-positive { background:rgba(22,163,74,0.15); color:#16a34a; border:1px solid rgba(22,163,74,0.3); }
-  .sent-negative { background:rgba(220,38,38,0.1); color:var(--red); border:1px solid rgba(220,38,38,0.25); }
-  .sent-neutral  { background:rgba(148,163,184,0.1); color:var(--muted); border:1px solid rgba(148,163,184,0.25); }
+  #news-count { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); margin-left: auto; }
+  #news-count span { color: var(--accent); font-weight: 700; }
 
-  .search-count-bar { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
-  #news-search {
-    font-family:'IBM Plex Mono',monospace; font-size:12px; background:var(--surface);
-    border:1px solid var(--border); color:var(--text); padding:6px 14px; width:240px; outline:none;
+  .news-list { display: flex; flex-direction: column; gap: 0; }
+
+  .news-card {
+    display: grid; grid-template-columns: 4px 1fr;
+    border: 1px solid var(--border); border-top: none; transition: background 0.12s;
   }
-  #news-search:focus { border-color:var(--accent); }
-  #news-search::placeholder { color:var(--muted); }
-  .row-count { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
-  .row-count span { color:var(--accent); font-weight:700; }
-  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
-  footer strong { color:var(--accent2); }
+  .news-card:first-child { border-top: 1px solid var(--border); }
+  .news-card:hover { background: var(--surface); }
+
+  .sent-bar { width: 4px; }
+  .sent-pos { background: var(--green); }
+  .sent-neg { background: var(--red); }
+  .sent-neu { background: var(--border); }
+
+  .news-body { padding: 14px 16px; }
+
+  .news-meta-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .news-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--accent); }
+  .news-sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; padding: 1px 6px; letter-spacing: 0.5px; }
+  .sect-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .sect-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+  .sect-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+  .sect-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
+  .sect-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
+  .sect-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+
+  .news-sent { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; }
+  .sent-pos-text { color: var(--green); }
+  .sent-neg-text { color: var(--red); }
+  .sent-neu-text { color: var(--muted); }
+
+  .news-headline { font-size: 14px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
+  .news-headline a { color: var(--text); text-decoration: none; }
+  .news-headline a:hover { color: var(--accent); text-decoration: underline; }
+
+  .news-meta-bot { display: flex; align-items: center; gap: 12px; font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: var(--muted); }
+  .news-publisher { color: var(--accent); opacity: 0.7; }
+
+  .no-news { text-align: center; padding: 60px 20px; font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 600px) {
+    .news-headline { font-size: 13px; }
+    .controls-row { gap: 6px; }
+  }
 </style>
 </head>
 <body>
+
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
-<div class="header-inner">
+  <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub">News &amp; Sentiment · <span id="version">v1.0</span></div>
+    <h1>All <span>News</span></h1>
+    <div class="header-sub">Latest headlines across 192 stocks · AI-scored sentiment · Newest first</div>
   </div>
   <div class="sector-switcher">
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-    <a class="sector-card hub-card" href="../index.html"><div class="sector-card-top"><span class="sector-card-icon">⊞</span></div><div class="sector-card-name">Stock Hub</div></a>
-    <a class="sector-card" href="../rss.html"><div class="sector-card-top"><span class="sector-card-icon">📰</span></div><div class="sector-card-name">RSS</div></a>
-    <a class="sector-card active" href="index.html"><div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">All Sectors</div></a>
-    <a class="sector-card" href="../AI/index.html"><div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">AI Infrastructure</div></a>
-    <a class="sector-card" href="../Defence/index.html"><div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Defence</div></a>
-    <a class="sector-card" href="../Biotech/index.html"><div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Biotech</div></a>
-    <a class="sector-card" href="../Tech/index.html"><div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Technology</div></a>
-    <a class="sector-card" href="../Crypto/index.html"><div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Crypto</div></a>
-    <a class="sector-card" href="../Energy/index.html"><div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Energy</div></a>
-  </div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+<a class="sector-card hub-card" href="../index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+  <div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card" href="../rss.html">
+  <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+  <div class="sector-card-name">RSS</div>
+</a>
+<a class="sector-card active" href="index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/news.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/news.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/news.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Tech/news.html">
+  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/news.html">
+  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/news.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Energy</div>
+</a>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
+</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · data from Yahoo Finance (yfinance), may be delayed · for research only · always consult a financial adviser</div>
 </header>
 <nav>
-<div class="nav-inner">
-  <a class="nav-link" href="index.html">📊 Dashboard</a>
-  <a class="nav-link" href="metrics.html">📋 Metrics</a>
-  <a class="nav-link active" href="news.html">📰 News</a>
-  <a class="nav-link" href="signals.html">🎯 Signals</a>
-  <a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
-  <a class="nav-link" href="charts.html">📈 Charts</a>
-  <a class="nav-link" href="calculator.html">🧮 What-If</a>
-</div>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
 </nav>
+
 <div class="container">
-  <div class="filter-bar">
-    <button class="filter-btn active" data-sector="all" onclick="filterSector('all',this)">All</button>
-    <button class="filter-btn" data-sector="AI"      onclick="filterSector('AI',this)">AI</button>
-    <button class="filter-btn" data-sector="Biotech" onclick="filterSector('Biotech',this)">Biotech</button>
-    <button class="filter-btn" data-sector="Defence" onclick="filterSector('Defence',this)">Defence</button>
-    <button class="filter-btn" data-sector="Tech"    onclick="filterSector('Tech',this)">Tech</button>
-    <button class="filter-btn" data-sector="Crypto"  onclick="filterSector('Crypto',this)">Crypto</button>
-    <button class="filter-btn" data-sector="Energy"  onclick="filterSector('Energy',this)">Energy</button>
+
+  <div class="controls-row">
+    <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
+    <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
+    <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
+    <button class="filter-btn" data-filter="defence" onclick="setSector('defence',this)">Defence</button>
+    <button class="filter-btn" data-filter="tech" onclick="setSector('tech',this)">Tech</button>
+    <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
+    <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
   </div>
-  <div class="info-box">
-    <strong>📰 Cross-sector news</strong> — headlines from each sector's news page. For the full live feed with sentiment scoring, visit the <a href="../rss.html">RSS page</a> or each sector's News tab.
-    <br>Individual sector news: <a href="../AI/news.html">AI</a> · <a href="../Biotech/news.html">Biotech</a> · <a href="../Defence/news.html">Defence</a> · <a href="../Tech/news.html">Tech</a> · <a href="../Crypto/news.html">Crypto</a> · <a href="../Energy/news.html">Energy</a>
+
+  <div class="controls-row">
+    <button class="sort-btn active" onclick="setSort('newest',this)">Newest</button>
+    <button class="sort-btn" onclick="setSort('oldest',this)">Oldest</button>
+    <button class="sort-btn" onclick="setSort('pos',this)">Most Positive</button>
+    <button class="sort-btn" onclick="setSort('neg',this)">Most Negative</button>
+    <div class="divider"></div>
+    <button class="period-btn" onclick="setPeriod('24h',this)">Last 24h</button>
+    <button class="period-btn active" onclick="setPeriod('week',this)">Last Week</button>
+    <button class="period-btn" onclick="setPeriod('all',this)">All Time</button>
+    <span id="news-count">Loading…</span>
   </div>
-  <div class="search-count-bar">
-    <input id="news-search" oninput="applyFilters()" placeholder="Search ticker or headline…" type="text"/>
-    <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span></span>
-  </div>
-  <div class="news-grid" id="news-grid">
-    <div class="news-item"><div class="news-body" style="padding:32px; color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:12px;">Loading news from all sectors…</div></div>
+
+  <div class="news-list" id="news-list">
+    <div class="no-news">Loading all sectors…</div>
   </div>
 </div>
-<footer><strong>News</strong> is aggregated from each sector's RSS feed data. For full sentiment analysis visit individual sector pages. <strong>Not financial advice.</strong></footer>
-<script>
-const SECTORS = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
-let allItems = [];
-let currentSector = 'all';
 
-async function loadAllNews() {
-  const results = await Promise.all(SECTORS.map(async s => {
+<script>
+  let allNews     = [];
+  let activeSector = 'all';
+  let activeSort   = 'newest';
+  let activePeriod = 'week';
+
+  const SECTOR_LABELS = {
+    'ai':'AI Infra','biotech':'Biotech','defence':'Defence',
+    'tech':'Tech','crypto':'Crypto','energy':'Energy',
+  };
+
+  function sentClass(score) {
+    if (score === null || score === undefined) return 'sent-neu';
+    if (score > 0.05)  return 'sent-pos';
+    if (score < -0.05) return 'sent-neg';
+    return 'sent-neu';
+  }
+  function sentLabel(score) {
+    if (score === null || score === undefined) return '—';
+    return (score > 0 ? '+' : '') + score.toFixed(2);
+  }
+  function sentTextCls(score) {
+    if (score === null || score === undefined) return 'sent-neu-text';
+    if (score > 0.05)  return 'sent-pos-text';
+    if (score < -0.05) return 'sent-neg-text';
+    return 'sent-neu-text';
+  }
+  function timeAgo(ts) {
+    const diff = Date.now() / 1000 - ts;
+    if (diff < 3600)  return Math.floor(diff / 60) + 'm ago';
+    if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+    return Math.floor(diff / 86400) + 'd ago';
+  }
+  function esc(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function setSector(sector, btn) {
+    activeSector = sector;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderNews();
+  }
+  function setSort(sort, btn) {
+    activeSort = sort;
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderNews();
+  }
+  function setPeriod(period, btn) {
+    activePeriod = period;
+    document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderNews();
+  }
+
+  function renderNews() {
+    let items = allNews.slice();
+    if (activeSector !== 'all') items = items.filter(n => n.sector === activeSector);
+    const now = Date.now() / 1000;
+    if (activePeriod === '24h')  items = items.filter(n => now - n.ts < 86400);
+    if (activePeriod === 'week') items = items.filter(n => now - n.ts < 604800);
+    if (activeSort === 'newest') items.sort((a, b) => b.ts - a.ts);
+    if (activeSort === 'oldest') items.sort((a, b) => a.ts - b.ts);
+    if (activeSort === 'pos')    items.sort((a, b) => (b.sent || -99) - (a.sent || -99));
+    if (activeSort === 'neg')    items.sort((a, b) => (a.sent || 99) - (b.sent || 99));
+
+    document.getElementById('news-count').innerHTML = '<span>' + items.length + '</span> articles';
+    const list = document.getElementById('news-list');
+    if (!items.length) { list.innerHTML = '<div class="no-news">No articles found for this selection.</div>'; return; }
+
+    list.innerHTML = items.map(n => {
+      const sc    = sentClass(n.sent);
+      const stxt  = sentTextCls(n.sent);
+      const slabel = SECTOR_LABELS[n.sector] || n.sector;
+      return '<div class="news-card">' +
+        '<div class="sent-bar ' + sc + '"></div>' +
+        '<div class="news-body">' +
+          '<div class="news-meta-top">' +
+            '<span class="news-ticker">' + esc(n.ticker) + '</span>' +
+            '<span class="news-sector-badge sect-' + n.sector + '">' + esc(slabel) + '</span>' +
+            '<span class="news-sent ' + stxt + '">' + sentLabel(n.sent) + '</span>' +
+          '</div>' +
+          '<div class="news-headline"><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.headline) + '</a></div>' +
+          '<div class="news-meta-bot">' +
+            (n.publisher ? '<span class="news-publisher">' + esc(n.publisher) + '</span>' : '') +
+            '<span>' + timeAgo(n.ts) + '</span>' +
+          '</div>' +
+        '</div></div>';
+    }).join('');
+  }
+
+  const SECTORS = [
+    { key: 'ai',      path: '../AI/prices-data.js'      },
+    { key: 'biotech', path: '../Biotech/prices-data.js'  },
+    { key: 'defence', path: '../Defence/prices-data.js'  },
+    { key: 'tech',    path: '../Tech/prices-data.js'     },
+    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
+    { key: 'energy',  path: '../Energy/prices-data.js'   },
+  ];
+
+  Promise.all(SECTORS.map(async sd => {
     try {
-      const res = await fetch('../rss-data.js');
-      const text = await res.text();
-      const match = text.match(/window\.RSS_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
+      const text = await fetch(sd.path).then(r => r.text());
+      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (!match) return [];
       const data = JSON.parse(match[1]);
-      // rss-data.js has items with ticker field — filter by sector's tickers
-      // Fallback: load sector prices-data to get ticker list
-      return [];
-    } catch { return []; }
-  }));
-
-  // Load rss-data.js once and cross-reference with sector prices
-  try {
-    const [rssRes, ...priceResponses] = await Promise.all([
-      fetch('../rss-data.js'),
-      ...SECTORS.map(s => fetch('../' + s + '/prices-data.js'))
-    ]);
-    const rssText = await rssRes.text();
-    const rssMatch = rssText.match(/window\.RSS_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
-
-    // Build ticker→sector map
-    const tickerSector = {};
-    await Promise.all(priceResponses.map(async (res, i) => {
-      const text = await res.text();
-      const m = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
-      if (!m) return;
-      const data = JSON.parse(m[1]);
-      (data.stocks || []).forEach(st => { tickerSector[st.ticker] = SECTORS[i]; });
-    }));
-
-    if (rssMatch) {
-      const rss = JSON.parse(rssMatch[1]);
-      allItems = (rss.items || []).map(item => ({
-        ...item,
-        sector: tickerSector[item.ticker] || 'Unknown'
-      })).filter(item => item.sector !== 'Unknown');
-    } else {
-      // No rss-data.js — show placeholder links to each sector
-      allItems = [];
-    }
-  } catch {
-    allItems = [];
-  }
-
-  if (allItems.length === 0) {
-    renderPlaceholder();
-    return;
-  }
-
-  document.getElementById('total-count').textContent = allItems.length;
-  renderItems(allItems);
-  applyFilters();
-}
-
-function renderPlaceholder() {
-  const grid = document.getElementById('news-grid');
-  const sectorLinks = SECTORS.map(s => {
-    const icons = { AI:'🤖', Biotech:'🧬', Defence:'🛡️', Tech:'💻', Crypto:'₿', Energy:'⚡' };
-    return `<a href="../${s}/news.html" style="display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);transition:background 0.15s;" onmouseover="this.style.background='var(--surface2)'" onmouseout="this.style.background=''">
-      <span style="font-size:20px">${icons[s]}</span>
-      <div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;">${s}</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:2px;">View ${s} sector news →</div>
-      </div>
-    </a>`;
-  }).join('');
-  grid.innerHTML = `
-    <div style="padding:20px 24px;border-bottom:1px solid var(--border);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:1px;">
-      NEWS FEEDS — click a sector to view live headlines
-    </div>
-    ${sectorLinks}
-  `;
-  document.getElementById('total-count').textContent = SECTORS.length;
-  document.getElementById('visible-count').textContent = SECTORS.length;
-}
-
-function sentClass(v) {
-  if (!v) return 'sent-neutral';
-  const n = parseFloat(v);
-  if (n > 0.1) return 'sent-positive';
-  if (n < -0.1) return 'sent-negative';
-  return 'sent-neutral';
-}
-function sentLabel(v) {
-  if (!v) return 'neutral';
-  const n = parseFloat(v);
-  if (n > 0.1) return 'positive';
-  if (n < -0.1) return 'negative';
-  return 'neutral';
-}
-
-function renderItems(items) {
-  const grid = document.getElementById('news-grid');
-  grid.innerHTML = '';
-  items.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'news-item';
-    div.dataset.sector = item.sector || '';
-    div.dataset.ticker = item.ticker || '';
-    div.dataset.headline = (item.title || '').toLowerCase();
-    const sentCls = sentClass(item.sentiment);
-    div.innerHTML =
-      '<div class="news-sector"><span class="sector-badge sector-' + item.sector + '">' + item.sector + '</span></div>' +
-      '<div class="news-body">' +
-        '<div class="news-ticker">' + (item.ticker || '') + '</div>' +
-        '<div class="news-headline"><a href="' + (item.url || '#') + '" target="_blank" rel="noopener">' + (item.title || 'No headline') + '</a></div>' +
-        '<div class="news-meta">' +
-          '<span class="news-source">' + (item.source || '') + '</span>' +
-          '<span class="news-time">' + (item.published || '') + '</span>' +
-          '<span class="sentiment-pill ' + sentCls + '">' + sentLabel(item.sentiment) + '</span>' +
-        '</div>' +
-      '</div>';
-    grid.appendChild(div);
+      const items = [];
+      (data.stocks || []).forEach(s => {
+        (s.news || []).forEach(n => {
+          items.push({
+            ticker: s.ticker,
+            sector: sd.key,
+            headline: n.headline || n.title || '',
+            url: n.url || '#',
+            ts: n.published_at || n.published || 0,
+            sent: n.sentiment_score !== undefined ? n.sentiment_score : (n.sentiment !== undefined ? n.sentiment : null),
+            publisher: n.publisher || n.source || '',
+          });
+        });
+      });
+      return items;
+    } catch(e) { return []; }
+  })).then(results => {
+    allNews = results.flat();
+    renderNews();
   });
-}
-
-function applyFilters() {
-  const query = (document.getElementById('news-search').value || '').toLowerCase().trim();
-  const items = document.querySelectorAll('.news-item');
-  let visible = 0;
-  items.forEach(item => {
-    if (!item.dataset.sector) return;
-    const matchSector = currentSector === 'all' || item.dataset.sector === currentSector;
-    const matchSearch = !query || item.dataset.ticker.toLowerCase().includes(query) || item.dataset.headline.includes(query);
-    if (matchSector && matchSearch) { item.classList.remove('hidden'); visible++; }
-    else item.classList.add('hidden');
-  });
-  document.getElementById('visible-count').textContent = visible;
-}
-
-function filterSector(sector, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentSector = sector;
-  applyFilters();
-}
-
-loadAllNews();
 </script>
+
 </body>
 </html>

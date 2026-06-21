@@ -1,287 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All Sectors What-If calculator — see what £100 to £10,000 invested across AI, Biotech, Defence, Tech, Crypto, and Energy at the start of 2026 is worth today." name="description"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="All sectors investment calculator — see what £100, £1,000 or £10,000 invested at the start of 2026 would be worth today across 192 stocks.">
 <title>All Sectors — What-If Calculator</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="../shared.css" rel="stylesheet"/>
-<script defer src="../shared.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
-  .filter-bar { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
+  .calc-intro {
+    border: 1px solid var(--border); background: var(--surface);
+    padding: 16px 20px; margin-bottom: 24px; font-size: 13px; color: var(--muted); line-height: 1.6;
+  }
+  .calc-intro strong { color: var(--text); }
+
+  .controls-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
   .filter-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
-    padding:5px 12px; border:1px solid var(--border); background:transparent;
-    color:var(--muted); cursor:pointer; transition:all 0.15s; text-transform:uppercase;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .filter-btn:hover { color:var(--accent); border-color:var(--accent); }
-  .filter-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-  .filter-btn[data-sector="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
-  .filter-btn[data-sector="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
-  .filter-btn[data-sector="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
-  .filter-btn[data-sector="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
-  .filter-btn[data-sector="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
-  .filter-btn[data-sector="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
+  .filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
 
-  .sector-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9px;
-    letter-spacing:1px; padding:2px 7px; border-radius:2px; text-transform:uppercase; font-weight:700;
-  }
-  .sector-AI      { background:rgba(0,212,255,0.12); color:#00d4ff; border:1px solid rgba(0,212,255,0.3); }
-  .sector-Biotech { background:rgba(167,139,250,0.12); color:#a78bfa; border:1px solid rgba(167,139,250,0.3); }
-  .sector-Defence { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.3); }
-  .sector-Tech    { background:rgba(96,165,250,0.12); color:#60a5fa; border:1px solid rgba(96,165,250,0.3); }
-  .sector-Crypto  { background:rgba(251,146,60,0.12); color:#fb923c; border:1px solid rgba(251,146,60,0.3); }
-  .sector-Energy  { background:rgba(250,204,21,0.12); color:#b45309; border:1px solid rgba(250,204,21,0.3); }
-  html[data-theme="dark"] .sector-Energy { color:#facc15; }
-
-  .calc-input-row {
-    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
-    margin-bottom:20px; padding:16px 20px;
-    background:var(--surface); border:1px solid var(--border);
-  }
-  .calc-label { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; white-space:nowrap; }
-  .calc-amount {
-    font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:700;
-    background:var(--bg); border:1px solid var(--border); color:var(--text);
-    padding:8px 14px; width:140px; outline:none;
-  }
-  .calc-amount:focus { border-color:var(--accent); }
-  .preset-group { display:flex; gap:4px; flex-wrap:wrap; }
-  .preset-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:11px; padding:7px 14px;
-    border:1px solid var(--border); background:transparent; color:var(--muted); cursor:pointer; transition:all 0.15s;
-  }
-  .preset-btn:hover  { color:var(--accent); border-color:var(--accent); }
-  .preset-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-
-  .search-count-bar { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
+  .search-sort-bar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
   #calc-search {
-    font-family:'IBM Plex Mono',monospace; font-size:12px; background:var(--surface);
-    border:1px solid var(--border); color:var(--text); padding:6px 14px; width:240px; outline:none;
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    padding: 6px 14px; width: 220px; outline: none; letter-spacing: 0.5px;
   }
-  #calc-search:focus { border-color:var(--accent); }
-  #calc-search::placeholder { color:var(--muted); }
-  .row-count { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
-  .row-count span { color:var(--accent); font-weight:700; }
-
-  .table-wrap { overflow-x:auto; border:1px solid var(--border); margin-bottom:4px; }
-  table { width:100%; border-collapse:collapse; font-size:13px; }
-  thead th {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase;
-    color:var(--muted); padding:12px 14px; text-align:left; border-bottom:1px solid var(--border);
-    background:var(--surface); white-space:nowrap; cursor:pointer; user-select:none;
+  #calc-search:focus { border-color: var(--accent); }
+  #calc-search::placeholder { color: var(--muted); }
+  .sort-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  thead th:hover { color:var(--accent); }
-  thead th.sort-asc::after  { content:' ▲'; color:var(--accent); }
-  thead th.sort-desc::after { content:' ▼'; color:var(--accent); }
-  tbody tr { border-bottom:1px solid var(--border); transition:background 0.15s; }
-  tbody tr:hover { background:var(--surface2); }
-  tbody tr.hidden { display:none; }
-  td { padding:10px 14px; vertical-align:middle; white-space:nowrap; }
+  .sort-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .sort-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 700; }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); margin-left: auto; }
+  .row-count span { color: var(--accent); font-weight: 700; }
 
-  .ticker-cell { font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:13px; letter-spacing:1px; }
-  .ticker-link { text-decoration:none; color:inherit; }
-  .ticker-link:hover .ticker-cell { text-decoration:underline; opacity:0.85; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead { background: var(--surface2); }
+  th {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap;
+  }
+  th.num-col { text-align: right; }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--surface); }
+  tfoot td { border-top: 2px solid var(--accent); border-bottom: none; background: var(--surface2); }
 
-  .val-now { font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:15px; }
-  .val-pos  { color:var(--green); } .val-neg { color:var(--red); } .val-flat { color:var(--muted); }
-  .val-gain { font-family:'IBM Plex Mono',monospace; font-size:12px; }
+  .ticker-cell { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
+  .ticker-link { text-decoration: none; color: inherit; }
+  .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
+  .company-cell { color: var(--muted); font-size: 12px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-  .ytd-col { font-family:'IBM Plex Mono',monospace; font-weight:700; }
+  .sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .sector-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .sector-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+  .sector-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+  .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
+  .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
+  .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
 
-  .loading { padding:48px; text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--muted); }
-  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
-  footer strong { color:var(--accent2); }
+  .num-cell { text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .ytd-pos { color: var(--green); font-weight: 700; }
+  .ytd-neg { color: var(--red);   font-weight: 700; }
+  .ytd-flat { color: var(--muted); }
+
+  .pl-pos { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; }
+  .pl-neg { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; }
+  .pl-zero { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .val-cell { font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-align: right; }
+  .totals-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; }
+  .null-val { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+
+  @media (max-width: 768px) {
+    .company-cell { display: none; }
+    th, td { padding: 8px 10px; }
+  }
 </style>
 </head>
 <body>
+
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
-<div class="header-inner">
+  <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub">What-If Calculator · <span id="version">v1.0</span></div>
+    <h1>All <span>What-If</span></h1>
+    <div class="header-sub">192 stocks · If you invested £100 / £1,000 / £10,000 at start of 2026…</div>
   </div>
   <div class="sector-switcher">
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-    <a class="sector-card hub-card" href="../index.html"><div class="sector-card-top"><span class="sector-card-icon">⊞</span></div><div class="sector-card-name">Stock Hub</div></a>
-    <a class="sector-card" href="../rss.html"><div class="sector-card-top"><span class="sector-card-icon">📰</span></div><div class="sector-card-name">RSS</div></a>
-    <a class="sector-card active" href="index.html"><div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">All Sectors</div></a>
-    <a class="sector-card" href="../AI/index.html"><div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">AI Infrastructure</div></a>
-    <a class="sector-card" href="../Defence/index.html"><div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Defence</div></a>
-    <a class="sector-card" href="../Biotech/index.html"><div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Biotech</div></a>
-    <a class="sector-card" href="../Tech/index.html"><div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Technology</div></a>
-    <a class="sector-card" href="../Crypto/index.html"><div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Crypto</div></a>
-    <a class="sector-card" href="../Energy/index.html"><div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Energy</div></a>
-  </div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+<a class="sector-card hub-card" href="../index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+  <div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card" href="../rss.html">
+  <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+  <div class="sector-card-name">RSS</div>
+</a>
+<a class="sector-card active" href="index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/calculator.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/calculator.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/calculator.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Tech/calculator.html">
+  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/calculator.html">
+  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/calculator.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Energy</div>
+</a>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
+</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · YTD return used · ignores dividends & fees · for research only · always consult a financial adviser</div>
 </header>
 <nav>
-<div class="nav-inner">
-  <a class="nav-link" href="index.html">📊 Dashboard</a>
-  <a class="nav-link" href="metrics.html">📋 Metrics</a>
-  <a class="nav-link" href="news.html">📰 News</a>
-  <a class="nav-link" href="signals.html">🎯 Signals</a>
-  <a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
-  <a class="nav-link" href="charts.html">📈 Charts</a>
-  <a class="nav-link active" href="calculator.html">🧮 What-If</a>
-</div>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link active" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
 </nav>
+
 <div class="container">
-  <div class="filter-bar">
-    <button class="filter-btn active" data-sector="all" onclick="filterSector('all',this)">All</button>
-    <button class="filter-btn" data-sector="AI"      onclick="filterSector('AI',this)">AI</button>
-    <button class="filter-btn" data-sector="Biotech" onclick="filterSector('Biotech',this)">Biotech</button>
-    <button class="filter-btn" data-sector="Defence" onclick="filterSector('Defence',this)">Defence</button>
-    <button class="filter-btn" data-sector="Tech"    onclick="filterSector('Tech',this)">Tech</button>
-    <button class="filter-btn" data-sector="Crypto"  onclick="filterSector('Crypto',this)">Crypto</button>
-    <button class="filter-btn" data-sector="Energy"  onclick="filterSector('Energy',this)">Energy</button>
+
+  <div class="calc-intro">
+    <strong>Hypothetical only.</strong> Shows what a lump-sum investment at the start of 2026 would be worth today, using YTD % return. Ignores dividends, fees, FX costs, and taxes. Figures are illustrative — not a forecast or advice.
   </div>
-  <div class="calc-input-row">
-    <span class="calc-label">If I invested</span>
-    <input class="calc-amount" id="invest-amount" min="1" oninput="recalc()" type="number" value="1000"/>
-    <div class="preset-group">
-      <button class="preset-btn" onclick="setPreset(100)">£100</button>
-      <button class="preset-btn" onclick="setPreset(500)">£500</button>
-      <button class="preset-btn active" onclick="setPreset(1000)">£1k</button>
-      <button class="preset-btn" onclick="setPreset(5000)">£5k</button>
-      <button class="preset-btn" onclick="setPreset(10000)">£10k</button>
-    </div>
-    <span class="calc-label" style="margin-left:8px">at start of 2026 — what is it worth today?</span>
+
+  <div class="controls-row">
+    <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
+    <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
+    <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
+    <button class="filter-btn" data-filter="defence" onclick="setSector('defence',this)">Defence</button>
+    <button class="filter-btn" data-filter="tech" onclick="setSector('tech',this)">Tech</button>
+    <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
+    <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
   </div>
-  <div class="search-count-bar">
-    <input id="calc-search" oninput="applyFilters()" placeholder="Search ticker or company…" type="text"/>
-    <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span></span>
+
+  <div class="search-sort-bar">
+    <input type="text" id="calc-search" placeholder="Search ticker or company…" oninput="filterCalc(this.value)">
+    <button class="sort-btn active" onclick="setSort('ticker',this)">A–Z</button>
+    <button class="sort-btn" onclick="setSort('ytd',this)">Best YTD</button>
+    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
   </div>
+
   <div class="table-wrap">
     <table id="calc-table">
       <thead>
         <tr>
-          <th onclick="sortTable('ticker',this)">Ticker</th>
-          <th onclick="sortTable('company',this)">Company</th>
-          <th onclick="sortTable('sector',this)">Sector</th>
-          <th onclick="sortTable('ytd',this)">YTD Return</th>
-          <th onclick="sortTable('now',this)">Worth Now</th>
-          <th onclick="sortTable('gain',this)">Gain / Loss</th>
+          <th>Ticker</th>
+          <th class="company-cell">Company</th>
+          <th>Sector</th>
+          <th class="num-col">YTD %</th>
+          <th class="num-col">£100 Now</th>
+          <th class="num-col">P/L</th>
+          <th class="num-col">£1,000 Now</th>
+          <th class="num-col">P/L</th>
+          <th class="num-col">£10,000 Now</th>
+          <th class="num-col">P/L</th>
         </tr>
       </thead>
-      <tbody><tr><td colspan="6" class="loading">Loading all sectors…</td></tr></tbody>
+      <tbody id="calc-body">
+        <tr><td colspan="10" style="text-align:center;padding:40px;color:var(--muted);font-family:'IBM Plex Mono',monospace;">Loading all sectors…</td></tr>
+      </tbody>
+      <tfoot id="calc-foot"></tfoot>
     </table>
   </div>
+
 </div>
-<footer><strong>What-If</strong> uses the YTD return from each stock's price data to estimate current value of a hypothetical Jan 2026 investment. Past performance does not predict future returns. <strong>Not financial advice.</strong></footer>
+
 <script>
-const SECTORS = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
-let allStocks = [];
-let currentSector = 'all';
-let sortState = { col: 'now', dir: -1 };
+  const SECTOR_LABELS = {
+    ai:'AI Infra', biotech:'Biotech', defence:'Defence',
+    tech:'Tech', crypto:'Crypto', energy:'Energy',
+  };
+  const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
+  function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
-async function loadData() {
-  const results = await Promise.all(SECTORS.map(async s => {
+  let calcData = [];
+  let activeSector = 'all';
+  let activeSort = 'ticker';
+  let searchQ = '';
+
+  function setSector(sector, btn) {
+    activeSector = sector;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderTable();
+  }
+  function setSort(sort, btn) {
+    activeSort = sort;
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderTable();
+  }
+  function filterCalc(q) { searchQ = q.toLowerCase().trim(); renderTable(); }
+
+  function fmtGbp(v) { return '£' + v.toFixed(2); }
+  function fmtPl(pl) { return (pl >= 0 ? '+£' : '−£') + Math.abs(pl).toFixed(2); }
+
+  function invCell(inv, ytd) {
+    if (ytd === null) return '<span class="null-val">—</span>';
+    const now = inv * (1 + ytd / 100);
+    return '<span class="val-cell">' + fmtGbp(now) + '</span>';
+  }
+  function multCell(inv, ytd) {
+    if (ytd === null) return '<span class="null-val">—</span>';
+    const pl = inv * (ytd / 100);
+    const cls = pl > 0 ? 'pl-pos' : pl < 0 ? 'pl-neg' : 'pl-zero';
+    return '<span class="' + cls + '">' + fmtPl(pl) + '</span>';
+  }
+
+  function renderTable() {
+    let data = calcData.slice();
+    if (activeSector !== 'all') data = data.filter(s => s.sector === activeSector);
+    if (searchQ) data = data.filter(s => s.ticker.toLowerCase().includes(searchQ) || s.name.toLowerCase().includes(searchQ));
+
+    if (activeSort === 'ticker') data.sort((a, b) => a.ticker.localeCompare(b.ticker));
+    if (activeSort === 'ytd') data.sort((a, b) => {
+      if (b.ytd === null) return -1;
+      if (a.ytd === null) return 1;
+      return b.ytd - a.ytd;
+    });
+
+    document.getElementById('calc-count').textContent = data.length;
+
+    const body = document.getElementById('calc-body');
+    body.innerHTML = data.map(s => {
+      const ytdCls = s.ytd === null ? '' : s.ytd > 0 ? 'ytd-pos' : s.ytd < 0 ? 'ytd-neg' : 'ytd-flat';
+      const ytdCell = s.ytd !== null
+        ? '<span class="' + ytdCls + '">' + (s.ytd >= 0 ? '+' : '') + s.ytd.toFixed(2) + '%</span>'
+        : '<span class="null-val">—</span>';
+      const sLabel = SECTOR_LABELS[s.sector] || s.sector;
+      return '<tr>' +
+        '<td class="ticker-cell"><a href="' + yahooUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
+        '<td class="company-cell">' + s.name + '</td>' +
+        '<td><span class="sector-badge sector-' + s.sector + '">' + sLabel + '</span></td>' +
+        '<td class="num-cell" style="text-align:right">' + ytdCell + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + invCell(100,   s.ytd) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + multCell(100,  s.ytd) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + invCell(1000,  s.ytd) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + multCell(1000, s.ytd) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + invCell(10000, s.ytd) + '</td>' +
+        '<td class="num-cell" style="text-align:right">' + multCell(10000,s.ytd) + '</td>' +
+        '</tr>';
+    }).join('');
+
+    const validYtd = data.filter(s => s.ytd !== null);
+    if (!validYtd.length) { document.getElementById('calc-foot').innerHTML = ''; return; }
+    const avgYtd = validYtd.reduce((a, b) => a + b.ytd, 0) / validYtd.length;
+    const foot = document.getElementById('calc-foot');
+    foot.innerHTML = '<tr>' +
+      '<td class="totals-label" colspan="3">AVG (equal weight · ' + validYtd.length + ' stocks)</td>' +
+      '<td class="num-cell" style="text-align:right"><span class="' + (avgYtd >= 0 ? 'ytd-pos' : 'ytd-neg') + '">' + (avgYtd >= 0 ? '+' : '') + avgYtd.toFixed(2) + '%</span></td>' +
+      '<td class="num-cell" style="text-align:right">' + invCell(100,   avgYtd) + '</td>' +
+      '<td class="num-cell" style="text-align:right">' + multCell(100,  avgYtd) + '</td>' +
+      '<td class="num-cell" style="text-align:right">' + invCell(1000,  avgYtd) + '</td>' +
+      '<td class="num-cell" style="text-align:right">' + multCell(1000, avgYtd) + '</td>' +
+      '<td class="num-cell" style="text-align:right">' + invCell(10000, avgYtd) + '</td>' +
+      '<td class="num-cell" style="text-align:right">' + multCell(10000,avgYtd) + '</td>' +
+      '</tr>';
+  }
+
+  function buildCalc(stocks) {
+    calcData = stocks.map(s => ({
+      ticker: s.ticker,
+      name:   s.company_name || s.ticker,
+      sector: s.sector || '',
+      ytd:    s.change_ytd && !isNaN(parseFloat(s.change_ytd)) ? parseFloat(s.change_ytd) : null,
+    }));
+    renderTable();
+  }
+
+  const SECTORS = [
+    { key: 'ai',      path: '../AI/prices-data.js'      },
+    { key: 'biotech', path: '../Biotech/prices-data.js'  },
+    { key: 'defence', path: '../Defence/prices-data.js'  },
+    { key: 'tech',    path: '../Tech/prices-data.js'     },
+    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
+    { key: 'energy',  path: '../Energy/prices-data.js'   },
+  ];
+
+  Promise.all(SECTORS.map(async sd => {
     try {
-      const res = await fetch('../' + s + '/prices-data.js');
-      const text = await res.text();
-      const m = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
-      if (!m) return [];
-      const data = JSON.parse(m[1]);
-      return (data.stocks || []).map(st => ({ ...st, sector: s }));
-    } catch { return []; }
-  }));
-  allStocks = results.flat();
-  document.getElementById('total-count').textContent = allStocks.length;
-  buildTable();
-  sortTable('now', document.querySelector('th[onclick*="\'now\'"]'));
-}
-
-function getAmount() { return parseFloat(document.getElementById('invest-amount').value) || 1000; }
-
-function setPreset(v) {
-  document.getElementById('invest-amount').value = v;
-  document.querySelectorAll('.preset-btn').forEach(b => b.classList.toggle('active', parseFloat(b.textContent.replace(/[^0-9]/g,'')) === v || (v >= 1000 && b.textContent.includes(v/1000 + 'k'))));
-  recalc();
-}
-
-function parseYtd(v) {
-  if (!v) return null;
-  const n = parseFloat(String(v).replace(/[^0-9.-]/g,''));
-  return isNaN(n) ? null : n;
-}
-
-function buildTable() {
-  const amount = getAmount();
-  const tbody = document.querySelector('#calc-table tbody');
-  tbody.innerHTML = '';
-  allStocks.forEach(s => {
-    const ytd = parseYtd(s.change_ytd);
-    const now = ytd !== null ? amount * (1 + ytd / 100) : null;
-    const gain = now !== null ? now - amount : null;
-    const tr = document.createElement('tr');
-    tr.dataset.ticker  = s.ticker;
-    tr.dataset.company = (s.company_name || s.ticker).toLowerCase();
-    tr.dataset.sector  = s.sector;
-    tr.dataset.ytd     = ytd !== null ? ytd : -9999;
-    tr.dataset.now     = now !== null ? now : -9999;
-    tr.dataset.gain    = gain !== null ? gain : -9999;
-    const cls = ytd === null ? 'val-flat' : ytd > 0 ? 'val-pos' : ytd < 0 ? 'val-neg' : 'val-flat';
-    const gainStr = gain !== null ? (gain >= 0 ? '+£' : '-£') + Math.abs(gain).toFixed(0) : '—';
-    tr.innerHTML =
-      '<td><a class="ticker-link" href="https://finance.yahoo.com/quote/' + s.ticker + '/" target="_blank"><span class="ticker-cell">' + s.ticker + '</span></a></td>' +
-      '<td>' + (s.company_name || s.ticker) + '</td>' +
-      '<td><span class="sector-badge sector-' + s.sector + '">' + s.sector + '</span></td>' +
-      '<td><span class="ytd-col ' + cls + '">' + (s.change_ytd || '—') + '</span></td>' +
-      '<td><span class="val-now ' + cls + '">' + (now !== null ? '£' + now.toFixed(0) : '—') + '</span></td>' +
-      '<td><span class="val-gain ' + cls + '">' + gainStr + '</span></td>';
-    tbody.appendChild(tr);
-  });
-  applyFilters();
-}
-
-function recalc() { buildTable(); }
-
-function applyFilters() {
-  const query = (document.getElementById('calc-search').value || '').toLowerCase().trim();
-  const rows = document.querySelectorAll('#calc-table tbody tr');
-  let visible = 0;
-  rows.forEach(row => {
-    if (!row.dataset.ticker) { row.classList.add('hidden'); return; }
-    const matchSector = currentSector === 'all' || row.dataset.sector === currentSector;
-    const matchSearch = !query || row.dataset.ticker.toLowerCase().includes(query) || row.dataset.company.includes(query);
-    if (matchSector && matchSearch) { row.classList.remove('hidden'); visible++; }
-    else row.classList.add('hidden');
-  });
-  document.getElementById('visible-count').textContent = visible;
-}
-
-function filterSector(sector, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentSector = sector;
-  applyFilters();
-}
-
-function sortTable(col, th) {
-  const tbody = document.querySelector('#calc-table tbody');
-  const rows = Array.from(tbody.querySelectorAll('tr')).filter(r => r.dataset.ticker);
-  if (sortState.col === col) sortState.dir *= -1;
-  else { sortState.col = col; sortState.dir = -1; }
-  document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
-  if (th) th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-  rows.sort((a, b) => {
-    if (col === 'ticker')  return a.dataset.ticker.localeCompare(b.dataset.ticker) * sortState.dir;
-    if (col === 'company') return a.dataset.company.localeCompare(b.dataset.company) * sortState.dir;
-    if (col === 'sector')  return a.dataset.sector.localeCompare(b.dataset.sector) * sortState.dir;
-    return (parseFloat(a.dataset[col]) - parseFloat(b.dataset[col])) * sortState.dir;
-  });
-  rows.forEach(r => tbody.appendChild(r));
-  applyFilters();
-}
-
-loadData();
+      const text = await fetch(sd.path).then(r => r.text());
+      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+      if (!match) return [];
+      const data = JSON.parse(match[1]);
+      return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
+    } catch(e) { return []; }
+  })).then(results => buildCalc(results.flat()));
 </script>
+
 </body>
 </html>

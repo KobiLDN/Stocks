@@ -1,223 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All Sectors charts — links to 1-year price charts for every stock across AI, Biotech, Defence, Tech, Crypto, and Energy." name="description"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="All sectors stock charts — TradingView price history for 192 stocks across AI, Biotech, Defence, Tech, Crypto, and Energy.">
 <title>All Sectors — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="../shared.css" rel="stylesheet"/>
-<script defer src="../shared.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
+<script src="https://s3.tradingview.com/tv.js"></script>
 <style>
-  .filter-bar { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
-  .filter-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
-    padding:5px 12px; border:1px solid var(--border); background:transparent;
-    color:var(--muted); cursor:pointer; transition:all 0.15s; text-transform:uppercase;
+  .charts-layout { display: grid; grid-template-columns: 240px 1fr; gap: 0; min-height: 600px; border: 1px solid var(--border); }
+  .sidebar { background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; max-height: 82vh; }
+  .sidebar-header {
+    padding: 12px 14px; background: var(--surface2); border-bottom: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; align-items: center;
   }
-  .filter-btn:hover { color:var(--accent); border-color:var(--accent); }
-  .filter-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-  .filter-btn[data-sector="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
-  .filter-btn[data-sector="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
-  .filter-btn[data-sector="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
-  .filter-btn[data-sector="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
-  .filter-btn[data-sector="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
-  .filter-btn[data-sector="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
+  .sidebar-toggle { display: none; background: none; border: none; color: var(--muted); cursor: pointer; font-size: 16px; }
 
-  .sector-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9px;
-    letter-spacing:1px; padding:2px 7px; border-radius:2px; text-transform:uppercase; font-weight:700;
+  .sector-group { border-bottom: 1px solid var(--border); }
+  .sector-group-label {
+    padding: 8px 14px; font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
   }
-  .sector-AI      { background:rgba(0,212,255,0.12); color:#00d4ff; border:1px solid rgba(0,212,255,0.3); }
-  .sector-Biotech { background:rgba(167,139,250,0.12); color:#a78bfa; border:1px solid rgba(167,139,250,0.3); }
-  .sector-Defence { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.3); }
-  .sector-Tech    { background:rgba(96,165,250,0.12); color:#60a5fa; border:1px solid rgba(96,165,250,0.3); }
-  .sector-Crypto  { background:rgba(251,146,60,0.12); color:#fb923c; border:1px solid rgba(251,146,60,0.3); }
-  .sector-Energy  { background:rgba(250,204,21,0.12); color:#b45309; border:1px solid rgba(250,204,21,0.3); }
-  html[data-theme="dark"] .sector-Energy { color:#facc15; }
+  .stock-item {
+    padding: 8px 14px; cursor: pointer; font-size: 12px;
+    display: flex; align-items: center; gap: 8px; transition: background 0.12s;
+    border-bottom: 1px solid var(--border);
+  }
+  .stock-item:last-child { border-bottom: none; }
+  .stock-item:hover { background: var(--surface2); }
+  .stock-item.active { background: var(--surface2); border-left: 3px solid var(--accent); }
+  .stock-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; min-width: 52px; }
+  .stock-name { font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-  .info-box {
-    border:1px solid var(--border); background:var(--surface); padding:16px 20px;
-    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted); margin-bottom:20px;
+  .chart-main { display: flex; flex-direction: column; }
+  .chart-toolbar {
+    display: flex; align-items: center; gap: 8px; padding: 10px 14px;
+    background: var(--surface2); border-bottom: 1px solid var(--border); flex-wrap: wrap;
   }
-  .info-box a { color:var(--accent); text-decoration:none; }
-  .info-box a:hover { text-decoration:underline; }
+  .tf-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 10px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
+  }
+  .tf-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .tf-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 700; }
+  .chart-ticker-label { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: var(--text); margin-right: 8px; }
+  .view-toggle { margin-left: auto; display: flex; gap: 6px; }
+  .view-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 10px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
+  }
+  .view-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .view-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
-  .search-count-bar { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
-  #charts-search {
-    font-family:'IBM Plex Mono',monospace; font-size:12px; background:var(--surface);
-    border:1px solid var(--border); color:var(--text); padding:6px 14px; width:240px; outline:none;
-  }
-  #charts-search:focus { border-color:var(--accent); }
-  #charts-search::placeholder { color:var(--muted); }
-  .row-count { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
-  .row-count span { color:var(--accent); font-weight:700; }
+  #chart-container { flex: 1; min-height: 500px; }
+  .tv-no-embed { display: flex; align-items: center; justify-content: center; min-height: 500px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
 
-  .charts-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
-    gap:12px;
-  }
-  .chart-card {
-    border:1px solid var(--border); background:var(--surface);
-    transition:border-color 0.15s, background 0.15s; cursor:pointer;
-    text-decoration:none; color:inherit; display:block; padding:16px;
-  }
-  .chart-card:hover { border-color:var(--accent); background:var(--surface2); }
-  .chart-card.hidden { display:none; }
-  .chart-card-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
-  .chart-ticker { font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:16px; letter-spacing:1px; }
-  .chart-company { font-size:11px; color:var(--muted); margin-bottom:10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  .chart-return {
-    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:14px;
-    padding:4px 0; border-top:1px solid var(--border); margin-top:6px;
-  }
-  .ret-pos { color:var(--green); } .ret-neg { color:var(--red); } .ret-flat { color:var(--muted); }
-  .chart-link-note { font-family:'IBM Plex Mono',monospace; font-size:9px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin-top:4px; }
+  /* Grid view */
+  .grid-view { display: none; }
+  .grid-view.active { display: block; }
+  .single-view { display: flex; flex-direction: column; }
+  .single-view.hidden { display: none; }
 
-  .loading { padding:48px; text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--muted); font-size:13px; }
-  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
-  footer strong { color:var(--accent2); }
+  .sector-grid-section { margin-bottom: 32px; }
+  .sector-grid-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; font-weight: 700; padding: 10px 14px;
+    border-bottom: 1px solid var(--border); margin-bottom: 12px;
+  }
+  .grid-sector-bar { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 12px; }
+  .grid-cat-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 10px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
+  }
+  .grid-cat-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .grid-cat-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+  .chart-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; padding: 0 14px; }
+  .grid-cell { border: 1px solid var(--border); }
+  .grid-cell-label {
+    padding: 6px 10px; background: var(--surface2); border-bottom: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700;
+    display: flex; gap: 8px; align-items: center;
+  }
+  .grid-cell-name { font-size: 10px; color: var(--muted); font-weight: 400; }
+  .grid-chart-wrap { height: 200px; }
+
+  @media (max-width: 768px) {
+    .charts-layout { grid-template-columns: 1fr; }
+    .sidebar { max-height: 240px; border-right: none; border-bottom: 1px solid var(--border); }
+    .sidebar-toggle { display: block; }
+  }
 </style>
 </head>
 <body>
+
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
-<div class="header-inner">
+  <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub">Charts · <span id="version">v1.0</span></div>
+    <h1>All <span>Charts</span></h1>
+    <div class="header-sub">192 stocks · TradingView price history · 1W to 5Y</div>
   </div>
   <div class="sector-switcher">
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-    <a class="sector-card hub-card" href="../index.html"><div class="sector-card-top"><span class="sector-card-icon">⊞</span></div><div class="sector-card-name">Stock Hub</div></a>
-    <a class="sector-card" href="../rss.html"><div class="sector-card-top"><span class="sector-card-icon">📰</span></div><div class="sector-card-name">RSS</div></a>
-    <a class="sector-card active" href="index.html"><div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">All Sectors</div></a>
-    <a class="sector-card" href="../AI/index.html"><div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">AI Infrastructure</div></a>
-    <a class="sector-card" href="../Defence/index.html"><div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Defence</div></a>
-    <a class="sector-card" href="../Biotech/index.html"><div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Biotech</div></a>
-    <a class="sector-card" href="../Tech/index.html"><div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Technology</div></a>
-    <a class="sector-card" href="../Crypto/index.html"><div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Crypto</div></a>
-    <a class="sector-card" href="../Energy/index.html"><div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Energy</div></a>
-  </div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+<a class="sector-card hub-card" href="../index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+  <div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card" href="../rss.html">
+  <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+  <div class="sector-card-name">RSS</div>
+</a>
+<a class="sector-card active" href="index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/charts.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/charts.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/charts.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Tech/charts.html">
+  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/charts.html">
+  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/charts.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Energy</div>
+</a>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
+</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · charts via TradingView · for research only · always consult a financial adviser</div>
 </header>
 <nav>
-<div class="nav-inner">
-  <a class="nav-link" href="index.html">📊 Dashboard</a>
-  <a class="nav-link" href="metrics.html">📋 Metrics</a>
-  <a class="nav-link" href="news.html">📰 News</a>
-  <a class="nav-link" href="signals.html">🎯 Signals</a>
-  <a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
-  <a class="nav-link active" href="charts.html">📈 Charts</a>
-  <a class="nav-link" href="calculator.html">🧮 What-If</a>
-</div>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link active" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
 </nav>
-<div class="container">
-  <div class="filter-bar">
-    <button class="filter-btn active" data-sector="all" onclick="filterSector('all',this)">All</button>
-    <button class="filter-btn" data-sector="AI"      onclick="filterSector('AI',this)">AI</button>
-    <button class="filter-btn" data-sector="Biotech" onclick="filterSector('Biotech',this)">Biotech</button>
-    <button class="filter-btn" data-sector="Defence" onclick="filterSector('Defence',this)">Defence</button>
-    <button class="filter-btn" data-sector="Tech"    onclick="filterSector('Tech',this)">Tech</button>
-    <button class="filter-btn" data-sector="Crypto"  onclick="filterSector('Crypto',this)">Crypto</button>
-    <button class="filter-btn" data-sector="Energy"  onclick="filterSector('Energy',this)">Energy</button>
+
+<div class="container" style="padding-left:0;padding-right:0;max-width:100%;">
+
+  <div class="charts-layout" id="charts-layout">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span>192 Stocks</span>
+        <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+      </div>
+      <div id="sidebar-body"><div style="padding:20px;font-family:'IBM Plex Mono',monospace;color:var(--muted);font-size:12px;">Loading…</div></div>
+    </div>
+
+    <div class="single-view" id="single-view">
+      <div class="chart-toolbar">
+        <span class="chart-ticker-label" id="chart-ticker-label">—</span>
+        <button class="tf-btn" data-tf="1W" onclick="setTf('1W',this)">1W</button>
+        <button class="tf-btn active" data-tf="12M" onclick="setTf('12M',this)">1Y</button>
+        <button class="tf-btn" data-tf="60M" onclick="setTf('60M',this)">5Y</button>
+        <div class="view-toggle">
+          <button class="view-btn active" onclick="setView('single',this)">Single</button>
+          <button class="view-btn" onclick="setView('grid',this)">Grid</button>
+        </div>
+      </div>
+      <div id="chart-container"></div>
+    </div>
+
+    <div class="grid-view" id="grid-view">
+      <div class="chart-toolbar">
+        <button class="tf-btn" data-tf="1W" onclick="setGridTf('1W',this)">1W</button>
+        <button class="tf-btn active" data-tf="12M" onclick="setGridTf('12M',this)">1Y</button>
+        <button class="tf-btn" data-tf="60M" onclick="setGridTf('60M',this)">5Y</button>
+        <div class="view-toggle">
+          <button class="view-btn" onclick="setView('single',this)">Single</button>
+          <button class="view-btn active" onclick="setView('grid',this)">Grid</button>
+        </div>
+      </div>
+      <div id="grid-body"></div>
+    </div>
   </div>
-  <div class="info-box">
-    Click any card to open the 1-year Yahoo Finance chart. For sector-specific charts pages: <a href="../AI/charts.html">AI</a> · <a href="../Biotech/charts.html">Biotech</a> · <a href="../Defence/charts.html">Defence</a> · <a href="../Tech/charts.html">Tech</a> · <a href="../Crypto/charts.html">Crypto</a> · <a href="../Energy/charts.html">Energy</a>
-  </div>
-  <div class="search-count-bar">
-    <input id="charts-search" oninput="applyFilters()" placeholder="Search ticker or company…" type="text"/>
-    <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span></span>
-  </div>
-  <div class="charts-grid" id="charts-grid">
-    <div class="loading" style="grid-column:1/-1">Loading all sectors…</div>
-  </div>
+
 </div>
-<footer><strong>Charts</strong> open on Yahoo Finance. 1-year price history. <strong>Not financial advice.</strong></footer>
+
 <script>
-const SECTORS = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
-const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-let allStocks = [];
-let currentSector = 'all';
+  const TV_MAP = { 'RR.': 'LSE:RR.', '285A': 'TSE:285A' };
+  const NO_EMBED = new Set(['NYSE:P']);
+  const SECTOR_LABELS = {
+    ai: 'AI Infrastructure', biotech: 'Biotech', defence: 'Defence',
+    tech: 'Technology', crypto: 'Crypto', energy: 'Energy',
+  };
+  const SECTOR_COLORS_CSS = {
+    ai: 'var(--accent)', biotech: 'var(--green)', defence: 'var(--rose)',
+    tech: 'var(--indigo)', crypto: 'var(--gold)', energy: 'var(--amber)',
+  };
 
-async function loadData() {
-  const results = await Promise.all(SECTORS.map(async s => {
+  const tfMap = {
+    '1W':  { interval: '60', range: '5D'  },
+    '12M': { interval: 'W',  range: '12M' },
+    '60M': { interval: 'M',  range: '60M' },
+  };
+
+  let allStocks = [];
+  let activeTicker = null;
+  let activeTf = '12M';
+  let activeGridTf = '12M';
+  let activeView = 'single';
+  let tvWidget = null;
+  const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark';
+
+  function tvSymbol(ticker) {
+    if (TV_MAP[ticker]) return TV_MAP[ticker];
+    return ticker;
+  }
+
+  function setTf(tf, btn) {
+    activeTf = tf;
+    document.querySelectorAll('#single-view .tf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (activeTicker) loadChart(activeTicker);
+  }
+
+  function setGridTf(tf, btn) {
+    activeGridTf = tf;
+    document.querySelectorAll('#grid-view .tf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    buildGridView();
+  }
+
+  function setView(view, btn) {
+    activeView = view;
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.view-btn').forEach(b => { if (b.textContent.toLowerCase().includes(view)) b.classList.add('active'); });
+    if (view === 'single') {
+      document.getElementById('single-view').classList.remove('hidden');
+      document.getElementById('grid-view').classList.remove('active');
+    } else {
+      document.getElementById('single-view').classList.add('hidden');
+      document.getElementById('grid-view').classList.add('active');
+      buildGridView();
+    }
+  }
+
+  function loadChart(ticker) {
+    activeTicker = ticker;
+    document.querySelectorAll('.stock-item').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('[data-ticker="' + ticker + '"]').forEach(el => el.classList.add('active'));
+    document.getElementById('chart-ticker-label').textContent = ticker;
+    const container = document.getElementById('chart-container');
+    container.innerHTML = '';
+    const sym = tvSymbol(ticker);
+    if (NO_EMBED.has(sym)) { container.innerHTML = '<div class="tv-no-embed">Chart not available for ' + ticker + '</div>'; return; }
+    const { interval, range } = tfMap[activeTf] || tfMap['12M'];
+    const wrap = document.createElement('div');
+    wrap.id = 'tv-main-' + Date.now();
+    wrap.style.height = '520px';
+    container.appendChild(wrap);
+    if (typeof TradingView !== 'undefined') {
+      tvWidget = new TradingView.widget({
+        container_id: wrap.id,
+        symbol: sym,
+        interval,
+        range,
+        theme: isDark() ? 'dark' : 'light',
+        style: '1',
+        locale: 'en',
+        toolbar_bg: isDark() ? '#0d1117' : '#f8fafc',
+        enable_publishing: false,
+        hide_side_toolbar: false,
+        allow_symbol_change: true,
+        width: '100%',
+        height: 520,
+        autosize: false,
+      });
+    }
+  }
+
+  function buildGridView() {
+    const body = document.getElementById('grid-body');
+    body.innerHTML = '<div style="padding:20px;font-family:\'IBM Plex Mono\',monospace;color:var(--muted);font-size:12px;">Building grid…</div>';
+    const grouped = {};
+    allStocks.forEach(s => {
+      if (!grouped[s.sector]) grouped[s.sector] = [];
+      grouped[s.sector].push(s);
+    });
+    const order = ['ai', 'biotech', 'defence', 'tech', 'crypto', 'energy'];
+    let html = '';
+    order.forEach(key => {
+      if (!grouped[key]) return;
+      html += '<div class="sector-grid-section">';
+      html += '<div class="sector-grid-label" style="color:' + (SECTOR_COLORS_CSS[key] || 'var(--accent)') + '">' + (SECTOR_LABELS[key] || key) + '</div>';
+      html += '<div class="chart-grid">';
+      grouped[key].forEach(s => {
+        html += '<div class="grid-cell">';
+        html += '<div class="grid-cell-label"><span>' + s.ticker + '</span><span class="grid-cell-name">' + (s.company_name || '') + '</span></div>';
+        html += '<div class="grid-chart-wrap" id="grid-cell-' + s.ticker.replace(/\./g,'_') + '"></div>';
+        html += '</div>';
+      });
+      html += '</div></div>';
+    });
+    body.innerHTML = html;
+
+    let i = 0;
+    const { interval, range } = tfMap[activeGridTf] || tfMap['12M'];
+    order.forEach(key => {
+      (grouped[key] || []).forEach(s => {
+        const idx = i++;
+        setTimeout(() => {
+          const id = 'grid-cell-' + s.ticker.replace(/\./g,'_');
+          const el = document.getElementById(id);
+          if (!el) return;
+          const sym = tvSymbol(s.ticker);
+          if (NO_EMBED.has(sym)) { el.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;font-family:\'IBM Plex Mono\',monospace;font-size:10px;color:var(--muted);">No chart</div>'; return; }
+          if (typeof TradingView !== 'undefined') {
+            new TradingView.widget({
+              container_id: id,
+              symbol: sym,
+              interval,
+              range,
+              theme: isDark() ? 'dark' : 'light',
+              style: '1',
+              locale: 'en',
+              toolbar_bg: isDark() ? '#0d1117' : '#f8fafc',
+              enable_publishing: false,
+              hide_side_toolbar: true,
+              hide_top_toolbar: true,
+              allow_symbol_change: false,
+              width: '100%',
+              height: 200,
+              autosize: false,
+            });
+          }
+        }, idx * 150);
+      });
+    });
+  }
+
+  function buildSidebar(stocks) {
+    const body = document.getElementById('sidebar-body');
+    const grouped = {};
+    stocks.forEach(s => {
+      if (!grouped[s.sector]) grouped[s.sector] = [];
+      grouped[s.sector].push(s);
+    });
+    const order = ['ai', 'biotech', 'defence', 'tech', 'crypto', 'energy'];
+    let html = '';
+    order.forEach(key => {
+      if (!grouped[key]) return;
+      const color = SECTOR_COLORS_CSS[key] || 'var(--accent)';
+      html += '<div class="sector-group">';
+      html += '<div class="sector-group-label" style="color:' + color + '">' + (SECTOR_LABELS[key] || key) + '</div>';
+      grouped[key].forEach(s => {
+        html += '<div class="stock-item" data-ticker="' + s.ticker + '" onclick="loadChart(\'' + s.ticker.replace(/'/g,"\\'") + '\')">';
+        html += '<span class="stock-ticker">' + s.ticker + '</span>';
+        html += '<span class="stock-name">' + (s.company_name || '') + '</span>';
+        html += '</div>';
+      });
+      html += '</div>';
+    });
+    body.innerHTML = html;
+  }
+
+  function toggleSidebar() {
+    const sb = document.getElementById('sidebar');
+    sb.style.display = sb.style.display === 'none' ? '' : 'none';
+  }
+
+  const SECTORS = [
+    { key: 'ai',      path: '../AI/prices-data.js'      },
+    { key: 'biotech', path: '../Biotech/prices-data.js'  },
+    { key: 'defence', path: '../Defence/prices-data.js'  },
+    { key: 'tech',    path: '../Tech/prices-data.js'     },
+    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
+    { key: 'energy',  path: '../Energy/prices-data.js'   },
+  ];
+
+  Promise.all(SECTORS.map(async sd => {
     try {
-      const res = await fetch('../' + s + '/prices-data.js');
-      const text = await res.text();
-      const m = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
-      if (!m) return [];
-      const data = JSON.parse(m[1]);
-      return (data.stocks || []).map(st => ({ ...st, sector: s }));
-    } catch { return []; }
-  }));
-  allStocks = results.flat();
-  document.getElementById('total-count').textContent = allStocks.length;
-  renderGrid(allStocks);
-  applyFilters();
-}
-
-function retClass(v) {
-  const n = parseFloat(String(v||'').replace(/[^0-9.-]/g,''));
-  if (isNaN(n)) return 'ret-flat';
-  return n > 0 ? 'ret-pos' : n < 0 ? 'ret-neg' : 'ret-flat';
-}
-
-function yahooChartUrl(ticker) {
-  const sym = YAHOO_SUFFIX[ticker] || ticker;
-  return 'https://finance.yahoo.com/chart/' + sym + '/';
-}
-
-function renderGrid(stocks) {
-  const grid = document.getElementById('charts-grid');
-  grid.innerHTML = '';
-  stocks.forEach(s => {
-    const a = document.createElement('a');
-    a.className = 'chart-card';
-    a.href = yahooChartUrl(s.ticker);
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.dataset.sector = s.sector;
-    a.dataset.ticker = s.ticker;
-    a.dataset.company = (s.company_name || s.ticker).toLowerCase();
-    const retVal = s.return_1yr || s.change_ytd || '—';
-    a.innerHTML =
-      '<div class="chart-card-top">' +
-        '<span class="chart-ticker">' + s.ticker + '</span>' +
-        '<span class="sector-badge sector-' + s.sector + '">' + s.sector + '</span>' +
-      '</div>' +
-      '<div class="chart-company">' + (s.company_name || s.ticker) + '</div>' +
-      '<div class="chart-return ' + retClass(retVal) + '">1yr: ' + retVal + '</div>' +
-      '<div class="chart-link-note">→ Yahoo Finance chart</div>';
-    grid.appendChild(a);
+      const text = await fetch(sd.path).then(r => r.text());
+      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+      if (!match) return [];
+      const data = JSON.parse(match[1]);
+      return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
+    } catch(e) { return []; }
+  })).then(results => {
+    allStocks = results.flat();
+    buildSidebar(allStocks);
+    if (allStocks.length) loadChart(allStocks[0].ticker);
   });
-}
-
-function applyFilters() {
-  const query = (document.getElementById('charts-search').value || '').toLowerCase().trim();
-  const cards = document.querySelectorAll('.chart-card');
-  let visible = 0;
-  cards.forEach(card => {
-    const matchSector = currentSector === 'all' || card.dataset.sector === currentSector;
-    const matchSearch = !query || card.dataset.ticker.toLowerCase().includes(query) || card.dataset.company.includes(query);
-    if (matchSector && matchSearch) { card.classList.remove('hidden'); visible++; }
-    else card.classList.add('hidden');
-  });
-  document.getElementById('visible-count').textContent = visible;
-}
-
-function filterSector(sector, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentSector = sector;
-  applyFilters();
-}
-
-loadData();
 </script>
+
 </body>
 </html>

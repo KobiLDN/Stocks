@@ -1,263 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All Sectors heatmap — visualise performance across 192 stocks and coins across AI, Biotech, Defence, Tech, Crypto, and Energy." name="description"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="All sectors stock heatmap — treemap visualisation of price movements across 192 stocks by AI, Biotech, Defence, Tech, Crypto, and Energy.">
 <title>All Sectors — Heatmap</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="../shared.css" rel="stylesheet"/>
-<script defer src="../shared.js"></script>
 <style>
-  .toolbar {
-    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
-    margin-bottom:16px; padding:12px 16px;
-    background:var(--surface); border:1px solid var(--border);
-    position:sticky; top:36px; z-index:50;
-  }
-  .toolbar-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; color:var(--muted); text-transform:uppercase; white-space:nowrap; }
-  .metric-group { display:flex; gap:2px; }
+  .metric-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
   .metric-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
-    padding:6px 14px; background:transparent; color:var(--muted); border:1px solid var(--border); cursor:pointer; transition:all 0.2s;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 14px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .metric-btn:hover  { color:var(--accent); border-color:var(--accent); }
-  .metric-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
+  .metric-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .metric-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
 
-  .sector-group { display:flex; gap:2px; flex-wrap:wrap; }
-  .sector-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase;
-    padding:5px 10px; background:transparent; color:var(--muted); border:1px solid var(--border); cursor:pointer; transition:all 0.2s;
-  }
-  .sector-btn:hover  { color:var(--accent); border-color:var(--accent); }
-  .sector-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-  .sector-btn[data-s="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
-  .sector-btn[data-s="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
-  .sector-btn[data-s="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
-  .sector-btn[data-s="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
-  .sector-btn[data-s="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
-  .sector-btn[data-s="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
-
-  .legend { display:flex; align-items:center; gap:8px; margin-left:auto; }
-  .leg-label { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); white-space:nowrap; min-width:28px; }
-  .leg-label.r { text-align:right; }
-  .leg-bar { width:90px; height:8px; background:linear-gradient(90deg,var(--red),var(--surface2),var(--green)); border:1px solid var(--border); flex-shrink:0; }
-
-  .toolbar-ts { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); white-space:nowrap; }
-  .toolbar-ts span { color:var(--accent); }
-
-  #heatmap-wrap { width:100%; overflow:hidden; }
-  #heatmap-wrap svg { display:block; width:100%; height:auto; }
-
-  .tooltip {
-    position:fixed; pointer-events:none; background:var(--surface2); border:1px solid var(--accent);
-    border-radius:4px; padding:10px 14px; font-family:'IBM Plex Mono',monospace; font-size:12px;
-    color:var(--text); z-index:200; display:none; line-height:1.6; min-width:140px;
-    box-shadow:0 4px 20px rgba(0,0,0,0.4);
+  .heatmap-section { margin-bottom: 40px; }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
   }
 
-  .loading { padding:48px; text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--muted); font-size:13px; }
-  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
-  footer strong { color:var(--accent2); }
+  .heatmap-wrap { width: 100%; overflow: hidden; }
+  .heatmap-wrap svg { display: block; width: 100%; }
+
+  .sector-heatmaps { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; margin-bottom: 40px; }
+  .sector-hm-block { }
+  .sector-hm-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; font-weight: 700; margin-bottom: 8px;
+  }
+
+  .hm-legend { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+  .hm-legend-item { display: flex; align-items: center; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
+  .hm-legend-swatch { width: 12px; height: 12px; }
+
+  #hm-tooltip {
+    position: fixed; z-index: 999; pointer-events: none;
+    background: var(--surface2); border: 1px solid var(--accent);
+    padding: 12px 16px; opacity: 0; transition: opacity 0.15s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5); min-width: 180px;
+  }
+  #hm-tooltip.visible { opacity: 1; }
+  .hm-tip-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+  .hm-tip-name { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .hm-tip-row { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 3px; }
+  .hm-tip-row span { color: var(--text); font-weight: 700; }
+  .hm-tip-pos { color: var(--green) !important; }
+  .hm-tip-neg { color: var(--red) !important; }
 </style>
 </head>
 <body>
+
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
-<div class="header-inner">
+  <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub">Heatmap · <span id="version">v1.0</span></div>
+    <h1>All <span>Heatmap</span></h1>
+    <div class="header-sub">192 stocks · tile size = % move · green = up · red = down</div>
   </div>
   <div class="sector-switcher">
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-    <a class="sector-card hub-card" href="../index.html"><div class="sector-card-top"><span class="sector-card-icon">⊞</span></div><div class="sector-card-name">Stock Hub</div></a>
-    <a class="sector-card" href="../rss.html"><div class="sector-card-top"><span class="sector-card-icon">📰</span></div><div class="sector-card-name">RSS</div></a>
-    <a class="sector-card active" href="index.html"><div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">All Sectors</div></a>
-    <a class="sector-card" href="../AI/index.html"><div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">AI Infrastructure</div></a>
-    <a class="sector-card" href="../Defence/index.html"><div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Defence</div></a>
-    <a class="sector-card" href="../Biotech/index.html"><div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Biotech</div></a>
-    <a class="sector-card" href="../Tech/index.html"><div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Technology</div></a>
-    <a class="sector-card" href="../Crypto/index.html"><div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Crypto</div></a>
-    <a class="sector-card" href="../Energy/index.html"><div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Energy</div></a>
-  </div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+<a class="sector-card hub-card" href="../index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+  <div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card" href="../rss.html">
+  <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+  <div class="sector-card-name">RSS</div>
+</a>
+<a class="sector-card active" href="index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/heatmap.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/heatmap.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/heatmap.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Tech/heatmap.html">
+  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/heatmap.html">
+  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/heatmap.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Energy</div>
+</a>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
+</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · data from Yahoo Finance (yfinance), may be delayed · for research only · always consult a financial adviser</div>
 </header>
 <nav>
-<div class="nav-inner">
-  <a class="nav-link" href="index.html">📊 Dashboard</a>
-  <a class="nav-link" href="metrics.html">📋 Metrics</a>
-  <a class="nav-link" href="news.html">📰 News</a>
-  <a class="nav-link" href="signals.html">🎯 Signals</a>
-  <a class="nav-link active" href="heatmap.html">🔥 Heatmap</a>
-  <a class="nav-link" href="charts.html">📈 Charts</a>
-  <a class="nav-link" href="calculator.html">🧮 What-If</a>
-</div>
-</nav>
-<div class="container">
-  <div class="toolbar">
-    <span class="toolbar-label">Metric</span>
-    <div class="metric-group">
-      <button class="metric-btn" data-m="change_1d"   onclick="setMetric('change_1d',this)">1D</button>
-      <button class="metric-btn" data-m="change_1w"   onclick="setMetric('change_1w',this)">1W</button>
-      <button class="metric-btn" data-m="change_1m"   onclick="setMetric('change_1m',this)">1M</button>
-      <button class="metric-btn active" data-m="change_ytd" onclick="setMetric('change_ytd',this)">YTD</button>
-      <button class="metric-btn" data-m="return_1yr"  onclick="setMetric('return_1yr',this)">1Y</button>
-    </div>
-    <span class="toolbar-label" style="margin-left:8px">Sector</span>
-    <div class="sector-group">
-      <button class="sector-btn active" data-s="all" onclick="setSector('all',this)">All</button>
-      <button class="sector-btn" data-s="AI"      onclick="setSector('AI',this)">AI</button>
-      <button class="sector-btn" data-s="Biotech" onclick="setSector('Biotech',this)">Biotech</button>
-      <button class="sector-btn" data-s="Defence" onclick="setSector('Defence',this)">Defence</button>
-      <button class="sector-btn" data-s="Tech"    onclick="setSector('Tech',this)">Tech</button>
-      <button class="sector-btn" data-s="Crypto"  onclick="setSector('Crypto',this)">Crypto</button>
-      <button class="sector-btn" data-s="Energy"  onclick="setSector('Energy',this)">Energy</button>
-    </div>
-    <div class="legend">
-      <span class="leg-label r">-50%</span>
-      <div class="leg-bar"></div>
-      <span class="leg-label">+50%</span>
-    </div>
-    <span class="toolbar-ts">Updated <span id="ts-label">—</span></span>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link active" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
-  <div id="heatmap-wrap"><div class="loading">Loading heatmap…</div></div>
+</nav>
+
+<div class="container">
+
+  <div class="metric-bar" id="metric-bar">
+    <button class="metric-btn" data-metric="1d" onclick="setMetric('1d',this)">1 Day</button>
+    <button class="metric-btn" data-metric="1w" onclick="setMetric('1w',this)">1 Week</button>
+    <button class="metric-btn" data-metric="1m" onclick="setMetric('1m',this)">1 Month</button>
+    <button class="metric-btn active" data-metric="ytd" onclick="setMetric('ytd',this)">YTD</button>
+    <button class="metric-btn" data-metric="1y" onclick="setMetric('1y',this)">1 Year</button>
+  </div>
+
+  <div class="hm-legend">
+    <div class="hm-legend-item"><div class="hm-legend-swatch" style="background:#16a34a"></div> Positive</div>
+    <div class="hm-legend-item"><div class="hm-legend-swatch" style="background:#dc2626"></div> Negative</div>
+    <div class="hm-legend-item"><div class="hm-legend-swatch" style="background:#374151"></div> Flat / No data</div>
+    <div class="hm-legend-item" style="margin-left:auto;font-size:11px;">Tile size = |% move|</div>
+  </div>
+
+  <div class="heatmap-section">
+    <div class="section-label">All 192 Stocks</div>
+    <div class="heatmap-wrap" id="hm-all"></div>
+  </div>
+
+  <div class="heatmap-section">
+    <div class="section-label">By Sector</div>
+    <div class="sector-heatmaps" id="hm-sectors"></div>
+  </div>
+
 </div>
-<div class="tooltip" id="tooltip"></div>
-<footer><strong>Heatmap:</strong> tile size = market cap (or equal weight if unavailable). Colour = return for selected period. Hover for details. <strong>Not financial advice.</strong></footer>
+
+<div id="hm-tooltip">
+  <div class="hm-tip-ticker" id="tip-ticker"></div>
+  <div class="hm-tip-name"   id="tip-name"></div>
+  <div class="hm-tip-row">1D: <span id="tip-1d"></span></div>
+  <div class="hm-tip-row">1W: <span id="tip-1w"></span></div>
+  <div class="hm-tip-row">1M: <span id="tip-1m"></span></div>
+  <div class="hm-tip-row">YTD: <span id="tip-ytd"></span></div>
+  <div class="hm-tip-row">1Y: <span id="tip-1y"></span></div>
+  <div class="hm-tip-row" id="tip-mc-row">Mkt Cap: <span id="tip-mc"></span></div>
+</div>
+
 <script>
-const SECTORS_LIST = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
-const SECTOR_COLORS = { AI:'#00d4ff', Biotech:'#a78bfa', Defence:'#f87171', Tech:'#60a5fa', Crypto:'#fb923c', Energy:'#facc15' };
+  const METRICS_CFG = {
+    '1d':  { field: 'change_1d',   label: '1D',  threshold: 2   },
+    '1w':  { field: 'change_1w',   label: '1W',  threshold: 4   },
+    '1m':  { field: 'change_1m',   label: '1M',  threshold: 6   },
+    'ytd': { field: 'change_ytd',  label: 'YTD', threshold: 15  },
+    '1y':  { field: 'change_1yr',  label: '1Y',  threshold: 30  },
+  };
 
-let allStocks = [];
-let currentMetric = 'change_ytd';
-let currentSector = 'all';
+  const SECTOR_COLORS = {
+    ai:      { pos: '#0e7490', neg: '#991b1b' },
+    biotech: { pos: '#065f46', neg: '#7f1d1d' },
+    defence: { pos: '#be123c', neg: '#7c3aed' },
+    tech:    { pos: '#4338ca', neg: '#9a3412' },
+    crypto:  { pos: '#92400e', neg: '#1e3a5f' },
+    energy:  { pos: '#78350f', neg: '#1c3d5a' },
+  };
 
-async function loadData() {
-  const responses = await Promise.all(SECTORS_LIST.map(s => fetch('../' + s + '/prices-data.js')));
-  const results = await Promise.all(responses.map(async (res, i) => {
-    const text = await res.text();
-    const m = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
-    if (!m) return [];
-    const data = JSON.parse(m[1]);
-    return (data.stocks || []).map(st => ({ ...st, sector: SECTORS_LIST[i], updated: data.updated }));
-  }));
-  allStocks = results.flat();
-  const latest = allStocks.map(s => s.updated).filter(Boolean).sort().pop() || '';
-  document.getElementById('ts-label').textContent = latest;
-  drawHeatmap();
-}
+  const SECTOR_LABELS = {
+    ai: 'AI Infrastructure', biotech: 'Biotech', defence: 'Defence',
+    tech: 'Technology', crypto: 'Crypto', energy: 'Energy',
+  };
 
-function parseVal(v) {
-  if (v == null) return null;
-  const n = parseFloat(String(v).replace(/[^0-9.-]/g,''));
-  return isNaN(n) ? null : n;
-}
+  let activeMetric = localStorage.getItem('heatmap-metric') || 'ytd';
+  let allStocks = [];
 
-function drawHeatmap() {
-  const wrap = document.getElementById('heatmap-wrap');
-  const stocks = currentSector === 'all' ? allStocks : allStocks.filter(s => s.sector === currentSector);
-  if (!stocks.length) { wrap.innerHTML = '<div class="loading">No data.</div>'; return; }
+  function setMetric(m, btn) {
+    activeMetric = m;
+    localStorage.setItem('heatmap-metric', m);
+    document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderAll();
+  }
 
-  const W = wrap.clientWidth || 1200;
-  const nodes = stocks.map(s => ({
-    id: s.ticker,
-    sector: s.sector,
-    name: s.company_name || s.ticker,
-    val: parseVal(s[currentMetric]),
-    cap: parseFloat(s.market_cap_gbp_b) || 1,
-  })).filter(n => n.val !== null);
+  function fmtPct(v) {
+    if (v === null || v === undefined || isNaN(v)) return '—';
+    return (v >= 0 ? '+' : '') + parseFloat(v).toFixed(2) + '%';
+  }
+  function fmtMC(v) {
+    if (!v) return '—';
+    if (v >= 1) return '£' + v.toFixed(1) + 'B';
+    return '£' + (v * 1000).toFixed(0) + 'M';
+  }
 
-  const colorScale = d3.scaleLinear()
-    .domain([-50, 0, 50])
-    .range(['#dc2626', '#1e293b', '#16a34a'])
-    .clamp(true);
+  function tileColor(pct, sector) {
+    if (pct === null || isNaN(pct)) return '#374151';
+    return pct >= 0 ? '#16a34a' : '#dc2626';
+  }
 
-  // Treemap
-  const totalCap = d3.sum(nodes, n => n.cap);
-  const root = d3.hierarchy({ children: nodes }).sum(d => d.cap || 1);
-  const H = Math.max(400, Math.round(W * 0.55));
-  d3.treemap().size([W, H]).padding(2).round(true)(root);
+  function drawTreemap(stocks, containerId, height) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = '';
+    if (!stocks.length) { container.innerHTML = '<div style="padding:20px;font-family:IBM Plex Mono,monospace;color:var(--muted);font-size:12px;">No data</div>'; return; }
 
-  const svg = d3.create('svg').attr('viewBox', '0 0 ' + W + ' ' + H).attr('width', W).attr('height', H);
-  const tooltip = document.getElementById('tooltip');
+    const cfg = METRICS_CFG[activeMetric];
+    const width = container.offsetWidth || 800;
+    const h = height || Math.max(200, Math.round(width * 0.38));
 
-  svg.selectAll('g')
-    .data(root.leaves())
-    .join('g')
-    .attr('transform', d => 'translate(' + d.x0 + ',' + d.y0 + ')')
-    .call(g => {
-      g.append('rect')
-        .attr('width', d => Math.max(0, d.x1 - d.x0))
-        .attr('height', d => Math.max(0, d.y1 - d.y0))
-        .attr('fill', d => colorScale(d.data.val))
-        .attr('stroke', d => SECTOR_COLORS[d.data.sector] || 'transparent')
-        .attr('stroke-width', 1)
-        .style('cursor', 'pointer')
-        .on('mousemove', (event, d) => {
-          const sign = d.data.val >= 0 ? '+' : '';
-          tooltip.style.display = 'block';
-          tooltip.style.left = (event.clientX + 14) + 'px';
-          tooltip.style.top = (event.clientY - 10) + 'px';
-          tooltip.innerHTML =
-            '<div style="font-weight:700;font-size:14px;margin-bottom:4px">' + d.data.id + '</div>' +
-            '<div style="color:var(--muted);font-size:10px;margin-bottom:6px">' + d.data.name + '</div>' +
-            '<div style="color:var(--muted);font-size:10px">' + d.data.sector + '</div>' +
-            '<div style="font-size:13px;font-weight:700;margin-top:4px;color:' + (d.data.val >= 0 ? 'var(--green)' : 'var(--red)') + '">' + sign + d.data.val.toFixed(2) + '%</div>';
-        })
-        .on('mouseleave', () => { tooltip.style.display = 'none'; });
-
-      g.append('text')
-        .attr('x', d => (d.x1 - d.x0) / 2)
-        .attr('y', d => (d.y1 - d.y0) / 2 - 4)
-        .attr('text-anchor', 'middle')
-        .attr('dominant-baseline', 'middle')
-        .attr('font-family', "'IBM Plex Mono', monospace")
-        .attr('font-weight', '700')
-        .attr('fill', '#fff')
-        .attr('pointer-events', 'none')
-        .style('font-size', d => Math.min(14, Math.max(8, (d.x1-d.x0)/4)) + 'px')
-        .text(d => (d.x1 - d.x0) > 30 && (d.y1 - d.y0) > 20 ? d.data.id : '');
-
-      g.append('text')
-        .attr('x', d => (d.x1 - d.x0) / 2)
-        .attr('y', d => (d.y1 - d.y0) / 2 + 14)
-        .attr('text-anchor', 'middle')
-        .attr('dominant-baseline', 'middle')
-        .attr('font-family', "'IBM Plex Mono', monospace")
-        .attr('fill', 'rgba(255,255,255,0.75)')
-        .attr('pointer-events', 'none')
-        .style('font-size', d => Math.min(11, Math.max(7, (d.x1-d.x0)/5)) + 'px')
-        .text(d => {
-          if ((d.x1-d.x0) < 40 || (d.y1-d.y0) < 32) return '';
-          const sign = d.data.val >= 0 ? '+' : '';
-          return sign + d.data.val.toFixed(1) + '%';
-        });
+    const data = stocks.map(s => {
+      const val = parseFloat(s[cfg.field]);
+      const pct = isNaN(val) ? null : val;
+      return { ...s, pct, size: Math.max(0.05, Math.abs(pct || 0.05)) };
     });
 
-  wrap.innerHTML = '';
-  wrap.appendChild(svg.node());
-}
+    const root = d3.hierarchy({ children: data }).sum(d => d.size || 0.05);
+    d3.treemap().size([width, h]).padding(1)(root);
 
-function setMetric(m, btn) {
-  document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentMetric = m;
-  drawHeatmap();
-}
-function setSector(s, btn) {
-  document.querySelectorAll('.sector-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentSector = s;
-  drawHeatmap();
-}
+    const svg = d3.select(container).append('svg')
+      .attr('viewBox', '0 0 ' + width + ' ' + h)
+      .attr('width', width).attr('height', h);
 
-loadData();
-window.addEventListener('resize', () => { if (allStocks.length) drawHeatmap(); });
+    const tip = document.getElementById('hm-tooltip');
+
+    const cell = svg.selectAll('g').data(root.leaves()).enter().append('g')
+      .attr('transform', d => 'translate(' + d.x0 + ',' + d.y0 + ')')
+      .style('cursor', 'pointer')
+      .on('mousemove', function(event, d) {
+        document.getElementById('tip-ticker').textContent = d.data.ticker;
+        document.getElementById('tip-name').textContent   = d.data.company_name || '';
+        function tipPct(field) {
+          const v = parseFloat(d.data[field]);
+          if (isNaN(v)) return '—';
+          const el = document.getElementById('tip-' + field.replace('change_', '').replace('_', ''));
+          const fld = field.replace('change_', '').replace('_', '');
+          const span = document.getElementById('tip-' + fld);
+          return (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+        }
+        document.getElementById('tip-1d').textContent  = fmtPct(d.data.change_1d);
+        document.getElementById('tip-1w').textContent  = fmtPct(d.data.change_1w);
+        document.getElementById('tip-1m').textContent  = fmtPct(d.data.change_1m);
+        document.getElementById('tip-ytd').textContent = fmtPct(d.data.change_ytd);
+        document.getElementById('tip-1y').textContent  = fmtPct(d.data.change_1yr);
+        document.getElementById('tip-mc').textContent  = fmtMC(d.data.market_cap_gbp_b);
+        const tw = 200, th = 180;
+        let left = event.clientX + 14, top = event.clientY - th / 2;
+        if (left + tw > window.innerWidth - 10) left = event.clientX - tw - 14;
+        top = Math.max(10, Math.min(top, window.innerHeight - th - 10));
+        tip.style.left = left + 'px'; tip.style.top = top + 'px';
+        tip.classList.add('visible');
+      })
+      .on('mouseleave', () => tip.classList.remove('visible'));
+
+    cell.append('clipPath').attr('id', (d, i) => 'clip-' + containerId + i)
+      .append('rect').attr('width', d => Math.max(0, d.x1 - d.x0)).attr('height', d => Math.max(0, d.y1 - d.y0));
+
+    cell.append('rect')
+      .attr('width',  d => Math.max(0, d.x1 - d.x0))
+      .attr('height', d => Math.max(0, d.y1 - d.y0))
+      .attr('fill', d => tileColor(d.data.pct, d.data.sector))
+      .on('mouseover', function() { d3.select(this).attr('filter', 'brightness(1.25)'); })
+      .on('mouseout',  function() { d3.select(this).attr('filter', null); });
+
+    cell.filter(d => (d.x1 - d.x0) > 30 && (d.y1 - d.y0) > 18)
+      .append('text')
+      .attr('clip-path', (d, i) => 'url(#clip-' + containerId + i + ')')
+      .attr('x', 4).attr('y', 13)
+      .attr('font-family', 'IBM Plex Mono, monospace').attr('font-size', 10).attr('font-weight', '700')
+      .attr('fill', 'rgba(255,255,255,0.9)')
+      .text(d => d.data.ticker);
+
+    cell.filter(d => (d.x1 - d.x0) > 36 && (d.y1 - d.y0) > 30)
+      .append('text')
+      .attr('clip-path', (d, i) => 'url(#clip-' + containerId + i + ')')
+      .attr('x', 4).attr('y', 26)
+      .attr('font-family', 'IBM Plex Mono, monospace').attr('font-size', 9)
+      .attr('fill', 'rgba(255,255,255,0.7)')
+      .text(d => d.data.pct !== null ? fmtPct(d.data.pct) : '');
+  }
+
+  function renderAll() {
+    drawTreemap(allStocks, 'hm-all', null);
+    renderSectors();
+  }
+
+  function renderSectors() {
+    const sectorContainer = document.getElementById('hm-sectors');
+    sectorContainer.innerHTML = '';
+    const grouped = {};
+    allStocks.forEach(s => {
+      if (!grouped[s.sector]) grouped[s.sector] = [];
+      grouped[s.sector].push(s);
+    });
+    const order = ['ai', 'biotech', 'defence', 'tech', 'crypto', 'energy'];
+    order.forEach(key => {
+      if (!grouped[key] || !grouped[key].length) return;
+      const block = document.createElement('div');
+      block.className = 'sector-hm-block';
+      const label = document.createElement('div');
+      label.className = 'sector-hm-label';
+      label.style.color = 'var(--' + (key === 'ai' ? 'accent' : key === 'biotech' ? 'green' : key === 'defence' ? 'rose' : key === 'tech' ? 'indigo' : key === 'crypto' ? 'gold' : 'amber') + ')';
+      label.textContent = SECTOR_LABELS[key] || key;
+      block.appendChild(label);
+      const wrap = document.createElement('div');
+      wrap.className = 'heatmap-wrap';
+      wrap.id = 'hm-sector-' + key;
+      block.appendChild(wrap);
+      sectorContainer.appendChild(block);
+      drawTreemap(grouped[key], 'hm-sector-' + key, 220);
+    });
+  }
+
+  const SECTOR_PATHS = [
+    { key: 'ai',      path: '../AI/prices-data.js'      },
+    { key: 'biotech', path: '../Biotech/prices-data.js'  },
+    { key: 'defence', path: '../Defence/prices-data.js'  },
+    { key: 'tech',    path: '../Tech/prices-data.js'     },
+    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
+    { key: 'energy',  path: '../Energy/prices-data.js'   },
+  ];
+
+  Promise.all(SECTOR_PATHS.map(async sd => {
+    try {
+      const text = await fetch(sd.path).then(r => r.text());
+      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+      if (!match) return [];
+      const data = JSON.parse(match[1]);
+      return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
+    } catch(e) { return []; }
+  })).then(results => {
+    allStocks = results.flat();
+    document.querySelector('[data-metric="' + activeMetric + '"]')?.classList.add('active');
+    document.querySelectorAll('.metric-btn:not([data-metric="' + activeMetric + '"])').forEach(b => b.classList.remove('active'));
+    renderAll();
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => renderAll(), 280);
+  });
+
+  window._onThemeChange = () => renderAll();
 </script>
+
 </body>
 </html>

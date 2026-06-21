@@ -1,263 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All Sectors AI signals — combined top picks across AI, Biotech, Defence, Tech, Crypto, and Energy ranked by momentum, fundamentals, and sentiment." name="description"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI stock picks across all 6 sectors — momentum screener, top picks and previous signals for 192 stocks.">
 <title>All Sectors — Signals</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
-<link href="../shared.css" rel="stylesheet"/>
-<script defer src="../shared.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
 <style>
-  .filter-bar { display:flex; gap:6px; margin-bottom:16px; flex-wrap:wrap; }
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
   .filter-btn {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px;
-    padding:5px 12px; border:1px solid var(--border); background:transparent;
-    color:var(--muted); cursor:pointer; transition:all 0.15s; text-transform:uppercase;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .filter-btn:hover { color:var(--accent); border-color:var(--accent); }
-  .filter-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
-  .filter-btn[data-sector="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
-  .filter-btn[data-sector="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
-  .filter-btn[data-sector="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
-  .filter-btn[data-sector="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
-  .filter-btn[data-sector="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
-  .filter-btn[data-sector="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
+  .filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
 
-  .sector-badge {
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:9px;
-    letter-spacing:1px; padding:2px 7px; border-radius:2px; text-transform:uppercase; font-weight:700;
+  .sector-block { margin-bottom: 48px; }
+  .sector-heading {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
   }
-  .sector-AI      { background:rgba(0,212,255,0.12); color:#00d4ff; border:1px solid rgba(0,212,255,0.3); }
-  .sector-Biotech { background:rgba(167,139,250,0.12); color:#a78bfa; border:1px solid rgba(167,139,250,0.3); }
-  .sector-Defence { background:rgba(248,113,113,0.12); color:#f87171; border:1px solid rgba(248,113,113,0.3); }
-  .sector-Tech    { background:rgba(96,165,250,0.12); color:#60a5fa; border:1px solid rgba(96,165,250,0.3); }
-  .sector-Crypto  { background:rgba(251,146,60,0.12); color:#fb923c; border:1px solid rgba(251,146,60,0.3); }
-  .sector-Energy  { background:rgba(250,204,21,0.12); color:#b45309; border:1px solid rgba(250,204,21,0.3); }
-  html[data-theme="dark"] .sector-Energy { color:#facc15; }
+  .sector-heading-icon { font-size: 22px; }
+  .sector-heading h2 { font-size: 18px; font-weight: 800; margin: 0; }
+  .sector-heading .sector-meta { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
 
-  .refresh-banner {
-    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;
-    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);
-    border:1px solid var(--border); background:var(--surface); padding:10px 16px; margin-bottom:20px;
+  .how-toggle {
+    display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px;
+    color: var(--muted); margin-bottom: 20px; transition: color 0.15s;
   }
-  .refresh-banner .ts { color:var(--accent); }
+  .how-toggle:hover { color: var(--accent); }
+  .how-toggle .toggle-icon { font-size: 12px; transition: transform 0.2s; }
+  .how-toggle.open .toggle-icon { transform: rotate(90deg); }
+  .how-box {
+    display: none; background: var(--surface); border: 1px solid var(--border);
+    padding: 16px 20px; margin-bottom: 20px;
+    font-size: 13px; color: var(--muted); line-height: 1.7;
+  }
+  .how-box.open { display: block; }
+  .how-box strong { color: var(--text); }
 
-  .signals-feed { display:flex; flex-direction:column; gap:12px; }
+  .picks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-bottom: 24px; }
 
   .signal-card {
-    display:flex; align-items:stretch; border:1px solid var(--border);
-    background:var(--surface); transition:border-color 0.15s, background 0.15s;
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 16px 18px; display: flex; align-items: flex-start; gap: 14px;
+    transition: border-color 0.15s;
   }
-  .signal-card:hover { border-color:var(--accent); background:var(--surface2); }
-  .signal-card.hidden { display:none; }
+  .signal-card:hover { border-color: var(--accent); }
 
-  .rank-rail {
-    width:64px; flex-shrink:0; display:flex; flex-direction:column;
-    align-items:center; justify-content:center; border-right:1px solid var(--border);
-    padding:16px 8px; gap:6px;
+  .rank-num { font-size: 28px; font-weight: 800; color: var(--accent); font-family: 'IBM Plex Mono', monospace; min-width: 36px; }
+
+  .signal-body { flex: 1; }
+  .signal-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 700; }
+  .signal-name { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  .signal-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; align-items: center; }
+  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .sector-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .sector-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+  .sector-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+  .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
+  .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
+  .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+
+  .signal-pill { margin-left: auto; }
+  .rank-delta { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 2px; }
+  .delta-new  { background: rgba(0,212,255,0.15); color: var(--accent); border: 1px solid rgba(0,212,255,0.3); }
+  .delta-up   { background: rgba(0,230,118,0.15); color: var(--green);  border: 1px solid rgba(0,230,118,0.3); }
+  .delta-down { background: rgba(255,68,68,0.15); color: var(--red);    border: 1px solid rgba(255,68,68,0.3); }
+  .delta-same { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+
+  .signal-score { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .signal-score span { color: var(--text); font-weight: 700; }
+
+  .momentum-section { margin-top: 10px; }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
   }
-  .rank-num {
-    font-family:'IBM Plex Mono',monospace; font-size:22px; font-weight:700;
-    color:var(--muted); line-height:1;
+  .momentum-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+  .momentum-card {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 12px 14px; transition: border-color 0.15s;
   }
-  .global-rank { font-family:'IBM Plex Mono',monospace; font-size:9px; color:var(--muted); letter-spacing:1px; }
+  .momentum-card:hover { border-color: var(--accent); }
+  .momentum-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
+  .momentum-name { font-size: 11px; color: var(--muted); }
+  .momentum-badges { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .momentum-score { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .momentum-score span { color: var(--green); font-weight: 700; }
 
-  .card-body { flex:1; padding:16px 20px; min-width:0; }
-  .card-top { display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+  .updated-row { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 24px; }
+  .updated-row span { color: var(--text); }
 
-  .sig-ticker {
-    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:20px;
-    letter-spacing:1.5px;
-  }
-  .signal-pill {
-    font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:1.5px;
-    padding:3px 9px; border-radius:2px; text-transform:uppercase; font-weight:700;
-  }
-  .sig-strong_buy  { background:rgba(22,163,74,0.15); color:#16a34a; border:1px solid rgba(22,163,74,0.35); }
-  .sig-buy         { background:rgba(0,212,255,0.1); color:var(--accent); border:1px solid rgba(0,212,255,0.3); }
-  .sig-hold        { background:rgba(148,163,184,0.1); color:var(--muted); border:1px solid rgba(148,163,184,0.25); }
-  .sig-sell        { background:rgba(220,38,38,0.1); color:var(--red); border:1px solid rgba(220,38,38,0.25); }
-  .sig-strong_sell { background:rgba(220,38,38,0.15); color:var(--red); border:1px solid rgba(220,38,38,0.3); }
-
-  .confidence-bar-wrap { display:flex; align-items:center; gap:8px; margin-top:2px; }
-  .confidence-label { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); white-space:nowrap; }
-  .confidence-bar { flex:1; height:3px; background:var(--border); border-radius:2px; max-width:120px; }
-  .confidence-fill { height:100%; border-radius:2px; background:linear-gradient(90deg,var(--accent),var(--green)); }
-
-  .rationale { font-size:13px; line-height:1.6; color:var(--text); margin:10px 0 12px; }
-
-  .drivers { display:flex; flex-wrap:wrap; gap:6px; }
-  .driver-pill {
-    font-family:'IBM Plex Mono',monospace; font-size:10px; padding:3px 9px;
-    border:1px solid var(--border); color:var(--muted); border-radius:2px;
-  }
-
-  .search-count-bar { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
-  #sig-search {
-    font-family:'IBM Plex Mono',monospace; font-size:12px; background:var(--surface);
-    border:1px solid var(--border); color:var(--text); padding:6px 14px; width:240px; outline:none;
-  }
-  #sig-search:focus { border-color:var(--accent); }
-  #sig-search::placeholder { color:var(--muted); }
-  .row-count { font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--muted); }
-  .row-count span { color:var(--accent); font-weight:700; }
-  .loading { padding:48px; text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--muted); font-size:13px; }
-  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
-  footer strong { color:var(--accent2); }
+  .empty-block { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); padding: 20px 0; }
 </style>
 </head>
 <body>
+
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
-<div class="header-inner">
+  <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub">AI Signals · <span id="version">v1.0</span></div>
+    <h1>All <span>Signals</span></h1>
+    <div class="header-sub">AI top picks across 6 sectors · momentum screener · updated 3× daily</div>
   </div>
   <div class="sector-switcher">
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-    <a class="sector-card hub-card" href="../index.html"><div class="sector-card-top"><span class="sector-card-icon">⊞</span></div><div class="sector-card-name">Stock Hub</div></a>
-    <a class="sector-card" href="../rss.html"><div class="sector-card-top"><span class="sector-card-icon">📰</span></div><div class="sector-card-name">RSS</div></a>
-    <a class="sector-card active" href="index.html"><div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">All Sectors</div></a>
-    <a class="sector-card" href="../AI/index.html"><div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">AI Infrastructure</div></a>
-    <a class="sector-card" href="../Defence/index.html"><div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Defence</div></a>
-    <a class="sector-card" href="../Biotech/index.html"><div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Biotech</div></a>
-    <a class="sector-card" href="../Tech/index.html"><div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Technology</div></a>
-    <a class="sector-card" href="../Crypto/index.html"><div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Crypto</div></a>
-    <a class="sector-card" href="../Energy/index.html"><div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Energy</div></a>
-  </div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+<a class="sector-card hub-card" href="../index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+  <div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card" href="../rss.html">
+  <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+  <div class="sector-card-name">RSS</div>
+</a>
+<a class="sector-card active" href="index.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/signals.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">AI Infrastructure</div>
+</a>
+<a class="sector-card" href="../Defence/signals.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Biotech/signals.html">
+  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Tech/signals.html">
+  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/signals.html">
+  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/signals.html">
+  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+  <div class="sector-card-name">Energy</div>
+</a>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
+</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · AI model output only · for research only · always consult a financial adviser</div>
 </header>
 <nav>
-<div class="nav-inner">
-  <a class="nav-link" href="index.html">📊 Dashboard</a>
-  <a class="nav-link" href="metrics.html">📋 Metrics</a>
-  <a class="nav-link" href="news.html">📰 News</a>
-  <a class="nav-link active" href="signals.html">🎯 Signals</a>
-  <a class="nav-link" href="heatmap.html">🔥 Heatmap</a>
-  <a class="nav-link" href="charts.html">📈 Charts</a>
-  <a class="nav-link" href="calculator.html">🧮 What-If</a>
-</div>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link active" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+  </div>
 </nav>
+
 <div class="container">
+
   <div class="filter-bar">
-    <button class="filter-btn active" data-sector="all" onclick="filterSector('all',this)">All</button>
-    <button class="filter-btn" data-sector="AI"      onclick="filterSector('AI',this)">AI</button>
-    <button class="filter-btn" data-sector="Biotech" onclick="filterSector('Biotech',this)">Biotech</button>
-    <button class="filter-btn" data-sector="Defence" onclick="filterSector('Defence',this)">Defence</button>
-    <button class="filter-btn" data-sector="Tech"    onclick="filterSector('Tech',this)">Tech</button>
-    <button class="filter-btn" data-sector="Crypto"  onclick="filterSector('Crypto',this)">Crypto</button>
-    <button class="filter-btn" data-sector="Energy"  onclick="filterSector('Energy',this)">Energy</button>
+    <button class="filter-btn active" data-filter="all" onclick="filterSectors('all',this)">All Sectors</button>
+    <button class="filter-btn" data-filter="ai" onclick="filterSectors('ai',this)">AI Infra</button>
+    <button class="filter-btn" data-filter="biotech" onclick="filterSectors('biotech',this)">Biotech</button>
+    <button class="filter-btn" data-filter="defence" onclick="filterSectors('defence',this)">Defence</button>
+    <button class="filter-btn" data-filter="tech" onclick="filterSectors('tech',this)">Tech</button>
+    <button class="filter-btn" data-filter="crypto" onclick="filterSectors('crypto',this)">Crypto</button>
+    <button class="filter-btn" data-filter="energy" onclick="filterSectors('energy',this)">Energy</button>
   </div>
-  <div class="refresh-banner">
-    <span>AI picks · DeepSeek via OpenRouter · Mon/Wed/Fri 07:00 UTC</span>
-    <span class="ts" id="updated-label">Loading…</span>
-  </div>
-  <div class="search-count-bar">
-    <input id="sig-search" oninput="applyFilters()" placeholder="Search ticker…" type="text"/>
-    <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span></span>
-  </div>
-  <div class="signals-feed" id="signals-feed">
-    <div class="loading">Loading signals from all sectors…</div>
+
+  <div id="signals-root">
+    <div style="text-align:center;padding:60px;font-family:'IBM Plex Mono',monospace;color:var(--muted);">Loading signals…</div>
   </div>
 </div>
-<footer><strong>Signals</strong> are generated by DeepSeek via OpenRouter, refreshed Mon/Wed/Fri. Each sector's top 10 picks are combined and shown here. <strong>Not financial advice.</strong></footer>
+
 <script>
-const SECTORS = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
-let allPicks = [];
-let currentSector = 'all';
+  const SECTOR_DEFS = [
+    { key: 'ai',      label: 'AI Infrastructure', icon: '🤖', pricesPath: '../AI/prices-data.js',      signalsPath: '../AI/signals-local.json'      },
+    { key: 'biotech', label: 'Biotech',            icon: '🧬', pricesPath: '../Biotech/prices-data.js',  signalsPath: '../Biotech/signals-local.json'  },
+    { key: 'defence', label: 'Defence',            icon: '🛡️', pricesPath: '../Defence/prices-data.js',  signalsPath: '../Defence/signals-local.json'  },
+    { key: 'tech',    label: 'Technology',         icon: '💻', pricesPath: '../Tech/prices-data.js',     signalsPath: '../Tech/signals-local.json'     },
+    { key: 'crypto',  label: 'Crypto',             icon: '₿',  pricesPath: '../Crypto/prices-data.js',   signalsPath: '../Crypto/signals-local.json'   },
+    { key: 'energy',  label: 'Energy',             icon: '⚡', pricesPath: '../Energy/prices-data.js',   signalsPath: '../Energy/signals-local.json'   },
+  ];
 
-async function loadAllSignals() {
-  const results = await Promise.all(SECTORS.map(async s => {
-    try {
-      const res = await fetch('../' + s + '/signals-local.json');
-      const data = await res.json();
-      return { sector: s, picks: data.picks || [], updated: data.updated || '' };
-    } catch { return { sector: s, picks: [], updated: '' }; }
-  }));
+  let activeSectorFilter = 'all';
+  let loadedData = [];
 
-  const latestUpdated = results.map(r => r.updated).filter(Boolean).sort().pop() || '';
-  document.getElementById('updated-label').textContent = latestUpdated ? 'Updated ' + latestUpdated : 'No data';
+  function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-  // Merge and assign global rank by confidence then sector rank
-  allPicks = [];
-  results.forEach(({ sector, picks }) => {
-    picks.forEach(pick => allPicks.push({ ...pick, sector }));
-  });
-
-  // Sort by confidence desc, then sector rank asc
-  allPicks.sort((a, b) => {
-    const cdiff = (b.confidence || 0) - (a.confidence || 0);
-    if (cdiff !== 0) return cdiff;
-    return (a.rank || 99) - (b.rank || 99);
-  });
-
-  document.getElementById('total-count').textContent = allPicks.length;
-  renderCards(allPicks);
-  applyFilters();
-}
-
-function renderCards(picks) {
-  const feed = document.getElementById('signals-feed');
-  feed.innerHTML = '';
-  if (!picks.length) {
-    feed.innerHTML = '<div class="loading">No signals available.</div>';
-    return;
+  function filterSectors(key, btn) {
+    activeSectorFilter = key;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderAll();
   }
-  picks.forEach((pick, globalIdx) => {
-    const div = document.createElement('div');
-    div.className = 'signal-card';
-    div.dataset.sector = pick.sector;
-    div.dataset.ticker = pick.ticker;
-    const pct = Math.round((pick.confidence || 0) * 100);
-    const drivers = (pick.drivers || []).map(d => '<span class="driver-pill">' + d + '</span>').join('');
-    div.innerHTML =
-      '<div class="rank-rail">' +
-        '<div class="rank-num">' + (globalIdx + 1) + '</div>' +
-        '<div class="global-rank">GLOBAL</div>' +
-        '<span class="sector-badge sector-' + pick.sector + '" style="margin-top:6px">' + pick.sector + '</span>' +
-      '</div>' +
-      '<div class="card-body">' +
-        '<div class="card-top">' +
-          '<span class="sig-ticker">' + pick.ticker + '</span>' +
-          '<span class="signal-pill sig-' + (pick.signal || 'hold') + '">' + (pick.signal || 'hold').replace('_', ' ') + '</span>' +
-          '<div class="confidence-bar-wrap">' +
-            '<span class="confidence-label">Conf ' + pct + '%</span>' +
-            '<div class="confidence-bar"><div class="confidence-fill" style="width:' + pct + '%"></div></div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="rationale">' + (pick.rationale || '') + '</div>' +
-        (drivers ? '<div class="drivers">' + drivers + '</div>' : '') +
-      '</div>';
-    feed.appendChild(div);
+
+  function rankDelta(ticker, picks, prev) {
+    const curRank  = picks.findIndex(p => p.ticker === ticker);
+    const prevRank = prev.findIndex(p => p.ticker === ticker);
+    if (prevRank === -1) return '<span class="rank-delta delta-new">NEW</span>';
+    const diff = prevRank - curRank;
+    if (diff > 0) return '<span class="rank-delta delta-up">&#8593;' + diff + '</span>';
+    if (diff < 0) return '<span class="rank-delta delta-down">&#8595;' + Math.abs(diff) + '</span>';
+    return '<span class="delta-same">—</span>';
+  }
+
+  function renderSectorBlock(sd) {
+    const { key, label, icon, signals, nameMap, catMap } = sd;
+    if (!signals) return '<div class="sector-block" data-sector="' + key + '"><div class="sector-heading"><span class="sector-heading-icon">' + icon + '</span><div><h2>' + esc(label) + '</h2><div class="sector-meta">Signals unavailable</div></div></div></div>';
+
+    const picks = signals.picks || [];
+    const prev  = signals.previous_picks || [];
+    const momentum = signals.momentum_picks || [];
+    const model = signals.model || 'claude-3-7-sonnet';
+    const updated = signals.updated || '';
+
+    let html = '<div class="sector-block" data-sector="' + key + '">';
+    html += '<div class="sector-heading">';
+    html += '<span class="sector-heading-icon">' + icon + '</span>';
+    html += '<div><h2>' + esc(label) + ' <span style="color:var(--accent)">Signals</span></h2>';
+    if (updated) html += '<div class="sector-meta">Updated ' + esc(updated) + ' · ' + esc(model) + '</div>';
+    html += '</div></div>';
+
+    html += '<div class="how-toggle" onclick="toggleHow(this)"><span class="toggle-icon">▶</span> How it works</div>';
+    html += '<div class="how-box"><strong>Model:</strong> ' + esc(model) + '. Scores each stock on momentum (1M + 3M return), fundamental quality (P/E, growth, margins) and recent news sentiment. Picks are updated 3× daily at 08:00, 14:30 and 20:30 UTC on weekdays. <strong>Not financial advice.</strong></div>';
+
+    if (picks.length) {
+      html += '<div class="section-label">Top Picks</div>';
+      html += '<div class="picks-grid">';
+      picks.forEach((p, i) => {
+        const name = nameMap[p.ticker] || p.ticker;
+        const cat  = catMap[p.ticker] || '';
+        const delta = rankDelta(p.ticker, picks, prev);
+        html += '<div class="signal-card">';
+        html += '<div class="rank-num">' + (i + 1) + '</div>';
+        html += '<div class="signal-body">';
+        html += '<div class="signal-ticker">' + esc(p.ticker) + '</div>';
+        html += '<div class="signal-name">' + esc(name) + '</div>';
+        html += '<div class="signal-badges">';
+        if (cat) html += '<span class="cat-badge cat-' + esc(cat) + '">' + esc(cat) + '</span>';
+        html += '<span class="sector-badge sector-' + key + '">' + esc(label) + '</span>';
+        html += '<span class="signal-pill">' + delta + '</span>';
+        html += '</div>';
+        if (p.score !== undefined) html += '<div class="signal-score">Score: <span>' + p.score + '</span></div>';
+        if (p.reason) html += '<div class="signal-score">' + esc(p.reason) + '</div>';
+        html += '</div></div>';
+      });
+      html += '</div>';
+    } else {
+      html += '<div class="empty-block">No picks available for this sector.</div>';
+    }
+
+    if (momentum.length) {
+      html += '<div class="momentum-section">';
+      html += '<div class="section-label">Momentum Screener</div>';
+      html += '<div class="momentum-grid">';
+      momentum.forEach(p => {
+        const name = nameMap[p.ticker] || p.ticker;
+        const cat  = catMap[p.ticker] || '';
+        html += '<div class="momentum-card">';
+        html += '<div class="momentum-ticker">' + esc(p.ticker) + '</div>';
+        html += '<div class="momentum-name">' + esc(name) + '</div>';
+        html += '<div class="momentum-badges">';
+        if (cat) html += '<span class="cat-badge cat-' + esc(cat) + '">' + esc(cat) + '</span>';
+        html += '<span class="sector-badge sector-' + key + '">' + esc(label) + '</span>';
+        html += '</div>';
+        if (p.score !== undefined) html += '<div class="momentum-score">Momentum: <span>' + p.score + '</span></div>';
+        html += '</div>';
+      });
+      html += '</div></div>';
+    }
+
+    html += '</div>';
+    return html;
+  }
+
+  function renderAll() {
+    const root = document.getElementById('signals-root');
+    const visible = activeSectorFilter === 'all'
+      ? loadedData
+      : loadedData.filter(sd => sd.key === activeSectorFilter);
+    if (!visible.length) { root.innerHTML = '<div class="empty-block">No data loaded yet.</div>'; return; }
+    root.innerHTML = visible.map(renderSectorBlock).join('');
+  }
+
+  function toggleHow(el) {
+    el.classList.toggle('open');
+    const box = el.nextElementSibling;
+    if (box) box.classList.toggle('open');
+  }
+
+  Promise.all(SECTOR_DEFS.map(async sd => {
+    const [pricesText, signalsJson] = await Promise.all([
+      fetch(sd.pricesPath).then(r => r.text()).catch(() => ''),
+      fetch(sd.signalsPath).then(r => r.json()).catch(() => null),
+    ]);
+
+    const nameMap = {}, catMap = {};
+    if (pricesText) {
+      const match = pricesText.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+      if (match) {
+        try {
+          const data = JSON.parse(match[1]);
+          (data.stocks || []).forEach(s => {
+            nameMap[s.ticker] = s.company_name || s.ticker;
+            catMap[s.ticker]  = s.category || '';
+          });
+        } catch(e) {}
+      }
+    }
+
+    return { ...sd, signals: signalsJson, nameMap, catMap };
+  })).then(results => {
+    loadedData = results;
+    renderAll();
   });
-}
-
-function applyFilters() {
-  const query = (document.getElementById('sig-search').value || '').toLowerCase().trim();
-  const cards = document.querySelectorAll('.signal-card');
-  let visible = 0;
-  cards.forEach(card => {
-    const matchSector = currentSector === 'all' || card.dataset.sector === currentSector;
-    const matchSearch = !query || card.dataset.ticker.toLowerCase().includes(query);
-    if (matchSector && matchSearch) { card.classList.remove('hidden'); visible++; }
-    else card.classList.add('hidden');
-  });
-  document.getElementById('visible-count').textContent = visible;
-}
-
-function filterSector(sector, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentSector = sector;
-  applyFilters();
-}
-
-loadAllSignals();
 </script>
+
 </body>
 </html>
