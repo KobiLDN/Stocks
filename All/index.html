@@ -326,7 +326,7 @@
   }
 </style>
 </head>
-<body>
+<body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
 <div class="header-inner">
@@ -335,15 +335,16 @@
 <h1>All <span>Sectors</span></h1>
 <div class="header-sub">v1 &nbsp;·&nbsp; Select a sector<span id="last-updated-label"></span></div>
 </div>
-<div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+</header>
+
+<div class="page-body">
+
+<div class="left-rail">
 <a class="sector-card hub-card" href="../index.html">
 <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
 <div class="sector-card-name">Stock Hub</div>
-</a>
-<a class="sector-card" href="../rss.html">
-<div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
-<div class="sector-card-name">RSS</div>
 </a>
 <a class="sector-card active" href="index.html">
 <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
@@ -351,15 +352,15 @@
 </a>
 <a class="sector-card" href="../AI/index.html">
 <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">AI Infrastructure</div>
-</a>
-<a class="sector-card" href="../Defence/index.html">
-<div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">Defence</div>
+<div class="sector-card-name">AI Infra</div>
 </a>
 <a class="sector-card" href="../Biotech/index.html">
 <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
 <div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Defence/index.html">
+<div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Defence</div>
 </a>
 <a class="sector-card" href="../Tech/index.html">
 <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
@@ -373,9 +374,13 @@
 <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
 <div class="sector-card-name">Energy</div>
 </a>
+<a class="sector-card" href="../rss.html">
+<div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+<div class="sector-card-name">RSS Feed</div>
+</a>
 </div>
-</div>
-</header>
+
+<div class="page-main">
 <nav>
 <div class="nav-inner">
 <a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks across every sector" href="index.html">📊 Dashboard</a>
@@ -681,5 +686,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
 </body>
 </html>
