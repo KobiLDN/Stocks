@@ -290,13 +290,51 @@
     return html;
   }
 
+  function renderCombinedMomentum(data) {
+    const allMomentum = [];
+    data.forEach(sd => {
+      if (!sd.signals) return;
+      (sd.signals.momentum_picks || []).forEach(p => {
+        allMomentum.push({ ...p, sectorKey: sd.key, sectorLabel: sd.label, nameMap: sd.nameMap, catMap: sd.catMap });
+      });
+    });
+    if (!allMomentum.length) return '';
+
+    let html = '<div class="sector-block">';
+    html += '<div class="sector-heading"><div><h2>All Sectors <span style="color:var(--accent)">Momentum Screener</span></h2>';
+    html += '<div class="sector-meta">' + allMomentum.length + ' stocks across all sectors</div></div></div>';
+    html += '<div class="momentum-grid">';
+    allMomentum.forEach(p => {
+      const name = p.nameMap[p.ticker] || p.ticker;
+      const cat  = p.catMap[p.ticker] || '';
+      html += '<div class="momentum-card">';
+      html += '<div class="momentum-ticker">' + esc(p.ticker) + '</div>';
+      html += '<div class="momentum-name">' + esc(name) + '</div>';
+      html += '<div class="momentum-badges">';
+      if (cat) html += '<span class="cat-badge cat-' + esc(cat) + '">' + esc(cat) + '</span>';
+      html += '<span class="sector-badge sector-' + p.sectorKey + '">' + esc(p.sectorLabel) + '</span>';
+      html += '</div>';
+      if (p.score !== undefined) html += '<div class="momentum-score">Momentum: <span>' + p.score + '</span></div>';
+      html += '</div>';
+    });
+    html += '</div></div>';
+    return html;
+  }
+
   function renderAll() {
     const root = document.getElementById('signals-root');
     const visible = activeSectorFilter === 'all'
       ? loadedData
       : loadedData.filter(sd => sd.key === activeSectorFilter);
     if (!visible.length) { root.innerHTML = '<div class="empty-block">No data loaded yet.</div>'; return; }
-    root.innerHTML = visible.map(renderSectorBlock).join('');
+
+    let html = '';
+    if (activeSectorFilter === 'all') {
+      html += renderCombinedMomentum(loadedData);
+      html += '<hr style="border:none;border-top:1px solid var(--border);margin:32px 0;">';
+    }
+    html += visible.map(renderSectorBlock).join('');
+    root.innerHTML = html;
   }
 
   function toggleHow(el) {
