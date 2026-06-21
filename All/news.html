@@ -92,13 +92,13 @@
   }
 </style>
 </head>
-<body>
+<body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
   <div class="header-inner">
   <div class="header-left">
-    <div class="header-label">// Stock Universe</div>
+    <div class="header-label">// Market Intelligence</div>
     <h1>All <span>News</span></h1>
     <div class="header-sub">Latest headlines across 192 stocks · AI-scored sentiment · Newest first</div>
   </div>
@@ -144,6 +144,48 @@
 </div>
 <div class="header-note">⚠️ NOT FINANCIAL ADVICE · data from Yahoo Finance (yfinance), may be delayed · for research only · always consult a financial adviser</div>
 </header>
+<div class="page-body">
+
+<div class="left-rail">
+<a class="sector-card hub-card" href="../index.html">
+<div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
+<div class="sector-card-name">Stock Hub</div>
+</a>
+<a class="sector-card active" href="index.html">
+<div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">All Sectors</div>
+</a>
+<a class="sector-card" href="../AI/news.html">
+<div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">AI Infra</div>
+</a>
+<a class="sector-card" href="../Biotech/news.html">
+<div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Biotech</div>
+</a>
+<a class="sector-card" href="../Defence/news.html">
+<div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Defence</div>
+</a>
+<a class="sector-card" href="../Tech/news.html">
+<div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Technology</div>
+</a>
+<a class="sector-card" href="../Crypto/news.html">
+<div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Crypto</div>
+</a>
+<a class="sector-card" href="../Energy/news.html">
+<div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
+<div class="sector-card-name">Energy</div>
+</a>
+<a class="sector-card" href="../rss.html">
+<div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
+<div class="sector-card-name">RSS Feed</div>
+</a>
+</div>
+
+<div class="page-main">
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
@@ -314,5 +356,7 @@
   });
 </script>
 
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
 </body>
 </html>
