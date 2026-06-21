@@ -337,6 +337,25 @@
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
+
+<nav>
+<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum across every sector" href="index.html">📊 Dashboard</a>
+<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
+<a class="nav-link" data-tooltip="Latest headlines across all stocks with news sentiment scoring" href="news.html">📰 News</a>
+<a class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined" href="signals.html">🎯 Signals</a>
+<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
+<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
+<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today across all sectors" href="calculator.html">🧮 What-If</a>
+</nav>
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
+<button class="filter-btn" data-filter="ai" data-tooltip="Semiconductors, nuclear power, data centres and AI infrastructure — 48 stocks" onclick="filterTable('ai', this)">AI Infra</button>
+<button class="filter-btn" data-filter="biotech" data-tooltip="Biotechnology, genomics and pharmaceutical companies" onclick="filterTable('biotech', this)">Biotech</button>
+<button class="filter-btn" data-filter="defence" data-tooltip="Defence, aerospace and security companies" onclick="filterTable('defence', this)">Defence</button>
+<button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="filterTable('tech', this)">Tech</button>
+<button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency, blockchain and digital asset companies" onclick="filterTable('crypto', this)">Crypto</button>
+<button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
+</div>
 </header>
 
 <div class="page-body">
@@ -388,25 +407,7 @@
 </div>
 
 <div class="page-main">
-<nav>
-<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum across every sector" href="index.html">📊 Dashboard</a>
-<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" data-tooltip="Latest headlines across all stocks with news sentiment scoring" href="news.html">📰 News</a>
-<a class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined" href="signals.html">🎯 Signals</a>
-<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
-<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
-<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today across all sectors" href="calculator.html">🧮 What-If</a>
-</nav>
 <div class="container">
-<div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
-<button class="filter-btn" data-filter="ai" data-tooltip="Semiconductors, nuclear power, data centres and AI infrastructure — 48 stocks" onclick="filterTable('ai', this)">AI Infra</button>
-<button class="filter-btn" data-filter="biotech" data-tooltip="Biotechnology, genomics and pharmaceutical companies" onclick="filterTable('biotech', this)">Biotech</button>
-<button class="filter-btn" data-filter="defence" data-tooltip="Defence, aerospace and security companies" onclick="filterTable('defence', this)">Defence</button>
-<button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="filterTable('tech', this)">Tech</button>
-<button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency, blockchain and digital asset companies" onclick="filterTable('crypto', this)">Crypto</button>
-<button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
-</div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>

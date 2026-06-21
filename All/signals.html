@@ -120,6 +120,25 @@
   
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
+
+<nav>
+      <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum">📊 Dashboard</a>
+    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html" class="nav-link active" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
+</nav>
+<div class="filter-bar">
+    <button class="filter-btn active" data-filter="all" onclick="filterSectors('all',this)">All Sectors</button>
+    <button class="filter-btn" data-filter="ai" onclick="filterSectors('ai',this)">AI Infra</button>
+    <button class="filter-btn" data-filter="biotech" onclick="filterSectors('biotech',this)">Biotech</button>
+    <button class="filter-btn" data-filter="defence" onclick="filterSectors('defence',this)">Defence</button>
+    <button class="filter-btn" data-filter="tech" onclick="filterSectors('tech',this)">Tech</button>
+    <button class="filter-btn" data-filter="crypto" onclick="filterSectors('crypto',this)">Crypto</button>
+    <button class="filter-btn" data-filter="energy" onclick="filterSectors('energy',this)">Energy</button>
+  </div>
 </header>
 <div class="page-body">
 
@@ -171,25 +190,8 @@
 
 <div class="page-main">
 <div class="container">
-<nav>
-      <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link active" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
-    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-</nav>
 
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all" onclick="filterSectors('all',this)">All Sectors</button>
-    <button class="filter-btn" data-filter="ai" onclick="filterSectors('ai',this)">AI Infra</button>
-    <button class="filter-btn" data-filter="biotech" onclick="filterSectors('biotech',this)">Biotech</button>
-    <button class="filter-btn" data-filter="defence" onclick="filterSectors('defence',this)">Defence</button>
-    <button class="filter-btn" data-filter="tech" onclick="filterSectors('tech',this)">Tech</button>
-    <button class="filter-btn" data-filter="crypto" onclick="filterSectors('crypto',this)">Crypto</button>
-    <button class="filter-btn" data-filter="energy" onclick="filterSectors('energy',this)">Energy</button>
-  </div>
+  
 
   <div id="signals-root">
     <div style="text-align:center;padding:60px;font-family:'IBM Plex Mono',monospace;color:var(--muted);">Loading signals…</div>
