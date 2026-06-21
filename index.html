@@ -47,7 +47,34 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      padding-top: 36px;
     }
+
+    /* ── Ticker tape ── */
+    #ticker-tape {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 36px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--accent);
+      z-index: 200;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+    .tape-track { display: flex; align-items: center; white-space: nowrap; will-change: transform; }
+    .tape-track.running { animation: tape-scroll linear infinite; }
+    .tape-track:hover { animation-play-state: paused; }
+    @keyframes tape-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .tape-item { font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 0 20px;
+      display: inline-flex; align-items: center; gap: 7px; height: 36px;
+      border-right: 1px solid var(--border); cursor: default; }
+    .tape-t { color: var(--text); font-weight: 700; letter-spacing: 1px; }
+    .tape-p { color: var(--text); }
+    .tape-r { font-weight: 700; }
+    .tape-r.pos { color: var(--green); }
+    .tape-r.neg { color: var(--red); }
+    .tape-r.flat { color: var(--muted); }
 
     .theme-toggle { font-family: 'IBM Plex Mono', monospace; font-size: 18px; background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--border); border-radius: 4px; color: var(--dim); cursor: pointer; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.15s; opacity: 0.65; }
     .theme-toggle:hover { color: var(--accent); border-color: var(--accent); border-top-color: var(--accent); opacity: 1; background: var(--surface2); }
@@ -55,7 +82,7 @@
     /* ── Sticky header shell ── */
     .header-sticky {
       position: sticky;
-      top: 0;
+      top: 36px;
       z-index: 100;
       background: var(--bg);
       border-bottom: 1px solid var(--accent);
@@ -461,9 +488,23 @@
 <script src="Energy/signals-local.js"></script>
 <script>window.__sd_Energy = window.SIGNALS_DATA;</script>
 
+<script>
+// Aggregate all sector stocks for ticker tape
+(function() {
+  const sectors = ['AI','Defence','Biotech','Tech','Crypto','Energy'];
+  const all = [], seen = new Set();
+  for (const s of sectors) {
+    const pd = window['__pd_' + s];
+    if (pd && pd.stocks) pd.stocks.forEach(st => { if (!seen.has(st.ticker)) { seen.add(st.ticker); all.push(st); } });
+  }
+  if (window.PRICES_DATA) window.PRICES_DATA.stocks = all;
+})();
+</script>
 <script src="shared.js" defer></script>
 </head>
 <body>
+
+  <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 
   <div class="header-sticky">
     <header>
