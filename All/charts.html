@@ -104,7 +104,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Charts</span></h1>
-    <div class="header-sub">192 stocks · TradingView price history · 1W to 5Y</div>
+    <div class="header-sub"><span id="all-stock-count">—</span> stocks &nbsp;·&nbsp; TradingView price history · 1W to 5Y</div>
 </div>
   
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -407,6 +407,7 @@
     } catch(e) { return []; }
   })).then(results => {
     allStocks = results.flat();
+    const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(allStocks.map(s => s.ticker)).size;
     buildSidebar(allStocks);
     if (allStocks.length) loadChart(allStocks[0].ticker);
   });

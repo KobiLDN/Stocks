@@ -146,7 +146,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Metrics</span></h1>
-    <div class="header-sub">192 stocks · Market cap · 1D / 1W / 1M / YTD returns · Beta · Volume · Analyst rating</div>
+    <div class="header-sub"><span id="all-stock-count">—</span> stocks &nbsp;·&nbsp; Market cap · 1D / 1W / 1M / YTD returns · Beta · Volume · Analyst rating</div>
 </div>
   
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -453,7 +453,11 @@
       const data = JSON.parse(match[1]);
       return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
     } catch(e) { return []; }
-  })).then(results => buildMetrics(results.flat()));
+  })).then(results => {
+  const stocks = results.flat();
+  const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(stocks.map(s => s.ticker)).size;
+  buildMetrics(stocks);
+});
 
   const tooltip = document.getElementById('col-tooltip');
   const tipTitle = tooltip.querySelector('.tip-title');
