@@ -34,9 +34,6 @@ __pycache__/
 .claude/*
 !.claude/settings.json
 
-# T212 API key — never commit
-t212_mcp/.key
-
 # generate_export.py outputs — market snapshots committed by GitHub Actions
 # portfolio-enriched files are LOCAL ONLY, never committed
 exports/*-portfolio.json

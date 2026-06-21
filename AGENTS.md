@@ -185,27 +185,6 @@ When adding a new sector, complete every item in this checklist — in order:
 
 Results appear in `signals-local.json` per sector under the `momentum` key and are displayed inline on each sector's `signals.html` below the AI picks, labelled `// Momentum Screener`.
 
-## T212 MCP server
-
-`t212_mcp/server.py` is a FastMCP server that gives Claude Code live access to the user's Trading 212 portfolio.
-
-**Tools:**
-- `get_positions` — all open positions with quantity, avg price, P&L
-- `get_account_summary` — total value, free cash, invested amount, overall P&L
-- `get_orders` — last 50 executed orders
-- `get_portfolio_vs_signals` — cross-references holdings against all sector signal picks
-
-**API key — HTTP Basic Authentication:**
-T212 uses Basic Auth (`KEY_ID:SECRET_KEY` base64 encoded). Put both on one line in `t212_mcp/.key`:
-```
-YOUR_API_KEY_ID:YOUR_SECRET_KEY
-```
-Generate the key pair from **T212 app → Settings → API (Beta)**. The secret is shown only once at generation time. The `.key` file is gitignored — never committed. The safest location is the **container-level** folder outside any git repo: `G:\My Drive\coding\ai\Stocks\t212_mcp\.key`.
-
-**MCP config** lives in `.claude/settings.json` (committed — no key stored there). The server starts automatically when a Claude Code session opens in this repo.
-
-**Privacy guarantee:** `exports/*-portfolio.json` and `exports/*-portfolio.csv` are in `.gitignore`. Portfolio data is fetched locally, used locally, and never reaches GitHub or Cloudflare Pages.
-
 ## Local portfolio snapshot (container-level — never in git)
 
 `G:\My Drive\coding\ai\portfolio\Portfolio-Local\` is outside both git repos — nothing here can ever be committed or reach GitHub.
@@ -234,7 +213,7 @@ TICKER_ALIASES = {
 }
 ```
 
-**Workflow:** run `run.bat` after 21:30 BST / 20:30 UTC (evening price update is fresh, export runs at 22:00 UTC / 23:00 BST) → snapshot merges your live T212 positions with all 176 stocks data + signal picks → open `snapshot.html` in browser, or paste `snapshot.json`/`snapshot.txt` to any AI for analysis.
+**Workflow:** run `run.bat` after 21:30 BST (evening price update is fresh, export runs at 22:00 UTC / 23:00 BST) → merges live T212 positions with all sector data + signal picks → open `portfolio.html` in browser, or paste `portfolio_analysis.json` to any AI for analysis.
 
 ## GitHub Actions
 
@@ -248,7 +227,7 @@ Workflow files must live at the **repo root** (`.github/workflows/`) — GitHub 
 - The signals workflow uses **one** secret: `OPENROUTER_API_KEY` — see exception below.
 - The Crypto workflow uses `CMC_API_KEY` + `COINGECKO_API_KEY` — see exception below.
 
-## Architectural rule: keyless by default (EXCEPTIONS: OPENROUTER_API_KEY, T212_API_KEY, CMC_API_KEY, COINGECKO_API_KEY)
+## Architectural rule: keyless by default (EXCEPTIONS: OPENROUTER_API_KEY, CMC_API_KEY, COINGECKO_API_KEY, COINSTATS_API_KEY)
 
 **This project is keyless by default.** Any new feature must work with no-auth/free data sources. Adding a new secret requires an explicit user decision — do **not** silently add one.
 
@@ -257,7 +236,7 @@ Current approved exceptions:
 - **`CMC_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinMarketCap free tier for real-time prices (bulk call, all 34 coins in one request).
 - **`COINGECKO_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinGecko Demo/Pro for true YTD (Jan 1 → today) + 52-week high/low + volume. Falls back to public endpoint if key absent.
 - **`COINSTATS_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinStats API for news fallback when yfinance returns 0 headlines (e.g. POL, MINA, HBAR). Free tier, credit-based. Falls back to unauthenticated public endpoint if key absent.
-- **T212 credentials** (local only — **never a GitHub secret**) — used by `t212_mcp/server.py`, `generate_export.py`, and `G:\My Drive\coding\ai\Stocks\t212_mcp\portfolio.py`. Stored as `KEY_ID:SECRET_KEY` in `t212_mcp/.key` (gitignored) or preferably in the container-level folder outside any repo. Never committed, never used in CI, never goes online.
+- **T212 credentials** (local only — **never a GitHub secret**) — used by `generate_export.py` and `G:\My Drive\coding\ai\portfolio\Portfolio-Local\portfolio.py`. Stored as `KEY_ID:SECRET_KEY` in `G:\My Drive\coding\ai\portfolio\Portfolio-Local\.key`. Never committed, never used in CI, never goes online.
 
 **Removed exception (2026-06-06):** `STOCKDATA_API_KEY` — StockData.org was added as Crypto primary news source but hit its 500 req/day free cap immediately with 34 coins. CryptoPanic moved to paid-only. Reverted to **yfinance → CoinStats** cascade (both free, no key).
 

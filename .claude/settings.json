@@ -1,9 +1,3 @@
 {
-  "mcpServers": {
-    "trading212": {
-      "command": "python",
-      "args": ["t212_mcp/server.py"]
-    }
-  },
   "worktree": false
 }
