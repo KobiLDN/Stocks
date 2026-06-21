@@ -3,23 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="All sectors investment calculator — see what £100, £1,000 or £10,000 invested at the start of 2026 would be worth today across 192 stocks.">
+<meta name="description" content="What-If investment calculator — see what £100 to £10,000 invested across 192 stocks at the start of 2026 is worth today.">
 <title>All Sectors — What-If Calculator</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  .calc-intro {
-    border: 1px solid var(--border); background: var(--surface);
-    padding: 16px 20px; margin-bottom: 24px; font-size: 13px; color: var(--muted); line-height: 1.6;
-  }
-  .calc-intro strong { color: var(--text); }
 
-  .controls-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
+  /* Filter bar */
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
   .filter-btn {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
   .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
@@ -30,40 +28,52 @@
   .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
 
-  .search-sort-bar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+  /* Search + count bar */
+  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
   #calc-search {
-    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
-    background: var(--surface); border: 1px solid var(--border); color: var(--text);
-    padding: 6px 14px; width: 220px; outline: none; letter-spacing: 0.5px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 14px;
+    width: 240px;
+    outline: none;
+    letter-spacing: 0.5px;
   }
   #calc-search:focus { border-color: var(--accent); }
   #calc-search::placeholder { color: var(--muted); }
-  .sort-btn {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
-    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
-  }
-  .sort-btn:hover { color: var(--accent); border-color: var(--accent); }
-  .sort-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 700; }
-  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); margin-left: auto; }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
   .row-count span { color: var(--accent); font-weight: 700; }
 
+  /* Table */
   .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
+
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
+
   thead { background: var(--surface2); }
+
   th {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--muted); padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); padding: 12px 14px; text-align: left;
+    border-bottom: 1px solid var(--border); white-space: nowrap;
   }
-  th.num-col { text-align: right; }
+  th.sortable { cursor: pointer; user-select: none; }
+  th.sortable:hover { color: var(--accent); }
+  th.sort-desc::after { content: ' ▼'; color: var(--accent); }
+  th.sort-asc::after  { content: ' ▲'; color: var(--accent); }
+  th.inv-col { text-align: right; }
+
   td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
   tr:last-child td { border-bottom: none; }
   tbody tr:hover { background: var(--surface); }
-  tfoot td { border-top: 2px solid var(--accent); border-bottom: none; background: var(--surface2); }
 
   .ticker-cell { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
   .ticker-link { text-decoration: none; color: inherit; }
   .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
-  .company-cell { color: var(--muted); font-size: 12px; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .company-cell { color: var(--muted); font-size: 12px; }
 
   .sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
   .sector-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
@@ -73,22 +83,34 @@
   .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
   .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
 
-  .num-cell { text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
-  .ytd-pos { color: var(--green); font-weight: 700; }
-  .ytd-neg { color: var(--red);   font-weight: 700; }
-  .ytd-flat { color: var(--muted); }
+  .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+  .ytd-flat { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
 
-  .pl-pos { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; }
-  .pl-neg { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; }
-  .pl-zero { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
-  .val-cell { font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-align: right; }
-  .totals-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; }
-  .null-val { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .inv-cell { text-align: right; }
+  .inv-value { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 13px; display: block; }
+  .inv-value.pos { color: var(--green); }
+  .inv-value.neg { color: var(--red); }
+  .inv-pl { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); display: block; margin-top: 2px; }
+  .inv-pl.pos { color: var(--green); }
+  .inv-pl.neg { color: var(--red); }
+
+  .mult-cell { text-align: center; white-space: nowrap; }
+  .mult-value { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 15px; }
+  .mult-value.pos  { color: var(--green); }
+  .mult-value.neg  { color: var(--red); }
+  .mult-value.flat { color: var(--muted); }
+
+  /* Totals row */
+  .totals-row td { background: var(--surface2); border-top: 2px solid var(--accent); font-weight: 700; }
+  .totals-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
 
   @media (max-width: 768px) {
-    .company-cell { display: none; }
+    h1 { font-size: 26px; }
     th, td { padding: 8px 10px; }
+    .company-cell { display: none; }
   }
+
 </style>
 </head>
 <body>
@@ -98,8 +120,8 @@
   <div class="header-inner">
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
-    <h1>All <span>What-If</span></h1>
-    <div class="header-sub">192 stocks · If you invested £100 / £1,000 / £10,000 at start of 2026…</div>
+    <h1>All <span>Calculator</span></h1>
+    <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -141,27 +163,23 @@
 </a>
 </div>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · YTD return used · ignores dividends & fees · for research only · always consult a financial adviser</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · YTD returns from 1 Jan 2026, illustrative only · past performance ≠ future results · always consult a financial adviser</div>
 </header>
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html"    class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html"    class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link active" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
 
 <div class="container">
 
-  <div class="calc-intro">
-    <strong>Hypothetical only.</strong> Shows what a lump-sum investment at the start of 2026 would be worth today, using YTD % return. Ignores dividends, fees, FX costs, and taxes. Figures are illustrative — not a forecast or advice.
-  </div>
-
-  <div class="controls-row">
+  <div class="filter-bar">
     <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
     <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
     <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
@@ -171,10 +189,8 @@
     <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
   </div>
 
-  <div class="search-sort-bar">
-    <input type="text" id="calc-search" placeholder="Search ticker or company…" oninput="filterCalc(this.value)">
-    <button class="sort-btn active" onclick="setSort('ticker',this)">A–Z</button>
-    <button class="sort-btn" onclick="setSort('ytd',this)">Best YTD</button>
+  <div class="search-count-bar">
+    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
     <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
   </div>
 
@@ -182,21 +198,17 @@
     <table id="calc-table">
       <thead>
         <tr>
-          <th>Ticker</th>
-          <th class="company-cell">Company</th>
+          <th class="sortable" onclick="sortCalc('ticker', this)">Ticker</th>
+          <th>Company</th>
           <th>Sector</th>
-          <th class="num-col">YTD %</th>
-          <th class="num-col">£100 Now</th>
-          <th class="num-col">P/L</th>
-          <th class="num-col">£1,000 Now</th>
-          <th class="num-col">P/L</th>
-          <th class="num-col">£10,000 Now</th>
-          <th class="num-col">P/L</th>
+          <th class="sortable sort-desc" onclick="sortCalc('ytd', this)">YTD %</th>
+          <th class="sortable" style="text-align:center" onclick="sortCalc('mult', this)">Multiplier</th>
+          <th class="sortable inv-col" onclick="sortCalc('v100', this)">£100 invested</th>
+          <th class="sortable inv-col" onclick="sortCalc('v1k', this)">£1,000 invested</th>
+          <th class="sortable inv-col" onclick="sortCalc('v10k', this)">£10,000 invested</th>
         </tr>
       </thead>
-      <tbody id="calc-body">
-        <tr><td colspan="10" style="text-align:center;padding:40px;color:var(--muted);font-family:'IBM Plex Mono',monospace;">Loading all sectors…</td></tr>
-      </tbody>
+      <tbody id="calc-body"></tbody>
       <tfoot id="calc-foot"></tfoot>
     </table>
   </div>
@@ -211,10 +223,47 @@
   const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
   function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
-  let calcData = [];
+  function fmtGbp(val) {
+    if (val >= 1000) return '£' + val.toLocaleString('en-GB', { maximumFractionDigits: 0 });
+    if (val >= 10)   return '£' + val.toFixed(0);
+    return '£' + val.toFixed(2);
+  }
+
+  function fmtPl(val) {
+    const sign = val >= 0 ? '+' : '';
+    if (Math.abs(val) >= 1000) return sign + '£' + Math.abs(val).toLocaleString('en-GB', { maximumFractionDigits: 0 }) + (val < 0 ? ' loss' : ' gain');
+    return sign + '£' + Math.abs(val).toFixed(2) + (val < 0 ? ' loss' : ' gain');
+  }
+
+  function invCell(invested, ytdPct) {
+    const current = invested * (1 + ytdPct / 100);
+    const pl  = current - invested;
+    const cls = ytdPct > 0 ? 'pos' : ytdPct < 0 ? 'neg' : '';
+    return `<td class="inv-cell">
+      <span class="inv-value ${cls}">${fmtGbp(current)}</span>
+      <span class="inv-pl ${cls}">${fmtPl(pl)}</span>
+    </td>`;
+  }
+
+  function multCell(ytdPct) {
+    const m   = 1 + ytdPct / 100;
+    const cls = ytdPct > 0 ? 'pos' : ytdPct < 0 ? 'neg' : 'flat';
+    return `<td class="mult-cell"><span class="mult-value ${cls}">${m.toFixed(2)}×</span></td>`;
+  }
+
+  let sortState    = { col: 'ytd', dir: -1 };
   let activeSector = 'all';
-  let activeSort = 'ticker';
-  let searchQ = '';
+  let searchQ      = '';
+
+  function sortCalc(col, th) {
+    if (sortState.col === col) sortState.dir *= -1;
+    else { sortState.col = col; sortState.dir = (col === 'ytd' || col === 'mult' || col === 'v100' || col === 'v1k' || col === 'v10k') ? -1 : 1; }
+    document.querySelectorAll('#calc-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+    th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+    renderTable();
+  }
+
+  function filterCalc(query) { searchQ = query.toLowerCase().trim(); renderTable(); }
 
   function setSector(sector, btn) {
     activeSector = sector;
@@ -222,87 +271,61 @@
     btn.classList.add('active');
     renderTable();
   }
-  function setSort(sort, btn) {
-    activeSort = sort;
-    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderTable();
-  }
-  function filterCalc(q) { searchQ = q.toLowerCase().trim(); renderTable(); }
-
-  function fmtGbp(v) { return '£' + v.toFixed(2); }
-  function fmtPl(pl) { return (pl >= 0 ? '+£' : '−£') + Math.abs(pl).toFixed(2); }
-
-  function invCell(inv, ytd) {
-    if (ytd === null) return '<span class="null-val">—</span>';
-    const now = inv * (1 + ytd / 100);
-    return '<span class="val-cell">' + fmtGbp(now) + '</span>';
-  }
-  function multCell(inv, ytd) {
-    if (ytd === null) return '<span class="null-val">—</span>';
-    const pl = inv * (ytd / 100);
-    const cls = pl > 0 ? 'pl-pos' : pl < 0 ? 'pl-neg' : 'pl-zero';
-    return '<span class="' + cls + '">' + fmtPl(pl) + '</span>';
-  }
 
   function renderTable() {
-    let data = calcData.slice();
+    let data = window._calcData || [];
     if (activeSector !== 'all') data = data.filter(s => s.sector === activeSector);
     if (searchQ) data = data.filter(s => s.ticker.toLowerCase().includes(searchQ) || s.name.toLowerCase().includes(searchQ));
 
-    if (activeSort === 'ticker') data.sort((a, b) => a.ticker.localeCompare(b.ticker));
-    if (activeSort === 'ytd') data.sort((a, b) => {
-      if (b.ytd === null) return -1;
-      if (a.ytd === null) return 1;
-      return b.ytd - a.ytd;
+    const sorted = [...data].sort((a, b) => {
+      if (sortState.col === 'ticker') return a.ticker.localeCompare(b.ticker) * sortState.dir;
+      return (a.ytdPct - b.ytdPct) * sortState.dir;
     });
 
-    document.getElementById('calc-count').textContent = data.length;
+    document.getElementById('calc-count').textContent = sorted.length;
 
     const body = document.getElementById('calc-body');
-    body.innerHTML = data.map(s => {
-      const ytdCls = s.ytd === null ? '' : s.ytd > 0 ? 'ytd-pos' : s.ytd < 0 ? 'ytd-neg' : 'ytd-flat';
-      const ytdCell = s.ytd !== null
-        ? '<span class="' + ytdCls + '">' + (s.ytd >= 0 ? '+' : '') + s.ytd.toFixed(2) + '%</span>'
-        : '<span class="null-val">—</span>';
-      const sLabel = SECTOR_LABELS[s.sector] || s.sector;
-      return '<tr>' +
-        '<td class="ticker-cell"><a href="' + yahooUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
-        '<td class="company-cell">' + s.name + '</td>' +
-        '<td><span class="sector-badge sector-' + s.sector + '">' + sLabel + '</span></td>' +
-        '<td class="num-cell" style="text-align:right">' + ytdCell + '</td>' +
-        '<td class="num-cell" style="text-align:right">' + invCell(100,   s.ytd) + '</td>' +
-        '<td class="num-cell" style="text-align:right">' + multCell(100,  s.ytd) + '</td>' +
-        '<td class="num-cell" style="text-align:right">' + invCell(1000,  s.ytd) + '</td>' +
-        '<td class="num-cell" style="text-align:right">' + multCell(1000, s.ytd) + '</td>' +
-        '<td class="num-cell" style="text-align:right">' + invCell(10000, s.ytd) + '</td>' +
-        '<td class="num-cell" style="text-align:right">' + multCell(10000,s.ytd) + '</td>' +
-        '</tr>';
+    body.innerHTML = sorted.map(s => {
+      const ytdCls   = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
+      const sLabel   = SECTOR_LABELS[s.sector] || s.sector;
+      return `<tr>
+        <td class="ticker-cell"><a href="${yahooUrl(s.ticker)}" target="_blank" class="ticker-link">${s.ticker}</a></td>
+        <td class="company-cell">${s.name}</td>
+        <td><span class="sector-badge sector-${s.sector}">${sLabel}</span></td>
+        <td><span class="${ytdCls}">${s.ytdPct >= 0 ? '+' : ''}${s.ytdPct.toFixed(2)}%</span></td>
+        ${multCell(s.ytdPct)}
+        ${invCell(100, s.ytdPct)}
+        ${invCell(1000, s.ytdPct)}
+        ${invCell(10000, s.ytdPct)}
+      </tr>`;
     }).join('');
 
-    const validYtd = data.filter(s => s.ytd !== null);
-    if (!validYtd.length) { document.getElementById('calc-foot').innerHTML = ''; return; }
-    const avgYtd = validYtd.reduce((a, b) => a + b.ytd, 0) / validYtd.length;
-    const foot = document.getElementById('calc-foot');
-    foot.innerHTML = '<tr>' +
-      '<td class="totals-label" colspan="3">AVG (equal weight · ' + validYtd.length + ' stocks)</td>' +
-      '<td class="num-cell" style="text-align:right"><span class="' + (avgYtd >= 0 ? 'ytd-pos' : 'ytd-neg') + '">' + (avgYtd >= 0 ? '+' : '') + avgYtd.toFixed(2) + '%</span></td>' +
-      '<td class="num-cell" style="text-align:right">' + invCell(100,   avgYtd) + '</td>' +
-      '<td class="num-cell" style="text-align:right">' + multCell(100,  avgYtd) + '</td>' +
-      '<td class="num-cell" style="text-align:right">' + invCell(1000,  avgYtd) + '</td>' +
-      '<td class="num-cell" style="text-align:right">' + multCell(1000, avgYtd) + '</td>' +
-      '<td class="num-cell" style="text-align:right">' + invCell(10000, avgYtd) + '</td>' +
-      '<td class="num-cell" style="text-align:right">' + multCell(10000,avgYtd) + '</td>' +
-      '</tr>';
+    const totals = [100, 1000, 10000].map(inv => {
+      const total = sorted.reduce((sum, s) => sum + inv * (1 + s.ytdPct / 100), 0);
+      const pl    = total - inv * sorted.length;
+      const cls   = pl >= 0 ? 'pos' : 'neg';
+      return `<td class="inv-cell">
+        <span class="inv-value ${cls}">${fmtGbp(total)}</span>
+        <span class="inv-pl ${cls}">${fmtPl(pl)}</span>
+      </td>`;
+    }).join('');
+
+    document.getElementById('calc-foot').innerHTML = `<tr class="totals-row">
+      <td colspan="3"><span class="totals-label">Total (${sorted.length} stocks)</span></td>
+      <td></td><td></td>
+      ${totals}
+    </tr>`;
   }
 
   function buildCalc(stocks) {
-    calcData = stocks.map(s => ({
-      ticker: s.ticker,
-      name:   s.company_name || s.ticker,
-      sector: s.sector || '',
-      ytd:    s.change_ytd && !isNaN(parseFloat(s.change_ytd)) ? parseFloat(s.change_ytd) : null,
-    }));
+    window._calcData = stocks
+      .map(s => ({
+        ticker:  s.ticker,
+        name:    s.company_name || s.ticker,
+        sector:  s.sector || '',
+        ytdPct:  parseFloat(s.change_ytd) || 0,
+      }))
+      .filter(s => s.ytdPct !== 0);
     renderTable();
   }
 
@@ -317,14 +340,13 @@
 
   Promise.all(SECTORS.map(async sd => {
     try {
-      const text = await fetch(sd.path).then(r => r.text());
+      const text  = await fetch(sd.path).then(r => r.text());
       const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (!match) return [];
-      const data = JSON.parse(match[1]);
+      const data  = JSON.parse(match[1]);
       return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
     } catch(e) { return []; }
   })).then(results => buildCalc(results.flat()));
 </script>
-
 </body>
 </html>
