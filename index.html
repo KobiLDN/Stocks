@@ -52,15 +52,28 @@
     .theme-toggle { font-family: 'IBM Plex Mono', monospace; font-size: 18px; background: var(--surface); border: 1px solid var(--border); border-top: 2px solid var(--border); border-radius: 4px; color: var(--dim); cursor: pointer; width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.15s; opacity: 0.65; }
     .theme-toggle:hover { color: var(--accent); border-color: var(--accent); border-top-color: var(--accent); opacity: 1; background: var(--surface2); }
 
+    /* ── Sticky header shell ── */
+    .header-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--accent);
+    }
+
     /* ── Header ── */
     header {
-      border-bottom: 1px solid var(--accent);
-      padding: 28px 40px 24px;
+      padding: 14px 40px;
       max-width: 1920px;
       width: 100%;
       margin: 0 auto;
       position: relative;
+      display: flex;
+      align-items: center;
+      gap: 28px;
     }
+
+    .header-brand { flex-shrink: 0; }
 
     .header-label {
       font-family: 'IBM Plex Mono', monospace;
@@ -68,11 +81,11 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--dim);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 700;
       letter-spacing: -0.01em;
       border-left: 3px solid var(--accent);
@@ -83,9 +96,9 @@
 
     .header-sub {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--dim);
-      margin-top: 6px;
+      margin-top: 4px;
       padding-left: 15px;
     }
 
@@ -377,23 +390,26 @@
       color: var(--dim);
     }
 
-    /* ── Quick-nav sector strip ── */
+    /* ── Quick-nav sector strip (in header) ── */
     .sector-strip {
-      display: flex; flex-wrap: wrap; gap: 8px;
-      margin-bottom: 28px;
+      display: flex; flex-wrap: nowrap; gap: 6px;
+      flex: 1; overflow-x: auto;
+      /* hide scrollbar but allow scroll */
+      scrollbar-width: none;
     }
+    .sector-strip::-webkit-scrollbar { display: none; }
     .sector-pill {
       display: flex; flex-direction: column; align-items: center;
-      gap: 4px; padding: 10px 16px; min-width: 96px;
+      gap: 3px; padding: 8px 14px; min-width: 84px;
       background: var(--surface); border: 1px solid var(--border);
       text-decoration: none; color: var(--dim);
       font-family: 'IBM Plex Mono', monospace;
       font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
-      transition: all 0.15s; border-radius: 2px;
+      transition: all 0.15s; border-radius: 2px; flex-shrink: 0;
     }
     .sector-pill:hover { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
     .sector-pill.active { border-color: var(--accent); color: var(--accent); background: var(--surface2); }
-    .sector-pill-icon { font-size: 20px; line-height: 1; }
+    .sector-pill-icon { font-size: 18px; line-height: 1; }
     .sector-pill-name { white-space: nowrap; }
     .sector-pill-badge {
       font-size: 8px; padding: 1px 5px;
@@ -401,12 +417,16 @@
       border: 1px solid rgba(0,230,118,0.25); letter-spacing: 0.5px;
     }
 
+    @media (max-width: 900px) {
+      header { gap: 16px; padding: 12px 16px; }
+      h1 { font-size: 22px; }
+      .header-sub { display: none; }
+    }
     @media (max-width: 640px) {
       main { padding: 24px 16px; }
       .card-grid { grid-template-columns: 1fr; }
       .pt-name { display: none; }
-      .sector-strip { gap: 6px; }
-      .sector-pill { min-width: 72px; padding: 8px 10px; }
+      .sector-pill { min-width: 68px; padding: 6px 8px; }
     }
   </style>
 <!-- Preload all sector data as scripts so index.html works on file:// -->
@@ -444,61 +464,66 @@
 </head>
 <body>
 
-  <header>
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="position:absolute;top:28px;right:40px;">☾</button>
-    <div class="header-label">// Market Intelligence</div>
-    <h1>Stocks <span>Hub</span></h1>
-    <div class="header-sub">v1 &nbsp;·&nbsp; Select a sector<span id="last-updated-label"></span></div>
-  </header>
+  <div class="header-sticky">
+    <header>
+      <div class="header-brand">
+        <div class="header-label">// Market Intelligence</div>
+        <h1>Stocks <span>Hub</span></h1>
+        <div class="header-sub">v1 &nbsp;·&nbsp; Select a sector<span id="last-updated-label"></span></div>
+      </div>
+
+      <div class="sector-strip">
+        <a class="sector-pill active" href="index.html">
+          <span class="sector-pill-icon">⊞</span>
+          <span class="sector-pill-name">Stock Hub</span>
+        </a>
+        <a class="sector-pill" href="All/index.html">
+          <span class="sector-pill-icon">🌐</span>
+          <span class="sector-pill-name">All Sectors</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="AI/index.html">
+          <span class="sector-pill-icon">🤖</span>
+          <span class="sector-pill-name">AI Infra</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Biotech/index.html">
+          <span class="sector-pill-icon">🧬</span>
+          <span class="sector-pill-name">Biotech</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Defence/index.html">
+          <span class="sector-pill-icon">🛡️</span>
+          <span class="sector-pill-name">Defence</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Tech/index.html">
+          <span class="sector-pill-icon">💻</span>
+          <span class="sector-pill-name">Technology</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Crypto/index.html">
+          <span class="sector-pill-icon">₿</span>
+          <span class="sector-pill-name">Crypto</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Energy/index.html">
+          <span class="sector-pill-icon">⚡</span>
+          <span class="sector-pill-name">Energy</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="rss.html">
+          <span class="sector-pill-icon">📰</span>
+          <span class="sector-pill-name">RSS Feed</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+      </div>
+
+      <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="flex-shrink:0;margin-left:auto;">☾</button>
+    </header>
+  </div>
 
   <main>
-
-    <div class="sector-strip">
-      <a class="sector-pill active" href="index.html">
-        <span class="sector-pill-icon">⊞</span>
-        <span class="sector-pill-name">Stock Hub</span>
-      </a>
-      <a class="sector-pill" href="All/index.html">
-        <span class="sector-pill-icon">🌐</span>
-        <span class="sector-pill-name">All Sectors</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-      <a class="sector-pill" href="AI/index.html">
-        <span class="sector-pill-icon">🤖</span>
-        <span class="sector-pill-name">AI Infra</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-      <a class="sector-pill" href="Biotech/index.html">
-        <span class="sector-pill-icon">🧬</span>
-        <span class="sector-pill-name">Biotech</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-      <a class="sector-pill" href="Defence/index.html">
-        <span class="sector-pill-icon">🛡️</span>
-        <span class="sector-pill-name">Defence</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-      <a class="sector-pill" href="Tech/index.html">
-        <span class="sector-pill-icon">💻</span>
-        <span class="sector-pill-name">Technology</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-      <a class="sector-pill" href="Crypto/index.html">
-        <span class="sector-pill-icon">₿</span>
-        <span class="sector-pill-name">Crypto</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-      <a class="sector-pill" href="Energy/index.html">
-        <span class="sector-pill-icon">⚡</span>
-        <span class="sector-pill-name">Energy</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-      <a class="sector-pill" href="rss.html">
-        <span class="sector-pill-icon">📰</span>
-        <span class="sector-pill-name">RSS Feed</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
-    </div>
 
     <div class="top-panel">
       <div class="top-panel-header">
