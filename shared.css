@@ -415,10 +415,29 @@ body[data-layout="rail"] header nav {
 
 /* Filter bar sits inside header, below nav */
 body[data-layout="rail"] header .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   padding: 8px 16px;
   border-top: 1px solid var(--border);
   margin-bottom: 0;
 }
+
+.filter-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+}
+.filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+.filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
 
 /* Page body: left rail + scrollable main */
 body[data-layout="rail"] .page-body {
