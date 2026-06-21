@@ -3,55 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="All sectors stock heatmap — treemap visualisation of price movements across 192 stocks by AI, Biotech, Defence, Tech, Crypto, and Energy.">
+<meta name="description" content="All sectors stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across 192 stocks at a glance.">
 <title>All Sectors — Heatmap</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
 <style>
-  .metric-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
-  .metric-btn {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-    padding: 5px 14px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
+  .toolbar {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    margin-bottom: 16px; padding: 12px 16px;
+    background: var(--surface); border: 1px solid var(--border);
+    position: sticky; top: 36px; z-index: 50;
   }
-  .metric-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .toolbar-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
+  .metric-group { display: flex; gap: 2px; }
+  .metric-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 6px 14px; background: transparent; color: var(--muted); border: 1px solid var(--border); cursor: pointer; transition: all 0.2s;
+  }
+  .metric-btn:hover  { color: var(--accent); border-color: var(--accent); }
   .metric-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
 
-  .heatmap-section { margin-bottom: 40px; }
-  .section-label {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+  .size-note { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
+  .size-note em { color: var(--text); font-style: normal; }
+  .toolbar-ts { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; margin-left: auto; }
+  .toolbar-ts span { color: var(--accent); }
+
+  .legend { display: flex; align-items: center; gap: 8px; }
+  .leg-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; min-width: 28px; }
+  .leg-label.r { text-align: right; }
+  .leg-bar { width: 90px; height: 8px; background: linear-gradient(90deg, var(--red), var(--surface2), var(--green)); border: 1px solid var(--border); flex-shrink: 0; }
+
+  .section-hdr { display: flex; align-items: center; gap: 16px; margin: 32px 0 10px; }
+  .section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
+  .section-hdr-line { flex: 1; height: 1px; background: var(--border); }
+  .section-hdr-count { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
+
+  .map-wrap { width: 100%; border: 1px solid var(--border); background: var(--surface); overflow: hidden; margin-bottom: 4px; }
+  .map-wrap svg { display: block; }
+
+  .sector-block { margin-bottom: 24px; }
+  .sector-name {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; font-weight: 700;
+    color: var(--muted); text-transform: uppercase; padding: 8px 12px;
+    background: var(--surface2); border: 1px solid var(--border); border-bottom: none;
+    display: flex; align-items: center; gap: 10px;
   }
+  .sector-name .sc { color: var(--muted); font-weight: 400; font-size: 10px; }
 
-  .heatmap-wrap { width: 100%; overflow: hidden; }
-  .heatmap-wrap svg { display: block; width: 100%; }
-
-  .sector-heatmaps { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; margin-bottom: 40px; }
-  .sector-hm-block { }
-  .sector-hm-label {
-    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
-    text-transform: uppercase; font-weight: 700; margin-bottom: 8px;
+  .tooltip {
+    position: fixed; z-index: 500; background: var(--surface2); border: 1px solid var(--accent);
+    padding: 14px 18px; pointer-events: none; min-width: 200px; max-width: 260px;
   }
+  .tooltip.hidden { display: none; }
+  .tt-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+  .tt-company { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .tt-grid { display: grid; grid-template-columns: 1fr auto; gap: 5px 20px; }
+  .tt-key { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.5px; align-self: center; }
+  .tt-val { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; text-align: right; }
+  .tt-val.pos { color: var(--green); }
+  .tt-val.neg { color: var(--red); }
+  .tt-val.neu { color: var(--muted); }
+  .tt-divider { grid-column: 1/-1; height: 1px; background: var(--border); margin: 4px 0; }
+  .tt-price { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: var(--accent); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
 
-  .hm-legend { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
-  .hm-legend-item { display: flex; align-items: center; gap: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); }
-  .hm-legend-swatch { width: 12px; height: 12px; }
+  .empty-state { text-align: center; padding: 60px 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.7; border: 1px solid var(--border); }
 
-  #hm-tooltip {
-    position: fixed; z-index: 999; pointer-events: none;
-    background: var(--surface2); border: 1px solid var(--accent);
-    padding: 12px 16px; opacity: 0; transition: opacity 0.15s;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.5); min-width: 180px;
-  }
-  #hm-tooltip.visible { opacity: 1; }
-  .hm-tip-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
-  .hm-tip-name { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
-  .hm-tip-row { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 3px; }
-  .hm-tip-row span { color: var(--text); font-weight: 700; }
-  .hm-tip-pos { color: var(--green) !important; }
-  .hm-tip-neg { color: var(--red) !important; }
+  @media (max-width: 900px) { h1 { font-size: 26px; } .legend { display: none; } }
+  @media (max-width: 600px) { .metric-btn { padding: 5px 10px; font-size: 10px; } .size-note { display: none; } }
 </style>
 </head>
 <body>
@@ -62,7 +83,7 @@
   <div class="header-left">
     <div class="header-label">// Stock Universe</div>
     <h1>All <span>Heatmap</span></h1>
-    <div class="header-sub">192 stocks · tile size = % move · green = up · red = down</div>
+    <div class="header-sub"><span id="hm-stock-count">192</span> stocks · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
   </div>
   <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -104,254 +125,381 @@
 </a>
 </div>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · data from Yahoo Finance (yfinance), may be delayed · for research only · always consult a financial adviser</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
 </header>
+
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link active" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
+    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 192 stocks">📊 Dashboard</a>
+    <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
+    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 192 stocks with news sentiment scoring">📰 News</a>
+    <a href="signals.html"    class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
+    <a href="heatmap.html"    class="nav-link active" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
+    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </div>
 </nav>
 
 <div class="container">
 
-  <div class="metric-bar" id="metric-bar">
-    <button class="metric-btn" data-metric="1d" onclick="setMetric('1d',this)">1 Day</button>
-    <button class="metric-btn" data-metric="1w" onclick="setMetric('1w',this)">1 Week</button>
-    <button class="metric-btn" data-metric="1m" onclick="setMetric('1m',this)">1 Month</button>
-    <button class="metric-btn active" data-metric="ytd" onclick="setMetric('ytd',this)">YTD</button>
-    <button class="metric-btn" data-metric="1y" onclick="setMetric('1y',this)">1 Year</button>
+  <div class="toolbar">
+    <span class="toolbar-label">Colour by</span>
+    <div class="metric-group" id="metric-group">
+      <button class="metric-btn active" data-metric="1d">1D</button>
+      <button class="metric-btn" data-metric="1w">1W</button>
+      <button class="metric-btn" data-metric="1m">1M</button>
+      <button class="metric-btn" data-metric="ytd">YTD</button>
+      <button class="metric-btn" data-metric="1y">1Y</button>
+    </div>
+    <span class="size-note">Size = <em id="size-label">|1D %|</em></span>
+    <span class="toolbar-ts">Prices: <span id="heatmap-ts">—</span></span>
+    <div class="legend">
+      <span class="leg-label r" id="leg-neg">−5%</span>
+      <div class="leg-bar"></div>
+      <span class="leg-label" id="leg-pos">+5%</span>
+    </div>
   </div>
 
-  <div class="hm-legend">
-    <div class="hm-legend-item"><div class="hm-legend-swatch" style="background:#16a34a"></div> Positive</div>
-    <div class="hm-legend-item"><div class="hm-legend-swatch" style="background:#dc2626"></div> Negative</div>
-    <div class="hm-legend-item"><div class="hm-legend-swatch" style="background:#374151"></div> Flat / No data</div>
-    <div class="hm-legend-item" style="margin-left:auto;font-size:11px;">Tile size = |% move|</div>
+  <div class="section-hdr">
+    <span class="section-hdr-label">All Stocks</span>
+    <div class="section-hdr-line"></div>
+    <span class="section-hdr-count" id="hm-all-count">192 stocks</span>
   </div>
+  <div class="map-wrap" id="map-all"></div>
 
-  <div class="heatmap-section">
-    <div class="section-label">All 192 Stocks</div>
-    <div class="heatmap-wrap" id="hm-all"></div>
+  <div class="section-hdr" style="margin-top:48px;">
+    <span class="section-hdr-label">By Sector</span>
+    <div class="section-hdr-line"></div>
+    <span class="section-hdr-count" id="hm-sector-count">6 sectors</span>
   </div>
-
-  <div class="heatmap-section">
-    <div class="section-label">By Sector</div>
-    <div class="sector-heatmaps" id="hm-sectors"></div>
-  </div>
+  <div id="sectors-container"></div>
 
 </div>
 
-<div id="hm-tooltip">
-  <div class="hm-tip-ticker" id="tip-ticker"></div>
-  <div class="hm-tip-name"   id="tip-name"></div>
-  <div class="hm-tip-row">1D: <span id="tip-1d"></span></div>
-  <div class="hm-tip-row">1W: <span id="tip-1w"></span></div>
-  <div class="hm-tip-row">1M: <span id="tip-1m"></span></div>
-  <div class="hm-tip-row">YTD: <span id="tip-ytd"></span></div>
-  <div class="hm-tip-row">1Y: <span id="tip-1y"></span></div>
-  <div class="hm-tip-row" id="tip-mc-row">Mkt Cap: <span id="tip-mc"></span></div>
-</div>
+<div id="tooltip" class="tooltip hidden"></div>
 
 <script>
-  const METRICS_CFG = {
-    '1d':  { field: 'change_1d',   label: '1D',  threshold: 2   },
-    '1w':  { field: 'change_1w',   label: '1W',  threshold: 4   },
-    '1m':  { field: 'change_1m',   label: '1M',  threshold: 6   },
-    'ytd': { field: 'change_ytd',  label: 'YTD', threshold: 15  },
-    '1y':  { field: 'change_1yr',  label: '1Y',  threshold: 30  },
-  };
+const METRICS_CFG = {
+  '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },
+  '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },
+  '1m':  { field: 'change_1m',  label: '1M',  threshold: 20 },
+  'ytd': { field: 'change_ytd', label: 'YTD', threshold: 40 },
+  '1y':  { field: 'return_1yr', label: '1Y',  threshold: 60 },
+};
 
-  const SECTOR_COLORS = {
-    ai:      { pos: '#0e7490', neg: '#991b1b' },
-    biotech: { pos: '#065f46', neg: '#7f1d1d' },
-    defence: { pos: '#be123c', neg: '#7c3aed' },
-    tech:    { pos: '#4338ca', neg: '#9a3412' },
-    crypto:  { pos: '#92400e', neg: '#1e3a5f' },
-    energy:  { pos: '#78350f', neg: '#1c3d5a' },
-  };
+const SECTOR_DEFS = [
+  { key: 'ai',      label: 'AI Infrastructure', icon: '🤖' },
+  { key: 'biotech', label: 'Biotech',            icon: '🧬' },
+  { key: 'defence', label: 'Defence',            icon: '🛡️' },
+  { key: 'tech',    label: 'Technology',         icon: '💻' },
+  { key: 'crypto',  label: 'Crypto',             icon: '₿'  },
+  { key: 'energy',  label: 'Energy',             icon: '⚡' },
+];
 
-  const SECTOR_LABELS = {
-    ai: 'AI Infrastructure', biotech: 'Biotech', defence: 'Defence',
-    tech: 'Technology', crypto: 'Crypto', energy: 'Energy',
-  };
+const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
+function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
-  let activeMetric = localStorage.getItem('heatmap-metric') || 'ytd';
-  let allStocks = [];
+function parsePct(s) {
+  if (s == null || s === '' || s === '—' || s === 'N/A') return null;
+  const n = parseFloat(String(s).replace(/[%,\s]/g, ''));
+  return isNaN(n) ? null : n;
+}
 
-  function setMetric(m, btn) {
-    activeMetric = m;
-    localStorage.setItem('heatmap-metric', m);
-    document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderAll();
-  }
+function getVal(stock, metricId) {
+  const cfg = METRICS_CFG[metricId];
+  if (!cfg) return null;
+  return parsePct(stock[cfg.field]);
+}
 
-  function fmtPct(v) {
-    if (v === null || v === undefined || isNaN(v)) return '—';
-    return (v >= 0 ? '+' : '') + parseFloat(v).toFixed(2) + '%';
-  }
-  function fmtMC(v) {
-    if (!v) return '—';
-    if (v >= 1) return '£' + v.toFixed(1) + 'B';
-    return '£' + (v * 1000).toFixed(0) + 'M';
-  }
+function fmtPct(val) {
+  if (val === null) return '—';
+  return (val >= 0 ? '+' : '') + val.toFixed(2) + '%';
+}
 
-  function tileColor(pct, sector) {
-    if (pct === null || isNaN(pct)) return '#374151';
-    return pct >= 0 ? '#16a34a' : '#dc2626';
-  }
+function valCls(val) {
+  if (val === null) return 'neu';
+  return val > 0.049 ? 'pos' : val < -0.049 ? 'neg' : 'neu';
+}
 
-  function drawTreemap(stocks, containerId, height) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    container.innerHTML = '';
-    if (!stocks.length) { container.innerHTML = '<div style="padding:20px;font-family:IBM Plex Mono,monospace;color:var(--muted);font-size:12px;">No data</div>'; return; }
+function tileSize(stock, metricId) {
+  const v = getVal(stock, metricId);
+  return v === null ? 0.05 : Math.max(0.05, Math.abs(v));
+}
 
-    const cfg = METRICS_CFG[activeMetric];
-    const width = container.offsetWidth || 800;
-    const h = height || Math.max(200, Math.round(width * 0.38));
+function getCssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
 
-    const data = stocks.map(s => {
-      const val = parseFloat(s[cfg.field]);
-      const pct = isNaN(val) ? null : val;
-      return { ...s, pct, size: Math.max(0.05, Math.abs(pct || 0.05)) };
-    });
+function tileColor(val) {
+  if (val === null) return getCssVar('--surface');
+  if (val > 0) return getCssVar('--green');
+  if (val < 0) return getCssVar('--red');
+  return getCssVar('--surface2');
+}
 
-    const root = d3.hierarchy({ children: data }).sum(d => d.size || 0.05);
-    d3.treemap().size([width, h]).padding(1)(root);
+let activeMetric = localStorage.getItem('heatmap-metric') || '1d';
+let allStocks = [];
 
-    const svg = d3.select(container).append('svg')
-      .attr('viewBox', '0 0 ' + width + ' ' + h)
-      .attr('width', width).attr('height', h);
+function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
+  containerEl.innerHTML = '';
+  if (!stocks.length) return;
 
-    const tip = document.getElementById('hm-tooltip');
+  const W = explicitWidth || containerEl.clientWidth || 1200;
+  const H = height;
 
-    const cell = svg.selectAll('g').data(root.leaves()).enter().append('g')
-      .attr('transform', d => 'translate(' + d.x0 + ',' + d.y0 + ')')
-      .style('cursor', 'pointer')
-      .on('mousemove', function(event, d) {
-        document.getElementById('tip-ticker').textContent = d.data.ticker;
-        document.getElementById('tip-name').textContent   = d.data.company_name || '';
-        function tipPct(field) {
-          const v = parseFloat(d.data[field]);
-          if (isNaN(v)) return '—';
-          const el = document.getElementById('tip-' + field.replace('change_', '').replace('_', ''));
-          const fld = field.replace('change_', '').replace('_', '');
-          const span = document.getElementById('tip-' + fld);
-          return (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
-        }
-        document.getElementById('tip-1d').textContent  = fmtPct(d.data.change_1d);
-        document.getElementById('tip-1w').textContent  = fmtPct(d.data.change_1w);
-        document.getElementById('tip-1m').textContent  = fmtPct(d.data.change_1m);
-        document.getElementById('tip-ytd').textContent = fmtPct(d.data.change_ytd);
-        document.getElementById('tip-1y').textContent  = fmtPct(d.data.change_1yr);
-        document.getElementById('tip-mc').textContent  = fmtMC(d.data.market_cap_gbp_b);
-        const tw = 200, th = 180;
-        let left = event.clientX + 14, top = event.clientY - th / 2;
-        if (left + tw > window.innerWidth - 10) left = event.clientX - tw - 14;
-        top = Math.max(10, Math.min(top, window.innerHeight - th - 10));
-        tip.style.left = left + 'px'; tip.style.top = top + 'px';
-        tip.classList.add('visible');
-      })
-      .on('mouseleave', () => tip.classList.remove('visible'));
+  const root = d3.hierarchy({ children: stocks.map(s => ({ ...s })) })
+    .sum(d => tileSize(d, metricId))
+    .sort((a, b) => b.value - a.value);
 
-    cell.append('clipPath').attr('id', (d, i) => 'clip-' + containerId + i)
-      .append('rect').attr('width', d => Math.max(0, d.x1 - d.x0)).attr('height', d => Math.max(0, d.y1 - d.y0));
+  d3.treemap()
+    .size([W, H])
+    .paddingInner(1)
+    .paddingOuter(0)
+    .round(true)(root);
 
-    cell.append('rect')
-      .attr('width',  d => Math.max(0, d.x1 - d.x0))
-      .attr('height', d => Math.max(0, d.y1 - d.y0))
-      .attr('fill', d => tileColor(d.data.pct, d.data.sector))
-      .on('mouseover', function() { d3.select(this).attr('filter', 'brightness(1.25)'); })
-      .on('mouseout',  function() { d3.select(this).attr('filter', null); });
+  const leaves = root.leaves();
 
-    cell.filter(d => (d.x1 - d.x0) > 30 && (d.y1 - d.y0) > 18)
-      .append('text')
-      .attr('clip-path', (d, i) => 'url(#clip-' + containerId + i + ')')
-      .attr('x', 4).attr('y', 13)
-      .attr('font-family', 'IBM Plex Mono, monospace').attr('font-size', 10).attr('font-weight', '700')
-      .attr('fill', 'rgba(255,255,255,0.9)')
-      .text(d => d.data.ticker);
+  const svg = d3.select(containerEl)
+    .append('svg')
+    .attr('width', W)
+    .attr('height', H);
 
-    cell.filter(d => (d.x1 - d.x0) > 36 && (d.y1 - d.y0) > 30)
-      .append('text')
-      .attr('clip-path', (d, i) => 'url(#clip-' + containerId + i + ')')
-      .attr('x', 4).attr('y', 26)
-      .attr('font-family', 'IBM Plex Mono, monospace').attr('font-size', 9)
-      .attr('fill', 'rgba(255,255,255,0.7)')
-      .text(d => d.data.pct !== null ? fmtPct(d.data.pct) : '');
-  }
+  const tileG = svg.selectAll('.tile')
+    .data(leaves)
+    .enter()
+    .append('g')
+    .attr('class', 'tile')
+    .attr('transform', d => `translate(${d.x0},${d.y0})`)
+    .style('cursor', 'pointer')
+    .on('click',      (ev, d) => window.open(yahooUrl(d.data.ticker), '_blank', 'noopener'))
+    .on('mousemove',  (ev, d) => showTooltip(ev, d.data))
+    .on('mouseleave', hideTooltip);
 
-  function renderAll() {
-    drawTreemap(allStocks, 'hm-all', null);
-    renderSectors();
-  }
+  tileG.append('clipPath')
+    .attr('id', (d, i) => `c${containerEl.id}-${i}`)
+    .append('rect')
+    .attr('width',  d => Math.max(0, d.x1 - d.x0 - 2))
+    .attr('height', d => Math.max(0, d.y1 - d.y0 - 2))
+    .attr('x', 1).attr('y', 1);
 
-  function renderSectors() {
-    const sectorContainer = document.getElementById('hm-sectors');
-    sectorContainer.innerHTML = '';
-    const grouped = {};
-    allStocks.forEach(s => {
-      if (!grouped[s.sector]) grouped[s.sector] = [];
-      grouped[s.sector].push(s);
-    });
-    const order = ['ai', 'biotech', 'defence', 'tech', 'crypto', 'energy'];
-    order.forEach(key => {
-      if (!grouped[key] || !grouped[key].length) return;
-      const block = document.createElement('div');
-      block.className = 'sector-hm-block';
-      const label = document.createElement('div');
-      label.className = 'sector-hm-label';
-      label.style.color = 'var(--' + (key === 'ai' ? 'accent' : key === 'biotech' ? 'green' : key === 'defence' ? 'rose' : key === 'tech' ? 'indigo' : key === 'crypto' ? 'gold' : 'amber') + ')';
-      label.textContent = SECTOR_LABELS[key] || key;
-      block.appendChild(label);
-      const wrap = document.createElement('div');
-      wrap.className = 'heatmap-wrap';
-      wrap.id = 'hm-sector-' + key;
-      block.appendChild(wrap);
-      sectorContainer.appendChild(block);
-      drawTreemap(grouped[key], 'hm-sector-' + key, 220);
-    });
-  }
+  tileG.append('rect')
+    .attr('width',  d => Math.max(0, d.x1 - d.x0))
+    .attr('height', d => Math.max(0, d.y1 - d.y0))
+    .attr('fill',   d => tileColor(getVal(d.data, metricId)))
+    .attr('stroke', getCssVar('--bg'))
+    .attr('stroke-width', 0.5)
+    .on('mouseover', function() { d3.select(this).attr('filter', 'brightness(1.3)'); })
+    .on('mouseout',  function() { d3.select(this).attr('filter', null); });
 
-  const SECTOR_PATHS = [
-    { key: 'ai',      path: '../AI/prices-data.js'      },
-    { key: 'biotech', path: '../Biotech/prices-data.js'  },
-    { key: 'defence', path: '../Defence/prices-data.js'  },
-    { key: 'tech',    path: '../Tech/prices-data.js'     },
-    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
-    { key: 'energy',  path: '../Energy/prices-data.js'   },
-  ];
-
-  Promise.all(SECTOR_PATHS.map(async sd => {
-    try {
-      const text = await fetch(sd.path).then(r => r.text());
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (!match) return [];
-      const data = JSON.parse(match[1]);
-      return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
-    } catch(e) { return []; }
-  })).then(results => {
-    allStocks = results.flat();
-    document.querySelector('[data-metric="' + activeMetric + '"]')?.classList.add('active');
-    document.querySelectorAll('.metric-btn:not([data-metric="' + activeMetric + '"])').forEach(b => b.classList.remove('active'));
-    renderAll();
+  const CW = 0.62;
+  leaves.forEach(d => {
+    const w = d.x1 - d.x0, h = d.y1 - d.y0;
+    const vs = fmtPct(getVal(d.data, metricId));
+    const tRaw = Math.min((w * 0.60) / (d.data.ticker.length * CW), h * 0.30, 30);
+    const vRaw = Math.min((w * 0.60) / (vs.length * CW),            h * 0.22, 18);
+    d._tfs = (tRaw >= 8  && w >= 26 && h >= 18) ? tRaw : 0;
+    d._vfs = (d._tfs > 0 && vRaw >= 7 && h >= 32) ? vRaw : 0;
+    d._vs  = vs;
+    d._ty  = (d._tfs > 0 && d._vfs > 0) ? h * 0.37 : h * 0.50;
+    d._vy  = h * 0.64;
   });
 
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => renderAll(), 280);
+  tileG.append('text')
+    .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
+    .attr('x', d => (d.x1-d.x0)/2).attr('y', d => d._ty)
+    .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+    .attr('font-family', 'IBM Plex Sans, sans-serif').attr('font-weight', '400')
+    .attr('font-size', d => d._tfs || 0)
+    .attr('fill', d => d._tfs ? '#ffffff' : 'transparent')
+    .text(d => d.data.ticker);
+
+  tileG.append('text')
+    .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
+    .attr('x', d => (d.x1-d.x0)/2).attr('y', d => d._vy)
+    .attr('text-anchor', 'middle').attr('dominant-baseline', 'middle')
+    .attr('font-family', 'IBM Plex Sans, sans-serif')
+    .attr('font-size', d => d._vfs || 0)
+    .attr('fill', d => d._vfs ? '#ffffff' : 'transparent')
+    .text(d => d._vfs ? d._vs : '');
+}
+
+function drawSplit(el, stocks, metricId, H) {
+  el.innerHTML = '';
+  const gainers = stocks.filter(s => (getVal(s, metricId) ?? 0) >= 0);
+  const losers  = stocks.filter(s => (getVal(s, metricId) ?? 0) <  0);
+  const total   = gainers.length + losers.length || 1;
+  const W       = el.clientWidth || 1200;
+  const gW      = gainers.length ? Math.round(W * gainers.length / total) : 0;
+  const lW      = losers.length  ? W - gW : 0;
+  const wrap = document.createElement('div');
+  wrap.style.cssText = 'display:flex;gap:3px;height:' + H + 'px;';
+  el.appendChild(wrap);
+  if (gW > 0) {
+    const gDiv = document.createElement('div');
+    gDiv.id = (el.id || 'sp') + '-g';
+    gDiv.style.cssText = 'width:' + gW + 'px;flex-shrink:0;';
+    wrap.appendChild(gDiv);
+    drawTreemap(gDiv, gainers, metricId, H, gW);
+  }
+  if (lW > 0) {
+    const lDiv = document.createElement('div');
+    lDiv.id = (el.id || 'sp') + '-l';
+    lDiv.style.cssText = 'width:' + lW + 'px;flex-shrink:0;';
+    wrap.appendChild(lDiv);
+    drawTreemap(lDiv, losers, metricId, H, lW);
+  }
+}
+
+function renderAll(stocks, metricId) {
+  const el = document.getElementById('map-all');
+  const H  = Math.max(480, Math.min(660, Math.round(window.innerHeight * 0.58)));
+  el.style.height = H + 'px';
+  drawSplit(el, stocks, metricId, H);
+}
+
+function renderSectors(stocks, metricId) {
+  const container = document.getElementById('sectors-container');
+  container.innerHTML = '';
+
+  const groups = {};
+  stocks.forEach(s => {
+    const key = s.sector || 'other';
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(s);
   });
 
-  window._onThemeChange = () => renderAll();
+  SECTOR_DEFS.forEach(sd => {
+    const ss = groups[sd.key];
+    if (!ss || !ss.length) return;
+    const H = Math.max(180, Math.min(400, ss.length * 30));
+
+    const block = document.createElement('div');
+    block.className = 'sector-block';
+
+    const label = document.createElement('div');
+    label.className = 'sector-name';
+    label.innerHTML = sd.icon + ' ' + sd.label.toUpperCase() +
+      ' <span class="sc">· ' + ss.length + ' stock' + (ss.length !== 1 ? 's' : '') + '</span>';
+
+    const mapEl = document.createElement('div');
+    mapEl.className = 'map-wrap';
+    mapEl.id = 'sec-' + sd.key;
+    mapEl.style.height = H + 'px';
+
+    block.appendChild(label);
+    block.appendChild(mapEl);
+    container.appendChild(block);
+
+    drawSplit(mapEl, ss, metricId, H);
+  });
+}
+
+function renderAll2(metricId) {
+  renderAll(allStocks, metricId);
+  renderSectors(allStocks, metricId);
+  updateLegend(metricId);
+}
+
+function updateLegend(metricId) {
+  const cfg = METRICS_CFG[metricId];
+  document.getElementById('leg-neg').textContent  = '−' + cfg.threshold + '%';
+  document.getElementById('leg-pos').textContent  = '+' + cfg.threshold + '%';
+  document.getElementById('size-label').textContent = '|' + cfg.label + ' %|';
+}
+
+const ttEl = document.getElementById('tooltip');
+
+function showTooltip(event, stock) {
+  const rows = Object.entries(METRICS_CFG).map(([id, cfg]) => {
+    const val = getVal(stock, id);
+    return `<div class="tt-key">${cfg.label} %</div><div class="tt-val ${valCls(val)}">${fmtPct(val)}</div>`;
+  }).join('');
+
+  const price = parseFloat(stock.price_gbp);
+  const priceStr = !price || price <= 0 ? '—'
+    : price >= 100 ? '£' + price.toFixed(0)
+    : price >= 10  ? '£' + price.toFixed(2)
+    : price >= 1   ? '£' + price.toFixed(3)
+    : '£' + price.toFixed(4);
+
+  const mcap = parseFloat(stock.market_cap_gbp_b);
+  const mcapStr = (!mcap || mcap <= 0) ? ''
+    : `<div class="tt-divider"></div><div class="tt-key">Mkt Cap</div><div class="tt-val neu">£${mcap.toFixed(1)}B</div>`;
+
+  ttEl.innerHTML =
+    `<div class="tt-ticker">${stock.ticker}</div>` +
+    `<div class="tt-company">${stock.company_name || stock.ticker}</div>` +
+    `<div class="tt-grid">${rows}${mcapStr}</div>` +
+    `<div class="tt-price">${priceStr}</div>`;
+
+  ttEl.classList.remove('hidden');
+  positionTooltip(event);
+}
+
+function positionTooltip(ev) {
+  const pad = 14, tw = ttEl.offsetWidth, th = ttEl.offsetHeight;
+  let x = ev.clientX + pad, y = ev.clientY - th / 2;
+  if (x + tw > window.innerWidth  - 8) x = ev.clientX - tw - pad;
+  if (y < 8) y = 8;
+  if (y + th > window.innerHeight - 8) y = window.innerHeight - th - 8;
+  ttEl.style.left = x + 'px';
+  ttEl.style.top  = y + 'px';
+}
+
+function hideTooltip() { ttEl.classList.add('hidden'); }
+document.addEventListener('mousemove', ev => {
+  if (!ttEl.classList.contains('hidden')) positionTooltip(ev);
+});
+
+document.getElementById('metric-group').addEventListener('click', ev => {
+  const btn = ev.target.closest('.metric-btn');
+  if (!btn) return;
+  const m = btn.dataset.metric;
+  if (m === activeMetric) return;
+  activeMetric = m;
+  localStorage.setItem('heatmap-metric', m);
+  document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderAll2(m);
+});
+
+/* ── Multi-sector loading ── */
+const SECTOR_PATHS = [
+  { key: 'ai',      path: '../AI/prices-data.js'      },
+  { key: 'biotech', path: '../Biotech/prices-data.js'  },
+  { key: 'defence', path: '../Defence/prices-data.js'  },
+  { key: 'tech',    path: '../Tech/prices-data.js'     },
+  { key: 'crypto',  path: '../Crypto/prices-data.js'   },
+  { key: 'energy',  path: '../Energy/prices-data.js'   },
+];
+
+Promise.all(SECTOR_PATHS.map(async sd => {
+  try {
+    const text = await fetch(sd.path).then(r => r.text());
+    const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+    if (!match) return { stocks: [], updated: null };
+    const data = JSON.parse(match[1]);
+    return { stocks: (data.stocks || []).map(s => ({ ...s, sector: sd.key })), updated: data.updated };
+  } catch(e) { return { stocks: [], updated: null }; }
+})).then(results => {
+  allStocks = results.flatMap(r => r.stocks);
+  const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
+
+  const tsEl = document.getElementById('heatmap-ts');
+  if (tsEl) tsEl.textContent = updated;
+  const scEl  = document.getElementById('hm-stock-count');
+  const allEl = document.getElementById('hm-all-count');
+  if (scEl)  scEl.textContent  = allStocks.length;
+  if (allEl) allEl.textContent = allStocks.length + ' stocks';
+
+  document.querySelectorAll('.metric-btn').forEach(b => b.classList.toggle('active', b.dataset.metric === activeMetric));
+  renderAll2(activeMetric);
+
+  let t;
+  window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => renderAll2(activeMetric), 280); });
+});
+
+window._onThemeChange = () => renderAll2(activeMetric);
 </script>
-
 </body>
 </html>
