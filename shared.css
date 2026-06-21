@@ -369,7 +369,12 @@ a[href="calculator.html"].nav-link[data-tooltip]::before { left: auto; right: 16
 .theme-toggle:hover { color: var(--accent); border-color: var(--accent); border-top-color: var(--accent); opacity: 1; background: var(--surface2); }
 
 /* ---- Left-rail layout (opt-in: <body data-layout="rail">) ---- */
-body[data-layout="rail"] { height: 100%; overflow: hidden; }
+body[data-layout="rail"] {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
 body[data-layout="rail"] .sticky-top { position: static; }
 
