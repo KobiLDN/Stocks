@@ -46,7 +46,6 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 ├── CHANGELOG.md            ← change history (newest first)
 ├── FEATURES.md             ← backlog + done
 ├── branches.md             ← branch map + "push to all" convention
-├── kanban.md               ← task board
 └── MIGRATION.md            ← single-folder migration plan + reference prompt
 ```
 
