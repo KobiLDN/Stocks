@@ -202,6 +202,24 @@ h1 span { color: var(--accent); }
 }
 
 /* ---- Sector switcher — pill row ---- */
+
+/* ---- Left-rail sector pills (hub + rail pages) ---- */
+.sector-pill {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 3px; padding: 8px 6px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 2px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 8px;
+  letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--dim); text-decoration: none; transition: all 0.15s;
+}
+.sector-pill:hover { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
+.sector-pill.active { border-color: var(--accent); color: var(--accent); background: var(--surface2); pointer-events: none; }
+.sector-pill-icon  { font-size: 18px; line-height: 1; }
+.sector-pill-name  { white-space: nowrap; text-align: center; }
+.sector-pill-badge { font-size: 7px; padding: 1px 4px;
+                     background: rgba(0,230,118,0.1); color: var(--green);
+                     border: 1px solid rgba(0,230,118,0.25); letter-spacing: 0.5px; }
+
 .sector-switcher {
   display: flex;
   gap: 6px;
@@ -411,7 +429,7 @@ body[data-layout="rail"] .container {
   z-index: 20;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 20px 24px;
 }
 
 /* Data bar — auto-refresh status strip injected below <nav> on every page */
