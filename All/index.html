@@ -309,10 +309,8 @@
   @media (max-width: 768px) {
     .container { padding: 16px 12px; }
     .nav-inner { padding: 8px 12px; flex-wrap: wrap; }
-    header { padding: 20px 0 16px; }
     .header-inner { padding-left: 27px; }
     .header-inner::before { left: 12px; }
-    h1 { font-size: 26px; }
     .filter-btn { font-size: 10px; padding: 6px 10px; letter-spacing: 0; }
     table { font-size: 12px; }
     thead th { padding: 10px 8px; font-size: 10px; }
@@ -333,9 +331,9 @@
 <header>
 <div class="header-inner">
 <div class="header-left">
-<div class="header-label">// Stock Universe</div>
+<div class="header-label">// Market Intelligence</div>
 <h1>All <span>Sectors</span></h1>
-<div class="header-sub">192 stocks · AI, Biotech, Defence, Tech, Crypto &amp; Energy · GBP prices @ <span id="fx-rate">loading…</span></div>
+<div class="header-sub">v1 &nbsp;·&nbsp; Select a sector<span id="last-updated-label"></span></div>
 </div>
 <div class="sector-switcher">
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -377,7 +375,6 @@
 </a>
 </div>
 </div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
 </header>
 <nav>
 <div class="nav-inner">
@@ -673,8 +670,8 @@ async function loadAllSectors() {
 
 window.addEventListener('DOMContentLoaded', () => {
   loadAllSectors().then(data => {
-    const fxEl = document.getElementById('fx-rate');
-    if (fxEl) fxEl.textContent = '£1 = $' + data.fx_gbp_usd;
+    const tsEl = document.getElementById('last-updated-label');
+    if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + data.updated;
     document.getElementById('total-count').textContent = data.stocks.length;
     buildTable(data.stocks);
     const returnTh = document.querySelector('th[onclick*="\'return\'"]');
