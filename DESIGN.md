@@ -5,6 +5,63 @@ All pages must conform to these rules. When in doubt, match the hub exactly.
 
 ---
 
+## Spacing Reference
+
+Exact pixel values for every zone. Do not deviate.
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  TICKER TAPE  h=36px  │ item pad: 0 20px │ gap: 7px     │
+├─────────────────────────────────────────────────────────┤
+│  HEADER       pad: 12px 20px (top/btm: 12  left/right: 20)
+│  ├─ header-label  mb: 4px                               │
+│  ├─ h1         font: 26px                               │
+│  ├─ header-sub  mt: 4px  font: 11px                     │
+│  ├─ info blocks  pad: 6px 24px  gap: 4px  mr: 16px      │
+│  └─ theme toggle  44×44px                               │
+├────────┬────────────────────────────────────────────────┤
+│  RAIL  │  NAV   pad: 0 16px │ tab pad: 10px 16px        │
+│ w=92px ├────────────────────────────────────────────────┤
+│pad:    │                                                 │
+│8px 6px │  CONTENT   pad: 20px 24px                      │
+│gap:4px │                                                 │
+└────────┴────────────────────────────────────────────────┘
+```
+
+| Zone | Property | Value |
+|---|---|---|
+| Ticker tape | height | `36px` |
+| Ticker tape | item padding | `0 20px` |
+| Ticker tape | item gap (ticker · price · change) | `7px` |
+| Ticker tape | font size | `11px` IBM Plex Mono |
+| Body | padding-top (clears tape) | `36px` |
+| Header sticky | top | `36px` |
+| Header | padding | `12px 20px` |
+| Header label | margin-bottom | `4px` |
+| Header h1 | font-size | `26px` |
+| Header sub | margin-top | `4px` |
+| Header sub | font-size | `11px` |
+| Info block (each) | padding | `6px 24px` |
+| Info block (each) | internal gap (label → value) | `4px` |
+| Info blocks group | margin-right (before toggle) | `16px` |
+| Info block label | font-size | `9px` |
+| Info block value | font-size | `13px` |
+| Theme toggle | size | `44×44px` |
+| Left rail | width | `92px` |
+| Left rail | padding | `8px 6px` |
+| Left rail | gap between pills | `4px` |
+| Sector pill | padding | `8px 6px` |
+| Sector pill | internal gap (icon · name · badge) | `3px` |
+| Sector pill icon | font-size | `18px` |
+| Sector pill name | font-size | `8px` |
+| Sector pill badge | font-size | `7px`, padding `1px 4px` |
+| Nav bar | padding | `0 16px` |
+| Nav tab | padding | `10px 16px` |
+| Nav tab | active underline | `border-bottom: 2px solid var(--accent)` |
+| Content area | padding | `20px 24px` |
+
+---
+
 ## Layout: Layer Stack (top → bottom)
 
 ```
