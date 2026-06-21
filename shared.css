@@ -378,16 +378,43 @@ body[data-layout="rail"] {
 
 body[data-layout="rail"] .sticky-top { position: static; }
 
-body[data-layout="rail"] header { padding: 12px 20px; }
+/* Header becomes a flex column: brand row → nav row → filter row */
+body[data-layout="rail"] header {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
 
 body[data-layout="rail"] .header-inner {
-  padding: 0;
+  padding: 12px 20px;
   max-width: none;
   justify-content: space-between;
 }
 body[data-layout="rail"] .header-inner::before { display: none; }
 body[data-layout="rail"] .header-label { color: var(--accent); }
 
+/* Nav sits inside header, below brand row */
+body[data-layout="rail"] header nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 16px;
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  background: var(--bg);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+/* Filter bar sits inside header, below nav */
+body[data-layout="rail"] header .filter-bar {
+  padding: 8px 16px;
+  border-top: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+/* Page body: left rail + scrollable main */
 body[data-layout="rail"] .page-body {
   display: flex;
   flex: 1;
@@ -409,36 +436,15 @@ body[data-layout="rail"] .left-rail {
 }
 body[data-layout="rail"] .left-rail::-webkit-scrollbar { display: none; }
 
+/* page-main is the scroll container — same as hub's <main> */
 body[data-layout="rail"] .page-main {
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto;
   min-width: 0;
-  overflow: hidden;
-}
-
-body[data-layout="rail"] .page-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  overflow: hidden;
 }
 
 body[data-layout="rail"] .container {
-  flex: 1;
-  overflow-y: auto;
   padding: 20px 24px;
-}
-
-body[data-layout="rail"] .container nav {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  margin: -20px -24px 20px;
-  padding: 0 24px;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
 }
 
 /* ---- Content container ---- */
