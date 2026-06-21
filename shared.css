@@ -412,20 +412,28 @@ body[data-layout="rail"] .page-main {
   overflow: hidden;
 }
 
-body[data-layout="rail"] nav {
-  flex-shrink: 0;
-  position: static;
+body[data-layout="rail"] .page-main {
+  flex: 1;
   display: flex;
-  align-items: center;
-  gap: 2px;
-  padding: 0 4px;
-  border-bottom: none;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
 }
 
 body[data-layout="rail"] .container {
   flex: 1;
   overflow-y: auto;
-  padding-top: 16px;
+  padding: 20px 24px;
+}
+
+body[data-layout="rail"] .container nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: -20px -24px 20px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
 }
 
 /* ---- Content container ---- */
