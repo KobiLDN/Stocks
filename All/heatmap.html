@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="All Sectors heatmap — visualise performance across 192 stocks and coins across AI, Biotech, Defence, Tech, Crypto, and Energy." name="description"/>
+<title>All Sectors — Heatmap</title>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="../shared.css" rel="stylesheet"/>
+<script defer src="../shared.js"></script>
+<style>
+  .toolbar {
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    margin-bottom:16px; padding:12px 16px;
+    background:var(--surface); border:1px solid var(--border);
+    position:sticky; top:36px; z-index:50;
+  }
+  .toolbar-label { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; color:var(--muted); text-transform:uppercase; white-space:nowrap; }
+  .metric-group { display:flex; gap:2px; }
+  .metric-btn {
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+    padding:6px 14px; background:transparent; color:var(--muted); border:1px solid var(--border); cursor:pointer; transition:all 0.2s;
+  }
+  .metric-btn:hover  { color:var(--accent); border-color:var(--accent); }
+  .metric-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
+
+  .sector-group { display:flex; gap:2px; flex-wrap:wrap; }
+  .sector-btn {
+    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase;
+    padding:5px 10px; background:transparent; color:var(--muted); border:1px solid var(--border); cursor:pointer; transition:all 0.2s;
+  }
+  .sector-btn:hover  { color:var(--accent); border-color:var(--accent); }
+  .sector-btn.active { background:var(--accent); color:var(--bg); border-color:var(--accent); font-weight:700; }
+  .sector-btn[data-s="AI"].active      { background:#00d4ff; border-color:#00d4ff; color:#000; }
+  .sector-btn[data-s="Biotech"].active { background:#a78bfa; border-color:#a78bfa; color:#000; }
+  .sector-btn[data-s="Defence"].active { background:#f87171; border-color:#f87171; color:#000; }
+  .sector-btn[data-s="Tech"].active    { background:#60a5fa; border-color:#60a5fa; color:#000; }
+  .sector-btn[data-s="Crypto"].active  { background:#fb923c; border-color:#fb923c; color:#000; }
+  .sector-btn[data-s="Energy"].active  { background:#facc15; border-color:#facc15; color:#000; }
+
+  .legend { display:flex; align-items:center; gap:8px; margin-left:auto; }
+  .leg-label { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); white-space:nowrap; min-width:28px; }
+  .leg-label.r { text-align:right; }
+  .leg-bar { width:90px; height:8px; background:linear-gradient(90deg,var(--red),var(--surface2),var(--green)); border:1px solid var(--border); flex-shrink:0; }
+
+  .toolbar-ts { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--muted); white-space:nowrap; }
+  .toolbar-ts span { color:var(--accent); }
+
+  #heatmap-wrap { width:100%; overflow:hidden; }
+  #heatmap-wrap svg { display:block; width:100%; height:auto; }
+
+  .tooltip {
+    position:fixed; pointer-events:none; background:var(--surface2); border:1px solid var(--accent);
+    border-radius:4px; padding:10px 14px; font-family:'IBM Plex Mono',monospace; font-size:12px;
+    color:var(--text); z-index:200; display:none; line-height:1.6; min-width:140px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .loading { padding:48px; text-align:center; font-family:'IBM Plex Mono',monospace; color:var(--muted); font-size:13px; }
+  footer { margin-top:48px; padding:24px; border:1px solid var(--border); background:var(--surface); font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); line-height:1.6; }
+  footer strong { color:var(--accent2); }
+</style>
+</head>
+<body>
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<header>
+<div class="header-inner">
+  <div class="header-left">
+    <div class="header-label">// Stock Universe</div>
+    <h1>All <span>Sectors</span></h1>
+    <div class="header-sub">Heatmap · <span id="version">v1.0</span></div>
+  </div>
+  <div class="sector-switcher">
+    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+    <a class="sector-card hub-card" href="../index.html"><div class="sector-card-top"><span class="sector-card-icon">⊞</span></div><div class="sector-card-name">Stock Hub</div></a>
+    <a class="sector-card" href="../rss.html"><div class="sector-card-top"><span class="sector-card-icon">📰</span></div><div class="sector-card-name">RSS</div></a>
+    <a class="sector-card active" href="index.html"><div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">All Sectors</div></a>
+    <a class="sector-card" href="../AI/index.html"><div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">AI Infrastructure</div></a>
+    <a class="sector-card" href="../Defence/index.html"><div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Defence</div></a>
+    <a class="sector-card" href="../Biotech/index.html"><div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Biotech</div></a>
+    <a class="sector-card" href="../Tech/index.html"><div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Technology</div></a>
+    <a class="sector-card" href="../Crypto/index.html"><div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Crypto</div></a>
+    <a class="sector-card" href="../Energy/index.html"><div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div><div class="sector-card-name">Energy</div></a>
+  </div>
+</div>
+<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
+</header>
+<nav>
+<div class="nav-inner">
+  <a class="nav-link" href="index.html">📊 Dashboard</a>
+  <a class="nav-link" href="metrics.html">📋 Metrics</a>
+  <a class="nav-link" href="news.html">📰 News</a>
+  <a class="nav-link" href="signals.html">🎯 Signals</a>
+  <a class="nav-link active" href="heatmap.html">🔥 Heatmap</a>
+  <a class="nav-link" href="charts.html">📈 Charts</a>
+  <a class="nav-link" href="calculator.html">🧮 What-If</a>
+</div>
+</nav>
+<div class="container">
+  <div class="toolbar">
+    <span class="toolbar-label">Metric</span>
+    <div class="metric-group">
+      <button class="metric-btn" data-m="change_1d"   onclick="setMetric('change_1d',this)">1D</button>
+      <button class="metric-btn" data-m="change_1w"   onclick="setMetric('change_1w',this)">1W</button>
+      <button class="metric-btn" data-m="change_1m"   onclick="setMetric('change_1m',this)">1M</button>
+      <button class="metric-btn active" data-m="change_ytd" onclick="setMetric('change_ytd',this)">YTD</button>
+      <button class="metric-btn" data-m="return_1yr"  onclick="setMetric('return_1yr',this)">1Y</button>
+    </div>
+    <span class="toolbar-label" style="margin-left:8px">Sector</span>
+    <div class="sector-group">
+      <button class="sector-btn active" data-s="all" onclick="setSector('all',this)">All</button>
+      <button class="sector-btn" data-s="AI"      onclick="setSector('AI',this)">AI</button>
+      <button class="sector-btn" data-s="Biotech" onclick="setSector('Biotech',this)">Biotech</button>
+      <button class="sector-btn" data-s="Defence" onclick="setSector('Defence',this)">Defence</button>
+      <button class="sector-btn" data-s="Tech"    onclick="setSector('Tech',this)">Tech</button>
+      <button class="sector-btn" data-s="Crypto"  onclick="setSector('Crypto',this)">Crypto</button>
+      <button class="sector-btn" data-s="Energy"  onclick="setSector('Energy',this)">Energy</button>
+    </div>
+    <div class="legend">
+      <span class="leg-label r">-50%</span>
+      <div class="leg-bar"></div>
+      <span class="leg-label">+50%</span>
+    </div>
+    <span class="toolbar-ts">Updated <span id="ts-label">—</span></span>
+  </div>
+  <div id="heatmap-wrap"><div class="loading">Loading heatmap…</div></div>
+</div>
+<div class="tooltip" id="tooltip"></div>
+<footer><strong>Heatmap:</strong> tile size = market cap (or equal weight if unavailable). Colour = return for selected period. Hover for details. <strong>Not financial advice.</strong></footer>
+<script>
+const SECTORS_LIST = ['AI','Biotech','Defence','Tech','Crypto','Energy'];
+const SECTOR_COLORS = { AI:'#00d4ff', Biotech:'#a78bfa', Defence:'#f87171', Tech:'#60a5fa', Crypto:'#fb923c', Energy:'#facc15' };
+
+let allStocks = [];
+let currentMetric = 'change_ytd';
+let currentSector = 'all';
+
+async function loadData() {
+  const responses = await Promise.all(SECTORS_LIST.map(s => fetch('../' + s + '/prices-data.js')));
+  const results = await Promise.all(responses.map(async (res, i) => {
+    const text = await res.text();
+    const m = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\});?\s*$/);
+    if (!m) return [];
+    const data = JSON.parse(m[1]);
+    return (data.stocks || []).map(st => ({ ...st, sector: SECTORS_LIST[i], updated: data.updated }));
+  }));
+  allStocks = results.flat();
+  const latest = allStocks.map(s => s.updated).filter(Boolean).sort().pop() || '';
+  document.getElementById('ts-label').textContent = latest;
+  drawHeatmap();
+}
+
+function parseVal(v) {
+  if (v == null) return null;
+  const n = parseFloat(String(v).replace(/[^0-9.-]/g,''));
+  return isNaN(n) ? null : n;
+}
+
+function drawHeatmap() {
+  const wrap = document.getElementById('heatmap-wrap');
+  const stocks = currentSector === 'all' ? allStocks : allStocks.filter(s => s.sector === currentSector);
+  if (!stocks.length) { wrap.innerHTML = '<div class="loading">No data.</div>'; return; }
+
+  const W = wrap.clientWidth || 1200;
+  const nodes = stocks.map(s => ({
+    id: s.ticker,
+    sector: s.sector,
+    name: s.company_name || s.ticker,
+    val: parseVal(s[currentMetric]),
+    cap: parseFloat(s.market_cap_gbp_b) || 1,
+  })).filter(n => n.val !== null);
+
+  const colorScale = d3.scaleLinear()
+    .domain([-50, 0, 50])
+    .range(['#dc2626', '#1e293b', '#16a34a'])
+    .clamp(true);
+
+  // Treemap
+  const totalCap = d3.sum(nodes, n => n.cap);
+  const root = d3.hierarchy({ children: nodes }).sum(d => d.cap || 1);
+  const H = Math.max(400, Math.round(W * 0.55));
+  d3.treemap().size([W, H]).padding(2).round(true)(root);
+
+  const svg = d3.create('svg').attr('viewBox', '0 0 ' + W + ' ' + H).attr('width', W).attr('height', H);
+  const tooltip = document.getElementById('tooltip');
+
+  svg.selectAll('g')
+    .data(root.leaves())
+    .join('g')
+    .attr('transform', d => 'translate(' + d.x0 + ',' + d.y0 + ')')
+    .call(g => {
+      g.append('rect')
+        .attr('width', d => Math.max(0, d.x1 - d.x0))
+        .attr('height', d => Math.max(0, d.y1 - d.y0))
+        .attr('fill', d => colorScale(d.data.val))
+        .attr('stroke', d => SECTOR_COLORS[d.data.sector] || 'transparent')
+        .attr('stroke-width', 1)
+        .style('cursor', 'pointer')
+        .on('mousemove', (event, d) => {
+          const sign = d.data.val >= 0 ? '+' : '';
+          tooltip.style.display = 'block';
+          tooltip.style.left = (event.clientX + 14) + 'px';
+          tooltip.style.top = (event.clientY - 10) + 'px';
+          tooltip.innerHTML =
+            '<div style="font-weight:700;font-size:14px;margin-bottom:4px">' + d.data.id + '</div>' +
+            '<div style="color:var(--muted);font-size:10px;margin-bottom:6px">' + d.data.name + '</div>' +
+            '<div style="color:var(--muted);font-size:10px">' + d.data.sector + '</div>' +
+            '<div style="font-size:13px;font-weight:700;margin-top:4px;color:' + (d.data.val >= 0 ? 'var(--green)' : 'var(--red)') + '">' + sign + d.data.val.toFixed(2) + '%</div>';
+        })
+        .on('mouseleave', () => { tooltip.style.display = 'none'; });
+
+      g.append('text')
+        .attr('x', d => (d.x1 - d.x0) / 2)
+        .attr('y', d => (d.y1 - d.y0) / 2 - 4)
+        .attr('text-anchor', 'middle')
+        .attr('dominant-baseline', 'middle')
+        .attr('font-family', "'IBM Plex Mono', monospace")
+        .attr('font-weight', '700')
+        .attr('fill', '#fff')
+        .attr('pointer-events', 'none')
+        .style('font-size', d => Math.min(14, Math.max(8, (d.x1-d.x0)/4)) + 'px')
+        .text(d => (d.x1 - d.x0) > 30 && (d.y1 - d.y0) > 20 ? d.data.id : '');
+
+      g.append('text')
+        .attr('x', d => (d.x1 - d.x0) / 2)
+        .attr('y', d => (d.y1 - d.y0) / 2 + 14)
+        .attr('text-anchor', 'middle')
+        .attr('dominant-baseline', 'middle')
+        .attr('font-family', "'IBM Plex Mono', monospace")
+        .attr('fill', 'rgba(255,255,255,0.75)')
+        .attr('pointer-events', 'none')
+        .style('font-size', d => Math.min(11, Math.max(7, (d.x1-d.x0)/5)) + 'px')
+        .text(d => {
+          if ((d.x1-d.x0) < 40 || (d.y1-d.y0) < 32) return '';
+          const sign = d.data.val >= 0 ? '+' : '';
+          return sign + d.data.val.toFixed(1) + '%';
+        });
+    });
+
+  wrap.innerHTML = '';
+  wrap.appendChild(svg.node());
+}
+
+function setMetric(m, btn) {
+  document.querySelectorAll('.metric-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentMetric = m;
+  drawHeatmap();
+}
+function setSector(s, btn) {
+  document.querySelectorAll('.sector-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentSector = s;
+  drawHeatmap();
+}
+
+loadData();
+window.addEventListener('resize', () => { if (allStocks.length) drawHeatmap(); });
+</script>
+</body>
+</html>
