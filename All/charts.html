@@ -37,6 +37,10 @@
   .stock-name { font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   .chart-main { display: flex; flex-direction: column; }
+  .chart-controls {
+    display: flex; align-items: center; gap: 8px; padding: 6px 16px;
+    border-top: 1px solid var(--border);
+  }
   .chart-toolbar {
     display: flex; align-items: center; gap: 8px; padding: 10px 14px;
     background: var(--surface2); border-bottom: 1px solid var(--border); flex-wrap: wrap;
@@ -119,6 +123,16 @@
     <a href="charts.html" class="nav-link active" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
 </nav>
+<div class="chart-controls">
+  <span class="chart-ticker-label" id="chart-ticker-label">—</span>
+  <button class="tf-btn" data-tf="1W" onclick="setActiveTf('1W',this)">1W</button>
+  <button class="tf-btn active" data-tf="12M" onclick="setActiveTf('12M',this)">1Y</button>
+  <button class="tf-btn" data-tf="60M" onclick="setActiveTf('60M',this)">5Y</button>
+  <div class="view-toggle">
+    <button class="view-btn active" onclick="setView('single',this)">Single</button>
+    <button class="view-btn" onclick="setView('grid',this)">Grid</button>
+  </div>
+</div>
 </header>
 <div class="page-body">
 
@@ -181,29 +195,10 @@
     </div>
 
     <div class="single-view" id="single-view">
-      <div class="chart-toolbar">
-        <span class="chart-ticker-label" id="chart-ticker-label">—</span>
-        <button class="tf-btn" data-tf="1W" onclick="setTf('1W',this)">1W</button>
-        <button class="tf-btn active" data-tf="12M" onclick="setTf('12M',this)">1Y</button>
-        <button class="tf-btn" data-tf="60M" onclick="setTf('60M',this)">5Y</button>
-        <div class="view-toggle">
-          <button class="view-btn active" onclick="setView('single',this)">Single</button>
-          <button class="view-btn" onclick="setView('grid',this)">Grid</button>
-        </div>
-      </div>
       <div id="chart-container"></div>
     </div>
 
     <div class="grid-view" id="grid-view">
-      <div class="chart-toolbar">
-        <button class="tf-btn" data-tf="1W" onclick="setGridTf('1W',this)">1W</button>
-        <button class="tf-btn active" data-tf="12M" onclick="setGridTf('12M',this)">1Y</button>
-        <button class="tf-btn" data-tf="60M" onclick="setGridTf('60M',this)">5Y</button>
-        <div class="view-toggle">
-          <button class="view-btn" onclick="setView('single',this)">Single</button>
-          <button class="view-btn active" onclick="setView('grid',this)">Grid</button>
-        </div>
-      </div>
       <div id="grid-body"></div>
     </div>
   </div>
@@ -241,16 +236,20 @@
     return ticker;
   }
 
-  function setTf(tf, btn) {
+  function setActiveTf(tf, btn) {
+    if (activeView === 'grid') setGridTf(tf, btn);
+    else setTf(tf, btn);
+  }
+    function setTf(tf, btn) {
     activeTf = tf;
-    document.querySelectorAll('#single-view .tf-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.chart-controls .tf-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     if (activeTicker) loadChart(activeTicker);
   }
 
   function setGridTf(tf, btn) {
     activeGridTf = tf;
-    document.querySelectorAll('#grid-view .tf-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.chart-controls .tf-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     buildGridView();
   }
