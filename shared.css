@@ -387,11 +387,15 @@ body[data-layout="rail"] header {
 }
 
 body[data-layout="rail"] .header-inner {
+  display: flex;
+  align-items: center;
   padding: 12px 20px;
   max-width: none;
-  justify-content: space-between;
+  margin: 0;
+  gap: 20px;
 }
 body[data-layout="rail"] .header-inner::before { display: none; }
+body[data-layout="rail"] .header-left { margin-right: auto; }
 body[data-layout="rail"] .header-label { color: var(--accent); }
 
 /* Nav sits inside header, below brand row */
@@ -445,6 +449,8 @@ body[data-layout="rail"] .page-main {
 
 body[data-layout="rail"] .container {
   padding: 20px 24px;
+  margin: 0;
+  max-width: none;
 }
 
 /* ---- Content container ---- */
