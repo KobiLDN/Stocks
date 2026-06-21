@@ -390,35 +390,46 @@
       color: var(--dim);
     }
 
-    /* ── Quick-nav sector strip (in header) ── */
-    .sector-strip {
-      display: flex; flex-wrap: nowrap; gap: 6px;
-      flex: 1; overflow-x: auto;
-      /* hide scrollbar but allow scroll */
-      scrollbar-width: none;
+    /* ── Hub layout: left rail + scrollable main ── */
+    html, body { height: 100%; }
+    body { overflow: hidden; }
+    .hub-body { display: flex; flex: 1; min-height: 0; overflow: hidden; }
+
+    /* Left rail */
+    .left-rail {
+      width: 92px; flex-shrink: 0;
+      border-right: 1px solid var(--border);
+      background: var(--bg);
+      display: flex; flex-direction: column;
+      padding: 8px 6px; gap: 4px;
+      overflow-y: auto; scrollbar-width: none;
     }
-    .sector-strip::-webkit-scrollbar { display: none; }
+    .left-rail::-webkit-scrollbar { display: none; }
+
     .sector-pill {
       display: flex; flex-direction: column; align-items: center;
-      gap: 3px; padding: 8px 14px; min-width: 84px;
+      gap: 3px; padding: 8px 6px;
       background: var(--surface); border: 1px solid var(--border);
       text-decoration: none; color: var(--dim);
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
-      transition: all 0.15s; border-radius: 2px; flex-shrink: 0;
+      font-size: 8px; letter-spacing: 1.2px; text-transform: uppercase;
+      transition: all 0.15s; border-radius: 2px;
     }
     .sector-pill:hover { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
     .sector-pill.active { border-color: var(--accent); color: var(--accent); background: var(--surface2); }
     .sector-pill-icon { font-size: 18px; line-height: 1; }
-    .sector-pill-name { white-space: nowrap; }
+    .sector-pill-name { white-space: nowrap; text-align: center; }
     .sector-pill-badge {
-      font-size: 8px; padding: 1px 5px;
+      font-size: 7px; padding: 1px 4px;
       background: rgba(0,230,118,0.1); color: var(--green);
       border: 1px solid rgba(0,230,118,0.25); letter-spacing: 0.5px;
     }
 
+    /* Main scrolls inside the flex body */
+    main { overflow-y: auto; }
+
     @media (max-width: 900px) {
-      header { gap: 16px; padding: 12px 16px; }
+      header { padding: 12px 16px; }
       h1 { font-size: 22px; }
       .header-sub { display: none; }
     }
@@ -426,7 +437,7 @@
       main { padding: 24px 16px; }
       .card-grid { grid-template-columns: 1fr; }
       .pt-name { display: none; }
-      .sector-pill { min-width: 68px; padding: 6px 8px; }
+      .left-rail { width: 72px; }
     }
   </style>
 <!-- Preload all sector data as scripts so index.html works on file:// -->
@@ -471,57 +482,58 @@
         <h1>Stocks <span>Hub</span></h1>
         <div class="header-sub">v1 &nbsp;·&nbsp; Select a sector<span id="last-updated-label"></span></div>
       </div>
-
-      <div class="sector-strip">
-        <a class="sector-pill active" href="index.html">
-          <span class="sector-pill-icon">⊞</span>
-          <span class="sector-pill-name">Stock Hub</span>
-        </a>
-        <a class="sector-pill" href="All/index.html">
-          <span class="sector-pill-icon">🌐</span>
-          <span class="sector-pill-name">All Sectors</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-        <a class="sector-pill" href="AI/index.html">
-          <span class="sector-pill-icon">🤖</span>
-          <span class="sector-pill-name">AI Infra</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-        <a class="sector-pill" href="Biotech/index.html">
-          <span class="sector-pill-icon">🧬</span>
-          <span class="sector-pill-name">Biotech</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-        <a class="sector-pill" href="Defence/index.html">
-          <span class="sector-pill-icon">🛡️</span>
-          <span class="sector-pill-name">Defence</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-        <a class="sector-pill" href="Tech/index.html">
-          <span class="sector-pill-icon">💻</span>
-          <span class="sector-pill-name">Technology</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-        <a class="sector-pill" href="Crypto/index.html">
-          <span class="sector-pill-icon">₿</span>
-          <span class="sector-pill-name">Crypto</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-        <a class="sector-pill" href="Energy/index.html">
-          <span class="sector-pill-icon">⚡</span>
-          <span class="sector-pill-name">Energy</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-        <a class="sector-pill" href="rss.html">
-          <span class="sector-pill-icon">📰</span>
-          <span class="sector-pill-name">RSS Feed</span>
-          <span class="sector-pill-badge">Live</span>
-        </a>
-      </div>
-
       <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="flex-shrink:0;margin-left:auto;">☾</button>
     </header>
   </div>
+
+  <div class="hub-body">
+
+    <div class="left-rail">
+      <a class="sector-pill active" href="index.html">
+        <span class="sector-pill-icon">⊞</span>
+        <span class="sector-pill-name">Stock Hub</span>
+      </a>
+      <a class="sector-pill" href="All/index.html">
+        <span class="sector-pill-icon">🌐</span>
+        <span class="sector-pill-name">All Sectors</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="AI/index.html">
+        <span class="sector-pill-icon">🤖</span>
+        <span class="sector-pill-name">AI Infra</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Biotech/index.html">
+        <span class="sector-pill-icon">🧬</span>
+        <span class="sector-pill-name">Biotech</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Defence/index.html">
+        <span class="sector-pill-icon">🛡️</span>
+        <span class="sector-pill-name">Defence</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Tech/index.html">
+        <span class="sector-pill-icon">💻</span>
+        <span class="sector-pill-name">Technology</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Crypto/index.html">
+        <span class="sector-pill-icon">₿</span>
+        <span class="sector-pill-name">Crypto</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Energy/index.html">
+        <span class="sector-pill-icon">⚡</span>
+        <span class="sector-pill-name">Energy</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="rss.html">
+        <span class="sector-pill-icon">📰</span>
+        <span class="sector-pill-name">RSS Feed</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+    </div>
 
   <main>
 
@@ -682,26 +694,29 @@
       </a>
 
     </div>
+
+    <div style="padding:0 40px 16px;">
+      <a href="exports/index.html" style="
+        display:flex;align-items:center;justify-content:space-between;
+        background:var(--surface);border:1px solid var(--border);
+        padding:14px 20px;text-decoration:none;color:inherit;
+        font-family:'IBM Plex Mono',monospace;font-size:12px;
+        transition:border-color 0.15s,background 0.15s;">
+        <span>
+          <span style="color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;">Data Export</span>
+          <span style="color:var(--muted);margin-left:16px;">176 stocks · metrics · what-if returns · news sentiment · AI signals</span>
+        </span>
+        <span style="color:var(--accent);font-size:14px;">→</span>
+      </a>
+    </div>
+
+    <footer>
+      stocks-4qw.pages.dev &nbsp;·&nbsp; prices in GBP
+    </footer>
+
   </main>
 
-  <div style="max-width:1920px;margin:24px auto 0;padding:0 24px;">
-    <a href="exports/index.html" style="
-      display:flex;align-items:center;justify-content:space-between;
-      background:var(--surface);border:1px solid var(--border);
-      padding:14px 20px;text-decoration:none;color:inherit;
-      font-family:'IBM Plex Mono',monospace;font-size:12px;
-      transition:border-color 0.15s,background 0.15s;">
-      <span>
-        <span style="color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;">Data Export</span>
-        <span style="color:var(--muted);margin-left:16px;">176 stocks · metrics · what-if returns · news sentiment · AI signals</span>
-      </span>
-      <span style="color:var(--accent);font-size:14px;">→</span>
-    </a>
-  </div>
-
-  <footer>
-    stocks-4qw.pages.dev &nbsp;·&nbsp; prices in GBP
-  </footer>
+  </div><!-- /.hub-body -->
 
   <script>
     const SECTORS = [
