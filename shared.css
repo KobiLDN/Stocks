@@ -415,6 +415,11 @@ body[data-layout="rail"] .page-main {
 body[data-layout="rail"] nav {
   flex-shrink: 0;
   position: static;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 4px;
+  border-bottom: none;
 }
 
 body[data-layout="rail"] .container {
