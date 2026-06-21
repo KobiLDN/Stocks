@@ -44,7 +44,9 @@
   .map-wrap { width: 100%; border: 1px solid var(--border); background: var(--surface); overflow: hidden; margin-bottom: 4px; }
   .map-wrap svg { display: block; }
 
-  .sector-block { margin-bottom: 24px; }
+  #sectors-container { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sector-block { margin-bottom: 0; }
+  @media (max-width: 700px) { #sectors-container { grid-template-columns: 1fr; } }
   .sector-name {
     font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; font-weight: 700;
     color: var(--muted); text-transform: uppercase; padding: 8px 12px;
@@ -371,7 +373,7 @@ function renderSectors(stocks, metricId) {
   SECTOR_DEFS.forEach(sd => {
     const ss = groups[sd.key];
     if (!ss || !ss.length) return;
-    const H = Math.max(180, Math.min(400, ss.length * 30));
+    const H = 240;
 
     const block = document.createElement('div');
     block.className = 'sector-block';
