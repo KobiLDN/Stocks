@@ -377,10 +377,36 @@
       color: var(--dim);
     }
 
+    /* ── Quick-nav sector strip ── */
+    .sector-strip {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 28px;
+    }
+    .sector-pill {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 4px; padding: 10px 16px; min-width: 96px;
+      background: var(--surface); border: 1px solid var(--border);
+      text-decoration: none; color: var(--dim);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
+      transition: all 0.15s; border-radius: 2px;
+    }
+    .sector-pill:hover { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
+    .sector-pill.active { border-color: var(--accent); color: var(--accent); background: var(--surface2); }
+    .sector-pill-icon { font-size: 20px; line-height: 1; }
+    .sector-pill-name { white-space: nowrap; }
+    .sector-pill-badge {
+      font-size: 8px; padding: 1px 5px;
+      background: rgba(0,230,118,0.1); color: var(--green);
+      border: 1px solid rgba(0,230,118,0.25); letter-spacing: 0.5px;
+    }
+
     @media (max-width: 640px) {
       main { padding: 24px 16px; }
       .card-grid { grid-template-columns: 1fr; }
       .pt-name { display: none; }
+      .sector-strip { gap: 6px; }
+      .sector-pill { min-width: 72px; padding: 8px 10px; }
     }
   </style>
 <!-- Preload all sector data as scripts so index.html works on file:// -->
@@ -426,6 +452,53 @@
   </header>
 
   <main>
+
+    <div class="sector-strip">
+      <a class="sector-pill active" href="index.html">
+        <span class="sector-pill-icon">⊞</span>
+        <span class="sector-pill-name">Stock Hub</span>
+      </a>
+      <a class="sector-pill" href="All/index.html">
+        <span class="sector-pill-icon">🌐</span>
+        <span class="sector-pill-name">All Sectors</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="AI/index.html">
+        <span class="sector-pill-icon">🤖</span>
+        <span class="sector-pill-name">AI Infra</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Biotech/index.html">
+        <span class="sector-pill-icon">🧬</span>
+        <span class="sector-pill-name">Biotech</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Defence/index.html">
+        <span class="sector-pill-icon">🛡️</span>
+        <span class="sector-pill-name">Defence</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Tech/index.html">
+        <span class="sector-pill-icon">💻</span>
+        <span class="sector-pill-name">Technology</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Crypto/index.html">
+        <span class="sector-pill-icon">₿</span>
+        <span class="sector-pill-name">Crypto</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="Energy/index.html">
+        <span class="sector-pill-icon">⚡</span>
+        <span class="sector-pill-name">Energy</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+      <a class="sector-pill" href="rss.html">
+        <span class="sector-pill-icon">📰</span>
+        <span class="sector-pill-name">RSS Feed</span>
+        <span class="sector-pill-badge">Live</span>
+      </a>
+    </div>
 
     <div class="top-panel">
       <div class="top-panel-header">
