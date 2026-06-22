@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Sectors — Dashboard (Mockup)</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #f8fafc;
+    --surface:  #ffffff;
+    --surface2: #f1f5f9;
+    --border:   #cbd5e1;
+    --accent:   #0284c7;
+    --accent2:  #ea580c;
+    --green:    #16a34a;
+    --gold:     #b45309;
+    --rose:     #f43f5e;
+    --indigo:   #6366f1;
+    --amber:    #f59e0b;
+    --purple:   #9333ea;
+    --teal:     #14b8a6;
+    --lime:     #65a30d;
+    --blue:     #3b82f6;
+    --text:     #0f172a;
+    --dim:      #1e293b;
+    --muted:    #64748b;
+    --slate:    #94a3b8;
+    --red:      #dc2626;
+  }
+
+  html, body { height: 100%; font-family: 'IBM Plex Sans', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; }
+
+  /* ── Ticker Tape ── */
+  #ticker-tape {
+    position: fixed; top: 0; left: 0; right: 0; height: 36px; z-index: 200;
+    background: var(--bg); border-bottom: 1px solid var(--accent);
+    overflow: hidden; display: flex; align-items: center;
+  }
+  .tape-track {
+    display: flex; gap: 0; white-space: nowrap;
+    animation: scroll-tape 28s linear infinite;
+  }
+  @keyframes scroll-tape { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tape-item {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 0 20px; font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 0.5px; border-right: 1px solid var(--border);
+  }
+  .tape-ticker { font-weight: 700; color: var(--accent); }
+  .tape-price  { color: var(--text); }
+  .tape-chg    { color: var(--muted); }
+  .tape-chg.pos { color: var(--green); }
+  .tape-chg.neg { color: var(--red); }
+
+  /* ── Layout ── */
+  body { padding-top: 36px; display: flex; flex-direction: column; overflow: hidden; }
+  header {
+    flex-shrink: 0; background: var(--bg);
+    border-bottom: 1px solid var(--accent);
+    display: flex; flex-direction: column;
+  }
+  .header-inner {
+    display: flex; align-items: center; padding: 12px 20px; gap: 20px;
+  }
+  .header-left { margin-right: auto; }
+  .header-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
+  h1 span { color: var(--accent); }
+  .header-sub { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  .header-blocks { display: flex; align-items: stretch; margin-left: auto; margin-right: 16px; }
+  .header-block { padding: 6px 24px; border-left: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+  .header-block-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+  .header-block-value { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; }
+
+  .theme-toggle {
+    width: 44px; height: 44px; border: 1px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 18px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+
+  nav {
+    display: flex; align-items: center; gap: 2px; padding: 0 16px;
+    border-top: 1px solid var(--border); background: var(--bg); overflow-x: auto;
+  }
+  .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; padding: 10px 16px; color: var(--dim);
+    border-bottom: 2px solid transparent; text-decoration: none; white-space: nowrap;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .nav-link.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .nav-link:hover { color: var(--accent); }
+
+  .filter-bar {
+    display: flex; align-items: center; gap: 6px; padding: 6px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+  .filter-btn[data-f="biotech"].active { background: var(--green);  border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-f="defence"].active { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-f="tech"].active    { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-f="crypto"].active  { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-f="energy"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+
+  .search-count-bar {
+    display: flex; align-items: center; gap: 16px;
+    padding: 6px 16px; border-top: 1px solid var(--border);
+  }
+  #stock-search {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    padding: 6px 12px; border: 1px solid var(--border); background: var(--surface);
+    color: var(--text); outline: none; width: 280px;
+  }
+  #stock-search:focus { border-color: var(--accent); }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+
+  /* ── Body ── */
+  .page-body { display: flex; flex: 1; overflow: hidden; }
+
+  /* ── Left Rail ── */
+  .left-rail {
+    width: 92px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 6px; gap: 4px; overflow-y: auto; scrollbar-width: none;
+  }
+  .sector-pill {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    padding: 8px 6px; border: 1px solid transparent; text-decoration: none;
+    color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    letter-spacing: 0.5px; text-transform: uppercase; text-align: center;
+    transition: all 0.15s; cursor: pointer;
+  }
+  .sector-pill:hover { color: var(--accent); border-color: var(--border); }
+  .sector-pill.active { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
+  .sector-pill-icon { font-size: 18px; }
+  .sector-pill-name { line-height: 1.2; }
+  .sector-pill-badge {
+    font-size: 7px; letter-spacing: 1px; padding: 1px 4px;
+    border: 1px solid currentColor; color: var(--green); margin-top: 2px;
+  }
+
+  /* ── Page Main ── */
+  .page-main { flex: 1; overflow-y: auto; min-width: 0; }
+  .container { padding: 20px 24px; }
+
+  /* ── Table ── */
+  .stock-table { width: 100%; border-collapse: collapse; }
+  .stock-table th {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); padding: 6px 12px 8px;
+    border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap;
+    cursor: pointer; user-select: none;
+  }
+  .stock-table th:hover { color: var(--accent); }
+  .stock-table td {
+    padding: 10px 12px; border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .stock-table tr:hover td { background: var(--surface2); }
+
+  .ticker-cell { display: flex; flex-direction: column; gap: 2px; }
+  .ticker-sym { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; }
+  .ticker-exch { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 0.5px; }
+
+  .ticker-ai     { color: var(--accent); }
+  .ticker-biotech { color: var(--green); }
+  .ticker-defence { color: var(--rose); }
+  .ticker-tech   { color: var(--indigo); }
+  .ticker-crypto { color: var(--gold); }
+  .ticker-energy { color: var(--amber); }
+
+  .company-cell { display: flex; flex-direction: column; gap: 2px; }
+  .company-name { font-size: 13px; color: var(--text); }
+
+  .cat-badge {
+    display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 1px; padding: 3px 8px; text-transform: uppercase; font-weight: 700;
+  }
+  .cat-memory        { background: rgba(147,51,234,0.1);  color: var(--purple); border: 1px solid rgba(147,51,234,0.3); }
+  .cat-materials     { background: rgba(101,163,13,0.1);  color: var(--lime);   border: 1px solid rgba(101,163,13,0.3); }
+  .cat-ai-compute    { background: rgba(244,63,94,0.1);   color: var(--rose);   border: 1px solid rgba(244,63,94,0.3); }
+  .cat-fibre         { background: rgba(20,184,166,0.1);  color: var(--teal);   border: 1px solid rgba(20,184,166,0.3); }
+  .cat-semis         { background: rgba(99,102,241,0.1);  color: var(--indigo); border: 1px solid rgba(99,102,241,0.3); }
+  .cat-nuclear       { background: rgba(234,88,12,0.1);   color: var(--accent2);border: 1px solid rgba(234,88,12,0.3); }
+  .cat-hyperscalers  { background: rgba(59,130,246,0.1);  color: var(--blue);   border: 1px solid rgba(59,130,246,0.3); }
+
+  .price-cell {
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700;
+    color: var(--text); white-space: nowrap;
+  }
+  .change-cell {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; white-space: nowrap;
+  }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .flat { color: var(--muted); }
+
+  .range-cell { min-width: 140px; }
+  .range-bar  { position: relative; height: 4px; background: var(--surface2); border: 1px solid var(--border); margin-bottom: 3px; }
+  .range-fill { position: absolute; left: 0; top: 0; height: 100%; background: var(--accent); opacity: 0.5; }
+  .range-dot  { position: absolute; top: -3px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); transform: translateX(-50%); }
+  .range-labels { display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); }
+
+  /* Dupe highlight */
+  tr.dupe td { background: rgba(234,88,12,0.04); }
+  tr.dupe .ticker-sym::after { content: ' ×'; color: var(--accent2); font-size: 10px; }
+
+  /* Sector badge in category col */
+  .sector-dot {
+    display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+    margin-right: 5px; vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<!-- Ticker tape -->
+<div id="ticker-tape">
+  <div class="tape-track">
+    <!-- duplicated for seamless loop -->
+    <span class="tape-item"><span class="tape-ticker">SNDK</span><span class="tape-price">£347</span><span class="tape-chg pos">+1.23%</span></span>
+    <span class="tape-item"><span class="tape-ticker">AXTI</span><span class="tape-price">£18</span><span class="tape-chg pos">+2.40%</span></span>
+    <span class="tape-item"><span class="tape-ticker">285A</span><span class="tape-price">£508</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">WDC</span><span class="tape-price">£552</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">LITE</span><span class="tape-price">£671</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">MU</span><span class="tape-price">£899</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">WULF</span><span class="tape-price">£23</span><span class="tape-chg pos">+3.10%</span></span>
+    <span class="tape-item"><span class="tape-ticker">NVDA</span><span class="tape-price">£1,247</span><span class="tape-chg pos">+0.85%</span></span>
+    <span class="tape-item"><span class="tape-ticker">AMZN</span><span class="tape-price">£182</span><span class="tape-chg neg">-0.32%</span></span>
+    <span class="tape-item"><span class="tape-ticker">MSFT</span><span class="tape-price">£356</span><span class="tape-chg pos">+0.47%</span></span>
+    <span class="tape-item"><span class="tape-ticker">BTC</span><span class="tape-price">£83,200</span><span class="tape-chg pos">+1.95%</span></span>
+    <span class="tape-item"><span class="tape-ticker">ETH</span><span class="tape-price">£2,441</span><span class="tape-chg neg">-0.60%</span></span>
+    <!-- duplicate set for seamless scroll -->
+    <span class="tape-item"><span class="tape-ticker">SNDK</span><span class="tape-price">£347</span><span class="tape-chg pos">+1.23%</span></span>
+    <span class="tape-item"><span class="tape-ticker">AXTI</span><span class="tape-price">£18</span><span class="tape-chg pos">+2.40%</span></span>
+    <span class="tape-item"><span class="tape-ticker">285A</span><span class="tape-price">£508</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">WDC</span><span class="tape-price">£552</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">LITE</span><span class="tape-price">£671</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">MU</span><span class="tape-price">£899</span><span class="tape-chg flat">+0.00%</span></span>
+    <span class="tape-item"><span class="tape-ticker">WULF</span><span class="tape-price">£23</span><span class="tape-chg pos">+3.10%</span></span>
+    <span class="tape-item"><span class="tape-ticker">NVDA</span><span class="tape-price">£1,247</span><span class="tape-chg pos">+0.85%</span></span>
+    <span class="tape-item"><span class="tape-ticker">AMZN</span><span class="tape-price">£182</span><span class="tape-chg neg">-0.32%</span></span>
+    <span class="tape-item"><span class="tape-ticker">MSFT</span><span class="tape-price">£356</span><span class="tape-chg pos">+0.47%</span></span>
+    <span class="tape-item"><span class="tape-ticker">BTC</span><span class="tape-price">£83,200</span><span class="tape-chg pos">+1.95%</span></span>
+    <span class="tape-item"><span class="tape-ticker">ETH</span><span class="tape-price">£2,441</span><span class="tape-chg neg">-0.60%</span></span>
+  </div>
+</div>
+
+<header>
+  <!-- Row 1: brand -->
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="header-label">// Market Intelligence</div>
+      <h1>All <span>Sectors</span></h1>
+      <div class="header-sub">184 stocks · v1 · Last updated 2026-06-22 20:37</div>
+    </div>
+    <div class="header-blocks">
+      <div class="header-block">
+        <div class="header-block-label">Prices Last Updated</div>
+        <div class="header-block-value">2026-06-22 20:37</div>
+      </div>
+    </div>
+    <button class="theme-toggle">☾</button>
+  </div>
+
+  <!-- Row 2: nav -->
+  <nav>
+    <a class="nav-link active" href="#">📊 Dashboard</a>
+    <a class="nav-link" href="#">📋 Metrics</a>
+    <a class="nav-link" href="#">📰 News</a>
+    <a class="nav-link" href="#">🎯 Signals</a>
+    <a class="nav-link" href="#">🔥 Heatmap</a>
+    <a class="nav-link" href="#">📈 Charts</a>
+    <a class="nav-link" href="#">🧮 What-If</a>
+  </nav>
+
+  <!-- Row 3: sector filter -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-f="all" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" data-f="ai" onclick="setFilter('ai',this)">AI Infra</button>
+    <button class="filter-btn" data-f="biotech" onclick="setFilter('biotech',this)">Biotech</button>
+    <button class="filter-btn" data-f="defence" onclick="setFilter('defence',this)">Defence</button>
+    <button class="filter-btn" data-f="tech" onclick="setFilter('tech',this)">Tech</button>
+    <button class="filter-btn" data-f="crypto" onclick="setFilter('crypto',this)">Crypto</button>
+    <button class="filter-btn" data-f="energy" onclick="setFilter('energy',this)">Energy</button>
+  </div>
+
+  <!-- Row 4: search -->
+  <div class="search-count-bar">
+    <input id="stock-search" type="text" placeholder="Search ticker or company..." oninput="applySearch()">
+    <span class="row-count">Showing <span id="visible-count">18</span> of <span id="total-count">18</span> stocks</span>
+  </div>
+</header>
+
+<div class="page-body">
+
+  <!-- Left rail -->
+  <div class="left-rail">
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">⊞</span>
+      <span class="sector-pill-name">Stock Hub</span>
+    </a>
+    <a class="sector-pill active" href="#">
+      <span class="sector-pill-icon">🌐</span>
+      <span class="sector-pill-name">All Sectors</span>
+      <span class="sector-pill-badge">Live</span>
+    </a>
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">🤖</span>
+      <span class="sector-pill-name">AI Infra</span>
+      <span class="sector-pill-badge">Live</span>
+    </a>
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">🧬</span>
+      <span class="sector-pill-name">Biotech</span>
+      <span class="sector-pill-badge">Live</span>
+    </a>
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">🛡️</span>
+      <span class="sector-pill-name">Defence</span>
+      <span class="sector-pill-badge">Live</span>
+    </a>
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">💻</span>
+      <span class="sector-pill-name">Technology</span>
+      <span class="sector-pill-badge">Live</span>
+    </a>
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">₿</span>
+      <span class="sector-pill-name">Crypto</span>
+      <span class="sector-pill-badge">Live</span>
+    </a>
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">⚡</span>
+      <span class="sector-pill-name">Energy</span>
+      <span class="sector-pill-badge">Live</span>
+    </a>
+    <a class="sector-pill" href="#">
+      <span class="sector-pill-icon">📰</span>
+      <span class="sector-pill-name">RSS Feed</span>
+    </a>
+  </div>
+
+  <!-- Main content -->
+  <div class="page-main">
+    <div class="container">
+      <table class="stock-table" id="stock-table">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Company</th>
+            <th>Category</th>
+            <th>Price (GBP)</th>
+            <th>1D %</th>
+            <th>1W %</th>
+            <th>YTD %</th>
+            <th>52-Week Range</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- rows injected by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const STOCKS = [
+  { ticker:'SNDK', exchange:'NASDAQ', name:'SanDisk Corporation',   sector:'ai',      cat:'memory',      catLabel:'Memory',        price:'£347',    d:'+1.23%', w:'+8.4%',  ytd:'+92.1%',  lo:180, hi:360, cur:347, pos:true  },
+  { ticker:'AXTI', exchange:'NASDAQ', name:'AXT Inc',               sector:'ai',      cat:'materials',   catLabel:'Materials',     price:'£18',     d:'+2.40%', w:'+5.1%',  ytd:'+480.4%', lo:3,   hi:20,  cur:18,  pos:true  },
+  { ticker:'285A', exchange:'TSE (Tokyo)', name:'Kioxia Holdings',  sector:'ai',      cat:'memory',      catLabel:'Memory',        price:'£508',    d:'+0.00%', w:'+0.0%',  ytd:'+856.8%', lo:55,  hi:520, cur:508, pos:false },
+  { ticker:'WDC',  exchange:'NASDAQ', name:'Western Digital',       sector:'ai',      cat:'memory',      catLabel:'Memory',        price:'£552',    d:'+0.00%', w:'+3.2%',  ytd:'+259.1%', lo:140, hi:570, cur:552, pos:true  },
+  { ticker:'LITE', exchange:'NASDAQ', name:'Lumentum Holdings',     sector:'ai',      cat:'fibre',       catLabel:'Fibre / Optical', price:'£671', d:'+0.00%', w:'-1.1%', ytd:'+41.2%',  lo:420, hi:690, cur:671, pos:false },
+  { ticker:'MU',   exchange:'NASDAQ', name:'Micron Technology',     sector:'ai',      cat:'memory',      catLabel:'Memory',        price:'£899',    d:'+0.00%', w:'+2.8%',  ytd:'+197.3%', lo:290, hi:930, cur:899, pos:true  },
+  { ticker:'MU',   exchange:'NASDAQ', name:'Micron Technology',     sector:'tech',    cat:'semis',       catLabel:'Semiconductors',price:'£899',    d:'+0.00%', w:'+2.8%',  ytd:'+197.3%', lo:290, hi:930, cur:899, pos:true,  dupe:true },
+  { ticker:'WULF', exchange:'NASDAQ', name:'TeraWulf',              sector:'ai',      cat:'ai-compute',  catLabel:'AI Compute',    price:'£23',     d:'+3.10%', w:'+11.2%', ytd:'+58.3%',  lo:10,  hi:26,  cur:23,  pos:true  },
+  { ticker:'STX',  exchange:'NASDAQ', name:'Seagate Technology',    sector:'ai',      cat:'memory',      catLabel:'Memory',        price:'£118',    d:'+0.82%', w:'+4.3%',  ytd:'+143.5%', lo:46,  hi:125, cur:118, pos:true  },
+  { ticker:'NVDA', exchange:'NASDAQ', name:'Nvidia Corporation',    sector:'ai',      cat:'ai-compute',  catLabel:'AI Compute',    price:'£1,247',  d:'+0.85%', w:'+3.2%',  ytd:'+28.4%',  lo:830, hi:1290,cur:1247,pos:true  },
+  { ticker:'AMZN', exchange:'NASDAQ', name:'Amazon.com',            sector:'ai',      cat:'hyperscalers',catLabel:'Hyperscalers',  price:'£182',    d:'-0.32%', w:'+1.8%',  ytd:'+12.3%',  lo:145, hi:210, cur:182, pos:false },
+  { ticker:'AMZN', exchange:'NASDAQ', name:'Amazon.com',            sector:'tech',    cat:'semis',       catLabel:'Mega-Cap',      price:'£182',    d:'-0.32%', w:'+1.8%',  ytd:'+12.3%',  lo:145, hi:210, cur:182, pos:false, dupe:true },
+  { ticker:'MSFT', exchange:'NASDAQ', name:'Microsoft Corporation', sector:'ai',      cat:'hyperscalers',catLabel:'Hyperscalers',  price:'£356',    d:'+0.47%', w:'+2.1%',  ytd:'+8.9%',   lo:310, hi:420, cur:356, pos:true  },
+  { ticker:'PLTR', exchange:'NASDAQ', name:'Palantir Technologies', sector:'ai',      cat:'ai-compute',  catLabel:'AI Compute',    price:'£142',    d:'+1.20%', w:'+6.4%',  ytd:'+84.2%',  lo:68,  hi:155, cur:142, pos:true  },
+  { ticker:'TLN',  exchange:'NASDAQ', name:'Talen Energy',          sector:'ai',      cat:'nuclear',     catLabel:'Nuclear Ops',   price:'£78',     d:'+2.10%', w:'+18.3%', ytd:'+92.5%',  lo:28,  hi:85,  cur:78,  pos:true  },
+  { ticker:'BTC',  exchange:'CRYPTO', name:'Bitcoin',               sector:'crypto',  cat:'bitcoin',     catLabel:'Bitcoin',       price:'£83,200', d:'+1.95%', w:'+4.2%',  ytd:'+22.1%',  lo:38000,hi:86000,cur:83200,pos:true },
+  { ticker:'ETH',  exchange:'CRYPTO', name:'Ethereum',              sector:'crypto',  cat:'layer1',      catLabel:'Layer 1',       price:'£2,441',  d:'-0.60%', w:'-2.1%',  ytd:'-14.3%',  lo:1800,hi:4000,cur:2441, pos:false },
+  { ticker:'XOM',  exchange:'NYSE',   name:'Exxon Mobil',           sector:'energy',  cat:'oil-majors',  catLabel:'Oil Majors',    price:'£89',     d:'+0.33%', w:'+1.0%',  ytd:'+4.2%',   lo:78,  hi:126, cur:89,  pos:true  },
+];
+
+let activeFilter = 'all';
+
+function setFilter(f, btn) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable();
+}
+
+function applySearch() {
+  renderTable();
+}
+
+function renderTable() {
+  const q = document.getElementById('stock-search').value.toLowerCase();
+  let filtered = STOCKS;
+  if (activeFilter !== 'all') filtered = filtered.filter(s => s.sector === activeFilter);
+  if (q) filtered = filtered.filter(s => s.ticker.toLowerCase().includes(q) || s.name.toLowerCase().includes(q));
+
+  document.getElementById('visible-count').textContent = filtered.length;
+  document.getElementById('total-count').textContent = STOCKS.length;
+
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = filtered.map(s => {
+    const pct = (s.cur - s.lo) / (s.hi - s.lo) * 100;
+    const dCls = s.d.startsWith('+') ? 'pos' : s.d.startsWith('-') ? 'neg' : 'flat';
+    const wCls = s.w.startsWith('+') ? 'pos' : s.w.startsWith('-') ? 'neg' : 'flat';
+    const yCls = s.ytd.startsWith('+') ? 'pos' : s.ytd.startsWith('-') ? 'neg' : 'flat';
+    return `<tr${s.dupe ? ' class="dupe"' : ''}>
+      <td><div class="ticker-cell">
+        <span class="ticker-sym ticker-${s.sector}">${s.ticker}</span>
+        <span class="ticker-exch">${s.exchange}</span>
+      </div></td>
+      <td><div class="company-cell"><span class="company-name">${s.name}</span></div></td>
+      <td><span class="cat-badge cat-${s.cat}">${s.catLabel}</span></td>
+      <td class="price-cell">${s.price}</td>
+      <td class="change-cell ${dCls}">${s.d}</td>
+      <td class="change-cell ${wCls}">${s.w}</td>
+      <td class="change-cell ${yCls}">${s.ytd}</td>
+      <td class="range-cell">
+        <div class="range-bar">
+          <div class="range-fill" style="width:${pct}%"></div>
+          <div class="range-dot"  style="left:${pct}%"></div>
+        </div>
+        <div class="range-labels"><span>£${s.lo.toLocaleString()}</span><span>£${s.hi.toLocaleString()}</span></div>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+renderTable();
+</script>
+</body>
+</html>
