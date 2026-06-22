@@ -110,7 +110,7 @@
     '5Y': { interval: 'M',  range: '60M' },
   };
 
-  let sectorStocks = {};   // key → top-2 stock objects
+  let sectorStocks = {};   // key → top-3 stock objects
   let activeSector  = 'all';
   let activePeriod  = '1Y';
 
@@ -148,29 +148,48 @@
     const widgets = [];
     let html = '';
 
-    toShow.forEach(sd => {
-      const stocks = sectorStocks[sd.key];
-      if (!stocks || !stocks.length) return;
+    if (activeSector === 'all') {
+      // 6 columns (one per sector) × 3 rows
+      html += '<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;">';
 
-      html += '<div style="margin-bottom:16px;">';
+      // Header row — one sector label per column
+      toShow.forEach(sd => {
+        html += '<div style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:' + sd.color + ';padding:6px 4px 4px;">' + sd.label + '</div>';
+      });
+
+      // 3 stock rows
+      for (let row = 0; row < 3; row++) {
+        toShow.forEach(sd => {
+          const s = (sectorStocks[sd.key] || [])[row];
+          if (!s) { html += '<div></div>'; return; }
+          const sym = tvSym(s);
+          const wid = 'tw-' + sd.key + '-r' + row + '-' + s.ticker.replace(/[^a-zA-Z0-9]/g, '_');
+          html += '<div class="grid-card">';
+          html += '<div class="grid-card-header"><span class="grid-ticker" style="color:' + sd.color + '">' + s.ticker + '</span><span class="grid-name">' + (s.company_name || '') + '</span></div>';
+          html += '<div id="' + wid + '" style="height:200px;"></div>';
+          html += '</div>';
+          widgets.push({ id: wid, sym });
+        });
+      }
+
+      html += '</div>';
+    } else {
+      // Single sector — 3-column grid, all top-3 stocks
+      const sd = toShow[0];
+      const stocks = sectorStocks[sd.key] || [];
       html += '<div class="grid-heading"><span style="color:' + sd.color + '">' + sd.label + '</span></div>';
       html += '<div class="chart-grid" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px;">';
-
       stocks.forEach(s => {
         const sym = tvSym(s);
         const wid = 'tw-' + sd.key + '-' + s.ticker.replace(/[^a-zA-Z0-9]/g, '_');
         html += '<div class="grid-card">';
-        html += '<div class="grid-card-header">';
-        html += '<span class="grid-ticker" style="color:' + sd.color + '">' + s.ticker + '</span>';
-        html += '<span class="grid-name">' + (s.company_name || '') + '</span>';
-        html += '</div>';
+        html += '<div class="grid-card-header"><span class="grid-ticker" style="color:' + sd.color + '">' + s.ticker + '</span><span class="grid-name">' + (s.company_name || '') + '</span></div>';
         html += '<div id="' + wid + '" style="height:220px;"></div>';
         html += '</div>';
         widgets.push({ id: wid, sym });
       });
-
-      html += '</div></div>';
-    });
+      html += '</div>';
+    }
 
     body.innerHTML = html || '<div class="empty-state">No data loaded yet.</div>';
 
@@ -183,19 +202,19 @@
           symbol:        w.sym,
           interval,
           range,
-          timezone:         'Europe/London',
-          theme:            isDark() ? 'dark' : 'light',
-          style:            '1',
-          locale:           'en',
+          timezone:          'Europe/London',
+          theme:             isDark() ? 'dark' : 'light',
+          style:             '1',
+          locale:            'en',
           enable_publishing: false,
           hide_side_toolbar: true,
           allow_symbol_change: false,
-          save_image:       false,
-          height:           220,
-          width:            '100%',
-          backgroundColor:  isDark() ? '#000000' : '#ffffff',
+          save_image:        false,
+          height:            200,
+          width:             '100%',
+          backgroundColor:   isDark() ? '#000000' : '#ffffff',
         });
-      }, i * 200);
+      }, i * 150);
     });
   }
 
@@ -207,7 +226,7 @@
       const data  = JSON.parse(match[1]);
       sectorStocks[sd.key] = (data.stocks || [])
         .sort((a, b) => (b.market_cap_gbp_b || 0) - (a.market_cap_gbp_b || 0))
-        .slice(0, 2);
+        .slice(0, 3);
     } catch(e) {
       sectorStocks[sd.key] = [];
     }
