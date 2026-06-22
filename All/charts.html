@@ -78,7 +78,7 @@
 <div class="page-main">
 <div class="container" style="padding-left:0;padding-right:0;max-width:100%;">
 
-<div id="charts-body" style="padding:16px 24px 32px;">
+<div id="charts-body" style="padding:12px 16px 24px;">
   <div class="empty-state">Loading…</div>
 </div>
 
@@ -152,9 +152,9 @@
       const stocks = sectorStocks[sd.key];
       if (!stocks || !stocks.length) return;
 
-      html += '<div style="margin-bottom:28px;">';
+      html += '<div style="margin-bottom:16px;">';
       html += '<div class="grid-heading"><span style="color:' + sd.color + '">' + sd.label + '</span></div>';
-      html += '<div class="chart-grid">';
+      html += '<div class="chart-grid" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px;">';
 
       stocks.forEach(s => {
         const sym = tvSym(s);
@@ -164,7 +164,7 @@
         html += '<span class="grid-ticker" style="color:' + sd.color + '">' + s.ticker + '</span>';
         html += '<span class="grid-name">' + (s.company_name || '') + '</span>';
         html += '</div>';
-        html += '<div id="' + wid + '" style="height:320px;"></div>';
+        html += '<div id="' + wid + '" style="height:220px;"></div>';
         html += '</div>';
         widgets.push({ id: wid, sym });
       });
@@ -191,7 +191,7 @@
           hide_side_toolbar: true,
           allow_symbol_change: false,
           save_image:       false,
-          height:           320,
+          height:           220,
           width:            '100%',
           backgroundColor:  isDark() ? '#000000' : '#ffffff',
         });
