@@ -305,6 +305,7 @@ body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: 
 - `.page-main` is the scroll container — same pattern as hub's `<main>`
 - Only this element scrolls — everything in `<header>` and `.left-rail` is fixed
 - `data-bar` (Prices Last Updated info block) is **static HTML** in every page's `.header-inner` Row 1 (`.header-blocks > .header-block` with `id="data-bar-ts"`); `buildDataBar()` in `shared.js` only fills in the timestamp text
+- **Signals pages** replace that block with **"Last Refreshed" / `id="signals-ts"`** (populated by the page's own `renderSignals()` from `SIGNALS_DATA.updated`) — there is no in-body refresh banner. The "Auto-refreshed Mon/Wed/Fri …" line lives at the bottom of the `// How signals are generated` panel as `.how-refresh-note`
 
 **Container overrides by page:**
 | Page | Override |

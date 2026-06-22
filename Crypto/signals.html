@@ -293,6 +293,21 @@
     line-height: 1.7;
   }
   .how-footer-note span { color: var(--accent2); }
+  .how-refresh-note {
+    grid-column: 1 / -1;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+  .how-refresh-note code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    font-size: 10px;
+  }
   .momentum-divider {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 11px;
@@ -323,8 +338,8 @@
   </div>
   <div class="header-blocks">
   <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
+  <div class="header-block-label">Last Refreshed</div>
+  <div class="header-block-value" id="signals-ts">—</div>
   </div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
@@ -354,11 +369,6 @@
 </div>
 <div class="page-main">
 <div class="container">
-
-  <div class="refresh-banner" id="refresh-banner">
-    <span>Last refreshed: <span class="ts" id="signals-ts">—</span></span>
-    <span>Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python generate_signals_local.py</code> locally</span>
-  </div>
 
   <div class="signals-feed" id="signals-feed"></div>
 
@@ -404,6 +414,8 @@
       <div class="how-footer-note">
         <span>Not financial advice.</span> The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
       </div>
+
+      <div class="how-refresh-note">Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python generate_signals_local.py</code> locally</div>
 
     </div>
   </div>
