@@ -68,21 +68,9 @@ function buildDataBar() {
   const isRail    = document.body.getAttribute('data-layout') === 'rail';
   const hdrInner  = document.querySelector('.header-inner');
 
-  if (isRail && hdrInner && !hdrInner.querySelector('.header-blocks')) {
-    // Rail layout: inject as an info block in Row 1 (top-right, before theme toggle)
-    const block = document.createElement('div');
-    block.className = 'header-blocks data-bar';
-    block.innerHTML =
-      '<div class="header-block">' +
-        '<div class="header-block-label">Prices Last Updated</div>' +
-        '<div class="header-block-value data-bar-ts">' + ts + '</div>' +
-      '</div>';
-    const toggle = hdrInner.querySelector('.theme-toggle');
-    if (toggle) hdrInner.insertBefore(block, toggle);
-    else hdrInner.appendChild(block);
-  }
-  // Hub (rail + .header-blocks already present) — hub manages its own blocks, skip.
-  // Non-rail pages — no sector pages are non-rail, nothing to do.
+  // Populate the static #data-bar-ts element (present in every sector page's HTML)
+  const el = document.getElementById('data-bar-ts');
+  if (el) el.textContent = ts;
 }
 
 // ── Sticky header+nav wrapper ─────────────────────────────────────────────────
