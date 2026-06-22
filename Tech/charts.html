@@ -45,9 +45,7 @@
     <a href="charts.html"     class="nav-link active" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </nav>
-</header>
-
-<div class="chart-controls">
+  <div class="chart-controls">
   <div class="toolbar-inner">
     <!-- Category row (grid mode only) -->
     <div class="toolbar-row" id="cat-row" style="display:none">
@@ -71,7 +69,23 @@
       </div>
     </div>
   </div>
+  </div>
+</header>
+
+<div class="page-body">
+<div class="left-rail">
+<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+<a class="sector-pill" href="../All/charts.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../AI/charts.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Biotech/charts.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Defence/charts.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill active" href="charts.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Crypto/charts.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Energy/charts.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
 </div>
+<div class="page-main">
+<div class="container" style="padding-left:0;padding-right:0;max-width:100%;">
 
 <!-- SINGLE VIEW -->
 <div id="single-view">
@@ -364,6 +378,7 @@
   });
 
 </script>
+</div><!-- /.container -->
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
 </body>
