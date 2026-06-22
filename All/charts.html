@@ -224,13 +224,15 @@
       const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (!match) return;
       const data  = JSON.parse(match[1]);
-      sectorStocks[sd.key] = (data.stocks || [])
-        .sort((a, b) => (b.market_cap_gbp_b || 0) - (a.market_cap_gbp_b || 0))
-        .slice(0, 3);
+      const sorted = (data.stocks || []).sort((a, b) => (b.market_cap_gbp_b || 0) - (a.market_cap_gbp_b || 0));
+      sectorStocks[sd.key] = sorted.slice(0, 3);
     } catch(e) {
       sectorStocks[sd.key] = [];
     }
-  })).then(() => render());
+  })).then(() => {
+    buildTape(SECTOR_META.flatMap(sd => sectorStocks[sd.key] || []));
+    render();
+  });
 </script>
 
 </div><!-- /.container -->

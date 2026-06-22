@@ -359,6 +359,7 @@
   const stocks = results.flat();
   const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(stocks.map(s => s.ticker)).size;
   buildCalc(stocks);
+  buildTape(stocks);
 });
 </script>
 </div><!-- /.page-main -->

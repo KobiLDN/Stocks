@@ -425,6 +425,7 @@ Promise.all(SECTOR_PATHS.map(async sd => {
   } catch(e) { return { stocks: [], updated: null }; }
 })).then(results => {
   allStocks = results.flatMap(r => r.stocks);
+  buildTape(allStocks);
   const sc = document.getElementById('hm-stock-count'); if (sc) sc.textContent = new Set(allStocks.map(s => s.ticker)).size;
   const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
 

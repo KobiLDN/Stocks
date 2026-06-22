@@ -360,12 +360,14 @@
     ]);
 
     const nameMap = {}, catMap = {};
+    let priceStocks = [];
     if (pricesText) {
       const match = pricesText.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (match) {
         try {
           const data = JSON.parse(match[1]);
-          (data.stocks || []).forEach(s => {
+          priceStocks = data.stocks || [];
+          priceStocks.forEach(s => {
             nameMap[s.ticker] = s.company_name || s.ticker;
             catMap[s.ticker]  = s.category || '';
           });
@@ -373,9 +375,10 @@
       }
     }
 
-    return { ...sd, signals: signalsJson, nameMap, catMap };
+    return { ...sd, signals: signalsJson, nameMap, catMap, stocks: priceStocks };
   })).then(results => {
     loadedData = results;
+    buildTape(results.flatMap(r => r.stocks || []));
     renderAll();
   });
 </script>

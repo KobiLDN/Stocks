@@ -463,6 +463,7 @@
   const stocks = results.flat();
   const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(stocks.map(s => s.ticker)).size;
   buildMetrics(stocks);
+  buildTape(stocks);
 });
 
   const tooltip = document.getElementById('col-tooltip');

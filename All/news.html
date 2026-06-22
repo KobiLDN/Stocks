@@ -235,7 +235,7 @@
     try {
       const text  = await fetch(sd.path).then(r => r.text());
       const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (!match) return [];
+      if (!match) return { news: [], stocks: [] };
       const data  = JSON.parse(match[1]);
 
       // Populate data-bar-ts from first sector that has an updated field
@@ -259,12 +259,13 @@
           });
         });
       });
-      return items;
-    } catch(e) { return []; }
+      return { news: items, stocks: data.stocks || [] };
+    } catch(e) { return { news: [], stocks: [] }; }
   })).then(results => {
-    allNews = results.flat();
+    allNews = results.flatMap(r => r.news);
     const sc = document.getElementById('all-stock-count');
     if (sc) sc.textContent = new Set(allNews.map(n => n.ticker).filter(Boolean)).size;
+    buildTape(results.flatMap(r => r.stocks));
     applyFilters();
   });
 </script>
