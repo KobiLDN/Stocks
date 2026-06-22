@@ -224,8 +224,21 @@ display: flex; align-items: center; gap: …;
 | News | `.news-controls` | Sector group · separator · Sort group · separator · Period group + count |
 | Signals | `.filter-bar` | Sector filters |
 | Heatmap | `.toolbar` | Colour By · timeframe buttons · Prices timestamp · gradient legend |
-| Charts | `.chart-controls` | Ticker label · 1W/1Y/5Y buttons · Single/Grid toggle (right) |
+| Charts | `.chart-controls` | Toolbar inner with category row + period/view controls |
 | Calculator | `.filter-bar` | Sector filters |
+| Calculator | `.search-count-bar` | Search input + visible/total count — sits as Row 4 inside `<header>` |
+
+**Calculator search row** (Row 4 on calculator pages only):
+```html
+<div class="search-count-bar">
+  <input id="stock-search" type="text" placeholder="Search ticker or company..." oninput="applyFilters()"/>
+  <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
+</div>
+```
+```css
+.search-count-bar { display: flex; align-items: center; gap: 16px;
+  padding: 6px 16px; border-top: 1px solid var(--border); }
+```
 
 **Filter buttons** (shared, in `shared.css`):
 ```css
@@ -552,6 +565,35 @@ All charts pages use the standard rail layout. All shared CSS lives in `shared.c
 .cat-btn.active-{catKey} { background: var(--COLOR); border-color: var(--COLOR); color: var(--bg); }
 .cat-label.{clsSuffix}   { color: var(--COLOR); }
 ```
+
+### All/charts — Sector Grid variant
+
+`All/charts.html` uses a **different pattern** from sector charts pages — no Single/Grid view toggle, no category buttons. Instead:
+
+```html
+<div class="chart-controls">
+  <div class="toolbar-inner">
+    <div class="toolbar-row">
+      <span class="toolbar-label">Sector</span>
+      <button class="tool-btn active-all" data-sector="all" onclick="setSector('all',this)">All</button>
+      <button class="tool-btn" data-sector="ai" onclick="setSector('ai',this)">AI Infra</button>
+      <!-- …one button per sector… -->
+    </div>
+    <div class="toolbar-row">
+      <span class="toolbar-label">Period</span>
+      <button class="tool-btn" data-period="1W">1W</button>
+      <button class="tool-btn active" data-period="1Y">1Y</button>
+      <button class="tool-btn" data-period="5Y">5Y</button>
+    </div>
+  </div>
+</div>
+```
+
+**"All" mode** renders a `display:grid; grid-template-columns: repeat(6,1fr)` with a header row of sector labels followed by 3 stock rows (top 3 per sector by `market_cap_gbp_b`). Chart height 200px.
+
+**Single-sector mode** renders a `chart-grid` with `repeat(auto-fill, minmax(320px, 1fr))`. Chart height 220px.
+
+Sector active-state colours use `.active-{sectorKey}` classes (inline `<style>` per page), mirroring the sector colour mapping from §8.
 
 ---
 

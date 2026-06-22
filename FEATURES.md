@@ -18,7 +18,7 @@
 
 - **Stock Hub sector quick-nav strip** — compact pill row (icon + label + Live badge) at top of hub main area; all 9 destinations; active state on Stock Hub; mobile wraps (`index.html`)
 
-- **All Sectors 7-page suite** — `All/` subfolder with `index.html`, `metrics.html`, `news.html`, `signals.html`, `heatmap.html`, `charts.html`, `calculator.html` aggregating all 6 sectors (192 stocks); heatmap uses `drawSplit()` (gainers left / losers right) + 2-column sector grid at 240px; calculator matches AI Infrastructure with `invCell()` stacking + Multiplier column; signals has combined momentum screener at top for All Sectors view; sector filter + colour-coded badges on every page (`All/`)
+- **All Sectors 7-page suite** — `All/` subfolder with `index.html`, `metrics.html`, `news.html`, `signals.html`, `heatmap.html`, `charts.html`, `calculator.html` aggregating all 6 sectors (192 stocks); heatmap uses `drawSplit()` (gainers left / losers right) + 2-column sector grid at 240px; calculator matches AI Infrastructure with `invCell()` stacking + Multiplier column + search bar in sticky header; signals has combined momentum screener at top for All Sectors view; charts shows 6×3 sector grid (top 3 stocks per sector by market cap, sector filter buttons, 1W/1Y/5Y period selector); ticker tape populated via explicit `buildTape(stocks)` call in each page's async fetch callback; sector filter + colour-coded badges on every page (`All/`)
 
 - **Portfolio output files renamed** — `snapshot.html` → `portfolio.html`, `analysis.json` → `portfolio_analysis.json`; local-only files, not committed
 
