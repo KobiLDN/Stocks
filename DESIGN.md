@@ -380,6 +380,7 @@ Never hardcode stock counts or timestamps.
 
 - Hub (`index.html`) uses inline `<style>` only — does **not** load `shared.css`
 - All other pages: `<link href="../shared.css">` + `<script src="../shared.js" defer>`
+- `rss.html` is a **root-level rail page** — loads `shared.css` / `shared.js` with no `../`, and its left-rail pills use root-relative hrefs (`AI/index.html`, not `../AI/index.html`). Sector pills point to each sector's dashboard (`index.html`); the RSS Feed pill is active.
 - `buildStickyTop()` is skipped on rail pages — `<header>` handles stickiness directly
 
 ---
