@@ -529,6 +529,14 @@ function toggleNav(id) {
     item.classList.add('open');
     item.querySelector('.nav-link').classList.add('active');
     activeNav = id;
+    // auto-select first sub-link
+    const subLinks = item.querySelectorAll('.sub-link');
+    subLinks.forEach(l => l.classList.remove('active'));
+    if (subLinks.length) {
+      subLinks[0].classList.add('active');
+      const firstVal = subLinks[0].getAttribute('onclick').match(/'([^']+)'\)$/)[1];
+      activeFilter = firstVal;
+    }
   }
   renderTable();
 }
