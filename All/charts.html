@@ -348,9 +348,8 @@
       grouped[key].forEach(s => {
         const safeId  = s.ticker.replace(/\./g,'_');
         const safeTk  = s.ticker.replace(/'/g,"\\'");
-        const checked = selectedTickers.has(s.ticker) ? ' checked' : '';
         html += '<div class="stock-item" data-ticker="' + s.ticker + '">';
-        html += '<input type="checkbox" class="stock-check" id="chk-' + safeId + '"' + checked + ' onchange="toggleStock(\'' + safeTk + '\',this.checked)">';
+        html += '<input type="checkbox" class="stock-check" id="chk-' + safeId + '" onchange="toggleStock(\'' + safeTk + '\',this.checked)">';
         html += '<label for="chk-' + safeId + '">';
         html += '<span class="stock-ticker" style="color:' + color + '">' + s.ticker + '</span>';
         html += '<span class="stock-name">' + (s.company_name || '') + '</span>';
@@ -360,6 +359,11 @@
       html += '</div></div>';
     });
     body.innerHTML = html;
+    // Set checked state programmatically — does NOT fire onchange
+    selectedTickers.forEach(ticker => {
+      const el = document.getElementById('chk-' + ticker.replace(/\./g,'_'));
+      if (el) el.checked = true;
+    });
   }
 
   function toggleGroup(key) {
@@ -367,12 +371,13 @@
     if (group) group.classList.toggle('collapsed');
   }
 
-  function toggleStock(ticker, checked) {
+  function toggleStock(ticker, isChecked) {
     const stock = allStocks.find(s => s.ticker === ticker);
     if (!stock) return;
-    if (checked) {
+    if (isChecked) {
       selectedTickers.add(ticker);
-      addChartToGrid(stock);
+      if (activeView !== 'grid') setView('grid', null);
+      else addChartToGrid(stock);
     } else {
       selectedTickers.delete(ticker);
       removeChartFromGrid(ticker);
@@ -394,7 +399,6 @@
   }
 
   function addChartToGrid(stock) {
-    if (activeView !== 'grid') setView('grid', null);
     const safeId = stock.ticker.replace(/\./g,'_');
     const cardId = 'card-' + safeId;
     const chartId = 'grid-cell-' + safeId;
