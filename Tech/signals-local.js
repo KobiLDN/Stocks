@@ -1,9 +1,187 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-19 12:23",
+  "updated": "2026-06-22 13:51",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "TSMC shows a balanced profile: +45% YTD, +18% 1M momentum, P/E 39.7, strong_buy analyst consensus (score 1.47), and positive news sentiment. AI chip demand and capacity expansion provide strong catalysts.",
+      "drivers": [
+        "+45% YTD",
+        "+18% 1M",
+        "P/E 39.7",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ASML has +66% YTD, +32% 1M momentum, P/E 64.1, strong_buy consensus (1.48), and near-zero short interest (0.27). Its monopoly in EUV lithography is a structural advantage.",
+      "drivers": [
+        "+66% YTD",
+        "+32% 1M",
+        "P/E 64.1",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Micron has surged +260% YTD, +62% 1M, with P/E 53.5 and strong_buy consensus (1.48). Recent price-target upgrades and potential Samsung strike catalyst support upside, though RSI is elevated.",
+      "drivers": [
+        "+260% YTD",
+        "+62% 1M",
+        "P/E 53.5",
+        "price-target upgrades"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Applied Materials has gained +130% YTD, +52% 1M, P/E 58.2, and strong_buy consensus (1.49). AI-driven semiconductor equipment demand justifies its valuation.",
+      "drivers": [
+        "+130% YTD",
+        "+52% 1M",
+        "P/E 58.2",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Qualcomm has +32% YTD, +16% 1M, a low P/E of 24.3, and recent AI wearables collaborations with OpenAI and Meta. Despite a hold analyst consensus (2.61), catalysts are strong.",
+      "drivers": [
+        "P/E 24.3 (cheap)",
+        "+32% YTD",
+        "AI wearables catalysts",
+        "+11% 1W momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Intel has exploded +240% YTD, +21% 1M, driven by the Apple chip partnership and CEO target of 10x returns. Analyst consensus is hold (2.62) but price targets raised and retail sentiment bullish.",
+      "drivers": [
+        "Apple foundry deal",
+        "+240% YTD",
+        "Mizuho target $135",
+        "bullish retail sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Palo Alto Networks is up +60% YTD, +20% 1M, with a buy consensus (1.60) and low beta (0.94). Cybersecurity demand and zero-trust trends support growth, though P/E at 250 is high.",
+      "drivers": [
+        "+60% YTD",
+        "+20% 1M",
+        "buy consensus",
+        "cybersecurity tailwinds"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Snowflake has rallied +37% in 1M and holds a strong_buy consensus (1.49) with positive news sentiment. YTD is only +7%, suggesting catch-up potential, but short-term dip (-3% 1W) adds risk.",
+      "drivers": [
+        "+37% 1M",
+        "strong_buy consensus",
+        "positive news sentiment 0.16",
+        "catch-up potential"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.702,
+      "rationale": "AMD is up +140% YTD, +30% 1M, with strong_buy consensus (1.45) and positive news sentiment (0.30). High P/E of 178 reflects AI GPU momentum, but beta of 2.49 adds volatility.",
+      "drivers": [
+        "+140% YTD",
+        "+30% 1M",
+        "strong_buy consensus",
+        "AI GPU momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "NVIDIA has the strongest analyst consensus (1.29) and highest news sentiment (0.55), with a reasonable P/E of 32.3. YTD is +12% but 1M is -4%; this dip offers a solid entry into the AI leader.",
+      "drivers": [
+        "strong_buy consensus (1.29)",
+        "news sentiment 0.55",
+        "P/E 32.3",
+        "AI market leader"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+283.04%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +283.04% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +283.04% \u2265 100.0% SB"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.857,
+      "ytd": "+85.84%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +85.84% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +85.84% \u2265 50.1% B"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.58,
+      "ytd": "+58.06%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +58.06% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +58.06% \u2265 50.1% B"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.509,
+      "ytd": "+50.99%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +50.99% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +50.99% \u2265 50.1% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MU",
@@ -132,173 +310,6 @@ window.SIGNALS_DATA = {
         "strong_buy consensus",
         "news sentiment 0.191",
         "data cloud growth"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.857,
-      "ytd": "+85.84%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +85.84% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +85.84% \u2265 50.1% B"
-      ]
-    },
-    {
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.58,
-      "ytd": "+58.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +58.06% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +58.06% \u2265 50.1% B"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.509,
-      "ytd": "+50.99%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +50.99% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +50.99% \u2265 50.1% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "Micron is up 259.67% YTD and 744% over 1 year, with strong analyst targets up to $1,500 from Stifel and TD Cowen, a forward P/E of just 9x, and a 97% implied probability of an earnings beat on June 24 per Polymarket [247wallst.com](https://247wallst.com/investing/2026/06/18/wall-street-just-put-a-monster-target-on-micron-is-the-stock-still-too-cheap-2/).",
-      "drivers": [
-        "+259.67% YTD",
-        "forward P/E 9x",
-        "analyst targets up to $1,500",
-        "97% beat probability next week"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "Intel has surged 240.25% YTD after President Trump confirmed Apple as a U.S. chip manufacturing partner on Intel's 18A P node, providing a major foundry catalyst alongside strong 1D (+7.77%) and 1W (+14.56%) momentum [9to5mac.com](https://9to5mac.com/2026/06/18/apple-intel-chip-manufacturing-american/).",
-      "drivers": [
-        "+240.25% YTD",
-        "Apple foundry partnership",
-        "+7.77% 1D",
-        "1W +14.56%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "ARM is up 283.04% YTD and 96.93% in the past month alone, with Bernstein raising its price target to $500 on AI CPU demand and a 'CPU renaissance' for agentic AI, though high short interest of 12.74% and a P/E of 529 keep confidence tempered [ts2.tech](https://ts2.tech/en/arm-spikes-as-bernstein-eyes-500-target-on-ai-cpu-demand/).",
-      "drivers": [
-        "+283.04% YTD",
-        "+96.93% 1M",
-        "Bernstein $500 target",
-        "short interest 12.74%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "AMD is up 140.47% YTD with strong 1M (+29.78%) and 1W (+10.02%) momentum, benefiting from AI chip demand and Amazon potentially selling its own AI chips, while analyst consensus remains strong_buy with an average score of 1.45.",
-      "drivers": [
-        "+140.47% YTD",
-        "+29.78% 1M",
-        "AI chip catalyst",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "Applied Materials is up 130.09% YTD with 1M momentum of +51.85%, benefiting from semiconductor capital equipment demand, though its P/E of 58 and buy rather than strong_buy consensus warrant a slightly lower rank.",
-      "drivers": [
-        "+130.09% YTD",
-        "+51.85% 1M",
-        "semi equipment demand",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "ASML is up 66.39% YTD and 32.22% in the last month, with a strong_buy analyst consensus, low short interest of 0.27%, and positive news sentiment of 0.167, driven by its monopoly in advanced lithography for AI chips.",
-      "drivers": [
-        "+66.39% YTD",
-        "+32.22% 1M",
-        "strong_buy consensus",
-        "short interest 0.27%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "TSMC is up 45.34% YTD with 1M (+17.98%) and 1W (+9.75%) momentum, rated strong_buy by analysts with low short interest of 0.58%, though news sentiment is slightly negative at -0.03 amid the Intel-Apple deal which could alter competitive dynamics.",
-      "drivers": [
-        "+45.34% YTD",
-        "+17.98% 1M",
-        "strong_buy consensus",
-        "short interest 0.58%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.604,
-      "rationale": "Palo Alto Networks is up 60.44% YTD with 1M momentum of +19.84%, benefiting from cybersecurity demand and a 1W gain of +2.95%, though a high P/E of 250 and neutral news sentiment of -0.014 reduce conviction.",
-      "drivers": [
-        "+60.44% YTD",
-        "+19.84% 1M",
-        "cybersecurity demand",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Qualcomm is up 32.04% YTD with strong 1W (+11.41%) and 1M (+16.02%) momentum, a reasonable P/E of 24.34, and a 1.72% dividend yield, but hold analyst consensus and high short interest of 4.78% cap its ranking.",
-      "drivers": [
-        "+32.04% YTD",
-        "+16.02% 1M",
-        "P/E 24.34",
-        "dividend yield 1.72%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.5,
-      "rationale": "Snowflake is up 7.19% YTD but surged 37.00% in the last month, with a strong_buy analyst consensus, though a lack of earnings (P/E null), short interest of 6.29%, and a 1W decline of -3.37% suggest caution.",
-      "drivers": [
-        "+37.00% 1M",
-        "strong_buy consensus",
-        "short interest 6.29%",
-        "cloud analytics growth"
       ]
     }
   ]
