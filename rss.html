@@ -380,7 +380,7 @@
       document.getElementById('feed-updated').textContent = data.generated_utc;
     }
     if (window.PRICES_DATA === undefined) {
-      window.PRICES_DATA = { updated: data.generated, stocks: [] };
+      window.PRICES_DATA = { updated: data.generated_utc || data.generated, stocks: [] };
     }
     buildFilterBar();
     renderFeed();
