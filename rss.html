@@ -378,15 +378,14 @@
     window._rssItems = data.articles || [];
     if (data.generated_utc) {
       document.getElementById('feed-updated').textContent = data.generated_utc;
-      const el = document.getElementById('data-bar-ts');
-      if (el) {
-        const d = new Date(data.generated_utc);
-        el.textContent = d.getFullYear() + '-' +
-          String(d.getMonth()+1).padStart(2,'0') + '-' +
-          String(d.getDate()).padStart(2,'0') + ' ' +
-          String(d.getHours()).padStart(2,'0') + ':' +
-          String(d.getMinutes()).padStart(2,'0');
-      }
+      const d = new Date(data.generated_utc);
+      const fmt = d.getFullYear() + '-' +
+        String(d.getMonth()+1).padStart(2,'0') + '-' +
+        String(d.getDate()).padStart(2,'0') + ' ' +
+        String(d.getHours()).padStart(2,'0') + ':' +
+        String(d.getMinutes()).padStart(2,'0');
+      window.PRICES_DATA = { updated: fmt, stocks: [] };
+      buildDataBar();
     }
     buildFilterBar();
     renderFeed();
