@@ -56,7 +56,13 @@
   .tape-chg.neg { color: var(--red); }
 
   /* ── Layout ── */
-  body { padding-top: 36px; display: flex; flex-direction: column; overflow: hidden; }
+  body { padding-top: 36px; display: flex; flex-direction: row; overflow: hidden; height: 100%; }
+
+  /* Left rail goes full height alongside everything */
+  .right-side {
+    flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0;
+  }
+
   header {
     flex-shrink: 0; background: var(--bg);
     border-bottom: 1px solid var(--accent);
@@ -125,7 +131,7 @@
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
 
   /* ── Body ── */
-  .page-body { display: flex; flex: 1; overflow: hidden; }
+  .page-body { display: flex; flex: 1; overflow: hidden; min-width: 0; }
 
   /* ── Left Rail ── */
   .left-rail {
@@ -256,6 +262,56 @@
   </div>
 </div>
 
+<!-- Left rail — full height from tape to bottom -->
+<div class="left-rail">
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">⊞</span>
+    <span class="sector-pill-name">Stock Hub</span>
+  </a>
+  <a class="sector-pill active" href="#">
+    <span class="sector-pill-icon">🌐</span>
+    <span class="sector-pill-name">All Sectors</span>
+    <span class="sector-pill-badge">Live</span>
+  </a>
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">🤖</span>
+    <span class="sector-pill-name">AI Infra</span>
+    <span class="sector-pill-badge">Live</span>
+  </a>
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">🧬</span>
+    <span class="sector-pill-name">Biotech</span>
+    <span class="sector-pill-badge">Live</span>
+  </a>
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">🛡️</span>
+    <span class="sector-pill-name">Defence</span>
+    <span class="sector-pill-badge">Live</span>
+  </a>
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">💻</span>
+    <span class="sector-pill-name">Technology</span>
+    <span class="sector-pill-badge">Live</span>
+  </a>
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">₿</span>
+    <span class="sector-pill-name">Crypto</span>
+    <span class="sector-pill-badge">Live</span>
+  </a>
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">⚡</span>
+    <span class="sector-pill-name">Energy</span>
+    <span class="sector-pill-badge">Live</span>
+  </a>
+  <a class="sector-pill" href="#">
+    <span class="sector-pill-icon">📰</span>
+    <span class="sector-pill-name">RSS Feed</span>
+  </a>
+</div>
+
+<!-- Right side: header + content -->
+<div class="right-side">
+
 <header>
   <!-- Row 1: brand -->
   <div class="header-inner">
@@ -303,54 +359,6 @@
 </header>
 
 <div class="page-body">
-
-  <!-- Left rail -->
-  <div class="left-rail">
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">⊞</span>
-      <span class="sector-pill-name">Stock Hub</span>
-    </a>
-    <a class="sector-pill active" href="#">
-      <span class="sector-pill-icon">🌐</span>
-      <span class="sector-pill-name">All Sectors</span>
-      <span class="sector-pill-badge">Live</span>
-    </a>
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">🤖</span>
-      <span class="sector-pill-name">AI Infra</span>
-      <span class="sector-pill-badge">Live</span>
-    </a>
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">🧬</span>
-      <span class="sector-pill-name">Biotech</span>
-      <span class="sector-pill-badge">Live</span>
-    </a>
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">🛡️</span>
-      <span class="sector-pill-name">Defence</span>
-      <span class="sector-pill-badge">Live</span>
-    </a>
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">💻</span>
-      <span class="sector-pill-name">Technology</span>
-      <span class="sector-pill-badge">Live</span>
-    </a>
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">₿</span>
-      <span class="sector-pill-name">Crypto</span>
-      <span class="sector-pill-badge">Live</span>
-    </a>
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">⚡</span>
-      <span class="sector-pill-name">Energy</span>
-      <span class="sector-pill-badge">Live</span>
-    </a>
-    <a class="sector-pill" href="#">
-      <span class="sector-pill-icon">📰</span>
-      <span class="sector-pill-name">RSS Feed</span>
-    </a>
-  </div>
-
   <!-- Main content -->
   <div class="page-main">
     <div class="container">
@@ -374,6 +382,8 @@
     </div>
   </div>
 </div>
+
+</div><!-- /.right-side -->
 
 <script>
 const STOCKS = [
