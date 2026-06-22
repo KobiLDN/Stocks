@@ -13,7 +13,7 @@
 
 
   /* Search + count bar */
-  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .search-count-bar { display: flex; align-items: center; gap: 16px; padding: 6px 16px; border-top: 1px solid var(--border); }
   #calc-search {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -194,6 +194,10 @@
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link active" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </nav>
+  <div class="search-count-bar">
+    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
+    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
+  </div>
 </header>
 
 <div class="page-body">
@@ -210,11 +214,6 @@
 </div>
 <div class="page-main">
 <div class="container">
-
-  <div class="search-count-bar">
-    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
-    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
-  </div>
 
   <div class="table-wrap">
     <table id="calc-table">

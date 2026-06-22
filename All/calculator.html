@@ -29,7 +29,7 @@
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
 
   /* Search + count bar */
-  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .search-count-bar { display: flex; align-items: center; gap: 16px; padding: 6px 16px; border-top: 1px solid var(--border); }
   #calc-search {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -145,6 +145,10 @@
     <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
     <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
   </div>
+  <div class="search-count-bar">
+    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
+    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
+  </div>
 </header>
 <div class="page-body">
 
@@ -198,11 +202,6 @@
 <div class="container">
 
   
-
-  <div class="search-count-bar">
-    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
-    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
-  </div>
 
   <div class="table-wrap">
     <table id="calc-table">
