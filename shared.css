@@ -484,8 +484,38 @@ body[data-layout="rail"] .container {
   padding: 20px 24px;
 }
 
-/* data-bar — reuses .header-blocks / .header-block styles (defined in hub section above).
-   .data-bar-ts colours the timestamp value accent. */
+/* Header info blocks — Row 1 top-right on every rail page (hub: Universe + PLU; sectors: PLU only) */
+.header-blocks {
+  display: flex;
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: 16px;
+}
+.header-block {
+  padding: 6px 24px;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.header-block-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.header-block-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+.header-block-value .accent { color: var(--accent); }
+
+/* data-bar timestamp accent (injected by buildDataBar on sector pages) */
 .data-bar .data-bar-ts { color: var(--accent); font-weight: 700; }
 
 /* Header note — disclaimer strip below sector switcher */
