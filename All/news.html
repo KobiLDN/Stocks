@@ -10,39 +10,24 @@
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
+  /* All-page controls row */
   .news-controls {
     display: flex; align-items: center; gap: 0;
     padding: 6px 16px; border-top: 1px solid var(--border);
     overflow-x: auto; scrollbar-width: none;
   }
   .news-controls::-webkit-scrollbar { display: none; }
-  .news-sector, .news-sort { display: flex; align-items: center; gap: 4px; }
-  .news-period { display: flex; align-items: center; gap: 4px; }
-  #news-count { margin-left: 10px; }
+  .news-sector, .news-sort, .news-period { display: flex; align-items: center; gap: 4px; }
   .controls-sep { width: 1px; height: 20px; background: var(--border); margin: 0 10px; flex-shrink: 0; }
 
-  .filter-btn {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
-    letter-spacing: 2px; text-transform: uppercase;
-    padding: 5px 12px; border: 1px solid var(--border);
-    background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
-  }
-  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
-  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
-  .filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
-  .filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
-  .filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
-  .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
-  .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
-  .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+  /* Sector filter active colours */
+  .filter-btn[data-filter="biotech"].active { background: var(--green);  border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-filter="defence"].active { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-filter="tech"].active    { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-filter="crypto"].active  { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-filter="energy"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
 
-  .sort-btn {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
-    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
-  }
-  .sort-btn:hover { color: var(--accent); border-color: var(--accent); }
-  .sort-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 700; }
-
+  /* Period buttons (All-specific) */
   .period-btn {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
     padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
@@ -50,29 +35,24 @@
   .period-btn:hover { color: var(--accent); border-color: var(--accent); }
   .period-btn.active { background: var(--surface2); color: var(--text); border-color: var(--accent); font-weight: 700; }
 
-  .divider { width: 1px; height: 28px; background: var(--border); margin: 0 4px; }
-
   #news-count { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); margin-left: auto; }
   #news-count span { color: var(--accent); font-weight: 700; }
 
+  /* All-page card layout (compact grid, no hover fill) */
   .news-list { display: flex; flex-direction: column; gap: 0; }
-
   .news-card {
     display: grid; grid-template-columns: 4px 1fr;
-    border: 1px solid var(--border); border-top: none; transition: background 0.12s;
+    border: 1px solid var(--border); border-top: none;
+    background: transparent; transition: background 0.12s;
   }
   .news-card:first-child { border-top: 1px solid var(--border); }
-  .news-card:hover { background: var(--surface); }
-
-  .sent-bar { width: 4px; }
-  .sent-pos { background: var(--green); }
-  .sent-neg { background: var(--red); }
-  .sent-neu { background: var(--border); }
-
+  .news-card:hover { background: var(--surface); border-color: var(--border); }
   .news-body { padding: 14px 16px; }
 
-  .news-meta-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
-  .news-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; color: var(--accent); }
+  /* All-page ticker (smaller, accent colour) */
+  .news-ticker { font-size: 11px; color: var(--accent); text-decoration: none; }
+
+  /* Sector badges */
   .news-sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; padding: 1px 6px; letter-spacing: 0.5px; }
   .sect-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
   .sect-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
@@ -90,15 +70,10 @@
   .news-headline a { color: var(--text); text-decoration: none; }
   .news-headline a:hover { color: var(--accent); text-decoration: underline; }
 
-  .news-meta-bot { display: flex; align-items: center; gap: 12px; font-size: 11px; font-family: 'IBM Plex Mono', monospace; color: var(--muted); }
   .news-publisher { color: var(--accent); opacity: 0.7; }
-
   .no-news { text-align: center; padding: 60px 20px; font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 13px; }
 
-  @media (max-width: 600px) {
-    .news-headline { font-size: 13px; }
-    .controls-row { gap: 6px; }
-  }
+  @media (max-width: 600px) { .news-headline { font-size: 13px; } }
 </style>
 </head>
 <body data-layout="rail">
@@ -110,9 +85,14 @@
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>News</span></h1>
     <div class="header-sub">Latest headlines across <span id="all-stock-count">—</span> stocks · AI-scored sentiment · Newest first</div>
-</div>
-  
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+  <div class="header-blocks">
+  <div class="header-block">
+  <div class="header-block-label">Prices Last Updated</div>
+  <div class="header-block-value" id="data-bar-ts">—</div>
+  </div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 
 <nav>
