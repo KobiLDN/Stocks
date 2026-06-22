@@ -378,9 +378,8 @@
     window._rssItems = data.articles || [];
     if (data.generated_utc) {
       document.getElementById('feed-updated').textContent = data.generated_utc;
-    }
-    if (window.PRICES_DATA === undefined) {
-      window.PRICES_DATA = { updated: data.generated_utc || data.generated, stocks: [] };
+      const el = document.getElementById('data-bar-ts');
+      if (el) el.textContent = data.generated_utc;
     }
     buildFilterBar();
     renderFeed();
