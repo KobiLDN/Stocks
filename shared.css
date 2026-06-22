@@ -768,7 +768,7 @@ html[data-theme="dark"] .cpill.flat { background: rgba(90,122,154,0.12); }
 .chart-name { font-size: 15px; color: var(--muted); margin-left: 12px; }
 .chart-widget { border: 1px solid var(--border); background: var(--surface); height: 580px; }
 .chart-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 8px; }
-#grid-view { position: relative; z-index: 1; padding: 24px; display: none; }
+#grid-view { position: relative; z-index: 1; padding: 12px 24px 24px; display: none; }
 .grid-heading { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
 .grid-heading span { color: var(--accent); }
 .chart-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 16px; }
