@@ -98,6 +98,13 @@
 
     .header-brand { flex-shrink: 0; }
 
+    /* ── Header info blocks ── */
+    .header-blocks { display: flex; align-items: stretch; margin-left: auto; margin-right: 16px; }
+    .header-block { padding: 6px 24px; border-left: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+    .header-block-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+    .header-block-value { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; }
+    .header-block-value .accent { color: var(--accent); }
+
 
     .header-label {
       font-family: 'IBM Plex Mono', monospace;
