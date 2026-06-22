@@ -348,7 +348,189 @@ Never hardcode stock counts or timestamps.
 
 ---
 
-## 8 · Rules Summary
+## 8 · Sector Colour Mapping
+
+Each sector has a canonical CSS variable used consistently for badges, filter-btn active states, and chart colours:
+
+| Sector | CSS var | Usage |
+|---|---|---|
+| AI Infra | `var(--accent)` | filter-btn active, sector badge, rail highlight |
+| Biotech | `var(--green)` | filter-btn active, sector badge |
+| Defence | `var(--rose)` | filter-btn active, sector badge |
+| Technology | `var(--indigo)` | filter-btn active, sector badge (text `#fff`) |
+| Crypto | `var(--gold)` | filter-btn active, sector badge |
+| Energy | `var(--amber)` | filter-btn active, sector badge |
+
+**Filter-btn active states** (inline `<style>` per page — sector-specific colours not in shared.css):
+```css
+.filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
+.filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
+.filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
+.filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
+.filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
+.filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+```
+
+**Sector badge classes** (inline `<style>` per page):
+```css
+.sector-badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; padding: 3px 8px; border-radius: 2px; text-transform: uppercase; font-weight: 700; }
+.sector-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+.sector-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+.sector-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+.sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
+.sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
+.sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+```
+
+---
+
+## 9 · Category Badges
+
+Used in dashboard and metrics tables. Inline `<style>` per page — not in shared.css.
+
+```css
+.cat-badge { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; padding: 3px 8px; border-radius: 2px; text-transform: uppercase; font-weight: 700; }
+.cat-memory        { background: rgba(192,132,252,0.15); color: var(--purple);  border: 1px solid rgba(192,132,252,0.3); }
+.cat-nuclear-ops   { background: rgba(255,107,53,0.15);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.3); }
+.cat-smr           { background: rgba(57,255,20,0.1);    color: var(--green);   border: 1px solid rgba(57,255,20,0.25); }
+.cat-uranium       { background: rgba(255,215,0,0.1);    color: var(--gold);    border: 1px solid rgba(255,215,0,0.3); }
+.cat-power-infra   { background: rgba(0,212,255,0.1);    color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+.cat-dc-operators  { background: rgba(68,136,255,0.1);   color: var(--blue);    border: 1px solid rgba(68,136,255,0.25); }
+.cat-hyperscalers  { background: rgba(167,139,250,0.1);  color: var(--indigo);  border: 1px solid rgba(167,139,250,0.25); }
+.cat-ai-compute    { background: rgba(251,113,133,0.1);  color: var(--rose);    border: 1px solid rgba(251,113,133,0.25); }
+.cat-fibre-optical { background: rgba(45,212,191,0.1);   color: var(--teal);    border: 1px solid rgba(45,212,191,0.25); }
+.cat-dsp-semi      { background: rgba(245,158,11,0.1);   color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+.cat-test-equip    { background: rgba(148,163,184,0.1);  color: var(--slate);   border: 1px solid rgba(148,163,184,0.25); }
+.cat-materials     { background: rgba(163,230,53,0.1);   color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
+```
+
+---
+
+## 10 · Charts Page Inner Layout
+
+The charts page has an additional inner split inside `.page-main`: a fixed sidebar + a scrollable chart area. This requires extra overrides on top of the standard rail layout.
+
+```css
+/* Allow charts-layout to fill page-main */
+body[data-layout="rail"] .page-main { overflow: hidden; display: flex; flex-direction: column; }
+body[data-layout="rail"] .container { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+.charts-layout { display: grid; grid-template-columns: 240px 1fr; flex: 1; min-height: 0; border: 1px solid var(--border); }
+.sidebar { background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; }
+.sidebar-header { padding: 12px 14px; background: var(--surface2); border-bottom: 1px solid var(--border); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; align-items: center; }
+```
+
+**Collapsible sector groups in sidebar:**
+```css
+.sector-group { border-bottom: 1px solid var(--border); }
+.sector-group-label { padding: 8px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none; transition: background 0.12s; }
+.sector-group-label:hover { background: var(--surface2); }
+.sector-group-label .chevron { font-size: 10px; transition: transform 0.2s; color: var(--muted); }
+.sector-group.collapsed .chevron { transform: rotate(-90deg); }
+.sector-group.collapsed .sector-stocks { display: none; }
+```
+
+**Stock items:**
+```css
+.stock-item { padding: 8px 14px; cursor: pointer; font-size: 12px; display: flex; align-items: center; gap: 8px; transition: background 0.12s; border-bottom: 1px solid var(--border); }
+.stock-item:hover { background: var(--surface2); }
+.stock-item.active { background: var(--surface2); border-left: 3px solid var(--accent); }
+.stock-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; min-width: 52px; }
+.stock-name { font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+```
+
+Container override: `style="padding-left:0; padding-right:0; max-width:100%;"` (same as DESIGN.md §4).
+
+TradingView widget: use `autosize: true` for the single view; fixed `height: 200` for grid cells.
+
+---
+
+## 11 · Section Header (divider with label + count)
+
+Used in heatmap and any page with multiple named sections:
+
+```html
+<div class="section-hdr">
+  <span class="section-hdr-label">All Stocks</span>
+  <div class="section-hdr-line"></div>
+  <span class="section-hdr-count">192 stocks</span>
+</div>
+```
+```css
+.section-hdr { display: flex; align-items: center; gap: 16px; margin: 32px 0 10px; }
+.section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
+.section-hdr-line { flex: 1; height: 1px; background: var(--border); }
+.section-hdr-count { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
+```
+
+---
+
+## 12 · Button Variants
+
+All buttons share the same base shape (IBM Plex Mono, uppercase, 1px border). Active states differ by button type:
+
+| Variant | Class | Active state |
+|---|---|---|
+| Filter | `.filter-btn` | Filled accent background, white text |
+| Sort | `.sort-btn` | Accent text + border only (no fill) |
+| Period | `.period-btn` | Surface2 background + accent border |
+| Timeframe | `.tf-btn` | Accent text + border only (no fill) |
+| View toggle | `.view-btn` | Filled accent background |
+
+**Sort button** (news page):
+```css
+.sort-btn.active { color: var(--accent); border-color: var(--accent); font-weight: 700; }
+```
+
+**Period button** (news page):
+```css
+.period-btn.active { background: var(--surface2); color: var(--text); border-color: var(--accent); font-weight: 700; }
+```
+
+**Controls separator** (news page, between button groups):
+```css
+.controls-sep { width: 1px; height: 20px; background: var(--border); margin: 0 10px; flex-shrink: 0; }
+```
+
+---
+
+## 13 · Analyst Rating Badges
+
+Used in metrics table. Inline `<style>` per page.
+
+```css
+.analyst-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap; border: 1px solid; }
+.analyst-strong-buy   { background: rgba(0,230,118,0.15);  color: var(--green);   border-color: rgba(0,230,118,0.3); }
+.analyst-buy          { background: rgba(163,230,53,0.12); color: var(--lime);    border-color: rgba(163,230,53,0.3); }
+.analyst-hold         { background: rgba(245,158,11,0.12); color: var(--amber);   border-color: rgba(245,158,11,0.3); }
+.analyst-underperform { background: rgba(255,107,53,0.12); color: var(--accent2); border-color: rgba(255,107,53,0.3); }
+.analyst-sell         { background: rgba(255,68,68,0.12);  color: var(--red);     border-color: rgba(255,68,68,0.3); }
+```
+
+---
+
+## 14 · Return & YTD Colouring
+
+**1-year return classes** (dashboard table):
+```css
+.return-mega     { color: #0284c7; font-family: 'IBM Plex Mono', monospace; font-weight: 700; } /* ≥200% */
+html[data-theme="dark"] .return-mega { color: #ffd700; }
+.return-positive { color: #16a34a; font-family: 'IBM Plex Mono', monospace; font-weight: 700; } /* ≥50% */
+.return-modest   { color: #0284c7; font-family: 'IBM Plex Mono', monospace; font-weight: 700; } /* positive but <50% */
+.return-negative { color: #dc2626; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+```
+
+**YTD classes:**
+```css
+.ytd-return { font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+.ytd-pos  { color: var(--green); }
+.ytd-neg  { color: var(--red); }
+.ytd-flat { color: var(--muted); }
+```
+
+---
+
+## 15 · Rules Summary
 
 1. **Ticker tape** is always first in `<body>`, always fixed at top
 2. **Header** contains all sticky chrome: brand row → nav row → page control row(s)
