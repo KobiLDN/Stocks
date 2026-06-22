@@ -157,9 +157,13 @@ body[data-layout="rail"] .header-left { margin-right: auto; }
 </div>
 ```
 
-#### Hub Info Blocks (Stock Hub only)
+#### Info Blocks — Row 1 top-right (every rail page)
 
-Two info blocks sit between `.header-left` and the theme toggle, aligned right via `margin-left: auto` on `.header-blocks`:
+One or two info blocks sit between `.header-left` and the theme toggle, aligned right via `margin-left: auto` on `.header-blocks`.
+
+**Rule: all rail pages show a "Prices Last Updated" block in the top-right corner of Row 1.** `buildDataBar()` in `shared.js` injects it automatically — it reads the timestamp from `window.PRICES_DATA.updated` (sector pages) or `window.SIGNALS_DATA.generated` (signals pages) and inserts a `.header-blocks.data-bar` div into `.header-inner` before the theme toggle. If `.header-blocks` already exists (hub), it skips — the hub manages its own blocks.
+
+**Hub** gets two blocks (Universe + Prices Last Updated); **sector pages** get one (Prices Last Updated only).
 
 ```css
 .header-blocks { display: flex; align-items: stretch; margin-left: auto; margin-right: 16px; }
@@ -300,7 +304,7 @@ body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: 
 
 - `.page-main` is the scroll container — same pattern as hub's `<main>`
 - Only this element scrolls — everything in `<header>` and `.left-rail` is fixed
-- `data-bar` (last updated / schedule info) injected at `afterbegin` of `.container` by `shared.js`
+- `data-bar` (Prices Last Updated info block) injected into `.header-inner` Row 1 by `buildDataBar()` in `shared.js`
 
 **Container overrides by page:**
 | Page | Override |

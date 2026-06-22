@@ -484,22 +484,9 @@ body[data-layout="rail"] .container {
   padding: 20px 24px;
 }
 
-/* Data bar — auto-refresh status strip injected as last row inside <header> on rail pages */
-.data-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.3px;
-  border-top: 1px solid var(--border);
-  padding: 8px 16px;
-}
-.data-bar .data-bar-ts    { color: var(--accent); font-weight: 600; }
-.data-bar .data-bar-sched { opacity: 0.75; }
+/* data-bar — reuses .header-blocks / .header-block styles (defined in hub section above).
+   .data-bar-ts colours the timestamp value accent. */
+.data-bar .data-bar-ts { color: var(--accent); font-weight: 700; }
 
 /* Header note — disclaimer strip below sector switcher */
 .header-note {

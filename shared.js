@@ -40,60 +40,49 @@ function buildTape(stocks) {
   track.classList.add('running');
 }
 
-// ── Data bar (injected after <nav> on every page) ─────────────────────────────
+// ── Data bar — "Prices Last Updated" info block ────────────────────────────────
 function buildDataBar() {
-  // Skip if already present, or if page has its own refresh-banner (signals pages)
+  // Skip if already present or page has its own refresh-banner (signals pages)
   if (document.querySelector('.data-bar') || document.querySelector('.refresh-banner')) return;
-  const nav = document.querySelector('nav');
-  if (!nav) return;
 
-  let ts = null, label = 'Last updated', sched = '';
+  let ts = null;
 
-  // Signals pages — read from SIGNALS_DATA global (signals-local.js)
+  // Signals pages — read from SIGNALS_DATA global
   if (window.SIGNALS_DATA && window.SIGNALS_DATA.generated) {
-    ts    = window.SIGNALS_DATA.generated;
-    label = 'Signals generated';
-    sched = 'Auto-refreshed Mon / Wed / Fri · 08:00 BST';
+    ts = window.SIGNALS_DATA.generated;
   }
-  // All other pages — read from PRICES_DATA (prices-data.js)
+  // Sector pages — read from PRICES_DATA (prices-data.js)
   else if (window.PRICES_DATA && window.PRICES_DATA.updated) {
-    ts    = window.PRICES_DATA.updated;
-    label = 'Prices updated';
-    sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST';
-  } else {
-    // Hub page: find first available sector snapshot global
+    ts = window.PRICES_DATA.updated;
+  }
+  // Hub page — find first available sector snapshot
+  else {
     for (const s of ['AI', 'Defence', 'Biotech', 'Tech', 'Crypto', 'Energy']) {
       const pd = window['__pd_' + s];
-      if (pd && pd.updated) {
-        ts    = pd.updated;
-        label = 'Prices updated';
-        sched = 'Auto-refreshed Mon–Fri · 09:00, 15:30, 21:30 BST';
-        break;
-      }
+      if (pd && pd.updated) { ts = pd.updated; break; }
     }
   }
 
   if (!ts) return;
 
-  const bar = document.createElement('div');
-  bar.className = 'data-bar';
-  bar.innerHTML =
-    '<span>' + label + ': <span class="data-bar-ts">' + ts + '</span></span>' +
-    '<span class="data-bar-sched">' + sched + '</span>';
+  const isRail    = document.body.getAttribute('data-layout') === 'rail';
+  const hdrInner  = document.querySelector('.header-inner');
 
-  // Inject inside .container (afterbegin) — naturally inherits container alignment.
-  // Reduce container padding-top to match the gap below the bar (16px each side).
-  // Charts pages use <main> — inject inside that instead.
-  const container = document.querySelector('.container');
-  const main      = document.querySelector('main');
-  if (container) {
-    container.style.paddingTop = '16px';
-    container.insertAdjacentElement('afterbegin', bar);
-  } else if (main) {
-    main.insertAdjacentElement('afterbegin', bar);
-  } else {
-    nav.insertAdjacentElement('afterend', bar);
+  if (isRail && hdrInner && !hdrInner.querySelector('.header-blocks')) {
+    // Rail layout: inject as an info block in Row 1 (top-right, before theme toggle)
+    const block = document.createElement('div');
+    block.className = 'header-blocks data-bar';
+    block.innerHTML =
+      '<div class="header-block">' +
+        '<div class="header-block-label">Prices Last Updated</div>' +
+        '<div class="header-block-value data-bar-ts">' + ts + '</div>' +
+      '</div>';
+    const toggle = hdrInner.querySelector('.theme-toggle');
+    if (toggle) hdrInner.insertBefore(block, toggle);
+    else hdrInner.appendChild(block);
   }
+  // Hub (rail + .header-blocks already present) — hub manages its own blocks, skip.
+  // Non-rail pages — no sector pages are non-rail, nothing to do.
 }
 
 // ── Sticky header+nav wrapper ─────────────────────────────────────────────────
