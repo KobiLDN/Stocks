@@ -95,6 +95,7 @@
 
   // Known symbols that need explicit exchange prefix or differ from EXCHANGE:TICKER
   const TV_OVERRIDES = {
+    // Equities — non-standard exchange or suffix
     '285A':  'TSE:285A',
     'RR.':   'LSE:RR.',
     'BA.':   'LSE:BA.',
@@ -102,6 +103,41 @@
     'GSK':   'LSE:GSK',
     'UEC':   'AMEX:UEC',
     'P':     'NYSE:P',
+    // Crypto — all coins need CRYPTO:TICKERUSD format
+    'BTC':     'CRYPTO:BTCUSD',
+    'ETH':     'CRYPTO:ETHUSD',
+    'SOL':     'CRYPTO:SOLUSD',
+    'BNB':     'CRYPTO:BNBUSD',
+    'ADA':     'CRYPTO:ADAUSD',
+    'AVAX':    'CRYPTO:AVAXUSD',
+    'XRP':     'CRYPTO:XRPUSD',
+    'XLM':     'CRYPTO:XLMUSD',
+    'TRX':     'CRYPTO:TRXUSD',
+    'SUI':     'CRYPTO:SUIUSD',
+    'HBAR':    'CRYPTO:HBARUSD',
+    'TON':     'CRYPTO:TONUSD',
+    'ALGO':    'CRYPTO:ALGOUSD',
+    'MINA':    'CRYPTO:MINAUSD',
+    'POL':     'CRYPTO:MATICUSD',
+    'DOT':     'CRYPTO:DOTUSD',
+    'LINK':    'CRYPTO:LINKUSD',
+    'DOGE':    'CRYPTO:DOGEUSD',
+    'PEPE':    'CRYPTO:PEPEUSD',
+    'TAO':     'CRYPTO:TAOUSD',
+    'FET':     'CRYPTO:FETUSD',
+    'RNDR':    'CRYPTO:RNDRUSD',
+    'OCEAN':   'CRYPTO:OCEANUSD',
+    'GRT':     'CRYPTO:GRTUSD',
+    'AGIX':    'CRYPTO:AGIXUSD',
+    'NMR':     'CRYPTO:NMRUSD',
+    'ALT':     'CRYPTO:ALTUSD',
+    'AIOZ':    'CRYPTO:AIOZUSD',
+    'ARKM':    'CRYPTO:ARKMUSD',
+    'WLD':     'CRYPTO:WLDUSD',
+    'NEAR':    'CRYPTO:NEARUSD',
+    'ICP':     'CRYPTO:ICPUSD',
+    'KAITO':   'CRYPTO:KAITOUSD',
+    'VIRTUAL': 'CRYPTO:VIRTUALUSD',
   };
 
   const TF_MAP = {
