@@ -88,18 +88,21 @@
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
 
-  nav {
-    display: flex; align-items: center; gap: 2px; padding: 0 16px;
-    border-top: 1px solid var(--border); background: var(--bg); overflow-x: auto;
+  /* ── Nav Panel (panel 2) ── */
+  .nav-panel {
+    width: 130px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
   }
   .nav-link {
-    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1.5px;
-    text-transform: uppercase; padding: 10px 16px; color: var(--dim);
-    border-bottom: 2px solid transparent; text-decoration: none; white-space: nowrap;
-    display: flex; align-items: center; gap: 6px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border-left: 2px solid transparent; text-decoration: none; white-space: nowrap;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
   }
-  .nav-link.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .nav-link:hover { color: var(--accent); }
+  .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-link:hover { color: var(--accent); background: var(--surface2); }
+  .nav-icon { font-size: 14px; flex-shrink: 0; }
 
   .filter-bar {
     display: flex; align-items: center; gap: 6px; padding: 6px 16px;
@@ -262,7 +265,7 @@
   </div>
 </div>
 
-<!-- Left rail — full height from tape to bottom -->
+<!-- Panel 1: Sector switcher -->
 <div class="left-rail">
   <a class="sector-pill" href="#">
     <span class="sector-pill-icon">⊞</span>
@@ -309,6 +312,17 @@
   </a>
 </div>
 
+<!-- Panel 2: Page nav -->
+<div class="nav-panel">
+  <a class="nav-link active" href="#"><span class="nav-icon">📊</span>Dashboard</a>
+  <a class="nav-link" href="#"><span class="nav-icon">📋</span>Metrics</a>
+  <a class="nav-link" href="#"><span class="nav-icon">📰</span>News</a>
+  <a class="nav-link" href="#"><span class="nav-icon">🎯</span>Signals</a>
+  <a class="nav-link" href="#"><span class="nav-icon">🔥</span>Heatmap</a>
+  <a class="nav-link" href="#"><span class="nav-icon">📈</span>Charts</a>
+  <a class="nav-link" href="#"><span class="nav-icon">🧮</span>What-If</a>
+</div>
+
 <!-- Right side: header + content -->
 <div class="right-side">
 
@@ -329,18 +343,7 @@
     <button class="theme-toggle">☾</button>
   </div>
 
-  <!-- Row 2: nav -->
-  <nav>
-    <a class="nav-link active" href="#">📊 Dashboard</a>
-    <a class="nav-link" href="#">📋 Metrics</a>
-    <a class="nav-link" href="#">📰 News</a>
-    <a class="nav-link" href="#">🎯 Signals</a>
-    <a class="nav-link" href="#">🔥 Heatmap</a>
-    <a class="nav-link" href="#">📈 Charts</a>
-    <a class="nav-link" href="#">🧮 What-If</a>
-  </nav>
-
-  <!-- Row 3: sector filter -->
+  <!-- Row 2: sector filter -->
   <div class="filter-bar">
     <button class="filter-btn active" data-f="all" onclick="setFilter('all',this)">All</button>
     <button class="filter-btn" data-f="ai" onclick="setFilter('ai',this)">AI Infra</button>
