@@ -10,121 +10,17 @@
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  .toolbar { position: relative; z-index: 25; padding: 12px 0; border-bottom: 1px solid var(--border); background: var(--bg); }
-  .toolbar-inner { max-width: 1920px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-  .toolbar-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .toolbar-group { display: flex; gap: 2px; align-items: center; }
-  .toolbar-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-right: 8px; }
-  .tool-btn { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; padding: 7px 14px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; text-transform: uppercase; position: relative; }
-  .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .tool-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
-  .divider { width: 1px; height: 28px; background: var(--border); margin: 0 8px; }
+  .cat-btn.active-oil-majors        { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }
+  .cat-btn.active-ep-refining       { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
+  .cat-btn.active-oilfield-services { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }
+  .cat-btn.active-utilities         { background: var(--green);   border-color: var(--green);   color: var(--bg); }
+  .cat-btn.active-clean-energy      { background: var(--lime);    border-color: var(--lime);    color: var(--bg); }
 
-  .cat-btn[data-tooltip]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--surface2);
-    color: var(--text);
-    border: 1px solid var(--accent);
-    border-radius: 6px;
-    padding: 8px 12px;
-    font-size: 12px;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-    width: 220px;
-    text-align: center;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.18s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    text-transform: none;
-    letter-spacing: 0;
-  }
-  .cat-btn[data-tooltip]::before {
-    content: '';
-    position: absolute;
-    bottom: calc(100% + 4px);
-    left: 50%;
-    transform: translateX(-50%);
-    border: 5px solid transparent;
-    border-top-color: var(--accent);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.18s ease;
-    z-index: 1001;
-  }
-  .cat-btn:hover[data-tooltip]::after,
-  .cat-btn:hover[data-tooltip]::before { opacity: 1; }
-
-  /* CAT BUTTONS in toolbar */
-  .cat-btn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; position: relative; }
-  .cat-btn:hover { color: var(--accent); border-color: var(--accent); }
-
-  /* Category button active states — Energy colours */
-  .cat-btn.active-oil-majors       { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
-  .cat-btn.active-ep-refining      { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }
-  .cat-btn.active-oilfield-services{ background: var(--accent); border-color: var(--accent); color: var(--bg); }
-  .cat-btn.active-utilities        { background: var(--green);  border-color: var(--green);  color: var(--bg); }
-  .cat-btn.active-clean-energy     { background: var(--lime);   border-color: var(--lime);   color: var(--bg); }
-
-  #single-view { position: relative; z-index: 1; display: grid; grid-template-columns: 260px 1fr; gap: 24px; max-width: 1920px; margin: 0 auto; padding: 24px; align-items: start; }
-  .sidebar { position: sticky; top: 24px; max-height: calc(100vh - 120px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
-  .sidebar-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 8px; padding-left: 2px; }
-
-  .cat-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 12px 4px; display: block; font-weight: 700; margin-top: 8px; }
   .cat-label.oil-majors        { color: var(--amber); }
   .cat-label.ep-refining       { color: var(--accent2); }
   .cat-label.oilfield-services { color: var(--accent); }
   .cat-label.utilities         { color: var(--green); }
   .cat-label.clean-energy      { color: var(--lime); }
-
-  .stock-btn { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 12px; background: transparent; border: none; border-left: 2px solid transparent; color: var(--muted); cursor: pointer; text-align: left; transition: all 0.15s; }
-  .stock-btn:hover { background: var(--surface); color: var(--text); }
-  .stock-btn.active { background: var(--surface2); border-left-color: var(--accent); color: var(--text); }
-  .btn-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; min-width: 52px; }
-  .btn-name { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .stock-btn.active .btn-name { color: var(--text); }
-
-  .chart-area { min-width: 0; }
-  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
-  .chart-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 28px; font-weight: 700; color: var(--text); }
-  .chart-name   { font-size: 15px; color: var(--muted); margin-left: 12px; }
-  .chart-widget { border: 1px solid var(--border); background: var(--surface); height: 580px; }
-  .chart-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 8px; }
-
-  #grid-view { position: relative; z-index: 1; max-width: 1920px; margin: 0 auto; padding: 24px; display: none; }
-  .grid-heading { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-  .grid-heading span { color: var(--accent); }
-  .chart-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 16px; }
-  .grid-card { border: 1px solid var(--border); background: var(--surface); }
-  .grid-card-header { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--border); }
-  .grid-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 700; }
-  .grid-name { font-size: 12px; color: var(--muted); }
-
-  .sidebar-toggle { display: none; width: 100%; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; padding: 10px 16px; background: var(--surface); border: 1px solid var(--border); color: var(--accent); cursor: pointer; text-align: left; margin-bottom: 12px; }
-
-  @media (max-width: 900px) {
-    #single-view { grid-template-columns: 1fr; padding: 16px 12px; gap: 12px; }
-    .sidebar { position: static; max-height: none; }
-    .chart-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 768px) {
-    .nav-inner { padding: 8px 12px; flex-wrap: wrap; }
-    .nav-link { font-size: 11px; padding: 7px 14px; letter-spacing: 1px; }
-    header { padding: 20px 0 16px; }
-    .toolbar { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px; }
-    .divider { display: none !important; }
-    #cat-toolbar { flex-wrap: wrap; gap: 4px; }
-    .sidebar-toggle { display: block; }
-    .sidebar { display: none; max-height: 300px; overflow-y: auto; background: var(--surface); border: 1px solid var(--border); margin-bottom: 12px; }
-    .sidebar.open { display: block; }
-    .chart-widget, #single-widget { height: 380px !important; }
-  }
 </style>
 </head>
 <body data-layout="rail">
@@ -149,7 +45,7 @@
   </nav>
 </header>
 
-<div class="toolbar">
+<div class="chart-controls">
   <div class="toolbar-inner">
     <!-- Category row (grid mode only) -->
     <div class="toolbar-row" id="cat-row" style="display:none">
