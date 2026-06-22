@@ -10,70 +10,21 @@
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  /* All-page controls row */
-  .news-controls {
-    display: flex; align-items: center; gap: 0;
-    padding: 6px 16px; border-top: 1px solid var(--border);
-    overflow-x: auto; scrollbar-width: none;
-  }
-  .news-controls::-webkit-scrollbar { display: none; }
-  .news-sector, .news-sort, .news-period { display: flex; align-items: center; gap: 4px; }
-  .controls-sep { width: 1px; height: 20px; background: var(--border); margin: 0 10px; flex-shrink: 0; }
-
-  /* Sector filter active colours */
-  .filter-btn[data-filter="biotech"].active { background: var(--green);  border-color: var(--green);  color: var(--bg); }
-  .filter-btn[data-filter="defence"].active { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
-  .filter-btn[data-filter="tech"].active    { background: var(--indigo); border-color: var(--indigo); color: #fff; }
-  .filter-btn[data-filter="crypto"].active  { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
-  .filter-btn[data-filter="energy"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
-
-  /* Period buttons (All-specific) */
-  .period-btn {
-    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
-    padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
-  }
-  .period-btn:hover { color: var(--accent); border-color: var(--accent); }
-  .period-btn.active { background: var(--surface2); color: var(--text); border-color: var(--accent); font-weight: 700; }
-
-  #news-count { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); margin-left: auto; }
-  #news-count span { color: var(--accent); font-weight: 700; }
-
-  /* All-page card layout (compact grid, no hover fill) */
-  .news-list { display: flex; flex-direction: column; gap: 0; }
-  .news-card {
-    display: grid; grid-template-columns: 4px 1fr;
-    border: 1px solid var(--border); border-top: none;
-    background: transparent; transition: background 0.12s;
-  }
-  .news-card:first-child { border-top: 1px solid var(--border); }
-  .news-card:hover { background: var(--surface); border-color: var(--border); }
-  .news-body { padding: 14px 16px; }
-
-  /* All-page ticker (smaller, accent colour) */
-  .news-ticker { font-size: 11px; color: var(--accent); text-decoration: none; }
+  /* Sector filter active colours (All-specific) */
+  .filter-btn[data-sector="biotech"].active { background: var(--green);  border-color: var(--green);  color: var(--bg); }
+  .filter-btn[data-sector="defence"].active { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }
+  .filter-btn[data-sector="tech"].active    { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+  .filter-btn[data-sector="crypto"].active  { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
+  .filter-btn[data-sector="energy"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
 
   /* Sector badges */
-  .news-sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; padding: 1px 6px; letter-spacing: 0.5px; }
+  .news-sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; padding: 2px 7px; letter-spacing: 0.5px; }
   .sect-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
   .sect-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
   .sect-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
   .sect-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
   .sect-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
   .sect-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
-
-  .news-sent { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; }
-  .sent-pos-text { color: var(--green); }
-  .sent-neg-text { color: var(--red); }
-  .sent-neu-text { color: var(--muted); }
-
-  .news-headline { font-size: 14px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
-  .news-headline a { color: var(--text); text-decoration: none; }
-  .news-headline a:hover { color: var(--accent); text-decoration: underline; }
-
-  .news-publisher { color: var(--accent); opacity: 0.7; }
-  .no-news { text-align: center; padding: 60px 20px; font-family: 'IBM Plex Mono', monospace; color: var(--muted); font-size: 13px; }
-
-  @media (max-width: 600px) { .news-headline { font-size: 13px; } }
 </style>
 </head>
 <body data-layout="rail">
@@ -84,7 +35,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>News</span></h1>
-    <div class="header-sub">Latest headlines across <span id="all-stock-count">—</span> stocks · AI-scored sentiment · Newest first</div>
+    <div class="header-sub">Latest headlines across <span id="all-stock-count">—</span> stocks · AI-scored sentiment</div>
   </div>
   <div class="header-blocks">
   <div class="header-block">
@@ -93,103 +44,74 @@
   </div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-</div>
+  </div>
 
-<nav>
-      <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum">📊 Dashboard</a>
+  <nav>
+    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum">📊 Dashboard</a>
     <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
     <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all stocks with news sentiment scoring">📰 News</a>
     <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
     <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-</nav>
-<div class="news-controls">
-  <div class="news-sector">
-    <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
-    <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
-    <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
-    <button class="filter-btn" data-filter="defence" onclick="setSector('defence',this)">Defence</button>
-    <button class="filter-btn" data-filter="tech" onclick="setSector('tech',this)">Tech</button>
-    <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
-    <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
-  </div>
-  <span class="controls-sep"></span>
-  <div class="news-sort">
-    <button class="sort-btn active" onclick="setSort('newest',this)">Newest</button>
-    <button class="sort-btn" onclick="setSort('oldest',this)">Oldest</button>
-    <button class="sort-btn" onclick="setSort('pos',this)">Most Positive</button>
-    <button class="sort-btn" onclick="setSort('neg',this)">Most Negative</button>
-  </div>
-  <span class="controls-sep"></span>
-  <div class="news-period">
-    <button class="period-btn" onclick="setPeriod('24h',this)">Last 24h</button>
-    <button class="period-btn active" onclick="setPeriod('week',this)">Last Week</button>
-    <button class="period-btn" onclick="setPeriod('all',this)">All Time</button>
-    <span id="news-count"></span>
-  </div>
-</div>
-</header>
-<div class="page-body">
+  </nav>
 
+  <div class="filter-bar" id="filter-bar">
+    <button class="filter-btn active" data-sector="all"     onclick="setSector('all',this)">All</button>
+    <button class="filter-btn"        data-sector="ai"      onclick="setSector('ai',this)">AI Infra</button>
+    <button class="filter-btn"        data-sector="biotech" onclick="setSector('biotech',this)">Biotech</button>
+    <button class="filter-btn"        data-sector="defence" onclick="setSector('defence',this)">Defence</button>
+    <button class="filter-btn"        data-sector="tech"    onclick="setSector('tech',this)">Tech</button>
+    <button class="filter-btn"        data-sector="crypto"  onclick="setSector('crypto',this)">Crypto</button>
+    <button class="filter-btn"        data-sector="energy"  onclick="setSector('energy',this)">Energy</button>
+  </div>
+
+  <div class="news-toolbar">
+    <input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
+    <span class="sort-label">Sort</span>
+    <div class="sort-group" id="sort-group">
+      <button class="sort-btn active" data-sort="newest"   onclick="setSort('newest',this)">Newest</button>
+      <button class="sort-btn"        data-sort="oldest"   onclick="setSort('oldest',this)">Oldest</button>
+      <button class="sort-btn"        data-sort="positive" onclick="setSort('positive',this)">Most Positive</button>
+      <button class="sort-btn"        data-sort="negative" onclick="setSort('negative',this)">Most Negative</button>
+    </div>
+    <span class="sort-label">Period</span>
+    <div class="sort-group" id="window-group">
+      <button class="sort-btn"        data-window="all"  onclick="setWindow('all',this)">All Time</button>
+      <button class="sort-btn active" data-window="day"  onclick="setWindow('day',this)">Last 24h</button>
+      <button class="sort-btn"        data-window="week" onclick="setWindow('week',this)">Last Week</button>
+    </div>
+    <span class="row-count">Showing <span id="news-count">—</span> articles</span>
+  </div>
+</header>
+
+<div class="page-body">
 <div class="left-rail">
-<a class="sector-pill" href="../index.html">
-<span class="sector-pill-icon">⊞</span>
-<span class="sector-pill-name">Stock Hub</span>
-</a>
-<a class="sector-pill active" href="index.html">
-<span class="sector-pill-icon">🌐</span>
-<span class="sector-pill-name">All Sectors</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../AI/news.html">
-<span class="sector-pill-icon">🤖</span>
-<span class="sector-pill-name">AI Infra</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Biotech/news.html">
-<span class="sector-pill-icon">🧬</span>
-<span class="sector-pill-name">Biotech</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Defence/news.html">
-<span class="sector-pill-icon">🛡️</span>
-<span class="sector-pill-name">Defence</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Tech/news.html">
-<span class="sector-pill-icon">💻</span>
-<span class="sector-pill-name">Technology</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Crypto/news.html">
-<span class="sector-pill-icon">₿</span>
-<span class="sector-pill-name">Crypto</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Energy/news.html">
-<span class="sector-pill-icon">⚡</span>
-<span class="sector-pill-name">Energy</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../rss.html">
-<span class="sector-pill-icon">📰</span>
-<span class="sector-pill-name">RSS Feed</span>
-</a>
+<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+<a class="sector-pill active" href="index.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../AI/news.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Biotech/news.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Defence/news.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Tech/news.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Crypto/news.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Energy/news.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
 </div>
 
 <div class="page-main">
 <div class="container">
-<div class="news-list" id="news-list">
-    <div class="no-news">Loading all sectors…</div>
+  <div class="news-feed" id="news-feed">
+    <div class="empty-state">Loading all sectors…</div>
   </div>
 </div>
 
 <script>
-  let allNews     = [];
+  let allNews      = [];
+  let filteredNews = [];
   let activeSector = 'all';
   let activeSort   = 'newest';
-  let activePeriod = 'week';
+  let activeWindow = 'day';
+  let activeQuery  = '';
 
   const SECTOR_LABELS = {
     'ai':'AI Infra','biotech':'Biotech','defence':'Defence',
@@ -206,12 +128,6 @@
     if (score === null || score === undefined) return '—';
     return (score > 0 ? '+' : '') + score.toFixed(2);
   }
-  function sentTextCls(score) {
-    if (score === null || score === undefined) return 'sent-neu-text';
-    if (score > 0.05)  return 'sent-pos-text';
-    if (score < -0.05) return 'sent-neg-text';
-    return 'sent-neu-text';
-  }
   function timeAgo(ts) {
     const diff = Date.now() / 1000 - ts;
     if (diff < 3600)  return Math.floor(diff / 60) + 'm ago';
@@ -221,57 +137,86 @@
   function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
+  function yahooUrl(ticker) {
+    return 'https://finance.yahoo.com/quote/' + encodeURIComponent(ticker);
+  }
 
   function setSector(sector, btn) {
     activeSector = sector;
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    renderNews();
+    applyFilters();
   }
-  function setSort(sort, btn) {
-    activeSort = sort;
-    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  function setSort(mode, btn) {
+    activeSort = mode;
+    document.querySelectorAll('#sort-group .sort-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    renderNews();
+    applyFilters();
   }
-  function setPeriod(period, btn) {
-    activePeriod = period;
-    document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+  function setWindow(w, btn) {
+    activeWindow = w;
+    document.querySelectorAll('#window-group .sort-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    renderNews();
+    applyFilters();
+  }
+  function filterNews(q) {
+    activeQuery = q.trim().toLowerCase();
+    applyFilters();
   }
 
-  function renderNews() {
+  function applyFilters() {
     let items = allNews.slice();
+
     if (activeSector !== 'all') items = items.filter(n => n.sector === activeSector);
+
     const now = Date.now() / 1000;
-    if (activePeriod === '24h')  items = items.filter(n => now - n.ts < 86400);
-    if (activePeriod === 'week') items = items.filter(n => now - n.ts < 604800);
-    if (activeSort === 'newest') items.sort((a, b) => b.ts - a.ts);
-    if (activeSort === 'oldest') items.sort((a, b) => a.ts - b.ts);
-    if (activeSort === 'pos')    items.sort((a, b) => (b.sent || -99) - (a.sent || -99));
-    if (activeSort === 'neg')    items.sort((a, b) => (a.sent || 99) - (b.sent || 99));
+    if (activeWindow === 'day')  items = items.filter(n => now - n.ts < 86400);
+    if (activeWindow === 'week') items = items.filter(n => now - n.ts < 604800);
 
-    document.getElementById('news-count').innerHTML = '<span>' + items.length + '</span> articles';
-    const list = document.getElementById('news-list');
-    if (!items.length) { list.innerHTML = '<div class="no-news">No articles found for this selection.</div>'; return; }
+    if (activeQuery) {
+      items = items.filter(n =>
+        n.ticker.toLowerCase().includes(activeQuery) ||
+        (n.company || '').toLowerCase().includes(activeQuery) ||
+        n.headline.toLowerCase().includes(activeQuery)
+      );
+    }
 
-    list.innerHTML = items.map(n => {
-      const sc    = sentClass(n.sent);
-      const stxt  = sentTextCls(n.sent);
+    if (activeSort === 'newest')   items.sort((a, b) => b.ts - a.ts);
+    if (activeSort === 'oldest')   items.sort((a, b) => a.ts - b.ts);
+    if (activeSort === 'positive') items.sort((a, b) => (b.sent ?? -99) - (a.sent ?? -99));
+    if (activeSort === 'negative') items.sort((a, b) => (a.sent ?? 99)  - (b.sent ?? 99));
+
+    filteredNews = items;
+    renderFeed();
+  }
+
+  function renderFeed() {
+    const countEl = document.getElementById('news-count');
+    const feed    = document.getElementById('news-feed');
+    if (countEl) countEl.textContent = filteredNews.length;
+
+    if (!filteredNews.length) {
+      feed.innerHTML = '<div class="empty-state">No articles found for this selection.</div>';
+      return;
+    }
+
+    feed.innerHTML = filteredNews.map(n => {
+      const sc     = sentClass(n.sent);
       const slabel = SECTOR_LABELS[n.sector] || n.sector;
       return '<div class="news-card">' +
         '<div class="sent-bar ' + sc + '"></div>' +
         '<div class="news-body">' +
           '<div class="news-meta-top">' +
-            '<span class="news-ticker">' + esc(n.ticker) + '</span>' +
+            '<a class="news-ticker" href="' + yahooUrl(n.ticker) + '" target="_blank" rel="noopener">' + esc(n.ticker) + '</a>' +
             '<span class="news-sector-badge sect-' + n.sector + '">' + esc(slabel) + '</span>' +
-            '<span class="news-sent ' + stxt + '">' + sentLabel(n.sent) + '</span>' +
+            '<span class="news-time">' + timeAgo(n.ts) + '</span>' +
           '</div>' +
-          '<div class="news-headline"><a href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.headline) + '</a></div>' +
+          (n.url
+            ? '<a class="news-headline" href="' + esc(n.url) + '" target="_blank" rel="noopener">' + esc(n.headline) + '</a>'
+            : '<span class="news-headline">' + esc(n.headline) + '</span>') +
           '<div class="news-meta-bot">' +
-            (n.publisher ? '<span class="news-publisher">' + esc(n.publisher) + '</span>' : '') +
-            '<span>' + timeAgo(n.ts) + '</span>' +
+            '<span class="sent-pill ' + sc + '">' + sentLabel(n.sent) + '</span>' +
+            (n.publisher ? '<span class="news-company">' + esc(n.publisher) + '</span>' : '') +
           '</div>' +
         '</div></div>';
     }).join('');
@@ -288,20 +233,28 @@
 
   Promise.all(SECTORS.map(async sd => {
     try {
-      const text = await fetch(sd.path).then(r => r.text());
+      const text  = await fetch(sd.path).then(r => r.text());
       const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (!match) return [];
-      const data = JSON.parse(match[1]);
+      const data  = JSON.parse(match[1]);
+
+      // Populate data-bar-ts from first sector that has an updated field
+      if (data.updated) {
+        const el = document.getElementById('data-bar-ts');
+        if (el && el.textContent === '—') el.textContent = data.updated;
+      }
+
       const items = [];
       (data.stocks || []).forEach(s => {
         (s.news || []).forEach(n => {
           items.push({
-            ticker: s.ticker,
-            sector: sd.key,
+            ticker:  s.ticker,
+            company: s.company_name || '',
+            sector:  sd.key,
             headline: n.headline || n.title || '',
-            url: n.url || '#',
-            ts: n.published_at || n.published || 0,
-            sent: n.sentiment_score !== undefined ? n.sentiment_score : (n.sentiment !== undefined ? n.sentiment : null),
+            url:     n.url || '',
+            ts:      n.published_at || n.published || 0,
+            sent:    n.sentiment_score !== undefined ? n.sentiment_score : (n.sentiment !== undefined ? n.sentiment : null),
             publisher: n.publisher || n.source || '',
           });
         });
@@ -310,8 +263,9 @@
     } catch(e) { return []; }
   })).then(results => {
     allNews = results.flat();
-    const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(allNews.map(n => n.ticker).filter(Boolean)).size;
-    renderNews();
+    const sc = document.getElementById('all-stock-count');
+    if (sc) sc.textContent = new Set(allNews.map(n => n.ticker).filter(Boolean)).size;
+    applyFilters();
   });
 </script>
 
