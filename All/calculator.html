@@ -356,8 +356,9 @@
       return (data.stocks || []).map(s => ({ ...s, sector: sd.key }));
     } catch(e) { return []; }
   })).then(results => {
-  const stocks = results.flat();
-  const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(stocks.map(s => s.ticker)).size;
+  const seen = new Set();
+  const stocks = results.flat().filter(s => { if (seen.has(s.ticker)) return false; seen.add(s.ticker); return true; });
+  const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = stocks.length;
   buildCalc(stocks);
   buildTape(stocks);
 });
