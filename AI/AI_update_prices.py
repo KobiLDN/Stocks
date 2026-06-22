@@ -37,7 +37,7 @@ STOCKS = {
     "RR.":   ("RR.L",   "nuclear-ops",   "LSE",    "lse_pence", "Rolls-Royce Holdings"),
     "CEG":   ("CEG",    "nuclear-ops",   "NASDAQ", None,        "Constellation Energy"),
     "VST":   ("VST",    "nuclear-ops",   "NYSE",   None,        "Vistra Corp"),
-    "TLN":   ("TLN",    "nuclear-ops",   "NYSE",   None,        "Talen Energy"),
+    "TLN":   ("TLN",    "nuclear-ops",   "NASDAQ", None,        "Talen Energy"),
     "BEP":   ("BEP",    "nuclear-ops",   "NYSE",   None,        "Brookfield Renewable"),
     "BEPC":  ("BEPC",   "nuclear-ops",   "NYSE",   None,        "Brookfield Renewable Corp"),
     "GEV":   ("GEV",    "smr",           "NYSE",   None,        "GE Vernova"),
