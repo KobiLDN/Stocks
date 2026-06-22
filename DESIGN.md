@@ -157,7 +157,39 @@ body[data-layout="rail"] .header-left { margin-right: auto; }
 </div>
 ```
 
-Info blocks (Universe / Prices / Last Updated) go between `.header-left` and the toggle — **hub only**.
+#### Hub Info Blocks (Stock Hub only)
+
+Two info blocks sit between `.header-left` and the theme toggle, aligned right via `margin-left: auto` on `.header-blocks`:
+
+```css
+.header-blocks { display: flex; align-items: stretch; margin-left: auto; margin-right: 16px; }
+.header-block  { padding: 6px 24px; border-left: 1px solid var(--border);
+                 display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+.header-block-label { font-family: 'IBM Plex Mono'; font-size: 9px; letter-spacing: 1.5px;
+                      text-transform: uppercase; color: var(--muted); }
+.header-block-value { font-family: 'IBM Plex Mono'; font-size: 13px; font-weight: 700;
+                      color: var(--text); white-space: nowrap; }
+.header-block-value .accent { color: var(--accent); }
+```
+
+```html
+<div class="header-blocks">
+  <div class="header-block">
+    <div class="header-block-label">Universe</div>
+    <div class="header-block-value" id="hb-universe">— stocks · — sectors</div>
+  </div>
+  <div class="header-block">
+    <div class="header-block-label">Prices Last Updated</div>
+    <div class="header-block-value" id="hb-updated">—</div>
+  </div>
+</div>
+```
+
+JS populates both from the aggregated sector data:
+```javascript
+el.innerHTML = `<span class="accent">${totalStocks}</span> stocks · <span class="accent">${results.length}</span> sectors`;
+elUp.textContent = latest; // ISO date string from prices-data.js "updated" field
+```
 
 ### Row 2 — Nav Tabs (every page)
 
