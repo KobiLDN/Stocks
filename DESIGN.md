@@ -3,6 +3,12 @@
 **Reference page:** Stock Hub (`/index.html`)  
 All pages must conform to these rules. When in doubt, match the hub exactly.
 
+**Site URLs:**
+- Dev: [dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev)
+- Live: [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev)
+
+> When sharing these URLs in chat, always make them clickable markdown links.
+
 ---
 
 ## Spacing Reference
