@@ -151,7 +151,7 @@ body[data-layout="rail"] .header-left { margin-right: auto; }
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Page <span>Title</span></h1>
-    <div class="header-sub">— stocks · v1 · Last updated —</div>
+    <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
   </div>
   <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -326,7 +326,7 @@ body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: 
       <div class="header-left">
         <div class="header-label">// Market Intelligence</div>
         <h1>Page <span>Title</span></h1>
-        <div class="header-sub">— stocks · v1 · Last updated —</div>
+        <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
       </div>
       <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
     </div>
