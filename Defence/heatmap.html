@@ -87,7 +87,6 @@
     <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
   </nav>
-
   <div class="toolbar">
     <span class="toolbar-label">Colour by</span>
     <div class="metric-group" id="metric-group">
@@ -97,6 +96,14 @@
       <button class="metric-btn" data-metric="ytd">YTD</button>
       <button class="metric-btn" data-metric="1y">1Y</button>
     </div>
+    <span class="size-note">Size = <em id="size-label">|1D %|</em></span>
+    <span class="toolbar-ts">Prices: <span id="heatmap-ts">—</span></span>
+    <div class="legend">
+      <span class="leg-label r" id="leg-neg">−5%</span>
+      <div class="leg-bar"></div>
+      <span class="leg-label" id="leg-pos">+5%</span>
+    </div>
+  </div>
 </header>
 
 <div class="page-body">
@@ -113,14 +120,6 @@
 </div>
 <div class="page-main">
 <div class="container">
-
-    <span class="size-note">Size = <em id="size-label">|1D %|</em></span>
-    <span class="toolbar-ts">Prices: <span id="heatmap-ts">—</span></span>
-    <div class="legend">
-      <span class="leg-label r" id="leg-neg">−5%</span>
-      <div class="leg-bar"></div>
-      <span class="leg-label" id="leg-pos">+5%</span>
-    </div>
   </div>
 
   <div class="section-hdr">
