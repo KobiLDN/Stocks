@@ -138,71 +138,42 @@
 
 </style>
 </head>
-<body>
+<body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
 <header>
   <div class="header-inner">
   <div class="header-left">
-    <div class="header-label">// Stock Universe</div>
-        <h1>Biotech <span>Heatmap</span></h1>
-        <div class="header-sub"><span id="hm-stock-count">30</span> stocks · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
+    <div class="header-label">// Market Intelligence</div>
+    <h1>Biotech <span>Heatmap</span></h1>
+    <div class="header-sub"><span id="hm-stock-count">30</span> stocks · tile size = magnitude of % move · colour = direction · hover for detail · click → Yahoo Finance</div>
   </div>
-  <div class="sector-switcher">
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-<a class="sector-card hub-card" href="../index.html">
-  <div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
-  <div class="sector-card-name">Stock Hub</div>
-</a>
-<a class="sector-card" href="../rss.html">
-  <div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
-  <div class="sector-card-name">RSS</div>
-</a>
-<a class="sector-card" href="../All/index.html">
-  <div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">All Sectors</div>
-</a>
-<a class="sector-card" href="../AI/heatmap.html">
-  <div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">AI Infrastructure</div>
-</a>
-<a class="sector-card" href="../Defence/heatmap.html">
-  <div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Defence</div>
-</a>
-<a class="sector-card active" href="heatmap.html">
-  <div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Biotech</div>
-</a>
-<a class="sector-card" href="../Tech/heatmap.html">
-  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Technology</div>
-</a>
-<a class="sector-card" href="../Crypto/heatmap.html">
-  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Crypto</div>
-</a>
-<a class="sector-card" href="../Energy/heatmap.html">
-  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Energy</div>
-</a>
-</div>
-</div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
-</header>
-
-<nav>
-  <div class="nav-inner">
-    <a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 30 biotech stocks">📊 Dashboard</a>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+  <nav>
+<a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 30 biotech stocks">📊 Dashboard</a>
     <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
     <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 30 stocks with news sentiment scoring">📰 News</a>
     <a href="signals.html"    class="nav-link" data-tooltip="Top 10 biotech picks ranked by momentum, fundamentals and sentiment — refreshed weekly">🎯 Signals</a>
     <a href="heatmap.html"    class="nav-link active" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
     <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
     <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-  </div>
-</nav>
+  </nav>
+</header>
 
+<div class="page-body">
+<div class="left-rail">
+<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+<a class="sector-pill" href="../All/heatmap.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../AI/heatmap.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill active" href="heatmap.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Defence/heatmap.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Tech/heatmap.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Crypto/heatmap.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Energy/heatmap.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
+</div>
+<div class="page-main">
 <div class="container">
 
   <!-- Sticky toolbar -->
@@ -607,5 +578,7 @@ function init() {
 init();
 window._onThemeChange = () => renderAll2(activeMetric);
 </script>
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
 </body>
 </html>
