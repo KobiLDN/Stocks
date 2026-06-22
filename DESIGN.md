@@ -444,42 +444,114 @@ Used in dashboard and metrics tables. Inline `<style>` per page — not in share
 
 ---
 
-## 10 · Charts Page Inner Layout
+## 10 · Charts Page Layout
 
-The charts page has an additional inner split inside `.page-main`: a fixed sidebar + a scrollable chart area. This requires extra overrides on top of the standard rail layout.
+All charts pages use the standard rail layout. All shared CSS lives in `shared.css` under `/* ---- Charts pages ---- */`. Only sector-specific `.cat-btn.active-*` and `.cat-label.*` colour rules stay inline per page.
 
-```css
-/* Allow charts-layout to fill page-main */
-body[data-layout="rail"] .page-main { overflow: hidden; display: flex; flex-direction: column; }
-body[data-layout="rail"] .container { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+**No "Prices Last Updated" block** — charts show live TradingView prices, so the `data-bar-ts` header block is omitted.
 
-.charts-layout { display: grid; grid-template-columns: 240px 1fr; flex: 1; min-height: 0; border: 1px solid var(--border); }
-.sidebar { background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; }
-.sidebar-header { padding: 12px 14px; background: var(--surface2); border-bottom: 1px solid var(--border); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; align-items: center; }
+### Header structure
+
+```html
+<header>
+  <div class="header-inner">
+    <div class="header-left">…brand…</div>
+    <!-- NO header-blocks / data-bar-ts -->
+    <button class="theme-toggle" …>☾</button>
+  </div>
+  <nav>…</nav>
+  <div class="chart-controls">
+    <div class="toolbar-inner">
+      <!-- Category row — shown only in grid mode -->
+      <div class="toolbar-row" id="cat-row" style="display:none">
+        <span class="toolbar-label">Category</span>
+        <div id="cat-toolbar-btns" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+      </div>
+      <!-- Controls row -->
+      <div class="toolbar-row">
+        <div class="toolbar-group">
+          <span class="toolbar-label">View</span>
+          <button class="tool-btn active" id="btn-single" onclick="setView('single')">Single</button>
+          <button class="tool-btn" id="btn-grid" onclick="setView('grid')">Category Grid</button>
+        </div>
+        <div class="divider"></div>
+        <div class="toolbar-group">
+          <span class="toolbar-label">Period</span>
+          <button class="tool-btn active" onclick="setTimeframe('1W',this)">1W</button>
+          <button class="tool-btn" onclick="setTimeframe('1M',this)">1M</button>
+          <button class="tool-btn" onclick="setTimeframe('12M',this)">1Y</button>
+          <button class="tool-btn" onclick="setTimeframe('60M',this)">5Y</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 ```
 
-**Collapsible sector groups in sidebar:**
-```css
-.sector-group { border-bottom: 1px solid var(--border); }
-.sector-group-label { padding: 8px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none; transition: background 0.12s; }
-.sector-group-label:hover { background: var(--surface2); }
-.sector-group-label .chevron { font-size: 10px; transition: transform 0.2s; color: var(--muted); }
-.sector-group.collapsed .chevron { transform: rotate(-90deg); }
-.sector-group.collapsed .sector-stocks { display: none; }
+### Page body structure
+
+```html
+<div class="page-body">
+  <div class="left-rail">…sector pills…</div>
+  <div class="page-main">
+    <div class="container" style="padding-left:0;padding-right:0;max-width:100%;">
+
+      <!-- SINGLE VIEW -->
+      <div id="single-view">
+        <button class="sidebar-toggle" …>☰ Select Stock ▾</button>
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-title">Select Stock</div>
+          <div id="sidebar-stocks"></div>
+        </aside>
+        <main class="chart-area">
+          <div class="chart-header">…ticker + name…</div>
+          <div class="chart-widget" id="single-widget"></div>
+          <div class="chart-note">Charts powered by TradingView…</div>
+        </main>
+      </div>
+
+      <!-- GRID VIEW -->
+      <div id="grid-view">
+        <div class="grid-heading" id="grid-heading">Select a category above</div>
+        <div class="chart-grid" id="chart-grid"></div>
+        <div class="chart-note" style="margin-top:16px;">…</div>
+      </div>
+
+    </div>
+  </div>
+</div>
 ```
 
-**Stock items:**
+### Key CSS rules (all in shared.css)
+
+| Selector | Purpose |
+|---|---|
+| `.chart-controls` | Toolbar wrapper inside `<header>` — `border-top`, sticky z-index 25 |
+| `.toolbar-inner` | Flex column, `padding: 8px 16px` — no max-width/centering |
+| `.toolbar-row` | Flex row for one row of controls |
+| `.toolbar-group` | Groups label + buttons horizontally |
+| `.tool-btn` | View / Period buttons; `.active` uses `var(--accent)` fill |
+| `.cat-btn` | Category filter buttons with tooltip support; active class is `.active-{catKey}` (sector-specific colours inline) |
+| `.divider` | 1px vertical separator between toolbar groups |
+| `#single-view` | CSS Grid `260px 1fr`, `padding: 24px` — no max-width/centering |
+| `.sidebar` | Sticky `top: 24px`, scrollable stock list |
+| `.cat-label` | Category group label in sidebar; colour from inline `.cat-label.{cls}` rules |
+| `.stock-btn` | Sidebar stock button; `.active` highlights with left accent border |
+| `#grid-view` | `padding: 12px 24px 24px` — top 12px keeps it tight under toolbar |
+| `.grid-heading` | Category + stock count heading; `span` uses `var(--accent)` |
+| `.chart-grid` | `auto-fill minmax(480px, 1fr)` responsive grid |
+| `.grid-card` | Individual chart card with border |
+
+### TradingView widgets
+- Single view: fixed `height: 580`, `width: '100%'`
+- Grid cards: fixed `height: 320` per card, staggered with `setTimeout(fn, i * 150)`
+
+### Sector-specific colours (inline per page)
 ```css
-.stock-item { padding: 8px 14px; cursor: pointer; font-size: 12px; display: flex; align-items: center; gap: 8px; transition: background 0.12s; border-bottom: 1px solid var(--border); }
-.stock-item:hover { background: var(--surface2); }
-.stock-item.active { background: var(--surface2); border-left: 3px solid var(--accent); }
-.stock-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; min-width: 52px; }
-.stock-name { font-size: 11px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* Keep INLINE — not in shared.css */
+.cat-btn.active-{catKey} { background: var(--COLOR); border-color: var(--COLOR); color: var(--bg); }
+.cat-label.{clsSuffix}   { color: var(--COLOR); }
 ```
-
-Container override: `style="padding-left:0; padding-right:0; max-width:100%;"` (same as DESIGN.md §4).
-
-TradingView widget: use `autosize: true` for the single view; fixed `height: 200` for grid cells.
 
 ---
 
