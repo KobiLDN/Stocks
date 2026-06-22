@@ -304,12 +304,12 @@ body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: 
 
 - `.page-main` is the scroll container — same pattern as hub's `<main>`
 - Only this element scrolls — everything in `<header>` and `.left-rail` is fixed
-- `data-bar` (Prices Last Updated info block) injected into `.header-inner` Row 1 by `buildDataBar()` in `shared.js`
+- `data-bar` (Prices Last Updated info block) is **static HTML** in every page's `.header-inner` Row 1 (`.header-blocks > .header-block` with `id="data-bar-ts"`); `buildDataBar()` in `shared.js` only fills in the timestamp text
 
 **Container overrides by page:**
 | Page | Override |
 |---|---|
-| Heatmap | `style="padding-top: 8px;"` (toolbar is in header, less gap needed) |
+| Heatmap | none — uses standard 20px container padding; first `.section-hdr` margin-top is zeroed in `shared.css` via `.container > .section-hdr:first-child` |
 | Charts | `style="padding-left:0; padding-right:0; max-width:100%;"` (full-width charts layout) |
 
 ---
@@ -494,10 +494,19 @@ Used in heatmap and any page with multiple named sections:
 ```
 ```css
 .section-hdr { display: flex; align-items: center; gap: 16px; margin: 32px 0 10px; }
+.container > .section-hdr:first-child { margin-top: 0; }   /* first header sits tight under the toolbar */
 .section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; white-space: nowrap; }
 .section-hdr-line { flex: 1; height: 1px; background: var(--border); }
 .section-hdr-count { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); white-space: nowrap; }
 ```
+
+> **Subsequent** section headers (e.g. "By Sector" / "By Category") keep an inline `style="margin-top:48px;"` to separate them from the block above.
+
+### Heatmap CSS lives in `shared.css`
+
+As of the rail redesign, **all heatmap-page styles are consolidated in `shared.css`** (section `/* ---- Heatmap pages ---- */`) — no per-page inline `<style>` blocks. This covers `.toolbar` + controls, `.metric-btn`, `.size-note`, `.toolbar-ts`, `.legend`/`.leg-*`, `.section-hdr*`, `.map-wrap`, `#sectors-container` (2-col grid), `.sector-block`/`.sector-name`, `.cat-label-text`, `.tooltip`/`.tt-*`, and `.empty-state`. All 7 heatmap pages (`All/` + 6 sectors) render identically from this single source.
+
+The `.toolbar` sits **inside `<header>`** (Row 3, after `<nav>`) on every heatmap page — a clean `border-top` bar, not a free-floating boxed/sticky element.
 
 ---
 
