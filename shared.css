@@ -484,7 +484,7 @@ body[data-layout="rail"] .container {
   padding: 20px 24px;
 }
 
-/* Data bar — auto-refresh status strip injected below <nav> on every page */
+/* Data bar — auto-refresh status strip injected as last row inside <header> on rail pages */
 .data-bar {
   display: flex;
   align-items: center;
@@ -495,10 +495,8 @@ body[data-layout="rail"] .container {
   font-size: 11px;
   color: var(--muted);
   letter-spacing: 0.3px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  padding: 10px 16px;
-  margin-bottom: 16px;
+  border-top: 1px solid var(--border);
+  padding: 8px 16px;
 }
 .data-bar .data-bar-ts    { color: var(--accent); font-weight: 600; }
 .data-bar .data-bar-sched { opacity: 0.75; }
