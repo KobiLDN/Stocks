@@ -11,6 +11,11 @@ from pathlib import Path
 SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "Tech"]
 BASE    = os.path.dirname(os.path.abspath(__file__))
 
+# T212 ticker → canonical universe ticker (OTC / ADR aliases)
+TICKER_ALIASES = {
+    "KXIAY": "285A",   # Kioxia Holdings US OTC = TSE 285A
+}
+
 # ── T212 portfolio fetch (optional) ──────────────────────────────────────────
 def fetch_t212_portfolio():
     key_file = Path(BASE) / "t212_mcp" / ".key"
@@ -32,6 +37,7 @@ def fetch_t212_portfolio():
         held_set  = set()
         for p in pos_r.json():
             ticker = clean(p.get("ticker", ""))
+            ticker = TICKER_ALIASES.get(ticker, ticker)  # resolve OTC/ADR aliases
             held_set.add(ticker)
             positions.append({
                 "ticker":      ticker,
