@@ -127,7 +127,7 @@
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
     .mobile-chips { display: flex; }
-    .header-search { display: none; }
+    #news-search, .news-toolbar .row-count { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -195,10 +195,6 @@
 <h1>AI <span>News</span></h1>
 <div class="header-sub">Latest headlines across all tracked stocks · sentiment scored locally (VADER)</div>
 </div>
-<div class="header-search">
-<input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
-<span class="row-count">Showing <span id="news-count">—</span> headlines</span>
-</div>
 <div class="header-blocks">
 <div class="header-block">
 <div class="header-block-label">Prices Last Updated</div>
@@ -208,6 +204,8 @@
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 <div class="news-toolbar">
+<input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
+<span class="row-count">Showing <span id="news-count">—</span> headlines</span>
 <span class="sort-label">Sort</span>
 <div class="sort-group" id="sort-group">
 <button class="sort-btn active" data-sort="newest" onclick="setSort('newest', this)">Newest</button>
