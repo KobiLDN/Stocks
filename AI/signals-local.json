@@ -1,137 +1,137 @@
 {
-  "updated": "2026-06-19 12:22",
+  "updated": "2026-06-22 13:49",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
     {
       "rank": 1,
-      "ticker": "MU",
+      "ticker": "WDC",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "Micron surged 8% to a record high after Deutsche Bank raised its price target to $1,500 and Citi to $1,200, citing an AI-driven memory supply deficit extending through 2028; the stock has +259.67% YTD, a strong_buy analyst consensus (score 1.48), and a forward P/E under 10.",
+      "rationale": "Momentum is extreme (+63.76% 1M, +297.86% YTD) with an 8% dividend yield, positive news sentiment of 0.213, and a strong analyst score of 1.56; web search confirms [Motley Fool](https://www.fool.com/investing/2026/06/21/dont-forget-about-western-digital-amid-sandisk-euphoria/) highlights WDC as a beneficiary of AI storage demand with 45% YoY revenue growth.",
       "drivers": [
-        "+259.67% YTD",
-        "strong_buy consensus (1.48)",
-        "Deutsche Bank PT $1,500",
-        "AI memory shortage catalyst"
+        "+63.76% 1M",
+        "8% dividend yield",
+        "+297.86% YTD",
+        "AI storage demand"
       ]
     },
     {
       "rank": 2,
-      "ticker": "SNDK",
+      "ticker": "MU",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "SanDisk surged ~700% YTD and +8.69% on the day after Apple's CEO confirmed memory-driven price hikes, reinforcing the NAND shortage trade; the stock has extreme momentum (+57.94% 1M) but a high P/E of 74.62 and beta above 3 warrant caution.",
+      "rationale": "Analyst consensus is strong_buy with a top score of 1.48, and the stock has surged +62.29% 1M and +259.67% YTD; Micron's upcoming earnings on June 24 are cited as a key catalyst in web results, with all three major firms raising price targets.",
       "drivers": [
-        "+693.76% YTD",
-        "+57.94% 1M",
-        "Apple price hike catalyst",
-        "high beta 3.45"
+        "strong_buy consensus",
+        "+62.29% 1M",
+        "$967.9B market cap",
+        "earnings catalyst"
       ]
     },
     {
       "rank": 3,
-      "ticker": "STX",
+      "ticker": "285A",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "Seagate gained +272.85% YTD and +23.29% in the last week, with Morgan Stanley raising its price target to $1,035 on HDD supply shortages driven by cloud and AI storage demand; news sentiment is positive at 0.22.",
+      "rationale": "The stock posted the highest YTD return (+857.71%) and 1M gain (+89.37%) among all names, with a buy analyst rating and 0.164 news sentiment; this Japan memory stock is riding the AI semiconductor wave alongside peers.",
       "drivers": [
-        "+272.85% YTD",
-        "+23.29% 1W",
-        "Morgan Stanley PT hike",
-        "positive news sentiment 0.22"
+        "+857.71% YTD",
+        "+89.37% 1M",
+        "buy consensus",
+        "AI memory theme"
       ]
     },
     {
       "rank": 4,
-      "ticker": "WDC",
+      "ticker": "SNDK",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "Western Digital surged +297.86% YTD and +40.99% in the last week, benefiting from Apple's memory price hike comments and a Morgan Stanley target increase to $650; short interest is elevated at 10.43%.",
+      "rationale": "SNDK has exploded +693.76% YTD and +57.94% 1M on a NAND flash shortage, with CEO commentary at Mizuho about data center becoming its largest market; however, extreme overbought conditions (beta 3.45, high short interest 9.71%) warrant caution.",
       "drivers": [
-        "+297.86% YTD",
-        "+40.99% 1W",
-        "Apple memory catalyst",
-        "short interest 10.43%"
+        "+693.76% YTD",
+        "NAND shortage",
+        "data center pivot",
+        "high short interest"
       ]
     },
     {
       "rank": 5,
-      "ticker": "285A",
+      "ticker": "MRVL",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "285A has the highest YTD return in the universe at +856.83%, with +118.20% in the last month and +11.64% today, driven by the memory boom; however, its P/E of 107.15 and lack of beta data add risk.",
+      "rationale": "MRVL shows a strong_buy analyst consensus (score 1.45), impressive momentum (+76.20% 1M, +247.87% YTD), and positive news sentiment 0.149; it recently hit 52-week highs and is a key beneficiary of AI infrastructure buildout.",
       "drivers": [
-        "+856.83% YTD",
-        "+118.20% 1M",
-        "memory sector tailwind",
-        "high P/E 107.15"
+        "strong_buy consensus",
+        "+76.20% 1M",
+        "+247.87% YTD",
+        "52-week high"
       ]
     },
     {
       "rank": 6,
-      "ticker": "MRVL",
+      "ticker": "STX",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "Marvell hit a new high with +247.87% YTD and +76.20% in the last month, supported by a strong_buy analyst consensus (score 1.45) and positive news sentiment 0.191; a quiet Amazon decision is cited as a catalyst.",
+      "rationale": "STX has strong momentum (+45.94% 1M, +272.85% YTD) with an 28% dividend yield and a buy analyst rating (score 1.54); web search notes retail sentiment bullish and a 55% rally in six sessions for peer WDC, indicating memory sector strength.",
       "drivers": [
-        "+247.87% YTD",
-        "+76.20% 1M",
-        "strong_buy consensus (1.45)",
-        "Amazon catalyst"
+        "+45.94% 1M",
+        "28% dividend yield",
+        "buoyant memory sector",
+        "buy consensus"
       ]
     },
     {
       "rank": 7,
-      "ticker": "CRDO",
+      "ticker": "DELL",
       "signal": "strong_buy",
-      "confidence": 0.897,
-      "rationale": "Credo Technology has +89.80% YTD and +60.86% in the last month, with a strong_buy analyst consensus (score 1.33) and positive news sentiment 0.144; its high beta of 3.229 reflects volatility but also momentum.",
+      "confidence": 1.0,
+      "rationale": "DELL surged +74.06% in the last month and +222.82% YTD, with a reasonable P/E of 32.68 and a 62% dividend yield; the stock is cited as 15.4% undervalued as the AI narrative builds, supported by strong data center demand.",
       "drivers": [
-        "+89.80% YTD",
-        "+60.86% 1M",
-        "strong_buy consensus (1.33)",
-        "beta 3.229"
+        "+74.06% 1M",
+        "+222.82% YTD",
+        "P/E 32.68",
+        "AI narrative"
       ]
     },
     {
       "rank": 8,
-      "ticker": "DELL",
+      "ticker": "CRDO",
       "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "Dell has surged +222.82% YTD and +74.06% in the last month, with a positive news sentiment of 0.444 and a P/E of 32.58; the company is now a leader in AI infrastructure, but the -4.40% 1D dip suggests short-term pullback risk.",
+      "confidence": 0.897,
+      "rationale": "CRDO has a strong_buy analyst rating (score 1.33), solid momentum (+60.86% 1M, +89.80% YTD), and is a key player in the DSP/semi segment; positive news sentiment of 0.084 and a beta of 3.229 indicate high growth potential.",
       "drivers": [
-        "+222.82% YTD",
-        "+74.06% 1M",
-        "positive news sentiment 0.444",
-        "P/E 32.58"
+        "strong_buy consensus",
+        "+60.86% 1M",
+        "+89.80% YTD",
+        "DSP/semi growth"
       ]
     },
     {
       "rank": 9,
       "ticker": "WULF",
       "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "WULF has +127.47% YTD and +35.80% in the last month, with a strong_buy analyst consensus (score 1.33) and positive news sentiment 0.15; high short interest of 25.85% adds squeeze potential but also risk.",
+      "confidence": 0.7,
+      "rationale": "WULF has explosive momentum (+35.80% 1M, +127.47% YTD) and a strong_buy analyst consensus (score 1.33), though short interest is high at 25.85%; the stock benefits from AI compute demand as an AI data center operator.",
       "drivers": [
+        "strong_buy consensus",
         "+127.47% YTD",
-        "+35.80% 1M",
-        "strong_buy consensus (1.33)",
-        "short interest 25.85%"
+        "AI data center",
+        "high momentum"
       ]
     },
     {
       "rank": 10,
       "ticker": "TLN",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Talen Energy has +9.97% YTD and +38.69% in the last month, with +26.53% in the last week and positive news sentiment 0.119; nuclear stocks are gaining on uranium deals, but the stock has no P/E and a beta of 1.604.",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "TLN has a strong_buy analyst rating (score 1.5) with exceptional 1M (+38.69%) and 1W (+26.53%) momentum; news sentiment is 0.227, and the stock surged after signing a uranium deal, aligning with the nuclear power theme for AI.",
       "drivers": [
+        "strong_buy consensus",
         "+38.69% 1M",
-        "+26.53% 1W",
-        "nuclear sector catalyst",
-        "positive news sentiment 0.119"
+        "nuclear uranium deal",
+        "AI power demand"
       ]
     }
   ],
@@ -297,38 +297,38 @@
       "ticker": "MU",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "MU has strong_buy consensus, forward P/E of just 9x, and surged 5.22% today after Apple's CEO warned of memory price hikes; multiple analysts raised targets to $1,300-$1,500 [247wallst.com](https://247wallst.com/investing/2026/06/18/wall-street-just-put-a-monster-target-on-micron-is-the-stock-still-too-cheap-2/).",
+      "rationale": "Micron surged 8% to a record high after Deutsche Bank raised its price target to $1,500 and Citi to $1,200, citing an AI-driven memory supply deficit extending through 2028; the stock has +259.67% YTD, a strong_buy analyst consensus (score 1.48), and a forward P/E under 10.",
       "drivers": [
-        "forward P/E 9x",
-        "analyst target hikes to $1,500",
-        "Apple memory price warning",
-        "+259% YTD momentum"
+        "+259.67% YTD",
+        "strong_buy consensus (1.48)",
+        "Deutsche Bank PT $1,500",
+        "AI memory shortage catalyst"
       ]
     },
     {
       "rank": 2,
-      "ticker": "MRVL",
+      "ticker": "SNDK",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "MRVL has strong_buy consensus, surged 4.33% today on a price target hike, with 1-month momentum of +76.20% and positive news sentiment of 0.101.",
+      "rationale": "SanDisk surged ~700% YTD and +8.69% on the day after Apple's CEO confirmed memory-driven price hikes, reinforcing the NAND shortage trade; the stock has extreme momentum (+57.94% 1M) but a high P/E of 74.62 and beta above 3 warrant caution.",
       "drivers": [
-        "strong_buy consensus",
-        "+76% 1-month return",
-        "price target hike catalyst",
-        "P/E 107x but high growth"
+        "+693.76% YTD",
+        "+57.94% 1M",
+        "Apple price hike catalyst",
+        "high beta 3.45"
       ]
     },
     {
       "rank": 3,
-      "ticker": "CRDO",
+      "ticker": "STX",
       "signal": "strong_buy",
-      "confidence": 0.897,
-      "rationale": "CRDO has strong_buy consensus, reported record FY26 results with triple-digit revenue growth, and gained 6.09% today with 1-month momentum of +60.86%.",
+      "confidence": 1.0,
+      "rationale": "Seagate gained +272.85% YTD and +23.29% in the last week, with Morgan Stanley raising its price target to $1,035 on HDD supply shortages driven by cloud and AI storage demand; news sentiment is positive at 0.22.",
       "drivers": [
-        "record FY26 results",
-        "strong_buy consensus",
-        "+60.86% 1-month",
-        "P/E 108x justified by growth"
+        "+272.85% YTD",
+        "+23.29% 1W",
+        "Morgan Stanley PT hike",
+        "positive news sentiment 0.22"
       ]
     },
     {
@@ -336,90 +336,90 @@
       "ticker": "WDC",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "WDC gained 1.24% today, has 1-month momentum of +63.76%, P/E of 44.7x, and analysts raised targets to $650 after Apple's memory warning [invezz.com](https://invezz.com/in/news/2026/06/18/mu-sndk-stx-wdc-stocks-rise-after-apple-chief-warns-of-memory-driven-price-hikes/).",
+      "rationale": "Western Digital surged +297.86% YTD and +40.99% in the last week, benefiting from Apple's memory price hike comments and a Morgan Stanley target increase to $650; short interest is elevated at 10.43%.",
       "drivers": [
-        "P/E 44.7x",
-        "analyst target hike to $650",
-        "Apple memory price warning",
-        "+297% YTD"
+        "+297.86% YTD",
+        "+40.99% 1W",
+        "Apple memory catalyst",
+        "short interest 10.43%"
       ]
     },
     {
       "rank": 5,
-      "ticker": "STX",
+      "ticker": "285A",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "STX has 1-month momentum of +45.94%, positive news sentiment of 0.22, and analysts raised targets to $1,035 on storage shortages driven by AI [invezz.com](https://invezz.com/in/news/2026/06/18/mu-sndk-stx-wdc-stocks-rise-after-apple-chief-warns-of-memory-driven-price-hikes/).",
+      "rationale": "285A has the highest YTD return in the universe at +856.83%, with +118.20% in the last month and +11.64% today, driven by the memory boom; however, its P/E of 107.15 and lack of beta data add risk.",
       "drivers": [
-        "analyst target hike to $1,035",
-        "storage shortage catalyst",
-        "+45.94% 1-month",
-        "P/E 101x but strong demand"
+        "+856.83% YTD",
+        "+118.20% 1M",
+        "memory sector tailwind",
+        "high P/E 107.15"
       ]
     },
     {
       "rank": 6,
-      "ticker": "DELL",
+      "ticker": "MRVL",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "DELL has strong YTD return of +222.82%, P/E of 32.6x, and very positive news sentiment of 0.481, despite a -4.40% 1-day dip.",
+      "rationale": "Marvell hit a new high with +247.87% YTD and +76.20% in the last month, supported by a strong_buy analyst consensus (score 1.45) and positive news sentiment 0.191; a quiet Amazon decision is cited as a catalyst.",
       "drivers": [
-        "P/E 32.6x",
-        "+222% YTD",
-        "news sentiment 0.481",
-        "AI server demand"
+        "+247.87% YTD",
+        "+76.20% 1M",
+        "strong_buy consensus (1.45)",
+        "Amazon catalyst"
       ]
     },
     {
       "rank": 7,
-      "ticker": "TLN",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "TLN has 1-month momentum of +38.69%, 1-week gain of +26.53%, and positive news sentiment of 0.119, riding nuclear energy demand for AI data centers.",
+      "ticker": "CRDO",
+      "signal": "strong_buy",
+      "confidence": 0.897,
+      "rationale": "Credo Technology has +89.80% YTD and +60.86% in the last month, with a strong_buy analyst consensus (score 1.33) and positive news sentiment 0.144; its high beta of 3.229 reflects volatility but also momentum.",
       "drivers": [
-        "+38.69% 1-month",
-        "+26.53% 1-week",
-        "nuclear AI catalyst",
-        "no P/E but strong momentum"
+        "+89.80% YTD",
+        "+60.86% 1M",
+        "strong_buy consensus (1.33)",
+        "beta 3.229"
       ]
     },
     {
       "rank": 8,
-      "ticker": "WULF",
+      "ticker": "DELL",
       "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "WULF has strong_buy consensus, YTD return of +127.47%, 1-month momentum of +35.80%, and positive news sentiment of 0.15, though short interest is high at 25.85%.",
+      "confidence": 1.0,
+      "rationale": "Dell has surged +222.82% YTD and +74.06% in the last month, with a positive news sentiment of 0.444 and a P/E of 32.58; the company is now a leader in AI infrastructure, but the -4.40% 1D dip suggests short-term pullback risk.",
       "drivers": [
-        "strong_buy consensus",
-        "+127% YTD",
-        "+35.80% 1-month",
-        "high short interest 25.85%"
+        "+222.82% YTD",
+        "+74.06% 1M",
+        "positive news sentiment 0.444",
+        "P/E 32.58"
       ]
     },
     {
       "rank": 9,
-      "ticker": "285A",
+      "ticker": "WULF",
       "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "285A has extreme 1-year return of +4465% and YTD of +753.74%, with 1-month momentum of +88.34%, but P/E of 95.6x and no beta data suggest high risk.",
+      "confidence": 0.72,
+      "rationale": "WULF has +127.47% YTD and +35.80% in the last month, with a strong_buy analyst consensus (score 1.33) and positive news sentiment 0.15; high short interest of 25.85% adds squeeze potential but also risk.",
       "drivers": [
-        "+4465% 1-year",
-        "+88.34% 1-month",
-        "P/E 95.6x",
-        "memory supercycle exposure"
+        "+127.47% YTD",
+        "+35.80% 1M",
+        "strong_buy consensus (1.33)",
+        "short interest 25.85%"
       ]
     },
     {
       "rank": 10,
-      "ticker": "SNDK",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "SNDK has YTD return of +693.76% and 1-month momentum of +57.94%, but a technician labeled it the 'most overbought stock ever' and it trades above the average analyst target [247wallst.com](https://247wallst.com/investing/2026/06/17/take-profits-now-famous-chart-technician-says-sandisk-is-the-most-overbought-stock-ever/).",
+      "ticker": "TLN",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Talen Energy has +9.97% YTD and +38.69% in the last month, with +26.53% in the last week and positive news sentiment 0.119; nuclear stocks are gaining on uranium deals, but the stock has no P/E and a beta of 1.604.",
       "drivers": [
-        "+693% YTD",
-        "overbought warning",
-        "P/E 74.6x",
-        "NAND shortage catalyst"
+        "+38.69% 1M",
+        "+26.53% 1W",
+        "nuclear sector catalyst",
+        "positive news sentiment 0.119"
       ]
     }
   ]

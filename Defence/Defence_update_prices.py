@@ -41,7 +41,7 @@ STOCKS = {
     "RR.L":  ("RR.L",  "uk-european", "LSE",    "lse_pence", "Rolls-Royce Holdings"),
     "QQ.L":  ("QQ.L",  "uk-european", "LSE",    "lse_pence", "QinetiQ Group"),
     # cyber-intel
-    "PLTR":  ("PLTR",  "cyber-intel", "NYSE",   None,        "Palantir Technologies"),
+    "PLTR":  ("PLTR",  "cyber-intel", "NASDAQ", None,        "Palantir Technologies"),
     "LDOS":  ("LDOS",  "cyber-intel", "NYSE",   None,        "Leidos Holdings"),
     "CACI":  ("CACI",  "cyber-intel", "NYSE",   None,        "CACI International"),
     "SAIC":  ("SAIC",  "cyber-intel", "NYSE",   None,        "Science Applications International"),

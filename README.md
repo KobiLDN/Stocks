@@ -26,6 +26,14 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 ├── rss.html                ← cross-sector RSS news feed page
 ├── rss-data.js             ← generated RSS feed data
 ├── exports/                ← dated market snapshots (JSON + CSV); served via Pages
+├── All/                    ← All Sectors suite (192 stocks; aggregates all 6 sectors)
+│   ├── index.html          ← combined dashboard with sector filter + search
+│   ├── metrics.html        ← combined fundamentals table
+│   ├── news.html           ← combined news feed
+│   ├── signals.html        ← cross-sector AI signals + combined momentum screener
+│   ├── heatmap.html        ← combined heatmap (drawSplit gainers/losers)
+│   ├── charts.html         ← 6×3 sector grid (top 3 by market cap, 1W/1Y/5Y)
+│   └── calculator.html     ← combined What-If calculator
 ├── AI/                     ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html          ← CANONICAL reference for typography/UI standards
 │   ├── AI_update_prices.py

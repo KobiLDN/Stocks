@@ -117,7 +117,12 @@
     <h1>All <span>Signals</span></h1>
     <div class="header-sub">AI top picks across 6 sectors · momentum screener · updated 3× daily</div>
 </div>
-  
+  <div class="header-blocks">
+  <div class="header-block">
+  <div class="header-block-label">Last Refreshed</div>
+  <div class="header-block-value" id="signals-ts">—</div>
+  </div>
+  </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 
@@ -360,12 +365,14 @@
     ]);
 
     const nameMap = {}, catMap = {};
+    let priceStocks = [];
     if (pricesText) {
       const match = pricesText.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (match) {
         try {
           const data = JSON.parse(match[1]);
-          (data.stocks || []).forEach(s => {
+          priceStocks = data.stocks || [];
+          priceStocks.forEach(s => {
             nameMap[s.ticker] = s.company_name || s.ticker;
             catMap[s.ticker]  = s.category || '';
           });
@@ -373,9 +380,13 @@
       }
     }
 
-    return { ...sd, signals: signalsJson, nameMap, catMap };
+    return { ...sd, signals: signalsJson, nameMap, catMap, stocks: priceStocks };
   })).then(results => {
     loadedData = results;
+    buildTape(results.flatMap(r => r.stocks || []));
+    const sigUpdated = results.map(r => r.signals?.updated).filter(Boolean).sort().pop() || '—';
+    const sigTsEl = document.getElementById('signals-ts');
+    if (sigTsEl) sigTsEl.textContent = sigUpdated;
     renderAll();
   });
 </script>

@@ -1,9 +1,137 @@
 {
-  "updated": "2026-06-19 12:24",
+  "updated": "2026-06-22 13:52",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "WLD",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Explosive 134.94% 1-month gain, 33% YTD, with positive news sentiment 0.11 and AI narrative fueled by Eightco treasury disclosure.",
+      "drivers": [
+        "+134.94% 1M momentum",
+        "+33% YTD",
+        "news sentiment 0.11",
+        "AI/OpenAI proxy story"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "XLM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong 47.59% 1-month and 11.21% 1-week gains, underpinned by Stellar hosting $1.9B BENJI fund and $660M tokenized Treasuries.",
+      "drivers": [
+        "+47.59% 1M",
+        "+11.21% 1W",
+        "RWA growth on Stellar",
+        "Franklin Templeton BENJI fund"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NEAR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Impressive 42% YTD return and 4.54% 1-month gain, with AI token rotation narrative and positive news sentiment 0.051.",
+      "drivers": [
+        "+42% YTD",
+        "+4.54% 1M",
+        "AI sector momentum",
+        "news sentiment 0.051"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Positive 15.65% YTD and 2.82% 1-week gain, with altcoin rotation tailwinds and stable payments network use.",
+      "drivers": [
+        "+15.65% YTD",
+        "+2.82% 1W",
+        "altcoin rotation",
+        "payments category stability"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Solid 8.24% 1-month and 5.91% 1-week gains, small-cap AI token with improving momentum despite YTD decline.",
+      "drivers": [
+        "+8.24% 1M",
+        "+5.91% 1W",
+        "AI sector interest",
+        "small-cap momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ARKM",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Positive 5.53% 1-month gain with AI on-chain analytics narrative, though 1-week slightly negative.",
+      "drivers": [
+        "+5.53% 1M",
+        "AI on-chain data narrative",
+        "small-cap dynamics"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RNDR",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Strong 29.93% YTD return despite recent 8.87% weekly pullback, leveraged to AI and rendering demand.",
+      "drivers": [
+        "+29.93% YTD",
+        "AI rendering narrative",
+        "long-term outperformer"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "Modest 3.30% weekly gain with Solana ecosystem catalysts (JTO launch), but YTD -40.87% limits conviction.",
+      "drivers": [
+        "+3.30% 1W",
+        "Solana infrastructure momentum",
+        "JTO trading interface catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Slight 2.17% weekly gain, infrastructure token with potential L2 scaling narrative, but YTD -21.07%.",
+      "drivers": [
+        "+2.17% 1W",
+        "L2 scaling narrative",
+        "low valuation relative to peers"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "Smallest gainer with 1.95% daily uptick and -4.87% 1-month, speculative AI token with low market cap.",
+      "drivers": [
+        "+1.95% 1D",
+        "AI token niche",
+        "low market cap potential"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "WLD",
@@ -132,139 +260,6 @@
         "-1.95% YTD",
         "AI token",
         "small cap rebound"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "WLD",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "WLD has surged +171% in 1M and +28.6% in 1W, driven by Eightco's massive treasury stake (~8.4% of supply) and the AI narrative, with positive news sentiment of 0.165. [thecryptoguardian.com](https://thecryptoguardian.com/worldcoin-jumps-20-after-massive-stake/)",
-      "drivers": [
-        "+171% 1M momentum",
-        "institutional treasury stake",
-        "AI narrative rotation",
-        "positive news sentiment 0.165"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XLM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "XLM shows exceptional momentum with +64.4% in 1M and +22.4% in 1W, plus +17.3% YTD, making it one of the strongest performers in the payments category.",
-      "drivers": [
-        "+64.4% 1M momentum",
-        "+22.4% 1W momentum",
-        "+17.3% YTD",
-        "strong payments narrative"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "NEAR has rallied +36.4% in 1M and +6.7% in 1W, with +45.5% YTD, fueled by AI sector rotation and a short squeeze that liquidated $5.8M in shorts. [tekstremediving.com](https://tekstremediving.com/article/near-protocol-price-explodes-why-near-is-surging-ai-short-squeeze-explained)",
-      "drivers": [
-        "+36.4% 1M momentum",
-        "+45.5% YTD",
-        "AI + short squeeze catalyst",
-        "decent market cap \u00a32.16B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "KAITO has gained +13.2% in 1W and +6.1% in 1M, with a small market cap of \u00a30.087B, offering high-beta exposure to the AI token space.",
-      "drivers": [
-        "+13.2% 1W momentum",
-        "+6.1% 1M momentum",
-        "AI token narrative",
-        "small cap high beta"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ARKM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ARKM shows strong short-term momentum with +12.3% in 1M and +7.5% in 1W, though YTD is -25.6%; the AI data analytics narrative supports continued interest.",
-      "drivers": [
-        "+12.3% 1M momentum",
-        "+7.5% 1W momentum",
-        "AI data analytics narrative",
-        "low market cap \u00a30.022B"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ALT",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "ALT has risen +7.2% in 1W and +2.1% in 1M, with a tiny market cap of \u00a30.033B, making it a speculative play on AI infrastructure momentum.",
-      "drivers": [
-        "+7.2% 1W momentum",
-        "+2.1% 1M momentum",
-        "AI infrastructure narrative",
-        "micro-cap high risk"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "RNDR has a strong YTD of +29.4% despite a -8.2% 1M pullback; the AI rendering narrative remains intact with a market cap of \u00a30.65B.",
-      "drivers": [
-        "+29.4% YTD",
-        "AI rendering narrative",
-        "moderate market cap \u00a30.65B",
-        "recent pullback offers entry"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "FET",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "FET shows modest positive momentum with +3.8% in 1M and near-flat YTD (-1.8%), but the AI agent narrative could reaccelerate given sector rotation.",
-      "drivers": [
-        "+3.8% 1M momentum",
-        "AI agent narrative",
-        "low market cap \u00a30.33B",
-        "stable YTD performance"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AGIX",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "AGIX has a slight +0.95% 1M gain but a -4.98% 1D drop; the AI narrative provides a floor, but momentum is weak relative to peers.",
-      "drivers": [
-        "+0.95% 1M momentum",
-        "AI narrative support",
-        "low market cap",
-        "weak short-term momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "NMR has a -7.25% 1M decline and -10.7% YTD, with only a +1.1% 1W bounce; it is the weakest of the AI momentum picks but still benefits from sector tailwinds.",
-      "drivers": [
-        "weak 1M momentum -7.25%",
-        "negative YTD -10.7%",
-        "AI narrative tailwind",
-        "small market cap \u00a30.048B"
       ]
     }
   ]

@@ -87,7 +87,6 @@
   .filter-bar {
     display: flex;
     gap: 6px;
-    margin-bottom: 16px;
     flex-wrap: wrap;
   }
 
@@ -425,119 +424,243 @@
 
   @media (max-width: 768px) {
     .container { padding: 16px 12px; }
-    .nav-inner { padding: 8px 12px; flex-wrap: wrap; }
-    header { padding: 20px 0 16px; }
-    .header-inner { padding-left: 27px; }
-    .header-inner::before { left: 12px; }
-    h1 { font-size: 26px; }
-
-    .filter-btn { font-size: 10px; padding: 6px 10px; letter-spacing: 0; }
-
-    /* Update button */
-    #update-btn { font-size: 10px; padding: 8px 16px; }
-
-    /* Table: hide heavy columns on small screens */
     table { font-size: 12px; }
     thead th { padding: 10px 8px; font-size: 10px; }
     td { padding: 10px 8px; }
     .ticker { font-size: 13px; }
     .price { font-size: 14px; }
     .exchange-badge { font-size: 9px; }
-
-    /* Hide 52wk range, Risk, Revenue on mobile */
     table th:nth-child(6), table td:nth-child(6) { display: none; }
     table th:nth-child(7), table td:nth-child(7) { display: none; }
     table th:nth-child(8), table td:nth-child(8) { display: none; }
+  }
 
-    .row-count { font-size: 11px; }
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
 
-    footer { font-size: 10px; padding: 16px; }
+  /* Nav panel (panel 2) */
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+  .nav-arrow { font-size: 8px; color: var(--muted); margin-left: auto; transition: transform 0.2s; }
+  .nav-item.open .nav-arrow { transform: rotate(90deg); }
+
+  .nav-sub {
+    display: none; flex-direction: column; background: var(--surface2);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .nav-item.open .nav-sub { display: flex; }
+
+  .sub-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); padding: 6px 14px 2px 26px;
+  }
+  .sub-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.5px;
+    text-transform: uppercase; padding: 7px 14px 7px 26px; color: var(--dim);
+    border-left: 2px solid transparent; text-decoration: none; display: flex;
+    align-items: center; gap: 6px; transition: all 0.15s; cursor: pointer;
+    white-space: nowrap;
+  }
+  .sub-link:hover  { color: var(--accent); }
+  .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
+  .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
+  .sub-link.active .sub-dot { opacity: 1; }
+
+  /* Search in header */
+  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
+  .header-search .row-count { font-size: 10px; }
+
+  /* Mobile chips */
+  .mobile-chips {
+    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
+    border-bottom: 1px solid var(--border); scrollbar-width: none;
+    background: var(--bg); flex-shrink: 0;
+  }
+  .mobile-chips::-webkit-scrollbar { display: none; }
+  .chip {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap;
+    flex-shrink: 0; transition: all 0.15s;
+  }
+  .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+
+  /* Hamburger */
+  .hamburger {
+    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 18px;
+    align-items: center; justify-content: center; flex-shrink: 0;
+  }
+
+  /* Drawer overlay */
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 260px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+
+  /* Bottom tab bar */
+  .bottom-tabs {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
+    background: var(--bg); border-top: 1px solid var(--accent);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-tabs-inner { display: flex; justify-content: space-around; align-items: stretch; }
+  .tab-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    gap: 2px; padding: 8px 4px 6px; background: none; border: none;
+    cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
+  .tab-btn:hover  { color: var(--accent); }
+  .tab-icon { font-size: 16px; line-height: 1; }
+
+  /* Tablet (≤900px): icon-only panels */
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+    .header-blocks { display: none; }
+    #stock-search { width: 160px; }
+  }
+
+  /* Mobile (≤600px): drawer + bottom tabs */
+  @media (max-width: 600px) {
+    body { padding-bottom: 56px; }
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+    .hamburger { display: flex; }
+    .bottom-tabs { display: block; }
+    .mobile-chips { display: flex; }
+    .header-search { display: none; }
+    .header-blocks { display: none; }
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
   }
 
 </style>
 </head>
-<body>
+<body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<!-- Panel 1: Sector switcher (full height) -->
+<div class="left-rail">
+<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+<a class="sector-pill" href="../All/index.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill active" href="index.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Biotech/index.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Defence/index.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Tech/index.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Crypto/index.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Energy/index.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
+</div>
+
+<!-- Panel 2: Nav panel with accordion category filter -->
+<div class="nav-panel">
+<div class="nav-item open" id="ni-dashboard">
+<button class="nav-link active" onclick="toggleNav('dashboard')">
+<span class="nav-icon">📊</span><span class="nav-label">Dashboard</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="filterNav('all',this)"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="filterNav('memory',this)"><span class="sub-dot"></span>Memory</a>
+<a class="sub-link" onclick="filterNav('nuclear-ops',this)"><span class="sub-dot"></span>Nuclear</a>
+<a class="sub-link" onclick="filterNav('smr',this)"><span class="sub-dot"></span>SMR</a>
+<a class="sub-link" onclick="filterNav('uranium',this)"><span class="sub-dot"></span>Uranium</a>
+<a class="sub-link" onclick="filterNav('power-infra',this)"><span class="sub-dot"></span>Power</a>
+<a class="sub-link" onclick="filterNav('dc-operators',this)"><span class="sub-dot"></span>Data Centres</a>
+<a class="sub-link" onclick="filterNav('hyperscalers',this)"><span class="sub-dot"></span>Hyperscalers</a>
+<a class="sub-link" onclick="filterNav('ai-compute',this)"><span class="sub-dot"></span>AI Compute</a>
+<a class="sub-link" onclick="filterNav('fibre-optical',this)"><span class="sub-dot"></span>Fibre/Optical</a>
+<a class="sub-link" onclick="filterNav('dsp-semi',this)"><span class="sub-dot"></span>DSP/Semi</a>
+<a class="sub-link" onclick="filterNav('test-equip',this)"><span class="sub-dot"></span>Test Equip</a>
+<a class="sub-link" onclick="filterNav('materials',this)"><span class="sub-dot"></span>Materials</a>
+</div>
+</div>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+
+<!-- Panel 3: Right side (header + content) -->
+<div class="right-side">
 <header>
 <div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
 <div class="header-left">
-<div class="header-label">// Stock Universe</div>
+<div class="header-label">// Market Intelligence</div>
 <h1>AI <span>Infrastructure</span></h1>
-<div class="header-sub">GBP prices @ <span id="fx-rate">£1 = $1.3457</span> · <span id="version">v2.4</span></div>
+<div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
 </div>
-<div class="sector-switcher">
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-<a class="sector-card hub-card" href="../index.html">
-<div class="sector-card-top"><span class="sector-card-icon">⊞</span></div>
-<div class="sector-card-name">Stock Hub</div>
-</a>
-<a class="sector-card" href="../rss.html">
-<div class="sector-card-top"><span class="sector-card-icon">📰</span></div>
-<div class="sector-card-name">RSS</div>
-</a>
-<a class="sector-card" href="../All/index.html">
-<div class="sector-card-top"><span class="sector-card-icon">🌐</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">All Sectors</div>
-</a>
-<a class="sector-card active" href="index.html">
-<div class="sector-card-top"><span class="sector-card-icon">🤖</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">AI Infrastructure</div>
-</a>
-<a class="sector-card" href="../Defence/index.html">
-<div class="sector-card-top"><span class="sector-card-icon">🛡️</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">Defence</div>
-</a>
-<a class="sector-card" href="../Biotech/index.html">
-<div class="sector-card-top"><span class="sector-card-icon">🧬</span><span class="badge badge-live">Live</span></div>
-<div class="sector-card-name">Biotech</div>
-</a>
-<a class="sector-card" href="../Tech/index.html">
-  <div class="sector-card-top"><span class="sector-card-icon">💻</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Technology</div>
-</a>
-<a class="sector-card" href="../Crypto/index.html">
-  <div class="sector-card-top"><span class="sector-card-icon">₿</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Crypto</div>
-</a>
-<a class="sector-card" href="../Energy/index.html">
-  <div class="sector-card-top"><span class="sector-card-icon">⚡</span><span class="badge badge-live">Live</span></div>
-  <div class="sector-card-name">Energy</div>
-</a>
-</div>
-</div>
-<div class="header-note">⚠️ NOT FINANCIAL ADVICE · for research purposes only · past performance does not guarantee future results · always consult a financial adviser</div>
-</header>
-<nav>
-<div class="nav-inner">
-<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 48 AI infrastructure stocks" href="index.html">📊 Dashboard</a>
-<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" data-tooltip="Latest headlines across all 48 stocks with news sentiment scoring" href="news.html">📰 News</a>
-<a class="nav-link" data-tooltip="AI top 10 picks ranked by momentum, fundamentals and sentiment — refreshed weekly" href="signals.html">🎯 Signals</a>
-<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
-<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
-<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today" href="calculator.html">🧮 What-If</a>
-</div>
-</nav>
-<div class="container">
-<div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
-<button class="filter-btn" data-filter="memory" data-tooltip="DRAM, NAND flash &amp; storage hardware — the memory layer that feeds AI accelerators" onclick="filterTable('memory', this)">Memory</button>
-<button class="filter-btn" data-filter="nuclear-ops" data-tooltip="Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres" onclick="filterTable('nuclear-ops', this)">Nuclear</button>
-<button class="filter-btn" data-filter="smr" data-tooltip="Small Modular Reactor developers — compact next-gen nuclear designed for on-site data centre power" onclick="filterTable('smr', this)">SMR</button>
-<button class="filter-btn" data-filter="uranium" data-tooltip="Uranium miners &amp; enrichers — upstream fuel supply benefiting from the nuclear power revival" onclick="filterTable('uranium', this)">Uranium</button>
-<button class="filter-btn" data-filter="power-infra" data-tooltip="Switchgear, transformers &amp; power management — the grid buildout infrastructure behind every data centre" onclick="filterTable('power-infra', this)">Power</button>
-<button class="filter-btn" data-filter="dc-operators" data-tooltip="Companies that own and operate the physical data centre facilities where AI compute is housed" onclick="filterTable('dc-operators', this)">Data Centres</button>
-<button class="filter-btn" data-filter="hyperscalers" data-tooltip="Mega cloud platforms (AWS, Azure, Google) building AI infrastructure at planetary scale" onclick="filterTable('hyperscalers', this)">Hyperscalers</button>
-<button class="filter-btn" data-filter="ai-compute" data-tooltip="GPU and AI accelerator makers — the silicon that runs AI training and inference workloads" onclick="filterTable('ai-compute', this)">AI Compute</button>
-<button class="filter-btn" data-filter="fibre-optical" data-tooltip="High-speed optical networking and fibre interconnects — the data links between and within data centres" onclick="filterTable('fibre-optical', this)">Fibre/Optical</button>
-<button class="filter-btn" data-filter="dsp-semi" data-tooltip="Specialised semiconductors for digital signal processing and high-speed networking silicon" onclick="filterTable('dsp-semi', this)">DSP/Semi</button>
-<button class="filter-btn" data-filter="test-equip" data-tooltip="Electronic test &amp; measurement gear used to validate chips, networks and power systems" onclick="filterTable('test-equip', this)">Test Equip</button>
-<button class="filter-btn" data-filter="materials" data-tooltip="Specialty substrates and compound semiconductors used in chip and optical component manufacturing" onclick="filterTable('materials', this)">Materials</button>
-</div>
-<div class="search-count-bar">
+<div class="header-search">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
+<div class="header-blocks">
+<div class="header-block">
+<div class="header-block-label">Prices Last Updated</div>
+<div class="header-block-value" id="data-bar-ts">—</div>
+</div>
+</div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+</header>
+
+<div class="mobile-chips">
+<button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
+<button class="chip" data-filter="memory" onclick="filterChip('memory',this)">Memory</button>
+<button class="chip" data-filter="nuclear-ops" onclick="filterChip('nuclear-ops',this)">Nuclear</button>
+<button class="chip" data-filter="smr" onclick="filterChip('smr',this)">SMR</button>
+<button class="chip" data-filter="uranium" onclick="filterChip('uranium',this)">Uranium</button>
+<button class="chip" data-filter="power-infra" onclick="filterChip('power-infra',this)">Power</button>
+<button class="chip" data-filter="dc-operators" onclick="filterChip('dc-operators',this)">Data Centres</button>
+<button class="chip" data-filter="hyperscalers" onclick="filterChip('hyperscalers',this)">Hyperscalers</button>
+<button class="chip" data-filter="ai-compute" onclick="filterChip('ai-compute',this)">AI Compute</button>
+<button class="chip" data-filter="fibre-optical" onclick="filterChip('fibre-optical',this)">Fibre/Optical</button>
+<button class="chip" data-filter="dsp-semi" onclick="filterChip('dsp-semi',this)">DSP/Semi</button>
+<button class="chip" data-filter="test-equip" onclick="filterChip('test-equip',this)">Test Equip</button>
+<button class="chip" data-filter="materials" onclick="filterChip('materials',this)">Materials</button>
+</div>
+
+<div class="page-body">
+<div class="page-main">
+<div class="container">
 <div class="table-wrap">
 <table id="stock-table">
 <thead>
@@ -562,7 +685,7 @@
 const NOTES = {
   'SNDK': 'NAND pure-play. AI storage supercycle. Spun off WDC 2025.',
   'WDC':  'HDD duopoly. Fully committed to hyperscalers through FY end.',
-  '285A': "SNDK's JV partner. Pure NAND play. Japan listed — needs specialist broker.",
+  '285A': "SNDK's JV partner. Pure NAND play. Japan listed — needs specialist broker. US OTC: KXIAY (T212 ISA alias).",
   'MU':   'DRAM + NAND + HBM. Sold out of HBM for all of 2026. 11.5x fwd P/E.',
   'STX':  'HDD duopoly with WDC. AI data centre mass storage.',
   'MRVL': 'Custom silicon + AI networking. 800G/1.6T optical interconnects.',
@@ -703,11 +826,13 @@ function buildTable(stocks) {
     tbody.appendChild(tr);
   });
   // Update header + count from prices-data.js
+  const tot = document.getElementById('total-count');
+  if (tot) tot.textContent = stocks.length;
+  const sc = document.getElementById('stock-count');
+  if (sc) sc.textContent = stocks.length;
   if (window.PRICES_DATA) {
-    const fxEl = document.getElementById('fx-rate');
-    if (fxEl) fxEl.textContent = '£1 = $' + window.PRICES_DATA.fx_gbp_usd;
-    const tot = document.getElementById('total-count');
-    if (tot) tot.textContent = stocks.length;
+    const lu = document.getElementById('last-updated');
+    if (lu) lu.textContent = window.PRICES_DATA.updated || '—';
   }
 }
 
@@ -763,13 +888,108 @@ function applyFilters() {
 }
 
 function filterTable(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+  if (btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
   currentCat = cat;
   applyFilters();
 }
 
+function filterNav(cat, el) {
+  document.querySelectorAll('.sub-link').forEach(l => l.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === cat));
+  currentCat = cat;
+  applyFilters();
+}
+
+function filterChip(cat, el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('#ni-dashboard .sub-link, #ni-dashboard-d .sub-link').forEach(l => {
+    const m = l.getAttribute('onclick') && l.getAttribute('onclick').match(/'([^',]+)'/);
+    l.classList.toggle('active', !!(m && m[1] === cat));
+  });
+  currentCat = cat;
+  applyFilters();
+}
+
+function toggleNav(id) {
+  const item = document.getElementById('ni-' + id);
+  if (!item) return;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+
 function searchTable() { applyFilters(); }
 </script>
+</div><!-- /.container -->
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
+<div class="left-rail">
+<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+<a class="sector-pill" href="../All/index.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill active" href="index.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Biotech/index.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Defence/index.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Tech/index.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Crypto/index.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Energy/index.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
+</div>
+<div class="nav-panel">
+<div class="nav-item open" id="ni-dashboard-d">
+<button class="nav-link active" onclick="toggleNav('dashboard-d')">
+<span class="nav-icon">📊</span><span class="nav-label">Dashboard</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="filterNav('all',this);closeDrawer()"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="filterNav('memory',this);closeDrawer()"><span class="sub-dot"></span>Memory</a>
+<a class="sub-link" onclick="filterNav('nuclear-ops',this);closeDrawer()"><span class="sub-dot"></span>Nuclear</a>
+<a class="sub-link" onclick="filterNav('smr',this);closeDrawer()"><span class="sub-dot"></span>SMR</a>
+<a class="sub-link" onclick="filterNav('uranium',this);closeDrawer()"><span class="sub-dot"></span>Uranium</a>
+<a class="sub-link" onclick="filterNav('power-infra',this);closeDrawer()"><span class="sub-dot"></span>Power</a>
+<a class="sub-link" onclick="filterNav('dc-operators',this);closeDrawer()"><span class="sub-dot"></span>Data Centres</a>
+<a class="sub-link" onclick="filterNav('hyperscalers',this);closeDrawer()"><span class="sub-dot"></span>Hyperscalers</a>
+<a class="sub-link" onclick="filterNav('ai-compute',this);closeDrawer()"><span class="sub-dot"></span>AI Compute</a>
+<a class="sub-link" onclick="filterNav('fibre-optical',this);closeDrawer()"><span class="sub-dot"></span>Fibre/Optical</a>
+<a class="sub-link" onclick="filterNav('dsp-semi',this);closeDrawer()"><span class="sub-dot"></span>DSP/Semi</a>
+<a class="sub-link" onclick="filterNav('test-equip',this);closeDrawer()"><span class="sub-dot"></span>Test Equip</a>
+<a class="sub-link" onclick="filterNav('materials',this);closeDrawer()"><span class="sub-dot"></span>Materials</a>
+</div>
+</div>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+
+<!-- Bottom tab bar (mobile) -->
+<div class="bottom-tabs">
+<div class="bottom-tabs-inner">
+<button class="tab-btn active" onclick="window.location='index.html'"><span class="tab-icon">📊</span>Dashboard</button>
+<button class="tab-btn" onclick="window.location='metrics.html'"><span class="tab-icon">📋</span>Metrics</button>
+<button class="tab-btn" onclick="window.location='news.html'"><span class="tab-icon">📰</span>News</button>
+<button class="tab-btn" onclick="window.location='signals.html'"><span class="tab-icon">🎯</span>Signals</button>
+<button class="tab-btn" onclick="window.location='heatmap.html'"><span class="tab-icon">🔥</span>Heatmap</button>
+<button class="tab-btn" onclick="window.location='charts.html'"><span class="tab-icon">📈</span>Charts</button>
+<button class="tab-btn" onclick="window.location='calculator.html'"><span class="tab-icon">🧮</span>What-If</button>
+</div>
+</div>
 </body>
 </html>
