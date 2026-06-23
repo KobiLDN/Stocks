@@ -200,6 +200,105 @@
   .page-main { flex: 1; overflow-y: auto; min-width: 0; }
   .container { padding: 20px 24px; }
 
+  /* ── Mobile sector chips (hidden on desktop) ── */
+  .mobile-chips {
+    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
+    border-bottom: 1px solid var(--border); scrollbar-width: none; flex-shrink: 0;
+  }
+  .chip {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap;
+    flex-shrink: 0; transition: all 0.15s;
+  }
+  .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+
+  /* ── Hamburger (hidden on desktop) ── */
+  .hamburger {
+    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 18px;
+    align-items: center; justify-content: center; flex-shrink: 0;
+  }
+
+  /* ── Drawer overlay ── */
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300;
+    background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 260px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail {
+    border-right: 1px solid var(--border); overflow-y: auto;
+  }
+  .drawer .nav-panel {
+    flex: 1; overflow-y: auto;
+  }
+
+  /* ── Bottom tab bar (hidden on desktop) ── */
+  .bottom-tabs {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
+    background: var(--bg); border-top: 1px solid var(--accent);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-tabs-inner {
+    display: flex; justify-content: space-around; align-items: stretch;
+  }
+  .tab-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    gap: 2px; padding: 8px 4px 6px; background: none; border: none;
+    cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
+  .tab-btn:hover  { color: var(--accent); }
+  .tab-icon { font-size: 16px; line-height: 1; }
+
+  /* ── Tablet (≤900px): icon-only panels ── */
+  @media (max-width: 900px) {
+    .left-rail { width: 52px; padding: 8px 4px; }
+    .sector-pill-name, .sector-pill-badge { display: none; }
+    .sector-pill { padding: 10px 4px; }
+    .sector-pill-icon { font-size: 20px; }
+
+    .nav-panel { width: 52px; }
+    .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none; }
+    .nav-link { padding: 12px 0; justify-content: center; }
+    .nav-icon { font-size: 18px; }
+
+    .header-blocks { display: none; }
+    #stock-search { width: 180px; }
+  }
+
+  /* ── Mobile (≤600px): drawer + bottom tabs ── */
+  @media (max-width: 600px) {
+    body { padding-bottom: 56px; }
+
+    .left-rail, .nav-panel { display: none; }
+
+    .hamburger { display: flex; }
+    .bottom-tabs { display: block; }
+    .mobile-chips { display: flex; }
+
+    .header-search { display: none; }
+    .header-blocks { display: none; }
+    .header-inner { padding: 10px 14px; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+
+    .container { padding: 12px 14px; }
+
+    /* hide less important table columns */
+    .stock-table th:nth-child(n+5),
+    .stock-table td:nth-child(n+5) { display: none; }
+  }
+
   /* ── Table ── */
   .stock-table { width: 100%; border-collapse: collapse; }
   .stock-table th {
@@ -486,9 +585,21 @@
         <div class="header-block-value">2026-06-22 20:37</div>
       </div>
     </div>
+    <button class="hamburger" onclick="toggleDrawer()">☰</button>
     <button class="theme-toggle">☾</button>
   </div>
 </header>
+
+<!-- Mobile sector chips -->
+<div class="mobile-chips" id="mobile-chips">
+  <button class="chip active" onclick="setMobileFilter('all',this)">All</button>
+  <button class="chip" onclick="setMobileFilter('ai',this)">AI Infra</button>
+  <button class="chip" onclick="setMobileFilter('biotech',this)">Biotech</button>
+  <button class="chip" onclick="setMobileFilter('defence',this)">Defence</button>
+  <button class="chip" onclick="setMobileFilter('tech',this)">Tech</button>
+  <button class="chip" onclick="setMobileFilter('crypto',this)">Crypto</button>
+  <button class="chip" onclick="setMobileFilter('energy',this)">Energy</button>
+</div>
 
 <div class="page-body">
   <!-- Main content -->
@@ -516,6 +627,57 @@
 </div>
 
 </div><!-- /.right-side -->
+
+<!-- Drawer (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()">
+  <div class="drawer" onclick="event.stopPropagation()">
+    <div class="left-rail">
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+      <a class="sector-pill active" href="#"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="#"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
+    </div>
+    <div class="nav-panel" style="padding-top:8px;">
+      <div class="nav-item open" id="dw-dashboard">
+        <button class="nav-link active" onclick="toggleNav('dashboard');toggleDrawer()"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span><span class="nav-arrow">▶</span></button>
+        <div class="nav-sub">
+          <span class="sub-label">Sector</span>
+          <a class="sub-link active" onclick="setMobileFilter('all',this);toggleDrawer()"><span class="sub-dot"></span>All</a>
+          <a class="sub-link" onclick="setMobileFilter('ai',this);toggleDrawer()"><span class="sub-dot"></span>AI Infra</a>
+          <a class="sub-link" onclick="setMobileFilter('biotech',this);toggleDrawer()"><span class="sub-dot"></span>Biotech</a>
+          <a class="sub-link" onclick="setMobileFilter('defence',this);toggleDrawer()"><span class="sub-dot"></span>Defence</a>
+          <a class="sub-link" onclick="setMobileFilter('tech',this);toggleDrawer()"><span class="sub-dot"></span>Tech</a>
+          <a class="sub-link" onclick="setMobileFilter('crypto',this);toggleDrawer()"><span class="sub-dot"></span>Crypto</a>
+          <a class="sub-link" onclick="setMobileFilter('energy',this);toggleDrawer()"><span class="sub-dot"></span>Energy</a>
+        </div>
+      </div>
+      <div class="nav-item" id="dw-metrics"><button class="nav-link" onclick="toggleNav('metrics');toggleDrawer()"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span></button></div>
+      <div class="nav-item" id="dw-news"><button class="nav-link" onclick="toggleNav('news');toggleDrawer()"><span class="nav-icon">📰</span><span class="nav-label">News</span><span class="nav-arrow">▶</span></button></div>
+      <div class="nav-item" id="dw-signals"><button class="nav-link" onclick="toggleNav('signals');toggleDrawer()"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span><span class="nav-arrow">▶</span></button></div>
+      <div class="nav-item" id="dw-heatmap"><button class="nav-link" onclick="toggleNav('heatmap');toggleDrawer()"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span><span class="nav-arrow">▶</span></button></div>
+      <div class="nav-item" id="dw-charts"><button class="nav-link" onclick="toggleNav('charts');toggleDrawer()"><span class="nav-icon">📈</span><span class="nav-label">Charts</span><span class="nav-arrow">▶</span></button></div>
+      <div class="nav-item" id="dw-whatif"><button class="nav-link" onclick="toggleNav('whatif');toggleDrawer()"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span><span class="nav-arrow">▶</span></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom tab bar (mobile) -->
+<div class="bottom-tabs">
+  <div class="bottom-tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('dashboard',this)"><span class="tab-icon">📊</span>Dashboard</button>
+    <button class="tab-btn" onclick="switchTab('metrics',this)"><span class="tab-icon">📋</span>Metrics</button>
+    <button class="tab-btn" onclick="switchTab('news',this)"><span class="tab-icon">📰</span>News</button>
+    <button class="tab-btn" onclick="switchTab('signals',this)"><span class="tab-icon">🎯</span>Signals</button>
+    <button class="tab-btn" onclick="switchTab('heatmap',this)"><span class="tab-icon">🔥</span>Heatmap</button>
+    <button class="tab-btn" onclick="switchTab('charts',this)"><span class="tab-icon">📈</span>Charts</button>
+    <button class="tab-btn" onclick="switchTab('whatif',this)"><span class="tab-icon">🧮</span>What-If</button>
+  </div>
+</div>
 
 <script>
 /* ── Accordion nav ── */
@@ -625,6 +787,32 @@ function renderTable() {
 }
 
 renderTable();
+
+/* ── Mobile helpers ── */
+function toggleDrawer() {
+  document.getElementById('drawer-overlay').classList.toggle('open');
+}
+
+function setMobileFilter(val, el) {
+  activeFilter = val;
+  // sync chip strip
+  document.querySelectorAll('.mobile-chips .chip').forEach(c => c.classList.remove('active'));
+  const chip = document.querySelector(`.mobile-chips .chip[onclick*="'${val}'"]`);
+  if (chip) chip.classList.add('active');
+  renderTable();
+}
+
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeNav = id;
+  // reset sector filter to all on tab switch
+  activeFilter = 'all';
+  document.querySelectorAll('.mobile-chips .chip').forEach(c => c.classList.remove('active'));
+  const allChip = document.querySelector('.mobile-chips .chip[onclick*="\'all\'"]');
+  if (allChip) allChip.classList.add('active');
+  renderTable();
+}
 </script>
 </body>
 </html>
