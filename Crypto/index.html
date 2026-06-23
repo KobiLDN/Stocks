@@ -345,48 +345,126 @@
     .row-count { font-size: 11px; }
     footer { font-size: 10px; padding: 16px; }
   }
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+  .nav-arrow { font-size: 8px; color: var(--muted); margin-left: auto; transition: transform 0.2s; }
+  .nav-item.open .nav-arrow { transform: rotate(90deg); }
+  .nav-sub {
+    display: none; flex-direction: column; background: var(--surface2);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .nav-item.open .nav-sub { display: flex; }
+  .sub-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); padding: 6px 14px 2px 26px;
+  }
+  .sub-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.5px;
+    text-transform: uppercase; padding: 7px 14px 7px 26px; color: var(--dim);
+    border-left: 2px solid transparent; text-decoration: none; display: flex;
+    align-items: center; gap: 6px; transition: all 0.15s; cursor: pointer; white-space: nowrap;
+  }
+  .sub-link:hover  { color: var(--accent); }
+  .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
+  .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
+  .sub-link.active .sub-dot { opacity: 1; }
+  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
+  .header-search .row-count { font-size: 10px; }
+  .mobile-chips {
+    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
+    border-bottom: 1px solid var(--border); scrollbar-width: none;
+    background: var(--bg); flex-shrink: 0;
+  }
+  .mobile-chips::-webkit-scrollbar { display: none; }
+  .chip {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap;
+    flex-shrink: 0; transition: all 0.15s;
+  }
+  .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+  .hamburger {
+    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 18px;
+    align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 260px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  .bottom-tabs {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
+    background: var(--bg); border-top: 1px solid var(--accent);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-tabs-inner { display: flex; justify-content: space-around; align-items: stretch; }
+  .tab-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    gap: 2px; padding: 8px 4px 6px; background: none; border: none;
+    cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
+  .tab-btn:hover  { color: var(--accent); }
+  .tab-icon { font-size: 16px; line-height: 1; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+    .header-blocks { display: none; }
+    #stock-search { width: 160px; }
+  }
+  @media (max-width: 600px) {
+    body { padding-bottom: 56px; }
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+    .hamburger { display: flex; }
+    .bottom-tabs { display: block; }
+    .mobile-chips { display: flex; }
+    .header-search { display: none; }
+    .header-blocks { display: none; }
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
 </style>
 </head>
 <body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
-<header>
-  <div class="header-inner">
-  <div class="header-left">
-    <div class="header-label">// Market Intelligence</div>
-    <h1>Crypto <span>Markets</span></h1>
-    <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
-  </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
-  </div>
-  </div>
-  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-  </div>
-  <nav>
-<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum for all 19 coins" href="index.html">📊 Dashboard</a>
-<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" data-tooltip="Latest headlines across all 19 coins with news sentiment scoring" href="news.html">📰 News</a>
-<a class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri" href="signals.html">🎯 Signals</a>
-<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
-<a class="nav-link" data-tooltip="1-year price history charts for every coin" href="charts.html">📈 Charts</a>
-<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today" href="calculator.html">🧮 What-If</a>
-  </nav>
 
-  <div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)" data-tooltip="Show all 19 coins">All</button>
-<button class="filter-btn" data-filter="bitcoin" data-tooltip="Bitcoin — the original and largest cryptocurrency by market cap" onclick="filterTable('bitcoin', this)">Bitcoin</button>
-<button class="filter-btn" data-filter="layer1" data-tooltip="Layer 1 blockchains — ETH, SOL, BNB, ADA, AVAX: major smart-contract platforms" onclick="filterTable('layer1', this)">Layer 1</button>
-<button class="filter-btn" data-filter="payments" data-tooltip="Payments — XRP, XLM (Stellar), TRX (TRON): fast, low-cost cross-border settlement networks" onclick="filterTable('payments', this)">Payments</button>
-<button class="filter-btn" data-filter="emerging" data-tooltip="Emerging L1s — SUI, HBAR (Hedera), TON (Toncoin), ALGO (Algorand), MINA: newer and niche blockchains" onclick="filterTable('emerging', this)">Emerging</button>
-<button class="filter-btn" data-filter="infra" data-tooltip="Infrastructure — POL (Polygon), DOT (Polkadot), LINK (Chainlink): scaling, interoperability, and oracle infrastructure" onclick="filterTable('infra', this)">Infra</button>
-<button class="filter-btn" data-filter="meme" data-tooltip="Meme coins — DOGE (Dogecoin), PEPE: community-driven high-volatility tokens" onclick="filterTable('meme', this)">Meme</button>
-<button class="filter-btn" data-filter="ai" data-tooltip="AI Tokens — TAO (Bittensor), FET (ASI Alliance), RNDR (Render), NEAR, ICP, GRT, OCEAN, AGIX, NMR, ALT, AIOZ, ARKM, WLD, KAITO, VIRTUAL: decentralised AI infrastructure and intelligence networks" onclick="filterTable('ai', this)">AI Tokens</button>
-</div>
-</header>
-
-<div class="page-body">
+<!-- Panel 1: Sector switcher (full height) -->
 <div class="left-rail">
 <a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
 <a class="sector-pill" href="../All/index.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
@@ -398,12 +476,71 @@
 <a class="sector-pill" href="../Energy/index.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
 <a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
 </div>
-<div class="page-main">
-<div class="container">
-<div class="search-count-bar">
+
+<!-- Panel 2: Nav panel with accordion category filter -->
+<div class="nav-panel">
+<div class="nav-item open" id="ni-dashboard">
+<button class="nav-link active" onclick="toggleNav('dashboard')">
+<span class="nav-icon">📊</span><span class="nav-label">Dashboard</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="filterNav('all',this)"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="filterNav('bitcoin',this)"><span class="sub-dot"></span>Bitcoin</a>
+<a class="sub-link" onclick="filterNav('layer1',this)"><span class="sub-dot"></span>Layer 1</a>
+<a class="sub-link" onclick="filterNav('payments',this)"><span class="sub-dot"></span>Payments</a>
+<a class="sub-link" onclick="filterNav('emerging',this)"><span class="sub-dot"></span>Emerging</a>
+<a class="sub-link" onclick="filterNav('infra',this)"><span class="sub-dot"></span>Infra</a>
+<a class="sub-link" onclick="filterNav('meme',this)"><span class="sub-dot"></span>Meme</a>
+<a class="sub-link" onclick="filterNav('ai',this)"><span class="sub-dot"></span>AI Tokens</a>
+</div>
+</div>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+
+<!-- Panel 3: Right side (header + content) -->
+<div class="right-side">
+<header>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+<div class="header-label">// Market Intelligence</div>
+<h1>Crypto <span>Markets</span></h1>
+<div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
+</div>
+<div class="header-search">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
+<div class="header-blocks">
+<div class="header-block">
+<div class="header-block-label">Prices Last Updated</div>
+<div class="header-block-value" id="data-bar-ts">—</div>
+</div>
+</div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+</header>
+
+<div class="mobile-chips">
+<button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
+<button class="chip" data-filter="bitcoin" onclick="filterChip('bitcoin',this)">Bitcoin</button>
+<button class="chip" data-filter="layer1" onclick="filterChip('layer1',this)">Layer 1</button>
+<button class="chip" data-filter="payments" onclick="filterChip('payments',this)">Payments</button>
+<button class="chip" data-filter="emerging" onclick="filterChip('emerging',this)">Emerging</button>
+<button class="chip" data-filter="infra" onclick="filterChip('infra',this)">Infra</button>
+<button class="chip" data-filter="meme" onclick="filterChip('meme',this)">Meme</button>
+<button class="chip" data-filter="ai" onclick="filterChip('ai',this)">AI Tokens</button>
+</div>
+
+<div class="page-body">
+<div class="page-main">
+<div class="container">
 <div class="table-wrap">
 <table id="stock-table">
 <thead>
@@ -613,15 +750,102 @@ function applyFilters() {
 }
 
 function filterTable(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+  if (btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
   currentCat = cat;
   applyFilters();
 }
+
+function filterNav(cat, el) {
+  document.querySelectorAll('.sub-link').forEach(l => l.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === cat));
+  currentCat = cat;
+  applyFilters();
+}
+
+function filterChip(cat, el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('#ni-dashboard .sub-link, #ni-dashboard-d .sub-link').forEach(l => {
+    const m = l.getAttribute('onclick') && l.getAttribute('onclick').match(/'([^',]+)'/);
+    l.classList.toggle('active', !!(m && m[1] === cat));
+  });
+  currentCat = cat;
+  applyFilters();
+}
+
+function toggleNav(id) {
+  const item = document.getElementById('ni-' + id);
+  if (!item) return;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
 
 function searchTable() { applyFilters(); }
 </script>
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
+<div class="left-rail">
+<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+<a class="sector-pill" href="../All/index.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../AI/index.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Biotech/index.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Defence/index.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Tech/index.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill active" href="index.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../Energy/index.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
+</div>
+<div class="nav-panel">
+<div class="nav-item open" id="ni-dashboard-d">
+<button class="nav-link active" onclick="toggleNav('dashboard-d')">
+<span class="nav-icon">📊</span><span class="nav-label">Dashboard</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="filterNav('all',this);closeDrawer()"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="filterNav('bitcoin',this);closeDrawer()"><span class="sub-dot"></span>Bitcoin</a>
+<a class="sub-link" onclick="filterNav('layer1',this);closeDrawer()"><span class="sub-dot"></span>Layer 1</a>
+<a class="sub-link" onclick="filterNav('payments',this);closeDrawer()"><span class="sub-dot"></span>Payments</a>
+<a class="sub-link" onclick="filterNav('emerging',this);closeDrawer()"><span class="sub-dot"></span>Emerging</a>
+<a class="sub-link" onclick="filterNav('infra',this);closeDrawer()"><span class="sub-dot"></span>Infra</a>
+<a class="sub-link" onclick="filterNav('meme',this);closeDrawer()"><span class="sub-dot"></span>Meme</a>
+<a class="sub-link" onclick="filterNav('ai',this);closeDrawer()"><span class="sub-dot"></span>AI Tokens</a>
+</div>
+</div>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+
+<!-- Bottom tab bar (mobile) -->
+<div class="bottom-tabs">
+<div class="bottom-tabs-inner">
+<button class="tab-btn active" onclick="window.location='index.html'"><span class="tab-icon">📊</span>Dashboard</button>
+<button class="tab-btn" onclick="window.location='metrics.html'"><span class="tab-icon">📋</span>Metrics</button>
+<button class="tab-btn" onclick="window.location='news.html'"><span class="tab-icon">📰</span>News</button>
+<button class="tab-btn" onclick="window.location='signals.html'"><span class="tab-icon">🎯</span>Signals</button>
+<button class="tab-btn" onclick="window.location='heatmap.html'"><span class="tab-icon">🔥</span>Heatmap</button>
+<button class="tab-btn" onclick="window.location='charts.html'"><span class="tab-icon">📈</span>Charts</button>
+<button class="tab-btn" onclick="window.location='calculator.html'"><span class="tab-icon">🧮</span>What-If</button>
+</div>
+</div>
 </body>
 </html>
