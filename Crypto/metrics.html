@@ -238,40 +238,127 @@
     th, td { padding: 8px 10px; }
     .company-cell { display: none; }
   }
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+  .nav-arrow { font-size: 8px; color: var(--muted); margin-left: auto; transition: transform 0.2s; }
+  .nav-item.open .nav-arrow { transform: rotate(90deg); }
+  .nav-sub {
+    display: none; flex-direction: column; background: var(--surface2);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .nav-item.open .nav-sub { display: flex; }
+  .sub-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); padding: 6px 14px 2px 26px;
+  }
+  .sub-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.5px;
+    text-transform: uppercase; padding: 7px 14px 7px 26px; color: var(--dim);
+    border-left: 2px solid transparent; text-decoration: none; display: flex;
+    align-items: center; gap: 6px; transition: all 0.15s; cursor: pointer; white-space: nowrap;
+  }
+  .sub-link:hover  { color: var(--accent); }
+  .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
+  .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
+  .sub-link.active .sub-dot { opacity: 1; }
+  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
+  .header-search .row-count { font-size: 10px; }
+  .mobile-chips {
+    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
+    border-bottom: 1px solid var(--border); scrollbar-width: none;
+    background: var(--bg); flex-shrink: 0;
+  }
+  .mobile-chips::-webkit-scrollbar { display: none; }
+  .chip {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap;
+    flex-shrink: 0; transition: all 0.15s;
+  }
+  .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+  .hamburger {
+    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 18px;
+    align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 260px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  .bottom-tabs {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
+    background: var(--bg); border-top: 1px solid var(--accent);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-tabs-inner { display: flex; justify-content: space-around; align-items: stretch; }
+  .tab-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    gap: 2px; padding: 8px 4px 6px; background: none; border: none;
+    cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
+  .tab-btn:hover  { color: var(--accent); }
+  .tab-icon { font-size: 16px; line-height: 1; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+    .header-blocks { display: none; }
+    #metrics-search { width: 160px; }
+  }
+  @media (max-width: 600px) {
+    body { padding-bottom: 56px; }
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+    .hamburger { display: flex; }
+    .bottom-tabs { display: block; }
+    .mobile-chips { display: flex; }
+    .header-search { display: none; }
+    .header-blocks { display: none; }
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
 </style>
 </head>
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
-<header>
-  <div class="header-inner">
-  <div class="header-left">
-    <div class="header-label">// Market Intelligence</div>
-    <h1>Crypto <span>Metrics</span></h1>
-    <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
-  </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
-  </div>
-  </div>
-  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-  </div>
-  <nav>
-<a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 19 coins">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link active" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all 19 coins with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every coin">📈 Charts</a>
-    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-  </nav>
 
-  <div class="filter-bar" id="filter-bar"></div>
-</header>
-
-<div class="page-body">
+<!-- Panel 1: Left Rail (sector pills) -->
 <div class="left-rail">
 <a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
 <a class="sector-pill" href="../All/metrics.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
@@ -283,13 +370,75 @@
 <a class="sector-pill" href="../Energy/metrics.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
 <a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
 </div>
-<div class="page-main">
-<div class="container">
 
-  <div class="search-count-bar">
+<!-- Panel 2: Nav Panel (accordion) -->
+<div class="nav-panel">
+  <div class="nav-item" id="ni-metrics">
+    <button class="nav-link active" onclick="toggleNav('metrics')">
+      <span class="nav-icon">📋</span>
+      <span class="nav-label">Metrics</span>
+      <span class="nav-arrow">▶</span>
+    </button>
+    <div class="nav-sub">
+      <span class="sub-label">Category</span>
+      <a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
+      <a class="sub-link" onclick="setCategory('bitcoin')"><span class="sub-dot"></span>Bitcoin</a>
+      <a class="sub-link" onclick="setCategory('layer1')"><span class="sub-dot"></span>Layer 1</a>
+      <a class="sub-link" onclick="setCategory('payments')"><span class="sub-dot"></span>Payments</a>
+      <a class="sub-link" onclick="setCategory('emerging')"><span class="sub-dot"></span>Emerging</a>
+      <a class="sub-link" onclick="setCategory('infra')"><span class="sub-dot"></span>Infra</a>
+      <a class="sub-link" onclick="setCategory('meme')"><span class="sub-dot"></span>Meme</a>
+      <a class="sub-link" onclick="setCategory('ai')"><span class="sub-dot"></span>AI Tokens</a>
+    </div>
+  </div>
+  <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+  <a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+  <a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+  <a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+  <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+  <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+
+<!-- Panel 3: Right Side -->
+<div class="right-side">
+
+<header>
+  <div class="header-inner">
+  <button class="hamburger" onclick="openDrawer()" aria-label="Open menu">☰</button>
+  <div class="header-left">
+    <div class="header-label">// Market Intelligence</div>
+    <h1>Crypto <span>Metrics</span></h1>
+    <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
+  </div>
+  <div class="header-search">
     <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
     <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
   </div>
+  <div class="header-blocks">
+  <div class="header-block">
+  <div class="header-block-label">Prices Last Updated</div>
+  <div class="header-block-value" id="data-bar-ts">—</div>
+  </div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+</header>
+
+<!-- Mobile horizontal chips -->
+<div class="mobile-chips">
+  <button class="chip active" data-filter="all" onclick="setCategory('all')">All</button>
+  <button class="chip" data-filter="bitcoin" onclick="setCategory('bitcoin')">Bitcoin</button>
+  <button class="chip" data-filter="layer1" onclick="setCategory('layer1')">Layer 1</button>
+  <button class="chip" data-filter="payments" onclick="setCategory('payments')">Payments</button>
+  <button class="chip" data-filter="emerging" onclick="setCategory('emerging')">Emerging</button>
+  <button class="chip" data-filter="infra" onclick="setCategory('infra')">Infra</button>
+  <button class="chip" data-filter="meme" onclick="setCategory('meme')">Meme</button>
+  <button class="chip" data-filter="ai" onclick="setCategory('ai')">AI Tokens</button>
+</div>
+
+<div class="page-body">
+<div class="page-main">
+<div class="container">
 
   <div class="table-wrap">
     <table id="metrics-table">
@@ -460,8 +609,24 @@
     document.querySelectorAll('.filter-btn').forEach(b => {
       b.classList.toggle('active', b.dataset.cat === cat);
     });
+    document.querySelectorAll('.sub-link').forEach(l => {
+      const m = l.getAttribute('onclick') && l.getAttribute('onclick').match(/'([^']+)'/);
+      l.classList.toggle('active', !!(m && m[1] === cat));
+    });
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === cat));
     renderTable();
   }
+
+  function toggleNav(id) {
+    const item = document.getElementById('ni-' + id);
+    if (!item) return;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
 
   function sortKey(s) {
     switch (sortState.col) {
@@ -594,6 +759,7 @@
   function buildFilterBar(stocks) {
     const cats = ['all', ...Object.keys(CAT_LABELS)];
     const bar = document.getElementById('filter-bar');
+    if (!bar) return;
     bar.innerHTML = cats.map(cat => {
       const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
       const tip   = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
@@ -674,5 +840,62 @@
 
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
+
+</div><!-- /.right-side -->
+
+<!-- Mobile drawer overlay -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+  <div class="drawer" onclick="event.stopPropagation()">
+    <div class="left-rail">
+      <a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
+      <a class="sector-pill" href="../All/metrics.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="../AI/metrics.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="../Biotech/metrics.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="../Defence/metrics.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="../Tech/metrics.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill active" href="metrics.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="../Energy/metrics.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
+      <a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
+    </div>
+    <div class="nav-panel">
+      <div class="nav-item" id="ni-metrics-d">
+        <button class="nav-link active" onclick="toggleNav('metrics-d')">
+          <span class="nav-icon">📋</span>
+          <span class="nav-label">Metrics</span>
+          <span class="nav-arrow">▶</span>
+        </button>
+        <div class="nav-sub">
+          <span class="sub-label">Category</span>
+          <a class="sub-link active" onclick="setCategory('all');closeDrawer()"><span class="sub-dot"></span>All</a>
+          <a class="sub-link" onclick="setCategory('bitcoin');closeDrawer()"><span class="sub-dot"></span>Bitcoin</a>
+          <a class="sub-link" onclick="setCategory('layer1');closeDrawer()"><span class="sub-dot"></span>Layer 1</a>
+          <a class="sub-link" onclick="setCategory('payments');closeDrawer()"><span class="sub-dot"></span>Payments</a>
+          <a class="sub-link" onclick="setCategory('emerging');closeDrawer()"><span class="sub-dot"></span>Emerging</a>
+          <a class="sub-link" onclick="setCategory('infra');closeDrawer()"><span class="sub-dot"></span>Infra</a>
+          <a class="sub-link" onclick="setCategory('meme');closeDrawer()"><span class="sub-dot"></span>Meme</a>
+          <a class="sub-link" onclick="setCategory('ai');closeDrawer()"><span class="sub-dot"></span>AI Tokens</a>
+        </div>
+      </div>
+      <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+      <a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+      <a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+      <a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+      <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+      <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom tabs (mobile) -->
+<div class="bottom-tabs" id="bottom-tabs">
+  <div class="bottom-tabs-inner">
+    <button class="tab-btn" onclick="location.href='index.html'"><span class="tab-icon">📊</span>Dashboard</button>
+    <button class="tab-btn active" onclick="location.href='metrics.html'"><span class="tab-icon">📋</span>Metrics</button>
+    <button class="tab-btn" onclick="location.href='news.html'"><span class="tab-icon">📰</span>News</button>
+    <button class="tab-btn" onclick="location.href='signals.html'"><span class="tab-icon">🎯</span>Signals</button>
+    <button class="tab-btn" onclick="location.href='heatmap.html'"><span class="tab-icon">🔥</span>Heatmap</button>
+  </div>
+</div>
+
 </body>
 </html>
