@@ -630,7 +630,7 @@ html[data-theme="dark"] .cpill.flat { background: rgba(90,122,154,0.12); }
 
 /* ---- News pages (toolbar, news cards, sentiment, cat badges) ---- */
 .news-toolbar {
-  display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
 }
 #news-search {
   font-family: 'IBM Plex Mono', monospace; font-size: 12px;
@@ -642,7 +642,7 @@ html[data-theme="dark"] .cpill.flat { background: rgba(90,122,154,0.12); }
 .sort-group { display: flex; gap: 4px; }
 .sort-label {
   font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--muted); align-self: center; margin-right: 4px;
+  text-transform: uppercase; color: var(--muted); align-self: center;
 }
 .sort-btn {
   font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
