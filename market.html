@@ -91,16 +91,19 @@
     display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px;
   }
   .sh-tile {
-    border: 1px solid var(--border); padding: 16px 12px; min-height: 92px;
+    border: 1px solid var(--border); border-left-width: 3px; padding: 16px 12px; min-height: 92px;
     display: flex; flex-direction: column; justify-content: space-between;
-    text-decoration: none; transition: border-color 0.15s, transform 0.1s;
+    text-decoration: none; color: var(--text); transition: transform 0.1s, filter 0.15s;
   }
-  .sh-tile:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .sh-tile:hover { transform: translateY(-1px); filter: brightness(1.08); }
   .sh-name {
     font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.5px;
     color: var(--text); display: flex; align-items: center; gap: 6px;
   }
-  .sh-pct { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 700; }
+  .sh-pct { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 700; color: var(--text); }
+  .sh-pct.pos  { color: var(--green); }
+  .sh-pct.neg  { color: var(--red); }
+  .sh-pct.flat { color: var(--muted); }
   .sh-meta { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); }
 
   /* ─── Movers tables ─── */
@@ -394,11 +397,12 @@
       const vals = r.stocks.map(s => pctNum(s.change_1w)).filter(v => v !== null);
       const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
       const cls = pctCls(avg);
-      // background intensity scaled by magnitude (cap at ~10%)
+      // Subtle background tint scaled by magnitude; direction shown by the
+      // coloured left border + the green/red number (kept readable in both themes).
       const mag = avg === null ? 0 : Math.min(Math.abs(avg) / 10, 1);
       const rgb = avg === null ? '100,116,139' : avg >= 0 ? '0,230,118' : '255,68,68';
-      const bg = `rgba(${rgb},${(0.05 + mag * 0.22).toFixed(3)})`;
-      return `<a class="sh-tile" href="${r.page}" style="background:${bg};">` +
+      const bg = `rgba(${rgb},${(0.05 + mag * 0.10).toFixed(3)})`;
+      return `<a class="sh-tile" href="${r.page}" style="background:${bg};border-left-color:rgb(${rgb});">` +
         `<span class="sh-name">${r.icon} ${r.label}</span>` +
         `<span class="sh-pct ${cls}">${pctStr(avg)}</span>` +
         `<span class="sh-meta">${vals.length} stocks · avg 1W</span>` +
