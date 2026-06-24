@@ -21,6 +21,11 @@
       --gold:     #b45309;
       --text:     #0f172a;
       --dim:      #1e293b;
+      --muted:    #1e293b;
+      --red:      #dc2626;
+      --amber:    #d97706;
+      --rose:     #e11d48;
+      --indigo:   #4f46e5;
     }
 
     html[data-theme="dark"] {
@@ -34,6 +39,11 @@
       --gold:     #ffd700;
       --text:     #e0eaf5;
       --dim:      #6b8299;
+      --muted:    #5a7a9a;
+      --red:      #ff4444;
+      --amber:    #f59e0b;
+      --rose:     #fb7185;
+      --indigo:   #a78bfa;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -464,7 +474,116 @@
       .pt-name { display: none; }
       .left-rail { width: 72px; }
     }
+
+    /* ═══════════════════════════════════════════════════════════════
+       Market section
+       ═══════════════════════════════════════════════════════════════ */
+    #market-section { padding-bottom: 32px; margin-bottom: 4px; border-bottom: 2px solid var(--border); }
+
+    /* Regime banner */
+    .regime-banner {
+      display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+      padding: 18px 22px; margin-bottom: 24px;
+      border: 1px solid var(--border); border-left-width: 4px;
+    }
+    .regime-banner .regime-title {
+      font-family: 'IBM Plex Mono', monospace; font-size: 18px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .regime-banner .regime-sub {
+      font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted);
+      letter-spacing: 0.5px; margin-left: auto;
+    }
+    .regime-normal     { border-left-color: var(--green); background: rgba(0,230,118,0.06); }
+    .regime-normal     .regime-title { color: var(--green); }
+    .regime-fear       { border-left-color: var(--amber); background: rgba(245,158,11,0.07); }
+    .regime-fear       .regime-title { color: var(--amber); }
+    .regime-correction { border-left-color: var(--red);   background: rgba(255,68,68,0.07); }
+    .regime-correction .regime-title { color: var(--red); }
+
+    /* Metric cards */
+    .market-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 8px; }
+    .market-card { border: 1px solid var(--border); background: var(--surface); padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+    .market-card .mc-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+    .market-card .mc-value { font-family: 'IBM Plex Mono', monospace; font-size: 30px; font-weight: 700; color: var(--text); line-height: 1; }
+    .market-card .mc-changes { display: flex; gap: 14px; flex-wrap: wrap; }
+    .market-card .mc-change { display: flex; flex-direction: column; gap: 3px; }
+    .market-card .mc-change-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+    .mc-pct { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; }
+    .mc-pct.pos  { color: var(--green); }
+    .mc-pct.neg  { color: var(--red); }
+    .mc-pct.flat { color: var(--muted); }
+    .vix-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; align-self: flex-start; }
+    .vix-calm   { background: rgba(0,230,118,0.12); color: var(--green); }
+    .vix-normal { background: rgba(245,158,11,0.12); color: var(--amber); }
+    .vix-fear   { background: rgba(255,68,68,0.12);  color: var(--red); }
+
+    /* Section header */
+    .sec-hdr { display: flex; align-items: center; gap: 14px; margin: 34px 0 12px; }
+    .sec-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+    .sec-hdr-line { flex: 1; height: 1px; background: var(--border); }
+
+    /* TradingView */
+    .tv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .tv-card { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+    .tv-card-hdr { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text); padding: 8px 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+    .tv-card-hdr .tv-sym { color: var(--muted); }
+    .tv-widget { height: 320px; }
+
+    /* Sector heatmap */
+    .sector-heatmap { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+    .sh-tile { border: 1px solid var(--border); border-left-width: 3px; padding: 16px 12px; min-height: 92px; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: var(--text); transition: transform 0.1s, filter 0.15s; }
+    .sh-tile:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .sh-name { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.5px; color: var(--text); display: flex; align-items: center; gap: 6px; }
+    .sh-pct { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 700; color: var(--text); }
+    .sh-pct.pos  { color: var(--green); }
+    .sh-pct.neg  { color: var(--red); }
+    .sh-pct.flat { color: var(--muted); }
+    .sh-meta { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); }
+
+    /* Movers */
+    .movers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .mover-wrap { overflow-x: auto; border: 1px solid var(--border); }
+    .mover-wrap table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .mover-wrap thead { background: var(--surface2); }
+    .mover-wrap th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .mover-wrap th.num { text-align: right; }
+    .mover-wrap td { padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .mover-wrap tr:last-child td { border-bottom: none; }
+    .mover-wrap tbody tr:hover { background: var(--surface); }
+    .mover-wrap td.num { text-align: right; font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
+    .ticker-cell { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
+    .ticker-link { text-decoration: none; color: inherit; }
+    .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
+    .mover-wrap .num.pos { color: var(--green); }
+    .mover-wrap .num.neg { color: var(--red); }
+    .mover-wrap .num.flat { color: var(--muted); }
+    .sec-badge { font-family: 'IBM Plex Mono', monospace; font-size: 9px; padding: 2px 6px; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap; }
+    .sec-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+    .sec-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
+    .sec-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
+    .sec-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
+    .sec-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
+    .sec-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+
+    /* Market responsive */
+    @media (max-width: 900px) {
+      .market-cards, .tv-grid { grid-template-columns: 1fr; }
+      .sector-heatmap { grid-template-columns: repeat(3, 1fr); }
+      .movers-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .sector-heatmap { grid-template-columns: repeat(2, 1fr); }
+      .regime-banner .regime-sub { margin-left: 0; }
+    }
+
+    /* Hub section divider */
+    .hub-section-hdr { display: flex; align-items: center; gap: 14px; margin: 28px 0 20px; }
+    .hub-section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+    .hub-section-hdr-line { flex: 1; height: 1px; background: var(--border); }
   </style>
+<script src="market-data.js"></script>
+<script src="https://s3.tradingview.com/tv.js"></script>
 <!-- Preload all sector data as scripts so index.html works on file:// -->
 <script src="AI/prices-data.js"></script>
 <script>window.__pd_AI = window.PRICES_DATA;</script>
@@ -519,7 +638,7 @@
       <div class="header-brand">
         <div class="header-label">// Market Intelligence</div>
         <h1>Stocks <span>Hub</span></h1>
-        <div class="header-sub">v1 &nbsp;·&nbsp; Select a sector</div>
+        <div class="header-sub">Market · SPY · QQQ · VIX &nbsp;·&nbsp; Sectors · Top 20 Signals</div>
       </div>
 
       <div class="header-blocks">
@@ -579,11 +698,6 @@
         <span class="sector-pill-name">Energy</span>
         <span class="sector-pill-badge">Live</span>
       </a>
-      <a class="sector-pill" href="market.html">
-        <span class="sector-pill-icon">💹</span>
-        <span class="sector-pill-name">Market</span>
-        <span class="sector-pill-badge">Live</span>
-      </a>
       <a class="sector-pill" href="rss.html">
         <span class="sector-pill-icon">📰</span>
         <span class="sector-pill-name">RSS Feed</span>
@@ -592,6 +706,64 @@
     </div>
 
   <main>
+
+    <!-- ═══ Market section ═══ -->
+    <section id="market-section">
+
+      <div class="regime-banner regime-normal" id="regime-banner">
+        <span class="regime-title" id="regime-title">—</span>
+        <span class="regime-sub" id="regime-sub"></span>
+      </div>
+
+      <div class="market-cards">
+        <div class="market-card">
+          <span class="mc-label">SPY · S&amp;P 500</span>
+          <span class="mc-value" id="spy-price">—</span>
+          <div class="mc-changes" id="spy-changes"></div>
+        </div>
+        <div class="market-card">
+          <span class="mc-label">QQQ · Nasdaq 100</span>
+          <span class="mc-value" id="qqq-price">—</span>
+          <div class="mc-changes" id="qqq-changes"></div>
+        </div>
+        <div class="market-card">
+          <span class="mc-label">VIX · Volatility</span>
+          <span class="mc-value" id="vix-level">—</span>
+          <div class="mc-changes" id="vix-changes"></div>
+          <span class="vix-tag" id="vix-tag"></span>
+        </div>
+      </div>
+
+      <div class="sec-hdr"><span class="sec-hdr-label">Live Charts</span><span class="sec-hdr-line"></span></div>
+      <div class="tv-grid">
+        <div class="tv-card"><div class="tv-card-hdr">SPY <span class="tv-sym">AMEX:SPY</span></div><div class="tv-widget" id="tv-spy"></div></div>
+        <div class="tv-card"><div class="tv-card-hdr">QQQ <span class="tv-sym">NASDAQ:QQQ</span></div><div class="tv-widget" id="tv-qqq"></div></div>
+        <div class="tv-card"><div class="tv-card-hdr">VIX <span class="tv-sym">CAPITALCOM:VIX</span></div><div class="tv-widget" id="tv-vix"></div></div>
+      </div>
+
+      <div class="sec-hdr"><span class="sec-hdr-label">Sector Heatmap · 1-Week Average</span><span class="sec-hdr-line"></span></div>
+      <div class="sector-heatmap" id="sector-heatmap"></div>
+
+      <div class="sec-hdr"><span class="sec-hdr-label" id="leaders-hdr">Market Leaders · Top 1W</span><span class="sec-hdr-line"></span></div>
+      <div class="movers-grid">
+        <div>
+          <div class="mover-wrap">
+            <table><thead><tr><th>Ticker</th><th>Sector</th><th class="num">1W</th><th class="num">vs SPY</th></tr></thead>
+            <tbody id="leaders-body"></tbody></table>
+          </div>
+        </div>
+        <div>
+          <div class="mover-wrap">
+            <table><thead><tr><th>Ticker</th><th>Sector</th><th class="num">1W</th><th class="num">vs SPY</th></tr></thead>
+            <tbody id="fallers-body"></tbody></table>
+          </div>
+        </div>
+      </div>
+      <div class="sec-hdr" style="margin-top:6px;"><span class="sec-hdr-label" style="color:var(--muted);font-size:9px;letter-spacing:1px;">Left: top 1-week movers · Right: biggest 1-week fallers · across all 192 stocks</span></div>
+
+    </section>
+    <!-- ═══ Hub section ═══ -->
+    <div class="hub-section-hdr"><span class="hub-section-hdr-label">// Stock Hub</span><span class="hub-section-hdr-line"></span></div>
 
     <div class="top-panel">
       <div class="top-panel-header">
@@ -775,6 +947,144 @@
   </div><!-- /.hub-body -->
 
   <script>
+    /* ═══════════════════════════════════════════════════════════════
+       Market section — SPY / QQQ / VIX / regime / heatmap / movers
+       ═══════════════════════════════════════════════════════════════ */
+    const MARKET_SECTORS = [
+      { key: 'ai',      label: 'AI Infra',   icon: '🤖', cls: 'sec-ai',      page: 'AI/index.html',      path: 'AI/prices-data.js'      },
+      { key: 'biotech', label: 'Biotech',    icon: '🧬', cls: 'sec-biotech', page: 'Biotech/index.html', path: 'Biotech/prices-data.js' },
+      { key: 'defence', label: 'Defence',    icon: '🛡️', cls: 'sec-defence', page: 'Defence/index.html', path: 'Defence/prices-data.js' },
+      { key: 'tech',    label: 'Technology', icon: '💻', cls: 'sec-tech',    page: 'Tech/index.html',    path: 'Tech/prices-data.js'    },
+      { key: 'crypto',  label: 'Crypto',     icon: '₿',  cls: 'sec-crypto',  page: 'Crypto/index.html',  path: 'Crypto/prices-data.js'  },
+      { key: 'energy',  label: 'Energy',     icon: '⚡', cls: 'sec-energy',  page: 'Energy/index.html',  path: 'Energy/prices-data.js'  },
+    ];
+    const REGIMES = {
+      normal:     { cls: 'regime-normal',     title: 'NORMAL · BUY THE DIP' },
+      high_fear:  { cls: 'regime-fear',       title: 'ELEVATED FEAR · HOLD' },
+      correction: { cls: 'regime-correction', title: 'CORRECTION · WAIT' },
+    };
+    function pctNum(s) {
+      if (s === null || s === undefined || s === '') return null;
+      const v = parseFloat(String(s).replace(/[+%\s]/g, ''));
+      return isNaN(v) ? null : v;
+    }
+    function pctCls(v) { return v === null ? 'flat' : v > 0 ? 'pos' : v < 0 ? 'neg' : 'flat'; }
+    function pctStr(v) { return v === null ? '—' : (v > 0 ? '+' : '') + v.toFixed(2) + '%'; }
+
+    function renderMacro(m) {
+      if (!m || !m.spy || m.spy.price == null) {
+        const banner = document.getElementById('regime-banner');
+        banner.className = 'regime-banner';
+        document.getElementById('regime-title').textContent = 'AWAITING MARKET DATA';
+        document.getElementById('regime-title').style.color = 'var(--muted)';
+        document.getElementById('regime-sub').textContent = 'SPY / QQQ / VIX refresh on the next price update (3× daily)';
+        return;
+      }
+      const regime = m.market_regime || 'normal';
+      const r = REGIMES[regime] || REGIMES.normal;
+      const banner = document.getElementById('regime-banner');
+      banner.className = 'regime-banner ' + r.cls;
+      document.getElementById('regime-title').textContent = r.title;
+      const spy1w = m.spy && m.spy.change_1w, qqq1w = m.qqq && m.qqq.change_1w;
+      document.getElementById('regime-sub').textContent =
+        `SPY ${pctStr(spy1w)} 1W · QQQ ${pctStr(qqq1w)} 1W · VIX ${m.vix && m.vix.level != null ? m.vix.level : '—'}`;
+      [['spy', m.spy], ['qqq', m.qqq]].forEach(([id, d]) => {
+        if (!d) return;
+        document.getElementById(id + '-price').textContent = d.price != null ? d.price.toLocaleString('en-US') : '—';
+        document.getElementById(id + '-changes').innerHTML = [['1D', d.change_1d], ['1W', d.change_1w], ['1M', d.change_1m]].map(([lbl, val]) => {
+          const v = pctNum(val);
+          return `<div class="mc-change"><span class="mc-change-label">${lbl}</span><span class="mc-pct ${pctCls(v)}">${pctStr(v)}</span></div>`;
+        }).join('');
+      });
+      if (m.vix) {
+        document.getElementById('vix-level').textContent = m.vix.level != null ? m.vix.level : '—';
+        const v = pctNum(m.vix.change_1d);
+        document.getElementById('vix-changes').innerHTML =
+          `<div class="mc-change"><span class="mc-change-label">1D</span><span class="mc-pct ${pctCls(v)}">${pctStr(v)}</span></div>`;
+        const lvl = m.vix.level, tag = document.getElementById('vix-tag');
+        if (lvl == null)    { tag.textContent = ''; }
+        else if (lvl > 25)  { tag.textContent = 'Elevated Fear'; tag.className = 'vix-tag vix-fear'; }
+        else if (lvl >= 18) { tag.textContent = 'Watchful';      tag.className = 'vix-tag vix-normal'; }
+        else                { tag.textContent = 'Calm';          tag.className = 'vix-tag vix-calm'; }
+      }
+    }
+
+    function isDark() { return document.documentElement.getAttribute('data-theme') === 'dark'; }
+    function buildWidgets() {
+      if (typeof TradingView === 'undefined') return;
+      [{ id: 'tv-spy', sym: 'AMEX:SPY' }, { id: 'tv-qqq', sym: 'NASDAQ:QQQ' }, { id: 'tv-vix', sym: 'CAPITALCOM:VIX' }].forEach((w, i) => {
+        document.getElementById(w.id).innerHTML = '';
+        setTimeout(() => {
+          new TradingView.widget({ container_id: w.id, symbol: w.sym, interval: 'D', range: '3M',
+            timezone: 'Europe/London', theme: isDark() ? 'dark' : 'light', style: '1', locale: 'en',
+            enable_publishing: false, hide_side_toolbar: true, allow_symbol_change: false, save_image: false,
+            height: 320, width: '100%', backgroundColor: isDark() ? '#000000' : '#ffffff',
+            gridColor: 'rgba(0,212,255,0.04)' });
+        }, i * 150);
+      });
+    }
+    window._onThemeChange = buildWidgets;
+
+    async function loadMarketSectors() {
+      const PD_MAP = { ai: 'AI', biotech: 'Biotech', defence: 'Defence', tech: 'Tech', crypto: 'Crypto', energy: 'Energy' };
+      return Promise.all(MARKET_SECTORS.map(async sd => {
+        try {
+          const pre = window['__pd_' + PD_MAP[sd.key]];
+          const data = pre ? pre : JSON.parse(
+            (await fetch(sd.path).then(r => r.text())).match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/)[1]
+          );
+          return { ...sd, stocks: (data.stocks || []).map(s => ({ ...s, sectorLabel: sd.label, sectorCls: sd.cls })), updated: data.updated || null };
+        } catch(e) { return { ...sd, stocks: [], updated: null }; }
+      }));
+    }
+
+    function renderSectorHeatmap(results) {
+      document.getElementById('sector-heatmap').innerHTML = results.map(r => {
+        const vals = r.stocks.map(s => pctNum(s.change_1w)).filter(v => v !== null);
+        const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+        const cls = pctCls(avg), mag = avg === null ? 0 : Math.min(Math.abs(avg) / 10, 1);
+        const rgb = avg === null ? '100,116,139' : avg >= 0 ? '0,230,118' : '255,68,68';
+        return `<a class="sh-tile" href="${r.page}" style="background:rgba(${rgb},${(0.05 + mag * 0.10).toFixed(3)});border-left-color:rgb(${rgb});">` +
+          `<span class="sh-name">${r.icon} ${r.label}</span><span class="sh-pct ${cls}">${pctStr(avg)}</span>` +
+          `<span class="sh-meta">${vals.length} stocks · avg 1W</span></a>`;
+      }).join('');
+    }
+
+    function moverRow(s, spy1w) {
+      const v = pctNum(s.change_1w), vs = v !== null && spy1w !== null ? v - spy1w : null;
+      return `<tr><td class="ticker-cell"><a class="ticker-link" href="https://finance.yahoo.com/quote/${encodeURIComponent(s.ticker)}/" target="_blank" rel="noopener">${s.ticker}</a></td>` +
+        `<td><span class="sec-badge ${s.sectorCls}">${s.sectorLabel}</span></td>` +
+        `<td class="num ${pctCls(v)}">${pctStr(v)}</td><td class="num ${pctCls(vs)}">${vs === null ? '—' : (vs > 0 ? '+' : '') + vs.toFixed(2)}</td></tr>`;
+    }
+
+    function renderMovers(results, macro) {
+      const spy1w = macro && macro.spy ? macro.spy.change_1w : null;
+      const sorted = results.flatMap(r => r.stocks).filter(s => pctNum(s.change_1w) !== null)
+        .sort((a, b) => pctNum(b.change_1w) - pctNum(a.change_1w));
+      const riskOff = macro && macro.market_regime && macro.market_regime !== 'normal';
+      let leaders = sorted.slice(0, 10), hdr = 'Market Leaders · Top 1W';
+      if (riskOff && spy1w !== null && spy1w < 0) {
+        const havens = sorted.filter(s => pctNum(s.change_1w) > 0);
+        if (havens.length) { leaders = havens.slice(0, 10); hdr = 'Safe Havens · Green while market is risk-off'; }
+      }
+      document.getElementById('leaders-hdr').textContent = hdr;
+      const empty = '<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:24px;">No data yet.</td></tr>';
+      document.getElementById('leaders-body').innerHTML = leaders.map(s => moverRow(s, spy1w)).join('') || empty;
+      document.getElementById('fallers-body').innerHTML = sorted.slice(-10).reverse().map(s => moverRow(s, spy1w)).join('') || empty;
+    }
+
+    async function initMarket() {
+      renderMacro(window.MARKET_DATA || null);
+      buildWidgets();
+      const results = await loadMarketSectors();
+      renderSectorHeatmap(results);
+      renderMovers(results, window.MARKET_DATA || null);
+      return results;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       Hub section
+       ═══════════════════════════════════════════════════════════════ */
     const SECTORS = [
       { id: 'AI',      signals: 'AI/signals-local.json',      prices: 'AI/prices-data.js' },
       { id: 'Defence', signals: 'Defence/signals-local.json', prices: 'Defence/prices-data.js' },
@@ -913,16 +1223,16 @@
     }
 
     async function init() {
-      const results = await Promise.all(SECTORS.map(fetchSector));
-      results.forEach(({ id, picks, priceMap }) => renderCardPicks(id, picks, priceMap));
-      renderTop20(results);
+      const [marketResults, hubResults] = await Promise.all([initMarket(), Promise.all(SECTORS.map(fetchSector))]);
+      hubResults.forEach(({ id, picks, priceMap }) => renderCardPicks(id, picks, priceMap));
+      renderTop20(hubResults);
       initTopSort();
-      // Populate header blocks
-      const dates = results.map(r => r.updated).filter(Boolean).sort();
+      const dates = [...hubResults.map(r => r.updated), ...marketResults.map(r => r.updated)].filter(Boolean).sort();
+      if (window.MARKET_DATA && window.MARKET_DATA.updated) dates.push(window.MARKET_DATA.updated);
       const latest = dates[dates.length - 1];
-      const totalStocks = new Set(results.flatMap(r => Object.keys(r.priceMap))).size;
+      const totalStocks = new Set(hubResults.flatMap(r => Object.keys(r.priceMap))).size;
       const el = document.getElementById('hb-universe');
-      if (el) el.innerHTML = `<span class="accent">${totalStocks}</span> stocks · <span class="accent">${results.length}</span> sectors`;
+      if (el) el.innerHTML = `<span class="accent">${totalStocks}</span> stocks · <span class="accent">${hubResults.length}</span> sectors`;
       const elUp = document.getElementById('hb-updated');
       if (elUp && latest) elUp.textContent = latest;
     }
