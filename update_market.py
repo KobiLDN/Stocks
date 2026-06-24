@@ -75,11 +75,14 @@ def get_index(yahoo_symbol):
     except Exception:
         pass
 
+    def rnd(v):
+        return round(v, 2) if v is not None else None
+
     return {
         "price":     round(price, 2) if price is not None else None,
-        "change_1d": fmt_pct(price, prev_close),
-        "change_1w": fmt_pct(price, price_1w),
-        "change_1m": fmt_pct(price, price_1m),
+        "change_1d": rnd(pct_val(price, prev_close)),
+        "change_1w": rnd(pct_val(price, price_1w)),
+        "change_1m": rnd(pct_val(price, price_1m)),
         "_v1w":      pct_val(price, price_1w),
     }
 
@@ -104,7 +107,8 @@ def main():
         try:
             print(f"  {key.upper():<4} ({sym})... ", end="", flush=True)
             data[key] = get_index(sym)
-            print(f"{data[key]['price']}  1d {data[key]['change_1d']}  1w {data[key]['change_1w']}")
+            d = data[key]
+            print(f"{d['price']}  1d {d['change_1d']}%  1w {d['change_1w']}%")
         except Exception as e:
             print(f"ERROR: {e}")
             errors.append(key)
@@ -118,8 +122,8 @@ def main():
         "updated": datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M"),
         "spy": {k: data["spy"][k] for k in ("price", "change_1d", "change_1w", "change_1m")},
         "qqq": {k: data["qqq"][k] for k in ("price", "change_1d", "change_1w", "change_1m")},
-        "vix": {"level": vix["price"], "change_1d": vix["change_1d"]},
-        "regime": regime,
+        "vix": {"level": vix["price"], "change_1d": vix["change_1d"], "regime": regime},
+        "market_regime": regime,
     }
 
     with open(JSON_FILE, "w", encoding="utf-8") as f:
