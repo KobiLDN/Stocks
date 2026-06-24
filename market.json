@@ -1,20 +1,20 @@
 {
-  "updated": "2026-06-24 20:37",
+  "updated": "2026-06-24 22:59",
   "spy": {
-    "price": 731.69,
-    "change_1d": "-0.45%",
-    "change_1w": "-2.23%",
-    "change_1m": "-2.27%"
+    "price": 733.24,
+    "change_1d": "-0.24%",
+    "change_1w": "-2.03%",
+    "change_1m": "-2.06%"
   },
   "qqq": {
-    "price": 708.24,
-    "change_1d": "-1.09%",
-    "change_1w": "-2.86%",
-    "change_1m": "-2.91%"
+    "price": 710.62,
+    "change_1d": "-0.76%",
+    "change_1w": "-2.53%",
+    "change_1m": "-2.59%"
   },
   "vix": {
-    "level": 20.03,
-    "change_1d": "+2.82%"
+    "level": 18.63,
+    "change_1d": "-4.36%"
   },
   "regime": "normal"
 }
