@@ -4,7 +4,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 
 **Live: [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/)** &nbsp;·&nbsp; **Dev preview: [dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev/)**
 
-## Sectors
+## Sectors & Pages
 
 | Sector | Stocks | Status | URL |
 |---|---|---|---|
@@ -14,16 +14,30 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 | Technology | 31 (6 categories) | Live | [stocks-4qw.pages.dev/Tech/](https://stocks-4qw.pages.dev/Tech/) |
 | Crypto | 34 (7 categories) | Live | [stocks-4qw.pages.dev/Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
 | Energy | 20 (5 categories) | Live | [stocks-4qw.pages.dev/Energy/](https://stocks-4qw.pages.dev/Energy/) |
+| All Sectors | 192 stocks combined | Live | [stocks-4qw.pages.dev/All/](https://stocks-4qw.pages.dev/All/) |
+
+## Top-level pages
+
+| Page | Description | URL |
+|---|---|---|
+| Hub | Sector cards + Top 20 signals panel | [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/) |
+| Market | Regime banner, SPY/QQQ/VIX cards + charts, sector heatmap, Leaders/Fallers | [stocks-4qw.pages.dev/market](https://stocks-4qw.pages.dev/market) |
+| RSS Feed | Cross-sector news feed | [stocks-4qw.pages.dev/rss](https://stocks-4qw.pages.dev/rss) |
+| Exports | Daily JSON/CSV snapshots | [stocks-4qw.pages.dev/exports/](https://stocks-4qw.pages.dev/exports/) |
 
 ## Repo structure
 
 ```
 ├── index.html              ← hub landing page (sector cards + top 20 signals panel)
+├── market.html             ← Market overview page (regime banner, SPY/QQQ/VIX, heatmap)
+├── rss.html                ← cross-sector RSS news feed page
 ├── shared.css              ← shared stylesheet loaded by all sector pages
 ├── shared.js               ← shared JS (toggleTheme, buildTape)
 ├── momentum_screener.py    ← cross-sector momentum screener (1Y + YTD thresholds)
+├── update_market.py        ← fetches SPY/QQQ/VIX via yfinance → market-data.js + market.json
 ├── generate_export.py      ← builds daily JSON/CSV snapshot across all sectors
-├── rss.html                ← cross-sector RSS news feed page
+├── market-data.js          ← generated market data (SPY/QQQ/VIX, regime, timestamps)
+├── market.json             ← same data as JSON (consumed by generate_export.py macro block)
 ├── rss-data.js             ← generated RSS feed data
 ├── exports/                ← dated market snapshots (JSON + CSV); served via Pages
 ├── All/                    ← All Sectors suite (192 stocks; aggregates all 6 sectors)
