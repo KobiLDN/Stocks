@@ -107,13 +107,23 @@ jobs:
         working-directory: Energy
         run: python Energy_update_prices.py
 
+      # Macro indicators (SPY/QQQ/VIX) for the Market page — always run on a
+      # full refresh; harmless on single-sector runs (uses the AI deps for yfinance).
+      - name: Install deps (Market)
+        if: github.event_name == 'schedule' || inputs.sector == 'all'
+        run: pip install yfinance
+
+      - name: Run market updater (SPY/QQQ/VIX)
+        if: github.event_name == 'schedule' || inputs.sector == 'all'
+        run: python update_market.py
+
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           SECTOR="${{ inputs.sector }}"
           LABEL="${SECTOR:-all sectors}"
-          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json Energy/prices.json Energy/prices-data.js; then
+          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json Energy/prices.json Energy/prices-data.js market.json market-data.js; then
             echo "No price changes."
           else
             git add AI/index.html AI/prices.json AI/prices-data.js
@@ -122,6 +132,7 @@ jobs:
             git add Tech/prices.json Tech/prices-data.js
             git add Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json
             git add Energy/prices.json Energy/prices-data.js
+            git add market.json market-data.js
             git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
               git fetch origin main

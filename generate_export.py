@@ -258,12 +258,23 @@ else:
     out_csv  = os.path.join(BASE, "exports", f"{date_str}.csv")
     update_manifest = True
 
+# ── Macro block (SPY / QQQ / VIX / regime) ────────────────────────────────────
+# Produced by update_market.py during the price workflow. Optional — null if the
+# file is missing so the export never fails on its absence.
+def read_macro():
+    try:
+        with open(os.path.join(BASE, "market.json"), encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
 # ── Write JSON ────────────────────────────────────────────────────────────────
 payload = {
     "generated":        gen_str,
     "total":            len(all_stocks),
     "has_portfolio":    t212_data is not None,
     "sectors":          meta,
+    "macro":            read_macro(),
     "momentum_picks":   compute_export_momentum(all_stocks),
     "stocks":           all_stocks,
 }
