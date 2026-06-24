@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-22 13:50",
+  "updated": "2026-06-24 11:23",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.975,
+      "rationale": "+97.67% YTD, +29.70% 1M, strong momentum driven by unanimous FDA panel backing for mFlusiva (mRNA flu vaccine) [simplywall.st](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-mrna/moderna/news/moderna-mrna-is-up-101-after-unanimous-fda-panel-backing-for). High short interest of 17.82% and negative news sentiment (-0.182) temper conviction, but tidal regulatory catalyst supports sustained upside.",
+      "drivers": [
+        "+97.67% YTD",
+        "+29.70% 1M momentum",
+        "Unanimous FDA panel endorsement for mFlusiva",
+        "Short interest 17.82%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTLA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+65.58% YTD, +20.94% 1M, with positive Phase III data on lonvoguran ziclermeran for HAE meeting key endpoints leading to a 29% weekly surge [genengnews.com](https://www.genengnews.com/topics/translational-medicine/stockwatch-positive-phase-iii-data-sells-investors-on-intellia/). High short interest (43.78%) signals squeezed potential; news sentiment strong at 0.45.",
+      "drivers": [
+        "+65.58% YTD",
+        "+20.94% 1M",
+        "Phase III HAE data hit all secondary endpoints",
+        "News sentiment 0.45"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NTRA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+16.85% 1M, +8.20% 1W, strong momentum in MRD testing; analyst score 1.52 (buy) with low short interest of 2.6%. Balanced fundamental profile with no P/E (pre-revenue) but market cap \u00a325.5B reflects robust growth expectations.",
+      "drivers": [
+        "+16.85% 1M",
+        "Analyst score 1.52 (buy)",
+        "Low short interest 2.6%",
+        "\u00a325.5B market cap"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+7.97% 1W, +3.92% 1D after UK MHRA approved Wegovy oral pill for weight management, making UK the first European country to clear the formulation [tikr.com](https://www.tikr.com/blog/novo-nordisk-stock-jumped-6-on-uk-pill-approval-heres-where-shares-could-go-in-2026). P/E 11.29, dividend yield 3.80%, news sentiment 0.209.",
+      "drivers": [
+        "+7.97% 1W",
+        "UK MHRA approved oral Wegovy pill",
+        "P/E 11.29, dividend 3.80%",
+        "News sentiment 0.209"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BEAM",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "+112% 1Y, +22.33% YTD, +11.45% 1M; FDA cleared IND for BEAM-304 in phenylketonuria. Analyst score 1.29 (strong_buy), but extreme short interest of 32.31% and beta 2.198 add risk.",
+      "drivers": [
+        "+112% 1Y",
+        "FDA IND clearance for BEAM-304",
+        "Analyst score 1.29 (strong_buy)",
+        "Short interest 32.31%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RCUS",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "+216% 1Y, +21.00% YTD, +16.78% 1M, +16.54% 1W; strong buy analyst rating (score 1.46) with no earnings (P/E null) but strong momentum in oncology pipeline.",
+      "drivers": [
+        "+216% 1Y",
+        "+16.78% 1M",
+        "Analyst score 1.46 (strong_buy)",
+        "Momentum across all timeframes"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+73% 1Y, +22.76% YTD, +13.56% 1M; attractive entry after adding Eli Lilly R&D chief to board. P/E 30.04, beta 1.49, but news sentiment negative (-0.078). Strong genomics leader with recurring revenue base.",
+      "drivers": [
+        "+73% 1Y",
+        "+13.56% 1M",
+        "P/E 30.04",
+        "Strategic board addition"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+53% 1Y, +7.52% 1M, P/E 14.75 is compelling for an oncology biotech; news sentiment high at 0.371 with low beta 0.79. Analyst score 2.33 (buy) supports continued upside.",
+      "drivers": [
+        "+53% 1Y",
+        "P/E 14.75",
+        "News sentiment 0.371",
+        "Beta 0.79"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+7.45% 1M, +3.99% 1W, analyst consensus strong buy (score 1.61) with positive news sentiment 0.275. P/E 27.78 but zero dividend; pipeline drivers include cystic fibrosis leadership and pain therapy expansion.",
+      "drivers": [
+        "+7.45% 1M",
+        "Analyst score 1.61 (buy)",
+        "News sentiment 0.275",
+        "Cystic fibrosis dominance"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+6.85% 1M, +1.53% 1W; positive Phase 2 data for VOXZOGO in hypochondroplasia treatment. News sentiment 0.353, analyst score 1.69 (buy), P/E 40.65 reflects orphan drug premium.",
+      "drivers": [
+        "+6.85% 1M",
+        "Positive Phase 2 VOXZOGO data",
+        "News sentiment 0.353",
+        "Analyst score 1.69 (buy)"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRNA",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "buy analyst consensus",
         "positive news sentiment 0.242",
         "P/E 39.4"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "YTD +107%, 1M +39.9%, 1W +28.9% \u2014 FDA advisory committee voted 9\u20130 in favor of its flu vaccine mRNA-1010, with a PDUFA date of Aug 5, 2026. Huge near-term binary catalyst and the best weekly gain in over 4 years.",
-      "drivers": [
-        "YTD +107% return",
-        "1W +28.9% surge",
-        "FDA advisory 9-0 for flu vaccine",
-        "PDUFA Aug 5 catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTLA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +70%, 1M +31.2%, 1W +26.9% \u2014 Phase 3 HAELO data for lonvo-z showed large drops in HAE attacks; rolling BLA with FDA underway targeting 1H 2027 launch. Strong analyst buy consensus (score 2.14).",
-      "drivers": [
-        "YTD +70.1% return",
-        "Phase 3 HAE data strong",
-        "rolling BLA started",
-        "1H 2027 launch target"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "YTD +25.8%, 1M +29.7%, 1W +16.1% \u2014 FDA cleared IND for BEAM-304 in PKU; preclinical data show normalized plasma Phe levels in mouse models. Strongest analyst score of 1.29 (strong_buy) in the universe.",
-      "drivers": [
-        "FDA IND clearance for PKU",
-        "analyst score 1.29",
-        "preclinical efficacy data",
-        "1M +29.7% momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NTRA",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "1M +18%, 1W +5.6%, YTD +1.1% \u2014 Strategic collaboration with CytoDyn for ctDNA-guided colorectal cancer trials. Analyst score 1.52 (buy) with low short interest of 2.6%. Strong underlying genomics revenue growth.",
-      "drivers": [
-        "1M +18.0% momentum",
-        "analyst score 1.52",
-        "low short interest 2.6%",
-        "ctDNA mCRC collaboration"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "YTD +0.6%, 1M +13.7%, 1W +7.7% \u2014 Analyst consensus buy (score 1.96) with positive news sentiment 0.291. Gene-editing leader with Casgevy commercial trajectory and pipeline breadth offering risk/reward.",
-      "drivers": [
-        "1M +13.7% momentum",
-        "analyst consensus buy",
-        "positive news sentiment 0.29",
-        "gene-editing platform leader"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "1D +10.6%, 1W +8.5%, 1M +14.9% \u2014 Strongest analyst score in universe at 1.0 (strong_buy). Rare-disease biotech advancing sutacimig Phase III plans post-IPO, with meaningful near-term upside potential on pipeline catalysts.",
-      "drivers": [
-        "analyst score 1.0 (strong_buy)",
-        "1D +10.6% surge",
-        "1M +14.9% gain",
-        "post-IPO pipeline push"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.64,
-      "rationale": "YTD +19.1%, 1M +6.7%, P/E 17.2 \u2014 CABINET trial win extends CABOMETYX label. Analyst consensus buy (score 2.16) with positive news sentiment 0.252. Profitable oncology compounder with manageable valuation.",
-      "drivers": [
-        "YTD +19.1% return",
-        "P/E 17.2 profitable",
-        "CABINET label expansion",
-        "analyst consensus buy"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "YTD +10.6%, 1Y +55%, P/E 21.2 \u2014 Beneficiary of sector rotation with positive news sentiment 0.244. $1B RayThera buyout strengthens immunology pipeline. Low beta 0.18 offers defensive profile.",
-      "drivers": [
-        "1Y +55% return",
-        "RayThera immunology buyout",
-        "low beta 0.18",
-        "positive news sentiment 0.24"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +20.5%, 1M +14.3%, P/E 29.4 \u2014 Strong genomics franchise with 1M momentum despite short-term pullback. Analyst consensus buy (score 2.32) reflecting dominance in sequencing market.",
-      "drivers": [
-        "YTD +20.5% return",
-        "1M +14.3% momentum",
-        "P/E 29.4 reasonable",
-        "sequencing market leader"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SRPT",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1W +16.9%, 1D +3.7% \u2014 Elevidys stabilization signs noted by RBC; siRNA pipeline gaining importance. Positive news sentiment 0.4, high conviction in rare-disease DMD franchise recovery.",
-      "drivers": [
-        "1W +16.9% recovery",
-        "positive news sentiment 0.4",
-        "Elevidys stabilization",
-        "siRNA pipeline momentum"
       ]
     }
   ]
