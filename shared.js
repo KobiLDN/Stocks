@@ -110,8 +110,12 @@ function buildNav() {
   const activeKey = isHub ? 'hub' : isRSS ? 'rss' : inAll ? 'all' : sector;
 
   // Build left rail HTML (identical for all pages, only active pill differs)
+  // When on a sector sub-page, sector/All pills preserve the current page type
+  const onSubPage = (sector || inAll) && file !== 'index.html';
   const railHTML = _RAIL_ITEMS.map(p => {
-    const href    = root + p.path;
+    const href = onSubPage && (SECTORS.includes(p.key) || p.key === 'all')
+      ? root + (p.key === 'all' ? 'All' : p.key) + '/' + file
+      : root + p.path;
     const active  = p.key === activeKey;
     return `<a class="sector-pill${active ? ' active' : ''}" href="${href}">` +
            `<span class="sector-pill-icon">${p.icon}</span>` +
