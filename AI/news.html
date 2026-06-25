@@ -1,14 +1,15 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment analysis across 48 AI infrastructure stocks. Filter by category and sort by recency or sentiment score.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Latest news and sentiment analysis across 48 AI infrastructure stocks. Filter by category and sort by recency or sentiment score." name="description"/>
 <title>AI Infrastructure — News</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../shared.css">
-<script src="../shared.js" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../shared.css" rel="stylesheet"/>
+<script defer="" src="../shared.js"></script>
 <style>
   .cat-memory        { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
   .cat-nuclear-ops   { background: rgba(255,107,53,0.1);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
@@ -65,14 +66,6 @@
   .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
   .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
   .sub-link.active .sub-dot { opacity: 1; }
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -112,7 +105,7 @@
   .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
   .tab-btn:hover  { color: var(--accent); }
   .tab-icon { font-size: 16px; line-height: 1; }
-  .news-toolbar { padding-left: 16px; }
+  .news-toolbar { padding: 8px 14px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 0; }
   .news-toolbar .row-count { margin-left: 0; }
   @media (max-width: 900px) {
     .nav-panel { width: 52px; }
@@ -128,7 +121,6 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
     #news-search, .news-toolbar .row-count { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
@@ -142,11 +134,9 @@
 </head>
 <body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
-
 <!-- Panel 1: Sector switcher (full height) -->
 <div class="left-rail">
 </div>
-
 <!-- Panel 2: Nav panel -->
 <div class="nav-panel">
 <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
@@ -177,7 +167,6 @@
 <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
 <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
 </div>
-
 <!-- Panel 3: Right side (header + content) -->
 <div class="right-side">
 <header>
@@ -188,16 +177,11 @@
 <h1>AI <span>News</span></h1>
 <div class="header-sub">Latest headlines across all tracked stocks · sentiment scored locally (VADER)</div>
 </div>
-<div class="header-blocks">
-<div class="header-block">
-<div class="header-block-label">Prices Last Updated</div>
-<div class="header-block-value" id="data-bar-ts">—</div>
-</div>
-</div>
+
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-<div class="news-toolbar">
-<input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
+<div class="filter-bar" id="filter-bar"></div><div class="news-toolbar">
+<input id="news-search" oninput="filterNews(this.value)" placeholder="Search ticker, company or headline..." type="text"/>
 <span class="row-count">Showing <span id="news-count">—</span> headlines</span>
 <span class="sort-label">Sort</span>
 <div class="sort-group" id="sort-group">
@@ -215,29 +199,10 @@
 </div>
 </header>
 
-<div class="mobile-chips">
-<button class="chip active" data-filter="all" onclick="setCategory('all')">All</button>
-<button class="chip" data-filter="memory" onclick="setCategory('memory')">Memory</button>
-<button class="chip" data-filter="nuclear-ops" onclick="setCategory('nuclear-ops')">Nuclear</button>
-<button class="chip" data-filter="smr" onclick="setCategory('smr')">SMR</button>
-<button class="chip" data-filter="uranium" onclick="setCategory('uranium')">Uranium</button>
-<button class="chip" data-filter="power-infra" onclick="setCategory('power-infra')">Power</button>
-<button class="chip" data-filter="dc-operators" onclick="setCategory('dc-operators')">Data Centres</button>
-<button class="chip" data-filter="hyperscalers" onclick="setCategory('hyperscalers')">Hyperscalers</button>
-<button class="chip" data-filter="ai-compute" onclick="setCategory('ai-compute')">AI Compute</button>
-<button class="chip" data-filter="fibre-optical" onclick="setCategory('fibre-optical')">Fibre/Optical</button>
-<button class="chip" data-filter="dsp-semi" onclick="setCategory('dsp-semi')">DSP/Semi</button>
-<button class="chip" data-filter="test-equip" onclick="setCategory('test-equip')">Test Equip</button>
-<button class="chip" data-filter="materials" onclick="setCategory('materials')">Materials</button>
-</div>
-
 <div class="page-body">
 <div class="page-main">
 <div class="container">
-
-  <div class="news-feed" id="news-feed"></div>
-
-
+<div class="news-feed" id="news-feed"></div>
 <script src="prices-data.js"></script>
 <script>
   /* ---- DATA ---- */
@@ -503,7 +468,6 @@
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
 </div><!-- /.right-side -->
-
 <!-- Drawer overlay (mobile) -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
 <div class="drawer">
@@ -540,7 +504,6 @@
 </div>
 </div>
 </div>
-
 <!-- Bottom tab bar (mobile) -->
 <div class="bottom-tabs">
 <div class="bottom-tabs-inner">
