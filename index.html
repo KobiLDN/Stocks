@@ -732,6 +732,7 @@
   <div class="right-side">
   <div class="header-sticky">
     <header>
+      <button aria-label="Menu" class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
       <div class="header-brand">
         <div class="header-label">// Market Intelligence</div>
         <h1>Stocks <span>Hub</span></h1>
@@ -749,7 +750,6 @@
         </div>
       </div>
 
-      <button aria-label="Menu" class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
       <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="flex-shrink:0;">☾</button>
     </header>
   </div>
@@ -1056,9 +1056,13 @@
   <div class="bottom-tabs">
     <div class="bottom-tabs-inner">
       <button class="tab-btn active" onclick="window.location='index.html'"><span class="tab-icon">⊞</span>Hub</button>
-      <button class="tab-btn" onclick="document.getElementById('market-section').scrollIntoView({behavior:'smooth'}); closeDrawer();"><span class="tab-icon">💹</span>Market</button>
+      <button class="tab-btn" onclick="document.getElementById('market-section').scrollIntoView({behavior:'smooth'})"><span class="tab-icon">💹</span>Market</button>
       <button class="tab-btn" onclick="window.location='All/index.html'"><span class="tab-icon">🌐</span>All</button>
-      <button class="tab-btn" onclick="window.location='rss.html'"><span class="tab-icon">📰</span>RSS</button>
+      <button class="tab-btn" onclick="window.location='AI/index.html'"><span class="tab-icon">🤖</span>AI</button>
+      <button class="tab-btn" onclick="window.location='Biotech/index.html'"><span class="tab-icon">🧬</span>Biotech</button>
+      <button class="tab-btn" onclick="window.location='Defence/index.html'"><span class="tab-icon">🛡️</span>Defence</button>
+      <button class="tab-btn" onclick="window.location='Tech/index.html'"><span class="tab-icon">💻</span>Tech</button>
+      <button class="tab-btn" onclick="window.location='Crypto/index.html'"><span class="tab-icon">₿</span>Crypto</button>
     </div>
   </div>
 
