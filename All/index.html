@@ -415,14 +415,9 @@
 <header>
 <div class="header-inner">
 <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
-<div class="header-left">
-<div class="header-label">// Market Intelligence</div>
-<h1>All <span>Sectors</span></h1>
-<div class="header-sub"><span id="all-stock-count">—</span> stocks &nbsp;·&nbsp; v1<span id="last-updated-label"></span></div>
-</div>
+<div class="header-left"></div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-
 <div class="filter-bar">
 <button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
 <button class="filter-btn" data-filter="ai" data-tooltip="Semiconductors, nuclear power, data centres and AI infrastructure — 48 stocks" onclick="filterTable('ai', this)">AI Infra</button>
@@ -433,9 +428,7 @@
 <button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
 </div>
 </header>
-
 <div class="page-body">
-
 <div class="page-main">
 <div class="container">
 <div class="search-count-bar">
@@ -463,7 +456,6 @@
 </table>
 </div>
 </div>
-
 <script>
 const NOTES = {
   'SNDK': 'NAND pure-play. AI storage supercycle. Spun off WDC 2025.',
@@ -730,7 +722,6 @@ window.addEventListener('DOMContentLoaded', () => {
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
 </div><!-- /.right-side -->
-
 <div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
 <div class="drawer" onclick="event.stopPropagation()">
 <div class="left-rail">
@@ -746,7 +737,6 @@ window.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 </div>
-
 <div class="bottom-tabs">
 <div class="bottom-tabs-inner">
 </div>

@@ -77,7 +77,7 @@ const _RAIL_ITEMS = [
   { key: 'hub',     label: 'Stock Hub',   icon: '⊞',  path: 'index.html',         badge: null },
   { key: 'rss',     label: 'RSS Feed',    icon: '📰', path: 'rss.html',            badge: null },
   { key: 'all',     label: 'All Sectors', icon: '🌐', path: 'All/index.html',      badge: null },
-  { key: 'AI',      label: 'AI Infra',    icon: '🤖', path: 'AI/index.html',       badge: null },
+  { key: 'AI',      label: 'AI',           icon: '🤖', path: 'AI/index.html',       badge: null },
   { key: 'Biotech', label: 'Biotech',     icon: '🧬', path: 'Biotech/index.html',  badge: null },
   { key: 'Crypto',  label: 'Crypto',      icon: '₿',  path: 'Crypto/index.html',   badge: null },
   { key: 'Defence', label: 'Defence',     icon: '🛡️', path: 'Defence/index.html',  badge: null },
@@ -179,6 +179,38 @@ function buildNav() {
   if (tabsInner && tabsHTML) tabsInner.innerHTML = tabsHTML;
 }
 
+// ── Dashboard content header ──────────────────────────────────────────────
+function buildDashboardHeader() {
+  const parts = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
+  const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
+  const sector = SECTORS.find(s => parts[0] === s) || null;
+  const inAll  = parts[0] === 'All';
+  const file   = parts[parts.length - 1] || 'index.html';
+  if (file !== 'index.html' && file !== '' || (!sector && !inAll)) return;
+
+  const railItem = _RAIL_ITEMS.find(r => r.key === (sector || 'all'));
+  const name     = railItem ? railItem.label : (sector || 'All');
+  const words    = name.split(' ');
+  const titleHTML = words.length > 1
+    ? words[0] + ' <span>' + words.slice(1).join(' ') + '</span>'
+    : '<span>' + name + '</span>';
+
+  const pd      = window.PRICES_DATA || window['__pd_' + sector] || {};
+  const count   = (pd.stocks || []).length || '—';
+  const updated = pd.updated || '—';
+
+  const headerLeft = document.querySelector('.header-left');
+  if (headerLeft) {
+    headerLeft.innerHTML =
+      '<div class="header-label">// Market Intelligence</div>' +
+      '<h1>' + titleHTML + '</h1>' +
+      '<div class="header-sub">' + count + ' stocks · Last updated ' + updated + '</div>';
+  }
+
+  const headerBlocks = document.querySelector('.header-blocks');
+  if (headerBlocks) headerBlocks.remove();
+}
+
 // ── Initialise on DOMContentLoaded ───────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Set correct theme icon
@@ -190,6 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inject shared left rail + bottom tabs
   buildNav();
+
+  // Inject dashboard content header (sector/All dashboard pages only)
+  buildDashboardHeader();
 
   // Inject data bar below nav
   buildDataBar();

@@ -573,11 +573,9 @@
 </head>
 <body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
-
 <!-- Panel 1: Sector switcher (full height) -->
 <div class="left-rail">
 </div>
-
 <!-- Panel 2: Nav panel with accordion category filter -->
 <div class="nav-panel">
 <div class="nav-item open" id="ni-dashboard">
@@ -608,31 +606,19 @@
 <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
 <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
 </div>
-
 <!-- Panel 3: Right side (header + content) -->
 <div class="right-side">
 <header>
 <div class="header-inner">
 <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
-<div class="header-left">
-<div class="header-label">// Market Intelligence</div>
-<h1>AI <span>Infrastructure</span></h1>
-<div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
-</div>
+<div class="header-left"></div>
 <div class="header-search">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
-<div class="header-blocks">
-<div class="header-block">
-<div class="header-block-label">Prices Last Updated</div>
-<div class="header-block-value" id="data-bar-ts">—</div>
-</div>
-</div>
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-</div>
-</header>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button></div>
 
+</header></div>
 <div class="mobile-chips">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
 <button class="chip" data-filter="memory" onclick="filterChip('memory',this)">Memory</button>
@@ -648,7 +634,6 @@
 <button class="chip" data-filter="test-equip" onclick="filterChip('test-equip',this)">Test Equip</button>
 <button class="chip" data-filter="materials" onclick="filterChip('materials',this)">Materials</button>
 </div>
-
 <div class="page-body">
 <div class="page-main">
 <div class="container">
@@ -921,9 +906,8 @@ function searchTable() { applyFilters(); }
 </script>
 </div><!-- /.container -->
 </div><!-- /.page-main -->
-</div><!-- /.page-body -->
-</div><!-- /.right-side -->
-
+<!-- /.page-body -->
+<!-- /.right-side -->
 <!-- Drawer overlay (mobile) -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
 <div class="drawer">
@@ -960,7 +944,6 @@ function searchTable() { applyFilters(); }
 </div>
 </div>
 </div>
-
 <!-- Bottom tab bar (mobile) -->
 <div class="bottom-tabs">
 <div class="bottom-tabs-inner">
