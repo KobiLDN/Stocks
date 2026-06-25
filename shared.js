@@ -75,14 +75,14 @@ function buildStickyTop() {
 // ── Shared nav: left rail + bottom tabs ───────────────────────────────────────
 const _RAIL_ITEMS = [
   { key: 'hub',     label: 'Stock Hub',   icon: '⊞',  path: 'index.html',         badge: null },
-  { key: 'all',     label: 'All Sectors', icon: '🌐', path: 'All/index.html',      badge: 'Live' },
-  { key: 'AI',      label: 'AI Infra',    icon: '🤖', path: 'AI/index.html',       badge: 'Live' },
-  { key: 'Biotech', label: 'Biotech',     icon: '🧬', path: 'Biotech/index.html',  badge: 'Live' },
-  { key: 'Defence', label: 'Defence',     icon: '🛡️', path: 'Defence/index.html',  badge: 'Live' },
-  { key: 'Tech',    label: 'Technology',  icon: '💻', path: 'Tech/index.html',     badge: 'Live' },
-  { key: 'Crypto',  label: 'Crypto',      icon: '₿',  path: 'Crypto/index.html',   badge: 'Live' },
-  { key: 'Energy',  label: 'Energy',      icon: '⚡', path: 'Energy/index.html',   badge: 'Live' },
-  { key: 'rss',     label: 'RSS Feed',    icon: '📰', path: 'rss.html',            badge: 'Live' },
+  { key: 'all',     label: 'All Sectors', icon: '🌐', path: 'All/index.html',      badge: null },
+  { key: 'rss',     label: 'RSS Feed',    icon: '📰', path: 'rss.html',            badge: null },
+  { key: 'AI',      label: 'AI Infra',    icon: '🤖', path: 'AI/index.html',       badge: null },
+  { key: 'Biotech', label: 'Biotech',     icon: '🧬', path: 'Biotech/index.html',  badge: null },
+  { key: 'Crypto',  label: 'Crypto',      icon: '₿',  path: 'Crypto/index.html',   badge: null },
+  { key: 'Defence', label: 'Defence',     icon: '🛡️', path: 'Defence/index.html',  badge: null },
+  { key: 'Energy',  label: 'Energy',      icon: '⚡', path: 'Energy/index.html',   badge: null },
+  { key: 'Tech',    label: 'Technology',  icon: '💻', path: 'Tech/index.html',     badge: null },
 ];
 
 const _SECTOR_PAGES = [
