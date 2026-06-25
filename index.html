@@ -471,7 +471,53 @@
       .card-grid { grid-template-columns: 1fr; }
       .pt-name { display: none; }
       .left-rail { width: 72px; }
+      body { padding-bottom: 56px; }
+      .left-rail { display: none; }
+      .hamburger { display: flex; }
+      .bottom-tabs { display: block; }
+      .header-blocks { display: none; }
+      main { padding: 12px 14px; }
     }
+
+    /* ── Mobile nav: hamburger, drawer, bottom tabs ── */
+    .hamburger {
+      display: none; width: 44px; height: 44px; border: 1px solid var(--border);
+      background: none; cursor: pointer; font-size: 20px;
+      flex-shrink: 0; color: var(--text);
+    }
+    .drawer-overlay {
+      display: none; position: fixed; inset: 0; z-index: 300;
+      background: rgba(0,0,0,0.4);
+    }
+    .drawer-overlay.open { display: block; }
+    .drawer {
+      position: fixed; top: 36px; left: 0; bottom: 56px; width: 260px;
+      background: var(--bg); border-right: 1px solid var(--accent);
+      display: flex; overflow: hidden; z-index: 301;
+    }
+    .drawer .left-rail {
+      border-right: 1px solid var(--border); overflow-y: auto;
+      flex-shrink: 0;
+    }
+
+    .bottom-tabs {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 250; background: var(--bg); border-top: 1px solid var(--accent);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .bottom-tabs-inner {
+      display: flex; justify-content: space-around; align-items: stretch;
+    }
+    .tab-btn {
+      flex: 1; display: flex; flex-direction: column; align-items: center;
+      gap: 2px; padding: 8px 4px 6px; background: none; border: none;
+      cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
+      font-family: 'IBM Plex Mono', monospace; font-size: 8px;
+      letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted);
+    }
+    .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
+    .tab-btn:hover { color: var(--accent); }
+    .tab-icon { font-size: 16px; line-height: 1; }
 
     /* ═══════════════════════════════════════════════════════════════
        Market section
@@ -703,6 +749,7 @@
         </div>
       </div>
 
+      <button aria-label="Menu" class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
       <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="flex-shrink:0;">☾</button>
     </header>
   </div>
@@ -948,7 +995,78 @@
 
   </div><!-- /.right-side -->
 
+  <!-- Drawer overlay (mobile) -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+    <div class="drawer">
+      <div class="left-rail">
+        <a class="sector-pill active" href="index.html">
+          <span class="sector-pill-icon">⊞</span>
+          <span class="sector-pill-name">Stock Hub</span>
+        </a>
+        <a class="sector-pill" href="All/index.html">
+          <span class="sector-pill-icon">🌐</span>
+          <span class="sector-pill-name">All Sectors</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="AI/index.html">
+          <span class="sector-pill-icon">🤖</span>
+          <span class="sector-pill-name">AI Infra</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Biotech/index.html">
+          <span class="sector-pill-icon">🧬</span>
+          <span class="sector-pill-name">Biotech</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Defence/index.html">
+          <span class="sector-pill-icon">🛡️</span>
+          <span class="sector-pill-name">Defence</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Tech/index.html">
+          <span class="sector-pill-icon">💻</span>
+          <span class="sector-pill-name">Technology</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Crypto/index.html">
+          <span class="sector-pill-icon">₿</span>
+          <span class="sector-pill-name">Crypto</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="Energy/index.html">
+          <span class="sector-pill-icon">⚡</span>
+          <span class="sector-pill-name">Energy</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="#market-section" onclick="closeDrawer()">
+          <span class="sector-pill-icon">💹</span>
+          <span class="sector-pill-name">Market</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+        <a class="sector-pill" href="rss.html">
+          <span class="sector-pill-icon">📰</span>
+          <span class="sector-pill-name">RSS Feed</span>
+          <span class="sector-pill-badge">Live</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom tab bar (mobile) -->
+  <div class="bottom-tabs">
+    <div class="bottom-tabs-inner">
+      <button class="tab-btn active" onclick="window.location='index.html'"><span class="tab-icon">⊞</span>Hub</button>
+      <button class="tab-btn" onclick="document.getElementById('market-section').scrollIntoView({behavior:'smooth'}); closeDrawer();"><span class="tab-icon">💹</span>Market</button>
+      <button class="tab-btn" onclick="window.location='All/index.html'"><span class="tab-icon">🌐</span>All</button>
+      <button class="tab-btn" onclick="window.location='rss.html'"><span class="tab-icon">📰</span>RSS</button>
+    </div>
+  </div>
+
   <script>
+    /* Mobile drawer */
+    function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+    function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+
     /* ═══════════════════════════════════════════════════════════════
        Market section — SPY / QQQ / VIX / regime / heatmap / movers
        ═══════════════════════════════════════════════════════════════ */
