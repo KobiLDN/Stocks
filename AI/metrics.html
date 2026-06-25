@@ -12,9 +12,26 @@
 <style>
   /* Category filter buttons */
   .filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
   }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
@@ -73,21 +90,7 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  /* Search + count bar */
-  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-  #metrics-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
-  }
-  #metrics-search:focus { border-color: var(--accent); }
-  #metrics-search::placeholder { color: var(--muted); }
+
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
   .row-count span { color: var(--accent); font-weight: 700; }
 
@@ -294,14 +297,6 @@
   .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
   .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
   .sub-link.active .sub-dot { opacity: 1; }
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -355,8 +350,6 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
-    .header-search { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -415,35 +408,14 @@
 <h1>AI <span>Metrics</span></h1>
 <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
 </div>
-<div class="header-search">
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+<div class="filter-bar" id="filter-bar"></div>
+<div class="search-count-bar">
 <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
 <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
 </div>
-<div class="header-blocks">
-<div class="header-block">
-<div class="header-block-label">Prices Last Updated</div>
-<div class="header-block-value" id="data-bar-ts">—</div>
-</div>
-</div>
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-</div>
 </header>
-
-<div class="mobile-chips">
-<button class="chip active" data-filter="all" onclick="setCategory('all')">All</button>
-<button class="chip" data-filter="memory" onclick="setCategory('memory')">Memory</button>
-<button class="chip" data-filter="nuclear-ops" onclick="setCategory('nuclear-ops')">Nuclear</button>
-<button class="chip" data-filter="smr" onclick="setCategory('smr')">SMR</button>
-<button class="chip" data-filter="uranium" onclick="setCategory('uranium')">Uranium</button>
-<button class="chip" data-filter="power-infra" onclick="setCategory('power-infra')">Power</button>
-<button class="chip" data-filter="dc-operators" onclick="setCategory('dc-operators')">Data Centres</button>
-<button class="chip" data-filter="hyperscalers" onclick="setCategory('hyperscalers')">Hyperscalers</button>
-<button class="chip" data-filter="ai-compute" onclick="setCategory('ai-compute')">AI Compute</button>
-<button class="chip" data-filter="fibre-optical" onclick="setCategory('fibre-optical')">Fibre/Optical</button>
-<button class="chip" data-filter="dsp-semi" onclick="setCategory('dsp-semi')">DSP/Semi</button>
-<button class="chip" data-filter="test-equip" onclick="setCategory('test-equip')">Test Equip</button>
-<button class="chip" data-filter="materials" onclick="setCategory('materials')">Materials</button>
-</div>
 
 <div class="page-body">
 <div class="page-main">
