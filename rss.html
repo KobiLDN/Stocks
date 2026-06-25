@@ -181,6 +181,9 @@
   .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
   .tab-icon { font-size: 16px; line-height: 1; }
 
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+
   @media (max-width: 600px) {
     body { padding-bottom: 56px; }
     body[data-layout="rail"] .left-rail { display: none; }
@@ -193,6 +196,8 @@
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail"></div>
+<div class="right-side">
 <header>
   <div class="header-inner">
   <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
@@ -231,19 +236,6 @@
   </div>
 </header>
 
-<div class="page-body">
-<div class="left-rail">
-<a class="sector-pill" href="index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
-<a class="sector-pill" href="All/index.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="AI/index.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="Biotech/index.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="Defence/index.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="Tech/index.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="Crypto/index.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="Energy/index.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="market.html"><span class="sector-pill-icon">💹</span><span class="sector-pill-name">Market</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill active" href="rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
-</div>
 <div class="page-main">
 <div class="container">
 
@@ -255,7 +247,7 @@
   Business RSS · FT · Reuters · BBC · Guardian · Sentiment: VADER · Updated <span id="feed-updated">—</span>
 </footer>
 </div><!-- /.page-main -->
-</div><!-- /.page-body -->
+</div><!-- /.right-side -->
 
 <script src="rss-data.js"></script>
 <script>
@@ -426,6 +418,14 @@
           '<div class="empty-state">No data available — run <strong>News/generate_news_feed.py</strong> first.</div>';
       });
   }
+
+  // Populate ticker tape from AI prices (PRICES_DATA.stocks is empty on RSS page)
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('AI/prices.json')
+      .then(r => r.json())
+      .then(data => buildTape(data.stocks))
+      .catch(() => {});
+  });
 </script>
 
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
