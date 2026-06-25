@@ -461,24 +461,6 @@
     /* Main scrolls inside the flex body */
     main { overflow-y: auto; }
 
-    @media (max-width: 900px) {
-      header { padding: 12px 16px; }
-      h1 { font-size: 22px; }
-      .header-sub { display: none; }
-    }
-    @media (max-width: 640px) {
-      main { padding: 24px 16px; }
-      .card-grid { grid-template-columns: 1fr; }
-      .pt-name { display: none; }
-      .left-rail { width: 72px; }
-      body { padding-bottom: 56px; }
-      .left-rail { display: none; }
-      .hamburger { display: flex; }
-      .bottom-tabs { display: block; }
-      .header-blocks { display: none; }
-      main { padding: 12px 14px; }
-    }
-
     /* ── Mobile nav: hamburger, drawer, bottom tabs ── */
     .hamburger {
       display: none; width: 44px; height: 44px; border: 1px solid var(--border);
@@ -625,6 +607,24 @@
     .hub-section-hdr { display: flex; align-items: center; gap: 14px; margin: 28px 0 20px; }
     .hub-section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
     .hub-section-hdr-line { flex: 1; height: 1px; background: var(--border); }
+
+    @media (max-width: 900px) {
+      h1 { font-size: 22px; }
+      .header-sub { display: none; }
+    }
+    @media (max-width: 640px) {
+      body { padding-bottom: 56px; }
+      .left-rail { display: none; }
+      .hamburger { display: flex; }
+      .bottom-tabs { display: block; }
+      .header-blocks { display: none; }
+      .card-grid { grid-template-columns: 1fr; }
+      .pt-name { display: none; }
+      main { padding: 12px 14px; }
+      .sector-heatmap { grid-template-columns: repeat(2, 1fr); }
+      .regime-banner .regime-sub { margin-left: 0; }
+      .market-cards { grid-template-columns: 1fr; }
+    }
   </style>
 <script src="market-data.js"></script>
 <script src="https://s3.tradingview.com/tv.js"></script>
