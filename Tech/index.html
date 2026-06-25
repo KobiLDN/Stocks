@@ -11,9 +11,26 @@
 <script defer="" src="../shared.js"></script>
 <style>
   .filter-bar {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
   }
 
   .filter-btn {

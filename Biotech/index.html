@@ -36,6 +36,12 @@
     overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
   }
   .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
   .search-count-bar input {
     font-family: 'IBM Plex Mono', monospace; font-size: 11px;
     padding: 6px 10px; border: 1px solid var(--border);
@@ -109,7 +115,6 @@
   .filter-btn[data-filter="neuroscience"].active{ background: var(--indigo);  border-color: var(--indigo); }
 
   /* Search */
-  .search-count-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
   #stock-search {
     font-family: 'IBM Plex Mono', monospace; font-size: 12px;
     background: var(--surface); border: 1px solid var(--border); color: var(--text);
