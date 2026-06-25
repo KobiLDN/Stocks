@@ -577,35 +577,7 @@
 <div class="left-rail">
 </div>
 <!-- Panel 2: Nav panel with accordion category filter -->
-<div class="nav-panel">
-<div class="nav-item open" id="ni-dashboard">
-<button class="nav-link active" onclick="toggleNav('dashboard')">
-<span class="nav-icon">📊</span><span class="nav-label">Dashboard</span><span class="nav-arrow">▶</span>
-</button>
-<div class="nav-sub">
-<span class="sub-label">Category</span>
-<a class="sub-link active" onclick="filterNav('all',this)"><span class="sub-dot"></span>All</a>
-<a class="sub-link" onclick="filterNav('memory',this)"><span class="sub-dot"></span>Memory</a>
-<a class="sub-link" onclick="filterNav('nuclear-ops',this)"><span class="sub-dot"></span>Nuclear</a>
-<a class="sub-link" onclick="filterNav('smr',this)"><span class="sub-dot"></span>SMR</a>
-<a class="sub-link" onclick="filterNav('uranium',this)"><span class="sub-dot"></span>Uranium</a>
-<a class="sub-link" onclick="filterNav('power-infra',this)"><span class="sub-dot"></span>Power</a>
-<a class="sub-link" onclick="filterNav('dc-operators',this)"><span class="sub-dot"></span>Data Centres</a>
-<a class="sub-link" onclick="filterNav('hyperscalers',this)"><span class="sub-dot"></span>Hyperscalers</a>
-<a class="sub-link" onclick="filterNav('ai-compute',this)"><span class="sub-dot"></span>AI Compute</a>
-<a class="sub-link" onclick="filterNav('fibre-optical',this)"><span class="sub-dot"></span>Fibre/Optical</a>
-<a class="sub-link" onclick="filterNav('dsp-semi',this)"><span class="sub-dot"></span>DSP/Semi</a>
-<a class="sub-link" onclick="filterNav('test-equip',this)"><span class="sub-dot"></span>Test Equip</a>
-<a class="sub-link" onclick="filterNav('materials',this)"><span class="sub-dot"></span>Materials</a>
-</div>
-</div>
-<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
-<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
-<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
-<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
-<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
-<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
-</div>
+<div class="nav-panel"></div>
 <!-- Panel 3: Right side (header + content) -->
 <div class="right-side">
 <header>
@@ -617,8 +589,7 @@
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button></div>
-
-</header></div>
+</header>
 <div class="mobile-chips">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
 <button class="chip" data-filter="memory" onclick="filterChip('memory',this)">Memory</button>
@@ -906,42 +877,14 @@ function searchTable() { applyFilters(); }
 </script>
 </div><!-- /.container -->
 </div><!-- /.page-main -->
-<!-- /.page-body -->
-<!-- /.right-side -->
+</div><!-- /.page-body -->
+</div><!-- /.right-side -->
 <!-- Drawer overlay (mobile) -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
 <div class="drawer">
 <div class="left-rail">
 </div>
-<div class="nav-panel">
-<div class="nav-item open" id="ni-dashboard-d">
-<button class="nav-link active" onclick="toggleNav('dashboard-d')">
-<span class="nav-icon">📊</span><span class="nav-label">Dashboard</span><span class="nav-arrow">▶</span>
-</button>
-<div class="nav-sub">
-<span class="sub-label">Category</span>
-<a class="sub-link active" onclick="filterNav('all',this);closeDrawer()"><span class="sub-dot"></span>All</a>
-<a class="sub-link" onclick="filterNav('memory',this);closeDrawer()"><span class="sub-dot"></span>Memory</a>
-<a class="sub-link" onclick="filterNav('nuclear-ops',this);closeDrawer()"><span class="sub-dot"></span>Nuclear</a>
-<a class="sub-link" onclick="filterNav('smr',this);closeDrawer()"><span class="sub-dot"></span>SMR</a>
-<a class="sub-link" onclick="filterNav('uranium',this);closeDrawer()"><span class="sub-dot"></span>Uranium</a>
-<a class="sub-link" onclick="filterNav('power-infra',this);closeDrawer()"><span class="sub-dot"></span>Power</a>
-<a class="sub-link" onclick="filterNav('dc-operators',this);closeDrawer()"><span class="sub-dot"></span>Data Centres</a>
-<a class="sub-link" onclick="filterNav('hyperscalers',this);closeDrawer()"><span class="sub-dot"></span>Hyperscalers</a>
-<a class="sub-link" onclick="filterNav('ai-compute',this);closeDrawer()"><span class="sub-dot"></span>AI Compute</a>
-<a class="sub-link" onclick="filterNav('fibre-optical',this);closeDrawer()"><span class="sub-dot"></span>Fibre/Optical</a>
-<a class="sub-link" onclick="filterNav('dsp-semi',this);closeDrawer()"><span class="sub-dot"></span>DSP/Semi</a>
-<a class="sub-link" onclick="filterNav('test-equip',this);closeDrawer()"><span class="sub-dot"></span>Test Equip</a>
-<a class="sub-link" onclick="filterNav('materials',this);closeDrawer()"><span class="sub-dot"></span>Materials</a>
-</div>
-</div>
-<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
-<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
-<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
-<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
-<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
-<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
-</div>
+<div class="nav-panel"></div>
 </div>
 </div>
 <!-- Bottom tab bar (mobile) -->

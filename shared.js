@@ -129,6 +129,15 @@ function buildNav() {
     'charts.html': 'charts', 'calculator.html': 'calculator' };
   const currentPage = PAGE_MAP[file] || 'dashboard';
 
+  // Build nav-panel HTML (sector/All pages: 7 within-sector page links)
+  if (sector || inAll) {
+    const navPanelHTML = _SECTOR_PAGES.map(p =>
+      `<a class="nav-link${p.key === currentPage ? ' active' : ''}" href="${p.file}">` +
+      `<span class="nav-icon">${p.icon}</span><span class="nav-label">${p.label}</span></a>`
+    ).join('');
+    document.querySelectorAll('.nav-panel').forEach(el => { el.innerHTML = navPanelHTML; });
+  }
+
   let tabsHTML = '';
   if (isHub) {
     // Hub: 8 cross-sector tabs
