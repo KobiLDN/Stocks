@@ -158,6 +158,24 @@ function buildNav() {
     tabsHTML = hubBtn + pageBtns;
   }
 
+  if (isRSS) {
+    // RSS: same cross-sector tabs as Hub, RSS active
+    const RSS_TABS = [
+      { label: 'Hub',     icon: '⊞', action: `window.location='index.html'` },
+      { label: 'Market',  icon: '💹', action: `window.location='index.html#market-section'` },
+      { label: 'All',     icon: '🌐', action: `window.location='All/index.html'` },
+      { label: 'AI',      icon: '🤖', action: `window.location='AI/index.html'` },
+      { label: 'Biotech', icon: '🧬', action: `window.location='Biotech/index.html'` },
+      { label: 'Defence', icon: '🛡️', action: `window.location='Defence/index.html'` },
+      { label: 'Tech',    icon: '💻', action: `window.location='Tech/index.html'` },
+      { label: 'RSS',     icon: '📰', action: ``, active: true },
+    ];
+    tabsHTML = RSS_TABS.map(t =>
+      `<button class="tab-btn${t.active ? ' active' : ''}" ${t.action ? `onclick="${t.action}"` : 'disabled'}>` +
+      `<span class="tab-icon">${t.icon}</span>${t.label}</button>`
+    ).join('');
+  }
+
   const tabsInner = document.querySelector('.bottom-tabs-inner');
   if (tabsInner && tabsHTML) tabsInner.innerHTML = tabsHTML;
 }
