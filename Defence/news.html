@@ -181,14 +181,6 @@
   .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
   .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
   .sub-link.active .sub-dot { opacity: 1; }
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -228,14 +220,27 @@
   .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
   .tab-btn:hover  { color: var(--accent); }
   .tab-icon { font-size: 16px; line-height: 1; }
-  .news-toolbar { padding-left: 16px; }
-  .news-toolbar .row-count { margin-left: 0; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
   @media (max-width: 900px) {
     .nav-panel { width: 52px; }
     .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none !important; }
     .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
     .nav-icon { font-size: 18px; }
-    .header-blocks { display: none; }
     #news-search { width: 160px; }
   }
   @media (max-width: 600px) {
@@ -244,9 +249,7 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
-    #news-search, .news-toolbar .row-count { display: none; }
-    .header-blocks { display: none; }
+    #news-search, .search-count-bar .row-count { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
     h1 { font-size: 20px; }
@@ -298,17 +301,10 @@
 <h1>Defence <span>News</span></h1>
 <div class="header-sub">Latest headlines across all 29 tracked stocks · sentiment scored locally (VADER)</div>
 </div>
-<div class="header-blocks">
-<div class="header-block">
-<div class="header-block-label">Prices Last Updated</div>
-<div class="header-block-value" id="data-bar-ts">—</div>
-</div>
-</div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-<div class="news-toolbar">
-<input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
-<span class="row-count">Showing <span id="news-count">—</span> headlines</span>
+<div class="filter-bar" id="filter-bar"></div>
+<div class="controls-row">
 <span class="sort-label">Sort</span>
 <div class="sort-group" id="sort-group">
 <button class="sort-btn active" data-sort="newest" onclick="setSort('newest', this)">Newest</button>
@@ -323,17 +319,12 @@
 <button class="sort-btn" data-window="week" onclick="setWindow('week', this)">Last Week</button>
 </div>
 </div>
+<div class="search-count-bar">
+<input id="news-search" oninput="filterNews(this.value)" placeholder="Search ticker, company or headline..." type="text"/>
+<span class="row-count">Showing <span id="news-count">—</span> headlines</span>
+</div>
 </header>
 
-<div class="mobile-chips">
-<button class="chip active" data-filter="all" onclick="setCategory('all')">All</button>
-<button class="chip" data-filter="us-primes" onclick="setCategory('us-primes')">US Prime</button>
-<button class="chip" data-filter="uk-european" onclick="setCategory('uk-european')">UK/European</button>
-<button class="chip" data-filter="cyber-intel" onclick="setCategory('cyber-intel')">Cyber/Intel</button>
-<button class="chip" data-filter="drones" onclick="setCategory('drones')">Drones</button>
-<button class="chip" data-filter="space" onclick="setCategory('space')">Space</button>
-<button class="chip" data-filter="weapons" onclick="setCategory('weapons')">Weapons</button>
-</div>
 
 <div class="page-body">
 <div class="page-main">

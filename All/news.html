@@ -79,12 +79,27 @@
   .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
   .tab-btn:hover  { color: var(--accent); }
   .tab-icon { font-size: 16px; line-height: 1; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
   @media (max-width: 900px) {
     .nav-panel { width: 52px; }
     .nav-label { display: none !important; }
     .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
     .nav-icon { font-size: 18px; }
-    .header-blocks { display: none; }
   }
   @media (max-width: 600px) {
     body { padding-bottom: 56px; }
@@ -124,12 +139,6 @@
     <h1>All <span>News</span></h1>
     <div class="header-sub">Latest headlines across <span id="all-stock-count">—</span> stocks · AI-scored sentiment</div>
   </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
-  </div>
-  </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
 
@@ -143,23 +152,25 @@
     <button class="filter-btn"        data-sector="energy"  onclick="setSector('energy',this)">Energy</button>
   </div>
 
-  <div class="news-toolbar">
-    <input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
-    <span class="sort-label">Sort</span>
-    <div class="sort-group" id="sort-group">
+<div class="controls-row">
+<span class="sort-label">Sort</span>
+<div class="sort-group" id="sort-group">
       <button class="sort-btn active" data-sort="newest"   onclick="setSort('newest',this)">Newest</button>
       <button class="sort-btn"        data-sort="oldest"   onclick="setSort('oldest',this)">Oldest</button>
       <button class="sort-btn"        data-sort="positive" onclick="setSort('positive',this)">Most Positive</button>
       <button class="sort-btn"        data-sort="negative" onclick="setSort('negative',this)">Most Negative</button>
     </div>
-    <span class="sort-label">Period</span>
-    <div class="sort-group" id="window-group">
+<span class="sort-label">Period</span>
+<div class="sort-group" id="window-group">
       <button class="sort-btn"        data-window="all"  onclick="setWindow('all',this)">All Time</button>
       <button class="sort-btn active" data-window="day"  onclick="setWindow('day',this)">Last 24h</button>
       <button class="sort-btn"        data-window="week" onclick="setWindow('week',this)">Last Week</button>
     </div>
-    <span class="row-count">Showing <span id="news-count">—</span> articles</span>
-  </div>
+</div>
+<div class="search-count-bar">
+<input id="news-search" oninput="filterNews(this.value)" placeholder="Search ticker, company or headline..." type="text"/>
+<span class="row-count">Showing <span id="news-count">—</span> articles</span>
+</div>
 </header>
 
 <div class="page-body">
