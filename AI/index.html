@@ -85,9 +85,26 @@
 <style>
   /* Filter tabs */
   .filter-bar {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
   }
 
   .filter-btn {
@@ -391,35 +408,6 @@
   tbody tr:nth-child(10) { animation-delay: 0.32s; }
   tbody tr:nth-child(n+11) { animation-delay: 0.35s; }
 
-  /* Search + count bar */
-  .search-count-bar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 12px;
-  }
-  #stock-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
-  }
-  #stock-search:focus { border-color: var(--accent); }
-  #stock-search::placeholder { color: var(--muted); }
-
-  /* Count display */
-  .row-count {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    color: var(--muted);
-    padding-left: 2px;
-  }
-
   .row-count span { color: var(--accent); font-weight: 700; }
 
   @media (max-width: 768px) {
@@ -485,16 +473,7 @@
   .sub-link.active .sub-dot { opacity: 1; }
 
   /* Search in header */
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
 
-  /* Mobile chips */
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -558,8 +537,6 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
-    .header-search { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -584,13 +561,9 @@
 <div class="header-inner">
 <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
 <div class="header-left"></div>
-<div class="header-search">
-<input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
-<span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button></div>
-</header>
-<div class="mobile-chips">
+<div class="filter-bar">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
 <button class="chip" data-filter="memory" onclick="filterChip('memory',this)">Memory</button>
 <button class="chip" data-filter="nuclear-ops" onclick="filterChip('nuclear-ops',this)">Nuclear</button>
@@ -605,6 +578,11 @@
 <button class="chip" data-filter="test-equip" onclick="filterChip('test-equip',this)">Test Equip</button>
 <button class="chip" data-filter="materials" onclick="filterChip('materials',this)">Materials</button>
 </div>
+<div class="search-count-bar">
+<input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
+</div>
+</header>
 <div class="page-body">
 <div class="page-main">
 <div class="container">
