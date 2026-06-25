@@ -194,8 +194,11 @@ function buildDashboardHeader() {
   const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
   const sector = SECTORS.find(s => parts[0] === s) || null;
   const inAll  = parts[0] === 'All';
-  const file   = parts[parts.length - 1] || 'index.html';
-  if (file !== 'index.html' && file !== '' || (!sector && !inAll)) return;
+  const rawFile = parts[parts.length - 1] || '';
+  // Treat sector-name-as-last-segment (trailing-slash URLs) as index.html
+  const SECTORS2 = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
+  const file = (rawFile === '' || SECTORS2.includes(rawFile) || rawFile === 'All') ? 'index.html' : rawFile;
+  if (file !== 'index.html' || (!sector && !inAll)) return;
 
   const railItem = _RAIL_ITEMS.find(r => r.key === (sector || 'all'));
   const name     = railItem ? railItem.label : (sector || 'All');
