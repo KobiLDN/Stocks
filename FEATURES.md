@@ -16,6 +16,12 @@
 
 ## Done
 
+- **Shared nav — single source of truth** — `buildNav()` in `shared.js` generates left rail (10 pills) + bottom tabs (8 tabs) for every page from URL detection; `_RAIL_ITEMS` + `_SECTOR_PAGES` arrays are the single config; zero changes to individual HTML files to update nav
+
+- **Mobile nav on Stock Hub** — hamburger + drawer + 8-tab bottom bar at ≤640px; matches sector page pattern; Hub left rail extends to ticker tape (layout restructured to `flex-direction:row`)
+
+- **Market page merged into Stock Hub** — `index.html` is now the combined landing page; regime banner + SPY/QQQ/VIX + TradingView charts + sector heatmap + Leaders/Fallers above hub content; `market.html` redirects to `/`
+
 - **Market overview page (issue #19)** — root-level `market.html` standalone leaf page (rss.html pattern, no nav-panel): rules-based risk regime banner (correction / elevated-fear / normal), SPY/QQQ/VIX metric cards, three TradingView widgets (`AMEX:SPY`, `NASDAQ:QQQ`, `CAPITALCOM:VIX`, 150ms stagger, theme-aware re-render), 6-sector 1-week average heatmap, Leaders/Fallers tables (vs-SPY column) computed client-side from all 6 `prices-data.js` files. `update_market.py` fetches SPY/QQQ/VIX via yfinance → `market-data.js` + `market.json`; wired into `update-prices.yml` (full refresh, 3× daily); `macro` block added to `generate_export.py`. **Market pill** (💹, Live badge) inserted before RSS Feed in every left-rail across all 51 pages via idempotent clone-the-RSS-pill sweep. Graceful "awaiting market data" empty state until first live refresh.
 
 - **3-panel rail layout — full site rollout (issues #17/#18)** — all 56 HTML pages (root + 7 pages × 7 sectors including All/, plus Market + RSS leaf pages) migrated to `body[data-layout="rail"]`: left-rail 92px sector pills | nav-panel 148px page links | right-side content area. Leaf pages (Market, RSS) use left-rail + page-main only. `shared.css` owns all rail CSS; drawer overlay + bottom-tabs for mobile; hamburger ☰ opens drawer on narrow viewports.
