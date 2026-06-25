@@ -8,6 +8,7 @@
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
+<script src="AI/prices-data.js"></script>
 <script src="shared.js" defer></script>
 <style>
   /* Header control row (Row 3) — search + sort + period.
@@ -400,8 +401,8 @@
         String(d.getDate()).padStart(2,'0') + ' ' +
         String(d.getHours()).padStart(2,'0') + ':' +
         String(d.getMinutes()).padStart(2,'0');
-      window.PRICES_DATA = { updated: fmt, stocks: [] };
-      buildDataBar();
+      window.PRICES_DATA = { updated: fmt, stocks: (window.PRICES_DATA || {}).stocks || [] };
+      if (typeof buildDataBar === 'function') buildDataBar();
     }
     buildFilterBar();
     renderFeed();
@@ -419,13 +420,6 @@
       });
   }
 
-  // Populate ticker tape from AI prices (PRICES_DATA.stocks is empty on RSS page)
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('AI/prices.json')
-      .then(r => r.json())
-      .then(data => buildTape(data.stocks))
-      .catch(() => {});
-  });
 </script>
 
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
