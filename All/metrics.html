@@ -246,14 +246,10 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Metrics</span></h1>
-    <div class="header-sub"><span id="all-stock-count">—</span> stocks &nbsp;·&nbsp; Market cap · 1D / 1W / 1M / YTD returns · Beta · Volume · Analyst rating</div>
-</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
+    <div class="header-sub"><span id="all-stock-count">—</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-</div>
-
 <div class="filter-bar">
     <button class="filter-btn active" data-filter="all" onclick="setSector('all', this)">All</button>
     <button class="filter-btn" data-filter="ai" data-tooltip="AI Infrastructure — semiconductors, nuclear, data centres" onclick="setSector('ai', this)">AI Infra</button>
