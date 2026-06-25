@@ -1,20 +1,21 @@
 {
-  "updated": "2026-06-25 11:51",
+  "updated": "2026-06-25 15:38",
   "spy": {
-    "price": 733.24,
-    "change_1d": "-0.54%",
-    "change_1w": "-2.03%",
-    "change_1m": "-2.06%"
+    "price": 735.96,
+    "change_1d": -0.17,
+    "change_1w": -0.42,
+    "change_1m": -1.7
   },
   "qqq": {
-    "price": 710.62,
-    "change_1d": "-1.92%",
-    "change_1w": "-2.53%",
-    "change_1m": "-2.59%"
+    "price": 713.59,
+    "change_1d": -1.51,
+    "change_1w": -1.13,
+    "change_1m": -2.18
   },
   "vix": {
-    "level": 17.92,
-    "change_1d": "-3.91%"
+    "level": 18.98,
+    "change_1d": 1.77,
+    "regime": "normal"
   },
-  "regime": "normal"
+  "market_regime": "normal"
 }
