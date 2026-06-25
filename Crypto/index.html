@@ -295,13 +295,6 @@
   tbody tr:nth-child(9) { animation-delay: 0.29s; }
   tbody tr:nth-child(10) { animation-delay: 0.32s; }
   tbody tr:nth-child(n+11) { animation-delay: 0.35s; }
-
-  .search-count-bar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 12px;
-  }
   #stock-search {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -388,14 +381,6 @@
   .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
   .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
   .sub-link.active .sub-dot { opacity: 1; }
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -449,8 +434,6 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
-    .header-search { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -497,14 +480,9 @@
 <div class="header-inner">
 <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
 <div class="header-left"></div>
-<div class="header-search">
-<input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
-<span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button></div>
-
-</header></div>
-<div class="mobile-chips">
+<div class="filter-bar">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
 <button class="chip" data-filter="bitcoin" onclick="filterChip('bitcoin',this)">Bitcoin</button>
 <button class="chip" data-filter="layer1" onclick="filterChip('layer1',this)">Layer 1</button>
@@ -514,6 +492,11 @@
 <button class="chip" data-filter="meme" onclick="filterChip('meme',this)">Meme</button>
 <button class="chip" data-filter="ai" onclick="filterChip('ai',this)">AI Tokens</button>
 </div>
+<div class="search-count-bar">
+<input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
+</div>
+</header>
 <div class="page-body">
 <div class="page-main">
 <div class="container">
@@ -768,7 +751,7 @@ function searchTable() { applyFilters(); }
 </script>
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
-<!-- /.right-side -->
+</div><!-- /.right-side -->
 <!-- Drawer overlay (mobile) -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
 <div class="drawer">

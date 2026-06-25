@@ -11,10 +11,11 @@
 <script defer="" src="../shared.js"></script>
 <style>
   .filter-bar {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
   }
+  .filter-bar::-webkit-scrollbar { display: none; }
 
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
@@ -278,30 +279,20 @@
   tbody tr:nth-child(n+11) { animation-delay: 0.35s; }
 
   .search-count-bar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
-  #stock-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
   }
-  #stock-search:focus { border-color: var(--accent); }
-  #stock-search::placeholder { color: var(--muted); }
-
-  .row-count {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    color: var(--muted);
-    padding-left: 2px;
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
   }
   .row-count span { color: var(--accent); font-weight: 700; }
 
@@ -427,14 +418,14 @@
 <button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency, blockchain and digital asset companies" onclick="filterTable('crypto', this)">Crypto</button>
 <button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
 </div>
-</header>
-<div class="page-body">
-<div class="page-main">
-<div class="container">
 <div class="search-count-bar">
 <input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
+</header>
+<div class="page-body">
+<div class="page-main">
+<div class="container">
 <div class="table-wrap">
 <table id="stock-table">
 <thead>
