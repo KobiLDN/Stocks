@@ -1,20 +1,38 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Biotech stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 30 stocks.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Biotech stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 30 stocks." name="description"/>
 <title>Biotech — Stock Metrics</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../shared.css">
-<script src="../shared.js" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../shared.css" rel="stylesheet"/>
+<script defer="" src="../shared.js"></script>
 <style>
   /* Category filter buttons */
   .filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
   }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
@@ -74,20 +92,6 @@
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
   /* Search + count bar */
-  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-  #metrics-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
-  }
-  #metrics-search:focus { border-color: var(--accent); }
-  #metrics-search::placeholder { color: var(--muted); }
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
   .row-count span { color: var(--accent); font-weight: 700; }
 
@@ -291,14 +295,6 @@
   .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
   .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
   .sub-link.active .sub-dot { opacity: 1; }
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -352,8 +348,6 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
-    .header-search { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -366,112 +360,84 @@
 </style>
 </head>
 <body data-layout="rail">
-
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
-
 <!-- Panel 1 -->
 <div class="left-rail">
 </div>
-
 <!-- Panel 2 -->
 <div class="nav-panel">
-  <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
-  <div class="nav-item open" id="ni-metrics">
-    <button class="nav-link active" onclick="toggleNav('metrics')">
-      <span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span>
-    </button>
-    <div class="nav-sub">
-      <span class="sub-label">Category</span>
-      <a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
-      <a class="sub-link" onclick="setCategory('large-cap')"><span class="sub-dot"></span>Large Cap</a>
-      <a class="sub-link" onclick="setCategory('uk-listed')"><span class="sub-dot"></span>UK Listed</a>
-      <a class="sub-link" onclick="setCategory('gene-editing')"><span class="sub-dot"></span>Gene Editing</a>
-      <a class="sub-link" onclick="setCategory('genomics')"><span class="sub-dot"></span>Genomics</a>
-      <a class="sub-link" onclick="setCategory('oncology')"><span class="sub-dot"></span>Oncology</a>
-      <a class="sub-link" onclick="setCategory('mrna')"><span class="sub-dot"></span>mRNA</a>
-      <a class="sub-link" onclick="setCategory('rare-disease')"><span class="sub-dot"></span>Rare Disease</a>
-      <a class="sub-link" onclick="setCategory('metabolic')"><span class="sub-dot"></span>Metabolic</a>
-      <a class="sub-link" onclick="setCategory('neuroscience')"><span class="sub-dot"></span>Neuroscience</a>
-    </div>
-  </div>
-  <a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
-  <a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
-  <a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
-  <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
-  <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<div class="nav-item open" id="ni-metrics">
+<button class="nav-link active" onclick="toggleNav('metrics')">
+<span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="setCategory('large-cap')"><span class="sub-dot"></span>Large Cap</a>
+<a class="sub-link" onclick="setCategory('uk-listed')"><span class="sub-dot"></span>UK Listed</a>
+<a class="sub-link" onclick="setCategory('gene-editing')"><span class="sub-dot"></span>Gene Editing</a>
+<a class="sub-link" onclick="setCategory('genomics')"><span class="sub-dot"></span>Genomics</a>
+<a class="sub-link" onclick="setCategory('oncology')"><span class="sub-dot"></span>Oncology</a>
+<a class="sub-link" onclick="setCategory('mrna')"><span class="sub-dot"></span>mRNA</a>
+<a class="sub-link" onclick="setCategory('rare-disease')"><span class="sub-dot"></span>Rare Disease</a>
+<a class="sub-link" onclick="setCategory('metabolic')"><span class="sub-dot"></span>Metabolic</a>
+<a class="sub-link" onclick="setCategory('neuroscience')"><span class="sub-dot"></span>Neuroscience</a>
 </div>
-
+</div>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
 <!-- Panel 3 -->
 <div class="right-side">
 <header>
-  <div class="header-inner">
-    <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
-    <div class="header-left">
-      <div class="header-label">// Market Intelligence</div>
-      <h1>Biotech <span>Metrics</span></h1>
-      <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
-    </div>
-    <div class="header-search">
-      <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
-      <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
-    </div>
-    <div class="header-blocks">
-    <div class="header-block">
-    <div class="header-block-label">Prices Last Updated</div>
-    <div class="header-block-value" id="data-bar-ts">—</div>
-    </div>
-    </div>
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-  </div>
-</header>
-<div class="mobile-chips">
-  <button class="chip active" data-filter="all" onclick="setCategory('all')">All</button>
-  <button class="chip" data-filter="large-cap" onclick="setCategory('large-cap')">Large Cap</button>
-  <button class="chip" data-filter="uk-listed" onclick="setCategory('uk-listed')">UK Listed</button>
-  <button class="chip" data-filter="gene-editing" onclick="setCategory('gene-editing')">Gene Editing</button>
-  <button class="chip" data-filter="genomics" onclick="setCategory('genomics')">Genomics</button>
-  <button class="chip" data-filter="oncology" onclick="setCategory('oncology')">Oncology</button>
-  <button class="chip" data-filter="mrna" onclick="setCategory('mrna')">mRNA</button>
-  <button class="chip" data-filter="rare-disease" onclick="setCategory('rare-disease')">Rare Disease</button>
-  <button class="chip" data-filter="metabolic" onclick="setCategory('metabolic')">Metabolic</button>
-  <button class="chip" data-filter="neuroscience" onclick="setCategory('neuroscience')">Neuroscience</button>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+<div class="header-label">// Market Intelligence</div>
+<h1>Biotech <span>Metrics</span></h1>
+<div class="header-sub"><span id="stock-count">—</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
+
+
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+<div class="filter-bar" id="filter-bar"></div><div class="search-count-bar"><input id="metrics-search" oninput="filterMetrics(this.value)" placeholder="Search ticker or company..." type="text"/><span class="row-count">Showing <span id="metrics-count">—</span> stocks</span></div></header>
+
 <div class="page-body">
 <div class="page-main">
 <div class="container">
-
-  <div class="table-wrap">
-    <table id="metrics-table">
-      <thead>
-        <tr>
-          <th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
-          <th class="sortable" onclick="sortMetrics('name', this)">Company</th>
-          <th class="sortable" onclick="sortMetrics('category', this)">Category</th>
-          <th class="sortable num-col" onclick="sortMetrics('price', this)" data-tip-title="Price" data-tip="Current share price converted to GBP.">Price</th>
-          <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP.">Market Cap</th>
-          <th class="sortable num-col" onclick="sortMetrics('ytd', this)" data-tip-title="YTD Return" data-tip="Year-to-date price change from the first trading day of 2026.">YTD</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1d', this)" data-tip-title="1-Day Return" data-tip="Price change over the last trading session.">1D</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1w', this)" data-tip-title="1-Week Return" data-tip="Price change over the last 5 trading days.">1W</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1m', this)" data-tip-title="1-Month Return" data-tip="Price change over the last month.">1M</th>
-          <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market.">Beta</th>
-          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio. Many biotech companies are pre-profit, so this will show — for those.">P/E Ratio</th>
-          <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume" data-tip="Average number of shares traded per day over the past 3 months.">Avg Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Total number of shares traded in the most recent trading session.">1D Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="1-Week Volume" data-tip="Total shares traded across the last 5 trading days.">1W Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1m', this)" data-tip-title="1-Month Volume" data-tip="Total shares traded over the past month (approx. 20 trading days).">1M Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('div_yield', this)" data-tip-title="Dividend Yield" data-tip="Annual dividend paid as a percentage of the current share price. Most biotech companies do not pay dividends.">Div Yield</th>
-          <th class="sortable num-col" onclick="sortMetrics('short_pct', this)" data-tip-title="Short Interest" data-tip="Percentage of available shares currently sold short. High short interest is common in speculative biotech names.">Short %</th>
-          <th class="sortable" onclick="sortMetrics('analyst_score', this)" data-tip-title="Analyst Rating" data-tip="Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell.">Analyst</th>
-        </tr>
-      </thead>
-      <tbody id="metrics-body"></tbody>
-    </table>
-  </div>
-
-
+<div class="table-wrap">
+<table id="metrics-table">
+<thead>
+<tr>
+<th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
+<th class="sortable" onclick="sortMetrics('name', this)">Company</th>
+<th class="sortable" onclick="sortMetrics('category', this)">Category</th>
+<th class="sortable num-col" data-tip="Current share price converted to GBP." data-tip-title="Price" onclick="sortMetrics('price', this)">Price</th>
+<th class="sortable num-col sort-desc" data-tip="Total market value of all outstanding shares, converted to GBP." data-tip-title="Market Cap" onclick="sortMetrics('market_cap', this)">Market Cap</th>
+<th class="sortable num-col" data-tip="Year-to-date price change from the first trading day of 2026." data-tip-title="YTD Return" onclick="sortMetrics('ytd', this)">YTD</th>
+<th class="sortable num-col" data-tip="Price change over the last trading session." data-tip-title="1-Day Return" onclick="sortMetrics('change_1d', this)">1D</th>
+<th class="sortable num-col" data-tip="Price change over the last 5 trading days." data-tip-title="1-Week Return" onclick="sortMetrics('change_1w', this)">1W</th>
+<th class="sortable num-col" data-tip="Price change over the last month." data-tip-title="1-Month Return" onclick="sortMetrics('change_1m', this)">1M</th>
+<th class="sortable num-col" data-tip="Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market." data-tip-title="Beta" onclick="sortMetrics('beta', this)">Beta</th>
+<th class="sortable num-col" data-tip="Price-to-Earnings ratio. Many biotech companies are pre-profit, so this will show — for those." data-tip-title="P/E Ratio" onclick="sortMetrics('pe_ratio', this)">P/E Ratio</th>
+<th class="sortable num-col" data-tip="Average number of shares traded per day over the past 3 months." data-tip-title="Avg Daily Volume" onclick="sortMetrics('avg_volume', this)">Avg Vol</th>
+<th class="sortable num-col" data-tip="Total number of shares traded in the most recent trading session." data-tip-title="1-Day Volume" onclick="sortMetrics('vol_1d', this)">1D Vol</th>
+<th class="sortable num-col" data-tip="Total shares traded across the last 5 trading days." data-tip-title="1-Week Volume" onclick="sortMetrics('vol_1w', this)">1W Vol</th>
+<th class="sortable num-col" data-tip="Total shares traded over the past month (approx. 20 trading days)." data-tip-title="1-Month Volume" onclick="sortMetrics('vol_1m', this)">1M Vol</th>
+<th class="sortable num-col" data-tip="Annual dividend paid as a percentage of the current share price. Most biotech companies do not pay dividends." data-tip-title="Dividend Yield" onclick="sortMetrics('div_yield', this)">Div Yield</th>
+<th class="sortable num-col" data-tip="Percentage of available shares currently sold short. High short interest is common in speculative biotech names." data-tip-title="Short Interest" onclick="sortMetrics('short_pct', this)">Short %</th>
+<th class="sortable" data-tip="Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell." data-tip-title="Analyst Rating" onclick="sortMetrics('analyst_score', this)">Analyst</th>
+</tr>
+</thead>
+<tbody id="metrics-body"></tbody>
+</table>
 </div>
-
-
+</div>
 <script src="prices-data.js"></script>
 <script>
   /* ---- DATA ---- */
@@ -842,45 +808,42 @@
     });
   });
 </script>
-
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
 </div><!-- /.right-side -->
-
 <!-- Drawer overlay -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
 <div class="drawer">
 <div class="left-rail">
 </div>
 <div class="nav-panel">
-  <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
-  <div class="nav-item open" id="ni-metrics-d">
-    <button class="nav-link active" onclick="toggleNav('metrics-d')">
-      <span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span>
-    </button>
-    <div class="nav-sub">
-      <span class="sub-label">Category</span>
-      <a class="sub-link active" onclick="setCategory('all');closeDrawer()"><span class="sub-dot"></span>All</a>
-      <a class="sub-link" onclick="setCategory('large-cap');closeDrawer()"><span class="sub-dot"></span>Large Cap</a>
-      <a class="sub-link" onclick="setCategory('uk-listed');closeDrawer()"><span class="sub-dot"></span>UK Listed</a>
-      <a class="sub-link" onclick="setCategory('gene-editing');closeDrawer()"><span class="sub-dot"></span>Gene Editing</a>
-      <a class="sub-link" onclick="setCategory('genomics');closeDrawer()"><span class="sub-dot"></span>Genomics</a>
-      <a class="sub-link" onclick="setCategory('oncology');closeDrawer()"><span class="sub-dot"></span>Oncology</a>
-      <a class="sub-link" onclick="setCategory('mrna');closeDrawer()"><span class="sub-dot"></span>mRNA</a>
-      <a class="sub-link" onclick="setCategory('rare-disease');closeDrawer()"><span class="sub-dot"></span>Rare Disease</a>
-      <a class="sub-link" onclick="setCategory('metabolic');closeDrawer()"><span class="sub-dot"></span>Metabolic</a>
-      <a class="sub-link" onclick="setCategory('neuroscience');closeDrawer()"><span class="sub-dot"></span>Neuroscience</a>
-    </div>
-  </div>
-  <a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
-  <a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
-  <a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
-  <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
-  <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<div class="nav-item open" id="ni-metrics-d">
+<button class="nav-link active" onclick="toggleNav('metrics-d')">
+<span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="setCategory('all');closeDrawer()"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="setCategory('large-cap');closeDrawer()"><span class="sub-dot"></span>Large Cap</a>
+<a class="sub-link" onclick="setCategory('uk-listed');closeDrawer()"><span class="sub-dot"></span>UK Listed</a>
+<a class="sub-link" onclick="setCategory('gene-editing');closeDrawer()"><span class="sub-dot"></span>Gene Editing</a>
+<a class="sub-link" onclick="setCategory('genomics');closeDrawer()"><span class="sub-dot"></span>Genomics</a>
+<a class="sub-link" onclick="setCategory('oncology');closeDrawer()"><span class="sub-dot"></span>Oncology</a>
+<a class="sub-link" onclick="setCategory('mrna');closeDrawer()"><span class="sub-dot"></span>mRNA</a>
+<a class="sub-link" onclick="setCategory('rare-disease');closeDrawer()"><span class="sub-dot"></span>Rare Disease</a>
+<a class="sub-link" onclick="setCategory('metabolic');closeDrawer()"><span class="sub-dot"></span>Metabolic</a>
+<a class="sub-link" onclick="setCategory('neuroscience');closeDrawer()"><span class="sub-dot"></span>Neuroscience</a>
+</div>
+</div>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
 </div>
 </div>
 </div>
-
 <!-- Bottom tabs (Metrics active) -->
 <div class="bottom-tabs">
 <div class="bottom-tabs-inner">

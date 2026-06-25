@@ -1,19 +1,37 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Crypto fundamentals — market cap, beta, volume data for 19 coins across Bitcoin, Layer 1, Payments, Emerging L1s, Infrastructure, and Meme. Market cap and volume data for all coins.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Crypto fundamentals — market cap, beta, volume data for 19 coins across Bitcoin, Layer 1, Payments, Emerging L1s, Infrastructure, and Meme. Market cap and volume data for all coins." name="description"/>
 <title>Crypto — Stock Metrics</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../shared.css">
-<script src="../shared.js" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../shared.css" rel="stylesheet"/>
+<script defer="" src="../shared.js"></script>
 <style>
   .filter-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
   }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
@@ -72,20 +90,6 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-  #metrics-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
-  }
-  #metrics-search:focus { border-color: var(--accent); }
-  #metrics-search::placeholder { color: var(--muted); }
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
   .row-count span { color: var(--accent); font-weight: 700; }
 
@@ -281,14 +285,6 @@
   .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
   .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
   .sub-link.active .sub-dot { opacity: 1; }
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -342,8 +338,6 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
-    .header-search { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -355,113 +349,85 @@
 </style>
 </head>
 <body data-layout="rail">
-
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
-
 <!-- Panel 1: Left Rail (sector pills) -->
 <div class="left-rail">
 </div>
-
 <!-- Panel 2: Nav Panel (accordion) -->
 <div class="nav-panel">
-  <div class="nav-item" id="ni-metrics">
-    <button class="nav-link active" onclick="toggleNav('metrics')">
-      <span class="nav-icon">📋</span>
-      <span class="nav-label">Metrics</span>
-      <span class="nav-arrow">▶</span>
-    </button>
-    <div class="nav-sub">
-      <span class="sub-label">Category</span>
-      <a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
-      <a class="sub-link" onclick="setCategory('bitcoin')"><span class="sub-dot"></span>Bitcoin</a>
-      <a class="sub-link" onclick="setCategory('layer1')"><span class="sub-dot"></span>Layer 1</a>
-      <a class="sub-link" onclick="setCategory('payments')"><span class="sub-dot"></span>Payments</a>
-      <a class="sub-link" onclick="setCategory('emerging')"><span class="sub-dot"></span>Emerging</a>
-      <a class="sub-link" onclick="setCategory('infra')"><span class="sub-dot"></span>Infra</a>
-      <a class="sub-link" onclick="setCategory('meme')"><span class="sub-dot"></span>Meme</a>
-      <a class="sub-link" onclick="setCategory('ai')"><span class="sub-dot"></span>AI Tokens</a>
-    </div>
-  </div>
-  <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
-  <a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
-  <a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
-  <a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
-  <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
-  <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+<div class="nav-item" id="ni-metrics">
+<button class="nav-link active" onclick="toggleNav('metrics')">
+<span class="nav-icon">📋</span>
+<span class="nav-label">Metrics</span>
+<span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="setCategory('bitcoin')"><span class="sub-dot"></span>Bitcoin</a>
+<a class="sub-link" onclick="setCategory('layer1')"><span class="sub-dot"></span>Layer 1</a>
+<a class="sub-link" onclick="setCategory('payments')"><span class="sub-dot"></span>Payments</a>
+<a class="sub-link" onclick="setCategory('emerging')"><span class="sub-dot"></span>Emerging</a>
+<a class="sub-link" onclick="setCategory('infra')"><span class="sub-dot"></span>Infra</a>
+<a class="sub-link" onclick="setCategory('meme')"><span class="sub-dot"></span>Meme</a>
+<a class="sub-link" onclick="setCategory('ai')"><span class="sub-dot"></span>AI Tokens</a>
 </div>
-
+</div>
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
 <!-- Panel 3: Right Side -->
 <div class="right-side">
-
 <header>
-  <div class="header-inner">
-  <button class="hamburger" onclick="openDrawer()" aria-label="Open menu">☰</button>
-  <div class="header-left">
-    <div class="header-label">// Market Intelligence</div>
-    <h1>Crypto <span>Metrics</span></h1>
-    <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
-  </div>
-  <div class="header-search">
-    <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
-    <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
-  </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
-  </div>
-  </div>
-  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-  </div>
-</header>
-
-<!-- Mobile horizontal chips -->
-<div class="mobile-chips">
-  <button class="chip active" data-filter="all" onclick="setCategory('all')">All</button>
-  <button class="chip" data-filter="bitcoin" onclick="setCategory('bitcoin')">Bitcoin</button>
-  <button class="chip" data-filter="layer1" onclick="setCategory('layer1')">Layer 1</button>
-  <button class="chip" data-filter="payments" onclick="setCategory('payments')">Payments</button>
-  <button class="chip" data-filter="emerging" onclick="setCategory('emerging')">Emerging</button>
-  <button class="chip" data-filter="infra" onclick="setCategory('infra')">Infra</button>
-  <button class="chip" data-filter="meme" onclick="setCategory('meme')">Meme</button>
-  <button class="chip" data-filter="ai" onclick="setCategory('ai')">AI Tokens</button>
+<div class="header-inner">
+<button aria-label="Open menu" class="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+<div class="header-label">// Market Intelligence</div>
+<h1>Crypto <span>Metrics</span></h1>
+<div class="header-sub"><span id="stock-count">—</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
+
+
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+<div class="filter-bar" id="filter-bar"></div><div class="search-count-bar"><input id="metrics-search" oninput="filterMetrics(this.value)" placeholder="Search ticker or company..." type="text"/><span class="row-count">Showing <span id="metrics-count">—</span> stocks</span></div></header>
+<!-- Mobile horizontal chips -->
 
 <div class="page-body">
 <div class="page-main">
 <div class="container">
-
-  <div class="table-wrap">
-    <table id="metrics-table">
-      <thead>
-        <tr>
-          <th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
-          <th class="sortable" onclick="sortMetrics('name', this)">Company</th>
-          <th class="sortable" onclick="sortMetrics('category', this)">Category</th>
-          <th class="sortable num-col" onclick="sortMetrics('price', this)" data-tip-title="Price" data-tip="Current share price converted to GBP.">Price</th>
-          <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP billions.">Market Cap</th>
-          <th class="sortable num-col" onclick="sortMetrics('ytd', this)" data-tip-title="YTD Return" data-tip="Year-to-date price change from the first trading day of 2026.">YTD</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1d', this)" data-tip-title="1-Day Return" data-tip="Price change over the last trading session.">1D</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1w', this)" data-tip-title="1-Week Return" data-tip="Price change over the last 5 trading days.">1W</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1m', this)" data-tip-title="1-Month Return" data-tip="Price change over the last month.">1M</th>
-          <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market.">Beta</th>
-          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio — how much investors pay per £1 of profit.">P/E Ratio</th>
-          <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume (7d)" data-tip="7-day average 24h trading volume (CoinGecko), in USD millions.">Avg Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Most recent day's trading volume (CoinGecko), in USD millions.">1D Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="7-Day Volume" data-tip="Cumulative trading volume over the past 7 days (CoinGecko), in USD millions.">1W Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1m', this)" data-tip-title="30-Day Volume" data-tip="Cumulative trading volume over the past 30 days (CoinGecko), in USD millions.">1M Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('div_yield', this)" data-tip-title="Dividend Yield" data-tip="Annual dividend paid as a percentage of the current share price.">Div Yield</th>
-          <th class="sortable num-col" onclick="sortMetrics('short_pct', this)" data-tip-title="Short Interest" data-tip="Percentage of available shares currently sold short.">Short %</th>
-          <th class="sortable" onclick="sortMetrics('analyst_score', this)" data-tip-title="Analyst Rating" data-tip="Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell.">Analyst</th>
-        </tr>
-      </thead>
-      <tbody id="metrics-body"></tbody>
-    </table>
-  </div>
-
-
+<div class="table-wrap">
+<table id="metrics-table">
+<thead>
+<tr>
+<th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
+<th class="sortable" onclick="sortMetrics('name', this)">Company</th>
+<th class="sortable" onclick="sortMetrics('category', this)">Category</th>
+<th class="sortable num-col" data-tip="Current share price converted to GBP." data-tip-title="Price" onclick="sortMetrics('price', this)">Price</th>
+<th class="sortable num-col sort-desc" data-tip="Total market value of all outstanding shares, converted to GBP billions." data-tip-title="Market Cap" onclick="sortMetrics('market_cap', this)">Market Cap</th>
+<th class="sortable num-col" data-tip="Year-to-date price change from the first trading day of 2026." data-tip-title="YTD Return" onclick="sortMetrics('ytd', this)">YTD</th>
+<th class="sortable num-col" data-tip="Price change over the last trading session." data-tip-title="1-Day Return" onclick="sortMetrics('change_1d', this)">1D</th>
+<th class="sortable num-col" data-tip="Price change over the last 5 trading days." data-tip-title="1-Week Return" onclick="sortMetrics('change_1w', this)">1W</th>
+<th class="sortable num-col" data-tip="Price change over the last month." data-tip-title="1-Month Return" onclick="sortMetrics('change_1m', this)">1M</th>
+<th class="sortable num-col" data-tip="Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market." data-tip-title="Beta" onclick="sortMetrics('beta', this)">Beta</th>
+<th class="sortable num-col" data-tip="Price-to-Earnings ratio — how much investors pay per £1 of profit." data-tip-title="P/E Ratio" onclick="sortMetrics('pe_ratio', this)">P/E Ratio</th>
+<th class="sortable num-col" data-tip="7-day average 24h trading volume (CoinGecko), in USD millions." data-tip-title="Avg Daily Volume (7d)" onclick="sortMetrics('avg_volume', this)">Avg Vol</th>
+<th class="sortable num-col" data-tip="Most recent day's trading volume (CoinGecko), in USD millions." data-tip-title="1-Day Volume" onclick="sortMetrics('vol_1d', this)">1D Vol</th>
+<th class="sortable num-col" data-tip="Cumulative trading volume over the past 7 days (CoinGecko), in USD millions." data-tip-title="7-Day Volume" onclick="sortMetrics('vol_1w', this)">1W Vol</th>
+<th class="sortable num-col" data-tip="Cumulative trading volume over the past 30 days (CoinGecko), in USD millions." data-tip-title="30-Day Volume" onclick="sortMetrics('vol_1m', this)">1M Vol</th>
+<th class="sortable num-col" data-tip="Annual dividend paid as a percentage of the current share price." data-tip-title="Dividend Yield" onclick="sortMetrics('div_yield', this)">Div Yield</th>
+<th class="sortable num-col" data-tip="Percentage of available shares currently sold short." data-tip-title="Short Interest" onclick="sortMetrics('short_pct', this)">Short %</th>
+<th class="sortable" data-tip="Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell." data-tip-title="Analyst Rating" onclick="sortMetrics('analyst_score', this)">Analyst</th>
+</tr>
+</thead>
+<tbody id="metrics-body"></tbody>
+</table>
 </div>
-
+</div>
 <script src="prices-data.js"></script>
 <script>
   const NAMES = {
@@ -828,22 +794,17 @@
     });
   });
 </script>
-
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
-
 </div><!-- /.right-side -->
-
 <!-- Mobile drawer overlay -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
-  <div class="drawer" onclick="event.stopPropagation()">
-    <div class="left-rail">
+<div class="drawer" onclick="event.stopPropagation()">
+<div class="left-rail">
 </div>
-
 <!-- Bottom tabs (mobile) -->
 <div class="bottom-tabs" id="bottom-tabs">
-  <div class="bottom-tabs-inner">
+<div class="bottom-tabs-inner">
 </div>
-
-</body>
+</div></div></div></body>
 </html>
