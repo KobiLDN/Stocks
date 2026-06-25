@@ -82,7 +82,6 @@ const _RAIL_ITEMS = [
   { key: 'Tech',    label: 'Technology',  icon: '💻', path: 'Tech/index.html',     badge: 'Live' },
   { key: 'Crypto',  label: 'Crypto',      icon: '₿',  path: 'Crypto/index.html',   badge: 'Live' },
   { key: 'Energy',  label: 'Energy',      icon: '⚡', path: 'Energy/index.html',   badge: 'Live' },
-  { key: 'market',  label: 'Market',      icon: '💹', path: 'index.html#market-section', badge: 'Live' },
   { key: 'rss',     label: 'RSS Feed',    icon: '📰', path: 'rss.html',            badge: 'Live' },
 ];
 
