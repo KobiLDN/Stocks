@@ -105,8 +105,22 @@
   .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
   .tab-btn:hover  { color: var(--accent); }
   .tab-icon { font-size: 16px; line-height: 1; }
-  .news-toolbar { padding: 8px 14px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 0; }
-  .news-toolbar .row-count { margin-left: 0; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
   @media (max-width: 900px) {
     .nav-panel { width: 52px; }
     .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none !important; }
@@ -121,7 +135,7 @@
     .nav-panel { display: none !important; }
     .hamburger { display: flex; }
     .bottom-tabs { display: block; }
-    #news-search, .news-toolbar .row-count { display: none; }
+    #news-search, .search-count-bar .row-count { display: none; }
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -180,9 +194,8 @@
 
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-<div class="filter-bar" id="filter-bar"></div><div class="news-toolbar">
-<input id="news-search" oninput="filterNews(this.value)" placeholder="Search ticker, company or headline..." type="text"/>
-<span class="row-count">Showing <span id="news-count">—</span> headlines</span>
+<div class="filter-bar" id="filter-bar"></div>
+<div class="controls-row">
 <span class="sort-label">Sort</span>
 <div class="sort-group" id="sort-group">
 <button class="sort-btn active" data-sort="newest" onclick="setSort('newest', this)">Newest</button>
@@ -196,6 +209,10 @@
 <button class="sort-btn active" data-window="day" onclick="setWindow('day', this)">Last 24h</button>
 <button class="sort-btn" data-window="week" onclick="setWindow('week', this)">Last Week</button>
 </div>
+</div>
+<div class="search-count-bar">
+<input id="news-search" oninput="filterNews(this.value)" placeholder="Search ticker, company or headline..." type="text"/>
+<span class="row-count">Showing <span id="news-count">—</span> headlines</span>
 </div>
 </header>
 
