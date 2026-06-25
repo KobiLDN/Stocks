@@ -75,8 +75,8 @@ function buildStickyTop() {
 // ── Shared nav: left rail + bottom tabs ───────────────────────────────────────
 const _RAIL_ITEMS = [
   { key: 'hub',     label: 'Stock Hub',   icon: '⊞',  path: 'index.html',         badge: null },
-  { key: 'all',     label: 'All Sectors', icon: '🌐', path: 'All/index.html',      badge: null },
   { key: 'rss',     label: 'RSS Feed',    icon: '📰', path: 'rss.html',            badge: null },
+  { key: 'all',     label: 'All Sectors', icon: '🌐', path: 'All/index.html',      badge: null },
   { key: 'AI',      label: 'AI Infra',    icon: '🤖', path: 'AI/index.html',       badge: null },
   { key: 'Biotech', label: 'Biotech',     icon: '🧬', path: 'Biotech/index.html',  badge: null },
   { key: 'Crypto',  label: 'Crypto',      icon: '₿',  path: 'Crypto/index.html',   badge: null },
