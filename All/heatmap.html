@@ -268,8 +268,9 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
   leaves.forEach(d => {
     const w = d.x1 - d.x0, h = d.y1 - d.y0;
     const vs = fmtPct(getVal(d.data, metricId));
-    const tRaw = Math.min((w * 0.60) / (d.data.ticker.length * CW), h * 0.30, 30);
-    const vRaw = Math.min((w * 0.60) / (vs.length * CW),            h * 0.22, 18);
+    d._label = d.data.ticker + (d.data.sector === 'crypto' ? '(c)' : '');
+    const tRaw = Math.min((w * 0.60) / (d._label.length * CW), h * 0.30, 30);
+    const vRaw = Math.min((w * 0.60) / (vs.length * CW),       h * 0.22, 18);
     d._tfs = (tRaw >= 8  && w >= 26 && h >= 18) ? tRaw : 0;
     d._vfs = (d._tfs > 0 && vRaw >= 7 && h >= 32) ? vRaw : 0;
     d._vs  = vs;
@@ -284,7 +285,7 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
     .attr('font-family', 'IBM Plex Sans, sans-serif').attr('font-weight', '400')
     .attr('font-size', d => d._tfs || 0)
     .attr('fill', d => d._tfs ? '#ffffff' : 'transparent')
-    .text(d => d.data.ticker);
+    .text(d => d._label);
 
   tileG.append('text')
     .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
