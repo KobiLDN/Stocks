@@ -214,15 +214,21 @@ function buildDashboardHeader() {
     : '<span>' + name + '</span>';
 
   const pd      = window.PRICES_DATA || window['__pd_' + sector] || {};
-  const count   = (pd.stocks || []).length || '—';
-  const updated = pd.updated || '—';
+  const count   = (pd.stocks || []).length || null;
+  const updated = pd.updated || null;
 
   const headerLeft = document.querySelector('.header-left');
-  if (headerLeft) {
+  if (headerLeft && headerLeft.children.length > 0) {
+    // Content already hardcoded — just refresh the dynamic spans
+    const sc = document.getElementById('sector-count');
+    if (sc && count) sc.textContent = count;
+    const ts = document.getElementById('data-bar-ts');
+    if (ts && updated) ts.textContent = updated;
+  } else if (headerLeft) {
     headerLeft.innerHTML =
       '<div class="header-label">// Market Intelligence</div>' +
       '<h1>' + titleHTML + '</h1>' +
-      '<div class="header-sub">' + count + ' stocks · Last updated ' + updated + '</div>';
+      '<div class="header-sub">' + (count || '—') + ' stocks · Last updated ' + (updated || '—') + '</div>';
   }
 
   const headerBlocks = document.querySelector('.header-blocks');
