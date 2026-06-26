@@ -545,6 +545,7 @@
     }));
     buildFilterBar(stocks);
     renderTable();
+    const sc = document.getElementById('stock-count'); if (sc) sc.textContent = stocks.length;
   }
 
   if (window.PRICES_DATA) {
