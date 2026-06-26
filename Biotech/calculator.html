@@ -240,7 +240,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Biotech <span>Calculator</span></h1>
-    <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026 · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="calc-total">—</span> stocks · If you invested 1 Jan 2026 · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -447,6 +447,7 @@
       .filter(s => s.ytdPct !== 0);
 
     window._calcData = data;
+    const _ct = document.getElementById('calc-total'); if (_ct) _ct.textContent = data.length;
     buildFilterBar();
     applyFilters();
   }
