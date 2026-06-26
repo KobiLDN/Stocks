@@ -409,7 +409,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Sectors</span></h1>
-    <div class="header-sub"><span id="sector-count">192</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="sector-count">191</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -703,6 +703,8 @@ window.addEventListener('DOMContentLoaded', () => {
     if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + data.updated;
     document.getElementById('total-count').textContent = data.stocks.length;
     const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(data.stocks.map(s => s.ticker)).size;
+    const headerSc = document.getElementById('sector-count'); if (headerSc) headerSc.textContent = data.stocks.length;
+    const headerTs = document.getElementById('data-bar-ts'); if (headerTs && data.updated) headerTs.textContent = data.updated;
     buildTable(data.stocks);
     const returnTh = document.querySelector('th[onclick*="\'return\'"]');
     sortState.col = 'return';

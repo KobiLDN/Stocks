@@ -16,7 +16,11 @@
 
 ## Done
 
-- **Shared nav — single source of truth** — `buildNav()` in `shared.js` generates left rail (10 pills) + bottom tabs (8 tabs) for every page from URL detection; `_RAIL_ITEMS` + `_SECTOR_PAGES` arrays are the single config; zero changes to individual HTML files to update nav
+- **Header subtitle standardization — all 52 pages** — `header-blocks` div (top-right timestamp block) removed from all sector/All pages; `data-bar-ts` moved inline into `.header-sub`; subtitle pattern uniform across all 7 page types; `buildDashboardHeader()` in `shared.js` now detects existing hardcoded `.header-left` content and only refreshes dynamic spans; 0 unwired subtitle spans confirmed by static audit; Crypto uses "coins" throughout; All/index.html wires `#sector-count` + `#data-bar-ts` in async callback
+
+- **RSS Feed renamed to News Feed at /news URL** — `rss.html` → `news.html`; rail label + path updated in `shared.js`; all links on hub updated
+
+- **Shared nav — single source of truth** — `buildNav()` in `shared.js` generates left rail (10 pills) + bottom tabs (8 tabs) for every page from URL detection; `_RAIL_ITEMS` + `_SECTOR_PAGES` arrays are the single config; zero changes to individual HTML files to update nav; trailing-slash URLs (e.g. `/AI/`) correctly normalized to `index.html`
 
 - **Mobile nav on Stock Hub** — hamburger + drawer + 8-tab bottom bar at ≤640px; matches sector page pattern; Hub left rail extends to ticker tape (layout restructured to `flex-direction:row`)
 

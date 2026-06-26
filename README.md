@@ -12,7 +12,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 | Biotech | 30 (9 categories) | Live | [stocks-4qw.pages.dev/Biotech/](https://stocks-4qw.pages.dev/Biotech/) |
 | Defence & Aerospace | 29 (6 categories) | Live | [stocks-4qw.pages.dev/Defence/](https://stocks-4qw.pages.dev/Defence/) |
 | Technology | 31 (6 categories) | Live | [stocks-4qw.pages.dev/Tech/](https://stocks-4qw.pages.dev/Tech/) |
-| Crypto | 34 (7 categories) | Live | [stocks-4qw.pages.dev/Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
+| Crypto | 33 (7 categories) | Live | [stocks-4qw.pages.dev/Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
 | Energy | 20 (5 categories) | Live | [stocks-4qw.pages.dev/Energy/](https://stocks-4qw.pages.dev/Energy/) |
 | All Sectors | 192 stocks combined | Live | [stocks-4qw.pages.dev/All/](https://stocks-4qw.pages.dev/All/) |
 
@@ -22,7 +22,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 |---|---|---|
 | Hub | Sector cards + Top 20 signals panel | [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/) |
 | Market | Regime banner, SPY/QQQ/VIX cards + charts, sector heatmap, Leaders/Fallers | [stocks-4qw.pages.dev/market](https://stocks-4qw.pages.dev/market) |
-| RSS Feed | Cross-sector news feed | [stocks-4qw.pages.dev/rss](https://stocks-4qw.pages.dev/rss) |
+| News Feed | Cross-sector news feed | [stocks-4qw.pages.dev/news](https://stocks-4qw.pages.dev/news) |
 | Exports | Daily JSON/CSV snapshots | [stocks-4qw.pages.dev/exports/](https://stocks-4qw.pages.dev/exports/) |
 
 ## Repo structure
@@ -30,9 +30,9 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 ```
 ├── index.html              ← hub landing page (sector cards + top 20 signals panel)
 ├── market.html             ← Market overview page (regime banner, SPY/QQQ/VIX, heatmap)
-├── rss.html                ← cross-sector RSS news feed page
+├── news.html               ← cross-sector news feed page (FT · Reuters · BBC · Guardian · sentiment scored)
 ├── shared.css              ← shared stylesheet loaded by all sector pages
-├── shared.js               ← shared JS (toggleTheme, buildTape)
+├── shared.js               ← shared JS (toggleTheme, buildTape, buildNav, buildDashboardHeader, buildDataBar)
 ├── momentum_screener.py    ← cross-sector momentum screener (1Y + YTD thresholds)
 ├── update_market.py        ← fetches SPY/QQQ/VIX via yfinance → market-data.js + market.json
 ├── generate_export.py      ← builds daily JSON/CSV snapshot across all sectors
@@ -62,7 +62,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 │   ├── update-prices.yml      ← prices: 3× daily weekdays (08:00/14:30/20:30 UTC)
 │   ├── generate-signals.yml   ← signals: Mon/Wed/Fri 07:00 UTC via OpenRouter
 │   ├── generate-export.yml    ← export: 22:00 UTC weekdays
-│   └── generate-news-feed.yml ← RSS feed: 3× daily weekdays
+│   └── generate-news-feed.yml ← News feed: 3× daily weekdays
 ├── AGENTS.md               ← contributor guide (read first)
 ├── WORKFLOW.md             ← dev → main shipping process
 ├── CHANGELOG.md            ← change history (newest first)
