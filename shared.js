@@ -101,7 +101,9 @@ function buildNav() {
   const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
   const sector  = SECTORS.find(s => parts[0] === s) || null;
   const inAll   = parts[0] === 'All';
-  const file    = parts[parts.length - 1] || 'index.html';
+  // Normalise trailing-slash URLs: /AI/ → file='index.html', not 'AI'
+  const _rawFile = parts[parts.length - 1] || '';
+  const file = (!_rawFile || SECTORS.includes(_rawFile) || _rawFile === 'All') ? 'index.html' : _rawFile;
   const isHub   = !sector && !inAll && (parts.length === 0 || file === 'index.html');
   const isRSS   = !sector && !inAll && file === 'news.html';
   const root    = (sector || inAll) ? '../' : '';  // prefix to reach repo root
