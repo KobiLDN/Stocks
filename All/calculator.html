@@ -29,22 +29,23 @@
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
 
   /* Search + count bar */
-  .search-count-bar { display: flex; align-items: center; gap: 16px; padding: 6px 16px; border-top: 1px solid var(--border); }
-  #calc-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
-  #calc-search:focus { border-color: var(--accent); }
-  #calc-search::placeholder { color: var(--muted); }
-  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
-  .row-count span { color: var(--accent); font-weight: 700; }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
+
 
   /* Table */
   .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
@@ -169,7 +170,6 @@
     .nav-label { display: none !important; }
     .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
     .nav-icon { font-size: 18px; }
-    .header-blocks { display: none; }
   }
   @media (max-width: 600px) {
     body { padding-bottom: 56px; }
@@ -208,14 +208,8 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Calculator</span></h1>
-    <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
+    <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026 · Last updated <span id="data-bar-ts">—</span></div>
 </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
-  </div>
-  </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 

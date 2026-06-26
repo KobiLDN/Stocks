@@ -12,23 +12,33 @@
 <style>
 
 
-  /* Search + count bar */
-  .search-count-bar { display: flex; align-items: center; gap: 16px; padding: 6px 16px; border-top: 1px solid var(--border); }
-  #calc-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
+  /* Filter bar chips */
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  #calc-search:focus { border-color: var(--accent); }
-  #calc-search::placeholder { color: var(--muted); }
-  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
-  .row-count span { color: var(--accent); font-weight: 700; }
+  .filter-btn:hover  { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+
+  /* Search + count bar */
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
+
 
   /* Table */
   .table-wrap {
@@ -223,7 +233,6 @@
     .nav-label { display: none !important; }
     .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
     .nav-icon { font-size: 18px; }
-    .header-blocks { display: none; }
   }
   @media (max-width: 600px) {
     body { padding-bottom: 56px; }
@@ -268,20 +277,15 @@
 <div class="header-left">
   <div class="header-label">// Market Intelligence</div>
   <h1>Technology <span>Calculator</span></h1>
-  <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
-</div>
-<div class="header-blocks">
-<div class="header-block">
-<div class="header-block-label">Prices Last Updated</div>
-<div class="header-block-value" id="data-bar-ts">—</div>
-</div>
+  <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026 · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-  <div class="search-count-bar">
-    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
-    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
-  </div>
+<div class="filter-bar" id="filter-bar"></div>
+<div class="search-count-bar">
+<input id="calc-search" oninput="filterCalc(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
+</div>
 </header>
 
 <div class="page-body">
@@ -397,13 +401,41 @@
   }
 
   /* ---- FILTER ---- */
-  function filterCalc(query) {
-    const q = query.toLowerCase().trim();
-    const filtered = q
-      ? window._calcData.filter(s => s.ticker.toLowerCase().includes(q) || s.name.toLowerCase().includes(q))
-      : window._calcData;
-    renderTable(filtered);
+  /* ---- FILTER ---- */
+  let activeCategory = 'all';
+  let activeQuery    = '';
+
+  function buildFilterBar() {
+    const bar = document.getElementById('filter-bar');
+    if (!bar) return;
+    const cats = ['all', ...Object.keys(CAT_LABELS)];
+    bar.innerHTML = cats.map(cat => {
+      const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
+      return '<button class="filter-btn' + (cat === activeCategory ? ' active' : '') +
+             '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+    }).join('');
   }
+
+  function setCategory(cat) {
+    activeCategory = cat;
+    document.querySelectorAll('#filter-bar .filter-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.cat === cat));
+    applyFilters();
+  }
+
+  function filterCalc(query) {
+    activeQuery = query.toLowerCase().trim();
+    applyFilters();
+  }
+
+  function applyFilters() {
+    let data = window._calcData;
+    if (activeCategory !== 'all') data = data.filter(s => s.category === activeCategory);
+    if (activeQuery) data = data.filter(s =>
+      s.ticker.toLowerCase().includes(activeQuery) || s.name.toLowerCase().includes(activeQuery));
+    renderTable(data);
+  }
+
 
   /* ---- RENDER ---- */
   function renderTable(data) {
@@ -459,7 +491,8 @@
       .filter(s => s.ytdPct !== 0);
 
     window._calcData = data;
-    renderTable(data);
+    buildFilterBar();
+    applyFilters();
   }
 
   if (window.PRICES_DATA) {

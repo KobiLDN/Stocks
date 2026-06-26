@@ -383,7 +383,6 @@
     .nav-label { display: none !important; }
     .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
     .nav-icon { font-size: 18px; }
-    .header-blocks { display: none; }
   }
   @media (max-width: 600px) {
     body { padding-bottom: 56px; }
@@ -426,13 +425,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Crypto <span>Signals</span></h1>
-    <div class="header-sub">Top 10 ranked picks · AI-generated · powered by <span class="model" id="model-name">—</span></div>
-  </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Last Refreshed</div>
-  <div class="header-block-value" id="signals-ts">—</div>
-  </div>
+    <div class="header-sub">Top 10 ranked picks · AI-generated · powered by <span class="model" id="model-name">—</span> · Last refreshed <span id="signals-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
