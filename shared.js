@@ -75,7 +75,7 @@ function buildStickyTop() {
 // ── Shared nav: left rail + bottom tabs ───────────────────────────────────────
 const _RAIL_ITEMS = [
   { key: 'hub',     label: 'Stock Hub',   icon: '⊞',  path: 'index.html',         badge: null },
-  { key: 'rss',     label: 'RSS Feed',    icon: '📰', path: 'rss.html',            badge: null },
+  { key: 'rss',     label: 'News Feed',    icon: '📰', path: 'news.html',            badge: null },
   { key: 'all',     label: 'All Sectors', icon: '🌐', path: 'All/index.html',      badge: null },
   { key: 'AI',      label: 'AI',           icon: '🤖', path: 'AI/index.html',       badge: null },
   { key: 'Biotech', label: 'Biotech',     icon: '🧬', path: 'Biotech/index.html',  badge: null },
@@ -103,7 +103,7 @@ function buildNav() {
   const inAll   = parts[0] === 'All';
   const file    = parts[parts.length - 1] || 'index.html';
   const isHub   = !sector && !inAll && (parts.length === 0 || file === 'index.html');
-  const isRSS   = !sector && !inAll && file === 'rss.html';
+  const isRSS   = !sector && !inAll && file === 'news.html';
   const root    = (sector || inAll) ? '../' : '';  // prefix to reach repo root
 
   // Active rail key
@@ -180,7 +180,7 @@ function buildNav() {
       { label: 'Biotech', icon: '🧬', action: `window.location='Biotech/index.html'` },
       { label: 'Defence', icon: '🛡️', action: `window.location='Defence/index.html'` },
       { label: 'Tech',    icon: '💻', action: `window.location='Tech/index.html'` },
-      { label: 'RSS',     icon: '📰', action: ``, active: true },
+      { label: 'News',    icon: '📰', action: ``, active: true },
     ];
     tabsHTML = RSS_TABS.map(t =>
       `<button class="tab-btn${t.active ? ' active' : ''}" ${t.action ? `onclick="${t.action}"` : 'disabled'}>` +
