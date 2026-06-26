@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-26 07:37",
-  "fx_gbp_usd": 1.3202,
+  "updated": "2026-06-26 12:00",
+  "fx_gbp_usd": 1.3223,
   "stocks": [
     {
       "ticker": "XOM",
@@ -9,15 +9,15 @@
       "exchange": "NYSE",
       "price_gbp": "104",
       "price_usd": 137.55,
-      "change_1d": "+0.87%",
+      "change_1d": "-0.04%",
       "change_1w": "-2.27%",
       "change_1m": "-8.18%",
       "change_ytd": "+13.66%",
       "return_1yr": "+26%",
       "low_gbp": "80",
-      "high_gbp": "134",
+      "high_gbp": "133",
       "bar_pct": 45,
-      "market_cap_gbp_b": 431.845,
+      "market_cap_gbp_b": 431.167,
       "beta": 0.149,
       "pe_ratio": 23.16,
       "avg_volume_m": 19.08,
@@ -28,44 +28,8 @@
       "vol_1d": 13288800,
       "vol_1w": 107047800,
       "vol_1m": 389119800,
-      "news": [
-        {
-          "title": "A Supreme Court Decision Revives Exxon\u2019s (XOM) Billion-Dollar Cuba Claim",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/energy/articles/supreme-court-decision-revives-exxon-013341783.html",
-          "published": 1782437621,
-          "sentiment": 0.735
-        },
-        {
-          "title": "Exxon Mobil (XOM) Stock After Recent Pullback Is The Market Pricing Cash Flows Correctly",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/exxon-mobil-xom-stock-recent-001617159.html",
-          "published": 1782432977,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Prediction: You Won't Recognize ExxonMobil in 2040",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/25/prediction-you-wont-recognize-exxonmobil-in-2040/",
-          "published": 1782408300,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Exxon, Chevron investors cautious after oil news",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/xom-exxon-cvx-chevron-general-license-x",
-          "published": 1782398220,
-          "sentiment": -0.103
-        },
-        {
-          "title": "Stock Market News for Jun 25, 2026",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-news-jun-25-132300370.html",
-          "published": 1782393780,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": 0.126
+      "news": [],
+      "news_sentiment": null
     },
     {
       "ticker": "CVX",
@@ -74,15 +38,15 @@
       "exchange": "NYSE",
       "price_gbp": "130",
       "price_usd": 172.24,
-      "change_1d": "+0.57%",
+      "change_1d": "-0.01%",
       "change_1w": "-3.01%",
       "change_1m": "-6.75%",
       "change_ytd": "+12.58%",
       "return_1yr": "+20%",
       "low_gbp": "108",
-      "high_gbp": "163",
+      "high_gbp": "162",
       "bar_pct": 41,
-      "market_cap_gbp_b": 259.827,
+      "market_cap_gbp_b": 259.419,
       "beta": 0.472,
       "pe_ratio": 30.01,
       "avg_volume_m": 10.37,
@@ -137,9 +101,9 @@
       "company_name": "Shell",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "59",
+      "price_gbp": "58",
       "price_usd": 77.33,
-      "change_1d": "-0.49%",
+      "change_1d": "+0.25%",
       "change_1w": "-3.79%",
       "change_1m": "-9.06%",
       "change_ytd": "+4.40%",
@@ -147,7 +111,7 @@
       "low_gbp": "52",
       "high_gbp": "72",
       "bar_pct": 33,
-      "market_cap_gbp_b": 162.364,
+      "market_cap_gbp_b": 162.109,
       "beta": -0.248,
       "pe_ratio": 12.05,
       "avg_volume_m": 7.7,
@@ -204,7 +168,7 @@
       "exchange": "NYSE",
       "price_gbp": "29",
       "price_usd": 37.72,
-      "change_1d": "-0.36%",
+      "change_1d": "-0.50%",
       "change_1w": "-6.03%",
       "change_1m": "-11.56%",
       "change_ytd": "+7.86%",
@@ -212,7 +176,7 @@
       "low_gbp": "23",
       "high_gbp": "37",
       "bar_pct": 43,
-      "market_cap_gbp_b": 73.571,
+      "market_cap_gbp_b": 73.456,
       "beta": -0.239,
       "pe_ratio": 30.42,
       "avg_volume_m": 10.89,
@@ -224,6 +188,13 @@
       "vol_1w": 56195000,
       "vol_1m": 217188500,
       "news": [
+        {
+          "title": "Spain authorises $240m Hy2USE reallocation for Castell\u00f3n hydrogen hub",
+          "publisher": "Energy Monitor",
+          "url": "https://www.energymonitor.ai/news/spain-reallocation-castellon-hydrogen-hub/",
+          "published": 1782468925,
+          "sentiment": 0.0
+        },
         {
           "title": "BP Is Reshaping Its Entire Business Structure\u2014What Management Is Trying to Achieve",
           "publisher": "Insider Monkey",
@@ -251,13 +222,6 @@
           "url": "https://finance.yahoo.com/energy/articles/bp-deepens-middle-east-gas-131843451.html",
           "published": 1782393523,
           "sentiment": 0.0
-        },
-        {
-          "title": "Chevron CFO pushes back on Trump gas price-gouging probe",
-          "publisher": "Quartz",
-          "url": "https://qz.com/chevron-cfo-trump-gas-prices-gouging-062526",
-          "published": 1782388349,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.005
@@ -269,7 +233,7 @@
       "exchange": "NYSE",
       "price_gbp": "59",
       "price_usd": 78.28,
-      "change_1d": "-0.97%",
+      "change_1d": "-0.01%",
       "change_1w": "-4.68%",
       "change_1m": "-13.06%",
       "change_ytd": "+18.96%",
@@ -277,7 +241,7 @@
       "low_gbp": "43",
       "high_gbp": "71",
       "bar_pct": 57,
-      "market_cap_gbp_b": 131.815,
+      "market_cap_gbp_b": 131.608,
       "beta": 0.045,
       "pe_ratio": 11.61,
       "avg_volume_m": 1.66,
@@ -334,7 +298,7 @@
       "exchange": "NYSE",
       "price_gbp": "24",
       "price_usd": 31.56,
-      "change_1d": "-0.44%",
+      "change_1d": "+0.67%",
       "change_1w": "-6.52%",
       "change_1m": "-16.38%",
       "change_ytd": "+31.60%",
@@ -342,7 +306,7 @@
       "low_gbp": "17",
       "high_gbp": "33",
       "bar_pct": 44,
-      "market_cap_gbp_b": 59.515,
+      "market_cap_gbp_b": 59.421,
       "beta": -0.752,
       "pe_ratio": 14.28,
       "avg_volume_m": 4.95,
@@ -354,6 +318,13 @@
       "vol_1w": 20522500,
       "vol_1m": 85703800,
       "news": [
+        {
+          "title": "Equinor submits Wisting oilfield EIA for public review",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/equinor-wisting-oil-field-eia-public-review/",
+          "published": 1782471032,
+          "sentiment": 0.0
+        },
         {
           "title": "Equinor Advances Wisting Project With Environmental Review Proposal",
           "publisher": "Oilprice.com",
@@ -381,25 +352,18 @@
           "url": "https://finance.yahoo.com/markets/options/articles/options-traders-betting-big-move-132800911.html",
           "published": 1782221280,
           "sentiment": 0.0
-        },
-        {
-          "title": "Energy Transition Update - Solar Success Powers Sustainable Growth In The Carolinas",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/energy-transition-solar-success-powers-113733997.html",
-          "published": 1782214653,
-          "sentiment": 0.813
         }
       ],
-      "news_sentiment": 0.297
+      "news_sentiment": 0.134
     },
     {
       "ticker": "COP",
       "company_name": "ConocoPhillips",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "81",
+      "price_gbp": "80",
       "price_usd": 106.41,
-      "change_1d": "+0.86%",
+      "change_1d": "-0.03%",
       "change_1w": "-4.32%",
       "change_1m": "-8.72%",
       "change_ytd": "+11.72%",
@@ -407,7 +371,7 @@
       "low_gbp": "65",
       "high_gbp": "103",
       "bar_pct": 41,
-      "market_cap_gbp_b": 98.194,
+      "market_cap_gbp_b": 98.039,
       "beta": 0.106,
       "pe_ratio": 18.04,
       "avg_volume_m": 8.19,
@@ -419,6 +383,13 @@
       "vol_1w": 52144500,
       "vol_1m": 174153700,
       "news": [
+        {
+          "title": "3 Profitable Stocks with Solid Fundamentals",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-profitable-stocks-solid-fundamentals-075225644.html",
+          "published": 1782460345,
+          "sentiment": 0.542
+        },
         {
           "title": "ConocoPhillips (COP) Plans General Counsel Kelly B. Rose Retirement For 2026",
           "publisher": "Simply Wall St.",
@@ -446,16 +417,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/nabors-industries-propetro-shares-falling-233625366.html",
           "published": 1782344185,
           "sentiment": 0.153
-        },
-        {
-          "title": "SM Energy, Kosmos Energy, and Tenaris Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/sm-energy-kosmos-energy-tenaris-232825000.html",
-          "published": 1782343705,
-          "sentiment": 0.494
         }
       ],
-      "news_sentiment": 0.412
+      "news_sentiment": 0.422
     },
     {
       "ticker": "OXY",
@@ -464,7 +428,7 @@
       "exchange": "NYSE",
       "price_gbp": "39",
       "price_usd": 51.21,
-      "change_1d": "+0.47%",
+      "change_1d": "-0.00%",
       "change_1w": "-3.45%",
       "change_1m": "-10.47%",
       "change_ytd": "+21.97%",
@@ -472,7 +436,7 @@
       "low_gbp": "29",
       "high_gbp": "51",
       "bar_pct": 43,
-      "market_cap_gbp_b": 38.58,
+      "market_cap_gbp_b": 38.52,
       "beta": 0.124,
       "pe_ratio": 69.2,
       "avg_volume_m": 13.17,
@@ -529,7 +493,7 @@
       "exchange": "NYSE",
       "price_gbp": "101",
       "price_usd": 133.59,
-      "change_1d": "+1.17%",
+      "change_1d": "-0.74%",
       "change_1w": "+0.26%",
       "change_1m": "-1.92%",
       "change_ytd": "+26.70%",
@@ -537,7 +501,7 @@
       "low_gbp": "77",
       "high_gbp": "115",
       "bar_pct": 64,
-      "market_cap_gbp_b": 53.895,
+      "market_cap_gbp_b": 53.81,
       "beta": 0.256,
       "pe_ratio": 13.14,
       "avg_volume_m": 4.01,
@@ -594,15 +558,15 @@
       "exchange": "NYSE",
       "price_gbp": "192",
       "price_usd": 253.56,
-      "change_1d": "+3.48%",
+      "change_1d": "-0.56%",
       "change_1w": "+3.66%",
       "change_1m": "+2.22%",
       "change_ytd": "+54.90%",
       "return_1yr": "+51%",
-      "low_gbp": "120",
+      "low_gbp": "119",
       "high_gbp": "206",
       "bar_pct": 83,
-      "market_cap_gbp_b": 56.068,
+      "market_cap_gbp_b": 55.98,
       "beta": 0.522,
       "pe_ratio": 16.69,
       "avg_volume_m": 2.33,
@@ -659,7 +623,7 @@
       "exchange": "NYSE",
       "price_gbp": "193",
       "price_usd": 255.06,
-      "change_1d": "+6.07%",
+      "change_1d": "+0.20%",
       "change_1w": "+6.38%",
       "change_1m": "+5.64%",
       "change_ytd": "+55.97%",
@@ -667,7 +631,7 @@
       "low_gbp": "99",
       "high_gbp": "201",
       "bar_pct": 92,
-      "market_cap_gbp_b": 57.365,
+      "market_cap_gbp_b": 57.275,
       "beta": 0.553,
       "pe_ratio": 18.62,
       "avg_volume_m": 3.17,
@@ -724,15 +688,15 @@
       "exchange": "NYSE",
       "price_gbp": "36",
       "price_usd": 47.42,
-      "change_1d": "+1.67%",
+      "change_1d": "-0.19%",
       "change_1w": "-5.78%",
       "change_1m": "-17.78%",
       "change_ytd": "+19.28%",
       "return_1yr": "+40%",
       "low_gbp": "24",
-      "high_gbp": "45",
+      "high_gbp": "44",
       "bar_pct": 58,
-      "market_cap_gbp_b": 53.699,
+      "market_cap_gbp_b": 53.615,
       "beta": 0.708,
       "pe_ratio": 20.89,
       "avg_volume_m": 15.28,
@@ -744,6 +708,13 @@
       "vol_1w": 143529200,
       "vol_1m": 386938400,
       "news": [
+        {
+          "title": "Should SLB\u2019s (SLB) New Digital Marketplace Strategy Reshape How Investors View Its Platform Ambitions?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/slb-slb-digital-marketplace-strategy-090701451.html",
+          "published": 1782464821,
+          "sentiment": 0.0
+        },
         {
           "title": "Nabors Industries and ProPetro Shares Are Falling, What You Need To Know",
           "publisher": "StockStory",
@@ -771,13 +742,6 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-stock-trades-down-231225265.html",
           "published": 1782342745,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why Baker Hughes (BKR) Stock Is Down Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-baker-hughes-bkr-stock-230425163.html",
-          "published": 1782342265,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.189
@@ -789,7 +753,7 @@
       "exchange": "NYSE",
       "price_gbp": "26",
       "price_usd": 34.67,
-      "change_1d": "+2.39%",
+      "change_1d": "-0.00%",
       "change_1w": "-4.31%",
       "change_1m": "-15.24%",
       "change_ytd": "+18.20%",
@@ -797,7 +761,7 @@
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 62,
-      "market_cap_gbp_b": 21.938,
+      "market_cap_gbp_b": 21.903,
       "beta": 0.704,
       "pe_ratio": 19.15,
       "avg_volume_m": 12.97,
@@ -854,15 +818,15 @@
       "exchange": "NASDAQ",
       "price_gbp": "43",
       "price_usd": 56.94,
-      "change_1d": "+1.37%",
+      "change_1d": "-0.47%",
       "change_1w": "-5.21%",
       "change_1m": "-14.67%",
       "change_ytd": "+21.65%",
       "return_1yr": "+50%",
-      "low_gbp": "29",
+      "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 59,
-      "market_cap_gbp_b": 42.787,
+      "market_cap_gbp_b": 42.719,
       "beta": 0.938,
       "pe_ratio": 18.19,
       "avg_volume_m": 8.17,
@@ -874,6 +838,20 @@
       "vol_1w": 55983800,
       "vol_1m": 179412300,
       "news": [
+        {
+          "title": "Baker Hughes wins contract from Azule Energy for Greater PAJ project",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/baker-hughes-contract-azule-energy-greater-paj/",
+          "published": 1782469718,
+          "sentiment": 0.807
+        },
+        {
+          "title": "Baker Hughes and Mantle Reach Power announce strategic agreement",
+          "publisher": "Energy Global",
+          "url": "https://www.energyglobal.com/other-renewables/26062026/baker-hughes-and-mantle-reach-power-announce-strategic-agreement/?yptr=yahoo",
+          "published": 1782466200,
+          "sentiment": 0.511
+        },
         {
           "title": "Baker Hughes Inks 500 MW Geothermal Deal as AI Drives Electricity Demand, Reuters Says",
           "publisher": "Insider Monkey",
@@ -894,23 +872,9 @@
           "url": "https://finance.yahoo.com/energy/articles/baker-hughes-unlocks-geothermal-opportunity-133000195.html",
           "published": 1782394200,
           "sentiment": 0.421
-        },
-        {
-          "title": "Baker Hughes (BKR) Stock After Recent Pullback Is The Current Valuation Attractive?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/baker-hughes-bkr-stock-recent-111052401.html",
-          "published": 1782385852,
-          "sentiment": 0.44
-        },
-        {
-          "title": "Why Baker Hughes (BKR) Stock Is Down Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-baker-hughes-bkr-stock-230425163.html",
-          "published": 1782342265,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.147
+      "news_sentiment": 0.322
     },
     {
       "ticker": "NEE",
@@ -919,7 +883,7 @@
       "exchange": "NYSE",
       "price_gbp": "66",
       "price_usd": 87.7,
-      "change_1d": "+0.57%",
+      "change_1d": "+0.10%",
       "change_1w": "+2.30%",
       "change_1m": "+0.79%",
       "change_ytd": "+9.90%",
@@ -927,7 +891,7 @@
       "low_gbp": "51",
       "high_gbp": "75",
       "bar_pct": 65,
-      "market_cap_gbp_b": 138.542,
+      "market_cap_gbp_b": 138.324,
       "beta": 0.671,
       "pe_ratio": 22.26,
       "avg_volume_m": 10.87,
@@ -939,6 +903,13 @@
       "vol_1w": 71284700,
       "vol_1m": 271097600,
       "news": [
+        {
+          "title": "The Portfolio That Buys You A New Car Every Three Years",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/06/26/the-portfolio-that-buys-you-a-new-car-every-three-years/",
+          "published": 1782465137,
+          "sentiment": 0.0
+        },
         {
           "title": "The Portfolio That Quietly Pays For Your Midlife Crisis Car",
           "publisher": "24/7 Wall St.",
@@ -966,16 +937,9 @@
           "url": "https://247wallst.com/investing/2026/06/25/forget-xlu-the-grid-fund-actually-powering-the-ai-boom-is-up-23-in-2026/",
           "published": 1782401812,
           "sentiment": -0.226
-        },
-        {
-          "title": "NextEra Energy (NEE) Stock After 28% One-Year Rally And AI Power Demand Buzz",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/nextera-energy-nee-stock-28-120739632.html",
-          "published": 1782389259,
-          "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.013
+      "news_sentiment": -0.017
     },
     {
       "ticker": "SSE.L",
@@ -983,26 +947,26 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2419.0,
-      "change_1d": "+3.02%",
-      "change_1w": "+4.63%",
-      "change_1m": "-1.63%",
-      "change_ytd": "+8.43%",
+      "price_usd": 2391.0,
+      "change_1d": "-0.95%",
+      "change_1w": "+2.84%",
+      "change_1m": "-2.77%",
+      "change_ytd": "+7.17%",
       "return_1yr": "+28%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 70,
-      "market_cap_gbp_b": 0.292,
+      "bar_pct": 68,
+      "market_cap_gbp_b": 0.288,
       "beta": 0.596,
-      "pe_ratio": 23.04,
+      "pe_ratio": 22.77,
       "avg_volume_m": 4.24,
       "div_yield_pct": 284.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 4915037,
-      "vol_1w": 24819921,
-      "vol_1m": 95718773,
+      "vol_1d": 548831,
+      "vol_1w": 17803783,
+      "vol_1m": 96267604,
       "news": [
         {
           "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
@@ -1049,15 +1013,15 @@
       "exchange": "NASDAQ",
       "price_gbp": "36",
       "price_usd": 47.21,
-      "change_1d": "-3.79%",
+      "change_1d": "-1.13%",
       "change_1w": "-1.19%",
       "change_1m": "-29.43%",
       "change_ytd": "+39.88%",
       "return_1yr": "+15%",
-      "low_gbp": "20",
+      "low_gbp": "19",
       "high_gbp": "56",
       "bar_pct": 45,
-      "market_cap_gbp_b": 4.713,
+      "market_cap_gbp_b": 4.706,
       "beta": 1.572,
       "pe_ratio": 46.74,
       "avg_volume_m": 7.92,
@@ -1069,6 +1033,13 @@
       "vol_1w": 38675700,
       "vol_1m": 168495700,
       "news": [
+        {
+          "title": "This Solar Power Stock Still Has a Bright Future",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/solar-power-stock-bright-future-69125145?siteid=yhoof2&yptr=yahoo",
+          "published": 1782451800,
+          "sentiment": 0.44
+        },
         {
           "title": "Here's Why Enphase Energy (ENPH) Fell More Than Broader Market",
           "publisher": "Zacks",
@@ -1096,16 +1067,9 @@
           "url": "https://finance.yahoo.com/energy/articles/enphase-energy-enph-gains-upgrade-134638710.html",
           "published": 1782308798,
           "sentiment": 0.743
-        },
-        {
-          "title": "Enphase Rolls Out IQ9N Microinverters Across the United States",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/enphase-rolls-iq9n-microinverters-across-124200108.html",
-          "published": 1782304920,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.333
+      "news_sentiment": 0.336
     },
     {
       "ticker": "FSLR",
@@ -1114,7 +1078,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "188",
       "price_usd": 248.64,
-      "change_1d": "-0.74%",
+      "change_1d": "+0.89%",
       "change_1w": "-2.42%",
       "change_1m": "-7.89%",
       "change_ytd": "-9.37%",
@@ -1122,7 +1086,7 @@
       "low_gbp": "113",
       "high_gbp": "243",
       "bar_pct": 58,
-      "market_cap_gbp_b": 20.237,
+      "market_cap_gbp_b": 20.205,
       "beta": 1.692,
       "pe_ratio": 16.05,
       "avg_volume_m": 2.5,
@@ -1179,7 +1143,7 @@
       "exchange": "NYSE",
       "price_gbp": "28",
       "price_usd": 37.62,
-      "change_1d": "-1.23%",
+      "change_1d": "+0.62%",
       "change_1w": "+4.56%",
       "change_1m": "-2.73%",
       "change_ytd": "-3.90%",
@@ -1187,7 +1151,7 @@
       "low_gbp": "24",
       "high_gbp": "34",
       "bar_pct": 43,
-      "market_cap_gbp_b": 5.197,
+      "market_cap_gbp_b": 5.189,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.53,
@@ -1242,17 +1206,17 @@
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.65",
+      "price_gbp": "5.64",
       "price_usd": 7.46,
       "change_1d": "+0.95%",
       "change_1w": "-0.67%",
       "change_1m": "-14.94%",
       "change_ytd": "+11.93%",
       "return_1yr": "-49%",
-      "low_gbp": "4.36",
+      "low_gbp": "4.35",
       "high_gbp": "25",
       "bar_pct": 6,
-      "market_cap_gbp_b": 22.394,
+      "market_cap_gbp_b": 22.359,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.13,
