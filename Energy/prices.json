@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-29 07:37",
-  "fx_gbp_usd": 1.3219,
+  "updated": "2026-06-29 13:43",
+  "fx_gbp_usd": 1.323,
   "stocks": [
     {
       "ticker": "XOM",
@@ -9,7 +9,7 @@
       "exchange": "NYSE",
       "price_gbp": "103",
       "price_usd": 136.54,
-      "change_1d": "-0.77%",
+      "change_1d": "-0.38%",
       "change_1w": "-0.92%",
       "change_1m": "-7.68%",
       "change_ytd": "+12.83%",
@@ -17,7 +17,7 @@
       "low_gbp": "80",
       "high_gbp": "133",
       "bar_pct": 44,
-      "market_cap_gbp_b": 428.125,
+      "market_cap_gbp_b": 427.774,
       "beta": 0.149,
       "pe_ratio": 22.99,
       "avg_volume_m": 18.95,
@@ -74,7 +74,7 @@
       "exchange": "NYSE",
       "price_gbp": "129",
       "price_usd": 171.06,
-      "change_1d": "-0.69%",
+      "change_1d": "-0.51%",
       "change_1w": "-1.48%",
       "change_1m": "-6.22%",
       "change_ytd": "+11.81%",
@@ -82,7 +82,7 @@
       "low_gbp": "108",
       "high_gbp": "162",
       "bar_pct": 40,
-      "market_cap_gbp_b": 257.716,
+      "market_cap_gbp_b": 257.505,
       "beta": 0.472,
       "pe_ratio": 29.75,
       "avg_volume_m": 10.35,
@@ -94,6 +94,20 @@
       "vol_1w": 49349400,
       "vol_1m": 203288900,
       "news": [
+        {
+          "title": "Chevron Corporation (CVX) Secures Texas Pacific Land Support on Microsoft\u2019s Project Kilby",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/chevron-corporation-cvx-secures-texas-115410436.html",
+          "published": 1782734050,
+          "sentiment": 0.612
+        },
+        {
+          "title": "AI Comes To the Permian. Two Gas Stocks and One Pipeline Play To Consider.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/ai-permian-data-center-chevron-stock-50002874?siteid=yhoof2&yptr=yahoo",
+          "published": 1782726900,
+          "sentiment": 0.34
+        },
         {
           "title": "The Case For and Against Buying Chevron Right Now",
           "publisher": "Motley Fool",
@@ -114,23 +128,9 @@
           "url": "https://finance.yahoo.com/energy/articles/why-aren-t-gas-prices-193104397.html",
           "published": 1782675064,
           "sentiment": -0.153
-        },
-        {
-          "title": "\u2018We should be at $2.25 at the pump\u2019: Trump says Exxon, Chevron, Shell and BP are price gouging drivers. Do you agree?",
-          "publisher": "Moneywise",
-          "url": "https://finance.yahoo.com/energy/articles/2-25-pump-trump-says-131500941.html",
-          "published": 1782652500,
-          "sentiment": 0.361
-        },
-        {
-          "title": "Is Chevron Impossible to Ignore Right Now? Here's What to Do With It.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/28/is-chevron-impossible-to-ignore-right-now-heres-wh/",
-          "published": 1782650100,
-          "sentiment": -0.361
         }
       ],
-      "news_sentiment": -0.081
+      "news_sentiment": 0.11
     },
     {
       "ticker": "SHEL",
@@ -139,7 +139,7 @@
       "exchange": "NYSE",
       "price_gbp": "58",
       "price_usd": 76.53,
-      "change_1d": "-0.78%",
+      "change_1d": "-0.30%",
       "change_1w": "-2.89%",
       "change_1m": "-8.69%",
       "change_ytd": "+3.32%",
@@ -147,7 +147,7 @@
       "low_gbp": "52",
       "high_gbp": "72",
       "bar_pct": 30,
-      "market_cap_gbp_b": 160.479,
+      "market_cap_gbp_b": 160.347,
       "beta": -0.248,
       "pe_ratio": 11.92,
       "avg_volume_m": 7.66,
@@ -159,6 +159,13 @@
       "vol_1w": 30920676,
       "vol_1m": 148898734,
       "news": [
+        {
+          "title": "Forget Shell Stock, A Pipeline ETF Quietly Pays Retirees 7.79% Every Month and Still Returned 15% This Year",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/29/forget-shell-stock-a-pipeline-etf-quietly-pays-retirees-7-79-every-month-and-still-returned-15-this-year/",
+          "published": 1782722708,
+          "sentiment": -0.226
+        },
         {
           "title": "FNDF Pays Twice Yearly From 800 Global Companies, But Tariffs and Oil Prices Threaten Payouts",
           "publisher": "24/7 Wall St.",
@@ -186,16 +193,9 @@
           "url": "https://finance.yahoo.com/energy/articles/shell-betting-future-ev-charging-013408042.html",
           "published": 1782437648,
           "sentiment": 0.0
-        },
-        {
-          "title": "European Equities Traded in US as ADRs Rise in Thursday Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-equities-traded-us-adrs-150626106.html",
-          "published": 1782399986,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.059
+      "news_sentiment": 0.013
     },
     {
       "ticker": "BP",
@@ -204,15 +204,15 @@
       "exchange": "NYSE",
       "price_gbp": "28",
       "price_usd": 37.13,
-      "change_1d": "-2.06%",
+      "change_1d": "-0.46%",
       "change_1w": "-5.04%",
       "change_1m": "-10.85%",
       "change_ytd": "+6.17%",
       "return_1yr": "+24%",
       "low_gbp": "23",
-      "high_gbp": "37",
+      "high_gbp": "36",
       "bar_pct": 39,
-      "market_cap_gbp_b": 72.328,
+      "market_cap_gbp_b": 72.268,
       "beta": -0.239,
       "pe_ratio": 29.94,
       "avg_volume_m": 10.81,
@@ -269,7 +269,7 @@
       "exchange": "NYSE",
       "price_gbp": "58",
       "price_usd": 76.77,
-      "change_1d": "-1.94%",
+      "change_1d": "-0.43%",
       "change_1w": "-4.55%",
       "change_1m": "-11.41%",
       "change_ytd": "+16.67%",
@@ -277,7 +277,7 @@
       "low_gbp": "43",
       "high_gbp": "71",
       "bar_pct": 53,
-      "market_cap_gbp_b": 129.107,
+      "market_cap_gbp_b": 129.001,
       "beta": 0.045,
       "pe_ratio": 11.39,
       "avg_volume_m": 1.68,
@@ -334,7 +334,7 @@
       "exchange": "NYSE",
       "price_gbp": "23",
       "price_usd": 31.03,
-      "change_1d": "-1.02%",
+      "change_1d": "-0.93%",
       "change_1w": "-4.17%",
       "change_1m": "-14.99%",
       "change_ytd": "+29.39%",
@@ -342,7 +342,7 @@
       "low_gbp": "17",
       "high_gbp": "33",
       "bar_pct": 41,
-      "market_cap_gbp_b": 58.441,
+      "market_cap_gbp_b": 58.393,
       "beta": -0.752,
       "pe_ratio": 14.04,
       "avg_volume_m": 4.86,
@@ -354,6 +354,13 @@
       "vol_1w": 17207500,
       "vol_1m": 84169900,
       "news": [
+        {
+          "title": "Equinor to end offshore wind operations in Japan",
+          "publisher": "Power Technology",
+          "url": "https://www.power-technology.com/news/equinor-end-offshore-wind-japan/",
+          "published": 1782731114,
+          "sentiment": 0.0
+        },
         {
           "title": "Sector Update: Energy Stocks Decline Late Afternoon",
           "publisher": "MT Newswires",
@@ -381,13 +388,6 @@
           "url": "https://finance.yahoo.com/energy/articles/eqnr-exits-japan-offshore-wind-142800928.html",
           "published": 1782484080,
           "sentiment": 0.0
-        },
-        {
-          "title": "Correction: Exchange-Traded Funds, Equity Futures Decline Pre-Bell Friday as Investors Shift Focus From Middle East to Technology Stocks",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/correction-exchange-traded-funds-equity-135811891.html",
-          "published": 1782482291,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.109
@@ -399,7 +399,7 @@
       "exchange": "NYSE",
       "price_gbp": "80",
       "price_usd": 105.96,
-      "change_1d": "-0.45%",
+      "change_1d": "-0.79%",
       "change_1w": "-1.65%",
       "change_1m": "-7.96%",
       "change_ytd": "+11.25%",
@@ -407,7 +407,7 @@
       "low_gbp": "65",
       "high_gbp": "103",
       "bar_pct": 41,
-      "market_cap_gbp_b": 97.653,
+      "market_cap_gbp_b": 97.573,
       "beta": 0.106,
       "pe_ratio": 17.96,
       "avg_volume_m": 8.23,
@@ -464,7 +464,7 @@
       "exchange": "NYSE",
       "price_gbp": "38",
       "price_usd": 49.99,
-      "change_1d": "-2.38%",
+      "change_1d": "-0.68%",
       "change_1w": "-3.53%",
       "change_1m": "-11.72%",
       "change_ytd": "+19.06%",
@@ -472,7 +472,7 @@
       "low_gbp": "29",
       "high_gbp": "51",
       "bar_pct": 39,
-      "market_cap_gbp_b": 37.613,
+      "market_cap_gbp_b": 37.582,
       "beta": 0.124,
       "pe_ratio": 67.55,
       "avg_volume_m": 12.93,
@@ -529,7 +529,7 @@
       "exchange": "NYSE",
       "price_gbp": "100",
       "price_usd": 132.6,
-      "change_1d": "-1.48%",
+      "change_1d": "-0.07%",
       "change_1w": "+2.02%",
       "change_1m": "-1.27%",
       "change_ytd": "+25.76%",
@@ -537,7 +537,7 @@
       "low_gbp": "77",
       "high_gbp": "115",
       "bar_pct": 62,
-      "market_cap_gbp_b": 53.427,
+      "market_cap_gbp_b": 53.383,
       "beta": 0.256,
       "pe_ratio": 13.04,
       "avg_volume_m": 4.03,
@@ -594,15 +594,15 @@
       "exchange": "NYSE",
       "price_gbp": "192",
       "price_usd": 254.06,
-      "change_1d": "-0.37%",
+      "change_1d": "-0.73%",
       "change_1w": "+4.59%",
       "change_1m": "+2.84%",
       "change_ytd": "+55.21%",
       "return_1yr": "+53%",
-      "low_gbp": "120",
+      "low_gbp": "119",
       "high_gbp": "206",
       "bar_pct": 84,
-      "market_cap_gbp_b": 56.107,
+      "market_cap_gbp_b": 56.061,
       "beta": 0.522,
       "pe_ratio": 16.73,
       "avg_volume_m": 2.4,
@@ -659,7 +659,7 @@
       "exchange": "NYSE",
       "price_gbp": "196",
       "price_usd": 259.37,
-      "change_1d": "+1.90%",
+      "change_1d": "-0.62%",
       "change_1w": "+9.76%",
       "change_1m": "+7.92%",
       "change_ytd": "+58.61%",
@@ -667,7 +667,7 @@
       "low_gbp": "99",
       "high_gbp": "201",
       "bar_pct": 95,
-      "market_cap_gbp_b": 58.26,
+      "market_cap_gbp_b": 58.212,
       "beta": 0.553,
       "pe_ratio": 18.95,
       "avg_volume_m": 3.21,
@@ -679,6 +679,13 @@
       "vol_1w": 21351500,
       "vol_1m": 72473100,
       "news": [
+        {
+          "title": "Magic Formula Showdown: Why CVS Beats Qualcomm and Valero for Retirees",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/06/29/magic-formula-showdown-why-cvs-beats-qualcomm-and-valero-for-retirees/",
+          "published": 1782732020,
+          "sentiment": 0.0
+        },
         {
           "title": "Valero Energy (VLO) Advances While Market Declines: Some Information for Investors",
           "publisher": "Zacks",
@@ -706,16 +713,9 @@
           "url": "https://finance.yahoo.com/energy/articles/valero-energy-vlo-stock-tied-080819920.html",
           "published": 1782374899,
           "sentiment": 0.273
-        },
-        {
-          "title": "Chord Energy and Atlas Energy Solutions Shares Are Falling, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/chord-energy-atlas-energy-solutions-235225053.html",
-          "published": 1782345145,
-          "sentiment": 0.67
         }
       ],
-      "news_sentiment": 0.325
+      "news_sentiment": 0.191
     },
     {
       "ticker": "SLB",
@@ -724,7 +724,7 @@
       "exchange": "NYSE",
       "price_gbp": "36",
       "price_usd": 47.0,
-      "change_1d": "-1.07%",
+      "change_1d": "-0.61%",
       "change_1w": "-2.27%",
       "change_1m": "-16.38%",
       "change_ytd": "+18.22%",
@@ -732,7 +732,7 @@
       "low_gbp": "24",
       "high_gbp": "44",
       "bar_pct": 57,
-      "market_cap_gbp_b": 53.155,
+      "market_cap_gbp_b": 53.112,
       "beta": 0.708,
       "pe_ratio": 20.7,
       "avg_volume_m": 15.17,
@@ -789,7 +789,7 @@
       "exchange": "NYSE",
       "price_gbp": "26",
       "price_usd": 34.21,
-      "change_1d": "-1.33%",
+      "change_1d": "-0.55%",
       "change_1w": "-2.06%",
       "change_1m": "-13.24%",
       "change_ytd": "+16.63%",
@@ -797,7 +797,7 @@
       "low_gbp": "15",
       "high_gbp": "33",
       "bar_pct": 60,
-      "market_cap_gbp_b": 21.619,
+      "market_cap_gbp_b": 21.601,
       "beta": 0.704,
       "pe_ratio": 18.9,
       "avg_volume_m": 12.92,
@@ -854,15 +854,15 @@
       "exchange": "NASDAQ",
       "price_gbp": "43",
       "price_usd": 56.56,
-      "change_1d": "-1.14%",
+      "change_1d": "-0.00%",
       "change_1w": "-3.17%",
       "change_1m": "-10.51%",
       "change_ytd": "+20.84%",
       "return_1yr": "+48%",
-      "low_gbp": "29",
+      "low_gbp": "28",
       "high_gbp": "53",
       "bar_pct": 58,
-      "market_cap_gbp_b": 42.447,
+      "market_cap_gbp_b": 42.412,
       "beta": 0.938,
       "pe_ratio": 18.07,
       "avg_volume_m": 8.18,
@@ -919,7 +919,7 @@
       "exchange": "NYSE",
       "price_gbp": "67",
       "price_usd": 88.56,
-      "change_1d": "+1.08%",
+      "change_1d": "+0.06%",
       "change_1w": "+2.09%",
       "change_1m": "+1.78%",
       "change_ytd": "+10.98%",
@@ -927,7 +927,7 @@
       "low_gbp": "51",
       "high_gbp": "75",
       "bar_pct": 68,
-      "market_cap_gbp_b": 139.721,
+      "market_cap_gbp_b": 139.606,
       "beta": 0.671,
       "pe_ratio": 22.48,
       "avg_volume_m": 11.0,
@@ -940,42 +940,42 @@
       "vol_1m": 274991300,
       "news": [
         {
+          "title": "Florida, Pennsylvania, Or California? Which Retiree Keeps The Most Money?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/06/29/florida-pennsylvania-or-california-which-retiree-keeps-the-most-money/",
+          "published": 1782731853,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Here\u2019s How You Can Retire In America\u2019s Pickleball Capital",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/06/29/heres-how-you-can-retire-in-americas-pickleball-capital/",
+          "published": 1782728140,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Let Your Dividends Do The Housework For You. Literally.",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/06/29/let-your-dividends-do-the-housework-for-you-literally/",
+          "published": 1782724364,
+          "sentiment": 0.0
+        },
+        {
+          "title": "AI fuels record $200bn M&A boom in US power sector",
+          "publisher": "Financial Times",
+          "url": "https://finance.yahoo.com/energy/articles/ai-fuels-record-200bn-m-040007730.html",
+          "published": 1782705607,
+          "sentiment": 0.0
+        },
+        {
           "title": "The Ultimate AI Power Supercycle Winner: NextEra Energy or Vistra Stock?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/coverage/better-buy/2026/06/28/the-ultimate-ai-power-supercycle-winner-nextera-energy-or-vistra-stock/",
           "published": 1782660448,
           "sentiment": 0.71
-        },
-        {
-          "title": "Why Today\u2019s Retirees May Need More Stocks Than Their Parents Did",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/06/28/why-todays-retirees-may-need-more-stocks-than-their-parents-did/",
-          "published": 1782645104,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why Paying Off Your Mortgage Early May Be A Retirement Mistake",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/06/28/why-paying-off-your-mortgage-early-may-be-a-retirement-mistake/",
-          "published": 1782640466,
-          "sentiment": -0.34
-        },
-        {
-          "title": "NextEra Energy (NEE) Is Buying Dominion As AI Data Center Demand Builds",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/nextera-energy-nee-buying-dominion-050550753.html",
-          "published": 1782623150,
-          "sentiment": 0.153
-        },
-        {
-          "title": "Dominion Energy (D) Price Target Lowered at Barclays. Here is Why",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/dominion-energy-d-price-target-050406531.html",
-          "published": 1782623046,
-          "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.135
+      "news_sentiment": 0.142
     },
     {
       "ticker": "SSE.L",
@@ -983,26 +983,26 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2421.0,
-      "change_1d": "+0.08%",
-      "change_1w": "+4.13%",
-      "change_1m": "-1.55%",
-      "change_ytd": "+8.52%",
+      "price_usd": 2450.0,
+      "change_1d": "+1.87%",
+      "change_1w": "+4.39%",
+      "change_1m": "+5.11%",
+      "change_ytd": "+9.82%",
       "return_1yr": "+32%",
       "low_gbp": "16",
       "high_gbp": "28",
-      "bar_pct": 70,
-      "market_cap_gbp_b": 0.292,
+      "bar_pct": 73,
+      "market_cap_gbp_b": 0.295,
       "beta": 0.596,
-      "pe_ratio": 23.06,
+      "pe_ratio": 23.33,
       "avg_volume_m": 4.23,
       "div_yield_pct": 284.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 3475661,
-      "vol_1w": 20730613,
-      "vol_1m": 99194434,
+      "vol_1d": 1680176,
+      "vol_1w": 19977443,
+      "vol_1m": 91039064,
       "news": [
         {
           "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
@@ -1049,15 +1049,15 @@
       "exchange": "NASDAQ",
       "price_gbp": "36",
       "price_usd": 47.58,
-      "change_1d": "-0.36%",
+      "change_1d": "+0.49%",
       "change_1w": "-8.99%",
       "change_1m": "-32.30%",
       "change_ytd": "+40.98%",
       "return_1yr": "+20%",
-      "low_gbp": "20",
+      "low_gbp": "19",
       "high_gbp": "56",
       "bar_pct": 45,
-      "market_cap_gbp_b": 4.744,
+      "market_cap_gbp_b": 4.74,
       "beta": 1.572,
       "pe_ratio": 47.11,
       "avg_volume_m": 7.95,
@@ -1114,7 +1114,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "181",
       "price_usd": 239.07,
-      "change_1d": "-2.99%",
+      "change_1d": "-0.18%",
       "change_1w": "-7.23%",
       "change_1m": "-12.64%",
       "change_ytd": "-12.86%",
@@ -1122,7 +1122,7 @@
       "low_gbp": "120",
       "high_gbp": "243",
       "bar_pct": 50,
-      "market_cap_gbp_b": 19.433,
+      "market_cap_gbp_b": 19.417,
       "beta": 1.692,
       "pe_ratio": 15.43,
       "avg_volume_m": 2.49,
@@ -1163,14 +1163,14 @@
           "sentiment": 0.0
         },
         {
-          "title": "Mizuho Raises its Price Target on First Solar (FSLR)",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/mizuho-raises-price-target-first-092245000.html",
-          "published": 1782120165,
-          "sentiment": 0.0
+          "title": "Barclays Just Upgraded Enphase Energy. Here's Why.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/2585451/barclays-just-upgraded-enphase-energy-here-s-why",
+          "published": 1782143621,
+          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": 0.182
     },
     {
       "ticker": "BEPC",
@@ -1179,7 +1179,7 @@
       "exchange": "NYSE",
       "price_gbp": "29",
       "price_usd": 37.71,
-      "change_1d": "+0.86%",
+      "change_1d": "+0.03%",
       "change_1w": "+0.77%",
       "change_1m": "-2.77%",
       "change_ytd": "-3.67%",
@@ -1187,7 +1187,7 @@
       "low_gbp": "24",
       "high_gbp": "34",
       "bar_pct": 43,
-      "market_cap_gbp_b": 5.203,
+      "market_cap_gbp_b": 5.198,
       "beta": 1.15,
       "pe_ratio": null,
       "avg_volume_m": 1.53,
@@ -1252,7 +1252,7 @@
       "low_gbp": "4.35",
       "high_gbp": "25",
       "bar_pct": 6,
-      "market_cap_gbp_b": 21.886,
+      "market_cap_gbp_b": 21.868,
       "beta": 0.634,
       "pe_ratio": null,
       "avg_volume_m": 0.13,
