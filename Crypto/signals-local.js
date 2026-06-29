@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-26 11:26",
+  "updated": "2026-06-29 13:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "KAITO",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "KAITO is the top momentum asset with +23.07% 1W and +26.92% 1M, +15.24% YTD, and a small \u00a30.107B market cap offering high beta potential in the AI narrative.",
+      "drivers": [
+        "+23.07% 1W momentum",
+        "+26.92% 1M momentum",
+        "AI narrative high-beta small cap",
+        "positive YTD +15.24%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "TRX is the sole asset with positive YTD (+13.68%) and 1Y (+14%) returns, supported by strong news sentiment (0.249) and a healthy \u00a323.2B market cap, showing resilient relative strength.",
+      "drivers": [
+        "positive YTD +13.68%",
+        "positive 1Y +14%",
+        "strong news sentiment 0.249",
+        "resilient price action"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SOL shows a strong 1D bounce +3.47% and modest 1W -1.37%, with positive news sentiment 0.224 and a large \u00a331.96B market cap, making it a leading L1 recovery play.",
+      "drivers": [
+        "+3.47% 1D bounce",
+        "positive news sentiment 0.224",
+        "large-cap L1 liquidity",
+        "modest 1W drawdown"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "OCEAN has exceptional 1W momentum (+11.97%) and moderate 1M decline (-7.71%), outperforming most AI tokens. Its small cap and data-economy narrative offer asymmetric upside.",
+      "drivers": [
+        "+11.97% 1W momentum",
+        "moderate 1M drawdown -7.71%",
+        "AI data-economy narrative",
+        "small-cap asymmetry"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AVAX leads L1s with +5.70% 1W and +4.72% 1D gains, signaling short-term momentum reversal. A \u00a32.16B market cap provides room for leveraged upside if momentum sustains.",
+      "drivers": [
+        "+5.70% 1W momentum",
+        "+4.72% 1D gain",
+        "short-term reversal signal",
+        "mid-cap L1"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TAO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TAO has minimal YTD drawdown (-5.13%) and a +0.21% 1D tick, with bullish mainstream coverage comparing it to Bitcoin's scarcity. The \u00a31.74B market cap positions it well for AI narrative re-rating.",
+      "drivers": [
+        "minimal YTD drawdown -5.13%",
+        "positive mainstream coverage",
+        "AI narrative scarcity play",
+        "mid-cap DePIN leader"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ETH has positive news sentiment (0.328) and a +1.06% 1D bounce; its \u00a3144B market cap makes it the core L2/liquidity proxy. Capitulation signals on BTC may precede a broader market recovery led by ETH.",
+      "drivers": [
+        "positive news sentiment 0.328",
+        "L2 ecosystem leader",
+        "core liquidity proxy",
+        "capitulation bottom setup"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "BTC is range-bound near $60,100 with whale accumulation underway and analyst capitulation signals historically marking cycle bottoms. A \u00a3911B market cap provides stability; ETF outflows are a near-term headwind.",
+      "drivers": [
+        "whale accumulation signal",
+        "capitulation bottom pattern",
+        "historical cycle low indicator",
+        "largest market cap \u00a3911B"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "NMR has positive 1M momentum (+0.38%) despite broader AI weakness, with minimal YTD decline (-10.65%). A tiny \u00a30.048B cap means high beta to any AI data narrative revival.",
+      "drivers": [
+        "positive 1M momentum +0.38%",
+        "small-cap high beta",
+        "AI data narrative",
+        "resilient relative performance"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BNB holds a \u00a356.5B market cap with modest drawdown and slight positive news sentiment (0.06). It remains a liquid exchange-backed L1 with potential to stabilise as crypto risk appetite returns.",
+      "drivers": [
+        "large-cap \u00a356.5B stability",
+        "exchange-backed narrative",
+        "modest 1M -16.82%",
+        "near-zero 1D change"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "OCEAN",
@@ -126,139 +259,6 @@ window.SIGNALS_DATA = {
         "1M +29.49%",
         "AI token selloff",
         "high risk"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TRX",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "TRX is the only asset with positive YTD (+15.53%) and 1Y (+16%) returns in a market where nearly everything is down; it held up best during the chip selloff, down only -0.90% on the day and up +3.33% on the week [analyticsinsight.net](https://www.analyticsinsight.net/price-analysis/crypto-prices-today-bitcoin-holds-near-62557-as-nasdaq-tech-selloff-triggers-717m-in-liquidations-eth-slips-below-1800).",
-      "drivers": [
-        "positive YTD and 1Y returns",
-        "best weekly performer in risk-off",
-        "low-fee network absorbs transfer volume",
-        "strong relative strength vs peers"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XLM",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "XLM boasts exceptional 1-month momentum of +27.67% YTD and a YTD of -4.06% that massively outperforms the broader market; its 1Y return of -4% is the second-best in the snapshot despite a weekly pullback.",
-      "drivers": [
-        "+27.67% one-month momentum",
-        "nearly flat YTD vs -28% for BTC",
-        "strong 1Y relative outperformance",
-        "low market cap \u00a35B offers upside"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BNB lost only -0.39% on the day and -4.60% on the week, the second-best among majors after TRX, with a 1M decline of -12.47% far less severe than ETH or SOL; its \u00a359B market cap and BNB Chain ecosystem give it defensive strength.",
-      "drivers": [
-        "resilient intraday and weekly price action",
-        "outperforming other large-cap L1s",
-        "low 1M drawdown vs peers",
-        "large market cap base"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "NMR is one of the few assets with positive short-term momentum\u2014+6.00% 1M and +3.84% 1W\u2014coupled with a shallow 1Y drawdown of -7% and tiny market cap of \u00a30.05B that amplifies any positive narrative.",
-      "drivers": [
-        "+6% one-month and +3.84% one-week gains",
-        "near-flat YTD at -7.07%",
-        "micro-cap with high beta potential",
-        "positive momentum in a risk-off market"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "HBAR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "HBAR's -0.07% one-day change and -3.92% weekly drop are among the mildest in the universe, while its 1Y return of -27% is far better than most altcoins; the \u00a32.56B market cap and enterprise Hashgraph narrative provide a floor.",
-      "drivers": [
-        "near flat daily price action",
-        "better 1Y return than most peers",
-        "resilient during broad sell-off",
-        "enterprise adoption catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "RNDR is the best-performing asset in the entire snapshot on a YTD basis (+24.03%) and 1Y (+24%), showing strong relative strength even though it has pulled back -21.11% in the last month.",
-      "drivers": [
-        "+24% YTD \u2014 best in universe",
-        "+24% 1Y return",
-        "AI + GPU rendering narrative",
-        "resilient long-term momentum"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "TAO has positive YTD (+1.52%) and 1Y (+2%) returns, making it one of only three assets with gains over both periods; its \u00a31.86B market cap and leading AI subnet protocol position it well if the AI narrative recovers.",
-      "drivers": [
-        "positive YTD and 1Y returns",
-        "top-3 performer by long-term metrics",
-        "leading AI narrative exposure",
-        "decent market cap liquidity"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NEAR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "NEAR has the highest 1Y return in the universe at +31% and YTD of +30.57%, but recent weakness (-16.80% 1M) tempers near-term conviction; positive news sentiment of 0.103 supports the AI-L1 thesis.",
-      "drivers": [
-        "+31% 1Y return \u2014 best in snapshot",
-        "+30.57% YTD",
-        "positive news sentiment 0.103",
-        "AI-focused L1 narrative"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BTC is the reference asset and is showing signs of holding a fragile floor near \u00a347.5K amid extreme fear (Fear & Greed 23); the \u00a3953B market cap and ETF outflows of $6B over 30 days suggest it's deeply oversold and poised for a mean-reversion bounce.",
-      "drivers": [
-        "extreme fear zone (23/100)",
-        "largest market cap \u2014 ultimate safety",
-        "$6B ETF outflows in 30 days = oversold",
-        "potential mean reversion setup"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ARKM",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "ARKM has a tiny market cap of \u00a30.021B and is flat on the day (+0.26%); while -31% YTD is poor, its micro-cap and on-chain analytics narrative could benefit from a rotation into AI assets if the chip sell-off stabilizes.",
-      "drivers": [
-        "micro-cap with high upside",
-        "positive intraday price action",
-        "on-chain AI analytics narrative",
-        "potential risk-on rotation candidate"
       ]
     }
   ]
