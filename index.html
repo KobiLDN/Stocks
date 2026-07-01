@@ -106,13 +106,6 @@
 
     .header-brand { flex-shrink: 0; }
 
-    /* ── Header info blocks ── */
-    .header-blocks { display: flex; align-items: stretch; margin-left: auto; margin-right: 16px; }
-    .header-block { padding: 6px 24px; border-left: 1px solid var(--border); display: flex; flex-direction: column; justify-content: center; gap: 4px; }
-    .header-block-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
-    .header-block-value { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; }
-    .header-block-value .accent { color: var(--accent); }
-
 
     .header-label {
       font-family: 'IBM Plex Mono', monospace;
@@ -620,14 +613,13 @@
 
     @media (max-width: 900px) {
       h1 { font-size: 22px; }
-      .header-sub { display: none; }
+      .header-sub { font-size: 9px; }
     }
     @media (max-width: 640px) {
       body { padding-bottom: 56px; }
       .left-rail { display: none; }
       .hamburger { display: flex; }
       .bottom-tabs { display: block; }
-      .header-blocks { display: none; }
       .card-grid { grid-template-columns: 1fr; }
       .pt-name { display: none; }
       main { padding: 12px 14px; }
@@ -746,18 +738,7 @@
       <div class="header-brand">
         <div class="header-label">// Market Intelligence</div>
         <h1>Stocks <span>Hub</span></h1>
-        <div class="header-sub">Market · SPY · QQQ · VIX · Sectors · Top 20 Signals</div>
-      </div>
-
-      <div class="header-blocks">
-        <div class="header-block">
-          <div class="header-block-label">Universe</div>
-          <div class="header-block-value" id="hb-universe">— stocks · — sectors</div>
-        </div>
-        <div class="header-block">
-          <div class="header-block-label">Prices Last Updated</div>
-          <div class="header-block-value" id="hb-updated">—</div>
-        </div>
+        <div class="header-sub"><span id="hub-stock-count">—</span> stocks · <span id="hub-sector-count">—</span> sectors · Last updated <span id="hub-updated-ts">—</span></div>
       </div>
 
       <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="flex-shrink:0;">☾</button>
@@ -1397,9 +1378,11 @@
       if (window.MARKET_DATA && window.MARKET_DATA.updated) dates.push(window.MARKET_DATA.updated);
       const latest = dates[dates.length - 1];
       const totalStocks = new Set(hubResults.flatMap(r => Object.keys(r.priceMap))).size;
-      const el = document.getElementById('hb-universe');
-      if (el) el.innerHTML = `<span class="accent">${totalStocks}</span> stocks · <span class="accent">${hubResults.length}</span> sectors`;
-      const elUp = document.getElementById('hb-updated');
+      const scEl = document.getElementById('hub-stock-count');
+      if (scEl) scEl.textContent = totalStocks;
+      const secEl = document.getElementById('hub-sector-count');
+      if (secEl) secEl.textContent = hubResults.length;
+      const elUp = document.getElementById('hub-updated-ts');
       if (elUp && latest) elUp.textContent = latest;
     }
 
