@@ -1099,6 +1099,25 @@
       { key: 'crypto',  label: 'Crypto',     icon: '₿',  cls: 'sec-crypto',  page: 'Crypto/index.html',  path: 'Crypto/prices-data.js'  },
       { key: 'energy',  label: 'Energy',     icon: '⚡', cls: 'sec-energy',  page: 'Energy/index.html',  path: 'Energy/prices-data.js'  },
     ];
+    // Crypto tickers need CoinGecko, not Yahoo — same map as Crypto/index.html
+    const COINGECKO_IDS = {
+      'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+      'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+      'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+      'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+      'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+      'TAO': 'bittensor', 'FET': 'fetch-ai', 'RNDR': 'render-token',
+      'OCEAN': 'ocean-protocol', 'GRT': 'the-graph', 'AGIX': 'singularitynet',
+      'NMR': 'numeraire', 'ALT': 'altlayer', 'AIOZ': 'aioz-network',
+      'ARKM': 'arkham', 'WLD': 'worldcoin-wld', 'NEAR': 'near',
+      'ICP': 'internet-computer', 'KAITO': 'kaito', 'VIRTUAL': 'virtual-protocol',
+    };
+    function tickerUrl(s) {
+      if (s.sectorCls === 'sec-crypto') {
+        return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[s.ticker] || s.ticker.toLowerCase());
+      }
+      return 'https://finance.yahoo.com/quote/' + encodeURIComponent(s.ticker) + '/';
+    }
     const REGIMES = {
       normal:     { cls: 'regime-normal',     title: 'NORMAL · BUY THE DIP' },
       high_fear:  { cls: 'regime-fear',       title: 'ELEVATED FEAR · HOLD' },
@@ -1211,7 +1230,7 @@
 
     function moverRow(s, spy1w) {
       const v = pctNum(s.change_1w), vs = v !== null && spy1w !== null ? v - spy1w : null;
-      return `<tr><td class="ticker-cell"><a class="ticker-link" href="https://finance.yahoo.com/quote/${encodeURIComponent(s.ticker)}/" target="_blank" rel="noopener">${s.ticker}</a></td>` +
+      return `<tr><td class="ticker-cell"><a class="ticker-link" href="${tickerUrl(s)}" target="_blank" rel="noopener">${s.ticker}</a></td>` +
         `<td><span class="sec-badge ${s.sectorCls}">${s.sectorLabel}</span></td>` +
         `<td class="num ${pctCls(v)}">${pctStr(v)}</td><td class="num ${pctCls(vs)}">${vs === null ? '—' : (vs > 0 ? '+' : '') + vs.toFixed(2)}</td></tr>`;
     }
