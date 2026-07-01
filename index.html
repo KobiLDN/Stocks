@@ -548,6 +548,11 @@
     .tv-card-hdr { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--text); padding: 8px 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
     .tv-card-hdr .tv-sym { color: var(--muted); }
     .tv-widget { height: 320px; }
+    .tv-note {
+      font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; line-height: 1.55;
+      color: var(--muted); padding: 12px 14px; border-top: 1px solid var(--border);
+    }
+    .tv-note strong { color: var(--text); }
     .tv-tf-group { display: flex; gap: 6px; }
     .tv-tf-btn {
       font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1.5px;
@@ -778,16 +783,28 @@
         <span class="sec-hdr-label">Live Charts</span>
         <div class="tv-tf-group" id="tv-tf-group">
           <button class="tv-tf-btn" data-tf="1D" onclick="setTvTimeframe('1D')">1D</button>
-          <button class="tv-tf-btn" data-tf="1W" onclick="setTvTimeframe('1W')">1W</button>
-          <button class="tv-tf-btn active" data-tf="1M" onclick="setTvTimeframe('1M')">1M</button>
+          <button class="tv-tf-btn active" data-tf="1W" onclick="setTvTimeframe('1W')">1W</button>
+          <button class="tv-tf-btn" data-tf="1M" onclick="setTvTimeframe('1M')">1M</button>
           <button class="tv-tf-btn" data-tf="1Y" onclick="setTvTimeframe('1Y')">1Y</button>
         </div>
         <span class="sec-hdr-line"></span>
       </div>
       <div class="tv-grid">
-        <div class="tv-card"><div class="tv-card-hdr">SPY <span class="tv-sym">AMEX:SPY</span></div><div class="tv-widget" id="tv-spy"></div></div>
-        <div class="tv-card"><div class="tv-card-hdr">QQQ <span class="tv-sym">NASDAQ:QQQ</span></div><div class="tv-widget" id="tv-qqq"></div></div>
-        <div class="tv-card"><div class="tv-card-hdr">VIX <span class="tv-sym">CAPITALCOM:VIX</span></div><div class="tv-widget" id="tv-vix"></div></div>
+        <div class="tv-card">
+          <div class="tv-card-hdr">SPY <span class="tv-sym">AMEX:SPY</span></div>
+          <div class="tv-widget" id="tv-spy"></div>
+          <div class="tv-note"><strong>S&amp;P 500 ETF.</strong> Tracks the 500 largest US public companies. The most widely watched gauge of overall US stock market health — when people say "the market is up/down," this is usually what they mean.</div>
+        </div>
+        <div class="tv-card">
+          <div class="tv-card-hdr">QQQ <span class="tv-sym">NASDAQ:QQQ</span></div>
+          <div class="tv-widget" id="tv-qqq"></div>
+          <div class="tv-note"><strong>Nasdaq 100 ETF.</strong> Tracks 100 of the largest non-financial companies on the Nasdaq — heavily weighted toward tech and growth. A proxy for sentiment on AI, semiconductors, and Big Tech specifically.</div>
+        </div>
+        <div class="tv-card">
+          <div class="tv-card-hdr">VIX <span class="tv-sym">CAPITALCOM:VIX</span></div>
+          <div class="tv-widget" id="tv-vix"></div>
+          <div class="tv-note"><strong>The "Fear Index."</strong> Measures how much volatility options traders expect in the S&amp;P 500 over the next 30 days. Low (below ~18) = calm markets; high (above ~25) = fear and uncertainty. Tends to spike when SPY/QQQ fall sharply.</div>
+        </div>
       </div>
 
       <div class="sec-hdr"><span class="sec-hdr-label">Sector Heatmap · 1-Week Average</span><span class="sec-hdr-line"></span></div>
@@ -1141,7 +1158,7 @@
       '1M': { interval: 'D',  range: '1M'  },
       '1Y': { interval: 'W',  range: '12M' },
     };
-    let tvTimeframe = '1M';
+    let tvTimeframe = '1W';
 
     function setTvTimeframe(tf) {
       if (tf === tvTimeframe) return;
@@ -1153,7 +1170,7 @@
 
     function buildWidgets() {
       if (typeof TradingView === 'undefined') return;
-      const tf = TV_TF_MAP[tvTimeframe] || TV_TF_MAP['1M'];
+      const tf = TV_TF_MAP[tvTimeframe] || TV_TF_MAP['1W'];
       [{ id: 'tv-spy', sym: 'AMEX:SPY' }, { id: 'tv-qqq', sym: 'NASDAQ:QQQ' }, { id: 'tv-vix', sym: 'CAPITALCOM:VIX' }].forEach((w, i) => {
         document.getElementById(w.id).innerHTML = '';
         setTimeout(() => {
