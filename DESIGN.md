@@ -563,7 +563,7 @@ Charts pages include `<span id="data-bar-ts">—</span>` in `.header-sub` — fi
 </div>
 ```
 
-**"All" mode** renders a `display:grid; grid-template-columns: repeat(6,1fr)` with a header row of sector labels followed by 3 stock rows (top 3 per sector by `market_cap_gbp_b`). Chart height 200px.
+**"All" mode** renders a `display:grid; grid-template-columns: repeat(6,1fr)` with a header row of sector labels followed by 3 stock rows (top 3 per sector by `market_cap_usd_b`). Chart height 200px.
 
 **Single-sector mode** renders a `chart-grid` with `repeat(auto-fill, minmax(320px, 1fr))`. Chart height 220px.
 

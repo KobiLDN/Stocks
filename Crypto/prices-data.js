@@ -60,7 +60,10 @@ window.PRICES_DATA = {
           "sentiment": -0.153
         }
       ],
-      "news_sentiment": -0.142
+      "news_sentiment": -0.142,
+      "low_usd": 59715.3874,
+      "high_usd": 124778.4806,
+      "market_cap_usd_b": 1201.852
     },
     {
       "ticker": "ETH",
@@ -127,7 +130,10 @@ window.PRICES_DATA = {
           "sentiment": -0.153
         }
       ],
-      "news_sentiment": -0.114
+      "news_sentiment": -0.114,
+      "low_usd": 1564.5376,
+      "high_usd": 4829.717,
+      "market_cap_usd_b": 190.291
     },
     {
       "ticker": "SOL",
@@ -194,7 +200,10 @@ window.PRICES_DATA = {
           "sentiment": -0.273
         }
       ],
-      "news_sentiment": 0.185
+      "news_sentiment": 0.185,
+      "low_usd": 62.1058,
+      "high_usd": 247.1018,
+      "market_cap_usd_b": 41.95
     },
     {
       "ticker": "BNB",
@@ -261,7 +270,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.02
+      "news_sentiment": 0.02,
+      "low_usd": 560.2736,
+      "high_usd": 1312.1502,
+      "market_cap_usd_b": 75.999
     },
     {
       "ticker": "ADA",
@@ -328,7 +340,10 @@ window.PRICES_DATA = {
           "sentiment": -0.273
         }
       ],
-      "news_sentiment": -0.055
+      "news_sentiment": -0.055,
+      "low_usd": 0.143504,
+      "high_usd": 0.963301,
+      "market_cap_usd_b": 5.375
     },
     {
       "ticker": "AVAX",
@@ -367,7 +382,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.0,
+      "low_usd": 5.893444,
+      "high_usd": 35.6778,
+      "market_cap_usd_b": 2.755
     },
     {
       "ticker": "XRP",
@@ -434,7 +452,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.104
+      "news_sentiment": 0.104,
+      "low_usd": 1.042188,
+      "high_usd": 3.554566,
+      "market_cap_usd_b": 64.92
     },
     {
       "ticker": "XLM",
@@ -465,7 +486,10 @@ window.PRICES_DATA = {
       "vol_1w": 1646172546,
       "vol_1m": 19922509935,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.143372,
+      "high_usd": 0.502925,
+      "market_cap_usd_b": 6.018
     },
     {
       "ticker": "TRX",
@@ -504,7 +528,10 @@ window.PRICES_DATA = {
           "sentiment": 0.249
         }
       ],
-      "news_sentiment": 0.249
+      "news_sentiment": 0.249,
+      "low_usd": 0.269301,
+      "high_usd": 0.375542,
+      "market_cap_usd_b": 30.279
     },
     {
       "ticker": "SUI",
@@ -543,7 +570,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.0,
+      "low_usd": 0.682239,
+      "high_usd": 4.320978,
+      "market_cap_usd_b": 2.78
     },
     {
       "ticker": "HBAR",
@@ -574,7 +604,10 @@ window.PRICES_DATA = {
       "vol_1w": 403117240,
       "vol_1m": 3152416260,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.073338,
+      "high_usd": 0.290708,
+      "market_cap_usd_b": 3.177
     },
     {
       "ticker": "ALGO",
@@ -605,7 +638,10 @@ window.PRICES_DATA = {
       "vol_1w": 240202671,
       "vol_1m": 1385796021,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.081002,
+      "high_usd": 0.321232,
+      "market_cap_usd_b": 0.749
     },
     {
       "ticker": "MINA",
@@ -636,7 +672,10 @@ window.PRICES_DATA = {
       "vol_1w": 29783967,
       "vol_1m": 324378479,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.038585,
+      "high_usd": 0.237852,
+      "market_cap_usd_b": 0.05
     },
     {
       "ticker": "POL",
@@ -667,7 +706,10 @@ window.PRICES_DATA = {
       "vol_1w": 318375267,
       "vol_1m": 1395966586,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.072016,
+      "high_usd": 0.289387,
+      "market_cap_usd_b": 0.761
     },
     {
       "ticker": "DOT",
@@ -698,7 +740,10 @@ window.PRICES_DATA = {
       "vol_1w": 597265411,
       "vol_1m": 3958640126,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.84226,
+      "high_usd": 4.545616,
+      "market_cap_usd_b": 1.44
     },
     {
       "ticker": "LINK",
@@ -751,7 +796,10 @@ window.PRICES_DATA = {
           "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.032
+      "news_sentiment": 0.032,
+      "low_usd": 7.241272,
+      "high_usd": 26.428,
+      "market_cap_usd_b": 5.328
     },
     {
       "ticker": "DOGE",
@@ -818,7 +866,10 @@ window.PRICES_DATA = {
           "sentiment": -0.807
         }
       ],
-      "news_sentiment": 0.13
+      "news_sentiment": 0.13,
+      "low_usd": 0.074791,
+      "high_usd": 0.289387,
+      "market_cap_usd_b": 11.581
     },
     {
       "ticker": "PEPE",
@@ -849,7 +900,10 @@ window.PRICES_DATA = {
       "vol_1w": 945509194,
       "vol_1m": 5577143496,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 2e-06,
+      "high_usd": 1.4e-05,
+      "market_cap_usd_b": 0.982
     },
     {
       "ticker": "TAO",
@@ -880,7 +934,10 @@ window.PRICES_DATA = {
       "vol_1w": 2347436422,
       "vol_1m": 7722014180,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 145.354,
+      "high_usd": 498.1678,
+      "market_cap_usd_b": 2.367
     },
     {
       "ticker": "FET",
@@ -911,7 +968,10 @@ window.PRICES_DATA = {
       "vol_1w": 395657167,
       "vol_1m": 3608598284,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.141258,
+      "high_usd": 0.842392,
+      "market_cap_usd_b": 0.395
     },
     {
       "ticker": "RNDR",
@@ -942,7 +1002,10 @@ window.PRICES_DATA = {
       "vol_1w": 330455517,
       "vol_1m": 2487658169,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 1.20961,
+      "high_usd": 4.585258,
+      "market_cap_usd_b": 0.799
     },
     {
       "ticker": "OCEAN",
@@ -973,7 +1036,10 @@ window.PRICES_DATA = {
       "vol_1w": 276998,
       "vol_1m": 1982877,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.08708,
+      "high_usd": 0.368406,
+      "market_cap_usd_b": null
     },
     {
       "ticker": "GRT",
@@ -1004,7 +1070,10 @@ window.PRICES_DATA = {
       "vol_1w": 108261406,
       "vol_1m": 479790365,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.017971,
+      "high_usd": 0.116019,
+      "market_cap_usd_b": 0.196
     },
     {
       "ticker": "AGIX",
@@ -1035,7 +1104,10 @@ window.PRICES_DATA = {
       "vol_1w": 66718,
       "vol_1m": 691893,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.017839,
+      "high_usd": 0.365367,
+      "market_cap_usd_b": null
     },
     {
       "ticker": "NMR",
@@ -1066,7 +1138,10 @@ window.PRICES_DATA = {
       "vol_1w": 49441525,
       "vol_1m": 194118792,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 6.303078,
+      "high_usd": 21.1424,
+      "market_cap_usd_b": 0.067
     },
     {
       "ticker": "ALT",
@@ -1097,7 +1172,10 @@ window.PRICES_DATA = {
       "vol_1w": 49911829,
       "vol_1m": 408928978,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.005666,
+      "high_usd": 0.041228,
+      "market_cap_usd_b": 0.038
     },
     {
       "ticker": "AIOZ",
@@ -1128,7 +1206,10 @@ window.PRICES_DATA = {
       "vol_1w": 27619023,
       "vol_1m": 129692942,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.051931,
+      "high_usd": 0.466851,
+      "market_cap_usd_b": 0.066
     },
     {
       "ticker": "ARKM",
@@ -1159,7 +1240,10 @@ window.PRICES_DATA = {
       "vol_1w": 56226821,
       "vol_1m": 390621426,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.094348,
+      "high_usd": 0.664928,
+      "market_cap_usd_b": 0.026
     },
     {
       "ticker": "WLD",
@@ -1190,7 +1274,10 @@ window.PRICES_DATA = {
       "vol_1w": 2414529151,
       "vol_1m": 20093364017,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.233888,
+      "high_usd": 1.942458,
+      "market_cap_usd_b": 1.616
     },
     {
       "ticker": "NEAR",
@@ -1229,7 +1316,10 @@ window.PRICES_DATA = {
           "sentiment": 0.103
         }
       ],
-      "news_sentiment": 0.103
+      "news_sentiment": 0.103,
+      "low_usd": 0.960526,
+      "high_usd": 3.197788,
+      "market_cap_usd_b": 2.332
     },
     {
       "ticker": "ICP",
@@ -1260,7 +1350,10 @@ window.PRICES_DATA = {
       "vol_1w": 302385264,
       "vol_1m": 2467278415,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 2.087812,
+      "high_usd": 8.98552,
+      "market_cap_usd_b": 1.226
     },
     {
       "ticker": "KAITO",
@@ -1291,7 +1384,10 @@ window.PRICES_DATA = {
       "vol_1w": 80230257,
       "vol_1m": 425386950,
       "news": [],
-      "news_sentiment": null
+      "news_sentiment": null,
+      "low_usd": 0.291104,
+      "high_usd": 1.744248,
+      "market_cap_usd_b": 0.128
     },
     {
       "ticker": "VIRTUAL",
@@ -1330,7 +1426,10 @@ window.PRICES_DATA = {
           "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.318
+      "news_sentiment": 0.318,
+      "low_usd": 0.518649,
+      "high_usd": 1.929244,
+      "market_cap_usd_b": 0.348
     }
   ]
 };

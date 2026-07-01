@@ -283,7 +283,7 @@
           <th class="sortable num-col" onclick="sortMetrics('change_1w', this)" data-tip-title="1-Week Return" data-tip="Price change over the last 5 trading days.">1W</th>
           <th class="sortable num-col" onclick="sortMetrics('change_1m', this)" data-tip-title="1-Month Return" data-tip="Price change over the last month.">1M</th>
           <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta > 1 means it moves more than the market.">Beta</th>
-          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio — how much investors pay per £1 of profit.">P/E Ratio</th>
+          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio — how much investors pay per $1 of profit.">P/E Ratio</th>
           <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume" data-tip="Average number of shares traded per day over the past 3 months.">Avg Vol</th>
           <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Total number of shares traded in the most recent trading session.">1D Vol</th>
           <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="1-Week Volume" data-tip="Total shares traded across the last 5 trading days.">1W Vol</th>
@@ -321,8 +321,8 @@
 
   function fmtMarketCap(v) {
     if (v === null || v === undefined) return null;
-    if (v >= 1) return '£' + v.toFixed(1) + 'B';
-    return '£' + (v * 1000).toFixed(0) + 'M';
+    if (v >= 1) return '$' + v.toFixed(1) + 'B';
+    return '$' + (v * 1000).toFixed(0) + 'M';
   }
   function fmtVolume(m) { if (m === null || m === undefined) return null; return m.toFixed(1) + 'M'; }
   function fmtPct(v, d) { if (v === null || v === undefined) return null; return v.toFixed(d !== undefined ? d : 2) + '%'; }
@@ -380,7 +380,7 @@
       case 'sector':       return s.sector;
       case 'ytd':          return s.ytd !== null ? s.ytd : -Infinity;
       case 'price':        return s.price !== null ? s.price : -Infinity;
-      case 'market_cap':   return s.market_cap_gbp_b !== null ? s.market_cap_gbp_b : -Infinity;
+      case 'market_cap':   return s.market_cap_usd_b !== null ? s.market_cap_usd_b : -Infinity;
       case 'beta':         return s.beta !== null ? s.beta : -Infinity;
       case 'pe_ratio':     return s.pe_ratio !== null ? s.pe_ratio : -Infinity;
       case 'avg_volume':   return s.avg_volume_m !== null ? s.avg_volume_m : -Infinity;
@@ -421,8 +421,8 @@
         const cls = val > 0 ? 'ytd-pos' : val < 0 ? 'ytd-neg' : 'ytd-flat';
         return '<span class="' + cls + '">' + (val >= 0 ? '+' : '') + val.toFixed(2) + '%</span>';
       }
-      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">£' + s.priceStr + '</span>' : dash();
-      const mcCell    = s.market_cap_gbp_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_gbp_b) + '</span>' : dash();
+      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">$' + s.priceStr + '</span>' : dash();
+      const mcCell    = s.market_cap_usd_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_usd_b) + '</span>' : dash();
       const peCell    = s.pe_ratio !== null ? '<span class="num-cell">' + fmtNum(s.pe_ratio, 1) + '</span>' : dash();
       const volCell   = s.avg_volume_m !== null ? '<span class="num-cell">' + fmtVolume(s.avg_volume_m) + '</span>' : dash();
       const vol1dCell = s.vol_1d !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1d / 1e6) + '</span>' : dash();
@@ -460,9 +460,9 @@
       name:             s.company_name || s.ticker,
       category:         s.category,
       sector:           s.sector || '',
-      priceStr:         (s.price_gbp != null) ? String(s.price_gbp) : null,
-      price:            (s.price_gbp != null && !isNaN(parseFloat(s.price_gbp))) ? parseFloat(s.price_gbp) : null,
-      market_cap_gbp_b: s.market_cap_gbp_b != null ? parseFloat(s.market_cap_gbp_b) : null,
+      priceStr:         (s.price_usd != null) ? fmtUsd(s.price_usd) : null,
+      price:            (s.price_usd != null && !isNaN(parseFloat(s.price_usd))) ? parseFloat(s.price_usd) : null,
+      market_cap_usd_b: s.market_cap_usd_b != null ? parseFloat(s.market_cap_usd_b) : null,
       beta:             s.beta != null ? parseFloat(s.beta) : null,
       pe_ratio:         s.pe_ratio != null ? parseFloat(s.pe_ratio) : null,
       avg_volume_m:     s.avg_volume_m != null ? parseFloat(s.avg_volume_m) : null,

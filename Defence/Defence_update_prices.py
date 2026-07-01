@@ -160,6 +160,7 @@ def get_metrics(yahoo_symbol, special, gbp_usd):
 
         return {
             'market_cap_gbp_b': mc_gbp_b,
+            'market_cap_usd_b': round(mc_gbp_b * gbp_usd, 3) if mc_gbp_b else None,
             'beta':             beta,
             'pe_ratio':         pe_ratio,
             'avg_volume_m':     avg_volume_m,
@@ -296,10 +297,13 @@ def write_json(results, gbp_usd, today_str):
             "change_ytd":       f"{r['change_ytd']:+.2f}%",
             "return_1yr":       f"{r['return_pct']:+}%",
             "low_gbp":          fmt_gbp(r["low_gbp"]),
+            "low_usd":          round(r["low_usd"], 2),
             "high_gbp":         fmt_gbp(r["high_gbp"]),
+            "high_usd":         round(r["high_usd"], 2),
             "bar_pct":          r["bar_pct"],
             # Fundamental metrics (None if unavailable)
             "market_cap_gbp_b": r.get("market_cap_gbp_b"),
+            "market_cap_usd_b": r.get("market_cap_usd_b"),
             "beta":             r.get("beta"),
             "pe_ratio":         r.get("pe_ratio"),
             "avg_volume_m":     r.get("avg_volume_m"),
@@ -366,10 +370,12 @@ def main():
             news_items, news_agg = get_news(yahoo_sym, analyzer)
 
             results[ticker] = {
-                "price_usd":  price_raw,
+                "price_usd":  price_gbp * gbp_usd,
                 "price_gbp":  price_gbp,
                 "low_gbp":    low_gbp or price_gbp * 0.7,
+                "low_usd":    (low_gbp or price_gbp * 0.7) * gbp_usd,
                 "high_gbp":   high_gbp or price_gbp * 1.1,
+                "high_usd":   (high_gbp or price_gbp * 1.1) * gbp_usd,
                 "return_pct": ret,
                 "bar_pct":    bp,
                 "change_1d":  change_1d,

@@ -354,10 +354,10 @@
 
   function yahooUrl(ticker) { return 'https://finance.yahoo.com/quote/' + ticker + '/'; }
 
-  function fmtMarketCap(gbpB) {
-    if (gbpB === null || gbpB === undefined) return null;
-    if (gbpB >= 1) return '£' + gbpB.toFixed(1) + 'B';
-    return '£' + (gbpB * 1000).toFixed(0) + 'M';
+  function fmtMarketCap(usdB) {
+    if (usdB === null || usdB === undefined) return null;
+    if (usdB >= 1) return '$' + usdB.toFixed(1) + 'B';
+    return '$' + (usdB * 1000).toFixed(0) + 'M';
   }
   function fmtVolume(m) { return m === null || m === undefined ? null : m.toFixed(1) + 'M'; }
   function fmtPct(v, d) { return v === null || v === undefined ? null : v.toFixed(d !== undefined ? d : 2) + '%'; }
@@ -428,7 +428,7 @@
       case 'category':     return s.category;
       case 'ytd':          return s.ytd !== null ? s.ytd : -Infinity;
       case 'price':        return s.price !== null ? s.price : -Infinity;
-      case 'market_cap':   return s.market_cap_gbp_b !== null ? s.market_cap_gbp_b : -Infinity;
+      case 'market_cap':   return s.market_cap_usd_b !== null ? s.market_cap_usd_b : -Infinity;
       case 'beta':         return s.beta !== null ? s.beta : -Infinity;
       case 'pe_ratio':     return s.pe_ratio !== null ? s.pe_ratio : -Infinity;
       case 'avg_volume':   return s.avg_volume_m !== null ? s.avg_volume_m : -Infinity;
@@ -471,8 +471,8 @@
       const change1dCell = changePct(s.change_1d);
       const change1wCell = changePct(s.change_1w);
       const change1mCell = changePct(s.change_1m);
-      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">£' + s.priceStr + '</span>' : dash();
-      const mcCell = s.market_cap_gbp_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_gbp_b) + '</span>' : dash();
+      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">$' + s.priceStr + '</span>' : dash();
+      const mcCell = s.market_cap_usd_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_usd_b) + '</span>' : dash();
       const peCell = s.pe_ratio !== null ? '<span class="num-cell">' + fmtNum(s.pe_ratio, 1) + '</span>' : dash();
       const volCell = s.avg_volume_m !== null ? '<span class="num-cell">' + fmtVolume(s.avg_volume_m) + '</span>' : dash();
       const vol1dCell = s.vol_1d !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1d / 1e6) + '</span>' : dash();
@@ -519,9 +519,9 @@
       ticker:           s.ticker,
       name:             NAMES[s.ticker] || s.company_name || s.ticker,
       category:         s.category,
-      priceStr:         (s.price_gbp !== undefined && s.price_gbp !== null) ? String(s.price_gbp) : null,
-      price:            (s.price_gbp !== undefined && s.price_gbp !== null && !isNaN(parseFloat(s.price_gbp))) ? parseFloat(s.price_gbp) : null,
-      market_cap_gbp_b: (s.market_cap_gbp_b !== undefined && s.market_cap_gbp_b !== null) ? parseFloat(s.market_cap_gbp_b) : null,
+      priceStr:         (s.price_usd !== undefined && s.price_usd !== null) ? fmtUsd(s.price_usd) : null,
+      price:            (s.price_usd !== undefined && s.price_usd !== null && !isNaN(parseFloat(s.price_usd))) ? parseFloat(s.price_usd) : null,
+      market_cap_usd_b: (s.market_cap_usd_b !== undefined && s.market_cap_usd_b !== null) ? parseFloat(s.market_cap_usd_b) : null,
       beta:             (s.beta !== undefined && s.beta !== null) ? parseFloat(s.beta) : null,
       pe_ratio:         (s.pe_ratio !== undefined && s.pe_ratio !== null) ? parseFloat(s.pe_ratio) : null,
       avg_volume_m:     (s.avg_volume_m !== undefined && s.avg_volume_m !== null) ? parseFloat(s.avg_volume_m) : null,

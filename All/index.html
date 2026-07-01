@@ -438,7 +438,7 @@
 <th class="sortable" onclick="sortTable('company', this)">Company</th>
 <th class="sortable" onclick="sortTable('cat', this)">Category</th>
 <th class="sortable" onclick="sortTable('sector', this)">Sector</th>
-<th class="sortable" onclick="sortTable('price', this)">Price (£)</th>
+<th class="sortable" onclick="sortTable('price', this)">Price ($)</th>
 <th class="sortable" onclick="sortTable('return', this)">1yr Return</th>
 <th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
 <th class="sortable" onclick="sortTable('range', this)">52-Week Range</th>
@@ -568,7 +568,6 @@ function buildTable(stocks) {
     const color    = CAT_COLORS[s.category] || (s.sectorColor || 'var(--text)');
     const catLabel = CAT_LABELS[s.category] || s.category;
     const retCls   = returnClass(s.return_1yr);
-    const prefix   = s.ticker === '285A' ? '~£' : '£';
     const exDisp   = s.exchange === 'TSE' ? 'TSE (Tokyo)' : (s.exchange || '');
     const tr = document.createElement('tr');
     tr.dataset.ticker    = s.ticker;
@@ -587,7 +586,7 @@ function buildTable(stocks) {
       '<td>' + (s.company_name || s.ticker) + '</td>' +
       '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
       '<td><span class="sector-badge sector-' + (s.sector || '') + '">' + (SECTOR_LABELS[s.sector] || s.sector || '—') + '</span></td>' +
-      '<td><span class="price">' + prefix + s.price_gbp + '</span>' +
+      '<td><span class="price">$' + fmtUsd(s.price_usd) + '</span>' +
         '<div class="change-pills">' +
           '<span class="cpill ' + pillClass(s.change_1d) + '">' + s.change_1d + ' 1D</span>' +
           '<span class="cpill ' + pillClass(s.change_1w) + '">' + s.change_1w + ' 1W</span>' +
@@ -596,12 +595,12 @@ function buildTable(stocks) {
       '<td><span class="' + retCls + '">' + s.return_1yr + '</span></td>' +
       '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + s.change_ytd + '</span></td>' +
       '<td><div class="range-wrap">' +
-        '<span class="range-label">£' + s.low_gbp + '</span>' +
+        '<span class="range-label">$' + fmtUsd(s.low_usd) + '</span>' +
         '<div class="range-bar-bg">' +
           '<div class="range-fill" style="width:' + s.bar_pct + '%"></div>' +
           '<div class="range-dot" style="left:' + s.bar_pct + '%"></div>' +
         '</div>' +
-        '<span class="range-label" style="text-align:right">£' + s.high_gbp + '</span>' +
+        '<span class="range-label" style="text-align:right">$' + fmtUsd(s.high_usd) + '</span>' +
       '</div></td>' +
       '<td><span class="notes-text">' + (NOTES[s.ticker] || '') + '</span></td>';
     tbody.appendChild(tr);
@@ -622,7 +621,7 @@ function sortTable(col, th) {
     if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
     if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
     if (col === 'sector')  { av = a.dataset.sector;  bv = b.dataset.sector; }
-    if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
+    if (col === 'price')   { av = parseFloat(a.dataset.priceUsd); bv = parseFloat(b.dataset.priceUsd); return (av - bv) * sortState.dir; }
     if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
     if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
     if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }

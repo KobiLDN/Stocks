@@ -1,6 +1,6 @@
 # Stocks Hub
 
-A multi-sector stock research platform. Each sector tracks a curated universe of stocks in GBP with live prices, fundamentals, news sentiment, and AI-generated signals.
+A multi-sector stock research platform. Each sector tracks a curated universe of stocks in USD with live prices, fundamentals, news sentiment, and AI-generated signals.
 
 **Live: [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/)** &nbsp;·&nbsp; **Dev preview: [dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev/)**
 

@@ -464,16 +464,16 @@ function showTooltip(event, stock) {
     return `<div class="tt-key">${cfg.label} %</div><div class="tt-val ${valCls(val)}">${fmtPct(val)}</div>`;
   }).join('');
 
-  const price = parseFloat(stock.price_gbp);
+  const price = parseFloat(stock.price_usd);
   const priceStr = !price || price <= 0 ? '—'
-    : price >= 100 ? '£' + price.toFixed(0)
-    : price >= 10  ? '£' + price.toFixed(2)
-    : price >= 1   ? '£' + price.toFixed(3)
-    : '£' + price.toFixed(4);
+    : price >= 100 ? '$' + price.toFixed(0)
+    : price >= 10  ? '$' + price.toFixed(2)
+    : price >= 1   ? '$' + price.toFixed(3)
+    : '$' + price.toFixed(4);
 
-  const mcap = parseFloat(stock.market_cap_gbp_b);
+  const mcap = parseFloat(stock.market_cap_usd_b);
   const mcapStr = (!mcap || mcap <= 0) ? ''
-    : `<div class="tt-divider"></div><div class="tt-key">Mkt Cap</div><div class="tt-val neu">£${mcap.toFixed(1)}B</div>`;
+    : `<div class="tt-divider"></div><div class="tt-key">Mkt Cap</div><div class="tt-val neu">$${mcap.toFixed(1)}B</div>`;
 
   ttEl.innerHTML =
     `<div class="tt-ticker">${stock.ticker}</div>` +

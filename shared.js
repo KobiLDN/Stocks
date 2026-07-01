@@ -17,6 +17,17 @@ function toggleTheme() {
   if (typeof window._onThemeChange === 'function') window._onThemeChange();
 }
 
+// ── Price formatting ─────────────────────────────────────────────────────────
+// Variable precision to match the site's compact numeric style: whole
+// numbers ≥ $10, 2dp ≥ $1, 3dp below (e.g. sub-$1 meme coins).
+function fmtUsd(v) {
+  const n = parseFloat(v);
+  if (isNaN(n)) return '—';
+  if (n >= 10) return String(Math.round(n));
+  if (n >= 1)  return n.toFixed(2);
+  return n.toFixed(3);
+}
+
 // ── Ticker tape ───────────────────────────────────────────────────────────────
 function buildTape(stocks) {
   const track = document.getElementById('tape-track');
@@ -28,11 +39,8 @@ function buildTape(stocks) {
     const isFlat   = val === 0;
     const cls      = isFlat ? 'flat' : isNeg ? 'neg' : 'pos';
     const arrow    = isFlat ? '—'   : isNeg ? '▼'   : '▲';
-    const price    = parseFloat(s.price_gbp) || 0;
-    const priceStr = price <= 0  ? '—' :
-                     price >= 10 ? '£' + Math.round(price) :
-                     price >= 1  ? '£' + price.toFixed(2) :
-                                   '£' + price.toFixed(3);
+    const price    = parseFloat(s.price_usd) || 0;
+    const priceStr = price <= 0 ? '—' : '$' + fmtUsd(price);
     return `<span class="tape-item"><span class="tape-t">${s.ticker}</span><span class="tape-p">${priceStr}</span><span class="tape-r ${cls}">${arrow} ${change}</span></span>`;
   }).join('');
   track.innerHTML = items + items;
@@ -264,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rows = Array.from(document.querySelectorAll('tbody tr[data-ticker]'));
         if (rows.length) buildTape(rows.map(row => ({
           ticker:    row.dataset.ticker,
-          price_gbp: row.dataset.priceGbp || '0',
+          price_usd: row.dataset.priceUsd || '0',
           change_1d: row.dataset['change-1d'] || '+0.00%',
         })));
       });

@@ -18,7 +18,7 @@ Read the **root `../AGENTS.md` first** — it contains the full workflow, git ru
 ## UK/European stocks (BA.L, RR.L, QQ.L)
 
 - Yahoo Finance symbols: `BA.L`, `RR.L`, `QQ.L`
-- yfinance returns prices in **GBp (pence)** — divide by 100 to get £
+- yfinance returns prices in **GBp (pence)** — divide by 100 to get £ (site displays `price_usd` = `price_gbp * fx_gbp_usd`)
 - TradingView widget symbols: `LSE:BA`, `LSE:RR`, `LSE:QQ`
 - Note: `BA.L` is BAE Systems (UK), not to be confused with Boeing (`BA` on NYSE)
 

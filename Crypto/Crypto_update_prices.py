@@ -434,6 +434,7 @@ def write_json(results, gbp_usd, today_str):
         r = results[ticker]
         mc_usd     = r.get("market_cap")
         mc_gbp_b   = round(mc_usd / gbp_usd / 1e9, 3) if mc_usd else None
+        mc_usd_b   = round(mc_usd / 1e9, 3) if mc_usd else None
         # Volume: prefer CoinGecko (daily from 365-day chart), fall back to CMC for 1d only
         vol_1d_cg  = r.get("vol_1d_cg")
         vol_1w_cg  = r.get("vol_1w_cg")
@@ -457,9 +458,12 @@ def write_json(results, gbp_usd, today_str):
             "change_ytd":       f"{r['change_ytd']:+.2f}%" if r['change_ytd'] is not None else None,
             "return_1yr":       f"{r['change_ytd']:+.0f}%" if r['change_ytd'] is not None else None,
             "low_gbp":          fmt_gbp(r["low_gbp"]),
+            "low_usd":          round(r["low_usd"], 6),
             "high_gbp":         fmt_gbp(r["high_gbp"]),
+            "high_usd":         round(r["high_usd"], 6),
             "bar_pct":          r["bar_pct"],
             "market_cap_gbp_b": mc_gbp_b,
+            "market_cap_usd_b": mc_usd_b,
             "avg_volume_m":     avg_vol_m,
             "cmc_rank":         r.get("cmc_rank"),
             # not applicable for crypto — kept for schema compatibility
@@ -557,6 +561,8 @@ def main():
             high_raw = high_map.get(ticker)
             low_gbp  = to_gbp(low_raw,  gbp_usd) if low_raw  else price_gbp * 0.5
             high_gbp = to_gbp(high_raw, gbp_usd) if high_raw else price_gbp * 1.5
+            low_usd  = low_raw  if low_raw  else price_usd * 0.5
+            high_usd = high_raw if high_raw else price_usd * 1.5
             bp = bar_pct(price_gbp, low_gbp, high_gbp)
 
             # YTD: true Jan 1 → today via CoinGecko. No CMC fallback — CMC's
@@ -585,7 +591,9 @@ def main():
                 "change_1m":      round(q["change_1m"], 2),
                 "change_ytd":     change_ytd,
                 "low_gbp":        low_gbp,
+                "low_usd":        low_usd,
                 "high_gbp":       high_gbp,
+                "high_usd":       high_usd,
                 "bar_pct":        bp,
                 "market_cap":     q.get("market_cap"),
                 # Volume: CoinGecko (daily from 365-day chart) preferred; CMC fallback for vol_1d only

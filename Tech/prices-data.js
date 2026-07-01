@@ -65,7 +65,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.231
+      "news_sentiment": -0.231,
+      "low_usd": 199.53,
+      "high_usd": 317.14,
+      "market_cap_usd_b": 4063.828
     },
     {
       "ticker": "MSFT",
@@ -130,7 +133,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.029
+      "news_sentiment": -0.029,
+      "low_usd": 348.85,
+      "high_usd": 554.99,
+      "market_cap_usd_b": 2735.064
     },
     {
       "ticker": "GOOGL",
@@ -195,7 +201,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.332
+      "news_sentiment": 0.332,
+      "low_usd": 171.78,
+      "high_usd": 408.31,
+      "market_cap_usd_b": 4190.042
     },
     {
       "ticker": "AMZN",
@@ -260,7 +269,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.12
+      "news_sentiment": 0.12,
+      "low_usd": 195.57,
+      "high_usd": 278.82,
+      "market_cap_usd_b": 2493.38
     },
     {
       "ticker": "META",
@@ -325,7 +337,10 @@ window.PRICES_DATA = {
           "sentiment": -0.382
         }
       ],
-      "news_sentiment": -0.151
+      "news_sentiment": -0.151,
+      "low_usd": 520.63,
+      "high_usd": 796.8,
+      "market_cap_usd_b": 1411.357
     },
     {
       "ticker": "NVDA",
@@ -390,7 +405,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.207
+      "news_sentiment": 0.207,
+      "low_usd": 151.96,
+      "high_usd": 236.53,
+      "market_cap_usd_b": 4703.53
     },
     {
       "ticker": "AMD",
@@ -455,7 +473,10 @@ window.PRICES_DATA = {
           "sentiment": 0.25
         }
       ],
-      "news_sentiment": 0.184
+      "news_sentiment": 0.184,
+      "low_usd": 133.46,
+      "high_usd": 562.92,
+      "market_cap_usd_b": 847.575
     },
     {
       "ticker": "INTC",
@@ -520,7 +541,10 @@ window.PRICES_DATA = {
           "sentiment": 0.361
         }
       ],
-      "news_sentiment": 0.289
+      "news_sentiment": 0.289,
+      "low_usd": 18.5,
+      "high_usd": 141.39,
+      "market_cap_usd_b": 648.904
     },
     {
       "ticker": "TSM",
@@ -585,7 +609,10 @@ window.PRICES_DATA = {
           "sentiment": -0.25
         }
       ],
-      "news_sentiment": 0.158
+      "news_sentiment": 0.158,
+      "low_usd": 220.67,
+      "high_usd": 477.03,
+      "market_cap_usd_b": 2238.473
     },
     {
       "ticker": "AVGO",
@@ -650,7 +677,10 @@ window.PRICES_DATA = {
           "sentiment": 0.103
         }
       ],
-      "news_sentiment": -0.048
+      "news_sentiment": -0.048,
+      "low_usd": 262.96,
+      "high_usd": 495.52,
+      "market_cap_usd_b": 1765.626
     },
     {
       "ticker": "QCOM",
@@ -715,7 +745,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.035
+      "news_sentiment": -0.035,
+      "low_usd": 121.57,
+      "high_usd": 260.32,
+      "market_cap_usd_b": 209.049
     },
     {
       "ticker": "ARM",
@@ -780,7 +813,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.017
+      "news_sentiment": 0.017,
+      "low_usd": 100.43,
+      "high_usd": 453.24,
+      "market_cap_usd_b": 355.044
     },
     {
       "ticker": "ASML",
@@ -845,7 +881,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.111
+      "news_sentiment": -0.111,
+      "low_usd": 683.16,
+      "high_usd": 1959.64,
+      "market_cap_usd_b": 690.548
     },
     {
       "ticker": "MU",
@@ -910,7 +949,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.105
+      "news_sentiment": 0.105,
+      "low_usd": 103.07,
+      "high_usd": 1255.33,
+      "market_cap_usd_b": 1337.76
     },
     {
       "ticker": "AMAT",
@@ -975,7 +1017,10 @@ window.PRICES_DATA = {
           "sentiment": -0.25
         }
       ],
-      "news_sentiment": 0.128
+      "news_sentiment": 0.128,
+      "low_usd": 154.6,
+      "high_usd": 668.63,
+      "market_cap_usd_b": 512.653
     },
     {
       "ticker": "ORCL",
@@ -1040,7 +1085,10 @@ window.PRICES_DATA = {
           "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.104
+      "news_sentiment": 0.104,
+      "low_usd": 134.78,
+      "high_usd": 346.21,
+      "market_cap_usd_b": 433.451
     },
     {
       "ticker": "CRM",
@@ -1105,7 +1153,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.049
+      "news_sentiment": -0.049,
+      "low_usd": 146.68,
+      "high_usd": 276.17,
+      "market_cap_usd_b": 128.616
     },
     {
       "ticker": "ADBE",
@@ -1170,7 +1221,10 @@ window.PRICES_DATA = {
           "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.202
+      "news_sentiment": 0.202,
+      "low_usd": 190.28,
+      "high_usd": 392.46,
+      "market_cap_usd_b": 79.86
     },
     {
       "ticker": "NOW",
@@ -1235,7 +1289,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.032
+      "news_sentiment": 0.032,
+      "low_usd": 80.61,
+      "high_usd": 211.42,
+      "market_cap_usd_b": 99.885
     },
     {
       "ticker": "SNOW",
@@ -1300,7 +1357,10 @@ window.PRICES_DATA = {
           "sentiment": 0.026
         }
       ],
-      "news_sentiment": 0.315
+      "news_sentiment": 0.315,
+      "low_usd": 118.93,
+      "high_usd": 285.42,
+      "market_cap_usd_b": 82.453
     },
     {
       "ticker": "INTU",
@@ -1365,7 +1425,10 @@ window.PRICES_DATA = {
           "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.072
+      "news_sentiment": 0.072,
+      "low_usd": 252.39,
+      "high_usd": 813.98,
+      "market_cap_usd_b": 73.644
     },
     {
       "ticker": "CRWD",
@@ -1430,7 +1493,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.263
+      "news_sentiment": 0.263,
+      "low_usd": 342.24,
+      "high_usd": 786.23,
+      "market_cap_usd_b": 176.595
     },
     {
       "ticker": "PANW",
@@ -1495,7 +1561,10 @@ window.PRICES_DATA = {
           "sentiment": -0.153
         }
       ],
-      "news_sentiment": 0.345
+      "news_sentiment": 0.345,
+      "low_usd": 140.07,
+      "high_usd": 302.6,
+      "market_cap_usd_b": 243.728
     },
     {
       "ticker": "NET",
@@ -1560,7 +1629,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.17
+      "news_sentiment": -0.17,
+      "low_usd": 158.57,
+      "high_usd": 276.17,
+      "market_cap_usd_b": 81.167
     },
     {
       "ticker": "FTNT",
@@ -1625,7 +1697,10 @@ window.PRICES_DATA = {
           "sentiment": 0.852
         }
       ],
-      "news_sentiment": 0.175
+      "news_sentiment": 0.175,
+      "low_usd": 70.03,
+      "high_usd": 151.96,
+      "market_cap_usd_b": 110.476
     },
     {
       "ticker": "NFLX",
@@ -1690,7 +1765,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.229
+      "news_sentiment": 0.229,
+      "low_usd": 71.36,
+      "high_usd": 133.46,
+      "market_cap_usd_b": 314.461
     },
     {
       "ticker": "SHOP",
@@ -1755,7 +1833,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.259
+      "news_sentiment": 0.259,
+      "low_usd": 93.82,
+      "high_usd": 182.35,
+      "market_cap_usd_b": 151.968
     },
     {
       "ticker": "SPOT",
@@ -1820,7 +1901,10 @@ window.PRICES_DATA = {
           "sentiment": -0.477
         }
       ],
-      "news_sentiment": -0.007
+      "news_sentiment": -0.007,
+      "low_usd": 404.35,
+      "high_usd": 784.91,
+      "market_cap_usd_b": 95.62
     },
     {
       "ticker": "UBER",
@@ -1885,7 +1969,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.011
+      "news_sentiment": -0.011,
+      "low_usd": 67.39,
+      "high_usd": 101.75,
+      "market_cap_usd_b": 155.091
     },
     {
       "ticker": "CSCO",
@@ -1950,7 +2037,10 @@ window.PRICES_DATA = {
           "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.185
+      "news_sentiment": 0.185,
+      "low_usd": 66.07,
+      "high_usd": 130.82,
+      "market_cap_usd_b": 452.829
     },
     {
       "ticker": "PLTR",
@@ -2015,7 +2105,10 @@ window.PRICES_DATA = {
           "sentiment": 0.25
         }
       ],
-      "news_sentiment": 0.295
+      "news_sentiment": 0.295,
+      "low_usd": 105.71,
+      "high_usd": 207.46,
+      "market_cap_usd_b": 272.154
     }
   ]
 };

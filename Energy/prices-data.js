@@ -65,7 +65,10 @@ window.PRICES_DATA = {
           "sentiment": -0.103
         }
       ],
-      "news_sentiment": 0.218
+      "news_sentiment": 0.218,
+      "low_usd": 105.66,
+      "high_usd": 176.99,
+      "market_cap_usd_b": 564.544
     },
     {
       "ticker": "CVX",
@@ -130,7 +133,10 @@ window.PRICES_DATA = {
           "sentiment": 0.691
         }
       ],
-      "news_sentiment": 0.246
+      "news_sentiment": 0.246,
+      "low_usd": 142.65,
+      "high_usd": 215.29,
+      "market_cap_usd_b": 339.34
     },
     {
       "ticker": "SHEL",
@@ -195,7 +201,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.092
+      "news_sentiment": 0.092,
+      "low_usd": 68.68,
+      "high_usd": 95.1,
+      "market_cap_usd_b": 212.461
     },
     {
       "ticker": "BP",
@@ -260,7 +269,10 @@ window.PRICES_DATA = {
           "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.054
+      "news_sentiment": 0.054,
+      "low_usd": 30.38,
+      "high_usd": 48.87,
+      "market_cap_usd_b": 95.638
     },
     {
       "ticker": "TTE",
@@ -325,7 +337,10 @@ window.PRICES_DATA = {
           "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.218
+      "news_sentiment": 0.218,
+      "low_usd": 56.79,
+      "high_usd": 93.78,
+      "market_cap_usd_b": 172.005
     },
     {
       "ticker": "EQNR",
@@ -390,7 +405,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.055
+      "news_sentiment": 0.055,
+      "low_usd": 22.45,
+      "high_usd": 43.59,
+      "market_cap_usd_b": 77.242
     },
     {
       "ticker": "COP",
@@ -455,7 +473,10 @@ window.PRICES_DATA = {
           "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.422
+      "news_sentiment": 0.422,
+      "low_usd": 85.85,
+      "high_usd": 136.04,
+      "market_cap_usd_b": 128.847
     },
     {
       "ticker": "OXY",
@@ -520,7 +541,10 @@ window.PRICES_DATA = {
           "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.313
+      "news_sentiment": 0.313,
+      "low_usd": 38.3,
+      "high_usd": 67.36,
+      "market_cap_usd_b": 50.065
     },
     {
       "ticker": "EOG",
@@ -585,7 +609,10 @@ window.PRICES_DATA = {
           "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.344
+      "news_sentiment": 0.344,
+      "low_usd": 101.7,
+      "high_usd": 151.89,
+      "market_cap_usd_b": 70.803
     },
     {
       "ticker": "MPC",
@@ -650,7 +677,10 @@ window.PRICES_DATA = {
           "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.452
+      "news_sentiment": 0.452,
+      "low_usd": 158.5,
+      "high_usd": 272.08,
+      "market_cap_usd_b": 74.488
     },
     {
       "ticker": "VLO",
@@ -715,7 +745,10 @@ window.PRICES_DATA = {
           "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.301
+      "news_sentiment": 0.301,
+      "low_usd": 130.76,
+      "high_usd": 265.48,
+      "market_cap_usd_b": 76.414
     },
     {
       "ticker": "SLB",
@@ -780,7 +813,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.189
+      "news_sentiment": 0.189,
+      "low_usd": 31.7,
+      "high_usd": 59.44,
+      "market_cap_usd_b": 69.857
     },
     {
       "ticker": "HAL",
@@ -845,7 +881,10 @@ window.PRICES_DATA = {
           "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.323
+      "news_sentiment": 0.323,
+      "low_usd": 19.81,
+      "high_usd": 43.59,
+      "market_cap_usd_b": 28.421
     },
     {
       "ticker": "BKR",
@@ -910,7 +949,10 @@ window.PRICES_DATA = {
           "sentiment": -0.128
         }
       ],
-      "news_sentiment": 0.238
+      "news_sentiment": 0.238,
+      "low_usd": 38.3,
+      "high_usd": 70.0,
+      "market_cap_usd_b": 56.002
     },
     {
       "ticker": "NEE",
@@ -975,7 +1017,10 @@ window.PRICES_DATA = {
           "sentiment": -0.625
         }
       ],
-      "news_sentiment": 0.043
+      "news_sentiment": 0.043,
+      "low_usd": 67.36,
+      "high_usd": 99.06,
+      "market_cap_usd_b": 183.326
     },
     {
       "ticker": "SSE.L",
@@ -983,7 +1028,7 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 2421.0,
+      "price_usd": 31.7,
       "change_1d": "+0.08%",
       "change_1w": "+4.13%",
       "change_1m": "-1.55%",
@@ -1040,7 +1085,10 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.149
+      "news_sentiment": 0.149,
+      "low_usd": 21.13,
+      "high_usd": 36.98,
+      "market_cap_usd_b": 0.386
     },
     {
       "ticker": "ENPH",
@@ -1105,7 +1153,10 @@ window.PRICES_DATA = {
           "sentiment": 0.743
         }
       ],
-      "news_sentiment": 0.336
+      "news_sentiment": 0.336,
+      "low_usd": 26.42,
+      "high_usd": 73.96,
+      "market_cap_usd_b": 6.247
     },
     {
       "ticker": "FSLR",
@@ -1170,7 +1221,10 @@ window.PRICES_DATA = {
           "sentiment": -0.34
         }
       ],
-      "news_sentiment": 0.059
+      "news_sentiment": 0.059,
+      "low_usd": 149.25,
+      "high_usd": 320.95,
+      "market_cap_usd_b": 25.719
     },
     {
       "ticker": "BEPC",
@@ -1235,7 +1289,10 @@ window.PRICES_DATA = {
           "sentiment": 0.361
         }
       ],
-      "news_sentiment": 0.506
+      "news_sentiment": 0.506,
+      "low_usd": 31.7,
+      "high_usd": 44.91,
+      "market_cap_usd_b": 6.924
     },
     {
       "ticker": "DNNGY",
@@ -1300,7 +1357,10 @@ window.PRICES_DATA = {
           "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.107
+      "news_sentiment": 0.107,
+      "low_usd": 5.75,
+      "high_usd": 33.02,
+      "market_cap_usd_b": 29.13
     }
   ]
 };

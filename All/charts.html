@@ -327,7 +327,7 @@
       const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
       if (!match) return;
       const data  = JSON.parse(match[1]);
-      const sorted = (data.stocks || []).sort((a, b) => (b.market_cap_gbp_b || 0) - (a.market_cap_gbp_b || 0));
+      const sorted = (data.stocks || []).sort((a, b) => (b.market_cap_usd_b || 0) - (a.market_cap_usd_b || 0));
       sectorStocks[sd.key] = sorted.slice(0, 3);
     } catch(e) {
       sectorStocks[sd.key] = [];
