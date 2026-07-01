@@ -363,12 +363,15 @@ Never hardcode timestamps. Static count placeholders are acceptable — they get
 | File | Purpose |
 |---|---|
 | `shared.css` | Rail layout, ticker tape, nav, filter-btn, sector-pill |
-| `shared.js` | `toggleTheme()`, `buildTape()`, `buildStickyTop()` (skipped on rail), `buildNav()` (left rail + nav-panel + bottom tabs), `buildDashboardHeader()` (sector/All dashboard index pages only), `buildDataBar()` (fills `#data-bar-ts` in header-sub) |
+| `shared.js` | `toggleTheme()`, `buildTape()`, `buildStickyTop()` (skipped on rail), `buildNav()` (left rail + nav-panel + bottom tabs), `buildDashboardHeader()` (sector/All dashboard index pages only), `buildDataBar()` (fills `#data-bar-ts` in header-sub), `fmtUsd()` (price string formatting for the ticker tape) |
+
+**Load-order gotcha:** `shared.js` loads with `defer`, so it only runs after the document is parsed but before `DOMContentLoaded`. A page's own inline `<script>` (no `defer`) that calls a `shared.js` function *synchronously* — not inside a `DOMContentLoaded` listener — will find that function undefined and throw, since it executes before the deferred script has run. This is why `metrics.html`/`calculator.html` pages define their own local `fmtMarketCap`/`fmtVolume`/`fmtPct`/`fmtNum`/`fmtUsd` instead of calling `shared.js`'s version — their render functions run synchronously right after `prices-data.js` loads. Pages that wrap their render call in `window.addEventListener('DOMContentLoaded', ...)` (e.g. `index.html`'s `buildTable()`) are safe to call `shared.js` functions directly.
 
 - Hub (`index.html`) uses inline `<style>` only — does **not** load `shared.css`
 - All other pages: `<link href="../shared.css">` + `<script src="../shared.js" defer>`
 - `news.html` is a **root-level rail page** — loads `shared.css` / `shared.js` with no `../`, and its left-rail pills use root-relative hrefs (`AI/index.html`, not `../AI/index.html`). Sector pills point to each sector's dashboard (`index.html`); the News Feed pill is active.
 - `buildNav()` in `shared.js` generates all left-rail pills AND the nav-panel 7-link sub-nav from URL detection — no hardcoded nav HTML needed in individual pages.
+- URL detection normalises three URL shapes to the same `file` value: `/AI/metrics.html`, `/AI/metrics` (Cloudflare Pages clean URL, no extension), and trailing-slash sector roots (`/AI/` → `index.html`). Any function that reads `location.pathname` (`buildNav()`, `buildDashboardHeader()`) must apply this same normalisation — do not assume the last path segment always has `.html`.
 - `buildStickyTop()` is skipped on rail pages — `<header>` handles stickiness directly
 
 ---
