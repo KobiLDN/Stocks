@@ -131,8 +131,8 @@
       </div>
       <div class="toolbar-row">
         <span class="toolbar-label">Period</span>
-        <button class="tool-btn"        data-period="1W" onclick="setPeriod('1W',this)">1W</button>
-        <button class="tool-btn active" data-period="1Y" onclick="setPeriod('1Y',this)">1Y</button>
+        <button class="tool-btn active" data-period="1W" onclick="setPeriod('1W',this)">1W</button>
+        <button class="tool-btn"        data-period="1Y" onclick="setPeriod('1Y',this)">1Y</button>
         <button class="tool-btn"        data-period="5Y" onclick="setPeriod('5Y',this)">5Y</button>
       </div>
     </div>
@@ -215,7 +215,7 @@
 
   let sectorStocks = {};   // key → top-3 stock objects
   let activeSector  = 'all';
-  let activePeriod  = '1Y';
+  let activePeriod  = '1W';
 
   const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark';
 
