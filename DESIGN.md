@@ -163,7 +163,7 @@ The "Last updated" timestamp lives **inline in `.header-sub`** as a `<span id="d
 
 **Signals pages** use `<span id="signals-ts">—</span>` in the subtitle instead, wired to `SIGNALS_DATA.updated` in page-specific JS.
 
-**Hub** keeps its own Universe + Prices Last Updated blocks inside `.header-blocks` (managed by `index.html` inline JS — not shared.js).
+**Hub** follows the same `header-sub` pattern as sector pages — `<span id="hub-stock-count">—</span> stocks · <span id="hub-sector-count">—</span> sectors · Last updated <span id="hub-updated-ts">—</span>`, populated by `index.html`'s own `init()` function (not shared.js, since the Hub aggregates all 6 sectors asynchronously). No `.header-blocks` div remains anywhere on the site.
 
 ### Row 2 — Nav Tabs (every page)
 
