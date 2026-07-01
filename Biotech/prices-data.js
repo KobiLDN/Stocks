@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-01 21:14",
-  "fx_gbp_usd": 1.3279,
+  "updated": "2026-07-01 22:59",
+  "fx_gbp_usd": 1.3281,
   "stocks": [
     {
       "ticker": "AMGN",
@@ -19,19 +19,26 @@ window.PRICES_DATA = {
       "high_gbp": "295",
       "high_usd": 391.29,
       "bar_pct": 75,
-      "market_cap_gbp_b": 146.856,
-      "market_cap_usd_b": 195.012,
+      "market_cap_gbp_b": 146.841,
+      "market_cap_usd_b": 195.013,
       "beta": 0.416,
       "pe_ratio": 25.13,
       "avg_volume_m": 2.76,
       "div_yield_pct": 278.0,
       "short_pct": 2.26,
       "analyst": "buy",
-      "analyst_score": 2.46,
+      "analyst_score": 2.44,
       "vol_1d": 1950819,
       "vol_1w": 12610819,
       "vol_1m": 65877519,
       "news": [
+        {
+          "title": "Judge blocks Colorado's first-of-its-kind\u00a0price cap on Amgen's Enbrel",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/healthcare/articles/judge-blocks-colorados-first-kind-205619439.html",
+          "published": 1782939379,
+          "sentiment": -0.226
+        },
         {
           "title": "Amgen or Biogen: Which Biotech Stock Appears Better Poised?",
           "publisher": "Zacks",
@@ -59,16 +66,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/amgen-amgn-faces-eu-push-200710549.html",
           "published": 1782850030,
           "sentiment": 0.477
-        },
-        {
-          "title": "Amgen Faces Fresh Pressure After NEJM Retracts Trial Behind $459 Million Drug",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/amgen-faces-fresh-pressure-nejm-162822863.html",
-          "published": 1782836902,
-          "sentiment": 0.026
         }
       ],
-      "news_sentiment": 0.22
+      "news_sentiment": 0.17
     },
     {
       "ticker": "GILD",
@@ -87,8 +87,8 @@ window.PRICES_DATA = {
       "high_gbp": "118",
       "high_usd": 157.29,
       "bar_pct": 37,
-      "market_cap_gbp_b": 117.779,
-      "market_cap_usd_b": 156.401,
+      "market_cap_gbp_b": 117.766,
+      "market_cap_usd_b": 156.4,
       "beta": 0.331,
       "pe_ratio": 17.14,
       "avg_volume_m": 7.14,
@@ -96,10 +96,17 @@ window.PRICES_DATA = {
       "short_pct": 1.92,
       "analyst": "buy",
       "analyst_score": 1.67,
-      "vol_1d": 5400878,
-      "vol_1w": 46866178,
-      "vol_1m": 194906078,
+      "vol_1d": 6185542,
+      "vol_1w": 47650842,
+      "vol_1m": 195690742,
       "news": [
+        {
+          "title": "The FDA Just Approved a KEYTRUDA Combination That Could Become the Standard First-Line Treatment for Aggressive Breast Cancer",
+          "publisher": "Insider Monkey",
+          "url": "https://www.yahoo.com/news/science/articles/fda-just-approved-keytruda-combination-213456808.html",
+          "published": 1782941696,
+          "sentiment": -0.494
+        },
         {
           "title": "KYMR Stock Soars 51% YTD on Progress of Atopic Dermatitis Drug",
           "publisher": "Zacks",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/gilead-gild-wins-fda-approval-000743265.html",
           "published": 1782605263,
           "sentiment": 0.778
-        },
-        {
-          "title": "Will Trodelvy\u2019s First-Line TNBC Approval Redefine Gilead Sciences\u2019 (GILD) Oncology-Led Investment Narrative?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/healthcare/articles/trodelvy-first-line-tnbc-approval-041517855.html",
-          "published": 1782533717,
-          "sentiment": 0.477
         }
       ],
-      "news_sentiment": 0.346
+      "news_sentiment": 0.151
     },
     {
       "ticker": "REGN",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "618",
       "high_usd": 821.11,
       "bar_pct": 33,
-      "market_cap_gbp_b": 49.322,
-      "market_cap_usd_b": 65.495,
+      "market_cap_gbp_b": 49.316,
+      "market_cap_usd_b": 65.494,
       "beta": 0.238,
       "pe_ratio": 15.25,
       "avg_volume_m": 0.99,
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "382",
       "high_usd": 507.92,
       "bar_pct": 93,
-      "market_cap_gbp_b": 95.185,
+      "market_cap_gbp_b": 95.175,
       "market_cap_usd_b": 126.398,
       "beta": 0.31,
       "pe_ratio": 29.57,
@@ -291,8 +291,8 @@ window.PRICES_DATA = {
       "high_gbp": "165",
       "high_usd": 219.72,
       "bar_pct": 90,
-      "market_cap_gbp_b": 23.319,
-      "market_cap_usd_b": 30.966,
+      "market_cap_gbp_b": 23.316,
+      "market_cap_usd_b": 30.965,
       "beta": 0.177,
       "pe_ratio": 22.58,
       "avg_volume_m": 1.21,
@@ -347,31 +347,38 @@ window.PRICES_DATA = {
       "company_name": "Bristol-Myers Squibb",
       "category": "large-cap",
       "exchange": "NYSE",
-      "price_gbp": "43",
-      "price_usd": 56.47,
-      "change_1d": "-2.00%",
-      "change_1w": "+2.66%",
-      "change_1m": "+3.68%",
-      "change_ytd": "+6.71%",
+      "price_gbp": "42",
+      "price_usd": 56.44,
+      "change_1d": "-2.05%",
+      "change_1w": "+2.62%",
+      "change_1m": "+3.64%",
+      "change_ytd": "+6.66%",
       "return_1yr": "+21%",
       "low_gbp": "32",
       "low_usd": 42.52,
       "high_gbp": "47",
       "high_usd": 62.89,
       "bar_pct": 68,
-      "market_cap_gbp_b": 86.832,
-      "market_cap_usd_b": 115.306,
+      "market_cap_gbp_b": 86.784,
+      "market_cap_usd_b": 115.254,
       "beta": 0.238,
-      "pe_ratio": 15.82,
+      "pe_ratio": 15.81,
       "avg_volume_m": 11.52,
       "div_yield_pct": 437.0,
       "short_pct": 1.94,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 7673330,
-      "vol_1w": 70765230,
-      "vol_1m": 281760430,
+      "vol_1d": 11192209,
+      "vol_1w": 74284109,
+      "vol_1m": 285279309,
       "news": [
+        {
+          "title": "Bristol-Myers Squibb (BMY) Joins Arcus Biosciences to Test a New Two-Drug Kidney Cancer Combination",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/bristol-myers-squibb-bmy-joins-213544982.html",
+          "published": 1782941744,
+          "sentiment": -0.66
+        },
         {
           "title": "Improve Your Retirement Income with These 3 Top-Ranked Dividend Stocks",
           "publisher": "Zacks",
@@ -399,16 +406,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/bristol-myers-squibb-bmy-moves-010703803.html",
           "published": 1782868023,
           "sentiment": 0.625
-        },
-        {
-          "title": "US House committee opens investigation into Merck, AbbVie China drug trials",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/news/exclusive-us-house-committee-opens-100330881.html",
-          "published": 1782850233,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.301
+      "news_sentiment": 0.169
     },
     {
       "ticker": "AZN",
@@ -416,16 +416,16 @@ window.PRICES_DATA = {
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "139",
-      "price_usd": 183.97,
+      "price_usd": 183.99,
       "change_1d": "-1.74%",
       "change_1w": "-0.40%",
       "change_1m": "+3.13%",
       "change_ytd": "+1.94%",
       "return_1yr": "+36%",
       "low_gbp": "101",
-      "low_usd": 134.28,
+      "low_usd": 134.29,
       "high_gbp": "157",
-      "high_usd": 208.91,
+      "high_usd": 208.93,
       "bar_pct": 67,
       "market_cap_gbp_b": 2.149,
       "market_cap_usd_b": 2.854,
@@ -493,10 +493,10 @@ window.PRICES_DATA = {
       "low_gbp": "13",
       "low_usd": 17.11,
       "high_gbp": "23",
-      "high_usd": 30.3,
+      "high_usd": 30.31,
       "bar_pct": 65,
       "market_cap_gbp_b": 0.773,
-      "market_cap_usd_b": 1.026,
+      "market_cap_usd_b": 1.027,
       "beta": 0.294,
       "pe_ratio": 13.59,
       "avg_volume_m": 7.75,
@@ -571,7 +571,7 @@ window.PRICES_DATA = {
       "div_yield_pct": null,
       "short_pct": 30.81,
       "analyst": "buy",
-      "analyst_score": 1.96,
+      "analyst_score": 2.0,
       "vol_1d": 954478,
       "vol_1w": 9471778,
       "vol_1m": 35433978,
@@ -708,9 +708,9 @@ window.PRICES_DATA = {
       "short_pct": 45.4,
       "analyst": "buy",
       "analyst_score": 2.14,
-      "vol_1d": 3687171,
-      "vol_1w": 26364671,
-      "vol_1m": 141619171,
+      "vol_1d": 3724376,
+      "vol_1w": 26401876,
+      "vol_1m": 141656376,
       "news": [
         {
           "title": "Wall Street Thinks This High-Flying Biotech Stock Can Soar Another 57%",
@@ -776,9 +776,9 @@ window.PRICES_DATA = {
       "short_pct": 12.02,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 2974870,
-      "vol_1w": 17039070,
-      "vol_1m": 57994970,
+      "vol_1d": 2982249,
+      "vol_1w": 17046449,
+      "vol_1m": 58002349,
       "news": [
         {
           "title": "Why Is Editas (EDIT) Down 12.4% Since Last Earnings Report?",
@@ -835,8 +835,8 @@ window.PRICES_DATA = {
       "high_gbp": "138",
       "high_usd": 182.84,
       "bar_pct": 99,
-      "market_cap_gbp_b": 20.952,
-      "market_cap_usd_b": 27.822,
+      "market_cap_gbp_b": 20.95,
+      "market_cap_usd_b": 27.823,
       "beta": 1.49,
       "pe_ratio": 33.43,
       "avg_volume_m": 1.77,
@@ -848,6 +848,20 @@ window.PRICES_DATA = {
       "vol_1w": 10491904,
       "vol_1m": 43516004,
       "news": [
+        {
+          "title": "SkylineDx\u2019s Merlin CP-GEP Granted FDA Breakthrough Device Designation",
+          "publisher": "Exec Edge",
+          "url": "https://www.yahoo.com/news/science/articles/skylinedx-merlin-cp-gep-granted-214132742.html",
+          "published": 1782942092,
+          "sentiment": 0.25
+        },
+        {
+          "title": "Illumina (ILMN) Gets Bernstein\u2019s Market Perform Rating Amid NovaSeq X Recovery",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/illumina-ilmn-gets-bernstein-market-213058136.html",
+          "published": 1782941458,
+          "sentiment": 0.0
+        },
         {
           "title": "AZN vs. ILMN: Which Stock Should Value Investors Buy Now?",
           "publisher": "Zacks",
@@ -868,23 +882,9 @@ window.PRICES_DATA = {
           "url": "https://www.medtechdive.com/news/roche-takes-on-illumina-with-new-ngs-system/824146/",
           "published": 1782835100,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why Illumina (ILMN) Stock Is Trading Up Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-illumina-ilmn-stock-trading-185625423.html",
-          "published": 1782327385,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Illumina (ILMN) Stock After 80% One-Year Rebound Is The Price Now Justified",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/illumina-ilmn-stock-80-one-131602114.html",
-          "published": 1782306962,
-          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.148
+      "news_sentiment": 0.118
     },
     {
       "ticker": "PACB",
@@ -904,7 +904,7 @@ window.PRICES_DATA = {
       "high_usd": 2.73,
       "bar_pct": 40,
       "market_cap_gbp_b": 0.407,
-      "market_cap_usd_b": 0.54,
+      "market_cap_usd_b": 0.541,
       "beta": 2.323,
       "pe_ratio": null,
       "avg_volume_m": 6.32,
@@ -912,9 +912,9 @@ window.PRICES_DATA = {
       "short_pct": 22.42,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 4965507,
-      "vol_1w": 49948207,
-      "vol_1m": 136231407,
+      "vol_1d": 4999863,
+      "vol_1w": 49982563,
+      "vol_1m": 136265763,
       "news": [
         {
           "title": "3 Cash-Burning Stocks with Questionable Fundamentals",
@@ -971,8 +971,8 @@ window.PRICES_DATA = {
       "high_gbp": "207",
       "high_usd": 275.24,
       "bar_pct": 99,
-      "market_cap_gbp_b": 29.796,
-      "market_cap_usd_b": 39.567,
+      "market_cap_gbp_b": 29.792,
+      "market_cap_usd_b": 39.565,
       "beta": 1.544,
       "pe_ratio": null,
       "avg_volume_m": 1.57,
@@ -984,6 +984,13 @@ window.PRICES_DATA = {
       "vol_1w": 10880111,
       "vol_1m": 33920611,
       "news": [
+        {
+          "title": "SkylineDx\u2019s Merlin CP-GEP Granted FDA Breakthrough Device Designation",
+          "publisher": "Exec Edge",
+          "url": "https://www.yahoo.com/news/science/articles/skylinedx-merlin-cp-gep-granted-214132742.html",
+          "published": 1782942092,
+          "sentiment": 0.25
+        },
         {
           "title": "NTRA & Aveta Partner to Advance MRD-Guided Trial in Head & Neck Cancer",
           "publisher": "Zacks",
@@ -1011,16 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/u-supreme-court-rejects-caredxa-195831651.html",
           "published": 1782676711,
           "sentiment": -0.318
-        },
-        {
-          "title": "Natera (NTRA) Stock Jumps 10.7%: Will It Continue to Soar?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/natera-ntra-stock-jumps-10-120200455.html",
-          "published": 1782388920,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.236
+      "news_sentiment": -0.186
     },
     {
       "ticker": "RXRX",
@@ -1107,8 +1107,8 @@ window.PRICES_DATA = {
       "high_gbp": "87",
       "high_usd": 115.56,
       "bar_pct": 96,
-      "market_cap_gbp_b": 17.122,
-      "market_cap_usd_b": 22.737,
+      "market_cap_gbp_b": 17.121,
+      "market_cap_usd_b": 22.738,
       "beta": 0.79,
       "pe_ratio": 16.05,
       "avg_volume_m": 1.66,
@@ -1120,6 +1120,13 @@ window.PRICES_DATA = {
       "vol_1w": 10514765,
       "vol_1m": 46968765,
       "news": [
+        {
+          "title": "Incyte (INCY): Truist Raises the Price Target to $105 as a Government Settlement Adds $246 Million to Net Sales",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/incyte-incy-truist-raises-price-213116003.html",
+          "published": 1782941476,
+          "sentiment": 0.0
+        },
         {
           "title": "INCY Stock Hits 52-Week High on Regulatory Updates for Opzelura",
           "publisher": "Zacks",
@@ -1147,16 +1154,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/incyte-incy-stock-66-one-150732656.html",
           "published": 1782572852,
           "sentiment": 0.318
-        },
-        {
-          "title": "Incyte (INCY) Wins EU Backing For Opzelura As Pipeline Data Builds Across Four Drugs",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/healthcare/articles/incyte-incy-wins-eu-backing-060649444.html",
-          "published": 1782540409,
-          "sentiment": 0.586
         }
       ],
-      "news_sentiment": 0.279
+      "news_sentiment": 0.162
     },
     {
       "ticker": "EXEL",
@@ -1175,7 +1175,7 @@ window.PRICES_DATA = {
       "high_gbp": "42",
       "high_usd": 55.91,
       "bar_pct": 91,
-      "market_cap_gbp_b": 10.214,
+      "market_cap_gbp_b": 10.213,
       "market_cap_usd_b": 13.563,
       "beta": 0.435,
       "pe_ratio": 17.87,
@@ -1184,10 +1184,17 @@ window.PRICES_DATA = {
       "short_pct": 16.57,
       "analyst": "buy",
       "analyst_score": 2.26,
-      "vol_1d": 1798325,
-      "vol_1w": 16173125,
-      "vol_1m": 58240525,
+      "vol_1d": 1843237,
+      "vol_1w": 16218037,
+      "vol_1m": 58285437,
       "news": [
+        {
+          "title": "What Does Truist\u2019s New Analyst Think About Exelixis (EXEL) and Its Next-Generation Cancer Drug?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/does-truist-analyst-think-exelixis-213218894.html",
+          "published": 1782941538,
+          "sentiment": -0.66
+        },
         {
           "title": "Qualcomm upgrade, Intel initiation among today's top calls on Wall Street",
           "publisher": "The Fly",
@@ -1215,16 +1222,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/sectors/healthcare/articles/exelixis-cabinet-win-extends-cabometyx-200859000.html",
           "published": 1781381339,
           "sentiment": 0.66
-        },
-        {
-          "title": "Halozyme Therapeutics (HALO) Up 0.8% Since Last Earnings Report: Can It Continue?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/sectors/healthcare/articles/halozyme-therapeutics-halo-0-8-153007386.html",
-          "published": 1781105407,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.168
+      "news_sentiment": 0.036
     },
     {
       "ticker": "ALNY",
@@ -1243,7 +1243,7 @@ window.PRICES_DATA = {
       "high_gbp": "373",
       "high_usd": 495.55,
       "bar_pct": 13,
-      "market_cap_gbp_b": 30.331,
+      "market_cap_gbp_b": 30.328,
       "market_cap_usd_b": 40.277,
       "beta": 0.267,
       "pe_ratio": 75.99,
@@ -1301,17 +1301,17 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "22",
       "price_usd": 28.92,
-      "change_1d": "-5.35%",
-      "change_1w": "+0.43%",
-      "change_1m": "+18.20%",
-      "change_ytd": "+24.19%",
+      "change_1d": "-5.37%",
+      "change_1w": "+0.42%",
+      "change_1m": "+18.19%",
+      "change_ytd": "+24.17%",
       "return_1yr": "+259%*",
       "low_gbp": "6.05",
       "low_usd": 8.03,
       "high_gbp": "24",
       "high_usd": 31.74,
       "bar_pct": 88,
-      "market_cap_gbp_b": 2.74,
+      "market_cap_gbp_b": 2.739,
       "market_cap_usd_b": 3.638,
       "beta": 0.837,
       "pe_ratio": null,
@@ -1320,10 +1320,17 @@ window.PRICES_DATA = {
       "short_pct": 17.36,
       "analyst": "strong_buy",
       "analyst_score": 1.46,
-      "vol_1d": 1268991,
-      "vol_1w": 11040391,
-      "vol_1m": 34655291,
+      "vol_1d": 1605079,
+      "vol_1w": 11376479,
+      "vol_1m": 34991379,
       "news": [
+        {
+          "title": "Bristol-Myers Squibb (BMY) Joins Arcus Biosciences to Test a New Two-Drug Kidney Cancer Combination",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/bristol-myers-squibb-bmy-joins-213544982.html",
+          "published": 1782941744,
+          "sentiment": -0.66
+        },
         {
           "title": "Bristol Myers Squibb\u2019s AI Overhaul And Oncology Trials Shape Value Story",
           "publisher": "Simply Wall St.",
@@ -1351,16 +1358,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/newsflash-arcus-biosciences-inc-nyse-140351158.html",
           "published": 1778940231,
           "sentiment": 0.0
-        },
-        {
-          "title": "Analyst Estimates: Here's What Brokers Think Of Arcus Biosciences, Inc. (NYSE:RCUS) After Its First-Quarter Report",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/analyst-estimates-heres-brokers-think-140357631.html",
-          "published": 1778249037,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.05
+      "news_sentiment": -0.082
     },
     {
       "ticker": "MRNA",
@@ -1379,7 +1379,7 @@ window.PRICES_DATA = {
       "high_gbp": "55",
       "high_usd": 73.28,
       "bar_pct": 98,
-      "market_cap_gbp_b": 21.663,
+      "market_cap_gbp_b": 21.661,
       "market_cap_usd_b": 28.767,
       "beta": 1.03,
       "pe_ratio": null,
@@ -1388,9 +1388,9 @@ window.PRICES_DATA = {
       "short_pct": 18.09,
       "analyst": "hold",
       "analyst_score": 3.0,
-      "vol_1d": 6484841,
-      "vol_1w": 47622241,
-      "vol_1m": 180410041,
+      "vol_1d": 6696737,
+      "vol_1w": 47834137,
+      "vol_1m": 180621937,
       "news": [
         {
           "title": "Sandisk Leads Seven S&P 500 Stocks That Have Skyrocketed In 2026",
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "high_gbp": "93",
       "high_usd": 124.0,
       "bar_pct": 32,
-      "market_cap_gbp_b": 17.886,
+      "market_cap_gbp_b": 17.884,
       "market_cap_usd_b": 23.751,
       "beta": 1.324,
       "pe_ratio": null,
@@ -1583,7 +1583,7 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 66.28,
       "bar_pct": 50,
-      "market_cap_gbp_b": 8.416,
+      "market_cap_gbp_b": 8.415,
       "market_cap_usd_b": 11.176,
       "beta": 0.24,
       "pe_ratio": 41.6,
@@ -1652,7 +1652,7 @@ window.PRICES_DATA = {
       "high_usd": 25.32,
       "bar_pct": 52,
       "market_cap_gbp_b": 1.447,
-      "market_cap_usd_b": 1.921,
+      "market_cap_usd_b": 1.922,
       "beta": 0.205,
       "pe_ratio": 52.0,
       "avg_volume_m": 3.17,
@@ -1755,19 +1755,19 @@ window.PRICES_DATA = {
       "category": "metabolic",
       "exchange": "NYSE",
       "price_gbp": "37",
-      "price_usd": 48.78,
-      "change_1d": "+1.71%",
-      "change_1w": "+2.88%",
-      "change_1m": "+13.64%",
-      "change_ytd": "-3.49%",
+      "price_usd": 48.77,
+      "change_1d": "+1.70%",
+      "change_1w": "+2.87%",
+      "change_1m": "+13.63%",
+      "change_ytd": "-3.50%",
       "return_1yr": "-31%",
       "low_gbp": "26",
       "low_usd": 35.12,
       "high_gbp": "54",
       "high_usd": 71.8,
       "bar_pct": 37,
-      "market_cap_gbp_b": 162.601,
-      "market_cap_usd_b": 215.92,
+      "market_cap_gbp_b": 162.567,
+      "market_cap_usd_b": 215.898,
       "beta": 0.349,
       "pe_ratio": 11.7,
       "avg_volume_m": 14.97,
@@ -1775,9 +1775,9 @@ window.PRICES_DATA = {
       "short_pct": 0.77,
       "analyst": "buy",
       "analyst_score": 2.43,
-      "vol_1d": 10194083,
-      "vol_1w": 60705083,
-      "vol_1m": 282104583,
+      "vol_1d": 11027516,
+      "vol_1w": 61538516,
+      "vol_1m": 282938016,
       "news": [
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Fall Sharply in Wednesday Trading",
@@ -1822,20 +1822,20 @@ window.PRICES_DATA = {
       "company_name": "Eli Lilly",
       "category": "metabolic",
       "exchange": "NYSE",
-      "price_gbp": "898",
-      "price_usd": 1191.91,
-      "change_1d": "-0.73%",
-      "change_1w": "+6.68%",
-      "change_1m": "+12.01%",
-      "change_ytd": "+10.70%",
+      "price_gbp": "897",
+      "price_usd": 1191.74,
+      "change_1d": "-0.75%",
+      "change_1w": "+6.67%",
+      "change_1m": "+11.99%",
+      "change_ytd": "+10.68%",
       "return_1yr": "+54%",
       "low_gbp": "470",
       "low_usd": 623.78,
       "high_gbp": "932",
       "high_usd": 1238.0,
       "bar_pct": 92,
-      "market_cap_gbp_b": 800.409,
-      "market_cap_usd_b": 1062.875,
+      "market_cap_gbp_b": 800.21,
+      "market_cap_usd_b": 1062.724,
       "beta": 0.517,
       "pe_ratio": 42.28,
       "avg_volume_m": 3.26,
@@ -1843,10 +1843,17 @@ window.PRICES_DATA = {
       "short_pct": 1.09,
       "analyst": "buy",
       "analyst_score": 1.74,
-      "vol_1d": 1929731,
-      "vol_1w": 19821031,
-      "vol_1m": 70809531,
+      "vol_1d": 2630478,
+      "vol_1w": 20521778,
+      "vol_1m": 71510278,
       "news": [
+        {
+          "title": "Is Eli Lilly (LLY) One of Billionaire Cliff Asness\u2019 Best Healthcare Stock Picks ?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/eli-lilly-lly-one-billionaire-213322476.html",
+          "published": 1782941602,
+          "sentiment": 0.637
+        },
         {
           "title": "Eli Lilly Price Prediction: The Case for Double-Digit Upside",
           "publisher": "24/7 Wall St.",
@@ -1874,16 +1881,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/eli-lilly-lly-faces-china-131753830.html",
           "published": 1782911873,
           "sentiment": 0.34
-        },
-        {
-          "title": "Cathie Wood Doubles Down on AI, Loads Up on Tesla, Palantir, and SpaceX",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/cathie-woods-biggest-portfolio-moves-130432149.html",
-          "published": 1782911072,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.059
+      "news_sentiment": 0.187
     },
     {
       "ticker": "LEGN",
@@ -1911,9 +1911,9 @@ window.PRICES_DATA = {
       "short_pct": 17.67,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 1607214,
-      "vol_1w": 9376614,
-      "vol_1m": 71318614,
+      "vol_1d": 1618243,
+      "vol_1w": 9387643,
+      "vol_1m": 71329643,
       "news": [
         {
           "title": "Legend Biotech Corporation (LEGN) Price Target Raised to $49 on LB5006 Clinical Progress",
@@ -1970,7 +1970,7 @@ window.PRICES_DATA = {
       "high_gbp": "65",
       "high_usd": 86.74,
       "bar_pct": 84,
-      "market_cap_gbp_b": 9.855,
+      "market_cap_gbp_b": 9.854,
       "market_cap_usd_b": 13.087,
       "beta": 0.37,
       "pe_ratio": null,
@@ -1979,9 +1979,9 @@ window.PRICES_DATA = {
       "short_pct": 14.26,
       "analyst": "buy",
       "analyst_score": 1.67,
-      "vol_1d": 1406893,
-      "vol_1w": 13005193,
-      "vol_1m": 42529993,
+      "vol_1d": 1433436,
+      "vol_1w": 13031736,
+      "vol_1m": 42556536,
       "news": [
         {
           "title": "Mizuho Highlights Amgen (AMGN) Pipeline Potential With MariTide and Olpasiran",
