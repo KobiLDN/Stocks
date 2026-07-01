@@ -1,5 +1,5 @@
 window.MARKET_DATA = {
-  "updated": "2026-06-30 23:01",
+  "updated": "2026-07-01 07:37",
   "spy": {
     "price": 746.77,
     "change_1d": 0.81,
