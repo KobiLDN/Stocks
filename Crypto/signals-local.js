@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-29 13:02",
+  "updated": "2026-07-01 11:44",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SOL",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Solana leads major crypto gains with +6.83% weekly and +0.73% daily, bucking the broader market slide; fresh DeFi activity and a +2.4% daily gain per [36crypto.com](https://36crypto.com/bitcoin-btc-slips-below-60000-while-solana-sol-leads-major-crypto-gains/) confirm relative strength.",
+      "drivers": [
+        "+6.83% 1W momentum",
+        "leading major crypto gains",
+        "DeFi activity inflow",
+        "market cap \u00a332.7B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "TRX is the only major with positive YTD (+11.30%) and strong news sentiment (0.249), supported by stablecoin settlement volumes and a healthy network outlook per [analyticsinsight.net](https://www.analyticsinsight.net/price-analysis/crypto-prices-today-bitcoin-holds-near-59190-as-solana-jumps-205-ahead-of-fed-chair-warshs-ecb-remarks).",
+      "drivers": [
+        "+11.30% YTD",
+        "news sentiment 0.249",
+        "stablecoin settlement volumes",
+        "market cap \u00a322.7B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "KAITO shows exceptional momentum with +31.11% weekly and +26.13% monthly, despite a small \u00a30.105B market cap; no direct news found but the price action signals strong speculative demand.",
+      "drivers": [
+        "+31.11% 1W",
+        "+26.13% 1M",
+        "+13.45% YTD",
+        "small-cap momentum play"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "NMR posts +6.56% daily and +5.57% monthly, showing resilience in a weak market; its small \u00a30.051B cap offers high beta for momentum traders.",
+      "drivers": [
+        "+6.56% 1D",
+        "+5.57% 1M",
+        "small-cap beta",
+        "positive short-term momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "OCEAN surged +16.00% weekly, the strongest weekly gain among AI tokens, though daily dipped -3.16%; the weekly strength suggests renewed interest in data economy narratives.",
+      "drivers": [
+        "+16.00% 1W",
+        "AI token category",
+        "weekly momentum leader",
+        "small-cap"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "XLM gains +7.98% daily and +3.91% weekly, nearly flat YTD (-0.14%), offering a relative value play with a \u00a35.1B market cap and no negative news overhang.",
+      "drivers": [
+        "+7.98% 1D",
+        "+3.91% 1W",
+        "near-flat YTD",
+        "market cap \u00a35.1B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "ADA bounces +3.47% daily after a steep monthly decline (-35.45%), with neutral news sentiment (0.111); the daily reversal could signal a short-term bottom.",
+      "drivers": [
+        "+3.47% 1D",
+        "news sentiment 0.111",
+        "oversold bounce",
+        "market cap \u00a34.1B"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "AVAX shows weekly strength (+3.45%) and a small daily gain (+0.83%), with a \u00a32.2B market cap; no negative headlines, making it a defensive altcoin pick.",
+      "drivers": [
+        "+3.45% 1W",
+        "+0.83% 1D",
+        "market cap \u00a32.2B",
+        "neutral news"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "DOT",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "DOT edges up +1.80% daily but remains deeply negative YTD (-53.52%); the daily gain is a minor recovery in a downtrend, suitable for a low-conviction tactical trade.",
+      "drivers": [
+        "+1.80% 1D",
+        "oversold territory",
+        "market cap \u00a31.1B",
+        "short-term bounce"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "MINA gains +1.47% daily with a tiny \u00a30.038B market cap; high risk but the daily uptick in a falling market offers speculative appeal for nimble traders.",
+      "drivers": [
+        "+1.47% 1D",
+        "micro-cap",
+        "speculative momentum",
+        "low liquidity"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "KAITO",
@@ -132,133 +265,6 @@ window.SIGNALS_DATA = {
         "exchange-backed narrative",
         "modest 1M -16.82%",
         "near-zero 1D change"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "OCEAN",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "Explosive 1D momentum (+32.47%) and strong 1W (+18.49%) despite broader market selloff; small-cap with high beta potential.",
-      "drivers": [
-        "1D +32.47%",
-        "1W +18.49%",
-        "high momentum",
-        "small cap"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Consistent positive returns across 1D (+4.64%), 1W (+4.76%), and 1M (+5.70%) in a risk-off environment; low market cap offers asymmetric upside.",
-      "drivers": [
-        "1M +5.70%",
-        "1W +4.76%",
-        "consistent momentum",
-        "low market cap"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Strong 1D gain (+6.65%) and flat 1W (+0.25%) amid macro headwinds; small cap with room to run.",
-      "drivers": [
-        "1D +6.65%",
-        "resilient 1W",
-        "small cap"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Only asset with positive YTD (+13.12%) and positive weekly momentum (+0.37%); news sentiment strongly bullish at 0.249, with headline highlighting health.",
-      "drivers": [
-        "YTD +13.12%",
-        "1W +0.37%",
-        "news sentiment +0.249",
-        "resilient"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Near-flat 1D (-0.25%) and positive 1W (+0.41%) with strong news sentiment (+0.126); large cap offers stability and liquidity.",
-      "drivers": [
-        "1W +0.41%",
-        "news sentiment +0.126",
-        "large cap",
-        "resilient"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "Impressive 1M gain (+19.06%) despite recent 1W pullback (-20.80%); YTD relatively strong at -12.58%.",
-      "drivers": [
-        "1M +19.06%",
-        "YTD -12.58%",
-        "strong medium-term"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Relatively resilient with modest losses (-1.65% 1D, -13.89% 1M) and large market cap (\u00a357.3B) providing safe-haven attributes.",
-      "drivers": [
-        "large cap \u00a357.3B",
-        "resilient declines",
-        "liquid"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Reference asset; despite -2.65% 1D and macro pressure from PCE inflation [crypto.news](https://crypto.news), dominance at 58.1% and large liquidation suggest potential bounce.",
-      "drivers": [
-        "market dominance 58.1%",
-        "liquidation event",
-        "reference asset"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HBAR",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "Moderate declines with -2.35% 1D and -8.02% 1W; no strong catalyst but small cap could benefit from rotation out of AI tokens.",
-      "drivers": [
-        "moderate losses",
-        "small cap",
-        "no negative news"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "WLD",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "1M gain of +29.49% intact, but recent 8% drop in AI selloff ([en.coinotag.com](https://en.coinotag.com)) and -25.78% 1W suggest high risk; contrarian play.",
-      "drivers": [
-        "1M +29.49%",
-        "AI token selloff",
-        "high risk"
       ]
     }
   ]

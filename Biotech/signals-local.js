@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-06-29 13:00",
+  "updated": "2026-07-01 11:42",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Massive +126.93% YTD and +52.04% 1M momentum; a key FDA win and a major lancet review validating mRNA platform safety have fueled a price target raise to $77 at Piper Sandler \u2014 the strong pipeline momentum and positive news sentiment (0.236) outweigh a hold consensus mean (3.00).",
+      "drivers": [
+        "YTD +126.93%",
+        "1M +52.04%",
+        "FDA win catalyst",
+        "Piper Sandler PT raise to $77"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTLA",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Sector-leading momentum with YTD +83.71%, 1M +23.23%, 1W +10.95%; strong_buy-level news sentiment (0.499) and a relatively low market cap (\u00a31.79B) leave room for upside despite very high short interest (45.4%).",
+      "drivers": [
+        "YTD +83.71%",
+        "1M +23.23%",
+        "news sentiment 0.499",
+        "small-mid cap upside"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Genomics leader with strong_buy analyst consensus and an_score 1.50; YTD +18.62%, 1M +24.06% and 1W +15.63% show accelerating momentum, while short interest is low (3.11%), indicating little bearish overhang.",
+      "drivers": [
+        "strong_buy consensus (1.50)",
+        "1M +24.06%",
+        "short interest 3.11%",
+        "genomics sector strength"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Reached $1T market cap in June and recently became the largest healthcare company by value; YTD +11.40%, 1M +10.83% and 1W +8.34% reflect continued metabolic/diabetes momentum with strong fundamentals (P/E 42.55, beta 0.52).",
+      "drivers": [
+        "$1T market cap milestone",
+        "1M +10.83%",
+        "metabolic sector leader",
+        "beta 0.52"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong recovery with YTD +21.50%, 1M +12.40%, 1W +9.57%; low beta (0.18) and reasonable P/E (23.26) with recent liquid option gains ($214.18 +12.22) pointing to continued institutional interest.",
+      "drivers": [
+        "1Y +67% recovery",
+        "1M +12.40%",
+        "low beta 0.18",
+        "P/E 23.26"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Hitting 52-week highs on Opzelura regulatory progress; YTD +11.77%, 1M +18.59% with solid fundamentals (P/E 16.03, beta 0.79) and positive news sentiment (0.279).",
+      "drivers": [
+        "52-week high catalyst",
+        "1M +18.59%",
+        "P/E 16.03",
+        "regulatory progress Opzelura"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Rare-disease play with perfect strong_buy analyst score (1.00); 1M +35.39% and 1W +26.00% signal pipeline catalysts from sutacimig Phase III plans, though limited data (null P/E, null short) demands caution.",
+      "drivers": [
+        "strong_buy 1.00 an_score",
+        "1M +35.39%",
+        "rare-disease pipeline",
+        "Phase III catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Large-cap with strong momentum (1M +13.31%, 1W +6.04%) and low volatility (beta 0.31); buy consensus (1.64) and positive news sentiment (0.368) support continued upside with P/E 29.5.",
+      "drivers": [
+        "1M +13.31%",
+        "buy consensus 1.64",
+        "beta 0.31",
+        "news sentiment 0.368"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "LEGN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Neuroscience focus with YTD +34.26% and price target raised to $49 based on LB5006 clinical progress; positive analyst consensus (1.60) with room to grow from current \u00a322 price.",
+      "drivers": [
+        "YTD +34.26%",
+        "PT raised to $49",
+        "LB5006 clinical progress",
+        "analyst consensus 1.60"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "RCUS",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Explosive 1-year return (+272%*) and YTD +32.37% with 1M +20.10% momentum in oncology; no analyst consensus yet but the recent Bristol Myers Squibb AI and oncology trial narrative adds catalyst potential.",
+      "drivers": [
+        "1Y +272%*",
+        "1M +20.10%",
+        "oncology trial catalyst",
+        "AI drug discovery angle"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTLA",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "analyst buy",
         "P/E 29.16",
         "strong CF franchise"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTLA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +74.05%, 1M +27.12%, news sentiment 0.45; Phase III HAELO trial met all endpoints with 87% attack reduction, rolling BLA underway for lonvo-z with potential 2027 launch [genengnews.com](https://www.genengnews.com/topics/translational-medicine/stockwatch-positive-phase-iii-data-sells-investors-on-intellia/).",
-      "drivers": [
-        "Phase III lonvo-z success",
-        "rolling BLA submission",
-        "strong YTD momentum",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "1M +29.78%, 1W +15.15%, analyst score 1.52 (buy); Signatera received first PMDA approval in Japan for colorectal MRD and NCCN Category 1 bladder cancer guideline inclusion [tradesoftheday.com](https://tradesoftheday.com/2026/06/25/ntra-stock-breakout-natera-japan-pmda-nccn-bladder/).",
-      "drivers": [
-        "Japan PMDA approval",
-        "NCCN Category 1 guideline",
-        "strong 1M momentum",
-        "low short interest 3.11%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.935,
-      "rationale": "YTD +93.62%, 1M +27.05%; FDA PDUFA for mRNA-1010 flu vaccine on Aug 5, 2026, and Science Day highlighted mRNA-2808 T-cell engager and mRNA-6007 in vivo CAR-T pipeline [stocktitan.net](https://www.stocktitan.net/news/MRNA/moderna-science-day-highlights-expanding-potential-of-m-r-n-a-2l5j48yhp52b.html).",
-      "drivers": [
-        "PDUFA catalyst Aug 5",
-        "pipeline optionality",
-        "strong YTD momentum",
-        "cash runway for diversification"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.76,
-      "rationale": "YTD +25.02%, 1M +13.90%, analyst score 1.29 (strong_buy), news sentiment 0.384; FDA cleared BEAM-304 IND for phenylketonuria, advancing base editing pipeline.",
-      "drivers": [
-        "FDA IND clearance BEAM-304",
-        "strong_buy consensus",
-        "positive news sentiment",
-        "high short interest 42.63% (squeeze potential)"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "YTD +32.23%, 1M +22.32%, 1W +11.67%, P/E 32.24; strong momentum driven by genomics demand and recent positive analyst coverage.",
-      "drivers": [
-        "strong 1M momentum",
-        "positive YTD return",
-        "reasonable P/E for growth",
-        "low short interest 9.95%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RCUS",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +29.88%, 1M +25.36%, 1W +25.41%; oncology pipeline momentum with Bristol Myers Squibb collaboration and AI-driven drug discovery narrative.",
-      "drivers": [
-        "strong 1W momentum",
-        "oncology pipeline catalysts",
-        "BMS collaboration",
-        "low market cap \u00a32.88B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1Y +57%, 1M +10.74%, 1W +8.63%, P/E 15.19, news sentiment 0.371; profitable oncology biotech with low beta 0.79 and strong analyst buy consensus.",
-      "drivers": [
-        "low P/E 15.19",
-        "positive news sentiment",
-        "strong 1Y return",
-        "low beta defensive profile"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PACB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +26.98%, 1W +19.40%, 1D +12.68%, analyst score 2.0 (buy); genomics sequencing play with recent momentum despite negative YTD -13.04%.",
-      "drivers": [
-        "strong 1D momentum",
-        "analyst buy consensus",
-        "genomics sector tailwind",
-        "low market cap \u00a30.38B"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "1M +10.15%, 1W +4.62%, P/E 28.5, news sentiment 0.463; large-cap biotech with cystic fibrosis franchise stability and pipeline expansion into pain and diabetes.",
-      "drivers": [
-        "positive news sentiment",
-        "strong 1M momentum",
-        "low beta 0.31",
-        "diversified pipeline"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1M +12.46%, 1W +7.40%, news sentiment 0.187; AI-driven drug discovery platform with contrarian value after YTD -20.48% and low market cap \u00a31.34B.",
-      "drivers": [
-        "recent 1M momentum",
-        "AI platform catalyst",
-        "contrarian value play",
-        "low market cap"
       ]
     }
   ]
