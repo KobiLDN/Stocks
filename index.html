@@ -1183,7 +1183,12 @@
 
     function renderMovers(results, macro) {
       const spy1w = macro && macro.spy ? macro.spy.change_1w : null;
-      const sorted = results.flatMap(r => r.stocks).filter(s => pctNum(s.change_1w) !== null)
+      const seen = new Set();
+      const deduped = results.flatMap(r => r.stocks).filter(s => {
+        if (seen.has(s.ticker)) return false;
+        seen.add(s.ticker); return true;
+      });
+      const sorted = deduped.filter(s => pctNum(s.change_1w) !== null)
         .sort((a, b) => pctNum(b.change_1w) - pctNum(a.change_1w));
       const riskOff = macro && macro.market_regime && macro.market_regime !== 'normal';
       let leaders = sorted.slice(0, 10), hdr = 'Market Leaders · Top 1W';
