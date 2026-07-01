@@ -319,6 +319,14 @@
   const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
   function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
+  function fmtUsd(v) {
+    const n = parseFloat(v);
+    if (isNaN(n)) return '—';
+    if (n >= 10) return String(Math.round(n));
+    if (n >= 1)  return n.toFixed(2);
+    return n.toFixed(3);
+  }
+
   function fmtMarketCap(v) {
     if (v === null || v === undefined) return null;
     if (v >= 1) return '$' + v.toFixed(1) + 'B';

@@ -524,6 +524,14 @@
   }
 
   /* ---- FORMAT HELPERS ---- */
+  function fmtUsd(v) {
+    const n = parseFloat(v);
+    if (isNaN(n)) return '—';
+    if (n >= 10) return String(Math.round(n));
+    if (n >= 1)  return n.toFixed(2);
+    return n.toFixed(3);
+  }
+
   function fmtMarketCap(usdB) {
     if (usdB === null || usdB === undefined) return null;
     if (usdB >= 1) return '$' + usdB.toFixed(1) + 'B';

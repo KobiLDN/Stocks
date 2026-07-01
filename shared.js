@@ -110,8 +110,11 @@ function buildNav() {
   const sector  = SECTORS.find(s => parts[0] === s) || null;
   const inAll   = parts[0] === 'All';
   // Normalise trailing-slash URLs: /AI/ → file='index.html', not 'AI'
+  // Also normalise extensionless "clean" URLs (Cloudflare Pages): /AI/metrics → 'metrics.html'
+  const _KNOWN_PAGES = ['index', 'metrics', 'news', 'signals', 'heatmap', 'charts', 'calculator'];
   const _rawFile = parts[parts.length - 1] || '';
-  const file = (!_rawFile || SECTORS.includes(_rawFile) || _rawFile === 'All') ? 'index.html' : _rawFile;
+  const _extFile = _KNOWN_PAGES.includes(_rawFile) ? _rawFile + '.html' : _rawFile;
+  const file = (!_rawFile || SECTORS.includes(_rawFile) || _rawFile === 'All') ? 'index.html' : _extFile;
   const isHub   = !sector && !inAll && (parts.length === 0 || file === 'index.html');
   const isRSS   = !sector && !inAll && file === 'news.html';
   const root    = (sector || inAll) ? '../' : '';  // prefix to reach repo root
@@ -211,7 +214,10 @@ function buildDashboardHeader() {
   const rawFile = parts[parts.length - 1] || '';
   // Treat sector-name-as-last-segment (trailing-slash URLs) as index.html
   const SECTORS2 = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
-  const file = (rawFile === '' || SECTORS2.includes(rawFile) || rawFile === 'All') ? 'index.html' : rawFile;
+  // Normalise extensionless "clean" URLs (Cloudflare Pages): /AI/index → 'index.html'
+  const _KNOWN_PAGES2 = ['index', 'metrics', 'news', 'signals', 'heatmap', 'charts', 'calculator'];
+  const _extRawFile = _KNOWN_PAGES2.includes(rawFile) ? rawFile + '.html' : rawFile;
+  const file = (rawFile === '' || SECTORS2.includes(rawFile) || rawFile === 'All') ? 'index.html' : _extRawFile;
   if (file !== 'index.html' || (!sector && !inAll)) return;
 
   const railItem = _RAIL_ITEMS.find(r => r.key === (sector || 'all'));
