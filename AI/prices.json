@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-03 17:03",
-  "fx_gbp_usd": 1.3356,
+  "updated": "2026-07-03 20:31",
+  "fx_gbp_usd": 1.3355,
   "stocks": [
     {
       "ticker": "SNDK",
@@ -19,7 +19,7 @@
       "high_gbp": "1763",
       "high_usd": 2354.39,
       "bar_pct": 74,
-      "market_cap_gbp_b": 193.487,
+      "market_cap_gbp_b": 193.492,
       "market_cap_usd_b": 258.417,
       "beta": null,
       "pe_ratio": 59.52,
@@ -33,10 +33,17 @@
       "vol_1m": 252441900,
       "news": [
         {
-          "title": "Dow Jones Futures: Techs Rebound After Tesla, Sandisk, AI Stocks Dive; Apple, Robinhood Flash Buy Signals",
+          "title": "Dow Jones Futures: Techs' Rise Signal AI Trend Isn't Over; Apple, Robinhood Flash Buy Signals",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
-          "published": 1783094066,
+          "published": 1783103656,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Jim Cramer Mentions Sandisk (SNDK) As He Discusses Biggest Gainers of Q2",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-mentions-sandisk-sndk-081611369.html",
+          "published": 1783101791,
           "sentiment": 0.0
         },
         {
@@ -59,13 +66,6 @@
           "url": "https://www.barrons.com/articles/spacex-stock-nasdaq-100-17eaccd9?siteid=yhoof2&yptr=yahoo",
           "published": 1783071840,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jim Cramer Mentions Sandisk (SNDK) As He Discusses Biggest Gainers of Q2",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-mentions-sandisk-sndk-081611369.html",
-          "published": 1783066571,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.0
@@ -87,8 +87,8 @@
       "high_gbp": "599",
       "high_usd": 799.87,
       "bar_pct": 65,
-      "market_cap_gbp_b": 139.104,
-      "market_cap_usd_b": 185.784,
+      "market_cap_gbp_b": 139.107,
+      "market_cap_usd_b": 185.783,
       "beta": 2.166,
       "pe_ratio": 32.26,
       "avg_volume_m": 8.37,
@@ -144,7 +144,7 @@
       "category": "memory",
       "exchange": "TSE",
       "price_gbp": "387",
-      "price_usd": 516.48,
+      "price_usd": 516.31,
       "change_1d": "+9.82%",
       "change_1w": "-9.63%",
       "change_1m": "+6.69%",
@@ -153,10 +153,10 @@
       "low_gbp": "11",
       "low_usd": 14.07,
       "high_gbp": "523",
-      "high_usd": 698.76,
+      "high_usd": 698.54,
       "bar_pct": 73,
-      "market_cap_gbp_b": 211.622,
-      "market_cap_usd_b": 282.638,
+      "market_cap_gbp_b": 211.561,
+      "market_cap_usd_b": 282.548,
       "beta": null,
       "pe_ratio": 82.75,
       "avg_volume_m": 36.3,
@@ -168,6 +168,13 @@
       "vol_1w": 212005600,
       "vol_1m": 888645300,
       "news": [
+        {
+          "title": "Kioxia Shares Jump 9.2% As AI Storage Push Accelerates",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/kioxia-shares-jump-9-2-162429794.html",
+          "published": 1783095869,
+          "sentiment": 0.296
+        },
         {
           "title": "European Chip Stocks Rebound After Thursday Selloff",
           "publisher": "The Wall Street Journal",
@@ -195,16 +202,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/micron-jumps-267-sees-memory-131848212.html",
           "published": 1782393528,
           "sentiment": -0.153
-        },
-        {
-          "title": "Japan's Nikkei Hits Record High After Micron's Blockbuster Results Soothe Investor Concerns",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-062526/card/japan-s-nikkei-hits-record-high-after-micron-s-blockbuster-results-soothe-investor-concerns-JVObi4NMtoGy6Bh3fu93?siteid=yhoof2&yptr=yahoo",
-          "published": 1782373900,
-          "sentiment": 0.751
         }
       ],
-      "news_sentiment": 0.11
+      "news_sentiment": 0.019
     },
     {
       "ticker": "MU",
@@ -223,7 +223,7 @@
       "high_gbp": "940",
       "high_usd": 1255.0,
       "bar_pct": 76,
-      "market_cap_gbp_b": 824.955,
+      "market_cap_gbp_b": 824.977,
       "market_cap_usd_b": 1101.791,
       "beta": 2.142,
       "pe_ratio": 22.08,
@@ -237,42 +237,42 @@
       "vol_1m": 1223601800,
       "news": [
         {
-          "title": "What a weak jobs report means for crypto",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/what-a-weak-jobs-report-means-for-crypto-173342792.html",
-          "published": 1783013622,
-          "sentiment": -0.44
+          "title": "Better Artificial Intelligence (AI) Stock: Alphabet vs. Micron Technology (the Winner May Surprise You)",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/better-artificial-intelligence-ai-stock-alphabet-v/",
+          "published": 1783104660,
+          "sentiment": 0.898
         },
         {
-          "title": "Michael Burry Shorts Micron, Adding to His NVIDIA and Applied Materials Short Bets Against Chip Stocks",
+          "title": "Top Invesco Analyst: The AI Trade That \u201cLifted All Boats\u201d Is Over. Now Profitability Decides Winners As \u201cCapacity Will Catch Up\u201d",
           "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/michael-burry-shorts-micron-adding-to-his-nvidia-and-applied-materials-short-bets-against-chip-stocks/",
-          "published": 1783088299,
-          "sentiment": 0.0
+          "url": "https://247wallst.com/investing/2026/07/03/top-invesco-analyst-the-ai-trade-that-lifted-all-boats-is-over-now-profitability-decides-winners-as-capacity-will-catch-up/",
+          "published": 1783104431,
+          "sentiment": 0.718
         },
         {
-          "title": "Michael Burry Shorts Micron After Massive Rally",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-shorts-micron-massive-134827628.html",
-          "published": 1783086507,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Retail Investors\u2019 Verdict: Micron Technology (MU) is Better Than Space (SPCX)",
+          "title": "Jim Cramer Mentions Sandisk (SNDK) As He Discusses Biggest Gainers of Q2",
           "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/retail-investors-verdict-micron-technology-132234282.html",
-          "published": 1783084954,
-          "sentiment": 0.542
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-mentions-sandisk-sndk-081611369.html",
+          "published": 1783101791,
+          "sentiment": 0.0
         },
         {
-          "title": "Can Higher Memory Prices Extend Micron Technology's Profit Boom?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/higher-memory-prices-extend-micron-130000596.html",
-          "published": 1783083600,
-          "sentiment": 0.557
+          "title": "Jim Cramer\u2019s Latest Thoughts on Micron (MU)",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-micron-seems-no-081649258.html",
+          "published": 1783101709,
+          "sentiment": 0.0
+        },
+        {
+          "title": "NVIDIA vs Micron: One Controls the AI Platform, Other Controls the Bottleneck. Only One Bet Will Pay Off in 2027.",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/03/nvidia-vs-micron-one-controls-the-ai-platform-other-controls-the-bottleneck-only-one-bet-will-pay-off-in-2027/",
+          "published": 1783101604,
+          "sentiment": -0.103
         }
       ],
-      "news_sentiment": 0.132
+      "news_sentiment": 0.303
     },
     {
       "ticker": "STX",
@@ -291,8 +291,8 @@
       "high_gbp": "857",
       "high_usd": 1145.0,
       "bar_pct": 68,
-      "market_cap_gbp_b": 137.696,
-      "market_cap_usd_b": 183.904,
+      "market_cap_gbp_b": 138.942,
+      "market_cap_usd_b": 185.563,
       "beta": 2.067,
       "pe_ratio": 77.52,
       "avg_volume_m": 4.35,
@@ -359,8 +359,8 @@
       "high_gbp": "247",
       "high_usd": 329.88,
       "bar_pct": 68,
-      "market_cap_gbp_b": 160.803,
-      "market_cap_usd_b": 214.765,
+      "market_cap_gbp_b": 160.669,
+      "market_cap_usd_b": 214.58,
       "beta": 2.197,
       "pe_ratio": 84.0,
       "avg_volume_m": 42.83,
@@ -372,6 +372,13 @@
       "vol_1w": 183514100,
       "vol_1m": 1398970500,
       "news": [
+        {
+          "title": "Jim Cramer\u2019s Thoughts on Marvell (MRVL) and Why It May Still Have A Lot More Upside",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-jensen-huang-081754859.html",
+          "published": 1783101234,
+          "sentiment": 0.0
+        },
         {
           "title": "How are Active Electrical Cables Driving Credo's Growth?",
           "publisher": "Zacks",
@@ -399,13 +406,6 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/mrvls-ai-infrastructure-growth-outpace-121200649.html",
           "published": 1783080720,
           "sentiment": 0.103
-        },
-        {
-          "title": "Jim Cramer Says If Jensen Huang Is Right, Marvell Has \u201cA Lot More Upside\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-jensen-huang-081754859.html",
-          "published": 1783066674,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.222
@@ -427,7 +427,7 @@
       "high_gbp": "75",
       "high_usd": 100.59,
       "bar_pct": 41,
-      "market_cap_gbp_b": 18.096,
+      "market_cap_gbp_b": 18.097,
       "market_cap_usd_b": 24.169,
       "beta": 1.447,
       "pe_ratio": 110.17,
@@ -440,6 +440,13 @@
       "vol_1w": 17047600,
       "vol_1m": 70551700,
       "news": [
+        {
+          "title": "VVX vs. P: Which Stock Is the Better Value Option?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/vvx-vs-p-stock-better-154003439.html",
+          "published": 1783093203,
+          "sentiment": 0.649
+        },
         {
           "title": "Everpure (P) Draws Jana Partners As New Activist Investor",
           "publisher": "Simply Wall St.",
@@ -467,16 +474,9 @@
           "url": "https://www.investors.com/news/technology/everpure-stock-jumps-after-report-of-jana-partners/?src=A00220&yptr=yahoo",
           "published": 1782852134,
           "sentiment": 0.0
-        },
-        {
-          "title": "Exclusive-Activist Jana Partners has new stake in Everpure, sources",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exclusive-activist-jana-partners-stake-193258851.html",
-          "published": 1782847978,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.13
     },
     {
       "ticker": "RR.",
@@ -485,7 +485,7 @@
       "exchange": "LSE",
       "price_gbp": "15",
       "price_usd": 20.09,
-      "change_1d": "+1.33%",
+      "change_1d": "+1.97%",
       "change_1w": "+6.97%",
       "change_1m": "+19.55%",
       "change_ytd": "+25.67%",
@@ -508,6 +508,13 @@
       "vol_1w": 101949371,
       "vol_1m": 645735188,
       "news": [
+        {
+          "title": "Rolls-Royce (LSE:RR.) Adds New Directors And Teams Up With Bombardier On Engine Monitoring",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-adds-171437421.html",
+          "published": 1783098877,
+          "sentiment": 0.0
+        },
         {
           "title": "Rolls Royce (LSE:RR.) Stock Looks Like A Bargain On Earnings But Fully Priced On Broader Checks",
           "publisher": "Simply Wall St.",
@@ -535,16 +542,9 @@
           "url": "https://www.wsj.com/business/energy-oil/small-engine-makers-gain-big-momentum-in-data-centers-32cd1254?siteid=yhoof2&yptr=yahoo",
           "published": 1782898200,
           "sentiment": 0.527
-        },
-        {
-          "title": "AirAsia Shares Drop 30% as Carrier Seeks Payment Deferrals",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/airasia-shares-drop-30-carrier-191848930.html",
-          "published": 1782328728,
-          "sentiment": 0.026
         }
       ],
-      "news_sentiment": 0.261
+      "news_sentiment": 0.256
     },
     {
       "ticker": "CEG",
@@ -563,7 +563,7 @@
       "high_gbp": "309",
       "high_usd": 412.7,
       "bar_pct": 6,
-      "market_cap_gbp_b": 63.97,
+      "market_cap_gbp_b": 63.972,
       "market_cap_usd_b": 85.437,
       "beta": 1.121,
       "pe_ratio": 20.79,
@@ -631,7 +631,7 @@
       "high_gbp": "165",
       "high_usd": 219.82,
       "bar_pct": 21,
-      "market_cap_gbp_b": 38.134,
+      "market_cap_gbp_b": 38.135,
       "market_cap_usd_b": 50.931,
       "beta": 1.409,
       "pe_ratio": 25.26,
@@ -903,7 +903,7 @@
       "high_gbp": "885",
       "high_usd": 1181.95,
       "bar_pct": 90,
-      "market_cap_gbp_b": 223.959,
+      "market_cap_gbp_b": 223.965,
       "market_cap_usd_b": 299.115,
       "beta": 0.935,
       "pe_ratio": 32.58,
@@ -917,18 +917,25 @@
       "vol_1m": 68065300,
       "news": [
         {
+          "title": "Jim Cramer on GE Vernova: \u201cI Believe In Scott Strazik\u201d",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-ge-vernova-believe-081738288.html",
+          "published": 1783101338,
+          "sentiment": 0.0
+        },
+        {
+          "title": "2 High-Flying Stocks with Competitive Advantages and 1 We Turn Down",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/2-high-flying-stocks-competitive-164206986.html",
+          "published": 1783096926,
+          "sentiment": 0.494
+        },
+        {
           "title": "Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/energy/articles/oklo-advances-groves-isotope-test-123300704.html",
           "published": 1783081980,
           "sentiment": 0.71
-        },
-        {
-          "title": "Jim Cramer on GE Vernova: \u201cI Believe In Scott Strazik\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-ge-vernova-believe-081738288.html",
-          "published": 1783066658,
-          "sentiment": 0.0
         },
         {
           "title": "Bull of the Day: Bloom Energy (BE)",
@@ -943,16 +950,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-gev-beat-estimates-161004422.html",
           "published": 1783008604,
           "sentiment": 0.0
-        },
-        {
-          "title": "Here's Why GE Vernova Stock Soared Last Month",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/02/heres-why-ge-vernova-stock-soared-last-month/",
-          "published": 1783002621,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.197
+      "news_sentiment": 0.295
     },
     {
       "ticker": "BWXT",
@@ -1053,6 +1053,13 @@
       "vol_1m": 738951400,
       "news": [
         {
+          "title": "Is NuScale Power Corporation (SMR) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nuscale-power-corporation-smr-good-173432861.html",
+          "published": 1783100072,
+          "sentiment": 0.44
+        },
+        {
           "title": "3 Small Nuclear Reactors Hit a Milestone, but There\u2019s a Long Road From Here",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/nuclear-energy-nuscale-aalo-atomics-9620be48?siteid=yhoof2&yptr=yahoo",
@@ -1079,16 +1086,9 @@
           "url": "https://www.fool.com/investing/2026/07/01/prediction-hot-ticker-stock-is-a-buy-before-august/",
           "published": 1782883200,
           "sentiment": 0.0
-        },
-        {
-          "title": "Nuclear Power Is the Only Real Answer to AI Data Center Demand and These 3 ETFs Cover the Trade at Three Risk Levels",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/30/nuclear-power-is-the-only-real-answer-to-ai-data-center-demand-and-these-3-etfs-cover-the-trade-at-three-risk-levels/",
-          "published": 1782835894,
-          "sentiment": -0.382
         }
       ],
-      "news_sentiment": 0.107
+      "news_sentiment": 0.272
     },
     {
       "ticker": "OKLO",
@@ -1243,7 +1243,7 @@
       "high_gbp": "101",
       "high_usd": 135.24,
       "bar_pct": 42,
-      "market_cap_gbp_b": 31.482,
+      "market_cap_gbp_b": 31.483,
       "market_cap_usd_b": 42.047,
       "beta": 1.0,
       "pe_ratio": 91.94,
@@ -1311,8 +1311,8 @@
       "high_gbp": "15",
       "high_usd": 20.34,
       "bar_pct": 34,
-      "market_cap_gbp_b": 3.953,
-      "market_cap_usd_b": 5.28,
+      "market_cap_gbp_b": 3.991,
+      "market_cap_usd_b": 5.33,
       "beta": 1.186,
       "pe_ratio": null,
       "avg_volume_m": 10.09,
@@ -1447,8 +1447,8 @@
       "high_gbp": "284",
       "high_usd": 379.93,
       "bar_pct": 71,
-      "market_cap_gbp_b": 86.432,
-      "market_cap_usd_b": 115.437,
+      "market_cap_gbp_b": 86.434,
+      "market_cap_usd_b": 115.436,
       "beta": 2.029,
       "pe_ratio": 75.7,
       "avg_volume_m": 6.19,
@@ -1515,7 +1515,7 @@
       "high_gbp": "327",
       "high_usd": 436.74,
       "bar_pct": 69,
-      "market_cap_gbp_b": 115.864,
+      "market_cap_gbp_b": 115.867,
       "market_cap_usd_b": 154.745,
       "beta": 1.181,
       "pe_ratio": 39.07,
@@ -1528,6 +1528,13 @@
       "vol_1w": 14993100,
       "vol_1m": 53786500,
       "news": [
+        {
+          "title": "VWDRY or ETN: Which Is the Better Value Stock Right Now?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/vwdry-etn-better-value-stock-154003306.html",
+          "published": 1783093203,
+          "sentiment": 0.649
+        },
         {
           "title": "Eaton (ETN) Stock Moves -3.34%: What You Should Know",
           "publisher": "Zacks",
@@ -1555,16 +1562,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/nvt-stock-still-worth-buying-142300259.html",
           "published": 1783002180,
           "sentiment": 0.494
-        },
-        {
-          "title": "Eaton Corporation, PLC (ETN) Is a Trending Stock: Facts to Know Before Betting on It",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/eaton-corporation-plc-etn-trending-130002159.html",
-          "published": 1782997202,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.275
+      "news_sentiment": 0.405
     },
     {
       "ticker": "POWL",
@@ -1583,8 +1583,8 @@
       "high_gbp": "246",
       "high_usd": 328.0,
       "bar_pct": 69,
-      "market_cap_gbp_b": 6.719,
-      "market_cap_usd_b": 8.974,
+      "market_cap_gbp_b": 6.72,
+      "market_cap_usd_b": 8.975,
       "beta": 1.135,
       "pe_ratio": 48.11,
       "avg_volume_m": 0.72,
@@ -1651,7 +1651,7 @@
       "high_gbp": "845",
       "high_usd": 1128.68,
       "bar_pct": 69,
-      "market_cap_gbp_b": 73.993,
+      "market_cap_gbp_b": 73.995,
       "market_cap_usd_b": 98.823,
       "beta": 0.971,
       "pe_ratio": 69.44,
@@ -1719,7 +1719,7 @@
       "high_gbp": "156",
       "high_usd": 208.14,
       "bar_pct": 44,
-      "market_cap_gbp_b": 47.226,
+      "market_cap_gbp_b": 47.227,
       "market_cap_usd_b": 63.074,
       "beta": 1.053,
       "pe_ratio": 45.85,
@@ -1732,6 +1732,13 @@
       "vol_1w": 32302900,
       "vol_1m": 78905400,
       "news": [
+        {
+          "title": "Is Digital Realty Trust Stock Worth Retaining in Your Portfolio?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/real-estate/articles/digital-realty-trust-stock-worth-155900773.html",
+          "published": 1783094340,
+          "sentiment": 0.637
+        },
         {
           "title": "S&P 500 Posts Weekly Rise Ahead of Fourth of July, Led by Communication Services",
           "publisher": "MT Newswires",
@@ -1759,16 +1766,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-dlr-buys-3-100858655.html",
           "published": 1782900538,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is Digital Realty (DLR) Quietly Shifting From Landlord To AI Infrastructure Platform With Its Latest Move?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/digital-realty-dlr-quietly-shifting-081912073.html",
-          "published": 1782893952,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.159
+      "news_sentiment": 0.286
     },
     {
       "ticker": "AMT",
@@ -1782,13 +1782,13 @@
       "change_1m": "-8.03%",
       "change_ytd": "-3.15%",
       "return_1yr": "-25%",
-      "low_gbp": "121",
+      "low_gbp": "122",
       "low_usd": 162.27,
       "high_gbp": "175",
       "high_usd": 234.33,
       "bar_pct": 5,
-      "market_cap_gbp_b": 57.917,
-      "market_cap_usd_b": 77.353,
+      "market_cap_gbp_b": 57.918,
+      "market_cap_usd_b": 77.352,
       "beta": 0.909,
       "pe_ratio": 26.82,
       "avg_volume_m": 3.24,
@@ -1855,7 +1855,7 @@
       "high_gbp": "306",
       "high_usd": 408.61,
       "bar_pct": 79,
-      "market_cap_gbp_b": 3288.337,
+      "market_cap_gbp_b": 3288.425,
       "market_cap_usd_b": 4391.828,
       "beta": 1.247,
       "pe_ratio": 27.47,
@@ -1876,35 +1876,35 @@
           "sentiment": 0.0
         },
         {
-          "title": "Tesla rolls out robotaxi service in Miami",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/ai/articles/tesla-rolls-robotaxi-miami-145913748.html",
-          "published": 1783090753,
+          "title": "Better Artificial Intelligence (AI) Stock: Alphabet vs. Micron Technology (the Winner May Surprise You)",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/better-artificial-intelligence-ai-stock-alphabet-v/",
+          "published": 1783104660,
+          "sentiment": 0.898
+        },
+        {
+          "title": "Is Reddit (RDDT) The Best Cheap AI Stock to Buy?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/reddit-rddt-best-cheap-ai-212857097.html",
+          "published": 1783102317,
+          "sentiment": 0.637
+        },
+        {
+          "title": "Jim Cramer\u2019s Latest Thought on Apple Inc. (AAPL)",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-apple-see-quarter-081840061.html",
+          "published": 1783100860,
           "sentiment": 0.0
         },
         {
-          "title": "Which Stocks Win When Google AI Powers Walmart\u2019s Checkout?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/which-stocks-win-when-google-ai-powers-walmarts-checkout/",
-          "published": 1783087510,
-          "sentiment": 0.586
-        },
-        {
-          "title": "Alphabet and FBI Disrupt Global Malware Network",
-          "publisher": "GuruFocus.com",
-          "url": "https://www.yahoo.com/news/us/articles/alphabet-fbi-disrupt-global-malware-135016609.html",
-          "published": 1783086616,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Alphabet Takes Aim at Malicious Web Traffic",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/articles/alphabet-takes-aim-malicious-traffic-130248885.html",
-          "published": 1783083768,
+          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
+          "published": 1783100747,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.117
+      "news_sentiment": 0.307
     },
     {
       "ticker": "MSFT",
@@ -1923,7 +1923,7 @@
       "high_gbp": "416",
       "high_usd": 555.45,
       "bar_pct": 20,
-      "market_cap_gbp_b": 2171.892,
+      "market_cap_gbp_b": 2171.95,
       "market_cap_usd_b": 2900.729,
       "beta": 1.13,
       "pe_ratio": 23.26,
@@ -1944,35 +1944,35 @@
           "sentiment": 0.0
         },
         {
-          "title": "AI Exuberance Warning Hits Investors",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/ai-exuberance-warning-hits-investors-160002940.html",
-          "published": 1783094402,
-          "sentiment": -0.34
-        },
-        {
-          "title": "Microsoft Launches AI Adoption Firm",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-launches-ai-adoption-firm-135313441.html",
-          "published": 1783086793,
-          "sentiment": 0.0
-        },
-        {
-          "title": "CRWV Shares Slip 24% in a Month: Buy the Dip or Stay on the Sidelines?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/crwv-shares-slip-24-month-134200068.html",
-          "published": 1783086120,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Rimini Street (RMNI) Partners With One New Zealand, Here\u2019s What You Need to Know",
+          "title": "Jim Cramer Explains What Microsoft Needs to Do to \u201cReverse Its Fortunes\u201d",
           "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/articles/rimini-street-rmni-partners-one-131202927.html",
-          "published": 1783084322,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-explains-microsoft-needs-081813422.html",
+          "published": 1783101073,
           "sentiment": 0.0
+        },
+        {
+          "title": "Here\u2019s Why Jim Cramer Thinks Amazon (AMZN) is Punished by the Markets",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-amazon-see-bountiful-081822860.html",
+          "published": 1783101022,
+          "sentiment": -0.318
+        },
+        {
+          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
+          "published": 1783100747,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Veteran Tech Analyst: The Market Has Wrongly Left Software for Dead in the AI Rotation",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/03/veteran-tech-analyst-the-market-has-wrongly-left-software-for-dead-in-the-ai-rotation/",
+          "published": 1783100115,
+          "sentiment": -0.649
         }
       ],
-      "news_sentiment": -0.009
+      "news_sentiment": -0.193
     },
     {
       "ticker": "AMZN",
@@ -1991,7 +1991,7 @@
       "high_gbp": "209",
       "high_usd": 278.56,
       "bar_pct": 57,
-      "market_cap_gbp_b": 1954.532,
+      "market_cap_gbp_b": 1954.584,
       "market_cap_usd_b": 2610.428,
       "beta": 1.461,
       "pe_ratio": 31.64,
@@ -2012,35 +2012,35 @@
           "sentiment": 0.0
         },
         {
-          "title": "The Bull Case For Airbnb (ABNB) Could Change Following Its AI-Powered Shift Toward an \u2018Amazon for Services\u2019",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/bull-case-airbnb-abnb-could-151101896.html",
-          "published": 1783091461,
+          "title": "Here\u2019s Why Jim Cramer Thinks Amazon (AMZN) is Punished by the Markets",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-amazon-see-bountiful-081822860.html",
+          "published": 1783101022,
+          "sentiment": -0.318
+        },
+        {
+          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
+          "published": 1783100747,
           "sentiment": 0.0
         },
         {
-          "title": "Tesla rolls out robotaxi service in Miami",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/ai/articles/tesla-rolls-robotaxi-miami-145913748.html",
-          "published": 1783090753,
-          "sentiment": 0.0
+          "title": "3 Core Artificial Intelligence (AI) Market Leaders to Buy with $1,000 Right Now and Hold for the Next 20 Years",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/3-core-artificial-intelligence-ai-market-leaders-t/",
+          "published": 1783098360,
+          "sentiment": 0.477
         },
         {
-          "title": "Investors Heavily Search Amazon.com, Inc. (AMZN): Here is What You Need to Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-amazon-com-130006149.html",
-          "published": 1783083606,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Wall Street Is Split on Meta\u2019s Secret Cloud Move, and One Side Is Very Wrong",
+          "title": "Early Snowflake Investor Nails a 50% Rebound That May Only Be Warming Up",
           "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/wall-street-is-split-on-metas-secret-cloud-move-and-one-side-is-very-wrong/",
-          "published": 1783083116,
-          "sentiment": -0.526
+          "url": "https://247wallst.com/ai-portfolio/2026/07/03/early-snowflake-investor-nails-a-50-rebound-that-may-only-be-warming-up/",
+          "published": 1783096428,
+          "sentiment": 0.153
         }
       ],
-      "news_sentiment": -0.105
+      "news_sentiment": 0.062
     },
     {
       "ticker": "META",
@@ -2059,8 +2059,8 @@
       "high_gbp": "596",
       "high_usd": 796.25,
       "bar_pct": 23,
-      "market_cap_gbp_b": 1107.871,
-      "market_cap_usd_b": 1479.647,
+      "market_cap_gbp_b": 1107.9,
+      "market_cap_usd_b": 1479.646,
       "beta": 1.246,
       "pe_ratio": 21.19,
       "avg_volume_m": 17.21,
@@ -2073,42 +2073,42 @@
       "vol_1m": 417063100,
       "news": [
         {
-          "title": "Meta's AI Chip Roadmap May Shift",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/metas-ai-chip-roadmap-may-155249563.html",
-          "published": 1783093969,
+          "title": "Top Invesco Analyst: The AI Trade That \u201cLifted All Boats\u201d Is Over. Now Profitability Decides Winners As \u201cCapacity Will Catch Up\u201d",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/03/top-invesco-analyst-the-ai-trade-that-lifted-all-boats-is-over-now-profitability-decides-winners-as-capacity-will-catch-up/",
+          "published": 1783104431,
+          "sentiment": 0.718
+        },
+        {
+          "title": "Here is Why Jim Cramer Thinks Meta Platforms (META) is Misunderstood",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-meta-spending-081829530.html",
+          "published": 1783100909,
+          "sentiment": -0.34
+        },
+        {
+          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
+          "published": 1783100747,
           "sentiment": 0.0
         },
         {
-          "title": "Meta Eyes $6.5 Billion Samsung AI Chip Deal",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/meta-eyes-6-5-billion-155124125.html",
-          "published": 1783093884,
-          "sentiment": 0.0
+          "title": "These Investors Say Buy Meta Platforms (META) and Ignore SpaceX Hype",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-buy-meta-platforms-meta-132231039.html",
+          "published": 1783100371,
+          "sentiment": -0.361
         },
         {
-          "title": "3 Stocks Under $10 We\u2019re Skeptical Of",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-10-skeptical-151406450.html",
-          "published": 1783091646,
-          "sentiment": -0.318
-        },
-        {
-          "title": "Meta AI agents not advancing as quickly as planned, Zuckerberg tells staff: report",
-          "publisher": "Proactive",
-          "url": "https://www.proactiveinvestors.com/companies/news/1094929/meta-ai-agents-not-advancing-as-quickly-as-planned-zuckerberg-tells-staff-report-1094929.html",
-          "published": 1783090320,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Meta Is Reportedly Building a Cloud Business to Rival Amazon and Microsoft -- and a Way to Make Its Massive AI Bet Pay Off",
+          "title": "3 Core Artificial Intelligence (AI) Market Leaders to Buy with $1,000 Right Now and Hold for the Next 20 Years",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/meta-is-reportedly-building-a-cloud-business-to-ri/",
-          "published": 1783086180,
-          "sentiment": 0.077
+          "url": "https://www.fool.com/investing/2026/07/03/3-core-artificial-intelligence-ai-market-leaders-t/",
+          "published": 1783098360,
+          "sentiment": 0.477
         }
       ],
-      "news_sentiment": -0.048
+      "news_sentiment": 0.099
     },
     {
       "ticker": "IREN",
@@ -2141,6 +2141,20 @@
       "vol_1m": 902644600,
       "news": [
         {
+          "title": "Forget Nvidia: This Infrastructure Upstart Is The Real Backdoor AI Winner",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/forget-nvidia-this-ai-upstart-is-the-winner/",
+          "published": 1783103908,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Applied Digital Continues Heavy Capital Spending: What's Ahead?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/technology/ai/articles/applied-digital-continues-heavy-capital-162900889.html",
+          "published": 1783096140,
+          "sentiment": 0.0
+        },
+        {
           "title": "Iren (NasdaqGS:IREN) Stock Sees Fair Value Lift On AI Data Center Contract Optimism",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/iren-nasdaqgs-iren-stock-sees-002134522.html",
@@ -2160,23 +2174,9 @@
           "url": "https://blockspace.media/insight/iren-grants-18-2m-in-restricted-stock-to-co-ceos/",
           "published": 1783025300,
           "sentiment": -0.178
-        },
-        {
-          "title": "IREN board just approved 18 million in stock worth $700M to co-CEOs",
-          "publisher": "Blockspace",
-          "url": "https://blockspace.media/short/iren-board-just-approved-18-million-in-stock-worth-700m-to-co-ceos/",
-          "published": 1783023584,
-          "sentiment": 0.572
-        },
-        {
-          "title": "IREN Stock Heads For Ninth Straight Loss: $50M-A-Year NBA Spends, $788M Co-Founder Pay Packet Leave Retail Unimpressed",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/iren-stock-heads-for-ninth-straight-loss-/cZmeu82R7j3",
-          "published": 1783020543,
-          "sentiment": -0.527
         }
       ],
-      "news_sentiment": 0.214
+      "news_sentiment": 0.293
     },
     {
       "ticker": "CORZ",
@@ -2263,8 +2263,8 @@
       "high_gbp": "22",
       "high_usd": 29.84,
       "bar_pct": 66,
-      "market_cap_gbp_b": 7.858,
-      "market_cap_usd_b": 10.495,
+      "market_cap_gbp_b": 7.859,
+      "market_cap_usd_b": 10.496,
       "beta": 4.261,
       "pe_ratio": null,
       "avg_volume_m": 30.49,
@@ -2276,6 +2276,13 @@
       "vol_1w": 182303900,
       "vol_1m": 603404500,
       "news": [
+        {
+          "title": "Applied Digital Continues Heavy Capital Spending: What's Ahead?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/technology/ai/articles/applied-digital-continues-heavy-capital-162900889.html",
+          "published": 1783096140,
+          "sentiment": 0.0
+        },
         {
           "title": "Is TeraWulf Inc. (WULF) A Good Stock To Buy Now?",
           "publisher": "Insider Monkey",
@@ -2303,16 +2310,9 @@
           "url": "https://247wallst.com/investing/2026/06/29/here-are-mondays-best-wall-street-analyst-research-calls-adobe-applovin-caseys-general-stores-crowdstrike-honeywell-aerospace-salesforce-synaptics-terawulf-and-more/",
           "published": 1782735682,
           "sentiment": 0.637
-        },
-        {
-          "title": "TeraWulf (WULF) Acquires Kentucky Data Campus To Expand AI And HPC Footprint",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/terawulf-wulf-acquires-kentucky-data-190623269.html",
-          "published": 1782673583,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.401
+      "news_sentiment": 0.338
     },
     {
       "ticker": "HUT",
@@ -2467,7 +2467,7 @@
       "high_gbp": "352",
       "high_usd": 469.47,
       "bar_pct": 79,
-      "market_cap_gbp_b": 190.769,
+      "market_cap_gbp_b": 190.774,
       "market_cap_usd_b": 254.787,
       "beta": 1.376,
       "pe_ratio": 31.44,
@@ -2481,6 +2481,27 @@
       "vol_1m": 187919800,
       "news": [
         {
+          "title": "Dell's ISG Growth Reflects AI Infrastructure Dominance: What's Ahead?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/technology/ai/articles/dells-isg-growth-reflects-ai-162800694.html",
+          "published": 1783096080,
+          "sentiment": 0.527
+        },
+        {
+          "title": "Lenovo Group Skyrockets 137% YTD: Time to Add the Stock?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lenovo-group-skyrockets-137-ytd-162400743.html",
+          "published": 1783095840,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Trump Says Musk Could Donate SpaceX Stock After $86 Billion IPO",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/trump-says-musk-could-donate-161729411.html",
+          "published": 1783095449,
+          "sentiment": 0.0
+        },
+        {
           "title": "Is DXC (DXC) Using Private Cloud+ to Quietly Redefine Its Core Modernization Story?",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/technology/ai/articles/dxc-dxc-using-private-cloud-151050202.html",
@@ -2493,30 +2514,9 @@
           "url": "https://www.trefis.com/articles/605692/cisco-stock-is-soaring-on-a-massive-ai-bet/2026-07-03",
           "published": 1783082802,
           "sentiment": 0.0
-        },
-        {
-          "title": "Apple Stock: A Familiar Ride With Better Shocks",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605689/apple-stock-a-familiar-ride-with-better-shocks/2026-07-03",
-          "published": 1783080794,
-          "sentiment": 0.077
-        },
-        {
-          "title": "Why Dell (DELL) Shares Are Plunging Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-dell-dell-shares-plunging-030824605.html",
-          "published": 1783048104,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Follow Stock Market Leaders To Stay In Step With Broader Market Health",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/how-to-invest/investors-corner/stock-market-leaders-micron-amat-dell-sp500-health/?src=A00220&yptr=yahoo",
-          "published": 1783007947,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.075
+      "news_sentiment": 0.105
     },
     {
       "ticker": "COHR",
@@ -2535,8 +2535,8 @@
       "high_gbp": "329",
       "high_usd": 440.0,
       "bar_pct": 70,
-      "market_cap_gbp_b": 48.832,
-      "market_cap_usd_b": 65.219,
+      "market_cap_gbp_b": 48.833,
+      "market_cap_usd_b": 65.218,
       "beta": 2.037,
       "pe_ratio": 158.74,
       "avg_volume_m": 6.12,
@@ -2603,7 +2603,7 @@
       "high_gbp": "813",
       "high_usd": 1085.68,
       "bar_pct": 64,
-      "market_cap_gbp_b": 42.426,
+      "market_cap_gbp_b": 42.427,
       "market_cap_usd_b": 56.663,
       "beta": 1.482,
       "pe_ratio": 128.23,
@@ -2672,7 +2672,7 @@
       "high_usd": 233.67,
       "bar_pct": 48,
       "market_cap_gbp_b": 7.267,
-      "market_cap_usd_b": 9.706,
+      "market_cap_usd_b": 9.705,
       "beta": 3.687,
       "pe_ratio": null,
       "avg_volume_m": 12.7,
@@ -2740,7 +2740,7 @@
       "high_usd": 748.89,
       "bar_pct": 48,
       "market_cap_gbp_b": 13.403,
-      "market_cap_usd_b": 17.901,
+      "market_cap_usd_b": 17.9,
       "beta": 1.198,
       "pe_ratio": 42.92,
       "avg_volume_m": 0.96,
@@ -2807,7 +2807,7 @@
       "high_gbp": "314",
       "high_usd": 418.9,
       "bar_pct": 68,
-      "market_cap_gbp_b": 18.409,
+      "market_cap_gbp_b": 18.41,
       "market_cap_usd_b": 24.587,
       "beta": 1.655,
       "pe_ratio": 137.13,
@@ -2943,8 +2943,8 @@
       "high_gbp": "231",
       "high_usd": 308.67,
       "bar_pct": 70,
-      "market_cap_gbp_b": 33.776,
-      "market_cap_usd_b": 45.11,
+      "market_cap_gbp_b": 33.777,
+      "market_cap_usd_b": 45.111,
       "beta": 3.202,
       "pe_ratio": 96.0,
       "avg_volume_m": 8.63,
@@ -2956,6 +2956,13 @@
       "vol_1w": 73809600,
       "vol_1m": 234396000,
       "news": [
+        {
+          "title": "Broadcom Inc. (AVGO) Down 14% Since Last Earnings Report: Can It Rebound?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/broadcom-inc-avgo-down-14-153003787.html",
+          "published": 1783092603,
+          "sentiment": 0.0
+        },
         {
           "title": "How are Active Electrical Cables Driving Credo's Growth?",
           "publisher": "Zacks",
@@ -2983,16 +2990,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/5-high-efficiency-stocks-strong-122200556.html",
           "published": 1782994920,
           "sentiment": 0.735
-        },
-        {
-          "title": "5 Top-Ranked Momentum Stock Picks for Q3 2026 After a Fabulous Q2",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/5-top-ranked-momentum-stock-122000661.html",
-          "published": 1782994800,
-          "sentiment": 0.527
         }
       ],
-      "news_sentiment": 0.382
+      "news_sentiment": 0.277
     },
     {
       "ticker": "MXL",
@@ -3011,8 +3011,8 @@
       "high_gbp": "96",
       "high_usd": 128.3,
       "bar_pct": 70,
-      "market_cap_gbp_b": 6.243,
-      "market_cap_usd_b": 8.338,
+      "market_cap_gbp_b": 6.244,
+      "market_cap_usd_b": 8.339,
       "beta": 3.926,
       "pe_ratio": null,
       "avg_volume_m": 5.15,
@@ -3079,7 +3079,7 @@
       "high_gbp": "281",
       "high_usd": 374.96,
       "bar_pct": 72,
-      "market_cap_gbp_b": 40.16,
+      "market_cap_gbp_b": 40.161,
       "market_cap_usd_b": 53.637,
       "beta": 1.214,
       "pe_ratio": 50.54,
