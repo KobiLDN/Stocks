@@ -76,3 +76,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 See [AGENTS.md](AGENTS.md) and [WORKFLOW.md](WORKFLOW.md).
 
 Single-folder setup — one local clone (`STOCKSDev/`) on `dev`. `main` is the live site (remote-only). Deploy with `git push origin dev:main` on explicit go.
+
+## License
+
+All rights reserved — see [LICENSE](LICENSE). This is a proprietary project, not open source.
