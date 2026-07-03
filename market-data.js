@@ -1,5 +1,5 @@
 window.MARKET_DATA = {
-  "updated": "2026-07-03 07:37",
+  "updated": "2026-07-03 11:44",
   "spy": {
     "price": 744.78,
     "change_1d": -0.03,
@@ -13,8 +13,8 @@ window.MARKET_DATA = {
     "change_1m": -4.14
   },
   "vix": {
-    "level": 16.15,
-    "change_1d": -2.53,
+    "level": 15.93,
+    "change_1d": -1.3,
     "regime": "normal"
   },
   "market_regime": "normal"
