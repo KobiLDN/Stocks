@@ -48,6 +48,8 @@
 
 - **Hub index.html works on `file://`** — all 6 sector `prices-data.js` + `signals-local.js` preloaded as `<script>` tags at the top of `index.html`; snapshotted to `window.__pd_*` / `window.__sd_*`; JS checks preloaded globals first so the page fully populates when opened as a local file without a web server (`index.html`)
 
+- **Shared push-to-main concurrency group across all 4 bot workflows** — `update-prices`, `generate-export`, `generate-news-feed`, and `generate-signals` all now share `concurrency: group: push-to-main`; GitHub Actions queues them so two simultaneous bot triggers can't race on a push to `main` (were previously each given their own independent concurrency group, causing non-fast-forward collisions and rebase retry loops) (issue #5)
+
 - **Robust bot push retry** — all 3 GitHub Actions workflows (`update-prices.yml`, `generate-signals.yml`, `generate-export.yml`) use `git fetch origin main → git rebase origin/main → git push origin HEAD:main` in a 3-attempt retry loop (10s sleep); prevents transient non-fast-forward failures from marking runs as failed
 
 - **Heatmap gainers/losers split + flat colours** — all 6 heatmap pages: "All Stocks" and every By Sector/Category block groups green (gainers) tiles on the left and red (losers) tiles on the right, sized proportionally by count; solid `var(--green)` / `var(--red)` colours, no gradient shading; `header-note` banner aligned to match the blue accent bar and nav content (`shared.css`, all 6 `heatmap.html` files)
