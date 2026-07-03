@@ -29,7 +29,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-prices
+  group: push-to-main
   cancel-in-progress: false
 
 jobs:

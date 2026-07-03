@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: generate-news-feed
+  group: push-to-main
   cancel-in-progress: false
 
 jobs:

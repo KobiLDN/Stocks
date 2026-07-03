@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: generate-export
+  group: push-to-main
   cancel-in-progress: false
 
 jobs:

@@ -24,7 +24,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: generate-signals
+  group: push-to-main
   cancel-in-progress: false
 
 jobs:
