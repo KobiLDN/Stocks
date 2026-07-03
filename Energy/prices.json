@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-03 15:38",
-  "fx_gbp_usd": 1.3353,
+  "updated": "2026-07-03 17:09",
+  "fx_gbp_usd": 1.3352,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,7 +19,7 @@
       "high_gbp": "132",
       "high_usd": 176.41,
       "bar_pct": 45,
-      "market_cap_gbp_b": 425.531,
+      "market_cap_gbp_b": 425.565,
       "market_cap_usd_b": 568.231,
       "beta": 0.162,
       "pe_ratio": 23.08,
@@ -87,7 +87,7 @@
       "high_gbp": "161",
       "high_usd": 214.71,
       "bar_pct": 34,
-      "market_cap_gbp_b": 252.353,
+      "market_cap_gbp_b": 252.373,
       "market_cap_usd_b": 336.978,
       "beta": 0.488,
       "pe_ratio": 29.48,
@@ -106,6 +106,13 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-producing-stocks-keep-141806248.html",
           "published": 1783088286,
           "sentiment": 0.0
+        },
+        {
+          "title": "Can OXY's Robust Proved Reserves Strengthen Its Long-Term Returns?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/energy/articles/oxys-robust-proved-reserves-strengthen-140300447.html",
+          "published": 1783087380,
+          "sentiment": 0.572
         },
         {
           "title": "Chevron Corporation (CVX) Is a Trending Stock: Facts to Know Before Betting on It",
@@ -127,16 +134,9 @@
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-192449734.html",
           "published": 1783020289,
           "sentiment": 0.273
-        },
-        {
-          "title": "Chevron (CVX) Stock Looks Near Fair Value With Strong Returns But Rich Earnings",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/chevron-cvx-stock-looks-near-191356823.html",
-          "published": 1783019636,
-          "sentiment": 0.856
         }
       ],
-      "news_sentiment": 0.28
+      "news_sentiment": 0.224
     },
     {
       "ticker": "SHEL",
@@ -155,7 +155,7 @@
       "high_gbp": "71",
       "high_usd": 94.9,
       "bar_pct": 36,
-      "market_cap_gbp_b": 161.906,
+      "market_cap_gbp_b": 161.919,
       "market_cap_usd_b": 216.2,
       "beta": -0.235,
       "pe_ratio": 12.15,
@@ -223,8 +223,8 @@
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 41,
-      "market_cap_gbp_b": 72.122,
-      "market_cap_usd_b": 96.308,
+      "market_cap_gbp_b": 72.127,
+      "market_cap_usd_b": 96.307,
       "beta": -0.231,
       "pe_ratio": 30.41,
       "avg_volume_m": 9.89,
@@ -236,6 +236,13 @@
       "vol_1w": 76344700,
       "vol_1m": 209967700,
       "news": [
+        {
+          "title": "Fiserv, service station operators including BP warn US stores on illegal vapes",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/healthcare/articles/fiserv-station-operators-including-bp-155734839.html",
+          "published": 1783094254,
+          "sentiment": -0.612
+        },
         {
           "title": "Sumitomo to divest stakes in three Belgian offshore wind projects",
           "publisher": "Power Technology",
@@ -263,16 +270,9 @@
           "url": "https://finance.yahoo.com/energy/articles/e-n-spa-e-announces-194244624.html",
           "published": 1782934964,
           "sentiment": 0.361
-        },
-        {
-          "title": "Talos Energy (TALO) Stock Is Up, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/talos-energy-talo-stock-know-190500612.html",
-          "published": 1782932700,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.096
+      "news_sentiment": -0.081
     },
     {
       "ticker": "TTE",
@@ -291,8 +291,8 @@
       "high_gbp": "71",
       "high_usd": 94.17,
       "bar_pct": 52,
-      "market_cap_gbp_b": 127.778,
-      "market_cap_usd_b": 170.628,
+      "market_cap_gbp_b": 127.788,
+      "market_cap_usd_b": 170.627,
       "beta": 0.05,
       "pe_ratio": 11.38,
       "avg_volume_m": 1.63,
@@ -359,8 +359,8 @@
       "high_gbp": "33",
       "high_usd": 43.46,
       "bar_pct": 46,
-      "market_cap_gbp_b": 59.725,
-      "market_cap_usd_b": 79.753,
+      "market_cap_gbp_b": 59.73,
+      "market_cap_usd_b": 79.754,
       "beta": -0.75,
       "pe_ratio": 14.5,
       "avg_volume_m": 4.43,
@@ -427,8 +427,8 @@
       "high_gbp": "102",
       "high_usd": 135.87,
       "bar_pct": 38,
-      "market_cap_gbp_b": 95.55,
-      "market_cap_usd_b": 127.592,
+      "market_cap_gbp_b": 95.557,
+      "market_cap_usd_b": 127.591,
       "beta": 0.122,
       "pe_ratio": 17.75,
       "avg_volume_m": 8.0,
@@ -440,6 +440,13 @@
       "vol_1w": 40136600,
       "vol_1m": 169328500,
       "news": [
+        {
+          "title": "Can OXY's Robust Proved Reserves Strengthen Its Long-Term Returns?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/energy/articles/oxys-robust-proved-reserves-strengthen-140300447.html",
+          "published": 1783087380,
+          "sentiment": 0.572
+        },
         {
           "title": "ConocoPhillips (COP) Stock Moves 1.46%: What You Should Know",
           "publisher": "Zacks",
@@ -467,16 +474,9 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/07/01/conocophillips-or-occidental-petroleum-which-oil-stock-should-you-buy-now/",
           "published": 1782935077,
           "sentiment": 0.0
-        },
-        {
-          "title": "2 Large-Cap Stocks Worth Your Attention and 1 We Avoid",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/2-large-cap-stocks-worth-100920464.html",
-          "published": 1782814160,
-          "sentiment": -0.077
         }
       ],
-      "news_sentiment": -0.046
+      "news_sentiment": 0.084
     },
     {
       "ticker": "OXY",
@@ -495,7 +495,7 @@
       "high_gbp": "51",
       "high_usd": 67.45,
       "bar_pct": 35,
-      "market_cap_gbp_b": 36.431,
+      "market_cap_gbp_b": 36.434,
       "market_cap_usd_b": 48.648,
       "beta": 0.15,
       "pe_ratio": 66.09,
@@ -508,6 +508,13 @@
       "vol_1w": 49665400,
       "vol_1m": 203389200,
       "news": [
+        {
+          "title": "Can OXY's Robust Proved Reserves Strengthen Its Long-Term Returns?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/energy/articles/oxys-robust-proved-reserves-strengthen-140300447.html",
+          "published": 1783087380,
+          "sentiment": 0.572
+        },
         {
           "title": "ConocoPhillips or Occidental Petroleum: Which Oil Stock Should You Buy Now?",
           "publisher": "Motley Fool",
@@ -535,16 +542,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/occidental-petroleum-oxy-stock-drops-215005057.html",
           "published": 1782856205,
           "sentiment": -0.388
-        },
-        {
-          "title": "Should You Buy Occidental Petroleum Corporation (OXY)\u2019s Shares?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/buy-occidental-petroleum-corporation-oxy-172708072.html",
-          "published": 1782840428,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": -0.043
+      "news_sentiment": 0.012
     },
     {
       "ticker": "EOG",
@@ -563,7 +563,7 @@
       "high_gbp": "114",
       "high_usd": 151.87,
       "bar_pct": 58,
-      "market_cap_gbp_b": 52.164,
+      "market_cap_gbp_b": 52.168,
       "market_cap_usd_b": 69.657,
       "beta": 0.261,
       "pe_ratio": 12.86,
@@ -631,8 +631,8 @@
       "high_gbp": "204",
       "high_usd": 272.46,
       "bar_pct": 95,
-      "market_cap_gbp_b": 58.23,
-      "market_cap_usd_b": 77.757,
+      "market_cap_gbp_b": 58.235,
+      "market_cap_usd_b": 77.758,
       "beta": 0.52,
       "pe_ratio": 17.55,
       "avg_volume_m": 2.36,
@@ -699,8 +699,8 @@
       "high_gbp": "206",
       "high_usd": 274.92,
       "bar_pct": 95,
-      "market_cap_gbp_b": 59.54,
-      "market_cap_usd_b": 79.506,
+      "market_cap_gbp_b": 59.545,
+      "market_cap_usd_b": 79.507,
       "beta": 0.545,
       "pe_ratio": 19.57,
       "avg_volume_m": 3.13,
@@ -767,7 +767,7 @@
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 50,
-      "market_cap_gbp_b": 50.528,
+      "market_cap_gbp_b": 50.532,
       "market_cap_usd_b": 67.472,
       "beta": 0.733,
       "pe_ratio": 19.88,
@@ -835,7 +835,7 @@
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 55,
-      "market_cap_gbp_b": 20.62,
+      "market_cap_gbp_b": 20.622,
       "market_cap_usd_b": 27.535,
       "beta": 0.725,
       "pe_ratio": 18.21,
@@ -903,8 +903,8 @@
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 45,
-      "market_cap_gbp_b": 39.212,
-      "market_cap_usd_b": 52.362,
+      "market_cap_gbp_b": 39.215,
+      "market_cap_usd_b": 52.361,
       "beta": 0.96,
       "pe_ratio": 16.86,
       "avg_volume_m": 8.28,
@@ -971,7 +971,7 @@
       "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 65,
-      "market_cap_gbp_b": 137.974,
+      "market_cap_gbp_b": 137.985,
       "market_cap_usd_b": 184.243,
       "beta": 0.667,
       "pe_ratio": 22.42,
@@ -1028,29 +1028,29 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "25",
-      "price_usd": 33.3,
-      "change_1d": "+1.84%",
-      "change_1w": "+3.02%",
-      "change_1m": "+6.76%",
-      "change_ytd": "+11.79%",
+      "price_usd": 33.47,
+      "change_1d": "+2.37%",
+      "change_1w": "+3.55%",
+      "change_1m": "+7.32%",
+      "change_ytd": "+12.37%",
       "return_1yr": "+32%",
       "low_gbp": "16",
-      "low_usd": 21.33,
+      "low_usd": 21.32,
       "high_gbp": "28",
-      "high_usd": 36.96,
-      "bar_pct": 77,
-      "market_cap_gbp_b": 0.301,
-      "market_cap_usd_b": 0.402,
+      "high_usd": 36.95,
+      "bar_pct": 78,
+      "market_cap_gbp_b": 0.302,
+      "market_cap_usd_b": 0.403,
       "beta": 0.59,
-      "pe_ratio": 23.75,
+      "pe_ratio": 23.88,
       "avg_volume_m": 4.22,
       "div_yield_pct": 279.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 883266,
-      "vol_1w": 19003447,
-      "vol_1m": 89232407,
+      "vol_1d": 2063099,
+      "vol_1w": 20183280,
+      "vol_1m": 90412240,
       "news": [
         {
           "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
@@ -1108,7 +1108,7 @@
       "high_usd": 73.74,
       "bar_pct": 36,
       "market_cap_gbp_b": 4.251,
-      "market_cap_usd_b": 5.677,
+      "market_cap_usd_b": 5.676,
       "beta": 1.615,
       "pe_ratio": 42.64,
       "avg_volume_m": 8.22,
@@ -1175,8 +1175,8 @@
       "high_gbp": "240",
       "high_usd": 320.95,
       "bar_pct": 40,
-      "market_cap_gbp_b": 18.071,
-      "market_cap_usd_b": 24.131,
+      "market_cap_gbp_b": 18.072,
+      "market_cap_usd_b": 24.13,
       "beta": 1.73,
       "pe_ratio": 14.52,
       "avg_volume_m": 2.5,
@@ -1311,7 +1311,7 @@
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 7,
-      "market_cap_gbp_b": 22.972,
+      "market_cap_gbp_b": 22.974,
       "market_cap_usd_b": 30.676,
       "beta": 0.636,
       "pe_ratio": null,

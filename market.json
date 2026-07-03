@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03 15:38",
+  "updated": "2026-07-03 17:09",
   "spy": {
     "price": 744.78,
     "change_1d": -0.03,
@@ -13,8 +13,8 @@
     "change_1m": -4.14
   },
   "vix": {
-    "level": 15.89,
-    "change_1d": -1.55,
+    "level": 15.81,
+    "change_1d": -2.04,
     "regime": "normal"
   },
   "market_regime": "normal"

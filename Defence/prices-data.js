@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-03 15:32",
-  "fx_gbp_usd": 1.3353,
+  "updated": "2026-07-03 17:04",
+  "fx_gbp_usd": 1.3354,
   "stocks": [
     {
       "ticker": "LMT",
@@ -19,7 +19,7 @@ window.PRICES_DATA = {
       "high_gbp": "518",
       "high_usd": 692.0,
       "bar_pct": 48,
-      "market_cap_gbp_b": 94.259,
+      "market_cap_gbp_b": 94.253,
       "market_cap_usd_b": 125.867,
       "beta": 0.113,
       "pe_ratio": 26.45,
@@ -87,8 +87,8 @@ window.PRICES_DATA = {
       "high_gbp": "161",
       "high_usd": 214.5,
       "bar_pct": 79,
-      "market_cap_gbp_b": 200.944,
-      "market_cap_usd_b": 268.326,
+      "market_cap_gbp_b": 200.931,
+      "market_cap_usd_b": 268.327,
       "beta": 0.298,
       "pe_ratio": 37.31,
       "avg_volume_m": 5.43,
@@ -100,6 +100,13 @@ window.PRICES_DATA = {
       "vol_1w": 24658200,
       "vol_1m": 113853800,
       "news": [
+        {
+          "title": "Is RTX (RTX) a Buy as Wall Street Analysts Look Optimistic?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-buy-wall-street-133003631.html",
+          "published": 1783085403,
+          "sentiment": 0.318
+        },
         {
           "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
           "publisher": "Trefis",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/northrop-grumman-expanding-presence-missile-141700362.html",
           "published": 1783001820,
           "sentiment": 0.0
-        },
-        {
-          "title": "From $4.8 to $101: Rocket Lab\u2019s Wild Ride Into an $8 Billion SpaceX Showdown",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/02/from-4-8-to-101-rocket-labs-wild-ride-into-an-8-billion-spacex-showdown/",
-          "published": 1782996627,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.064
     },
     {
       "ticker": "NOC",
@@ -155,7 +155,7 @@ window.PRICES_DATA = {
       "high_gbp": "580",
       "high_usd": 774.0,
       "bar_pct": 20,
-      "market_cap_gbp_b": 58.396,
+      "market_cap_gbp_b": 58.392,
       "market_cap_usd_b": 77.978,
       "beta": -0.102,
       "pe_ratio": 17.21,
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "280",
       "high_usd": 373.6,
       "bar_pct": 99,
-      "market_cap_gbp_b": 75.649,
+      "market_cap_gbp_b": 75.644,
       "market_cap_usd_b": 101.016,
       "beta": 0.338,
       "pe_ratio": 23.52,
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "344",
       "high_usd": 460.0,
       "bar_pct": 21,
-      "market_cap_gbp_b": 8.602,
+      "market_cap_gbp_b": 8.601,
       "market_cap_usd_b": 11.486,
       "beta": 0.248,
       "pe_ratio": 18.94,
@@ -359,8 +359,8 @@ window.PRICES_DATA = {
       "high_gbp": "284",
       "high_usd": 379.23,
       "bar_pct": 40,
-      "market_cap_gbp_b": 42.143,
-      "market_cap_usd_b": 56.275,
+      "market_cap_gbp_b": 42.14,
+      "market_cap_usd_b": 56.274,
       "beta": 0.746,
       "pe_ratio": 32.8,
       "avg_volume_m": 1.42,
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "190",
       "high_usd": 254.35,
       "bar_pct": 64,
-      "market_cap_gbp_b": 133.707,
+      "market_cap_gbp_b": 133.698,
       "market_cap_usd_b": 178.543,
       "beta": 1.205,
       "pe_ratio": 89.17,
@@ -484,30 +484,37 @@ window.PRICES_DATA = {
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "20",
-      "price_usd": 26.41,
-      "change_1d": "-0.85%",
-      "change_1w": "+9.38%",
-      "change_1m": "+4.08%",
-      "change_ytd": "+12.75%",
+      "price_usd": 26.46,
+      "change_1d": "-0.65%",
+      "change_1w": "+9.60%",
+      "change_1m": "+4.29%",
+      "change_ytd": "+12.98%",
       "return_1yr": "+5%",
       "low_gbp": "15",
       "low_usd": 20.42,
       "high_gbp": "24",
-      "high_usd": 31.51,
+      "high_usd": 31.52,
       "bar_pct": 54,
-      "market_cap_gbp_b": 0.58,
-      "market_cap_usd_b": 0.774,
+      "market_cap_gbp_b": 0.581,
+      "market_cap_usd_b": 0.776,
       "beta": -0.066,
-      "pe_ratio": 29.08,
+      "pe_ratio": 29.14,
       "avg_volume_m": 6.69,
       "div_yield_pct": 183.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.17,
-      "vol_1d": 1263613,
-      "vol_1w": 26960092,
-      "vol_1m": 162583529,
+      "vol_1d": 3204355,
+      "vol_1w": 28900834,
+      "vol_1m": 164524271,
       "news": [
+        {
+          "title": "U.K.-Italian-Japanese Fighter Jet Venture Wins $6.14 Billion Contract",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/u-k-italian-japan-fighter-jet-venture-wins-6-14-billion-contract-e63655a3?siteid=yhoof2&yptr=yahoo",
+          "published": 1783090680,
+          "sentiment": 0.649
+        },
         {
           "title": "How to take advantage of Labour\u2019s \u00a315bn defence drive",
           "publisher": "The Telegraph",
@@ -535,16 +542,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/general-dynamics-expanding-presence-submarine-142100364.html",
           "published": 1783002060,
           "sentiment": 0.273
-        },
-        {
-          "title": "Allison Transmission (ALSN) Soars 4.2%: Is Further Upside Left in the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/allison-transmission-alsn-soars-4-100100843.html",
-          "published": 1782986460,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.189
+      "news_sentiment": 0.318
     },
     {
       "ticker": "RR.L",
@@ -552,30 +552,37 @@ window.PRICES_DATA = {
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "15",
-      "price_usd": 19.9,
-      "change_1d": "+0.40%",
-      "change_1w": "+5.99%",
-      "change_1m": "+18.45%",
-      "change_ytd": "+24.52%",
+      "price_usd": 20.09,
+      "change_1d": "+1.33%",
+      "change_1w": "+6.97%",
+      "change_1m": "+19.55%",
+      "change_ytd": "+25.67%",
       "return_1yr": "+53%",
       "low_gbp": "9.51",
       "low_usd": 12.7,
       "high_gbp": "15",
       "high_usd": 20.47,
-      "bar_pct": 93,
-      "market_cap_gbp_b": 1.235,
-      "market_cap_usd_b": 1.649,
+      "bar_pct": 95,
+      "market_cap_gbp_b": 1.247,
+      "market_cap_usd_b": 1.665,
       "beta": 1.203,
-      "pe_ratio": 21.6,
+      "pe_ratio": 21.8,
       "avg_volume_m": 33.76,
       "div_yield_pct": 64.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 3165074,
-      "vol_1w": 94121911,
-      "vol_1m": 637907728,
+      "vol_1d": 10992534,
+      "vol_1w": 101949371,
+      "vol_1m": 645735188,
       "news": [
+        {
+          "title": "Rolls Royce (LSE:RR.) Stock Looks Like A Bargain On Earnings But Fully Priced On Broader Checks",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rolls-royce-lse-rr-stock-151117449.html",
+          "published": 1783091477,
+          "sentiment": 0.285
+        },
         {
           "title": "How to take advantage of Labour\u2019s \u00a315bn defence drive",
           "publisher": "The Telegraph",
@@ -603,46 +610,39 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/airasia-shares-drop-30-carrier-191848930.html",
           "published": 1782328728,
           "sentiment": 0.026
-        },
-        {
-          "title": "Is Heico (HEI) Stock Outpacing Its Aerospace Peers This Year?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/heico-hei-stock-outpacing-aerospace-134002422.html",
-          "published": 1782308402,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.204
+      "news_sentiment": 0.261
     },
     {
       "ticker": "QQ.L",
       "company_name": "QinetiQ Group",
       "category": "uk-european",
       "exchange": "LSE",
-      "price_gbp": "4.81",
-      "price_usd": 6.42,
-      "change_1d": "-0.46%",
-      "change_1w": "+16.02%",
-      "change_1m": "+1.65%",
-      "change_ytd": "+8.20%",
+      "price_gbp": "4.79",
+      "price_usd": 6.4,
+      "change_1d": "+0.29%",
+      "change_1w": "+15.69%",
+      "change_1m": "+1.35%",
+      "change_ytd": "+7.88%",
       "return_1yr": "-5%",
       "low_gbp": "3.98",
       "low_usd": 5.32,
       "high_gbp": "5.51",
       "high_usd": 7.36,
-      "bar_pct": 54,
+      "bar_pct": 53,
       "market_cap_gbp_b": 0.025,
       "market_cap_usd_b": 0.033,
       "beta": 0.325,
-      "pe_ratio": 24.04,
+      "pe_ratio": 23.97,
       "avg_volume_m": 2.26,
       "div_yield_pct": 230.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.82,
-      "vol_1d": 827281,
-      "vol_1w": 14586932,
-      "vol_1m": 51607817,
+      "vol_1d": 1540112,
+      "vol_1w": 15299763,
+      "vol_1m": 52320648,
       "news": [
         {
           "title": "3 UK Penny Stocks With Market Caps Over \u00a3300M To Consider",
@@ -699,8 +699,8 @@ window.PRICES_DATA = {
       "high_gbp": "155",
       "high_usd": 207.52,
       "bar_pct": 23,
-      "market_cap_gbp_b": 232.132,
-      "market_cap_usd_b": 309.972,
+      "market_cap_gbp_b": 232.117,
+      "market_cap_usd_b": 309.973,
       "beta": 1.562,
       "pe_ratio": 145.28,
       "avg_volume_m": 45.89,
@@ -727,6 +727,13 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Palantir\u2019s NVIDIA AI Collab Could Be a Game-Changer That Marks a Turn in the Stock",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/03/palantirs-nvidia-ai-collab-could-be-a-game-changer-that-marks-a-turn-in-the-stock/",
+          "published": 1783090417,
+          "sentiment": 0.0
+        },
+        {
           "title": "Palantir Stock: A Different Engine, Not A Quieter One",
           "publisher": "Trefis",
           "url": "https://www.trefis.com/articles/605690/palantir-stock-a-different-engine-not-a-quieter-one/2026-07-03",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/07/03/palantirs-business-is-booming-so-why-has-the-stock/",
           "published": 1783078200,
           "sentiment": 0.0
-        },
-        {
-          "title": "Palantir CEO gets painfully honest about AI\u2019s biggest problem",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/palantir-ceo-honest-about-ai-trust-problem",
-          "published": 1783040580,
-          "sentiment": -0.421
         }
       ],
-      "news_sentiment": 0.004
+      "news_sentiment": 0.088
     },
     {
       "ticker": "LDOS",
@@ -767,7 +767,7 @@ window.PRICES_DATA = {
       "high_gbp": "154",
       "high_usd": 205.77,
       "bar_pct": 9,
-      "market_cap_gbp_b": 10.253,
+      "market_cap_gbp_b": 10.252,
       "market_cap_usd_b": 13.691,
       "beta": 0.547,
       "pe_ratio": 9.96,
@@ -835,8 +835,8 @@ window.PRICES_DATA = {
       "high_gbp": "512",
       "high_usd": 683.5,
       "bar_pct": 27,
-      "market_cap_gbp_b": 8.319,
-      "market_cap_usd_b": 11.109,
+      "market_cap_gbp_b": 8.318,
+      "market_cap_usd_b": 11.108,
       "beta": 0.541,
       "pe_ratio": 20.74,
       "avg_volume_m": 0.3,
@@ -1039,8 +1039,8 @@ window.PRICES_DATA = {
       "high_gbp": "313",
       "high_usd": 417.86,
       "bar_pct": 20,
-      "market_cap_gbp_b": 7.235,
-      "market_cap_usd_b": 9.661,
+      "market_cap_gbp_b": 7.234,
+      "market_cap_usd_b": 9.66,
       "beta": 1.395,
       "pe_ratio": null,
       "avg_volume_m": 1.5,
@@ -1107,7 +1107,7 @@ window.PRICES_DATA = {
       "high_gbp": "100",
       "high_usd": 134.0,
       "bar_pct": 14,
-      "market_cap_gbp_b": 7.773,
+      "market_cap_gbp_b": 7.772,
       "market_cap_usd_b": 10.379,
       "beta": 1.07,
       "pe_ratio": 325.59,
@@ -1243,7 +1243,7 @@ window.PRICES_DATA = {
       "high_gbp": "76",
       "high_usd": 101.57,
       "bar_pct": 65,
-      "market_cap_gbp_b": 12.046,
+      "market_cap_gbp_b": 12.045,
       "market_cap_usd_b": 16.085,
       "beta": 0.905,
       "pe_ratio": 17.65,
@@ -1311,8 +1311,8 @@ window.PRICES_DATA = {
       "high_gbp": "169",
       "high_usd": 225.64,
       "bar_pct": 19,
-      "market_cap_gbp_b": 1598.273,
-      "market_cap_usd_b": 2134.218,
+      "market_cap_gbp_b": 1598.167,
+      "market_cap_usd_b": 2134.219,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 169.2,
@@ -1339,28 +1339,28 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Where Will SpaceX Be in 100 Years?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/where-will-hot-ticker-be-in-100-years/",
-          "published": 1783087500,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Dow Jones Futures Fall Techs Rise After Tesla, Sandisk, AI Stocks Dive; Apple, Robinhood Flash Buy Signals",
+          "title": "Dow Jones Futures: Techs Rebound After Tesla, Sandisk, AI Stocks Dive; Apple, Robinhood Flash Buy Signals",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
-          "published": 1783086290,
+          "published": 1783094066,
           "sentiment": 0.0
         },
         {
-          "title": "Could SpaceX Really Disrupt the Telecoms?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/could-spacex-really-disrupt-the-telecoms/",
-          "published": 1783085747,
-          "sentiment": 0.0
+          "title": "Is Rocket Lab (RKLB) The Best Space Stock to Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-best-space-153110214.html",
+          "published": 1783092670,
+          "sentiment": 0.637
+        },
+        {
+          "title": "He Predicted the Dot-com Bubble Burst. Now He's Saying SpaceX Could be a Fresh Warning Sign.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/he-predicted-the-dot-com-bubble-burst-now-hes-sayi/",
+          "published": 1783089300,
+          "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.122
     },
     {
       "ticker": "RKLB",
@@ -1379,7 +1379,7 @@ window.PRICES_DATA = {
       "high_gbp": "113",
       "high_usd": 151.0,
       "bar_pct": 56,
-      "market_cap_gbp_b": 47.007,
+      "market_cap_gbp_b": 47.004,
       "market_cap_usd_b": 62.77,
       "beta": 2.553,
       "pe_ratio": null,
@@ -1392,6 +1392,13 @@ window.PRICES_DATA = {
       "vol_1w": 153954400,
       "vol_1m": 620733900,
       "news": [
+        {
+          "title": "Is Rocket Lab (RKLB) The Best Space Stock to Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-best-space-153110214.html",
+          "published": 1783092670,
+          "sentiment": 0.637
+        },
         {
           "title": "Blue Origin Deserves More Attention From SpaceX Investors",
           "publisher": "Trefis",
@@ -1419,16 +1426,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/pl-stock-lags-industry-trades-172600939.html",
           "published": 1783013160,
           "sentiment": -0.361
-        },
-        {
-          "title": "Rocket Lab\u2019s CEO Just Bet $8 Billion on Taking Down SpaceX. Here\u2019s the \u20181+1=3\u2019 Logic",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/02/rocket-labs-ceo-just-bet-8-billion-on-taking-down-spacex-heres-the-113-logic/",
-          "published": 1783007100,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.072
+      "news_sentiment": 0.055
     },
     {
       "ticker": "PL",
@@ -1448,7 +1448,7 @@ window.PRICES_DATA = {
       "high_usd": 51.76,
       "bar_pct": 56,
       "market_cap_gbp_b": 8.375,
-      "market_cap_usd_b": 11.183,
+      "market_cap_usd_b": 11.184,
       "beta": 2.067,
       "pe_ratio": null,
       "avg_volume_m": 13.44,
@@ -1515,7 +1515,7 @@ window.PRICES_DATA = {
       "high_gbp": "100",
       "high_usd": 133.86,
       "bar_pct": 50,
-      "market_cap_gbp_b": 24.744,
+      "market_cap_gbp_b": 24.742,
       "market_cap_usd_b": 33.041,
       "beta": 2.677,
       "pe_ratio": null,
@@ -1583,7 +1583,7 @@ window.PRICES_DATA = {
       "high_gbp": "1216",
       "high_usd": 1623.83,
       "bar_pct": 45,
-      "market_cap_gbp_b": 56.485,
+      "market_cap_gbp_b": 56.481,
       "market_cap_usd_b": 75.426,
       "beta": 0.884,
       "pe_ratio": 42.02,
@@ -1651,8 +1651,8 @@ window.PRICES_DATA = {
       "high_gbp": "275",
       "high_usd": 366.59,
       "bar_pct": 96,
-      "market_cap_gbp_b": 37.87,
-      "market_cap_usd_b": 50.569,
+      "market_cap_gbp_b": 37.868,
+      "market_cap_usd_b": 50.57,
       "beta": 1.03,
       "pe_ratio": 64.54,
       "avg_volume_m": 0.68,
@@ -1719,7 +1719,7 @@ window.PRICES_DATA = {
       "high_gbp": "663",
       "high_usd": 885.92,
       "bar_pct": 47,
-      "market_cap_gbp_b": 36.038,
+      "market_cap_gbp_b": 36.036,
       "market_cap_usd_b": 48.123,
       "beta": 1.378,
       "pe_ratio": 237.86,
@@ -1787,8 +1787,8 @@ window.PRICES_DATA = {
       "high_gbp": "23",
       "high_usd": 30.46,
       "bar_pct": 16,
-      "market_cap_gbp_b": 1.711,
-      "market_cap_usd_b": 2.285,
+      "market_cap_gbp_b": 1.71,
+      "market_cap_usd_b": 2.284,
       "beta": 1.206,
       "pe_ratio": null,
       "avg_volume_m": 2.61,
@@ -1923,8 +1923,8 @@ window.PRICES_DATA = {
       "high_gbp": "38",
       "high_usd": 50.59,
       "bar_pct": 62,
-      "market_cap_gbp_b": 8.734,
-      "market_cap_usd_b": 11.663,
+      "market_cap_gbp_b": 8.733,
+      "market_cap_usd_b": 11.662,
       "beta": 0.19,
       "pe_ratio": 40.86,
       "avg_volume_m": 1.06,
