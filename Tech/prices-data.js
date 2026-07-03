@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-03 20:32",
-  "fx_gbp_usd": 1.3355,
+  "updated": "2026-07-03 22:40",
+  "fx_gbp_usd": 1.335,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -19,8 +19,8 @@ window.PRICES_DATA = {
       "high_gbp": "238",
       "high_usd": 317.4,
       "bar_pct": 92,
-      "market_cap_gbp_b": 3394.144,
-      "market_cap_usd_b": 4532.959,
+      "market_cap_gbp_b": 3395.504,
+      "market_cap_usd_b": 4532.96,
       "beta": 1.097,
       "pe_ratio": 37.32,
       "avg_volume_m": 53.94,
@@ -28,9 +28,9 @@ window.PRICES_DATA = {
       "short_pct": 0.98,
       "analyst": "buy",
       "analyst_score": 2.02,
-      "vol_1d": 75352800,
-      "vol_1w": 518819700,
-      "vol_1m": 1433302500,
+      "vol_1d": 75400600,
+      "vol_1w": 518867500,
+      "vol_1m": 1433350300,
       "news": [
         {
           "title": "Here's how much more expensive your devices have gotten thanks to AI",
@@ -40,10 +40,10 @@ window.PRICES_DATA = {
           "sentiment": 0.44
         },
         {
-          "title": "Inside Securitize's SPAC IPO and tokenization strategy",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/inside-securitizes-spac-ipo-tokenization-203100628.html",
-          "published": 1783024260,
+          "title": "Dow Jones Futures: Techs' Rise Signal AI Trend Isn't Over; Apple, Robinhood Flash Buy Signals",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
+          "published": 1783112035,
           "sentiment": 0.0
         },
         {
@@ -54,17 +54,17 @@ window.PRICES_DATA = {
           "sentiment": 0.153
         },
         {
-          "title": "Dow Jones Futures: Techs' Rise Signal AI Trend Isn't Over; Apple, Robinhood Flash Buy Signals",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
-          "published": 1783103656,
-          "sentiment": 0.0
-        },
-        {
           "title": "Jim Cramer\u2019s Latest Thought on Apple Inc. (AAPL)",
           "publisher": "Insider Monkey",
           "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-apple-see-quarter-081840061.html",
           "published": 1783100860,
+          "sentiment": 0.0
+        },
+        {
+          "title": "This Tech ETF Is Quietly Outperforming QQQ in 2026 -- Is There Still Time to Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/tech-etf-vgt-quietly-outperform-qqq-2026-buy/",
+          "published": 1783100100,
           "sentiment": 0.0
         }
       ],
@@ -75,19 +75,19 @@ window.PRICES_DATA = {
       "company_name": "Microsoft",
       "category": "mega-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "292",
+      "price_gbp": "293",
       "price_usd": 390.49,
       "change_1d": "+1.43%",
       "change_1w": "+10.67%",
       "change_1m": "-8.62%",
       "change_ytd": "-17.07%",
       "return_1yr": "-22%",
-      "low_gbp": "261",
+      "low_gbp": "262",
       "low_usd": 349.2,
       "high_gbp": "416",
       "high_usd": 555.45,
       "bar_pct": 20,
-      "market_cap_gbp_b": 2171.979,
+      "market_cap_gbp_b": 2172.849,
       "market_cap_usd_b": 2900.729,
       "beta": 1.13,
       "pe_ratio": 23.26,
@@ -96,15 +96,29 @@ window.PRICES_DATA = {
       "short_pct": 1.28,
       "analyst": "strong_buy",
       "analyst_score": 1.34,
-      "vol_1d": 42128900,
-      "vol_1w": 372571900,
-      "vol_1m": 1017343300,
+      "vol_1d": 42194400,
+      "vol_1w": 372637400,
+      "vol_1m": 1017408800,
       "news": [
         {
           "title": "Tokenmaxxing is out, but companies are still spending on AI. What's changed?",
           "publisher": "Yahoo Finance Video",
           "url": "https://finance.yahoo.com/video/tokenmaxxing-companies-still-spending-ai-120000127.html",
           "published": 1783080000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Microsoft Had Its Worst Month in More Than 25 Years. Should Investors Buy the Crash?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/is-microsoft-a-buy-after-worst-month-in-25-years/",
+          "published": 1783112460,
+          "sentiment": -0.778
+        },
+        {
+          "title": "Microsoft (MSFT) Launches $2.5 Billion Frontier Company For Enterprise AI Adoption",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-msft-launches-2-5-201139635.html",
+          "published": 1783109499,
           "sentiment": 0.0
         },
         {
@@ -120,30 +134,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-amazon-see-bountiful-081822860.html",
           "published": 1783101022,
           "sentiment": -0.318
-        },
-        {
-          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
-          "published": 1783100747,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Veteran Tech Analyst: The Market Has Wrongly Left Software for Dead in the AI Rotation",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/veteran-tech-analyst-the-market-has-wrongly-left-software-for-dead-in-the-ai-rotation/",
-          "published": 1783100115,
-          "sentiment": -0.649
         }
       ],
-      "news_sentiment": -0.193
+      "news_sentiment": -0.219
     },
     {
       "ticker": "GOOGL",
       "company_name": "Alphabet (Google)",
       "category": "mega-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "269",
+      "price_gbp": "270",
       "price_usd": 359.91,
       "change_1d": "-0.16%",
       "change_1w": "+4.71%",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "306",
       "high_usd": 408.61,
       "bar_pct": 79,
-      "market_cap_gbp_b": 3288.469,
-      "market_cap_usd_b": 4391.828,
+      "market_cap_gbp_b": 3289.787,
+      "market_cap_usd_b": 4391.829,
       "beta": 1.247,
       "pe_ratio": 27.47,
       "avg_volume_m": 31.5,
@@ -164,9 +164,9 @@ window.PRICES_DATA = {
       "short_pct": 1.53,
       "analyst": "strong_buy",
       "analyst_score": 1.44,
-      "vol_1d": 25974800,
-      "vol_1w": 236868600,
-      "vol_1m": 821842900,
+      "vol_1d": 25999300,
+      "vol_1w": 236893100,
+      "vol_1m": 821867400,
       "news": [
         {
           "title": "Tokenmaxxing is out, but companies are still spending on AI. What's changed?",
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "209",
       "high_usd": 278.56,
       "bar_pct": 57,
-      "market_cap_gbp_b": 1954.61,
+      "market_cap_gbp_b": 1955.393,
       "market_cap_usd_b": 2610.428,
       "beta": 1.461,
       "pe_ratio": 31.64,
@@ -232,9 +232,9 @@ window.PRICES_DATA = {
       "short_pct": 1.01,
       "analyst": "strong_buy",
       "analyst_score": 1.34,
-      "vol_1d": 48246400,
-      "vol_1w": 494295900,
-      "vol_1m": 1320486800,
+      "vol_1d": 48298100,
+      "vol_1w": 494347600,
+      "vol_1m": 1320538500,
       "news": [
         {
           "title": "Tokenmaxxing is out, but companies are still spending on AI. What's changed?",
@@ -279,7 +279,7 @@ window.PRICES_DATA = {
       "company_name": "Meta Platforms",
       "category": "mega-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "436",
+      "price_gbp": "437",
       "price_usd": 582.9,
       "change_1d": "-4.77%",
       "change_1w": "+7.37%",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "596",
       "high_usd": 796.25,
       "bar_pct": 23,
-      "market_cap_gbp_b": 1107.915,
+      "market_cap_gbp_b": 1108.359,
       "market_cap_usd_b": 1479.647,
       "beta": 1.246,
       "pe_ratio": 21.19,
@@ -300,9 +300,9 @@ window.PRICES_DATA = {
       "short_pct": 1.37,
       "analyst": "strong_buy",
       "analyst_score": 1.32,
-      "vol_1d": 21705900,
-      "vol_1w": 119232400,
-      "vol_1m": 417063100,
+      "vol_1d": 21750500,
+      "vol_1w": 119277000,
+      "vol_1m": 417107700,
       "news": [
         {
           "title": "Top Invesco Analyst: The AI Trade That \u201cLifted All Boats\u201d Is Over. Now Profitability Decides Winners As \u201cCapacity Will Catch Up\u201d",
@@ -359,8 +359,8 @@ window.PRICES_DATA = {
       "high_gbp": "177",
       "high_usd": 236.54,
       "bar_pct": 47,
-      "market_cap_gbp_b": 3533.429,
-      "market_cap_usd_b": 4718.978,
+      "market_cap_gbp_b": 3534.844,
+      "market_cap_usd_b": 4718.977,
       "beta": 2.211,
       "pe_ratio": 29.84,
       "avg_volume_m": 158.96,
@@ -368,9 +368,9 @@ window.PRICES_DATA = {
       "short_pct": 1.29,
       "analyst": "strong_buy",
       "analyst_score": 1.3,
-      "vol_1d": 142068700,
-      "vol_1w": 782832800,
-      "vol_1m": 3306309000,
+      "vol_1d": 142385500,
+      "vol_1w": 783149600,
+      "vol_1m": 3306625800,
       "news": [
         {
           "title": "Palantir stock jumps on analyst upgrade 'as profits have soared'",
@@ -380,35 +380,35 @@ window.PRICES_DATA = {
           "sentiment": 0.44
         },
         {
-          "title": "3 Things I Wish I Knew About Retirement Savings When I Started Working",
+          "title": "Better EV Stock: Rivian vs. Lucid",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/retirement/2026/07/03/wish-i-knew-about-retirement-savings/",
-          "published": 1783106400,
-          "sentiment": 0.402
+          "url": "https://www.fool.com/investing/2026/07/03/better-ev-stock-rivian-vs-lucid/",
+          "published": 1783113600,
+          "sentiment": 0.44
         },
         {
-          "title": "All Eyes Are on Social Security's Financial Woes. But Medicare Is in Trouble, Too.",
+          "title": "Is This $17.5 Billion Nuclear Stock Your Ticket to Future Riches?",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/retirement/2026/07/03/social-security-financial-woes-medicare-trouble/",
-          "published": 1783106400,
-          "sentiment": -0.67
+          "url": "https://www.fool.com/investing/2026/07/03/is-this-x-nuclear-stock-your-ticket-to-future-rich/",
+          "published": 1783112584,
+          "sentiment": 0.527
         },
         {
-          "title": "Travelers Is Quietly Trading Near a Record High While Tech Grabs the Headlines. Can the Rally Last?",
+          "title": "3 Reasons You Should Buy Carnival Stock in July",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/travelers-quietly-trading-record-high-rally/",
-          "published": 1783105500,
+          "url": "https://www.fool.com/investing/2026/07/03/reasons-you-should-buy-carnival-stock-in-july/",
+          "published": 1783111020,
           "sentiment": 0.0
         },
         {
-          "title": "Better Artificial Intelligence (AI) Stock: Alphabet vs. Micron Technology (the Winner May Surprise You)",
+          "title": "How to Buy Pre-IPO Shares in Anthropic and OpenAI (And Why You Might Not Want To)",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/better-artificial-intelligence-ai-stock-alphabet-v/",
-          "published": 1783104660,
-          "sentiment": 0.898
+          "url": "https://www.fool.com/investing/2026/07/03/how-to-buy-pre-ipo-shares-in-anthropic-and-openai/",
+          "published": 1783110594,
+          "sentiment": 0.245
         }
       ],
-      "news_sentiment": 0.214
+      "news_sentiment": 0.33
     },
     {
       "ticker": "AMD",
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "438",
       "high_usd": 584.73,
       "bar_pct": 85,
-      "market_cap_gbp_b": 632.23,
+      "market_cap_gbp_b": 632.483,
       "market_cap_usd_b": 844.358,
       "beta": 2.469,
       "pe_ratio": 172.61,
@@ -436,9 +436,9 @@ window.PRICES_DATA = {
       "short_pct": 2.88,
       "analyst": "strong_buy",
       "analyst_score": 1.45,
-      "vol_1d": 28142500,
-      "vol_1w": 170333900,
-      "vol_1m": 671052400,
+      "vol_1d": 28228900,
+      "vol_1w": 170420300,
+      "vol_1m": 671138800,
       "news": [
         {
           "title": "Top Invesco Analyst: The AI Trade That \u201cLifted All Boats\u201d Is Over. Now Profitability Decides Winners As \u201cCapacity Will Catch Up\u201d",
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "107",
       "high_usd": 142.35,
       "bar_pct": 82,
-      "market_cap_gbp_b": 452.915,
+      "market_cap_gbp_b": 453.097,
       "market_cap_usd_b": 604.879,
       "beta": 2.187,
       "pe_ratio": null,
@@ -504,9 +504,9 @@ window.PRICES_DATA = {
       "short_pct": 2.86,
       "analyst": "hold",
       "analyst_score": 2.63,
-      "vol_1d": 124577600,
-      "vol_1w": 560962200,
-      "vol_1m": 2755325800,
+      "vol_1d": 125021700,
+      "vol_1w": 561406300,
+      "vol_1m": 2755769900,
       "news": [
         {
           "title": "Jim Cramer Highlights Intel\u2019s \u201cThree Major Growth Opportunities\u201d",
@@ -558,12 +558,12 @@ window.PRICES_DATA = {
       "change_1m": "-0.35%",
       "change_ytd": "+36.54%",
       "return_1yr": "+89%",
-      "low_gbp": "167",
+      "low_gbp": "168",
       "low_usd": 223.7,
       "high_gbp": "359",
       "high_usd": 479.0,
       "bar_pct": 82,
-      "market_cap_gbp_b": 1686.05,
+      "market_cap_gbp_b": 1686.726,
       "market_cap_usd_b": 2251.76,
       "beta": 1.246,
       "pe_ratio": 37.72,
@@ -572,23 +572,23 @@ window.PRICES_DATA = {
       "short_pct": 0.51,
       "analyst": "strong_buy",
       "analyst_score": 1.47,
-      "vol_1d": 18375000,
-      "vol_1w": 84839600,
-      "vol_1m": 313167700,
+      "vol_1d": 18424800,
+      "vol_1w": 84889400,
+      "vol_1m": 313217500,
       "news": [
+        {
+          "title": "Dow Jones Futures: Techs' Rise Signal AI Trend Isn't Over; Apple, Robinhood Flash Buy Signals",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
+          "published": 1783112035,
+          "sentiment": 0.0
+        },
         {
           "title": "Top Invesco Analyst: The AI Trade That \u201cLifted All Boats\u201d Is Over. Now Profitability Decides Winners As \u201cCapacity Will Catch Up\u201d",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/07/03/top-invesco-analyst-the-ai-trade-that-lifted-all-boats-is-over-now-profitability-decides-winners-as-capacity-will-catch-up/",
           "published": 1783104431,
           "sentiment": 0.718
-        },
-        {
-          "title": "Dow Jones Futures: Techs' Rise Signal AI Trend Isn't Over; Apple, Robinhood Flash Buy Signals",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
-          "published": 1783103656,
-          "sentiment": 0.0
         },
         {
           "title": "Meta Could Hand Samsung Its Biggest AI Chip Order Yet in $6.5 Billion Deal",
@@ -631,7 +631,7 @@ window.PRICES_DATA = {
       "high_gbp": "371",
       "high_usd": 495.0,
       "bar_pct": 40,
-      "market_cap_gbp_b": 1284.043,
+      "market_cap_gbp_b": 1284.558,
       "market_cap_usd_b": 1714.87,
       "beta": 1.462,
       "pe_ratio": 59.88,
@@ -640,9 +640,9 @@ window.PRICES_DATA = {
       "short_pct": 1.32,
       "analyst": "strong_buy",
       "analyst_score": 1.31,
-      "vol_1d": 26749500,
-      "vol_1w": 138104000,
-      "vol_1m": 757331600,
+      "vol_1d": 26788900,
+      "vol_1w": 138143400,
+      "vol_1m": 757371000,
       "news": [
         {
           "title": "Jim Cramer Explains Why You Need to Own NVIDIA Now",
@@ -699,8 +699,8 @@ window.PRICES_DATA = {
       "high_gbp": "195",
       "high_usd": 259.92,
       "bar_pct": 39,
-      "market_cap_gbp_b": 139.097,
-      "market_cap_usd_b": 185.767,
+      "market_cap_gbp_b": 139.153,
+      "market_cap_usd_b": 185.768,
       "beta": 1.638,
       "pe_ratio": 18.93,
       "avg_volume_m": 22.91,
@@ -708,10 +708,17 @@ window.PRICES_DATA = {
       "short_pct": 4.74,
       "analyst": "hold",
       "analyst_score": 2.51,
-      "vol_1d": 18661200,
-      "vol_1w": 122758900,
-      "vol_1m": 474129800,
+      "vol_1d": 18682500,
+      "vol_1w": 122780200,
+      "vol_1m": 474151100,
       "news": [
+        {
+          "title": "Unpacking Q1 Earnings: Qualcomm (NASDAQ:QCOM) In The Context Of Other Processors and Graphics Chips Stocks",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/unpacking-q1-earnings-qualcomm-nasdaq-205806117.html",
+          "published": 1783112286,
+          "sentiment": 0.0
+        },
         {
           "title": "Stocks making big moves this week: IPG Photonics, Micron, CarGurus, Qualcomm, and Qualys",
           "publisher": "StockStory",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-qualcomm-qcom-shares-trading-011624811.html",
           "published": 1783041384,
           "sentiment": 0.0
-        },
-        {
-          "title": "Dow Closes At Record High As Weak Jobs Data Calm Rate Hike Fears, While Chipmakers Weigh On S&P 500, Nasdaq \u2014  WMT, META, GM, KR, QCOM In Focus",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/dow-closes-at-record-high-as-weak-jobs-data-calm-rate-hike-fears-while-chipmakers-weigh-on-s-and-p-500-nasdaq-wmt-meta-gm-kr-qcom-in-focus/cZmeyHpR7j7",
-          "published": 1783029932,
-          "sentiment": -0.527
         }
       ],
-      "news_sentiment": -0.105
+      "news_sentiment": 0.0
     },
     {
       "ticker": "ARM",
@@ -767,7 +767,7 @@ window.PRICES_DATA = {
       "high_gbp": "339",
       "high_usd": 452.7,
       "bar_pct": 61,
-      "market_cap_gbp_b": 252.144,
+      "market_cap_gbp_b": 252.245,
       "market_cap_usd_b": 336.744,
       "beta": 3.77,
       "pe_ratio": 370.92,
@@ -776,9 +776,9 @@ window.PRICES_DATA = {
       "short_pct": 11.26,
       "analyst": "buy",
       "analyst_score": 1.93,
-      "vol_1d": 7553900,
-      "vol_1w": 34992700,
-      "vol_1m": 238461100,
+      "vol_1d": 7576000,
+      "vol_1w": 35014800,
+      "vol_1m": 238483200,
       "news": [
         {
           "title": "Arm Holdings' Robust Licensing Business Drives AI-Fueled Growth",
@@ -835,8 +835,8 @@ window.PRICES_DATA = {
       "high_gbp": "1498",
       "high_usd": 1999.96,
       "bar_pct": 82,
-      "market_cap_gbp_b": 510.607,
-      "market_cap_usd_b": 681.928,
+      "market_cap_gbp_b": 510.811,
+      "market_cap_usd_b": 681.927,
       "beta": 1.394,
       "pe_ratio": 60.24,
       "avg_volume_m": 1.93,
@@ -844,9 +844,9 @@ window.PRICES_DATA = {
       "short_pct": 0.43,
       "analyst": "strong_buy",
       "analyst_score": 1.43,
-      "vol_1d": 2699100,
-      "vol_1w": 12596900,
-      "vol_1m": 50011600,
+      "vol_1d": 2701000,
+      "vol_1w": 12598800,
+      "vol_1m": 50013500,
       "news": [
         {
           "title": "Tech Stocks Deliver Boost to Global Markets as Rate-Hike Worries Fade",
@@ -891,7 +891,7 @@ window.PRICES_DATA = {
       "company_name": "Micron Technology",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "730",
+      "price_gbp": "731",
       "price_usd": 975.56,
       "change_1d": "-4.37%",
       "change_1w": "-19.61%",
@@ -903,8 +903,8 @@ window.PRICES_DATA = {
       "high_gbp": "940",
       "high_usd": 1255.0,
       "bar_pct": 76,
-      "market_cap_gbp_b": 824.988,
-      "market_cap_usd_b": 1101.791,
+      "market_cap_gbp_b": 825.318,
+      "market_cap_usd_b": 1101.79,
       "beta": 2.142,
       "pe_ratio": 22.08,
       "avg_volume_m": 51.3,
@@ -912,10 +912,24 @@ window.PRICES_DATA = {
       "short_pct": 3.69,
       "analyst": "strong_buy",
       "analyst_score": 1.44,
-      "vol_1d": 61316900,
-      "vol_1w": 301897000,
-      "vol_1m": 1223601800,
+      "vol_1d": 61844400,
+      "vol_1w": 302424500,
+      "vol_1m": 1224129300,
       "news": [
+        {
+          "title": "Can Micron Stock Really Hit $2,000?",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-stock-really-hit-2-212120295.html",
+          "published": 1783113680,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Micron & 2 Profitable Stocks to Buy in July for Explosive Upside",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-2-profitable-stocks-buy-190000663.html",
+          "published": 1783105200,
+          "sentiment": 0.44
+        },
         {
           "title": "Better Artificial Intelligence (AI) Stock: Alphabet vs. Micron Technology (the Winner May Surprise You)",
           "publisher": "Motley Fool",
@@ -936,23 +950,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-mentions-sandisk-sndk-081611369.html",
           "published": 1783101791,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jim Cramer\u2019s Latest Thoughts on Micron (MU)",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-micron-seems-no-081649258.html",
-          "published": 1783101709,
-          "sentiment": 0.0
-        },
-        {
-          "title": "NVIDIA vs Micron: One Controls the AI Platform, Other Controls the Bottleneck. Only One Bet Will Pay Off in 2027.",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/nvidia-vs-micron-one-controls-the-ai-platform-other-controls-the-bottleneck-only-one-bet-will-pay-off-in-2027/",
-          "published": 1783101604,
-          "sentiment": -0.103
         }
       ],
-      "news_sentiment": 0.303
+      "news_sentiment": 0.411
     },
     {
       "ticker": "AMAT",
@@ -971,8 +971,8 @@ window.PRICES_DATA = {
       "high_gbp": "554",
       "high_usd": 739.67,
       "bar_pct": 77,
-      "market_cap_gbp_b": 358.503,
-      "market_cap_usd_b": 478.789,
+      "market_cap_gbp_b": 358.647,
+      "market_cap_usd_b": 478.79,
       "beta": 1.567,
       "pe_ratio": 56.84,
       "avg_volume_m": 8.85,
@@ -980,9 +980,9 @@ window.PRICES_DATA = {
       "short_pct": 2.77,
       "analyst": "strong_buy",
       "analyst_score": 1.49,
-      "vol_1d": 15071700,
-      "vol_1w": 89926000,
-      "vol_1m": 271239300,
+      "vol_1d": 15096100,
+      "vol_1w": 89950400,
+      "vol_1m": 271263700,
       "news": [
         {
           "title": "Michael Burry Shorts Micron, Adding to His NVIDIA and Applied Materials Short Bets Against Chip Stocks",
@@ -1039,7 +1039,7 @@ window.PRICES_DATA = {
       "high_gbp": "259",
       "high_usd": 345.72,
       "bar_pct": 3,
-      "market_cap_gbp_b": 302.536,
+      "market_cap_gbp_b": 302.657,
       "market_cap_usd_b": 404.044,
       "beta": 1.712,
       "pe_ratio": 24.02,
@@ -1048,10 +1048,17 @@ window.PRICES_DATA = {
       "short_pct": 2.19,
       "analyst": "buy",
       "analyst_score": 1.52,
-      "vol_1d": 44166700,
-      "vol_1w": 196900000,
-      "vol_1m": 668856200,
+      "vol_1d": 44273600,
+      "vol_1w": 197006900,
+      "vol_1m": 668963100,
       "news": [
+        {
+          "title": "Bloom Energy Skyrocketed Over 248% in the First Half of 2026. Here's What to Expect in the Second Half.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/bloom-energy-up-248-first-half-2026-expect/",
+          "published": 1783109100,
+          "sentiment": 0.273
+        },
         {
           "title": "Is Oracle (ORCL) One of the Cheap Stocks That Are About to Explode?",
           "publisher": "Insider Monkey",
@@ -1079,16 +1086,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/articles/rimini-street-rmni-partners-one-131202927.html",
           "published": 1783084322,
           "sentiment": 0.0
-        },
-        {
-          "title": "The Contracted Revenue Backlog Microsoft Stock Bears Keep Missing",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605696/the-contracted-revenue-backlog-microsoft-stock-bears-keep-missing/2026-07-03",
-          "published": 1783081110,
-          "sentiment": -0.296
         }
       ],
-      "news_sentiment": 0.085
+      "news_sentiment": 0.199
     },
     {
       "ticker": "CRM",
@@ -1107,8 +1107,8 @@ window.PRICES_DATA = {
       "high_gbp": "207",
       "high_usd": 276.8,
       "bar_pct": 15,
-      "market_cap_gbp_b": 101.866,
-      "market_cap_usd_b": 136.044,
+      "market_cap_gbp_b": 101.907,
+      "market_cap_usd_b": 136.045,
       "beta": 1.178,
       "pe_ratio": 19.23,
       "avg_volume_m": 15.3,
@@ -1116,10 +1116,17 @@ window.PRICES_DATA = {
       "short_pct": 8.34,
       "analyst": "buy",
       "analyst_score": 1.63,
-      "vol_1d": 10486300,
-      "vol_1w": 72273400,
-      "vol_1m": 355295900,
+      "vol_1d": 10493200,
+      "vol_1w": 72280300,
+      "vol_1m": 355302800,
       "news": [
+        {
+          "title": "Salesforce (CRM) Lands Formula 1 Partnership To Bring Agentforce 360 To Racing Bulls",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-crm-lands-formula-1-201036513.html",
+          "published": 1783109436,
+          "sentiment": 0.0
+        },
         {
           "title": "Veteran Tech Analyst: The Market Has Wrongly Left Software for Dead in the AI Rotation",
           "publisher": "24/7 Wall St.",
@@ -1147,13 +1154,6 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/605696/the-contracted-revenue-backlog-microsoft-stock-bears-keep-missing/2026-07-03",
           "published": 1783081110,
           "sentiment": -0.296
-        },
-        {
-          "title": "VGT Investors: Watch Hyperscaler Capex Guidance in H2 2026",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/vgt-investors-watch-hyperscaler-capex-guidance-in-h2-2026/",
-          "published": 1783079750,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.033
@@ -1172,10 +1172,10 @@ window.PRICES_DATA = {
       "return_1yr": "-42%",
       "low_gbp": "142",
       "low_usd": 190.12,
-      "high_gbp": "289",
+      "high_gbp": "290",
       "high_usd": 386.6,
       "bar_pct": 15,
-      "market_cap_gbp_b": 65.397,
+      "market_cap_gbp_b": 65.423,
       "market_cap_usd_b": 87.339,
       "beta": 1.433,
       "pe_ratio": 12.56,
@@ -1184,9 +1184,9 @@ window.PRICES_DATA = {
       "short_pct": 5.88,
       "analyst": "hold",
       "analyst_score": 2.64,
-      "vol_1d": 7903100,
-      "vol_1w": 36735800,
-      "vol_1m": 183721600,
+      "vol_1d": 7907500,
+      "vol_1w": 36740200,
+      "vol_1m": 183726000,
       "news": [
         {
           "title": "Veteran Tech Analyst: The Market Has Wrongly Left Software for Dead in the AI Rotation",
@@ -1243,7 +1243,7 @@ window.PRICES_DATA = {
       "high_gbp": "157",
       "high_usd": 210.2,
       "bar_pct": 19,
-      "market_cap_gbp_b": 82.102,
+      "market_cap_gbp_b": 82.135,
       "market_cap_usd_b": 109.649,
       "beta": 0.959,
       "pe_ratio": 63.29,
@@ -1252,9 +1252,9 @@ window.PRICES_DATA = {
       "short_pct": 5.78,
       "analyst": "strong_buy",
       "analyst_score": 1.44,
-      "vol_1d": 20227500,
-      "vol_1w": 118457400,
-      "vol_1m": 549557700,
+      "vol_1d": 20276600,
+      "vol_1w": 118506500,
+      "vol_1m": 549606800,
       "news": [
         {
           "title": "Here\u2019s Why ServiceNow (NOW) Isn\u2019t A Good Investment According to This Fund",
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "213",
       "high_usd": 284.99,
       "bar_pct": 85,
-      "market_cap_gbp_b": 67.515,
+      "market_cap_gbp_b": 67.542,
       "market_cap_usd_b": 90.168,
       "beta": 1.353,
       "pe_ratio": null,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": 6.43,
       "analyst": "strong_buy",
       "analyst_score": 1.49,
-      "vol_1d": 8093200,
-      "vol_1w": 51870100,
-      "vol_1m": 158001400,
+      "vol_1d": 8095800,
+      "vol_1w": 51872700,
+      "vol_1m": 158004000,
       "news": [
         {
           "title": "Palantir stock jumps on analyst upgrade 'as profits have soared'",
@@ -1376,11 +1376,11 @@ window.PRICES_DATA = {
       "return_1yr": "-65%",
       "low_gbp": "189",
       "low_usd": 252.84,
-      "high_gbp": "609",
+      "high_gbp": "610",
       "high_usd": 813.7,
       "bar_pct": 4,
-      "market_cap_gbp_b": 56.396,
-      "market_cap_usd_b": 75.318,
+      "market_cap_gbp_b": 56.419,
+      "market_cap_usd_b": 75.319,
       "beta": 0.996,
       "pe_ratio": 16.81,
       "avg_volume_m": 5.02,
@@ -1388,9 +1388,9 @@ window.PRICES_DATA = {
       "short_pct": 5.16,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 5046900,
-      "vol_1w": 31296200,
-      "vol_1m": 124683300,
+      "vol_1d": 5049800,
+      "vol_1w": 31299100,
+      "vol_1m": 124686200,
       "news": [
         {
           "title": "Sandisk Is the Best-Performing S&P 500 Stock During the First Half of 2026. Here's What Stock I Think Will Dominate the Second Half (Hint: It's Not SpaceX)",
@@ -1447,8 +1447,8 @@ window.PRICES_DATA = {
       "high_gbp": "149",
       "high_usd": 199.53,
       "bar_pct": 95,
-      "market_cap_gbp_b": 147.898,
-      "market_cap_usd_b": 197.521,
+      "market_cap_gbp_b": 147.958,
+      "market_cap_usd_b": 197.522,
       "beta": 1.237,
       "pe_ratio": null,
       "avg_volume_m": 13.67,
@@ -1456,9 +1456,9 @@ window.PRICES_DATA = {
       "short_pct": 3.08,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 10423900,
-      "vol_1w": 69004700,
-      "vol_1m": 293495500,
+      "vol_1d": 10432200,
+      "vol_1w": 69013000,
+      "vol_1m": 293503800,
       "news": [
         {
           "title": "Palantir stock jumps on analyst upgrade 'as profits have soared'",
@@ -1515,7 +1515,7 @@ window.PRICES_DATA = {
       "high_gbp": "268",
       "high_usd": 358.1,
       "bar_pct": 95,
-      "market_cap_gbp_b": 212.403,
+      "market_cap_gbp_b": 212.488,
       "market_cap_usd_b": 283.669,
       "beta": 0.908,
       "pe_ratio": 302.66,
@@ -1524,9 +1524,9 @@ window.PRICES_DATA = {
       "short_pct": 2.78,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 7697700,
-      "vol_1w": 43201900,
-      "vol_1m": 168622800,
+      "vol_1d": 7699600,
+      "vol_1w": 43203800,
+      "vol_1m": 168624700,
       "news": [
         {
           "title": "Here is Why Palo Alto Networks (PANW) Is A Good Stock To Buy Now According to This Fund",
@@ -1583,7 +1583,7 @@ window.PRICES_DATA = {
       "high_gbp": "207",
       "high_usd": 276.82,
       "bar_pct": 71,
-      "market_cap_gbp_b": 64.425,
+      "market_cap_gbp_b": 64.451,
       "market_cap_usd_b": 86.041,
       "beta": 1.671,
       "pe_ratio": null,
@@ -1592,9 +1592,9 @@ window.PRICES_DATA = {
       "short_pct": 3.16,
       "analyst": "buy",
       "analyst_score": 1.91,
-      "vol_1d": 2832000,
-      "vol_1w": 17748500,
-      "vol_1m": 74592200,
+      "vol_1d": 2832500,
+      "vol_1w": 17749000,
+      "vol_1m": 74592700,
       "news": [
         {
           "title": "Cloudflare (NET) Launches AI Tools To Help Websites Control And Monetize Content Access",
@@ -1651,18 +1651,18 @@ window.PRICES_DATA = {
       "high_gbp": "120",
       "high_usd": 159.8,
       "bar_pct": 96,
-      "market_cap_gbp_b": 85.716,
-      "market_cap_usd_b": 114.476,
+      "market_cap_gbp_b": 85.751,
+      "market_cap_usd_b": 114.477,
       "beta": 1.09,
       "pe_ratio": 60.56,
       "avg_volume_m": 6.43,
       "div_yield_pct": null,
       "short_pct": 3.1,
       "analyst": "hold",
-      "analyst_score": 2.7,
-      "vol_1d": 4490600,
-      "vol_1w": 31883700,
-      "vol_1m": 143604200,
+      "analyst_score": 2.75,
+      "vol_1d": 4491300,
+      "vol_1w": 31884400,
+      "vol_1m": 143604900,
       "news": [
         {
           "title": "How Investors May Respond To Fortinet (FTNT) Losing Russell Defensive Status Amid AI Security Spotlight",
@@ -1719,7 +1719,7 @@ window.PRICES_DATA = {
       "high_gbp": "97",
       "high_usd": 129.5,
       "bar_pct": 12,
-      "market_cap_gbp_b": 244.824,
+      "market_cap_gbp_b": 244.922,
       "market_cap_usd_b": 326.968,
       "beta": 1.517,
       "pe_ratio": 25.05,
@@ -1728,10 +1728,17 @@ window.PRICES_DATA = {
       "short_pct": 2.41,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 55456500,
-      "vol_1w": 265959100,
-      "vol_1m": 1027565000,
+      "vol_1d": 55541700,
+      "vol_1w": 266044300,
+      "vol_1m": 1027650200,
       "news": [
+        {
+          "title": "Netflix Slides 17% as Valuation Worries Grow",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/netflix-slides-17-valuation-worries-212104695.html",
+          "published": 1783113664,
+          "sentiment": -0.421
+        },
         {
           "title": "Netflix (NFLX): 3 Reasons We Love This Stock",
           "publisher": "StockStory",
@@ -1759,16 +1766,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/netflix-gears-report-q2-earnings-145700087.html",
           "published": 1783090620,
           "sentiment": 0.0
-        },
-        {
-          "title": "1 of Wall Street\u2019s Favorite Stocks for Long-Term Investors and 2 We Avoid",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/1-wall-street-favorite-stocks-143406703.html",
-          "published": 1783089246,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.202
+      "news_sentiment": 0.078
     },
     {
       "ticker": "SHOP",
@@ -1787,7 +1787,7 @@ window.PRICES_DATA = {
       "high_gbp": "136",
       "high_usd": 182.19,
       "bar_pct": 29,
-      "market_cap_gbp_b": 116.073,
+      "market_cap_gbp_b": 116.119,
       "market_cap_usd_b": 155.018,
       "beta": 2.585,
       "pe_ratio": 117.12,
@@ -1796,9 +1796,9 @@ window.PRICES_DATA = {
       "short_pct": 1.73,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 6759600,
-      "vol_1w": 41639000,
-      "vol_1m": 182139800,
+      "vol_1d": 6761700,
+      "vol_1w": 41641100,
+      "vol_1m": 182141900,
       "news": [
         {
           "title": "Palantir stock jumps on analyst upgrade 'as profits have soared'",
@@ -1852,10 +1852,10 @@ window.PRICES_DATA = {
       "return_1yr": "-34%",
       "low_gbp": "303",
       "low_usd": 405.0,
-      "high_gbp": "560",
+      "high_gbp": "561",
       "high_usd": 748.3,
       "bar_pct": 24,
-      "market_cap_gbp_b": 74.821,
+      "market_cap_gbp_b": 74.851,
       "market_cap_usd_b": 99.925,
       "beta": 1.564,
       "pe_ratio": 33.1,
@@ -1864,9 +1864,9 @@ window.PRICES_DATA = {
       "short_pct": 4.91,
       "analyst": "buy",
       "analyst_score": 1.55,
-      "vol_1d": 1723800,
-      "vol_1w": 8764100,
-      "vol_1m": 39300300,
+      "vol_1d": 1724600,
+      "vol_1w": 8764900,
+      "vol_1m": 39301100,
       "news": [
         {
           "title": "Spotify Removes Streams After Kalshi Bets",
@@ -1923,8 +1923,8 @@ window.PRICES_DATA = {
       "high_gbp": "76",
       "high_usd": 101.99,
       "bar_pct": 21,
-      "market_cap_gbp_b": 113.446,
-      "market_cap_usd_b": 151.51,
+      "market_cap_gbp_b": 113.491,
+      "market_cap_usd_b": 151.509,
       "beta": 1.113,
       "pe_ratio": 18.47,
       "avg_volume_m": 19.33,
@@ -1932,9 +1932,9 @@ window.PRICES_DATA = {
       "short_pct": 2.81,
       "analyst": "strong_buy",
       "analyst_score": 1.48,
-      "vol_1d": 14087900,
-      "vol_1w": 145343900,
-      "vol_1m": 481786500,
+      "vol_1d": 14097400,
+      "vol_1w": 145353400,
+      "vol_1m": 481796000,
       "news": [
         {
           "title": "Tokenmaxxing is out, but companies are still spending on AI. What's changed?",
@@ -1991,7 +1991,7 @@ window.PRICES_DATA = {
       "high_gbp": "98",
       "high_usd": 130.37,
       "bar_pct": 73,
-      "market_cap_gbp_b": 332.574,
+      "market_cap_gbp_b": 332.707,
       "market_cap_usd_b": 444.16,
       "beta": 1.007,
       "pe_ratio": 37.56,
@@ -2000,9 +2000,9 @@ window.PRICES_DATA = {
       "short_pct": 1.57,
       "analyst": "buy",
       "analyst_score": 1.88,
-      "vol_1d": 24251000,
-      "vol_1w": 162821100,
-      "vol_1m": 560972300,
+      "vol_1d": 24254900,
+      "vol_1w": 162825000,
+      "vol_1m": 560976200,
       "news": [
         {
           "title": "2 Growth Stocks with All-Star Potential and 1 Facing Challenges",
@@ -2059,7 +2059,7 @@ window.PRICES_DATA = {
       "high_gbp": "155",
       "high_usd": 207.52,
       "bar_pct": 23,
-      "market_cap_gbp_b": 232.098,
+      "market_cap_gbp_b": 232.191,
       "market_cap_usd_b": 309.972,
       "beta": 1.562,
       "pe_ratio": 145.28,
@@ -2067,10 +2067,10 @@ window.PRICES_DATA = {
       "div_yield_pct": null,
       "short_pct": 3.57,
       "analyst": "buy",
-      "analyst_score": 1.91,
-      "vol_1d": 60641000,
-      "vol_1w": 263649900,
-      "vol_1m": 912778000,
+      "analyst_score": 1.84,
+      "vol_1d": 60789400,
+      "vol_1w": 263798300,
+      "vol_1m": 912926400,
       "news": [
         {
           "title": "Palantir stock jumps on analyst upgrade 'as profits have soared'",
