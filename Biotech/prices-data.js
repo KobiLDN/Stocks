@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-03 11:39",
+  "updated": "2026-07-03 15:32",
   "fx_gbp_usd": 1.3355,
   "stocks": [
     {
@@ -13,14 +13,14 @@ window.PRICES_DATA = {
       "change_1w": "+6.05%",
       "change_1m": "+10.62%",
       "change_ytd": "+15.86%",
-      "return_1yr": "+25%",
+      "return_1yr": "+28%",
       "low_gbp": "202",
       "low_usd": 269.77,
       "high_gbp": "293",
       "high_usd": 391.29,
       "bar_pct": 86,
-      "market_cap_gbp_b": 151.207,
-      "market_cap_usd_b": 201.932,
+      "market_cap_gbp_b": 151.201,
+      "market_cap_usd_b": 201.933,
       "beta": 0.403,
       "pe_ratio": 26.04,
       "avg_volume_m": 2.77,
@@ -56,7 +56,7 @@ window.PRICES_DATA = {
         {
           "title": "Roche Lung-Cancer Drug Candidate Beats Existing Therapies in Late-Stage Trial",
           "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/health/pharma/roche-lung-cancer-drug-candidate-beats-existing-therapies-in-late-stage-trial-548e7ca0",
+          "url": "https://www.wsj.com/health/pharma/roche-lung-cancer-drug-candidate-beats-existing-therapies-in-late-stage-trial-548e7ca0?siteid=yhoof2&yptr=yahoo",
           "published": 1782971400,
           "sentiment": 0.0
         },
@@ -87,7 +87,7 @@ window.PRICES_DATA = {
       "high_gbp": "118",
       "high_usd": 157.29,
       "bar_pct": 47,
-      "market_cap_gbp_b": 122.04,
+      "market_cap_gbp_b": 122.035,
       "market_cap_usd_b": 162.981,
       "beta": 0.343,
       "pe_ratio": 17.86,
@@ -149,13 +149,13 @@ window.PRICES_DATA = {
       "change_1w": "+5.50%",
       "change_1m": "+5.71%",
       "change_ytd": "-15.49%",
-      "return_1yr": "+20%",
+      "return_1yr": "+22%",
       "low_gbp": "399",
       "low_usd": 532.6,
       "high_gbp": "615",
       "high_usd": 821.11,
       "bar_pct": 42,
-      "market_cap_gbp_b": 51.362,
+      "market_cap_gbp_b": 51.36,
       "market_cap_usd_b": 68.592,
       "beta": 0.236,
       "pe_ratio": 15.97,
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "396",
       "high_usd": 529.14,
       "bar_pct": 99,
-      "market_cap_gbp_b": 100.354,
+      "market_cap_gbp_b": 100.35,
       "market_cap_usd_b": 134.02,
       "beta": 0.292,
       "pe_ratio": 31.36,
@@ -236,6 +236,20 @@ window.PRICES_DATA = {
       "vol_1w": 15786200,
       "vol_1m": 39321300,
       "news": [
+        {
+          "title": "Vertex Pharmaceuticals (VRTX) Wins FDA Approval To Treat Two Year Olds With CASGEVY",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/healthcare/articles/vertex-pharmaceuticals-vrtx-wins-fda-141453136.html",
+          "published": 1783088093,
+          "sentiment": 0.859
+        },
+        {
+          "title": "Arcutis vs. Vertex: Which Pharmaceutical Maker Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/07/03/arcutis-vs-vertex-which-pharmaceutical-maker-stock-is-a-better-buy-in-2026/",
+          "published": 1783083440,
+          "sentiment": 0.44
+        },
         {
           "title": "CRSP, VRTX Stocks Surge As FDA Clears Casgevy For Children Ages 2 And Up",
           "publisher": "Stocktwits",
@@ -256,23 +270,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/coverage/better-buy/2026/07/01/dyne-therapeutics-vs-vertex-pharmaceuticals-which-drug-innovator-stock-is-a-better-buy-in-2026/",
           "published": 1782921522,
           "sentiment": 0.44
-        },
-        {
-          "title": "Investors Heavily Search Vertex Pharmaceuticals Incorporated (VRTX): Here is What You Need to Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-vertex-pharmaceuticals-130005329.html",
-          "published": 1782910805,
-          "sentiment": 0.0
-        },
-        {
-          "title": "BridgeBio gets funding for drug launch; United buys into cell therapy",
-          "publisher": "BioPharma Dive",
-          "url": "https://www.biopharmadive.com/news/bridgebio-united-thymmune-otsuka-fda-casgevy/824197/",
-          "published": 1782905340,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.188
+      "news_sentiment": 0.363
     },
     {
       "ticker": "BIIB",
@@ -285,13 +285,13 @@ window.PRICES_DATA = {
       "change_1w": "+7.01%",
       "change_1m": "+10.29%",
       "change_ytd": "+21.54%",
-      "return_1yr": "+63%",
+      "return_1yr": "+66%",
       "low_gbp": "91",
       "low_usd": 121.05,
       "high_gbp": "165",
       "high_usd": 219.72,
       "bar_pct": 96,
-      "market_cap_gbp_b": 23.892,
+      "market_cap_gbp_b": 23.891,
       "market_cap_usd_b": 31.907,
       "beta": 0.158,
       "pe_ratio": 23.26,
@@ -353,14 +353,14 @@ window.PRICES_DATA = {
       "change_1w": "+6.13%",
       "change_1m": "+7.43%",
       "change_ytd": "+11.10%",
-      "return_1yr": "+24%",
+      "return_1yr": "+25%",
       "low_gbp": "32",
       "low_usd": 42.52,
       "high_gbp": "47",
       "high_usd": 62.89,
       "bar_pct": 77,
-      "market_cap_gbp_b": 88.887,
-      "market_cap_usd_b": 118.706,
+      "market_cap_gbp_b": 88.883,
+      "market_cap_usd_b": 118.705,
       "beta": 0.235,
       "pe_ratio": 16.28,
       "avg_volume_m": 11.43,
@@ -372,6 +372,13 @@ window.PRICES_DATA = {
       "vol_1w": 68321800,
       "vol_1m": 281550900,
       "news": [
+        {
+          "title": "2 Cash-Producing Stocks Worth Investigating and 1 Facing Headwinds",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-producing-stocks-worth-134606046.html",
+          "published": 1783086366,
+          "sentiment": 0.226
+        },
         {
           "title": "Sector Update: Healthcare Stocks Gain Late Afternoon",
           "publisher": "MT Newswires",
@@ -399,47 +406,47 @@ window.PRICES_DATA = {
           "url": "https://www.biopharmadive.com/news/roche-kras-lung-cancer-data-head-to-head/824344/",
           "published": 1782987579,
           "sentiment": -0.296
-        },
-        {
-          "title": "Bristol-Myers Squibb (BMY) Joins Arcus Biosciences to Test a New Two-Drug Kidney Cancer Combination",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/healthcare/articles/bristol-myers-squibb-bmy-joins-213544982.html",
-          "published": 1782941744,
-          "sentiment": -0.66
         }
       ],
-      "news_sentiment": 0.02
+      "news_sentiment": 0.197
     },
     {
       "ticker": "AZN",
       "company_name": "AstraZeneca",
       "category": "uk-listed",
       "exchange": "LSE",
-      "price_gbp": "144",
-      "price_usd": 192.52,
-      "change_1d": "-1.08%",
-      "change_1w": "+0.68%",
-      "change_1m": "+9.13%",
-      "change_ytd": "+6.07%",
-      "return_1yr": "+36%",
+      "price_gbp": "145",
+      "price_usd": 193.28,
+      "change_1d": "-0.70%",
+      "change_1w": "+1.08%",
+      "change_1m": "+9.55%",
+      "change_ytd": "+6.49%",
+      "return_1yr": "+41%",
       "low_gbp": "101",
       "low_usd": 135.18,
       "high_gbp": "157",
       "high_usd": 210.1,
-      "bar_pct": 77,
-      "market_cap_gbp_b": 2.236,
-      "market_cap_usd_b": 2.986,
+      "bar_pct": 78,
+      "market_cap_gbp_b": 2.244,
+      "market_cap_usd_b": 2.997,
       "beta": 0.225,
-      "pe_ratio": 28.66,
-      "avg_volume_m": 2.15,
+      "pe_ratio": 28.77,
+      "avg_volume_m": 2.16,
       "div_yield_pct": 162.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 277752,
-      "vol_1w": 9290062,
-      "vol_1m": 50354735,
+      "vol_1d": 386360,
+      "vol_1w": 9398670,
+      "vol_1m": 50463343,
       "news": [
+        {
+          "title": "Arcutis vs. Vertex: Which Pharmaceutical Maker Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/07/03/arcutis-vs-vertex-which-pharmaceutical-maker-stock-is-a-better-buy-in-2026/",
+          "published": 1783083440,
+          "sentiment": 0.44
+        },
         {
           "title": "AstraZeneca (LSE:AZN) Wins Two EU Cancer Approvals And Starts Abbisko Lung Trial",
           "publisher": "Simply Wall St.",
@@ -467,13 +474,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/azn-vs-ilmn-stock-value-154002303.html",
           "published": 1782920402,
           "sentiment": 0.34
-        },
-        {
-          "title": "J&J's Innovative Medicine Business in Q2: Here's What to Watch",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/j-js-innovative-medicine-business-132700259.html",
-          "published": 1782912420,
-          "sentiment": 0.44
         }
       ],
       "news_sentiment": 0.151
@@ -484,29 +484,29 @@ window.PRICES_DATA = {
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "20",
-      "price_usd": 26.71,
-      "change_1d": "-0.50%",
-      "change_1w": "+0.86%",
-      "change_1m": "+8.02%",
-      "change_ytd": "+9.22%",
-      "return_1yr": "+38%",
+      "price_usd": 26.86,
+      "change_1d": "+0.05%",
+      "change_1w": "+1.41%",
+      "change_1m": "+8.61%",
+      "change_ytd": "+9.82%",
+      "return_1yr": "+43%",
       "low_gbp": "13",
       "low_usd": 17.21,
       "high_gbp": "23",
       "high_usd": 30.48,
-      "bar_pct": 72,
-      "market_cap_gbp_b": 0.801,
-      "market_cap_usd_b": 1.07,
-      "beta": 0.294,
-      "pe_ratio": 13.61,
-      "avg_volume_m": 7.79,
+      "bar_pct": 73,
+      "market_cap_gbp_b": 0.806,
+      "market_cap_usd_b": 1.076,
+      "beta": 0.3,
+      "pe_ratio": 14.16,
+      "avg_volume_m": 7.95,
       "div_yield_pct": 339.0,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.81,
-      "vol_1d": 890593,
-      "vol_1w": 50954365,
-      "vol_1m": 193884066,
+      "vol_1d": 1278090,
+      "vol_1w": 51341862,
+      "vol_1m": 194271563,
       "news": [
         {
           "title": "GSK plc (GSK) Launches Tender Offer to Acquire Nuvalent Inc. for $124 Per Share",
@@ -557,14 +557,14 @@ window.PRICES_DATA = {
       "change_1w": "+11.30%",
       "change_1m": "+15.36%",
       "change_ytd": "+11.74%",
-      "return_1yr": "+15%",
+      "return_1yr": "+17%",
       "low_gbp": "33",
       "low_usd": 44.12,
       "high_gbp": "59",
       "high_usd": 78.48,
       "bar_pct": 46,
-      "market_cap_gbp_b": 4.431,
-      "market_cap_usd_b": 5.917,
+      "market_cap_gbp_b": 4.43,
+      "market_cap_usd_b": 5.916,
       "beta": 1.702,
       "pe_ratio": null,
       "avg_volume_m": 1.74,
@@ -625,7 +625,7 @@ window.PRICES_DATA = {
       "change_1w": "+2.53%",
       "change_1m": "+17.73%",
       "change_ytd": "+28.19%",
-      "return_1yr": "+74%",
+      "return_1yr": "+81%",
       "low_gbp": "12",
       "low_usd": 15.6,
       "high_gbp": "28",
@@ -693,7 +693,7 @@ window.PRICES_DATA = {
       "change_1w": "+9.54%",
       "change_1m": "+34.87%",
       "change_ytd": "+90.66%",
-      "return_1yr": "+64%",
+      "return_1yr": "+71%",
       "low_gbp": "5.95",
       "low_usd": 7.95,
       "high_gbp": "21",
@@ -761,7 +761,7 @@ window.PRICES_DATA = {
       "change_1w": "+33.21%",
       "change_1m": "+31.29%",
       "change_ytd": "+78.05%",
-      "return_1yr": "+42%*",
+      "return_1yr": "+44%*",
       "low_gbp": "1.24",
       "low_usd": 1.66,
       "high_gbp": "3.40",
@@ -829,13 +829,13 @@ window.PRICES_DATA = {
       "change_1w": "+6.21%",
       "change_1m": "+10.38%",
       "change_ytd": "+40.44%",
-      "return_1yr": "+87%",
+      "return_1yr": "+94%",
       "low_gbp": "66",
       "low_usd": 88.0,
       "high_gbp": "142",
       "high_usd": 189.46,
       "bar_pct": 99,
-      "market_cap_gbp_b": 21.376,
+      "market_cap_gbp_b": 21.375,
       "market_cap_usd_b": 28.547,
       "beta": 1.469,
       "pe_ratio": 34.37,
@@ -848,6 +848,13 @@ window.PRICES_DATA = {
       "vol_1w": 10547800,
       "vol_1m": 44364400,
       "news": [
+        {
+          "title": "Should You Continue to Hold ILMN Stock in Your Portfolio?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/continue-hold-ilmn-stock-portfolio-125300602.html",
+          "published": 1783083180,
+          "sentiment": 0.0
+        },
         {
           "title": "Prediction: Grail Stock Will Skyrocket to $100 in 1 Year",
           "publisher": "Motley Fool",
@@ -875,16 +882,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/illumina-ilmn-gets-bernstein-market-213058136.html",
           "published": 1782941458,
           "sentiment": 0.0
-        },
-        {
-          "title": "AZN vs. ILMN: Which Stock Should Value Investors Buy Now?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/azn-vs-ilmn-stock-value-154002303.html",
-          "published": 1782920402,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.118
+      "news_sentiment": 0.05
     },
     {
       "ticker": "PACB",
@@ -897,7 +897,7 @@ window.PRICES_DATA = {
       "change_1w": "+5.00%",
       "change_1m": "+6.33%",
       "change_ytd": "-8.70%",
-      "return_1yr": "+5%*",
+      "return_1yr": "+14%*",
       "low_gbp": "0.816",
       "low_usd": 1.09,
       "high_gbp": "2.04",
@@ -916,6 +916,13 @@ window.PRICES_DATA = {
       "vol_1w": 44780800,
       "vol_1m": 133705700,
       "news": [
+        {
+          "title": "Is Pacific Biosciences (PACB) The Best Rising Penny Stock?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/pacific-biosciences-pacb-best-rising-131201175.html",
+          "published": 1783084321,
+          "sentiment": 0.637
+        },
         {
           "title": "3 Cash-Burning Stocks with Questionable Fundamentals",
           "publisher": "StockStory",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/pacific-biosciences-california-inc-pacb-125325195.html",
           "published": 1781614405,
           "sentiment": 0.637
-        },
-        {
-          "title": "Cathie Wood Buys $444 Million in SpaceX, Dumps Tesla and AMD",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-buys-444-million-184808165.html",
-          "published": 1781549288,
-          "sentiment": -0.402
         }
       ],
-      "news_sentiment": 0.056
+      "news_sentiment": 0.264
     },
     {
       "ticker": "NTRA",
@@ -965,13 +965,13 @@ window.PRICES_DATA = {
       "change_1w": "+7.13%",
       "change_1m": "+31.85%",
       "change_ytd": "+22.06%",
-      "return_1yr": "+73%",
+      "return_1yr": "+76%",
       "low_gbp": "99",
       "low_usd": 131.81,
       "high_gbp": "209",
       "high_usd": 279.63,
       "bar_pct": 99,
-      "market_cap_gbp_b": 29.954,
+      "market_cap_gbp_b": 29.953,
       "market_cap_usd_b": 40.003,
       "beta": 1.505,
       "pe_ratio": null,
@@ -1033,7 +1033,7 @@ window.PRICES_DATA = {
       "change_1w": "+13.77%",
       "change_1m": "+9.51%",
       "change_ytd": "-9.52%",
-      "return_1yr": "-28%*",
+      "return_1yr": "-23%*",
       "low_gbp": "2.07",
       "low_usd": 2.77,
       "high_gbp": "5.38",
@@ -1101,14 +1101,14 @@ window.PRICES_DATA = {
       "change_1w": "+8.68%",
       "change_1m": "+19.27%",
       "change_ytd": "+15.22%",
-      "return_1yr": "+71%",
+      "return_1yr": "+74%",
       "low_gbp": "50",
       "low_usd": 66.85,
       "high_gbp": "89",
       "high_usd": 118.69,
       "bar_pct": 96,
-      "market_cap_gbp_b": 17.482,
-      "market_cap_usd_b": 23.347,
+      "market_cap_gbp_b": 17.481,
+      "market_cap_usd_b": 23.346,
       "beta": 0.758,
       "pe_ratio": 16.51,
       "avg_volume_m": 1.69,
@@ -1120,6 +1120,13 @@ window.PRICES_DATA = {
       "vol_1w": 11501000,
       "vol_1m": 47765500,
       "news": [
+        {
+          "title": "1 Mid-Cap Stock to Research Further and 2 We Avoid",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/1-mid-cap-stock-research-125006431.html",
+          "published": 1783083006,
+          "sentiment": -0.296
+        },
         {
           "title": "Incyte (INCY): Truist Raises the Price Target to $105 as a Government Settlement Adds $246 Million to Net Sales",
           "publisher": "Insider Monkey",
@@ -1147,16 +1154,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-producing-stock-solid-101015263.html",
           "published": 1782727815,
           "sentiment": 0.153
-        },
-        {
-          "title": "Incyte (INCY) Stock After 66% One-Year Rally Is The Market Too Optimistic Now",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/incyte-incy-stock-66-one-150732656.html",
-          "published": 1782572852,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.162
+      "news_sentiment": 0.039
     },
     {
       "ticker": "EXEL",
@@ -1169,13 +1169,13 @@ window.PRICES_DATA = {
       "change_1w": "+4.92%",
       "change_1m": "+8.24%",
       "change_ytd": "+28.16%",
-      "return_1yr": "+21%",
+      "return_1yr": "+26%",
       "low_gbp": "25",
       "low_usd": 33.76,
       "high_gbp": "42",
       "high_usd": 56.21,
       "bar_pct": 98,
-      "market_cap_gbp_b": 10.512,
+      "market_cap_gbp_b": 10.511,
       "market_cap_usd_b": 14.038,
       "beta": 0.424,
       "pe_ratio": 18.49,
@@ -1237,15 +1237,15 @@ window.PRICES_DATA = {
       "change_1w": "+6.69%",
       "change_1m": "+6.90%",
       "change_ytd": "-21.84%",
-      "return_1yr": "-6%",
-      "low_gbp": "205",
+      "return_1yr": "-4%",
+      "low_gbp": "204",
       "low_usd": 273.11,
       "high_gbp": "371",
       "high_usd": 495.55,
       "bar_pct": 18,
-      "market_cap_gbp_b": 31.27,
+      "market_cap_gbp_b": 31.269,
       "market_cap_usd_b": 41.76,
-      "beta": 0.267,
+      "beta": 0.269,
       "pe_ratio": 78.79,
       "avg_volume_m": 1.14,
       "div_yield_pct": null,
@@ -1256,6 +1256,13 @@ window.PRICES_DATA = {
       "vol_1w": 6432900,
       "vol_1m": 26621900,
       "news": [
+        {
+          "title": "What Offers Alnylam Pharmaceuticals (ALNY) Sustained Long-Term Growth?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/offers-alnylam-pharmaceuticals-alny-sustained-115939874.html",
+          "published": 1783079979,
+          "sentiment": 0.382
+        },
         {
           "title": "Wall Street Thinks This Biotech Stock Can Soar 45%. Here's Why Analysts Are Right.",
           "publisher": "Motley Fool",
@@ -1283,16 +1290,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/alnylam-pharmaceuticals-alny-inceptive-form-191804665.html",
           "published": 1782242284,
           "sentiment": 0.0
-        },
-        {
-          "title": "Alnylam (ALNY) Expands Its RNAi Therapeutics Reach Into Four More Nordic Countries",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/healthcare/articles/alnylam-alny-expands-rnai-therapeutics-141527548.html",
-          "published": 1782137727,
-          "sentiment": 0.128
         }
       ],
-      "news_sentiment": 0.11
+      "news_sentiment": 0.161
     },
     {
       "ticker": "RCUS",
@@ -1305,7 +1305,7 @@ window.PRICES_DATA = {
       "change_1w": "+0.26%",
       "change_1m": "+27.12%",
       "change_ytd": "+30.23%",
-      "return_1yr": "+258%*",
+      "return_1yr": "+269%*",
       "low_gbp": "6.01",
       "low_usd": 8.03,
       "high_gbp": "24",
@@ -1313,7 +1313,7 @@ window.PRICES_DATA = {
       "bar_pct": 94,
       "market_cap_gbp_b": 2.856,
       "market_cap_usd_b": 3.814,
-      "beta": 0.837,
+      "beta": 0.799,
       "pe_ratio": null,
       "avg_volume_m": 1.31,
       "div_yield_pct": null,
@@ -1373,13 +1373,13 @@ window.PRICES_DATA = {
       "change_1w": "+33.49%",
       "change_1m": "+62.58%",
       "change_ytd": "+158.46%",
-      "return_1yr": "+162%",
+      "return_1yr": "+167%",
       "low_gbp": "17",
       "low_usd": 22.28,
       "high_gbp": "61",
       "high_usd": 81.4,
       "bar_pct": 97,
-      "market_cap_gbp_b": 23.698,
+      "market_cap_gbp_b": 23.697,
       "market_cap_usd_b": 31.648,
       "beta": 0.942,
       "pe_ratio": null,
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "high_gbp": "93",
       "high_usd": 124.0,
       "bar_pct": 41,
-      "market_cap_gbp_b": 18.471,
+      "market_cap_gbp_b": 18.47,
       "market_cap_usd_b": 24.667,
       "beta": 1.324,
       "pe_ratio": null,
@@ -1509,7 +1509,7 @@ window.PRICES_DATA = {
       "change_1w": "+13.79%",
       "change_1m": "-4.51%",
       "change_ytd": "+36.61%",
-      "return_1yr": "+43%*",
+      "return_1yr": "+47%*",
       "low_gbp": "4.64",
       "low_usd": 6.2,
       "high_gbp": "8.96",
@@ -1583,8 +1583,8 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 66.28,
       "bar_pct": 57,
-      "market_cap_gbp_b": 8.538,
-      "market_cap_usd_b": 11.402,
+      "market_cap_gbp_b": 8.537,
+      "market_cap_usd_b": 11.401,
       "beta": 0.239,
       "pe_ratio": 42.44,
       "avg_volume_m": 2.05,
@@ -1645,7 +1645,7 @@ window.PRICES_DATA = {
       "change_1w": "+20.35%",
       "change_1m": "+18.72%",
       "change_ytd": "-9.53%",
-      "return_1yr": "+6%",
+      "return_1yr": "+11%",
       "low_gbp": "7.80",
       "low_usd": 10.42,
       "high_gbp": "19",
@@ -1766,7 +1766,7 @@ window.PRICES_DATA = {
       "high_gbp": "54",
       "high_usd": 71.8,
       "bar_pct": 42,
-      "market_cap_gbp_b": 167.127,
+      "market_cap_gbp_b": 167.12,
       "market_cap_usd_b": 223.193,
       "beta": 0.36,
       "pe_ratio": 12.09,
@@ -1780,42 +1780,42 @@ window.PRICES_DATA = {
       "vol_1m": 278082800,
       "news": [
         {
-          "title": "Microsoft launches Microsoft Frontier Company with $2.5bn investment",
-          "publisher": "Verdict",
-          "url": "https://www.verdict.co.uk/microsoft-launches-microsoft-frontier-company/",
-          "published": 1783065342,
+          "title": "Novo Nordisk (NVO) Stock May Be 48% Undervalued On Medicare GLP 1 Coverage",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/novo-nordisk-nvo-stock-may-141412298.html",
+          "published": 1783088052,
           "sentiment": 0.0
         },
         {
-          "title": "MSFT Stock Alert: Microsoft Invests $2.5 Billion in AI Implementation Unit",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3106223/msft-stock-alert-microsoft-invests-2-5-billion-in-ai-implementation-unit",
-          "published": 1783023893,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Microsoft Invests $2.5 Billion in New AI Implementation Business",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-invests-2-5-billion-192515066.html",
-          "published": 1783020315,
+          "title": "Microsoft Launches AI Adoption Firm",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-launches-ai-adoption-firm-135313441.html",
+          "published": 1783086793,
           "sentiment": 0.0
         },
         {
-          "title": "European Stocks Surge, Oil Prices Drop; Defense, Luxury Shares Rally",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/european-stocks-surge-oil-prices-155124843.html",
-          "published": 1783007484,
-          "sentiment": 0.153
+          "title": "Here's Why Viking Therapeutics Stock Surged Higher in June",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/heres-why-viking-therapeutics-stock-surged-higher/",
+          "published": 1783086339,
+          "sentiment": 0.0
         },
         {
-          "title": "Lilly Up Around 7% in a Week: Should You Buy, Sell or Hold the Stock?",
+          "title": "Lexicon Pharmaceuticals (LXRX) Gains on Russell 3000 Inclusion",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lexicon-pharmaceuticals-lxrx-gains-russell-131232712.html",
+          "published": 1783084352,
+          "sentiment": 0.34
+        },
+        {
+          "title": "Can Medicare Bridge Help Novo Nordisk Defend Its GLP-1 Leadership?",
           "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/lilly-around-7-week-buy-124900308.html",
-          "published": 1782996540,
-          "sentiment": 0.0
+          "url": "https://finance.yahoo.com/healthcare/articles/medicare-bridge-help-novo-nordisk-131200842.html",
+          "published": 1783084320,
+          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.09
+      "news_sentiment": 0.148
     },
     {
       "ticker": "LLY",
@@ -1828,15 +1828,15 @@ window.PRICES_DATA = {
       "change_1w": "+7.65%",
       "change_1m": "+12.53%",
       "change_ytd": "+12.74%",
-      "return_1yr": "+55%",
+      "return_1yr": "+57%",
       "low_gbp": "467",
       "low_usd": 623.78,
       "high_gbp": "927",
       "high_usd": 1238.0,
       "bar_pct": 96,
-      "market_cap_gbp_b": 810.571,
-      "market_cap_usd_b": 1082.493,
-      "beta": 0.517,
+      "market_cap_gbp_b": 810.539,
+      "market_cap_usd_b": 1082.494,
+      "beta": 0.506,
       "pe_ratio": 43.11,
       "avg_volume_m": 3.26,
       "div_yield_pct": 57.0,
@@ -1847,6 +1847,27 @@ window.PRICES_DATA = {
       "vol_1w": 21150600,
       "vol_1m": 72487800,
       "news": [
+        {
+          "title": "Here's Why Viking Therapeutics Stock Surged Higher in June",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/heres-why-viking-therapeutics-stock-surged-higher/",
+          "published": 1783086339,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Can Medicare Bridge Help Novo Nordisk Defend Its GLP-1 Leadership?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/healthcare/articles/medicare-bridge-help-novo-nordisk-131200842.html",
+          "published": 1783084320,
+          "sentiment": 0.402
+        },
+        {
+          "title": "These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Data Center Play Leads EPS Gauge",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/research/best-stocks-seven-magnificent-stocks-earnings-growth/?src=A00220&yptr=yahoo",
+          "published": 1783080021,
+          "sentiment": 0.893
+        },
         {
           "title": "JNJ Stock Management Sees A Breakout, The Market Sees A Standoff",
           "publisher": "Trefis",
@@ -1860,30 +1881,9 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/stock-lists/ibd-50/healthcare-stocks-sector-investing-markets-ibd-50-list-eli-lilly/?src=A00220&yptr=yahoo",
           "published": 1783008478,
           "sentiment": 0.778
-        },
-        {
-          "title": "House committee investigates Merck, AbbVie over China trials",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/merck-abbvie-china-trials-investigation-house-committee",
-          "published": 1783008180,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Lilly Up Around 7% in a Week: Should You Buy, Sell or Hold the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/lilly-around-7-week-buy-124900308.html",
-          "published": 1782996540,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why Medicare Isn\u2019t a Game Changer for Weight-Loss Drugmakers",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/health/pharma/why-medicare-isnt-a-game-changer-for-weight-loss-drugmakers-36bdae96?siteid=yhoof2&yptr=yahoo",
-          "published": 1782984600,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.156
+      "news_sentiment": 0.415
     },
     {
       "ticker": "LEGN",
@@ -1896,7 +1896,7 @@ window.PRICES_DATA = {
       "change_1w": "+5.21%",
       "change_1m": "-16.87%",
       "change_ytd": "+39.05%",
-      "return_1yr": "-16%",
+      "return_1yr": "-17%",
       "low_gbp": "12",
       "low_usd": 16.24,
       "high_gbp": "34",
@@ -1964,14 +1964,14 @@ window.PRICES_DATA = {
       "change_1w": "+4.42%",
       "change_1m": "+10.81%",
       "change_ytd": "+2.67%",
-      "return_1yr": "+90%",
+      "return_1yr": "+96%",
       "low_gbp": "30",
       "low_usd": 40.03,
       "high_gbp": "65",
       "high_usd": 86.74,
       "bar_pct": 89,
-      "market_cap_gbp_b": 10.123,
-      "market_cap_usd_b": 13.519,
+      "market_cap_gbp_b": 10.122,
+      "market_cap_usd_b": 13.518,
       "beta": 0.365,
       "pe_ratio": null,
       "avg_volume_m": 1.83,
