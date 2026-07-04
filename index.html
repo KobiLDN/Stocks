@@ -455,6 +455,12 @@
 
     /* ── Mobile nav: hamburger + drawer ── */
 
+    .hamburger {
+      display: none; width: 44px; height: 44px; border: none;
+      background: transparent; cursor: pointer; font-size: 18px;
+      align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
     .drawer-overlay {
       display: none; position: fixed; inset: 0; z-index: 300;
       background: rgba(0,0,0,0.4);
@@ -597,6 +603,7 @@
       .header-sub { font-size: 9px; }
     }
     @media (max-width: 640px) {
+      .hamburger { display: flex; }
       .left-rail { display: none; }
       .drawer-overlay.open .left-rail { display: flex !important; }
 
