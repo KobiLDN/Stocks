@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04 10:10",
+  "updated": "2026-07-04 22:39",
   "fx_gbp_usd": 1.335,
   "stocks": [
     {
@@ -28,47 +28,47 @@
       "short_pct": 1.68,
       "analyst": "hold",
       "analyst_score": 2.52,
-      "vol_1d": 1397900,
-      "vol_1w": 8502700,
-      "vol_1m": 28876000,
+      "vol_1d": 1396900,
+      "vol_1w": 8501700,
+      "vol_1m": 28875000,
       "news": [
+        {
+          "title": "Is Lockheed Martin (LMT) Still Trading At A Discount After Contract Wins?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-still-trading-180930017.html",
+          "published": 1783188570,
+          "sentiment": 0.572
+        },
+        {
+          "title": "GE Aerospace or Lockheed Martin: Which Aerospace and Defense Stock Is a Better Buy for 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/07/04/ge-aerospace-or-lockheed-martin-which-aerospace-and-defense-stock-is-a-better-buy-for-2026/",
+          "published": 1783184761,
+          "sentiment": 0.527
+        },
+        {
+          "title": "America\u2019s 250th Birthday Bash and Severe Weather Spark Travel Chaos",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/fourth-of-july-travel-airport-delays-amtrak-america-250-ea61b1be?siteid=yhoof2&yptr=yahoo",
+          "published": 1783179960,
+          "sentiment": -0.66
+        },
+        {
+          "title": "3 Resilient Defense Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/04/3-resilient-defense-stocks-to-buy-in-july/",
+          "published": 1783170055,
+          "sentiment": 0.128
+        },
         {
           "title": "Lockheed Martin (LMT) Eyes $3.5 Billion Ultra Maritime Deal In Undersea Defense",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-eyes-3-080858805.html",
           "published": 1783152538,
           "sentiment": 0.128
-        },
-        {
-          "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
-          "publisher": "Investing.com",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-marks-fourth-july-mount-063221288.html",
-          "published": 1783146741,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Lockheed Closes In on $3.5 Billion Ultra Maritime Deal",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-closes-3-5-billion-165842132.html",
-          "published": 1783097922,
-          "sentiment": 0.0
-        },
-        {
-          "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605683/aerovironments-big-bet-gets-a-pentagon-payday/2026-07-03",
-          "published": 1783080894,
-          "sentiment": 0.0
-        },
-        {
-          "title": "What to Expect From Lockheed Martin\u2019s Next Quarterly Earnings Report",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3115438/what-to-expect-from-lockheed-martins-next-quarterly-earnings-report",
-          "published": 1783080876,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.026
+      "news_sentiment": 0.139
     },
     {
       "ticker": "RTX",
@@ -96,10 +96,17 @@
       "short_pct": 1.4,
       "analyst": "buy",
       "analyst_score": 1.87,
-      "vol_1d": 5194400,
-      "vol_1w": 24660100,
-      "vol_1m": 113855700,
+      "vol_1d": 5192500,
+      "vol_1w": 24658200,
+      "vol_1m": 113853800,
       "news": [
+        {
+          "title": "3 Resilient Defense Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/04/3-resilient-defense-stocks-to-buy-in-july/",
+          "published": 1783170055,
+          "sentiment": 0.128
+        },
         {
           "title": "Is RTX Corporation (RTX) A Good Stock To Buy Now?",
           "publisher": "Insider Monkey",
@@ -127,16 +134,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/ge-aerospace-sustain-growth-commercial-155300331.html",
           "published": 1783093980,
           "sentiment": 0.273
-        },
-        {
-          "title": "Is RTX (RTX) a Buy as Wall Street Analysts Look Optimistic?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-buy-wall-street-133003631.html",
-          "published": 1783085403,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.206
+      "news_sentiment": 0.168
     },
     {
       "ticker": "NOC",
@@ -169,6 +169,13 @@
       "vol_1m": 23263800,
       "news": [
         {
+          "title": "3 Resilient Defense Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/04/3-resilient-defense-stocks-to-buy-in-july/",
+          "published": 1783170055,
+          "sentiment": 0.128
+        },
+        {
           "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
           "publisher": "Investing.com",
           "url": "https://www.yahoo.com/news/politics/articles/trump-marks-fourth-july-mount-063221288.html",
@@ -195,16 +202,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/northrop-grumman-noc-stock-trades-215624334.html",
           "published": 1783029384,
           "sentiment": 0.0
-        },
-        {
-          "title": "Get Paid 8.1% A Year To Hold RTX Stock You Already Own",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605516/get-paid-8-1-a-year-to-hold-rtx-stock-you-already-own/2026-07-02",
-          "published": 1783025548,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.026
     },
     {
       "ticker": "GD",
@@ -436,10 +436,24 @@
       "short_pct": 0.02,
       "analyst": "buy",
       "analyst_score": 1.63,
-      "vol_1d": 6055000,
-      "vol_1w": 34827300,
-      "vol_1m": 129104000,
+      "vol_1d": 6050800,
+      "vol_1w": 34823100,
+      "vol_1m": 129099800,
       "news": [
+        {
+          "title": "Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/vertical-aerospace-just-secured-a-critical-supplie/",
+          "published": 1783193100,
+          "sentiment": 0.557
+        },
+        {
+          "title": "Gavin Newsom Calls Trump's $400 Million Qatari Jet 'Air Fraud One' as Bernie Sanders, Elizabeth Warren Slam President",
+          "publisher": "Benzinga",
+          "url": "https://www.yahoo.com/news/politics/articles/gavin-newsom-calls-trumps-400-173105547.html",
+          "published": 1783186265,
+          "sentiment": -0.751
+        },
         {
           "title": "Is The Boeing Company (BA) A Good Stock To Buy Now?",
           "publisher": "Insider Monkey",
@@ -460,23 +474,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/airbus-deliver-18-a330-900-123700602.html",
           "published": 1783082220,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is BAE Systems (LSE:BA.) Still A Bargain After Its 324% Run?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bae-systems-lse-ba-still-070934228.html",
-          "published": 1783062574,
-          "sentiment": 0.202
-        },
-        {
-          "title": "Why Boeing (BA) Stock Is Trading Up Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-boeing-ba-stock-trading-220424637.html",
-          "published": 1783029864,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.128
+      "news_sentiment": 0.049
     },
     {
       "ticker": "BA.L",
@@ -489,7 +489,7 @@
       "change_1w": "+9.60%",
       "change_1m": "+4.29%",
       "change_ytd": "+12.98%",
-      "return_1yr": "+5%",
+      "return_1yr": "+6%",
       "low_gbp": "15",
       "low_usd": 20.41,
       "high_gbp": "24",
@@ -499,7 +499,7 @@
       "market_cap_usd_b": 0.776,
       "beta": -0.066,
       "pe_ratio": 29.14,
-      "avg_volume_m": 6.69,
+      "avg_volume_m": 6.63,
       "div_yield_pct": 183.0,
       "short_pct": null,
       "analyst": "buy",
@@ -557,7 +557,7 @@
       "change_1w": "+6.97%",
       "change_1m": "+19.55%",
       "change_ytd": "+25.67%",
-      "return_1yr": "+53%",
+      "return_1yr": "+55%",
       "low_gbp": "9.59",
       "low_usd": 12.81,
       "high_gbp": "15",
@@ -567,7 +567,7 @@
       "market_cap_usd_b": 1.665,
       "beta": 1.203,
       "pe_ratio": 21.8,
-      "avg_volume_m": 33.76,
+      "avg_volume_m": 33.39,
       "div_yield_pct": 63.0,
       "short_pct": null,
       "analyst": "buy",
@@ -713,42 +713,42 @@
       "vol_1m": 912926400,
       "news": [
         {
-          "title": "Meet the Major Artificial Intelligence (AI) CPU Player That Just Joined Nvidia, Tesla, and Palantir as One of the Most Popular Stocks on Robinhood",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/major-artificial-intelligence-ai-cpu-play-amd/",
-          "published": 1783096500,
-          "sentiment": 0.756
+          "title": "Anthony Scaramucci Warns Wealth Inequality Could End With 'Pitchforks,' Urges Rich to 'Spread the Wealth'",
+          "publisher": "Benzinga",
+          "url": "https://www.yahoo.com/news/politics/articles/anthony-scaramucci-warns-wealth-inequality-180110832.html",
+          "published": 1783188070,
+          "sentiment": 0.863
         },
         {
-          "title": "Palantir\u2019s NVIDIA AI Collab Could Be a Game-Changer That Marks a Turn in the Stock",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/palantirs-nvidia-ai-collab-could-be-a-game-changer-that-marks-a-turn-in-the-stock/",
-          "published": 1783090417,
-          "sentiment": 0.0
+          "title": "America\u2019s 250th Birthday Bash and Severe Weather Spark Travel Chaos",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/fourth-of-july-travel-airport-delays-amtrak-america-250-ea61b1be?siteid=yhoof2&yptr=yahoo",
+          "published": 1783179960,
+          "sentiment": -0.66
         },
         {
-          "title": "Palantir Stock: A Different Engine, Not A Quieter One",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605690/palantir-stock-a-different-engine-not-a-quieter-one/2026-07-03",
-          "published": 1783081585,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Palantir's Business Is Booming. So Why Has the Stock Dropped by More Than a Third?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/palantirs-business-is-booming-so-why-has-the-stock/",
-          "published": 1783078200,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Palantir CEO gets painfully honest about AI\u2019s biggest problem",
+          "title": "Palantir doubles down on national security with Nvidia AI alliance",
           "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/palantir-ceo-honest-about-ai-trust-problem",
-          "published": 1783040580,
-          "sentiment": -0.421
+          "url": "https://www.thestreet.com/investing/stocks/pltr-palantir-us-national-security-nvidia-ai-alliance",
+          "published": 1783177620,
+          "sentiment": 0.34
+        },
+        {
+          "title": "Jim Cramer on Palantir: \u201cThis Is the Fastest Grower of the Stocks I Follow, and It\u2019s Been Crushed\u201d",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-palantir-fastest-grower-142010542.html",
+          "published": 1783174810,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Needham Maintains Buy Rating on Zeta Global Holdings (ZETA) Stock",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/needham-maintains-buy-rating-zeta-141130943.html",
+          "published": 1783174290,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.067
+      "news_sentiment": 0.109
     },
     {
       "ticker": "LDOS",
@@ -1048,9 +1048,9 @@
       "short_pct": 12.56,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 4167400,
-      "vol_1w": 24209500,
-      "vol_1m": 42589000,
+      "vol_1d": 4152100,
+      "vol_1w": 24194200,
+      "vol_1m": 42573700,
       "news": [
         {
           "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
@@ -1116,9 +1116,9 @@
       "short_pct": 8.91,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 6712300,
-      "vol_1w": 54572200,
-      "vol_1m": 119864500,
+      "vol_1d": 6702400,
+      "vol_1w": 54562300,
+      "vol_1m": 119854600,
       "news": [
         {
           "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
@@ -1325,42 +1325,42 @@
       "vol_1m": 2369053300,
       "news": [
         {
-          "title": "Tokenmaxxing is out, but companies are still spending on AI. What's changed?",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/tokenmaxxing-companies-still-spending-ai-120000127.html",
-          "published": 1783080000,
+          "title": "Is SpaceX Stock a Buy Before Its First Earnings Report as a Public Company?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/is-spacex-stock-a-buy-before-its-first-earnings-re/",
+          "published": 1783196700,
           "sentiment": 0.0
         },
         {
-          "title": "Rocket Lab Announces a Massive $8 Billion Satellite Acquisition. Now What?",
+          "title": "Here's the Next Major Trillion-Dollar Blockbuster IPO Now That SpaceX's Is Complete",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/rocket-lab-billion-satellite-acquisition-irdm/",
-          "published": 1783154400,
+          "url": "https://www.fool.com/investing/2026/07/04/heres-the-next-major-trillion-dollar-blockbuster-i/",
+          "published": 1783196400,
+          "sentiment": 0.634
+        },
+        {
+          "title": "Comcast (CMCSA) Stock Has Fallen 50%, Why Are Analysts Suddenly Turning Bullish On The Stock?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/comcast-cmcsa-stock-fallen-50-191550222.html",
+          "published": 1783192550,
+          "sentiment": -0.361
+        },
+        {
+          "title": "Prediction: SpaceX Stock Will Hit This Price by the End of 2026",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/prediction-spacex-stock-hit-this-price-end-2026/",
+          "published": 1783191000,
           "sentiment": 0.0
         },
         {
-          "title": "President Donald Trump and Fed Chair Kevin Warsh Are on a Collision Course Over Interest Rates, and Things May Get Ugly for Wall Street",
+          "title": "Here's Why The Latest Rocket Lab Acquisition Could Shake Up The Entire Space Economy",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/trump-kevin-warsh-collision-course-interest-rates/",
-          "published": 1783153560,
-          "sentiment": -0.421
-        },
-        {
-          "title": "SpaceX Stock Rebounds Above $170. Here Is How Much Upside Analysts See Left.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/prediction-where-spacex-stock-will-trade-heading-i/",
-          "published": 1783149900,
-          "sentiment": 0.0
-        },
-        {
-          "title": "SpaceX Is Finally Public. Here's How Much a $1,000 Investment Would Get You.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/spacex-is-finally-public-heres-how-much-a-1000-inv/",
-          "published": 1783133160,
-          "sentiment": 0.0
+          "url": "https://www.fool.com/investing/2026/07/04/heres-why-the-latest-rocket-lab-acquisition-could/",
+          "published": 1783187512,
+          "sentiment": -0.178
         }
       ],
-      "news_sentiment": -0.084
+      "news_sentiment": 0.019
     },
     {
       "ticker": "RKLB",
@@ -1393,6 +1393,27 @@
       "vol_1m": 620787200,
       "news": [
         {
+          "title": "Why Rocket Lab Stock Skyrocketed Last Week",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/why-rocket-lab-stock-skyrocketed-last-week/",
+          "published": 1783193350,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Here's Why The Latest Rocket Lab Acquisition Could Shake Up The Entire Space Economy",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/heres-why-the-latest-rocket-lab-acquisition-could/",
+          "published": 1783187512,
+          "sentiment": -0.178
+        },
+        {
+          "title": "Is Rocket Lab (RKLB) is One of the Best NASDAQ Stocks to Invest In For Long Term?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-one-best-125611792.html",
+          "published": 1783169771,
+          "sentiment": 0.637
+        },
+        {
           "title": "Rocket Lab Announces a Massive $8 Billion Satellite Acquisition. Now What?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/04/rocket-lab-billion-satellite-acquisition-irdm/",
@@ -1405,30 +1426,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-best-space-153110214.html",
           "published": 1783092670,
           "sentiment": 0.637
-        },
-        {
-          "title": "Why Analysts Think Rocket Lab Stock Can Gain Another 50% from Here",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3116319/why-analysts-think-rocket-lab-stock-can-gain-another-50-from-here",
-          "published": 1783085402,
-          "sentiment": 0.527
-        },
-        {
-          "title": "Blue Origin Deserves More Attention From SpaceX Investors",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605651/blue-origin-deserves-more-attention-from-spacex-investors/2026-07-03",
-          "published": 1783082860,
-          "sentiment": 0.0
-        },
-        {
-          "title": "SpaceX Stock Is Joining the Nasdaq 100 Soon. What History Says Happens Next.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/spacex-stock-nasdaq-100-17eaccd9?siteid=yhoof2&yptr=yahoo",
-          "published": 1783071840,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.233
+      "news_sentiment": 0.219
     },
     {
       "ticker": "PL",
@@ -1529,6 +1529,20 @@
       "vol_1m": 509021900,
       "news": [
         {
+          "title": "Jim Cramer on AST SpaceMobile: \u201cI Think It Can Make Money in Two Years\u201d",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-ast-spacemobile-think-143029882.html",
+          "published": 1783175429,
+          "sentiment": 0.0
+        },
+        {
+          "title": "AST SpaceMobile\u2019s Japan Catalyst Puts Its Rollout Story Back in Focus",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/articles/ast-spacemobiles-japan-catalyst-puts-its-rollout-story-back-in-focus/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1783091100,
+          "sentiment": 0.0
+        },
+        {
           "title": "AST SpaceMobile (ASTS) Secures $926 Million And Rakuten Venture For Japan Network",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/ast-spacemobile-asts-secures-926-031858055.html",
@@ -1548,23 +1562,9 @@
           "url": "https://www.fool.com/investing/2026/07/02/why-ast-spacemobile-stock-fell-216-in-june/",
           "published": 1783014551,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is AST SpaceMobile (ASTS) The Next SanDisk (SNDK)?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ast-spacemobile-asts-next-sandisk-143423080.html",
-          "published": 1783002863,
-          "sentiment": 0.0
-        },
-        {
-          "title": "ASTS Stock Eases After 3-Day Run: FCC Opens Door For Direct Phone-To-Satellite Connectivity Using 800 MHz Spectrum",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/asts-fcc-direct-phone-to-satellite-800mhz-spectrum/cZmeIMOR71M",
-          "published": 1782966959,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": 0.064
     },
     {
       "ticker": "TDG",
@@ -1728,10 +1728,24 @@
       "short_pct": 5.65,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 1062200,
-      "vol_1w": 7762800,
-      "vol_1m": 25073900,
+      "vol_1d": 1061700,
+      "vol_1w": 7762300,
+      "vol_1m": 25073400,
       "news": [
+        {
+          "title": "Raymond James Begins Coverage on AppLovin (APP) Stock",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/raymond-james-begins-coverage-applovin-141102807.html",
+          "published": 1783174262,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Stock Market Week Ahead: Oil Hints At A Paradigm Shift",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/news/stock-market-week-ahead-oil-hints-at-a-paradigm-shift/?src=A00220&yptr=yahoo",
+          "published": 1783173887,
+          "sentiment": 0.0
+        },
         {
           "title": "How AppLovin Corporation\u2019s (APP) E-Commerce Ad Push Could Broaden Its Growth Beyond Mobile Apps",
           "publisher": "Insider Monkey",
@@ -1752,23 +1766,9 @@
           "url": "https://finance.yahoo.com/media-advertising/articles/applovin-app-opens-applovin-ads-021047660.html",
           "published": 1783044647,
           "sentiment": 0.0
-        },
-        {
-          "title": "Brown Advisory Large-Cap Growth Strategy Picked Axon Enterprises (AXON) Amid Broader Sell-Off",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/brown-advisory-large-cap-growth-144841246.html",
-          "published": 1783003721,
-          "sentiment": 0.382
-        },
-        {
-          "title": "CEO of Taser maker Axon: Drones that stun perpetrators are in our future",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/ceo-of-taser-maker-axon-drones-that-stun-perpetrators-are-in-our-future-132334656.html",
-          "published": 1782998614,
-          "sentiment": -0.25
         }
       ],
-      "news_sentiment": 0.015
+      "news_sentiment": -0.012
     },
     {
       "ticker": "OLN",

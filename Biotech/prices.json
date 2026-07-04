@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04 10:10",
+  "updated": "2026-07-04 22:39",
   "fx_gbp_usd": 1.335,
   "stocks": [
     {
@@ -169,6 +169,20 @@
       "vol_1m": 23027700,
       "news": [
         {
+          "title": "Regeneron (REGN) Secures FDA Priority Review And EMA Acceptance For Cemdisiran",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/healthcare/articles/regeneron-regn-secures-fda-priority-161530818.html",
+          "published": 1783181730,
+          "sentiment": 0.649
+        },
+        {
+          "title": "Regeneron (REGN) Stock Looks Undervalued Even After A 20% Gain",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/regeneron-regn-stock-looks-undervalued-150854996.html",
+          "published": 1783177734,
+          "sentiment": 0.527
+        },
+        {
           "title": "What Sparked the $43B Jump in AbbVie's Market Cap in the Past Week?",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/sparked-43b-jump-abbvies-market-163400890.html",
@@ -188,23 +202,9 @@
           "url": "https://qz.com/fda-precheck-pilot-program-eli-lilly-regeneron-domestic-manufacturing-062926",
           "published": 1782817844,
           "sentiment": 0.0
-        },
-        {
-          "title": "Talawar Therapeutics to debut on Nasdaq with $285m as Dupixent challenger",
-          "publisher": "Pharmaceutical Technology",
-          "url": "https://www.pharmaceutical-technology.com/news/talawar-therapeutics-spac-public-debut-285m-ad-therapy/",
-          "published": 1782816796,
-          "sentiment": 0.128
-        },
-        {
-          "title": "Is Regeneron Pharmaceuticals, Inc. (REGN) Among the Best AI-Powered Healthcare Stocks to Buy According to Hedge Funds?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/healthcare/articles/regeneron-pharmaceuticals-inc-regn-among-195815563.html",
-          "published": 1782676695,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.153
+      "news_sentiment": 0.235
     },
     {
       "ticker": "VRTX",
@@ -368,9 +368,9 @@
       "short_pct": 1.94,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 10004000,
-      "vol_1w": 68323900,
-      "vol_1m": 281553000,
+      "vol_1d": 10001900,
+      "vol_1w": 68321800,
+      "vol_1m": 281550900,
       "news": [
         {
           "title": "Roche Reports Positive Results From Head-to-Head Study on NSCLC Drug",
@@ -431,7 +431,7 @@
       "market_cap_usd_b": 2.993,
       "beta": 0.225,
       "pe_ratio": 28.74,
-      "avg_volume_m": 2.16,
+      "avg_volume_m": 2.14,
       "div_yield_pct": 163.0,
       "short_pct": null,
       "analyst": "buy",
@@ -489,7 +489,7 @@
       "change_1w": "+1.61%",
       "change_1m": "+8.83%",
       "change_ytd": "+10.04%",
-      "return_1yr": "+43%",
+      "return_1yr": "+44%",
       "low_gbp": "13",
       "low_usd": 17.2,
       "high_gbp": "23",
@@ -499,7 +499,7 @@
       "market_cap_usd_b": 1.077,
       "beta": 0.3,
       "pe_ratio": 14.19,
-      "avg_volume_m": 7.95,
+      "avg_volume_m": 7.86,
       "div_yield_pct": 337.0,
       "short_pct": null,
       "analyst": "hold",
@@ -1053,6 +1053,13 @@
       "vol_1m": 469519600,
       "news": [
         {
+          "title": "Dyne Therapeutics vs. Recursion Pharmaceuticals: Which Development Stage Pharma Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/07/04/dyne-therapeutics-vs-recursion-pharmaceuticals-which-development-stage-pharma-stock-is-a-better-buy-in-2026/",
+          "published": 1783172469,
+          "sentiment": 0.44
+        },
+        {
           "title": "Moderna vs. Recursion: Which Cutting-Edge Pharma Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/coverage/better-buy/2026/07/03/moderna-vs-recursion-which-cutting-edge-pharma-stock-is-a-better-buy-in-2026/",
@@ -1079,16 +1086,9 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/06/30/recursion-pharmaceuticals-vs-summit-therapeutics-which-healthcare-stock-is-a-better-buy-in-2026/",
           "published": 1782821103,
           "sentiment": 0.44
-        },
-        {
-          "title": "2 Beaten-Down Artificial Intelligence (AI) Stocks for Contrarian Investors to Consider Buying",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/06/26/2-beaten-down-artificial-intelligence-ai-stocks-to/",
-          "published": 1782448500,
-          "sentiment": 0.477
         }
       ],
-      "news_sentiment": 0.356
+      "news_sentiment": 0.348
     },
     {
       "ticker": "INCY",
@@ -1116,9 +1116,9 @@
       "short_pct": 9.1,
       "analyst": "buy",
       "analyst_score": 2.31,
-      "vol_1d": 2632600,
-      "vol_1w": 11501500,
-      "vol_1m": 47766000,
+      "vol_1d": 2632100,
+      "vol_1w": 11501000,
+      "vol_1m": 47765500,
       "news": [
         {
           "title": "Incyte Shares Rise on EPS Growth, Lifted Guidance, Expansion",
@@ -1393,6 +1393,20 @@
       "vol_1m": 191622400,
       "news": [
         {
+          "title": "Jim Cramer Says \u201cFor the First Time in Ages, I Like Having a Position in Moderna\u201d",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-first-time-143014976.html",
+          "published": 1783175414,
+          "sentiment": 0.361
+        },
+        {
+          "title": "Stock Market Week Ahead: Oil Hints At A Paradigm Shift",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/news/stock-market-week-ahead-oil-hints-at-a-paradigm-shift/?src=A00220&yptr=yahoo",
+          "published": 1783173887,
+          "sentiment": 0.0
+        },
+        {
           "title": "Moderna Is Up More Than 70% in a Month After a 9-0 FDA Vote. Wall Street's Average Price Target Says It Should Fall 44%. What Gives?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/03/moderna-is-up-more-than-70-in-a-month-after-a-9-0/",
@@ -1412,23 +1426,9 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/07/03/moderna-vs-recursion-which-cutting-edge-pharma-stock-is-a-better-buy-in-2026/",
           "published": 1783092855,
           "sentiment": 0.44
-        },
-        {
-          "title": "MRNA Stock on the Move: What Sparked the 33.5% Jump in the Past Week?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/mrna-stock-move-sparked-33-153200195.html",
-          "published": 1783092720,
-          "sentiment": 0.0
-        },
-        {
-          "title": "3 Cash-Heavy Stocks with Warning Signs",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-cash-heavy-stocks-warning-100206113.html",
-          "published": 1783072926,
-          "sentiment": -0.34
         }
       ],
-      "news_sentiment": 0.056
+      "news_sentiment": 0.196
     },
     {
       "ticker": "BNTX",
@@ -1524,9 +1524,9 @@
       "short_pct": 27.61,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 4850700,
-      "vol_1w": 25853700,
-      "vol_1m": 96399300,
+      "vol_1d": 4848700,
+      "vol_1w": 25851700,
+      "vol_1m": 96397300,
       "news": [
         {
           "title": "Novavax (NVAX) Stock Moves 1.36%: What You Should Know",
@@ -1592,9 +1592,9 @@
       "short_pct": 6.49,
       "analyst": "buy",
       "analyst_score": 1.69,
-      "vol_1d": 1483600,
-      "vol_1w": 10188700,
-      "vol_1m": 43844100,
+      "vol_1d": 1481600,
+      "vol_1w": 10186700,
+      "vol_1m": 43842100,
       "news": [
         {
           "title": "2 Cash-Heavy Stocks with Exciting Potential and 1 We Ignore",
@@ -1660,9 +1660,9 @@
       "short_pct": 28.57,
       "analyst": "hold",
       "analyst_score": 2.83,
-      "vol_1d": 4358100,
-      "vol_1w": 35828700,
-      "vol_1m": 81319500,
+      "vol_1d": 4356200,
+      "vol_1w": 35826800,
+      "vol_1m": 81317600,
       "news": [
         {
           "title": "SRPT Stock Climbs After Sarepta Seeks Permanent FDA Nod For Two Duchenne Therapies",
@@ -1775,10 +1775,17 @@
       "short_pct": 0.77,
       "analyst": "buy",
       "analyst_score": 2.43,
-      "vol_1d": 12080200,
-      "vol_1w": 61368400,
-      "vol_1m": 278093900,
+      "vol_1d": 12069100,
+      "vol_1w": 61357300,
+      "vol_1m": 278082800,
       "news": [
+        {
+          "title": "Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/is-viking-therapeutics-stock-going-to-50-heres-wha/",
+          "published": 1783157400,
+          "sentiment": 0.0
+        },
         {
           "title": "Johnson & Johnson Is Walking Away From a $100 Billion Obesity Market. Could That Actually Make It the Better Long-Term Buy Than Eli Lilly?",
           "publisher": "Motley Fool",
@@ -1806,16 +1813,9 @@
           "url": "https://www.fool.com/investing/2026/07/03/heres-why-viking-therapeutics-stock-surged-higher/",
           "published": 1783086339,
           "sentiment": 0.0
-        },
-        {
-          "title": "Lexicon Pharmaceuticals (LXRX) Gains on Russell 3000 Inclusion",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/lexicon-pharmaceuticals-lxrx-gains-russell-131232712.html",
-          "published": 1783084352,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.156
+      "news_sentiment": 0.088
     },
     {
       "ticker": "LLY",
@@ -1843,10 +1843,24 @@
       "short_pct": 1.09,
       "analyst": "buy",
       "analyst_score": 1.77,
-      "vol_1d": 3297400,
-      "vol_1w": 21151900,
-      "vol_1m": 72489100,
+      "vol_1d": 3296100,
+      "vol_1w": 21150600,
+      "vol_1m": 72487800,
       "news": [
+        {
+          "title": "Dividend King vs. Growth Giant: Johnson & Johnson Takes on Eli Lilly",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/04/dividend-king-vs-growth-giant-johnson-johnson-takes-on-eli-lilly/",
+          "published": 1783188027,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/is-viking-therapeutics-stock-going-to-50-heres-wha/",
+          "published": 1783157400,
+          "sentiment": 0.0
+        },
         {
           "title": "Johnson & Johnson Is Walking Away From a $100 Billion Obesity Market. Could That Actually Make It the Better Long-Term Buy Than Eli Lilly?",
           "publisher": "Motley Fool",
@@ -1867,23 +1881,9 @@
           "url": "https://finance.yahoo.com/healthcare/articles/medicare-bridge-help-novo-nordisk-131200842.html",
           "published": 1783084320,
           "sentiment": 0.402
-        },
-        {
-          "title": "These 7 Stocks Are Analyst Favorites For Magnificent Earnings Growth; Data Center Play Leads EPS Gauge",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/research/best-stocks-seven-magnificent-stocks-earnings-growth/?src=A00220&yptr=yahoo",
-          "published": 1783080021,
-          "sentiment": 0.893
-        },
-        {
-          "title": "JNJ Stock Management Sees A Breakout, The Market Sees A Standoff",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605501/jnj-stock-management-sees-a-breakout-the-market-sees-a-standoff/2026-07-02",
-          "published": 1783013373,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.347
+      "news_sentiment": 0.245
     },
     {
       "ticker": "LEGN",

@@ -1,9 +1,141 @@
 {
-  "updated": "2026-07-04 10:24",
+  "updated": "2026-07-04 22:51",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Valero leads with YTD +63.74% and 1W momentum +4.98%, supported by a buy rating and news sentiment 0.248; falling oil prices benefit refining margins, and the stock is seen as 34% undervalued per latest analysis.",
+      "drivers": [
+        "YTD +63.74%",
+        "1W +4.98%",
+        "PE 19.57",
+        "Analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Marathon Petroleum shows YTD +62.71% with 1W momentum +5.04%, strong refining tailwinds from lower crude prices, buy consensus, and positive news sentiment 0.183.",
+      "drivers": [
+        "YTD +62.71%",
+        "1W +5.04%",
+        "PE 17.55",
+        "Analyst buy"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "EOG Resources offers YTD +24.03%, a low P/E of 12.86, and a buy rating with news sentiment 0.289; its strong cash-flow generation at $70 oil provides a buffer against price volatility.",
+      "drivers": [
+        "YTD +24.03%",
+        "PE 12.86",
+        "Analyst buy",
+        "News sentiment 0.289"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SSE has exceptional 1M momentum +7.32% and 1W +3.55%, a buy rating, and a dividend yield of 2.74%; UK utility exposure offers stability amid energy market volatility.",
+      "drivers": [
+        "1M +7.32%",
+        "1W +3.55%",
+        "Analyst buy",
+        "Dividend yield 2.74%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "NextEra Energy delivers 1M momentum +5.21% and 1W +0.73%, with a buy rating, P/E 22.42, and dividend yield 2.82%; its regulated utility and renewable assets provide resilience.",
+      "drivers": [
+        "1M +5.21%",
+        "Analyst buy",
+        "Dividend yield 2.82%",
+        "Market cap $184B"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DNNGY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "DNNGY has YTD +16.13% and 1W momentum +3.75%, benefiting from renewable tailwinds; no analyst rating but positive news sentiment 0.107 and low base create upside potential.",
+      "drivers": [
+        "YTD +16.13%",
+        "1W +3.75%",
+        "News sentiment 0.107"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Shell offers a low P/E of 12.15, dividend yield 4.01%, buy rating, and 1W momentum +0.89%; its integrated model provides cash-flow stability as oil prices settle near $70.",
+      "drivers": [
+        "PE 12.15",
+        "Dividend yield 4.01%",
+        "Analyst buy",
+        "1W +0.89%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ExxonMobil has YTD +13.28%, a strong payout ratio of 67.6% at $72 oil per [ainvest.com](https://www.ainvest.com/news/hormuz-truce-expires-44-days-energy-split-middle-2607/), buy rating, and 1D bounce +0.56% with 0.16x debt-to-equity.",
+      "drivers": [
+        "YTD +13.28%",
+        "Payout ratio 67.6%",
+        "Analyst buy",
+        "Low debt 0.16x"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Chevron yields 4.21%, has a buy rating, and 1D momentum +2.05%; however its 117.5% payout ratio at current oil prices per [ainvest.com](https://www.ainvest.com/news/hormuz-truce-expires-44-days-energy-split-middle-2607/) increases risk, but the dividend remains attractive.",
+      "drivers": [
+        "Dividend yield 4.21%",
+        "Analyst buy",
+        "1D +2.05%",
+        "YTD +10.60%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TotalEnergies combines a low P/E of 11.38, dividend yield 5.50%, buy rating, and YTD +16.55%; it benefits from LNG and diversified gas assets, even as oil prices retreat.",
+      "drivers": [
+        "PE 11.38",
+        "Dividend yield 5.50%",
+        "Analyst buy",
+        "YTD +16.55%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +264,6 @@
         "P/E 17.75",
         "analyst score 1.73",
         "news sentiment 0.084"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Valero has surged +85% over 1Y and +63.74% YTD, with +2.41% 1M momentum, a P/E of 19.57, and a 1.79% dividend yield, while benefiting from record diesel crack spreads of $86.25/barrel due to the Strait of Hormuz disruption [ainvest.com](https://www.ainvest.com/news/refiner-windfall-narrative-hidden-expiration-date-2607/).",
-      "drivers": [
-        "+85% 1-year return",
-        "+63.74% YTD",
-        "+2.41% 1-month momentum",
-        "record crack spreads"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "Marathon Petroleum delivered +51% 1Y and +62.71% YTD returns, with +5.04% 1W momentum, a P/E of 17.55, and a 1.47% dividend yield, supported by Q1 earnings that beat consensus by 50% amid elevated refining margins [ainvest.com](https://www.ainvest.com/news/refiner-windfall-narrative-hidden-expiration-date-2607/).",
-      "drivers": [
-        "+51% 1-year return",
-        "+62.71% YTD",
-        "+5.04% 1-week momentum",
-        "Q1 earnings beat by 50%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "EOG Resources has gained +24.03% YTD with a P/E of 12.86, a 3.12% dividend yield, and positive news sentiment of 0.289, while maintaining a low-cost production base that is resilient in a $65-$75 Brent range [getfinancebrief.com](https://getfinancebrief.com/story/bessent-iran-oil-china-buyer-markets).",
-      "drivers": [
-        "+24.03% YTD",
-        "P/E 12.86",
-        "dividend yield 3.12%",
-        "low-cost producer"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "SSE has risen +28% over 1Y and +10.26% YTD, with strong 1M momentum of +9.04% and a 2.88% dividend yield, as a regulated utility with growing renewables exposure and a P/E of 23.43.",
-      "drivers": [
-        "+28% 1-year return",
-        "+9.04% 1-month momentum",
-        "dividend yield 2.88%",
-        "regulated utility + renewables"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "NextEra Energy posted +20% 1Y and +10.71% YTD returns, with +5.21% 1M momentum, a P/E of 22.42, a 2.82% dividend yield, and near-zero short interest of 0.01%, reflecting strong demand for clean power generation.",
-      "drivers": [
-        "+20% 1-year return",
-        "+5.21% 1-month momentum",
-        "dividend yield 2.82%",
-        "near-zero short interest"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Chevron has gained +14% 1Y and +10.60% YTD, with a 4.21% dividend yield, a P/E of 29.48, and positive news sentiment of 0.304, while benefiting from a floor under oil prices as Iran exports remain sanctioned [getfinancebrief.com](https://getfinancebrief.com/story/bessent-iran-oil-china-buyer-markets).",
-      "drivers": [
-        "dividend yield 4.21%",
-        "+10.60% YTD",
-        "positive news sentiment 0.304",
-        "oil price floor from Iran sanctions"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ExxonMobil is up +22% 1Y and +13.28% YTD, with a 3.01% dividend yield and a P/E of 23.08, while its Rovuma LNG project in Mozambique could add ~$11B annually to the local economy once production begins [fxleaders.com](https://www.fxleaders.com/news/2026/07/02/exxon-mobil-stock-tests-key-support-as-oil-outlook-and-texas-move-take-focus/).",
-      "drivers": [
-        "+22% 1-year return",
-        "dividend yield 3.01%",
-        "Rovuma LNG upside",
-        "integrated model resilience"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Shell trades at a P/E of 12.15 with a 4.01% dividend yield, +8% 1Y return, and positive news sentiment of 0.23, while its upcoming earnings are expected to show EPS growth of 76.76% year-over-year [wallstreetwaves.com](https://wallstreetwaves.com/understanding-shells-underperformance-compared-to-the-broader-market/).",
-      "drivers": [
-        "P/E 12.15",
-        "dividend yield 4.01%",
-        "expected EPS growth +76.76%",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.66,
-      "rationale": "TotalEnergies has returned +22% 1Y and +16.55% YTD, with a P/E of 11.38, a 5.50% dividend yield, and very low short interest of 0.20%, offering attractive value and income in the integrated oil space.",
-      "drivers": [
-        "+16.55% YTD",
-        "P/E 11.38",
-        "dividend yield 5.50%",
-        "low short interest 0.20%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.64,
-      "rationale": "Equinor has surged +33.60% YTD and +25% 1Y, with a P/E of 14.50, a 4.74% dividend yield, and positive news sentiment of 0.285, while securing a $1B contract for harsh-environment rigs that underscores its operational strength.",
-      "drivers": [
-        "+33.60% YTD",
-        "P/E 14.50",
-        "dividend yield 4.74%",
-        "$1B rig contract secured"
       ]
     }
   ]

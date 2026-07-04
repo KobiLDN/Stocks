@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-04 10:19",
+  "updated": "2026-07-04 22:49",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NTLA",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +90.66%, 1M +34.87%, with positive Phase 3 HAELO results for lonvo-z and a rolling BLA submission to the FDA targeting a US launch in H1 2027 [simplywall.st](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-ntla/intellia-therapeutics/news/intellia-therapeutics-ntla-is-up-112-after-lonvo-z-phase-3-p).",
+      "drivers": [
+        "+90.66% YTD",
+        "Phase 3 HAELO success",
+        "2027 US launch plans for lonvo-z",
+        "gene-editing catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +158.46%, 1M +62.58%, with FDA panel unanimously backing mRNA-1010/mFLUSIVA flu vaccine and a PDUFA date of Aug 5, 2026 \u2014 but still loss-making with 'hold' analyst consensus [invezz.com](https://invezz.com/news/2026/07/02/moderna-stock-jumps-as-pipeline-progress-and-flu-shot-data-lift-sentiment/).",
+      "drivers": [
+        "+158.46% YTD",
+        "FDA panel support for flu vaccine",
+        "PDUFA Aug 5, 2026 catalyst",
+        "mRNA platform expansion"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "VRTX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "1M +23.28%, 1W +9.97%, news sentiment +0.339, with FDA approval to expand CASGEVY to children ages 2+ for sickle cell disease and beta thalassemia, unlocking ~5,500 additional patients [biospace.com](https://www.biospace.com/press-releases/vertex-announces-us-fda-approval-for-expanded-use-of-casgevy-for-the-treatment-of-people-ages-2-years-and-older-with-sickle-cell-disease-or-transfusion-dependent-beta-thalassemia).",
+      "drivers": [
+        "FDA approval for pediatric CASGEVY",
+        "+23.28% 1M",
+        "positive news sentiment 0.339",
+        "large-cap with analyst 'buy' consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "EDIT",
+      "signal": "strong_buy",
+      "confidence": 0.644,
+      "rationale": "YTD +78.05%, 1W +33.21%, 1D +12.88%, on strong one-week momentum amid gene-editing tailwinds, but negative news sentiment -0.03 and no analyst rating.",
+      "drivers": [
+        "+78.05% YTD",
+        "explosive 1W momentum +33.21%",
+        "gene-editing sector catalyst",
+        "tiny market cap $0.56B"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +22.06%, 1M +31.85%, analyst consensus 'strong_buy' with score 1.5, trading on strong genomics momentum driven by CareDx/Naveris deal in oncology.",
+      "drivers": [
+        "+31.85% 1M",
+        "strong_buy analyst consensus",
+        "oncology/genomics catalyst",
+        "low short interest 3.11%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +20.07%, P/E 12.09, dividend yield 357 bps, low short interest 0.77%, and recovery from YTD -0.21% on metabolic/diabetes franchise momentum.",
+      "drivers": [
+        "+20.07% 1M",
+        "low P/E 12.09",
+        "high dividend yield 3.57%",
+        "metabolic sector leader"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +15.22%, 1M +19.27%, P/E 16.51, with positive headlines on EPS growth and lifted guidance, reinforcing oncology fundamentals.",
+      "drivers": [
+        "+19.27% 1M",
+        "P/E 16.51",
+        "EPS growth and guidance lift",
+        "oncology focus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RCUS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +30.23%, 1M +27.12%, analyst consensus 'strong_buy' (1.46), with BMY collaboration on kidney cancer combination, though negative news sentiment -0.082 and high short interest 17.36%.",
+      "drivers": [
+        "+30.23% YTD",
+        "strong_buy analyst consensus",
+        "BMY partnership in kidney cancer",
+        "high short interest 17.36%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "COAG",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +18.46%, analyst consensus 'strong_buy' (score 1.0), with Hemab Therapeutics' post-IPO pipeline push and sutacimig Phase III plans, but negative news sentiment -0.137 and YTD -8.82%.",
+      "drivers": [
+        "+18.46% 1M",
+        "strong_buy analyst consensus (1.0)",
+        "post-IPO pipeline catalyst",
+        "rare-disease orphan drug focus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1W +20.35%, 1M +18.72%, with Sarepta seeking permanent FDA nod for two Duchenne therapies, though high short interest 28.57% and 'hold' analyst consensus (2.83).",
+      "drivers": [
+        "+20.35% 1W",
+        "FDA catalyst for Duchenne therapies",
+        "rare-disease pipeline",
+        "high short interest 28.57%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VRTX",
@@ -132,145 +265,6 @@ window.SIGNALS_DATA = {
         "FDA approval catalyst",
         "buy consensus",
         "large cap stability"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.644,
-      "ytd": "+78.05%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +78.05% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +78.05% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +158.46%, 1M +62.58%, 1W +33.49% driven by a unanimous FDA advisory panel vote for its mRNA-1010 flu vaccine and Science Day oncology/CAR-T pipeline updates; analyst consensus remains hold but Piper Sandler raised target to $77 (Overweight).",
-      "drivers": [
-        "unanimous FDA flu panel vote",
-        "+158% YTD momentum",
-        "in vivo CAR-T mRNA-6007 launch plan",
-        "PDUFA date Aug 5, 2026"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTLA",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +90.66%, 1M +34.87% on positive Phase 3 HAELO results for lonvo-z and rolling BLA submission; U.S. launch targeted for H1 2027, reducing clinical risk despite high short interest (45.4%) and cash burn concerns.",
-      "drivers": [
-        "positive Phase 3 lonvo-z data",
-        "rolling BLA submission",
-        "2027 U.S. launch catalyst",
-        "high short interest setup"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +22.06%, 1M +31.85%, strong_buy consensus (score 1.5); PMDA approval for Signatera in Japan (launch by late 2026) and integration into Phase 3 head & neck cancer trial with Aveta Biomics expand addressable market.",
-      "drivers": [
-        "PMDA Japan approval for Signatera",
-        "Phase 3 MRD trial integration",
-        "strong buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +78.05%, 1W +33.21%, 1D +12.88% reflecting gene-editing momentum; no current analyst rating but sector tailwinds from Casgevy's pediatric approval and broader CRISPR enthusiasm support continued upside.",
-      "drivers": [
-        "+78% YTD momentum",
-        "CRISPR sector tailwinds",
-        "near-term catalyst potential"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RCUS",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +30.23%, 1M +27.12%, strong_buy consensus (score 1.46); collaboration with Bristol-Myers Squibb for a new kidney cancer two-drug combo trial underscores validated platform and potential pipeline inflection.",
-      "drivers": [
-        "BMY collaboration on kidney cancer",
-        "strong buy analyst consensus",
-        "+27% 1-month momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +16.79%, 1M +23.28%, 1W +9.97% after FDA expansion of Casgevy to children as young as 2 (SCD/beta thalassemia); strong buy consensus (score 1.64) and news sentiment 0.188 reinforce large-cap gene therapy leadership.",
-      "drivers": [
-        "FDA pediatric Casgevy approval",
-        "strong buy consensus",
-        "large-cap stability with growth catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD -0.21% but 1M +20.07% and 1W +5.86%, showing a sharp reversal; P/E 12.09, dividend yield 3.57%, low beta 0.35 provide defensive value; positive momentum driven by broader sector rotation into GLP-1 names.",
-      "drivers": [
-        "low P/E (12x) and strong yield",
-        "1-month +20% reversal",
-        "GLP-1 sector tailwind",
-        "low beta defensive profile"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +15.22%, 1M +19.27%, 1W +8.68% after Truist price target raise to $105 citing a $246M government settlement; P/E 16.51, low beta 0.79, and positive news sentiment 0.162 support sustainable upside.",
-      "drivers": [
-        "Truist PT raise to $105",
-        "16.5x P/E with growth",
-        "+19% 1-month momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SRPT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD -9.53% but 1M +18.72%, 1W +20.35% after announcing FDA submission for permanent approval of two Duchenne therapies; high short interest 28.57% could squeeze on positive FDA decision.",
-      "drivers": [
-        "permanent FDA filing for Duchenne",
-        "+20% weekly momentum",
-        "short squeeze potential"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "YTD -8.82% but 1M +18.46%, 1W +11.83% reflecting pipeline optimism from Hemab Therapeutics' post-IPO Phase III plans for sutacimig; strong_buy consensus (score 1.0) and high-risk/high-reward profile in rare disease.",
-      "drivers": [
-        "strong buy consensus (1.0)",
-        "Phase III sutacimig plans",
-        "+18% monthly momentum",
-        "rare disease orphan drug potential"
       ]
     }
   ]

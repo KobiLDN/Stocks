@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-04 10:20",
+  "updated": "2026-07-04 22:49",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "RTX surged 3.7% on a $1.1B Navy missile contract, with +15.47% 1M momentum, P/E 37.31, analyst buy consensus, and positive news sentiment 0.168. [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/07/03/rtx-nyse-rtx-stock-price-surges-on-1-1-billion-u-s-navy-missile-contract-award/)",
+      "drivers": [
+        "$1.1B contract win",
+        "+15.47% 1M return",
+        "analyst buy",
+        "raised guidance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Citi upgraded LMT to Buy with a $582 target, citing $35.5B THAAD and $2.9B radar contracts; stock +8.10% 1W, P/E 26.45, news sentiment 0.139. [tikr.com](https://www.tikr.com/blog/citi-upgrades-lockheed-martin-nyse-lmt-stock-to-buy-as-historical-rebounds-override-election-fears)",
+      "drivers": [
+        "Citi upgrade to Buy",
+        "$35.5B THAAD contract",
+        "+8.10% 1W",
+        "P/E 26.45"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "GD",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "GD hit a new 12-month high after an earnings beat ($4.10 vs $3.67), +11.32% 1M, P/E 23.52, analyst buy, and highest news sentiment 0.296 among primes. [americanbankingnews.com](https://www.americanbankingnews.com/2026/07/04/general-dynamics-nysegd-reaches-new-12-month-high-time-to-buy.html)",
+      "drivers": [
+        "new 12-month high",
+        "earnings beat $0.43",
+        "+11.32% 1M",
+        "news sentiment 0.296"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NOC",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "NOC has a $95.6B backlog, P/E 17.21 (cheapest among primes), +9.95% 1W, analyst buy, and long-cycle deterrence programs (B-21, Sentinel). [alphastreet.com](https://news.alphastreet.com/northrop-grumman-noc-has-a-long-cycle-deterrence-and-mission-systems-engine-bigger-than-a-budget-debate/)",
+      "drivers": [
+        "$95.6B backlog",
+        "P/E 17.21",
+        "+9.95% 1W",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "RR.L",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "RR.L shows exceptional momentum with +25.67% YTD and +19.55% 1M, P/E 21.8, analyst buy (score 1.6), and positive news sentiment 0.256.",
+      "drivers": [
+        "+25.67% YTD",
+        "+19.55% 1M",
+        "P/E 21.8",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AXON has explosive momentum (+34.25% 1W, +24.00% 1M) and analyst buy consensus, but P/E 237.86 is extremely high, warranting caution.",
+      "drivers": [
+        "+34.25% 1W",
+        "+24.00% 1M",
+        "analyst buy",
+        "high P/E 237.86"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "MRCY leads the universe with +66.00% YTD and +19.55% 1W, but lacks analyst coverage and has no P/E (negative earnings), adding risk.",
+      "drivers": [
+        "+66.00% YTD",
+        "+19.55% 1W",
+        "no analyst coverage",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TDG has the highest news sentiment (0.408) in the universe, +11.30% 1M, analyst buy, and P/E 42.02, reflecting strong aftermarket demand.",
+      "drivers": [
+        "news sentiment 0.408",
+        "+11.30% 1M",
+        "analyst buy",
+        "P/E 42.02"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "HEI shows solid momentum (+10.03% YTD, +10.06% 1M), analyst buy, news sentiment 0.3, though P/E 64.54 is elevated.",
+      "drivers": [
+        "+10.03% YTD",
+        "+10.06% 1M",
+        "analyst buy",
+        "news sentiment 0.3"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "CACI offers value with P/E 20.74, analyst buy (score 1.56), and +13.44% 1W recovery, despite YTD -6.43% and high short interest 8.27%.",
+      "drivers": [
+        "P/E 20.74",
+        "analyst buy score 1.56",
+        "+13.44% 1W",
+        "short interest 8.27%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RTX",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "+19.55% 1M momentum",
         "P/E 21.8",
         "Positive news sentiment 0.256"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Citi upgraded to Buy with $582 target; $35.5B THAAD and $2.9B radar contracts plus potential $3.5B Ultra Maritime acquisition drive +4.68% daily gain, YTD +11.13%, P/E 26.45.",
-      "drivers": [
-        "Citi upgrade to Buy",
-        "$35.5B THAAD contract",
-        "potential $3.5B Ultra Maritime deal",
-        "+4.68% daily gain"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Received $312M SEWIP contract modification, raised full-year guidance after Q2 beat; +5.17% daily, P/E 17.21, analyst buy rating.",
-      "drivers": [
-        "$312M SEWIP contract",
-        "raised FY guidance",
-        "P/E 17.21",
-        "+5.17% daily"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Strong 1-month momentum +15.47%, +4.18% daily, analyst buy rating (1.87), P/E 37.31, YTD +7.21%.",
-      "drivers": [
-        "+15.47% 1-month",
-        "analyst buy",
-        "YTD +7.21%",
-        "P/E 37.31"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Solid YTD +10.21%, 1-month +11.32%, P/E 23.52, analyst buy, positive news sentiment 0.296.",
-      "drivers": [
-        "YTD +10.21%",
-        "+11.32% 1-month",
-        "P/E 23.52",
-        "news sentiment 0.296"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +23.25%, 1-month +15.20%, P/E 21.07, analyst buy (1.6), boosted by UK $20B military overhaul.",
-      "drivers": [
-        "YTD +23.25%",
-        "+15.20% 1-month",
-        "P/E 21.07",
-        "UK defense spending catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +10.03%, 1-month +10.06%, analyst buy, highest news sentiment 0.446, though P/E 64.54.",
-      "drivers": [
-        "news sentiment 0.446",
-        "YTD +10.03%",
-        "analyst buy",
-        "+10.06% 1-month"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1-month +11.30%, analyst buy (1.82), news sentiment 0.291, P/E 42.02, YTD -0.74% but recovering.",
-      "drivers": [
-        "+11.30% 1-month",
-        "analyst buy",
-        "news sentiment 0.291",
-        "P/E 42.02"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Exceptional YTD +66%, 1-month +13.10%, 1-week +19.55%, but no analyst rating and negative P/E; high momentum with risk.",
-      "drivers": [
-        "YTD +66%",
-        "+19.55% 1-week",
-        "no analyst rating",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Extreme 1-week +34.25%, 1-month +24%, analyst buy (1.6), but P/E 237.86 and high beta 1.422; momentum-driven.",
-      "drivers": [
-        "+34.25% 1-week",
-        "+24% 1-month",
-        "analyst buy",
-        "P/E 237.86"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BA",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "1-month +7.56%, analyst buy (1.63), news sentiment 0.121, but P/E 89.17 and YTD -0.56%; improving momentum.",
-      "drivers": [
-        "+7.56% 1-month",
-        "analyst buy",
-        "news sentiment 0.121",
-        "P/E 89.17"
       ]
     }
   ]
