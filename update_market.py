@@ -45,8 +45,21 @@ def pct_val(current, ref):
     return (current - ref) / ref * 100
 
 
-def get_index(yahoo_symbol):
-    """Return dict with price/level + 1d/1w/1m changes (formatted + raw 1w)."""
+def vix_signal(level):
+    """Human-readable VIX fear label used by portfolio AI."""
+    if level is None:
+        return "unknown"
+    if level < 15:
+        return "calm"
+    if level < 25:
+        return "normal"
+    if level < 30:
+        return "high_fear"
+    return "extreme_fear"
+
+
+def get_index(yahoo_symbol, include_long=False):
+    """Return dict with price/level + 1d/1w/1m changes (+ ytd/1y when include_long=True)."""
     t = yf.Ticker(yahoo_symbol)
     fi = t.fast_info
 
@@ -59,14 +72,28 @@ def get_index(yahoo_symbol):
     except Exception:
         prev_close = None
 
-    price_1w = price_1m = None
+    price_1w = price_1m = price_ytd = price_1y = None
     try:
+        period = "1y" if include_long else "1mo"
         with contextlib.redirect_stderr(io.StringIO()):
-            hist = t.history(period="1mo")
+            hist = t.history(period=period)
         if len(hist) >= 6:
-            price_1w = float(hist["Close"].iloc[-6])   # 6 trading days back
-        if len(hist) >= 1:
-            price_1m = float(hist["Close"].iloc[0])     # oldest row in window
+            price_1w = float(hist["Close"].iloc[-6])    # ~5 trading days back
+        if include_long:
+            if len(hist) >= 23:
+                price_1m = float(hist["Close"].iloc[-23])   # ~22 trading days back
+            elif len(hist) >= 1:
+                price_1m = float(hist["Close"].iloc[0])
+            if len(hist) >= 1:
+                price_1y = float(hist["Close"].iloc[0])     # oldest row ≈ 1 year ago
+            # YTD: first trading day of current calendar year
+            year = datetime.now().year
+            ytd_rows = hist[hist.index.year == year]
+            if not ytd_rows.empty:
+                price_ytd = float(ytd_rows["Close"].iloc[0])
+        else:
+            if len(hist) >= 1:
+                price_1m = float(hist["Close"].iloc[0])
         # Fall back to history if fast_info was unavailable.
         if price is None and len(hist) >= 1:
             price = float(hist["Close"].iloc[-1])
@@ -78,13 +105,17 @@ def get_index(yahoo_symbol):
     def rnd(v):
         return round(v, 2) if v is not None else None
 
-    return {
+    result = {
         "price":     round(price, 2) if price is not None else None,
         "change_1d": rnd(pct_val(price, prev_close)),
         "change_1w": rnd(pct_val(price, price_1w)),
         "change_1m": rnd(pct_val(price, price_1m)),
         "_v1w":      pct_val(price, price_1w),
     }
+    if include_long:
+        result["change_ytd"] = rnd(pct_val(price, price_ytd))
+        result["change_1y"]  = rnd(pct_val(price, price_1y))
+    return result
 
 
 def compute_regime(spy, qqq, vix):
@@ -104,25 +135,35 @@ def main():
     data = {}
     errors = []
     for key, sym in INDICES.items():
+        long = key in ("spy", "qqq")
         try:
             print(f"  {key.upper():<4} ({sym})... ", end="", flush=True)
-            data[key] = get_index(sym)
+            data[key] = get_index(sym, include_long=long)
             d = data[key]
-            print(f"{d['price']}  1d {d['change_1d']}%  1w {d['change_1w']}%")
+            ytd_str = f"  ytd {d.get('change_ytd')}%" if long else ""
+            print(f"{d['price']}  1d {d['change_1d']}%  1w {d['change_1w']}%{ytd_str}")
         except Exception as e:
             print(f"ERROR: {e}")
             errors.append(key)
-            data[key] = {"price": None, "change_1d": None, "change_1w": None,
-                         "change_1m": None, "_v1w": None}
+            base = {"price": None, "change_1d": None, "change_1w": None,
+                    "change_1m": None, "_v1w": None}
+            if long:
+                base.update({"change_ytd": None, "change_1y": None})
+            data[key] = base
 
     regime = compute_regime(data["spy"], data["qqq"], data["vix"])
     vix = data["vix"]
 
     out = {
         "updated": datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M"),
-        "spy": {k: data["spy"][k] for k in ("price", "change_1d", "change_1w", "change_1m")},
-        "qqq": {k: data["qqq"][k] for k in ("price", "change_1d", "change_1w", "change_1m")},
-        "vix": {"level": vix["price"], "change_1d": vix["change_1d"], "regime": regime},
+        "spy": {k: data["spy"][k] for k in ("price", "change_1d", "change_1w", "change_1m", "change_ytd", "change_1y")},
+        "qqq": {k: data["qqq"][k] for k in ("price", "change_1d", "change_1w", "change_1m", "change_ytd", "change_1y")},
+        "vix": {
+            "level":    vix["price"],
+            "change_1d": vix["change_1d"],
+            "regime":   regime,
+            "signal":   vix_signal(vix["price"]),
+        },
         "market_regime": regime,
     }
 
