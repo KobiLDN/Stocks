@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-03 22:39",
+  "updated": "2026-07-04 10:10",
   "fx_gbp_usd": 1.335,
   "stocks": [
     {
@@ -305,6 +305,13 @@ window.PRICES_DATA = {
       "vol_1m": 24589600,
       "news": [
         {
+          "title": "Biogen Is Paying $1 Billion for a Company That Won't Say What It Makes. Here's Why That's Actually Good News for BIIB Investors.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/biogen-is-paying-1-billion-for-a-company-that-wont/",
+          "published": 1783153320,
+          "sentiment": 0.44
+        },
+        {
           "title": "BIIB Stock Ends 3% Higher \u2014 Why This Strategist Picks Biogen Over Other Biotech Peers",
           "publisher": "Stocktwits",
           "url": "https://stocktwits.com/news-articles/markets/equity/biib-stock-ends-higher-why-this-strategist-picks-biogen-over-other-biotech-peers/cZm7GYQR7jB",
@@ -331,16 +338,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/biogen-biib-share-alzheimer-data-011843495.html",
           "published": 1782955123,
           "sentiment": 0.296
-        },
-        {
-          "title": "Amgen or Biogen: Which Biotech Stock Appears Better Poised?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/amgen-biogen-biotech-stock-appears-130400234.html",
-          "published": 1782911040,
-          "sentiment": 0.599
         }
       ],
-      "news_sentiment": 0.413
+      "news_sentiment": 0.381
     },
     {
       "ticker": "BMY",
@@ -363,7 +363,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 118.706,
       "beta": 0.235,
       "pe_ratio": 16.28,
-      "avg_volume_m": 11.43,
+      "avg_volume_m": 11.44,
       "div_yield_pct": 434.0,
       "short_pct": 1.94,
       "analyst": "buy",
@@ -423,7 +423,7 @@ window.PRICES_DATA = {
       "change_ytd": "+6.37%",
       "return_1yr": "+41%",
       "low_gbp": "101",
-      "low_usd": 135.13,
+      "low_usd": 135.47,
       "high_gbp": "157",
       "high_usd": 210.02,
       "bar_pct": 77,
@@ -432,13 +432,13 @@ window.PRICES_DATA = {
       "beta": 0.225,
       "pe_ratio": 28.74,
       "avg_volume_m": 2.16,
-      "div_yield_pct": 162.0,
+      "div_yield_pct": 163.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 649803,
-      "vol_1w": 9662113,
-      "vol_1m": 50726786,
+      "vol_1d": 653264,
+      "vol_1w": 9665574,
+      "vol_1m": 50730247,
       "news": [
         {
           "title": "Arcutis vs. Vertex: Which Pharmaceutical Maker Stock Is a Better Buy in 2026?",
@@ -500,13 +500,13 @@ window.PRICES_DATA = {
       "beta": 0.3,
       "pe_ratio": 14.19,
       "avg_volume_m": 7.95,
-      "div_yield_pct": 339.0,
+      "div_yield_pct": 337.0,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.81,
-      "vol_1d": 2548387,
-      "vol_1w": 52612159,
-      "vol_1m": 195541860,
+      "vol_1d": 2548758,
+      "vol_1w": 52612530,
+      "vol_1m": 195542231,
       "news": [
         {
           "title": "GSK plc (GSK) Launches Tender Offer to Acquire Nuvalent Inc. for $124 Per Share",
@@ -577,6 +577,13 @@ window.PRICES_DATA = {
       "vol_1m": 37003900,
       "news": [
         {
+          "title": "CRISPR Therapeutics (CRSP) Stock Looks Stretched On Book Value Yet Reasonable On Broader Checks",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/healthcare/articles/crispr-therapeutics-crsp-stock-looks-231001667.html",
+          "published": 1783120201,
+          "sentiment": 0.34
+        },
+        {
           "title": "CRISPR Therapeutics (CRSP) Is Up 11.3% After Broad Russell Growth Index Inclusion Has The Bull Case Changed?",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-crsp-11-3-201129013.html",
@@ -603,16 +610,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-crispr-therapeutics-130004846.html",
           "published": 1782824404,
           "sentiment": 0.0
-        },
-        {
-          "title": "Tesla\u2019s 10% Weight in ARKK Sets Up a Make-or-Break Year for the Innovation ETF",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/29/teslas-10-weight-in-arkk-sets-up-a-make-or-break-year-for-the-innovation-etf/",
-          "published": 1782759344,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.168
+      "news_sentiment": 0.16
     },
     {
       "ticker": "BEAM",
@@ -638,8 +638,8 @@ window.PRICES_DATA = {
       "avg_volume_m": 2.19,
       "div_yield_pct": null,
       "short_pct": 42.63,
-      "analyst": "strong_buy",
-      "analyst_score": 1.29,
+      "analyst": "none",
+      "analyst_score": null,
       "vol_1d": 2316300,
       "vol_1w": 13839200,
       "vol_1m": 50881800,
@@ -713,6 +713,13 @@ window.PRICES_DATA = {
       "vol_1m": 141882800,
       "news": [
         {
+          "title": "Is Intellia Therapeutics, Inc. (NTLA) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/intellia-therapeutics-inc-ntla-good-234249098.html",
+          "published": 1783122169,
+          "sentiment": 0.44
+        },
+        {
           "title": "Wall Street Thinks This High-Flying Biotech Stock Can Soar Another 57%",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/01/wall-street-thinks-this-high-flying-biotech-stock/",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/06/17/this-stock-is-up-58-this-year-is-it-too-late-to-bu/",
           "published": 1781679000,
           "sentiment": 0.0
-        },
-        {
-          "title": "NTLA Posts Strong Additional Phase III Data From HAE Study, Stock Up",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/ntla-posts-strong-additional-phase-141700583.html",
-          "published": 1781619420,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.344
+      "news_sentiment": 0.33
     },
     {
       "ticker": "EDIT",
@@ -1780,6 +1780,13 @@ window.PRICES_DATA = {
       "vol_1m": 278093900,
       "news": [
         {
+          "title": "Johnson & Johnson Is Walking Away From a $100 Billion Obesity Market. Could That Actually Make It the Better Long-Term Buy Than Eli Lilly?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/johnson-johnson-is-walking-away-from-a-100-billion/",
+          "published": 1783128900,
+          "sentiment": 0.44
+        },
+        {
           "title": "Novo Nordisk (NVO) Stock May Be 48% Undervalued On Medicare GLP 1 Coverage",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/novo-nordisk-nvo-stock-may-141412298.html",
@@ -1806,16 +1813,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/lexicon-pharmaceuticals-lxrx-gains-russell-131232712.html",
           "published": 1783084352,
           "sentiment": 0.34
-        },
-        {
-          "title": "Can Medicare Bridge Help Novo Nordisk Defend Its GLP-1 Leadership?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/medicare-bridge-help-novo-nordisk-131200842.html",
-          "published": 1783084320,
-          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.148
+      "news_sentiment": 0.156
     },
     {
       "ticker": "LLY",
@@ -1848,6 +1848,13 @@ window.PRICES_DATA = {
       "vol_1m": 72489100,
       "news": [
         {
+          "title": "Johnson & Johnson Is Walking Away From a $100 Billion Obesity Market. Could That Actually Make It the Better Long-Term Buy Than Eli Lilly?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/johnson-johnson-is-walking-away-from-a-100-billion/",
+          "published": 1783128900,
+          "sentiment": 0.44
+        },
+        {
           "title": "Here's Why Viking Therapeutics Stock Surged Higher in June",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/03/heres-why-viking-therapeutics-stock-surged-higher/",
@@ -1874,16 +1881,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/605501/jnj-stock-management-sees-a-breakout-the-market-sees-a-standoff/2026-07-02",
           "published": 1783013373,
           "sentiment": 0.0
-        },
-        {
-          "title": "Healthcare Stocks Rise To The Heart Of IBD's Elite List Of Growth Names",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/stock-lists/ibd-50/healthcare-stocks-sector-investing-markets-ibd-50-list-eli-lilly/?src=A00220&yptr=yahoo",
-          "published": 1783008478,
-          "sentiment": 0.778
         }
       ],
-      "news_sentiment": 0.415
+      "news_sentiment": 0.347
     },
     {
       "ticker": "LEGN",

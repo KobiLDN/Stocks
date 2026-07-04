@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-03 22:45",
+  "updated": "2026-07-04 10:15",
   "fx_gbp_usd": 1.335,
   "stocks": [
     {
@@ -95,11 +95,18 @@ window.PRICES_DATA = {
       "div_yield_pct": 421.0,
       "short_pct": 1.09,
       "analyst": "buy",
-      "analyst_score": 1.79,
+      "analyst_score": 1.71,
       "vol_1d": 9563700,
       "vol_1w": 60083900,
       "vol_1m": 202821400,
       "news": [
+        {
+          "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-marks-fourth-july-mount-063221288.html",
+          "published": 1783146741,
+          "sentiment": 0.0
+        },
         {
           "title": "2 Cash-Producing Stocks to Keep an Eye On and 1 We Brush Off",
           "publisher": "StockStory",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-rise-afternoon-195459455.html",
           "published": 1783022099,
           "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-192449734.html",
-          "published": 1783020289,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.224
+      "news_sentiment": 0.169
     },
     {
       "ticker": "SHEL",
@@ -164,9 +164,9 @@ window.PRICES_DATA = {
       "short_pct": 1.96,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 5452856,
-      "vol_1w": 29524915,
-      "vol_1m": 135480492,
+      "vol_1d": 5453358,
+      "vol_1w": 29525417,
+      "vol_1m": 135480994,
       "news": [
         {
           "title": "TotalEnergies sells 8.5% stake in Marjoram gas field to Inpex",
@@ -359,8 +359,8 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 43.46,
       "bar_pct": 46,
-      "market_cap_gbp_b": 59.741,
-      "market_cap_usd_b": 79.754,
+      "market_cap_gbp_b": 57.378,
+      "market_cap_usd_b": 76.599,
       "beta": -0.75,
       "pe_ratio": 14.5,
       "avg_volume_m": 4.43,
@@ -713,6 +713,13 @@ window.PRICES_DATA = {
       "vol_1m": 69369300,
       "news": [
         {
+          "title": "Valero (VLO) Stock May Be 34% Undervalued Following Earnings Beat Hopes",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/valero-vlo-stock-may-34-010919994.html",
+          "published": 1783127359,
+          "sentiment": 0.421
+        },
+        {
           "title": "Valero Energy (VLO) Joins Five Russell Indexes As Its Investor Base Shifts",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-vlo-joins-five-191604869.html",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/07/02/u-s-refiners-are-running-incredibly-hard-heres-why-gas-prices-arent-falling/",
           "published": 1783018364,
           "sentiment": -0.153
-        },
-        {
-          "title": "Will Valero Energy (VLO) Beat Estimates Again in Its Next Earnings Report?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-vlo-beat-estimates-161005135.html",
-          "published": 1783008605,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.219
+      "news_sentiment": 0.248
     },
     {
       "ticker": "SLB",
@@ -917,6 +917,13 @@ window.PRICES_DATA = {
       "vol_1m": 178654100,
       "news": [
         {
+          "title": "Here's What to Expect From Baker Hughes' Next Earnings Report",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3119170/here-s-what-to-expect-from-baker-hughes-next-earnings-report",
+          "published": 1783100603,
+          "sentiment": 0.0
+        },
+        {
           "title": "Will Baker Hughes (BKR) Beat Estimates Again in Its Next Earnings Report?",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/baker-hughes-bkr-beat-estimates-161004920.html",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/bkr-wins-angola-contract-azule-133600557.html",
           "published": 1782740160,
           "sentiment": 0.735
-        },
-        {
-          "title": "US rig count up 10 as prices drop",
-          "publisher": "Odessa American, Texas",
-          "url": "https://www.oaoa.com/?p=365383",
-          "published": 1782518460,
-          "sentiment": -0.382
         }
       ],
-      "news_sentiment": 0.222
+      "news_sentiment": 0.298
     },
     {
       "ticker": "NEE",
@@ -1044,13 +1044,13 @@ window.PRICES_DATA = {
       "beta": 0.59,
       "pe_ratio": 23.88,
       "avg_volume_m": 4.22,
-      "div_yield_pct": 279.0,
+      "div_yield_pct": 274.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 2063099,
-      "vol_1w": 20183280,
-      "vol_1m": 90412240,
+      "vol_1d": 2063214,
+      "vol_1w": 20183395,
+      "vol_1m": 90412355,
       "news": [
         {
           "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
