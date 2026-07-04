@@ -38,7 +38,8 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 ├── update_market.py        ← fetches SPY/QQQ/VIX via yfinance → market-data.js + market.json
 ├── generate_export.py      ← builds daily JSON/CSV snapshot across all sectors
 ├── market-data.js          ← generated market data (SPY/QQQ/VIX, regime, timestamps)
-├── market.json             ← same data as JSON (consumed by generate_export.py macro block)
+├── market.json             ← same data as JSON; consumed by generate_export.py as the `macro` block
+│                               Fields: SPY/QQQ price + 1D/1W/1M/YTD/1Y changes; VIX level/1D/regime/signal
 ├── rss-data.js             ← generated RSS feed data
 ├── exports/                ← dated market snapshots (JSON + CSV); served via Pages
 ├── All/                    ← All Sectors suite (192 stocks; aggregates all 6 sectors)

@@ -101,6 +101,7 @@ Stocks/
 ├── shared.css          ← shared stylesheet loaded by all sector pages
 ├── shared.js           ← shared JS (toggleTheme, buildTape)
 ├── update_market.py    ← fetches SPY/QQQ/VIX via yfinance → market-data.js + market.json
+│                          SPY/QQQ: price, 1D/1W/1M/YTD/1Y changes; VIX: level, 1D, regime, signal (calm/normal/high_fear/extreme_fear)
 ├── market-data.js      ← generated: window.MARKET_DATA = {...}; (updated 3× daily)
 ├── AI\                 ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html      ← CANONICAL reference for typography/UI standards
