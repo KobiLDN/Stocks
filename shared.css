@@ -816,3 +816,9 @@ footer {
   letter-spacing: 0.3px;
 }
 .disclaimer span { color: var(--accent2); }
+
+/* ---- Mobile drawer: override the ≤600px hide rules inside an open drawer ---- */
+@media (max-width: 600px) {
+  .drawer-overlay.open .left-rail { display: flex !important; flex-direction: column; }
+  .drawer-overlay.open .nav-panel { display: flex !important; flex-direction: column; }
+}
