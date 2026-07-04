@@ -176,20 +176,14 @@
   .drawer-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4); }
   .drawer-overlay.open { display: block; }
   .drawer { position: fixed; top: 36px; left: 0; bottom: 56px; width: 92px; background: var(--bg); border-right: 1px solid var(--accent); overflow-y: auto; z-index: 301; padding: 8px 6px; display: flex; flex-direction: column; gap: 4px; }
-  .bottom-tabs { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250; background: var(--bg); border-top: 1px solid var(--accent); padding-bottom: env(safe-area-inset-bottom); }
-  .bottom-tabs-inner { display: flex; justify-content: space-around; align-items: stretch; }
-  .tab-btn { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px 6px; background: none; border: none; cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted); }
-  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
-  .tab-icon { font-size: 16px; line-height: 1; }
+
 
   body[data-layout="rail"] { flex-direction: row; }
   .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
 
   @media (max-width: 600px) {
-    body { padding-bottom: 56px; }
     body[data-layout="rail"] .left-rail { display: none; }
     .hamburger { display: flex; }
-    .bottom-tabs { display: block; }
   }
 </style>
 </head>
@@ -419,8 +413,6 @@
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
   <div class="drawer left-rail"></div>
 </div>
-<div class="bottom-tabs"><div class="bottom-tabs-inner"></div></div>
-
 <script>
 function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
 function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }

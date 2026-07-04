@@ -475,24 +475,6 @@
       flex-shrink: 0;
     }
 
-    .bottom-tabs {
-      display: none; position: fixed; bottom: 0; left: 0; right: 0;
-      z-index: 250; background: var(--bg); border-top: 1px solid var(--accent);
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-    .bottom-tabs-inner {
-      display: flex; justify-content: space-around; align-items: stretch;
-    }
-    .tab-btn {
-      flex: 1; display: flex; flex-direction: column; align-items: center;
-      gap: 2px; padding: 8px 4px 6px; background: none; border: none;
-      cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
-      font-family: 'IBM Plex Mono', monospace; font-size: 8px;
-      letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted);
-    }
-    .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
-    .tab-btn:hover { color: var(--accent); }
-    .tab-icon { font-size: 16px; line-height: 1; }
 
     /* ═══════════════════════════════════════════════════════════════
        Market section
@@ -621,10 +603,8 @@
       .header-sub { font-size: 9px; }
     }
     @media (max-width: 640px) {
-      body { padding-bottom: 56px; }
       .left-rail { display: none; }
       .hamburger { display: flex; }
-      .bottom-tabs { display: block; }
       .card-grid { grid-template-columns: 1fr; }
       .pt-name { display: none; }
       main { padding: 12px 14px; }
@@ -1094,18 +1074,6 @@
   </div>
 
   <!-- Bottom tab bar (mobile) -->
-  <div class="bottom-tabs">
-    <div class="bottom-tabs-inner">
-      <button class="tab-btn active" onclick="window.location='index.html'"><span class="tab-icon">⊞</span>Hub</button>
-      <button class="tab-btn" onclick="document.getElementById('market-section').scrollIntoView({behavior:'smooth'})"><span class="tab-icon">💹</span>Market</button>
-      <button class="tab-btn" onclick="window.location='All/index.html'"><span class="tab-icon">🌐</span>All</button>
-      <button class="tab-btn" onclick="window.location='AI/index.html'"><span class="tab-icon">🤖</span>AI</button>
-      <button class="tab-btn" onclick="window.location='Biotech/index.html'"><span class="tab-icon">🧬</span>Biotech</button>
-      <button class="tab-btn" onclick="window.location='Defence/index.html'"><span class="tab-icon">🛡️</span>Defence</button>
-      <button class="tab-btn" onclick="window.location='Tech/index.html'"><span class="tab-icon">💻</span>Tech</button>
-      <button class="tab-btn" onclick="window.location='Crypto/index.html'"><span class="tab-icon">₿</span>Crypto</button>
-    </div>
-  </div>
 
   <script>
     /* Mobile drawer */

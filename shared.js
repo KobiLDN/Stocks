@@ -156,54 +156,6 @@ function buildNav() {
     document.querySelectorAll('.nav-panel').forEach(el => { el.innerHTML = navPanelHTML; });
   }
 
-  let tabsHTML = '';
-  if (isHub) {
-    // Hub: 8 cross-sector tabs
-    const HUB_TABS = [
-      { label: 'Hub',     icon: '⊞', action: `window.location='index.html'`,                                               active: true },
-      { label: 'Market',  icon: '💹', action: `document.getElementById('market-section').scrollIntoView({behavior:'smooth'})` },
-      { label: 'All',     icon: '🌐', action: `window.location='All/index.html'` },
-      { label: 'AI',      icon: '🤖', action: `window.location='AI/index.html'` },
-      { label: 'Biotech', icon: '🧬', action: `window.location='Biotech/index.html'` },
-      { label: 'Defence', icon: '🛡️', action: `window.location='Defence/index.html'` },
-      { label: 'Tech',    icon: '💻', action: `window.location='Tech/index.html'` },
-      { label: 'Crypto',  icon: '₿',  action: `window.location='Crypto/index.html'` },
-    ];
-    tabsHTML = HUB_TABS.map(t =>
-      `<button class="tab-btn${t.active ? ' active' : ''}" onclick="${t.action}">` +
-      `<span class="tab-icon">${t.icon}</span>${t.label}</button>`
-    ).join('');
-  } else if (sector || inAll) {
-    // Sector / All Sectors: Hub + 7 within-sector page tabs
-    const hubBtn = `<button class="tab-btn" onclick="window.location='${root}index.html'">` +
-                   `<span class="tab-icon">⊞</span>Hub</button>`;
-    const pageBtns = _SECTOR_PAGES.map(p =>
-      `<button class="tab-btn${p.key === currentPage ? ' active' : ''}" onclick="window.location='${p.file}'">` +
-      `<span class="tab-icon">${p.icon}</span>${p.label}</button>`
-    ).join('');
-    tabsHTML = hubBtn + pageBtns;
-  }
-
-  if (isRSS) {
-    // RSS: same cross-sector tabs as Hub, RSS active
-    const RSS_TABS = [
-      { label: 'Hub',     icon: '⊞', action: `window.location='index.html'` },
-      { label: 'Market',  icon: '💹', action: `window.location='index.html#market-section'` },
-      { label: 'All',     icon: '🌐', action: `window.location='All/index.html'` },
-      { label: 'AI',      icon: '🤖', action: `window.location='AI/index.html'` },
-      { label: 'Biotech', icon: '🧬', action: `window.location='Biotech/index.html'` },
-      { label: 'Defence', icon: '🛡️', action: `window.location='Defence/index.html'` },
-      { label: 'Tech',    icon: '💻', action: `window.location='Tech/index.html'` },
-      { label: 'News',    icon: '📰', action: ``, active: true },
-    ];
-    tabsHTML = RSS_TABS.map(t =>
-      `<button class="tab-btn${t.active ? ' active' : ''}" ${t.action ? `onclick="${t.action}"` : 'disabled'}>` +
-      `<span class="tab-icon">${t.icon}</span>${t.label}</button>`
-    ).join('');
-  }
-
-  const tabsInner = document.querySelector('.bottom-tabs-inner');
-  if (tabsInner && tabsHTML) tabsInner.innerHTML = tabsHTML;
 }
 
 // ── Dashboard content header ──────────────────────────────────────────────
