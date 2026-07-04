@@ -110,7 +110,8 @@ Stocks/
 ├── Tech\               ← Technology sector (31 stocks, 6 categories)
 ├── Crypto\             ← Crypto sector (34 coins, 7 categories)
 ├── Energy\             ← Energy sector (20 stocks, 5 categories)
-└── All\                ← All Sectors combined suite (192 stocks across all 6 sectors)
+├── MegaCap\            ← Global Mega-Cap Leaders sector (50 stocks, 7 categories)
+└── All\                ← All Sectors combined suite (242 stocks across all 7 sectors)
 ```
 
 ## Leaf pages (Market + RSS)
@@ -176,7 +177,7 @@ When adding a new sector, complete every item in this checklist — in order:
 
 | File | Purpose |
 |---|---|
-| `generate_export.py` | Reads all 6 `prices-data.js` + `signals-local.json` files; writes dated snapshot + updates manifest; optionally merges T212 portfolio |
+| `generate_export.py` | Reads all 7 `prices-data.js` + `signals-local.json` files; writes dated snapshot + updates manifest; optionally merges T212 portfolio |
 | `exports/YYYY-MM-DD.json` | Daily market snapshot — `stocks[]` includes `change_1y` (1-year price change %); top-level `momentum_picks[]` lists cross-sector momentum screener picks |
 | `exports/YYYY-MM-DD.csv` | Same data in CSV format |
 | `exports/manifest.json` | List of all available snapshots (newest first); loaded by the export page to build the date dropdown |
@@ -186,7 +187,7 @@ When adding a new sector, complete every item in this checklist — in order:
 
 **Adding new fields to the export:** edit the `PRICE_FIELDS` list and/or `csv_fields` list in `generate_export.py`. The manifest entry only needs `date`, `generated`, `total`, `json`, `csv`.
 
-**Top-level export keys:** in addition to `stocks[]`, the export JSON has a `momentum_picks[]` array built by `compute_export_momentum()` in `generate_export.py`. This mirrors the per-sector `momentum_screener.py` logic but runs cross-sector over all 6 sectors at export time.
+**Top-level export keys:** in addition to `stocks[]`, the export JSON has a `momentum_picks[]` array built by `compute_export_momentum()` in `generate_export.py`. This mirrors the per-sector `momentum_screener.py` logic but runs cross-sector over all 7 sectors at export time.
 
 ## Momentum screener
 

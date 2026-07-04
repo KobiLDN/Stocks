@@ -249,7 +249,7 @@ Sector-colour active states (in each page's inline `<style>`):
 }
 ```
 
-Always **9 pills** in order: Stock Hub · News Feed · All Sectors · AI Infra · Biotech · Crypto · Defence · Energy · Technology
+Always **10 pills** in order: Stock Hub · News Feed · All Sectors · AI Infra · Biotech · Crypto · Defence · Energy · Mega-Cap · Technology
 
 Active pill: `border-color: var(--accent); color: var(--accent); background: var(--surface2)`
 
@@ -274,6 +274,7 @@ Each pill links to the **same page type** across sectors (e.g. on metrics → ea
 | Technology | 💻 | `/Tech/index.html` | Live |
 | Crypto | ₿ | `/Crypto/index.html` | Live |
 | Energy | ⚡ | `/Energy/index.html` | Live |
+| Mega-Cap | 🌍 | `/MegaCap/index.html` | Dev |
 | News Feed | 📰 | `/news.html` | — |
 
 ---
@@ -388,6 +389,7 @@ Each sector has a canonical CSS variable used consistently for badges, filter-bt
 | Technology | `var(--indigo)` | filter-btn active, sector badge (text `#fff`) |
 | Crypto | `var(--gold)` | filter-btn active, sector badge |
 | Energy | `var(--amber)` | filter-btn active, sector badge |
+| Mega-Cap | `#f472b6` | filter-btn active, sector badge (hardcoded — no CSS var) |
 
 **Filter-btn active states** (inline `<style>` per page — sector-specific colours not in shared.css):
 ```css
@@ -397,6 +399,7 @@ Each sector has a canonical CSS variable used consistently for badges, filter-bt
 .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
 .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
 .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+.filter-btn[data-filter="megacap"].active { background: #f472b6;        border-color: #f472b6;       color: var(--bg); }
 ```
 
 **Sector badge classes** (inline `<style>` per page):
@@ -408,6 +411,7 @@ Each sector has a canonical CSS variable used consistently for badges, filter-bt
 .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
 .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
 .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+.sector-megacap { background: rgba(244,114,182,0.1); color: #f472b6;       border: 1px solid rgba(244,114,182,0.25); }
 ```
 
 ---
@@ -566,7 +570,7 @@ Charts pages include `<span id="data-bar-ts">—</span>` in `.header-sub` — fi
 </div>
 ```
 
-**"All" mode** renders a `display:grid; grid-template-columns: repeat(6,1fr)` with a header row of sector labels followed by 3 stock rows (top 3 per sector by `market_cap_usd_b`). Chart height 200px.
+**"All" mode** renders a `display:grid; grid-template-columns: repeat(7,1fr)` with a header row of sector labels followed by 3 stock rows (top 3 per sector by `market_cap_usd_b`). Chart height 200px.
 
 **Single-sector mode** renders a `chart-grid` with `repeat(auto-fill, minmax(320px, 1fr))`. Chart height 220px.
 

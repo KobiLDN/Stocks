@@ -14,7 +14,8 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 | Technology | 31 (6 categories) | Live | [stocks-4qw.pages.dev/Tech/](https://stocks-4qw.pages.dev/Tech/) |
 | Crypto | 33 (7 categories) | Live | [stocks-4qw.pages.dev/Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
 | Energy | 20 (5 categories) | Live | [stocks-4qw.pages.dev/Energy/](https://stocks-4qw.pages.dev/Energy/) |
-| All Sectors | 192 stocks combined | Live | [stocks-4qw.pages.dev/All/](https://stocks-4qw.pages.dev/All/) |
+| Global Mega-Cap Leaders | 50 (7 categories) | Dev | [stocks-4qw.pages.dev/MegaCap/](https://stocks-4qw.pages.dev/MegaCap/) |
+| All Sectors | 242 stocks combined | Live | [stocks-4qw.pages.dev/All/](https://stocks-4qw.pages.dev/All/) |
 
 ## Top-level pages
 
@@ -47,7 +48,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 │   ├── signals.html        ← cross-sector AI signals + combined momentum screener
 │   ├── heatmap.html        ← combined heatmap (drawSplit gainers/losers)
 │   ├── charts.html         ← 6×3 sector grid (top 3 by market cap, 1W/1Y/5Y)
-│   └── calculator.html     ← combined What-If calculator
+│   └── calculator.html     ← combined What-If calculator (7 sectors)
 ├── AI/                     ← AI Infrastructure sector (48 stocks, 12 categories)
 │   ├── index.html          ← CANONICAL reference for typography/UI standards
 │   ├── AI_update_prices.py
@@ -58,6 +59,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 ├── Tech/                   ← Technology sector (31 stocks, 6 categories)
 ├── Crypto/                 ← Crypto sector (34 coins, 7 categories)
 ├── Energy/                 ← Energy sector (20 stocks, 5 categories)
+├── MegaCap/                ← Global Mega-Cap Leaders sector (50 stocks, 7 categories)
 ├── .github/workflows/
 │   ├── update-prices.yml      ← prices: 3× daily weekdays (08:00/14:30/20:30 UTC)
 │   ├── generate-signals.yml   ← signals: Mon/Wed/Fri 07:00 UTC via OpenRouter
