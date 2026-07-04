@@ -817,8 +817,31 @@ footer {
 }
 .disclaimer span { color: var(--accent2); }
 
-/* ---- Mobile drawer: override the ≤600px hide rules inside an open drawer ---- */
+/* ---- Mobile drawer: override the ≤600px hide rules + compact nav-panel ---- */
 @media (max-width: 600px) {
   .drawer-overlay.open .left-rail { display: flex !important; flex-direction: column; }
   .drawer-overlay.open .nav-panel { display: flex !important; flex-direction: column; }
 }
+
+/* Drawer nav-panel: compact icon+label column, same style as old bottom tabs */
+.drawer .nav-panel {
+  width: 72px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+}
+.drawer .nav-panel .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 4px;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+}
+.drawer .nav-panel .nav-icon  { font-size: 16px; }
+.drawer .nav-panel .nav-label { display: block !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 64px; }
