@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-03 11:02",
+  "updated": "2026-07-04 10:24",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Valero shows +63.74% YTD and +2.41% 1-month momentum, with strong refining margins (crack spreads ~$25/bbl per [investing.com](https://investing.com)) and potential 34% undervaluation per [simplywall.st](https://simplywall.st). P/E 19.57, analyst buy.",
+      "drivers": [
+        "+63.74% YTD",
+        "+2.41% 1M momentum",
+        "crack spread tailwind",
+        "34% undervalued"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Marathon Petroleum has +62.71% YTD and +5.04% 1-week gain, benefiting from robust refining margins and diesel crack spreads ~$45/bbl ([investing.com](https://investing.com)). P/E 17.55, analyst buy.",
+      "drivers": [
+        "+62.71% YTD",
+        "+5.04% 1W gain",
+        "diesel crack spread tailwind",
+        "P/E 17.55"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "EOG Resources offers +24.03% YTD with a low P/E of 12.86 and positive news sentiment of 0.289. Analyst consensus is buy, supported by strong operational performance.",
+      "drivers": [
+        "+24.03% YTD",
+        "P/E 12.86",
+        "news sentiment 0.289",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XOM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ExxonMobil has +13.28% YTD and is expected to report Q2 profits triple Q1 levels ([reuters.com](https://reuters.com)), with Motley Fool predicting it will beat the S&P 500 in H2 2026 ([fool.com](https://fool.com)). P/E 23.08, div yield 3.01%, analyst buy.",
+      "drivers": [
+        "+13.28% YTD",
+        "Q2 profit triple",
+        "P/E 23.08",
+        "dividend 3.01%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Chevron has +10.60% YTD and was upgraded by Wolfe Research as 22% undervalued ([simplywall.st](https://simplywall.st)), with expected Q2 earnings of $9.9B ([investing.com](https://investing.com)). P/E 29.48, div yield 4.21%, analyst score 1.71.",
+      "drivers": [
+        "+10.60% YTD",
+        "Wolfe upgrade",
+        "22% undervalued",
+        "div yield 4.21%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "NextEra Energy has +10.71% YTD and +5.21% 1-month momentum, with strong news sentiment of 0.309. P/E 22.42, analyst buy, benefiting from utility stability and clean energy growth.",
+      "drivers": [
+        "+5.21% 1M momentum",
+        "news sentiment 0.309",
+        "P/E 22.42",
+        "utility stability"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SSE has +12.37% YTD and +7.32% 1-month gain, with positive news sentiment 0.149. P/E 23.88, analyst buy, as a UK utility with strong momentum.",
+      "drivers": [
+        "+7.32% 1M gain",
+        "YTD +12.37%",
+        "news sentiment 0.149",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Shell has a low P/E of 12.15 and dividend yield of 4.01%, with +5.33% YTD. Analyst consensus is buy, and the stock offers value in the oil major space.",
+      "drivers": [
+        "P/E 12.15",
+        "div yield 4.01%",
+        "analyst buy",
+        "value play"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "TotalEnergies has +16.55% YTD, low P/E of 11.38, and high dividend yield of 5.50%. Analyst buy, with strong YTD performance despite recent pullback.",
+      "drivers": [
+        "+16.55% YTD",
+        "P/E 11.38",
+        "div yield 5.50%",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ConocoPhillips has +9.96% YTD, P/E 17.75, and analyst score 1.73 (buy). Decent fundamentals and positive news sentiment 0.084.",
+      "drivers": [
+        "+9.96% YTD",
+        "P/E 17.75",
+        "analyst score 1.73",
+        "news sentiment 0.084"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "P/E 14.50",
         "dividend yield 4.74%",
         "$1B rig contract secured"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Valero leads the universe with +59.26% YTD and +93% 1-year return, 1W momentum of +6.88%, P/E 19.01, and a 1.84% dividend yield, with strong refining margins driving outperformance.",
-      "drivers": [
-        "+59% YTD return",
-        "+6.88% 1W momentum",
-        "P/E 19.01",
-        "Strong refining margins"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Marathon Petroleum shows +56.19% YTD and +53% 1-year return, 1W momentum of +2.88%, P/E 16.83, and positive news sentiment of 0.452, supported by robust refining spreads.",
-      "drivers": [
-        "+56% YTD return",
-        "+2.88% 1W momentum",
-        "P/E 16.83",
-        "Positive news sentiment 0.452"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "NextEra Energy has +5.68% 1M momentum, P/E 22.28, a 2.84% dividend yield, near-zero short interest of 0.01%, and a 'buy' analyst consensus, benefiting from stable power demand and regulatory support.",
-      "drivers": [
-        "+5.68% 1M momentum",
-        "P/E 22.28",
-        "Dividend yield 2.84%",
-        "Near-zero short interest"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "SSE shows +4.19% 1W and +5.55% 1M momentum, P/E 23.2, 2.82% dividend yield, with a 'buy' rating, gaining from UK grid investments and renewables expansion.",
-      "drivers": [
-        "+4.19% 1W momentum",
-        "+5.55% 1M momentum",
-        "P/E 23.2",
-        "Dividend yield 2.82%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "EOG Resources delivers +23.04% YTD, P/E 12.76, 3.14% dividend yield, and a positive news sentiment of 0.344, though short interest at 3.87% and 1W decline of -3.83% temper the outlook.",
-      "drivers": [
-        "+23% YTD return",
-        "P/E 12.76",
-        "Dividend yield 3.14%",
-        "Positive news sentiment 0.344"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Shell trades at a low P/E of 12.08 with a 4.03% dividend yield, positive news sentiment of 0.251, and acts on asset sales ($1.7B Gulf stakes, $1B SA stations) while maintaining 'buy' consensus despite -9.21% 1M slide.",
-      "drivers": [
-        "P/E 12.08",
-        "Dividend yield 4.03%",
-        "Asset sales catalysts",
-        "Positive news sentiment 0.251"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ExxonMobil has +12.98% YTD, low beta of 0.149, P/E 23.06, and a 3.01% dividend yield, but faces headwinds from -8.48% 1M return and falling oil prices due to Iran deal, per [aol.com](https://www.aol.com/finance/exxon-chevron-investors-cautious-oil-113700509.html).",
-      "drivers": [
-        "+12.98% YTD return",
-        "Low beta 0.149",
-        "Dividend yield 3.01%",
-        "Oil price headwinds"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.58,
-      "rationale": "ConocoPhillips shows +9.15% YTD, P/E 17.62, 3.23% dividend yield, and the best analyst score of 1.73 among peers with news sentiment of 0.287, offset by -5.47% 1W decline and weak oil outlook.",
-      "drivers": [
-        "Analyst score 1.73 (buy)",
-        "Dividend yield 3.23%",
-        "P/E 17.62",
-        "News sentiment 0.287"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Chevron offers a 4.30% dividend yield with a 39-year growth streak, 'buy' consensus at 1.79 analyst score, but -10.80% 1M and -5.81% 1W drops reflect oil price collapse; Morgan Stanley lowered target to $210 per [insidermonkey.com](https://www.insidermonkey.com/blog/chevron-cvx-price-target-lowered-at-morgan-stanley-here-is-why-1793059/).",
-      "drivers": [
-        "Dividend yield 4.30%",
-        "Dividend aristocrat 39 years",
-        "Analyst score 1.79",
-        "Oil price pressure"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BEPC",
-      "signal": "strong_buy",
-      "confidence": 0.52,
-      "rationale": "Brookfield Renewable has a 4.22% dividend yield and the highest news sentiment of 0.561, with a 'none' analyst rating but favorable renewable tailwinds, despite -5.18% YTD and P/E missing.",
-      "drivers": [
-        "Dividend yield 4.22%",
-        "News sentiment 0.561",
-        "Renewable tailwinds",
-        "No short interest data"
       ]
     }
   ]

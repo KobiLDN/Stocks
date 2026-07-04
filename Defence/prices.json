@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03 22:40",
+  "updated": "2026-07-04 10:10",
   "fx_gbp_usd": 1.335,
   "stocks": [
     {
@@ -12,7 +12,7 @@
       "change_1d": "+4.68%",
       "change_1w": "+8.10%",
       "change_1m": "+6.62%",
-      "change_ytd": "+11.13%",
+      "change_ytd": "+10.40%",
       "return_1yr": "+16%",
       "low_gbp": "307",
       "low_usd": 410.11,
@@ -27,11 +27,25 @@
       "div_yield_pct": 253.0,
       "short_pct": 1.68,
       "analyst": "hold",
-      "analyst_score": 2.62,
+      "analyst_score": 2.52,
       "vol_1d": 1397900,
       "vol_1w": 8502700,
       "vol_1m": 28876000,
       "news": [
+        {
+          "title": "Lockheed Martin (LMT) Eyes $3.5 Billion Ultra Maritime Deal In Undersea Defense",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-eyes-3-080858805.html",
+          "published": 1783152538,
+          "sentiment": 0.128
+        },
+        {
+          "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-marks-fourth-july-mount-063221288.html",
+          "published": 1783146741,
+          "sentiment": 0.0
+        },
         {
           "title": "Lockheed Closes In on $3.5 Billion Ultra Maritime Deal",
           "publisher": "GuruFocus.com",
@@ -52,23 +66,9 @@
           "url": "https://www.barchart.com/story/news/3115438/what-to-expect-from-lockheed-martins-next-quarterly-earnings-report",
           "published": 1783080876,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why Lockheed Martin (LMT) Stock Is Trading Up Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-lockheed-martin-lmt-stock-010024790.html",
-          "published": 1783040424,
-          "sentiment": 0.0
-        },
-        {
-          "title": "LMT Stock Gains Nearly 5% \u2014 Lockheed Martin Emerges As Frontrunner For Ultra Maritime In Potential $3.5B Deal",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/lmt-stock-gains-lockheed-martin-leads-race-for-ultra-maritime-3-5b-deal/cZm973IR7j9",
-          "published": 1783038010,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.068
+      "news_sentiment": 0.026
     },
     {
       "ticker": "RTX",
@@ -101,6 +101,13 @@
       "vol_1m": 113855700,
       "news": [
         {
+          "title": "Is RTX Corporation (RTX) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-corporation-rtx-good-stock-233446315.html",
+          "published": 1783121686,
+          "sentiment": 0.44
+        },
+        {
           "title": "RTX (RTX): Buy, Sell, or Hold Post Q1 Earnings?",
           "publisher": "StockStory",
           "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-buy-sell-hold-174606242.html",
@@ -127,16 +134,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-buy-wall-street-133003631.html",
           "published": 1783085403,
           "sentiment": 0.318
-        },
-        {
-          "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605683/aerovironments-big-bet-gets-a-pentagon-payday/2026-07-03",
-          "published": 1783080894,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.118
+      "news_sentiment": 0.206
     },
     {
       "ticker": "NOC",
@@ -148,7 +148,7 @@
       "change_1d": "+5.17%",
       "change_1w": "+9.95%",
       "change_1m": "+4.36%",
-      "change_ytd": "-5.54%",
+      "change_ytd": "-5.96%",
       "return_1yr": "+8%",
       "low_gbp": "370",
       "low_usd": 493.84,
@@ -169,6 +169,20 @@
       "vol_1m": 23263800,
       "news": [
         {
+          "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-marks-fourth-july-mount-063221288.html",
+          "published": 1783146741,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Russian forces claim capture of Kostiantynivka in eastern Ukraine",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/world/articles/russian-forces-claim-capture-kostiantynivka-233312740.html",
+          "published": 1783121592,
+          "sentiment": 0.0
+        },
+        {
           "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
           "publisher": "Trefis",
           "url": "https://www.trefis.com/articles/605683/aerovironments-big-bet-gets-a-pentagon-payday/2026-07-03",
@@ -187,20 +201,6 @@
           "publisher": "Trefis",
           "url": "https://www.trefis.com/articles/605516/get-paid-8-1-a-year-to-hold-rtx-stock-you-already-own/2026-07-02",
           "published": 1783025548,
-          "sentiment": 0.0
-        },
-        {
-          "title": "AEVEX Lands A New Deal, And A New Narrative",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605373/aevex-lands-a-new-deal-and-a-new-narrative/2026-07-02",
-          "published": 1783024916,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Did a US$312 Million Navy EW Deal Just Shift Northrop Grumman's (NOC) Investment Narrative?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/did-us-312-million-navy-181512109.html",
-          "published": 1783016112,
           "sentiment": 0.0
         }
       ],
@@ -441,6 +441,13 @@
       "vol_1m": 129104000,
       "news": [
         {
+          "title": "Is The Boeing Company (BA) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/boeing-company-ba-good-stock-233211886.html",
+          "published": 1783121531,
+          "sentiment": 0.44
+        },
+        {
           "title": "Boeing Says \u2018Unplanned IT Outage\u2019 Hit Computer Systems as Factory Work From Washington to Florida was Disrupted",
           "publisher": "Benzinga",
           "url": "https://finance.yahoo.com/technology/articles/boeing-says-unplanned-outage-hit-150058744.html",
@@ -467,16 +474,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-boeing-ba-stock-trading-220424637.html",
           "published": 1783029864,
           "sentiment": 0.0
-        },
-        {
-          "title": "Get Paid 8.1% A Year To Hold RTX Stock You Already Own",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605516/get-paid-8-1-a-year-to-hold-rtx-stock-you-already-own/2026-07-02",
-          "published": 1783025548,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.04
+      "news_sentiment": 0.128
     },
     {
       "ticker": "BA.L",
@@ -504,9 +504,9 @@
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.17,
-      "vol_1d": 3204355,
-      "vol_1w": 28900834,
-      "vol_1m": 164524271,
+      "vol_1d": 3206450,
+      "vol_1w": 28902929,
+      "vol_1m": 164526366,
       "news": [
         {
           "title": "U.K., Italian, Japanese Fighter Jet Venture Wins $6.14 Billion Contract",
@@ -558,8 +558,8 @@
       "change_1m": "+19.55%",
       "change_ytd": "+25.67%",
       "return_1yr": "+53%",
-      "low_gbp": "9.51",
-      "low_usd": 12.7,
+      "low_gbp": "9.59",
+      "low_usd": 12.81,
       "high_gbp": "15",
       "high_usd": 20.46,
       "bar_pct": 95,
@@ -568,13 +568,13 @@
       "beta": 1.203,
       "pe_ratio": 21.8,
       "avg_volume_m": 33.76,
-      "div_yield_pct": 64.0,
+      "div_yield_pct": 63.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 10992534,
-      "vol_1w": 101949371,
-      "vol_1m": 645735188,
+      "vol_1d": 10723720,
+      "vol_1w": 101680557,
+      "vol_1m": 645466374,
       "news": [
         {
           "title": "Rolls-Royce (LSE:RR.) Adds New Directors And Teams Up With Bombardier On Engine Monitoring",
@@ -636,13 +636,13 @@
       "beta": 0.325,
       "pe_ratio": 23.97,
       "avg_volume_m": 2.26,
-      "div_yield_pct": 230.0,
+      "div_yield_pct": 229.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.82,
-      "vol_1d": 1790112,
-      "vol_1w": 15549763,
-      "vol_1m": 52570648,
+      "vol_1d": 1790138,
+      "vol_1w": 15549789,
+      "vol_1m": 52570674,
       "news": [
         {
           "title": "3 UK Penny Stocks With Market Caps Over \u00a3300M To Consider",
@@ -713,13 +713,6 @@
       "vol_1m": 912926400,
       "news": [
         {
-          "title": "Palantir stock jumps on analyst upgrade 'as profits have soared'",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/palantir-stock-jumps-on-analyst-upgrade-as-profits-have-soared-141251986.html",
-          "published": 1783001571,
-          "sentiment": 0.44
-        },
-        {
           "title": "Meet the Major Artificial Intelligence (AI) CPU Player That Just Joined Nvidia, Tesla, and Palantir as One of the Most Popular Stocks on Robinhood",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/03/major-artificial-intelligence-ai-cpu-play-amd/",
@@ -746,9 +739,16 @@
           "url": "https://www.fool.com/investing/2026/07/03/palantirs-business-is-booming-so-why-has-the-stock/",
           "published": 1783078200,
           "sentiment": 0.0
+        },
+        {
+          "title": "Palantir CEO gets painfully honest about AI\u2019s biggest problem",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/palantir-ceo-honest-about-ai-trust-problem",
+          "published": 1783040580,
+          "sentiment": -0.421
         }
       ],
-      "news_sentiment": 0.239
+      "news_sentiment": 0.067
     },
     {
       "ticker": "LDOS",
@@ -1182,8 +1182,8 @@
       "avg_volume_m": 13.62,
       "div_yield_pct": null,
       "short_pct": 21.08,
-      "analyst": "none",
-      "analyst_score": null,
+      "analyst": "strong_buy",
+      "analyst_score": 1.17,
       "vol_1d": 13990400,
       "vol_1w": 70317500,
       "vol_1m": 276418500,
@@ -1315,11 +1315,11 @@
       "market_cap_usd_b": 2134.218,
       "beta": null,
       "pe_ratio": null,
-      "avg_volume_m": 169.2,
+      "avg_volume_m": 169.22,
       "div_yield_pct": null,
       "short_pct": 0.38,
       "analyst": "buy",
-      "analyst_score": 2.0,
+      "analyst_score": 2.08,
       "vol_1d": 61257100,
       "vol_1w": 460998200,
       "vol_1m": 2369053300,
@@ -1332,35 +1332,35 @@
           "sentiment": 0.0
         },
         {
-          "title": "Dow Jones Futures: Techs' Rise Signal AI Trend Isn't Over; Apple, Robinhood Flash Buy Signals",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
-          "published": 1783112035,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Elon Musk's X Money \u2014 New Details On Bank Killer Super App",
-          "publisher": "Benzinga",
-          "url": "https://finance.yahoo.com/markets/currencies/articles/elon-musks-x-money-details-193121263.html",
-          "published": 1783107081,
-          "sentiment": -0.103
-        },
-        {
-          "title": "Down 30% From Its High, Is SpaceX Stock a Buy Now?",
+          "title": "Rocket Lab Announces a Massive $8 Billion Satellite Acquisition. Now What?",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/down-30-from-its-high-is-spacex-stock-a-buy-now/",
-          "published": 1783104300,
+          "url": "https://www.fool.com/investing/2026/07/04/rocket-lab-billion-satellite-acquisition-irdm/",
+          "published": 1783154400,
           "sentiment": 0.0
         },
         {
-          "title": "Jim Cramer on Tesla: \u201cI Think It\u2019ll Be Bought By SpaceX Sooner Rather Than Later\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-tesla-think-ll-081553609.html",
-          "published": 1783101953,
+          "title": "President Donald Trump and Fed Chair Kevin Warsh Are on a Collision Course Over Interest Rates, and Things May Get Ugly for Wall Street",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/trump-kevin-warsh-collision-course-interest-rates/",
+          "published": 1783153560,
+          "sentiment": -0.421
+        },
+        {
+          "title": "SpaceX Stock Rebounds Above $170. Here Is How Much Upside Analysts See Left.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/prediction-where-spacex-stock-will-trade-heading-i/",
+          "published": 1783149900,
+          "sentiment": 0.0
+        },
+        {
+          "title": "SpaceX Is Finally Public. Here's How Much a $1,000 Investment Would Get You.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/spacex-is-finally-public-heres-how-much-a-1000-inv/",
+          "published": 1783133160,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.021
+      "news_sentiment": -0.084
     },
     {
       "ticker": "RKLB",
@@ -1387,11 +1387,18 @@
       "div_yield_pct": null,
       "short_pct": 5.94,
       "analyst": "buy",
-      "analyst_score": 1.61,
+      "analyst_score": 1.53,
       "vol_1d": 22233600,
       "vol_1w": 154007700,
       "vol_1m": 620787200,
       "news": [
+        {
+          "title": "Rocket Lab Announces a Massive $8 Billion Satellite Acquisition. Now What?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/rocket-lab-billion-satellite-acquisition-irdm/",
+          "published": 1783154400,
+          "sentiment": 0.0
+        },
         {
           "title": "Is Rocket Lab (RKLB) The Best Space Stock to Buy Now?",
           "publisher": "Insider Monkey",
@@ -1418,13 +1425,6 @@
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/spacex-stock-nasdaq-100-17eaccd9?siteid=yhoof2&yptr=yahoo",
           "published": 1783071840,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Should You Buy Rocket Lab Stock Right Now?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/should-you-buy-rocket-lab-stock-right-now/",
-          "published": 1783070520,
           "sentiment": 0.0
         }
       ],
@@ -1733,6 +1733,13 @@
       "vol_1m": 25073900,
       "news": [
         {
+          "title": "How AppLovin Corporation\u2019s (APP) E-Commerce Ad Push Could Broaden Its Growth Beyond Mobile Apps",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/applovin-corporation-app-e-commerce-213313251.html",
+          "published": 1783114393,
+          "sentiment": 0.382
+        },
+        {
           "title": "Hillary Clinton Escalates Trump Criticism, Cites Reports Linking Stock Purchases to Federal ICE Contract Decisions: 'Unprecedented Corruption'",
           "publisher": "Benzinga",
           "url": "https://www.yahoo.com/news/politics/articles/hillary-clinton-escalates-trump-criticism-120050133.html",
@@ -1759,16 +1766,9 @@
           "url": "https://finance.yahoo.com/markets/article/ceo-of-taser-maker-axon-drones-that-stun-perpetrators-are-in-our-future-132334656.html",
           "published": 1782998614,
           "sentiment": -0.25
-        },
-        {
-          "title": "How Axon is replacing guns with tech",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/axon-replacing-guns-tech-100000686.html",
-          "published": 1782986400,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.062
+      "news_sentiment": 0.015
     },
     {
       "ticker": "OLN",

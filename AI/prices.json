@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03 22:39",
+  "updated": "2026-07-04 10:10",
   "fx_gbp_usd": 1.335,
   "stocks": [
     {
@@ -36,7 +36,14 @@
           "title": "Dow Jones Futures: Techs' Rise Signal AI Trend Isn't Over; Apple, Robinhood Flash Buy Signals",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-ai-tumbles-apple-robinhood-buy-signals-tesla-sandisk-dive/?src=A00220&yptr=yahoo",
-          "published": 1783112035,
+          "published": 1783129636,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Weekly Wrap: Crypto Recovers To Start Third Quarter",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/weekly-wrap-crypto-recovers-to-start-third-quarter-6067",
+          "published": 1783119960,
           "sentiment": 0.0
         },
         {
@@ -58,13 +65,6 @@
           "publisher": "Trefis",
           "url": "https://www.trefis.com/articles/605699/what-actually-drove-iwd-over-the-past-year/2026-07-03",
           "published": 1783083334,
-          "sentiment": 0.0
-        },
-        {
-          "title": "SpaceX Stock Is Joining the Nasdaq 100 Soon. What History Says Happens Next.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/spacex-stock-nasdaq-100-17eaccd9?siteid=yhoof2&yptr=yahoo",
-          "published": 1783071840,
           "sentiment": 0.0
         }
       ],
@@ -101,6 +101,13 @@
       "vol_1m": 221700300,
       "news": [
         {
+          "title": "Western Digital (WDC) Stock Falls As Apple CXMT Talk Adds Memory Pressure",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-wdc-stock-falls-230956533.html",
+          "published": 1783120196,
+          "sentiment": -0.296
+        },
+        {
           "title": "Sandisk Stock Is Up More Than 6,000% Since Spinning Off From Western Digital. Is a Stock Split on the Horizon?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/03/sandisk-stock-is-up-more-than-6000-since-spinning/",
@@ -127,16 +134,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-macom-lattice-semiconductor-022824236.html",
           "published": 1783045704,
           "sentiment": 0.153
-        },
-        {
-          "title": "Western Digital (WDC) Stock Moves -9.92%: What You Should Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/western-digital-wdc-stock-moves-215005096.html",
-          "published": 1783029005,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.015
+      "news_sentiment": -0.044
     },
     {
       "ticker": "285A",
@@ -149,7 +149,7 @@
       "change_1w": "-9.63%",
       "change_1m": "+6.69%",
       "change_ytd": "+633.92%",
-      "return_1yr": "+3104%",
+      "return_1yr": "+3400%",
       "low_gbp": "11",
       "low_usd": 14.07,
       "high_gbp": "523",
@@ -158,8 +158,8 @@
       "market_cap_gbp_b": 211.586,
       "market_cap_usd_b": 282.465,
       "beta": null,
-      "pe_ratio": 82.75,
-      "avg_volume_m": 36.3,
+      "pe_ratio": 82.64,
+      "avg_volume_m": 36.64,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "buy",
@@ -227,52 +227,52 @@
       "market_cap_usd_b": 1101.79,
       "beta": 2.142,
       "pe_ratio": 22.08,
-      "avg_volume_m": 51.3,
+      "avg_volume_m": 51.31,
       "div_yield_pct": 5.0,
       "short_pct": 3.69,
       "analyst": "strong_buy",
-      "analyst_score": 1.44,
+      "analyst_score": 1.42,
       "vol_1d": 61844400,
       "vol_1w": 302424500,
       "vol_1m": 1224129300,
       "news": [
         {
-          "title": "Can Micron Stock Really Hit $2,000?",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-stock-really-hit-2-212120295.html",
-          "published": 1783113680,
+          "title": "Micron Earned $24.67 Per Share Last Quarter. Its Dividend Is Still 15 Cents. Something Has to Give.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/micron-earned-2467-per-share-last-quarter-its-divi/",
+          "published": 1783137120,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Jim Cramer gets Micron CEO to reveal what's next for AI chips",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/mu-micron-ceo-sanjay-mehrotra-tells-jim-cramer-memory-chip-shortage-will-persist-beyond-2027",
+          "published": 1783127820,
           "sentiment": 0.0
         },
         {
-          "title": "Micron & 2 Profitable Stocks to Buy in July for Explosive Upside",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-2-profitable-stocks-buy-190000663.html",
-          "published": 1783105200,
+          "title": "Small Stocks Are Having Their Biggest Run in Decades",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/finance/stocks/russell-2000-small-stocks-gains-83fade43?siteid=yhoof2&yptr=yahoo",
+          "published": 1783126800,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Micron vs. Intel: Which AI Stock Is the Better Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/micron-vs-intel-which-ai-stock-is-the-better-buy/",
+          "published": 1783126200,
           "sentiment": 0.44
         },
         {
-          "title": "Better Artificial Intelligence (AI) Stock: Alphabet vs. Micron Technology (the Winner May Surprise You)",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/better-artificial-intelligence-ai-stock-alphabet-v/",
-          "published": 1783104660,
-          "sentiment": 0.898
-        },
-        {
-          "title": "Top Invesco Analyst: The AI Trade That \u201cLifted All Boats\u201d Is Over. Now Profitability Decides Winners As \u201cCapacity Will Catch Up\u201d",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/top-invesco-analyst-the-ai-trade-that-lifted-all-boats-is-over-now-profitability-decides-winners-as-capacity-will-catch-up/",
-          "published": 1783104431,
-          "sentiment": 0.718
-        },
-        {
-          "title": "Jim Cramer Mentions Sandisk (SNDK) As He Discusses Biggest Gainers of Q2",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-mentions-sandisk-sndk-081611369.html",
-          "published": 1783101791,
+          "title": "Weekly Wrap: Crypto Recovers To Start Third Quarter",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/weekly-wrap-crypto-recovers-to-start-third-quarter-6067",
+          "published": 1783119960,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.411
+      "news_sentiment": 0.147
     },
     {
       "ticker": "STX",
@@ -490,8 +490,8 @@
       "change_1m": "+19.55%",
       "change_ytd": "+25.67%",
       "return_1yr": "+53%",
-      "low_gbp": "9.51",
-      "low_usd": 12.7,
+      "low_gbp": "9.59",
+      "low_usd": 12.81,
       "high_gbp": "15",
       "high_usd": 20.46,
       "bar_pct": 95,
@@ -500,13 +500,13 @@
       "beta": 1.203,
       "pe_ratio": 21.8,
       "avg_volume_m": 33.76,
-      "div_yield_pct": 64.0,
+      "div_yield_pct": 63.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 10992534,
-      "vol_1w": 101949371,
-      "vol_1m": 645735188,
+      "vol_1d": 10723720,
+      "vol_1w": 101680557,
+      "vol_1m": 645466374,
       "news": [
         {
           "title": "Rolls-Royce (LSE:RR.) Adds New Directors And Teams Up With Bombardier On Engine Monitoring",
@@ -1257,6 +1257,13 @@
       "vol_1m": 70720700,
       "news": [
         {
+          "title": "Cameco (TSX:CCO) Pauses Cigar Lake Output While Lifting Joint Venture Stake",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cameco-tsx-cco-pauses-cigar-050732769.html",
+          "published": 1783141652,
+          "sentiment": 0.0
+        },
+        {
           "title": "Cameco temporarily suspends Cigar Lake mine operations",
           "publisher": "Mining Technology",
           "url": "https://www.mining-technology.com/news/cameco-temporarily-suspends-cigar-lake-operations/",
@@ -1283,16 +1290,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/timessquare-mid-cap-growth-strategy-131548570.html",
           "published": 1782911748,
           "sentiment": 0.382
-        },
-        {
-          "title": "Can BWX Technologies Benefit From the Commercial Nuclear Revival?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/bwx-technologies-benefit-commercial-nuclear-121100700.html",
-          "published": 1782907860,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.277
+      "news_sentiment": 0.186
     },
     {
       "ticker": "UEC",
@@ -1665,6 +1665,13 @@
       "vol_1m": 14455500,
       "news": [
         {
+          "title": "Stifel Backs Equinix (EQIX) as AI Infrastructure Demand Drives Data Center Growth",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/stifel-backs-equinix-eqix-ai-023350592.html",
+          "published": 1783132430,
+          "sentiment": 0.226
+        },
+        {
           "title": "Equinix (EQIX) Could Be a Great Choice",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/equinix-eqix-could-great-choice-154502929.html",
@@ -1691,16 +1698,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/equinix-eqix-stock-dips-while-221502505.html",
           "published": 1782857702,
           "sentiment": 0.34
-        },
-        {
-          "title": "Cisco (CSCO) Expands AI And Quantum Networking Ties With Equinix Rafay And Rotterdam",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/cisco-csco-expands-ai-quantum-170623615.html",
-          "published": 1782839183,
-          "sentiment": 0.103
         }
       ],
-      "news_sentiment": 0.36
+      "news_sentiment": 0.385
     },
     {
       "ticker": "DLR",
@@ -1876,35 +1876,35 @@
           "sentiment": 0.0
         },
         {
-          "title": "Better Artificial Intelligence (AI) Stock: Alphabet vs. Micron Technology (the Winner May Surprise You)",
+          "title": "Tesla (TSLA) Expands Robotaxi Service To Miami With Cybercabs On Public Roads",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-tsla-expands-robotaxi-miami-080943832.html",
+          "published": 1783152583,
+          "sentiment": 0.103
+        },
+        {
+          "title": "Stock Market Volatility: History Says This 1 Investing Move Is More Important Than Ever Before",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/better-artificial-intelligence-ai-stock-alphabet-v/",
-          "published": 1783104660,
-          "sentiment": 0.898
+          "url": "https://www.fool.com/investing/2026/07/04/stock-market-volatility-history-1-investing-move/",
+          "published": 1783151400,
+          "sentiment": 0.272
         },
         {
-          "title": "Is Reddit (RDDT) The Best Cheap AI Stock to Buy?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/reddit-rddt-best-cheap-ai-212857097.html",
-          "published": 1783102317,
-          "sentiment": 0.637
+          "title": "Anthropic just landed its biggest win of 2026 so far",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/technology/anthropic-ipo-fable5-mythos-safety-classifier-block-jailbreak",
+          "published": 1783135980,
+          "sentiment": 0.586
         },
         {
-          "title": "Jim Cramer\u2019s Latest Thought on Apple Inc. (AAPL)",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-apple-see-quarter-081840061.html",
-          "published": 1783100860,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
-          "published": 1783100747,
-          "sentiment": 0.0
+          "title": "Forget College? The AI Boom Is Creating a New Generation of Six-Figure Trade Jobs",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/03/forget-college-the-ai-boom-is-creating-a-new-generation-of-six-figure-trade-jobs/",
+          "published": 1783125866,
+          "sentiment": 0.077
         }
       ],
-      "news_sentiment": 0.307
+      "news_sentiment": 0.208
     },
     {
       "ticker": "MSFT",
@@ -1931,7 +1931,7 @@
       "div_yield_pct": 93.0,
       "short_pct": 1.28,
       "analyst": "strong_buy",
-      "analyst_score": 1.34,
+      "analyst_score": 1.32,
       "vol_1d": 42194400,
       "vol_1w": 372637400,
       "vol_1m": 1017408800,
@@ -1941,6 +1941,20 @@
           "publisher": "Yahoo Finance Video",
           "url": "https://finance.yahoo.com/video/tokenmaxxing-companies-still-spending-ai-120000127.html",
           "published": 1783080000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Anthropic just landed its biggest win of 2026 so far",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/technology/anthropic-ipo-fable5-mythos-safety-classifier-block-jailbreak",
+          "published": 1783135980,
+          "sentiment": 0.586
+        },
+        {
+          "title": "Why FNGU\u2019s 0.95% Fee Is Only Half the Hidden Cost",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/03/why-fngus-0-95-fee-is-only-half-the-hidden-cost/",
+          "published": 1783129226,
           "sentiment": 0.0
         },
         {
@@ -1956,23 +1970,9 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-msft-launches-2-5-201139635.html",
           "published": 1783109499,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jim Cramer Explains What Microsoft Needs to Do to \u201cReverse Its Fortunes\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-explains-microsoft-needs-081813422.html",
-          "published": 1783101073,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Here\u2019s Why Jim Cramer Thinks Amazon (AMZN) is Punished by the Markets",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-amazon-see-bountiful-081822860.html",
-          "published": 1783101022,
-          "sentiment": -0.318
         }
       ],
-      "news_sentiment": -0.219
+      "news_sentiment": -0.038
     },
     {
       "ticker": "AMZN",
@@ -1999,7 +1999,7 @@
       "div_yield_pct": null,
       "short_pct": 1.01,
       "analyst": "strong_buy",
-      "analyst_score": 1.34,
+      "analyst_score": 1.35,
       "vol_1d": 48298100,
       "vol_1w": 494347600,
       "vol_1m": 1320538500,
@@ -2012,35 +2012,35 @@
           "sentiment": 0.0
         },
         {
-          "title": "Here\u2019s Why Jim Cramer Thinks Amazon (AMZN) is Punished by the Markets",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-amazon-see-bountiful-081822860.html",
-          "published": 1783101022,
-          "sentiment": -0.318
+          "title": "Anthropic just landed its biggest win of 2026 so far",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/technology/anthropic-ipo-fable5-mythos-safety-classifier-block-jailbreak",
+          "published": 1783135980,
+          "sentiment": 0.586
         },
         {
-          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
-          "published": 1783100747,
+          "title": "Synchrony's Credit Numbers Are Improving Even as Inflation Bites. Is the Everyday Consumer Tougher Than Feared?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/03/synchronys-credit-numbers-are-improving-even-as-in/",
+          "published": 1783132500,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Which Retailer Can Deliver My Order the Fastest?",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/media-advertising/articles/retailer-deliver-order-fastest-001103156.html",
+          "published": 1783123863,
           "sentiment": 0.0
         },
         {
-          "title": "3 Core Artificial Intelligence (AI) Market Leaders to Buy with $1,000 Right Now and Hold for the Next 20 Years",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/3-core-artificial-intelligence-ai-market-leaders-t/",
-          "published": 1783098360,
-          "sentiment": 0.477
-        },
-        {
-          "title": "Early Snowflake Investor Nails a 50% Rebound That May Only Be Warming Up",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/ai-portfolio/2026/07/03/early-snowflake-investor-nails-a-50-rebound-that-may-only-be-warming-up/",
-          "published": 1783096428,
-          "sentiment": 0.153
+          "title": "Anthropic quietly joins the race to build its own chips",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/technology/anthropic-samsung-custom-chip-talks",
+          "published": 1783123380,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.062
+      "news_sentiment": 0.205
     },
     {
       "ticker": "META",
@@ -2073,42 +2073,42 @@
       "vol_1m": 417107700,
       "news": [
         {
-          "title": "Top Invesco Analyst: The AI Trade That \u201cLifted All Boats\u201d Is Over. Now Profitability Decides Winners As \u201cCapacity Will Catch Up\u201d",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/top-invesco-analyst-the-ai-trade-that-lifted-all-boats-is-over-now-profitability-decides-winners-as-capacity-will-catch-up/",
-          "published": 1783104431,
-          "sentiment": 0.718
-        },
-        {
-          "title": "Here is Why Jim Cramer Thinks Meta Platforms (META) is Misunderstood",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-meta-spending-081829530.html",
-          "published": 1783100909,
+          "title": "Meta CEO sends warning on its AI goal before earnings",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/meta-ceo-sends-warning-on-its-ai-goal-before-earnings",
+          "published": 1783132380,
           "sentiment": -0.34
         },
         {
-          "title": "Here\u2019s Why Jim Cramer Thinks Alphabet Is Still Cheap",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-alphabet-getting-081847382.html",
-          "published": 1783100747,
+          "title": "Zuckerberg: Meta\u2019s AI reorganization goals 'haven\u2019t come to fruition\u2019",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/zuckerberg-meta-ai-reorganization-goals-havent-come-to-fruition",
+          "published": 1783132380,
           "sentiment": 0.0
         },
         {
-          "title": "These Investors Say Buy Meta Platforms (META) and Ignore SpaceX Hype",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-buy-meta-platforms-meta-132231039.html",
-          "published": 1783100371,
-          "sentiment": -0.361
+          "title": "Forget College? The AI Boom Is Creating a New Generation of Six-Figure Trade Jobs",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/03/forget-college-the-ai-boom-is-creating-a-new-generation-of-six-figure-trade-jobs/",
+          "published": 1783125866,
+          "sentiment": 0.077
         },
         {
-          "title": "3 Core Artificial Intelligence (AI) Market Leaders to Buy with $1,000 Right Now and Hold for the Next 20 Years",
+          "title": "Meta Platforms Will Spend $135 Billion on AI in 2026. There Might Only Be 1 Reason Why.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/3-core-artificial-intelligence-ai-market-leaders-t/",
-          "published": 1783098360,
-          "sentiment": 0.477
+          "url": "https://www.fool.com/investing/2026/07/03/meta-135-billion-ai-capex-2026-one-reason/",
+          "published": 1783115700,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Meta Defends WhatsApp Usernames After India Raises Cybercrime Concerns and Seeks an Explanation",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/technology/ai/articles/meta-defends-whatsapp-usernames-india-213105934.html",
+          "published": 1783114265,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.099
+      "news_sentiment": -0.053
     },
     {
       "ticker": "IREN",
@@ -2345,6 +2345,13 @@
       "vol_1m": 92683700,
       "news": [
         {
+          "title": "Weekly Wrap: Crypto Recovers To Start Third Quarter",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/weekly-wrap-crypto-recovers-to-start-third-quarter-6067",
+          "published": 1783119960,
+          "sentiment": 0.0
+        },
+        {
           "title": "American Bitcoin Conducts Reverse Stock Split To Avoid Delisting",
           "publisher": "CryptoProwl",
           "url": "https://www.cryptoprowl.com/releases/american-bitcoin-conducts-reverse-stock-split-to-avoid-delisting-6064",
@@ -2370,13 +2377,6 @@
           "publisher": "Stocktwits",
           "url": "https://stocktwits.com/news-articles/markets/equity/ai-valuations-cifr-hut-undervalued-vaneck/cZ1Qlw4R70e",
           "published": 1782833591,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Hut 8 (HUT) Soars 4.5%: Is Further Upside Left in the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/hut-8-hut-soars-4-174500765.html",
-          "published": 1782755100,
           "sentiment": 0.0
         }
       ],
@@ -2413,6 +2413,13 @@
       "vol_1m": 1559408400,
       "news": [
         {
+          "title": "Supermicro (SMCI) Expands AI Reach With StorMagic And Odine Partnerships",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/supermicro-smci-expands-ai-reach-221639242.html",
+          "published": 1783116999,
+          "sentiment": 0.128
+        },
+        {
           "title": "SpaceX Stock Is Joining the Nasdaq 100 Soon. What History Says Happens Next.",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/spacex-stock-nasdaq-100-17eaccd9?siteid=yhoof2&yptr=yahoo",
@@ -2439,16 +2446,9 @@
           "url": "https://www.barchart.com/story/news/3104630/i-wouldnt-touch-supermicro-stock-right-now-with-a-10-foot-pole-heres-why",
           "published": 1783017841,
           "sentiment": 0.0
-        },
-        {
-          "title": "StorMagic, Supermicro (SMCI) Partner to Deliver Virtualized Edge Infrastructure Solutions",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/articles/stormagic-supermicro-smci-partner-deliver-173304964.html",
-          "published": 1783013584,
-          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.148
+      "news_sentiment": 0.138
     },
     {
       "ticker": "DELL",
@@ -2481,6 +2481,13 @@
       "vol_1m": 187926600,
       "news": [
         {
+          "title": "How Dell Technologies Inc.\u2019s (DELL) AI Server Guidance Reset Is Driving Its Earnings Estimate Momentum",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dell-technologies-inc-dell-ai-233035592.html",
+          "published": 1783121435,
+          "sentiment": 0.0
+        },
+        {
           "title": "Dell's ISG Growth Reflects AI Infrastructure Dominance: What's Ahead?",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/technology/ai/articles/dells-isg-growth-reflects-ai-162800694.html",
@@ -2506,13 +2513,6 @@
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/technology/ai/articles/dxc-dxc-using-private-cloud-151050202.html",
           "published": 1783091450,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Cisco Stock Is Soaring On A Massive AI Bet",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605692/cisco-stock-is-soaring-on-a-massive-ai-bet/2026-07-03",
-          "published": 1783082802,
           "sentiment": 0.0
         }
       ],
@@ -2957,6 +2957,13 @@
       "vol_1m": 234410200,
       "news": [
         {
+          "title": "How Credo Technology Group Holding Ltd\u2019s (CRDO) DustPhotonics Deal Deepens Its AI Data Center Connectivity Roadmap",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/credo-technology-group-holding-ltd-215834431.html",
+          "published": 1783115914,
+          "sentiment": 0.0
+        },
+        {
           "title": "How Credo\u2019s Shift Into Larger Russell Indices and AI Connectivity Focus Will Impact CRDO Investors",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/credo-shift-larger-russell-indices-201156404.html",
@@ -2983,13 +2990,6 @@
           "url": "https://finance.yahoo.com/technology/articles/active-electrical-cables-driving-credos-134400439.html",
           "published": 1783086240,
           "sentiment": 0.649
-        },
-        {
-          "title": "Price Prediction: Up 90% YTD, Will Credo\u2019s Rally Continue?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/03/price-prediction-up-90-ytd-will-credos-rally-continue/",
-          "published": 1783085445,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.218
@@ -3154,12 +3154,19 @@
       "avg_volume_m": 7.62,
       "div_yield_pct": null,
       "short_pct": 8.33,
-      "analyst": "none",
-      "analyst_score": null,
+      "analyst": "strong_buy",
+      "analyst_score": 1.38,
       "vol_1d": 7083900,
       "vol_1w": 58871800,
       "vol_1m": 196647500,
       "news": [
+        {
+          "title": "Is Viavi Solutions Inc. (VIAV) A Good Stock To Buy Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/viavi-solutions-inc-viav-good-233307179.html",
+          "published": 1783121587,
+          "sentiment": 0.557
+        },
         {
           "title": "2 Mid-Cap Stocks with Competitive Advantages and 1 We Find Risky",
           "publisher": "StockStory",
@@ -3187,16 +3194,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/viavi-solutions-viav-buy-sell-180215112.html",
           "published": 1782756135,
           "sentiment": 0.178
-        },
-        {
-          "title": "VIAVI Solutions (VIAV) Launches TETRA MS Base Station Simulator for CX300 Service Monitor",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/articles/viavi-solutions-viav-launches-tetra-060851380.html",
-          "published": 1782626931,
-          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.155
+      "news_sentiment": 0.23
     },
     {
       "ticker": "AXTI",

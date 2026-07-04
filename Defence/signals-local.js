@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-03 10:58",
+  "updated": "2026-07-04 10:20",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "RTX has strong momentum (+15.47% 1M, +7.21% YTD), a buy analyst consensus (score 1.87), positive news sentiment (0.206), and was just awarded a $1.1B U.S. Navy missile contract, with Q1 earnings beating estimates and guidance raised. [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/07/03/rtx-nyse-rtx-stock-price-surges-on-1-1-billion-u-s-navy-missile-contract-award/)",
+      "drivers": [
+        "$1.1B Navy missile contract",
+        "Q1 earnings beat & raised guidance",
+        "+15.47% 1M momentum",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "LMT is up 10.40% YTD with strong 1W (+8.10%) and 1D (+4.68%) momentum, and is the frontrunner to acquire Ultra Maritime for $3.5B, expanding undersea warfare capabilities; Citi upgraded to Buy with a $582 price target. [tradingview.com](https://www.tradingview.com/news/stocktwits:7c598ebb5094b:0-lmt-stock-gains-nearly-5-lockheed-martin-emerges-as-frontrunner-for-ultra-maritime-in-potential-3-5b-deal/) [gurufocus.com](https://www.gurufocus.com/news/8944487/lockheed-closes-in-on-35-billion-ultra-maritime-deal) [tikr.com](https://www.tikr.com/blog/citi-upgrades-lockheed-martin-nyse-lmt-stock-to-buy-as-historical-rebounds-override-election-fears)",
+      "drivers": [
+        "$3.5B Ultra Maritime acquisition frontrunner",
+        "Citi upgrade to Buy",
+        "+10.40% YTD",
+        "Missile & Fire Control segment growth"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "NOC surged 5.17% today and 9.95% in the past week, with a low P/E of 17.21 and a buy analyst consensus; recent contract momentum includes $7.8B in awards over the past year, including GBSD and GMD programs. [quiverquant.com](https://www.quiverquant.com/news/Northrop+Grumman+Rises+as+Investors+Weigh+Contract+Momentum+and+Defense+Demand)",
+      "drivers": [
+        "+9.95% 1W momentum",
+        "P/E 17.21 attractive",
+        "$7.8B in government contract awards",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "General Dynamics shows strong momentum (+11.32% 1M, +10.21% YTD) with a reasonable P/E of 23.52, a buy consensus (score 2.12), and positive news sentiment (0.296), supported by submarine market expansion.",
+      "drivers": [
+        "+11.32% 1M momentum",
+        "+10.21% YTD",
+        "P/E 23.52",
+        "Positive news sentiment 0.296"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "AXON has explosive short-term momentum (+34.25% 1W, +24.00% 1M) and a buy analyst consensus (score 1.6), though its P/E of 237.86 is very high; the recent surge suggests strong investor interest in its law enforcement technology.",
+      "drivers": [
+        "+34.25% 1W momentum",
+        "+24.00% 1M momentum",
+        "Buy analyst consensus",
+        "Law enforcement tech demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Mercury Systems has outstanding 1-year (+145%) and YTD (+66.00%) returns, with strong 1M (+13.10%) and 1W (+19.55%) momentum, though it lacks a P/E and analyst coverage; the momentum reflects strong defence electronics demand.",
+      "drivers": [
+        "+66.00% YTD",
+        "+145% 1-year return",
+        "+19.55% 1W momentum",
+        "Defence electronics demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "TransDigm has a buy analyst consensus (score 1.82), positive news sentiment (0.408), and +11.30% 1M momentum, though its P/E of 42.02 is elevated; the company benefits from aftermarket parts demand and defence spending.",
+      "drivers": [
+        "Positive news sentiment 0.408",
+        "+11.30% 1M momentum",
+        "Buy analyst consensus",
+        "Aftermarket parts demand"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "HEICO has a buy consensus (score 1.83), positive news sentiment (0.30), and solid YTD (+10.03%) and 1M (+10.06%) returns, though its P/E of 64.54 is high; the company is well-positioned in aerospace and defence components.",
+      "drivers": [
+        "+10.03% YTD",
+        "+10.06% 1M momentum",
+        "Positive news sentiment 0.30",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Boeing has a buy analyst consensus (score 1.63), positive news sentiment (0.128), and +7.56% 1M momentum, but its P/E of 89.17 is very high and YTD is slightly negative (-0.56%); the stock is recovering on commercial aerospace demand.",
+      "drivers": [
+        "Buy analyst consensus",
+        "+7.56% 1M momentum",
+        "Positive news sentiment 0.128",
+        "Commercial aerospace recovery"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Rolls-Royce has strong YTD (+25.67%) and 1M (+19.55%) momentum, a buy consensus (score 1.6), and positive news sentiment (0.256), with a reasonable P/E of 21.8; the company is benefiting from defence engine demand and partnerships.",
+      "drivers": [
+        "+25.67% YTD",
+        "+19.55% 1M momentum",
+        "P/E 21.8",
+        "Positive news sentiment 0.256"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "analyst buy",
         "news sentiment 0.121",
         "P/E 89.17"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SPCX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +6.16%, 1W +9.45%, 1D +4.61% with news of SpaceX exploring phone service and Dan Ives initiating with Outperform rating and $190 PT, citing AI potential.",
-      "drivers": [
-        "1D +4.61% momentum",
-        "Dan Ives Outperform initiation",
-        "Phone service catalyst",
-        "AI play narrative"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +60.90%, 1M +9.93%, 1W +10.34%, 1D +11.80% \u2014 exceptional momentum with high short interest of 8.83% suggesting potential squeeze.",
-      "drivers": [
-        "YTD +60.90%",
-        "1D +11.80%",
-        "High short interest 8.83%",
-        "Strong momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RR.L",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +20.69%, 1M +13.50%, 1W +3.84% with recent nuclear deal catalysts and analyst buy consensus at 1.60.",
-      "drivers": [
-        "YTD +20.69%",
-        "1M +13.50%",
-        "Nuclear deal catalyst",
-        "Analyst buy score 1.60"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +17.56%, 1W +29.46%, 1D +8.18% explosive momentum despite negative YTD; analyst buy rating with score 1.60.",
-      "drivers": [
-        "1W +29.46%",
-        "1D +8.18%",
-        "Analyst buy 1.60",
-        "Momentum surge"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "1M +8.78%, analyst buy rating 1.87, positive news sentiment 0.143, and Zacks Rank #2 Buy with earnings growth expected.",
-      "drivers": [
-        "1M +8.78%",
-        "Analyst buy 1.87",
-        "Zacks Rank #2",
-        "Positive earnings outlook"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +8.20%, 1M +6.88%, 1W +6.59% with UBS price target increase and strong commercial aerospace demand.",
-      "drivers": [
-        "YTD +8.20%",
-        "1M +6.88%",
-        "UBS price target increase",
-        "Commercial aerospace demand"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +5.42%, 1W +6.17%, P/E 17.51 attractive, analyst buy, and positive news sentiment 0.27.",
-      "drivers": [
-        "P/E 17.51",
-        "1W +6.17%",
-        "Positive news sentiment 0.27",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +4.06%, 1M +4.43%, P/E 22.27 reasonable, analyst buy score 2.12, and news sentiment 0.298.",
-      "drivers": [
-        "1M +4.43%",
-        "P/E 22.27",
-        "Analyst buy 2.12",
-        "News sentiment 0.298"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +7.56%, analyst buy consensus 1.82, and strong news sentiment 0.291, despite negative YTD.",
-      "drivers": [
-        "1M +7.56%",
-        "Analyst buy 1.82",
-        "News sentiment 0.291",
-        "High-quality defense play"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LMT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +3.71%, low beta 0.106, P/E 24.7 reasonable, and stable defense prime with dividend yield 2.71%.",
-      "drivers": [
-        "Low beta 0.106",
-        "P/E 24.7",
-        "Dividend yield 2.71%",
-        "Defensive anchor"
       ]
     }
   ]
