@@ -170,12 +170,11 @@
 
   /* Mobile nav */
   .hamburger {
-    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
-    background: none; cursor: pointer; font-size: 20px; flex-shrink: 0; color: var(--text);
+    display: none; width: 44px; height: 44px; background: none; cursor: pointer; font-size: 20px; flex-shrink: 0; color: var(--text);
   }
   .drawer-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4); }
   .drawer-overlay.open { display: block; }
-  .drawer { position: fixed; top: 36px; left: 0; bottom: 56px; width: 92px; background: var(--bg); border-right: 1px solid var(--accent); overflow-y: auto; z-index: 301; padding: 8px 6px; display: flex; flex-direction: column; gap: 4px; }
+  .drawer { position: fixed; top: 36px; left: 0; bottom: 0; width: 92px; background: var(--bg); border-right: 1px solid var(--accent); overflow-y: auto; z-index: 301; padding: 8px 6px; display: flex; flex-direction: column; gap: 4px; }
 
 
   body[data-layout="rail"] { flex-direction: row; }
