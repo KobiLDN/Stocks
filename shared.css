@@ -824,15 +824,18 @@ footer {
 }
 
 /* Drawer nav-panel: compact icon+label column, same style as old bottom tabs */
-.drawer .nav-panel {
-  width: 72px;
+/* Use .drawer-overlay selector for higher specificity (30) to override page CSS flex:1 (20) */
+.drawer-overlay .drawer .nav-panel {
+  width: 72px !important;
+  flex: none !important;
+  min-width: 0;
   flex-shrink: 0;
   border-left: 1px solid var(--border);
   overflow-y: auto;
 }
-.drawer .nav-panel .nav-link {
-  display: flex;
-  flex-direction: column;
+.drawer-overlay .drawer .nav-panel .nav-link {
+  display: flex !important;
+  flex-direction: column !important;
   align-items: center;
   justify-content: center;
   gap: 3px;
@@ -843,5 +846,5 @@ footer {
   border-bottom: 1px solid var(--border);
   width: 100%;
 }
-.drawer .nav-panel .nav-icon  { font-size: 16px; }
-.drawer .nav-panel .nav-label { display: block !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 64px; }
+.drawer-overlay .drawer .nav-panel .nav-icon  { font-size: 16px; }
+.drawer-overlay .drawer .nav-panel .nav-label { display: block !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 64px; }
