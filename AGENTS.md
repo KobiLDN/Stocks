@@ -41,8 +41,10 @@ All editing happens in the web Claude container. There are no local clones to ma
 ### The 3-step workflow
 
 1. **Make changes** — edit files in the container, commit, `git push origin dev`.
-2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → **https://dev.stocks-4qw.pages.dev**
+2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → **[dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev)**
 3. **Go live** — only when the user explicitly says so. Push `dev → main`: `git push origin dev:main`.
+
+**After every push:** share a clickable markdown link to the relevant page on the dev preview (e.g. `[dev.stocks-4qw.pages.dev/MegaCap/](https://dev.stocks-4qw.pages.dev/MegaCap/)`). Never paste a bare URL.
 
 Step 3 requires explicit user approval every time. If unsure, ask.
 
