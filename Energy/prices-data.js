@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-04 10:15",
+  "updated": "2026-07-04 22:45",
   "fx_gbp_usd": 1.335,
   "stocks": [
     {
@@ -28,10 +28,24 @@ window.PRICES_DATA = {
       "short_pct": 1.29,
       "analyst": "buy",
       "analyst_score": 2.29,
-      "vol_1d": 13708000,
-      "vol_1w": 89582300,
-      "vol_1m": 380236300,
+      "vol_1d": 13703300,
+      "vol_1w": 89577600,
+      "vol_1m": 380231600,
       "news": [
+        {
+          "title": "Oil is Starting to Flow Out of the Strait of Hormuz Again. Should You Still Buy Oil Stocks?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/oil-is-starting-to-flow-out-of-the-strait-of-hormu/",
+          "published": 1783172100,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Sable Offshore (SOC) Is Down 42.3% After Convertible Notes And Equity Sale To Rework Exxon Loan",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/sable-offshore-soc-down-42-090936309.html",
+          "published": 1783156176,
+          "sentiment": 0.0
+        },
         {
           "title": "Prediction: This Oil Stock Will Beat the S&P 500 in the Second Half of 2026",
           "publisher": "Motley Fool",
@@ -52,23 +66,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/xom-qatarenergy-reach-milestone-cyprus-154200501.html",
           "published": 1783093320,
           "sentiment": 0.026
-        },
-        {
-          "title": "Exxon Mobil Corporation (XOM) is Attracting Investor Attention: Here is What You Should Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exxon-mobil-corporation-xom-attracting-130006219.html",
-          "published": 1783083606,
-          "sentiment": 0.477
-        },
-        {
-          "title": "U.S. Refiners Are Running \u201cIncredibly Hard.\u201d Here\u2019s Why Gas Prices Aren\u2019t Falling",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/02/u-s-refiners-are-running-incredibly-hard-heres-why-gas-prices-arent-falling/",
-          "published": 1783018364,
-          "sentiment": -0.153
         }
       ],
-      "news_sentiment": 0.07
+      "news_sentiment": 0.005
     },
     {
       "ticker": "CVX",
@@ -96,10 +96,17 @@ window.PRICES_DATA = {
       "short_pct": 1.09,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 9563700,
-      "vol_1w": 60083900,
-      "vol_1m": 202821400,
+      "vol_1d": 9561800,
+      "vol_1w": 60082000,
+      "vol_1m": 202819500,
       "news": [
+        {
+          "title": "Oil is Starting to Flow Out of the Strait of Hormuz Again. Should You Still Buy Oil Stocks?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/04/oil-is-starting-to-flow-out-of-the-strait-of-hormu/",
+          "published": 1783172100,
+          "sentiment": 0.0
+        },
         {
           "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
           "publisher": "Investing.com",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/chevron-corporation-cvx-trending-stock-130007406.html",
           "published": 1783083607,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Rise Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-rise-afternoon-195459455.html",
-          "published": 1783022099,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.169
+      "news_sentiment": 0.114
     },
     {
       "ticker": "SHEL",
@@ -149,7 +149,7 @@ window.PRICES_DATA = {
       "change_1w": "+0.89%",
       "change_1m": "-10.08%",
       "change_ytd": "+5.33%",
-      "return_1yr": "+8%",
+      "return_1yr": "+12%",
       "low_gbp": "51",
       "low_usd": 68.62,
       "high_gbp": "71",
@@ -232,10 +232,24 @@ window.PRICES_DATA = {
       "short_pct": 0.73,
       "analyst": "hold",
       "analyst_score": 2.53,
-      "vol_1d": 21306000,
-      "vol_1w": 76345900,
-      "vol_1m": 209968900,
+      "vol_1d": 21304800,
+      "vol_1w": 76344700,
+      "vol_1m": 209967700,
       "news": [
+        {
+          "title": "BP (LSE:BP) Reshuffles Leadership And Expands ONGC Partnership In India",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/bp-lse-bp-reshuffles-leadership-180828598.html",
+          "published": 1783188508,
+          "sentiment": 0.103
+        },
+        {
+          "title": "BP (LSE:BP.) Stock May Trade At A Premium As UAE Gas Expansion Builds",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/bp-lse-bp-stock-may-161527051.html",
+          "published": 1783181727,
+          "sentiment": 0.0
+        },
         {
           "title": "Fiserv, service station operators including BP warn US stores on illegal vapes",
           "publisher": "Reuters",
@@ -256,23 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/bp-p-l-c-bp-130004657.html",
           "published": 1783083604,
           "sentiment": 0.0
-        },
-        {
-          "title": "U.S. Refiners Are Running \u201cIncredibly Hard.\u201d Here\u2019s Why Gas Prices Aren\u2019t Falling",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/02/u-s-refiners-are-running-incredibly-hard-heres-why-gas-prices-arent-falling/",
-          "published": 1783018364,
-          "sentiment": -0.153
-        },
-        {
-          "title": "E N I Spa (E) Announces Angolan Expansion with Greater PAJ Project Investment",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/energy/articles/e-n-spa-e-announces-194244624.html",
-          "published": 1782934964,
-          "sentiment": 0.361
         }
       ],
-      "news_sentiment": -0.081
+      "news_sentiment": -0.102
     },
     {
       "ticker": "TTE",
@@ -441,6 +441,13 @@ window.PRICES_DATA = {
       "vol_1m": 169328500,
       "news": [
         {
+          "title": "Phillips 66\u2019s Quarterly Earnings Preview: What You Need to Know",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3126930/phillips-66s-quarterly-earnings-preview-what-you-need-to-know",
+          "published": 1783167542,
+          "sentiment": 0.0
+        },
+        {
           "title": "Can OXY's Robust Proved Reserves Strengthen Its Long-Term Returns?",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/energy/articles/oxys-robust-proved-reserves-strengthen-140300447.html",
@@ -466,13 +473,6 @@ window.PRICES_DATA = {
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/energy/articles/exxonmobils-upstream-business-thrive-oil-145300123.html",
           "published": 1783003980,
-          "sentiment": 0.0
-        },
-        {
-          "title": "ConocoPhillips or Occidental Petroleum: Which Oil Stock Should You Buy Now?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/07/01/conocophillips-or-occidental-petroleum-which-oil-stock-should-you-buy-now/",
-          "published": 1782935077,
           "sentiment": 0.0
         }
       ],
@@ -504,9 +504,9 @@ window.PRICES_DATA = {
       "short_pct": 0.02,
       "analyst": "hold",
       "analyst_score": 2.54,
-      "vol_1d": 8553600,
-      "vol_1w": 49670300,
-      "vol_1m": 203394100,
+      "vol_1d": 8548700,
+      "vol_1w": 49665400,
+      "vol_1m": 203389200,
       "news": [
         {
           "title": "Can OXY's Robust Proved Reserves Strengthen Its Long-Term Returns?",
@@ -776,9 +776,9 @@ window.PRICES_DATA = {
       "short_pct": 3.99,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 11678000,
-      "vol_1w": 67084600,
-      "vol_1m": 354092700,
+      "vol_1d": 11677500,
+      "vol_1w": 67084100,
+      "vol_1m": 354092200,
       "news": [
         {
           "title": "SLB Boosts Middle East Growth With Seven-Year Kuwait Innovation Deal",
@@ -912,10 +912,17 @@ window.PRICES_DATA = {
       "short_pct": 2.93,
       "analyst": "buy",
       "analyst_score": 1.77,
-      "vol_1d": 12191800,
-      "vol_1w": 50981200,
-      "vol_1m": 178654100,
+      "vol_1d": 12190500,
+      "vol_1w": 50979900,
+      "vol_1m": 178652800,
       "news": [
+        {
+          "title": "Stock Market Week Ahead: Oil Hints At A Paradigm Shift",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/news/stock-market-week-ahead-oil-hints-at-a-paradigm-shift/?src=A00220&yptr=yahoo",
+          "published": 1783173887,
+          "sentiment": 0.0
+        },
         {
           "title": "Here's What to Expect From Baker Hughes' Next Earnings Report",
           "publisher": "Barchart",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://www.offshore-technology.com/news/nlng-awards-baker-hughes-turbine-services-contract/",
           "published": 1782819808,
           "sentiment": 0.459
-        },
-        {
-          "title": "BKR Wins Angola Contract for Azule Energy's Greater PAJ Development",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/bkr-wins-angola-contract-azule-133600557.html",
-          "published": 1782740160,
-          "sentiment": 0.735
         }
       ],
-      "news_sentiment": 0.298
+      "news_sentiment": 0.151
     },
     {
       "ticker": "NEE",
@@ -980,47 +980,47 @@ window.PRICES_DATA = {
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 1.95,
-      "vol_1d": 14283600,
-      "vol_1w": 66521000,
-      "vol_1m": 250785700,
+      "vol_1d": 14281800,
+      "vol_1w": 66519200,
+      "vol_1m": 250783900,
       "news": [
         {
-          "title": "Oklo Advances Groves Isotope Test Reactor With Key DOE Safety Approval",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/oklo-advances-groves-isotope-test-123300704.html",
-          "published": 1783081980,
-          "sentiment": 0.71
-        },
-        {
-          "title": "How to Enjoy Retirement Without Spending Your Children\u2019s Inheritance",
+          "title": "The Portfolio That Lets You Go Part-Time Five Years Early",
           "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/07/03/how-to-enjoy-retirement-without-spending-your-childrens-inheritance/",
-          "published": 1783081278,
-          "sentiment": 0.494
-        },
-        {
-          "title": "The Portfolio That Pays For Season Tickets Forever",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/07/03/the-portfolio-that-pays-for-season-tickets-forever/",
-          "published": 1783076501,
+          "url": "https://247wallst.com/personal-finance/2026/07/04/the-portfolio-that-lets-you-go-part-time-five-years-early/",
+          "published": 1783192312,
           "sentiment": 0.0
         },
         {
-          "title": "How Much Capital Does It Take to Fund Your Hobby Forever?",
+          "title": "What A $750,000 Dividend Portfolio Actually Pays After Taxes, Medicare Premiums, And Reality",
           "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/07/03/how-much-capital-does-it-take-to-fund-your-hobby-forever/",
-          "published": 1783072080,
+          "url": "https://247wallst.com/personal-finance/2026/07/04/what-a-750000-dividend-portfolio-actually-pays-after-taxes-medicare-premiums-and-reality/",
+          "published": 1783184991,
           "sentiment": 0.0
         },
         {
-          "title": "Merger Value Hit a First-Half Record as Deal Sizes Grew",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/record-ma-value-first-half-2026-64882132?siteid=yhoof2&yptr=yahoo",
-          "published": 1783017180,
-          "sentiment": 0.34
+          "title": "What Happens When Medicare Premiums Are No Longer Your Problem?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/04/what-happens-when-medicare-premiums-are-no-longer-your-problem/",
+          "published": 1783180241,
+          "sentiment": -0.599
+        },
+        {
+          "title": "Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-happens-nextera-142330726.html",
+          "published": 1783175010,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The Dividend Portfolio That Can Cover a Silicon Valley House Payment",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/04/the-dividend-portfolio-that-can-cover-a-silicon-valley-house-payment/",
+          "published": 1783157800,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.309
+      "news_sentiment": -0.12
     },
     {
       "ticker": "SSE.L",
@@ -1033,7 +1033,7 @@ window.PRICES_DATA = {
       "change_1w": "+3.55%",
       "change_1m": "+7.32%",
       "change_ytd": "+12.37%",
-      "return_1yr": "+32%",
+      "return_1yr": "+35%",
       "low_gbp": "16",
       "low_usd": 21.32,
       "high_gbp": "28",
@@ -1043,7 +1043,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 0.403,
       "beta": 0.59,
       "pe_ratio": 23.88,
-      "avg_volume_m": 4.22,
+      "avg_volume_m": 4.19,
       "div_yield_pct": 274.0,
       "short_pct": null,
       "analyst": "buy",
@@ -1051,44 +1051,8 @@ window.PRICES_DATA = {
       "vol_1d": 2063214,
       "vol_1w": 20183395,
       "vol_1m": 90412355,
-      "news": [
-        {
-          "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/sse-lse-sse-stock-fair-043011632.html",
-          "published": 1782275411,
-          "sentiment": 0.361
-        },
-        {
-          "title": "UK, Japan to deepen ties with \u00a318 billion investment agreement",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/uk-japan-deepen-ties-18-003636120.html",
-          "published": 1781397396,
-          "sentiment": 0.494
-        },
-        {
-          "title": "Bears are Losing Control Over SSE (SSEZY), Here's Why It's a 'Buy' Now",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bears-losing-control-over-sse-135503184.html",
-          "published": 1781099703,
-          "sentiment": -0.382
-        },
-        {
-          "title": "Are heat pumps an underappreciated lever of power demand growth?",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/sectors/energy/articles/heat-pumps-underappreciated-lever-power-102637659.html",
-          "published": 1780827997,
-          "sentiment": 0.273
-        },
-        {
-          "title": "How A Steady Analyst Stance Is Shaping The Evolving Story For SSE (LSE:SSE)",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/steady-analyst-stance-shaping-evolving-042141491.html",
-          "published": 1780806101,
-          "sentiment": 0.0
-        }
-      ],
-      "news_sentiment": 0.149
+      "news": [],
+      "news_sentiment": null
     },
     {
       "ticker": "ENPH",
@@ -1184,10 +1148,17 @@ window.PRICES_DATA = {
       "short_pct": 10.39,
       "analyst": "buy",
       "analyst_score": 2.14,
-      "vol_1d": 2597500,
-      "vol_1w": 9808800,
-      "vol_1m": 47086800,
+      "vol_1d": 2596900,
+      "vol_1w": 9808200,
+      "vol_1m": 47086200,
       "news": [
+        {
+          "title": "First Solar Inc (FSLR) Stock Gets Added Attention on Potential China Ban",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-inc-fslr-stock-134532634.html",
+          "published": 1783172732,
+          "sentiment": -0.557
+        },
         {
           "title": "First Solar (FSLR) Stock Moves -3.49%: What You Should Know",
           "publisher": "Zacks",
@@ -1215,16 +1186,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-inc-fslr-trending-130008012.html",
           "published": 1782910808,
           "sentiment": 0.0
-        },
-        {
-          "title": "Solar Stocks Get Their Moment Under the Sun",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-30-2026/card/solar-stocks-get-their-moment-under-the-sun-fEcxVeDEQrVZBc8VLok2?siteid=yhoof2&yptr=yahoo",
-          "published": 1782829910,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.191
+      "news_sentiment": 0.079
     },
     {
       "ticker": "BEPC",
