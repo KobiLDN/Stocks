@@ -6,6 +6,8 @@
 
 ## Done
 
+- **Mobile burger menu — consistent across all pages** — hamburger button `border: none` added to `shared.css` (canonical single source); per-page accordion HTML stripped from all 49 sector drawer `nav-panel`s so `buildNav()` populates them identically to All/ pages; drawer nav-panel forced to compact 72px icon+label column via high-specificity CSS in `shared.css`; bottom tab bar removed (`shared.css`, all sector + All/ HTML pages).
+
 - **Macro block YTD/1Y + VIX signal in CDN export (issue #23)** — `update_market.py` fetches 1-year history for SPY/QQQ so it can compute `change_ytd` (first trading day of current year → today) and `change_1y` (52 weeks ago → today) in addition to 1D/1W/1M; adds `vix.signal` label (calm/normal/high_fear/extreme_fear based on VIX level thresholds <15/<25/<30/>30); new fields pass through to the CDN export `macro` key via `generate_export.py`'s existing `read_macro()` passthrough — portfolio AI now has full market-regime context (`update_market.py`, `generate_export.py`).
 
 - **Global Mega-Cap Leaders sector (`MegaCap/`)** — 50 stocks across 7 categories: Big Tech (AAPL/MSFT/NVDA/GOOGL/META/AMZN/TSLA/NFLX), Financials (JPM/BAC/BRK-B/V/MA/GS/BLK), Healthcare (LLY/UNH/JNJ/ABBV/MRK/TMO/ABT), Consumer (PG/KO/PEP/MCD/NKE/WMT/COST), Energy & Industrial (XOM/CVX/CAT/HON/GE/RTX/BA), Tech & Semis (AMD/QCOM/AVGO/TSM/ASML/ARM/INTC), Global Growth (2222.SR/BABA/SAP/SONY/TM/NVO/HSBC). USD-primary price pipeline with SAR special case for Saudi Aramco. Full 7-page suite + hub card + updated All/ pages + updated workflows + `generate_export.py`. Total universe: 242 stocks & coins.

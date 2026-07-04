@@ -14,7 +14,7 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 | Technology | 31 (6 categories) | Live | [stocks-4qw.pages.dev/Tech/](https://stocks-4qw.pages.dev/Tech/) |
 | Crypto | 33 (7 categories) | Live | [stocks-4qw.pages.dev/Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
 | Energy | 20 (5 categories) | Live | [stocks-4qw.pages.dev/Energy/](https://stocks-4qw.pages.dev/Energy/) |
-| Global Mega-Cap Leaders | 50 (7 categories) | Dev | [stocks-4qw.pages.dev/MegaCap/](https://stocks-4qw.pages.dev/MegaCap/) |
+| Global Mega-Cap Leaders | 50 (7 categories) | Live | [stocks-4qw.pages.dev/MegaCap/](https://stocks-4qw.pages.dev/MegaCap/) |
 | All Sectors | 242 stocks combined | Live | [stocks-4qw.pages.dev/All/](https://stocks-4qw.pages.dev/All/) |
 
 ## Top-level pages
