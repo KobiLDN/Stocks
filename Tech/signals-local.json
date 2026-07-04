@@ -1,9 +1,176 @@
 {
-  "updated": "2026-07-03 10:59",
+  "updated": "2026-07-04 10:21",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "Q1 revenue of $109.9B (+22% YoY) beat estimates, Cloud grew 63% to $20B with a $460B backlog, and the stock trades at a reasonable 27.5x P/E with strong_buy consensus and positive news sentiment of 0.208. [247wallst.com](https://247wallst.com/investing/2026/07/02/forget-nvidia-is-google-quietly-about-to-steal-the-crown-as-the-worlds-most-valuable-company/) highlights Google's full-stack AI ownership and accelerating revenue growth.",
+      "drivers": [
+        "+22% revenue growth",
+        "63% Cloud growth",
+        "27.5x P/E",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD return of +94%, 1M momentum of +24%, and 1W momentum of +19% show exceptional near-term strength, supported by a buy rating and positive news sentiment of 0.156 after beating earnings estimates. [seekingalpha.com](https://seekingalpha.com/news/4600729-quant-ratings-of-major-cybersecurity-stocks-after-earnings-season) notes robust enterprise demand for cybersecurity.",
+      "drivers": [
+        "+94% YTD",
+        "+24% 1M momentum",
+        "earnings beat",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "YTD return of +20%, 1M momentum of +8%, and 1W momentum of +15% reflect strong momentum, with a strong_buy analyst consensus and positive news sentiment of 0.253, while an early investor sees a 50% rebound still warming up.",
+      "drivers": [
+        "+20% YTD",
+        "+15% 1W momentum",
+        "strong_buy consensus",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD return of +71%, 1M momentum of +4%, and 1W momentum of +14% show strong upward trajectory, with a buy rating and positive news sentiment, while the stock is up 7.9% since last earnings.",
+      "drivers": [
+        "+71% YTD",
+        "+14% 1W momentum",
+        "buy consensus",
+        "post-earnings strength"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "YTD return of +125%, 1M momentum of +20%, and strong_buy consensus reflect robust demand, with CEO expecting semiconductor equipment revenue to grow >30% in 2026. [aol.com](https://www.aol.com/articles/michael-burry-shorts-micron-adding-141819000.html) notes record quarterly performance.",
+      "drivers": [
+        "+125% YTD",
+        "+20% 1M momentum",
+        "strong_buy consensus",
+        ">30% revenue growth outlook"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.825,
+      "rationale": "YTD return of +206% and 1M momentum of +7% are exceptional, driven by unverified reports of AI chip deals with Google and Nvidia, though analyst consensus is hold and P/E is negative. [bitrss.com](https://bitrss.com/intel-intc-stock-surges-11-on-reports-of-major-ai-chip-deals-with-google-and-nvidia-219045) reports 11% surge on AI chip speculation.",
+      "drivers": [
+        "+206% YTD",
+        "AI chip deal speculation",
+        "strong server CPU demand",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.74,
+      "rationale": "YTD return of +53%, 1M momentum of +2.5%, and strong_buy consensus with low short interest of 0.43% indicate solid fundamentals, while the stock benefits from AI-driven lithography demand.",
+      "drivers": [
+        "+53% YTD",
+        "strong_buy consensus",
+        "low short interest 0.43%",
+        "AI lithography demand"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.831,
+      "rationale": "YTD return of +101% and 1M momentum of +7% show strong performance, but analyst consensus is hold with a high an_score of 2.75 and the stock lost Russell defensive status, tempering conviction.",
+      "drivers": [
+        "+101% YTD",
+        "+7% 1M momentum",
+        "hold consensus",
+        "Russell defensive status loss"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1M momentum of +6% and 1W momentum of +7% show recovery, but YTD is -24% and P/E is high at 117x, making it a higher-risk pick with no analyst consensus.",
+      "drivers": [
+        "+6% 1M momentum",
+        "recovery trend",
+        "high P/E 117x",
+        "no analyst consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "UBER",
+      "signal": "strong_buy",
+      "confidence": 0.58,
+      "rationale": "Strong_buy consensus with an_score of 1.48 and reasonable P/E of 18.5x, but YTD is -10% and news sentiment is negative at -0.108, limiting upside conviction.",
+      "drivers": [
+        "strong_buy consensus",
+        "low P/E 18.5x",
+        "negative news sentiment",
+        "YTD decline"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.841,
+      "ytd": "+209.42%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +209.42% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +209.42% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.702,
+      "ytd": "+174.80%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +174.80% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +174.80% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.529,
+      "ytd": "+131.72%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +131.72% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +131.72% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "GOOGL",
@@ -132,173 +299,6 @@
         "low P/E 18.5",
         "AV catalyst",
         "platform expansion"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.841,
-      "ytd": "+209.42%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +209.42% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +209.42% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.702,
-      "ytd": "+174.80%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +174.80% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +174.80% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.529,
-      "ytd": "+131.72%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +131.72% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +131.72% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Record AI earnings and YTD +50.19% with strong 1M/+9.88% and 1W/+9.44% momentum, PE 41.49, analyst strong_buy, and news sentiment -0.026. Web search confirms sustained AI demand and hyperscaler capex benefiting foundry leaders.",
-      "drivers": [
-        "YTD +50.19%",
-        "PE 41.49",
-        "analyst strong_buy",
-        "record AI earnings"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "Best-in-class YTD +266.11% with 1M/+11.47% and 1W/+9.75% gains, extremely low PE 26.11 for a high-growth stock, analyst strong_buy, and short interest 3.69% suggests room to run. Web search highlights AI-driven memory demand and $2T chip rally.",
-      "drivers": [
-        "YTD +266.11%",
-        "PE 26.11",
-        "analyst strong_buy",
-        "AI memory demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PANW",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +90.12% with accelerating 1M/+13.49% and 1W/+17.22% momentum, low beta 0.942, analyst buy, and news sentiment 0.223. Web search shows cybersecurity benefiting from AI-driven threat landscape.",
-      "drivers": [
-        "YTD +90.12%",
-        "1W +17.22%",
-        "beta 0.942",
-        "positive news sentiment 0.223"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "YTD +254.57% with 1M/+27.71% and 1W/+5.56% momentum, analyst hold, news sentiment 0.07. Web search confirms Apple foundry deal catalyst and BofA upgrade to $160, but risk production stage and net loss keep confidence tempered.",
-      "drivers": [
-        "YTD +254.57%",
-        "1M +27.71%",
-        "Apple deal catalyst",
-        "BofA upgrade"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +71.55% with 1M/+22.16% and 1W/+11.86% momentum, PE 67.58, analyst strong_buy, short interest very low at 0.43%, and news sentiment 0.133. Web search confirms lithography equipment demand driven by AI chip expansion.",
-      "drivers": [
-        "YTD +71.55%",
-        "1M +22.16%",
-        "short 0.43%",
-        "analyst strong_buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +159.95% with robust 1M/+13.87% and 1W/+11.75% momentum, analyst strong_buy, but PE 192.35 and news sentiment -0.026 indicate elevated expectations. Web search confirms 57% YoY DC revenue growth and AI infrastructure demand.",
-      "drivers": [
-        "YTD +159.95%",
-        "DC revenue +57% YoY",
-        "analyst strong_buy",
-        "high PE 192.35"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +169.57% with exceptional 1M/+57.80% and 1W/+23.40% momentum, PE 68.02, analyst strong_buy, news sentiment 0.076. Web search notes Burry short position, warranting caution despite strong momentum.",
-      "drivers": [
-        "YTD +169.57%",
-        "1M +57.80%",
-        "analyst strong_buy",
-        "Burry short risk"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.803,
-      "rationale": "YTD +97.25% with steady 1M/+4.40% and 1W/+3.80% momentum, PE 59.54, analyst hold, negative news sentiment -0.064. Web search shows sector momentum but mixed analyst view caps confidence.",
-      "drivers": [
-        "YTD +97.25%",
-        "1M +4.40%",
-        "analyst hold",
-        "negative sentiment"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CRWD",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +68.25% with powerful 1W/+12.98% and 1D/+2.38% recovery, beta 1.244, analyst buy, and highest news sentiment 0.406 in universe. Web search supports cybersecurity demand wave.",
-      "drivers": [
-        "YTD +68.25%",
-        "1W +12.98%",
-        "news sentiment 0.406",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "UBER",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Favorable PE 17.91, analyst strong_buy, and 1W/+3.57% recovery despite YTD -12.91% and negative news sentiment -0.092. Web search shows platform strength but consumer headwinds limit near-term upside.",
-      "drivers": [
-        "PE 17.91",
-        "analyst strong_buy",
-        "1W +3.57%",
-        "negative sentiment"
       ]
     }
   ]

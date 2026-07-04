@@ -1,137 +1,137 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-03 10:56",
+  "updated": "2026-07-04 10:18",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
     {
       "rank": 1,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
+      "ticker": "RR.",
+      "signal": "buy",
       "confidence": 0.85,
-      "rationale": "Google owns the full AI stack (Gemini, TPUs, Cloud) with Q1 revenue up 21.8% YoY to $109.90B and Cloud growing 63%, trades at a reasonable 27x trailing P/E with strong analyst consensus (58 buy ratings, zero sells).",
+      "rationale": "Rolls-Royce shows +19.55% 1M momentum and +25.67% YTD, with a low P/E of 21.8, positive news sentiment 0.256, and a high dividend yield of 63 bps as a diversified nuclear engineering play.",
       "drivers": [
-        "Q1 revenue beat +21.8% YoY",
-        "Cloud backlog near $460B",
-        "58 analyst buys, 0 sells",
-        "27x P/E reasonable for growth"
+        "1M +19.55%",
+        "P/E 21.8",
+        "YTD +25.67%",
+        "news_s 0.256"
       ]
     },
     {
       "rank": 2,
       "ticker": "GEV",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "GEV surged +16.09% in the past month and is up +64.10% YTD, benefiting from a bullish Bernstein initiation with a $1,206 target and strong nuclear/AI energy demand catalyst.",
+      "signal": "buy",
+      "confidence": 0.88,
+      "rationale": "GE Vernova has strong +64.10% YTD and +16.09% 1M momentum, P/E 32.58, positive news sentiment 0.372, and is highlighted in Zacks as a top nuclear AI energy stock to buy now.",
       "drivers": [
-        "+16.09% 1-month momentum",
-        "Bernstein target $1,206",
-        "AI energy demand catalyst",
-        "YTD +64.10%"
+        "YTD +64.10%",
+        "1M +16.09%",
+        "news_s 0.372",
+        "Zacks recommendation"
       ]
     },
     {
       "rank": 3,
-      "ticker": "AMZN",
+      "ticker": "CRDO",
       "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Amazon trades at 31.64x P/E with a stellar news sentiment of 0.506, strong analyst consensus (strong_buy, an_score 1.34), and +6.90% weekly momentum as hyperscaler AI demand accelerates.",
+      "confidence": 0.9,
+      "rationale": "Credo Technology has strong_buy consensus and surged to record highs on bullish analyst reports (+12.73% 1M, +68.91% YTD, P/E 96) as a key AI data-center connectivity play.",
       "drivers": [
-        "News sentiment +0.506",
-        "Strong analyst consensus",
-        "Weekly momentum +6.90%",
-        "AWS AI infrastructure catalyst"
+        "1M +12.73%",
+        "strong_buy consensus",
+        "news_s 0.218",
+        "analyst upgrades"
       ]
     },
     {
       "rank": 4,
-      "ticker": "RR.",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Rolls-Royce has positive 1-month momentum (+15.20%), a reasonable P/E of 21.07, and news sentiment of 0.136, catalyzed by UK defense spending and nuclear submarine/SMR opportunities.",
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Alphabet offers a steady strong_buy profile with P/E 27.47, +14.35% YTD, positive news sentiment 0.208, and moderate beta 1.247 as a hyperscaler investing in AI.",
       "drivers": [
-        "+15.20% 1-month momentum",
-        "P/E 21.07 cheap",
-        "UK defense spending catalyst",
-        "SMR/nuclear growth"
+        "P/E 27.47",
+        "strong_buy consensus",
+        "YTD +14.35%",
+        "beta 1.247"
       ]
     },
     {
       "rank": 5,
-      "ticker": "CRDO",
+      "ticker": "AMZN",
       "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Astera Labs maintains strong analyst consensus (strong_buy, an_score 1.32) with +12.73% 1-month momentum and news sentiment of 0.382, riding AI data center interconnect demand despite weekly pullback.",
+      "confidence": 0.8,
+      "rationale": "Amazon has strong_buy consensus with P/E 31.64, YTD +7.14%, news sentiment 0.205, and recent +6.90% 1W rebound as a hyperscaler AI beneficiary.",
       "drivers": [
-        "+12.73% 1-month momentum",
-        "Analyst score 1.32 strong_buy",
-        "News sentiment 0.382",
-        "AI interconnect demand"
+        "strong_buy consensus",
+        "P/E 31.64",
+        "1W +6.90%",
+        "news_s 0.205"
       ]
     },
     {
       "rank": 6,
-      "ticker": "285A",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "Despite recent weekly weakness, 285A has +636.21% YTD and +7.02% 1-month momentum, with a 1-day bounce of +10.16% showing resilient demand for advanced memory in AI infrastructure.",
+      "ticker": "BWXT",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "BWX Technologies shows +3.43% 1M, positive news sentiment 0.401, P/E 51.09, and a dividend yield of 54 bps, benefiting from nuclear SMR demand with low beta 0.737.",
       "drivers": [
-        "YTD +636.21% momentum",
-        "1-month +7.02%",
-        "1-day bounce +10.16%",
-        "Memory AI demand"
+        "news_s 0.401",
+        "P/E 51.09",
+        "div yield 54",
+        "beta 0.737"
       ]
     },
     {
       "rank": 7,
-      "ticker": "BWXT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "BWXT has positive news sentiment of 0.394, +3.43% 1-month momentum, and a low beta of 0.734, positioned as a stable nuclear play for AI-driven energy demand.",
+      "ticker": "VRT",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Vertiv has strong_buy consensus, YTD +71.21%, and high news sentiment 0.454, though P/E 75.7 reflects its leading role in AI data-center power infrastructure.",
       "drivers": [
-        "News sentiment 0.394",
-        "Low beta 0.734",
-        "Nuclear/SMR catalyst",
-        "Stable 1-month momentum"
+        "strong_buy consensus",
+        "YTD +71.21%",
+        "news_s 0.454",
+        "P/E 75.7"
       ]
     },
     {
       "rank": 8,
-      "ticker": "MXL",
+      "ticker": "META",
       "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MaxLinear has spectacular +403.08% YTD and +1.89% 1-month momentum despite a steep 1-day drop, reflecting extreme volatility but strong long-term AI connectivity demand.",
+      "confidence": 0.73,
+      "rationale": "Meta Platforms has strong_buy consensus, low P/E 21.19, and +7.37% 1W rebound, with news of building a cloud business to monetize AI capacity (Schwab Network).",
       "drivers": [
-        "YTD +403.08%",
-        "1-month +1.89% holds",
-        "AI connectivity",
-        "Extreme catalyst-driven"
+        "P/E 21.19",
+        "strong_buy consensus",
+        "1W +7.37%",
+        "news_s -0.053"
       ]
     },
     {
       "rank": 9,
-      "ticker": "VST",
+      "ticker": "MSFT",
       "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Vistra has strong analyst consensus (strong_buy, an_score 1.40) and a 0.61% dividend yield, with nuclear/energy assets essential for AI data center power, despite recent 1-week pullback.",
+      "confidence": 0.72,
+      "rationale": "Microsoft has strong_buy consensus, low P/E 23.26, +10.67% 1W bounce off YTD losses, and beta 1.13 as a defensive hyperscaler with stable free cash flow.",
       "drivers": [
-        "Analyst score 1.40 strong_buy",
-        "Dividend yield 0.61%",
-        "Nuclear energy catalyst",
-        "AI power demand"
+        "P/E 23.26",
+        "strong_buy consensus",
+        "1W +10.67%",
+        "beta 1.13"
       ]
     },
     {
       "rank": 10,
-      "ticker": "TLN",
+      "ticker": "ETN",
       "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Talen Energy has a news sentiment of 0.288 and is highlighted as 'Stock Of The Day' by Investor's Business Daily, delivering for Amazon AI data centers with nuclear-powered infrastructure.",
+      "confidence": 0.7,
+      "rationale": "Eaton Corp has YTD +22.47%, positive news sentiment 0.405, P/E 39.07, and dividend yield 110 bps as a diversified power infrastructure beneficiary of AI capex.",
       "drivers": [
-        "News sentiment 0.288",
-        "Amazon AI data center deal",
-        "Nuclear power catalyst",
-        "YTD -8% oversold"
+        "YTD +22.47%",
+        "news_s 0.405",
+        "P/E 39.07",
+        "div yield 110"
       ]
     }
   ],
@@ -145,6 +145,28 @@ window.SIGNALS_DATA = {
       "rationale": "Momentum screener: +533.99% YTD exceeds strong buy threshold.",
       "drivers": [
         "YTD +533.99% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+633.92%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +633.92% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +633.92% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+403.08%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +403.08% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +403.08% \u2265 124.5% SB"
       ]
     },
     {
@@ -291,17 +313,6 @@ window.SIGNALS_DATA = {
       ]
     },
     {
-      "ticker": "VRT",
-      "signal": "buy",
-      "confidence": 0.588,
-      "ytd": "+71.21%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +71.21% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +71.21% \u2265 60.6% B"
-      ]
-    },
-    {
       "ticker": "WULF",
       "signal": "buy",
       "confidence": 0.547,
@@ -327,132 +338,132 @@ window.SIGNALS_DATA = {
   "previous_picks": [
     {
       "rank": 1,
-      "ticker": "SNDK",
+      "ticker": "GOOGL",
       "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "SNDK surged 726% YTD and 10.3% today after Bernstein raised its target to $3,000, citing structural LTAs that reduce cyclicality; P/E 77.5, news sentiment +0.264.",
+      "confidence": 0.85,
+      "rationale": "Google owns the full AI stack (Gemini, TPUs, Cloud) with Q1 revenue up 21.8% YoY to $109.90B and Cloud growing 63%, trades at a reasonable 27x trailing P/E with strong analyst consensus (58 buy ratings, zero sells).",
       "drivers": [
-        "+726% YTD",
-        "Bernstein $3,000 target",
-        "LTA structural shift",
-        "news_s 0.264"
+        "Q1 revenue beat +21.8% YoY",
+        "Cloud backlog near $460B",
+        "58 analyst buys, 0 sells",
+        "27x P/E reasonable for growth"
       ]
     },
     {
       "rank": 2,
-      "ticker": "MU",
+      "ticker": "GEV",
       "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MU has strong_buy consensus, P/E 26.1, +266% YTD, and recent earnings beat with 345% revenue growth; memory supercycle confirmed by analysts.",
+      "confidence": 0.8,
+      "rationale": "GEV surged +16.09% in the past month and is up +64.10% YTD, benefiting from a bullish Bernstein initiation with a $1,206 target and strong nuclear/AI energy demand catalyst.",
       "drivers": [
-        "strong_buy consensus",
-        "P/E 26.1",
-        "+266% YTD",
-        "earnings beat +345% rev"
+        "+16.09% 1-month momentum",
+        "Bernstein target $1,206",
+        "AI energy demand catalyst",
+        "YTD +64.10%"
       ]
     },
     {
       "rank": 3,
-      "ticker": "MRVL",
+      "ticker": "AMZN",
       "signal": "strong_buy",
-      "confidence": 0.938,
-      "rationale": "MRVL shows strong_buy consensus, +35.8% 1M momentum, and highest news sentiment at 0.442; P/E 102 reflects AI networking demand.",
+      "confidence": 0.8,
+      "rationale": "Amazon trades at 31.64x P/E with a stellar news sentiment of 0.506, strong analyst consensus (strong_buy, an_score 1.34), and +6.90% weekly momentum as hyperscaler AI demand accelerates.",
       "drivers": [
-        "strong_buy consensus",
-        "+35.8% 1M",
-        "news_s 0.442",
-        "AI networking play"
+        "News sentiment +0.506",
+        "Strong analyst consensus",
+        "Weekly momentum +6.90%",
+        "AWS AI infrastructure catalyst"
       ]
     },
     {
       "rank": 4,
-      "ticker": "CRDO",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "CRDO has strong_buy consensus, +20.3% 1M, +11% 1D, and news sentiment 0.294; P/E 108.8 but strong AI data-center connectivity demand.",
+      "ticker": "RR.",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Rolls-Royce has positive 1-month momentum (+15.20%), a reasonable P/E of 21.07, and news sentiment of 0.136, catalyzed by UK defense spending and nuclear submarine/SMR opportunities.",
       "drivers": [
-        "strong_buy consensus",
-        "+20.3% 1M",
-        "+11% 1D",
-        "news_s 0.294"
+        "+15.20% 1-month momentum",
+        "P/E 21.07 cheap",
+        "UK defense spending catalyst",
+        "SMR/nuclear growth"
       ]
     },
     {
       "rank": 5,
-      "ticker": "GEV",
-      "signal": "buy",
+      "ticker": "CRDO",
+      "signal": "strong_buy",
       "confidence": 0.7,
-      "rationale": "GEV gained 73% YTD, +23.7% 1M, with a reasonable P/E of 34.4 and buy consensus; SMR exposure and AI data-center power demand support.",
+      "rationale": "Astera Labs maintains strong analyst consensus (strong_buy, an_score 1.32) with +12.73% 1-month momentum and news sentiment of 0.382, riding AI data center interconnect demand despite weekly pullback.",
       "drivers": [
-        "+73% YTD",
-        "+23.7% 1M",
-        "P/E 34.4",
-        "SMR/AI power demand"
+        "+12.73% 1-month momentum",
+        "Analyst score 1.32 strong_buy",
+        "News sentiment 0.382",
+        "AI interconnect demand"
       ]
     },
     {
       "rank": 6,
-      "ticker": "COHR",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "COHR is up 103% YTD with +8.7% 1M, buy consensus, and news sentiment 0.167; fibre-optical play benefiting from AI data-center expansion.",
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Despite recent weekly weakness, 285A has +636.21% YTD and +7.02% 1-month momentum, with a 1-day bounce of +10.16% showing resilient demand for advanced memory in AI infrastructure.",
       "drivers": [
-        "+103% YTD",
-        "+8.7% 1M",
-        "buy consensus",
-        "fibre-optical AI demand"
+        "YTD +636.21% momentum",
+        "1-month +7.02%",
+        "1-day bounce +10.16%",
+        "Memory AI demand"
       ]
     },
     {
       "rank": 7,
-      "ticker": "MXL",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MXL has extreme momentum: +592% YTD, +48.5% 1M, +16.5% 1D, but no analyst rating and P/E null; high risk but strong end-market strength.",
+      "ticker": "BWXT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BWXT has positive news sentiment of 0.394, +3.43% 1-month momentum, and a low beta of 0.734, positioned as a stable nuclear play for AI-driven energy demand.",
       "drivers": [
-        "+592% YTD",
-        "+48.5% 1M",
-        "+16.5% 1D",
-        "no analyst rating"
+        "News sentiment 0.394",
+        "Low beta 0.734",
+        "Nuclear/SMR catalyst",
+        "Stable 1-month momentum"
       ]
     },
     {
       "rank": 8,
-      "ticker": "285A",
+      "ticker": "MXL",
       "signal": "strong_buy",
       "confidence": 1.0,
-      "rationale": "285A is up 678% YTD with +21.7% 1M, buy consensus, and news sentiment 0.233; Japan memory stock riding the AI supercycle.",
+      "rationale": "MaxLinear has spectacular +403.08% YTD and +1.89% 1-month momentum despite a steep 1-day drop, reflecting extreme volatility but strong long-term AI connectivity demand.",
       "drivers": [
-        "+678% YTD",
-        "+21.7% 1M",
-        "buy consensus",
-        "Japan memory play"
+        "YTD +403.08%",
+        "1-month +1.89% holds",
+        "AI connectivity",
+        "Extreme catalyst-driven"
       ]
     },
     {
       "rank": 9,
-      "ticker": "WDC",
+      "ticker": "VST",
       "signal": "strong_buy",
-      "confidence": 0.966,
-      "rationale": "WDC is up 241% YTD with P/E 38.3 and buy consensus; recent -4.8% 1W pullback offers entry, supported by memory supercycle and AI demand.",
+      "confidence": 0.6,
+      "rationale": "Vistra has strong analyst consensus (strong_buy, an_score 1.40) and a 0.61% dividend yield, with nuclear/energy assets essential for AI data center power, despite recent 1-week pullback.",
       "drivers": [
-        "+241% YTD",
-        "P/E 38.3",
-        "buy consensus",
-        "memory supercycle"
+        "Analyst score 1.40 strong_buy",
+        "Dividend yield 0.61%",
+        "Nuclear energy catalyst",
+        "AI power demand"
       ]
     },
     {
       "rank": 10,
-      "ticker": "RR.",
+      "ticker": "TLN",
       "signal": "buy",
       "confidence": 0.55,
-      "rationale": "RR. has +20.7% YTD, P/E 20.9, dividend yield 66, and buy consensus; nuclear operations exposure with steady momentum.",
+      "rationale": "Talen Energy has a news sentiment of 0.288 and is highlighted as 'Stock Of The Day' by Investor's Business Daily, delivering for Amazon AI data centers with nuclear-powered infrastructure.",
       "drivers": [
-        "+20.7% YTD",
-        "P/E 20.9",
-        "dividend yield 66",
-        "buy consensus"
+        "News sentiment 0.288",
+        "Amazon AI data center deal",
+        "Nuclear power catalyst",
+        "YTD -8% oversold"
       ]
     }
   ]
