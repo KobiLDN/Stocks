@@ -6,6 +6,8 @@
 
 ## Done
 
+- **Nav flash eliminated — `nav.js` critical-path split** — `buildNav()`, `_RAIL_ITEMS`, and `_SECTOR_PAGES` moved from deferred `shared.js` into a new `nav.js` loaded synchronously before `</body>`; runs before first browser paint so rail and nav-panel are correct on first render with zero flash; `shared.js` stays deferred; future nav changes edit `nav.js` only — single source of truth (`nav.js`, `shared.js`, all 62 HTML pages).
+
 - **Mobile burger menu — consistent across all pages** — hamburger button `border: none` added to `shared.css` (canonical single source); per-page accordion HTML stripped from all 49 sector drawer `nav-panel`s so `buildNav()` populates them identically to All/ pages; drawer nav-panel forced to compact 72px icon+label column via high-specificity CSS in `shared.css`; bottom tab bar removed (`shared.css`, all sector + All/ HTML pages).
 
 - **Macro block YTD/1Y + VIX signal in CDN export (issue #23)** — `update_market.py` fetches 1-year history for SPY/QQQ so it can compute `change_ytd` (first trading day of current year → today) and `change_1y` (52 weeks ago → today) in addition to 1D/1W/1M; adds `vix.signal` label (calm/normal/high_fear/extreme_fear based on VIX level thresholds <15/<25/<30/>30); new fields pass through to the CDN export `macro` key via `generate_export.py`'s existing `read_macro()` passthrough — portfolio AI now has full market-regime context (`update_market.py`, `generate_export.py`).
