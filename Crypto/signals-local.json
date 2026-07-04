@@ -1,9 +1,142 @@
 {
-  "updated": "2026-07-04 10:22",
+  "updated": "2026-07-04 22:51",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SOL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong momentum with +20.73% 1m and +14.95% 1w, positive news sentiment 0.308, and large market cap of $47.7B; on-chain usage hitting new highs with 3.8B monthly transactions and 7M daily active addresses.",
+      "drivers": [
+        "+20.73% 1m momentum",
+        "+14.95% 1w momentum",
+        "positive news sentiment 0.308",
+        "large cap $47.7B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ADA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Exceptional weekly gain of +32.69% and daily gain of +8.08%, leading altcoin recovery; catalyst from German banks opening crypto trading for 50 million customers.",
+      "drivers": [
+        "+32.69% 1w gain",
+        "+8.08% 1d gain",
+        "German banks crypto trading catalyst",
+        "market cap $7.04B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong weekly performance of +13.41% with large market cap of $216.1B and positive news sentiment 0.22; Ethereum Institutional launch on July 1 adds institutional adoption catalyst.",
+      "drivers": [
+        "+13.41% 1w gain",
+        "large cap $216.1B",
+        "positive news sentiment 0.22",
+        "Ethereum Institutional launch"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Impressive weekly gain of +20.40% and positive YTD return of +4.68%, market cap $7.14B; payments narrative benefits from broader altcoin recovery.",
+      "drivers": [
+        "+20.40% 1w gain",
+        "+4.68% YTD",
+        "market cap $7.14B",
+        "payments sector momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solid weekly gain of +10.24% with positive news sentiment 0.274 and market cap $5.87B; oracle infrastructure benefits from DeFi and RWA tokenization trends.",
+      "drivers": [
+        "+10.24% 1w gain",
+        "positive news sentiment 0.274",
+        "market cap $5.87B",
+        "oracle infrastructure demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Weekly gain of +10.59% and daily gain of +3.27%, overtook USDC to become 5th largest crypto by market cap ($72.6B); positive news sentiment 0.137.",
+      "drivers": [
+        "+10.59% 1w gain",
+        "5th largest crypto by market cap",
+        "positive news sentiment 0.137",
+        "market cap $72.6B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Bitcoin holds above $62K with +5.13% weekly gain, whale accumulation of 270K BTC ($16.7B) in two weeks, and $221M ETF inflow on July 2; market anchor at $1.27T cap.",
+      "drivers": [
+        "+5.13% 1w gain",
+        "whale accumulation 270K BTC",
+        "$221M ETF inflow",
+        "market cap $1.27T"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Exceptional 1-month momentum of +30.06% and +8.88% weekly gain, YTD +20.56%; AI narrative with small market cap $0.147B offers high beta potential.",
+      "drivers": [
+        "+30.06% 1m momentum",
+        "+20.56% YTD",
+        "AI narrative",
+        "small cap $0.147B"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Strong 1-month gain of +18.47% and weekly gain of +11.57%, YTD +1.19%; AI token with small market cap $0.072B, benefiting from AI sector interest.",
+      "drivers": [
+        "+18.47% 1m gain",
+        "+11.57% 1w gain",
+        "AI token",
+        "small cap $0.072B"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SUI",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Weekly gain of +13.11% with market cap $3.14B; emerging L1 with growing ecosystem, benefiting from altcoin recovery and positive on-chain activity.",
+      "drivers": [
+        "+13.11% 1w gain",
+        "market cap $3.14B",
+        "emerging L1",
+        "altcoin recovery tailwind"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SOL",
@@ -132,139 +265,6 @@
         "AI sector recovery",
         "large cap in AI category",
         "stable price near support"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SOL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SOL leads the rally with +17.19% weekly gain, +3.47% daily, and a positive news sentiment of 0.099, boosted by the Securitize NYSE listing and a short squeeze that liquidated $281M in bearish bets.",
-      "drivers": [
-        "+17.19% weekly momentum",
-        "Securitize tokenization catalyst",
-        "short squeeze beneficiary",
-        "positive news sentiment 0.099"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ETH",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "ETH surged +10.17% weekly and +5.63% daily, leading the short squeeze with $157M in liquidated shorts, despite negative news sentiment -0.164; weak jobs data and $221M BTC ETF inflows support risk-on rotation.",
-      "drivers": [
-        "+10.17% weekly gain",
-        "largest short liquidation share",
-        "weak jobs data catalyst",
-        "ETF inflow tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BTC",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "BTC rallied to $61.6K (+2.91% weekly, +2.05% daily) as $221M ETF inflows ended a 10-day outflow streak, with positive news sentiment 0.104 and a short squeeze backdrop.",
-      "drivers": [
-        "$221M ETF inflow reversal",
-        "short squeeze catalyst",
-        "positive news sentiment 0.104",
-        "key $60K support held"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "KAITO shows exceptional momentum with +25.37% monthly and +18.40% weekly gains, despite a -4.72% daily pullback; YTD +13.57% and small $0.14B market cap offer high beta upside.",
-      "drivers": [
-        "+25.37% monthly momentum",
-        "+18.40% weekly gain",
-        "small cap high beta",
-        "positive YTD return"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "LINK gained +7.95% weekly and +4.21% daily with the highest news sentiment in the universe at 0.274, supported by Robinhood's blockchain rollout and infrastructure narrative.",
-      "drivers": [
-        "highest news sentiment 0.274",
-        "+7.95% weekly gain",
-        "infrastructure catalyst",
-        "Robinhood blockchain news"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XRP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "XRP rose +6.56% weekly and +4.24% daily with strong news sentiment 0.169, benefiting from the broad short squeeze and weak jobs data, though CLARITY Act delay caps upside.",
-      "drivers": [
-        "+6.56% weekly gain",
-        "positive news sentiment 0.169",
-        "short squeeze beneficiary",
-        "weak jobs data tailwind"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ADA surged +15.24% weekly and +6.90% daily, the strongest daily gain among L1s, with positive news sentiment 0.056, though YTD -50.31% remains a concern.",
-      "drivers": [
-        "+15.24% weekly gain",
-        "+6.90% daily gain",
-        "positive news sentiment 0.056",
-        "high beta recovery play"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.63,
-      "rationale": "TAO gained +4.73% daily and +0.93% weekly, with YTD -2.16% showing relative resilience; AI narrative and $2.37B market cap provide a balanced risk-reward.",
-      "drivers": [
-        "resilient YTD -2.16%",
-        "+4.73% daily gain",
-        "AI narrative catalyst",
-        "mid-cap stability"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "TRX is the only asset with positive YTD at +12.03% and the highest news sentiment 0.202, though weekly -0.96% and daily +0.97% show lagging momentum; sanctions news adds uncertainty.",
-      "drivers": [
-        "positive YTD +12.03%",
-        "highest news sentiment 0.202",
-        "defensive relative strength",
-        "sanctions headline risk"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "NMR shows strong momentum with +14.24% monthly and +7.51% weekly gains, YTD +0.34%, but a -3.71% daily dip and tiny $0.072B market cap make it a high-risk, high-reward pick.",
-      "drivers": [
-        "+14.24% monthly momentum",
-        "+7.51% weekly gain",
-        "positive YTD return",
-        "small cap high beta"
       ]
     }
   ]
