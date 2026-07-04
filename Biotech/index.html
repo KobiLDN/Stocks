@@ -165,7 +165,6 @@
   /* Price & pills */
   .price { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 17px; }
 
-
   /* Returns */
   .return-mega     { color: #0284c7; font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
   html[data-theme="dark"] .return-mega { color: #ffd700; }
@@ -252,10 +251,7 @@
     flex-shrink: 0; transition: all 0.15s;
   }
   .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
-  .hamburger {
-    display: none; width: 44px; height: 44px; background: transparent; cursor: pointer; font-size: 18px;
-    align-items: center; justify-content: center; flex-shrink: 0;
-  }
+
   .drawer-overlay {
     display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
   }
@@ -278,7 +274,7 @@
   @media (max-width: 600px) {
     body[data-layout="rail"] .left-rail { display: none; }
     .nav-panel { display: none !important; }
-    .hamburger { display: flex; }
+
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }

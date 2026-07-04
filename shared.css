@@ -817,8 +817,16 @@ footer {
 }
 .disclaimer span { color: var(--accent2); }
 
+/* ---- Hamburger button (hidden desktop, shown mobile) ---- */
+.hamburger {
+  display: none; width: 44px; height: 44px; border: none;
+  background: transparent; cursor: pointer; font-size: 18px;
+  align-items: center; justify-content: center; flex-shrink: 0;
+}
+
 /* ---- Mobile drawer: override the ≤600px hide rules + compact nav-panel ---- */
 @media (max-width: 600px) {
+  .hamburger { display: flex; }
   .drawer-overlay.open .left-rail { display: flex !important; flex-direction: column; }
   .drawer-overlay.open .nav-panel { display: flex !important; flex-direction: column; }
 }
