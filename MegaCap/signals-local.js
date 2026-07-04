@@ -1,0 +1,1 @@
+window.SIGNALS_DATA = {"updated":"—","model":"deepseek/deepseek-v4-flash","endpoint":"https://openrouter.ai/api/v1/chat/completions","source":"openrouter","picks":[],"momentum_picks":[],"previous_picks":[]};

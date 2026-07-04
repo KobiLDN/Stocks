@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment across 192 stocks — AI, Biotech, Defence, Tech, Crypto, and Energy sectors.">
+<meta name="description" content="Latest news and sentiment across 242 stocks — AI, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap sectors.">
 <title>All Sectors — News</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
   .filter-btn[data-sector="tech"].active    { background: var(--indigo); border-color: var(--indigo); color: #fff; }
   .filter-btn[data-sector="crypto"].active  { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-sector="energy"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-sector="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
   /* Sector badges */
   .news-sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; padding: 2px 7px; letter-spacing: 0.5px; }
@@ -25,6 +26,7 @@
   .sect-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
   .sect-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
   .sect-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .sect-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
 
   /* ─── 3-Panel Layout ─── */
   body[data-layout="rail"] { flex-direction: row; }
@@ -150,6 +152,7 @@
     <button class="filter-btn"        data-sector="tech"    onclick="setSector('tech',this)">Tech</button>
     <button class="filter-btn"        data-sector="crypto"  onclick="setSector('crypto',this)">Crypto</button>
     <button class="filter-btn"        data-sector="energy"  onclick="setSector('energy',this)">Energy</button>
+    <button class="filter-btn"        data-sector="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="setSector('megacap',this)">Mega-Cap</button>
   </div>
 
 <div class="controls-row">
@@ -191,7 +194,7 @@
 
   const SECTOR_LABELS = {
     'ai':'AI Infra','biotech':'Biotech','defence':'Defence',
-    'tech':'Tech','crypto':'Crypto','energy':'Energy',
+    'tech':'Tech','crypto':'Crypto','energy':'Energy','megacap':'Mega-Cap',
   };
 
   function sentClass(score) {
@@ -305,6 +308,7 @@
     { key: 'tech',    path: '../Tech/prices-data.js'     },
     { key: 'crypto',  path: '../Crypto/prices-data.js'   },
     { key: 'energy',  path: '../Energy/prices-data.js'   },
+    { key: 'megacap', path: '../MegaCap/prices-data.js'  },
   ];
 
   Promise.all(SECTORS.map(async sd => {

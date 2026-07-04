@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="All sectors stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across 242 stocks at a glance.">
-<title>All Sectors — Heatmap</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="Mega-cap stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 50 mega-cap stocks at a glance.">
+<title>Mega-Cap — Heatmap</title>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
@@ -88,8 +88,12 @@
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<!-- Panel 1: Sector switcher -->
 <div class="left-rail">
 </div>
+
+<!-- Panel 2: Nav panel (Heatmap active) -->
 <div class="nav-panel">
 <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
 <a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
@@ -99,19 +103,20 @@
 <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
 <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
 </div>
+
+<!-- Panel 3: Right side -->
 <div class="right-side">
 <header>
   <div class="header-inner">
   <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
-    <h1>All <span>Heatmap</span></h1>
-    <div class="header-sub"><span id="hm-stock-count">192</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
-</div>
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-</div>
-
-<div class="toolbar">
+    <h1>Mega-Cap <span>Heatmap</span></h1>
+    <div class="header-sub"><span id="hm-stock-count">50</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+  <div class="toolbar">
     <span class="toolbar-label">Colour by</span>
     <div class="metric-group" id="metric-group">
       <button class="metric-btn active" data-metric="1d">1D</button>
@@ -129,6 +134,7 @@
     </div>
   </div>
 </header>
+
 <div class="page-body">
 <div class="page-main">
 <div class="container">
@@ -136,14 +142,14 @@
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">192 stocks</span>
+    <span class="section-hdr-count" id="hm-all-count">50 stocks</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
   <div class="section-hdr" style="margin-top:48px;">
-    <span class="section-hdr-label">By Sector</span>
+    <span class="section-hdr-label">By Category</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-sector-count">6 sectors</span>
+    <span class="section-hdr-count" id="hm-cat-count">7 categories</span>
   </div>
   <div id="sectors-container"></div>
 
@@ -151,7 +157,78 @@
 
 <div id="tooltip" class="tooltip hidden"></div>
 
+
+<script src="prices-data.js"></script>
 <script>
+function getCssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
+const NAMES = {
+  'AAPL':    'Apple Inc.',
+  'MSFT':    'Microsoft Corporation',
+  'NVDA':    'NVIDIA Corporation',
+  'GOOGL':   'Alphabet Inc.',
+  'META':    'Meta Platforms',
+  'AMZN':    'Amazon.com',
+  'TSLA':    'Tesla',
+  'NFLX':    'Netflix',
+  'JPM':     'JPMorgan Chase',
+  'BAC':     'Bank of America',
+  'BRK-B':   'Berkshire Hathaway B',
+  'V':       'Visa Inc.',
+  'MA':      'Mastercard',
+  'GS':      'Goldman Sachs',
+  'BLK':     'BlackRock',
+  'LLY':     'Eli Lilly',
+  'UNH':     'UnitedHealth Group',
+  'JNJ':     'Johnson & Johnson',
+  'ABBV':    'AbbVie',
+  'MRK':     'Merck',
+  'TMO':     'Thermo Fisher Scientific',
+  'ABT':     'Abbott Laboratories',
+  'PG':      'Procter & Gamble',
+  'KO':      'Coca-Cola',
+  'PEP':     'PepsiCo',
+  'MCD':     "McDonald's",
+  'NKE':     'Nike',
+  'WMT':     'Walmart',
+  'COST':    'Costco',
+  'XOM':     'ExxonMobil',
+  'CVX':     'Chevron',
+  'CAT':     'Caterpillar',
+  'HON':     'Honeywell',
+  'GE':      'GE Aerospace',
+  'RTX':     'RTX Corp',
+  'BA':      'Boeing',
+  'AMD':     'Advanced Micro Devices',
+  'QCOM':    'Qualcomm',
+  'AVGO':    'Broadcom',
+  'TSM':     'Taiwan Semiconductor',
+  'ASML':    'ASML Holding',
+  'ARM':     'Arm Holdings',
+  'INTC':    'Intel',
+  '2222.SR': 'Saudi Aramco',
+  'BABA':    'Alibaba Group',
+  'SAP':     'SAP SE',
+  'SONY':    'Sony Group',
+  'TM':      'Toyota Motor',
+  'NVO':     'Novo Nordisk',
+  'HSBC':    'HSBC Holdings',
+};
+
+const CAT_LABELS = {
+  'big-tech':           'Big Tech',
+  'financials':         'Financials',
+  'healthcare':         'Healthcare',
+  'consumer':           'Consumer',
+  'energy-industrial':  'Energy & Industrial',
+  'tech-semis':         'Tech & Semis',
+  'global-growth':      'Global Growth',
+};
+
+const CAT_ORDER = ['big-tech', 'financials', 'healthcare', 'consumer', 'energy-industrial', 'tech-semis', 'global-growth'];
+
 const METRICS_CFG = {
   '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },
   '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },
@@ -160,18 +237,7 @@ const METRICS_CFG = {
   '1y':  { field: 'return_1yr', label: '1Y',  threshold: 60 },
 };
 
-const SECTOR_DEFS = [
-  { key: 'ai',      label: 'AI Infrastructure', icon: '🤖' },
-  { key: 'biotech', label: 'Biotech',            icon: '🧬' },
-  { key: 'defence', label: 'Defence',            icon: '🛡️' },
-  { key: 'tech',    label: 'Technology',         icon: '💻' },
-  { key: 'crypto',  label: 'Crypto',             icon: '₿'  },
-  { key: 'energy',  label: 'Energy',             icon: '⚡' },
-  { key: 'megacap', label: 'Mega-Cap',           icon: '💎' },
-];
-
-const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
+function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + t + '/'; }
 
 function parsePct(s) {
   if (s == null || s === '' || s === '—' || s === 'N/A') return null;
@@ -200,11 +266,8 @@ function tileSize(stock, metricId) {
   return v === null ? 0.05 : Math.max(0.05, Math.abs(v));
 }
 
-function getCssVar(name) {
-  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-}
-
-function tileColor(val) {
+/* Color: flat green (gainers) or flat red (losers) */
+function tileColor(val, threshold) {
   if (val === null) return getCssVar('--surface');
   if (val > 0) return getCssVar('--green');
   if (val < 0) return getCssVar('--red');
@@ -212,12 +275,13 @@ function tileColor(val) {
 }
 
 let activeMetric = localStorage.getItem('heatmap-metric') || '1d';
-let allStocks = [];
+let allStocks    = [];
 
 function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
   containerEl.innerHTML = '';
   if (!stocks.length) return;
 
+  const cfg = METRICS_CFG[metricId];
   const W = explicitWidth || containerEl.clientWidth || 1200;
   const H = height;
 
@@ -225,18 +289,11 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
     .sum(d => tileSize(d, metricId))
     .sort((a, b) => b.value - a.value);
 
-  d3.treemap()
-    .size([W, H])
-    .paddingInner(1)
-    .paddingOuter(0)
-    .round(true)(root);
+  d3.treemap().size([W, H]).paddingInner(1).paddingOuter(0).round(true)(root);
 
   const leaves = root.leaves();
 
-  const svg = d3.select(containerEl)
-    .append('svg')
-    .attr('width', W)
-    .attr('height', H);
+  const svg = d3.select(containerEl).append('svg').attr('width', W).attr('height', H);
 
   const tileG = svg.selectAll('.tile')
     .data(leaves)
@@ -259,7 +316,7 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
   tileG.append('rect')
     .attr('width',  d => Math.max(0, d.x1 - d.x0))
     .attr('height', d => Math.max(0, d.y1 - d.y0))
-    .attr('fill',   d => tileColor(getVal(d.data, metricId)))
+    .attr('fill',   d => tileColor(getVal(d.data, metricId), cfg.threshold))
     .attr('stroke', getCssVar('--bg'))
     .attr('stroke-width', 0.5)
     .on('mouseover', function() { d3.select(this).attr('filter', 'brightness(1.3)'); })
@@ -269,9 +326,8 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
   leaves.forEach(d => {
     const w = d.x1 - d.x0, h = d.y1 - d.y0;
     const vs = fmtPct(getVal(d.data, metricId));
-    d._label = d.data.ticker + (d.data.sector === 'crypto' ? '(c)' : '');
-    const tRaw = Math.min((w * 0.60) / (d._label.length * CW), h * 0.30, 30);
-    const vRaw = Math.min((w * 0.60) / (vs.length * CW),       h * 0.22, 18);
+    const tRaw = Math.min((w * 0.60) / (d.data.ticker.length * CW), h * 0.30, 30);
+    const vRaw = Math.min((w * 0.60) / (vs.length * CW),            h * 0.22, 18);
     d._tfs = (tRaw >= 8  && w >= 26 && h >= 18) ? tRaw : 0;
     d._vfs = (d._tfs > 0 && vRaw >= 7 && h >= 32) ? vRaw : 0;
     d._vs  = vs;
@@ -286,7 +342,7 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
     .attr('font-family', 'IBM Plex Sans, sans-serif').attr('font-weight', '400')
     .attr('font-size', d => d._tfs || 0)
     .attr('fill', d => d._tfs ? '#ffffff' : 'transparent')
-    .text(d => d._label);
+    .text(d => d.data.ticker);
 
   tileG.append('text')
     .attr('clip-path', (d, i) => `url(#c${containerEl.id}-${i})`)
@@ -298,6 +354,7 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
     .text(d => d._vfs ? d._vs : '');
 }
 
+/* ── Split helper: gainers left, losers right ── */
 function drawSplit(el, stocks, metricId, H) {
   el.innerHTML = '';
   const gainers = stocks.filter(s => (getVal(s, metricId) ?? 0) >= 0);
@@ -338,27 +395,31 @@ function renderSectors(stocks, metricId) {
 
   const groups = {};
   stocks.forEach(s => {
-    const key = s.sector || 'other';
-    if (!groups[key]) groups[key] = [];
-    groups[key].push(s);
+    const cat = s.category || 'other';
+    if (!groups[cat]) groups[cat] = [];
+    groups[cat].push(s);
   });
 
-  SECTOR_DEFS.forEach(sd => {
-    const ss = groups[sd.key];
-    if (!ss || !ss.length) return;
-    const H = 240;
+  const orderedSlugs = [
+    ...CAT_ORDER.filter(c => groups[c]),
+    ...Object.keys(groups).filter(c => !CAT_ORDER.includes(c))
+  ];
+
+  orderedSlugs.forEach(slug => {
+    const ss = groups[slug];
+    const name = CAT_LABELS[slug] || slug;
+    const H = Math.max(180, Math.min(340, ss.length * 52));
 
     const block = document.createElement('div');
     block.className = 'sector-block';
 
     const label = document.createElement('div');
     label.className = 'sector-name';
-    label.innerHTML = sd.icon + ' ' + sd.label.toUpperCase() +
-      ' <span class="sc">· ' + ss.length + ' stock' + (ss.length !== 1 ? 's' : '') + '</span>';
+    label.innerHTML = name.toUpperCase() + ' <span class="sc">· ' + ss.length + ' stock' + (ss.length !== 1 ? 's' : '') + '</span>';
 
     const mapEl = document.createElement('div');
     mapEl.className = 'map-wrap';
-    mapEl.id = 'sec-' + sd.key;
+    mapEl.id = 'sec-' + slug;
     mapEl.style.height = H + 'px';
 
     block.appendChild(label);
@@ -403,7 +464,7 @@ function showTooltip(event, stock) {
 
   ttEl.innerHTML =
     `<div class="tt-ticker">${stock.ticker}</div>` +
-    `<div class="tt-company">${stock.company_name || stock.ticker}</div>` +
+    `<div class="tt-company">${stock.company_name || NAMES[stock.ticker] || stock.ticker}</div>` +
     `<div class="tt-grid">${rows}${mcapStr}</div>` +
     `<div class="tt-price">${priceStr}</div>`;
 
@@ -438,63 +499,47 @@ document.getElementById('metric-group').addEventListener('click', ev => {
   renderAll2(m);
 });
 
-/* ── Multi-sector loading ── */
-const SECTOR_PATHS = [
-  { key: 'ai',      path: '../AI/prices-data.js'      },
-  { key: 'biotech', path: '../Biotech/prices-data.js'  },
-  { key: 'defence', path: '../Defence/prices-data.js'  },
-  { key: 'tech',    path: '../Tech/prices-data.js'     },
-  { key: 'crypto',  path: '../Crypto/prices-data.js'   },
-  { key: 'energy',  path: '../Energy/prices-data.js'   },
-  { key: 'megacap', path: '../MegaCap/prices-data.js'  },
-];
-
-Promise.all(SECTOR_PATHS.map(async sd => {
-  try {
-    const text = await fetch(sd.path).then(r => r.text());
-    const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-    if (!match) return { stocks: [], updated: null };
-    const data = JSON.parse(match[1]);
-    return { stocks: (data.stocks || []).map(s => ({ ...s, sector: sd.key })), updated: data.updated };
-  } catch(e) { return { stocks: [], updated: null }; }
-})).then(results => {
-  const seen = new Set();
-  allStocks = results.flatMap(r => r.stocks).filter(s => { if (seen.has(s.ticker)) return false; seen.add(s.ticker); return true; });
-  buildTape(allStocks);
-  const sc = document.getElementById('hm-stock-count'); if (sc) sc.textContent = new Set(allStocks.map(s => s.ticker)).size;
-  const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
-
+function init() {
+  const stocks = window.PRICES_DATA && window.PRICES_DATA.stocks;
+  if (!stocks || !stocks.length) {
+    document.getElementById('map-all').innerHTML =
+      '<div class="empty-state">No data — prices-data.js not loaded or empty.</div>';
+    return;
+  }
+  allStocks = stocks;
   const tsEl = document.getElementById('heatmap-ts');
-  if (tsEl) tsEl.textContent = updated;
-  const dbTs = document.getElementById('data-bar-ts');
-  if (dbTs) dbTs.textContent = updated;
-  const scEl  = document.getElementById('hm-stock-count');
+  if (tsEl) tsEl.textContent = window.PRICES_DATA.updated || '—';
+  const catCount = new Set(stocks.map(s => s.category)).size;
+  const scEl = document.getElementById('hm-stock-count');
   const allEl = document.getElementById('hm-all-count');
-  if (scEl)  scEl.textContent  = allStocks.length;
-  if (allEl) allEl.textContent = allStocks.length + ' stocks';
-
+  const catEl = document.getElementById('hm-cat-count');
+  if (scEl)  scEl.textContent  = stocks.length;
+  if (allEl) allEl.textContent = stocks.length + ' stocks';
+  if (catEl) catEl.textContent = catCount + ' categories';
   document.querySelectorAll('.metric-btn').forEach(b => b.classList.toggle('active', b.dataset.metric === activeMetric));
   renderAll2(activeMetric);
 
   let t;
-  window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => renderAll2(activeMetric), 280); });
-});
+  window.addEventListener('resize', () => {
+    clearTimeout(t);
+    t = setTimeout(() => renderAll2(activeMetric), 280);
+  });
+}
 
+init();
 window._onThemeChange = () => renderAll2(activeMetric);
-
-function openDrawer() {
-  document.getElementById('drawer-overlay').classList.add('open');
-}
-function closeDrawer() {
-  document.getElementById('drawer-overlay').classList.remove('open');
-}
+function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
 </script>
+
+</div><!-- /.container -->
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
 </div><!-- /.right-side -->
 
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
-<div class="drawer" onclick="event.stopPropagation()">
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
 <div class="left-rail">
 </div>
 <div class="nav-panel">
@@ -509,6 +554,7 @@ function closeDrawer() {
 </div>
 </div>
 
+<!-- Bottom tab bar (mobile) -->
 <div class="bottom-tabs">
 <div class="bottom-tabs-inner">
 </div>

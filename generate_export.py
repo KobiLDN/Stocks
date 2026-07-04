@@ -8,7 +8,7 @@ import json, re, csv, os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "Tech"]
+SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
 BASE    = os.path.dirname(os.path.abspath(__file__))
 
 # T212 ticker → canonical universe ticker (OTC / ADR aliases)

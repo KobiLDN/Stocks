@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI stock picks across all 6 sectors — momentum screener, top picks and previous signals for 192 stocks.">
+<meta name="description" content="AI stock picks across all 7 sectors — momentum screener, top picks and previous signals for 242 stocks.">
 <title>All Sectors — Signals</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
   .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
   .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
   .sector-block { margin-bottom: 48px; }
   .sector-heading {
@@ -73,6 +74,7 @@
   .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
   .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
   .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .sector-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
 
   .signal-pill { margin-left: auto; }
   .rank-delta { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 2px; }
@@ -214,6 +216,7 @@
     <button class="filter-btn" data-filter="tech" onclick="filterSectors('tech',this)">Tech</button>
     <button class="filter-btn" data-filter="crypto" onclick="filterSectors('crypto',this)">Crypto</button>
     <button class="filter-btn" data-filter="energy" onclick="filterSectors('energy',this)">Energy</button>
+    <button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="filterSectors('megacap',this)">Mega-Cap</button>
   </div>
 </header>
 <div class="page-body">
@@ -235,6 +238,7 @@
     { key: 'tech',    label: 'Technology',         icon: '💻', pricesPath: '../Tech/prices-data.js',     signalsPath: '../Tech/signals-local.json'     },
     { key: 'crypto',  label: 'Crypto',             icon: '₿',  pricesPath: '../Crypto/prices-data.js',   signalsPath: '../Crypto/signals-local.json'   },
     { key: 'energy',  label: 'Energy',             icon: '⚡', pricesPath: '../Energy/prices-data.js',   signalsPath: '../Energy/signals-local.json'   },
+    { key: 'megacap', label: 'Mega-Cap',           icon: '💎', pricesPath: '../MegaCap/prices-data.js',  signalsPath: '../MegaCap/signals-local.json'  },
   ];
 
   let activeSectorFilter = 'all';

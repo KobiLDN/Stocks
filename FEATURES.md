@@ -2,19 +2,11 @@
 
 ## Backlog
 
-- **Global Mega-Cap Leaders sector** — 50 stocks across 6–7 categories; full 7-page suite + hub card + workflows
-
 - **Crypto signals generator** — `Crypto_generate_signals_local.py` + entry in `generate-signals.yml`; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle, category rotation)
-  - Big Tech (6): MSFT, AAPL, AMZN, GOOGL, META, NVDA
-  - Financials (6): BRK-B, JPM, V, MA, BAC, MS
-  - Healthcare (6): LLY, JNJ, UNH, ABBV, NVO, TMO
-  - Consumer (7): WMT, COST, KO, PEP, HD, MCD, PG
-  - Energy & Industrials (6): XOM, CVX, SHEL, TM, NESN (NSRGY), 2222.SR
-  - Tech & Semis (12): AVGO, TSM, ASML, QCOM, ORCL, SAP, CRM, ADBE, CSCO, IBM, ACN, AMD
-  - Global & Growth (7): BABA, TCEHY, SSNLF, LVMUY, TSLA, NFLX, PLTR
-  - Notes: Samsung (SSNLF) + Tencent (TCEHY) + Saudi Aramco (2222.SR) kept in — expect some N/A on return fields; #50 Netflix duplicate replaced with Thermo Fisher (TMO)
 
 ## Done
+
+- **Global Mega-Cap Leaders sector (`MegaCap/`)** — 50 stocks across 7 categories: Big Tech (AAPL/MSFT/NVDA/GOOGL/META/AMZN/TSLA/NFLX), Financials (JPM/BAC/BRK-B/V/MA/GS/BLK), Healthcare (LLY/UNH/JNJ/ABBV/MRK/TMO/ABT), Consumer (PG/KO/PEP/MCD/NKE/WMT/COST), Energy & Industrial (XOM/CVX/CAT/HON/GE/RTX/BA), Tech & Semis (AMD/QCOM/AVGO/TSM/ASML/ARM/INTC), Global Growth (2222.SR/BABA/SAP/SONY/TM/NVO/HSBC). USD-primary price pipeline with SAR special case for Saudi Aramco. Full 7-page suite + hub card + updated All/ pages + updated workflows + `generate_export.py`. Total universe: 242 stocks & coins.
 
 - **Hub Live Charts — period toggle + explainer notes** — 1D/1W/1M/1Y toggle above the SPY/QQQ/VIX TradingView widgets (default 1W), replacing the previous fixed 3M/daily view; each chart card has a short note explaining what the instrument tracks and why it matters; crypto tickers in the Hub's Market Leaders/Fallers table now link to CoinGecko instead of Yahoo Finance; duplicate tickers (tracked under two sectors) deduped in that same table; Hub header restructured to match All Sectors — stock count/sector count/last-updated moved into `header-sub` under the title, old top-right `header-blocks` boxes removed (`index.html`)
 

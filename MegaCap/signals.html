@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI-generated weekly top 10 buy signals for Global Mega-Cap Leaders, ranked by momentum, fundamentals, and news sentiment.">
+<title>Mega-Cap — Signals</title>
+<script src="signals-local.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
+<style>
+
+
+  /* Signal cards */
+  .signals-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .signal-card {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .signal-card:hover { border-color: var(--accent); background: var(--surface2); }
+
+  .rank-rail {
+    width: 64px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border-right: 1px solid var(--border);
+    background: var(--bg);
+  }
+  .rank-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+  .rank-delta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .rank-delta-up   { color: var(--green); }
+  .rank-delta-down { color: var(--red); }
+  .rank-delta-new  { color: var(--accent); }
+  .rank-delta-same { color: var(--muted); }
+
+  .card-body { flex: 1; padding: 16px 22px; min-width: 0; }
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .ticker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .ticker:hover { color: var(--accent); text-decoration: underline; }
+  .company { color: var(--muted); font-size: 13px; }
+
+  .cat-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  .cat-big-tech          { background: rgba(0,212,255,0.1);    color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+  .cat-financials        { background: rgba(245,158,11,0.15); color: var(--amber);   border: 1px solid rgba(245,158,11,0.35); }
+  .cat-healthcare        { background: rgba(163,230,53,0.12); color: var(--lime);    border: 1px solid rgba(163,230,53,0.3); }
+  .cat-consumer          { background: rgba(255,107,53,0.15); color: var(--accent2); border: 1px solid rgba(255,107,53,0.35); }
+  .cat-energy-industrial { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
+  .cat-tech-semis        { background: rgba(167,139,250,0.12);color: #a78bfa;        border: 1px solid rgba(167,139,250,0.3); }
+  .cat-global-growth     { background: rgba(244,114,182,0.12);color: #f472b6;        border: 1px solid rgba(244,114,182,0.3); }
+
+  .signal-pill {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+  .signal-strong_buy { background: rgba(0,230,118,0.18); color: var(--green); border: 1px solid rgba(0,230,118,0.45); }
+  .signal-buy        { background: rgba(163,230,53,0.15); color: var(--lime);  border: 1px solid rgba(163,230,53,0.4); }
+
+  .conf-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .conf-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .conf-bar {
+    flex: 1;
+    max-width: 240px;
+    height: 6px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .conf-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--green));
+  }
+  .conf-pct {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    min-width: 36px;
+  }
+
+  .rationale {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .drivers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .driver-chip {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    background: var(--bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    letter-spacing: 0.5px;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    border: 1px solid var(--border);
+  }
+  .empty-state strong { color: var(--accent); }
+  .empty-state code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    font-size: 12px;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 26px; }
+    .rank-rail { width: 48px; }
+    .rank-num { font-size: 22px; }
+    .card-body { padding: 14px 16px; }
+    .ticker { font-size: 14px; }
+    .company { display: none; }
+    .signal-pill { margin-left: 0; }
+    .rationale { font-size: 13px; }
+  }
+
+/* How it works */
+  .how-it-works {
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .how-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+  .how-header:hover { background: var(--surface2); }
+  .how-chevron { transition: transform 0.2s; font-style: normal; }
+  .how-header.open .how-chevron { transform: rotate(180deg); }
+  .how-body {
+    display: none;
+    padding: 20px;
+    gap: 20px;
+  }
+  .how-body.open { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .how-step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .how-step-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 28px;
+  }
+  .how-step-text h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .how-step-text p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .how-step-text p code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 1px 5px;
+    border: 1px solid var(--border);
+    font-size: 11px;
+  }
+  .how-footer-note {
+    grid-column: 1 / -1;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .how-footer-note span { color: var(--accent2); }
+  .how-refresh-note {
+    grid-column: 1 / -1;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+  }
+  .how-refresh-note code {
+    background: var(--bg);
+    color: var(--text);
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    font-size: 10px;
+  }
+  .momentum-divider {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 20px 0 8px;
+    margin-top: 4px;
+  }
+  .rank-mom {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--amber);
+    line-height: 1;
+  }
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+  .hamburger {
+    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 18px;
+    align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 260px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  .bottom-tabs {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
+    background: var(--bg); border-top: 1px solid var(--accent);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-tabs-inner { display: flex; justify-content: space-around; align-items: stretch; }
+  .tab-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    gap: 2px; padding: 8px 4px 6px; background: none; border: none;
+    cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
+  .tab-btn:hover  { color: var(--accent); }
+  .tab-icon { font-size: 16px; line-height: 1; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+  }
+  @media (max-width: 600px) {
+    body { padding-bottom: 56px; }
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+    .hamburger { display: flex; }
+    .bottom-tabs { display: block; }
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
+</style>
+</head>
+<body data-layout="rail">
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<!-- Panel 1: Sector switcher (full height) -->
+<div class="left-rail">
+</div>
+
+<!-- Panel 2: Nav panel -->
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link active" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+
+<!-- Panel 3: Right side (header + content) -->
+<div class="right-side">
+<header>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+    <div class="header-label">// Market Intelligence</div>
+    <h1>Mega-Cap <span>Signals</span></h1>
+    <div class="header-sub">Top 10 ranked picks · AI-generated · powered by <span class="model" id="model-name">—</span> · Last updated <span id="signals-ts">—</span></div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+</header>
+
+<div class="page-body">
+<div class="page-main">
+<div class="container">
+
+  <div class="signals-feed" id="signals-feed"></div>
+
+  <div class="how-it-works">
+    <div class="how-header" onclick="toggleHow(this)">
+      // How signals are generated
+      <i class="how-chevron">▼</i>
+    </div>
+    <div class="how-body">
+
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-text">
+          <h4>Live price &amp; news data</h4>
+          <p>GitHub Actions runs <code>MegaCap_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 50 mega-cap stocks via Yahoo Finance.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-text">
+          <h4>Web search for live catalysts</h4>
+          <p>Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing earnings beats, product launches, AI infrastructure spending, M&amp;A activity, regulatory developments, and macro rate moves.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-text">
+          <h4>AI ranking via DeepSeek</h4>
+          <p><code>MegaCap_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.</p>
+        </div>
+      </div>
+
+      <div class="how-step">
+        <div class="how-step-num">4</div>
+        <div class="how-step-text">
+          <h4>Mon/Wed/Fri refresh via GitHub Actions</h4>
+          <p>The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python MegaCap_generate_signals_local.py</code> locally to generate fresh signals on demand.</p>
+        </div>
+      </div>
+
+      <div class="how-footer-note">
+        <span>Not financial advice.</span> Mega-cap stocks can be sensitive to macro interest rates, AI capex cycles, regulatory shifts, and global growth — always do your own research before making any investment decision. The model can be wrong, biased toward recent momentum, or inconsistent run-to-run.
+      </div>
+
+      <div class="how-refresh-note">Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python MegaCap_generate_signals_local.py</code> locally</div>
+
+    </div>
+  </div>
+
+
+</div><!-- /.container -->
+
+
+<script src="prices-data.js"></script>
+<script>
+  const NAMES = {
+    'AAPL':    'Apple Inc.',
+    'MSFT':    'Microsoft Corporation',
+    'NVDA':    'NVIDIA Corporation',
+    'GOOGL':   'Alphabet Inc.',
+    'META':    'Meta Platforms',
+    'AMZN':    'Amazon.com',
+    'TSLA':    'Tesla',
+    'NFLX':    'Netflix',
+    'JPM':     'JPMorgan Chase',
+    'BAC':     'Bank of America',
+    'BRK-B':   'Berkshire Hathaway B',
+    'V':       'Visa Inc.',
+    'MA':      'Mastercard',
+    'GS':      'Goldman Sachs',
+    'BLK':     'BlackRock',
+    'LLY':     'Eli Lilly',
+    'UNH':     'UnitedHealth Group',
+    'JNJ':     'Johnson & Johnson',
+    'ABBV':    'AbbVie',
+    'MRK':     'Merck',
+    'TMO':     'Thermo Fisher Scientific',
+    'ABT':     'Abbott Laboratories',
+    'PG':      'Procter & Gamble',
+    'KO':      'Coca-Cola',
+    'PEP':     'PepsiCo',
+    'MCD':     "McDonald's",
+    'NKE':     'Nike',
+    'WMT':     'Walmart',
+    'COST':    'Costco',
+    'XOM':     'ExxonMobil',
+    'CVX':     'Chevron',
+    'CAT':     'Caterpillar',
+    'HON':     'Honeywell',
+    'GE':      'GE Aerospace',
+    'RTX':     'RTX Corp',
+    'BA':      'Boeing',
+    'AMD':     'Advanced Micro Devices',
+    'QCOM':    'Qualcomm',
+    'AVGO':    'Broadcom',
+    'TSM':     'Taiwan Semiconductor',
+    'ASML':    'ASML Holding',
+    'ARM':     'Arm Holdings',
+    'INTC':    'Intel',
+    '2222.SR': 'Saudi Aramco',
+    'BABA':    'Alibaba Group',
+    'SAP':     'SAP SE',
+    'SONY':    'Sony Group',
+    'TM':      'Toyota Motor',
+    'NVO':     'Novo Nordisk',
+    'HSBC':    'HSBC Holdings',
+  };
+
+  const CAT_LABELS = {
+    'big-tech':           'Big Tech',
+    'financials':         'Financials',
+    'healthcare':         'Healthcare',
+    'consumer':           'Consumer',
+    'energy-industrial':  'Energy & Industrial',
+    'tech-semis':         'Tech & Semis',
+    'global-growth':      'Global Growth',
+  };
+
+  function yahooUrl(ticker) {
+    return 'https://finance.yahoo.com/quote/' + ticker + '/';
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function signalLabel(s) {
+    return (s || '').replace('_', ' ').toUpperCase();
+  }
+
+  /* Build a ticker -> category map from prices-data.js */
+  function tickerCategoryMap() {
+    const map = {};
+    if (window.PRICES_DATA && Array.isArray(window.PRICES_DATA.stocks)) {
+      window.PRICES_DATA.stocks.forEach(s => { map[s.ticker] = s.category; });
+    }
+    return map;
+  }
+
+  function tickerNameMap() {
+    const map = {};
+    if (window.PRICES_DATA && Array.isArray(window.PRICES_DATA.stocks)) {
+      window.PRICES_DATA.stocks.forEach(s => { map[s.ticker] = s.company_name || NAMES[s.ticker] || s.ticker; });
+    }
+    return map;
+  }
+
+  function renderSignals(data) {
+    const tsEl   = document.getElementById('signals-ts');
+    const modelEl= document.getElementById('model-name');
+    const feed   = document.getElementById('signals-feed');
+
+    if (!data || !Array.isArray(data.picks) || !data.picks.length) {
+      tsEl.textContent    = '—';
+      modelEl.textContent = '—';
+      feed.innerHTML =
+        '<div class="empty-state">' +
+        'No signals data yet. Signals are generated on Mon/Wed/Fri by <strong>GitHub Actions</strong> ' +
+        '(deepseek/deepseek-v4-flash via OpenRouter) or run ' +
+        '<code>python MegaCap_generate_signals_local.py</code> locally to generate them now.' +
+        '</div>';
+      return;
+    }
+
+    tsEl.textContent    = data.updated || '—';
+    modelEl.textContent = data.model   || 'local model';
+
+    const catFor  = tickerCategoryMap();
+    const nameFor = tickerNameMap();
+
+    // Build previous rank lookup for delta badges
+    const prevRank = {};
+    const hasPrev = Array.isArray(data.previous_picks) && data.previous_picks.length > 0;
+    if (hasPrev) {
+      data.previous_picks.forEach(p => { prevRank[p.ticker] = p.rank; });
+    }
+
+    let html = data.picks.map(p => {
+      const t = p.ticker || '';
+      const name = nameFor[t] || NAMES[t] || t;
+      const cat  = catFor[t] || '';
+      const catLabel = CAT_LABELS[cat] || cat;
+      const catBadge = cat
+        ? '<span class="cat-badge cat-' + cat + '">' + catLabel + '</span>'
+        : '';
+
+      const signalCls = 'signal-' + (p.signal || '');
+      const conf = Math.max(0, Math.min(1, Number(p.confidence) || 0));
+      const confPct = Math.round(conf * 100) + '%';
+
+      const drivers = (Array.isArray(p.drivers) ? p.drivers : [])
+        .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
+        .join('');
+
+      // Rank delta badge
+      let deltaBadge = '';
+      if (hasPrev) {
+        if (!(t in prevRank)) {
+          deltaBadge = '<span class="rank-delta rank-delta-new">NEW</span>';
+        } else {
+          const diff = prevRank[t] - p.rank; // positive = moved up
+          if (diff > 0)       deltaBadge = '<span class="rank-delta rank-delta-up">↑' + diff + '</span>';
+          else if (diff < 0)  deltaBadge = '<span class="rank-delta rank-delta-down">↓' + Math.abs(diff) + '</span>';
+          else                deltaBadge = '<span class="rank-delta rank-delta-same">—</span>';
+        }
+      }
+
+      return '<div class="signal-card">' +
+        '<div class="rank-rail"><span class="rank-num">' + (p.rank || '') + '</span>' + deltaBadge + '</div>' +
+        '<div class="card-body">' +
+          '<div class="card-top">' +
+            '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
+            '<span class="company">' + escapeHtml(name) + '</span>' +
+            catBadge +
+            '<span class="signal-pill ' + signalCls + '">' + escapeHtml(signalLabel(p.signal)) + '</span>' +
+          '</div>' +
+          '<div class="conf-wrap">' +
+            '<span class="conf-label">Confidence</span>' +
+            '<div class="conf-bar"><div class="conf-fill" style="width:' + confPct + '"></div></div>' +
+            '<span class="conf-pct">' + confPct + '</span>' +
+          '</div>' +
+          '<div class="rationale">' + escapeHtml(p.rationale || '') + '</div>' +
+          (drivers ? '<div class="drivers">' + drivers + '</div>' : '') +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    const momPicks = Array.isArray(data.momentum_picks) ? data.momentum_picks : [];
+    if (momPicks.length) {
+      html += '<div class="momentum-divider">// Momentum Screener</div>';
+      html += momPicks.map((p, i) => {
+        const t = p.ticker || '';
+        const name = nameFor[t] || NAMES[t] || t;
+        const cat  = catFor[t] || '';
+        const catLabel = CAT_LABELS[cat] || cat;
+        const catBadge = cat
+          ? '<span class="cat-badge cat-' + cat + '">' + catLabel + '</span>'
+          : '';
+        const signalCls = 'signal-' + (p.signal || '');
+        const conf = Math.max(0, Math.min(1, Number(p.confidence) || 0));
+        const confPct = Math.round(conf * 100) + '%';
+        const drivers = (Array.isArray(p.drivers) ? p.drivers : [])
+          .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
+          .join('');
+        return '<div class="signal-card">' +
+          '<div class="rank-rail"><span class="rank-num">' + (i + 1) + '</span></div>' +
+          '<div class="card-body">' +
+            '<div class="card-top">' +
+              '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
+              '<span class="company">' + escapeHtml(name) + '</span>' +
+              catBadge +
+              '<span class="signal-pill ' + signalCls + '">' + escapeHtml(signalLabel(p.signal)) + '</span>' +
+            '</div>' +
+            '<div class="conf-wrap">' +
+              '<span class="conf-label">Confidence</span>' +
+              '<div class="conf-bar"><div class="conf-fill" style="width:' + confPct + '"></div></div>' +
+              '<span class="conf-pct">' + confPct + '</span>' +
+            '</div>' +
+            '<div class="rationale">' + escapeHtml(p.rationale || '') + '</div>' +
+            (drivers ? '<div class="drivers">' + drivers + '</div>' : '') +
+          '</div>' +
+        '</div>';
+      }).join('');
+    }
+
+    feed.innerHTML = html;
+  }
+
+  if (window.SIGNALS_DATA) {
+    renderSignals(window.SIGNALS_DATA);
+  } else {
+    fetch('signals-local.json')
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => renderSignals(data))
+      .catch(() => renderSignals(null));
+  }
+
+  /* ---- HOW IT WORKS TOGGLE ---- */
+  function toggleHow(header) {
+    header.classList.toggle('open');
+    header.nextElementSibling.classList.toggle('open');
+  }
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+</script>
+
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link active" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+
+<!-- Bottom tab bar (mobile) -->
+<div class="bottom-tabs">
+<div class="bottom-tabs-inner">
+</div>
+</div>
+</body>
+</html>

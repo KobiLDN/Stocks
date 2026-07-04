@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All sectors combined stock dashboard — live prices, 52-week range, and momentum for 192 stocks across AI Infrastructure, Biotech, Defence, Tech, Crypto, and Energy." name="description"/>
+<meta content="All sectors combined stock dashboard — live prices, 52-week range, and momentum for 242 stocks across AI Infrastructure, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap." name="description"/>
 <title>All Sectors — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -81,6 +81,7 @@
   .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
   .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
   .table-wrap {
     overflow-x: auto;
@@ -185,6 +186,7 @@
   .sector-tech    { background: rgba(167,139,250,0.15); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.3); }
   .sector-crypto  { background: rgba(255,215,0,0.15);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.3); }
   .sector-energy  { background: rgba(245,158,11,0.15);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.3); }
+  .sector-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
 
   .price {
     font-family: 'IBM Plex Mono', monospace;
@@ -421,6 +423,7 @@
 <button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="filterTable('tech', this)">Tech</button>
 <button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency, blockchain and digital asset companies" onclick="filterTable('crypto', this)">Crypto</button>
 <button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
+<button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="filterTable('megacap', this)">Mega-Cap</button>
 </div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company..." type="text"/>
@@ -540,6 +543,7 @@ const SECTOR_LABELS = {
   'tech':    'Tech',
   'crypto':  'Crypto',
   'energy':  'Energy',
+  'megacap': 'Mega-Cap',
 };
 
 const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
@@ -665,6 +669,7 @@ const SECTORS = [
   { key: 'tech',    label: 'Technology',         color: 'var(--indigo)',  path: '../Tech/prices-data.js'     },
   { key: 'crypto',  label: 'Crypto',             color: 'var(--gold)',    path: '../Crypto/prices-data.js'   },
   { key: 'energy',  label: 'Energy',             color: 'var(--amber)',   path: '../Energy/prices-data.js'   },
+  { key: 'megacap', label: 'Mega-Cap',           color: '#f472b6',        path: '../MegaCap/prices-data.js'  },
 ];
 
 async function loadAllSectors() {

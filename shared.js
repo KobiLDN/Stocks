@@ -57,7 +57,7 @@ function buildDataBar() {
   } else if (window.PRICES_DATA && window.PRICES_DATA.updated) {
     ts = window.PRICES_DATA.updated;
   } else {
-    for (const s of ['AI', 'Defence', 'Biotech', 'Tech', 'Crypto', 'Energy']) {
+    for (const s of ['AI', 'Defence', 'Biotech', 'Tech', 'Crypto', 'Energy', 'MegaCap']) {
       const pd = window['__pd_' + s];
       if (pd && pd.updated) { ts = pd.updated; break; }
     }
@@ -90,6 +90,7 @@ const _RAIL_ITEMS = [
   { key: 'Crypto',  label: 'Crypto',      icon: '₿',  path: 'Crypto/index.html',   badge: null },
   { key: 'Defence', label: 'Defence',     icon: '🛡️', path: 'Defence/index.html',  badge: null },
   { key: 'Energy',  label: 'Energy',      icon: '⚡', path: 'Energy/index.html',   badge: null },
+  { key: 'MegaCap', label: 'Mega-Cap',   icon: '🌍', path: 'MegaCap/index.html',  badge: null },
   { key: 'Tech',    label: 'Technology',  icon: '💻', path: 'Tech/index.html',     badge: null },
 ];
 
@@ -106,7 +107,7 @@ const _SECTOR_PAGES = [
 function buildNav() {
   // Detect context from URL path
   const parts = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
-  const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
+  const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy', 'MegaCap'];
   const sector  = SECTORS.find(s => parts[0] === s) || null;
   const inAll   = parts[0] === 'All';
   // Normalise trailing-slash URLs: /AI/ → file='index.html', not 'AI'
@@ -208,12 +209,12 @@ function buildNav() {
 // ── Dashboard content header ──────────────────────────────────────────────
 function buildDashboardHeader() {
   const parts = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
-  const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
+  const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy', 'MegaCap'];
   const sector = SECTORS.find(s => parts[0] === s) || null;
   const inAll  = parts[0] === 'All';
   const rawFile = parts[parts.length - 1] || '';
   // Treat sector-name-as-last-segment (trailing-slash URLs) as index.html
-  const SECTORS2 = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy'];
+  const SECTORS2 = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy', 'MegaCap'];
   // Normalise extensionless "clean" URLs (Cloudflare Pages): /AI/index → 'index.html'
   const _KNOWN_PAGES2 = ['index', 'metrics', 'news', 'signals', 'heatmap', 'charts', 'calculator'];
   const _extRawFile = _KNOWN_PAGES2.includes(rawFile) ? rawFile + '.html' : rawFile;

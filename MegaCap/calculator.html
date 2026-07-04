@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="What-If investment calculator — see what $100 to $10,000 invested across 242 stocks at the start of 2026 is worth today.">
-<title>All Sectors — What-If Calculator</title>
-<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta name="description" content="What-If investment calculator — see what $100 to $10,000 invested in Global Mega-Cap Leaders stocks at the start of 2026 is worth today.">
+<title>Mega-Cap — What-If Calculator</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
 
-  /* Filter bar */
-  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+  /* Filter bar chips */
   .filter-btn {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-    padding: 5px 12px; border: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
     background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
   }
-  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn:hover  { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
-  .filter-btn[data-filter="ai"].active      { background: var(--accent);  border-color: var(--accent); }
-  .filter-btn[data-filter="biotech"].active { background: var(--green);   border-color: var(--green);  color: var(--bg); }
-  .filter-btn[data-filter="defence"].active { background: var(--rose);    border-color: var(--rose);   color: var(--bg); }
-  .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
-  .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
-  .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
-  .filter-btn[data-filter="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
   /* Search + count bar */
   .search-count-bar {
@@ -47,26 +38,26 @@
     color: var(--dim); white-space: nowrap; margin-left: auto;
   }
 
-
   /* Table */
   .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
-
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
-
   thead { background: var(--surface2); }
-
   th {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-    color: var(--muted); padding: 12px 14px; text-align: left;
-    border-bottom: 1px solid var(--border); white-space: nowrap;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
   }
   th.sortable { cursor: pointer; user-select: none; }
   th.sortable:hover { color: var(--accent); }
   th.sort-desc::after { content: ' ▼'; color: var(--accent); }
   th.sort-asc::after  { content: ' ▲'; color: var(--accent); }
   th.inv-col { text-align: right; }
-
   td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
   tr:last-child td { border-bottom: none; }
   tbody tr:hover { background: var(--surface); }
@@ -74,17 +65,23 @@
   .ticker-cell { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; }
   .ticker-link { text-decoration: none; color: inherit; }
   .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
-
   .company-cell { color: var(--muted); font-size: 12px; }
 
-  .sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
-  .sector-ai      { background: rgba(0,212,255,0.1);   color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .sector-biotech { background: rgba(0,230,118,0.1);   color: var(--green);  border: 1px solid rgba(0,230,118,0.25); }
-  .sector-defence { background: rgba(251,113,133,0.1); color: var(--rose);   border: 1px solid rgba(251,113,133,0.25); }
-  .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
-  .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
-  .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
-  .sector-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
+  .cat-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  /* MegaCap category badge colours */
+  .cat-big-tech          { background: rgba(0,212,255,0.08);   color: var(--accent);  border: 1px solid rgba(0,212,255,0.2); }
+  .cat-financials        { background: rgba(245,158,11,0.1);   color: var(--amber);   border: 1px solid rgba(245,158,11,0.25); }
+  .cat-healthcare        { background: rgba(163,230,53,0.1);   color: var(--lime);    border: 1px solid rgba(163,230,53,0.25); }
+  .cat-consumer          { background: rgba(255,120,50,0.1);   color: var(--accent2); border: 1px solid rgba(255,120,50,0.25); }
+  .cat-energy-industrial { background: rgba(34,197,94,0.1);    color: var(--green);   border: 1px solid rgba(34,197,94,0.25); }
+  .cat-tech-semis        { background: rgba(167,139,250,0.1);  color: #a78bfa;        border: 1px solid rgba(167,139,250,0.25); }
+  .cat-global-growth     { background: rgba(244,114,182,0.1);  color: #f472b6;        border: 1px solid rgba(244,114,182,0.25); }
 
   .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
@@ -104,9 +101,14 @@
   .mult-value.neg  { color: var(--red); }
   .mult-value.flat { color: var(--muted); }
 
-  /* Totals row */
   .totals-row td { background: var(--surface2); border-top: 2px solid var(--accent); font-weight: 700; }
   .totals-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+
+  footer {
+    position: relative; z-index: 1; text-align: center; padding: 24px;
+    color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    border-top: 1px solid var(--border); margin-top: 48px;
+  }
 
   @media (max-width: 768px) {
     h1 { font-size: 26px; }
@@ -192,8 +194,12 @@
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<!-- Panel 1: Sector switcher -->
 <div class="left-rail">
 </div>
+
+<!-- Panel 2: Nav panel (What-If active) -->
 <div class="nav-panel">
 <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
 <a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
@@ -203,38 +209,29 @@
 <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
 <a class="nav-link active" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
 </div>
+
+<!-- Panel 3: Right side -->
 <div class="right-side">
 <header>
-  <div class="header-inner">
-  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
-  <div class="header-left">
-    <div class="header-label">// Market Intelligence</div>
-    <h1>All <span>Calculator</span></h1>
-    <div class="header-sub"><span id="calc-total">—</span> stocks · If you invested 1 Jan 2026 · Last updated <span id="data-bar-ts">—</span></div>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+  <div class="header-label">// Market Intelligence</div>
+  <h1>Mega-Cap <span>Calculator</span></h1>
+  <div class="header-sub"><span id="calc-total">—</span> stocks · If you invested 1 Jan 2026 · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-
-<div class="filter-bar">
-    <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
-    <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
-    <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
-    <button class="filter-btn" data-filter="defence" onclick="setSector('defence',this)">Defence</button>
-    <button class="filter-btn" data-filter="tech" onclick="setSector('tech',this)">Tech</button>
-    <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
-    <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
-    <button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="setSector('megacap',this)">Mega-Cap</button>
-  </div>
-  <div class="search-count-bar">
-    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
-    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
-  </div>
+<div class="filter-bar" id="filter-bar"></div>
+<div class="search-count-bar">
+<input id="calc-search" oninput="filterCalc(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
+</div>
 </header>
+
 <div class="page-body">
 <div class="page-main">
 <div class="container">
-
-  
 
   <div class="table-wrap">
     <table id="calc-table">
@@ -242,7 +239,7 @@
         <tr>
           <th class="sortable" onclick="sortCalc('ticker', this)">Ticker</th>
           <th>Company</th>
-          <th>Sector</th>
+          <th>Category</th>
           <th class="sortable sort-desc" onclick="sortCalc('ytd', this)">YTD %</th>
           <th class="sortable" style="text-align:center" onclick="sortCalc('mult', this)">Multiplier</th>
           <th class="sortable inv-col" onclick="sortCalc('v100', this)">$100 invested</th>
@@ -257,13 +254,74 @@
 
 </div>
 
+<script src="prices-data.js"></script>
 <script>
-  const SECTOR_LABELS = {
-    ai:'AI Infra', biotech:'Biotech', defence:'Defence',
-    tech:'Tech', crypto:'Crypto', energy:'Energy', megacap:'Mega-Cap',
+  const NAMES = {
+    'AAPL':    'Apple',
+    'MSFT':    'Microsoft',
+    'NVDA':    'NVIDIA',
+    'GOOGL':   'Alphabet',
+    'META':    'Meta Platforms',
+    'AMZN':    'Amazon',
+    'TSLA':    'Tesla',
+    'NFLX':    'Netflix',
+    'JPM':     'JPMorgan Chase',
+    'BAC':     'Bank of America',
+    'BRK-B':   'Berkshire Hathaway B',
+    'V':       'Visa',
+    'MA':      'Mastercard',
+    'GS':      'Goldman Sachs',
+    'BLK':     'BlackRock',
+    'LLY':     'Eli Lilly',
+    'UNH':     'UnitedHealth Group',
+    'JNJ':     'Johnson & Johnson',
+    'ABBV':    'AbbVie',
+    'MRK':     'Merck',
+    'TMO':     'Thermo Fisher Scientific',
+    'ABT':     'Abbott Laboratories',
+    'PG':      'Procter & Gamble',
+    'KO':      'Coca-Cola',
+    'PEP':     'PepsiCo',
+    'MCD':     "McDonald's",
+    'NKE':     'Nike',
+    'WMT':     'Walmart',
+    'COST':    'Costco',
+    'XOM':     'ExxonMobil',
+    'CVX':     'Chevron',
+    'CAT':     'Caterpillar',
+    'HON':     'Honeywell',
+    'GE':      'GE Aerospace',
+    'RTX':     'RTX Corp',
+    'BA':      'Boeing',
+    'AMD':     'Advanced Micro Devices',
+    'QCOM':    'Qualcomm',
+    'AVGO':    'Broadcom',
+    'TSM':     'Taiwan Semiconductor',
+    'ASML':    'ASML Holding',
+    'ARM':     'Arm Holdings',
+    'INTC':    'Intel',
+    '2222.SR': 'Saudi Aramco',
+    'BABA':    'Alibaba Group',
+    'SAP':     'SAP SE',
+    'SONY':    'Sony Group',
+    'TM':      'Toyota Motor',
+    'NVO':     'Novo Nordisk',
+    'HSBC':    'HSBC Holdings',
   };
-  const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-  function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
+
+  const CAT_LABELS = {
+    'big-tech':          'Big Tech',
+    'financials':        'Financials',
+    'healthcare':        'Healthcare',
+    'consumer':          'Consumer',
+    'energy-industrial': 'Energy/Ind.',
+    'tech-semis':        'Tech/Semis',
+    'global-growth':     'Global Growth',
+  };
+
+  function yahooUrl(ticker) {
+    return 'https://finance.yahoo.com/quote/' + ticker + '/';
+  }
 
   function fmtUsd(val) {
     if (val >= 1000) return '$' + val.toLocaleString('en-US', { maximumFractionDigits: 0 });
@@ -279,7 +337,7 @@
 
   function invCell(invested, ytdPct) {
     const current = invested * (1 + ytdPct / 100);
-    const pl  = current - invested;
+    const pl = current - invested;
     const cls = ytdPct > 0 ? 'pos' : ytdPct < 0 ? 'neg' : '';
     return `<td class="inv-cell">
       <span class="inv-value ${cls}">${fmtUsd(current)}</span>
@@ -287,53 +345,72 @@
     </td>`;
   }
 
+  let sortState = { col: 'ytd', dir: -1 };
+
   function multCell(ytdPct) {
-    const m   = 1 + ytdPct / 100;
+    const m = 1 + ytdPct / 100;
     const cls = ytdPct > 0 ? 'pos' : ytdPct < 0 ? 'neg' : 'flat';
     return `<td class="mult-cell"><span class="mult-value ${cls}">${m.toFixed(2)}×</span></td>`;
   }
 
-  let sortState    = { col: 'ytd', dir: -1 };
-  let activeSector = 'all';
-  let searchQ      = '';
-
   function sortCalc(col, th) {
     if (sortState.col === col) sortState.dir *= -1;
-    else { sortState.col = col; sortState.dir = (col === 'ytd' || col === 'mult' || col === 'v100' || col === 'v1k' || col === 'v10k') ? -1 : 1; }
+    else { sortState.col = col; sortState.dir = (col === 'ytd' || col === 'mult') ? -1 : 1; }
     document.querySelectorAll('#calc-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
     th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-    renderTable();
+    renderTable(window._calcData);
   }
 
-  function filterCalc(query) { searchQ = query.toLowerCase().trim(); renderTable(); }
+  /* ---- FILTER ---- */
+  let activeCategory = 'all';
+  let activeQuery    = '';
 
-  function setSector(sector, btn) {
-    activeSector = sector;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderTable();
+  function buildFilterBar() {
+    const bar = document.getElementById('filter-bar');
+    if (!bar) return;
+    const cats = ['all', ...Object.keys(CAT_LABELS)];
+    bar.innerHTML = cats.map(cat => {
+      const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
+      return '<button class="filter-btn' + (cat === activeCategory ? ' active' : '') +
+             '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+    }).join('');
   }
 
-  function renderTable() {
-    let data = window._calcData || [];
-    if (activeSector !== 'all') data = data.filter(s => s.sector === activeSector);
-    if (searchQ) data = data.filter(s => s.ticker.toLowerCase().includes(searchQ) || s.name.toLowerCase().includes(searchQ));
+  function setCategory(cat) {
+    activeCategory = cat;
+    document.querySelectorAll('#filter-bar .filter-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.cat === cat));
+    applyFilters();
+  }
 
+  function filterCalc(query) {
+    activeQuery = query.toLowerCase().trim();
+    applyFilters();
+  }
+
+  function applyFilters() {
+    let data = window._calcData;
+    if (activeCategory !== 'all') data = data.filter(s => s.category === activeCategory);
+    if (activeQuery) data = data.filter(s =>
+      s.ticker.toLowerCase().includes(activeQuery) || s.name.toLowerCase().includes(activeQuery));
+    renderTable(data);
+  }
+
+  function renderTable(data) {
     const sorted = [...data].sort((a, b) => {
       if (sortState.col === 'ticker') return a.ticker.localeCompare(b.ticker) * sortState.dir;
       return (a.ytdPct - b.ytdPct) * sortState.dir;
     });
 
-    document.getElementById('calc-count').textContent = sorted.length;
-
+    document.getElementById('calc-count').textContent = data.length;
     const body = document.getElementById('calc-body');
     body.innerHTML = sorted.map(s => {
-      const ytdCls   = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
-      const sLabel   = SECTOR_LABELS[s.sector] || s.sector;
+      const ytdCls = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
+      const catLabel = CAT_LABELS[s.category] || s.category;
       return `<tr>
         <td class="ticker-cell"><a href="${yahooUrl(s.ticker)}" target="_blank" class="ticker-link">${s.ticker}</a></td>
         <td class="company-cell">${s.name}</td>
-        <td><span class="sector-badge sector-${s.sector}">${sLabel}</span></td>
+        <td><span class="cat-badge cat-${s.category}">${catLabel}</span></td>
         <td><span class="${ytdCls}">${s.ytdPct >= 0 ? '+' : ''}${s.ytdPct.toFixed(2)}%</span></td>
         ${multCell(s.ytdPct)}
         ${invCell(100, s.ytdPct)}
@@ -343,9 +420,9 @@
     }).join('');
 
     const totals = [100, 1000, 10000].map(inv => {
-      const total = sorted.reduce((sum, s) => sum + inv * (1 + s.ytdPct / 100), 0);
-      const pl    = total - inv * sorted.length;
-      const cls   = pl >= 0 ? 'pos' : 'neg';
+      const total = data.reduce((sum, s) => sum + inv * (1 + s.ytdPct / 100), 0);
+      const pl = total - inv * data.length;
+      const cls = pl >= 0 ? 'pos' : 'neg';
       return `<td class="inv-cell">
         <span class="inv-value ${cls}">${fmtUsd(total)}</span>
         <span class="inv-pl ${cls}">${fmtPl(pl)}</span>
@@ -353,66 +430,51 @@
     }).join('');
 
     document.getElementById('calc-foot').innerHTML = `<tr class="totals-row">
-      <td colspan="3"><span class="totals-label">Total (${sorted.length} stocks)</span></td>
+      <td colspan="3"><span class="totals-label">Total (${data.length} stocks)</span></td>
       <td></td><td></td>
       ${totals}
     </tr>`;
   }
 
   function buildCalc(stocks) {
-    window._calcData = stocks
+    const data = stocks
       .map(s => ({
-        ticker:  s.ticker,
-        name:    s.company_name || s.ticker,
-        sector:  s.sector || '',
-        ytdPct:  parseFloat(s.change_ytd) || 0,
+        ticker:   s.ticker,
+        name:     s.company_name || NAMES[s.ticker] || s.ticker,
+        category: s.category,
+        ytdPct:   parseFloat(s.change_ytd) || 0,
       }))
       .filter(s => s.ytdPct !== 0);
-    const _ct = document.getElementById('calc-total'); if (_ct) _ct.textContent = window._calcData.length;
-    renderTable();
+    window._calcData = data;
+    const _ct = document.getElementById('calc-total'); if (_ct) _ct.textContent = data.length;
+    buildFilterBar();
+    applyFilters();
   }
 
-  const SECTORS = [
-    { key: 'ai',      path: '../AI/prices-data.js'      },
-    { key: 'biotech', path: '../Biotech/prices-data.js'  },
-    { key: 'defence', path: '../Defence/prices-data.js'  },
-    { key: 'tech',    path: '../Tech/prices-data.js'     },
-    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
-    { key: 'energy',  path: '../Energy/prices-data.js'   },
-    { key: 'megacap', path: '../MegaCap/prices-data.js'  },
-  ];
-
-  Promise.all(SECTORS.map(async sd => {
-    try {
-      const text  = await fetch(sd.path).then(r => r.text());
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (!match) return { stocks: [], updated: null };
-      const data  = JSON.parse(match[1]);
-      return { stocks: (data.stocks || []).map(s => ({ ...s, sector: sd.key })), updated: data.updated || null };
-    } catch(e) { return { stocks: [], updated: null }; }
-  })).then(results => {
-  const seen = new Set();
-  const stocks = results.flatMap(r => r.stocks).filter(s => { if (seen.has(s.ticker)) return false; seen.add(s.ticker); return true; });
-  const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = stocks.length;
-  const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
-  const tsEl = document.getElementById('data-bar-ts'); if (tsEl) tsEl.textContent = updated;
-  buildCalc(stocks);
-  buildTape(stocks);
-});
-
-  function openDrawer() {
-    document.getElementById('drawer-overlay').classList.add('open');
+  if (window.PRICES_DATA) {
+    buildCalc(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json')
+      .then(r => r.json())
+      .then(data => buildCalc(data.stocks))
+      .catch(() => {
+        document.getElementById('calc-body').innerHTML =
+          '<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--muted);font-family:\'IBM Plex Mono\',monospace;">No price data available — run the price bot first.</td></tr>';
+      });
   }
-  function closeDrawer() {
-    document.getElementById('drawer-overlay').classList.remove('open');
-  }
+
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+
 </script>
+</div><!-- /.container -->
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
 </div><!-- /.right-side -->
 
-<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
-<div class="drawer" onclick="event.stopPropagation()">
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
 <div class="left-rail">
 </div>
 <div class="nav-panel">
@@ -427,6 +489,7 @@
 </div>
 </div>
 
+<!-- Bottom tab bar (mobile) -->
 <div class="bottom-tabs">
 <div class="bottom-tabs-inner">
 </div>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Latest news and sentiment analysis across 50 Mega-Cap stocks. Filter by category and sort by recency or sentiment score.">
+<title>Mega-Cap — News</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
+<style>
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+  }
+  .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .filter-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface2);
+    color: var(--text);
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 220px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .filter-btn[data-tooltip]::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--accent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    z-index: 1001;
+  }
+  .filter-btn:hover[data-tooltip]::after,
+  .filter-btn:hover[data-tooltip]::before { opacity: 1; }
+
+  .toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+  #news-search {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 14px;
+    width: 260px;
+    outline: none;
+    letter-spacing: 0.5px;
+  }
+  #news-search:focus { border-color: var(--accent); }
+  #news-search::placeholder { color: var(--muted); }
+  .sort-group { display: flex; gap: 4px; }
+  .sort-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); align-self: center; margin-right: 4px; }
+  .sort-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .sort-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .sort-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
+  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); margin-left: auto; }
+  .row-count span { color: var(--accent); font-weight: 700; }
+
+  .news-feed { display: flex; flex-direction: column; gap: 10px; margin-bottom: 4px; }
+  .news-card {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .news-card:hover { border-color: var(--accent); background: var(--surface2); }
+  .sent-bar { width: 4px; flex-shrink: 0; }
+  .sent-pos  { background: var(--green); }
+  .sent-neg  { background: var(--red); }
+  .sent-neu  { background: var(--muted); }
+  .news-body { flex: 1; padding: 14px 18px; min-width: 0; }
+  .news-meta-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .news-ticker { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 700; text-decoration: none; color: var(--text); }
+  .news-ticker:hover { color: var(--accent); text-decoration: underline; }
+  .news-company { color: var(--muted); font-size: 12px; }
+  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .cat-big-tech          { background: rgba(0,212,255,0.1);    color: var(--accent);  border: 1px solid rgba(0,212,255,0.25); }
+  .cat-financials        { background: rgba(245,158,11,0.15); color: var(--amber);   border: 1px solid rgba(245,158,11,0.35); }
+  .cat-healthcare        { background: rgba(163,230,53,0.12); color: var(--lime);    border: 1px solid rgba(163,230,53,0.3); }
+  .cat-consumer          { background: rgba(255,107,53,0.15); color: var(--accent2); border: 1px solid rgba(255,107,53,0.35); }
+  .cat-energy-industrial { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
+  .cat-tech-semis        { background: rgba(167,139,250,0.12);color: #a78bfa;        border: 1px solid rgba(167,139,250,0.3); }
+  .cat-global-growth     { background: rgba(244,114,182,0.12);color: #f472b6;        border: 1px solid rgba(244,114,182,0.3); }
+  .news-time { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-left: auto; }
+  .news-headline { display: block; font-size: 15px; font-weight: 600; line-height: 1.45; color: var(--text); text-decoration: none; margin-bottom: 8px; }
+  .news-headline:hover { color: var(--accent); }
+  .news-meta-bot { display: flex; align-items: center; gap: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .sent-pill { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; padding: 2px 7px; letter-spacing: 0.5px; }
+  .sent-pill.sent-pos { background: rgba(0,230,118,0.12);  color: var(--green); border: 1px solid rgba(0,230,118,0.3); }
+  .sent-pill.sent-neg { background: rgba(255,68,68,0.12);  color: var(--red);   border: 1px solid rgba(255,68,68,0.3); }
+  .sent-pill.sent-neu { background: rgba(90,122,154,0.12); color: var(--muted); border: 1px solid rgba(90,122,154,0.3); }
+
+  .empty-state { text-align: center; padding: 60px 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 13px; line-height: 1.7; border: 1px solid var(--border); }
+  .empty-state strong { color: var(--accent); }
+
+  footer { position: relative; z-index: 1; text-align: center; padding: 24px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 11px; border-top: 1px solid var(--border); margin-top: 48px; }
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+  .nav-arrow { font-size: 8px; color: var(--muted); margin-left: auto; transition: transform 0.2s; }
+  .nav-item.open .nav-arrow { transform: rotate(90deg); }
+  .nav-sub {
+    display: none; flex-direction: column; background: var(--surface2);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .nav-item.open .nav-sub { display: flex; }
+  .sub-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--muted); padding: 6px 14px 2px 26px;
+  }
+  .sub-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.5px;
+    text-transform: uppercase; padding: 7px 14px 7px 26px; color: var(--dim);
+    border-left: 2px solid transparent; text-decoration: none; display: flex;
+    align-items: center; gap: 6px; transition: all 0.15s; cursor: pointer; white-space: nowrap;
+  }
+  .sub-link:hover  { color: var(--accent); }
+  .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
+  .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
+  .sub-link.active .sub-dot { opacity: 1; }
+  .chip {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap;
+    flex-shrink: 0; transition: all 0.15s;
+  }
+  .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
+  .hamburger {
+    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
+    background: transparent; cursor: pointer; font-size: 18px;
+    align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 260px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  .bottom-tabs {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
+    background: var(--bg); border-top: 1px solid var(--accent);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-tabs-inner { display: flex; justify-content: space-around; align-items: stretch; }
+  .tab-btn {
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    gap: 2px; padding: 8px 4px 6px; background: none; border: none;
+    cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
+    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
+  .tab-btn:hover  { color: var(--accent); }
+  .tab-icon { font-size: 16px; line-height: 1; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+    #news-search { width: 160px; }
+  }
+  @media (max-width: 600px) {
+    body { padding-bottom: 56px; }
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+    .hamburger { display: flex; }
+    .bottom-tabs { display: block; }
+    #news-search, .search-count-bar .row-count { display: none; }
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
+</style>
+</head>
+<body data-layout="rail">
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<!-- Panel 1: Sector switcher (full height) -->
+<div class="left-rail">
+</div>
+
+<!-- Panel 2: Nav panel -->
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<div class="nav-item open" id="ni-news">
+<button class="nav-link active" onclick="toggleNav('news')">
+<span class="nav-icon">📰</span><span class="nav-label">News</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="setCategory('big-tech')"><span class="sub-dot"></span>Big Tech</a>
+<a class="sub-link" onclick="setCategory('financials')"><span class="sub-dot"></span>Financials</a>
+<a class="sub-link" onclick="setCategory('healthcare')"><span class="sub-dot"></span>Healthcare</a>
+<a class="sub-link" onclick="setCategory('consumer')"><span class="sub-dot"></span>Consumer</a>
+<a class="sub-link" onclick="setCategory('energy-industrial')"><span class="sub-dot"></span>Energy &amp; Ind.</a>
+<a class="sub-link" onclick="setCategory('tech-semis')"><span class="sub-dot"></span>Tech &amp; Semis</a>
+<a class="sub-link" onclick="setCategory('global-growth')"><span class="sub-dot"></span>Global Growth</a>
+</div>
+</div>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+
+<!-- Panel 3: Right side (header + content) -->
+<div class="right-side">
+<header>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+<div class="header-label">// Market Intelligence</div>
+<h1>Mega-Cap <span>News</span></h1>
+<div class="header-sub">Latest headlines across all tracked stocks · sentiment scored · Last updated <span id="data-bar-ts">—</span></div>
+</div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+<div class="filter-bar" id="filter-bar"></div>
+<div class="controls-row">
+<span class="sort-label">Sort</span>
+<div class="sort-group" id="sort-group">
+<button class="sort-btn active" data-sort="newest" onclick="setSort('newest', this)">Newest</button>
+<button class="sort-btn" data-sort="oldest" onclick="setSort('oldest', this)">Oldest</button>
+<button class="sort-btn" data-sort="positive" onclick="setSort('positive', this)">Most Positive</button>
+<button class="sort-btn" data-sort="negative" onclick="setSort('negative', this)">Most Negative</button>
+</div>
+<span class="sort-label">Period</span>
+<div class="sort-group" id="window-group">
+<button class="sort-btn" data-window="all" onclick="setWindow('all', this)">All Time</button>
+<button class="sort-btn active" data-window="day" onclick="setWindow('day', this)">Last 24h</button>
+<button class="sort-btn" data-window="week" onclick="setWindow('week', this)">Last Week</button>
+</div>
+</div>
+<div class="search-count-bar">
+<input id="news-search" oninput="filterNews(this.value)" placeholder="Search ticker, company or headline..." type="text"/>
+<span class="row-count">Showing <span id="news-count">—</span> headlines</span>
+</div>
+</header>
+
+
+<div class="page-body">
+<div class="page-main">
+<div class="container">
+
+  <div class="news-feed" id="news-feed"></div>
+
+
+<script src="prices-data.js"></script>
+<script>
+  const NAMES = {
+    'AAPL':    'Apple Inc.',
+    'MSFT':    'Microsoft Corporation',
+    'NVDA':    'NVIDIA Corporation',
+    'GOOGL':   'Alphabet Inc.',
+    'META':    'Meta Platforms',
+    'AMZN':    'Amazon.com',
+    'TSLA':    'Tesla',
+    'NFLX':    'Netflix',
+    'JPM':     'JPMorgan Chase',
+    'BAC':     'Bank of America',
+    'BRK-B':   'Berkshire Hathaway B',
+    'V':       'Visa Inc.',
+    'MA':      'Mastercard',
+    'GS':      'Goldman Sachs',
+    'BLK':     'BlackRock',
+    'LLY':     'Eli Lilly',
+    'UNH':     'UnitedHealth Group',
+    'JNJ':     'Johnson & Johnson',
+    'ABBV':    'AbbVie',
+    'MRK':     'Merck',
+    'TMO':     'Thermo Fisher Scientific',
+    'ABT':     'Abbott Laboratories',
+    'PG':      'Procter & Gamble',
+    'KO':      'Coca-Cola',
+    'PEP':     'PepsiCo',
+    'MCD':     "McDonald's",
+    'NKE':     'Nike',
+    'WMT':     'Walmart',
+    'COST':    'Costco',
+    'XOM':     'ExxonMobil',
+    'CVX':     'Chevron',
+    'CAT':     'Caterpillar',
+    'HON':     'Honeywell',
+    'GE':      'GE Aerospace',
+    'RTX':     'RTX Corp',
+    'BA':      'Boeing',
+    'AMD':     'Advanced Micro Devices',
+    'QCOM':    'Qualcomm',
+    'AVGO':    'Broadcom',
+    'TSM':     'Taiwan Semiconductor',
+    'ASML':    'ASML Holding',
+    'ARM':     'Arm Holdings',
+    'INTC':    'Intel',
+    '2222.SR': 'Saudi Aramco',
+    'BABA':    'Alibaba Group',
+    'SAP':     'SAP SE',
+    'SONY':    'Sony Group',
+    'TM':      'Toyota Motor',
+    'NVO':     'Novo Nordisk',
+    'HSBC':    'HSBC Holdings',
+  };
+
+  const CAT_LABELS = {
+    'big-tech':           'Big Tech',
+    'financials':         'Financials',
+    'healthcare':         'Healthcare',
+    'consumer':           'Consumer',
+    'energy-industrial':  'Energy & Industrial',
+    'tech-semis':         'Tech & Semis',
+    'global-growth':      'Global Growth',
+  };
+
+  const CAT_TOOLTIPS = {
+    'big-tech':           'Large-cap technology companies — Apple, Microsoft, NVIDIA, Alphabet, Meta, Amazon, Tesla, Netflix',
+    'financials':         'Major financial institutions — JPMorgan, Bank of America, Berkshire, Visa, Mastercard, Goldman Sachs, BlackRock',
+    'healthcare':         'Healthcare and pharma leaders — Eli Lilly, UnitedHealth, J&J, AbbVie, Merck, Thermo Fisher, Abbott',
+    'consumer':           'Consumer brands and retail — Procter & Gamble, Coca-Cola, PepsiCo, McDonald\'s, Nike, Walmart, Costco',
+    'energy-industrial':  'Energy and industrial companies — ExxonMobil, Chevron, Caterpillar, Honeywell, GE Aerospace, RTX, Boeing',
+    'tech-semis':         'Technology and semiconductor companies — AMD, Qualcomm, Broadcom, TSMC, ASML, Arm, Intel',
+    'global-growth':      'Global growth stocks — Saudi Aramco, Alibaba, SAP, Sony, Toyota, Novo Nordisk, HSBC',
+  };
+
+  function yahooUrl(ticker) {
+    return 'https://finance.yahoo.com/quote/' + ticker + '/';
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function sentClass(v) {
+    if (v === null || v === undefined) return 'sent-neu';
+    if (v >= 0.05) return 'sent-pos';
+    if (v <= -0.05) return 'sent-neg';
+    return 'sent-neu';
+  }
+
+  function sentLabel(v) {
+    if (v === null || v === undefined) return 'N/A';
+    return (v >= 0 ? '+' : '') + v.toFixed(2);
+  }
+
+  function timeAgo(unixSec) {
+    if (!unixSec) return '';
+    const diff = Date.now() / 1000 - unixSec;
+    if (diff < 0) return 'just now';
+    if (diff < 3600) return Math.max(1, Math.round(diff / 60)) + 'm ago';
+    if (diff < 86400) return Math.round(diff / 3600) + 'h ago';
+    if (diff < 86400 * 30) return Math.round(diff / 86400) + 'd ago';
+    return new Date(unixSec * 1000).toLocaleDateString();
+  }
+
+  let sortMode = 'newest';
+  let activeCategory = 'all';
+  let searchQuery = '';
+  let timeWindow = 'day';
+
+  function setSort(mode, btn) {
+    sortMode = mode;
+    document.querySelectorAll('#sort-group .sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderFeed();
+  }
+
+  function setWindow(w, btn) {
+    timeWindow = w;
+    document.querySelectorAll('#window-group .sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderFeed();
+  }
+
+  function filterNews(q) {
+    searchQuery = q.toLowerCase().trim();
+    renderFeed();
+  }
+
+  function setCategory(cat) {
+    activeCategory = cat;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.cat === cat);
+    });
+    document.querySelectorAll('.sub-link').forEach(l => {
+      const m = l.getAttribute('onclick') && l.getAttribute('onclick').match(/'([^']+)'/);
+      l.classList.toggle('active', !!(m && m[1] === cat));
+    });
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === cat));
+    renderFeed();
+  }
+  function toggleNav(id) {
+    const item = document.getElementById('ni-' + id);
+    if (!item) return;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+
+  function renderFeed() {
+    let items = window._newsItems || [];
+
+    if (activeCategory !== 'all') {
+      items = items.filter(n => n.category === activeCategory);
+    }
+    if (searchQuery) {
+      items = items.filter(n =>
+        n.ticker.toLowerCase().includes(searchQuery) ||
+        n.name.toLowerCase().includes(searchQuery) ||
+        (n.title || '').toLowerCase().includes(searchQuery)
+      );
+    }
+    if (timeWindow !== 'all') {
+      const span = timeWindow === 'day' ? 86400 : 604800;
+      const cutoff = Date.now() / 1000 - span;
+      items = items.filter(n => n.published && n.published >= cutoff);
+    }
+
+    const sorted = [...items].sort((a, b) => {
+      switch (sortMode) {
+        case 'oldest':   return (a.published || 0) - (b.published || 0);
+        case 'positive': return (b.sentiment ?? -2) - (a.sentiment ?? -2);
+        case 'negative': return (a.sentiment ??  2) - (b.sentiment ??  2);
+        case 'newest':
+        default:         return (b.published || 0) - (a.published || 0);
+      }
+    });
+
+    document.getElementById('news-count').textContent = sorted.length;
+
+    const feed = document.getElementById('news-feed');
+    if (!sorted.length) {
+      const anyNews = (window._newsItems || []).length > 0;
+      feed.innerHTML = '<div class="empty-state">' +
+        (anyNews
+          ? 'No headlines match the current filters.'
+          : 'No news data yet. The price/news bot needs to run on GitHub Actions to populate <strong>prices-data.js</strong>.') +
+        '</div>';
+      return;
+    }
+
+    feed.innerHTML = sorted.map(n => {
+      const sc = sentClass(n.sentiment);
+      const catLabel = CAT_LABELS[n.category] || n.category;
+      const headlineTag = n.url
+        ? '<a class="news-headline" href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener">' + escapeHtml(n.title) + '</a>'
+        : '<span class="news-headline">' + escapeHtml(n.title) + '</span>';
+      return '<div class="news-card">' +
+        '<div class="sent-bar ' + sc + '"></div>' +
+        '<div class="news-body">' +
+          '<div class="news-meta-top">' +
+            '<a class="news-ticker" href="' + yahooUrl(n.ticker) + '" target="_blank" rel="noopener">' + n.ticker + '</a>' +
+            '<span class="news-company">' + escapeHtml(n.name) + '</span>' +
+            '<span class="cat-badge cat-' + n.category + '">' + catLabel + '</span>' +
+            '<span class="news-time">' + timeAgo(n.published) + '</span>' +
+          '</div>' +
+          headlineTag +
+          '<div class="news-meta-bot">' +
+            '<span class="sent-pill ' + sc + '">' + sentLabel(n.sentiment) + '</span>' +
+            (n.publisher ? '<span>' + escapeHtml(n.publisher) + '</span>' : '') +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function buildFilterBar() {
+    const cats = ['all', ...Object.keys(CAT_LABELS)];
+    const bar = document.getElementById('filter-bar');
+    if (!bar) return;
+    bar.innerHTML = cats.map(cat => {
+      const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
+      const tip = CAT_TOOLTIPS[cat] ? ' data-tooltip="' + CAT_TOOLTIPS[cat] + '"' : '';
+      return '<button class="filter-btn' + (cat === 'all' ? ' active' : '') + '" data-cat="' + cat + '"' + tip + ' onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+    }).join('');
+  }
+
+  function buildNews(stocks) {
+    const items = [];
+    stocks.forEach(s => {
+      const arr = Array.isArray(s.news) ? s.news : [];
+      arr.forEach(n => {
+        if (!n || !n.title) return;
+        items.push({
+          ticker:    s.ticker,
+          name:      s.company_name || NAMES[s.ticker] || s.ticker,
+          category:  s.category,
+          title:     n.title,
+          url:       n.url || null,
+          publisher: n.publisher || null,
+          published: (n.published !== undefined && n.published !== null) ? parseInt(n.published) : null,
+          sentiment: (n.sentiment !== undefined && n.sentiment !== null) ? parseFloat(n.sentiment) : null,
+        });
+      });
+    });
+    window._newsItems = items;
+    buildFilterBar();
+    renderFeed();
+  }
+
+  if (window.PRICES_DATA) {
+    buildNews(window.PRICES_DATA.stocks);
+  } else {
+    fetch('prices.json')
+      .then(r => r.json())
+      .then(data => buildNews(data.stocks))
+      .catch(() => {
+        document.getElementById('news-feed').innerHTML =
+          '<div class="empty-state">No data available — run the price/news bot first.</div>';
+      });
+  }
+
+</script>
+</div><!-- /.container -->
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<div class="nav-item open" id="ni-news-d">
+<button class="nav-link active" onclick="toggleNav('news-d')">
+<span class="nav-icon">📰</span><span class="nav-label">News</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="setCategory('all');closeDrawer()"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="setCategory('big-tech');closeDrawer()"><span class="sub-dot"></span>Big Tech</a>
+<a class="sub-link" onclick="setCategory('financials');closeDrawer()"><span class="sub-dot"></span>Financials</a>
+<a class="sub-link" onclick="setCategory('healthcare');closeDrawer()"><span class="sub-dot"></span>Healthcare</a>
+<a class="sub-link" onclick="setCategory('consumer');closeDrawer()"><span class="sub-dot"></span>Consumer</a>
+<a class="sub-link" onclick="setCategory('energy-industrial');closeDrawer()"><span class="sub-dot"></span>Energy &amp; Ind.</a>
+<a class="sub-link" onclick="setCategory('tech-semis');closeDrawer()"><span class="sub-dot"></span>Tech &amp; Semis</a>
+<a class="sub-link" onclick="setCategory('global-growth');closeDrawer()"><span class="sub-dot"></span>Global Growth</a>
+</div>
+</div>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+
+<!-- Bottom tab bar (mobile) -->
+<div class="bottom-tabs">
+<div class="bottom-tabs-inner">
+</div>
+</div>
+</body>
+</html>

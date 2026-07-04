@@ -666,10 +666,15 @@
 <script src="Energy/signals-local.js"></script>
 <script>window.__sd_Energy = window.SIGNALS_DATA;</script>
 
+<script src="MegaCap/prices-data.js"></script>
+<script>window.__pd_MegaCap = window.PRICES_DATA;</script>
+<script src="MegaCap/signals-local.js"></script>
+<script>window.__sd_MegaCap = window.SIGNALS_DATA;</script>
+
 <script>
 // Aggregate all sector stocks for ticker tape
 (function() {
-  const sectors = ['AI','Defence','Biotech','Tech','Crypto','Energy'];
+  const sectors = ['AI','Defence','Biotech','Tech','Crypto','Energy','MegaCap'];
   const all = [], seen = new Set();
   for (const s of sectors) {
     const pd = window['__pd_' + s];
@@ -969,13 +974,32 @@
         </div>
       </a>
 
+      <a class="card live" href="MegaCap/index.html">
+        <div class="card-top">
+          <div class="card-icon">🌍</div>
+          <span class="badge badge-live">Live</span>
+        </div>
+        <div class="card-name">Mega-Cap</div>
+        <div class="card-desc">50 stocks across Big Tech (AAPL/MSFT/NVDA/GOOGL/META), Financials (JPM/V/MA/BLK), Healthcare (LLY/UNH/ABBV), Consumer (WMT/COST/MCD), Energy &amp; Industrial (XOM/CAT/GE), Tech &amp; Semis (AMD/AVGO/TSM/ASML), and Global Growth (2222.SR/NVO/BABA/SAP).</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='MegaCap/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-MegaCap"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </a>
+
       <a class="card live" href="All/index.html">
         <div class="card-top">
           <div class="card-icon">🌐</div>
           <span class="badge badge-live">Live</span>
         </div>
         <div class="card-name">All Sectors</div>
-        <div class="card-desc">192 stocks &amp; coins across AI, Biotech, Defence, Tech, Crypto, and Energy — combined dashboard, heatmap, signals, and What-If calculator.</div>
+        <div class="card-desc">242 stocks &amp; coins across AI, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap — combined dashboard, heatmap, signals, and What-If calculator.</div>
       </a>
 
       <a class="card live" href="news.html">
@@ -1275,6 +1299,7 @@
       { id: 'Tech',    signals: 'Tech/signals-local.json',    prices: 'Tech/prices-data.js' },
       { id: 'Crypto',  signals: 'Crypto/signals-local.json',  prices: 'Crypto/prices-data.js' },
       { id: 'Energy',  signals: 'Energy/signals-local.json',  prices: 'Energy/prices-data.js' },
+      { id: 'MegaCap', signals: 'MegaCap/signals-local.json', prices: 'MegaCap/prices-data.js' },
     ];
 
     function priceMapFromData(data) {
