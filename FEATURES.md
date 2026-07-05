@@ -6,6 +6,10 @@
 
 ## Done
 
+- **Auto-release on deploy to live** — `.github/workflows/create-release.yml` triggers on every push to `main`; tags with today's date, builds release notes from commit messages since the last tag, publishes automatically to GitHub Releases — zero manual steps per deploy.
+
+- **Mobile metrics table fixes — all 8 pages** — four issues fixed across all sector metrics pages (AI, Tech, Crypto, Biotech, Defence, MegaCap, Energy, All): (1) sticky TICKER column with `position:sticky;left:0` so the stock identifier stays visible while scrolling through 18 columns; (2) `white-space:nowrap` on `.cat-badge` prevents multi-word categories ("Tech & Semis", "Global Growth") wrapping onto two lines; (3) Company column header (`th:nth-child(2)`) now hidden on mobile alongside data cells — previously the ghost header misaligned all columns; (4) CSS hover-tooltips on filter buttons disabled on mobile where they were non-functional and appeared behind the page header.
+
 - **Nav flash eliminated — `nav.js` critical-path split** — `buildNav()`, `_RAIL_ITEMS`, and `_SECTOR_PAGES` moved from deferred `shared.js` into a new `nav.js` loaded synchronously before `</body>`; runs before first browser paint so rail and nav-panel are correct on first render with zero flash; `shared.js` stays deferred; future nav changes edit `nav.js` only — single source of truth (`nav.js`, `shared.js`, all 62 HTML pages).
 
 - **Mobile burger menu — consistent across all pages** — hamburger button `border: none` added to `shared.css` (canonical single source); per-page accordion HTML stripped from all 49 sector drawer `nav-panel`s so `buildNav()` populates them identically to All/ pages; drawer nav-panel forced to compact 72px icon+label column via high-specificity CSS in `shared.css`; bottom tab bar removed (`shared.css`, all sector + All/ HTML pages).
