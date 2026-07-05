@@ -1,0 +1,48 @@
+name: Create Release on Deploy to Live
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate tag name
+        id: tag
+        run: |
+          DATE=$(date +'%Y-%m-%d')
+          TAG="v${DATE}"
+          # If a tag already exists for today, append the short commit SHA
+          if git tag | grep -q "^${TAG}$"; then
+            SHORT=$(git rev-parse --short HEAD)
+            TAG="${TAG}-${SHORT}"
+          fi
+          echo "tag=${TAG}" >> $GITHUB_OUTPUT
+
+      - name: Build release notes from commits since last tag
+        run: |
+          LAST_TAG=$(git tag --sort=-creatordate | head -1)
+          if [ -z "$LAST_TAG" ]; then
+            git log --pretty=format:"- %s" -20 > release_notes.txt
+          else
+            git log "${LAST_TAG}..HEAD" --pretty=format:"- %s" > release_notes.txt
+          fi
+          # Fallback if nothing was written
+          [ -s release_notes.txt ] || echo "- Deploy to live" > release_notes.txt
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ steps.tag.outputs.tag }}" \
+            --title "Deploy ${{ steps.tag.outputs.tag }}" \
+            --notes-file release_notes.txt \
+            --target main
