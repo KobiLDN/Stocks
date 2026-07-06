@@ -1,13 +1,13 @@
 {
-  "updated": "2026-07-04 22:39",
-  "fx_gbp_usd": 1.335,
+  "updated": "2026-07-06 07:31",
+  "fx_gbp_usd": 1.3335,
   "stocks": [
     {
       "ticker": "AMGN",
       "company_name": "Amgen",
       "category": "large-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "280",
+      "price_gbp": "281",
       "price_usd": 374.15,
       "change_1d": "+3.54%",
       "change_1w": "+6.05%",
@@ -19,7 +19,7 @@
       "high_gbp": "293",
       "high_usd": 391.29,
       "bar_pct": 86,
-      "market_cap_gbp_b": 151.261,
+      "market_cap_gbp_b": 151.429,
       "market_cap_usd_b": 201.932,
       "beta": 0.403,
       "pe_ratio": 26.04,
@@ -87,8 +87,8 @@
       "high_gbp": "118",
       "high_usd": 157.29,
       "bar_pct": 47,
-      "market_cap_gbp_b": 122.084,
-      "market_cap_usd_b": 162.981,
+      "market_cap_gbp_b": 122.219,
+      "market_cap_usd_b": 162.98,
       "beta": 0.343,
       "pe_ratio": 17.86,
       "avg_volume_m": 7.18,
@@ -100,6 +100,13 @@
       "vol_1w": 48958300,
       "vol_1m": 196165900,
       "news": [
+        {
+          "title": "Is Gilead (GILD) One of the Most Undervalued NASDAQ Stocks to Buy Right Now?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/gilead-gild-one-most-undervalued-125908409.html",
+          "published": 1783256348,
+          "sentiment": 0.0
+        },
         {
           "title": "The FDA Just Approved a KEYTRUDA Combination That Could Become the Standard First-Line Treatment for Aggressive Breast Cancer",
           "publisher": "Insider Monkey",
@@ -127,23 +134,16 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/gilead-gild-moves-3-3-122200433.html",
           "published": 1782735720,
           "sentiment": 0.579
-        },
-        {
-          "title": "Gilead (GILD) Wins FDA Approval for Trodelvy in TNBC",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/healthcare/articles/gilead-gild-wins-fda-approval-000743265.html",
-          "published": 1782605263,
-          "sentiment": 0.778
         }
       ],
-      "news_sentiment": 0.151
+      "news_sentiment": -0.004
     },
     {
       "ticker": "REGN",
       "company_name": "Regeneron Pharmaceuticals",
       "category": "large-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "490",
+      "price_gbp": "491",
       "price_usd": 654.27,
       "change_1d": "+3.85%",
       "change_1w": "+5.50%",
@@ -152,10 +152,10 @@
       "return_1yr": "+22%",
       "low_gbp": "399",
       "low_usd": 532.6,
-      "high_gbp": "615",
+      "high_gbp": "616",
       "high_usd": 821.11,
       "bar_pct": 42,
-      "market_cap_gbp_b": 51.381,
+      "market_cap_gbp_b": 51.438,
       "market_cap_usd_b": 68.593,
       "beta": 0.236,
       "pe_ratio": 15.97,
@@ -220,11 +220,11 @@
       "return_1yr": "+15%",
       "low_gbp": "272",
       "low_usd": 362.5,
-      "high_gbp": "396",
+      "high_gbp": "397",
       "high_usd": 529.14,
       "bar_pct": 99,
-      "market_cap_gbp_b": 100.39,
-      "market_cap_usd_b": 134.02,
+      "market_cap_gbp_b": 100.501,
+      "market_cap_usd_b": 134.019,
       "beta": 0.292,
       "pe_ratio": 31.36,
       "avg_volume_m": 1.42,
@@ -236,6 +236,13 @@
       "vol_1w": 15786200,
       "vol_1m": 39321300,
       "news": [
+        {
+          "title": "While SpaceX Gets the Headlines, Smart Investors Are Loading Up on This Stock Instead",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/while-spacex-gets-the-headlines-smart-investors-ar/",
+          "published": 1783242240,
+          "sentiment": 0.402
+        },
         {
           "title": "Vertex Pharmaceuticals (VRTX) Wins FDA Approval To Treat Two Year Olds With CASGEVY",
           "publisher": "Simply Wall St.",
@@ -263,16 +270,9 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/crsp-vrtx-stocks-surge-as-fda-clears-casgevy-for-children-ages-2-and-up/cZmexkXR7je",
           "published": 1783027004,
           "sentiment": 0.077
-        },
-        {
-          "title": "Vertex Gets FDA Nod for Expanded Use of Casgevy in SCD & TDT",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/vertex-gets-fda-nod-expanded-144200647.html",
-          "published": 1783003320,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.339
+      "news_sentiment": 0.419
     },
     {
       "ticker": "BIIB",
@@ -291,8 +291,8 @@
       "high_gbp": "165",
       "high_usd": 219.72,
       "bar_pct": 96,
-      "market_cap_gbp_b": 23.901,
-      "market_cap_usd_b": 31.908,
+      "market_cap_gbp_b": 23.927,
+      "market_cap_usd_b": 31.907,
       "beta": 0.158,
       "pe_ratio": 23.26,
       "avg_volume_m": 1.2,
@@ -304,6 +304,13 @@
       "vol_1w": 7039200,
       "vol_1m": 24589600,
       "news": [
+        {
+          "title": "Here is Why Biogen (BIIB) is One of the Most Undervalued NASDAQ Stocks to Buy Right Now",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-biogen-biib-one-most-125914947.html",
+          "published": 1783256354,
+          "sentiment": 0.0
+        },
         {
           "title": "Biogen Is Paying $1 Billion for a Company That Won't Say What It Makes. Here's Why That's Actually Good News for BIIB Investors.",
           "publisher": "Motley Fool",
@@ -331,16 +338,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/biogen-biib-priced-near-fair-071450931.html",
           "published": 1782976490,
           "sentiment": 0.572
-        },
-        {
-          "title": "Biogen (BIIB) To Share New Alzheimer\u2019s Data At AAIC 2026",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/healthcare/articles/biogen-biib-share-alzheimer-data-011843495.html",
-          "published": 1782955123,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.381
+      "news_sentiment": 0.322
     },
     {
       "ticker": "BMY",
@@ -359,11 +359,11 @@
       "high_gbp": "47",
       "high_usd": 62.89,
       "bar_pct": 77,
-      "market_cap_gbp_b": 88.919,
-      "market_cap_usd_b": 118.706,
+      "market_cap_gbp_b": 89.017,
+      "market_cap_usd_b": 118.705,
       "beta": 0.235,
       "pe_ratio": 16.28,
-      "avg_volume_m": 11.44,
+      "avg_volume_m": 11.43,
       "div_yield_pct": 434.0,
       "short_pct": 1.94,
       "analyst": "buy",
@@ -416,19 +416,19 @@
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "145",
-      "price_usd": 192.99,
+      "price_usd": 192.77,
       "change_1d": "-0.56%",
       "change_1w": "+0.96%",
       "change_1m": "+9.43%",
       "change_ytd": "+6.37%",
       "return_1yr": "+41%",
       "low_gbp": "101",
-      "low_usd": 135.47,
+      "low_usd": 135.32,
       "high_gbp": "157",
-      "high_usd": 210.02,
+      "high_usd": 209.79,
       "bar_pct": 77,
       "market_cap_gbp_b": 2.242,
-      "market_cap_usd_b": 2.993,
+      "market_cap_usd_b": 2.99,
       "beta": 0.225,
       "pe_ratio": 28.74,
       "avg_volume_m": 2.14,
@@ -440,6 +440,13 @@
       "vol_1w": 9665574,
       "vol_1m": 50730247,
       "news": [
+        {
+          "title": "Abbisko, AstraZeneca Team Up on Lung Cancer Drug Combo After China Trial Clearance",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/healthcare/articles/abbisko-astrazeneca-team-lung-cancer-193142466.html",
+          "published": 1783279902,
+          "sentiment": -0.66
+        },
         {
           "title": "Arcutis vs. Vertex: Which Pharmaceutical Maker Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
@@ -467,16 +474,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-astrazeneca-azn-dipped-more-221502564.html",
           "published": 1782944102,
           "sentiment": 0.0
-        },
-        {
-          "title": "AZN vs. ILMN: Which Stock Should Value Investors Buy Now?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/azn-vs-ilmn-stock-value-154002303.html",
-          "published": 1782920402,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.151
+      "news_sentiment": -0.049
     },
     {
       "ticker": "GSK",
@@ -484,19 +484,19 @@
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "20",
-      "price_usd": 26.9,
+      "price_usd": 26.87,
       "change_1d": "+0.25%",
       "change_1w": "+1.61%",
       "change_1m": "+8.83%",
       "change_ytd": "+10.04%",
       "return_1yr": "+44%",
       "low_gbp": "13",
-      "low_usd": 17.2,
+      "low_usd": 17.18,
       "high_gbp": "23",
-      "high_usd": 30.46,
+      "high_usd": 30.43,
       "bar_pct": 73,
       "market_cap_gbp_b": 0.807,
-      "market_cap_usd_b": 1.077,
+      "market_cap_usd_b": 1.076,
       "beta": 0.3,
       "pe_ratio": 14.19,
       "avg_volume_m": 7.86,
@@ -563,7 +563,7 @@
       "high_gbp": "59",
       "high_usd": 78.48,
       "bar_pct": 46,
-      "market_cap_gbp_b": 4.432,
+      "market_cap_gbp_b": 4.437,
       "market_cap_usd_b": 5.917,
       "beta": 1.702,
       "pe_ratio": null,
@@ -572,9 +572,9 @@
       "short_pct": 30.81,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2931700,
-      "vol_1w": 10323000,
-      "vol_1m": 37003900,
+      "vol_1d": 2926600,
+      "vol_1w": 10317900,
+      "vol_1m": 36998800,
       "news": [
         {
           "title": "CRISPR Therapeutics (CRSP) Stock Looks Stretched On Book Value Yet Reasonable On Broader Checks",
@@ -631,7 +631,7 @@
       "high_gbp": "28",
       "high_usd": 36.88,
       "bar_pct": 90,
-      "market_cap_gbp_b": 2.681,
+      "market_cap_gbp_b": 2.684,
       "market_cap_usd_b": 3.579,
       "beta": 2.182,
       "pe_ratio": null,
@@ -640,9 +640,9 @@
       "short_pct": 42.63,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 2316300,
-      "vol_1w": 13839200,
-      "vol_1m": 50881800,
+      "vol_1d": 2315500,
+      "vol_1w": 13838400,
+      "vol_1m": 50881000,
       "news": [
         {
           "title": "Tesla\u2019s 10% Weight in ARKK Sets Up a Make-or-Break Year for the Innovation ETF",
@@ -699,7 +699,7 @@
       "high_gbp": "21",
       "high_usd": 28.25,
       "bar_pct": 47,
-      "market_cap_gbp_b": 1.838,
+      "market_cap_gbp_b": 1.84,
       "market_cap_usd_b": 2.454,
       "beta": 1.77,
       "pe_ratio": null,
@@ -708,9 +708,9 @@
       "short_pct": 45.4,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 4165300,
-      "vol_1w": 27102900,
-      "vol_1m": 141882800,
+      "vol_1d": 4163100,
+      "vol_1w": 27100700,
+      "vol_1m": 141880600,
       "news": [
         {
           "title": "Is Intellia Therapeutics, Inc. (NTLA) A Good Stock To Buy Now?",
@@ -755,7 +755,7 @@
       "company_name": "Editas Medicine",
       "category": "gene-editing",
       "exchange": "NASDAQ",
-      "price_gbp": "2.73",
+      "price_gbp": "2.74",
       "price_usd": 3.65,
       "change_1d": "+12.88%",
       "change_1w": "+33.21%",
@@ -768,7 +768,7 @@
       "high_usd": 4.54,
       "bar_pct": 69,
       "market_cap_gbp_b": 0.42,
-      "market_cap_usd_b": 0.561,
+      "market_cap_usd_b": 0.56,
       "beta": 2.1,
       "pe_ratio": null,
       "avg_volume_m": 2.39,
@@ -776,9 +776,9 @@
       "short_pct": 12.02,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 4202100,
-      "vol_1w": 18463200,
-      "vol_1m": 58287000,
+      "vol_1d": 4200600,
+      "vol_1w": 18461700,
+      "vol_1m": 58285500,
       "news": [
         {
           "title": "Why Is Editas (EDIT) Down 12.4% Since Last Earnings Report?",
@@ -835,8 +835,8 @@
       "high_gbp": "142",
       "high_usd": 189.46,
       "bar_pct": 99,
-      "market_cap_gbp_b": 21.384,
-      "market_cap_usd_b": 28.547,
+      "market_cap_gbp_b": 21.408,
+      "market_cap_usd_b": 28.548,
       "beta": 1.469,
       "pe_ratio": 34.37,
       "avg_volume_m": 1.81,
@@ -898,13 +898,13 @@
       "change_1m": "+6.33%",
       "change_ytd": "-8.70%",
       "return_1yr": "+14%*",
-      "low_gbp": "0.816",
+      "low_gbp": "0.817",
       "low_usd": 1.09,
-      "high_gbp": "2.04",
+      "high_gbp": "2.05",
       "high_usd": 2.73,
       "bar_pct": 36,
       "market_cap_gbp_b": 0.391,
-      "market_cap_usd_b": 0.522,
+      "market_cap_usd_b": 0.521,
       "beta": 2.289,
       "pe_ratio": null,
       "avg_volume_m": 6.28,
@@ -912,9 +912,9 @@
       "short_pct": 22.42,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 5375200,
-      "vol_1w": 44781900,
-      "vol_1m": 133706800,
+      "vol_1d": 5374100,
+      "vol_1w": 44780800,
+      "vol_1m": 133705700,
       "news": [
         {
           "title": "3 of Wall Street\u2019s Favorite Stocks Walking a Fine Line",
@@ -968,10 +968,10 @@
       "return_1yr": "+76%",
       "low_gbp": "99",
       "low_usd": 131.81,
-      "high_gbp": "209",
+      "high_gbp": "210",
       "high_usd": 279.63,
       "bar_pct": 99,
-      "market_cap_gbp_b": 29.965,
+      "market_cap_gbp_b": 29.998,
       "market_cap_usd_b": 40.003,
       "beta": 1.505,
       "pe_ratio": null,
@@ -1034,13 +1034,13 @@
       "change_1m": "+9.51%",
       "change_ytd": "-9.52%",
       "return_1yr": "-23%*",
-      "low_gbp": "2.07",
+      "low_gbp": "2.08",
       "low_usd": 2.77,
       "high_gbp": "5.38",
       "high_usd": 7.18,
       "bar_pct": 23,
-      "market_cap_gbp_b": 1.511,
-      "market_cap_usd_b": 2.017,
+      "market_cap_gbp_b": 1.512,
+      "market_cap_usd_b": 2.016,
       "beta": 0.995,
       "pe_ratio": null,
       "avg_volume_m": 17.31,
@@ -1048,10 +1048,31 @@
       "short_pct": 36.75,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 32680500,
-      "vol_1w": 157088100,
-      "vol_1m": 469519600,
+      "vol_1d": 32636300,
+      "vol_1w": 157043900,
+      "vol_1m": 469475400,
       "news": [
+        {
+          "title": "Recursion Pharmaceuticals (RXRX) Is Up 8.0% After Russell Index Additions Expand Its Investor Base \u2013 Has The Bull Case Changed?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/recursion-pharmaceuticals-rxrx-8-0-010926467.html",
+          "published": 1783300166,
+          "sentiment": 0.318
+        },
+        {
+          "title": "Recursion Pharmaceuticals (RXRX) Stock Looks Fully Valued Despite AI Drug Hopes",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/recursion-pharmaceuticals-rxrx-stock-looks-231042688.html",
+          "published": 1783293042,
+          "sentiment": 0.217
+        },
+        {
+          "title": "Cathie Wood Goes Bargain Hunting: 3 Stocks She Just Bought",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/cathie-wood-goes-bargain-hunting-3-stocks-she-just/",
+          "published": 1783246980,
+          "sentiment": 0.202
+        },
         {
           "title": "Dyne Therapeutics vs. Recursion Pharmaceuticals: Which Development Stage Pharma Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
@@ -1065,30 +1086,9 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/07/03/moderna-vs-recursion-which-cutting-edge-pharma-stock-is-a-better-buy-in-2026/",
           "published": 1783092855,
           "sentiment": 0.44
-        },
-        {
-          "title": "Cathie Wood Doubles Down on AI, Loads Up on Tesla, Palantir, and SpaceX",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/cathie-woods-biggest-portfolio-moves-130432149.html",
-          "published": 1782911072,
-          "sentiment": 0.0
-        },
-        {
-          "title": "AI Is Transforming Drug Discovery. Here Is the Next Trillion-Dollar Biotech Opportunity",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/06/30/ai-is-transforming-drug-discovery-here-is-the-next-trillion-dollar-biotech-opportunity/",
-          "published": 1782826709,
-          "sentiment": 0.421
-        },
-        {
-          "title": "Recursion Pharmaceuticals vs. Summit Therapeutics: Which Healthcare Stock Is a Better Buy in 2026?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/06/30/recursion-pharmaceuticals-vs-summit-therapeutics-which-healthcare-stock-is-a-better-buy-in-2026/",
-          "published": 1782821103,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.348
+      "news_sentiment": 0.323
     },
     {
       "ticker": "INCY",
@@ -1107,8 +1107,8 @@
       "high_gbp": "89",
       "high_usd": 118.69,
       "bar_pct": 96,
-      "market_cap_gbp_b": 17.488,
-      "market_cap_usd_b": 23.346,
+      "market_cap_gbp_b": 17.508,
+      "market_cap_usd_b": 23.347,
       "beta": 0.758,
       "pe_ratio": 16.51,
       "avg_volume_m": 1.69,
@@ -1175,8 +1175,8 @@
       "high_gbp": "42",
       "high_usd": 56.21,
       "bar_pct": 98,
-      "market_cap_gbp_b": 10.516,
-      "market_cap_usd_b": 14.039,
+      "market_cap_gbp_b": 10.527,
+      "market_cap_usd_b": 14.038,
       "beta": 0.424,
       "pe_ratio": 18.49,
       "avg_volume_m": 2.69,
@@ -1231,7 +1231,7 @@
       "company_name": "Alnylam Pharmaceuticals",
       "category": "oncology",
       "exchange": "NASDAQ",
-      "price_gbp": "234",
+      "price_gbp": "235",
       "price_usd": 312.78,
       "change_1d": "+3.57%",
       "change_1w": "+6.69%",
@@ -1240,10 +1240,10 @@
       "return_1yr": "-4%",
       "low_gbp": "205",
       "low_usd": 273.11,
-      "high_gbp": "371",
+      "high_gbp": "372",
       "high_usd": 495.55,
       "bar_pct": 18,
-      "market_cap_gbp_b": 31.281,
+      "market_cap_gbp_b": 31.316,
       "market_cap_usd_b": 41.76,
       "beta": 0.269,
       "pe_ratio": 78.79,
@@ -1311,8 +1311,8 @@
       "high_gbp": "24",
       "high_usd": 31.74,
       "bar_pct": 94,
-      "market_cap_gbp_b": 2.857,
-      "market_cap_usd_b": 3.814,
+      "market_cap_gbp_b": 2.861,
+      "market_cap_usd_b": 3.815,
       "beta": 0.799,
       "pe_ratio": null,
       "avg_volume_m": 1.31,
@@ -1379,8 +1379,8 @@
       "high_gbp": "61",
       "high_usd": 81.4,
       "bar_pct": 97,
-      "market_cap_gbp_b": 23.706,
-      "market_cap_usd_b": 31.647,
+      "market_cap_gbp_b": 23.733,
+      "market_cap_usd_b": 31.648,
       "beta": 0.942,
       "pe_ratio": null,
       "avg_volume_m": 7.52,
@@ -1388,9 +1388,9 @@
       "short_pct": 18.09,
       "analyst": "hold",
       "analyst_score": 3.0,
-      "vol_1d": 14112000,
-      "vol_1w": 57727300,
-      "vol_1m": 191622400,
+      "vol_1d": 14087700,
+      "vol_1w": 57703000,
+      "vol_1m": 191598100,
       "news": [
         {
           "title": "Jim Cramer Says \u201cFor the First Time in Ages, I Like Having a Position in Moderna\u201d",
@@ -1407,6 +1407,13 @@
           "sentiment": 0.0
         },
         {
+          "title": "MarketBeat Week in Review \u2013 06/29 - 07/03",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/articles/marketbeat-week-in-review-06-29-07-03/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1783162800,
+          "sentiment": 0.0
+        },
+        {
           "title": "Moderna Is Up More Than 70% in a Month After a 9-0 FDA Vote. Wall Street's Average Price Target Says It Should Fall 44%. What Gives?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/03/moderna-is-up-more-than-70-in-a-month-after-a-9-0/",
@@ -1419,16 +1426,9 @@
           "url": "https://www.thestreet.com/investing/jim-cramer-moderna-stock-buy-mrna-pipeline",
           "published": 1783094580,
           "sentiment": 0.178
-        },
-        {
-          "title": "Moderna vs. Recursion: Which Cutting-Edge Pharma Stock Is a Better Buy in 2026?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/07/03/moderna-vs-recursion-which-cutting-edge-pharma-stock-is-a-better-buy-in-2026/",
-          "published": 1783092855,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.196
+      "news_sentiment": 0.108
     },
     {
       "ticker": "BNTX",
@@ -1447,8 +1447,8 @@
       "high_gbp": "93",
       "high_usd": 124.0,
       "bar_pct": 41,
-      "market_cap_gbp_b": 18.478,
-      "market_cap_usd_b": 24.668,
+      "market_cap_gbp_b": 18.498,
+      "market_cap_usd_b": 24.667,
       "beta": 1.324,
       "pe_ratio": null,
       "avg_volume_m": 0.96,
@@ -1510,12 +1510,12 @@
       "change_1m": "-4.51%",
       "change_ytd": "+36.61%",
       "return_1yr": "+47%*",
-      "low_gbp": "4.64",
+      "low_gbp": "4.65",
       "low_usd": 6.2,
-      "high_gbp": "8.97",
+      "high_gbp": "8.98",
       "high_usd": 11.97,
       "bar_pct": 61,
-      "market_cap_gbp_b": 1.2,
+      "market_cap_gbp_b": 1.201,
       "market_cap_usd_b": 1.602,
       "beta": 2.427,
       "pe_ratio": null,
@@ -1583,7 +1583,7 @@
       "high_gbp": "50",
       "high_usd": 66.28,
       "bar_pct": 57,
-      "market_cap_gbp_b": 8.541,
+      "market_cap_gbp_b": 8.55,
       "market_cap_usd_b": 11.402,
       "beta": 0.239,
       "pe_ratio": 42.44,
@@ -1651,8 +1651,8 @@
       "high_gbp": "19",
       "high_usd": 25.32,
       "bar_pct": 59,
-      "market_cap_gbp_b": 1.525,
-      "market_cap_usd_b": 2.036,
+      "market_cap_gbp_b": 1.526,
+      "market_cap_usd_b": 2.035,
       "beta": 0.202,
       "pe_ratio": 55.09,
       "avg_volume_m": 3.19,
@@ -1719,7 +1719,7 @@
       "high_gbp": "29",
       "high_usd": 38.87,
       "bar_pct": 50,
-      "market_cap_gbp_b": 1.085,
+      "market_cap_gbp_b": 1.086,
       "market_cap_usd_b": 1.448,
       "beta": null,
       "pe_ratio": null,
@@ -1766,8 +1766,8 @@
       "high_gbp": "54",
       "high_usd": 71.8,
       "bar_pct": 42,
-      "market_cap_gbp_b": 167.187,
-      "market_cap_usd_b": 223.193,
+      "market_cap_gbp_b": 167.373,
+      "market_cap_usd_b": 223.194,
       "beta": 0.36,
       "pe_ratio": 12.09,
       "avg_volume_m": 14.87,
@@ -1779,6 +1779,20 @@
       "vol_1w": 61357300,
       "vol_1m": 278082800,
       "news": [
+        {
+          "title": "Trump\u2019s FDA May Soon Throw Its Weight Behind Peptides. Should You Buy In?",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/fda-peptides-endorse-trump-e7690edd?siteid=yhoof2&yptr=yahoo",
+          "published": 1783231200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How Much Could $1,000 Invested in Viking Therapeutics Be Worth by 2030?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/how-much-could-1000-invested-in-viking-therapeutic/",
+          "published": 1783229100,
+          "sentiment": 0.226
+        },
         {
           "title": "Is Viking Therapeutics Stock Going to $50? Here's What the Bulls and Bears Are Saying",
           "publisher": "Motley Fool",
@@ -1799,42 +1813,28 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/novo-nordisk-nvo-stock-may-141412298.html",
           "published": 1783088052,
           "sentiment": 0.0
-        },
-        {
-          "title": "Microsoft Launches AI Adoption Firm",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-launches-ai-adoption-firm-135313441.html",
-          "published": 1783086793,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Here's Why Viking Therapeutics Stock Surged Higher in June",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/heres-why-viking-therapeutics-stock-surged-higher/",
-          "published": 1783086339,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.088
+      "news_sentiment": 0.133
     },
     {
       "ticker": "LLY",
       "company_name": "Eli Lilly",
       "category": "metabolic",
       "exchange": "NYSE",
-      "price_gbp": "909",
+      "price_gbp": "910",
       "price_usd": 1213.91,
       "change_1d": "+2.03%",
       "change_1w": "+7.65%",
       "change_1m": "+12.53%",
       "change_ytd": "+12.74%",
       "return_1yr": "+57%",
-      "low_gbp": "467",
+      "low_gbp": "468",
       "low_usd": 623.78,
-      "high_gbp": "927",
+      "high_gbp": "928",
       "high_usd": 1238.0,
       "bar_pct": 96,
-      "market_cap_gbp_b": 810.864,
+      "market_cap_gbp_b": 811.762,
       "market_cap_usd_b": 1082.494,
       "beta": 0.506,
       "pe_ratio": 43.11,
@@ -1848,6 +1848,27 @@
       "vol_1m": 72487800,
       "news": [
         {
+          "title": "Lilly quietly hands Chinese partner its cancer drug",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/lly-eli-lilly-innovent-verzenios-china-deal",
+          "published": 1783298220,
+          "sentiment": -0.66
+        },
+        {
+          "title": "How Much Could $1,000 Invested in Viking Therapeutics Be Worth by 2030?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/how-much-could-1000-invested-in-viking-therapeutic/",
+          "published": 1783229100,
+          "sentiment": 0.226
+        },
+        {
+          "title": "Eli Lilly (LLY) Stock May Trade At A Cash Flow Discount But An Earnings Premium",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/eli-lilly-lly-stock-may-031647120.html",
+          "published": 1783221407,
+          "sentiment": 0.0
+        },
+        {
           "title": "Dividend King vs. Growth Giant: Johnson & Johnson Takes on Eli Lilly",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/07/04/dividend-king-vs-growth-giant-johnson-johnson-takes-on-eli-lilly/",
@@ -1860,30 +1881,9 @@
           "url": "https://www.fool.com/investing/2026/07/04/is-viking-therapeutics-stock-going-to-50-heres-wha/",
           "published": 1783157400,
           "sentiment": 0.0
-        },
-        {
-          "title": "Johnson & Johnson Is Walking Away From a $100 Billion Obesity Market. Could That Actually Make It the Better Long-Term Buy Than Eli Lilly?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/johnson-johnson-is-walking-away-from-a-100-billion/",
-          "published": 1783128900,
-          "sentiment": 0.44
-        },
-        {
-          "title": "Here's Why Viking Therapeutics Stock Surged Higher in June",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/heres-why-viking-therapeutics-stock-surged-higher/",
-          "published": 1783086339,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Can Medicare Bridge Help Novo Nordisk Defend Its GLP-1 Leadership?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/medicare-bridge-help-novo-nordisk-131200842.html",
-          "published": 1783084320,
-          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.245
+      "news_sentiment": -0.01
     },
     {
       "ticker": "LEGN",
@@ -1902,7 +1902,7 @@
       "high_gbp": "34",
       "high_usd": 45.3,
       "bar_pct": 47,
-      "market_cap_gbp_b": 4.334,
+      "market_cap_gbp_b": 4.339,
       "market_cap_usd_b": 5.786,
       "beta": 0.341,
       "pe_ratio": null,
@@ -1970,8 +1970,8 @@
       "high_gbp": "65",
       "high_usd": 86.74,
       "bar_pct": 89,
-      "market_cap_gbp_b": 10.126,
-      "market_cap_usd_b": 13.518,
+      "market_cap_gbp_b": 10.138,
+      "market_cap_usd_b": 13.519,
       "beta": 0.365,
       "pe_ratio": null,
       "avg_volume_m": 1.83,

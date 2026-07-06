@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-04 22:45",
-  "fx_gbp_usd": 1.335,
+  "updated": "2026-07-06 07:37",
+  "fx_gbp_usd": 1.3336,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,7 +19,7 @@
       "high_gbp": "132",
       "high_usd": 176.41,
       "bar_pct": 45,
-      "market_cap_gbp_b": 425.645,
+      "market_cap_gbp_b": 426.099,
       "market_cap_usd_b": 568.231,
       "beta": 0.162,
       "pe_ratio": 23.08,
@@ -33,6 +33,27 @@
       "vol_1m": 380231600,
       "news": [
         {
+          "title": "3 Energy Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/05/3-energy-stocks-to-buy-in-july/",
+          "published": 1783254625,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Trump administration proposes 702 regulatory rollbacks in deregulatory push",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-administration-proposes-702-regulatory-233140707.html",
+          "published": 1783207900,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Chevron vs. Exxon Mobil: Which Energy Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/07/04/chevron-vs-exxon-mobil-which-energy-stock-is-a-better-buy-in-2026/",
+          "published": 1783207261,
+          "sentiment": 0.612
+        },
+        {
           "title": "Oil is Starting to Flow Out of the Strait of Hormuz Again. Should You Still Buy Oil Stocks?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/07/04/oil-is-starting-to-flow-out-of-the-strait-of-hormu/",
@@ -45,30 +66,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/sable-offshore-soc-down-42-090936309.html",
           "published": 1783156176,
           "sentiment": 0.0
-        },
-        {
-          "title": "Prediction: This Oil Stock Will Beat the S&P 500 in the Second Half of 2026",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/03/prediction-this-oil-stock-will-beat-the-sp-500-in/",
-          "published": 1783106700,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Exxon (XOM) flashes key signals on New Jersey exit",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/exxon-xom-move-new-jersey-texas-cuban-asset",
-          "published": 1783099980,
-          "sentiment": 0.0
-        },
-        {
-          "title": "XOM, QatarEnergy Reach Milestone in Cyprus Offshore Gas Development",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/xom-qatarenergy-reach-milestone-cyprus-154200501.html",
-          "published": 1783093320,
-          "sentiment": 0.026
         }
       ],
-      "news_sentiment": 0.005
+      "news_sentiment": 0.177
     },
     {
       "ticker": "CVX",
@@ -87,7 +87,7 @@
       "high_gbp": "161",
       "high_usd": 214.71,
       "bar_pct": 34,
-      "market_cap_gbp_b": 252.42,
+      "market_cap_gbp_b": 252.69,
       "market_cap_usd_b": 336.978,
       "beta": 0.488,
       "pe_ratio": 29.48,
@@ -101,49 +101,49 @@
       "vol_1m": 202819500,
       "news": [
         {
-          "title": "Oil is Starting to Flow Out of the Strait of Hormuz Again. Should You Still Buy Oil Stocks?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/oil-is-starting-to-flow-out-of-the-strait-of-hormu/",
-          "published": 1783172100,
+          "title": "Five Energy Stocks Riding Texas's Data Center Power Boom",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/five-energy-stocks-riding-texass-210000847.html",
+          "published": 1783285200,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Six Dividend Aristocrats Keeping SCHD\u2019s Income Stream Bulletproof This Year",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/etf/2026/07/05/six-dividend-aristocrats-keeping-schds-income-stream-bulletproof-this-year/",
+          "published": 1783273647,
           "sentiment": 0.0
         },
         {
-          "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
+          "title": "3 Energy Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/05/3-energy-stocks-to-buy-in-july/",
+          "published": 1783254625,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Trump administration proposes 702 regulatory rollbacks in deregulatory push",
           "publisher": "Investing.com",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-marks-fourth-july-mount-063221288.html",
-          "published": 1783146741,
+          "url": "https://www.yahoo.com/news/politics/articles/trump-administration-proposes-702-regulatory-233140707.html",
+          "published": 1783207900,
           "sentiment": 0.0
         },
         {
-          "title": "2 Cash-Producing Stocks to Keep an Eye On and 1 We Brush Off",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/2-cash-producing-stocks-keep-141806248.html",
-          "published": 1783088286,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Can OXY's Robust Proved Reserves Strengthen Its Long-Term Returns?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/oxys-robust-proved-reserves-strengthen-140300447.html",
-          "published": 1783087380,
-          "sentiment": 0.572
-        },
-        {
-          "title": "Chevron Corporation (CVX) Is a Trending Stock: Facts to Know Before Betting on It",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/chevron-corporation-cvx-trending-stock-130007406.html",
-          "published": 1783083607,
-          "sentiment": 0.0
+          "title": "Chevron vs. Exxon Mobil: Which Energy Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/07/04/chevron-vs-exxon-mobil-which-energy-stock-is-a-better-buy-in-2026/",
+          "published": 1783207261,
+          "sentiment": 0.612
         }
       ],
-      "news_sentiment": 0.114
+      "news_sentiment": 0.232
     },
     {
       "ticker": "SHEL",
       "company_name": "Shell",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "58",
+      "price_gbp": "59",
       "price_usd": 78.02,
       "change_1d": "+1.84%",
       "change_1w": "+0.89%",
@@ -155,7 +155,7 @@
       "high_gbp": "71",
       "high_usd": 94.9,
       "bar_pct": 36,
-      "market_cap_gbp_b": 161.949,
+      "market_cap_gbp_b": 162.122,
       "market_cap_usd_b": 216.2,
       "beta": -0.235,
       "pe_ratio": 12.15,
@@ -168,6 +168,20 @@
       "vol_1w": 29525417,
       "vol_1m": 135480994,
       "news": [
+        {
+          "title": "Here\u2019s Why Shell (SHEL) is Among the 9 Most Oversold Strong Buy-Rated Stocks to Invest In Now",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-shell-shel-among-9-113601674.html",
+          "published": 1783251361,
+          "sentiment": 0.554
+        },
+        {
+          "title": "Shell (LSE:SHEL) Exits Jiffy Lube And Reshapes Trading And South Africa Retail",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/shell-lse-shel-exits-jiffy-061157500.html",
+          "published": 1783231917,
+          "sentiment": 0.0
+        },
         {
           "title": "TotalEnergies sells 8.5% stake in Marjoram gas field to Inpex",
           "publisher": "Offshore Technology",
@@ -188,23 +202,9 @@
           "url": "https://finance.yahoo.com/energy/articles/shell-sees-global-lng-demand-130400629.html",
           "published": 1782997440,
           "sentiment": -0.183
-        },
-        {
-          "title": "Here's Why Shell (SHEL) Fell More Than Broader Market",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-shell-shel-fell-221504883.html",
-          "published": 1782944104,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Shell plc (SHEL) Continues to Focus on Fossil Fuel Opportunities",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/energy/articles/shell-plc-shel-continues-focus-162707847.html",
-          "published": 1782923227,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.128
+      "news_sentiment": 0.162
     },
     {
       "ticker": "BP",
@@ -223,7 +223,7 @@
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 41,
-      "market_cap_gbp_b": 72.141,
+      "market_cap_gbp_b": 72.218,
       "market_cap_usd_b": 96.307,
       "beta": -0.231,
       "pe_ratio": 30.41,
@@ -236,6 +236,20 @@
       "vol_1w": 76344700,
       "vol_1m": 209967700,
       "news": [
+        {
+          "title": "Here\u2019s Why Shell (SHEL) is Among the 9 Most Oversold Strong Buy-Rated Stocks to Invest In Now",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-shell-shel-among-9-113601674.html",
+          "published": 1783251361,
+          "sentiment": 0.554
+        },
+        {
+          "title": "BP chairman plotted boardroom cull before sacking",
+          "publisher": "The Telegraph",
+          "url": "https://www.telegraph.co.uk/business/2026/07/05/bp-chairman-plotted-boardroom-cull-before-sacking/",
+          "published": 1783231200,
+          "sentiment": 0.0
+        },
         {
           "title": "BP (LSE:BP) Reshuffles Leadership And Expands ONGC Partnership In India",
           "publisher": "Simply Wall St.",
@@ -256,30 +270,16 @@
           "url": "https://finance.yahoo.com/healthcare/articles/fiserv-station-operators-including-bp-155734839.html",
           "published": 1783094254,
           "sentiment": -0.612
-        },
-        {
-          "title": "Sumitomo to divest stakes in three Belgian offshore wind projects",
-          "publisher": "Power Technology",
-          "url": "https://www.power-technology.com/news/sumitomo-divest-stakes-three-belgian-offshore-wind/",
-          "published": 1783088321,
-          "sentiment": 0.0
-        },
-        {
-          "title": "BP p.l.c. (BP) Is a Trending Stock: Facts to Know Before Betting on It",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bp-p-l-c-bp-130004657.html",
-          "published": 1783083604,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.102
+      "news_sentiment": 0.009
     },
     {
       "ticker": "TTE",
       "company_name": "TotalEnergies",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "57",
+      "price_gbp": "58",
       "price_usd": 76.69,
       "change_1d": "+2.76%",
       "change_1w": "-2.03%",
@@ -291,7 +291,7 @@
       "high_gbp": "71",
       "high_usd": 94.17,
       "bar_pct": 52,
-      "market_cap_gbp_b": 127.812,
+      "market_cap_gbp_b": 127.949,
       "market_cap_usd_b": 170.628,
       "beta": 0.05,
       "pe_ratio": 11.38,
@@ -359,8 +359,8 @@
       "high_gbp": "33",
       "high_usd": 43.46,
       "bar_pct": 46,
-      "market_cap_gbp_b": 57.378,
-      "market_cap_usd_b": 76.599,
+      "market_cap_gbp_b": 57.44,
+      "market_cap_usd_b": 76.6,
       "beta": -0.75,
       "pe_ratio": 14.5,
       "avg_volume_m": 4.43,
@@ -415,7 +415,7 @@
       "company_name": "ConocoPhillips",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "78",
+      "price_gbp": "79",
       "price_usd": 104.73,
       "change_1d": "+1.46%",
       "change_1w": "-1.58%",
@@ -427,8 +427,8 @@
       "high_gbp": "102",
       "high_usd": 135.87,
       "bar_pct": 38,
-      "market_cap_gbp_b": 95.575,
-      "market_cap_usd_b": 127.592,
+      "market_cap_gbp_b": 95.677,
+      "market_cap_usd_b": 127.591,
       "beta": 0.122,
       "pe_ratio": 17.75,
       "avg_volume_m": 8.0,
@@ -440,6 +440,13 @@
       "vol_1w": 40136600,
       "vol_1m": 169328500,
       "news": [
+        {
+          "title": "3 Energy Stocks to Buy in July",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/05/3-energy-stocks-to-buy-in-july/",
+          "published": 1783254625,
+          "sentiment": 0.273
+        },
         {
           "title": "Phillips 66\u2019s Quarterly Earnings Preview: What You Need to Know",
           "publisher": "Barchart",
@@ -467,16 +474,9 @@
           "url": "https://247wallst.com/investing/2026/07/02/u-s-refiners-are-running-incredibly-hard-heres-why-gas-prices-arent-falling/",
           "published": 1783018364,
           "sentiment": -0.153
-        },
-        {
-          "title": "Can ExxonMobil's Upstream Business Thrive With Oil Below $70?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/exxonmobils-upstream-business-thrive-oil-145300123.html",
-          "published": 1783003980,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.084
+      "news_sentiment": 0.138
     },
     {
       "ticker": "OXY",
@@ -495,7 +495,7 @@
       "high_gbp": "51",
       "high_usd": 67.45,
       "bar_pct": 35,
-      "market_cap_gbp_b": 36.44,
+      "market_cap_gbp_b": 36.479,
       "market_cap_usd_b": 48.647,
       "beta": 0.15,
       "pe_ratio": 66.09,
@@ -563,7 +563,7 @@
       "high_gbp": "114",
       "high_usd": 151.87,
       "bar_pct": 58,
-      "market_cap_gbp_b": 52.178,
+      "market_cap_gbp_b": 52.234,
       "market_cap_usd_b": 69.657,
       "beta": 0.261,
       "pe_ratio": 12.86,
@@ -631,8 +631,8 @@
       "high_gbp": "204",
       "high_usd": 272.46,
       "bar_pct": 95,
-      "market_cap_gbp_b": 58.246,
-      "market_cap_usd_b": 77.758,
+      "market_cap_gbp_b": 58.308,
+      "market_cap_usd_b": 77.757,
       "beta": 0.52,
       "pe_ratio": 17.55,
       "avg_volume_m": 2.36,
@@ -699,7 +699,7 @@
       "high_gbp": "206",
       "high_usd": 274.92,
       "bar_pct": 95,
-      "market_cap_gbp_b": 59.556,
+      "market_cap_gbp_b": 59.62,
       "market_cap_usd_b": 79.507,
       "beta": 0.545,
       "pe_ratio": 19.57,
@@ -760,14 +760,14 @@
       "change_1d": "-0.27%",
       "change_1w": "-4.83%",
       "change_1m": "-20.62%",
-      "change_ytd": "+13.52%",
+      "change_ytd": "+12.93%",
       "return_1yr": "+29%",
       "low_gbp": "24",
       "low_usd": 31.64,
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 50,
-      "market_cap_gbp_b": 50.541,
+      "market_cap_gbp_b": 50.595,
       "market_cap_usd_b": 67.472,
       "beta": 0.733,
       "pe_ratio": 19.88,
@@ -828,14 +828,14 @@
       "change_1d": "-0.28%",
       "change_1w": "-4.93%",
       "change_1m": "-19.67%",
-      "change_ytd": "+12.37%",
+      "change_ytd": "+11.89%",
       "return_1yr": "+58%",
       "low_gbp": "15",
       "low_usd": 20.17,
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 55,
-      "market_cap_gbp_b": 20.625,
+      "market_cap_gbp_b": 20.647,
       "market_cap_usd_b": 27.534,
       "beta": 0.725,
       "pe_ratio": 18.21,
@@ -903,7 +903,7 @@
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 45,
-      "market_cap_gbp_b": 39.222,
+      "market_cap_gbp_b": 39.264,
       "market_cap_usd_b": 52.361,
       "beta": 0.96,
       "pe_ratio": 16.86,
@@ -916,6 +916,13 @@
       "vol_1w": 50979900,
       "vol_1m": 178652800,
       "news": [
+        {
+          "title": "Baker Hughes (BKR) Lands Angola Subsea Deal And North America Geothermal Partnership",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/baker-hughes-bkr-lands-angola-120837304.html",
+          "published": 1783253317,
+          "sentiment": 0.0
+        },
         {
           "title": "Stock Market Week Ahead: Oil Hints At A Paradigm Shift",
           "publisher": "Investor's Business Daily",
@@ -943,16 +950,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-producing-stock-worth-110024677.html",
           "published": 1782990024,
           "sentiment": 0.296
-        },
-        {
-          "title": "NLNG awards Baker Hughes 13-year gas turbine services contract",
-          "publisher": "Offshore Technology",
-          "url": "https://www.offshore-technology.com/news/nlng-awards-baker-hughes-turbine-services-contract/",
-          "published": 1782819808,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.151
+      "news_sentiment": 0.059
     },
     {
       "ticker": "NEE",
@@ -971,8 +971,8 @@
       "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 65,
-      "market_cap_gbp_b": 138.01,
-      "market_cap_usd_b": 184.242,
+      "market_cap_gbp_b": 138.158,
+      "market_cap_usd_b": 184.243,
       "beta": 0.667,
       "pe_ratio": 22.42,
       "avg_volume_m": 11.15,
@@ -985,42 +985,42 @@
       "vol_1m": 250783900,
       "news": [
         {
+          "title": "What NextEra Energy (NEE)'s AI Data Center Power Push and Dividend Plans Mean For Shareholders",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/nextera-energy-nee-ai-data-001542024.html",
+          "published": 1783296942,
+          "sentiment": 0.273
+        },
+        {
+          "title": "What It Takes To Build A Portfolio That Covers A Retiree\u2019s Grocery Bill Forever",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/05/what-it-takes-to-build-a-portfolio-that-covers-a-retirees-grocery-bill-forever/",
+          "published": 1783274828,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How To Turn A Portfolio Into $500 A Month Without Chasing Dangerous Yields",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/05/how-to-turn-a-portfolio-into-500-a-month-without-chasing-dangerous-yields/",
+          "published": 1783259539,
+          "sentiment": 0.372
+        },
+        {
+          "title": "The Real Cost Of Building A $2,500-A-Month Income Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/05/the-real-cost-of-building-a-2500-a-month-income-portfolio/",
+          "published": 1783249037,
+          "sentiment": 0.0
+        },
+        {
           "title": "The Portfolio That Lets You Go Part-Time Five Years Early",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/personal-finance/2026/07/04/the-portfolio-that-lets-you-go-part-time-five-years-early/",
           "published": 1783192312,
           "sentiment": 0.0
-        },
-        {
-          "title": "What A $750,000 Dividend Portfolio Actually Pays After Taxes, Medicare Premiums, And Reality",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/07/04/what-a-750000-dividend-portfolio-actually-pays-after-taxes-medicare-premiums-and-reality/",
-          "published": 1783184991,
-          "sentiment": 0.0
-        },
-        {
-          "title": "What Happens When Medicare Premiums Are No Longer Your Problem?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/07/04/what-happens-when-medicare-premiums-are-no-longer-your-problem/",
-          "published": 1783180241,
-          "sentiment": -0.599
-        },
-        {
-          "title": "Jim Cramer Says He Happens to \u201cLike NextEra Very Much\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-happens-nextera-142330726.html",
-          "published": 1783175010,
-          "sentiment": 0.0
-        },
-        {
-          "title": "The Dividend Portfolio That Can Cover a Silicon Valley House Payment",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/07/04/the-dividend-portfolio-that-can-cover-a-silicon-valley-house-payment/",
-          "published": 1783157800,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.12
+      "news_sentiment": 0.129
     },
     {
       "ticker": "SSE.L",
@@ -1028,16 +1028,16 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "25",
-      "price_usd": 33.47,
+      "price_usd": 33.43,
       "change_1d": "+2.37%",
       "change_1w": "+3.55%",
       "change_1m": "+7.32%",
       "change_ytd": "+12.37%",
       "return_1yr": "+35%",
       "low_gbp": "16",
-      "low_usd": 21.32,
+      "low_usd": 21.3,
       "high_gbp": "28",
-      "high_usd": 36.95,
+      "high_usd": 36.91,
       "bar_pct": 78,
       "market_cap_gbp_b": 0.302,
       "market_cap_usd_b": 0.403,
@@ -1051,8 +1051,44 @@
       "vol_1d": 2063214,
       "vol_1w": 20183395,
       "vol_1m": 90412355,
-      "news": [],
-      "news_sentiment": null
+      "news": [
+        {
+          "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/sse-lse-sse-stock-fair-043011632.html",
+          "published": 1782275411,
+          "sentiment": 0.361
+        },
+        {
+          "title": "UK, Japan to deepen ties with \u00a318 billion investment agreement",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/uk-japan-deepen-ties-18-003636120.html",
+          "published": 1781397396,
+          "sentiment": 0.494
+        },
+        {
+          "title": "Bears are Losing Control Over SSE (SSEZY), Here's Why It's a 'Buy' Now",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/bears-losing-control-over-sse-135503184.html",
+          "published": 1781099703,
+          "sentiment": -0.382
+        },
+        {
+          "title": "Are heat pumps an underappreciated lever of power demand growth?",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/sectors/energy/articles/heat-pumps-underappreciated-lever-power-102637659.html",
+          "published": 1780827997,
+          "sentiment": 0.273
+        },
+        {
+          "title": "How A Steady Analyst Stance Is Shaping The Evolving Story For SSE (LSE:SSE)",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/steady-analyst-stance-shaping-evolving-042141491.html",
+          "published": 1780806101,
+          "sentiment": 0.0
+        }
+      ],
+      "news_sentiment": 0.149
     },
     {
       "ticker": "ENPH",
@@ -1071,8 +1107,8 @@
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 36,
-      "market_cap_gbp_b": 4.252,
-      "market_cap_usd_b": 5.676,
+      "market_cap_gbp_b": 4.257,
+      "market_cap_usd_b": 5.677,
       "beta": 1.615,
       "pe_ratio": 42.64,
       "avg_volume_m": 8.22,
@@ -1080,10 +1116,17 @@
       "short_pct": 22.12,
       "analyst": "hold",
       "analyst_score": 2.52,
-      "vol_1d": 6885300,
-      "vol_1w": 44992200,
-      "vol_1m": 157666000,
+      "vol_1d": 6880400,
+      "vol_1w": 44987300,
+      "vol_1m": 157661100,
       "news": [
+        {
+          "title": "BE Stock Is Trading At A Massive Premium To Peers \u2014 Retail Bulls Still See A Nearly 4x Rally",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/be-stock-is-trading-at-a-massive-premium-to-peers/cZmKyuMR7kV",
+          "published": 1783309044,
+          "sentiment": 0.0
+        },
         {
           "title": "Here\u2019s Why Jim Cramer Thinks Enphase Energy Is Hard to Own",
           "publisher": "Insider Monkey",
@@ -1111,16 +1154,9 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/07/01/enphase-energy-vs-plug-power-which-renewable-energy-stock-is-a-better-buy-in-2026/",
           "published": 1782913443,
           "sentiment": 0.727
-        },
-        {
-          "title": "Enphase Energy (ENPH) Could Gain From Inverter Curbs And AI Data Center Push",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/enphase-energy-enph-could-gain-131817368.html",
-          "published": 1782911897,
-          "sentiment": 0.67
         }
       ],
-      "news_sentiment": 0.438
+      "news_sentiment": 0.304
     },
     {
       "ticker": "FSLR",
@@ -1136,10 +1172,10 @@
       "return_1yr": "+27%",
       "low_gbp": "120",
       "low_usd": 159.85,
-      "high_gbp": "240",
+      "high_gbp": "241",
       "high_usd": 320.95,
       "bar_pct": 40,
-      "market_cap_gbp_b": 18.076,
+      "market_cap_gbp_b": 18.095,
       "market_cap_usd_b": 24.131,
       "beta": 1.73,
       "pe_ratio": 14.52,
@@ -1207,8 +1243,8 @@
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 31,
-      "market_cap_gbp_b": 4.985,
-      "market_cap_usd_b": 6.655,
+      "market_cap_gbp_b": 4.99,
+      "market_cap_usd_b": 6.654,
       "beta": 1.159,
       "pe_ratio": null,
       "avg_volume_m": 1.5,
@@ -1275,8 +1311,8 @@
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 7,
-      "market_cap_gbp_b": 22.978,
-      "market_cap_usd_b": 30.675,
+      "market_cap_gbp_b": 23.003,
+      "market_cap_usd_b": 30.676,
       "beta": 0.636,
       "pe_ratio": null,
       "avg_volume_m": 0.12,

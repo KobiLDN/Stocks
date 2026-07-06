@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-04 22:39",
-  "fx_gbp_usd": 1.335,
+  "updated": "2026-07-06 07:31",
+  "fx_gbp_usd": 1.3334,
   "stocks": [
     {
       "ticker": "LMT",
@@ -14,12 +14,12 @@
       "change_1m": "+6.62%",
       "change_ytd": "+10.40%",
       "return_1yr": "+16%",
-      "low_gbp": "307",
+      "low_gbp": "308",
       "low_usd": 410.11,
-      "high_gbp": "518",
+      "high_gbp": "519",
       "high_usd": 692.0,
       "bar_pct": 48,
-      "market_cap_gbp_b": 94.283,
+      "market_cap_gbp_b": 94.394,
       "market_cap_usd_b": 125.867,
       "beta": 0.113,
       "pe_ratio": 26.45,
@@ -33,42 +33,42 @@
       "vol_1m": 28875000,
       "news": [
         {
+          "title": "Six Dividend Aristocrats Keeping SCHD\u2019s Income Stream Bulletproof This Year",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/etf/2026/07/05/six-dividend-aristocrats-keeping-schds-income-stream-bulletproof-this-year/",
+          "published": 1783273647,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Trump marks America\u2019s 250th birthday with National Mall address",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/us/articles/trump-marks-america-250th-birthday-061004471.html",
+          "published": 1783231804,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Trump, Putin discuss Ukraine, Iran ahead of NATO summit",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-putin-discuss-ukraine-iran-013804798.html",
+          "published": 1783215484,
+          "sentiment": 0.0
+        },
+        {
+          "title": "North Korea\u2019s Kim oversees cruise missile launch from new naval destroyer",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/world/articles/north-korea-kim-oversees-cruise-005806734.html",
+          "published": 1783213086,
+          "sentiment": -0.459
+        },
+        {
           "title": "Is Lockheed Martin (LMT) Still Trading At A Discount After Contract Wins?",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-still-trading-180930017.html",
           "published": 1783188570,
           "sentiment": 0.572
-        },
-        {
-          "title": "GE Aerospace or Lockheed Martin: Which Aerospace and Defense Stock Is a Better Buy for 2026?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/07/04/ge-aerospace-or-lockheed-martin-which-aerospace-and-defense-stock-is-a-better-buy-for-2026/",
-          "published": 1783184761,
-          "sentiment": 0.527
-        },
-        {
-          "title": "America\u2019s 250th Birthday Bash and Severe Weather Spark Travel Chaos",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/fourth-of-july-travel-airport-delays-amtrak-america-250-ea61b1be?siteid=yhoof2&yptr=yahoo",
-          "published": 1783179960,
-          "sentiment": -0.66
-        },
-        {
-          "title": "3 Resilient Defense Stocks to Buy in July",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/04/3-resilient-defense-stocks-to-buy-in-july/",
-          "published": 1783170055,
-          "sentiment": 0.128
-        },
-        {
-          "title": "Lockheed Martin (LMT) Eyes $3.5 Billion Ultra Maritime Deal In Undersea Defense",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/lockheed-martin-lmt-eyes-3-080858805.html",
-          "published": 1783152538,
-          "sentiment": 0.128
         }
       ],
-      "news_sentiment": 0.139
+      "news_sentiment": 0.023
     },
     {
       "ticker": "RTX",
@@ -87,8 +87,8 @@
       "high_gbp": "161",
       "high_usd": 214.5,
       "bar_pct": 79,
-      "market_cap_gbp_b": 200.995,
-      "market_cap_usd_b": 268.326,
+      "market_cap_gbp_b": 201.232,
+      "market_cap_usd_b": 268.327,
       "beta": 0.298,
       "pe_ratio": 37.31,
       "avg_volume_m": 5.43,
@@ -100,6 +100,20 @@
       "vol_1w": 24658200,
       "vol_1m": 113853800,
       "news": [
+        {
+          "title": "Trump, Putin discuss Ukraine, Iran ahead of NATO summit",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-putin-discuss-ukraine-iran-013804798.html",
+          "published": 1783215484,
+          "sentiment": 0.0
+        },
+        {
+          "title": "North Korea\u2019s Kim oversees cruise missile launch from new naval destroyer",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/world/articles/north-korea-kim-oversees-cruise-005806734.html",
+          "published": 1783213086,
+          "sentiment": -0.459
+        },
         {
           "title": "3 Resilient Defense Stocks to Buy in July",
           "publisher": "24/7 Wall St.",
@@ -120,30 +134,16 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-buy-sell-hold-174606242.html",
           "published": 1783100766,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is ISSC Building a One-Stop Cockpit Modernization Platform?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/articles/issc-building-one-stop-cockpit-174000700.html",
-          "published": 1783100400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Can GE Aerospace Sustain Growth as Commercial Aerospace Demand Surges?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ge-aerospace-sustain-growth-commercial-155300331.html",
-          "published": 1783093980,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.168
+      "news_sentiment": 0.022
     },
     {
       "ticker": "NOC",
       "company_name": "Northrop Grumman",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "411",
+      "price_gbp": "412",
       "price_usd": 549.01,
       "change_1d": "+5.17%",
       "change_1w": "+9.95%",
@@ -155,8 +155,8 @@
       "high_gbp": "580",
       "high_usd": 774.0,
       "bar_pct": 20,
-      "market_cap_gbp_b": 58.411,
-      "market_cap_usd_b": 77.978,
+      "market_cap_gbp_b": 58.479,
+      "market_cap_usd_b": 77.977,
       "beta": -0.102,
       "pe_ratio": 17.21,
       "avg_volume_m": 0.94,
@@ -169,42 +169,42 @@
       "vol_1m": 23263800,
       "news": [
         {
+          "title": "Citi Keeps Buy Rating on Northrop Grumman (NOC)",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/citi-keeps-buy-rating-northrop-113547885.html",
+          "published": 1783251347,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Trump marks America\u2019s 250th birthday with National Mall address",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/us/articles/trump-marks-america-250th-birthday-061004471.html",
+          "published": 1783231804,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Trump, Putin discuss Ukraine, Iran ahead of NATO summit",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/trump-putin-discuss-ukraine-iran-013804798.html",
+          "published": 1783215484,
+          "sentiment": 0.0
+        },
+        {
+          "title": "North Korea\u2019s Kim oversees cruise missile launch from new naval destroyer",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/world/articles/north-korea-kim-oversees-cruise-005806734.html",
+          "published": 1783213086,
+          "sentiment": -0.459
+        },
+        {
           "title": "3 Resilient Defense Stocks to Buy in July",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/07/04/3-resilient-defense-stocks-to-buy-in-july/",
           "published": 1783170055,
           "sentiment": 0.128
-        },
-        {
-          "title": "Trump marks Fourth of July with Mount Rushmore speech ahead of midterms",
-          "publisher": "Investing.com",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-marks-fourth-july-mount-063221288.html",
-          "published": 1783146741,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Russian forces claim capture of Kostiantynivka in eastern Ukraine",
-          "publisher": "Investing.com",
-          "url": "https://www.yahoo.com/news/world/articles/russian-forces-claim-capture-kostiantynivka-233312740.html",
-          "published": 1783121592,
-          "sentiment": 0.0
-        },
-        {
-          "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605683/aerovironments-big-bet-gets-a-pentagon-payday/2026-07-03",
-          "published": 1783080894,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Northrop Grumman (NOC) Stock Trades Up, Here Is Why",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/northrop-grumman-noc-stock-trades-215624334.html",
-          "published": 1783029384,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.026
+      "news_sentiment": -0.066
     },
     {
       "ticker": "GD",
@@ -223,7 +223,7 @@
       "high_gbp": "280",
       "high_usd": 373.6,
       "bar_pct": 99,
-      "market_cap_gbp_b": 75.668,
+      "market_cap_gbp_b": 75.757,
       "market_cap_usd_b": 101.016,
       "beta": 0.338,
       "pe_ratio": 23.52,
@@ -279,7 +279,7 @@
       "company_name": "Huntington Ingalls Industries",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "218",
+      "price_gbp": "219",
       "price_usd": 291.5,
       "change_1d": "+2.93%",
       "change_1w": "+4.45%",
@@ -291,7 +291,7 @@
       "high_gbp": "345",
       "high_usd": 460.0,
       "bar_pct": 21,
-      "market_cap_gbp_b": 8.604,
+      "market_cap_gbp_b": 8.614,
       "market_cap_usd_b": 11.486,
       "beta": 0.248,
       "pe_ratio": 18.94,
@@ -347,19 +347,19 @@
       "company_name": "L3Harris Technologies",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "226",
+      "price_gbp": "227",
       "price_usd": 302.07,
       "change_1d": "+1.73%",
       "change_1w": "+4.70%",
       "change_1m": "-0.05%",
       "change_ytd": "-0.04%",
       "return_1yr": "+18%",
-      "low_gbp": "187",
+      "low_gbp": "188",
       "low_usd": 250.02,
       "high_gbp": "284",
       "high_usd": 379.23,
       "bar_pct": 40,
-      "market_cap_gbp_b": 42.153,
+      "market_cap_gbp_b": 42.203,
       "market_cap_usd_b": 56.274,
       "beta": 0.746,
       "pe_ratio": 32.8,
@@ -422,12 +422,12 @@
       "change_1m": "+7.56%",
       "change_ytd": "-0.56%",
       "return_1yr": "+4%",
-      "low_gbp": "132",
+      "low_gbp": "133",
       "low_usd": 176.77,
       "high_gbp": "191",
       "high_usd": 254.35,
       "bar_pct": 64,
-      "market_cap_gbp_b": 133.741,
+      "market_cap_gbp_b": 133.898,
       "market_cap_usd_b": 178.543,
       "beta": 1.205,
       "pe_ratio": 89.17,
@@ -440,6 +440,13 @@
       "vol_1w": 34823100,
       "vol_1m": 129099800,
       "news": [
+        {
+          "title": "Trump marks America\u2019s 250th birthday with National Mall address",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/us/articles/trump-marks-america-250th-birthday-061004471.html",
+          "published": 1783231804,
+          "sentiment": 0.0
+        },
         {
           "title": "Vertical Aerospace Just Secured a Critical Supplier Agreement for Its Valo Fleet: Time to Buy?",
           "publisher": "Motley Fool",
@@ -467,13 +474,6 @@
           "url": "https://finance.yahoo.com/technology/articles/boeing-says-unplanned-outage-hit-150058744.html",
           "published": 1783090858,
           "sentiment": 0.0
-        },
-        {
-          "title": "Airbus to Deliver 18 A330-900 Aircraft to Scandinavian Airlines",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/airbus-deliver-18-a330-900-123700602.html",
-          "published": 1783082220,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.049
@@ -484,19 +484,19 @@
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "20",
-      "price_usd": 26.45,
+      "price_usd": 26.42,
       "change_1d": "-0.05%",
       "change_1w": "+9.60%",
       "change_1m": "+4.29%",
       "change_ytd": "+12.98%",
       "return_1yr": "+6%",
       "low_gbp": "15",
-      "low_usd": 20.41,
+      "low_usd": 20.39,
       "high_gbp": "24",
-      "high_usd": 31.51,
+      "high_usd": 31.47,
       "bar_pct": 54,
       "market_cap_gbp_b": 0.581,
-      "market_cap_usd_b": 0.776,
+      "market_cap_usd_b": 0.775,
       "beta": -0.066,
       "pe_ratio": 29.14,
       "avg_volume_m": 6.63,
@@ -552,19 +552,19 @@
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "15",
-      "price_usd": 20.08,
+      "price_usd": 20.06,
       "change_1d": "+1.97%",
       "change_1w": "+6.97%",
       "change_1m": "+19.55%",
       "change_ytd": "+25.67%",
       "return_1yr": "+55%",
       "low_gbp": "9.59",
-      "low_usd": 12.81,
+      "low_usd": 12.79,
       "high_gbp": "15",
-      "high_usd": 20.46,
+      "high_usd": 20.44,
       "bar_pct": 95,
       "market_cap_gbp_b": 1.247,
-      "market_cap_usd_b": 1.665,
+      "market_cap_usd_b": 1.663,
       "beta": 1.203,
       "pe_ratio": 21.8,
       "avg_volume_m": 33.39,
@@ -620,16 +620,16 @@
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "4.79",
-      "price_usd": 6.4,
+      "price_usd": 6.39,
       "change_1d": "+0.29%",
       "change_1w": "+15.69%",
       "change_1m": "+1.35%",
       "change_ytd": "+7.88%",
       "return_1yr": "-5%",
       "low_gbp": "3.98",
-      "low_usd": 5.32,
+      "low_usd": 5.31,
       "high_gbp": "5.51",
-      "high_usd": 7.36,
+      "high_usd": 7.35,
       "bar_pct": 53,
       "market_cap_gbp_b": 0.025,
       "market_cap_usd_b": 0.033,
@@ -638,8 +638,8 @@
       "avg_volume_m": 2.26,
       "div_yield_pct": 229.0,
       "short_pct": null,
-      "analyst": "buy",
-      "analyst_score": 1.82,
+      "analyst": "none",
+      "analyst_score": null,
       "vol_1d": 1790138,
       "vol_1w": 15549789,
       "vol_1m": 52570674,
@@ -696,11 +696,11 @@
       "return_1yr": "-7%",
       "low_gbp": "80",
       "low_usd": 106.37,
-      "high_gbp": "155",
+      "high_gbp": "156",
       "high_usd": 207.52,
       "bar_pct": 23,
-      "market_cap_gbp_b": 232.191,
-      "market_cap_usd_b": 309.972,
+      "market_cap_gbp_b": 232.464,
+      "market_cap_usd_b": 309.973,
       "beta": 1.562,
       "pe_ratio": 145.28,
       "avg_volume_m": 45.89,
@@ -708,47 +708,47 @@
       "short_pct": 3.57,
       "analyst": "buy",
       "analyst_score": 1.84,
-      "vol_1d": 60789400,
-      "vol_1w": 263798300,
-      "vol_1m": 912926400,
+      "vol_1d": 60641000,
+      "vol_1w": 263649900,
+      "vol_1m": 912778000,
       "news": [
         {
-          "title": "Anthony Scaramucci Warns Wealth Inequality Could End With 'Pitchforks,' Urges Rich to 'Spread the Wealth'",
-          "publisher": "Benzinga",
-          "url": "https://www.yahoo.com/news/politics/articles/anthony-scaramucci-warns-wealth-inequality-180110832.html",
-          "published": 1783188070,
-          "sentiment": 0.863
-        },
-        {
-          "title": "America\u2019s 250th Birthday Bash and Severe Weather Spark Travel Chaos",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/fourth-of-july-travel-airport-delays-amtrak-america-250-ea61b1be?siteid=yhoof2&yptr=yahoo",
-          "published": 1783179960,
-          "sentiment": -0.66
-        },
-        {
-          "title": "Palantir doubles down on national security with Nvidia AI alliance",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/pltr-palantir-us-national-security-nvidia-ai-alliance",
-          "published": 1783177620,
-          "sentiment": 0.34
-        },
-        {
-          "title": "Jim Cramer on Palantir: \u201cThis Is the Fastest Grower of the Stocks I Follow, and It\u2019s Been Crushed\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-palantir-fastest-grower-142010542.html",
-          "published": 1783174810,
+          "title": "Why Palantir Stock Popped This Week",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/why-palantir-stock-popped-this-week/",
+          "published": 1783307422,
           "sentiment": 0.0
         },
         {
-          "title": "Needham Maintains Buy Rating on Zeta Global Holdings (ZETA) Stock",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/needham-maintains-buy-rating-zeta-141130943.html",
-          "published": 1783174290,
+          "title": "Palantir Is Down 38% From Its High -- and It Just Got a Wall Street Upgrade. Time to Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/palantir-is-down-38-from-its-high-and-it-just-got/",
+          "published": 1783300800,
           "sentiment": 0.0
+        },
+        {
+          "title": "Here is Why Palantir Technologies (PLTR) is One of BlackRock\u2019s 30 Most Important AI Stock Picks",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/why-palantir-technologies-pltr-one-001815015.html",
+          "published": 1783297095,
+          "sentiment": 0.272
+        },
+        {
+          "title": "Palantir Technologies Stock Could Soar 55% in 1 Year, According to Wall Street. Should You Buy It Hand Over Fist?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/palantir-technologies-stock-could-soar-55-in-1-yea/",
+          "published": 1783274940,
+          "sentiment": 0.494
+        },
+        {
+          "title": "AMD vs Palantir: Which AI Giant Is a Better Buy?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/05/amd-vs-palantir-which-ai-giant-is-a-better-buy/",
+          "published": 1783273821,
+          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.109
+      "news_sentiment": 0.241
     },
     {
       "ticker": "LDOS",
@@ -767,7 +767,7 @@
       "high_gbp": "154",
       "high_usd": 205.77,
       "bar_pct": 9,
-      "market_cap_gbp_b": 10.255,
+      "market_cap_gbp_b": 10.267,
       "market_cap_usd_b": 13.69,
       "beta": 0.547,
       "pe_ratio": 9.96,
@@ -832,11 +832,11 @@
       "return_1yr": "+0%",
       "low_gbp": "326",
       "low_usd": 434.7,
-      "high_gbp": "512",
+      "high_gbp": "513",
       "high_usd": 683.5,
       "bar_pct": 27,
-      "market_cap_gbp_b": 8.321,
-      "market_cap_usd_b": 11.108,
+      "market_cap_gbp_b": 8.331,
+      "market_cap_usd_b": 11.109,
       "beta": 0.541,
       "pe_ratio": 20.74,
       "avg_volume_m": 0.3,
@@ -900,10 +900,10 @@
       "return_1yr": "-6%",
       "low_gbp": "61",
       "low_usd": 81.08,
-      "high_gbp": "92",
+      "high_gbp": "93",
       "high_usd": 123.41,
       "bar_pct": 71,
-      "market_cap_gbp_b": 3.514,
+      "market_cap_gbp_b": 3.518,
       "market_cap_usd_b": 4.691,
       "beta": 0.283,
       "pe_ratio": 12.48,
@@ -971,8 +971,8 @@
       "high_gbp": "90",
       "high_usd": 120.05,
       "bar_pct": 5,
-      "market_cap_gbp_b": 5.61,
-      "market_cap_usd_b": 7.489,
+      "market_cap_gbp_b": 5.617,
+      "market_cap_usd_b": 7.49,
       "beta": 0.361,
       "pe_ratio": 9.05,
       "avg_volume_m": 1.93,
@@ -984,6 +984,13 @@
       "vol_1w": 17157800,
       "vol_1m": 52617000,
       "news": [
+        {
+          "title": "Booz Allen Hamilton (BAH) to Buy Ultra I&C Mission Solutions Business for $720 Million",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/booz-allen-hamilton-bah-buy-022451599.html",
+          "published": 1783218291,
+          "sentiment": 0.178
+        },
         {
           "title": "The Debates That Matter For ACN Stock",
           "publisher": "Trefis",
@@ -1011,16 +1018,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/booz-allen-hamilton-bah-stock-220003761.html",
           "published": 1782856803,
           "sentiment": 0.0
-        },
-        {
-          "title": "Does Booz Allen\u2019s Expanded OpenAI Access Redefine Its Secure AI Edge For BAH Investors?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/does-booz-allen-expanded-openai-140637150.html",
-          "published": 1782828397,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.073
+      "news_sentiment": 0.041
     },
     {
       "ticker": "AVAV",
@@ -1039,8 +1039,8 @@
       "high_gbp": "313",
       "high_usd": 417.86,
       "bar_pct": 20,
-      "market_cap_gbp_b": 7.236,
-      "market_cap_usd_b": 9.66,
+      "market_cap_gbp_b": 7.245,
+      "market_cap_usd_b": 9.661,
       "beta": 1.395,
       "pe_ratio": null,
       "avg_volume_m": 1.5,
@@ -1052,6 +1052,20 @@
       "vol_1w": 24194200,
       "vol_1m": 42573700,
       "news": [
+        {
+          "title": "AeroVironment (AVAV) Garners Positive Sentiment Following Latest UGV Launch",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/articles/aerovironment-avav-garners-positive-sentiment-022330964.html",
+          "published": 1783218210,
+          "sentiment": 0.557
+        },
+        {
+          "title": "AeroVironment Posted Solid Earnings and the Stock Reacted Sharply Higher. If You Can Tolerate Risk, Buy Here.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3127995/aerovironment-posted-solid-earnings-and-the-stock-reacted-sharply-higher-if-you-can-tolerate-risk-buy-here",
+          "published": 1783180802,
+          "sentiment": -0.128
+        },
         {
           "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
           "publisher": "Trefis",
@@ -1072,30 +1086,16 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-aerovironment-avav-stock-rocketing-233224912.html",
           "published": 1783035144,
           "sentiment": 0.0
-        },
-        {
-          "title": "AEVEX Lands A New Deal, And A New Narrative",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/605373/aevex-lands-a-new-deal-and-a-new-narrative/2026-07-02",
-          "published": 1783024916,
-          "sentiment": 0.0
-        },
-        {
-          "title": "AeroVironment Stock Jumps. Sometimes Disabling Drones Is Worth More Than Making Them.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/aerovironment-stock-price-anti-drone-deal-46350e89?siteid=yhoof2&yptr=yahoo",
-          "published": 1783024380,
-          "sentiment": -0.296
         }
       ],
-      "news_sentiment": -0.059
+      "news_sentiment": 0.086
     },
     {
       "ticker": "KTOS",
       "company_name": "Kratos Defense",
       "category": "drones",
       "exchange": "NASDAQ",
-      "price_gbp": "41",
+      "price_gbp": "42",
       "price_usd": 55.35,
       "change_1d": "+3.75%",
       "change_1w": "+19.49%",
@@ -1107,8 +1107,8 @@
       "high_gbp": "100",
       "high_usd": 134.0,
       "bar_pct": 14,
-      "market_cap_gbp_b": 7.775,
-      "market_cap_usd_b": 10.38,
+      "market_cap_gbp_b": 7.784,
+      "market_cap_usd_b": 10.379,
       "beta": 1.07,
       "pe_ratio": 325.59,
       "avg_volume_m": 4.84,
@@ -1120,6 +1120,13 @@
       "vol_1w": 54562300,
       "vol_1m": 119854600,
       "news": [
+        {
+          "title": "What Makes Kratos (KTOS) an Attractive Industrial Stock",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/makes-kratos-ktos-attractive-industrial-022405166.html",
+          "published": 1783218245,
+          "sentiment": 0.44
+        },
         {
           "title": "AeroVironment\u2019s Big Bet Gets a Pentagon Payday",
           "publisher": "Trefis",
@@ -1147,35 +1154,28 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-kratos-ktos-stock-rocketing-193700016.html",
           "published": 1782934620,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is Kratos Defense Becoming a Major Supplier for Golden Dome?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/kratos-defense-becoming-major-supplier-170000281.html",
-          "published": 1782925200,
-          "sentiment": 0.128
         }
       ],
-      "news_sentiment": 0.026
+      "news_sentiment": 0.088
     },
     {
       "ticker": "RCAT",
       "company_name": "Red Cat Holdings",
       "category": "drones",
       "exchange": "NASDAQ",
-      "price_gbp": "7.82",
+      "price_gbp": "7.83",
       "price_usd": 10.44,
       "change_1d": "-1.79%",
       "change_1w": "+17.17%",
       "change_1m": "-24.29%",
       "change_ytd": "+13.97%",
       "return_1yr": "+54%",
-      "low_gbp": "4.32",
+      "low_gbp": "4.33",
       "low_usd": 5.77,
       "high_gbp": "14",
       "high_usd": 18.78,
       "bar_pct": 36,
-      "market_cap_gbp_b": 1.19,
+      "market_cap_gbp_b": 1.192,
       "market_cap_usd_b": 1.589,
       "beta": 1.296,
       "pe_ratio": null,
@@ -1184,9 +1184,9 @@
       "short_pct": 21.08,
       "analyst": "strong_buy",
       "analyst_score": 1.17,
-      "vol_1d": 13990400,
-      "vol_1w": 70317500,
-      "vol_1m": 276418500,
+      "vol_1d": 13937800,
+      "vol_1w": 70264900,
+      "vol_1m": 276365900,
       "news": [
         {
           "title": "Red Cat (RCAT) Stock May Be Fully Priced On Hellcat Launch",
@@ -1243,7 +1243,7 @@
       "high_gbp": "76",
       "high_usd": 101.57,
       "bar_pct": 65,
-      "market_cap_gbp_b": 12.049,
+      "market_cap_gbp_b": 12.063,
       "market_cap_usd_b": 16.085,
       "beta": 0.905,
       "pe_ratio": 17.65,
@@ -1311,7 +1311,7 @@
       "high_gbp": "169",
       "high_usd": 225.64,
       "bar_pct": 19,
-      "market_cap_gbp_b": 1598.679,
+      "market_cap_gbp_b": 1600.557,
       "market_cap_usd_b": 2134.218,
       "beta": null,
       "pe_ratio": null,
@@ -1319,48 +1319,48 @@
       "div_yield_pct": null,
       "short_pct": 0.38,
       "analyst": "buy",
-      "analyst_score": 2.08,
+      "analyst_score": 2.0,
       "vol_1d": 61257100,
       "vol_1w": 460998200,
       "vol_1m": 2369053300,
       "news": [
         {
-          "title": "Is SpaceX Stock a Buy Before Its First Earnings Report as a Public Company?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/is-spacex-stock-a-buy-before-its-first-earnings-re/",
-          "published": 1783196700,
+          "title": "SK Hynix to launch $28 billion US listing to ride global AI wave",
+          "publisher": "Reuters Videos",
+          "url": "https://finance.yahoo.com/video/sk-hynix-launch-28-billion-062348085.html",
+          "published": 1783319028,
           "sentiment": 0.0
         },
         {
-          "title": "Here's the Next Major Trillion-Dollar Blockbuster IPO Now That SpaceX's Is Complete",
+          "title": "If You Invested $1,000 in SpaceX at Its IPO, Here Is What It Is Worth Today",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/heres-the-next-major-trillion-dollar-blockbuster-i/",
-          "published": 1783196400,
-          "sentiment": 0.634
+          "url": "https://www.fool.com/investing/2026/07/06/if-you-invested-1000-in-spacex-at-its-ipo-here-is/",
+          "published": 1783315500,
+          "sentiment": 0.226
         },
         {
-          "title": "Comcast (CMCSA) Stock Has Fallen 50%, Why Are Analysts Suddenly Turning Bullish On The Stock?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/comcast-cmcsa-stock-fallen-50-191550222.html",
-          "published": 1783192550,
-          "sentiment": -0.361
+          "title": "SK Hynix Taps US Markets for $29 Billion Amid AI Chip Frenzy",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/sk-hynix-29-billion-nasdaq-listing/",
+          "published": 1783314151,
+          "sentiment": -0.318
         },
         {
-          "title": "Prediction: SpaceX Stock Will Hit This Price by the End of 2026",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/prediction-spacex-stock-hit-this-price-end-2026/",
-          "published": 1783191000,
+          "title": "Why Did T, MAT, And HTZ Stocks Slump To 52-Week Lows Last Week?",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-did-t-mat-htz-stocks-slump-to-52-week-lows-last-week/cZmK6FBR7ko",
+          "published": 1783313140,
+          "sentiment": -0.202
+        },
+        {
+          "title": "Dow Jones Futures Rise, Techs Lead; Apple, SpaceX, Sandisk, Robinhood In Focus",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-spacex-sandisk-robinhood/?src=A00220&yptr=yahoo",
+          "published": 1783307838,
           "sentiment": 0.0
-        },
-        {
-          "title": "Here's Why The Latest Rocket Lab Acquisition Could Shake Up The Entire Space Economy",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/heres-why-the-latest-rocket-lab-acquisition-could/",
-          "published": 1783187512,
-          "sentiment": -0.178
         }
       ],
-      "news_sentiment": 0.019
+      "news_sentiment": -0.059
     },
     {
       "ticker": "RKLB",
@@ -1379,7 +1379,7 @@
       "high_gbp": "113",
       "high_usd": 151.0,
       "bar_pct": 56,
-      "market_cap_gbp_b": 47.019,
+      "market_cap_gbp_b": 47.074,
       "market_cap_usd_b": 62.77,
       "beta": 2.553,
       "pe_ratio": null,
@@ -1388,47 +1388,47 @@
       "short_pct": 5.94,
       "analyst": "buy",
       "analyst_score": 1.53,
-      "vol_1d": 22233600,
-      "vol_1w": 154007700,
-      "vol_1m": 620787200,
+      "vol_1d": 22180300,
+      "vol_1w": 153954400,
+      "vol_1m": 620733900,
       "news": [
         {
-          "title": "Why Rocket Lab Stock Skyrocketed Last Week",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/why-rocket-lab-stock-skyrocketed-last-week/",
-          "published": 1783193350,
+          "title": "Why Retail Traders Couldn\u2019t Take Their Eyes Off These Stocks Last Week: META, MU, BABA, TSLA, RKLB",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-retail-traders-couldn-t-take-their-eyes-off-these-stocks-last-week-meta-mu-baba-tsla-rklb/cZmKDleR7kk",
+          "published": 1783303861,
           "sentiment": 0.0
         },
         {
-          "title": "Here's Why The Latest Rocket Lab Acquisition Could Shake Up The Entire Space Economy",
+          "title": "Could Buying Rocket Lab Stock Today Set You Up for Life?",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/heres-why-the-latest-rocket-lab-acquisition-could/",
-          "published": 1783187512,
-          "sentiment": -0.178
-        },
-        {
-          "title": "Is Rocket Lab (RKLB) is One of the Best NASDAQ Stocks to Invest In For Long Term?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-one-best-125611792.html",
-          "published": 1783169771,
-          "sentiment": 0.637
-        },
-        {
-          "title": "Rocket Lab Announces a Massive $8 Billion Satellite Acquisition. Now What?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/04/rocket-lab-billion-satellite-acquisition-irdm/",
-          "published": 1783154400,
+          "url": "https://www.fool.com/investing/2026/07/05/could-buying-rocket-lab-stock-today-set-you-up-for/",
+          "published": 1783293900,
           "sentiment": 0.0
         },
         {
-          "title": "Is Rocket Lab (RKLB) The Best Space Stock to Buy Now?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-best-space-153110214.html",
-          "published": 1783092670,
-          "sentiment": 0.637
+          "title": "Rocket Lab (RKLB) Sets New Benchmark With VICTUS HAZE Launch For U.S. Space Force",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-rklb-sets-benchmark-140737693.html",
+          "published": 1783260457,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why AST SpaceMobile Stock Skyrocketed This Week",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/why-ast-spacemobile-stock-skyrocketed-this-week/",
+          "published": 1783259657,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Axon and Rocket Lab rallied while chip stocks sank",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/sandisk-bank-of-america-bubble-risk-week",
+          "published": 1783221420,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.219
+      "news_sentiment": 0.0
     },
     {
       "ticker": "PL",
@@ -1447,8 +1447,8 @@
       "high_gbp": "39",
       "high_usd": 51.76,
       "bar_pct": 56,
-      "market_cap_gbp_b": 8.378,
-      "market_cap_usd_b": 11.185,
+      "market_cap_gbp_b": 8.387,
+      "market_cap_usd_b": 11.183,
       "beta": 2.067,
       "pe_ratio": null,
       "avg_volume_m": 13.44,
@@ -1456,10 +1456,17 @@
       "short_pct": 14.05,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 10083600,
-      "vol_1w": 97022200,
-      "vol_1m": 380953600,
+      "vol_1d": 10064800,
+      "vol_1w": 97003400,
+      "vol_1m": 380934800,
       "news": [
+        {
+          "title": "Here is Why Planet Labs (PL) is One of the Best Industrial Stocks to Buy",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-planet-labs-pl-one-022439347.html",
+          "published": 1783218279,
+          "sentiment": 0.637
+        },
         {
           "title": "Planet Labs Stock Is Down 37% Over the Past Month. Here's What's Sending the Stock Lower.",
           "publisher": "Motley Fool",
@@ -1487,16 +1494,9 @@
           "url": "https://247wallst.com/investing/2026/07/01/forget-spacex-this-high-margin-space-data-king-is-cheaper/",
           "published": 1782928043,
           "sentiment": -0.226
-        },
-        {
-          "title": "Planet Labs (PL) Is Up 16.1% After Raising 2026 Revenue Outlook And Expanding Satellite Fleet",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/planet-labs-pl-16-1-131515439.html",
-          "published": 1782911715,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.177
+      "news_sentiment": -0.049
     },
     {
       "ticker": "ASTS",
@@ -1515,7 +1515,7 @@
       "high_gbp": "100",
       "high_usd": 133.86,
       "bar_pct": 50,
-      "market_cap_gbp_b": 24.75,
+      "market_cap_gbp_b": 24.779,
       "market_cap_usd_b": 33.041,
       "beta": 2.677,
       "pe_ratio": null,
@@ -1524,66 +1524,66 @@
       "short_pct": 20.98,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 15993800,
-      "vol_1w": 114001400,
-      "vol_1m": 509021900,
+      "vol_1d": 15940200,
+      "vol_1w": 113947800,
+      "vol_1m": 508968300,
       "news": [
+        {
+          "title": "ASTS Stock Rises Overnight: Vodafone Ireland Trial Shows AST Tech Can Support Emergency Services During Outages",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-vodafone-ireland-trial-emergency-services/cZm1baGR7kp",
+          "published": 1783314528,
+          "sentiment": 0.026
+        },
+        {
+          "title": "Why AST SpaceMobile Stock Skyrocketed This Week",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/why-ast-spacemobile-stock-skyrocketed-this-week/",
+          "published": 1783259657,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Jim Cramer says it's time to buy one surging space stock",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/asts-ast-spacemobile-stock-jim-cramer-buy-signal-not-spacex",
+          "published": 1783206000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "These Stocks Could Win as Wall Street Looks Beyond AI Software",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/articles/these-stocks-could-win-as-wall-street-looks-beyond-ai-software/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1783175700,
+          "sentiment": 0.586
+        },
         {
           "title": "Jim Cramer on AST SpaceMobile: \u201cI Think It Can Make Money in Two Years\u201d",
           "publisher": "Insider Monkey",
           "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-ast-spacemobile-think-143029882.html",
           "published": 1783175429,
           "sentiment": 0.0
-        },
-        {
-          "title": "AST SpaceMobile\u2019s Japan Catalyst Puts Its Rollout Story Back in Focus",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/articles/ast-spacemobiles-japan-catalyst-puts-its-rollout-story-back-in-focus/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1783091100,
-          "sentiment": 0.0
-        },
-        {
-          "title": "AST SpaceMobile (ASTS) Secures $926 Million And Rakuten Venture For Japan Network",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ast-spacemobile-asts-secures-926-031858055.html",
-          "published": 1783048738,
-          "sentiment": 0.318
-        },
-        {
-          "title": "Retail Investors Are Buying This Space Stock, and It\u2019s Not SpaceX (SPCX)",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/retail-investors-buying-space-stock-213311540.html",
-          "published": 1783027991,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why AST SpaceMobile Stock Fell 21.6% In June",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/02/why-ast-spacemobile-stock-fell-216-in-june/",
-          "published": 1783014551,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.064
+      "news_sentiment": 0.122
     },
     {
       "ticker": "TDG",
       "company_name": "TransDigm Group",
       "category": "weapons",
       "exchange": "NYSE",
-      "price_gbp": "1010",
+      "price_gbp": "1011",
       "price_usd": 1348.49,
       "change_1d": "+3.99%",
       "change_1w": "+1.20%",
       "change_1m": "+11.30%",
       "change_ytd": "-0.74%",
       "return_1yr": "-12%",
-      "low_gbp": "842",
+      "low_gbp": "843",
       "low_usd": 1123.61,
-      "high_gbp": "1216",
+      "high_gbp": "1218",
       "high_usd": 1623.83,
       "bar_pct": 45,
-      "market_cap_gbp_b": 56.499,
+      "market_cap_gbp_b": 56.566,
       "market_cap_usd_b": 75.426,
       "beta": 0.884,
       "pe_ratio": 42.02,
@@ -1639,7 +1639,7 @@
       "company_name": "HEICO Corporation",
       "category": "weapons",
       "exchange": "NYSE",
-      "price_gbp": "271",
+      "price_gbp": "272",
       "price_usd": 362.09,
       "change_1d": "+0.30%",
       "change_1w": "+5.77%",
@@ -1651,7 +1651,7 @@
       "high_gbp": "275",
       "high_usd": 366.59,
       "bar_pct": 96,
-      "market_cap_gbp_b": 37.88,
+      "market_cap_gbp_b": 37.924,
       "market_cap_usd_b": 50.569,
       "beta": 1.03,
       "pe_ratio": 64.54,
@@ -1707,7 +1707,7 @@
       "company_name": "Axon Enterprise",
       "category": "weapons",
       "exchange": "NASDAQ",
-      "price_gbp": "447",
+      "price_gbp": "448",
       "price_usd": 597.04,
       "change_1d": "+0.34%",
       "change_1w": "+34.25%",
@@ -1719,8 +1719,8 @@
       "high_gbp": "664",
       "high_usd": 885.92,
       "bar_pct": 47,
-      "market_cap_gbp_b": 36.047,
-      "market_cap_usd_b": 48.122,
+      "market_cap_gbp_b": 36.09,
+      "market_cap_usd_b": 48.123,
       "beta": 1.378,
       "pe_ratio": 237.86,
       "avg_volume_m": 1.23,
@@ -1732,6 +1732,20 @@
       "vol_1w": 7762300,
       "vol_1m": 25073400,
       "news": [
+        {
+          "title": "3 Magnificent Growth Stocks to Buy in July",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/05/3-magnificent-growth-stocks-to-buy-in-july/",
+          "published": 1783236300,
+          "sentiment": 0.758
+        },
+        {
+          "title": "Axon and Rocket Lab rallied while chip stocks sank",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/sandisk-bank-of-america-bubble-risk-week",
+          "published": 1783221420,
+          "sentiment": 0.0
+        },
         {
           "title": "Raymond James Begins Coverage on AppLovin (APP) Stock",
           "publisher": "Insider Monkey",
@@ -1752,23 +1766,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/applovin-corporation-app-e-commerce-213313251.html",
           "published": 1783114393,
           "sentiment": 0.382
-        },
-        {
-          "title": "Hillary Clinton Escalates Trump Criticism, Cites Reports Linking Stock Purchases to Federal ICE Contract Decisions: 'Unprecedented Corruption'",
-          "publisher": "Benzinga",
-          "url": "https://www.yahoo.com/news/politics/articles/hillary-clinton-escalates-trump-criticism-120050133.html",
-          "published": 1783080050,
-          "sentiment": -0.44
-        },
-        {
-          "title": "AppLovin (APP) Opens AppLovin Ads To All Advertisers After Axon Rebrand",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/media-advertising/articles/applovin-app-opens-applovin-ads-021047660.html",
-          "published": 1783044647,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.012
+      "news_sentiment": 0.228
     },
     {
       "ticker": "OLN",
@@ -1787,7 +1787,7 @@
       "high_gbp": "23",
       "high_usd": 30.46,
       "bar_pct": 16,
-      "market_cap_gbp_b": 1.711,
+      "market_cap_gbp_b": 1.713,
       "market_cap_usd_b": 2.284,
       "beta": 1.206,
       "pe_ratio": null,
@@ -1855,8 +1855,8 @@
       "high_gbp": "96",
       "high_usd": 127.83,
       "bar_pct": 98,
-      "market_cap_gbp_b": 5.676,
-      "market_cap_usd_b": 7.577,
+      "market_cap_gbp_b": 5.683,
+      "market_cap_usd_b": 7.578,
       "beta": 0.932,
       "pe_ratio": null,
       "avg_volume_m": 0.67,
@@ -1923,8 +1923,8 @@
       "high_gbp": "38",
       "high_usd": 50.59,
       "bar_pct": 62,
-      "market_cap_gbp_b": 8.736,
-      "market_cap_usd_b": 11.662,
+      "market_cap_gbp_b": 8.747,
+      "market_cap_usd_b": 11.663,
       "beta": 0.19,
       "pe_ratio": 40.86,
       "avg_volume_m": 1.06,
