@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-04 22:49",
+  "updated": "2026-07-06 12:28",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "MRNA has surged +158% YTD and +62.6% in the last month, driven by a unanimous FDA advisory panel backing for its flu vaccine (mRNA-1010/mFLUSIVA) ahead of an Aug 5, 2026 PDUFA, plus Science Day pipeline expansion into oncology and in vivo CAR-T. [invezz.com](https://invezz.com/news/2026/07/02/moderna-stock-jumps-as-pipeline-progress-and-flu-shot-data-lift-sentiment/)",
+      "drivers": [
+        "+158% YTD",
+        "+62.6% 1M",
+        "FDA panel unanimous for flu vaccine",
+        "Piper Sandler target raised to $77"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTLA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "NTLA is up +90.7% YTD and +34.9% in the last month after positive Phase 3 HAELO results for lonvo-z (ATTR therapy) and a rolling BLA submission, with a planned U.S. launch in H1 2027. [simplywall.st](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-ntla/intellia-therapeutics/news/intellia-therapeutics-ntla-is-up-112-after-lonvo-z-phase-3-p)",
+      "drivers": [
+        "+90.7% YTD",
+        "+34.9% 1M",
+        "Phase 3 HAELO positive",
+        "U.S. launch planned H1 2027"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "NTRA gained +22.1% YTD and +31.9% in the last month, supported by PMDA approval for Signatera in colorectal cancer in Japan (launch late 2026) and integration into a global Phase 3 head and neck cancer trial. [simplywall.st](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-ntra/natera/news/why-natera-ntra-is-up-63-after-new-signatera-cancer-trial-an)",
+      "drivers": [
+        "+22.1% YTD",
+        "+31.9% 1M",
+        "PMDA approval Japan",
+        "Strong buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "EDIT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "EDIT has rallied +78.1% YTD and +31.3% in the last month, with a 1-week surge of +33.2%, reflecting renewed interest in gene-editing despite a small market cap of $0.56B and no near-term revenue.",
+      "drivers": [
+        "+78.1% YTD",
+        "+33.2% 1W",
+        "Gene-editing momentum",
+        "Small cap catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "VRTX is up +16.8% YTD and +23.3% in the last month, with strong fundamentals (P/E 31.4, beta 0.29) and positive news sentiment of 0.419, reflecting confidence in its CF franchise and pipeline expansion.",
+      "drivers": [
+        "+16.8% YTD",
+        "+23.3% 1M",
+        "Low beta 0.29",
+        "Positive news sentiment 0.42"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "NVO is up 20.1% in the last month despite a -27% 1-year return, with a low P/E of 12.1 and a 3.57% dividend yield, making it an attractive value play in the metabolic space amid GLP-1 growth.",
+      "drivers": [
+        "+20.1% 1M",
+        "P/E 12.1",
+        "Dividend yield 3.57%",
+        "Metabolic leader"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "INCY is up +15.2% YTD and +19.3% in the last month, with a P/E of 16.5 and positive news sentiment of 0.126, supported by EPS growth and raised guidance in oncology.",
+      "drivers": [
+        "+15.2% YTD",
+        "+19.3% 1M",
+        "P/E 16.5",
+        "Raised guidance"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "SRPT climbed +18.7% in the last month and +20.4% in the last week after seeking permanent FDA approval for two Duchenne therapies, with positive news sentiment of 0.25.",
+      "drivers": [
+        "+20.4% 1W",
+        "+18.7% 1M",
+        "FDA filing for Duchenne",
+        "Positive news sentiment 0.25"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "RCUS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "RCUS is up +30.2% YTD and +27.1% in the last month, with a strong buy analyst consensus (score 1.46) and a new kidney cancer combination trial with Bristol-Myers Squibb.",
+      "drivers": [
+        "+30.2% YTD",
+        "+27.1% 1M",
+        "Strong buy consensus",
+        "BMY collaboration"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "COAG",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "COAG is up +18.5% in the last month despite a -8.8% YTD, with a strong buy analyst consensus (score 1.0) and Phase III plans for sutacimig in rare disease, though news sentiment is slightly negative at -0.137.",
+      "drivers": [
+        "+18.5% 1M",
+        "Strong buy consensus",
+        "Phase III plans",
+        "Rare disease catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTLA",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "FDA catalyst for Duchenne therapies",
         "rare-disease pipeline",
         "high short interest 28.57%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VRTX",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +16.79%, 1M +23.28%, P/E 31.36, news_s 0.339. FDA approval of CASGEVY for children aged 2+ expands eligible population by 5,500, a powerful near-term catalyst [simplywall.st](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-vrtx/vertex-pharmaceuticals/news/vertex-vrtx-just-won-fda-approval-to-treat-5500-more-young-c) [biospace.com](https://www.biospace.com/press-releases/vertex-announces-us-fda-approval-for-expanded-use-of-casgevy-for-the-treatment-of-people-ages-2-years-and-older-with-sickle-cell-disease-or-transfusion-dependent-beta-thalassemia).",
-      "drivers": [
-        "FDA approval catalyst",
-        "strong YTD momentum",
-        "low beta 0.29",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTLA",
-      "signal": "strong_buy",
-      "confidence": 0.748,
-      "rationale": "YTD +90.66%, 1M +34.87%, news_s 0.33. Positive Phase 3 HAELO results for lonvo-z and rolling BLA submission, with a potential U.S. launch in first half 2027 [simplywall.st](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-ntla/intellia-therapeutics/news/intellia-therapeutics-ntla-is-up-112-after-lonvo-z-phase-3-p).",
-      "drivers": [
-        "Phase 3 lonvo-z progress",
-        "high YTD momentum",
-        "2027 launch plans",
-        "high short interest 45.4%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +158.46%, 1M +62.58%, 1D +9.10%. FDA panel unanimously supported its flu vaccine (mRNA-1010), with PDUFA Aug 5, 2026, and pipeline expansion into oncology [invezz.com](https://invezz.com/news/2026/07/02/moderna-stock-jumps-as-pipeline-progress-and-flu-shot-data-lift-sentiment/).",
-      "drivers": [
-        "flu vaccine PDUFA catalyst",
-        "extreme YTD rally",
-        "pipeline expansion",
-        "hold analyst consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +22.06%, 1M +31.85%, analyst consensus strong_buy (an_score 1.5), low short interest 3.11%. Strong momentum in genomics with positive analyst outlook.",
-      "drivers": [
-        "strong_buy consensus",
-        "strong 1M momentum",
-        "low short interest",
-        "genomics growth"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NVO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD -0.21% but 1M +20.07%, P/E 12.09, dividend yield 3.57%, buy consensus, low short interest 0.77%. Attractive valuation with obesity market leadership and strong 1M momentum.",
-      "drivers": [
-        "low P/E and dividend yield",
-        "obesity market leader",
-        "strong 1M recovery",
-        "low short interest"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RCUS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +30.23%, 1M +27.12%, analyst consensus strong_buy (an_score 1.46). Collaboration with BMY for kidney cancer combination adds pipeline credibility.",
-      "drivers": [
-        "BMY collaboration",
-        "strong_buy consensus",
-        "oncology pipeline",
-        "high short interest 17.36%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +15.22%, 1M +19.27%, P/E 16.51, buy consensus, news_s 0.126. EPS growth and lifted guidance support positive fundamentals.",
-      "drivers": [
-        "P/E below industry average",
-        "EPS growth guidance",
-        "oncology leadership",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +21.54%, 1M +10.29%, P/E 23.26, buy consensus, news_s 0.381. Acquisition strategy and positive news sentiment reinforce momentum.",
-      "drivers": [
-        "strong YTD return",
-        "positive news sentiment",
-        "buy analyst consensus",
-        "acquisition catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +11.10%, 1M +7.43%, P/E 16.28, dividend yield 4.34%, buy consensus, news_s 0.367. Solid large-cap pharma with low valuation and high dividend.",
-      "drivers": [
-        "low P/E and high dividend",
-        "positive news sentiment",
-        "buy consensus",
-        "large cap stability"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +9.28%, 1M +2.44%, P/E 17.86, dividend yield 2.50%, buy consensus, news_s 0.151. Recent FDA approval of KEYTRUDA combo for breast cancer adds pipeline strength.",
-      "drivers": [
-        "low P/E and dividend",
-        "FDA approval catalyst",
-        "buy consensus",
-        "large cap stability"
       ]
     }
   ]

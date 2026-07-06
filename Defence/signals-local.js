@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-04 22:49",
+  "updated": "2026-07-06 12:29",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AXON",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "AXON has surged +34% in the past week and +24% in the past month, with strong analyst consensus (buy, score 1.6) and positive news sentiment (0.228), driven by its dominant position in law enforcement technology and recent growth momentum.",
+      "drivers": [
+        "+34.25% 1W momentum",
+        "buy analyst consensus (1.6)",
+        "positive news sentiment 0.228",
+        "YTD +5.96%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "RTX has strong momentum (+15.5% 1M, +37% 1Y), a buy analyst consensus (1.87), and a recent $1.1B Navy AIM-9X contract win, with the company raising FY2026 guidance after a Q1 earnings beat.",
+      "drivers": [
+        "+15.47% 1M momentum",
+        "$1.1B Navy contract win",
+        "buy analyst consensus (1.87)",
+        "raised FY2026 guidance"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "MRCY shows exceptional momentum with +66% YTD, +145% 1Y, and +19.6% in the past week, driven by strong demand for its defense electronics and signal processing solutions, though it lacks an analyst rating.",
+      "drivers": [
+        "+66% YTD return",
+        "+145% 1Y return",
+        "+19.55% 1W momentum",
+        "defense electronics demand"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "General Dynamics has strong momentum (+11.3% 1M, +27% 1Y), a buy analyst consensus (2.12), and the highest news sentiment in the universe (0.296), supported by its submarine and shipbuilding programs.",
+      "drivers": [
+        "+11.32% 1M momentum",
+        "highest news sentiment 0.296",
+        "buy analyst consensus (2.12)",
+        "+27% 1Y return"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "Northrop Grumman has rebounded +10% in the past week and +4.4% in the past month, with a low P/E of 17.2, a buy analyst consensus (1.96), and a record $95.6B backlog driven by B-21 and Sentinel programs.",
+      "drivers": [
+        "+9.95% 1W momentum",
+        "low P/E 17.21",
+        "buy analyst consensus (1.96)",
+        "$95.6B backlog"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Rolls-Royce has strong momentum (+19.6% 1M, +55% 1Y, +25.7% YTD), a buy analyst consensus (1.6), and positive news sentiment (0.256), supported by new partnerships and defense engine demand.",
+      "drivers": [
+        "+19.55% 1M momentum",
+        "+55% 1Y return",
+        "buy analyst consensus (1.6)",
+        "positive news sentiment 0.256"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Lockheed Martin has strong momentum (+8.1% 1W, +6.6% 1M, +10.4% YTD), a forward P/E of 17, and a record $194B backlog, with a $4.8B PAC-3 contract win and multi-year framework agreements for missile production.",
+      "drivers": [
+        "+8.10% 1W momentum",
+        "record $194B backlog",
+        "$4.8B PAC-3 contract",
+        "forward P/E 17"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "TransDigm has strong momentum (+11.3% 1M) and the highest news sentiment in the universe (0.408), with a buy analyst consensus (1.82) and a dominant position in aerospace components.",
+      "drivers": [
+        "+11.30% 1M momentum",
+        "highest news sentiment 0.408",
+        "buy analyst consensus (1.82)",
+        "aerospace components leader"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "HEICO has strong momentum (+10.1% 1M, +10% YTD), a buy analyst consensus (1.83), and positive news sentiment (0.3), driven by its niche in aerospace and defense electronics.",
+      "drivers": [
+        "+10.06% 1M momentum",
+        "buy analyst consensus (1.83)",
+        "positive news sentiment 0.3",
+        "+10% YTD return"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Boeing has strong momentum (+7.6% 1M, +3.9% 1D), a buy analyst consensus (1.63), and positive news sentiment (0.049), with a low short interest of 0.02% and potential recovery in defense and commercial segments.",
+      "drivers": [
+        "+7.56% 1M momentum",
+        "buy analyst consensus (1.63)",
+        "low short interest 0.02%",
+        "positive news sentiment 0.049"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RTX",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "analyst buy score 1.56",
         "+13.44% 1W",
         "short interest 8.27%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "RTX has strong momentum (+15.47% 1M, +7.21% YTD), a buy analyst consensus (score 1.87), positive news sentiment (0.206), and was just awarded a $1.1B U.S. Navy missile contract, with Q1 earnings beating estimates and guidance raised. [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/07/03/rtx-nyse-rtx-stock-price-surges-on-1-1-billion-u-s-navy-missile-contract-award/)",
-      "drivers": [
-        "$1.1B Navy missile contract",
-        "Q1 earnings beat & raised guidance",
-        "+15.47% 1M momentum",
-        "Buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "LMT is up 10.40% YTD with strong 1W (+8.10%) and 1D (+4.68%) momentum, and is the frontrunner to acquire Ultra Maritime for $3.5B, expanding undersea warfare capabilities; Citi upgraded to Buy with a $582 price target. [tradingview.com](https://www.tradingview.com/news/stocktwits:7c598ebb5094b:0-lmt-stock-gains-nearly-5-lockheed-martin-emerges-as-frontrunner-for-ultra-maritime-in-potential-3-5b-deal/) [gurufocus.com](https://www.gurufocus.com/news/8944487/lockheed-closes-in-on-35-billion-ultra-maritime-deal) [tikr.com](https://www.tikr.com/blog/citi-upgrades-lockheed-martin-nyse-lmt-stock-to-buy-as-historical-rebounds-override-election-fears)",
-      "drivers": [
-        "$3.5B Ultra Maritime acquisition frontrunner",
-        "Citi upgrade to Buy",
-        "+10.40% YTD",
-        "Missile & Fire Control segment growth"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "NOC surged 5.17% today and 9.95% in the past week, with a low P/E of 17.21 and a buy analyst consensus; recent contract momentum includes $7.8B in awards over the past year, including GBSD and GMD programs. [quiverquant.com](https://www.quiverquant.com/news/Northrop+Grumman+Rises+as+Investors+Weigh+Contract+Momentum+and+Defense+Demand)",
-      "drivers": [
-        "+9.95% 1W momentum",
-        "P/E 17.21 attractive",
-        "$7.8B in government contract awards",
-        "Buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "General Dynamics shows strong momentum (+11.32% 1M, +10.21% YTD) with a reasonable P/E of 23.52, a buy consensus (score 2.12), and positive news sentiment (0.296), supported by submarine market expansion.",
-      "drivers": [
-        "+11.32% 1M momentum",
-        "+10.21% YTD",
-        "P/E 23.52",
-        "Positive news sentiment 0.296"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "AXON has explosive short-term momentum (+34.25% 1W, +24.00% 1M) and a buy analyst consensus (score 1.6), though its P/E of 237.86 is very high; the recent surge suggests strong investor interest in its law enforcement technology.",
-      "drivers": [
-        "+34.25% 1W momentum",
-        "+24.00% 1M momentum",
-        "Buy analyst consensus",
-        "Law enforcement tech demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Mercury Systems has outstanding 1-year (+145%) and YTD (+66.00%) returns, with strong 1M (+13.10%) and 1W (+19.55%) momentum, though it lacks a P/E and analyst coverage; the momentum reflects strong defence electronics demand.",
-      "drivers": [
-        "+66.00% YTD",
-        "+145% 1-year return",
-        "+19.55% 1W momentum",
-        "Defence electronics demand"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "TransDigm has a buy analyst consensus (score 1.82), positive news sentiment (0.408), and +11.30% 1M momentum, though its P/E of 42.02 is elevated; the company benefits from aftermarket parts demand and defence spending.",
-      "drivers": [
-        "Positive news sentiment 0.408",
-        "+11.30% 1M momentum",
-        "Buy analyst consensus",
-        "Aftermarket parts demand"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "HEICO has a buy consensus (score 1.83), positive news sentiment (0.30), and solid YTD (+10.03%) and 1M (+10.06%) returns, though its P/E of 64.54 is high; the company is well-positioned in aerospace and defence components.",
-      "drivers": [
-        "+10.03% YTD",
-        "+10.06% 1M momentum",
-        "Positive news sentiment 0.30",
-        "Buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Boeing has a buy analyst consensus (score 1.63), positive news sentiment (0.128), and +7.56% 1M momentum, but its P/E of 89.17 is very high and YTD is slightly negative (-0.56%); the stock is recovering on commercial aerospace demand.",
-      "drivers": [
-        "Buy analyst consensus",
-        "+7.56% 1M momentum",
-        "Positive news sentiment 0.128",
-        "Commercial aerospace recovery"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Rolls-Royce has strong YTD (+25.67%) and 1M (+19.55%) momentum, a buy consensus (score 1.6), and positive news sentiment (0.256), with a reasonable P/E of 21.8; the company is benefiting from defence engine demand and partnerships.",
-      "drivers": [
-        "+25.67% YTD",
-        "+19.55% 1M momentum",
-        "P/E 21.8",
-        "Positive news sentiment 0.256"
       ]
     }
   ]
