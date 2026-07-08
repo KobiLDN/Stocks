@@ -2,20 +2,21 @@
 
 Rules that apply to every session in this repo. Read before acting.
 
-## Site URLs — always use clickable markdown links
+## Site URL
 
 | Environment | URL |
 |---|---|
-| Dev preview | [dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev) |
 | Live / production | [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev) |
 
-**After every push to `dev`:** include a clickable link to the relevant page on the dev preview so the user can jump straight to it. Example: "Preview at [dev.stocks-4qw.pages.dev/MegaCap/](https://dev.stocks-4qw.pages.dev/MegaCap/)". Never paste a bare URL — always wrap it in `[text](url)` markdown.
+**After every PR merge:** include a clickable link to the relevant live page. Example: "Live at [stocks-4qw.pages.dev/MegaCap/](https://stocks-4qw.pages.dev/MegaCap/)". Never paste a bare URL — always wrap it in `[text](url)` markdown.
 
 ## Branch rules (summary — see AGENTS.md for full detail)
 
-- All changes → `dev` only
-- Never push `main` without explicit "go live" / "push to live" from the user
-- Always ask before pushing to `main`
+- One branch: `main` — it is the live site
+- Code changes go via a feature branch + PR (`fix/description`, `feat/description`)
+- Bots push data updates directly to `main` — no PR needed
+- Never commit code directly to `main`
+- PR merge = goes live (Cloudflare deploys automatically)
 
 ## Read order at session start
 

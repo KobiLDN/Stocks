@@ -12,17 +12,19 @@ Worktrees are disabled (`"worktree": false` in `.claude/settings.json`) — sess
 
 ## BRANCH RULES — READ BEFORE TOUCHING ANYTHING
 
-> **ALL changes go to `dev` only. Never push to `main` without explicit user instruction.**
+> **There is one branch: `main`. It is the live site.**
 
-| Branch | Purpose | Who pushes |
+| Branch type | Purpose | Who pushes |
 |---|---|---|
-| `dev` | All development work — push here after every change | Agent / contributor |
-| `main` | Live production site — **never push directly** | User only, after explicit "go live" |
+| `main` | Live production — bots push data updates here directly | Bots + PR merges |
+| `fix/*`, `feat/*`, `docs/*` | Short-lived feature branches for code changes | Agent, deleted after PR merges |
 
-- Push every commit to `origin/dev`.
-- When the user says "go live" / "push to live" / "merge to main", only then merge `dev → main`.
-- If unsure whether to go live, **ask first**.
-- Never create or push to feature branches unless the user explicitly asks.
+- Code changes go via a feature branch + PR. Never commit code directly to `main`.
+- Bots (prices, news, signals, exports) push directly to `main` — no PR needed.
+- Create feature branches from the latest `main`: `git checkout -b fix/description origin/main`
+- Open a PR, let Cloudflare build the preview, user merges → goes live.
+- Delete the branch after the PR merges.
+- Never force-push `main`.
 
 ---
 
@@ -38,38 +40,13 @@ Worktrees are disabled (`"worktree": false` in `.claude/settings.json`) — sess
 
 All editing happens in the web Claude container. There are no local clones to manage.
 
-### The 3-step workflow
+### The 3-step workflow for code changes
 
-1. **Make changes** — edit files in the container, commit, `git push origin dev`.
-2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → **[dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev)**
-3. **Go live** — only when the user explicitly says so. Push `dev → main`: `git push origin dev:main`.
+1. **Branch** — `git checkout -b fix/description origin/main`
+2. **Make changes** — commit, `git push -u origin fix/description`
+3. **PR** — open a pull request → Cloudflare builds a preview URL → user reviews → merges → live
 
-**After every push:** share a clickable markdown link to the relevant page on the dev preview (e.g. `[dev.stocks-4qw.pages.dev/MegaCap/](https://dev.stocks-4qw.pages.dev/MegaCap/)`). Never paste a bare URL.
-
-Step 3 requires explicit user approval every time. If unsure, ask.
-
-### If dev and main diverge
-
-Usually caused by the price bot committing directly to `main`. Fix:
-
-```
-git fetch origin
-git rebase origin/main
-git push origin dev
-```
-
-### After pushing to main (CCR / feature-branch sessions)
-
-When working on a feature branch (e.g. `claude/magical-davinci-zYLYI`) and pushing
-to main via `git push origin <branch>:main`, the remote tracking ref for the feature
-branch goes stale. The stop hook checks `origin/<branch>..HEAD` and flags the
-divergence as unverified commits. Fix — run this immediately after every push to main:
-
-```
-git push --force-with-lease -u origin <current-branch>
-```
-
-This syncs the remote feature branch to HEAD so the hook range is empty and exits 0.
+Merging the PR is going live. Feature branches are deleted after merge.
 
 ## After every edit
 

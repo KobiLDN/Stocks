@@ -2,48 +2,50 @@
 
 ## BRANCH RULES
 
-> **ALL changes go to `dev` only. Never push to `main` without explicit user instruction.**
+> **There is one branch: `main`. It is the live site.**
 
-- Every commit gets pushed to `origin/dev`.
-- `main` is the live site — only push `dev → main` when the user explicitly says "go live".
-- Always ask before pushing to `main`. Never assume.
+- Bots (price updates, news, signals, exports) push directly to `main`.
+- Code changes go via a short-lived feature branch + PR — never directly to `main`.
+- `main` is always deployable. Do not commit broken code.
 
 ---
 
 ## How it works
 
-All editing happens in the web Claude container. The user reviews changes on the dev preview site. No local clones needed.
+All editing happens in the web Claude container. Changes are reviewed via Cloudflare Pages PR preview before merging.
 
-### The 3-step workflow
+### The 3-step workflow for code changes
 
-1. **Make changes** — edit files, commit, `git push origin dev`
-2. **Preview** — Cloudflare Pages auto-deploys `dev` in ~30–60s → **https://dev.stocks-4qw.pages.dev**
-3. **Go live** — user says "go live" → `git push origin dev:main`
+1. **Branch** — create a short-lived branch from `main`: `git checkout -b fix/description`
+2. **Make changes** — commit and push the branch: `git push -u origin fix/description`
+3. **PR** — open a pull request → Cloudflare builds a preview URL automatically → user reviews → merges → live
 
-`main` = live production site. Always working, always deployable.
-`dev` = preview. Break it freely.
+Feature branches are deleted after the PR merges. Never re-use them.
 
-### Pushing to live when main has bot commits
+### Bots
 
-The price/signal/RSS bots push directly to `main` several times a day, so `git push origin dev:main` is often rejected with "fetch first." Always use **merge, not rebase**:
+Price updates, news feed, signals, and exports push directly to `main` via GitHub Actions. No PR needed — these are automated data refreshes, not code changes.
 
-```bash
-git fetch origin main
-git merge origin/main --no-edit   # absorbs bot commits — no history rewrite
-git push origin dev:main          # succeeds
-git push origin dev               # fast-forward, no force needed
-```
+### Naming branches
 
-**Never use `git rebase origin/main`** — it rewrites `dev`'s history, makes `origin/dev` incompatible, and requires a force-push to sync (which gets blocked by the auto mode classifier).
+Use a short `type/description` slug:
 
-## Push to all branches
+| Type | Example |
+|---|---|
+| Fix | `fix/coingecko-links` |
+| Feature | `feat/crypto-signals` |
+| Docs | `docs/workflow-update` |
+| Refactor | `refactor/nav-cleanup` |
 
-When the user says **"check branches.md and push to all"** (or just **"push to all"**): read `branches.md` and push the current commit to **every branch listed** — `main`, `dev`, and `claude/magical-davinci-zYLYI`. Worktrees are disabled, so there are no `claude/...` worktree branches.
+## After every code change
 
-## Branch hygiene
+Update these in the same commit (or a final commit before opening the PR):
 
-- All work on `dev`
-- `main` only ever receives fast-forward merges from `dev`
-- Never commit directly to `main`
-- Never force-push `main`
-- No feature branches unless user asks
+1. **`CHANGELOG.md`** — prepend one row (newest first): date (BST), AI Name, Where, what changed
+2. **`FEATURES.md`** — move completed item from Backlog → Done, or add new Done entry
+
+## Going live
+
+Merging the PR is going live. Cloudflare Pages deploys `main` automatically in ~30–60s after merge.
+
+Never force-push `main`.
