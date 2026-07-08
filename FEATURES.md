@@ -8,6 +8,8 @@
 
 - **Push-to-live workflow fix — merge not rebase (issue #24)** — `WORKFLOW.md` updated: when `git push origin dev:main` is rejected because bots have committed to `main`, use `git merge origin/main --no-edit` instead of `git rebase origin/main`; merge adds one commit without rewriting history so `origin/dev` stays compatible and no force-push is needed.
 
+- **FX rate fallback for GitHub Actions SSL failures** — all 7 `*_update_prices.py` scripts now catch `curl_cffi` SSL errors on `fc.yahoo.com` and fall back to `api.frankfurter.app` (GBP/USD, GBP/JPY) or `open.er-api.com` (GBP/USD, SAR/USD for MegaCap) via stdlib `urllib.request`; no new dependencies required.
+
 - **Auto-release on deploy to live** — `.github/workflows/create-release.yml` triggers on every push to `main`; tags with today's date, builds release notes from commit messages since the last tag, publishes automatically to GitHub Releases — zero manual steps per deploy.
 
 - **Mobile metrics table fixes — all 8 pages** — four issues fixed across all sector metrics pages (AI, Tech, Crypto, Biotech, Defence, MegaCap, Energy, All): (1) sticky TICKER column with `position:sticky;left:0` so the stock identifier stays visible while scrolling through 18 columns; (2) `white-space:nowrap` on `.cat-badge` prevents multi-word categories ("Tech & Semis", "Global Growth") wrapping onto two lines; (3) Company column header (`th:nth-child(2)`) now hidden on mobile alongside data cells — previously the ghost header misaligned all columns; (4) CSS hover-tooltips on filter buttons disabled on mobile where they were non-functional and appeared behind the page header.
