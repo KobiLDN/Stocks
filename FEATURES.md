@@ -6,6 +6,10 @@
 
 ## Done
 
+- **All/heatmap crypto tiles → CoinGecko (issue #26)** — `COINGECKO_IDS` map (34 coins) + `tileUrl(d)` helper routes crypto tiles to CoinGecko, equities to Yahoo Finance; uses existing `d.data.sector === 'crypto'` tag (`All/heatmap.html`).
+
+- **UK date format DD/MM/YYYY HH:MM site-wide (issue #25)** — `fmtDate()` in `nav.js` converts all "Last updated" timestamps; handles sync init() pages via post-process loop and async pages via direct call; works for both price-update format (`YYYY-MM-DD HH:MM`) and ISO 8601 news timestamps (`nav.js`, `shared.js`, `All/`, `news.html`, 7 sector signals pages).
+
 - **Push-to-live workflow fix — merge not rebase (issue #24)** — `WORKFLOW.md` updated: when `git push origin dev:main` is rejected because bots have committed to `main`, use `git merge origin/main --no-edit` instead of `git rebase origin/main`; merge adds one commit without rewriting history so `origin/dev` stays compatible and no force-push is needed.
 
 - **FX rate fallback for GitHub Actions SSL failures** — all 7 `*_update_prices.py` scripts now catch `curl_cffi` SSL errors on `fc.yahoo.com` and fall back to `api.frankfurter.app` (GBP/USD, GBP/JPY) or `open.er-api.com` (GBP/USD, SAR/USD for MegaCap) via stdlib `urllib.request`; no new dependencies required.
