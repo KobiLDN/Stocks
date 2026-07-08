@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-07 22:58",
-  "fx_gbp_usd": 1.3357,
+  "updated": "2026-07-08 07:38",
+  "fx_gbp_usd": 1.3365,
   "stocks": [
     {
       "ticker": "XOM",
@@ -13,62 +13,62 @@ window.PRICES_DATA = {
       "change_1w": "+4.14%",
       "change_1m": "-6.63%",
       "change_ytd": "+17.08%",
-      "return_1yr": "+19%",
+      "return_1yr": "+24%",
       "low_gbp": "79",
       "low_usd": 105.53,
       "high_gbp": "132",
       "high_usd": 176.41,
       "bar_pct": 51,
-      "market_cap_gbp_b": 439.698,
+      "market_cap_gbp_b": 439.44,
       "market_cap_usd_b": 587.298,
       "beta": 0.162,
-      "pe_ratio": 23.85,
-      "avg_volume_m": 17.86,
+      "pe_ratio": 23.0,
+      "avg_volume_m": 17.8,
       "div_yield_pct": 302.0,
       "short_pct": 1.29,
       "analyst": "buy",
       "analyst_score": 2.29,
-      "vol_1d": 11670726,
-      "vol_1w": 80506526,
-      "vol_1m": 363061026,
+      "vol_1d": 14630900,
+      "vol_1w": 83466700,
+      "vol_1m": 366021200,
       "news": [
+        {
+          "title": "Exxon Mobil (XOM) Price Target Lowered by $17 at TD Cowen. Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/exxon-mobil-xom-price-target-050508533.html",
+          "published": 1783487108,
+          "sentiment": -0.128
+        },
+        {
+          "title": "ExxonMobil and Chevron Shares Skyrocket, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-chevron-shares-skyrocket-know-232952453.html",
+          "published": 1783466992,
+          "sentiment": 0.296
+        },
+        {
+          "title": "XOM Stock Posts Best Day In Over Five Months \u2014 Exxon Lifts Q2 Upstream Income Outlook To Highest Since 2022",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/xom-stock-posts-best-day-in-over-five-months-exxon-lifts-q2-upstream-income-outlook-to-highest-since-2022/cZmlCh6R7Z8",
+          "published": 1783466091,
+          "sentiment": 0.637
+        },
+        {
+          "title": "ExxonMobil (XOM) Expands In Nigeria Deepwater Oil As Export Hub Ambitions Grow",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/exxonmobil-xom-expands-nigeria-deepwater-220836904.html",
+          "published": 1783462116,
+          "sentiment": 0.103
+        },
         {
           "title": "ExxonMobil Holdings (XOM) Following Its Texas Move Has Investors Rechecking Valuation",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-holdings-xom-following-texas-211521703.html",
           "published": 1783458921,
           "sentiment": 0.0
-        },
-        {
-          "title": "Big Oil's Windfall Earnings Threaten to Reignite Trump's Price-Gouging Push",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/big-oils-windfall-earnings-threaten-200000293.html",
-          "published": 1783454400,
-          "sentiment": -0.382
-        },
-        {
-          "title": "Oil Prices Jump As U.S. Yanks Iran Sanctions Waiver Over Tanker Attacks",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/oil-prices-rise-july-attacks-near-strait-of-hormuz/?src=A00220&yptr=yahoo",
-          "published": 1783453724,
-          "sentiment": -0.44
-        },
-        {
-          "title": "Oil\u2019s $100 Threshold: What It Means for Energy Stocks Now",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/07/oils-100-threshold-what-it-means-for-energy-stocks-now/",
-          "published": 1783451008,
-          "sentiment": 0.273
-        },
-        {
-          "title": "ExxonMobil Trade Can Pump Out A Premium Or Discounted Shares For The Oil Heavyweight",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/research/options/exxonmobil-stock-xom-oil-energy-options-income-investing-markets/?src=A00220&yptr=yahoo",
-          "published": 1783445993,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": -0.042
+      "news_sentiment": 0.182
     },
     {
       "ticker": "CVX",
@@ -81,62 +81,62 @@ window.PRICES_DATA = {
       "change_1w": "+3.29%",
       "change_1m": "-8.05%",
       "change_ytd": "+13.74%",
-      "return_1yr": "+10%",
+      "return_1yr": "+14%",
       "low_gbp": "110",
       "low_usd": 146.49,
       "high_gbp": "161",
       "high_usd": 214.71,
       "bar_pct": 40,
-      "market_cap_gbp_b": 259.461,
-      "market_cap_usd_b": 346.558,
+      "market_cap_gbp_b": 259.308,
+      "market_cap_usd_b": 346.557,
       "beta": 0.488,
-      "pe_ratio": 30.37,
-      "avg_volume_m": 10.11,
+      "pe_ratio": 29.34,
+      "avg_volume_m": 10.1,
       "div_yield_pct": 424.0,
       "short_pct": 1.09,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 7046042,
-      "vol_1w": 55186442,
-      "vol_1m": 200382042,
+      "vol_1d": 9732600,
+      "vol_1w": 57873000,
+      "vol_1m": 203068600,
       "news": [
         {
-          "title": "Big Oil's Windfall Earnings Threaten to Reignite Trump's Price-Gouging Push",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/big-oils-windfall-earnings-threaten-200000293.html",
-          "published": 1783454400,
-          "sentiment": -0.382
+          "title": "Exxon Mobil (XOM) Price Target Lowered by $17 at TD Cowen. Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/exxon-mobil-xom-price-target-050508533.html",
+          "published": 1783487108,
+          "sentiment": -0.128
         },
         {
-          "title": "Oil\u2019s $100 Threshold: What It Means for Energy Stocks Now",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/07/oils-100-threshold-what-it-means-for-energy-stocks-now/",
-          "published": 1783451008,
-          "sentiment": 0.273
+          "title": "Chevron (CVX) \u2013 Among the 14 Best Blue Chip Dividend Stocks to Buy According to Hedge Funds",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/chevron-cvx-among-14-best-050426509.html",
+          "published": 1783487066,
+          "sentiment": 0.637
         },
         {
-          "title": "After an Almost 20% One-Year Run, is ExxonMobil Still Worth Buying?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/almost-20-one-run-exxonmobil-144800840.html",
-          "published": 1783435680,
-          "sentiment": 0.226
+          "title": "Here is Why Chevron (CVX) is One of the Most Promising Energy Stocks to Buy Now",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/why-chevron-cvx-one-most-050111102.html",
+          "published": 1783486871,
+          "sentiment": 0.657
         },
         {
-          "title": "Should Chevron\u2019s (CVX) Index Exit and Guyana Upgrade Reframe How Investors View Its Cash-Flow Story?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/chevron-cvx-index-exit-guyana-031959685.html",
-          "published": 1783394399,
-          "sentiment": 0.0
+          "title": "TD Cowen Cuts Price Target on TotalEnergies (TTE). Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/td-cowen-cuts-price-target-050039593.html",
+          "published": 1783486839,
+          "sentiment": -0.296
         },
         {
-          "title": "Big Oil Heads for Record Profits as Trump Turns Up the Heat on Gas Prices",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/big-oil-heads-record-profits-220000892.html",
-          "published": 1783375200,
-          "sentiment": 0.44
+          "title": "ExxonMobil and Chevron Shares Skyrocket, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-chevron-shares-skyrocket-know-232952453.html",
+          "published": 1783466992,
+          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.111
+      "news_sentiment": 0.233
     },
     {
       "ticker": "SHEL",
@@ -155,56 +155,56 @@ window.PRICES_DATA = {
       "high_gbp": "71",
       "high_usd": 94.9,
       "bar_pct": 51,
-      "market_cap_gbp_b": 170.101,
+      "market_cap_gbp_b": 170.001,
       "market_cap_usd_b": 227.201,
       "beta": -0.235,
-      "pe_ratio": 12.77,
+      "pe_ratio": 12.16,
       "avg_volume_m": 7.33,
       "div_yield_pct": 400.0,
       "short_pct": 1.96,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 8261571,
-      "vol_1w": 31428431,
-      "vol_1m": 128193719,
+      "vol_1d": 9159462,
+      "vol_1w": 32327180,
+      "vol_1m": 129092468,
       "news": [
+        {
+          "title": "Exxon Mobil (XOM) Price Target Lowered by $17 at TD Cowen. Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/exxon-mobil-xom-price-target-050508533.html",
+          "published": 1783487108,
+          "sentiment": -0.128
+        },
+        {
+          "title": "TD Cowen Cuts Price Target on TotalEnergies (TTE). Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/td-cowen-cuts-price-target-050039593.html",
+          "published": 1783486839,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Shell (LSE:SHEL) Updates Q2 Guidance, Is The Stock Still 15% Undervalued?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/shell-lse-shel-updates-q2-002122565.html",
+          "published": 1783470082,
+          "sentiment": 0.0
+        },
+        {
+          "title": "ExxonMobil (XOM) Expands In Nigeria Deepwater Oil As Export Hub Ambitions Grow",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/exxonmobil-xom-expands-nigeria-deepwater-220836904.html",
+          "published": 1783462116,
+          "sentiment": 0.103
+        },
         {
           "title": "Stocks to Watch: Samsung, SpaceX, Fiserv, Rivian",
           "publisher": "The Wall Street Journal",
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-07-07-2026/card/stocks-to-watch-samsung-spacex-fiserv-rivian-zkuZajQmdq6HvhBUc1vv?siteid=yhoof2&yptr=yahoo",
           "published": 1783455663,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Higher Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-higher-afternoon-195546944.html",
-          "published": 1783454146,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Shell Rises 2.7% After Reporting Stronger Second-Quarter Gas Trading",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/energy/articles/shell-rises-2-7-reporting-194427003.html",
-          "published": 1783453467,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Adnoc Distribution's $1 Billion Shell Deal Targets 6% EPS Lift",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/energy/articles/adnoc-distributions-1-billion-shell-191539964.html",
-          "published": 1783451739,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Global LNG Demand Could Surge 65% by 2050. Here Are the Top Energy Stocks to Buy to Cash In on the Boom.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/07/global-lng-demand-could-surge-65-by-2050-here-are/",
-          "published": 1783443000,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.199
+      "news_sentiment": -0.064
     },
     {
       "ticker": "BP",
@@ -217,25 +217,32 @@ window.PRICES_DATA = {
       "change_1w": "+3.37%",
       "change_1m": "-11.69%",
       "change_ytd": "+10.40%",
-      "return_1yr": "+20%",
+      "return_1yr": "+23%",
       "low_gbp": "23",
-      "low_usd": 30.32,
+      "low_usd": 31.01,
       "high_gbp": "36",
       "high_usd": 48.27,
-      "bar_pct": 46,
-      "market_cap_gbp_b": 74.436,
+      "bar_pct": 44,
+      "market_cap_gbp_b": 74.392,
       "market_cap_usd_b": 99.423,
       "beta": -0.231,
-      "pe_ratio": 31.14,
-      "avg_volume_m": 9.9,
+      "pe_ratio": 30.16,
+      "avg_volume_m": 9.89,
       "div_yield_pct": 534.0,
       "short_pct": 0.73,
       "analyst": "hold",
       "analyst_score": 2.53,
-      "vol_1d": 9803135,
-      "vol_1w": 66922135,
-      "vol_1m": 211244835,
+      "vol_1d": 9842700,
+      "vol_1w": 66961700,
+      "vol_1m": 211284400,
       "news": [
+        {
+          "title": "BP Price Target Cut by \u00a350 at JP Morgan",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/bp-price-target-cut-50-045913296.html",
+          "published": 1783486753,
+          "sentiment": 0.111
+        },
         {
           "title": "Noble vs. Transocean: Which Off-Shore Drilling Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
@@ -263,16 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/bp-sells-nearly-40-bay-133911804.html",
           "published": 1783431551,
           "sentiment": 0.0
-        },
-        {
-          "title": "FTSE 100 Live: Shell and consumer giants make gains, while miners and defence sell off",
-          "publisher": "Proactive",
-          "url": "https://www.proactiveinvestors.com/companies/news/1095022/ftse-100-live-london-index-called-higher-as-oil-rebounds-samsung-tanks-on-earnings-1095022.html",
-          "published": 1783405140,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.271
+      "news_sentiment": 0.209
     },
     {
       "ticker": "TTE",
@@ -285,25 +285,39 @@ window.PRICES_DATA = {
       "change_1w": "+0.37%",
       "change_1m": "-12.04%",
       "change_ytd": "+18.48%",
-      "return_1yr": "+23%",
+      "return_1yr": "+26%",
       "low_gbp": "43",
       "low_usd": 57.39,
-      "high_gbp": "71",
+      "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 56,
-      "market_cap_gbp_b": 129.861,
-      "market_cap_usd_b": 173.453,
+      "market_cap_gbp_b": 129.743,
+      "market_cap_usd_b": 173.398,
       "beta": 0.05,
-      "pe_ratio": 11.57,
+      "pe_ratio": 11.33,
       "avg_volume_m": 1.61,
       "div_yield_pct": 553.0,
       "short_pct": 0.2,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 1922010,
-      "vol_1w": 7552110,
-      "vol_1m": 34926310,
+      "vol_1d": 1922200,
+      "vol_1w": 7552300,
+      "vol_1m": 34926500,
       "news": [
+        {
+          "title": "Exxon Mobil (XOM) Price Target Lowered by $17 at TD Cowen. Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/exxon-mobil-xom-price-target-050508533.html",
+          "published": 1783487108,
+          "sentiment": -0.128
+        },
+        {
+          "title": "TD Cowen Cuts Price Target on TotalEnergies (TTE). Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/td-cowen-cuts-price-target-050039593.html",
+          "published": 1783486839,
+          "sentiment": -0.296
+        },
         {
           "title": "Sector Update: Energy Stocks Higher Late Afternoon",
           "publisher": "MT Newswires",
@@ -324,23 +338,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/coverage/better-buy/2026/07/07/noble-vs-transocean-which-off-shore-drilling-stock-is-a-better-buy-in-2026/",
           "published": 1783439347,
           "sentiment": 0.71
-        },
-        {
-          "title": "TotalEnergies (ENXTPA:TTE) Buys Into Abu Dhabi Gas And Launches MethaneLive",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/totalenergies-enxtpa-tte-buys-abu-161243104.html",
-          "published": 1783095163,
-          "sentiment": 0.0
-        },
-        {
-          "title": "TotalEnergies Offers Millions Of Iraqi Barrels As Asia Supply Builds",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/energy/articles/totalenergies-offers-millions-iraqi-barrels-160949834.html",
-          "published": 1783094989,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.251
+      "news_sentiment": 0.166
     },
     {
       "ticker": "EQNR",
@@ -353,24 +353,24 @@ window.PRICES_DATA = {
       "change_1w": "+8.76%",
       "change_1m": "-9.81%",
       "change_ytd": "+41.40%",
-      "return_1yr": "+23%",
+      "return_1yr": "+30%",
       "low_gbp": "17",
       "low_usd": 22.26,
       "high_gbp": "33",
       "high_usd": 43.46,
       "bar_pct": 55,
-      "market_cap_gbp_b": 60.696,
-      "market_cap_usd_b": 81.071,
+      "market_cap_gbp_b": 60.324,
+      "market_cap_usd_b": 80.621,
       "beta": -0.75,
-      "pe_ratio": 15.34,
-      "avg_volume_m": 4.4,
+      "pe_ratio": 14.49,
+      "avg_volume_m": 4.41,
       "div_yield_pct": 474.0,
       "short_pct": 3.06,
       "analyst": "hold",
       "analyst_score": 3.33,
-      "vol_1d": 4806761,
-      "vol_1w": 16709361,
-      "vol_1m": 77637661,
+      "vol_1d": 4833500,
+      "vol_1w": 16736100,
+      "vol_1m": 77664400,
       "news": [
         {
           "title": "Sector Update: Energy Stocks Higher Late Afternoon",
@@ -421,25 +421,32 @@ window.PRICES_DATA = {
       "change_1w": "+4.07%",
       "change_1m": "-8.79%",
       "change_ytd": "+13.85%",
-      "return_1yr": "+8%",
+      "return_1yr": "+13%",
       "low_gbp": "64",
       "low_usd": 85.57,
       "high_gbp": "102",
       "high_usd": 135.87,
       "bar_pct": 45,
-      "market_cap_gbp_b": 98.909,
+      "market_cap_gbp_b": 98.851,
       "market_cap_usd_b": 132.111,
       "beta": 0.122,
-      "pe_ratio": 18.38,
-      "avg_volume_m": 8.04,
-      "div_yield_pct": null,
+      "pe_ratio": 17.55,
+      "avg_volume_m": 8.02,
+      "div_yield_pct": 324.0,
       "short_pct": 1.97,
       "analyst": "buy",
       "analyst_score": 1.73,
-      "vol_1d": 6694518,
-      "vol_1w": 35031718,
-      "vol_1m": 163499718,
+      "vol_1d": 6752800,
+      "vol_1w": 35090000,
+      "vol_1m": 163558000,
       "news": [
+        {
+          "title": "Why ConocoPhillips (COP) Stock Is Up Today",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-conocophillips-cop-stock-today-231352809.html",
+          "published": 1783466032,
+          "sentiment": 0.0
+        },
         {
           "title": "Up 14.81% in a Year, COWZ Proves You Don\u2019t Need Apple",
           "publisher": "24/7 Wall St.",
@@ -467,13 +474,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/oxys-robust-proved-reserves-strengthen-140300447.html",
           "published": 1783087380,
           "sentiment": 0.572
-        },
-        {
-          "title": "ConocoPhillips (COP) Stock Moves 1.46%: What You Should Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/conocophillips-cop-stock-moves-1-220004366.html",
-          "published": 1783029604,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.169
@@ -489,25 +489,32 @@ window.PRICES_DATA = {
       "change_1w": "+5.28%",
       "change_1m": "-9.68%",
       "change_ytd": "+23.09%",
-      "return_1yr": "+7%",
+      "return_1yr": "+13%",
       "low_gbp": "29",
       "low_usd": 38.8,
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 45,
-      "market_cap_gbp_b": 38.484,
-      "market_cap_usd_b": 51.402,
+      "market_cap_gbp_b": 38.462,
+      "market_cap_usd_b": 51.403,
       "beta": 0.15,
-      "pe_ratio": 69.84,
+      "pe_ratio": 65.42,
       "avg_volume_m": 11.66,
-      "div_yield_pct": null,
+      "div_yield_pct": 213.0,
       "short_pct": 0.02,
       "analyst": "hold",
       "analyst_score": 2.54,
-      "vol_1d": 11594124,
-      "vol_1w": 45427324,
-      "vol_1m": 196257624,
+      "vol_1d": 11640300,
+      "vol_1w": 45473500,
+      "vol_1m": 196303800,
       "news": [
+        {
+          "title": "Morgan Stanley Trims Price Target on Occidental Petroleum (OXY). Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/morgan-stanley-trims-price-target-050024765.html",
+          "published": 1783486824,
+          "sentiment": 0.0
+        },
         {
           "title": "Occidental Petroleum Corporation (OXY) is Attracting Investor Attention: Here is What You Should Know",
           "publisher": "Zacks",
@@ -535,13 +542,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/oxys-robust-proved-reserves-strengthen-140300447.html",
           "published": 1783087380,
           "sentiment": 0.572
-        },
-        {
-          "title": "ConocoPhillips or Occidental Petroleum: Which Oil Stock Should You Buy Now?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/07/01/conocophillips-or-occidental-petroleum-which-oil-stock-should-you-buy-now/",
-          "published": 1782935077,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.405
@@ -557,25 +557,32 @@ window.PRICES_DATA = {
       "change_1w": "+1.98%",
       "change_1m": "-4.00%",
       "change_ytd": "+27.60%",
-      "return_1yr": "+4%",
+      "return_1yr": "+9%",
       "low_gbp": "76",
       "low_usd": 101.59,
       "high_gbp": "114",
       "high_usd": 151.87,
       "bar_pct": 66,
-      "market_cap_gbp_b": 53.65,
-      "market_cap_usd_b": 71.659,
+      "market_cap_gbp_b": 53.619,
+      "market_cap_usd_b": 71.66,
       "beta": 0.261,
-      "pe_ratio": 13.23,
-      "avg_volume_m": 3.91,
+      "pe_ratio": 12.73,
+      "avg_volume_m": 3.89,
       "div_yield_pct": 315.0,
       "short_pct": 3.87,
       "analyst": "buy",
       "analyst_score": 2.17,
-      "vol_1d": 1958929,
-      "vol_1w": 14408429,
-      "vol_1m": 84288329,
+      "vol_1d": 2673000,
+      "vol_1w": 15122500,
+      "vol_1m": 85002400,
       "news": [
+        {
+          "title": "Jefferies Boosts Price Target on EOG Resources (EOG). Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/jefferies-boosts-price-target-eog-051100717.html",
+          "published": 1783487460,
+          "sentiment": 0.318
+        },
         {
           "title": "Will EOG Resources (EOG) Beat Estimates Again in Its Next Earnings Report?",
           "publisher": "Zacks",
@@ -603,16 +610,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/zacks-analyst-blog-highlights-exxon-065100767.html",
           "published": 1781765460,
           "sentiment": 0.0
-        },
-        {
-          "title": "Oil Prices Slide on US-Iran Deal: 3 Energy Stocks Worth Watching",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/oil-prices-slide-us-iran-173100927.html",
-          "published": 1781717460,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.194
+      "news_sentiment": 0.166
     },
     {
       "ticker": "MPC",
@@ -625,24 +625,24 @@ window.PRICES_DATA = {
       "change_1w": "+2.74%",
       "change_1m": "+0.06%",
       "change_ytd": "+62.70%",
-      "return_1yr": "+49%",
+      "return_1yr": "+48%",
       "low_gbp": "118",
       "low_usd": 158.0,
       "high_gbp": "204",
       "high_usd": 272.46,
       "bar_pct": 95,
-      "market_cap_gbp_b": 58.211,
+      "market_cap_gbp_b": 58.177,
       "market_cap_usd_b": 77.752,
       "beta": 0.52,
       "pe_ratio": 17.52,
-      "avg_volume_m": 2.37,
+      "avg_volume_m": 2.36,
       "div_yield_pct": 145.0,
       "short_pct": 3.04,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 1557415,
-      "vol_1w": 8779415,
-      "vol_1m": 49422815,
+      "vol_1d": 1838500,
+      "vol_1w": 9060500,
+      "vol_1m": 49703900,
       "news": [
         {
           "title": "Valero Stock Surges 88.1% in a Year: Should You Stay Invested?",
@@ -693,25 +693,32 @@ window.PRICES_DATA = {
       "change_1w": "-0.04%",
       "change_1m": "+3.03%",
       "change_ytd": "+62.80%",
-      "return_1yr": "+82%",
+      "return_1yr": "+79%",
       "low_gbp": "98",
       "low_usd": 130.78,
       "high_gbp": "206",
       "high_usd": 274.92,
       "bar_pct": 94,
-      "market_cap_gbp_b": 59.183,
+      "market_cap_gbp_b": 59.148,
       "market_cap_usd_b": 79.05,
       "beta": 0.545,
-      "pe_ratio": 19.46,
-      "avg_volume_m": 3.13,
-      "div_yield_pct": null,
+      "pe_ratio": 19.76,
+      "avg_volume_m": 3.11,
+      "div_yield_pct": 178.0,
       "short_pct": 4.31,
       "analyst": "buy",
       "analyst_score": 2.42,
-      "vol_1d": 2214905,
-      "vol_1w": 11440605,
-      "vol_1m": 65928005,
+      "vol_1d": 2249200,
+      "vol_1w": 11474900,
+      "vol_1m": 65962300,
       "news": [
+        {
+          "title": "Here's Why Valero Energy (VLO) Fell More Than Broader Market",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-valero-energy-vlo-221504887.html",
+          "published": 1783462504,
+          "sentiment": 0.273
+        },
         {
           "title": "Valero Stock Surges 88.1% in a Year: Should You Stay Invested?",
           "publisher": "Zacks",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/deleks-big-spring-upgrade-deliver-131700266.html",
           "published": 1783343820,
           "sentiment": 0.44
-        },
-        {
-          "title": "Market Chatter: BP, Gas Station Operators Warn Against Illegal Vape Sales",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-bp-gas-station-102732642.html",
-          "published": 1783333652,
-          "sentiment": -0.612
         }
       ],
-      "news_sentiment": 0.034
+      "news_sentiment": 0.211
     },
     {
       "ticker": "SLB",
@@ -761,25 +761,32 @@ window.PRICES_DATA = {
       "change_1w": "+0.09%",
       "change_1m": "-17.91%",
       "change_ytd": "+16.15%",
-      "return_1yr": "+25%",
+      "return_1yr": "+27%",
       "low_gbp": "24",
       "low_usd": 31.64,
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 54,
-      "market_cap_gbp_b": 51.959,
-      "market_cap_usd_b": 69.401,
+      "market_cap_gbp_b": 51.928,
+      "market_cap_usd_b": 69.4,
       "beta": 0.733,
-      "pe_ratio": 20.45,
-      "avg_volume_m": 14.86,
-      "div_yield_pct": null,
+      "pe_ratio": 20.1,
+      "avg_volume_m": 14.79,
+      "div_yield_pct": 258.0,
       "short_pct": 3.99,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 10302326,
-      "vol_1w": 62942626,
-      "vol_1m": 343556026,
+      "vol_1d": 10371900,
+      "vol_1w": 63012200,
+      "vol_1m": 343625600,
       "news": [
+        {
+          "title": "SLB (SLB) Increases Despite Market Slip: Here's What You Need to Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-increases-despite-market-220005531.html",
+          "published": 1783461605,
+          "sentiment": 0.0
+        },
         {
           "title": "SLB Boosts Middle East Growth With Seven-Year Kuwait Innovation Deal",
           "publisher": "Zacks",
@@ -807,13 +814,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-under-50-warning-123624949.html",
           "published": 1782995784,
           "sentiment": -0.34
-        },
-        {
-          "title": "SLB N.V.'s Quarterly Earnings Preview: What You Need to Know",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3095415/slb-n-v-s-quarterly-earnings-preview-what-you-need-to-know",
-          "published": 1782989554,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.102
@@ -829,24 +829,24 @@ window.PRICES_DATA = {
       "change_1w": "-0.88%",
       "change_1m": "-16.57%",
       "change_ytd": "+14.71%",
-      "return_1yr": "+49%",
+      "return_1yr": "+52%",
       "low_gbp": "15",
       "low_usd": 20.17,
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 58,
-      "market_cap_gbp_b": 21.134,
+      "market_cap_gbp_b": 21.121,
       "market_cap_usd_b": 28.228,
       "beta": 0.725,
-      "pe_ratio": 18.67,
-      "avg_volume_m": 12.39,
+      "pe_ratio": 18.26,
+      "avg_volume_m": 12.35,
       "div_yield_pct": 206.0,
       "short_pct": 5.38,
       "analyst": "buy",
       "analyst_score": 1.81,
-      "vol_1d": 7283836,
-      "vol_1w": 46831336,
-      "vol_1m": 254389036,
+      "vol_1d": 9724200,
+      "vol_1w": 49271700,
+      "vol_1m": 256829400,
       "news": [
         {
           "title": "Liberty Energy Stock Surges 96% in a Year: Is There More Upside Ahead?",
@@ -897,25 +897,39 @@ window.PRICES_DATA = {
       "change_1w": "-3.27%",
       "change_1m": "-15.99%",
       "change_ytd": "+16.37%",
-      "return_1yr": "+33%",
+      "return_1yr": "+36%",
       "low_gbp": "29",
       "low_usd": 38.37,
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 50,
-      "market_cap_gbp_b": 40.457,
-      "market_cap_usd_b": 54.038,
+      "market_cap_gbp_b": 40.433,
+      "market_cap_usd_b": 54.037,
       "beta": 0.96,
-      "pe_ratio": 17.4,
-      "avg_volume_m": 8.52,
+      "pe_ratio": 17.02,
+      "avg_volume_m": 8.51,
       "div_yield_pct": 173.0,
       "short_pct": 2.93,
       "analyst": "buy",
       "analyst_score": 1.77,
-      "vol_1d": 7716067,
-      "vol_1w": 59852967,
-      "vol_1m": 182527667,
+      "vol_1d": 7750800,
+      "vol_1w": 59887700,
+      "vol_1m": 182562400,
       "news": [
+        {
+          "title": "TD Cowen Boosts Price Target on Baker Hughes (BKR). Here is Why",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/td-cowen-boosts-price-target-045853224.html",
+          "published": 1783486733,
+          "sentiment": 0.318
+        },
+        {
+          "title": "Baker Hughes (BKR) Stock Trades Up, Here Is Why",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/baker-hughes-bkr-stock-trades-233752762.html",
+          "published": 1783467472,
+          "sentiment": 0.0
+        },
         {
           "title": "Baker Hughes (BKR) Lands Angola Subsea Deal And North America Geothermal Partnership",
           "publisher": "Simply Wall St.",
@@ -936,23 +950,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/3119170/here-s-what-to-expect-from-baker-hughes-next-earnings-report",
           "published": 1783100603,
           "sentiment": 0.0
-        },
-        {
-          "title": "Will Baker Hughes (BKR) Beat Estimates Again in Its Next Earnings Report?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/baker-hughes-bkr-beat-estimates-161004920.html",
-          "published": 1783095004,
-          "sentiment": 0.0
-        },
-        {
-          "title": "1 Cash-Producing Stock Worth Your Attention and 2 Facing Challenges",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-producing-stock-worth-110024677.html",
-          "published": 1782990024,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.059
+      "news_sentiment": 0.064
     },
     {
       "ticker": "NEE",
@@ -964,26 +964,33 @@ window.PRICES_DATA = {
       "change_1d": "+1.04%",
       "change_1w": "-0.21%",
       "change_1m": "+5.31%",
-      "change_ytd": "+10.87%",
-      "return_1yr": "+21%",
+      "change_ytd": "+10.06%",
+      "return_1yr": "+22%",
       "low_gbp": "52",
       "low_usd": 69.24,
       "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 65,
-      "market_cap_gbp_b": 138.142,
-      "market_cap_usd_b": 184.514,
+      "market_cap_gbp_b": 138.06,
+      "market_cap_usd_b": 184.513,
       "beta": 0.667,
-      "pe_ratio": 22.45,
-      "avg_volume_m": 11.32,
+      "pe_ratio": 22.17,
+      "avg_volume_m": 11.35,
       "div_yield_pct": 285.0,
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 1.95,
-      "vol_1d": 9020382,
-      "vol_1w": 59028182,
-      "vol_1m": 236843282,
+      "vol_1d": 13102300,
+      "vol_1w": 63110100,
+      "vol_1m": 240925200,
       "news": [
+        {
+          "title": "Why the AI Boom Is About to Break the U.S. Power Grid",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/why-ai-boom-break-u-000000959.html",
+          "published": 1783468800,
+          "sentiment": 0.0
+        },
         {
           "title": "Can PPL's Balanced Energy Portfolio Fuel Long-Term Earnings Growth?",
           "publisher": "Zacks",
@@ -1011,13 +1018,6 @@ window.PRICES_DATA = {
           "url": "https://www.utilitydive.com/news/exelon-firstenergy-ferc-maryland-rto-adder/824576/",
           "published": 1783419154,
           "sentiment": -0.296
-        },
-        {
-          "title": "The Income Ladder: What It Takes To Go From $250 To $5,000 A Month",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/07/06/the-income-ladder-what-it-takes-to-go-from-250-to-5000-a-month/",
-          "published": 1783354792,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.232
@@ -1028,19 +1028,19 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "25",
-      "price_usd": 33.08,
+      "price_usd": 33.1,
       "change_1d": "+0.16%",
       "change_1w": "+1.68%",
       "change_1m": "+4.03%",
       "change_ytd": "+11.03%",
       "return_1yr": "+32%",
-      "low_gbp": "16",
-      "low_usd": 21.33,
+      "low_gbp": "17",
+      "low_usd": 23.17,
       "high_gbp": "28",
-      "high_usd": 36.97,
-      "bar_pct": 75,
+      "high_usd": 36.99,
+      "bar_pct": 50,
       "market_cap_gbp_b": 0.299,
-      "market_cap_usd_b": 0.399,
+      "market_cap_usd_b": 0.4,
       "beta": 0.59,
       "pe_ratio": 23.59,
       "avg_volume_m": 4.18,
@@ -1048,9 +1048,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 5310503,
-      "vol_1w": 20165573,
-      "vol_1m": 84489578,
+      "vol_1d": 777955,
+      "vol_1w": 15633025,
+      "vol_1m": 79957030,
       "news": [
         {
           "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
@@ -1101,62 +1101,62 @@ window.PRICES_DATA = {
       "change_1w": "-11.07%",
       "change_1m": "-24.42%",
       "change_ytd": "+27.38%",
-      "return_1yr": "+9%",
+      "return_1yr": "+5%",
       "low_gbp": "19",
       "low_usd": 25.78,
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 36,
-      "market_cap_gbp_b": 4.242,
-      "market_cap_usd_b": 5.666,
+      "market_cap_gbp_b": 4.24,
+      "market_cap_usd_b": 5.667,
       "beta": 1.615,
-      "pe_ratio": 42.56,
-      "avg_volume_m": 8.2,
+      "pe_ratio": 43.87,
+      "avg_volume_m": 8.15,
       "div_yield_pct": null,
       "short_pct": 22.12,
-      "analyst": "hold",
-      "analyst_score": 2.52,
-      "vol_1d": 4953082,
-      "vol_1w": 41688182,
-      "vol_1m": 148370882,
+      "analyst": "buy",
+      "analyst_score": 2.48,
+      "vol_1d": 4958900,
+      "vol_1w": 41694000,
+      "vol_1m": 148376700,
       "news": [
         {
-          "title": "Valmont, Woodward, and ATI Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/valmont-woodward-ati-stocks-trade-214552136.html",
-          "published": 1783460752,
-          "sentiment": 0.0
+          "title": "Enphase Energy (ENPH) Stock Jumps As Polysilicon Probe Talk Lifts Solar Stocks",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-enph-stock-jumps-042947414.html",
+          "published": 1783484987,
+          "sentiment": 0.273
         },
         {
-          "title": "WESCO, Kadant, and Dycom Shares Plummet, What You Need To Know",
+          "title": "Enphase Energy (ENPH) Slides Before Earnings As Valuation Debate Comes Back Into Focus",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-enph-slides-earnings-021059133.html",
+          "published": 1783476659,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Atmus Filtration Technologies and Energy Recovery Shares Are Falling, What You Need To Know",
           "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/wesco-kadant-dycom-shares-plummet-213752664.html",
-          "published": 1783460272,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/atmus-filtration-technologies-energy-recovery-224952479.html",
+          "published": 1783464592,
+          "sentiment": 0.402
+        },
+        {
+          "title": "Hubbell, Cummins, and WillScot Mobile Mini Shares Plummet, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/hubbell-cummins-willscot-mobile-mini-220952794.html",
+          "published": 1783462192,
           "sentiment": 0.296
         },
         {
-          "title": "JELD-WEN, Federal Signal, and VSE Corporation Stocks Trade Down, What You Need To Know",
+          "title": "Acuity Brands, JBT Marel, and Builders FirstSource Stocks Trade Down, What You Need To Know",
           "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jeld-wen-federal-signal-vse-212152278.html",
-          "published": 1783459312,
-          "sentiment": 0.0
-        },
-        {
-          "title": "APi, Applied Industrial, and Shoals Shares Plummet, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/api-applied-industrial-shoals-shares-211352265.html",
-          "published": 1783458832,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Gates Industrial Corporation, Titan International, and Limbach Stocks Trade Down, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/gates-industrial-corporation-titan-international-210552908.html",
-          "published": 1783458352,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/acuity-brands-jbt-marel-builders-220152796.html",
+          "published": 1783461712,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.118
+      "news_sentiment": 0.249
     },
     {
       "ticker": "FSLR",
@@ -1169,25 +1169,32 @@ window.PRICES_DATA = {
       "change_1w": "-2.18%",
       "change_1m": "-17.31%",
       "change_ytd": "-16.99%",
-      "return_1yr": "+41%",
+      "return_1yr": "+38%",
       "low_gbp": "120",
       "low_usd": 159.85,
       "high_gbp": "240",
       "high_usd": 320.95,
       "bar_pct": 42,
-      "market_cap_gbp_b": 18.32,
-      "market_cap_usd_b": 24.47,
+      "market_cap_gbp_b": 18.309,
+      "market_cap_usd_b": 24.469,
       "beta": 1.73,
-      "pe_ratio": 14.71,
-      "avg_volume_m": 2.52,
+      "pe_ratio": 15.06,
+      "avg_volume_m": 2.51,
       "div_yield_pct": null,
       "short_pct": 10.39,
       "analyst": "buy",
-      "analyst_score": 2.14,
-      "vol_1d": 1885469,
-      "vol_1w": 9640869,
-      "vol_1m": 41317469,
+      "analyst_score": 2.09,
+      "vol_1d": 1917000,
+      "vol_1w": 9672400,
+      "vol_1m": 41349000,
       "news": [
+        {
+          "title": "First Solar (FSLR) Draws Tariff Backed Upgrades, Is It Fairly Valued?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-draws-tariff-220906663.html",
+          "published": 1783462146,
+          "sentiment": 0.459
+        },
         {
           "title": "How Dual Index Additions and Tariff Scrutiny At First Solar (FSLR) Has Changed Its Investment Story",
           "publisher": "Simply Wall St.",
@@ -1215,46 +1222,39 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-growth-stocks-star-potential-121752184.html",
           "published": 1783426672,
           "sentiment": 0.382
-        },
-        {
-          "title": "Here Are Tuesday\u2019s Best Wall Street Analyst Research Calls: Adobe, American Airlines, Broadcom, First Solar, Meta Platforms, Shopify, SpaceX, Ventas, Waste Management, and More",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/07/here-are-tuesdays-best-wall-street-analyst-research-calls-adobe-american-airlines-broadcom-first-solar-meta-platforms-shopify-space-x-ventas-waste-managment-and-more/",
-          "published": 1783425618,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.154
+      "news_sentiment": 0.178
     },
     {
       "ticker": "BEPC",
       "company_name": "Brookfield Renewable Corp",
       "category": "clean-energy",
       "exchange": "NYSE",
-      "price_gbp": "27",
+      "price_gbp": "26",
       "price_usd": 35.41,
       "change_1d": "-3.33%",
       "change_1w": "-4.89%",
       "change_1m": "-8.19%",
       "change_ytd": "-9.54%",
-      "return_1yr": "+11%",
+      "return_1yr": "+7%",
       "low_gbp": "24",
       "low_usd": 32.65,
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 22,
-      "market_cap_gbp_b": 4.835,
+      "market_cap_gbp_b": 4.832,
       "market_cap_usd_b": 6.458,
       "beta": 1.159,
       "pe_ratio": null,
-      "avg_volume_m": 1.52,
+      "avg_volume_m": 1.51,
       "div_yield_pct": 428.0,
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 982979,
-      "vol_1w": 5588079,
-      "vol_1m": 28520679,
+      "vol_1d": 1394500,
+      "vol_1w": 5999600,
+      "vol_1m": 28932200,
       "news": [
         {
           "title": "Prediction: Why Buying Brookfield Renewable Instead of Bloom Energy Could Set You Up For Life",
@@ -1299,19 +1299,19 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.62",
+      "price_gbp": "5.61",
       "price_usd": 7.5,
-      "change_1d": "-3.47%",
+      "change_1d": "-3.35%",
       "change_1w": "+1.63%",
       "change_1m": "-8.14%",
       "change_ytd": "+12.53%",
-      "return_1yr": "-47%",
+      "return_1yr": "-48%",
       "low_gbp": "4.30",
       "low_usd": 5.75,
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 6,
-      "market_cap_gbp_b": 22.254,
+      "market_cap_gbp_b": 22.241,
       "market_cap_usd_b": 29.724,
       "beta": 0.636,
       "pe_ratio": null,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 8789,
-      "vol_1w": 426989,
-      "vol_1m": 2390189,
+      "vol_1d": 110700,
+      "vol_1w": 528900,
+      "vol_1m": 2492100,
       "news": [
         {
           "title": "Energy & Utilities Roundup: Market Talk",
