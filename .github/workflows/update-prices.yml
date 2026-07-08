@@ -44,89 +44,25 @@ jobs:
           python-version: '3.12'
           cache: pip
 
-      - name: Install deps (AI)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
-        working-directory: AI
-        run: pip install -r requirements.txt
-
-      - name: Run price updater (AI)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
-        working-directory: AI
-        run: python AI_update_prices.py
-
-      - name: Install deps (Biotech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
-        working-directory: Biotech
-        run: pip install -r requirements.txt
-
-      - name: Run price updater (Biotech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
-        working-directory: Biotech
-        run: python Biotech_update_prices.py
-
-      - name: Install deps (Defence)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
-        working-directory: Defence
-        run: pip install -r requirements.txt
-
-      - name: Run price updater (Defence)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
-        working-directory: Defence
-        run: python Defence_update_prices.py
-
-      - name: Install deps (Tech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
-        working-directory: Tech
-        run: pip install -r requirements.txt
-
-      - name: Run price updater (Tech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
-        working-directory: Tech
-        run: python Tech_update_prices.py
-
-      - name: Install deps (Crypto)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Crypto'
-        working-directory: Crypto
-        run: pip install -r requirements.txt
-
-      - name: Run price updater (Crypto)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Crypto'
-        working-directory: Crypto
+      - name: Run price updaters
         env:
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           COINSTATS_API_KEY: ${{ secrets.COINSTATS_API_KEY }}
-        run: python Crypto_update_prices.py
-
-      - name: Install deps (Energy)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
-        working-directory: Energy
-        run: pip install -r requirements.txt
-
-      - name: Run price updater (Energy)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
-        working-directory: Energy
-        run: python Energy_update_prices.py
-
-      - name: Install deps (MegaCap)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'MegaCap'
-        working-directory: MegaCap
-        run: pip install -r requirements.txt
-
-      - name: Run price updater (MegaCap)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'MegaCap'
-        working-directory: MegaCap
-        run: python MegaCap_update_prices.py
-
-      # Macro indicators (SPY/QQQ/VIX) for the Market page — always run on a
-      # full refresh; harmless on single-sector runs (uses the AI deps for yfinance).
-      - name: Install deps (Market)
-        if: github.event_name == 'schedule' || inputs.sector == 'all'
-        run: pip install yfinance
+        run: |
+          SECTOR="${{ inputs.sector }}"
+          for s in AI Biotech Defence Tech Crypto Energy MegaCap; do
+            if [[ "${{ github.event_name }}" == "schedule" || "$SECTOR" == "all" || "$SECTOR" == "$s" ]]; then
+              pip install -q -r $s/requirements.txt
+              (cd $s && python ${s}_update_prices.py)
+            fi
+          done
 
       - name: Run market updater (SPY/QQQ/VIX)
         if: github.event_name == 'schedule' || inputs.sector == 'all'
-        run: python update_market.py
+        run: |
+          pip install -q yfinance
+          python update_market.py
 
       - name: Commit and push if changed
         run: |

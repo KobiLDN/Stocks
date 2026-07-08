@@ -39,89 +39,17 @@ jobs:
           python-version: '3.12'
           cache: pip
 
-      - name: Install deps (AI)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
-        working-directory: AI
-        run: pip install -r requirements.txt
-
-      - name: Generate signals (AI)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'AI'
-        working-directory: AI
+      - name: Generate signals
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python AI_generate_signals_local.py
-
-      - name: Install deps (Biotech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
-        working-directory: Biotech
-        run: pip install -r requirements.txt
-
-      - name: Generate signals (Biotech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Biotech'
-        working-directory: Biotech
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python Biotech_generate_signals_local.py
-
-      - name: Install deps (Defence)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
-        working-directory: Defence
-        run: pip install -r requirements.txt
-
-      - name: Generate signals (Defence)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Defence'
-        working-directory: Defence
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python Defence_generate_signals_local.py
-
-      - name: Install deps (Tech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
-        working-directory: Tech
-        run: pip install -r requirements.txt
-
-      - name: Generate signals (Tech)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Tech'
-        working-directory: Tech
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python Tech_generate_signals_local.py
-
-      - name: Install deps (Crypto)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Crypto'
-        working-directory: Crypto
-        run: pip install -r requirements.txt
-
-      - name: Generate signals (Crypto)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Crypto'
-        working-directory: Crypto
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python Crypto_generate_signals_local.py
-
-      - name: Install deps (Energy)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
-        working-directory: Energy
-        run: pip install -r requirements.txt
-
-      - name: Generate signals (Energy)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'Energy'
-        working-directory: Energy
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python Energy_generate_signals_local.py
-
-      - name: Install deps (MegaCap)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'MegaCap'
-        working-directory: MegaCap
-        run: pip install -r requirements.txt
-
-      - name: Generate signals (MegaCap)
-        if: github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'MegaCap'
-        working-directory: MegaCap
-        env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-        run: python MegaCap_generate_signals_local.py
+        run: |
+          SECTOR="${{ inputs.sector }}"
+          for s in AI Biotech Defence Tech Crypto Energy MegaCap; do
+            if [[ "${{ github.event_name }}" == "schedule" || "$SECTOR" == "all" || "$SECTOR" == "$s" ]]; then
+              pip install -q -r $s/requirements.txt
+              (cd $s && python ${s}_generate_signals_local.py)
+            fi
+          done
 
       - name: Commit and push if changed
         run: |
