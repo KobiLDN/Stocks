@@ -120,9 +120,15 @@ STOCKS = {
 
 
 def get_fx_rates():
-    """Fetch GBP/USD rate via yfinance."""
-    gbp_usd = yf.Ticker("GBPUSD=X").fast_info["last_price"]
-    return gbp_usd
+    """Fetch GBP/USD rate."""
+    try:
+        return yf.Ticker("GBPUSD=X").fast_info["last_price"]
+    except Exception:
+        import urllib.request, json as _json
+        with urllib.request.urlopen(
+            "https://api.frankfurter.app/latest?from=GBP&to=USD", timeout=10
+        ) as r:
+            return _json.loads(r.read())["rates"]["USD"]
 
 
 def fetch_cmc_quotes():
