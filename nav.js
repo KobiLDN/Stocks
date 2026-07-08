@@ -72,3 +72,18 @@ function buildNav() {
 }
 
 buildNav();
+
+/* ── Date formatter: YYYY-MM-DD HH:MM → DD/MM/YYYY HH:MM ───────────────────
+   Defined here (synchronous) so it's available to all inline scripts and to
+   deferred shared.js. nav.js also runs after each page's synchronous init(),
+   so the post-process loop below catches timestamps already written to the DOM. */
+function fmtDate(s) {
+  if (!s || s === '—') return s || '—';
+  var m = String(s).match(/^(\d{4})-(\d{2})-(\d{2})[\sT](\d{2}:\d{2})/);
+  return m ? m[3] + '/' + m[2] + '/' + m[1] + ' ' + m[4] : s;
+}
+
+['heatmap-ts', 'data-bar-ts', 'signals-ts', 'feed-updated', 'hub-updated-ts'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (el && /^\d{4}-\d{2}-\d{2}/.test(el.textContent)) el.textContent = fmtDate(el.textContent);
+});

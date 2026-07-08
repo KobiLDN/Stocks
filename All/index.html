@@ -682,11 +682,11 @@ async function loadAllSectors() {
 window.addEventListener('DOMContentLoaded', () => {
   loadAllSectors().then(data => {
     const tsEl = document.getElementById('last-updated-label');
-    if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + data.updated;
+    if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + fmtDate(data.updated);
     document.getElementById('total-count').textContent = data.stocks.length;
     const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(data.stocks.map(s => s.ticker)).size;
     const headerSc = document.getElementById('sector-count'); if (headerSc) headerSc.textContent = data.stocks.length;
-    const headerTs = document.getElementById('data-bar-ts'); if (headerTs && data.updated) headerTs.textContent = data.updated;
+    const headerTs = document.getElementById('data-bar-ts'); if (headerTs && data.updated) headerTs.textContent = fmtDate(data.updated);
     buildTable(data.stocks);
     const returnTh = document.querySelector('th[onclick*="\'return\'"]');
     sortState.col = 'return';

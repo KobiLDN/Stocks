@@ -372,7 +372,7 @@
   const stocks = results.flatMap(r => r.stocks).filter(s => { if (seen.has(s.ticker)) return false; seen.add(s.ticker); return true; });
   const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = stocks.length;
   const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
-  const tsEl = document.getElementById('data-bar-ts'); if (tsEl) tsEl.textContent = updated;
+  const tsEl = document.getElementById('data-bar-ts'); if (tsEl) tsEl.textContent = fmtDate(updated);
   buildCalc(stocks);
   buildTape(stocks);
 });

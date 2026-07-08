@@ -64,7 +64,7 @@ function buildDataBar() {
   }
   if (!ts) return;
   const el = document.getElementById('data-bar-ts');
-  if (el) el.textContent = ts;
+  if (el) el.textContent = (typeof fmtDate === 'function') ? fmtDate(ts) : ts;
 }
 
 // ── Sticky header+nav wrapper ─────────────────────────────────────────────────
@@ -112,12 +112,13 @@ function buildDashboardHeader() {
     const sc = document.getElementById('sector-count');
     if (sc && count) sc.textContent = count;
     const ts = document.getElementById('data-bar-ts');
-    if (ts && updated) ts.textContent = updated;
+    if (ts && updated) ts.textContent = (typeof fmtDate === 'function') ? fmtDate(updated) : updated;
   } else if (headerLeft) {
+    const _fmt = (typeof fmtDate === 'function') ? fmtDate : function(x) { return x; };
     headerLeft.innerHTML =
       '<div class="header-label">// Market Intelligence</div>' +
       '<h1>' + titleHTML + '</h1>' +
-      '<div class="header-sub">' + (count || '—') + ' stocks · Last updated ' + (updated || '—') + '</div>';
+      '<div class="header-sub">' + (count || '—') + ' stocks · Last updated ' + (updated ? _fmt(updated) : '—') + '</div>';
   }
 
   const headerBlocks = document.querySelector('.header-blocks');

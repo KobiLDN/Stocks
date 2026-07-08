@@ -377,8 +377,8 @@
   function init(data) {
     window._rssItems = data.articles || [];
     if (data.generated_utc) {
-      document.getElementById('feed-updated').textContent = data.generated_utc;
-      const _dbTs = document.getElementById('data-bar-ts'); if (_dbTs) _dbTs.textContent = data.generated_utc;
+      document.getElementById('feed-updated').textContent = fmtDate(data.generated_utc);
+      const _dbTs = document.getElementById('data-bar-ts'); if (_dbTs) _dbTs.textContent = fmtDate(data.generated_utc);
       const d = new Date(data.generated_utc);
       const fmt = d.getFullYear() + '-' +
         String(d.getMonth()+1).padStart(2,'0') + '-' +

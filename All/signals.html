@@ -392,7 +392,7 @@
     buildTape(results.flatMap(r => r.stocks || []));
     const sigUpdated = results.map(r => r.signals?.updated).filter(Boolean).sort().pop() || '—';
     const sigTsEl = document.getElementById('signals-ts');
-    if (sigTsEl) sigTsEl.textContent = sigUpdated;
+    if (sigTsEl) sigTsEl.textContent = fmtDate(sigUpdated);
     renderAll();
   });
 

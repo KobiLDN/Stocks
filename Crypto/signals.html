@@ -560,7 +560,7 @@
       return;
     }
 
-    tsEl.textContent    = data.updated || '—';
+    tsEl.textContent    = fmtDate(data.updated) || '—';
     modelEl.textContent = data.model   || 'local model';
 
     const catFor  = tickerCategoryMap();

@@ -151,6 +151,21 @@ const SECTOR_DEFS = [
 const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
 function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
+const COINGECKO_IDS = {
+  'BTC': 'bitcoin', 'ETH': 'ethereum', 'SOL': 'solana', 'BNB': 'binancecoin',
+  'ADA': 'cardano', 'AVAX': 'avalanche-2', 'XRP': 'ripple', 'XLM': 'stellar',
+  'TRX': 'tron', 'SUI': 'sui', 'HBAR': 'hedera-hashgraph', 'TON': 'the-open-network',
+  'ALGO': 'algorand', 'MINA': 'mina-protocol', 'POL': 'polygon-ecosystem-token',
+  'DOT': 'polkadot', 'LINK': 'chainlink', 'DOGE': 'dogecoin', 'PEPE': 'pepe',
+  'TAO': 'bittensor', 'FET': 'fetch-ai', 'RNDR': 'render-token',
+  'OCEAN': 'ocean-protocol', 'GRT': 'the-graph', 'AGIX': 'singularitynet',
+  'NMR': 'numeraire', 'ALT': 'altlayer', 'AIOZ': 'aioz-network',
+  'ARKM': 'arkham', 'WLD': 'worldcoin-wld', 'NEAR': 'near',
+  'ICP': 'internet-computer', 'KAITO': 'kaito', 'VIRTUAL': 'virtual-protocol',
+};
+function cgUrl(t) { return 'https://www.coingecko.com/en/coins/' + (COINGECKO_IDS[t] || t.toLowerCase()); }
+function tileUrl(d) { return d.sector === 'crypto' ? cgUrl(d.ticker) : yahooUrl(d.ticker); }
+
 function parsePct(s) {
   if (s == null || s === '' || s === '—' || s === 'N/A') return null;
   const n = parseFloat(String(s).replace(/[%,\s]/g, ''));
@@ -223,7 +238,7 @@ function drawTreemap(containerEl, stocks, metricId, height, explicitWidth) {
     .attr('class', 'tile')
     .attr('transform', d => `translate(${d.x0},${d.y0})`)
     .style('cursor', 'pointer')
-    .on('click',      (ev, d) => window.open(yahooUrl(d.data.ticker), '_blank', 'noopener'))
+    .on('click',      (ev, d) => window.open(tileUrl(d.data), '_blank', 'noopener'))
     .on('mousemove',  (ev, d) => showTooltip(ev, d.data))
     .on('mouseleave', hideTooltip);
 
@@ -443,9 +458,9 @@ Promise.all(SECTOR_PATHS.map(async sd => {
   const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
 
   const tsEl = document.getElementById('heatmap-ts');
-  if (tsEl) tsEl.textContent = updated;
+  if (tsEl) tsEl.textContent = fmtDate(updated);
   const dbTs = document.getElementById('data-bar-ts');
-  if (dbTs) dbTs.textContent = updated;
+  if (dbTs) dbTs.textContent = fmtDate(updated);
   const scEl  = document.getElementById('hm-stock-count');
   const allEl = document.getElementById('hm-all-count');
   if (scEl)  scEl.textContent  = allStocks.length;
