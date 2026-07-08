@@ -794,6 +794,9 @@
         </div>
       </div>
 
+      <div class="sec-hdr"><span class="sec-hdr-label">Sector Heatmap · 1-Day Average</span><span class="sec-hdr-line"></span></div>
+      <div class="sector-heatmap" id="sector-heatmap-1d"></div>
+
       <div class="sec-hdr"><span class="sec-hdr-label">Sector Heatmap · 1-Week Average</span><span class="sec-hdr-line"></span></div>
       <div class="sector-heatmap" id="sector-heatmap"></div>
 
@@ -1211,15 +1214,19 @@
     }
 
     function renderSectorHeatmap(results) {
-      document.getElementById('sector-heatmap').innerHTML = results.map(r => {
-        const vals = r.stocks.map(s => pctNum(s.change_1w)).filter(v => v !== null);
-        const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
-        const cls = pctCls(avg), mag = avg === null ? 0 : Math.min(Math.abs(avg) / 10, 1);
-        const rgb = avg === null ? '100,116,139' : avg >= 0 ? '0,230,118' : '255,68,68';
-        return `<a class="sh-tile" href="${r.page}" style="background:rgba(${rgb},${(0.05 + mag * 0.10).toFixed(3)});border-left-color:rgb(${rgb});">` +
-          `<span class="sh-name">${r.icon} ${r.label}</span><span class="sh-pct ${cls}">${pctStr(avg)}</span>` +
-          `<span class="sh-meta">${vals.length} stocks · avg 1W</span></a>`;
-      }).join('');
+      function heatmapTiles(field, meta) {
+        return results.map(r => {
+          const vals = r.stocks.map(s => pctNum(s[field])).filter(v => v !== null);
+          const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+          const cls = pctCls(avg), mag = avg === null ? 0 : Math.min(Math.abs(avg) / 10, 1);
+          const rgb = avg === null ? '100,116,139' : avg >= 0 ? '0,230,118' : '255,68,68';
+          return `<a class="sh-tile" href="${r.page}" style="background:rgba(${rgb},${(0.05 + mag * 0.10).toFixed(3)});border-left-color:rgb(${rgb});">` +
+            `<span class="sh-name">${r.icon} ${r.label}</span><span class="sh-pct ${cls}">${pctStr(avg)}</span>` +
+            `<span class="sh-meta">${vals.length} stocks · ${meta}</span></a>`;
+        }).join('');
+      }
+      document.getElementById('sector-heatmap-1d').innerHTML = heatmapTiles('change_1d', 'avg 1D');
+      document.getElementById('sector-heatmap').innerHTML    = heatmapTiles('change_1w', 'avg 1W');
     }
 
     function moverRow(s, spy1w) {
