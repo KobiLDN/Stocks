@@ -139,7 +139,7 @@ jobs:
             git add Crypto/signals-local.json Crypto/signals-local.js
             git add Energy/signals-local.json Energy/signals-local.js
             git add MegaCap/signals-local.json MegaCap/signals-local.js
-            git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+            git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC')) [skip ci]"
             for i in 1 2 3; do
               git fetch origin main
               git rebase origin/main

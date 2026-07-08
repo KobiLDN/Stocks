@@ -34,7 +34,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to export files."
           else
-            git commit -m "Update export — $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git commit -m "Update export — $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
             for i in 1 2 3; do
               git fetch origin main
               git rebase origin/main
