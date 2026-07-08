@@ -23,15 +23,18 @@ All editing happens in the web Claude container. The user reviews changes on the
 `main` = live production site. Always working, always deployable.
 `dev` = preview. Break it freely.
 
-### If dev and main diverge
+### Pushing to live when main has bot commits
 
-Usually caused by GitHub Actions (price bot) committing directly to `main`. Fix:
+The price/signal/RSS bots push directly to `main` several times a day, so `git push origin dev:main` is often rejected with "fetch first." Always use **merge, not rebase**:
 
+```bash
+git fetch origin main
+git merge origin/main --no-edit   # absorbs bot commits — no history rewrite
+git push origin dev:main          # succeeds
+git push origin dev               # fast-forward, no force needed
 ```
-git fetch origin
-git rebase origin/main
-git push origin dev
-```
+
+**Never use `git rebase origin/main`** — it rewrites `dev`'s history, makes `origin/dev` incompatible, and requires a force-push to sync (which gets blocked by the auto mode classifier).
 
 ## Push to all branches
 
