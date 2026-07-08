@@ -1,9 +1,142 @@
 {
-  "updated": "2026-07-06 12:29",
+  "updated": "2026-07-08 10:28",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "+39% 1Y, +12.42% 1M, analyst buy, P/E 37.75, news sentiment 0.098; web search confirms multiple contract wins (Stinger, AMRAAM, $1.1B AIM-9X), raised FY2026 guidance, and $271B backlog amid record defense budget [congress.net](https://congress.net/defense-stocks-ita-ge-ba-rtx-hwm-hit-new-highs-as-military-ai-spending-race-accelerates/).",
+      "drivers": [
+        "$1.1B AIM-9X contract",
+        "Stinger production doubling",
+        "raised FY2026 guidance",
+        "record defense budget"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "+26% 1Y, +10.39% 1M, analyst buy, P/E 23.7, news sentiment 0.387; strong defense exposure with reasonable valuation and positive momentum.",
+      "drivers": [
+        "26% 1Y return",
+        "P/E 23.7",
+        "positive sentiment 0.387",
+        "10.54% YTD"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+16% 1Y, +6.63% 1W, P/E 26, analyst hold but news sentiment 0.227; web search highlights $35.3B THAAD contract, $4.8B PAC-3, and record $194B backlog [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/07/05/lockheed-martin-nyse-lmt-northrop-grumman-nyse-noc-and-rtx-nyse-rtx-emerge-as-top-defense-picks-amid-record-budget-tailwinds/).",
+      "drivers": [
+        "$35.3B THAAD contract",
+        "record backlog $194B",
+        "P/E 26",
+        "2.94% 1M"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RR.L",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+56% 1Y, +20.96% YTD, +14.80% 1M, analyst buy, P/E 20.98, news sentiment 0.209; strong momentum with reasonable valuation and UK defense exposure.",
+      "drivers": [
+        "56% 1Y return",
+        "P/E 20.98",
+        "analyst buy",
+        "14.80% 1M"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+10.69% 1W, analyst buy, P/E 17.18, news sentiment 0.227; low beta and attractive valuation benefiting from record defense budget and multi-year contracts.",
+      "drivers": [
+        "P/E 17.18",
+        "1W +10.69%",
+        "analyst buy",
+        "low beta -0.102"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+8.80% YTD, +10.71% 1M, analyst buy, P/E 65.33, news sentiment 0.292; solid momentum in defense electronics with high P/E justified by growth.",
+      "drivers": [
+        "10.71% 1M",
+        "analyst buy",
+        "8.80% YTD",
+        "sentiment 0.292"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AXON",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "+13.67% YTD, +35.96% 1M, analyst buy, P/E 250.18, news sentiment 0.09; extreme short-term momentum despite high valuation, driven by law enforcement/defense demand.",
+      "drivers": [
+        "35.96% 1M",
+        "YTD +13.67%",
+        "analyst buy",
+        "momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+10.23% 1M, analyst buy, P/E 41.5, news sentiment 0.088; defense supplier with recovering momentum and reasonable valuation for the sector.",
+      "drivers": [
+        "10.23% 1M",
+        "analyst buy",
+        "P/E 41.5",
+        "recovery"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "MRCY",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "+123% 1Y, +52.35% YTD, +4.41% 1M, but no analyst rating, high short interest 8.83%; high risk-reward with strong momentum but lack of coverage.",
+      "drivers": [
+        "123% 1Y",
+        "52.35% YTD",
+        "high short interest",
+        "no analyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+31.26% YTD, +11.04% 1W, P/E 42.5, low beta 0.19, news sentiment 0.013; solid YTD performance and low volatility in defense electronics.",
+      "drivers": [
+        "31.26% YTD",
+        "1W +11.04%",
+        "low beta 0.19",
+        "P/E 42.5"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AXON",
@@ -132,139 +265,6 @@
         "buy analyst consensus (1.63)",
         "low short interest 0.02%",
         "positive news sentiment 0.049"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "RTX surged 3.7% on a $1.1B Navy missile contract, with +15.47% 1M momentum, P/E 37.31, analyst buy consensus, and positive news sentiment 0.168. [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/07/03/rtx-nyse-rtx-stock-price-surges-on-1-1-billion-u-s-navy-missile-contract-award/)",
-      "drivers": [
-        "$1.1B contract win",
-        "+15.47% 1M return",
-        "analyst buy",
-        "raised guidance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Citi upgraded LMT to Buy with a $582 target, citing $35.5B THAAD and $2.9B radar contracts; stock +8.10% 1W, P/E 26.45, news sentiment 0.139. [tikr.com](https://www.tikr.com/blog/citi-upgrades-lockheed-martin-nyse-lmt-stock-to-buy-as-historical-rebounds-override-election-fears)",
-      "drivers": [
-        "Citi upgrade to Buy",
-        "$35.5B THAAD contract",
-        "+8.10% 1W",
-        "P/E 26.45"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "GD",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "GD hit a new 12-month high after an earnings beat ($4.10 vs $3.67), +11.32% 1M, P/E 23.52, analyst buy, and highest news sentiment 0.296 among primes. [americanbankingnews.com](https://www.americanbankingnews.com/2026/07/04/general-dynamics-nysegd-reaches-new-12-month-high-time-to-buy.html)",
-      "drivers": [
-        "new 12-month high",
-        "earnings beat $0.43",
-        "+11.32% 1M",
-        "news sentiment 0.296"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NOC",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "NOC has a $95.6B backlog, P/E 17.21 (cheapest among primes), +9.95% 1W, analyst buy, and long-cycle deterrence programs (B-21, Sentinel). [alphastreet.com](https://news.alphastreet.com/northrop-grumman-noc-has-a-long-cycle-deterrence-and-mission-systems-engine-bigger-than-a-budget-debate/)",
-      "drivers": [
-        "$95.6B backlog",
-        "P/E 17.21",
-        "+9.95% 1W",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RR.L",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "RR.L shows exceptional momentum with +25.67% YTD and +19.55% 1M, P/E 21.8, analyst buy (score 1.6), and positive news sentiment 0.256.",
-      "drivers": [
-        "+25.67% YTD",
-        "+19.55% 1M",
-        "P/E 21.8",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "AXON has explosive momentum (+34.25% 1W, +24.00% 1M) and analyst buy consensus, but P/E 237.86 is extremely high, warranting caution.",
-      "drivers": [
-        "+34.25% 1W",
-        "+24.00% 1M",
-        "analyst buy",
-        "high P/E 237.86"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "MRCY leads the universe with +66.00% YTD and +19.55% 1W, but lacks analyst coverage and has no P/E (negative earnings), adding risk.",
-      "drivers": [
-        "+66.00% YTD",
-        "+19.55% 1W",
-        "no analyst coverage",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "TDG has the highest news sentiment (0.408) in the universe, +11.30% 1M, analyst buy, and P/E 42.02, reflecting strong aftermarket demand.",
-      "drivers": [
-        "news sentiment 0.408",
-        "+11.30% 1M",
-        "analyst buy",
-        "P/E 42.02"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "HEI shows solid momentum (+10.03% YTD, +10.06% 1M), analyst buy, news sentiment 0.3, though P/E 64.54 is elevated.",
-      "drivers": [
-        "+10.03% YTD",
-        "+10.06% 1M",
-        "analyst buy",
-        "news sentiment 0.3"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "CACI offers value with P/E 20.74, analyst buy (score 1.56), and +13.44% 1W recovery, despite YTD -6.43% and high short interest 8.27%.",
-      "drivers": [
-        "P/E 20.74",
-        "analyst buy score 1.56",
-        "+13.44% 1W",
-        "short interest 8.27%"
       ]
     }
   ]
