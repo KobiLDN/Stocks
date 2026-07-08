@@ -83,8 +83,17 @@ SPECULATIVE = {"OKLO", "NNE", "SMR", "IREN", "CORZ", "WULF"}
 
 def get_fx_rates():
     """Fetch GBP/USD and GBP/JPY rates."""
-    gbp_usd = yf.Ticker("GBPUSD=X").fast_info["last_price"]
-    gbp_jpy = yf.Ticker("GBPJPY=X").fast_info["last_price"]
+    try:
+        gbp_usd = yf.Ticker("GBPUSD=X").fast_info["last_price"]
+        gbp_jpy = yf.Ticker("GBPJPY=X").fast_info["last_price"]
+    except Exception:
+        import urllib.request, json as _json
+        with urllib.request.urlopen(
+            "https://api.frankfurter.app/latest?from=GBP&to=USD,JPY", timeout=10
+        ) as r:
+            rates = _json.loads(r.read())["rates"]
+        gbp_usd = rates["USD"]
+        gbp_jpy = rates["JPY"]
     return gbp_usd, gbp_jpy
 
 

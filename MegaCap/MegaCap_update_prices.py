@@ -91,8 +91,17 @@ STOCKS = {
 
 def get_fx_rates():
     """Fetch GBP/USD and SAR/USD rates."""
-    gbp_usd = yf.Ticker("GBPUSD=X").fast_info["last_price"]
-    sar_usd = yf.Ticker("SARUSD=X").fast_info["last_price"]
+    try:
+        gbp_usd = yf.Ticker("GBPUSD=X").fast_info["last_price"]
+        sar_usd = yf.Ticker("SARUSD=X").fast_info["last_price"]
+    except Exception:
+        import urllib.request, json as _json
+        with urllib.request.urlopen(
+            "https://open.er-api.com/v6/latest/GBP", timeout=10
+        ) as r:
+            rates = _json.loads(r.read())["rates"]
+        gbp_usd = rates["USD"]
+        sar_usd = rates["USD"] / rates["SAR"]
     return gbp_usd, sar_usd
 
 
