@@ -44,9 +44,9 @@ jobs:
           else
             git commit -m "Update RSS feed — $(date -u '+%Y-%m-%d %H:%M UTC') [skip ci]"
             for i in 1 2 3 4; do
-              git fetch origin main dev
+              git fetch origin main
               git rebase origin/main
-              git push origin HEAD:main && git push origin HEAD:dev && break
+              git push origin HEAD:main && break
               echo "Push attempt $i failed, retrying..."
               sleep $((2 ** i))
             done
