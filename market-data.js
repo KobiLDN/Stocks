@@ -1,5 +1,5 @@
 window.MARKET_DATA = {
-  "updated": "2026-07-08 22:46",
+  "updated": "2026-07-09 07:38",
   "spy": {
     "price": 745.4,
     "change_1d": -0.1,
@@ -19,12 +19,12 @@ window.MARKET_DATA = {
   "vix": {
     "level": 16.9,
     "change_1d": 4.77,
-    "regime": "normal",
+    "regime": "uncertain",
     "signal": "normal"
   },
-  "market_regime": "normal",
+  "market_regime": "uncertain",
   "raw_regime": "uncertain",
   "spread_1w": -3.21,
-  "pending_regime": "uncertain",
-  "consecutive_count": 1
+  "pending_regime": null,
+  "consecutive_count": 0
 };
