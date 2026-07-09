@@ -18,6 +18,14 @@ Rules that apply to every session in this repo. Read before acting.
 - Never commit code directly to `main`
 - PR merge = goes live (Cloudflare deploys automatically)
 
+## Agora mode (see WORKFLOW.md for full protocol)
+
+When the user says "agora" / "discuss only": deliberation mode. No implementation, no offers to implement. The user relays other AIs' responses (DeepSeek, Cerebras); treat them as proposals to stress-test — trace concrete inputs through their logic. Resolution = spec frozen in a GitHub issue. Implementation starts only when the user explicitly calls the vote; Claude is the sole implementer.
+
+## Bot-code PRs
+
+When a PR touches bot-side Python, run the script on the branch and commit its output so the Cloudflare preview shows real behaviour — see WORKFLOW.md "Bot-code changes".
+
 ## Read order at session start
 
 1. `CLAUDE.md` (this file)
