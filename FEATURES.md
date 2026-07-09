@@ -6,6 +6,8 @@
 
 ## Done
 
+- **Four-layer regime diagnostic (issue #33)** — hub regime banner now driven by a state machine: joint-decline override → VIX bracket → QQQ−SPY spread tiebreaker → asymmetric hysteresis (fast to alarm, slow to relax; 2-confirmation rule, state persisted in `market.json`); six descriptive banners (CORRECTION/CRISIS/UNCERTAIN/ROTATION/NORMAL/BULLISH), banner always reflects the hysteresis-filtered regime with raw + spread in the sub-line (`update_market.py`, `index.html`).
+
 - **All/heatmap crypto tiles → CoinGecko (issue #26)** — `COINGECKO_IDS` map (34 coins) + `tileUrl(d)` helper routes crypto tiles to CoinGecko, equities to Yahoo Finance; uses existing `d.data.sector === 'crypto'` tag (`All/heatmap.html`).
 
 - **UK date format DD/MM/YYYY HH:MM site-wide (issue #25)** — `fmtDate()` in `nav.js` converts all "Last updated" timestamps; handles sync init() pages via post-process loop and async pages via direct call; works for both price-update format (`YYYY-MM-DD HH:MM`) and ISO 8601 news timestamps (`nav.js`, `shared.js`, `All/`, `news.html`, 7 sector signals pages).
