@@ -1116,9 +1116,14 @@
       return 'https://finance.yahoo.com/quote/' + encodeURIComponent(s.ticker) + '/';
     }
     const REGIMES = {
-      normal:     { cls: 'regime-normal',     title: 'NORMAL · BUY THE DIP' },
-      high_fear:  { cls: 'regime-fear',       title: 'ELEVATED FEAR · HOLD' },
-      correction: { cls: 'regime-correction', title: 'CORRECTION · WAIT' },
+      correction: { cls: 'regime-correction', title: 'CORRECTION — Broad Selloff' },
+      crisis:     { cls: 'regime-correction', title: 'CRISIS — Volatility Spike' },
+      uncertain:  { cls: 'regime-fear',       title: 'UNCERTAIN — Tech Weakness' },
+      rotation:   { cls: 'regime-fear',       title: 'ROTATION — Tech Leading' },
+      normal:     { cls: 'regime-normal',     title: 'NORMAL — Choppy Market' },
+      bullish:    { cls: 'regime-normal',     title: 'BULLISH — Quiet Strength' },
+      // Legacy key (pre-#33 market.json) until the first bot run writes the new schema
+      high_fear:  { cls: 'regime-fear',       title: 'ELEVATED FEAR — High VIX' },
     };
     function pctNum(s) {
       if (s === null || s === undefined || s === '') return null;
@@ -1143,8 +1148,10 @@
       banner.className = 'regime-banner ' + r.cls;
       document.getElementById('regime-title').textContent = r.title;
       const spy1w = m.spy && m.spy.change_1w, qqq1w = m.qqq && m.qqq.change_1w;
+      const spreadTxt = m.spread_1w != null ? ` · Spread ${pctStr(pctNum(m.spread_1w))}` : '';
+      const rawTxt = m.raw_regime && m.raw_regime !== regime ? ` · raw: ${m.raw_regime.toUpperCase()} (pending)` : '';
       document.getElementById('regime-sub').textContent =
-        `SPY ${pctStr(spy1w)} 1W · QQQ ${pctStr(qqq1w)} 1W · VIX ${m.vix && m.vix.level != null ? m.vix.level : '—'}`;
+        `SPY ${pctStr(spy1w)} 1W · QQQ ${pctStr(qqq1w)} 1W · VIX ${m.vix && m.vix.level != null ? m.vix.level : '—'}${spreadTxt}${rawTxt}`;
       [['spy', m.spy], ['qqq', m.qqq]].forEach(([id, d]) => {
         if (!d) return;
         document.getElementById(id + '-price').textContent = d.price != null ? d.price.toLocaleString('en-US') : '—';

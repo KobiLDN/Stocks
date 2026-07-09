@@ -118,16 +118,84 @@ def get_index(yahoo_symbol, include_long=False):
     return result
 
 
+ALARM_REGIMES = {"correction", "crisis"}
+
+
+def classify_raw_regime(spy_1w, qqq_1w, vix_level):
+    """Layers 1-3 of the regime diagnostic (issue #33). Returns raw regime key."""
+    # Layer 1: joint-decline override — wins over CRISIS (price action is
+    # realized fact, VIX is forecast)
+    if spy_1w is not None and qqq_1w is not None and spy_1w <= -3 and qqq_1w <= -3:
+        return "correction"
+    # Layer 2: VIX bracket
+    if vix_level is not None and vix_level >= 22:
+        return "crisis"
+    spread = (qqq_1w - spy_1w) if (spy_1w is not None and qqq_1w is not None) else None
+    if vix_level is not None and vix_level >= 16:
+        # Layer 3, MID bracket: spread tiebreaker
+        if spread is not None and spread <= -2:
+            return "uncertain"
+        if spread is not None and spread >= 2:
+            return "rotation"
+        return "normal"
+    # Layer 3, LOW bracket (vix < 16 or unknown)
+    if spy_1w is not None and qqq_1w is not None and spy_1w > 0 and qqq_1w > 0:
+        return "bullish"
+    return "normal"
+
+
+def load_prev_state():
+    """Prior hysteresis state from the committed market.json (Q3: repo is the
+    only persistence between GitHub Actions runs)."""
+    try:
+        with open(JSON_FILE, encoding="utf-8") as f:
+            prev = json.load(f)
+        return {
+            "regime":            prev.get("market_regime"),
+            "pending_regime":    prev.get("pending_regime"),
+            "consecutive_count": prev.get("consecutive_count", 0),
+        }
+    except Exception:
+        return {"regime": None, "pending_regime": None, "consecutive_count": 0}
+
+
 def compute_regime(spy, qqq, vix):
-    """correction → high_fear → normal, per issue #19 thresholds."""
+    """Four-layer regime diagnostic with asymmetric hysteresis (issue #33).
+
+    Returns (final_regime, raw_regime, spread, pending_regime, consecutive_count).
+    """
     spy_1w = spy.get("_v1w")
     qqq_1w = qqq.get("_v1w")
     vix_level = vix.get("price")
-    if spy_1w is not None and qqq_1w is not None and spy_1w < -3 and qqq_1w < -3:
-        return "correction"
-    if vix_level is not None and vix_level > 25:
-        return "high_fear"
-    return "normal"
+    spread = (qqq_1w - spy_1w) if (spy_1w is not None and qqq_1w is not None) else None
+    state = load_prev_state()
+
+    # EC1: fetch failure is not evidence about the market — total state freeze
+    if spy_1w is None or qqq_1w is None or vix_level is None:
+        held = state["regime"] or "normal"
+        return held, held, spread, state["pending_regime"], state["consecutive_count"]
+
+    raw = classify_raw_regime(spy_1w, qqq_1w, vix_level)
+    current = state["regime"]
+
+    # Q4: cold start — adopt raw immediately, don't fake a NORMAL history
+    if current is None:
+        return raw, raw, spread, None, 0
+
+    if raw == current:
+        return current, raw, spread, None, 0
+
+    # Layer 4: alarms fire immediately (fast to alarm, slow to relax)
+    if raw in ALARM_REGIMES:
+        return raw, raw, spread, None, 0
+
+    # All other transitions need 2 consecutive confirmations
+    if state["pending_regime"] == raw:
+        count = state["consecutive_count"] + 1
+        if count >= 2:
+            return raw, raw, spread, None, 0
+        return current, raw, spread, raw, count
+    return current, raw, spread, raw, 1
 
 
 def main():
@@ -151,7 +219,8 @@ def main():
                 base.update({"change_ytd": None, "change_1y": None})
             data[key] = base
 
-    regime = compute_regime(data["spy"], data["qqq"], data["vix"])
+    regime, raw_regime, spread, pending, count = compute_regime(
+        data["spy"], data["qqq"], data["vix"])
     vix = data["vix"]
 
     out = {
@@ -165,6 +234,10 @@ def main():
             "signal":   vix_signal(vix["price"]),
         },
         "market_regime": regime,
+        "raw_regime": raw_regime,
+        "spread_1w": round(spread, 2) if spread is not None else None,
+        "pending_regime": pending,
+        "consecutive_count": count,
     }
 
     with open(JSON_FILE, "w", encoding="utf-8") as f:
