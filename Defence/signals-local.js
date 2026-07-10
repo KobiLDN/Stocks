@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-08 10:28",
+  "updated": "2026-07-10 11:26",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +20.01%, 1M +17.24%, P/E 20.82, analyst buy with score 1.6, and positive news sentiment 0.205.",
+      "drivers": [
+        "YTD +20%",
+        "1M +17%",
+        "P/E 21",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +10.52%, 1M +10.31%, P/E 23.53, low beta 0.34, analyst buy, and solid fundamentals.",
+      "drivers": [
+        "YTD +10.5%",
+        "1M +10%",
+        "P/E 23.5",
+        "low beta"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +5.03%, 1M +10.03%, P/E 36.62, analyst buy with score 1.87, large cap at $263B.",
+      "drivers": [
+        "1M +10%",
+        "analyst buy",
+        "large cap",
+        "steady momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +7.01%, 1M +9.78%, P/E 62.1, analyst buy, positive momentum despite high valuation.",
+      "drivers": [
+        "1M +9.8%",
+        "analyst buy",
+        "strong momentum",
+        "favorable news"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AXON",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "1M +30.03%, upgraded to Strong Buy (news sentiment 0.246), but P/E 243.5 is high; momentum is compelling.",
+      "drivers": [
+        "1M +30%",
+        "upgrade to strong_buy",
+        "positive sentiment",
+        "momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +13.48%, 1W +8.13%, P/E 12.73, low beta 0.28, but analyst hold (score 2.82); value play.",
+      "drivers": [
+        "YTD +13.5%",
+        "low P/E 12.7",
+        "1W +8%",
+        "low beta"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +28.95%, 1W +4.64%, P/E 41.75, low beta 0.19, no analyst rating but strong defence exposure.",
+      "drivers": [
+        "YTD +29%",
+        "1W +4.6%",
+        "low beta",
+        "defence growth"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +50.27%, 1M +6.97%, P/E null, high short interest 8.83%, but strong momentum and growth.",
+      "drivers": [
+        "YTD +50%",
+        "1M +7%",
+        "high momentum",
+        "risk/reward"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD -4.63%, but 1M +6.88%, P/E 40.49, analyst buy, potential reversal on aerospace recovery.",
+      "drivers": [
+        "1M +6.9%",
+        "analyst buy",
+        "aerospace play",
+        "P/E 40.5"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BA",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +6.75%, analyst buy with score 1.63, but YTD -2.05% and high P/E 89.24; turnaround candidate.",
+      "drivers": [
+        "1M +6.8%",
+        "analyst buy",
+        "turnaround",
+        "defence exposure"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RTX",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "1W +11.04%",
         "low beta 0.19",
         "P/E 42.5"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AXON",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "AXON has surged +34% in the past week and +24% in the past month, with strong analyst consensus (buy, score 1.6) and positive news sentiment (0.228), driven by its dominant position in law enforcement technology and recent growth momentum.",
-      "drivers": [
-        "+34.25% 1W momentum",
-        "buy analyst consensus (1.6)",
-        "positive news sentiment 0.228",
-        "YTD +5.96%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "RTX has strong momentum (+15.5% 1M, +37% 1Y), a buy analyst consensus (1.87), and a recent $1.1B Navy AIM-9X contract win, with the company raising FY2026 guidance after a Q1 earnings beat.",
-      "drivers": [
-        "+15.47% 1M momentum",
-        "$1.1B Navy contract win",
-        "buy analyst consensus (1.87)",
-        "raised FY2026 guidance"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRCY",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "MRCY shows exceptional momentum with +66% YTD, +145% 1Y, and +19.6% in the past week, driven by strong demand for its defense electronics and signal processing solutions, though it lacks an analyst rating.",
-      "drivers": [
-        "+66% YTD return",
-        "+145% 1Y return",
-        "+19.55% 1W momentum",
-        "defense electronics demand"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "General Dynamics has strong momentum (+11.3% 1M, +27% 1Y), a buy analyst consensus (2.12), and the highest news sentiment in the universe (0.296), supported by its submarine and shipbuilding programs.",
-      "drivers": [
-        "+11.32% 1M momentum",
-        "highest news sentiment 0.296",
-        "buy analyst consensus (2.12)",
-        "+27% 1Y return"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "Northrop Grumman has rebounded +10% in the past week and +4.4% in the past month, with a low P/E of 17.2, a buy analyst consensus (1.96), and a record $95.6B backlog driven by B-21 and Sentinel programs.",
-      "drivers": [
-        "+9.95% 1W momentum",
-        "low P/E 17.21",
-        "buy analyst consensus (1.96)",
-        "$95.6B backlog"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Rolls-Royce has strong momentum (+19.6% 1M, +55% 1Y, +25.7% YTD), a buy analyst consensus (1.6), and positive news sentiment (0.256), supported by new partnerships and defense engine demand.",
-      "drivers": [
-        "+19.55% 1M momentum",
-        "+55% 1Y return",
-        "buy analyst consensus (1.6)",
-        "positive news sentiment 0.256"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "LMT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Lockheed Martin has strong momentum (+8.1% 1W, +6.6% 1M, +10.4% YTD), a forward P/E of 17, and a record $194B backlog, with a $4.8B PAC-3 contract win and multi-year framework agreements for missile production.",
-      "drivers": [
-        "+8.10% 1W momentum",
-        "record $194B backlog",
-        "$4.8B PAC-3 contract",
-        "forward P/E 17"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "TransDigm has strong momentum (+11.3% 1M) and the highest news sentiment in the universe (0.408), with a buy analyst consensus (1.82) and a dominant position in aerospace components.",
-      "drivers": [
-        "+11.30% 1M momentum",
-        "highest news sentiment 0.408",
-        "buy analyst consensus (1.82)",
-        "aerospace components leader"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "HEICO has strong momentum (+10.1% 1M, +10% YTD), a buy analyst consensus (1.83), and positive news sentiment (0.3), driven by its niche in aerospace and defense electronics.",
-      "drivers": [
-        "+10.06% 1M momentum",
-        "buy analyst consensus (1.83)",
-        "positive news sentiment 0.3",
-        "+10% YTD return"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Boeing has strong momentum (+7.6% 1M, +3.9% 1D), a buy analyst consensus (1.63), and positive news sentiment (0.049), with a low short interest of 0.02% and potential recovery in defense and commercial segments.",
-      "drivers": [
-        "+7.56% 1M momentum",
-        "buy analyst consensus (1.63)",
-        "low short interest 0.02%",
-        "positive news sentiment 0.049"
       ]
     }
   ]

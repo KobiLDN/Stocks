@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-08 10:30",
+  "updated": "2026-07-10 11:27",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "KAITO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "KAITO has the highest momentum in the universe with +57.12% 1-month and +17.05% 1-week returns, +32.93% YTD, and a small market cap of $0.162B offering high upside potential.",
+      "drivers": [
+        "+57.12% 1-month return",
+        "+17.05% 1-week return",
+        "+32.93% YTD",
+        "small cap $0.162B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NMR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "NMR shows strong momentum with +19.95% 1-month and +6.18% 1-week returns, +6.65% YTD, and a tiny market cap of $0.076B making it a high-beta AI play.",
+      "drivers": [
+        "+19.95% 1-month return",
+        "+6.18% 1-week return",
+        "+6.65% YTD",
+        "micro cap $0.076B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SOL has strong 1-month momentum at +23.10% and a large market cap of $45.891B, though 1-week is slightly negative at -2.56% and news sentiment is mildly negative at -0.066.",
+      "drivers": [
+        "+23.10% 1-month return",
+        "large cap $45.891B",
+        "-2.56% 1-week pullback",
+        "negative news sentiment -0.066"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ETH has positive 1-month momentum at +8.74% and a large market cap of $213.531B, with positive news sentiment of 0.185, though YTD is down -40.36%.",
+      "drivers": [
+        "+8.74% 1-month return",
+        "large cap $213.531B",
+        "positive news sentiment 0.185",
+        "YTD -40.36%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "BTC has positive 1-month momentum at +4.33% and 1-week at +3.52%, with a massive market cap of $1,281.164B and positive news sentiment of 0.071, serving as a safe haven.",
+      "drivers": [
+        "+4.33% 1-month return",
+        "+3.52% 1-week return",
+        "largest cap $1,281.164B",
+        "positive news sentiment 0.071"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "OCEAN has strong 1-month momentum at +9.19% and positive 1-day at +0.92%, though YTD is down -24.54% and market cap data is unavailable.",
+      "drivers": [
+        "+9.19% 1-month return",
+        "+0.92% 1-day return",
+        "YTD -24.54%",
+        "market cap N/A"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "MINA shows positive 1-month momentum at +6.33% and 1-week at +2.50%, with a micro cap of $0.057B offering high risk/reward, though YTD is down -41.08%.",
+      "drivers": [
+        "+6.33% 1-month return",
+        "+2.50% 1-week return",
+        "micro cap $0.057B",
+        "YTD -41.08%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AVAX has positive 1-month momentum at +4.12% and 1-day at +2.15%, with a market cap of $2.928B and positive news sentiment of 0.081, though YTD is down -44.90%.",
+      "drivers": [
+        "+4.12% 1-month return",
+        "+2.15% 1-day return",
+        "market cap $2.928B",
+        "positive news sentiment 0.081"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ALT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "ALT has strong 1-week momentum at +8.07% and 1-day at +6.34%, with a micro cap of $0.044B, though YTD is down -41.95% and 1-month is only +3.86%.",
+      "drivers": [
+        "+8.07% 1-week return",
+        "+6.34% 1-day return",
+        "micro cap $0.044B",
+        "YTD -41.95%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "ADA has positive 1-month momentum at +3.69% and positive news sentiment of 0.084, with a market cap of $6.062B, though YTD is down -50.04% and 1-day is negative at -1.83%.",
+      "drivers": [
+        "+3.69% 1-month return",
+        "positive news sentiment 0.084",
+        "market cap $6.062B",
+        "YTD -50.04%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BTC",
@@ -125,131 +258,6 @@ window.SIGNALS_DATA = {
         "5.72% monthly gain",
         "AI data economy",
         "Low volatility"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SOL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Solana shows strong momentum (+27.48% 1m, +10.52% 1w), positive news sentiment 0.169, and web search confirms ETF inflows ($5.8M) and bullish technical setup targeting $90-$96.",
-      "drivers": [
-        "+27.48% 1m momentum",
-        "positive news sentiment 0.169",
-        "Solana ETF inflows $5.8M",
-        "bullish technical setup"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ADA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Cardano rallied 32% from June low, added 14,783 new wallets, news sentiment 0.079, RealFi testnet catalyst.",
-      "drivers": [
-        "+26.11% 1w rally",
-        "14,783 new wallets",
-        "RealFi testnet upgrade",
-        "news sentiment 0.079"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "KAITO leads with +34.20% 1m momentum and +19.06% YTD, small cap high beta AI token.",
-      "drivers": [
-        "+34.20% 1m momentum",
-        "+19.06% YTD",
-        "small cap AI token"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "NMR shows +24.57% 1m and +11.61% 1w momentum, YTD nearly flat, small cap AI.",
-      "drivers": [
-        "+24.57% 1m momentum",
-        "+11.61% 1w momentum",
-        "small cap AI"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "MINA surged +23.23% 1w and +13.24% 1m, positive daily momentum +2.93%, small cap emerging L1.",
-      "drivers": [
-        "+23.23% 1w momentum",
-        "+13.24% 1m momentum",
-        "small cap emerging L1"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Ethereum strong recovery (+12.46% 1m, +11.99% 1w) as largest smart contract platform, despite negative news sentiment -0.24.",
-      "drivers": [
-        "+12.46% 1m momentum",
-        "largest L1 by market cap $213.7B",
-        "negative news sentiment -0.24"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Chainlink positive news sentiment 0.274, +7.89% 1m and +8.12% 1w, key oracle infrastructure.",
-      "drivers": [
-        "news sentiment 0.274",
-        "+7.89% 1m momentum",
-        "oracle infrastructure"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ALT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ALT shows +12.00% 1m and +10.98% 1w momentum, very small cap AI token.",
-      "drivers": [
-        "+12.00% 1m momentum",
-        "+10.98% 1w momentum",
-        "small cap AI"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "TAO nearly flat YTD (-3.01%), +9.51% 1m momentum, AI narrative with $2.35B market cap.",
-      "drivers": [
-        "+9.51% 1m momentum",
-        "AI narrative",
-        "moderate market cap $2.35B"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "PEPE +13.14% 1w momentum, meme coin with $1.11B market cap, high beta.",
-      "drivers": [
-        "+13.14% 1w momentum",
-        "meme coin high beta",
-        "$1.11B market cap"
       ]
     }
   ]
