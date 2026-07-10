@@ -81,7 +81,7 @@ jobs:
             git add Energy/prices.json Energy/prices-data.js
             git add MegaCap/prices.json MegaCap/prices-data.js
             git add market.json market-data.js
-            git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC')) [skip ci]"
+            git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
               git fetch origin main
               git rebase origin/main
