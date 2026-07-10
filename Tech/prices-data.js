@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-10 07:32",
-  "fx_gbp_usd": 1.3431,
+  "updated": "2026-07-10 11:58",
+  "fx_gbp_usd": 1.3432,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -9,7 +9,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "235",
       "price_usd": 316.22,
-      "change_1d": "+0.98%",
+      "change_1d": "+0.32%",
       "change_1w": "+7.42%",
       "change_1m": "+8.45%",
       "change_ytd": "+16.90%",
@@ -19,10 +19,10 @@ window.PRICES_DATA = {
       "high_gbp": "236",
       "high_usd": 317.4,
       "bar_pct": 99,
-      "market_cap_gbp_b": 3458.108,
+      "market_cap_gbp_b": 3457.69,
       "market_cap_usd_b": 4644.436,
       "beta": 1.097,
-      "pe_ratio": 38.24,
+      "pe_ratio": 38.33,
       "avg_volume_m": 54.34,
       "div_yield_pct": 34.0,
       "short_pct": 0.98,
@@ -33,42 +33,42 @@ window.PRICES_DATA = {
       "vol_1m": 1309716100,
       "news": [
         {
-          "title": "After Apple, India\u2019s smartphone manufacturing boom enters new phase with Vivo JV",
-          "publisher": "TechCrunch",
-          "url": "https://finance.yahoo.com/technology/articles/apple-india-smartphone-manufacturing-boom-043620231.html",
-          "published": 1783658180,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Jim Cramer says one AI giant holds key to market\u2019s next move",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/avgo-broadcom-stock-jim-cramer-market-bellwether-to-watch-bear-market",
-          "published": 1783654380,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Is Digital Turbine\u2019s (APPS) AI Partnership Blitz Quietly Rewriting Its Mobile Advertising Thesis?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/media-advertising/articles/digital-turbine-apps-ai-partnership-032236737.html",
-          "published": 1783653756,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Broadcom Is Less Than 5% From the $2 Trillion Club -- and Apple Just Committed $30 Billion for More Chips",
+          "title": "Trump Made 327 Stock Trades in Apple, Nvidia, and Other Tech Giants Before His Tariff Pause",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/09/broadcom-is-less-than-5-from-the-2-trillion-club-a/",
-          "published": 1783653060,
-          "sentiment": 0.273
+          "url": "https://www.fool.com/investing/2026/07/10/trump-made-327-stock-trades-in-apple-nvidia-and-ot/",
+          "published": 1783680300,
+          "sentiment": 0.0
         },
         {
-          "title": "Small Cap ETFs Are Beating the S 500 as the Mag 7 Stumble",
-          "publisher": "etf.com",
-          "url": "http://www.etf.com/sections/features/small-cap-etfs-are-beating-sp-500-mag-7-stumble?utm_source=yahoo-financeutm_medium=rssutm_campaign=yahoo-finance-rss",
-          "published": 1783645579,
-          "sentiment": -0.459
+          "title": "Take Five: Chips, banks and volatility",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/markets/articles/five-chips-banks-volatility-084111323.html",
+          "published": 1783672871,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The Zacks Analyst Blog Highlights Apple, KLA, Western Digital and Optex Systems",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-apple-074100532.html",
+          "published": 1783669260,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The Zacks Analyst Blog Highlights Lenovo, HP, Dell and Apple",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-lenovo-073500673.html",
+          "published": 1783668900,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Apple Announces $30 billion Multi-year Chip Deal With Broadcom (AVGO)",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/articles/apple-announces-30-billion-multi-065814718.html",
+          "published": 1783666694,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.037
+      "news_sentiment": 0.0
     },
     {
       "ticker": "MSFT",
@@ -77,7 +77,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "286",
       "price_usd": 384.36,
-      "change_1d": "+0.12%",
+      "change_1d": "+0.07%",
       "change_1w": "+0.02%",
       "change_1m": "-3.27%",
       "change_ytd": "-18.37%",
@@ -87,7 +87,7 @@ window.PRICES_DATA = {
       "high_gbp": "414",
       "high_usd": 555.45,
       "bar_pct": 17,
-      "market_cap_gbp_b": 2125.891,
+      "market_cap_gbp_b": 2125.634,
       "market_cap_usd_b": 2855.193,
       "beta": 1.13,
       "pe_ratio": 22.84,
@@ -115,28 +115,28 @@ window.PRICES_DATA = {
           "sentiment": -0.026
         },
         {
-          "title": "Starbucks (SBUX) Is Replacing Microsoft And IBM Software To Cut $400 Million Spend",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/starbucks-sbux-replacing-microsoft-ibm-051312835.html",
-          "published": 1783660392,
-          "sentiment": -0.273
+          "title": "UK to regulate cloud service providers Microsoft, Google and others to protect financial stability",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/articles/uk-regulate-cloud-providers-microsoft-101817675.html",
+          "published": 1783678806,
+          "sentiment": 0.382
         },
         {
-          "title": "Small Cap ETFs Are Beating the S 500 as the Mag 7 Stumble",
-          "publisher": "etf.com",
-          "url": "http://www.etf.com/sections/features/small-cap-etfs-are-beating-sp-500-mag-7-stumble?utm_source=yahoo-financeutm_medium=rssutm_campaign=yahoo-finance-rss",
-          "published": 1783645579,
-          "sentiment": -0.459
+          "title": "The 20-Year Dividend Strategy Built For Investors Who Don\u2019t Need Income Yet",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/07/10/the-20-year-dividend-strategy-built-for-investors-who-dont-need-income-yet/",
+          "published": 1783678805,
+          "sentiment": 0.0
         },
         {
-          "title": "Wix.com (WIX) Could Be 37% Undervalued On Elavon Partnership News",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/wix-com-wix-could-37-001734316.html",
-          "published": 1783642654,
+          "title": "After Laying Off 3,200 Employees, Xbox CEO Joins the Fed\u2019s Jobs Task Force",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/10/after-laying-off-3200-employees-xbox-ceo-joins-the-feds-jobs-task-force/",
+          "published": 1783676823,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.152
+      "news_sentiment": 0.071
     },
     {
       "ticker": "GOOGL",
@@ -145,7 +145,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "267",
       "price_usd": 358.89,
-      "change_1d": "-0.83%",
+      "change_1d": "+0.38%",
       "change_1w": "-0.64%",
       "change_1m": "+0.70%",
       "change_ytd": "+14.03%",
@@ -155,7 +155,7 @@ window.PRICES_DATA = {
       "high_gbp": "304",
       "high_usd": 408.61,
       "bar_pct": 79,
-      "market_cap_gbp_b": 3260.756,
+      "market_cap_gbp_b": 3260.362,
       "market_cap_usd_b": 4379.381,
       "beta": 1.247,
       "pe_ratio": 27.63,
@@ -183,28 +183,28 @@ window.PRICES_DATA = {
           "sentiment": 0.599
         },
         {
-          "title": "Is Digital Turbine\u2019s (APPS) AI Partnership Blitz Quietly Rewriting Its Mobile Advertising Thesis?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/media-advertising/articles/digital-turbine-apps-ai-partnership-032236737.html",
-          "published": 1783653756,
+          "title": "UK to regulate cloud service providers Microsoft, Google and others to protect financial stability",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/articles/uk-regulate-cloud-providers-microsoft-101817675.html",
+          "published": 1783678806,
+          "sentiment": 0.382
+        },
+        {
+          "title": "OpenAI and Google Provided AI Services to Pentagon-Listed Chinese Groups via Singapore Units",
+          "publisher": "InvestorsHub",
+          "url": "https://investorshub.advfn.com/market-news/article/31626/openai-and-google-provided-ai-services-to-pentagon-listed-chinese-groups-via-singapore-units",
+          "published": 1783678454,
           "sentiment": 0.0
         },
         {
-          "title": "Small Cap ETFs Are Beating the S 500 as the Mag 7 Stumble",
-          "publisher": "etf.com",
-          "url": "http://www.etf.com/sections/features/small-cap-etfs-are-beating-sp-500-mag-7-stumble?utm_source=yahoo-financeutm_medium=rssutm_campaign=yahoo-finance-rss",
-          "published": 1783645579,
-          "sentiment": -0.459
-        },
-        {
-          "title": "Google-backed ex-Bitcoin miner reveals $3.5 billion debt raise",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/crypto/markets/google-backed-ex-bitcoin-miner-reveals-3-5-billion-debt-raise",
-          "published": 1783641600,
-          "sentiment": -0.361
+          "title": "Taiwanese chipmaker Nanya plans $6 billion in spending in 2027, riding AI boom",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/ai/articles/taiwanese-chipmaker-nanya-plans-6-092507004.html",
+          "published": 1783675507,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.044
+      "news_sentiment": 0.196
     },
     {
       "ticker": "AMZN",
@@ -213,7 +213,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "184",
       "price_usd": 247.04,
-      "change_1d": "+1.63%",
+      "change_1d": "+0.34%",
       "change_1w": "+2.21%",
       "change_1m": "+3.80%",
       "change_ytd": "+9.07%",
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "207",
       "high_usd": 278.56,
       "bar_pct": 62,
-      "market_cap_gbp_b": 1978.647,
+      "market_cap_gbp_b": 1978.408,
       "market_cap_usd_b": 2657.436,
       "beta": 1.461,
       "pe_ratio": 31.63,
@@ -251,28 +251,28 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Climb Global Solutions Lays Out 2030 Growth Targets, Global M&A Push",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/climb-global-solutions-lays-out-2030-growth-targets-global-ma-push-2026-07-10/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1783659751,
-          "sentiment": 0.511
+          "title": "UK to regulate cloud service providers Microsoft, Google and others to protect financial stability",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/articles/uk-regulate-cloud-providers-microsoft-101817675.html",
+          "published": 1783678806,
+          "sentiment": 0.382
         },
         {
-          "title": "This French Water Company Doesn\u2019t Make Bottled Water. It\u2019s Bigger Than That.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/french-water-company-1842b40a?siteid=yhoof2&yptr=yahoo",
-          "published": 1783659600,
-          "sentiment": 0.0
+          "title": "Corning (GLW) Lands Amazon Deal And Nvidia Tie Up For AI Fiber Expansion",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/corning-glw-lands-amazon-deal-100930043.html",
+          "published": 1783678170,
+          "sentiment": 0.178
         },
         {
-          "title": "ASTS Stock Eyes Worst Week In Over A Month: FCC Chair Says SPCX, AMZN Are Heating Up Satellite-To-Cell Competition",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/asts-fcc-chair-spcx-amzn-satellite-to-cell-competition/cZmApYPR7FB",
-          "published": 1783652984,
-          "sentiment": -0.625
+          "title": "UK retailer M&S widens Amazon partnership with Dutch launch",
+          "publisher": "Retail Insight Network",
+          "url": "https://www.retail-insight-network.com/news/ms-amazon-partnership-dutch-launch/",
+          "published": 1783676108,
+          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.041
+      "news_sentiment": 0.211
     },
     {
       "ticker": "META",
@@ -281,7 +281,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "470",
       "price_usd": 631.48,
-      "change_1d": "+4.64%",
+      "change_1d": "-1.31%",
       "change_1w": "+3.03%",
       "change_1m": "+10.70%",
       "change_ytd": "-2.74%",
@@ -291,10 +291,10 @@ window.PRICES_DATA = {
       "high_gbp": "593",
       "high_usd": 796.25,
       "bar_pct": 40,
-      "market_cap_gbp_b": 1193.519,
-      "market_cap_usd_b": 1602.964,
+      "market_cap_gbp_b": 1193.374,
+      "market_cap_usd_b": 1602.963,
       "beta": 1.246,
-      "pe_ratio": 21.93,
+      "pe_ratio": 22.99,
       "avg_volume_m": 17.16,
       "div_yield_pct": 35.0,
       "short_pct": 1.37,
@@ -319,28 +319,28 @@ window.PRICES_DATA = {
           "sentiment": -0.026
         },
         {
-          "title": "Tencent in talks to become AI startup Manus' largest shareholder, sources say",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/ai/articles/tencent-talks-become-ai-start-030728722.html",
-          "published": 1783652848,
-          "sentiment": 0.0
+          "title": "Meta Failed to Protect Users From Addictive Apps, EU Says",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/tech/meta-failed-to-protect-users-from-addictive-apps-eu-says-a4e21a74?siteid=yhoof2&yptr=yahoo",
+          "published": 1783677600,
+          "sentiment": -0.178
         },
         {
-          "title": "META Stock Moves Closer To 200-DMA After Muse Spark AI Release: Cathie Wood's ARK Boosts Stake By Over $20M",
+          "title": "LRCX, APLD, KLAC: Why Chip Equipment Stocks Are Falling Premarket Today",
           "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/meta-stock-moves-closer-to-200-dma-after-muse-spark-ai-release-cathie-wood-s-ark-boosts-stake-by-over-20-m/cZmAFL8R7FE",
-          "published": 1783647949,
-          "sentiment": 0.494
+          "url": "https://stocktwits.com/news-articles/markets/equity/lrcx-apld-klac-why-chip-equipment-stocks-are-falling-premarket-today/cZmACpqR7FV",
+          "published": 1783675549,
+          "sentiment": -0.153
         },
         {
-          "title": "Small Cap ETFs Are Beating the S 500 as the Mag 7 Stumble",
-          "publisher": "etf.com",
-          "url": "http://www.etf.com/sections/features/small-cap-etfs-are-beating-sp-500-mag-7-stumble?utm_source=yahoo-financeutm_medium=rssutm_campaign=yahoo-finance-rss",
-          "published": 1783645579,
-          "sentiment": -0.459
+          "title": "META Stock Eyes Best Weekly Finish In Over 2 Months On Muse Spark Boost: AI Chief Promises \u2018More To Come\u2019",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/meta-stock-eyes-best-weekly-finish-in-over-2-months-on-muse-spark-boost-ai-chief-promises-more-to-come/cZmAyGsR7Fk",
+          "published": 1783671696,
+          "sentiment": 0.886
         }
       ],
-      "news_sentiment": 0.065
+      "news_sentiment": 0.169
     },
     {
       "ticker": "NVDA",
@@ -349,7 +349,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "151",
       "price_usd": 202.78,
-      "change_1d": "-0.41%",
+      "change_1d": "+0.23%",
       "change_1w": "+2.63%",
       "change_1m": "+1.18%",
       "change_ytd": "+7.38%",
@@ -359,10 +359,10 @@ window.PRICES_DATA = {
       "high_gbp": "176",
       "high_usd": 236.54,
       "bar_pct": 55,
-      "market_cap_gbp_b": 3656.981,
+      "market_cap_gbp_b": 3656.539,
       "market_cap_usd_b": 4911.534,
       "beta": 2.211,
-      "pe_ratio": 31.24,
+      "pe_ratio": 31.05,
       "avg_volume_m": 159.09,
       "div_yield_pct": 49.0,
       "short_pct": 1.29,
@@ -373,10 +373,17 @@ window.PRICES_DATA = {
       "vol_1m": 2949611200,
       "news": [
         {
-          "title": "SK Hynix's US listing, Delta earnings, housing bill: What to Watch",
+          "title": "Chip giant SK Hynix raises $26.5 billion in blockbuster US share offering",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/article/chip-giant-sk-hynix-raises-265-billion-in-blockbuster-us-share-offering-193700352.html",
+          "published": 1783539420,
+          "sentiment": 0.727
+        },
+        {
+          "title": "SK Hynix is the talk of the town. Is IPO day the right time to buy?",
           "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/sk-hynixs-us-listing-delta-230000258.html",
-          "published": 1783638000,
+          "url": "https://finance.yahoo.com/video/sk-hynix-talk-town-ipo-155738106.html",
+          "published": 1783612658,
           "sentiment": 0.0
         },
         {
@@ -387,28 +394,21 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Why Bandwidth Stock Was Rising This Week",
+          "title": "Trump Made 327 Stock Trades in Apple, Nvidia, and Other Tech Giants Before His Tariff Pause",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/10/why-bandwidth-stock-was-rising-this-week/",
-          "published": 1783663873,
+          "url": "https://www.fool.com/investing/2026/07/10/trump-made-327-stock-trades-in-apple-nvidia-and-ot/",
+          "published": 1783680300,
           "sentiment": 0.0
         },
         {
-          "title": "Costco's June Sales Rose 10.6%, but the Stock Fell 4%. Here's What Spooked Investors.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/09/costcos-june-sales-rose-106-but-the-stock-fell-4-h/",
-          "published": 1783655460,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why Mara Holdings Stock Spiked Today",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/09/why-mara-holdings-stock-is-up-today/",
-          "published": 1783654205,
-          "sentiment": 0.0
+          "title": "Dow Jones Futures Rise, Techs Fall; Delta Gains On Guidance, SK Hynix Raises $26.5 Billion; Micron, Sandisk Slide",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nasdaq-micron-sandisk-jump-delta-taiwan-semi-sk-hynix/?src=A00220&yptr=yahoo",
+          "published": 1783680942,
+          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.213
     },
     {
       "ticker": "AMD",
@@ -417,7 +417,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "407",
       "price_usd": 546.72,
-      "change_1d": "+5.79%",
+      "change_1d": "-0.06%",
       "change_1w": "+1.08%",
       "change_1m": "+20.85%",
       "change_ytd": "+144.65%",
@@ -427,8 +427,8 @@ window.PRICES_DATA = {
       "high_gbp": "435",
       "high_usd": 584.73,
       "bar_pct": 91,
-      "market_cap_gbp_b": 663.771,
-      "market_cap_usd_b": 891.482,
+      "market_cap_gbp_b": 663.69,
+      "market_cap_usd_b": 891.481,
       "beta": 2.469,
       "pe_ratio": 172.47,
       "avg_volume_m": 36.7,
@@ -448,35 +448,35 @@ window.PRICES_DATA = {
           "sentiment": 0.34
         },
         {
-          "title": "Advanced Micro Devices vs. Nvidia: What Revenue Growth Rates and Scale Reveal for Investors",
+          "title": "AMD Just Out-Earned Intel in the Data Center. Here's What That Means for Both Stocks.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/charts/2026/07/09/advanced-micro-devices-vs-nvidia-what-revenue-growth-rates-and-scale-reveal-for-investors/",
-          "published": 1783648201,
-          "sentiment": 0.557
-        },
-        {
-          "title": "Meta to produce AI chips in September, memo shows",
-          "publisher": "Reuters Videos",
-          "url": "https://finance.yahoo.com/video/meta-produce-ai-chips-september-232348609.html",
-          "published": 1783639428,
+          "url": "https://www.fool.com/investing/2026/07/10/amd-just-out-earned-intel-in-the-data-center-for-t/",
+          "published": 1783677660,
           "sentiment": 0.0
         },
         {
-          "title": "Why Is AMD (AMD) Stock Rocketing Higher Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-amd-amd-stock-rocketing-215942210.html",
-          "published": 1783634382,
+          "title": "Stocks to Watch: SK Hynix, EasyJet, Vodafone",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-07-10-2026/card/stocks-to-watch-sk-hynix-easyjet-vodafone-9jRubZCK4RwBfuX2M50M?siteid=yhoof2&yptr=yahoo",
+          "published": 1783675129,
           "sentiment": 0.0
         },
         {
-          "title": "Update: US Equities Rise, Oil Prices Fall as Traders Look Past Middle East Tensions",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equities-rise-oil-prices-204234656.html",
-          "published": 1783629754,
-          "sentiment": -0.402
+          "title": "AMD (AMD) Partners With 5C To Build Gigascale AI Campuses",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/amd-amd-partners-5c-build-091124052.html",
+          "published": 1783674684,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Take Five: Chips, banks and volatility",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/markets/articles/five-chips-banks-volatility-084111323.html",
+          "published": 1783672871,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.099
+      "news_sentiment": 0.068
     },
     {
       "ticker": "INTC",
@@ -485,7 +485,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "84",
       "price_usd": 112.54,
-      "change_1d": "+2.04%",
+      "change_1d": "-0.08%",
       "change_1w": "-11.40%",
       "change_1m": "+5.14%",
       "change_ytd": "+185.78%",
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "106",
       "high_usd": 142.35,
       "bar_pct": 76,
-      "market_cap_gbp_b": 421.148,
+      "market_cap_gbp_b": 421.097,
       "market_cap_usd_b": 565.626,
       "beta": 2.187,
       "pe_ratio": null,
@@ -509,42 +509,42 @@ window.PRICES_DATA = {
       "vol_1m": 2559157500,
       "news": [
         {
-          "title": "Micron, Sandisk, Marvell stocks jump, leading chip sector gains",
+          "title": "Nasdaq's hottest winners just fell behind: Chart of the Day",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/micron-sandisk-marvell-stocks-jump-leading-chip-sector-gains-135433074.html",
-          "published": 1783605273,
-          "sentiment": 0.34
+          "url": "https://finance.yahoo.com/markets/article/nasdaqs-hottest-winners-just-fell-behind-chart-of-the-day-100000829.html",
+          "published": 1783677600,
+          "sentiment": 0.477
         },
         {
-          "title": "Memory chip stocks fall into a bear market amid latest tech sell-off",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/memory-chip-stocks-fall-bear-191922938.html",
-          "published": 1783451962,
+          "title": "Intel's new chip patent and the solution to AI's biggest logjam",
+          "publisher": "Proactive",
+          "url": "https://www.proactiveinvestors.com/companies/news/1095248/intel-s-new-chip-patent-and-the-solution-to-ai-s-biggest-logjam-1095248.html",
+          "published": 1783677720,
+          "sentiment": 0.318
+        },
+        {
+          "title": "AMD Just Out-Earned Intel in the Data Center. Here's What That Means for Both Stocks.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/10/amd-just-out-earned-intel-in-the-data-center-for-t/",
+          "published": 1783677660,
           "sentiment": 0.0
         },
         {
-          "title": "Update: US Equities Rise, Oil Prices Fall as Traders Look Past Middle East Tensions",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equities-rise-oil-prices-204234656.html",
-          "published": 1783629754,
-          "sentiment": -0.402
+          "title": "Stocks to Watch: SK Hynix, EasyJet, Vodafone",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-07-10-2026/card/stocks-to-watch-sk-hynix-easyjet-vodafone-9jRubZCK4RwBfuX2M50M?siteid=yhoof2&yptr=yahoo",
+          "published": 1783675129,
+          "sentiment": 0.0
         },
         {
-          "title": "State Capitalism Ventures Into AI. What Could Go Wrong?",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/state-capitalism-ventures-into-ai-what-could-go-wrong-b95ee6d5?siteid=yhoof2&yptr=yahoo",
-          "published": 1783628520,
-          "sentiment": -0.477
-        },
-        {
-          "title": "Six Months In, AZA Law Firm\u2019s Dallas Office Tracks Toward Its Year-One Plan",
-          "publisher": "Exec Edge",
-          "url": "https://finance.yahoo.com/small-business/articles/six-months-aza-law-firm-190607304.html",
-          "published": 1783623967,
+          "title": "Cathie Wood's ARK Says AMD Chips 'Can Already Be More Performant Per Dollar' Than Nvidia",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-woods-ark-says-amd-080324347.html",
+          "published": 1783670604,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.108
+      "news_sentiment": 0.159
     },
     {
       "ticker": "TSM",
@@ -553,7 +553,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "325",
       "price_usd": 436.96,
-      "change_1d": "-0.34%",
+      "change_1d": "-0.55%",
       "change_1w": "-1.64%",
       "change_1m": "+7.15%",
       "change_ytd": "+37.42%",
@@ -563,7 +563,7 @@ window.PRICES_DATA = {
       "high_gbp": "357",
       "high_usd": 479.0,
       "bar_pct": 84,
-      "market_cap_gbp_b": 1687.405,
+      "market_cap_gbp_b": 1687.201,
       "market_cap_usd_b": 2266.281,
       "beta": 1.246,
       "pe_ratio": 38.03,
@@ -584,35 +584,35 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "This French Water Company Doesn\u2019t Make Bottled Water. It\u2019s Bigger Than That.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/french-water-company-1842b40a?siteid=yhoof2&yptr=yahoo",
-          "published": 1783659600,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Dow Jones Futures: SK Hynix Raises $26.5 Billion After Micron, Sandisk Jump, Nasdaq Tops Key Level",
+          "title": "Dow Jones Futures Rise, Techs Fall; Delta Gains On Guidance, SK Hynix Raises $26.5 Billion; Micron, Sandisk Slide",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nasdaq-micron-sandisk-jump-delta-taiwan-semi-sk-hynix/?src=A00220&yptr=yahoo",
-          "published": 1783652999,
-          "sentiment": 0.511
+          "published": 1783680942,
+          "sentiment": 0.34
         },
         {
-          "title": "Semiconductor chip plants cost a ton of money. Here's why",
-          "publisher": "Quartz",
-          "url": "https://qz.com/semiconductor-fab-cost-breakdown-hidden-expenses-070626",
-          "published": 1783630524,
+          "title": "Take Five: Chips, banks and volatility",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/markets/articles/five-chips-banks-volatility-084111323.html",
+          "published": 1783672871,
           "sentiment": 0.0
         },
         {
-          "title": "Nvidia owns the AI chips market. Google, Amazon, and others are coming",
-          "publisher": "Quartz",
-          "url": "https://qz.com/custom-ai-chips-openai-google-amazon-microsoft-meta-tesla-070626",
-          "published": 1783630296,
-          "sentiment": 0.178
+          "title": "Why SK Hynix Stock Is Set to Trade at a Premium in U.S. Listing",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/sk-hynix-stock-price-us-listing-6401db72?siteid=yhoof2&yptr=yahoo",
+          "published": 1783668360,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why the S&P 500 Is Suddenly Your 401(k) Account\u2019s Worst Performer",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/markets-asset-allocation-6f1988cf?siteid=yhoof2&yptr=yahoo",
+          "published": 1783666800,
+          "sentiment": -0.625
         }
       ],
-      "news_sentiment": 0.138
+      "news_sentiment": -0.057
     },
     {
       "ticker": "AVGO",
@@ -621,7 +621,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "299",
       "price_usd": 401.11,
-      "change_1d": "+2.88%",
+      "change_1d": "+0.06%",
       "change_1w": "+8.60%",
       "change_1m": "+7.97%",
       "change_ytd": "+15.81%",
@@ -631,12 +631,12 @@ window.PRICES_DATA = {
       "high_gbp": "369",
       "high_usd": 495.0,
       "bar_pct": 58,
-      "market_cap_gbp_b": 1420.873,
+      "market_cap_gbp_b": 1420.701,
       "market_cap_usd_b": 1908.313,
       "beta": 1.462,
       "pe_ratio": 64.49,
       "avg_volume_m": 26.66,
-      "div_yield_pct": 67.0,
+      "div_yield_pct": 65.0,
       "short_pct": 1.32,
       "analyst": "strong_buy",
       "analyst_score": 1.31,
@@ -652,35 +652,35 @@ window.PRICES_DATA = {
           "sentiment": 0.34
         },
         {
+          "title": "3 Hypergrowth Tech Stocks to Buy With $3,000 Right Now",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/10/3-hypergrowth-tech-stocks-to-buy-with-3000-right-n/",
+          "published": 1783675800,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Take Five: Chips, banks and volatility",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/markets/articles/five-chips-banks-volatility-084111323.html",
+          "published": 1783672871,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Apple Announces $30 billion Multi-year Chip Deal With Broadcom (AVGO)",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/articles/apple-announces-30-billion-multi-065814718.html",
+          "published": 1783666694,
+          "sentiment": 0.0
+        },
+        {
           "title": "Jim Cramer says one AI giant holds key to market\u2019s next move",
           "publisher": "TheStreet",
           "url": "https://www.thestreet.com/investing/stocks/avgo-broadcom-stock-jim-cramer-market-bellwether-to-watch-bear-market",
           "published": 1783654380,
           "sentiment": 0.0
-        },
-        {
-          "title": "Broadcom Is Less Than 5% From the $2 Trillion Club -- and Apple Just Committed $30 Billion for More Chips",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/09/broadcom-is-less-than-5-from-the-2-trillion-club-a/",
-          "published": 1783653060,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Why Did Ciena Stock Gain 460%?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/606400/why-did-ciena-stock-gain-460/2026-07-09",
-          "published": 1783647911,
-          "sentiment": 0.527
-        },
-        {
-          "title": "Broadcom Stock Investors Just Got Incredible News from Apple CEO Tim Cook",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/09/broadcom-stock-investors-just-got-incredible-news-from-apple-ceo-tim-cook/",
-          "published": 1783632696,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.228
+      "news_sentiment": 0.068
     },
     {
       "ticker": "QCOM",
@@ -689,7 +689,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "142",
       "price_usd": 191.11,
-      "change_1d": "+1.82%",
+      "change_1d": "+0.17%",
       "change_1w": "+5.05%",
       "change_1m": "-0.05%",
       "change_ytd": "+11.19%",
@@ -699,10 +699,10 @@ window.PRICES_DATA = {
       "high_gbp": "194",
       "high_usd": 259.92,
       "bar_pct": 50,
-      "market_cap_gbp_b": 149.979,
-      "market_cap_usd_b": 201.43,
+      "market_cap_gbp_b": 149.961,
+      "market_cap_usd_b": 201.431,
       "beta": 1.638,
-      "pe_ratio": 20.07,
+      "pe_ratio": 20.53,
       "avg_volume_m": 23.17,
       "div_yield_pct": 197.0,
       "short_pct": 4.74,
@@ -712,6 +712,20 @@ window.PRICES_DATA = {
       "vol_1w": 73618100,
       "vol_1m": 424158000,
       "news": [
+        {
+          "title": "Taiwanese chipmaker Nanya plans $6 billion in spending in 2027, riding AI boom",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/ai/articles/taiwanese-chipmaker-nanya-plans-6-092507004.html",
+          "published": 1783675507,
+          "sentiment": 0.0
+        },
+        {
+          "title": "nLight (LASR) Moves 27.3% Higher: Will This Strength Last?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nlight-lasr-moves-27-3-064700995.html",
+          "published": 1783666020,
+          "sentiment": 0.579
+        },
         {
           "title": "How Investors Are Reacting To QUALCOMM (QCOM) Index Removal And New On-Device AI Deepfake Partnership",
           "publisher": "Simply Wall St.",
@@ -732,23 +746,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/amd-stock-price-analyst-sell-intel-cd026a13?siteid=yhoof2&yptr=yahoo",
           "published": 1783619880,
           "sentiment": 0.318
-        },
-        {
-          "title": "Will Qualcomm's Automotive Business Continue Driving Top-Line Growth?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/qualcomms-automotive-business-continue-driving-171500765.html",
-          "published": 1783617300,
-          "sentiment": 0.382
-        },
-        {
-          "title": "MU, AMD, MRVL, QCOM Stocks Surge \u2014 Bernstein\u2019s Stacy Rasgon Says AI Demand Is Exploding, Memory Capacity Is 'Very Tight'",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/mu-amd-mrvl-qcom-stocks-surge-bernstein-analyst-ai-memory-demand/cZmYPqGR7nm",
-          "published": 1783616406,
-          "sentiment": -0.128
         }
       ],
-      "news_sentiment": 0.114
+      "news_sentiment": 0.179
     },
     {
       "ticker": "ARM",
@@ -757,7 +757,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "244",
       "price_usd": 327.87,
-      "change_1d": "+9.11%",
+      "change_1d": "-2.08%",
       "change_1w": "-2.84%",
       "change_1m": "+6.65%",
       "change_ytd": "+185.78%",
@@ -767,10 +767,10 @@ window.PRICES_DATA = {
       "high_gbp": "337",
       "high_usd": 452.7,
       "bar_pct": 65,
-      "market_cap_gbp_b": 260.742,
+      "market_cap_gbp_b": 260.71,
       "market_cap_usd_b": 350.191,
       "beta": 3.77,
-      "pe_ratio": 356.38,
+      "pe_ratio": 385.73,
       "avg_volume_m": 11.13,
       "div_yield_pct": null,
       "short_pct": 11.26,
@@ -825,7 +825,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "1343",
       "price_usd": 1804.25,
-      "change_1d": "+1.70%",
+      "change_1d": "-0.67%",
       "change_1w": "-2.10%",
       "change_1m": "+4.04%",
       "change_ytd": "+55.58%",
@@ -835,8 +835,8 @@ window.PRICES_DATA = {
       "high_gbp": "1489",
       "high_usd": 1999.96,
       "bar_pct": 85,
-      "market_cap_gbp_b": 517.766,
-      "market_cap_usd_b": 695.389,
+      "market_cap_gbp_b": 517.704,
+      "market_cap_usd_b": 695.39,
       "beta": 1.394,
       "pe_ratio": 59.88,
       "avg_volume_m": 1.93,
@@ -848,6 +848,13 @@ window.PRICES_DATA = {
       "vol_1w": 9478200,
       "vol_1m": 44757500,
       "news": [
+        {
+          "title": "European shares muted on AI valuation concerns; Middle East tensions linger",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-shares-muted-ai-valuation-073328922.html",
+          "published": 1783668808,
+          "sentiment": -0.128
+        },
         {
           "title": "ASML (ASML) Outperforms Broader Market: What You Need to Know",
           "publisher": "Zacks",
@@ -875,16 +882,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/bernstein-raises-price-target-asml-164506322.html",
           "published": 1783615506,
           "sentiment": 0.0
-        },
-        {
-          "title": "European Stocks Rise at Open as Tech, Banks Recover",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-070926/card/european-stocks-rise-at-open-as-tech-banks-recover-Em6zyeyUrkaMHKZXf9uH?siteid=yhoof2&yptr=yahoo",
-          "published": 1783585263,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.073
+      "news_sentiment": 0.047
     },
     {
       "ticker": "MU",
@@ -893,7 +893,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "738",
       "price_usd": 991.64,
-      "change_1d": "+3.54%",
+      "change_1d": "-1.08%",
       "change_1w": "-3.92%",
       "change_1m": "+11.20%",
       "change_ytd": "+214.57%",
@@ -903,12 +903,12 @@ window.PRICES_DATA = {
       "high_gbp": "934",
       "high_usd": 1255.0,
       "bar_pct": 77,
-      "market_cap_gbp_b": 833.882,
+      "market_cap_gbp_b": 833.781,
       "market_cap_usd_b": 1119.951,
       "beta": 2.142,
-      "pe_ratio": 21.46,
+      "pe_ratio": 22.42,
       "avg_volume_m": 51.29,
-      "div_yield_pct": 6.0,
+      "div_yield_pct": 5.0,
       "short_pct": 3.69,
       "analyst": "strong_buy",
       "analyst_score": 1.42,
@@ -917,11 +917,18 @@ window.PRICES_DATA = {
       "vol_1m": 1096788100,
       "news": [
         {
-          "title": "Micron, Sandisk, Marvell stocks jump, leading chip sector gains",
+          "title": "Nasdaq's hottest winners just fell behind: Chart of the Day",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/micron-sandisk-marvell-stocks-jump-leading-chip-sector-gains-135433074.html",
-          "published": 1783605273,
-          "sentiment": 0.34
+          "url": "https://finance.yahoo.com/markets/article/nasdaqs-hottest-winners-just-fell-behind-chart-of-the-day-100000829.html",
+          "published": 1783677600,
+          "sentiment": 0.477
+        },
+        {
+          "title": "SK Hynix is the talk of the town. Is IPO day the right time to buy?",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/sk-hynix-talk-town-ipo-155738106.html",
+          "published": 1783612658,
+          "sentiment": 0.0
         },
         {
           "title": "Nvidia's nearly $1 trillion wipeout could prompt this bullish action",
@@ -931,28 +938,21 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Wall Street's next AI trade is smaller than a grain of rice: One Big Idea",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/wall-streets-next-ai-trade-is-smaller-than-a-grain-of-rice-one-big-idea-100100993.html",
-          "published": 1783591320,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Micron's Data Center Gross Margin Hit 87% Last Quarter. Here's What It Means for the Stock.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/09/microns-data-center-gross-margin-hit-87-last-quart/",
-          "published": 1783653900,
-          "sentiment": -0.477
-        },
-        {
-          "title": "Dow Jones Futures: SK Hynix Raises $26.5 Billion After Micron, Sandisk Jump, Nasdaq Tops Key Level",
+          "title": "Dow Jones Futures Rise, Techs Fall; Delta Gains On Guidance, SK Hynix Raises $26.5 Billion; Micron, Sandisk Slide",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nasdaq-micron-sandisk-jump-delta-taiwan-semi-sk-hynix/?src=A00220&yptr=yahoo",
-          "published": 1783652999,
-          "sentiment": 0.511
+          "published": 1783680942,
+          "sentiment": 0.34
+        },
+        {
+          "title": "SK Hynix Raises $26.5 Billion In U.S. Listing; Memory Giants Micron, Sandisk Fall",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/news/technology/sk-hynix-stock-raises-26-5-billion-u-s-listing-memory-giants-micron-sandisk-rise/?src=A00220&yptr=yahoo",
+          "published": 1783680131,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.075
+      "news_sentiment": 0.163
     },
     {
       "ticker": "AMAT",
@@ -961,7 +961,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "438",
       "price_usd": 588.66,
-      "change_1d": "+2.02%",
+      "change_1d": "-1.53%",
       "change_1w": "-9.56%",
       "change_1m": "+18.44%",
       "change_ytd": "+119.48%",
@@ -971,12 +971,12 @@ window.PRICES_DATA = {
       "high_gbp": "551",
       "high_usd": 739.67,
       "bar_pct": 74,
-      "market_cap_gbp_b": 347.991,
+      "market_cap_gbp_b": 347.949,
       "market_cap_usd_b": 467.372,
       "beta": 1.567,
       "pe_ratio": 53.76,
       "avg_volume_m": 9.23,
-      "div_yield_pct": 37.0,
+      "div_yield_pct": 36.0,
       "short_pct": 2.77,
       "analyst": "strong_buy",
       "analyst_score": 1.49,
@@ -984,6 +984,13 @@ window.PRICES_DATA = {
       "vol_1w": 58172300,
       "vol_1m": 265278000,
       "news": [
+        {
+          "title": "Stocks to Watch: SK Hynix, EasyJet, Vodafone",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-07-10-2026/card/stocks-to-watch-sk-hynix-easyjet-vodafone-9jRubZCK4RwBfuX2M50M?siteid=yhoof2&yptr=yahoo",
+          "published": 1783675129,
+          "sentiment": 0.0
+        },
         {
           "title": "US stocks end higher; chip surge offsets Iran worries",
           "publisher": "Reuters Videos",
@@ -1011,13 +1018,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-set-open-higher-131606821.html",
           "published": 1783628196,
           "sentiment": -0.421
-        },
-        {
-          "title": "Why Meta\u2019s In-House AI Chip Plans Sent Chip-Equipment Stocks Soaring",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/applied-materials-lam-research-meta-ai-chip-10398bf4?siteid=yhoof2&yptr=yahoo",
-          "published": 1783627020,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.249
@@ -1029,7 +1029,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "107",
       "price_usd": 144.22,
-      "change_1d": "+2.10%",
+      "change_1d": "-0.43%",
       "change_1w": "+1.21%",
       "change_1m": "-28.34%",
       "change_ytd": "-25.86%",
@@ -1039,12 +1039,12 @@ window.PRICES_DATA = {
       "high_gbp": "257",
       "high_usd": 345.72,
       "bar_pct": 5,
-      "market_cap_gbp_b": 309.31,
+      "market_cap_gbp_b": 309.273,
       "market_cap_usd_b": 415.421,
       "beta": 1.712,
-      "pe_ratio": 24.08,
+      "pe_ratio": 24.74,
       "avg_volume_m": 29.97,
-      "div_yield_pct": 142.0,
+      "div_yield_pct": 139.0,
       "short_pct": 2.19,
       "analyst": "buy",
       "analyst_score": 1.51,
@@ -1058,6 +1058,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/video/ai-could-cause-huge-electricity-201410692.html",
           "published": 1783628050,
           "sentiment": 0.318
+        },
+        {
+          "title": "UK to regulate cloud service providers Microsoft, Google and others to protect financial stability",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/articles/uk-regulate-cloud-providers-microsoft-101817675.html",
+          "published": 1783678806,
+          "sentiment": 0.382
         },
         {
           "title": "S&P 500, Nasdaq, Dow End Higher Led By Chipmaker Stocks As Investors Look Past US-Iran Hostility \u2014 ORCL, SBUX, WULF, PANW, FATE In Focus",
@@ -1079,16 +1086,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/oracle-stock-shrugs-off-p-185346661.html",
           "published": 1783623226,
           "sentiment": -0.631
-        },
-        {
-          "title": "Why Is Palantir Stock Falling Today",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palantir-stock-falling-today-181529051.html",
-          "published": 1783620929,
-          "sentiment": -0.153
         }
       ],
-      "news_sentiment": -0.125
+      "news_sentiment": -0.018
     },
     {
       "ticker": "CRM",
@@ -1097,7 +1097,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "121",
       "price_usd": 162.5,
-      "change_1d": "-1.99%",
+      "change_1d": "+0.43%",
       "change_1w": "-0.45%",
       "change_1m": "-4.68%",
       "change_ytd": "-35.60%",
@@ -1107,12 +1107,12 @@ window.PRICES_DATA = {
       "high_gbp": "204",
       "high_usd": 274.0,
       "bar_pct": 13,
-      "market_cap_gbp_b": 99.093,
+      "market_cap_gbp_b": 99.081,
       "market_cap_usd_b": 133.088,
       "beta": 1.178,
       "pe_ratio": 19.3,
       "avg_volume_m": 15.08,
-      "div_yield_pct": 106.0,
+      "div_yield_pct": 108.0,
       "short_pct": 8.34,
       "analyst": "buy",
       "analyst_score": 1.63,
@@ -1135,6 +1135,13 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Can DocuSign\u2019s (DOCU) Iris AI Push It From E-Signature Tool To Core Workflow Platform?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/docusign-docu-iris-ai-push-081133763.html",
+          "published": 1783671093,
+          "sentiment": 0.0
+        },
+        {
           "title": "Salesforce (CRM) Stock Sinks As Market Gains: Here's Why",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-crm-stock-sinks-market-214505045.html",
@@ -1147,13 +1154,6 @@ window.PRICES_DATA = {
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-07-09-2026/card/stocks-to-watch-levi-strauss-pepsico-astrazeneca-ZzQtATlnpm26Cd3dKfnN?siteid=yhoof2&yptr=yahoo",
           "published": 1783632529,
           "sentiment": 0.0
-        },
-        {
-          "title": "Datadog, IBD Stock Of The Day, Breaks Away From Software Pack",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/research/ibd-stock-of-the-day/datadog-stock-ddog-artificial-intelligence-observability/?src=A00220&yptr=yahoo",
-          "published": 1783630296,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.068
@@ -1165,7 +1165,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "166",
       "price_usd": 222.65,
-      "change_1d": "+1.14%",
+      "change_1d": "+0.28%",
       "change_1w": "+5.53%",
       "change_1m": "-4.60%",
       "change_ytd": "-33.20%",
@@ -1175,10 +1175,10 @@ window.PRICES_DATA = {
       "high_gbp": "280",
       "high_usd": 376.16,
       "bar_pct": 17,
-      "market_cap_gbp_b": 65.897,
+      "market_cap_gbp_b": 65.889,
       "market_cap_usd_b": 88.503,
       "beta": 1.433,
-      "pe_ratio": 12.64,
+      "pe_ratio": 12.74,
       "avg_volume_m": 6.46,
       "div_yield_pct": null,
       "short_pct": 5.88,
@@ -1188,6 +1188,20 @@ window.PRICES_DATA = {
       "vol_1w": 30377300,
       "vol_1m": 179778000,
       "news": [
+        {
+          "title": "3 Tech Stocks Poised for Comebacks",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/10/3-tech-stocks-poised-for-comebacks/",
+          "published": 1783678800,
+          "sentiment": 0.25
+        },
+        {
+          "title": "Figma CEO Says He\u2019s \u2018Never Been More Bullish\u2019 As AI Vs Design Debate Intensifies",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/figma-ceo-says-he-s-never-been-more-bullish-as-ai-vs-design-debate-intensifies/cZmAvk2R7FK",
+          "published": 1783666159,
+          "sentiment": 0.0
+        },
         {
           "title": "Salesforce Downgrade Sparks Slide in Software Stocks",
           "publisher": "The Wall Street Journal",
@@ -1208,23 +1222,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/week-e-commerce-shopifys-q2-123743922.html",
           "published": 1783600663,
           "sentiment": 0.0
-        },
-        {
-          "title": "Winning Trade of Buying Chips, Selling Software Is Falling Apart",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/winning-trade-buying-chips-selling-111446839.html",
-          "published": 1783595686,
-          "sentiment": 0.421
-        },
-        {
-          "title": "Adobe (ADBE) to Acquire Topaz Labs",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/adobe-adbe-acquire-topaz-labs-204751561.html",
-          "published": 1783543671,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.039
+      "news_sentiment": 0.005
     },
     {
       "ticker": "NOW",
@@ -1233,17 +1233,17 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "81",
       "price_usd": 108.84,
-      "change_1d": "+1.08%",
+      "change_1d": "+0.01%",
       "change_1w": "+2.87%",
       "change_1m": "+2.62%",
       "change_ytd": "-26.19%",
       "return_1yr": "-44%",
       "low_gbp": "60",
       "low_usd": 81.24,
-      "high_gbp": "157",
+      "high_gbp": "156",
       "high_usd": 210.2,
       "bar_pct": 21,
-      "market_cap_gbp_b": 83.576,
+      "market_cap_gbp_b": 83.566,
       "market_cap_usd_b": 112.247,
       "beta": 0.959,
       "pe_ratio": 64.02,
@@ -1301,7 +1301,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "199",
       "price_usd": 267.49,
-      "change_1d": "+2.51%",
+      "change_1d": "+0.04%",
       "change_1w": "+2.41%",
       "change_1m": "+11.50%",
       "change_ytd": "+23.43%",
@@ -1311,8 +1311,8 @@ window.PRICES_DATA = {
       "high_gbp": "212",
       "high_usd": 284.99,
       "bar_pct": 90,
-      "market_cap_gbp_b": 69.031,
-      "market_cap_usd_b": 92.713,
+      "market_cap_gbp_b": 69.022,
+      "market_cap_usd_b": 92.712,
       "beta": 1.353,
       "pe_ratio": null,
       "avg_volume_m": 8.88,
@@ -1369,7 +1369,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "204",
       "price_usd": 273.38,
-      "change_1d": "+0.07%",
+      "change_1d": "+0.13%",
       "change_1w": "+2.81%",
       "change_1m": "-3.39%",
       "change_ytd": "-56.16%",
@@ -1379,7 +1379,7 @@ window.PRICES_DATA = {
       "high_gbp": "606",
       "high_usd": 813.7,
       "bar_pct": 4,
-      "market_cap_gbp_b": 55.679,
+      "market_cap_gbp_b": 55.672,
       "market_cap_usd_b": 74.78,
       "beta": 0.996,
       "pe_ratio": 16.61,
@@ -1437,7 +1437,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "148",
       "price_usd": 198.4,
-      "change_1d": "+4.14%",
+      "change_1d": "+0.22%",
       "change_1w": "+2.70%",
       "change_1m": "+22.52%",
       "change_ytd": "+74.96%",
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "high_gbp": "156",
       "high_usd": 209.5,
       "bar_pct": 91,
-      "market_cap_gbp_b": 150.42,
+      "market_cap_gbp_b": 150.402,
       "market_cap_usd_b": 202.023,
       "beta": 1.237,
       "pe_ratio": null,
@@ -1505,7 +1505,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "252",
       "price_usd": 338.31,
-      "change_1d": "+5.35%",
+      "change_1d": "+0.42%",
       "change_1w": "-3.90%",
       "change_1m": "+28.53%",
       "change_ytd": "+88.61%",
@@ -1515,7 +1515,7 @@ window.PRICES_DATA = {
       "high_gbp": "274",
       "high_usd": 368.17,
       "bar_pct": 87,
-      "market_cap_gbp_b": 205.295,
+      "market_cap_gbp_b": 205.27,
       "market_cap_usd_b": 275.723,
       "beta": 0.908,
       "pe_ratio": 277.3,
@@ -1528,6 +1528,13 @@ window.PRICES_DATA = {
       "vol_1w": 43202400,
       "vol_1m": 157110100,
       "news": [
+        {
+          "title": "1 Profitable Stock with Exciting Potential and 2 We Ignore",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-exciting-potential-095920441.html",
+          "published": 1783677560,
+          "sentiment": 0.557
+        },
         {
           "title": "Akamai Just Found The Magic Word",
           "publisher": "Trefis",
@@ -1555,16 +1562,9 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/research/ibd-stock-of-the-day/datadog-stock-ddog-artificial-intelligence-observability/?src=A00220&yptr=yahoo",
           "published": 1783630296,
           "sentiment": 0.0
-        },
-        {
-          "title": "PANW, OpenAI, Anthropic In Focus \u2014 Nikesh Arora Says Wider AI Adoption Needs 90% Lower Token Costs",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/panw-open-ai-anthropic-in-focus-nikesh-arora-says-wider-ai-adoption-needs-90-lower-token-costs/cZmYe4tR7nx",
-          "published": 1783626535,
-          "sentiment": -0.296
         }
       ],
-      "news_sentiment": -0.287
+      "news_sentiment": -0.117
     },
     {
       "ticker": "NET",
@@ -1573,7 +1573,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "205",
       "price_usd": 275.8,
-      "change_1d": "+1.05%",
+      "change_1d": "-0.11%",
       "change_1w": "+11.97%",
       "change_1m": "+25.55%",
       "change_ytd": "+40.70%",
@@ -1583,8 +1583,8 @@ window.PRICES_DATA = {
       "high_gbp": "208",
       "high_usd": 278.88,
       "bar_pct": 97,
-      "market_cap_gbp_b": 72.888,
-      "market_cap_usd_b": 97.893,
+      "market_cap_gbp_b": 72.879,
+      "market_cap_usd_b": 97.892,
       "beta": 1.671,
       "pe_ratio": null,
       "avg_volume_m": 4.34,
@@ -1641,7 +1641,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "122",
       "price_usd": 163.73,
-      "change_1d": "+4.62%",
+      "change_1d": "+0.15%",
       "change_1w": "+2.99%",
       "change_1m": "+17.89%",
       "change_ytd": "+110.23%",
@@ -1651,7 +1651,7 @@ window.PRICES_DATA = {
       "high_gbp": "122",
       "high_usd": 164.01,
       "bar_pct": 99,
-      "market_cap_gbp_b": 89.316,
+      "market_cap_gbp_b": 89.305,
       "market_cap_usd_b": 119.956,
       "beta": 1.09,
       "pe_ratio": 60.64,
@@ -1709,7 +1709,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "56",
       "price_usd": 75.47,
-      "change_1d": "-0.18%",
+      "change_1d": "+1.25%",
       "change_1w": "+1.73%",
       "change_1m": "-7.96%",
       "change_ytd": "-17.06%",
@@ -1719,10 +1719,10 @@ window.PRICES_DATA = {
       "high_gbp": "95",
       "high_usd": 127.75,
       "bar_pct": 8,
-      "market_cap_gbp_b": 236.616,
-      "market_cap_usd_b": 317.789,
+      "market_cap_gbp_b": 236.588,
+      "market_cap_usd_b": 317.79,
       "beta": 1.517,
-      "pe_ratio": 24.42,
+      "pe_ratio": 24.35,
       "avg_volume_m": 41.89,
       "div_yield_pct": null,
       "short_pct": 2.41,
@@ -1777,7 +1777,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "92",
       "price_usd": 123.17,
-      "change_1d": "+3.35%",
+      "change_1d": "-0.86%",
       "change_1w": "+1.27%",
       "change_1m": "+13.84%",
       "change_ytd": "-21.65%",
@@ -1787,10 +1787,10 @@ window.PRICES_DATA = {
       "high_gbp": "136",
       "high_usd": 182.19,
       "bar_pct": 33,
-      "market_cap_gbp_b": 119.006,
+      "market_cap_gbp_b": 118.992,
       "market_cap_usd_b": 159.832,
       "beta": 2.585,
-      "pe_ratio": 116.2,
+      "pe_ratio": 120.75,
       "avg_volume_m": 10.36,
       "div_yield_pct": null,
       "short_pct": 1.73,
@@ -1855,10 +1855,10 @@ window.PRICES_DATA = {
       "high_gbp": "557",
       "high_usd": 748.3,
       "bar_pct": 24,
-      "market_cap_gbp_b": 74.388,
+      "market_cap_gbp_b": 74.379,
       "market_cap_usd_b": 99.907,
       "beta": 1.564,
-      "pe_ratio": 33.01,
+      "pe_ratio": 33.12,
       "avg_volume_m": 2.19,
       "div_yield_pct": null,
       "short_pct": 4.91,
@@ -1913,7 +1913,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "55",
       "price_usd": 74.35,
-      "change_1d": "+1.09%",
+      "change_1d": "+0.04%",
       "change_1w": "+2.33%",
       "change_1m": "+8.37%",
       "change_ytd": "-10.27%",
@@ -1923,8 +1923,8 @@ window.PRICES_DATA = {
       "high_gbp": "76",
       "high_usd": 101.99,
       "bar_pct": 21,
-      "market_cap_gbp_b": 112.688,
-      "market_cap_usd_b": 151.346,
+      "market_cap_gbp_b": 112.675,
+      "market_cap_usd_b": 151.347,
       "beta": 1.113,
       "pe_ratio": 18.27,
       "avg_volume_m": 19.59,
@@ -1941,13 +1941,6 @@ window.PRICES_DATA = {
           "publisher": "Yahoo Finance Video",
           "url": "https://finance.yahoo.com/video/why-ai-spending-beginning-hit-200500299.html",
           "published": 1783627500,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Lyft CEO on surge pricing, robotaxis, and Bezos",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/lyft-ceo-surge-pricing-robotaxis-100000189.html",
-          "published": 1783591200,
           "sentiment": 0.0
         },
         {
@@ -1970,6 +1963,13 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/07/09/tbpns-john-coogan-people-cant-really-complain-heres-why-blue-origin-is-worth-130-billion/",
           "published": 1783626063,
           "sentiment": 0.226
+        },
+        {
+          "title": "$5.8 Billion in Buybacks\u2014But What Did Avis Stock Actually Buy?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/606396/5-8-billion-in-buybacks-but-what-did-avis-stock-actually-buy/2026-07-09",
+          "published": 1783602825,
+          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.045
@@ -1981,7 +1981,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "88",
       "price_usd": 118.31,
-      "change_1d": "+3.82%",
+      "change_1d": "+0.05%",
       "change_1w": "+1.49%",
       "change_1m": "-0.04%",
       "change_ytd": "+57.02%",
@@ -1991,10 +1991,10 @@ window.PRICES_DATA = {
       "high_gbp": "97",
       "high_usd": 130.37,
       "bar_pct": 81,
-      "market_cap_gbp_b": 347.201,
+      "market_cap_gbp_b": 347.159,
       "market_cap_usd_b": 466.311,
       "beta": 1.007,
-      "pe_ratio": 37.92,
+      "pe_ratio": 39.31,
       "avg_volume_m": 24.55,
       "div_yield_pct": 148.0,
       "short_pct": 1.57,
@@ -2005,11 +2005,11 @@ window.PRICES_DATA = {
       "vol_1m": 506629200,
       "news": [
         {
-          "title": "Dow Jones Futures: SK Hynix Raises $26.5 Billion After Micron, Sandisk Jump, Nasdaq Tops Key Level",
+          "title": "Dow Jones Futures Rise, Techs Fall; Delta Gains On Guidance, SK Hynix Raises $26.5 Billion; Micron, Sandisk Slide",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nasdaq-micron-sandisk-jump-delta-taiwan-semi-sk-hynix/?src=A00220&yptr=yahoo",
-          "published": 1783652999,
-          "sentiment": 0.511
+          "published": 1783680942,
+          "sentiment": 0.34
         },
         {
           "title": "Why Did Ciena Stock Gain 460%?",
@@ -2040,7 +2040,7 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.197
+      "news_sentiment": 0.163
     },
     {
       "ticker": "PLTR",
@@ -2049,17 +2049,17 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "96",
       "price_usd": 129.04,
-      "change_1d": "-1.86%",
+      "change_1d": "+0.22%",
       "change_1w": "+2.63%",
       "change_1m": "-0.90%",
       "change_ytd": "-23.13%",
       "return_1yr": "-7%",
       "low_gbp": "79",
       "low_usd": 106.37,
-      "high_gbp": "155",
+      "high_gbp": "154",
       "high_usd": 207.52,
       "bar_pct": 22,
-      "market_cap_gbp_b": 230.332,
+      "market_cap_gbp_b": 230.304,
       "market_cap_usd_b": 309.349,
       "beta": 1.562,
       "pe_ratio": 150.05,
@@ -2072,6 +2072,20 @@ window.PRICES_DATA = {
       "vol_1w": 226320300,
       "vol_1m": 892608400,
       "news": [
+        {
+          "title": "Palantir Stock Is Down 36% From Its All-Time High. Time to Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/10/palantir-stock-is-down-36-from-its-all-time-high-t/",
+          "published": 1783679100,
+          "sentiment": 0.0
+        },
+        {
+          "title": "1 Cash-Heavy Stock with Impressive Fundamentals and 2 Facing Challenges",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/1-cash-heavy-stock-impressive-090316087.html",
+          "published": 1783674196,
+          "sentiment": 0.557
+        },
         {
           "title": "Stocks to Watch: PepsiCo, Salesforce, AstraZeneca",
           "publisher": "The Wall Street Journal",
@@ -2092,23 +2106,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/rackspace-stock-offering-overshadows-ai-185704558.html",
           "published": 1783623424,
           "sentiment": 0.0
-        },
-        {
-          "title": "Here's How Much More Upside Is Left in Palantir Stock, According to Wall Street Analysts",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/09/how-much-more-upside-palantir-stock-analyst/",
-          "published": 1783622220,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why Is Palantir Stock Falling Today",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palantir-stock-falling-today-181529051.html",
-          "published": 1783620929,
-          "sentiment": -0.153
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.142
     }
   ]
 };
