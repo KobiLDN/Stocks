@@ -1,9 +1,187 @@
 {
-  "updated": "2026-07-10 11:27",
+  "updated": "2026-07-13 11:27",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "META has strong momentum with +17.84% 1M and +14.81% 1W, a reasonable P/E of 24.33, and a strong_buy analyst consensus (score 1.32), despite slightly negative news sentiment of -0.212.",
+      "drivers": [
+        "+17.84% 1M momentum",
+        "P/E 24.33",
+        "strong_buy consensus",
+        "large cap $1.7T"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "AMD has exceptional YTD return of +149.65% and strong 1M (+14.22%) and 1W (+7.74%) momentum, supported by a strong_buy analyst score of 1.48, though P/E is elevated at 185.35.",
+      "drivers": [
+        "+149.65% YTD",
+        "+14.22% 1M",
+        "strong_buy consensus",
+        "AI chip demand"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "AMAT shows strong YTD return of +124.64% and 1M gain of +9.02%, with a strong_buy analyst score of 1.49, positive news sentiment of 0.175, and a P/E of 56.84.",
+      "drivers": [
+        "+124.64% YTD",
+        "+9.02% 1M",
+        "strong_buy consensus",
+        "positive sentiment 0.175"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "NVDA has solid momentum with +8.28% 1W and +4.27% 1D, a reasonable P/E of 32.26, strong_buy analyst consensus (score 1.30), and positive news sentiment of 0.135.",
+      "drivers": [
+        "+8.28% 1W",
+        "P/E 32.26",
+        "strong_buy consensus",
+        "positive sentiment 0.135"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "AVGO has strong 1W momentum of +10.96% and YTD of +15.48%, with a strong_buy analyst score of 1.31, positive news sentiment of 0.323, and a P/E of 66.66.",
+      "drivers": [
+        "+10.96% 1W",
+        "positive sentiment 0.323",
+        "strong_buy consensus",
+        "AI networking demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "NET has strong momentum with +18.01% 1M and +10.72% 1W, YTD of +36.92%, a buy analyst consensus (score 1.88), and positive news sentiment of 0.107, though P/E is not available.",
+      "drivers": [
+        "+18.01% 1M",
+        "+10.72% 1W",
+        "YTD +36.92%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "PANW has impressive YTD return of +81.70% and 1M gain of +16.59%, with a buy analyst score of 1.63 and positive news sentiment of 0.15, though P/E is high at 285.89.",
+      "drivers": [
+        "+81.70% YTD",
+        "+16.59% 1M",
+        "buy consensus",
+        "cybersecurity leader"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.844,
+      "rationale": "FTNT has strong YTD return of +102.25% and 1M gain of +8.58%, with a P/E of 61.05 and positive news sentiment of 0.077, but analyst consensus is hold (score 2.75).",
+      "drivers": [
+        "+102.25% YTD",
+        "+8.58% 1M",
+        "P/E 61.05",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CRWD has strong YTD return of +65.07% and 1M gain of +8.27%, with a buy analyst score of 1.67 and positive news sentiment of 0.108, though P/E is not available and recent 1D is -5.45%.",
+      "drivers": [
+        "+65.07% YTD",
+        "+8.27% 1M",
+        "buy consensus",
+        "positive sentiment 0.108"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "UBER",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "UBER has a strong_buy analyst consensus (score 1.48), a low P/E of 18.5, positive news sentiment of 0.127, and recent 1M momentum of +7.17%, despite negative YTD of -10.04%.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 18.5",
+        "positive sentiment 0.127",
+        "+7.17% 1M"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.846,
+      "ytd": "+210.65%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +210.65% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +210.65% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "ytd": "+181.87%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +181.87% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +181.87% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.718,
+      "ytd": "+178.92%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +178.92% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +178.92% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.503,
+      "ytd": "+61.00%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +61.00% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +61.00% \u2265 60.6% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MU",
@@ -132,162 +310,6 @@
         "buy consensus",
         "positive sentiment 0.09",
         "recovery potential"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.746,
-      "ytd": "+185.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +185.78% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +185.78% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.746,
-      "ytd": "+185.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +185.78% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +185.78% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NET",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Up 9.73% today on a Scotiabank upgrade to Sector Outperform with a $300 target, citing Workers platform as default for AI applications and traffic trends that historically lead revenue by ~3 quarters. YTD +37.14%, 1M +8.49%, and positive news sentiment 0.201.",
-      "drivers": [
-        "Scotiabank upgrade to $300",
-        "Workers platform AI tailwind",
-        "Traffic inflection for 2H26 beat-and-raise",
-        "1D +9.73% momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CRWD",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "UBS raised price target to $235 on AI-driven growth cycle; YTD +71.63%, 1M +18.17%, revenue grew 23% LTM with 30 analyst EPS revisions up. News sentiment neutral but catalyst-rich.",
-      "drivers": [
-        "UBS target raise to $235",
-        "AI-driven growth cycle",
-        "1M +18.17% momentum",
-        "30 analyst EPS revisions up"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PANW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +87.90%, 1M +26.55%, news sentiment 0.242 with a Seeking Alpha 'Buy' thesis citing platformization, CyberArk acquisition, and $20B NGS ARR target by FY2030. Strong momentum and AI attack-surface tailwind.",
-      "drivers": [
-        "YTD +87.90%",
-        "1M +26.55% momentum",
-        "Platformization & CyberArk deal",
-        "AI attack-surface tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Launched Muse Image generation model with coding and search capabilities; P/E 21.84 is attractive for mega-cap, 1W +9.42%, 1D +2.52%, analyst consensus strong_buy with score 1.32.",
-      "drivers": [
-        "Muse Image model launch",
-        "P/E 21.84 value",
-        "1W +9.42% momentum",
-        "Strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.856,
-      "rationale": "YTD +103.74%, 1M +10.93%, P/E 62.96 with strong AI-driven demand; analyst hold rating (2.75) is a caution but momentum and news sentiment 0.094 support continued upside.",
-      "drivers": [
-        "YTD +103.74%",
-        "1M +10.93% momentum",
-        "AI-driven cybersecurity demand",
-        "Strong price action"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +10.02%, 1W +6.72%, news sentiment 0.326 with positive analyst coverage; P/E 117.19 is elevated but YTD -22.47% offers a pullback entry in a strong software franchise.",
-      "drivers": [
-        "1M +10.02% momentum",
-        "Positive news sentiment 0.326",
-        "Pullback YTD -22.47%",
-        "Strong software franchise"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SNOW",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "YTD +21.24%, 1M +9.27%, news sentiment 0.28 with ISG report highlighting enterprise-AI data layer role; no P/E but strong revenue growth and analyst upgrade potential.",
-      "drivers": [
-        "YTD +21.24%",
-        "1M +9.27% momentum",
-        "Enterprise-AI data layer role",
-        "Positive news sentiment 0.28"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "UBER",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "P/E 18.0 is attractive, analyst consensus strong_buy with score 1.48, news sentiment 0.179, and BTIG maintains Buy rating. 1M +6.09% shows steady momentum.",
-      "drivers": [
-        "P/E 18.0 value",
-        "Strong_buy consensus",
-        "1M +6.09% momentum",
-        "BTIG Buy rating"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "YTD +130.95%, 1M +5.26%, analyst strong_buy with score 1.45; P/E 184.99 is high but 1-year return +274% reflects AI GPU demand. News sentiment slightly negative (-0.03) but long-term AI tailwind intact.",
-      "drivers": [
-        "YTD +130.95%",
-        "Strong_buy consensus",
-        "AI GPU demand",
-        "1M +5.26% momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AMAT",
-      "signal": "buy",
-      "confidence": 0.881,
-      "rationale": "YTD +106.75%, 1M +12.66%, analyst strong_buy with score 1.49; P/E 55.84 reflects semiconductor equipment demand. Recent 1W -20.17% pullback offers entry, news sentiment slightly negative (-0.01).",
-      "drivers": [
-        "YTD +106.75%",
-        "1M +12.66% momentum",
-        "Strong_buy consensus",
-        "Pullback entry opportunity"
       ]
     }
   ]

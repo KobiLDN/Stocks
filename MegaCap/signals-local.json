@@ -1,9 +1,165 @@
 {
-  "updated": "2026-07-10 11:29",
+  "updated": "2026-07-13 11:29",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "AMD has surged +281% over 1 year and +149.65% YTD, with a strong buy analyst consensus (score 1.48) and 1M momentum of +14.22%, driven by AI chip demand tailwinds.",
+      "drivers": [
+        "+149.65% YTD",
+        "strong_buy consensus (1.48)",
+        "1M +14.22% momentum",
+        "AI infrastructure investment theme"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "META shows accelerating momentum with 1M +17.84% and 1W +14.81%, a strong_buy rating (score 1.32), and a reasonable P/E of 24.33, with positive AI ad platform catalysts.",
+      "drivers": [
+        "1W +14.81% momentum",
+        "strong_buy consensus (1.32)",
+        "P/E 24.33 attractive",
+        "AI ad revenue tailwinds"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "HSBC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "HSBC has strong momentum (+27.34% YTD, +9.23% 1M), a low P/E of 16.38, a high dividend yield of 3.78%, and benefits from rising global interest rates and emerging market exposure.",
+      "drivers": [
+        "+27.34% YTD",
+        "P/E 16.38 value",
+        "dividend yield 3.78%",
+        "global bank earnings cycle"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MA",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Mastercard has rebounded +8.45% in the last month, carries a strong_buy analyst score of 1.34, and benefits from resilient consumer spending trends and payment network growth.",
+      "drivers": [
+        "1M +8.45% rebound",
+        "strong_buy consensus (1.34)",
+        "P/E 30.48 fair",
+        "consumer spending resilient"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "V",
+      "signal": "strong_buy",
+      "confidence": 0.76,
+      "rationale": "Visa has gained +9.38% over the last month, maintains a strong_buy consensus (1.37), and is supported by steady consumer transaction volumes and a low beta of 0.754.",
+      "drivers": [
+        "1M +9.38% momentum",
+        "strong_buy consensus (1.37)",
+        "low beta 0.754",
+        "payment network scale"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Novo Nordisk has surged +12.56% in the past month, offers a compelling P/E of 11.87 and a 3.64% dividend yield, with GLP-1 drug market dynamics as a key catalyst.",
+      "drivers": [
+        "1M +12.56% momentum",
+        "P/E 11.87 attractive",
+        "dividend yield 3.64%",
+        "GLP-1 pipeline momentum"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Thermo Fisher posted a +10.92% monthly gain, has a buy consensus (1.61), a reasonable P/E of 28.99, and a catalyst from winning FBI approval for its rapid DNA tool.",
+      "drivers": [
+        "1M +10.92% gain",
+        "FBI DNA tool approval",
+        "P/E 28.99 reasonable",
+        "buy consensus (1.61)"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ABBV",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "AbbVie gained +10.37% in the last month despite a recent pullback, supported by a 2.79% dividend yield and the $10.9B Apogee deal strengthening its pipeline, with a buy analyst score of 1.74.",
+      "drivers": [
+        "1M +10.37% momentum",
+        "dividend yield 2.79%",
+        "Apogee acquisition catalyst",
+        "buy consensus (1.74)"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BAC",
+      "signal": "strong_buy",
+      "confidence": 0.74,
+      "rationale": "Bank of America has a strong_buy rating (1.50), +7.81% YTD, a low P/E of 14.81, and a high dividend yield of 1.88%, benefitting from a steep yield curve and big bank earnings season.",
+      "drivers": [
+        "strong_buy consensus (1.50)",
+        "P/E 14.81 value",
+        "dividend yield 1.88%",
+        "bank earnings catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "GE",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "GE Aerospace has a strong_buy consensus (1.50), +12.31% YTD, and +8.10% monthly momentum, with aerospace and defence demand as a key catalyst amid geopolitical tensions.",
+      "drivers": [
+        "strong_buy consensus (1.50)",
+        "1M +8.10% momentum",
+        "aerospace & defence demand",
+        "geopolitical catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "ytd": "+181.87%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +181.87% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +181.87% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.718,
+      "ytd": "+178.92%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +178.92% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +178.92% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMD",
@@ -132,162 +288,6 @@
         "+8.96% 1-month gain",
         "FBI Rapid DNA approval",
         "positive news sentiment"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.746,
-      "ytd": "+185.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +185.78% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +185.78% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.746,
-      "ytd": "+185.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +185.78% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +185.78% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "JNJ leads with +30.31% YTD and +15.11% 1-month momentum, supported by a diversified earnings engine beyond talc [alphastreet.com](https://news.alphastreet.com/johnson-johnson-jnj-has-a-diversified-earnings-engine-bigger-than-talc/), a low beta of 0.235, and a 2.07% dividend yield.",
-      "drivers": [
-        "+30% YTD",
-        "+15% 1M",
-        "low beta 0.235",
-        "diversified healthcare"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BAC",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "BAC shows strong momentum (+11.62% 1M, +7.59% YTD) with a low P/E of 14.85, a 1.87% dividend yield, and a strong_buy consensus; the Fiserv debit network deal could reshape payment fees.",
-      "drivers": [
-        "+11.6% 1M",
-        "P/E 14.85",
-        "strong_buy consensus",
-        "Fiserv deal catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Visa benefits from a strong_buy rating (an_score 1.37), +10.18% 1-month momentum, positive news sentiment (0.20), and a low beta of 0.754, with payment volumes supported by consumer spending.",
-      "drivers": [
-        "+10.2% 1M",
-        "strong_buy",
-        "beta 0.754",
-        "payment network tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.76,
-      "rationale": "Mastercard has a strong_buy consensus (an_score 1.32), +9.46% 1-month gain, the highest news sentiment (0.242) among payments peers, and low short interest of 0.76%.",
-      "drivers": [
-        "+9.5% 1M",
-        "strong_buy",
-        "sentiment 0.242",
-        "low short interest"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "JPM",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "JPMorgan combines +9.53% 1-month momentum with a low P/E of 16.15, a 1.78% dividend yield, and a buy rating; the bank benefits from a favorable rate environment and strong capital markets.",
-      "drivers": [
-        "+9.5% 1M",
-        "P/E 16.15",
-        "div yield 1.78%",
-        "rate tailwind"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "GE",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "GE Aerospace has a strong_buy rating, +14.72% YTD and +14.10% 1-month returns, driven by defense spending surges and aerospace cycle tailwinds, though sentiment is slightly negative.",
-      "drivers": [
-        "+14.7% YTD",
-        "+14.1% 1M",
-        "strong_buy",
-        "defense spending"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "RTX delivers +12.42% 1-month and +8.07% YTD gains, with a low beta of 0.298, a 1.45% dividend yield, and a buy rating; defense spending and AI battlefield technology provide catalysts.",
-      "drivers": [
-        "+12.4% 1M",
-        "beta 0.298",
-        "div yield 1.45%",
-        "defense catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ABBV",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "AbbVie shows +14.16% 1-month momentum and +12.87% YTD, with very high news sentiment (0.365) and a 2.72% dividend yield; Jefferies highlights it as a high-quality stock to navigate AI concerns [gurufocus.com](https://www.gurufocus.com/news/8947891/highquality-stocks-to-navigate-ai-investment-concerns-abbv-nflx), though P/E is elevated at 124.83.",
-      "drivers": [
-        "+14.2% 1M",
-        "sentiment 0.365",
-        "div yield 2.72%",
-        "Jefferies pick"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "UNH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "UnitedHealth is the best-performing mega-cap healthcare stock in H1 with +29.01% YTD and +5.92% 1-month, supported by a low beta of 0.633, a 2.22% dividend yield, and the highest news sentiment (0.44) in the universe.",
-      "drivers": [
-        "+29% YTD",
-        "sentiment 0.44",
-        "beta 0.633",
-        "top healthcare performer"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "KO",
-      "signal": "buy",
-      "confidence": 0.71,
-      "rationale": "Coca-Cola offers +23.23% YTD and +6.35% 1-month returns, with a low beta of 0.349, a 2.56% dividend yield, and positive news sentiment (0.227), making it a resilient consumer staple play.",
-      "drivers": [
-        "+23% YTD",
-        "beta 0.349",
-        "div yield 2.56%",
-        "consumer staple resilience"
       ]
     }
   ]

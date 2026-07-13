@@ -1,9 +1,137 @@
 {
-  "updated": "2026-07-10 11:26",
+  "updated": "2026-07-13 11:26",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "General Dynamics has strong YTD performance (+10.66%), positive 1M momentum (+4.97%), a reasonable P/E of 23.59, and slightly positive news sentiment (+0.029), benefiting from ongoing geopolitical tensions and increased defence spending. Recent reports indicate an escalating conflict between the U.S. and Iran, boosting demand for GD's combat systems and shipbuilding.",
+      "drivers": [
+        "+10.66% YTD",
+        "P/E 23.59",
+        "positive news sentiment 0.029",
+        "geopolitical risk catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Rolls-Royce shows exceptional momentum (+44% 1Y, +20.17% YTD, +16.60% 1M) with a reasonable P/E of 20.85 and positive news sentiment (+0.205). Strong demand for its aero engines and defence power systems, coupled with the UAE's increased defence spending, drives confidence.",
+      "drivers": [
+        "+44% 1Y return",
+        "+20.17% YTD",
+        "P/E 20.85",
+        "positive news sentiment 0.205"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "RTX has solid 1Y return (+31%) and 1M momentum (+6.36%), supported by a 'buy' analyst consensus (score 1.87). As a leading missile and sensor supplier, RTX is a direct beneficiary of the U.S.-Iran conflict, with recent headlines highlighting potential for a 'devastating U.S. response' and increased defence procurement.",
+      "drivers": [
+        "+31% 1Y return",
+        "+6.36% 1M momentum",
+        "analyst consensus buy (1.87)",
+        "geopolitical tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "HEICO delivers consistent performance (+9% 1Y, +6.64% YTD, +3.49% 1M) with a low short interest (1.51%) and a 'buy' consensus. Its P/E of 62.55 is high but reflects growth expectations in aerospace and defence sustainment; recent geopolitical tensions support increased aftermarket demand.",
+      "drivers": [
+        "+6.64% YTD",
+        "+3.49% 1M momentum",
+        "low short interest 1.51%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Axon has explosive 1M momentum (+26.80%) and positive news sentiment (+0.286). Despite a high P/E of 227.23, the 'buy' analyst consensus (score 1.60) reflects confidence in its public safety technology revenue growth.",
+      "drivers": [
+        "+26.80% 1M momentum",
+        "positive news sentiment 0.286",
+        "buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Boeing offers a 'buy' consensus (score 1.63) with a low short interest (0.02%) and modest YTD drawdown (-2.41%). News sentiment is slightly positive (+0.053), and the company stands to benefit from increased defence aircraft and systems orders due to the Iran conflict.",
+      "drivers": [
+        "buy analyst consensus (1.63)",
+        "low short interest 0.02%",
+        "positive news sentiment 0.053"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Booz Allen Hamilton has attractive value with a P/E of 9.1 and a high dividend yield (376 bps). News sentiment is positive (+0.165), and despite recent weakness, its cyber-intelligence services are critical amid escalating U.S.-Iran cyber operations.",
+      "drivers": [
+        "P/E 9.1",
+        "high dividend yield 376 bps",
+        "positive news sentiment 0.165"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "SAIC shows a strong YTD return (+12.43%), a low P/E of 12.67, and positive news sentiment (+0.075). Recent 1W momentum (+1.83%) indicates a rebound, and its mission IT services are in high demand from the U.S. government.",
+      "drivers": [
+        "+12.43% YTD",
+        "P/E 12.67",
+        "positive news sentiment 0.075",
+        "1W momentum +1.83%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TransDigm has a resilient 1M momentum (+2.68%) and a 'buy' analyst consensus (score 1.82). While its P/E of 40.32 is elevated, the company's aftermarket-focused model provides insulation, and the current geopolitical climate supports increased defence spending.",
+      "drivers": [
+        "+2.68% 1M momentum",
+        "buy consensus (1.82)",
+        "defence aftermarket tailwind"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Northrop Grumman is attractively valued with a P/E of 16.92 and a 'buy' analyst consensus (score 1.96). The stock has dipped YTD (-7.16%) but offers a solid dividend yield (174 bps). News sentiment is negative but the company is a core beneficiary of heightened defence spending due to the Iran conflict.",
+      "drivers": [
+        "P/E 16.92",
+        "buy consensus (1.96)",
+        "dividend yield 174 bps"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RR.L",
@@ -132,139 +260,6 @@
         "analyst buy",
         "turnaround",
         "defence exposure"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "+39% 1Y, +12.42% 1M, analyst buy, P/E 37.75, news sentiment 0.098; web search confirms multiple contract wins (Stinger, AMRAAM, $1.1B AIM-9X), raised FY2026 guidance, and $271B backlog amid record defense budget [congress.net](https://congress.net/defense-stocks-ita-ge-ba-rtx-hwm-hit-new-highs-as-military-ai-spending-race-accelerates/).",
-      "drivers": [
-        "$1.1B AIM-9X contract",
-        "Stinger production doubling",
-        "raised FY2026 guidance",
-        "record defense budget"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "+26% 1Y, +10.39% 1M, analyst buy, P/E 23.7, news sentiment 0.387; strong defense exposure with reasonable valuation and positive momentum.",
-      "drivers": [
-        "26% 1Y return",
-        "P/E 23.7",
-        "positive sentiment 0.387",
-        "10.54% YTD"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LMT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+16% 1Y, +6.63% 1W, P/E 26, analyst hold but news sentiment 0.227; web search highlights $35.3B THAAD contract, $4.8B PAC-3, and record $194B backlog [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/07/05/lockheed-martin-nyse-lmt-northrop-grumman-nyse-noc-and-rtx-nyse-rtx-emerge-as-top-defense-picks-amid-record-budget-tailwinds/).",
-      "drivers": [
-        "$35.3B THAAD contract",
-        "record backlog $194B",
-        "P/E 26",
-        "2.94% 1M"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RR.L",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+56% 1Y, +20.96% YTD, +14.80% 1M, analyst buy, P/E 20.98, news sentiment 0.209; strong momentum with reasonable valuation and UK defense exposure.",
-      "drivers": [
-        "56% 1Y return",
-        "P/E 20.98",
-        "analyst buy",
-        "14.80% 1M"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+10.69% 1W, analyst buy, P/E 17.18, news sentiment 0.227; low beta and attractive valuation benefiting from record defense budget and multi-year contracts.",
-      "drivers": [
-        "P/E 17.18",
-        "1W +10.69%",
-        "analyst buy",
-        "low beta -0.102"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+8.80% YTD, +10.71% 1M, analyst buy, P/E 65.33, news sentiment 0.292; solid momentum in defense electronics with high P/E justified by growth.",
-      "drivers": [
-        "10.71% 1M",
-        "analyst buy",
-        "8.80% YTD",
-        "sentiment 0.292"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AXON",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "+13.67% YTD, +35.96% 1M, analyst buy, P/E 250.18, news sentiment 0.09; extreme short-term momentum despite high valuation, driven by law enforcement/defense demand.",
-      "drivers": [
-        "35.96% 1M",
-        "YTD +13.67%",
-        "analyst buy",
-        "momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+10.23% 1M, analyst buy, P/E 41.5, news sentiment 0.088; defense supplier with recovering momentum and reasonable valuation for the sector.",
-      "drivers": [
-        "10.23% 1M",
-        "analyst buy",
-        "P/E 41.5",
-        "recovery"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MRCY",
-      "signal": "strong_buy",
-      "confidence": 0.5,
-      "rationale": "+123% 1Y, +52.35% YTD, +4.41% 1M, but no analyst rating, high short interest 8.83%; high risk-reward with strong momentum but lack of coverage.",
-      "drivers": [
-        "123% 1Y",
-        "52.35% YTD",
-        "high short interest",
-        "no analyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+31.26% YTD, +11.04% 1W, P/E 42.5, low beta 0.19, news sentiment 0.013; solid YTD performance and low volatility in defense electronics.",
-      "drivers": [
-        "31.26% YTD",
-        "1W +11.04%",
-        "low beta 0.19",
-        "P/E 42.5"
       ]
     }
   ]
