@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-13 22:34",
-  "fx_gbp_usd": 1.3352,
+  "updated": "2026-07-14 07:39",
+  "fx_gbp_usd": 1.3359,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,8 +19,8 @@ window.PRICES_DATA = {
       "high_gbp": "132",
       "high_usd": 176.41,
       "bar_pct": 55,
-      "market_cap_gbp_b": 448.611,
-      "market_cap_usd_b": 598.987,
+      "market_cap_gbp_b": 448.383,
+      "market_cap_usd_b": 598.986,
       "beta": 0.162,
       "pe_ratio": 24.33,
       "avg_volume_m": 17.2,
@@ -28,10 +28,17 @@ window.PRICES_DATA = {
       "short_pct": 1.02,
       "analyst": "buy",
       "analyst_score": 2.29,
-      "vol_1d": 18476067,
-      "vol_1w": 75298967,
-      "vol_1m": 345059467,
+      "vol_1d": 18707700,
+      "vol_1w": 75530600,
+      "vol_1m": 345291100,
       "news": [
+        {
+          "title": "Why ExxonMobil (XOM) Stock Is Up Today",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/energy/articles/why-exxonmobil-xom-stock-today-225439934.html",
+          "published": 1783983279,
+          "sentiment": 0.0
+        },
         {
           "title": "Soaring Energy Profits Won\u2019t Last. Where to Find Bargains Now.",
           "publisher": "Barrons.com",
@@ -59,13 +66,6 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/07/12/after-iran-says-strait-of-hormuz-is-closed-again-oils-risk-to-economy-rises-once-more/",
           "published": 1783861985,
           "sentiment": -0.273
-        },
-        {
-          "title": "This Dividend ETF Choice Could Shape Your Income Strategy Through 2026",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/articles/this-dividend-etf-choice-could-shape-your-income-strategy-through-2026/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1783861500,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.015
@@ -87,7 +87,7 @@ window.PRICES_DATA = {
       "high_gbp": "161",
       "high_usd": 214.71,
       "bar_pct": 52,
-      "market_cap_gbp_b": 271.771,
+      "market_cap_gbp_b": 271.633,
       "market_cap_usd_b": 362.869,
       "beta": 0.488,
       "pe_ratio": 31.8,
@@ -96,10 +96,31 @@ window.PRICES_DATA = {
       "short_pct": 0.95,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 7640248,
-      "vol_1w": 39889948,
-      "vol_1m": 190623748,
+      "vol_1d": 7670400,
+      "vol_1w": 39920100,
+      "vol_1m": 190653900,
       "news": [
+        {
+          "title": "Perryman says data centers can be beneficial with protections",
+          "publisher": "Odessa American, Texas",
+          "url": "https://www.oaoa.com/?p=366403",
+          "published": 1783987260,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Chevron (CVX) Launches AI Data Center Power Venture And Extends Australia Gas Supply",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/chevron-cvx-launches-ai-data-231453395.html",
+          "published": 1783984493,
+          "sentiment": 0.128
+        },
+        {
+          "title": "Oil Surges As Trump Asserts Control Over Strait Of Hormuz; What Happens Now",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/news/oil-prices-jump-trump-hormuz-guardian-us-iran-escalation-tests-market-calm/?src=A00220&yptr=yahoo",
+          "published": 1783978528,
+          "sentiment": 0.0
+        },
         {
           "title": "Update: US Equity Indexes Slump, Crude Oil Soars as Trump Plans to Reinstate Iran Blockade, Impose 20% Toll on Hormuz Cargo",
           "publisher": "MT Newswires",
@@ -113,30 +134,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/energy-stocks-where-to-invest-8b505444?siteid=yhoof2&yptr=yahoo",
           "published": 1783973220,
           "sentiment": 0.612
-        },
-        {
-          "title": "Update: US Equity Indexes Slump as Trump's Plan to Reinstate Iran Blockade, Impose 20% Toll on Hormuz Cargo Sends Crude Oil Higher",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/us-equity-indexes-slump-trump-192255775.html",
-          "published": 1783970575,
-          "sentiment": -0.71
-        },
-        {
-          "title": "Update: US Equity Indexes Fall, Crude Oil Surges as Trump Plans to Reinstate Iran Blockade, Proposes 20% Toll on Hormuz Cargo",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/commodities/articles/us-equity-indexes-fall-crude-173029281.html",
-          "published": 1783963829,
-          "sentiment": -0.572
-        },
-        {
-          "title": "Oil Jumps As Trump Makes U.S. 'Guardian' Of Hormuz; What Happens Now",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/oil-prices-jump-trump-hormuz-guardian-us-iran-escalation-tests-market-calm/?src=A00220&yptr=yahoo",
-          "published": 1783957563,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.276
+      "news_sentiment": 0.094
     },
     {
       "ticker": "SHEL",
@@ -155,18 +155,18 @@ window.PRICES_DATA = {
       "high_gbp": "71",
       "high_usd": 94.9,
       "bar_pct": 58,
-      "market_cap_gbp_b": 174.293,
+      "market_cap_gbp_b": 174.204,
       "market_cap_usd_b": 232.716,
       "beta": -0.235,
-      "pe_ratio": 13.08,
+      "pe_ratio": 12.8,
       "avg_volume_m": 7.27,
       "div_yield_pct": 380.0,
       "short_pct": 1.94,
       "analyst": "buy",
       "analyst_score": 2.07,
-      "vol_1d": 5700531,
-      "vol_1w": 30047027,
-      "vol_1m": 120172751,
+      "vol_1d": 6086376,
+      "vol_1w": 30448534,
+      "vol_1m": 120574258,
       "news": [
         {
           "title": "Sector Update: Energy Stocks Gain Late Afternoon",
@@ -223,18 +223,18 @@ window.PRICES_DATA = {
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 55,
-      "market_cap_gbp_b": 78.747,
+      "market_cap_gbp_b": 78.707,
       "market_cap_usd_b": 105.143,
       "beta": -0.231,
-      "pe_ratio": 33.2,
+      "pe_ratio": 31.65,
       "avg_volume_m": 9.62,
       "div_yield_pct": 509.0,
       "short_pct": 0.47,
       "analyst": "hold",
       "analyst_score": 2.53,
-      "vol_1d": 9617852,
-      "vol_1w": 41997152,
-      "vol_1m": 208301252,
+      "vol_1d": 10297100,
+      "vol_1w": 42676400,
+      "vol_1m": 208980500,
       "news": [
         {
           "title": "Update: US Equity Futures Drop Pre-Bell as Iran Says Strait of Hormuz Closed Once Again, Oil Prices Jump",
@@ -288,22 +288,29 @@ window.PRICES_DATA = {
       "return_1yr": "+26%",
       "low_gbp": "43",
       "low_usd": 57.39,
-      "high_gbp": "71",
+      "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 65,
-      "market_cap_gbp_b": 135.224,
+      "market_cap_gbp_b": 135.155,
       "market_cap_usd_b": 180.551,
       "beta": 0.05,
-      "pe_ratio": 12.05,
+      "pe_ratio": 11.63,
       "avg_volume_m": 1.51,
       "div_yield_pct": 537.0,
       "short_pct": 0.24,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 1241798,
-      "vol_1w": 6803698,
-      "vol_1m": 33741398,
+      "vol_1d": 1431400,
+      "vol_1w": 6993300,
+      "vol_1m": 33931000,
       "news": [
+        {
+          "title": "Why Halliburton (HAL) Stock Is Trading Up Today",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-halliburton-hal-stock-trading-004639782.html",
+          "published": 1783989999,
+          "sentiment": 0.0
+        },
         {
           "title": "Update: US Equity Futures Drop Pre-Bell as Iran Says Strait of Hormuz Closed Once Again, Oil Prices Jump",
           "publisher": "MT Newswires",
@@ -331,16 +338,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/totalenergies-enxtpa-tte-could-22-211340087.html",
           "published": 1783631620,
           "sentiment": 0.382
-        },
-        {
-          "title": "First U.S. LNG Ships To Asia From Mexico, Avoiding Hormuz Tensions",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/lng-stocks-u-s-gas-ships-asia-mexico-win-for-trump/?src=A00220&yptr=yahoo",
-          "published": 1783628692,
-          "sentiment": -0.625
         }
       ],
-      "news_sentiment": -0.083
+      "news_sentiment": 0.042
     },
     {
       "ticker": "EQNR",
@@ -359,18 +359,18 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 43.46,
       "bar_pct": 65,
-      "market_cap_gbp_b": 64.209,
-      "market_cap_usd_b": 85.732,
+      "market_cap_gbp_b": 64.177,
+      "market_cap_usd_b": 85.733,
       "beta": -0.75,
       "pe_ratio": 16.32,
       "avg_volume_m": 4.19,
-      "div_yield_pct": 447.0,
+      "div_yield_pct": 448.0,
       "short_pct": 3.14,
       "analyst": "hold",
       "analyst_score": 3.33,
-      "vol_1d": 5557844,
-      "vol_1w": 21212444,
-      "vol_1m": 72799144,
+      "vol_1d": 5577400,
+      "vol_1w": 21232000,
+      "vol_1m": 72818700,
       "news": [
         {
           "title": "Energy Transition Update - Statkraft Expands With Major Wind Project In Brazil",
@@ -415,7 +415,7 @@ window.PRICES_DATA = {
       "company_name": "ConocoPhillips",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "85",
+      "price_gbp": "84",
       "price_usd": 112.85,
       "change_1d": "+3.77%",
       "change_1w": "+8.95%",
@@ -427,18 +427,18 @@ window.PRICES_DATA = {
       "high_gbp": "102",
       "high_usd": 135.87,
       "bar_pct": 54,
-      "market_cap_gbp_b": 102.969,
-      "market_cap_usd_b": 137.484,
+      "market_cap_gbp_b": 102.917,
+      "market_cap_usd_b": 137.485,
       "beta": 0.122,
-      "pe_ratio": 19.13,
+      "pe_ratio": 18.47,
       "avg_volume_m": 7.85,
       "div_yield_pct": 308.0,
       "short_pct": 1.58,
       "analyst": "buy",
       "analyst_score": 1.73,
-      "vol_1d": 5938596,
-      "vol_1w": 35362696,
-      "vol_1m": 159075796,
+      "vol_1d": 5968100,
+      "vol_1w": 35392200,
+      "vol_1m": 159105300,
       "news": [
         {
           "title": "Update: US Equity Futures Drop Pre-Bell as Iran Says Strait of Hormuz Closed Once Again, Oil Prices Jump",
@@ -492,21 +492,21 @@ window.PRICES_DATA = {
       "return_1yr": "+17%",
       "low_gbp": "29",
       "low_usd": 38.8,
-      "high_gbp": "51",
+      "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 56,
-      "market_cap_gbp_b": 40.83,
+      "market_cap_gbp_b": 40.809,
       "market_cap_usd_b": 54.516,
       "beta": 0.15,
-      "pe_ratio": 74.07,
+      "pe_ratio": 71.18,
       "avg_volume_m": 11.35,
       "div_yield_pct": 197.0,
       "short_pct": 0.02,
       "analyst": "buy",
       "analyst_score": 2.38,
-      "vol_1d": 12725416,
-      "vol_1w": 60099216,
-      "vol_1m": 193349616,
+      "vol_1d": 12822900,
+      "vol_1w": 60196700,
+      "vol_1m": 193447100,
       "news": [
         {
           "title": "Sector Update: Energy Stocks Higher Early Monday",
@@ -563,7 +563,7 @@ window.PRICES_DATA = {
       "high_gbp": "114",
       "high_usd": 151.87,
       "bar_pct": 76,
-      "market_cap_gbp_b": 55.692,
+      "market_cap_gbp_b": 55.664,
       "market_cap_usd_b": 74.36,
       "beta": 0.261,
       "pe_ratio": 13.74,
@@ -572,9 +572,9 @@ window.PRICES_DATA = {
       "short_pct": 3.97,
       "analyst": "buy",
       "analyst_score": 2.17,
-      "vol_1d": 1939531,
-      "vol_1w": 14238831,
-      "vol_1m": 80379031,
+      "vol_1d": 3809100,
+      "vol_1w": 16108400,
+      "vol_1m": 82248600,
       "news": [
         {
           "title": "Can CRGY's Cash Flow Centric Business Model Support Future Growth?",
@@ -628,27 +628,27 @@ window.PRICES_DATA = {
       "return_1yr": "+62%",
       "low_gbp": "118",
       "low_usd": 158.0,
-      "high_gbp": "215",
-      "high_usd": 287.15,
-      "bar_pct": 99,
-      "market_cap_gbp_b": 64.912,
+      "high_gbp": "224",
+      "high_usd": 299.05,
+      "bar_pct": 98,
+      "market_cap_gbp_b": 64.879,
       "market_cap_usd_b": 86.671,
       "beta": 0.52,
-      "pe_ratio": 19.56,
+      "pe_ratio": 18.7,
       "avg_volume_m": 2.34,
       "div_yield_pct": 138.0,
       "short_pct": 2.88,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 2091950,
-      "vol_1w": 10174550,
-      "vol_1m": 47108150,
+      "vol_1d": 2143600,
+      "vol_1w": 10226200,
+      "vol_1m": 47159800,
       "news": [
         {
-          "title": "Oil Jumps As Trump Makes U.S. 'Guardian' Of Hormuz; What Happens Now",
+          "title": "Oil Surges As Trump Asserts Control Over Strait Of Hormuz; What Happens Now",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/news/oil-prices-jump-trump-hormuz-guardian-us-iran-escalation-tests-market-calm/?src=A00220&yptr=yahoo",
-          "published": 1783957563,
+          "published": 1783978528,
           "sentiment": 0.0
         },
         {
@@ -687,7 +687,7 @@ window.PRICES_DATA = {
       "company_name": "Valero Energy",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "222",
+      "price_gbp": "221",
       "price_usd": 295.79,
       "change_1d": "+5.39%",
       "change_1w": "+9.42%",
@@ -696,22 +696,29 @@ window.PRICES_DATA = {
       "return_1yr": "+89%",
       "low_gbp": "98",
       "low_usd": 130.78,
-      "high_gbp": "215",
-      "high_usd": 287.05,
+      "high_gbp": "223",
+      "high_usd": 297.66,
       "bar_pct": 99,
-      "market_cap_gbp_b": 65.78,
+      "market_cap_gbp_b": 65.747,
       "market_cap_usd_b": 87.83,
       "beta": 0.545,
-      "pe_ratio": 21.59,
+      "pe_ratio": 20.5,
       "avg_volume_m": 3.06,
       "div_yield_pct": 171.0,
       "short_pct": 4.04,
       "analyst": "buy",
       "analyst_score": 2.42,
-      "vol_1d": 2780820,
-      "vol_1w": 13341920,
-      "vol_1m": 63196120,
+      "vol_1d": 2863900,
+      "vol_1w": 13425000,
+      "vol_1m": 63279200,
       "news": [
+        {
+          "title": "Oil Surges As Trump Asserts Control Over Strait Of Hormuz; What Happens Now",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/news/oil-prices-jump-trump-hormuz-guardian-us-iran-escalation-tests-market-calm/?src=A00220&yptr=yahoo",
+          "published": 1783978528,
+          "sentiment": 0.0
+        },
         {
           "title": "US Equity Markets End Lower After Trump Proposes Blockade of Iranian Ships, Toll on Strait of Hormuz",
           "publisher": "MT Newswires",
@@ -725,13 +732,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/renewed-middle-east-tensions-threaten-160900410.html",
           "published": 1783958940,
           "sentiment": -0.494
-        },
-        {
-          "title": "Oil Jumps As Trump Makes U.S. 'Guardian' Of Hormuz; What Happens Now",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/oil-prices-jump-trump-hormuz-guardian-us-iran-escalation-tests-market-calm/?src=A00220&yptr=yahoo",
-          "published": 1783957563,
-          "sentiment": 0.0
         },
         {
           "title": "Strong Fuel Demand & Elevated Crack Spreads Support Valero's Outlook",
@@ -767,19 +767,26 @@ window.PRICES_DATA = {
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 58,
-      "market_cap_gbp_b": 53.03,
+      "market_cap_gbp_b": 53.003,
       "market_cap_usd_b": 70.806,
       "beta": 0.733,
-      "pe_ratio": 20.86,
+      "pe_ratio": 21.05,
       "avg_volume_m": 14.6,
       "div_yield_pct": 247.0,
       "short_pct": 4.11,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 6537830,
-      "vol_1w": 52752630,
-      "vol_1m": 324313630,
+      "vol_1d": 8028000,
+      "vol_1w": 54242800,
+      "vol_1m": 325803800,
       "news": [
+        {
+          "title": "Does Baker Hughes Stock Spread Your Risk?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/606825/does-baker-hughes-stock-spread-your-risk/2026-07-13",
+          "published": 1783981546,
+          "sentiment": -0.273
+        },
         {
           "title": "Sector Update: Energy Stocks Gain Monday Afternoon",
           "publisher": "MT Newswires",
@@ -807,16 +814,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/07/09/the-sp-500-is-up-5-this-year-this-cash-cow-fund-is-up-9-cowz/",
           "published": 1783621753,
           "sentiment": 0.0
-        },
-        {
-          "title": "Wolfe Research bullish on SLB and BKR, sees selective oil services cycle ahead",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/energy/articles/wolfe-research-bullish-slb-bkr-150622664.html",
-          "published": 1783523182,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.419
+      "news_sentiment": 0.364
     },
     {
       "ticker": "HAL",
@@ -835,7 +835,7 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 64,
-      "market_cap_gbp_b": 22.03,
+      "market_cap_gbp_b": 22.019,
       "market_cap_usd_b": 29.415,
       "beta": 0.725,
       "pe_ratio": 19.45,
@@ -844,10 +844,31 @@ window.PRICES_DATA = {
       "short_pct": 5.15,
       "analyst": "buy",
       "analyst_score": 1.86,
-      "vol_1d": 6800984,
-      "vol_1w": 47605684,
-      "vol_1m": 231229284,
+      "vol_1d": 8211500,
+      "vol_1w": 49016200,
+      "vol_1m": 232639800,
       "news": [
+        {
+          "title": "Why Halliburton (HAL) Stock Is Trading Up Today",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-halliburton-hal-stock-trading-004639782.html",
+          "published": 1783989999,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Does Baker Hughes Stock Spread Your Risk?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/606825/does-baker-hughes-stock-spread-your-risk/2026-07-13",
+          "published": 1783981546,
+          "sentiment": -0.273
+        },
+        {
+          "title": "Halliburton (HAL) Gains As Market Dips: What You Should Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/halliburton-hal-gains-market-dips-221504995.html",
+          "published": 1783980904,
+          "sentiment": 0.34
+        },
         {
           "title": "HAL vs. FTI: Which Stock Is the Better Value Option?",
           "publisher": "Zacks",
@@ -861,30 +882,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-inc-gev-stock-134004696.html",
           "published": 1783690804,
           "sentiment": 0.0
-        },
-        {
-          "title": "Halliburton (HAL) Stock Still Looks Discounted Despite Its 81% Five Year Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/halliburton-hal-stock-still-looks-012435456.html",
-          "published": 1783646675,
-          "sentiment": 0.052
-        },
-        {
-          "title": "Is Halliburton (HAL) Cheap Following Its Basra Deal And Higher Oil Prices?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/halliburton-hal-cheap-following-basra-211502391.html",
-          "published": 1783631702,
-          "sentiment": 0.0
-        },
-        {
-          "title": "The S&P 500 Is Up 5% This Year. This \u2018Cash Cow\u2019 Fund Is Up 9%",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/09/the-sp-500-is-up-5-this-year-this-cash-cow-fund-is-up-9-cowz/",
-          "published": 1783621753,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.14
+      "news_sentiment": 0.143
     },
     {
       "ticker": "BKR",
@@ -903,19 +903,26 @@ window.PRICES_DATA = {
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 60,
-      "market_cap_gbp_b": 42.842,
-      "market_cap_usd_b": 57.203,
+      "market_cap_gbp_b": 42.82,
+      "market_cap_usd_b": 57.202,
       "beta": 0.96,
-      "pe_ratio": 18.42,
+      "pe_ratio": 18.36,
       "avg_volume_m": 8.61,
       "div_yield_pct": 160.0,
       "short_pct": 2.83,
       "analyst": "buy",
       "analyst_score": 1.74,
-      "vol_1d": 5668418,
-      "vol_1w": 43155018,
-      "vol_1m": 185806318,
+      "vol_1d": 6117500,
+      "vol_1w": 43604100,
+      "vol_1m": 186255400,
       "news": [
+        {
+          "title": "Does Baker Hughes Stock Spread Your Risk?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/606825/does-baker-hughes-stock-spread-your-risk/2026-07-13",
+          "published": 1783981546,
+          "sentiment": -0.273
+        },
         {
           "title": "EC conditionally approves $13.6bn Baker Hughes-Chart deal",
           "publisher": "Offshore Technology",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-posts-weekly-gain-205535829.html",
           "published": 1783716935,
           "sentiment": 0.67
-        },
-        {
-          "title": "US Oil, Gas Drillers Hang Back in Volatile Market",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/us-oil-gas-drillers-hang-180000139.html",
-          "published": 1783706400,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.323
+      "news_sentiment": 0.268
     },
     {
       "ticker": "NEE",
@@ -971,7 +971,7 @@ window.PRICES_DATA = {
       "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 65,
-      "market_cap_gbp_b": 138.051,
+      "market_cap_gbp_b": 137.981,
       "market_cap_usd_b": 184.326,
       "beta": 0.667,
       "pe_ratio": 22.43,
@@ -980,9 +980,9 @@ window.PRICES_DATA = {
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 1.95,
-      "vol_1d": 4642354,
-      "vol_1w": 51942354,
-      "vol_1m": 230250654,
+      "vol_1d": 6738700,
+      "vol_1w": 54038700,
+      "vol_1m": 232347000,
       "news": [
         {
           "title": "NextEra Energy (NEE) Bylaw Change Lands As Fair Value Debate Splits The Stock",
@@ -1028,17 +1028,17 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 32.57,
+      "price_usd": 32.58,
       "change_1d": "+0.54%",
       "change_1w": "-1.37%",
       "change_1m": "+2.65%",
       "change_ytd": "+9.32%",
       "return_1yr": "+32%",
-      "low_gbp": "16",
-      "low_usd": 21.32,
+      "low_gbp": "17",
+      "low_usd": 22.81,
       "high_gbp": "28",
-      "high_usd": 36.95,
-      "bar_pct": 72,
+      "high_usd": 36.97,
+      "bar_pct": 50,
       "market_cap_gbp_b": 0.294,
       "market_cap_usd_b": 0.393,
       "beta": 0.59,
@@ -1048,9 +1048,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 1010757,
-      "vol_1w": 13482293,
-      "vol_1m": 78800423,
+      "vol_1d": 901,
+      "vol_1w": 12472437,
+      "vol_1m": 77790567,
       "news": [
         {
           "title": "SSE (LSE:SSE) Stock Fair Value Edges Lower After Mixed Analyst Target Changes",
@@ -1107,7 +1107,7 @@ window.PRICES_DATA = {
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 36,
-      "market_cap_gbp_b": 4.25,
+      "market_cap_gbp_b": 4.248,
       "market_cap_usd_b": 5.675,
       "beta": 1.615,
       "pe_ratio": 42.63,
@@ -1116,10 +1116,17 @@ window.PRICES_DATA = {
       "short_pct": 21.49,
       "analyst": "buy",
       "analyst_score": 2.48,
-      "vol_1d": 3006266,
-      "vol_1w": 20238266,
-      "vol_1m": 129371366,
+      "vol_1d": 3021800,
+      "vol_1w": 20253800,
+      "vol_1m": 129386900,
       "news": [
+        {
+          "title": "Enphase Energy (ENPH) Falls More Steeply Than Broader Market: What Investors Need to Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-enph-falls-more-215004168.html",
+          "published": 1783979404,
+          "sentiment": 0.273
+        },
         {
           "title": "Here is What to Know Beyond Why Enphase Energy, Inc. (ENPH) is a Trending Stock",
           "publisher": "Zacks",
@@ -1147,46 +1154,39 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/ai-data-center-demand-fuel-130047315.html",
           "published": 1783602047,
           "sentiment": 0.296
-        },
-        {
-          "title": "What The Market Refuses To Pay For FSLR",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/606197/what-the-market-refuses-to-pay-for-fslr/2026-07-08",
-          "published": 1783544741,
-          "sentiment": -0.103
         }
       ],
-      "news_sentiment": 0.165
+      "news_sentiment": 0.241
     },
     {
       "ticker": "FSLR",
       "company_name": "First Solar",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "166",
+      "price_gbp": "165",
       "price_usd": 221.03,
       "change_1d": "-3.27%",
       "change_1w": "-5.16%",
       "change_1m": "-19.19%",
       "change_ytd": "-19.43%",
       "return_1yr": "+42%",
-      "low_gbp": "120",
-      "low_usd": 159.85,
+      "low_gbp": "124",
+      "low_usd": 165.57,
       "high_gbp": "240",
       "high_usd": 320.95,
-      "bar_pct": 38,
-      "market_cap_gbp_b": 17.788,
+      "bar_pct": 36,
+      "market_cap_gbp_b": 17.779,
       "market_cap_usd_b": 23.751,
       "beta": 1.73,
-      "pe_ratio": 14.29,
+      "pe_ratio": 14.73,
       "avg_volume_m": 2.53,
       "div_yield_pct": null,
       "short_pct": 10.01,
       "analyst": "buy",
-      "analyst_score": 2.09,
-      "vol_1d": 1798454,
-      "vol_1w": 8403354,
-      "vol_1m": 35853954,
+      "analyst_score": 2.11,
+      "vol_1d": 1819000,
+      "vol_1w": 8423900,
+      "vol_1m": 35874500,
       "news": [
         {
           "title": "3 S&P 500 Stocks to Target This Week",
@@ -1239,12 +1239,12 @@ window.PRICES_DATA = {
       "change_ytd": "-12.69%",
       "return_1yr": "+5%",
       "low_gbp": "25",
-      "low_usd": 32.73,
+      "low_usd": 32.76,
       "high_gbp": "34",
       "high_usd": 45.18,
-      "bar_pct": 12,
-      "market_cap_gbp_b": 4.669,
-      "market_cap_usd_b": 6.234,
+      "bar_pct": 11,
+      "market_cap_gbp_b": 4.666,
+      "market_cap_usd_b": 6.233,
       "beta": 1.159,
       "pe_ratio": null,
       "avg_volume_m": 1.51,
@@ -1252,9 +1252,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 1284133,
-      "vol_1w": 5826133,
-      "vol_1m": 26084633,
+      "vol_1d": 1293500,
+      "vol_1w": 5835500,
+      "vol_1m": 26094000,
       "news": [
         {
           "title": "I'm Calling It. It's Time to Load Up on These 3 High-Yielding Dividend Stocks Right Now (1 Currently Yields Over 8.5%)",
@@ -1301,17 +1301,17 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "5.57",
       "price_usd": 7.44,
-      "change_1d": "-0.13%",
+      "change_1d": "+0.00%",
       "change_1w": "-4.12%",
       "change_1m": "-6.42%",
       "change_ytd": "+11.63%",
       "return_1yr": "-49%",
-      "low_gbp": "4.31",
+      "low_gbp": "4.30",
       "low_usd": 5.75,
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 6,
-      "market_cap_gbp_b": 22.084,
+      "market_cap_gbp_b": 22.073,
       "market_cap_usd_b": 29.487,
       "beta": 0.636,
       "pe_ratio": null,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 13825,
-      "vol_1w": 438825,
-      "vol_1m": 2261225,
+      "vol_1d": 105900,
+      "vol_1w": 530900,
+      "vol_1m": 2353300,
       "news": [
         {
           "title": "Energy & Utilities Roundup: Market Talk",
