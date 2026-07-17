@@ -1,9 +1,198 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-13 11:27",
+  "updated": "2026-07-17 10:10",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PANW",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "PANW has surged +97% YTD and +25% in the last month, with strong analyst buy consensus (score 1.64) and positive news sentiment 0.013. The company's push for lower AI token pricing positions it as a key cybersecurity beneficiary of AI adoption.",
+      "drivers": [
+        "+97% YTD",
+        "+25% 1M momentum",
+        "analyst buy consensus",
+        "AI token pricing catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CRWD has rallied +80% YTD and +19% in the last month, with a buy analyst consensus (score 1.67). Despite negative news sentiment -0.236, its strong 3-year returns and leadership in endpoint security support continued momentum.",
+      "drivers": [
+        "+80% YTD",
+        "+19% 1M momentum",
+        "buy analyst consensus",
+        "cybersecurity leader"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "NET is up +39% YTD and +20% in the last month, with a buy analyst consensus (score 1.88) and the highest news sentiment in the universe at 0.43. Analysts have raised AI and security targets, driving fair value boosts.",
+      "drivers": [
+        "+39% YTD",
+        "+20% 1M momentum",
+        "news sentiment 0.43",
+        "AI/security target upgrades"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "META has gained +17% in the last month and +5% in the last week, with a strong_buy analyst consensus (score 1.32) and a reasonable P/E of 24.75. Upcoming Big Tech earnings will spotlight AI spending, a key catalyst for META.",
+      "drivers": [
+        "+17% 1M momentum",
+        "strong_buy consensus",
+        "P/E 24.75",
+        "AI spending catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ADBE has rebounded +20% in the last month and +6% in the last week, with a low P/E of 12.85 and positive news sentiment 0.008. Despite a hold analyst consensus (score 2.67), its valuation and momentum make it attractive for a turnaround.",
+      "drivers": [
+        "+20% 1M momentum",
+        "P/E 12.85",
+        "low valuation",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SNOW",
+      "signal": "buy",
+      "confidence": 0.73,
+      "rationale": "SNOW is up +25% YTD and +15% in the last month, with strong news sentiment 0.184. The stock is gaining attention as a deflated cloud stock worth another look, supported by its data cloud leadership and AI tailwinds.",
+      "drivers": [
+        "+25% YTD",
+        "+15% 1M momentum",
+        "news sentiment 0.184",
+        "cloud/AI tailwinds"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SHOP has rallied +16% in the last month and +1.5% in the last week, with a buy analyst consensus (score 1.67). Despite negative news sentiment -0.213, its e-commerce platform strength and recent momentum support a positive outlook.",
+      "drivers": [
+        "+16% 1M momentum",
+        "buy analyst consensus",
+        "e-commerce leader",
+        "recent rally"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.879,
+      "rationale": "FTNT has surged +106% YTD and +12% in the last month, with positive news sentiment 0.115. Despite a hold analyst consensus (score 2.75), its strong YTD performance and cybersecurity positioning make it a momentum play.",
+      "drivers": [
+        "+106% YTD",
+        "+12% 1M momentum",
+        "positive news sentiment",
+        "cybersecurity growth"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CRM has gained +11% in the last month and +6% in the last week, with a buy analyst consensus (score 1.62) and positive news sentiment 0.066. The Air Force contract win and low P/E of 19.34 provide fundamental support.",
+      "drivers": [
+        "+11% 1M momentum",
+        "P/E 19.34",
+        "Air Force contract",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "AAPL is up +23% YTD and +13% in the last month, with a buy analyst consensus (score 2.04) and positive news sentiment 0.129. The rotation from chips to mega-caps and its strong brand support continued gains.",
+      "drivers": [
+        "+23% YTD",
+        "+13% 1M momentum",
+        "positive news sentiment",
+        "mega-cap rotation"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+124.16%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +124.16% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +124.16% \u2265 60.6% B"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "signal": "buy",
+      "confidence": 0.901,
+      "ytd": "+109.14%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +109.14% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +109.14% \u2265 60.6% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.685,
+      "ytd": "+170.65%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +170.65% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +170.65% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.587,
+      "ytd": "+146.27%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +146.27% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +146.27% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.515,
+      "ytd": "+128.37%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +128.37% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +128.37% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "META",
@@ -132,184 +321,6 @@ window.SIGNALS_DATA = {
         "P/E 18.5",
         "positive sentiment 0.127",
         "+7.17% 1M"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.846,
-      "ytd": "+210.65%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +210.65% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +210.65% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.73,
-      "ytd": "+181.87%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +181.87% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +181.87% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.718,
-      "ytd": "+178.92%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +178.92% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +178.92% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.503,
-      "ytd": "+61.00%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +61.00% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +61.00% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.861,
-      "rationale": "Micron leads chip sector gains with +214.57% YTD, P/E 21.46, strong_buy consensus, and positive news sentiment 0.075, supported by semiconductor momentum.",
-      "drivers": [
-        "+214.57% YTD",
-        "P/E 21.46",
-        "strong_buy consensus",
-        "chip sector gains"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "AMD surges +144.65% YTD with +20.85% 1M momentum, strong_buy analyst rating, and positive news sentiment 0.099, driven by AI chip demand.",
-      "drivers": [
-        "+144.65% YTD",
-        "+20.85% 1M",
-        "strong_buy",
-        "AI chip demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CrowdStrike gains +74.96% YTD and +22.52% 1M, with positive news sentiment 0.236 and a favorable comparison in CRWD vs PANW analysis [moomoo.com](https://www.moomoo.com/ca/learn/detail-crwd-vs-panw-which-is-better-cybersecurity-stock-117087-240762163).",
-      "drivers": [
-        "+74.96% YTD",
-        "+22.52% 1M",
-        "positive sentiment 0.236",
-        "CRWD vs PANW analysis"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Cloudflare shows strong short-term momentum with +11.97% 1W and +25.55% 1M, buy consensus, and positive news sentiment 0.096.",
-      "drivers": [
-        "+11.97% 1W",
-        "+25.55% 1M",
-        "buy consensus",
-        "positive sentiment 0.096"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.731,
-      "rationale": "Palo Alto Networks has +88.61% YTD and +28.53% 1M, but high P/E 277.3 and negative sentiment -0.287; CRWD vs PANW article highlights competitive dynamics [moomoo.com](https://www.moomoo.com/ca/learn/detail-crwd-vs-panw-which-is-better-cybersecurity-stock-117087-240762163).",
-      "drivers": [
-        "+88.61% YTD",
-        "+28.53% 1M",
-        "high P/E 277.3",
-        "negative sentiment"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Meta offers value with P/E 21.93, strong_buy consensus, positive sentiment 0.065, and +10.70% 1M momentum despite -2.74% YTD.",
-      "drivers": [
-        "P/E 21.93",
-        "strong_buy",
-        "+10.70% 1M",
-        "positive sentiment 0.065"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SNOW",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Snowflake outperforms with +23.43% YTD, +11.50% 1M, and strong news sentiment 0.277, though no analyst rating.",
-      "drivers": [
-        "+23.43% YTD",
-        "+11.50% 1M",
-        "sentiment 0.277",
-        "outperformance"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.91,
-      "rationale": "Fortinet has +110.23% YTD and +17.89% 1M, positive sentiment 0.077, but hold analyst rating tempers conviction.",
-      "drivers": [
-        "+110.23% YTD",
-        "+17.89% 1M",
-        "positive sentiment 0.077",
-        "hold rating"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.986,
-      "rationale": "Applied Materials up +119.48% YTD and +18.44% 1M, strong_buy consensus, but negative sentiment -0.249 and -9.56% 1W pullback.",
-      "drivers": [
-        "+119.48% YTD",
-        "+18.44% 1M",
-        "strong_buy",
-        "negative sentiment -0.249"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Shopify rebounds with +13.84% 1M, buy consensus, positive sentiment 0.09, though YTD -21.65% shows recovery potential.",
-      "drivers": [
-        "+13.84% 1M",
-        "buy consensus",
-        "positive sentiment 0.09",
-        "recovery potential"
       ]
     }
   ]

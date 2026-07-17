@@ -1,9 +1,154 @@
 {
-  "updated": "2026-07-13 11:25",
+  "updated": "2026-07-17 10:08",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NVO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "18.29% 1-month momentum, PE 12.14, dividend yield 3.56%, and positive news sentiment 0.441 make it a compelling value play in metabolic.",
+      "drivers": [
+        "1-month +18.29%",
+        "PE 12.14",
+        "dividend yield 3.56%",
+        "news sentiment 0.441"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "10.70% 1-month, PE 16.44, 4.29% dividend yield, and positive news sentiment 0.204 reflect strong momentum and value in large-cap pharma.",
+      "drivers": [
+        "1-month +10.70%",
+        "PE 16.44",
+        "dividend yield 4.29%",
+        "news sentiment 0.204"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "11.68% 1-month, low PE 16.23, very positive news sentiment 0.447, and low beta 0.236 suggest a turnaround with solid fundamentals.",
+      "drivers": [
+        "1-month +11.68%",
+        "PE 16.23",
+        "news sentiment 0.447",
+        "low beta 0.236"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "19.16% 1-month, YTD +17.91%, strong_buy consensus (an_score 1.5), and positive news sentiment 0.157 drive high-growth genomics exposure.",
+      "drivers": [
+        "1-month +19.16%",
+        "YTD +17.91%",
+        "strong_buy consensus",
+        "news sentiment 0.157"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "17.84% 1-month, PE 16.27, YTD +15.02%, and positive news sentiment 0.076 offer a balanced oncology pick with reasonable valuation.",
+      "drivers": [
+        "1-month +17.84%",
+        "PE 16.27",
+        "YTD +15.02%",
+        "news sentiment 0.076"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "19.59% 1-month, YTD +41.61%, buy consensus, but negative news sentiment -0.088 due to German recall tempers conviction.",
+      "drivers": [
+        "1-month +19.59%",
+        "YTD +41.61%",
+        "buy consensus",
+        "news sentiment -0.088"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "68.36% 1-month, strong_buy consensus (an_score 1.0), and YTD +30.97%, but negative news sentiment -0.091 and no earnings heighten risk.",
+      "drivers": [
+        "1-month +68.36%",
+        "strong_buy consensus",
+        "YTD +30.97%",
+        "news sentiment -0.091"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RCUS",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "10.45% 1-month, YTD +14.38%, and 183% 1-year return, but weekly -11.08%, no analyst coverage, and negative sentiment -0.051 signal caution.",
+      "drivers": [
+        "1-month +10.45%",
+        "YTD +14.38%",
+        "1-year +183%",
+        "weekly -11.08%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "EDIT",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "YTD +40.49%, 1-month +12.94%, but beta 2.1, no analyst coverage, negative sentiment -0.03, and small-cap risk make it speculative.",
+      "drivers": [
+        "YTD +40.49%",
+        "1-month +12.94%",
+        "high beta 2.1",
+        "no analyst coverage"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PACB",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "11.19% 1-month, positive news sentiment 0.167, but YTD -19.02%, beta 2.29, and high short interest 17.58% reflect high risk.",
+      "drivers": [
+        "1-month +11.19%",
+        "news sentiment 0.167",
+        "high beta 2.29",
+        "short interest 17.58%"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.864,
+      "ytd": "+104.63%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +104.63% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +104.63% \u2265 60.6% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTLA",
@@ -132,139 +277,6 @@
         "+13% 1M",
         "positive sentiment 0.2",
         "analyst buy"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "MRNA surged +148% YTD and +66% in the last month, with positive news sentiment of 0.188 and strong pipeline momentum as highlighted by recent coverage of regulatory and pipeline catalysts [tickeron.com](https://tickeron.com/blogs/moderna-mrna-stock-surges-74-9-over-30-days-on-pipeline-and-regulatory-momentum-14451/).",
-      "drivers": [
-        "+148% YTD",
-        "+66% 1M return",
-        "positive news sentiment 0.188",
-        "pipeline & regulatory momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "COAG has the strongest analyst consensus (score 1.0, strong_buy) and impressive momentum with +45.6% 1M and +14.5% 1W returns, supported by recent pipeline updates including sutacimig Phase III plans.",
-      "drivers": [
-        "analyst score 1.0 (strong_buy)",
-        "+45.6% 1M return",
-        "+14.5% 1W return",
-        "Phase III pipeline catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SRPT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SRPT shows strong short-term momentum with +35.8% 1M and +12.8% 1W returns, positive news sentiment of 0.16, and a manageable P/E of 58.63 for a rare-disease biotech with pipeline catalysts.",
-      "drivers": [
-        "+35.8% 1M return",
-        "+12.8% 1W return",
-        "positive news sentiment 0.16",
-        "rare-disease pipeline"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RCUS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "RCUS has a strong_buy analyst consensus (score 1.46) and impressive +35.4% 1M return, with a recent Bristol-Myers Squibb partnership for a kidney cancer combination trial providing a key catalyst.",
-      "drivers": [
-        "strong_buy consensus (score 1.46)",
-        "+35.4% 1M return",
-        "BMY partnership for kidney cancer",
-        "+28.6% YTD"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "EDIT has surged +61% YTD and +33% in the last month, with a low market cap of $0.5B offering high upside potential, though high beta of 2.1 and negative news sentiment (-0.03) add risk.",
-      "drivers": [
-        "+61% YTD",
-        "+33% 1M return",
-        "low market cap $0.5B",
-        "gene-editing platform"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "NTRA has a strong_buy analyst consensus (score 1.5) and strong momentum with +30.2% 1M and +23.2% YTD returns, though negative news sentiment (-0.205) and a delayed SPAC merger are headwinds.",
-      "drivers": [
-        "strong_buy consensus (score 1.5)",
-        "+30.2% 1M return",
-        "+23.2% YTD",
-        "genomics leader"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NTLA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "NTLA has surged +67.6% YTD and +26.6% 1M, with positive analyst coverage citing Phase 3 Lonvo Z success and 37% undervaluation, but high short interest (45.4%) and negative 1W momentum (-10.4%) signal caution.",
-      "drivers": [
-        "+67.6% YTD",
-        "+26.6% 1M return",
-        "Phase 3 Lonvo Z catalyst",
-        "high short interest 45.4%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "RXRX has positive news sentiment of 0.275 and strong 1M momentum (+23.7%), with a low beta of 0.995 and AI-driven drug discovery platform, though YTD is negative (-10.5%) and short interest is high (36.8%).",
-      "drivers": [
-        "positive news sentiment 0.275",
-        "+23.7% 1M return",
-        "AI platform catalyst",
-        "low beta 0.995"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "BEAM has a strong_buy analyst consensus (score 1.31) and strong momentum with +67% 1Y and +32% YTD returns, though high short interest (42.6%) and beta (2.18) reflect elevated risk.",
-      "drivers": [
-        "strong_buy consensus (score 1.31)",
-        "+67% 1Y return",
-        "+32% YTD",
-        "gene-editing platform"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ILMN has exceptional 1Y return of +94% and YTD of +44.2%, with positive news sentiment of 0.155 and a reasonable P/E of 34.11, though high short interest (9.95%) and beta (1.47) warrant monitoring.",
-      "drivers": [
-        "+94% 1Y return",
-        "+44.2% YTD",
-        "positive news sentiment 0.155",
-        "P/E 34.11"
       ]
     }
   ]

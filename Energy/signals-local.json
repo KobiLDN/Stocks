@@ -1,9 +1,142 @@
 {
-  "updated": "2026-07-13 11:29",
+  "updated": "2026-07-17 10:12",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +83.61%, 1M +25.23%, P/E 21.37 \u2014 crude spike from the Iran\u2013US airstrikes on the Strait of Hormuz further boosts already-surging refining margins [apnews.com](https://apnews.com/article/iran-us-hormuz-strait-war-july-16-2026-f98ff56554de2336f0e85bb5fdcae769).",
+      "drivers": [
+        "YTD +83.6%",
+        "1M momentum +25.2%",
+        "War risk premium on refining",
+        "Analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "YTD +86.85%, 1M +25.04%, P/E 19.68 \u2014 tight fuel markets and widening crack spreads create a tailwind as the Hormuz blockade escalates [aljazeera.com](https://www.aljazeera.com/video/newsfeed/2026/7/17/us-bombards-iran-in-sixth-straight-night-of-attacks).",
+      "drivers": [
+        "YTD +86.9%",
+        "1M gain +25.0%",
+        "Tight fuel markets",
+        "High refining margin exposure"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "YTD +48.57%, price $35.63, P/E 16.27, dividend yield 4.24% \u2014 Equinor\u2019s low-beta profile (-0.75) provides a safe haven amid the Iran Strait disruption, and new subsea contracts add production growth visibility.",
+      "drivers": [
+        "YTD +48.6%",
+        "P/E 16.3",
+        "Div yield 4.2%",
+        "New Equinor/Eni subsea contracts"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +31.32%, 1D +1.80%, P/E 13.51 \u2014 low valuation and high-quality Permian assets are well placed to capitalise on the oil price spike from the Hormuz blockade [apnews.com](https://apnews.com/article/iran-us-hormuz-strait-war-july-16-2026-f98ff56554de2336f0e85bb5fdcae769).",
+      "drivers": [
+        "YTD +31.3%",
+        "P/E 13.5",
+        "Low short interest",
+        "Permian basin producer"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +20.60%, price $145.95, dividend yield 2.85%, beta 0.162 \u2014 as the world\u2019s largest integrated oil company, Exxon benefits from the limited supply flowing through the Strait of Hormuz.",
+      "drivers": [
+        "YTD +20.6%",
+        "Div yield 2.85%",
+        "Low beta 0.16",
+        "Oil price tailwind from geopolitical risk"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +20.18%, price $183.86, analyst score 1.71 (strong bullish consensus) \u2014 Chevron\u2019s diversified production and trading operations offer upside as US-led strikes pressure Iranian supply [aljazeera.com](https://www.aljazeera.com/video/newsfeed/2026/7/17/us-bombards-iran-in-sixth-straight-night-of-attacks).",
+      "drivers": [
+        "YTD +20.2%",
+        "Analyst score 1.71",
+        "Dividend yield 3.9%",
+        "Geopolitical supply risk premium"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "YTD +14.86%, price $85.08, P/E 13.25, dividend yield 3.69% \u2014 Shell\u2019s best-in-class LNG portfolio provides pricing power in a tight global gas market, while its low beta (-0.24) adds defensiveness.",
+      "drivers": [
+        "P/E 13.3",
+        "Div yield 3.7%",
+        "LNG exposure",
+        "Low beta"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +17.47%, 1W +6.56%, dividend yield 4.83% \u2014 the highest yield among the majors and a low short interest (0.47%) point to resilient cash flows even amid a negative news sentiment (-0.068).",
+      "drivers": [
+        "YTD +17.5%",
+        "Div yield 4.8%",
+        "1W momentum +6.6%",
+        "Low short interest 0.47%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +11.97%, news sentiment +0.416, analyst consensus buy \u2014 the $2.25bn Dominion merger filing signals growth in regulated utility earnings, offering a counter-cyclical hedge to the oil price spike [aljazeera.com](https://www.aljazeera.com/video/newsfeed/2026/7/17/us-bombards-iran-in-sixth-straight-night-of-attacks).",
+      "drivers": [
+        "YTD +12.0%",
+        "News sentiment +0.416",
+        "Merger catalyst",
+        "Utility defensiveness"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +8.87%, P/E 23.13, dividend yield 2.78% \u2014 the UK utility offers regulated earnings stability and a low beta (0.59), though the small market cap ($0.4B) limits liquidity.",
+      "drivers": [
+        "YTD +8.9%",
+        "Div yield 2.8%",
+        "Low beta 0.59",
+        "Regulated utility hedge"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +265,6 @@
         "+8.74% YTD",
         "dividend yield 2.83%",
         "positive news sentiment 0.149"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "VLO surged +72% YTD and +82% 1-year, with +9% 1-month momentum and +4.4% 1-week; recent refinancing margin tailwinds and Russell reclassification support the strong momentum, while P/E of 20.7 remains reasonable for the refining sector (source: [seekingalpha.com](https://www.youtube.com/watch?v=K6Wh0cFZjDg)). Drivers include upward price momentum, strong quarterly earnings beat potential, and positive news sentiment (0.18).",
-      "drivers": [
-        "+72% YTD return",
-        "9% 1-month gain",
-        "refining margin tailwinds",
-        "Russell reclassification catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.86,
-      "rationale": "MPC outperformed with +73% YTD, +55% 1-year, and +7.6% 1-month, supported by continued strong refining margins and a reasonable P/E of 18.5 (source: [seekingalpha.com](https://www.youtube.com/watch?v=K6Wh0cFZjDg)).",
-      "drivers": [
-        "+73% YTD return",
-        "7.6% 1-month gain",
-        "P/E 18.5",
-        "refining margin catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "EOG rose +26.7% YTD and +10% 1-year, with strong 1-week (+3.9%) and 1-month (-4.8%) performance attributed to its low-cost production and free cash flow generation; P/E of 13.5 and positive news sentiment (0.34) (source: [seekingalpha.com](https://www.youtube.com/watch?v=K6Wh0cFZjDg)).",
-      "drivers": [
-        "+26.7% YTD return",
-        "low P/E 13.5",
-        "strong free cash flow",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SHEL gained +9.9% YTD and +13% 1-year, with strong 1-week momentum (+6.3%) and a very attractive P/E of 12.8, plus a 3.8% dividend yield, making it a defensive value play among majors (source: [seekingalpha.com](https://www.youtube.com/watch?v=K6Wh0cFZjDg)).",
-      "drivers": [
-        "P/E 12.8",
-        "3.8% dividend yield",
-        "6.3% 1-week gain",
-        "low beta -0.235"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "CVX returned +13.8% YTD and +13% 1-year, with a sharp 1-week reversal of +5.1%, supported by a solid dividend yield of 4.1%, strong analyst consensus (buy, an_score 1.71), and relatively low short interest of 1.09%.",
-      "drivers": [
-        "+13.8% YTD return",
-        "4.1% dividend yield",
-        "analyst buy consensus",
-        "low short interest"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "NEE gained +8.4% YTD and +17% 1-year, with consistent positive momentum over 1-month (+2.3%) and strong analyst support (buy, an_score 1.95), while benefiting from utility sector stability and data center demand growth.",
-      "drivers": [
-        "+8.4% YTD return",
-        "2.3% 1-month gain",
-        "analyst buy consensus",
-        "utility sector strength"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "SSE.L rose +8.3% YTD and +34% 1-year, with steady 1-month momentum (+2.5%); despite limited coverage (an_score null), its strong 1-year return and dividend yield of 2.8% make it attractive for value and income investors.",
-      "drivers": [
-        "+34% 1-year return",
-        "2.5% 1-month gain",
-        "dividend yield 2.8%",
-        "value play"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "FSLR trades at P/E of 14.5 with positive 1-day momentum (+1.6%), despite YTD decline of -16.7%; the stock benefits from growing solar capacity additions and supportive US policy, with strong analyst consensus (buy, an_score 2.09).",
-      "drivers": [
-        "P/E 14.5",
-        "analyst buy consensus",
-        "solar capacity catalysts",
-        "1-day reversal +1.6%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "BEPC offers a high dividend yield of 4.4% and very positive news sentiment (0.49) despite a YTD decline of -9.2%; its renewable portfolio and long-term PPAs provide stable cash flows, supported by global energy transition trends.",
-      "drivers": [
-        "4.4% dividend yield",
-        "high news sentiment 0.49",
-        "renewable growth catalyst",
-        "stable cash flows"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DNNGY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "DNNGY has risen +12.2% YTD and shows upside from depressed levels after a -49% 1-year return, with improving news sentiment (0.11); the stock offers a turnaround play with potential offshore wind and renewable asset development upside.",
-      "drivers": [
-        "+12.2% YTD",
-        "turnaround potential",
-        "renewable asset catalyst",
-        "upside from depressed levels"
       ]
     }
   ]

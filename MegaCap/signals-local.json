@@ -1,9 +1,176 @@
 {
-  "updated": "2026-07-13 11:29",
+  "updated": "2026-07-17 10:12",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "V",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong buy consensus, +10.52% 1M momentum, P/E 30.97, stablecoin catalyst for AI micropayments, and positive news sentiment (0.238).",
+      "drivers": [
+        "strong_buy consensus",
+        "1M momentum +10.5%",
+        "stablecoin & AI payments",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong buy consensus, +12.06% 1M momentum, P/E 31.9, Visa stablecoin platform tailwind, and positive news sentiment (0.194).",
+      "drivers": [
+        "strong_buy consensus",
+        "1M momentum +12.1%",
+        "payments network growth",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong buy consensus, +17.08% 1M momentum, P/E 24.75, AI spending focus, though news sentiment is slightly negative (-0.097).",
+      "drivers": [
+        "strong_buy consensus",
+        "1M momentum +17.1%",
+        "AI capex tailwind",
+        "reasonable valuation"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MRK",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Buy consensus, +21.65% YTD, +10.56% 1M, FDA approval of first-of-its-kind cholesterol pill Lipfendra, P/E 35.95, positive news sentiment (0.228).",
+      "drivers": [
+        "YTD +21.7%",
+        "FDA approval catalyst",
+        "1M momentum +10.6%",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Buy consensus, +23.20% YTD, +12.61% 1M, record high, P/E 39.67, safe-haven appeal amid geopolitical tensions (US-Iran conflict).",
+      "drivers": [
+        "YTD +23.2%",
+        "1M momentum +12.6%",
+        "record high",
+        "defensive mega-cap"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong buy consensus, +9.35% 1M, P/E 18.19, Apple Intelligence approval in China revives tech rally, positive news sentiment (0.238).",
+      "drivers": [
+        "strong_buy consensus",
+        "low P/E 18.2",
+        "China AI catalyst",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ABBV",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Buy consensus, +15.81% 1M, +13.56% YTD, healthcare haven, dividend 2.83%, positive news sentiment (0.302), though P/E 124 is high.",
+      "drivers": [
+        "1M momentum +15.8%",
+        "YTD +13.6%",
+        "healthcare defensive",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Buy consensus, +17.65% 1M, P/E 29.41, upcoming Q2 earnings catalyst, positive news sentiment (0.170), despite YTD -8.14%.",
+      "drivers": [
+        "1M momentum +17.7%",
+        "earnings catalyst",
+        "reasonable P/E",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Buy consensus, +18.29% 1M, P/E 12.14, high dividend 3.56%, very positive news sentiment (0.441), GLP-1 leader, but analyst score 2.43 is weak.",
+      "drivers": [
+        "1M momentum +18.3%",
+        "low P/E 12.1",
+        "high dividend yield",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Buy consensus, +12.47% 1M, +10.07% 1D, P/E 25.02, dividend 2.82%, positive news sentiment (0.178), recovery play after YTD -18.94%.",
+      "drivers": [
+        "1M momentum +12.5%",
+        "one-day surge +10%",
+        "dividend yield",
+        "positive sentiment"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+124.16%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +124.16% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +124.16% \u2265 60.6% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.587,
+      "ytd": "+146.27%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +146.27% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +146.27% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.515,
+      "ytd": "+128.37%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +128.37% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +128.37% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMD",
@@ -132,162 +299,6 @@
         "1M +8.10% momentum",
         "aerospace & defence demand",
         "geopolitical catalyst"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.73,
-      "ytd": "+181.87%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +181.87% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +181.87% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.718,
-      "ytd": "+178.92%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +178.92% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +178.92% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "AMD has surged +279% over 1 year and +144.65% YTD, with a 1-month gain of +20.85% and strong analyst support (strong_buy, an_score 1.48). The AI chip cycle and data center demand provide a powerful tailwind, and recent news of chip sector gains reinforces momentum.",
-      "drivers": [
-        "+279% 1-year return",
-        "+144.65% YTD",
-        "strong_buy consensus",
-        "AI infrastructure tailwind"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CAT",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "Caterpillar has delivered a +130% 1-year return and +57.48% YTD, with a 1-month gain of +9.60%. The stock benefits from AI-driven electricity demand and infrastructure spending, with a positive news sentiment of 0.274.",
-      "drivers": [
-        "+130% 1-year return",
-        "+57.48% YTD",
-        "AI electricity demand theme",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "GE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "GE Aerospace shows a +42% 1-year return and +12.24% YTD, with a 1-month gain of +12.79%. It has a strong_buy consensus (an_score 1.5) and positive news sentiment of 0.224, supported by aerospace and defense demand.",
-      "drivers": [
-        "+42% 1-year return",
-        "+12.79% 1-month gain",
-        "strong_buy consensus",
-        "aerospace/defense tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "RTX has gained +33% over 1 year and +10.03% in the last month, with a low beta of 0.298 and a buy consensus (an_score 1.87). Defense spending and aerospace recovery support its momentum.",
-      "drivers": [
-        "+33% 1-year return",
-        "+10.03% 1-month gain",
-        "low beta 0.298",
-        "defense spending tailwind"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "HSBC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "HSBC has a +56% 1-year return and +25.96% YTD, with a 1-month gain of +13.77%. Its P/E of 15.86 and dividend yield of 3.90% offer value, and positive news sentiment of 0.195 reflects global banking strength.",
-      "drivers": [
-        "+56% 1-year return",
-        "+25.96% YTD",
-        "P/E 15.86",
-        "dividend yield 3.90%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ABBV",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "AbbVie has a +30% 1-year return and +10.77% YTD, with a 1-month gain of +11.10%. Despite a high P/E of 123.72, its dividend yield of 2.74% and positive news sentiment of 0.165, along with GLP-1 drug market dynamics, support the pick.",
-      "drivers": [
-        "+30% 1-year return",
-        "+11.10% 1-month gain",
-        "dividend yield 2.74%",
-        "GLP-1 drug market"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Meta has a strong_buy consensus (an_score 1.32) and a 1-month gain of +10.70%, with a P/E of 21.93. Despite a -17% 1-year return, its AI investments and advertising recovery provide catalysts, with positive news sentiment of 0.065.",
-      "drivers": [
-        "strong_buy consensus",
-        "+10.70% 1-month gain",
-        "P/E 21.93",
-        "AI investment catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "JPM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "JPMorgan has a +16% 1-year return and +4.53% YTD, with a 1-month gain of +9.01%. Its P/E of 15.82 and dividend yield of 1.81% offer value, and upcoming Q2 earnings provide a catalyst. News sentiment is slightly positive at 0.026.",
-      "drivers": [
-        "+9.01% 1-month gain",
-        "P/E 15.82",
-        "dividend yield 1.81%",
-        "Q2 earnings catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Novo Nordisk has a +14.18% 1-month gain and a P/E of 11.75, with a dividend yield of 3.69%. Despite a -31% 1-year return, GLP-1 drug demand is a strong catalyst, and news sentiment is positive at 0.125.",
-      "drivers": [
-        "+14.18% 1-month gain",
-        "P/E 11.75",
-        "dividend yield 3.69%",
-        "GLP-1 drug demand"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Thermo Fisher has a +22% 1-year return and +8.96% 1-month gain, with a P/E of 28.01. The FBI approval for its Rapid DNA tool is a positive catalyst, and news sentiment is 0.132. The stock is recovering from a YTD decline of -11.27%.",
-      "drivers": [
-        "+22% 1-year return",
-        "+8.96% 1-month gain",
-        "FBI Rapid DNA approval",
-        "positive news sentiment"
       ]
     }
   ]
