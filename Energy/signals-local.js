@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-17 10:12",
+  "updated": "2026-07-20 11:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "VLO surged +31% in the past month and +89% YTD, driven by soaring refining margins amid the Strait of Hormuz blockade. P/E 22.6, yield 1.55%, with buy consensus.",
+      "drivers": [
+        "+31% 1-month momentum",
+        "+89% YTD",
+        "refining catalyst from Iran crisis",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "MPC's +91% YTD and +28.7% 1-month gains reflect the refinery margin expansion from the Iran conflict. P/E 20.6, yield 1.25%, with buy rating.",
+      "drivers": [
+        "+28.7% 1-month momentum",
+        "+91% YTD",
+        "refining margins",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SHEL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SHEL offers a low P/E of 13.6 and a 3.58% yield, with +10.8% 1-month momentum as oil prices rally on war news. Strong buy consensus.",
+      "drivers": [
+        "P/E 13.6",
+        "yield 3.58%",
+        "+10.8% 1-month",
+        "strong buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "CVX has the best analyst consensus (score 1.71) and a 3.8% dividend yield, with +7.9% 1-month momentum on rising oil prices. P/E 32.7.",
+      "drivers": [
+        "best analyst score 1.71",
+        "yield 3.8%",
+        "+7.9% 1-month",
+        "low beta 0.49"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "EOG boasts a low P/E of 13.76 and the highest news sentiment (0.316) among peers, with +33.7% YTD and +8.4% 1-month. Buy recommendation.",
+      "drivers": [
+        "P/E 13.76",
+        "news sentiment 0.316",
+        "+33.7% YTD",
+        "+8.4% 1-month"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "XOM's +21.8% YTD and +6.9% 1-month gains are supported by its integrated model and low beta of 0.16. P/E 24.8, yield 2.8%.",
+      "drivers": [
+        "+21.8% YTD",
+        "low beta 0.16",
+        "P/E 24.8",
+        "yield 2.8%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COP",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "COP has a strong analyst score of 1.76 and a P/E of 19.4, with +6.5% 1-month momentum. Dividend yield 2.93%.",
+      "drivers": [
+        "analyst score 1.76",
+        "P/E 19.4",
+        "+6.5% 1-month",
+        "yield 2.93%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "BP offers the highest dividend yield at 4.77% and low short interest of 0.47%, with +7.2% 1-month gain. P/E 33.8, hold consensus.",
+      "drivers": [
+        "yield 4.77%",
+        "short interest 0.47%",
+        "+7.2% 1-month",
+        "low beta -0.23"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "EQNR has surged +55.8% YTD and +15.4% in the last month, with a low P/E of 16.9 and yield 4.07%. However, analyst hold (score 3.33) tempers conviction.",
+      "drivers": [
+        "+55.8% YTD",
+        "+15.4% 1-month",
+        "P/E 16.9",
+        "yield 4.07%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "OXY's +30.7% YTD and +5.9% 1-month gains are notable, but its P/E of 74.1 is elevated. Yield 1.9%, buy consensus, low short interest of 0.02%.",
+      "drivers": [
+        "+30.7% YTD",
+        "+5.9% 1-month",
+        "low short interest 0.02%",
+        "buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "Div yield 2.8%",
         "Low beta 0.59",
         "Regulated utility hedge"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "VLO has surged +89% over 1 year and +71.65% YTD, with +9.82% in the last month, driven by strong fuel demand and elevated crack spreads; P/E of 20.49 and dividend yield of 1.71% are attractive for a refiner.",
-      "drivers": [
-        "+89% 1-year return",
-        "+71.65% YTD",
-        "+9.82% 1-month momentum",
-        "strong fuel demand & crack spreads"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "MPC has delivered a +62% 1-year return and +73.34% YTD, with +8.79% in the last month, supported by elevated refining margins amid geopolitical tensions; P/E of 18.69 and dividend yield of 1.38% are solid.",
-      "drivers": [
-        "+73.34% YTD",
-        "+62% 1-year return",
-        "+8.79% 1-month momentum",
-        "elevated refining margins"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "OXY",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "OXY has gained +25.97% YTD and +17% over 1 year, with a strong +8.14% weekly momentum and near-zero short interest of 0.02%, indicating bullish sentiment; P/E of 71.47 is elevated but reflects growth expectations.",
-      "drivers": [
-        "+25.97% YTD",
-        "+8.14% 1-week momentum",
-        "near-zero short interest 0.02%",
-        "strong weekly momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EOG",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "EOG has gained +27.18% YTD with a P/E of 13.2 and dividend yield of 3.04%, offering value and income; news sentiment is positive at 0.337, and the stock is a cash cow in a rising oil price environment.",
-      "drivers": [
-        "+27.18% YTD",
-        "P/E 13.2",
-        "dividend yield 3.04%",
-        "positive news sentiment 0.337"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "SHEL has a +11.02% YTD return, a low P/E of 12.81, and a dividend yield of 3.80%, offering value and income; weekly momentum of +5.40% is strong, and the stock benefits from potential large offshore oil discoveries in Uruguay.",
-      "drivers": [
-        "P/E 12.81",
-        "dividend yield 3.80%",
-        "+5.40% 1-week momentum",
-        "Uruguay offshore oil potential"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "CVX has a +15.30% YTD return, strong weekly momentum of +4.26%, and a dividend yield of 4.04%, supported by a buy analyst consensus; the stock benefits from rising oil prices amid US-Iran tensions.",
-      "drivers": [
-        "+15.30% YTD",
-        "+4.26% 1-week momentum",
-        "dividend yield 4.04%",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "XOM has a +14.76% YTD return, a low beta of 0.162, and a dividend yield of 2.97%, with a buy analyst consensus; the stock is climbing amid escalating US-Iran conflict pushing oil near $80/barrel.",
-      "drivers": [
-        "+14.76% YTD",
-        "dividend yield 2.97%",
-        "low beta 0.162",
-        "oil price support from US-Iran conflict"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "COP has a +14.48% YTD return, a P/E of 18.48, and a dividend yield of 3.08%, with a buy analyst consensus; weekly momentum of +4.12% is solid, and the stock is a strong dividend payer for retirees.",
-      "drivers": [
-        "+14.48% YTD",
-        "P/E 18.48",
-        "dividend yield 3.08%",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "NEE has a +10.23% YTD return, a P/E of 22.32, and a dividend yield of 2.83%, with a buy analyst consensus; the stock benefits from growing demand for renewable energy and grid infrastructure.",
-      "drivers": [
-        "+10.23% YTD",
-        "P/E 22.32",
-        "dividend yield 2.83%",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SSE.L has a +32% 1-year return and +8.74% YTD, with a P/E of 23.1 and dividend yield of 2.83%; positive news sentiment of 0.149 supports its position as a UK utility with renewable growth.",
-      "drivers": [
-        "+32% 1-year return",
-        "+8.74% YTD",
-        "dividend yield 2.83%",
-        "positive news sentiment 0.149"
       ]
     }
   ]

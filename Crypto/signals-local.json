@@ -1,9 +1,142 @@
 {
-  "updated": "2026-07-17 10:11",
+  "updated": "2026-07-20 11:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "KAITO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Explosive momentum with +89% YTD, +96.6% 1M, and +44.6% 1W, far outpacing the entire universe; micro-cap $0.23B offers high upside potential.",
+      "drivers": [
+        "+89% YTD return",
+        "+96.6% 1-month gain",
+        "+44.6% 1-week surge",
+        "micro-cap at $0.23B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong institutional catalyst via DTCC tokenization pilot involving BlackRock, Vanguard, and JPMorgan; positive news sentiment 0.247 and +5.12% 1W.",
+      "drivers": [
+        "news sentiment +0.247",
+        "+5.12% 1-week return",
+        "DTCC tokenization pilot with major banks",
+        "market cap $6.2B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Only major asset with positive YTD at +14.79% and positive 1D at +0.30%, supported by tokenization narrative and sentiment 0.119.",
+      "drivers": [
+        "+14.79% YTD return",
+        "positive news sentiment 0.119",
+        "tokenization theme",
+        "stable 1D momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Buyback catalyst with $1.2M in NMR repurchased as hedge fund assets reach $700M; positive sentiment 0.101 and +6.79% 1M.",
+      "drivers": [
+        "$1.2M buyback announced",
+        "positive news sentiment 0.101",
+        "+6.79% 1-month return",
+        "YTD +0.69%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Leading large-cap L1 with +7.48% 1M and +4.31% 1W, resilient amid Iran tensions; positive sentiment 0.061 and headline noting flat trading.",
+      "drivers": [
+        "+7.48% 1-month gain",
+        "+4.31% 1-week gain",
+        "market cap $223.8B",
+        "resilient to macro news"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "Best 1M return among major L1s at +7.84% and highest news sentiment 0.18 in layer1, with tokenized stocks narrative as a $3T market.",
+      "drivers": [
+        "+7.84% 1-month return",
+        "news sentiment +0.18",
+        "tokenized stocks $3T market theme",
+        "market cap $2.8B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "Largest alt-L1 by market cap at $44.2B with +5.42% 1M, but negative sentiment -0.223 and slight weekly decline -0.70%.",
+      "drivers": [
+        "+5.42% 1-month return",
+        "market cap $44.2B",
+        "negative sentiment -0.223",
+        "1W -0.70%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Decent short-term momentum with +3.15% 1W and +3.91% 1M, though negative YTD -41.73% and tiny $0.057B market cap.",
+      "drivers": [
+        "+3.15% 1-week gain",
+        "+3.91% 1-month gain",
+        "micro-cap $0.057B",
+        "YTD -41.73%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.52,
+      "rationale": "Moderate 1M momentum at +4.02% but with weekly decline -4.76% and no news sentiment; YTD -28.57%.",
+      "drivers": [
+        "+4.02% 1-month return",
+        "1W -4.76%",
+        "YTD -28.57%",
+        "no sentiment data"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SUI",
+      "signal": "buy",
+      "confidence": 0.48,
+      "rationale": "Slight daily gain +0.03% and 1M +3.10% but depressed on-chain data and very negative sentiment -0.527, forecasting a 33% drop.",
+      "drivers": [
+        "+3.10% 1-month return",
+        "news sentiment -0.527",
+        "depressed on-chain activity",
+        "micro-cap $3.0B"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "KAITO",
@@ -129,139 +262,6 @@
         "+15.21% 1W",
         "AI narrative",
         "small-cap momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KAITO",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "KAITO leads all assets with +57.06% 1-month and +30.74% YTD returns, showing explosive momentum despite a -0.73% 1-day dip.",
-      "drivers": [
-        "+57% 1M momentum",
-        "+31% 1Y return",
-        "low market cap $0.16B",
-        "high beta potential"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SOL has strong +14.48% 1-month momentum and a $44.5B market cap, with positive 1-day (+0.78%) despite geopolitical headwinds.",
-      "drivers": [
-        "+14.5% 1M momentum",
-        "large cap $44.5B",
-        "positive 1D move",
-        "layer1 leader"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "NMR shows +12.66% 1-month gain and nearly flat YTD (-1%), with a small $0.07B market cap offering high upside.",
-      "drivers": [
-        "+12.7% 1M momentum",
-        "near-flat YTD",
-        "small cap",
-        "AI category"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "OCEAN has +10.87% 1-month momentum and a positive 1-day (+0.64%), with YTD at -25% suggesting a potential reversal.",
-      "drivers": [
-        "+10.9% 1M momentum",
-        "positive 1D move",
-        "AI data economy",
-        "low price entry"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "POL surged +10.99% in 1 week and +9.11% in 1 month, with +2.59% 1-day, making it the strongest short-term momentum play in infra.",
-      "drivers": [
-        "+11% 1W momentum",
-        "+9.1% 1M momentum",
-        "+2.6% 1D",
-        "infra category"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ETH has +6.77% 1-month momentum and positive news sentiment (0.104), with a $214.6B market cap providing relative stability.",
-      "drivers": [
-        "+6.8% 1M momentum",
-        "positive news sentiment",
-        "large cap $214.6B",
-        "layer1 leader"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "TRX is the only asset with positive YTD (+16.12%) and 1-year (+16%) returns, plus +4.68% 1-month and neutral news sentiment.",
-      "drivers": [
-        "+16% YTD",
-        "+16% 1Y return",
-        "+4.7% 1M momentum",
-        "positive trend"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "LINK shows modest +0.78% 1-month and +0.22% 1-week gains with a $5.8B market cap, supported by institutional interest.",
-      "drivers": [
-        "positive 1M/1W momentum",
-        "mid cap $5.8B",
-        "oracle leader",
-        "institutional adoption"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "MINA has +0.21% 1-month momentum despite a -10.37% 1-week pullback, with a tiny $0.055B market cap for speculative upside.",
-      "drivers": [
-        "slightly positive 1M",
-        "micro cap $0.055B",
-        "zero-knowledge narrative",
-        "potential reversal"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ALT",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "ALT has nearly flat 1-month (-0.03%) and a small $0.042B market cap, with a -6.85% 1-day drop offering a potential entry point.",
-      "drivers": [
-        "flat 1M momentum",
-        "micro cap $0.042B",
-        "AI category",
-        "oversold 1D"
       ]
     }
   ]
