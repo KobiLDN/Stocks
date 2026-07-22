@@ -1,9 +1,136 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-20 11:02",
+  "updated": "2026-07-22 10:36",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "KAITO",
+      "signal": "strong_buy",
+      "confidence": 0.772,
+      "rationale": "KAITO shows exceptional momentum with +93.58% YTD, +106.72% 1M, and +25.36% 1W, despite a small market cap of $0.237B, making it a high-growth outlier.",
+      "drivers": [
+        "+93.58% YTD",
+        "+106.72% 1M",
+        "+25.36% 1W",
+        "small cap high growth"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "LINK has strong momentum (+8.47% 1M, +2.70% 1W) and very positive news sentiment of 0.677, with a headline highlighting it as a top 20 best performer.",
+      "drivers": [
+        "+8.47% 1M",
+        "news sentiment 0.677",
+        "market cap $6.44B",
+        "top performer headline"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ETH shows solid 1M momentum of +10.36% and is a large-cap at $230.9B, though news sentiment is slightly negative at -0.042.",
+      "drivers": [
+        "+10.36% 1M",
+        "large cap $230.9B",
+        "1W +1.49%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SOL has positive news sentiment of 0.21 and 1M momentum of +4.48%, with a large market cap of $44.9B, benefiting from crypto bill optimism.",
+      "drivers": [
+        "news sentiment 0.21",
+        "+4.48% 1M",
+        "large cap $44.9B",
+        "crypto bill optimism"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ADA has positive momentum (+6.71% 1M, +3.89% 1W) and positive news sentiment of 0.122, with a market cap of $6.23B.",
+      "drivers": [
+        "+6.71% 1M",
+        "+3.89% 1W",
+        "news sentiment 0.122"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "VIRTUAL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "VIRTUAL shows strong recent momentum with +8.10% 1M and +9.06% 1W, and a market cap of $0.425B, despite flat YTD performance.",
+      "drivers": [
+        "+8.10% 1M",
+        "+9.06% 1W",
+        "market cap $0.425B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "XRP has positive news sentiment of 0.161 and bullish on-chain signals, with a 1W gain of +1.84% and large market cap of $70.6B.",
+      "drivers": [
+        "news sentiment 0.161",
+        "1W +1.84%",
+        "large cap $70.6B",
+        "bullish on-chain signals"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TRX is one of the few with positive YTD at +15.58%, with stable recent performance and a large market cap of $31.18B.",
+      "drivers": [
+        "+15.58% YTD",
+        "large cap $31.18B",
+        "1D +0.75%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "MINA has high 1M momentum of +8.92% but a very small market cap of $0.059B, offering high risk-reward.",
+      "drivers": [
+        "+8.92% 1M",
+        "small cap $0.059B",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "OCEAN has positive 1M momentum of +5.91% and a small market cap, though no news sentiment data is available.",
+      "drivers": [
+        "+5.91% 1M",
+        "small cap",
+        "positive momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "KAITO",
@@ -132,136 +259,6 @@ window.SIGNALS_DATA = {
         "news sentiment -0.527",
         "depressed on-chain activity",
         "micro-cap $3.0B"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KAITO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "KAITO leads all assets with +69% YTD, +74.57% 1-month, and +27.46% 1-week momentum, with a +12.40% daily gain, driven by AI narrative tailwinds and China's Moonshot AI releasing the largest open-source model Kimi K3 [venturebeat.com](https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems).",
-      "drivers": [
-        "+69% YTD",
-        "+74.57% 1M",
-        "+27.46% 1W",
-        "AI narrative catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NMR",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "NMR shows strong momentum with +4.96% YTD and +16.92% 1-month return, supported by AI sector interest and a small market cap of $0.075B offering high beta potential.",
-      "drivers": [
-        "+16.92% 1M",
-        "+4.96% YTD",
-        "AI sector momentum",
-        "small-cap beta"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "POL has strong short-term momentum with +7.48% 1-month and +6.49% 1-week gains, despite a -17.97% YTD, and benefits from infrastructure narrative with a modest $0.88B market cap.",
-      "drivers": [
-        "+7.48% 1M",
-        "+6.49% 1W",
-        "infrastructure narrative",
-        "low market cap"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "OCEAN has positive 1-month momentum at +5.66% and is positioned in the AI data economy, though YTD is -28.20% and 1-week is -4.85%, offering a contrarian play.",
-      "drivers": [
-        "+5.66% 1M",
-        "AI data economy",
-        "contrarian opportunity"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "MINA shows positive momentum with +2.97% 1-month, +1.96% 1-week, and +1.74% daily gain, with a tiny $0.058B market cap offering high upside potential in the emerging category.",
-      "drivers": [
-        "+2.97% 1M",
-        "+1.96% 1W",
-        "tiny market cap",
-        "emerging L1"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ETH has positive 1-month (+2.64%) and 1-week (+3.52%) momentum, a large $221B market cap, and positive news sentiment of 0.131, with headlines calling it 'increasingly compelling'.",
-      "drivers": [
-        "+3.52% 1W",
-        "+2.64% 1M",
-        "positive sentiment 0.131",
-        "large-cap stability"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "SOL has +1.79% 1-month momentum and a $43.5B market cap, but negative 1-week (-5.44%) and news sentiment (-0.097) temper the outlook; still a major L1 with ecosystem strength.",
-      "drivers": [
-        "+1.79% 1M",
-        "large L1 market cap",
-        "ecosystem adoption"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TRX is the only asset with positive YTD (+13.26%) and 1-month (+1.35%) returns, with a $30.6B market cap and positive news sentiment of 0.071, benefiting from tokenization trends.",
-      "drivers": [
-        "+13.26% YTD",
-        "+1.35% 1M",
-        "positive sentiment 0.071",
-        "tokenization narrative"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "LINK has +3.93% 1-week momentum, positive news sentiment of 0.286, and is directly benefiting from BlackRock/Vanguard/DTCC tokenization pilot news [apnews.com](https://apnews.com/article/iran-us-hormuz-strait-war-july-16-2026-f98ff56554de2336f0e85bb5fdcae769), though YTD is -32.73%.",
-      "drivers": [
-        "+3.93% 1W",
-        "positive sentiment 0.286",
-        "tokenization catalyst",
-        "institutional adoption"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "VIRTUAL",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "VIRTUAL has strong 1-week momentum of +15.21% and a modest $0.407B market cap, though YTD is -4.16% and 1-month is -2.49%, making it a short-term momentum play in AI.",
-      "drivers": [
-        "+15.21% 1W",
-        "AI narrative",
-        "small-cap momentum"
       ]
     }
   ]

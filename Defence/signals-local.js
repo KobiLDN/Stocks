@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-20 11:01",
+  "updated": "2026-07-22 10:29",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +31.23%, strong_buy consensus (score 1.5), PE 41.33, positive 1M +1.04% and 1W +2.46% momentum, low short interest 1.19%.",
+      "drivers": [
+        "YTD +31%",
+        "strong_buy consensus",
+        "low short interest",
+        "positive near-term momentum"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +8.50%, 1M +7.57%, PE 23.3, analyst buy (score 2.12), news sentiment 0.188, strong defence prime.",
+      "drivers": [
+        "strong YTD and 1M",
+        "reasonable PE",
+        "positive news sentiment",
+        "defence prime stability"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +4.20%, 1M +6.51%, buy consensus (score 1.87), PE 36.47, positive news sentiment 0.015, recent contract win catalyst.",
+      "drivers": [
+        "solid 1M momentum",
+        "buy analyst rating",
+        "contract win headline",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +8.85%, 1M +5.41%, 1W +3.02%, 1D +1.81%, buy consensus (score 2.17), PE 28.07, news sentiment 0.138.",
+      "drivers": [
+        "strong recent momentum",
+        "positive sentiment",
+        "UK defence exposure",
+        "attractive valuation"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +4.91%, 1M +8.67%, 1W +3.23%, 1D +3.14%, buy consensus (score 1.82), PE 23.31, news sentiment 0.296.",
+      "drivers": [
+        "exceptional short-term momentum",
+        "lowest an_score among small caps",
+        "positive sentiment",
+        "reasonable PE"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +14.68%, buy consensus (score 1.6), PE 19.89, strong annual return +38%, recent 1D +0.67% stabilisation.",
+      "drivers": [
+        "strong YTD return",
+        "low PE",
+        "strong buy consensus",
+        "defence engine exposure"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +11.63%, 1M +11.51%, PE 12.66, news sentiment 0.143, cheap valuation despite hold rating (score 2.82).",
+      "drivers": [
+        "strong YTD and 1M",
+        "very low PE",
+        "positive sentiment",
+        "cyber-intel contractor"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +3.44%, 1M +2.83%, buy consensus (score 1.86), PE 61.0, news sentiment 0.161, steady growth in weapons systems.",
+      "drivers": [
+        "moderate YTD gain",
+        "positive sentiment",
+        "buy rating",
+        "defence electronics exposure"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +4.04%, 1M +4.13%, 1W +1.15%, PE 17.34, buy consensus (score 2.29), drones/autonomy programme tailwinds.",
+      "drivers": [
+        "consistent positive momentum",
+        "low PE",
+        "buy rating",
+        "drone programme exposure"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +24.67% rebound, buy consensus (score 1.71), news sentiment 0.251, but YTD -9.28% and high PE 212.99; high risk/reward.",
+      "drivers": [
+        "strong 1M momentum",
+        "buy consensus",
+        "positive sentiment",
+        "AI-driven law enforcement tech"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "GD",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "1D +2.51%",
         "Buy consensus",
         "Aerospace/armour niche"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "GD",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "General Dynamics has strong YTD momentum (+8.82%), a reasonable P/E of 22.99, and positive news sentiment (0.226) driven by the $1.5 trillion defense budget and ongoing US-Iran conflict, which directly benefits its shipbuilding and combat systems.",
-      "drivers": [
-        "+8.82% YTD",
-        "P/E 22.99",
-        "positive news sentiment 0.226",
-        "defense budget catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "RTX shows solid 1M momentum (+0.92%), strong buy analyst consensus (score 1.87), and positive news sentiment (0.264) with recent UK training win and AI advances, while the US-Iran conflict boosts demand for missile systems and defense electronics.",
-      "drivers": [
-        "buy consensus",
-        "news sentiment 0.264",
-        "UK training win",
-        "geopolitical catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "SAIC has outstanding 1M momentum (+8.01%) and YTD (+14.71%), a low P/E of 12.95, and benefits from rising cyber-intel spending amid the US-Iran conflict, though high short interest (7.85%) and hold analyst rating temper confidence.",
-      "drivers": [
-        "+8.01% 1M",
-        "+14.71% YTD",
-        "P/E 12.95",
-        "cyber spending tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Leidos has a very attractive P/E of 9.9, positive news sentiment (0.267), and recent stock outperformance, but YTD decline of -40.62% and high short interest (5.26%) signal caution; the US-Iran conflict could drive intelligence contract awards.",
-      "drivers": [
-        "P/E 9.9",
-        "news sentiment 0.267",
-        "intelligence contract potential",
-        "high short interest risk"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "HEICO has positive 1M momentum (+2.02%) and YTD (+4.55%), a buy analyst consensus (score 1.86), and benefits from aerospace aftermarket demand, though its high P/E of 62.89 limits upside.",
-      "drivers": [
-        "+2.02% 1M",
-        "buy consensus",
-        "aerospace aftermarket",
-        "P/E 62.89"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Axon has explosive 1M momentum (+28.07%) and positive news sentiment (0.236), but a very high P/E of 217.57 and YTD decline (-3.85%) suggest speculative froth; the US-Iran conflict may boost law enforcement tech demand.",
-      "drivers": [
-        "+28.07% 1M",
-        "news sentiment 0.236",
-        "high P/E 217.57",
-        "law enforcement tech catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Palantir has strong 1W momentum (+4.18%) and 1M momentum (+2.92%), a buy analyst consensus (score 1.88), and is a key AI infrastructure play for defense, but its high P/E of 149.38 and negative news sentiment (-0.06) warrant caution.",
-      "drivers": [
-        "+4.18% 1W",
-        "buy consensus",
-        "AI defense play",
-        "P/E 149.38"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Rolls-Royce has strong YTD momentum (+15.16%) and a low P/E of 19.98, with a buy analyst consensus (score 1.6) and a new Quantinuum deal, but recent 1W decline (-4.04%) and UK exposure add some risk.",
-      "drivers": [
-        "+15.16% YTD",
-        "P/E 19.98",
-        "buy consensus",
-        "Quantinuum deal"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BAE Systems has positive YTD (+4.57%) and 1D momentum (+1.16%), a reasonable P/E of 26.97, and benefits from European defense spending and the US-Iran conflict, but the buy analyst rating (score 2.17) is less bullish.",
-      "drivers": [
-        "+4.57% YTD",
-        "P/E 26.97",
-        "European defense spending",
-        "geopolitical catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "QinetiQ has positive news sentiment (0.296) and a low P/E of 22.28, but flat YTD (+0.28%) and no analyst rating; it could benefit from UK defense budget increases, but momentum is weak.",
-      "drivers": [
-        "news sentiment 0.296",
-        "P/E 22.28",
-        "UK defense budget",
-        "weak momentum"
       ]
     }
   ]

@@ -1,9 +1,142 @@
 {
-  "updated": "2026-07-20 11:03",
+  "updated": "2026-07-22 10:41",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "MPC has exceptional YTD return of +95.34% and 1-month momentum of +29.31%, with a P/E of 21.04 and analyst buy consensus, supported by strong refining margins.",
+      "drivers": [
+        "YTD +95%",
+        "1M +29%",
+        "P/E 21",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "VLO shows YTD return of +92.51% and 1M momentum of +29.13%, with a P/E of 22.88 and positive news sentiment of 0.195, reflecting robust refining performance.",
+      "drivers": [
+        "YTD +92%",
+        "1M +29%",
+        "P/E 23",
+        "news sentiment 0.195"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "EOG offers YTD return of +37.05% and 1M momentum of +8.79%, combined with a low P/E of 13.87 and positive news sentiment of 0.257, indicating strong operational efficiency.",
+      "drivers": [
+        "YTD +37%",
+        "P/E 13.9",
+        "news sentiment 0.257",
+        "1M +8.8%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "XOM has YTD return of +25.36% and 1M momentum of +9.56%, with a P/E of 24.99 and analyst buy rating, supported by leading industry position.",
+      "drivers": [
+        "YTD +25%",
+        "1M +9.6%",
+        "P/E 25",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "CVX delivers YTD return of +24.89% and 1M momentum of +9.15%, with the best analyst score of 1.71 (strong buy) and a dividend yield of 3.75%.",
+      "drivers": [
+        "YTD +25%",
+        "analyst score 1.71",
+        "div yield 3.75%",
+        "1M +9.2%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "SHEL shows YTD return of +17.73% and 1M momentum of +9.47%, with a low P/E of 13.42, a dividend yield of 3.63%, and positive news sentiment of 0.227.",
+      "drivers": [
+        "P/E 13.4",
+        "div yield 3.63%",
+        "1M +9.5%",
+        "news sentiment 0.227"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "COP has YTD return of +23.37% and 1M momentum of +7.11%, with a P/E of 19.62 and analyst buy consensus at score 1.76, reflecting solid E&P fundamentals.",
+      "drivers": [
+        "YTD +23%",
+        "analyst score 1.76",
+        "P/E 19.6",
+        "1M +7.1%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "OXY has YTD return of +34.57% and 1M momentum of +8.65%, but a high P/E of 74.34; however, analyst buy consensus and positive news sentiment of 0.107 support the momentum.",
+      "drivers": [
+        "YTD +35%",
+        "1M +8.7%",
+        "analyst buy",
+        "news sentiment 0.107"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "EQNR has YTD return of +56.75% and 1M momentum of +14.36%, with a P/E of 16.86 and dividend yield of 4.07%, but analyst hold rating and high short interest of 3.14% add caution.",
+      "drivers": [
+        "YTD +57%",
+        "1M +14%",
+        "P/E 16.9",
+        "div yield 4.07%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BP has YTD return of +22.27% and 1M momentum of +7.49%, with a high dividend yield of 4.75% and positive news sentiment of 0.299, but analyst hold rating and P/E of 33.94 limit upside.",
+      "drivers": [
+        "div yield 4.75%",
+        "YTD +22%",
+        "news sentiment 0.299",
+        "P/E 33.9"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +265,6 @@
         "+5.9% 1-month",
         "low short interest 0.02%",
         "buy consensus"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +83.61%, 1M +25.23%, P/E 21.37 \u2014 crude spike from the Iran\u2013US airstrikes on the Strait of Hormuz further boosts already-surging refining margins [apnews.com](https://apnews.com/article/iran-us-hormuz-strait-war-july-16-2026-f98ff56554de2336f0e85bb5fdcae769).",
-      "drivers": [
-        "YTD +83.6%",
-        "1M momentum +25.2%",
-        "War risk premium on refining",
-        "Analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "YTD +86.85%, 1M +25.04%, P/E 19.68 \u2014 tight fuel markets and widening crack spreads create a tailwind as the Hormuz blockade escalates [aljazeera.com](https://www.aljazeera.com/video/newsfeed/2026/7/17/us-bombards-iran-in-sixth-straight-night-of-attacks).",
-      "drivers": [
-        "YTD +86.9%",
-        "1M gain +25.0%",
-        "Tight fuel markets",
-        "High refining margin exposure"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "YTD +48.57%, price $35.63, P/E 16.27, dividend yield 4.24% \u2014 Equinor\u2019s low-beta profile (-0.75) provides a safe haven amid the Iran Strait disruption, and new subsea contracts add production growth visibility.",
-      "drivers": [
-        "YTD +48.6%",
-        "P/E 16.3",
-        "Div yield 4.2%",
-        "New Equinor/Eni subsea contracts"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +31.32%, 1D +1.80%, P/E 13.51 \u2014 low valuation and high-quality Permian assets are well placed to capitalise on the oil price spike from the Hormuz blockade [apnews.com](https://apnews.com/article/iran-us-hormuz-strait-war-july-16-2026-f98ff56554de2336f0e85bb5fdcae769).",
-      "drivers": [
-        "YTD +31.3%",
-        "P/E 13.5",
-        "Low short interest",
-        "Permian basin producer"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +20.60%, price $145.95, dividend yield 2.85%, beta 0.162 \u2014 as the world\u2019s largest integrated oil company, Exxon benefits from the limited supply flowing through the Strait of Hormuz.",
-      "drivers": [
-        "YTD +20.6%",
-        "Div yield 2.85%",
-        "Low beta 0.16",
-        "Oil price tailwind from geopolitical risk"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "YTD +20.18%, price $183.86, analyst score 1.71 (strong bullish consensus) \u2014 Chevron\u2019s diversified production and trading operations offer upside as US-led strikes pressure Iranian supply [aljazeera.com](https://www.aljazeera.com/video/newsfeed/2026/7/17/us-bombards-iran-in-sixth-straight-night-of-attacks).",
-      "drivers": [
-        "YTD +20.2%",
-        "Analyst score 1.71",
-        "Dividend yield 3.9%",
-        "Geopolitical supply risk premium"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "YTD +14.86%, price $85.08, P/E 13.25, dividend yield 3.69% \u2014 Shell\u2019s best-in-class LNG portfolio provides pricing power in a tight global gas market, while its low beta (-0.24) adds defensiveness.",
-      "drivers": [
-        "P/E 13.3",
-        "Div yield 3.7%",
-        "LNG exposure",
-        "Low beta"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +17.47%, 1W +6.56%, dividend yield 4.83% \u2014 the highest yield among the majors and a low short interest (0.47%) point to resilient cash flows even amid a negative news sentiment (-0.068).",
-      "drivers": [
-        "YTD +17.5%",
-        "Div yield 4.8%",
-        "1W momentum +6.6%",
-        "Low short interest 0.47%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +11.97%, news sentiment +0.416, analyst consensus buy \u2014 the $2.25bn Dominion merger filing signals growth in regulated utility earnings, offering a counter-cyclical hedge to the oil price spike [aljazeera.com](https://www.aljazeera.com/video/newsfeed/2026/7/17/us-bombards-iran-in-sixth-straight-night-of-attacks).",
-      "drivers": [
-        "YTD +12.0%",
-        "News sentiment +0.416",
-        "Merger catalyst",
-        "Utility defensiveness"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +8.87%, P/E 23.13, dividend yield 2.78% \u2014 the UK utility offers regulated earnings stability and a low beta (0.59), though the small market cap ($0.4B) limits liquidity.",
-      "drivers": [
-        "YTD +8.9%",
-        "Div yield 2.8%",
-        "Low beta 0.59",
-        "Regulated utility hedge"
       ]
     }
   ]

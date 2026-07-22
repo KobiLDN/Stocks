@@ -1,9 +1,155 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-20 11:00",
+  "updated": "2026-07-22 10:28",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Exceptional momentum with +52.11% 1M, +42% YTD, and a 42% 1-year return; strong buy analyst consensus with the lowest score of 1.0, indicating maximum bullishness.",
+      "drivers": [
+        "+52.11% 1M return",
+        "+42% YTD",
+        "strong_buy consensus (an_score 1.0)",
+        "low market cap $2.26B biotech IPO"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Robust momentum with +19.30% 1M, +43.30% YTD, and +89% 1-year return; P/E of 33.54 is reasonable given growth; positive news sentiment 0.04, and Eli Lilly collaboration via Illumina Atlas for AI-driven disease mapping.",
+      "drivers": [
+        "+43.30% YTD",
+        "+19.30% 1M return",
+        "P/E 33.54",
+        "Eli Lilly collaboration via Illumina Atlas"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong momentum with +16.77% 1M, +16.75% YTD, and +91% 1-year return; strong_buy consensus from analysts (an_score 1.5) with positive news sentiment 0.134.",
+      "drivers": [
+        "+91% 1-year return",
+        "+16.77% 1M return",
+        "strong_buy consensus (an_score 1.5)",
+        "positive news sentiment 0.134"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong momentum with +13.25% 1M, +15.75% YTD, and +70% 1-year return; attractive P/E of 16.35 combined with buy consensus (an_score 2.31).",
+      "drivers": [
+        "+70% 1-year return",
+        "+13.25% 1M return",
+        "P/E 16.35",
+        "buy consensus (an_score 2.31)"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong momentum with +12.65% 1M, +16.45% YTD, and +27% 1-year return; P/E of 16.88 is attractive, dividend yield 419 basis points, and a new AI drug discovery hub signals growth.",
+      "drivers": [
+        "+12.65% 1M return",
+        "+16.45% YTD",
+        "P/E 16.88",
+        "div yield 419bps",
+        "AI drug discovery hub"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Positive momentum with +10.24% 1M but YTD -12.79%; low P/E of 16.42, buy consensus (an_score 1.81), and very positive news sentiment of 0.402 highlight upside potential.",
+      "drivers": [
+        "+10.24% 1M return",
+        "P/E 16.42",
+        "buy consensus (an_score 1.81)",
+        "positive news sentiment 0.402"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Strong momentum with +9.29% 1M, +28.77% YTD, and +26% 1-year return; P/E of 18.4 with buy consensus (an_score 2.26) and zero sentiment risk.",
+      "drivers": [
+        "+28.77% YTD",
+        "+9.29% 1M return",
+        "P/E 18.4",
+        "buy consensus (an_score 2.26)"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RCUS",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Explosive momentum with +4.06% 1W, +8.26% 1M, +26.58% YTD, and +222% 1-year return; however, no analyst consensus and slightly negative news sentiment -0.051 indicate elevated risk.",
+      "drivers": [
+        "+222% 1-year return",
+        "+26.58% YTD",
+        "+8.26% 1M return",
+        "no analyst consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Positive momentum with +7.63% 1M; low P/E of 11.9 and high dividend yield of 363bps; buy consensus (an_score 2.43), but negative news sentiment -0.398 reflects litigation risk with Eli Lilly.",
+      "drivers": [
+        "+7.63% 1M return",
+        "P/E 11.9",
+        "div yield 363bps",
+        "buy consensus (an_score 2.43)"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Steady momentum with +6.65% 1M, +9.17% YTD, and +51% 1-year return; P/E 40.81 reflects premium, but buy consensus (an_score 1.76) and involvement in AI disease mapping collaborations are positive.",
+      "drivers": [
+        "+51% 1-year return",
+        "+6.65% 1M return",
+        "buy consensus (an_score 1.76)",
+        "AI disease mapping collaboration"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.77,
+      "ytd": "+93.32%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +93.32% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +93.32% \u2265 60.6% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "COAG",
@@ -132,151 +278,6 @@ window.SIGNALS_DATA = {
         "+7.53% 1M",
         "buy consensus",
         "news sentiment 0.195"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.828,
-      "ytd": "+100.32%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +100.32% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +100.32% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NVO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "18.29% 1-month momentum, PE 12.14, dividend yield 3.56%, and positive news sentiment 0.441 make it a compelling value play in metabolic.",
-      "drivers": [
-        "1-month +18.29%",
-        "PE 12.14",
-        "dividend yield 3.56%",
-        "news sentiment 0.441"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "10.70% 1-month, PE 16.44, 4.29% dividend yield, and positive news sentiment 0.204 reflect strong momentum and value in large-cap pharma.",
-      "drivers": [
-        "1-month +10.70%",
-        "PE 16.44",
-        "dividend yield 4.29%",
-        "news sentiment 0.204"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "11.68% 1-month, low PE 16.23, very positive news sentiment 0.447, and low beta 0.236 suggest a turnaround with solid fundamentals.",
-      "drivers": [
-        "1-month +11.68%",
-        "PE 16.23",
-        "news sentiment 0.447",
-        "low beta 0.236"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "19.16% 1-month, YTD +17.91%, strong_buy consensus (an_score 1.5), and positive news sentiment 0.157 drive high-growth genomics exposure.",
-      "drivers": [
-        "1-month +19.16%",
-        "YTD +17.91%",
-        "strong_buy consensus",
-        "news sentiment 0.157"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "17.84% 1-month, PE 16.27, YTD +15.02%, and positive news sentiment 0.076 offer a balanced oncology pick with reasonable valuation.",
-      "drivers": [
-        "1-month +17.84%",
-        "PE 16.27",
-        "YTD +15.02%",
-        "news sentiment 0.076"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "19.59% 1-month, YTD +41.61%, buy consensus, but negative news sentiment -0.088 due to German recall tempers conviction.",
-      "drivers": [
-        "1-month +19.59%",
-        "YTD +41.61%",
-        "buy consensus",
-        "news sentiment -0.088"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "68.36% 1-month, strong_buy consensus (an_score 1.0), and YTD +30.97%, but negative news sentiment -0.091 and no earnings heighten risk.",
-      "drivers": [
-        "1-month +68.36%",
-        "strong_buy consensus",
-        "YTD +30.97%",
-        "news sentiment -0.091"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RCUS",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "10.45% 1-month, YTD +14.38%, and 183% 1-year return, but weekly -11.08%, no analyst coverage, and negative sentiment -0.051 signal caution.",
-      "drivers": [
-        "1-month +10.45%",
-        "YTD +14.38%",
-        "1-year +183%",
-        "weekly -11.08%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "YTD +40.49%, 1-month +12.94%, but beta 2.1, no analyst coverage, negative sentiment -0.03, and small-cap risk make it speculative.",
-      "drivers": [
-        "YTD +40.49%",
-        "1-month +12.94%",
-        "high beta 2.1",
-        "no analyst coverage"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "PACB",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "11.19% 1-month, positive news sentiment 0.167, but YTD -19.02%, beta 2.29, and high short interest 17.58% reflect high risk.",
-      "drivers": [
-        "1-month +11.19%",
-        "news sentiment 0.167",
-        "high beta 2.29",
-        "short interest 17.58%"
       ]
     }
   ]
