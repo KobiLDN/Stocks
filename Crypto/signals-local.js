@@ -1,9 +1,137 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-22 10:36",
+  "updated": "2026-07-24 10:32",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "KAITO",
+      "signal": "strong_buy",
+      "confidence": 0.843,
+      "rationale": "+133.55% 1m, +102% YTD, strong momentum despite small cap $0.247B; neutral news sentiment.",
+      "drivers": [
+        "+133.55% monthly",
+        "+102% YTD",
+        "low market cap $0.247B",
+        "neutral news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+10.87% 1m, news sentiment 0.73, $6.33B market cap, positive catalyst from Chainlink news.",
+      "drivers": [
+        "+10.87% monthly",
+        "positive news sentiment 0.73",
+        "Chainlink supply boost",
+        "mid-cap $6.33B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+11.96% 1m, but very small cap $0.058B, no negative news; high risk-reward.",
+      "drivers": [
+        "+11.96% monthly",
+        "tiny cap $0.058B",
+        "no negative headlines"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+12.56% 1m, $227B market cap, but negative sentiment -0.182 and geopolitical risk from US-Iran strikes.",
+      "drivers": [
+        "+12.56% monthly",
+        "large cap $227B",
+        "negative sentiment -0.182",
+        "geopolitical uncertainty"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+10.27% 1m, +4.98% 1w, positive sentiment 0.07, market cap $6.09B, technical breakout potential.",
+      "drivers": [
+        "+10.27% monthly",
+        "+4.98% weekly",
+        "positive sentiment 0.07",
+        "mid-cap $6.09B"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+9.67% 1m, but no market cap data, low liquidity; speculative momentum play.",
+      "drivers": [
+        "+9.67% monthly",
+        "market cap null",
+        "low liquidity risk"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+8.54% 1m, $44.2B market cap, but negative sentiment -0.08 and geopolitical headwinds.",
+      "drivers": [
+        "+8.54% monthly",
+        "large cap $44.2B",
+        "negative sentiment -0.08",
+        "geopolitical risk"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "VIRTUAL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+6.96% 1m, market cap $0.401B, no news catalyst; moderate momentum.",
+      "drivers": [
+        "+6.96% monthly",
+        "small cap $0.401B",
+        "no news catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SUI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+5.98% 1m, $3.02B market cap, neutral sentiment; Mubadala news not directly related.",
+      "drivers": [
+        "+5.98% monthly",
+        "mid-cap $3.02B",
+        "neutral sentiment"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ALT",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "+4.67% 1m, very small cap $0.042B, high risk; momentum play.",
+      "drivers": [
+        "+4.67% monthly",
+        "tiny cap $0.042B",
+        "high risk"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "KAITO",
@@ -126,139 +254,6 @@ window.SIGNALS_DATA = {
         "+5.91% 1M",
         "small cap",
         "positive momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KAITO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Explosive momentum with +89% YTD, +96.6% 1M, and +44.6% 1W, far outpacing the entire universe; micro-cap $0.23B offers high upside potential.",
-      "drivers": [
-        "+89% YTD return",
-        "+96.6% 1-month gain",
-        "+44.6% 1-week surge",
-        "micro-cap at $0.23B"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Strong institutional catalyst via DTCC tokenization pilot involving BlackRock, Vanguard, and JPMorgan; positive news sentiment 0.247 and +5.12% 1W.",
-      "drivers": [
-        "news sentiment +0.247",
-        "+5.12% 1-week return",
-        "DTCC tokenization pilot with major banks",
-        "market cap $6.2B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Only major asset with positive YTD at +14.79% and positive 1D at +0.30%, supported by tokenization narrative and sentiment 0.119.",
-      "drivers": [
-        "+14.79% YTD return",
-        "positive news sentiment 0.119",
-        "tokenization theme",
-        "stable 1D momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NMR",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Buyback catalyst with $1.2M in NMR repurchased as hedge fund assets reach $700M; positive sentiment 0.101 and +6.79% 1M.",
-      "drivers": [
-        "$1.2M buyback announced",
-        "positive news sentiment 0.101",
-        "+6.79% 1-month return",
-        "YTD +0.69%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Leading large-cap L1 with +7.48% 1M and +4.31% 1W, resilient amid Iran tensions; positive sentiment 0.061 and headline noting flat trading.",
-      "drivers": [
-        "+7.48% 1-month gain",
-        "+4.31% 1-week gain",
-        "market cap $223.8B",
-        "resilient to macro news"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "Best 1M return among major L1s at +7.84% and highest news sentiment 0.18 in layer1, with tokenized stocks narrative as a $3T market.",
-      "drivers": [
-        "+7.84% 1-month return",
-        "news sentiment +0.18",
-        "tokenized stocks $3T market theme",
-        "market cap $2.8B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.58,
-      "rationale": "Largest alt-L1 by market cap at $44.2B with +5.42% 1M, but negative sentiment -0.223 and slight weekly decline -0.70%.",
-      "drivers": [
-        "+5.42% 1-month return",
-        "market cap $44.2B",
-        "negative sentiment -0.223",
-        "1W -0.70%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Decent short-term momentum with +3.15% 1W and +3.91% 1M, though negative YTD -41.73% and tiny $0.057B market cap.",
-      "drivers": [
-        "+3.15% 1-week gain",
-        "+3.91% 1-month gain",
-        "micro-cap $0.057B",
-        "YTD -41.73%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.52,
-      "rationale": "Moderate 1M momentum at +4.02% but with weekly decline -4.76% and no news sentiment; YTD -28.57%.",
-      "drivers": [
-        "+4.02% 1-month return",
-        "1W -4.76%",
-        "YTD -28.57%",
-        "no sentiment data"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SUI",
-      "signal": "buy",
-      "confidence": 0.48,
-      "rationale": "Slight daily gain +0.03% and 1M +3.10% but depressed on-chain data and very negative sentiment -0.527, forecasting a 33% drop.",
-      "drivers": [
-        "+3.10% 1-month return",
-        "news sentiment -0.527",
-        "depressed on-chain activity",
-        "micro-cap $3.0B"
       ]
     }
   ]

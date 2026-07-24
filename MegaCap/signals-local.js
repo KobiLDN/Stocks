@@ -1,9 +1,176 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-22 10:42",
+  "updated": "2026-07-24 10:35",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "XOM",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "XOM surged +29.64% YTD with +14.60% 1M momentum, directly benefiting from the Iran war pushing oil to $100/bbl [thenationalnews.com](https://www.thenationalnews.com/news/mena/2026/07/24/live-us-iran-war-houthi-blockade-red-sea/), while P/E 25.98 and 2.67% yield add fundamental support.",
+      "drivers": [
+        "+29.64% YTD",
+        "+14.60% 1M",
+        "oil price catalyst",
+        "P/E 25.98"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "RTX jumped +7.54% 1D and +13.02% 1M on defense tailwinds from US-Iran escalation, with P/E 36.5 and positive news sentiment 0.134.",
+      "drivers": [
+        "+7.54% 1D",
+        "+13.02% 1M",
+        "defense catalyst",
+        "news_s 0.134"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "CVX gained +27.08% YTD and +13.40% 1M, driven by oil price spike and strong 3.69% dividend yield, with P/E 33.69.",
+      "drivers": [
+        "+27.08% YTD",
+        "+13.40% 1M",
+        "oil price catalyst",
+        "div 3.69%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TMO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "TMO soared +7.98% 1D and +16.28% 1M after solid earnings and price target upgrades, with P/E 28.91 and positive news sentiment 0.271.",
+      "drivers": [
+        "+7.98% 1D",
+        "+16.28% 1M",
+        "earnings catalyst",
+        "P/E 28.91"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ABBV",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "ABBV posted +14.69% YTD and +10.16% 1M momentum, offering a 2.73% dividend yield, despite a high P/E of 123.52.",
+      "drivers": [
+        "+14.69% YTD",
+        "+10.16% 1M",
+        "div 2.73%",
+        "low beta 0.283"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HSBC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "HSBC delivered +30.76% YTD with +8.42% 1M, supported by a 3.64% dividend yield and P/E 17.04, benefitting from higher global rates.",
+      "drivers": [
+        "+30.76% YTD",
+        "+8.42% 1M",
+        "div 3.64%",
+        "P/E 17.04"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "BABA jumped +14.29% 1M, with strong_buy analyst consensus (score 1.32) and a low P/E of 17.96, despite YTD -26.09%.",
+      "drivers": [
+        "+14.29% 1M",
+        "strong_buy consensus",
+        "P/E 17.96",
+        "low beta 0.496"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ABT rallied +12.13% 1M on bargain-bin medical-device appeal, with positive news sentiment 0.276 and P/E 32.61, despite YTD -17.37%.",
+      "drivers": [
+        "+12.13% 1M",
+        "positive news_s 0.276",
+        "P/E 32.61",
+        "div 2.51%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "JNJ gained +26.43% YTD and +7.58% 1M, with a low beta of 0.235, P/E 29.66, and a 2.10% dividend yield, offering defensive stability.",
+      "drivers": [
+        "+26.43% YTD",
+        "+7.58% 1M",
+        "low beta 0.235",
+        "P/E 29.66"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "LLY rose +10.14% YTD and +6.14% 1M, driven by GLP-1 dominance, with positive news sentiment 0.246 and P/E 41.32.",
+      "drivers": [
+        "+10.14% YTD",
+        "+6.14% 1M",
+        "GLP-1 catalyst",
+        "news_s 0.246"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.62,
+      "ytd": "+154.52%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +154.52% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +154.52% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.589,
+      "ytd": "+146.70%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +146.70% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +146.70% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.568,
+      "ytd": "+141.50%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +141.50% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +141.50% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "META",
@@ -132,173 +299,6 @@ window.SIGNALS_DATA = {
         "P/E 39.53",
         "momentum peak warning",
         "an_score 2.02"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.674,
-      "ytd": "+167.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +167.78% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +167.78% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.612,
-      "ytd": "+152.53%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +152.53% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +152.53% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.577,
-      "ytd": "+143.63%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +143.63% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +143.63% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRK",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Up 21.53% YTD and 11.97% in 1M, P/E 36.02, with FDA approval for first oral PCSK9 cholesterol drug providing a strong catalyst.",
-      "drivers": [
-        "+21.53% YTD",
-        "+11.97% 1M",
-        "FDA approval catalyst",
-        "2.67% dividend yield"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "JNJ",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Up 23.39% YTD and 10.79% in 1M, P/E 29.32, low beta 0.235, and a blowout earnings report driving momentum.",
-      "drivers": [
-        "+23.39% YTD",
-        "+10.79% 1M",
-        "blowout earnings",
-        "2.12% dividend yield"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Up 16.51% in 1M, P/E 12.07, dividend yield 3.58%, with European approval for oral Wegovy pill expanding the GLP-1 franchise.",
-      "drivers": [
-        "+16.51% 1M",
-        "low P/E 12.07",
-        "3.58% dividend yield",
-        "Wegovy pill approval"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ABBV",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Up 18.39% in 1M and 13.60% YTD, P/E 124.75, with a $10.9B Apogee acquisition supporting dividend growth.",
-      "drivers": [
-        "+18.39% 1M",
-        "+13.60% YTD",
-        "2.72% dividend yield",
-        "Apogee acquisition"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Up 23.38% YTD and 11.99% in 1M, P/E 40.5, benefiting from AI infrastructure investment and capital rotation.",
-      "drivers": [
-        "+23.38% YTD",
-        "+11.99% 1M",
-        "AI capex tailwind",
-        "low short interest 0.96%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Up 11.92% in 1M, P/E 23.47, strong_buy consensus, and hyperscaler AI spending driving ad revenue growth.",
-      "drivers": [
-        "+11.92% 1M",
-        "P/E 23.47",
-        "strong_buy consensus",
-        "AI ad platform"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Up 11.17% in 1M, P/E 31.44, strong_buy consensus, and resilient consumer spending supporting payment volumes.",
-      "drivers": [
-        "+11.17% 1M",
-        "strong_buy consensus",
-        "low short interest 0.88%",
-        "payment network moat"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Up 9.57% in 1M and 3.91% YTD, P/E 31.26, strong_buy consensus, with steady cross-border transaction growth.",
-      "drivers": [
-        "+9.57% 1M",
-        "strong_buy consensus",
-        "0.75% dividend yield",
-        "global payment leader"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Up 14.69% in 1M, P/E 28.2, dividend yield 2.5%, rebounding from YTD losses with positive news sentiment of 0.344.",
-      "drivers": [
-        "+14.69% 1M",
-        "P/E 28.2",
-        "2.5% dividend yield",
-        "positive news sentiment 0.344"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Up 14.61% in 1M, P/E 29.24, with strong news sentiment 0.264 and a rebound from YTD decline of -9.95%.",
-      "drivers": [
-        "+14.61% 1M",
-        "P/E 29.24",
-        "news sentiment 0.264",
-        "life sciences leader"
       ]
     }
   ]

@@ -1,9 +1,154 @@
 {
-  "updated": "2026-07-22 10:28",
+  "updated": "2026-07-24 10:29",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "LLY combines strong momentum (+47% 1y, +10.14% YTD, +6.14% 1m) with solid fundamentals: PE 41.32, low beta 0.506, and positive news sentiment 0.246. Analyst consensus is strong_buy (score 1.76) supported by its leading metabolic portfolio.",
+      "drivers": [
+        "strong YTD & 1y momentum",
+        "positive news sentiment 0.246",
+        "analyst strong_buy consensus",
+        "low beta 0.506"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "ILMN has exceptional momentum with +83% 1y, +46.53% YTD, and +12.43% 1m, supported by a PE of 34.72 and positive news sentiment 0.035. High short interest of 8.17% adds squeeze potential.",
+      "drivers": [
+        "+46.53% YTD momentum",
+        "positive news sentiment 0.035",
+        "short interest 8.17%",
+        "high beta 1.469"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "BMY offers a compelling value with +17.56% YTD, +13.10% 1m, a low PE of 16.99, and a high dividend yield of 4.15%. Despite slightly negative news sentiment -0.019, analyst consensus is buy with an_score 2.5.",
+      "drivers": [
+        "+13.10% 1-month momentum",
+        "low PE 16.99",
+        "high dividend yield 4.15%",
+        "low beta 0.235"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "COAG shows explosive momentum with +59.35% 1m and +34.79% YTD, backed by the strongest analyst consensus (strong_buy, an_score 1.0). Despite negative news sentiment -0.018, the rare-disease focus and IPO catalyst drive upside.",
+      "drivers": [
+        "+59.35% 1-month rally",
+        "strong_buy analyst consensus",
+        "rare-disease category",
+        "high YTD return 34.79%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "RCUS",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "RCUS delivers outstanding long-term performance (+201% 1y, +27.65% YTD) with a strong 1-week gain of +11.60%. Analyst consensus is strong_buy (score 1.46) and news sentiment is positive 0.128, signaling continued oncology-driven momentum.",
+      "drivers": [
+        "+201% 1-year return",
+        "strong_buy analyst consensus",
+        "positive news sentiment 0.128",
+        "high short interest 16.54%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "EXEL has strong YTD return of +27.70% and a low PE of 18.19, with low beta 0.424 providing stability. Short interest at 15.44% is elevated, and analyst consensus is buy (score 2.26).",
+      "drivers": [
+        "+27.70% YTD",
+        "low PE 18.19",
+        "low beta 0.424",
+        "elevated short interest 15.44%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "INCY shows solid momentum with +66% 1y, +15.06% YTD, and +7.59% 1m, supported by a low PE of 16.37 and low beta 0.758. Despite slightly negative news sentiment -0.004, analyst consensus is buy (score 2.31).",
+      "drivers": [
+        "+66% 1-year return",
+        "low PE 16.37",
+        "low beta 0.758",
+        "short interest 9.12%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AMGN provides steady momentum with +15.03% YTD, +5.71% 1m, and a PE of 25.45. It offers a dividend yield of 2.75% and low beta 0.403, with analyst consensus buy (score 2.44) and neutral news sentiment.",
+      "drivers": [
+        "+15.03% YTD",
+        "dividend yield 2.75%",
+        "low beta 0.403",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "REGN has a low PE of 15.9 and positive news sentiment 0.26, with a 1-month gain of +4.57% despite a negative YTD of -15.80%. Analyst consensus is buy (score 1.81), and low beta 0.236 offers stability.",
+      "drivers": [
+        "low PE 15.9",
+        "positive news sentiment 0.26",
+        "low beta 0.236",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.62,
+      "rationale": "NTRA has strong momentum with +88% 1y, +15.67% YTD, and positive news sentiment 0.179. Analyst consensus is strong_buy (score 1.5), and high beta 1.505 adds upside potential in genomics.",
+      "drivers": [
+        "+88% 1-year return",
+        "strong_buy analyst consensus",
+        "positive news sentiment 0.179",
+        "high beta 1.505"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "ytd": "+84.77%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +84.77% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +84.77% \u2265 60.6% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "COAG",
@@ -133,151 +278,6 @@
         "+6.65% 1M return",
         "buy consensus (an_score 1.76)",
         "AI disease mapping collaboration"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.77,
-      "ytd": "+93.32%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +93.32% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +93.32% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Explosive momentum with +44.97% YTD, +68.57% 1M, and +29.61% 1W, backed by a strong_buy analyst consensus (score 1.0) despite a neutral news sentiment of -0.091.",
-      "drivers": [
-        "+44.97% YTD",
-        "+68.57% 1M",
-        "strong_buy consensus",
-        "low market cap $2.3B"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong momentum with +18.59% YTD and +17.28% 1M, strong_buy analyst rating (1.50), low short interest of 4.19%, and positive news sentiment of 0.157.",
-      "drivers": [
-        "+18.59% YTD",
-        "+17.28% 1M",
-        "strong_buy consensus",
-        "low short interest 4.19%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Solid fundamentals with P/E of 17.01, 4.15% dividend yield, +16.08% YTD, +13.75% 1M, and low short interest of 1.99%, supported by positive news sentiment of 0.108.",
-      "drivers": [
-        "P/E 17.01",
-        "dividend yield 4.15%",
-        "+16.08% YTD",
-        "low short interest 1.99%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Attractive valuation with P/E of 16.53, recent 1M surge of +10.94%, and the highest news sentiment (0.402) in the universe, offsetting a negative YTD of -12.60%.",
-      "drivers": [
-        "P/E 16.53",
-        "+10.94% 1M",
-        "news sentiment 0.402",
-        "beta 0.236"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Cheap P/E of 12.07, 3.58% dividend yield, strong 1M momentum of +16.51%, and a positive catalyst from the first European approval of oral Wegovy, with low short interest of 0.88%.",
-      "drivers": [
-        "P/E 12.07",
-        "dividend yield 3.58%",
-        "+16.51% 1M",
-        "oral Wegovy EU approval"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Impressive 1-year return of +74%, YTD +15.61%, 1M gain of +19.37%, a reasonable P/E of 16.56, and positive news sentiment of 0.076, with a buy rating.",
-      "drivers": [
-        "+74% 1Y",
-        "+19.37% 1M",
-        "P/E 16.56",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Strong YTD performance of +38.93% and 1M gain of +15.27%, but tempered by a German recall order and negative news sentiment (-0.088); P/E of 33.87 reflects growth premium.",
-      "drivers": [
-        "+38.93% YTD",
-        "+15.27% 1M",
-        "P/E 33.87",
-        "German recall risk"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Positive news sentiment of 0.195, 1M momentum of +8.96%, a buy analyst consensus (score 1.72), and a low beta of 0.239, though P/E of 42.87 is elevated.",
-      "drivers": [
-        "news sentiment 0.195",
-        "+8.96% 1M",
-        "buy consensus",
-        "beta 0.239"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Exceptional YTD return of +45.37% and 1M gain of +10.78%, but very small market cap ($458M), high beta of 2.1, no analyst coverage, and negative news sentiment (-0.03).",
-      "drivers": [
-        "+45.37% YTD",
-        "+10.78% 1M",
-        "small cap $458M",
-        "high beta 2.1"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Recent FDA approval for children as young as 2, +7.53% 1M, +7.41% YTD, a buy consensus (score 1.68), and positive news sentiment of 0.195, though P/E of 28.82 is not cheap.",
-      "drivers": [
-        "FDA approval for ages 2+",
-        "+7.53% 1M",
-        "buy consensus",
-        "news sentiment 0.195"
       ]
     }
   ]

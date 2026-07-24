@@ -1,9 +1,209 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-22 10:30",
+  "updated": "2026-07-24 10:32",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PANW",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "PANW has strong momentum with +81.54% YTD and +14.15% 1-month return, positive news sentiment of 0.17, and a buy analyst consensus (score 1.60). Upcoming Q4 2026 earnings are a key catalyst.",
+      "drivers": [
+        "+81.54% YTD",
+        "+14.15% 1M",
+        "buy consensus",
+        "positive news sentiment 0.17"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CRWD shows strong YTD performance at +61.75% and a 1-month gain of +9.01%, supported by positive news sentiment of 0.132 and a buy analyst consensus. The partnership with Cerebras for AI cybersecurity is a live catalyst.",
+      "drivers": [
+        "+61.75% YTD",
+        "+9.01% 1M",
+        "buy consensus",
+        "AI cybersecurity partnership"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "NET has impressive 1-month momentum of +17.38% and YTD return of +33.82%, with a buy analyst consensus (score 1.88). Despite a cautious headline, the strong short-term momentum and positive news sentiment of 0.042 are attractive.",
+      "drivers": [
+        "+17.38% 1M",
+        "+33.82% YTD",
+        "buy consensus",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.76,
+      "rationale": "SNOW has strong momentum with +22.34% YTD and +17.34% 1-month return, a strong_buy analyst consensus (score 1.49), and positive news sentiment of 0.028. Fresh AI growth news is a key catalyst.",
+      "drivers": [
+        "+22.34% YTD",
+        "+17.34% 1M",
+        "strong_buy consensus",
+        "AI growth catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "NVDA has solid YTD return of +10.68% and 1-month gain of +4.90%, with a strong_buy analyst consensus (score 1.30) and a reasonable P/E of 32.47. Its dominant position in AI remains a key driver.",
+      "drivers": [
+        "+10.68% YTD",
+        "strong_buy consensus",
+        "P/E 32.47",
+        "AI leadership"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "rationale": "META has a 1-month return of +8.68% and a strong_buy analyst consensus (score 1.35), with positive news sentiment of 0.114. The hot-selling smart glasses catalyst supports growth.",
+      "drivers": [
+        "+8.68% 1M",
+        "strong_buy consensus",
+        "positive news sentiment 0.114",
+        "smart glasses catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AAPL has a YTD return of +18.91% and a 1-month gain of +9.75%, with a buy analyst consensus (score 2.02) and low short interest of 0.96%. Despite a recent dip, its mega-cap stability is attractive.",
+      "drivers": [
+        "+18.91% YTD",
+        "+9.75% 1M",
+        "buy consensus",
+        "low short interest 0.96%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "INTU has a 1-month return of +7.83% and a low P/E of 17.36, with a buy analyst consensus (score 1.74). Despite a negative YTD, the recent momentum and attractive valuation are compelling.",
+      "drivers": [
+        "+7.83% 1M",
+        "P/E 17.36",
+        "buy consensus",
+        "attractive valuation"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ADBE has a 1-month return of +7.94% and a very low P/E of 12.49, with positive news sentiment of 0.136. However, the hold analyst consensus (score 2.70) and negative YTD of -36.34% warrant caution.",
+      "drivers": [
+        "+7.94% 1M",
+        "P/E 12.49",
+        "positive news sentiment 0.136",
+        "hold consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "PLTR has a 1-month return of +8.70% and the highest news sentiment in the universe at 0.38, with a buy analyst consensus (score 1.88). The Pentagon deal catalyst is a positive, but a high P/E of 140.19 and negative YTD of -26.50% add risk.",
+      "drivers": [
+        "+8.70% 1M",
+        "news sentiment 0.38",
+        "buy consensus",
+        "Pentagon deal catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMAT",
+      "signal": "buy",
+      "confidence": 0.907,
+      "ytd": "+109.84%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +109.84% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +109.84% \u2265 60.6% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.86,
+      "ytd": "+214.11%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +214.11% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +214.11% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.781,
+      "ytd": "+94.58%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +94.58% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +94.58% \u2265 60.6% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.62,
+      "ytd": "+154.52%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +154.52% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +154.52% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.589,
+      "ytd": "+146.70%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +146.70% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +146.70% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.568,
+      "ytd": "+141.50%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +141.50% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +141.50% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "META",
@@ -123,206 +323,6 @@ window.SIGNALS_DATA = {
         "strong_buy",
         "sentiment 0.311",
         "YTD +11.59%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMAT",
-      "signal": "buy",
-      "confidence": 0.912,
-      "ytd": "+110.49%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.49% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.49% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.85,
-      "ytd": "+103.00%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +103.00% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +103.00% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.835,
-      "ytd": "+207.96%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +207.96% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +207.96% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.674,
-      "ytd": "+167.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +167.78% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +167.78% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.612,
-      "ytd": "+152.53%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +152.53% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +152.53% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.577,
-      "ytd": "+143.63%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +143.63% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +143.63% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +99.97%, 1M +24.64%, 1W +10.05%, strong momentum driven by cybersecurity demand amid escalating US-Iran conflict; analyst consensus 'buy' with score 1.60.",
-      "drivers": [
-        "YTD +99.97%",
-        "1M +24.64%",
-        "1W +10.05%",
-        "cybersecurity tailwinds from geopolitical tensions"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "YTD +79.09%, 1M +18.61%, 1W +8.49%, positive news sentiment 0.356, and shares soaring alongside PANW as cybersecurity sector benefits from heightened geopolitical risk.",
-      "drivers": [
-        "YTD +79.09%",
-        "1M +18.61%",
-        "news sentiment 0.356",
-        "cybersecurity sector momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +41.65%, 1M +23.92%, 1D +2.09%, highest news sentiment in universe at 0.554, and gains despite market dip as demand for cloud security rises.",
-      "drivers": [
-        "1M +23.92%",
-        "news sentiment 0.554",
-        "YTD +41.65%",
-        "cloud security demand"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.887,
-      "rationale": "YTD +107.51%, 1M +11.66%, 1W +2.60%, strong momentum but analyst consensus 'hold' with score 2.75; P/E 62.4 is elevated.",
-      "drivers": [
-        "YTD +107.51%",
-        "1M +11.66%",
-        "P/E 62.4",
-        "analyst hold rating"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +24.08%, 1M +15.76%, 1W +2.85%, strong_buy consensus with score 1.49, news sentiment 0.344, and CEO RSU award tied to long-term AI goals.",
-      "drivers": [
-        "1M +15.76%",
-        "strong_buy consensus 1.49",
-        "news sentiment 0.344",
-        "AI-driven CEO incentives"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +21.57%, 1W +6.09%, 1D +1.46%, P/E 13.56 is attractive, but analyst consensus 'hold' with score 2.67 and negative news sentiment -0.009.",
-      "drivers": [
-        "1M +21.57%",
-        "P/E 13.56",
-        "analyst hold rating",
-        "negative news sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "1M +13.51%, YTD -21.40%, analyst 'buy' with score 1.65, news sentiment 0.127, and lean profitability strategy contrasts with Amazon's capex gamble.",
-      "drivers": [
-        "1M +13.51%",
-        "buy consensus 1.65",
-        "lean profitability strategy",
-        "news sentiment 0.127"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "1M +12.51%, 1W +4.56%, P/E 19.81, highest news sentiment among enterprise software at 0.404, and analyst 'buy' with score 1.62.",
-      "drivers": [
-        "1M +12.51%",
-        "news sentiment 0.404",
-        "P/E 19.81",
-        "buy consensus 1.62"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.76,
-      "rationale": "1M +11.92%, P/E 23.47, strong_buy consensus with score 1.35, and positive news sentiment 0.008; mega-cap with AI-driven advertising growth.",
-      "drivers": [
-        "1M +11.92%",
-        "strong_buy consensus 1.35",
-        "P/E 23.47",
-        "AI advertising growth"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "YTD +23.38%, 1M +11.99%, 1W +5.84%, P/E 40.5, analyst 'buy' with score 2.0, news sentiment 0.17, and AI money rotation from Nvidia.",
-      "drivers": [
-        "YTD +23.38%",
-        "1M +11.99%",
-        "AI money rotation",
-        "buy consensus 2.0"
       ]
     }
   ]
