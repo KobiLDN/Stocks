@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-24 07:31",
-  "fx_gbp_usd": 1.3321,
+  "updated": "2026-07-24 11:21",
+  "fx_gbp_usd": 1.3322,
   "stocks": [
     {
       "ticker": "LMT",
@@ -9,7 +9,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "427",
       "price_usd": 568.59,
-      "change_1d": "+10.36%",
+      "change_1d": "+0.12%",
       "change_1w": "+10.72%",
       "change_1m": "+15.65%",
       "change_ytd": "+15.74%",
@@ -19,10 +19,10 @@ window.PRICES_DATA = {
       "high_gbp": "519",
       "high_usd": 692.0,
       "bar_pct": 56,
-      "market_cap_gbp_b": 98.176,
-      "market_cap_usd_b": 130.776,
+      "market_cap_gbp_b": 98.164,
+      "market_cap_usd_b": 130.775,
       "beta": 0.113,
-      "pe_ratio": 24.94,
+      "pe_ratio": 20.97,
       "avg_volume_m": 1.34,
       "div_yield_pct": 268.0,
       "short_pct": 1.81,
@@ -32,6 +32,27 @@ window.PRICES_DATA = {
       "vol_1w": 8002700,
       "vol_1m": 26524200,
       "news": [
+        {
+          "title": "Exclusive-Defense tech company Anduril in talks to raise funding at about $100 billion valuation",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/news/exclusive-defense-tech-company-anduril-100423200.html",
+          "published": 1784887463,
+          "sentiment": 0.0
+        },
+        {
+          "title": "US Stock Market Today: S&P 500 Futures Slip As Higher Yields And Volatility Bite",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/us-stock-market-today-p-080956518.html",
+          "published": 1784880596,
+          "sentiment": 0.0
+        },
+        {
+          "title": "RTX, LMT Stocks Head For Weekly Gains After Solid Q2 Performance \u2014 Retail Calls Defense 'A Bipartisan Issue'",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/rtx-lmt-stocks-head-for-weekly-gains-after-solid-q2-performance-retail-calls-defense-a-bipartisan-issue/cZZYFQdR7y4",
+          "published": 1784879758,
+          "sentiment": 0.542
+        },
         {
           "title": "US weapons makers confront Europe's drive for local control",
           "publisher": "Reuters",
@@ -45,30 +66,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-lockheed-martin-lmt-shares-220431200.html",
           "published": 1784844271,
           "sentiment": 0.296
-        },
-        {
-          "title": "Stocks to Watch Recap: Alphabet, Tesla, Nestle, Intel",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-07-23-2026/card/stocks-to-watch-alphabet-tesla-nestle-intel-AS4f3LXvev9BmGBq1IkS?siteid=yhoof2&yptr=yahoo",
-          "published": 1784843383,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Lockheed Martin Corporation Q2 2026 Earnings Call Summary",
-          "publisher": "Moby",
-          "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-lockheed-martin-corporation-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss",
-          "published": 1784842004,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Lockheed Martin Q2 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/lockheed-martin-q2-earnings-call-highlights-2026-07-23/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1784840849,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.052
+      "news_sentiment": 0.056
     },
     {
       "ticker": "RTX",
@@ -77,7 +77,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "157",
       "price_usd": 209.16,
-      "change_1d": "+7.54%",
+      "change_1d": "+0.10%",
       "change_1w": "+7.61%",
       "change_1m": "+13.02%",
       "change_ytd": "+12.54%",
@@ -87,8 +87,8 @@ window.PRICES_DATA = {
       "high_gbp": "161",
       "high_usd": 214.5,
       "bar_pct": 92,
-      "market_cap_gbp_b": 211.457,
-      "market_cap_usd_b": 281.672,
+      "market_cap_gbp_b": 211.432,
+      "market_cap_usd_b": 281.673,
       "beta": 0.298,
       "pe_ratio": 36.5,
       "avg_volume_m": 5.46,
@@ -100,6 +100,13 @@ window.PRICES_DATA = {
       "vol_1w": 27467000,
       "vol_1m": 97208800,
       "news": [
+        {
+          "title": "RTX, LMT Stocks Head For Weekly Gains After Solid Q2 Performance \u2014 Retail Calls Defense 'A Bipartisan Issue'",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/rtx-lmt-stocks-head-for-weekly-gains-after-solid-q2-performance-retail-calls-defense-a-bipartisan-issue/cZZYFQdR7y4",
+          "published": 1784879758,
+          "sentiment": 0.542
+        },
         {
           "title": "Why Is RTX (RTX) Stock Soaring Today",
           "publisher": "StockStory",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-raises-outlook-shares-jump-203036781.html",
           "published": 1784838636,
           "sentiment": 0.67
-        },
-        {
-          "title": "Update: Nasdaq, S&P 500 Log Worst Day in More Than Four Weeks as Brent Tops $100",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nasdaq-p-500-log-worst-202557019.html",
-          "published": 1784838357,
-          "sentiment": -0.202
         }
       ],
-      "news_sentiment": 0.134
+      "news_sentiment": 0.283
     },
     {
       "ticker": "NOC",
@@ -145,7 +145,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "400",
       "price_usd": 533.48,
-      "change_1d": "+1.62%",
+      "change_1d": "-0.00%",
       "change_1w": "+2.86%",
       "change_1m": "+6.06%",
       "change_ytd": "-8.22%",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "581",
       "high_usd": 774.0,
       "bar_pct": 18,
-      "market_cap_gbp_b": 56.895,
-      "market_cap_usd_b": 75.787,
+      "market_cap_gbp_b": 56.889,
+      "market_cap_usd_b": 75.788,
       "beta": -0.102,
       "pe_ratio": 16.48,
       "avg_volume_m": 0.97,
@@ -168,6 +168,13 @@ window.PRICES_DATA = {
       "vol_1w": 6666600,
       "vol_1m": 22806600,
       "news": [
+        {
+          "title": "Exclusive-Defense tech company Anduril in talks to raise funding at about $100 billion valuation",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/news/exclusive-defense-tech-company-anduril-100423200.html",
+          "published": 1784887463,
+          "sentiment": 0.0
+        },
         {
           "title": "Lockheed Q2 Earnings Beat Estimates, Sales Increase Year Over Year",
           "publisher": "Zacks",
@@ -195,13 +202,6 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/spacex-stock-satellite-repair-starship-907cac1a?siteid=yhoof2&yptr=yahoo",
           "published": 1784757240,
           "sentiment": 0.765
-        },
-        {
-          "title": "Reading Between The Lines Of GE's Latest Call",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/608385/reading-between-the-lines-of-ges-latest-call/2026-07-22",
-          "published": 1784744511,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.257
@@ -213,7 +213,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "287",
       "price_usd": 381.79,
-      "change_1d": "+2.08%",
+      "change_1d": "-0.30%",
       "change_1w": "+3.52%",
       "change_1m": "+11.37%",
       "change_ytd": "+12.65%",
@@ -223,12 +223,12 @@ window.PRICES_DATA = {
       "high_gbp": "291",
       "high_usd": 387.69,
       "bar_pct": 93,
-      "market_cap_gbp_b": 77.51,
+      "market_cap_gbp_b": 77.501,
       "market_cap_usd_b": 103.248,
       "beta": 0.338,
       "pe_ratio": 23.48,
       "avg_volume_m": 1.3,
-      "div_yield_pct": 170.0,
+      "div_yield_pct": 167.0,
       "short_pct": 1.3,
       "analyst": "buy",
       "analyst_score": 2.12,
@@ -279,22 +279,22 @@ window.PRICES_DATA = {
       "company_name": "Huntington Ingalls Industries",
       "category": "us-primes",
       "exchange": "NYSE",
-      "price_gbp": "216",
+      "price_gbp": "215",
       "price_usd": 287.09,
-      "change_1d": "+2.90%",
+      "change_1d": "-1.68%",
       "change_1w": "+5.92%",
       "change_1m": "+2.67%",
       "change_ytd": "-17.30%",
       "return_1yr": "+9%",
-      "low_gbp": "193",
+      "low_gbp": "192",
       "low_usd": 256.45,
       "high_gbp": "345",
       "high_usd": 460.0,
       "bar_pct": 15,
-      "market_cap_gbp_b": 8.493,
+      "market_cap_gbp_b": 8.492,
       "market_cap_usd_b": 11.313,
       "beta": 0.248,
-      "pe_ratio": 18.02,
+      "pe_ratio": 18.65,
       "avg_volume_m": 0.53,
       "div_yield_pct": 199.0,
       "short_pct": 2.64,
@@ -349,7 +349,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "225",
       "price_usd": 299.67,
-      "change_1d": "+5.41%",
+      "change_1d": "-0.24%",
       "change_1w": "+5.36%",
       "change_1m": "+4.32%",
       "change_ytd": "-0.84%",
@@ -359,12 +359,12 @@ window.PRICES_DATA = {
       "high_gbp": "285",
       "high_usd": 379.23,
       "bar_pct": 32,
-      "market_cap_gbp_b": 41.91,
+      "market_cap_gbp_b": 41.905,
       "market_cap_usd_b": 55.826,
       "beta": 0.746,
-      "pe_ratio": 30.96,
+      "pe_ratio": 32.57,
       "avg_volume_m": 1.4,
-      "div_yield_pct": 175.0,
+      "div_yield_pct": 167.0,
       "short_pct": 2.07,
       "analyst": "buy",
       "analyst_score": 1.6,
@@ -417,7 +417,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "157",
       "price_usd": 209.23,
-      "change_1d": "+1.15%",
+      "change_1d": "+0.15%",
       "change_1w": "-2.38%",
       "change_1m": "-5.00%",
       "change_ytd": "-8.14%",
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "191",
       "high_usd": 254.35,
       "bar_pct": 42,
-      "market_cap_gbp_b": 123.821,
+      "market_cap_gbp_b": 123.806,
       "market_cap_usd_b": 164.936,
       "beta": 1.205,
       "pe_ratio": 82.7,
@@ -440,6 +440,13 @@ window.PRICES_DATA = {
       "vol_1w": 31065500,
       "vol_1m": 114954400,
       "news": [
+        {
+          "title": "IBM to buy HRL Laboratories to enhance quantum computing",
+          "publisher": "Verdict",
+          "url": "https://www.verdict.co.uk/ibm-to-buy-hrl-laboratories/",
+          "published": 1784882321,
+          "sentiment": 0.0
+        },
         {
           "title": "Boeing Nears Max 10 Certification With 1,500+ Orders Awaiting Approval",
           "publisher": "GuruFocus.com",
@@ -467,16 +474,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/articles/airbus-boeing-fly-different-directions-171145657.html",
           "published": 1784826705,
           "sentiment": 0.0
-        },
-        {
-          "title": "Boeing Wins Quiet Airshow Order Race",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/boeing-wins-quiet-airshow-order-170924682.html",
-          "published": 1784826564,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.269
+      "news_sentiment": 0.155
     },
     {
       "ticker": "BA.L",
@@ -484,29 +484,29 @@ window.PRICES_DATA = {
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "20",
-      "price_usd": 26.17,
-      "change_1d": "+2.13%",
-      "change_1w": "+7.14%",
-      "change_1m": "+7.67%",
-      "change_ytd": "+12.04%",
+      "price_usd": 26.12,
+      "change_1d": "-0.28%",
+      "change_1w": "+4.28%",
+      "change_1m": "+7.45%",
+      "change_ytd": "+11.79%",
       "return_1yr": "+4%",
-      "low_gbp": "14",
-      "low_usd": 18.32,
+      "low_gbp": "15",
+      "low_usd": 20.37,
       "high_gbp": "24",
       "high_usd": 31.44,
-      "bar_pct": 50,
-      "market_cap_gbp_b": 0.576,
-      "market_cap_usd_b": 0.767,
+      "bar_pct": 52,
+      "market_cap_gbp_b": 0.575,
+      "market_cap_usd_b": 0.766,
       "beta": -0.066,
-      "pe_ratio": 28.9,
+      "pe_ratio": 28.83,
       "avg_volume_m": 6.42,
       "div_yield_pct": 189.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.17,
-      "vol_1d": 2077000,
-      "vol_1w": 22618328,
-      "vol_1m": 140580033,
+      "vol_1d": 505659,
+      "vol_1w": 26000384,
+      "vol_1m": 143647824,
       "news": [
         {
           "title": "BAE Systems (LSE:BA.) Wins Brazil Naval Gun Order, Is The Stock Still Cheap?",
@@ -552,29 +552,29 @@ window.PRICES_DATA = {
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "14",
-      "price_usd": 18.1,
-      "change_1d": "-2.37%",
-      "change_1w": "-1.41%",
-      "change_1m": "-2.31%",
-      "change_ytd": "+13.54%",
+      "price_usd": 18.43,
+      "change_1d": "+1.24%",
+      "change_1w": "+1.32%",
+      "change_1m": "-2.51%",
+      "change_ytd": "+15.59%",
       "return_1yr": "+41%",
-      "low_gbp": "9.51",
-      "low_usd": 12.67,
+      "low_gbp": "9.70",
+      "low_usd": 12.93,
       "high_gbp": "15",
       "high_usd": 20.42,
-      "bar_pct": 50,
-      "market_cap_gbp_b": 1.123,
-      "market_cap_usd_b": 1.496,
+      "bar_pct": 74,
+      "market_cap_gbp_b": 1.144,
+      "market_cap_usd_b": 1.524,
       "beta": 1.203,
-      "pe_ratio": 19.7,
+      "pe_ratio": 20.05,
       "avg_volume_m": 28.25,
       "div_yield_pct": 68.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 7248355,
-      "vol_1w": 76306255,
-      "vol_1m": 468048115,
+      "vol_1d": 3241062,
+      "vol_1w": 80261381,
+      "vol_1m": 419886895,
       "news": [
         {
           "title": "European Stocks Close Higher in Wednesday Trading; UK Inflation Decelerates",
@@ -619,30 +619,30 @@ window.PRICES_DATA = {
       "company_name": "QinetiQ Group",
       "category": "uk-european",
       "exchange": "LSE",
-      "price_gbp": "4.82",
-      "price_usd": 6.43,
-      "change_1d": "+0.54%",
-      "change_1w": "+8.28%",
-      "change_1m": "+12.52%",
-      "change_ytd": "+8.58%",
+      "price_gbp": "4.81",
+      "price_usd": 6.41,
+      "change_1d": "-1.27%",
+      "change_1w": "+6.01%",
+      "change_1m": "+13.25%",
+      "change_ytd": "+8.26%",
       "return_1yr": "-4%",
-      "low_gbp": "3.38",
-      "low_usd": 4.5,
+      "low_gbp": "3.98",
+      "low_usd": 5.31,
       "high_gbp": "5.51",
       "high_usd": 7.35,
-      "bar_pct": 50,
+      "bar_pct": 54,
       "market_cap_gbp_b": 0.025,
       "market_cap_usd_b": 0.033,
       "beta": 0.325,
-      "pe_ratio": 24.12,
+      "pe_ratio": 24.05,
       "avg_volume_m": 2.21,
       "div_yield_pct": 229.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.82,
-      "vol_1d": 22,
-      "vol_1w": 4946058,
-      "vol_1m": 41468448,
+      "vol_1d": 172341,
+      "vol_1w": 5786110,
+      "vol_1m": 40831393,
       "news": [
         {
           "title": "3 UK Penny Stocks With Market Caps Over \u00a3300M To Consider",
@@ -689,7 +689,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "93",
       "price_usd": 123.37,
-      "change_1d": "-1.42%",
+      "change_1d": "+0.52%",
       "change_1w": "-8.23%",
       "change_1m": "+8.70%",
       "change_ytd": "-26.50%",
@@ -699,8 +699,8 @@ window.PRICES_DATA = {
       "high_gbp": "156",
       "high_usd": 207.52,
       "bar_pct": 17,
-      "market_cap_gbp_b": 222.03,
-      "market_cap_usd_b": 295.756,
+      "market_cap_gbp_b": 222.004,
+      "market_cap_usd_b": 295.757,
       "beta": 1.562,
       "pe_ratio": 140.19,
       "avg_volume_m": 41.47,
@@ -712,6 +712,13 @@ window.PRICES_DATA = {
       "vol_1w": 153855200,
       "vol_1m": 867599300,
       "news": [
+        {
+          "title": "Palantir Is Down 25%. Here's Why I'm Buying More.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/24/palantir-is-down-28-heres-why-im-buying-more/",
+          "published": 1784881200,
+          "sentiment": 0.0
+        },
         {
           "title": "ORCL Stock Rises After-Hours On Pentagon Deal Worth Up To $7B \u2014 Why Retail Sees NOW, PLTR, MSFT And Others Benefiting Too",
           "publisher": "Stocktwits",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/07/23/palantir-vs-lockheed-martin-which-defense-stock-wi/",
           "published": 1784827500,
           "sentiment": 0.637
-        },
-        {
-          "title": "Palantir Commercial Business Gets Citi Boost",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-commercial-business-gets-citi-170827003.html",
-          "published": 1784826507,
-          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.38
+      "news_sentiment": 0.3
     },
     {
       "ticker": "LDOS",
@@ -757,7 +757,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "83",
       "price_usd": 110.33,
-      "change_1d": "+2.86%",
+      "change_1d": "+0.30%",
       "change_1w": "+1.88%",
       "change_1m": "+5.76%",
       "change_ytd": "-39.50%",
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "154",
       "high_usd": 205.77,
       "bar_pct": 11,
-      "market_cap_gbp_b": 10.418,
-      "market_cap_usd_b": 13.877,
+      "market_cap_gbp_b": 10.417,
+      "market_cap_usd_b": 13.878,
       "beta": 0.547,
       "pe_ratio": 9.82,
       "avg_volume_m": 1.58,
@@ -825,7 +825,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "361",
       "price_usd": 480.61,
-      "change_1d": "+2.79%",
+      "change_1d": "-0.01%",
       "change_1w": "+3.84%",
       "change_1m": "+4.02%",
       "change_ytd": "-10.57%",
@@ -835,7 +835,7 @@ window.PRICES_DATA = {
       "high_gbp": "513",
       "high_usd": 683.5,
       "bar_pct": 18,
-      "market_cap_gbp_b": 7.971,
+      "market_cap_gbp_b": 7.97,
       "market_cap_usd_b": 10.618,
       "beta": 0.541,
       "pe_ratio": 19.3,
@@ -893,7 +893,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "87",
       "price_usd": 116.5,
-      "change_1d": "-0.48%",
+      "change_1d": "+0.00%",
       "change_1w": "+1.39%",
       "change_1m": "+7.75%",
       "change_ytd": "+16.30%",
@@ -961,7 +961,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "49",
       "price_usd": 65.87,
-      "change_1d": "-0.80%",
+      "change_1d": "-2.41%",
       "change_1w": "+0.93%",
       "change_1m": "+5.09%",
       "change_ytd": "-21.22%",
@@ -971,7 +971,7 @@ window.PRICES_DATA = {
       "high_gbp": "90",
       "high_usd": 120.05,
       "bar_pct": 11,
-      "market_cap_gbp_b": 5.931,
+      "market_cap_gbp_b": 5.93,
       "market_cap_usd_b": 7.9,
       "beta": 0.361,
       "pe_ratio": 9.59,
@@ -1029,7 +1029,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "119",
       "price_usd": 158.73,
-      "change_1d": "+5.29%",
+      "change_1d": "-0.48%",
       "change_1w": "+6.32%",
       "change_1m": "+11.64%",
       "change_ytd": "-38.04%",
@@ -1039,8 +1039,8 @@ window.PRICES_DATA = {
       "high_gbp": "314",
       "high_usd": 417.86,
       "bar_pct": 8,
-      "market_cap_gbp_b": 6.031,
-      "market_cap_usd_b": 8.034,
+      "market_cap_gbp_b": 6.03,
+      "market_cap_usd_b": 8.033,
       "beta": 1.395,
       "pe_ratio": null,
       "avg_volume_m": 1.63,
@@ -1097,7 +1097,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "37",
       "price_usd": 49.44,
-      "change_1d": "+1.94%",
+      "change_1d": "-0.57%",
       "change_1w": "+5.28%",
       "change_1m": "+3.11%",
       "change_ytd": "-37.65%",
@@ -1107,7 +1107,7 @@ window.PRICES_DATA = {
       "high_gbp": "101",
       "high_usd": 134.0,
       "bar_pct": 4,
-      "market_cap_gbp_b": 6.96,
+      "market_cap_gbp_b": 6.959,
       "market_cap_usd_b": 9.271,
       "beta": 1.07,
       "pe_ratio": 290.82,
@@ -1165,7 +1165,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "6.03",
       "price_usd": 8.03,
-      "change_1d": "+1.65%",
+      "change_1d": "-0.47%",
       "change_1w": "+4.69%",
       "change_1m": "-14.03%",
       "change_ytd": "-12.34%",
@@ -1176,7 +1176,7 @@ window.PRICES_DATA = {
       "high_usd": 18.78,
       "bar_pct": 17,
       "market_cap_gbp_b": 0.917,
-      "market_cap_usd_b": 1.221,
+      "market_cap_usd_b": 1.222,
       "beta": 1.296,
       "pe_ratio": null,
       "avg_volume_m": 12.81,
@@ -1188,6 +1188,13 @@ window.PRICES_DATA = {
       "vol_1w": 40398600,
       "vol_1m": 200938900,
       "news": [
+        {
+          "title": "Red Cat (RCAT) Stock Still Looks Above Fair Value Following A 7x Run",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/red-cat-rcat-stock-still-090650130.html",
+          "published": 1784884010,
+          "sentiment": 0.572
+        },
         {
           "title": "Will Executive Firing and Lawsuit Over Controls Change Red Cat Holdings' (RCAT) Leadership Narrative?",
           "publisher": "Simply Wall St.",
@@ -1215,16 +1222,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/coverage/stock-market-today/2026/07/22/stock-market-today-july-22-ondas-secures-usd70-million-in-new-orders-rises-28-over-the-last-week/",
           "published": 1784755541,
           "sentiment": 0.318
-        },
-        {
-          "title": "Red Cat Just Dropped 26% in a Month: Are Drone Stocks Like RCAT, Ondas, Redwire, and AeroVironment Out of Fuel?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/22/red-cat-just-dropped-26-in-a-month-are-drone-stocks-like-rcat-ondas-redwire-and-aerovironment-out-of-fuel/",
-          "published": 1784747710,
-          "sentiment": 0.361
         }
       ],
-      "news_sentiment": -0.134
+      "news_sentiment": -0.092
     },
     {
       "ticker": "TXT",
@@ -1233,7 +1233,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "70",
       "price_usd": 93.19,
-      "change_1d": "+1.61%",
+      "change_1d": "+0.74%",
       "change_1w": "+2.81%",
       "change_1m": "+7.68%",
       "change_ytd": "+7.10%",
@@ -1243,8 +1243,8 @@ window.PRICES_DATA = {
       "high_gbp": "76",
       "high_usd": 101.57,
       "bar_pct": 67,
-      "market_cap_gbp_b": 12.165,
-      "market_cap_usd_b": 16.204,
+      "market_cap_gbp_b": 12.164,
+      "market_cap_usd_b": 16.205,
       "beta": 0.905,
       "pe_ratio": 17.52,
       "avg_volume_m": 1.47,
@@ -1301,7 +1301,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "89",
       "price_usd": 118.24,
-      "change_1d": "+1.94%",
+      "change_1d": "+1.80%",
       "change_1w": "-9.82%",
       "change_1m": "-23.49%",
       "change_ytd": "-26.54%",
@@ -1311,8 +1311,8 @@ window.PRICES_DATA = {
       "high_gbp": "169",
       "high_usd": 225.64,
       "bar_pct": 6,
-      "market_cap_gbp_b": 1169.409,
-      "market_cap_usd_b": 1557.717,
+      "market_cap_gbp_b": 1169.268,
+      "market_cap_usd_b": 1557.715,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 122.1,
@@ -1325,11 +1325,18 @@ window.PRICES_DATA = {
       "vol_1m": 1649156200,
       "news": [
         {
-          "title": "Space stocks fall below their 52-week highs as SpaceX sinks lower",
+          "title": "SpaceX stock got cut in half after joining an industry sell-off already underway: Chart of the Day",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/spacex-stock-got-cut-in-half-after-joining-an-industry-sell-off-already-underway-chart-of-the-day-100000924.html",
+          "published": 1784887200,
+          "sentiment": -0.273
+        },
+        {
+          "title": "How Tesla's robotaxi struggle is akin to the Apple vs. Google Maps rivalry",
           "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/space-stocks-fall-below-52-195500035.html",
-          "published": 1784836500,
-          "sentiment": -0.296
+          "url": "https://finance.yahoo.com/video/teslas-robotaxi-struggle-akin-apple-151500987.html",
+          "published": 1784819700,
+          "sentiment": -0.318
         },
         {
           "title": "Tesla is 'all about' future promises: Why this strategist calls it a 'story' stock",
@@ -1339,28 +1346,21 @@ window.PRICES_DATA = {
           "sentiment": 0.382
         },
         {
-          "title": "Cathie Wood Just Bought More SpaceX Stock. Here's Why I Wouldn't Copy Her",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/24/cathie-wood-just-bought-more-spacex-stock-heres-wh/",
-          "published": 1784867700,
-          "sentiment": 0.0
+          "title": "Elon Musk Has Lost $650 Billion In 5 Weeks As Tesla And SpaceX Plummet",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/07/24/elon-musk-has-lost-650-billion-in-5-weeks-as-tesla-and-spacex-plummet/",
+          "published": 1784886731,
+          "sentiment": -0.318
         },
         {
-          "title": "Alphabet Just Revealed a $94 Billion Stake in SpaceX -- and It Can't Sell a Single Share Yet",
+          "title": "Will SpaceX Land on the Moon Before 2030? Here's What Betting Markets Are Predicting Post-IPO.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/07/23/alphabet-just-revealed-a-94-billion-stake-in-space/",
-          "published": 1784863560,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Dow Jones Futures: Market Sells Off On Oil Prices, Google, Tesla; Intel Jumps Late",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-market-sells-off-oil-prices-google-tesla-intel-spacex-starship-launch/?src=A00220&yptr=yahoo",
-          "published": 1784862228,
+          "url": "https://www.fool.com/investing/2026/07/24/will-spacex-land-on-the-moon-before-2030-heres-wha/",
+          "published": 1784886600,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.076
+      "news_sentiment": -0.105
     },
     {
       "ticker": "RKLB",
@@ -1369,7 +1369,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "53",
       "price_usd": 69.99,
-      "change_1d": "+0.89%",
+      "change_1d": "+0.71%",
       "change_1w": "+3.92%",
       "change_1m": "-18.05%",
       "change_ytd": "-7.90%",
@@ -1379,7 +1379,7 @@ window.PRICES_DATA = {
       "high_gbp": "113",
       "high_usd": 151.0,
       "bar_pct": 29,
-      "market_cap_gbp_b": 32.83,
+      "market_cap_gbp_b": 32.826,
       "market_cap_usd_b": 43.731,
       "beta": 2.553,
       "pe_ratio": null,
@@ -1393,11 +1393,25 @@ window.PRICES_DATA = {
       "vol_1m": 482690000,
       "news": [
         {
+          "title": "SpaceX stock got cut in half after joining an industry sell-off already underway: Chart of the Day",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/spacex-stock-got-cut-in-half-after-joining-an-industry-sell-off-already-underway-chart-of-the-day-100000924.html",
+          "published": 1784887200,
+          "sentiment": -0.273
+        },
+        {
           "title": "These high-flying tech stocks are down 60% \u2014 here's how to shop the sell-off: One Big Investment Idea",
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/markets/article/these-high-flying-tech-stocks-are-down-60--heres-how-to-shop-the-sell-off-one-big-investment-idea-131623103.html",
           "published": 1784812583,
           "sentiment": 0.0
+        },
+        {
+          "title": "ASTS, RKLB Slip Overnight Amid Falcon 9 Booking Freeze: Retail Traders Say SpaceX Is \u2018Ruining\u2019 Space Stocks",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-rklb-spacex-booking-freeze-retail-space-stocks/cZZYZCjR7yd",
+          "published": 1784874384,
+          "sentiment": 0.052
         },
         {
           "title": "2 Missions, 3 Launches, and Up to $300 Million for Rocket Lab",
@@ -1412,23 +1426,9 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/news/spacex-space-junk-orbital-debris-kesslers-syndrome-amazon-satellites/?src=A00220&yptr=yahoo",
           "published": 1784831963,
           "sentiment": -0.273
-        },
-        {
-          "title": "A $266 Million Reason to Buy Rocket Lab Stock Here",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3430737/a-266-million-reason-to-buy-rocket-lab-stock-here",
-          "published": 1784822546,
-          "sentiment": 0.0
-        },
-        {
-          "title": "RKLB vs. LUNR: Which Emerging Space Stock Is the Better Pick Today?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rklb-vs-lunr-emerging-space-145400922.html",
-          "published": 1784818440,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.033
+      "news_sentiment": -0.099
     },
     {
       "ticker": "PL",
@@ -1437,7 +1437,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "17",
       "price_usd": 22.36,
-      "change_1d": "-0.09%",
+      "change_1d": "-0.07%",
       "change_1w": "+1.22%",
       "change_1m": "-14.98%",
       "change_ytd": "+9.55%",
@@ -1447,8 +1447,8 @@ window.PRICES_DATA = {
       "high_gbp": "39",
       "high_usd": 51.76,
       "bar_pct": 36,
-      "market_cap_gbp_b": 5.983,
-      "market_cap_usd_b": 7.97,
+      "market_cap_gbp_b": 5.982,
+      "market_cap_usd_b": 7.969,
       "beta": 2.067,
       "pe_ratio": null,
       "avg_volume_m": 12.38,
@@ -1461,10 +1461,24 @@ window.PRICES_DATA = {
       "vol_1m": 232188700,
       "news": [
         {
+          "title": "SpaceX stock got cut in half after joining an industry sell-off already underway: Chart of the Day",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/spacex-stock-got-cut-in-half-after-joining-an-industry-sell-off-already-underway-chart-of-the-day-100000924.html",
+          "published": 1784887200,
+          "sentiment": -0.273
+        },
+        {
           "title": "These high-flying tech stocks are down 60% \u2014 here's how to shop the sell-off: One Big Investment Idea",
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/markets/article/these-high-flying-tech-stocks-are-down-60--heres-how-to-shop-the-sell-off-one-big-investment-idea-131623103.html",
           "published": 1784812583,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Prediction: SpaceX Will Underperform Planet Labs This Year",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/24/prediction-spacex-will-underperform-planet-labs-th/",
+          "published": 1784878200,
           "sentiment": 0.0
         },
         {
@@ -1480,23 +1494,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/coverage/filings/2026/07/23/a-planet-labs-director-sold-over-6-000-shares-amid-a-323-stock-rally-what-does-that-mean-for-investors/",
           "published": 1784842081,
           "sentiment": 0.296
-        },
-        {
-          "title": "Satellite Images Show Iran Is Rebuilding. Fast.",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/world/middle-east/satellite-images-show-iran-is-rebuilding-fast-199978f7?siteid=yhoof2&yptr=yahoo",
-          "published": 1784834520,
-          "sentiment": 0.0
-        },
-        {
-          "title": "1 Unprofitable Stock Worth Your Attention and 2 We Avoid",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/1-unprofitable-stock-worth-attention-145207206.html",
-          "published": 1784818327,
-          "sentiment": -0.077
         }
       ],
-      "news_sentiment": 0.132
+      "news_sentiment": 0.093
     },
     {
       "ticker": "ASTS",
@@ -1505,7 +1505,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "44",
       "price_usd": 59.18,
-      "change_1d": "-4.86%",
+      "change_1d": "-0.02%",
       "change_1w": "+7.58%",
       "change_1m": "-12.98%",
       "change_ytd": "-29.10%",
@@ -1515,7 +1515,7 @@ window.PRICES_DATA = {
       "high_gbp": "100",
       "high_usd": 133.86,
       "bar_pct": 24,
-      "market_cap_gbp_b": 17.243,
+      "market_cap_gbp_b": 17.241,
       "market_cap_usd_b": 22.969,
       "beta": 2.677,
       "pe_ratio": null,
@@ -1529,6 +1529,13 @@ window.PRICES_DATA = {
       "vol_1m": 392491900,
       "news": [
         {
+          "title": "SpaceX stock got cut in half after joining an industry sell-off already underway: Chart of the Day",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/spacex-stock-got-cut-in-half-after-joining-an-industry-sell-off-already-underway-chart-of-the-day-100000924.html",
+          "published": 1784887200,
+          "sentiment": -0.273
+        },
+        {
           "title": "These high-flying tech stocks are down 60% \u2014 here's how to shop the sell-off: One Big Investment Idea",
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/markets/article/these-high-flying-tech-stocks-are-down-60--heres-how-to-shop-the-sell-off-one-big-investment-idea-131623103.html",
@@ -1536,35 +1543,28 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "ASTS Stock Eyes Worst Month In Over 2 Years \u2014 But 2 Telecom Giants Just Gave Bulls Reasons To Look Past The Selloff",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-2-telecom-giants-bulls-reasons-look-past-selloff/cZZY8otR7yI",
+          "published": 1784880465,
+          "sentiment": -0.372
+        },
+        {
+          "title": "ASTS, RKLB Slip Overnight Amid Falcon 9 Booking Freeze: Retail Traders Say SpaceX Is \u2018Ruining\u2019 Space Stocks",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-rklb-spacex-booking-freeze-retail-space-stocks/cZZYZCjR7yd",
+          "published": 1784874384,
+          "sentiment": 0.052
+        },
+        {
           "title": "AT&T 'Strong' Wireless Execution Keeps Thesis Intact, RBC Says",
           "publisher": "MT Newswires",
           "url": "https://finance.yahoo.com/markets/stocks/articles/t-apos-strong-apos-wireless-163727458.html",
           "published": 1784824647,
           "sentiment": 0.625
-        },
-        {
-          "title": "AST SpaceMobile's 50% Pullback Is A Buying Opportunity, Says Clear Street Ahead Of Q2 Earnings",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/asts-stock-clear-street-buy-rating-50-percent-pullback-q2-earnings/cZZnNHbR7xV",
-          "published": 1784805989,
-          "sentiment": 0.66
-        },
-        {
-          "title": "ASTS Stock Eyes Weekly Comeback: AT&T Says AST SpaceMobile Satellite Offering Will 'Come To Fruition' Next Year",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/asts-at-and-t-satellite-offering-next-year/cZZn4ASR7DU",
-          "published": 1784769823,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Here's Why AST SpaceMobile, Inc. (ASTS) Fell More Than Broader Market",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-why-ast-spacemobile-inc-220004362.html",
-          "published": 1784757604,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.257
+      "news_sentiment": 0.006
     },
     {
       "ticker": "TDG",
@@ -1573,18 +1573,18 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "911",
       "price_usd": 1213.83,
-      "change_1d": "+1.60%",
+      "change_1d": "+0.69%",
       "change_1w": "-1.40%",
       "change_1m": "-8.23%",
       "change_ytd": "-10.65%",
       "return_1yr": "-24%",
-      "low_gbp": "844",
+      "low_gbp": "843",
       "low_usd": 1123.61,
       "high_gbp": "1219",
       "high_usd": 1623.83,
       "bar_pct": 18,
-      "market_cap_gbp_b": 50.969,
-      "market_cap_usd_b": 67.893,
+      "market_cap_gbp_b": 50.963,
+      "market_cap_usd_b": 67.894,
       "beta": 0.884,
       "pe_ratio": 37.31,
       "avg_volume_m": 0.39,
@@ -1641,7 +1641,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "256",
       "price_usd": 340.54,
-      "change_1d": "+1.58%",
+      "change_1d": "+0.00%",
       "change_1w": "-1.01%",
       "change_1m": "+1.60%",
       "change_ytd": "+3.49%",
@@ -1651,8 +1651,8 @@ window.PRICES_DATA = {
       "high_gbp": "277",
       "high_usd": 369.48,
       "bar_pct": 74,
-      "market_cap_gbp_b": 35.724,
-      "market_cap_usd_b": 47.586,
+      "market_cap_gbp_b": 35.72,
+      "market_cap_usd_b": 47.587,
       "beta": 1.03,
       "pe_ratio": 59.85,
       "avg_volume_m": 0.64,
@@ -1709,18 +1709,18 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "369",
       "price_usd": 491.9,
-      "change_1d": "-0.18%",
+      "change_1d": "+0.37%",
       "change_1w": "-9.20%",
       "change_1m": "+7.70%",
       "change_ytd": "-12.70%",
       "return_1yr": "-31%",
-      "low_gbp": "255",
+      "low_gbp": "254",
       "low_usd": 339.01,
       "high_gbp": "665",
       "high_usd": 885.92,
       "bar_pct": 28,
-      "market_cap_gbp_b": 29.765,
-      "market_cap_usd_b": 39.649,
+      "market_cap_gbp_b": 29.761,
+      "market_cap_usd_b": 39.648,
       "beta": 1.378,
       "pe_ratio": 199.96,
       "avg_volume_m": 1.13,
@@ -1777,7 +1777,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "18",
       "price_usd": 23.64,
-      "change_1d": "-1.91%",
+      "change_1d": "-0.51%",
       "change_1w": "+7.55%",
       "change_1m": "+12.63%",
       "change_ytd": "+11.35%",
@@ -1792,7 +1792,7 @@ window.PRICES_DATA = {
       "beta": 1.206,
       "pe_ratio": null,
       "avg_volume_m": 2.71,
-      "div_yield_pct": 330.0,
+      "div_yield_pct": 338.0,
       "short_pct": 16.2,
       "analyst": "hold",
       "analyst_score": 2.86,
@@ -1845,7 +1845,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "80",
       "price_usd": 106.34,
-      "change_1d": "+7.50%",
+      "change_1d": "-1.60%",
       "change_1w": "+10.77%",
       "change_1m": "+1.28%",
       "change_ytd": "+39.87%",
@@ -1913,7 +1913,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "36",
       "price_usd": 48.16,
-      "change_1d": "+4.90%",
+      "change_1d": "-0.00%",
       "change_1w": "+11.74%",
       "change_1m": "+7.76%",
       "change_ytd": "+39.03%",
@@ -1923,7 +1923,7 @@ window.PRICES_DATA = {
       "high_gbp": "38",
       "high_usd": 50.59,
       "bar_pct": 87,
-      "market_cap_gbp_b": 9.645,
+      "market_cap_gbp_b": 9.644,
       "market_cap_usd_b": 12.848,
       "beta": 0.19,
       "pe_ratio": 43.0,
