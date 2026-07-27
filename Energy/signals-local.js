@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-24 10:34",
+  "updated": "2026-07-27 11:44",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +31.91%, P/E 10.86, dividend yield 4.86% \u2014 outstanding value with strong momentum and a buy analyst consensus (score 2.10).",
+      "drivers": [
+        "strong YTD momentum",
+        "low P/E",
+        "high dividend yield",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +68.26%, 1M +27.85%, P/E 10.93, dividend yield 3.77% \u2014 exceptional momentum and cheap valuation despite a hold analyst rating (score 3.33).",
+      "drivers": [
+        "very high momentum",
+        "low P/E",
+        "strong news sentiment",
+        "positive earnings surprise"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SLB",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +31.85%, 1W +11.56%, P/E 25.57, dividend yield 2.25% \u2014 recent surge and near-strong-buy analyst score of 1.6 signal strong upside.",
+      "drivers": [
+        "strong weekly momentum",
+        "very bullish analyst score",
+        "positive news sentiment",
+        "oilfield services demand"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +88.92%, 1M +21.96%, P/E 20.37, dividend yield 1.26% \u2014 explosive YTD gain with solid buy consensus and positive news sentiment.",
+      "drivers": [
+        "very high YTD return",
+        "strong monthly momentum",
+        "analyst buy consensus",
+        "refining margin tailwinds"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +84.98%, 1M +18.60%, P/E 22.08, dividend yield 1.59% \u2014 near triple-digit YTD returns, supported by buy consensus despite elevated short interest of 4.27%.",
+      "drivers": [
+        "very high YTD return",
+        "strong monthly momentum",
+        "analyst buy consensus",
+        "high short interest (contrarian)"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +39.87%, 1M +10.39%, P/E 14.39, dividend yield 2.79% \u2014 attractive E&P value with strong momentum and positive news sentiment.",
+      "drivers": [
+        "strong YTD momentum",
+        "low P/E",
+        "positive news sentiment",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +26.26%, 1M +13.02%, P/E 20.38, dividend yield 2.79% \u2014 solid momentum with a bullish analyst score of 1.76 and neutral news.",
+      "drivers": [
+        "strong YTD momentum",
+        "bullish analyst score",
+        "low beta",
+        "stable fundamentals"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +29.68%, 1M +14.10%, P/E 26.47, dividend yield 2.63% \u2014 strong momentum from the largest oil major with buy consensus and positive news sentiment.",
+      "drivers": [
+        "strong YTD momentum",
+        "large market cap stability",
+        "positive news sentiment",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +27.32%, 1M +13.09%, P/E 33.88, dividend yield 3.66% \u2014 solid outperformance with a very bullish analyst score of 1.72 and high dividend yield.",
+      "drivers": [
+        "strong YTD momentum",
+        "very bullish analyst score",
+        "high dividend yield",
+        "low beta"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +25.30%, 1M +16.17%, P/E 35.34, dividend yield 4.56% \u2014 strong monthly momentum and highest dividend yield among majors, with buy consensus.",
+      "drivers": [
+        "strong monthly momentum",
+        "high dividend yield",
+        "positive news sentiment",
+        "analyst buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "EQNR",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "+12.74% 1-month",
         "Permian exposure",
         "carbon capture"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "MPC has exceptional YTD return of +95.34% and 1-month momentum of +29.31%, with a P/E of 21.04 and analyst buy consensus, supported by strong refining margins.",
-      "drivers": [
-        "YTD +95%",
-        "1M +29%",
-        "P/E 21",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "VLO shows YTD return of +92.51% and 1M momentum of +29.13%, with a P/E of 22.88 and positive news sentiment of 0.195, reflecting robust refining performance.",
-      "drivers": [
-        "YTD +92%",
-        "1M +29%",
-        "P/E 23",
-        "news sentiment 0.195"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "EOG offers YTD return of +37.05% and 1M momentum of +8.79%, combined with a low P/E of 13.87 and positive news sentiment of 0.257, indicating strong operational efficiency.",
-      "drivers": [
-        "YTD +37%",
-        "P/E 13.9",
-        "news sentiment 0.257",
-        "1M +8.8%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "XOM has YTD return of +25.36% and 1M momentum of +9.56%, with a P/E of 24.99 and analyst buy rating, supported by leading industry position.",
-      "drivers": [
-        "YTD +25%",
-        "1M +9.6%",
-        "P/E 25",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "CVX delivers YTD return of +24.89% and 1M momentum of +9.15%, with the best analyst score of 1.71 (strong buy) and a dividend yield of 3.75%.",
-      "drivers": [
-        "YTD +25%",
-        "analyst score 1.71",
-        "div yield 3.75%",
-        "1M +9.2%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "SHEL shows YTD return of +17.73% and 1M momentum of +9.47%, with a low P/E of 13.42, a dividend yield of 3.63%, and positive news sentiment of 0.227.",
-      "drivers": [
-        "P/E 13.4",
-        "div yield 3.63%",
-        "1M +9.5%",
-        "news sentiment 0.227"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "COP has YTD return of +23.37% and 1M momentum of +7.11%, with a P/E of 19.62 and analyst buy consensus at score 1.76, reflecting solid E&P fundamentals.",
-      "drivers": [
-        "YTD +23%",
-        "analyst score 1.76",
-        "P/E 19.6",
-        "1M +7.1%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "OXY has YTD return of +34.57% and 1M momentum of +8.65%, but a high P/E of 74.34; however, analyst buy consensus and positive news sentiment of 0.107 support the momentum.",
-      "drivers": [
-        "YTD +35%",
-        "1M +8.7%",
-        "analyst buy",
-        "news sentiment 0.107"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "EQNR has YTD return of +56.75% and 1M momentum of +14.36%, with a P/E of 16.86 and dividend yield of 4.07%, but analyst hold rating and high short interest of 3.14% add caution.",
-      "drivers": [
-        "YTD +57%",
-        "1M +14%",
-        "P/E 16.9",
-        "div yield 4.07%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BP has YTD return of +22.27% and 1M momentum of +7.49%, with a high dividend yield of 4.75% and positive news sentiment of 0.299, but analyst hold rating and P/E of 33.94 limit upside.",
-      "drivers": [
-        "div yield 4.75%",
-        "YTD +22%",
-        "news sentiment 0.299",
-        "P/E 33.9"
       ]
     }
   ]

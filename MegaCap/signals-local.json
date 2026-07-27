@@ -1,9 +1,176 @@
 {
-  "updated": "2026-07-24 10:35",
+  "updated": "2026-07-27 11:46",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "XOM",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "YTD +29.68%, 1M +14.1%, P/E 26.47, dividend yield 2.63%, strong oil price tailwinds with Brent near $100, and robust demand for energy infrastructure.",
+      "drivers": [
+        "YTD +29.68%",
+        "strong oil price tailwinds",
+        "P/E 26.47 attractive for energy",
+        "dividend yield 2.63%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +27.32%, 1M +13.09%, P/E 33.88, dividend yield 3.66% benefiting from elevated oil prices and strong integrated energy margins.",
+      "drivers": [
+        "YTD +27.32%",
+        "1M +13.09% momentum",
+        "dividend yield 3.66%",
+        "energy sector tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "HSBC",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "YTD +32.88%, 1Y +60%, 1M +8.77%, P/E 17.09, dividend yield 3.63% supported by higher global interest rates and robust Asia-Pacific loan growth.",
+      "drivers": [
+        "YTD +32.88%",
+        "1Y +60%",
+        "P/E 17.09 attractive",
+        "dividend yield 3.63%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +14.49%, 1W +9.96%, 1M +14.04%, P/E 37.46, defense and aerospace backlog at record levels, and increasing geopolitical tensions driving orders.",
+      "drivers": [
+        "1M +14.04%",
+        "1W +9.96%",
+        "defense spending catalyst",
+        "P/E 37.46 premium justified by backlog"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MA",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "1M +10.56%, 1D +2.37%, P/E 31.25, analyst consensus strong_buy, benefiting from resilient cross-border payment volumes and rate-cut expectations boosting fintech.",
+      "drivers": [
+        "1M +10.56% momentum",
+        "strong_buy consensus",
+        "P/E 31.25 reasonable",
+        "cross-border spending tailwind"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "YTD +23.11%, 1M +21.03%, 1D +3.71%, P/E 40.32, Services revenue continues to grow double-digit, and AI integration across iPhone ecosystem provides catalyst.",
+      "drivers": [
+        "1M +21.03% surge",
+        "YTD +23.11%",
+        "Services revenue growth",
+        "AI ecosystem catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BABA",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "1M +17.96%, P/E 17.28, strong_buy analyst consensus (score 1.32), cloud and international commerce growth offset domestic headwinds, bargain valuation.",
+      "drivers": [
+        "1M +17.96% rebound",
+        "P/E 17.28 undervalued",
+        "strong_buy consensus",
+        "cloud business growth"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "1M +12.36%, 1W +6.72%, P/E 30.58, news sentiment positive (+0.255), strong Q2 earnings, and leadership in life sciences tools with growing bioprocessing demand.",
+      "drivers": [
+        "1M +12.36%",
+        "1W +6.72%",
+        "positive earnings catalyst",
+        "life sciences demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "1M +11.32%, 1W +2.36%, P/E 33.35, dividend yield 2.45%, robust FreeStyle Libre and medical device pipeline, recovering procedure volumes support growth.",
+      "drivers": [
+        "1M +11.32%",
+        "dividend yield 2.45%",
+        "medical device growth",
+        "recovery in procedures"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "META",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "1M +9.64%, P/E 21.64, strong_buy consensus (score 1.35), massive AI infrastructure capex and Reels monetization driving ad revenue recovery.",
+      "drivers": [
+        "1M +9.64%",
+        "P/E 21.64 discount to tech peers",
+        "AI capex catalyst",
+        "ad revenue recovery"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.54,
+      "ytd": "+134.43%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +134.43% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +134.43% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.536,
+      "ytd": "+133.57%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +133.57% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +133.57% \u2265 124.5% SB"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.508,
+      "ytd": "+126.63%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +126.63% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +126.63% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "XOM",
@@ -132,173 +299,6 @@
         "+6.14% 1M",
         "GLP-1 catalyst",
         "news_s 0.246"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.62,
-      "ytd": "+154.52%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +154.52% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +154.52% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.589,
-      "ytd": "+146.70%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +146.70% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +146.70% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.568,
-      "ytd": "+141.50%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +141.50% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +141.50% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Strong 1-month momentum (+14.18%), low P/E of 23.47, strong_buy consensus (score 1.35), positive news sentiment (0.217), and AI advertising tailwinds support a top-tier pick.",
-      "drivers": [
-        "+14.18% 1M",
-        "P/E 23.47",
-        "strong_buy consensus",
-        "news_s 0.217"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BABA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong_buy consensus (score 1.32), low P/E of 18.58, positive news sentiment (0.332), and a +12.38% 1-month rebound despite a weak YTD, suggesting a turnaround opportunity.",
-      "drivers": [
-        "an_score 1.32",
-        "P/E 18.58",
-        "news_s 0.332",
-        "+12.38% 1M"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "Strong YTD (+25.36%), 1-month momentum (+9.56%), low beta (0.162), reasonable P/E (24.99), 2.78% dividend yield, and positive news sentiment (0.283) backed by AI-driven energy demand.",
-      "drivers": [
-        "+25.36% YTD",
-        "P/E 24.99",
-        "beta 0.162",
-        "news_s 0.283"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Strong YTD (+24.89%), 1-month momentum (+9.15%), high dividend yield (3.75%), low beta (0.488), and positive news sentiment (0.156) with energy sector tailwinds.",
-      "drivers": [
-        "+24.89% YTD",
-        "div_pct 3.75%",
-        "beta 0.488",
-        "news_s 0.156"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Strong YTD (+20.35%), 1-month momentum (+9.33%), low beta (0.205), 2.73% dividend yield, and buy consensus with neutral news sentiment, benefiting from pharmaceutical stability.",
-      "drivers": [
-        "+20.35% YTD",
-        "beta 0.205",
-        "div_pct 2.73%",
-        "+9.33% 1M"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ABBV",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong 1-month momentum (+12.14%), high dividend yield (2.73%), positive news sentiment (0.25) from EU approval for aesthetic toxin, buy consensus, but high P/E of 123.72 is a caution.",
-      "drivers": [
-        "+12.14% 1M",
-        "news_s 0.25",
-        "div_pct 2.73%",
-        "P/E 123.72"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "Strong_buy consensus (score 1.37), 1-month momentum (+11.38%), reasonable P/E (31.65), positive news sentiment (0.167), and stable payment network growth.",
-      "drivers": [
-        "an_score 1.37",
-        "+11.38% 1M",
-        "P/E 31.65",
-        "news_s 0.167"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Exceptional 1-week momentum (+12.84%) and 1-month (+14.29%), low beta (0.607), 2.48% dividend yield, buy consensus, and positive news sentiment (0.176) despite a weak YTD.",
-      "drivers": [
-        "+12.84% 1W",
-        "+14.29% 1M",
-        "beta 0.607",
-        "news_s 0.176"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "Strong 1-month momentum (+12.81%), positive news sentiment (0.292) from FBI Rapid DNA approval, buy consensus, reasonable P/E (28.9), but YTD decline of -11.48% tempers confidence.",
-      "drivers": [
-        "+12.81% 1M",
-        "news_s 0.292",
-        "P/E 28.9",
-        "YTD -11.48%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Strong YTD (+21.16%) and 1-month momentum (+10.35%), but high P/E (39.53), buy consensus (not strong_buy), and a web search warning of momentum peak [barchart.com](https://www.barchart.com/story/news/3368019/apple-stock-sends-major-warning-signal-as-momentum-hits-peak) reduce conviction.",
-      "drivers": [
-        "+21.16% YTD",
-        "P/E 39.53",
-        "momentum peak warning",
-        "an_score 2.02"
       ]
     }
   ]

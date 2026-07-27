@@ -1,9 +1,154 @@
 {
-  "updated": "2026-07-24 10:29",
+  "updated": "2026-07-27 11:41",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ILMN leads with +44.47% YTD and +9.25% in one month, supported by positive news sentiment (0.075) and a P/E of 35.35, reflecting strong growth momentum in genomics.",
+      "drivers": [
+        "+44.47% YTD",
+        "+9.25% 1M",
+        "P/E 35.35",
+        "positive sentiment 0.075"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "BMY offers a compelling mix of +18.67% YTD, +13.36% 1M momentum, a low P/E of 17.39, and a 4.06% dividend yield, with a low beta of 0.235 providing stability.",
+      "drivers": [
+        "+18.67% YTD",
+        "+13.36% 1M",
+        "P/E 17.39",
+        "dividend 4.06%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "COAG has explosive momentum with +39.15% YTD and +70.67% in the last month, with a rare strong_buy analyst consensus (score 1.0), though it lacks earnings and beta data.",
+      "drivers": [
+        "+39.15% YTD",
+        "+70.67% 1M",
+        "strong_buy consensus",
+        "analyst score 1.0"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "INCY shows strong performance with +68% 1-year return, +16.02% YTD, and +9.43% 1M, with a reasonable P/E of 16.62, though high short interest (9.06%) adds risk.",
+      "drivers": [
+        "+68% 1Y",
+        "+16.02% YTD",
+        "+9.43% 1M",
+        "P/E 16.62"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "EXEL has strong YTD momentum (+27.05%) and a low P/E of 18.33, with low beta (0.424) and positive news sentiment (0.046), though high short interest (16.72%) is a concern.",
+      "drivers": [
+        "+27.05% YTD",
+        "P/E 18.33",
+        "beta 0.424",
+        "sentiment 0.046"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "LLY boasts a +48% 1-year return and +11.08% YTD, with a strong buy consensus (an_score 1.76) and low short interest (1.15%), despite a high P/E of 42.55.",
+      "drivers": [
+        "+48% 1Y",
+        "+11.08% YTD",
+        "analyst score 1.76",
+        "short interest 1.15%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AMGN provides steady gains with +16.44% YTD, +6.58% 1M, a P/E of 26.19, a 2.68% dividend yield, and a very low beta of 0.403, making it a defensive pick.",
+      "drivers": [
+        "+16.44% YTD",
+        "P/E 26.19",
+        "dividend 2.68%",
+        "beta 0.403"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "GILD has a low P/E of 17.62, a 2.54% dividend yield, and a strong buy analyst consensus (score 1.69), with +7.65% YTD and low beta (0.343) for stability.",
+      "drivers": [
+        "P/E 17.62",
+        "dividend 2.54%",
+        "analyst score 1.69",
+        "beta 0.343"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "REGN is down -15.27% YTD but shows a +5.78% 1M rebound, with a low P/E of 16.02, low beta (0.236), and positive news sentiment (0.13), offering a value opportunity.",
+      "drivers": [
+        "+5.78% 1M rebound",
+        "P/E 16.02",
+        "beta 0.236",
+        "sentiment 0.13"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BMRN has a strong buy consensus (score 1.72) and positive news sentiment (0.195), with a modest +3.45% 1M move, but a high P/E of 42.68 and nearly flat YTD (-0.20%) limit upside.",
+      "drivers": [
+        "analyst score 1.72",
+        "sentiment 0.195",
+        "P/E 42.68",
+        "YTD -0.20%"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.621,
+      "ytd": "+75.21%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +75.21% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +75.21% \u2265 60.6% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,152 +277,6 @@
         "strong_buy analyst consensus",
         "positive news sentiment 0.179",
         "high beta 1.505"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "ytd": "+84.77%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +84.77% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +84.77% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "Exceptional momentum with +52.11% 1M, +42% YTD, and a 42% 1-year return; strong buy analyst consensus with the lowest score of 1.0, indicating maximum bullishness.",
-      "drivers": [
-        "+52.11% 1M return",
-        "+42% YTD",
-        "strong_buy consensus (an_score 1.0)",
-        "low market cap $2.26B biotech IPO"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Robust momentum with +19.30% 1M, +43.30% YTD, and +89% 1-year return; P/E of 33.54 is reasonable given growth; positive news sentiment 0.04, and Eli Lilly collaboration via Illumina Atlas for AI-driven disease mapping.",
-      "drivers": [
-        "+43.30% YTD",
-        "+19.30% 1M return",
-        "P/E 33.54",
-        "Eli Lilly collaboration via Illumina Atlas"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong momentum with +16.77% 1M, +16.75% YTD, and +91% 1-year return; strong_buy consensus from analysts (an_score 1.5) with positive news sentiment 0.134.",
-      "drivers": [
-        "+91% 1-year return",
-        "+16.77% 1M return",
-        "strong_buy consensus (an_score 1.5)",
-        "positive news sentiment 0.134"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong momentum with +13.25% 1M, +15.75% YTD, and +70% 1-year return; attractive P/E of 16.35 combined with buy consensus (an_score 2.31).",
-      "drivers": [
-        "+70% 1-year return",
-        "+13.25% 1M return",
-        "P/E 16.35",
-        "buy consensus (an_score 2.31)"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong momentum with +12.65% 1M, +16.45% YTD, and +27% 1-year return; P/E of 16.88 is attractive, dividend yield 419 basis points, and a new AI drug discovery hub signals growth.",
-      "drivers": [
-        "+12.65% 1M return",
-        "+16.45% YTD",
-        "P/E 16.88",
-        "div yield 419bps",
-        "AI drug discovery hub"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Positive momentum with +10.24% 1M but YTD -12.79%; low P/E of 16.42, buy consensus (an_score 1.81), and very positive news sentiment of 0.402 highlight upside potential.",
-      "drivers": [
-        "+10.24% 1M return",
-        "P/E 16.42",
-        "buy consensus (an_score 1.81)",
-        "positive news sentiment 0.402"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Strong momentum with +9.29% 1M, +28.77% YTD, and +26% 1-year return; P/E of 18.4 with buy consensus (an_score 2.26) and zero sentiment risk.",
-      "drivers": [
-        "+28.77% YTD",
-        "+9.29% 1M return",
-        "P/E 18.4",
-        "buy consensus (an_score 2.26)"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RCUS",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Explosive momentum with +4.06% 1W, +8.26% 1M, +26.58% YTD, and +222% 1-year return; however, no analyst consensus and slightly negative news sentiment -0.051 indicate elevated risk.",
-      "drivers": [
-        "+222% 1-year return",
-        "+26.58% YTD",
-        "+8.26% 1M return",
-        "no analyst consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Positive momentum with +7.63% 1M; low P/E of 11.9 and high dividend yield of 363bps; buy consensus (an_score 2.43), but negative news sentiment -0.398 reflects litigation risk with Eli Lilly.",
-      "drivers": [
-        "+7.63% 1M return",
-        "P/E 11.9",
-        "div yield 363bps",
-        "buy consensus (an_score 2.43)"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Steady momentum with +6.65% 1M, +9.17% YTD, and +51% 1-year return; P/E 40.81 reflects premium, but buy consensus (an_score 1.76) and involvement in AI disease mapping collaborations are positive.",
-      "drivers": [
-        "+51% 1-year return",
-        "+6.65% 1M return",
-        "buy consensus (an_score 1.76)",
-        "AI disease mapping collaboration"
       ]
     }
   ]
