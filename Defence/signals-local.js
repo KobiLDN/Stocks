@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-27 11:42",
+  "updated": "2026-07-29 10:41",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Leonardo DRS has strong_buy consensus, +42% YTD and +20% 1M momentum, P/E 45, low beta 0.19, and positive news sentiment 0.091.",
+      "drivers": [
+        "+42% YTD",
+        "strong_buy consensus",
+        "low beta 0.19",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Lockheed Martin shows +18% YTD and +16% 1M momentum, P/E 21.36, high dividend yield 2.38%, and positive news sentiment 0.282 despite hold analyst rating.",
+      "drivers": [
+        "+18% YTD",
+        "P/E 21.36",
+        "high dividend yield 2.38%",
+        "positive news sentiment 0.282"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "General Dynamics has buy consensus, +16% YTD, +13.5% 1M, P/E 24.51, and positive news sentiment 0.169.",
+      "drivers": [
+        "+16% YTD",
+        "buy consensus",
+        "P/E 24.51",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "RTX has buy consensus, +17.6% YTD and +16.7% 1M momentum, P/E 38.48, and positive news sentiment 0.071.",
+      "drivers": [
+        "+17.6% YTD",
+        "buy consensus",
+        "strong 1M momentum +16.7%",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "BAE Systems has buy consensus, +15.5% YTD, +12% 1M, P/E 29.78, and strong news sentiment 0.299.",
+      "drivers": [
+        "+15.5% YTD",
+        "buy consensus",
+        "news sentiment 0.299",
+        "UK defence exposure"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SAIC has buy consensus, +21.4% YTD, P/E 13.33, low beta 0.283, and positive news sentiment 0.083.",
+      "drivers": [
+        "+21.4% YTD",
+        "P/E 13.33",
+        "low beta 0.283",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Leidos has buy consensus, +17.8% 1M momentum, P/E 10.51, and positive news sentiment 0.078, despite -35% YTD.",
+      "drivers": [
+        "+17.8% 1M",
+        "P/E 10.51",
+        "buy consensus",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "CACI has buy consensus with strong analyst score 1.56, +11.6% 1M, P/E 20.49, and positive news sentiment 0.123.",
+      "drivers": [
+        "analyst score 1.56",
+        "+11.6% 1M",
+        "P/E 20.49",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "QinetiQ has buy consensus, +12.9% YTD, +21.6% 1M momentum, P/E 25.07, and positive news sentiment 0.296.",
+      "drivers": [
+        "+21.6% 1M",
+        "+12.9% YTD",
+        "buy consensus",
+        "positive news sentiment 0.296"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "AeroVironment has buy consensus, +12.5% 1M, positive news sentiment 0.213, and drone exposure, despite -39% YTD and high short interest 10%.",
+      "drivers": [
+        "+12.5% 1M",
+        "buy consensus",
+        "positive news sentiment 0.213",
+        "drone sector focus"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "sentiment 0.41",
         "autonomous systems",
         "SpaceX supply chain"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "DRS has strong momentum (+39% YTD, +11.74% 1W, +4.90% 1D), a low beta of 0.19, and a strong_buy analyst consensus with the best score of 1.5. The ongoing US-Iran conflict (US strikes on IRGC Navy HQ on July 24, 2026) directly boosts demand for Leonardo DRS's integrated sensing and countermeasure systems [tass.com](https://tass.com/world/2164579).",
-      "drivers": [
-        "+39% YTD",
-        "strong_buy consensus (1.5)",
-        "low beta 0.19",
-        "US-Iran conflict catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LMT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Lockheed Martin surged +10.36% in a single day and +10.72% in a week, with a +15.74% YTD return, driven by Q2 earnings beat and escalating US-Iran hostilities that accelerate demand for missile defense and F-35 systems. P/E of 24.94 is reasonable for a prime contractor.",
-      "drivers": [
-        "+10.36% 1D surge",
-        "Q2 earnings beat",
-        "US-Iran escalation catalyst",
-        "P/E 24.94"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "RTX rallied +7.54% today and +13.02% in the past month, with a buy analyst consensus (1.87) and positive news sentiment (0.134). The US-Iran war and naval blockade directly benefit RTX's missile, sensor, and air defense portfolios [tass.com](https://tass.com/world/2164579).",
-      "drivers": [
-        "+13.02% 1M",
-        "buy consensus 1.87",
-        "positive news sentiment 0.134",
-        "US-Iran conflict demand"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "General Dynamics shows strong momentum (+12.65% YTD, +11.37% 1M) with a buy analyst rating (2.12) and positive news sentiment (0.193). Its shipbuilding and combat systems are critical for sustained US naval operations amid the Iran blockade.",
-      "drivers": [
-        "+12.65% YTD",
-        "+11.37% 1M",
-        "buy consensus 2.12",
-        "navy shipbuilding catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Mercury Systems has exceptional momentum (+39.87% YTD, +10.77% 1W, +7.50% 1D) and is expected to beat earnings estimates again. Its electronic warfare and secure processing solutions are in high demand from the US-Iran conflict.",
-      "drivers": [
-        "+39.87% YTD",
-        "+10.77% 1W",
-        "earnings beat expectations",
-        "EW/processing demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AeroVironment gained +11.64% in the past month and +5.29% today, with a buy analyst consensus (1.60) and positive news sentiment (0.303). Its tactical drone systems are essential for surveillance and strike missions in the Iran conflict.",
-      "drivers": [
-        "+11.64% 1M",
-        "buy consensus 1.60",
-        "positive news sentiment 0.303",
-        "drone demand in conflict"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "SAIC has a solid +16.30% YTD return, a low P/E of 13.03, and positive news sentiment (0.143). Its IT and mission support services are critical for US military operations, and the stock offers value with a 1.28% dividend yield.",
-      "drivers": [
-        "+16.30% YTD",
-        "low P/E 13.03",
-        "positive news sentiment 0.143",
-        "mission support catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Olin shows strong momentum (+11.35% YTD, +12.63% 1M, +7.55% 1W) and a high 3.30% dividend yield. As a key supplier of ammunition components, it benefits directly from increased defense spending due to the US-Iran war.",
-      "drivers": [
-        "+12.63% 1M",
-        "+7.55% 1W",
-        "3.30% dividend yield",
-        "ammunition demand catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "QinetiQ has gained +12.52% in the past month and +8.28% in the past week, with a buy analyst consensus (1.82) and positive news sentiment (0.296). Its defense technology and testing services are in demand amid European defense spending increases.",
-      "drivers": [
-        "+12.52% 1M",
-        "+8.28% 1W",
-        "buy consensus 1.82",
-        "European defense spending"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Axon has +7.70% 1M momentum, a buy analyst consensus (1.71), and positive news sentiment (0.213). Its public safety and AI-driven policing platforms are seeing increased adoption, though high P/E of 199.96 tempers conviction.",
-      "drivers": [
-        "+7.70% 1M",
-        "buy consensus 1.71",
-        "positive news sentiment 0.213",
-        "public safety demand"
       ]
     }
   ]

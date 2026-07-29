@@ -1,9 +1,132 @@
 {
-  "updated": "2026-07-27 11:43",
+  "updated": "2026-07-29 10:44",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "KAITO",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Massive +143% YTD and +110% 1M momentum, though small cap of $0.3B suggests high risk.",
+      "drivers": [
+        "+143% YTD",
+        "+110% 1M",
+        "small cap $0.3B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ETH",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong +21.17% 1M rebound with $231B market cap and positive news sentiment 0.098.",
+      "drivers": [
+        "+21.17% 1M",
+        "large cap $231B",
+        "news sentiment 0.098"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+14.79% 1M, high news sentiment 0.371, and $6.3B market cap.",
+      "drivers": [
+        "+14.79% 1M",
+        "news sentiment 0.371",
+        "market cap $6.3B"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+16.80% 1M momentum, meme coin with $1.15B cap and news sentiment 0.202.",
+      "drivers": [
+        "+16.80% 1M",
+        "meme coin momentum",
+        "sentiment 0.202"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+12.83% 1M and +5.21% 1D, but -51% YTD; $6B cap, sentiment 0.037.",
+      "drivers": [
+        "+12.83% 1M",
+        "+5.21% 1D",
+        "market cap $6B"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "High news sentiment 0.35, +3.4% 1M, large $68B market cap.",
+      "drivers": [
+        "news sentiment 0.35",
+        "large cap $68B",
+        "+3.4% 1M"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+7% 1M, largest cap $1.29T, positive sentiment 0.093, safe haven.",
+      "drivers": [
+        "+7% 1M",
+        "largest cap $1.29T",
+        "news sentiment 0.093"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+2.93% 1M, positive sentiment 0.179, $75.9B cap.",
+      "drivers": [
+        "+2.93% 1M",
+        "sentiment 0.179",
+        "large cap $75.9B"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "+9.94% 1M, but tiny $0.055B cap, high risk.",
+      "drivers": [
+        "+9.94% 1M",
+        "tiny cap $0.055B",
+        "high beta"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+14% YTD and +14.41% YTD, large cap $30.9B, steady momentum.",
+      "drivers": [
+        "+14% YTD",
+        "large cap $30.9B",
+        "positive annual return"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "KAITO",
@@ -132,134 +255,6 @@
         "AI sector",
         "tiny market cap",
         "speculative upside"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KAITO",
-      "signal": "strong_buy",
-      "confidence": 0.843,
-      "rationale": "+133.55% 1m, +102% YTD, strong momentum despite small cap $0.247B; neutral news sentiment.",
-      "drivers": [
-        "+133.55% monthly",
-        "+102% YTD",
-        "low market cap $0.247B",
-        "neutral news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+10.87% 1m, news sentiment 0.73, $6.33B market cap, positive catalyst from Chainlink news.",
-      "drivers": [
-        "+10.87% monthly",
-        "positive news sentiment 0.73",
-        "Chainlink supply boost",
-        "mid-cap $6.33B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+11.96% 1m, but very small cap $0.058B, no negative news; high risk-reward.",
-      "drivers": [
-        "+11.96% monthly",
-        "tiny cap $0.058B",
-        "no negative headlines"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+12.56% 1m, $227B market cap, but negative sentiment -0.182 and geopolitical risk from US-Iran strikes.",
-      "drivers": [
-        "+12.56% monthly",
-        "large cap $227B",
-        "negative sentiment -0.182",
-        "geopolitical uncertainty"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+10.27% 1m, +4.98% 1w, positive sentiment 0.07, market cap $6.09B, technical breakout potential.",
-      "drivers": [
-        "+10.27% monthly",
-        "+4.98% weekly",
-        "positive sentiment 0.07",
-        "mid-cap $6.09B"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "+9.67% 1m, but no market cap data, low liquidity; speculative momentum play.",
-      "drivers": [
-        "+9.67% monthly",
-        "market cap null",
-        "low liquidity risk"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+8.54% 1m, $44.2B market cap, but negative sentiment -0.08 and geopolitical headwinds.",
-      "drivers": [
-        "+8.54% monthly",
-        "large cap $44.2B",
-        "negative sentiment -0.08",
-        "geopolitical risk"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "VIRTUAL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "+6.96% 1m, market cap $0.401B, no news catalyst; moderate momentum.",
-      "drivers": [
-        "+6.96% monthly",
-        "small cap $0.401B",
-        "no news catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SUI",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+5.98% 1m, $3.02B market cap, neutral sentiment; Mubadala news not directly related.",
-      "drivers": [
-        "+5.98% monthly",
-        "mid-cap $3.02B",
-        "neutral sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ALT",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "+4.67% 1m, very small cap $0.042B, high risk; momentum play.",
-      "drivers": [
-        "+4.67% monthly",
-        "tiny cap $0.042B",
-        "high risk"
       ]
     }
   ]

@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-27 11:41",
+  "updated": "2026-07-29 10:39",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "INCY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong momentum (+68% 1Y, +28% YTD, +13% 1M, +10% 1W) driven by robust Q2 revenue growth, P/E of 16.81 is attractive for oncology, and positive news sentiment of 0.179 supports continued upside.",
+      "drivers": [
+        "+68% 1-year return",
+        "P/E 16.81",
+        "positive news sentiment 0.179",
+        "Q2 earnings beat"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Exceptional 1-year return of +53% and YTD +30%, with a reasonable P/E of 18.47 and low beta of 0.42, indicating steady growth with manageable risk.",
+      "drivers": [
+        "+53% 1-year return",
+        "P/E 18.47",
+        "low beta 0.42",
+        "strong YTD momentum"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong 1-month momentum (+10%) and positive news sentiment (0.161) ahead of Q2 earnings, with a low P/E of 16.29 and a buy rating from analysts.",
+      "drivers": [
+        "+10% 1-month return",
+        "P/E 16.29",
+        "positive news sentiment 0.161",
+        "analyst buy rating"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Solid YTD gain of +21.55% and 1-month momentum of +9.83%, supported by a P/E of 17.52, a high dividend yield of 4.03%, and positive news sentiment of 0.176.",
+      "drivers": [
+        "+21.55% YTD",
+        "P/E 17.52",
+        "dividend yield 4.03%",
+        "positive news sentiment 0.176"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong YTD performance (+21.72%) and 1-month momentum (+9.03%), with a P/E of 26.17 and low beta of 0.40, reflecting stable large-cap growth.",
+      "drivers": [
+        "+21.72% YTD",
+        "+9.03% 1-month",
+        "low beta 0.40",
+        "analyst buy rating"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Attractive P/E of 17.77 with a dividend yield of 2.51%, combined with YTD gain of +11.82% and 1-month momentum of +6.32%, supported by a strong analyst score of 1.69.",
+      "drivers": [
+        "P/E 17.77",
+        "dividend yield 2.51%",
+        "analyst score 1.69",
+        "+11.82% YTD"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Exceptional 1-year return of +78% and YTD of +43.64%, with strong 1-month momentum (+6.56%), though P/E of 34.46 is elevated and short interest is high at 9.46%.",
+      "drivers": [
+        "+78% 1-year return",
+        "+43.64% YTD",
+        "+6.56% 1-month",
+        "high short interest 9.46%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Positive 1-month momentum (+7.63%) and 1-week gain (+4.83%), with a buy rating from analysts and a beta of 0.24, though P/E of 43.41 is high.",
+      "drivers": [
+        "+7.63% 1-month",
+        "analyst buy rating",
+        "low beta 0.24",
+        "P/E 43.41"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Low P/E of 11.91 and dividend yield of 3.63%, with recent 1-month momentum of +5.42% and low short interest of 0.98%, though news sentiment is slightly negative at -0.10.",
+      "drivers": [
+        "P/E 11.91",
+        "dividend yield 3.63%",
+        "low short interest 0.98%",
+        "+5.42% 1-month"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "Exceptional YTD return of +39% and strong analyst consensus (strong_buy, score 1.0), but high volatility with a -6.21% 1-day drop and lack of fundamental data (no P/E, no beta) increases risk.",
+      "drivers": [
+        "+39% YTD",
+        "strong_buy analyst rating",
+        "no P/E data",
+        "high 1-day volatility"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.667,
+      "ytd": "+80.83%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +80.83% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +80.83% \u2265 60.6% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ILMN",
@@ -132,151 +277,6 @@ window.SIGNALS_DATA = {
         "sentiment 0.195",
         "P/E 42.68",
         "YTD -0.20%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.621,
-      "ytd": "+75.21%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +75.21% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +75.21% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "LLY combines strong momentum (+47% 1y, +10.14% YTD, +6.14% 1m) with solid fundamentals: PE 41.32, low beta 0.506, and positive news sentiment 0.246. Analyst consensus is strong_buy (score 1.76) supported by its leading metabolic portfolio.",
-      "drivers": [
-        "strong YTD & 1y momentum",
-        "positive news sentiment 0.246",
-        "analyst strong_buy consensus",
-        "low beta 0.506"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "ILMN has exceptional momentum with +83% 1y, +46.53% YTD, and +12.43% 1m, supported by a PE of 34.72 and positive news sentiment 0.035. High short interest of 8.17% adds squeeze potential.",
-      "drivers": [
-        "+46.53% YTD momentum",
-        "positive news sentiment 0.035",
-        "short interest 8.17%",
-        "high beta 1.469"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "BMY offers a compelling value with +17.56% YTD, +13.10% 1m, a low PE of 16.99, and a high dividend yield of 4.15%. Despite slightly negative news sentiment -0.019, analyst consensus is buy with an_score 2.5.",
-      "drivers": [
-        "+13.10% 1-month momentum",
-        "low PE 16.99",
-        "high dividend yield 4.15%",
-        "low beta 0.235"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "COAG shows explosive momentum with +59.35% 1m and +34.79% YTD, backed by the strongest analyst consensus (strong_buy, an_score 1.0). Despite negative news sentiment -0.018, the rare-disease focus and IPO catalyst drive upside.",
-      "drivers": [
-        "+59.35% 1-month rally",
-        "strong_buy analyst consensus",
-        "rare-disease category",
-        "high YTD return 34.79%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RCUS",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "RCUS delivers outstanding long-term performance (+201% 1y, +27.65% YTD) with a strong 1-week gain of +11.60%. Analyst consensus is strong_buy (score 1.46) and news sentiment is positive 0.128, signaling continued oncology-driven momentum.",
-      "drivers": [
-        "+201% 1-year return",
-        "strong_buy analyst consensus",
-        "positive news sentiment 0.128",
-        "high short interest 16.54%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "EXEL has strong YTD return of +27.70% and a low PE of 18.19, with low beta 0.424 providing stability. Short interest at 15.44% is elevated, and analyst consensus is buy (score 2.26).",
-      "drivers": [
-        "+27.70% YTD",
-        "low PE 18.19",
-        "low beta 0.424",
-        "elevated short interest 15.44%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "INCY shows solid momentum with +66% 1y, +15.06% YTD, and +7.59% 1m, supported by a low PE of 16.37 and low beta 0.758. Despite slightly negative news sentiment -0.004, analyst consensus is buy (score 2.31).",
-      "drivers": [
-        "+66% 1-year return",
-        "low PE 16.37",
-        "low beta 0.758",
-        "short interest 9.12%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AMGN provides steady momentum with +15.03% YTD, +5.71% 1m, and a PE of 25.45. It offers a dividend yield of 2.75% and low beta 0.403, with analyst consensus buy (score 2.44) and neutral news sentiment.",
-      "drivers": [
-        "+15.03% YTD",
-        "dividend yield 2.75%",
-        "low beta 0.403",
-        "analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "REGN has a low PE of 15.9 and positive news sentiment 0.26, with a 1-month gain of +4.57% despite a negative YTD of -15.80%. Analyst consensus is buy (score 1.81), and low beta 0.236 offers stability.",
-      "drivers": [
-        "low PE 15.9",
-        "positive news sentiment 0.26",
-        "low beta 0.236",
-        "analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.62,
-      "rationale": "NTRA has strong momentum with +88% 1y, +15.67% YTD, and positive news sentiment 0.179. Analyst consensus is strong_buy (score 1.5), and high beta 1.505 adds upside potential in genomics.",
-      "drivers": [
-        "+88% 1-year return",
-        "strong_buy analyst consensus",
-        "positive news sentiment 0.179",
-        "high beta 1.505"
       ]
     }
   ]
