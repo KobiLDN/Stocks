@@ -1,9 +1,176 @@
 {
-  "updated": "2026-07-29 10:46",
+  "updated": "2026-07-31 10:54",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "1M +20.93%, 1W +18.22%, strong_buy consensus (1.33), P/E 21.74, AI capex tailwind from Microsoft's $41B AI bet.",
+      "drivers": [
+        "1M +20.93%",
+        "strong_buy 1.33",
+        "P/E 21.74",
+        "AI infrastructure"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "1M +21.19%, strong_buy (1.32), P/E 17.7, positive sentiment 0.186, China recovery play.",
+      "drivers": [
+        "1M +21.19%",
+        "strong_buy 1.32",
+        "P/E 17.7",
+        "sentiment 0.186"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "1W +23.57%, 1M +17.37%, buy (1.56), P/E 24.51, sentiment 0.208, European software momentum.",
+      "drivers": [
+        "1W +23.57%",
+        "buy 1.56",
+        "P/E 24.51",
+        "sentiment 0.208"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +25.70%, 1M +16.02%, buy (1.72), div yield 3.71%, oil earnings tailwind.",
+      "drivers": [
+        "YTD +25.70%",
+        "1M +16.02%",
+        "div 3.71%",
+        "energy sector"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +29.71%, 1M +14.81%, buy (2.4), div 2.63%, strong oil earnings.",
+      "drivers": [
+        "YTD +29.71%",
+        "1M +14.81%",
+        "div 2.63%",
+        "energy sector"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "1M +17.22%, sentiment 0.486, buy (1.67), P/E 34.97, healthcare momentum.",
+      "drivers": [
+        "1M +17.22%",
+        "sentiment 0.486",
+        "buy 1.67",
+        "healthcare"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +15.04%, sentiment 0.219, buy (1.54), P/E 31.06, Q2 earnings beat.",
+      "drivers": [
+        "1M +15.04%",
+        "sentiment 0.219",
+        "buy 1.54",
+        "earnings beat"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BLK",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +14.23%, 1W +5.90%, sentiment 0.318, buy (1.53), P/E 25.84, asset management rally.",
+      "drivers": [
+        "1M +14.23%",
+        "sentiment 0.318",
+        "buy 1.53",
+        "asset management"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TM",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "strong_buy (1.5), P/E 10.7, div 3.25%, 1M +13.67%, attractive valuation.",
+      "drivers": [
+        "strong_buy 1.5",
+        "P/E 10.7",
+        "div 3.25%",
+        "1M +13.67%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +23.26%, 1M +15.23%, but supply constraints flagged by CEO Tim Cook may weigh on near-term; analyst rating buy (2.04). [bbc.com](https://www.bbc.com/news/articles/c204nw64xwno) [straitstimes.com](https://www.straitstimes.com/business/companies-markets/apple-slides-after-supply-shortages-hurt-sales-forecast)",
+      "drivers": [
+        "YTD +23.26%",
+        "1M +15.23%",
+        "supply constraints",
+        "buy 2.04"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.967,
+      "ytd": "+117.21%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +117.21% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +117.21% \u2265 60.6% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.912,
+      "ytd": "+110.53%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +110.53% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +110.53% \u2265 60.6% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.528,
+      "ytd": "+131.41%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +131.41% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +131.41% \u2265 124.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "XOM",
@@ -132,173 +299,6 @@
         "P/E 9.45",
         "upgraded by BofA",
         "news sentiment 0.456"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.983,
-      "ytd": "+119.15%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +119.15% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +119.15% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.935,
-      "ytd": "+113.32%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +113.32% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +113.32% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.854,
-      "ytd": "+103.44%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +103.44% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +103.44% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "XOM",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "YTD +29.68%, 1M +14.1%, P/E 26.47, dividend yield 2.63%, strong oil price tailwinds with Brent near $100, and robust demand for energy infrastructure.",
-      "drivers": [
-        "YTD +29.68%",
-        "strong oil price tailwinds",
-        "P/E 26.47 attractive for energy",
-        "dividend yield 2.63%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +27.32%, 1M +13.09%, P/E 33.88, dividend yield 3.66% benefiting from elevated oil prices and strong integrated energy margins.",
-      "drivers": [
-        "YTD +27.32%",
-        "1M +13.09% momentum",
-        "dividend yield 3.66%",
-        "energy sector tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "HSBC",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "YTD +32.88%, 1Y +60%, 1M +8.77%, P/E 17.09, dividend yield 3.63% supported by higher global interest rates and robust Asia-Pacific loan growth.",
-      "drivers": [
-        "YTD +32.88%",
-        "1Y +60%",
-        "P/E 17.09 attractive",
-        "dividend yield 3.63%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +14.49%, 1W +9.96%, 1M +14.04%, P/E 37.46, defense and aerospace backlog at record levels, and increasing geopolitical tensions driving orders.",
-      "drivers": [
-        "1M +14.04%",
-        "1W +9.96%",
-        "defense spending catalyst",
-        "P/E 37.46 premium justified by backlog"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MA",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "1M +10.56%, 1D +2.37%, P/E 31.25, analyst consensus strong_buy, benefiting from resilient cross-border payment volumes and rate-cut expectations boosting fintech.",
-      "drivers": [
-        "1M +10.56% momentum",
-        "strong_buy consensus",
-        "P/E 31.25 reasonable",
-        "cross-border spending tailwind"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "YTD +23.11%, 1M +21.03%, 1D +3.71%, P/E 40.32, Services revenue continues to grow double-digit, and AI integration across iPhone ecosystem provides catalyst.",
-      "drivers": [
-        "1M +21.03% surge",
-        "YTD +23.11%",
-        "Services revenue growth",
-        "AI ecosystem catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BABA",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "1M +17.96%, P/E 17.28, strong_buy analyst consensus (score 1.32), cloud and international commerce growth offset domestic headwinds, bargain valuation.",
-      "drivers": [
-        "1M +17.96% rebound",
-        "P/E 17.28 undervalued",
-        "strong_buy consensus",
-        "cloud business growth"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "1M +12.36%, 1W +6.72%, P/E 30.58, news sentiment positive (+0.255), strong Q2 earnings, and leadership in life sciences tools with growing bioprocessing demand.",
-      "drivers": [
-        "1M +12.36%",
-        "1W +6.72%",
-        "positive earnings catalyst",
-        "life sciences demand"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "1M +11.32%, 1W +2.36%, P/E 33.35, dividend yield 2.45%, robust FreeStyle Libre and medical device pipeline, recovering procedure volumes support growth.",
-      "drivers": [
-        "1M +11.32%",
-        "dividend yield 2.45%",
-        "medical device growth",
-        "recovery in procedures"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "META",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "1M +9.64%, P/E 21.64, strong_buy consensus (score 1.35), massive AI infrastructure capex and Reels monetization driving ad revenue recovery.",
-      "drivers": [
-        "1M +9.64%",
-        "P/E 21.64 discount to tech peers",
-        "AI capex catalyst",
-        "ad revenue recovery"
       ]
     }
   ]

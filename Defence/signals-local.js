@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-29 10:41",
+  "updated": "2026-07-31 10:44",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "LMT +16.87% YTD, P/E 21.01, beat Q2 with $20.06B sales (+10.5% YoY), raised FY26 revenue guidance to $79.75-81.75B, and booked a record $230B backlog plus a $35B THAAD contract [lockheedmartin.com](https://news.lockheedmartin.com/2026-07-23-Lockheed-Martin-Reports-Second-Quarter-2026-Financial-Results) [spokesman.com](https://www.spokesman.com/stories/2026/jul/23/lockheed-martin-rtx-lift-2026-forecasts-as-pentago/).",
+      "drivers": [
+        "+16.87% YTD / +12.69% 1M",
+        "P/E 21.01",
+        "record $230B backlog",
+        "FY26 guidance raised"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "RTX +15.35% YTD, P/E 37.88, Q2 adjusted EPS $1.89 (+21% YoY), backlog $289B (+22% YoY), and FY26 adjusted sales guidance raised to $95-96B [rtx.com](https://www.rtx.com/news/news-center/2026/07/23/rtx-reports-q2-2026-results) [moneytimes.com](https://www.moneytimes.com/articles/60710/20260729/lockheed-rtx-booked-record-backlogs-pentagon-restocking-law-that-authorizes-those-contracts.htm).",
+      "drivers": [
+        "+15.35% YTD / +12.99% 1M",
+        "backlog $289B",
+        "FY26 EPS raised to $7.10-7.25",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "GD +12.77% YTD, P/E 23.26, analyst buy, and a $76.6B submarine win underpins long-cycle backlog with news sentiment 0.21.",
+      "drivers": [
+        "+12.77% YTD",
+        "P/E 23.26",
+        "$76.6B submarine win",
+        "news_s 0.21"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "DRS +31.69% YTD, strong_buy consensus score 1.50, P/E 43.45, with Q2 earnings transcript highlighting defense electronics momentum.",
+      "drivers": [
+        "+31.69% YTD",
+        "strong_buy consensus",
+        "P/E 43.45",
+        "Q2 earnings catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "HII 1M +14.29%, 1W +11.43%, 1D +9.65% on Q2 earnings, P/E 18.22, and buy consensus supports naval shipbuilding turnaround.",
+      "drivers": [
+        "1M +14.29% / 1W +11.43%",
+        "P/E 18.22",
+        "Q2 earnings call",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BA.L +16.89% YTD, 1M +11.17%, P/E 30.15, buy consensus, and European defence backdrop with FTSE momentum.",
+      "drivers": [
+        "+16.89% YTD",
+        "1M +11.17%",
+        "P/E 30.15",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "QQ.L 1M +17.82%, YTD +12.00%, P/E 24.88, with strong news sentiment 0.296 and buy consensus.",
+      "drivers": [
+        "1M +17.82%",
+        "YTD +12.00%",
+        "news_s 0.296",
+        "P/E 24.88"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "LDOS P/E 10.46, 1M +9.17% rebound, buy consensus, and news_s 0.231; deep value despite -38.36% YTD.",
+      "drivers": [
+        "P/E 10.46",
+        "1M +9.17%",
+        "news_s 0.231",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BAH 1M +12.59%, P/E 11.02, high short interest 8.59%, and news_s 0.142; value plus short-squeeze optionality.",
+      "drivers": [
+        "1M +12.59%",
+        "P/E 11.02",
+        "short 8.59%",
+        "news_s 0.142"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "NOC P/E 17.01, buy consensus, news_s 0.192, and 1M +5.01%; defensive demand despite -7.98% YTD.",
+      "drivers": [
+        "P/E 17.01",
+        "buy consensus",
+        "news_s 0.192",
+        "1M +5.01%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "DRS",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "buy consensus",
         "positive news sentiment 0.213",
         "drone sector focus"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "18.6% YTD, 15.4% 1M, and $134B market cap with a P/E of 21.5 and a 2.4% yield; Lockheed is the prime beneficiary of escalating Iran conflict and U.S. Indo-Pacific build-up.",
-      "drivers": [
-        "18.6% YTD",
-        "P/E 21.5",
-        "1M +15.4%",
-        "geopolitical catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "GD",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "14.1% YTD and 12.7% 1M with a P/E of 24.3, solid backlog growth, and direct exposure to rising European defence spending; news of Russia attacks on Kyiv supports near-term demand.",
-      "drivers": [
-        "14.1% YTD",
-        "P/E 24.3",
-        "1M +12.7%",
-        "European defence tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "14.5% YTD and 14% 1M, analyst buy consensus (1.87 score), positive news sentiment 0.17, and the US\u2013Japan\u2013Philippines South China Sea drills confirm a multi-year demand cycle.",
-      "drivers": [
-        "14.5% YTD",
-        "buy consensus",
-        "positive sentiment 0.17",
-        "Indo-Pacific drills"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BAH",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Booz Allen beat on earnings as national security backlog grows; the stock surged 21.5% in one month and 7.5% today, yet still trades at a cheap 11.4 P/E with strong momentum.",
-      "drivers": [
-        "+21.5% 1M",
-        "P/E 11.4",
-        "earnings beat",
-        "backlog growth"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Despite a -38.5% YTD, Leidos offers deep value at a 10.3 P/E, is up 12.1% in the last month, and is poised to benefit from the accelerating shift to cyber-intel and digital modernisation.",
-      "drivers": [
-        "P/E 10.3",
-        "1M +12.1%",
-        "cyber-intel demand",
-        "deep value"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "SAIC is +18.8% YTD and +12% in the last month, trades at a cheap 13.4 P/E, and has positive news sentiment 0.14; value-oriented and benefiting from the same cyber/backlog trends.",
-      "drivers": [
-        "18.8% YTD",
-        "P/E 13.4",
-        "positive sentiment",
-        "value strength"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Axon rebounded 12.9% in the last month and trades with buy analyst consensus (1.67), a positive news sentiment of 0.26, and a large addressable market in law enforcement tech despite a high P/E.",
-      "drivers": [
-        "1M +12.9%",
-        "buy consensus 1.67",
-        "positive sentiment 0.26",
-        "law enforcement tech"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "QinetiQ is up 15.3% in one month, 10.2% YTD, with a P/E of 24.5 and positive news sentiment 0.30; a pure-play UK defence name benefiting from NATO budget increases and UK deterrence.",
-      "drivers": [
-        "1M +15.3%",
-        "P/E 24.5",
-        "positive sentiment 0.30",
-        "NATO/UK defence spend"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.67,
-      "rationale": "CACI is up 9.8% in the last month, trades at a reasonable 20.1 P/E, and has the most bullish analyst score in the cyber-intel space at 1.56 with positive news sentiment 0.12.",
-      "drivers": [
-        "1M +9.8%",
-        "P/E 20.1",
-        "best analyst score 1.56",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "KTOS",
-      "signal": "strong_buy",
-      "confidence": 0.62,
-      "rationale": "Kratos has a strong_buy analyst consensus (score 1.50), the highest news sentiment in the universe at 0.41, and is the leading play on autonomous systems despite a high P/E.",
-      "drivers": [
-        "strong_buy consensus",
-        "sentiment 0.41",
-        "autonomous systems",
-        "SpaceX supply chain"
       ]
     }
   ]

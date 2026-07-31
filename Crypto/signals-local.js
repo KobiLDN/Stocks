@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-29 10:44",
+  "updated": "2026-07-31 10:52",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ETH has the highest positive 1M momentum among all majors (+20.91%), positive news sentiment (0.09) and on-chain fees are rebuilding. Morgan Stanley's new Ethereum ETP drew $33M in combined inflows, signaling institutional demand.",
+      "drivers": [
+        "+20.91% monthly momentum",
+        "positive news sentiment 0.09",
+        "institutional ETP inflows",
+        "on-chain fee recovery"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "BNB is the standout gainer today (+3.25% 1D) and this week (+4.07% 1W) with the highest weekly return among all assets, positive news sentiment (0.189), and strong volume leadership.",
+      "drivers": [
+        "+4.07% weekly gain leader",
+        "+3.25% daily momentum",
+        "high news sentiment 0.189",
+        "altcoin strength catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "KAITO",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "KAITO has explosive momentum with +128% YTD and +101.18% over the past month, driven by strong narrative around its AI-focused data platform, though lagging news sentiment and small market cap ($0.28B) add risk.",
+      "drivers": [
+        "+128% YTD return",
+        "+101% 1M momentum",
+        "AI narrative growth",
+        "small cap high beta"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "LINK shows strong 1M momentum (+15.65%) with neutral sentiment (0.0) and a $6.3B market cap supporting its oracle infrastructure dominance, though 1W is slightly negative (-1.09%).",
+      "drivers": [
+        "+15.65% 1M momentum",
+        "oracle network dominance",
+        "neutral sentiment",
+        "infrastructure catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ADA exhibits strong short-term momentum with +4.10% today and +12.72% over the past month, despite negative news sentiment (-0.016) tied to political controversy; on-chain/dApp growth is a supporting catalyst.",
+      "drivers": [
+        "+4.10% daily gain",
+        "+12.72% 1M momentum",
+        "low market cap ($6.2B)",
+        "on-chain recovery narrative"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "BTC remains the anchor asset at $64.4K, with +9.68% monthly gain and $32.1M in spot ETF inflows ending a four-session outflow streak; tight range near $64\u2013$65K suggests a volatility breakout ahead.",
+      "drivers": [
+        "+9.68% 1M gain",
+        "ETF inflows $32.1M",
+        "volatility compression signal",
+        "low sentiment fear zone"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "PEPE has strong 1M momentum (+19.15%) and positive news sentiment (0.202) despite a slightly negative 1W; memecoin social sentiment remains elevated, supporting speculative interest.",
+      "drivers": [
+        "+19.15% 1M momentum",
+        "positive news sentiment 0.202",
+        "memecoin social activity",
+        "high speculative volume"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "MINA shows a solid +8.83% monthly recovery and a very small market cap ($0.054B) making it a high-beta play on the zero-knowledge narrative, though 1W weakness (-7.01%) and low liquidity are risks.",
+      "drivers": [
+        "+8.83% 1M recovery",
+        "ZK narrative catalyst",
+        "small cap high beta",
+        "oversold technical bounce"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "DOGE",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "DOGE has strong news sentiment (0.323) and a mild +1.26% weekly gain in a mixed market; lower market cap ($10.9B) than top majors but still the leading memecoin, supported by retail and social volume.",
+      "drivers": [
+        "high news sentiment 0.323",
+        "leading memecoin status",
+        "mild +1.26% weekly gain",
+        "retail speculative catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "OCEAN has extreme short-term momentum (+322.36% 1M/1W) reflecting a likely token migration or pump event, but zero price data and market cap make it highly speculative; high risk of snapback.",
+      "drivers": [
+        "+322% 1M explosive move",
+        "extreme volatility",
+        "zero price stability",
+        "speculative token event"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "KAITO",
@@ -122,139 +255,6 @@ window.SIGNALS_DATA = {
         "+14% YTD",
         "large cap $30.9B",
         "positive annual return"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KAITO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Explosive momentum with +130% YTD, +121.50% 1-month, and +21.61% weekly gains, driven by AI narrative and token unlock catalysts despite small $0.28B market cap.",
-      "drivers": [
-        "+130% YTD",
-        "+121.50% 1M",
-        "AI narrative",
-        "token unlock catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "PEPE",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong short-term momentum with +25.83% 1-month and +7.39% weekly gains, benefiting from meme coin social sentiment and low $1.26B market cap offering high beta.",
-      "drivers": [
-        "+25.83% 1M",
-        "+7.39% 1W",
-        "meme coin sentiment",
-        "high beta"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ETH",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Impressive +24.41% 1-month rally with positive news sentiment 0.037 and analyst calls suggesting a bottom, supported by $237B market cap stability and ETF flow catalysts.",
-      "drivers": [
-        "+24.41% 1M",
-        "+4.65% 1D",
-        "positive news sentiment",
-        "ETF flow catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.76,
-      "rationale": "Strong momentum with +19.98% 1-month and +5.72% weekly gains, very high news sentiment 0.73, and a $1B supply boost catalyst from United Stable.",
-      "drivers": [
-        "+19.98% 1M",
-        "news sentiment 0.73",
-        "$1B supply boost",
-        "oracle network demand"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "VIRTUAL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Solid +13.94% 1-month gain with +3.56% daily momentum, AI sector tailwinds, and a modest $0.4B market cap offering upside potential.",
-      "drivers": [
-        "+13.94% 1M",
-        "+3.56% 1D",
-        "AI sector tailwind",
-        "low market cap"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Strong +13.03% 1-month gain with positive weekly and daily momentum, tiny $0.057B market cap provides high beta exposure to emerging L1 narrative.",
-      "drivers": [
-        "+13.03% 1M",
-        "tiny market cap",
-        "emerging L1 narrative",
-        "high beta"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Solid +12.77% 1-month rally with positive news sentiment 0.078 and founder commentary on governance, supported by $6B market cap for relative stability.",
-      "drivers": [
-        "+12.77% 1M",
-        "news sentiment 0.078",
-        "governance narrative",
-        "mid-cap stability"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Steady +8.68% 1-month and +2.13% weekly gains with positive news sentiment 0.051, serving as the reference asset with $1.3T market cap and safe-haven bid.",
-      "drivers": [
-        "+8.68% 1M",
-        "reference asset",
-        "safe-haven bid",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "Decent +8.18% 1-month gain with +1.51% daily momentum, infra category exposure, and low $0.83B market cap offering recovery potential from -22.65% YTD.",
-      "drivers": [
-        "+8.18% 1M",
-        "infra category",
-        "low market cap",
-        "recovery potential"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ALT",
-      "signal": "buy",
-      "confidence": 0.58,
-      "rationale": "Modest +7.19% 1-month gain with positive daily momentum, AI sector exposure, and tiny $0.042B market cap for speculative upside.",
-      "drivers": [
-        "+7.19% 1M",
-        "AI sector",
-        "tiny market cap",
-        "speculative upside"
       ]
     }
   ]
