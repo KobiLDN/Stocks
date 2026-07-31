@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-07-30 22:41",
-  "fx_gbp_usd": 1.3462,
+  "updated": "2026-07-31 07:31",
+  "fx_gbp_usd": 1.3457,
   "stocks": [
     {
       "ticker": "AMGN",
@@ -19,8 +19,8 @@ window.PRICES_DATA = {
       "high_gbp": "296",
       "high_usd": 398.0,
       "bar_pct": 92,
-      "market_cap_gbp_b": 155.405,
-      "market_cap_usd_b": 209.212,
+      "market_cap_gbp_b": 155.466,
+      "market_cap_usd_b": 209.213,
       "beta": 0.403,
       "pe_ratio": 26.96,
       "avg_volume_m": 2.73,
@@ -28,9 +28,9 @@ window.PRICES_DATA = {
       "short_pct": 2.38,
       "analyst": "buy",
       "analyst_score": 2.44,
-      "vol_1d": 2487808,
-      "vol_1w": 14300508,
-      "vol_1m": 51487708,
+      "vol_1d": 3004900,
+      "vol_1w": 14817600,
+      "vol_1m": 52004800,
       "news": [
         {
           "title": "What Analyst Projections for Key Metrics Reveal About Amgen (AMGN) Q2 Earnings",
@@ -87,18 +87,18 @@ window.PRICES_DATA = {
       "high_gbp": "117",
       "high_usd": 157.29,
       "bar_pct": 47,
-      "market_cap_gbp_b": 121.073,
+      "market_cap_gbp_b": 121.12,
       "market_cap_usd_b": 162.993,
       "beta": 0.343,
-      "pe_ratio": 17.86,
+      "pe_ratio": 18.06,
       "avg_volume_m": 7.58,
       "div_yield_pct": 247.0,
       "short_pct": 2.04,
       "analyst": "buy",
       "analyst_score": 1.69,
-      "vol_1d": 6156159,
-      "vol_1w": 31348659,
-      "vol_1m": 146854259,
+      "vol_1d": 6724500,
+      "vol_1w": 31917000,
+      "vol_1m": 147422600,
       "news": [
         {
           "title": "Seeking Clues to Gilead (GILD) Q2 Earnings? A Peek Into Wall Street Projections for Key Metrics",
@@ -143,7 +143,7 @@ window.PRICES_DATA = {
       "company_name": "Regeneron Pharmaceuticals",
       "category": "large-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "548",
+      "price_gbp": "549",
       "price_usd": 738.34,
       "change_1d": "+5.63%",
       "change_1w": "+13.26%",
@@ -155,19 +155,33 @@ window.PRICES_DATA = {
       "high_gbp": "610",
       "high_usd": 821.11,
       "bar_pct": 70,
-      "market_cap_gbp_b": 57.499,
-      "market_cap_usd_b": 77.407,
+      "market_cap_gbp_b": 56.487,
+      "market_cap_usd_b": 76.015,
       "beta": 0.236,
-      "pe_ratio": 18.03,
+      "pe_ratio": 16.98,
       "avg_volume_m": 1.0,
       "div_yield_pct": 54.0,
       "short_pct": 3.53,
       "analyst": "buy",
       "analyst_score": 1.86,
-      "vol_1d": 1429257,
-      "vol_1w": 4710757,
-      "vol_1m": 17581757,
+      "vol_1d": 1460700,
+      "vol_1w": 4742200,
+      "vol_1m": 17613200,
       "news": [
+        {
+          "title": "Regeneron (REGN) Q2 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/regeneron-regn-q2-2026-earnings-call-transcript/",
+          "published": 1785459750,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Regeneron (REGN) Stock Looks Cheap On Earnings Yet Mixed Elsewhere",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/regeneron-regn-stock-looks-cheap-220941843.html",
+          "published": 1785449381,
+          "sentiment": 0.0
+        },
         {
           "title": "Regeneron Pharmaceuticals Inc (REGN) (Q2 2026) Earnings Call Highlights: Record Dupixent Sales ...",
           "publisher": "GuruFocus.com",
@@ -188,23 +202,9 @@ window.PRICES_DATA = {
           "url": "https://www.marketbeat.com/instant-alerts/regeneron-pharmaceuticals-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1785438271,
           "sentiment": 0.0
-        },
-        {
-          "title": "Health Care Roundup: Market Talk",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/health-care-roundup-market-talk-16ec34dc?siteid=yhoof2&yptr=yahoo",
-          "published": 1785430740,
-          "sentiment": 0.494
-        },
-        {
-          "title": "Regeneron Q2 Earnings Beat, Sales Up on Dupixent & Eylea HD Strength",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/regeneron-q2-earnings-beat-sales-155800381.html",
-          "published": 1785427080,
-          "sentiment": 0.494
         }
       ],
-      "news_sentiment": 0.198
+      "news_sentiment": 0.0
     },
     {
       "ticker": "VRTX",
@@ -220,22 +220,29 @@ window.PRICES_DATA = {
       "return_1yr": "+6%",
       "low_gbp": "269",
       "low_usd": 362.5,
-      "high_gbp": "396",
+      "high_gbp": "397",
       "high_usd": 533.67,
       "bar_pct": 70,
-      "market_cap_gbp_b": 90.815,
-      "market_cap_usd_b": 122.259,
+      "market_cap_gbp_b": 90.85,
+      "market_cap_usd_b": 122.258,
       "beta": 0.292,
-      "pe_ratio": 28.55,
+      "pe_ratio": 28.66,
       "avg_volume_m": 1.56,
       "div_yield_pct": null,
       "short_pct": 2.22,
       "analyst": "buy",
-      "analyst_score": 1.68,
-      "vol_1d": 1140773,
-      "vol_1w": 7176973,
-      "vol_1m": 33029673,
+      "analyst_score": 1.66,
+      "vol_1d": 1248600,
+      "vol_1w": 7284800,
+      "vol_1m": 33137500,
       "news": [
+        {
+          "title": "Vertex Just Paid $10 Billion for Crinetics. Here's Why Viking Therapeutics Could Be the Next Big Pharma Takeover Target",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/30/vertex-just-paid-10-billion-for-crinetics-heres-wh/",
+          "published": 1785451800,
+          "sentiment": 0.0
+        },
         {
           "title": "Vertex Pharmaceuticals (VRTX) Expands Its Pipeline Reach, Is The Stock Fully Valued?",
           "publisher": "Simply Wall St.",
@@ -263,13 +270,6 @@ window.PRICES_DATA = {
           "url": "https://www.biopharmadive.com/news/abcellera-vertex-partnership-next-gen-t-cell-engagers/826471/",
           "published": 1785325200,
           "sentiment": 0.25
-        },
-        {
-          "title": "Vertex Pharmaceuticals (VRTX) Exceeds Market Returns: Some Facts to Consider",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/vertex-pharmaceuticals-vrtx-exceeds-market-215005922.html",
-          "published": 1785275405,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.266
@@ -279,7 +279,7 @@ window.PRICES_DATA = {
       "company_name": "Biogen",
       "category": "large-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "154",
+      "price_gbp": "155",
       "price_usd": 207.93,
       "change_1d": "+0.74%",
       "change_1w": "+3.64%",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "163",
       "high_usd": 219.72,
       "bar_pct": 88,
-      "market_cap_gbp_b": 22.821,
+      "market_cap_gbp_b": 22.83,
       "market_cap_usd_b": 30.723,
       "beta": null,
       "pe_ratio": 36.93,
@@ -299,10 +299,10 @@ window.PRICES_DATA = {
       "div_yield_pct": null,
       "short_pct": 4.53,
       "analyst": "buy",
-      "analyst_score": 1.89,
-      "vol_1d": 868412,
-      "vol_1w": 6459312,
-      "vol_1m": 31699812,
+      "analyst_score": 1.86,
+      "vol_1d": 892900,
+      "vol_1w": 6483800,
+      "vol_1m": 31724300,
       "news": [
         {
           "title": "Biogen (BIIB) Is Up 5.8% After Earnings Compression Amid Revenue Growth \u2013 Is Profitability Peaking?",
@@ -356,22 +356,36 @@ window.PRICES_DATA = {
       "return_1yr": "+46%",
       "low_gbp": "32",
       "low_usd": 42.52,
-      "high_gbp": "48",
-      "high_usd": 64.97,
-      "bar_pct": 99,
-      "market_cap_gbp_b": 98.384,
-      "market_cap_usd_b": 132.448,
+      "high_gbp": "49",
+      "high_usd": 65.56,
+      "bar_pct": 97,
+      "market_cap_gbp_b": 98.423,
+      "market_cap_usd_b": 132.449,
       "beta": 0.235,
-      "pe_ratio": 18.17,
+      "pe_ratio": 17.67,
       "avg_volume_m": 11.77,
       "div_yield_pct": 399.0,
       "short_pct": 2.2,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 15874427,
-      "vol_1w": 64011427,
-      "vol_1m": 236165127,
+      "vol_1d": 18021300,
+      "vol_1w": 66158300,
+      "vol_1m": 238312000,
       "news": [
+        {
+          "title": "Bristol-Myers Squibb (BMY) Q2 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/bristol-myers-squibb-bmy-q2-2026-earnings-call-transcript/",
+          "published": 1785457805,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why Bristol Myers Squibb Stock Topped the Market on Thursday",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/30/why-bristol-myers-squibb-stock-topped-the-market-o/",
+          "published": 1785457529,
+          "sentiment": 0.0
+        },
         {
           "title": "Bristol-Myers Squibb Co (BMY) (Q2 2026) Earnings Call Highlights: Growth Portfolio Surges 14%, ...",
           "publisher": "GuruFocus.com",
@@ -392,23 +406,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/bristol-myers-squibb-nyse-bmy-140055279.html",
           "published": 1785420055,
           "sentiment": 0.511
-        },
-        {
-          "title": "Bristol Myers Squibb Lifts Full-Year Guidance After Strong Second-Quarter Earnings Beat",
-          "publisher": "InvestorsHub",
-          "url": "https://investorshub.advfn.com/market-news/article/33088/bristol-myers-squibb-lifts-full-year-guidance-after-strong-second-quarter-earnings-beat",
-          "published": 1785419407,
-          "sentiment": 0.511
-        },
-        {
-          "title": "Bristol Myers (BMY) Q2 Earnings: Taking a Look at Key Metrics Versus Estimates",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/bristol-myers-bmy-q2-earnings-133006657.html",
-          "published": 1785418206,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.281
+      "news_sentiment": 0.179
     },
     {
       "ticker": "AZN",
@@ -416,19 +416,19 @@ window.PRICES_DATA = {
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "127",
-      "price_usd": 171.24,
+      "price_usd": 171.17,
       "change_1d": "-3.03%",
       "change_1w": "+0.25%",
       "change_1m": "-9.79%",
       "change_ytd": "-6.41%",
       "return_1yr": "+16%",
-      "low_gbp": "99",
-      "low_usd": 133.17,
+      "low_gbp": "89",
+      "low_usd": 119.82,
       "high_gbp": "157",
-      "high_usd": 211.79,
-      "bar_pct": 48,
+      "high_usd": 211.71,
+      "bar_pct": 50,
       "market_cap_gbp_b": 1.973,
-      "market_cap_usd_b": 2.656,
+      "market_cap_usd_b": 2.655,
       "beta": 0.225,
       "pe_ratio": 25.29,
       "avg_volume_m": 2.36,
@@ -436,9 +436,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.87,
-      "vol_1d": 5119477,
-      "vol_1w": 17564636,
-      "vol_1m": 64398523,
+      "vol_1d": 69339,
+      "vol_1w": 12514498,
+      "vol_1m": 59348385,
       "news": [
         {
           "title": "Sector Update: Healthcare Stocks Decline Late Afternoon",
@@ -484,17 +484,17 @@ window.PRICES_DATA = {
       "category": "uk-listed",
       "exchange": "LSE",
       "price_gbp": "19",
-      "price_usd": 26.12,
+      "price_usd": 26.11,
       "change_1d": "-3.34%",
       "change_1w": "+1.81%",
       "change_1m": "-2.07%",
       "change_ytd": "+5.94%",
       "return_1yr": "+42%",
-      "low_gbp": "13",
-      "low_usd": 17.35,
+      "low_gbp": "14",
+      "low_usd": 18.27,
       "high_gbp": "23",
-      "high_usd": 30.72,
-      "bar_pct": 66,
+      "high_usd": 30.71,
+      "bar_pct": 50,
       "market_cap_gbp_b": 0.777,
       "market_cap_usd_b": 1.046,
       "beta": 0.3,
@@ -504,9 +504,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.59,
-      "vol_1d": 7052998,
-      "vol_1w": 53174437,
-      "vol_1m": 209276937,
+      "vol_1d": 483191,
+      "vol_1w": 46604630,
+      "vol_1m": 202707130,
       "news": [
         {
           "title": "IONS Beats Q2 Earnings & Sales Estimates, Reiterates '26 Outlook",
@@ -563,7 +563,7 @@ window.PRICES_DATA = {
       "high_gbp": "58",
       "high_usd": 78.48,
       "bar_pct": 13,
-      "market_cap_gbp_b": 3.544,
+      "market_cap_gbp_b": 3.545,
       "market_cap_usd_b": 4.771,
       "beta": 1.702,
       "pe_ratio": null,
@@ -572,10 +572,24 @@ window.PRICES_DATA = {
       "short_pct": 22.97,
       "analyst": "buy",
       "analyst_score": 1.96,
-      "vol_1d": 1353533,
-      "vol_1w": 8046133,
-      "vol_1m": 37469933,
+      "vol_1d": 1376200,
+      "vol_1w": 8068800,
+      "vol_1m": 37492600,
       "news": [
+        {
+          "title": "Morgan Stanley Nearly Doubled Its Price Target for CRISPR Therapeutics. Is the Gene-Editing Stock a No-Brainer Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/07/30/morgan-stanley-nearly-doubled-its-price-target-for/",
+          "published": 1785448680,
+          "sentiment": 0.0
+        },
+        {
+          "title": "CRISPR Therapeutics AG (CRSP) Exceeds Market Returns: Some Facts to Consider",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-ag-crsp-exceeds-215005908.html",
+          "published": 1785448205,
+          "sentiment": 0.0
+        },
         {
           "title": "3 Stocks With the Most Upside by the End of 2026",
           "publisher": "Motley Fool",
@@ -596,23 +610,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/07/28/3-mid-cap-growth-stocks-with-monstrous-long-term-u/",
           "published": 1785252167,
           "sentiment": 0.382
-        },
-        {
-          "title": "Earnings Preview: Ultragenyx (RARE) Q2 Earnings Expected to Decline",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-preview-ultragenyx-rare-q2-140030479.html",
-          "published": 1785247230,
-          "sentiment": 0.0
-        },
-        {
-          "title": "CRISPR Therapeutics AG (CRSP) is Attracting Investor Attention: Here is What You Should Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-ag-crsp-attracting-130001953.html",
-          "published": 1785243601,
-          "sentiment": 0.477
         }
       ],
-      "news_sentiment": 0.24
+      "news_sentiment": 0.144
     },
     {
       "ticker": "BEAM",
@@ -631,19 +631,26 @@ window.PRICES_DATA = {
       "high_gbp": "28",
       "high_usd": 38.26,
       "bar_pct": 48,
-      "market_cap_gbp_b": 2.024,
+      "market_cap_gbp_b": 2.025,
       "market_cap_usd_b": 2.725,
       "beta": 2.182,
       "pe_ratio": null,
       "avg_volume_m": 2.28,
       "div_yield_pct": null,
       "short_pct": 34.96,
-      "analyst": "strong_buy",
-      "analyst_score": 1.33,
-      "vol_1d": 1402112,
-      "vol_1w": 8904412,
-      "vol_1m": 52178412,
+      "analyst": "none",
+      "analyst_score": null,
+      "vol_1d": 1454000,
+      "vol_1w": 8956300,
+      "vol_1m": 52230300,
       "news": [
+        {
+          "title": "Myriad Genetics (MYGN) Reports Q2 Loss, Misses Revenue Estimates",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/myriad-genetics-mygn-reports-q2-220014235.html",
+          "published": 1785448814,
+          "sentiment": -0.494
+        },
         {
           "title": "Scribe\u2019s Genetic Editing Aims to Prevent Heart Attacks",
           "publisher": "Barrons.com",
@@ -671,16 +678,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/prime-medicine-prme-reaches-positive-085317803.html",
           "published": 1784105597,
           "sentiment": 0.586
-        },
-        {
-          "title": "Kyverna Therapeutics Sinks 13%: Here\u2019s Why",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/10/kyverna-therapeutics-sinks-13-heres-why/",
-          "published": 1783713599,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.244
+      "news_sentiment": 0.146
     },
     {
       "ticker": "NTLA",
@@ -700,7 +700,7 @@ window.PRICES_DATA = {
       "high_usd": 28.25,
       "bar_pct": 15,
       "market_cap_gbp_b": 1.151,
-      "market_cap_usd_b": 1.55,
+      "market_cap_usd_b": 1.549,
       "beta": 1.77,
       "pe_ratio": null,
       "avg_volume_m": 5.76,
@@ -708,9 +708,9 @@ window.PRICES_DATA = {
       "short_pct": 41.3,
       "analyst": "buy",
       "analyst_score": 2.3,
-      "vol_1d": 3119259,
-      "vol_1w": 17809759,
-      "vol_1m": 93460259,
+      "vol_1d": 3180600,
+      "vol_1w": 17871100,
+      "vol_1m": 93521600,
       "news": [
         {
           "title": "3 Promising Genomics Stocks to Add to Your Portfolio in 2026",
@@ -776,9 +776,9 @@ window.PRICES_DATA = {
       "short_pct": 14.49,
       "analyst": "buy",
       "analyst_score": 2.08,
-      "vol_1d": 833935,
-      "vol_1w": 6280435,
-      "vol_1m": 44289535,
+      "vol_1d": 834000,
+      "vol_1w": 6280500,
+      "vol_1m": 44289600,
       "news": [
         {
           "title": "Why Is Editas (EDIT) Down 12.4% Since Last Earnings Report?",
@@ -832,59 +832,59 @@ window.PRICES_DATA = {
       "return_1yr": "+90%",
       "low_gbp": "65",
       "low_usd": 88.0,
-      "high_gbp": "148",
-      "high_usd": 199.14,
+      "high_gbp": "153",
+      "high_usd": 205.47,
       "bar_pct": 99,
-      "market_cap_gbp_b": 23.049,
+      "market_cap_gbp_b": 23.058,
       "market_cap_usd_b": 31.029,
       "beta": 1.469,
-      "pe_ratio": 37.36,
+      "pe_ratio": 35.48,
       "avg_volume_m": 1.88,
       "div_yield_pct": null,
       "short_pct": 9.46,
       "analyst": "buy",
       "analyst_score": 2.35,
-      "vol_1d": 2710427,
-      "vol_1w": 9556227,
-      "vol_1m": 39539727,
+      "vol_1d": 2764500,
+      "vol_1w": 9610300,
+      "vol_1m": 39593800,
       "news": [
+        {
+          "title": "Illumina Inc (ILMN) (Q2 2026) Earnings Call Highlights: Strong Clinical Growth Drives Revenue ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/healthcare/articles/illumina-inc-ilmn-q2-2026-050415404.html",
+          "published": 1785474255,
+          "sentiment": 0.71
+        },
+        {
+          "title": "Illumina (ILMN) Q2 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/illumina-ilmn-q2-2026-earnings-call-transcript/",
+          "published": 1785461569,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Illumina (ILMN) Reports Q2 Earnings: What Key Metrics Have to Say",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/illumina-ilmn-reports-q2-earnings-233003165.html",
+          "published": 1785454203,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Illumina (ILMN) Tops Q2 Earnings and Revenue Estimates",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/healthcare/articles/illumina-ilmn-tops-q2-earnings-220011740.html",
+          "published": 1785448811,
+          "sentiment": 0.511
+        },
         {
           "title": "Illumina (NASDAQ:ILMN) Surprises With Q2 CY2026 Sales, Full-Year Outlook Slightly Exceeds Expectations",
           "publisher": "StockStory",
           "url": "https://finance.yahoo.com/healthcare/articles/illumina-nasdaq-ilmn-surprises-q2-202139521.html",
           "published": 1785442899,
           "sentiment": 0.226
-        },
-        {
-          "title": "Scale AI names Francis deSouza as new CEO",
-          "publisher": "Quartz",
-          "url": "https://qz.com/scale-ai-francis-desouza-ceo-google-cloud-073026",
-          "published": 1785433746,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Scale AI taps former Google Cloud executive as CEO",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/ai/articles/scale-ai-taps-former-google-150409834.html",
-          "published": 1785423849,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Eli Lilly (LLY) Joins Illumina\u2019s Billion Cell Atlas For AI Drug Discovery",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/healthcare/articles/eli-lilly-lly-joins-illumina-140733174.html",
-          "published": 1785420453,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Illumina Earnings: What To Look For From ILMN",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/illumina-earnings-look-ilmn-133302540.html",
-          "published": 1785331982,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.045
+      "news_sentiment": 0.289
     },
     {
       "ticker": "PACB",
@@ -903,8 +903,8 @@ window.PRICES_DATA = {
       "high_gbp": "2.03",
       "high_usd": 2.73,
       "bar_pct": 24,
-      "market_cap_gbp_b": 0.341,
-      "market_cap_usd_b": 0.459,
+      "market_cap_gbp_b": 0.342,
+      "market_cap_usd_b": 0.46,
       "beta": 2.289,
       "pe_ratio": null,
       "avg_volume_m": 6.32,
@@ -912,9 +912,9 @@ window.PRICES_DATA = {
       "short_pct": 17.11,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2804528,
-      "vol_1w": 32878028,
-      "vol_1m": 130639128,
+      "vol_1d": 2806300,
+      "vol_1w": 32879800,
+      "vol_1m": 130640900,
       "news": [
         {
           "title": "Beta Bionics, Inc. (BBNX) Reports Q2 Loss, Tops Revenue Estimates",
@@ -971,8 +971,8 @@ window.PRICES_DATA = {
       "high_gbp": "214",
       "high_usd": 288.04,
       "bar_pct": 88,
-      "market_cap_gbp_b": 28.687,
-      "market_cap_usd_b": 38.62,
+      "market_cap_gbp_b": 28.698,
+      "market_cap_usd_b": 38.619,
       "beta": 1.505,
       "pe_ratio": null,
       "avg_volume_m": 1.51,
@@ -980,9 +980,9 @@ window.PRICES_DATA = {
       "short_pct": 3.57,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 1129535,
-      "vol_1w": 4756635,
-      "vol_1m": 25255535,
+      "vol_1d": 1184100,
+      "vol_1w": 4811200,
+      "vol_1m": 25310100,
       "news": [
         {
           "title": "1 Unpopular Stock That Deserves Some Love and 2 We Question",
@@ -1036,7 +1036,7 @@ window.PRICES_DATA = {
       "return_1yr": "-50%*",
       "low_gbp": "2.06",
       "low_usd": 2.77,
-      "high_gbp": "5.33",
+      "high_gbp": "5.34",
       "high_usd": 7.18,
       "bar_pct": 6,
       "market_cap_gbp_b": 1.199,
@@ -1048,9 +1048,9 @@ window.PRICES_DATA = {
       "short_pct": 36.1,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 10274082,
-      "vol_1w": 90880982,
-      "vol_1m": 513962882,
+      "vol_1d": 10308800,
+      "vol_1w": 90915700,
+      "vol_1m": 513997600,
       "news": [
         {
           "title": "Recursion Pharmaceuticals (RXRX) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
@@ -1104,21 +1104,21 @@ window.PRICES_DATA = {
       "return_1yr": "+70%",
       "low_gbp": "55",
       "low_usd": 73.81,
-      "high_gbp": "98",
+      "high_gbp": "99",
       "high_usd": 132.6,
       "bar_pct": 84,
-      "market_cap_gbp_b": 18.518,
-      "market_cap_usd_b": 24.93,
+      "market_cap_gbp_b": 18.525,
+      "market_cap_usd_b": 24.929,
       "beta": 0.758,
-      "pe_ratio": 15.67,
+      "pe_ratio": 16.16,
       "avg_volume_m": 1.81,
       "div_yield_pct": null,
       "short_pct": 9.06,
       "analyst": "buy",
       "analyst_score": 2.31,
-      "vol_1d": 2506354,
-      "vol_1w": 15272654,
-      "vol_1m": 42328654,
+      "vol_1d": 2628100,
+      "vol_1w": 15394400,
+      "vol_1m": 42450400,
       "news": [
         {
           "title": "Incyte Shares Retreat After Best Day In A Year Despite Opzelura EU Nod",
@@ -1175,18 +1175,18 @@ window.PRICES_DATA = {
       "high_gbp": "43",
       "high_usd": 57.57,
       "bar_pct": 93,
-      "market_cap_gbp_b": 10.45,
+      "market_cap_gbp_b": 10.454,
       "market_cap_usd_b": 14.068,
       "beta": 0.424,
-      "pe_ratio": 18.53,
+      "pe_ratio": 18.29,
       "avg_volume_m": 2.68,
       "div_yield_pct": null,
       "short_pct": 16.72,
       "analyst": "buy",
       "analyst_score": 2.26,
-      "vol_1d": 2156511,
-      "vol_1w": 10682911,
-      "vol_1m": 50126011,
+      "vol_1d": 2486700,
+      "vol_1w": 11013100,
+      "vol_1m": 50456200,
       "news": [
         {
           "title": "Expand Energy Q2 Earnings Call Highlights",
@@ -1238,24 +1238,31 @@ window.PRICES_DATA = {
       "change_1m": "-31.74%",
       "change_ytd": "-48.65%",
       "return_1yr": "-27%",
-      "low_gbp": "195",
-      "low_usd": 262.21,
+      "low_gbp": "147",
+      "low_usd": 197.81,
       "high_gbp": "368",
       "high_usd": 495.55,
-      "bar_pct": 1,
-      "market_cap_gbp_b": 20.378,
+      "bar_pct": 3,
+      "market_cap_gbp_b": 20.386,
       "market_cap_usd_b": 27.434,
       "beta": 0.269,
-      "pe_ratio": 51.63,
+      "pe_ratio": 71.85,
       "avg_volume_m": 1.28,
       "div_yield_pct": null,
       "short_pct": 5.77,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 9753222,
-      "vol_1w": 15052322,
-      "vol_1m": 42262822,
+      "vol_1d": 9826800,
+      "vol_1w": 15125900,
+      "vol_1m": 42336400,
       "news": [
+        {
+          "title": "Alnylam Pharma (ALNY) Q2 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/30/alnylam-alny-q2-2026-earnings-call-transcript/",
+          "published": 1785468008,
+          "sentiment": 0.0
+        },
         {
           "title": "Alnylam Pharmaceuticals Inc (ALNY) (Q2 2026) Earnings Call Highlights: Amvuttra Surpasses $1 ...",
           "publisher": "GuruFocus.com",
@@ -1283,13 +1290,6 @@ window.PRICES_DATA = {
           "url": "https://www.marketbeat.com/instant-alerts/alnylam-pharmaceuticals-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1785420268,
           "sentiment": 0.0
-        },
-        {
-          "title": "Alnylam (ALNY) Q2 Earnings: Taking a Look at Key Metrics Versus Estimates",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/alnylam-alny-q2-earnings-taking-140003827.html",
-          "published": 1785420003,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.068
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "24",
       "high_usd": 31.74,
       "bar_pct": 85,
-      "market_cap_gbp_b": 2.639,
+      "market_cap_gbp_b": 2.64,
       "market_cap_usd_b": 3.553,
       "beta": 0.799,
       "pe_ratio": null,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": 16.43,
       "analyst": "strong_buy",
       "analyst_score": 1.46,
-      "vol_1d": 636991,
-      "vol_1w": 5572791,
-      "vol_1m": 23189891,
+      "vol_1d": 813600,
+      "vol_1w": 5749400,
+      "vol_1m": 23366500,
       "news": [
         {
           "title": "SMMT's Q2 Loss Wider Than Expected, Ivonescimab Development in Focus",
@@ -1379,7 +1379,7 @@ window.PRICES_DATA = {
       "high_gbp": "64",
       "high_usd": 85.6,
       "bar_pct": 56,
-      "market_cap_gbp_b": 17.071,
+      "market_cap_gbp_b": 17.078,
       "market_cap_usd_b": 22.982,
       "beta": 0.942,
       "pe_ratio": null,
@@ -1388,9 +1388,9 @@ window.PRICES_DATA = {
       "short_pct": 16.15,
       "analyst": "hold",
       "analyst_score": 2.91,
-      "vol_1d": 4430003,
-      "vol_1w": 23797903,
-      "vol_1m": 150834103,
+      "vol_1d": 4437600,
+      "vol_1w": 23805500,
+      "vol_1m": 150841700,
       "news": [
         {
           "title": "When will fusion power startup Commonwealth Fusion Systems go public?",
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "high_gbp": "92",
       "high_usd": 124.0,
       "bar_pct": 30,
-      "market_cap_gbp_b": 17.441,
+      "market_cap_gbp_b": 17.448,
       "market_cap_usd_b": 23.48,
       "beta": 1.324,
       "pe_ratio": null,
@@ -1456,9 +1456,9 @@ window.PRICES_DATA = {
       "short_pct": 3.32,
       "analyst": "buy",
       "analyst_score": 1.55,
-      "vol_1d": 1367327,
-      "vol_1w": 4359427,
-      "vol_1m": 17181927,
+      "vol_1d": 1381300,
+      "vol_1w": 4373400,
+      "vol_1m": 17195900,
       "news": [
         {
           "title": "2 Major Reasons to Buy Moderna Stock Before July 31",
@@ -1516,7 +1516,7 @@ window.PRICES_DATA = {
       "high_usd": 11.97,
       "bar_pct": 21,
       "market_cap_gbp_b": 0.909,
-      "market_cap_usd_b": 1.224,
+      "market_cap_usd_b": 1.223,
       "beta": 2.427,
       "pe_ratio": null,
       "avg_volume_m": 4.84,
@@ -1524,9 +1524,9 @@ window.PRICES_DATA = {
       "short_pct": 26.82,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 2865930,
-      "vol_1w": 14551730,
-      "vol_1m": 72483930,
+      "vol_1d": 2924000,
+      "vol_1w": 14609800,
+      "vol_1m": 72542000,
       "news": [
         {
           "title": "Novavax (NVAX) Stock Falls Amid Market Uptick: What Investors Need to Know",
@@ -1583,8 +1583,8 @@ window.PRICES_DATA = {
       "high_gbp": "49",
       "high_usd": 66.28,
       "bar_pct": 67,
-      "market_cap_gbp_b": 8.698,
-      "market_cap_usd_b": 11.71,
+      "market_cap_gbp_b": 8.701,
+      "market_cap_usd_b": 11.709,
       "beta": 0.239,
       "pe_ratio": 43.58,
       "avg_volume_m": 2.09,
@@ -1592,9 +1592,9 @@ window.PRICES_DATA = {
       "short_pct": 7.43,
       "analyst": "buy",
       "analyst_score": 1.72,
-      "vol_1d": 1208498,
-      "vol_1w": 8520198,
-      "vol_1m": 34165698,
+      "vol_1d": 1224100,
+      "vol_1w": 8535800,
+      "vol_1m": 34181300,
       "news": [
         {
           "title": "Acadia Pharmaceuticals (ACAD) Expected to Beat Earnings Estimates: Should You Buy?",
@@ -1651,8 +1651,8 @@ window.PRICES_DATA = {
       "high_gbp": "19",
       "high_usd": 25.32,
       "bar_pct": 8,
-      "market_cap_gbp_b": 1.22,
-      "market_cap_usd_b": 1.642,
+      "market_cap_gbp_b": 1.221,
+      "market_cap_usd_b": 1.643,
       "beta": 0.202,
       "pe_ratio": 44.46,
       "avg_volume_m": 3.39,
@@ -1660,9 +1660,9 @@ window.PRICES_DATA = {
       "short_pct": 32.35,
       "analyst": "hold",
       "analyst_score": 2.74,
-      "vol_1d": 2954683,
-      "vol_1w": 15178083,
-      "vol_1m": 70127083,
+      "vol_1d": 3022000,
+      "vol_1w": 15245400,
+      "vol_1m": 70194400,
       "news": [
         {
           "title": "Earnings Preview: Sarepta Therapeutics (SRPT) Q2 Earnings Expected to Decline",
@@ -1719,8 +1719,8 @@ window.PRICES_DATA = {
       "high_gbp": "39",
       "high_usd": 52.15,
       "bar_pct": 84,
-      "market_cap_gbp_b": 1.647,
-      "market_cap_usd_b": 2.217,
+      "market_cap_gbp_b": 1.648,
+      "market_cap_usd_b": 2.218,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 0.37,
@@ -1728,9 +1728,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "strong_buy",
       "analyst_score": 1.0,
-      "vol_1d": 820345,
-      "vol_1w": 2934445,
-      "vol_1m": 8824745,
+      "vol_1d": 821200,
+      "vol_1w": 2935300,
+      "vol_1m": 8825600,
       "news": [
         {
           "title": "Biotech IPO Gains Crush AI Listings With Standout 55% Return",
@@ -1780,7 +1780,7 @@ window.PRICES_DATA = {
       "high_gbp": "48",
       "high_usd": 64.16,
       "bar_pct": 57,
-      "market_cap_gbp_b": 169.52,
+      "market_cap_gbp_b": 169.586,
       "market_cap_usd_b": 228.214,
       "beta": 0.36,
       "pe_ratio": 12.38,
@@ -1789,9 +1789,9 @@ window.PRICES_DATA = {
       "short_pct": 0.98,
       "analyst": "buy",
       "analyst_score": 2.43,
-      "vol_1d": 10562597,
-      "vol_1w": 46399397,
-      "vol_1m": 197012697,
+      "vol_1d": 10594900,
+      "vol_1w": 46431700,
+      "vol_1m": 197045000,
       "news": [
         {
           "title": "Pfizer Inc. (PFE) vs. Eli Lilly and Company (LLY): The Growth vs. Value Play in Pharma",
@@ -1843,29 +1843,36 @@ window.PRICES_DATA = {
       "change_1m": "-3.71%",
       "change_ytd": "+7.27%",
       "return_1yr": "+64%",
-      "low_gbp": "463",
+      "low_gbp": "464",
       "low_usd": 623.78,
       "high_gbp": "928",
       "high_usd": 1249.45,
       "bar_pct": 85,
-      "market_cap_gbp_b": 765.046,
-      "market_cap_usd_b": 1029.935,
+      "market_cap_gbp_b": null,
+      "market_cap_usd_b": null,
       "beta": 0.506,
-      "pe_ratio": 40.97,
+      "pe_ratio": 42.92,
       "avg_volume_m": 3.03,
       "div_yield_pct": 57.0,
       "short_pct": 1.15,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 3023808,
-      "vol_1w": 11146208,
-      "vol_1m": 53894108,
+      "vol_1d": 3027700,
+      "vol_1w": 11150100,
+      "vol_1m": 53898000,
       "news": [
         {
-          "title": "Dow Jones Futures: Apple, Amazon Diverge Late After Microsoft Powers AI Stock Rebound",
+          "title": "Here Comes the Next Wave of GLP-1s. They\u2019ll Treat a Lot More Than Obesity.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/glp-1-obesity-drugs-eli-lilly-novo-nordisk-stocks-19200dcc?siteid=yhoof2&yptr=yahoo",
+          "published": 1785474000,
+          "sentiment": 0.402
+        },
+        {
+          "title": "Dow Jones Futures: Apple, Amazon Diverge Late; What To Do After AI Stocks Surge",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-apple-amazon-earnings-microsoft-powers-ai-stock/?src=A00220&yptr=yahoo",
-          "published": 1785447209,
+          "published": 1785467096,
           "sentiment": 0.178
         },
         {
@@ -1888,16 +1895,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/buy-sell-hold-merck-stock-171500419.html",
           "published": 1785431700,
           "sentiment": 0.0
-        },
-        {
-          "title": "Lilly Boosts Diabetes and Obesity Capacity With $750 Million Deal",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/lilly-boosts-diabetes-obesity-capacity-161957060.html",
-          "published": 1785428397,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.099
+      "news_sentiment": 0.116
     },
     {
       "ticker": "LEGN",
@@ -1913,10 +1913,10 @@ window.PRICES_DATA = {
       "return_1yr": "-52%",
       "low_gbp": "12",
       "low_usd": 16.24,
-      "high_gbp": "30",
-      "high_usd": 40.05,
+      "high_gbp": "29",
+      "high_usd": 39.27,
       "bar_pct": 12,
-      "market_cap_gbp_b": 2.737,
+      "market_cap_gbp_b": 2.738,
       "market_cap_usd_b": 3.685,
       "beta": 0.341,
       "pe_ratio": null,
@@ -1925,9 +1925,9 @@ window.PRICES_DATA = {
       "short_pct": 17.34,
       "analyst": "buy",
       "analyst_score": 1.87,
-      "vol_1d": 2310573,
-      "vol_1w": 20999773,
-      "vol_1m": 53687973,
+      "vol_1d": 2806400,
+      "vol_1w": 21495600,
+      "vol_1m": 54183800,
       "news": [
         {
           "title": "Legend Biotech (LEGN) Stock May Be Cheap After CEO Resignation",
@@ -1984,8 +1984,8 @@ window.PRICES_DATA = {
       "high_gbp": "64",
       "high_usd": 86.74,
       "bar_pct": 28,
-      "market_cap_gbp_b": 6.541,
-      "market_cap_usd_b": 8.806,
+      "market_cap_gbp_b": 6.58,
+      "market_cap_usd_b": 8.855,
       "beta": 0.365,
       "pe_ratio": null,
       "avg_volume_m": 2.75,
@@ -1993,9 +1993,9 @@ window.PRICES_DATA = {
       "short_pct": 16.09,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 2819203,
-      "vol_1w": 14432403,
-      "vol_1m": 96784403,
+      "vol_1d": 2875000,
+      "vol_1w": 14488200,
+      "vol_1m": 96840200,
       "news": [
         {
           "title": "IONS Beats Q2 Earnings & Sales Estimates, Reiterates '26 Outlook",
