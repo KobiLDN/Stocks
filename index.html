@@ -345,6 +345,14 @@
       padding: 14px;
     }
 
+    /* ── News preview in RSS card ── */
+    .news-preview-list { display: flex; flex-direction: column; }
+    .news-preview-item { padding: 7px 12px; border-bottom: 1px solid var(--border); font-size: 12px; line-height: 1.4; color: var(--text); }
+    .news-preview-item:last-child { border-bottom: none; }
+    .news-preview-meta { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1px; color: var(--dim); margin-bottom: 3px; display: flex; gap: 8px; }
+    .news-preview-sent.pos { color: var(--green); }
+    .news-preview-sent.neg { color: #f87171; }
+
     /* ── Top 20 panel ── */
     .top-panel {
       background: var(--surface);
@@ -733,6 +741,16 @@
         </div>
         <div class="card-name">All Sectors</div>
         <div class="card-desc">192 stocks &amp; coins across AI, Biotech, Defence, Tech, Crypto, and Energy — combined dashboard, heatmap, signals, and What-If calculator.</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='All/signals.html'">
+          <div class="picks-header">// Top Signals</div>
+          <table class="picks-table">
+            <thead><tr>
+              <th>#</th><th>Company</th>
+              <th class="r">1D</th><th class="r">1W</th><th class="r">YTD</th><th class="r">Conf</th>
+            </tr></thead>
+            <tbody id="picks-All"><tr><td colspan="6" class="pt-empty">Loading…</td></tr></tbody>
+          </table>
+        </div>
       </a>
 
       <a class="card live" href="rss.html">
@@ -742,6 +760,10 @@
         </div>
         <div class="card-name">RSS Feed</div>
         <div class="card-desc">FT · Reuters · BBC · Guardian — aggregated business news, VADER sentiment scored, refreshed 3× daily.</div>
+        <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='rss.html'">
+          <div class="picks-header">// Latest Headlines</div>
+          <div id="news-previews" class="news-preview-list"><div class="pt-empty">Loading…</div></div>
+        </div>
       </a>
 
     </div>
@@ -907,11 +929,48 @@
       });
     }
 
+    async function renderNewsCard() {
+      const el = document.getElementById('news-previews');
+      if (!el) return;
+      try {
+        const text = await fetch('rss-data.js').then(r => r.text());
+        const match = text.match(/window\.NEWS_FEED_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+        if (!match) return;
+        const data = JSON.parse(match[1]);
+        const articles = (data.articles || []).slice(0, 3);
+        if (!articles.length) { el.innerHTML = '<div class="pt-empty">No articles</div>'; return; }
+        el.innerHTML = articles.map(a => {
+          const sc = a.sentiment > 0.05 ? 'pos' : a.sentiment < -0.05 ? 'neg' : '';
+          const sent = a.sentiment != null ? (a.sentiment > 0 ? '+' : '') + a.sentiment.toFixed(2) : '—';
+          const ago = (() => { const d = Date.now()/1000 - a.published; return d < 3600 ? Math.floor(d/60)+'m ago' : d < 86400 ? Math.floor(d/3600)+'h ago' : Math.floor(d/86400)+'d ago'; })();
+          return `<div class="news-preview-item">
+            <div class="news-preview-meta"><span>${a.label || a.source}</span><span>${ago}</span><span class="news-preview-sent ${sc}">${sent}</span></div>
+            <div>${a.title}</div>
+          </div>`;
+        }).join('');
+      } catch(e) { el.innerHTML = '<div class="pt-empty">Could not load</div>'; }
+    }
+
     async function init() {
       const results = await Promise.all(SECTORS.map(fetchSector));
       results.forEach(({ id, picks, priceMap }) => renderCardPicks(id, picks, priceMap));
+
+      // Aggregate all picks for the "All Sectors" card
+      const combinedMap = {};
+      const byTicker = {};
+      results.forEach(({ picks, priceMap }) => {
+        Object.assign(combinedMap, priceMap);
+        picks.forEach(p => {
+          const ex = byTicker[p.ticker];
+          if (!ex || (p.confidence || 0) > (ex.confidence || 0)) byTicker[p.ticker] = p;
+        });
+      });
+      const allPicks = Object.values(byTicker).sort((a, b) => (b.confidence || 0) - (a.confidence || 0)).map((p, i) => ({ ...p, rank: i + 1 }));
+      renderCardPicks('All', allPicks, combinedMap);
+
       renderTop20(results);
       initTopSort();
+      renderNewsCard();
       // Populate header blocks
       const dates = results.map(r => r.updated).filter(Boolean).sort();
       const latest = dates[dates.length - 1];
