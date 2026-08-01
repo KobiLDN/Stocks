@@ -1,6 +1,6 @@
 # AI Infrastructure Stock Dashboard
 
-Tracks 48 AI infrastructure stocks in GBP with live prices, fundamentals, news sentiment, and AI-generated signals.
+Tracks 48 AI infrastructure stocks in USD with live prices, fundamentals, news sentiment, and AI-generated signals.
 
 **Live: [stocks-4qw.pages.dev/AI/](https://stocks-4qw.pages.dev/AI/)**
 
@@ -14,7 +14,7 @@ Tracks 48 AI infrastructure stocks in GBP with live prices, fundamentals, news s
 | Signals | AI top 10 ranked picks with confidence, rationale, and driver chips |
 | Heatmap | D3 treemap — tile size = % move, colour = direction |
 | Charts | TradingView embeds, single-stock and category grid views |
-| What-If | Jan 2026 investment simulator (£100 / £1k / £10k per stock) |
+| What-If | Jan 2026 investment simulator ($100 / $1k / $10k per stock) |
 
 ## Stocks — 48 across 12 categories
 
@@ -60,6 +60,6 @@ python AI_generate_signals_local.py
 
 ## Notes
 
-- All prices in GBP. USD/JPY stocks converted via live FX rates.
-- Tokyo stock 285A (Kioxia) shown as `~£` prefix (approximate due to JPY conversion).
+- All prices displayed in USD. GBP/JPY-listed stocks converted via live FX rates (`price_usd = price_gbp * fx_gbp_usd`).
+- Tokyo stock 285A (Kioxia) and LSE stock RR. (Rolls-Royce) go through an extra GBP bridge conversion — same formula, no special-case prefix needed.
 - `prices-data.js` exposes `window.PRICES_DATA` so all pages work via `file://` without a server.

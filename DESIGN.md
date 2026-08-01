@@ -157,43 +157,13 @@ body[data-layout="rail"] .header-left { margin-right: auto; }
 </div>
 ```
 
-#### Info Blocks — Row 1 top-right (every rail page)
+#### Timestamp in header-sub (every rail page)
 
-One or two info blocks sit between `.header-left` and the theme toggle, aligned right via `margin-left: auto` on `.header-blocks`.
+The "Last updated" timestamp lives **inline in `.header-sub`** as a `<span id="data-bar-ts">—</span>`, not in a separate top-right block. `buildDataBar()` in `shared.js` fills it on DOMContentLoaded — it reads `window.SIGNALS_DATA.generated`, `window.PRICES_DATA.updated`, or `window['__pd_*'].updated` (first non-null wins). All/ pages that load data asynchronously must fill it manually in their `.then()` callback.
 
-**Rule: all rail pages show a "Prices Last Updated" block in the top-right corner of Row 1.** `buildDataBar()` in `shared.js` injects it automatically — it reads the timestamp from `window.PRICES_DATA.updated` (sector pages) or `window.SIGNALS_DATA.generated` (signals pages) and inserts a `.header-blocks.data-bar` div into `.header-inner` before the theme toggle. If `.header-blocks` already exists (hub), it skips — the hub manages its own blocks.
+**Signals pages** use `<span id="signals-ts">—</span>` in the subtitle instead, wired to `SIGNALS_DATA.updated` in page-specific JS.
 
-**Hub** gets two blocks (Universe + Prices Last Updated); **sector pages** get one (Prices Last Updated only).
-
-```css
-.header-blocks { display: flex; align-items: stretch; margin-left: auto; margin-right: 16px; }
-.header-block  { padding: 6px 24px; border-left: 1px solid var(--border);
-                 display: flex; flex-direction: column; justify-content: center; gap: 4px; }
-.header-block-label { font-family: 'IBM Plex Mono'; font-size: 9px; letter-spacing: 1.5px;
-                      text-transform: uppercase; color: var(--muted); }
-.header-block-value { font-family: 'IBM Plex Mono'; font-size: 13px; font-weight: 700;
-                      color: var(--text); white-space: nowrap; }
-.header-block-value .accent { color: var(--accent); }
-```
-
-```html
-<div class="header-blocks">
-  <div class="header-block">
-    <div class="header-block-label">Universe</div>
-    <div class="header-block-value" id="hb-universe">— stocks · — sectors</div>
-  </div>
-  <div class="header-block">
-    <div class="header-block-label">Prices Last Updated</div>
-    <div class="header-block-value" id="hb-updated">—</div>
-  </div>
-</div>
-```
-
-JS populates both from the aggregated sector data:
-```javascript
-el.innerHTML = `<span class="accent">${totalStocks}</span> stocks · <span class="accent">${results.length}</span> sectors`;
-elUp.textContent = latest; // ISO date string from prices-data.js "updated" field
-```
+**Hub** follows the same `header-sub` pattern as sector pages — `<span id="hub-stock-count">—</span> stocks · <span id="hub-sector-count">—</span> sectors · Last updated <span id="hub-updated-ts">—</span>`, populated by `index.html`'s own `init()` function (not shared.js, since the Hub aggregates all 6 sectors asynchronously). No `.header-blocks` div remains anywhere on the site.
 
 ### Row 2 — Nav Tabs (every page)
 
@@ -279,7 +249,7 @@ Sector-colour active states (in each page's inline `<style>`):
 }
 ```
 
-Always **9 pills** in order: Stock Hub · All Sectors · AI Infra · Biotech · Defence · Technology · Crypto · Energy · RSS Feed
+Always **10 pills** in order: Stock Hub · News Feed · All Sectors · AI Infra · Biotech · Crypto · Defence · Energy · Mega-Cap · Technology
 
 Active pill: `border-color: var(--accent); color: var(--accent); background: var(--surface2)`
 
@@ -304,7 +274,8 @@ Each pill links to the **same page type** across sectors (e.g. on metrics → ea
 | Technology | 💻 | `/Tech/index.html` | Live |
 | Crypto | ₿ | `/Crypto/index.html` | Live |
 | Energy | ⚡ | `/Energy/index.html` | Live |
-| RSS Feed | 📰 | `/rss.html` | — |
+| Mega-Cap | 🌍 | `/MegaCap/index.html` | Dev |
+| News Feed | 📰 | `/news.html` | — |
 
 ---
 
@@ -317,8 +288,8 @@ body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: 
 
 - `.page-main` is the scroll container — same pattern as hub's `<main>`
 - Only this element scrolls — everything in `<header>` and `.left-rail` is fixed
-- `data-bar` (Prices Last Updated info block) is **static HTML** in every page's `.header-inner` Row 1 (`.header-blocks > .header-block` with `id="data-bar-ts"`). For **sector pages** `buildDataBar()` in `shared.js` fills in the timestamp from `window.PRICES_DATA.updated`. For **All/ pages** (which load data asynchronously), the timestamp is set manually in the async `.then()` callback: `const tsEl = document.getElementById('data-bar-ts'); if (tsEl) tsEl.textContent = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';`
-- **Signals pages** replace that block with **"Last Refreshed" / `id="signals-ts"`** — sector signals pages populate it from `SIGNALS_DATA.updated`; `All/signals.html` populates it in its async callback from `results.map(r => r.signals?.updated).filter(Boolean).sort().pop()`. There is no in-body refresh banner. The "Auto-refreshed Mon/Wed/Fri …" line lives at the bottom of the `// How signals are generated` panel as `.how-refresh-note`
+- **Last updated timestamp** lives in `.header-sub` as `<span id="data-bar-ts">—</span>`. `buildDataBar()` in `shared.js` fills it from `window.PRICES_DATA.updated` (sector pages) or `window.SIGNALS_DATA.generated`. All/ pages (async data) fill it manually in their `.then()` callback.
+- **Signals pages** use `<span id="signals-ts">—</span>` in the subtitle instead — sector signals JS populates it from `SIGNALS_DATA.updated`; `All/signals.html` populates it in its async callback. The "Auto-refreshed Mon/Wed/Fri …" line lives at the bottom of the `// How signals are generated` panel as `.how-refresh-note`.
 
 **Container overrides by page:**
 | Page | Override |
@@ -340,7 +311,7 @@ body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: 
       <div class="header-left">
         <div class="header-label">// Market Intelligence</div>
         <h1>Page <span>Title</span></h1>
-        <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
+        <div class="header-sub"><span id="stock-count">—</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
       </div>
       <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
     </div>
@@ -376,12 +347,15 @@ body[data-layout="rail"] .container { padding: 20px 24px; margin: 0; max-width: 
 
 | Element | Source |
 |---|---|
-| Stock count in header-sub | `new Set(stocks.map(s => s.ticker)).size` from loaded price data |
-| Last updated | `data.updated` from prices-data.js / signals-local.js |
+| Stock count in header-sub (`#stock-count` / `#sector-count`) | `stocks.length` from loaded price data; set in page JS or `buildDashboardHeader()` |
+| Stock count static placeholder | Hardcode the current real count so the page looks right before JS runs |
+| Last updated (`#data-bar-ts`) | `buildDataBar()` in shared.js fills it; All/ pages fill it in their async `.then()` |
+| Signals timestamp (`#signals-ts`) | Set in page-specific signals JS from `SIGNALS_DATA.updated` |
+| Model name (`#model-name`) | Set in page-specific signals JS from `SIGNALS_DATA.model` |
 | Ticker tape | `buildTape(stocks)` via shared.js |
-| Hub info blocks | Aggregated from `window.__pd_*` globals |
+| Hub info blocks | Aggregated from `window.__pd_*` globals (hub inline JS) |
 
-Never hardcode stock counts or timestamps.
+Never hardcode timestamps. Static count placeholders are acceptable — they get overwritten by JS at runtime.
 
 ---
 
@@ -390,11 +364,15 @@ Never hardcode stock counts or timestamps.
 | File | Purpose |
 |---|---|
 | `shared.css` | Rail layout, ticker tape, nav, filter-btn, sector-pill |
-| `shared.js` | `toggleTheme()`, `buildTape()`, `buildStickyTop()` (skipped on rail), `buildDataBar()` |
+| `shared.js` | `toggleTheme()`, `buildTape()`, `buildStickyTop()` (skipped on rail), `buildNav()` (left rail + nav-panel + bottom tabs), `buildDashboardHeader()` (sector/All dashboard index pages only), `buildDataBar()` (fills `#data-bar-ts` in header-sub), `fmtUsd()` (price string formatting for the ticker tape) |
+
+**Load-order gotcha:** `shared.js` loads with `defer`, so it only runs after the document is parsed but before `DOMContentLoaded`. A page's own inline `<script>` (no `defer`) that calls a `shared.js` function *synchronously* — not inside a `DOMContentLoaded` listener — will find that function undefined and throw, since it executes before the deferred script has run. This is why `metrics.html`/`calculator.html` pages define their own local `fmtMarketCap`/`fmtVolume`/`fmtPct`/`fmtNum`/`fmtUsd` instead of calling `shared.js`'s version — their render functions run synchronously right after `prices-data.js` loads. Pages that wrap their render call in `window.addEventListener('DOMContentLoaded', ...)` (e.g. `index.html`'s `buildTable()`) are safe to call `shared.js` functions directly.
 
 - Hub (`index.html`) uses inline `<style>` only — does **not** load `shared.css`
 - All other pages: `<link href="../shared.css">` + `<script src="../shared.js" defer>`
-- `rss.html` is a **root-level rail page** — loads `shared.css` / `shared.js` with no `../`, and its left-rail pills use root-relative hrefs (`AI/index.html`, not `../AI/index.html`). Sector pills point to each sector's dashboard (`index.html`); the RSS Feed pill is active.
+- `news.html` is a **root-level rail page** — loads `shared.css` / `shared.js` with no `../`, and its left-rail pills use root-relative hrefs (`AI/index.html`, not `../AI/index.html`). Sector pills point to each sector's dashboard (`index.html`); the News Feed pill is active.
+- `buildNav()` in `shared.js` generates all left-rail pills AND the nav-panel 7-link sub-nav from URL detection — no hardcoded nav HTML needed in individual pages.
+- URL detection normalises three URL shapes to the same `file` value: `/AI/metrics.html`, `/AI/metrics` (Cloudflare Pages clean URL, no extension), and trailing-slash sector roots (`/AI/` → `index.html`). Any function that reads `location.pathname` (`buildNav()`, `buildDashboardHeader()`) must apply this same normalisation — do not assume the last path segment always has `.html`.
 - `buildStickyTop()` is skipped on rail pages — `<header>` handles stickiness directly
 
 ---
@@ -411,6 +389,7 @@ Each sector has a canonical CSS variable used consistently for badges, filter-bt
 | Technology | `var(--indigo)` | filter-btn active, sector badge (text `#fff`) |
 | Crypto | `var(--gold)` | filter-btn active, sector badge |
 | Energy | `var(--amber)` | filter-btn active, sector badge |
+| Mega-Cap | `#f472b6` | filter-btn active, sector badge (hardcoded — no CSS var) |
 
 **Filter-btn active states** (inline `<style>` per page — sector-specific colours not in shared.css):
 ```css
@@ -420,6 +399,7 @@ Each sector has a canonical CSS variable used consistently for badges, filter-bt
 .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
 .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
 .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+.filter-btn[data-filter="megacap"].active { background: #f472b6;        border-color: #f472b6;       color: var(--bg); }
 ```
 
 **Sector badge classes** (inline `<style>` per page):
@@ -431,6 +411,7 @@ Each sector has a canonical CSS variable used consistently for badges, filter-bt
 .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
 .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
 .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+.sector-megacap { background: rgba(244,114,182,0.1); color: #f472b6;       border: 1px solid rgba(244,114,182,0.25); }
 ```
 
 ---
@@ -461,7 +442,7 @@ Used in dashboard and metrics tables. Inline `<style>` per page — not in share
 
 All charts pages use the standard rail layout. All shared CSS lives in `shared.css` under `/* ---- Charts pages ---- */`. Only sector-specific `.cat-btn.active-*` and `.cat-label.*` colour rules stay inline per page.
 
-**No "Prices Last Updated" block** — charts show live TradingView prices, so the `data-bar-ts` header block is omitted.
+Charts pages include `<span id="data-bar-ts">—</span>` in `.header-sub` — filled by `buildDataBar()` from `shared.js`, same as other pages.
 
 ### Header structure
 
@@ -589,7 +570,7 @@ All charts pages use the standard rail layout. All shared CSS lives in `shared.c
 </div>
 ```
 
-**"All" mode** renders a `display:grid; grid-template-columns: repeat(6,1fr)` with a header row of sector labels followed by 3 stock rows (top 3 per sector by `market_cap_gbp_b`). Chart height 200px.
+**"All" mode** renders a `display:grid; grid-template-columns: repeat(7,1fr)` with a header row of sector labels followed by 3 stock rows (top 3 per sector by `market_cap_usd_b`). Chart height 200px.
 
 **Single-sector mode** renders a `chart-grid` with `repeat(auto-fill, minmax(320px, 1fr))`. Chart height 220px.
 

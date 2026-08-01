@@ -677,6 +677,7 @@ html[data-theme="dark"] .cpill.flat { background: rgba(90,122,154,0.12); }
 .cat-badge {
   font-family: 'IBM Plex Mono', monospace; font-size: 10px;
   padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600;
+  white-space: nowrap;
 }
 /* sector-specific .cat-* colour definitions stay inline per news/signals page */
 .news-time { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-left: auto; }
@@ -816,3 +817,43 @@ footer {
   letter-spacing: 0.3px;
 }
 .disclaimer span { color: var(--accent2); }
+
+/* ---- Hamburger button (hidden desktop, shown mobile) ---- */
+.hamburger {
+  display: none; width: 44px; height: 44px; border: none;
+  background: transparent; cursor: pointer; font-size: 18px;
+  align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+/* ---- Mobile drawer: override the ≤600px hide rules + compact nav-panel ---- */
+@media (max-width: 600px) {
+  .hamburger { display: flex; }
+  .drawer-overlay.open .left-rail { display: flex !important; flex-direction: column; }
+  .drawer-overlay.open .nav-panel { display: flex !important; flex-direction: column; }
+}
+
+/* Drawer nav-panel: compact icon+label column, same style as old bottom tabs */
+/* Use .drawer-overlay selector for higher specificity (30) to override page CSS flex:1 (20) */
+.drawer-overlay .drawer .nav-panel {
+  width: 72px !important;
+  flex: none !important;
+  min-width: 0;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+}
+.drawer-overlay .drawer .nav-panel .nav-link {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 10px 4px;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  width: 100%;
+}
+.drawer-overlay .drawer .nav-panel .nav-icon  { font-size: 16px; }
+.drawer-overlay .drawer .nav-panel .nav-label { display: block !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 64px; }

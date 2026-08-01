@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: generate-export
+  group: push-to-main
   cancel-in-progress: false
 
 jobs:
@@ -25,6 +25,14 @@ jobs:
 
       - name: Generate export
         run: python generate_export.py
+
+      - name: Prune old exports (keep last 30)
+        run: |
+          cd exports
+          ls -t *.json 2>/dev/null | grep -v manifest | tail -n +31 | while read f; do
+            rm -f "$f" "${f%.json}.csv"
+            echo "Pruned $f"
+          done
 
       - name: Commit and push if changed
         run: |

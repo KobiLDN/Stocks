@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All sectors combined stock dashboard — live prices, 52-week range, and momentum for 192 stocks across AI Infrastructure, Biotech, Defence, Tech, Crypto, and Energy." name="description"/>
+<meta content="All sectors combined stock dashboard — live prices, 52-week range, and momentum for 242 stocks across AI Infrastructure, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap." name="description"/>
 <title>All Sectors — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -11,10 +11,11 @@
 <script defer="" src="../shared.js"></script>
 <style>
   .filter-bar {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
   }
+  .filter-bar::-webkit-scrollbar { display: none; }
 
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
@@ -80,6 +81,7 @@
   .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
   .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
   .table-wrap {
     overflow-x: auto;
@@ -184,6 +186,7 @@
   .sector-tech    { background: rgba(167,139,250,0.15); color: var(--indigo);  border: 1px solid rgba(167,139,250,0.3); }
   .sector-crypto  { background: rgba(255,215,0,0.15);   color: var(--gold);    border: 1px solid rgba(255,215,0,0.3); }
   .sector-energy  { background: rgba(245,158,11,0.15);  color: var(--amber);   border: 1px solid rgba(245,158,11,0.3); }
+  .sector-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
 
   .price {
     font-family: 'IBM Plex Mono', monospace;
@@ -278,30 +281,20 @@
   tbody tr:nth-child(n+11) { animation-delay: 0.35s; }
 
   .search-count-bar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
-  #stock-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
   }
-  #stock-search:focus { border-color: var(--accent); }
-  #stock-search::placeholder { color: var(--muted); }
-
-  .row-count {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    color: var(--muted);
-    padding-left: 2px;
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
   }
   .row-count span { color: var(--accent); font-weight: 700; }
 
@@ -323,29 +316,83 @@
     .row-count { font-size: 11px; }
     footer { font-size: 10px; padding: 16px; }
   }
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 164px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+    .header-blocks { display: none; }
+  }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
 </style>
 </head>
 <body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link active" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+<div class="right-side">
 <header>
 <div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
 <div class="header-left">
-<div class="header-label">// Market Intelligence</div>
-<h1>All <span>Sectors</span></h1>
-<div class="header-sub"><span id="all-stock-count">—</span> stocks &nbsp;·&nbsp; v1<span id="last-updated-label"></span></div>
+    <div class="header-label">// Market Intelligence</div>
+    <h1>All <span>Sectors</span></h1>
+    <div class="header-sub"><span id="sector-count">191</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-
-<nav>
-<a class="nav-link active" data-tooltip="Live prices, 52-week range and momentum across every sector" href="index.html">📊 Dashboard</a>
-<a class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings" href="metrics.html">📋 Metrics</a>
-<a class="nav-link" data-tooltip="Latest headlines across all stocks with news sentiment scoring" href="news.html">📰 News</a>
-<a class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined" href="signals.html">🎯 Signals</a>
-<a class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y" href="heatmap.html">🔥 Heatmap</a>
-<a class="nav-link" data-tooltip="1-year price history charts for every stock" href="charts.html">📈 Charts</a>
-<a class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today across all sectors" href="calculator.html">🧮 What-If</a>
-</nav>
 <div class="filter-bar">
 <button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
 <button class="filter-btn" data-filter="ai" data-tooltip="Semiconductors, nuclear power, data centres and AI infrastructure — 48 stocks" onclick="filterTable('ai', this)">AI Infra</button>
@@ -354,63 +401,16 @@
 <button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="filterTable('tech', this)">Tech</button>
 <button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency, blockchain and digital asset companies" onclick="filterTable('crypto', this)">Crypto</button>
 <button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
+<button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="filterTable('megacap', this)">Mega-Cap</button>
 </div>
-</header>
-
-<div class="page-body">
-
-<div class="left-rail">
-<a class="sector-pill" href="../index.html">
-<span class="sector-pill-icon">⊞</span>
-<span class="sector-pill-name">Stock Hub</span>
-</a>
-<a class="sector-pill active" href="index.html">
-<span class="sector-pill-icon">🌐</span>
-<span class="sector-pill-name">All Sectors</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../AI/index.html">
-<span class="sector-pill-icon">🤖</span>
-<span class="sector-pill-name">AI Infra</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Biotech/index.html">
-<span class="sector-pill-icon">🧬</span>
-<span class="sector-pill-name">Biotech</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Defence/index.html">
-<span class="sector-pill-icon">🛡️</span>
-<span class="sector-pill-name">Defence</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Tech/index.html">
-<span class="sector-pill-icon">💻</span>
-<span class="sector-pill-name">Technology</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Crypto/index.html">
-<span class="sector-pill-icon">₿</span>
-<span class="sector-pill-name">Crypto</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Energy/index.html">
-<span class="sector-pill-icon">⚡</span>
-<span class="sector-pill-name">Energy</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../rss.html">
-<span class="sector-pill-icon">📰</span>
-<span class="sector-pill-name">RSS Feed</span>
-</a>
-</div>
-
-<div class="page-main">
-<div class="container">
 <div class="search-count-bar">
 <input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
+</header>
+<div class="page-body">
+<div class="page-main">
+<div class="container">
 <div class="table-wrap">
 <table id="stock-table">
 <thead>
@@ -419,7 +419,7 @@
 <th class="sortable" onclick="sortTable('company', this)">Company</th>
 <th class="sortable" onclick="sortTable('cat', this)">Category</th>
 <th class="sortable" onclick="sortTable('sector', this)">Sector</th>
-<th class="sortable" onclick="sortTable('price', this)">Price (£)</th>
+<th class="sortable" onclick="sortTable('price', this)">Price ($)</th>
 <th class="sortable" onclick="sortTable('return', this)">1yr Return</th>
 <th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
 <th class="sortable" onclick="sortTable('range', this)">52-Week Range</th>
@@ -432,7 +432,6 @@
 </table>
 </div>
 </div>
-
 <script>
 const NOTES = {
   'SNDK': 'NAND pure-play. AI storage supercycle. Spun off WDC 2025.',
@@ -522,6 +521,7 @@ const SECTOR_LABELS = {
   'tech':    'Tech',
   'crypto':  'Crypto',
   'energy':  'Energy',
+  'megacap': 'Mega-Cap',
 };
 
 const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
@@ -550,7 +550,6 @@ function buildTable(stocks) {
     const color    = CAT_COLORS[s.category] || (s.sectorColor || 'var(--text)');
     const catLabel = CAT_LABELS[s.category] || s.category;
     const retCls   = returnClass(s.return_1yr);
-    const prefix   = s.ticker === '285A' ? '~£' : '£';
     const exDisp   = s.exchange === 'TSE' ? 'TSE (Tokyo)' : (s.exchange || '');
     const tr = document.createElement('tr');
     tr.dataset.ticker    = s.ticker;
@@ -569,7 +568,7 @@ function buildTable(stocks) {
       '<td>' + (s.company_name || s.ticker) + '</td>' +
       '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
       '<td><span class="sector-badge sector-' + (s.sector || '') + '">' + (SECTOR_LABELS[s.sector] || s.sector || '—') + '</span></td>' +
-      '<td><span class="price">' + prefix + s.price_gbp + '</span>' +
+      '<td><span class="price">$' + fmtUsd(s.price_usd) + '</span>' +
         '<div class="change-pills">' +
           '<span class="cpill ' + pillClass(s.change_1d) + '">' + s.change_1d + ' 1D</span>' +
           '<span class="cpill ' + pillClass(s.change_1w) + '">' + s.change_1w + ' 1W</span>' +
@@ -578,12 +577,12 @@ function buildTable(stocks) {
       '<td><span class="' + retCls + '">' + s.return_1yr + '</span></td>' +
       '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + s.change_ytd + '</span></td>' +
       '<td><div class="range-wrap">' +
-        '<span class="range-label">£' + s.low_gbp + '</span>' +
+        '<span class="range-label">$' + fmtUsd(s.low_usd) + '</span>' +
         '<div class="range-bar-bg">' +
           '<div class="range-fill" style="width:' + s.bar_pct + '%"></div>' +
           '<div class="range-dot" style="left:' + s.bar_pct + '%"></div>' +
         '</div>' +
-        '<span class="range-label" style="text-align:right">£' + s.high_gbp + '</span>' +
+        '<span class="range-label" style="text-align:right">$' + fmtUsd(s.high_usd) + '</span>' +
       '</div></td>' +
       '<td><span class="notes-text">' + (NOTES[s.ticker] || '') + '</span></td>';
     tbody.appendChild(tr);
@@ -604,7 +603,7 @@ function sortTable(col, th) {
     if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
     if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
     if (col === 'sector')  { av = a.dataset.sector;  bv = b.dataset.sector; }
-    if (col === 'price')   { av = parseFloat(a.dataset.priceGbp); bv = parseFloat(b.dataset.priceGbp); return (av - bv) * sortState.dir; }
+    if (col === 'price')   { av = parseFloat(a.dataset.priceUsd); bv = parseFloat(b.dataset.priceUsd); return (av - bv) * sortState.dir; }
     if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
     if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
     if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
@@ -648,6 +647,7 @@ const SECTORS = [
   { key: 'tech',    label: 'Technology',         color: 'var(--indigo)',  path: '../Tech/prices-data.js'     },
   { key: 'crypto',  label: 'Crypto',             color: 'var(--gold)',    path: '../Crypto/prices-data.js'   },
   { key: 'energy',  label: 'Energy',             color: 'var(--amber)',   path: '../Energy/prices-data.js'   },
+  { key: 'megacap', label: 'Mega-Cap',           color: '#f472b6',        path: '../MegaCap/prices-data.js'  },
 ];
 
 async function loadAllSectors() {
@@ -682,9 +682,11 @@ async function loadAllSectors() {
 window.addEventListener('DOMContentLoaded', () => {
   loadAllSectors().then(data => {
     const tsEl = document.getElementById('last-updated-label');
-    if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + data.updated;
+    if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + fmtDate(data.updated);
     document.getElementById('total-count').textContent = data.stocks.length;
     const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(data.stocks.map(s => s.ticker)).size;
+    const headerSc = document.getElementById('sector-count'); if (headerSc) headerSc.textContent = data.stocks.length;
+    const headerTs = document.getElementById('data-bar-ts'); if (headerTs && data.updated) headerTs.textContent = fmtDate(data.updated);
     buildTable(data.stocks);
     const returnTh = document.querySelector('th[onclick*="\'return\'"]');
     sortState.col = 'return';
@@ -693,8 +695,27 @@ window.addEventListener('DOMContentLoaded', () => {
     buildTape(data.stocks);
   });
 });
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
 </script>
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
+</div><!-- /.right-side -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+<div class="drawer" onclick="event.stopPropagation()">
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link active" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+  <script src="../nav.js"></script>
 </body>
 </html>

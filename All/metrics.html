@@ -3,14 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="All sectors stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 192 stocks across AI, Biotech, Defence, Tech, Crypto, and Energy.">
+<meta name="description" content="All sectors stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 242 stocks across AI, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap.">
 <title>All Sectors — Stock Metrics</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../shared.js" defer></script>
 <style>
-  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filter-bar {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
   .filter-btn {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
@@ -42,19 +63,22 @@
   .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
   .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
-  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-  #metrics-search {
-    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
-    background: var(--surface); border: 1px solid var(--border);
-    color: var(--text); padding: 6px 14px; width: 240px; outline: none; letter-spacing: 0.5px;
-  }
-  #metrics-search:focus { border-color: var(--accent); }
-  #metrics-search::placeholder { color: var(--muted); }
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
   .row-count span { color: var(--accent); font-weight: 700; }
 
   .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
+  th:first-child,
+  td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--bg);
+    border-right: 1px solid var(--border);
+  }
+  thead th:first-child { z-index: 3; background: var(--surface2); }
+  tbody tr:hover td:first-child { background: var(--surface); }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   thead { background: var(--surface2); }
   th {
@@ -91,7 +115,7 @@
   .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
   .company-cell { color: var(--muted); font-size: 12px; }
 
-  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap; }
   .cat-memory        { background: rgba(192,132,252,0.1); color: var(--purple);  border: 1px solid rgba(192,132,252,0.25); }
   .cat-nuclear-ops   { background: rgba(255,107,53,0.1);  color: var(--accent2); border: 1px solid rgba(255,107,53,0.25); }
   .cat-smr           { background: rgba(0,230,118,0.1);   color: var(--green);   border: 1px solid rgba(0,230,118,0.25); }
@@ -112,6 +136,7 @@
   .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
   .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
   .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .sector-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
 
   .num-cell { text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
   .null-val { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
@@ -135,37 +160,89 @@
     h1 { font-size: 26px; }
     th, td { padding: 8px 10px; }
     .company-cell { display: none; }
+    th:nth-child(2) { display: none; }
+    .filter-btn[data-tooltip]::after,
+    .filter-btn[data-tooltip]::before { display: none; }
+  }
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 164px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+    .header-blocks { display: none; }
+  }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
   }
 </style>
 </head>
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link active" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+<div class="right-side">
 <header>
   <div class="header-inner">
+  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Metrics</span></h1>
-    <div class="header-sub"><span id="all-stock-count">—</span> stocks &nbsp;·&nbsp; Market cap · 1D / 1W / 1M / YTD returns · Beta · Volume · Analyst rating</div>
-</div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
+    <div class="header-sub"><span id="all-stock-count">—</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
-<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-</div>
-
-<nav>
-      <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link active" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
-    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-</nav>
 <div class="filter-bar">
     <button class="filter-btn active" data-filter="all" onclick="setSector('all', this)">All</button>
     <button class="filter-btn" data-filter="ai" data-tooltip="AI Infrastructure — semiconductors, nuclear, data centres" onclick="setSector('ai', this)">AI Infra</button>
@@ -174,65 +251,16 @@
     <button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="setSector('tech', this)">Tech</button>
     <button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency and blockchain companies" onclick="setSector('crypto', this)">Crypto</button>
     <button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="setSector('energy', this)">Energy</button>
+    <button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="setSector('megacap', this)">Mega-Cap</button>
   </div>
+<div class="search-count-bar">
+<input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
+<span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
+</div>
 </header>
 <div class="page-body">
-
-<div class="left-rail">
-<a class="sector-pill" href="../index.html">
-<span class="sector-pill-icon">⊞</span>
-<span class="sector-pill-name">Stock Hub</span>
-</a>
-<a class="sector-pill active" href="index.html">
-<span class="sector-pill-icon">🌐</span>
-<span class="sector-pill-name">All Sectors</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../AI/metrics.html">
-<span class="sector-pill-icon">🤖</span>
-<span class="sector-pill-name">AI Infra</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Biotech/metrics.html">
-<span class="sector-pill-icon">🧬</span>
-<span class="sector-pill-name">Biotech</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Defence/metrics.html">
-<span class="sector-pill-icon">🛡️</span>
-<span class="sector-pill-name">Defence</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Tech/metrics.html">
-<span class="sector-pill-icon">💻</span>
-<span class="sector-pill-name">Technology</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Crypto/metrics.html">
-<span class="sector-pill-icon">₿</span>
-<span class="sector-pill-name">Crypto</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Energy/metrics.html">
-<span class="sector-pill-icon">⚡</span>
-<span class="sector-pill-name">Energy</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../rss.html">
-<span class="sector-pill-icon">📰</span>
-<span class="sector-pill-name">RSS Feed</span>
-</a>
-</div>
-
 <div class="page-main">
 <div class="container">
-
-  
-
-  <div class="search-count-bar">
-    <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
-    <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
-  </div>
 
   <div class="table-wrap">
     <table id="metrics-table">
@@ -249,7 +277,7 @@
           <th class="sortable num-col" onclick="sortMetrics('change_1w', this)" data-tip-title="1-Week Return" data-tip="Price change over the last 5 trading days.">1W</th>
           <th class="sortable num-col" onclick="sortMetrics('change_1m', this)" data-tip-title="1-Month Return" data-tip="Price change over the last month.">1M</th>
           <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta > 1 means it moves more than the market.">Beta</th>
-          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio — how much investors pay per £1 of profit.">P/E Ratio</th>
+          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio — how much investors pay per $1 of profit.">P/E Ratio</th>
           <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume" data-tip="Average number of shares traded per day over the past 3 months.">Avg Vol</th>
           <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Total number of shares traded in the most recent trading session.">1D Vol</th>
           <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="1-Week Volume" data-tip="Total shares traded across the last 5 trading days.">1W Vol</th>
@@ -279,16 +307,24 @@
 
   const SECTOR_LABELS = {
     'ai':'AI Infra','biotech':'Biotech','defence':'Defence',
-    'tech':'Tech','crypto':'Crypto','energy':'Energy',
+    'tech':'Tech','crypto':'Crypto','energy':'Energy','megacap':'Mega-Cap',
   };
 
   const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
   function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
+  function fmtUsd(v) {
+    const n = parseFloat(v);
+    if (isNaN(n)) return '—';
+    if (n >= 10) return String(Math.round(n));
+    if (n >= 1)  return n.toFixed(2);
+    return n.toFixed(3);
+  }
+
   function fmtMarketCap(v) {
     if (v === null || v === undefined) return null;
-    if (v >= 1) return '£' + v.toFixed(1) + 'B';
-    return '£' + (v * 1000).toFixed(0) + 'M';
+    if (v >= 1) return '$' + v.toFixed(1) + 'B';
+    return '$' + (v * 1000).toFixed(0) + 'M';
   }
   function fmtVolume(m) { if (m === null || m === undefined) return null; return m.toFixed(1) + 'M'; }
   function fmtPct(v, d) { if (v === null || v === undefined) return null; return v.toFixed(d !== undefined ? d : 2) + '%'; }
@@ -346,7 +382,7 @@
       case 'sector':       return s.sector;
       case 'ytd':          return s.ytd !== null ? s.ytd : -Infinity;
       case 'price':        return s.price !== null ? s.price : -Infinity;
-      case 'market_cap':   return s.market_cap_gbp_b !== null ? s.market_cap_gbp_b : -Infinity;
+      case 'market_cap':   return s.market_cap_usd_b !== null ? s.market_cap_usd_b : -Infinity;
       case 'beta':         return s.beta !== null ? s.beta : -Infinity;
       case 'pe_ratio':     return s.pe_ratio !== null ? s.pe_ratio : -Infinity;
       case 'avg_volume':   return s.avg_volume_m !== null ? s.avg_volume_m : -Infinity;
@@ -387,8 +423,8 @@
         const cls = val > 0 ? 'ytd-pos' : val < 0 ? 'ytd-neg' : 'ytd-flat';
         return '<span class="' + cls + '">' + (val >= 0 ? '+' : '') + val.toFixed(2) + '%</span>';
       }
-      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">£' + s.priceStr + '</span>' : dash();
-      const mcCell    = s.market_cap_gbp_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_gbp_b) + '</span>' : dash();
+      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">$' + s.priceStr + '</span>' : dash();
+      const mcCell    = s.market_cap_usd_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_usd_b) + '</span>' : dash();
       const peCell    = s.pe_ratio !== null ? '<span class="num-cell">' + fmtNum(s.pe_ratio, 1) + '</span>' : dash();
       const volCell   = s.avg_volume_m !== null ? '<span class="num-cell">' + fmtVolume(s.avg_volume_m) + '</span>' : dash();
       const vol1dCell = s.vol_1d !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1d / 1e6) + '</span>' : dash();
@@ -426,9 +462,9 @@
       name:             s.company_name || s.ticker,
       category:         s.category,
       sector:           s.sector || '',
-      priceStr:         (s.price_gbp != null) ? String(s.price_gbp) : null,
-      price:            (s.price_gbp != null && !isNaN(parseFloat(s.price_gbp))) ? parseFloat(s.price_gbp) : null,
-      market_cap_gbp_b: s.market_cap_gbp_b != null ? parseFloat(s.market_cap_gbp_b) : null,
+      priceStr:         (s.price_usd != null) ? fmtUsd(s.price_usd) : null,
+      price:            (s.price_usd != null && !isNaN(parseFloat(s.price_usd))) ? parseFloat(s.price_usd) : null,
+      market_cap_usd_b: s.market_cap_usd_b != null ? parseFloat(s.market_cap_usd_b) : null,
       beta:             s.beta != null ? parseFloat(s.beta) : null,
       pe_ratio:         s.pe_ratio != null ? parseFloat(s.pe_ratio) : null,
       avg_volume_m:     s.avg_volume_m != null ? parseFloat(s.avg_volume_m) : null,
@@ -454,6 +490,7 @@
     { key: 'tech',    path: '../Tech/prices-data.js'     },
     { key: 'crypto',  path: '../Crypto/prices-data.js'   },
     { key: 'energy',  path: '../Energy/prices-data.js'   },
+    { key: 'megacap', path: '../MegaCap/prices-data.js'  },
   ];
 
   Promise.all(SECTORS.map(async sd => {
@@ -469,7 +506,7 @@
   const stocks = results.flatMap(r => r.stocks).filter(s => { if (seen.has(s.ticker)) return false; seen.add(s.ticker); return true; });
   const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = stocks.length;
   const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
-  const tsEl = document.getElementById('data-bar-ts'); if (tsEl) tsEl.textContent = updated;
+  const tsEl = document.getElementById('data-bar-ts'); if (tsEl) tsEl.textContent = fmtDate(updated);
   buildMetrics(stocks);
   buildTape(stocks);
 });
@@ -492,9 +529,31 @@
     });
     th.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
   });
+
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
 </script>
 
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+<div class="drawer" onclick="event.stopPropagation()">
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link active" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+
+  <script src="../nav.js"></script>
 </body>
 </html>

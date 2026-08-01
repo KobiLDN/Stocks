@@ -118,13 +118,13 @@ def compact_stock(s):
     return {
         "ticker":   s.get("ticker"),
         "cat":      s.get("category"),
-        "price":    s.get("price_gbp"),
+        "price":    s.get("price_usd"),
         "ret_1y":   s.get("return_1yr"),
         "ytd":      s.get("change_ytd"),
         "ch_1m":    s.get("change_1m"),
         "ch_1w":    s.get("change_1w"),
         "ch_1d":    s.get("change_1d"),
-        "mc_gbp_b": s.get("market_cap_gbp_b"),
+        "mc_usd_b": s.get("market_cap_usd_b"),
         "beta":     s.get("beta"),
         "pe":       s.get("pe_ratio"),
         "div_pct":  s.get("div_yield_pct"),
@@ -140,7 +140,7 @@ SYSTEM_PROMPT = """You are an investment research assistant analysing a curated 
 
 The universe covers five categories: oil majors (ExxonMobil, Chevron, Shell, BP, TotalEnergies, Equinor — vertically integrated supermajors), E&P/refining (ConocoPhillips, Occidental, EOG Resources, Marathon Petroleum, Valero — exploration, production and refining), oilfield services (SLB/Schlumberger, Halliburton, Baker Hughes — drilling and completion services), utilities (NextEra Energy, SSE — power generation and grid infrastructure), and clean energy (Enphase Energy, First Solar, Brookfield Renewable, Ørsted — solar, wind and renewable developers).
 
-You will be given a JSON snapshot of every tracked stock: prices in GBP, year-to-date and 1-year returns, short-term momentum (1D/1W/1M %), fundamentals (market cap in £B, beta, P/E, dividend yield, short interest %, analyst recommendation and score), recent news headlines and an aggregate news sentiment score in [-1, +1].
+You will be given a JSON snapshot of every tracked stock: prices in USD, year-to-date and 1-year returns, short-term momentum (1D/1W/1M %), fundamentals (market cap in $B, beta, P/E, dividend yield, short interest %, analyst recommendation and score), recent news headlines and an aggregate news sentiment score in [-1, +1].
 
 Before ranking, use web search to find the latest news, analyst upgrades, earnings surprises, oil price moves, OPEC decisions, LNG contract wins, regulatory approvals, or deal announcements for the highest-momentum stocks listed in the user prompt. Use what you find to enrich your rationale with live catalysts.
 
@@ -196,7 +196,7 @@ def build_user_prompt(stocks):
         f"Search for the latest news on these high-momentum tickers before ranking: {search_tickers}.\n\n"
         "Stock universe snapshot follows as compact JSON. "
         "Field keys: cat=category, ret_1y=1-year return, ytd=YTD %, "
-        "ch_1m/1w/1d=% change, mc_gbp_b=market cap in GBP billions, "
+        "ch_1m/1w/1d=% change, mc_usd_b=market cap in USD billions, "
         "pe=trailing P/E, div_pct=dividend yield %, short=short interest %, "
         "an_score=analyst recommendation mean (lower=more bullish), "
         "news_s=aggregate news sentiment in [-1,+1], headline=latest headline. "

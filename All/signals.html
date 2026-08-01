@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI stock picks across all 6 sectors — momentum screener, top picks and previous signals for 192 stocks.">
+<meta name="description" content="AI stock picks across all 7 sectors — momentum screener, top picks and previous signals for 242 stocks.">
 <title>All Sectors — Signals</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
   .filter-btn[data-filter="tech"].active    { background: var(--indigo);  border-color: var(--indigo); color: #fff; }
   .filter-btn[data-filter="crypto"].active  { background: var(--gold);    border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-filter="energy"].active  { background: var(--amber);   border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-filter="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
   .sector-block { margin-bottom: 48px; }
   .sector-heading {
@@ -73,6 +74,7 @@
   .sector-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
   .sector-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
   .sector-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .sector-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
 
   .signal-pill { margin-left: auto; }
   .rank-delta { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 2px; }
@@ -105,36 +107,85 @@
   .updated-row span { color: var(--text); }
 
   .empty-block { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); padding: 20px 0; }
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 164px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+  }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
 </style>
 </head>
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link active" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+<div class="right-side">
 <header>
   <div class="header-inner">
+  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Signals</span></h1>
-    <div class="header-sub">AI top picks across 6 sectors · momentum screener · updated 3× daily</div>
+    <div class="header-sub">AI top picks across 6 sectors · momentum screener · Last updated <span id="signals-ts">—</span></div>
 </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Last Refreshed</div>
-  <div class="header-block-value" id="signals-ts">—</div>
-  </div>
-  </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 
-<nav>
-      <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link" data-tooltip="Latest headlines across all stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link active" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
-    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-</nav>
 <div class="filter-bar">
     <button class="filter-btn active" data-filter="all" onclick="filterSectors('all',this)">All Sectors</button>
     <button class="filter-btn" data-filter="ai" onclick="filterSectors('ai',this)">AI Infra</button>
@@ -143,56 +194,10 @@
     <button class="filter-btn" data-filter="tech" onclick="filterSectors('tech',this)">Tech</button>
     <button class="filter-btn" data-filter="crypto" onclick="filterSectors('crypto',this)">Crypto</button>
     <button class="filter-btn" data-filter="energy" onclick="filterSectors('energy',this)">Energy</button>
+    <button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="filterSectors('megacap',this)">Mega-Cap</button>
   </div>
 </header>
 <div class="page-body">
-
-<div class="left-rail">
-<a class="sector-pill" href="../index.html">
-<span class="sector-pill-icon">⊞</span>
-<span class="sector-pill-name">Stock Hub</span>
-</a>
-<a class="sector-pill active" href="index.html">
-<span class="sector-pill-icon">🌐</span>
-<span class="sector-pill-name">All Sectors</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../AI/signals.html">
-<span class="sector-pill-icon">🤖</span>
-<span class="sector-pill-name">AI Infra</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Biotech/signals.html">
-<span class="sector-pill-icon">🧬</span>
-<span class="sector-pill-name">Biotech</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Defence/signals.html">
-<span class="sector-pill-icon">🛡️</span>
-<span class="sector-pill-name">Defence</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Tech/signals.html">
-<span class="sector-pill-icon">💻</span>
-<span class="sector-pill-name">Technology</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Crypto/signals.html">
-<span class="sector-pill-icon">₿</span>
-<span class="sector-pill-name">Crypto</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../Energy/signals.html">
-<span class="sector-pill-icon">⚡</span>
-<span class="sector-pill-name">Energy</span>
-<span class="sector-pill-badge">Live</span>
-</a>
-<a class="sector-pill" href="../rss.html">
-<span class="sector-pill-icon">📰</span>
-<span class="sector-pill-name">RSS Feed</span>
-</a>
-</div>
-
 <div class="page-main">
 <div class="container">
 
@@ -211,6 +216,7 @@
     { key: 'tech',    label: 'Technology',         icon: '💻', pricesPath: '../Tech/prices-data.js',     signalsPath: '../Tech/signals-local.json'     },
     { key: 'crypto',  label: 'Crypto',             icon: '₿',  pricesPath: '../Crypto/prices-data.js',   signalsPath: '../Crypto/signals-local.json'   },
     { key: 'energy',  label: 'Energy',             icon: '⚡', pricesPath: '../Energy/prices-data.js',   signalsPath: '../Energy/signals-local.json'   },
+    { key: 'megacap', label: 'Mega-Cap',           icon: '💎', pricesPath: '../MegaCap/prices-data.js',  signalsPath: '../MegaCap/signals-local.json'  },
   ];
 
   let activeSectorFilter = 'all';
@@ -386,12 +392,34 @@
     buildTape(results.flatMap(r => r.stocks || []));
     const sigUpdated = results.map(r => r.signals?.updated).filter(Boolean).sort().pop() || '—';
     const sigTsEl = document.getElementById('signals-ts');
-    if (sigTsEl) sigTsEl.textContent = sigUpdated;
+    if (sigTsEl) sigTsEl.textContent = fmtDate(sigUpdated);
     renderAll();
   });
+
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
 </script>
 
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+<div class="drawer" onclick="event.stopPropagation()">
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link active" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+
+  <script src="../nav.js"></script>
 </body>
 </html>

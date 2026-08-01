@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="What-If investment calculator — see what £100 to £10,000 invested in crypto coins at the start of 2026 is worth today. Covers Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins.">
+<meta name="description" content="What-If investment calculator — see what $100 to $10,000 invested in crypto coins at the start of 2026 is worth today. Covers Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins.">
 <title>Crypto — What-If Calculator</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -11,24 +11,32 @@
 <script src="../shared.js" defer></script>
 <style>
 
+  /* Filter bar chips */
+  .filter-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s;
+  }
+  .filter-btn:hover  { color: var(--accent); border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
 
   /* Search + count bar */
-  .search-count-bar { display: flex; align-items: center; gap: 16px; padding: 6px 16px; border-top: 1px solid var(--border); }
-  #calc-search {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 6px 14px;
-    width: 240px;
-    outline: none;
-    letter-spacing: 0.5px;
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
-  #calc-search:focus { border-color: var(--accent); }
-  #calc-search::placeholder { color: var(--muted); }
-  .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
-  .row-count span { color: var(--accent); font-weight: 700; }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
 
   /* Table */
   .table-wrap {
@@ -166,53 +174,98 @@
     .company-cell { display: none; }
   }
 
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 164px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+  }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
+
 </style>
 </head>
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<!-- Panel 1: Sector switcher -->
+<div class="left-rail">
+</div>
+
+<!-- Panel 2: Nav panel (What-If active) -->
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link active" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+
+<!-- Panel 3: Right side -->
+<div class="right-side">
 <header>
-  <div class="header-inner">
-  <div class="header-left">
-    <div class="header-label">// Market Intelligence</div>
-    <h1>Crypto <span>Calculator</span></h1>
-    <div class="header-sub">Based on YTD return · values in GBP · if you invested 1 Jan 2026</div>
-  </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
-  </div>
-  </div>
-  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-  </div>
-  <nav>
-<a href="index.html"      class="nav-link" data-tooltip="Live prices, 52-week range and momentum for all 19 coins">📊 Dashboard</a>
-    <a href="metrics.html"    class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html"       class="nav-link" data-tooltip="Latest headlines across all 19 coins with news sentiment scoring">📰 News</a>
-    <a href="signals.html"    class="nav-link" data-tooltip="Crypto top 10 picks ranked by momentum, fundamentals and sentiment — refreshed Mon/Wed/Fri">🎯 Signals</a>
-    <a href="heatmap.html"    class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html"     class="nav-link" data-tooltip="1-year price history charts for every coin">📈 Charts</a>
-    <a href="calculator.html" class="nav-link active" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-  </nav>
-  <div class="search-count-bar">
-    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
-    <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
-  </div>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+  <div class="header-label">// Market Intelligence</div>
+  <h1>Crypto <span>Calculator</span></h1>
+  <div class="header-sub"><span id="calc-total">—</span> coins · If you invested 1 Jan 2026 · Last updated <span id="data-bar-ts">—</span></div>
+</div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+<div class="filter-bar" id="filter-bar"></div>
+<div class="search-count-bar">
+<input id="calc-search" oninput="filterCalc(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
+</div>
 </header>
 
 <div class="page-body">
-<div class="left-rail">
-<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
-<a class="sector-pill" href="../All/calculator.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../AI/calculator.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Biotech/calculator.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Defence/calculator.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Tech/calculator.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill active" href="calculator.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Energy/calculator.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
-</div>
 <div class="page-main">
 <div class="container">
 
@@ -225,9 +278,9 @@
           <th>Category</th>
           <th class="sortable sort-desc" onclick="sortCalc('ytd', this)">YTD %</th>
           <th class="sortable" style="text-align:center" onclick="sortCalc('mult', this)">Multiplier</th>
-          <th class="sortable inv-col" onclick="sortCalc('v100', this)">£100 invested</th>
-          <th class="sortable inv-col" onclick="sortCalc('v1k', this)">£1,000 invested</th>
-          <th class="sortable inv-col" onclick="sortCalc('v10k', this)">£10,000 invested</th>
+          <th class="sortable inv-col" onclick="sortCalc('v100', this)">$100 invested</th>
+          <th class="sortable inv-col" onclick="sortCalc('v1k', this)">$1,000 invested</th>
+          <th class="sortable inv-col" onclick="sortCalc('v10k', this)">$10,000 invested</th>
         </tr>
       </thead>
       <tbody id="calc-body"></tbody>
@@ -235,9 +288,7 @@
     </table>
   </div>
 
-
 </div>
-
 
 <script src="prices-data.js"></script>
 <script>
@@ -293,16 +344,16 @@
     'ai':       'AI Tokens',
   };
 
-  function fmtGbp(val) {
-    if (val >= 1000) return '£' + val.toLocaleString('en-GB', { maximumFractionDigits: 0 });
-    if (val >= 10)   return '£' + val.toFixed(0);
-    return '£' + val.toFixed(2);
+  function fmtUsd(val) {
+    if (val >= 1000) return '$' + val.toLocaleString('en-US', { maximumFractionDigits: 0 });
+    if (val >= 10)   return '$' + val.toFixed(0);
+    return '$' + val.toFixed(2);
   }
 
   function fmtPl(val) {
     const sign = val >= 0 ? '+' : '';
-    if (Math.abs(val) >= 1000) return sign + '£' + Math.abs(val).toLocaleString('en-GB', { maximumFractionDigits: 0 }) + (val < 0 ? ' loss' : ' gain');
-    return sign + '£' + Math.abs(val).toFixed(2) + (val < 0 ? ' loss' : ' gain');
+    if (Math.abs(val) >= 1000) return sign + '$' + Math.abs(val).toLocaleString('en-US', { maximumFractionDigits: 0 }) + (val < 0 ? ' loss' : ' gain');
+    return sign + '$' + Math.abs(val).toFixed(2) + (val < 0 ? ' loss' : ' gain');
   }
 
   function invCell(invested, ytdPct) {
@@ -310,7 +361,7 @@
     const pl = current - invested;
     const cls = ytdPct > 0 ? 'pos' : ytdPct < 0 ? 'neg' : '';
     return `<td class="inv-cell">
-      <span class="inv-value ${cls}">${fmtGbp(current)}</span>
+      <span class="inv-value ${cls}">${fmtUsd(current)}</span>
       <span class="inv-pl ${cls}">${fmtPl(pl)}</span>
     </td>`;
   }
@@ -333,12 +384,39 @@
   }
 
   /* ---- FILTER ---- */
+  /* ---- FILTER ---- */
+  let activeCategory = 'all';
+  let activeQuery    = '';
+
+  function buildFilterBar() {
+    const bar = document.getElementById('filter-bar');
+    if (!bar) return;
+    const cats = ['all', ...Object.keys(CAT_LABELS)];
+    bar.innerHTML = cats.map(cat => {
+      const label = cat === 'all' ? 'All' : (CAT_LABELS[cat] || cat);
+      return '<button class="filter-btn' + (cat === activeCategory ? ' active' : '') +
+             '" data-cat="' + cat + '" onclick="setCategory(\'' + cat + '\')">' + label + '</button>';
+    }).join('');
+  }
+
+  function setCategory(cat) {
+    activeCategory = cat;
+    document.querySelectorAll('#filter-bar .filter-btn').forEach(b =>
+      b.classList.toggle('active', b.dataset.cat === cat));
+    applyFilters();
+  }
+
   function filterCalc(query) {
-    const q = query.toLowerCase().trim();
-    const filtered = q
-      ? window._calcData.filter(s => s.ticker.toLowerCase().includes(q) || s.name.toLowerCase().includes(q))
-      : window._calcData;
-    renderTable(filtered);
+    activeQuery = query.toLowerCase().trim();
+    applyFilters();
+  }
+
+  function applyFilters() {
+    let data = window._calcData;
+    if (activeCategory !== 'all') data = data.filter(s => s.category === activeCategory);
+    if (activeQuery) data = data.filter(s =>
+      s.ticker.toLowerCase().includes(activeQuery) || s.name.toLowerCase().includes(activeQuery));
+    renderTable(data);
   }
 
   /* ---- RENDER ---- */
@@ -371,7 +449,7 @@
       const pl = total - inv * data.length;
       const cls = pl >= 0 ? 'pos' : 'neg';
       return `<td class="inv-cell">
-        <span class="inv-value ${cls}">${fmtGbp(total)}</span>
+        <span class="inv-value ${cls}">${fmtUsd(total)}</span>
         <span class="inv-pl ${cls}">${fmtPl(pl)}</span>
       </td>`;
     }).join('');
@@ -395,7 +473,9 @@
       .filter(s => s.ytdPct !== 0);
 
     window._calcData = data;
-    renderTable(data);
+    const _ct = document.getElementById('calc-total'); if (_ct) _ct.textContent = data.length;
+    buildFilterBar();
+    applyFilters();
   }
 
   if (window.PRICES_DATA) {
@@ -410,8 +490,24 @@
       });
   }
 
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+
 </script>
+</div><!-- /.container -->
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
+<div class="left-rail">
+</div>
+<div class="nav-panel"></div>
+</div>
+</div>
+
+  <script src="../nav.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment across 192 stocks — AI, Biotech, Defence, Tech, Crypto, and Energy sectors.">
+<meta name="description" content="Latest news and sentiment across 242 stocks — AI, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap sectors.">
 <title>All Sectors — News</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
   .filter-btn[data-sector="tech"].active    { background: var(--indigo); border-color: var(--indigo); color: #fff; }
   .filter-btn[data-sector="crypto"].active  { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }
   .filter-btn[data-sector="energy"].active  { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }
+  .filter-btn[data-sector="megacap"].active { background: #f472b6; border-color: #f472b6; color: var(--bg); }
 
   /* Sector badges */
   .news-sector-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; padding: 2px 7px; letter-spacing: 0.5px; }
@@ -25,36 +26,101 @@
   .sect-tech    { background: rgba(167,139,250,0.1); color: var(--indigo); border: 1px solid rgba(167,139,250,0.25); }
   .sect-crypto  { background: rgba(255,215,0,0.1);   color: var(--gold);   border: 1px solid rgba(255,215,0,0.25); }
   .sect-energy  { background: rgba(245,158,11,0.1);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.25); }
+  .sect-megacap { background: rgba(244,114,182,0.12); color: #f472b6; border: 1px solid rgba(244,114,182,0.3); }
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 164px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+  }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
 </style>
 </head>
 <body data-layout="rail">
 
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link active" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+<div class="right-side">
 <header>
   <div class="header-inner">
+  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>News</span></h1>
-    <div class="header-sub">Latest headlines across <span id="all-stock-count">—</span> stocks · AI-scored sentiment</div>
-  </div>
-  <div class="header-blocks">
-  <div class="header-block">
-  <div class="header-block-label">Prices Last Updated</div>
-  <div class="header-block-value" id="data-bar-ts">—</div>
-  </div>
+    <div class="header-sub">Latest headlines across <span id="all-stock-count">—</span> stocks · sentiment scored · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
-
-  <nav>
-    <a href="index.html" class="nav-link" data-tooltip="Live prices, 52-week range and momentum">📊 Dashboard</a>
-    <a href="metrics.html" class="nav-link" data-tooltip="Fundamentals — P/E, market cap, beta, dividend yield, short interest and analyst ratings">📋 Metrics</a>
-    <a href="news.html" class="nav-link active" data-tooltip="Latest headlines across all stocks with news sentiment scoring">📰 News</a>
-    <a href="signals.html" class="nav-link" data-tooltip="AI top picks ranked by momentum, fundamentals and sentiment — all sectors combined">🎯 Signals</a>
-    <a href="heatmap.html" class="nav-link" data-tooltip="Treemap: tile size = % move, colour = direction. Toggle 1D / 1W / 1M / YTD / 1Y">🔥 Heatmap</a>
-    <a href="charts.html" class="nav-link" data-tooltip="1-year price history charts for every stock">📈 Charts</a>
-    <a href="calculator.html" class="nav-link" data-tooltip="Investment simulator — see what £100 to £10k in Jan 2026 is worth today">🧮 What-If</a>
-  </nav>
 
   <div class="filter-bar" id="filter-bar">
     <button class="filter-btn active" data-sector="all"     onclick="setSector('all',this)">All</button>
@@ -64,40 +130,31 @@
     <button class="filter-btn"        data-sector="tech"    onclick="setSector('tech',this)">Tech</button>
     <button class="filter-btn"        data-sector="crypto"  onclick="setSector('crypto',this)">Crypto</button>
     <button class="filter-btn"        data-sector="energy"  onclick="setSector('energy',this)">Energy</button>
+    <button class="filter-btn"        data-sector="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="setSector('megacap',this)">Mega-Cap</button>
   </div>
 
-  <div class="news-toolbar">
-    <input type="text" id="news-search" placeholder="Search ticker, company or headline..." oninput="filterNews(this.value)">
-    <span class="sort-label">Sort</span>
-    <div class="sort-group" id="sort-group">
+<div class="controls-row">
+<span class="sort-label">Sort</span>
+<div class="sort-group" id="sort-group">
       <button class="sort-btn active" data-sort="newest"   onclick="setSort('newest',this)">Newest</button>
       <button class="sort-btn"        data-sort="oldest"   onclick="setSort('oldest',this)">Oldest</button>
       <button class="sort-btn"        data-sort="positive" onclick="setSort('positive',this)">Most Positive</button>
       <button class="sort-btn"        data-sort="negative" onclick="setSort('negative',this)">Most Negative</button>
     </div>
-    <span class="sort-label">Period</span>
-    <div class="sort-group" id="window-group">
+<span class="sort-label">Period</span>
+<div class="sort-group" id="window-group">
       <button class="sort-btn"        data-window="all"  onclick="setWindow('all',this)">All Time</button>
       <button class="sort-btn active" data-window="day"  onclick="setWindow('day',this)">Last 24h</button>
       <button class="sort-btn"        data-window="week" onclick="setWindow('week',this)">Last Week</button>
     </div>
-    <span class="row-count">Showing <span id="news-count">—</span> articles</span>
-  </div>
+</div>
+<div class="search-count-bar">
+<input id="news-search" oninput="filterNews(this.value)" placeholder="Search ticker, company or headline..." type="text"/>
+<span class="row-count">Showing <span id="news-count">—</span> articles</span>
+</div>
 </header>
 
 <div class="page-body">
-<div class="left-rail">
-<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
-<a class="sector-pill active" href="index.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../AI/news.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Biotech/news.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Defence/news.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Tech/news.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Crypto/news.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Energy/news.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
-</div>
-
 <div class="page-main">
 <div class="container">
   <div class="news-feed" id="news-feed">
@@ -115,7 +172,7 @@
 
   const SECTOR_LABELS = {
     'ai':'AI Infra','biotech':'Biotech','defence':'Defence',
-    'tech':'Tech','crypto':'Crypto','energy':'Energy',
+    'tech':'Tech','crypto':'Crypto','energy':'Energy','megacap':'Mega-Cap',
   };
 
   function sentClass(score) {
@@ -229,6 +286,7 @@
     { key: 'tech',    path: '../Tech/prices-data.js'     },
     { key: 'crypto',  path: '../Crypto/prices-data.js'   },
     { key: 'energy',  path: '../Energy/prices-data.js'   },
+    { key: 'megacap', path: '../MegaCap/prices-data.js'  },
   ];
 
   Promise.all(SECTORS.map(async sd => {
@@ -268,9 +326,31 @@
     buildTape(results.flatMap(r => r.stocks));
     applyFilters();
   });
+
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
 </script>
 
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+<div class="drawer" onclick="event.stopPropagation()">
+<div class="left-rail">
+</div>
+<div class="nav-panel">
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<a class="nav-link" href="metrics.html"><span class="nav-icon">📋</span><span class="nav-label">Metrics</span></a>
+<a class="nav-link active" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
+</div>
+</div>
+
+  <script src="../nav.js"></script>
 </body>
 </html>

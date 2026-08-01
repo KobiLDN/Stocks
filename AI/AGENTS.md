@@ -55,10 +55,10 @@ When you make a change, update these in the same commit:
 ## Price updater bot
 
 - `AI_update_prices.py` runs automatically via GitHub Actions **3× daily on weekdays** (08:00, 14:30, 20:30 UTC).
-- It fetches live prices from Yahoo Finance, converts to GBP, and writes three files: `index.html` (data-* attributes), `prices.json` (JSON snapshot), and `prices-data.js` (`window.PRICES_DATA` global for file:// compatibility).
+- It fetches live prices from Yahoo Finance, converts to GBP (internal reference currency, not displayed), derives USD (`price_gbp * fx_gbp_usd` — the currency shown on the site), and writes three files: `index.html` (data-* attributes), `prices.json` (JSON snapshot), and `prices-data.js` (`window.PRICES_DATA` global for file:// compatibility).
 - It commits and pushes all three files to `main` if prices changed.
 - **Do not manually edit price data in `index.html`** — the bot will overwrite it on the next run.
-- To add a new stock: add it to the `STOCKS` dict in `AI_update_prices.py` and add the corresponding `<tr>` row in `index.html`. Placeholder prices (`£0`) are fine — the bot fills them on next run.
+- To add a new stock: add it to the `STOCKS` dict in `AI_update_prices.py` and add the corresponding `<tr>` row in `index.html`. Placeholder prices (`$0`) are fine — the bot fills them on next run.
 - The bot relies on `data-ticker` attributes to match rows. Never remove or rename these.
 - **Ticker tape** on all pages loads `prices-data.js` via a `<script>` tag and reads `window.PRICES_DATA` directly — works with file:// and HTTP. Falls back to `fetch('prices.json')` if the global isn't set, then to DOM rows on `index.html`. New pages only need the tape HTML, CSS, `<script src="prices-data.js">`, and the shared `buildTape()` JS block.
 

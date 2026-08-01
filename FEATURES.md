@@ -2,19 +2,49 @@
 
 ## Backlog
 
-- **Global Mega-Cap Leaders sector** — 50 stocks across 6–7 categories; full 7-page suite + hub card + workflows
-
 - **Crypto signals generator** — `Crypto_generate_signals_local.py` + entry in `generate-signals.yml`; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle, category rotation)
-  - Big Tech (6): MSFT, AAPL, AMZN, GOOGL, META, NVDA
-  - Financials (6): BRK-B, JPM, V, MA, BAC, MS
-  - Healthcare (6): LLY, JNJ, UNH, ABBV, NVO, TMO
-  - Consumer (7): WMT, COST, KO, PEP, HD, MCD, PG
-  - Energy & Industrials (6): XOM, CVX, SHEL, TM, NESN (NSRGY), 2222.SR
-  - Tech & Semis (12): AVGO, TSM, ASML, QCOM, ORCL, SAP, CRM, ADBE, CSCO, IBM, ACN, AMD
-  - Global & Growth (7): BABA, TCEHY, SSNLF, LVMUY, TSLA, NFLX, PLTR
-  - Notes: Samsung (SSNLF) + Tencent (TCEHY) + Saudi Aramco (2222.SR) kept in — expect some N/A on return fields; #50 Netflix duplicate replaced with Thermo Fisher (TMO)
 
 ## Done
+
+- **Four-layer regime diagnostic (issue #33)** — hub regime banner now driven by a state machine: joint-decline override → VIX bracket → QQQ−SPY spread tiebreaker → asymmetric hysteresis (fast to alarm, slow to relax; 2-confirmation rule, state persisted in `market.json`); six descriptive banners (CORRECTION/CRISIS/UNCERTAIN/ROTATION/NORMAL/BULLISH), banner always reflects the hysteresis-filtered regime with raw + spread in the sub-line (`update_market.py`, `index.html`).
+
+- **All/heatmap crypto tiles → CoinGecko (issue #26)** — `COINGECKO_IDS` map (34 coins) + `tileUrl(d)` helper routes crypto tiles to CoinGecko, equities to Yahoo Finance; uses existing `d.data.sector === 'crypto'` tag (`All/heatmap.html`).
+
+- **UK date format DD/MM/YYYY HH:MM site-wide (issue #25)** — `fmtDate()` in `nav.js` converts all "Last updated" timestamps; handles sync init() pages via post-process loop and async pages via direct call; works for both price-update format (`YYYY-MM-DD HH:MM`) and ISO 8601 news timestamps (`nav.js`, `shared.js`, `All/`, `news.html`, 7 sector signals pages).
+
+- **Push-to-live workflow fix — merge not rebase (issue #24)** — `WORKFLOW.md` updated: when `git push origin dev:main` is rejected because bots have committed to `main`, use `git merge origin/main --no-edit` instead of `git rebase origin/main`; merge adds one commit without rewriting history so `origin/dev` stays compatible and no force-push is needed.
+
+- **FX rate fallback for GitHub Actions SSL failures** — all 7 `*_update_prices.py` scripts now catch `curl_cffi` SSL errors on `fc.yahoo.com` and fall back to `api.frankfurter.app` (GBP/USD, GBP/JPY) or `open.er-api.com` (GBP/USD, SAR/USD for MegaCap) via stdlib `urllib.request`; no new dependencies required.
+
+- **Auto-release on deploy to live** — `.github/workflows/create-release.yml` triggers on every push to `main`; tags with today's date, builds release notes from commit messages since the last tag, publishes automatically to GitHub Releases — zero manual steps per deploy.
+
+- **Mobile metrics table fixes — all 8 pages** — four issues fixed across all sector metrics pages (AI, Tech, Crypto, Biotech, Defence, MegaCap, Energy, All): (1) sticky TICKER column with `position:sticky;left:0` so the stock identifier stays visible while scrolling through 18 columns; (2) `white-space:nowrap` on `.cat-badge` prevents multi-word categories ("Tech & Semis", "Global Growth") wrapping onto two lines; (3) Company column header (`th:nth-child(2)`) now hidden on mobile alongside data cells — previously the ghost header misaligned all columns; (4) CSS hover-tooltips on filter buttons disabled on mobile where they were non-functional and appeared behind the page header.
+
+- **Nav flash eliminated — `nav.js` critical-path split** — `buildNav()`, `_RAIL_ITEMS`, and `_SECTOR_PAGES` moved from deferred `shared.js` into a new `nav.js` loaded synchronously before `</body>`; runs before first browser paint so rail and nav-panel are correct on first render with zero flash; `shared.js` stays deferred; future nav changes edit `nav.js` only — single source of truth (`nav.js`, `shared.js`, all 62 HTML pages).
+
+- **Mobile burger menu — consistent across all pages** — hamburger button `border: none` added to `shared.css` (canonical single source); per-page accordion HTML stripped from all 49 sector drawer `nav-panel`s so `buildNav()` populates them identically to All/ pages; drawer nav-panel forced to compact 72px icon+label column via high-specificity CSS in `shared.css`; bottom tab bar removed (`shared.css`, all sector + All/ HTML pages).
+
+- **Macro block YTD/1Y + VIX signal in CDN export (issue #23)** — `update_market.py` fetches 1-year history for SPY/QQQ so it can compute `change_ytd` (first trading day of current year → today) and `change_1y` (52 weeks ago → today) in addition to 1D/1W/1M; adds `vix.signal` label (calm/normal/high_fear/extreme_fear based on VIX level thresholds <15/<25/<30/>30); new fields pass through to the CDN export `macro` key via `generate_export.py`'s existing `read_macro()` passthrough — portfolio AI now has full market-regime context (`update_market.py`, `generate_export.py`).
+
+- **Global Mega-Cap Leaders sector (`MegaCap/`)** — 50 stocks across 7 categories: Big Tech (AAPL/MSFT/NVDA/GOOGL/META/AMZN/TSLA/NFLX), Financials (JPM/BAC/BRK-B/V/MA/GS/BLK), Healthcare (LLY/UNH/JNJ/ABBV/MRK/TMO/ABT), Consumer (PG/KO/PEP/MCD/NKE/WMT/COST), Energy & Industrial (XOM/CVX/CAT/HON/GE/RTX/BA), Tech & Semis (AMD/QCOM/AVGO/TSM/ASML/ARM/INTC), Global Growth (2222.SR/BABA/SAP/SONY/TM/NVO/HSBC). USD-primary price pipeline with SAR special case for Saudi Aramco. Full 7-page suite + hub card + updated All/ pages + updated workflows + `generate_export.py`. Total universe: 242 stocks & coins.
+
+- **Hub Live Charts — period toggle + explainer notes** — 1D/1W/1M/1Y toggle above the SPY/QQQ/VIX TradingView widgets (default 1W), replacing the previous fixed 3M/daily view; each chart card has a short note explaining what the instrument tracks and why it matters; crypto tickers in the Hub's Market Leaders/Fallers table now link to CoinGecko instead of Yahoo Finance; duplicate tickers (tracked under two sectors) deduped in that same table; Hub header restructured to match All Sectors — stock count/sector count/last-updated moved into `header-sub` under the title, old top-right `header-blocks` boxes removed (`index.html`)
+
+- **Currency switch: GBP → USD site-wide display** — all price/market-cap/52-week-range displays across dashboard, metrics, heatmap tooltips, and calculator pages now show `$` (USD) instead of `£` (GBP), on all 7 sectors (42 pages). Fixed a pre-existing pipeline bug where `price_usd` stored the *raw native-currency* price (pence for LSE tickers BA.L/RR.L/QQ.L/SSE.L/AZN/GSK/RR., JPY for Kioxia 285A) mislabeled as USD — now derived consistently as `price_gbp * fx_gbp_usd` for every ticker. Added `low_usd`/`high_usd`/`market_cap_usd_b` fields (previously GBP-only) across all 6 price-update pipelines and backfilled into existing `prices.json`/`prices-data.js` without a live re-fetch. AI signal-generator prompts updated to describe USD figures so LLM rationale matches displayed data. GBP fields (`price_gbp`, `low_gbp`, `high_gbp`, `market_cap_gbp_b`, `fx_gbp_usd`) are retained in the data for reference/sorting compatibility but are no longer displayed anywhere on the site. The local T212 portfolio tool (genuinely GBP-denominated UK brokerage account) is unaffected — out of scope. Follow-up fix: `buildMetrics()` on all 7 sector metrics pages called `shared.js`'s `fmtUsd()` before that deferred script had loaded, throwing an error that emptied the whole table — fixed by giving each page its own local `fmtUsd()`; also fixed `buildNav()`/`buildDashboardHeader()` not recognising extensionless "clean" URLs (e.g. `/AI/metrics`), which caused the wrong nav item to highlight.
+
+- **Header subtitle standardization — all 52 pages** — `header-blocks` div (top-right timestamp block) removed from all sector/All pages; `data-bar-ts` moved inline into `.header-sub`; subtitle pattern uniform across all 7 page types; `buildDashboardHeader()` in `shared.js` now detects existing hardcoded `.header-left` content and only refreshes dynamic spans; 0 unwired subtitle spans confirmed by static audit; Crypto uses "coins" throughout; All/index.html wires `#sector-count` + `#data-bar-ts` in async callback
+
+- **RSS Feed renamed to News Feed at /news URL** — `rss.html` → `news.html`; rail label + path updated in `shared.js`; all links on hub updated
+
+- **Shared nav — single source of truth** — `buildNav()` in `shared.js` generates left rail (10 pills) + bottom tabs (8 tabs) for every page from URL detection; `_RAIL_ITEMS` + `_SECTOR_PAGES` arrays are the single config; zero changes to individual HTML files to update nav; trailing-slash URLs (e.g. `/AI/`) correctly normalized to `index.html`
+
+- **Mobile nav on Stock Hub** — hamburger + drawer + 8-tab bottom bar at ≤640px; matches sector page pattern; Hub left rail extends to ticker tape (layout restructured to `flex-direction:row`)
+
+- **Market page merged into Stock Hub** — `index.html` is now the combined landing page; regime banner + SPY/QQQ/VIX + TradingView charts + sector heatmap + Leaders/Fallers above hub content; `market.html` redirects to `/`
+
+- **Market overview page (issue #19)** — root-level `market.html` standalone leaf page (rss.html pattern, no nav-panel): rules-based risk regime banner (correction / elevated-fear / normal), SPY/QQQ/VIX metric cards, three TradingView widgets (`AMEX:SPY`, `NASDAQ:QQQ`, `CAPITALCOM:VIX`, 150ms stagger, theme-aware re-render), 6-sector 1-week average heatmap, Leaders/Fallers tables (vs-SPY column) computed client-side from all 6 `prices-data.js` files. `update_market.py` fetches SPY/QQQ/VIX via yfinance → `market-data.js` + `market.json`; wired into `update-prices.yml` (full refresh, 3× daily); `macro` block added to `generate_export.py`. **Market pill** (💹, Live badge) inserted before RSS Feed in every left-rail across all 51 pages via idempotent clone-the-RSS-pill sweep. Graceful "awaiting market data" empty state until first live refresh.
+
+- **3-panel rail layout — full site rollout (issues #17/#18)** — all 56 HTML pages (root + 7 pages × 7 sectors including All/, plus Market + RSS leaf pages) migrated to `body[data-layout="rail"]`: left-rail 92px sector pills | nav-panel 148px page links | right-side content area. Leaf pages (Market, RSS) use left-rail + page-main only. `shared.css` owns all rail CSS; drawer overlay + bottom-tabs for mobile; hamburger ☰ opens drawer on narrow viewports.
 
 - **Stock Hub sector quick-nav strip** — compact pill row (icon + label + Live badge) at top of hub main area; all 9 destinations; active state on Stock Hub; mobile wraps (`index.html`)
 
@@ -30,6 +60,8 @@
 
 - **Hub index.html works on `file://`** — all 6 sector `prices-data.js` + `signals-local.js` preloaded as `<script>` tags at the top of `index.html`; snapshotted to `window.__pd_*` / `window.__sd_*`; JS checks preloaded globals first so the page fully populates when opened as a local file without a web server (`index.html`)
 
+- **Shared push-to-main concurrency group across all 4 bot workflows** — `update-prices`, `generate-export`, `generate-news-feed`, and `generate-signals` all now share `concurrency: group: push-to-main`; GitHub Actions queues them so two simultaneous bot triggers can't race on a push to `main` (were previously each given their own independent concurrency group, causing non-fast-forward collisions and rebase retry loops) (issue #5)
+
 - **Robust bot push retry** — all 3 GitHub Actions workflows (`update-prices.yml`, `generate-signals.yml`, `generate-export.yml`) use `git fetch origin main → git rebase origin/main → git push origin HEAD:main` in a 3-attempt retry loop (10s sleep); prevents transient non-fast-forward failures from marking runs as failed
 
 - **Heatmap gainers/losers split + flat colours** — all 6 heatmap pages: "All Stocks" and every By Sector/Category block groups green (gainers) tiles on the left and red (losers) tiles on the right, sized proportionally by count; solid `var(--green)` / `var(--red)` colours, no gradient shading; `header-note` banner aligned to match the blue accent bar and nav content (`shared.css`, all 6 `heatmap.html` files)
@@ -40,7 +72,7 @@
 
 - **Local portfolio dashboard** — `G:\My Drive\coding\ai\portfolio\Portfolio-Local\portfolio.py` + `run.bat` — fetches live T212 positions, merges with the latest live export, writes `portfolio.html` (1920px browser dashboard) + `portfolio_analysis.json`; appends to `portfolio_history.json` each run. Dashboard sections: account cards (incl. T212 P&L + Real GBP P&L with FX explanation); sector allocation bar blocks (equal-width, variable-height, 1D weighted avg above each block in green/red); portfolio value line chart; holdings treemap heatmap (sized by 1D% magnitude, coloured by direction); holdings table (Bought+Current+P&L, sortable); picks table (filterable by sector/signal, pinnable). `TICKER_ALIASES` maps T212 non-standard tickers (e.g. HUTMF→HUT). Key: `KEY_ID:SECRET_KEY` in `Portfolio-Local/.key` (never committed)
 
-- **Daily export pipeline** — `generate_export.py` builds `exports/YYYY-MM-DD.json+csv` (176 stocks; metrics, what-if £100/£1k/£10k × 5 timeframes, top-3 news + sentiment, AI signals); `exports/manifest.json` tracks all snapshots; `generate-export.yml` runs at 22:00 UTC weekdays; `exports/index.html` shows date dropdown, loads selected snapshot, one-click Copy JSON/CSV; served at `stocks-4qw.pages.dev/exports/`
+- **Daily export pipeline** — `generate_export.py` builds `exports/YYYY-MM-DD.json+csv` (176 stocks; metrics, what-if $100/$1k/$10k × 5 timeframes, top-3 news + sentiment, AI signals); `exports/manifest.json` tracks all snapshots; `generate-export.yml` runs at 22:00 UTC weekdays; `exports/index.html` shows date dropdown, loads selected snapshot, one-click Copy JSON/CSV; served at `stocks-4qw.pages.dev/exports/`
 
 - **Site max-width 1920px** — `.header-inner`, `.nav-inner`, `.container` in `shared.css` widened from 1600px to 1920px; no layout changes, just allows the content to spread wider on large monitors (`shared.css`)
 

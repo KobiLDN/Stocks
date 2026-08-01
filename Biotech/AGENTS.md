@@ -21,7 +21,7 @@ Read the **root `../AGENTS.md` first** — it contains the full workflow, git ru
 ## UK-listed stocks (AZN, GSK)
 
 - Yahoo Finance symbols: `AZN.L` and `GSK.L`
-- yfinance returns prices in **GBp (pence)** — divide by 100 to get £
+- yfinance returns prices in **GBp (pence)** — divide by 100 to get £ (site displays `price_usd` = `price_gbp * fx_gbp_usd`)
 - TradingView widget symbols: `LSE:AZN` and `LSE:GSK`
 - `YAHOO_SUFFIX` mapping in HTML/JS: `{ 'AZN': 'AZN.L', 'GSK': 'GSK.L' }`
 

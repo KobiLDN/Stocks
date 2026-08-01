@@ -8,7 +8,7 @@ import json, re, csv, os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "Tech"]
+SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
 BASE    = os.path.dirname(os.path.abspath(__file__))
 
 # T212 ticker → canonical universe ticker (OTC / ADR aliases)
@@ -102,7 +102,7 @@ PRICE_FIELDS = [
     "ticker", "company_name", "sector", "category", "exchange",
     "price_usd", "change_1d", "change_1w", "change_1m",
     "change_ytd", "return_1yr",
-    "market_cap_gbp_b", "beta", "pe_ratio",
+    "market_cap_usd_b", "beta", "pe_ratio",
     "avg_volume_m", "vol_1d", "vol_1w", "vol_1m",
     "div_yield_pct", "short_pct",
     "analyst", "analyst_score",
@@ -258,12 +258,23 @@ else:
     out_csv  = os.path.join(BASE, "exports", f"{date_str}.csv")
     update_manifest = True
 
+# ── Macro block (SPY / QQQ / VIX / regime) ────────────────────────────────────
+# Produced by update_market.py during the price workflow. Optional — null if the
+# file is missing so the export never fails on its absence.
+def read_macro():
+    try:
+        with open(os.path.join(BASE, "market.json"), encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
 # ── Write JSON ────────────────────────────────────────────────────────────────
 payload = {
     "generated":        gen_str,
     "total":            len(all_stocks),
     "has_portfolio":    t212_data is not None,
     "sectors":          meta,
+    "macro":            read_macro(),
     "momentum_picks":   compute_export_momentum(all_stocks),
     "stocks":           all_stocks,
 }
