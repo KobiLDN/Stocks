@@ -768,7 +768,7 @@
 
     </div>
 
-    <div style="padding:0 40px 16px;">
+    <div style="padding:28px 40px 16px;">
       <a href="exports/index.html" style="
         display:flex;align-items:center;justify-content:space-between;
         background:var(--surface);border:1px solid var(--border);
@@ -937,7 +937,7 @@
         const match = text.match(/window\.NEWS_FEED_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
         if (!match) return;
         const data = JSON.parse(match[1]);
-        const articles = (data.articles || []).slice(0, 3);
+        const articles = (data.articles || []).slice(0, 6);
         if (!articles.length) { el.innerHTML = '<div class="pt-empty">No articles</div>'; return; }
         el.innerHTML = articles.map(a => {
           const sc = a.sentiment > 0.05 ? 'pos' : a.sentiment < -0.05 ? 'neg' : '';
