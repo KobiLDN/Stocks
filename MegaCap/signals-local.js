@@ -1,9 +1,176 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-31 10:54",
+  "updated": "2026-08-03 11:53",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "Azure revenue soared 43% YoY, pushing shares +21.75% in a week; P/E is a reasonable 25.9 with strong_buy consensus and a record $678B commercial backlog.",
+      "drivers": [
+        "+21.75% 1W momentum",
+        "P/E 25.9 is attractive",
+        "Azure +43% revenue growth",
+        "strong_buy consensus (1.35)"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Amazon surged +17% in a week and +19.9% YTD, with P/E of 21.8 and strong_buy consensus; robust AI/cloud tailwinds bolster the outlook.",
+      "drivers": [
+        "+17.00% 1W momentum",
+        "+19.90% YTD",
+        "P/E 21.8 undervalued",
+        "strong_buy consensus (1.35)"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Shares jumped +24.76% in a month after unveiling Qwen3.8-Max AI model rivaling Anthropic; P/E 18.8 with strong_buy consensus and bullish retail sentiment.",
+      "drivers": [
+        "+24.76% 1M momentum",
+        "+9.02% 1W",
+        "P/E 18.8 cheap",
+        "strong_buy consensus (1.32)"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Chevron gained +28.66% YTD and +18.79% in a month, supported by 3.62% dividend yield and a P/E of 18.9; strong energy sector momentum.",
+      "drivers": [
+        "+28.66% YTD",
+        "+18.79% 1M momentum",
+        "P/E 18.9 reasonable",
+        "3.62% dividend yield"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "SAP rallied +15.38% in a month and +14.76% in a week, with a 1.6% dividend yield and buy consensus; enterprise software demand is robust.",
+      "drivers": [
+        "+15.38% 1M momentum",
+        "+14.76% 1W",
+        "P/E 24.0 fair",
+        "1.6% dividend yield"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Abbott surged +15.48% in a month and offers a 2.38% dividend yield; P/E 34.2 with buy consensus and positive news sentiment.",
+      "drivers": [
+        "+15.48% 1M momentum",
+        "2.38% dividend yield",
+        "Buy consensus (1.67)",
+        "+0.334 news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SONY",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Sony climbed +15.09% in a month and +10.87% in a week, with a P/E of 20.4 and strong_buy consensus; cheap valuation supports upside.",
+      "drivers": [
+        "+15.09% 1M momentum",
+        "+10.87% 1W",
+        "P/E 20.4 attractive",
+        "strong_buy consensus (1.50)"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ExxonMobil is up +28.45% YTD and +14.06% in a month, with a 2.65% dividend yield; buy consensus with bullish energy sector tailwinds.",
+      "drivers": [
+        "+28.45% YTD",
+        "+14.06% 1M",
+        "2.65% dividend yield",
+        "buy consensus (2.40)"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "RTX gained +15.8% YTD and +12.22% in a month, with a 1.36% dividend yield and buy consensus; defense spending provides a macro tailwind.",
+      "drivers": [
+        "+12.22% 1M momentum",
+        "+15.8% YTD",
+        "1.36% dividend yield",
+        "buy consensus (1.87)"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Thermo Fisher rose +11.88% in a month, P/E 30.9 with buy consensus and positive news sentiment; life sciences tools demand is steady.",
+      "drivers": [
+        "+11.88% 1M momentum",
+        "P/E 30.9 reasonable",
+        "buy consensus (1.54)",
+        "+0.132 news sentiment"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.898,
+      "ytd": "+129.05%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +129.05% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +129.05% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.787,
+      "ytd": "+113.07%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +113.07% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +113.07% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.758,
+      "ytd": "+108.92%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +108.92% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +108.92% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,173 +299,6 @@ window.SIGNALS_DATA = {
         "1M +15.23%",
         "supply constraints",
         "buy 2.04"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.967,
-      "ytd": "+117.21%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +117.21% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +117.21% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.912,
-      "ytd": "+110.53%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.53% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.53% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.528,
-      "ytd": "+131.41%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +131.41% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +131.41% \u2265 124.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +26.46%, 1M +12.48%, P/E 26.03, div yield 2.66%, upcoming earnings catalyst on July 31, low beta 0.162 provides stability.",
-      "drivers": [
-        "YTD +26.46%",
-        "1M +12.48%",
-        "P/E 26.03",
-        "div yield 2.66%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "YTD +22.61%, 1M +11.34%, P/E 33.14, high div yield 3.75%, strong energy sector momentum with buy consensus.",
-      "drivers": [
-        "YTD +22.61%",
-        "1M +11.34%",
-        "div yield 3.75%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "1M +16.68%, 1W +12.86%, YTD +17.61%, P/E 38.48, defense sector tailwinds, low beta 0.298, buy rating.",
-      "drivers": [
-        "1M +16.68%",
-        "1W +12.86%",
-        "YTD +17.61%",
-        "low beta 0.298"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +25.72%, 1M +20.71%, market cap $4.99T, AI strength narrative, positive news sentiment 0.252, analyst buy.",
-      "drivers": [
-        "YTD +25.72%",
-        "1M +20.71%",
-        "market cap $4.99T",
-        "news sentiment 0.252"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BLK",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +15.51%, 1W +5.71%, P/E 25.45, div yield 2.16%, asset manager benefiting from market rally, buy consensus.",
-      "drivers": [
-        "1M +15.51%",
-        "P/E 25.45",
-        "div yield 2.16%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "1M +13.82%, 1W +10.12%, P/E 30.12, high news sentiment 0.402, buy rating, strong bounce from YTD -2.52%.",
-      "drivers": [
-        "1M +13.82%",
-        "1W +10.12%",
-        "news sentiment 0.402",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "1M +16.53%, 1W +7.63%, P/E 33.73, record results and raised guidance, high news sentiment 0.411, buy consensus.",
-      "drivers": [
-        "1M +16.53%",
-        "record results guidance",
-        "news sentiment 0.411",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +15.67%, 1W +16.09%, P/E 22.51, div yield 1.71%, undervalued narrative, buy rating, strong recent momentum.",
-      "drivers": [
-        "1M +15.67%",
-        "1W +16.09%",
-        "P/E 22.51",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BABA",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "1M +20.61%, P/E 17.69, strong_buy consensus (score 1.32), AI push via OceanBase, turnaround potential from YTD -25.36%.",
-      "drivers": [
-        "1M +20.61%",
-        "P/E 17.69",
-        "strong_buy consensus",
-        "AI push catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "HON",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "YTD +21.52%, 1M +8.45%, P/E 9.45 (low), upgraded by BofA, high news sentiment 0.456, strong fundamentals.",
-      "drivers": [
-        "YTD +21.52%",
-        "P/E 9.45",
-        "upgraded by BofA",
-        "news sentiment 0.456"
       ]
     }
   ]

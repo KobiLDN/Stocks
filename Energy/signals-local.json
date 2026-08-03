@@ -1,9 +1,142 @@
 {
-  "updated": "2026-07-31 10:53",
+  "updated": "2026-08-03 11:52",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +92.08%, P/E 13.05, and aggregate news sentiment 0.414 \u2014 Valero benefits from record refining margins as highlighted in recent industry reports [energynow.com](https://energynow.com/2026/08/exxonmobil-chevron-steer-windfall-profits-into-debt-reduction/).",
+      "drivers": [
+        "YTD +92% return",
+        "low P/E 13x",
+        "high news sentiment 0.414",
+        "refining margin tailwind"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +93.33%, 1M +19.48%, and P/E 20.83 \u2014 Marathon Petroleum is capturing strong downstream margins with a favourable analyst consensus.",
+      "drivers": [
+        "YTD +93% return",
+        "strong 1M momentum +19.5%",
+        "refining margin catalyst",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "YTD +42.07%, P/E 14.62, and news sentiment 0.332 \u2014 EOG's low-cost production and strong free cash flow make it a top E&P pick.",
+      "drivers": [
+        "YTD +42% return",
+        "P/E 14.6x",
+        "positive news sentiment 0.332",
+        "low-cost producer"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +71.38%, P/E 11.14, and 1M rally of +31.69% \u2014 Equinor's massive momentum is supported by high oil prices and LNG demand, though analyst consensus is hold.",
+      "drivers": [
+        "YTD +71% return",
+        "P/E 11.1x",
+        "1M momentum +31.7%",
+        "LNG exposure"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "YTD +28.66%, P/E 18.94, analyst score 1.72 (strong buy consensus), and news sentiment 0.16 \u2014 Chevron posted record Q2 profit and is aggressively reducing debt [energynow.com](https://energynow.com/2026/08/exxonmobil-chevron-steer-windfall-profits-into-debt-reduction/).",
+      "drivers": [
+        "record Q2 profit",
+        "analyst score 1.72",
+        "debt reduction",
+        "dividend yield 3.62%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +33.52%, P/E 11.0, and dividend yield 4.82% \u2014 TotalEnergies offers a compelling value with low valuation and high yield, benefiting from integrated operations.",
+      "drivers": [
+        "P/E 11x",
+        "dividend yield 4.82%",
+        "YTD +33.5%",
+        "integrated model"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +24.18%, P/E 10.17, and 1W +4.07% \u2014 Shell's CEO forecasts higher oil prices long-term, and the company cut net debt by ~$10.8B, reinforcing its balance sheet [longbridge.com](https://longbridge.com/news/294586204).",
+      "drivers": [
+        "P/E 10.2x",
+        "1W momentum +4.1%",
+        "CEO bullish on oil prices",
+        "debt reduction"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +26.49%, P/E 20.42, and news sentiment 0.258 \u2014 ConocoPhillips has a solid production growth profile and a strong buy rating with an analyst score of 1.76.",
+      "drivers": [
+        "YTD +26.5%",
+        "analyst score 1.76",
+        "positive news sentiment",
+        "production growth"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +29.30%, 1M +25.09%, and dividend yield 4.42% \u2014 BP shows strong short-term momentum, though its P/E of 36.76 is elevated, raising valuation concerns.",
+      "drivers": [
+        "1M momentum +25.1%",
+        "dividend yield 4.42%",
+        "YTD +29.3%",
+        "high P/E"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +35.93%, 1M +19.04%, but P/E 77.12 is very high \u2014 Occidental has strong momentum but extreme valuation, and low short interest at 0.01% suggests limited bearishness.",
+      "drivers": [
+        "YTD +35.9%",
+        "1M momentum +19%",
+        "low short interest 0.01%",
+        "high P/E 77x"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SHEL",
@@ -132,139 +265,6 @@
         "P/E 11.04",
         "analyst hold",
         "CFO caution"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "TotalEnergies offers exceptional value with a P/E of 10.54, a 5.01% dividend yield, and strong YTD return of +27.93%, supported by positive news sentiment of 0.211.",
-      "drivers": [
-        "P/E 10.54",
-        "dividend yield 5.01%",
-        "YTD +27.93%",
-        "news sentiment 0.211"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Marathon Petroleum leads with a staggering YTD return of +86.97% and 1-month momentum of +18.07%, driven by record crack spreads and tight fuel markets, with a buy analyst consensus.",
-      "drivers": [
-        "YTD +86.97%",
-        "1M +18.07%",
-        "record crack spreads",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Valero Energy shows a YTD return of +82.77% and 1-month gain of +12.23%, with a P/E of 22.27 and the highest news sentiment (0.284) among refiners.",
-      "drivers": [
-        "YTD +82.77%",
-        "1M +12.23%",
-        "news sentiment 0.284",
-        "refining momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SLB",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SLB has the best analyst score (1.60) and highest news sentiment (0.382) in the universe, with a YTD return of +25.72% and 1-week momentum of +7.28%.",
-      "drivers": [
-        "analyst score 1.60",
-        "news sentiment 0.382",
-        "YTD +25.72%",
-        "1W +7.28%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Exxon Mobil has a solid YTD return of +26.46% and 1-month gain of +12.48%, with a low beta of 0.162 and a buy rating ahead of its July 31 earnings report.",
-      "drivers": [
-        "YTD +26.46%",
-        "1M +12.48%",
-        "beta 0.162",
-        "earnings catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Chevron combines a YTD return of +22.61% with a strong analyst score of 1.72 and a 3.75% dividend yield, supported by positive news sentiment of 0.119.",
-      "drivers": [
-        "analyst score 1.72",
-        "dividend yield 3.75%",
-        "YTD +22.61%",
-        "news sentiment 0.119"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Shell offers a compelling P/E of 13.47 and a 3.62% dividend yield, with a YTD return of +16.38% and 1-month momentum of +12.11%.",
-      "drivers": [
-        "P/E 13.47",
-        "dividend yield 3.62%",
-        "YTD +16.38%",
-        "1M +12.11%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "BP provides a high dividend yield of 4.72% and a YTD return of +19.15%, with a 1-month gain of +11.57% and low short interest of 0.49%.",
-      "drivers": [
-        "dividend yield 4.72%",
-        "YTD +19.15%",
-        "1M +11.57%",
-        "short interest 0.49%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "EOG Resources has a YTD return of +33.42%, a low P/E of 13.8, and a 2.91% dividend yield, with positive news sentiment of 0.202 ahead of its earnings release.",
-      "drivers": [
-        "YTD +33.42%",
-        "P/E 13.8",
-        "dividend yield 2.91%",
-        "news sentiment 0.202"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ConocoPhillips has a strong analyst score of 1.76, a YTD return of +19.80%, and a P/E of 19.6, with a 2.91% dividend yield despite slightly negative news sentiment.",
-      "drivers": [
-        "analyst score 1.76",
-        "YTD +19.80%",
-        "P/E 19.6",
-        "dividend yield 2.91%"
       ]
     }
   ]

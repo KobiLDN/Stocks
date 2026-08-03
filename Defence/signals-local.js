@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-31 10:44",
+  "updated": "2026-08-03 11:49",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +18.62%, PE 21.5, record backlog $230B and raised FY2026 guidance after Q2 sales of $20.1B (+11% YoY) and a $35B THAAD contract [lockheedmartin.com](https://news.lockheedmartin.com/2026-07-23-Lockheed-Martin-Reports-Second-Quarter-2026-Financial-Results) [spokesman.com](https://www.spokesman.com/stories/2026/jul/23/lockheed-martin-rtx-lift-2026-forecasts-as-pentago/).",
+      "drivers": [
+        "YTD +18.62%",
+        "PE 21.5",
+        "record $230B backlog",
+        "raised guidance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +15.8%, 1M +12.22%, PE 37.89, raised FY2026 adjusted sales and EPS guidance after Q2 organic sales growth of 16% and backlog of $289B [rtx.com](https://www.rtx.com/news/news-center/2026/07/23/rtx-reports-q2-2026-results) [spokesman.com](https://www.spokesman.com/stories/2026/jul/23/lockheed-martin-rtx-lift-2026-forecasts-as-pentago/).",
+      "drivers": [
+        "YTD +15.8%",
+        "1M +12.22%",
+        "raised guidance",
+        "backlog $289B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "HII",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "1M +17.02%, 1W +13.51%, PE 19.45, Q2 earnings beat ($5.27 vs $3.82 est.) and raised shipbuilding revenue guidance to ~$10.3B [fool.com](https://www.fool.com/investing/2026/08/02/why-huntington-ingalls-industries-stock-is-up/).",
+      "drivers": [
+        "1M +17.02%",
+        "1W +13.51%",
+        "PE 19.45",
+        "earnings beat"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +32.93%, strong_buy analyst consensus (score 1.5), PE 38.7, positive news sentiment 0.217 with AI expansion and strong execution.",
+      "drivers": [
+        "YTD +32.93%",
+        "strong_buy rating",
+        "PE 38.7",
+        "news sentiment 0.217"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +16.93%, PE 13.19 (cheap), news sentiment 0.148, Navy radar order win supports backlog growth.",
+      "drivers": [
+        "YTD +16.93%",
+        "PE 13.19",
+        "Navy radar order",
+        "positive news"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +19.4%, 1M +13.56%, PE 29.91, buy rating (score 2.17), UK defence momentum with 'all-British' fighter jet programme.",
+      "drivers": [
+        "YTD +19.4%",
+        "1M +13.56%",
+        "PE 29.91",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +19.81%, YTD +13.89%, PE 25.3, news sentiment 0.296, small-cap UK defence penny stock with strong momentum.",
+      "drivers": [
+        "1M +19.81%",
+        "YTD +13.89%",
+        "PE 25.3",
+        "news sentiment 0.296"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1D +3.48%, analyst score 1.56 (buy), PE 20.53, SkyValor contract win suggests 24% undervaluation.",
+      "drivers": [
+        "1D +3.48%",
+        "analyst score 1.56",
+        "PE 20.53",
+        "SkyValor contract"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1M +12.16%, PE 10.57 (very cheap), news sentiment 0.214, Leidos partnership with CoreWeave, though YTD -36.61% remains a risk.",
+      "drivers": [
+        "1M +12.16%",
+        "PE 10.57",
+        "Leidos partnership",
+        "news sentiment 0.214"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +16.18%, PE 10.95 (cheap), but YTD -16.62% and hold rating (2.86) with high short interest 8.59% limit conviction.",
+      "drivers": [
+        "1M +16.18%",
+        "PE 10.95",
+        "YTD -16.62%",
+        "hold rating"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "buy consensus",
         "news_s 0.192",
         "1M +5.01%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Leonardo DRS has strong_buy consensus, +42% YTD and +20% 1M momentum, P/E 45, low beta 0.19, and positive news sentiment 0.091.",
-      "drivers": [
-        "+42% YTD",
-        "strong_buy consensus",
-        "low beta 0.19",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LMT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Lockheed Martin shows +18% YTD and +16% 1M momentum, P/E 21.36, high dividend yield 2.38%, and positive news sentiment 0.282 despite hold analyst rating.",
-      "drivers": [
-        "+18% YTD",
-        "P/E 21.36",
-        "high dividend yield 2.38%",
-        "positive news sentiment 0.282"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "General Dynamics has buy consensus, +16% YTD, +13.5% 1M, P/E 24.51, and positive news sentiment 0.169.",
-      "drivers": [
-        "+16% YTD",
-        "buy consensus",
-        "P/E 24.51",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "RTX has buy consensus, +17.6% YTD and +16.7% 1M momentum, P/E 38.48, and positive news sentiment 0.071.",
-      "drivers": [
-        "+17.6% YTD",
-        "buy consensus",
-        "strong 1M momentum +16.7%",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BAE Systems has buy consensus, +15.5% YTD, +12% 1M, P/E 29.78, and strong news sentiment 0.299.",
-      "drivers": [
-        "+15.5% YTD",
-        "buy consensus",
-        "news sentiment 0.299",
-        "UK defence exposure"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SAIC has buy consensus, +21.4% YTD, P/E 13.33, low beta 0.283, and positive news sentiment 0.083.",
-      "drivers": [
-        "+21.4% YTD",
-        "P/E 13.33",
-        "low beta 0.283",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Leidos has buy consensus, +17.8% 1M momentum, P/E 10.51, and positive news sentiment 0.078, despite -35% YTD.",
-      "drivers": [
-        "+17.8% 1M",
-        "P/E 10.51",
-        "buy consensus",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "CACI has buy consensus with strong analyst score 1.56, +11.6% 1M, P/E 20.49, and positive news sentiment 0.123.",
-      "drivers": [
-        "analyst score 1.56",
-        "+11.6% 1M",
-        "P/E 20.49",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "QinetiQ has buy consensus, +12.9% YTD, +21.6% 1M momentum, P/E 25.07, and positive news sentiment 0.296.",
-      "drivers": [
-        "+21.6% 1M",
-        "+12.9% YTD",
-        "buy consensus",
-        "positive news sentiment 0.296"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "AeroVironment has buy consensus, +12.5% 1M, positive news sentiment 0.213, and drone exposure, despite -39% YTD and high short interest 10%.",
-      "drivers": [
-        "+12.5% 1M",
-        "buy consensus",
-        "positive news sentiment 0.213",
-        "drone sector focus"
       ]
     }
   ]

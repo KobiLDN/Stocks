@@ -1,9 +1,220 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-31 10:47",
+  "updated": "2026-08-03 11:50",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "Azure revenue surged 43% to $100B annual run rate, backlog hit $678B, and EPS of $4.74 beat estimates; stock surged +20.93% in 1M and +21.75% in 1W with strong_buy consensus (score 1.35) and positive news sentiment 0.219 [fool.com](https://www.fool.com/investing/2026/08/02/why-microsoft-stock-is-surging/).",
+      "drivers": [
+        "Azure 43% growth",
+        "$678B backlog",
+        "EPS beat $4.74 vs $4.24 est",
+        "1M momentum +20.93%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "AWS revenue grew 37% to $42.2B, beating 31% consensus, and contract backlog expanded to $496B; stock gained +12.36% 1M and +17% 1W with strong_buy consensus and P/E 21.83 [tradingpedia.com](https://www.tradingpedia.com/2026/08/03/amazon-boosts-ai-capex-as-aws-growth-accelerates/).",
+      "drivers": [
+        "AWS 37% revenue growth",
+        "$496B backlog",
+        "1W momentum +17%",
+        "P/E 21.83"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +35.33%, 1M +12.29%, 1W +9.41% with strong_buy analyst consensus (score 1.49) and highest news sentiment in enterprise software at 0.254.",
+      "drivers": [
+        "YTD +35.33%",
+        "1M +12.29%",
+        "strong_buy consensus",
+        "news sentiment 0.254"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +42.32%, 1M +13.26%, 1W +6.42% with buy consensus and positive news sentiment 0.14; high beta 1.671 reflects growth profile.",
+      "drivers": [
+        "YTD +42.32%",
+        "1M +13.26%",
+        "buy consensus",
+        "news sentiment 0.14"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +12.40%, 1M +5.40%, 1W +1.93% with strong_buy consensus (score 1.31) and P/E 64.99 reflecting AI infrastructure demand; stable momentum.",
+      "drivers": [
+        "strong_buy consensus 1.31",
+        "YTD +12.40%",
+        "1M +5.40%",
+        "P/E 64.99"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +12.74%, 1W +12.44% with buy consensus (score 1.66) and reasonable P/E 21.32; YTD -27.07% offers value entry.",
+      "drivers": [
+        "1M +12.74%",
+        "1W +12.44%",
+        "P/E 21.32",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +18.87%, 1W +6.66% with buy consensus (score 1.8) and low P/E 19.27; YTD -49.32% suggests deep value with AI restructuring catalyst.",
+      "drivers": [
+        "1M +18.87%",
+        "P/E 19.27",
+        "buy consensus",
+        "AI restructuring"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +13.15%, 1W +11.38%, 1D +6.10% with strong_buy consensus (score 1.39) and attractive P/E 17.86; news sentiment slightly negative but fundamentals solid.",
+      "drivers": [
+        "P/E 17.86",
+        "1W +11.38%",
+        "strong_buy consensus",
+        "YTD +13.15%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +53.94%, 1W +1.59%, 1D +2.24% with buy consensus (score 1.88) and P/E 38.66; dividend yield 1.45% adds income.",
+      "drivers": [
+        "YTD +53.94%",
+        "P/E 38.66",
+        "buy consensus",
+        "dividend yield 1.45%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "1W +12.60%, 1D +2.34% with strong_buy consensus (score 1.47) and positive news sentiment 0.079; YTD -24.56% but strong weekly momentum.",
+      "drivers": [
+        "1W +12.60%",
+        "strong_buy consensus 1.47",
+        "news sentiment 0.079",
+        "beta 0.959"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.898,
+      "ytd": "+129.05%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +129.05% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +129.05% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.787,
+      "ytd": "+113.07%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +113.07% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +113.07% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.758,
+      "ytd": "+108.92%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +108.92% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +108.92% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.752,
+      "ytd": "+107.95%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +107.95% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +107.95% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "signal": "buy",
+      "confidence": 0.622,
+      "ytd": "+89.29%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +89.29% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +89.29% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.592,
+      "ytd": "+85.00%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +85.00% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +85.00% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.53,
+      "ytd": "+161.08%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +161.08% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +161.08% \u2265 152.1% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,215 +343,6 @@ window.SIGNALS_DATA = {
         "strong_buy 1.42",
         "news sentiment 0.311",
         "memory chip demand"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.967,
-      "ytd": "+117.21%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +117.21% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +117.21% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.912,
-      "ytd": "+110.53%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.53% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.53% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.809,
-      "ytd": "+98.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +98.06% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +98.06% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "signal": "buy",
-      "confidence": 0.719,
-      "ytd": "+87.09%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +87.09% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +87.09% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.673,
-      "ytd": "+81.57%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +81.57% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +81.57% \u2265 60.6% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.528,
-      "ytd": "+131.41%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +131.41% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +131.41% \u2265 124.5% SB"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.523,
-      "ytd": "+63.34%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +63.34% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +63.34% \u2265 60.6% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Strong momentum (+20.71% 1M, +25.72% YTD), positive news sentiment 0.252, and analyst buy consensus with P/E 40.83.",
-      "drivers": [
-        "1M +20.71%",
-        "YTD +25.72%",
-        "news_s 0.252",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Low P/E of 13.61 with strong recent momentum (+20.71% 1M, +9.69% 1W), positive news sentiment 0.23, though analyst hold.",
-      "drivers": [
-        "P/E 13.61",
-        "1M +20.71%",
-        "1W +9.69%",
-        "news_s 0.23"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong_buy analyst consensus, strong momentum (+10.65% 1M, +8.39% 1W), positive news sentiment 0.175, P/E 65.85.",
-      "drivers": [
-        "strong_buy",
-        "1M +10.65%",
-        "1W +8.39%",
-        "news_s 0.175"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Reasonable P/E 20.12, strong momentum (+14.92% 1M, +6.73% 1W), positive news sentiment 0.121, buy consensus.",
-      "drivers": [
-        "P/E 20.12",
-        "1M +14.92%",
-        "1W +6.73%",
-        "news_s 0.121"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "P/E 18.55, strong momentum (+18.01% 1M, +7.96% 1W), buy consensus, though slightly negative news sentiment -0.042.",
-      "drivers": [
-        "P/E 18.55",
-        "1M +18.01%",
-        "1W +7.96%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Moderate P/E 33.79, good momentum (+10.66% 1M, +3.72% 1W), buy consensus, news sentiment 0.074.",
-      "drivers": [
-        "P/E 33.79",
-        "1M +10.66%",
-        "1W +3.72%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Strong momentum (+14.07% 1M, +5.89% 1W), positive news sentiment 0.275, buy consensus, though high P/E 125.27.",
-      "drivers": [
-        "1M +14.07%",
-        "1W +5.89%",
-        "news_s 0.275",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Positive news sentiment 0.243, YTD +34.73%, buy consensus, though P/E negative and mixed short-term momentum.",
-      "drivers": [
-        "news_s 0.243",
-        "YTD +34.73%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Strong_buy consensus, YTD +24.76%, positive news sentiment 0.028, though P/E negative.",
-      "drivers": [
-        "strong_buy",
-        "YTD +24.76%",
-        "news_s 0.028"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong YTD +53.39%, positive news sentiment 0.243, buy consensus, P/E 38.15, stable beta 1.007.",
-      "drivers": [
-        "YTD +53.39%",
-        "news_s 0.243",
-        "buy consensus",
-        "P/E 38.15"
       ]
     }
   ]

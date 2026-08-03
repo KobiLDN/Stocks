@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-07-31 10:52",
+  "updated": "2026-08-03 11:51",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "BNB",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "BNB is the only major in the green, up 1.32% on the week and +2.30% on the month, with positive news sentiment 0.154 and a headline about World Liberty Financial's billion-dollar crypto income. Its relative strength against a weak market and strong fundamentals make it the top pick.",
+      "drivers": [
+        "+1.32% 1W, +2.30% 1M",
+        "Only major in green",
+        "News sentiment 0.154",
+        "Market cap $77.5B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ADA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "ADA surged 10.56% in the past week, the best among large caps, with +3.92% on the month, driven by the upcoming Cardano upgrade. Despite negative news sentiment -0.057, the momentum and upgrade catalyst support a strong buy.",
+      "drivers": [
+        "+10.56% 1W",
+        "+3.92% 1M",
+        "Upgrade catalyst",
+        "Market cap $6.7B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ETH is down 5.53% on the week but up 5.78% on the month, with positive news sentiment 0.234 and a headline about cryptocurrencies being cheap. Despite ETF outflows and macro headwinds, its strong monthly momentum and institutional interest support a buy.",
+      "drivers": [
+        "+5.78% 1M",
+        "News sentiment 0.234",
+        "Institutional interest",
+        "Market cap $223.9B"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TRX is the only asset with positive YTD (+14.47%) and 1-year (+14%) returns, with new accounts jumping 42.87% to a one-month high. Its strong fundamentals and adoption growth make it a solid buy despite a slight weekly dip.",
+      "drivers": [
+        "+14.47% YTD",
+        "+14% 1Y",
+        "New accounts +42.87%",
+        "Market cap $30.9B"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "LINK is up 4.44% on the month with a headline about Ethereum Institutional closing a funding round with 100+ backers, indicating strong ecosystem growth. Despite a -6.51% weekly dip, its monthly momentum and positive news support a buy.",
+      "drivers": [
+        "+4.44% 1M",
+        "Ecosystem funding round",
+        "Market cap $6.2B",
+        "News sentiment 0.0"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "PEPE is up 2.87% on the month with positive news sentiment 0.202 and a headline about a trader turning $50K into nearly $1M, indicating strong memecoin social sentiment. Despite a weekly dip, its monthly momentum and meme appeal make it a buy.",
+      "drivers": [
+        "+2.87% 1M",
+        "News sentiment 0.202",
+        "Memecoin social sentiment",
+        "Market cap $1.2B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "BTC is down 4.17% on the week but up 0.42% on the month, with a market cap of $1.26T. Despite the Coldcard hack and ETF outflows, its status as the reference asset and potential support at $60K make it a buy for long-term holders.",
+      "drivers": [
+        "+0.42% 1M",
+        "Market cap $1.26T",
+        "Support at $60K",
+        "News sentiment -0.062"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "POL is up 0.76% on the day and nearly flat on the month (-0.01%), showing resilience in a weak market. With a market cap of $0.78B and no negative news, it offers a defensive play with potential for upside.",
+      "drivers": [
+        "+0.76% 1D",
+        "Flat 1M",
+        "Market cap $0.78B",
+        "Defensive play"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ALGO",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "ALGO is up 6.18% on the day and 1.25% on the week, showing strong short-term momentum despite a -4.17% monthly dip. Its low market cap of $0.76B offers high beta potential, and it was mentioned as sustaining gains in the latest news.",
+      "drivers": [
+        "+6.18% 1D",
+        "+1.25% 1W",
+        "High beta",
+        "Market cap $0.76B"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.592,
+      "rationale": "KAITO is up 85.08% YTD and 51.74% on the month, but down 19.50% on the week and 19.29% on the day, indicating high volatility. Despite the recent pullback, its strong YTD performance and small market cap of $0.23B make it a speculative buy.",
+      "drivers": [
+        "+85.08% YTD",
+        "+51.74% 1M",
+        "High volatility",
+        "Market cap $0.23B"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ETH",
@@ -132,129 +265,6 @@ window.SIGNALS_DATA = {
         "extreme volatility",
         "zero price stability",
         "speculative token event"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KAITO",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Massive +143% YTD and +110% 1M momentum, though small cap of $0.3B suggests high risk.",
-      "drivers": [
-        "+143% YTD",
-        "+110% 1M",
-        "small cap $0.3B"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ETH",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong +21.17% 1M rebound with $231B market cap and positive news sentiment 0.098.",
-      "drivers": [
-        "+21.17% 1M",
-        "large cap $231B",
-        "news sentiment 0.098"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+14.79% 1M, high news sentiment 0.371, and $6.3B market cap.",
-      "drivers": [
-        "+14.79% 1M",
-        "news sentiment 0.371",
-        "market cap $6.3B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+16.80% 1M momentum, meme coin with $1.15B cap and news sentiment 0.202.",
-      "drivers": [
-        "+16.80% 1M",
-        "meme coin momentum",
-        "sentiment 0.202"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+12.83% 1M and +5.21% 1D, but -51% YTD; $6B cap, sentiment 0.037.",
-      "drivers": [
-        "+12.83% 1M",
-        "+5.21% 1D",
-        "market cap $6B"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XRP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "High news sentiment 0.35, +3.4% 1M, large $68B market cap.",
-      "drivers": [
-        "news sentiment 0.35",
-        "large cap $68B",
-        "+3.4% 1M"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+7% 1M, largest cap $1.29T, positive sentiment 0.093, safe haven.",
-      "drivers": [
-        "+7% 1M",
-        "largest cap $1.29T",
-        "news sentiment 0.093"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+2.93% 1M, positive sentiment 0.179, $75.9B cap.",
-      "drivers": [
-        "+2.93% 1M",
-        "sentiment 0.179",
-        "large cap $75.9B"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "+9.94% 1M, but tiny $0.055B cap, high risk.",
-      "drivers": [
-        "+9.94% 1M",
-        "tiny cap $0.055B",
-        "high beta"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+14% YTD and +14.41% YTD, large cap $30.9B, steady momentum.",
-      "drivers": [
-        "+14% YTD",
-        "large cap $30.9B",
-        "positive annual return"
       ]
     }
   ]
