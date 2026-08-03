@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-08-03 07:37",
-  "fx_gbp_usd": 1.3465,
+  "updated": "2026-08-03 12:31",
+  "fx_gbp_usd": 1.346,
   "stocks": [
     {
       "ticker": "XOM",
@@ -9,7 +9,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "115",
       "price_usd": 155.44,
-      "change_1d": "-1.92%",
+      "change_1d": "-1.05%",
       "change_1w": "-0.96%",
       "change_1m": "+14.06%",
       "change_ytd": "+28.45%",
@@ -19,9 +19,9 @@ window.PRICES_DATA = {
       "high_gbp": "131",
       "high_usd": 176.41,
       "bar_pct": 70,
-      "market_cap_gbp_b": 478.495,
-      "market_cap_usd_b": 644.29,
-      "beta": 0.162,
+      "market_cap_gbp_b": null,
+      "market_cap_usd_b": null,
+      "beta": 0.173,
       "pe_ratio": 26.17,
       "avg_volume_m": 16.7,
       "div_yield_pct": 265.0,
@@ -32,6 +32,13 @@ window.PRICES_DATA = {
       "vol_1w": 73074300,
       "vol_1m": 317761200,
       "news": [
+        {
+          "title": "Major oil companies reap profits as US-Iran fighting drives energy prices higher",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/03/major-oil-companies-reap-profits-as-us-iran-fighting-drives-energy-prices-higher",
+          "published": 1785751202,
+          "sentiment": 0.361
+        },
         {
           "title": "4 Dividend Energy Stocks to Buy This Month, Starting With ExxonMobil",
           "publisher": "Motley Fool",
@@ -59,16 +66,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/3595009/hoping-for-lower-prices-at-the-gas-pump-after-exxon-doubles-profits-ceo-darren-woods-says-i-wouldnt-hold-my-breath",
           "published": 1785597302,
           "sentiment": 0.542
-        },
-        {
-          "title": "Exxon, Chevron Warn Fuel Prices to Endure as War Knocks Refining",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/energy/articles/exxon-chevron-warn-fuel-prices-133000445.html",
-          "published": 1785591000,
-          "sentiment": -0.649
         }
       ],
-      "news_sentiment": 0.11
+      "news_sentiment": 0.312
     },
     {
       "ticker": "CVX",
@@ -77,17 +77,17 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "146",
       "price_usd": 196.83,
-      "change_1d": "+1.64%",
+      "change_1d": "-0.84%",
       "change_1w": "+1.05%",
       "change_1m": "+18.79%",
       "change_ytd": "+28.66%",
       "return_1yr": "+30%",
       "low_gbp": "109",
       "low_usd": 146.49,
-      "high_gbp": "159",
+      "high_gbp": "160",
       "high_usd": 214.71,
       "bar_pct": 74,
-      "market_cap_gbp_b": 291.131,
+      "market_cap_gbp_b": 291.237,
       "market_cap_usd_b": 392.006,
       "beta": 0.488,
       "pe_ratio": 18.94,
@@ -101,6 +101,27 @@ window.PRICES_DATA = {
       "vol_1m": 170554400,
       "news": [
         {
+          "title": "USO, CVX, XOM, OXY Drop Premarket As Trump\u2019s Iran Talks Trigger Crude Oil Selloff",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/uso-cvx-xom-oxy-drop-premarket-as-trump-s-iran-talks-trigger-crude-oil-selloff/cZoTJprRJde",
+          "published": 1785754699,
+          "sentiment": -0.7
+        },
+        {
+          "title": "Oil Companies Have Raked in Massive Profits During the Iran War but Their Future Will Be Expensive",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/oil-companies-expensive-future-struggle-energy-market-share-90090535?siteid=yhoof2&yptr=yahoo",
+          "published": 1785750900,
+          "sentiment": -0.128
+        },
+        {
+          "title": "Warren Buffett's Successor, Greg Abel, Started His Tenure With a Bang by Slashing Berkshire's Chevron Stake and Making a Virtual Monopoly the New No. 5 Holding",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/03/warren-buffett-successor-abel-sell-cvx-buy-googl/",
+          "published": 1785749160,
+          "sentiment": -0.052
+        },
+        {
           "title": "4 Dividend Energy Stocks to Buy This Month, Starting With ExxonMobil",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/08/02/4-dividend-energy-stocks-to-buy-this-month-startin/",
@@ -113,30 +134,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/livecoverage/sunday0802/card/chevron-ceo-says-in-discussions-with-iraq-on-pipeline-to-avoid-hormuz-KXsvO7747K8XuAluoDBR?siteid=yhoof2&yptr=yahoo",
           "published": 1785694478,
           "sentiment": -0.296
-        },
-        {
-          "title": "3 Bold Oil Predictions for the Second Half of 2026",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/02/3-bold-oil-predictions-for-the-second-half-of-2026/",
-          "published": 1785684900,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Chevron (CVX) Warns Fuel Prices Could Stay High As Refining Capacity Stays Tight",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/chevron-cvx-warns-fuel-prices-201107675.html",
-          "published": 1785615067,
-          "sentiment": -0.103
-        },
-        {
-          "title": "Hoping for Lower Prices at the Gas Pump? After Exxon Doubles Profits, CEO Darren Woods Says \u2018I Wouldn\u2019t Hold My Breath.\u2019",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3595009/hoping-for-lower-prices-at-the-gas-pump-after-exxon-doubles-profits-ceo-darren-woods-says-i-wouldnt-hold-my-breath",
-          "published": 1785597302,
-          "sentiment": 0.542
         }
       ],
-      "news_sentiment": 0.16
+      "news_sentiment": -0.181
     },
     {
       "ticker": "SHEL",
@@ -145,19 +145,19 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "68",
       "price_usd": 91.98,
-      "change_1d": "+1.68%",
+      "change_1d": "-0.35%",
       "change_1w": "+4.07%",
       "change_1m": "+20.13%",
       "change_ytd": "+24.18%",
       "return_1yr": "+28%",
       "low_gbp": "51",
       "low_usd": 68.62,
-      "high_gbp": "70",
+      "high_gbp": "71",
       "high_usd": 94.9,
       "bar_pct": 89,
-      "market_cap_gbp_b": 189.002,
+      "market_cap_gbp_b": 189.071,
       "market_cap_usd_b": 254.49,
-      "beta": -0.235,
+      "beta": -0.218,
       "pe_ratio": 10.17,
       "avg_volume_m": 7.01,
       "div_yield_pct": 340.0,
@@ -169,42 +169,42 @@ window.PRICES_DATA = {
       "vol_1m": 150235842,
       "news": [
         {
-          "title": "3 Bold Oil Predictions for the Second Half of 2026",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/02/3-bold-oil-predictions-for-the-second-half-of-2026/",
-          "published": 1785684900,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Shell Says Oil Prices Are Headed Higher for Years. Here's the Case for Buying Oil Stocks.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/01/shell-says-oil-prices-are-headed-higher-for-years/",
-          "published": 1785598500,
+          "title": "Shell sells solar and wind operations to France's TotalEnergies",
+          "publisher": "Proactive",
+          "url": "https://www.proactiveinvestors.com/companies/news/1096437/shell-sells-solar-and-wind-operations-to-france-s-totalenergies-1096437.html",
+          "published": 1785754740,
           "sentiment": 0.0
         },
         {
-          "title": "Exxon, Chevron Warn Fuel Prices to Endure as War Knocks Refining",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/energy/articles/exxon-chevron-warn-fuel-prices-133000445.html",
-          "published": 1785591000,
-          "sentiment": -0.649
+          "title": "Energy & Utilities Roundup: Market Talk",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
+          "published": 1785754020,
+          "sentiment": 0.273
         },
         {
-          "title": "Shell Q2 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/shell-q2-earnings-call-highlights-2026-07-31/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1785549820,
+          "title": "Shell to sell BG Cyprus and Aphrodite gas stake to MOL Group",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/shell-aphrodite-gas-stake-mol-group/",
+          "published": 1785749325,
           "sentiment": 0.0
         },
         {
-          "title": "Shell CEO's blunt message as gas and diesel face new squeeze",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/shell-shel-ceo-warns-diesel-gasoline-shortage",
-          "published": 1785537180,
+          "title": "Shell ditches British solar farms in net zero retreat",
+          "publisher": "The Telegraph",
+          "url": "https://www.telegraph.co.uk/business/2026/08/03/shell-ditches-british-solar-farms-in-net-zero-retreat/",
+          "published": 1785747773,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Shell to sell European onshore renewables business to TotalEnergies",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/shell-sell-european-onshore-renewables-083158371.html",
+          "published": 1785745918,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.053
+      "news_sentiment": 0.095
     },
     {
       "ticker": "BP",
@@ -213,7 +213,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "34",
       "price_usd": 45.22,
-      "change_1d": "+2.77%",
+      "change_1d": "-0.40%",
       "change_1w": "+3.19%",
       "change_1m": "+25.09%",
       "change_ytd": "+29.30%",
@@ -223,9 +223,9 @@ window.PRICES_DATA = {
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 81,
-      "market_cap_gbp_b": 86.482,
+      "market_cap_gbp_b": 86.513,
       "market_cap_usd_b": 116.447,
-      "beta": -0.231,
+      "beta": -0.212,
       "pe_ratio": 36.76,
       "avg_volume_m": 8.95,
       "div_yield_pct": 442.0,
@@ -237,42 +237,42 @@ window.PRICES_DATA = {
       "vol_1m": 187140500,
       "news": [
         {
-          "title": "BP (LSE:BP.) Stock Looks Fully Priced Despite Its 130% Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bp-lse-bp-stock-looks-080901485.html",
-          "published": 1785658141,
+          "title": "BP launches potential sale process for North Sea portfolio",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/bp-north-sea-portfolio-sale/",
+          "published": 1785755969,
           "sentiment": 0.0
         },
         {
-          "title": "BP (LSE:BP.) Stock Fair Value Moves Lower After Analysts Flag Transition Risks",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bp-lse-bp-stock-fair-221008449.html",
-          "published": 1785622208,
-          "sentiment": 0.103
+          "title": "Energy & Utilities Roundup: Market Talk",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
+          "published": 1785754020,
+          "sentiment": 0.273
         },
         {
-          "title": "BP Puts the North Sea in the Departure Lounge",
-          "publisher": "Moby",
-          "url": "https://app.moby.co/home/news/news-bp-puts-the-north-sea-in-the-departure-lounge?utm_source=yahoo_finance&utm_medium=rss",
-          "published": 1785524778,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Saudis Push Maritime Coalition as Oil Finds Support",
+          "title": "BP Completes Sale of Gelsenkirchen Refinery to Klesch Group",
           "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/saudis-push-maritime-coalition-oil-161556456.html",
-          "published": 1785514556,
-          "sentiment": 0.402
+          "url": "https://finance.yahoo.com/energy/articles/bp-completes-sale-gelsenkirchen-refinery-094556316.html",
+          "published": 1785750356,
+          "sentiment": 0.0
         },
         {
-          "title": "British oil giant BP prepares to sell North Sea business",
-          "publisher": "Euronews",
-          "url": "https://www.euronews.com/2026/07/31/british-oil-giant-bp-launches-sale-of-north-sea-business",
-          "published": 1785508035,
+          "title": "BP Completes Sale of German Refinery as Portfolio Overhaul Accelerates",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/bp-completes-sale-german-refinery-093000417.html",
+          "published": 1785749400,
           "sentiment": 0.0
+        },
+        {
+          "title": "European Energy Stocks Fall as Oil Slumps on Renewed U.S.-Iran Diplomacy",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/finance/stocks/nikkei-falls-1-4-dragged-by-electronics-auto-stocks-e85119b4?siteid=yhoof2&yptr=yahoo",
+          "published": 1785743640,
+          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.101
+      "news_sentiment": 0.109
     },
     {
       "ticker": "TTE",
@@ -281,7 +281,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "65",
       "price_usd": 87.86,
-      "change_1d": "+0.93%",
+      "change_1d": "-0.99%",
       "change_1w": "+1.22%",
       "change_1m": "+17.46%",
       "change_ytd": "+33.52%",
@@ -291,9 +291,9 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 83,
-      "market_cap_gbp_b": 144.876,
+      "market_cap_gbp_b": 144.929,
       "market_cap_usd_b": 195.075,
-      "beta": 0.05,
+      "beta": 0.062,
       "pe_ratio": 11.0,
       "avg_volume_m": 1.53,
       "div_yield_pct": 482.0,
@@ -305,42 +305,42 @@ window.PRICES_DATA = {
       "vol_1m": 37955900,
       "news": [
         {
-          "title": "3 Ultra-High-Yield Energy Stocks to Hold Forever",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/02/3-ultra-high-yield-energy-stocks-to-hold-forever/",
-          "published": 1785681300,
+          "title": "Shell sells solar and wind operations to France's TotalEnergies",
+          "publisher": "Proactive",
+          "url": "https://www.proactiveinvestors.com/companies/news/1096437/shell-sells-solar-and-wind-operations-to-france-s-totalenergies-1096437.html",
+          "published": 1785754740,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Energy & Utilities Roundup: Market Talk",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
+          "published": 1785754020,
           "sentiment": 0.273
         },
         {
-          "title": "TotalEnergies (ENXTPA:TTE) Back In Focus After Q2 Results And Cronos Deal Valuation Debate",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/totalenergies-enxtpa-tte-back-focus-020813525.html",
-          "published": 1785636493,
+          "title": "Shell ditches British solar farms in net zero retreat",
+          "publisher": "The Telegraph",
+          "url": "https://www.telegraph.co.uk/business/2026/08/03/shell-ditches-british-solar-farms-in-net-zero-retreat/",
+          "published": 1785747773,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Shell to sell European onshore renewables business to TotalEnergies",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/shell-sell-european-onshore-renewables-083158371.html",
+          "published": 1785745918,
           "sentiment": 0.0
         },
         {
-          "title": "Suriname's $26 Billion Oil Bet Is Finally Paying Off",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/surinames-26-billion-oil-bet-210000202.html",
-          "published": 1785618000,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Chevron Profit Surpasses Forecasts on War-Driven Price Rally",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/energy/articles/chevron-profit-surpasses-forecasts-war-101511220.html",
-          "published": 1785492911,
-          "sentiment": 0.44
-        },
-        {
-          "title": "French climate lawsuit over corporate emissions signals the next global legal\u00a0fight",
-          "publisher": "FastCompany",
-          "url": "https://www.fastcompany.com/91581095/french-climate-lawsuit-corporate-emissions-next-global-legal-fight",
-          "published": 1785400200,
-          "sentiment": -0.459
+          "title": "Shell to Sell European Renewable Assets to Total Energies",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/energy/articles/shell-sell-european-renewable-assets-075719477.html",
+          "published": 1785743839,
+          "sentiment": 0.439
         }
       ],
-      "news_sentiment": 0.051
+      "news_sentiment": 0.183
     },
     {
       "ticker": "EQNR",
@@ -349,7 +349,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "31",
       "price_usd": 41.1,
-      "change_1d": "+0.93%",
+      "change_1d": "-1.72%",
       "change_1w": "+1.86%",
       "change_1m": "+31.69%",
       "change_ytd": "+71.38%",
@@ -359,9 +359,9 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.46,
       "bar_pct": 89,
-      "market_cap_gbp_b": 72.526,
-      "market_cap_usd_b": 97.656,
-      "beta": -0.75,
+      "market_cap_gbp_b": 72.552,
+      "market_cap_usd_b": 97.655,
+      "beta": -0.73,
       "pe_ratio": 11.14,
       "avg_volume_m": 3.95,
       "div_yield_pct": 370.0,
@@ -372,6 +372,20 @@ window.PRICES_DATA = {
       "vol_1w": 18453300,
       "vol_1m": 88740300,
       "news": [
+        {
+          "title": "Energy & Utilities Roundup: Market Talk",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
+          "published": 1785754020,
+          "sentiment": 0.273
+        },
+        {
+          "title": "European Energy Stocks Fall as Oil Slumps on Renewed U.S.-Iran Diplomacy",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/finance/stocks/nikkei-falls-1-4-dragged-by-electronics-auto-stocks-e85119b4?siteid=yhoof2&yptr=yahoo",
+          "published": 1785743640,
+          "sentiment": 0.273
+        },
         {
           "title": "NOV (NOV) Stock Still Looks Undervalued Despite Its 64% Run",
           "publisher": "Simply Wall St.",
@@ -392,32 +406,18 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/week-energy-transition-atlas-suite-113734425.html",
           "published": 1785411454,
           "sentiment": 0.557
-        },
-        {
-          "title": "European Equities Traded in US as ADRs Ease in Wednesday Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-equities-traded-us-adrs-150507593.html",
-          "published": 1785337507,
-          "sentiment": 0.361
-        },
-        {
-          "title": "Energy Transition Update - SunPower Advances Amid Solar Industry Challenges",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/energy-transition-sunpower-advances-amid-113847282.html",
-          "published": 1785238727,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.379
+      "news_sentiment": 0.348
     },
     {
       "ticker": "COP",
       "company_name": "ConocoPhillips",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "89",
+      "price_gbp": "90",
       "price_usd": 120.48,
-      "change_1d": "+1.16%",
+      "change_1d": "-0.98%",
       "change_1w": "+0.18%",
       "change_1m": "+16.72%",
       "change_ytd": "+26.49%",
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "101",
       "high_usd": 135.87,
       "bar_pct": 69,
-      "market_cap_gbp_b": 109.009,
+      "market_cap_gbp_b": 109.049,
       "market_cap_usd_b": 146.78,
       "beta": 0.122,
       "pe_ratio": 20.42,
@@ -440,6 +440,13 @@ window.PRICES_DATA = {
       "vol_1w": 33253500,
       "vol_1m": 137795000,
       "news": [
+        {
+          "title": "Falling Oil Boosts Wall Street Pre-Bell; Asia Mixed, Europe Up",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/articles/falling-oil-boosts-wall-street-111121742.html",
+          "published": 1785755481,
+          "sentiment": 0.178
+        },
         {
           "title": "Is ConocoPhillips (COP) Stock Trading At A Discount Or Fair Value?",
           "publisher": "Simply Wall St.",
@@ -467,16 +474,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-conocophillips-cop-130005937.html",
           "published": 1785416405,
           "sentiment": 0.0
-        },
-        {
-          "title": "Chord Energy, Murphy Oil, Genesis Energy, ExxonMobil, and ConocoPhillips Stocks Trade Up, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/energy/articles/chord-energy-murphy-oil-genesis-104502529.html",
-          "published": 1785408302,
-          "sentiment": 0.494
         }
       ],
-      "news_sentiment": 0.258
+      "news_sentiment": 0.195
     },
     {
       "ticker": "OXY",
@@ -485,7 +485,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "42",
       "price_usd": 57.07,
-      "change_1d": "+1.95%",
+      "change_1d": "-0.91%",
       "change_1w": "-0.40%",
       "change_1m": "+19.04%",
       "change_ytd": "+35.93%",
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 64,
-      "market_cap_gbp_b": 42.157,
+      "market_cap_gbp_b": 42.172,
       "market_cap_usd_b": 56.764,
       "beta": 0.15,
       "pe_ratio": 77.12,
@@ -553,7 +553,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "110",
       "price_usd": 148.69,
-      "change_1d": "+2.16%",
+      "change_1d": "-1.08%",
       "change_1w": "+1.57%",
       "change_1m": "+16.49%",
       "change_ytd": "+42.07%",
@@ -563,8 +563,8 @@ window.PRICES_DATA = {
       "high_gbp": "113",
       "high_usd": 151.87,
       "bar_pct": 94,
-      "market_cap_gbp_b": 58.817,
-      "market_cap_usd_b": 79.197,
+      "market_cap_gbp_b": 58.838,
+      "market_cap_usd_b": 79.196,
       "beta": 0.261,
       "pe_ratio": 14.62,
       "avg_volume_m": 3.57,
@@ -621,7 +621,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "235",
       "price_usd": 316.47,
-      "change_1d": "+0.29%",
+      "change_1d": "-0.67%",
       "change_1w": "+2.34%",
       "change_1m": "+19.48%",
       "change_ytd": "+93.33%",
@@ -631,9 +631,9 @@ window.PRICES_DATA = {
       "high_gbp": "243",
       "high_usd": 326.92,
       "bar_pct": 94,
-      "market_cap_gbp_b": 68.615,
+      "market_cap_gbp_b": 68.64,
       "market_cap_usd_b": 92.39,
-      "beta": 0.52,
+      "beta": 0.508,
       "pe_ratio": 20.83,
       "avg_volume_m": 2.33,
       "div_yield_pct": 126.0,
@@ -644,6 +644,13 @@ window.PRICES_DATA = {
       "vol_1w": 9458300,
       "vol_1m": 44201800,
       "news": [
+        {
+          "title": "Jobs Numbers, SpaceX Earnings: What to Watch This Week",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-03-2026/card/jobs-numbers-spacex-earnings-what-to-watch-this-week-QDZWSaJBtZb4Ueluwuim?siteid=yhoof2&yptr=yahoo",
+          "published": 1785742795,
+          "sentiment": 0.0
+        },
         {
           "title": "Ahead of Marathon Petroleum (MPC) Q2 Earnings: Get Ready With Wall Street Estimates for Key Metrics",
           "publisher": "Zacks",
@@ -671,13 +678,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-undervalued-august-150810397.html",
           "published": 1785337690,
           "sentiment": 0.421
-        },
-        {
-          "title": "Phillips 66 (PSX) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/phillips-66-psx-earnings-expected-140029958.html",
-          "published": 1785333629,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.176
@@ -689,7 +689,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "232",
       "price_usd": 312.9,
-      "change_1d": "+0.04%",
+      "change_1d": "-1.10%",
       "change_1w": "+3.84%",
       "change_1m": "+16.58%",
       "change_ytd": "+92.08%",
@@ -699,8 +699,8 @@ window.PRICES_DATA = {
       "high_gbp": "238",
       "high_usd": 320.24,
       "bar_pct": 96,
-      "market_cap_gbp_b": 66.909,
-      "market_cap_usd_b": 90.093,
+      "market_cap_gbp_b": 66.933,
+      "market_cap_usd_b": 90.092,
       "beta": 0.545,
       "pe_ratio": 13.05,
       "avg_volume_m": 3.02,
@@ -757,18 +757,18 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "37",
       "price_usd": 49.59,
-      "change_1d": "+1.37%",
+      "change_1d": "-0.56%",
       "change_1w": "-5.40%",
       "change_1m": "+9.98%",
       "change_ytd": "+24.74%",
       "return_1yr": "+51%",
-      "low_gbp": "23",
+      "low_gbp": "24",
       "low_usd": 31.64,
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 66,
-      "market_cap_gbp_b": 54.66,
-      "market_cap_usd_b": 73.599,
+      "market_cap_gbp_b": 54.679,
+      "market_cap_usd_b": 73.598,
       "beta": 0.733,
       "pe_ratio": 24.19,
       "avg_volume_m": 14.2,
@@ -825,7 +825,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "24",
       "price_usd": 32.25,
-      "change_1d": "+1.74%",
+      "change_1d": "-0.77%",
       "change_1w": "-3.33%",
       "change_1m": "-2.30%",
       "change_ytd": "+9.95%",
@@ -835,9 +835,9 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 51,
-      "market_cap_gbp_b": 20.009,
+      "market_cap_gbp_b": 20.016,
       "market_cap_usd_b": 26.942,
-      "beta": 0.725,
+      "beta": 0.753,
       "pe_ratio": 16.88,
       "avg_volume_m": 11.84,
       "div_yield_pct": 211.0,
@@ -893,7 +893,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "45",
       "price_usd": 60.49,
-      "change_1d": "+1.27%",
+      "change_1d": "-0.84%",
       "change_1w": "+5.66%",
       "change_1m": "+12.39%",
       "change_ytd": "+29.23%",
@@ -903,7 +903,7 @@ window.PRICES_DATA = {
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 65,
-      "market_cap_gbp_b": 44.595,
+      "market_cap_gbp_b": 44.611,
       "market_cap_usd_b": 60.047,
       "beta": 0.96,
       "pe_ratio": 19.45,
@@ -961,7 +961,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "65",
       "price_usd": 86.92,
-      "change_1d": "-1.23%",
+      "change_1d": "-0.32%",
       "change_1w": "-3.19%",
       "change_1m": "+0.64%",
       "change_ytd": "+8.93%",
@@ -971,9 +971,9 @@ window.PRICES_DATA = {
       "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 60,
-      "market_cap_gbp_b": 134.632,
-      "market_cap_usd_b": 181.281,
-      "beta": 0.667,
+      "market_cap_gbp_b": 134.705,
+      "market_cap_usd_b": 181.313,
+      "beta": 0.653,
       "pe_ratio": 19.53,
       "avg_volume_m": 11.71,
       "div_yield_pct": 287.0,
@@ -1028,29 +1028,29 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "23",
-      "price_usd": 31.59,
+      "price_usd": 31.51,
       "change_1d": "-0.04%",
-      "change_1w": "-3.14%",
-      "change_1m": "-3.68%",
-      "change_ytd": "+5.17%",
+      "change_1w": "-1.51%",
+      "change_1m": "-6.60%",
+      "change_ytd": "+4.95%",
       "return_1yr": "+27%",
       "low_gbp": "16",
       "low_usd": 21.5,
       "high_gbp": "28",
-      "high_usd": 37.26,
+      "high_usd": 37.25,
       "bar_pct": 64,
-      "market_cap_gbp_b": 0.283,
-      "market_cap_usd_b": 0.381,
-      "beta": 0.59,
-      "pe_ratio": 22.34,
+      "market_cap_gbp_b": 0.282,
+      "market_cap_usd_b": 0.38,
+      "beta": 0.576,
+      "pe_ratio": 22.3,
       "avg_volume_m": 4.06,
       "div_yield_pct": 293.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 1910696,
-      "vol_1w": 15064806,
-      "vol_1m": 78922619,
+      "vol_1d": 291393,
+      "vol_1w": 13829059,
+      "vol_1m": 66061157,
       "news": [
         {
           "title": "UK PM Burnham uses policy blitz to buy time for tougher decisions",
@@ -1097,7 +1097,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "28",
       "price_usd": 37.54,
-      "change_1d": "-1.07%",
+      "change_1d": "-0.69%",
       "change_1w": "+2.29%",
       "change_1m": "-19.85%",
       "change_ytd": "+11.23%",
@@ -1107,9 +1107,9 @@ window.PRICES_DATA = {
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 25,
-      "market_cap_gbp_b": 3.675,
-      "market_cap_usd_b": 4.948,
-      "beta": 1.615,
+      "market_cap_gbp_b": 3.686,
+      "market_cap_usd_b": 4.961,
+      "beta": 1.651,
       "pe_ratio": 37.17,
       "avg_volume_m": 7.32,
       "div_yield_pct": null,
@@ -1165,7 +1165,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "157",
       "price_usd": 211.03,
-      "change_1d": "-0.30%",
+      "change_1d": "+0.84%",
       "change_1w": "+4.05%",
       "change_1m": "-9.07%",
       "change_ytd": "-23.08%",
@@ -1175,9 +1175,9 @@ window.PRICES_DATA = {
       "high_gbp": "238",
       "high_usd": 320.95,
       "bar_pct": 24,
-      "market_cap_gbp_b": 16.843,
+      "market_cap_gbp_b": 16.849,
       "market_cap_usd_b": 22.679,
-      "beta": 1.73,
+      "beta": 1.746,
       "pe_ratio": 21.56,
       "avg_volume_m": 2.39,
       "div_yield_pct": null,
@@ -1233,7 +1233,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "25",
       "price_usd": 33.35,
-      "change_1d": "+0.63%",
+      "change_1d": "-0.09%",
       "change_1w": "-0.54%",
       "change_1m": "-9.25%",
       "change_ytd": "-14.81%",
@@ -1243,9 +1243,9 @@ window.PRICES_DATA = {
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 11,
-      "market_cap_gbp_b": 4.517,
-      "market_cap_usd_b": 6.082,
-      "beta": 1.159,
+      "market_cap_gbp_b": 4.519,
+      "market_cap_usd_b": 6.083,
+      "beta": 1.166,
       "pe_ratio": null,
       "avg_volume_m": 1.59,
       "div_yield_pct": 470.0,
@@ -1311,9 +1311,9 @@ window.PRICES_DATA = {
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 6,
-      "market_cap_gbp_b": 21.781,
+      "market_cap_gbp_b": 21.789,
       "market_cap_usd_b": 29.328,
-      "beta": 0.636,
+      "beta": 0.629,
       "pe_ratio": null,
       "avg_volume_m": 0.11,
       "div_yield_pct": null,
