@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31 22:43",
+  "updated": "2026-08-03 07:37",
   "spy": {
     "price": 747.03,
     "change_1d": 0.5,
@@ -19,12 +19,12 @@
   "vix": {
     "level": 15.99,
     "change_1d": -6.38,
-    "regime": "normal",
+    "regime": "bullish",
     "signal": "normal"
   },
-  "market_regime": "normal",
+  "market_regime": "bullish",
   "raw_regime": "bullish",
   "spread_1w": -0.55,
-  "pending_regime": "bullish",
-  "consecutive_count": 1
+  "pending_regime": null,
+  "consecutive_count": 0
 }
