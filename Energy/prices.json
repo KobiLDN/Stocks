@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-03 22:43",
-  "fx_gbp_usd": 1.3429,
+  "updated": "2026-08-04 07:38",
+  "fx_gbp_usd": 1.3432,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,8 +19,8 @@
       "high_gbp": "131",
       "high_usd": 176.41,
       "bar_pct": 70,
-      "market_cap_gbp_b": 478.605,
-      "market_cap_usd_b": 642.716,
+      "market_cap_gbp_b": null,
+      "market_cap_usd_b": null,
       "beta": 0.173,
       "pe_ratio": 26.1,
       "avg_volume_m": 16.7,
@@ -40,35 +40,35 @@
           "sentiment": 0.44
         },
         {
-          "title": "Trump says Exxon, Chevron are 'making too much money' amid Iran war",
-          "publisher": "USA TODAY",
-          "url": "https://www.usatoday.com/story/news/politics/2026/08/03/trump-exxonmobil-chevron-profits-earnings-iran-war/91155779007/",
-          "published": 1785789870,
-          "sentiment": -0.599
+          "title": "Medicare Now Takes $202.90 a Month Straight From Your Social Security Check. These 3 ETFs Pay It Back",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/etf/2026/08/03/medicare-now-takes-202-90-a-month-straight-from-your-social-security-check-these-3-etfs-pay-it-back/",
+          "published": 1785814558,
+          "sentiment": 0.44
         },
         {
-          "title": "XOM, CVX Stocks In Focus: Trump Criticizes Exxon And Chevron For Profiting From Iran-Driven Oil Price Surge \u2014 \u2018They\u2019re Making Too Much Money\u2019",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/xom-cvx-stocks-in-focus-trump-criticizes-exxon-chevron-for-profiting-from-iran-driven-oil-price-surge/cZoTFnxRJ3i",
-          "published": 1785788178,
-          "sentiment": 0.052
-        },
-        {
-          "title": "Several Oil Stocks Tee Up For Earnings, As One Breaks Out Bullishly",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/oil-stocks-buy-points-break-out-hefty-earnings-week/?src=A00220&yptr=yahoo",
-          "published": 1785787585,
+          "title": "Trump blasts Exxon, Chevron for making 'too much money'",
+          "publisher": "Reuters Videos",
+          "url": "https://finance.yahoo.com/video/trump-blasts-exxon-chevron-making-023044753.html",
+          "published": 1785811667,
           "sentiment": 0.0
         },
         {
-          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-afternoon-194250228.html",
-          "published": 1785786170,
-          "sentiment": 0.273
+          "title": "\"Too Much Money:\" President Trump Just Lashed Out at ExxonMobil and Chevron for Windfall Profits, Warns Both Companies They Should \"Give Some of That Back.\"",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/03/too-much-money-president-trump-just-lashed-out-at-exxonmobil-and-chevron-for-windfall-profits-warns-both-companies-they-should-give-some-of-that-back/",
+          "published": 1785807121,
+          "sentiment": 0.361
+        },
+        {
+          "title": "Trump Calls Out Exxon, Chevron for Profiting From a War He Started",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/trump-exxon-chevron-oil-profits/",
+          "published": 1785797607,
+          "sentiment": -0.318
         }
       ],
-      "news_sentiment": 0.033
+      "news_sentiment": 0.185
     },
     {
       "ticker": "CVX",
@@ -87,7 +87,7 @@
       "high_gbp": "160",
       "high_usd": 214.71,
       "bar_pct": 68,
-      "market_cap_gbp_b": 286.498,
+      "market_cap_gbp_b": 286.433,
       "market_cap_usd_b": 384.737,
       "beta": 0.488,
       "pe_ratio": 18.59,
@@ -108,35 +108,35 @@
           "sentiment": 0.44
         },
         {
-          "title": "Stock Market Today: Dow Rises To Record As Amazon Jumps; This Cathie Wood Trade Nets $2.9 Mil (Live Coverage)",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-trump-iran-comments-oil-prices-plunge/?src=A00220&yptr=yahoo",
-          "published": 1785790885,
-          "sentiment": 0.178
+          "title": "SCHD\u2019s 0.06% Fee Hides the Real Cost: How March Reconstitution Triggered $0.8241 Per Share in Surprise Distributions",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/etf/2026/08/03/schds-0-06-fee-hides-the-real-cost-how-march-reconstitution-triggered-0-8241-per-share-in-surprise-distributions/",
+          "published": 1785815121,
+          "sentiment": 0.382
         },
         {
-          "title": "Trump says Exxon, Chevron are 'making too much money' amid Iran war",
-          "publisher": "USA TODAY",
-          "url": "https://www.usatoday.com/story/news/politics/2026/08/03/trump-exxonmobil-chevron-profits-earnings-iran-war/91155779007/",
-          "published": 1785789870,
-          "sentiment": -0.599
+          "title": "Trump blasts Exxon, Chevron for making 'too much money'",
+          "publisher": "Reuters Videos",
+          "url": "https://finance.yahoo.com/video/trump-blasts-exxon-chevron-making-023044753.html",
+          "published": 1785811667,
+          "sentiment": 0.0
         },
         {
-          "title": "XOM, CVX Stocks In Focus: Trump Criticizes Exxon And Chevron For Profiting From Iran-Driven Oil Price Surge \u2014 \u2018They\u2019re Making Too Much Money\u2019",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/xom-cvx-stocks-in-focus-trump-criticizes-exxon-chevron-for-profiting-from-iran-driven-oil-price-surge/cZoTFnxRJ3i",
-          "published": 1785788178,
-          "sentiment": 0.052
+          "title": "\"Too Much Money:\" President Trump Just Lashed Out at ExxonMobil and Chevron for Windfall Profits, Warns Both Companies They Should \"Give Some of That Back.\"",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/03/too-much-money-president-trump-just-lashed-out-at-exxonmobil-and-chevron-for-windfall-profits-warns-both-companies-they-should-give-some-of-that-back/",
+          "published": 1785807121,
+          "sentiment": 0.361
         },
         {
-          "title": "Several Oil Stocks Tee Up For Earnings, As One Breaks Out Bullishly",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/oil-stocks-buy-points-break-out-hefty-earnings-week/?src=A00220&yptr=yahoo",
-          "published": 1785787585,
+          "title": "Chevron CEO evaluates new pipeline route around Strait of Hormuz",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/cvx-chevron-ceo-pipeline-route-strait-of-hormuz",
+          "published": 1785806220,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.014
+      "news_sentiment": 0.237
     },
     {
       "ticker": "SHEL",
@@ -155,8 +155,8 @@
       "high_gbp": "71",
       "high_usd": 94.9,
       "bar_pct": 85,
-      "market_cap_gbp_b": 187.654,
-      "market_cap_usd_b": 252.0,
+      "market_cap_gbp_b": 187.612,
+      "market_cap_usd_b": 252.001,
       "beta": -0.218,
       "pe_ratio": 10.08,
       "avg_volume_m": 7.01,
@@ -169,25 +169,25 @@
       "vol_1m": 144811623,
       "news": [
         {
-          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-afternoon-194250228.html",
-          "published": 1785786170,
-          "sentiment": 0.273
+          "title": "Shell to Sell European Onshore Renewables Portfolio to TotalEnergies",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/shell-sell-european-onshore-renewables-014000999.html",
+          "published": 1785807600,
+          "sentiment": 0.0
         },
         {
-          "title": "Sector Update: Energy Stocks Fall Monday Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-monday-175126891.html",
-          "published": 1785779486,
-          "sentiment": 0.273
+          "title": "Shell (SHEL) Q2 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/08/03/shell-shel-q2-2026-earnings-call-transcript/",
+          "published": 1785802542,
+          "sentiment": 0.0
         },
         {
-          "title": "Sector Update: Energy",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-173552391.html",
-          "published": 1785778552,
-          "sentiment": 0.273
+          "title": "How Namibia Pulled Ahead In Africa\u2019s Hottest Offshore Oil Basin",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/namibia-pulled-ahead-africa-hottest-000000066.html",
+          "published": 1785801600,
+          "sentiment": 0.0
         },
         {
           "title": "Energy & Utilities Roundup: Market Talk",
@@ -197,14 +197,14 @@
           "sentiment": 0.273
         },
         {
-          "title": "TotalEnergies (ENXTPA:TTE) Buys Shell Renewables Assets And Partners With KKR",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/totalenergies-enxtpa-tte-buys-shell-141053512.html",
-          "published": 1785766253,
-          "sentiment": 0.178
+          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-afternoon-194250228.html",
+          "published": 1785786170,
+          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.254
+      "news_sentiment": 0.109
     },
     {
       "ticker": "BP",
@@ -219,11 +219,11 @@
       "change_ytd": "+26.56%",
       "return_1yr": "+39%",
       "low_gbp": "24",
-      "low_usd": 31.98,
+      "low_usd": 32.69,
       "high_gbp": "36",
       "high_usd": 48.27,
-      "bar_pct": 75,
-      "market_cap_gbp_b": 84.873,
+      "bar_pct": 74,
+      "market_cap_gbp_b": 84.853,
       "market_cap_usd_b": 113.975,
       "beta": -0.212,
       "pe_ratio": 35.98,
@@ -236,6 +236,13 @@
       "vol_1w": 50074297,
       "vol_1m": 167058797,
       "news": [
+        {
+          "title": "Energy & Utilities Roundup: Market Talk",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
+          "published": 1785790920,
+          "sentiment": 0.273
+        },
         {
           "title": "End Labour tax raid to halt BP\u2019s North Sea exit, Scottish leaders urge",
           "publisher": "The Telegraph",
@@ -255,13 +262,6 @@
           "publisher": "MT Newswires",
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-monday-175126891.html",
           "published": 1785779486,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Energy & Utilities Roundup: Market Talk",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
-          "published": 1785790920,
           "sentiment": 0.273
         },
         {
@@ -291,7 +291,7 @@
       "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 81,
-      "market_cap_gbp_b": 144.173,
+      "market_cap_gbp_b": 144.14,
       "market_cap_usd_b": 193.609,
       "beta": 0.062,
       "pe_ratio": 10.91,
@@ -304,6 +304,20 @@
       "vol_1w": 6107310,
       "vol_1m": 36203210,
       "news": [
+        {
+          "title": "Shell to Sell European Onshore Renewables Portfolio to TotalEnergies",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/shell-sell-european-onshore-renewables-014000999.html",
+          "published": 1785807600,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How Namibia Pulled Ahead In Africa\u2019s Hottest Offshore Oil Basin",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/namibia-pulled-ahead-africa-hottest-000000066.html",
+          "published": 1785801600,
+          "sentiment": 0.0
+        },
         {
           "title": "Energy & Utilities Roundup: Market Talk",
           "publisher": "The Wall Street Journal",
@@ -324,23 +338,9 @@
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-monday-175126891.html",
           "published": 1785779486,
           "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-173552391.html",
-          "published": 1785778552,
-          "sentiment": 0.273
-        },
-        {
-          "title": "TotalEnergies (ENXTPA:TTE) Stock Looks Below Fair Value On Renewables Portfolio Moves",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/totalenergies-enxtpa-tte-stock-looks-150923897.html",
-          "published": 1785769763,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.333
+      "news_sentiment": 0.164
     },
     {
       "ticker": "EQNR",
@@ -359,7 +359,7 @@
       "high_gbp": "32",
       "high_usd": 43.46,
       "bar_pct": 83,
-      "market_cap_gbp_b": 70.614,
+      "market_cap_gbp_b": 70.598,
       "market_cap_usd_b": 94.827,
       "beta": -0.73,
       "pe_ratio": 10.82,
@@ -427,7 +427,7 @@
       "high_gbp": "101",
       "high_usd": 135.87,
       "bar_pct": 67,
-      "market_cap_gbp_b": 108.104,
+      "market_cap_gbp_b": 108.079,
       "market_cap_usd_b": 145.172,
       "beta": 0.123,
       "pe_ratio": 20.2,
@@ -441,6 +441,27 @@
       "vol_1m": 129790059,
       "news": [
         {
+          "title": "SCHD\u2019s 0.06% Fee Hides the Real Cost: How March Reconstitution Triggered $0.8241 Per Share in Surprise Distributions",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/etf/2026/08/03/schds-0-06-fee-hides-the-real-cost-how-march-reconstitution-triggered-0-8241-per-share-in-surprise-distributions/",
+          "published": 1785815121,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Atlas Energy Solutions Inc. (AESI) Reports Q2 Loss, Tops Revenue Estimates",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/energy/articles/atlas-energy-solutions-inc-aesi-224502396.html",
+          "published": 1785797102,
+          "sentiment": 0.586
+        },
+        {
+          "title": "Chevron Stock Is Priced For Growth A Single Quarter Hasn't Proven",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/609848/chevron-stock-is-priced-for-growth-a-single-quarter-hasnt-proven/2026-08-03",
+          "published": 1785793042,
+          "sentiment": 0.382
+        },
+        {
           "title": "Several Oil Stocks Tee Up For Earnings, As One Breaks Out Bullishly",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/news/oil-stocks-buy-points-break-out-hefty-earnings-week/?src=A00220&yptr=yahoo",
@@ -453,30 +474,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-p-500-stocks-worth-194122264.html",
           "published": 1785786082,
           "sentiment": 0.226
-        },
-        {
-          "title": "ConocoPhillips Gears Up to Report Q2 Earnings: What's in the Cards?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/conocophillips-gears-report-q2-earnings-181900347.html",
-          "published": 1785781140,
-          "sentiment": 0.0
-        },
-        {
-          "title": "ConocoPhillips (COP) Decline on US-Iran Accord",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/energy/articles/conocophillips-cop-decline-us-iran-143850728.html",
-          "published": 1785767930,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Countdown to ConocoPhillips (COP) Q2 Earnings: A Look at Estimates Beyond Revenue and EPS",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/countdown-conocophillips-cop-q2-earnings-131505944.html",
-          "published": 1785762905,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.045
+      "news_sentiment": 0.315
     },
     {
       "ticker": "OXY",
@@ -495,8 +495,8 @@
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 58,
-      "market_cap_gbp_b": 41.085,
-      "market_cap_usd_b": 55.173,
+      "market_cap_gbp_b": 41.075,
+      "market_cap_usd_b": 55.172,
       "beta": 0.16,
       "pe_ratio": 74.96,
       "avg_volume_m": 10.34,
@@ -563,8 +563,8 @@
       "high_gbp": "113",
       "high_usd": 151.87,
       "bar_pct": 88,
-      "market_cap_gbp_b": 57.781,
-      "market_cap_usd_b": 77.594,
+      "market_cap_gbp_b": 57.767,
+      "market_cap_usd_b": 77.593,
       "beta": 0.278,
       "pe_ratio": 14.32,
       "avg_volume_m": 3.57,
@@ -631,7 +631,7 @@
       "high_gbp": "243",
       "high_usd": 326.92,
       "bar_pct": 88,
-      "market_cap_gbp_b": 66.746,
+      "market_cap_gbp_b": 66.731,
       "market_cap_usd_b": 89.633,
       "beta": 0.508,
       "pe_ratio": 20.21,
@@ -644,6 +644,13 @@
       "vol_1w": 9182433,
       "vol_1m": 42709533,
       "news": [
+        {
+          "title": "Chevron Stock Is Priced For Growth A Single Quarter Hasn't Proven",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/609848/chevron-stock-is-priced-for-growth-a-single-quarter-hasnt-proven/2026-08-03",
+          "published": 1785793042,
+          "sentiment": 0.382
+        },
         {
           "title": "Several Oil Stocks Tee Up For Earnings, As One Breaks Out Bullishly",
           "publisher": "Investor's Business Daily",
@@ -671,16 +678,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/exploring-analyst-estimates-marathon-petroleum-131504661.html",
           "published": 1785762904,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jobs Numbers, SpaceX Earnings: What to Watch This Week",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-03-2026/card/jobs-numbers-spacex-earnings-what-to-watch-this-week-QDZWSaJBtZb4Ueluwuim?siteid=yhoof2&yptr=yahoo",
-          "published": 1785742795,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": 0.204
     },
     {
       "ticker": "VLO",
@@ -699,19 +699,26 @@
       "high_gbp": "238",
       "high_usd": 320.24,
       "bar_pct": 93,
-      "market_cap_gbp_b": 65.939,
+      "market_cap_gbp_b": 65.924,
       "market_cap_usd_b": 88.549,
       "beta": 0.554,
       "pe_ratio": 12.83,
       "avg_volume_m": 3.02,
       "div_yield_pct": 153.0,
-      "short_pct": 4.27,
+      "short_pct": 4.42,
       "analyst": "buy",
       "analyst_score": 2.37,
       "vol_1d": 2521367,
       "vol_1w": 12039267,
       "vol_1m": 56495067,
       "news": [
+        {
+          "title": "Chevron Stock Is Priced For Growth A Single Quarter Hasn't Proven",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/609848/chevron-stock-is-priced-for-growth-a-single-quarter-hasnt-proven/2026-08-03",
+          "published": 1785793042,
+          "sentiment": 0.382
+        },
         {
           "title": "Par Pacific's Q2 Earnings on Deck: Should You Bet on the Stock?",
           "publisher": "Zacks",
@@ -739,16 +746,9 @@
           "url": "https://www.marketbeat.com/instant-alerts/valero-energy-q2-earnings-call-highlights-2026-08-01/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1785560624,
           "sentiment": 0.273
-        },
-        {
-          "title": "RES Q2 Earnings Beat Estimates on Better Job Mix, Revenues Miss",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/res-q2-earnings-beat-estimates-182100964.html",
-          "published": 1785522060,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.26
+      "news_sentiment": 0.273
     },
     {
       "ticker": "SLB",
@@ -767,8 +767,8 @@
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 65,
-      "market_cap_gbp_b": 54.497,
-      "market_cap_usd_b": 73.184,
+      "market_cap_gbp_b": 54.484,
+      "market_cap_usd_b": 73.183,
       "beta": 0.749,
       "pe_ratio": 24.05,
       "avg_volume_m": 14.2,
@@ -780,6 +780,13 @@
       "vol_1w": 65895308,
       "vol_1m": 270178108,
       "news": [
+        {
+          "title": "SLB (SLB) Just Took a Hit. Here\u2019s Why Investors May Stay Bullish",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-just-took-hit-005512062.html",
+          "published": 1785804912,
+          "sentiment": 0.0
+        },
         {
           "title": "Is CLB Stock Attractive After Its Sharp Selloff and Mixed Q2 Results?",
           "publisher": "Zacks",
@@ -807,13 +814,6 @@
           "url": "https://www.barchart.com/story/news/3548445/do-wall-street-analysts-like-slb-stock",
           "published": 1785411877,
           "sentiment": 0.361
-        },
-        {
-          "title": "SLB (SLB) Stock Looks Reasonable Despite Its 93% Five Year Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-stock-looks-reasonable-170944013.html",
-          "published": 1785344984,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.244
@@ -835,8 +835,8 @@
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 50,
-      "market_cap_gbp_b": 19.838,
-      "market_cap_usd_b": 26.64,
+      "market_cap_gbp_b": 19.834,
+      "market_cap_usd_b": 26.641,
       "beta": 0.753,
       "pe_ratio": 16.7,
       "avg_volume_m": 11.84,
@@ -903,13 +903,13 @@
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 66,
-      "market_cap_gbp_b": 44.951,
-      "market_cap_usd_b": 60.364,
+      "market_cap_gbp_b": 44.941,
+      "market_cap_usd_b": 60.365,
       "beta": 0.959,
       "pe_ratio": 19.55,
       "avg_volume_m": 8.83,
       "div_yield_pct": 152.0,
-      "short_pct": 3.07,
+      "short_pct": 3.06,
       "analyst": "buy",
       "analyst_score": 1.7,
       "vol_1d": 6494852,
@@ -971,8 +971,8 @@
       "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 59,
-      "market_cap_gbp_b": 134.418,
-      "market_cap_usd_b": 180.509,
+      "market_cap_gbp_b": 134.411,
+      "market_cap_usd_b": 180.541,
       "beta": 0.653,
       "pe_ratio": 19.45,
       "avg_volume_m": 11.71,
@@ -1028,17 +1028,17 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 31.64,
+      "price_usd": 31.65,
       "change_1d": "+0.43%",
       "change_1w": "-0.88%",
       "change_1m": "-6.01%",
       "change_ytd": "+5.62%",
       "return_1yr": "+27%",
       "low_gbp": "16",
-      "low_usd": 21.45,
+      "low_usd": 22.15,
       "high_gbp": "28",
-      "high_usd": 37.16,
-      "bar_pct": 65,
+      "high_usd": 37.17,
+      "bar_pct": 50,
       "market_cap_gbp_b": 0.284,
       "market_cap_usd_b": 0.381,
       "beta": 0.576,
@@ -1048,9 +1048,9 @@
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2706128,
-      "vol_1w": 16243794,
-      "vol_1m": 68475892,
+      "vol_1d": 17976,
+      "vol_1w": 13555642,
+      "vol_1m": 65787740,
       "news": [
         {
           "title": "UK PM Burnham uses policy blitz to buy time for tougher decisions",
@@ -1107,19 +1107,26 @@
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 28,
-      "market_cap_gbp_b": 3.862,
-      "market_cap_usd_b": 5.186,
+      "market_cap_gbp_b": 3.871,
+      "market_cap_usd_b": 5.2,
       "beta": 1.651,
       "pe_ratio": 38.96,
       "avg_volume_m": 7.32,
       "div_yield_pct": null,
-      "short_pct": 20.94,
+      "short_pct": 20.87,
       "analyst": "buy",
       "analyst_score": 2.48,
       "vol_1d": 4221474,
       "vol_1w": 34558074,
       "vol_1m": 96740974,
       "news": [
+        {
+          "title": "FSLR Tops S&P500 To Its Best Day In Two Months, But Trump's Section 232 Ruling Will Decide Its Future",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/fslr-jumps-to-best-day-in-two-months-trump-s-section-232/cZoTtmXRJ3Z",
+          "published": 1785801572,
+          "sentiment": 0.579
+        },
         {
           "title": "1 Cash-Producing Stock on Our Watchlist and 2 We Find Risky",
           "publisher": "StockStory",
@@ -1147,16 +1154,9 @@
           "url": "https://finance.yahoo.com/energy/articles/enphase-energy-q2-earnings-match-142900910.html",
           "published": 1785335340,
           "sentiment": 0.273
-        },
-        {
-          "title": "ENPH Q2 Earnings Call Highlights Storage-Led Recovery",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/enph-q2-earnings-call-highlights-140000997.html",
-          "published": 1785333600,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.055
+      "news_sentiment": 0.17
     },
     {
       "ticker": "FSLR",
@@ -1175,19 +1175,26 @@
       "high_gbp": "239",
       "high_usd": 320.95,
       "bar_pct": 39,
-      "market_cap_gbp_b": 18.625,
-      "market_cap_usd_b": 25.011,
+      "market_cap_gbp_b": 18.621,
+      "market_cap_usd_b": 25.012,
       "beta": 1.746,
       "pe_ratio": 23.77,
       "avg_volume_m": 2.39,
       "div_yield_pct": null,
-      "short_pct": 12.04,
+      "short_pct": 12.03,
       "analyst": "buy",
       "analyst_score": 2.11,
       "vol_1d": 5054094,
       "vol_1w": 14691494,
       "vol_1m": 42237494,
       "news": [
+        {
+          "title": "FSLR Tops S&P500 To Its Best Day In Two Months, But Trump's Section 232 Ruling Will Decide Its Future",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/fslr-jumps-to-best-day-in-two-months-trump-s-section-232/cZoTtmXRJ3Z",
+          "published": 1785801572,
+          "sentiment": 0.579
+        },
         {
           "title": "First Solar Stock Powers to the Top of the S&P 500 as Regulatory Decision Approaches",
           "publisher": "Barrons.com",
@@ -1215,16 +1222,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-inc-fslr-q2-050358341.html",
           "published": 1785474238,
           "sentiment": 0.0
-        },
-        {
-          "title": "First Solar Q2 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/first-solar-q2-earnings-call-highlights-2026-07-30/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1785452644,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.04
+      "news_sentiment": 0.156
     },
     {
       "ticker": "BEPC",
@@ -1243,7 +1243,7 @@
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 18,
-      "market_cap_gbp_b": 4.639,
+      "market_cap_gbp_b": 4.638,
       "market_cap_usd_b": 6.23,
       "beta": 1.166,
       "pe_ratio": null,
@@ -1299,20 +1299,20 @@
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.50",
-      "price_usd": 7.39,
-      "change_1d": "+0.14%",
-      "change_1w": "-0.40%",
-      "change_1m": "-4.77%",
-      "change_ytd": "+10.88%",
+      "price_gbp": "5.46",
+      "price_usd": 7.34,
+      "change_1d": "-0.81%",
+      "change_1w": "-1.08%",
+      "change_1m": "-5.41%",
+      "change_ytd": "+10.13%",
       "return_1yr": "-53%",
       "low_gbp": "4.28",
       "low_usd": 5.75,
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 6,
-      "market_cap_gbp_b": 21.81,
-      "market_cap_usd_b": 29.289,
+      "market_cap_gbp_b": 21.657,
+      "market_cap_usd_b": 29.09,
       "beta": 0.629,
       "pe_ratio": null,
       "avg_volume_m": 0.11,
