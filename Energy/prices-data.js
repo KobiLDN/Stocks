@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-08-04 07:38",
-  "fx_gbp_usd": 1.3432,
+  "updated": "2026-08-04 11:47",
+  "fx_gbp_usd": 1.3447,
   "stocks": [
     {
       "ticker": "XOM",
@@ -9,12 +9,12 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "115",
       "price_usd": 155.06,
-      "change_1d": "-1.29%",
+      "change_1d": "-0.21%",
       "change_1w": "+0.19%",
       "change_1m": "+13.65%",
       "change_ytd": "+28.13%",
       "return_1yr": "+45%",
-      "low_gbp": "79",
+      "low_gbp": "78",
       "low_usd": 105.53,
       "high_gbp": "131",
       "high_usd": 176.41,
@@ -22,15 +22,15 @@ window.PRICES_DATA = {
       "market_cap_gbp_b": null,
       "market_cap_usd_b": null,
       "beta": 0.173,
-      "pe_ratio": 26.1,
+      "pe_ratio": 26.19,
       "avg_volume_m": 16.7,
       "div_yield_pct": 265.0,
       "short_pct": 1.15,
       "analyst": "buy",
       "analyst_score": 2.4,
       "vol_1d": 14453456,
-      "vol_1w": 73571956,
-      "vol_1m": 306077956,
+      "vol_1w": 73616956,
+      "vol_1m": 306122956,
       "news": [
         {
           "title": "Trump calls out Chevron and Exxon profits: 'They're making too much money'",
@@ -40,35 +40,35 @@ window.PRICES_DATA = {
           "sentiment": 0.44
         },
         {
-          "title": "Medicare Now Takes $202.90 a Month Straight From Your Social Security Check. These 3 ETFs Pay It Back",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/etf/2026/08/03/medicare-now-takes-202-90-a-month-straight-from-your-social-security-check-these-3-etfs-pay-it-back/",
-          "published": 1785814558,
+          "title": "BP profit more than doubles as Middle East conflict boosts oil prices",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/04/bp-profit-more-than-doubles-as-middle-east-conflict-boosts-oil-prices",
+          "published": 1785835997,
           "sentiment": 0.44
         },
         {
-          "title": "Trump blasts Exxon, Chevron for making 'too much money'",
-          "publisher": "Reuters Videos",
-          "url": "https://finance.yahoo.com/video/trump-blasts-exxon-chevron-making-023044753.html",
-          "published": 1785811667,
+          "title": "BP profits soar to four-year high after boost from Iran war",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/bp-profits-soar-four-high-070922256.html",
+          "published": 1785834488,
+          "sentiment": 0.178
+        },
+        {
+          "title": "BP profit soars as Mideast war roils energy prices",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/energy/articles/bp-profit-soars-mideast-war-082500397.html",
+          "published": 1785831900,
+          "sentiment": 0.026
+        },
+        {
+          "title": "Exxon CEO delivers blunt message on what's coming for gas prices",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/xom-exxonmobil-ceo-darren-woods-says-crude-prices-and-gas-prices-have-become-disconnected",
+          "published": 1785826020,
           "sentiment": 0.0
-        },
-        {
-          "title": "\"Too Much Money:\" President Trump Just Lashed Out at ExxonMobil and Chevron for Windfall Profits, Warns Both Companies They Should \"Give Some of That Back.\"",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/03/too-much-money-president-trump-just-lashed-out-at-exxonmobil-and-chevron-for-windfall-profits-warns-both-companies-they-should-give-some-of-that-back/",
-          "published": 1785807121,
-          "sentiment": 0.361
-        },
-        {
-          "title": "Trump Calls Out Exxon, Chevron for Profiting From a War He Started",
-          "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/trump-exxon-chevron-oil-profits/",
-          "published": 1785797607,
-          "sentiment": -0.318
         }
       ],
-      "news_sentiment": 0.185
+      "news_sentiment": 0.217
     },
     {
       "ticker": "CVX",
@@ -77,7 +77,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "144",
       "price_usd": 193.18,
-      "change_1d": "-2.68%",
+      "change_1d": "+0.09%",
       "change_1w": "+1.67%",
       "change_1m": "+14.92%",
       "change_ytd": "+26.27%",
@@ -87,8 +87,8 @@ window.PRICES_DATA = {
       "high_gbp": "160",
       "high_usd": 214.71,
       "bar_pct": 68,
-      "market_cap_gbp_b": 286.433,
-      "market_cap_usd_b": 384.737,
+      "market_cap_gbp_b": 286.113,
+      "market_cap_usd_b": 384.736,
       "beta": 0.488,
       "pe_ratio": 18.59,
       "avg_volume_m": 9.11,
@@ -97,8 +97,8 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 1.72,
       "vol_1d": 7965535,
-      "vol_1w": 40047235,
-      "vol_1m": 159782635,
+      "vol_1w": 40076635,
+      "vol_1m": 159812035,
       "news": [
         {
           "title": "Trump calls out Chevron and Exxon profits: 'They're making too much money'",
@@ -108,35 +108,35 @@ window.PRICES_DATA = {
           "sentiment": 0.44
         },
         {
+          "title": "BP profit more than doubles as Middle East conflict boosts oil prices",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/04/bp-profit-more-than-doubles-as-middle-east-conflict-boosts-oil-prices",
+          "published": 1785835997,
+          "sentiment": 0.44
+        },
+        {
+          "title": "BP profit soars as Mideast war roils energy prices",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/energy/articles/bp-profit-soars-mideast-war-082500397.html",
+          "published": 1785831900,
+          "sentiment": 0.026
+        },
+        {
+          "title": "Exxon CEO delivers blunt message on what's coming for gas prices",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/xom-exxonmobil-ceo-darren-woods-says-crude-prices-and-gas-prices-have-become-disconnected",
+          "published": 1785826020,
+          "sentiment": 0.0
+        },
+        {
           "title": "SCHD\u2019s 0.06% Fee Hides the Real Cost: How March Reconstitution Triggered $0.8241 Per Share in Surprise Distributions",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/etf/2026/08/03/schds-0-06-fee-hides-the-real-cost-how-march-reconstitution-triggered-0-8241-per-share-in-surprise-distributions/",
           "published": 1785815121,
           "sentiment": 0.382
-        },
-        {
-          "title": "Trump blasts Exxon, Chevron for making 'too much money'",
-          "publisher": "Reuters Videos",
-          "url": "https://finance.yahoo.com/video/trump-blasts-exxon-chevron-making-023044753.html",
-          "published": 1785811667,
-          "sentiment": 0.0
-        },
-        {
-          "title": "\"Too Much Money:\" President Trump Just Lashed Out at ExxonMobil and Chevron for Windfall Profits, Warns Both Companies They Should \"Give Some of That Back.\"",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/03/too-much-money-president-trump-just-lashed-out-at-exxonmobil-and-chevron-for-windfall-profits-warns-both-companies-they-should-give-some-of-that-back/",
-          "published": 1785807121,
-          "sentiment": 0.361
-        },
-        {
-          "title": "Chevron CEO evaluates new pipeline route around Strait of Hormuz",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/cvx-chevron-ceo-pipeline-route-strait-of-hormuz",
-          "published": 1785806220,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.237
+      "news_sentiment": 0.258
     },
     {
       "ticker": "SHEL",
@@ -145,7 +145,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "68",
       "price_usd": 91.08,
-      "change_1d": "-1.32%",
+      "change_1d": "-0.43%",
       "change_1w": "+5.45%",
       "change_1m": "+16.56%",
       "change_ytd": "+22.96%",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "71",
       "high_usd": 94.9,
       "bar_pct": 85,
-      "market_cap_gbp_b": 187.612,
-      "market_cap_usd_b": 252.001,
+      "market_cap_gbp_b": 187.402,
+      "market_cap_usd_b": 252.0,
       "beta": -0.218,
       "pe_ratio": 10.08,
       "avg_volume_m": 7.01,
@@ -164,47 +164,47 @@ window.PRICES_DATA = {
       "short_pct": 1.82,
       "analyst": "buy",
       "analyst_score": 2.25,
-      "vol_1d": 6194602,
-      "vol_1w": 40222550,
-      "vol_1m": 144811623,
+      "vol_1d": 6532405,
+      "vol_1w": 40560353,
+      "vol_1m": 145149426,
       "news": [
         {
-          "title": "Shell to Sell European Onshore Renewables Portfolio to TotalEnergies",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/shell-sell-european-onshore-renewables-014000999.html",
-          "published": 1785807600,
+          "title": "BP profit more than doubles as Middle East conflict boosts oil prices",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/04/bp-profit-more-than-doubles-as-middle-east-conflict-boosts-oil-prices",
+          "published": 1785835997,
+          "sentiment": 0.44
+        },
+        {
+          "title": "BP profits soar to four-year high after boost from Iran war",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/bp-profits-soar-four-high-070922256.html",
+          "published": 1785834488,
+          "sentiment": 0.178
+        },
+        {
+          "title": "BP profit soars as Mideast war roils energy prices",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/energy/articles/bp-profit-soars-mideast-war-082500397.html",
+          "published": 1785831900,
+          "sentiment": 0.026
+        },
+        {
+          "title": "TotalEnergies to buy Shell's wind and solar businesses in Europe",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/04/totalenergies-to-buy-shells-wind-and-solar-business-in-europe",
+          "published": 1785831673,
           "sentiment": 0.0
         },
         {
-          "title": "Shell (SHEL) Q2 2026 Earnings Call Transcript",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/earnings/call-transcripts/2026/08/03/shell-shel-q2-2026-earnings-call-transcript/",
-          "published": 1785802542,
+          "title": "Exxon CEO delivers blunt message on what's coming for gas prices",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/xom-exxonmobil-ceo-darren-woods-says-crude-prices-and-gas-prices-have-become-disconnected",
+          "published": 1785826020,
           "sentiment": 0.0
-        },
-        {
-          "title": "How Namibia Pulled Ahead In Africa\u2019s Hottest Offshore Oil Basin",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/namibia-pulled-ahead-africa-hottest-000000066.html",
-          "published": 1785801600,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Energy & Utilities Roundup: Market Talk",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
-          "published": 1785790920,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-afternoon-194250228.html",
-          "published": 1785786170,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.109
+      "news_sentiment": 0.129
     },
     {
       "ticker": "BP",
@@ -213,7 +213,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "33",
       "price_usd": 44.26,
-      "change_1d": "-2.51%",
+      "change_1d": "-0.19%",
       "change_1w": "+4.61%",
       "change_1m": "+18.37%",
       "change_ytd": "+26.56%",
@@ -223,8 +223,8 @@ window.PRICES_DATA = {
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 74,
-      "market_cap_gbp_b": 84.853,
-      "market_cap_usd_b": 113.975,
+      "market_cap_gbp_b": 84.766,
+      "market_cap_usd_b": 113.985,
       "beta": -0.212,
       "pe_ratio": 35.98,
       "avg_volume_m": 8.95,
@@ -233,46 +233,46 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 2.47,
       "vol_1d": 10669397,
-      "vol_1w": 50074297,
-      "vol_1m": 167058797,
+      "vol_1w": 50087597,
+      "vol_1m": 167072097,
       "news": [
         {
-          "title": "Energy & Utilities Roundup: Market Talk",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
-          "published": 1785790920,
-          "sentiment": 0.273
-        },
-        {
-          "title": "End Labour tax raid to halt BP\u2019s North Sea exit, Scottish leaders urge",
-          "publisher": "The Telegraph",
-          "url": "https://uk.finance.yahoo.com/news/end-labour-tax-raid-halt-203637631.html",
-          "published": 1785789397,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
+          "title": "Update: BP Q2 Profit, Revenue Rise; Shares Up Pre-Bell",
           "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-afternoon-194250228.html",
-          "published": 1785786170,
-          "sentiment": 0.273
+          "url": "https://finance.yahoo.com/energy/articles/bp-q2-profit-revenue-rise-100131680.html",
+          "published": 1785837691,
+          "sentiment": 0.625
         },
         {
-          "title": "Sector Update: Energy Stocks Fall Monday Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-monday-175126891.html",
-          "published": 1785779486,
-          "sentiment": 0.273
+          "title": "BP profit more than doubles as Middle East conflict boosts oil prices",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/04/bp-profit-more-than-doubles-as-middle-east-conflict-boosts-oil-prices",
+          "published": 1785835997,
+          "sentiment": 0.44
         },
         {
-          "title": "European Equities Traded in the US as American Depositary Receipts Decline in Monday Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-equities-traded-us-american-150539652.html",
-          "published": 1785769539,
+          "title": "BP profits soar to four-year high after boost from Iran war",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/bp-profits-soar-four-high-070922256.html",
+          "published": 1785834488,
+          "sentiment": 0.178
+        },
+        {
+          "title": "BP profit soars as Mideast war roils energy prices",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/energy/articles/bp-profit-soars-mideast-war-082500397.html",
+          "published": 1785831900,
+          "sentiment": 0.026
+        },
+        {
+          "title": "BP Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/bp-q2-earnings-call-highlights-2026-08-04/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1785830559,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.164
+      "news_sentiment": 0.254
     },
     {
       "ticker": "TTE",
@@ -281,7 +281,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "65",
       "price_usd": 87.2,
-      "change_1d": "-1.74%",
+      "change_1d": "+0.25%",
       "change_1w": "+3.61%",
       "change_1m": "+14.27%",
       "change_ytd": "+32.52%",
@@ -291,8 +291,8 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 81,
-      "market_cap_gbp_b": 144.14,
-      "market_cap_usd_b": 193.609,
+      "market_cap_gbp_b": 143.885,
+      "market_cap_usd_b": 193.482,
       "beta": 0.062,
       "pe_ratio": 10.91,
       "avg_volume_m": 1.53,
@@ -301,9 +301,30 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 2.1,
       "vol_1d": 1487510,
-      "vol_1w": 6107310,
-      "vol_1m": 36203210,
+      "vol_1w": 6108810,
+      "vol_1m": 36204710,
       "news": [
+        {
+          "title": "BP profit more than doubles as Middle East conflict boosts oil prices",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/04/bp-profit-more-than-doubles-as-middle-east-conflict-boosts-oil-prices",
+          "published": 1785835997,
+          "sentiment": 0.44
+        },
+        {
+          "title": "BP profit soars as Mideast war roils energy prices",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/energy/articles/bp-profit-soars-mideast-war-082500397.html",
+          "published": 1785831900,
+          "sentiment": 0.026
+        },
+        {
+          "title": "TotalEnergies to buy Shell's wind and solar businesses in Europe",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/08/04/totalenergies-to-buy-shells-wind-and-solar-business-in-europe",
+          "published": 1785831673,
+          "sentiment": 0.0
+        },
         {
           "title": "Shell to Sell European Onshore Renewables Portfolio to TotalEnergies",
           "publisher": "Oilprice.com",
@@ -317,30 +338,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/namibia-pulled-ahead-africa-hottest-000000066.html",
           "published": 1785801600,
           "sentiment": 0.0
-        },
-        {
-          "title": "Energy & Utilities Roundup: Market Talk",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/energy-oil/energy-utilities-roundup-market-talk-25004551?siteid=yhoof2&yptr=yahoo",
-          "published": 1785790920,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-afternoon-194250228.html",
-          "published": 1785786170,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Monday Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-monday-175126891.html",
-          "published": 1785779486,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.164
+      "news_sentiment": 0.093
     },
     {
       "ticker": "EQNR",
@@ -349,7 +349,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "30",
       "price_usd": 39.91,
-      "change_1d": "-4.57%",
+      "change_1d": "+0.63%",
       "change_1w": "+3.72%",
       "change_1m": "+24.49%",
       "change_ytd": "+66.42%",
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.46,
       "bar_pct": 83,
-      "market_cap_gbp_b": 70.598,
+      "market_cap_gbp_b": 70.519,
       "market_cap_usd_b": 94.827,
       "beta": -0.73,
       "pe_ratio": 10.82,
@@ -369,8 +369,8 @@ window.PRICES_DATA = {
       "analyst": "hold",
       "analyst_score": 3.33,
       "vol_1d": 3287397,
-      "vol_1w": 17861797,
-      "vol_1m": 86314797,
+      "vol_1w": 17862597,
+      "vol_1m": 86315597,
       "news": [
         {
           "title": "Energy & Utilities Roundup: Market Talk",
@@ -417,7 +417,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "89",
       "price_usd": 119.16,
-      "change_1d": "-2.06%",
+      "change_1d": "+0.01%",
       "change_1w": "+3.10%",
       "change_1m": "+15.04%",
       "change_ytd": "+25.11%",
@@ -427,8 +427,8 @@ window.PRICES_DATA = {
       "high_gbp": "101",
       "high_usd": 135.87,
       "bar_pct": 67,
-      "market_cap_gbp_b": 108.079,
-      "market_cap_usd_b": 145.172,
+      "market_cap_gbp_b": 107.959,
+      "market_cap_usd_b": 145.173,
       "beta": 0.123,
       "pe_ratio": 20.2,
       "avg_volume_m": 7.19,
@@ -437,9 +437,16 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 1.76,
       "vol_1d": 4673259,
-      "vol_1w": 30604259,
-      "vol_1m": 129790059,
+      "vol_1w": 30608359,
+      "vol_1m": 129794159,
       "news": [
+        {
+          "title": "SpaceX Earnings, Jobs Numbers: What to Watch This Week",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-spacex-earnings-08-04-2026/card/spacex-earnings-jobs-numbers-what-to-watch-this-week-vqSR3cVFGGzbAU6gfGA1?siteid=yhoof2&yptr=yahoo",
+          "published": 1785826027,
+          "sentiment": 0.0
+        },
         {
           "title": "SCHD\u2019s 0.06% Fee Hides the Real Cost: How March Reconstitution Triggered $0.8241 Per Share in Surprise Distributions",
           "publisher": "24/7 Wall St.",
@@ -467,16 +474,9 @@ window.PRICES_DATA = {
           "url": "https://www.investors.com/news/oil-stocks-buy-points-break-out-hefty-earnings-week/?src=A00220&yptr=yahoo",
           "published": 1785787585,
           "sentiment": 0.0
-        },
-        {
-          "title": "3 S&P 500 Stocks Worth Your Attention",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-p-500-stocks-worth-194122264.html",
-          "published": 1785786082,
-          "sentiment": 0.226
         }
       ],
-      "news_sentiment": 0.315
+      "news_sentiment": 0.27
     },
     {
       "ticker": "OXY",
@@ -485,7 +485,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "41",
       "price_usd": 55.47,
-      "change_1d": "-3.68%",
+      "change_1d": "-0.16%",
       "change_1w": "+0.98%",
       "change_1m": "+13.64%",
       "change_ytd": "+32.12%",
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 58,
-      "market_cap_gbp_b": 41.075,
+      "market_cap_gbp_b": 41.029,
       "market_cap_usd_b": 55.172,
       "beta": 0.16,
       "pe_ratio": 74.96,
@@ -505,8 +505,8 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 2.38,
       "vol_1d": 7027304,
-      "vol_1w": 37603004,
-      "vol_1m": 187526704,
+      "vol_1w": 37629404,
+      "vol_1m": 187553104,
       "news": [
         {
           "title": "ConocoPhillips Gears Up to Report Q2 Earnings: What's in the Cards?",
@@ -553,7 +553,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "108",
       "price_usd": 145.68,
-      "change_1d": "-3.08%",
+      "change_1d": "+0.08%",
       "change_1w": "+3.83%",
       "change_1m": "+13.43%",
       "change_ytd": "+39.19%",
@@ -563,18 +563,18 @@ window.PRICES_DATA = {
       "high_gbp": "113",
       "high_usd": 151.87,
       "bar_pct": 88,
-      "market_cap_gbp_b": 57.767,
+      "market_cap_gbp_b": 57.703,
       "market_cap_usd_b": 77.593,
       "beta": 0.278,
-      "pe_ratio": 14.32,
+      "pe_ratio": 14.63,
       "avg_volume_m": 3.57,
       "div_yield_pct": 274.0,
       "short_pct": 3.65,
       "analyst": "buy",
       "analyst_score": 2.17,
       "vol_1d": 2634445,
-      "vol_1w": 13029345,
-      "vol_1m": 60877745,
+      "vol_1w": 13031445,
+      "vol_1m": 60879845,
       "news": [
         {
           "title": "Several Oil Stocks Tee Up For Earnings, As One Breaks Out Bullishly",
@@ -619,20 +619,20 @@ window.PRICES_DATA = {
       "company_name": "Marathon Petroleum",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "229",
+      "price_gbp": "228",
       "price_usd": 307.03,
-      "change_1d": "-3.63%",
+      "change_1d": "-0.38%",
       "change_1w": "-1.70%",
       "change_1m": "+14.14%",
       "change_ytd": "+87.57%",
       "return_1yr": "+88%",
-      "low_gbp": "118",
+      "low_gbp": "117",
       "low_usd": 158.0,
       "high_gbp": "243",
       "high_usd": 326.92,
       "bar_pct": 88,
-      "market_cap_gbp_b": 66.731,
-      "market_cap_usd_b": 89.633,
+      "market_cap_gbp_b": 66.657,
+      "market_cap_usd_b": 89.634,
       "beta": 0.508,
       "pe_ratio": 20.21,
       "avg_volume_m": 2.33,
@@ -641,9 +641,16 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 2.33,
       "vol_1d": 2102033,
-      "vol_1w": 9182433,
-      "vol_1m": 42709533,
+      "vol_1w": 9183833,
+      "vol_1m": 42710933,
       "news": [
+        {
+          "title": "SpaceX Earnings, Jobs Numbers: What to Watch This Week",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-spacex-earnings-08-04-2026/card/spacex-earnings-jobs-numbers-what-to-watch-this-week-vqSR3cVFGGzbAU6gfGA1?siteid=yhoof2&yptr=yahoo",
+          "published": 1785826027,
+          "sentiment": 0.0
+        },
         {
           "title": "Chevron Stock Is Priced For Growth A Single Quarter Hasn't Proven",
           "publisher": "Trefis",
@@ -671,13 +678,6 @@ window.PRICES_DATA = {
           "url": "https://moneyweek.com/economy/uk-economy/605427/when-will-interest-rates-go-up",
           "published": 1785768414,
           "sentiment": 0.459
-        },
-        {
-          "title": "Exploring Analyst Estimates for Marathon Petroleum (MPC) Q2 Earnings, Beyond Revenue and EPS",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exploring-analyst-estimates-marathon-petroleum-131504661.html",
-          "published": 1785762904,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.204
@@ -689,7 +689,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "229",
       "price_usd": 307.54,
-      "change_1d": "-2.79%",
+      "change_1d": "-0.00%",
       "change_1w": "+1.25%",
       "change_1m": "+14.21%",
       "change_ytd": "+88.79%",
@@ -699,8 +699,8 @@ window.PRICES_DATA = {
       "high_gbp": "238",
       "high_usd": 320.24,
       "bar_pct": 93,
-      "market_cap_gbp_b": 65.924,
-      "market_cap_usd_b": 88.549,
+      "market_cap_gbp_b": 65.851,
+      "market_cap_usd_b": 88.55,
       "beta": 0.554,
       "pe_ratio": 12.83,
       "avg_volume_m": 3.02,
@@ -709,8 +709,8 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 2.37,
       "vol_1d": 2521367,
-      "vol_1w": 12039267,
-      "vol_1m": 56495067,
+      "vol_1w": 12041467,
+      "vol_1m": 56497267,
       "news": [
         {
           "title": "Chevron Stock Is Priced For Growth A Single Quarter Hasn't Proven",
@@ -757,7 +757,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "37",
       "price_usd": 49.31,
-      "change_1d": "-1.12%",
+      "change_1d": "-0.70%",
       "change_1w": "-4.31%",
       "change_1m": "+7.85%",
       "change_ytd": "+24.03%",
@@ -767,7 +767,7 @@ window.PRICES_DATA = {
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 65,
-      "market_cap_gbp_b": 54.484,
+      "market_cap_gbp_b": 54.423,
       "market_cap_usd_b": 73.183,
       "beta": 0.749,
       "pe_ratio": 24.05,
@@ -777,8 +777,8 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 1.6,
       "vol_1d": 12534208,
-      "vol_1w": 65895308,
-      "vol_1m": 270178108,
+      "vol_1w": 65900208,
+      "vol_1m": 270183008,
       "news": [
         {
           "title": "SLB (SLB) Just Took a Hit. Here\u2019s Why Investors May Stay Bullish",
@@ -825,7 +825,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "24",
       "price_usd": 31.89,
-      "change_1d": "-1.88%",
+      "change_1d": "-0.04%",
       "change_1w": "-0.75%",
       "change_1m": "-3.36%",
       "change_ytd": "+8.72%",
@@ -835,7 +835,7 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 50,
-      "market_cap_gbp_b": 19.834,
+      "market_cap_gbp_b": 19.812,
       "market_cap_usd_b": 26.641,
       "beta": 0.753,
       "pe_ratio": 16.7,
@@ -845,8 +845,8 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 1.75,
       "vol_1d": 7823359,
-      "vol_1w": 51304459,
-      "vol_1m": 251186059,
+      "vol_1w": 51306959,
+      "vol_1m": 251188559,
       "news": [
         {
           "title": "Patterson-UTI Energy Q2 Earnings & Revenues Beat Estimates",
@@ -893,7 +893,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "45",
       "price_usd": 60.81,
-      "change_1d": "-0.31%",
+      "change_1d": "+0.79%",
       "change_1w": "+0.36%",
       "change_1m": "+14.20%",
       "change_ytd": "+29.92%",
@@ -903,18 +903,18 @@ window.PRICES_DATA = {
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 66,
-      "market_cap_gbp_b": 44.941,
+      "market_cap_gbp_b": 44.891,
       "market_cap_usd_b": 60.365,
       "beta": 0.959,
-      "pe_ratio": 19.55,
+      "pe_ratio": 19.43,
       "avg_volume_m": 8.83,
       "div_yield_pct": 152.0,
       "short_pct": 3.06,
       "analyst": "buy",
       "analyst_score": 1.7,
       "vol_1d": 6494852,
-      "vol_1w": 54023452,
-      "vol_1m": 209602552,
+      "vol_1w": 54026252,
+      "vol_1m": 209605352,
       "news": [
         {
           "title": "The Top 5 Analyst Questions From Baker Hughes\u2019s Q2 Earnings Call",
@@ -961,28 +961,28 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "64",
       "price_usd": 86.55,
-      "change_1d": "-0.75%",
+      "change_1d": "-0.12%",
       "change_1w": "-2.57%",
       "change_1m": "-1.02%",
       "change_ytd": "+8.46%",
       "return_1yr": "+23%",
-      "low_gbp": "52",
+      "low_gbp": "51",
       "low_usd": 69.24,
-      "high_gbp": "74",
+      "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 59,
-      "market_cap_gbp_b": 134.411,
+      "market_cap_gbp_b": 134.261,
       "market_cap_usd_b": 180.541,
       "beta": 0.653,
-      "pe_ratio": 19.45,
+      "pe_ratio": 19.54,
       "avg_volume_m": 11.71,
       "div_yield_pct": 287.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.95,
       "vol_1d": 8834814,
-      "vol_1w": 57359714,
-      "vol_1m": 216338114,
+      "vol_1w": 57363714,
+      "vol_1m": 216342114,
       "news": [
         {
           "title": "This Top Nuclear Energy Dividend Stock Could Turn $1,000 Into a Lifetime Income Stream",
@@ -1028,29 +1028,29 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 31.65,
-      "change_1d": "+0.43%",
-      "change_1w": "-0.88%",
-      "change_1m": "-6.01%",
-      "change_ytd": "+5.62%",
+      "price_usd": 31.82,
+      "change_1d": "+0.55%",
+      "change_1w": "-0.46%",
+      "change_1m": "-4.31%",
+      "change_ytd": "+6.07%",
       "return_1yr": "+27%",
       "low_gbp": "16",
-      "low_usd": 22.15,
+      "low_usd": 21.47,
       "high_gbp": "28",
-      "high_usd": 37.17,
-      "bar_pct": 50,
-      "market_cap_gbp_b": 0.284,
-      "market_cap_usd_b": 0.381,
+      "high_usd": 37.21,
+      "bar_pct": 66,
+      "market_cap_gbp_b": 0.285,
+      "market_cap_usd_b": 0.383,
       "beta": 0.576,
-      "pe_ratio": 22.44,
+      "pe_ratio": 22.53,
       "avg_volume_m": 4.06,
       "div_yield_pct": 293.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 17976,
-      "vol_1w": 13555642,
-      "vol_1m": 65787740,
+      "vol_1d": 176406,
+      "vol_1w": 13714072,
+      "vol_1m": 63882956,
       "news": [
         {
           "title": "UK PM Burnham uses policy blitz to buy time for tougher decisions",
@@ -1097,7 +1097,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "29",
       "price_usd": 39.35,
-      "change_1d": "+4.10%",
+      "change_1d": "-0.15%",
       "change_1w": "+3.53%",
       "change_1m": "-11.67%",
       "change_ytd": "+16.59%",
@@ -1107,7 +1107,7 @@ window.PRICES_DATA = {
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 28,
-      "market_cap_gbp_b": 3.871,
+      "market_cap_gbp_b": 3.867,
       "market_cap_usd_b": 5.2,
       "beta": 1.651,
       "pe_ratio": 38.96,
@@ -1117,8 +1117,8 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 2.48,
       "vol_1d": 4221474,
-      "vol_1w": 34558074,
-      "vol_1m": 96740974,
+      "vol_1w": 34560374,
+      "vol_1m": 96743274,
       "news": [
         {
           "title": "FSLR Tops S&P500 To Its Best Day In Two Months, But Trump's Section 232 Ruling Will Decide Its Future",
@@ -1165,7 +1165,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "173",
       "price_usd": 232.73,
-      "change_1d": "+11.21%",
+      "change_1d": "-0.80%",
       "change_1w": "+13.07%",
       "change_1m": "-0.14%",
       "change_ytd": "-15.17%",
@@ -1175,8 +1175,8 @@ window.PRICES_DATA = {
       "high_gbp": "239",
       "high_usd": 320.95,
       "bar_pct": 39,
-      "market_cap_gbp_b": 18.621,
-      "market_cap_usd_b": 25.012,
+      "market_cap_gbp_b": 18.6,
+      "market_cap_usd_b": 25.011,
       "beta": 1.746,
       "pe_ratio": 23.77,
       "avg_volume_m": 2.39,
@@ -1185,8 +1185,8 @@ window.PRICES_DATA = {
       "analyst": "buy",
       "analyst_score": 2.11,
       "vol_1d": 5054094,
-      "vol_1w": 14691494,
-      "vol_1m": 42237494,
+      "vol_1w": 14693294,
+      "vol_1m": 42239294,
       "news": [
         {
           "title": "FSLR Tops S&P500 To Its Best Day In Two Months, But Trump's Section 232 Ruling Will Decide Its Future",
@@ -1233,7 +1233,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "25",
       "price_usd": 34.16,
-      "change_1d": "+2.34%",
+      "change_1d": "-0.41%",
       "change_1w": "+4.79%",
       "change_1m": "-6.72%",
       "change_ytd": "-12.74%",
@@ -1243,8 +1243,8 @@ window.PRICES_DATA = {
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 18,
-      "market_cap_gbp_b": 4.638,
-      "market_cap_usd_b": 6.23,
+      "market_cap_gbp_b": 4.715,
+      "market_cap_usd_b": 6.34,
       "beta": 1.166,
       "pe_ratio": null,
       "avg_volume_m": 1.59,
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 6,
-      "market_cap_gbp_b": 21.657,
+      "market_cap_gbp_b": 21.633,
       "market_cap_usd_b": 29.09,
       "beta": 0.629,
       "pe_ratio": null,
