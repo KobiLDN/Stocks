@@ -1,9 +1,176 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-03 11:53",
+  "updated": "2026-08-05 10:42",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Azure crossed $100B annual revenue, Copilot 30M paid seats, Goldman added to Conviction List with $640 target; +27.4% 1M, P/E 26.2.",
+      "drivers": [
+        "+27.4% 1M momentum",
+        "Azure $100B revenue",
+        "Goldman Conviction List",
+        "P/E 26.2"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+20.2% 1W, +22.5% YTD, P/E 22.8, AI capex expected >$200B, short squeeze catalyst.",
+      "drivers": [
+        "+20.2% 1W",
+        "AI capex >$200B",
+        "P/E 22.8",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+31.7% 1M, Qwen AI model launch, cloud revenue +38% YoY, P/E 19.5, analyst strong_buy.",
+      "drivers": [
+        "+31.7% 1M momentum",
+        "Qwen AI catalyst",
+        "P/E 19.5",
+        "cloud revenue +38%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "+11.8% 1M, +20.7% YTD, strong_buy consensus, AI semiconductor infrastructure play, P/E 69.2 but justified.",
+      "drivers": [
+        "+11.8% 1M",
+        "strong_buy consensus",
+        "AI semiconductor demand",
+        "YTD +20.7%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+13.2% 1W, +20% YTD, P/E 18.7, strong_buy, cheap valuation relative to growth.",
+      "drivers": [
+        "P/E 18.7",
+        "+13.2% 1W",
+        "YTD +20%",
+        "strong_buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+13.3% 1M, +24.5% YTD, P/E 18.6, record profits, dividend yield 3.7%.",
+      "drivers": [
+        "+13.3% 1M",
+        "P/E 18.6",
+        "record profits",
+        "dividend 3.7%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+12.8% 1M, +27.2% YTD, P/E 26, record profits, but analyst score 2.4 (buy).",
+      "drivers": [
+        "+27.2% YTD",
+        "+12.8% 1M",
+        "record profits",
+        "P/E 26"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+21.8% 1M, +9.1% 1W, P/E 24.6, AI beneficiary in enterprise software, analyst buy.",
+      "drivers": [
+        "+21.8% 1M",
+        "AI enterprise play",
+        "P/E 24.6",
+        "European tech winner"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BLK",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+11.9% 1M, P/E 27, buy consensus, asset management AUM growth, YTD +5.4%.",
+      "drivers": [
+        "+11.9% 1M",
+        "P/E 27",
+        "buy consensus",
+        "asset management"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+11.1% 1M, news sentiment +0.416, P/E 34.7, healthcare turnaround potential, YTD -13.5%.",
+      "drivers": [
+        "+11.1% 1M",
+        "positive news sentiment",
+        "healthcare",
+        "P/E 34.7"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+144.54%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +144.54% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +144.54% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.919,
+      "ytd": "+132.06%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +132.06% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +132.06% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.513,
+      "ytd": "+156.12%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +156.12% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +156.12% \u2265 152.1% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,173 +299,6 @@ window.SIGNALS_DATA = {
         "P/E 30.9 reasonable",
         "buy consensus (1.54)",
         "+0.132 news sentiment"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.898,
-      "ytd": "+129.05%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +129.05% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +129.05% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.787,
-      "ytd": "+113.07%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +113.07% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +113.07% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.758,
-      "ytd": "+108.92%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +108.92% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +108.92% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "1M +20.93%, 1W +18.22%, strong_buy consensus (1.33), P/E 21.74, AI capex tailwind from Microsoft's $41B AI bet.",
-      "drivers": [
-        "1M +20.93%",
-        "strong_buy 1.33",
-        "P/E 21.74",
-        "AI infrastructure"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BABA",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "1M +21.19%, strong_buy (1.32), P/E 17.7, positive sentiment 0.186, China recovery play.",
-      "drivers": [
-        "1M +21.19%",
-        "strong_buy 1.32",
-        "P/E 17.7",
-        "sentiment 0.186"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "1W +23.57%, 1M +17.37%, buy (1.56), P/E 24.51, sentiment 0.208, European software momentum.",
-      "drivers": [
-        "1W +23.57%",
-        "buy 1.56",
-        "P/E 24.51",
-        "sentiment 0.208"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +25.70%, 1M +16.02%, buy (1.72), div yield 3.71%, oil earnings tailwind.",
-      "drivers": [
-        "YTD +25.70%",
-        "1M +16.02%",
-        "div 3.71%",
-        "energy sector"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +29.71%, 1M +14.81%, buy (2.4), div 2.63%, strong oil earnings.",
-      "drivers": [
-        "YTD +29.71%",
-        "1M +14.81%",
-        "div 2.63%",
-        "energy sector"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "1M +17.22%, sentiment 0.486, buy (1.67), P/E 34.97, healthcare momentum.",
-      "drivers": [
-        "1M +17.22%",
-        "sentiment 0.486",
-        "buy 1.67",
-        "healthcare"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +15.04%, sentiment 0.219, buy (1.54), P/E 31.06, Q2 earnings beat.",
-      "drivers": [
-        "1M +15.04%",
-        "sentiment 0.219",
-        "buy 1.54",
-        "earnings beat"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BLK",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +14.23%, 1W +5.90%, sentiment 0.318, buy (1.53), P/E 25.84, asset management rally.",
-      "drivers": [
-        "1M +14.23%",
-        "sentiment 0.318",
-        "buy 1.53",
-        "asset management"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TM",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "strong_buy (1.5), P/E 10.7, div 3.25%, 1M +13.67%, attractive valuation.",
-      "drivers": [
-        "strong_buy 1.5",
-        "P/E 10.7",
-        "div 3.25%",
-        "1M +13.67%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +23.26%, 1M +15.23%, but supply constraints flagged by CEO Tim Cook may weigh on near-term; analyst rating buy (2.04). [bbc.com](https://www.bbc.com/news/articles/c204nw64xwno) [straitstimes.com](https://www.straitstimes.com/business/companies-markets/apple-slides-after-supply-shortages-hurt-sales-forecast)",
-      "drivers": [
-        "YTD +23.26%",
-        "1M +15.23%",
-        "supply constraints",
-        "buy 2.04"
       ]
     }
   ]

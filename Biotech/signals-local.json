@@ -1,9 +1,154 @@
 {
-  "updated": "2026-08-03 11:43",
+  "updated": "2026-08-05 10:37",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "REGN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Q2 revenues +17% to $4.3B, Dupixent +38%, EYLEA HD +52%, non-GAAP EPS $14.29 vs $12.89, 1M +17.06%, P/E 18.8, analyst buy, news sentiment +0.147 [prnewswire.com](https://www.prnewswire.com/news-releases/amgen-reports-second-quarter-2026-financial-results-302842890.html)",
+      "drivers": [
+        "Q2 beat and raised guidance",
+        "strong product momentum",
+        "low P/E 18.8",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMGN",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Q2 revenue $10.1B beat $9.42B estimate, adj EPS $6.29 vs $5.62, raised FY guidance, YTD +20.77%, P/E 27.16, analyst buy [briefs.co](https://www.briefs.co/news/amgen-raises-2026-sales-forecast-after-strong-q2-beat/)",
+      "drivers": [
+        "Q2 earnings beat",
+        "raised full-year outlook",
+        "growth drivers +26% YoY",
+        "strong YTD return"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +25.93%, 1M +16.21%, P/E 14.48, dividend yield 3.86%, news sentiment +0.183, strong momentum with reasonable valuation",
+      "drivers": [
+        "high YTD return",
+        "low P/E 14.48",
+        "attractive dividend yield",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +51.11%, 1Y +103%, 1W +5.20%, P/E 39.27, analyst buy, news sentiment +0.064, strong growth momentum in genomics",
+      "drivers": [
+        "exceptional 1-year return",
+        "strong YTD performance",
+        "analyst buy consensus",
+        "genomics sector leader"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +12.59%, P/E 18.43, dividend yield 2.5%, analyst buy (score 1.69), news sentiment -0.064, solid large-cap with HIV PrEP sales doubling to $1B",
+      "drivers": [
+        "low P/E 18.43",
+        "strong analyst consensus",
+        "dividend yield 2.5%",
+        "HIV franchise growth"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +18.91%, P/E 15.07, news sentiment +0.636 (highest in universe), EU approval for Opzelura, analyst buy",
+      "drivers": [
+        "very high news sentiment",
+        "low P/E 15.07",
+        "EU approval catalyst",
+        "strong YTD return"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +28.50%, P/E 18.24, analyst buy, news sentiment +0.151, strong oncology pipeline momentum",
+      "drivers": [
+        "high YTD return",
+        "reasonable P/E 18.24",
+        "positive news sentiment",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "YTD +20.25%, 1W +9.11%, analyst strong_buy (score 1.5), high growth genomics stock with Druckenmiller holding 18% of portfolio",
+      "drivers": [
+        "strong_buy analyst consensus",
+        "strong weekly momentum",
+        "high-profile investor interest",
+        "genomics growth story"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +17.23%, 1Y +52%, P/E 37.02, analyst buy, news sentiment +0.14, recent strength with +3.30% 1D",
+      "drivers": [
+        "strong 1-year return",
+        "positive YTD performance",
+        "analyst buy consensus",
+        "recent daily momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "COAG",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +36.82%, 1M +55.22%, biotech IPO with standout return, no analyst coverage but extreme momentum",
+      "drivers": [
+        "exceptional 1-month return",
+        "high YTD performance",
+        "recent IPO momentum",
+        "rare-disease category"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.589,
+      "ytd": "+84.67%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +84.67% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +84.67% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ILMN",
@@ -132,151 +277,6 @@
         "P/E 16.37",
         "dividend yield 3.52%",
         "Cambridge research hub"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.541,
-      "ytd": "+77.64%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +77.64% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +77.64% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Exceptional YTD performance of +39.62% and 1-month surge of +29.24% combined with a perfect analyst score of 1.0 (strong_buy) indicate strong near-term momentum despite the lack of current earnings.",
-      "drivers": [
-        "YTD +39.62%",
-        "1M +29.24%",
-        "analyst score 1.0",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "REGN",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Q2 2026 revenue grew 17% to $4.3B and non-GAAP EPS rose 11% to $14.29, driving a 1M return of +18.41% and 1W return of +13.26%, while P/E remains attractive at 16.98.",
-      "drivers": [
-        "Q2 revenue +17%",
-        "non-GAAP EPS +11%",
-        "1M +18.41%",
-        "P/E 16.98"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ILMN",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Year-to-date return of +52.65% and 1M gain of +16.64% are supported by a Q2 revenue beat ($1.16B, +9.4% YoY) and raised full-year guidance, with positive news sentiment of 0.289.",
-      "drivers": [
-        "YTD +52.65%",
-        "Q2 revenue $1.16B",
-        "raised FY guidance",
-        "news sentiment 0.289"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BMY",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong momentum (YTD +23.96%, 1M +13.84%) combined with a low P/E of 17.67 and a high dividend yield of 3.99% make it a compelling value play with positive earnings catalyst.",
-      "drivers": [
-        "YTD +23.96%",
-        "1M +13.84%",
-        "P/E 17.67",
-        "dividend 3.99%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD return of +21.27% and 1M gain of +8.50% are backed by a P/E of 16.16 and positive news sentiment of 0.283, following the EU approval of Opzelura.",
-      "drivers": [
-        "YTD +21.27%",
-        "1M +8.50%",
-        "P/E 16.16",
-        "news sentiment 0.283"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Attractive P/E of 12.38 and a 1M return of +7.66% with a low short interest of 0.98% indicate undervaluation and steady momentum in the metabolic space.",
-      "drivers": [
-        "P/E 12.38",
-        "1M +7.66%",
-        "short interest 0.98%",
-        "dividend 3.49%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD return of +20.03% and 1M gain of +7.05% are supported by a moderate P/E of 26.96, a 2.6% dividend yield, and positive news sentiment of 0.232.",
-      "drivers": [
-        "YTD +20.03%",
-        "1M +7.05%",
-        "P/E 26.96",
-        "dividend 2.6%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong YTD return of +28.43% and a reasonable P/E of 18.29 with a 1M gain of +2.87% reflect solid momentum in oncology, though short interest is elevated at 16.72%.",
-      "drivers": [
-        "YTD +28.43%",
-        "P/E 18.29",
-        "1M +2.87%",
-        "short interest 16.72%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NTRA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Strong_buy analyst consensus (score 1.5) and YTD return of +17.84% with positive news sentiment of 0.213, though the stock lacks earnings and has a high beta of 1.505.",
-      "drivers": [
-        "analyst score 1.5",
-        "YTD +17.84%",
-        "news sentiment 0.213",
-        "beta 1.505"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Low P/E of 18.06, a 2.47% dividend yield, and the best analyst score among large-caps (1.69) with positive sentiment of 0.269, though 1Y return is a moderate +18%.",
-      "drivers": [
-        "P/E 18.06",
-        "analyst score 1.69",
-        "dividend 2.47%",
-        "news sentiment 0.269"
       ]
     }
   ]

@@ -1,9 +1,231 @@
 {
-  "updated": "2026-08-03 11:50",
+  "updated": "2026-08-05 10:40",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Added to Goldman Sachs Conviction List after 43% Azure growth and $100B annual revenue; P/E 26.19, 1W +25.29%, strong_buy consensus [247wallst.com](https://247wallst.com/investing/2026/08/04/goldman-sachs-just-added-microsoft-to-its-closely-watched-conviction-list-broadcom-and-servicenow-were-removed/).",
+      "drivers": [
+        "Azure 43% growth",
+        "Goldman Conviction List addition",
+        "P/E 26.19",
+        "1W +25.29% momentum"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Q2 revenue of $1.935B (+93% YoY) crushed estimates, raised FY guidance to 82% growth, US commercial up 149% [sec.gov](https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm).",
+      "drivers": [
+        "93% YoY revenue growth",
+        "FY guidance raised to $8.15B",
+        "US commercial +149%",
+        "1W +31.68% momentum"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "YTD +22.48%, 1W +20.17%, P/E 22.83, strong_buy analyst consensus with 1.35 score.",
+      "drivers": [
+        "YTD +22.48%",
+        "P/E 22.83",
+        "1W +20.17%",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +46.17%, 1M +20.86%, strong_buy analyst consensus and positive news sentiment 0.127.",
+      "drivers": [
+        "YTD +46.17%",
+        "1M +20.86%",
+        "strong_buy consensus",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +53.72%, 1M +21.72%, Jefferies sees revenue acceleration, analyst buy.",
+      "drivers": [
+        "YTD +53.72%",
+        "1M +21.72%",
+        "Jefferies acceleration call",
+        "buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +15.30%, P/E 21.9, VA deal win supports undervalued narrative, analyst buy.",
+      "drivers": [
+        "1M +15.30%",
+        "P/E 21.9",
+        "VA deal win",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "1M +19.44%, P/E 19.59, dividend yield 1.52%, buy analyst consensus.",
+      "drivers": [
+        "1M +19.44%",
+        "P/E 19.59",
+        "1.52% dividend yield",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +18.08%, P/E 14.38 (lowest in group), positive news sentiment 0.285, though analyst hold.",
+      "drivers": [
+        "1M +18.08%",
+        "P/E 14.38",
+        "low valuation",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "1M +11.84%, 1W +9.78%, strong_buy consensus, but removed from Goldman Conviction List and P/E 69.23 high [247wallst.com](https://247wallst.com/investing/2026/08/04/goldman-sachs-just-added-microsoft-to-its-closely-watched-conviction-list-broadcom-and-servicenow-were-removed/).",
+      "drivers": [
+        "1M +11.84%",
+        "strong_buy consensus",
+        "removed from Goldman list",
+        "P/E 69.23"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "1M +9.46%, 1W +6.80%, strong_buy consensus, but removed from Goldman Conviction List and P/E 72.04 high [247wallst.com](https://247wallst.com/investing/2026/08/04/goldman-sachs-just-added-microsoft-to-its-closely-watched-conviction-list-broadcom-and-servicenow-were-removed/).",
+      "drivers": [
+        "1M +9.46%",
+        "strong_buy consensus",
+        "removed from Goldman list",
+        "P/E 72.04"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+144.54%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +144.54% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +144.54% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.919,
+      "ytd": "+132.06%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +132.06% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +132.06% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.808,
+      "ytd": "+116.09%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +116.09% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +116.09% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.726,
+      "ytd": "+104.24%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +104.24% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +104.24% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "signal": "buy",
+      "confidence": 0.723,
+      "ytd": "+103.81%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +103.81% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +103.81% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.602,
+      "ytd": "+183.17%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +183.17% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +183.17% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.601,
+      "ytd": "+86.27%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +86.27% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +86.27% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.513,
+      "ytd": "+156.12%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +156.12% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +156.12% \u2265 152.1% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,217 +354,6 @@
         "strong_buy consensus 1.47",
         "news sentiment 0.079",
         "beta 0.959"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.898,
-      "ytd": "+129.05%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +129.05% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +129.05% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.787,
-      "ytd": "+113.07%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +113.07% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +113.07% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.758,
-      "ytd": "+108.92%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +108.92% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +108.92% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.752,
-      "ytd": "+107.95%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +107.95% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +107.95% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "signal": "buy",
-      "confidence": 0.622,
-      "ytd": "+89.29%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +89.29% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +89.29% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.592,
-      "ytd": "+85.00%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +85.00% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +85.00% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.53,
-      "ytd": "+161.08%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +161.08% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +161.08% \u2265 152.1% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Strong recent momentum (+20.93% 1M, +18.22% 1W), reasonable P/E 21.74, strong_buy consensus (1.33), positive news sentiment 0.177, and AI growth catalyst per web search [simplywall.st](https://simplywall.st/stocks/us/software/nasdaq-msft/microsoft/news/microsoft-msft-stock-price-rallies-on-ai-growth-and-margin-s).",
-      "drivers": [
-        "1M +20.93%",
-        "P/E 21.74",
-        "strong_buy 1.33",
-        "AI growth catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Strong YTD (+37.56%) and 1M (+17.13%) momentum, strong_buy analyst consensus (1.49), positive news sentiment 0.178, cloud data platform benefiting from AI adoption.",
-      "drivers": [
-        "YTD +37.56%",
-        "1M +17.13%",
-        "strong_buy 1.49",
-        "news sentiment 0.178"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Strong YTD (+44.57%) and 1M (+15.54%) momentum, buy consensus (1.88), positive news sentiment 0.203, cybersecurity growth tailwinds.",
-      "drivers": [
-        "YTD +44.57%",
-        "1M +15.54%",
-        "news sentiment 0.203",
-        "cybersecurity growth"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Strong recent momentum (1M +15.35%, 1W +15.15%), reasonable P/E 21.82, buy consensus (1.66), very high news sentiment 0.416, profit engine upgrade.",
-      "drivers": [
-        "1M +15.35%",
-        "P/E 21.82",
-        "news sentiment 0.416",
-        "profit engine upgrade"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Strong recent momentum (1M +13.83%, 1W +11.43%), moderate P/E 35.72, buy consensus (1.57), positive news sentiment 0.277.",
-      "drivers": [
-        "1M +13.83%",
-        "1W +11.43%",
-        "buy 1.57",
-        "news sentiment 0.277"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Strong recent momentum (1M +21.42%, 1W +12.07%), low P/E 20.33, buy consensus (1.8), positive news sentiment 0.086, turnaround potential.",
-      "drivers": [
-        "1M +21.42%",
-        "P/E 20.33",
-        "buy 1.8",
-        "turnaround potential"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Strong recent momentum (1M +10.87%, 1W +19.72%), strong_buy consensus (1.47), despite high P/E 72.41, enterprise software demand.",
-      "drivers": [
-        "1W +19.72%",
-        "strong_buy 1.47",
-        "enterprise software",
-        "high P/E 72.41"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Strong recent momentum (1M +20.92%, 1W +16.84%), low P/E 15.06, positive news sentiment 0.232, value play despite hold rating.",
-      "drivers": [
-        "1M +20.92%",
-        "P/E 15.06",
-        "news sentiment 0.232",
-        "value play"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ORCL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Recent positive momentum (1W +6.26%, 1D +7.87%), low P/E 20.22, buy consensus (1.55), very high news sentiment 0.437, cloud growth.",
-      "drivers": [
-        "1W +6.26%",
-        "P/E 20.22",
-        "news sentiment 0.437",
-        "cloud growth"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.712,
-      "rationale": "Very low P/E 16.7, strong_buy consensus (1.42), positive news sentiment 0.311, memory chip demand catalyst from supply crunch [bworldonline.com](https://bworldonline.com/technology/2026/07/31/767251/apple-disappoints-with-forecast-dogged-by-supply-chain-struggles/).",
-      "drivers": [
-        "P/E 16.7",
-        "strong_buy 1.42",
-        "news sentiment 0.311",
-        "memory chip demand"
       ]
     }
   ]

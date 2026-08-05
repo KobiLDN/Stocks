@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-03 11:49",
+  "updated": "2026-08-05 10:39",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LDOS",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Q2 revenues $4.56B (+7% YoY), raised FY26 guidance, P/E 10.86, 1m +20.13%, news sentiment 0.208, strong cash flow conversion [prnewswire.com](https://www.prnewswire.com/news-releases/leidos-delivers-strong-second-quarter-and-enhances-full-year-guidance-302841544.html)",
+      "drivers": [
+        "P/E 10.86",
+        "1m +20.13%",
+        "raised FY26 guidance",
+        "news sentiment 0.208"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Q2 EPS $7.94 beat consensus, record backlog $230B, raised guidance, P/E 21.6, YTD +19.97%, analyst target $756 implies 30% upside [247wallst.com](https://247wallst.com/investing/2026/08/04/lockheed-martin-is-down-8-in-6-months-wall-street-pro-expects-30-growth-within-a-year/)",
+      "drivers": [
+        "record backlog $230B",
+        "Q2 EPS beat",
+        "YTD +19.97%",
+        "P/E 21.6"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +17.26%, analyst buy (score 1.87), CEO positive on Pentagon spending and multi-year munitions deals, P/E 38.17 [breakingdefense.com](https://breakingdefense.com/2026/08/defense-execs-feel-good-about-pentagon-spending-despite-uncertainty-on-fy27-budget/)",
+      "drivers": [
+        "YTD +17.26%",
+        "analyst buy score 1.87",
+        "Pentagon spending tailwinds",
+        "1m +8.22%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "HII",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "1m +9.85%, P/E 19.41, analyst buy, news sentiment 0.224, recent Q2 earnings call, low beta 0.241",
+      "drivers": [
+        "1m +9.85%",
+        "P/E 19.41",
+        "analyst buy",
+        "news sentiment 0.224"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Analyst strong buy (score 1.56), P/E 21.19, news sentiment 0.234, 1d +3.79%, low beta 0.541",
+      "drivers": [
+        "analyst strong buy 1.56",
+        "P/E 21.19",
+        "news sentiment 0.234",
+        "1d +3.79%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1w +31.68%, 1d +12.63%, analyst buy, but P/E 182.76 and beta 1.563 indicate high risk",
+      "drivers": [
+        "1w +31.68%",
+        "1d +12.63%",
+        "analyst buy",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1m +18.10%, P/E 11.17 (cheap), high short interest 8.56%, analyst hold (score 2.86), news sentiment 0.026",
+      "drivers": [
+        "1m +18.10%",
+        "P/E 11.17",
+        "short interest 8.56%",
+        "value play"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +22.10%, 1m +12.38%, analyst buy (score 1.75), news sentiment 0.296, small cap UK penny stock",
+      "drivers": [
+        "YTD +22.10%",
+        "1m +12.38%",
+        "analyst buy",
+        "news sentiment 0.296"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +24.53%, 1m +7.85%, analyst buy, news about 'All-British' fighter jet engine deal, P/E 31.2",
+      "drivers": [
+        "YTD +24.53%",
+        "1m +7.85%",
+        "analyst buy",
+        "fighter jet catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD +20.17%, P/E 13.51, but no analyst coverage and 1w -1.00%, news sentiment 0.106",
+      "drivers": [
+        "YTD +20.17%",
+        "P/E 13.51",
+        "no analyst coverage",
+        "1w -1.00%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@
         "PE 10.95",
         "YTD -16.62%",
         "hold rating"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "LMT +16.87% YTD, P/E 21.01, beat Q2 with $20.06B sales (+10.5% YoY), raised FY26 revenue guidance to $79.75-81.75B, and booked a record $230B backlog plus a $35B THAAD contract [lockheedmartin.com](https://news.lockheedmartin.com/2026-07-23-Lockheed-Martin-Reports-Second-Quarter-2026-Financial-Results) [spokesman.com](https://www.spokesman.com/stories/2026/jul/23/lockheed-martin-rtx-lift-2026-forecasts-as-pentago/).",
-      "drivers": [
-        "+16.87% YTD / +12.69% 1M",
-        "P/E 21.01",
-        "record $230B backlog",
-        "FY26 guidance raised"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "RTX +15.35% YTD, P/E 37.88, Q2 adjusted EPS $1.89 (+21% YoY), backlog $289B (+22% YoY), and FY26 adjusted sales guidance raised to $95-96B [rtx.com](https://www.rtx.com/news/news-center/2026/07/23/rtx-reports-q2-2026-results) [moneytimes.com](https://www.moneytimes.com/articles/60710/20260729/lockheed-rtx-booked-record-backlogs-pentagon-restocking-law-that-authorizes-those-contracts.htm).",
-      "drivers": [
-        "+15.35% YTD / +12.99% 1M",
-        "backlog $289B",
-        "FY26 EPS raised to $7.10-7.25",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "GD +12.77% YTD, P/E 23.26, analyst buy, and a $76.6B submarine win underpins long-cycle backlog with news sentiment 0.21.",
-      "drivers": [
-        "+12.77% YTD",
-        "P/E 23.26",
-        "$76.6B submarine win",
-        "news_s 0.21"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "DRS +31.69% YTD, strong_buy consensus score 1.50, P/E 43.45, with Q2 earnings transcript highlighting defense electronics momentum.",
-      "drivers": [
-        "+31.69% YTD",
-        "strong_buy consensus",
-        "P/E 43.45",
-        "Q2 earnings catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "HII",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "HII 1M +14.29%, 1W +11.43%, 1D +9.65% on Q2 earnings, P/E 18.22, and buy consensus supports naval shipbuilding turnaround.",
-      "drivers": [
-        "1M +14.29% / 1W +11.43%",
-        "P/E 18.22",
-        "Q2 earnings call",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BA.L +16.89% YTD, 1M +11.17%, P/E 30.15, buy consensus, and European defence backdrop with FTSE momentum.",
-      "drivers": [
-        "+16.89% YTD",
-        "1M +11.17%",
-        "P/E 30.15",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.58,
-      "rationale": "QQ.L 1M +17.82%, YTD +12.00%, P/E 24.88, with strong news sentiment 0.296 and buy consensus.",
-      "drivers": [
-        "1M +17.82%",
-        "YTD +12.00%",
-        "news_s 0.296",
-        "P/E 24.88"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "LDOS P/E 10.46, 1M +9.17% rebound, buy consensus, and news_s 0.231; deep value despite -38.36% YTD.",
-      "drivers": [
-        "P/E 10.46",
-        "1M +9.17%",
-        "news_s 0.231",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BAH 1M +12.59%, P/E 11.02, high short interest 8.59%, and news_s 0.142; value plus short-squeeze optionality.",
-      "drivers": [
-        "1M +12.59%",
-        "P/E 11.02",
-        "short 8.59%",
-        "news_s 0.142"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "NOC P/E 17.01, buy consensus, news_s 0.192, and 1M +5.01%; defensive demand despite -7.98% YTD.",
-      "drivers": [
-        "P/E 17.01",
-        "buy consensus",
-        "news_s 0.192",
-        "1M +5.01%"
       ]
     }
   ]

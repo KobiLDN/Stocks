@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-03 11:52",
+  "updated": "2026-08-05 10:41",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Best YTD return at +90.97% with 1M +16.22%, P/E 20.21, and profit quadrupled on higher refining margins amid the Iran war. [CNN Business](https://www.cnn.com/2026/08/04/business/saudi-aramco-profits-soar-trump) confirms a global refining boom.",
+      "drivers": [
+        "+90.97% YTD",
+        "refining margin surge",
+        "strong 1M momentum",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +89.52%, P/E 12.82 (cheap), 1W +3.69%, and highest news sentiment at 0.391. Refining margins are a key catalyst. [CNN](https://www.cnn.com/2026/08/04/business/saudi-aramco-profits-soar-trump) highlights the refining boom from Middle East conflict.",
+      "drivers": [
+        "+89.52% YTD",
+        "P/E 12.82",
+        "news sentiment 0.391",
+        "refining tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SHEL",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "P/E 10.07 (attractive), dividend yield 3.40%, 1M +14.97%, and nearly $10B quarterly profit as reported by [CNN](https://www.cnn.com/2026/08/04/business/saudi-aramco-profits-soar-trump). Solid value and momentum.",
+      "drivers": [
+        "P/E 10.07",
+        "dividend 3.40%",
+        "1M +14.97%",
+        "strong earnings"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +24.45%, 1M +13.27%, P/E 18.59, dividend yield 3.69%, and analyst score 1.72 (most bullish). Chevron beat estimates per [BNN Bloomberg](https://www.bnnbloomberg.ca/business/company-news/2026/07/31/exxonmobil-misses-second-quarter-profit-estimates/).",
+      "drivers": [
+        "analyst score 1.72",
+        "dividend 3.69%",
+        "beat Q2 estimates",
+        "1M +13.27%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +27.22%, 1M +12.84%, market cap $638B, and Q2 earnings of $14.5B per [OGJ](https://www.ogj.com/general-interest/companies/news/55394938/exxonmobil-second-quarter-earnings-climb-to-145-billion-on-rising-oil-prices-record-permian-output). Record Permian output supports upside.",
+      "drivers": [
+        "+27.22% YTD",
+        "Q2 earnings $14.5B",
+        "record Permian production",
+        "dividend 2.66%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Highest YTD return at +63.33% and 1M +22.18%, P/E 10.82, dividend yield 3.81%. Despite analyst hold, momentum is exceptional. [CNN](https://www.cnn.com/2026/08/04/business/saudi-aramco-profits-soar-trump) notes oil majors' profits soar.",
+      "drivers": [
+        "+63.33% YTD",
+        "P/E 10.82",
+        "dividend 3.81%",
+        "1M +22.18%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "YTD +23.83%, 1M +13.86%, analyst score 1.76 (bullish), news sentiment 0.24. Strong performance with reasonable P/E 20.2 and dividend 2.82%.",
+      "drivers": [
+        "analyst score 1.76",
+        "1M +13.86%",
+        "dividend 2.82%",
+        "news sentiment 0.24"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +21.36%, 1M +13.51%, dividend yield 4.42% (highest in group), and Q2 underlying profit $5.7B per [SEC filing](https://www.stocktitan.net/sec-filings/BP/6-k-bp-plc-current-report-foreign-issuer-36e4bd171257.html). P/E 35.97 is high but earnings surged.",
+      "drivers": [
+        "dividend 4.42%",
+        "Q2 profit $5.7B",
+        "1M +13.51%",
+        "strong cash flow"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +31.21%, 1M +12.87%, short interest very low at 0.01%. P/E 74.45 is elevated but momentum is solid. [CNN](https://www.cnn.com/2026/08/04/business/saudi-aramco-profits-soar-trump) context supports oil sector.",
+      "drivers": [
+        "+31.21% YTD",
+        "low short interest",
+        "1M +12.87%",
+        "momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BKR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +31.88%, 1M +15.92%, 1W +5.59%, 1D +2.32%, analyst score 1.70 (bullish). Oilfield services benefit from high drilling activity. P/E 19.72 is reasonable.",
+      "drivers": [
+        "1M +15.92%",
+        "analyst score 1.70",
+        "1W +5.59%",
+        "oilfield services demand"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +265,6 @@
         "1M momentum +19%",
         "low short interest 0.01%",
         "high P/E 77x"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SHEL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Shell posted best quarterly profit in four years ($9.84B vs $8.79B consensus) with P/E of 13.76, YTD +22.20%, and a 3.54% dividend yield, supported by strong cash flow and buybacks [cnbc.com](https://www.cnbc.com/2026/07/30/shell-2q-earnings-iran-war-oil.html).",
-      "drivers": [
-        "earnings beat",
-        "low P/E 13.76",
-        "strong cash flow",
-        "war-driven oil prices"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Marathon Petroleum has surged +91.87% YTD and +22.85% in the last month, benefiting from elevated refining margins amid the Iran conflict, with a P/E of 20.33 and analyst buy consensus.",
-      "drivers": [
-        "YTD +91.87%",
-        "refining margin tailwind",
-        "P/E 20.33",
-        "strong momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Valero Energy is up +90.62% YTD and +19.69% in the past month, driven by war-boosted refining margins, with a P/E of 22.03 and a 1.59% dividend yield.",
-      "drivers": [
-        "YTD +90.62%",
-        "refining margins",
-        "P/E 22.03",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EOG",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "EOG Resources has gained +39.03% YTD with a low P/E of 14.35, a 2.80% dividend yield, and strong news sentiment of 0.332, making it a well-valued E&P play.",
-      "drivers": [
-        "YTD +39.03%",
-        "P/E 14.35",
-        "dividend 2.80%",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Chevron is expected to report Q2 profits of $11.1B (4x year-ago) with a best-in-class analyst score of 1.72, YTD +25.70%, and a 3.71% dividend yield [france24.com](https://www.france24.com/en/live-news/20260731-oil-industry-sees-war-windfall-but-girds-for-political-blowback).",
-      "drivers": [
-        "earnings expected strong",
-        "analyst score 1.72",
-        "dividend 3.71%",
-        "YTD +25.70%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ExxonMobil is projected to report $14.9B in Q2 profits (more than double year-ago) with YTD +29.71%, P/E 26.43, and a 2.63% dividend yield [thebull.com.au](https://thebull.com.au/us-news/exxonmobil-earnings-preview-what-to-expect-from-xom/).",
-      "drivers": [
-        "earnings expected $14.9B",
-        "YTD +29.71%",
-        "P/E 26.43",
-        "war windfall"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ConocoPhillips has a YTD return of +24.97%, P/E of 20.01, dividend yield of 2.85%, and a strong analyst score of 1.76, with earnings expected next week.",
-      "drivers": [
-        "YTD +24.97%",
-        "analyst score 1.76",
-        "P/E 20.01",
-        "dividend 2.85%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Occidental is up +33.26% YTD with the highest news sentiment (0.457) and a Buffett backing, though its P/E of 75.61 is elevated.",
-      "drivers": [
-        "YTD +33.26%",
-        "news sentiment 0.457",
-        "Buffett stake",
-        "high P/E risk"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BP has gained +26.45% YTD and offers a high 4.61% dividend yield, but its P/E of 35.1 and negative news sentiment (-0.058) temper the outlook.",
-      "drivers": [
-        "dividend 4.61%",
-        "YTD +26.45%",
-        "high P/E 35.1",
-        "negative sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.576,
-      "rationale": "Equinor has soared +69.84% YTD with a low P/E of 11.04, but analyst consensus is hold (score 3.33) and its CFO flagged an asterisk on the best quarter in years.",
-      "drivers": [
-        "YTD +69.84%",
-        "P/E 11.04",
-        "analyst hold",
-        "CFO caution"
       ]
     }
   ]
