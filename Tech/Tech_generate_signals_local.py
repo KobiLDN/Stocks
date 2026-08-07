@@ -254,9 +254,9 @@ def call_api(api_key, system_prompt, user_prompt):
     print(f"  finish={finish}  in={in_tok}  out={out_tok}  "
           f"est. cost=${(in_tok*0.15 + out_tok*0.60)/1_000_000:.5f}")
 
-    content = data["choices"][0]["message"].get("content", "").strip()
+    content = (data["choices"][0]["message"].get("content") or "").strip()
     if not content:
-        fail("Empty response from model.")
+        raise ValueError(f"Empty response from model (finish_reason={finish}).")
     return content
 
 
@@ -372,12 +372,12 @@ def main():
     last_err = None
     for attempt in range(1 + RETRY_ON_BAD_JSON):
         print(f"\nAttempt {attempt + 1}: requesting top {TOP_N} picks...")
-        content = call_api(api_key, system_prompt, user_prompt)
         try:
+            content = call_api(api_key, system_prompt, user_prompt)
             picks = parse_picks(content, valid_tickers)
             break
         except ValueError as e:
-            print(f"  parse failed: {e}")
+            print(f"  attempt failed: {e}")
             last_err = e
             system_prompt = (
                 SYSTEM_PROMPT
