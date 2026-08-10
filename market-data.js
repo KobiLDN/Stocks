@@ -1,30 +1,30 @@
 window.MARKET_DATA = {
-  "updated": "2026-08-10 16:34",
+  "updated": "2026-08-10 20:40",
   "spy": {
-    "price": 773.41,
-    "change_1d": 0.0,
-    "change_1w": 2.08,
-    "change_1m": 2.89,
-    "change_ytd": 13.81,
-    "change_1y": 22.97
+    "price": 773.13,
+    "change_1d": -0.03,
+    "change_1w": 2.04,
+    "change_1m": 2.85,
+    "change_ytd": 13.77,
+    "change_1y": 22.92
   },
   "qqq": {
-    "price": 721.1,
-    "change_1d": -0.3,
-    "change_1w": 3.0,
-    "change_1m": -0.3,
-    "change_ytd": 17.89,
-    "change_1y": 26.49
+    "price": 721.91,
+    "change_1d": -0.19,
+    "change_1w": 3.12,
+    "change_1m": -0.19,
+    "change_ytd": 18.02,
+    "change_1y": 26.63
   },
   "vix": {
-    "level": 15.24,
-    "change_1d": 2.35,
+    "level": 15.36,
+    "change_1d": 3.16,
     "regime": "bullish",
     "signal": "normal"
   },
   "market_regime": "bullish",
   "raw_regime": "bullish",
-  "spread_1w": 0.93,
+  "spread_1w": 1.08,
   "pending_regime": null,
   "consecutive_count": 0
 };
