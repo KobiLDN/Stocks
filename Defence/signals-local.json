@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-05 10:39",
+  "updated": "2026-08-10 09:30",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RTX",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "RTX has +20% YTD, P/E 39.2, analyst buy (score 1.87), and positive news sentiment 0.081; Q2 sales surged 14% YoY, adjusted EPS up 21%, and backlog hit $289B (+22% YoY) with $5B in GEM-T orders.",
+      "drivers": [
+        "+20% YTD",
+        "P/E 39.2",
+        "analyst buy",
+        "Q2 sales +14%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "CACI has +19.91% YTD, P/E 26.66, analyst buy (score 1.56), and news sentiment 0.14; Q4 revenue grew 17.6% YoY, backlog $32B, and secured a $500M C-UAS IDIQ contract for SkyValor.",
+      "drivers": [
+        "+19.91% YTD",
+        "P/E 26.66",
+        "analyst buy",
+        "Q4 revenue +17.6%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "LDOS has -24.57% YTD but +28.35% 1M, P/E 12.83, analyst buy (score 2.35), and news sentiment 0.215; Q2 net bookings $4.9B, backlog $48.7B, and raised FY2026 guidance (revenue $18.2-18.4B).",
+      "drivers": [
+        "+28.35% 1M",
+        "P/E 12.83",
+        "analyst buy",
+        "backlog $48.7B"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SAIC has +26.33% YTD, P/E 14.23, and news sentiment 0.177; strong momentum with +12.11% 1M and +8.03% 1W, and a cheap valuation relative to peers.",
+      "drivers": [
+        "+26.33% YTD",
+        "P/E 14.23",
+        "news sentiment 0.177",
+        "+12.11% 1M"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "KTOS",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "KTOS has -23.36% YTD but +20.62% 1M, analyst strong_buy (score 1.43), and news sentiment 0.113; momentum is accelerating with +30.41% 1W, and the drone sector is a key defence growth area.",
+      "drivers": [
+        "+20.62% 1M",
+        "analyst strong_buy",
+        "+30.41% 1W",
+        "defence drone catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AVAV has -27.11% YTD but +18.35% 1M, analyst buy (score 1.6), and a $400M Army Locust contract win; strong 1W momentum (+25.01%) and 1D (+8.88%) signal a turnaround.",
+      "drivers": [
+        "+18.35% 1M",
+        "analyst buy",
+        "$400M Army contract",
+        "+25.01% 1W"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "PLTR has +2.47% YTD but +30.09% 1M and +39.78% 1W, analyst buy (score 1.81), and news sentiment 0.253; high momentum driven by AI/defence demand, though P/E 147 is elevated.",
+      "drivers": [
+        "+30.09% 1M",
+        "analyst buy",
+        "news sentiment 0.253",
+        "AI/defence catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "RR.L has +27.83% YTD, P/E 42.5, analyst buy (score 1.6), and strong news sentiment 0.416; consistent momentum with +5.68% 1M and +4.24% 1W, backed by defence and civil aerospace growth.",
+      "drivers": [
+        "+27.83% YTD",
+        "analyst buy",
+        "news sentiment 0.416",
+        "+5.68% 1M"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "QQ.L has +24.58% YTD, P/E 27.68, analyst buy (score 1.75), and news sentiment 0.296; strong short-term momentum with +13.53% 1M and +9.39% 1W, and a small-cap defence play.",
+      "drivers": [
+        "+24.58% YTD",
+        "analyst buy",
+        "news sentiment 0.296",
+        "+13.53% 1M"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BA.L has +26.58% YTD, P/E 31.71, analyst buy (score 2.17), and news sentiment 0.048; positive momentum with +12.63% 1M and +6.02% 1W, though small market cap and lower sentiment.",
+      "drivers": [
+        "+26.58% YTD",
+        "analyst buy",
+        "+12.63% 1M",
+        "small-cap defence"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LDOS",
@@ -132,139 +265,6 @@
         "P/E 13.51",
         "no analyst coverage",
         "1w -1.00%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +18.62%, PE 21.5, record backlog $230B and raised FY2026 guidance after Q2 sales of $20.1B (+11% YoY) and a $35B THAAD contract [lockheedmartin.com](https://news.lockheedmartin.com/2026-07-23-Lockheed-Martin-Reports-Second-Quarter-2026-Financial-Results) [spokesman.com](https://www.spokesman.com/stories/2026/jul/23/lockheed-martin-rtx-lift-2026-forecasts-as-pentago/).",
-      "drivers": [
-        "YTD +18.62%",
-        "PE 21.5",
-        "record $230B backlog",
-        "raised guidance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +15.8%, 1M +12.22%, PE 37.89, raised FY2026 adjusted sales and EPS guidance after Q2 organic sales growth of 16% and backlog of $289B [rtx.com](https://www.rtx.com/news/news-center/2026/07/23/rtx-reports-q2-2026-results) [spokesman.com](https://www.spokesman.com/stories/2026/jul/23/lockheed-martin-rtx-lift-2026-forecasts-as-pentago/).",
-      "drivers": [
-        "YTD +15.8%",
-        "1M +12.22%",
-        "raised guidance",
-        "backlog $289B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "HII",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "1M +17.02%, 1W +13.51%, PE 19.45, Q2 earnings beat ($5.27 vs $3.82 est.) and raised shipbuilding revenue guidance to ~$10.3B [fool.com](https://www.fool.com/investing/2026/08/02/why-huntington-ingalls-industries-stock-is-up/).",
-      "drivers": [
-        "1M +17.02%",
-        "1W +13.51%",
-        "PE 19.45",
-        "earnings beat"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +32.93%, strong_buy analyst consensus (score 1.5), PE 38.7, positive news sentiment 0.217 with AI expansion and strong execution.",
-      "drivers": [
-        "YTD +32.93%",
-        "strong_buy rating",
-        "PE 38.7",
-        "news sentiment 0.217"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +16.93%, PE 13.19 (cheap), news sentiment 0.148, Navy radar order win supports backlog growth.",
-      "drivers": [
-        "YTD +16.93%",
-        "PE 13.19",
-        "Navy radar order",
-        "positive news"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +19.4%, 1M +13.56%, PE 29.91, buy rating (score 2.17), UK defence momentum with 'all-British' fighter jet programme.",
-      "drivers": [
-        "YTD +19.4%",
-        "1M +13.56%",
-        "PE 29.91",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +19.81%, YTD +13.89%, PE 25.3, news sentiment 0.296, small-cap UK defence penny stock with strong momentum.",
-      "drivers": [
-        "1M +19.81%",
-        "YTD +13.89%",
-        "PE 25.3",
-        "news sentiment 0.296"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1D +3.48%, analyst score 1.56 (buy), PE 20.53, SkyValor contract win suggests 24% undervaluation.",
-      "drivers": [
-        "1D +3.48%",
-        "analyst score 1.56",
-        "PE 20.53",
-        "SkyValor contract"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1M +12.16%, PE 10.57 (very cheap), news sentiment 0.214, Leidos partnership with CoreWeave, though YTD -36.61% remains a risk.",
-      "drivers": [
-        "1M +12.16%",
-        "PE 10.57",
-        "Leidos partnership",
-        "news sentiment 0.214"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1M +16.18%, PE 10.95 (cheap), but YTD -16.62% and hold rating (2.86) with high short interest 8.59% limit conviction.",
-      "drivers": [
-        "1M +16.18%",
-        "PE 10.95",
-        "YTD -16.62%",
-        "hold rating"
       ]
     }
   ]

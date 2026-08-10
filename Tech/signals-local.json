@@ -1,9 +1,220 @@
 {
-  "updated": "2026-08-05 10:40",
+  "updated": "2026-08-10 09:31",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "Microsoft surged +30.43% in one month on a historic short squeeze after a decisive earnings beat, with Azure revenue up 43% constant currency and cloud revenue $59.3B (+27% YoY). P/E of 27.85 is reasonable, analyst consensus is strong_buy (score 1.36), and news sentiment is positive at 0.258. [cnbc.com](https://www.cnbc.com/2026/08/04/palantir-2q-earnings-ai-sovereign-tools.html) [247wallst.com](https://247wallst.com/investing/2026/08/04/wall-street-short-sellers-piled-into-amazon-and-microsoft-at-historic-rates-before-earnings-now-theyre-rallying/)",
+      "drivers": [
+        "+30.43% 1-month momentum",
+        "Azure AI growth reacceleration",
+        "Short squeeze & earnings beat",
+        "Attractive P/E 27.85"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Amazon rallied +12.67% in one month driven by a short squeeze after strong earnings, cloud growth reacceleration, and AI capex confidence. P/E of 22.08 is attractive, analyst consensus is strong_buy (score 1.32), and news sentiment is high at 0.284. [247wallst.com](https://247wallst.com/investing/2026/08/04/wall-street-short-sellers-piled-into-amazon-and-microsoft-at-historic-rates-before-earnings-now-theyre-rallying/)",
+      "drivers": [
+        "+12.67% 1-month momentum",
+        "P/E 22.08 attractive",
+        "Short squeeze & AI infrastructure",
+        "Strong buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Palantir skyrocketed +30.09% in one month and +39.78% in one week after reporting 'otherworldly' Q2 earnings with 93% revenue growth to $1.94B, driven by AI sovereignty demand. News sentiment is 0.253 and analyst rating is buy (score 1.81), though P/E of 147 is elevated. [cnbc.com](https://www.cnbc.com/2026/08/04/palantir-2q-earnings-ai-sovereign-tools.html)",
+      "drivers": [
+        "+30.09% 1-month momentum",
+        "93% revenue growth beat",
+        "AI sovereign tools catalyst",
+        "Strong news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "Shopify bounced +27.13% in one month and +29.38% in one week after beating Q2 estimates with revenue up 34% to $3.58B and raising guidance. Analyst consensus is buy (score 1.69), Morningstar raised fair value to $145, and agentic commerce is a new growth vector. [morningstar.com](https://www.morningstar.com/stocks/shopify-bounces-earnings-calm-ai-loser-trade-concerns)",
+      "drivers": [
+        "+27.13% 1-month momentum",
+        "Revenue beat & raised guidance",
+        "Agentic commerce catalyst",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SNOW",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Snowflake rose +26.47% in one month and +12.69% in one week, with YTD return of +52.50%. Analyst consensus is buy (score 1.51), news sentiment is positive at 0.262, and the stock hit 52-week highs driven by AI data platform demand.",
+      "drivers": [
+        "+26.47% 1-month momentum",
+        "+52.50% YTD return",
+        "Positive news sentiment 0.262",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "ServiceNow gained +15.87% in one month and +12.27% in one week, with a strong_buy analyst consensus (score 1.47) and positive news sentiment of 0.199. The company unveiled autonomous security capabilities to accelerate growth, and P/E of 78.05 reflects premium for AI-driven workflow automation.",
+      "drivers": [
+        "+15.87% 1-month momentum",
+        "Strong_buy consensus",
+        "Autonomous security product launch",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Salesforce rallied +15.70% in one month and has a reasonable P/E of 22.33. Analyst consensus is buy (score 1.67), news sentiment is strong at 0.317, and short interest of 6.56% suggests potential for a squeeze. The stock is recovering from YTD losses of -23.62%.",
+      "drivers": [
+        "+15.70% 1-month momentum",
+        "P/E 22.33 reasonable",
+        "High short interest 6.56%",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.73,
+      "rationale": "Palo Alto Networks surged +13.50% in one month and is up +102.85% YTD, reflecting strong cybersecurity demand. Analyst consensus is buy (score 1.60), news sentiment is 0.211, and the company's market cap has nearly tripled in a year. P/E of 313.67 is high but justified by growth.",
+      "drivers": [
+        "+13.50% 1-month momentum",
+        "+102.85% YTD return",
+        "Buy analyst consensus",
+        "Cybersecurity sector tailwind"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Intuit gained +20.06% in one month and trades at a low P/E of 19.84, offering deep value after a -47.84% YTD decline. Analyst consensus is buy (score 1.86), and the company is benefiting from AI integration in tax and financial software.",
+      "drivers": [
+        "+20.06% 1-month momentum",
+        "P/E 19.84 value",
+        "Buy analyst consensus",
+        "AI integration in fintech"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Cisco rose +6.69% in one month and is up +61.16% YTD, with a reasonable P/E of 40.48 and a dividend yield of 1.38%. Analyst consensus is buy (score 1.85), news sentiment is the highest in the universe at 0.349, and the company is benefiting from AI infrastructure spending.",
+      "drivers": [
+        "+61.16% YTD return",
+        "High news sentiment 0.349",
+        "Dividend yield 1.38%",
+        "AI infrastructure spending"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+146.29%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +146.29% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +146.29% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.81,
+      "ytd": "+116.30%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +116.30% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +116.30% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.731,
+      "ytd": "+104.98%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +104.98% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +104.98% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "signal": "buy",
+      "confidence": 0.703,
+      "ytd": "+101.02%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +101.02% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +101.02% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.62,
+      "ytd": "+89.09%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +89.09% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +89.09% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.587,
+      "ytd": "+178.38%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +178.38% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +178.38% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.52,
+      "ytd": "+158.13%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +158.13% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +158.13% \u2265 152.1% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,228 +343,6 @@
         "strong_buy consensus",
         "removed from Goldman list",
         "P/E 72.04"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+144.54%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +144.54% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +144.54% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.919,
-      "ytd": "+132.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +132.06% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +132.06% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.808,
-      "ytd": "+116.09%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +116.09% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +116.09% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.726,
-      "ytd": "+104.24%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +104.24% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +104.24% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "signal": "buy",
-      "confidence": 0.723,
-      "ytd": "+103.81%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +103.81% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +103.81% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.602,
-      "ytd": "+183.17%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +183.17% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +183.17% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.601,
-      "ytd": "+86.27%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +86.27% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +86.27% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.513,
-      "ytd": "+156.12%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +156.12% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +156.12% \u2265 152.1% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Azure revenue surged 43% to $100B annual run rate, backlog hit $678B, and EPS of $4.74 beat estimates; stock surged +20.93% in 1M and +21.75% in 1W with strong_buy consensus (score 1.35) and positive news sentiment 0.219 [fool.com](https://www.fool.com/investing/2026/08/02/why-microsoft-stock-is-surging/).",
-      "drivers": [
-        "Azure 43% growth",
-        "$678B backlog",
-        "EPS beat $4.74 vs $4.24 est",
-        "1M momentum +20.93%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "AWS revenue grew 37% to $42.2B, beating 31% consensus, and contract backlog expanded to $496B; stock gained +12.36% 1M and +17% 1W with strong_buy consensus and P/E 21.83 [tradingpedia.com](https://www.tradingpedia.com/2026/08/03/amazon-boosts-ai-capex-as-aws-growth-accelerates/).",
-      "drivers": [
-        "AWS 37% revenue growth",
-        "$496B backlog",
-        "1W momentum +17%",
-        "P/E 21.83"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +35.33%, 1M +12.29%, 1W +9.41% with strong_buy analyst consensus (score 1.49) and highest news sentiment in enterprise software at 0.254.",
-      "drivers": [
-        "YTD +35.33%",
-        "1M +12.29%",
-        "strong_buy consensus",
-        "news sentiment 0.254"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +42.32%, 1M +13.26%, 1W +6.42% with buy consensus and positive news sentiment 0.14; high beta 1.671 reflects growth profile.",
-      "drivers": [
-        "YTD +42.32%",
-        "1M +13.26%",
-        "buy consensus",
-        "news sentiment 0.14"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +12.40%, 1M +5.40%, 1W +1.93% with strong_buy consensus (score 1.31) and P/E 64.99 reflecting AI infrastructure demand; stable momentum.",
-      "drivers": [
-        "strong_buy consensus 1.31",
-        "YTD +12.40%",
-        "1M +5.40%",
-        "P/E 64.99"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +12.74%, 1W +12.44% with buy consensus (score 1.66) and reasonable P/E 21.32; YTD -27.07% offers value entry.",
-      "drivers": [
-        "1M +12.74%",
-        "1W +12.44%",
-        "P/E 21.32",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +18.87%, 1W +6.66% with buy consensus (score 1.8) and low P/E 19.27; YTD -49.32% suggests deep value with AI restructuring catalyst.",
-      "drivers": [
-        "1M +18.87%",
-        "P/E 19.27",
-        "buy consensus",
-        "AI restructuring"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +13.15%, 1W +11.38%, 1D +6.10% with strong_buy consensus (score 1.39) and attractive P/E 17.86; news sentiment slightly negative but fundamentals solid.",
-      "drivers": [
-        "P/E 17.86",
-        "1W +11.38%",
-        "strong_buy consensus",
-        "YTD +13.15%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +53.94%, 1W +1.59%, 1D +2.24% with buy consensus (score 1.88) and P/E 38.66; dividend yield 1.45% adds income.",
-      "drivers": [
-        "YTD +53.94%",
-        "P/E 38.66",
-        "buy consensus",
-        "dividend yield 1.45%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "1W +12.60%, 1D +2.34% with strong_buy consensus (score 1.47) and positive news sentiment 0.079; YTD -24.56% but strong weekly momentum.",
-      "drivers": [
-        "1W +12.60%",
-        "strong_buy consensus 1.47",
-        "news sentiment 0.079",
-        "beta 0.959"
       ]
     }
   ]

@@ -1,9 +1,137 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-05 10:41",
+  "updated": "2026-08-10 09:32",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "BTC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Bitcoin ETFs pulled in $853M in a week (4x new supply), price at $65,120 with +3.79% 1w momentum, though short-term holder cost basis at $67.5K poses resistance [cryptoadworld.com].",
+      "drivers": [
+        "$853M weekly ETF inflow",
+        "+3.79% 1w",
+        "4x supply-demand imbalance",
+        "institutional demand"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ADA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Cardano leads momentum with +18.56% 1m and +7.81% 1w, positive news sentiment of 0.062, and a market cap of $7.2B offering relative value.",
+      "drivers": [
+        "+18.56% 1m",
+        "+7.81% 1w",
+        "positive sentiment 0.062",
+        "low market cap"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "PEPE exchange outflows hit nearly 2-year high as whales accumulate, with +5.01% 1m and +1.53% 1d momentum, signaling strong accumulation.",
+      "drivers": [
+        "whale accumulation",
+        "exchange outflows 2Y high",
+        "+5.01% 1m",
+        "+1.53% 1d"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Chainlink enters accumulation zone that preceded a 550% rally, with +2.81% 1m and neutral sentiment, offering a high-reward setup.",
+      "drivers": [
+        "accumulation zone catalyst",
+        "+2.81% 1m",
+        "historical 550% rally pattern"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solana has positive news sentiment of 0.136, +5.61% 1w, and a token burn narrative that could boost value, despite -1.36% 1m.",
+      "drivers": [
+        "positive sentiment 0.136",
+        "+5.61% 1w",
+        "token burn catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BNB shows steady momentum with +4.83% 1m and +3.58% 1w, highest news sentiment in the universe at 0.192, and $80B market cap.",
+      "drivers": [
+        "+4.83% 1m",
+        "+3.58% 1w",
+        "sentiment 0.192",
+        "large cap stability"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "TRX is the only asset with positive YTD at +15.93%, despite negative news sentiment -0.22, showing resilience and relative strength.",
+      "drivers": [
+        "+15.93% YTD",
+        "only positive YTD",
+        "relative strength"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Ethereum has +6.93% 1m and +3.72% 1w, a massive $232B market cap, but negative sentiment -0.139 and a hack headline weigh on confidence.",
+      "drivers": [
+        "+6.93% 1m",
+        "large cap $232B",
+        "institutional core holding"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "KAITO",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "KAITO has strong YTD (+35.36%) and 1m (+11.80%) but a sharp 1w drop of -27.11%, high risk but potential contrarian play if momentum resumes.",
+      "drivers": [
+        "+35.36% YTD",
+        "+11.80% 1m",
+        "high volatility",
+        "contrarian opportunity"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "WLD",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "Worldcoin surged +10.20% in 1d with +7.43% 1w, but YTD -29.09% and weak fundamentals; short-term momentum play.",
+      "drivers": [
+        "+10.20% 1d",
+        "+7.43% 1w",
+        "short-term momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BTC",
@@ -132,139 +260,6 @@ window.SIGNALS_DATA = {
         "+7.21% 1D",
         "price near zero",
         "speculative"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "BNB",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "BNB is the only major in the green, up 1.32% on the week and +2.30% on the month, with positive news sentiment 0.154 and a headline about World Liberty Financial's billion-dollar crypto income. Its relative strength against a weak market and strong fundamentals make it the top pick.",
-      "drivers": [
-        "+1.32% 1W, +2.30% 1M",
-        "Only major in green",
-        "News sentiment 0.154",
-        "Market cap $77.5B"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ADA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "ADA surged 10.56% in the past week, the best among large caps, with +3.92% on the month, driven by the upcoming Cardano upgrade. Despite negative news sentiment -0.057, the momentum and upgrade catalyst support a strong buy.",
-      "drivers": [
-        "+10.56% 1W",
-        "+3.92% 1M",
-        "Upgrade catalyst",
-        "Market cap $6.7B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ETH is down 5.53% on the week but up 5.78% on the month, with positive news sentiment 0.234 and a headline about cryptocurrencies being cheap. Despite ETF outflows and macro headwinds, its strong monthly momentum and institutional interest support a buy.",
-      "drivers": [
-        "+5.78% 1M",
-        "News sentiment 0.234",
-        "Institutional interest",
-        "Market cap $223.9B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "TRX is the only asset with positive YTD (+14.47%) and 1-year (+14%) returns, with new accounts jumping 42.87% to a one-month high. Its strong fundamentals and adoption growth make it a solid buy despite a slight weekly dip.",
-      "drivers": [
-        "+14.47% YTD",
-        "+14% 1Y",
-        "New accounts +42.87%",
-        "Market cap $30.9B"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "LINK is up 4.44% on the month with a headline about Ethereum Institutional closing a funding round with 100+ backers, indicating strong ecosystem growth. Despite a -6.51% weekly dip, its monthly momentum and positive news support a buy.",
-      "drivers": [
-        "+4.44% 1M",
-        "Ecosystem funding round",
-        "Market cap $6.2B",
-        "News sentiment 0.0"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "PEPE is up 2.87% on the month with positive news sentiment 0.202 and a headline about a trader turning $50K into nearly $1M, indicating strong memecoin social sentiment. Despite a weekly dip, its monthly momentum and meme appeal make it a buy.",
-      "drivers": [
-        "+2.87% 1M",
-        "News sentiment 0.202",
-        "Memecoin social sentiment",
-        "Market cap $1.2B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BTC is down 4.17% on the week but up 0.42% on the month, with a market cap of $1.26T. Despite the Coldcard hack and ETF outflows, its status as the reference asset and potential support at $60K make it a buy for long-term holders.",
-      "drivers": [
-        "+0.42% 1M",
-        "Market cap $1.26T",
-        "Support at $60K",
-        "News sentiment -0.062"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "POL is up 0.76% on the day and nearly flat on the month (-0.01%), showing resilience in a weak market. With a market cap of $0.78B and no negative news, it offers a defensive play with potential for upside.",
-      "drivers": [
-        "+0.76% 1D",
-        "Flat 1M",
-        "Market cap $0.78B",
-        "Defensive play"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "ALGO is up 6.18% on the day and 1.25% on the week, showing strong short-term momentum despite a -4.17% monthly dip. Its low market cap of $0.76B offers high beta potential, and it was mentioned as sustaining gains in the latest news.",
-      "drivers": [
-        "+6.18% 1D",
-        "+1.25% 1W",
-        "High beta",
-        "Market cap $0.76B"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.592,
-      "rationale": "KAITO is up 85.08% YTD and 51.74% on the month, but down 19.50% on the week and 19.29% on the day, indicating high volatility. Despite the recent pullback, its strong YTD performance and small market cap of $0.23B make it a speculative buy.",
-      "drivers": [
-        "+85.08% YTD",
-        "+51.74% 1M",
-        "High volatility",
-        "Market cap $0.23B"
       ]
     }
   ]

@@ -1,9 +1,176 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-05 10:42",
+  "updated": "2026-08-10 09:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "+30.43% 1M, P/E 27.85, Azure growth 43% YoY, strong_buy consensus, news sentiment 0.258, short squeeze catalyst post-earnings.",
+      "drivers": [
+        "1M +30.43%",
+        "Azure growth 43%",
+        "P/E 27.85",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "+12.67% 1M, YTD +21.18%, P/E 22.08, strong_buy, news sentiment 0.284, AI capex confidence with 93.5% probability of >$200B spend.",
+      "drivers": [
+        "1M +12.67%",
+        "YTD +21.18%",
+        "P/E 22.08",
+        "AI capex tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "+30.96% 1M, cloud backlog +27% YoY, P/E 26.74, buy consensus, strong cloud momentum from Q2 results.",
+      "drivers": [
+        "1M +30.96%",
+        "cloud backlog +27%",
+        "P/E 26.74",
+        "Q2 cloud beat"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+17.83% 1M, P/E 19.69, strong_buy, earnings beat with 14% revenue growth and 51% net income surge, restructuring catalyst.",
+      "drivers": [
+        "1M +17.83%",
+        "P/E 19.69",
+        "earnings beat",
+        "strong_buy"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+16.44% 1M, P/E 31.95, news sentiment 0.452 (highest in universe), buy consensus, life sciences tools demand.",
+      "drivers": [
+        "1M +16.44%",
+        "news sentiment 0.452",
+        "P/E 31.95",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BLK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+14.75% 1M, P/E 27.25, YTD +5.91%, news sentiment 0.202, asset manager benefiting from market rally and AUM growth.",
+      "drivers": [
+        "1M +14.75%",
+        "P/E 27.25",
+        "YTD +5.91%",
+        "asset manager tailwind"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+14.43% 1M, YTD +20%, P/E 39.2, defence catalyst from Pentagon acceleration request, buy consensus.",
+      "drivers": [
+        "1M +14.43%",
+        "YTD +20%",
+        "defence spending",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+14.08% 1M, P/E 34.89, news sentiment 0.289, $1.35B buyback update, buy consensus, healthcare stability.",
+      "drivers": [
+        "1M +14.08%",
+        "buyback catalyst",
+        "news sentiment 0.289",
+        "P/E 34.89"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HON",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+11.73% 1M, YTD +21.11%, P/E 9.47 (deep value), buy consensus, diversified industrial with aerospace exposure.",
+      "drivers": [
+        "1M +11.73%",
+        "P/E 9.47",
+        "YTD +21.11%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SONY",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "+10.92% 1M, P/E 19.88, strong_buy, news sentiment 0.273, image sensor JV with TSMC ($6.3B) catalyst.",
+      "drivers": [
+        "1M +10.92%",
+        "P/E 19.88",
+        "strong_buy",
+        "TSMC JV catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+146.29%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +146.29% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +146.29% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.81,
+      "ytd": "+116.30%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +116.30% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +116.30% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.52,
+      "ytd": "+158.13%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +158.13% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +158.13% \u2265 152.1% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,173 +299,6 @@ window.SIGNALS_DATA = {
         "positive news sentiment",
         "healthcare",
         "P/E 34.7"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+144.54%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +144.54% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +144.54% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.919,
-      "ytd": "+132.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +132.06% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +132.06% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.513,
-      "ytd": "+156.12%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +156.12% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +156.12% \u2265 152.1% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Azure revenue soared 43% YoY, pushing shares +21.75% in a week; P/E is a reasonable 25.9 with strong_buy consensus and a record $678B commercial backlog.",
-      "drivers": [
-        "+21.75% 1W momentum",
-        "P/E 25.9 is attractive",
-        "Azure +43% revenue growth",
-        "strong_buy consensus (1.35)"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Amazon surged +17% in a week and +19.9% YTD, with P/E of 21.8 and strong_buy consensus; robust AI/cloud tailwinds bolster the outlook.",
-      "drivers": [
-        "+17.00% 1W momentum",
-        "+19.90% YTD",
-        "P/E 21.8 undervalued",
-        "strong_buy consensus (1.35)"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BABA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Shares jumped +24.76% in a month after unveiling Qwen3.8-Max AI model rivaling Anthropic; P/E 18.8 with strong_buy consensus and bullish retail sentiment.",
-      "drivers": [
-        "+24.76% 1M momentum",
-        "+9.02% 1W",
-        "P/E 18.8 cheap",
-        "strong_buy consensus (1.32)"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Chevron gained +28.66% YTD and +18.79% in a month, supported by 3.62% dividend yield and a P/E of 18.9; strong energy sector momentum.",
-      "drivers": [
-        "+28.66% YTD",
-        "+18.79% 1M momentum",
-        "P/E 18.9 reasonable",
-        "3.62% dividend yield"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SAP rallied +15.38% in a month and +14.76% in a week, with a 1.6% dividend yield and buy consensus; enterprise software demand is robust.",
-      "drivers": [
-        "+15.38% 1M momentum",
-        "+14.76% 1W",
-        "P/E 24.0 fair",
-        "1.6% dividend yield"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Abbott surged +15.48% in a month and offers a 2.38% dividend yield; P/E 34.2 with buy consensus and positive news sentiment.",
-      "drivers": [
-        "+15.48% 1M momentum",
-        "2.38% dividend yield",
-        "Buy consensus (1.67)",
-        "+0.334 news sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SONY",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Sony climbed +15.09% in a month and +10.87% in a week, with a P/E of 20.4 and strong_buy consensus; cheap valuation supports upside.",
-      "drivers": [
-        "+15.09% 1M momentum",
-        "+10.87% 1W",
-        "P/E 20.4 attractive",
-        "strong_buy consensus (1.50)"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ExxonMobil is up +28.45% YTD and +14.06% in a month, with a 2.65% dividend yield; buy consensus with bullish energy sector tailwinds.",
-      "drivers": [
-        "+28.45% YTD",
-        "+14.06% 1M",
-        "2.65% dividend yield",
-        "buy consensus (2.40)"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "RTX gained +15.8% YTD and +12.22% in a month, with a 1.36% dividend yield and buy consensus; defense spending provides a macro tailwind.",
-      "drivers": [
-        "+12.22% 1M momentum",
-        "+15.8% YTD",
-        "1.36% dividend yield",
-        "buy consensus (1.87)"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Thermo Fisher rose +11.88% in a month, P/E 30.9 with buy consensus and positive news sentiment; life sciences tools demand is steady.",
-      "drivers": [
-        "+11.88% 1M momentum",
-        "P/E 30.9 reasonable",
-        "buy consensus (1.54)",
-        "+0.132 news sentiment"
       ]
     }
   ]

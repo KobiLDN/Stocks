@@ -1,9 +1,154 @@
 {
-  "updated": "2026-08-05 10:37",
+  "updated": "2026-08-10 09:27",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Natera shows exceptional momentum with +105% 1-year return, +40.75% YTD, +17.39% 1-month, and +20.29% 1-week, supported by a strong buy analyst consensus (score 1.52) and positive news sentiment (0.152) after raising 2026 guidance.",
+      "drivers": [
+        "+105% 1-year return",
+        "+40.75% YTD",
+        "+20.29% 1-week",
+        "strong_buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMGN",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Amgen delivered a Q2 beat with 10% revenue growth to $10.1B, raised full-year guidance to $22.30-$23.50 EPS, and saw strong sales from key growth drivers (Repatha +37%, Evenity +38%), driving +44% 1-year return and +27.25% YTD.",
+      "drivers": [
+        "Q2 beat with raised guidance",
+        "+27.25% YTD",
+        "strong growth drivers",
+        "positive news sentiment 0.182"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Regeneron has strong 1-year return of +44% and 1-month momentum of +18.33%, with a reasonable P/E of 19.42 and a buy analyst consensus (score 1.81), though short interest at 3.59% warrants caution.",
+      "drivers": [
+        "+44% 1-year return",
+        "+18.33% 1-month",
+        "P/E 19.42",
+        "buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "Bristol-Myers Squibb offers a compelling mix of +41% 1-year return, +23.69% YTD, low P/E of 14.26, a 3.89% dividend yield, and the highest news sentiment (0.282) among large-cap picks, with strong momentum in the last month (+12.48%).",
+      "drivers": [
+        "+23.69% YTD",
+        "P/E 14.26",
+        "dividend yield 3.89%",
+        "news sentiment 0.282"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "Biogen has delivered a standout +62% 1-year return with +16.94% YTD and positive news sentiment (0.156) following its Q2 earnings call, supported by a buy analyst consensus (score 1.86), though short interest at 4.53% adds some risk.",
+      "drivers": [
+        "+62% 1-year return",
+        "+16.94% YTD",
+        "buy analyst consensus",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Incyte shows solid performance with +52% 1-year return, +18.87% YTD, a low P/E of 15.36, and the highest news sentiment (0.415) in the oncology category, though short interest at 8.97% is elevated.",
+      "drivers": [
+        "+52% 1-year return",
+        "P/E 15.36",
+        "news sentiment 0.415",
+        "oncology focus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Illumina has impressive +98% 1-year return and +39.90% YTD, with strong news sentiment (0.348) and a P/E of 35.07, but a hold analyst consensus (score 2.53) and recent 1-week decline of -8.36% temper enthusiasm.",
+      "drivers": [
+        "+98% 1-year return",
+        "+39.90% YTD",
+        "news sentiment 0.348",
+        "genomics leader"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "COAG",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "COAG has exceptional momentum with +46% 1-year return, +46.06% YTD, and +46.53% 1-month, but lacks analyst coverage (score null) and has slightly negative news sentiment (-0.018), making it a high-risk, high-reward pick.",
+      "drivers": [
+        "+46.06% YTD",
+        "+46.53% 1-month",
+        "rare-disease catalyst",
+        "no analyst coverage"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.63,
+      "rationale": "BioMarin has +12% 1-year return, +7.33% YTD, +6.79% 1-month, and strong news sentiment (0.293) after a Q2 beat with raised 2026 outlook, but a high P/E of 172.46 and short interest of 7.43% indicate valuation and risk concerns.",
+      "drivers": [
+        "Q2 beat with raised outlook",
+        "news sentiment 0.293",
+        "rare-disease pipeline",
+        "high P/E 172.46"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BNTX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BioNTech has a buy analyst consensus (score 1.55) and positive news sentiment (0.161) with a new CEO and European clearance for its updated COVID-19 shot, but negative 1-year return (-14%) and YTD (-3.12%) suggest recent underperformance.",
+      "drivers": [
+        "buy analyst consensus",
+        "new CEO catalyst",
+        "positive news sentiment",
+        "mRNA platform"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.639,
+      "ytd": "+91.74%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +91.74% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +91.74% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "REGN",
@@ -132,151 +277,6 @@
         "high YTD performance",
         "recent IPO momentum",
         "rare-disease category"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.589,
-      "ytd": "+84.67%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +84.67% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +84.67% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "ILMN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "ILMN is up 5.7% after raising 2026 revenue guidance to $4.60B-$4.64B on strong clinical sequencing demand and NovaSeq X adoption, with YTD +52.66% and 1M +11.53% momentum.",
-      "drivers": [
-        "+52.66% YTD",
-        "raised 2026 revenue guidance",
-        "clinical sequencing momentum",
-        "1M +11.53%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "REGN",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "REGN Q2 revenue surged 17% to $4.29B with Dupixent sales reaching $6B (+38% YoY), driving a 1M +22.08% and 1W +16.25% rally; analyst consensus is buy with an_score 1.81.",
-      "drivers": [
-        "Q2 revenue beat $4.29B",
-        "Dupixent +38% YoY",
-        "1M +22.08%",
-        "earnings inflection"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "COAG has surged +39.85% YTD and +46.31% in the past month, with a strong_buy analyst consensus (an_score 1.0) and no debt, reflecting strong rare-disease pipeline momentum.",
-      "drivers": [
-        "+39.85% YTD",
-        "+46.31% 1M",
-        "strong_buy consensus",
-        "rare-disease catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "INCY won EU approval for Opzelura, driving +17.85% YTD and +5.02% 1M, with a low P/E of 15.23 and very positive news sentiment of 0.636.",
-      "drivers": [
-        "EU approval for Opzelura",
-        "P/E 15.23",
-        "news sentiment 0.636",
-        "+17.85% YTD"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "BMY has strong momentum with +24.82% YTD and +17.02% 1M, a low P/E of 14.39, and a 3.86% dividend yield, though news sentiment is slightly negative (-0.125) on M&A speculation.",
-      "drivers": [
-        "+24.82% YTD",
-        "P/E 14.39",
-        "dividend yield 3.86%",
-        "M&A speculation"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "GILD is heading into Q2 earnings with +8.40% YTD, a low P/E of 17.74, a 2.52% dividend yield, and positive news sentiment of 0.158; analyst consensus is buy (an_score 1.69).",
-      "drivers": [
-        "P/E 17.74",
-        "dividend yield 2.52%",
-        "analyst buy consensus",
-        "Q2 earnings catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "EXEL has +21.68% YTD, a low P/E of 17.56, and positive news sentiment of 0.151, though recent 1W -4.23% and 1D -5.64% pullbacks offer a better entry point.",
-      "drivers": [
-        "+21.68% YTD",
-        "P/E 17.56",
-        "positive news sentiment",
-        "pullback entry"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "AMGN has +19.26% YTD and a low beta of 0.403, with a 2.6% dividend yield and Q2 earnings expected on Aug 4; however, a recent data breach and hold consensus (an_score 2.44) temper confidence.",
-      "drivers": [
-        "+19.26% YTD",
-        "dividend yield 2.6%",
-        "Q2 earnings catalyst",
-        "data breach risk"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BMRN has modest YTD +0.96% but a 1M +3.80% uptick, a low beta of 0.239, and a buy analyst consensus (an_score 1.72), though P/E of 43.18 is elevated.",
-      "drivers": [
-        "1M +3.80%",
-        "low beta 0.239",
-        "buy consensus",
-        "rare-disease pipeline"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "GSK",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "GSK has +38% 1-year return and +5.48% YTD, a low P/E of 16.37, a 3.52% dividend yield, and opened a new Cambridge research hub, though analyst consensus is hold (an_score 2.59).",
-      "drivers": [
-        "+38% 1-year return",
-        "P/E 16.37",
-        "dividend yield 3.52%",
-        "Cambridge research hub"
       ]
     }
   ]
