@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-08-07 22:14",
-  "fx_gbp_usd": 1.3493,
+  "updated": "2026-08-10 07:37",
+  "fx_gbp_usd": 1.3495,
   "fx_sar_usd": 0.266347,
   "stocks": [
     {
@@ -9,67 +9,67 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "313",
-      "price_gbp": 232.2214,
+      "price_gbp": 232.1869,
       "change_1d": "+0.25%",
       "change_1w": "+1.43%",
       "change_1m": "-0.02%",
       "change_ytd": "+15.83%",
-      "return_1yr": "+32%",
-      "low_usd": "219",
-      "low_gbp": 162.4949,
+      "return_1yr": "+38%",
+      "low_usd": "224",
+      "low_gbp": 165.8277,
       "high_usd": "345",
-      "high_gbp": 255.3746,
-      "bar_pct": 75,
+      "high_gbp": 255.3367,
+      "bar_pct": 74,
       "market_cap_usd_b": 4572.794,
-      "market_cap_gbp_b": 3389.081,
+      "market_cap_gbp_b": 3388.577,
       "beta": 1.086,
-      "pe_ratio": 35.93,
-      "avg_volume_m": 57.24,
-      "div_yield_pct": 35.0,
+      "pe_ratio": 35.97,
+      "avg_volume_m": 56.81,
+      "div_yield_pct": 34.0,
       "short_pct": 1.0,
       "analyst": "buy",
       "analyst_score": 2.09,
-      "vol_1d": 34331108,
-      "vol_1w": 272962808,
-      "vol_1m": 1250227008,
+      "vol_1d": 34407100,
+      "vol_1w": 273038800,
+      "vol_1m": 1250303000,
       "news": [
         {
-          "title": "OpenAI developing $300+ AI speaker to challenge Amazon Alexa",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/openai-developing-300-ai-speaker-202000842.html",
-          "published": 1786134000,
-          "sentiment": 0.25
-        },
-        {
-          "title": "What we know about OpenAI's upcoming handheld device: Bloomberg",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/know-openais-upcoming-handheld-device-140247594.html",
-          "published": 1786111367,
+          "title": "Apple\u2019s Foldable Phone, Whoop-Like Band, CXMT Memory Tests Buzz Keep Traders Hooked",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/apple-s-foldable-phone-whoop-like-band-cxmt-memory-tests-buzz-keep-traders-hooked/cZojgdmRJap",
+          "published": 1786337919,
           "sentiment": 0.0
         },
         {
-          "title": "Apple and OpenAI escalate legal battle over devices",
-          "publisher": "AFP",
-          "url": "https://finance.yahoo.com/technology/ai/articles/apple-openai-escalate-legal-battle-203900524.html",
-          "published": 1786135140,
-          "sentiment": -0.273
+          "title": "Apple CEO Tim Cook Just Passed His Successor a Mess",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/apple-ceo-tim-cook-just-passed-his-successor-a-mes/",
+          "published": 1786314000,
+          "sentiment": -0.153
         },
         {
-          "title": "Why Apple\u2019s 10% Drop Fails to Tell the Whole Story",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-apple-10-drop-fails-203810284.html",
-          "published": 1786135090,
-          "sentiment": -0.599
-        },
-        {
-          "title": "Canaccord Genuity Shareholders Back Board as Revenue Tops CAD 2 Billion",
+          "title": "Canaccord Genuity Group Q1 Earnings Call Highlights",
           "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/canaccord-genuity-shareholders-back-board-as-revenue-tops-cad-2-billion-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1786129461,
-          "sentiment": 0.511
+          "url": "https://www.marketbeat.com/instant-alerts/canaccord-genuity-group-q1-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786313027,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Apple's Favorite Bullying Tactic Just Died in China. It Could Cost You Hundreds on Your Next iPhone.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3746480/apple-s-favorite-bullying-tactic-just-died-in-china-it-could-cost-you-hundreds-on-your-next-iphone",
+          "published": 1786309597,
+          "sentiment": -0.67
+        },
+        {
+          "title": "If You Had Bought $10,000 of Apple Stock When Steve Jobs Handpicked Tim Cook as the Next CEO, Here's How Much You'd Have Today",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/if-bought-apple-stock-when-steve-jobs-tim-cook/",
+          "published": 1786301760,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.022
+      "news_sentiment": -0.165
     },
     {
       "ticker": "MSFT",
@@ -77,67 +77,67 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "500",
-      "price_gbp": 370.5626,
+      "price_gbp": 370.5076,
       "change_1d": "+0.20%",
       "change_1w": "+7.59%",
       "change_1m": "+30.43%",
       "change_ytd": "+6.19%",
-      "return_1yr": "-7%",
+      "return_1yr": "-4%",
       "low_usd": "349",
-      "low_gbp": 258.8061,
+      "low_gbp": 258.7677,
       "high_usd": "554",
-      "high_gbp": 410.384,
+      "high_gbp": 410.3231,
       "bar_pct": 74,
       "market_cap_usd_b": 3712.699,
-      "market_cap_gbp_b": 2751.63,
+      "market_cap_gbp_b": 2751.221,
       "beta": 1.099,
-      "pe_ratio": 27.87,
-      "avg_volume_m": 41.5,
+      "pe_ratio": 27.85,
+      "avg_volume_m": 41.35,
       "div_yield_pct": 73.0,
       "short_pct": 1.24,
       "analyst": "strong_buy",
       "analyst_score": 1.36,
-      "vol_1d": 24137816,
-      "vol_1w": 211185816,
-      "vol_1m": 872587116,
+      "vol_1d": 28818000,
+      "vol_1w": 215866000,
+      "vol_1m": 877267300,
       "news": [
         {
-          "title": "AI theme has 'a long way to run': Strategist",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/ai-theme-long-way-run-204908888.html",
-          "published": 1786135748,
-          "sentiment": 0.0
+          "title": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/very-little-to-like-wall-street-assesses-surprise-july-jobs-report-as-stocks-jump-113529334.html",
+          "published": 1786275329,
+          "sentiment": 0.555
         },
         {
-          "title": "C3.ai vs. Applied Digital: Which Artificial Intelligence Stock Is a Better Buy in 2026?",
+          "title": "LegalZoom.com (LZ) Could Be 32% Undervalued Following Copilot Launch And Guidance Cut",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/legalzoom-com-lz-could-32-051041491.html",
+          "published": 1786338641,
+          "sentiment": -0.273
+        },
+        {
+          "title": "Meet the High-Yield Dividend Stock Bill Ackman Has Owned for Over a Decade. Here's Why It's a Great Buy in August.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/08/07/c3-ai-vs-applied-digital-which-artificial-intelligence-stock-is-a-better-buy-in-2026/",
-          "published": 1786136821,
-          "sentiment": 0.718
+          "url": "https://www.fool.com/investing/2026/08/09/meet-the-high-yield-dividend-stock-bill-ackman-has/",
+          "published": 1786320300,
+          "sentiment": 0.625
         },
         {
-          "title": "Nvidia, Microsoft Partner Tests Breakout. Three Clues Bode Well.",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/research/ibd-stock-analysis/dell-stock-rises-ai-collaboration-with-nvidia-microsoft-amd/?src=A00220&yptr=yahoo",
-          "published": 1786132866,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Beyond NVIDIA and GPUs: The Next AI & Quantum Winners Leading 2026",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/beyond-nvidia-gpus-next-ai-190000472.html",
-          "published": 1786129200,
-          "sentiment": 0.477
-        },
-        {
-          "title": "Jim Cramer Was \u201cBlown Away\u201d By Microsoft Corporation (NASDAQ:MSFT)\u2019s Financials",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-blown-away-microsoft-183838604.html",
-          "published": 1786127918,
+          "title": "Amazon's $86 2-in-1 laptop and tablet has fully-integrated AI features",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/shopping/aiprotablet-10-inch-android-16-tablet-amazon",
+          "published": 1786302900,
           "sentiment": 0.0
+        },
+        {
+          "title": "Sundar Pichai's Alphabet Has Grown Google Cloud Revenue 82% Year Over Year. Here's Why That Growth Rate Justifies the Company's Capex Bet.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/sundar-pichai-alphabet-grow-google-cloud-capex/",
+          "published": 1786302840,
+          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.294
+      "news_sentiment": 0.258
     },
     {
       "ticker": "NVDA",
@@ -145,67 +145,67 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "224",
-      "price_gbp": 165.9857,
+      "price_gbp": 165.9611,
       "change_1d": "+2.07%",
       "change_1w": "+11.56%",
       "change_1m": "+9.72%",
       "change_ytd": "+18.74%",
-      "return_1yr": "+13%",
+      "return_1yr": "+23%",
       "low_usd": "164",
-      "low_gbp": 121.5988,
+      "low_gbp": 121.5808,
       "high_usd": "237",
-      "high_gbp": 175.3093,
+      "high_gbp": 175.2832,
       "bar_pct": 83,
       "market_cap_usd_b": 5424.535,
-      "market_cap_gbp_b": 4020.34,
+      "market_cap_gbp_b": 4019.743,
       "beta": 2.215,
-      "pe_ratio": 34.3,
-      "avg_volume_m": 152.65,
-      "div_yield_pct": 46.0,
+      "pe_ratio": 34.24,
+      "avg_volume_m": 151.33,
+      "div_yield_pct": 45.0,
       "short_pct": 1.39,
       "analyst": "strong_buy",
       "analyst_score": 1.3,
-      "vol_1d": 104730601,
-      "vol_1w": 640187501,
-      "vol_1m": 2971413001,
+      "vol_1d": 105473700,
+      "vol_1w": 640930600,
+      "vol_1m": 2972156100,
       "news": [
         {
-          "title": "Nvidia ends week up more than 10% as AI chip fears ease",
+          "title": "How AI agents can power the S&P 500 higher",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/technology/article/nvidia-ends-week-up-more-than-10-as-ai-chip-fears-ease-205751147.html",
-          "published": 1786136271,
-          "sentiment": -0.077
-        },
-        {
-          "title": "Call options explained: From opening trade to expiration",
-          "publisher": "Yahoo Personal Finance",
-          "url": "https://finance.yahoo.com/personal-finance/investing/article/call-options-165604768.html",
-          "published": 1786121764,
+          "url": "https://finance.yahoo.com/markets/article/how-ai-agents-can-power-the-sp-500-higher-123000201.html",
+          "published": 1786278600,
           "sentiment": 0.0
         },
         {
-          "title": "Dow Jones Futures: As Stock Market Ramps Up, Here's What To Do; Warren Buffett, Cisco, Lumentum Due",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-warren-buffett-cisco-lumentum-earnings/?src=A00220&yptr=yahoo",
-          "published": 1786136320,
+          "title": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/very-little-to-like-wall-street-assesses-surprise-july-jobs-report-as-stocks-jump-113529334.html",
+          "published": 1786275329,
+          "sentiment": 0.555
+        },
+        {
+          "title": "Prediction: Sandisk Will Reclaim Its All-Time High by the End of the Year",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/10/prediction-sandisk-will-reclaim-its-all-time-high/",
+          "published": 1786342800,
           "sentiment": 0.0
         },
         {
-          "title": "Gray Media, Inc. Q2 2026 Earnings Call Summary",
-          "publisher": "Moby",
-          "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-gray-media-inc-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss",
-          "published": 1786136182,
-          "sentiment": 0.0
+          "title": "Iran Tensions Highlight Defense Supply Gaps Poised to Lift 2 Stocks",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/10/iran-tensions-highlight-defense-supply-gaps-poised/",
+          "published": 1786341000,
+          "sentiment": 0.296
         },
         {
-          "title": "S&P 500 Posts Weekly Gain as Tech Giants Surge",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-posts-weekly-gain-205341016.html",
-          "published": 1786136021,
-          "sentiment": 0.527
+          "title": "New Fed Chair Kevin Warsh Has Refused to Give Forward Guidance for 2 Straight Meetings. Here's Why That Should Worry Markets.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/10/new-fed-chair-kevin-warsh-has-refused-to-give-forw/",
+          "published": 1786340100,
+          "sentiment": -0.494
         }
       ],
-      "news_sentiment": 0.09
+      "news_sentiment": 0.071
     },
     {
       "ticker": "GOOGL",
@@ -213,67 +213,67 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "354",
-      "price_gbp": 262.5859,
+      "price_gbp": 262.5469,
       "change_1d": "-1.28%",
       "change_1w": "-0.51%",
       "change_1m": "-2.11%",
       "change_ytd": "+12.57%",
-      "return_1yr": "+85%",
+      "return_1yr": "+76%",
       "low_usd": "197",
-      "low_gbp": 145.7081,
+      "low_gbp": 145.6865,
       "high_usd": "409",
-      "high_gbp": 302.8372,
+      "high_gbp": 302.7922,
       "bar_pct": 74,
       "market_cap_usd_b": 4333.066,
-      "market_cap_gbp_b": 3211.409,
+      "market_cap_gbp_b": 3210.932,
       "beta": 1.237,
-      "pe_ratio": 17.78,
-      "avg_volume_m": 33.06,
+      "pe_ratio": 17.76,
+      "avg_volume_m": 33.18,
       "div_yield_pct": 25.0,
       "short_pct": 1.34,
       "analyst": "strong_buy",
       "analyst_score": 1.39,
-      "vol_1d": 19720908,
-      "vol_1w": 166258508,
-      "vol_1m": 715609908,
+      "vol_1d": 19805200,
+      "vol_1w": 166342800,
+      "vol_1m": 715694200,
       "news": [
         {
-          "title": "Tech stocks today: Shares climb after rocky week",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/technology/live/tech-stocks-today-shares-climb-after-rocky-week-140419479.html",
-          "published": 1785765859,
-          "sentiment": 0.296
-        },
-        {
-          "title": "Big Tech is borrowing its way through the AI boom: Chart of the Day",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/big-tech-is-borrowing-its-way-through-the-ai-boom-chart-of-the-day-100000605.html",
-          "published": 1786096800,
+          "title": "Apple\u2019s Foldable Phone, Whoop-Like Band, CXMT Memory Tests Buzz Keep Traders Hooked",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/apple-s-foldable-phone-whoop-like-band-cxmt-memory-tests-buzz-keep-traders-hooked/cZojgdmRJap",
+          "published": 1786337919,
           "sentiment": 0.0
         },
         {
-          "title": "Google Cloud\u2019s Taiwan Launch Hints at Alphabet\u2019s (GOOGL) Next Growth Phase",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/google-cloud-taiwan-launch-hints-205939823.html",
-          "published": 1786136379,
-          "sentiment": 0.382
+          "title": "Starlink 'Unbelievable Juggernaut Cash Machine,' Says VC David Friedberg; SpaceX CEO Elon Musk Responds With $1 Trillion+ Annual Revenue Projection",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/starlink-unbelievable-juggernaut-cash-machine-031007704.html",
+          "published": 1786331407,
+          "sentiment": 0.202
         },
         {
-          "title": "Explainer-How could New Mexico's $567 million ruling change Meta?",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/news/explainer-could-mexicos-567-million-193540756.html",
-          "published": 1786131578,
-          "sentiment": 0.0
+          "title": "Why Is Berkshire Hathaway (BRK.B) Deploying Cash More Aggressively Under Greg Abel?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-berkshire-hathaway-brk-b-011435429.html",
+          "published": 1786324475,
+          "sentiment": -0.38
         },
         {
-          "title": "Beyond NVIDIA and GPUs: The Next AI & Quantum Winners Leading 2026",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/beyond-nvidia-gpus-next-ai-190000472.html",
-          "published": 1786129200,
-          "sentiment": 0.477
+          "title": "Tencent AI Spending Key After Magnificent 7 Rout",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/technology/ai/articles/tencent-ai-spending-key-magnificent-004806894.html",
+          "published": 1786322886,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Meet the High-Yield Dividend Stock Bill Ackman Has Owned for Over a Decade. Here's Why It's a Great Buy in August.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/meet-the-high-yield-dividend-stock-bill-ackman-has/",
+          "published": 1786320300,
+          "sentiment": 0.625
         }
       ],
-      "news_sentiment": 0.231
+      "news_sentiment": 0.209
     },
     {
       "ticker": "META",
@@ -281,67 +281,67 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "592",
-      "price_gbp": 438.829,
+      "price_gbp": 438.7638,
       "change_1d": "+0.51%",
       "change_1w": "+6.36%",
       "change_1m": "-1.83%",
       "change_ytd": "-8.80%",
       "return_1yr": "-23%",
       "low_usd": "520",
-      "low_gbp": 385.5855,
+      "low_gbp": 385.5282,
       "high_usd": "796",
-      "high_gbp": 590.1327,
+      "high_gbp": 590.0451,
       "bar_pct": 26,
       "market_cap_usd_b": 1508.378,
-      "market_cap_gbp_b": 1117.919,
+      "market_cap_gbp_b": 1117.753,
       "beta": 1.243,
-      "pe_ratio": 22.3,
-      "avg_volume_m": 18.37,
-      "div_yield_pct": 36.0,
+      "pe_ratio": 22.32,
+      "avg_volume_m": 18.17,
+      "div_yield_pct": 35.0,
       "short_pct": 1.72,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 11039349,
-      "vol_1w": 81645349,
-      "vol_1m": 425608949,
+      "vol_1d": 11226700,
+      "vol_1w": 81832700,
+      "vol_1m": 425796300,
       "news": [
         {
-          "title": "AI theme has 'a long way to run': Strategist",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/ai-theme-long-way-run-204908888.html",
-          "published": 1786135748,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Big Tech is borrowing its way through the AI boom: Chart of the Day",
+          "title": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/big-tech-is-borrowing-its-way-through-the-ai-boom-chart-of-the-day-100000605.html",
-          "published": 1786096800,
+          "url": "https://finance.yahoo.com/markets/article/very-little-to-like-wall-street-assesses-surprise-july-jobs-report-as-stocks-jump-113529334.html",
+          "published": 1786275329,
+          "sentiment": 0.555
+        },
+        {
+          "title": "Meet the High-Yield Dividend Stock Bill Ackman Has Owned for Over a Decade. Here's Why It's a Great Buy in August.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/meet-the-high-yield-dividend-stock-bill-ackman-has/",
+          "published": 1786320300,
+          "sentiment": 0.625
+        },
+        {
+          "title": "Meta adds more incentives for paying users",
+          "publisher": "Social Media Today",
+          "url": "https://www.socialmediatoday.com/news/meta-adds-more-incentives-for-paying-users/827393/",
+          "published": 1786304204,
+          "sentiment": 0.38
+        },
+        {
+          "title": "Here's Why Iren Has an Edge in the Neocloud Market, According to Meta's Mark Zuckerberg",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/heres-why-iren-has-an-edge-in-the-neocloud-market/",
+          "published": 1786303200,
           "sentiment": 0.0
         },
         {
-          "title": "Meta Faces New Risk After Major Court Ruling",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/meta-faces-risk-major-court-195614005.html",
-          "published": 1786132574,
-          "sentiment": -0.273
-        },
-        {
-          "title": "Meta Stock Rises 1.2% Despite $942 Million Child-Safety Judgment",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/meta-stock-rises-1-2-195317524.html",
-          "published": 1786132397,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Explainer-How could New Mexico's $567 million ruling change Meta?",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/news/explainer-could-mexicos-567-million-193540756.html",
-          "published": 1786131578,
+          "title": "Mark Zuckerberg's Meta lands in hot soup again",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/latest-news/mark-zuckerbergs-meta-enters-another-hot-soup-new-mexico-lawsuit-child-safety",
+          "published": 1786298580,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.055
+      "news_sentiment": 0.312
     },
     {
       "ticker": "AMZN",
@@ -349,67 +349,67 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "274",
-      "price_gbp": 203.4281,
+      "price_gbp": 203.3979,
       "change_1d": "+0.84%",
       "change_1w": "+1.07%",
       "change_1m": "+12.67%",
       "change_ytd": "+21.18%",
-      "return_1yr": "+28%",
+      "return_1yr": "+24%",
       "low_usd": "196",
-      "low_gbp": 145.2634,
+      "low_gbp": 145.2419,
       "high_usd": "287",
-      "high_gbp": 212.8554,
+      "high_gbp": 212.8238,
       "bar_pct": 86,
       "market_cap_usd_b": 2960.627,
-      "market_cap_gbp_b": 2194.239,
+      "market_cap_gbp_b": 2193.913,
       "beta": 1.454,
-      "pe_ratio": 22.06,
-      "avg_volume_m": 50.61,
+      "pe_ratio": 22.08,
+      "avg_volume_m": 50.49,
       "div_yield_pct": null,
       "short_pct": 1.09,
       "analyst": "strong_buy",
-      "analyst_score": 1.33,
-      "vol_1d": 31375313,
-      "vol_1w": 267746313,
-      "vol_1m": 1098153113,
+      "analyst_score": 1.32,
+      "vol_1d": 33833300,
+      "vol_1w": 270204300,
+      "vol_1m": 1100611100,
       "news": [
         {
-          "title": "OpenAI developing $300+ AI speaker to challenge Amazon Alexa",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/openai-developing-300-ai-speaker-202000842.html",
-          "published": 1786134000,
-          "sentiment": 0.25
-        },
-        {
-          "title": "Amazon vs. Celsius: Which Consumer Stock Is a Better Buy in 2026?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/08/07/amazon-vs-celsius-which-consumer-stock-is-a-better-buy-in-2026/",
-          "published": 1786136701,
-          "sentiment": 0.557
-        },
-        {
-          "title": "Amazon behind massive private gas plant for new data centers",
-          "publisher": "AFP",
-          "url": "https://finance.yahoo.com/energy/articles/amazon-behind-massive-private-gas-210211828.html",
-          "published": 1786136531,
+          "title": "Ozempic For $50 a Month? Amazon Pharmacy Rolls Out Cheap Weight-Loss Drugs for Medicare Patients",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/healthcare/articles/ozempic-50-month-amazon-pharmacy-013108263.html",
+          "published": 1786325468,
           "sentiment": 0.178
         },
         {
-          "title": "Solana wants to be the Netflix of finance",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/crypto/innovation/solana-wants-to-be-the-netflix-of-finance",
-          "published": 1786132639,
+          "title": "Airbnb vs. McDonald's: Which Consumer Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/08/09/airbnb-vs-mcdonald-s-which-consumer-stock-is-a-better-buy-in-2026/",
+          "published": 1786320901,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Meet the High-Yield Dividend Stock Bill Ackman Has Owned for Over a Decade. Here's Why It's a Great Buy in August.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/meet-the-high-yield-dividend-stock-bill-ackman-has/",
+          "published": 1786320300,
+          "sentiment": 0.625
+        },
+        {
+          "title": "Taylor Farms Pulls Salsa and Guacamole Over Salmonella Concerns",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/healthcare/articles/taylor-farms-pulls-salsa-guacamole-222513483.html",
+          "published": 1786314313,
           "sentiment": 0.0
         },
         {
-          "title": "Beyond NVIDIA and GPUs: The Next AI & Quantum Winners Leading 2026",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/beyond-nvidia-gpus-next-ai-190000472.html",
-          "published": 1786129200,
-          "sentiment": 0.477
+          "title": "UPS Completed Its Amazon Volume Pullback. Is the Turnaround Finally Working?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ups-completed-amazon-volume-pullback-205917884.html",
+          "published": 1786309157,
+          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.292
+      "news_sentiment": 0.284
     },
     {
       "ticker": "TSLA",
@@ -417,67 +417,67 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "329",
-      "price_gbp": 243.5238,
+      "price_gbp": 243.4876,
       "change_1d": "+2.53%",
       "change_1w": "+5.58%",
       "change_1m": "-16.62%",
       "change_ytd": "-24.99%",
-      "return_1yr": "-2%",
+      "return_1yr": "-3%",
       "low_usd": "297",
-      "low_gbp": 220.4002,
+      "low_gbp": 220.3675,
       "high_usd": "499",
-      "high_gbp": 369.7029,
+      "high_gbp": 369.648,
       "bar_pct": 15,
       "market_cap_usd_b": 1297.742,
-      "market_cap_gbp_b": 961.809,
+      "market_cap_gbp_b": 961.666,
       "beta": 1.827,
-      "pe_ratio": 301.45,
-      "avg_volume_m": 46.56,
+      "pe_ratio": 304.24,
+      "avg_volume_m": 45.3,
       "div_yield_pct": null,
       "short_pct": 2.0,
       "analyst": "buy",
       "analyst_score": 2.36,
-      "vol_1d": 38841743,
-      "vol_1w": 164296043,
-      "vol_1m": 892278743,
+      "vol_1d": 39370100,
+      "vol_1w": 164824400,
+      "vol_1m": 892807100,
       "news": [
         {
-          "title": "Why Rivian's R2 EV could be its new star vehicle",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/why-rivians-r2-ev-could-213212115.html",
-          "published": 1786051932,
+          "title": "How to Deploy $1000 Across Tesla and Ford for Growth and Optionality",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/10/how-to-deploy-1000-across-tesla-and-ford-for-growth-and-optionality/",
+          "published": 1786336182,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Elon Musk Backs Study Showing Bot Traffic Will Be 1,000X Human Traffic \u2014 Michael Burry Wants To Know Who's Actually Paying",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/elon-musk-backs-study-showing-bot-traffic-will-be-1-000-x-human-traffic-michael-burry-wants-to-know-who-s-actually-paying/cZojOsgRJan",
+          "published": 1786332571,
+          "sentiment": -0.052
+        },
+        {
+          "title": "Explainer-What is Unitree and why are China\u2019s humanoid robot makers racing to list?",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/ai/articles/explainer-unitree-why-china-humanoid-023633152.html",
+          "published": 1786329393,
           "sentiment": 0.0
         },
         {
-          "title": "2 Reasons Tesla Could Monopolize the U.S. Robotaxi Market",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/meet-the-quiet-monopoly-hiding-in-the-industrial-s/",
-          "published": 1786134300,
-          "sentiment": -0.202
-        },
-        {
-          "title": "Tesla Stock Jumps Nearly 4% as $16.8 Billion Terafab Breaks Ground",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-stock-jumps-nearly-4-192926948.html",
-          "published": 1786130966,
+          "title": "Billionaire investor shorting SpaceX says one possible fix won't work",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/spcx-spacex-andersen-capital-management-ceo-peter-andersen-says-tesla-spacex-merger-would-make-situation-more-confusing",
+          "published": 1786300380,
           "sentiment": 0.0
         },
         {
-          "title": "Tesla Jumps as Rate Fears Ease",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-jumps-rate-fears-ease-191404427.html",
-          "published": 1786130044,
-          "sentiment": -0.077
-        },
-        {
-          "title": "SpaceX\u2019s Texas Terafab Could Become World\u2019s Largest Building",
-          "publisher": "CRE Daily",
-          "url": "https://www.credaily.com/briefs/spacexs-texas-terafab-could-become-worlds-largest-building/",
-          "published": 1786127239,
+          "title": "Kevin O'Leary Sat Out SpaceX's IPO\u2014 Now He's Plotting His Entry as Elon Musk's Empire Takes Shape: 'As the Stock Settles... I'll Be Watching Closely...'",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/kevin-oleary-sat-spacexs-ipo-170142786.html",
+          "published": 1786294902,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.056
+      "news_sentiment": 0.066
     },
     {
       "ticker": "NFLX",
@@ -485,29 +485,29 @@ window.PRICES_DATA = {
       "category": "big-tech",
       "exchange": "NASDAQ",
       "price_usd": "74",
-      "price_gbp": 54.9481,
+      "price_gbp": 54.94,
       "change_1d": "+0.68%",
       "change_1w": "+3.39%",
       "change_1m": "-1.92%",
       "change_ytd": "-18.52%",
       "return_1yr": "-39%",
       "low_usd": "65",
-      "low_gbp": 48.2334,
+      "low_gbp": 48.2262,
       "high_usd": "127",
-      "high_gbp": 93.9098,
+      "high_gbp": 93.8959,
       "bar_pct": 15,
       "market_cap_usd_b": 308.714,
-      "market_cap_gbp_b": 228.8,
+      "market_cap_gbp_b": 228.766,
       "beta": 1.514,
       "pe_ratio": 23.31,
-      "avg_volume_m": 44.12,
+      "avg_volume_m": 43.42,
       "div_yield_pct": null,
       "short_pct": 2.41,
       "analyst": "buy",
       "analyst_score": 1.73,
-      "vol_1d": 24721717,
-      "vol_1w": 159384017,
-      "vol_1m": 1062481617,
+      "vol_1d": 24783400,
+      "vol_1w": 159445700,
+      "vol_1m": 1062543300,
       "news": [
         {
           "title": "Netflix Looks Attractive to Short-Put Players - a 2.0% One Month Income Yield",
@@ -553,67 +553,67 @@ window.PRICES_DATA = {
       "category": "financials",
       "exchange": "NYSE",
       "price_usd": "358",
-      "price_gbp": 264.9724,
+      "price_gbp": 264.933,
       "change_1d": "+0.15%",
       "change_1w": "+1.63%",
       "change_1m": "+8.14%",
       "change_ytd": "+11.40%",
-      "return_1yr": "+22%",
+      "return_1yr": "+23%",
       "low_usd": "279",
-      "low_gbp": 206.8522,
+      "low_gbp": 206.8215,
       "high_usd": "363",
-      "high_gbp": 269.0338,
+      "high_gbp": 268.9939,
       "bar_pct": 93,
-      "market_cap_usd_b": 950.36,
-      "market_cap_gbp_b": 704.35,
+      "market_cap_usd_b": 950.355,
+      "market_cap_gbp_b": 704.242,
       "beta": 0.977,
-      "pe_ratio": 15.32,
-      "avg_volume_m": 9.45,
+      "pe_ratio": 15.31,
+      "avg_volume_m": 9.23,
       "div_yield_pct": 168.0,
       "short_pct": 1.11,
       "analyst": "buy",
       "analyst_score": 2.08,
-      "vol_1d": 4453856,
-      "vol_1w": 30457256,
-      "vol_1m": 202030056,
+      "vol_1d": 4565200,
+      "vol_1w": 30568600,
+      "vol_1m": 202141400,
       "news": [
         {
-          "title": "Financial Services Roundup: Market Talk",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/financial-services-roundup-market-talk-78c77f4f?siteid=yhoof2&yptr=yahoo",
-          "published": 1786119840,
-          "sentiment": 0.0
+          "title": "J.P. Morgan lifts 2026-end target for S&P 500 to 8,000 on AI, earnings strength",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/j-p-morgan-lifts-2026-061958111.html",
+          "published": 1786342798,
+          "sentiment": 0.494
         },
         {
-          "title": "Portman Ridge Finance Q2 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/portman-ridge-finance-q2-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1786118663,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Trump\u2019s Homegrown Solar Push Risks Widening Green Energy Divide",
+          "title": "Behind Bessent Moves, Wall Street Sees Sign of Bond-Market Angst",
           "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/energy/articles/trump-homegrown-solar-push-risks-150441089.html",
-          "published": 1786115081,
+          "url": "https://finance.yahoo.com/economy/policy/articles/behind-bessent-moves-wall-street-133600816.html",
+          "published": 1786282560,
           "sentiment": 0.0
         },
         {
-          "title": "The New Wild West: Texas Experiments With Raw Capitalism",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/texas-boom-yall-street-water-crisis-18860b3e?siteid=yhoof2&yptr=yahoo",
-          "published": 1786109400,
+          "title": "You saved $1.5M in your 401(k) \u2014 now the IRS wants $56,603 a year, and that's just the start",
+          "publisher": "Moneywise",
+          "url": "https://finance.yahoo.com/markets/options/articles/saved-1-5m-401-k-130000096.html",
+          "published": 1786280400,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Hyperliquid ETFs Turn Green After Bleeding $30 Million in Three Weeks",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/hyperliquid-etf-inflows-return-outflow-streak/",
+          "published": 1786207120,
           "sentiment": 0.0
         },
         {
-          "title": "Tom Lee Thinks 2027 Will Be \u201cOne of the Best Years\u201d for Stocks\u2014Why He\u2019s Got a Strong Case",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/tom-lee-thinks-2027-will-be-one-of-the-best-years-for-stocks-why-hes-got-a-strong-case/",
-          "published": 1786107812,
-          "sentiment": 0.818
+          "title": "Sunrun (RUN) Stock Fair Value Falls As Analysts Weigh Growth Projects And Cash Risks",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/sunrun-run-stock-fair-value-161314040.html",
+          "published": 1786205594,
+          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.164
+      "news_sentiment": 0.31
     },
     {
       "ticker": "BAC",
@@ -621,67 +621,67 @@ window.PRICES_DATA = {
       "category": "financials",
       "exchange": "NYSE",
       "price_usd": "63",
-      "price_gbp": 46.8178,
+      "price_gbp": 46.8109,
       "change_1d": "+0.19%",
       "change_1w": "+1.97%",
       "change_1m": "+8.35%",
       "change_ytd": "+14.13%",
-      "return_1yr": "+36%",
-      "low_usd": "45",
-      "low_gbp": 33.3365,
+      "return_1yr": "+37%",
+      "low_usd": "46",
+      "low_gbp": 33.9466,
       "high_usd": "64",
-      "high_gbp": 47.4107,
+      "high_gbp": 47.4037,
       "bar_pct": 96,
       "market_cap_usd_b": 441.732,
-      "market_cap_gbp_b": 327.385,
+      "market_cap_gbp_b": 327.337,
       "beta": 1.168,
       "pe_ratio": 14.59,
-      "avg_volume_m": 36.44,
+      "avg_volume_m": 35.8,
       "div_yield_pct": 203.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.54,
-      "vol_1d": 14560187,
-      "vol_1w": 121564887,
-      "vol_1m": 733363887,
+      "vol_1d": 22609800,
+      "vol_1w": 129614500,
+      "vol_1m": 741413500,
       "news": [
         {
-          "title": "Stock Market Today, Aug. 7: Palantir Surges on Bank of America Upbeat View After Strong Earnings",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/08/07/stock-market-today-aug-7-palantir-surges-on-bank-of-america-upbeat-view-after-strong-earnings/",
-          "published": 1786136716,
-          "sentiment": 0.511
-        },
-        {
-          "title": "Three Banks Hit New Highs And Trade Near Buy Points",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/stock-lists/new-highs/bank-of-america-bac-stock/?src=A00220&yptr=yahoo",
-          "published": 1786129759,
+          "title": "AI Spending is Slowing Down. How Will the S&P 500 React?",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/ai-biggest-risk-global-markets-sp500/",
+          "published": 1786298691,
           "sentiment": 0.0
         },
         {
-          "title": "Palantir Surges 10%, UiPath Rises 7%, C3.ai Gains 5% as Agentic AI Stocks Rally Together",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/palantir-surges-10-uipath-rises-7-c3-ai-gains-5-as-agentic-ai-stocks-rally-together/",
-          "published": 1786126354,
-          "sentiment": 0.34
-        },
-        {
-          "title": "Bank of America spends $250M yearly on GLP-1s for workers, CEO says",
-          "publisher": "USA TODAY",
-          "url": "https://www.usatoday.com/story/money/2026/08/07/bank-of-america-spends-250-million-yearly-workers-glp-1-drugs/91214909007/",
-          "published": 1786124697,
+          "title": "BofA points to the Eli Lilly market that could outsize the U.S.",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/bank-of-america-eli-lilly-stock-international-obesity-glp1-lly",
+          "published": 1786213980,
           "sentiment": 0.0
         },
         {
-          "title": "S&P 500 Hits Record Highs \u2014 But BofA Warns Bullish Sentiment Has Gone Too Far",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-hits-record-highs/cZofOeORJ9L",
-          "published": 1786122501,
-          "sentiment": -0.153
+          "title": "Bank of America revamps Apple stock price target after earnings",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/bank-of-america-apple-aapl-stock-price-target-after-earnings",
+          "published": 1786202220,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Key HIV stat over 70% leaves BofA siding with Gilead",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/bank-of-america-gilead-gild-stock-hiv-yeztugo-persistence",
+          "published": 1786198020,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Do Compliance Risks and Rising Health Costs Signal a Strategic Turning Point for Bank of America (BAC)?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/compliance-risks-rising-health-costs-071502298.html",
+          "published": 1786173302,
+          "sentiment": -0.273
         }
       ],
-      "news_sentiment": 0.14
+      "news_sentiment": -0.055
     },
     {
       "ticker": "BRK-B",
@@ -689,67 +689,67 @@ window.PRICES_DATA = {
       "category": "financials",
       "exchange": "NYSE",
       "price_usd": "522",
-      "price_gbp": 386.7268,
+      "price_gbp": 386.6694,
       "change_1d": "-0.36%",
       "change_1w": "+2.01%",
       "change_1m": "+5.46%",
       "change_ytd": "+5.02%",
-      "return_1yr": "+10%",
-      "low_usd": "463",
-      "low_gbp": 342.8143,
+      "return_1yr": "+12%",
+      "low_usd": "464",
+      "low_gbp": 343.4674,
       "high_usd": "525",
-      "high_gbp": 389.4246,
+      "high_gbp": 389.3668,
       "bar_pct": 94,
       "market_cap_usd_b": 1125.446,
-      "market_cap_gbp_b": 834.113,
+      "market_cap_gbp_b": 833.989,
       "beta": 0.607,
-      "pe_ratio": 15.54,
-      "avg_volume_m": 4.87,
+      "pe_ratio": 15.53,
+      "avg_volume_m": 4.82,
       "div_yield_pct": null,
       "short_pct": 0.96,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 2721178,
-      "vol_1w": 19843678,
-      "vol_1m": 93455278,
+      "vol_1d": 3635700,
+      "vol_1w": 20758200,
+      "vol_1m": 94369800,
       "news": [
         {
-          "title": "Berkshire Hathaway earnings, CPI inflation data, & more: What to Watch",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/berkshire-hathaway-earnings-cpi-inflation-205540844.html",
-          "published": 1786136140,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Dow Jones Futures: As Stock Market Ramps Up, Here's What To Do; Warren Buffett, Cisco, Lumentum Due",
+          "title": "Dow Jones Futures Fall After Market Ramps Up; Cisco, Lumentum Earnings Ahead",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-warren-buffett-cisco-lumentum-earnings/?src=A00220&yptr=yahoo",
-          "published": 1786136320,
+          "published": 1786335864,
           "sentiment": 0.0
         },
         {
-          "title": "Greg Abel Reports Saturday Morning. Berkshire Stock Just Hit a 52-Week High and Is Still Behind the S&P 500 This Year.",
+          "title": "Why Is Berkshire Hathaway (BRK.B) Deploying Cash More Aggressively Under Greg Abel?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-berkshire-hathaway-brk-b-011435429.html",
+          "published": 1786324475,
+          "sentiment": -0.38
+        },
+        {
+          "title": "Berkshire Earnings Were Good\u2014Not Great. A Real Bright Spot Was This.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/berkshire-hathaway-earnings-stock-buybacks-d5a6ac50?siteid=yhoof2&yptr=yahoo",
+          "published": 1786314060,
+          "sentiment": 0.791
+        },
+        {
+          "title": "3 Mega-Cap Stocks to Research Further",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-mega-cap-stocks-research-214922807.html",
+          "published": 1786312162,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Berkshire's Operating Earnings Rose $1.8 Billion Last Quarter. A Currency Swing Was $1.2 Billion of It.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/greg-abel-reports-saturday-morning-berkshire-stock/",
-          "published": 1786129080,
-          "sentiment": 0.0
-        },
-        {
-          "title": "BNSF Railway Says Regulators Should Deny Big Rail Merger Now",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/july-jobs-report-stock-market-08-07-2026/card/bnsf-railway-says-regulators-should-deny-big-rail-merger-now-VMrYs3HJQ6CKZkeROwOR?siteid=yhoof2&yptr=yahoo",
-          "published": 1786123433,
-          "sentiment": -0.34
-        },
-        {
-          "title": "Greg Abel concentrates 63% of Berkshire's $355B portfolio in 5 stocks",
-          "publisher": "Quartz",
-          "url": "https://qz.com/berkshire-hathaway-greg-abel-portfolio-concentration-five-stocks-080726",
-          "published": 1786123324,
+          "url": "https://www.fool.com/investing/2026/08/09/berkshires-operating-earnings-rose-18-billion-last/",
+          "published": 1786312140,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.068
+      "news_sentiment": 0.082
     },
     {
       "ticker": "V",
@@ -757,30 +757,51 @@ window.PRICES_DATA = {
       "category": "financials",
       "exchange": "NYSE",
       "price_usd": "362",
-      "price_gbp": 268.6633,
+      "price_gbp": 268.6234,
       "change_1d": "-1.89%",
       "change_1w": "-0.99%",
       "change_1m": "+4.31%",
       "change_ytd": "+5.06%",
-      "return_1yr": "+9%",
+      "return_1yr": "+8%",
       "low_usd": "294",
-      "low_gbp": 217.8136,
+      "low_gbp": 217.7813,
       "high_usd": "374",
-      "high_gbp": 277.1641,
+      "high_gbp": 277.123,
       "bar_pct": 86,
       "market_cap_usd_b": 676.805,
-      "market_cap_gbp_b": 501.607,
+      "market_cap_gbp_b": 501.533,
       "beta": 0.759,
-      "pe_ratio": 30.88,
-      "avg_volume_m": 8.32,
-      "div_yield_pct": 72.0,
+      "pe_ratio": 30.85,
+      "avg_volume_m": 8.21,
+      "div_yield_pct": 74.0,
       "short_pct": 1.39,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
-      "vol_1d": 4066533,
-      "vol_1w": 28172933,
-      "vol_1m": 163752933,
+      "vol_1d": 5110600,
+      "vol_1w": 29217000,
+      "vol_1m": 164797000,
       "news": [
+        {
+          "title": "Great disappointment will follow the Great Wealth Transfer as baby boomers pass on just a fraction of their fortune to millennials and Gen Xers",
+          "publisher": "Fortune",
+          "url": "https://finance.yahoo.com/economy/articles/great-disappointment-great-wealth-transfer-230109389.html",
+          "published": 1786230069,
+          "sentiment": 0.844
+        },
+        {
+          "title": "Circle Internet Group (CRCL) Launches Arc As Its Growth Story Moves Beyond USDC",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/circle-internet-group-crcl-launches-041923139.html",
+          "published": 1786162763,
+          "sentiment": 0.382
+        },
+        {
+          "title": "PYPL Showered Owners With Cash. The Stock Still Lagged The Market",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/610547/pypl-showered-owners-with-cash-the-stock-still-lagged-the-market/2026-08-07",
+          "published": 1786138307,
+          "sentiment": -0.296
+        },
         {
           "title": "Reading Between The Lines Of V's Latest Call",
           "publisher": "Trefis",
@@ -794,30 +815,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-raises-visa-outlook-145600845.html",
           "published": 1786114560,
           "sentiment": 0.511
-        },
-        {
-          "title": "Zacks Industry Outlook Visa, Mastercard, PayPal, Fidelity   and WEX",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-visa-mastercard-100600594.html",
-          "published": 1786097160,
-          "sentiment": 0.0
-        },
-        {
-          "title": "SoFi and Visa Earnings Point to Consumer Confidence",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/sofi-and-visa-earnings-point-to-consumer-confidence/",
-          "published": 1786078846,
-          "sentiment": 0.511
-        },
-        {
-          "title": "Mastercard (MA) vs. Visa (V): Stablecoins or AI Fraud Defense?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/mastercard-ma-vs-visa-v-222246965.html",
-          "published": 1786054966,
-          "sentiment": -0.511
         }
       ],
-      "news_sentiment": 0.102
+      "news_sentiment": 0.288
     },
     {
       "ticker": "MA",
@@ -825,67 +825,67 @@ window.PRICES_DATA = {
       "category": "financials",
       "exchange": "NYSE",
       "price_usd": "563",
-      "price_gbp": 417.2248,
+      "price_gbp": 417.1628,
       "change_1d": "-1.92%",
       "change_1w": "-1.77%",
       "change_1m": "+8.47%",
       "change_ytd": "+0.46%",
-      "return_1yr": "-1%",
+      "return_1yr": "-2%",
       "low_usd": "465",
-      "low_gbp": 344.2743,
+      "low_gbp": 344.2232,
       "high_usd": "602",
-      "high_gbp": 445.9958,
+      "high_gbp": 445.9296,
       "bar_pct": 72,
       "market_cap_usd_b": 493.15,
-      "market_cap_gbp_b": 365.493,
+      "market_cap_gbp_b": 365.439,
       "beta": 0.735,
-      "pe_ratio": 30.93,
-      "avg_volume_m": 3.65,
-      "div_yield_pct": 60.0,
+      "pe_ratio": 30.97,
+      "avg_volume_m": 3.6,
+      "div_yield_pct": 62.0,
       "short_pct": 1.04,
       "analyst": "strong_buy",
       "analyst_score": 1.37,
-      "vol_1d": 3003740,
-      "vol_1w": 15167840,
-      "vol_1m": 69163240,
+      "vol_1d": 3018500,
+      "vol_1w": 15182600,
+      "vol_1m": 69178000,
       "news": [
+        {
+          "title": "How Investors Are Reacting To Fiserv (FISV) Weaker Guidance Amid Portfolio Shift And Activist Pressure",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-fiserv-fisv-weaker-081328470.html",
+          "published": 1786176808,
+          "sentiment": -0.625
+        },
+        {
+          "title": "Circle Internet Group (CRCL) Launches Arc As Its Growth Story Moves Beyond USDC",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/crypto/articles/circle-internet-group-crcl-launches-041923139.html",
+          "published": 1786162763,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Mastercard (MA) Q2 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/mastercard-ma-q2-2026-earnings-call-transcript/",
+          "published": 1786152619,
+          "sentiment": 0.0
+        },
+        {
+          "title": "PYPL Showered Owners With Cash. The Stock Still Lagged The Market",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/610547/pypl-showered-owners-with-cash-the-stock-still-lagged-the-market/2026-08-07",
+          "published": 1786138307,
+          "sentiment": -0.296
+        },
         {
           "title": "What Does Fiserv (FISV) Gain From Its New Merchant Services Partnership?",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/does-fiserv-fisv-gain-merchant-190936503.html",
           "published": 1786129776,
           "sentiment": 0.527
-        },
-        {
-          "title": "Reading Between The Lines Of V's Latest Call",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610574/reading-between-the-lines-of-vs-latest-call/2026-08-07",
-          "published": 1786126683,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Wall Street Raises Visa Outlook After Strong Q3: Buy, Hold or Sell?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-raises-visa-outlook-145600845.html",
-          "published": 1786114560,
-          "sentiment": 0.511
-        },
-        {
-          "title": "Zacks Industry Outlook Visa, Mastercard, PayPal, Fidelity   and WEX",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-visa-mastercard-100600594.html",
-          "published": 1786097160,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Mastercard (MA) vs. Visa (V): Stablecoins or AI Fraud Defense?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/mastercard-ma-vs-visa-v-222246965.html",
-          "published": 1786054966,
-          "sentiment": -0.511
         }
       ],
-      "news_sentiment": 0.105
+      "news_sentiment": -0.002
     },
     {
       "ticker": "GS",
@@ -893,67 +893,67 @@ window.PRICES_DATA = {
       "category": "financials",
       "exchange": "NYSE",
       "price_usd": "1040",
-      "price_gbp": 770.4966,
+      "price_gbp": 770.3821,
       "change_1d": "-0.04%",
       "change_1w": "+2.08%",
       "change_1m": "+0.97%",
       "change_ytd": "+14.80%",
-      "return_1yr": "+42%",
+      "return_1yr": "+45%",
       "low_usd": "706",
-      "low_gbp": 522.9113,
+      "low_gbp": 522.8337,
       "high_usd": "1154",
-      "high_gbp": 855.2682,
+      "high_gbp": 855.1411,
       "bar_pct": 74,
       "market_cap_usd_b": 302.705,
-      "market_cap_gbp_b": 224.347,
+      "market_cap_gbp_b": 224.313,
       "beta": 1.288,
-      "pe_ratio": 16.06,
-      "avg_volume_m": 2.2,
-      "div_yield_pct": 194.0,
+      "pe_ratio": 16.05,
+      "avg_volume_m": 2.19,
+      "div_yield_pct": 192.0,
       "short_pct": 2.15,
       "analyst": "hold",
       "analyst_score": 2.6,
-      "vol_1d": 941055,
-      "vol_1w": 8675655,
-      "vol_1m": 45752655,
+      "vol_1d": 1429400,
+      "vol_1w": 9164000,
+      "vol_1m": 46241000,
       "news": [
         {
-          "title": "Non-Opioid Painkiller Maker Latigo Jumps 17% After Upsized IPO",
+          "title": "Angi (ANGI) Stock Fair Value Moves Lower As Analysts Weigh Execution Risks",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/angi-angi-stock-fair-value-141009937.html",
+          "published": 1786284609,
+          "sentiment": 0.103
+        },
+        {
+          "title": "Barrick Chairman's Planned Overhaul Meets Investor Backlash",
           "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/healthcare/articles/non-opioid-painkiller-maker-latigo-154856353.html",
-          "published": 1786117736,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/barrick-chairmans-planned-overhaul-meets-120132508.html",
+          "published": 1786276892,
           "sentiment": 0.0
         },
         {
-          "title": "Broadcom Will Survive the AI Bubble, But Everyone Else Won't. Here's Why.",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3721191/broadcom-will-survive-the-ai-bubble-but-everyone-else-won-t-here-s-why",
-          "published": 1786115007,
-          "sentiment": 0.0
+          "title": "AI\u2019s new millionaires want to disrupt philanthropy. They should fund what already exists",
+          "publisher": "Fortune",
+          "url": "https://finance.yahoo.com/small-business/articles/ai-millionaires-want-disrupt-philanthropy-113000012.html",
+          "published": 1786275000,
+          "sentiment": 0.077
         },
         {
-          "title": "Is The Goldman Sachs Group (GS) Outperforming Other Finance Stocks This Year?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/goldman-sachs-group-gs-outperforming-134004166.html",
-          "published": 1786110004,
-          "sentiment": 0.0
+          "title": "Travel + Leisure (TNL) Stock Fair Value Edges Higher After Analyst Target Increases",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/travel-leisure-tnl-stock-fair-190858978.html",
+          "published": 1786216138,
+          "sentiment": 0.572
         },
         {
-          "title": "The New Wild West: Texas Experiments With Raw Capitalism",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/texas-boom-yall-street-water-crisis-18860b3e?siteid=yhoof2&yptr=yahoo",
-          "published": 1786109400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Goldman Sachs tops South & Central America M&A adviser rankings in H1 2026",
-          "publisher": "Private Banker International",
-          "url": "https://www.privatebankerinternational.com/news/south-central-america-ma-rankings-h1-2026/",
-          "published": 1786108948,
-          "sentiment": 0.511
+          "title": "Got $1,000? Here Are My Favorite Nuclear Stocks to Invest in Right Now.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/08/got-1000-heres-the-best-nuclear-stock-to-invest-in/",
+          "published": 1786206300,
+          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.102
+      "news_sentiment": 0.242
     },
     {
       "ticker": "BLK",
@@ -961,67 +961,67 @@ window.PRICES_DATA = {
       "category": "financials",
       "exchange": "NYSE",
       "price_usd": "1136",
-      "price_gbp": 842.2241,
+      "price_gbp": 842.099,
       "change_1d": "+0.74%",
       "change_1w": "+4.22%",
       "change_1m": "+14.75%",
       "change_ytd": "+5.91%",
-      "return_1yr": "+0%",
+      "return_1yr": "+1%",
       "low_usd": "917",
-      "low_gbp": 679.9144,
+      "low_gbp": 679.8135,
       "high_usd": "1220",
-      "high_gbp": 904.1463,
+      "high_gbp": 904.012,
       "bar_pct": 72,
-      "market_cap_usd_b": 184.78,
-      "market_cap_gbp_b": 136.948,
+      "market_cap_usd_b": 184.636,
+      "market_cap_gbp_b": 136.821,
       "beta": 1.425,
-      "pe_ratio": 27.2,
+      "pe_ratio": 27.25,
       "avg_volume_m": 0.78,
-      "div_yield_pct": 203.0,
+      "div_yield_pct": 202.0,
       "short_pct": 1.38,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 343861,
-      "vol_1w": 3178161,
-      "vol_1m": 17965361,
+      "vol_1d": 588800,
+      "vol_1w": 3423100,
+      "vol_1m": 18210300,
       "news": [
         {
-          "title": "BlackRock (BLK) Launches Tokenized Cash Funds, Is The 14% Discount Still Compelling?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/blackrock-blk-launches-tokenized-cash-172056637.html",
-          "published": 1786123256,
-          "sentiment": 0.226
+          "title": "Dear Circle Stock Fans, Mark Your Calendars for September 16",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3746248/dear-circle-stock-fans-mark-your-calendars-for-september-16",
+          "published": 1786303802,
+          "sentiment": 0.382
         },
         {
-          "title": "BlackRock's Rick Rieder Sees Rate Hike Unlikely",
+          "title": "Billionaire Larry Fink Warns Keeping Your Savings in a Bank Account Is 'One Of The Worst Financial Decisions Of A Lifetime' \u2014 But Mark Cuban Told People To Do the Opposite",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3745231/billionaire-larry-fink-warns-keeping-your-savings-in-a-bank-account-is-one-of-the-worst-financial-decisions-of-a-lifetime-but-mark-cuban-told-people-to-do-the-opposite",
+          "published": 1786289402,
+          "sentiment": -0.412
+        },
+        {
+          "title": "Strategy (MSTR) vs BlackRock\u2019s IBIT: Which Bitcoin Bet Has Held Up Better in 2026?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/cryptocurrency/2026/08/09/strategy-mstr-vs-blackrocks-ibit-which-bitcoin-bet-has-held-up-better-in-2026/",
+          "published": 1786280149,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Barrick Chairman's Planned Overhaul Meets Investor Backlash",
           "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/video/blackrocks-rick-rieder-sees-rate-145132184.html",
-          "published": 1786114292,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/barrick-chairmans-planned-overhaul-meets-120132508.html",
+          "published": 1786276892,
           "sentiment": 0.0
         },
         {
-          "title": "BlackRock's Rieder on Jobs Report, Fed Rates and Bonds",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/video/blackrocks-rieder-jobs-report-fed-144855253.html",
-          "published": 1786114135,
-          "sentiment": 0.0
-        },
-        {
-          "title": "BlackRock Is Being as Boring as Possible in Bonds, Rieder Says",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/video/blackrock-being-boring-possible-bonds-141035949.html",
-          "published": 1786111835,
-          "sentiment": -0.318
-        },
-        {
-          "title": "Should iShares Russell 2000 Value ETF (IWN) Be on Your Investing Radar?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ishares-russell-2000-value-etf-102001369.html",
-          "published": 1786098001,
-          "sentiment": 0.34
+          "title": "European stocks draw investors as earnings and growth strengthen",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-stocks-draw-investors-earnings-102830581.html",
+          "published": 1786271310,
+          "sentiment": 0.599
         }
       ],
-      "news_sentiment": 0.05
+      "news_sentiment": 0.202
     },
     {
       "ticker": "LLY",
@@ -1029,67 +1029,67 @@ window.PRICES_DATA = {
       "category": "healthcare",
       "exchange": "NYSE",
       "price_usd": "1186",
-      "price_gbp": 878.7771,
+      "price_gbp": 878.6466,
       "change_1d": "-0.44%",
       "change_1w": "+3.21%",
       "change_1m": "-2.48%",
       "change_ytd": "+10.12%",
-      "return_1yr": "+79%",
-      "low_usd": "624",
-      "low_gbp": 462.3083,
+      "return_1yr": "+87%",
+      "low_usd": "626",
+      "low_gbp": 463.8107,
       "high_usd": "1249",
-      "high_gbp": 926.0173,
+      "high_gbp": 925.8798,
       "bar_pct": 90,
-      "market_cap_usd_b": 1056.891,
-      "market_cap_gbp_b": 783.304,
+      "market_cap_usd_b": 1057.347,
+      "market_cap_gbp_b": 783.526,
       "beta": 0.506,
-      "pe_ratio": 39.79,
-      "avg_volume_m": 2.97,
+      "pe_ratio": 39.84,
+      "avg_volume_m": 3.05,
       "div_yield_pct": 58.0,
       "short_pct": 1.15,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 1797267,
-      "vol_1w": 18696567,
-      "vol_1m": 60456467,
+      "vol_1d": 2897000,
+      "vol_1w": 19796300,
+      "vol_1m": 61556200,
       "news": [
         {
-          "title": "Novo Nordisk Stock Rises After GLP-1 Antitrust Win",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/novo-nordisk-stock-rises-glp-195231835.html",
-          "published": 1786132351,
-          "sentiment": 0.586
+          "title": "Nvidia, Eli Lilly, and Disney Show It\u2019s Time to Back the Top Dogs",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/nvidia-stock-eli-lilly-disney-0133194f?siteid=yhoof2&yptr=yahoo",
+          "published": 1786338000,
+          "sentiment": 0.202
         },
         {
-          "title": "Pfizer's Next Weight-Loss Weapon: How Berobenatide Stacks Up Against Novo Nordisk's Wegovy and Eli Lilly's Zepbound",
+          "title": "Ozempic For $50 a Month? Amazon Pharmacy Rolls Out Cheap Weight-Loss Drugs for Medicare Patients",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/healthcare/articles/ozempic-50-month-amazon-pharmacy-013108263.html",
+          "published": 1786325468,
+          "sentiment": 0.178
+        },
+        {
+          "title": "Eli Lilly (LLY) Posts Blowout Growth And Raises Its Outlook",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/eli-lilly-lly-posts-blowout-085111847.html",
+          "published": 1786265471,
+          "sentiment": 0.382
+        },
+        {
+          "title": "When Leverage Goes Wrong on Wall Street",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/pfizers-next-weight-loss-weapon-how-berobenatide-s/",
-          "published": 1786132080,
-          "sentiment": -0.296
+          "url": "https://www.fool.com/investing/2026/08/08/when-leverage-goes-wrong-on-wall-street/",
+          "published": 1786225537,
+          "sentiment": -0.477
         },
         {
-          "title": "The Two Divergent Paths Priced Into Eli Lilly Stock",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610531/the-two-divergent-paths-priced-into-eli-lilly-stock/2026-08-07",
-          "published": 1786127896,
+          "title": "LLY Q2 Deep Dive: Key Products and Pipeline Expansion",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/healthcare/articles/lly-q2-deep-dive-key-212522317.html",
+          "published": 1786224322,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stock Market Rally Powers Ahead; SpaceX, Palantir, Sandisk Are Key Earnings Movers: Weekly Review",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/stock-market-rally-powers-ahead-spacex-palantir-sandisk-are-key-earnings-movers-weekly-review/?src=A00220&yptr=yahoo",
-          "published": 1786120507,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Lilly and Novo Win a Key GLP-1 Antitrust Fight",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/lilly-novo-win-key-glp-163431906.html",
-          "published": 1786120471,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.117
+      "news_sentiment": 0.057
     },
     {
       "ticker": "UNH",
@@ -1097,30 +1097,44 @@ window.PRICES_DATA = {
       "category": "healthcare",
       "exchange": "NYSE",
       "price_usd": "407",
-      "price_gbp": 301.7033,
+      "price_gbp": 301.6585,
       "change_1d": "+0.76%",
       "change_1w": "-1.77%",
       "change_1m": "-4.35%",
       "change_ytd": "+22.65%",
-      "return_1yr": "+66%",
-      "low_usd": "244",
-      "low_gbp": 181.1124,
+      "return_1yr": "+61%",
+      "low_usd": "252",
+      "low_gbp": 186.8433,
       "high_usd": "462",
-      "high_gbp": 342.125,
-      "bar_pct": 75,
+      "high_gbp": 342.0742,
+      "bar_pct": 74,
       "market_cap_usd_b": 369.687,
-      "market_cap_gbp_b": 273.99,
+      "market_cap_gbp_b": 273.949,
       "beta": 0.632,
-      "pe_ratio": 30.63,
-      "avg_volume_m": 6.44,
-      "div_yield_pct": 230.0,
+      "pe_ratio": 30.68,
+      "avg_volume_m": 6.34,
+      "div_yield_pct": 228.0,
       "short_pct": 2.13,
       "analyst": "buy",
       "analyst_score": 1.59,
-      "vol_1d": 4088899,
-      "vol_1w": 22676199,
-      "vol_1m": 123531499,
+      "vol_1d": 4093800,
+      "vol_1w": 22681100,
+      "vol_1m": 123536400,
       "news": [
+        {
+          "title": "UnitedHealth (UNH) Commits $4M to Tennessee Health Hub Expansion",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/unitedhealth-unh-commits-4m-tennessee-181302253.html",
+          "published": 1786299182,
+          "sentiment": 0.026
+        },
+        {
+          "title": "UnitedHealth Group (UNH) Leans On Optum And Medicare Advantage, Is The Stock Already Pricey?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/healthcare/articles/unitedhealth-group-unh-leans-optum-061430711.html",
+          "published": 1786256070,
+          "sentiment": 0.25
+        },
         {
           "title": "UNH Leads Its Peer Group. You Pay For That",
           "publisher": "Trefis",
@@ -1141,23 +1155,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/4-healthcare-stocks-watch-defensive-125900116.html",
           "published": 1786107540,
           "sentiment": 0.382
-        },
-        {
-          "title": "Dow Poised to Break Winning Streak",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/finance/stocks/chip-stocks-weaken-oil-steady-as-investors-await-hormuz-progress-919a2cec?siteid=yhoof2&yptr=yahoo",
-          "published": 1786040700,
-          "sentiment": 0.66
-        },
-        {
-          "title": "Pediatrix Medical Tops Q2 Earnings on Better Cash Collections",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/pediatrix-medical-tops-q2-earnings-170000237.html",
-          "published": 1786035600,
-          "sentiment": 0.735
         }
       ],
-      "news_sentiment": 0.335
+      "news_sentiment": 0.111
     },
     {
       "ticker": "JNJ",
@@ -1165,67 +1165,67 @@ window.PRICES_DATA = {
       "category": "healthcare",
       "exchange": "NYSE",
       "price_usd": "259",
-      "price_gbp": 192.1331,
+      "price_gbp": 192.1046,
       "change_1d": "+0.68%",
       "change_1w": "+1.13%",
       "change_1m": "-1.58%",
       "change_ytd": "+26.41%",
-      "return_1yr": "+47%",
-      "low_usd": "170",
-      "low_gbp": 126.2828,
+      "return_1yr": "+49%",
+      "low_usd": "172",
+      "low_gbp": 127.3164,
       "high_usd": "275",
-      "high_gbp": 203.7394,
+      "high_gbp": 203.7091,
       "bar_pct": 85,
       "market_cap_usd_b": 624.742,
-      "market_cap_gbp_b": 463.021,
+      "market_cap_gbp_b": 462.953,
       "beta": 0.231,
-      "pe_ratio": 30.11,
-      "avg_volume_m": 8.34,
-      "div_yield_pct": 209.0,
+      "pe_ratio": 30.04,
+      "avg_volume_m": 8.28,
+      "div_yield_pct": 207.0,
       "short_pct": 1.27,
       "analyst": "buy",
       "analyst_score": 1.91,
-      "vol_1d": 6416873,
-      "vol_1w": 35319973,
-      "vol_1m": 181571773,
+      "vol_1d": 6531100,
+      "vol_1w": 35434200,
+      "vol_1m": 181686000,
       "news": [
         {
-          "title": "Johnson & Johnson (JNJ) Reaches $5.5 Billion Talc Settlement To Close Years Of Lawsuits",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/healthcare/articles/johnson-johnson-jnj-reaches-5-191035095.html",
-          "published": 1786129835,
-          "sentiment": -0.103
+          "title": "Johnson & Johnson Has Increased Its Dividend for 64 Consecutive Years. Here's How Much $10,000 Invested in the Dividend King Pays Annually.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/johnson-johnson-increased-dividend-king-yield/",
+          "published": 1786282500,
+          "sentiment": 0.273
         },
         {
-          "title": "The Two Divergent Paths Priced Into Eli Lilly Stock",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610531/the-two-divergent-paths-priced-into-eli-lilly-stock/2026-08-07",
-          "published": 1786127896,
+          "title": "How Much Do You Need Invested by 50 to Retire on Dividends at 60?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/08/09/how-much-do-you-need-invested-by-50-to-retire-on-dividends-at-60/",
+          "published": 1786271486,
           "sentiment": 0.0
         },
         {
-          "title": "Halozyme's Q2 Earnings Beat Estimates, 2026 Outlook Raised, Stock Up",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/halozymes-q2-earnings-beat-estimates-173500785.html",
-          "published": 1786124100,
+          "title": "How a 52-Year-Old Can Turn $425,000 Into a Monthly Paycheck Machine by 62",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/08/08/how-a-52-year-old-can-turn-425000-into-a-monthly-paycheck-machine-by-62/",
+          "published": 1786241687,
           "sentiment": 0.0
         },
         {
-          "title": "Genmab Stock Rises 4.4% as Drug Royalties Lift Outlook",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/genmab-stock-rises-4-4-164350819.html",
-          "published": 1786121030,
-          "sentiment": 0.0
+          "title": "How Much Do You Need Invested to Out-Earn the Average Social Security Check With Dividends?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/08/08/how-much-do-you-need-invested-to-out-earn-the-average-social-security-check-with-dividends/",
+          "published": 1786225028,
+          "sentiment": 0.34
         },
         {
-          "title": "Johnson & Johnson (JNJ) Could Be a Great Choice",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/johnson-johnson-jnj-could-great-154503195.html",
-          "published": 1786117503,
-          "sentiment": 0.625
+          "title": "Competition Is Heating Up, but Here's Why Intuitive Surgical Might Still Be the Smartest Bet in MedTech",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/08/competition-is-heating-up-but-heres-why-intuitive/",
+          "published": 1786206900,
+          "sentiment": 0.758
         }
       ],
-      "news_sentiment": 0.104
+      "news_sentiment": 0.274
     },
     {
       "ticker": "ABBV",
@@ -1233,30 +1233,37 @@ window.PRICES_DATA = {
       "category": "healthcare",
       "exchange": "NYSE",
       "price_usd": "246",
-      "price_gbp": 182.3501,
+      "price_gbp": 182.323,
       "change_1d": "+0.75%",
       "change_1w": "-1.95%",
       "change_1m": "-1.96%",
       "change_ytd": "+9.83%",
       "return_1yr": "+24%",
       "low_usd": "191",
-      "low_gbp": 141.3725,
+      "low_gbp": 141.3515,
       "high_usd": "267",
-      "high_gbp": 198.2327,
+      "high_gbp": 198.2033,
       "bar_pct": 72,
       "market_cap_usd_b": 434.782,
-      "market_cap_gbp_b": 322.234,
+      "market_cap_gbp_b": 322.186,
       "beta": 0.28,
       "pe_ratio": 69.5,
-      "avg_volume_m": 6.86,
-      "div_yield_pct": 284.0,
+      "avg_volume_m": 6.82,
+      "div_yield_pct": 281.0,
       "short_pct": 1.42,
       "analyst": "buy",
       "analyst_score": 1.74,
-      "vol_1d": 4699891,
-      "vol_1w": 29928191,
-      "vol_1m": 132642991,
+      "vol_1d": 4930200,
+      "vol_1w": 30158500,
+      "vol_1m": 132873300,
       "news": [
+        {
+          "title": "The 5 Most Interesting Analyst Questions From AbbVie\u2019s Q2 Earnings Call",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/5-most-interesting-analyst-questions-233322850.html",
+          "published": 1786318402,
+          "sentiment": 0.458
+        },
         {
           "title": "AbbVie vs. Abbott Laboratories: Which Healthcare Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
@@ -1284,16 +1291,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/healthcare/articles/ironwood-q2-earnings-beat-estimates-165300959.html",
           "published": 1786121580,
           "sentiment": -0.34
-        },
-        {
-          "title": "These New Drugs Could Fuel Fresh Highs for Biotech and Pharma Stocks",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/biotech-stocks-to-buy-new-drugs-1b626dfc?siteid=yhoof2&yptr=yahoo",
-          "published": 1786116600,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.011
+      "news_sentiment": 0.039
     },
     {
       "ticker": "MRK",
@@ -1301,29 +1301,29 @@ window.PRICES_DATA = {
       "category": "healthcare",
       "exchange": "NYSE",
       "price_usd": "129",
-      "price_gbp": 95.2958,
+      "price_gbp": 95.2816,
       "change_1d": "+0.30%",
       "change_1w": "-1.24%",
       "change_1m": "+2.06%",
       "change_ytd": "+22.56%",
-      "return_1yr": "+58%",
+      "return_1yr": "+61%",
       "low_usd": "78",
-      "low_gbp": 57.4976,
+      "low_gbp": 57.4891,
       "high_usd": "135",
-      "high_gbp": 100.091,
+      "high_gbp": 100.0761,
       "bar_pct": 89,
-      "market_cap_usd_b": 317.57,
-      "market_cap_gbp_b": 235.364,
+      "market_cap_usd_b": null,
+      "market_cap_gbp_b": null,
       "beta": 0.211,
       "pe_ratio": 102.86,
       "avg_volume_m": 10.23,
-      "div_yield_pct": 265.0,
+      "div_yield_pct": 264.0,
       "short_pct": 1.19,
       "analyst": "buy",
       "analyst_score": 1.82,
-      "vol_1d": 5074759,
-      "vol_1w": 45599059,
-      "vol_1m": 197428459,
+      "vol_1d": 7347500,
+      "vol_1w": 47871800,
+      "vol_1m": 199701200,
       "news": [
         {
           "title": "The Two Divergent Paths Priced Into Eli Lilly Stock",
@@ -1369,30 +1369,37 @@ window.PRICES_DATA = {
       "category": "healthcare",
       "exchange": "NYSE",
       "price_usd": "594",
-      "price_gbp": 440.2372,
+      "price_gbp": 440.1718,
       "change_1d": "+3.43%",
       "change_1w": "+3.43%",
       "change_1m": "+16.44%",
       "change_ytd": "+0.45%",
-      "return_1yr": "+25%",
+      "return_1yr": "+28%",
       "low_usd": "435",
-      "low_gbp": 322.596,
+      "low_gbp": 322.5481,
       "high_usd": "644",
-      "high_gbp": 477.2867,
+      "high_gbp": 477.2159,
       "bar_pct": 76,
       "market_cap_usd_b": 219.63,
-      "market_cap_gbp_b": 162.777,
+      "market_cap_gbp_b": 162.752,
       "beta": 0.847,
-      "pe_ratio": 32.0,
-      "avg_volume_m": 2.41,
+      "pe_ratio": 31.95,
+      "avg_volume_m": 2.35,
       "div_yield_pct": 32.0,
       "short_pct": 1.43,
       "analyst": "buy",
       "analyst_score": 1.54,
-      "vol_1d": 1325315,
-      "vol_1w": 8128215,
-      "vol_1m": 49654215,
+      "vol_1d": 2206600,
+      "vol_1w": 9009500,
+      "vol_1m": 50535500,
       "news": [
+        {
+          "title": "Thermo Fisher (TMO) vs Danaher (DHR): Which Life Sciences Stock Looks Better Positioned?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/thermo-fisher-tmo-vs-danaher-000131616.html",
+          "published": 1786320091,
+          "sentiment": 0.44
+        },
         {
           "title": "Labcorp Stock Jumps 14% in a Month as Growth Meets Rich Valuation",
           "publisher": "Zacks",
@@ -1420,16 +1427,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/thermo-fisher-raises-2026-outlook-153700819.html",
           "published": 1785771420,
           "sentiment": 0.511
-        },
-        {
-          "title": "Unlocking Thermo Fisher (TMO) International Revenues: Trends, Surprises, and Prospects",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/unlocking-thermo-fisher-tmo-international-131503247.html",
-          "published": 1785762903,
-          "sentiment": 0.477
         }
       ],
-      "news_sentiment": 0.459
+      "news_sentiment": 0.452
     },
     {
       "ticker": "ABT",
@@ -1437,30 +1437,37 @@ window.PRICES_DATA = {
       "category": "healthcare",
       "exchange": "NYSE",
       "price_usd": "108",
-      "price_gbp": 79.9023,
+      "price_gbp": 79.8904,
       "change_1d": "+0.52%",
       "change_1w": "+2.00%",
       "change_1m": "+14.08%",
       "change_ytd": "-11.58%",
-      "return_1yr": "-20%",
+      "return_1yr": "-18%",
       "low_usd": "82",
-      "low_gbp": 60.7512,
+      "low_gbp": 60.7422,
       "high_usd": "137",
-      "high_gbp": 101.8993,
+      "high_gbp": 101.8842,
       "bar_pct": 47,
-      "market_cap_usd_b": 187.785,
-      "market_cap_gbp_b": 139.175,
+      "market_cap_usd_b": 186.553,
+      "market_cap_gbp_b": 138.241,
       "beta": 0.581,
       "pe_ratio": 34.89,
-      "avg_volume_m": 12.94,
-      "div_yield_pct": 233.0,
+      "avg_volume_m": 12.69,
+      "div_yield_pct": 234.0,
       "short_pct": 1.61,
       "analyst": "buy",
       "analyst_score": 1.67,
-      "vol_1d": 4542025,
-      "vol_1w": 39222925,
-      "vol_1m": 268744025,
+      "vol_1d": 6606000,
+      "vol_1w": 41286900,
+      "vol_1m": 270808000,
       "news": [
+        {
+          "title": "Abbott Laboratories (ABT) Could Be 10% Undervalued On Its $1.35b Buyback Update",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/abbott-laboratories-abt-could-10-161147968.html",
+          "published": 1786205507,
+          "sentiment": 0.0
+        },
         {
           "title": "AbbVie vs. Abbott Laboratories: Which Healthcare Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
@@ -1488,16 +1495,9 @@ window.PRICES_DATA = {
           "url": "https://www.entrepreneur.com/business-news/dont-want-to-pay-a-lot-of-taxes-move-your-company-to-this-tiny-mediterranean-archipelago",
           "published": 1786107600,
           "sentiment": -0.026
-        },
-        {
-          "title": "What Makes Abbott Laboratories (ABT) a Compelling Investment Opportunity with Reliable Growth",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/makes-abbott-laboratories-abt-compelling-123730283.html",
-          "published": 1786106250,
-          "sentiment": 0.743
         }
       ],
-      "news_sentiment": 0.438
+      "news_sentiment": 0.289
     },
     {
       "ticker": "PG",
@@ -1505,67 +1505,67 @@ window.PRICES_DATA = {
       "category": "consumer",
       "exchange": "NYSE",
       "price_usd": "146",
-      "price_gbp": 108.0508,
+      "price_gbp": 108.0348,
       "change_1d": "-0.64%",
       "change_1w": "+0.90%",
       "change_1m": "-1.03%",
       "change_ytd": "+5.11%",
       "return_1yr": "-6%",
       "low_usd": "138",
-      "low_gbp": 101.9957,
+      "low_gbp": 101.9805,
       "high_usd": "167",
-      "high_gbp": 123.9557,
+      "high_gbp": 123.9373,
       "bar_pct": 28,
-      "market_cap_usd_b": 339.486,
-      "market_cap_gbp_b": 251.607,
+      "market_cap_usd_b": 338.879,
+      "market_cap_gbp_b": 251.119,
       "beta": 0.377,
-      "pe_ratio": 22.06,
-      "avg_volume_m": 8.87,
-      "div_yield_pct": 296.0,
+      "pe_ratio": 22.02,
+      "avg_volume_m": 8.89,
+      "div_yield_pct": 299.0,
       "short_pct": 0.99,
       "analyst": "buy",
-      "analyst_score": 2.12,
-      "vol_1d": 7562397,
-      "vol_1w": 42288297,
-      "vol_1m": 198646697,
+      "analyst_score": 2.2,
+      "vol_1d": 7565000,
+      "vol_1w": 42290900,
+      "vol_1m": 198649300,
       "news": [
         {
-          "title": "SpaceX upgraded, Trade Desk downgraded: Wall Street's top analyst calls",
-          "publisher": "The Fly",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-initiation-apple-downgrade-among-133025602.html",
-          "published": 1786110322,
-          "sentiment": 0.202
-        },
-        {
-          "title": "SoFi and Visa Earnings Point to Consumer Confidence",
+          "title": "This Dividend Stock's Moat Is as Wide as It Gets. 3 Reasons to Buy and Hold Forever.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/sofi-and-visa-earnings-point-to-consumer-confidence/",
-          "published": 1786078846,
-          "sentiment": 0.511
-        },
-        {
-          "title": "5 Solid Dividend Stocks to Buy in August",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/06/5-solid-dividend-stocks-to-buy-in-august/",
-          "published": 1786014038,
-          "sentiment": 0.153
-        },
-        {
-          "title": "3 Microcaps for Your Watchlist",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-microcaps-watchlist-075700512.html",
-          "published": 1786003020,
+          "url": "https://www.fool.com/investing/2026/08/09/this-dividend-stocks-moat-is-as-wide-as-it-gets-3/",
+          "published": 1786304100,
           "sentiment": 0.0
         },
         {
-          "title": "A $3.8 Billion Reason Why Procter & Gamble Stock Is in Focus Today",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3667266/a-3-8-billion-reason-why-procter-gamble-stock-is-in-focus-today",
-          "published": 1785942882,
+          "title": "P&G\u2019s (PG) $3.8B Wellness Deal Collides With a Costly Outlook",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/healthcare/articles/p-g-pg-3-8b-183514791.html",
+          "published": 1786300514,
+          "sentiment": 0.103
+        },
+        {
+          "title": "Wall Street Is Betting P&G\u2019s Dividend Growth Ends. The Cash Flow Suggests That\u2019s Not Happening",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/09/wall-street-is-betting-pgs-dividend-growth-ends-the-cash-flow-suggests-thats-not-happening/",
+          "published": 1786280433,
+          "sentiment": 0.382
+        },
+        {
+          "title": "What Could Procter & Gamble (PG) Chairman Change Mean After Jon Moeller Retires?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/could-procter-gamble-pg-chairman-061237482.html",
+          "published": 1786255957,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How a 52-Year-Old Can Turn $425,000 Into a Monthly Paycheck Machine by 62",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/personal-finance/2026/08/08/how-a-52-year-old-can-turn-425000-into-a-monthly-paycheck-machine-by-62/",
+          "published": 1786241687,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.173
+      "news_sentiment": 0.097
     },
     {
       "ticker": "KO",
@@ -1573,67 +1573,67 @@ window.PRICES_DATA = {
       "category": "consumer",
       "exchange": "NYSE",
       "price_usd": "87",
-      "price_gbp": 64.5162,
+      "price_gbp": 64.5067,
       "change_1d": "+0.10%",
       "change_1w": "-0.62%",
       "change_1m": "+4.38%",
       "change_ytd": "+27.63%",
       "return_1yr": "+23%",
       "low_usd": "65",
-      "low_gbp": 48.4335,
+      "low_gbp": 48.4263,
       "high_usd": "91",
-      "high_gbp": 67.3844,
+      "high_gbp": 67.3744,
       "bar_pct": 85,
       "market_cap_usd_b": 374.537,
-      "market_cap_gbp_b": 277.584,
+      "market_cap_gbp_b": 277.543,
       "beta": 0.342,
       "pe_ratio": 26.14,
-      "avg_volume_m": 18.03,
+      "avg_volume_m": 17.89,
       "div_yield_pct": 244.0,
       "short_pct": 1.12,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 11211574,
-      "vol_1w": 80931474,
-      "vol_1m": 390934574,
+      "vol_1d": 11217500,
+      "vol_1w": 80937400,
+      "vol_1m": 390940500,
       "news": [
         {
-          "title": "Airbnb vs. Coca-Cola: Which Consumer Stock Is a Better Buy in 2026?",
+          "title": "Berkshire Earnings Were Good\u2014Not Great. A Real Bright Spot Was This.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/berkshire-hathaway-earnings-stock-buybacks-d5a6ac50?siteid=yhoof2&yptr=yahoo",
+          "published": 1786314060,
+          "sentiment": 0.791
+        },
+        {
+          "title": "This Dividend Stock's Moat Is as Wide as It Gets. 3 Reasons to Buy and Hold Forever.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/08/07/airbnb-vs-coca-cola-which-consumer-stock-is-a-better-buy-in-2026/",
-          "published": 1786133738,
-          "sentiment": 0.44
-        },
-        {
-          "title": "Greg Abel concentrates 63% of Berkshire's $355B portfolio in 5 stocks",
-          "publisher": "Quartz",
-          "url": "https://qz.com/berkshire-hathaway-greg-abel-portfolio-concentration-five-stocks-080726",
-          "published": 1786123324,
+          "url": "https://www.fool.com/investing/2026/08/09/this-dividend-stocks-moat-is-as-wide-as-it-gets-3/",
+          "published": 1786304100,
           "sentiment": 0.0
         },
         {
-          "title": "Molson Coors Q2 Earnings Beat Estimates on Pricing and Cost Savings",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/molson-coors-q2-earnings-beat-164500953.html",
-          "published": 1786121100,
+          "title": "Dividend King Coca-Cola is suddenly acting like a growth stock",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/coca-cola-q2-earnings-growth-stock",
+          "published": 1786291380,
+          "sentiment": 0.625
+        },
+        {
+          "title": "Coca-Cola (KO) Just Pulled Back. Here\u2019s Why Retirees Are Buying the Dip in August",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/09/coca-cola-ko-just-pulled-back-heres-why-retirees-are-buying-the-dip-in-august/",
+          "published": 1786284013,
           "sentiment": 0.0
         },
         {
-          "title": "Monster Beverage Beats Q2 Earnings on Broad-Based Sales Growth",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/monster-beverage-beats-q2-earnings-164300309.html",
-          "published": 1786120980,
-          "sentiment": 0.382
-        },
-        {
-          "title": "DEO FY26 Preliminary Earnings Show Pressure on North America Weakness",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/deo-fy26-preliminary-earnings-show-154700605.html",
-          "published": 1786117620,
-          "sentiment": -0.612
+          "title": "Here's How Many Shares of Coca-Cola You'd Need for $30,000 in Yearly Dividends. (Spoiler: It's a Lot.)",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/heres-how-many-shares-of-coca-cola-youd-need-for-3/",
+          "published": 1786265400,
+          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.042
+      "news_sentiment": 0.342
     },
     {
       "ticker": "PEP",
@@ -1641,30 +1641,44 @@ window.PRICES_DATA = {
       "category": "consumer",
       "exchange": "NASDAQ",
       "price_usd": "139",
-      "price_gbp": 103.0333,
+      "price_gbp": 103.018,
       "change_1d": "+0.37%",
       "change_1w": "-0.39%",
       "change_1m": "-2.45%",
       "change_ytd": "-0.35%",
       "return_1yr": "-4%",
       "low_usd": "134",
-      "low_gbp": 99.1127,
+      "low_gbp": 99.0979,
       "high_usd": "171",
-      "high_gbp": 127.0907,
+      "high_gbp": 127.0718,
       "bar_pct": 14,
       "market_cap_usd_b": 189.901,
-      "market_cap_gbp_b": 140.743,
+      "market_cap_gbp_b": 140.722,
       "beta": 0.361,
       "pe_ratio": 18.22,
-      "avg_volume_m": 8.89,
-      "div_yield_pct": 428.0,
+      "avg_volume_m": 8.83,
+      "div_yield_pct": 426.0,
       "short_pct": 2.66,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 4593274,
-      "vol_1w": 34531674,
-      "vol_1m": 193967174,
+      "vol_1d": 4731100,
+      "vol_1w": 34669500,
+      "vol_1m": 194105000,
       "news": [
+        {
+          "title": "Here's How Many Shares of PepsiCo You'd Need for $20,000 in Yearly Dividends",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/heres-how-many-shares-of-pepsico-youd-need-for-200/",
+          "published": 1786289820,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Celsius Stock Soars as Rockstar Founder Pushes CEO Shake-Up",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/celsius-stock-soars-rockstar-founder-190903568.html",
+          "published": 1786129743,
+          "sentiment": 0.0
+        },
         {
           "title": "Celsius jumps 12% as Rockstar founder builds 4.7% stake, demands CEO ouster",
           "publisher": "Investing.com",
@@ -1685,23 +1699,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/pepsico-pep-stock-looks-reasonable-121442174.html",
           "published": 1786104882,
           "sentiment": 0.296
-        },
-        {
-          "title": "Are Wall Street Analysts Predicting PepsiCo Stock Will Climb or Sink?",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3715580/are-wall-street-analysts-predicting-pepsico-stock-will-climb-or-sink",
-          "published": 1786100727,
-          "sentiment": 0.0
-        },
-        {
-          "title": "From Milk to Snack Foods, More Products Are Going 'Regenerative'",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/economy/policy/articles/milk-snack-foods-more-products-100020581.html",
-          "published": 1786096820,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.054
+      "news_sentiment": 0.113
     },
     {
       "ticker": "MCD",
@@ -1709,67 +1709,67 @@ window.PRICES_DATA = {
       "category": "consumer",
       "exchange": "NYSE",
       "price_usd": "274",
-      "price_gbp": 203.4281,
+      "price_gbp": 203.3979,
       "change_1d": "-0.51%",
       "change_1w": "+1.42%",
       "change_1m": "-1.35%",
       "change_ytd": "-8.37%",
-      "return_1yr": "-13%",
+      "return_1yr": "-10%",
       "low_usd": "261",
-      "low_gbp": 193.4079,
+      "low_gbp": 193.3792,
       "high_usd": "342",
-      "high_gbp": 253.2846,
+      "high_gbp": 253.247,
       "bar_pct": 17,
-      "market_cap_usd_b": 195.02,
-      "market_cap_gbp_b": 144.537,
+      "market_cap_usd_b": null,
+      "market_cap_gbp_b": null,
       "beta": 0.419,
-      "pe_ratio": 22.28,
-      "avg_volume_m": 4.6,
-      "div_yield_pct": 269.0,
+      "pe_ratio": 22.32,
+      "avg_volume_m": 4.62,
+      "div_yield_pct": 271.0,
       "short_pct": 1.8,
       "analyst": "buy",
       "analyst_score": 2.06,
-      "vol_1d": 3763815,
-      "vol_1w": 27680515,
-      "vol_1m": 105010115,
+      "vol_1d": 4906500,
+      "vol_1w": 28823200,
+      "vol_1m": 106152800,
       "news": [
         {
-          "title": "Burger King vs. McDonald's: Why the king is reigning supreme in the US",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/burger-king-vs-mcdonalds-why-the-king-is-reigning-supreme-in-the-us-133949992.html",
-          "published": 1786109989,
-          "sentiment": 0.557
-        },
-        {
-          "title": "Wendy's Earnings Fall Amid Traffic Headwinds; Fast-Food Chain Withdraws Outlook",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/wendy-apos-earnings-fall-amid-160900082.html",
-          "published": 1786118940,
+          "title": "Restaurant Brands' stock jumps as star franchise beats Wendy's",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/burger-king-passes-wendys-restaurant-brands-earnings-qsr",
+          "published": 1786329180,
           "sentiment": 0.0
         },
         {
-          "title": "MCD Stock Forecast: Here\u2019s Where It\u2019ll End The Year",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/mcd-stock-forecast-heres-where-itll-end-the-year/",
-          "published": 1786114827,
+          "title": "Airbnb vs. McDonald's: Which Consumer Stock Is a Better Buy in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/08/09/airbnb-vs-mcdonald-s-which-consumer-stock-is-a-better-buy-in-2026/",
+          "published": 1786320901,
+          "sentiment": 0.44
+        },
+        {
+          "title": "McDonald's making some big changes to its menu",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/restaurants/mcdonalds-is-making-some-big-changes-to-its-menu",
+          "published": 1786318620,
           "sentiment": 0.0
         },
         {
-          "title": "Wendy\u2019s takes steps to fix its brand as sales fall again",
-          "publisher": "Nation's Restaurant News",
-          "url": "https://www.nrn.com/restaurant-finance/wendy-s-takes-steps-to-fix-its-brand-as-sales-fall-again",
-          "published": 1786109524,
-          "sentiment": 0.0
+          "title": "Wendy's loses status as second-largest burger chain after 6-year run",
+          "publisher": "Fox Business",
+          "url": "https://www.foxbusiness.com/economy/wendys-loses-status-second-largest-burger-chain-after-6-year-run",
+          "published": 1786300053,
+          "sentiment": -0.318
         },
         {
-          "title": "McDonald (MCD): A Consistent Dividend Payer Since 1976",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/mcdonald-mcd-consistent-dividend-payer-123334976.html",
-          "published": 1786106014,
-          "sentiment": 0.0
+          "title": "Does McDonald's (MCD) Have A US Menu Problem After Weak Same Store Sales?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/does-mcdonalds-mcd-us-menu-002025685.html",
+          "published": 1786234825,
+          "sentiment": -0.681
         }
       ],
-      "news_sentiment": 0.111
+      "news_sentiment": -0.112
     },
     {
       "ticker": "NKE",
@@ -1777,67 +1777,67 @@ window.PRICES_DATA = {
       "category": "consumer",
       "exchange": "NYSE",
       "price_usd": "42",
-      "price_gbp": 30.9055,
+      "price_gbp": 30.9009,
       "change_1d": "-0.93%",
       "change_1w": "-0.02%",
       "change_1m": "-2.77%",
       "change_ytd": "-33.07%",
-      "return_1yr": "-43%",
+      "return_1yr": "-44%",
       "low_usd": "40",
-      "low_gbp": 29.6456,
+      "low_gbp": 29.6412,
       "high_usd": "80",
-      "high_gbp": 59.4172,
+      "high_gbp": 59.4084,
       "bar_pct": 4,
       "market_cap_usd_b": 61.862,
-      "market_cap_gbp_b": 45.848,
+      "market_cap_gbp_b": 45.842,
       "beta": 1.118,
       "pe_ratio": 19.86,
-      "avg_volume_m": 23.28,
-      "div_yield_pct": 390.0,
+      "avg_volume_m": 23.33,
+      "div_yield_pct": 393.0,
       "short_pct": 6.7,
       "analyst": "hold",
       "analyst_score": 2.51,
-      "vol_1d": 19589144,
-      "vol_1w": 108960744,
-      "vol_1m": 428271144,
+      "vol_1d": 21999700,
+      "vol_1w": 111371300,
+      "vol_1m": 430681700,
       "news": [
+        {
+          "title": "You Can Do Better Than Nike. Buy This High-Yield Dividend Stock Instead.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/you-can-do-better-than-nike-buy-this-high-yield/",
+          "published": 1786290900,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Nike Stock Is Down 76% From Its High. Is It Time to Invest in a Possible Comeback?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/nike-stock-is-down-76-from-its-high-is-it-time-to/",
+          "published": 1786271700,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Seaport Entertainment Gr Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/seaport-entertainment-gr-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786251832,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Nike (NKE) Is Betting Big on Basketball\u2019s Next Generation. Will It Pay Off?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nike-nke-betting-big-basketball-132534474.html",
+          "published": 1786195534,
+          "sentiment": -0.103
+        },
         {
           "title": "Under Armour stock drops: AlphaSpace chart breakdown",
           "publisher": "Yahoo Finance Video",
           "url": "https://finance.yahoo.com/video/under-armour-stock-drops-alphaspace-195724541.html",
           "published": 1786132644,
           "sentiment": 0.0
-        },
-        {
-          "title": "Seaport Entertainment Group Inc (SEG) (Q2 2026) Earnings Call Highlights: First-Ever Positive ...",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/seaport-entertainment-group-inc-seg-231314023.html",
-          "published": 1786057994,
-          "sentiment": 0.751
-        },
-        {
-          "title": "Global sportswear brand closing 15 stores, laying off workers",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/retail/munich-closing-15-stores-retail-restructuring",
-          "published": 1786038420,
-          "sentiment": 0.0
-        },
-        {
-          "title": "NIKE (NKE) On China Reset And Store Closures Still Looks Pricey Against Fair Value",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nike-nke-china-reset-store-011324730.html",
-          "published": 1785978804,
-          "sentiment": 0.572
-        },
-        {
-          "title": "Nike stock could suffer because of JPMorgan verdict",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/jpmorgan-nike-nke-stock-downgrade-underweight",
-          "published": 1785971820,
-          "sentiment": -0.44
         }
       ],
-      "news_sentiment": 0.177
+      "news_sentiment": 0.152
     },
     {
       "ticker": "WMT",
@@ -1845,67 +1845,67 @@ window.PRICES_DATA = {
       "category": "consumer",
       "exchange": "NYSE",
       "price_usd": "112",
-      "price_gbp": 82.8965,
+      "price_gbp": 82.8842,
       "change_1d": "-0.07%",
       "change_1w": "+0.58%",
       "change_1m": "-1.11%",
       "change_ytd": "-0.41%",
-      "return_1yr": "+7%",
+      "return_1yr": "+8%",
       "low_usd": "95",
-      "low_gbp": 70.7196,
+      "low_gbp": 70.7091,
       "high_usd": "135",
-      "high_gbp": 100.1725,
+      "high_gbp": 100.1576,
       "bar_pct": 41,
       "market_cap_usd_b": 890.111,
-      "market_cap_gbp_b": 659.697,
+      "market_cap_gbp_b": 659.599,
       "beta": 0.605,
       "pe_ratio": 39.38,
-      "avg_volume_m": 23.63,
-      "div_yield_pct": 88.0,
+      "avg_volume_m": 23.75,
+      "div_yield_pct": 89.0,
       "short_pct": 1.68,
       "analyst": "buy",
       "analyst_score": 1.58,
-      "vol_1d": 18727446,
-      "vol_1w": 116939346,
-      "vol_1m": 489794346,
+      "vol_1d": 18808600,
+      "vol_1w": 117020500,
+      "vol_1m": 489875500,
       "news": [
         {
-          "title": "Walmart Resets Store Operations After Shopping Cart Risk",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/walmart-resets-store-operations-shopping-190730216.html",
-          "published": 1786129650,
-          "sentiment": -0.273
-        },
-        {
-          "title": "Trade Desk's Downbeat Guidance Indicates Macro, Structural Issues, Wedbush Says",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/media-advertising/articles/trade-desk-apos-downbeat-guidance-185852903.html",
-          "published": 1786129132,
+          "title": "Taylor Farms Pulls Salsa and Guacamole Over Salmonella Concerns",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/healthcare/articles/taylor-farms-pulls-salsa-guacamole-222513483.html",
+          "published": 1786314313,
           "sentiment": 0.0
         },
         {
-          "title": "\u2018Your refund: $0\u2019: Companies claim billions in tariff refunds, months after Trump floated $2,000 checks",
-          "publisher": "Moneywise",
-          "url": "https://finance.yahoo.com/economy/policy/articles/refund-0-companies-claim-billions-185000374.html",
-          "published": 1786128600,
+          "title": "Walmart (WMT) Stock Price Prediction: Where Our Price Target Sees the Stock Going Over the Next 12 Months",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/09/walmart-wmt-stock-price-prediction-where-our-price-target-sees-the-stock-going-over-the-next-12-months/",
+          "published": 1786276843,
           "sentiment": 0.0
         },
         {
-          "title": "Albertsons CEO Makes First-Ever Stock Purchase After Earnings Selloff",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/albertsons-stock-ceo-insider-buying-earnings-c9005206?siteid=yhoof2&yptr=yahoo",
-          "published": 1786128480,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Constellation Signed 920 Megawatts of New Power Deals, Including a Walmart PPA. Here's What It Means for CEG Stock.",
+          "title": "3 Reasons to Buy and Hold This Dividend King (and 1 Reason Not To)",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/constellation-signed-920-megawatts-of-new-power-deals-including-a-walmart-ppa-heres-what-it-means-for-ceg-stock/",
-          "published": 1786121158,
+          "url": "https://www.fool.com/investing/2026/08/09/3-reasons-to-buy-and-hold-this-dividend-king-and-o/",
+          "published": 1786275900,
           "sentiment": 0.0
+        },
+        {
+          "title": "Constellation (CEG) Locks In More Power Deals As Nuclear Output Slips",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/constellation-ceg-locks-more-power-112156765.html",
+          "published": 1786274516,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Home Depot Has Raised Its Dividend for 17 Consecutive Years and Reports Earnings Aug. 18. Is It the Smarter Dow Stock to Buy Over Walmart?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/08/home-depot-dividend-17-years-walmart/",
+          "published": 1786225200,
+          "sentiment": 0.459
         }
       ],
-      "news_sentiment": -0.055
+      "news_sentiment": 0.092
     },
     {
       "ticker": "COST",
@@ -1913,30 +1913,44 @@ window.PRICES_DATA = {
       "category": "consumer",
       "exchange": "NASDAQ",
       "price_usd": "948",
-      "price_gbp": 702.4673,
+      "price_gbp": 702.363,
       "change_1d": "-0.07%",
       "change_1w": "-0.43%",
       "change_1m": "-0.40%",
       "change_ytd": "+11.41%",
-      "return_1yr": "-3%",
+      "return_1yr": "-4%",
       "low_usd": "844",
-      "low_gbp": 625.5666,
+      "low_gbp": 625.4737,
       "high_usd": "1096",
-      "high_gbp": 812.66,
+      "high_gbp": 812.5393,
       "bar_pct": 41,
       "market_cap_usd_b": 420.338,
-      "market_cap_gbp_b": 311.529,
+      "market_cap_gbp_b": 311.483,
       "beta": 0.86,
-      "pe_ratio": 47.77,
-      "avg_volume_m": 2.44,
+      "pe_ratio": 47.63,
+      "avg_volume_m": 2.42,
       "div_yield_pct": 62.0,
       "short_pct": 1.57,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 1250029,
-      "vol_1w": 9510329,
-      "vol_1m": 49588329,
+      "vol_1d": 1523800,
+      "vol_1w": 9784100,
+      "vol_1m": 49862100,
       "news": [
+        {
+          "title": "Costco vs. General Mills: Comparing Revenue Trends Between These Consumer Staples Companies",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/charts/2026/08/09/costco-vs-general-mills-comparing-revenue-trends-between-these-consumer-staples-companies/",
+          "published": 1786304881,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Walmart (WMT) Stock Price Prediction: Where Our Price Target Sees the Stock Going Over the Next 12 Months",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/09/walmart-wmt-stock-price-prediction-where-our-price-target-sees-the-stock-going-over-the-next-12-months/",
+          "published": 1786276843,
+          "sentiment": 0.0
+        },
         {
           "title": "Costco Stock Slips Despite 10.7% July Sales Jump",
           "publisher": "GuruFocus.com",
@@ -1957,23 +1971,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/costco-wholesale-cost-fully-valued-171906948.html",
           "published": 1786123146,
           "sentiment": 0.854
-        },
-        {
-          "title": "Kroger makes a pricing move Costco and Walmart will love",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/retail/kroger-makes-a-pricing-move-costco-and-walmart-will-love",
-          "published": 1786115220,
-          "sentiment": 0.637
-        },
-        {
-          "title": "CBP has paid $100B in IEEPA tariff refunds",
-          "publisher": "Supply Chain Dive",
-          "url": "https://www.supplychaindive.com/news/cbp-has-paid-100-billion-in-ieepa-tariff-refunds/827257/",
-          "published": 1786097777,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.404
+      "news_sentiment": 0.276
     },
     {
       "ticker": "XOM",
@@ -1981,67 +1981,67 @@ window.PRICES_DATA = {
       "category": "energy-industrial",
       "exchange": "NYSE",
       "price_usd": "153",
-      "price_gbp": 113.4241,
+      "price_gbp": 113.4072,
       "change_1d": "-1.14%",
       "change_1w": "-1.54%",
       "change_1m": "+8.44%",
       "change_ytd": "+26.46%",
       "return_1yr": "+45%",
       "low_usd": "106",
-      "low_gbp": 78.2125,
+      "low_gbp": 78.2009,
       "high_usd": "176",
-      "high_gbp": 130.7445,
+      "high_gbp": 130.7251,
       "bar_pct": 67,
-      "market_cap_usd_b": 634.343,
-      "market_cap_gbp_b": 470.137,
+      "market_cap_usd_b": null,
+      "market_cap_gbp_b": null,
       "beta": 0.173,
-      "pe_ratio": 25.72,
-      "avg_volume_m": 16.61,
-      "div_yield_pct": 266.0,
+      "pe_ratio": 25.76,
+      "avg_volume_m": 16.41,
+      "div_yield_pct": 269.0,
       "short_pct": 1.15,
       "analyst": "buy",
       "analyst_score": 2.4,
-      "vol_1d": 9931964,
-      "vol_1w": 62919264,
-      "vol_1m": 326005864,
+      "vol_1d": 18450600,
+      "vol_1w": 71437900,
+      "vol_1m": 334524500,
       "news": [
+        {
+          "title": "Exxon Handed Shareholders $9.4 Billion in One Quarter. Here's What It Earned to Cover It.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/exxon-handed-shareholders-94-billion-in-one-quarte/",
+          "published": 1786324020,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why Trump\u2019s Waiver of the Jones Act Is Unlikely To Lower Gas Prices",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/why-trump-waiver-jones-act-230000493.html",
+          "published": 1786316400,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Warren Buffett sends a blunt message to stock market investors",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/warren-buffett-sends-a-blunt-message-to-stock-market-investors-sp-500-dot-com-bubble-gambling",
+          "published": 1786153020,
+          "sentiment": 0.0
+        },
+        {
+          "title": "ELAM: Let\u2019s make deal \u2013 not",
+          "publisher": "Odessa American, Texas",
+          "url": "https://www.oaoa.com/?p=368558",
+          "published": 1786147260,
+          "sentiment": 0.0
+        },
         {
           "title": "SM Energy Q2 Earnings Beat Estimates on Strong Production Growth",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/energy/articles/sm-energy-q2-earnings-beat-160800909.html",
           "published": 1786118880,
           "sentiment": 0.791
-        },
-        {
-          "title": "XOM Q2 Earnings Call Highlights Refining Strength and Guyana Cash Flow",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/xom-q2-earnings-call-highlights-151000279.html",
-          "published": 1786115400,
-          "sentiment": 0.494
-        },
-        {
-          "title": "The New Wild West: Texas Experiments With Raw Capitalism",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/texas-boom-yall-street-water-crisis-18860b3e?siteid=yhoof2&yptr=yahoo",
-          "published": 1786109400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "20 Years on Wall Street Taught Me to Buy and Hold 5 High-Yield Energy Giants",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/20-years-on-wall-street-taught-me-to-buy-and-hold-5-high-yield-energy-giants/",
-          "published": 1786106536,
-          "sentiment": 0.273
-        },
-        {
-          "title": "What Imperial Oil (TSX:IMO)'s Q2 Earnings Beat and Board Shift Means For Shareholders",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/imperial-oil-tsx-imo-q2-121454502.html",
-          "published": 1786104894,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.312
+      "news_sentiment": 0.099
     },
     {
       "ticker": "CVX",
@@ -2049,67 +2049,67 @@ window.PRICES_DATA = {
       "category": "energy-industrial",
       "exchange": "NYSE",
       "price_usd": "187",
-      "price_gbp": 138.2671,
+      "price_gbp": 138.2465,
       "change_1d": "-1.45%",
       "change_1w": "-5.22%",
       "change_1m": "+6.02%",
       "change_ytd": "+21.94%",
-      "return_1yr": "+25%",
+      "return_1yr": "+22%",
       "low_usd": "146",
-      "low_gbp": 108.5696,
+      "low_gbp": 108.5535,
       "high_usd": "215",
-      "high_gbp": 159.1302,
+      "high_gbp": 159.1065,
       "bar_pct": 59,
-      "market_cap_usd_b": 366.031,
-      "market_cap_gbp_b": 271.28,
+      "market_cap_usd_b": 365.957,
+      "market_cap_gbp_b": 271.185,
       "beta": 0.488,
       "pe_ratio": 17.96,
-      "avg_volume_m": 9.11,
-      "div_yield_pct": 376.0,
+      "avg_volume_m": 8.98,
+      "div_yield_pct": 382.0,
       "short_pct": 1.03,
       "analyst": "buy",
       "analyst_score": 1.72,
-      "vol_1d": 4924516,
-      "vol_1w": 39367216,
-      "vol_1m": 171490516,
+      "vol_1d": 7095400,
+      "vol_1w": 41538100,
+      "vol_1m": 173661400,
       "news": [
         {
-          "title": "SM Energy Q2 Earnings Beat Estimates on Strong Production Growth",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/sm-energy-q2-earnings-beat-160800909.html",
-          "published": 1786118880,
-          "sentiment": 0.791
+          "title": "5 Insightful Analyst Questions From Chevron\u2019s Q2 Earnings Call",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/5-insightful-analyst-questions-chevron-001322967.html",
+          "published": 1786320802,
+          "sentiment": 0.0
         },
         {
-          "title": "The U.S. Didn\u2019t Buy a Drop of Saudi Oil in July \u2014 the First Time in 41 Years",
+          "title": "Why Trump\u2019s Waiver of the Jones Act Is Unlikely To Lower Gas Prices",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/why-trump-waiver-jones-act-230000493.html",
+          "published": 1786316400,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Texas Pacific Land Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/texas-pacific-land-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786273432,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How Chevron became the AI darling of Big Oil",
+          "publisher": "Fortune",
+          "url": "https://finance.yahoo.com/technology/ai/articles/chevron-became-ai-darling-big-071100687.html",
+          "published": 1786173060,
+          "sentiment": 0.586
+        },
+        {
+          "title": "The Portfolio Blueprint for Building $50,000 a Month in Dividend Income",
           "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/the-u-s-didnt-buy-a-drop-of-saudi-oil-in-july-the-first-time-in-41-years/",
-          "published": 1786116637,
-          "sentiment": -0.273
-        },
-        {
-          "title": "20 Years on Wall Street Taught Me to Buy and Hold 5 High-Yield Energy Giants",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/20-years-on-wall-street-taught-me-to-buy-and-hold-5-high-yield-energy-giants/",
-          "published": 1786106536,
-          "sentiment": 0.273
-        },
-        {
-          "title": "An Early Bet on SpaceX Led to a 30% Gain for This College Endowment",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/early-bet-spacex-led-30-111500300.html",
-          "published": 1786101300,
-          "sentiment": 0.527
-        },
-        {
-          "title": "Texas Pacific Land Corp (TPL) (Q2 2026) Earnings Call Highlights: Record Revenue and Strategic ...",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/texas-pacific-land-corp-tpl-230415726.html",
-          "published": 1786057455,
+          "url": "https://247wallst.com/personal-finance/2026/08/07/the-portfolio-blueprint-for-building-50000-a-month-in-dividend-income/",
+          "published": 1786152926,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.264
+      "news_sentiment": 0.058
     },
     {
       "ticker": "CAT",
@@ -2117,67 +2117,67 @@ window.PRICES_DATA = {
       "category": "energy-industrial",
       "exchange": "NYSE",
       "price_usd": "842",
-      "price_gbp": 624.1807,
+      "price_gbp": 624.088,
       "change_1d": "-2.38%",
       "change_1w": "+3.36%",
       "change_1m": "-11.00%",
       "change_ytd": "+41.60%",
-      "return_1yr": "+99%",
+      "return_1yr": "+106%",
       "low_usd": "405",
-      "low_gbp": 300.5026,
+      "low_gbp": 300.458,
       "high_usd": "1073",
-      "high_gbp": 795.5841,
+      "high_gbp": 795.466,
       "bar_pct": 65,
       "market_cap_usd_b": 387.134,
-      "market_cap_gbp_b": 286.92,
+      "market_cap_gbp_b": 286.878,
       "beta": 1.605,
-      "pe_ratio": 36.27,
-      "avg_volume_m": 3.21,
-      "div_yield_pct": 76.0,
+      "pe_ratio": 36.24,
+      "avg_volume_m": 3.26,
+      "div_yield_pct": 77.0,
       "short_pct": 1.95,
       "analyst": "buy",
       "analyst_score": 2.14,
-      "vol_1d": 2423130,
-      "vol_1w": 18227230,
-      "vol_1m": 71615830,
+      "vol_1d": 2442900,
+      "vol_1w": 18247000,
+      "vol_1m": 71635600,
       "news": [
+        {
+          "title": "A $72 Billion Reason to Buy Caterpillar Stock Now",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3745321/a-72-billion-reason-to-buy-caterpillar-stock-now",
+          "published": 1786291202,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Earnings beats ease concerns over record U.S. stock rally - WSJ",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-beats-ease-concerns-over-070820398.html",
+          "published": 1786259300,
+          "sentiment": 0.361
+        },
+        {
+          "title": "Caterpillar tariffs send major signal on margins",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/cat-caterpillar-tariff-recovery-margins-signal",
+          "published": 1786219620,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Manitowoc Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/manitowoc-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786219431,
+          "sentiment": 0.0
+        },
         {
           "title": "Caterpillar (CAT) Could Be 13% Undervalued After Record Quarter And Raised Outlook",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/caterpillar-cat-could-13-undervalued-201232624.html",
           "published": 1786133552,
           "sentiment": 0.0
-        },
-        {
-          "title": "Michael Burry issues blunt warning as he bets against 2 AI favorites",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/orcl-oracle-nbis-nebius-michael-burry-shorts",
-          "published": 1786131420,
-          "sentiment": 0.103
-        },
-        {
-          "title": "Jim Cramer Shares Key Reason Why Caterpillar Inc. (NYSE:CAT)\u2019s Shares Are Higher Than Deere\u2019s",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-shares-key-reason-183005462.html",
-          "published": 1786127405,
-          "sentiment": 0.527
-        },
-        {
-          "title": "ASTE Cuts 2026 EBITDA Outlook as Asphalt Order Delays Test Growth",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/aste-cuts-2026-ebitda-outlook-164300951.html",
-          "published": 1786120980,
-          "sentiment": 0.103
-        },
-        {
-          "title": "Is ASTE Stock a Buy Now on Cheap Valuation Despite Execution Risk?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/aste-stock-buy-now-cheap-163300371.html",
-          "published": 1786120380,
-          "sentiment": 0.206
         }
       ],
-      "news_sentiment": 0.188
+      "news_sentiment": 0.072
     },
     {
       "ticker": "HON",
@@ -2185,30 +2185,37 @@ window.PRICES_DATA = {
       "category": "energy-industrial",
       "exchange": "NASDAQ",
       "price_usd": "246",
-      "price_gbp": 182.4761,
+      "price_gbp": 182.449,
       "change_1d": "+2.53%",
       "change_1w": "+1.30%",
       "change_1m": "+11.73%",
       "change_ytd": "+21.11%",
       "return_1yr": "+15%",
       "low_usd": "196",
-      "low_gbp": 145.1655,
+      "low_gbp": 145.144,
       "high_usd": "260",
-      "high_gbp": 192.9063,
+      "high_gbp": 192.8776,
       "bar_pct": 78,
       "market_cap_usd_b": 78.034,
-      "market_cap_gbp_b": 57.834,
+      "market_cap_gbp_b": 57.826,
       "beta": 0.918,
       "pe_ratio": 9.47,
-      "avg_volume_m": 4.69,
-      "div_yield_pct": 116.0,
+      "avg_volume_m": 4.62,
+      "div_yield_pct": 114.0,
       "short_pct": 3.02,
       "analyst": "buy",
       "analyst_score": 1.92,
-      "vol_1d": 2822224,
-      "vol_1w": 16941524,
-      "vol_1m": 77135724,
+      "vol_1d": 2837400,
+      "vol_1w": 16956700,
+      "vol_1m": 77150900,
       "news": [
+        {
+          "title": "SpaceX vs. Quantinuum: Which Recent IPO Stock Is a Better Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/spacex-vs-quantinuum-which-recent-ipo-stock-is-a-b/",
+          "published": 1786321200,
+          "sentiment": 0.44
+        },
         {
           "title": "Honeywell International (HON) Could Be 25% Undervalued As Aerospace Miss Sparks Valuation Debate",
           "publisher": "Simply Wall St.",
@@ -2236,16 +2243,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/honeywell-aerospace-earnings-stock-price-e9022b0c?siteid=yhoof2&yptr=yahoo",
           "published": 1786048320,
           "sentiment": -0.361
-        },
-        {
-          "title": "Honeywell (HON) Completes Aerospace Spin Off As Standalone Guidance Takes Shape",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/honeywell-hon-completes-aerospace-spin-191215452.html",
-          "published": 1786043535,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.017
+      "news_sentiment": 0.105
     },
     {
       "ticker": "GE",
@@ -2253,30 +2253,37 @@ window.PRICES_DATA = {
       "category": "energy-industrial",
       "exchange": "NYSE",
       "price_usd": "370",
-      "price_gbp": 274.2811,
+      "price_gbp": 274.2404,
       "change_1d": "-1.20%",
       "change_1w": "+2.78%",
       "change_1m": "+3.95%",
       "change_ytd": "+15.69%",
       "return_1yr": "+34%",
       "low_usd": "264",
-      "low_gbp": 195.5127,
+      "low_gbp": 195.4837,
       "high_usd": "389",
-      "high_gbp": 288.1849,
+      "high_gbp": 288.1421,
       "bar_pct": 85,
       "market_cap_usd_b": 383.981,
-      "market_cap_gbp_b": 284.584,
+      "market_cap_gbp_b": 284.541,
       "beta": 1.366,
-      "pe_ratio": 43.74,
-      "avg_volume_m": 4.65,
-      "div_yield_pct": 50.0,
+      "pe_ratio": 43.69,
+      "avg_volume_m": 4.58,
+      "div_yield_pct": 51.0,
       "short_pct": 1.44,
       "analyst": "strong_buy",
       "analyst_score": 1.45,
-      "vol_1d": 2499182,
-      "vol_1w": 16767882,
-      "vol_1m": 87692182,
+      "vol_1d": 2526900,
+      "vol_1w": 16795600,
+      "vol_1m": 87719900,
       "news": [
+        {
+          "title": "General Electric (GE) Sits 21% Above Fair Value Following Its Recent Pullback",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/general-electric-ge-sits-21-221200770.html",
+          "published": 1786140720,
+          "sentiment": 0.572
+        },
         {
           "title": "GE Vernova Holds an $176 Billion Backlog, Yet Wall Street Is Selling: What Investors Should Know.",
           "publisher": "Motley Fool",
@@ -2304,16 +2311,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/honeywell-aerospace-earnings-stock-price-e9022b0c?siteid=yhoof2&yptr=yahoo",
           "published": 1786048320,
           "sentiment": -0.361
-        },
-        {
-          "title": "This GE Vernova Supplier Spikes Past A Buy Point",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/this-ge-vernova-supplier-spikes-past-a-buy-point/?src=A00220&yptr=yahoo",
-          "published": 1785960452,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.021
+      "news_sentiment": 0.093
     },
     {
       "ticker": "RTX",
@@ -2321,30 +2321,37 @@ window.PRICES_DATA = {
       "category": "energy-industrial",
       "exchange": "NYSE",
       "price_usd": "223",
-      "price_gbp": 165.2965,
+      "price_gbp": 165.2719,
       "change_1d": "-0.36%",
       "change_1w": "+3.63%",
       "change_1m": "+14.43%",
       "change_ytd": "+20.00%",
-      "return_1yr": "+40%",
+      "return_1yr": "+44%",
       "low_usd": "151",
-      "low_gbp": 111.6231,
+      "low_gbp": 111.6065,
       "high_usd": "226",
-      "high_gbp": 167.2382,
+      "high_gbp": 167.2134,
       "bar_pct": 97,
       "market_cap_usd_b": 300.59,
-      "market_cap_gbp_b": 222.779,
+      "market_cap_gbp_b": 222.746,
       "beta": 0.294,
-      "pe_ratio": 39.34,
-      "avg_volume_m": 5.43,
+      "pe_ratio": 39.2,
+      "avg_volume_m": 5.42,
       "div_yield_pct": 131.0,
       "short_pct": 1.27,
       "analyst": "buy",
       "analyst_score": 1.87,
-      "vol_1d": 2100622,
-      "vol_1w": 22552022,
-      "vol_1m": 114818522,
+      "vol_1d": 4974200,
+      "vol_1w": 25425600,
+      "vol_1m": 117692100,
       "news": [
+        {
+          "title": "Pentagon asks defence firms to accelerate weapons production",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/economy/policy/articles/pentagon-asks-defence-firms-accelerate-010848666.html",
+          "published": 1786237728,
+          "sentiment": -0.361
+        },
         {
           "title": "Honeywell Aerospace Needs to Resolve Supply Chain Issues for Upside, Morgan Stanley Says",
           "publisher": "MT Newswires",
@@ -2372,16 +2379,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/woodwards-q3-beat-raised-outlook-163700496.html",
           "published": 1786034220,
           "sentiment": 0.382
-        },
-        {
-          "title": "Is Woodward Stock a Buy as Growth Clashes With a Premium Valuation?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/woodward-stock-buy-growth-clashes-162500228.html",
-          "published": 1786033500,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.229
+      "news_sentiment": 0.081
     },
     {
       "ticker": "BA",
@@ -2389,67 +2389,67 @@ window.PRICES_DATA = {
       "category": "energy-industrial",
       "exchange": "NYSE",
       "price_usd": "234",
-      "price_gbp": 173.738,
+      "price_gbp": 173.7122,
       "change_1d": "+0.96%",
       "change_1w": "+8.46%",
       "change_1m": "+4.21%",
       "change_ytd": "+2.92%",
-      "return_1yr": "+2%",
+      "return_1yr": "+4%",
       "low_usd": "177",
-      "low_gbp": 131.0113,
+      "low_gbp": 130.9919,
       "high_usd": "254",
-      "high_gbp": 188.509,
+      "high_gbp": 188.481,
       "bar_pct": 74,
-      "market_cap_usd_b": 185.143,
-      "market_cap_gbp_b": 137.217,
+      "market_cap_usd_b": 185.279,
+      "market_cap_gbp_b": 137.297,
       "beta": 1.221,
       "pe_ratio": 84.02,
-      "avg_volume_m": 6.52,
+      "avg_volume_m": 6.5,
       "div_yield_pct": null,
       "short_pct": 0.02,
       "analyst": "buy",
       "analyst_score": 1.61,
-      "vol_1d": 3855477,
-      "vol_1w": 36487377,
-      "vol_1m": 139065677,
+      "vol_1d": 4106000,
+      "vol_1w": 36737900,
+      "vol_1m": 139316200,
       "news": [
         {
-          "title": "FAA Orders Inspection Of Boeing Jets. Wall Street Eyes Break From Resistance Level.",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/boeing-737-max-faa-jet-plane-aerospace-defense/?src=A00220&yptr=yahoo",
-          "published": 1786129207,
+          "title": "Pentagon asks defence firms to accelerate weapons production",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/economy/policy/articles/pentagon-asks-defence-firms-accelerate-010848666.html",
+          "published": 1786237728,
+          "sentiment": -0.361
+        },
+        {
+          "title": "Loar Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/loar-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786208633,
           "sentiment": 0.0
         },
         {
-          "title": "Jim Cramer Gloats After Getting The Boeing Company (NYSE:BA)\u2019s Shares Right",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-gloats-getting-boeing-182822239.html",
-          "published": 1786127302,
-          "sentiment": 0.296
+          "title": "U.S. Senate passes stopgap spending bill without Trump priorities",
+          "publisher": "Investing.com",
+          "url": "https://www.yahoo.com/news/politics/articles/u-senate-passes-stopgap-spending-102512444.html",
+          "published": 1786184712,
+          "sentiment": 0.0
         },
         {
-          "title": "IPO Stock Of The Week: Defense Leader Loar Sets Up New Buy Point But Pulls Back To Key Level",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/stock-lists/ipo-analysis/loar-stock/?src=A00220&yptr=yahoo",
-          "published": 1786126303,
-          "sentiment": 0.064
+          "title": "Ducommun Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/ducommun-q2-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786161834,
+          "sentiment": 0.0
         },
         {
-          "title": "Boeing (BA) Wins 737 Max 7 Approval As Valuation Debate Heats Up",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/boeing-ba-wins-737-max-181107439.html",
-          "published": 1786126267,
-          "sentiment": 0.778
-        },
-        {
-          "title": "FAA Orders Inspections of Hundreds of Boeing 737 MAX Jets Over Possible Cracks",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/airlines/faa-orders-inspections-of-over-400-boeing-737-max-jets-for-possible-cracks-c41ec557?siteid=yhoof2&yptr=yahoo",
-          "published": 1786117020,
+          "title": "Trump's $400 Million Qatari Jet May Not End Up At His Presidential Library After All\u2014 Here's Why",
+          "publisher": "Benzinga",
+          "url": "https://www.yahoo.com/news/politics/articles/trumps-400-million-qatari-jet-003017363.html",
+          "published": 1786149017,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.228
+      "news_sentiment": -0.072
     },
     {
       "ticker": "AMD",
@@ -2457,67 +2457,67 @@ window.PRICES_DATA = {
       "category": "tech-semis",
       "exchange": "NASDAQ",
       "price_usd": "483",
-      "price_gbp": 358.2374,
+      "price_gbp": 358.1842,
       "change_1d": "-1.70%",
       "change_1w": "+1.51%",
       "change_1m": "-6.58%",
       "change_ytd": "+116.30%",
       "return_1yr": "+181%",
       "low_usd": "149",
-      "low_gbp": 110.5929,
+      "low_gbp": 110.5765,
       "high_usd": "585",
-      "high_gbp": 433.3668,
+      "high_gbp": 433.3024,
       "bar_pct": 77,
       "market_cap_usd_b": 789.073,
-      "market_cap_gbp_b": 584.814,
+      "market_cap_gbp_b": 584.727,
       "beta": 2.489,
-      "pe_ratio": 123.62,
-      "avg_volume_m": 31.08,
+      "pe_ratio": 123.31,
+      "avg_volume_m": 31.05,
       "div_yield_pct": null,
       "short_pct": 2.45,
       "analyst": "strong_buy",
       "analyst_score": 1.49,
-      "vol_1d": 25504058,
-      "vol_1w": 172681058,
-      "vol_1m": 670840758,
+      "vol_1d": 26560000,
+      "vol_1w": 173737000,
+      "vol_1m": 671896700,
       "news": [
         {
-          "title": "Nvidia, Microsoft Partner Tests Breakout. Three Clues Bode Well.",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/research/ibd-stock-analysis/dell-stock-rises-ai-collaboration-with-nvidia-microsoft-amd/?src=A00220&yptr=yahoo",
-          "published": 1786132866,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Jim Cramer Shares Reasons Behind Why NVIDIA Corporation (NASDAQ:NVDA)\u2019s Shares Are Finally Rising",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-shares-reasons-behind-182404118.html",
-          "published": 1786127044,
-          "sentiment": 0.527
-        },
-        {
-          "title": "The Toughest Questions AMD Faced On Its Latest Call",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610570/the-toughest-questions-amd-faced-on-its-latest-call/2026-08-07",
-          "published": 1786125529,
-          "sentiment": -0.077
-        },
-        {
-          "title": "How To Earn 11% On NVDA Stock And Set A 30% Safety Net",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610545/how-to-earn-11-on-nvda-stock-and-set-a-30-safety-net/2026-08-07",
-          "published": 1786124670,
-          "sentiment": 0.421
-        },
-        {
-          "title": "AI Boom: Top Stocks to Consider for Your Portfolio",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/ai-boom-top-stocks-consider-172600854.html",
-          "published": 1786123560,
+          "title": "Nvidia, Eli Lilly, and Disney Show It\u2019s Time to Back the Top Dogs",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/nvidia-stock-eli-lilly-disney-0133194f?siteid=yhoof2&yptr=yahoo",
+          "published": 1786338000,
           "sentiment": 0.202
+        },
+        {
+          "title": "US Export Control Meant to Cripple China\u2019s AI. But They Created Its Most Valuable Company",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/us-chip-export-controls-cxmt-china-ai/",
+          "published": 1786333380,
+          "sentiment": 0.796
+        },
+        {
+          "title": "5-star analyst resets AMD stock price target",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/amd-stock-price-target-jpmorgan-harlan-sur",
+          "published": 1786309380,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Core Scientific (CORZ) Shareholders Rejected a $9B Sale. Does the AMD Deal Vindicate Them?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/core-scientific-corz-shareholders-rejected-203304503.html",
+          "published": 1786307584,
+          "sentiment": -0.459
+        },
+        {
+          "title": "A $10,000 Investment in Taiwan Semiconductor Today Will Be Worth This Much by 2028",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/a-10000-investment-in-taiwan-semiconductor-today/",
+          "published": 1786305000,
+          "sentiment": 0.226
         }
       ],
-      "news_sentiment": 0.269
+      "news_sentiment": 0.153
     },
     {
       "ticker": "QCOM",
@@ -2525,30 +2525,44 @@ window.PRICES_DATA = {
       "category": "tech-semis",
       "exchange": "NASDAQ",
       "price_usd": "168",
-      "price_gbp": 124.4078,
+      "price_gbp": 124.3893,
       "change_1d": "+4.27%",
       "change_1w": "+13.72%",
       "change_1m": "-10.02%",
       "change_ytd": "-1.98%",
-      "return_1yr": "+3%",
+      "return_1yr": "+13%",
       "low_usd": "122",
-      "low_gbp": 90.4117,
+      "low_gbp": 90.3982,
       "high_usd": "260",
-      "high_gbp": 192.6371,
+      "high_gbp": 192.6085,
       "bar_pct": 33,
       "market_cap_usd_b": 176.253,
-      "market_cap_gbp_b": 130.628,
+      "market_cap_gbp_b": 130.609,
       "beta": 1.663,
-      "pe_ratio": 19.16,
-      "avg_volume_m": 20.65,
-      "div_yield_pct": 229.0,
+      "pe_ratio": 19.18,
+      "avg_volume_m": 19.73,
+      "div_yield_pct": 219.0,
       "short_pct": 3.83,
       "analyst": "hold",
-      "analyst_score": 2.57,
-      "vol_1d": 8664569,
-      "vol_1w": 55675269,
-      "vol_1m": 291241769,
+      "analyst_score": 2.51,
+      "vol_1d": 9717700,
+      "vol_1w": 56728400,
+      "vol_1m": 292294900,
       "news": [
+        {
+          "title": "Micron (MU) Secures Strategic Auto Deals and AI Momentum to Offset Cyclical Pressures",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/micron-mu-secures-strategic-auto-101757418.html",
+          "published": 1786270677,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Qualcomm (QCOM) Q3 2026 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/qualcomm-qcom-q3-2026-earnings-call-transcript/",
+          "published": 1786147128,
+          "sentiment": 0.0
+        },
         {
           "title": "The Toughest Questions AMD Faced On Its Latest Call",
           "publisher": "Trefis",
@@ -2569,23 +2583,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/610529/can-mu-stock-compound-its-way-higher/2026-08-07",
           "published": 1786106845,
           "sentiment": 0.0
-        },
-        {
-          "title": "Earn 14% On MRVL Stock Now, Or Own It 60% Cheaper Later",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610346/earn-14-on-mrvl-stock-now-or-own-it-60-cheaper-later/2026-08-06",
-          "published": 1786067315,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Qualcomm (QCOM) Stock Fair Value Moves Lower As Margin Pressure Offsets AI Ambitions",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/qualcomm-qcom-stock-fair-value-231733386.html",
-          "published": 1786058253,
-          "sentiment": 0.077
         }
       ],
-      "news_sentiment": 0.084
+      "news_sentiment": 0.069
     },
     {
       "ticker": "AVGO",
@@ -2593,67 +2593,67 @@ window.PRICES_DATA = {
       "category": "tech-semis",
       "exchange": "NASDAQ",
       "price_usd": "428",
-      "price_gbp": 317.0301,
+      "price_gbp": 316.983,
       "change_1d": "+1.36%",
       "change_1w": "+9.88%",
       "change_1m": "+10.05%",
       "change_ytd": "+23.51%",
-      "return_1yr": "+29%",
+      "return_1yr": "+41%",
       "low_usd": "282",
-      "low_gbp": 208.9051,
+      "low_gbp": 208.8741,
       "high_usd": "495",
-      "high_gbp": 366.8643,
+      "high_gbp": 366.8098,
       "bar_pct": 68,
       "market_cap_usd_b": 2035.103,
-      "market_cap_gbp_b": 1508.296,
+      "market_cap_gbp_b": 1508.072,
       "beta": 1.473,
-      "pe_ratio": 71.17,
-      "avg_volume_m": 26.36,
-      "div_yield_pct": 62.0,
+      "pe_ratio": 71.41,
+      "avg_volume_m": 25.93,
+      "div_yield_pct": 61.0,
       "short_pct": 1.47,
       "analyst": "strong_buy",
       "analyst_score": 1.31,
-      "vol_1d": 12344165,
-      "vol_1w": 90011365,
-      "vol_1m": 453133665,
+      "vol_1d": 14680000,
+      "vol_1w": 92347200,
+      "vol_1m": 455469500,
       "news": [
         {
-          "title": "Beyond NVIDIA and GPUs: The Next AI & Quantum Winners Leading 2026",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/beyond-nvidia-gpus-next-ai-190000472.html",
-          "published": 1786129200,
-          "sentiment": 0.477
+          "title": "A $10,000 Investment in Taiwan Semiconductor Today Will Be Worth This Much by 2028",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/a-10000-investment-in-taiwan-semiconductor-today/",
+          "published": 1786305000,
+          "sentiment": 0.226
         },
         {
-          "title": "The Toughest Questions AMD Faced On Its Latest Call",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610570/the-toughest-questions-amd-faced-on-its-latest-call/2026-08-07",
-          "published": 1786125529,
-          "sentiment": -0.077
+          "title": "Marvell (MRVL) vs. AVGO and NVDA: Can AI Interconnect Growth Deliver the Earnings Its Premium Valuation Demands?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-mrvl-vs-avgo-nvda-181931790.html",
+          "published": 1786299571,
+          "sentiment": 0.382
         },
         {
-          "title": "How To Earn 11% On NVDA Stock And Set A 30% Safety Net",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610545/how-to-earn-11-on-nvda-stock-and-set-a-30-safety-net/2026-08-07",
-          "published": 1786124670,
-          "sentiment": 0.421
+          "title": "Top Semiconductor Stock Outpacing Nvidia With a 36% Gain Over 6 Months",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/top-semiconductor-stock-outpacing-nvidia-with-a-36/",
+          "published": 1786281600,
+          "sentiment": 0.637
         },
         {
-          "title": "AMD Drops 6% Post Q2 Earnings: Is the Stock a Buy on the Dip?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amd-drops-6-post-q2-171500161.html",
-          "published": 1786122900,
+          "title": "How Many of the Largest Companies Do You Own -- and Should You Own More or Fewer?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/how-many-of-the-largest-companies-do-you-own-and-s/",
+          "published": 1786258200,
           "sentiment": 0.0
         },
         {
-          "title": "Forget Taiwan Semiconductor: 2 AI Semiconductor Equipment Stocks to Buy and Hold Instead",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/forget-tsmc-2-ai-semiconductor-equipment/",
-          "published": 1786121400,
-          "sentiment": -0.226
+          "title": "Broadcom (AVGO) Pairs AI Chip Boom With A Software Security Push",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-pairs-ai-chip-204234966.html",
+          "published": 1786221754,
+          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.119
+      "news_sentiment": 0.317
     },
     {
       "ticker": "TSM",
@@ -2661,67 +2661,67 @@ window.PRICES_DATA = {
       "category": "tech-semis",
       "exchange": "NYSE",
       "price_usd": "420",
-      "price_gbp": 311.3085,
+      "price_gbp": 311.2622,
       "change_1d": "-0.07%",
       "change_1w": "+3.91%",
       "change_1m": "-3.88%",
       "change_ytd": "+32.10%",
-      "return_1yr": "+68%",
+      "return_1yr": "+74%",
       "low_usd": "224",
-      "low_gbp": 165.793,
+      "low_gbp": 165.7684,
       "high_usd": "479",
-      "high_gbp": 355.0061,
+      "high_gbp": 354.9533,
       "bar_pct": 77,
       "market_cap_usd_b": 2178.527,
-      "market_cap_gbp_b": 1614.594,
+      "market_cap_gbp_b": 1614.354,
       "beta": 1.258,
-      "pe_ratio": 37.07,
-      "avg_volume_m": 14.37,
-      "div_yield_pct": 91.0,
+      "pe_ratio": 36.91,
+      "avg_volume_m": 14.13,
+      "div_yield_pct": 90.0,
       "short_pct": 0.69,
       "analyst": "strong_buy",
       "analyst_score": 1.42,
-      "vol_1d": 9134337,
-      "vol_1w": 59159637,
-      "vol_1m": 333156637,
+      "vol_1d": 9145500,
+      "vol_1w": 59170800,
+      "vol_1m": 333167800,
       "news": [
         {
-          "title": "Jim Cramer Called Linde plc (NASDAQ:LIN)\u2019s Share Price Movement \u201cStupid\u201d",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-called-linde-plc-183106534.html",
-          "published": 1786127466,
-          "sentiment": 0.296
+          "title": "Emerging-Market Stocks, Currencies Gain After Soft US Jobs Data",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/currencies/articles/emerging-market-stocks-currencies-gain-042549202.html",
+          "published": 1786335949,
+          "sentiment": 0.527
         },
         {
-          "title": "Forget Taiwan Semiconductor: 2 AI Semiconductor Equipment Stocks to Buy and Hold Instead",
+          "title": "Sony, TSMC to spend $6.3 billion to jointly make image sensors, Nikkei says",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/articles/sony-tsmc-spend-6-3-031506727.html",
+          "published": 1786331706,
+          "sentiment": 0.0
+        },
+        {
+          "title": "A $10,000 Investment in Taiwan Semiconductor Today Will Be Worth This Much by 2028",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/forget-tsmc-2-ai-semiconductor-equipment/",
-          "published": 1786121400,
-          "sentiment": -0.226
+          "url": "https://www.fool.com/investing/2026/08/09/a-10000-investment-in-taiwan-semiconductor-today/",
+          "published": 1786305000,
+          "sentiment": 0.226
         },
         {
-          "title": "BTQ and ITRI clear first milestone in quantum-security chip roadmap",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/crypto/innovation/btq-and-itri-clear-first-milestone-in-quantum-security-chip-roadmap",
-          "published": 1786120583,
-          "sentiment": 0.382
+          "title": "Cathie Wood's Ark Piled Into Nvidia and Taiwan Semiconductor After Meta's Earnings Miss. Here's What It Signals for Artificial Intelligence (AI) Stocks.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/cathie-woods-ark-piled-into-nvidia-and-taiwan-semi/",
+          "published": 1786260300,
+          "sentiment": 0.361
         },
         {
-          "title": "Could Taiwan Semiconductor Manufacturing (TSM) Be the Most Critical Bottleneck in the AI Chip Boom?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/could-taiwan-semiconductor-manufacturing-tsm-152156862.html",
-          "published": 1786116116,
-          "sentiment": -0.38
-        },
-        {
-          "title": "Semiconductor Sales Continue to Grow on AI Optimism: 4 Stocks to Grab",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/semiconductor-sales-continue-grow-ai-133600129.html",
-          "published": 1786109760,
-          "sentiment": 0.542
+          "title": "How Many of the Largest Companies Do You Own -- and Should You Own More or Fewer?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/how-many-of-the-largest-companies-do-you-own-and-s/",
+          "published": 1786258200,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.123
+      "news_sentiment": 0.223
     },
     {
       "ticker": "ASML",
@@ -2729,67 +2729,67 @@ window.PRICES_DATA = {
       "category": "tech-semis",
       "exchange": "NASDAQ",
       "price_usd": "1741",
-      "price_gbp": 1290.3173,
+      "price_gbp": 1290.1257,
       "change_1d": "+1.73%",
       "change_1w": "+6.87%",
       "change_1m": "-1.44%",
       "change_ytd": "+50.32%",
-      "return_1yr": "+127%",
-      "low_usd": "710",
-      "low_gbp": 526.5429,
+      "return_1yr": "+141%",
+      "low_usd": "716",
+      "low_gbp": 530.7257,
       "high_usd": "2000",
-      "high_gbp": 1482.2503,
+      "high_gbp": 1482.0302,
       "bar_pct": 80,
       "market_cap_usd_b": 668.714,
-      "market_cap_gbp_b": 495.611,
+      "market_cap_gbp_b": 495.537,
       "beta": 1.365,
-      "pe_ratio": 59.38,
-      "avg_volume_m": 2.01,
-      "div_yield_pct": 53.0,
+      "pe_ratio": 59.18,
+      "avg_volume_m": 1.95,
+      "div_yield_pct": 52.0,
       "short_pct": 0.33,
       "analyst": "strong_buy",
       "analyst_score": 1.39,
-      "vol_1d": 1053149,
-      "vol_1w": 6310749,
-      "vol_1m": 42825549,
+      "vol_1d": 1063800,
+      "vol_1w": 6321400,
+      "vol_1m": 42836200,
       "news": [
         {
-          "title": "Forget Taiwan Semiconductor: 2 AI Semiconductor Equipment Stocks to Buy and Hold Instead",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/forget-tsmc-2-ai-semiconductor-equipment/",
-          "published": 1786121400,
-          "sentiment": -0.226
+          "title": "Is ASML Holding (NasdaqGS:ASML) Trading At A Premium Or Fair Value?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/asml-holding-nasdaqgs-asml-trading-170934851.html",
+          "published": 1786295374,
+          "sentiment": 0.572
         },
         {
-          "title": "Chinese AI Chipmakers Poised to Gain From Beijing\u2019s Tech Push",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/technology/ai/articles/chinese-ai-chipmakers-poised-gain-033220643.html",
-          "published": 1786073540,
-          "sentiment": 0.66
+          "title": "ASML Holding (ENXTAM:ASML) Draws Fresh Attention After $400 Million Bet On Lithography Rival",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/asml-holding-enxtam-asml-draws-181008839.html",
+          "published": 1786212608,
+          "sentiment": 0.318
         },
         {
-          "title": "PancakeSwap Expands Tokenized Equity Offerings with 10 New 'bStocks' on BNB Chain",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/pancakeswap-expands-tokenized-equity-offerings-with-10-new-bstocks-on-bnb-chain-6348",
-          "published": 1786039920,
-          "sentiment": 0.103
-        },
-        {
-          "title": "Tesla's $16.8 Billion Chip Bet Could Create Several New Winners",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/articles/teslas-16-8-billion-chip-173239335.html",
-          "published": 1786037559,
-          "sentiment": 0.637
-        },
-        {
-          "title": "Nuclear Utility Constellation Leads Nasdaq 100 After Earnings",
+          "title": "Nucor, ASML Lead Five Stocks Near Buy Points Without This Big Risk",
           "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/nasdaq-constellation-energy-ai-artificial-intelligence-microsft-meta/?src=A00220&yptr=yahoo",
-          "published": 1786022852,
+          "url": "https://www.investors.com/news/nucor-asml-stocks-near-buy-points/?src=A00220&yptr=yahoo",
+          "published": 1786190421,
+          "sentiment": 0.206
+        },
+        {
+          "title": "Situational Awareness Reportedly Bet $400 Million on a $5 Billion Stealth Chip Startup\u2014 Weeks After the 'Most Catastrophic Hedge Fund Blowup' of the Year",
+          "publisher": "Benzinga Private Markets",
+          "url": "https://www.benzinga.com/markets/private-markets/26/08/61061545/situational-awareness-source-foundry-500-million-investment?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral",
+          "published": 1786180457,
+          "sentiment": -0.585
+        },
+        {
+          "title": "Situational Awareness invested $500 million in chip startup Source Foundry",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/technology/articles/situational-awareness-invested-500-million-052325217.html",
+          "published": 1786166605,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.235
+      "news_sentiment": 0.102
     },
     {
       "ticker": "ARM",
@@ -2797,67 +2797,67 @@ window.PRICES_DATA = {
       "category": "tech-semis",
       "exchange": "NASDAQ",
       "price_usd": "283",
-      "price_gbp": 209.4239,
+      "price_gbp": 209.3928,
       "change_1d": "-2.22%",
       "change_1w": "+17.89%",
       "change_1m": "-5.89%",
       "change_ytd": "+146.29%",
-      "return_1yr": "+73%",
+      "return_1yr": "+100%",
       "low_usd": "100",
-      "low_gbp": 74.1288,
+      "low_gbp": 74.1178,
       "high_usd": "453",
-      "high_gbp": 335.5141,
+      "high_gbp": 335.4643,
       "bar_pct": 52,
       "market_cap_usd_b": 301.784,
-      "market_cap_gbp_b": 223.664,
+      "market_cap_gbp_b": 223.631,
       "beta": 3.909,
-      "pe_ratio": 291.31,
-      "avg_volume_m": 9.88,
+      "pe_ratio": 285.42,
+      "avg_volume_m": 9.58,
       "div_yield_pct": null,
       "short_pct": 12.02,
       "analyst": "buy",
       "analyst_score": 1.9,
-      "vol_1d": 3819703,
-      "vol_1w": 28575503,
-      "vol_1m": 142045803,
+      "vol_1d": 3824400,
+      "vol_1w": 28580200,
+      "vol_1m": 142050500,
       "news": [
+        {
+          "title": "Arista Networks vs. Arm: Comparing Revenue Growth Trajectories for These Artificial Intelligence Companies",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/charts/2026/08/09/arista-networks-vs-arm-comparing-revenue-growth-trajectories-for-these-artificial-intelligence-companies/",
+          "published": 1786303741,
+          "sentiment": 0.691
+        },
+        {
+          "title": "Arm Stock Is Off 39% From Its High. Why This Could Be the Best Time to Buy.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3744923/arm-stock-is-off-39-from-its-high-why-this-could-be-the-best-time-to-buy",
+          "published": 1786284902,
+          "sentiment": 0.637
+        },
+        {
+          "title": "This Analyst On Wall Street Thinks The CPU Trade Is Overdone, Should You Sell ARM (ARM) Stock?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/analyst-wall-street-thinks-cpu-125533234.html",
+          "published": 1786193733,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Arm (ARM) Q1 2027 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/08/07/arm-arm-q1-2027-earnings-call-transcript/",
+          "published": 1786147127,
+          "sentiment": 0.0
+        },
         {
           "title": "SpaceX's influence ripples across markets: AlphaCheck",
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/markets/article/spacexs-influence-ripples-across-markets-alphacheck-144205821.html",
           "published": 1786113725,
           "sentiment": 0.0
-        },
-        {
-          "title": "Update: US Equity Indexes Mixed as Technology, Energy Help Blunt Broad-Based Declines",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-technology-195530717.html",
-          "published": 1786046130,
-          "sentiment": 0.586
-        },
-        {
-          "title": "Prediction: Arm Holdings Will Trade at This Price in 12 Months",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/06/prediction-arm-holdings-will-trade-at-this-price-in-12-months/",
-          "published": 1786039253,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Update: US Equity Indexes Mixed as Chipmakers Help Lift Technology While Crude Oil Jumps With Treasury Yields",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-mixed-chipmakers-175735868.html",
-          "published": 1786039055,
-          "sentiment": -0.052
-        },
-        {
-          "title": "US Equity Indexes Decline, Crude Oil Rises in Midday Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/articles/us-equity-indexes-decline-crude-164821357.html",
-          "published": 1786034901,
-          "sentiment": -0.572
         }
       ],
-      "news_sentiment": -0.008
+      "news_sentiment": 0.266
     },
     {
       "ticker": "INTC",
@@ -2865,98 +2865,119 @@ window.PRICES_DATA = {
       "category": "tech-semis",
       "exchange": "NASDAQ",
       "price_usd": "102",
-      "price_gbp": 75.3369,
+      "price_gbp": 75.3257,
       "change_1d": "+1.45%",
       "change_1w": "+12.69%",
       "change_1m": "-7.79%",
       "change_ytd": "+158.13%",
-      "return_1yr": "+356%",
+      "return_1yr": "+392%",
       "low_usd": "20",
-      "low_gbp": 14.5338,
+      "low_gbp": 15.1467,
       "high_usd": "142",
-      "high_gbp": 105.5013,
+      "high_gbp": 105.4856,
       "bar_pct": 67,
       "market_cap_usd_b": 512.723,
-      "market_cap_gbp_b": 380.0,
+      "market_cap_gbp_b": 379.943,
       "beta": 2.241,
       "pe_ratio": null,
-      "avg_volume_m": 127.35,
+      "avg_volume_m": 123.39,
       "div_yield_pct": null,
       "short_pct": 2.4,
       "analyst": "hold",
       "analyst_score": 2.56,
-      "vol_1d": 74293938,
-      "vol_1w": 458759138,
-      "vol_1m": 2566604138,
+      "vol_1d": 76609900,
+      "vol_1w": 461075100,
+      "vol_1m": 2568920100,
       "news": [
         {
-          "title": "SpaceX's influence ripples across markets: AlphaCheck",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/spacexs-influence-ripples-across-markets-alphacheck-144205821.html",
-          "published": 1786113725,
+          "title": "Why Micron is Decisively Better Positioned Than Intel Now",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/10/why-micron-is-decisively-better-positioned-than-intel-now/",
+          "published": 1786336333,
+          "sentiment": 0.44
+        },
+        {
+          "title": "1 Nasdaq 100 Stock for Long-Term Investors and 2 We Question",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/1-nasdaq-100-stock-long-221322614.html",
+          "published": 1786313602,
           "sentiment": 0.0
         },
         {
-          "title": "SoftBank Stock Drops 6.1% as AI Funding Pressure Intensifies",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/softbank-stock-drops-6-1-195054327.html",
-          "published": 1786132254,
-          "sentiment": -0.296
+          "title": "Intel Foundry Lands a Major New Client Worth Watching",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/intel-foundry-lands-a-major-new-client-worth-watch/",
+          "published": 1786257000,
+          "sentiment": 0.288
         },
         {
-          "title": "The Toughest Questions AMD Faced On Its Latest Call",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610570/the-toughest-questions-amd-faced-on-its-latest-call/2026-08-07",
-          "published": 1786125529,
-          "sentiment": -0.077
+          "title": "Ron Paul: Trump\u2019s New Policy Is \u2018As Dangerous to Liberty and Prosperity\u2019 as Mamdani\u2019s",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/08/ron-paul-trumps-new-policy-is-as-dangerous-to-liberty-and-prosperity-as-mamdanis-2/",
+          "published": 1786197608,
+          "sentiment": 0.077
         },
         {
-          "title": "How To Earn 11% On NVDA Stock And Set A 30% Safety Net",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/610545/how-to-earn-11-on-nvda-stock-and-set-a-30-safety-net/2026-08-07",
-          "published": 1786124670,
-          "sentiment": 0.421
-        },
-        {
-          "title": "AMD Drops 6% Post Q2 Earnings: Is the Stock a Buy on the Dip?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amd-drops-6-post-q2-171500161.html",
-          "published": 1786122900,
+          "title": "This Analyst On Wall Street Thinks The CPU Trade Is Overdone, Should You Sell ARM (ARM) Stock?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/analyst-wall-street-thinks-cpu-125533234.html",
+          "published": 1786193733,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.01
+      "news_sentiment": 0.161
     },
     {
       "ticker": "2222.SR",
       "company_name": "Saudi Aramco",
       "category": "global-growth",
       "exchange": "TADAWUL",
-      "price_usd": "7.06",
-      "price_gbp": 5.2311,
-      "change_1d": "-0.75%",
+      "price_usd": "7.08",
+      "price_gbp": 5.2501,
+      "change_1d": "+0.15%",
       "change_1w": "+0.08%",
-      "change_1m": "+1.30%",
-      "change_ytd": "+13.79%",
-      "return_1yr": "+12%",
+      "change_1m": "-0.45%",
+      "change_ytd": "+14.22%",
+      "return_1yr": "+10%",
       "low_usd": "6.14",
-      "low_gbp": 4.5481,
+      "low_gbp": 4.5474,
       "high_usd": "7.45",
-      "high_gbp": 5.5193,
-      "bar_pct": 70,
-      "market_cap_usd_b": 1707.43,
-      "market_cap_gbp_b": 1265.445,
+      "high_gbp": 5.5185,
+      "bar_pct": 72,
+      "market_cap_usd_b": 1713.873,
+      "market_cap_gbp_b": 1270.031,
       "beta": 0.009,
-      "pe_ratio": 17.21,
-      "avg_volume_m": 11.27,
+      "pe_ratio": 17.27,
+      "avg_volume_m": 11.34,
       "div_yield_pct": 512.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.11,
-      "vol_1d": 9327140,
-      "vol_1w": 60875668,
-      "vol_1m": 204275945,
+      "vol_1d": 3003565,
+      "vol_1w": 57104606,
+      "vol_1m": 179099089,
       "news": [
+        {
+          "title": "Oil Prices Rise as Iran Hardens Hormuz Demands",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/oil-prices-rise-iran-hardens-053000723.html",
+          "published": 1786339800,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How Many of the Largest Companies Do You Own -- and Should You Own More or Fewer?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/how-many-of-the-largest-companies-do-you-own-and-s/",
+          "published": 1786258200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Trump says U.S. is \u2019low-keying it\u2019 with Iran as its economy struggles",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/energy/articles/fire-saudi-aramco-jazan-refinery-043350430.html",
+          "published": 1786250030,
+          "sentiment": -0.361
+        },
         {
           "title": "Aramco Flags 'Historical Supply Constraints'",
           "publisher": "Rigzone.com",
@@ -2970,30 +2991,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/saudis-cut-main-oil-price-074105419.html",
           "published": 1786002065,
           "sentiment": -0.273
-        },
-        {
-          "title": "Aramco's Record Profits Hide a Growing Cash Flow Crisis",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/aramcos-record-profits-hide-growing-170000879.html",
-          "published": 1785949200,
-          "sentiment": -0.296
-        },
-        {
-          "title": "Saudi Aramco backs India\u2019s Mitti Labs to make Asia\u2019s rice farming more water-resilient",
-          "publisher": "TechCrunch",
-          "url": "https://finance.yahoo.com/technology/ai/articles/saudi-aramco-backs-india-mitti-110000158.html",
-          "published": 1785927600,
-          "sentiment": -0.052
-        },
-        {
-          "title": "Strong cash flow + blue-chip customers = long-term growth",
-          "publisher": "InvestorsHub",
-          "url": "https://investorshub.advfn.com/market-news/article/33439/strong-cash-flow-blue-chip-customers-long-term-growth-2",
-          "published": 1785915180,
-          "sentiment": 0.71
         }
       ],
-      "news_sentiment": 0.018
+      "news_sentiment": -0.127
     },
     {
       "ticker": "BABA",
@@ -3001,30 +3001,44 @@ window.PRICES_DATA = {
       "category": "global-growth",
       "exchange": "NYSE",
       "price_usd": "128",
-      "price_gbp": 95.1698,
+      "price_gbp": 95.1557,
       "change_1d": "+1.28%",
       "change_1w": "+5.04%",
       "change_1m": "+17.83%",
       "change_ytd": "-16.79%",
-      "return_1yr": "+6%",
+      "return_1yr": "+8%",
       "low_usd": "92",
-      "low_gbp": 68.1775,
+      "low_gbp": 68.1673,
       "high_usd": "193",
-      "high_gbp": 142.7954,
+      "high_gbp": 142.7742,
       "bar_pct": 36,
       "market_cap_usd_b": 307.783,
-      "market_cap_gbp_b": 228.11,
+      "market_cap_gbp_b": 228.076,
       "beta": 0.51,
       "pe_ratio": 19.69,
-      "avg_volume_m": 12.88,
-      "div_yield_pct": 83.0,
+      "avg_volume_m": 12.6,
+      "div_yield_pct": 82.0,
       "short_pct": 1.79,
       "analyst": "strong_buy",
       "analyst_score": 1.32,
-      "vol_1d": 5616393,
-      "vol_1w": 45429893,
-      "vol_1m": 269868793,
+      "vol_1d": 6046000,
+      "vol_1w": 45859500,
+      "vol_1m": 270298400,
       "news": [
+        {
+          "title": "Apple says Mac users in China can connect to Alibaba's Qwen AI service",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/ai/articles/apple-says-mac-users-china-123458419.html",
+          "published": 1786192498,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Alibaba Pioneers Revenue Share on Open-Weight Models \u2014 the First Chinese Lab to Tax Deployment",
+          "publisher": "Forkast News",
+          "url": "https://finance.yahoo.com/technology/ai/articles/alibaba-pioneers-revenue-share-open-113214289.html",
+          "published": 1786188734,
+          "sentiment": 0.296
+        },
         {
           "title": "How America\u2019s Dizzying AI Strategy Plays Into China\u2019s Hands",
           "publisher": "Barrons.com",
@@ -3045,23 +3059,9 @@ window.PRICES_DATA = {
           "url": "https://www.benzinga.com/markets/tech/26/08/61032819/bytedance-is-reportedly-training-a-massive-new-ai-model-to-rival-anthropics-mythos?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral",
           "published": 1786099691,
           "sentiment": 0.0
-        },
-        {
-          "title": "Market Chatter: Alibaba Plans Revenue Sharing With Big Customers of New Qwen AI Model",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/technology/ai/articles/market-chatter-alibaba-plans-revenue-091018424.html",
-          "published": 1786093818,
-          "sentiment": 0.421
-        },
-        {
-          "title": "Alibaba may start charging for use of latest AI model",
-          "publisher": "Reuters Videos",
-          "url": "https://finance.yahoo.com/video/alibaba-may-start-charging-latest-080442954.html",
-          "published": 1786089882,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.218
+      "news_sentiment": 0.193
     },
     {
       "ticker": "SAP",
@@ -3069,29 +3069,29 @@ window.PRICES_DATA = {
       "category": "global-growth",
       "exchange": "NYSE",
       "price_usd": "206",
-      "price_gbp": 152.7934,
+      "price_gbp": 152.7707,
       "change_1d": "+3.33%",
       "change_1w": "+12.28%",
       "change_1m": "+30.96%",
       "change_ytd": "-11.47%",
-      "return_1yr": "-35%",
+      "return_1yr": "-28%",
       "low_usd": "145",
-      "low_gbp": 107.4431,
-      "high_usd": "293",
-      "high_gbp": 217.1688,
-      "bar_pct": 41,
+      "low_gbp": 107.4271,
+      "high_usd": "290",
+      "high_gbp": 215.2692,
+      "bar_pct": 42,
       "market_cap_usd_b": 237.951,
-      "market_cap_gbp_b": 176.355,
+      "market_cap_gbp_b": 176.329,
       "beta": 0.757,
-      "pe_ratio": 26.77,
-      "avg_volume_m": 3.2,
-      "div_yield_pct": 147.0,
+      "pe_ratio": 26.74,
+      "avg_volume_m": 3.17,
+      "div_yield_pct": 142.0,
       "short_pct": 0.83,
       "analyst": "buy",
       "analyst_score": 1.56,
-      "vol_1d": 2952490,
-      "vol_1w": 14334390,
-      "vol_1m": 80061190,
+      "vol_1d": 2952800,
+      "vol_1w": 14334700,
+      "vol_1m": 80061500,
       "news": [
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Rise in Friday Trading",
@@ -3137,30 +3137,37 @@ window.PRICES_DATA = {
       "category": "global-growth",
       "exchange": "NYSE",
       "price_usd": "23",
-      "price_gbp": 17.3871,
+      "price_gbp": 17.3846,
       "change_1d": "+1.38%",
       "change_1w": "+0.86%",
       "change_1m": "+10.92%",
       "change_ytd": "-9.35%",
-      "return_1yr": "-17%",
+      "return_1yr": "-14%",
       "low_usd": "19",
-      "low_gbp": 14.3188,
+      "low_gbp": 14.3167,
       "high_usd": "30",
-      "high_gbp": 22.4862,
+      "high_gbp": 22.4828,
       "bar_pct": 38,
       "market_cap_usd_b": 137.768,
-      "market_cap_gbp_b": 102.105,
+      "market_cap_gbp_b": 102.09,
       "beta": 0.759,
       "pe_ratio": 19.88,
-      "avg_volume_m": 6.42,
-      "div_yield_pct": 69.0,
+      "avg_volume_m": 6.24,
+      "div_yield_pct": 68.0,
       "short_pct": 0.25,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 4410666,
-      "vol_1w": 26946366,
-      "vol_1m": 123506166,
+      "vol_1d": 4412600,
+      "vol_1w": 26948300,
+      "vol_1m": 123508100,
       "news": [
+        {
+          "title": "Sony, TSMC to spend $6.3 billion to jointly make image sensors, Nikkei says",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/articles/sony-tsmc-spend-6-3-031506727.html",
+          "published": 1786331706,
+          "sentiment": 0.0
+        },
         {
           "title": "CRUS Q1 Earnings Beat on Smartphone Demand, Revenues Match Estimates",
           "publisher": "Zacks",
@@ -3188,16 +3195,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/sony-stock-buy-profit-growth-140500020.html",
           "published": 1785938700,
           "sentiment": 0.527
-        },
-        {
-          "title": "Sony Stock Gains 10.9% in a Week: Can the Rally Extend Further?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/sony-stock-gains-10-9-140200671.html",
-          "published": 1785938520,
-          "sentiment": 0.477
         }
       ],
-      "news_sentiment": 0.369
+      "news_sentiment": 0.273
     },
     {
       "ticker": "TM",
@@ -3205,30 +3205,51 @@ window.PRICES_DATA = {
       "category": "global-growth",
       "exchange": "NYSE",
       "price_usd": "190",
-      "price_gbp": 140.8833,
+      "price_gbp": 140.8624,
       "change_1d": "+1.11%",
       "change_1w": "+0.58%",
       "change_1m": "+7.30%",
       "change_ytd": "-12.75%",
-      "return_1yr": "-1%",
+      "return_1yr": "+1%",
       "low_usd": "166",
-      "low_gbp": 123.1034,
+      "low_gbp": 123.0851,
       "high_usd": "249",
-      "high_gbp": 184.4697,
+      "high_gbp": 184.4424,
       "bar_pct": 29,
       "market_cap_usd_b": 225.087,
-      "market_cap_gbp_b": 166.821,
+      "market_cap_gbp_b": 166.796,
       "beta": 0.335,
-      "pe_ratio": 8.54,
-      "avg_volume_m": 0.52,
-      "div_yield_pct": 334.0,
+      "pe_ratio": 8.52,
+      "avg_volume_m": 0.51,
+      "div_yield_pct": 330.0,
       "short_pct": 0.07,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 311497,
-      "vol_1w": 2228597,
-      "vol_1m": 10352897,
+      "vol_1d": 315500,
+      "vol_1w": 2232600,
+      "vol_1m": 10356900,
       "news": [
+        {
+          "title": "Toyota Motor (TSE:7203) Could Be 39% Overvalued After Its Texas Tacoma Shift",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/toyota-motor-tse-7203-could-001531842.html",
+          "published": 1786320931,
+          "sentiment": 0.0
+        },
+        {
+          "title": "\u2018Tariffs have been incredible\u2019: Trump says America\u2019s \u2018rocking\u2019 as Toyota, giants pour billions into US. Was he right?",
+          "publisher": "Moneywise",
+          "url": "https://finance.yahoo.com/economy/policy/articles/tariffs-incredible-trump-says-america-101500758.html",
+          "published": 1786184100,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Ground control to private equity: has AI landed on the factory floor?",
+          "publisher": "Pitchbook",
+          "url": "https://pitchbook.com/news/articles/ground-control-to-private-equity-has-ai-landed-on-the-factory-floor",
+          "published": 1786138745,
+          "sentiment": 0.0
+        },
         {
           "title": "The Week in Numbers: BP's huge profit, Toyota moves fast",
           "publisher": "Reuters Videos",
@@ -3242,30 +3263,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-apple-095300068.html",
           "published": 1786096380,
           "sentiment": 0.34
-        },
-        {
-          "title": "Top Research Reports for Apple, Shell & Toyota Motor",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-apple-shell-201400129.html",
-          "published": 1786047240,
-          "sentiment": 0.202
-        },
-        {
-          "title": "Joby Aviation Climbs 9% on Raised Guidance as Archer Aviation, EHang Sit Out the eVTOL Rally",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/06/joby-aviation-climbs-9-on-raised-guidance-as-archer-aviation-ehang-sit-out-the-evtol-rally/",
-          "published": 1786036558,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Toyota Q1 Earnings Miss Estimates on High Labor Cost & R&D Expenses",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/toyota-q1-earnings-miss-estimates-144700185.html",
-          "published": 1786027620,
-          "sentiment": -0.153
         }
       ],
-      "news_sentiment": 0.205
+      "news_sentiment": 0.195
     },
     {
       "ticker": "NVO",
@@ -3273,67 +3273,67 @@ window.PRICES_DATA = {
       "category": "global-growth",
       "exchange": "NYSE",
       "price_usd": "47",
-      "price_gbp": 35.0263,
+      "price_gbp": 35.0211,
       "change_1d": "+2.96%",
       "change_1w": "+0.38%",
       "change_1m": "-3.33%",
       "change_ytd": "-6.48%",
-      "return_1yr": "-8%",
+      "return_1yr": "-5%",
       "low_usd": "35",
-      "low_gbp": 26.0288,
+      "low_gbp": 26.025,
       "high_usd": "64",
-      "high_gbp": 47.5515,
+      "high_gbp": 47.5445,
       "bar_pct": 42,
       "market_cap_usd_b": 208.925,
-      "market_cap_gbp_b": 154.843,
+      "market_cap_gbp_b": 154.82,
       "beta": 0.349,
-      "pe_ratio": 11.7,
-      "avg_volume_m": 11.87,
-      "div_yield_pct": 392.0,
+      "pe_ratio": 11.67,
+      "avg_volume_m": 12.63,
+      "div_yield_pct": 380.0,
       "short_pct": 0.98,
       "analyst": "buy",
       "analyst_score": 2.43,
-      "vol_1d": 10486661,
-      "vol_1w": 105221861,
-      "vol_1m": 272612061,
+      "vol_1d": 12069600,
+      "vol_1w": 106804800,
+      "vol_1m": 274195000,
       "news": [
         {
-          "title": "Novo Nordisk Stock Rises After GLP-1 Antitrust Win",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/novo-nordisk-stock-rises-glp-195231835.html",
-          "published": 1786132351,
-          "sentiment": 0.586
+          "title": "Nvidia, Eli Lilly, and Disney Show It\u2019s Time to Back the Top Dogs",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/nvidia-stock-eli-lilly-disney-0133194f?siteid=yhoof2&yptr=yahoo",
+          "published": 1786338000,
+          "sentiment": 0.202
         },
         {
-          "title": "Pfizer's Next Weight-Loss Weapon: How Berobenatide Stacks Up Against Novo Nordisk's Wegovy and Eli Lilly's Zepbound",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/07/pfizers-next-weight-loss-weapon-how-berobenatide-s/",
-          "published": 1786132080,
-          "sentiment": -0.296
+          "title": "Ozempic For $50 a Month? Amazon Pharmacy Rolls Out Cheap Weight-Loss Drugs for Medicare Patients",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/healthcare/articles/ozempic-50-month-amazon-pharmacy-013108263.html",
+          "published": 1786325468,
+          "sentiment": 0.178
         },
         {
-          "title": "PRTA's Q2 Loss Narrower Than Expected, Pipeline Progress in Focus",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/healthcare/articles/prtas-q2-loss-narrower-expected-174100209.html",
-          "published": 1786124460,
-          "sentiment": 0.128
+          "title": "Novo Nordisk (CPSE:NOVO B) Wins Dutch Injunction Over Compounded Semaglutide Spray",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/healthcare/articles/novo-nordisk-cpse-novo-b-231020183.html",
+          "published": 1786230620,
+          "sentiment": 0.572
         },
         {
-          "title": "Stock Market Rally Powers Ahead; SpaceX, Palantir, Sandisk Are Key Earnings Movers: Weekly Review",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/stock-market-rally-powers-ahead-spacex-palantir-sandisk-are-key-earnings-movers-weekly-review/?src=A00220&yptr=yahoo",
-          "published": 1786120507,
+          "title": "Novo Nordisk A/S Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/novo-nordisk-as-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786226630,
           "sentiment": 0.0
         },
         {
-          "title": "Lilly and Novo Win a Key GLP-1 Antitrust Fight",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/healthcare/articles/lilly-novo-win-key-glp-163431906.html",
-          "published": 1786120471,
-          "sentiment": 0.296
+          "title": "Eli Lilly's Timing of the FDA Filing of Its Next Weight-Loss Drug Is Now Official -- and Novo Nordisk Has a Problem",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/07/eli-lillys-timing-of-the-fda-filing-of-its-next-we/",
+          "published": 1786143000,
+          "sentiment": -0.402
         }
       ],
-      "news_sentiment": 0.143
+      "news_sentiment": 0.11
     },
     {
       "ticker": "HSBC",
@@ -3341,29 +3341,29 @@ window.PRICES_DATA = {
       "category": "global-growth",
       "exchange": "NYSE",
       "price_usd": "104",
-      "price_gbp": 76.8785,
+      "price_gbp": 76.867,
       "change_1d": "+0.81%",
       "change_1w": "-2.53%",
       "change_1m": "+7.95%",
       "change_ytd": "+33.30%",
-      "return_1yr": "+69%",
-      "low_usd": "63",
-      "low_gbp": 46.6177,
+      "return_1yr": "+62%",
+      "low_usd": "64",
+      "low_gbp": 47.0628,
       "high_usd": "108",
-      "high_gbp": 79.9838,
+      "high_gbp": 79.972,
       "bar_pct": 91,
-      "market_cap_usd_b": 355.757,
-      "market_cap_gbp_b": 263.666,
+      "market_cap_usd_b": 355.747,
+      "market_cap_gbp_b": 263.619,
       "beta": 0.577,
       "pe_ratio": 14.82,
-      "avg_volume_m": 1.51,
-      "div_yield_pct": 366.0,
+      "avg_volume_m": 1.53,
+      "div_yield_pct": 362.0,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.67,
-      "vol_1d": 1447292,
-      "vol_1w": 8855592,
-      "vol_1m": 32850992,
+      "vol_1d": 1513500,
+      "vol_1w": 8921800,
+      "vol_1m": 32917200,
       "news": [
         {
           "title": "HSBC Stock Rises as $10.1 Billion Profit Restarts Buybacks",

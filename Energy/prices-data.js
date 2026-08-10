@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-08-07 22:14",
-  "fx_gbp_usd": 1.3493,
+  "updated": "2026-08-10 07:37",
+  "fx_gbp_usd": 1.3495,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,56 +19,56 @@ window.PRICES_DATA = {
       "high_gbp": "131",
       "high_usd": 176.41,
       "bar_pct": 67,
-      "market_cap_gbp_b": 470.137,
-      "market_cap_usd_b": 634.343,
+      "market_cap_gbp_b": null,
+      "market_cap_usd_b": null,
       "beta": 0.173,
-      "pe_ratio": 25.72,
-      "avg_volume_m": 16.61,
-      "div_yield_pct": 266.0,
+      "pe_ratio": 25.76,
+      "avg_volume_m": 16.41,
+      "div_yield_pct": 269.0,
       "short_pct": 1.15,
       "analyst": "buy",
       "analyst_score": 2.4,
-      "vol_1d": 9931964,
-      "vol_1w": 62919264,
-      "vol_1m": 326005864,
+      "vol_1d": 18450600,
+      "vol_1w": 71437900,
+      "vol_1m": 334524500,
       "news": [
+        {
+          "title": "Exxon Handed Shareholders $9.4 Billion in One Quarter. Here's What It Earned to Cover It.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/09/exxon-handed-shareholders-94-billion-in-one-quarte/",
+          "published": 1786324020,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Why Trump\u2019s Waiver of the Jones Act Is Unlikely To Lower Gas Prices",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/why-trump-waiver-jones-act-230000493.html",
+          "published": 1786316400,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Warren Buffett sends a blunt message to stock market investors",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/warren-buffett-sends-a-blunt-message-to-stock-market-investors-sp-500-dot-com-bubble-gambling",
+          "published": 1786153020,
+          "sentiment": 0.0
+        },
+        {
+          "title": "ELAM: Let\u2019s make deal \u2013 not",
+          "publisher": "Odessa American, Texas",
+          "url": "https://www.oaoa.com/?p=368558",
+          "published": 1786147260,
+          "sentiment": 0.0
+        },
         {
           "title": "SM Energy Q2 Earnings Beat Estimates on Strong Production Growth",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/energy/articles/sm-energy-q2-earnings-beat-160800909.html",
           "published": 1786118880,
           "sentiment": 0.791
-        },
-        {
-          "title": "XOM Q2 Earnings Call Highlights Refining Strength and Guyana Cash Flow",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/xom-q2-earnings-call-highlights-151000279.html",
-          "published": 1786115400,
-          "sentiment": 0.494
-        },
-        {
-          "title": "The New Wild West: Texas Experiments With Raw Capitalism",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/texas-boom-yall-street-water-crisis-18860b3e?siteid=yhoof2&yptr=yahoo",
-          "published": 1786109400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "20 Years on Wall Street Taught Me to Buy and Hold 5 High-Yield Energy Giants",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/20-years-on-wall-street-taught-me-to-buy-and-hold-5-high-yield-energy-giants/",
-          "published": 1786106536,
-          "sentiment": 0.273
-        },
-        {
-          "title": "What Imperial Oil (TSX:IMO)'s Q2 Earnings Beat and Board Shift Means For Shareholders",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/imperial-oil-tsx-imo-q2-121454502.html",
-          "published": 1786104894,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.312
+      "news_sentiment": 0.099
     },
     {
       "ticker": "CVX",
@@ -81,62 +81,62 @@ window.PRICES_DATA = {
       "change_1w": "-5.22%",
       "change_1m": "+6.02%",
       "change_ytd": "+21.94%",
-      "return_1yr": "+25%",
+      "return_1yr": "+22%",
       "low_gbp": "109",
       "low_usd": 146.49,
       "high_gbp": "159",
       "high_usd": 214.71,
       "bar_pct": 59,
-      "market_cap_gbp_b": 271.28,
-      "market_cap_usd_b": 366.031,
+      "market_cap_gbp_b": 271.185,
+      "market_cap_usd_b": 365.957,
       "beta": 0.488,
       "pe_ratio": 17.96,
-      "avg_volume_m": 9.11,
-      "div_yield_pct": 376.0,
+      "avg_volume_m": 8.98,
+      "div_yield_pct": 382.0,
       "short_pct": 1.03,
       "analyst": "buy",
       "analyst_score": 1.72,
-      "vol_1d": 4924516,
-      "vol_1w": 39367216,
-      "vol_1m": 171490516,
+      "vol_1d": 7095400,
+      "vol_1w": 41538100,
+      "vol_1m": 173661400,
       "news": [
         {
-          "title": "SM Energy Q2 Earnings Beat Estimates on Strong Production Growth",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/sm-energy-q2-earnings-beat-160800909.html",
-          "published": 1786118880,
-          "sentiment": 0.791
+          "title": "5 Insightful Analyst Questions From Chevron\u2019s Q2 Earnings Call",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/5-insightful-analyst-questions-chevron-001322967.html",
+          "published": 1786320802,
+          "sentiment": 0.0
         },
         {
-          "title": "The U.S. Didn\u2019t Buy a Drop of Saudi Oil in July \u2014 the First Time in 41 Years",
+          "title": "Why Trump\u2019s Waiver of the Jones Act Is Unlikely To Lower Gas Prices",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/why-trump-waiver-jones-act-230000493.html",
+          "published": 1786316400,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Texas Pacific Land Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/texas-pacific-land-q2-earnings-call-highlights-2026-08-09/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786273432,
+          "sentiment": 0.0
+        },
+        {
+          "title": "How Chevron became the AI darling of Big Oil",
+          "publisher": "Fortune",
+          "url": "https://finance.yahoo.com/technology/ai/articles/chevron-became-ai-darling-big-071100687.html",
+          "published": 1786173060,
+          "sentiment": 0.586
+        },
+        {
+          "title": "The Portfolio Blueprint for Building $50,000 a Month in Dividend Income",
           "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/the-u-s-didnt-buy-a-drop-of-saudi-oil-in-july-the-first-time-in-41-years/",
-          "published": 1786116637,
-          "sentiment": -0.273
-        },
-        {
-          "title": "20 Years on Wall Street Taught Me to Buy and Hold 5 High-Yield Energy Giants",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/20-years-on-wall-street-taught-me-to-buy-and-hold-5-high-yield-energy-giants/",
-          "published": 1786106536,
-          "sentiment": 0.273
-        },
-        {
-          "title": "An Early Bet on SpaceX Led to a 30% Gain for This College Endowment",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/early-bet-spacex-led-30-111500300.html",
-          "published": 1786101300,
-          "sentiment": 0.527
-        },
-        {
-          "title": "Texas Pacific Land Corp (TPL) (Q2 2026) Earnings Call Highlights: Record Revenue and Strategic ...",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/texas-pacific-land-corp-tpl-230415726.html",
-          "published": 1786057455,
+          "url": "https://247wallst.com/personal-finance/2026/08/07/the-portfolio-blueprint-for-building-50000-a-month-in-dividend-income/",
+          "published": 1786152926,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.264
+      "news_sentiment": 0.058
     },
     {
       "ticker": "SHEL",
@@ -149,25 +149,32 @@ window.PRICES_DATA = {
       "change_1w": "-3.78%",
       "change_1m": "+7.61%",
       "change_ytd": "+19.48%",
-      "return_1yr": "+25%",
+      "return_1yr": "+24%",
       "low_gbp": "51",
       "low_usd": 68.62,
       "high_gbp": "70",
       "high_usd": 94.9,
       "bar_pct": 76,
-      "market_cap_gbp_b": 181.376,
-      "market_cap_usd_b": 244.726,
+      "market_cap_gbp_b": 181.242,
+      "market_cap_usd_b": 244.581,
       "beta": -0.218,
       "pe_ratio": 9.79,
       "avg_volume_m": 6.84,
-      "div_yield_pct": 349.0,
+      "div_yield_pct": 353.0,
       "short_pct": 1.82,
       "analyst": "buy",
       "analyst_score": 2.25,
-      "vol_1d": 4214976,
-      "vol_1w": 34759282,
-      "vol_1m": 157928139,
+      "vol_1d": 4423586,
+      "vol_1w": 34991311,
+      "vol_1m": 158160168,
       "news": [
+        {
+          "title": "Barrick Chairman's Planned Overhaul Meets Investor Backlash",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/barrick-chairmans-planned-overhaul-meets-120132508.html",
+          "published": 1786276892,
+          "sentiment": 0.0
+        },
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Rise in Friday Trading",
           "publisher": "MT Newswires",
@@ -195,16 +202,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/petrobras-profit-tops-estimates-iran-224447408.html",
           "published": 1786056287,
           "sentiment": 0.735
-        },
-        {
-          "title": "Top Research Reports for Apple, Shell & Toyota Motor",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-apple-shell-201400129.html",
-          "published": 1786047240,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.383
+      "news_sentiment": 0.342
     },
     {
       "ticker": "BP",
@@ -217,25 +217,32 @@ window.PRICES_DATA = {
       "change_1w": "-7.94%",
       "change_1m": "+6.17%",
       "change_ytd": "+19.04%",
-      "return_1yr": "+30%",
+      "return_1yr": "+23%",
       "low_gbp": "24",
       "low_usd": 32.72,
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 57,
-      "market_cap_gbp_b": 79.459,
+      "market_cap_gbp_b": 79.447,
       "market_cap_usd_b": 107.212,
       "beta": -0.212,
       "pe_ratio": 19.92,
-      "avg_volume_m": 8.99,
-      "div_yield_pct": 478.0,
+      "avg_volume_m": 8.92,
+      "div_yield_pct": 485.0,
       "short_pct": 0.49,
       "analyst": "buy",
       "analyst_score": 2.37,
-      "vol_1d": 4070039,
-      "vol_1w": 44070839,
-      "vol_1m": 181502639,
+      "vol_1d": 4070100,
+      "vol_1w": 44070900,
+      "vol_1m": 181502700,
       "news": [
+        {
+          "title": "Klesch becomes Germany\u2019s second-largest oil refiner after BP deal",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/energy/articles/klesch-becomes-germany-second-largest-072146991.html",
+          "published": 1786173706,
+          "sentiment": 0.0
+        },
         {
           "title": "North Sea shutdown to cost Treasury billions in tax relief",
           "publisher": "The Telegraph",
@@ -263,16 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/video/week-numbers-bps-huge-profit-104138978.html",
           "published": 1786099298,
           "sentiment": 0.637
-        },
-        {
-          "title": "BP agrees to buy Woodside\u2019s 70% stake in Calypso gas project",
-          "publisher": "Offshore Technology",
-          "url": "https://www.offshore-technology.com/news/bp-to-buy-woodsides-stake-calypso-project/",
-          "published": 1786091446,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.288
+      "news_sentiment": 0.247
     },
     {
       "ticker": "TTE",
@@ -285,25 +285,32 @@ window.PRICES_DATA = {
       "change_1w": "-2.31%",
       "change_1m": "+8.82%",
       "change_ytd": "+30.44%",
-      "return_1yr": "+42%",
+      "return_1yr": "+41%",
       "low_gbp": "43",
       "low_usd": 57.39,
       "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 77,
-      "market_cap_gbp_b": 141.145,
+      "market_cap_gbp_b": 141.124,
       "market_cap_usd_b": 190.443,
       "beta": 0.062,
       "pe_ratio": 10.74,
-      "avg_volume_m": 1.54,
-      "div_yield_pct": 491.0,
+      "avg_volume_m": 1.53,
+      "div_yield_pct": 494.0,
       "short_pct": 0.26,
       "analyst": "buy",
       "analyst_score": 2.1,
-      "vol_1d": 1321524,
-      "vol_1w": 6882024,
-      "vol_1m": 38735424,
+      "vol_1d": 1325300,
+      "vol_1w": 6885800,
+      "vol_1m": 38739200,
       "news": [
+        {
+          "title": "What Is TotalEnergies (ENXTPA:TTE) Signaling With Its Cyprus LNG Commitment?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/totalenergies-enxtpa-tte-signaling-cyprus-042939019.html",
+          "published": 1786336179,
+          "sentiment": 0.382
+        },
         {
           "title": "Eni Stock Jumps 12.7% in a Month: Will the Rally Continue?",
           "publisher": "Zacks",
@@ -331,16 +338,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/sempras-q2-earnings-outpace-estimates-145400564.html",
           "published": 1786028040,
           "sentiment": 0.0
-        },
-        {
-          "title": "Devon Q2 Earnings Surpass Estimates on Strong Oil Output and Pricing",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/devon-q2-earnings-surpass-estimates-165900303.html",
-          "published": 1785949140,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.303
+      "news_sentiment": 0.277
     },
     {
       "ticker": "EQNR",
@@ -353,24 +353,24 @@ window.PRICES_DATA = {
       "change_1w": "-5.30%",
       "change_1m": "+13.57%",
       "change_ytd": "+62.29%",
-      "return_1yr": "+63%",
+      "return_1yr": "+60%",
       "low_gbp": "16",
       "low_usd": 22.26,
       "high_gbp": "32",
       "high_usd": 43.46,
       "bar_pct": 79,
-      "market_cap_gbp_b": 68.518,
-      "market_cap_usd_b": 92.449,
+      "market_cap_gbp_b": 68.508,
+      "market_cap_usd_b": 92.45,
       "beta": -0.73,
       "pe_ratio": 10.55,
-      "avg_volume_m": 3.85,
-      "div_yield_pct": 385.0,
+      "avg_volume_m": 3.8,
+      "div_yield_pct": 391.0,
       "short_pct": 2.92,
-      "analyst": "hold",
-      "analyst_score": 3.33,
-      "vol_1d": 2555267,
-      "vol_1w": 16421167,
-      "vol_1m": 91741167,
+      "analyst": "none",
+      "analyst_score": null,
+      "vol_1d": 2669700,
+      "vol_1w": 16535600,
+      "vol_1m": 91855600,
       "news": [
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Rise in Friday Trading",
@@ -421,25 +421,32 @@ window.PRICES_DATA = {
       "change_1w": "-2.38%",
       "change_1m": "+6.22%",
       "change_ytd": "+23.48%",
-      "return_1yr": "+27%",
+      "return_1yr": "+26%",
       "low_gbp": "63",
       "low_usd": 85.57,
       "high_gbp": "101",
       "high_usd": 135.87,
       "bar_pct": 64,
-      "market_cap_gbp_b": 104.715,
-      "market_cap_usd_b": 141.289,
-      "beta": null,
-      "pe_ratio": 15.58,
-      "avg_volume_m": 7.01,
-      "div_yield_pct": 288.0,
+      "market_cap_gbp_b": 104.7,
+      "market_cap_usd_b": 141.29,
+      "beta": 0.123,
+      "pe_ratio": 15.56,
+      "avg_volume_m": 7.05,
+      "div_yield_pct": 286.0,
       "short_pct": 1.7,
       "analyst": "buy",
-      "analyst_score": 1.73,
-      "vol_1d": 4243520,
-      "vol_1w": 34467520,
-      "vol_1m": 147461920,
+      "analyst_score": 1.72,
+      "vol_1d": 7865200,
+      "vol_1w": 38089200,
+      "vol_1m": 151083600,
       "news": [
+        {
+          "title": "ConocoPhillips Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/conocophillips-q2-earnings-call-highlights-2026-08-07/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786154635,
+          "sentiment": 0.0
+        },
         {
           "title": "COP Q2 Earnings Call Reinforces 2029 Free Cash-Flow Path",
           "publisher": "Zacks",
@@ -462,21 +469,14 @@ window.PRICES_DATA = {
           "sentiment": 0.273
         },
         {
-          "title": "ConocoPhillips CFO to Ascend to Top Role; Fast-Food Burger Battle; Plus, New Layoff Data",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/cfo-journal/conocophillips-cfo-to-ascend-to-top-role-fast-food-burger-battle-plus-new-layoff-data-6402d48b?siteid=yhoof2&yptr=yahoo",
-          "published": 1786100820,
-          "sentiment": -0.202
-        },
-        {
-          "title": "Morning Bid: Dealj\u00e0 vu",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/morning-bid-dealj-vu-104313750.html",
-          "published": 1786099393,
+          "title": "ConocoPhillips Q2 2026 Earnings Call Summary",
+          "publisher": "Moby",
+          "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-conocophillips-q2-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss",
+          "published": 1786105800,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.116
+      "news_sentiment": 0.157
     },
     {
       "ticker": "OXY",
@@ -489,25 +489,32 @@ window.PRICES_DATA = {
       "change_1w": "-2.03%",
       "change_1m": "+4.33%",
       "change_ytd": "+33.16%",
-      "return_1yr": "+25%",
+      "return_1yr": "+28%",
       "low_gbp": "29",
       "low_usd": 38.8,
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 60,
-      "market_cap_gbp_b": 41.422,
+      "market_cap_gbp_b": 41.416,
       "market_cap_usd_b": 55.89,
       "beta": 0.16,
       "pe_ratio": 16.49,
-      "avg_volume_m": 10.02,
-      "div_yield_pct": 186.0,
+      "avg_volume_m": 9.99,
+      "div_yield_pct": 200.0,
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 5828769,
-      "vol_1w": 48365269,
-      "vol_1m": 210561669,
+      "vol_1d": 7680900,
+      "vol_1w": 50217400,
+      "vol_1m": 212413800,
       "news": [
+        {
+          "title": "Occidental Petroleum Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/occidental-petroleum-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786233832,
+          "sentiment": 0.0
+        },
         {
           "title": "OXY Q2 Earnings Call Maps $4B Cash Flow Path to 2030",
           "publisher": "Zacks",
@@ -535,16 +542,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/occidental-stock-jumps-5-cash-203411644.html",
           "published": 1786048451,
           "sentiment": -0.557
-        },
-        {
-          "title": "CEG Q2 Earnings Top Estimates on Calpine Contribution, View Raised",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ceg-q2-earnings-top-estimates-154300717.html",
-          "published": 1786030980,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.031
+      "news_sentiment": -0.009
     },
     {
       "ticker": "EOG",
@@ -557,25 +557,32 @@ window.PRICES_DATA = {
       "change_1w": "-9.38%",
       "change_1m": "-1.34%",
       "change_ytd": "+28.74%",
-      "return_1yr": "+25%",
+      "return_1yr": "+15%",
       "low_gbp": "75",
       "low_usd": 101.59,
       "high_gbp": "113",
       "high_usd": 151.87,
       "bar_pct": 66,
-      "market_cap_gbp_b": 53.189,
-      "market_cap_usd_b": 71.766,
+      "market_cap_gbp_b": 52.372,
+      "market_cap_usd_b": 70.675,
       "beta": 0.278,
       "pe_ratio": 10.49,
-      "avg_volume_m": 3.48,
-      "div_yield_pct": 300.0,
+      "avg_volume_m": 3.52,
+      "div_yield_pct": 303.0,
       "short_pct": 3.65,
       "analyst": "buy",
       "analyst_score": 2.23,
-      "vol_1d": 2457824,
-      "vol_1w": 18113824,
-      "vol_1m": 71340024,
+      "vol_1d": 3244400,
+      "vol_1w": 18900400,
+      "vol_1m": 72126600,
       "news": [
+        {
+          "title": "EOG Resources Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/eog-resources-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786169032,
+          "sentiment": 0.0
+        },
         {
           "title": "EOG Q2 Earnings Call Highlights UAE Progress & Cost Discipline",
           "publisher": "Zacks",
@@ -603,13 +610,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/eog-resources-doubles-q2-profit-044500406.html",
           "published": 1785905100,
           "sentiment": 0.44
-        },
-        {
-          "title": "EOG Resources (EOG) Beats Q2 Earnings and Revenue Estimates",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/eog-resources-eog-beats-q2-214006699.html",
-          "published": 1785879606,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.172
@@ -625,14 +625,14 @@ window.PRICES_DATA = {
       "change_1w": "-5.77%",
       "change_1m": "+6.24%",
       "change_ytd": "+82.17%",
-      "return_1yr": "+91%",
+      "return_1yr": "+88%",
       "low_gbp": "117",
       "low_usd": 158.0,
       "high_gbp": "242",
       "high_usd": 326.92,
       "bar_pct": 83,
-      "market_cap_gbp_b": 64.52,
-      "market_cap_usd_b": 87.055,
+      "market_cap_gbp_b": 62.055,
+      "market_cap_usd_b": 83.742,
       "beta": 0.508,
       "pe_ratio": 10.34,
       "avg_volume_m": 2.32,
@@ -640,9 +640,9 @@ window.PRICES_DATA = {
       "short_pct": 2.54,
       "analyst": "buy",
       "analyst_score": 2.21,
-      "vol_1d": 1322248,
-      "vol_1w": 10690048,
-      "vol_1m": 47740348,
+      "vol_1d": 2299200,
+      "vol_1w": 11667000,
+      "vol_1m": 48717300,
       "news": [
         {
           "title": "MPC Q2 Earnings Call Highlights Refining Capture and Cash Returns",
@@ -693,25 +693,32 @@ window.PRICES_DATA = {
       "change_1w": "-4.66%",
       "change_1m": "+5.86%",
       "change_ytd": "+83.13%",
-      "return_1yr": "+131%",
+      "return_1yr": "+126%",
       "low_gbp": "97",
       "low_usd": 130.78,
       "high_gbp": "237",
       "high_usd": 320.24,
       "bar_pct": 88,
-      "market_cap_gbp_b": 63.658,
-      "market_cap_usd_b": 85.892,
+      "market_cap_gbp_b": 63.648,
+      "market_cap_usd_b": 85.891,
       "beta": 0.554,
-      "pe_ratio": 12.45,
-      "avg_volume_m": 2.99,
-      "div_yield_pct": 158.0,
+      "pe_ratio": 12.44,
+      "avg_volume_m": 3.01,
+      "div_yield_pct": 161.0,
       "short_pct": 4.42,
       "analyst": "buy",
       "analyst_score": 2.3,
-      "vol_1d": 2124766,
-      "vol_1w": 14923366,
-      "vol_1m": 64898566,
+      "vol_1d": 3627500,
+      "vol_1w": 16426100,
+      "vol_1m": 66401300,
       "news": [
+        {
+          "title": "Valero Energy (VLO) Buyback And Results Leave Valuation Looking Finely Balanced",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-vlo-buyback-results-021035171.html",
+          "published": 1786155035,
+          "sentiment": 0.226
+        },
         {
           "title": "The U.S. Didn\u2019t Buy a Drop of Saudi Oil in July \u2014 the First Time in 41 Years",
           "publisher": "24/7 Wall St.",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/valero-energy-stock-buy-premium-161900909.html",
           "published": 1786033140,
           "sentiment": 0.612
-        },
-        {
-          "title": "Is It Worth Investing in Valero Energy (VLO) Based on Wall Street's Bullish Views?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/worth-investing-valero-energy-vlo-133003975.html",
-          "published": 1786023003,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.262
+      "news_sentiment": 0.215
     },
     {
       "ticker": "SLB",
@@ -761,24 +761,24 @@ window.PRICES_DATA = {
       "change_1w": "+1.90%",
       "change_1m": "+6.54%",
       "change_ytd": "+27.10%",
-      "return_1yr": "+50%",
+      "return_1yr": "+56%",
       "low_gbp": "23",
       "low_usd": 31.64,
       "high_gbp": "44",
       "high_usd": 58.82,
       "bar_pct": 69,
-      "market_cap_gbp_b": 55.581,
+      "market_cap_gbp_b": 55.573,
       "market_cap_usd_b": 74.994,
       "beta": 0.749,
       "pe_ratio": 24.65,
-      "avg_volume_m": 14.35,
-      "div_yield_pct": 229.0,
+      "avg_volume_m": 14.14,
+      "div_yield_pct": 234.0,
       "short_pct": 4.88,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 6890690,
-      "vol_1w": 52321890,
-      "vol_1m": 288996590,
+      "vol_1d": 8350900,
+      "vol_1w": 53782100,
+      "vol_1m": 290456800,
       "news": [
         {
           "title": "Is Cactus Worth Buying as Growth Accelerates but Valuation Stretches?",
@@ -829,25 +829,32 @@ window.PRICES_DATA = {
       "change_1w": "-1.12%",
       "change_1m": "-8.81%",
       "change_ytd": "+8.72%",
-      "return_1yr": "+53%",
+      "return_1yr": "+56%",
       "low_gbp": "15",
       "low_usd": 20.39,
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 50,
-      "market_cap_gbp_b": 19.745,
-      "market_cap_usd_b": 26.641,
+      "market_cap_gbp_b": 19.688,
+      "market_cap_usd_b": 26.568,
       "beta": 0.753,
       "pe_ratio": 16.7,
-      "avg_volume_m": 11.97,
-      "div_yield_pct": 209.0,
+      "avg_volume_m": 12.01,
+      "div_yield_pct": 213.0,
       "short_pct": 5.61,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 8260276,
-      "vol_1w": 57865876,
-      "vol_1m": 282817376,
+      "vol_1d": 8262600,
+      "vol_1w": 57868200,
+      "vol_1m": 282819700,
       "news": [
+        {
+          "title": "This nuclear startup and Halliburton repurposed oil-drilling tech in a bid to solve America\u2019s radioactive waste problem",
+          "publisher": "Fortune",
+          "url": "https://finance.yahoo.com/energy/articles/nuclear-startup-halliburton-repurposed-oil-070900904.html",
+          "published": 1786259340,
+          "sentiment": -0.572
+        },
         {
           "title": "TC Energy Q2 Earnings and Revenues Beat Estimates, Rise Y/Y",
           "publisher": "Zacks",
@@ -875,16 +882,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/technipfmc-q2-earnings-revenues-beat-170200874.html",
           "published": 1785862920,
           "sentiment": 0.0
-        },
-        {
-          "title": "ProPetro Q2 Loss Wider Than Expected, Revenues Beat Estimates",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/propetro-q2-loss-wider-expected-133100629.html",
-          "published": 1785850260,
-          "sentiment": -0.318
         }
       ],
-      "news_sentiment": 0.027
+      "news_sentiment": -0.024
     },
     {
       "ticker": "BKR",
@@ -894,65 +894,65 @@ window.PRICES_DATA = {
       "price_gbp": "46",
       "price_usd": 61.55,
       "change_1d": "-1.52%",
-      "change_1w": "+1.75%",
-      "change_1m": "+6.89%",
-      "change_ytd": "+31.50%",
-      "return_1yr": "+40%",
+      "change_1w": "+2.13%",
+      "change_1m": "+7.29%",
+      "change_ytd": "+31.98%",
+      "return_1yr": "+44%",
       "low_gbp": "31",
       "low_usd": 41.96,
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 69,
-      "market_cap_gbp_b": 45.283,
+      "market_cap_gbp_b": 45.276,
       "market_cap_usd_b": 61.099,
       "beta": 0.959,
       "pe_ratio": 19.79,
-      "avg_volume_m": 8.84,
-      "div_yield_pct": 147.0,
+      "avg_volume_m": 8.69,
+      "div_yield_pct": 149.0,
       "short_pct": 3.06,
       "analyst": "buy",
-      "analyst_score": 1.7,
-      "vol_1d": 4699597,
-      "vol_1w": 29565097,
-      "vol_1m": 208933997,
+      "analyst_score": 1.71,
+      "vol_1d": 7321500,
+      "vol_1w": 32187000,
+      "vol_1m": 211555900,
       "news": [
+        {
+          "title": "Baker Hughes (BKR) Secures LNG And Gas Turbine Orders Across Key Growth Markets",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/baker-hughes-bkr-secures-lng-020707736.html",
+          "published": 1786241227,
+          "sentiment": 0.599
+        },
+        {
+          "title": "Kodiak Gas Services Q2 Earnings Call Highlights",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/instant-alerts/kodiak-gas-services-q2-earnings-call-highlights-2026-08-08/?utm_source=yahoofinance&utm_medium=yahoofinance",
+          "published": 1786201437,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Basin rig count up three as prices drop",
+          "publisher": "Odessa American, Texas",
+          "url": "https://www.oaoa.com/?p=368569",
+          "published": 1786147260,
+          "sentiment": -0.382
+        },
+        {
+          "title": "Kodiak Gas Services Inc (KGS) (Q2 2026) Earnings Call Highlights: Record EBITDA and Strategic ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/energy/articles/kodiak-gas-services-inc-kgs-230028140.html",
+          "published": 1786143628,
+          "sentiment": 0.0
+        },
         {
           "title": "C3.ai vs. Applied Digital: Which Artificial Intelligence Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/coverage/better-buy/2026/08/07/c3-ai-vs-applied-digital-which-artificial-intelligence-stock-is-a-better-buy-in-2026/",
           "published": 1786136821,
           "sentiment": 0.718
-        },
-        {
-          "title": "Sector Update: Energy Stocks Decline Friday Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-friday-174624121.html",
-          "published": 1786124784,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Is Cactus Worth Buying as Growth Accelerates but Valuation Stretches?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/cactus-worth-buying-growth-accelerates-174400748.html",
-          "published": 1786124640,
-          "sentiment": 0.307
-        },
-        {
-          "title": "US Oil Drillers Add Rigs",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/us-oil-drillers-add-rigs-171400610.html",
-          "published": 1786122840,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Here Are Friday\u2019s Top Wall Street Analyst Research Calls: Baker Hughes, Etsy, HubSpot, Instacart, JetBlue, Roku, SpaceX, Tower Semiconductor, Trade Desk, and More",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/07/here-are-fridays-top-wall-street-analyst-research-calls-baker-hughes-etsy-hubspot-instacart-jetblue-roku-spacex-tower-semiconductor-trade-desk-and-more/",
-          "published": 1786103484,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.3
+      "news_sentiment": 0.187
     },
     {
       "ticker": "NEE",
@@ -965,25 +965,46 @@ window.PRICES_DATA = {
       "change_1w": "-2.61%",
       "change_1m": "-3.19%",
       "change_ytd": "+6.08%",
-      "return_1yr": "+20%",
+      "return_1yr": "+17%",
       "low_gbp": "51",
       "low_usd": 69.24,
       "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 52,
-      "market_cap_gbp_b": 130.846,
-      "market_cap_usd_b": 176.547,
+      "market_cap_gbp_b": 130.85,
+      "market_cap_usd_b": 176.579,
       "beta": 0.653,
       "pe_ratio": 19.02,
-      "avg_volume_m": 11.96,
-      "div_yield_pct": 295.0,
+      "avg_volume_m": 12.11,
+      "div_yield_pct": 294.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.95,
-      "vol_1d": 6434043,
-      "vol_1w": 60153943,
-      "vol_1m": 244280843,
+      "vol_1d": 9322000,
+      "vol_1w": 63041900,
+      "vol_1m": 247168800,
       "news": [
+        {
+          "title": "Forget Chips: AI Is Now a Power Trade. These 2 Dividend-Paying Industrials Prove It.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/10/forget-chips-ai-is-now-a-power-trade-these-2-divid/",
+          "published": 1786338300,
+          "sentiment": -0.226
+        },
+        {
+          "title": "NextEra Energy (NEE) Stock Could Be 11% Overvalued Despite Fresh AI Data Center News",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nextera-energy-nee-stock-could-141050537.html",
+          "published": 1786198250,
+          "sentiment": 0.036
+        },
+        {
+          "title": "NextEra Energy (NEE) Draws Governor Scrutiny In $67 Billion Utility Deal Review",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/nextera-energy-nee-draws-governor-121203730.html",
+          "published": 1786191123,
+          "sentiment": 0.273
+        },
         {
           "title": "PPL Q2 Earnings Miss Estimates on Higher Costs, Revenues Increase Y/Y",
           "publisher": "Zacks",
@@ -997,30 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-decline-premarket-132559908.html",
           "published": 1786109159,
           "sentiment": 0.273
-        },
-        {
-          "title": "The future of the NextEra-Dominion megadeal",
-          "publisher": "Axios",
-          "url": "https://www.axios.com/2026/08/07/nextera-dominion-megadeal-power-data-centers#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI",
-          "published": 1786107789,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Spanberger intervenes in case to decide fate of Dominion-NextEra merger",
-          "publisher": "The Virginian-Pilot",
-          "url": "https://www.pilotonline.com/2026/08/06/spanberger-intervenes-in-dominion-merger/",
-          "published": 1786055640,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Virginia Governor Is \u2018Skeptical\u2019 of NextEra Energy\u2019s Dominion Acquisition",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/nextera-energy-dominion-energy-acquisition-48df4128?siteid=yhoof2&yptr=yahoo",
-          "published": 1786047240,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.09
+      "news_sentiment": 0.107
     },
     {
       "ticker": "SSE.L",
@@ -1033,24 +1033,24 @@ window.PRICES_DATA = {
       "change_1w": "+1.88%",
       "change_1m": "-3.49%",
       "change_ytd": "+7.15%",
-      "return_1yr": "+31%",
+      "return_1yr": "+35%",
       "low_gbp": "16",
       "low_usd": 21.55,
       "high_gbp": "28",
-      "high_usd": 37.34,
+      "high_usd": 37.35,
       "bar_pct": 68,
       "market_cap_gbp_b": 0.288,
       "market_cap_usd_b": 0.389,
       "beta": 0.576,
       "pe_ratio": 22.76,
-      "avg_volume_m": 4.01,
-      "div_yield_pct": 289.0,
+      "avg_volume_m": 3.94,
+      "div_yield_pct": 287.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 3404310,
-      "vol_1w": 12718329,
-      "vol_1m": 73569939,
+      "vol_1d": 3404436,
+      "vol_1w": 12718455,
+      "vol_1m": 73570065,
       "news": [
         {
           "title": "UK PM Burnham uses policy blitz to buy time for tougher decisions",
@@ -1101,25 +1101,39 @@ window.PRICES_DATA = {
       "change_1w": "+11.53%",
       "change_1m": "-2.67%",
       "change_ytd": "+24.06%",
-      "return_1yr": "+21%",
+      "return_1yr": "+29%",
       "low_gbp": "19",
       "low_usd": 25.78,
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 34,
-      "market_cap_gbp_b": 4.09,
-      "market_cap_usd_b": 5.519,
+      "market_cap_gbp_b": 4.1,
+      "market_cap_usd_b": 5.533,
       "beta": 1.651,
       "pe_ratio": 41.46,
-      "avg_volume_m": 7.37,
+      "avg_volume_m": 7.31,
       "div_yield_pct": null,
       "short_pct": 20.87,
       "analyst": "buy",
       "analyst_score": 2.48,
-      "vol_1d": 5392472,
-      "vol_1w": 26613272,
-      "vol_1m": 108604072,
+      "vol_1d": 5398500,
+      "vol_1w": 26619300,
+      "vol_1m": 108610100,
       "news": [
+        {
+          "title": "Enphase Energy (ENPH) Stock Looks Fully Priced With Cash Flow And Earnings In Sync",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-enph-stock-looks-121211780.html",
+          "published": 1786191131,
+          "sentiment": 0.273
+        },
+        {
+          "title": "Enphase Energy (ENPH) Is Up 6.1% After Expanding U.S. AI-Focused Power Electronics Manufacturing - What's Changed",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/enphase-energy-enph-6-1-221245652.html",
+          "published": 1786140765,
+          "sentiment": 0.273
+        },
         {
           "title": "Solar stocks pop on Trump tariffs: AlphaSpace heat map breakdown",
           "publisher": "Yahoo Finance Video",
@@ -1140,23 +1154,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/solar-stocks-rise-trump-imposes-122254440.html",
           "published": 1786105374,
           "sentiment": -0.103
-        },
-        {
-          "title": "Solar Stocks Tumble After SolarEdge Posts Weak Q3 Outlook",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/solar-stocks-tumble-solaredge-posts-172456563.html",
-          "published": 1785950696,
-          "sentiment": -0.44
-        },
-        {
-          "title": "SolarEdge Technologies' Q2 Earnings Top Estimates, Revenues Rise Y/Y",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/solaredge-technologies-q2-earnings-top-145200287.html",
-          "published": 1785941520,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": -0.123
+      "news_sentiment": 0.034
     },
     {
       "ticker": "FSLR",
@@ -1169,25 +1169,46 @@ window.PRICES_DATA = {
       "change_1w": "+18.49%",
       "change_1m": "+11.48%",
       "change_ytd": "-8.85%",
-      "return_1yr": "+26%",
+      "return_1yr": "+37%",
       "low_gbp": "131",
       "low_usd": 176.47,
       "high_gbp": "238",
       "high_usd": 320.95,
       "bar_pct": 51,
-      "market_cap_gbp_b": 19.917,
+      "market_cap_gbp_b": 19.914,
       "market_cap_usd_b": 26.873,
       "beta": 1.746,
-      "pe_ratio": 25.54,
-      "avg_volume_m": 2.4,
+      "pe_ratio": 25.52,
+      "avg_volume_m": 2.52,
       "div_yield_pct": null,
       "short_pct": 12.03,
       "analyst": "buy",
-      "analyst_score": 2.11,
-      "vol_1d": 5127121,
-      "vol_1w": 21354821,
-      "vol_1m": 54947921,
+      "analyst_score": 2.06,
+      "vol_1d": 5214300,
+      "vol_1w": 21442000,
+      "vol_1m": 55035100,
       "news": [
+        {
+          "title": "First Solar (FSLR) After Tariffs And Guidance, Buying Opportunity Or Fairly Valued?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-tariffs-guidance-211445769.html",
+          "published": 1786223685,
+          "sentiment": 0.691
+        },
+        {
+          "title": "First Solar (FSLR) Is Up 18.5% After Cad-Tel Edge Widens Under New U.S. Solar Tariffs",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/first-solar-fslr-18-5-190938580.html",
+          "published": 1786216178,
+          "sentiment": 0.0
+        },
+        {
+          "title": "First Solar (FSLR) Backed New 15% US Polysilicon Tariffs",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/economy/policy/articles/first-solar-fslr-backed-15-181138323.html",
+          "published": 1786212698,
+          "sentiment": 0.026
+        },
         {
           "title": "Solar stocks pop on Trump tariffs: AlphaSpace heat map breakdown",
           "publisher": "Yahoo Finance Video",
@@ -1201,30 +1222,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/610601/first-solar-diversifies-the-source-of-your-risk-not-its-size/2026-08-07",
           "published": 1786119398,
           "sentiment": -0.273
-        },
-        {
-          "title": "Solar Stocks Jump as Trump Tariffs Boost U.S. Manufacturing",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/solar-stocks-trump-tariffs-first-solar-t1-energy-1077472d?siteid=yhoof2&yptr=yahoo",
-          "published": 1786116840,
-          "sentiment": 0.402
-        },
-        {
-          "title": "First Solar Clears Aggressive Buy Point On Trump Polysilicon Order",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/first-solar-stock-buy-point-trump-232-polysilicon-order/?src=A00220&yptr=yahoo",
-          "published": 1786105852,
-          "sentiment": -0.077
-        },
-        {
-          "title": "Update: Solar Stocks Rise After Trump Imposes 15% Tariff, Minimum Prices on Polysilicon Imports",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/solar-stocks-rise-trump-imposes-122254440.html",
-          "published": 1786105374,
-          "sentiment": -0.103
         }
       ],
-      "news_sentiment": -0.01
+      "news_sentiment": 0.089
     },
     {
       "ticker": "BEPC",
@@ -1237,25 +1237,32 @@ window.PRICES_DATA = {
       "change_1w": "+1.17%",
       "change_1m": "-6.07%",
       "change_ytd": "-13.81%",
-      "return_1yr": "+1%",
+      "return_1yr": "+2%",
       "low_gbp": "24",
       "low_usd": 31.82,
       "high_gbp": "33",
       "high_usd": 45.18,
       "bar_pct": 14,
-      "market_cap_gbp_b": 4.641,
+      "market_cap_gbp_b": 4.64,
       "market_cap_usd_b": 6.262,
       "beta": 1.166,
       "pe_ratio": null,
-      "avg_volume_m": 1.54,
-      "div_yield_pct": 470.0,
+      "avg_volume_m": 1.59,
+      "div_yield_pct": 465.0,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 3.17,
-      "vol_1d": 1773711,
-      "vol_1w": 10973111,
-      "vol_1m": 43332711,
+      "vol_1d": 1778800,
+      "vol_1w": 10978200,
+      "vol_1m": 43337800,
       "news": [
+        {
+          "title": "Why Cameco's Ugly Earnings Miss Might Be Good News in Disguise",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/08/why-camecos-ugly-earnings-miss-might-be-good-news/",
+          "published": 1786207800,
+          "sentiment": -0.459
+        },
         {
           "title": "Brookfield Renewable Q2 Earnings Call Highlights",
           "publisher": "MarketBeat",
@@ -1283,36 +1290,29 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/07/31/why-i-just-bought-more-shares-of-brookfield-renewa/",
           "published": 1785486000,
           "sentiment": 0.36
-        },
-        {
-          "title": "NextEra Energy vs Brookfield Renewable: The Better Dividend Stock",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/07/25/nextera-energy-vs-brookfield-renewable-the-better-dividend-stock/",
-          "published": 1784989813,
-          "sentiment": 0.612
         }
       ],
-      "news_sentiment": 0.194
+      "news_sentiment": -0.02
     },
     {
       "ticker": "DNNGY",
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.40",
-      "price_usd": 7.29,
-      "change_1d": "+3.85%",
-      "change_1w": "-1.49%",
-      "change_1m": "-1.62%",
-      "change_ytd": "+9.38%",
-      "return_1yr": "-52%",
+      "price_gbp": "5.39",
+      "price_usd": 7.28,
+      "change_1d": "+3.70%",
+      "change_1w": "-1.62%",
+      "change_1m": "-1.75%",
+      "change_ytd": "+9.23%",
+      "return_1yr": "-35%",
       "low_gbp": "4.26",
       "low_usd": 5.75,
       "high_gbp": "24",
       "high_usd": 33.02,
       "bar_pct": 6,
-      "market_cap_gbp_b": 21.413,
-      "market_cap_usd_b": 28.892,
+      "market_cap_gbp_b": 21.38,
+      "market_cap_usd_b": 28.852,
       "beta": 0.629,
       "pe_ratio": null,
       "avg_volume_m": 0.11,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 7153,
-      "vol_1w": 382153,
-      "vol_1m": 2178653,
+      "vol_1d": 57900,
+      "vol_1w": 432900,
+      "vol_1m": 2229400,
       "news": [
         {
           "title": "Haizea delivers monopiles for \u00d8rsted\u2019s 2.9GW Hornsea 3 wind farm",
