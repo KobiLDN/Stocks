@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-11 07:32",
-  "fx_gbp_usd": 1.3506,
+  "updated": "2026-08-11 10:00",
+  "fx_gbp_usd": 1.3504,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -9,7 +9,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "228",
       "price_usd": 308.26,
-      "change_1d": "-1.59%",
+      "change_1d": "+0.23%",
       "change_1w": "+1.68%",
       "change_1m": "-2.77%",
       "change_ytd": "+14.05%",
@@ -19,7 +19,7 @@
       "high_gbp": "255",
       "high_usd": 344.57,
       "bar_pct": 70,
-      "market_cap_gbp_b": 3330.913,
+      "market_cap_gbp_b": 3331.453,
       "market_cap_usd_b": 4498.802,
       "beta": 1.086,
       "pe_ratio": 35.97,
@@ -77,7 +77,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "375",
       "price_usd": 506.06,
-      "change_1d": "+1.32%",
+      "change_1d": "+0.16%",
       "change_1w": "+3.78%",
       "change_1m": "+29.43%",
       "change_ytd": "+7.48%",
@@ -87,10 +87,10 @@
       "high_gbp": "410",
       "high_usd": 553.72,
       "bar_pct": 77,
-      "market_cap_gbp_b": 2782.254,
-      "market_cap_usd_b": 3757.771,
+      "market_cap_gbp_b": 2782.705,
+      "market_cap_usd_b": 3757.772,
       "beta": 1.099,
-      "pe_ratio": 28.19,
+      "pe_ratio": 27.85,
       "avg_volume_m": 41.28,
       "div_yield_pct": 73.0,
       "short_pct": 1.24,
@@ -145,7 +145,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "265",
       "price_usd": 357.52,
-      "change_1d": "+0.78%",
+      "change_1d": "+0.27%",
       "change_1w": "-4.28%",
       "change_1m": "+1.42%",
       "change_ytd": "+13.59%",
@@ -155,8 +155,8 @@
       "high_gbp": "303",
       "high_usd": 408.61,
       "bar_pct": 76,
-      "market_cap_gbp_b": 3237.359,
-      "market_cap_usd_b": 4372.446,
+      "market_cap_gbp_b": 3237.884,
+      "market_cap_usd_b": 4372.447,
       "beta": 1.237,
       "pe_ratio": 17.76,
       "avg_volume_m": 32.99,
@@ -190,21 +190,21 @@
           "sentiment": 0.0
         },
         {
+          "title": "INTC Stock Gains Overnight: Chipmaker Raising Share Sale To Over $20B?",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/intc-stock-gains-overnight-chipmaker-raising-share-sale-to-over-20-b/cZoZnuSRJfz",
+          "published": 1786429997,
+          "sentiment": 0.557
+        },
+        {
           "title": "Cloudflare Wants to Control the Identity and Money Layer for Agent Commerce",
           "publisher": "Forkast News",
           "url": "https://finance.yahoo.com/technology/ai/articles/cloudflare-wants-control-identity-money-061021630.html",
           "published": 1786428621,
           "sentiment": 0.0
-        },
-        {
-          "title": "Anthropic, OpenAI Said To Be Racing For Public Markets: Reports Of Pre-IPO Moves Tell Very Different Stories",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/anthropic-open-ai-said-to-be-racing-for-public-markets-reports-of-pre-ipo-moves-tell-very-different-stories/cZoZZhRRJfu",
-          "published": 1786424504,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.14
+      "news_sentiment": 0.252
     },
     {
       "ticker": "AMZN",
@@ -213,7 +213,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "206",
       "price_usd": 278.09,
-      "change_1d": "+1.38%",
+      "change_1d": "+0.31%",
       "change_1w": "-2.09%",
       "change_1m": "+12.45%",
       "change_ytd": "+22.78%",
@@ -223,8 +223,8 @@
       "high_gbp": "213",
       "high_usd": 287.2,
       "bar_pct": 90,
-      "market_cap_gbp_b": 2220.879,
-      "market_cap_usd_b": 2999.566,
+      "market_cap_gbp_b": 2221.238,
+      "market_cap_usd_b": 2999.565,
       "beta": 1.454,
       "pe_ratio": 22.07,
       "avg_volume_m": 50.45,
@@ -279,23 +279,23 @@
       "company_name": "Meta Platforms",
       "category": "mega-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "440",
+      "price_gbp": "441",
       "price_usd": 594.92,
-      "change_1d": "+0.53%",
+      "change_1d": "+0.12%",
       "change_1w": "+0.79%",
       "change_1m": "-9.41%",
       "change_ytd": "-8.37%",
-      "return_1yr": "-22%",
+      "return_1yr": "-25%",
       "low_gbp": "385",
       "low_usd": 520.26,
       "high_gbp": "590",
       "high_usd": 796.25,
       "bar_pct": 27,
-      "market_cap_gbp_b": 1122.122,
+      "market_cap_gbp_b": 1122.304,
       "market_cap_usd_b": 1515.562,
       "beta": 1.243,
       "pe_ratio": 22.32,
-      "avg_volume_m": 18.12,
+      "avg_volume_m": 18.15,
       "div_yield_pct": 35.0,
       "short_pct": 1.72,
       "analyst": "strong_buy",
@@ -349,7 +349,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "161",
       "price_usd": 217.55,
-      "change_1d": "-2.78%",
+      "change_1d": "-0.20%",
       "change_1w": "+5.28%",
       "change_1m": "+6.89%",
       "change_ytd": "+15.34%",
@@ -359,7 +359,7 @@
       "high_gbp": "175",
       "high_usd": 236.54,
       "bar_pct": 74,
-      "market_cap_gbp_b": 3901.374,
+      "market_cap_gbp_b": 3902.006,
       "market_cap_usd_b": 5269.279,
       "beta": 2.215,
       "pe_ratio": 34.26,
@@ -387,28 +387,28 @@
           "sentiment": 0.0
         },
         {
-          "title": "2 Hugely Overlooked Auto Stocks With Massive Upside",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/11/2-hugely-overlooked-auto-stocks-with-massive-upsid/",
-          "published": 1786428300,
-          "sentiment": -0.101
-        },
-        {
-          "title": "CoreWeave Earnings Will Test Its Speedrun to AI Hyperscale",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/coreweave-earnings-stock-price-066fec34?siteid=yhoof2&yptr=yahoo",
-          "published": 1786428000,
+          "title": "Nvidia $500bn AI spending splurge unnerves investors",
+          "publisher": "The Telegraph",
+          "url": "https://uk.finance.yahoo.com/news/nvidia-500bn-ai-spending-splurge-085227057.html",
+          "published": 1786438347,
           "sentiment": 0.0
         },
         {
-          "title": "Making Sense of the Multibillion-Dollar Numbers of Nvidia Deal, Intel Share Sale",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/video/making-sense-multibillion-dollar-numbers-052655909.html",
-          "published": 1786426015,
-          "sentiment": 0.296
+          "title": "Why Is the U.S. Army Buying $54 Billion Worth of Patriot Missiles From Lockheed Martin?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/11/us-army-buys-54-billion-worth-of-patriot-missiles/",
+          "published": 1786438260,
+          "sentiment": 0.226
+        },
+        {
+          "title": "Micron vs. SK Hynix: Which Memory Chip Giant Is the Better Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/11/micron-vs-sk-hynix-memory-chip-giant-better-buy/",
+          "published": 1786437600,
+          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.039
+      "news_sentiment": 0.133
     },
     {
       "ticker": "AMD",
@@ -417,17 +417,17 @@
       "exchange": "NASDAQ",
       "price_gbp": "348",
       "price_usd": 469.56,
-      "change_1d": "-2.82%",
+      "change_1d": "+0.07%",
       "change_1w": "-3.11%",
       "change_1m": "-12.13%",
       "change_ytd": "+110.12%",
       "return_1yr": "+168%",
-      "low_gbp": "110",
+      "low_gbp": "111",
       "low_usd": 149.22,
       "high_gbp": "433",
       "high_usd": 584.73,
       "bar_pct": 74,
-      "market_cap_gbp_b": 567.55,
+      "market_cap_gbp_b": 567.642,
       "market_cap_usd_b": 766.545,
       "beta": 2.489,
       "pe_ratio": 123.57,
@@ -440,6 +440,13 @@
       "vol_1w": 168950000,
       "vol_1m": 620158200,
       "news": [
+        {
+          "title": "3 Dividend-Paying Industrial Stocks to Buy in August",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/11/3-dividend-paying-industrial-stocks-to-buy-in-augu/",
+          "published": 1786436700,
+          "sentiment": 0.0
+        },
         {
           "title": "12 Nasdaq Stocks Doubled in 2026, But None Are Magnificent Seven",
           "publisher": "BeInCrypto",
@@ -467,13 +474,6 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-strikes-9-billion-cloud-001720559.html",
           "published": 1786407440,
           "sentiment": -0.727
-        },
-        {
-          "title": "Stock Screening Made Simple: A Guide",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-screening-made-simple-guide-225800443.html",
-          "published": 1786402680,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.253
@@ -485,7 +485,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "72",
       "price_usd": 97.52,
-      "change_1d": "-4.09%",
+      "change_1d": "+0.22%",
       "change_1w": "+7.16%",
       "change_1m": "-5.43%",
       "change_ytd": "+147.64%",
@@ -495,7 +495,7 @@
       "high_gbp": "105",
       "high_usd": 142.35,
       "bar_pct": 63,
-      "market_cap_gbp_b": 364.196,
+      "market_cap_gbp_b": 364.255,
       "market_cap_usd_b": 491.891,
       "beta": 2.241,
       "pe_ratio": null,
@@ -516,35 +516,35 @@
           "sentiment": 0.0
         },
         {
-          "title": "Making Sense of the Multibillion-Dollar Numbers of Nvidia Deal, Intel Share Sale",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/video/making-sense-multibillion-dollar-numbers-052655909.html",
-          "published": 1786426015,
-          "sentiment": 0.296
+          "title": "S&P 500, Nasdaq, Dow Futures Mixed As CPI Countdown Begins: Why INTC, SLS, SPCX, RKLB, ASTS, RIOT, FRMI Stocks Are In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-nasdaq-dow-futures-mixed-premarket-cpi-countdown-intc-sls-spcx-rklb-asts-frmi-riot-stocks-focus/cZoZqRXRJQ5",
+          "published": 1786437214,
+          "sentiment": -0.652
         },
         {
-          "title": "12 Nasdaq Stocks Doubled in 2026, But None Are Magnificent Seven",
-          "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/nasdaq-100-stocks-doubled-2026/",
-          "published": 1786425900,
-          "sentiment": -0.639
-        },
-        {
-          "title": "Intel Is Selling $15 Billion of Stock to Fund the AI Build-Out. The Dilution Is About 3%. The Premarket Hit Was 5%.",
+          "title": "Intel's Foundry Grew 31% Last Quarter and Lost $2.1 Billion Doing It.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/10/intel-is-selling-15-billion-of-stock-to-fund-the-a/",
-          "published": 1786412580,
+          "url": "https://www.fool.com/investing/2026/08/11/intels-foundry-grew-31-last-quarter-and-lost-21-bi/",
+          "published": 1786433220,
+          "sentiment": -0.318
+        },
+        {
+          "title": "Intel Increases Size of Stock Offering to Raise $20 Billion",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/tech/intel-increases-size-of-stock-offering-to-raise-20-billion-0a32a534?siteid=yhoof2&yptr=yahoo",
+          "published": 1786432260,
           "sentiment": 0.0
         },
         {
-          "title": "Why Intel Stock Is Down Today",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/10/why-intel-stock-is-down-today/",
-          "published": 1786411628,
-          "sentiment": 0.0
+          "title": "INTC Stock Gains Overnight: Chipmaker Raising Share Sale To Over $20B?",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/intc-stock-gains-overnight-chipmaker-raising-share-sale-to-over-20-b/cZoZnuSRJfz",
+          "published": 1786429997,
+          "sentiment": 0.557
         }
       ],
-      "news_sentiment": -0.069
+      "news_sentiment": -0.083
     },
     {
       "ticker": "TSM",
@@ -553,7 +553,7 @@
       "exchange": "NYSE",
       "price_gbp": "310",
       "price_usd": 418.47,
-      "change_1d": "-0.59%",
+      "change_1d": "-0.08%",
       "change_1w": "+3.04%",
       "change_1m": "-0.74%",
       "change_ytd": "+31.61%",
@@ -563,8 +563,8 @@
       "high_gbp": "355",
       "high_usd": 479.0,
       "bar_pct": 76,
-      "market_cap_gbp_b": 1606.952,
-      "market_cap_usd_b": 2170.383,
+      "market_cap_gbp_b": 1607.213,
+      "market_cap_usd_b": 2170.384,
       "beta": 1.258,
       "pe_ratio": 36.9,
       "avg_volume_m": 14.08,
@@ -584,11 +584,11 @@
           "sentiment": 0.0
         },
         {
-          "title": "Central Processing Units Could Be New Growth Driver for TSMC",
+          "title": "European Indexes Boosted by Energy Stocks on Higher Oil Price",
           "publisher": "The Wall Street Journal",
           "url": "https://www.wsj.com/finance/stocks/central-processing-units-could-be-new-growth-driver-for-tsmc-7cf7ff95?siteid=yhoof2&yptr=yahoo",
-          "published": 1786421280,
-          "sentiment": 0.382
+          "published": 1786434360,
+          "sentiment": 0.557
         },
         {
           "title": "Japan\u2019s chip subsidies may swing $6.4 billion Sony bet",
@@ -612,7 +612,7 @@
           "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.228
+      "news_sentiment": 0.263
     },
     {
       "ticker": "AVGO",
@@ -621,17 +621,17 @@
       "exchange": "NASDAQ",
       "price_gbp": "313",
       "price_usd": 422.4,
-      "change_1d": "-1.00%",
+      "change_1d": "+0.01%",
       "change_1w": "+7.69%",
       "change_1m": "+9.99%",
       "change_ytd": "+21.96%",
       "return_1yr": "+35%",
       "low_gbp": "209",
       "low_usd": 281.87,
-      "high_gbp": "366",
+      "high_gbp": "367",
       "high_usd": 495.0,
       "bar_pct": 66,
-      "market_cap_gbp_b": 1487.909,
+      "market_cap_gbp_b": 1488.15,
       "market_cap_usd_b": 2009.601,
       "beta": 1.473,
       "pe_ratio": 71.47,
@@ -644,6 +644,13 @@
       "vol_1w": 88880400,
       "vol_1m": 395023800,
       "news": [
+        {
+          "title": "Hock Tan Reaffirmed Broadcom's $100 Billion AI Forecast. Six Customers Carry Nearly All of It.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/11/hock-tan-reaffirmed-broadcoms-100-billion-ai-forec/",
+          "published": 1786435260,
+          "sentiment": 0.0
+        },
         {
           "title": "VYM\u2019s 2.2% Yield Hides $141,000 in Decade-Long Underperformance Versus the S&P 500",
           "publisher": "24/7 Wall St.",
@@ -671,16 +678,9 @@
           "url": "https://www.trefis.com/articles/610757/marvell-technology-stocks-multiple-leans-on-profit-from-below-the-operating-line/2026-08-10",
           "published": 1786392073,
           "sentiment": 0.44
-        },
-        {
-          "title": "Broadcom Boosts VCF Security: Can it Fend Off Nutanix and IBM?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/articles/broadcom-boosts-vcf-security-fend-161900110.html",
-          "published": 1786378740,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.247
+      "news_sentiment": 0.132
     },
     {
       "ticker": "QCOM",
@@ -689,7 +689,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "120",
       "price_usd": 162.17,
-      "change_1d": "-3.61%",
+      "change_1d": "-0.01%",
       "change_1w": "+6.99%",
       "change_1m": "-11.85%",
       "change_ytd": "-5.30%",
@@ -699,8 +699,8 @@
       "high_gbp": "192",
       "high_usd": 259.92,
       "bar_pct": 29,
-      "market_cap_gbp_b": 126.074,
-      "market_cap_usd_b": 170.278,
+      "market_cap_gbp_b": 126.095,
+      "market_cap_usd_b": 170.279,
       "beta": 1.663,
       "pe_ratio": 19.19,
       "avg_volume_m": 19.15,
@@ -757,7 +757,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "198",
       "price_usd": 267.85,
-      "change_1d": "-5.44%",
+      "change_1d": "-0.02%",
       "change_1w": "+12.04%",
       "change_1m": "-10.42%",
       "change_ytd": "+133.46%",
@@ -767,8 +767,8 @@
       "high_gbp": "335",
       "high_usd": 452.7,
       "bar_pct": 48,
-      "market_cap_gbp_b": 211.801,
-      "market_cap_usd_b": 286.063,
+      "market_cap_gbp_b": 211.836,
+      "market_cap_usd_b": 286.064,
       "beta": 3.909,
       "pe_ratio": 284.95,
       "avg_volume_m": 9.48,
@@ -823,9 +823,9 @@
       "company_name": "ASML Holding",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "1283",
+      "price_gbp": "1284",
       "price_usd": 1733.48,
-      "change_1d": "-0.52%",
+      "change_1d": "-0.05%",
       "change_1w": "+5.54%",
       "change_1m": "+0.56%",
       "change_ytd": "+49.67%",
@@ -835,7 +835,7 @@
       "high_gbp": "1481",
       "high_usd": 1999.96,
       "bar_pct": 79,
-      "market_cap_gbp_b": 492.98,
+      "market_cap_gbp_b": 493.06,
       "market_cap_usd_b": 665.829,
       "beta": 1.365,
       "pe_ratio": 59.16,
@@ -891,9 +891,9 @@
       "company_name": "Micron Technology",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "637",
+      "price_gbp": "638",
       "price_usd": 861.0,
-      "change_1d": "-2.16%",
+      "change_1d": "-0.08%",
       "change_1w": "+3.80%",
       "change_1m": "-8.11%",
       "change_ytd": "+173.13%",
@@ -903,8 +903,8 @@
       "high_gbp": "929",
       "high_usd": 1255.0,
       "bar_pct": 65,
-      "market_cap_gbp_b": 719.971,
-      "market_cap_usd_b": 972.408,
+      "market_cap_gbp_b": 720.087,
+      "market_cap_usd_b": 972.407,
       "beta": 2.213,
       "pe_ratio": 19.84,
       "avg_volume_m": 51.46,
@@ -924,6 +924,20 @@
           "sentiment": 0.0
         },
         {
+          "title": "Micron vs. SK Hynix: Which Memory Chip Giant Is the Better Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/11/micron-vs-sk-hynix-memory-chip-giant-better-buy/",
+          "published": 1786437600,
+          "sentiment": 0.44
+        },
+        {
+          "title": "3 Dividend-Paying Industrial Stocks to Buy in August",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/11/3-dividend-paying-industrial-stocks-to-buy-in-augu/",
+          "published": 1786436700,
+          "sentiment": 0.0
+        },
+        {
           "title": "12 Nasdaq Stocks Doubled in 2026, But None Are Magnificent Seven",
           "publisher": "BeInCrypto",
           "url": "https://beincrypto.com/nasdaq-100-stocks-doubled-2026/",
@@ -936,23 +950,9 @@
           "url": "https://www.marketbeat.com/instant-alerts/micron-says-ai-memory-crunch-could-last-beyond-2027-as-dram-demand-soars-2026-08-10/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1786410248,
           "sentiment": -0.128
-        },
-        {
-          "title": "Stock Screening Made Simple: A Guide",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-screening-made-simple-guide-225800443.html",
-          "published": 1786402680,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Apple, Sionna, AbCellera, Sandisk, SpaceX, Berkshire,  and More Stocks That Explain Today\u2019s Market",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/stock-movers-e2d99041?siteid=yhoof2&yptr=yahoo",
-          "published": 1786395060,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.153
+      "news_sentiment": -0.065
     },
     {
       "ticker": "AMAT",
@@ -961,7 +961,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "387",
       "price_usd": 522.12,
-      "change_1d": "-3.67%",
+      "change_1d": "-0.06%",
       "change_1w": "+0.75%",
       "change_1m": "-9.26%",
       "change_ytd": "+94.67%",
@@ -971,8 +971,8 @@
       "high_gbp": "548",
       "high_usd": 739.67,
       "bar_pct": 63,
-      "market_cap_gbp_b": 306.927,
-      "market_cap_usd_b": 414.542,
+      "market_cap_gbp_b": 306.977,
+      "market_cap_usd_b": 414.543,
       "beta": 1.618,
       "pe_ratio": 50.74,
       "avg_volume_m": 9.64,
@@ -1029,7 +1029,7 @@
       "exchange": "NYSE",
       "price_gbp": "112",
       "price_usd": 151.05,
-      "change_1d": "+2.93%",
+      "change_1d": "+1.00%",
       "change_1w": "+6.49%",
       "change_1m": "+0.00%",
       "change_ytd": "-22.08%",
@@ -1039,8 +1039,8 @@
       "high_gbp": "256",
       "high_usd": 345.72,
       "bar_pct": 16,
-      "market_cap_gbp_b": 322.144,
-      "market_cap_usd_b": 435.095,
+      "market_cap_gbp_b": 322.197,
+      "market_cap_usd_b": 435.096,
       "beta": 1.718,
       "pe_ratio": 25.18,
       "avg_volume_m": 31.45,
@@ -1052,6 +1052,13 @@
       "vol_1w": 137388900,
       "vol_1m": 776050100,
       "news": [
+        {
+          "title": "INTC Stock Gains Overnight: Chipmaker Raising Share Sale To Over $20B?",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/intc-stock-gains-overnight-chipmaker-raising-share-sale-to-over-20-b/cZoZnuSRJfz",
+          "published": 1786429997,
+          "sentiment": 0.557
+        },
         {
           "title": "CRM Stock Has Bounced From This Price Before. Now What?",
           "publisher": "Trefis",
@@ -1079,16 +1086,9 @@
           "url": "https://finance.yahoo.com/video/market-expert-cautious-ai-trade-212036260.html",
           "published": 1786396836,
           "sentiment": 0.542
-        },
-        {
-          "title": "Nvidia Stock Falls. A $3 Billion AI Infrastructure Bet Could Be Next",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-stock-falls-3-billion-192611455.html",
-          "published": 1786389971,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.214
+      "news_sentiment": 0.325
     },
     {
       "ticker": "CRM",
@@ -1097,7 +1097,7 @@
       "exchange": "NYSE",
       "price_gbp": "146",
       "price_usd": 197.51,
-      "change_1d": "+2.92%",
+      "change_1d": "+0.50%",
       "change_1w": "+6.22%",
       "change_1m": "+15.35%",
       "change_ytd": "-21.73%",
@@ -1107,8 +1107,8 @@
       "high_gbp": "199",
       "high_usd": 269.11,
       "bar_pct": 42,
-      "market_cap_gbp_b": null,
-      "market_cap_usd_b": null,
+      "market_cap_gbp_b": 119.787,
+      "market_cap_usd_b": 161.761,
       "beta": 1.152,
       "pe_ratio": 22.32,
       "avg_volume_m": 14.9,
@@ -1165,7 +1165,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "202",
       "price_usd": 272.96,
-      "change_1d": "+3.00%",
+      "change_1d": "+0.26%",
       "change_1w": "+8.60%",
       "change_1m": "+18.36%",
       "change_ytd": "-18.10%",
@@ -1175,7 +1175,7 @@
       "high_gbp": "275",
       "high_usd": 370.86,
       "bar_pct": 46,
-      "market_cap_gbp_b": 80.335,
+      "market_cap_gbp_b": 80.348,
       "market_cap_usd_b": 108.502,
       "beta": 1.397,
       "pe_ratio": 15.17,
@@ -1187,8 +1187,44 @@
       "vol_1d": 4050400,
       "vol_1w": 21992100,
       "vol_1m": 114170800,
-      "news": [],
-      "news_sentiment": null
+      "news": [
+        {
+          "title": "CRM Stock Has Bounced From This Price Before. Now What?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/610733/crm-stock-has-bounced-from-this-price-before-now-what-2/2026-08-10",
+          "published": 1786401548,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The Options Market Says Adobe Stock Can Fall Over A Third Or Rise More Than Half",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/610759/the-options-market-says-adobe-stock-can-fall-over-a-third-or-rise-more-than-half/2026-08-10",
+          "published": 1786379411,
+          "sentiment": 0.0
+        },
+        {
+          "title": "What Are Wall Street Analysts' Target Price for Adobe Stock?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/3757535/what-are-wall-street-analysts-target-price-for-adobe-stock",
+          "published": 1786373198,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Salesforce Declines 17% Over the Past Year: How to Play CRM Stock?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-declines-17-over-past-131300699.html",
+          "published": 1786367580,
+          "sentiment": 0.34
+        },
+        {
+          "title": "25-Year-Old Lost $35 Billion of His Investors\u2019 Money. 2 Weeks Later, Silicon Valley Insiders Are Lining Up to Give Him More Cash.",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/08/10/25-year-old-lost-35-billion-of-his-investors-money-2-weeks-later-silicon-valley-insiders-are-lining-up-to-give-him-more-cash/",
+          "published": 1786359057,
+          "sentiment": -0.318
+        }
+      ],
+      "news_sentiment": 0.004
     },
     {
       "ticker": "NOW",
@@ -1197,7 +1233,7 @@
       "exchange": "NYSE",
       "price_gbp": "94",
       "price_usd": 127.44,
-      "change_1d": "+1.96%",
+      "change_1d": "+0.87%",
       "change_1w": "+11.60%",
       "change_1m": "+14.54%",
       "change_ytd": "-13.57%",
@@ -1207,8 +1243,8 @@
       "high_gbp": "144",
       "high_usd": 194.73,
       "bar_pct": 41,
-      "market_cap_gbp_b": 97.552,
-      "market_cap_usd_b": 131.756,
+      "market_cap_gbp_b": 97.567,
+      "market_cap_usd_b": 131.755,
       "beta": 0.93,
       "pe_ratio": 78.18,
       "avg_volume_m": 27.72,
@@ -1265,7 +1301,7 @@
       "exchange": "NYSE",
       "price_gbp": "248",
       "price_usd": 334.7,
-      "change_1d": "+1.36%",
+      "change_1d": "-0.03%",
       "change_1w": "+8.83%",
       "change_1m": "+24.59%",
       "change_ytd": "+54.45%",
@@ -1275,7 +1311,7 @@
       "high_gbp": "252",
       "high_usd": 340.5,
       "bar_pct": 97,
-      "market_cap_gbp_b": 85.892,
+      "market_cap_gbp_b": 85.906,
       "market_cap_usd_b": 116.008,
       "beta": 1.315,
       "pe_ratio": null,
@@ -1288,6 +1324,13 @@
       "vol_1w": 27073400,
       "vol_1m": 106807100,
       "news": [
+        {
+          "title": "Is Snowflake\u2019s (SNOW) New AI Security Push Quietly Redefining Its Competitive Moat?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/snowflake-snow-ai-security-push-071301507.html",
+          "published": 1786432381,
+          "sentiment": 0.477
+        },
         {
           "title": "Snowflake Inc. (SNOW) Rises As Market Takes a Dip: Key Facts",
           "publisher": "Zacks",
@@ -1315,16 +1358,9 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/snowflake-snow-added-no-code-161025001.html",
           "published": 1786378225,
           "sentiment": -0.296
-        },
-        {
-          "title": "1 Software Stock to Own for Decades and 2 We Question",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/1-software-stock-own-decades-123722468.html",
-          "published": 1786365442,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.052
+      "news_sentiment": 0.148
     },
     {
       "ticker": "INTU",
@@ -1333,7 +1369,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "248",
       "price_usd": 334.43,
-      "change_1d": "+2.46%",
+      "change_1d": "+0.23%",
       "change_1w": "+5.04%",
       "change_1m": "+15.42%",
       "change_ytd": "-46.37%",
@@ -1343,7 +1379,7 @@
       "high_gbp": "534",
       "high_usd": 721.54,
       "bar_pct": 17,
-      "market_cap_gbp_b": 67.731,
+      "market_cap_gbp_b": 67.742,
       "market_cap_usd_b": 91.479,
       "beta": 0.959,
       "pe_ratio": 19.84,
@@ -1401,7 +1437,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "167",
       "price_usd": 225.16,
-      "change_1d": "+5.05%",
+      "change_1d": "+0.74%",
       "change_1w": "+11.17%",
       "change_1m": "+19.82%",
       "change_ytd": "+98.56%",
@@ -1411,7 +1447,7 @@
       "high_gbp": "168",
       "high_usd": 226.9,
       "bar_pct": 99,
-      "market_cap_gbp_b": 169.752,
+      "market_cap_gbp_b": 169.78,
       "market_cap_usd_b": 229.271,
       "beta": 1.234,
       "pe_ratio": null,
@@ -1469,7 +1505,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "285",
       "price_usd": 385.04,
-      "change_1d": "+5.66%",
+      "change_1d": "+0.16%",
       "change_1w": "+10.92%",
       "change_1m": "+16.57%",
       "change_ytd": "+114.66%",
@@ -1479,8 +1515,8 @@
       "high_gbp": "285",
       "high_usd": 385.17,
       "bar_pct": 99,
-      "market_cap_gbp_b": 232.343,
-      "market_cap_usd_b": 313.807,
+      "market_cap_gbp_b": 232.381,
+      "market_cap_usd_b": 313.808,
       "beta": 0.893,
       "pe_ratio": 313.04,
       "avg_volume_m": 7.89,
@@ -1537,7 +1573,7 @@
       "exchange": "NYSE",
       "price_gbp": "230",
       "price_usd": 310.59,
-      "change_1d": "+2.84%",
+      "change_1d": "+0.55%",
       "change_1w": "+9.85%",
       "change_1m": "+15.23%",
       "change_ytd": "+58.45%",
@@ -1547,8 +1583,8 @@
       "high_gbp": "240",
       "high_usd": 324.73,
       "bar_pct": 91,
-      "market_cap_gbp_b": 81.884,
-      "market_cap_usd_b": 110.594,
+      "market_cap_gbp_b": 81.898,
+      "market_cap_usd_b": 110.595,
       "beta": 1.66,
       "pe_ratio": null,
       "avg_volume_m": 3.75,
@@ -1605,7 +1641,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "122",
       "price_usd": 164.21,
-      "change_1d": "+2.74%",
+      "change_1d": "-0.12%",
       "change_1w": "+0.61%",
       "change_1m": "+2.24%",
       "change_ytd": "+110.85%",
@@ -1615,8 +1651,8 @@
       "high_gbp": "127",
       "high_usd": 172.09,
       "bar_pct": 92,
-      "market_cap_gbp_b": 89.206,
-      "market_cap_usd_b": 120.484,
+      "market_cap_gbp_b": 89.22,
+      "market_cap_usd_b": 120.483,
       "beta": 1.058,
       "pe_ratio": 56.43,
       "avg_volume_m": 6.09,
@@ -1673,7 +1709,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "56",
       "price_usd": 76.29,
-      "change_1d": "+2.85%",
+      "change_1d": "-0.04%",
       "change_1w": "+4.04%",
       "change_1m": "+3.33%",
       "change_ytd": "-16.16%",
@@ -1683,7 +1719,7 @@
       "high_gbp": "94",
       "high_usd": 126.71,
       "bar_pct": 18,
-      "market_cap_gbp_b": 235.201,
+      "market_cap_gbp_b": 235.239,
       "market_cap_usd_b": 317.667,
       "beta": 1.514,
       "pe_ratio": 23.33,
@@ -1741,7 +1777,7 @@
       "exchange": "NYSE",
       "price_gbp": "115",
       "price_usd": 155.18,
-      "change_1d": "+2.63%",
+      "change_1d": "+0.22%",
       "change_1w": "+32.62%",
       "change_1m": "+24.40%",
       "change_ytd": "-1.28%",
@@ -1751,8 +1787,8 @@
       "high_gbp": "135",
       "high_usd": 182.19,
       "bar_pct": 69,
-      "market_cap_gbp_b": 149.094,
-      "market_cap_usd_b": 201.37,
+      "market_cap_gbp_b": 147.853,
+      "market_cap_usd_b": 199.661,
       "beta": 2.59,
       "pe_ratio": 102.09,
       "avg_volume_m": 10.26,
@@ -1809,7 +1845,7 @@
       "exchange": "NYSE",
       "price_gbp": "379",
       "price_usd": 511.82,
-      "change_1d": "+4.48%",
+      "change_1d": "+0.16%",
       "change_1w": "+5.24%",
       "change_1m": "+6.66%",
       "change_ytd": "-10.99%",
@@ -1819,8 +1855,8 @@
       "high_gbp": "554",
       "high_usd": 748.3,
       "bar_pct": 31,
-      "market_cap_gbp_b": 77.906,
-      "market_cap_usd_b": 105.221,
+      "market_cap_gbp_b": 77.933,
+      "market_cap_usd_b": 105.241,
       "beta": 1.581,
       "pe_ratio": 26.52,
       "avg_volume_m": 2.04,
@@ -1877,7 +1913,7 @@
       "exchange": "NYSE",
       "price_gbp": "58",
       "price_usd": 78.03,
-      "change_1d": "+4.10%",
+      "change_1d": "+0.12%",
       "change_1w": "+8.97%",
       "change_1m": "+5.08%",
       "change_ytd": "-5.83%",
@@ -1887,7 +1923,7 @@
       "high_gbp": "76",
       "high_usd": 101.99,
       "bar_pct": 34,
-      "market_cap_gbp_b": 118.006,
+      "market_cap_gbp_b": 118.025,
       "market_cap_usd_b": 159.381,
       "beta": 1.154,
       "pe_ratio": 16.46,
@@ -1945,7 +1981,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "91",
       "price_usd": 122.57,
-      "change_1d": "+0.72%",
+      "change_1d": "-0.24%",
       "change_1w": "+5.79%",
       "change_1m": "+2.78%",
       "change_ytd": "+62.67%",
@@ -1955,7 +1991,7 @@
       "high_gbp": "97",
       "high_usd": 130.37,
       "bar_pct": 88,
-      "market_cap_gbp_b": 357.688,
+      "market_cap_gbp_b": 357.746,
       "market_cap_usd_b": 483.101,
       "beta": 1.002,
       "pe_ratio": 40.45,
@@ -2013,7 +2049,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "130",
       "price_usd": 175.23,
-      "change_1d": "+1.99%",
+      "change_1d": "+1.32%",
       "change_1w": "+39.46%",
       "change_1m": "+34.75%",
       "change_ytd": "+4.39%",
@@ -2023,8 +2059,8 @@
       "high_gbp": "154",
       "high_usd": 207.52,
       "bar_pct": 68,
-      "market_cap_gbp_b": 311.773,
-      "market_cap_usd_b": 421.087,
+      "market_cap_gbp_b": 311.824,
+      "market_cap_usd_b": 421.088,
       "beta": 1.563,
       "pe_ratio": 147.25,
       "avg_volume_m": 43.65,
