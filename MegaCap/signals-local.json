@@ -1,9 +1,176 @@
 {
-  "updated": "2026-08-10 09:34",
+  "updated": "2026-08-12 09:22",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "Azure growth 43% and Goldman Sachs adding to Conviction List drive +28.85% 1M momentum; P/E 28 is reasonable for AI leader.",
+      "drivers": [
+        "1M +28.85%",
+        "P/E 28",
+        "Strong_buy consensus",
+        "Azure 43% growth"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "Cloud backlog up 27% and Autonomous Enterprise strategy fuel +31% 1M surge; P/E 27 offers value.",
+      "drivers": [
+        "1M +31.07%",
+        "Cloud backlog +27%",
+        "Buy consensus",
+        "P/E 27"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +20% with strong_buy consensus; P/E 22 attractive for cloud and e-commerce leader.",
+      "drivers": [
+        "YTD +20.21%",
+        "P/E 22.37",
+        "Strong_buy consensus",
+        "1M +10.09%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "AI computing demand tailwinds; strong_buy consensus and P/E 33 reflect growth premium.",
+      "drivers": [
+        "YTD +15.31%",
+        "Strong_buy consensus",
+        "P/E 33.36",
+        "1M +6.86%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +32.7% with highest news sentiment (0.37); key AI chip manufacturer with strong_buy.",
+      "drivers": [
+        "YTD +32.74%",
+        "News sentiment 0.371",
+        "Strong_buy consensus",
+        "P/E 36.64"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +55.4% with strong_buy; monopoly in EUV lithography for advanced chips.",
+      "drivers": [
+        "YTD +55.36%",
+        "Strong_buy consensus",
+        "P/E 61.41",
+        "1M +4.38%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +20.1% with strong_buy; diversified semiconductor and infrastructure software.",
+      "drivers": [
+        "YTD +20.13%",
+        "Strong_buy consensus",
+        "1M +8.34%",
+        "P/E 70.4"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong_buy at cheap P/E 20; 1M +13.8% momentum as China internet rotation picks up.",
+      "drivers": [
+        "P/E 20.29",
+        "Strong_buy consensus",
+        "1M +13.80%",
+        "YTD -17.15% (value play)"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BLK",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Highest news sentiment 0.328; 1M +11.4% with buy consensus; asset manager benefiting from AI infrastructure financing.",
+      "drivers": [
+        "News sentiment 0.328",
+        "1M +11.37%",
+        "YTD +7.07%",
+        "Buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +20.5% with 1M +14% momentum; defense and aerospace demand supports growth.",
+      "drivers": [
+        "YTD +20.45%",
+        "1M +13.99%",
+        "Buy consensus",
+        "P/E 39.55"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+148.12%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +148.12% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +148.12% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.936,
+      "ytd": "+134.40%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +134.40% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +134.40% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.781,
+      "ytd": "+112.25%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +112.25% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +112.25% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,173 +299,6 @@
         "P/E 19.88",
         "strong_buy",
         "TSMC JV catalyst"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+146.29%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +146.29% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +146.29% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.81,
-      "ytd": "+116.30%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +116.30% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +116.30% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.52,
-      "ytd": "+158.13%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +158.13% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +158.13% \u2265 152.1% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Azure crossed $100B annual revenue, Copilot 30M paid seats, Goldman added to Conviction List with $640 target; +27.4% 1M, P/E 26.2.",
-      "drivers": [
-        "+27.4% 1M momentum",
-        "Azure $100B revenue",
-        "Goldman Conviction List",
-        "P/E 26.2"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+20.2% 1W, +22.5% YTD, P/E 22.8, AI capex expected >$200B, short squeeze catalyst.",
-      "drivers": [
-        "+20.2% 1W",
-        "AI capex >$200B",
-        "P/E 22.8",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BABA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "+31.7% 1M, Qwen AI model launch, cloud revenue +38% YoY, P/E 19.5, analyst strong_buy.",
-      "drivers": [
-        "+31.7% 1M momentum",
-        "Qwen AI catalyst",
-        "P/E 19.5",
-        "cloud revenue +38%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "+11.8% 1M, +20.7% YTD, strong_buy consensus, AI semiconductor infrastructure play, P/E 69.2 but justified.",
-      "drivers": [
-        "+11.8% 1M",
-        "strong_buy consensus",
-        "AI semiconductor demand",
-        "YTD +20.7%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "+13.2% 1W, +20% YTD, P/E 18.7, strong_buy, cheap valuation relative to growth.",
-      "drivers": [
-        "P/E 18.7",
-        "+13.2% 1W",
-        "YTD +20%",
-        "strong_buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+13.3% 1M, +24.5% YTD, P/E 18.6, record profits, dividend yield 3.7%.",
-      "drivers": [
-        "+13.3% 1M",
-        "P/E 18.6",
-        "record profits",
-        "dividend 3.7%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+12.8% 1M, +27.2% YTD, P/E 26, record profits, but analyst score 2.4 (buy).",
-      "drivers": [
-        "+27.2% YTD",
-        "+12.8% 1M",
-        "record profits",
-        "P/E 26"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+21.8% 1M, +9.1% 1W, P/E 24.6, AI beneficiary in enterprise software, analyst buy.",
-      "drivers": [
-        "+21.8% 1M",
-        "AI enterprise play",
-        "P/E 24.6",
-        "European tech winner"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BLK",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+11.9% 1M, P/E 27, buy consensus, asset management AUM growth, YTD +5.4%.",
-      "drivers": [
-        "+11.9% 1M",
-        "P/E 27",
-        "buy consensus",
-        "asset management"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+11.1% 1M, news sentiment +0.416, P/E 34.7, healthcare turnaround potential, YTD -13.5%.",
-      "drivers": [
-        "+11.1% 1M",
-        "positive news sentiment",
-        "healthcare",
-        "P/E 34.7"
       ]
     }
   ]

@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-10 09:32",
+  "updated": "2026-08-12 09:20",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Strong across all timeframes: +9.35% 1m, +6.32% 1w, +3.21% 1d, and a bullish catalyst from Standard Chartered's 2,300% upside prediction [coindesk.com](https://www.coindesk.com/markets/2026/02/12/bitcoin-tumbles-back-near-last-week-s-lows-as-ai-fears-crush-tech-and-precious-metals-plunge). Market cap $6.5B.",
+      "drivers": [
+        "+9.35% 1-month return",
+        "Standard Chartered 2,300% upside prediction",
+        "Positive 1w and 1d momentum",
+        "Mid-cap infrastructure asset"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Best YTD in the universe at +18%, with consistent 1w +2.60% and 1d +1.17% gains. Large $31.8B market cap and steady positive momentum despite low volatility [coingecko.com](https://www.coingecko.com/).",
+      "drivers": [
+        "+18% YTD (best in universe)",
+        "+2.60% 1-week gain",
+        "Large $31.8B market cap",
+        "Steady positive momentum"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "Strong 1m +7.31% and 1d +1.86%, with positive news sentiment (0.132). Large $81.3B market cap provides stability while still offering momentum [coindesk.com](https://www.coindesk.com/markets/2026/02/12/bitcoin-tumbles-back-near-last-week-s-lows-as-ai-fears-crush-tech-and-precious-metals-plunge).",
+      "drivers": [
+        "+7.31% 1-month return",
+        "+1.86% 1-day gain",
+        "Positive news sentiment 0.132",
+        "Large-cap $81.3B market cap"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1m +4.01% with whale accumulation (exchange outflows near 2-year high). $1.17B market cap, high beta meme asset with potential for further upside [coingecko.com](https://www.coingecko.com/).",
+      "drivers": [
+        "+4.01% 1-month return",
+        "Whale accumulation (exchange outflows)",
+        "Meme coin with high beta",
+        "Positive on-chain activity"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "1m +5.99% and 1d +0.75%, with a massive $227.4B market cap. Despite slightly negative news sentiment (-0.012), Ethereum remains the core smart contract layer and benefits from scaling activity [thedefiant.io](https://thedefiant.io/news/markets/bitcoin-under-usd66000-crypto-market-update-feb-12-2026).",
+      "drivers": [
+        "+5.99% 1-month return",
+        "Large $227.4B market cap",
+        "Core smart contract platform",
+        "Scaling and L2 ecosystem growth"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DOGE",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "1w +2.45% and 1d +2.01% with positive news sentiment (0.154). $11.1B market cap, leading meme coin with strong community and potential for retail-driven rallies [coingecko.com](https://www.coingecko.com/).",
+      "drivers": [
+        "+2.01% 1-day gain",
+        "+2.45% 1-week gain",
+        "Positive news sentiment 0.154",
+        "Large $11.1B meme coin market cap"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1m +16.17% despite Grayscale ETF drop news. $6.8B market cap, showing strong short-term momentum that could continue if broader market sentiment improves [coingecko.com](https://www.coingecko.com/).",
+      "drivers": [
+        "+16.17% 1-month return",
+        "Strong momentum despite negative ETF news",
+        "Mid-cap $6.8B market cap",
+        "Potential for recovery"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1w +5.71% with a $1.24B market cap. Recent positive momentum after a period of weakness, and the AI-focused narrative could attract renewed interest [coingecko.com](https://www.coingecko.com/).",
+      "drivers": [
+        "+5.71% 1-week gain",
+        "AI-focused narrative",
+        "Small-cap $1.24B market cap",
+        "Recent positive momentum"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.66,
+      "rationale": "1w +2.78% and 1d +0.32%, with a large $44.3B market cap. Solana remains a top layer-1 with strong ecosystem activity, though sentiment is slightly negative (-0.084) [coindesk.com](https://www.coindesk.com/markets/2026/02/12/bitcoin-tumbles-back-near-last-week-s-lows-as-ai-fears-crush-tech-and-precious-metals-plunge).",
+      "drivers": [
+        "+2.78% 1-week gain",
+        "Large $44.3B market cap",
+        "Top layer-1 ecosystem",
+        "Strong institutional interest"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.63,
+      "rationale": "1m +1.22% with $1,275B market cap. Fear & Greed at an all-time low of 5 suggests contrarian opportunity; Bitcoin remains the reference asset and could rally on any positive macro catalyst [thedefiant.io](https://thedefiant.io/news/markets/bitcoin-under-usd66000-crypto-market-update-feb-12-2026).",
+      "drivers": [
+        "+1.22% 1-month return",
+        "Fear & Greed at an all-time low of 5",
+        "Largest $1,275B market cap",
+        "Contrarian buy opportunity"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BTC",
@@ -127,139 +260,6 @@
         "+10.20% 1d",
         "+7.43% 1w",
         "short-term momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "BTC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "BTC is the reference asset with +0.87% 1D momentum, positive news sentiment 0.401, and on-chain accumulation near $62-65K with 155K BTC moved into that range, plus a potential Hormuz deal catalyst.",
-      "drivers": [
-        "+0.87% 1D, +2.05% 1M",
-        "news_s 0.401",
-        "accumulation at $62-65K",
-        "Hormuz deal catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BNB",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "BNB leads majors with +5.39% 1W and +1.71% 1D, positive sentiment 0.188, and strong market cap of $80B, making it a top momentum play.",
-      "drivers": [
-        "+5.39% 1W",
-        "+1.71% 1D",
-        "mc_usd_b 80.0",
-        "news_s 0.188"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ADA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "ADA is the top weekly gainer at +15.77% 1W, though 1D is -2.70% and sentiment is negative -0.089; momentum is strong but volatility is high.",
-      "drivers": [
-        "+15.77% 1W",
-        "+3.60% 1M",
-        "news_s -0.089",
-        "top weekly gainer"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ALGO",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "ALGO shows +12.63% 1W and +1.42% 1M with positive sentiment 0.202, and is highlighted as a top altcoin to watch, though market cap is small at $0.8B.",
-      "drivers": [
-        "+12.63% 1W",
-        "news_s 0.202",
-        "top altcoin watch",
-        "small cap $0.8B"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "PEPE has +6.26% 1M and +2.92% 1W, showing resilience in the meme category, though 1D is -2.63% and market cap is $1.18B.",
-      "drivers": [
-        "+6.26% 1M",
-        "+2.92% 1W",
-        "mc_usd_b 1.18",
-        "meme momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "LINK has +3.08% 1M and a major catalyst with BitGo migrating $7.7B WBTC to CCIP, but 1W is -2.91% and sentiment is neutral 0.0.",
-      "drivers": [
-        "+3.08% 1M",
-        "BitGo $7.7B WBTC migration",
-        "news_s 0.0",
-        "institutional adoption"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "POL has +5.10% 1W and +1.93% 1D, with a small market cap of $0.8B, offering high beta potential.",
-      "drivers": [
-        "+5.10% 1W",
-        "+1.93% 1D",
-        "small cap $0.8B",
-        "infra momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "ETH has +5.54% 1M and positive sentiment 0.222, but 1W is -2.50% and it is the only major down on the week, showing mixed signals.",
-      "drivers": [
-        "+5.54% 1M",
-        "news_s 0.222",
-        "1W -2.50%",
-        "large cap $225B"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "KAITO",
-      "signal": "buy",
-      "confidence": 0.582,
-      "rationale": "KAITO has +83.62% YTD and +54.23% 1M, but 1W is -24.29% showing extreme volatility; high momentum but risky.",
-      "drivers": [
-        "+83.62% YTD",
-        "+54.23% 1M",
-        "1W -24.29%",
-        "high beta"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "OCEAN shows +454.11% 1M and +7.21% 1D, but price is near zero and market cap is null, indicating a possible delisting or data issue; speculative.",
-      "drivers": [
-        "+454.11% 1M",
-        "+7.21% 1D",
-        "price near zero",
-        "speculative"
       ]
     }
   ]

@@ -1,9 +1,297 @@
 {
-  "updated": "2026-08-10 09:25",
+  "updated": "2026-08-12 09:16",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AXTI",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Staggering +340% YTD and +46% 1M momentum are backed by record $100M+ InP backlog and a landmark $22.3M supply deal with Coherent; analyst price target of $125 implies 70% upside from $73.78.",
+      "drivers": [
+        "+340% YTD",
+        "+46% 1M chg",
+        "record InP backlog",
+        "$125 PT vs $73.78"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AAOI",
+      "signal": "strong_buy",
+      "confidence": 0.787,
+      "rationale": "Explosive +239% YTD and +20% 1M gain driven by surging demand for AI optical components; positive news sentiment 0.104 with recent analyst commentary highlighting AI tailwinds.",
+      "drivers": [
+        "+239% YTD",
+        "+20% 1M chg",
+        "AI optical demand",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Blue-chip hyperscaler with strong_buy analyst consensus (score 1.36) and +28.85% 1M rebound; P/E of 28 is reasonable given Azure AI growth and $3.7T market cap stability.",
+      "drivers": [
+        "strong_buy consensus",
+        "+28.85% 1M chg",
+        "P/E 28",
+        "$3.7T market cap"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ETN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Power infrastructure leader up +41.5% YTD with exceptional +14.29% 1M momentum driven by AI data center electrification demand; P/E 45 is justified by robust backlog.",
+      "drivers": [
+        "+41.5% YTD",
+        "+14.29% 1M chg",
+        "AI data center demand",
+        "P/E 45"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "P",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Memory stock surging +45% 1M and +58.5% YTD amid 'chipflation' narrative cited by Morgan Stanley; beta 1.4, P/E 150 reflects extreme growth expectations.",
+      "drivers": [
+        "+45% 1M chg",
+        "+58.5% YTD",
+        "'chipflation' catalyst",
+        "strong 1W +30%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "FN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Fiber-optical play up +10.8% 1M with healthy P/E 45 and low beta 1.2; news sentiment 0.143, positioned to benefit from coherent optics demand in AI networks.",
+      "drivers": [
+        "+10.8% 1M chg",
+        "P/E 45",
+        "beta 1.2",
+        "AI optical networking"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SMCI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AI server maker rallying +14.24% 1M after upbeat outlook despite hold consensus; P/E 16.5 is attractive and short interest 18.45% could fuel a squeeze with positive news sentiment 0.412.",
+      "drivers": [
+        "+14.24% 1M chg",
+        "P/E 16.5",
+        "upbeat outlook",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "LEU",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Uranium enricher up +21.24% 1M with buy consensus and strong news sentiment 0.3; backlog growth and expansion plans support the nuclear renaissance theme.",
+      "drivers": [
+        "+21.24% 1M chg",
+        "buy consensus",
+        "news sentiment 0.3",
+        "nuclear renaissance"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "UEC",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Uranium stock with strong_buy consensus (score 1.44) and highest news sentiment in universe at 0.554; +13.8% 1M momentum reflects growing nuclear fuel demand.",
+      "drivers": [
+        "strong_buy consensus",
+        "news sentiment 0.554",
+        "+13.8% 1M chg",
+        "nuclear fuel demand"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SMR",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "Small modular reactor stock rebounding +18.44% 1M and +7.6% 1D as nuclear AI data center interest revives; high beta 2.3 and short interest 19.43% add upside risk.",
+      "drivers": [
+        "+18.44% 1M chg",
+        "nuclear AI catalyst",
+        "beta 2.3",
+        "high short interest"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+361.80%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +361.80% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +361.80% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+337.97%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +337.97% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +337.97% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "MRVL",
+      "signal": "buy",
+      "confidence": 0.96,
+      "ytd": "+137.86%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +137.86% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +137.86% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "WDC",
+      "signal": "buy",
+      "confidence": 0.929,
+      "ytd": "+133.49%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +133.49% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +133.49% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "strong_buy",
+      "confidence": 0.897,
+      "ytd": "+272.88%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +272.88% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +272.88% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "signal": "strong_buy",
+      "confidence": 0.816,
+      "ytd": "+248.20%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +248.20% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +248.20% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "signal": "buy",
+      "confidence": 0.783,
+      "ytd": "+112.53%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +112.53% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +112.53% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "VIAV",
+      "signal": "buy",
+      "confidence": 0.777,
+      "ytd": "+111.57%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +111.57% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +111.57% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "STX",
+      "signal": "strong_buy",
+      "confidence": 0.612,
+      "ytd": "+186.06%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +186.06% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +186.06% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.577,
+      "ytd": "+175.51%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +175.51% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +175.51% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "POWL",
+      "signal": "buy",
+      "confidence": 0.539,
+      "ytd": "+77.48%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +77.48% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +77.48% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "SMTC",
+      "signal": "buy",
+      "confidence": 0.517,
+      "ytd": "+74.30%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +74.30% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +74.30% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "HUT",
+      "signal": "buy",
+      "confidence": 0.509,
+      "ytd": "+73.16%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +73.16% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +73.16% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "CRDO",
+      "signal": "buy",
+      "confidence": 0.508,
+      "ytd": "+72.94%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +72.94% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +72.94% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AXTI",
@@ -132,294 +420,6 @@
         "Very positive news sentiment 0.462",
         "Uranium sector demand",
         "Momentum despite no analyst coverage"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "SNDK",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+340.42%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +340.42% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +340.42% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "285A",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+321.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +321.06% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +321.06% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "MRVL",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+145.04%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +145.04% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +145.04% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "MXL",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+305.08%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +305.08% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +305.08% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "WDC",
-      "signal": "buy",
-      "confidence": 0.916,
-      "ytd": "+131.55%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +131.55% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +131.55% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.849,
-      "ytd": "+258.31%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +258.31% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +258.31% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "VIAV",
-      "signal": "buy",
-      "confidence": 0.805,
-      "ytd": "+115.65%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +115.65% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +115.65% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "STX",
-      "signal": "strong_buy",
-      "confidence": 0.603,
-      "ytd": "+183.35%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +183.35% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +183.35% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "SMTC",
-      "signal": "buy",
-      "confidence": 0.594,
-      "ytd": "+85.25%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +85.25% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +85.25% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.587,
-      "ytd": "+178.38%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +178.38% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +178.38% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "POWL",
-      "signal": "buy",
-      "confidence": 0.558,
-      "ytd": "+80.19%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +80.19% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +80.19% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "MTSI",
-      "signal": "buy",
-      "confidence": 0.541,
-      "ytd": "+77.65%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +77.65% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +77.65% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "CRDO",
-      "signal": "buy",
-      "confidence": 0.519,
-      "ytd": "+74.48%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +74.48% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +74.48% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "HUT",
-      "signal": "buy",
-      "confidence": 0.507,
-      "ytd": "+72.79%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +72.79% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +72.79% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "MSFT shows strong momentum (+28.55% 1M, +10.81% 1W) with a low P/E of 27.18, strong_buy analyst consensus, and positive news sentiment of 0.273, reflecting growing AI monetization.",
-      "drivers": [
-        "+28.55% 1M momentum",
-        "P/E 27.18",
-        "strong_buy consensus",
-        "news sentiment 0.273"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "AMZN combines strong momentum (+10.68% 1M, +15.61% 1W) with a compelling P/E of 21.92, strong_buy rating, and positive news sentiment of 0.089, supported by hyperscaler AI demand.",
-      "drivers": [
-        "+10.68% 1M momentum",
-        "P/E 21.92",
-        "strong_buy consensus",
-        "hyperscaler AI tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ETN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "ETN has solid momentum (+13.27% 1M, +15.84% 1W), a reasonable P/E of 45.46, buy consensus, and positive news sentiment of 0.1, with a catalyst from winning an Air Force quantum grid contract.",
-      "drivers": [
-        "+13.27% 1M momentum",
-        "P/E 45.46",
-        "Air Force quantum grid contract",
-        "news sentiment 0.1"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "FN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "FN exhibits strong momentum (+16.11% 1M, +23.81% 1W) with a reasonable P/E of 44.84, buy consensus, and positive news sentiment of 0.197, benefiting from fibre-optical demand.",
-      "drivers": [
-        "+16.11% 1M momentum",
-        "P/E 44.84",
-        "buy consensus",
-        "news sentiment 0.197"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "KEYS",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "KEYS shows good momentum (+9.01% 1M, +7.76% 1W) with a P/E of 54.09, buy consensus, and the highest news sentiment in the universe at 0.478, driven by test-equipment demand.",
-      "drivers": [
-        "+9.01% 1M momentum",
-        "P/E 54.09",
-        "buy consensus",
-        "news sentiment 0.478"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "LITE",
-      "signal": "buy",
-      "confidence": 0.815,
-      "rationale": "LITE has very strong momentum (+19.91% 1M, +20.89% 1W) with a buy consensus and news sentiment of 0.282, though the P/E of 144.99 is elevated; fibre-optical growth justifies the premium.",
-      "drivers": [
-        "+19.91% 1M momentum",
-        "buy consensus",
-        "news sentiment 0.282",
-        "fibre-optical growth"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "DLR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "DLR offers solid momentum (+10.10% 1M) with a buy consensus, news sentiment of 0.099, and extremely low short interest of 0.01%, though the P/E of 243.75 is high; data center demand supports the valuation.",
-      "drivers": [
-        "+10.10% 1M momentum",
-        "buy consensus",
-        "short interest 0.01%",
-        "data center demand"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AXTI",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "AXTI has exceptional momentum (+29.27% 1M, +60.14% 1W, +348.51% YTD) with a buy consensus and news sentiment of 0.242; web search confirms upward earnings revisions and a Zacks Momentum Score A, though P/E of 2505 is extreme.",
-      "drivers": [
-        "+29.27% 1M momentum",
-        "Zacks Momentum Score A",
-        "upward earnings revisions",
-        "news sentiment 0.242"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "MU has a strong_buy consensus, low P/E of 20.2, and positive news sentiment of 0.218, with a memory upcycle catalyst from the new HBF standard and analyst upgrades, despite flat 1M momentum.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 20.2",
-        "memory upcycle catalyst",
-        "news sentiment 0.218"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "VRT",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "VRT has strong_buy consensus, strong 1W momentum (+20.95%), a P/E of 62.82, and news sentiment of 0.266, benefiting from power infrastructure demand for AI data centers.",
-      "drivers": [
-        "strong_buy consensus",
-        "+20.95% 1W momentum",
-        "P/E 62.82",
-        "AI power demand"
       ]
     }
   ]
