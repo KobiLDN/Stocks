@@ -1,9 +1,136 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-12 09:21",
+  "updated": "2026-08-14 09:21",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +117.7%, 1M +17.5%, P/E 12.1, analyst buy, refining margins boosted by Iran war disruptions.",
+      "drivers": [
+        "YTD +117.7%",
+        "1M +17.5%",
+        "P/E 12.1",
+        "refining catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +110.5%, 1M +14.2%, P/E 13.8, analyst buy, strong refining momentum.",
+      "drivers": [
+        "YTD +110.5%",
+        "1M +14.2%",
+        "P/E 13.8"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EQNR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +69%, 1M +12%, P/E 11.1, dividend yield 3.81%, positive news sentiment 0.262.",
+      "drivers": [
+        "YTD +69%",
+        "P/E 11.1",
+        "div 3.81%",
+        "news sentiment 0.262"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +29%, P/E 18.9, dividend 3.62%, analyst score 1.72 (very bullish), Q2 beat estimates with record US production.",
+      "drivers": [
+        "YTD +29%",
+        "analyst score 1.72",
+        "Q2 earnings beat",
+        "record production"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +30.7%, 1M +11.3%, P/E 16.8, analyst score 1.64 (most bullish), news sentiment 0.208.",
+      "drivers": [
+        "YTD +30.7%",
+        "1M +11.3%",
+        "analyst score 1.64"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +31%, P/E 20.6, dividend 2.58%, Q2 earnings $14.5B, record Permian production, strong cash flow.",
+      "drivers": [
+        "YTD +31%",
+        "Q2 earnings $14.5B",
+        "record Permian",
+        "dividend $1.03/q"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BKR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +36%, 1M +10.2%, P/E 20.7, analyst score 1.71, highest news sentiment 0.441.",
+      "drivers": [
+        "YTD +36%",
+        "news sentiment 0.441",
+        "analyst score 1.71"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +31%, 1M +9.5%, analyst score 1.6 (most bullish), news sentiment 0.334.",
+      "drivers": [
+        "YTD +31%",
+        "analyst score 1.6",
+        "news sentiment 0.334"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +32.3%, P/E 10.9, dividend yield 4.83%, low valuation.",
+      "drivers": [
+        "YTD +32.3%",
+        "P/E 10.9",
+        "div 4.83%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +22.5%, P/E 9.96, dividend 3.47%, analyst buy, low valuation.",
+      "drivers": [
+        "YTD +22.5%",
+        "P/E 9.96",
+        "div 3.47%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +259,6 @@ window.SIGNALS_DATA = {
         "1W +7.21%",
         "Short interest 0.01%",
         "Buffett-backed"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "EQNR",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +62.29%, P/E 10.55, 1M momentum +13.57%, news sentiment +0.35 \u2014 the strongest YTD return in the universe, low valuation, and positive sentiment underline very strong momentum.",
-      "drivers": [
-        "YTD +62.29%",
-        "1M +13.57%",
-        "P/E 10.55",
-        "news sentiment +0.35"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "YTD +82.17%, 1Y +88%, P/E 10.34, analyst buy consensus \u2014 massive refining margin tailwinds drive exceptional returns and compelling value.",
-      "drivers": [
-        "YTD +82.17%",
-        "1Y +88%",
-        "P/E 10.34",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +30.44%, P/E 10.74, dividend yield 4.94%, news sentiment +0.28 \u2014 strong integrated model, best dividend yield in the supermajor peer set, attractive valuation.",
-      "drivers": [
-        "YTD +30.44%",
-        "P/E 10.74",
-        "div yield 4.94%",
-        "news sentiment +0.28"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "XOM",
-      "signal": "strong_buy",
-      "confidence": 0.83,
-      "rationale": "YTD +26.46%, 1M +8.44%, Q2 adj EPS $3.52 beat $3.60 consensus, free cash flow $17.2B, $9.4B returned to shareholders \u2014 record Permian production and Guyana FPSO startup reinforce outlook.",
-      "drivers": [
-        "Q2 EPS $3.52",
-        "FCF $17.2B",
-        "YTD +26.46%",
-        "Permian record"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "YTD +19.48%, P/E 9.79, dividend yield 3.53%, news sentiment +0.34, Q2 adj earnings $9.8B with record Brazil upstream output \u2014 lowest P/E among majors and strong operational delivery.",
-      "drivers": [
-        "P/E 9.79",
-        "Q2 adj earnings $9.8B",
-        "YTD +19.48%",
-        "news sentiment +0.34"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +19.04%, Q2 underlying profit $5.7B beat $5B consensus, dividend +4%, net debt reduced to $22.25B \u2014 restructuring and asset sales improving the balance sheet with 27% YTD stock gain.",
-      "drivers": [
-        "Q2 profit $5.7B beat",
-        "div +4%",
-        "net debt $22.25B",
-        "YTD +19.04%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BKR",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +31.98%, 1M +7.29%, analyst score 1.71 (strong buy consensus), LNG and gas turbine orders secured \u2014 services demand fueled by global LNG expansion cycle.",
-      "drivers": [
-        "YTD +31.98%",
-        "1M +7.29%",
-        "analyst score 1.71",
-        "LNG orders"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "YTD +23.48%, P/E 15.56, 1M +6.22%, analyst score 1.72 \u2014 strong upstream position and positive Q2 earnings highlights with supportive oil price environment.",
-      "drivers": [
-        "YTD +23.48%",
-        "P/E 15.56",
-        "1M +6.22%",
-        "analyst score 1.72"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +27.10%, 1M +6.54%, 1Y +56%, analyst score 1.60 \u2014 best analyst consensus in the universe, international drilling upturn supports revenue growth.",
-      "drivers": [
-        "YTD +27.10%",
-        "1Y +56%",
-        "analyst score 1.60",
-        "1M +6.54%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1W +18.49%, 1M +11.48%, P/E 25.52, news sentiment +0.09 \u2014 strong short-term momentum after tariff news, though YTD -8.85% and high short interest 12.03% add risk.",
-      "drivers": [
-        "1W +18.49%",
-        "1M +11.48%",
-        "P/E 25.52",
-        "short interest 12.03%"
       ]
     }
   ]

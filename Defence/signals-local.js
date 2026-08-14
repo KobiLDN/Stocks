@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-12 09:18",
+  "updated": "2026-08-14 09:19",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "CACI delivered a 42.99% 1-month return, YTD +24.67%, with P/E of 28.17 and positive news sentiment of 0.253. Web search shows FY2026 revenue up 10.9% to $9.6B, backlog up 28.6%, and new contracts like SkyValor drone defense at the Southern Border.",
+      "drivers": [
+        "42.99% 1M return",
+        "24.67% YTD",
+        "P/E 28.17",
+        "backlog growth 28.6%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Palantir surged 33.87% in the last month, with a 14.81% weekly gain, driven by a Q2 earnings beat (EPS $0.41 vs $0.35 expected) and revenue up 93% YoY to $1.94B, raising full-year guidance. P/E is high at 146.73 but momentum is strong.",
+      "drivers": [
+        "33.87% 1M return",
+        "Q2 revenue beat $1.94B",
+        "raised FY guidance",
+        "US commercial revenue +149%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Leidos gained 33.83% in the last month, P/E is low at 13.11, and news sentiment is 0.189. Web search confirms Q2 revenue up 7% to $4.56B, bookings of $5B, and raised FY2026 guidance, with a free cash flow conversion of 185%.",
+      "drivers": [
+        "33.83% 1M return",
+        "P/E 13.11",
+        "Q2 revenue $4.56B",
+        "raised FY guidance"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Rolls-Royce has a YTD return of +27.41%, 1-month return of +7.75%, and a very positive news sentiment of 0.416. Analyst consensus is buy with an average score of 1.60, and P/E is 42.36.",
+      "drivers": [
+        "27.41% YTD",
+        "7.75% 1M return",
+        "news sentiment 0.416",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SAIC shows a YTD return of +26.45%, a 1-month return of +11.18%, and a low P/E of 14.23. News sentiment is positive at 0.261, and the company has a strong backlog in the cyber-intel space.",
+      "drivers": [
+        "26.45% YTD",
+        "11.18% 1M return",
+        "P/E 14.23",
+        "news sentiment 0.261"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Leonardo DRS has a YTD return of +29.35%, a strong_buy analyst consensus with a score of 1.50, and a P/E of 37.9. Despite a slight 1-month decline, the company is well-positioned with defence programmes.",
+      "drivers": [
+        "29.35% YTD",
+        "strong_buy consensus",
+        "P/E 37.9",
+        "defence contractor"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Mercury Systems has a YTD return of +44.40%, a 1-month return of +9.44%, and a buy analyst consensus. P/E is null, but the company focuses on defence electronics with strong momentum.",
+      "drivers": [
+        "44.40% YTD",
+        "9.44% 1M return",
+        "buy consensus",
+        "defence electronics"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Axon has a 1-week return of +17.83%, a 1-month return of +12.49%, and a buy analyst consensus with a score of 1.71. P/E is high at 250.24, but news sentiment is positive at 0.114.",
+      "drivers": [
+        "17.83% 1W return",
+        "12.49% 1M return",
+        "buy consensus",
+        "news sentiment 0.114"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "KTOS",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "Kratos has a strong_buy analyst consensus (score 1.43) and a 1-month return of +24.68%. P/E is very high at 369.35, but YTD is -20.81%, showing recent momentum driven by drone tariffs news.",
+      "drivers": [
+        "24.68% 1M return",
+        "strong_buy consensus",
+        "drone sector catalyst",
+        "news on tariffs"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "BAE Systems (BA.L) has a YTD return of +27.49%, a 1-month return of +21.00%, and a buy analyst consensus. P/E is 31.94, but news sentiment is slightly negative at -0.001.",
+      "drivers": [
+        "27.49% YTD",
+        "21.00% 1M return",
+        "buy consensus",
+        "UK defence prime"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CACI",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "Dividend yield 3.03%",
         "+21.3% 1m momentum",
         "Positive news sentiment 0.40"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RTX",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "RTX has +20% YTD, P/E 39.2, analyst buy (score 1.87), and positive news sentiment 0.081; Q2 sales surged 14% YoY, adjusted EPS up 21%, and backlog hit $289B (+22% YoY) with $5B in GEM-T orders.",
-      "drivers": [
-        "+20% YTD",
-        "P/E 39.2",
-        "analyst buy",
-        "Q2 sales +14%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "CACI has +19.91% YTD, P/E 26.66, analyst buy (score 1.56), and news sentiment 0.14; Q4 revenue grew 17.6% YoY, backlog $32B, and secured a $500M C-UAS IDIQ contract for SkyValor.",
-      "drivers": [
-        "+19.91% YTD",
-        "P/E 26.66",
-        "analyst buy",
-        "Q4 revenue +17.6%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "LDOS has -24.57% YTD but +28.35% 1M, P/E 12.83, analyst buy (score 2.35), and news sentiment 0.215; Q2 net bookings $4.9B, backlog $48.7B, and raised FY2026 guidance (revenue $18.2-18.4B).",
-      "drivers": [
-        "+28.35% 1M",
-        "P/E 12.83",
-        "analyst buy",
-        "backlog $48.7B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "SAIC has +26.33% YTD, P/E 14.23, and news sentiment 0.177; strong momentum with +12.11% 1M and +8.03% 1W, and a cheap valuation relative to peers.",
-      "drivers": [
-        "+26.33% YTD",
-        "P/E 14.23",
-        "news sentiment 0.177",
-        "+12.11% 1M"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "KTOS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "KTOS has -23.36% YTD but +20.62% 1M, analyst strong_buy (score 1.43), and news sentiment 0.113; momentum is accelerating with +30.41% 1W, and the drone sector is a key defence growth area.",
-      "drivers": [
-        "+20.62% 1M",
-        "analyst strong_buy",
-        "+30.41% 1W",
-        "defence drone catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "AVAV has -27.11% YTD but +18.35% 1M, analyst buy (score 1.6), and a $400M Army Locust contract win; strong 1W momentum (+25.01%) and 1D (+8.88%) signal a turnaround.",
-      "drivers": [
-        "+18.35% 1M",
-        "analyst buy",
-        "$400M Army contract",
-        "+25.01% 1W"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "PLTR has +2.47% YTD but +30.09% 1M and +39.78% 1W, analyst buy (score 1.81), and news sentiment 0.253; high momentum driven by AI/defence demand, though P/E 147 is elevated.",
-      "drivers": [
-        "+30.09% 1M",
-        "analyst buy",
-        "news sentiment 0.253",
-        "AI/defence catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "RR.L has +27.83% YTD, P/E 42.5, analyst buy (score 1.6), and strong news sentiment 0.416; consistent momentum with +5.68% 1M and +4.24% 1W, backed by defence and civil aerospace growth.",
-      "drivers": [
-        "+27.83% YTD",
-        "analyst buy",
-        "news sentiment 0.416",
-        "+5.68% 1M"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "QQ.L has +24.58% YTD, P/E 27.68, analyst buy (score 1.75), and news sentiment 0.296; strong short-term momentum with +13.53% 1M and +9.39% 1W, and a small-cap defence play.",
-      "drivers": [
-        "+24.58% YTD",
-        "analyst buy",
-        "news sentiment 0.296",
-        "+13.53% 1M"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BA.L has +26.58% YTD, P/E 31.71, analyst buy (score 2.17), and news sentiment 0.048; positive momentum with +12.63% 1M and +6.02% 1W, though small market cap and lower sentiment.",
-      "drivers": [
-        "+26.58% YTD",
-        "analyst buy",
-        "+12.63% 1M",
-        "small-cap defence"
       ]
     }
   ]
