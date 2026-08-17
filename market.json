@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-17 07:38",
+  "updated": "2026-08-17 09:53",
   "spy": {
     "price": 776.34,
-    "change_1d": -0.23,
+    "change_1d": 0.05,
     "change_1w": 0.4,
     "change_1m": 2.85,
     "change_ytd": 14.24,
@@ -10,15 +10,15 @@
   },
   "qqq": {
     "price": 731.07,
-    "change_1d": -0.16,
+    "change_1d": 0.03,
     "change_1w": 1.11,
     "change_1m": 1.86,
     "change_ytd": 19.52,
     "change_1y": 27.24
   },
   "vix": {
-    "level": 14.25,
-    "change_1d": -2.6,
+    "level": 14.96,
+    "change_1d": 4.98,
     "regime": "bullish",
     "signal": "calm"
   },
