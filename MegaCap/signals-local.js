@@ -1,9 +1,176 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-14 09:22",
+  "updated": "2026-08-17 09:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "MSFT has strong momentum (+25.22% 1M) and a strong_buy consensus (an_score 1.36). JPMorgan raised its price target to $625 on AI-driven Copilot adoption, and Morningstar keeps a $600 fair value estimate, citing Azure AI demand and a 17% revenue beat.",
+      "drivers": [
+        "+25.22% 1M momentum",
+        "strong_buy consensus (1.36)",
+        "JPMorgan $625 PT on AI tailwinds",
+        "Azure revenue beat +17% YoY"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SAP",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SAP surged +33.39% in the last month with a strong_buy consensus and a Barclays price target of $242 (+17.4% upside). The company is cutting costs and reinvesting in AI, which supports margin expansion.",
+      "drivers": [
+        "+33.39% 1M momentum",
+        "strong_buy consensus",
+        "Barclays $242 PT",
+        "AI reinvestment and cost discipline"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "ABT rallied +24.62% in the last month, with positive news sentiment (0.335) and a buy consensus. The Lingo partnership with Alphabet for AI-powered health is a key catalyst.",
+      "drivers": [
+        "+24.62% 1M momentum",
+        "positive news sentiment (0.335)",
+        "AI health partnership with GOOG",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SONY",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "SONY gained +17.29% in the last month, has a strong_buy consensus (an_score 1.5), and very low short interest (0.17%). The stock benefits from a weak JPY tailwind and strong entertainment segment.",
+      "drivers": [
+        "+17.29% 1M momentum",
+        "strong_buy consensus (1.5)",
+        "low short interest (0.17%)",
+        "weak JPY tailwind"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "RTX has strong momentum (+14.20% 1M, +20.37% YTD) with a buy consensus and positive news sentiment (0.302). Defense spending tailwinds and aerospace demand support the outlook.",
+      "drivers": [
+        "+14.20% 1M momentum",
+        "+20.37% YTD",
+        "positive news sentiment (0.302)",
+        "defense spending tailwinds"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "XOM is up +10.79% in the last month and +32.30% YTD, with a low beta of 0.173 and a 2.57% dividend yield. Rising oil prices due to Iran tensions are a near-term catalyst.",
+      "drivers": [
+        "+10.79% 1M momentum",
+        "+32.30% YTD",
+        "low beta (0.173)",
+        "geopolitical oil price catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "CVX gained +10.13% in the last month and +30.73% YTD, with a buy consensus and a 3.56% dividend yield. Strong energy sector momentum and a favorable macro backdrop support the pick.",
+      "drivers": [
+        "+10.13% 1M momentum",
+        "+30.73% YTD",
+        "3.56% dividend yield",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "TMO surged +9.90% in the last month, with a buy consensus and a P/E of 31.65. The life sciences tools sector is seeing renewed demand, and the stock is recovering from a flat YTD.",
+      "drivers": [
+        "+9.90% 1M momentum",
+        "buy consensus",
+        "life sciences demand recovery",
+        "P/E 31.65"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "MRK",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "MRK is up +9.89% in the last month and +29.48% YTD, with very positive news sentiment (0.527) and a buy consensus. Strong drug pipeline and Keytruda momentum drive growth.",
+      "drivers": [
+        "+9.89% 1M momentum",
+        "+29.48% YTD",
+        "very positive news sentiment (0.527)",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TM",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "TM gained +8.02% in the last month, has a strong_buy consensus (an_score 1.5), a low P/E of 8.67, and a 3.28% dividend yield. A weak JPY and improving Japan economy are tailwinds.",
+      "drivers": [
+        "+8.02% 1M momentum",
+        "strong_buy consensus (1.5)",
+        "low P/E (8.67)",
+        "3.28% dividend yield"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.999,
+      "ytd": "+143.56%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +143.56% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +143.56% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.906,
+      "ytd": "+130.18%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.18% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.18% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.527,
+      "ytd": "+160.28%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +160.28% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +160.28% \u2265 152.1% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,173 +299,6 @@ window.SIGNALS_DATA = {
         "+22% 1Y return",
         "P/E 32.5x",
         "Divestiture catalyst"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.995,
-      "ytd": "+142.87%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +142.87% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +142.87% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.809,
-      "ytd": "+116.14%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +116.14% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +116.14% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.544,
-      "ytd": "+165.52%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +165.52% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +165.52% \u2265 152.1% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Azure growth 43% and Goldman Sachs adding to Conviction List drive +28.85% 1M momentum; P/E 28 is reasonable for AI leader.",
-      "drivers": [
-        "1M +28.85%",
-        "P/E 28",
-        "Strong_buy consensus",
-        "Azure 43% growth"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "Cloud backlog up 27% and Autonomous Enterprise strategy fuel +31% 1M surge; P/E 27 offers value.",
-      "drivers": [
-        "1M +31.07%",
-        "Cloud backlog +27%",
-        "Buy consensus",
-        "P/E 27"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +20% with strong_buy consensus; P/E 22 attractive for cloud and e-commerce leader.",
-      "drivers": [
-        "YTD +20.21%",
-        "P/E 22.37",
-        "Strong_buy consensus",
-        "1M +10.09%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "AI computing demand tailwinds; strong_buy consensus and P/E 33 reflect growth premium.",
-      "drivers": [
-        "YTD +15.31%",
-        "Strong_buy consensus",
-        "P/E 33.36",
-        "1M +6.86%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +32.7% with highest news sentiment (0.37); key AI chip manufacturer with strong_buy.",
-      "drivers": [
-        "YTD +32.74%",
-        "News sentiment 0.371",
-        "Strong_buy consensus",
-        "P/E 36.64"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +55.4% with strong_buy; monopoly in EUV lithography for advanced chips.",
-      "drivers": [
-        "YTD +55.36%",
-        "Strong_buy consensus",
-        "P/E 61.41",
-        "1M +4.38%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +20.1% with strong_buy; diversified semiconductor and infrastructure software.",
-      "drivers": [
-        "YTD +20.13%",
-        "Strong_buy consensus",
-        "1M +8.34%",
-        "P/E 70.4"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BABA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong_buy at cheap P/E 20; 1M +13.8% momentum as China internet rotation picks up.",
-      "drivers": [
-        "P/E 20.29",
-        "Strong_buy consensus",
-        "1M +13.80%",
-        "YTD -17.15% (value play)"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BLK",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Highest news sentiment 0.328; 1M +11.4% with buy consensus; asset manager benefiting from AI infrastructure financing.",
-      "drivers": [
-        "News sentiment 0.328",
-        "1M +11.37%",
-        "YTD +7.07%",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +20.5% with 1M +14% momentum; defense and aerospace demand supports growth.",
-      "drivers": [
-        "YTD +20.45%",
-        "1M +13.99%",
-        "Buy consensus",
-        "P/E 39.55"
       ]
     }
   ]

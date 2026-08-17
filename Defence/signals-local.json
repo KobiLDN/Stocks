@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-14 09:19",
+  "updated": "2026-08-17 08:59",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "KTOS",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Raised FY2026 organic growth guidance to 18-23% after Q2 revenue beat of $458.8M vs $411M est, momentum +30% 1m, analyst strong_buy score 1.43, news sentiment 0.261. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
+      "drivers": [
+        "Q2 revenue beat 11.6%",
+        "FY organic growth guidance raised to 18-23%",
+        "Analyst strong_buy consensus 1.43",
+        "1-month return +30%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "1m return +42.11%, Pentagon $1.3B supply chain commitment includes CACI, PE 27.78, analyst buy score 1.56, news sentiment 0.329. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
+      "drivers": [
+        "1-month return +42.11%",
+        "Pentagon contract award",
+        "Low PE 27.78",
+        "Positive news sentiment 0.329"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Q2 EPS $7.94 vs $7.23 est, sales +11% to $20.1B, record backlog $230B, raised guidance, PE 22.42, low beta 0.11. [prnewswire.com](https://www.prnewswire.com/news-releases/lockheed-martin-reports-second-quarter-2026-financial-results-302833219.html)",
+      "drivers": [
+        "Q2 earnings beat 9.8%",
+        "Record backlog $230B",
+        "Raised 2026 guidance",
+        "Low beta 0.11"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Q2 revenue $1.935B, +93% YoY, raised FY guidance to $8.15B, 1m return +30.11%, analyst buy score 1.81, news sentiment 0.203. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
+      "drivers": [
+        "Revenue growth +93% YoY",
+        "FY guidance raised to $8.15B",
+        "1-month return +30.11%",
+        "Analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1m return +32.92%, PE 13.42, analyst buy score 2.35, news sentiment 0.087, low beta 0.546. Attractive valuation after YTD decline of -21.13%.",
+      "drivers": [
+        "1-month return +32.92%",
+        "Low PE 13.42",
+        "Low beta 0.546",
+        "YTD decline offers value"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Analyst strong_buy score 1.17, 1m return +35.07%, 1w return +20.85%, but high short interest 23.21% and no PE. Drone sector tailwinds from Pentagon spending. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
+      "drivers": [
+        "Analyst strong_buy consensus 1.17",
+        "1-week return +20.85%",
+        "Pentagon drone spending catalyst",
+        "High short interest 23.21%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1m return +36.53%, analyst buy score 1.6, news sentiment 0.157, but negative earnings and high short interest 11.32%. Drone market momentum. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
+      "drivers": [
+        "1-month return +36.53%",
+        "Analyst buy consensus 1.6",
+        "Drone sector momentum",
+        "YTD decline -24.74% offers entry"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD return +31.70%, analyst strong_buy score 1.5, low beta 0.179, PE 38.26, positive news sentiment 0.013. Strong defense electronics exposure.",
+      "drivers": [
+        "YTD return +31.70%",
+        "Analyst strong_buy consensus 1.5",
+        "Low beta 0.179",
+        "Defense electronics growth"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD return +28.75%, 1m return +21.86%, analyst buy score 2.21, PE 32.26, negative news sentiment -0.015. UK defence budget growth.",
+      "drivers": [
+        "YTD return +28.75%",
+        "1-month return +21.86%",
+        "UK defence spending tailwind",
+        "Analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "YTD return +26.72%, 1m return +24.69%, news sentiment 0.296, PE 28.15, analyst buy score 1.75. Small cap UK defense penny stock with momentum.",
+      "drivers": [
+        "1-month return +24.69%",
+        "Positive news sentiment 0.296",
+        "YTD return +26.72%",
+        "Analyst buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CACI",
@@ -132,139 +265,6 @@
         "21.00% 1M return",
         "buy consensus",
         "UK defence prime"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "CACI\u2019s +39.67% 1-month momentum is underpinned by a stellar Q4 FY2026 with 17.6% revenue growth and $1.6B in new awards, plus FY2027 guidance for revenue of $10.65\u201310.85B and adjusted EPS of $32.96\u201333.86 [investor.caci.com]. With a low beta of 0.54, a P/E of 26.8, and a strong buy analyst consensus (score 1.56), it offers a balanced risk/reward.",
-      "drivers": [
-        "+39.7% 1m momentum",
-        "17.6% Q4 revenue growth",
-        "FY2027 guidance raised",
-        "Low beta 0.54"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "KTOS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Kratos reported Q2 revenue of $458.8M (+30.5% YoY) and EPS of $0.21, both beating estimates, and raised FY2026 revenue guidance to $1.75\u20131.81B [stocktwits.com]. The CEO\u2019s hypersonics growth outlook ($200M\u2192$700M by 2027) and a strong_buy analyst rating (score 1.43) drive conviction despite the high P/E of 375.",
-      "drivers": [
-        "Q2 revenue beat ($458.8M)",
-        "FY2026 guidance raised",
-        "Hypersonics revenue growth trajectory",
-        "Strong_buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Palantir\u2019s Q2 revenue surged 93% YoY to $1.935B, with U.S. commercial revenue up 149% and its largest-ever guidance raise to $8.15\u20138.158B [tikr.com]. The 34.5% 1-month return and 157% net dollar retention underscore accelerating momentum, though the P/E of 149.5 demands caution.",
-      "drivers": [
-        "Q2 revenue +93% YoY",
-        "Largest-ever guidance raise",
-        "U.S. commercial revenue +149%",
-        "Net dollar retention 157%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Leidos delivered Q2 revenue of $4.56B (+7% YoY), $4.9B in bookings, and raised FY2026 guidance with non-GAAP EPS of $12.20\u201312.50 [prnewswire.com]. Trading at a P/E of 12.99 with a 1.24% dividend yield and +32% 1-month momentum, it offers a compelling value entry.",
-      "drivers": [
-        "Q2 revenue $4.56B (+7%)",
-        "FY2026 guidance raised",
-        "P/E 12.99 (value)",
-        "Bookings $4.9B, book-to-bill 1.1"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AeroVironment has surged 38.2% in the past month and 16% in the past week, with a buy rating (score 1.6) and a short interest of 11.3% that could fuel further upside. The lack of a P/E suggests recent losses, but the momentum is strong.",
-      "drivers": [
-        "+38.2% 1m momentum",
-        "Buy analyst consensus",
-        "High short interest 11.3%",
-        "Potential short squeeze"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Axon jumped 6.9% on the day on earnings beat and analyst target hikes, with a 16.32% 1-month return and a buy rating (score 1.71) [news article cited]. The high P/E of 249.5 is offset by strong revenue growth and a dominant position in law enforcement tech.",
-      "drivers": [
-        "Earnings beat and analyst target hikes",
-        "+16.3% 1m momentum",
-        "Buy rating (score 1.71)",
-        "Dominant law enforcement tech"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "QinetiQ Group has gained 27.65% in the past month and 28.63% YTD, with a P/E of 28.6, a dividend yield of 1.95%, and a buy rating (score 1.75). Its small-cap status and positive news sentiment of 0.296 support further upside.",
-      "drivers": [
-        "+27.7% 1m momentum",
-        "+28.6% YTD",
-        "Buy rating",
-        "Positive news sentiment 0.30"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BAE Systems (BA.L) shows a 20.67% 1-month return and 27.15% YTD, with a buy rating (score 2.17) and a dividend yield of 1.68%. The P/E of 31.9 is reasonable for a UK defence prime with strong order books.",
-      "drivers": [
-        "+20.7% 1m momentum",
-        "+27.2% YTD",
-        "Dividend yield 1.68%",
-        "Buy rating"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.5,
-      "rationale": "Red Cat Holdings has rallied 27.21% in the past month and 20.32% in the past week, with a strong_buy analyst consensus (score 1.17). However, a short interest of 23.21% and negative news sentiment of -0.12 add risk, making it a high-reward momentum play.",
-      "drivers": [
-        "+27.2% 1m momentum",
-        "Strong_buy rating (score 1.17)",
-        "High short interest 23.2%",
-        "Small-cap drone play"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Booz Allen Hamilton trades at a P/E of 12.33 with a 3.03% dividend yield, offering value despite a hold analyst rating (score 2.86). Its +21.25% 1-month return and positive news sentiment of 0.404 suggest improving sentiment.",
-      "drivers": [
-        "P/E 12.33 (cheap)",
-        "Dividend yield 3.03%",
-        "+21.3% 1m momentum",
-        "Positive news sentiment 0.40"
       ]
     }
   ]
