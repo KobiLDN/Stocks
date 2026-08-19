@@ -1,9 +1,176 @@
 {
-  "updated": "2026-08-17 09:04",
+  "updated": "2026-08-19 08:50",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "MSFT has strong analyst support (strong_buy, an_score 1.36), a P/E of 26.8, and positive news sentiment (0.468). Its 1M momentum of +19.72% is exceptional, driven by AI tailwinds in enterprise and cloud, despite a 1W pullback of -4.40%.",
+      "drivers": [
+        "Momentum: +19.72% 1M",
+        "Analyst consensus: strong_buy (1.36)",
+        "Fundamentals: P/E 26.8, beta 1.099",
+        "AI enterprise spending catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "RTX shows strong momentum (+16.35% 1M, +21.73% YTD) with a low beta of 0.294 and a solid dividend yield of 1.32%. Positive news sentiment (0.14) and a buy rating from analysts support the pick, aided by defense spending tailwinds.",
+      "drivers": [
+        "Momentum: +16.35% 1M, +21.73% YTD",
+        "Low beta: 0.294",
+        "Dividend: 1.32% yield",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "XOM has exceptional YTD return of +37.69% and 1M momentum of +12.32%, supported by a low beta of 0.173 and a strong dividend yield of 1.55%. Energy sector tailwinds from high oil prices drive performance, with a P/E of 20.8.",
+      "drivers": [
+        "Momentum: +37.69% YTD, +12.32% 1M",
+        "Low beta: 0.173",
+        "Dividend: 1.55% yield",
+        "Energy price tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "NFLX's 1M momentum of +15.04% is a clear reversal signal from its -14.53% YTD loss. The Ackman re-entry has been a major catalyst and subscriber growth is strong, while the P/E of 23.93 is reasonable for a streaming leader. [247wallst.com](https://247wallst.com/investing/2026/08/18/netflix-climbs-4-on-ackmans-return-still-down-16-in-2026/) notes the stock is up 4% on the news.",
+      "drivers": [
+        "Momentum: +15.04% 1M",
+        "Ackman catalyst: new stake",
+        "P/E 23.93",
+        "325M+ subscriber base"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TMO has strong 1M momentum (+11.94%) with a reasonable P/E of 31.55, a buy analyst consensus, and a healthy dividend yield of 0.32%. Life sciences demand provides a stable growth catalyst, despite slight YTD underperformance (-0.39%).",
+      "drivers": [
+        "Momentum: +11.94% 1M",
+        "P/E 31.55",
+        "Buy analyst consensus",
+        "Life sciences growth demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "ABT shows strong 1M momentum of +10.84% and a 1D gain of +3.00%, signaling a recovery. Its P/E of 35.66 is justified by solid healthcare demand, a buy rating, and strong cash flow as noted in the headline. [youtube.com]",
+      "drivers": [
+        "Momentum: +10.84% 1M, +3.00% 1D",
+        "Buy analyst consensus",
+        "Dividend yield 2.28%",
+        "Healthcare demand stability"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.66,
+      "rationale": "SONY's 1M momentum of +10.78% and low short interest of 0.17% point to renewed investor interest. A P/E of 20.2 and positive news sentiment (0.258) support the pick, aided by entertainment and gaming sector strength.",
+      "drivers": [
+        "Momentum: +10.78% 1M",
+        "Low short interest: 0.17%",
+        "P/E 20.2",
+        "Entertainment & gaming catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "GE",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "GE has strong analyst support (strong_buy, an_score 1.45) and the highest news sentiment (0.511) among all stocks. Its 1M momentum of +9.90% and YTD of +17.26% are robust, driven by aerospace demand and a P/E of 43.46 reflecting premium growth expectations.",
+      "drivers": [
+        "Analyst consensus: strong_buy (1.45)",
+        "News sentiment: 0.511",
+        "Momentum: +9.90% 1M, +17.26% YTD",
+        "Aerospace demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BLK",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BLK's 1M momentum of +9.51% and a YTD of +7.58% reflect strong AUM growth and market share gains. A P/E of 27.65 and a buy analyst consensus, along with ETF and AI investment themes, support the pick.",
+      "drivers": [
+        "Momentum: +9.51% 1M, +7.58% YTD",
+        "Buy analyst consensus",
+        "P/E 27.65",
+        "AUM growth & AI/investment themes"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SAP's 1M momentum of +32.91% is the strongest in the universe, driven by solid cloud revenue growth and AI spending despite a YTD loss. However, the recent profit trim (reported in July) and software sector caution moderate confidence. [quiverquant.com](https://www.quiverquant.com/news/SAP+slides+as+investors+weigh+AI+spending,+recent+profit+trim,+and+software-sector+pressure) notes today's -3.1% slide on AI spending concerns.",
+      "drivers": [
+        "Momentum: +32.91% 1M",
+        "Cloud revenue growth",
+        "P/E 26.88",
+        "AI investment catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+145.53%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +145.53% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +145.53% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.841,
+      "ytd": "+120.80%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +120.80% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +120.80% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.813,
+      "ytd": "+116.76%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +116.76% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +116.76% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,173 +299,6 @@
         "strong_buy consensus (1.5)",
         "low P/E (8.67)",
         "3.28% dividend yield"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.999,
-      "ytd": "+143.56%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +143.56% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +143.56% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.906,
-      "ytd": "+130.18%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.18% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.18% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.527,
-      "ytd": "+160.28%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +160.28% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +160.28% \u2265 152.1% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Azure revenue grew 43% to cross $100B annual run rate, with $678B in remaining performance obligations (+84% YoY), driving a 29% one-month surge; consensus analyst price target of $604 implies ~20% upside from $497.",
-      "drivers": [
-        "Azure 43% growth",
-        "$678B RPO backlog",
-        "+29% 1M momentum",
-        "Strong Buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SAP",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Current cloud backlog surged 26% at constant currencies to \u20ac22.9B, cloud revenue up 24% at constant currencies, and the stock rallied 35% in one month on accelerating enterprise AI adoption.",
-      "drivers": [
-        "Cloud backlog +26% cc",
-        "Cloud revenue +24% cc",
-        "+35% 1M momentum",
-        "Enterprise AI tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Stock up 12% in one month and 61% over one year, with YTD +29% and a very positive news sentiment of 0.44, driven by pipeline optimism and potential Gilead partnership.",
-      "drivers": [
-        "+12% 1M momentum",
-        "+61% 1Y return",
-        "News sentiment 0.44",
-        "Low beta 0.21"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Stock gained 14% in one month and 43% over one year, with YTD +19%, supported by a fresh missile defense contract and strong aerospace/defense demand.",
-      "drivers": [
-        "+14% 1M momentum",
-        "+43% 1Y return",
-        "Defense contract catalyst",
-        "Low beta 0.29"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BLK",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Shares surged 15% in one month and YTD +10%, with a P/E of 27.9x and a 1.97% dividend yield, benefiting from AUM growth and digital asset initiatives.",
-      "drivers": [
-        "+15% 1M momentum",
-        "YTD +10%",
-        "P/E 27.9x",
-        "Dividend yield 1.97%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Stock rebounded 26% in one month from a YTD decline of -9%, with a P/E of 35.9x and positive news sentiment of 0.11, signaling a potential turnaround in medical devices.",
-      "drivers": [
-        "+26% 1M momentum",
-        "P/E 35.9x",
-        "Turnaround signal",
-        "News sentiment 0.11"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Stock up 9% in one month and 49% over one year, with YTD +31%, a P/E of 20.6x, and a 2.58% dividend yield, supported by strong energy prices and cash flow.",
-      "drivers": [
-        "+9% 1M momentum",
-        "+49% 1Y return",
-        "P/E 20.6x",
-        "Dividend yield 2.58%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Stock gained 9% in one month and 26% over one year, with YTD +29%, a P/E of 18.9x, and a 3.62% dividend yield, appearing undervalued relative to peers.",
-      "drivers": [
-        "+9% 1M momentum",
-        "+29% YTD",
-        "P/E 18.9x",
-        "Dividend yield 3.62%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SONY",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "Stock rose 14% in one month, with a P/E of 20.0x and a strong buy analyst consensus, benefiting from a $4.69B TSMC venture and entertainment/content momentum.",
-      "drivers": [
-        "+14% 1M momentum",
-        "P/E 20.0x",
-        "Strong Buy consensus",
-        "TSMC venture catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Stock gained 12% in one month and 22% over one year, with a P/E of 32.5x and a $1.1B microbiology unit sale closing, streamlining focus on core life sciences.",
-      "drivers": [
-        "+12% 1M momentum",
-        "+22% 1Y return",
-        "P/E 32.5x",
-        "Divestiture catalyst"
       ]
     }
   ]

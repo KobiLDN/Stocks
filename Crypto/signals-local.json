@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-17 09:01",
+  "updated": "2026-08-19 08:45",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "LINK has the strongest momentum in the universe with +15.32% 1M and +10.86% 1W, supported by $2.07M daily ETF inflows and a bullish Standard Chartered $200 price target. [coinjournal.net](https://coinjournal.net/news/chainlink-pauses-near-9-56-as-etf-inflows-support-breakout-hopes/)",
+      "drivers": [
+        "+15.32% 1M momentum",
+        "$2.07M daily ETF inflows",
+        "Standard Chartered $200 target",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "BTC at $64K with a 1.05% weekly gain, positive news sentiment 0.088, and bullish taker volume ratio with funding rates at 20-month highs, though macro headwinds from rising yields and oil persist. [coindesk.com](https://www.coindesk.com/markets/2026/08/18/bitcoin-pauses-at-usd64-000-as-rising-yields-oil-drag-equities-lower)",
+      "drivers": [
+        "+1.05% 1W gain",
+        "Positive news sentiment 0.088",
+        "Bullish taker volume ratio",
+        "Funding rates at 20-month high"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "POL",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "POL surged +8.52% in the past week and +3.14% in 1D, making it the strongest weekly performer among infra tokens with a low market cap of $0.878B offering high upside. [crypto.news](https://crypto.news/bitcoin-price-breaks-64k-as-major-altcoins-struggle/)",
+      "drivers": [
+        "+8.52% 1W gain",
+        "+3.14% 1D gain",
+        "Low market cap $0.878B",
+        "Strong weekly momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ETH shows steady recovery with +2.92% 1M and +1.33% 1W gains, positive news sentiment 0.197, and institutional adoption via Securitize adding funds to Ethereum. [decrypt.co](https://decrypt.co/336067/crypto-market-fear-ethereum-solana-chainlink-price-analysis)",
+      "drivers": [
+        "+2.92% 1M gain",
+        "Positive news sentiment 0.197",
+        "Institutional adoption",
+        "Steady recovery momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SOL gained +1.20% in 1D with rising OI to 66.88M tokens, the highest since July 10, and positive news sentiment 0.095, though funding rates remain near zero. [coindesk.com](https://www.coindesk.com/markets/2026/08/18/bitcoin-pauses-at-usd64-000-as-rising-yields-oil-drag-equities-lower)",
+      "drivers": [
+        "+1.20% 1D gain",
+        "Rising OI to 66.88M tokens",
+        "Positive news sentiment 0.095",
+        "Institutional adoption via Securitize"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BNB has strong 1M momentum at +6.45% despite a slight weekly dip, with a large market cap of $80B providing stability, though news sentiment is slightly negative at -0.142.",
+      "drivers": [
+        "+6.45% 1M gain",
+        "Large market cap $80B",
+        "Stable price action",
+        "Slightly negative news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ADA leads layer1s with +8.41% 1M momentum and a +0.94% 1D gain, though the -5.74% weekly drop signals volatility; low market cap $6.4B offers high beta potential.",
+      "drivers": [
+        "+8.41% 1M momentum",
+        "+0.94% 1D gain",
+        "Low market cap $6.4B",
+        "High beta potential"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TRX is the only asset with positive YTD at +17.07% and 1Y return at +17%, with +1.99% 1M momentum, showing consistent outperformance in the payments category.",
+      "drivers": [
+        "+17.07% YTD",
+        "+17% 1Y return",
+        "+1.99% 1M gain",
+        "Consistent outperformance"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HBAR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "HBAR shows strong short-term momentum with +2.50% 1D and +2.77% 1M gains, though OI is declining; low market cap $2.96B provides upside potential.",
+      "drivers": [
+        "+2.50% 1D gain",
+        "+2.77% 1M gain",
+        "Low market cap $2.96B",
+        "Short-term momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "ICP has +4.19% 1M momentum and a market cap of $1.23B, with recent analysis noting strength in AI-related tokens, though weekly performance is slightly negative at -0.95%. [decrypt.co](https://decrypt.co/336067/crypto-market-fear-ethereum-solana-chainlink-price-analysis)",
+      "drivers": [
+        "+4.19% 1M gain",
+        "Market cap $1.23B",
+        "AI token strength",
+        "Moderate momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LINK",
@@ -124,139 +257,6 @@
         "+6.0% 1M",
         "mc $6.5B",
         "contrarian play"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Up 7.07% in the past week and 4.60% in the past month, with positive news sentiment and institutional demand for oracle infrastructure rising alongside the tokenized RWA narrative; the only token with positive 24h CVD per CoinDesk.",
-      "drivers": [
-        "+7.07% 1W momentum",
-        "positive 24h CVD",
-        "institutional oracle demand",
-        "RWA narrative tailwind"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BNB",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Up 4.70% in the past month and 3.49% in the past week, with Grayscale making BNB its largest Smart Contract Fund holding at 30.6% weight, boosting its institutional profile.",
-      "drivers": [
-        "+4.70% 1M momentum",
-        "Grayscale top fund holding",
-        "30.6% portfolio weight",
-        "institutional validation"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Up 4.16% in the past week and 0.98% in the past month, with a relatively mild -9% 1-year drawdown compared to peers, and AI narrative gaining traction via Grayscale's AI adoption report.",
-      "drivers": [
-        "+4.16% 1W momentum",
-        "resilient -9% 1Y return",
-        "AI narrative catalyst",
-        "Grayscale AI mention"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Up 17.34% YTD and 2.12% in the past month, the only asset with positive YTD returns in the universe, and positive 24h CVD per CoinDesk, though news sentiment is slightly negative.",
-      "drivers": [
-        "+17.34% YTD",
-        "positive 24h CVD",
-        "only positive YTD asset",
-        "steady 1M momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Bitcoin reclaimed $64K after CPI eased to 3.4%, with $865M in ETF inflows over 5 days and whales adding 20K BTC; on-chain cost basis at $62-65K creates resistance but ETF demand supports the floor.",
-      "drivers": [
-        "$865M ETF inflows",
-        "CPI relief catalyst",
-        "whale accumulation 20K BTC",
-        "key $62-65K support zone"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Fidelity added staking rewards to its ETH ETF, positive news sentiment at 0.159, and ETH call options show upside bias; down only 0.46% in the past month, showing relative stability.",
-      "drivers": [
-        "Fidelity staking ETF catalyst",
-        "positive news sentiment 0.159",
-        "options upside bias",
-        "stable 1M performance"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Up 10.75% in the past month despite a -10.12% weekly pullback and negative news sentiment from Grayscale dropping ETF plans; short-term momentum remains strong.",
-      "drivers": [
-        "+10.75% 1M momentum",
-        "oversold bounce potential",
-        "high beta altcoin",
-        "short-term strength"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Up 4.74% in the past week with a -23% 1-year return, showing relative resilience among AI tokens; no negative news catalysts and AI narrative remains supportive.",
-      "drivers": [
-        "+4.74% 1W momentum",
-        "AI narrative tailwind",
-        "resilient vs AI peers",
-        "no negative catalysts"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Up 5.23% in the past week with neutral news sentiment, benefiting from Upbit listing momentum that fueled 30% moves for select altcoins; small market cap offers high beta potential.",
-      "drivers": [
-        "+5.23% 1W momentum",
-        "Upbit listing catalyst",
-        "small cap high beta",
-        "neutral sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "Up an extraordinary 402.19% in the past month and 3.30% in the past week, though price is near zero and 1-year return is -100%; extreme momentum but high risk of manipulation.",
-      "drivers": [
-        "+402.19% 1M momentum",
-        "extreme short-term rally",
-        "high risk/reward",
-        "speculative play"
       ]
     }
   ]

@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-17 08:58",
+  "updated": "2026-08-19 08:37",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMGN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong Q2 beat with raised FY2026 guidance (non-GAAP EPS $22.30-$23.50 vs $22.35 consensus) and 26% YoY growth from six key drivers; +31.69% YTD, +16.78% 1M momentum, P/E 26.04, and positive news sentiment 0.081 supported by MariTide Phase 3 expansion [amgen.com](https://www.amgen.com/newsroom/press-releases/2026/08/amgen-reports-second-quarter-2026-financial-results).",
+      "drivers": [
+        "Raised FY2026 guidance",
+        "+31.69% YTD",
+        "MariTide Phase 3 expansion",
+        "Strong Q2 beat"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Consistent +34% 1-year return, +16.82% YTD, +9.93% 1M momentum, P/E 30.03, strong analyst consensus (1.62 score), low short interest 1.76%, and positive news sentiment 0.088.",
+      "drivers": [
+        "+34% 1-year return",
+        "Strong analyst consensus 1.62",
+        "Low short interest 1.76%",
+        "Positive news sentiment 0.088"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Exceptional +20.69% 1M momentum, +37% 1-year return, attractive P/E 19.96, low beta 0.188, and analyst consensus 'buy' (1.81 score) despite slightly negative news sentiment -0.095.",
+      "drivers": [
+        "+20.69% 1M momentum",
+        "Attractive P/E 19.96",
+        "+37% 1-year return",
+        "Low beta 0.188"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong +26.23% YTD, +9.79% 1M momentum, low P/E 14.23, high dividend yield 3.90%, and analyst consensus 'buy' (2.46 score) despite negative news sentiment -0.132.",
+      "drivers": [
+        "+26.23% YTD",
+        "Low P/E 14.23",
+        "High dividend yield 3.90%",
+        "+9.79% 1M momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong +19.41% YTD, +7.68% 1M momentum, +5.65% 1W momentum, low beta 0.336, positive news sentiment 0.144, and analyst consensus 'buy' (1.69 score) with expanding HIV portfolio.",
+      "drivers": [
+        "+19.41% YTD",
+        "+7.68% 1M momentum",
+        "Positive news sentiment 0.144",
+        "Analyst consensus 1.69"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong +53% 1-year return, +19.53% YTD, +6.30% 1M momentum, highest news sentiment 0.357 in the universe, and analyst consensus 'buy' (1.83 score).",
+      "drivers": [
+        "+53% 1-year return",
+        "Highest news sentiment 0.357",
+        "+19.53% YTD",
+        "Analyst consensus 1.83"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Exceptional +94% 1-year return, +36.20% YTD, +18.68% 1M momentum, analyst consensus 'strong_buy' (1.50 score), and low short interest 3.12% despite negative news sentiment -0.088.",
+      "drivers": [
+        "+94% 1-year return",
+        "+36.20% YTD",
+        "Analyst consensus strong_buy 1.50",
+        "+18.68% 1M momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Strong +43% 1-year return, +21.74% YTD, +6.76% 1M momentum, low P/E 15.71, positive news sentiment 0.327, and analyst consensus 'buy' (2.33 score).",
+      "drivers": [
+        "+43% 1-year return",
+        "Low P/E 15.71",
+        "Positive news sentiment 0.327",
+        "+21.74% YTD"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "IONS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Strong +12.60% 1M momentum, +7.58% 1W momentum, +39% 1-year return, positive news sentiment 0.279, and analyst consensus 'buy' (1.74 score) despite -25.17% YTD.",
+      "drivers": [
+        "+12.60% 1M momentum",
+        "+39% 1-year return",
+        "Positive news sentiment 0.279",
+        "Analyst consensus 1.74"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Strong +13.33% 1M momentum, +12.68% YTD, +17% 1-year return, analyst consensus 'buy' (1.72 score), and positive news sentiment 0.031 driven by up to $490M Alesta deal.",
+      "drivers": [
+        "+13.33% 1M momentum",
+        "+12.68% YTD",
+        "Alesta deal catalyst",
+        "Analyst consensus 1.72"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "buy",
+      "confidence": 0.724,
+      "ytd": "+104.02%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +104.02% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +104.02% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "COAG",
@@ -132,151 +277,6 @@ window.SIGNALS_DATA = {
         "dividend yield 395bps",
         "YTD +21.99%",
         "1M +8.70%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.732,
-      "ytd": "+105.18%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +105.18% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +105.18% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMGN",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "AMGN beat Q2 estimates ($6.29 vs $5.60 EPS) and raised 2026 guidance; YTD +29.38%, P/E 25.84, news sentiment 0.204, with strong growth drivers (Repatha +37%, Imdelltra +115%) and MariTide Phase 3 underway [finance.yahoo.com](https://finance.yahoo.com/healthcare/articles/amgn-q2-earnings-call-centers-140000556.html).",
-      "drivers": [
-        "Q2 earnings beat & raised guidance",
-        "YTD +29.38% momentum",
-        "P/E 25.84 reasonable",
-        "Positive news sentiment 0.204"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "NTRA shows exceptional momentum with YTD +35.81% and 1W +17.11%, backed by strong_buy analyst consensus (score 1.5) and high news sentiment 0.387, reflecting strong Q2 execution in genomics.",
-      "drivers": [
-        "YTD +35.81%",
-        "1W +17.11% surge",
-        "Strong_buy consensus",
-        "News sentiment 0.387"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "REGN has strong 1M momentum (+22.84%) with a reasonable P/E of 19.76, analyst buy rating (score 1.81), and low beta 0.188, offering a balanced risk/reward profile.",
-      "drivers": [
-        "1M +22.84% momentum",
-        "P/E 19.76 attractive",
-        "Analyst buy consensus",
-        "Low beta 0.188"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BMRN has strong 1M (+16.87%) and 1W (+11.50%) momentum, positive news sentiment 0.267, and analyst buy rating (score 1.72), though P/E of 190.36 reflects high growth expectations in rare disease.",
-      "drivers": [
-        "1M +16.87%",
-        "1W +11.50%",
-        "News sentiment 0.267",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "COAG leads with YTD +58.68% and 1M +24.57% momentum, strong_buy analyst consensus (score 1.0), and a recent IPO gain of 55%, though lacks earnings and has negative news sentiment -0.018.",
-      "drivers": [
-        "YTD +58.68%",
-        "1M +24.57%",
-        "Strong_buy consensus (1.0)",
-        "IPO momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BIIB has YTD +18.46% and 1M +9.74% momentum, positive news sentiment 0.254, and a recent Wolfe Research upgrade on pipeline strength, with analyst buy rating (score 1.86).",
-      "drivers": [
-        "YTD +18.46%",
-        "1M +9.74%",
-        "News sentiment 0.254",
-        "Wolfe upgrade"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "GILD shows solid YTD +15.00% and 1M +6.23% momentum, low beta 0.336, analyst buy consensus (score 1.69), and positive news sentiment 0.135, with a 2.41% dividend yield.",
-      "drivers": [
-        "YTD +15.00%",
-        "Low beta 0.336",
-        "Analyst buy (1.69)",
-        "Dividend yield 2.41%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "BMY has YTD +23.56% and 1M +13.52% momentum, a low P/E of 14.02, and a high dividend yield of 3.96%, but negative news sentiment -0.203 and merger uncertainty weigh on confidence.",
-      "drivers": [
-        "YTD +23.56%",
-        "P/E 14.02 value",
-        "Dividend yield 3.96%",
-        "Merger catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "VRTX has YTD +14.22% and 1W +6.70% momentum, a solid P/E of 30.58, and strong analyst buy rating (score 1.62), though news sentiment is slightly negative at -0.091.",
-      "drivers": [
-        "YTD +14.22%",
-        "P/E 30.58",
-        "Analyst buy (1.62)",
-        "1W +6.70%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "CRSP has 1M +7.00% and 1W +4.55% momentum, analyst buy rating (score 2.0), and high short interest of 22.28% which could fuel a squeeze, but lacks earnings and has low news sentiment 0.019.",
-      "drivers": [
-        "1M +7.00%",
-        "Short interest 22.28%",
-        "Analyst buy",
-        "Gene-editing catalyst"
       ]
     }
   ]
