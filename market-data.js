@@ -1,8 +1,8 @@
 window.MARKET_DATA = {
-  "updated": "2026-08-21 07:39",
+  "updated": "2026-08-21 09:50",
   "spy": {
     "price": 762.6,
-    "change_1d": -0.96,
+    "change_1d": -0.04,
     "change_1w": -1.96,
     "change_1m": 1.91,
     "change_ytd": 12.22,
@@ -10,15 +10,15 @@ window.MARKET_DATA = {
   },
   "qqq": {
     "price": 710.93,
-    "change_1d": -1.08,
+    "change_1d": 0.02,
     "change_1w": -2.89,
     "change_1m": 0.28,
     "change_ytd": 16.23,
     "change_1y": 26.82
   },
   "vix": {
-    "level": 16.01,
-    "change_1d": 7.52,
+    "level": 15.79,
+    "change_1d": -1.37,
     "regime": "normal",
     "signal": "normal"
   },
