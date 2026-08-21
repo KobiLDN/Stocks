@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-19 08:37",
+  "updated": "2026-08-21 08:42",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "MRNA has surged +332% YTD and +123% in the last month, driven by positive melanoma vaccine trial results with Merck, though the -19.88% one-day drop and 'hold' analyst consensus (score 2.83) signal extreme volatility and risk.",
+      "drivers": [
+        "+332% YTD",
+        "+123% 1M momentum",
+        "Melanoma vaccine catalyst",
+        "High short interest 15.23%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ILMN shows exceptional momentum with +109% 1-year return, +58.72% YTD, +10.76% 1M, and +10.69% 1W, supported by strong news sentiment (0.462) and a reasonable P/E of 38.28 for a genomics leader.",
+      "drivers": [
+        "+109% 1-year return",
+        "+58.72% YTD",
+        "Positive news sentiment 0.462",
+        "P/E 38.28"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "NTRA has returned +96% over one year and +41.95% YTD with strong 1M momentum (+21.58%), a 'strong_buy' analyst consensus (score 1.5), and is a top holding of billionaire investor Stanley Druckenmiller.",
+      "drivers": [
+        "+96% 1-year return",
+        "+41.95% YTD",
+        "Strong_buy consensus (1.5)",
+        "Billionaire backing"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "AMGN has rallied +34.3% YTD and +18.43% in the last month, with a 'buy' analyst consensus (2.47), low beta of 0.413, and strong Q2 earnings (revenue +10% to $10.1B), though the stock trades at a premium to its GF Value.",
+      "drivers": [
+        "+34.3% YTD",
+        "+18.43% 1M",
+        "Q2 revenue +10% to $10.1B",
+        "Low beta 0.413"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "VRTX is up +37% over one year and +19.49% YTD with +12.09% 1M momentum, a 'buy' analyst consensus (1.62), positive news sentiment (0.215), and a new growth engine beyond cystic fibrosis driving Wall Street optimism.",
+      "drivers": [
+        "+37% 1-year return",
+        "+19.49% YTD",
+        "Buy consensus (1.62)",
+        "Positive news sentiment 0.215"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "REGN has gained +40% over one year and +22.57% in the last month, with a 'buy' analyst consensus (1.86), low beta of 0.188, and a P/E of 20.79, though YTD performance is a more modest +6.9%.",
+      "drivers": [
+        "+40% 1-year return",
+        "+22.57% 1M",
+        "Low beta 0.188",
+        "P/E 20.79"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BNTX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "BNTX has surged +20.38% in the last week and +20.1% in the last month, with a 'buy' analyst consensus (1.55) and YTD gains of +14.69%, though news sentiment is negative (-0.349) and the stock is flat over one year.",
+      "drivers": [
+        "+20.38% 1W",
+        "+20.1% 1M",
+        "Buy consensus (1.55)",
+        "Negative news sentiment -0.349"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CRSP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CRSP has risen +20.71% in the last month and +7.09% in the last week, with a 'buy' analyst consensus (2.0) and Casgevy advancing, though high short interest (22.28%) and no P/E reflect binary clinical risk.",
+      "drivers": [
+        "+20.71% 1M",
+        "+7.09% 1W",
+        "Buy consensus (2.0)",
+        "High short interest 22.28%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BMRN is up +14.31% in the last month and +13.84% YTD, with a 'buy' analyst consensus (1.74) and a high P/E of 188, indicating premium valuation for a rare-disease leader with steady growth.",
+      "drivers": [
+        "+14.31% 1M",
+        "+13.84% YTD",
+        "Buy consensus (1.74)",
+        "P/E 188 (premium valuation)"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "SRPT has gained +18.57% in the last month and +4.34% in the last week, with neutral news sentiment (0.101), but a 'hold' analyst consensus (2.67), negative YTD (-9.81%), and high short interest (31.28%) temper enthusiasm.",
+      "drivers": [
+        "+18.57% 1M",
+        "+4.34% 1W",
+        "Hold consensus (2.67)",
+        "High short interest 31.28%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMGN",
@@ -132,151 +265,6 @@
         "+12.68% YTD",
         "Alesta deal catalyst",
         "Analyst consensus 1.72"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.724,
-      "ytd": "+104.02%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +104.02% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +104.02% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Highest momentum in the universe with YTD +61.59%, 1M +26.82%, and 1W +10.63%; consensus analyst score is a perfect 1.00 (strong_buy) supporting massive near-term upside.",
-      "drivers": [
-        "YTD +61.59%",
-        "1M +26.82%",
-        "consensus strong_buy analysts score 1.00",
-        "1W +10.63% short-term momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Exceptional 1Y return of +92%, YTD +35.44%, 1M +11.74%; strong_buy consensus with an_score 1.50, and news sentiment positive at 0.154; web search indicates 49% upside potential per recent report.",
-      "drivers": [
-        "1Y +92% return",
-        "strong_buy consensus an_score 1.50",
-        "1M +11.74%",
-        "news sentiment 0.154 positive"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "1M surge of +20.92% and 1W +2.44%; P/E 19.88 is attractive vs peers, and analyst consensus is buy (1.81); web search confirms 7-day winning streak with 17% gain and strong underlying operating margin of 26.9%.",
-      "drivers": [
-        "1M +20.92%",
-        "P/E 19.88 attractive",
-        "7-day +17% rally",
-        "buy consensus an_score 1.81"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.79,
-      "rationale": "Fundamentals robust: YTD +28.57%, P/E 25.77, market cap $224.6B, dividend yield 243bps; web search confirms Q2 revenue beat ($10.1B vs est. $9.42B) and raised full-year guidance.",
-      "drivers": [
-        "YTD +28.57%",
-        "Q2 revenue $10.1B beat estimates",
-        "raised full-year guidance",
-        "dividend yield 243bps"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RCUS",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "1Y return of +182% lead the universe, YTD +26.58%; strong_buy consensus an_score 1.46; recent 1W +3.00% and 1D +2.15% momentum is solid despite high short interest of 16.82%.",
-      "drivers": [
-        "1Y +182% top in universe",
-        "strong_buy consensus 1.46",
-        "1W +3.00%",
-        "YTD +26.58%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Impressive 1M gain of +14.27% and 1W +5.56%; buy consensus an_score 1.72; web search confirms Q2 revenue up 20% Y/Y to $990M, VOXZOGO guidance raised to at least $1B, and FDA sNDA accepted for hypochondroplasia.",
-      "drivers": [
-        "1M +14.27%",
-        "Q2 revenue +20% Y/Y to $990M",
-        "VOXZOGO guidance >$1B",
-        "buy consensus an_score 1.72"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "Solid 1Y return +30%, YTD +11.86%, 1M +6.01%, and 1W +1.95%; analyst consensus is buy (1.62) with low short interest 1.76%, supportive of steady outperformance.",
-      "drivers": [
-        "1Y +30%",
-        "buy consensus an_score 1.62",
-        "short interest low 1.76%",
-        "1M +6.01%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Strong YTD +18.00%, 1M +6.38%, and highest news sentiment in universe at 0.254; buy consensus an_score 1.81; web search highlights Wolfe Research upgrade on pipeline strength.",
-      "drivers": [
-        "YTD +18.00%",
-        "news sentiment 0.254",
-        "1M +6.38%",
-        "buy consensus 1.81"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Very attractive P/E of 15.31 with highest news sentiment among peers at 0.483; 1Y return +41%, YTD +18.48%, and 1M +4.41% momentum.",
-      "drivers": [
-        "P/E 15.31 very low",
-        "news sentiment 0.483",
-        "1Y +41%",
-        "YTD +18.48%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Excellent value with P/E 14.06 and dividend yield 395bps; YTD +21.99%, 1M +8.70%; analyst consensus is buy (2.46) with low beta 0.225, suitable for risk-adjusted positioning.",
-      "drivers": [
-        "P/E 14.06 value",
-        "dividend yield 395bps",
-        "YTD +21.99%",
-        "1M +8.70%"
       ]
     }
   ]

@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-19 08:38",
+  "updated": "2026-08-21 08:43",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "CACI posted 17.6% Q4 revenue growth and issued strong FY2027 guidance ($10.65-10.85B revenue, adj. EPS $32.96-33.86), with a 1-month momentum of +46.64%, P/E 27.4, and positive news sentiment 0.329. [investor.caci.com](https://investor.caci.com/2026-08-05-CACI-Reports-Results-for-Its-Fiscal-2026-Fourth-Quarter-and-Full-Year-and-Issues-Fiscal-Year-2027-Guidance)",
+      "drivers": [
+        "+46.64% 1-month momentum",
+        "P/E 27.4",
+        "news sentiment 0.329",
+        "strong earnings and guidance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LDOS",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Leidos delivered strong Q2 with $4.9B bookings, raised FY2026 guidance, and trades at a low P/E 13.66 with 1-month momentum +34.74% and backlog of $48.7B. [sec.gov](https://www.sec.gov/Archives/edgar/data/1336920/000133692026000243/ldos070326q2pressreleaseex.htm)",
+      "drivers": [
+        "+34.74% 1-month momentum",
+        "P/E 13.66",
+        "backlog $48.7B",
+        "raised guidance"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Lockheed Martin reported Q2 sales up 11% to $20.1B, record backlog of $230B, raised full-year guidance, with a P/E 21.74 and low beta 0.11. [news.lockheedmartin.com](https://news.lockheedmartin.com/2026-07-23-Lockheed-Martin-Reports-Second-Quarter-2026-Financial-Results)",
+      "drivers": [
+        "+12.70% 1-month momentum",
+        "P/E 21.74",
+        "record backlog $230B",
+        "raised guidance"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "RTX has a buy analyst consensus (score 1.87), strong news sentiment 0.327, 1-month momentum +9.98%, and a P/E of 38.74 reflecting solid defence demand.",
+      "drivers": [
+        "+9.98% 1-month momentum",
+        "analyst buy",
+        "news sentiment 0.327",
+        "YTD +14.60%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Northrop Grumman offers a low P/E of 17.92, buy analyst consensus, 1-month momentum +10.07%, and positive news sentiment 0.237.",
+      "drivers": [
+        "+10.07% 1-month momentum",
+        "P/E 17.92",
+        "analyst buy",
+        "news sentiment 0.237"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "General Dynamics has a buy rating, news sentiment 0.325, P/E 23.92, YTD +13.91%, and 1-month momentum +4.99%.",
+      "drivers": [
+        "analyst buy",
+        "news sentiment 0.325",
+        "YTD +13.91%",
+        "P/E 23.92"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Huntington Ingalls trades at a low P/E 18.55 with a buy rating, 1-month momentum +12.14%, and recent $2.2B task order win.",
+      "drivers": [
+        "+12.14% 1-month momentum",
+        "P/E 18.55",
+        "analyst buy",
+        "recent $2.2B award"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Rolls-Royce has a buy consensus (score 1.6), strong news sentiment 0.346, 1-month momentum +10.42%, and YTD +25.27%.",
+      "drivers": [
+        "+10.42% 1-month momentum",
+        "analyst buy",
+        "news sentiment 0.346",
+        "YTD +25.27%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SAIC has a low P/E of 14.48, YTD +26.08%, 1-month momentum +12.94%, and a reasonable valuation despite a hold analyst score.",
+      "drivers": [
+        "+12.94% 1-month momentum",
+        "P/E 14.48",
+        "YTD +26.08%",
+        "low valuation"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Booz Allen Hamilton trades at a cheap P/E of 12.38 with 1-month momentum +20.50%, though analyst consensus is hold and short interest is 7.86%.",
+      "drivers": [
+        "+20.50% 1-month momentum",
+        "P/E 12.38",
+        "YTD -7.99% recovery",
+        "high short interest"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "Analyst buy consensus",
         "News sentiment 0.14",
         "Missile production ramp"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KTOS",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Raised FY2026 organic growth guidance to 18-23% after Q2 revenue beat of $458.8M vs $411M est, momentum +30% 1m, analyst strong_buy score 1.43, news sentiment 0.261. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
-      "drivers": [
-        "Q2 revenue beat 11.6%",
-        "FY organic growth guidance raised to 18-23%",
-        "Analyst strong_buy consensus 1.43",
-        "1-month return +30%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "1m return +42.11%, Pentagon $1.3B supply chain commitment includes CACI, PE 27.78, analyst buy score 1.56, news sentiment 0.329. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
-      "drivers": [
-        "1-month return +42.11%",
-        "Pentagon contract award",
-        "Low PE 27.78",
-        "Positive news sentiment 0.329"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LMT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Q2 EPS $7.94 vs $7.23 est, sales +11% to $20.1B, record backlog $230B, raised guidance, PE 22.42, low beta 0.11. [prnewswire.com](https://www.prnewswire.com/news-releases/lockheed-martin-reports-second-quarter-2026-financial-results-302833219.html)",
-      "drivers": [
-        "Q2 earnings beat 9.8%",
-        "Record backlog $230B",
-        "Raised 2026 guidance",
-        "Low beta 0.11"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Q2 revenue $1.935B, +93% YoY, raised FY guidance to $8.15B, 1m return +30.11%, analyst buy score 1.81, news sentiment 0.203. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
-      "drivers": [
-        "Revenue growth +93% YoY",
-        "FY guidance raised to $8.15B",
-        "1-month return +30.11%",
-        "Analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1m return +32.92%, PE 13.42, analyst buy score 2.35, news sentiment 0.087, low beta 0.546. Attractive valuation after YTD decline of -21.13%.",
-      "drivers": [
-        "1-month return +32.92%",
-        "Low PE 13.42",
-        "Low beta 0.546",
-        "YTD decline offers value"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Analyst strong_buy score 1.17, 1m return +35.07%, 1w return +20.85%, but high short interest 23.21% and no PE. Drone sector tailwinds from Pentagon spending. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
-      "drivers": [
-        "Analyst strong_buy consensus 1.17",
-        "1-week return +20.85%",
-        "Pentagon drone spending catalyst",
-        "High short interest 23.21%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1m return +36.53%, analyst buy score 1.6, news sentiment 0.157, but negative earnings and high short interest 11.32%. Drone market momentum. [aistockwire.com](https://aistockwire.com/blog/defense-drone-stocks-ktos-avav-onds-two-week-rally-august-2026)",
-      "drivers": [
-        "1-month return +36.53%",
-        "Analyst buy consensus 1.6",
-        "Drone sector momentum",
-        "YTD decline -24.74% offers entry"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD return +31.70%, analyst strong_buy score 1.5, low beta 0.179, PE 38.26, positive news sentiment 0.013. Strong defense electronics exposure.",
-      "drivers": [
-        "YTD return +31.70%",
-        "Analyst strong_buy consensus 1.5",
-        "Low beta 0.179",
-        "Defense electronics growth"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "YTD return +28.75%, 1m return +21.86%, analyst buy score 2.21, PE 32.26, negative news sentiment -0.015. UK defence budget growth.",
-      "drivers": [
-        "YTD return +28.75%",
-        "1-month return +21.86%",
-        "UK defence spending tailwind",
-        "Analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "YTD return +26.72%, 1m return +24.69%, news sentiment 0.296, PE 28.15, analyst buy score 1.75. Small cap UK defense penny stock with momentum.",
-      "drivers": [
-        "1-month return +24.69%",
-        "Positive news sentiment 0.296",
-        "YTD return +26.72%",
-        "Analyst buy consensus"
       ]
     }
   ]

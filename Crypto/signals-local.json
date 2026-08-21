@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-19 08:45",
+  "updated": "2026-08-21 08:49",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "BTC",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "BTC +19.4% 1W and +8.35% 1D to $75,417, with $1.4B short liquidations and ETF inflows of $651M over three sessions; news sentiment 0.229. Treasury buyback expansion and Trump's CLARITY Act push are live catalysts.",
+      "drivers": [
+        "+19.4% 1W momentum",
+        "$1.4B short liquidations",
+        "ETF inflows $651M",
+        "news sentiment 0.229"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ETH",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ETH +25.84% 1W and +23.43% 1M to $2,362, with 18% daily surge and 20% weekly gain; news sentiment 0.227. Ether ETF inflows of $71.4M and Trump's CLARITY Act support.",
+      "drivers": [
+        "+25.84% 1W momentum",
+        "Ether ETF inflows $71.4M",
+        "20% weekly gain",
+        "news sentiment 0.227"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "XRP",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "XRP +29.55% 1W and +18% 1D to $1.30, reclaiming $1 level; news sentiment 0.033. Short liquidations of $1.06B and Ripple's White House presence are catalysts.",
+      "drivers": [
+        "+29.55% 1W momentum",
+        "+18% 1D surge",
+        "reclaimed $1 level",
+        "short liquidations $1.06B"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PEPE",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "PEPE +28.98% 1W and +17.63% 1D to $0.000003, with highest news sentiment 0.527. Meme coin season and $3B rally narrative drive momentum.",
+      "drivers": [
+        "+28.98% 1W momentum",
+        "news sentiment 0.527",
+        "meme coin season",
+        "+17.63% 1D"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "LINK +27.80% 1M and +25.49% 1W to $11.00, with Wyoming choosing Chainlink for stablecoin; news sentiment -0.055 but adoption catalyst strong.",
+      "drivers": [
+        "+27.80% 1M momentum",
+        "Wyoming stablecoin adoption",
+        "+25.49% 1W",
+        "market cap $8.23B"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SOL +19.21% 1W and +16.89% 1M to $90.09, with news sentiment 0.186. Solana's meme coin ecosystem and institutional adoption via Securitize fund.",
+      "drivers": [
+        "+19.21% 1W momentum",
+        "meme coin ecosystem",
+        "news sentiment 0.186",
+        "Securitize fund on Solana"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "DOGE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "DOGE +19.65% 1W and +11.34% 1D to $0.083, with news sentiment 0.454. Stablecoin payment integration at X and meme coin rally support.",
+      "drivers": [
+        "+19.65% 1W momentum",
+        "news sentiment 0.454",
+        "X payment integration",
+        "+11.34% 1D"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ADA +22.25% 1M and +13.62% 1D to $0.209, with strong momentum despite no news sentiment. Cardano's rally aligns with broad altcoin surge.",
+      "drivers": [
+        "+22.25% 1M momentum",
+        "+13.62% 1D",
+        "market cap $7.63B",
+        "broad altcoin rally"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BNB +17.18% 1M and +6.31% 1D to $665.70, with news sentiment 0.295. Meme coin season on BNB Chain and regulatory clarity support.",
+      "drivers": [
+        "+17.18% 1M momentum",
+        "news sentiment 0.295",
+        "meme coin season",
+        "market cap $88.65B"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "OCEAN +39.68% 1W and +21.41% 1M, with strong momentum despite no news sentiment. AI sector rotation and data economy narrative drive gains.",
+      "drivers": [
+        "+39.68% 1W momentum",
+        "+21.41% 1M",
+        "AI sector rotation",
+        "data economy narrative"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LINK",
@@ -132,131 +265,6 @@
         "Market cap $1.23B",
         "AI token strength",
         "Moderate momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Best momentum in universe with +14.34% 1M and +14.68% 1W, supported by ICE partnership catalyst and whale buying. Web search confirms LINK hitting $24+ and record OI of $1.5B.",
-      "drivers": [
-        "+14% 1M",
-        "+14.7% 1W",
-        "ICE partnership catalyst",
-        "whale accumulation"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Strong +6.65% 1M gain, positive news sentiment of 0.059, and large market cap of $80.6B provide a solid risk/reward profile.",
-      "drivers": [
-        "+6.6% 1M",
-        "news_s 0.059",
-        "large cap $80.6B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Positive YTD of +16.88% and +3.31% 1M gain, with $31.5B market cap and neutral news sentiment. Web search highlights $2.1T USDT volume.",
-      "drivers": [
-        "+16.9% YTD",
-        "+3.3% 1M",
-        "high USDT volume"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Top 1D momentum at +2.24%, +5.88% 1M and +3.61% 1W, showing strong short-term demand with a $1.27B market cap.",
-      "drivers": [
-        "+2.2% 1D",
-        "+5.9% 1M",
-        "+3.6% 1W"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Largest layer-1 by market cap at $229B with +2.97% 1M gain and slightly positive news sentiment 0.03. Hong Kong stablecoin news supports institutional interest.",
-      "drivers": [
-        "+3.0% 1M",
-        "mc $229B",
-        "news_s 0.03"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Best-performing AI token with -10% 1Y (least negative) and +1.26% 1M, benefiting from AI narrative and $2.2B market cap.",
-      "drivers": [
-        "-10% 1Y (best in AI)",
-        "+1.3% 1M",
-        "AI narrative"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Largest crypto at $1.27T with slight 1M decline -0.66%, but web search indicates strong ETF inflows ($199M on Mar 16) and institutional buying by Strategy.",
-      "drivers": [
-        "mc $1.27T (safe haven)",
-        "ETF inflows",
-        "institutional buying"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Large-cap layer-1 at $44B with flat 1M (+0.57%). Web search notes ETF inflows surged 70x but mixed derivatives signals. Still a core portfolio holding.",
-      "drivers": [
-        "mc $44B",
-        "ETF inflows surge",
-        "slight 1M gain"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "WLD",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Strong 1W (+6.07%) and 1D (+4.23%) momentum with positive news sentiment 0.076 and AI/identity narrative. Market cap $1.3B offers room to grow.",
-      "drivers": [
-        "+6.1% 1W",
-        "+4.2% 1D",
-        "news_s 0.076",
-        "AI narrative"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "Despite negative news sentiment -0.261 and Grayscale ETF withdrawal, ADA has +5.97% 1M momentum and a $6.5B market cap, offering contrarian upside.",
-      "drivers": [
-        "+6.0% 1M",
-        "mc $6.5B",
-        "contrarian play"
       ]
     }
   ]

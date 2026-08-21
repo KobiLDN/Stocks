@@ -1,9 +1,166 @@
 {
-  "updated": "2026-08-19 08:50",
+  "updated": "2026-08-21 08:56",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAP",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "SAP is up +40.66% in the past month and its cloud backlog grew 27% YoY to \u20ac22.9B, proving strong AI-driven ERP demand despite profit-trimming acquisitions; recent Q2 cloud revenue of +24% CC confirms the platform pivot is working, creating a powerful re-rating catalyst. [sap.com](https://news.sap.com/2026/07/sap-announces-q2-and-half-year-2026-results/)",
+      "drivers": [
+        "+40.66% 1M momentum",
+        "26% cloud backlog growth YoY",
+        "Analyst price targets recently as high as $257"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Microsoft's fiscal Q4 revenue of $90.0B topped guidance of $87.8B, Azure growth accelerated to +43% CC with RPO surging 84% to $678B, and Morningstar reaffirmed its $600 fair value estimate with a 4-star rating. [morningstar.com](https://www.morningstar.com/stocks/after-earnings-is-microsoft-stock-buy-sell-or-fairly-valued-11)",
+      "drivers": [
+        "Azure growth of 43%, beating 39.5% guidance",
+        "RPO reached $678B (+84% YoY)",
+        "P/E of 26.96 with strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MRK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Merck surged +42.01% YTD and +18.00% in the past month, driven by a breakthrough cancer vaccine partnership with Moderna, while maintaining a low beta of 0.21 and a reasonable 2.23% dividend yield in a defensive sector.",
+      "drivers": [
+        "+42.01% YTD momentum",
+        "Low beta of 0.211",
+        "Cancer vaccine catalyst from Moderna partnership"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "KO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Coca-Cola delivered a +32.68% YTD return and +10.41% in the past month, combining defensive consumer staples characteristics with a strong 2.35% dividend yield and a moderate P/E of 27.1, ideal for a risk-off macro backdrop.",
+      "drivers": [
+        "+32.68% YTD",
+        "+10.41% 1M move",
+        "2.35% dividend yield with low beta of 0.34"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ExxonMobil gained +38.18% YTD and +10.23% in the past month, benefiting from rising oil prices near $94/barrel, while offering a strong 2.50% dividend yield and a low beta of 0.17 providing macro shelter.",
+      "drivers": [
+        "+38.18% YTD",
+        "+10.23% 1M performance",
+        "2.50% dividend yield, low beta of 0.17"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Thermo Fisher gained +19.88% in the past month on strong life sciences tools momentum, and trades at a reasonable P/E of 33.01 with a buy rating from analysts, benefiting from sustained biotech capital spending.",
+      "drivers": [
+        "+19.88% 1M momentum",
+        "P/E of 33.01",
+        "Analyst buy consensus with improving news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Netflix rebounded +16.70% in the past month, with streaming market leadership and a P/E of 25.28 offering a compelling growth-at-a-reasonable-price profile despite a -33% 1-year decline.",
+      "drivers": [
+        "+16.70% 1M recovery",
+        "P/E of 25.28",
+        "Buy analyst consensus with streaming leadership"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ABT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Abbott Laboratories rose +14.52% in the past month, driven by its new Instinct CGM sensor launch and steady medical device demand, while offering a strong 2.20% dividend yield and buy rating from analysts.",
+      "drivers": [
+        "+14.52% 1M momentum",
+        "2.20% dividend yield",
+        "Innovation catalyst from new CGM sensor"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BABA",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Alibaba gained +10.65% in the past month and +6.85% in the past week, supported by a strong_buy analyst consensus (score 1.32), a low P/E of 19.78, and improving sentiment around China's regulatory easing. [reuters.com cited via news sentiment +0.138]",
+      "drivers": [
+        "+10.65% 1M momentum",
+        "P/E of 19.78",
+        "Strong_buy consensus with improving China regulatory outlook"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Sony gained +12.18% in the past month, supported by its PlayStation and entertainment transformation strategy, with a P/E of 20.15 and positive news sentiment (+0.157) driven by diversification beyond consumer electronics.",
+      "drivers": [
+        "+12.18% 1M momentum",
+        "P/E of 20.15",
+        "Positive news sentiment on entertainment transformation"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.933,
+      "ytd": "+133.95%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +133.95% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +133.95% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.825,
+      "ytd": "+118.53%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +118.53% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +118.53% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.766,
+      "ytd": "+110.08%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +110.08% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +110.08% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,173 +289,6 @@
         "Cloud revenue growth",
         "P/E 26.88",
         "AI investment catalyst"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+145.53%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +145.53% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +145.53% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.841,
-      "ytd": "+120.80%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +120.80% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +120.80% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.813,
-      "ytd": "+116.76%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +116.76% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +116.76% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "MSFT has strong momentum (+25.22% 1M) and a strong_buy consensus (an_score 1.36). JPMorgan raised its price target to $625 on AI-driven Copilot adoption, and Morningstar keeps a $600 fair value estimate, citing Azure AI demand and a 17% revenue beat.",
-      "drivers": [
-        "+25.22% 1M momentum",
-        "strong_buy consensus (1.36)",
-        "JPMorgan $625 PT on AI tailwinds",
-        "Azure revenue beat +17% YoY"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SAP",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SAP surged +33.39% in the last month with a strong_buy consensus and a Barclays price target of $242 (+17.4% upside). The company is cutting costs and reinvesting in AI, which supports margin expansion.",
-      "drivers": [
-        "+33.39% 1M momentum",
-        "strong_buy consensus",
-        "Barclays $242 PT",
-        "AI reinvestment and cost discipline"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "ABT rallied +24.62% in the last month, with positive news sentiment (0.335) and a buy consensus. The Lingo partnership with Alphabet for AI-powered health is a key catalyst.",
-      "drivers": [
-        "+24.62% 1M momentum",
-        "positive news sentiment (0.335)",
-        "AI health partnership with GOOG",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SONY",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SONY gained +17.29% in the last month, has a strong_buy consensus (an_score 1.5), and very low short interest (0.17%). The stock benefits from a weak JPY tailwind and strong entertainment segment.",
-      "drivers": [
-        "+17.29% 1M momentum",
-        "strong_buy consensus (1.5)",
-        "low short interest (0.17%)",
-        "weak JPY tailwind"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "RTX has strong momentum (+14.20% 1M, +20.37% YTD) with a buy consensus and positive news sentiment (0.302). Defense spending tailwinds and aerospace demand support the outlook.",
-      "drivers": [
-        "+14.20% 1M momentum",
-        "+20.37% YTD",
-        "positive news sentiment (0.302)",
-        "defense spending tailwinds"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "XOM is up +10.79% in the last month and +32.30% YTD, with a low beta of 0.173 and a 2.57% dividend yield. Rising oil prices due to Iran tensions are a near-term catalyst.",
-      "drivers": [
-        "+10.79% 1M momentum",
-        "+32.30% YTD",
-        "low beta (0.173)",
-        "geopolitical oil price catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "CVX gained +10.13% in the last month and +30.73% YTD, with a buy consensus and a 3.56% dividend yield. Strong energy sector momentum and a favorable macro backdrop support the pick.",
-      "drivers": [
-        "+10.13% 1M momentum",
-        "+30.73% YTD",
-        "3.56% dividend yield",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "TMO surged +9.90% in the last month, with a buy consensus and a P/E of 31.65. The life sciences tools sector is seeing renewed demand, and the stock is recovering from a flat YTD.",
-      "drivers": [
-        "+9.90% 1M momentum",
-        "buy consensus",
-        "life sciences demand recovery",
-        "P/E 31.65"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "MRK is up +9.89% in the last month and +29.48% YTD, with very positive news sentiment (0.527) and a buy consensus. Strong drug pipeline and Keytruda momentum drive growth.",
-      "drivers": [
-        "+9.89% 1M momentum",
-        "+29.48% YTD",
-        "very positive news sentiment (0.527)",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TM",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "TM gained +8.02% in the last month, has a strong_buy consensus (an_score 1.5), a low P/E of 8.67, and a 3.28% dividend yield. A weak JPY and improving Japan economy are tailwinds.",
-      "drivers": [
-        "+8.02% 1M momentum",
-        "strong_buy consensus (1.5)",
-        "low P/E (8.67)",
-        "3.28% dividend yield"
       ]
     }
   ]

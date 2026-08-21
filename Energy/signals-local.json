@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-19 08:47",
+  "updated": "2026-08-21 08:50",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "COP",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "COP surged +15.57% in the past month and +42.57% YTD, with a strong analyst score of 1.64 (buy) and positive news sentiment of 0.171, driven by rising oil prices and Middle East supply disruptions. The stock hit a 52-week high, supported by a P/E of 17.27 and a 2.57% dividend yield.",
+      "drivers": [
+        "+15.57% 1M momentum",
+        "52-week high breakout",
+        "analyst score 1.64",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "EQNR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "EQNR leads the universe with +80.46% YTD and +70% 1-year return, with strong 1M momentum of +15.13% and a recent Norwegian crude supply deal with ORLEN. Despite a hold rating (3.33), its P/E of 11.4 and 3.71% dividend yield offer compelling value.",
+      "drivers": [
+        "+80.46% YTD",
+        "crude supply deal with ORLEN",
+        "P/E 11.4",
+        "dividend yield 3.71%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.832,
+      "rationale": "MPC has surged +119.44% YTD and +117% over 1 year, with +12.34% 1M momentum, benefiting from surging refining margins amid Middle East disruptions. Its P/E of 12.52 and 1.11% dividend yield are attractive, though short interest at 2.81% and a slight 1D dip warrant monitoring.",
+      "drivers": [
+        "+119.44% YTD",
+        "surging refining margins",
+        "P/E 12.52",
+        "strong 1M momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.763,
+      "rationale": "VLO shows exceptional +109.65% YTD and +143% 1-year returns, with +8.90% 1M momentum and the highest news sentiment (0.284) in the refining group. Its P/E of 14.43 and 1.39% dividend yield are solid, though a slight 1W/1D pullback and 3.67% short interest suggest caution.",
+      "drivers": [
+        "+109.65% YTD",
+        "highest news sentiment 0.284",
+        "P/E 14.43",
+        "strong 1M momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SLB gained +14.94% in the past month and +34.70% YTD, with a strong analyst score of 1.6 (buy) and positive news sentiment of 0.254, driven by rising oilfield service demand. Its P/E of 26.12 is elevated, but the 2.20% dividend yield and low beta of 0.749 provide stability.",
+      "drivers": [
+        "+14.94% 1M momentum",
+        "analyst score 1.6",
+        "positive news sentiment",
+        "dividend yield 2.20%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "XOM is up +38.18% YTD and +49% over 1 year, with +10.23% 1M momentum, supported by record Permian production and strong refining margins despite a slight earnings miss. Its P/E of 21.36 and 2.50% dividend yield are reasonable, though negative news sentiment (-0.06) and a carbon credit controversy are headwinds.",
+      "drivers": [
+        "+38.18% YTD",
+        "record Permian production",
+        "P/E 21.36",
+        "dividend yield 2.50%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "TTE has gained +38.14% YTD and +42% over 1 year, with +8.82% 1M momentum, benefiting from higher oil prices and a low P/E of 11.28. Its 4.71% dividend yield is the highest among oil majors, though the lack of an analyst rating and a neutral news sentiment (0.04) limit conviction.",
+      "drivers": [
+        "+38.14% YTD",
+        "P/E 11.28",
+        "dividend yield 4.71%",
+        "low short interest 0.20%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CVX is up +35.67% YTD and +30% over 1 year, with +8.63% 1M momentum, driven by a strong Q2 earnings beat ($6.06 vs $5.56 expected) and surging profits from Middle East disruptions. Its P/E of 19.8 and 3.46% dividend yield are attractive, though negative news sentiment (-0.043) and a slight 1D gain temper the outlook.",
+      "drivers": [
+        "+35.67% YTD",
+        "Q2 earnings beat",
+        "P/E 19.8",
+        "dividend yield 3.46%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "OXY has surged +46.53% YTD and +38% over 1 year, with +8.88% 1M momentum, supported by Berkshire Hathaway's ownership and rising oil prices. Its P/E of 17.73 and 1.86% dividend yield are reasonable, but negative news sentiment (-0.171) and a low short interest of 0.01% suggest limited bearish pressure.",
+      "drivers": [
+        "+46.53% YTD",
+        "Berkshire Hathaway backing",
+        "P/E 17.73",
+        "low short interest 0.01%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BKR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "BKR gained +34.62% YTD and +44% over 1 year, with +11.76% 1M momentum, benefiting from strong oilfield service demand and a positive news sentiment of 0.196. Its P/E of 20.72 and 1.43% dividend yield are fair, though a 1W/1D pullback and higher beta of 0.959 add risk.",
+      "drivers": [
+        "+34.62% YTD",
+        "positive news sentiment 0.196",
+        "P/E 20.72",
+        "strong 1M momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +265,6 @@
         "1M momentum +14.7%",
         "news sentiment 0.254",
         "YTD return +33.8%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "MPC is up +117% YTD and +19% in the last month, with a P/E of 12.3 and a 1.1% dividend yield. Refining margins are surging due to Middle East supply disruptions, and the stock has strong momentum and positive news sentiment (+0.25).",
-      "drivers": [
-        "+117% YTD",
-        "+19% 1M momentum",
-        "P/E 12.3",
-        "Refining margin surge"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Valero is up +150% over the past year and +110% YTD, with a P/E of 14.2 and a 1.4% dividend yield. Record refining profits are being driven by high crack spreads, and the stock has strong momentum and a positive analyst consensus.",
-      "drivers": [
-        "+150% 1Y return",
-        "+110% YTD",
-        "P/E 14.2",
-        "Record refining profits"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Equinor is up +72% YTD and +15% in the last month, with a P/E of 11.1 and a 3.8% dividend yield. The stock benefits from high oil prices and strong European gas demand, though analyst consensus is hold (3.33) and short interest is elevated at 2.95%.",
-      "drivers": [
-        "+72% YTD",
-        "+15% 1M momentum",
-        "P/E 11.1",
-        "Dividend yield 3.8%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "COP",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "ConocoPhillips is up +33% YTD and +14% in the last month, with a P/E of 16.8 and a 2.7% dividend yield. The company has a strong analyst score (1.64) and positive news sentiment (+0.20), and is well-positioned for high oil prices.",
-      "drivers": [
-        "+33% YTD",
-        "+14% 1M momentum",
-        "Analyst score 1.64",
-        "P/E 16.8"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SLB",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "SLB is up +35% YTD and +13% in the last month, with a P/E of 26.2 and a 2.2% dividend yield. The stock has the best analyst score (1.6) and highest news sentiment (+0.33) in the universe, driven by strong oilfield services demand.",
-      "drivers": [
-        "+35% YTD",
-        "+13% 1M momentum",
-        "Analyst score 1.6",
-        "News sentiment +0.33"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BKR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Baker Hughes is up +39% YTD and +14% in the last month, with a P/E of 20.8 and a 1.4% dividend yield. The stock has strong momentum, a positive analyst score (1.71), and benefits from rising rig counts and LNG demand.",
-      "drivers": [
-        "+39% YTD",
-        "+14% 1M momentum",
-        "Analyst score 1.71",
-        "Rising rig count"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Exxon is up +32% YTD and +11% in the last month, with a P/E of 20.6 and a 2.6% dividend yield. Despite a slight EPS miss, the company posted record production and strong cash flows, and is trading at a premium valuation but with solid fundamentals.",
-      "drivers": [
-        "+32% YTD",
-        "+11% 1M momentum",
-        "Dividend yield 2.6%",
-        "Record production"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.67,
-      "rationale": "Chevron is up +31% YTD and +10% in the last month, with a P/E of 19.2 and a 3.6% dividend yield. The company beat Q2 EPS estimates and has a strong analyst score (1.72), with positive news sentiment (+0.28).",
-      "drivers": [
-        "+31% YTD",
-        "+10% 1M momentum",
-        "Dividend yield 3.6%",
-        "EPS beat"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "TotalEnergies is up +34% YTD and +10% in the last month, with a P/E of 11.1 and a 4.8% dividend yield. The stock offers a high dividend yield and benefits from high oil prices, though analyst coverage is limited.",
-      "drivers": [
-        "+34% YTD",
-        "+10% 1M momentum",
-        "Dividend yield 4.8%",
-        "P/E 11.1"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "Occidental is up +39% YTD and +9% in the last month, with a P/E of 17.2 and a 1.9% dividend yield. The company has a strong analyst score (2.33) and is benefiting from high oil prices and debt reduction, though short interest is very low.",
-      "drivers": [
-        "+39% YTD",
-        "+9% 1M momentum",
-        "P/E 17.2",
-        "Debt reduction"
       ]
     }
   ]
