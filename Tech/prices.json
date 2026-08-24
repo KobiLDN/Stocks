@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-24 07:32",
-  "fx_gbp_usd": 1.364,
+  "updated": "2026-08-24 09:51",
+  "fx_gbp_usd": 1.3634,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -9,7 +9,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "227",
       "price_usd": 309.35,
-      "change_1d": "-0.88%",
+      "change_1d": "-0.11%",
       "change_1w": "+1.12%",
       "change_1m": "-4.99%",
       "change_ytd": "+14.46%",
@@ -19,8 +19,8 @@
       "high_gbp": "253",
       "high_usd": 344.57,
       "bar_pct": 71,
-      "market_cap_gbp_b": 3309.869,
-      "market_cap_usd_b": 4514.71,
+      "market_cap_gbp_b": 3311.404,
+      "market_cap_usd_b": 4514.709,
       "beta": 1.086,
       "pe_ratio": 35.48,
       "avg_volume_m": 56.65,
@@ -35,7 +35,7 @@
         {
           "title": "Xiaomi launches new Xring chip, partners with TSMC for production, sources say",
           "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/articles/xiaomi-launches-xring-chip-partners-062221305.html",
+          "url": "https://finance.yahoo.com/technology/articles/xiaomi-launches-new-xring-chip-partners-with-tsmc-for-production-sources-say-062221305.html",
           "published": 1787552541,
           "sentiment": 0.0
         },
@@ -77,7 +77,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "354",
       "price_usd": 483.24,
-      "change_1d": "+0.44%",
+      "change_1d": "-0.08%",
       "change_1w": "-2.27%",
       "change_1m": "+24.03%",
       "change_ytd": "+2.83%",
@@ -87,8 +87,8 @@
       "high_gbp": "406",
       "high_usd": 553.72,
       "bar_pct": 66,
-      "market_cap_gbp_b": 2630.705,
-      "market_cap_usd_b": 3588.32,
+      "market_cap_gbp_b": 2631.926,
+      "market_cap_usd_b": 3588.321,
       "beta": 1.099,
       "pe_ratio": 26.95,
       "avg_volume_m": 39.9,
@@ -105,6 +105,13 @@
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/news/nvidias-q2-earnings-to-test-resurgent-ai-trade-112502189.html",
           "published": 1787484302,
+          "sentiment": 0.0
+        },
+        {
+          "title": "I've Covered Semiconductors for Years. Nvidia Is My No. 1 Pick Heading Into 2027.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/24/ive-covered-semiconductors-for-years-nvidia-is-m/",
+          "published": 1787558700,
           "sentiment": 0.0
         },
         {
@@ -127,13 +134,6 @@
           "url": "https://www.fool.com/investing/2026/08/23/bill-gates-foundation-holds-berkshire-hathaway-as/",
           "published": 1787538900,
           "sentiment": 0.202
-        },
-        {
-          "title": "This Company Just Paid Out $6.8 Billion. Its AI Bill Was 4x That",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/23/this-company-just-paid-out-6-8-billion-its-ai-bill-was-4x-that/",
-          "published": 1787517535,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.128
@@ -145,17 +145,17 @@
       "exchange": "NASDAQ",
       "price_gbp": "253",
       "price_usd": 344.82,
-      "change_1d": "+1.18%",
+      "change_1d": "-0.08%",
       "change_1w": "-0.31%",
       "change_1m": "+0.80%",
       "change_ytd": "+9.56%",
       "return_1yr": "+65%",
-      "low_gbp": "150",
+      "low_gbp": "151",
       "low_usd": 205.28,
       "high_gbp": "300",
       "high_usd": 408.61,
       "bar_pct": 69,
-      "market_cap_gbp_b": 3091.702,
+      "market_cap_gbp_b": 3093.136,
       "market_cap_usd_b": 4217.127,
       "beta": 1.237,
       "pe_ratio": 17.3,
@@ -173,6 +173,13 @@
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/news/nvidias-q2-earnings-to-test-resurgent-ai-trade-112502189.html",
           "published": 1787484302,
+          "sentiment": 0.0
+        },
+        {
+          "title": "I've Covered Semiconductors for Years. Nvidia Is My No. 1 Pick Heading Into 2027.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/24/ive-covered-semiconductors-for-years-nvidia-is-m/",
+          "published": 1787558700,
           "sentiment": 0.0
         },
         {
@@ -195,16 +202,9 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/alibaba-shares-fall-8-10-015142834.html",
           "published": 1787536663,
           "sentiment": 0.527
-        },
-        {
-          "title": "Hugging Face exploring sale valuing it at $13 billion, Business Insider says",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/ai/articles/hugging-face-exploring-sale-valuing-200012818.html",
-          "published": 1787515212,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.178
+      "news_sentiment": 0.051
     },
     {
       "ticker": "AMZN",
@@ -213,7 +213,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "190",
       "price_usd": 258.63,
-      "change_1d": "-0.72%",
+      "change_1d": "-0.35%",
       "change_1w": "-1.53%",
       "change_1m": "+5.63%",
       "change_ytd": "+14.19%",
@@ -223,8 +223,8 @@
       "high_gbp": "211",
       "high_usd": 287.2,
       "bar_pct": 69,
-      "market_cap_gbp_b": 2045.187,
-      "market_cap_usd_b": 2789.665,
+      "market_cap_gbp_b": 2046.135,
+      "market_cap_usd_b": 2789.664,
       "beta": 1.454,
       "pe_ratio": 20.79,
       "avg_volume_m": 50.07,
@@ -241,6 +241,13 @@
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/news/nvidias-q2-earnings-to-test-resurgent-ai-trade-112502189.html",
           "published": 1787484302,
+          "sentiment": 0.0
+        },
+        {
+          "title": "I've Covered Semiconductors for Years. Nvidia Is My No. 1 Pick Heading Into 2027.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/24/ive-covered-semiconductors-for-years-nvidia-is-m/",
+          "published": 1787558700,
           "sentiment": 0.0
         },
         {
@@ -263,16 +270,9 @@
           "url": "https://beincrypto.com/peter-thiel-13f-ai-power-bet/",
           "published": 1787537235,
           "sentiment": 0.0
-        },
-        {
-          "title": "UPS Stopped Carrying 2 Million Amazon Packages a Day. Amazon Still Has to Move Them.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/23/ups-stopped-carrying-2-million-amazon-packages-a-day-amazon-still-has-to-move-them/",
-          "published": 1787531641,
-          "sentiment": 0.128
         }
       ],
-      "news_sentiment": -0.011
+      "news_sentiment": -0.037
     },
     {
       "ticker": "META",
@@ -281,18 +281,18 @@
       "exchange": "NASDAQ",
       "price_gbp": "403",
       "price_usd": 549.9,
-      "change_1d": "+0.68%",
+      "change_1d": "-0.55%",
       "change_1w": "-6.77%",
       "change_1m": "-12.32%",
       "change_ytd": "-15.30%",
       "return_1yr": "-27%",
-      "low_gbp": "381",
+      "low_gbp": "382",
       "low_usd": 520.26,
       "high_gbp": "580",
       "high_usd": 790.8,
       "bar_pct": 11,
-      "market_cap_gbp_b": 1027.022,
-      "market_cap_usd_b": 1400.873,
+      "market_cap_gbp_b": 1027.499,
+      "market_cap_usd_b": 1400.874,
       "beta": 1.243,
       "pe_ratio": 20.7,
       "avg_volume_m": 18.57,
@@ -309,6 +309,13 @@
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/news/nvidias-q2-earnings-to-test-resurgent-ai-trade-112502189.html",
           "published": 1787484302,
+          "sentiment": 0.0
+        },
+        {
+          "title": "I've Covered Semiconductors for Years. Nvidia Is My No. 1 Pick Heading Into 2027.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/24/ive-covered-semiconductors-for-years-nvidia-is-m/",
+          "published": 1787558700,
           "sentiment": 0.0
         },
         {
@@ -331,16 +338,9 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-msft-gets-australia-news-170738761.html",
           "published": 1787504858,
           "sentiment": 0.0
-        },
-        {
-          "title": "The $1.7 Trillion Job Apocalypse: Why Investors Can\u2019t Ignore Humanoid Robots",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/23/the-1-7-trillion-job-apocalypse-why-investors-cant-ignore-humanoid-robots/",
-          "published": 1787501862,
-          "sentiment": -0.361
         }
       ],
-      "news_sentiment": -0.156
+      "news_sentiment": -0.084
     },
     {
       "ticker": "NVDA",
@@ -349,7 +349,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "157",
       "price_usd": 214.72,
-      "change_1d": "-1.07%",
+      "change_1d": "-0.31%",
       "change_1w": "-4.64%",
       "change_1m": "+1.25%",
       "change_ytd": "+13.84%",
@@ -359,7 +359,7 @@
       "high_gbp": "173",
       "high_usd": 236.54,
       "bar_pct": 70,
-      "market_cap_gbp_b": 3812.813,
+      "market_cap_gbp_b": 3814.582,
       "market_cap_usd_b": 5200.733,
       "beta": 2.215,
       "pe_ratio": 32.88,
@@ -373,42 +373,42 @@
       "vol_1m": 2694289600,
       "news": [
         {
-          "title": "Nvidia's Q2 earnings to test resurgent AI trade",
+          "title": "Stock market today: Dow, S&P 500, Nasdaq futures mixed after US-Canada talks break down",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/news/nvidias-q2-earnings-to-test-resurgent-ai-trade-112502189.html",
-          "published": 1787484302,
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-august-24-dow-sp-500-nasdaq-080306047.html",
+          "published": 1787558586,
           "sentiment": 0.0
         },
         {
-          "title": "Nvidia earnings and Jackson Hole: What to watch this week",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/nvidia-earnings-and-jackson-hole-what-to-watch-this-week-100000082.html",
-          "published": 1787479200,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Taiwan indicts 9 over alleged illegal export of AI servers to China",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/ai/articles/taiwan-indicts-9-over-alleged-062457847.html",
-          "published": 1787552697,
-          "sentiment": -0.557
-        },
-        {
-          "title": "Billionaire Investor Stanley Druckenmiller Sold Broadcom, Intel, and Micron and Bought Another Chip Stock That Expects to Double Data Center Sales in 2027",
+          "title": "Will Nvidia Stock Soar After Aug. 26? Here's What History Shows.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/24/billionaire-stanley-druckenmiller-sold-micron-2027/",
-          "published": 1787551500,
+          "url": "https://www.fool.com/investing/2026/08/24/will-nvidia-stock-soar-after-aug-26-here-s-what-history-shows/",
+          "published": 1787561041,
           "sentiment": 0.0
         },
         {
-          "title": "Shares, oil slip awaiting US details of Iran sanctions",
+          "title": "Anthropic Has a $65 Billion Run Rate. Buy These Stocks to Profit From It.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/24/anthropic-has-a-65-billion-run-rate-buy-these-stoc/",
+          "published": 1787561040,
+          "sentiment": 0.44
+        },
+        {
+          "title": "BlackRock Says the Long-Term Investment Thesis for Bitcoin Remains Intact. Is Bitcoin Now a Buy?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/24/blackrock-says-the-long-term-investment-thesis-for/",
+          "published": 1787560380,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Shares, oil dip as US sanctions on Iran loom",
           "publisher": "Reuters",
           "url": "https://finance.yahoo.com/news/shares-flat-asia-iran-sanctions-004936320.html",
-          "published": 1787550276,
-          "sentiment": 0.296
+          "published": 1787560305,
+          "sentiment": 0.077
         }
       ],
-      "news_sentiment": -0.052
+      "news_sentiment": 0.144
     },
     {
       "ticker": "AMD",
@@ -417,7 +417,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "347",
       "price_usd": 473.25,
-      "change_1d": "+1.14%",
+      "change_1d": "+0.20%",
       "change_1w": "-8.00%",
       "change_1m": "-14.32%",
       "change_ytd": "+111.77%",
@@ -427,8 +427,8 @@
       "high_gbp": "429",
       "high_usd": 584.73,
       "bar_pct": 74,
-      "market_cap_gbp_b": 566.393,
-      "market_cap_usd_b": 772.568,
+      "market_cap_gbp_b": 566.656,
+      "market_cap_usd_b": 772.569,
       "beta": 2.489,
       "pe_ratio": 120.42,
       "avg_volume_m": 28.74,
@@ -485,7 +485,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "66",
       "price_usd": 90.07,
-      "change_1d": "-2.02%",
+      "change_1d": "+0.23%",
       "change_1w": "-12.13%",
       "change_1m": "-12.23%",
       "change_ytd": "+128.72%",
@@ -495,7 +495,7 @@
       "high_gbp": "104",
       "high_usd": 142.35,
       "bar_pct": 56,
-      "market_cap_gbp_b": 349.057,
+      "market_cap_gbp_b": 349.219,
       "market_cap_usd_b": 476.119,
       "beta": 2.241,
       "pe_ratio": null,
@@ -553,7 +553,7 @@
       "exchange": "NYSE",
       "price_gbp": "307",
       "price_usd": 418.95,
-      "change_1d": "+0.85%",
+      "change_1d": "-0.14%",
       "change_1w": "-1.74%",
       "change_1m": "-0.54%",
       "change_ytd": "+31.76%",
@@ -563,8 +563,8 @@
       "high_gbp": "351",
       "high_usd": 479.0,
       "bar_pct": 76,
-      "market_cap_gbp_b": 1592.999,
-      "market_cap_usd_b": 2172.874,
+      "market_cap_gbp_b": 1593.737,
+      "market_cap_usd_b": 2172.873,
       "beta": 1.258,
       "pe_ratio": 31.24,
       "avg_volume_m": 13.61,
@@ -579,7 +579,7 @@
         {
           "title": "Xiaomi launches new Xring chip, partners with TSMC for production, sources say",
           "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/technology/articles/xiaomi-launches-xring-chip-partners-062221305.html",
+          "url": "https://finance.yahoo.com/technology/articles/xiaomi-launches-new-xring-chip-partners-with-tsmc-for-production-sources-say-062221305.html",
           "published": 1787552541,
           "sentiment": 0.0
         },
@@ -621,7 +621,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "270",
       "price_usd": 368.45,
-      "change_1d": "+1.07%",
+      "change_1d": "-0.15%",
       "change_1w": "-6.24%",
       "change_1m": "-7.15%",
       "change_ytd": "+6.38%",
@@ -631,7 +631,7 @@
       "high_gbp": "363",
       "high_usd": 495.0,
       "bar_pct": 39,
-      "market_cap_gbp_b": 1285.126,
+      "market_cap_gbp_b": 1285.722,
       "market_cap_usd_b": 1752.931,
       "beta": 1.473,
       "pe_ratio": 61.31,
@@ -689,7 +689,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "118",
       "price_usd": 160.75,
-      "change_1d": "+0.20%",
+      "change_1d": "-0.06%",
       "change_1w": "-3.04%",
       "change_1m": "-8.47%",
       "change_ytd": "-6.13%",
@@ -699,7 +699,7 @@
       "high_gbp": "191",
       "high_usd": 259.92,
       "bar_pct": 28,
-      "market_cap_gbp_b": 123.771,
+      "market_cap_gbp_b": 123.828,
       "market_cap_usd_b": 168.825,
       "beta": 1.663,
       "pe_ratio": 18.39,
@@ -757,7 +757,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "178",
       "price_usd": 243.32,
-      "change_1d": "-2.71%",
+      "change_1d": "+0.04%",
       "change_1w": "-12.93%",
       "change_1m": "-14.14%",
       "change_ytd": "+112.08%",
@@ -767,8 +767,8 @@
       "high_gbp": "332",
       "high_usd": 452.7,
       "bar_pct": 41,
-      "market_cap_gbp_b": 190.515,
-      "market_cap_usd_b": 259.865,
+      "market_cap_gbp_b": 190.604,
+      "market_cap_usd_b": 259.866,
       "beta": 3.909,
       "pe_ratio": 250.85,
       "avg_volume_m": 8.26,
@@ -823,20 +823,20 @@
       "company_name": "ASML Holding",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "1293",
+      "price_gbp": "1294",
       "price_usd": 1763.76,
-      "change_1d": "+0.63%",
+      "change_1d": "+0.02%",
       "change_1w": "-4.36%",
       "change_1m": "-1.99%",
       "change_ytd": "+52.28%",
       "return_1yr": "+134%",
       "low_gbp": "525",
       "low_usd": 716.2,
-      "high_gbp": "1466",
+      "high_gbp": "1467",
       "high_usd": 1999.96,
       "bar_pct": 82,
-      "market_cap_gbp_b": 496.666,
-      "market_cap_usd_b": 677.46,
+      "market_cap_gbp_b": 496.897,
+      "market_cap_usd_b": 677.461,
       "beta": 1.365,
       "pe_ratio": 59.53,
       "avg_volume_m": 1.88,
@@ -848,6 +848,13 @@
       "vol_1w": 6056100,
       "vol_1m": 34596400,
       "news": [
+        {
+          "title": "European Stocks Mostly Lower as Tech, Autos Fall",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/finance/stocks/nikkei-edges-0-3-higher-tracking-wall-streets-gains-7da05fa9?siteid=yhoof2&yptr=yahoo",
+          "published": 1787557560,
+          "sentiment": -0.296
+        },
         {
           "title": "TSMC vs. ASML: Which Semi Monopoly Has the Wider Moat?",
           "publisher": "24/7 Wall St.",
@@ -875,16 +882,9 @@
           "url": "https://finance.yahoo.com/technology/articles/asml-gains-tsmcs-spending-forecast-190758887.html",
           "published": 1787252878,
           "sentiment": 0.34
-        },
-        {
-          "title": "Paul Tudor Jones Just Liquidated His Entire Stake in Applied Materials Stock. I Don\u2019t Think He\u2019s 100% Bearish on AI Though\u2026 Yet",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/3956206/paul-tudor-jones-just-liquidated-his-entire-stake-in-applied-materials-stock-i-dont-think-hes-100-bearish-on-ai-though-yet",
-          "published": 1787249570,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.068
+      "news_sentiment": 0.009
     },
     {
       "ticker": "MU",
@@ -893,14 +893,14 @@
       "exchange": "NASDAQ",
       "price_gbp": "709",
       "price_usd": 966.78,
-      "change_1d": "-0.04%",
+      "change_1d": "+0.32%",
       "change_1w": "-0.50%",
       "change_1m": "+0.76%",
       "change_ytd": "+206.68%",
       "return_1yr": "+730%",
       "low_gbp": "84",
       "low_usd": 114.25,
-      "high_gbp": "920",
+      "high_gbp": "921",
       "high_usd": 1255.0,
       "bar_pct": 75,
       "market_cap_gbp_b": null,
@@ -924,6 +924,13 @@
           "sentiment": 0.0
         },
         {
+          "title": "Micron Sees 'No End' to AI Memory Supply Crunch: CEO Sanjay Mehrotra Says 'Nothing Ever Goes in a Straight Line'",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/technology/ai/articles/micron-sees-no-end-ai-053539087.html",
+          "published": 1787549739,
+          "sentiment": 0.226
+        },
+        {
           "title": "3 Growth Stocks That Could Skyrocket in the Second Half of 2026",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/08/23/3-growth-stocks-that-could-skyrocket-in-the-second/",
@@ -943,16 +950,9 @@
           "url": "https://www.thestreet.com/technology/micron-ceo-doubling-down-cycle-free-future",
           "published": 1787522820,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jim Cramer Says Stocks and the Economy Are Telling Two Very Different Stories: \u2018Jarring Gulf\u2019",
-          "publisher": "Benzinga",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-stocks-economy-203116548.html",
-          "published": 1787517076,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.076
+      "news_sentiment": 0.122
     },
     {
       "ticker": "AMAT",
@@ -961,17 +961,17 @@
       "exchange": "NASDAQ",
       "price_gbp": "361",
       "price_usd": 492.32,
-      "change_1d": "-0.54%",
+      "change_1d": "+0.07%",
       "change_1w": "-2.83%",
       "change_1m": "-11.03%",
       "change_ytd": "+83.76%",
       "return_1yr": "+204%",
       "low_gbp": "113",
       "low_usd": 154.47,
-      "high_gbp": "542",
+      "high_gbp": "543",
       "high_usd": 739.67,
       "bar_pct": 58,
-      "market_cap_gbp_b": 286.567,
+      "market_cap_gbp_b": 286.7,
       "market_cap_usd_b": 390.882,
       "beta": 1.618,
       "pe_ratio": 42.55,
@@ -1029,18 +1029,18 @@
       "exchange": "NYSE",
       "price_gbp": "107",
       "price_usd": 146.47,
-      "change_1d": "+3.40%",
+      "change_1d": "-0.22%",
       "change_1w": "-2.69%",
       "change_1m": "+16.39%",
       "change_ytd": "-24.44%",
       "return_1yr": "-38%",
       "low_gbp": "84",
       "low_usd": 114.5,
-      "high_gbp": "253",
+      "high_gbp": "254",
       "high_usd": 345.72,
       "bar_pct": 14,
-      "market_cap_gbp_b": 309.309,
-      "market_cap_usd_b": 421.902,
+      "market_cap_gbp_b": 309.453,
+      "market_cap_usd_b": 421.903,
       "beta": 1.718,
       "pe_ratio": 25.12,
       "avg_volume_m": 32.58,
@@ -1097,7 +1097,7 @@
       "exchange": "NYSE",
       "price_gbp": "153",
       "price_usd": 209.17,
-      "change_1d": "+1.76%",
+      "change_1d": "-0.00%",
       "change_1w": "+6.61%",
       "change_1m": "+28.33%",
       "change_ytd": "-17.11%",
@@ -1120,6 +1120,13 @@
       "vol_1w": 67470400,
       "vol_1m": 291789400,
       "news": [
+        {
+          "title": "Nvidia Earnings, Jackson Hole: What to Watch This Week",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-24-2026/card/nvidia-earnings-jackson-hole-what-to-watch-this-week-yAWzqr7EgdI6DD1nSyTs?siteid=yhoof2&yptr=yahoo",
+          "published": 1787558861,
+          "sentiment": 0.0
+        },
         {
           "title": "How S&P 500, Nasdaq, Dow Futures Are Moving As Trump\u2019s \u2018Economic D-Day\u2019 On Iran, Nvidia Earnings Loom",
           "publisher": "Stocktwits",
@@ -1147,13 +1154,6 @@
           "url": "https://www.barchart.com/story/news/3993117/nvidia-earnings-jackson-hole-and-other-key-things-to-watch-this-week",
           "published": 1787504402,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jim Cramer Said Affirm Holdings, Inc. (NASDAQ:AFRM) Was The One To Buy",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-said-affirm-holdings-235948978.html",
-          "published": 1787443188,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.045
@@ -1165,7 +1165,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "202",
       "price_usd": 275.3,
-      "change_1d": "+1.32%",
+      "change_1d": "+0.04%",
       "change_1w": "+4.27%",
       "change_1m": "+26.08%",
       "change_ytd": "-17.40%",
@@ -1175,7 +1175,7 @@
       "high_gbp": "272",
       "high_usd": 370.86,
       "bar_pct": 47,
-      "market_cap_gbp_b": 80.228,
+      "market_cap_gbp_b": 80.265,
       "market_cap_usd_b": 109.432,
       "beta": 1.397,
       "pe_ratio": 15.75,
@@ -1233,7 +1233,7 @@
       "exchange": "NYSE",
       "price_gbp": "94",
       "price_usd": 128.48,
-      "change_1d": "-1.04%",
+      "change_1d": "+0.53%",
       "change_1w": "+3.61%",
       "change_1m": "+34.59%",
       "change_ytd": "-12.87%",
@@ -1243,7 +1243,7 @@
       "high_gbp": "143",
       "high_usd": 194.73,
       "bar_pct": 42,
-      "market_cap_gbp_b": 97.382,
+      "market_cap_gbp_b": 97.427,
       "market_cap_usd_b": 132.83,
       "beta": 0.93,
       "pe_ratio": 79.8,
@@ -1301,7 +1301,7 @@
       "exchange": "NYSE",
       "price_gbp": "244",
       "price_usd": 332.78,
-      "change_1d": "+3.83%",
+      "change_1d": "-0.26%",
       "change_1w": "+1.17%",
       "change_1m": "+24.26%",
       "change_ytd": "+53.56%",
@@ -1311,8 +1311,8 @@
       "high_gbp": "251",
       "high_usd": 341.95,
       "bar_pct": 96,
-      "market_cap_gbp_b": 84.56,
-      "market_cap_usd_b": 115.341,
+      "market_cap_gbp_b": 84.6,
+      "market_cap_usd_b": 115.342,
       "beta": 1.315,
       "pe_ratio": null,
       "avg_volume_m": 7.12,
@@ -1369,7 +1369,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "269",
       "price_usd": 367.0,
-      "change_1d": "+1.39%",
+      "change_1d": "-0.14%",
       "change_1w": "+6.17%",
       "change_1m": "+29.01%",
       "change_ytd": "-41.15%",
@@ -1379,7 +1379,7 @@
       "high_gbp": "517",
       "high_usd": 705.08,
       "bar_pct": 25,
-      "market_cap_gbp_b": 73.598,
+      "market_cap_gbp_b": 73.632,
       "market_cap_usd_b": 100.389,
       "beta": 0.959,
       "pe_ratio": 22.38,
@@ -1392,6 +1392,13 @@
       "vol_1w": 18181500,
       "vol_1m": 83596200,
       "news": [
+        {
+          "title": "Nvidia Earnings, Jackson Hole: What to Watch This Week",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-24-2026/card/nvidia-earnings-jackson-hole-what-to-watch-this-week-yAWzqr7EgdI6DD1nSyTs?siteid=yhoof2&yptr=yahoo",
+          "published": 1787558861,
+          "sentiment": 0.0
+        },
         {
           "title": "Intuit (INTU) Reports Earnings Tomorrow: What To Expect",
           "publisher": "StockStory",
@@ -1419,13 +1426,6 @@
           "url": "https://www.trefis.com/articles/612362/get-paid-16-a-year-to-hold-intu-stock-you-already-own/2026-08-21",
           "published": 1787346713,
           "sentiment": 0.0
-        },
-        {
-          "title": "Warsh at Jackson Hole, Nvidia Earnings: What to Watch Next Week",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-21-2026/card/warsh-at-jackson-hole-nvidia-earnings-what-to-watch-next-week-e9WedRMUsVqY3fMQCdVf?siteid=yhoof2&yptr=yahoo",
-          "published": 1787339376,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.068
@@ -1437,7 +1437,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "141",
       "price_usd": 191.95,
-      "change_1d": "+0.63%",
+      "change_1d": "+0.13%",
       "change_1w": "-11.52%",
       "change_1m": "+1.87%",
       "change_ytd": "+69.28%",
@@ -1447,8 +1447,8 @@
       "high_gbp": "167",
       "high_usd": 227.5,
       "bar_pct": 75,
-      "market_cap_gbp_b": 143.294,
-      "market_cap_usd_b": 195.455,
+      "market_cap_gbp_b": 143.36,
+      "market_cap_usd_b": 195.454,
       "beta": 1.234,
       "pe_ratio": null,
       "avg_volume_m": 10.67,
@@ -1460,6 +1460,13 @@
       "vol_1w": 41130000,
       "vol_1m": 174425700,
       "news": [
+        {
+          "title": "Nvidia Earnings, Jackson Hole: What to Watch This Week",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-08-24-2026/card/nvidia-earnings-jackson-hole-what-to-watch-this-week-yAWzqr7EgdI6DD1nSyTs?siteid=yhoof2&yptr=yahoo",
+          "published": 1787558861,
+          "sentiment": 0.0
+        },
         {
           "title": "Dow Jones Futures Waver; Nvidia, Tariffs, Warsh In Focus",
           "publisher": "Investor's Business Daily",
@@ -1487,16 +1494,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-argued-world-palo-001602176.html",
           "published": 1787444162,
           "sentiment": -0.361
-        },
-        {
-          "title": "S&P 500 Posts First Weekly Loss Since July Amid US Warning to Iran",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-posts-first-weekly-204508360.html",
-          "published": 1787345108,
-          "sentiment": -0.572
         }
       ],
-      "news_sentiment": -0.187
+      "news_sentiment": -0.072
     },
     {
       "ticker": "PANW",
@@ -1505,18 +1505,18 @@
       "exchange": "NASDAQ",
       "price_gbp": "262",
       "price_usd": 357.87,
-      "change_1d": "+2.48%",
+      "change_1d": "-0.14%",
       "change_1w": "-6.87%",
       "change_1m": "+6.74%",
       "change_ytd": "+99.51%",
       "return_1yr": "+94%",
       "low_gbp": "102",
       "low_usd": 139.57,
-      "high_gbp": "292",
+      "high_gbp": "293",
       "high_usd": 398.88,
       "bar_pct": 84,
-      "market_cap_gbp_b": 213.828,
-      "market_cap_usd_b": 291.665,
+      "market_cap_gbp_b": 213.927,
+      "market_cap_usd_b": 291.664,
       "beta": 0.893,
       "pe_ratio": 311.19,
       "avg_volume_m": 7.32,
@@ -1573,7 +1573,7 @@
       "exchange": "NYSE",
       "price_gbp": "215",
       "price_usd": 293.14,
-      "change_1d": "+5.00%",
+      "change_1d": "-0.55%",
       "change_1w": "-7.17%",
       "change_1m": "+8.98%",
       "change_ytd": "+49.55%",
@@ -1583,7 +1583,7 @@
       "high_gbp": "244",
       "high_usd": 332.22,
       "bar_pct": 77,
-      "market_cap_gbp_b": 76.525,
+      "market_cap_gbp_b": 76.56,
       "market_cap_usd_b": 104.381,
       "beta": 1.66,
       "pe_ratio": null,
@@ -1641,7 +1641,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "113",
       "price_usd": 153.51,
-      "change_1d": "+1.46%",
+      "change_1d": "-0.10%",
       "change_1w": "-4.06%",
       "change_1m": "-0.99%",
       "change_ytd": "+97.11%",
@@ -1651,7 +1651,7 @@
       "high_gbp": "126",
       "high_usd": 172.09,
       "bar_pct": 81,
-      "market_cap_gbp_b": 82.574,
+      "market_cap_gbp_b": 82.612,
       "market_cap_usd_b": 112.632,
       "beta": 1.058,
       "pe_ratio": 54.44,
@@ -1709,7 +1709,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "58",
       "price_usd": 79.59,
-      "change_1d": "-0.65%",
+      "change_1d": "-0.09%",
       "change_1w": "+1.83%",
       "change_1m": "+16.14%",
       "change_ytd": "-12.53%",
@@ -1719,7 +1719,7 @@
       "high_gbp": "93",
       "high_usd": 126.71,
       "bar_pct": 24,
-      "market_cap_gbp_b": 242.965,
+      "market_cap_gbp_b": 243.078,
       "market_cap_usd_b": 331.408,
       "beta": 1.514,
       "pe_ratio": 25.03,
@@ -1777,7 +1777,7 @@
       "exchange": "NYSE",
       "price_gbp": "109",
       "price_usd": 149.25,
-      "change_1d": "+1.98%",
+      "change_1d": "+0.16%",
       "change_1w": "-3.29%",
       "change_1m": "+26.03%",
       "change_ytd": "-5.06%",
@@ -1787,7 +1787,7 @@
       "high_gbp": "134",
       "high_usd": 182.19,
       "bar_pct": 63,
-      "market_cap_gbp_b": 141.989,
+      "market_cap_gbp_b": 142.055,
       "market_cap_usd_b": 193.675,
       "beta": 2.59,
       "pe_ratio": 100.84,
@@ -1845,7 +1845,7 @@
       "exchange": "NYSE",
       "price_gbp": "391",
       "price_usd": 533.72,
-      "change_1d": "-0.79%",
+      "change_1d": "+0.02%",
       "change_1w": "+4.08%",
       "change_1m": "+12.56%",
       "change_ytd": "-7.18%",
@@ -1855,8 +1855,8 @@
       "high_gbp": "546",
       "high_usd": 745.0,
       "bar_pct": 38,
-      "market_cap_gbp_b": 80.442,
-      "market_cap_usd_b": 109.724,
+      "market_cap_gbp_b": 80.48,
+      "market_cap_usd_b": 109.725,
       "beta": 1.581,
       "pe_ratio": 28.74,
       "avg_volume_m": 1.9,
@@ -1913,7 +1913,7 @@
       "exchange": "NYSE",
       "price_gbp": "58",
       "price_usd": 78.8,
-      "change_1d": "-0.13%",
+      "change_1d": "-0.06%",
       "change_1w": "+3.75%",
       "change_1m": "+12.04%",
       "change_ytd": "-4.90%",
@@ -1923,7 +1923,7 @@
       "high_gbp": "75",
       "high_usd": 101.99,
       "bar_pct": 37,
-      "market_cap_gbp_b": 118.0,
+      "market_cap_gbp_b": 118.055,
       "market_cap_usd_b": 160.954,
       "beta": 1.154,
       "pe_ratio": 17.28,
@@ -1981,18 +1981,18 @@
       "exchange": "NASDAQ",
       "price_gbp": "81",
       "price_usd": 111.04,
-      "change_1d": "+1.32%",
+      "change_1d": "-0.14%",
       "change_1w": "-0.57%",
       "change_1m": "-1.04%",
       "change_ytd": "+47.37%",
       "return_1yr": "+65%",
-      "low_gbp": "48",
+      "low_gbp": "49",
       "low_usd": 66.13,
       "high_gbp": "96",
       "high_usd": 130.37,
       "bar_pct": 70,
-      "market_cap_gbp_b": 320.859,
-      "market_cap_usd_b": 437.656,
+      "market_cap_gbp_b": 321.008,
+      "market_cap_usd_b": 437.657,
       "beta": 1.002,
       "pe_ratio": 33.35,
       "avg_volume_m": 23.97,
@@ -2049,7 +2049,7 @@
       "exchange": "NASDAQ",
       "price_gbp": "132",
       "price_usd": 179.94,
-      "change_1d": "+3.56%",
+      "change_1d": "+0.02%",
       "change_1w": "+3.39%",
       "change_1m": "+44.45%",
       "change_ytd": "+7.20%",
@@ -2059,7 +2059,7 @@
       "high_gbp": "152",
       "high_usd": 207.52,
       "bar_pct": 73,
-      "market_cap_gbp_b": 317.01,
+      "market_cap_gbp_b": 317.157,
       "market_cap_usd_b": 432.406,
       "beta": 1.563,
       "pe_ratio": 153.79,
