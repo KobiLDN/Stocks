@@ -1,9 +1,220 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-21 08:46",
+  "updated": "2026-08-24 09:00",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "Azure crossed $100B in annual revenue growing 43% in Q4, commercial RPO surged 84% to $678B, and Goldman Sachs added MSFT to its Conviction List with a $640 target, supporting a strong buy with P/E 27 and positive news sentiment 0.128.",
+      "drivers": [
+        "+24% 1M momentum",
+        "Azure $100B revenue milestone",
+        "Goldman Conviction List addition",
+        "$678B commercial backlog"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PLTR",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Q2 revenue surged 93% YoY to $1.94B beating estimates, US commercial revenue jumped 149%, and FY2026 guidance raised to $8.15B+, driving +44% 1M momentum with positive news sentiment 0.149.",
+      "drivers": [
+        "+44% 1M momentum",
+        "Q2 revenue beat (+93% YoY)",
+        "US commercial revenue +149%",
+        "Raised FY2026 guidance"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Massive +34.6% 1M momentum, strong_buy consensus with an_score 1.43, highest news sentiment in the universe at 0.363, and P/E 79.8 reflecting high-growth expectations.",
+      "drivers": [
+        "+34.6% 1M momentum",
+        "strong_buy consensus (1.43)",
+        "Highest news sentiment (0.363)",
+        "P/E 79.8 growth premium"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SNOW",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "AI growth story intact with +24.3% 1M momentum, +71% 1-year return, positive news sentiment 0.273, and buy consensus at an_score 1.51 despite no P/E due to negative earnings.",
+      "drivers": [
+        "+24.3% 1M momentum",
+        "+71% 1-year return",
+        "Positive news sentiment (0.273)",
+        "Buy consensus (1.51)"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Sharp +29% 1M recovery after -44% 1-year decline, attractive P/E 22.4, buy consensus at 1.86, and upcoming earnings catalyst with dividend yield 1.31%.",
+      "drivers": [
+        "+29% 1M momentum",
+        "Low P/E (22.4)",
+        "Dividend yield (1.31%)",
+        "Upcoming earnings catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong +28.3% 1M recovery, P/E 24.2 is reasonable, positive 1W momentum +6.6%, and buy consensus at 1.72 despite slightly negative news sentiment.",
+      "drivers": [
+        "+28.3% 1M momentum",
+        "Reasonable P/E (24.2)",
+        "+6.6% 1W momentum",
+        "Buy consensus (1.72)"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Cheap P/E 15.8 with +26% 1M momentum, +4.3% 1W gain, and a compelling value narrative despite hold consensus at 2.73 which could shift on earnings.",
+      "drivers": [
+        "+26% 1M momentum",
+        "Low P/E (15.8)",
+        "Value opportunity",
+        "+4.3% 1W momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Powerful +26% 1M momentum, highest news sentiment among consumer stocks at 0.319, buy consensus at 1.70, but high P/E 101 and elevated beta 2.6 warrant caution.",
+      "drivers": [
+        "+26% 1M momentum",
+        "High news sentiment (0.319)",
+        "Buy consensus (1.70)",
+        "Elevated beta (2.6)"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Solid +16% 1M recovery, P/E 25 is reasonable, positive news sentiment 0.224 with Ackman investment interest, though -35% 1-year decline lingers.",
+      "drivers": [
+        "+16% 1M momentum",
+        "Reasonable P/E (25)",
+        "Positive news sentiment (0.224)",
+        "Ackman investment catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ORCL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Healthy +16.4% 1M momentum, P/E 25 with a 1.37% dividend yield, positive news sentiment 0.114, and buy consensus at 1.59, though -38% 1-year return remains a risk.",
+      "drivers": [
+        "+16.4% 1M momentum",
+        "Dividend yield (1.37%)",
+        "Buy consensus (1.59)",
+        "Positive news sentiment (0.114)"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.896,
+      "ytd": "+128.72%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +128.72% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +128.72% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.78,
+      "ytd": "+112.08%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +112.08% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +112.08% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.778,
+      "ytd": "+111.77%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +111.77% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +111.77% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.693,
+      "ytd": "+99.51%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +99.51% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +99.51% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "ytd": "+206.68%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +206.68% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +206.68% \u2265 152.1% SB"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.676,
+      "ytd": "+97.11%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +97.11% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +97.11% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "signal": "buy",
+      "confidence": 0.583,
+      "ytd": "+83.76%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +83.76% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +83.76% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PLTR",
@@ -132,215 +343,6 @@ window.SIGNALS_DATA = {
         "buy-rated (score 1.59)",
         "AI infrastructure positioning",
         "1.39% dividend yield"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.933,
-      "ytd": "+133.95%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +133.95% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +133.95% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.825,
-      "ytd": "+118.53%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +118.53% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +118.53% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.766,
-      "ytd": "+110.08%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.08% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.08% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.688,
-      "ytd": "+209.08%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +209.08% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +209.08% \u2265 152.1% SB"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.661,
-      "ytd": "+94.88%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +94.88% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +94.88% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.652,
-      "ytd": "+93.62%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +93.62% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +93.62% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "signal": "buy",
-      "confidence": 0.593,
-      "ytd": "+85.21%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +85.21% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +85.21% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "PLTR rocketed 29% after Q2 earnings crushed estimates: revenue surged +93% YoY to $1.94B, US commercial revenue soared +149% to $764M, and Citi analysts called results a blowout that weakens the bear case. 1M momentum is +27.21%, analyst consensus is buy with a score of 1.81, and news sentiment is positive at 0.176.",
-      "drivers": [
-        "Q2 revenue surged 93% YoY to $1.94B",
-        "US commercial revenue jumped 149% to $764M",
-        "1M momentum +27.21%",
-        "Strong AI sovereignty demand catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "INTU",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "INTU surged 5% in the software rotation trade, with 1M momentum of +19.26%, 1D gain of +4.31%, YTD rebound despite being down 43.81%. P/E is a reasonable 20.49, offering attractive value, and news sentiment is strongly positive at 0.283.",
-      "drivers": [
-        "1M momentum +19.26%",
-        "P/E 20.49 attractive valuation",
-        "Positive news sentiment 0.283",
-        "Software rotation beneficiary"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SNOW",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "SNOW has strong 1M momentum of +18.59% and YTD return of +50.12%, reflecting continued enterprise AI adoption. Beta of 1.315 and analyst buy consensus with an_score 1.51 support growth trajectory.",
-      "drivers": [
-        "1M momentum +18.59%",
-        "YTD return +50.12%",
-        "Analyst consensus buy at 1.51"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NFLX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "NFLX rallied 3.2% in the software rotation on 1M momentum of +15.04% and 1W gain of +3.98%. Despite YTD decline of -14.53%, P/E of 23.93 is reasonable and Q2 revenue grew 12% YoY with full-year guidance raised to 13-14% growth.",
-      "drivers": [
-        "1M momentum +15.04%",
-        "P/E 23.93 reasonable",
-        "Rotation into software names",
-        "Management raised FY guidance"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "CRM jumped 3.8% as a key beneficiary of rotation out of AI hardware into software, with 1M momentum of +12.86% and 1D gain of +2.85%. P/E is low at 22.11, AgentForce + Data360 ARR reached $3.4B, and 1Q revenue grew 13% to $11.13B.",
-      "drivers": [
-        "1M momentum +12.86%",
-        "P/E 22.11 attractive valuation",
-        "AI monetization AgentForce ARR $3.4B",
-        "Software rotation beneficiary"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ADBE rallied 4.6% in the rotation trade with 1M momentum of +12.10% and 1D gain of +3.61%. P/E of 14.54 is extremely low, AI-first ARR exceeded $500M growing 4x YoY, and Q2 revenue of $6.62B shows solid execution.",
-      "drivers": [
-        "1M momentum +12.10%",
-        "P/E 14.54 very low valuation",
-        "AI-first ARR $500M growing 4x YoY",
-        "Software rotation beneficiary"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ORCL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ORCL has strong 1M momentum of +17.64% and a P/E of 25.14, with dividend yield of 1.36%. Despite YTD decline of -26.34%, the rotation into software and AI cloud growth potential support a buy.",
-      "drivers": [
-        "1M momentum +17.64%",
-        "P/E 25.14 reasonable",
-        "Dividend yield 1.36%",
-        "AI cloud growth potential"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "NOW shows 1M momentum of +14.13%, strong analyst consensus strong_buy with an_score 1.47, and low beta of 0.93. Despite YTD decline of -18.96%, enterprise AI adoption and low volatility support upside.",
-      "drivers": [
-        "1M momentum +14.13%",
-        "Strong buy consensus at 1.47",
-        "Beta 0.93 low risk",
-        "Enterprise AI adoption tailwind"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SHOP has strong 1M momentum of +17.75% and YTD of -6.76%, with analyst consensus buy at 1.71. Beta of 2.59 is high, but the recovering momentum and low valuation relative to growth support a buy.",
-      "drivers": [
-        "1M momentum +17.75%",
-        "Analyst consensus buy at 1.71",
-        "YTD recovery potential"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "MSFT has massive 1M momentum of +19.72% and a P/E of 26.8, with strong_buy consensus and an_score of 1.36. Azure revenue grew 43% and June-quarter revenue rose 18% to $90B, despite a -$112B market cap wipeout on recent rotation fears.",
-      "drivers": [
-        "1M momentum +19.72%",
-        "Strong buy consensus at 1.36",
-        "Azure revenue grew 43%",
-        "Fundamentals remain strong"
       ]
     }
   ]

@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-21 08:49",
+  "updated": "2026-08-24 09:01",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "XRP",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "XRP surged 47.94% in a week, 36.25% in a month, with positive news sentiment 0.088; ETF inflows of $13M and a $16B market cap shift support momentum per decrypt.co and ts2.tech.",
+      "drivers": [
+        "+47.94% 1W return",
+        "positive news sentiment 0.088",
+        "ETF inflows & market cap shift",
+        "top 10 best performer"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PEPE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "PEPE gained 53.98% in a week and 49.83% in a month with strong news sentiment 0.527; a broad crypto rally and memecoin rotation drove the move per CoinMarketCap.",
+      "drivers": [
+        "+53.98% 1W return",
+        "high news sentiment 0.527",
+        "memecoin rotation leader",
+        "high-beta rally"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "POL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "POL returned +43.89% in a week and +41.12% in a month, leading the infra category with YTD +7.67%; momentum aligns with altcoin breakout across sector.",
+      "drivers": [
+        "+43.89% 1W return",
+        "+41.12% 1M return",
+        "YTD positive 7.67%",
+        "infra category leader"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "LINK broke above $12 with +39.05% 1M return and +22.39% weekly; spot ETF inflows of $4.46M and 1.78% of supply held by ETFs support breakout per coinpedia.org.",
+      "drivers": [
+        "+39.05% 1M return",
+        "ETF inflows $4.46M",
+        "breakout above $12",
+        "institutional demand"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "MINA surged 49.82% in a week and 35.37% in a month with +8.73% in 24h, the strongest daily move among emerging assets; small cap at $0.076B provides explosive upside.",
+      "drivers": [
+        "+49.82% 1W return",
+        "+35.37% 1M return",
+        "strong daily +8.73%",
+        "small cap momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "ETH gained 32.36% in a month and 29.27% in a week with a $296B market cap; ETF inflow week of $2.08B and breakout above $2,500 align with altcoin rally per inflowscan.com.",
+      "drivers": [
+        "+32.36% 1M return",
+        "+29.27% 1W return",
+        "large cap stability",
+        "ETF inflows & breakout"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ADA",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ADA returned 35.58% in a month and 24.41% in a week, with positive news sentiment 0.021; AI prediction of a 2026 comeback adds narrative fuel.",
+      "drivers": [
+        "+35.58% 1M return",
+        "+24.41% 1W return",
+        "positive news sentiment 0.021",
+        "comeback narrative"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DOGE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "DOGE gained 30.92% in a week and 32.64% in a month with high news sentiment 0.351; memecoin rotation and broad rally boosted it per CoinMarketCap.",
+      "drivers": [
+        "+30.92% 1W return",
+        "+32.64% 1M return",
+        "high news sentiment 0.351",
+        "memecoin rotation"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SOL returned 27.76% in a month and 25.07% in a week with a $55B market cap; altcoin rally and institutional infrastructure (Securitize fund addition) support it.",
+      "drivers": [
+        "+27.76% 1M return",
+        "+25.07% 1W return",
+        "$55B market cap",
+        "institutional adoption"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "OCEAN surged 41.05% in a week and 26.83% in a month, with strong weekly momentum in the AI category despite no market cap data; benefits from altcoin rally.",
+      "drivers": [
+        "+41.05% 1W return",
+        "+26.83% 1M return",
+        "AI category momentum",
+        "altcoin rally tailwind"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BTC",
@@ -132,139 +265,6 @@
         "+21.41% 1M",
         "AI sector rotation",
         "data economy narrative"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "LINK has the strongest momentum in the universe with +15.32% 1M and +10.86% 1W, supported by $2.07M daily ETF inflows and a bullish Standard Chartered $200 price target. [coinjournal.net](https://coinjournal.net/news/chainlink-pauses-near-9-56-as-etf-inflows-support-breakout-hopes/)",
-      "drivers": [
-        "+15.32% 1M momentum",
-        "$2.07M daily ETF inflows",
-        "Standard Chartered $200 target",
-        "Positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "BTC at $64K with a 1.05% weekly gain, positive news sentiment 0.088, and bullish taker volume ratio with funding rates at 20-month highs, though macro headwinds from rising yields and oil persist. [coindesk.com](https://www.coindesk.com/markets/2026/08/18/bitcoin-pauses-at-usd64-000-as-rising-yields-oil-drag-equities-lower)",
-      "drivers": [
-        "+1.05% 1W gain",
-        "Positive news sentiment 0.088",
-        "Bullish taker volume ratio",
-        "Funding rates at 20-month high"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "POL",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "POL surged +8.52% in the past week and +3.14% in 1D, making it the strongest weekly performer among infra tokens with a low market cap of $0.878B offering high upside. [crypto.news](https://crypto.news/bitcoin-price-breaks-64k-as-major-altcoins-struggle/)",
-      "drivers": [
-        "+8.52% 1W gain",
-        "+3.14% 1D gain",
-        "Low market cap $0.878B",
-        "Strong weekly momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ETH shows steady recovery with +2.92% 1M and +1.33% 1W gains, positive news sentiment 0.197, and institutional adoption via Securitize adding funds to Ethereum. [decrypt.co](https://decrypt.co/336067/crypto-market-fear-ethereum-solana-chainlink-price-analysis)",
-      "drivers": [
-        "+2.92% 1M gain",
-        "Positive news sentiment 0.197",
-        "Institutional adoption",
-        "Steady recovery momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SOL gained +1.20% in 1D with rising OI to 66.88M tokens, the highest since July 10, and positive news sentiment 0.095, though funding rates remain near zero. [coindesk.com](https://www.coindesk.com/markets/2026/08/18/bitcoin-pauses-at-usd64-000-as-rising-yields-oil-drag-equities-lower)",
-      "drivers": [
-        "+1.20% 1D gain",
-        "Rising OI to 66.88M tokens",
-        "Positive news sentiment 0.095",
-        "Institutional adoption via Securitize"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "BNB has strong 1M momentum at +6.45% despite a slight weekly dip, with a large market cap of $80B providing stability, though news sentiment is slightly negative at -0.142.",
-      "drivers": [
-        "+6.45% 1M gain",
-        "Large market cap $80B",
-        "Stable price action",
-        "Slightly negative news sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ADA leads layer1s with +8.41% 1M momentum and a +0.94% 1D gain, though the -5.74% weekly drop signals volatility; low market cap $6.4B offers high beta potential.",
-      "drivers": [
-        "+8.41% 1M momentum",
-        "+0.94% 1D gain",
-        "Low market cap $6.4B",
-        "High beta potential"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "TRX is the only asset with positive YTD at +17.07% and 1Y return at +17%, with +1.99% 1M momentum, showing consistent outperformance in the payments category.",
-      "drivers": [
-        "+17.07% YTD",
-        "+17% 1Y return",
-        "+1.99% 1M gain",
-        "Consistent outperformance"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HBAR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "HBAR shows strong short-term momentum with +2.50% 1D and +2.77% 1M gains, though OI is declining; low market cap $2.96B provides upside potential.",
-      "drivers": [
-        "+2.50% 1D gain",
-        "+2.77% 1M gain",
-        "Low market cap $2.96B",
-        "Short-term momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "ICP has +4.19% 1M momentum and a market cap of $1.23B, with recent analysis noting strength in AI-related tokens, though weekly performance is slightly negative at -0.95%. [decrypt.co](https://decrypt.co/336067/crypto-market-fear-ethereum-solana-chainlink-price-analysis)",
-      "drivers": [
-        "+4.19% 1M gain",
-        "Market cap $1.23B",
-        "AI token strength",
-        "Moderate momentum"
       ]
     }
   ]

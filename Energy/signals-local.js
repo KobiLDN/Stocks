@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-21 08:50",
+  "updated": "2026-08-24 09:01",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "MPC: +121% YTD, P/E 12.5, Q2 EPS $17.73 vs $3.96 YoY, strong refining margins (R&M adj. EBITDA $24.84/bbl vs $6.79)",
+      "drivers": [
+        "YTD +121%",
+        "P/E 12.5",
+        "Refining margin boom",
+        "Strong earnings beat"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "COP",
+      "signal": "strong_buy",
+      "confidence": 0.93,
+      "rationale": "COP: +42.6% YTD, P/E 17.8, Q2 adj. EPS $3.24, doubled share repurchases to $2B, LNG offtake expanded to 12 MTPA",
+      "drivers": [
+        "YTD +42.6%",
+        "Doubled buybacks",
+        "LNG expansion",
+        "Analyst score 1.64"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "VLO: +114% YTD, P/E 14.6, robust refining margins and strong 1M momentum (+12.6%), analyst buy consensus",
+      "drivers": [
+        "YTD +114%",
+        "P/E 14.6",
+        "Refining strength",
+        "1M +12.6%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.88,
+      "rationale": "XOM: +37.3% YTD, P/E 21.2, Q2 adj. EPS $3.52, record Permian production, Jefferies PT raised to $200",
+      "drivers": [
+        "YTD +37.3%",
+        "Record Permian output",
+        "Jefferies PT $200",
+        "Cash flow $23.6B"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.87,
+      "rationale": "CVX: +35.3% YTD, P/E 19.8, dividend yield 3.47%, refining profit surged to $4.9B in Q2 vs $737M last year",
+      "drivers": [
+        "YTD +35.3%",
+        "Dividend yield 3.47%",
+        "Refining profit surge",
+        "Analyst score 1.72"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.84,
+      "rationale": "EOG: +46.2% YTD, P/E 11.9, cheap valuation, positive news sentiment 0.351, analyst buy",
+      "drivers": [
+        "YTD +46.2%",
+        "P/E 11.9",
+        "Positive sentiment",
+        "Low valuation"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "SLB: +35.5% YTD, P/E 26.3, 1M momentum +13%, strong analyst consensus (score 1.6) and positive news sentiment 0.323",
+      "drivers": [
+        "YTD +35.5%",
+        "1M +13%",
+        "Analyst score 1.6",
+        "Oil services demand"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "SHEL: +27.1% YTD, P/E 10.3, cheap valuation, dividend yield 3.35%, stable amid geopolitical tensions",
+      "drivers": [
+        "YTD +27.1%",
+        "P/E 10.3",
+        "Dividend yield 3.35%",
+        "Low beta -0.218"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "HAL: +20.5% YTD, P/E 18.5, 1M +7%, positive news sentiment 0.289, analyst buy with score 1.75",
+      "drivers": [
+        "YTD +20.5%",
+        "P/E 18.5",
+        "Positive sentiment",
+        "New tech partnerships"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BKR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "BKR: +33.7% YTD, P/E 20.1, 1M +10.6%, analyst consensus buy (score 1.71), but recent 1W pullback -3.83%",
+      "drivers": [
+        "YTD +33.7%",
+        "1M +10.6%",
+        "Analyst score 1.71",
+        "Pullback opportunity"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.56,
+      "ytd": "+80.46%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +80.46% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +80.46% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "COP",
@@ -132,139 +277,6 @@ window.SIGNALS_DATA = {
         "positive news sentiment 0.196",
         "P/E 20.72",
         "strong 1M momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.861,
-      "rationale": "MPC is up 123% YTD with a P/E of 12.4, driven by near-record refinery utilization and strong margins, and positive news sentiment of 0.196.",
-      "drivers": [
-        "YTD return +123%",
-        "P/E 12.4",
-        "refinery utilization catalyst",
-        "news sentiment 0.196"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "VLO has surged 115% YTD, P/E 14.6, with positive news sentiment of 0.2 and strong 1W momentum of +8.1%.",
-      "drivers": [
-        "YTD return +115%",
-        "P/E 14.6",
-        "1W momentum +8.1%",
-        "news sentiment 0.2"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "XOM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "XOM is up 37.7% YTD, P/E 20.8, with catalysts including Rovuma LNG contract awards and Jefferies raising PT to $200 [benzinga.com](https://www.benzinga.com/trading-ideas/movers/26/08/61280321/why-is-exxonmobil-stock-gaining-tuesday) [marketscreener.com](https://www.marketscreener.com/news/jefferies-adjusts-price-target-on-exxon-mobil-to-200-from-184-keeps-buy-rating-ce7859dfd08ef527), plus strong Q2 earnings and Guyana cash flow inflection.",
-      "drivers": [
-        "YTD return +37.7%",
-        "Rovuma LNG catalyst",
-        "Jefferies PT $200",
-        "Q2 earnings beat"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "EQNR leads with +76% YTD, P/E 11.3, and positive news sentiment of 0.141, though analyst consensus is hold.",
-      "drivers": [
-        "YTD return +76%",
-        "P/E 11.3",
-        "1M momentum +13.1%",
-        "news sentiment 0.141"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COP",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "COP is up 37% YTD, P/E 16.9, with a very bullish analyst score of 1.64 and strong 1M momentum of +12.9%.",
-      "drivers": [
-        "YTD return +37%",
-        "analyst score 1.64",
-        "1M momentum +12.9%",
-        "P/E 16.9"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "TTE has a low P/E of 11.1, high dividend yield of 4.78%, and YTD return of +35.7% with 1M momentum of +10.5%.",
-      "drivers": [
-        "P/E 11.1",
-        "dividend yield 4.78%",
-        "YTD return +35.7%",
-        "1M momentum +10.5%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "CVX is up 34.5% YTD, P/E 19.5, with a bullish analyst score of 1.72, dividend yield 3.51%, and positive news sentiment of 0.065.",
-      "drivers": [
-        "YTD return +34.5%",
-        "analyst score 1.72",
-        "dividend yield 3.51%",
-        "1W momentum +4.6%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "OXY has gained 42.4% YTD, P/E 17.6, with analyst buy consensus and positive news sentiment of 0.04.",
-      "drivers": [
-        "YTD return +42.4%",
-        "P/E 17.6",
-        "analyst buy",
-        "news sentiment 0.04"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BKR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "BKR is up 38% YTD with the strongest 1M momentum at +17.3%, analyst score 1.71 (very bullish), and positive news sentiment of 0.181, supported by LNG work builds.",
-      "drivers": [
-        "1M momentum +17.3%",
-        "analyst score 1.71",
-        "YTD return +38%",
-        "LNG catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "SLB has the best analyst score of 1.6, YTD +33.8%, 1M momentum +14.7%, and positive news sentiment of 0.254, despite short-term weakness.",
-      "drivers": [
-        "analyst score 1.6",
-        "1M momentum +14.7%",
-        "news sentiment 0.254",
-        "YTD return +33.8%"
       ]
     }
   ]
