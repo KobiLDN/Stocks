@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-08-26 07:33",
+  "updated": "2026-08-26 09:47",
   "fx_gbp_usd": 1.3632,
   "stocks": [
     {
@@ -9,7 +9,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "227",
       "price_usd": 309.9,
-      "change_1d": "-0.24%",
+      "change_1d": "+0.18%",
       "change_1w": "-0.04%",
       "change_1m": "-7.94%",
       "change_ytd": "+14.66%",
@@ -19,7 +19,7 @@ window.PRICES_DATA = {
       "high_gbp": "253",
       "high_usd": 344.57,
       "bar_pct": 71,
-      "market_cap_gbp_b": 3317.744,
+      "market_cap_gbp_b": 3317.699,
       "market_cap_usd_b": 4522.737,
       "beta": 1.086,
       "pe_ratio": 35.58,
@@ -47,6 +47,13 @@ window.PRICES_DATA = {
           "sentiment": 0.625
         },
         {
+          "title": "Nvidia Earnings Give Investors a Barometer for State of AI Trade",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-earnings-investors-barometer-state-074856874.html",
+          "published": 1787730536,
+          "sentiment": 0.0
+        },
+        {
           "title": "How These 3 Top Funds Deliver \u2018Deep Value\u2019 With Fewer Tech Stocks",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/how-these-3-top-funds-deliver-deep-value-with-fewer-tech-stocks-adcfd689?siteid=yhoof2&yptr=yahoo",
@@ -59,13 +66,6 @@ window.PRICES_DATA = {
           "url": "https://stocktwits.com/news-articles/markets/equity/tsla-nvda-goog-elon-musk-terafab-semi-high-gear/cZYNiHqRJor",
           "published": 1787714369,
           "sentiment": 0.0
-        },
-        {
-          "title": "Dell Stock's Massive Guidance Raise Has A Catch",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/612811/dell-stocks-massive-guidance-raise-has-a-catch/2026-08-25",
-          "published": 1787689227,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.165
@@ -77,7 +77,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "361",
       "price_usd": 491.71,
-      "change_1d": "+0.91%",
+      "change_1d": "+0.42%",
       "change_1w": "+2.29%",
       "change_1m": "+26.61%",
       "change_ytd": "+4.63%",
@@ -87,7 +87,7 @@ window.PRICES_DATA = {
       "high_gbp": "406",
       "high_usd": 553.72,
       "bar_pct": 70,
-      "market_cap_gbp_b": 2678.422,
+      "market_cap_gbp_b": 2678.385,
       "market_cap_usd_b": 3651.215,
       "beta": 1.099,
       "pe_ratio": 27.18,
@@ -108,35 +108,35 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Market Chatter: SoftBank Considering Up to $20 Billion Bond Offering to Refinance OpenAI Investment Loan",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-softbank-considering-20-081355496.html",
+          "published": 1787732035,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Exclusive-China's Moonshot in talks with Microsoft, Amazon, Google over K3 revenue sharing, sources say",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-chinas-moonshot-talks-microsoft-075340033.html",
+          "published": 1787731021,
+          "sentiment": 0.542
+        },
+        {
+          "title": "Nvidia\u2019s Paradox: Stellar Earnings and a Sliding Stock",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/nvidia-stock-vs-earnings-022aa42a?siteid=yhoof2&yptr=yahoo",
+          "published": 1787727600,
+          "sentiment": -0.103
+        },
+        {
           "title": "How These 3 Top Funds Deliver \u2018Deep Value\u2019 With Fewer Tech Stocks",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/how-these-3-top-funds-deliver-deep-value-with-fewer-tech-stocks-adcfd689?siteid=yhoof2&yptr=yahoo",
           "published": 1787720400,
           "sentiment": 0.202
-        },
-        {
-          "title": "TSLA Stock Races Past NVDA, GOOG In August Rally: Elon Musk\u2019s TeraFab And Semi Bets Shift Into High Gear",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/tsla-nvda-goog-elon-musk-terafab-semi-high-gear/cZYNiHqRJor",
-          "published": 1787714369,
-          "sentiment": 0.0
-        },
-        {
-          "title": "How Investors May Respond To Kroger (KR) Linking Prescriptions With Instacart-Powered Online Grocery Delivery",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-kroger-kr-010754643.html",
-          "published": 1787706474,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Uber Technologies (UBER) Is Up 7.6% After Dubai Apollo Go Tie-Up - Has The Bull Case Changed?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/uber-technologies-uber-7-6-010722210.html",
-          "published": 1787706442,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.04
+      "news_sentiment": 0.128
     },
     {
       "ticker": "GOOGL",
@@ -145,7 +145,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "255",
       "price_usd": 346.96,
-      "change_1d": "-0.28%",
+      "change_1d": "+0.19%",
       "change_1w": "+0.80%",
       "change_1m": "+6.25%",
       "change_ytd": "+10.24%",
@@ -155,7 +155,7 @@ window.PRICES_DATA = {
       "high_gbp": "300",
       "high_usd": 408.61,
       "bar_pct": 70,
-      "market_cap_gbp_b": 3112.756,
+      "market_cap_gbp_b": 3112.714,
       "market_cap_usd_b": 4243.298,
       "beta": 1.237,
       "pe_ratio": 17.45,
@@ -176,35 +176,35 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "NFLX Stock Eyes Sixth Week Of Gains: Netflix Reportedly Mulls Adding Rival Streamers To Compete With YouTube, Roku",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/nflx-stock-eyes-sixth-week-of-gains-netflix-reportedly-mulls-adding-rival-streamers-to-compete-with-you-tube-roku/cZYNmeQRJoz",
-          "published": 1787724159,
-          "sentiment": 0.34
+          "title": "Exclusive-China's Moonshot in talks with Microsoft, Amazon, Google over K3 revenue sharing, sources say",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-chinas-moonshot-talks-microsoft-075340033.html",
+          "published": 1787731021,
+          "sentiment": 0.542
         },
         {
-          "title": "Why DOCU, TRI Stocks Slid Over 3% After Google Cloud\u2019s Latest AI Release",
+          "title": "From OpenAI To Google To Amazon: Nvidia\u2019s Biggest Customers Are Becoming Its Biggest Rivals \u2014 The Custom Silicon Race Explained",
           "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/why-docu-tri-stocks-slid-over-3-after-google-cloud-s-latest-ai-release/cZYN1DeRJov",
-          "published": 1787718975,
+          "url": "https://stocktwits.com/news-articles/markets/equity/from-open-ai-to-google-to-amazon-nvidia-s-biggest-customers-are-becoming-its-biggest-rivals-the-custom-silicon-race-explained/cZYNV8HRJYc",
+          "published": 1787729738,
+          "sentiment": 0.178
+        },
+        {
+          "title": "Nvidia\u2019s Paradox: Stellar Earnings and a Sliding Stock",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/nvidia-stock-vs-earnings-022aa42a?siteid=yhoof2&yptr=yahoo",
+          "published": 1787727600,
+          "sentiment": -0.103
+        },
+        {
+          "title": "Nvidia Reports Earnings Today. Will Wall Street\u2019s High Bar Spoil the Surge?",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/livecoverage/nvidia-earnings-stock-price-jensen-huang-chips/card/nvidia-reports-earnings-today-will-wall-street-s-high-bar-spoil-the-surge--dtWiMNKU6BVHW0G0Dx1A?siteid=yhoof2&yptr=yahoo",
+          "published": 1787726241,
           "sentiment": 0.0
-        },
-        {
-          "title": "TSLA Stock Races Past NVDA, GOOG In August Rally: Elon Musk\u2019s TeraFab And Semi Bets Shift Into High Gear",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/tsla-nvda-goog-elon-musk-terafab-semi-high-gear/cZYNiHqRJor",
-          "published": 1787714369,
-          "sentiment": 0.0
-        },
-        {
-          "title": "The AI accountability problem is getting bigger",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/technology/ai-accountability-problem-getting-bigger",
-          "published": 1787712420,
-          "sentiment": -0.402
         }
       ],
-      "news_sentiment": -0.012
+      "news_sentiment": 0.123
     },
     {
       "ticker": "AMZN",
@@ -213,7 +213,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "192",
       "price_usd": 261.06,
-      "change_1d": "-0.59%",
+      "change_1d": "+0.20%",
       "change_1w": "+0.62%",
       "change_1m": "+12.82%",
       "change_ytd": "+15.26%",
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "211",
       "high_usd": 287.2,
       "bar_pct": 71,
-      "market_cap_gbp_b": 2065.641,
+      "market_cap_gbp_b": 2065.613,
       "market_cap_usd_b": 2815.875,
       "beta": 1.454,
       "pe_ratio": 21.02,
@@ -251,28 +251,28 @@ window.PRICES_DATA = {
           "sentiment": 0.625
         },
         {
-          "title": "How These 3 Top Funds Deliver \u2018Deep Value\u2019 With Fewer Tech Stocks",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/how-these-3-top-funds-deliver-deep-value-with-fewer-tech-stocks-adcfd689?siteid=yhoof2&yptr=yahoo",
-          "published": 1787720400,
-          "sentiment": 0.202
+          "title": "Exclusive-China's Moonshot in talks with Microsoft, Amazon, Google over K3 revenue sharing, sources say",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/technology/ai/articles/exclusive-chinas-moonshot-talks-microsoft-075340033.html",
+          "published": 1787731021,
+          "sentiment": 0.542
         },
         {
-          "title": "TSLA Stock Races Past NVDA, GOOG In August Rally: Elon Musk\u2019s TeraFab And Semi Bets Shift Into High Gear",
+          "title": "From OpenAI To Google To Amazon: Nvidia\u2019s Biggest Customers Are Becoming Its Biggest Rivals \u2014 The Custom Silicon Race Explained",
           "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/tsla-nvda-goog-elon-musk-terafab-semi-high-gear/cZYNiHqRJor",
-          "published": 1787714369,
-          "sentiment": 0.0
+          "url": "https://stocktwits.com/news-articles/markets/equity/from-open-ai-to-google-to-amazon-nvidia-s-biggest-customers-are-becoming-its-biggest-rivals-the-custom-silicon-race-explained/cZYNV8HRJYc",
+          "published": 1787729738,
+          "sentiment": 0.178
         },
         {
-          "title": "2 Monster Stocks to Hold for the Next 10 Years",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/25/2-monster-stocks-to-hold-for-the-next-10-years/",
-          "published": 1787707500,
-          "sentiment": 0.0
+          "title": "Nvidia\u2019s Paradox: Stellar Earnings and a Sliding Stock",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/nvidia-stock-vs-earnings-022aa42a?siteid=yhoof2&yptr=yahoo",
+          "published": 1787727600,
+          "sentiment": -0.103
         }
       ],
-      "news_sentiment": 0.165
+      "news_sentiment": 0.248
     },
     {
       "ticker": "META",
@@ -281,7 +281,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "418",
       "price_usd": 570.05,
-      "change_1d": "+1.76%",
+      "change_1d": "+0.40%",
       "change_1w": "+4.85%",
       "change_1m": "-4.01%",
       "change_ytd": "-12.20%",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "580",
       "high_usd": 790.8,
       "bar_pct": 18,
-      "market_cap_gbp_b": 1065.295,
+      "market_cap_gbp_b": 1065.28,
       "market_cap_usd_b": 1452.206,
       "beta": 1.243,
       "pe_ratio": 21.05,
@@ -319,28 +319,28 @@ window.PRICES_DATA = {
           "sentiment": 0.599
         },
         {
+          "title": "Teenagers \u2018didn\u2019t want\u2019 key safety feature, Instagram boss claims",
+          "publisher": "The Telegraph",
+          "url": "https://uk.finance.yahoo.com/news/teenagers-didn-t-want-key-075136035.html",
+          "published": 1787730696,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Meta Could Pay Billions To End Teen Addiction Trial \u2013 Gary Black Says That Could Boost META Stock",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/meta-billions-teen-addiction-trial-gary-black-boost-stock/cZYNmxMRJo6",
+          "published": 1787725774,
+          "sentiment": 0.318
+        },
+        {
           "title": "Meta Talking With States to Settle Landmark Lawsuit That Claims Facebook and Instagram Were Designed to Be Addictive to Kids: Report",
           "publisher": "Benzinga",
           "url": "https://finance.yahoo.com/technology/articles/meta-talking-states-settle-landmark-024713360.html",
           "published": 1787712433,
           "sentiment": -0.153
-        },
-        {
-          "title": "The AI accountability problem is getting bigger",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/technology/ai-accountability-problem-getting-bigger",
-          "published": 1787712420,
-          "sentiment": -0.402
-        },
-        {
-          "title": "Meta, States Have Discussed Settling Teen Social Media Case",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/media-advertising/articles/meta-states-discussed-settling-teen-013711654.html",
-          "published": 1787708231,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.009
+      "news_sentiment": 0.237
     },
     {
       "ticker": "NVDA",
@@ -349,7 +349,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "156",
       "price_usd": 213.05,
-      "change_1d": "+2.04%",
+      "change_1d": "-0.27%",
       "change_1w": "-3.04%",
       "change_1m": "+8.42%",
       "change_ytd": "+12.95%",
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "174",
       "high_usd": 236.54,
       "bar_pct": 68,
-      "market_cap_gbp_b": 3785.429,
+      "market_cap_gbp_b": 3785.378,
       "market_cap_usd_b": 5160.284,
       "beta": 2.215,
       "pe_ratio": 31.94,
@@ -373,42 +373,42 @@ window.PRICES_DATA = {
       "vol_1m": 2588535400,
       "news": [
         {
-          "title": "Earnings live updates: Intuit stock drops on soft guidance, Dick's Sporting Goods stock plummets 30%",
+          "title": "Stock market today: Dow, S&P 500, Nasdaq futures hold steady ahead of inflation data, Nvidia earnings",
           "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/live/earnings-live-updates-q2-nvidia-115314802.html",
-          "published": 1787658794,
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-august-26-dow-sp-500-nasdaq-081834782.html",
+          "published": 1787732314,
           "sentiment": 0.0
         },
         {
-          "title": "Nvidia earnings in focus: Why its networking segment is growing faster than compute",
+          "title": "The story that Nvidia's margins, balance sheet tell going into Q2 earnings",
           "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/nvidia-earnings-focus-why-networking-192016863.html",
-          "published": 1787685616,
-          "sentiment": 0.178
-        },
-        {
-          "title": "The real question investors should be asking ahead of Nvidia earnings",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/real-investors-asking-ahead-nvidia-160432776.html",
-          "published": 1787673872,
+          "url": "https://finance.yahoo.com/video/story-nvidias-margins-balance-sheet-200000914.html",
+          "published": 1787688000,
           "sentiment": 0.0
         },
         {
-          "title": "Nvidia stock hopes to snap seven-day losing streak ahead of earnings",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/nvidia-stock-hopes-snap-seven-135037753.html",
-          "published": 1787665837,
-          "sentiment": 0.052
+          "title": "Why Nvidia rival AMD may see a 40% rip in its stock",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/article/why-nvidia-rival-amd-may-see-a-40-rip-in-its-stock-164720676.html",
+          "published": 1787676440,
+          "sentiment": 0.0
         },
         {
-          "title": "Constellation Energy Just Raised Guidance. Here's What's Driving It.",
+          "title": "Investors rotate into tech stocks as inflation concerns ease: AlphaCheck",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/investors-rotate-into-tech-stocks-as-inflation-concerns-ease-alphacheck-135258775.html",
+          "published": 1787665978,
+          "sentiment": 0.361
+        },
+        {
+          "title": "Nvidia Stock Has a New $500 Billion Opportunity in the Artificial Intelligence (AI) Boom",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/26/constellation-energy-just-raised-guidance-heres-wh/",
-          "published": 1787725500,
-          "sentiment": 0.273
+          "url": "https://www.fool.com/investing/2026/08/26/nvidia-stock-new-500-billion-opportunity-ai-boom/",
+          "published": 1787733120,
+          "sentiment": 0.71
         }
       ],
-      "news_sentiment": 0.101
+      "news_sentiment": 0.214
     },
     {
       "ticker": "AMD",
@@ -417,7 +417,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "352",
       "price_usd": 479.18,
-      "change_1d": "+5.41%",
+      "change_1d": "-0.09%",
       "change_1w": "-1.08%",
       "change_1m": "-3.19%",
       "change_ytd": "+114.43%",
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "429",
       "high_usd": 584.73,
       "bar_pct": 76,
-      "market_cap_gbp_b": 573.835,
+      "market_cap_gbp_b": 573.827,
       "market_cap_usd_b": 782.25,
       "beta": 2.489,
       "pe_ratio": 116.31,
@@ -446,6 +446,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/article/why-nvidia-rival-amd-may-see-a-40-rip-in-its-stock-164720676.html",
           "published": 1787676440,
           "sentiment": 0.0
+        },
+        {
+          "title": "What Is Advanced Micro Devices (AMD) Telling Investors With Its AI Security Push?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-amd-telling-071013777.html",
+          "published": 1787728213,
+          "sentiment": 0.527
         },
         {
           "title": "AMD Stock Is Rising. Here's Why This Top AI Stock Is a Strong Buy Right Now",
@@ -467,16 +474,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/612797/what-you-actually-pay-to-join-the-amd-run-2/2026-08-25",
           "published": 1787697267,
           "sentiment": 0.202
-        },
-        {
-          "title": "Can You Stomach The Plunge In Micron Stock?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/612783/can-you-stomach-the-plunge-in-micron-stock-2/2026-08-25",
-          "published": 1787696624,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.17
+      "news_sentiment": 0.276
     },
     {
       "ticker": "INTC",
@@ -485,7 +485,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "64",
       "price_usd": 87.48,
-      "change_1d": "+0.46%",
+      "change_1d": "-0.11%",
       "change_1w": "-9.53%",
       "change_1m": "-4.57%",
       "change_ytd": "+122.14%",
@@ -495,8 +495,8 @@ window.PRICES_DATA = {
       "high_gbp": "104",
       "high_usd": 142.35,
       "bar_pct": 54,
-      "market_cap_gbp_b": 339.224,
-      "market_cap_usd_b": 462.429,
+      "market_cap_gbp_b": 339.219,
+      "market_cap_usd_b": 462.428,
       "beta": 2.241,
       "pe_ratio": null,
       "avg_volume_m": 119.34,
@@ -514,6 +514,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/article/investors-rotate-into-tech-stocks-as-inflation-concerns-ease-alphacheck-135258775.html",
           "published": 1787665978,
           "sentiment": 0.361
+        },
+        {
+          "title": "The Market Has Priced Intel Anywhere Between $24 and $142 in the Past 12 Months",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/26/the-market-has-priced-intel-anywhere-between-usd24-and-usd142-in-the-past-12-months/",
+          "published": 1787731921,
+          "sentiment": 0.0
         },
         {
           "title": "Nancy Pelosi makes intriguing first-ever bet on AI power stock",
@@ -535,16 +542,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/612783/can-you-stomach-the-plunge-in-micron-stock-2/2026-08-25",
           "published": 1787696624,
           "sentiment": 0.0
-        },
-        {
-          "title": "AMD Stock Upgraded To Strong Buy. Here's Why.",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/technology/amd-stock-upgraded-strong-buy-server-cpus-agentic-ai/?src=A00220&yptr=yahoo",
-          "published": 1787690728,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.215
+      "news_sentiment": 0.113
     },
     {
       "ticker": "TSM",
@@ -553,7 +553,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "306",
       "price_usd": 417.41,
-      "change_1d": "+1.94%",
+      "change_1d": "-0.07%",
       "change_1w": "+0.97%",
       "change_1m": "+4.59%",
       "change_ytd": "+31.27%",
@@ -563,7 +563,7 @@ window.PRICES_DATA = {
       "high_gbp": "351",
       "high_usd": 479.0,
       "bar_pct": 76,
-      "market_cap_gbp_b": 1588.095,
+      "market_cap_gbp_b": 1588.074,
       "market_cap_usd_b": 2164.886,
       "beta": 1.258,
       "pe_ratio": 30.58,
@@ -621,7 +621,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "262",
       "price_usd": 356.74,
-      "change_1d": "-0.53%",
+      "change_1d": "-0.24%",
       "change_1w": "-6.12%",
       "change_1m": "-6.91%",
       "change_ytd": "+3.00%",
@@ -631,7 +631,7 @@ window.PRICES_DATA = {
       "high_gbp": "363",
       "high_usd": 495.0,
       "bar_pct": 33,
-      "market_cap_gbp_b": 1245.029,
+      "market_cap_gbp_b": 1245.012,
       "market_cap_usd_b": 1697.219,
       "beta": 1.473,
       "pe_ratio": 59.56,
@@ -689,7 +689,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "118",
       "price_usd": 160.56,
-      "change_1d": "+1.62%",
+      "change_1d": "+0.34%",
       "change_1w": "+0.23%",
       "change_1m": "-5.58%",
       "change_ytd": "-6.24%",
@@ -699,8 +699,8 @@ window.PRICES_DATA = {
       "high_gbp": "191",
       "high_usd": 259.92,
       "bar_pct": 28,
-      "market_cap_gbp_b": 125.798,
-      "market_cap_usd_b": 171.487,
+      "market_cap_gbp_b": 125.797,
+      "market_cap_usd_b": 171.488,
       "beta": 1.663,
       "pe_ratio": 18.12,
       "avg_volume_m": 16.23,
@@ -757,7 +757,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "177",
       "price_usd": 241.56,
-      "change_1d": "+1.59%",
+      "change_1d": "+0.07%",
       "change_1w": "-4.64%",
       "change_1m": "-9.30%",
       "change_ytd": "+110.55%",
@@ -767,7 +767,7 @@ window.PRICES_DATA = {
       "high_gbp": "332",
       "high_usd": 452.7,
       "bar_pct": 40,
-      "market_cap_gbp_b": 189.251,
+      "market_cap_gbp_b": 189.248,
       "market_cap_usd_b": 257.986,
       "beta": 3.909,
       "pe_ratio": 244.0,
@@ -825,7 +825,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "1279",
       "price_usd": 1744.16,
-      "change_1d": "+0.35%",
+      "change_1d": "+0.07%",
       "change_1w": "-3.26%",
       "change_1m": "+5.51%",
       "change_ytd": "+50.59%",
@@ -835,7 +835,7 @@ window.PRICES_DATA = {
       "high_gbp": "1467",
       "high_usd": 1999.96,
       "bar_pct": 80,
-      "market_cap_gbp_b": 491.442,
+      "market_cap_gbp_b": 491.435,
       "market_cap_usd_b": 669.932,
       "beta": 1.365,
       "pe_ratio": 58.47,
@@ -848,6 +848,13 @@ window.PRICES_DATA = {
       "vol_1w": 5272300,
       "vol_1m": 33178200,
       "news": [
+        {
+          "title": "European Indexes Mostly Gain, Tech Stocks Fall",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/finance/stocks/nikkei-falls-0-4-dragged-by-chip-related-stocks-472365b8?siteid=yhoof2&yptr=yahoo",
+          "published": 1787729160,
+          "sentiment": 0.527
+        },
         {
           "title": "ASML (ENXTAM:ASML) Stock May Trade At A Premium As AI DRAM Demand Builds",
           "publisher": "Simply Wall St.",
@@ -875,16 +882,9 @@ window.PRICES_DATA = {
           "url": "https://www.wsj.com/finance/stocks/nikkei-falls-0-8-dragged-by-electronics-stocks-961a5697?siteid=yhoof2&yptr=yahoo",
           "published": 1787646120,
           "sentiment": 0.0
-        },
-        {
-          "title": "Where Canon Can Actually Disrupt ASML",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/24/where-canon-can-actually-disrupt-asml/",
-          "published": 1787572923,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.109
+      "news_sentiment": 0.214
     },
     {
       "ticker": "MU",
@@ -893,7 +893,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "684",
       "price_usd": 932.97,
-      "change_1d": "+3.31%",
+      "change_1d": "+0.32%",
       "change_1w": "-0.83%",
       "change_1m": "+3.64%",
       "change_ytd": "+195.96%",
@@ -903,19 +903,26 @@ window.PRICES_DATA = {
       "high_gbp": "921",
       "high_usd": 1255.0,
       "bar_pct": 72,
-      "market_cap_gbp_b": null,
-      "market_cap_usd_b": null,
+      "market_cap_gbp_b": 772.945,
+      "market_cap_usd_b": 1053.69,
       "beta": 2.213,
       "pe_ratio": 20.58,
       "avg_volume_m": 47.6,
       "div_yield_pct": 6.0,
-      "short_pct": 2.65,
+      "short_pct": 2.66,
       "analyst": "strong_buy",
       "analyst_score": 1.36,
       "vol_1d": 19076500,
       "vol_1w": 123026600,
       "vol_1m": 833659700,
       "news": [
+        {
+          "title": "Micron (MU) Stock Looks Cheap, But Not Like A Clear Bargain",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-mu-stock-looks-cheap-061938878.html",
+          "published": 1787725178,
+          "sentiment": -0.501
+        },
         {
           "title": "Schwab Strategist Flags Wall Street's Growth Is Concentrated in Two Firms",
           "publisher": "BeInCrypto",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/612783/can-you-stomach-the-plunge-in-micron-stock-2/2026-08-25",
           "published": 1787696624,
           "sentiment": 0.0
-        },
-        {
-          "title": "Prediction: This Memory Stock Will Soar 165% in 3 Years (Hint: It's not Micron or Sandisk)",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/25/prediction-this-memory-stock-will-soar-165-in-3-years-hint-it-s-not-micron-or-sandisk/",
-          "published": 1787692861,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.066
+      "news_sentiment": -0.034
     },
     {
       "ticker": "AMAT",
@@ -961,7 +961,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "352",
       "price_usd": 480.04,
-      "change_1d": "-0.70%",
+      "change_1d": "+0.30%",
       "change_1w": "-6.57%",
       "change_1m": "-7.03%",
       "change_ytd": "+79.18%",
@@ -971,13 +971,13 @@ window.PRICES_DATA = {
       "high_gbp": "543",
       "high_usd": 739.67,
       "bar_pct": 56,
-      "market_cap_gbp_b": 279.46,
+      "market_cap_gbp_b": 279.456,
       "market_cap_usd_b": 380.959,
       "beta": 1.618,
       "pe_ratio": 41.85,
       "avg_volume_m": 9.63,
       "div_yield_pct": 44.0,
-      "short_pct": 1.8,
+      "short_pct": 1.5,
       "analyst": "strong_buy",
       "analyst_score": 1.46,
       "vol_1d": 5185200,
@@ -1029,7 +1029,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "106",
       "price_usd": 144.76,
-      "change_1d": "+1.44%",
+      "change_1d": "-0.11%",
       "change_1w": "+1.38%",
       "change_1m": "+20.73%",
       "change_ytd": "-25.32%",
@@ -1039,7 +1039,7 @@ window.PRICES_DATA = {
       "high_gbp": "254",
       "high_usd": 345.72,
       "bar_pct": 13,
-      "market_cap_gbp_b": 305.882,
+      "market_cap_gbp_b": 305.878,
       "market_cap_usd_b": 416.977,
       "beta": 1.718,
       "pe_ratio": 24.45,
@@ -1097,7 +1097,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "151",
       "price_usd": 205.69,
-      "change_1d": "-1.61%",
+      "change_1d": "+0.94%",
       "change_1w": "+4.87%",
       "change_1m": "+18.49%",
       "change_ytd": "-18.49%",
@@ -1107,8 +1107,8 @@ window.PRICES_DATA = {
       "high_gbp": "197",
       "high_usd": 269.11,
       "bar_pct": 48,
-      "market_cap_gbp_b": null,
-      "market_cap_usd_b": null,
+      "market_cap_gbp_b": 123.576,
+      "market_cap_usd_b": 168.461,
       "beta": 1.152,
       "pe_ratio": 24.23,
       "avg_volume_m": 14.9,
@@ -1128,6 +1128,20 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Dow Jones Futures: Inflation Data, Nvidia Earnings Due; Robinhood In Buy Area",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-inflation-data-nvidia-earning-srobinhood-oil-prices-yields/?src=A00220&yptr=yahoo",
+          "published": 1787732048,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Nvidia Earnings Give Investors a Barometer for State of AI Trade",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-earnings-investors-barometer-state-074856874.html",
+          "published": 1787730536,
+          "sentiment": 0.0
+        },
+        {
           "title": "Salesforce Reports Earnings While Disrupting Itself to Fight AI",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/salesforce-earnings-stock-price-74e0e769?siteid=yhoof2&yptr=yahoo",
@@ -1135,25 +1149,11 @@ window.PRICES_DATA = {
           "sentiment": -0.382
         },
         {
-          "title": "Dow Jones Futures: Inflation Data, Nvidia Earnings Due; Robinhood In Buy Area",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-inflation-data-nvidia-earning-srobinhood-oil-prices-yields/?src=A00220&yptr=yahoo",
-          "published": 1787713634,
-          "sentiment": 0.0
-        },
-        {
           "title": "Salesforce's AI Agent Business Is Growing Over 200%, But Will It Show Up in Its Order Book?",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/08/25/salesforces-ai-agent-business-is-growing-over-200/",
           "published": 1787695500,
           "sentiment": 0.09
-        },
-        {
-          "title": "ServiceNow Just Ripped 29% in a Month. What Would It Take to Get NOW Stock Up to $150?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/25/servicenow-just-ripped-29-in-a-month-what-would-it-take-to-get-now-stock-up-to-150/",
-          "published": 1787687107,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.058
@@ -1165,7 +1165,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "201",
       "price_usd": 273.92,
-      "change_1d": "-0.76%",
+      "change_1d": "+1.46%",
       "change_1w": "+4.10%",
       "change_1m": "+15.21%",
       "change_ytd": "-17.82%",
@@ -1175,7 +1175,7 @@ window.PRICES_DATA = {
       "high_gbp": "272",
       "high_usd": 370.86,
       "bar_pct": 46,
-      "market_cap_gbp_b": 79.873,
+      "market_cap_gbp_b": 79.872,
       "market_cap_usd_b": 108.883,
       "beta": 1.397,
       "pe_ratio": 15.8,
@@ -1233,7 +1233,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "93",
       "price_usd": 127.0,
-      "change_1d": "-0.19%",
+      "change_1d": "+1.38%",
       "change_1w": "+6.29%",
       "change_1m": "+20.31%",
       "change_ytd": "-13.87%",
@@ -1243,8 +1243,8 @@ window.PRICES_DATA = {
       "high_gbp": "143",
       "high_usd": 194.73,
       "bar_pct": 40,
-      "market_cap_gbp_b": 96.318,
-      "market_cap_usd_b": 131.3,
+      "market_cap_gbp_b": 96.317,
+      "market_cap_usd_b": 131.301,
       "beta": 0.93,
       "pe_ratio": 79.87,
       "avg_volume_m": 25.27,
@@ -1301,7 +1301,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "233",
       "price_usd": 317.02,
-      "change_1d": "-1.93%",
+      "change_1d": "+0.74%",
       "change_1w": "-2.55%",
       "change_1m": "+16.16%",
       "change_ytd": "+46.29%",
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "251",
       "high_usd": 341.95,
       "bar_pct": 89,
-      "market_cap_gbp_b": 80.604,
+      "market_cap_gbp_b": 80.603,
       "market_cap_usd_b": 109.879,
       "beta": 1.315,
       "pe_ratio": null,
@@ -1369,7 +1369,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "262",
       "price_usd": 357.46,
-      "change_1d": "-3.36%",
+      "change_1d": "+11.40%",
       "change_1w": "+2.01%",
       "change_1m": "+17.62%",
       "change_ytd": "-42.68%",
@@ -1379,7 +1379,7 @@ window.PRICES_DATA = {
       "high_gbp": "517",
       "high_usd": 705.08,
       "bar_pct": 23,
-      "market_cap_gbp_b": 71.727,
+      "market_cap_gbp_b": 71.726,
       "market_cap_usd_b": 97.778,
       "beta": 0.959,
       "pe_ratio": 22.57,
@@ -1407,28 +1407,28 @@ window.PRICES_DATA = {
           "sentiment": 0.511
         },
         {
+          "title": "Update: Intuit Shares Drop Pre-Bell as Fiscal 2027 Guidance Lags Estimates While Fiscal Q4 Adjusted Earnings, Revenue Rise",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/intuit-shares-drop-pre-bell-081458703.html",
+          "published": 1787732098,
+          "sentiment": -0.34
+        },
+        {
+          "title": "Intuit's earnings miss is largely an accounting illusion, but the revenue slowdown is real",
+          "publisher": "Proactive",
+          "url": "https://www.proactiveinvestors.com/companies/news/1097618/intuit-s-earnings-miss-is-largely-an-accounting-illusion-but-the-revenue-slowdown-is-real-1097618.html",
+          "published": 1787728380,
+          "sentiment": -0.077
+        },
+        {
           "title": "Intuit CEO Admits Pricing Is Driving TurboTax Customers Away, Says Low-Cost Fix Coming As Stock Extends Tumble Overnight",
           "publisher": "Stocktwits",
           "url": "https://stocktwits.com/news-articles/markets/equity/intuit-ceo-admits-pricing-is-driving-turbo-tax-customers-away-says-low-cost-fix-coming-as-stock-extends-tumble-overnight/cZYNiVQRJoq",
           "published": 1787713837,
           "sentiment": 0.402
-        },
-        {
-          "title": "Intuit Q4 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/transcript-intuit-q4-earnings-call-highlights-2026-08-25/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1787698988,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Intuit Inc. Q4 2026 Earnings: Recap of $INTU Earnings Call, Forecast",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/latest-news/intuit-inc-intu-q4-2026-earnings-forecast-updates",
-          "published": 1787697031,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.183
+      "news_sentiment": 0.099
     },
     {
       "ticker": "CRWD",
@@ -1437,7 +1437,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "136",
       "price_usd": 185.38,
-      "change_1d": "-2.69%",
+      "change_1d": "+0.26%",
       "change_1w": "-12.93%",
       "change_1m": "+2.93%",
       "change_ytd": "+63.48%",
@@ -1447,8 +1447,8 @@ window.PRICES_DATA = {
       "high_gbp": "167",
       "high_usd": 227.5,
       "bar_pct": 70,
-      "market_cap_gbp_b": 138.472,
-      "market_cap_usd_b": 188.765,
+      "market_cap_gbp_b": 138.47,
+      "market_cap_usd_b": 188.764,
       "beta": 1.234,
       "pe_ratio": null,
       "avg_volume_m": 10.65,
@@ -1471,7 +1471,14 @@ window.PRICES_DATA = {
           "title": "Dow Jones Futures: Inflation Data, Nvidia Earnings Due; Robinhood In Buy Area",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-inflation-data-nvidia-earning-srobinhood-oil-prices-yields/?src=A00220&yptr=yahoo",
-          "published": 1787713634,
+          "published": 1787732048,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Nvidia Earnings Give Investors a Barometer for State of AI Trade",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-earnings-investors-barometer-state-074856874.html",
+          "published": 1787730536,
           "sentiment": 0.0
         },
         {
@@ -1487,16 +1494,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/08/25/crowdstrikes-next-earnings-report-on-aug-26-could-send-the-stock-soaring-heres-why/",
           "published": 1787682001,
           "sentiment": 0.0
-        },
-        {
-          "title": "SaaSmageddon Survivors: 5 Top Software Stocks to Buy",
-          "publisher": "Kiplinger",
-          "url": "https://www.kiplinger.com/investing/tech-stocks/saasmageddon-survivors-top-software-stocks-to-buy",
-          "published": 1787671237,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.04
+      "news_sentiment": 0.0
     },
     {
       "ticker": "PANW",
@@ -1505,21 +1505,21 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "249",
       "price_usd": 339.9,
-      "change_1d": "-3.13%",
+      "change_1d": "+0.10%",
       "change_1w": "-9.15%",
       "change_1m": "+7.12%",
       "change_ytd": "+89.50%",
-      "return_1yr": "+90%",
+      "return_1yr": "+87%",
       "low_gbp": "102",
       "low_usd": 139.57,
       "high_gbp": "293",
       "high_usd": 398.88,
       "bar_pct": 77,
-      "market_cap_gbp_b": 203.212,
-      "market_cap_usd_b": 277.018,
+      "market_cap_gbp_b": 203.21,
+      "market_cap_usd_b": 277.019,
       "beta": 0.893,
       "pe_ratio": 303.48,
-      "avg_volume_m": 7.29,
+      "avg_volume_m": 7.3,
       "div_yield_pct": null,
       "short_pct": 2.77,
       "analyst": "buy",
@@ -1573,7 +1573,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "204",
       "price_usd": 277.58,
-      "change_1d": "-0.86%",
+      "change_1d": "-0.30%",
       "change_1w": "-7.89%",
       "change_1m": "+4.51%",
       "change_ytd": "+41.61%",
@@ -1584,7 +1584,7 @@ window.PRICES_DATA = {
       "high_usd": 332.22,
       "bar_pct": 68,
       "market_cap_gbp_b": 72.506,
-      "market_cap_usd_b": 98.84,
+      "market_cap_usd_b": 98.841,
       "beta": 1.66,
       "pe_ratio": null,
       "avg_volume_m": 3.74,
@@ -1641,7 +1641,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "113",
       "price_usd": 153.66,
-      "change_1d": "+0.43%",
+      "change_1d": "+0.41%",
       "change_1w": "-2.75%",
       "change_1m": "+0.84%",
       "change_ytd": "+97.30%",
@@ -1651,7 +1651,7 @@ window.PRICES_DATA = {
       "high_gbp": "126",
       "high_usd": 172.09,
       "bar_pct": 81,
-      "market_cap_gbp_b": 82.704,
+      "market_cap_gbp_b": 82.703,
       "market_cap_usd_b": 112.742,
       "beta": 1.058,
       "pe_ratio": 53.73,
@@ -1709,7 +1709,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "60",
       "price_usd": 82.23,
-      "change_1d": "+2.81%",
+      "change_1d": "+0.45%",
       "change_1w": "+5.73%",
       "change_1m": "+16.80%",
       "change_ytd": "-9.63%",
@@ -1719,7 +1719,7 @@ window.PRICES_DATA = {
       "high_gbp": "93",
       "high_usd": 126.71,
       "bar_pct": 28,
-      "market_cap_gbp_b": 251.175,
+      "market_cap_gbp_b": 251.172,
       "market_cap_usd_b": 342.401,
       "beta": 1.514,
       "pe_ratio": 25.22,
@@ -1777,7 +1777,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "113",
       "price_usd": 153.88,
-      "change_1d": "+2.83%",
+      "change_1d": "-0.06%",
       "change_1w": "+4.98%",
       "change_1m": "+21.28%",
       "change_ytd": "-2.11%",
@@ -1787,8 +1787,8 @@ window.PRICES_DATA = {
       "high_gbp": "134",
       "high_usd": 182.19,
       "bar_pct": 68,
-      "market_cap_gbp_b": 146.482,
-      "market_cap_usd_b": 199.684,
+      "market_cap_gbp_b": 145.237,
+      "market_cap_usd_b": 197.989,
       "beta": 2.59,
       "pe_ratio": 101.24,
       "avg_volume_m": 9.33,
@@ -1845,21 +1845,21 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "405",
       "price_usd": 552.57,
-      "change_1d": "+2.63%",
+      "change_1d": "+0.28%",
       "change_1w": "+7.03%",
       "change_1m": "+11.69%",
       "change_ytd": "-3.90%",
-      "return_1yr": "-23%",
+      "return_1yr": "-22%",
       "low_gbp": "297",
       "low_usd": 405.0,
       "high_gbp": "547",
       "high_usd": 745.0,
       "bar_pct": 43,
-      "market_cap_gbp_b": 83.333,
-      "market_cap_usd_b": 113.599,
+      "market_cap_gbp_b": 83.347,
+      "market_cap_usd_b": 113.62,
       "beta": 1.581,
       "pe_ratio": 28.9,
-      "avg_volume_m": 1.89,
+      "avg_volume_m": 1.88,
       "div_yield_pct": null,
       "short_pct": 3.12,
       "analyst": "buy",
@@ -1913,7 +1913,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "59",
       "price_usd": 80.35,
-      "change_1d": "+1.13%",
+      "change_1d": "-0.63%",
       "change_1w": "+7.62%",
       "change_1m": "+17.85%",
       "change_ytd": "-3.03%",
@@ -1923,8 +1923,8 @@ window.PRICES_DATA = {
       "high_gbp": "75",
       "high_usd": 101.99,
       "bar_pct": 41,
-      "market_cap_gbp_b": 120.393,
-      "market_cap_usd_b": 164.119,
+      "market_cap_gbp_b": 120.392,
+      "market_cap_usd_b": 164.12,
       "beta": 1.154,
       "pe_ratio": 17.39,
       "avg_volume_m": 20.49,
@@ -1981,7 +1981,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "82",
       "price_usd": 111.11,
-      "change_1d": "+0.73%",
+      "change_1d": "-0.02%",
       "change_1w": "-0.45%",
       "change_1m": "-3.02%",
       "change_ytd": "+47.46%",
@@ -1991,11 +1991,11 @@ window.PRICES_DATA = {
       "high_gbp": "96",
       "high_usd": 130.37,
       "bar_pct": 70,
-      "market_cap_gbp_b": 321.254,
-      "market_cap_usd_b": 437.932,
+      "market_cap_gbp_b": 321.25,
+      "market_cap_usd_b": 437.933,
       "beta": 1.002,
       "pe_ratio": 33.07,
-      "avg_volume_m": 23.75,
+      "avg_volume_m": 23.79,
       "div_yield_pct": 152.0,
       "short_pct": 1.5,
       "analyst": "buy",
@@ -2049,7 +2049,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "127",
       "price_usd": 172.73,
-      "change_1d": "-1.61%",
+      "change_1d": "+0.28%",
       "change_1w": "+0.69%",
       "change_1m": "+31.32%",
       "change_ytd": "+2.90%",
@@ -2059,10 +2059,10 @@ window.PRICES_DATA = {
       "high_gbp": "152",
       "high_usd": 207.52,
       "bar_pct": 66,
-      "market_cap_gbp_b": 304.49,
+      "market_cap_gbp_b": 304.486,
       "market_cap_usd_b": 415.08,
       "beta": 1.563,
-      "pe_ratio": 146.38,
+      "pe_ratio": 148.91,
       "avg_volume_m": 43.5,
       "div_yield_pct": null,
       "short_pct": 3.18,
@@ -2078,6 +2078,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/video/disclosure-trump-owns-spacex-disney-151222555.html",
           "published": 1787670742,
           "sentiment": 0.625
+        },
+        {
+          "title": "Why Is Palantir (PLTR) In Focus After Thiel Turned To AI Power Assets?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/why-palantir-pltr-focus-thiel-070901257.html",
+          "published": 1787728141,
+          "sentiment": 0.178
         },
         {
           "title": "Peter Thiel Has Steadily Sold Down His Palantir Stake for Years Yet Remains Its Largest Individual Shareholder. Here's What His Selling Pattern Signals for Investors.",
@@ -2099,16 +2106,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/08/25/palantirs-maven-is-now-an-official-pentagon-progra/",
           "published": 1787672460,
           "sentiment": 0.226
-        },
-        {
-          "title": "Palantir Stock Has Surged Over 40% in a Month. What\u2019s Fueling the Rally \u2014 and What Comes Next.",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/4024825/palantir-stock-has-surged-over-40-in-a-month-whats-fueling-the-rally-and-what-comes-next",
-          "published": 1787669751,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.17
+      "news_sentiment": 0.206
     }
   ]
 };
