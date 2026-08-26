@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-24 08:57",
+  "updated": "2026-08-26 08:47",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Phase 3 INTerpath-001 melanoma data met endpoints, stock surged 152% in a week; YTD +414%, 1M +185%, but P/E null and hold consensus (2.83) suggest caution. [stockstotrade.com](https://stockstotrade.com/news/moderna-inc-mrna-news-2026_08_25/)",
+      "drivers": [
+        "+152% 1W",
+        "Phase 3 melanoma win",
+        "+414% YTD",
+        "high short interest 16%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTLA",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +46.7%, 1M +26.6%, 1W +16.5%; Phase 3 HAELO trial showed 87% attack reduction, rolling BLA underway; analyst buy (an_score 2.26). [themarketsdaily.com](https://www.themarketsdaily.com/2026/08/25/intellia-therapeutics-nasdaqntla-trading-8-3-higher-still-a-buy.html)",
+      "drivers": [
+        "+46.7% YTD",
+        "Phase 3 HAELO 87% reduction",
+        "rolling BLA",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CRSP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +13.3%, 1M +30.3%, 1W +15.0%; FDA expanded Casgevy to ages 2+; analyst buy (an_score 2.05), short interest 22.2%. [tradingview.com](https://www.tradingview.com/news/zacks:b3db22586094b:0-4-gene-editing-biotech-stocks-worth-watching-for-long-term-gains/)",
+      "drivers": [
+        "+30% 1M",
+        "Casgevy expanded to ages 2+",
+        "analyst buy",
+        "commercial validation"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BNTX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +18.0%, 1M +25.2%, 1W +23.0%; analyst strong_buy (an_score 1.6), low short interest 3.7%; tailwind from Moderna's cancer vaccine success. [genengnews.com](https://www.genengnews.com/topics/cancer/stockwatch-merck-moderna-cancer-vaccine-gives-a-shot-in-the-arm-to-sequencing-companies-too/)",
+      "drivers": [
+        "+23% 1W",
+        "analyst strong_buy",
+        "low short interest 3.7%",
+        "mRNA cancer vaccine tailwind"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +47.1%, 1M +30.5%, 1W +8.0%; strong_buy consensus (an_score 1.5), low short interest 3.1%, large market cap $48.5B.",
+      "drivers": [
+        "+47% YTD",
+        "strong_buy consensus",
+        "low short interest 3.1%",
+        "market cap $48.5B"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BEAM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +14.3%, 1M +23.8%, 1W +16.8%; BLA for risto-cel in SCD due end of 2026; no analyst rating, high short interest 36.5%. [tradingview.com](https://www.tradingview.com/news/zacks:b3db22586094b:0-4-gene-editing-biotech-stocks-worth-watching-for-long-term-gains/)",
+      "drivers": [
+        "+23.8% 1M",
+        "BLA for risto-cel",
+        "high short interest 36.5%",
+        "base editing platform"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +7.8%, 1M +25.1%, 1W +2.9%; P/E 20.5, beta 0.19, dividend yield 0.45%; analyst buy (an_score 1.89), positive news sentiment 0.225.",
+      "drivers": [
+        "+25% 1M",
+        "P/E 20.5",
+        "low beta 0.19",
+        "positive news sentiment 0.225"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +32.4%, 1M +26.0%, 1W +19.0%; no analyst consensus, high short interest 29.0%, high beta 2.42.",
+      "drivers": [
+        "+32% YTD",
+        "+26% 1M",
+        "high beta 2.42",
+        "no analyst consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "EDIT",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +60.0%, 1M +22.4%, 1W +13.9%; most speculative, only one in vivo candidate; analyst buy (an_score 2.08), short interest 16.1%. [tradingview.com](https://www.tradingview.com/news/zacks:b3db22586094b:0-4-gene-editing-biotech-stocks-worth-watching-for-long-term-gains/)",
+      "drivers": [
+        "+60% YTD",
+        "+22% 1M",
+        "speculative in vivo",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD -11.2%, 1M +19.1%, 1W +5.0%; analyst hold (an_score 2.67), high short interest 30.7%, beta 0.21.",
+      "drivers": [
+        "+19% 1M",
+        "YTD -11%",
+        "high short interest 30.7%",
+        "analyst hold"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRNA",
@@ -131,139 +264,6 @@ window.SIGNALS_DATA = {
         "news sentiment 0.361",
         "analyst buy",
         "+26.02% YTD"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MRNA has surged +332% YTD and +123% in the last month, driven by positive melanoma vaccine trial results with Merck, though the -19.88% one-day drop and 'hold' analyst consensus (score 2.83) signal extreme volatility and risk.",
-      "drivers": [
-        "+332% YTD",
-        "+123% 1M momentum",
-        "Melanoma vaccine catalyst",
-        "High short interest 15.23%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "ILMN shows exceptional momentum with +109% 1-year return, +58.72% YTD, +10.76% 1M, and +10.69% 1W, supported by strong news sentiment (0.462) and a reasonable P/E of 38.28 for a genomics leader.",
-      "drivers": [
-        "+109% 1-year return",
-        "+58.72% YTD",
-        "Positive news sentiment 0.462",
-        "P/E 38.28"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "NTRA has returned +96% over one year and +41.95% YTD with strong 1M momentum (+21.58%), a 'strong_buy' analyst consensus (score 1.5), and is a top holding of billionaire investor Stanley Druckenmiller.",
-      "drivers": [
-        "+96% 1-year return",
-        "+41.95% YTD",
-        "Strong_buy consensus (1.5)",
-        "Billionaire backing"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "AMGN has rallied +34.3% YTD and +18.43% in the last month, with a 'buy' analyst consensus (2.47), low beta of 0.413, and strong Q2 earnings (revenue +10% to $10.1B), though the stock trades at a premium to its GF Value.",
-      "drivers": [
-        "+34.3% YTD",
-        "+18.43% 1M",
-        "Q2 revenue +10% to $10.1B",
-        "Low beta 0.413"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "VRTX is up +37% over one year and +19.49% YTD with +12.09% 1M momentum, a 'buy' analyst consensus (1.62), positive news sentiment (0.215), and a new growth engine beyond cystic fibrosis driving Wall Street optimism.",
-      "drivers": [
-        "+37% 1-year return",
-        "+19.49% YTD",
-        "Buy consensus (1.62)",
-        "Positive news sentiment 0.215"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "REGN has gained +40% over one year and +22.57% in the last month, with a 'buy' analyst consensus (1.86), low beta of 0.188, and a P/E of 20.79, though YTD performance is a more modest +6.9%.",
-      "drivers": [
-        "+40% 1-year return",
-        "+22.57% 1M",
-        "Low beta 0.188",
-        "P/E 20.79"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BNTX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "BNTX has surged +20.38% in the last week and +20.1% in the last month, with a 'buy' analyst consensus (1.55) and YTD gains of +14.69%, though news sentiment is negative (-0.349) and the stock is flat over one year.",
-      "drivers": [
-        "+20.38% 1W",
-        "+20.1% 1M",
-        "Buy consensus (1.55)",
-        "Negative news sentiment -0.349"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "CRSP has risen +20.71% in the last month and +7.09% in the last week, with a 'buy' analyst consensus (2.0) and Casgevy advancing, though high short interest (22.28%) and no P/E reflect binary clinical risk.",
-      "drivers": [
-        "+20.71% 1M",
-        "+7.09% 1W",
-        "Buy consensus (2.0)",
-        "High short interest 22.28%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BMRN is up +14.31% in the last month and +13.84% YTD, with a 'buy' analyst consensus (1.74) and a high P/E of 188, indicating premium valuation for a rare-disease leader with steady growth.",
-      "drivers": [
-        "+14.31% 1M",
-        "+13.84% YTD",
-        "Buy consensus (1.74)",
-        "P/E 188 (premium valuation)"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SRPT",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "SRPT has gained +18.57% in the last month and +4.34% in the last week, with neutral news sentiment (0.101), but a 'hold' analyst consensus (2.67), negative YTD (-9.81%), and high short interest (31.28%) temper enthusiasm.",
-      "drivers": [
-        "+18.57% 1M",
-        "+4.34% 1W",
-        "Hold consensus (2.67)",
-        "High short interest 31.28%"
       ]
     }
   ]
