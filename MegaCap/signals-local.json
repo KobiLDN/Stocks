@@ -1,9 +1,176 @@
 {
-  "updated": "2026-08-26 08:58",
+  "updated": "2026-08-28 20:21",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "Post-earnings surge with +106% YoY revenue growth to $96.2B, Q3 guidance $108B, strong_buy consensus, P/E 28.49.",
+      "drivers": [
+        "+106% YoY revenue growth",
+        "Q3 guidance $108B",
+        "strong_buy consensus",
+        "P/E 28.49"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "1-month momentum +30.12%, approaching cup-base buy point at $513.73, strong_buy with an_score 1.36, AI catalyst.",
+      "drivers": [
+        "+30.12% 1-month",
+        "AI catalyst",
+        "strong_buy consensus",
+        "P/E 28.49"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +34.17%, 1-month +8.75%, strong_buy consensus, P/E 31.78, AI chip demand tailwind.",
+      "drivers": [
+        "+34.17% YTD",
+        "strong_buy consensus",
+        "P/E 31.78",
+        "AI chip demand"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +49.72%, 1-month +9.55%, strong_buy consensus, news sentiment +0.396, semiconductor equipment leader.",
+      "drivers": [
+        "+49.72% YTD",
+        "strong_buy consensus",
+        "news sentiment +0.396",
+        "P/E 58.45"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +15.55%, 1-month +13.37%, strong_buy consensus, P/E 21.06 attractive, news sentiment +0.259.",
+      "drivers": [
+        "P/E 21.06",
+        "strong_buy consensus",
+        "+13.37% 1-month",
+        "news sentiment +0.259"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MRK",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +41.15%, 1-month +12.33%, buy consensus, P/E 117.52 reflects growth, low beta 0.211.",
+      "drivers": [
+        "+41.15% YTD",
+        "buy consensus",
+        "low beta 0.211",
+        "P/E 117.52"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1-month +24.01% strong momentum, buy consensus, P/E 28.44, low short interest 0.7%.",
+      "drivers": [
+        "+24.01% 1-month",
+        "buy consensus",
+        "P/E 28.44",
+        "low short interest 0.7%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TSLA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1-month +14.94% momentum, news sentiment +0.306, FSD subscriptions growing 56% YoY, but P/E 333.4 high.",
+      "drivers": [
+        "+14.94% 1-month",
+        "news sentiment +0.306",
+        "FSD growth 56% YoY",
+        "P/E 333.4"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1-month +12.82% rebound, buy consensus, P/E 25.68, Jim Cramer calls it 'ridiculously cheap'.",
+      "drivers": [
+        "+12.82% 1-month",
+        "buy consensus",
+        "P/E 25.68",
+        "Jim Cramer cheap call"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1-month +9.45%, 1-week +3.91%, P/E 21.24 low, low short interest 0.18%, but no analyst rating.",
+      "drivers": [
+        "P/E 21.24",
+        "+9.45% 1-month",
+        "low short interest 0.18%",
+        "no analyst rating"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.939,
+      "ytd": "+134.84%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +134.84% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +134.84% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.813,
+      "ytd": "+116.84%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +116.84% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +116.84% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.789,
+      "ytd": "+113.40%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +113.40% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +113.40% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRK",
@@ -132,173 +299,6 @@
         "+3.97% 1W",
         "SpaceX catalyst",
         "buy consensus"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.85,
-      "ytd": "+122.14%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +122.14% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +122.14% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.797,
-      "ytd": "+114.43%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +114.43% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +114.43% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.77,
-      "ytd": "+110.55%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.55% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.55% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Momentum surged +24% in 1M, P/E 26.95, strong_buy consensus, Azure growth beat guidance and Morningstar top pick at $600 fair value.",
-      "drivers": [
-        "+24% 1M momentum",
-        "P/E 26.95",
-        "strong_buy",
-        "Azure growth beat"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Explosive +47% 1M, P/E 28, buy consensus, Q2 earnings beat with cloud backlog +26% despite AI spending concerns.",
-      "drivers": [
-        "+47% 1M momentum",
-        "P/E 28",
-        "Q2 earnings beat",
-        "cloud backlog +26%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong +20% 1M and +45% YTD, P/E 122 high but momentum intact, buy consensus, hit 52-week highs.",
-      "drivers": [
-        "+20% 1M momentum",
-        "+45% YTD",
-        "buy",
-        "52-week high"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "KO",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Solid +11% 1M, +34% YTD, P/E 27.36, 2.33% dividend yield, buy consensus, positive news sentiment 0.355.",
-      "drivers": [
-        "+11% 1M momentum",
-        "+34% YTD",
-        "2.33% div yield",
-        "news_s 0.355"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Impressive +20% 1M, P/E 33.9, buy consensus, news sentiment 0.308, healthcare turnaround theme.",
-      "drivers": [
-        "+20% 1M momentum",
-        "P/E 33.9",
-        "buy",
-        "news_s 0.308"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NFLX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong +16% 1M, P/E 25.03, buy consensus, positive news sentiment 0.224, attractive valuation.",
-      "drivers": [
-        "+16% 1M momentum",
-        "P/E 25.03",
-        "buy",
-        "news_s 0.224"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ABT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Robust +16% 1M, P/E 37.75, 2.16% dividend yield, buy consensus, highest news sentiment 0.309 in healthcare.",
-      "drivers": [
-        "+16% 1M momentum",
-        "2.16% div yield",
-        "buy",
-        "news_s 0.309"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Up +10% 1M, P/E 8.89, 3.18% dividend yield, low short interest 0.07%, value play with strong momentum.",
-      "drivers": [
-        "+10% 1M momentum",
-        "P/E 8.89",
-        "3.18% div yield",
-        "low short %"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BLK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Decent +9.5% 1M, P/E 27.7, 1.98% dividend yield, buy consensus, asset manager benefiting from AI infrastructure.",
-      "drivers": [
-        "+9.5% 1M momentum",
-        "P/E 27.7",
-        "buy",
-        "1.98% div yield"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SONY",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Up +14% 1M, P/E 20.27, low short interest 0.17%, positive news sentiment 0.202, no analyst rating but momentum strong.",
-      "drivers": [
-        "+14% 1M momentum",
-        "P/E 20.27",
-        "short % 0.17",
-        "news_s 0.202"
       ]
     }
   ]

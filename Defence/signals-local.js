@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-26 08:53",
+  "updated": "2026-08-28 20:16",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PLTR",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Momentum surge of +50.28% over 1M and +10.59% YTD, fueled by a 93% revenue jump to $1.94B and raised 2026 guidance to ~$8.15B [forbes.com]. Despite a high trailing P/E of 150.92, analyst consensus remains buy (score 1.81) with positive news sentiment of 0.172.",
+      "drivers": [
+        "Momentum +50% 1M",
+        "Revenue growth 93%",
+        "Analyst consensus buy",
+        "Pentagon/defense catalysts"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong 1M gain of +22.62%, YTD +16.38% and 1-year +32%, supported by a reasonable P/E of 25.9, a bullish analyst score of 1.56, and positive news sentiment of 0.289. Short interest at 6.32% remains manageable.",
+      "drivers": [
+        "Momentum +22.6% 1M",
+        "P/E 25.9 reasonable",
+        "Analyst score 1.56 bullish",
+        "Positive news sentiment 0.289"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Up +21.44% in 1M with a buy analyst consensus (score 1.69); web search highlights an average analyst target of $232.35 implying ~68% upside [fool.com] and a growing Nvidia relationship driving AI hyperscaler status. News sentiment is neutral at 0.112.",
+      "drivers": [
+        "Momentum +21.4% 1M",
+        "Analyst target $232 (+68%)",
+        "Nvidia AI partnership",
+        "Large-cap space play"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RCAT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Gained +18.52% in 1M despite YTD weakness, with a strong_buy analyst rating (score 1.17) and positive news sentiment of 0.214. High short interest of 21.86% adds potential squeeze catalysts, though P/E is not applicable and risk is elevated.",
+      "drivers": [
+        "Momentum +18.5% 1M",
+        "Analyst strong_buy score 1.17",
+        "Short interest 21.86%",
+        "Drone/defense theme"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Rebounded +18.44% in 1M from a deep YTD drawdown of -23.14%, offering a low trailing P/E of 13.09. Analyst consensus is buy (score 2.35) despite negative news sentiment of -0.11; value-oriented opportunity in cyber-intel.",
+      "drivers": [
+        "Momentum +18.4% 1M",
+        "P/E 13.09 low",
+        "YTD -23% contrarian value",
+        "Analyst consensus buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AXON",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Up +9.70% in 1M, YTD +6.62%, with a buy analyst consensus (score 1.71) and positive news sentiment of 0.154. The high P/E of 252.42 reflects premium growth pricing in the weapons/tech segment, but momentum and analyst support justify a selective buy.",
+      "drivers": [
+        "Momentum +9.7% 1M",
+        "Analyst consensus buy",
+        "Weapons/tech growth",
+        "Positive news sentiment 0.154"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solid momentum with +7.26% 1M, YTD +27.20%, and 1-year return of +43%, driven by UK defense and aerospace demand. P/E of 42.28 is elevated but supported by analyst buy consensus (score 1.6) and a dividend yield of 0.78%.",
+      "drivers": [
+        "Momentum +7.3% 1M",
+        "YTD +27.2% strong",
+        "Analyst consensus buy",
+        "UK defense/aerospace exposure"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "KTOS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Up +7.79% in 1M, driven by strong_buy analyst consensus (score 1.43) and positive news sentiment of 0.196, despite a high P/E of 308.41 and YTD decline of -33.88%. Drone and space systems exposure keeps it in focus.",
+      "drivers": [
+        "Momentum +7.8% 1M",
+        "Analyst strong_buy score 1.43",
+        "Drone/space defense",
+        "Positive news sentiment 0.196"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Gained +5.96% in 1M, with a strong YTD of +28.62% and a low P/E of 14.49. Analyst consensus is hold (score 2.82) but news sentiment is positive at 0.152; short interest of 7.21% suggests some skepticism but value may emerge.",
+      "drivers": [
+        "Momentum +5.96% 1M",
+        "P/E 14.49 low",
+        "YTD +28.6% strong",
+        "Positive news sentiment 0.152"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Up +5.66% in 1M but YTD -28.42%, with a high beta of 2.745 and short interest at 19.23%. News sentiment is mildly positive at 0.088; space-based network catalysts (BlueBird deployment, NZ gateway) offer high-risk/high-reward potential.",
+      "drivers": [
+        "Momentum +5.66% 1M",
+        "High beta 2.745",
+        "Short interest 19.23%",
+        "Space telecom catalysts"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CACI",
@@ -127,139 +260,6 @@ window.SIGNALS_DATA = {
         "+7.13% 1M momentum",
         "high dividend yield 208bp",
         "buy analyst consensus"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "PLTR surged 44% in 1M after Q2 revenue of $1.94B beat estimates by 8%, commercial revenue +149% YoY, and AI sovereignty demand driving growth. P/E 154 is high but justified by accelerating revenue.",
-      "drivers": [
-        "1M +44.45%",
-        "Q2 revenue beat $1.94B",
-        "AI sovereignty catalyst",
-        "Analyst buy score 1.81"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "CACI +38.5% in 1M, Q2 revenue $2.71B beat estimates, EPS $8.91 vs $7.23 beat, FY2027 guidance above expectations, $10B contract awards, backlog $32B.",
-      "drivers": [
-        "1M +38.50%",
-        "Q2 EPS beat 23%",
-        "FY2027 guidance above estimates",
-        "Backlog $32B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "LDOS +31.8% in 1M, Q2 revenue $4.56B up 7% YoY, raised FY2026 guidance, $5B contract awards, P/E 13.2 cheap.",
-      "drivers": [
-        "1M +31.82%",
-        "Q2 revenue beat",
-        "Raised guidance",
-        "P/E 13.2"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AXON +27.7% in 1M, YTD +11.4%, analyst buy consensus, positive news sentiment 0.243, but P/E 263 is elevated.",
-      "drivers": [
-        "1M +27.72%",
-        "Analyst buy",
-        "Positive sentiment 0.243",
-        "YTD +11.41%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "RCAT +22.9% in 1M, strong_buy analyst consensus (score 1.17), positive news sentiment 0.328, but high short interest 23.2% and no P/E.",
-      "drivers": [
-        "1M +22.86%",
-        "Strong_buy analyst",
-        "Positive sentiment 0.328",
-        "Drone tariff tailwind"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "KTOS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "KTOS +19.4% in 1M, strong_buy analyst consensus, positive sentiment 0.252, but P/E 336 high and YTD -27.9%.",
-      "drivers": [
-        "1M +19.38%",
-        "Strong_buy analyst",
-        "Positive sentiment 0.252",
-        "Drone tariff tailwind"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "QQ.L +15.9% in 1M, YTD +21.5%, P/E 27 reasonable, positive news sentiment 0.296, small cap UK defence.",
-      "drivers": [
-        "1M +15.85%",
-        "YTD +21.54%",
-        "P/E 27",
-        "Positive sentiment 0.296"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "BA.L +11.4% in 1M, YTD +21.2%, P/E 30.4, positive sentiment 0.222, UK defence exposure.",
-      "drivers": [
-        "1M +11.37%",
-        "YTD +21.22%",
-        "P/E 30.37",
-        "Positive sentiment 0.222"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "RR.L +9.5% in 1M, YTD +25.5%, analyst buy consensus (score 1.6), P/E 41.7, positive sentiment 0.136.",
-      "drivers": [
-        "YTD +25.51%",
-        "Analyst buy score 1.6",
-        "1M +9.45%",
-        "Positive sentiment 0.136"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SAIC +10.4% in 1M, YTD +27.8%, P/E 14.4 cheap, positive sentiment 0.236, but analyst hold.",
-      "drivers": [
-        "YTD +27.82%",
-        "1M +10.43%",
-        "P/E 14.4",
-        "Positive sentiment 0.236"
       ]
     }
   ]

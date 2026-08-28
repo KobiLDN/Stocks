@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-26 08:57",
+  "updated": "2026-08-28 20:20",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "TotalEnergies boasts a strong_buy analyst consensus, a low P/E of 10.84, a high dividend yield of 4.91%, and solid YTD return of +31.59%, making it a top pick in the energy sector.",
+      "drivers": [
+        "YTD +31.59%",
+        "P/E 10.84",
+        "dividend yield 4.91%",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Shell benefits from record Q2 earnings of $9.8bn, a $3bn buyback, and an Erste Group upgrade to Buy; its P/E of 10.03 and 3.45% yield add value.",
+      "drivers": [
+        "Q2 earnings beat",
+        "Erste Group upgrade",
+        "P/E 10.03",
+        "dividend yield 3.45%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.858,
+      "rationale": "Marathon Petroleum has surged +123.2% YTD with a 1M gain of +19.38%, supported by strong refining margins and a P/E of 12.64, though yield is modest at 1.10%.",
+      "drivers": [
+        "YTD +123.2%",
+        "1M +19.38%",
+        "P/E 12.64",
+        "refining margin tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.788,
+      "rationale": "Valero is up +113.13% YTD and +16.61% in the past month, benefiting from robust refining spreads; its P/E of 14.54 and positive news sentiment of 0.303 are supportive.",
+      "drivers": [
+        "YTD +113.13%",
+        "1M +16.61%",
+        "P/E 14.54",
+        "news sentiment 0.303"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ConocoPhillips has gained +37.69% YTD with strong 1M momentum of +14.93%, a favorable analyst score of 1.64, and potential tailwinds from Venezuelan oil developments.",
+      "drivers": [
+        "YTD +37.69%",
+        "1M +14.93%",
+        "P/E 17.23",
+        "analyst score 1.64"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Chevron delivers a balanced profile: YTD +32.37%, P/E 19.32, dividend yield 3.56%, and a low analyst score of 1.72; it could benefit from Venezuela's OPEC exit.",
+      "drivers": [
+        "YTD +32.37%",
+        "P/E 19.32",
+        "dividend yield 3.56%",
+        "an_score 1.72"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Halliburton has rallied +15.08% in the past month on news of potential multi-billion dollar investments in Venezuelan oil fields, with a P/E of 18.82 and positive sentiment of 0.229.",
+      "drivers": [
+        "1M +15.08%",
+        "Venezuela deal catalyst",
+        "P/E 18.82",
+        "news sentiment 0.229"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Schlumberger has gained +40.38% YTD with strong 1M momentum of +11.66%; its P/E of 27.22 is elevated but supported by an analyst score of 1.6 and data access in Venezuela.",
+      "drivers": [
+        "YTD +40.38%",
+        "1M +11.66%",
+        "an_score 1.6",
+        "Venezuela data deal"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Equinor has soared +74.1% YTD and +9.1% in the past month, with a low P/E of 11.21 and a 3.75% yield, but its analyst consensus is hold, tempering conviction.",
+      "drivers": [
+        "YTD +74.1%",
+        "1M +9.1%",
+        "P/E 11.21",
+        "dividend yield 3.75%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "EOG Resources offers a compelling value with a P/E of 11.18, YTD gain of +37.21%, dividend yield 2.82%, and the highest news sentiment (0.321) among the universe.",
+      "drivers": [
+        "YTD +37.21%",
+        "P/E 11.18",
+        "dividend yield 2.82%",
+        "news sentiment 0.321"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "P/E 18.1",
         "news sentiment 0.241",
         "oilfield services demand"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "MPC: +121% YTD, P/E 12.5, Q2 EPS $17.73 vs $3.96 YoY, strong refining margins (R&M adj. EBITDA $24.84/bbl vs $6.79)",
-      "drivers": [
-        "YTD +121%",
-        "P/E 12.5",
-        "Refining margin boom",
-        "Strong earnings beat"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "COP",
-      "signal": "strong_buy",
-      "confidence": 0.93,
-      "rationale": "COP: +42.6% YTD, P/E 17.8, Q2 adj. EPS $3.24, doubled share repurchases to $2B, LNG offtake expanded to 12 MTPA",
-      "drivers": [
-        "YTD +42.6%",
-        "Doubled buybacks",
-        "LNG expansion",
-        "Analyst score 1.64"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "VLO: +114% YTD, P/E 14.6, robust refining margins and strong 1M momentum (+12.6%), analyst buy consensus",
-      "drivers": [
-        "YTD +114%",
-        "P/E 14.6",
-        "Refining strength",
-        "1M +12.6%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.88,
-      "rationale": "XOM: +37.3% YTD, P/E 21.2, Q2 adj. EPS $3.52, record Permian production, Jefferies PT raised to $200",
-      "drivers": [
-        "YTD +37.3%",
-        "Record Permian output",
-        "Jefferies PT $200",
-        "Cash flow $23.6B"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.87,
-      "rationale": "CVX: +35.3% YTD, P/E 19.8, dividend yield 3.47%, refining profit surged to $4.9B in Q2 vs $737M last year",
-      "drivers": [
-        "YTD +35.3%",
-        "Dividend yield 3.47%",
-        "Refining profit surge",
-        "Analyst score 1.72"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.84,
-      "rationale": "EOG: +46.2% YTD, P/E 11.9, cheap valuation, positive news sentiment 0.351, analyst buy",
-      "drivers": [
-        "YTD +46.2%",
-        "P/E 11.9",
-        "Positive sentiment",
-        "Low valuation"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "SLB: +35.5% YTD, P/E 26.3, 1M momentum +13%, strong analyst consensus (score 1.6) and positive news sentiment 0.323",
-      "drivers": [
-        "YTD +35.5%",
-        "1M +13%",
-        "Analyst score 1.6",
-        "Oil services demand"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SHEL: +27.1% YTD, P/E 10.3, cheap valuation, dividend yield 3.35%, stable amid geopolitical tensions",
-      "drivers": [
-        "YTD +27.1%",
-        "P/E 10.3",
-        "Dividend yield 3.35%",
-        "Low beta -0.218"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "HAL: +20.5% YTD, P/E 18.5, 1M +7%, positive news sentiment 0.289, analyst buy with score 1.75",
-      "drivers": [
-        "YTD +20.5%",
-        "P/E 18.5",
-        "Positive sentiment",
-        "New tech partnerships"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BKR",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BKR: +33.7% YTD, P/E 20.1, 1M +10.6%, analyst consensus buy (score 1.71), but recent 1W pullback -3.83%",
-      "drivers": [
-        "YTD +33.7%",
-        "1M +10.6%",
-        "Analyst score 1.71",
-        "Pullback opportunity"
       ]
     }
   ]
