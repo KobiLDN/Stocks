@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-28 05:26",
-  "fx_gbp_usd": 1.3589,
+  "updated": "2026-08-28 07:32",
+  "fx_gbp_usd": 1.3593,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -16,10 +16,10 @@
       "return_1yr": "+36%",
       "low_gbp": "166",
       "low_usd": 225.95,
-      "high_gbp": "254",
+      "high_gbp": "253",
       "high_usd": 344.57,
       "bar_pct": 75,
-      "market_cap_gbp_b": 3378.544,
+      "market_cap_gbp_b": 3377.396,
       "market_cap_usd_b": 4591.037,
       "beta": 1.086,
       "pe_ratio": 36.12,
@@ -87,8 +87,8 @@
       "high_gbp": "407",
       "high_usd": 553.72,
       "bar_pct": 76,
-      "market_cap_gbp_b": 2759.88,
-      "market_cap_usd_b": 3750.347,
+      "market_cap_gbp_b": 2758.942,
+      "market_cap_usd_b": 3750.346,
       "beta": 1.099,
       "pe_ratio": 28.11,
       "avg_volume_m": 38.94,
@@ -108,10 +108,17 @@
           "sentiment": -0.34
         },
         {
+          "title": "Does IREN\u2019s Sold-Out 2026 AI Capacity and Heavy Losses Change The Bull Case For IREN (IREN)?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/does-iren-sold-2026-ai-050828737.html",
+          "published": 1787893708,
+          "sentiment": -0.402
+        },
+        {
           "title": "Dow Jones Futures Rise With Fed Chief Warsh Due; Nvidia, These 7 Stocks Are In Buy Zones",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-chief-warsh-speech-nvidia-jumps-software-sector-on-fire/?src=A00220&yptr=yahoo",
-          "published": 1787889421,
+          "published": 1787893052,
           "sentiment": 0.0
         },
         {
@@ -127,16 +134,9 @@
           "url": "https://www.fool.com/coverage/better-buy/2026/08/27/c3-ai-vs-oracle-which-artificial-intelligence-stock-is-a-better-investment-in-2026/",
           "published": 1787875019,
           "sentiment": 0.718
-        },
-        {
-          "title": "Why Is Wall Street Doubting Google Stock?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/613260/why-is-wall-street-doubting-google-stock/2026-08-27",
-          "published": 1787873991,
-          "sentiment": -0.34
         }
       ],
-      "news_sentiment": 0.159
+      "news_sentiment": 0.147
     },
     {
       "ticker": "GOOGL",
@@ -155,10 +155,10 @@
       "high_gbp": "301",
       "high_usd": 408.61,
       "bar_pct": 66,
-      "market_cap_gbp_b": 3065.853,
+      "market_cap_gbp_b": 3064.811,
       "market_cap_usd_b": 4166.127,
       "beta": 1.237,
-      "pe_ratio": 17.08,
+      "pe_ratio": 17.15,
       "avg_volume_m": 31.88,
       "div_yield_pct": 26.0,
       "short_pct": 1.24,
@@ -183,6 +183,13 @@
           "sentiment": 0.765
         },
         {
+          "title": "YouTube Faces Potential Lawsuit from FTC As Regulator Probes Whether It Broke Its Own Policies on Suspended Accounts: Report",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/media-advertising/articles/youtube-faces-potential-lawsuit-ftc-033214915.html",
+          "published": 1787887934,
+          "sentiment": -0.778
+        },
+        {
           "title": "Can Marvell Technology (MRVL) Justify Its Price On AI Growth?",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-mrvl-justify-price-010754982.html",
@@ -195,16 +202,9 @@
           "url": "https://www.wsj.com/politics/elections/trump-corporate-donors-election-2026-572c1b28?siteid=yhoof2&yptr=yahoo",
           "published": 1787878800,
           "sentiment": -0.649
-        },
-        {
-          "title": "FTC Probes YouTube Over Suspended Social Media Accounts, Says Report \u2014 GOOGL Stock In Focus",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/ftc-probes-youtube-over-suspended-social-media-accounts-says-report-googl-stock-in-focus/cZYqYHSRJqp",
-          "published": 1787875243,
-          "sentiment": -0.477
         }
       ],
-      "news_sentiment": 0.11
+      "news_sentiment": 0.05
     },
     {
       "ticker": "AMZN",
@@ -223,10 +223,10 @@
       "high_gbp": "211",
       "high_usd": 287.2,
       "bar_pct": 66,
-      "market_cap_gbp_b": 2034.102,
+      "market_cap_gbp_b": 2033.411,
       "market_cap_usd_b": 2764.101,
       "beta": 1.454,
-      "pe_ratio": 20.6,
+      "pe_ratio": 20.92,
       "avg_volume_m": 49.16,
       "div_yield_pct": null,
       "short_pct": 0.97,
@@ -291,10 +291,10 @@
       "high_gbp": "582",
       "high_usd": 790.8,
       "bar_pct": 19,
-      "market_cap_gbp_b": 1070.647,
+      "market_cap_gbp_b": 1070.283,
       "market_cap_usd_b": 1454.881,
       "beta": 1.243,
-      "pe_ratio": 21.5,
+      "pe_ratio": 21.69,
       "avg_volume_m": 18.55,
       "div_yield_pct": 36.0,
       "short_pct": 1.27,
@@ -359,8 +359,8 @@
       "high_gbp": "174",
       "high_usd": 236.54,
       "bar_pct": 88,
-      "market_cap_gbp_b": 4051.154,
-      "market_cap_usd_b": 5505.033,
+      "market_cap_gbp_b": 4049.777,
+      "market_cap_usd_b": 5505.032,
       "beta": 2.215,
       "pe_ratio": 32.16,
       "avg_volume_m": 141.72,
@@ -427,10 +427,10 @@
       "high_gbp": "430",
       "high_usd": 584.73,
       "bar_pct": 75,
-      "market_cap_gbp_b": 572.642,
-      "market_cap_usd_b": 778.152,
+      "market_cap_gbp_b": 572.447,
+      "market_cap_usd_b": 778.151,
       "beta": 2.489,
-      "pe_ratio": 120.98,
+      "pe_ratio": 121.91,
       "avg_volume_m": 27.79,
       "div_yield_pct": null,
       "short_pct": 2.46,
@@ -489,17 +489,17 @@
       "change_1w": "-0.04%",
       "change_1m": "+6.71%",
       "change_ytd": "+133.85%",
-      "return_1yr": "+278%",
+      "return_1yr": "+269%",
       "low_gbp": "17",
       "low_usd": 23.68,
       "high_gbp": "105",
       "high_usd": 142.35,
       "bar_pct": 58,
-      "market_cap_gbp_b": 358.234,
-      "market_cap_usd_b": 486.797,
+      "market_cap_gbp_b": 358.113,
+      "market_cap_usd_b": 486.798,
       "beta": 2.241,
       "pe_ratio": null,
-      "avg_volume_m": 118.69,
+      "avg_volume_m": 118.36,
       "div_yield_pct": null,
       "short_pct": 2.57,
       "analyst": "hold",
@@ -514,6 +514,13 @@
           "url": "https://finance.yahoo.com/technology/live/tech-stocks-today-tech-stocks-gain-after-nvidia-tops-q2-expectations-125406169.html",
           "published": 1787576046,
           "sentiment": 0.772
+        },
+        {
+          "title": "Meet the 3 Stocks Nvidia Has Invested Billions Into",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/08/28/meet-the-3-stocks-nvidia-has-invested-billions-int/",
+          "published": 1787894400,
+          "sentiment": 0.0
         },
         {
           "title": "Amkor, FormFactor, Vishay Intertechnology, Allegro MicroSystems, and Intel Shares Skyrocket, What You Need To Know",
@@ -535,13 +542,6 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/ai-bubble-could-ready-pop-220103672.html",
           "published": 1787868063,
           "sentiment": 0.026
-        },
-        {
-          "title": "Nancy Pelosi Buys Intel. What Comes Next and If You Should Buy INTC Stock Too.",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/4250726/nancy-pelosi-buys-intel-what-comes-next-and-if-you-should-buy-intc-stock-too",
-          "published": 1787867842,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.278
@@ -563,10 +563,10 @@
       "high_gbp": "352",
       "high_usd": 479.0,
       "bar_pct": 80,
-      "market_cap_gbp_b": 1630.887,
+      "market_cap_gbp_b": 1630.333,
       "market_cap_usd_b": 2216.18,
       "beta": 1.258,
-      "pe_ratio": 31.86,
+      "pe_ratio": 31.14,
       "avg_volume_m": 13.46,
       "div_yield_pct": 104.0,
       "short_pct": 0.62,
@@ -631,10 +631,10 @@
       "high_gbp": "364",
       "high_usd": 495.0,
       "bar_pct": 41,
-      "market_cap_gbp_b": 1300.8,
+      "market_cap_gbp_b": 1300.358,
       "market_cap_usd_b": 1767.631,
       "beta": 1.473,
-      "pe_ratio": 61.82,
+      "pe_ratio": 59.16,
       "avg_volume_m": 26.21,
       "div_yield_pct": 73.0,
       "short_pct": 1.2,
@@ -699,10 +699,10 @@
       "high_gbp": "191",
       "high_usd": 259.92,
       "bar_pct": 31,
-      "market_cap_gbp_b": 129.515,
+      "market_cap_gbp_b": 129.471,
       "market_cap_usd_b": 175.995,
       "beta": 1.663,
-      "pe_ratio": 18.85,
+      "pe_ratio": 18.73,
       "avg_volume_m": 15.81,
       "div_yield_pct": 225.0,
       "short_pct": 3.48,
@@ -767,10 +767,10 @@
       "high_gbp": "333",
       "high_usd": 452.7,
       "bar_pct": 44,
-      "market_cap_gbp_b": 200.58,
+      "market_cap_gbp_b": 200.512,
       "market_cap_usd_b": 272.564,
       "beta": 3.909,
-      "pe_ratio": 260.42,
+      "pe_ratio": 255.21,
       "avg_volume_m": 7.83,
       "div_yield_pct": null,
       "short_pct": 12.57,
@@ -809,37 +809,37 @@
           "sentiment": 0.382
         },
         {
-          "title": "Can IBM's Advanced Processor Shape the Future of Enterprise Computing?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/articles/ibms-advanced-processor-shape-future-150000922.html",
+          "title": "IBM Just Opened Its Mainframes to Arm\u2014Is the Market Missing the Shift?",
+          "publisher": "MarketBeat",
+          "url": "https://www.marketbeat.com/articles/ibm-just-opened-its-mainframes-to-armis-the-market-missing-the-shift/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1787670000,
-          "sentiment": 0.25
+          "sentiment": -0.296
         }
       ],
-      "news_sentiment": 0.229
+      "news_sentiment": 0.119
     },
     {
       "ticker": "ASML",
       "company_name": "ASML Holding",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "1277",
+      "price_gbp": "1276",
       "price_usd": 1735.01,
       "change_1d": "-2.80%",
       "change_1w": "-0.87%",
       "change_1m": "+9.61%",
       "change_ytd": "+49.80%",
-      "return_1yr": "+134%",
+      "return_1yr": "+127%",
       "low_gbp": "527",
       "low_usd": 716.2,
-      "high_gbp": "1472",
+      "high_gbp": "1471",
       "high_usd": 1999.96,
       "bar_pct": 79,
-      "market_cap_gbp_b": 490.417,
-      "market_cap_usd_b": 666.418,
+      "market_cap_gbp_b": 490.25,
+      "market_cap_usd_b": 666.417,
       "beta": 1.365,
       "pe_ratio": 58.46,
-      "avg_volume_m": 1.85,
+      "avg_volume_m": 1.83,
       "div_yield_pct": 52.0,
       "short_pct": 0.35,
       "analyst": "strong_buy",
@@ -900,13 +900,13 @@
       "return_1yr": "+686%",
       "low_gbp": "84",
       "low_usd": 114.25,
-      "high_gbp": "924",
+      "high_gbp": "923",
       "high_usd": 1255.0,
       "bar_pct": 72,
-      "market_cap_gbp_b": null,
-      "market_cap_usd_b": null,
+      "market_cap_gbp_b": 777.158,
+      "market_cap_usd_b": 1056.424,
       "beta": 2.213,
-      "pe_ratio": 21.16,
+      "pe_ratio": 21.23,
       "avg_volume_m": 45.96,
       "div_yield_pct": 6.0,
       "short_pct": 2.66,
@@ -965,17 +965,17 @@
       "change_1w": "-2.79%",
       "change_1m": "+1.35%",
       "change_ytd": "+80.04%",
-      "return_1yr": "+200%",
+      "return_1yr": "+192%",
       "low_gbp": "114",
       "low_usd": 154.47,
       "high_gbp": "544",
       "high_usd": 739.67,
       "bar_pct": 56,
-      "market_cap_gbp_b": 281.702,
-      "market_cap_usd_b": 382.799,
+      "market_cap_gbp_b": 281.607,
+      "market_cap_usd_b": 382.8,
       "beta": 1.618,
-      "pe_ratio": 41.55,
-      "avg_volume_m": 9.6,
+      "pe_ratio": 41.33,
+      "avg_volume_m": 9.53,
       "div_yield_pct": 44.0,
       "short_pct": 1.5,
       "analyst": "strong_buy",
@@ -1039,7 +1039,7 @@
       "high_gbp": "254",
       "high_usd": 345.72,
       "bar_pct": 16,
-      "market_cap_gbp_b": 322.073,
+      "market_cap_gbp_b": 321.964,
       "market_cap_usd_b": 437.659,
       "beta": 1.718,
       "pe_ratio": 25.49,
@@ -1107,10 +1107,10 @@
       "high_gbp": "198",
       "high_usd": 269.11,
       "bar_pct": 86,
-      "market_cap_gbp_b": 152.653,
+      "market_cap_gbp_b": 152.601,
       "market_cap_usd_b": 207.437,
       "beta": 1.152,
-      "pe_ratio": 23.08,
+      "pe_ratio": 18.84,
       "avg_volume_m": 15.29,
       "div_yield_pct": 86.0,
       "short_pct": 3.74,
@@ -1135,28 +1135,28 @@
           "sentiment": 0.402
         },
         {
-          "title": "Dow Jones Futures Rise With Fed Chief Warsh Due; Nvidia, These 7 Stocks Are In Buy Zones",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-chief-warsh-speech-nvidia-jumps-software-sector-on-fire/?src=A00220&yptr=yahoo",
-          "published": 1787889421,
+          "title": "SoundHound AI (SOUN) Stock Trades Up, Here Is Why",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/soundhound-ai-soun-stock-trades-060907479.html",
+          "published": 1787897347,
           "sentiment": 0.0
         },
         {
-          "title": "Salesforce (CRM) Shares Skyrocket, What You Need To Know",
+          "title": "Amplitude, GitLab, Doximity, Freshworks, and Sprinklr Shares Skyrocket, What You Need To Know",
           "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/salesforce-crm-shares-skyrocket-know-030507664.html",
-          "published": 1787886307,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amplitude-gitlab-doximity-freshworks-sprinklr-060107087.html",
+          "published": 1787896867,
           "sentiment": 0.296
         },
         {
-          "title": "Salesforce Stock Just Soared. Thank Anthropic.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/27/salesforce-stock-just-soared-but-investment-gains-delivered-usd2-53-of-its-usd5-90-in-per-share-profit/",
-          "published": 1787883781,
-          "sentiment": 0.361
+          "title": "Paylocity, MongoDB, Datadog, Five9, and monday.com Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/paylocity-mongodb-datadog-five9-monday-055307084.html",
+          "published": 1787896387,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.186
+      "news_sentiment": 0.114
     },
     {
       "ticker": "ADBE",
@@ -1175,10 +1175,10 @@
       "high_gbp": "273",
       "high_usd": 370.86,
       "bar_pct": 55,
-      "market_cap_gbp_b": 84.582,
-      "market_cap_usd_b": 114.937,
+      "market_cap_gbp_b": 84.553,
+      "market_cap_usd_b": 114.936,
       "beta": 1.397,
-      "pe_ratio": 16.55,
+      "pe_ratio": 15.65,
       "avg_volume_m": 6.41,
       "div_yield_pct": null,
       "short_pct": 5.06,
@@ -1193,6 +1193,13 @@
           "publisher": "Yahoo Finance Video",
           "url": "https://finance.yahoo.com/video/companies-leading-software-comeback-against-140939706.html",
           "published": 1787839779,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Snowflake, Varonis Systems, Fastly, Adobe, and DocuSign Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-varonis-systems-fastly-adobe-044907322.html",
+          "published": 1787892547,
           "sentiment": 0.0
         },
         {
@@ -1215,13 +1222,6 @@
           "url": "https://247wallst.com/investing/2026/08/27/figma-spikes-12-as-ai-turns-from-threat-to-tailwind-for-design-software-atlassian-rallies-8/",
           "published": 1787843336,
           "sentiment": -0.527
-        },
-        {
-          "title": "Salesforce Soars 14% as Claudeforce and a Guidance Raise End the Slump, ServiceNow Climbs 5%, Adobe Advances 3%",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/27/salesforce-soars-14-as-claudeforce-and-a-guidance-raise-end-the-slump-servicenow-climbs-5-adobe-advances-3/",
-          "published": 1787837898,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.16
@@ -1243,10 +1243,10 @@
       "high_gbp": "143",
       "high_usd": 194.73,
       "bar_pct": 50,
-      "market_cap_gbp_b": 105.32,
+      "market_cap_gbp_b": 105.284,
       "market_cap_usd_b": 143.117,
       "beta": 0.93,
-      "pe_ratio": 86.52,
+      "pe_ratio": 78.65,
       "avg_volume_m": 24.64,
       "div_yield_pct": null,
       "short_pct": 2.83,
@@ -1257,10 +1257,17 @@
       "vol_1m": 460321200,
       "news": [
         {
+          "title": "ServiceNow, Zscaler, SentinelOne, Asana, and Elastic Shares Skyrocket, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/servicenow-zscaler-sentinelone-asana-elastic-050507287.html",
+          "published": 1787893507,
+          "sentiment": 0.296
+        },
+        {
           "title": "Dow Jones Futures Rise With Fed Chief Warsh Due; Nvidia, These 7 Stocks Are In Buy Zones",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-chief-warsh-speech-nvidia-jumps-software-sector-on-fire/?src=A00220&yptr=yahoo",
-          "published": 1787889421,
+          "published": 1787893052,
           "sentiment": 0.0
         },
         {
@@ -1283,16 +1290,9 @@
           "url": "https://www.thestreet.com/investing/stocks/servicenow-stock-now-jim-cramer-advice",
           "published": 1787869020,
           "sentiment": 0.421
-        },
-        {
-          "title": "Stock Market Today, Aug. 27: Salesforce Surges 23% on Anthropic Partnership and Q2 Earnings Beat",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/08/27/stock-market-today-aug-27-salesforce-surges-23-on-anthropic-partnership-and-q2-earnings-beat/",
-          "published": 1787867267,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.192
+      "news_sentiment": 0.251
     },
     {
       "ticker": "SNOW",
@@ -1311,8 +1311,8 @@
       "high_gbp": "252",
       "high_usd": 341.95,
       "bar_pct": 94,
-      "market_cap_gbp_b": 83.944,
-      "market_cap_usd_b": 114.07,
+      "market_cap_gbp_b": 83.915,
+      "market_cap_usd_b": 114.069,
       "beta": 1.315,
       "pe_ratio": null,
       "avg_volume_m": 6.14,
@@ -1324,6 +1324,13 @@
       "vol_1w": 18747900,
       "vol_1m": 109290600,
       "news": [
+        {
+          "title": "Snowflake, Varonis Systems, Fastly, Adobe, and DocuSign Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/snowflake-varonis-systems-fastly-adobe-044907322.html",
+          "published": 1787892547,
+          "sentiment": 0.0
+        },
         {
           "title": "How Much Track Is Left For SNOW Stock?",
           "publisher": "Trefis",
@@ -1351,13 +1358,6 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/snow-benefits-product-revenue-surge-151900680.html",
           "published": 1787843940,
           "sentiment": 0.382
-        },
-        {
-          "title": "Palantir Technologies Stock Surged On Evidence That Was Already Public",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/613346/palantir-technologies-stock-surged-on-evidence-that-was-already-public/2026-08-27",
-          "published": 1787838793,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.187
@@ -1379,10 +1379,10 @@
       "high_gbp": "519",
       "high_usd": 705.08,
       "bar_pct": 21,
-      "market_cap_gbp_b": 70.051,
+      "market_cap_gbp_b": 70.027,
       "market_cap_usd_b": 95.191,
       "beta": 0.959,
-      "pe_ratio": 21.14,
+      "pe_ratio": 21.01,
       "avg_volume_m": 4.93,
       "div_yield_pct": 139.0,
       "short_pct": 3.84,
@@ -1447,8 +1447,8 @@
       "high_gbp": "169",
       "high_usd": 229.08,
       "bar_pct": 99,
-      "market_cap_gbp_b": 171.771,
-      "market_cap_usd_b": 233.416,
+      "market_cap_gbp_b": 171.713,
+      "market_cap_usd_b": 233.417,
       "beta": 1.234,
       "pe_ratio": 3256.57,
       "avg_volume_m": 10.84,
@@ -1468,35 +1468,35 @@
           "sentiment": -0.128
         },
         {
-          "title": "Dow Jones Futures Rise With Fed Chief Warsh Due; Nvidia, These 7 Stocks Are In Buy Zones",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-chief-warsh-speech-nvidia-jumps-software-sector-on-fire/?src=A00220&yptr=yahoo",
-          "published": 1787889421,
+          "title": "SoundHound AI (SOUN) Stock Trades Up, Here Is Why",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/soundhound-ai-soun-stock-trades-060907479.html",
+          "published": 1787897347,
           "sentiment": 0.0
         },
         {
-          "title": "Palo Alto Networks (PANW) Stock Trades Up, Here Is Why",
+          "title": "Amplitude, GitLab, Doximity, Freshworks, and Sprinklr Shares Skyrocket, What You Need To Know",
           "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-panw-stock-025707467.html",
-          "published": 1787885827,
-          "sentiment": 0.0
-        },
-        {
-          "title": "CrowdStrike (CRWD) Shares Skyrocket, What You Need To Know",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/crowdstrike-crwd-shares-skyrocket-know-023307402.html",
-          "published": 1787884387,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amplitude-gitlab-doximity-freshworks-sprinklr-060107087.html",
+          "published": 1787896867,
           "sentiment": 0.296
         },
         {
-          "title": "CRWD Q2 Deep Dive: AI Security Demand Drives Growth and Platform Consolidation",
+          "title": "Paylocity, MongoDB, Datadog, Five9, and monday.com Stocks Trade Up, What You Need To Know",
           "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/technology/ai/articles/crwd-q2-deep-dive-ai-005707202.html",
-          "published": 1787878627,
-          "sentiment": 0.542
+          "url": "https://finance.yahoo.com/markets/stocks/articles/paylocity-mongodb-datadog-five9-monday-055307084.html",
+          "published": 1787896387,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Braze, Procore Technologies, PTC, Samsara, and Zeta Global Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/braze-procore-technologies-ptc-samsara-054507081.html",
+          "published": 1787895907,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.142
+      "news_sentiment": 0.034
     },
     {
       "ticker": "PANW",
@@ -1512,10 +1512,10 @@
       "return_1yr": "+101%",
       "low_gbp": "103",
       "low_usd": 139.57,
-      "high_gbp": "294",
+      "high_gbp": "293",
       "high_usd": 398.88,
       "bar_pct": 94,
-      "market_cap_gbp_b": 229.618,
+      "market_cap_gbp_b": 229.54,
       "market_cap_usd_b": 312.023,
       "beta": 0.893,
       "pe_ratio": 294.5,
@@ -1528,6 +1528,13 @@
       "vol_1w": 27214500,
       "vol_1m": 129906100,
       "news": [
+        {
+          "title": "Palo Alto Networks (PANW) Signed A Multi Year AI Security Partnership",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/palo-alto-networks-panw-signed-050752552.html",
+          "published": 1787893672,
+          "sentiment": 0.34
+        },
         {
           "title": "Palo Alto Networks (PANW) Stock Trades Up, Here Is Why",
           "publisher": "StockStory",
@@ -1555,16 +1562,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/snps-q3-earnings-beat-estimates-151100379.html",
           "published": 1787843460,
           "sentiment": 0.494
-        },
-        {
-          "title": "CRWD Q2 Earnings Beat Estimates on ARR and Falcon Flex Strength",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/crwd-q2-earnings-beat-estimates-150400518.html",
-          "published": 1787843040,
-          "sentiment": 0.494
         }
       ],
-      "news_sentiment": 0.358
+      "news_sentiment": 0.327
     },
     {
       "ticker": "NET",
@@ -1583,8 +1583,8 @@
       "high_gbp": "244",
       "high_usd": 332.22,
       "bar_pct": 86,
-      "market_cap_gbp_b": 80.768,
-      "market_cap_usd_b": 109.754,
+      "market_cap_gbp_b": 80.741,
+      "market_cap_usd_b": 109.755,
       "beta": 1.66,
       "pe_ratio": null,
       "avg_volume_m": 3.71,
@@ -1596,6 +1596,13 @@
       "vol_1w": 14832400,
       "vol_1m": 91613100,
       "news": [
+        {
+          "title": "Wix, Workiva, DigitalOcean, Commvault, and Cloudflare Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/wix-workiva-digitalocean-commvault-cloudflare-044107663.html",
+          "published": 1787892067,
+          "sentiment": 0.0
+        },
         {
           "title": "Why Is JFrog (FROG) Stock Rocketing Higher Today",
           "publisher": "StockStory",
@@ -1623,16 +1630,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/investors-may-respond-cloudflare-net-150619695.html",
           "published": 1787843179,
           "sentiment": 0.318
-        },
-        {
-          "title": "Cathie Wood Goes Bargain Hunting: 3 Stocks She Just Bought",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/27/cathie-wood-goes-bargain-hunting-3-stocks-she-just/",
-          "published": 1787841720,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.016
+      "news_sentiment": -0.024
     },
     {
       "ticker": "FTNT",
@@ -1651,7 +1651,7 @@
       "high_gbp": "128",
       "high_usd": 173.89,
       "bar_pct": 99,
-      "market_cap_gbp_b": 93.291,
+      "market_cap_gbp_b": 93.259,
       "market_cap_usd_b": 126.771,
       "beta": 1.058,
       "pe_ratio": 60.84,
@@ -1668,7 +1668,7 @@
           "title": "Dow Jones Futures Rise With Fed Chief Warsh Due; Nvidia, These 7 Stocks Are In Buy Zones",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-chief-warsh-speech-nvidia-jumps-software-sector-on-fire/?src=A00220&yptr=yahoo",
-          "published": 1787889421,
+          "published": 1787893052,
           "sentiment": 0.0
         },
         {
@@ -1719,7 +1719,7 @@
       "high_gbp": "93",
       "high_usd": 126.71,
       "bar_pct": 24,
-      "market_cap_gbp_b": 244.649,
+      "market_cap_gbp_b": 244.566,
       "market_cap_usd_b": 332.449,
       "beta": 1.514,
       "pe_ratio": 25.67,
@@ -1732,6 +1732,20 @@
       "vol_1w": 124316400,
       "vol_1m": 734065900,
       "news": [
+        {
+          "title": "Netflix embraces traditional telly as streaming revolution dries up",
+          "publisher": "The Telegraph",
+          "url": "https://uk.finance.yahoo.com/news/netflix-embraces-traditional-telly-streaming-053000579.html",
+          "published": 1787895000,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The GTA 6 Leak Saga May Be Over \u2014 the Money Trail Shows Where It Went",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/gta6-trailer-netflix-leaker-dumps-cyberleek/",
+          "published": 1787892695,
+          "sentiment": -0.34
+        },
         {
           "title": "Why Is Wall Street Doubting Google Stock?",
           "publisher": "Trefis",
@@ -1752,23 +1766,9 @@
           "url": "https://www.trefis.com/articles/613256/nflx-has-bounced-from-this-price-before-now-what-2/2026-08-27",
           "published": 1787860012,
           "sentiment": 0.0
-        },
-        {
-          "title": "Unusual Options Activity: NFLX, HONA, and MSFT Lead the Way With These 3 Options Strategies",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/4229172/unusual-options-activity-nflx-hona-and-msft-lead-the-way-with-these-3-options-strategies",
-          "published": 1787851802,
-          "sentiment": 0.0
-        },
-        {
-          "title": "2 S&P 500 Stocks with Promising Prospects and 1 We Ignore",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/2-p-500-stocks-promising-160107232.html",
-          "published": 1787846467,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": -0.136
     },
     {
       "ticker": "SHOP",
@@ -1787,8 +1787,8 @@
       "high_gbp": "134",
       "high_usd": 182.19,
       "bar_pct": 68,
-      "market_cap_gbp_b": 147.377,
-      "market_cap_usd_b": 200.268,
+      "market_cap_gbp_b": 146.076,
+      "market_cap_usd_b": 198.567,
       "beta": 2.59,
       "pe_ratio": 102.21,
       "avg_volume_m": 9.11,
@@ -1855,10 +1855,10 @@
       "high_gbp": "548",
       "high_usd": 745.0,
       "bar_pct": 36,
-      "market_cap_gbp_b": 79.767,
-      "market_cap_usd_b": 108.394,
+      "market_cap_gbp_b": 79.754,
+      "market_cap_usd_b": 108.413,
       "beta": 1.581,
-      "pe_ratio": 28.36,
+      "pe_ratio": 29.59,
       "avg_volume_m": 1.86,
       "div_yield_pct": null,
       "short_pct": 3.12,
@@ -1923,10 +1923,10 @@
       "high_gbp": "75",
       "high_usd": 101.99,
       "bar_pct": 32,
-      "market_cap_gbp_b": 115.665,
+      "market_cap_gbp_b": 115.626,
       "market_cap_usd_b": 157.175,
       "beta": 1.154,
-      "pe_ratio": 16.88,
+      "pe_ratio": 17.21,
       "avg_volume_m": 20.17,
       "div_yield_pct": null,
       "short_pct": 2.36,
@@ -1991,10 +1991,10 @@
       "high_gbp": "96",
       "high_usd": 130.37,
       "bar_pct": 72,
-      "market_cap_gbp_b": 325.291,
+      "market_cap_gbp_b": 325.181,
       "market_cap_usd_b": 442.032,
       "beta": 1.002,
-      "pe_ratio": 33.68,
+      "pe_ratio": 33.78,
       "avg_volume_m": 23.26,
       "div_yield_pct": 150.0,
       "short_pct": 1.5,
@@ -2059,10 +2059,10 @@
       "high_gbp": "153",
       "high_usd": 207.52,
       "bar_pct": 79,
-      "market_cap_gbp_b": 328.801,
+      "market_cap_gbp_b": 328.689,
       "market_cap_usd_b": 446.801,
       "beta": 1.563,
-      "pe_ratio": 158.91,
+      "pe_ratio": 151.16,
       "avg_volume_m": 42.92,
       "div_yield_pct": null,
       "short_pct": 3.18,
@@ -2073,10 +2073,17 @@
       "vol_1m": 1044369500,
       "news": [
         {
+          "title": "Twilio, Palantir Technologies, Zoom, PagerDuty, and nCino Shares Are Soaring, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/twilio-palantir-technologies-zoom-pagerduty-051307238.html",
+          "published": 1787893987,
+          "sentiment": 0.296
+        },
+        {
           "title": "Dow Jones Futures Rise With Fed Chief Warsh Due; Nvidia, These 7 Stocks Are In Buy Zones",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-fed-chief-warsh-speech-nvidia-jumps-software-sector-on-fire/?src=A00220&yptr=yahoo",
-          "published": 1787889421,
+          "published": 1787893052,
           "sentiment": 0.0
         },
         {
@@ -2099,16 +2106,9 @@
           "url": "https://www.trefis.com/articles/613264/how-much-track-is-left-for-snow-stock/2026-08-27",
           "published": 1787872499,
           "sentiment": 0.0
-        },
-        {
-          "title": "Palantir Billionaire Peter Thiel Just Bought This Magnificent Artificial Intelligence (AI) Stock Up 347,260% Since Its IPO",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/27/palantir-billionaire-peter-thiel-just-bought-this/",
-          "published": 1787855520,
-          "sentiment": 0.828
         }
       ],
-      "news_sentiment": 0.036
+      "news_sentiment": -0.071
     }
   ]
 }
