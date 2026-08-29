@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-08-29 00:42",
+  "updated": "2026-08-29 03:58",
   "fx_gbp_usd": 1.3537,
   "stocks": [
     {
@@ -13,7 +13,7 @@ window.PRICES_DATA = {
       "change_1w": "-5.09%",
       "change_1m": "+0.62%",
       "change_ytd": "+30.33%",
-      "return_1yr": "+37%",
+      "return_1yr": "+36%",
       "low_gbp": "80",
       "low_usd": 108.35,
       "high_gbp": "130",
@@ -23,7 +23,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 644.377,
       "beta": 0.173,
       "pe_ratio": 20.14,
-      "avg_volume_m": 15.83,
+      "avg_volume_m": 15.63,
       "div_yield_pct": 263.0,
       "short_pct": 1.0,
       "analyst": "buy",
@@ -33,42 +33,42 @@ window.PRICES_DATA = {
       "vol_1m": 323979809,
       "news": [
         {
+          "title": "Exxon (XOM) is Betting on Robots to Unlock a New Permian Oil Boom",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/exxon-xom-betting-robots-unlock-022225076.html",
+          "published": 1787970145,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Cenovus (CVE) Enters the Ranks of the World\u2019s Largest Oil and Gas Producers",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/cenovus-cve-enters-ranks-world-021429265.html",
+          "published": 1787969669,
+          "sentiment": 0.0
+        },
+        {
+          "title": "SpaceX renews investor hope with bold new plan",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/investing/stocks/spacex-spcx-plans-louisiana-starbase-spaceport",
+          "published": 1787968980,
+          "sentiment": 0.67
+        },
+        {
+          "title": "Buc-ee\u2019s CEO Says Company Will Favor \u2018Conservative, Business-Friendly\u2019 States Amid Backlash Over Ohio Mini-Mart Lawsuit",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/small-business/articles/buc-ee-ceo-says-company-013026300.html",
+          "published": 1787967026,
+          "sentiment": 0.202
+        },
+        {
           "title": "The Number ExxonMobil No Longer Puts In Front Of Its Results",
           "publisher": "Trefis",
           "url": "https://www.trefis.com/articles/613532/the-number-exxonmobil-no-longer-puts-in-front-of-its-results/2026-08-28",
           "published": 1787950219,
           "sentiment": -0.226
-        },
-        {
-          "title": "Top Stock Reports for NVIDIA, ExxonMobil & HSBC",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-stock-reports-nvidia-exxonmobil-202200522.html",
-          "published": 1787948520,
-          "sentiment": 0.202
-        },
-        {
-          "title": "Targa Resources (TRGP) vs. ExxonMobil (XOM): Which Stock Is the Better Energy Bet?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/targa-resources-trgp-vs-exxonmobil-200425525.html",
-          "published": 1787947465,
-          "sentiment": 0.612
-        },
-        {
-          "title": "Oil Remains Above $80: Are Permian Stocks Well Poised to Gain?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/oil-remains-above-80-permian-153700222.html",
-          "published": 1787931420,
-          "sentiment": 0.758
-        },
-        {
-          "title": "I'm Not Selling ExxonMobil, Even With Oil Prices Where They Are",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/28/im-not-selling-exxon-even-with-oil-prices-where/",
-          "published": 1787927700,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.269
+      "news_sentiment": 0.129
     },
     {
       "ticker": "CVX",
@@ -81,7 +81,7 @@ window.PRICES_DATA = {
       "change_1w": "-1.66%",
       "change_1m": "+6.13%",
       "change_ytd": "+33.10%",
-      "return_1yr": "+24%",
+      "return_1yr": "+23%",
       "low_gbp": "108",
       "low_usd": 146.49,
       "high_gbp": "159",
@@ -91,7 +91,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 395.97,
       "beta": 0.488,
       "pe_ratio": 19.43,
-      "avg_volume_m": 8.5,
+      "avg_volume_m": 8.42,
       "div_yield_pct": 356.0,
       "short_pct": 0.81,
       "analyst": "buy",
@@ -100,6 +100,13 @@ window.PRICES_DATA = {
       "vol_1w": 34274062,
       "vol_1m": 181731562,
       "news": [
+        {
+          "title": "Chevron (CVX) Nears Major Venezuela Oil Deal: Is a New Growth Engine Emerging?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/chevron-cvx-nears-major-venezuela-020912972.html",
+          "published": 1787969352,
+          "sentiment": 0.382
+        },
         {
           "title": "Trump to Discuss High Fuel Prices With Oil Refiners Next Week",
           "publisher": "Bloomberg",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/chevron-cvx-outperforming-totalenergies-tte-200855625.html",
           "published": 1787947735,
           "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy Stocks Mixed Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-mixed-afternoon-200438758.html",
-          "published": 1787947478,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.064
+      "news_sentiment": 0.086
     },
     {
       "ticker": "SHEL",
@@ -159,7 +159,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 250.225,
       "beta": -0.218,
       "pe_ratio": 10.06,
-      "avg_volume_m": 6.37,
+      "avg_volume_m": 6.34,
       "div_yield_pct": 345.0,
       "short_pct": 1.57,
       "analyst": "buy",
@@ -227,7 +227,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 108.55,
       "beta": -0.212,
       "pe_ratio": 20.17,
-      "avg_volume_m": 8.84,
+      "avg_volume_m": 8.79,
       "div_yield_pct": 476.0,
       "short_pct": 0.28,
       "analyst": "buy",
@@ -353,17 +353,17 @@ window.PRICES_DATA = {
       "change_1w": "-3.43%",
       "change_1m": "+2.06%",
       "change_ytd": "+74.27%",
-      "return_1yr": "+69%",
+      "return_1yr": "+68%",
       "low_gbp": "16",
       "low_usd": 22.26,
       "high_gbp": "32",
       "high_usd": 43.46,
       "bar_pct": 90,
-      "market_cap_gbp_b": 72.564,
-      "market_cap_usd_b": 98.233,
+      "market_cap_gbp_b": 72.582,
+      "market_cap_usd_b": 98.258,
       "beta": -0.73,
       "pe_ratio": 11.22,
-      "avg_volume_m": 3.54,
+      "avg_volume_m": 3.55,
       "div_yield_pct": 375.0,
       "short_pct": 2.82,
       "analyst": "hold",
@@ -431,7 +431,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 156.595,
       "beta": 0.123,
       "pe_ratio": 17.24,
-      "avg_volume_m": 7.2,
+      "avg_volume_m": 7.11,
       "div_yield_pct": 259.0,
       "short_pct": 1.41,
       "analyst": "buy",
@@ -489,7 +489,7 @@ window.PRICES_DATA = {
       "change_1w": "-3.59%",
       "change_1m": "+5.48%",
       "change_ytd": "+40.76%",
-      "return_1yr": "+24%",
+      "return_1yr": "+23%",
       "low_gbp": "29",
       "low_usd": 38.8,
       "high_gbp": "50",
@@ -499,8 +499,8 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 59.079,
       "beta": 0.16,
       "pe_ratio": 17.43,
-      "avg_volume_m": 9.12,
-      "div_yield_pct": 191.0,
+      "avg_volume_m": 9.03,
+      "div_yield_pct": 189.0,
       "short_pct": 0.01,
       "analyst": "buy",
       "analyst_score": 2.33,
@@ -557,17 +557,17 @@ window.PRICES_DATA = {
       "change_1w": "-6.34%",
       "change_1m": "-1.77%",
       "change_ytd": "+36.97%",
-      "return_1yr": "+16%",
+      "return_1yr": "+15%",
       "low_gbp": "75",
       "low_usd": 101.59,
       "high_gbp": "114",
       "high_usd": 153.67,
       "bar_pct": 80,
-      "market_cap_gbp_b": 55.543,
-      "market_cap_usd_b": 75.191,
+      "market_cap_gbp_b": 56.401,
+      "market_cap_usd_b": 76.353,
       "beta": 0.278,
       "pe_ratio": 11.16,
-      "avg_volume_m": 3.41,
+      "avg_volume_m": 3.34,
       "div_yield_pct": 282.0,
       "short_pct": 3.11,
       "analyst": "buy",
@@ -631,8 +631,8 @@ window.PRICES_DATA = {
       "high_gbp": "272",
       "high_usd": 367.6,
       "bar_pct": 99,
-      "market_cap_gbp_b": 76.511,
-      "market_cap_usd_b": 103.577,
+      "market_cap_gbp_b": 79.538,
+      "market_cap_usd_b": 107.674,
       "beta": 0.508,
       "pe_ratio": 12.79,
       "avg_volume_m": 2.37,
@@ -693,7 +693,7 @@ window.PRICES_DATA = {
       "change_1w": "+1.00%",
       "change_1m": "+17.39%",
       "change_ytd": "+116.31%",
-      "return_1yr": "+128%",
+      "return_1yr": "+125%",
       "low_gbp": "111",
       "low_usd": 150.1,
       "high_gbp": "261",
@@ -703,7 +703,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 101.454,
       "beta": 0.554,
       "pe_ratio": 14.69,
-      "avg_volume_m": 2.85,
+      "avg_volume_m": 2.83,
       "div_yield_pct": 138.0,
       "short_pct": 3.89,
       "analyst": "buy",
@@ -712,6 +712,20 @@ window.PRICES_DATA = {
       "vol_1w": 9711039,
       "vol_1m": 56055139,
       "news": [
+        {
+          "title": "Did Strong Q2 2026 Earnings and Refining Tailwinds Just Shift Valero Energy's (VLO) Investment Narrative?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/did-strong-q2-2026-earnings-021511091.html",
+          "published": 1787969711,
+          "sentiment": 0.511
+        },
+        {
+          "title": "Valero Energy (VLO) Looks Well Placed In The Tight Global Refining Market",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/valero-energy-vlo-looks-well-001520844.html",
+          "published": 1787962520,
+          "sentiment": 0.494
+        },
         {
           "title": "Trump to Discuss High Fuel Prices With Oil Refiners Next Week",
           "publisher": "Bloomberg",
@@ -732,23 +746,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/613532/the-number-exxonmobil-no-longer-puts-in-front-of-its-results/2026-08-28",
           "published": 1787950219,
           "sentiment": -0.226
-        },
-        {
-          "title": "Equinor and Partners Plan to Pursue High-Impact NCS Exploration",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/equinor-partners-plan-pursue-high-164900885.html",
-          "published": 1787935740,
-          "sentiment": 0.226
-        },
-        {
-          "title": "Enbridge Partners With KKR to Fund Westcoast Expansion Project",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/enbridge-partners-kkr-fund-westcoast-163100842.html",
-          "published": 1787934660,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.108
+      "news_sentiment": 0.264
     },
     {
       "ticker": "SLB",
@@ -761,7 +761,7 @@ window.PRICES_DATA = {
       "change_1w": "+6.42%",
       "change_1m": "+17.10%",
       "change_ytd": "+44.21%",
-      "return_1yr": "+49%",
+      "return_1yr": "+53%",
       "low_gbp": "23",
       "low_usd": 31.64,
       "high_gbp": "43",
@@ -771,7 +771,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 85.086,
       "beta": 0.749,
       "pe_ratio": 27.97,
-      "avg_volume_m": 13.48,
+      "avg_volume_m": 13.2,
       "div_yield_pct": 215.0,
       "short_pct": 4.28,
       "analyst": "buy",
@@ -780,6 +780,13 @@ window.PRICES_DATA = {
       "vol_1w": 66178697,
       "vol_1m": 237416497,
       "news": [
+        {
+          "title": "SLB\u2019s Venezuela Bet: Massive Opportunity or Risky Gamble?",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/slb-venezuela-bet-massive-opportunity-021536077.html",
+          "published": 1787969736,
+          "sentiment": 0.25
+        },
         {
           "title": "The World\u2019s Largest Oil Reserves Are Opening Their Data to SLB. Should Investors Trust Venezuela to Pay?",
           "publisher": "24/7 Wall St.",
@@ -807,16 +814,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/slb-slb-stock-falls-amid-215002937.html",
           "published": 1787694602,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Tuesday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-tuesday-200328287.html",
-          "published": 1787688208,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.059
+      "news_sentiment": 0.054
     },
     {
       "ticker": "HAL",
@@ -835,11 +835,11 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 67,
-      "market_cap_gbp_b": 22.266,
-      "market_cap_usd_b": 30.143,
+      "market_cap_gbp_b": 22.327,
+      "market_cap_usd_b": 30.225,
       "beta": 0.753,
       "pe_ratio": 18.94,
-      "avg_volume_m": 11.88,
+      "avg_volume_m": 11.73,
       "div_yield_pct": 192.0,
       "short_pct": 5.04,
       "analyst": "buy",
@@ -893,7 +893,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "46",
       "price_usd": 62.41,
-      "change_1d": "-0.11%",
+      "change_1d": "-0.10%",
       "change_1w": "+0.11%",
       "change_1m": "+6.68%",
       "change_ytd": "+33.83%",
@@ -907,7 +907,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 61.953,
       "beta": 0.959,
       "pe_ratio": 20.07,
-      "avg_volume_m": 8.34,
+      "avg_volume_m": 8.24,
       "div_yield_pct": 148.0,
       "short_pct": 2.74,
       "analyst": "buy",
@@ -916,6 +916,13 @@ window.PRICES_DATA = {
       "vol_1w": 29530856,
       "vol_1m": 158777456,
       "news": [
+        {
+          "title": "Basin rig count steady as prices drop",
+          "publisher": "Odessa American, Texas",
+          "url": "https://www.oaoa.com/?p=370297",
+          "published": 1787961720,
+          "sentiment": -0.382
+        },
         {
           "title": "U.S. Oil Rig Count Falls by 5 as Gas Rigs Rise",
           "publisher": "Oilprice.com",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/q2-earnings-highs-lows-baker-144313707.html",
           "published": 1787755393,
           "sentiment": -0.202
-        },
-        {
-          "title": "Why Baker Hughes (BKR) Could be a Key Winner From the AI Boom",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/energy/articles/why-baker-hughes-bkr-could-002112710.html",
-          "published": 1787703672,
-          "sentiment": 0.586
         }
       ],
-      "news_sentiment": 0.051
+      "news_sentiment": -0.142
     },
     {
       "ticker": "NEE",
@@ -965,17 +965,17 @@ window.PRICES_DATA = {
       "change_1w": "-2.16%",
       "change_1m": "-7.48%",
       "change_ytd": "+2.56%",
-      "return_1yr": "+16%",
+      "return_1yr": "+15%",
       "low_gbp": "51",
       "low_usd": 69.24,
       "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 43,
-      "market_cap_gbp_b": 126.107,
-      "market_cap_usd_b": 170.717,
+      "market_cap_gbp_b": 126.084,
+      "market_cap_usd_b": 170.686,
       "beta": 0.653,
       "pe_ratio": 18.39,
-      "avg_volume_m": 11.19,
+      "avg_volume_m": 10.96,
       "div_yield_pct": 299.0,
       "short_pct": null,
       "analyst": "buy",
@@ -984,6 +984,13 @@ window.PRICES_DATA = {
       "vol_1w": 43624821,
       "vol_1m": 244814521,
       "news": [
+        {
+          "title": "NextEra (NEE) Wants Dominion (D) But States Push Back",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/nextera-nee-wants-dominion-d-021442322.html",
+          "published": 1787969682,
+          "sentiment": 0.0
+        },
         {
           "title": "NextEra Energy vs. AEP: Which Electric Power Stock Has More Upside?",
           "publisher": "Zacks",
@@ -1011,13 +1018,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/nextera-outperforms-industry-buy-stock-175500292.html",
           "published": 1787766900,
           "sentiment": 0.0
-        },
-        {
-          "title": "OKLO's Aurora Reactor: New Design, Proven Nuclear Principles",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/oklos-aurora-reactor-design-proven-125400671.html",
-          "published": 1787748840,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.055
@@ -1033,7 +1033,7 @@ window.PRICES_DATA = {
       "change_1w": "+2.64%",
       "change_1m": "+4.12%",
       "change_ytd": "+9.79%",
-      "return_1yr": "+38%",
+      "return_1yr": "+42%",
       "low_gbp": "16",
       "low_usd": 21.62,
       "high_gbp": "28",
@@ -1043,7 +1043,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 0.399,
       "beta": 0.576,
       "pe_ratio": 23.32,
-      "avg_volume_m": 3.32,
+      "avg_volume_m": 3.23,
       "div_yield_pct": 289.0,
       "short_pct": null,
       "analyst": "none",
@@ -1101,17 +1101,17 @@ window.PRICES_DATA = {
       "change_1w": "-3.52%",
       "change_1m": "+6.22%",
       "change_ytd": "+10.37%",
-      "return_1yr": "+4%",
+      "return_1yr": "+6%",
       "low_gbp": "19",
       "low_usd": 25.78,
       "high_gbp": "54",
       "high_usd": 73.74,
       "bar_pct": 24,
-      "market_cap_gbp_b": 3.636,
-      "market_cap_usd_b": 4.922,
+      "market_cap_gbp_b": 3.627,
+      "market_cap_usd_b": 4.91,
       "beta": 1.651,
       "pe_ratio": 36.88,
-      "avg_volume_m": 5.58,
+      "avg_volume_m": 5.52,
       "div_yield_pct": null,
       "short_pct": 19.63,
       "analyst": "buy",
@@ -1169,7 +1169,7 @@ window.PRICES_DATA = {
       "change_1w": "-4.58%",
       "change_1m": "+2.62%",
       "change_ytd": "-25.47%",
-      "return_1yr": "+8%",
+      "return_1yr": "+7%",
       "low_gbp": "135",
       "low_usd": 182.99,
       "high_gbp": "237",
@@ -1179,7 +1179,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 21.973,
       "beta": 1.746,
       "pe_ratio": 12.61,
-      "avg_volume_m": 2.3,
+      "avg_volume_m": 2.24,
       "div_yield_pct": null,
       "short_pct": 11.86,
       "analyst": "buy",
@@ -1237,7 +1237,7 @@ window.PRICES_DATA = {
       "change_1w": "-2.89%",
       "change_1m": "+0.53%",
       "change_ytd": "-17.51%",
-      "return_1yr": "-2%",
+      "return_1yr": "+0%",
       "low_gbp": "24",
       "low_usd": 31.82,
       "high_gbp": "33",
@@ -1305,7 +1305,7 @@ window.PRICES_DATA = {
       "change_1w": "+2.45%",
       "change_1m": "-0.42%",
       "change_ytd": "+6.53%",
-      "return_1yr": "-28%",
+      "return_1yr": "-30%",
       "low_gbp": "4.25",
       "low_usd": 5.75,
       "high_gbp": "24",
@@ -1315,7 +1315,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 28.139,
       "beta": 0.629,
       "pe_ratio": null,
-      "avg_volume_m": 0.11,
+      "avg_volume_m": 0.1,
       "div_yield_pct": null,
       "short_pct": null,
       "analyst": "strong_buy",

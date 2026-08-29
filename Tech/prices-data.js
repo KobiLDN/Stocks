@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-08-29 00:37",
+  "updated": "2026-08-29 03:53",
   "fx_gbp_usd": 1.3537,
   "stocks": [
     {
@@ -13,7 +13,7 @@ window.PRICES_DATA = {
       "change_1w": "+3.35%",
       "change_1m": "-5.39%",
       "change_ytd": "+18.29%",
-      "return_1yr": "+36%",
+      "return_1yr": "+37%",
       "low_gbp": "167",
       "low_usd": 225.95,
       "high_gbp": "255",
@@ -23,7 +23,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 4665.76,
       "beta": 1.086,
       "pe_ratio": 36.7,
-      "avg_volume_m": 55.44,
+      "avg_volume_m": 55.2,
       "div_yield_pct": 34.0,
       "short_pct": 0.8,
       "analyst": "buy",
@@ -47,6 +47,13 @@ window.PRICES_DATA = {
           "sentiment": -0.34
         },
         {
+          "title": "Apple CEO Tim Cook Pays Tribute to Yayoi Kusama, the Legendary Artist Behind Iconic Pumpkin Sculptures and Polka-Dots",
+          "publisher": "Benzinga",
+          "url": "https://www.yahoo.com/entertainment/celebrity/articles/apple-ceo-tim-cook-pays-233105418.html",
+          "published": 1787959865,
+          "sentiment": 0.0
+        },
+        {
           "title": "Apple Makes Costly Move Subscribers Won't Miss",
           "publisher": "GuruFocus.com",
           "url": "https://finance.yahoo.com/media-advertising/articles/apple-makes-costly-move-subscribers-222454691.html",
@@ -59,16 +66,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/613494/has-microsoft-stock-run-ahead-of-its-ai-payoff/2026-08-28",
           "published": 1787955055,
           "sentiment": 0.0
-        },
-        {
-          "title": "Weekly Wrap: Bitcoin Holds Onto Gains",
-          "publisher": "CryptoProwl",
-          "url": "https://www.cryptoprowl.com/releases/weekly-wrap-bitcoin-holds-onto-gains-6579",
-          "published": 1787954280,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.043
+      "news_sentiment": -0.025
     },
     {
       "ticker": "MSFT",
@@ -91,7 +91,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 3813.241,
       "beta": 1.099,
       "pe_ratio": 28.64,
-      "avg_volume_m": 38.94,
+      "avg_volume_m": 38.29,
       "div_yield_pct": 72.0,
       "short_pct": 0.92,
       "analyst": "strong_buy",
@@ -100,13 +100,6 @@ window.PRICES_DATA = {
       "vol_1w": 115150949,
       "vol_1m": 787991749,
       "news": [
-        {
-          "title": "Quantum computing company Pasqual goes public via SPAC",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/quantum-computing-company-pasqual-goes-public-via-spac-202504983.html",
-          "published": 1787948704,
-          "sentiment": 0.0
-        },
         {
           "title": "Why ZM Stock Prints So Much Cash Right Now",
           "publisher": "Trefis",
@@ -134,9 +127,16 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/613489/is-adobe-stocks-ai-strategy-worth-the-near-term-risk/2026-08-28",
           "published": 1787954398,
           "sentiment": -0.052
+        },
+        {
+          "title": "How Much Upside Can AAPL Stock's Growth Deliver?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/articles/613496/how-much-upside-can-aapl-stocks-growth-deliver/2026-08-28",
+          "published": 1787954034,
+          "sentiment": 0.382
         }
       ],
-      "news_sentiment": -0.01
+      "news_sentiment": 0.066
     },
     {
       "ticker": "GOOGL",
@@ -149,7 +149,7 @@ window.PRICES_DATA = {
       "change_1w": "+0.51%",
       "change_1m": "+2.93%",
       "change_ytd": "+10.12%",
-      "return_1yr": "+60%",
+      "return_1yr": "+61%",
       "low_gbp": "152",
       "low_usd": 206.2,
       "high_gbp": "302",
@@ -159,7 +159,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 4238.773,
       "beta": 1.237,
       "pe_ratio": 17.39,
-      "avg_volume_m": 31.88,
+      "avg_volume_m": 31.68,
       "div_yield_pct": 26.0,
       "short_pct": 1.24,
       "analyst": "strong_buy",
@@ -183,28 +183,28 @@ window.PRICES_DATA = {
           "sentiment": 0.382
         },
         {
-          "title": "Why PayPal (PYPL) Shares Are Plunging Today",
-          "publisher": "StockStory",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-paypal-pypl-shares-plunging-232052051.html",
-          "published": 1787959252,
-          "sentiment": 0.296
+          "title": "AppLovin vs. Alphabet: Which High-Growth Digital Media Stock Is the Better Investment in 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/coverage/better-buy/2026/08/28/applovin-vs-alphabet-which-high-growth-digital-media-stock-is-the-better-investment-in-2026/",
+          "published": 1787969495,
+          "sentiment": 0.44
         },
         {
-          "title": "Marvell Stock Crashes 10% After Guidance Disappoints Investors",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-stock-crashes-10-guidance-222120627.html",
-          "published": 1787955680,
-          "sentiment": -0.382
+          "title": "Expert ranks top 5 U.S. tech companies to recruit from",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/expert-ranks-top-5-u-020011183.html",
+          "published": 1787968811,
+          "sentiment": 0.202
         },
         {
-          "title": "Why ZM Stock Prints So Much Cash Right Now",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/613490/why-zm-stock-prints-so-much-cash-right-now/2026-08-28",
-          "published": 1787955454,
-          "sentiment": 0.0
+          "title": "Alphabet (GOOGL) Faces FTC Heat, AI Turmoil And UK Play Store Settlement",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/alphabet-googl-faces-ftc-heat-010904346.html",
+          "published": 1787965744,
+          "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.1
+      "news_sentiment": 0.24
     },
     {
       "ticker": "AMZN",
@@ -217,7 +217,7 @@ window.PRICES_DATA = {
       "change_1w": "+3.02%",
       "change_1m": "+17.55%",
       "change_ytd": "+17.63%",
-      "return_1yr": "+12%",
+      "return_1yr": "+14%",
       "low_gbp": "145",
       "low_usd": 196.0,
       "high_gbp": "212",
@@ -227,7 +227,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 2873.797,
       "beta": 1.454,
       "pe_ratio": 21.43,
-      "avg_volume_m": 49.16,
+      "avg_volume_m": 49.07,
       "div_yield_pct": null,
       "short_pct": 0.97,
       "analyst": "strong_buy",
@@ -285,7 +285,7 @@ window.PRICES_DATA = {
       "change_1w": "+5.11%",
       "change_1m": "-1.30%",
       "change_ytd": "-10.97%",
-      "return_1yr": "-23%",
+      "return_1yr": "-22%",
       "low_gbp": "384",
       "low_usd": 520.26,
       "high_gbp": "584",
@@ -295,7 +295,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 1472.509,
       "beta": 1.243,
       "pe_ratio": 21.76,
-      "avg_volume_m": 18.55,
+      "avg_volume_m": 18.53,
       "div_yield_pct": 37.0,
       "short_pct": 1.27,
       "analyst": "strong_buy",
@@ -304,6 +304,13 @@ window.PRICES_DATA = {
       "vol_1w": 84971085,
       "vol_1m": 408967185,
       "news": [
+        {
+          "title": "Dick\u2019s Hit by a Footware Apocalypse",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/dicks-hit-by-a-footware-apocalypse-a0c47825?siteid=yhoof2&yptr=yahoo",
+          "published": 1787961120,
+          "sentiment": 0.0
+        },
         {
           "title": "Meta's 9.9% Jio Stake Finally Gets a Public Scoreboard",
           "publisher": "GuruFocus.com",
@@ -331,16 +338,9 @@ window.PRICES_DATA = {
           "url": "https://www.mediapost.com/publications/article/417544/chamber-of-commerce-backs-meta-in-monopoly-battle.html",
           "published": 1787950273,
           "sentiment": -0.421
-        },
-        {
-          "title": "Microsoft Just Gained 14% in a Month: Take Profits, or Buy More?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/08/28/microsoft-just-gained-14-in-a-month-take-profits-or-buy-more/",
-          "published": 1787944017,
-          "sentiment": 0.67
         }
       ],
-      "news_sentiment": -0.018
+      "news_sentiment": -0.152
     },
     {
       "ticker": "NVDA",
@@ -353,7 +353,7 @@ window.PRICES_DATA = {
       "change_1w": "+1.32%",
       "change_1m": "+14.49%",
       "change_ytd": "+15.34%",
-      "return_1yr": "+31%",
+      "return_1yr": "+33%",
       "low_gbp": "121",
       "low_usd": 164.07,
       "high_gbp": "175",
@@ -363,7 +363,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 5253.179,
       "beta": 2.215,
       "pe_ratio": 27.5,
-      "avg_volume_m": 141.72,
+      "avg_volume_m": 139.35,
       "div_yield_pct": 44.0,
       "short_pct": 1.23,
       "analyst": "strong_buy",
@@ -387,28 +387,28 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "CrowdStrike Just Had Its Best Quarter Ever, and I'm Not Buying the Stock at 43 Times Revenue",
+          "title": "A Costco Special Dividend Could Be Coming, but Walmart Has Raised Its Dividend for 53 Consecutive Years. Here's the Better Buy Now.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/28/crowdstrike-just-had-its-best-quarter-ever-and-i-m-not-buying-the-stock-at-43-times-revenue/",
-          "published": 1787958062,
-          "sentiment": 0.637
+          "url": "https://www.fool.com/investing/2026/08/28/a-costco-special-dividend-could-be-coming-but-walm/",
+          "published": 1787970900,
+          "sentiment": 0.691
         },
         {
-          "title": "Ulta Beauty Stock Is Down Today. Now Could Be a Good Time to Buy.",
+          "title": "Marvell's AI Bookings Are Stellar. But Its Gross Margin Guide Is What Moved the Stock.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/28/ulta-beauty-stock-is-down-today-now-good-buy/",
-          "published": 1787956950,
-          "sentiment": 0.772
+          "url": "https://www.fool.com/investing/2026/08/28/marvell-s-ai-bookings-are-stellar-but-its-gross-margin-guide-is-what-moved-the-stock/",
+          "published": 1787968261,
+          "sentiment": -0.631
         },
         {
-          "title": "This AI Energy Stock Is Up Nearly 2,000% in the Last Two Years. Could It Be Nvidia's Next Big Investment?",
+          "title": "Why Elastic Stock Snapped Back Today",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/08/28/this-ai-energy-stock-is-up-nearly-2000-in-the-last/",
-          "published": 1787956500,
-          "sentiment": 0.273
+          "url": "https://www.fool.com/investing/2026/08/28/why-elastic-stock-is-up-today/",
+          "published": 1787966133,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.336
+      "news_sentiment": 0.012
     },
     {
       "ticker": "AMD",
@@ -421,7 +421,7 @@ window.PRICES_DATA = {
       "change_1w": "-1.62%",
       "change_1m": "+8.39%",
       "change_ytd": "+108.34%",
-      "return_1yr": "+193%",
+      "return_1yr": "+194%",
       "low_gbp": "110",
       "low_usd": 149.22,
       "high_gbp": "432",
@@ -431,7 +431,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 760.048,
       "beta": 2.489,
       "pe_ratio": 119.07,
-      "avg_volume_m": 27.79,
+      "avg_volume_m": 27.74,
       "div_yield_pct": null,
       "short_pct": 2.46,
       "analyst": "strong_buy",
@@ -446,6 +446,13 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/08/28/this-ai-fund-is-crushing-qqq-and-nvidia-is-barely-2-of-it/",
           "published": 1787951117,
           "sentiment": -0.361
+        },
+        {
+          "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327953/stocks-fall-as-hawkish-warsh-boosts-fed-rate-hike-chances",
+          "published": 1787949701,
+          "sentiment": 0.477
         },
         {
           "title": "History Says the Nasdaq-100 Does This in September. AI Investors Should Take Note.",
@@ -467,16 +474,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/arms-expanding-ai-growth-opportunity-183000282.html",
           "published": 1787941800,
           "sentiment": 0.66
-        },
-        {
-          "title": "NVIDIA (NVDA)\u2019s Real Advantage Isn\u2019t Chips Anymore. It\u2019s Money",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-real-advantage-isn-180700556.html",
-          "published": 1787940420,
-          "sentiment": 0.25
         }
       ],
-      "news_sentiment": 0.198
+      "news_sentiment": 0.243
     },
     {
       "ticker": "INTC",
@@ -499,7 +499,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 472.948,
       "beta": 2.241,
       "pe_ratio": null,
-      "avg_volume_m": 118.69,
+      "avg_volume_m": 118.7,
       "div_yield_pct": null,
       "short_pct": 2.57,
       "analyst": "hold",
@@ -557,7 +557,7 @@ window.PRICES_DATA = {
       "change_1w": "-0.34%",
       "change_1m": "+11.44%",
       "change_ytd": "+31.31%",
-      "return_1yr": "+85%",
+      "return_1yr": "+87%",
       "low_gbp": "167",
       "low_usd": 225.63,
       "high_gbp": "354",
@@ -567,7 +567,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 2165.456,
       "beta": 1.258,
       "pe_ratio": 31.11,
-      "avg_volume_m": 13.46,
+      "avg_volume_m": 13.5,
       "div_yield_pct": 102.0,
       "short_pct": 0.62,
       "analyst": "strong_buy",
@@ -635,7 +635,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 1754.548,
       "beta": 1.473,
       "pe_ratio": 61.26,
-      "avg_volume_m": 26.21,
+      "avg_volume_m": 25.96,
       "div_yield_pct": 70.0,
       "short_pct": 1.2,
       "analyst": "strong_buy",
@@ -693,7 +693,7 @@ window.PRICES_DATA = {
       "change_1w": "+2.14%",
       "change_1m": "+5.47%",
       "change_ytd": "-4.12%",
-      "return_1yr": "+3%",
+      "return_1yr": "+4%",
       "low_gbp": "90",
       "low_usd": 121.99,
       "high_gbp": "192",
@@ -703,8 +703,8 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 175.364,
       "beta": 1.663,
       "pe_ratio": 18.76,
-      "avg_volume_m": 15.81,
-      "div_yield_pct": 225.0,
+      "avg_volume_m": 15.6,
+      "div_yield_pct": 223.0,
       "short_pct": 3.48,
       "analyst": "hold",
       "analyst_score": 2.57,
@@ -781,6 +781,13 @@ window.PRICES_DATA = {
       "vol_1m": 115211205,
       "news": [
         {
+          "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327953/stocks-fall-as-hawkish-warsh-boosts-fed-rate-hike-chances",
+          "published": 1787949701,
+          "sentiment": 0.477
+        },
+        {
           "title": "ARM's Expanding AI Growth Opportunity Goes Beyond Market Hype",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/technology/ai/articles/arms-expanding-ai-growth-opportunity-183000282.html",
@@ -807,16 +814,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/amd-stock-price-upgrade-strong-buy-nvidia-3636f478?siteid=yhoof2&yptr=yahoo",
           "published": 1787683080,
           "sentiment": 0.0
-        },
-        {
-          "title": "ARM's 93X Earnings Multiple Overshadows Its Growth Potential",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/arms-93x-earnings-multiple-overshadows-173500812.html",
-          "published": 1787679300,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.311
+      "news_sentiment": 0.33
     },
     {
       "ticker": "ASML",
@@ -856,6 +856,13 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327953/stocks-fall-as-hawkish-warsh-boosts-fed-rate-hike-chances",
+          "published": 1787949701,
+          "sentiment": 0.477
+        },
+        {
           "title": "History Says the Nasdaq-100 Does This in September. AI Investors Should Take Note.",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/08/28/history-says-the-nasdaq-100-does-this-in-september/",
@@ -875,16 +882,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/makes-asml-asml-best-positioned-143408648.html",
           "published": 1787927648,
           "sentiment": 0.0
-        },
-        {
-          "title": "European Indexes Rise in Strong Open",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-082826/card/european-indexes-rise-in-strong-open-B83ej5q8hwKN1AankUsH?siteid=yhoof2&yptr=yahoo",
-          "published": 1787907478,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.102
+      "news_sentiment": 0.095
     },
     {
       "ticker": "MU",
@@ -897,7 +897,7 @@ window.PRICES_DATA = {
       "change_1w": "-3.51%",
       "change_1m": "+26.23%",
       "change_ytd": "+195.92%",
-      "return_1yr": "+686%",
+      "return_1yr": "+689%",
       "low_gbp": "84",
       "low_usd": 114.25,
       "high_gbp": "927",
@@ -907,7 +907,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 1053.565,
       "beta": 2.213,
       "pe_ratio": 21.09,
-      "avg_volume_m": 45.96,
+      "avg_volume_m": 45.73,
       "div_yield_pct": 6.0,
       "short_pct": 2.66,
       "analyst": "strong_buy",
@@ -985,6 +985,13 @@ window.PRICES_DATA = {
       "vol_1m": 174739114,
       "news": [
         {
+          "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327953/stocks-fall-as-hawkish-warsh-boosts-fed-rate-hike-chances",
+          "published": 1787949701,
+          "sentiment": 0.477
+        },
+        {
           "title": "How Far Applied Materials Stock Can Move On You In A Year",
           "publisher": "Trefis",
           "url": "https://www.trefis.com/articles/613535/how-far-applied-materials-stock-can-move-on-you-in-a-year/2026-08-28",
@@ -1011,16 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/ai-buildout-turning-applied-materials-203556927.html",
           "published": 1787862956,
           "sentiment": 0.44
-        },
-        {
-          "title": "Applied Materials Sees AI Driving Its Biggest Semiconductor Growth Inflection Yet",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/event-applied-materials-sees-ai-driving-its-biggest-semiconductor-growth-inflection-yet-2026-08-27/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1787846635,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.27
+      "news_sentiment": 0.289
     },
     {
       "ticker": "ORCL",
@@ -1043,7 +1043,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 434.519,
       "beta": 1.718,
       "pe_ratio": 25.87,
-      "avg_volume_m": 32.47,
+      "avg_volume_m": 32.33,
       "div_yield_pct": 132.0,
       "short_pct": 2.78,
       "analyst": "buy",
@@ -1101,7 +1101,7 @@ window.PRICES_DATA = {
       "change_1w": "+22.39%",
       "change_1m": "+35.90%",
       "change_ytd": "+1.45%",
-      "return_1yr": "-2%",
+      "return_1yr": "+0%",
       "low_gbp": "108",
       "low_usd": 146.32,
       "high_gbp": "199",
@@ -1111,7 +1111,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 210.688,
       "beta": 1.152,
       "pe_ratio": 23.46,
-      "avg_volume_m": 15.29,
+      "avg_volume_m": 14.98,
       "div_yield_pct": 70.0,
       "short_pct": 3.74,
       "analyst": "buy",
@@ -1169,7 +1169,7 @@ window.PRICES_DATA = {
       "change_1w": "+5.89%",
       "change_1m": "+10.66%",
       "change_ytd": "-12.54%",
-      "return_1yr": "-19%",
+      "return_1yr": "-16%",
       "low_gbp": "140",
       "low_usd": 190.12,
       "high_gbp": "274",
@@ -1179,7 +1179,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 115.879,
       "beta": 1.397,
       "pe_ratio": 16.67,
-      "avg_volume_m": 6.41,
+      "avg_volume_m": 6.34,
       "div_yield_pct": null,
       "short_pct": 5.06,
       "analyst": "hold",
@@ -1237,7 +1237,7 @@ window.PRICES_DATA = {
       "change_1w": "+12.63%",
       "change_1m": "+25.01%",
       "change_ytd": "-1.86%",
-      "return_1yr": "-25%",
+      "return_1yr": "-24%",
       "low_gbp": "60",
       "low_usd": 81.24,
       "high_gbp": "144",
@@ -1247,7 +1247,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 149.611,
       "beta": 0.93,
       "pe_ratio": 89.88,
-      "avg_volume_m": 24.64,
+      "avg_volume_m": 23.93,
       "div_yield_pct": null,
       "short_pct": 2.83,
       "analyst": "strong_buy",
@@ -1305,7 +1305,7 @@ window.PRICES_DATA = {
       "change_1w": "-1.44%",
       "change_1m": "+15.94%",
       "change_ytd": "+51.35%",
-      "return_1yr": "+38%",
+      "return_1yr": "+41%",
       "low_gbp": "87",
       "low_usd": 118.3,
       "high_gbp": "253",
@@ -1315,7 +1315,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 113.685,
       "beta": 1.315,
       "pe_ratio": null,
-      "avg_volume_m": 6.14,
+      "avg_volume_m": 5.92,
       "div_yield_pct": null,
       "short_pct": 5.56,
       "analyst": "buy",
@@ -1373,7 +1373,7 @@ window.PRICES_DATA = {
       "change_1w": "-2.44%",
       "change_1m": "+7.48%",
       "change_ytd": "-42.58%",
-      "return_1yr": "-48%",
+      "return_1yr": "-47%",
       "low_gbp": "187",
       "low_usd": 252.84,
       "high_gbp": "521",
@@ -1383,7 +1383,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 97.942,
       "beta": 0.959,
       "pe_ratio": 21.75,
-      "avg_volume_m": 4.93,
+      "avg_volume_m": 4.87,
       "div_yield_pct": 159.0,
       "short_pct": 3.84,
       "analyst": "buy",
@@ -1441,7 +1441,7 @@ window.PRICES_DATA = {
       "change_1w": "+13.78%",
       "change_1m": "+21.75%",
       "change_ytd": "+92.60%",
-      "return_1yr": "+115%",
+      "return_1yr": "+121%",
       "low_gbp": "63",
       "low_usd": 85.68,
       "high_gbp": "169",
@@ -1451,7 +1451,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 223.627,
       "beta": 1.234,
       "pe_ratio": 4368.0,
-      "avg_volume_m": 10.84,
+      "avg_volume_m": 10.71,
       "div_yield_pct": null,
       "short_pct": 2.41,
       "analyst": "buy",
@@ -1519,7 +1519,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 302.846,
       "beta": 0.893,
       "pe_ratio": 323.12,
-      "avg_volume_m": 7.22,
+      "avg_volume_m": 7.1,
       "div_yield_pct": null,
       "short_pct": 2.77,
       "analyst": "buy",
@@ -1534,6 +1534,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/video/now-time-buy-software-stocks-160600652.html",
           "published": 1787933160,
           "sentiment": 0.0
+        },
+        {
+          "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327953/stocks-fall-as-hawkish-warsh-boosts-fed-rate-hike-chances",
+          "published": 1787949701,
+          "sentiment": 0.477
         },
         {
           "title": "Palo Alto Networks Stock Surged With The Whole Security Group",
@@ -1555,16 +1562,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/fortinet-stock-surges-security-platform-143800387.html",
           "published": 1787927880,
           "sentiment": 0.34
-        },
-        {
-          "title": "Palo Alto Networks to Report Q4 Earnings: How to Play the Stock",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/palo-alto-networks-report-q4-141700247.html",
-          "published": 1787926620,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.204
+      "news_sentiment": 0.231
     },
     {
       "ticker": "NET",
@@ -1587,7 +1587,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 106.767,
       "beta": 1.66,
       "pe_ratio": null,
-      "avg_volume_m": 3.71,
+      "avg_volume_m": 3.67,
       "div_yield_pct": null,
       "short_pct": 2.61,
       "analyst": "buy",
@@ -1596,6 +1596,13 @@ window.PRICES_DATA = {
       "vol_1w": 14413724,
       "vol_1m": 91483124,
       "news": [
+        {
+          "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327953/stocks-fall-as-hawkish-warsh-boosts-fed-rate-hike-chances",
+          "published": 1787949701,
+          "sentiment": 0.477
+        },
         {
           "title": "Oracle Just Rallied 18% in a Month: Take Profits, or Buy More?",
           "publisher": "24/7 Wall St.",
@@ -1623,16 +1630,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-sends-20-million-191855720.html",
           "published": 1787858335,
           "sentiment": 0.0
-        },
-        {
-          "title": "Major tech companies call for defensive surge to defeat AI-driven hacks",
-          "publisher": "Reuters",
-          "url": "https://ca.finance.yahoo.com/news/major-tech-companies-call-defensive-170210641.html",
-          "published": 1787850130,
-          "sentiment": -0.44
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.183
     },
     {
       "ticker": "FTNT",
@@ -1645,7 +1645,7 @@ window.PRICES_DATA = {
       "change_1w": "+8.14%",
       "change_1m": "+8.34%",
       "change_ytd": "+113.15%",
-      "return_1yr": "+119%",
+      "return_1yr": "+125%",
       "low_gbp": "54",
       "low_usd": 73.55,
       "high_gbp": "128",
@@ -1655,7 +1655,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 121.797,
       "beta": 1.058,
       "pe_ratio": 58.66,
-      "avg_volume_m": 5.75,
+      "avg_volume_m": 5.69,
       "div_yield_pct": null,
       "short_pct": 2.34,
       "analyst": "none",
@@ -1664,6 +1664,13 @@ window.PRICES_DATA = {
       "vol_1w": 21853649,
       "vol_1m": 119864849,
       "news": [
+        {
+          "title": "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327953/stocks-fall-as-hawkish-warsh-boosts-fed-rate-hike-chances",
+          "published": 1787949701,
+          "sentiment": 0.477
+        },
         {
           "title": "Palo Alto Networks Stock Surged With The Whole Security Group",
           "publisher": "Trefis",
@@ -1691,16 +1698,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/fortinet-ftnt-crossed-above-20-133501362.html",
           "published": 1787924101,
           "sentiment": 0.0
-        },
-        {
-          "title": "If You Invested $1000 in Fortinet 10 Years Ago, This Is How Much You'd Have Now",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/invested-1000-fortinet-10-years-123001380.html",
-          "published": 1787920201,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.136
+      "news_sentiment": 0.231
     },
     {
       "ticker": "NFLX",
@@ -1723,7 +1723,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 340.277,
       "beta": 1.514,
       "pe_ratio": 25.7,
-      "avg_volume_m": 42.5,
+      "avg_volume_m": 42.54,
       "div_yield_pct": null,
       "short_pct": 2.19,
       "analyst": "buy",
@@ -1738,6 +1738,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/video/netflix-scores-exclusive-look-gta-194100478.html",
           "published": 1787946060,
           "sentiment": 0.128
+        },
+        {
+          "title": "Netflix Stock Is Up 25% From Its 2026 Lows. More Gains for NFLX Could Be in Store.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4327141/netflix-stock-is-up-25-from-its-2026-lows-more-gains-for-nflx-could-be-in-store",
+          "published": 1787946998,
+          "sentiment": 0.225
         },
         {
           "title": "Netflix Stock Price Prediction: The Road Back to $100",
@@ -1759,16 +1766,9 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/gta-6-take-two-interactive-stock-d3ac872e?siteid=yhoof2&yptr=yahoo",
           "published": 1787932380,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is Amazon Stock's Peak Margin About To Crack?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/613525/is-amazon-stocks-peak-margin-about-to-crack/2026-08-28",
-          "published": 1787932000,
-          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.061
+      "news_sentiment": 0.071
     },
     {
       "ticker": "SHOP",
@@ -1781,17 +1781,17 @@ window.PRICES_DATA = {
       "change_1w": "+2.45%",
       "change_1m": "+18.37%",
       "change_ytd": "-2.74%",
-      "return_1yr": "+9%",
+      "return_1yr": "+11%",
       "low_gbp": "69",
       "low_usd": 94.0,
       "high_gbp": "135",
       "high_usd": 182.19,
       "bar_pct": 67,
-      "market_cap_gbp_b": 146.565,
-      "market_cap_usd_b": 198.412,
+      "market_cap_gbp_b": 145.321,
+      "market_cap_usd_b": 196.728,
       "beta": 2.59,
       "pe_ratio": 103.31,
-      "avg_volume_m": 9.11,
+      "avg_volume_m": 9.07,
       "div_yield_pct": null,
       "short_pct": 1.28,
       "analyst": "buy",
@@ -1849,17 +1849,17 @@ window.PRICES_DATA = {
       "change_1w": "+2.58%",
       "change_1m": "+4.48%",
       "change_ytd": "-4.78%",
-      "return_1yr": "-23%",
+      "return_1yr": "-24%",
       "low_gbp": "299",
       "low_usd": 405.0,
       "high_gbp": "550",
       "high_usd": 745.0,
       "bar_pct": 42,
-      "market_cap_gbp_b": 83.147,
-      "market_cap_usd_b": 112.56,
+      "market_cap_gbp_b": 83.161,
+      "market_cap_usd_b": 112.579,
       "beta": 1.581,
       "pe_ratio": 29.5,
-      "avg_volume_m": 1.86,
+      "avg_volume_m": 1.83,
       "div_yield_pct": null,
       "short_pct": 3.12,
       "analyst": "buy",
@@ -1917,7 +1917,7 @@ window.PRICES_DATA = {
       "change_1w": "+0.03%",
       "change_1m": "+10.70%",
       "change_ytd": "-4.88%",
-      "return_1yr": "-18%",
+      "return_1yr": "-17%",
       "low_gbp": "48",
       "low_usd": 65.41,
       "high_gbp": "75",
@@ -1927,7 +1927,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 160.994,
       "beta": 1.154,
       "pe_ratio": 17.29,
-      "avg_volume_m": 20.17,
+      "avg_volume_m": 19.69,
       "div_yield_pct": null,
       "short_pct": 2.36,
       "analyst": "buy",
@@ -1985,7 +1985,7 @@ window.PRICES_DATA = {
       "change_1w": "-1.00%",
       "change_1m": "-2.27%",
       "change_ytd": "+45.90%",
-      "return_1yr": "+62%",
+      "return_1yr": "+65%",
       "low_gbp": "49",
       "low_usd": 66.13,
       "high_gbp": "96",
@@ -1995,7 +1995,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 433.282,
       "beta": 1.002,
       "pe_ratio": 33.01,
-      "avg_volume_m": 23.26,
+      "avg_volume_m": 22.96,
       "div_yield_pct": 150.0,
       "short_pct": 1.5,
       "analyst": "buy",
@@ -2053,7 +2053,7 @@ window.PRICES_DATA = {
       "change_1w": "+3.53%",
       "change_1m": "+51.46%",
       "change_ytd": "+10.98%",
-      "return_1yr": "+19%",
+      "return_1yr": "+18%",
       "low_gbp": "79",
       "low_usd": 106.37,
       "high_gbp": "153",
@@ -2063,7 +2063,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 447.665,
       "beta": 1.563,
       "pe_ratio": 159.22,
-      "avg_volume_m": 42.92,
+      "avg_volume_m": 42.12,
       "div_yield_pct": null,
       "short_pct": 3.18,
       "analyst": "buy",
@@ -2072,6 +2072,13 @@ window.PRICES_DATA = {
       "vol_1w": 153296761,
       "vol_1m": 1025818861,
       "news": [
+        {
+          "title": "Expert ranks top 5 U.S. tech companies to recruit from",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/expert-ranks-top-5-u-020011183.html",
+          "published": 1787968811,
+          "sentiment": 0.202
+        },
         {
           "title": "Can PLTR Stock Live Up To Its Multiple?",
           "publisher": "Trefis",
@@ -2099,16 +2106,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-nvda-palantir-technologies-pltr-171034656.html",
           "published": 1787937034,
           "sentiment": -0.34
-        },
-        {
-          "title": "As Palantir Stock Jumps, An Income-Generating Trade Aims For A Big Annualized Return",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/research/options/as-palantir-stock-jumps-an-income-generating-trade-aims-for-a-big-annualized-return/?src=A00220&yptr=yahoo",
-          "published": 1787936555,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.224
+      "news_sentiment": -0.184
     }
   ]
 };
