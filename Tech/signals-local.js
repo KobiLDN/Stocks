@@ -1,9 +1,198 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-28 20:17",
+  "updated": "2026-08-31 15:55",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CRM",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "Salesforce delivered record Q2 FY27 with cRPO up 14% Y/Y, raised full-year revenue guidance by $200M, and Agentforce ARR exceeded $1.5B (+240% Y/Y), driving a +41% 1M return and positive sentiment 0.215. [investor.salesforce.com](https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx)",
+      "drivers": [
+        "+41% 1M momentum",
+        "P/E 23.76, reasonable",
+        "strong_buy analyst consensus",
+        "Agentforce ARR surge"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ServiceNow rallied +31% 1M and +13.8% 1W on sympathy from Salesforce's AI-driven beat, with analyst consensus strong_buy (score 1.43) and positive news sentiment 0.21. [247wallst.com](https://247wallst.com/investing/2026/08/27/salesforce-soars-14-as-claudeforce-and-a-guidance-raise-end-the-slump-servicenow-climbs-5-adobe-advances-3/)",
+      "drivers": [
+        "+31% 1M momentum",
+        "strong_buy consensus (1.43)",
+        "AI/cRPO tailwind",
+        "sympathy rally"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Palantir surged +50.8% 1M on Pentagon AI ban ruling favorable to Maven program; US gov revenue grew 90% YoY to $809M, though P/E 158.59 is stretched. [247wallst.com](https://247wallst.com/investing/2026/08/29/a-judge-just-called-this-pentagon-ai-ban-illegal-why-palantir-could-rally/)",
+      "drivers": [
+        "+50.8% 1M momentum",
+        "Pentagon Maven catalyst",
+        "US gov revenue +90% YoY",
+        "high P/E risk"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "CrowdStrike rallied +18.7% 1M and +18.8% 1W after Q2 results: revenue +26% YoY, net new ARR +51%, and Fal.Con expansions; P/E extreme at 5662 but growth intact. [investomine.substack.com](https://investomine.substack.com/p/crowdstrike-q2-fy2027-the-cybersecurity)",
+      "drivers": [
+        "+18.7% 1M momentum",
+        "ARR $5.84B, +25% YoY",
+        "Falcon Flex scaling",
+        "high PE but strong growth"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Qualcomm gained +14.4% 1M and +6.5% 1W, supported by a low P/E of 19.29, a 2.23% dividend yield, and short interest of 3.48% suggesting potential squeeze appeal.",
+      "drivers": [
+        "+14.4% 1M momentum",
+        "P/E 19.29, low",
+        "dividend yield 2.23%",
+        "short interest 3.48%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Micron returned +14.1% 1M and +197% YTD, with a low P/E of 21.24 and analyst consensus strong_buy (score 1.36), but news sentiment slightly negative (-0.089).",
+      "drivers": [
+        "+14.1% 1M momentum",
+        "P/E 21.24, low",
+        "strong_buy consensus",
+        "YTD +197%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ORCL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Oracle gained +14.5% 1M and +4.4% 1W, with a P/E of 25.56, analyst buy rating, and positive news sentiment 0.206, though YTD is -23.28%.",
+      "drivers": [
+        "+14.5% 1M momentum",
+        "P/E 25.56, reasonable",
+        "buy consensus",
+        "positive sentiment 0.206"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Adobe rose +16.2% 1M and +5.3% 1W on software sector relief, with a low P/E of 16.64 and positive news sentiment 0.089, though analyst consensus is hold (score 2.73).",
+      "drivers": [
+        "+16.2% 1M momentum",
+        "P/E 16.64, attractive",
+        "sympathy rally from CRM",
+        "hold consensus risk"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Shopify jumped +24.7% 1M driven by B2B GMV surging 76% in Q2, but a -4.2% 1D pullback and high P/E of 98.68 temper conviction. [tradingstrategyguides.com](https://tradingstrategyguides.com/5-stocks-to-watch-this-week-august-31-2026-the-great-saas-relief-rally/)",
+      "drivers": [
+        "+24.7% 1M momentum",
+        "B2B GMV +76%",
+        "high P/E 98.68",
+        "short-term weakness"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Intuit recovered +13.3% 1M from deep YTD losses (-42.6%), with a low P/E of 21.74 and a 1.54% dividend yield, making it a value play in enterprise software.",
+      "drivers": [
+        "+13.3% 1M momentum",
+        "P/E 21.74, low",
+        "dividend yield 1.54%",
+        "deep value from YTD"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.892,
+      "ytd": "+128.19%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +128.19% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +128.19% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.801,
+      "ytd": "+115.12%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +115.12% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +115.12% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.763,
+      "ytd": "+109.54%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +109.54% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +109.54% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.762,
+      "ytd": "+109.46%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +109.46% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +109.46% \u2265 71.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.762,
+      "ytd": "+109.40%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +109.40% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +109.40% \u2265 71.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CRM",
@@ -132,206 +321,6 @@ window.SIGNALS_DATA = {
         "P/E 21.02",
         "13.15% 1M",
         "High sentiment 0.259"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.931,
-      "ytd": "+133.74%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +133.74% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +133.74% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.807,
-      "ytd": "+115.92%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +115.92% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +115.92% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.784,
-      "ytd": "+112.55%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +112.55% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +112.55% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.764,
-      "ytd": "+109.68%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +109.68% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +109.68% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.705,
-      "ytd": "+101.27%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +101.27% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +101.27% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "signal": "buy",
-      "confidence": 0.533,
-      "ytd": "+76.49%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +76.49% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +76.49% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Azure crossed $100B in revenue with 43% growth, Q1 FY2027 guidance calls for 45% constant-currency growth, and $678B commercial backlog provides exceptional forward visibility. [247wallst.com](https://247wallst.com/investing/2026/08/25/microsoft-just-ripped-28-in-a-month-what-would-it-take-to-get-msft-stock-up-to-600/)",
-      "drivers": [
-        "Azure 43% growth, $100B run-rate",
-        "$678B commercial backlog (+84% YoY)",
-        "13.4x forward P/E vs peer group",
-        "54/57 analyst bullish (strong_buy/buy)"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Q2 US commercial revenue surged 149% YoY, record $2.13B TCV bookings (+153% YoY), and AIP demand driving 93% total revenue growth with expanding margins. [barchart.com](https://www.barchart.com/story/news/4024825/palantir-stock-has-surged-over-40-in-a-month-whats-fueling-the-rally-and-what-comes-next)",
-      "drivers": [
-        "US commercial rev +149% YoY",
-        "Record Q2 TCV bookings $2.13B",
-        "Adj FCF record $1.22B (+115% YoY)",
-        "FY2026 rev guidance raised to ~$8.15B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ORCL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "RPO of $638B (+363% YoY), OCI revenue grew 93% with 97.5% GPU utilization, yet trades at just 18x forward P/E and 0.83 PEG \u2014 extreme value asymmetry. [narrative-news.com](https://narrative-news.com/asymmetry-is-the-reason-i-will-not-stop-buying-oracle/)",
-      "drivers": [
-        "$638B RPO (+363% YoY)",
-        "OCI cloud +93% revenue growth",
-        "Forward P/E 18 vs 31% CAGR",
-        "4yr OCI ramp guidance $18B\u2192$144B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Stock ripped 29% in the past month, analyst consensus is strong_buy with low score 1.43, positive news sentiment 0.198, and beta below 1.0 providing downside resilience.",
-      "drivers": [
-        "+20.31% 1-month momentum",
-        "Strong_buy consensus 1.43",
-        "Low beta 0.93",
-        "Positive news sentiment 0.198"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NFLX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Stock up nearly 17% in a month, P/E of 25 is reasonable for a dominant streaming platform, strong news sentiment of 0.371, and reports of adding rival streamers to compete with YouTube/Roku.",
-      "drivers": [
-        "+16.80% 1-month momentum",
-        "P/E 25.2x reasonable",
-        "Highest news sentiment 0.371",
-        "Possible new distribution deals"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "One-month momentum +21.28%, strong news sentiment 0.212, and YTD decline of -2.11% leaves room for mean reversion despite high P/E of 101.",
-      "drivers": [
-        "+21.28% 1-month momentum",
-        "Strong news sentiment 0.212",
-        "YTD -2.11% gives relative value",
-        "E-commerce growth driver"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SNOW",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Up 46% YTD and 16% in past month, highest news sentiment in category at 0.263, CEO messaging on trusted data for enterprise AI differentiates the platform.",
-      "drivers": [
-        "+46.29% YTD return",
-        "+16.16% 1-month momentum",
-        "Highest news sentiment 0.263",
-        "Enterprise AI data positioning"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "UBER",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1-month +17.85%, P/E of 17.4 is the lowest among consumer-platform peers, cleared key California legal hurdle that was a major overhang.",
-      "drivers": [
-        "+17.85% 1-month momentum",
-        "Lowest P/E 17.4 in group",
-        "California legal headway",
-        "Buy consensus rating"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Stock rebounded 18.5% in a month, P/E 24.2 is reasonable, though analyst score is higher (less bullish) at 1.7 and news sentiment mildly negative -0.058.",
-      "drivers": [
-        "+18.49% 1-month momentum",
-        "P/E 24.2x reasonable",
-        "Recent rebound from -16% 1Y",
-        "Enterprise AI adoption still early"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Stock +17.6% in a month despite -3.36% daily drop on soft guidance, fundamental P/E of 22.6 is attractive at scale, dividend yield 1.3% adds support.",
-      "drivers": [
-        "+17.62% 1-month momentum",
-        "P/E 22.6x for earnings stability",
-        "Dividend yield 1.3%",
-        "Buy analyst consensus despite guide-down"
       ]
     }
   ]
