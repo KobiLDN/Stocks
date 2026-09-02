@@ -1,9 +1,209 @@
 {
-  "updated": "2026-08-31 15:55",
+  "updated": "2026-09-02 13:00",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PLTR",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "1m +43.19%, YTD +7.18%, P/E 159.22, news sentiment 0.145, with Q2 revenue beat and commercial crossover nearing per [walletinvestor.com](https://walletinvestor.com/news/trading-news/palantirs-commercial-business-nears-crossover-with-government-revenue-as-stock-trades-sideways/).",
+      "drivers": [
+        "1m momentum +43%",
+        "Q2 revenue beat 92.8% YoY",
+        "Commercial revenue crossover catalyst",
+        "Rule of 40 155%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "1m +38.81%, 1w +25.48%, P/E 23.59, analyst buy (score 1.72), news sentiment 0.095.",
+      "drivers": [
+        "1m momentum +39%",
+        "1w momentum +25%",
+        "Reasonable P/E 23.6",
+        "Positive sector momentum"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "1m +25.14%, 1w +12.52%, strong_buy analyst (score 1.43), news sentiment 0.225.",
+      "drivers": [
+        "1m momentum +25%",
+        "Strong buy consensus",
+        "Positive news sentiment 0.225",
+        "Low beta 0.93"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +196.11%, 1m +12.53%, P/E 21.12, strong_buy analyst (score 1.36), news sentiment 0.096.",
+      "drivers": [
+        "YTD +196%",
+        "Reasonable P/E 21.1",
+        "Strong buy consensus",
+        "Memory cycle tailwind"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1m +11.89%, P/E 29.49, news sentiment 0.391 (highest in universe), analyst buy (score 1.56).",
+      "drivers": [
+        "Highest news sentiment 0.39",
+        "1m momentum +12%",
+        "Reasonable P/E 29.5",
+        "Positive analyst consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1m +10.20%, P/E 25.49, news sentiment 0.253, analyst buy (score 1.76).",
+      "drivers": [
+        "1m momentum +10%",
+        "Reasonable P/E 25.5",
+        "Positive news sentiment",
+        "New partnership catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1m +9.92%, 1w +3.77%, P/E 19.49, news sentiment 0.134, dividend yield 2.16%.",
+      "drivers": [
+        "1m momentum +10%",
+        "Low P/E 19.5",
+        "1w momentum +3.8%",
+        "Dividend yield 2.16%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1m +19.49%, news sentiment 0.256, analyst buy (score 1.70), but 1w -9.14% and P/E 99.87.",
+      "drivers": [
+        "1m momentum +19%",
+        "Positive news sentiment 0.26",
+        "High growth platform",
+        "Volatility risk"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1m +13.82%, P/E 16.75, news sentiment 0.059, but analyst hold (score 2.73) and YTD -14.17%.",
+      "drivers": [
+        "1m momentum +14%",
+        "Low P/E 16.8",
+        "Ahead of Q3 earnings",
+        "Citi price target raise"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1m +8.34%, P/E 21.83, news sentiment 0.169, analyst buy (score 2.0), but YTD -44.69%.",
+      "drivers": [
+        "1m momentum +8%",
+        "Low P/E 21.8",
+        "Positive news sentiment",
+        "Turnaround potential"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.751,
+      "ytd": "+125.93%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +125.93% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +125.93% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.643,
+      "ytd": "+107.82%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +107.82% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +107.82% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.63,
+      "ytd": "+105.67%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +105.67% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +105.67% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.624,
+      "ytd": "+104.67%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +104.67% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +104.67% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.607,
+      "ytd": "+101.87%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +101.87% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +101.87% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.535,
+      "ytd": "+89.66%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +89.66% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +89.66% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CRM",
@@ -132,195 +332,6 @@
         "P/E 21.74, low",
         "dividend yield 1.54%",
         "deep value from YTD"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.892,
-      "ytd": "+128.19%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +128.19% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +128.19% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.801,
-      "ytd": "+115.12%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +115.12% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +115.12% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.763,
-      "ytd": "+109.54%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +109.54% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +109.54% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.762,
-      "ytd": "+109.46%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +109.46% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +109.46% \u2265 71.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.762,
-      "ytd": "+109.40%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +109.40% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +109.40% \u2265 71.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.95,
-      "rationale": "Salesforce surged 22% on Q2 earnings beat (revenue $11.35B vs $11.32B, EPS $5.90 vs $3.27) and expanded Anthropic partnership, with P/E of 23.67 and 1M return of +42.30% [cnbc.com](https://www.cnbc.com/2026/08/27/salesforce-stock-soars-on-track-for-second-best-day-ever.html).",
-      "drivers": [
-        "Earnings beat",
-        "AI partnership",
-        "Cheap P/E 23.67",
-        "42% 1M momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "CrowdStrike rallied 20.5% after record net new ARR of $333M, record free cash flow of $377M, and 26% revenue growth, with strong buy consensus [simplywall.st](https://simplywall.st/stocks/us/software/nasdaq-crwd/crowdstrike-holdings/news/crowdstrike-crwd-stock-reprices-higher-as-arr-momentum-resha) [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/262137849-crowdstrike-stock-ai-security-earnings-crwd-break-230-tradingkey).",
-      "drivers": [
-        "Record ARR $333M",
-        "Record FCF $377M",
-        "26% revenue growth",
-        "AI security demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "Palantir surged 40%+ after Q2 revenue beat ($1.94B vs $1.8B, +93% YoY) and raised FY guidance to $8.15B, with US commercial revenue up 149% [forbes.com](https://www.forbes.com/sites/greatspeculations/2026/08/28/why-palantir-stocks-massive-breakout-was-old-news/) [tikr.com](https://www.tikr.com/blog/palantir-stock-has-rallied-40-over-the-past-month-heres-whats-behind-the-surge).",
-      "drivers": [
-        "93% revenue growth",
-        "Raised guidance $8.15B",
-        "149% US commercial growth",
-        "AI sovereignty tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Microsoft has strong momentum (+30% 1M) with strong_buy consensus, P/E 28.53, and positive news sentiment 0.19, driven by enterprise AI adoption.",
-      "drivers": [
-        "30% 1M momentum",
-        "Strong_buy consensus",
-        "P/E 28.53",
-        "Positive sentiment 0.19"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "ServiceNow shows strong momentum (+28.95% 1M, +11% 1W) with strong_buy rating, P/E 88.6, benefiting from expanded AI platform capabilities.",
-      "drivers": [
-        "28.95% 1M",
-        "Strong_buy rating",
-        "AI platform growth",
-        "11% 1W"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ORCL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Oracle has strong 1M return of +26.18%, buy consensus, reasonable P/E 25.96, and high news sentiment 0.316, supported by cloud momentum.",
-      "drivers": [
-        "26% 1M return",
-        "P/E 25.96",
-        "High sentiment 0.316",
-        "Cloud growth"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SNOW",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Snowflake has 1M return of +21.62%, buy consensus, and positive news sentiment 0.102, driven by data cloud and AI workloads.",
-      "drivers": [
-        "21.62% 1M",
-        "Buy consensus",
-        "Data cloud AI",
-        "Positive sentiment"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Shopify has 1M return of +19.35%, buy consensus, P/E 105.13, and positive news sentiment 0.19, benefiting from e-commerce and BNPL tailwinds.",
-      "drivers": [
-        "19.35% 1M",
-        "Buy consensus",
-        "E-commerce growth",
-        "Positive sentiment 0.19"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Micron has strong_buy consensus, P/E 21.32, and 1M return of +14.97%, with strong fundamentals driven by memory and AI demand.",
-      "drivers": [
-        "Strong_buy consensus",
-        "P/E 21.32",
-        "14.97% 1M",
-        "Memory AI demand"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Amazon has strong_buy consensus, P/E 21.02, 1M return of +13.15%, and high news sentiment 0.259, driven by AWS growth and e-commerce.",
-      "drivers": [
-        "Strong_buy consensus",
-        "P/E 21.02",
-        "13.15% 1M",
-        "High sentiment 0.259"
       ]
     }
   ]

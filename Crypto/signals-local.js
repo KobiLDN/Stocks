@@ -1,9 +1,139 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-31 16:00",
+  "updated": "2026-09-02 13:01",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MINA",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Explosive momentum with +79% 1m, +18% 1w, +7.5% 1d despite tiny $0.093B market cap, suggesting a high-beta breakout in the emerging category.",
+      "drivers": [
+        "+79% 1-month return",
+        "+18% 1-week return",
+        "+7.5% 1-day return",
+        "micro-cap breakout"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SOL",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong 1m momentum (+37.2%), positive news sentiment (0.081), and institutional rotation with $10.19M daily ETF inflows on Sep 1 and $154M weekly inflows per Wintermute, plus network ATH of 5.2B non-vote transactions in August.",
+      "drivers": [
+        "+37.2% 1-month return",
+        "ETF inflows $10.19M daily",
+        "institutional rotation from BTC",
+        "network ATH transactions"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong 1m momentum (+35.95%), positive news sentiment (0.207), and solid $8.4B market cap, with Charles Schwab expanding crypto offerings as a catalyst.",
+      "drivers": [
+        "+35.95% 1-month return",
+        "news sentiment 0.207",
+        "market cap $8.4B",
+        "institutional adoption catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ICP",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Impressive short-term momentum with +23.8% 1m, +6% 1w, +5% 1d, and a $1.4B market cap, indicating renewed interest in the AI/blockchain crossover.",
+      "drivers": [
+        "+23.8% 1-month return",
+        "+6% 1-week return",
+        "+5% 1-day return",
+        "AI narrative"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "XRP",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong 1m momentum (+25.84%), large $84.5B market cap, and institutional inflows of $14.38M daily ETF inflows on Sep 1 and $110M weekly per Wintermute, despite short-term price dip.",
+      "drivers": [
+        "+25.84% 1-month return",
+        "ETF inflows $14.38M daily",
+        "institutional rotation",
+        "market cap $84.5B"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Strong 1m momentum (+30.17%), positive news sentiment (0.015), and consistent ETF inflows ($10.95M daily, $816M weekly) with no outflow days, supporting institutional demand.",
+      "drivers": [
+        "+30.17% 1-month return",
+        "ETF inflows $10.95M daily",
+        "no ETF outflow days",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "High 1m momentum (+39.51%) and slight 1w gain (+0.95%), but very small market cap (null) and no news sentiment, making it a speculative play.",
+      "drivers": [
+        "+39.51% 1-month return",
+        "+0.95% 1-week return",
+        "small cap speculative"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solid 1m momentum (+23.49%) and dominant $1.56T market cap, but negative news sentiment (-0.031) and ETF outflows ($236M daily) amid geopolitical risk, still a core holding.",
+      "drivers": [
+        "+23.49% 1-month return",
+        "market cap $1.56T",
+        "ETF outflows $236M daily",
+        "geopolitical risk"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "VIRTUAL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Decent 1m momentum (+22.61%) and $0.454B market cap, but negative 1w (-8.91%) and 1d (-3.95%) with neutral news sentiment, a high-beta AI play.",
+      "drivers": [
+        "+22.61% 1-month return",
+        "AI agent platform narrative",
+        "negative short-term momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Strong 1m momentum (+22.77%) but severe 1w drop (-26.03%) and negative 1d (-2.76%), suggesting a potential bounce candidate from oversold levels.",
+      "drivers": [
+        "+22.77% 1-month return",
+        "-26% 1-week drop",
+        "oversold bounce potential"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SOL",
@@ -123,136 +253,6 @@ window.SIGNALS_DATA = {
         "+19.40% 1-month gain",
         "small cap ($931M) opportunity",
         "oversold weekly -25.51% reversal potential"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SOL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SOL +42.52% 1m, +14.39% 1w, Solana inflation proposal passed doubling disinflation rate, Charles Schwab to add SOL, $60.91M daily ETF inflows [decrypt.co](https://decrypt.co/376800/morning-minute-solana-jumps-with-network-inflation-set-to-drop) [cryptobriefing.com](https://cryptobriefing.com/solana-proposal-passes-kraken-vote-flip/) [walletinvestor.com](https://walletinvestor.com/news/crypto-news/solana-spot-etfs-draw-60-91-million-in-a-single-day-as-treasury-buyers-and-stakers-pile-in/)",
-      "drivers": [
-        "+42.52% 1m momentum",
-        "inflation proposal passed",
-        "Charles Schwab listing",
-        "$60.91M daily ETF inflows"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "POL",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "POL +49.57% 1m, +21.08% 1w, YTD +7.08%, market cap $1.151B, strong momentum with no immediate catalysts",
-      "drivers": [
-        "+49.57% 1m momentum",
-        "+21.08% 1w",
-        "YTD +7.08%",
-        "market cap $1.15B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "LINK +40.65% 1m, Charles Schwab to add LINK, news sentiment 0.172, market cap $8.714B [decrypt.co](https://decrypt.co/376800/morning-minute-solana-jumps-with-network-inflation-set-to-drop)",
-      "drivers": [
-        "+40.65% 1m momentum",
-        "Charles Schwab listing",
-        "positive news sentiment 0.172",
-        "market cap $8.7B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "XRP",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "XRP +31.59% 1m, record ETF inflows $1.566B cumulative, whales pulled $335M off Binance, positive news sentiment 0.225 [walletinvestor.com](https://walletinvestor.com/news/crypto-news/xrp-holds-above-1-40-as-etf-inflows-hit-record-while-derivatives-selling-climbs/)",
-      "drivers": [
-        "+31.59% 1m momentum",
-        "record ETF inflows $1.566B",
-        "whale accumulation $335M",
-        "positive sentiment 0.225"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ETH +31.17% 1m, ETH ETFs saw $225M inflows, positive news sentiment 0.075, market cap $300B [decrypt.co](https://decrypt.co/376800/morning-minute-solana-jumps-with-network-inflation-set-to-drop)",
-      "drivers": [
-        "+31.17% 1m momentum",
-        "$225M ETH ETF inflows",
-        "positive sentiment 0.075",
-        "large cap $300B"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "PEPE +38.94% 1m, news sentiment 0.103, market cap $1.561B, meme coin with strong monthly rally",
-      "drivers": [
-        "+38.94% 1m momentum",
-        "positive news sentiment 0.103",
-        "meme coin rally"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "MINA +46.30% 1m, +19.50% 1w, but small cap $0.079B and -5.55% 1d, high risk high reward",
-      "drivers": [
-        "+46.30% 1m momentum",
-        "+19.50% 1w",
-        "small cap $0.079B",
-        "high volatility"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "OCEAN +35.24% 1m, +8.49% 1w, YTD -5.30%, no news sentiment, small cap",
-      "drivers": [
-        "+35.24% 1m momentum",
-        "+8.49% 1w",
-        "YTD -5.30%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "AIOZ +29.24% 1m, +8.35% 1w, YTD -30.49%, small cap $0.077B, AI narrative",
-      "drivers": [
-        "+29.24% 1m momentum",
-        "+8.35% 1w",
-        "AI narrative",
-        "small cap"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "WLD",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "WLD +28.61% 1m, YTD -18.52%, market cap $1.418B, moderate momentum with no recent catalysts",
-      "drivers": [
-        "+28.61% 1m momentum",
-        "market cap $1.418B",
-        "no recent catalysts"
       ]
     }
   ]

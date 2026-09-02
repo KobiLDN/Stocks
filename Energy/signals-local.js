@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-31 16:01",
+  "updated": "2026-09-02 13:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "MPC leads refining stocks with +134.6% YTD and P/E 13.3, driven by crack spread soaring to nearly $9/bbl ( triple January levels) [Pomegra News](https://pomegra.io/news/mpc-vlo-psx-hit-all-time-highs-on-crack-spread-surge).",
+      "drivers": [
+        "+135% YTD return",
+        "crack spread surge",
+        "low P/E 13.3",
+        "refining margin expansion"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "VLO surged +122.2% YTD with P/E 15.0 and positive news sentiment 0.26, benefiting from the same crack spread catalyst that propelled refiners to all-time highs [Pomegra News](https://pomegra.io/news/mpc-vlo-psx-hit-all-time-highs-on-crack-spread-surge).",
+      "drivers": [
+        "+122% YTD return",
+        "crack spread catalyst",
+        "strong news sentiment",
+        "low P/E 15.0"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "EQNR has gained +86.2% YTD with P/E 12.0 and an attractive dividend yield of 3.6%, though it carries no analyst coverage and negative beta.",
+      "drivers": [
+        "+86% YTD return",
+        "low P/E 12.0",
+        "high dividend 3.6%",
+        "strong momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "COP returned +43.9% YTD with P/E 17.5, low short interest of 1.4%, and an analyst score of 1.64, supported by tight oil supply dynamics [Reuters](https://reuters.com/business/energy/oil-up-nearly-1-us-iran-trade-fresh-strikes-2026-09-02/).",
+      "drivers": [
+        "+44% YTD return",
+        "low short interest 1.4%",
+        "favorable analyst score",
+        "oil supply risk"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "OXY gained +45.2% YTD with near-zero short interest (0.01%) and positive news sentiment 0.19, while CEO flagged offset Middle East disruptions via Permian volume [247 Wall St](https://247wallst.com/investing/2026/09/01/chevron-exxon-and-other-oil-stocks-jump-as-two-huge-energy-stories-collide/).",
+      "drivers": [
+        "+45% YTD return",
+        "negligible short interest",
+        "resilient production",
+        "positive news"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CVX rose +39.2% YTD, P/E 19.8, yield 3.5%, and is a direct beneficiary of the Venezuela deal to control 65B barrels of reserves and rising oil above $80 [247 Wall St](https://247wallst.com/investing/2026/09/01/chevron-exxon-and-other-oil-stocks-jump-as-two-huge-energy-stories-collide/).",
+      "drivers": [
+        "+39% YTD return",
+        "Venezuela reserves catalyst",
+        "low short 0.8%",
+        "strong dividend 3.5%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "XOM gained +36.9% YTD with P/E 20.7, benefited from supply disruptions and a potential $8B Shell chemicals acquisition [SimplyWall St](https://simplywall.st/stocks/us/energy/nyse-xom/exxonmobil-holdings/news/exxonmobil-holdings-xom-eyes-shell-chemicals-deal-as-fair-va).",
+      "drivers": [
+        "+37% YTD return",
+        "chemicals acquisition catalyst",
+        "low short 1.0%",
+        "oil price tailwind"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "TTE has +37.3% YTD, lowest P/E (11.1) among majors, highest dividend yield 4.8%, and a 'strong_buy' analyst consensus (score 1.0) with positive news sentiment 0.15.",
+      "drivers": [
+        "strong-buy analyst",
+        "lowest P/E 11.1",
+        "high dividend 4.8%",
+        "attractive valuation"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SLB has +43.8% YTD and strong one-month momentum (+15.9%), but its one-day drop of -5.4% and high short interest of 4.3% temper enthusiasm; analyst score 1.6 is best in group.",
+      "drivers": [
+        "+44% YTD return",
+        "strong 1m momentum",
+        "best analyst score 1.6",
+        "high short risk"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "HAL posted +25.5% YTD with +8.9% weekly and +15.4% monthly gains, but short interest of 5.0% and high short interest; positive news from oil rally and Venezuela deal [247 Wall St](https://247wallst.com/investing/2026/09/01/chevron-exxon-and-other-oil-stocks-jump-as-two-huge-energy-stories-collide/).",
+      "drivers": [
+        "+9% weekly gain",
+        "oil services demand",
+        "Venezuela deal lift",
+        "elevated short interest"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "Dividend 4.91%",
         "Strong_buy rating",
         "Record cash flow"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "TotalEnergies boasts a strong_buy analyst consensus, a low P/E of 10.84, a high dividend yield of 4.91%, and solid YTD return of +31.59%, making it a top pick in the energy sector.",
-      "drivers": [
-        "YTD +31.59%",
-        "P/E 10.84",
-        "dividend yield 4.91%",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Shell benefits from record Q2 earnings of $9.8bn, a $3bn buyback, and an Erste Group upgrade to Buy; its P/E of 10.03 and 3.45% yield add value.",
-      "drivers": [
-        "Q2 earnings beat",
-        "Erste Group upgrade",
-        "P/E 10.03",
-        "dividend yield 3.45%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.858,
-      "rationale": "Marathon Petroleum has surged +123.2% YTD with a 1M gain of +19.38%, supported by strong refining margins and a P/E of 12.64, though yield is modest at 1.10%.",
-      "drivers": [
-        "YTD +123.2%",
-        "1M +19.38%",
-        "P/E 12.64",
-        "refining margin tailwind"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.788,
-      "rationale": "Valero is up +113.13% YTD and +16.61% in the past month, benefiting from robust refining spreads; its P/E of 14.54 and positive news sentiment of 0.303 are supportive.",
-      "drivers": [
-        "YTD +113.13%",
-        "1M +16.61%",
-        "P/E 14.54",
-        "news sentiment 0.303"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ConocoPhillips has gained +37.69% YTD with strong 1M momentum of +14.93%, a favorable analyst score of 1.64, and potential tailwinds from Venezuelan oil developments.",
-      "drivers": [
-        "YTD +37.69%",
-        "1M +14.93%",
-        "P/E 17.23",
-        "analyst score 1.64"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Chevron delivers a balanced profile: YTD +32.37%, P/E 19.32, dividend yield 3.56%, and a low analyst score of 1.72; it could benefit from Venezuela's OPEC exit.",
-      "drivers": [
-        "YTD +32.37%",
-        "P/E 19.32",
-        "dividend yield 3.56%",
-        "an_score 1.72"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Halliburton has rallied +15.08% in the past month on news of potential multi-billion dollar investments in Venezuelan oil fields, with a P/E of 18.82 and positive sentiment of 0.229.",
-      "drivers": [
-        "1M +15.08%",
-        "Venezuela deal catalyst",
-        "P/E 18.82",
-        "news sentiment 0.229"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Schlumberger has gained +40.38% YTD with strong 1M momentum of +11.66%; its P/E of 27.22 is elevated but supported by an analyst score of 1.6 and data access in Venezuela.",
-      "drivers": [
-        "YTD +40.38%",
-        "1M +11.66%",
-        "an_score 1.6",
-        "Venezuela data deal"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Equinor has soared +74.1% YTD and +9.1% in the past month, with a low P/E of 11.21 and a 3.75% yield, but its analyst consensus is hold, tempering conviction.",
-      "drivers": [
-        "YTD +74.1%",
-        "1M +9.1%",
-        "P/E 11.21",
-        "dividend yield 3.75%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "EOG Resources offers a compelling value with a P/E of 11.18, YTD gain of +37.21%, dividend yield 2.82%, and the highest news sentiment (0.321) among the universe.",
-      "drivers": [
-        "YTD +37.21%",
-        "P/E 11.18",
-        "dividend yield 2.82%",
-        "news sentiment 0.321"
       ]
     }
   ]

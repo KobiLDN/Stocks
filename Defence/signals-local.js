@@ -1,9 +1,139 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-08-31 15:55",
+  "updated": "2026-09-02 12:59",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PLTR",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "PLTR surged +43.19% in the last month, driven by a $127M Army TITAN production order and a blowout Q2 with Maven AI defense revenue approaching a $1B run rate, despite a high P/E of 159.22.",
+      "drivers": [
+        "+43.19% 1M momentum",
+        "$127M TITAN contract win",
+        "Maven AI $1B run rate",
+        "buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CACI has strong +22.78% 1M momentum, +17.13% YTD, a reasonable P/E of 25.78, and positive news sentiment of 0.289, supported by a buy analyst consensus.",
+      "drivers": [
+        "+22.78% 1M momentum",
+        "+17.13% YTD",
+        "P/E 25.78",
+        "buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SPCX gained +24.19% in the last month, with rising analyst interest and institutional buying post-IPO, though fundamentals are opaque with no P/E.",
+      "drivers": [
+        "+24.19% 1M momentum",
+        "rising analyst interest",
+        "institutional buying"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "LDOS rebounded +17.23% in the last month, with a low P/E of 13.09 and a 1.23% dividend yield, despite negative YTD performance and short interest of 3.83%.",
+      "drivers": [
+        "+17.23% 1M momentum",
+        "P/E 13.09",
+        "1.23% dividend yield",
+        "value rebound"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SAIC raised full-year guidance after Q2 beat, with +26.57% YTD, a low P/E of 14.95, and a 1.15% dividend yield, though analyst consensus is hold.",
+      "drivers": [
+        "+26.57% YTD",
+        "raised guidance",
+        "P/E 14.95",
+        "1.15% dividend yield"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BAH has +6.75% 1M momentum, a low P/E of 11.83, and a high dividend yield of 3.12%, but YTD is negative and short interest is elevated at 7.3%.",
+      "drivers": [
+        "+6.75% 1M momentum",
+        "P/E 11.83",
+        "3.12% dividend yield",
+        "value play"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "KTOS",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "KTOS has strong_buy analyst consensus with a score of 1.43 and positive news sentiment of 0.407, but YTD is -37.77% and P/E is extremely high at 290.24.",
+      "drivers": [
+        "strong_buy consensus",
+        "news sentiment 0.407",
+        "MUX TACAIR win potential"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "NOC has a low P/E of 17.15, a 1.83% dividend yield, and buy analyst consensus, but YTD is -7.90% and 1M momentum is -2.40%.",
+      "drivers": [
+        "P/E 17.15",
+        "1.83% dividend yield",
+        "buy consensus",
+        "defensive value"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "RR.L has strong +43% 1-year return and +21.91% YTD, with buy analyst consensus, but 1D momentum is -4.64% and P/E is 40.53.",
+      "drivers": [
+        "+43% 1-year return",
+        "+21.91% YTD",
+        "buy consensus",
+        "defence growth"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.45,
+      "rationale": "RCAT has strong_buy analyst consensus with a score of 1.17, but YTD is -9.93%, short interest is very high at 21.86%, and no P/E available.",
+      "drivers": [
+        "strong_buy consensus",
+        "high short interest",
+        "drone sector play"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PLTR",
@@ -132,139 +262,6 @@ window.SIGNALS_DATA = {
         "low P/E 13.1",
         "high short interest 3.83% squeeze potential",
         "contrarian value opportunity"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Momentum surge of +50.28% over 1M and +10.59% YTD, fueled by a 93% revenue jump to $1.94B and raised 2026 guidance to ~$8.15B [forbes.com]. Despite a high trailing P/E of 150.92, analyst consensus remains buy (score 1.81) with positive news sentiment of 0.172.",
-      "drivers": [
-        "Momentum +50% 1M",
-        "Revenue growth 93%",
-        "Analyst consensus buy",
-        "Pentagon/defense catalysts"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong 1M gain of +22.62%, YTD +16.38% and 1-year +32%, supported by a reasonable P/E of 25.9, a bullish analyst score of 1.56, and positive news sentiment of 0.289. Short interest at 6.32% remains manageable.",
-      "drivers": [
-        "Momentum +22.6% 1M",
-        "P/E 25.9 reasonable",
-        "Analyst score 1.56 bullish",
-        "Positive news sentiment 0.289"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SPCX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Up +21.44% in 1M with a buy analyst consensus (score 1.69); web search highlights an average analyst target of $232.35 implying ~68% upside [fool.com] and a growing Nvidia relationship driving AI hyperscaler status. News sentiment is neutral at 0.112.",
-      "drivers": [
-        "Momentum +21.4% 1M",
-        "Analyst target $232 (+68%)",
-        "Nvidia AI partnership",
-        "Large-cap space play"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RCAT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Gained +18.52% in 1M despite YTD weakness, with a strong_buy analyst rating (score 1.17) and positive news sentiment of 0.214. High short interest of 21.86% adds potential squeeze catalysts, though P/E is not applicable and risk is elevated.",
-      "drivers": [
-        "Momentum +18.5% 1M",
-        "Analyst strong_buy score 1.17",
-        "Short interest 21.86%",
-        "Drone/defense theme"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Rebounded +18.44% in 1M from a deep YTD drawdown of -23.14%, offering a low trailing P/E of 13.09. Analyst consensus is buy (score 2.35) despite negative news sentiment of -0.11; value-oriented opportunity in cyber-intel.",
-      "drivers": [
-        "Momentum +18.4% 1M",
-        "P/E 13.09 low",
-        "YTD -23% contrarian value",
-        "Analyst consensus buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Up +9.70% in 1M, YTD +6.62%, with a buy analyst consensus (score 1.71) and positive news sentiment of 0.154. The high P/E of 252.42 reflects premium growth pricing in the weapons/tech segment, but momentum and analyst support justify a selective buy.",
-      "drivers": [
-        "Momentum +9.7% 1M",
-        "Analyst consensus buy",
-        "Weapons/tech growth",
-        "Positive news sentiment 0.154"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Solid momentum with +7.26% 1M, YTD +27.20%, and 1-year return of +43%, driven by UK defense and aerospace demand. P/E of 42.28 is elevated but supported by analyst buy consensus (score 1.6) and a dividend yield of 0.78%.",
-      "drivers": [
-        "Momentum +7.3% 1M",
-        "YTD +27.2% strong",
-        "Analyst consensus buy",
-        "UK defense/aerospace exposure"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "KTOS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Up +7.79% in 1M, driven by strong_buy analyst consensus (score 1.43) and positive news sentiment of 0.196, despite a high P/E of 308.41 and YTD decline of -33.88%. Drone and space systems exposure keeps it in focus.",
-      "drivers": [
-        "Momentum +7.8% 1M",
-        "Analyst strong_buy score 1.43",
-        "Drone/space defense",
-        "Positive news sentiment 0.196"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Gained +5.96% in 1M, with a strong YTD of +28.62% and a low P/E of 14.49. Analyst consensus is hold (score 2.82) but news sentiment is positive at 0.152; short interest of 7.21% suggests some skepticism but value may emerge.",
-      "drivers": [
-        "Momentum +5.96% 1M",
-        "P/E 14.49 low",
-        "YTD +28.6% strong",
-        "Positive news sentiment 0.152"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "Up +5.66% in 1M but YTD -28.42%, with a high beta of 2.745 and short interest at 19.23%. News sentiment is mildly positive at 0.088; space-based network catalysts (BlueBird deployment, NZ gateway) offer high-risk/high-reward potential.",
-      "drivers": [
-        "Momentum +5.66% 1M",
-        "High beta 2.745",
-        "Short interest 19.23%",
-        "Space telecom catalysts"
       ]
     }
   ]

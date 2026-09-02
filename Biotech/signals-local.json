@@ -1,9 +1,142 @@
 {
-  "updated": "2026-08-31 15:51",
+  "updated": "2026-09-02 12:58",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "YTD +399.9%, 1M +179.78%, driven by historic Phase 3 melanoma cancer vaccine win with Merck; analyst consensus 'hold' but positive catalyst from FDA-approved updated COVID vaccine and oncology platform re-rating [timothysykes.com](https://timothysykes.com/news/moderna-inc-mrna-news-2026_09_01/).",
+      "drivers": [
+        "YTD +399.9% momentum",
+        "Phase 3 melanoma vaccine success",
+        "FDA approval of updated Spikevax",
+        "Analyst hold but catalyst-driven"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +40.17%, 1M +18.64%, strong_buy analyst consensus (score 1.5), low short interest 3.07%, positive news sentiment 0.12, and no P/E reflects growth-stage genomics leader.",
+      "drivers": [
+        "Strong buy consensus",
+        "YTD +40.17%",
+        "Low short interest 3.07%",
+        "Positive news sentiment 0.12"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +21.13%, 1M +16.34%, analyst buy (score 1.66), low beta 0.305, short interest 1.85%, P/E 31.75, and positive news sentiment 0.252; solid large-cap with cystic fibrosis franchise.",
+      "drivers": [
+        "Analyst buy score 1.66",
+        "YTD +21.13%",
+        "Low short interest 1.85%",
+        "P/E 31.75 reasonable"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +36.46%, 1M +16.31%, new Repatha survival data from Phase 3 VESALIUS-CV trial presented at ESC 2026 expands cardiovascular market [simplywall.st](https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-amgn/amgen/news/why-is-amgen-amgn-in-focus-after-new-repatha-survival-data); P/E 26.67, dividend yield 2.34%.",
+      "drivers": [
+        "YTD +36.46%",
+        "Repatha survival data catalyst",
+        "P/E 26.67",
+        "Dividend yield 2.34%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +24.80%, 1M +14.31%, analyst buy (score 1.75), low short interest 1.87%, positive news sentiment 0.119, and Bixlenvo potential to unlock HIV growth; no P/E but strong pipeline.",
+      "drivers": [
+        "Analyst buy score 1.75",
+        "YTD +24.80%",
+        "Low short interest 1.87%",
+        "Positive news sentiment 0.119"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +34.32%, 1W +12.74%, on track for best week in 5 months ahead of late-2026 clinical data; high short interest 30.69% but positive news sentiment 0.173 and potential 'monumental comeback'.",
+      "drivers": [
+        "1M +34.32% momentum",
+        "Late-2026 clinical data catalyst",
+        "Positive news sentiment 0.173",
+        "High short interest 30.69% contrarian"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "EDIT",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +49.76%, 1M +15.85%, analyst buy (score 2.08), high beta 2.063, short interest 16.1%; gene-editing small cap with strong YTD momentum despite recent weekly pullback.",
+      "drivers": [
+        "YTD +49.76%",
+        "1M +15.85%",
+        "Analyst buy",
+        "High beta 2.063"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NTLA",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +37.73%, 1M +17.78%, analyst buy (score 2.26), Cathie Wood buying; very high short interest 40.35% adds squeeze potential, but positive news sentiment 0.023.",
+      "drivers": [
+        "YTD +37.73%",
+        "Cathie Wood buying",
+        "High short interest 40.35%",
+        "Analyst buy"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "RCUS",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "YTD +27.57%, 1M +7.57%, strong_buy analyst consensus (score 1.46), positive news sentiment 0.084, and partnership with Summit Therapeutics for cancer drug; no P/E but pipeline progress.",
+      "drivers": [
+        "Strong buy consensus score 1.46",
+        "YTD +27.57%",
+        "Partnership with Summit",
+        "Positive news sentiment 0.084"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +30.54%, 1M +3.32%, P/E 17.19, analyst buy (score 2.4), low beta 0.422, positive news sentiment 0.134; oncology mid-cap with reasonable valuation and steady momentum.",
+      "drivers": [
+        "YTD +30.54%",
+        "P/E 17.19 attractive",
+        "Analyst buy",
+        "Low beta 0.422"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTRA",
@@ -132,139 +265,6 @@
         "+18.22% 1M momentum",
         "buy analyst consensus",
         "16.1% short interest"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "NTRA has strong momentum (+31.46% 1M, +44.89% YTD), a strong_buy analyst consensus (score 1.5), and positive news sentiment (0.072), with no P/E but high growth potential in genomics.",
-      "drivers": [
-        "strong momentum",
-        "strong_buy consensus",
-        "positive sentiment",
-        "high growth genomics"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CRSP presented Phase 1a data for CTX310 showing deep and durable ANGPTL3 editing (79% mean reduction), TG lowering (48%), and LDL lowering (53%) at ESC Congress 2026, with +20.57% 1M momentum and a buy analyst consensus (score 2.05).",
-      "drivers": [
-        "positive Phase 1a CTX310 data",
-        "strong 1M momentum",
-        "buy consensus",
-        "durable lipid lowering"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "ILMN has strong momentum (+13.75% 1M, +63.39% YTD), a buy analyst consensus (score 2.45), positive news sentiment (0.199), and a P/E of 41.03 reflecting its genomics leadership.",
-      "drivers": [
-        "strong YTD momentum",
-        "buy consensus",
-        "positive sentiment",
-        "genomics leader"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "REGN has good momentum (+14.59% 1M), a buy analyst consensus (score 1.89), positive news sentiment (0.117), a P/E of 19.7, and a dividend yield of 46, offering balanced large-cap value.",
-      "drivers": [
-        "good 1M momentum",
-        "buy consensus",
-        "attractive P/E",
-        "dividend yield"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "BMY has strong YTD performance (+27.09%), a buy analyst consensus (score 2.46), very high news sentiment (0.597), a low P/E of 14.78, and a dividend yield of 376, combining value and positive catalysts.",
-      "drivers": [
-        "strong YTD",
-        "very high sentiment",
-        "low P/E",
-        "high dividend yield"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "VRTX has solid momentum (+11.18% 1M, +20.58% YTD), a buy analyst consensus (score 1.66), positive news sentiment (0.298), and a P/E of 31.72, reflecting its strong large-cap biotech franchise.",
-      "drivers": [
-        "solid momentum",
-        "buy consensus",
-        "positive sentiment",
-        "large-cap biotech"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AMGN has strong YTD momentum (+34.86%), a buy analyst consensus (score 2.47), positive news sentiment (0.309), a P/E of 26.93, and a dividend yield of 229, offering large-cap stability with growth.",
-      "drivers": [
-        "strong YTD",
-        "buy consensus",
-        "positive sentiment",
-        "dividend yield"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RCUS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "RCUS has a strong_buy analyst consensus (score 1.46), good momentum (+10.87% 1M, +28.77% YTD), and positive news sentiment (0.084), with potential from its oncology pipeline.",
-      "drivers": [
-        "strong_buy consensus",
-        "good momentum",
-        "oncology pipeline",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MRNA has explosive momentum (+141.15% 1M, +336.08% YTD) driven by a cancer vaccine breakthrough with Merck and FDA approval for updated COVID-19 vaccines, but faces dilution from a $2B convertible note and a hold analyst consensus (score 2.74).",
-      "drivers": [
-        "cancer vaccine breakthrough",
-        "FDA vaccine approval",
-        "explosive momentum",
-        "convertible note dilution risk"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SRPT",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "SRPT has high momentum (+41.54% 1M, +16.23% 1W) ahead of late-2026 clinical data, with a hold analyst consensus (score 2.67) and positive news sentiment (0.173), but carries high short interest (30.69%) and binary event risk.",
-      "drivers": [
-        "high 1M momentum",
-        "upcoming clinical data",
-        "positive sentiment",
-        "high short interest"
       ]
     }
   ]
