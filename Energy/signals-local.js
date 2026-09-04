@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-02 13:03",
+  "updated": "2026-09-04 13:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "MPC has surged +137.5% YTD and +24.4% in the last month, driven by a near-tripling of the WTI 3-2-1 crack spread to ~$9/barrel, with a P/E of 13.4 and a 1.03% dividend yield.",
+      "drivers": [
+        "+137.5% YTD",
+        "crack spread ~$9/bbl",
+        "P/E 13.4",
+        "1M +24.4%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "VLO has gained +127.6% YTD and +20.1% in the last month, benefiting from record refining margins as the crack spread tripled, with a P/E of 15.5 and a 1.31% dividend yield.",
+      "drivers": [
+        "+127.6% YTD",
+        "crack spread ~$9/bbl",
+        "P/E 15.5",
+        "1M +20.1%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EQNR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "EQNR has returned +83% over one year and +79.6% YTD, with strong momentum (+10% 1M) and a low P/E of 11.8, supported by a 3.58% dividend yield and positive news sentiment of 0.209.",
+      "drivers": [
+        "+79.6% YTD",
+        "P/E 11.8",
+        "div yield 3.58%",
+        "1M +10%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "COP is up +43.5% YTD and +15.8% in the last month, with a P/E of 18.1 and a 2.45% dividend yield, supported by a buy analyst consensus and positive news sentiment.",
+      "drivers": [
+        "+43.5% YTD",
+        "1M +15.8%",
+        "P/E 18.1",
+        "div yield 2.45%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SLB has gained +45.2% YTD and +13.6% in the last month, with a buy analyst consensus (score 1.6) and positive news sentiment of 0.201, reflecting strong oilfield services demand.",
+      "drivers": [
+        "+45.2% YTD",
+        "1M +13.6%",
+        "an_score 1.6",
+        "news_s 0.201"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "HAL is up +27.7% YTD and +15.8% in the last month, with a P/E of 19.7 and a buy analyst consensus (score 1.75), benefiting from robust drilling and completion activity.",
+      "drivers": [
+        "1M +15.8%",
+        "P/E 19.7",
+        "an_score 1.75",
+        "YTD +27.7%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "CVX has returned +39.3% YTD and +12% in the last month, with a P/E of 20.4 and a 3.36% dividend yield, supported by a buy analyst consensus and a record Q2 powered by $104 Brent.",
+      "drivers": [
+        "+39.3% YTD",
+        "1M +12%",
+        "div yield 3.36%",
+        "an_score 1.72"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "OXY has gained +44.4% YTD and +10% in the last month, with a P/E of 17.9 and a 1.84% dividend yield, supported by the highest news sentiment (0.369) in the group and a buy analyst consensus.",
+      "drivers": [
+        "+44.4% YTD",
+        "1M +10%",
+        "news_s 0.369",
+        "P/E 17.9"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "XOM is up +34.9% YTD and +6% in the last month, with a P/E of 21.2 and a 2.5% dividend yield, supported by potential catalysts including a bid for Shell's U.S. chemicals assets and Venezuela entry.",
+      "drivers": [
+        "+34.9% YTD",
+        "div yield 2.5%",
+        "Shell chemicals bid",
+        "Venezuela entry"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "TTE has gained +35.6% YTD and +4.8% in the last month, with a low P/E of 11.2, a 4.7% dividend yield, and the strongest analyst consensus (strong_buy, score 1.0) in the universe.",
+      "drivers": [
+        "+35.6% YTD",
+        "P/E 11.2",
+        "div yield 4.7%",
+        "an_score 1.0"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "oil services demand",
         "Venezuela deal lift",
         "elevated short interest"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.882,
-      "rationale": "YTD +126.67%, P/E 12.83, 1M +17.24% \u2014 refining margins elevated by Middle East disruptions and reduced global capacity, as noted in [trefis.com](https://www.trefis.com/stock/xom/articles/613015/exxonmobil-stocks-biggest-risk-is-the-shortage-ending/2026-08-26).",
-      "drivers": [
-        "YTD +126.67%",
-        "P/E 12.83",
-        "1M +17.24%",
-        "Refining tailwinds"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.822,
-      "rationale": "YTD +118.02%, P/E 14.8, 1M +13.50% \u2014 strong refining margins and positive news sentiment (0.36) supported by tight global refining capacity.",
-      "drivers": [
-        "YTD +118.02%",
-        "P/E 14.8",
-        "News sentiment 0.36",
-        "Refining tailwinds"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SLB",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "1M +19.28%, YTD +48.78%, analyst score 1.60 (buy) \u2014 oilfield services benefitting from high drilling activity as Brent crude stays near $89, per [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/brent-crude-nears-89-strait-hormuz-xom-cvx-uso-record-cash-flow/cZo6uIKRJKY).",
-      "drivers": [
-        "1M +19.28%",
-        "Analyst score 1.60",
-        "Brent near $89",
-        "Oilfield services demand"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +40.19%, 1M +10.83%, P/E 17.54, dividend 2.58% \u2014 strong momentum with reasonable valuation and solid dividend yield.",
-      "drivers": [
-        "YTD +40.19%",
-        "Dividend 2.58%",
-        "P/E 17.54",
-        "1M +10.83%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "YTD +78.69%, P/E 11.5, dividend 3.77% \u2014 low P/E, high dividend, and record Q2 free cash flow among top oil majors, per [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/brent-crude-nears-89-strait-hormuz-xom-cvx-uso-record-cash-flow/cZo6uIKRJKY).",
-      "drivers": [
-        "YTD +78.69%",
-        "P/E 11.5",
-        "Dividend 3.77%",
-        "Record cash flow"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +43.00%, short interest 0.01%, P/E 17.71 \u2014 very low short interest, strong YTD performance, and positive sentiment (0.11).",
-      "drivers": [
-        "YTD +43.00%",
-        "Short interest 0.01%",
-        "P/E 17.71",
-        "Positive sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "YTD +35.90%, dividend 3.56%, analyst buy (1.72) \u2014 solid major with high dividend yield and low short interest (0.81%).",
-      "drivers": [
-        "Dividend 3.56%",
-        "YTD +35.90%",
-        "Short interest 0.81%",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +14.79%, YTD +26.21%, P/E 19.38 \u2014 strong 1M momentum and oilfield services exposure benefiting from high oil prices.",
-      "drivers": [
-        "1M +14.79%",
-        "P/E 19.38",
-        "Oilfield services",
-        "YTD +26.21%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BKR",
-      "signal": "buy",
-      "confidence": 0.63,
-      "rationale": "YTD +36.14%, analyst buy (1.71), 1W +2.42% \u2014 diversified oilfield services exposure with good momentum and analyst support.",
-      "drivers": [
-        "YTD +36.14%",
-        "Analyst score 1.71",
-        "1W +2.42%",
-        "Oilfield services"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "P/E 11.02, dividend 4.91%, analyst strong_buy (1.00) \u2014 attractive valuation and high yield, though momentum modest; record Q2 cash flows support earnings.",
-      "drivers": [
-        "P/E 11.02",
-        "Dividend 4.91%",
-        "Strong_buy rating",
-        "Record cash flow"
       ]
     }
   ]

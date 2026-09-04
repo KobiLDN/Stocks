@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-02 12:59",
+  "updated": "2026-09-04 13:00",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "1-month momentum +20.19%, YTD +17.23%, PE 25.44, analyst consensus buy with an_score 1.56, news sentiment positive 0.228.",
+      "drivers": [
+        "1M +20.19%",
+        "YTD +17.23%",
+        "PE 25.44",
+        "analyst buy 1.56"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Surged 7.4% on $127M Army AI contract and expanded PwC alliance, 1-month +12.22%, commercial revenue +149% YoY, but PE 144.87 and short interest 3.18%.",
+      "drivers": [
+        "+7.4% day on contract win",
+        "1M +12.22%",
+        "commercial revenue +149% YoY",
+        "analyst buy 1.81"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Price target raised to $123 by UBS, EPS beat of $3.01 vs $2.31, PE 14.81 low, YTD +26.29%, upgraded to strong-buy by Wall Street Zen.",
+      "drivers": [
+        "target raised to $123",
+        "EPS beat $0.70",
+        "PE 14.81",
+        "YTD +26.29%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Surged 6.4% with near $2T market cap, 1-month +19.48%, Q2 revenue +91.9% YoY, analyst average target $222.32 (+48% upside).",
+      "drivers": [
+        "+6.4% day",
+        "1M +19.48%",
+        "Q2 revenue +91.9% YoY",
+        "analyst target $222"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "B-2 bomber deployed in Iran strikes, $3B in new Pentagon/Lockheed contracts, PE 16.64 low, analyst buy consensus 2.04, beneficiary of rising defense ETF demand.",
+      "drivers": [
+        "$3B new contracts",
+        "PE 16.64",
+        "analyst buy 2.04",
+        "defense ETF demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +7.95%, PE 22.23, analyst buy consensus 2.12, likely benefiting from US-Iran tensions and $60B Patriot missile production ramp.",
+      "drivers": [
+        "YTD +7.95%",
+        "PE 22.23",
+        "analyst buy 2.12",
+        "defense spending tailwind"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1-year return +37%, YTD +23.67%, strong momentum despite slight monthly dip -1.76%, PE 41.12 reflects growth premium.",
+      "drivers": [
+        "1Y +37%",
+        "YTD +23.67%",
+        "1M -1.76% mild",
+        "growth trajectory"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RCAT",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "Analyst consensus strong_buy with an_score 1.14, short interest 21.86% high (squeeze potential), YTD -6.77%, speculative but high conviction.",
+      "drivers": [
+        "analyst strong_buy 1.14",
+        "short interest 21.86%",
+        "revenue growth up to 42%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "PE 12.35 low valuation, analyst buy consensus 2.35, up 5.5% since last earnings report, despite YTD -27.42% may be a value play.",
+      "drivers": [
+        "PE 12.35",
+        "analyst buy 2.35",
+        "+5.5% since earnings",
+        "value opportunity"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "PE 11.49 very low, YTD -10.98%, short interest 7.3% elevated, potential recovery from oversold levels as lagging defense performer.",
+      "drivers": [
+        "PE 11.49",
+        "short interest 7.3%",
+        "oversold potential",
+        "defense sector exposure"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PLTR",
@@ -129,139 +261,6 @@ window.SIGNALS_DATA = {
         "strong_buy consensus",
         "high short interest",
         "drone sector play"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "PLTR surged +50.9% over 1M, with Maven officially designated a Pentagon Program of Record, securing a $2.3B budget request over five years, and a federal court removed the Anthropic AI ban overhang, lowering execution risk; US government revenue grew 90% YoY to $809M in Q2.",
-      "drivers": [
-        "+50.9% 1M momentum",
-        "Pentagon program of record designation",
-        "$2.3B budget request for Maven",
-        "90% YoY US gov't revenue growth"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "CACI has +24.9% 1M momentum, +30% over 1Y, P/E 25.7, analyst buy consensus (score 1.56), and positive news sentiment 0.289, reflecting strong cyber-intel demand amid heightened geopolitical tensions and Pentagon IT modernization.",
-      "drivers": [
-        "+24.9% 1M momentum",
-        "+30% 1Y return",
-        "analyst buy consensus (1.56)",
-        "positive news sentiment 0.289"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SAIC has strong YTD momentum (+29.7%), +10.9% 1M, low P/E 14.6, and high short interest (7.21%) that could fuel a squeeze; recent US-Iran tensions underscore demand for cyber and IT services.",
-      "drivers": [
-        "+29.7% YTD",
-        "+10.9% 1M momentum",
-        "low P/E 14.6",
-        "high short interest 7.21% squeeze potential"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SPCX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SPCX has +31.9% 1M momentum and +5.9% 1W, with a buy analyst score of 1.69 and positive news sentiment 0.114, buoyed by SpaceX's dominant launch market position and the FTX/OAI legal dynamics clearing regulatory fog.",
-      "drivers": [
-        "+31.9% 1M momentum",
-        "buy analyst consensus (1.69)",
-        "positive news sentiment 0.114",
-        "SpaceX launch market leadership"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "RR.L is up +27.9% YTD and +7.8% 1M, with +39% over 1Y, analyst buy consensus (score 1.60), and strong tailwinds from UK defence budget increases and global aero engine demand.",
-      "drivers": [
-        "+27.9% YTD",
-        "+39% 1Y return",
-        "analyst buy consensus (1.60)",
-        "UK defence spending tailwinds"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AXON",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AXON has +11.2% 1M momentum, strong news sentiment 0.294, and analyst buy consensus (1.71), driven by its Dedrone counter-drone platform and TASER demand despite a high P/E of 244.",
-      "drivers": [
-        "+11.2% 1M momentum",
-        "positive news sentiment 0.294",
-        "analyst buy consensus (1.71)",
-        "Dedrone counter-drone growth"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "RCAT has +13.5% 1M momentum, a strong_buy analyst consensus (score 1.17), but very high short interest (21.86%) and no P/E due to lack of profitability; upside is contingent on drone contract wins.",
-      "drivers": [
-        "+13.5% 1M momentum",
-        "strong_buy analyst consensus (1.17)",
-        "very high short interest 21.86% squeeze potential",
-        "drone market tailwinds"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "KTOS",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "KTOS has +9.0% 1M momentum, strong_buy analyst consensus (1.43), and positive news sentiment 0.29, supported by next-gen defence spending acceleration for its drone and propulsion systems.",
-      "drivers": [
-        "+9.0% 1M momentum",
-        "strong_buy analyst consensus (1.43)",
-        "positive news sentiment 0.29",
-        "next-gen defence spending acceleration"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BAH has +9.2% 1M momentum, low P/E 11.9, and short interest 7.3%, though analyst consensus is hold (score 2.86) and YTD is -8.95%; attractive value play in cyber-intel if geopolitical risks escalate.",
-      "drivers": [
-        "+9.2% 1M momentum",
-        "low P/E 11.9",
-        "short interest 7.3% squeeze potential",
-        "geopolitical risk catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "LDOS has +20.9% 1M momentum, low P/E 13.1, and high short interest 3.83%, but YTD is -23.4% and news sentiment is slightly negative (-0.11), offering a contrarian value play in IT services.",
-      "drivers": [
-        "+20.9% 1M momentum",
-        "low P/E 13.1",
-        "high short interest 3.83% squeeze potential",
-        "contrarian value opportunity"
       ]
     }
   ]

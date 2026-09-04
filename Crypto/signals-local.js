@@ -1,9 +1,138 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-02 13:01",
+  "updated": "2026-09-04 13:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "BTC",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Bitcoin cleared $82,000 on $730M ETF inflows and a $510M short squeeze; +25.58% 1M, positive news sentiment 0.114, and Fed dovish signals support further upside toward $85,000 resistance [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/crypto-overview-bitcoin-clears-80-000-on-reduced-rate-hike-odds-zcash-ethena-rise-202609040346).",
+      "drivers": [
+        "$730M ETF inflow",
+        "+25.58% 1M momentum",
+        "short squeeze $510M",
+        "Fed dovish pivot"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ETH",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Ethereum closed above $2,500 resistance with $141M ETF inflows; +34.05% 1M and +4.08% 1D, though news sentiment is slightly negative at -0.12 [coingabbar.com](https://www.coingabbar.com/en/crypto-currency-news/crypto-news-etf-bitcoin-ethereum-xrp-solana-rally-today).",
+      "drivers": [
+        "$141M ETF inflow",
+        "+34.05% 1M",
+        "broke $2,500 resistance",
+        "broad market rally"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "XRP",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "XRP gained 5.74% on the day with $6.14M ETF inflows and positive news sentiment 0.105; +35.24% 1M and holding above key EMAs [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/top-3-price-prediction-bitcoin-ethereum-ripple-btc-eth-and-xrp-await-us-nfp-for-next-directional-move-202609040332).",
+      "drivers": [
+        "$6.14M ETF inflow",
+        "+35.24% 1M",
+        "+5.74% 1D",
+        "positive sentiment 0.105"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Solana saw $6.4M ETF inflows and +39.68% 1M momentum; price at $103.75 with growing use in payments, though weekly -3.58% and negative sentiment -0.105 [coingabbar.com](https://www.coingabbar.com/en/crypto-currency-news/crypto-news-etf-bitcoin-ethereum-xrp-solana-rally-today).",
+      "drivers": [
+        "$6.4M ETF inflow",
+        "+39.68% 1M",
+        "payments adoption",
+        "broad rally"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Chainlink surged +44.97% 1M and +5.70% 1D with the highest news sentiment in the universe at 0.127; market cap $8.86B offers a solid mid-cap opportunity.",
+      "drivers": [
+        "+44.97% 1M",
+        "+5.70% 1D",
+        "news sentiment 0.127",
+        "mid-cap momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Mina posted an extraordinary +83.55% 1M and +22.78% 1W, though market cap is tiny at $0.097B; extreme momentum warrants a high-risk position.",
+      "drivers": [
+        "+83.55% 1M",
+        "+22.78% 1W",
+        "tiny cap high beta"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Ocean Protocol gained +46.41% 1M and +3.17% 1D, riding the AI narrative; no market cap data but strong momentum relative to peers.",
+      "drivers": [
+        "+46.41% 1M",
+        "+3.17% 1D",
+        "AI narrative"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DOGE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Dogecoin spiked 4.71% 1D as part of the broad crypto rally, with memecoin interest persisting; +24.38% 1M and market cap $14.88B [coinwy.com](https://coinwy.com/bitcoin-hits-82000-amid-fed-dovish-signals-ethereum-xrp-dogecoin-spike/).",
+      "drivers": [
+        "+4.71% 1D",
+        "+24.38% 1M",
+        "memecoin rally",
+        "broad market lift"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "PEPE gained +27.07% 1M and +4.89% 1D, showing strong meme momentum; market cap $1.5B offers higher beta than DOGE.",
+      "drivers": [
+        "+27.07% 1M",
+        "+4.89% 1D",
+        "meme sector momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Polygon (POL) rallied +26.58% 1M but weakened -11.34% 1W; still benefits from Ethereum scaling narrative and +1.50% 1D recovery.",
+      "drivers": [
+        "+26.58% 1M",
+        "Ethereum scaling",
+        "1D recovery +1.50%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MINA",
@@ -129,130 +258,6 @@ window.SIGNALS_DATA = {
         "+22.77% 1-month return",
         "-26% 1-week drop",
         "oversold bounce potential"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SOL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SOL surging 40.69% in 1-month and 6.99% in 1-week on approved SGP-0002 disinflation vote (68.77% support, cuts ~18.9M SOL supply over 6 years); Kalshi traders price 41% chance of positive 2026 return, highest among majors [coinnews.com](https://coinnews.com/news/solana-disinflation-vote/) [news.kalshi.com](https://news.kalshi.com/p/sol-surges-past-100-kalshi-odds-2026). Daily active addresses hit 5M, and price broke above $106 with $120\u2013$150 targets [bravenewcoin.com](https://bravenewcoin.com/insights/solana-price-prediction-sol-breaks-above-106-as-120-and-140-targets-move-closer).",
-      "drivers": [
-        "+40.69% 1-month momentum",
-        "SGP-0002 disinflation vote passed",
-        "Kalshi 41% positive 2026 odds",
-        "5M daily active addresses"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MINA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "MINA posts extraordinary +52.81% 1-month gain and +7.28% 1-week, with tiny $81M market cap providing high-beta upside potential; no negative catalysts found, and the momentum is the strongest among all tracked assets.",
-      "drivers": [
-        "+52.81% 1-month gain",
-        "+7.28% 1-week momentum",
-        "micro-cap ($81M) high beta"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "LINK gains +38.31% in 1-month, ranks second among majors on Kalshi for positive 2026 return odds (30%), with positive news sentiment of 0.207; market cap $8.4B offers reasonable size for continued momentum.",
-      "drivers": [
-        "+38.31% 1-month return",
-        "Kalshi 30% positive 2026 odds",
-        "positive sentiment 0.207"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "OCEAN surges +37.15% in 1-month with +1.80% weekly gain, showing strong momentum with no market cap cap limiting upside; the AI sector tailwind from Nvidia earnings and crypto-AI crossover supports further upside.",
-      "drivers": [
-        "+37.15% 1-month momentum",
-        "AI sector tailwind",
-        "positive weekly momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ETH gains +30.78% in 1-month, market cap $295B with positive sentiment 0.098; as the leading smart-contract L2 hub, benefits from rate-cut expectations and ETF flow potential, despite 1-week dip of -2.95%.",
-      "drivers": [
-        "+30.78% 1-month gain",
-        "large-cap liquidity $295B",
-        "positive sentiment 0.098"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "PEPE climbs +28.75% in 1-month with positive sentiment 0.103, benefiting from Bitcoin rally to $80K and meme-coin retail interest; top meme coin by momentum as Bitcoin briefly touched $80K [themarketperiodical.com](https://themarketperiodical.com/2026/08/30/qcp-reveals-3-reasons-behind-bitcoin-price-rally-to-80k-is-83k-next/).",
-      "drivers": [
-        "+28.75% 1-month momentum",
-        "positive sentiment 0.103",
-        "meme sector rally catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XRP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "XRP gains +28.23% in 1-month, $85.6B market cap with resilient ETF demand despite Fed pressure breaking support; Kalshi 25% positive 2026 return odds among majors, and sentiment -0.054 shows room for improvement.",
-      "drivers": [
-        "+28.23% 1-month return",
-        "ETF demand resilient",
-        "Kalshi 25% positive 2026 odds"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "BTC recovers +23.77% in 1-month on spot ETF inflows ($2.8B over 8 sessions) and short covering, with QCP noting derivatives leverage fell while price rose; faces $81K-$86K supply but holds above $73,880 support [themarketperiodical.com](https://themarketperiodical.com/2026/08/30/qcp-reveals-3-reasons-behind-bitcoin-price-rally-to-80k-is-83k-next/). Base asset for any crypto portfolio.",
-      "drivers": [
-        "+23.77% 1-month rally",
-        "$2.8B ETF inflows",
-        "short covering vs leverage drop"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "VIRTUAL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "VIRTUAL gains +23.46% in 1-month and +4.55% YTD, the only tracked AI agent token with positive YTD return; small cap $445M offers high-beta AI exposure with positive sentiment catalyst from Solana ecosystem overlap.",
-      "drivers": [
-        "+23.46% 1-month gain",
-        "positive YTD +4.55%",
-        "AI agent narrative"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "POL gains +19.40% in 1-month despite -25.51% weekly drubbing, showing strong monthly momentum with a small $931M cap; the severe weekly pullback may offer a contrarian entry if buyers return, but requires caution.",
-      "drivers": [
-        "+19.40% 1-month gain",
-        "small cap ($931M) opportunity",
-        "oversold weekly -25.51% reversal potential"
       ]
     }
   ]

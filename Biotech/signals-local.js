@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-02 12:58",
+  "updated": "2026-09-04 12:59",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMGN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +38.32%, 1M +14.54%, positive news sentiment 0.39, and recent Repatha mortality reduction data & raised 2026 guidance reinforce strong momentum.",
+      "drivers": [
+        "Repatha mortality data",
+        "raised 2026 guidance",
+        "YTD +38%",
+        "positive news sentiment 0.39"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +43.19%, 1M +19.07%, strong_buy consensus (an_score 1.5), and low short interest of 3.07%.",
+      "drivers": [
+        "strong_buy consensus",
+        "YTD +43%",
+        "low short interest 3.07%",
+        "1M momentum +19%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +23.41%, 1M +16.55%, low short interest 1.85%, and buy consensus (an_score 1.67) with P/E 32.5.",
+      "drivers": [
+        "low short interest 1.85%",
+        "strong 1M momentum +16.55%",
+        "buy consensus",
+        "P/E 32.5"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +30.13%, low P/E of 15.0, high dividend yield 3.72%, and buy consensus despite slightly negative news sentiment -0.064.",
+      "drivers": [
+        "low P/E 15.0",
+        "high dividend yield 3.72%",
+        "YTD +30%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +26.21%, low P/E of 16.41, positive news sentiment 0.179, and short interest 7.9%.",
+      "drivers": [
+        "low P/E 16.41",
+        "positive news sentiment 0.179",
+        "YTD +26%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +35.68%, P/E 18.59, buy consensus, and 1W +7.00% momentum offset by high short interest of 15.46%.",
+      "drivers": [
+        "strong YTD +35.68%",
+        "reasonable P/E 18.59",
+        "buy consensus",
+        "1W momentum +7%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "P/E 21.1, positive news sentiment 0.356, low short interest 2.46%, and buy consensus (an_score 1.89).",
+      "drivers": [
+        "low P/E 21.1",
+        "positive news sentiment 0.356",
+        "low short interest 2.46%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +25.89%, 1M +11.81%, low short interest 1.87%, and buy consensus (an_score 1.75).",
+      "drivers": [
+        "low short interest 1.87%",
+        "strong YTD +25.89%",
+        "1M momentum +11.81%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Very positive news sentiment 0.471, buy consensus (an_score 1.74), and 1M +9.40% despite high P/E 179.5.",
+      "drivers": [
+        "very positive news sentiment 0.471",
+        "buy consensus",
+        "1M momentum +9.40%",
+        "low short 5.28%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Positive news sentiment 0.276, low short interest 0.74%, buy consensus (an_score 1.7), and P/E 38.9.",
+      "drivers": [
+        "low short interest 0.74%",
+        "positive news sentiment 0.276",
+        "buy consensus",
+        "P/E 38.9"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+382.40%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +382.40% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +382.40% \u2265 182.9% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRNA",
@@ -132,139 +277,6 @@ window.SIGNALS_DATA = {
         "P/E 17.19 attractive",
         "Analyst buy",
         "Low beta 0.422"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Exceptional momentum (+38.55% YTD, +18.41% 1M) backed by a strong_buy analyst consensus (score 1.50) and positive news sentiment (0.12), with a $45.7B market cap reflecting robust growth in genomics-based cancer diagnostics.",
-      "drivers": [
-        "+38.55% YTD return",
-        "strong_buy analyst consensus",
-        "positive news sentiment 0.12",
-        "large-cap genomics leader"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ALNY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Powerful catalyst from ESC 2026 data showing vutrisiran cuts ATTR-CM decline risk by 52% [stocktitan.net], driving +17.23% 1M momentum; analyst buy (1.68) and positive news sentiment (0.226) despite -39.79% YTD, with a reasonable P/E of 41.98.",
-      "drivers": [
-        "ESC 2026 vutrisiran data",
-        "+17.23% 1M momentum",
-        "buy analyst consensus",
-        "positive news sentiment 0.226"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "Explosive momentum (+358.88% YTD, +158.32% 1M) fueled by FDA approval of updated COVID-19 vaccines [biospace.com] and breakthrough mRNA cancer vaccine data with Merck [straitstimes.com]; analyst hold (2.64) and no P/E reflect binary risk, but news sentiment is positive (0.201).",
-      "drivers": [
-        "+358.88% YTD",
-        "FDA approval 2026-2027 vaccines",
-        "mRNA cancer vaccine breakthrough",
-        "positive news sentiment 0.201"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Strong 1M momentum (+18.13%) ahead of CTX310 Phase 1a durability data at ESC [ts2.tech], with analyst buy consensus (2.05) and an $80 price target implying 31% upside; high short interest (22.2%) adds squeeze potential, though news sentiment is neutral (0.01).",
-      "drivers": [
-        "+18.13% 1M momentum",
-        "CTX310 ESC data catalyst",
-        "buy analyst consensus",
-        "22.2% short interest"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Solid all-round performer with +33.82% YTD, +12.21% 1M, a reasonable P/E of 26.7, positive news sentiment (0.222), and a buy analyst rating (2.47); large-cap stability ($232B) with a 2.33% dividend yield.",
-      "drivers": [
-        "+33.82% YTD",
-        "P/E 26.7",
-        "positive news sentiment 0.222",
-        "2.33% dividend yield"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "High momentum (+38.16% YTD, +34.57% 1M, +11.18% 1W) driven by expanded Nuvaxovid royalties and partner execution; no analyst rating and high short interest (28.98%) add risk, but news sentiment is mildly positive (0.083).",
-      "drivers": [
-        "+34.57% 1M momentum",
-        "+38.16% YTD",
-        "high short interest 28.98%",
-        "expanded royalty narrative"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SRPT",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Impressive 1M surge (+38.73%) and 1W gain (+13.71%) ahead of late-2026 clinical data, but YTD is negative (-3.26%) and analyst consensus is hold (2.67); high short interest (30.69%) could amplify moves, with news sentiment positive (0.173).",
-      "drivers": [
-        "+38.73% 1M momentum",
-        "late-2026 clinical catalyst",
-        "30.69% short interest",
-        "positive news sentiment 0.173"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "IONS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Decent 1M momentum (+16.38%) with a buy analyst consensus (1.79) and positive news sentiment (0.146); YTD is weak (-24.38%) but the commercial pipeline narrative supports a turnaround, and market cap ($10B) provides scale.",
-      "drivers": [
-        "+16.38% 1M momentum",
-        "buy analyst consensus",
-        "positive news sentiment 0.146",
-        "commercial pipeline catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.45,
-      "rationale": "Strong_buy analyst consensus (1.33) and +12.58% 1M momentum, but negative news sentiment (-0.177) and very high short interest (36.48%) signal caution; YTD +5.86% and stretched valuation per web search [simplywallst].",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "+12.58% 1M momentum",
-        "36.48% short interest",
-        "negative news sentiment -0.177"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EDIT",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "Strong YTD (+48.78%) and 1M (+18.22%) momentum, with a buy analyst rating (2.08); however, negative news sentiment (-0.081), tiny market cap ($0.47B), and high short interest (16.1%) make it a high-risk, high-reward gene-editing play.",
-      "drivers": [
-        "+48.78% YTD",
-        "+18.22% 1M momentum",
-        "buy analyst consensus",
-        "16.1% short interest"
       ]
     }
   ]

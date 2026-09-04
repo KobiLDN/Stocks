@@ -1,9 +1,176 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-02 13:06",
+  "updated": "2026-09-04 13:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+21% YTD, P/E 28.9, strong_buy consensus, AI tailwind from Hugging Face acquisition and data centre demand",
+      "drivers": [
+        "+21% YTD",
+        "P/E 28.9",
+        "strong_buy consensus",
+        "AI catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+39% YTD, P/E 20.4, 3.4% dividend yield, strong energy momentum supported by oil price tailwinds",
+      "drivers": [
+        "+39% YTD",
+        "P/E 20.4",
+        "3.4% dividend",
+        "energy tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+36% YTD, P/E 32, low beta 0.23, positive news sentiment 0.20, defensive healthcare exposure",
+      "drivers": [
+        "+36% YTD",
+        "low beta 0.23",
+        "P/E 32",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+12% 1M, P/E 26, very high news sentiment 0.48, buy consensus, streaming margin expansion story",
+      "drivers": [
+        "+12% 1M",
+        "P/E 26",
+        "news sentiment 0.48",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MRK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+45% YTD, +19% 1M, but high P/E 123 and negative news on Keytruda patent cliff; momentum remains strong",
+      "drivers": [
+        "+45% YTD",
+        "+19% 1M",
+        "P/E 123",
+        "Keytruda warning"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TSLA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+15% 1M, Cybercab launch in Austin catalyst, but P/E 333 and NHTSA evaluation add risk; high reward optionality",
+      "drivers": [
+        "+15% 1M",
+        "Cybercab launch",
+        "P/E 333",
+        "NHTSA evaluation"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+12% 1M, P/E 21, positive sentiment 0.29, buy consensus, diversified entertainment and gaming exposure",
+      "drivers": [
+        "+12% 1M",
+        "P/E 21",
+        "news sentiment 0.29",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+9.5% 1M, P/E 32.8, positive sentiment 0.27, analyst buy, life sciences tools demand recovery",
+      "drivers": [
+        "+9.5% 1M",
+        "P/E 32.8",
+        "news sentiment 0.27",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+11% 1M, P/E 27, positive sentiment 0.24, but YTD -6.8%; enterprise software cloud transition tailwind",
+      "drivers": [
+        "+11% 1M",
+        "P/E 27",
+        "news sentiment 0.24",
+        "YTD -6.8%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NVO",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+8.7% 1M, low P/E 11.6, but YTD -4.8% and no analyst rating; GLP-1 competition weighs on outlook",
+      "drivers": [
+        "+8.7% 1M",
+        "P/E 11.6",
+        "YTD -4.8%",
+        "obesity drug competition"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.792,
+      "ytd": "+132.78%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +132.78% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +132.78% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.665,
+      "ytd": "+111.44%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +111.44% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +111.44% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.621,
+      "ytd": "+104.13%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +104.13% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +104.13% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRK",
@@ -132,173 +299,6 @@ window.SIGNALS_DATA = {
         "+6.81% 1M",
         "dividend yield 2.56%",
         "energy security tailwind"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.751,
-      "ytd": "+125.93%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +125.93% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +125.93% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.63,
-      "ytd": "+105.67%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +105.67% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +105.67% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.624,
-      "ytd": "+104.67%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +104.67% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +104.67% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Up 40.49% YTD and 13.21% in the past month, with exceptionally positive news sentiment (0.376) and analyst buy consensus. P/E of 117.9 reflects strong earnings growth from pharmaceutical pipeline momentum.",
-      "drivers": [
-        "+40.49% YTD",
-        "+13.21% 1m",
-        "news_s 0.376",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Up 16.66% YTD and 9.61% in the past month, with strong_buy analyst consensus (score 1.28) and positive news sentiment (0.13). P/E of 27.78 is reasonable for the AI infrastructure leader benefiting from sustained capex.",
-      "drivers": [
-        "+16.66% YTD",
-        "+9.61% 1m",
-        "strong_buy consensus",
-        "P/E 27.78"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Up 8.35% YTD and 9.78% in the past month, with strong_buy consensus (an_score 1.36). P/E of 28.34 and beta of 1.1 provide a balanced growth profile, supported by cloud and AI monetization tailwinds.",
-      "drivers": [
-        "+8.35% YTD",
-        "+9.78% 1m",
-        "strong_buy consensus",
-        "P/E 28.34"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Up 36.01% YTD and 5.71% in the past month, with a P/E of 19.83 and a dividend yield of 3.56%. Analyst consensus is buy despite negative news sentiment (-0.274), benefiting from energy price strength and capital returns.",
-      "drivers": [
-        "+36.01% YTD",
-        "P/E 19.83",
-        "div yield 3.56%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Up 20.83% in the past month, with analyst buy consensus (score 1.62) and positive news sentiment (0.08). Cloud backlog grew 27% and cloud revenue rose 22% in Q2, underpinning guidance upgrades despite a UBS downgrade on AI monetization concerns.",
-      "drivers": [
-        "+20.83% 1m",
-        "cloud backlog +27%",
-        "analyst buy",
-        "news_s 0.08"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NFLX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Up 12.86% in the past month, with a P/E of 25.45 and analyst buy consensus (score 1.76). News sentiment is positive (0.102), and the streaming leader continues to benefit from subscriber growth and ad-tier expansion.",
-      "drivers": [
-        "+12.86% 1m",
-        "P/E 25.45",
-        "analyst buy",
-        "news_s 0.102"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TSLA",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Up 17.17% in the past month, with positive news sentiment (0.254) and analyst buy consensus (score 2.35). Q2 revenue reached $28.2B with FSD subscribers at 1.5M, but high P/E of 337.7 and negative free cash flow add risk.",
-      "drivers": [
-        "+17.17% 1m",
-        "news_s 0.254",
-        "Q2 rev $28.2B",
-        "P/E 337.7 high"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Up 14.96% in the past month, with a P/E of 19.39 and a dividend yield of 2.23%. Despite negative news sentiment (-0.061) and no analyst consensus, the valuation is attractive and the company benefits from smartphone recovery and automotive chip growth.",
-      "drivers": [
-        "+14.96% 1m",
-        "P/E 19.39",
-        "div yield 2.23%",
-        "valuation attractive"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Up 7.05% in the past month and 3.96% YTD, with a P/E of 33.05 and analyst buy consensus (score 1.57). News sentiment is neutral (0.031), and the life sciences leader is poised for steady demand from biopharma spending.",
-      "drivers": [
-        "+7.05% 1m",
-        "YTD +3.96%",
-        "analyst buy",
-        "P/E 33.05"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SONY",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Up 6.88% in the past month, with a P/E of 21.25 and a dividend yield of 0.64%. Negative news sentiment (-0.033) and no analyst consensus, but the stock is trading at a discount with potential catalysts from gaming and entertainment segments.",
-      "drivers": [
-        "+6.88% 1m",
-        "P/E 21.25",
-        "YTD -3.94%",
-        "no consensus"
       ]
     }
   ]
