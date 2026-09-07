@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-09-07 07:37",
-  "fx_gbp_usd": 1.3529,
+  "updated": "2026-09-07 15:09",
+  "fx_gbp_usd": 1.3538,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,8 +19,8 @@ window.PRICES_DATA = {
       "high_gbp": "130",
       "high_usd": 176.41,
       "bar_pct": 75,
-      "market_cap_gbp_b": 484.674,
-      "market_cap_usd_b": 655.727,
+      "market_cap_gbp_b": 484.372,
+      "market_cap_usd_b": 655.726,
       "beta": 0.175,
       "pe_ratio": 20.52,
       "avg_volume_m": 15.58,
@@ -32,6 +32,20 @@ window.PRICES_DATA = {
       "vol_1w": 70980200,
       "vol_1m": 323466000,
       "news": [
+        {
+          "title": "TotalEnergies Cuts Papua LNG Cost to $14 Billion, Exxon to Become Operator",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/totalenergies-cuts-papua-lng-cost-083000825.html",
+          "published": 1788769800,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Santos Boosts Papua LNG Stake as ExxonMobil Takes Operatorship",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/santos-boosts-papua-lng-stake-082000701.html",
+          "published": 1788769200,
+          "sentiment": 0.318
+        },
         {
           "title": "Oil Majors Seek Bigger Bargaining Power in Labor Disputes",
           "publisher": "Oilprice.com",
@@ -52,23 +66,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/09/05/why-i-just-added-to-my-chevron-position-despite-ne/",
           "published": 1788631980,
           "sentiment": 0.341
-        },
-        {
-          "title": "Exxon Falls While Diesel Margins Explode to $108",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/energy/articles/exxon-falls-while-diesel-margins-192742941.html",
-          "published": 1788550062,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Can ExxonMobil Benefit From the Current Energy Market Tightness?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/exxonmobil-benefit-current-energy-market-134600503.html",
-          "published": 1788529560,
-          "sentiment": 0.625
         }
       ],
-      "news_sentiment": 0.139
+      "news_sentiment": 0.018
     },
     {
       "ticker": "CVX",
@@ -87,8 +87,8 @@ window.PRICES_DATA = {
       "high_gbp": "159",
       "high_usd": 214.71,
       "bar_pct": 91,
-      "market_cap_gbp_b": 302.449,
-      "market_cap_usd_b": 409.19,
+      "market_cap_gbp_b": 302.261,
+      "market_cap_usd_b": 409.191,
       "beta": 0.491,
       "pe_ratio": 20.08,
       "avg_volume_m": 8.45,
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.9,
       "bar_pct": 93,
-      "market_cap_gbp_b": 196.544,
-      "market_cap_usd_b": 265.909,
+      "market_cap_gbp_b": 196.421,
+      "market_cap_usd_b": 265.908,
       "beta": -0.22,
       "pe_ratio": 10.28,
       "avg_volume_m": 6.39,
@@ -168,6 +168,13 @@ window.PRICES_DATA = {
       "vol_1w": 37703822,
       "vol_1m": 134265042,
       "news": [
+        {
+          "title": "British energy giant BP names Ian Tyler as chair after boardroom turmoil",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/09/02/british-energy-giant-bp-names-ian-tyler-as-chair-after-boardroom-turmoil",
+          "published": 1788771044,
+          "sentiment": -0.103
+        },
         {
           "title": "T Mobile US (TMUS) Sets Up CFO Handover With Jessica Uhl Joining In September",
           "publisher": "Simply Wall St.",
@@ -195,16 +202,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/shell-lse-shel-weighs-malaysian-181343700.html",
           "published": 1788545623,
           "sentiment": 0.361
-        },
-        {
-          "title": "Sector Update: Energy Stocks Lower in Afternoon Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-lower-afternoon-175510988.html",
-          "published": 1788544510,
-          "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.162
+      "news_sentiment": 0.147
     },
     {
       "ticker": "BP",
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 71,
-      "market_cap_gbp_b": 83.396,
+      "market_cap_gbp_b": 83.344,
       "market_cap_usd_b": 112.828,
       "beta": -0.22,
       "pe_ratio": 20.96,
@@ -236,6 +236,13 @@ window.PRICES_DATA = {
       "vol_1w": 50596300,
       "vol_1m": 200390800,
       "news": [
+        {
+          "title": "British energy giant BP names Ian Tyler as chair after boardroom turmoil",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/09/02/british-energy-giant-bp-names-ian-tyler-as-chair-after-boardroom-turmoil",
+          "published": 1788771044,
+          "sentiment": -0.103
+        },
         {
           "title": "Oil Majors Seek Bigger Bargaining Power in Labor Disputes",
           "publisher": "Oilprice.com",
@@ -263,16 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/world-indices/articles/european-equities-traded-us-american-150559563.html",
           "published": 1788534359,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Pre-Bell Friday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-pre-132629779.html",
-          "published": 1788528389,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": -0.009
+      "news_sentiment": -0.084
     },
     {
       "ticker": "TTE",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 85,
-      "market_cap_gbp_b": 144.886,
+      "market_cap_gbp_b": 144.796,
       "market_cap_usd_b": 196.02,
       "beta": 0.06,
       "pe_ratio": 11.09,
@@ -304,6 +304,20 @@ window.PRICES_DATA = {
       "vol_1w": 10149100,
       "vol_1m": 35390900,
       "news": [
+        {
+          "title": "TotalEnergies Cuts Papua LNG Cost to $14 Billion, Exxon to Become Operator",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/totalenergies-cuts-papua-lng-cost-083000825.html",
+          "published": 1788769800,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Santos Boosts Papua LNG Stake as ExxonMobil Takes Operatorship",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/santos-boosts-papua-lng-stake-082000701.html",
+          "published": 1788769200,
+          "sentiment": 0.318
+        },
         {
           "title": "Sector Update: Energy Stocks Softer Late Afternoon",
           "publisher": "MT Newswires",
@@ -324,23 +338,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-lower-afternoon-175510988.html",
           "published": 1788544510,
           "sentiment": -0.026
-        },
-        {
-          "title": "Here Are Friday\u2019s Top Wall Street Analyst Research Calls: Ambarella, Cal-Maine Foods, Lennar, Ormat Technologies, Paychex, PulteGroup, Shell plc, TotalEnergies, W.P. Carey, and More",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/04/here-are-fridays-top-wall-street-analyst-research-calls-ambarella-cal-maine-foods-lennar-ormat-technologies-paychex-pultegroup-shell-plc-totalenergies-w-p-carey-and-more/",
-          "published": 1788523619,
-          "sentiment": 0.202
-        },
-        {
-          "title": "TotalEnergies completes Galp swap to operate Namibia\u2019s Mopane find",
-          "publisher": "Offshore Technology",
-          "url": "https://www.offshore-technology.com/news/totalenergies-galp-swap-namibia-mopane/",
-          "published": 1788518614,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.079
+      "news_sentiment": 0.043
     },
     {
       "ticker": "EQNR",
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 44.33,
       "bar_pct": 90,
-      "market_cap_gbp_b": 73.836,
+      "market_cap_gbp_b": 73.79,
       "market_cap_usd_b": 99.894,
       "beta": -0.727,
       "pe_ratio": 11.41,
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "102",
       "high_usd": 137.42,
       "bar_pct": 94,
-      "market_cap_gbp_b": 119.217,
+      "market_cap_gbp_b": 119.143,
       "market_cap_usd_b": 161.292,
       "beta": 0.134,
       "pe_ratio": 17.76,
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 74,
-      "market_cap_gbp_b": 44.362,
+      "market_cap_gbp_b": 44.334,
       "market_cap_usd_b": 60.018,
       "beta": 0.164,
       "pe_ratio": 17.71,
@@ -563,7 +563,7 @@ window.PRICES_DATA = {
       "high_gbp": "114",
       "high_usd": 153.67,
       "bar_pct": 84,
-      "market_cap_gbp_b": 56.29,
+      "market_cap_gbp_b": 56.255,
       "market_cap_usd_b": 76.156,
       "beta": 0.272,
       "pe_ratio": 11.3,
@@ -628,11 +628,11 @@ window.PRICES_DATA = {
       "return_1yr": "+115%",
       "low_gbp": "120",
       "low_usd": 161.93,
-      "high_gbp": "295",
+      "high_gbp": "294",
       "high_usd": 398.52,
       "bar_pct": 96,
-      "market_cap_gbp_b": 80.724,
-      "market_cap_usd_b": 109.213,
+      "market_cap_gbp_b": 80.673,
+      "market_cap_usd_b": 109.212,
       "beta": 0.527,
       "pe_ratio": 13.48,
       "avg_volume_m": 2.37,
@@ -644,6 +644,13 @@ window.PRICES_DATA = {
       "vol_1w": 12411400,
       "vol_1m": 58113800,
       "news": [
+        {
+          "title": "Here is What to Know Beyond Why Marathon Petroleum Corporation (MPC) is a Trending Stock",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-marathon-petroleum-130002567.html",
+          "published": 1788786002,
+          "sentiment": 0.0
+        },
         {
           "title": "S&P 500 Posts Slight Weekly Gain as Energy Climbs, Consumer Discretionary Weighs",
           "publisher": "MT Newswires",
@@ -671,16 +678,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-stock-still-buy-135200356.html",
           "published": 1788529920,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why Oil Majors Don\u2019t Want to Build New U.S. Refineries",
-          "publisher": "Oilprice.com",
-          "url": "https://finance.yahoo.com/energy/articles/why-oil-majors-don-t-230000574.html",
-          "published": 1788476400,
-          "sentiment": 0.077
         }
       ],
-      "news_sentiment": 0.235
+      "news_sentiment": 0.22
     },
     {
       "ticker": "VLO",
@@ -694,12 +694,12 @@ window.PRICES_DATA = {
       "change_1m": "+22.60%",
       "change_ytd": "+127.58%",
       "return_1yr": "+136%",
-      "low_gbp": "114",
+      "low_gbp": "113",
       "low_usd": 153.6,
       "high_gbp": "277",
       "high_usd": 375.11,
       "bar_pct": 98,
-      "market_cap_gbp_b": 78.896,
+      "market_cap_gbp_b": 78.847,
       "market_cap_usd_b": 106.74,
       "beta": 0.568,
       "pe_ratio": 15.45,
@@ -712,6 +712,13 @@ window.PRICES_DATA = {
       "vol_1w": 14494300,
       "vol_1m": 56621300,
       "news": [
+        {
+          "title": "Here's How Much a $1000 Investment in Valero Energy Made 10 Years Ago Would Be Worth Today",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/heres-much-1000-investment-valero-123003659.html",
+          "published": 1788784203,
+          "sentiment": 0.459
+        },
         {
           "title": "Does Valero Energy (VLO) Still Sit Above Fair Value After Its 7x Run?",
           "publisher": "Simply Wall St.",
@@ -739,23 +746,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/3-refining-stocks-more-100-135600345.html",
           "published": 1788530160,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is Marathon Petroleum Stock Still a Buy After More Than Doubling YTD?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-stock-still-buy-135200356.html",
-          "published": 1788529920,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.268
+      "news_sentiment": 0.36
     },
     {
       "ticker": "SLB",
       "company_name": "SLB (Schlumberger)",
       "category": "oilfield-services",
       "exchange": "NYSE",
-      "price_gbp": "43",
+      "price_gbp": "42",
       "price_usd": 57.51,
       "change_1d": "+0.17%",
       "change_1w": "+0.83%",
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "45",
       "high_usd": 60.46,
       "bar_pct": 90,
-      "market_cap_gbp_b": 63.088,
-      "market_cap_usd_b": 85.353,
+      "market_cap_gbp_b": 63.049,
+      "market_cap_usd_b": 85.354,
       "beta": 0.774,
       "pe_ratio": 28.05,
       "avg_volume_m": 13.72,
@@ -780,6 +780,13 @@ window.PRICES_DATA = {
       "vol_1w": 84454900,
       "vol_1m": 259782700,
       "news": [
+        {
+          "title": "Is SLB Stock Underperforming the S&P 500?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4471891/is-slb-stock-underperforming-the-s-p-500",
+          "published": 1788763934,
+          "sentiment": 0.0
+        },
         {
           "title": "How Could SLB (SLB) Change After Its Upstream Software Deal?",
           "publisher": "Simply Wall St.",
@@ -807,16 +814,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-aptiv-plc-aptv-down-153007878.html",
           "published": 1788449407,
           "sentiment": 0.0
-        },
-        {
-          "title": "SLB\u2019s Kelvion Deal Could Change How Investors Value the Oilfield Giant",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/articles/slbs-kelvion-deal-could-change-how-investors-value-the-oilfield-giant/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1788434700,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.176
+      "news_sentiment": 0.108
     },
     {
       "ticker": "HAL",
@@ -835,8 +835,8 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 71,
-      "market_cap_gbp_b": 22.828,
-      "market_cap_usd_b": 30.885,
+      "market_cap_gbp_b": 22.813,
+      "market_cap_usd_b": 30.883,
       "beta": 0.769,
       "pe_ratio": 19.41,
       "avg_volume_m": 11.95,
@@ -903,7 +903,7 @@ window.PRICES_DATA = {
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 74,
-      "market_cap_gbp_b": 46.592,
+      "market_cap_gbp_b": 46.563,
       "market_cap_usd_b": 63.035,
       "beta": 0.961,
       "pe_ratio": 20.42,
@@ -916,6 +916,13 @@ window.PRICES_DATA = {
       "vol_1w": 32879400,
       "vol_1m": 142361000,
       "news": [
+        {
+          "title": "Baker Hughes to provide stimulation services for bp in UK North Sea",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/baker-hughes-stimulation-services-bp-uk/",
+          "published": 1788768968,
+          "sentiment": 0.0
+        },
         {
           "title": "Basin rig count up one as prices surge",
           "publisher": "Odessa American, Texas",
@@ -943,13 +950,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-pre-132629779.html",
           "published": 1788528389,
           "sentiment": 0.273
-        },
-        {
-          "title": "Baker Hughes Deepens Pakistan Footprint With OGDC's Multi-Year Deal",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/baker-hughes-deepens-pakistan-footprint-114900915.html",
-          "published": 1788522540,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.08
@@ -971,7 +971,7 @@ window.PRICES_DATA = {
       "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 48,
-      "market_cap_gbp_b": 128.635,
+      "market_cap_gbp_b": 128.555,
       "market_cap_usd_b": 174.033,
       "beta": 0.644,
       "pe_ratio": 18.75,
@@ -1028,29 +1028,29 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 32.48,
-      "change_1d": "+1.09%",
-      "change_1w": "+0.84%",
-      "change_1m": "+1.91%",
-      "change_ytd": "+7.64%",
+      "price_usd": 32.82,
+      "change_1d": "+0.83%",
+      "change_1w": "-1.02%",
+      "change_1m": "+1.42%",
+      "change_ytd": "+8.67%",
       "return_1yr": "+46%",
       "low_gbp": "16",
-      "low_usd": 22.01,
+      "low_usd": 22.02,
       "high_gbp": "28",
-      "high_usd": 37.44,
-      "bar_pct": 68,
-      "market_cap_gbp_b": 0.29,
-      "market_cap_usd_b": 0.392,
+      "high_usd": 37.47,
+      "bar_pct": 70,
+      "market_cap_gbp_b": 0.292,
+      "market_cap_usd_b": 0.395,
       "beta": 0.579,
-      "pe_ratio": 22.87,
+      "pe_ratio": 23.09,
       "avg_volume_m": 3.11,
       "div_yield_pct": 286.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.94,
-      "vol_1d": 2617597,
-      "vol_1w": 16365411,
-      "vol_1m": 56324747,
+      "vol_1d": 287940,
+      "vol_1w": 13606908,
+      "vol_1m": 50005176,
       "news": [
         {
           "title": "UK PM Burnham uses policy blitz to buy time for tougher decisions",
@@ -1104,10 +1104,10 @@ window.PRICES_DATA = {
       "return_1yr": "-6%",
       "low_gbp": "19",
       "low_usd": 25.78,
-      "high_gbp": "55",
+      "high_gbp": "54",
       "high_usd": 73.74,
       "bar_pct": 22,
-      "market_cap_gbp_b": 3.552,
+      "market_cap_gbp_b": 3.55,
       "market_cap_usd_b": 4.806,
       "beta": 1.643,
       "pe_ratio": 36.01,
@@ -1175,8 +1175,8 @@ window.PRICES_DATA = {
       "high_gbp": "237",
       "high_usd": 320.95,
       "bar_pct": 16,
-      "market_cap_gbp_b": 16.241,
-      "market_cap_usd_b": 21.973,
+      "market_cap_gbp_b": 16.23,
+      "market_cap_usd_b": 21.972,
       "beta": 1.733,
       "pe_ratio": 12.61,
       "avg_volume_m": 2.13,
@@ -1243,8 +1243,8 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 45.18,
       "bar_pct": 6,
-      "market_cap_gbp_b": 4.357,
-      "market_cap_usd_b": 5.895,
+      "market_cap_gbp_b": 4.354,
+      "market_cap_usd_b": 5.894,
       "beta": 1.158,
       "pe_ratio": null,
       "avg_volume_m": 1.65,
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "24",
       "high_usd": 33.02,
       "bar_pct": 5,
-      "market_cap_gbp_b": 20.623,
+      "market_cap_gbp_b": 20.61,
       "market_cap_usd_b": 27.901,
       "beta": 0.624,
       "pe_ratio": null,
