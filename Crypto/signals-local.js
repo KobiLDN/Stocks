@@ -1,9 +1,140 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-04 13:03",
+  "updated": "2026-09-07 14:20",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Chainlink surged +63.52% 1M and +10.29% 1D with a short squeeze spike \u2014 a whale sent $7.6M to Coinbase [coinedition.com](https://coinedition.com/chainlink-price-prediction-whale-sends-7-6m-to-coinbase-as-link-hits-a-fresh-high/) and DTCC targets Q4 launch with Chainlink. Market cap $10.1B, news sentiment +0.065.",
+      "drivers": [
+        "+63.52% 1M return",
+        "Whale deposit $7.6M to Coinbase",
+        "Short squeeze mechanics",
+        "DTCC collateral platform Q4"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ICP",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "ICP rallied +13.66% 1D and +43.05% 1M to a 4-month high above $3, driven by DFINITY AI advancement and Bitcoin L2 integration [tradingkey.com](https://www.tradingkey.com/analysis/cryptocurrencies/more/262153882-crypto-internet-computer-icp-dfinity-layer1-google-aws-tradingkey). Market cap $1.67B.",
+      "drivers": [
+        "+13.66% 1D gain",
+        "+43.05% 1M rally",
+        "DFINITY AI & BTC L2 catalysts",
+        "Independent breakout despite BTC drop"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "NEAR climbed +51.60% 1M, +30.83% 1W, and +8.83% 1D with strong AI L1 narrative. Market cap $3.16B, but news sentiment slightly negative at -0.148.",
+      "drivers": [
+        "+51.60% 1M momentum",
+        "+30.83% 1W surge",
+        "AI L1 narrative",
+        "$3.16B market cap"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "XRP designated as digital commodity under Nasdaq Texas rule alongside SOL [digitaltoday.co.kr](https://www.digitaltoday.co.kr/en/view/100672/us-sec-nasdaq-texas-rule-xrp-solana-digital-commodities-signal). 11 consecutive days of ETF inflows, RLUSD stablecoin supply >$1B. Up +36.39% 1M, news sentiment +0.187.",
+      "drivers": [
+        "SEC digital commodity designation",
+        "11-day ETF inflow streak",
+        "RLUSD >$1B supply",
+        "+36.39% 1M return"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solana also named digital commodity in SEC rule change [digitaltoday.co.kr](https://www.digitaltoday.co.kr/en/view/100672/us-sec-nasdaq-texas-rule-xrp-solana-digital-commodities-signal). Up +40.87% 1M but faces taker sell pressure (ratio 0.7623) [blockchain.news](https://blockchain.news/news/20260907-price-prediction-sol-108-or-99-the-stall-at). Market cap $61.66B, news sentiment +0.342.",
+      "drivers": [
+        "SEC digital commodity nod",
+        "+40.87% 1M return",
+        "Top traders 70.2% long",
+        "Taker sell pressure caution"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TAO",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "TAO gained +35.93% 1M, +16.69% 1W, and +12.75% 1D, riding AI narrative momentum. Market cap $3.03B.",
+      "drivers": [
+        "+35.93% 1M return",
+        "+16.69% 1W gain",
+        "AI sector momentum",
+        "$3.03B market cap"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "WLD",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Worldcoin up +40.90% 1M, +18.01% 1W, +7.57% 1D; AI theme supports demand. Market cap $1.57B.",
+      "drivers": [
+        "+40.90% 1M return",
+        "+18.01% 1W gain",
+        "AI narrative",
+        "$1.57B market cap"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Ocean Protocol surged +56.89% 1M and +6.24% 1W, driven by AI data economy interest. Market cap not available.",
+      "drivers": [
+        "+56.89% 1M return",
+        "AI data economy catalyst",
+        "+6.24% 1W gain"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Mina Protocol posted the highest 1M return at +86.18% and +19.33% 1W, but micro-cap of $98M carries elevated risk.",
+      "drivers": [
+        "+86.18% 1M return",
+        "+19.33% 1W gain",
+        "Micro-cap risk ($98M)"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "AIOZ Network gained +36.38% 1M, +11.31% 1W, +5.93% 1D; small AI token with $81M market cap.",
+      "drivers": [
+        "+36.38% 1M return",
+        "+11.31% 1W gain",
+        "Small-cap AI play",
+        "$81M market cap"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BTC",
@@ -128,136 +259,6 @@ window.SIGNALS_DATA = {
         "+26.58% 1M",
         "Ethereum scaling",
         "1D recovery +1.50%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MINA",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Explosive momentum with +79% 1m, +18% 1w, +7.5% 1d despite tiny $0.093B market cap, suggesting a high-beta breakout in the emerging category.",
-      "drivers": [
-        "+79% 1-month return",
-        "+18% 1-week return",
-        "+7.5% 1-day return",
-        "micro-cap breakout"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SOL",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong 1m momentum (+37.2%), positive news sentiment (0.081), and institutional rotation with $10.19M daily ETF inflows on Sep 1 and $154M weekly inflows per Wintermute, plus network ATH of 5.2B non-vote transactions in August.",
-      "drivers": [
-        "+37.2% 1-month return",
-        "ETF inflows $10.19M daily",
-        "institutional rotation from BTC",
-        "network ATH transactions"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong 1m momentum (+35.95%), positive news sentiment (0.207), and solid $8.4B market cap, with Charles Schwab expanding crypto offerings as a catalyst.",
-      "drivers": [
-        "+35.95% 1-month return",
-        "news sentiment 0.207",
-        "market cap $8.4B",
-        "institutional adoption catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ICP",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Impressive short-term momentum with +23.8% 1m, +6% 1w, +5% 1d, and a $1.4B market cap, indicating renewed interest in the AI/blockchain crossover.",
-      "drivers": [
-        "+23.8% 1-month return",
-        "+6% 1-week return",
-        "+5% 1-day return",
-        "AI narrative"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "XRP",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong 1m momentum (+25.84%), large $84.5B market cap, and institutional inflows of $14.38M daily ETF inflows on Sep 1 and $110M weekly per Wintermute, despite short-term price dip.",
-      "drivers": [
-        "+25.84% 1-month return",
-        "ETF inflows $14.38M daily",
-        "institutional rotation",
-        "market cap $84.5B"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Strong 1m momentum (+30.17%), positive news sentiment (0.015), and consistent ETF inflows ($10.95M daily, $816M weekly) with no outflow days, supporting institutional demand.",
-      "drivers": [
-        "+30.17% 1-month return",
-        "ETF inflows $10.95M daily",
-        "no ETF outflow days",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "High 1m momentum (+39.51%) and slight 1w gain (+0.95%), but very small market cap (null) and no news sentiment, making it a speculative play.",
-      "drivers": [
-        "+39.51% 1-month return",
-        "+0.95% 1-week return",
-        "small cap speculative"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Solid 1m momentum (+23.49%) and dominant $1.56T market cap, but negative news sentiment (-0.031) and ETF outflows ($236M daily) amid geopolitical risk, still a core holding.",
-      "drivers": [
-        "+23.49% 1-month return",
-        "market cap $1.56T",
-        "ETF outflows $236M daily",
-        "geopolitical risk"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "VIRTUAL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Decent 1m momentum (+22.61%) and $0.454B market cap, but negative 1w (-8.91%) and 1d (-3.95%) with neutral news sentiment, a high-beta AI play.",
-      "drivers": [
-        "+22.61% 1-month return",
-        "AI agent platform narrative",
-        "negative short-term momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "Strong 1m momentum (+22.77%) but severe 1w drop (-26.03%) and negative 1d (-2.76%), suggesting a potential bounce candidate from oversold levels.",
-      "drivers": [
-        "+22.77% 1-month return",
-        "-26% 1-week drop",
-        "oversold bounce potential"
       ]
     }
   ]

@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-04 13:03",
+  "updated": "2026-09-07 14:23",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "COP",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +41.9%, 1M +17.5%, P/E 17.8, analyst score 1.69 (strong buy), and recent earnings beat with $7B FCF target by 2029 [oilprice.net].",
+      "drivers": [
+        "+17.5% 1M momentum",
+        "analyst score 1.69",
+        "earnings beat and FCF target",
+        "low short interest 1.41%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +138.2%, 1M +31.0%, P/E 13.5, analyst buy, benefiting from strong refining margins and oil price rally to $96 Brent [stockminded.com].",
+      "drivers": [
+        "+138% YTD",
+        "+31% 1M",
+        "P/E 13.5",
+        "refining margin tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +127.6%, 1M +22.6%, P/E 15.5, analyst buy, similar refining catalyst as MPC with positive news sentiment 0.27.",
+      "drivers": [
+        "+127.6% YTD",
+        "+22.6% 1M",
+        "P/E 15.5",
+        "positive news sentiment 0.27"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +37.5%, 1M +12.9%, P/E 20.1, dividend yield 3.4%, analyst score 1.72, low short interest 0.81%, and oil price tailwind.",
+      "drivers": [
+        "+12.9% 1M",
+        "dividend yield 3.4%",
+        "low short interest 0.81%",
+        "analyst score 1.72"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +45.4%, 1M +15.8%, analyst score 1.6 (best in universe), positive news sentiment 0.18, oilfield services demand rising with high oil prices.",
+      "drivers": [
+        "analyst score 1.6",
+        "+15.8% 1M",
+        "oilfield services demand",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +27.0%, 1M +17.0%, P/E 19.4, analyst score 1.75, news sentiment 0.30, benefiting from increased drilling activity.",
+      "drivers": [
+        "+17% 1M",
+        "analyst score 1.75",
+        "news sentiment 0.30",
+        "oilfield services catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +43.0%, 1M +11.6%, P/E 17.7, short interest 0.01% (extremely low), news sentiment 0.31, analyst buy.",
+      "drivers": [
+        "low short interest 0.01%",
+        "+11.6% 1M",
+        "news sentiment 0.31",
+        "P/E 17.7"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +38.7%, 1M +8.2%, P/E 11.3 (low), dividend yield 2.8%, analyst buy, good value in E&P.",
+      "drivers": [
+        "P/E 11.3",
+        "dividend yield 2.8%",
+        "+8.2% 1M",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +26.8%, 1M +7.6%, dividend yield 4.6% (high), short interest 0.28%, analyst buy, though news sentiment slightly negative.",
+      "drivers": [
+        "dividend yield 4.6%",
+        "low short interest 0.28%",
+        "+7.6% 1M",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +77.2%, 1M +11.5%, P/E 11.4, dividend yield 3.7%, but analyst hold (score 3.33). Strong momentum but cautious consensus.",
+      "drivers": [
+        "+77.2% YTD",
+        "P/E 11.4",
+        "dividend yield 3.7%",
+        "momentum tailwind"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "P/E 11.2",
         "div yield 4.7%",
         "an_score 1.0"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "MPC leads refining stocks with +134.6% YTD and P/E 13.3, driven by crack spread soaring to nearly $9/bbl ( triple January levels) [Pomegra News](https://pomegra.io/news/mpc-vlo-psx-hit-all-time-highs-on-crack-spread-surge).",
-      "drivers": [
-        "+135% YTD return",
-        "crack spread surge",
-        "low P/E 13.3",
-        "refining margin expansion"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "VLO surged +122.2% YTD with P/E 15.0 and positive news sentiment 0.26, benefiting from the same crack spread catalyst that propelled refiners to all-time highs [Pomegra News](https://pomegra.io/news/mpc-vlo-psx-hit-all-time-highs-on-crack-spread-surge).",
-      "drivers": [
-        "+122% YTD return",
-        "crack spread catalyst",
-        "strong news sentiment",
-        "low P/E 15.0"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "EQNR has gained +86.2% YTD with P/E 12.0 and an attractive dividend yield of 3.6%, though it carries no analyst coverage and negative beta.",
-      "drivers": [
-        "+86% YTD return",
-        "low P/E 12.0",
-        "high dividend 3.6%",
-        "strong momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "COP returned +43.9% YTD with P/E 17.5, low short interest of 1.4%, and an analyst score of 1.64, supported by tight oil supply dynamics [Reuters](https://reuters.com/business/energy/oil-up-nearly-1-us-iran-trade-fresh-strikes-2026-09-02/).",
-      "drivers": [
-        "+44% YTD return",
-        "low short interest 1.4%",
-        "favorable analyst score",
-        "oil supply risk"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "OXY gained +45.2% YTD with near-zero short interest (0.01%) and positive news sentiment 0.19, while CEO flagged offset Middle East disruptions via Permian volume [247 Wall St](https://247wallst.com/investing/2026/09/01/chevron-exxon-and-other-oil-stocks-jump-as-two-huge-energy-stories-collide/).",
-      "drivers": [
-        "+45% YTD return",
-        "negligible short interest",
-        "resilient production",
-        "positive news"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CVX rose +39.2% YTD, P/E 19.8, yield 3.5%, and is a direct beneficiary of the Venezuela deal to control 65B barrels of reserves and rising oil above $80 [247 Wall St](https://247wallst.com/investing/2026/09/01/chevron-exxon-and-other-oil-stocks-jump-as-two-huge-energy-stories-collide/).",
-      "drivers": [
-        "+39% YTD return",
-        "Venezuela reserves catalyst",
-        "low short 0.8%",
-        "strong dividend 3.5%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "XOM gained +36.9% YTD with P/E 20.7, benefited from supply disruptions and a potential $8B Shell chemicals acquisition [SimplyWall St](https://simplywall.st/stocks/us/energy/nyse-xom/exxonmobil-holdings/news/exxonmobil-holdings-xom-eyes-shell-chemicals-deal-as-fair-va).",
-      "drivers": [
-        "+37% YTD return",
-        "chemicals acquisition catalyst",
-        "low short 1.0%",
-        "oil price tailwind"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "TTE has +37.3% YTD, lowest P/E (11.1) among majors, highest dividend yield 4.8%, and a 'strong_buy' analyst consensus (score 1.0) with positive news sentiment 0.15.",
-      "drivers": [
-        "strong-buy analyst",
-        "lowest P/E 11.1",
-        "high dividend 4.8%",
-        "attractive valuation"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SLB has +43.8% YTD and strong one-month momentum (+15.9%), but its one-day drop of -5.4% and high short interest of 4.3% temper enthusiasm; analyst score 1.6 is best in group.",
-      "drivers": [
-        "+44% YTD return",
-        "strong 1m momentum",
-        "best analyst score 1.6",
-        "high short risk"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "HAL posted +25.5% YTD with +8.9% weekly and +15.4% monthly gains, but short interest of 5.0% and high short interest; positive news from oil rally and Venezuela deal [247 Wall St](https://247wallst.com/investing/2026/09/01/chevron-exxon-and-other-oil-stocks-jump-as-two-huge-energy-stories-collide/).",
-      "drivers": [
-        "+9% weekly gain",
-        "oil services demand",
-        "Venezuela deal lift",
-        "elevated short interest"
       ]
     }
   ]
