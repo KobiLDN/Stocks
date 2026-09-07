@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-09-07 20:37",
-  "fx_gbp_usd": 1.3539,
+  "updated": "2026-09-08 00:03",
+  "fx_gbp_usd": 1.3544,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,12 +19,12 @@ window.PRICES_DATA = {
       "high_gbp": "130",
       "high_usd": 176.41,
       "bar_pct": 75,
-      "market_cap_gbp_b": 484.307,
+      "market_cap_gbp_b": 484.136,
       "market_cap_usd_b": 655.727,
       "beta": 0.175,
       "pe_ratio": 20.52,
       "avg_volume_m": 15.58,
-      "div_yield_pct": 254.0,
+      "div_yield_pct": 258.0,
       "short_pct": 1.0,
       "analyst": "buy",
       "analyst_score": 2.32,
@@ -87,12 +87,12 @@ window.PRICES_DATA = {
       "high_gbp": "159",
       "high_usd": 214.71,
       "bar_pct": 91,
-      "market_cap_gbp_b": 302.22,
+      "market_cap_gbp_b": 302.114,
       "market_cap_usd_b": 409.191,
       "beta": 0.491,
       "pe_ratio": 20.08,
       "avg_volume_m": 8.45,
-      "div_yield_pct": 337.0,
+      "div_yield_pct": 341.0,
       "short_pct": 0.81,
       "analyst": "buy",
       "analyst_score": 1.72,
@@ -101,11 +101,25 @@ window.PRICES_DATA = {
       "vol_1m": 178401100,
       "news": [
         {
+          "title": "Chevron\u2019s Record Run Isn\u2019t Over Yet, BMO Says",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/chevron-record-run-isn-t-201647397.html",
+          "published": 1788812207,
+          "sentiment": 0.0
+        },
+        {
           "title": "2 Safe High-Yield Energy Dividend Stocks You've Probably Never Heard Of",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/09/07/3-safe-energy-dividends-youve-probably-never-heard/",
           "published": 1788803400,
           "sentiment": 0.612
+        },
+        {
+          "title": "Chevron Is Expanding Operations in Venezuela. How to Play CVX Stock Now.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4475555/chevron-is-expanding-operations-in-venezuela-how-to-play-cvx-stock-now",
+          "published": 1788795002,
+          "sentiment": 0.34
         },
         {
           "title": "Chevron Targets $7B Investment in Venezuela",
@@ -120,23 +134,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/09/06/chevron-stayed-in-venezuela-for-20-years-while-rivals-left-here-s-why-its-ceo-says-patience-pays-off/",
           "published": 1788723301,
           "sentiment": 0.0
-        },
-        {
-          "title": "How Much Do You Really Need Invested to Replace a $95,000 Salary With Dividends?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/personal-finance/2026/09/05/how-much-do-you-really-need-invested-to-replace-a-95000-salary-with-dividends/",
-          "published": 1788638184,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why I Just Added to My Chevron Position Despite Trump Criticism",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/05/why-i-just-added-to-my-chevron-position-despite-ne/",
-          "published": 1788631980,
-          "sentiment": 0.341
         }
       ],
-      "news_sentiment": 0.191
+      "news_sentiment": 0.19
     },
     {
       "ticker": "SHEL",
@@ -155,7 +155,7 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.9,
       "bar_pct": 93,
-      "market_cap_gbp_b": 196.395,
+      "market_cap_gbp_b": 196.326,
       "market_cap_usd_b": 265.909,
       "beta": -0.22,
       "pe_ratio": 10.28,
@@ -168,6 +168,13 @@ window.PRICES_DATA = {
       "vol_1w": 37703822,
       "vol_1m": 134265042,
       "news": [
+        {
+          "title": "Shell Climbs 1.3% as $97 Oil Supercharges Its $21 Billion Cash Engine",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/energy/articles/shell-climbs-1-3-97-214842303.html",
+          "published": 1788817722,
+          "sentiment": 0.0
+        },
         {
           "title": "Shares edge down as Iran tensions push oil higher",
           "publisher": "PA Media: Money",
@@ -195,16 +202,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-apple-broadcom-211600532.html",
           "published": 1788556560,
           "sentiment": 0.202
-        },
-        {
-          "title": "Sector Update: Energy Stocks Softer Late Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-softer-afternoon-195737210.html",
-          "published": 1788551857,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.049
+      "news_sentiment": -0.006
     },
     {
       "ticker": "BP",
@@ -223,8 +223,8 @@ window.PRICES_DATA = {
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 71,
-      "market_cap_gbp_b": 83.333,
-      "market_cap_usd_b": 112.829,
+      "market_cap_gbp_b": 83.302,
+      "market_cap_usd_b": 112.826,
       "beta": -0.22,
       "pe_ratio": 20.96,
       "avg_volume_m": 9.1,
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 85,
-      "market_cap_gbp_b": 144.777,
+      "market_cap_gbp_b": 144.726,
       "market_cap_usd_b": 196.021,
       "beta": 0.06,
       "pe_ratio": 11.09,
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 44.33,
       "bar_pct": 90,
-      "market_cap_gbp_b": 73.78,
+      "market_cap_gbp_b": 73.754,
       "market_cap_usd_b": 99.894,
       "beta": -0.727,
       "pe_ratio": 11.41,
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "101",
       "high_usd": 137.42,
       "bar_pct": 94,
-      "market_cap_gbp_b": 119.127,
+      "market_cap_gbp_b": 119.085,
       "market_cap_usd_b": 161.292,
       "beta": 0.134,
       "pe_ratio": 17.76,
@@ -495,8 +495,8 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 74,
-      "market_cap_gbp_b": 44.328,
-      "market_cap_usd_b": 60.018,
+      "market_cap_gbp_b": 44.313,
+      "market_cap_usd_b": 60.019,
       "beta": 0.164,
       "pe_ratio": 17.71,
       "avg_volume_m": 8.75,
@@ -508,6 +508,13 @@ window.PRICES_DATA = {
       "vol_1w": 34102000,
       "vol_1m": 175044000,
       "news": [
+        {
+          "title": "Is Occidental Petroleum Stock Outperforming the Nasdaq?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4475207/is-occidental-petroleum-stock-outperforming-the-nasdaq",
+          "published": 1788792269,
+          "sentiment": 0.0
+        },
         {
           "title": "Occidental (OXY) Up 8.2% Since Last Earnings Report: Can It Continue?",
           "publisher": "Zacks",
@@ -535,16 +542,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/1-value-stock-own-decades-173223152.html",
           "published": 1788370343,
           "sentiment": 0.402
-        },
-        {
-          "title": "Chevron, Exxon and Other Oil Stocks Jump as Two Huge Energy Stories Collide",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/01/chevron-exxon-and-other-oil-stocks-jump-as-two-huge-energy-stories-collide/",
-          "published": 1788279798,
-          "sentiment": 0.477
         }
       ],
-      "news_sentiment": 0.314
+      "news_sentiment": 0.219
     },
     {
       "ticker": "EOG",
@@ -563,8 +563,8 @@ window.PRICES_DATA = {
       "high_gbp": "113",
       "high_usd": 153.67,
       "bar_pct": 84,
-      "market_cap_gbp_b": 56.248,
-      "market_cap_usd_b": 76.157,
+      "market_cap_gbp_b": 57.096,
+      "market_cap_usd_b": 77.332,
       "beta": 0.272,
       "pe_ratio": 11.3,
       "avg_volume_m": 3.37,
@@ -631,8 +631,8 @@ window.PRICES_DATA = {
       "high_gbp": "294",
       "high_usd": 398.52,
       "bar_pct": 96,
-      "market_cap_gbp_b": 80.662,
-      "market_cap_usd_b": 109.212,
+      "market_cap_gbp_b": 83.825,
+      "market_cap_usd_b": 113.535,
       "beta": 0.527,
       "pe_ratio": 13.48,
       "avg_volume_m": 2.37,
@@ -644,6 +644,13 @@ window.PRICES_DATA = {
       "vol_1w": 12411400,
       "vol_1m": 58113800,
       "news": [
+        {
+          "title": "Can Marathon Petroleum (MPC) Keep Rallying? Wells Fargo Says Yes",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-keep-rallying-203402101.html",
+          "published": 1788813242,
+          "sentiment": 0.572
+        },
         {
           "title": "PBF Energy Rises 168% in a Year: Is This the Right Time to Buy?",
           "publisher": "Zacks",
@@ -671,16 +678,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-posts-slight-weekly-204507917.html",
           "published": 1788554707,
           "sentiment": 0.639
-        },
-        {
-          "title": "Will UK interest rates fall in 2026?",
-          "publisher": "Moneyweek",
-          "url": "https://moneyweek.com/economy/uk-economy/605427/when-will-interest-rates-go-up",
-          "published": 1788531458,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.274
+      "news_sentiment": 0.297
     },
     {
       "ticker": "VLO",
@@ -699,8 +699,8 @@ window.PRICES_DATA = {
       "high_gbp": "277",
       "high_usd": 375.11,
       "bar_pct": 98,
-      "market_cap_gbp_b": 78.836,
-      "market_cap_usd_b": 106.74,
+      "market_cap_gbp_b": 78.809,
+      "market_cap_usd_b": 106.741,
       "beta": 0.568,
       "pe_ratio": 15.45,
       "avg_volume_m": 2.85,
@@ -712,6 +712,13 @@ window.PRICES_DATA = {
       "vol_1w": 14494300,
       "vol_1m": 56621300,
       "news": [
+        {
+          "title": "Wells Fargo Just Raised its Bets on These 2 Refining Giants",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/energy/articles/wells-fargo-just-raised-bets-222636997.html",
+          "published": 1788819996,
+          "sentiment": 0.25
+        },
         {
           "title": "Here's How Much a $1000 Investment in Valero Energy Made 10 Years Ago Would Be Worth Today",
           "publisher": "Zacks",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/rex-record-2q-eps-ccs-173908985.html",
           "published": 1788543548,
           "sentiment": 0.0
-        },
-        {
-          "title": "3 Refining Stocks Up More Than 100% YTD With Further Upside Potential",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/3-refining-stocks-more-100-135600345.html",
-          "published": 1788530160,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.36
+      "news_sentiment": 0.41
     },
     {
       "ticker": "SLB",
@@ -767,7 +767,7 @@ window.PRICES_DATA = {
       "high_gbp": "45",
       "high_usd": 60.46,
       "bar_pct": 90,
-      "market_cap_gbp_b": 63.04,
+      "market_cap_gbp_b": 63.018,
       "market_cap_usd_b": 85.353,
       "beta": 0.774,
       "pe_ratio": 28.05,
@@ -780,6 +780,13 @@ window.PRICES_DATA = {
       "vol_1w": 84454900,
       "vol_1m": 259782700,
       "news": [
+        {
+          "title": "SLB Bets $4.1 Billion on the AI Data Center Boom",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/slb-bets-4-1-billion-202013359.html",
+          "published": 1788812367,
+          "sentiment": 0.0
+        },
         {
           "title": "Is SLB Stock Underperforming the S&P 500?",
           "publisher": "Barchart",
@@ -807,13 +814,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/1-profitable-stock-solid-fundamentals-150210700.html",
           "published": 1788534130,
           "sentiment": 0.542
-        },
-        {
-          "title": "Why Is APTIV PLC (APTV) Down 4.2% Since Last Earnings Report?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/why-aptiv-plc-aptv-down-153007878.html",
-          "published": 1788449407,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.108
@@ -835,8 +835,8 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 71,
-      "market_cap_gbp_b": 22.81,
-      "market_cap_usd_b": 30.884,
+      "market_cap_gbp_b": 22.864,
+      "market_cap_usd_b": 30.968,
       "beta": 0.769,
       "pe_ratio": 19.41,
       "avg_volume_m": 11.95,
@@ -903,8 +903,8 @@ window.PRICES_DATA = {
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 74,
-      "market_cap_gbp_b": 46.556,
-      "market_cap_usd_b": 63.034,
+      "market_cap_gbp_b": 46.54,
+      "market_cap_usd_b": 63.035,
       "beta": 0.961,
       "pe_ratio": 20.42,
       "avg_volume_m": 8.23,
@@ -971,8 +971,8 @@ window.PRICES_DATA = {
       "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 48,
-      "market_cap_gbp_b": 128.537,
-      "market_cap_usd_b": 174.033,
+      "market_cap_gbp_b": 128.469,
+      "market_cap_usd_b": 174.002,
       "beta": 0.644,
       "pe_ratio": 18.75,
       "avg_volume_m": 11.03,
@@ -1028,16 +1028,16 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 32.52,
+      "price_usd": 32.53,
       "change_1d": "+0.04%",
       "change_1w": "-1.92%",
       "change_1m": "+0.50%",
       "change_ytd": "+7.68%",
       "return_1yr": "+46%",
       "low_gbp": "16",
-      "low_usd": 22.02,
+      "low_usd": 22.03,
       "high_gbp": "28",
-      "high_usd": 37.47,
+      "high_usd": 37.48,
       "bar_pct": 68,
       "market_cap_gbp_b": 0.29,
       "market_cap_usd_b": 0.393,
@@ -1107,8 +1107,8 @@ window.PRICES_DATA = {
       "high_gbp": "54",
       "high_usd": 73.74,
       "bar_pct": 22,
-      "market_cap_gbp_b": 3.55,
-      "market_cap_usd_b": 4.807,
+      "market_cap_gbp_b": 3.539,
+      "market_cap_usd_b": 4.793,
       "beta": 1.643,
       "pe_ratio": 36.01,
       "avg_volume_m": 5.23,
@@ -1175,8 +1175,8 @@ window.PRICES_DATA = {
       "high_gbp": "237",
       "high_usd": 320.95,
       "bar_pct": 16,
-      "market_cap_gbp_b": 16.228,
-      "market_cap_usd_b": 21.972,
+      "market_cap_gbp_b": 16.223,
+      "market_cap_usd_b": 21.973,
       "beta": 1.733,
       "pe_ratio": 12.61,
       "avg_volume_m": 2.13,
@@ -1243,7 +1243,7 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 45.18,
       "bar_pct": 6,
-      "market_cap_gbp_b": 4.353,
+      "market_cap_gbp_b": 4.352,
       "market_cap_usd_b": 5.894,
       "beta": 1.158,
       "pe_ratio": null,
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "24",
       "high_usd": 33.02,
       "bar_pct": 5,
-      "market_cap_gbp_b": 20.607,
+      "market_cap_gbp_b": 20.6,
       "market_cap_usd_b": 27.901,
       "beta": 0.624,
       "pe_ratio": null,
