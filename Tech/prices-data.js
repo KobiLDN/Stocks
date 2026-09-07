@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-09-07 15:04",
-  "fx_gbp_usd": 1.3538,
+  "updated": "2026-09-07 15:33",
+  "fx_gbp_usd": 1.3539,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -16,11 +16,11 @@ window.PRICES_DATA = {
       "return_1yr": "+35%",
       "low_gbp": "167",
       "low_usd": 225.95,
-      "high_gbp": "255",
+      "high_gbp": "254",
       "high_usd": 344.57,
       "bar_pct": 79,
-      "market_cap_gbp_b": 3449.227,
-      "market_cap_usd_b": 4669.7,
+      "market_cap_gbp_b": 3448.994,
+      "market_cap_usd_b": 4669.701,
       "beta": 1.085,
       "pe_ratio": 36.61,
       "avg_volume_m": 54.15,
@@ -32,6 +32,20 @@ window.PRICES_DATA = {
       "vol_1w": 204964100,
       "vol_1m": 923077600,
       "news": [
+        {
+          "title": "There Are Only a Handful of Nasdaq-100 Stocks That Yield Over 3%. Here's My Top Pick to Buy Now.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/there-are-only-a-handful-of-nasdaq-100-stocks-that/",
+          "published": 1788789900,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Is Apple Stock a Buy Now Ahead of its Product Launch Event?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-stock-buy-now-ahead-140000662.html",
+          "published": 1788789600,
+          "sentiment": 0.0
+        },
         {
           "title": "The S&P 100 ETF Just Dumped Nike and Colgate for 4 AI Stocks. Here\u2019s What That Means for Your Portfolio",
           "publisher": "24/7 Wall St.",
@@ -52,23 +66,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/09/07/why-apple-may-be-the-safest-ai-stock-nobody-calls-an-ai-stock/",
           "published": 1788786028,
           "sentiment": 0.402
-        },
-        {
-          "title": "Apple's Foldable iPhone Is About to Face a China Problem",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/apples-foldable-iphone-face-china-125842656.html",
-          "published": 1788785922,
-          "sentiment": -0.402
-        },
-        {
-          "title": "Apple\u2019s Sept. 9 Event Could Change Everything",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/apples-sept-9-event-could-change-everything/",
-          "published": 1788785701,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.1
+      "news_sentiment": 0.021
     },
     {
       "ticker": "MSFT",
@@ -87,8 +87,8 @@ window.PRICES_DATA = {
       "high_gbp": "409",
       "high_usd": 553.72,
       "bar_pct": 74,
-      "market_cap_gbp_b": 2740.757,
-      "market_cap_usd_b": 3710.545,
+      "market_cap_gbp_b": 2740.572,
+      "market_cap_usd_b": 3710.546,
       "beta": 1.108,
       "pe_ratio": 27.85,
       "avg_volume_m": 36.78,
@@ -108,35 +108,35 @@ window.PRICES_DATA = {
           "sentiment": -0.318
         },
         {
+          "title": "Microsoft Stock Is Building a Trillion-Dollar AI Opportunity. Is $600 Next?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/09/07/microsoft-stock-is-building-a-trillion-dollar-ai-opportunity-is-600-next/",
+          "published": 1788790519,
+          "sentiment": 0.421
+        },
+        {
+          "title": "There Are Only a Handful of Nasdaq-100 Stocks That Yield Over 3%. Here's My Top Pick to Buy Now.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/there-are-only-a-handful-of-nasdaq-100-stocks-that/",
+          "published": 1788789900,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Is Apple Stock a Buy Now Ahead of its Product Launch Event?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-stock-buy-now-ahead-140000662.html",
+          "published": 1788789600,
+          "sentiment": 0.0
+        },
+        {
           "title": "The S&P 100 ETF Just Dumped Nike and Colgate for 4 AI Stocks. Here\u2019s What That Means for Your Portfolio",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/etf/2026/09/07/the-sp-100-etf-just-dumped-nike-and-colgate-for-4-ai-stocks-heres-what-that-means-for-your-portfolio/",
           "published": 1788789176,
           "sentiment": -0.402
-        },
-        {
-          "title": "Apple Just Made a Move Most Investors Overlooked. This Is Why I Keep Buying The Stock",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/apple-just-made-a-move-most-investors-overlooked-this-is-why-i-keep-buying-the-stock/",
-          "published": 1788789095,
-          "sentiment": -0.097
-        },
-        {
-          "title": "Alphabet May Be the Mag 7 Stock Investors Are Underestimating",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/alphabet-may-be-the-mag-7-stock-investors-are-underestimating/",
-          "published": 1788789002,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Investors Pulled $700 Million From IGV Hours Before Snowflake Reignited Software",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/etf/2026/09/07/investors-pulled-700-million-from-igv-hours-before-snowflake-reignited-software/",
-          "published": 1788788265,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.163
+      "news_sentiment": -0.019
     },
     {
       "ticker": "GOOGL",
@@ -155,7 +155,7 @@ window.PRICES_DATA = {
       "high_gbp": "302",
       "high_usd": 408.61,
       "bar_pct": 60,
-      "market_cap_gbp_b": 3057.485,
+      "market_cap_gbp_b": 3057.278,
       "market_cap_usd_b": 4139.344,
       "beta": 1.225,
       "pe_ratio": 16.97,
@@ -176,6 +176,20 @@ window.PRICES_DATA = {
           "sentiment": -0.318
         },
         {
+          "title": "Microsoft Stock Is Building a Trillion-Dollar AI Opportunity. Is $600 Next?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/09/07/microsoft-stock-is-building-a-trillion-dollar-ai-opportunity-is-600-next/",
+          "published": 1788790519,
+          "sentiment": 0.421
+        },
+        {
+          "title": "Is Apple Stock a Buy Now Ahead of its Product Launch Event?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-stock-buy-now-ahead-140000662.html",
+          "published": 1788789600,
+          "sentiment": 0.0
+        },
+        {
           "title": "Apple Just Made a Move Most Investors Overlooked. This Is Why I Keep Buying The Stock",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/09/07/apple-just-made-a-move-most-investors-overlooked-this-is-why-i-keep-buying-the-stock/",
@@ -188,23 +202,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/09/07/alphabet-may-be-the-mag-7-stock-investors-are-underestimating/",
           "published": 1788789002,
           "sentiment": 0.0
-        },
-        {
-          "title": "Broadcom vs Marvell: One of These AI Chip Stocks Is a Clear Winner",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/broadcom-vs-marvell-one-of-these-ai-chip-stocks-is-a-clear-winner/",
-          "published": 1788788332,
-          "sentiment": 0.751
-        },
-        {
-          "title": "Why Apple May Be the Safest AI Stock Nobody Calls an AI Stock",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/why-apple-may-be-the-safest-ai-stock-nobody-calls-an-ai-stock/",
-          "published": 1788786028,
-          "sentiment": 0.402
         }
       ],
-      "news_sentiment": 0.148
+      "news_sentiment": 0.001
     },
     {
       "ticker": "AMZN",
@@ -223,8 +223,8 @@ window.PRICES_DATA = {
       "high_gbp": "212",
       "high_usd": 287.2,
       "bar_pct": 69,
-      "market_cap_gbp_b": 2059.601,
-      "market_cap_usd_b": 2788.369,
+      "market_cap_gbp_b": 2059.462,
+      "market_cap_usd_b": 2788.37,
       "beta": 1.443,
       "pe_ratio": 20.8,
       "avg_volume_m": 47.83,
@@ -242,6 +242,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/video/real-danger-black-market-peptides-110000226.html",
           "published": 1788778800,
           "sentiment": -0.527
+        },
+        {
+          "title": "Microsoft Stock Is Building a Trillion-Dollar AI Opportunity. Is $600 Next?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/09/07/microsoft-stock-is-building-a-trillion-dollar-ai-opportunity-is-600-next/",
+          "published": 1788790519,
+          "sentiment": 0.421
         },
         {
           "title": "The S&P 100 ETF Just Dumped Nike and Colgate for 4 AI Stocks. Here\u2019s What That Means for Your Portfolio",
@@ -263,16 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-com-inc-amzn-attracting-130004501.html",
           "published": 1788786004,
           "sentiment": 0.477
-        },
-        {
-          "title": "Amazon Cargo Jet Crash Puts Its Air Network in the Spotlight",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-cargo-jet-crash-puts-124313120.html",
-          "published": 1788784993,
-          "sentiment": -0.25
         }
       ],
-      "news_sentiment": -0.195
+      "news_sentiment": -0.061
     },
     {
       "ticker": "META",
@@ -291,8 +291,8 @@ window.PRICES_DATA = {
       "high_gbp": "584",
       "high_usd": 790.8,
       "bar_pct": 36,
-      "market_cap_gbp_b": 1160.57,
-      "market_cap_usd_b": 1571.226,
+      "market_cap_gbp_b": 1160.491,
+      "market_cap_usd_b": 1571.225,
       "beta": 1.243,
       "pe_ratio": 23.26,
       "avg_volume_m": 17.85,
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "175",
       "high_usd": 236.54,
       "bar_pct": 91,
-      "market_cap_gbp_b": 4108.687,
+      "market_cap_gbp_b": 4108.409,
       "market_cap_usd_b": 5562.503,
       "beta": 2.217,
       "pe_ratio": 29.16,
@@ -373,6 +373,27 @@ window.PRICES_DATA = {
       "vol_1m": 2955793800,
       "news": [
         {
+          "title": "Nvidia\u2019s (NVDA) Strong Results Reinforce Long Term Outlook",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-strong-results-reinforce-140501713.html",
+          "published": 1788789901,
+          "sentiment": 0.511
+        },
+        {
+          "title": "There Are Only a Handful of Nasdaq-100 Stocks That Yield Over 3%. Here's My Top Pick to Buy Now.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/there-are-only-a-handful-of-nasdaq-100-stocks-that/",
+          "published": 1788789900,
+          "sentiment": 0.202
+        },
+        {
+          "title": "The S&P 100 ETF Just Dumped Nike and Colgate for 4 AI Stocks. Here\u2019s What That Means for Your Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/etf/2026/09/07/the-sp-100-etf-just-dumped-nike-and-colgate-for-4-ai-stocks-heres-what-that-means-for-your-portfolio/",
+          "published": 1788789176,
+          "sentiment": -0.402
+        },
+        {
           "title": "How Elastic Stock Bounced 48.3% Higher Last Month",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/09/07/how-elastic-stock-bounced-483-higher-last-month/",
@@ -385,30 +406,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/09/07/better-space-stock-ast-spacemobile-vs-l3harris/",
           "published": 1788789000,
           "sentiment": 0.44
-        },
-        {
-          "title": "Palantir Stock Could Make a Dramatic Move Over the Next Year (Hint: It Implies a Big Move)",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/07/palantir-stock-could-make-a-dramatic-move-over-the/",
-          "published": 1788788580,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Are You Ready for Early Retirement? 3 Signs You Can Safely Move Forward.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/retirement/2026/09/07/are-you-ready-for-early-retirement-3-signs-you-can/",
-          "published": 1788788580,
-          "sentiment": 0.691
-        },
-        {
-          "title": "3 Dividend Kings You Can Buy and Never Sell",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/07/3-dividend-kings-you-can-buy-and-never-sell/",
-          "published": 1788788100,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.226
+      "news_sentiment": 0.15
     },
     {
       "ticker": "AMD",
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "432",
       "high_usd": 584.73,
       "bar_pct": 75,
-      "market_cap_gbp_b": 575.859,
+      "market_cap_gbp_b": 575.82,
       "market_cap_usd_b": 779.621,
       "beta": 2.476,
       "pe_ratio": 121.83,
@@ -495,8 +495,8 @@ window.PRICES_DATA = {
       "high_gbp": "105",
       "high_usd": 142.35,
       "bar_pct": 61,
-      "market_cap_gbp_b": 374.054,
-      "market_cap_usd_b": 506.409,
+      "market_cap_gbp_b": 374.029,
+      "market_cap_usd_b": 506.41,
       "beta": 2.231,
       "pe_ratio": null,
       "avg_volume_m": 113.77,
@@ -563,8 +563,8 @@ window.PRICES_DATA = {
       "high_gbp": "354",
       "high_usd": 479.0,
       "bar_pct": 79,
-      "market_cap_gbp_b": 1643.127,
-      "market_cap_usd_b": 2224.53,
+      "market_cap_gbp_b": 1643.016,
+      "market_cap_usd_b": 2224.531,
       "beta": 1.247,
       "pe_ratio": 31.84,
       "avg_volume_m": 12.98,
@@ -631,8 +631,8 @@ window.PRICES_DATA = {
       "high_gbp": "366",
       "high_usd": 495.0,
       "bar_pct": 33,
-      "market_cap_gbp_b": 1257.693,
-      "market_cap_usd_b": 1702.714,
+      "market_cap_gbp_b": 1257.608,
+      "market_cap_usd_b": 1702.715,
       "beta": 1.457,
       "pe_ratio": 45.65,
       "avg_volume_m": 24.58,
@@ -644,6 +644,13 @@ window.PRICES_DATA = {
       "vol_1w": 173127700,
       "vol_1m": 514537600,
       "news": [
+        {
+          "title": "The S&P 100 ETF Just Dumped Nike and Colgate for 4 AI Stocks. Here\u2019s What That Means for Your Portfolio",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/etf/2026/09/07/the-sp-100-etf-just-dumped-nike-and-colgate-for-4-ai-stocks-heres-what-that-means-for-your-portfolio/",
+          "published": 1788789176,
+          "sentiment": -0.402
+        },
         {
           "title": "Broadcom vs Marvell: One of These AI Chip Stocks Is a Clear Winner",
           "publisher": "24/7 Wall St.",
@@ -671,16 +678,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/09/07/amds-whole-ai-story-has-one-threat-it-cannot-ignore-broadcom/",
           "published": 1788785248,
           "sentiment": -0.316
-        },
-        {
-          "title": "Nvidia Is Near Its High While Its Biggest Chip Peers Sit 18% to 32% Below Theirs. These Are the Chip Stocks to Buy.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/06/nvidia-is-near-its-high-while-its-biggest-chip-peers-sit-18-to-32-below-theirs-these-are-the-chip-stocks-to-buy/",
-          "published": 1788716041,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.132
+      "news_sentiment": 0.052
     },
     {
       "ticker": "QCOM",
@@ -699,7 +699,7 @@ window.PRICES_DATA = {
       "high_gbp": "192",
       "high_usd": 259.92,
       "bar_pct": 34,
-      "market_cap_gbp_b": 133.121,
+      "market_cap_gbp_b": 133.112,
       "market_cap_usd_b": 180.224,
       "beta": 1.679,
       "pe_ratio": 19.26,
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "334",
       "high_usd": 452.7,
       "bar_pct": 43,
-      "market_cap_gbp_b": 198.865,
-      "market_cap_usd_b": 269.231,
+      "market_cap_gbp_b": 198.852,
+      "market_cap_usd_b": 269.232,
       "beta": 3.89,
       "pe_ratio": 257.23,
       "avg_volume_m": 6.8,
@@ -835,7 +835,7 @@ window.PRICES_DATA = {
       "high_gbp": "1477",
       "high_usd": 1999.96,
       "bar_pct": 77,
-      "market_cap_gbp_b": 486.531,
+      "market_cap_gbp_b": 486.498,
       "market_cap_usd_b": 658.685,
       "beta": 1.363,
       "pe_ratio": 58.13,
@@ -903,7 +903,7 @@ window.PRICES_DATA = {
       "high_gbp": "927",
       "high_usd": 1255.0,
       "bar_pct": 79,
-      "market_cap_gbp_b": 848.055,
+      "market_cap_gbp_b": 847.997,
       "market_cap_usd_b": 1148.13,
       "beta": 2.222,
       "pe_ratio": 22.99,
@@ -916,6 +916,13 @@ window.PRICES_DATA = {
       "vol_1w": 131064700,
       "vol_1m": 659085300,
       "news": [
+        {
+          "title": "Can Silicon Motion's CRA Compliance Efforts Drive Future Growth?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/technology/articles/silicon-motions-cra-compliance-efforts-141100714.html",
+          "published": 1788790260,
+          "sentiment": 0.382
+        },
         {
           "title": "Do You Think Micron Technology\u2019s (MU) Return Drivers May Falter Ahead",
           "publisher": "Insider Monkey",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/micron-jumps-6-ai-memory-120948403.html",
           "published": 1788782988,
           "sentiment": 0.0
-        },
-        {
-          "title": "Dow Jones Futures Fall With Iran, Apple, Inflation In Focus; Nvidia, Micron, Sandisk Flash Buy Signals",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-micron-sandisk-buy-signals-apple-inflation-reports/?src=A00220&yptr=yahoo",
-          "published": 1788750407,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.076
     },
     {
       "ticker": "AMAT",
@@ -971,8 +971,8 @@ window.PRICES_DATA = {
       "high_gbp": "546",
       "high_usd": 739.67,
       "bar_pct": 51,
-      "market_cap_gbp_b": 266.543,
-      "market_cap_usd_b": 360.856,
+      "market_cap_gbp_b": 266.525,
+      "market_cap_usd_b": 360.857,
       "beta": 1.597,
       "pe_ratio": 39.2,
       "avg_volume_m": 9.36,
@@ -1039,7 +1039,7 @@ window.PRICES_DATA = {
       "high_gbp": "255",
       "high_usd": 345.72,
       "bar_pct": 19,
-      "market_cap_gbp_b": 337.825,
+      "market_cap_gbp_b": 337.802,
       "market_cap_usd_b": 457.361,
       "beta": 1.732,
       "pe_ratio": 27.23,
@@ -1107,7 +1107,7 @@ window.PRICES_DATA = {
       "high_gbp": "199",
       "high_usd": 269.11,
       "bar_pct": 92,
-      "market_cap_gbp_b": 157.586,
+      "market_cap_gbp_b": 157.575,
       "market_cap_usd_b": 213.346,
       "beta": 1.202,
       "pe_ratio": 23.76,
@@ -1175,7 +1175,7 @@ window.PRICES_DATA = {
       "high_gbp": "274",
       "high_usd": 370.86,
       "bar_pct": 42,
-      "market_cap_gbp_b": 78.25,
+      "market_cap_gbp_b": 78.245,
       "market_cap_usd_b": 105.938,
       "beta": 1.417,
       "pe_ratio": 15.25,
@@ -1243,7 +1243,7 @@ window.PRICES_DATA = {
       "high_gbp": "144",
       "high_usd": 194.73,
       "bar_pct": 53,
-      "market_cap_gbp_b": 107.873,
+      "market_cap_gbp_b": 107.866,
       "market_cap_usd_b": 146.043,
       "beta": 0.972,
       "pe_ratio": 88.29,
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "284",
       "high_usd": 384.56,
       "bar_pct": 82,
-      "market_cap_gbp_b": 86.322,
+      "market_cap_gbp_b": 86.316,
       "market_cap_usd_b": 116.866,
       "beta": 1.328,
       "pe_ratio": null,
@@ -1379,8 +1379,8 @@ window.PRICES_DATA = {
       "high_gbp": "521",
       "high_usd": 705.08,
       "bar_pct": 18,
-      "market_cap_gbp_b": 67.22,
-      "market_cap_usd_b": 91.005,
+      "market_cap_gbp_b": 67.216,
+      "market_cap_usd_b": 91.006,
       "beta": 0.976,
       "pe_ratio": 20.2,
       "avg_volume_m": 4.59,
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "high_gbp": "173",
       "high_usd": 233.88,
       "bar_pct": 86,
-      "market_cap_gbp_b": 161.172,
+      "market_cap_gbp_b": 161.161,
       "market_cap_usd_b": 218.201,
       "beta": 1.255,
       "pe_ratio": 5327.5,
@@ -1515,7 +1515,7 @@ window.PRICES_DATA = {
       "high_gbp": "295",
       "high_usd": 398.88,
       "bar_pct": 75,
-      "market_cap_gbp_b": 200.62,
+      "market_cap_gbp_b": 200.606,
       "market_cap_usd_b": 271.607,
       "beta": 0.908,
       "pe_ratio": 284.84,
@@ -1583,7 +1583,7 @@ window.PRICES_DATA = {
       "high_gbp": "245",
       "high_usd": 332.22,
       "bar_pct": 69,
-      "market_cap_gbp_b": 73.36,
+      "market_cap_gbp_b": 73.355,
       "market_cap_usd_b": 99.318,
       "beta": 1.664,
       "pe_ratio": null,
@@ -1651,8 +1651,8 @@ window.PRICES_DATA = {
       "high_gbp": "128",
       "high_usd": 173.89,
       "bar_pct": 82,
-      "market_cap_gbp_b": 84.701,
-      "market_cap_usd_b": 114.672,
+      "market_cap_gbp_b": 84.696,
+      "market_cap_usd_b": 114.673,
       "beta": 1.059,
       "pe_ratio": 55.23,
       "avg_volume_m": 5.49,
@@ -1719,7 +1719,7 @@ window.PRICES_DATA = {
       "high_gbp": "94",
       "high_usd": 126.7,
       "bar_pct": 21,
-      "market_cap_gbp_b": 240.67,
+      "market_cap_gbp_b": 240.654,
       "market_cap_usd_b": 325.829,
       "beta": 1.526,
       "pe_ratio": 24.61,
@@ -1787,8 +1787,8 @@ window.PRICES_DATA = {
       "high_gbp": "135",
       "high_usd": 182.19,
       "bar_pct": 58,
-      "market_cap_gbp_b": 139.069,
-      "market_cap_usd_b": 188.277,
+      "market_cap_gbp_b": 137.879,
+      "market_cap_usd_b": 186.679,
       "beta": 2.616,
       "pe_ratio": 98.03,
       "avg_volume_m": 8.88,
@@ -1855,8 +1855,8 @@ window.PRICES_DATA = {
       "high_gbp": "550",
       "high_usd": 745.0,
       "bar_pct": 40,
-      "market_cap_gbp_b": 82.369,
-      "market_cap_usd_b": 111.514,
+      "market_cap_gbp_b": 82.378,
+      "market_cap_usd_b": 111.534,
       "beta": 1.586,
       "pe_ratio": 29.42,
       "avg_volume_m": 1.81,
@@ -1923,8 +1923,8 @@ window.PRICES_DATA = {
       "high_gbp": "75",
       "high_usd": 101.99,
       "bar_pct": 28,
-      "market_cap_gbp_b": 114.3,
-      "market_cap_usd_b": 154.744,
+      "market_cap_gbp_b": 114.293,
+      "market_cap_usd_b": 154.745,
       "beta": 1.159,
       "pe_ratio": 16.61,
       "avg_volume_m": 19.19,
@@ -1991,7 +1991,7 @@ window.PRICES_DATA = {
       "high_gbp": "96",
       "high_usd": 130.37,
       "bar_pct": 67,
-      "market_cap_gbp_b": 318.007,
+      "market_cap_gbp_b": 317.985,
       "market_cap_usd_b": 430.53,
       "beta": 0.992,
       "pe_ratio": 32.79,
@@ -2059,7 +2059,7 @@ window.PRICES_DATA = {
       "high_gbp": "153",
       "high_usd": 207.52,
       "bar_pct": 67,
-      "market_cap_gbp_b": 309.435,
+      "market_cap_gbp_b": 309.414,
       "market_cap_usd_b": 418.925,
       "beta": 1.621,
       "pe_ratio": 149.0,

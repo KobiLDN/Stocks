@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07 15:10",
+  "updated": "2026-09-07 15:39",
   "spy": {
     "price": 770.19,
     "change_1d": -0.33,
@@ -17,8 +17,8 @@
     "change_1y": 25.41
   },
   "vix": {
-    "level": 15.13,
-    "change_1d": 4.2,
+    "level": 15.19,
+    "change_1d": 4.61,
     "regime": "bullish",
     "signal": "normal"
   },
