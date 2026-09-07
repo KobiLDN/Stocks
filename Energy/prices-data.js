@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-09-07 15:38",
-  "fx_gbp_usd": 1.3541,
+  "updated": "2026-09-07 19:53",
+  "fx_gbp_usd": 1.3542,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,12 +19,12 @@ window.PRICES_DATA = {
       "high_gbp": "130",
       "high_usd": 176.41,
       "bar_pct": 75,
-      "market_cap_gbp_b": 484.241,
+      "market_cap_gbp_b": 484.228,
       "market_cap_usd_b": 655.727,
       "beta": 0.175,
       "pe_ratio": 20.52,
       "avg_volume_m": 15.58,
-      "div_yield_pct": 258.0,
+      "div_yield_pct": 254.0,
       "short_pct": 1.0,
       "analyst": "buy",
       "analyst_score": 2.32,
@@ -32,6 +32,20 @@ window.PRICES_DATA = {
       "vol_1w": 70980200,
       "vol_1m": 323466000,
       "news": [
+        {
+          "title": "2 Safe High-Yield Energy Dividend Stocks You've Probably Never Heard Of",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/3-safe-energy-dividends-youve-probably-never-heard/",
+          "published": 1788803400,
+          "sentiment": 0.612
+        },
+        {
+          "title": "TotalEnergies to transfer Papua LNG operatorship to ExxonMobil",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/totalenergies-to-hand-papua-lng-exxonmobil/",
+          "published": 1788793174,
+          "sentiment": 0.0
+        },
         {
           "title": "TotalEnergies Cuts Papua LNG Cost to $14 Billion, Exxon to Become Operator",
           "publisher": "Oilprice.com",
@@ -52,23 +66,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/oil-majors-seek-bigger-bargaining-210000743.html",
           "published": 1788728400,
           "sentiment": -0.273
-        },
-        {
-          "title": "Chevron Stayed in Venezuela for 20 Years While Rivals Left. Here's Why Its CEO Says Patience Pays Off.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/06/chevron-stayed-in-venezuela-for-20-years-while-rivals-left-here-s-why-its-ceo-says-patience-pays-off/",
-          "published": 1788723301,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Why I Just Added to My Chevron Position Despite Trump Criticism",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/05/why-i-just-added-to-my-chevron-position-despite-ne/",
-          "published": 1788631980,
-          "sentiment": 0.341
         }
       ],
-      "news_sentiment": 0.018
+      "news_sentiment": 0.072
     },
     {
       "ticker": "CVX",
@@ -87,12 +87,12 @@ window.PRICES_DATA = {
       "high_gbp": "159",
       "high_usd": 214.71,
       "bar_pct": 91,
-      "market_cap_gbp_b": 302.179,
+      "market_cap_gbp_b": 302.171,
       "market_cap_usd_b": 409.191,
       "beta": 0.491,
       "pe_ratio": 20.08,
       "avg_volume_m": 8.45,
-      "div_yield_pct": 341.0,
+      "div_yield_pct": 337.0,
       "short_pct": 0.81,
       "analyst": "buy",
       "analyst_score": 1.72,
@@ -100,6 +100,20 @@ window.PRICES_DATA = {
       "vol_1w": 40340800,
       "vol_1m": 178401100,
       "news": [
+        {
+          "title": "2 Safe High-Yield Energy Dividend Stocks You've Probably Never Heard Of",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/3-safe-energy-dividends-youve-probably-never-heard/",
+          "published": 1788803400,
+          "sentiment": 0.612
+        },
+        {
+          "title": "Chevron Targets $7B Investment in Venezuela",
+          "publisher": "The Daily Upside",
+          "url": "https://www.thedailyupside.com/industries/energy/chevron-ramps-up-investment-in-venezuela/",
+          "published": 1788753660,
+          "sentiment": 0.0
+        },
         {
           "title": "Chevron Stayed in Venezuela for 20 Years While Rivals Left. Here's Why Its CEO Says Patience Pays Off.",
           "publisher": "Motley Fool",
@@ -120,23 +134,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/09/05/why-i-just-added-to-my-chevron-position-despite-ne/",
           "published": 1788631980,
           "sentiment": 0.341
-        },
-        {
-          "title": "Chevron's Iraq Bet Isn't the Real Dividend Growth Story. Here's What Is.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/05/chevrons-iraq-bet-isnt-the-real-dividend-growth-st/",
-          "published": 1788615300,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Energy stocks could be the biggest winners of the AI boom",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/energy-stocks-could-biggest-winners-193225814.html",
-          "published": 1788550345,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.272
+      "news_sentiment": 0.191
     },
     {
       "ticker": "SHEL",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.9,
       "bar_pct": 93,
-      "market_cap_gbp_b": 196.368,
-      "market_cap_usd_b": 265.908,
+      "market_cap_gbp_b": 196.363,
+      "market_cap_usd_b": 265.909,
       "beta": -0.22,
       "pe_ratio": 10.28,
       "avg_volume_m": 6.39,
@@ -168,6 +168,13 @@ window.PRICES_DATA = {
       "vol_1w": 37703822,
       "vol_1m": 134265042,
       "news": [
+        {
+          "title": "Shares edge down as Iran tensions push oil higher",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/shares-edge-down-iran-tensions-162804586.html",
+          "published": 1788798484,
+          "sentiment": -0.128
+        },
         {
           "title": "British energy giant BP names Ian Tyler as chair after boardroom turmoil",
           "publisher": "Euronews",
@@ -195,16 +202,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-softer-afternoon-195737210.html",
           "published": 1788551857,
           "sentiment": 0.273
-        },
-        {
-          "title": "Shell (LSE:SHEL) Weighs Malaysian Asset Review With Possible $1 Billion Stake Exit",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/shell-lse-shel-weighs-malaysian-181343700.html",
-          "published": 1788545623,
-          "sentiment": 0.361
         }
       ],
-      "news_sentiment": 0.147
+      "news_sentiment": 0.049
     },
     {
       "ticker": "BP",
@@ -223,8 +223,8 @@ window.PRICES_DATA = {
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 71,
-      "market_cap_gbp_b": 83.32,
-      "market_cap_usd_b": 112.826,
+      "market_cap_gbp_b": 83.319,
+      "market_cap_usd_b": 112.828,
       "beta": -0.22,
       "pe_ratio": 20.96,
       "avg_volume_m": 9.1,
@@ -236,6 +236,13 @@ window.PRICES_DATA = {
       "vol_1w": 50596300,
       "vol_1m": 200390800,
       "news": [
+        {
+          "title": "Shares edge down as Iran tensions push oil higher",
+          "publisher": "PA Media: Money",
+          "url": "https://uk.finance.yahoo.com/news/shares-edge-down-iran-tensions-162804586.html",
+          "published": 1788798484,
+          "sentiment": -0.128
+        },
         {
           "title": "British energy giant BP names Ian Tyler as chair after boardroom turmoil",
           "publisher": "Euronews",
@@ -263,16 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/bp-apos-turnaround-gains-momentum-162531476.html",
           "published": 1788539131,
           "sentiment": -0.318
-        },
-        {
-          "title": "European Equities Traded in the US as American Depositary Receipts Marginally Higher in Friday Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/world-indices/articles/european-equities-traded-us-american-150559563.html",
-          "published": 1788534359,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.084
+      "news_sentiment": -0.11
     },
     {
       "ticker": "TTE",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 94.17,
       "bar_pct": 85,
-      "market_cap_gbp_b": 144.757,
+      "market_cap_gbp_b": 144.753,
       "market_cap_usd_b": 196.02,
       "beta": 0.06,
       "pe_ratio": 11.09,
@@ -304,6 +304,20 @@ window.PRICES_DATA = {
       "vol_1w": 10149100,
       "vol_1m": 35390900,
       "news": [
+        {
+          "title": "Can Iraq Really Replace Saudi Arabia As The Middle East\u2019s Top Oil Producer?",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/iraq-really-replace-saudi-arabia-150000955.html",
+          "published": 1788793200,
+          "sentiment": 0.202
+        },
+        {
+          "title": "TotalEnergies to transfer Papua LNG operatorship to ExxonMobil",
+          "publisher": "Offshore Technology",
+          "url": "https://www.offshore-technology.com/news/totalenergies-to-hand-papua-lng-exxonmobil/",
+          "published": 1788793174,
+          "sentiment": 0.0
+        },
         {
           "title": "TotalEnergies Cuts Papua LNG Cost to $14 Billion, Exxon to Become Operator",
           "publisher": "Oilprice.com",
@@ -324,23 +338,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-softer-afternoon-195737210.html",
           "published": 1788551857,
           "sentiment": 0.273
-        },
-        {
-          "title": "TotalEnergies (ENXTPA:TTE) Takes Namibia PEL83 Operatorship And Backs Hydrogen Freight Push",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/totalenergies-enxtpa-tte-takes-namibia-181353109.html",
-          "published": 1788545633,
-          "sentiment": -0.052
-        },
-        {
-          "title": "Sector Update: Energy Stocks Lower in Afternoon Trading",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-lower-afternoon-175510988.html",
-          "published": 1788544510,
-          "sentiment": -0.026
         }
       ],
-      "news_sentiment": 0.043
+      "news_sentiment": 0.099
     },
     {
       "ticker": "EQNR",
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 44.33,
       "bar_pct": 90,
-      "market_cap_gbp_b": 73.77,
+      "market_cap_gbp_b": 73.768,
       "market_cap_usd_b": 99.894,
       "beta": -0.727,
       "pe_ratio": 11.41,
@@ -427,8 +427,8 @@ window.PRICES_DATA = {
       "high_gbp": "101",
       "high_usd": 137.42,
       "bar_pct": 94,
-      "market_cap_gbp_b": 119.111,
-      "market_cap_usd_b": 161.292,
+      "market_cap_gbp_b": 119.107,
+      "market_cap_usd_b": 161.291,
       "beta": 0.134,
       "pe_ratio": 17.76,
       "avg_volume_m": 7.08,
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 74,
-      "market_cap_gbp_b": 44.322,
+      "market_cap_gbp_b": 44.321,
       "market_cap_usd_b": 60.018,
       "beta": 0.164,
       "pe_ratio": 17.71,
@@ -563,8 +563,8 @@ window.PRICES_DATA = {
       "high_gbp": "113",
       "high_usd": 153.67,
       "bar_pct": 84,
-      "market_cap_gbp_b": 57.108,
-      "market_cap_usd_b": 77.332,
+      "market_cap_gbp_b": 56.238,
+      "market_cap_usd_b": 76.156,
       "beta": 0.272,
       "pe_ratio": 11.3,
       "avg_volume_m": 3.37,
@@ -631,8 +631,8 @@ window.PRICES_DATA = {
       "high_gbp": "294",
       "high_usd": 398.52,
       "bar_pct": 96,
-      "market_cap_gbp_b": 83.843,
-      "market_cap_usd_b": 113.535,
+      "market_cap_gbp_b": 80.649,
+      "market_cap_usd_b": 109.212,
       "beta": 0.527,
       "pe_ratio": 13.48,
       "avg_volume_m": 2.37,
@@ -645,10 +645,24 @@ window.PRICES_DATA = {
       "vol_1m": 58113800,
       "news": [
         {
+          "title": "PBF Energy Rises 168% in a Year: Is This the Right Time to Buy?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/pbf-energy-rises-168-time-170400499.html",
+          "published": 1788800640,
+          "sentiment": 0.273
+        },
+        {
           "title": "Here is What to Know Beyond Why Marathon Petroleum Corporation (MPC) is a Trending Stock",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-marathon-petroleum-130002567.html",
           "published": 1788786002,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Is Marathon Petroleum Stock Outperforming the S&P 500?",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4472478/is-marathon-petroleum-stock-outperforming-the-s-p-500",
+          "published": 1788771634,
           "sentiment": 0.0
         },
         {
@@ -664,23 +678,9 @@ window.PRICES_DATA = {
           "url": "https://moneyweek.com/economy/uk-economy/605427/when-will-interest-rates-go-up",
           "published": 1788531458,
           "sentiment": 0.459
-        },
-        {
-          "title": "3 Refining Stocks Up More Than 100% YTD With Further Upside Potential",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/3-refining-stocks-more-100-135600345.html",
-          "published": 1788530160,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Is Marathon Petroleum Stock Still a Buy After More Than Doubling YTD?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-stock-still-buy-135200356.html",
-          "published": 1788529920,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.22
+      "news_sentiment": 0.274
     },
     {
       "ticker": "VLO",
@@ -699,7 +699,7 @@ window.PRICES_DATA = {
       "high_gbp": "277",
       "high_usd": 375.11,
       "bar_pct": 98,
-      "market_cap_gbp_b": 78.826,
+      "market_cap_gbp_b": 78.824,
       "market_cap_usd_b": 106.741,
       "beta": 0.568,
       "pe_ratio": 15.45,
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "45",
       "high_usd": 60.46,
       "bar_pct": 90,
-      "market_cap_gbp_b": 63.032,
-      "market_cap_usd_b": 85.354,
+      "market_cap_gbp_b": 63.03,
+      "market_cap_usd_b": 85.353,
       "beta": 0.774,
       "pe_ratio": 28.05,
       "avg_volume_m": 13.72,
@@ -835,8 +835,8 @@ window.PRICES_DATA = {
       "high_gbp": "32",
       "high_usd": 43.59,
       "bar_pct": 71,
-      "market_cap_gbp_b": 22.869,
-      "market_cap_usd_b": 30.968,
+      "market_cap_gbp_b": 22.807,
+      "market_cap_usd_b": 30.885,
       "beta": 0.769,
       "pe_ratio": 19.41,
       "avg_volume_m": 11.95,
@@ -903,7 +903,7 @@ window.PRICES_DATA = {
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 74,
-      "market_cap_gbp_b": 46.55,
+      "market_cap_gbp_b": 46.549,
       "market_cap_usd_b": 63.035,
       "beta": 0.961,
       "pe_ratio": 20.42,
@@ -971,8 +971,8 @@ window.PRICES_DATA = {
       "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 48,
-      "market_cap_gbp_b": 128.497,
-      "market_cap_usd_b": 174.002,
+      "market_cap_gbp_b": 128.517,
+      "market_cap_usd_b": 174.034,
       "beta": 0.644,
       "pe_ratio": 18.75,
       "avg_volume_m": 11.03,
@@ -984,6 +984,13 @@ window.PRICES_DATA = {
       "vol_1w": 60230200,
       "vol_1m": 246488900,
       "news": [
+        {
+          "title": "EXC vs. NEE: Which Stock Is the Better Value Option?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/exc-vs-nee-stock-better-154004062.html",
+          "published": 1788795604,
+          "sentiment": 0.649
+        },
         {
           "title": "XLU\u2019s AI Power Story Crumbles as Texas Freezes Data-Center Demand",
           "publisher": "24/7 Wall St.",
@@ -1011,16 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-higher-equity-133330774.html",
           "published": 1788528810,
           "sentiment": 0.511
-        },
-        {
-          "title": "Sector Update: Energy Stocks Fall Pre-Bell Friday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-fall-pre-132629779.html",
-          "published": 1788528389,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.176
+      "news_sentiment": 0.251
     },
     {
       "ticker": "SSE.L",
@@ -1028,29 +1028,29 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "24",
-      "price_usd": 32.8,
-      "change_1d": "+0.75%",
-      "change_1w": "-1.10%",
-      "change_1m": "+1.34%",
-      "change_ytd": "+8.58%",
+      "price_usd": 32.53,
+      "change_1d": "+0.04%",
+      "change_1w": "-1.92%",
+      "change_1m": "+0.50%",
+      "change_ytd": "+7.68%",
       "return_1yr": "+46%",
       "low_gbp": "16",
-      "low_usd": 22.02,
+      "low_usd": 22.03,
       "high_gbp": "28",
       "high_usd": 37.48,
-      "bar_pct": 70,
-      "market_cap_gbp_b": 0.292,
-      "market_cap_usd_b": 0.395,
+      "bar_pct": 68,
+      "market_cap_gbp_b": 0.29,
+      "market_cap_usd_b": 0.393,
       "beta": 0.579,
-      "pe_ratio": 23.07,
+      "pe_ratio": 22.88,
       "avg_volume_m": 3.11,
       "div_yield_pct": 286.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.94,
-      "vol_1d": 301072,
-      "vol_1w": 13620040,
-      "vol_1m": 50018308,
+      "vol_1d": 852358,
+      "vol_1w": 14171326,
+      "vol_1m": 50569594,
       "news": [
         {
           "title": "UK PM Burnham uses policy blitz to buy time for tougher decisions",
@@ -1107,8 +1107,8 @@ window.PRICES_DATA = {
       "high_gbp": "54",
       "high_usd": 73.74,
       "bar_pct": 22,
-      "market_cap_gbp_b": 3.54,
-      "market_cap_usd_b": 4.794,
+      "market_cap_gbp_b": 3.549,
+      "market_cap_usd_b": 4.806,
       "beta": 1.643,
       "pe_ratio": 36.01,
       "avg_volume_m": 5.23,
@@ -1176,7 +1176,7 @@ window.PRICES_DATA = {
       "high_usd": 320.95,
       "bar_pct": 16,
       "market_cap_gbp_b": 16.226,
-      "market_cap_usd_b": 21.972,
+      "market_cap_usd_b": 21.973,
       "beta": 1.733,
       "pe_ratio": 12.61,
       "avg_volume_m": 2.13,
