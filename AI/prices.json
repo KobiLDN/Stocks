@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-07 19:47",
-  "fx_gbp_usd": 1.3542,
+  "updated": "2026-09-07 20:31",
+  "fx_gbp_usd": 1.354,
   "stocks": [
     {
       "ticker": "SNDK",
@@ -19,7 +19,7 @@
       "high_gbp": "1739",
       "high_usd": 2354.39,
       "bar_pct": 73,
-      "market_cap_gbp_b": 188.134,
+      "market_cap_gbp_b": 188.157,
       "market_cap_usd_b": 254.769,
       "beta": null,
       "pe_ratio": 23.58,
@@ -87,7 +87,7 @@
       "high_gbp": "591",
       "high_usd": 799.87,
       "bar_pct": 53,
-      "market_cap_gbp_b": 124.457,
+      "market_cap_gbp_b": 124.472,
       "market_cap_usd_b": 168.538,
       "beta": 2.182,
       "pe_ratio": 17.36,
@@ -153,10 +153,10 @@
       "low_gbp": "15",
       "low_usd": 20.28,
       "high_gbp": "539",
-      "high_usd": 730.19,
+      "high_usd": 730.2,
       "bar_pct": 51,
-      "market_cap_gbp_b": 155.865,
-      "market_cap_usd_b": 211.07,
+      "market_cap_gbp_b": 155.886,
+      "market_cap_usd_b": 211.073,
       "beta": null,
       "pe_ratio": 59.09,
       "avg_volume_m": 41.73,
@@ -223,8 +223,8 @@
       "high_gbp": "927",
       "high_usd": 1255.0,
       "bar_pct": 79,
-      "market_cap_gbp_b": 847.836,
-      "market_cap_usd_b": 1148.129,
+      "market_cap_gbp_b": 847.94,
+      "market_cap_usd_b": 1148.13,
       "beta": 2.222,
       "pe_ratio": 22.99,
       "avg_volume_m": 43.22,
@@ -291,8 +291,8 @@
       "high_gbp": "846",
       "high_usd": 1145.0,
       "bar_pct": 69,
-      "market_cap_gbp_b": 142.14,
-      "market_cap_usd_b": 192.484,
+      "market_cap_gbp_b": 142.158,
+      "market_cap_usd_b": 192.485,
       "beta": 2.087,
       "pe_ratio": 60.97,
       "avg_volume_m": 4.73,
@@ -359,7 +359,7 @@
       "high_gbp": "244",
       "high_usd": 329.88,
       "bar_pct": 60,
-      "market_cap_gbp_b": 148.359,
+      "market_cap_gbp_b": 148.377,
       "market_cap_usd_b": 200.906,
       "beta": 2.253,
       "pe_ratio": 74.02,
@@ -427,7 +427,7 @@
       "high_gbp": "88",
       "high_usd": 119.1,
       "bar_pct": 69,
-      "market_cap_gbp_b": 24.426,
+      "market_cap_gbp_b": 24.429,
       "market_cap_usd_b": 33.077,
       "beta": 1.434,
       "pe_ratio": 136.32,
@@ -440,6 +440,13 @@
       "vol_1w": 13270100,
       "vol_1m": 79989400,
       "news": [
+        {
+          "title": "Illumina and Everpure to Join S&P 500 in September Rebalancing: What it Means for Investors",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/illumina-everpure-join-p-500-191523204.html",
+          "published": 1788808523,
+          "sentiment": 0.296
+        },
         {
           "title": "Bloom Energy, Illumina, Everpure Rise On S&P 500 Inclusion",
           "publisher": "Investor's Business Daily",
@@ -467,16 +474,9 @@
           "url": "https://www.barrons.com/articles/bloom-energy-everpure-illumina-sp500-stocks-ffd89f1a?siteid=yhoof2&yptr=yahoo",
           "published": 1788560160,
           "sentiment": 0.273
-        },
-        {
-          "title": "Bloom Energy, Illumina, and Everpure set to join S&P 500 in quarterly rebalance",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/bloom-energy-illumina-everpure-set-220908819.html",
-          "published": 1788559748,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.49
+      "news_sentiment": 0.447
     },
     {
       "ticker": "RR.",
@@ -491,9 +491,9 @@
       "change_ytd": "+24.55%",
       "return_1yr": "+36%",
       "low_gbp": "9.90",
-      "low_usd": 13.41,
+      "low_usd": 13.4,
       "high_gbp": "16",
-      "high_usd": 21.48,
+      "high_usd": 21.47,
       "bar_pct": 84,
       "market_cap_gbp_b": 1.229,
       "market_cap_usd_b": 1.664,
@@ -563,8 +563,8 @@
       "high_gbp": "305",
       "high_usd": 412.7,
       "bar_pct": 38,
-      "market_cap_gbp_b": 78.219,
-      "market_cap_usd_b": 105.923,
+      "market_cap_gbp_b": 78.229,
+      "market_cap_usd_b": 105.924,
       "beta": 1.117,
       "pe_ratio": 29.25,
       "avg_volume_m": 3.11,
@@ -631,7 +631,7 @@
       "high_gbp": "162",
       "high_usd": 219.82,
       "bar_pct": 19,
-      "market_cap_gbp_b": 37.004,
+      "market_cap_gbp_b": 37.008,
       "market_cap_usd_b": 50.11,
       "beta": 1.414,
       "pe_ratio": 25.18,
@@ -699,7 +699,7 @@
       "high_gbp": "333",
       "high_usd": 451.28,
       "bar_pct": 17,
-      "market_cap_gbp_b": 11.216,
+      "market_cap_gbp_b": 11.218,
       "market_cap_usd_b": 15.189,
       "beta": 1.63,
       "pe_ratio": null,
@@ -767,8 +767,8 @@
       "high_gbp": "28",
       "high_usd": 38.12,
       "bar_pct": 50,
-      "market_cap_gbp_b": 11.284,
-      "market_cap_usd_b": 15.281,
+      "market_cap_gbp_b": 11.285,
+      "market_cap_usd_b": 15.28,
       "beta": 0.978,
       "pe_ratio": null,
       "avg_volume_m": 0.87,
@@ -836,7 +836,7 @@
       "high_usd": 45.18,
       "bar_pct": 6,
       "market_cap_gbp_b": 4.353,
-      "market_cap_usd_b": 5.895,
+      "market_cap_usd_b": 5.894,
       "beta": 1.158,
       "pe_ratio": null,
       "avg_volume_m": 1.65,
@@ -898,12 +898,12 @@
       "change_1m": "-7.47%",
       "change_ytd": "+38.87%",
       "return_1yr": "+57%",
-      "low_gbp": "391",
+      "low_gbp": "392",
       "low_usd": 530.16,
       "high_gbp": "883",
       "high_usd": 1195.94,
       "bar_pct": 62,
-      "market_cap_gbp_b": 185.257,
+      "market_cap_gbp_b": 185.28,
       "market_cap_usd_b": 250.873,
       "beta": 0.967,
       "pe_ratio": 27.03,
@@ -971,8 +971,8 @@
       "high_gbp": "179",
       "high_usd": 241.82,
       "bar_pct": 10,
-      "market_cap_gbp_b": 10.662,
-      "market_cap_usd_b": 14.438,
+      "market_cap_gbp_b": 10.664,
+      "market_cap_usd_b": 14.439,
       "beta": 0.743,
       "pe_ratio": 40.83,
       "avg_volume_m": 1.01,
@@ -1107,7 +1107,7 @@
       "high_gbp": "143",
       "high_usd": 193.84,
       "bar_pct": 3,
-      "market_cap_gbp_b": 5.669,
+      "market_cap_gbp_b": 5.67,
       "market_cap_usd_b": 7.677,
       "beta": 1.195,
       "pe_ratio": null,
@@ -1243,7 +1243,7 @@
       "high_gbp": "100",
       "high_usd": 135.24,
       "bar_pct": 43,
-      "market_cap_gbp_b": 32.4,
+      "market_cap_gbp_b": 32.404,
       "market_cap_usd_b": 43.876,
       "beta": 1.012,
       "pe_ratio": 173.69,
@@ -1311,7 +1311,7 @@
       "high_gbp": "15",
       "high_usd": 20.34,
       "bar_pct": 23,
-      "market_cap_gbp_b": 4.217,
+      "market_cap_gbp_b": 4.218,
       "market_cap_usd_b": 5.711,
       "beta": 1.236,
       "pe_ratio": null,
@@ -1447,7 +1447,7 @@
       "high_gbp": "281",
       "high_usd": 379.93,
       "bar_pct": 62,
-      "market_cap_gbp_b": 79.753,
+      "market_cap_gbp_b": 79.763,
       "market_cap_usd_b": 108.001,
       "beta": 2.075,
       "pe_ratio": 63.33,
@@ -1515,8 +1515,8 @@
       "high_gbp": "353",
       "high_usd": 478.0,
       "bar_pct": 60,
-      "market_cap_gbp_b": 117.838,
-      "market_cap_usd_b": 159.575,
+      "market_cap_gbp_b": 117.852,
+      "market_cap_usd_b": 159.574,
       "beta": 1.168,
       "pe_ratio": 41.84,
       "avg_volume_m": 2.24,
@@ -1583,8 +1583,8 @@
       "high_gbp": "242",
       "high_usd": 328.0,
       "bar_pct": 38,
-      "market_cap_gbp_b": 4.874,
-      "market_cap_usd_b": 6.6,
+      "market_cap_gbp_b": 4.875,
+      "market_cap_usd_b": 6.601,
       "beta": 1.185,
       "pe_ratio": 34.71,
       "avg_volume_m": 0.74,
@@ -1648,10 +1648,10 @@
       "return_1yr": "+35%",
       "low_gbp": "532",
       "low_usd": 720.62,
-      "high_gbp": "833",
+      "high_gbp": "834",
       "high_usd": 1128.68,
       "bar_pct": 77,
-      "market_cap_gbp_b": 75.486,
+      "market_cap_gbp_b": 75.495,
       "market_cap_usd_b": 102.222,
       "beta": 0.973,
       "pe_ratio": 66.67,
@@ -1719,7 +1719,7 @@
       "high_gbp": "154",
       "high_usd": 208.14,
       "bar_pct": 68,
-      "market_cap_gbp_b": 52.539,
+      "market_cap_gbp_b": 52.546,
       "market_cap_usd_b": 71.148,
       "beta": 1.037,
       "pe_ratio": 91.9,
@@ -1787,7 +1787,7 @@
       "high_gbp": "147",
       "high_usd": 199.13,
       "bar_pct": 40,
-      "market_cap_gbp_b": 60.508,
+      "market_cap_gbp_b": 60.515,
       "market_cap_usd_b": 81.939,
       "beta": 0.895,
       "pe_ratio": 24.22,
@@ -1855,8 +1855,8 @@
       "high_gbp": "302",
       "high_usd": 408.61,
       "bar_pct": 60,
-      "market_cap_gbp_b": 3056.698,
-      "market_cap_usd_b": 4139.343,
+      "market_cap_gbp_b": 3057.071,
+      "market_cap_usd_b": 4139.344,
       "beta": 1.225,
       "pe_ratio": 16.97,
       "avg_volume_m": 30.1,
@@ -1876,6 +1876,20 @@
           "sentiment": -0.318
         },
         {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Berkshire Hathaway Owns AI Exposure in 3 Different Ways. Here's Why That's Not the Same as Owning Nvidia.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/berkshire-owns-ai-exposure-3-different-ways-heres/",
+          "published": 1788807000,
+          "sentiment": 0.0
+        },
+        {
           "title": "Apple\u2019s new CEO faces a staggering $14 billion iPhone test",
           "publisher": "TheStreet",
           "url": "https://www.thestreet.com/investing/apples-new-ceo-faces-a-staggering-14-billion-iphone-test",
@@ -1888,23 +1902,9 @@
           "url": "https://finance.yahoo.com/technology/articles/google-backed-pixxel-raises-100-174102678.html",
           "published": 1788802862,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jabil Rises 36.2% Year to Date: Should You Buy the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jabil-rises-36-2-date-152000660.html",
-          "published": 1788794400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Microsoft Stock Is Building a Trillion-Dollar AI Opportunity. Is $600 Next?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/microsoft-stock-is-building-a-trillion-dollar-ai-opportunity-is-600-next/",
-          "published": 1788790519,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.021
+      "news_sentiment": -0.064
     },
     {
       "ticker": "MSFT",
@@ -1923,7 +1923,7 @@
       "high_gbp": "409",
       "high_usd": 553.72,
       "bar_pct": 74,
-      "market_cap_gbp_b": 2740.052,
+      "market_cap_gbp_b": 2740.386,
       "market_cap_usd_b": 3710.545,
       "beta": 1.108,
       "pe_ratio": 27.85,
@@ -1944,6 +1944,20 @@
           "sentiment": -0.318
         },
         {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Microsoft Has a $1,000 Problem With Its Next Xbox",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/articles/microsoft-1-000-problem-next-192040075.html",
+          "published": 1788808840,
+          "sentiment": -0.402
+        },
+        {
           "title": "IREN\u2019s AI Pricing Is Exploding \u2014 Why the Neocloud\u2019s $2.6 Billion Contract Base Could Scale Dramatically",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/09/07/irens-ai-pricing-is-exploding-why-the-neoclouds-2-6-billion-contract-base-could-scale-dramatically/",
@@ -1956,23 +1970,9 @@
           "url": "https://247wallst.com/investing/2026/09/07/microsoft-is-close-to-a-new-all-time-high-this-number-will-determine-if-it-keeps-climbing/",
           "published": 1788795950,
           "sentiment": 0.096
-        },
-        {
-          "title": "Jabil Rises 36.2% Year to Date: Should You Buy the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jabil-rises-36-2-date-152000660.html",
-          "published": 1788794400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Bernie Sanders Wants to Ban Superintelligence. What It Means for Microsoft and Amazon",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/bernie-sanders-wants-ban-superintelligence-145733495.html",
-          "published": 1788793053,
-          "sentiment": -0.44
         }
       ],
-      "news_sentiment": -0.132
+      "news_sentiment": -0.125
     },
     {
       "ticker": "AMZN",
@@ -1991,7 +1991,7 @@
       "high_gbp": "212",
       "high_usd": 287.2,
       "bar_pct": 69,
-      "market_cap_gbp_b": 2059.072,
+      "market_cap_gbp_b": 2059.323,
       "market_cap_usd_b": 2788.37,
       "beta": 1.443,
       "pe_ratio": 20.8,
@@ -2010,6 +2010,13 @@
           "url": "https://finance.yahoo.com/video/real-danger-black-market-peptides-110000226.html",
           "published": 1788778800,
           "sentiment": -0.527
+        },
+        {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
         },
         {
           "title": "Why Does Amazon Trade at a Discount to Walmart and Costco? Here's the Only Answer That Makes Sense.",
@@ -2031,13 +2038,6 @@
           "url": "https://247wallst.com/investing/2026/09/07/irens-ai-pricing-is-exploding-why-the-neoclouds-2-6-billion-contract-base-could-scale-dramatically/",
           "published": 1788798954,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jabil Rises 36.2% Year to Date: Should You Buy the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jabil-rises-36-2-date-152000660.html",
-          "published": 1788794400,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.07
@@ -2047,7 +2047,7 @@
       "company_name": "Meta Platforms",
       "category": "hyperscalers",
       "exchange": "NASDAQ",
-      "price_gbp": "455",
+      "price_gbp": "456",
       "price_usd": 616.77,
       "change_1d": "+0.47%",
       "change_1w": "+6.70%",
@@ -2059,8 +2059,8 @@
       "high_gbp": "584",
       "high_usd": 790.8,
       "bar_pct": 36,
-      "market_cap_gbp_b": 1160.271,
-      "market_cap_usd_b": 1571.225,
+      "market_cap_gbp_b": 1160.413,
+      "market_cap_usd_b": 1571.226,
       "beta": 1.243,
       "pe_ratio": 23.26,
       "avg_volume_m": 17.85,
@@ -2072,6 +2072,13 @@
       "vol_1w": 81413200,
       "vol_1m": 358047700,
       "news": [
+        {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
+        },
         {
           "title": "AMD Is Behind The AI Chip Shift Nobody Is Talking About",
           "publisher": "24/7 Wall St.",
@@ -2087,28 +2094,21 @@
           "sentiment": 0.0
         },
         {
+          "title": "Meta Is Underperforming Every Trillion-Dollar Stock but Tesla. This Trade Pays You While Wall Street Waits It Out.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4474528/meta-is-underperforming-every-trillion-dollar-stock-but-tesla-this-trade-pays-you-while-wall-street-waits-it-out",
+          "published": 1788786879,
+          "sentiment": 0.0
+        },
+        {
           "title": "Here is What to Know Beyond Why Meta Platforms, Inc. (META) is a Trending Stock",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-meta-platforms-130005630.html",
           "published": 1788786005,
           "sentiment": 0.0
-        },
-        {
-          "title": "Nvidia, Tech Giants Flash Stunning Market Signal",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-tech-giants-flash-stunning-123419569.html",
-          "published": 1788784459,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Meta\u2019s $18 Billion Teen Safety Deal Puts the Pressure on TikTok and YouTube Next",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/media-advertising/articles/meta-18-billion-teen-safety-011613870.html",
-          "published": 1788743773,
-          "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.107
+      "news_sentiment": 0.0
     },
     {
       "ticker": "IREN",
@@ -2127,8 +2127,8 @@
       "high_gbp": "57",
       "high_usd": 76.87,
       "bar_pct": 37,
-      "market_cap_gbp_b": 13.002,
-      "market_cap_usd_b": 17.607,
+      "market_cap_gbp_b": 13.003,
+      "market_cap_usd_b": 17.606,
       "beta": 4.285,
       "pe_ratio": null,
       "avg_volume_m": 44.18,
@@ -2140,6 +2140,13 @@
       "vol_1w": 195015300,
       "vol_1m": 1015189900,
       "news": [
+        {
+          "title": "IREN Jumps 23% as Its AI Business Starts to Take Over the Story",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/iren-jumps-23-ai-business-192418866.html",
+          "published": 1788809058,
+          "sentiment": 0.0
+        },
         {
           "title": "IREN\u2019s AI Pricing Is Exploding \u2014 Why the Neocloud\u2019s $2.6 Billion Contract Base Could Scale Dramatically",
           "publisher": "24/7 Wall St.",
@@ -2167,13 +2174,6 @@
           "url": "https://www.fool.com/coverage/charts/2026/09/06/analyzing-applied-digital-vs-iren-accelerating-upward-trajectories-vs-sequential-contractions-in-quarterly-revenue-generation/",
           "published": 1788728773,
           "sentiment": 0.0
-        },
-        {
-          "title": "What Should I Invest In? I'm Putting My Money in These 2 Stocks for 2027.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/06/what-should-invest-put-my-money-stock-nlst-iren/",
-          "published": 1788717900,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.026
@@ -2195,7 +2195,7 @@
       "high_gbp": "22",
       "high_usd": 30.46,
       "bar_pct": 27,
-      "market_cap_gbp_b": 4.245,
+      "market_cap_gbp_b": 4.246,
       "market_cap_usd_b": 5.749,
       "beta": 5.485,
       "pe_ratio": null,
@@ -2263,7 +2263,7 @@
       "high_gbp": "22",
       "high_usd": 29.84,
       "bar_pct": 36,
-      "market_cap_gbp_b": 6.083,
+      "market_cap_gbp_b": 6.084,
       "market_cap_usd_b": 8.238,
       "beta": 4.248,
       "pe_ratio": null,
@@ -2331,7 +2331,7 @@
       "high_gbp": "104",
       "high_usd": 140.8,
       "bar_pct": 59,
-      "market_cap_gbp_b": 8.515,
+      "market_cap_gbp_b": 8.516,
       "market_cap_usd_b": 11.531,
       "beta": 5.976,
       "pe_ratio": null,
@@ -2399,8 +2399,8 @@
       "high_gbp": "43",
       "high_usd": 58.78,
       "bar_pct": 51,
-      "market_cap_gbp_b": 19.207,
-      "market_cap_usd_b": 26.01,
+      "market_cap_gbp_b": 19.209,
+      "market_cap_usd_b": 26.009,
       "beta": 1.996,
       "pe_ratio": 12.14,
       "avg_volume_m": 56.59,
@@ -2467,8 +2467,8 @@
       "high_gbp": "395",
       "high_usd": 534.99,
       "bar_pct": 97,
-      "market_cap_gbp_b": 250.09,
-      "market_cap_usd_b": 338.669,
+      "market_cap_gbp_b": 250.121,
+      "market_cap_usd_b": 338.67,
       "beta": 1.409,
       "pe_ratio": 30.49,
       "avg_volume_m": 7.65,
@@ -2480,6 +2480,13 @@
       "vol_1w": 91791000,
       "vol_1m": 184664600,
       "news": [
+        {
+          "title": "Dell & 2 Momentum Stocks to Buy Now for Explosive Upside",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dell-2-momentum-stocks-buy-190000023.html",
+          "published": 1788807600,
+          "sentiment": 0.0
+        },
         {
           "title": "Jim Cramer Explains Why \u201cBuyers Flocked in\u201d for Dell (DELL)",
           "publisher": "Insider Monkey",
@@ -2507,13 +2514,6 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/buy-netapp-stock-ai-growth-162300856.html",
           "published": 1788798180,
           "sentiment": 0.382
-        },
-        {
-          "title": "NTAP Stock Up 14.8% in 3 Months Can AI Momentum Keep It Climbing?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/ntap-stock-14-8-3-161800540.html",
-          "published": 1788797880,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.193
@@ -2535,7 +2535,7 @@
       "high_gbp": "325",
       "high_usd": 440.0,
       "bar_pct": 54,
-      "market_cap_gbp_b": 40.76,
+      "market_cap_gbp_b": 40.765,
       "market_cap_usd_b": 55.197,
       "beta": 2.104,
       "pe_ratio": 68.41,
@@ -2603,8 +2603,8 @@
       "high_gbp": "802",
       "high_usd": 1085.68,
       "bar_pct": 78,
-      "market_cap_gbp_b": 58.373,
-      "market_cap_usd_b": 79.048,
+      "market_cap_gbp_b": 58.381,
+      "market_cap_usd_b": 79.049,
       "beta": 1.541,
       "pe_ratio": null,
       "avg_volume_m": 4.84,
@@ -2672,7 +2672,7 @@
       "high_usd": 233.67,
       "bar_pct": 40,
       "market_cap_gbp_b": 6.617,
-      "market_cap_usd_b": 8.961,
+      "market_cap_usd_b": 8.96,
       "beta": 3.783,
       "pe_ratio": null,
       "avg_volume_m": 11.21,
@@ -2739,7 +2739,7 @@
       "high_gbp": "553",
       "high_usd": 748.89,
       "bar_pct": 15,
-      "market_cap_gbp_b": 10.781,
+      "market_cap_gbp_b": 10.782,
       "market_cap_usd_b": 14.599,
       "beta": 1.208,
       "pe_ratio": 31.24,
@@ -2807,8 +2807,8 @@
       "high_gbp": "309",
       "high_usd": 418.9,
       "bar_pct": 49,
-      "market_cap_gbp_b": 15.168,
-      "market_cap_usd_b": 20.54,
+      "market_cap_gbp_b": 15.17,
+      "market_cap_usd_b": 20.541,
       "beta": 1.708,
       "pe_ratio": 85.38,
       "avg_volume_m": 1.55,
@@ -2875,7 +2875,7 @@
       "high_gbp": "131",
       "high_usd": 177.35,
       "bar_pct": 75,
-      "market_cap_gbp_b": 10.192,
+      "market_cap_gbp_b": 10.193,
       "market_cap_usd_b": 13.802,
       "beta": 2.353,
       "pe_ratio": 97.94,
@@ -2943,7 +2943,7 @@
       "high_gbp": "228",
       "high_usd": 308.67,
       "bar_pct": 38,
-      "market_cap_gbp_b": 23.674,
+      "market_cap_gbp_b": 23.677,
       "market_cap_usd_b": 32.059,
       "beta": 3.228,
       "pe_ratio": 59.85,
@@ -3079,7 +3079,7 @@
       "high_gbp": "277",
       "high_usd": 374.96,
       "bar_pct": 78,
-      "market_cap_gbp_b": 41.136,
+      "market_cap_gbp_b": 41.141,
       "market_cap_usd_b": 55.706,
       "beta": 1.208,
       "pe_ratio": 44.28,
@@ -3147,7 +3147,7 @@
       "high_gbp": "45",
       "high_usd": 60.43,
       "bar_pct": 48,
-      "market_cap_gbp_b": 6.352,
+      "market_cap_gbp_b": 6.353,
       "market_cap_usd_b": 8.602,
       "beta": 1.226,
       "pe_ratio": null,

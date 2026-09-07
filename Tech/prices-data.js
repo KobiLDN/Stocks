@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-09-07 19:48",
-  "fx_gbp_usd": 1.3542,
+  "updated": "2026-09-07 20:32",
+  "fx_gbp_usd": 1.354,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -19,8 +19,8 @@ window.PRICES_DATA = {
       "high_gbp": "254",
       "high_usd": 344.57,
       "bar_pct": 79,
-      "market_cap_gbp_b": 3448.433,
-      "market_cap_usd_b": 4669.699,
+      "market_cap_gbp_b": 3448.9,
+      "market_cap_usd_b": 4669.7,
       "beta": 1.085,
       "pe_ratio": 36.61,
       "avg_volume_m": 54.15,
@@ -32,6 +32,20 @@ window.PRICES_DATA = {
       "vol_1w": 204964100,
       "vol_1m": 923077600,
       "news": [
+        {
+          "title": "KeyBanc Delivers Stark Warning on Apple Stock Ahead of iPhone 18 Launch",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/keybanc-delivers-stark-warning-apple-191353530.html",
+          "published": 1788808433,
+          "sentiment": -0.34
+        },
+        {
+          "title": "Berkshire Hathaway Owns AI Exposure in 3 Different Ways. Here's Why That's Not the Same as Owning Nvidia.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/berkshire-owns-ai-exposure-3-different-ways-heres/",
+          "published": 1788807000,
+          "sentiment": 0.0
+        },
         {
           "title": "Apple\u2019s new CEO faces a staggering $14 billion iPhone test",
           "publisher": "TheStreet",
@@ -52,23 +66,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/dell-expands-consumer-pc-reach-165000055.html",
           "published": 1788799800,
           "sentiment": 0.202
-        },
-        {
-          "title": "The Real Satellite Race Isn\u2019t About Rockets \u2014 It\u2019s About Who Controls the Spectrum in Your Phone",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/the-real-satellite-race-isnt-about-rockets-its-about-who-controls-the-spectrum-in-your-phone/",
-          "published": 1788799264,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Is Adobe's Stock Heading for $300?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/07/is-adobe-s-stock-heading-for-300/",
-          "published": 1788798149,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.125
+      "news_sentiment": 0.057
     },
     {
       "ticker": "MSFT",
@@ -87,7 +87,7 @@ window.PRICES_DATA = {
       "high_gbp": "409",
       "high_usd": 553.72,
       "bar_pct": 74,
-      "market_cap_gbp_b": 2740.126,
+      "market_cap_gbp_b": 2740.497,
       "market_cap_usd_b": 3710.545,
       "beta": 1.108,
       "pe_ratio": 27.85,
@@ -108,6 +108,20 @@ window.PRICES_DATA = {
           "sentiment": -0.318
         },
         {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Microsoft Has a $1,000 Problem With Its Next Xbox",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/articles/microsoft-1-000-problem-next-192040075.html",
+          "published": 1788808840,
+          "sentiment": -0.402
+        },
+        {
           "title": "IREN\u2019s AI Pricing Is Exploding \u2014 Why the Neocloud\u2019s $2.6 Billion Contract Base Could Scale Dramatically",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/09/07/irens-ai-pricing-is-exploding-why-the-neoclouds-2-6-billion-contract-base-could-scale-dramatically/",
@@ -120,23 +134,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/09/07/microsoft-is-close-to-a-new-all-time-high-this-number-will-determine-if-it-keeps-climbing/",
           "published": 1788795950,
           "sentiment": 0.096
-        },
-        {
-          "title": "Jabil Rises 36.2% Year to Date: Should You Buy the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jabil-rises-36-2-date-152000660.html",
-          "published": 1788794400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Bernie Sanders Wants to Ban Superintelligence. What It Means for Microsoft and Amazon",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/bernie-sanders-wants-ban-superintelligence-145733495.html",
-          "published": 1788793053,
-          "sentiment": -0.44
         }
       ],
-      "news_sentiment": -0.132
+      "news_sentiment": -0.125
     },
     {
       "ticker": "GOOGL",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "302",
       "high_usd": 408.61,
       "bar_pct": 60,
-      "market_cap_gbp_b": 3056.781,
-      "market_cap_usd_b": 4139.343,
+      "market_cap_gbp_b": 3057.195,
+      "market_cap_usd_b": 4139.344,
       "beta": 1.225,
       "pe_ratio": 16.97,
       "avg_volume_m": 30.1,
@@ -176,6 +176,20 @@ window.PRICES_DATA = {
           "sentiment": -0.318
         },
         {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Berkshire Hathaway Owns AI Exposure in 3 Different Ways. Here's Why That's Not the Same as Owning Nvidia.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/berkshire-owns-ai-exposure-3-different-ways-heres/",
+          "published": 1788807000,
+          "sentiment": 0.0
+        },
+        {
           "title": "Apple\u2019s new CEO faces a staggering $14 billion iPhone test",
           "publisher": "TheStreet",
           "url": "https://www.thestreet.com/investing/apples-new-ceo-faces-a-staggering-14-billion-iphone-test",
@@ -188,23 +202,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/articles/google-backed-pixxel-raises-100-174102678.html",
           "published": 1788802862,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jabil Rises 36.2% Year to Date: Should You Buy the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jabil-rises-36-2-date-152000660.html",
-          "published": 1788794400,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Microsoft Stock Is Building a Trillion-Dollar AI Opportunity. Is $600 Next?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/microsoft-stock-is-building-a-trillion-dollar-ai-opportunity-is-600-next/",
-          "published": 1788790519,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.021
+      "news_sentiment": -0.064
     },
     {
       "ticker": "AMZN",
@@ -223,8 +223,8 @@ window.PRICES_DATA = {
       "high_gbp": "212",
       "high_usd": 287.2,
       "bar_pct": 69,
-      "market_cap_gbp_b": 2059.128,
-      "market_cap_usd_b": 2788.371,
+      "market_cap_gbp_b": 2059.406,
+      "market_cap_usd_b": 2788.37,
       "beta": 1.443,
       "pe_ratio": 20.8,
       "avg_volume_m": 47.83,
@@ -242,6 +242,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/video/real-danger-black-market-peptides-110000226.html",
           "published": 1788778800,
           "sentiment": -0.527
+        },
+        {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
         },
         {
           "title": "Why Does Amazon Trade at a Discount to Walmart and Costco? Here's the Only Answer That Makes Sense.",
@@ -263,13 +270,6 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/09/07/irens-ai-pricing-is-exploding-why-the-neoclouds-2-6-billion-contract-base-could-scale-dramatically/",
           "published": 1788798954,
           "sentiment": 0.0
-        },
-        {
-          "title": "Jabil Rises 36.2% Year to Date: Should You Buy the Stock?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jabil-rises-36-2-date-152000660.html",
-          "published": 1788794400,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.07
@@ -279,7 +279,7 @@ window.PRICES_DATA = {
       "company_name": "Meta Platforms",
       "category": "mega-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "455",
+      "price_gbp": "456",
       "price_usd": 616.77,
       "change_1d": "+0.47%",
       "change_1w": "+6.70%",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "584",
       "high_usd": 790.8,
       "bar_pct": 36,
-      "market_cap_gbp_b": 1160.303,
+      "market_cap_gbp_b": 1160.46,
       "market_cap_usd_b": 1571.226,
       "beta": 1.243,
       "pe_ratio": 23.26,
@@ -304,6 +304,13 @@ window.PRICES_DATA = {
       "vol_1w": 81413200,
       "vol_1m": 358047700,
       "news": [
+        {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
+        },
         {
           "title": "AMD Is Behind The AI Chip Shift Nobody Is Talking About",
           "publisher": "24/7 Wall St.",
@@ -319,28 +326,21 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Meta Is Underperforming Every Trillion-Dollar Stock but Tesla. This Trade Pays You While Wall Street Waits It Out.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4474528/meta-is-underperforming-every-trillion-dollar-stock-but-tesla-this-trade-pays-you-while-wall-street-waits-it-out",
+          "published": 1788786879,
+          "sentiment": 0.0
+        },
+        {
           "title": "Here is What to Know Beyond Why Meta Platforms, Inc. (META) is a Trending Stock",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/know-beyond-why-meta-platforms-130005630.html",
           "published": 1788786005,
           "sentiment": 0.0
-        },
-        {
-          "title": "Nvidia, Tech Giants Flash Stunning Market Signal",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-tech-giants-flash-stunning-123419569.html",
-          "published": 1788784459,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Meta\u2019s $18 Billion Teen Safety Deal Puts the Pressure on TikTok and YouTube Next",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/media-advertising/articles/meta-18-billion-teen-safety-011613870.html",
-          "published": 1788743773,
-          "sentiment": 0.153
         }
       ],
-      "news_sentiment": 0.107
+      "news_sentiment": 0.0
     },
     {
       "ticker": "NVDA",
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "175",
       "high_usd": 236.54,
       "bar_pct": 91,
-      "market_cap_gbp_b": 4107.741,
+      "market_cap_gbp_b": 4108.297,
       "market_cap_usd_b": 5562.502,
       "beta": 2.217,
       "pe_ratio": 29.16,
@@ -373,42 +373,42 @@ window.PRICES_DATA = {
       "vol_1m": 2955793800,
       "news": [
         {
-          "title": "This ETF Would Have Increased Your Investment by 6x Over the Past 10 Years -- and It's Still Soaring",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/07/this-etf-would-have-increased-your-investment-by-6/",
-          "published": 1788805620,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Broadcom Inc. (AVGO)\u2019s AI Opportunity Expands Across AI Infrastructure",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-inc-avgo-ai-opportunity-181909723.html",
-          "published": 1788805097,
-          "sentiment": 0.494
-        },
-        {
-          "title": "Should You Buy Marvell Technology Stock Before Oct. 6?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/07/should-you-buy-marvell-technology-stock-before-oct-6/",
-          "published": 1788804861,
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
           "sentiment": 0.0
         },
         {
-          "title": "2 Safe High-Yield Energy Dividend Stocks You've Probably Never Heard Of",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/07/3-safe-energy-dividends-youve-probably-never-heard/",
-          "published": 1788803400,
-          "sentiment": 0.612
+          "title": "TSMC's $265 Billion U.S. Bet Is Becoming Part of Taiwan's Chip Diplomacy",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/articles/tsmcs-265-billion-u-bet-192538926.html",
+          "published": 1788809138,
+          "sentiment": 0.0
         },
         {
-          "title": "Jim Cramer Explains Why \u201cBuyers Flocked in\u201d for Dell (DELL)",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-explains-why-buyers-174139489.html",
-          "published": 1788802899,
+          "title": "Will Silver Take Off Before the End of 2026?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/will-silver-take-off-before-the-end-of-2026/",
+          "published": 1788809044,
           "sentiment": 0.0
+        },
+        {
+          "title": "Nvidia Stock: Is It Still a Good Buy at $230?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/nvidia-stock-is-it-still-a-good-buy-at-230/",
+          "published": 1788808801,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Anthropic Seeking $15 Billion in Debt Before Its IPO: Is That a Warning Sign or a Bullish Signal for AI Infrastructure Stocks?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/07/anthropic-seeking-usd15-billion-in-debt-before-its-ipo-is-that-a-warning-sign-or-a-bullish-signal-for-ai-infrastructure-stocks/",
+          "published": 1788808640,
+          "sentiment": -0.599
         }
       ],
-      "news_sentiment": 0.276
+      "news_sentiment": -0.032
     },
     {
       "ticker": "AMD",
@@ -427,7 +427,7 @@ window.PRICES_DATA = {
       "high_gbp": "432",
       "high_usd": 584.73,
       "bar_pct": 75,
-      "market_cap_gbp_b": 575.727,
+      "market_cap_gbp_b": 575.805,
       "market_cap_usd_b": 779.621,
       "beta": 2.476,
       "pe_ratio": 121.83,
@@ -440,6 +440,20 @@ window.PRICES_DATA = {
       "vol_1w": 75134600,
       "vol_1m": 450994800,
       "news": [
+        {
+          "title": "Nvidia, Microsoft at Center of $7 Trillion AI Boom",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-microsoft-center-7-trillion-192652924.html",
+          "published": 1788809212,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Cathie Wood Is Moving Money From Palantir Into Rocket Lab and Fintech",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-moving-money-palantir-192133259.html",
+          "published": 1788808893,
+          "sentiment": 0.0
+        },
         {
           "title": "Wall Street Is Worried About AMD. Here\u2019s Why Long-Term Investors Shouldn\u2019t Be",
           "publisher": "24/7 Wall St.",
@@ -460,23 +474,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/09/07/nvidia-is-no-longer-just-a-chip-company-its-the-infrastructure-platform-for-all-of-ai/",
           "published": 1788799814,
           "sentiment": -0.296
-        },
-        {
-          "title": "AMD Is Behind The AI Chip Shift Nobody Is Talking About",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/07/amd-is-behind-the-ai-chip-shift-nobody-is-talking-about/",
-          "published": 1788792057,
-          "sentiment": 0.0
-        },
-        {
-          "title": "NVIDIA's Hugging Face Buyout: Can It Further Strengthen AI Dominance?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/nvidias-hugging-face-buyout-further-130200882.html",
-          "published": 1788786120,
-          "sentiment": 0.71
         }
       ],
-      "news_sentiment": -0.082
+      "news_sentiment": -0.224
     },
     {
       "ticker": "INTC",
@@ -495,8 +495,8 @@ window.PRICES_DATA = {
       "high_gbp": "105",
       "high_usd": 142.35,
       "bar_pct": 61,
-      "market_cap_gbp_b": 373.968,
-      "market_cap_usd_b": 506.409,
+      "market_cap_gbp_b": 374.018,
+      "market_cap_usd_b": 506.408,
       "beta": 2.231,
       "pe_ratio": null,
       "avg_volume_m": 113.77,
@@ -563,7 +563,7 @@ window.PRICES_DATA = {
       "high_gbp": "354",
       "high_usd": 479.0,
       "bar_pct": 79,
-      "market_cap_gbp_b": 1642.749,
+      "market_cap_gbp_b": 1642.971,
       "market_cap_usd_b": 2224.53,
       "beta": 1.247,
       "pe_ratio": 31.84,
@@ -576,6 +576,13 @@ window.PRICES_DATA = {
       "vol_1w": 41073900,
       "vol_1m": 217306100,
       "news": [
+        {
+          "title": "TSMC's $265 Billion U.S. Bet Is Becoming Part of Taiwan's Chip Diplomacy",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/technology/articles/tsmcs-265-billion-u-bet-192538926.html",
+          "published": 1788809138,
+          "sentiment": 0.0
+        },
         {
           "title": "Arm Expands Into AI Accelerators With Samsung \u2014 But It\u2019s Not the Data Center Goldmine Investors Hope For",
           "publisher": "24/7 Wall St.",
@@ -603,16 +610,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-think-tsmc-133005730.html",
           "published": 1788787805,
           "sentiment": 0.44
-        },
-        {
-          "title": "Taiwan Semiconductor Retains 73% Foundry Share: Is the Stock a Buy?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-retains-73-foundry-124900456.html",
-          "published": 1788785340,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.371
+      "news_sentiment": 0.312
     },
     {
       "ticker": "AVGO",
@@ -631,8 +631,8 @@ window.PRICES_DATA = {
       "high_gbp": "366",
       "high_usd": 495.0,
       "bar_pct": 33,
-      "market_cap_gbp_b": 1257.403,
-      "market_cap_usd_b": 1702.714,
+      "market_cap_gbp_b": 1257.573,
+      "market_cap_usd_b": 1702.713,
       "beta": 1.457,
       "pe_ratio": 45.65,
       "avg_volume_m": 24.58,
@@ -699,7 +699,7 @@ window.PRICES_DATA = {
       "high_gbp": "192",
       "high_usd": 259.92,
       "bar_pct": 34,
-      "market_cap_gbp_b": 133.09,
+      "market_cap_gbp_b": 133.108,
       "market_cap_usd_b": 180.224,
       "beta": 1.679,
       "pe_ratio": 19.26,
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "334",
       "high_usd": 452.7,
       "bar_pct": 43,
-      "market_cap_gbp_b": 198.82,
-      "market_cap_usd_b": 269.232,
+      "market_cap_gbp_b": 198.846,
+      "market_cap_usd_b": 269.231,
       "beta": 3.89,
       "pe_ratio": 257.23,
       "avg_volume_m": 6.8,
@@ -823,7 +823,7 @@ window.PRICES_DATA = {
       "company_name": "ASML Holding",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "1266",
+      "price_gbp": "1267",
       "price_usd": 1714.88,
       "change_1d": "+4.17%",
       "change_1w": "+1.10%",
@@ -835,7 +835,7 @@ window.PRICES_DATA = {
       "high_gbp": "1477",
       "high_usd": 1999.96,
       "bar_pct": 77,
-      "market_cap_gbp_b": 486.419,
+      "market_cap_gbp_b": 486.485,
       "market_cap_usd_b": 658.685,
       "beta": 1.363,
       "pe_ratio": 58.13,
@@ -903,8 +903,8 @@ window.PRICES_DATA = {
       "high_gbp": "927",
       "high_usd": 1255.0,
       "bar_pct": 79,
-      "market_cap_gbp_b": 847.859,
-      "market_cap_usd_b": 1148.129,
+      "market_cap_gbp_b": 847.974,
+      "market_cap_usd_b": 1148.13,
       "beta": 2.222,
       "pe_ratio": 22.99,
       "avg_volume_m": 43.22,
@@ -971,7 +971,7 @@ window.PRICES_DATA = {
       "high_gbp": "546",
       "high_usd": 739.67,
       "bar_pct": 51,
-      "market_cap_gbp_b": 266.482,
+      "market_cap_gbp_b": 266.518,
       "market_cap_usd_b": 360.857,
       "beta": 1.597,
       "pe_ratio": 39.2,
@@ -1039,8 +1039,8 @@ window.PRICES_DATA = {
       "high_gbp": "255",
       "high_usd": 345.72,
       "bar_pct": 19,
-      "market_cap_gbp_b": 337.748,
-      "market_cap_usd_b": 457.362,
+      "market_cap_gbp_b": 337.793,
+      "market_cap_usd_b": 457.361,
       "beta": 1.732,
       "pe_ratio": 27.23,
       "avg_volume_m": 31.52,
@@ -1107,8 +1107,8 @@ window.PRICES_DATA = {
       "high_gbp": "199",
       "high_usd": 269.11,
       "bar_pct": 92,
-      "market_cap_gbp_b": 157.55,
-      "market_cap_usd_b": 213.347,
+      "market_cap_gbp_b": 157.571,
+      "market_cap_usd_b": 213.346,
       "beta": 1.202,
       "pe_ratio": 23.76,
       "avg_volume_m": 15.14,
@@ -1175,8 +1175,8 @@ window.PRICES_DATA = {
       "high_gbp": "274",
       "high_usd": 370.86,
       "bar_pct": 42,
-      "market_cap_gbp_b": 78.232,
-      "market_cap_usd_b": 105.938,
+      "market_cap_gbp_b": 78.242,
+      "market_cap_usd_b": 105.937,
       "beta": 1.417,
       "pe_ratio": 15.25,
       "avg_volume_m": 6.21,
@@ -1243,8 +1243,8 @@ window.PRICES_DATA = {
       "high_gbp": "144",
       "high_usd": 194.73,
       "bar_pct": 53,
-      "market_cap_gbp_b": 107.849,
-      "market_cap_usd_b": 146.044,
+      "market_cap_gbp_b": 107.863,
+      "market_cap_usd_b": 146.043,
       "beta": 0.972,
       "pe_ratio": 88.29,
       "avg_volume_m": 22.18,
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "284",
       "high_usd": 384.56,
       "bar_pct": 82,
-      "market_cap_gbp_b": 86.302,
+      "market_cap_gbp_b": 86.314,
       "market_cap_usd_b": 116.866,
       "beta": 1.328,
       "pe_ratio": null,
@@ -1379,7 +1379,7 @@ window.PRICES_DATA = {
       "high_gbp": "521",
       "high_usd": 705.08,
       "bar_pct": 18,
-      "market_cap_gbp_b": 67.205,
+      "market_cap_gbp_b": 67.214,
       "market_cap_usd_b": 91.006,
       "beta": 0.976,
       "pe_ratio": 20.2,
@@ -1447,8 +1447,8 @@ window.PRICES_DATA = {
       "high_gbp": "173",
       "high_usd": 233.88,
       "bar_pct": 86,
-      "market_cap_gbp_b": 161.135,
-      "market_cap_usd_b": 218.201,
+      "market_cap_gbp_b": 161.156,
+      "market_cap_usd_b": 218.2,
       "beta": 1.255,
       "pe_ratio": 5327.5,
       "avg_volume_m": 10.1,
@@ -1515,8 +1515,8 @@ window.PRICES_DATA = {
       "high_gbp": "295",
       "high_usd": 398.88,
       "bar_pct": 75,
-      "market_cap_gbp_b": 200.574,
-      "market_cap_usd_b": 271.608,
+      "market_cap_gbp_b": 200.601,
+      "market_cap_usd_b": 271.607,
       "beta": 0.908,
       "pe_ratio": 284.84,
       "avg_volume_m": 6.71,
@@ -1583,7 +1583,7 @@ window.PRICES_DATA = {
       "high_gbp": "245",
       "high_usd": 332.22,
       "bar_pct": 69,
-      "market_cap_gbp_b": 73.343,
+      "market_cap_gbp_b": 73.353,
       "market_cap_usd_b": 99.318,
       "beta": 1.664,
       "pe_ratio": null,
@@ -1651,7 +1651,7 @@ window.PRICES_DATA = {
       "high_gbp": "128",
       "high_usd": 173.89,
       "bar_pct": 82,
-      "market_cap_gbp_b": 84.682,
+      "market_cap_gbp_b": 84.693,
       "market_cap_usd_b": 114.672,
       "beta": 1.059,
       "pe_ratio": 55.23,
@@ -1719,7 +1719,7 @@ window.PRICES_DATA = {
       "high_gbp": "94",
       "high_usd": 126.7,
       "bar_pct": 21,
-      "market_cap_gbp_b": 240.614,
+      "market_cap_gbp_b": 240.647,
       "market_cap_usd_b": 325.828,
       "beta": 1.526,
       "pe_ratio": 24.61,
@@ -1787,7 +1787,7 @@ window.PRICES_DATA = {
       "high_gbp": "135",
       "high_usd": 182.19,
       "bar_pct": 58,
-      "market_cap_gbp_b": 139.037,
+      "market_cap_gbp_b": 139.056,
       "market_cap_usd_b": 188.277,
       "beta": 2.616,
       "pe_ratio": 98.03,
@@ -1800,6 +1800,13 @@ window.PRICES_DATA = {
       "vol_1w": 35230600,
       "vol_1m": 207141900,
       "news": [
+        {
+          "title": "Cathie Wood Is Moving Money From Palantir Into Rocket Lab and Fintech",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-moving-money-palantir-192133259.html",
+          "published": 1788808893,
+          "sentiment": 0.0
+        },
         {
           "title": "Cathie Wood Dumps $25 Million of Palantir Shares. Should PLTR Investors Worry?",
           "publisher": "GuruFocus.com",
@@ -1827,13 +1834,6 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/09/06/where-will-shopify-stock-be-in-5-years/",
           "published": 1788698521,
           "sentiment": 0.0
-        },
-        {
-          "title": "She Runs a $185 Billion Company. Here\u2019s the Exact Type of Person She Is Looking to Hire.",
-          "publisher": "Entrepreneur",
-          "url": "https://www.entrepreneur.com/business-news/she-runs-185-billion-shopify-the-exact-type-of-person-she-is-looking-to-hire",
-          "published": 1788543851,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.071
@@ -1855,7 +1855,7 @@ window.PRICES_DATA = {
       "high_gbp": "550",
       "high_usd": 745.0,
       "bar_pct": 40,
-      "market_cap_gbp_b": 82.351,
+      "market_cap_gbp_b": 82.362,
       "market_cap_usd_b": 111.516,
       "beta": 1.586,
       "pe_ratio": 29.42,
@@ -1923,8 +1923,8 @@ window.PRICES_DATA = {
       "high_gbp": "75",
       "high_usd": 101.99,
       "bar_pct": 28,
-      "market_cap_gbp_b": 114.274,
-      "market_cap_usd_b": 154.744,
+      "market_cap_gbp_b": 114.29,
+      "market_cap_usd_b": 154.745,
       "beta": 1.159,
       "pe_ratio": 16.61,
       "avg_volume_m": 19.19,
@@ -1936,6 +1936,13 @@ window.PRICES_DATA = {
       "vol_1w": 71553100,
       "vol_1m": 424136200,
       "news": [
+        {
+          "title": "Uber tries to leave a key market",
+          "publisher": "TheStreet",
+          "url": "https://www.thestreet.com/markets/uber-tries-to-leave-a-key-market",
+          "published": 1788806820,
+          "sentiment": -0.119
+        },
         {
           "title": "Chewy vs. Uber Technologies: Which Consumer Stock Is a Better Buy in 2026?",
           "publisher": "Motley Fool",
@@ -1963,16 +1970,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/three-credits-biggest-names-talks-193034091.html",
           "published": 1788723034,
           "sentiment": -0.361
-        },
-        {
-          "title": "Travis Kalanick\u2019s Atoms might be getting into the robotaxi business",
-          "publisher": "TechCrunch",
-          "url": "https://finance.yahoo.com/technology/articles/travis-kalanick-atoms-might-getting-164500551.html",
-          "published": 1788713100,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": 0.103
     },
     {
       "ticker": "CSCO",
@@ -1991,7 +1991,7 @@ window.PRICES_DATA = {
       "high_gbp": "96",
       "high_usd": 130.37,
       "bar_pct": 67,
-      "market_cap_gbp_b": 317.934,
+      "market_cap_gbp_b": 317.977,
       "market_cap_usd_b": 430.531,
       "beta": 0.992,
       "pe_ratio": 32.79,
@@ -2059,7 +2059,7 @@ window.PRICES_DATA = {
       "high_gbp": "153",
       "high_usd": 207.52,
       "bar_pct": 67,
-      "market_cap_gbp_b": 309.364,
+      "market_cap_gbp_b": 309.406,
       "market_cap_usd_b": 418.926,
       "beta": 1.621,
       "pe_ratio": 149.0,
@@ -2072,6 +2072,13 @@ window.PRICES_DATA = {
       "vol_1w": 156385700,
       "vol_1m": 845893300,
       "news": [
+        {
+          "title": "Cathie Wood Is Moving Money From Palantir Into Rocket Lab and Fintech",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-moving-money-palantir-192133259.html",
+          "published": 1788808893,
+          "sentiment": 0.0
+        },
         {
           "title": "Cathie Wood Dumps $25 Million of Palantir Shares. Should PLTR Investors Worry?",
           "publisher": "GuruFocus.com",
@@ -2098,13 +2105,6 @@ window.PRICES_DATA = {
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/etf/2026/09/07/investors-pulled-700-million-from-igv-hours-before-snowflake-reignited-software/",
           "published": 1788788265,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Down Nearly 50% in 2026, Is BigBear.ai Stock Cheap Enough to Finally Buy?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/07/down-nearly-50-in-2026-is-bigbear-ai-cheap-enough-to-finally-buy/",
-          "published": 1788783601,
           "sentiment": 0.0
         }
       ],
