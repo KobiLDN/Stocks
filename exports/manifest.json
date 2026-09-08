@@ -1,6 +1,13 @@
 {
   "snapshots": [
     {
+      "date": "2026-09-08",
+      "generated": "2026-09-09 00:45 BST",
+      "total": 241,
+      "json": "2026-09-08.json",
+      "csv": "2026-09-08.csv"
+    },
+    {
       "date": "2026-09-07",
       "generated": "2026-09-08 00:52 BST",
       "total": 241,
