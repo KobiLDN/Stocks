@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-07 14:20",
+  "updated": "2026-09-09 13:12",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MINA",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Mina's Mesa mainnet upgrade went live on September 3, 2026, cutting block time to 90 seconds and expanding zkApp capacity. The token surged +108.98% in 1 month, +17.91% in 1 week, and +5.45% in 1 day, with market cap at $0.11B, making it the highest-momentum asset in the universe. [coingabbar.com](https://www.coingabbar.com/en/crypto-currency-news/mina-mesa-hard-fork-mainnet-launch-mina-coin-reaction)",
+      "drivers": [
+        "+108.98% 1-month return",
+        "Mesa mainnet upgrade live",
+        "micro-cap $0.11B with room to run",
+        "positive catalyst from hard fork"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "DOT",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Polkadot surged +37.05% in 1 week and +13.26% in 1 day, with a rolling 24-hour gain of 17.90% amid a rotation into legacy L1 tokens as Fed rate hike bets grow, trading at $1.25 with a $2.02B market cap. [coinlive.me](https://coinlive.me/polkadot-legacy-layer-1-rotation-fed-rate-hike-bets/)",
+      "drivers": [
+        "+37.05% 1-week momentum",
+        "legacy L1 rotation narrative",
+        "macro backdrop supporting capital shifts",
+        "$2.02B market cap, still re-rating"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LINK",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Chainlink trades at $12.59 with a +53.05% 1-month return, positive news sentiment of 0.052, and bullish technical alignment (price above 200 EMA at $9.08). Technical analysis shows a cumulative bullish score of 6.1/10 with strong EMAs and MACD momentum. [altcoinbuzz.io](https://www.altcoinbuzz.io/chainlink-link-price-is-testing-a-critical-moment-should-you-buy-chainlink-crypto-right-now)",
+      "drivers": [
+        "+53.05% 1-month return",
+        "bullish EMA alignment",
+        "solid $9.4B market cap",
+        "LINK breakout targeting $18"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AIOZ posted +48.88% in 1 month, +28.58% in 1 week, and +13.13% in 1 day, the strongest recent momentum among AI tokens. Despite a negative YTD of -18.48%, the acceleration suggests a breakout, with a tiny $0.09B market cap offering high beta potential.",
+      "drivers": [
+        "+28.58% 1-week surge",
+        "AI narrative tailwind",
+        "micro-cap with explosive momentum",
+        "decentralised infrastructure play"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NEAR",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "NEAR has a standout +57.52% YTD return, plus +44.23% in 1 month and +28.45% in 1 week. With a $3.11B market cap and strong ecosystem activity, it leads the AI cohort despite slightly negative news sentiment of -0.148. [en.cryptonomist.ch](https://en.cryptonomist.ch/2026/09/09/solana-price-today-analysis-key-resistance/) (related context)",
+      "drivers": [
+        "+57.52% YTD",
+        "strong 1-month +44.23%",
+        "large-cap AI leader",
+        "ecosystem growth and adoption"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "OCEAN surged +59.77% in 1 month and +9.97% in 1 week, reflecting strong momentum in the AI data economy space. Its YTD remains modest at +1.37%, but the recent acceleration and AI sector tailwinds support a buy rating.",
+      "drivers": [
+        "+59.77% 1-month return",
+        "AI data economy narrative",
+        "low market cap with upside",
+        "momentum acceleration"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "XRP ETFs attracted nearly $2 million in inflows on Tuesday, the only meaningful gain in US crypto ETFs, while XRP itself gained +38.96% in 1 month and +3.81% in 1 day. With a $90.2B market cap and positive news sentiment of 0.197, it shows strong institutional demand. [en.cryptonomist.ch](https://en.cryptonomist.ch/2026/09/09/us-crypto-etf-inflows-xrp-strength/)",
+      "drivers": [
+        "+38.96% 1-month return",
+        "XRP ETF inflows positive",
+        "large-cap with institutional demand",
+        "positive news sentiment 0.197"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solana trades at $104.61 with a +36.13% 1-month return, strong on-chain activity (Raydium fees up 363% monthly, Orca +81%), and positive news sentiment of 0.197. Daily EMA structure is bullish (price above 20/50/200 EMAs), though MACD histogram shows slight deceleration. [en.cryptonomist.ch](https://en.cryptonomist.ch/2026/09/09/solana-price-today-analysis-key-resistance/)",
+      "drivers": [
+        "+36.13% 1-month return",
+        "on-chain DEX fees surging",
+        "large-cap $61.3B",
+        "bullish EMA alignment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "WLD",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "WLD gained +33.75% in 1 month and +25.19% in 1 week, showing strong short-term momentum. With a $1.68B market cap and year-to-date performance of -5.14%, it represents a relatively stable AI token with recent breakout potential.",
+      "drivers": [
+        "+25.19% 1-week momentum",
+        "AI narrative",
+        "mid-cap at $1.68B",
+        "recent price acceleration"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "GRT",
+      "signal": "buy",
+      "confidence": 0.52,
+      "rationale": "GRT posted +33.55% in 1 month and +19.34% in 1 week, with a +1.05% 1-day gain. Despite a deeply negative YTD of -41.38% and small market cap of $0.21B, the recent momentum and indexing protocol use case make it a speculative buy.",
+      "drivers": [
+        "+33.55% 1-month return",
+        "AI/Web3 indexing narrative",
+        "low entry point from beaten-down YTD",
+        "recent volume increase"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LINK",
@@ -130,135 +263,6 @@ window.SIGNALS_DATA = {
         "+11.31% 1W gain",
         "Small-cap AI play",
         "$81M market cap"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "BTC",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Bitcoin cleared $82,000 on $730M ETF inflows and a $510M short squeeze; +25.58% 1M, positive news sentiment 0.114, and Fed dovish signals support further upside toward $85,000 resistance [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/crypto-overview-bitcoin-clears-80-000-on-reduced-rate-hike-odds-zcash-ethena-rise-202609040346).",
-      "drivers": [
-        "$730M ETF inflow",
-        "+25.58% 1M momentum",
-        "short squeeze $510M",
-        "Fed dovish pivot"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ETH",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Ethereum closed above $2,500 resistance with $141M ETF inflows; +34.05% 1M and +4.08% 1D, though news sentiment is slightly negative at -0.12 [coingabbar.com](https://www.coingabbar.com/en/crypto-currency-news/crypto-news-etf-bitcoin-ethereum-xrp-solana-rally-today).",
-      "drivers": [
-        "$141M ETF inflow",
-        "+34.05% 1M",
-        "broke $2,500 resistance",
-        "broad market rally"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "XRP",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "XRP gained 5.74% on the day with $6.14M ETF inflows and positive news sentiment 0.105; +35.24% 1M and holding above key EMAs [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/top-3-price-prediction-bitcoin-ethereum-ripple-btc-eth-and-xrp-await-us-nfp-for-next-directional-move-202609040332).",
-      "drivers": [
-        "$6.14M ETF inflow",
-        "+35.24% 1M",
-        "+5.74% 1D",
-        "positive sentiment 0.105"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Solana saw $6.4M ETF inflows and +39.68% 1M momentum; price at $103.75 with growing use in payments, though weekly -3.58% and negative sentiment -0.105 [coingabbar.com](https://www.coingabbar.com/en/crypto-currency-news/crypto-news-etf-bitcoin-ethereum-xrp-solana-rally-today).",
-      "drivers": [
-        "$6.4M ETF inflow",
-        "+39.68% 1M",
-        "payments adoption",
-        "broad rally"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LINK",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Chainlink surged +44.97% 1M and +5.70% 1D with the highest news sentiment in the universe at 0.127; market cap $8.86B offers a solid mid-cap opportunity.",
-      "drivers": [
-        "+44.97% 1M",
-        "+5.70% 1D",
-        "news sentiment 0.127",
-        "mid-cap momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Mina posted an extraordinary +83.55% 1M and +22.78% 1W, though market cap is tiny at $0.097B; extreme momentum warrants a high-risk position.",
-      "drivers": [
-        "+83.55% 1M",
-        "+22.78% 1W",
-        "tiny cap high beta"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Ocean Protocol gained +46.41% 1M and +3.17% 1D, riding the AI narrative; no market cap data but strong momentum relative to peers.",
-      "drivers": [
-        "+46.41% 1M",
-        "+3.17% 1D",
-        "AI narrative"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "DOGE",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Dogecoin spiked 4.71% 1D as part of the broad crypto rally, with memecoin interest persisting; +24.38% 1M and market cap $14.88B [coinwy.com](https://coinwy.com/bitcoin-hits-82000-amid-fed-dovish-signals-ethereum-xrp-dogecoin-spike/).",
-      "drivers": [
-        "+4.71% 1D",
-        "+24.38% 1M",
-        "memecoin rally",
-        "broad market lift"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "PEPE gained +27.07% 1M and +4.89% 1D, showing strong meme momentum; market cap $1.5B offers higher beta than DOGE.",
-      "drivers": [
-        "+27.07% 1M",
-        "+4.89% 1D",
-        "meme sector momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Polygon (POL) rallied +26.58% 1M but weakened -11.34% 1W; still benefits from Ethereum scaling narrative and +1.50% 1D recovery.",
-      "drivers": [
-        "+26.58% 1M",
-        "Ethereum scaling",
-        "1D recovery +1.50%"
       ]
     }
   ]

@@ -1,9 +1,154 @@
 {
-  "updated": "2026-09-07 14:18",
+  "updated": "2026-09-09 13:10",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Strong momentum with +129% 1Y and +57% YTD, driven by clinical market adoption of NovaSeq X; P/E 39.3 is elevated but supported by 19.9% operating margin and raised guidance; analyst consensus buy with positive news sentiment 0.211.",
+      "drivers": [
+        "+129% 1-year return",
+        "+57% YTD",
+        "P/E 39.3",
+        "Positive news sentiment 0.211"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Solid +31% 1Y and +22% YTD gains, with +10% 1M momentum; low beta 0.35, analyst buy, and positive news sentiment 0.199; P/E null due to one-time items but strong cash flow.",
+      "drivers": [
+        "+31% 1-year return",
+        "+22% YTD",
+        "Low beta 0.35",
+        "Analyst buy"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Excellent +54% 1Y and +32% YTD, with +8.9% 1M and +5.5% 1W showing recent acceleration; P/E 18.14 is reasonable, analyst buy, though news sentiment slightly negative -0.132.",
+      "drivers": [
+        "+54% 1-year return",
+        "+32% YTD",
+        "P/E 18.14",
+        "Recent 1W +5.55%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Impressive +93% 1Y and +42% YTD, strong_buy analyst consensus (score 1.5), positive news sentiment 0.12; high growth genomics diagnostics with no P/E.",
+      "drivers": [
+        "+93% 1-year return",
+        "+42% YTD",
+        "Strong_buy analyst",
+        "Positive sentiment 0.12"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong +47% 1Y and +23% YTD, with positive 1M and 1W; P/E 15.85, profitable, analyst buy, and news sentiment 0.187.",
+      "drivers": [
+        "+47% 1-year return",
+        "+23% YTD",
+        "P/E 15.85",
+        "Analyst buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RCUS",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Remarkable +153% 1Y and +25% YTD, strong_buy analyst (score 1.46), news sentiment 0.084; oncology partnership with Summit Therapeutics.",
+      "drivers": [
+        "+153% 1-year return",
+        "+25% YTD",
+        "Strong_buy analyst",
+        "Positive sentiment 0.084"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Good +42% 1Y and +24% YTD, low P/E 14.25, high dividend yield 3.77%, analyst buy, but news sentiment slightly negative -0.055.",
+      "drivers": [
+        "+42% 1-year return",
+        "+24% YTD",
+        "P/E 14.25",
+        "Dividend yield 3.77%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Solid +41% 1Y and +17% YTD, analyst buy (score 1.67), P/E 30.84, but news sentiment -0.127; large-cap with cystic fibrosis franchise.",
+      "drivers": [
+        "+41% 1-year return",
+        "+17% YTD",
+        "Analyst buy",
+        "P/E 30.84"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ALNY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Recent turnaround with +20% 1M and +8% 1W, despite -43% 1Y; analyst buy, positive news sentiment 0.137, P/E 45.23 reflects growth expectations.",
+      "drivers": [
+        "+20% 1-month return",
+        "+8% 1-week return",
+        "Analyst buy",
+        "Positive sentiment 0.137"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Speculative momentum play with +43% YTD and +29% 1M, positive news sentiment 0.203, but no analyst coverage and high short interest 28.98%.",
+      "drivers": [
+        "+43% YTD",
+        "+29% 1-month return",
+        "Positive sentiment 0.203",
+        "High short interest 28.98%"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 0.97,
+      "ytd": "+354.73%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +354.73% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +354.73% \u2265 182.9% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "GILD",
@@ -132,139 +277,6 @@
         "buy score 2.08",
         "gene-editing platform",
         "micro-cap risk"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMGN",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +38.32%, 1M +14.54%, positive news sentiment 0.39, and recent Repatha mortality reduction data & raised 2026 guidance reinforce strong momentum.",
-      "drivers": [
-        "Repatha mortality data",
-        "raised 2026 guidance",
-        "YTD +38%",
-        "positive news sentiment 0.39"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +43.19%, 1M +19.07%, strong_buy consensus (an_score 1.5), and low short interest of 3.07%.",
-      "drivers": [
-        "strong_buy consensus",
-        "YTD +43%",
-        "low short interest 3.07%",
-        "1M momentum +19%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +23.41%, 1M +16.55%, low short interest 1.85%, and buy consensus (an_score 1.67) with P/E 32.5.",
-      "drivers": [
-        "low short interest 1.85%",
-        "strong 1M momentum +16.55%",
-        "buy consensus",
-        "P/E 32.5"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +30.13%, low P/E of 15.0, high dividend yield 3.72%, and buy consensus despite slightly negative news sentiment -0.064.",
-      "drivers": [
-        "low P/E 15.0",
-        "high dividend yield 3.72%",
-        "YTD +30%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +26.21%, low P/E of 16.41, positive news sentiment 0.179, and short interest 7.9%.",
-      "drivers": [
-        "low P/E 16.41",
-        "positive news sentiment 0.179",
-        "YTD +26%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +35.68%, P/E 18.59, buy consensus, and 1W +7.00% momentum offset by high short interest of 15.46%.",
-      "drivers": [
-        "strong YTD +35.68%",
-        "reasonable P/E 18.59",
-        "buy consensus",
-        "1W momentum +7%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "P/E 21.1, positive news sentiment 0.356, low short interest 2.46%, and buy consensus (an_score 1.89).",
-      "drivers": [
-        "low P/E 21.1",
-        "positive news sentiment 0.356",
-        "low short interest 2.46%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +25.89%, 1M +11.81%, low short interest 1.87%, and buy consensus (an_score 1.75).",
-      "drivers": [
-        "low short interest 1.87%",
-        "strong YTD +25.89%",
-        "1M momentum +11.81%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Very positive news sentiment 0.471, buy consensus (an_score 1.74), and 1M +9.40% despite high P/E 179.5.",
-      "drivers": [
-        "very positive news sentiment 0.471",
-        "buy consensus",
-        "1M momentum +9.40%",
-        "low short 5.28%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Positive news sentiment 0.276, low short interest 0.74%, buy consensus (an_score 1.7), and P/E 38.9.",
-      "drivers": [
-        "low short interest 0.74%",
-        "positive news sentiment 0.276",
-        "buy consensus",
-        "P/E 38.9"
       ]
     }
   ]

@@ -1,9 +1,152 @@
 {
-  "updated": "2026-09-07 14:24",
+  "updated": "2026-09-09 13:15",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.986,
+      "rationale": "Up 165% YTD and 292% 1-year, with a CPU price hike and Musk Terafab deal driving momentum; Northland upgraded to $120 PT.",
+      "drivers": [
+        "+165% YTD",
+        "Terafab & CPU price hike catalysts",
+        "Northland upgrade to $120"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Up 126% YTD and 199% 1-year with strong_buy consensus; AI chip demand and TSMC ties reinforce growth despite high P/E of 129.",
+      "drivers": [
+        "+126% YTD",
+        "+199% 1-year return",
+        "strong_buy analyst consensus",
+        "AI tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Up 38% YTD, P/E 32.6, strong_buy consensus; critical foundry partner for AI chips with Apple/AMD orders securing production.",
+      "drivers": [
+        "+38% YTD",
+        "P/E 32.6",
+        "strong_buy consensus",
+        "critical AI supply chain"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Up 38% YTD, P/E 20.2, 3.4% yield; energy momentum supported by positive sentiment and stable oil prices.",
+      "drivers": [
+        "+38% YTD",
+        "P/E 20.2",
+        "3.4% dividend yield",
+        "positive sentiment 0.218"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Up 32% YTD, P/E 31.3, 1.95% yield; low beta 0.24 offers defensive growth amid healthcare rotation.",
+      "drivers": [
+        "+32% YTD",
+        "low beta 0.24",
+        "1.95% dividend yield",
+        "defensive healthcare"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MRK",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Up 42% YTD and 79% 1-year; pipeline pivot to $70B commercial opportunity offsets high P/E of 118.8.",
+      "drivers": [
+        "+42% YTD",
+        "pipeline $70B opportunity",
+        "high P/E 118.8 but growth"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HSBC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Up 37% YTD, P/E 15.2, 3.5% yield; attractive valuation and global diversification benefit from higher interest rates.",
+      "drivers": [
+        "+37% YTD",
+        "P/E 15.2",
+        "3.5% dividend yield",
+        "global diversification"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Up 20% YTD, P/E 28.6, strong_buy consensus; AI data center dominance and $108B revenue target justify margin concerns.",
+      "drivers": [
+        "+20% YTD",
+        "P/E 28.6",
+        "strong_buy consensus",
+        "AI data center dominance"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Up 52% YTD and 113% 1-year, strong_buy consensus; lithography monopoly benefits from AI capex and chip expansion.",
+      "drivers": [
+        "+52% YTD",
+        "strong_buy consensus",
+        "lithography monopoly",
+        "AI capex beneficiary"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "KO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Up 30% YTD, P/E 26.5, 2.4% yield; stable consumer staple with low beta 0.34 offers steady income.",
+      "drivers": [
+        "+30% YTD",
+        "P/E 26.5",
+        "2.4% dividend yield",
+        "low beta 0.34"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.763,
+      "ytd": "+127.95%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +127.95% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +127.95% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRK",
@@ -132,173 +275,6 @@
         "YTD +3.80%",
         "P/E 33.0",
         "buy analyst rating"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.854,
-      "ytd": "+143.27%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +143.27% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +143.27% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.714,
-      "ytd": "+119.72%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +119.72% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +119.72% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.678,
-      "ytd": "+113.71%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +113.71% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +113.71% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+21% YTD, P/E 28.9, strong_buy consensus, AI tailwind from Hugging Face acquisition and data centre demand",
-      "drivers": [
-        "+21% YTD",
-        "P/E 28.9",
-        "strong_buy consensus",
-        "AI catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+39% YTD, P/E 20.4, 3.4% dividend yield, strong energy momentum supported by oil price tailwinds",
-      "drivers": [
-        "+39% YTD",
-        "P/E 20.4",
-        "3.4% dividend",
-        "energy tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+36% YTD, P/E 32, low beta 0.23, positive news sentiment 0.20, defensive healthcare exposure",
-      "drivers": [
-        "+36% YTD",
-        "low beta 0.23",
-        "P/E 32",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NFLX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+12% 1M, P/E 26, very high news sentiment 0.48, buy consensus, streaming margin expansion story",
-      "drivers": [
-        "+12% 1M",
-        "P/E 26",
-        "news sentiment 0.48",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+45% YTD, +19% 1M, but high P/E 123 and negative news on Keytruda patent cliff; momentum remains strong",
-      "drivers": [
-        "+45% YTD",
-        "+19% 1M",
-        "P/E 123",
-        "Keytruda warning"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TSLA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+15% 1M, Cybercab launch in Austin catalyst, but P/E 333 and NHTSA evaluation add risk; high reward optionality",
-      "drivers": [
-        "+15% 1M",
-        "Cybercab launch",
-        "P/E 333",
-        "NHTSA evaluation"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SONY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+12% 1M, P/E 21, positive sentiment 0.29, buy consensus, diversified entertainment and gaming exposure",
-      "drivers": [
-        "+12% 1M",
-        "P/E 21",
-        "news sentiment 0.29",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+9.5% 1M, P/E 32.8, positive sentiment 0.27, analyst buy, life sciences tools demand recovery",
-      "drivers": [
-        "+9.5% 1M",
-        "P/E 32.8",
-        "news sentiment 0.27",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "+11% 1M, P/E 27, positive sentiment 0.24, but YTD -6.8%; enterprise software cloud transition tailwind",
-      "drivers": [
-        "+11% 1M",
-        "P/E 27",
-        "news sentiment 0.24",
-        "YTD -6.8%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "+8.7% 1M, low P/E 11.6, but YTD -4.8% and no analyst rating; GLP-1 competition weighs on outlook",
-      "drivers": [
-        "+8.7% 1M",
-        "P/E 11.6",
-        "YTD -4.8%",
-        "obesity drug competition"
       ]
     }
   ]
