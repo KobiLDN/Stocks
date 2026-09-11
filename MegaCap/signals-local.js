@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-09 13:15",
+  "updated": "2026-09-11 13:20",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +40.28%, 1M +9.13%, P/E 20.58, dividend yield 3.33%, and oil above $109 provide a strong macro tailwind; Berkshire Hathaway's new top holding signals institutional conviction.",
+      "drivers": [
+        "YTD +40.28%",
+        "1M +9.13%",
+        "P/E 20.58",
+        "oil price surge"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +37.42%, 1M +4.07%, P/E 21.13, dividend yield 2.51%, and rising oil prices support earnings momentum; integrated energy model benefits from $109 crude.",
+      "drivers": [
+        "YTD +37.42%",
+        "1M +4.07%",
+        "P/E 21.13",
+        "oil price tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +125.35%, 1W +10.18%, analyst consensus strong_buy, and AI infrastructure investment theme drives demand for GPU accelerators; P/E 133 reflects growth expectations.",
+      "drivers": [
+        "YTD +125.35%",
+        "1W +10.18%",
+        "strong_buy consensus",
+        "AI capex tailwind"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MRK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +37.93%, 1M +10.96%, and 1-year return +78% show strong momentum; P/E 117.65 is elevated but supported by pipeline and GLP-1 market dynamics.",
+      "drivers": [
+        "YTD +37.93%",
+        "1M +10.96%",
+        "1Y +78%",
+        "GLP-1 market exposure"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +30.52%, 1M +3.03%, P/E 30.97, dividend yield 2.01%, and low beta 0.235 provide defensive growth; healthcare stability amid macro uncertainty.",
+      "drivers": [
+        "YTD +30.52%",
+        "1M +3.03%",
+        "P/E 30.97",
+        "low beta 0.235"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "KO",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +28.77%, 1M +1.56%, P/E 26.30, dividend yield 2.42%, and positive news sentiment 0.344; consumer staple resilience with strong brand moat.",
+      "drivers": [
+        "YTD +28.77%",
+        "P/E 26.30",
+        "dividend yield 2.42%",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +34.61%, 1W +3.02%, P/E 32.16, analyst consensus strong_buy, and leading-edge node dominance captures AI chip demand; geopolitical risk mitigated by scale.",
+      "drivers": [
+        "YTD +34.61%",
+        "strong_buy consensus",
+        "P/E 32.16",
+        "AI chip demand"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +9.32%, 1W +4.64%, P/E 20.17, dividend yield 2.09%; Amazon AWS partnership for custom AI silicon (up to $60B potential) offsets Apple revenue decline and provides a live catalyst.",
+      "drivers": [
+        "1M +9.32%",
+        "P/E 20.17",
+        "Amazon AI chip deal",
+        "dividend yield 2.09%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "1M +7.55%, 1W +8.69%, P/E 24.63, analyst consensus strong_buy; strong near-term momentum despite Cambridge Analytica trial risk (max $62.85B claim is <4% of market cap).",
+      "drivers": [
+        "1M +7.55%",
+        "1W +8.69%",
+        "strong_buy consensus",
+        "P/E 24.63"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.923,
+      "rationale": "YTD +154.75%, 1W +11.40%, and 1-year return +332% reflect a dramatic turnaround; high short interest 2.88% and no P/E (negative earnings) add risk, but AI infrastructure and foundry ambitions drive momentum.",
+      "drivers": [
+        "YTD +154.75%",
+        "1W +11.40%",
+        "1Y +332%",
+        "foundry turnaround"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.725,
+      "ytd": "+121.55%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +121.55% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +121.55% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "INTC",
@@ -130,151 +275,6 @@ window.SIGNALS_DATA = {
         "P/E 26.5",
         "2.4% dividend yield",
         "low beta 0.34"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.763,
-      "ytd": "+127.95%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +127.95% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +127.95% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +43.29%, 1M +17.14%, P/E 120.26; FDA approved LIPFENDRA, Wells Fargo raised target to $170 on strong pipeline.",
-      "drivers": [
-        "YTD +43.29%",
-        "1M +17.14%",
-        "FDA LIPFENDRA approval",
-        "Wells Fargo target $170"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +37.54%, 1M +12.88%, P/E 20.08, dividend 3.37%; energy tailwinds and Venezuela patience paying off.",
-      "drivers": [
-        "YTD +37.54%",
-        "1M +12.88%",
-        "P/E 20.08",
-        "dividend 3.37%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +34.87%, 1M +7.38%, P/E 31.97, dividend 1.95%; strong defensive momentum with positive news sentiment.",
-      "drivers": [
-        "YTD +34.87%",
-        "1M +7.38%",
-        "P/E 31.97",
-        "news sentiment 0.262"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +22.13%, 1W +5.89%, P/E 29.16; AI infrastructure spending tailwind, strong analyst consensus.",
-      "drivers": [
-        "YTD +22.13%",
-        "1W +5.89%",
-        "P/E 29.16",
-        "strong_buy analyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +48.06%, 1D +4.17%, P/E 58.13; semiconductor equipment monopoly benefiting from AI chip demand.",
-      "drivers": [
-        "YTD +48.06%",
-        "1D +4.17%",
-        "strong_buy analyst",
-        "AI capex cycle"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +34.89%, 1M +3.60%, P/E 31.84; leading foundry with strong AI orders, high analyst conviction.",
-      "drivers": [
-        "YTD +34.89%",
-        "1M +3.60%",
-        "P/E 31.84",
-        "strong_buy analyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "UNH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +19.65%, 1W +1.07%, P/E 25.51; managed care leader with stable earnings and positive sentiment.",
-      "drivers": [
-        "YTD +19.65%",
-        "P/E 25.51",
-        "1W +1.07%",
-        "buy analyst rating"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "KO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +29.12%, P/E 26.45, dividend 2.41%; consumer staple with strong YTD momentum and positive news.",
-      "drivers": [
-        "YTD +29.12%",
-        "P/E 26.45",
-        "dividend 2.41%",
-        "news sentiment 0.123"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +9.01%, P/E 27.79, YTD -7.63%; enterprise software turnaround momentum, positive news sentiment 0.237.",
-      "drivers": [
-        "1M +9.01%",
-        "P/E 27.79",
-        "news sentiment 0.237",
-        "buy analyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +6.22%, YTD +3.80%, P/E 33.0; life sciences tools leader with steady growth and analyst buy consensus.",
-      "drivers": [
-        "1M +6.22%",
-        "YTD +3.80%",
-        "P/E 33.0",
-        "buy analyst rating"
       ]
     }
   ]

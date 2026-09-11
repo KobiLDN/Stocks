@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-09 13:11",
+  "updated": "2026-09-11 13:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SAIC has strong momentum (+28.5% YTD, +2.7% 1M) with a low P/E of 15.0 and a market cap of $5.4B. Recent earnings beat estimates by $0.70 EPS and management raised full-year guidance, while Goldman Sachs raised its price target to $103. [thecerbatgem.com](https://www.thecerbatgem.com/2026/09/11/science-applications-international-nasdaqsaic-price-target-raised-to-103-00.html)",
+      "drivers": [
+        "+28.5% YTD",
+        "P/E 15.0",
+        "EPS beat by $0.70",
+        "raised guidance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CACI shows strong 1-year return of +22% and positive short-term momentum (+3.0% 1D, +1.6% 1W), with a solid P/E of 25.1 and a strong analyst score of 1.56 (buy). The stock benefits from robust defense contract wins and a favorable cyber-intel spending backdrop.",
+      "drivers": [
+        "+22% 1-year return",
+        "P/E 25.1",
+        "analyst score 1.56",
+        "+3.0% 1D"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "BAH has attractive valuation with a P/E of 11.4 and strong recent momentum (+4.8% 1D, +3.4% 1W), despite a YTD decline of -8.8%. The low P/E and positive short-term price action suggest a potential turnaround, supported by a dividend yield of 3.3%.",
+      "drivers": [
+        "P/E 11.4",
+        "+4.8% 1D",
+        "div yield 3.3%",
+        "low valuation"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SpaceX has strong 1-month momentum (+11.2%) and a massive market cap of $1.95T. Recent news highlights a $1.11B/month AI hosting deal and a path to $100B annual revenue run rate, though the P/S ratio is elevated at 76.6. [ainvest.com](https://www.ainvest.com/news/spacex-billion-dollar-month-ai-hosting-deal-real-locked-revenue-isn-2609/)",
+      "drivers": [
+        "+11.2% 1M",
+        "$1.11B/month AI deal",
+        "$100B revenue target",
+        "analyst score 1.67"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Northrop Grumman has a low P/E of 16.4 and a beta of -0.11, offering defensive characteristics. Despite a -10.3% YTD decline, the stock is involved in the Navy's next fighter race, providing a potential catalyst, and has a positive news sentiment of 0.23.",
+      "drivers": [
+        "P/E 16.4",
+        "beta -0.11",
+        "Navy fighter race",
+        "news sentiment 0.23"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Leidos trades at a low P/E of 12.0 with a dividend yield of 1.3%, and despite a -29% YTD decline, it showed a +1.1% gain today. The stock is a key cyber-intel player with potential for recovery as defense spending remains robust.",
+      "drivers": [
+        "P/E 12.0",
+        "div yield 1.3%",
+        "+1.1% 1D",
+        "defense spending tailwind"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Rolls-Royce has strong 1-year (+28%) and YTD (+19.5%) returns, with a beta of 1.19. Despite a -7.1% 1-month pullback, the stock benefits from UK/European defense momentum and a positive news sentiment of 0.14.",
+      "drivers": [
+        "+28% 1-year",
+        "+19.5% YTD",
+        "beta 1.19",
+        "news sentiment 0.14"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Palantir has a high P/E of 145.5 and a beta of 1.62, but remains a key AI/defense play with a positive analyst score of 1.81. Recent news highlights a potential valuation reset risk, but the stock's long-term growth narrative in AI and defense supports a buy. [seekingalpha.com](https://seekingalpha.com/article/4944890-palantir-an-elite-business-heading-into-a-valuation-reset-rating-downgrade)",
+      "drivers": [
+        "analyst score 1.81",
+        "AI/defense play",
+        "news sentiment 0.11",
+        "high beta 1.62"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "TransDigm has a P/E of 34.1 and a beta of 0.89, with a -17% YTD decline but a slight +0.1% gain today. The stock is a key weapons/systems supplier with a buy analyst consensus, and the negative news sentiment of -0.05 may present a contrarian opportunity.",
+      "drivers": [
+        "P/E 34.1",
+        "beta 0.89",
+        "analyst consensus buy",
+        "contrarian opportunity"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OLN",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Olin has a high dividend yield of 4.6% and a positive news sentiment of 0.30, despite a -17.5% YTD decline and a high short interest of 11.3%. The stock is a weapons/systems play with potential for a rebound if commodity prices improve.",
+      "drivers": [
+        "div yield 4.6%",
+        "news sentiment 0.30",
+        "short interest 11.3%",
+        "potential rebound"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,139 +265,6 @@
         "news sentiment 0.305",
         "P/E 283 (speculative)",
         "drone/autonomy theme"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "CACI surged 20.38% in one month with a P/E of 25.84, supported by $10B in contract awards and the new SkyValor drone defence deployment; web search confirms strong Q4 results with 66% free cash flow growth.",
-      "drivers": [
-        "+20% 1-month momentum",
-        "P/E 25.84 (reasonable)",
-        "$10B contract awards",
-        "SkyValor drone contract win"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SAIC gained 5.36% in one month, trades at a cheap P/E of 14.77, and raised FY2027 guidance after Q2 revenue of $1.88B (+6% YoY); web search highlights $22.1B backlog and $150M cost savings from Project ORBIT.",
-      "drivers": [
-        "+5.4% 1-month momentum",
-        "P/E 14.77 (cheap)",
-        "raised FY2027 guidance",
-        "$22.1B backlog"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Palantir jumped 10.04% in one month with 93% YoY revenue growth in Q2 2026 and raised full-year guidance to 82%; web search notes AIP expansion but a lofty P/E of 149 introduces risk.",
-      "drivers": [
-        "+10% 1-month momentum",
-        "93% revenue growth",
-        "raised FY2026 guidance",
-        "P/E 149 (high valuation)"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SPCX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SpaceX rallied 36.65% in one month and analysts see 48% upside to the $222 consensus target; web search reports Q2 revenue beat ($7.81B vs $6.82B) and a Street-high $800 target, though profitability remains elusive.",
-      "drivers": [
-        "+36.7% 1-month momentum",
-        "Q2 revenue beat of $7.81B",
-        "Raymond James $800 target",
-        "80% analyst bullish coverage"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Leidos rose 4.89% in one month and has a low P/E of 12.42, making it a value play with a 'buy' analyst consensus; however, its YTD return of -27% reflects operational headwinds.",
-      "drivers": [
-        "+4.9% 1-month momentum",
-        "P/E 12.42 (value)",
-        "buy analyst consensus",
-        "YTD -27% (contrarian)"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Rolls-Royce is up 24.44% YTD and 36% over one year, with a web search catalyst of UK building turbines for mini-nuclear reactors; the stock dipped 2.61% in the past month but remains on a strong long-term trajectory.",
-      "drivers": [
-        "+24.4% YTD momentum",
-        "nuclear reactor turbine contract",
-        "36% 1-year return",
-        "-2.6% 1-month pullback"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "General Dynamics is up 6.04% YTD with a P/E of 21.93 and a 'buy' analyst rating; the stock fell 6.43% in the past month, presenting a potential dip-buy opportunity in a prime defence contractor.",
-      "drivers": [
-        "+6% YTD",
-        "P/E 21.93 (fair)",
-        "buy analyst consensus",
-        "-6.4% 1-month (dip)"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "Booz Allen trades at a cheap P/E of 11.43 with a 3.24% dividend yield and positive news sentiment (0.077); the stock gained 2.01% in one month but is down 12.28% YTD, offering modest upside at a discount.",
-      "drivers": [
-        "P/E 11.43 (cheap)",
-        "3.24% dividend yield",
-        "+2% 1-month momentum",
-        "YTD -12.3% (discount)"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RCAT",
-      "signal": "strong_buy",
-      "confidence": 0.35,
-      "rationale": "Red Cat has a 'strong_buy' analyst rating (score 1.38) and very high short interest of 21.86%, but the stock fell 8.62% YTD and 3.35% in the past month; a short squeeze or drone catalyst could spark a recovery.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "21.86% short interest",
-        "drones defence theme",
-        "-8.6% YTD (high risk)"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "Olin offers a 4.61% dividend yield with positive news sentiment (0.301), but the stock is down 17.24% YTD and lost 6.14% in the past month; analyst consensus is 'hold' and P/E is negative, making it a deep-value speculation.",
-      "drivers": [
-        "4.61% dividend yield",
-        "positive news sentiment 0.301",
-        "YTD -17.2% (deep value)",
-        "hold analyst rating"
       ]
     }
   ]

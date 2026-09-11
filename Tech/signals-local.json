@@ -1,9 +1,187 @@
 {
-  "updated": "2026-09-09 13:11",
+  "updated": "2026-09-11 13:10",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "QCOM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "P/E 20.17 with a cheap forward multiple of ~16; landed AWS deal for custom AI chips with up to $60B in potential purchases via warrant \u2014 a massive live catalyst. [stockreport.com](https://www.stockreport.com/2026/09/10/qualcomm-landed-amazon-now-it-has-to-deliver/)",
+      "drivers": [
+        "live AWS partnership catalyst",
+        "low forward P/E (~16x)",
+        "+9.32% 1M momentum",
+        "strong analyst upgrade potential"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ORCL",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Revenue backlog surged to $664B vs est. $639.9B, Q1 revenue +30% to $19.3B; beat earnings $1.92 vs $1.74. AI cloud contract backlog up $30B+ and cash burn much lighter than feared. [reuters.com](https://www.reuters.com/business/retail-consumer/oracle-shares-rise-ai-cloud-backlog-beats-estimates-2026-09-11/)",
+      "drivers": [
+        "massive AI cloud backlog beat",
+        "Q1 earnings beat ($1.92 vs $1.74)",
+        "cash burn less than expected",
+        "+5.13% 1M momentum"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NOW",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Highest news sentiment score (0.37) in the universe; strong_buy analyst consensus (an_score 1.43) with a low beta of 0.97 providing defensive appeal despite a high P/E of 81.98.",
+      "drivers": [
+        "highest news sentiment (0.37)",
+        "strong_buy consensus (1.43)",
+        "low beta (0.97) defensive",
+        "+2.85% 1M momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "META",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong 1M momentum (+7.55%) and 1W (+8.69%); P/E of 24.63 is reasonable for mega-cap. However, a $62.85B penalty claim in the Cambridge Analytica trial introduces headline risk. [ts2.tech](https://ts2.tech/en/meta-stock-falls-1-4-as-zuckerberg-video-reaches-jury-the-62-85-billion-claim/)",
+      "drivers": [
+        "strong 1W momentum (+8.69%)",
+        "moderate P/E (24.63x)",
+        "strong_buy consensus",
+        "legal trial headline risk"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Astounding YTD return of +210% and 1M momentum +12.54%; P/E of 23.26 is attractive for such growth. Recent dip (-4.75%) on AI regulatory fears and Taiwan bonus costs is a buying opportunity. [fool.com](https://www.fool.com/investing/2026/09/11/why-micron-stock-just-sank/)",
+      "drivers": [
+        "+210% YTD growth",
+        "low P/E (23.26x)",
+        "strong_buy consensus",
+        "recent dip as entry opportunity"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.748,
+      "rationale": "Exceptional 1Y return of +235% and YTD +125.35%; strong_buy consensus (an_score 1.48). High beta (2.48) and elevated P/E (133.23) require caution, but AI chip demand remains a powerful tailwind.",
+      "drivers": [
+        "+235% 1-year return",
+        "strong_buy consensus",
+        "AI chip demand tailwind",
+        "elevated P/E (133x)"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.923,
+      "rationale": "Massive rebound (+332% 1Y, +154.75% YTD) plus 1W momentum (+11.40%); analyst consensus 'buy'. Negative earnings (P/E null) and short interest of 2.88% signal turnaround risk but also potential.",
+      "drivers": [
+        "+332% 1-year return",
+        "strong 1W momentum (+11.4%)",
+        "buy consensus",
+        "negative earnings risk"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Impressive 1M momentum of +23.06% driven by early close of $3.6B Finn acquisition; P/E of 22.38 is reasonable. Recent 1W dip (-5.42%) offers a better entry point.",
+      "drivers": [
+        "+23.06% 1M momentum",
+        "reasonable P/E (22.38x)",
+        "early acquisition close catalyst",
+        "recent 1W pullback"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Moderate P/E of 28.25 with a 1M momentum of +4.14%; buy consensus (an_score 1.56). YTD decline (-9.26%) provides value entry against stable streaming fundamentals.",
+      "drivers": [
+        "moderate P/E (28.25x)",
+        "+4.14% 1M gain",
+        "buy consensus",
+        "YTD decline as value entry"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Modest 1M momentum of +1.63% and low P/E of 23.9 for a mega-cap. YTD decline of -16.46% offers a value play; news sentiment slightly positive (0.042).",
+      "drivers": [
+        "low P/E (23.9x)",
+        "+1.63% 1M momentum",
+        "YTD decline value",
+        "slightly positive sentiment"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.725,
+      "ytd": "+121.55%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +121.55% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +121.55% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.62,
+      "ytd": "+103.97%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +103.97% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +103.97% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.529,
+      "ytd": "+88.71%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +88.71% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +88.71% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.502,
+      "ytd": "+84.19%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +84.19% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +84.19% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "INTC",
@@ -131,184 +309,6 @@
         "buy consensus",
         "P/E 28.67",
         "+3.29% 1M momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.763,
-      "ytd": "+127.95%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +127.95% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +127.95% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.609,
-      "ytd": "+102.20%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +102.20% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +102.20% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.524,
-      "ytd": "+87.87%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +87.87% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +87.87% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.508,
-      "ytd": "+85.21%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +85.21% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +85.21% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "1m +13.8%, 1w +9%, PE 22.99, strong buy consensus, market cap $1.15T",
-      "drivers": [
-        "1m +13.8%",
-        "1w +9%",
-        "strong buy consensus",
-        "low PE 23"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "1m +34.33%, PE 24, AI platform momentum with Agentforce ARR $1.5B and earnings beat [insidermonkey.com](https://www.insidermonkey.com/blog/salesforce-crms-ai-numbers-just-gave-benioff-his-swagger-back-1826675/)",
-      "drivers": [
-        "1m +34%",
-        "AI revenue growth",
-        "earnings beat",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ORCL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1m +9.97%, PE 27.23, cloud backlog $638B, earnings catalyst Thursday [thedailyupside.com](https://www.thedailyupside.com/technology/oracles-battered-shares-positioned-for-rally-as-investors-renew-software-bets/)",
-      "drivers": [
-        "1m +10%",
-        "low PE 27",
-        "cloud backlog",
-        "earnings catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "1m +20.51%, strong buy, analyst score 1.45, PE 88 but high growth",
-      "drivers": [
-        "1m +20%",
-        "strong buy consensus",
-        "analyst score 1.45",
-        "growth momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "YTD +55.59%, 1m +6.42%, strong buy, high growth, short interest 5.56%",
-      "drivers": [
-        "YTD +55%",
-        "strong buy",
-        "1m +6.4%",
-        "high growth"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1m +12.48%, PE 29.42, news sentiment 0.294, buy rating",
-      "drivers": [
-        "1m +12.5%",
-        "sentiment 0.294",
-        "PE 29",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "UBER",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1m +11.12%, PE 16.61, low valuation, buy rating",
-      "drivers": [
-        "1m +11%",
-        "PE 16.6",
-        "low valuation",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "1m +5.08%, YTD +22.13%, PE 29.16, strong buy, AI leader",
-      "drivers": [
-        "1m +5%",
-        "YTD +22%",
-        "strong buy",
-        "PE 29"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1m +10.04%, news sentiment 0.186, buy rating, strong momentum",
-      "drivers": [
-        "1m +10%",
-        "sentiment 0.186",
-        "buy rating",
-        "momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NFLX",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1m +5.46%, PE 24.61, buy rating, positive news sentiment 0.145",
-      "drivers": [
-        "1m +5.5%",
-        "PE 24.6",
-        "buy rating",
-        "sentiment 0.145"
       ]
     }
   ]

@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-09 13:14",
+  "updated": "2026-09-11 13:19",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "VLO has surged +136.61% YTD and +18.99% in 1 month, with refining margins nearly doubling to $23.62/bbl amid record diesel prices, while [Reuters](https://www.reuters.com/business/energy/oil-prices-set-end-week-over-100-first-time-nearly-4-months-2026-09-11/) reports oil above $100, benefiting downstream earnings.",
+      "drivers": [
+        "YTD +136.61%",
+        "1M +18.99%",
+        "Refining margin $23.62/bbl",
+        "Oil >$100"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.837,
+      "rationale": "MPC has soared +140.39% YTD with +16.97% 1M momentum and a low P/E of 13.85, capturing massive refining margin expansion as [247wallst.com](https://247wallst.com/investing/2026/09/10/oil-just-blew-past-100-a-barrel-and-these-5-energy-stocks-are-in-the-line-of-fire/) highlights downstream earnings strength.",
+      "drivers": [
+        "YTD +140.39%",
+        "1M +16.97%",
+        "P/E 13.85",
+        "Refining margin tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "EQNR shows explosive +89.93% YTD and +11.28% 1M performance driven by European natural gas surging to 4-year highs, supported by a low P/E of 12.26 and strong news sentiment.",
+      "drivers": [
+        "YTD +89.93%",
+        "1M +11.28%",
+        "P/E 12.26",
+        "Natural gas price surge"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "COP climbed to 52-week highs with +44.84% YTD and +9.56% 1M, as upstream leverage to $100+ oil drives Q2 revenue up 37.1% YoY to $19.16B per [247wallst.com](https://247wallst.com/investing/2026/09/10/oil-just-blew-past-100-a-barrel-and-these-5-energy-stocks-are-in-the-line-of-fire/).",
+      "drivers": [
+        "YTD +44.84%",
+        "1M +9.56%",
+        "Q2 revenue +37.1% YoY",
+        "Oil >$100"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.77,
+      "rationale": "CVX hit annual highs with YTD +40.28% and P/E 20.58, benefiting from strong downstream earnings of $4.87B in Q2 and debt reduction of $8.41B, as [nemo.money](https://nemo.money/posts/energy-stocks-are-on-fire-chevron-conoco-and-valero-hit-annual-highs-as-oil-tops-101) reports.",
+      "drivers": [
+        "YTD +40.28%",
+        "Downstream earnings $4.87B",
+        "Debt reduction $8.41B",
+        "52-week high"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "XOM trades at $165.23 (+37.42% YTD) with a 20th Angola discovery per [fool.com](https://www.fool.com/investing/2026/09/10/exxonmobil-just-made-its-20th-discovery-in-a-block-that-s-produced-2-7-billion-barrels-here-s-what-it-means-for-xom-stock/), and Guyana free cash flow doubling, supported by industry-leading Q2 earnings of $14.5B.",
+      "drivers": [
+        "YTD +37.42%",
+        "20th Angola discovery",
+        "Q2 earnings $14.5B",
+        "Guyana FCF inflection"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "SHEL hit 52-week highs with YTD +30.69% and +6.96% 1M momentum, offering a low P/E of 10.57 and a 3.27% dividend yield, with strong news sentiment amid oil above $100.",
+      "drivers": [
+        "YTD +30.69%",
+        "P/E 10.57",
+        "Dividend yield 3.27%",
+        "52-week high"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "BP gained +33.38% YTD with +8.08% 1M, supported by the strongest news sentiment (0.52) in the universe and a low short interest of 0.29%, while oil supply disruptions boost upstream.",
+      "drivers": [
+        "YTD +33.38%",
+        "1M +8.08%",
+        "News sentiment 0.52",
+        "Short interest 0.29%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "SLB has +41.62% YTD and a strong analyst consensus score of 1.60, with [247wallst.com](https://247wallst.com/investing/2026/09/10/oil-just-blew-past-100-a-barrel-and-these-5-energy-stocks-are-in-the-line-of-fire/) noting upcycle signs as FIDs rise ~30% YoY, though Middle East disruptions cause recent weakness.",
+      "drivers": [
+        "YTD +41.62%",
+        "Analyst score 1.60",
+        "FIDs up 30% YoY",
+        "Oil services upcycle"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "HAL has +23.54% YTD and P/E 19.5, with positive news sentiment, though a high short interest of 5.57% and recent -4.15% 1W decline reflect Middle East risk, per [247wallst.com](https://247wallst.com/investing/2026/09/10/oil-just-blew-past-100-a-barrel-and-these-5-energy-stocks-are-in-the-line-of-fire/).",
+      "drivers": [
+        "YTD +23.54%",
+        "P/E 19.5",
+        "Short interest 5.57%",
+        "Oil services exposure"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +265,6 @@
         "analyst score 1.60",
         "P/E 27.85",
         "1W -4.50%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "COP",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +41.9%, 1M +17.5%, P/E 17.8, analyst score 1.69 (strong buy), and recent earnings beat with $7B FCF target by 2029 [oilprice.net].",
-      "drivers": [
-        "+17.5% 1M momentum",
-        "analyst score 1.69",
-        "earnings beat and FCF target",
-        "low short interest 1.41%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +138.2%, 1M +31.0%, P/E 13.5, analyst buy, benefiting from strong refining margins and oil price rally to $96 Brent [stockminded.com].",
-      "drivers": [
-        "+138% YTD",
-        "+31% 1M",
-        "P/E 13.5",
-        "refining margin tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +127.6%, 1M +22.6%, P/E 15.5, analyst buy, similar refining catalyst as MPC with positive news sentiment 0.27.",
-      "drivers": [
-        "+127.6% YTD",
-        "+22.6% 1M",
-        "P/E 15.5",
-        "positive news sentiment 0.27"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +37.5%, 1M +12.9%, P/E 20.1, dividend yield 3.4%, analyst score 1.72, low short interest 0.81%, and oil price tailwind.",
-      "drivers": [
-        "+12.9% 1M",
-        "dividend yield 3.4%",
-        "low short interest 0.81%",
-        "analyst score 1.72"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +45.4%, 1M +15.8%, analyst score 1.6 (best in universe), positive news sentiment 0.18, oilfield services demand rising with high oil prices.",
-      "drivers": [
-        "analyst score 1.6",
-        "+15.8% 1M",
-        "oilfield services demand",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +27.0%, 1M +17.0%, P/E 19.4, analyst score 1.75, news sentiment 0.30, benefiting from increased drilling activity.",
-      "drivers": [
-        "+17% 1M",
-        "analyst score 1.75",
-        "news sentiment 0.30",
-        "oilfield services catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +43.0%, 1M +11.6%, P/E 17.7, short interest 0.01% (extremely low), news sentiment 0.31, analyst buy.",
-      "drivers": [
-        "low short interest 0.01%",
-        "+11.6% 1M",
-        "news sentiment 0.31",
-        "P/E 17.7"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +38.7%, 1M +8.2%, P/E 11.3 (low), dividend yield 2.8%, analyst buy, good value in E&P.",
-      "drivers": [
-        "P/E 11.3",
-        "dividend yield 2.8%",
-        "+8.2% 1M",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +26.8%, 1M +7.6%, dividend yield 4.6% (high), short interest 0.28%, analyst buy, though news sentiment slightly negative.",
-      "drivers": [
-        "dividend yield 4.6%",
-        "low short interest 0.28%",
-        "+7.6% 1M",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +77.2%, 1M +11.5%, P/E 11.4, dividend yield 3.7%, but analyst hold (score 3.33). Strong momentum but cautious consensus.",
-      "drivers": [
-        "+77.2% YTD",
-        "P/E 11.4",
-        "dividend yield 3.7%",
-        "momentum tailwind"
       ]
     }
   ]
