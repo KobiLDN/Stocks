@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-11 13:02",
+  "updated": "2026-09-14 14:43",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +29.68%, P/E 15.14, 1M momentum +2.84% with positive news sentiment 0.028; strong Q2 earnings and best-in-class performance among gov-consc stocks.",
+      "drivers": [
+        "YTD +29.68%",
+        "P/E 15.14",
+        "1M +2.84%",
+        "strong Q2 earnings"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PLTR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Record Q2 revenue $1.94B (+93% YoY), beat on EPS $0.41 vs $0.35, Rule of 40 at 155%, raised full-year guidance to $8.15B; strong sovereign AI wins with NVIDIA and FAA.",
+      "drivers": [
+        "Q2 revenue +93%",
+        "EPS beat $0.06",
+        "raised FY guidance",
+        "sovereign AI wins"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +3.46%, 1D +2.34%, news sentiment 0.274; Nasdaq-100 weighting set to double, potential $ billions in inflows; management targets $100B run-rate revenue by Dec 2026.",
+      "drivers": [
+        "1M +3.46%",
+        "Nasdaq-100 weighting increase",
+        "$100B run-rate target",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +15.59%, analyst score 1.56 (buy) and fair value $724.50 implies ~17% upside from $621.17; recent 7% pullback offers entry.",
+      "drivers": [
+        "YTD +15.59%",
+        "analyst score 1.56",
+        "14.3% undervalued",
+        "recent pullback"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +21.53%, 1Y +27%, 1D +1.72%, beta 1.188; strong momentum with positive news sentiment 0.143, supported by defence and civil aerospace demand.",
+      "drivers": [
+        "YTD +21.53%",
+        "1Y +27%",
+        "positive news sentiment",
+        "strong momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "1W +2.08%, 1D +2.27%, P/E 15.25, dividend yield 10.0%; short-term momentum turning positive with improving demand in commercial aerospace.",
+      "drivers": [
+        "1W +2.08%",
+        "1D +2.27%",
+        "P/E 15.25",
+        "dividend yield 10.0%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1D +1.19%, analyst score 1.95 (buy), beta 0.893; recent pullback in line with sector but fundamental demand for aftermarket parts remains strong.",
+      "drivers": [
+        "1D +1.19%",
+        "analyst score 1.95",
+        "low beta",
+        "defence aftermarket demand"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "1W +2.73%, 1D +0.29%, P/E 11.92, news sentiment 0.138; cheap valuation and short-term momentum improving, positive news flow around cyber and consulting contracts.",
+      "drivers": [
+        "1W +2.73%",
+        "P/E 11.92",
+        "positive news sentiment",
+        "short-term momentum"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OLN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1W +1.36%, dividend yield 4.65%, news sentiment 0.301; improving short-term trend with positive sentiment and high yield providing downside protection.",
+      "drivers": [
+        "1W +1.36%",
+        "dividend yield 4.65%",
+        "news sentiment 0.301",
+        "improving short-term trend"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "P/E 12.03, news sentiment 0.057, analyst score 2.35 (buy); cheap valuation and recent uptick despite YTD decline, potential value play in cyber-intel.",
+      "drivers": [
+        "P/E 12.03",
+        "buy analyst consensus",
+        "value opportunity",
+        "cyber-intel exposure"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "news sentiment 0.30",
         "short interest 11.3%",
         "potential rebound"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SAIC reported Q2 FY2027 revenue of $1.88B (+6% YoY), raised full-year guidance, and holds a $22.1B backlog \u2014 combined with +27% YTD returns and a P/E of 14.9, the stock blends growth with reasonable valuation.",
-      "drivers": [
-        "+27% YTD return",
-        "P/E 14.9",
-        "raised FY guidance",
-        "$22.1B backlog"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SPCX",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SpaceX surged +10.6% in the past month and +6.8% in the past week on Pivotal Research's buy initiation with a $220 target (48% upside), citing Starship reusability as the key catalyst.",
-      "drivers": [
-        "+10.6% 1-month return",
-        "analyst buy initiation",
-        "$220 price target",
-        "Starship catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AST SpaceMobile rallied +11.9% in the last week and +6.5% today, supported by news of expanded satellite tests and positive sentiment (0.151), though high short interest (19.2%) adds risk.",
-      "drivers": [
-        "+11.9% weekly return",
-        "positive news sentiment 0.151",
-        "satellite test expansion",
-        "high short interest 19.2%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "CACI posted +16.4% YTD, a P/E of 25.9, and a strong analyst buy rating (score 1.56), with steady weekly momentum (+0.4%) and no extreme valuation concerns.",
-      "drivers": [
-        "+16.4% YTD",
-        "P/E 25.9",
-        "analyst score 1.56 (buy)",
-        "stable weekly momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Rolls-Royce trades with +23.7% YTD and a P/E of 41.1, but news that it expects \u00a34.7\u20134.9B profit in 2026 (up from \u00a33.5B in 2025) and its mini-nuclear reactor programme justify the premium.",
-      "drivers": [
-        "+23.7% YTD return",
-        "FY2026 profit guidance \u00a34.7-4.9B",
-        "mini-nuclear reactor catalyst",
-        "P/E 41.1"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Olin rose +3.8% today and +2.8% this week, with a high dividend yield of 4.61% and positive news sentiment (0.301), making it a contrarian pick in a defensive sector despite negative earnings.",
-      "drivers": [
-        "+3.8% daily gain",
-        "dividend yield 4.61%",
-        "news sentiment 0.301",
-        "short-term momentum"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "TransDigm holds a buy rating (score 1.95), a P/E of 34.7, and positive sentiment (0.177), while its aftermarket business model provides stability in an uncertain defence spending environment.",
-      "drivers": [
-        "analyst score 1.95 (buy)",
-        "P/E 34.7",
-        "positive sentiment 0.177",
-        "defence aftermarket stability"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Leidos is down -29% YTD but trades at a compelling P/E of 12.1 with a buy rating, offering deep value if government IT spending stabilises and backlog conversion improves.",
-      "drivers": [
-        "P/E 12.1 (value)",
-        "analyst buy rating",
-        "YTD decline -29%",
-        "potential government IT catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Booz Allen has a cheap P/E of 11.3, a high dividend yield of 3.24%, and a hold rating (score 2.87) \u2014 a low-risk pick with positive sentiment (0.079) that could benefit from increased intelligence spending.",
-      "drivers": [
-        "P/E 11.3",
-        "dividend yield 3.24%",
-        "positive sentiment 0.079",
-        "intelligence spending tailwind"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "KTOS",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "Kratos has a strong_buy consensus (score 1.40) and positive news sentiment (0.305), but its P/E of 283 and -39% YTD return make it a high-risk play on drone/autonomy growth.",
-      "drivers": [
-        "strong_buy consensus (1.40)",
-        "news sentiment 0.305",
-        "P/E 283 (speculative)",
-        "drone/autonomy theme"
       ]
     }
   ]

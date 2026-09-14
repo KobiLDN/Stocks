@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-11 13:02",
+  "updated": "2026-09-14 14:39",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +43.74%, analyst strong_buy 1.46, low short interest 3.94%, positive news sentiment 0.223 \u2014 strong momentum and consensus alignment.",
+      "drivers": [
+        "YTD +43.74%",
+        "analyst strong_buy 1.46",
+        "low short interest 3.94%",
+        "news sentiment +0.223"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +53.67%, returning to S&P 500, Q2 revenue beat of $1.16B, P/E 38.45, analyst buy 2.38.",
+      "drivers": [
+        "YTD +53.67%",
+        "S&P 500 re-entry",
+        "Q2 revenue beat",
+        "analyst buy 2.38"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "GILD",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +19.64%, low beta 0.35, analyst buy 1.75, dividend yield 2.28%, positive news sentiment 0.146 \u2014 defensive strength.",
+      "drivers": [
+        "analyst buy 1.75",
+        "low beta 0.35",
+        "dividend yield 2.28%",
+        "news sentiment +0.146"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "INCY",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "P/E 15.47, YTD +19.77%, highest news sentiment in universe at 0.454, analyst buy 2.29, low beta 0.77.",
+      "drivers": [
+        "P/E 15.47",
+        "news sentiment +0.454",
+        "YTD +19.77%",
+        "analyst buy 2.29"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "YTD +366.53%, Phase 3 cancer vaccine win with Merck, 2 FDA approvals in Aug 2026, Argus upgrade to Buy $180 target, but analyst consensus hold (2.74).",
+      "drivers": [
+        "YTD +366.53%",
+        "Phase 3 cancer vaccine win",
+        "FDA approvals Aug 2026",
+        "Argus upgrade to Buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "P/E 17.65, YTD +28.77%, $1.17B free cash flow, FDA delay viewed as speed bump with target $63, analyst buy 2.37.",
+      "drivers": [
+        "P/E 17.65",
+        "FCF $1.17B",
+        "YTD +28.77%",
+        "analyst buy 2.37"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ALNY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1M +11.04%, analyst buy 1.69, positive sentiment 0.295, P/E 43.32 \u2014 turning from negative YTD of -37.86%.",
+      "drivers": [
+        "1M +11.04%",
+        "analyst buy 1.69",
+        "sentiment +0.295",
+        "P/E 43.32"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BNTX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Analyst buy 1.7, low short 3.45%, gotistobart OS 18.5 vs 10.0 months in PRESERVE-003, strong financial strength (GF Score financials 8/10).",
+      "drivers": [
+        "analyst buy 1.7",
+        "short 3.45%",
+        "gotistobart OS benefit",
+        "financial strength 8/10"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +32.12%, 1M +18.34%, analyst buy 2.33, but high short interest 29.77% signals contrarian potential.",
+      "drivers": [
+        "YTD +32.12%",
+        "1M +18.34%",
+        "analyst buy 2.33",
+        "short interest 29.77%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +22.12%, 1Y +52%, P/E 38.64, analyst buy 1.83, positive sentiment 0.282 \u2014 steady large-cap momentum.",
+      "drivers": [
+        "YTD +22.12%",
+        "1Y +52%",
+        "analyst buy 1.83",
+        "sentiment +0.282"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTRA",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "1M momentum +16.98%",
         "YTD +30.43%",
         "oncology optionality"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Strong momentum with +129% 1Y and +57% YTD, driven by clinical market adoption of NovaSeq X; P/E 39.3 is elevated but supported by 19.9% operating margin and raised guidance; analyst consensus buy with positive news sentiment 0.211.",
-      "drivers": [
-        "+129% 1-year return",
-        "+57% YTD",
-        "P/E 39.3",
-        "Positive news sentiment 0.211"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Solid +31% 1Y and +22% YTD gains, with +10% 1M momentum; low beta 0.35, analyst buy, and positive news sentiment 0.199; P/E null due to one-time items but strong cash flow.",
-      "drivers": [
-        "+31% 1-year return",
-        "+22% YTD",
-        "Low beta 0.35",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Excellent +54% 1Y and +32% YTD, with +8.9% 1M and +5.5% 1W showing recent acceleration; P/E 18.14 is reasonable, analyst buy, though news sentiment slightly negative -0.132.",
-      "drivers": [
-        "+54% 1-year return",
-        "+32% YTD",
-        "P/E 18.14",
-        "Recent 1W +5.55%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Impressive +93% 1Y and +42% YTD, strong_buy analyst consensus (score 1.5), positive news sentiment 0.12; high growth genomics diagnostics with no P/E.",
-      "drivers": [
-        "+93% 1-year return",
-        "+42% YTD",
-        "Strong_buy analyst",
-        "Positive sentiment 0.12"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Strong +47% 1Y and +23% YTD, with positive 1M and 1W; P/E 15.85, profitable, analyst buy, and news sentiment 0.187.",
-      "drivers": [
-        "+47% 1-year return",
-        "+23% YTD",
-        "P/E 15.85",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RCUS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Remarkable +153% 1Y and +25% YTD, strong_buy analyst (score 1.46), news sentiment 0.084; oncology partnership with Summit Therapeutics.",
-      "drivers": [
-        "+153% 1-year return",
-        "+25% YTD",
-        "Strong_buy analyst",
-        "Positive sentiment 0.084"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Good +42% 1Y and +24% YTD, low P/E 14.25, high dividend yield 3.77%, analyst buy, but news sentiment slightly negative -0.055.",
-      "drivers": [
-        "+42% 1-year return",
-        "+24% YTD",
-        "P/E 14.25",
-        "Dividend yield 3.77%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Solid +41% 1Y and +17% YTD, analyst buy (score 1.67), P/E 30.84, but news sentiment -0.127; large-cap with cystic fibrosis franchise.",
-      "drivers": [
-        "+41% 1-year return",
-        "+17% YTD",
-        "Analyst buy",
-        "P/E 30.84"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ALNY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Recent turnaround with +20% 1M and +8% 1W, despite -43% 1Y; analyst buy, positive news sentiment 0.137, P/E 45.23 reflects growth expectations.",
-      "drivers": [
-        "+20% 1-month return",
-        "+8% 1-week return",
-        "Analyst buy",
-        "Positive sentiment 0.137"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Speculative momentum play with +43% YTD and +29% 1M, positive news sentiment 0.203, but no analyst coverage and high short interest 28.98%.",
-      "drivers": [
-        "+43% YTD",
-        "+29% 1-month return",
-        "Positive sentiment 0.203",
-        "High short interest 28.98%"
       ]
     }
   ]
