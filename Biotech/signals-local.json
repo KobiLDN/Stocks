@@ -1,9 +1,137 @@
 {
-  "updated": "2026-09-14 14:39",
+  "updated": "2026-09-16 13:25",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "MRNA has surged +365.88% YTD and +123.04% in the last month, with a 1-year return of +487%, driven by strong cancer vaccine momentum and pipeline progress. Despite a 'hold' analyst consensus, the massive momentum and positive news on cancer turnaround make it a top pick.",
+      "drivers": [
+        "+365.88% YTD",
+        "+123.04% 1M",
+        "Cancer vaccine catalyst",
+        "Strong momentum"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "NTRA has gained +53.29% YTD and +11.65% in the last month, with a strong_buy analyst consensus (score 1.46) and positive news sentiment (0.223). The company's strong momentum and analyst support make it a compelling pick.",
+      "drivers": [
+        "+53.29% YTD",
+        "+11.65% 1M",
+        "Strong buy consensus",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ILMN",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "ILMN has delivered a stellar +106% 1-year return and +65.46% YTD, with a +15.09% gain in the last month. The strong momentum and positive news sentiment (0.502) indicate robust fundamentals and market confidence.",
+      "drivers": [
+        "+106% 1Y",
+        "+65.46% YTD",
+        "+15.09% 1M",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "EXEL is up +30.56% YTD and +8.75% in the last month, with a P/E of 17.67 and a buy analyst consensus. Despite negative news sentiment (-0.196), the company's strong fundamentals and momentum support a buy rating.",
+      "drivers": [
+        "+30.56% YTD",
+        "+8.75% 1M",
+        "P/E 17.67",
+        "Buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "GILD has gained +22.48% YTD and +5.91% in the last month, with a strong buy analyst consensus (score 1.75) and a dividend yield of 2.24%. The company's solid performance and positive outlook make it a reliable pick.",
+      "drivers": [
+        "+22.48% YTD",
+        "+5.91% 1M",
+        "Buy consensus",
+        "Dividend yield 2.24%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BNTX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BNTX has shown a +5.56% gain in the last month, with a flat YTD performance. The company's pipeline progress and potential catalysts make it an attractive buy, despite a neutral analyst consensus.",
+      "drivers": [
+        "+5.56% 1M",
+        "Pipeline catalysts",
+        "Stable YTD"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SRPT has gained +13.97% in the last month, with a 1-year return of +16%. The rare-disease focus and recent momentum suggest potential upside, despite a slight weekly decline.",
+      "drivers": [
+        "+13.97% 1M",
+        "+16% 1Y",
+        "Rare-disease focus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ALNY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "ALNY has rebounded +6.09% in the last month, though it is down -40.46% YTD. The recent momentum and potential pipeline catalysts make it a speculative buy, but with high risk.",
+      "drivers": [
+        "+6.09% 1M",
+        "Pipeline catalysts",
+        "High risk"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "NVAX has gained +29.45% YTD and +14.37% in the last month, despite a high short interest of 29.77%. The strong momentum and potential for short squeezes make it a high-risk, high-reward pick.",
+      "drivers": [
+        "+29.45% YTD",
+        "+14.37% 1M",
+        "High short interest"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PACB",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "PACB has gained +10.74% in the last month, with a 1-year return of +10%. Despite a negative YTD performance, the recent momentum and potential for turnaround make it a speculative buy.",
+      "drivers": [
+        "+10.74% 1M",
+        "+10% 1Y",
+        "Turnaround potential"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTRA",
@@ -132,139 +260,6 @@
         "1Y +52%",
         "analyst buy 1.83",
         "sentiment +0.282"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +42.52%, 1M +4.29%, analyst strong_buy (score 1.5) and positive news sentiment 0.208, with strong momentum in genomics and no P/E overhang as a growth story.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "YTD +42.52%",
-        "positive news sentiment",
-        "1M momentum +4.29%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +49.81%, 1M +4.37%, P/E 38.34, buy rating (score 2.38) and positive news sentiment 0.153, driven by strong genomics market position.",
-      "drivers": [
-        "YTD +49.81%",
-        "buy analyst consensus",
-        "positive news sentiment",
-        "solid 1M momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +21.15%, 1M +5.66%, recent FDA approval catalyst, buy rating (score 1.83) and high news sentiment 0.375, supported by large-cap stability.",
-      "drivers": [
-        "FDA approval catalyst",
-        "YTD +21.15%",
-        "positive news sentiment 0.375",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +20.55%, 1M +6.66%, buy rating (score 1.75), large-cap with P/E null but strong revenue from HIV drugs like Sunlenca.",
-      "drivers": [
-        "buy analyst consensus (1.75)",
-        "YTD +20.55%",
-        "large-cap stability",
-        "1M momentum +6.66%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +31.78%, 1M +11.88%, P/E 18.35 reasonable, buy rating (score 2.37) though news sentiment slightly negative -0.132, but strong oncology momentum.",
-      "drivers": [
-        "YTD +31.78%",
-        "strong 1M momentum +11.88%",
-        "P/E 18.35",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "INCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +21.55%, 1M +1.83%, P/E 16.05 attractive, buy rating (score 2.29) and positive news sentiment 0.286, with solid oncology fundamentals.",
-      "drivers": [
-        "P/E 16.05 attractive",
-        "positive news sentiment 0.286",
-        "YTD +21.55%",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +21.84%, P/E 14.2 cheap, buy rating (score 2.46) but slightly negative news -0.031; value play with dividend yield 391 bps.",
-      "drivers": [
-        "low P/E 14.2",
-        "YTD +21.84%",
-        "dividend yield 391 bps",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NTLA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +29.53%, buy rating (score 2.26) and strong news sentiment 0.351, though no P/E and high short interest 39.49%.",
-      "drivers": [
-        "YTD +29.53%",
-        "positive news sentiment 0.351",
-        "buy analyst consensus",
-        "gene-editing growth potential"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 0.937,
-      "rationale": "YTD +342.71% but analyst hold (2.74) and Rothschild downgrade to Sell post Phase 3 cancer vaccine win cited extreme valuation; 1W -9.41% shows profit-taking risk.",
-      "drivers": [
-        "Phase 3 cancer vaccine win (49% recurrence risk reduction)",
-        "YTD +342.71%",
-        "analyst hold/downgrade risk",
-        "1W -9.41% pullback"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "YTD +30.43%, 1M +16.98%, Matrix-M licensing push and oncology optionality highlighted at Cantor conference; no analyst rating but news sentiment 0.148, though high short interest 29.77%.",
-      "drivers": [
-        "Matrix-M licensing strategy",
-        "1M momentum +16.98%",
-        "YTD +30.43%",
-        "oncology optionality"
       ]
     }
   ]

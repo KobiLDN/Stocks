@@ -1,9 +1,133 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-14 14:44",
+  "updated": "2026-09-16 13:29",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MINA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Massive +107.72% 1-month momentum and +1.02% daily gain bucking the broad sell-off, tiny $0.106B market cap offering high beta upside.",
+      "drivers": [
+        "+107.72% 1m",
+        "+1.02% 1d",
+        "market cap $0.106B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "OCEAN",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Strong +62.69% 1-month and +1.45% 1-week gains in the AI category, with only a -3.22% 1d dip showing relative resilience.",
+      "drivers": [
+        "+62.69% 1m",
+        "+1.45% 1w",
+        "AI sector tailwind"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NEAR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Impressive +43.35% 1-month return and $3.057B market cap, though negative news sentiment (-0.293) and long liquidation risks temper conviction.",
+      "drivers": [
+        "+43.35% 1m",
+        "market cap $3.057B",
+        "news sentiment -0.293"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Solid +28.80% 1-month momentum, large $57B market cap, and positive news sentiment 0.208, despite -3.91% 1d in the market rout.",
+      "drivers": [
+        "+28.80% 1m",
+        "market cap $57B",
+        "news sentiment 0.208"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Large-cap leader with +26.34% 1m and $292B market cap, -3.58% 1d is moderate; negative sentiment (-0.073) but institutional flows remain supportive.",
+      "drivers": [
+        "+26.34% 1m",
+        "market cap $292B",
+        "institutional adoption"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Up +29.14% 1m despite -7.70% 1d on Clarity Act failure; Ripple CLO reaffirms legal clarity per [coindesk.com](https://www.coindesk.com/markets/2026/09/16/xrp-sinks-10-as-the-clarity-act-fails-and-bitcoin-slides-toward-usd76-000), $81.5B market cap and positive sentiment 0.195.",
+      "drivers": [
+        "+29.14% 1m",
+        "market cap $81.5B",
+        "news sentiment 0.195",
+        "regulatory clarity intact"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Meme token with +29.43% 1m and only -0.89% 1d showing resilience, $1.395B market cap; high risk but strong short-term momentum.",
+      "drivers": [
+        "+29.43% 1m",
+        "-0.89% 1d",
+        "market cap $1.395B"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "AI infrastructure play with +38.89% 1m but -7.67% 1d; tiny $0.085B market cap offers high beta if momentum resumes.",
+      "drivers": [
+        "+38.89% 1m",
+        "AI narrative",
+        "market cap $0.085B"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "GRT",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Decent +27.75% 1m and $0.189B market cap, but -11.52% 1w and -3.68% 1d indicate weakness; speculative small-cap AI play.",
+      "drivers": [
+        "+27.75% 1m",
+        "market cap $0.189B",
+        "AI sector"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AGIX",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "AI token with +26.80% 1m but -5.90% 1d and -12.31% 1w; no market cap data, high risk but momentum remains elevated.",
+      "drivers": [
+        "+26.80% 1m",
+        "AI narrative",
+        "high momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MINA",
@@ -132,139 +256,6 @@ window.SIGNALS_DATA = {
         "AI infrastructure",
         "positive 1D",
         "momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MINA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "MINA leads all assets with +140.41% 1-month and +21.94% weekly gains; its recent 23% weekly surge confirms strong momentum, though resistance near $0.0945 and doji patterns suggest short-term exhaustion [ainvest.com].",
-      "drivers": [
-        "+140.4% 1M return",
-        "+21.9% weekly return",
-        "bullish engulfing pattern",
-        "resistance at $0.0945"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "DOT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "DOT surged +46.99% in 1M and +33.50% this week with a +5.37% daily gain, reflecting strong breakout momentum from a low market cap of $1.97B and no negative news.",
-      "drivers": [
-        "+47% 1M return",
-        "+33.5% weekly return",
-        "low market cap $1.97B",
-        "strong daily momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "NEAR has +63.97% YTD and +49.06% 1-month return, with daily gain of +1.02% and a headline about AI-driven buying, signaling strong fundamental catalyst in AI crypto sector.",
-      "drivers": [
-        "+64% YTD return",
-        "+49.1% 1M return",
-        "AI sector catalyst",
-        "positive news sentiment 0.0 (neutral headline)"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "AIOZ gained +41.31% in 1M and +20.28% weekly, with micro-cap dynamics and no negative news; slight -4.47% daily pullback offers potential entry after momentum.",
-      "drivers": [
-        "+41.3% 1M return",
-        "+20.3% weekly return",
-        "micro-cap $87M",
-        "AI infrastructure narrative"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "LINK shows +32.73% 1M return, $8.62B market cap, spot ETF inflows returning after 8-day dry spell adding $1.1M on Sept 9, but a whale deposited $26M to Coinbase suggesting selling pressure [cryptocompass.com][usagoldmines.com].",
-      "drivers": [
-        "+32.7% 1M return",
-        "ETF inflows return",
-        "whale deposit $26M to exchange",
-        "resistance near $12.65"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XRP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "XRP gained +32.67% in 1M but fell -6.41% weekly and -2.44% daily, testing 200-day EMA at $1.344 with bearish derivatives long/short ratio of 0.83 and negative funding rates [cvj.ai].",
-      "drivers": [
-        "+32.7% 1M return",
-        "200-day EMA test at $1.344",
-        "bearish long/short 0.83",
-        "negative funding rates"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SOL gained +30.99% in 1M, RWA holders surged past 400,000 from under 10,000 in Jan 2025, record 263,000 new SPL tokens minted daily, but MACD shows cooling momentum near $100 support [coincentral.com].",
-      "drivers": [
-        "+31% 1M return",
-        "400K RWA holders",
-        "record token minting",
-        "MACD cooling below signal"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ETH gained +30.87% in 1M and has the largest market cap among altcoins at $300.9B, but YTD -16.88% and negative news sentiment of 0.086 with inflation data upcoming cap short-term confidence.",
-      "drivers": [
-        "+30.9% 1M return",
-        "$300.9B market cap",
-        "YTD -16.9%",
-        "inflation data risk"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "OCEAN surged +64.13% in 1M with +4.88% weekly and +1.01% daily gain, though market cap data is missing and YTD is only +0.92%, suggesting speculative momentum without fundamental backstop.",
-      "drivers": [
-        "+64.1% 1M return",
-        "+4.9% weekly gain",
-        "low liquidity/unknown market cap",
-        "speculative AI token"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "GRT",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "GRT gained +29.64% in 1M and +5.55% weekly, but has weak -46.29% YTD and tiny market cap of $195M, remaining a high-beta AI play with limited volume.",
-      "drivers": [
-        "+29.6% 1M return",
-        "high beta AI token",
-        "YTD -46.3%",
-        "small market cap $195M"
       ]
     }
   ]

@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-14 14:43",
+  "updated": "2026-09-16 13:26",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong YTD performance (+33.51%), low P/E (15.4), positive momentum across all timeframes (+7.56% 1M, +4.85% 1W, +1.31% 1D), and top of the pack for Q2 earnings among government consulting peers. The high short interest (6.46%) may indicate potential for a squeeze, but the momentum is clear.",
+      "drivers": [
+        "+33.51% YTD",
+        "low P/E 15.39",
+        "+7.56% 1-month momentum",
+        "top Q2 earnings performer"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Excellent one-year return (+29%) and strong YTD (+18.42%), with analyst consensus being a strong buy (lowest an_score in the group at 1.56). P/E of 26.38 is reasonable for the growth, and positive short-term momentum (+1.77% 1W) supports the uptrend.",
+      "drivers": [
+        "+29% 1-year return",
+        "+18.42% YTD",
+        "strong buy consensus (an_score 1.56)",
+        "reasonable P/E 26.38"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Very strong 1-week momentum (+11.02%) and +6.79% 1-month, indicating a potential reversal from a negative YTD (-3.53%). P/E is low at 12.43, and despite a hold consensus, the recent price action suggests a positive catalyst may be at play. High dividend yield (2.98%) adds cushion.",
+      "drivers": [
+        "+11.02% 1-week surge",
+        "low P/E 12.43",
+        "2.98% dividend yield",
+        "recent positive price reversal"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Largely positive news flow offsets weak short-term price action. [Reuters](https://www.reuters.com/business/aerospace-defense/boeing-korean-air-finalize-order-103-aircraft-2026-09-16/) reports a $36.2B order from Korean Air for 103 aircraft, and [Insider Monkey](https://www.insidermonkey.com/blog/pentagon-adds-13-4-billion-to-boeing-ba-contract-that-isnt-an-immediate-financial-windfall-1837587/) notes a $13.4B expansion of a Pentagon contract. Although Trefis highlights operational losses, the record $715B backlog and analyst strong buy consensus (an_score 1.54) suggest a long-term value play.",
+      "drivers": [
+        "$36.2B Korean Air order",
+        "$13.4B Pentagon contract expansion",
+        "record $715B backlog",
+        "strong buy consensus (an_score 1.54)"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "U.S. commercial revenue growth is explosive at 149% YoY, according to [Seeking Alpha](https://seekingalpha.com/article/4946932-palantir-why-us-commercial-growth-justifies-the-challenging-valuation), justifying the premium valuation. Positive 1-week momentum (+1.33%) and a strong buy analyst consensus (an_score 1.81). The valuation (P/E 147.49) is a risk, but the growth narrative and AI data governance moat support a buy.",
+      "drivers": [
+        "149% YoY U.S. commercial growth",
+        "strong buy consensus (an_score 1.81)",
+        "positive 1-week momentum +1.33%",
+        "AI data governance moat"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Attractive valuation with P/E of 16.75 and a strong buy consensus. Positive 1-day (+0.73%) and 1-week (+2.44%) momentum, and news sentiment indicates the stock is potentially 21% undervalued following Sentinel missile progress. The stock is starting to look like a value play with positive catalysts.",
+      "drivers": [
+        "low P/E 16.75",
+        "+2.44% 1-week momentum",
+        "news suggests 21% undervaluation",
+        "Sentinel missile progress"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Positive 1-day (+1.39%) and 1-week (+0.57%) momentum, with a solid P/E of 21.73 and a strong buy consensus. YTD is positive (+5.80%) and news sentiment is also positive.",
+      "drivers": [
+        "+1.39% 1-day gain",
+        "positive YTD +5.80%",
+        "P/E 21.73",
+        "strong buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Low P/E of 15.17 and a brief positive 1-week momentum (+1.51%) offer a potential entry point. YTD is negative (-7.21%) but the fundamentals are compelling in the drones category.",
+      "drivers": [
+        "low P/E 15.17",
+        "+1.51% 1-week momentum",
+        "defense demand tailwinds for drones",
+        "value buy in the segment"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OLN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Positive news on a cleared antitrust hurdle for a merger of equals (Huntsman) is a catalyst. Despite a negative YTD (-18.33%), the news sentiment is the highest in the entire universe at 0.347, and a high dividend yield (4.74%) offers a safety net.",
+      "drivers": [
+        "positive news sentiment 0.347",
+        "high dividend yield 4.74%",
+        "antitrust hurdle cleared",
+        "potential merger catalyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Despite a negative 1-week (-6.50%) and YTD (-10.85%), news sentiment is high (0.272) and the analyst consensus remains a buy (an_score 1.67). The stock is a high-duration play on defense space, which could see renewed interest if geopolitical risks escalate.",
+      "drivers": [
+        "high news sentiment 0.272",
+        "buy consensus (an_score 1.67)",
+        "defense space exposure",
+        "high-duration catalyst potential"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "buy analyst consensus",
         "value opportunity",
         "cyber-intel exposure"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SAIC has strong momentum (+28.5% YTD, +2.7% 1M) with a low P/E of 15.0 and a market cap of $5.4B. Recent earnings beat estimates by $0.70 EPS and management raised full-year guidance, while Goldman Sachs raised its price target to $103. [thecerbatgem.com](https://www.thecerbatgem.com/2026/09/11/science-applications-international-nasdaqsaic-price-target-raised-to-103-00.html)",
-      "drivers": [
-        "+28.5% YTD",
-        "P/E 15.0",
-        "EPS beat by $0.70",
-        "raised guidance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CACI shows strong 1-year return of +22% and positive short-term momentum (+3.0% 1D, +1.6% 1W), with a solid P/E of 25.1 and a strong analyst score of 1.56 (buy). The stock benefits from robust defense contract wins and a favorable cyber-intel spending backdrop.",
-      "drivers": [
-        "+22% 1-year return",
-        "P/E 25.1",
-        "analyst score 1.56",
-        "+3.0% 1D"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BAH has attractive valuation with a P/E of 11.4 and strong recent momentum (+4.8% 1D, +3.4% 1W), despite a YTD decline of -8.8%. The low P/E and positive short-term price action suggest a potential turnaround, supported by a dividend yield of 3.3%.",
-      "drivers": [
-        "P/E 11.4",
-        "+4.8% 1D",
-        "div yield 3.3%",
-        "low valuation"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SPCX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SpaceX has strong 1-month momentum (+11.2%) and a massive market cap of $1.95T. Recent news highlights a $1.11B/month AI hosting deal and a path to $100B annual revenue run rate, though the P/S ratio is elevated at 76.6. [ainvest.com](https://www.ainvest.com/news/spacex-billion-dollar-month-ai-hosting-deal-real-locked-revenue-isn-2609/)",
-      "drivers": [
-        "+11.2% 1M",
-        "$1.11B/month AI deal",
-        "$100B revenue target",
-        "analyst score 1.67"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Northrop Grumman has a low P/E of 16.4 and a beta of -0.11, offering defensive characteristics. Despite a -10.3% YTD decline, the stock is involved in the Navy's next fighter race, providing a potential catalyst, and has a positive news sentiment of 0.23.",
-      "drivers": [
-        "P/E 16.4",
-        "beta -0.11",
-        "Navy fighter race",
-        "news sentiment 0.23"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Leidos trades at a low P/E of 12.0 with a dividend yield of 1.3%, and despite a -29% YTD decline, it showed a +1.1% gain today. The stock is a key cyber-intel player with potential for recovery as defense spending remains robust.",
-      "drivers": [
-        "P/E 12.0",
-        "div yield 1.3%",
-        "+1.1% 1D",
-        "defense spending tailwind"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Rolls-Royce has strong 1-year (+28%) and YTD (+19.5%) returns, with a beta of 1.19. Despite a -7.1% 1-month pullback, the stock benefits from UK/European defense momentum and a positive news sentiment of 0.14.",
-      "drivers": [
-        "+28% 1-year",
-        "+19.5% YTD",
-        "beta 1.19",
-        "news sentiment 0.14"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Palantir has a high P/E of 145.5 and a beta of 1.62, but remains a key AI/defense play with a positive analyst score of 1.81. Recent news highlights a potential valuation reset risk, but the stock's long-term growth narrative in AI and defense supports a buy. [seekingalpha.com](https://seekingalpha.com/article/4944890-palantir-an-elite-business-heading-into-a-valuation-reset-rating-downgrade)",
-      "drivers": [
-        "analyst score 1.81",
-        "AI/defense play",
-        "news sentiment 0.11",
-        "high beta 1.62"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "TransDigm has a P/E of 34.1 and a beta of 0.89, with a -17% YTD decline but a slight +0.1% gain today. The stock is a key weapons/systems supplier with a buy analyst consensus, and the negative news sentiment of -0.05 may present a contrarian opportunity.",
-      "drivers": [
-        "P/E 34.1",
-        "beta 0.89",
-        "analyst consensus buy",
-        "contrarian opportunity"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "Olin has a high dividend yield of 4.6% and a positive news sentiment of 0.30, despite a -17.5% YTD decline and a high short interest of 11.3%. The stock is a weapons/systems play with potential for a rebound if commodity prices improve.",
-      "drivers": [
-        "div yield 4.6%",
-        "news sentiment 0.30",
-        "short interest 11.3%",
-        "potential rebound"
       ]
     }
   ]
