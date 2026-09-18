@@ -1,9 +1,176 @@
 {
-  "updated": "2026-09-16 13:28",
+  "updated": "2026-09-18 13:06",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "AMD is up +143.92% YTD with +12.53% 1M momentum, strong_buy consensus (an_score 1.26), and positive news sentiment 0.319, driven by AI accelerator demand and data center share gains.",
+      "drivers": [
+        "+143.92% YTD",
+        "+12.53% 1M momentum",
+        "strong_buy consensus 1.26",
+        "AI accelerator demand"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "INTC has surged +176.28% YTD with +12.52% 1M momentum, strong_buy consensus (an_score 1.26), and positive news sentiment, supported by foundry momentum and AI PC adoption.",
+      "drivers": [
+        "+176.28% YTD",
+        "+12.52% 1M momentum",
+        "strong_buy consensus 1.26",
+        "Foundry and AI PC catalysts"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "META is up +25.50% in 1M with strong_buy consensus (an_score 1.34) and positive news sentiment 0.057, driven by AI-driven ad targeting and Reels monetization.",
+      "drivers": [
+        "+25.50% 1M momentum",
+        "strong_buy consensus 1.34",
+        "AI ad targeting",
+        "Reels monetization"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "CRM has rebounded +24.03% in 1M, with buy consensus (an_score 1.75) and P/E 22.93, despite negative news sentiment -0.087, as AI-driven Agentforce adoption gains traction.",
+      "drivers": [
+        "+24.03% 1M momentum",
+        "P/E 22.93",
+        "buy consensus 1.75",
+        "Agentforce AI adoption"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.83,
+      "rationale": "QCOM is up +18.45% in 1M with buy consensus (an_score ~1.7) and positive news sentiment, driven by AI smartphone and automotive design wins.",
+      "drivers": [
+        "+18.45% 1M momentum",
+        "buy consensus ~1.7",
+        "AI smartphone growth",
+        "Automotive design wins"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NOW",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "NOW is up +15.88% in 1M with strong_buy consensus (an_score ~1.5) and positive news sentiment, driven by AI-powered workflow automation and strong enterprise demand.",
+      "drivers": [
+        "+15.88% 1M momentum",
+        "strong_buy consensus ~1.5",
+        "AI workflow automation",
+        "Enterprise demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CRWD has strong momentum with +8.64% 1W and buy consensus (an_score ~1.7), positive news sentiment 0.025, driven by Falcon platform growth and AI-driven security demand.",
+      "drivers": [
+        "+8.64% 1W momentum",
+        "buy consensus ~1.7",
+        "Falcon platform growth",
+        "AI security demand"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "NET is up +70.36% YTD with +10.81% 1M momentum, buy consensus (an_score ~1.7), and positive news sentiment, driven by AI edge computing and cloud security expansion.",
+      "drivers": [
+        "+70.36% YTD",
+        "+10.81% 1M momentum",
+        "buy consensus ~1.7",
+        "AI edge computing"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "FTNT has positive momentum with +8.64% 1W, buy consensus (an_score ~1.7), and positive news sentiment 0.297, driven by secure networking and SASE growth.",
+      "drivers": [
+        "+8.64% 1W momentum",
+        "buy consensus ~1.7",
+        "SASE growth",
+        "Secure networking"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AAPL is up +24.69% YTD with +8.70% 1M momentum, buy consensus (an_score 2.2), and positive news sentiment 0.337, driven by AI features and services growth.",
+      "drivers": [
+        "+24.69% YTD",
+        "+8.70% 1M momentum",
+        "buy consensus 2.2",
+        "AI features and services"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.781,
+      "ytd": "+130.89%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.89% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.89% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.651,
+      "ytd": "+109.10%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +109.10% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +109.10% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.574,
+      "ytd": "+210.08%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +210.08% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +210.08% \u2265 182.9% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "META",
@@ -132,195 +299,6 @@
         "P/E 28.17",
         "positive news sentiment 0.331",
         "cloud/AI positioning"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.875,
-      "ytd": "+146.67%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +146.67% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +146.67% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.749,
-      "ytd": "+125.62%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +125.62% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +125.62% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.661,
-      "ytd": "+110.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.78% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.78% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.651,
-      "ytd": "+109.12%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +109.12% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +109.12% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.531,
-      "ytd": "+194.25%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +194.25% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +194.25% \u2265 182.9% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Micron shows exceptional momentum with +209% YTD and +518% 1-year returns, P/E 22.02, and strong_buy analyst consensus (score 1.35). Despite a slightly negative news sentiment (-0.046), the AI memory demand cycle remains a powerful tailwind.",
-      "drivers": [
-        "+209% YTD",
-        "P/E 22.02",
-        "strong_buy consensus",
-        "AI memory demand"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.962,
-      "rationale": "Intel has surged +161% YTD and +316% over 1 year, with +12.29% weekly momentum and positive news sentiment (0.21). The turnaround story and AI chip ambitions are gaining traction, though P/E is not meaningful due to losses.",
-      "drivers": [
-        "+161% YTD",
-        "+12.29% 1W",
-        "news_s 0.21",
-        "AI turnaround"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "Qualcomm shows strong momentum (+12.20% 1M, +7.95% 1W) with a reasonable P/E of 20.8 and a 2.02% dividend yield. Its diversification into AI-enabled devices and automotive provides solid growth catalysts.",
-      "drivers": [
-        "+12.20% 1M",
-        "P/E 20.8",
-        "div yield 2.02%",
-        "AI device growth"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Meta has rebounded with +11.95% monthly momentum and +6.12% weekly gains, supported by a strong_buy analyst consensus (score 1.3) and a reasonable P/E of 24.39. AI-driven advertising and metaverse investments are key catalysts.",
-      "drivers": [
-        "+11.95% 1M",
-        "P/E 24.39",
-        "strong_buy consensus",
-        "AI ad growth"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Salesforce has surged +28.14% over the past month, though it pulled back -6.32% this week. With a P/E of 22.68 and a buy consensus, its Agentforce AI platform is a major growth driver.",
-      "drivers": [
-        "+28.14% 1M",
-        "P/E 22.68",
-        "Agentforce AI",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Apple shows steady momentum (+22.94% YTD, +9.93% 1M) with a solid buy consensus (score 2.18) and positive news sentiment (0.102). The upcoming iPhone event and AI integration are expected to drive growth.",
-      "drivers": [
-        "+22.94% YTD",
-        "+9.93% 1M",
-        "news_s 0.102",
-        "iPhone AI event"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "ServiceNow has strong_buy consensus (score 1.43) and a positive outlook with AI business expected to triple by 2029. Despite a -8.97% weekly dip, the long-term AI opportunity is compelling.",
-      "drivers": [
-        "strong_buy consensus",
-        "AI business tripling",
-        "P/E 82.83",
-        "enterprise AI"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Spotify has positive news sentiment (0.172) and is pitching AI add-ons and new verticals for growth. With a P/E of 28.4 and buy consensus, the stock offers a balanced risk-reward.",
-      "drivers": [
-        "news_s 0.172",
-        "AI add-ons",
-        "P/E 28.4",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NFLX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Netflix has a buy case with a P/E of 24.34 and positive long-term growth prospects, despite recent volatility (-6.37% 1W). The stock is seen as undervalued with strong content pipeline.",
-      "drivers": [
-        "P/E 24.34",
-        "content pipeline",
-        "long-term growth",
-        "buy case"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.781,
-      "rationale": "AMD has a strong_buy consensus (score 1.3) and is a key AI chip player, though recent news sentiment is negative (-0.113) due to AI slowdown concerns. The long-term AI opportunity remains intact.",
-      "drivers": [
-        "strong_buy consensus",
-        "AI chip demand",
-        "P/E 27.63",
-        "long-term growth"
       ]
     }
   ]

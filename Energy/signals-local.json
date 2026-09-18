@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-16 13:30",
+  "updated": "2026-09-18 13:11",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.914,
+      "rationale": "VLO has YTD +153.24%, 1M +17.85%, P/E 16.8, div yield 1.19%, analyst buy, and strong news sentiment 0.129. Refining margins remain elevated with Brent above $100.",
+      "drivers": [
+        "+153% YTD momentum",
+        "+17.85% 1M gain",
+        "P/E 16.8",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.945,
+      "rationale": "MPC shows YTD +158.48%, 1M +15.54%, 1W +7.53%, P/E 14.35, analyst buy, and positive news sentiment 0.153. Tight gasoline and diesel markets support refining margins.",
+      "drivers": [
+        "+158% YTD return",
+        "+15.54% 1M momentum",
+        "P/E 14.35",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "TTE has YTD +39.19%, 1Y +50%, P/E 11.36, high div yield 4.67%, analyst buy, and neutral news sentiment. Integrated oil major with low beta and strong dividend.",
+      "drivers": [
+        "P/E 11.36 (low)",
+        "div yield 4.67%",
+        "buy rating",
+        "+39% YTD"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "CVX has YTD +39.50%, 1M +3.73%, P/E 20.36, div yield 3.37%, best analyst score 1.72 (buy), and positive news sentiment 0.37. Venezuela operations offer upside.",
+      "drivers": [
+        "analyst score 1.72 (best)",
+        "news sentiment +0.37",
+        "+39.5% YTD",
+        "div yield 3.37%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "COP has YTD +40.77%, 1Y +44%, P/E 17.55, div yield 2.54%, analyst buy with score 1.74, and positive news sentiment 0.171. E&P exposure to strong oil prices.",
+      "drivers": [
+        "+40.8% YTD",
+        "analyst score 1.74",
+        "P/E 17.55",
+        "positive sentiment 0.171"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "EQNR has YTD +86.65%, 1M +5.95%, P/E 11.98, div yield 3.53%, but hold rating (score 3.33). News sentiment slightly positive 0.025; LNG expansion announced amid supply disruptions.",
+      "drivers": [
+        "+86.65% YTD",
+        "P/E 11.98",
+        "div yield 3.53%",
+        "LNG expansion catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "XOM has YTD +35.79%, 1Y +45%, P/E 21.01, div yield 2.52%, analyst buy, and news sentiment 0.031. Nearing potential Venezuela oil deal with 50B barrel fields.",
+      "drivers": [
+        "+35.8% YTD",
+        "div yield 2.52%",
+        "advancing Venezuela talks",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "SHEL has YTD +30.50%, 1M +4.14%, P/E 10.6 (low), div yield 3.27%, analyst buy, but negative news sentiment -0.167 due to LNG buffer warning. Low P/E provides value buffer.",
+      "drivers": [
+        "P/E 10.6 (lowest among majors)",
+        "div yield 3.27%",
+        "buy rating",
+        "+30.5% YTD"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BP has YTD +31.47%, 1M +4.63%, P/E 21.73, high div yield 4.45%, analyst buy, and slightly negative news sentiment -0.055. Attractive income but higher P/E.",
+      "drivers": [
+        "div yield 4.45%",
+        "+31.5% YTD",
+        "buy rating",
+        "+4.63% 1M"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SSE.L has YTD +11.50%, 1M +3.62%, 1W +5.20%, 1D +3.58%, P/E 23.69, div yield 2.86%, analyst buy (score 1.94), and positive news sentiment 0.185. Utility benefiting from UK policy support.",
+      "drivers": [
+        "+5.20% 1W momentum",
+        "buy rating score 1.94",
+        "positive sentiment 0.185",
+        "UK utility policy backdrop"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TTE",
@@ -132,139 +265,6 @@
         "P/E 12.07",
         "div yield 3.5%",
         "1M +9.40%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "VLO is up 139.67% YTD and 148% 1-year, with record Q2 EPS of $12.54 and refining margins doubling to $23.62/bbl; Michael Burry calls it a 'huge position' amid a global refining capacity crunch and Saudi pipeline closure pushing oil toward $108.",
-      "drivers": [
-        "+139.67% YTD",
-        "record Q2 EPS $12.54",
-        "refining margins $23.62/bbl",
-        "Saudi pipeline crisis"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "MPC is up 142.54% YTD and 120% 1-year, with strong momentum (+14% 1M) and positive news sentiment (0.408); the Saudi pipeline closure and refining capacity squeeze directly benefit independent refiners.",
-      "drivers": [
-        "+142.54% YTD",
-        "+14% 1M momentum",
-        "refining capacity squeeze",
-        "positive news sentiment 0.408"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "EQNR is up 88.63% YTD and 84% 1-year, with P/E of 12.14 and strong cash flow ($7.68B Q2 CFO); Brent above $107 and European gas prices boost its integrated model, though analyst consensus is hold (3.33).",
-      "drivers": [
-        "+88.63% YTD",
-        "P/E 12.14",
-        "Brent >$107",
-        "Q2 CFO $7.68B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.84,
-      "rationale": "CVX is up 41.14% YTD with a P/E of 20.62 and a 3.33% dividend yield; strong analyst score (1.72) and oil above $100 support its integrated model, with premarket gains of 1.9% after Saudi pipeline attacks.",
-      "drivers": [
-        "+41.14% YTD",
-        "analyst score 1.72",
-        "dividend yield 3.33%",
-        "oil >$100"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "COP is up 45.17% YTD and 49% 1-year, with a P/E of 18.19 and a 2.45% dividend yield; analyst consensus is buy (1.74) and the stock gained 1.6-2.9% premarket on Saudi pipeline disruption.",
-      "drivers": [
-        "+45.17% YTD",
-        "P/E 18.19",
-        "analyst buy consensus 1.74",
-        "Saudi supply disruption"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "BP is up 33.44% YTD with strong 1M (+8.70%) and 1W (+5.78%) momentum, a 4.38% dividend yield, and very low short interest (0.29%); positive news sentiment (0.4) and Brent above $107 support earnings.",
-      "drivers": [
-        "+33.44% YTD",
-        "dividend yield 4.38%",
-        "low short interest 0.29%",
-        "Brent >$107"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "SHEL is up 31.79% YTD with a P/E of 10.7, a 3.23% dividend yield, and strong 1M (+8.38%) and 1W (+4.81%) momentum; Q2 adjusted earnings of $9.8B and cash flow of $21.4B highlight cash generation.",
-      "drivers": [
-        "P/E 10.7",
-        "dividend yield 3.23%",
-        "+8.38% 1M",
-        "Q2 CFO $21.4B"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "OXY is up 47.05% YTD with a P/E of 18.13 and near-zero short interest (0.01%); the stock gained 1.6-2.9% premarket on Saudi pipeline attacks, and its Permian assets benefit from higher oil prices.",
-      "drivers": [
-        "+47.05% YTD",
-        "short interest 0.01%",
-        "Permian exposure",
-        "oil price surge"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SLB is up 41.74% YTD with a strong analyst score of 1.6 (buy) and positive news sentiment (0.143); oilfield services benefit from sustained high oil prices and increased drilling activity, though P/E of 27.35 is elevated.",
-      "drivers": [
-        "+41.74% YTD",
-        "analyst score 1.6",
-        "oilfield services demand",
-        "high oil prices"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "HAL is up 22.75% YTD with a P/E of 18.76 and a 1.90% dividend yield; analyst consensus is buy (1.75) and the stock gained 1% premarket on Saudi pipeline attacks, though short interest is high at 5.57%.",
-      "drivers": [
-        "+22.75% YTD",
-        "P/E 18.76",
-        "analyst buy consensus 1.75",
-        "drilling activity uplift"
       ]
     }
   ]

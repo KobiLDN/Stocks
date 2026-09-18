@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-16 13:26",
+  "updated": "2026-09-18 13:06",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SPCX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "8% one-month momentum, Q2 revenue surged 92% YoY to $7.8B, Starlink users doubled to 12M, and Pentagon confirmed space-weapons budget with Golden Dome \u2014 all catalysts per [247wallst.com] and [gate.com].",
+      "drivers": [
+        "1M +8.00%",
+        "Q2 rev +92% YoY",
+        "Starship Flight 14 catalyst",
+        "Pentagon space weapons spend"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +18.16%, P/E 26.11, $1.5B CENTCOM contract award (Apollo), $32B backlog, and FY revenue grew 10.9% to $9.6B \u2014 see [insidermonkey.com].",
+      "drivers": [
+        "YTD +18.16%",
+        "$1.5B CENTCOM win",
+        "$32B backlog",
+        "P/E 26.11"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Top YTD performer at +33.42%, 1M +6.11%, P/E 15.47, and cited as best of the bunch in Q2 earnings.",
+      "drivers": [
+        "YTD +33.42%",
+        "1M +6.11%",
+        "P/E 15.47",
+        "Q2 earnings beat"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1W +6.26%, revenue up 93% YoY with 86% gross margin, commercial revenue surging $495M \u2014 despite high P/E 149, analyst consensus is buy per [fool.com].",
+      "drivers": [
+        "1W +6.26%",
+        "Rev +93% YoY",
+        "86% gross margin",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1W +4.24%, P/E 12.31, 3.01% dividend yield, and Golden Dome Space-Based Interceptor contract makes it a hidden beneficiary of declassified space-weapons budgets per [marketspectator.com].",
+      "drivers": [
+        "1W +4.24%",
+        "P/E 12.31",
+        "Golden Dome SBI contract",
+        "3.01% dividend yield"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +23.64%, 1W +3.48%, 1D +2.72%, P/E 41.11, strong UK defence momentum with no analyst rating but solid price action.",
+      "drivers": [
+        "YTD +23.64%",
+        "1W +3.48%",
+        "1D +2.72%",
+        "UK defence demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RKLB",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1W +9.46%, 1D +5.47%, analyst buy rating, space momentum from SpaceX catalyst spillover, though YTD -10.75% and high beta 2.61.",
+      "drivers": [
+        "1W +9.46%",
+        "1D +5.47%",
+        "Analyst buy",
+        "Space sector tailwind"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1W +11.09%, 1D +4.41% strong weekly snap-back, analyst buy, yet YTD -36.23% and no P/E; high short interest 11.21% could amplify gains.",
+      "drivers": [
+        "1W +11.09%",
+        "1D +4.41%",
+        "Analyst buy",
+        "Short interest 11.21%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "P/E 15.21 reasonable, analyst buy, YTD -6.99% but 1W +2.18%, defence drone exposure with manageable valuation.",
+      "drivers": [
+        "P/E 15.21",
+        "Analyst buy",
+        "1W +2.18%",
+        "Defence drone exposure"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Strong_buy analyst consensus (score 1.45), YTD +7.20%, P/E 31.14, low short 1.17%, steady defence prime subsidiary with growing backlog.",
+      "drivers": [
+        "Strong_buy consensus",
+        "YTD +7.20%",
+        "P/E 31.14",
+        "Low short interest 1.17%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,139 +265,6 @@
         "buy consensus (an_score 1.67)",
         "defense space exposure",
         "high-duration catalyst potential"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +29.68%, P/E 15.14, 1M momentum +2.84% with positive news sentiment 0.028; strong Q2 earnings and best-in-class performance among gov-consc stocks.",
-      "drivers": [
-        "YTD +29.68%",
-        "P/E 15.14",
-        "1M +2.84%",
-        "strong Q2 earnings"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Record Q2 revenue $1.94B (+93% YoY), beat on EPS $0.41 vs $0.35, Rule of 40 at 155%, raised full-year guidance to $8.15B; strong sovereign AI wins with NVIDIA and FAA.",
-      "drivers": [
-        "Q2 revenue +93%",
-        "EPS beat $0.06",
-        "raised FY guidance",
-        "sovereign AI wins"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SPCX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +3.46%, 1D +2.34%, news sentiment 0.274; Nasdaq-100 weighting set to double, potential $ billions in inflows; management targets $100B run-rate revenue by Dec 2026.",
-      "drivers": [
-        "1M +3.46%",
-        "Nasdaq-100 weighting increase",
-        "$100B run-rate target",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +15.59%, analyst score 1.56 (buy) and fair value $724.50 implies ~17% upside from $621.17; recent 7% pullback offers entry.",
-      "drivers": [
-        "YTD +15.59%",
-        "analyst score 1.56",
-        "14.3% undervalued",
-        "recent pullback"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +21.53%, 1Y +27%, 1D +1.72%, beta 1.188; strong momentum with positive news sentiment 0.143, supported by defence and civil aerospace demand.",
-      "drivers": [
-        "YTD +21.53%",
-        "1Y +27%",
-        "positive news sentiment",
-        "strong momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "1W +2.08%, 1D +2.27%, P/E 15.25, dividend yield 10.0%; short-term momentum turning positive with improving demand in commercial aerospace.",
-      "drivers": [
-        "1W +2.08%",
-        "1D +2.27%",
-        "P/E 15.25",
-        "dividend yield 10.0%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1D +1.19%, analyst score 1.95 (buy), beta 0.893; recent pullback in line with sector but fundamental demand for aftermarket parts remains strong.",
-      "drivers": [
-        "1D +1.19%",
-        "analyst score 1.95",
-        "low beta",
-        "defence aftermarket demand"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "1W +2.73%, 1D +0.29%, P/E 11.92, news sentiment 0.138; cheap valuation and short-term momentum improving, positive news flow around cyber and consulting contracts.",
-      "drivers": [
-        "1W +2.73%",
-        "P/E 11.92",
-        "positive news sentiment",
-        "short-term momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1W +1.36%, dividend yield 4.65%, news sentiment 0.301; improving short-term trend with positive sentiment and high yield providing downside protection.",
-      "drivers": [
-        "1W +1.36%",
-        "dividend yield 4.65%",
-        "news sentiment 0.301",
-        "improving short-term trend"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "P/E 12.03, news sentiment 0.057, analyst score 2.35 (buy); cheap valuation and recent uptick despite YTD decline, potential value play in cyber-intel.",
-      "drivers": [
-        "P/E 12.03",
-        "buy analyst consensus",
-        "value opportunity",
-        "cyber-intel exposure"
       ]
     }
   ]

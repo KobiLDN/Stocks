@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-16 13:30",
+  "updated": "2026-09-18 13:12",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "ARM surged 6.8% on CEO confidence in $2B AI chip demand, with YTD +130.89% and 1M +4.57% momentum; high beta 3.89 and short interest 11.52% add squeeze potential.",
+      "drivers": [
+        "YTD +130.89%",
+        "1D +6.81%",
+        "AI chip demand catalyst",
+        "high short interest"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "TSM gained 2.2% on 2nm win with MediaTek and raised FY guidance above 40%; YTD +35.68%, P/E 31.07, strong_buy consensus with 29% upside to price target.",
+      "drivers": [
+        "2nm win & expansion",
+        "FY guidance >40%",
+        "P/E 31.07",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.858,
+      "rationale": "AMD rose 5% on AI compute price hikes and data center revenue +107% YoY; YTD +143.92%, 1M +12.53%, strong_buy with $654 avg target.",
+      "drivers": [
+        "YTD +143.92%",
+        "1M +12.53%",
+        "AI compute pricing power",
+        "data center revenue surge"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "META posted 1M +25.50% momentum with P/E 25.38 and strong_buy consensus; YTD +5.09% but accelerating on AI/advertising tailwinds.",
+      "drivers": [
+        "1M +25.50%",
+        "P/E 25.38",
+        "strong_buy consensus",
+        "AI/advertising momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "TMO gained 1.8% with 1M +11.85% and 1W +9.23%, P/E 34.85, buy consensus; life sciences tools demand supports steady growth.",
+      "drivers": [
+        "1M +11.85%",
+        "1W +9.23%",
+        "P/E 34.85",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "JNJ YTD +32.42%, P/E 30.95, buy consensus, with 1.45% 1W gain; diversified healthcare and dividend yield 2.01% provide stability.",
+      "drivers": [
+        "YTD +32.42%",
+        "P/E 30.95",
+        "buy consensus",
+        "dividend yield 2.01%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CVX YTD +39.50%, P/E 20.36, buy consensus, with 3.73% 1M gain; energy price tailwinds and strong free cash flow support dividend yield 3.37%.",
+      "drivers": [
+        "YTD +39.50%",
+        "P/E 20.36",
+        "buy consensus",
+        "dividend yield 3.37%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "GOOGL YTD +10.43%, P/E 17.21, strong_buy consensus; low valuation relative to mega-cap tech, with AI agent infrastructure buildout.",
+      "drivers": [
+        "P/E 17.21",
+        "strong_buy consensus",
+        "YTD +10.43%",
+        "AI infrastructure theme"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "NVDA P/E 27.01, strong_buy consensus, YTD +16.42%; AI leader with data center demand intact despite flat 1M.",
+      "drivers": [
+        "P/E 27.01",
+        "strong_buy consensus",
+        "YTD +16.42%",
+        "AI leader"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AAPL YTD +24.69%, 1M +8.70%, P/E 38.17, buy consensus; iPhone 18 launch with AI features supports premium pricing and ecosystem lock-in.",
+      "drivers": [
+        "YTD +24.69%",
+        "1M +8.70%",
+        "iPhone 18 AI launch",
+        "buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+176.28%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +176.28% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +176.28% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CVX",
@@ -132,172 +277,6 @@ window.SIGNALS_DATA = {
         "P/E 26.8",
         "2.4% dividend",
         "defensive growth"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.875,
-      "ytd": "+146.67%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +146.67% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +146.67% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.749,
-      "ytd": "+125.62%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +125.62% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +125.62% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.661,
-      "ytd": "+110.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.78% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.78% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "JPMorgan upgraded to Overweight with an $820 target after AI agent Muse hit #2 in the App Store; +11.95% 1M momentum, P/E 24.4, strong_buy consensus.",
-      "drivers": [
-        "JPMorgan upgrade & $820 PT",
-        "Muse AI app #2 in App Store",
-        "+11.95% 1M momentum",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AAPL",
-      "signal": "strong_buy",
-      "confidence": 0.83,
-      "rationale": "TD Cowen reaffirmed $400 buy target citing Siri AI upgrade cycle on 2.5B devices; +22.94% YTD, +9.93% 1M, P/E 38.2, buy consensus.",
-      "drivers": [
-        "Siri AI upgrade cycle on 2.5B devices",
-        "TD Cowen $400 target",
-        "+22.94% YTD",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "+130.79% YTD, +9.15% 1W, +4.96% 1D with strong AI chip demand; high short interest 11.52% adds squeeze potential.",
-      "drivers": [
-        "+130.79% YTD",
-        "+9.15% 1W momentum",
-        "AI chip demand tailwind",
-        "High short interest 11.52%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.781,
-      "rationale": "+220% 1Y return, +130.96% YTD, +13.15% 1W as AI GPU leader; strong_buy consensus with P/E 131.7 reflecting growth expectations.",
-      "drivers": [
-        "+220% 1Y return",
-        "+13.15% 1W momentum",
-        "AI GPU leadership",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+41.14% YTD, +9.83% 1M with oil above $100; P/E 20.6, 3.33% dividend yield provides value and income.",
-      "drivers": [
-        "+41.14% YTD",
-        "Oil above $100 tailwind",
-        "3.33% dividend yield",
-        "P/E 20.6"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "+38.05% YTD, +48% 1Y; oil above $100 supports earnings, P/E 21.4, 2.48% dividend yield.",
-      "drivers": [
-        "+38.05% YTD",
-        "Oil price tailwind",
-        "2.48% dividend yield",
-        "P/E 21.4"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.962,
-      "rationale": "+161.40% YTD, +316% 1Y recovery story; +12.29% 1W momentum, but high beta 2.23 and no dividend.",
-      "drivers": [
-        "+161.40% YTD",
-        "+316% 1Y recovery",
-        "+12.29% 1W momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "+30.14% YTD, +50% 1Y with low beta 0.235 and 2.02% dividend yield; defensive healthcare strength.",
-      "drivers": [
-        "+30.14% YTD",
-        "Low beta 0.235",
-        "2.02% dividend yield",
-        "Defensive healthcare"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "+12.20% 1M, +7.95% 1W, +3.45% 1D with iPhone AI upgrade cycle tailwind; P/E 20.8 and 2.02% dividend yield attractive.",
-      "drivers": [
-        "+12.20% 1M momentum",
-        "iPhone AI upgrade tailwind",
-        "P/E 20.8",
-        "2.02% dividend yield"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "+36.25% YTD, +66% 1Y as dominant AI chip foundry; P/E 32.0, strong_buy consensus with low short interest 0.62%.",
-      "drivers": [
-        "+36.25% YTD",
-        "AI chip foundry leader",
-        "strong_buy consensus",
-        "Low short interest 0.62%"
       ]
     }
   ]

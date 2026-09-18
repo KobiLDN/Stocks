@@ -1,9 +1,134 @@
 {
-  "updated": "2026-09-16 13:29",
+  "updated": "2026-09-18 13:10",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "NEAR is up +129% YTD, +116% 1M, and +40% 1W, with open interest near yearly highs of $656M and a 15% single-day TVL surge to ~$150M, driven by the AI agent settlement narrative and Grayscale ETF filing.",
+      "drivers": [
+        "+129% YTD",
+        "+116% 1M",
+        "OI at yearly high",
+        "AI infrastructure story"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "MINA surged +138% in the past month and is up +27% YTD, making it the strongest 1M performer in the universe with a tiny $123M market cap, though liquidity risk is elevated.",
+      "drivers": [
+        "+138% 1M",
+        "+27% YTD",
+        "tiny market cap"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SOL",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "SOL is up +37% 1M, +5.9% 1W, and +6% 1D, with a confirmed breakout above $100 and $105 resistance in play; SEC tokenized stock exemption and record ETF holdings of 10.58M SOL add regulatory/institutional tailwinds.",
+      "drivers": [
+        "+37% 1M",
+        "$105 breakout level",
+        "record ETF holdings",
+        "SEC exemption"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "PEPE is up +41% 1M and +10% 1W, showing strong meme momentum with a market cap of $1.5B, benefiting from retail rotation into high-beta meme assets.",
+      "drivers": [
+        "+41% 1M",
+        "+10% 1W",
+        "meme momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.64,
+      "rationale": "FET is up +49% 1M and +16% 1D, with a +15.9% daily surge reflecting renewed AI sector demand and low market cap of $416M offering high beta to the AI narrative.",
+      "drivers": [
+        "+48.7% 1M",
+        "+15.9% 1D",
+        "AI sector demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "OCEAN",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "OCEAN is up +61% 1M, with a +6.4% YTD return and low absolute price of $0.16, benefiting from data-economy token narrative and strong relative momentum.",
+      "drivers": [
+        "+61% 1M",
+        "low price entry",
+        "data economy narrative"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AIOZ rallied +55% 1M and +8.4% 1W, with a market cap of just $95M, riding the AI-dePIN crossover theme and showing strong short-term momentum.",
+      "drivers": [
+        "+55% 1M",
+        "+8.4% 1W",
+        "AI-dePIN theme"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DOT",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "DOT surged +48% 1M and +12% 1D, with positive news sentiment score of 0.494 and a $1.9B market cap, though 1W return is negative at -2.9% indicating some short-term pullback.",
+      "drivers": [
+        "+48% 1M",
+        "+12% 1D",
+        "positive news sentiment 0.494"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "GRT",
+      "signal": "buy",
+      "confidence": 0.56,
+      "rationale": "GRT is up +48% 1M, +9.2% 1W, and +7.8% 1D, with a low market cap of $213M, showing strong momentum in the AI data-indexing subsector.",
+      "drivers": [
+        "+48% 1M",
+        "+9.2% 1W",
+        "AI indexing sector"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AGIX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "AGIX is up +47% 1M and +14% 1D, benefiting from the AI agent narrative and low absolute price of $0.077, though liquidity is thin due to null market cap data.",
+      "drivers": [
+        "+47% 1M",
+        "+14% 1D",
+        "AI agent narrative"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MINA",
@@ -123,139 +248,6 @@
         "+26.80% 1m",
         "AI narrative",
         "high momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MINA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "MINA leads with +120.92% 1-month momentum and +14.98% YTD, though 1-day pullback of -19.18% suggests volatility; strong uptrend and small market cap ($0.112B) offer high upside.",
-      "drivers": [
-        "+120.92% 1M momentum",
-        "+14.98% YTD",
-        "small cap $0.112B",
-        "high volatility"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "NEAR shows robust +61.16% YTD and +48.81% 1M, with positive 1D +4.34% and 1W +0.77%, supported by AI narrative and news of AI-driven crypto buying.",
-      "drivers": [
-        "+61.16% YTD",
-        "+48.81% 1M",
-        "AI sector momentum",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "XRP",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "XRP has strong +37.70% 1M momentum and +1.24% 1D, with large market cap $86.945B and positive news on ETF interest, indicating institutional adoption.",
-      "drivers": [
-        "+37.70% 1M",
-        "ETF inflows",
-        "large cap $86.945B",
-        "positive 1D +1.24%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SOL shows +34.72% 1M momentum and positive news sentiment 0.164, with a large cap $59.509B; despite -3.58% 1W, the uptrend is intact.",
-      "drivers": [
-        "+34.72% 1M",
-        "positive news sentiment",
-        "large cap $59.509B",
-        "strong ecosystem"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ETH has +33.80% 1M momentum and is a core layer1 with $306.904B market cap; despite negative news sentiment -0.182, its fundamental role supports a buy.",
-      "drivers": [
-        "+33.80% 1M",
-        "large cap $306.904B",
-        "core layer1",
-        "institutional interest"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "DOT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "DOT shows +32.68% 1M and +4.92% 1W, with +0.72% 1D, indicating strong momentum; small cap $1.742B offers growth potential.",
-      "drivers": [
-        "+32.68% 1M",
-        "+4.92% 1W",
-        "small cap $1.742B",
-        "infrastructure play"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "PEPE has +29.83% 1M momentum and is a meme coin with high beta; despite -4.70% 1W, the short-term trend is positive.",
-      "drivers": [
-        "+29.83% 1M",
-        "meme coin momentum",
-        "high volatility",
-        "social sentiment"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ALGO shows +22.24% 1M and +4.52% 1D, with +2.90% 1W, indicating strong short-term momentum; small cap $0.879B offers upside.",
-      "drivers": [
-        "+22.24% 1M",
-        "+4.52% 1D",
-        "small cap $0.879B",
-        "positive momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "OCEAN",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "OCEAN has explosive +67.02% 1M momentum and +5.42% 1W, with +1.16% 1D, though market cap is null; AI narrative supports growth.",
-      "drivers": [
-        "+67.02% 1M",
-        "+5.42% 1W",
-        "AI sector",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "GRT",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "GRT shows +26.46% 1M and +1.25% 1D, with -2.43% 1W; AI infrastructure play with potential for further gains.",
-      "drivers": [
-        "+26.46% 1M",
-        "AI infrastructure",
-        "positive 1D",
-        "momentum"
       ]
     }
   ]

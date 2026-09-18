@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-16 13:25",
+  "updated": "2026-09-18 13:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "NTRA is up +91% over 1Y and +60% YTD, with a +17.52% 1M momentum and a strong_buy analyst consensus (score 1.46). Positive news sentiment (0.338) and a new all-time high signal robust momentum.",
+      "drivers": [
+        "+91% 1Y return",
+        "+60% YTD",
+        "strong_buy consensus 1.46",
+        "New all-time high"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "EXEL shows +40% 1Y and +34.21% YTD with a +10.11% 1M gain, supported by a low P/E of 17.89 and positive news sentiment (0.084). The stock has strong momentum with reasonable valuation.",
+      "drivers": [
+        "+40% 1Y return",
+        "+34.21% YTD",
+        "P/E 17.89",
+        "Positive news sentiment 0.084"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "ILMN is up +123% 1Y and +82.49% YTD, with a +30.21% 1M surge and a +21.82% 1W gain. Despite a high P/E of 42.71, the strong momentum and positive news sentiment (0.164) support a buy.",
+      "drivers": [
+        "+123% 1Y return",
+        "+82.49% YTD",
+        "+30.21% 1M",
+        "Positive news sentiment 0.164"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CRSP",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "CRSP is up +8.22% 1M and +9.69% 1W, with a strong news sentiment of 0.398 and a buy analyst consensus (score 2.05). The gene-editing sector is gaining momentum, and the stock is rebounding from a -16% 1Y decline.",
+      "drivers": [
+        "+8.22% 1M",
+        "+9.69% 1W",
+        "News sentiment 0.398",
+        "Buy consensus 2.05"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "NVAX is up +40.25% YTD and +26.10% 1M, with a +7.53% 1W gain and a buy analyst consensus (score 2.33). The stock is benefiting from the cancer vaccine trade, though high short interest (29.77%) adds risk.",
+      "drivers": [
+        "+40.25% YTD",
+        "+26.10% 1M",
+        "Buy consensus 2.33",
+        "High short interest 29.77%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AZN is up +7.51% 1M and +5.70% 1W, with a positive news sentiment of 0.251 and a buy analyst consensus (score 1.72). The recent HER2-directed lung cancer Phase III success is a key catalyst.",
+      "drivers": [
+        "+7.51% 1M",
+        "+5.70% 1W",
+        "News sentiment 0.251",
+        "HER2 lung cancer Phase III success"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RXRX",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "RXRX is up +14.56% 1M and +12.03% 1W, with a +10.63% 1D gain and a strong_buy analyst consensus (score 1.43). Despite a -35% 1Y decline, the recent momentum and low market cap ($1.899B) offer upside potential.",
+      "drivers": [
+        "+14.56% 1M",
+        "+12.03% 1W",
+        "Strong_buy consensus 1.43",
+        "Low market cap $1.899B"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PACB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "PACB is up +21.05% 1M and +8.66% 1W, with a buy analyst consensus (score 2.12). The stock is rebounding from a -25% YTD decline, and the high short interest (18.34%) could fuel a short squeeze.",
+      "drivers": [
+        "+21.05% 1M",
+        "+8.66% 1W",
+        "Buy consensus 2.12",
+        "Short interest 18.34%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SRPT is up +14.71% 1M, with a buy analyst consensus (score 1.74) and positive news sentiment (0.046). The stock is recovering from a -3% YTD decline, and the rare-disease pipeline offers long-term potential.",
+      "drivers": [
+        "+14.71% 1M",
+        "Buy consensus 1.74",
+        "Positive news sentiment 0.046",
+        "Rare-disease pipeline"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "MRNA is up +40.25% YTD and +26.10% 1M, with a buy analyst consensus (score 2.33) and positive news sentiment (0.045). The cancer vaccine trade is a key catalyst, though high short interest (29.77%) adds risk.",
+      "drivers": [
+        "+40.25% YTD",
+        "+26.10% 1M",
+        "Buy consensus 2.33",
+        "Cancer vaccine trade"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRNA",
@@ -127,139 +260,6 @@ window.SIGNALS_DATA = {
         "+10.74% 1M",
         "+10% 1Y",
         "Turnaround potential"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +43.74%, analyst strong_buy 1.46, low short interest 3.94%, positive news sentiment 0.223 \u2014 strong momentum and consensus alignment.",
-      "drivers": [
-        "YTD +43.74%",
-        "analyst strong_buy 1.46",
-        "low short interest 3.94%",
-        "news sentiment +0.223"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +53.67%, returning to S&P 500, Q2 revenue beat of $1.16B, P/E 38.45, analyst buy 2.38.",
-      "drivers": [
-        "YTD +53.67%",
-        "S&P 500 re-entry",
-        "Q2 revenue beat",
-        "analyst buy 2.38"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "GILD",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +19.64%, low beta 0.35, analyst buy 1.75, dividend yield 2.28%, positive news sentiment 0.146 \u2014 defensive strength.",
-      "drivers": [
-        "analyst buy 1.75",
-        "low beta 0.35",
-        "dividend yield 2.28%",
-        "news sentiment +0.146"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "INCY",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "P/E 15.47, YTD +19.77%, highest news sentiment in universe at 0.454, analyst buy 2.29, low beta 0.77.",
-      "drivers": [
-        "P/E 15.47",
-        "news sentiment +0.454",
-        "YTD +19.77%",
-        "analyst buy 2.29"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "YTD +366.53%, Phase 3 cancer vaccine win with Merck, 2 FDA approvals in Aug 2026, Argus upgrade to Buy $180 target, but analyst consensus hold (2.74).",
-      "drivers": [
-        "YTD +366.53%",
-        "Phase 3 cancer vaccine win",
-        "FDA approvals Aug 2026",
-        "Argus upgrade to Buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "P/E 17.65, YTD +28.77%, $1.17B free cash flow, FDA delay viewed as speed bump with target $63, analyst buy 2.37.",
-      "drivers": [
-        "P/E 17.65",
-        "FCF $1.17B",
-        "YTD +28.77%",
-        "analyst buy 2.37"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ALNY",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1M +11.04%, analyst buy 1.69, positive sentiment 0.295, P/E 43.32 \u2014 turning from negative YTD of -37.86%.",
-      "drivers": [
-        "1M +11.04%",
-        "analyst buy 1.69",
-        "sentiment +0.295",
-        "P/E 43.32"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BNTX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Analyst buy 1.7, low short 3.45%, gotistobart OS 18.5 vs 10.0 months in PRESERVE-003, strong financial strength (GF Score financials 8/10).",
-      "drivers": [
-        "analyst buy 1.7",
-        "short 3.45%",
-        "gotistobart OS benefit",
-        "financial strength 8/10"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "YTD +32.12%, 1M +18.34%, analyst buy 2.33, but high short interest 29.77% signals contrarian potential.",
-      "drivers": [
-        "YTD +32.12%",
-        "1M +18.34%",
-        "analyst buy 2.33",
-        "short interest 29.77%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +22.12%, 1Y +52%, P/E 38.64, analyst buy 1.83, positive sentiment 0.282 \u2014 steady large-cap momentum.",
-      "drivers": [
-        "YTD +22.12%",
-        "1Y +52%",
-        "analyst buy 1.83",
-        "sentiment +0.282"
       ]
     }
   ]
