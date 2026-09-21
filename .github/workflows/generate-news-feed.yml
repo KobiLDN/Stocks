@@ -45,7 +45,7 @@ jobs:
             git commit -m "Update RSS feed — $(date -u '+%Y-%m-%d %H:%M UTC')"
             for i in 1 2 3 4; do
               git fetch origin main
-              git rebase origin/main
+              git merge -X ours origin/main --no-edit
               git push origin HEAD:main && break
               echo "Push attempt $i failed, retrying..."
               sleep $((2 ** i))
