@@ -1,9 +1,187 @@
 {
-  "updated": "2026-09-18 13:06",
+  "updated": "2026-09-21 14:42",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +222.23%, P/E 22.94, strong_buy consensus, news sentiment 0.318, memory price surge catalysts from Intel CEO comments and supply tightness [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/262177719-fed-rate-hike-ai-stocks-rebound-nvda-mu-amd-chip-sector-rally-tradingkey).",
+      "drivers": [
+        "YTD return +222%",
+        "P/E 22.9",
+        "strong_buy consensus",
+        "memory demand catalysts"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "1M +21.93%, P/E 25.07, strong_buy, Wells Fargo PT hike to $796 on AI product momentum and Muse assistant traction ahead of Connect event [rallies.ai](https://rallies.ai/news/meta-rises-wells-fargo-hikes-pt-on-ai-product-momentum-d1e7263f3aff4d4b).",
+      "drivers": [
+        "1M momentum +22%",
+        "P/E 25.1",
+        "analyst PT upgrade",
+        "AI product catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 1.0,
+      "rationale": "YTD +175.77%, 1M +17.03%, analyst upgrades (Tigress PT $145, Northland Outperform), High-NA EUV progress, SK Hynix partnership talks [stockstotrade.com](https://stockstotrade.com/news/intel-corporation-intc-news-2026_09_21/).",
+      "drivers": [
+        "YTD return +176%",
+        "analyst upgrades",
+        "foundry execution",
+        "SK Hynix deal talks"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.898,
+      "rationale": "YTD +150.51%, 1M +20.02%, strong_buy, news sentiment 0.158, AI chip demand and data center growth [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/262177719-fed-rate-hike-ai-stocks-rebound-nvda-mu-amd-chip-sector-rally-tradingkey).",
+      "drivers": [
+        "YTD return +151%",
+        "1M momentum +20%",
+        "strong_buy consensus",
+        "AI chip demand"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +17.97%, P/E 28.1, strong_buy, AI spending expansion and lower Treasury yields supporting sector [reuters.com](https://www.reuters.com/business/wall-st-futures-rise-ai-stocks-gain-oil-prices-slide-2026-09-21/).",
+      "drivers": [
+        "P/E 28.1",
+        "strong_buy consensus",
+        "AI capex growth",
+        "macro tailwinds"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +37.07%, P/E 32.46, strong_buy, news sentiment 0.249, AI chip manufacturing leader benefiting from hyperscaler spending.",
+      "drivers": [
+        "YTD return +37%",
+        "P/E 32.5",
+        "strong_buy consensus",
+        "AI manufacturing leader"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +45.04%, P/E 57.81, strong_buy, news sentiment 0.216, EUV lithography demand driven by advanced chip nodes.",
+      "drivers": [
+        "YTD return +45%",
+        "strong_buy consensus",
+        "EUV demand",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +53.40%, strong_buy, cloud data platform growth and agentic AI adoption.",
+      "drivers": [
+        "YTD return +53%",
+        "strong_buy consensus",
+        "cloud growth",
+        "AI adoption"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +65.09%, analyst buy, news sentiment 0.278, cybersecurity demand and network edge expansion.",
+      "drivers": [
+        "YTD return +65%",
+        "buy consensus",
+        "positive sentiment",
+        "cybersecurity tailwinds"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1M +15.65%, P/E 21.79, analyst buy, enterprise software rebound and AI integration.",
+      "drivers": [
+        "1M momentum +16%",
+        "P/E 21.8",
+        "buy consensus",
+        "enterprise AI opportunity"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.836,
+      "ytd": "+140.22%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +140.22% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +140.22% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.704,
+      "ytd": "+118.08%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +118.08% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +118.08% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.653,
+      "ytd": "+109.58%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +109.58% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +109.58% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.612,
+      "ytd": "+102.70%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +102.70% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +102.70% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMD",
@@ -132,173 +310,6 @@
         "+8.70% 1M momentum",
         "buy consensus 2.2",
         "AI features and services"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.781,
-      "ytd": "+130.89%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.89% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.89% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.651,
-      "ytd": "+109.10%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +109.10% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +109.10% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.574,
-      "ytd": "+210.08%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +210.08% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +210.08% \u2265 182.9% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "META is up +17.80% in 1M and +9.25% in 1W, with a P/E of 25.07, positive news sentiment of 0.356, and a strong_buy analyst consensus (score 1.34) driven by its Meta One subscription launch to better monetize AI spending.",
-      "drivers": [
-        "+17.80% 1M momentum",
-        "P/E 25.07 attractive",
-        "strong_buy consensus",
-        "Meta One AI monetization launch"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CRWD surged +111% 1-year and +113.85% YTD, with +15.46% in 1W and +2.97% today, buoyed by AI-fueled cybersecurity demand; despite an extreme P/E of 4849.8, the analyst buy rating (score 1.70) and strong momentum signal continued outperformance.",
-      "drivers": [
-        "+113.85% YTD",
-        "+15.46% 1W momentum",
-        "AI cybersecurity demand",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "QCOM gained +16.43% in 1M and +7.88% in 1W, closing at a 2-month high on AI data center momentum; with a reasonable P/E of 20.57 and 4.07% daily gain, it offers value despite a hold analyst rating (score 2.57).",
-      "drivers": [
-        "+16.43% 1M momentum",
-        "P/E 20.57 low",
-        "AI data center push",
-        "2-month high"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "FTNT is up +121.33% YTD, +10.60% in 1M and +9.46% in 1W, with strong cybersecurity tailwinds; the P/E of 60.27 is elevated but supported by a low beta of 1.059 and positive news sentiment of 0.017.",
-      "drivers": [
-        "+121.33% YTD",
-        "+10.60% 1M momentum",
-        "cybersecurity tailwinds",
-        "low beta 1.059"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "NET soared +66.94% YTD, +15.10% in 1W, with strong revenue growth and a buy analyst consensus (score 1.94), though it lacks profitability; the positive news sentiment of 0.179 and high beta of 1.664 indicate growth-driven upside.",
-      "drivers": [
-        "+66.94% YTD",
-        "+15.10% 1W momentum",
-        "strong revenue growth",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "NOW jumped +20.56% in 1M and +5.73% in 1W, with a strong_buy rating (score 1.43) and low beta of 0.972; the high P/E of 89.25 reflects premium growth pricing, supported by recent analyst upgrades.",
-      "drivers": [
-        "+20.56% 1M momentum",
-        "strong_buy consensus",
-        "low beta 0.972",
-        "analyst upgrades"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "CRM surged +33.87% in 1M, driven by Dreamforce AIforce platform launch with Nvidia's Koa reasoning model; despite a net margin of 22% and a P/E of 23.41, the buy consensus (score 1.75) and AI catalysts support the rally.",
-      "drivers": [
-        "+33.87% 1M momentum",
-        "P/E 23.41 attractive",
-        "AIforce launch at Dreamforce",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "AAPL has +39% 1-year return, P/E of 38.17, and strong buy consensus (score 2.2), but pre-order data for iPhone 18 Pro is lukewarm; the stock is up +8.43% in 1M, still supported by AI upgrades and services growth (+12.1% FQ3).",
-      "drivers": [
-        "+8.43% 1M momentum",
-        "strong_buy consensus",
-        "services growth 12.1%",
-        "AI Siri upgrades"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "SPOT rallied +13.36% in 1M and +5.60% in 1W, with a P/E of 30.13, positive news sentiment of 0.26, and a buy consensus (score 1.55); it offers a balanced risk-reward amid consumer platform recovery.",
-      "drivers": [
-        "+13.36% 1M momentum",
-        "P/E 30.13",
-        "positive news sentiment 0.26",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.62,
-      "rationale": "MSFT has a strong_buy consensus (score 1.36), P/E of 28.17, and positive news sentiment of 0.331, with +5.78% YTD and +3.69% 1M; the solid fundamentals and cloud/AI positioning support a steady ranking.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 28.17",
-        "positive news sentiment 0.331",
-        "cloud/AI positioning"
       ]
     }
   ]

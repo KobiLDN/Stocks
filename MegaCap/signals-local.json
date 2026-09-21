@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-18 13:12",
+  "updated": "2026-09-21 14:45",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +150.51%, 1m +20.02%, strong_buy consensus with an_score 1.49, AI GPU tailwind from data centre buildout.",
+      "drivers": [
+        "YTD +150.51%",
+        "1m +20.02%",
+        "strong_buy consensus",
+        "AI infrastructure demand"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 1.0,
+      "rationale": "YTD +175.77%, 1m +17.03%, analyst upgrades (Tigress PT $145, Northland Outperform) on High-NA EUV execution and Terafab partnership.",
+      "drivers": [
+        "YTD +175.77%",
+        "1m +17.03%",
+        "analyst upgrades",
+        "18A/High-NA EUV progress"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "1m +21.93%, P/E 25, strong_buy with 57/64 buy ratings, Wells Fargo PT $796 on Muse AI momentum ahead of Connect 2026.",
+      "drivers": [
+        "1m +21.93%",
+        "P/E 25",
+        "Muse AI traction",
+        "Wells Fargo PT $796"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.836,
+      "rationale": "YTD +140.22%, 1m +10.54%, news sentiment 0.492, dominant CPU IP position underpinning AI edge compute expansion.",
+      "drivers": [
+        "YTD +140.22%",
+        "1m +10.54%",
+        "news sentiment 0.492",
+        "AI edge IP dominance"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +17.97%, P/E 28.1, strong_buy consensus, Jensen Huang calls AI profit expansion durable; strong data centre demand.",
+      "drivers": [
+        "P/E 28.1",
+        "strong_buy consensus",
+        "AI profit expansion narrative",
+        "data centre demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +37.07%, P/E 32.46, strong_buy, sole advanced chip manufacturer benefiting from AI and 'RAMageddon' memory shortages.",
+      "drivers": [
+        "YTD +37.07%",
+        "P/E 32.46",
+        "strong_buy",
+        "AI chip manufacturing monopoly"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +45.04%, P/E 57.81, strong_buy, monopoly lithography equipment supplier critical for advanced node scaling.",
+      "drivers": [
+        "YTD +45.04%",
+        "strong_buy",
+        "lithography monopoly",
+        "semiconductor capex cycle"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1m +6.26%, 1w +6.91%, P/E 35, buy-rated, life sciences tools exposed to pharma R&D and GLP-1 supply chain.",
+      "drivers": [
+        "1w +6.91%",
+        "1m +6.26%",
+        "P/E 35",
+        "life sciences tools demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +38.14%, P/E 20.16, dividend yield 3.4%, buy-rated, energy supply tightness and AI data centre power demand.",
+      "drivers": [
+        "YTD +38.14%",
+        "P/E 20.16",
+        "dividend yield 3.4%",
+        "energy supply tailwind"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +32.30%, P/E 31.36, dividend yield 1.99%, buy-rated, defensive healthcare with drug pipeline and medical device growth.",
+      "drivers": [
+        "YTD +32.30%",
+        "P/E 31.36",
+        "dividend yield 1.99%",
+        "defensive healthcare exposure"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "ARM",
@@ -132,151 +265,6 @@
         "1M +8.70%",
         "iPhone 18 AI launch",
         "buy consensus"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+176.28%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +176.28% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +176.28% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+43.6% YTD, P/E 20.4, 3.4% dividend yield; energy sector tailwind from AI-driven power demand and 52-week high momentum.",
-      "drivers": [
-        "+43.6% YTD",
-        "P/E 20.4",
-        "3.4% dividend yield",
-        "52-week high momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+40.8% YTD, P/E 21.2, 2.5% dividend yield; LNG expansion catalyst from upgraded ambitions.",
-      "drivers": [
-        "+40.8% YTD",
-        "P/E 21.2",
-        "2.5% dividend yield",
-        "LNG catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+17.8% 1M, P/E 25.1, strong_buy consensus; AI monetization via Meta One subscriptions launch.",
-      "drivers": [
-        "+17.8% 1M",
-        "P/E 25.1",
-        "strong_buy consensus",
-        "AI monetization"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+16.4% 1M, +10.3% YTD, P/E 20.6, 2.0% dividend; $60B Amazon AI data center partnership redefines growth narrative [bitget.com](https://www.bitget.com/news/detail/12560605839223).",
-      "drivers": [
-        "+16.4% 1M",
-        "P/E 20.6",
-        "$60B Amazon AI deal",
-        "data center pivot"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+9.6% 1M, +8.6% YTD, P/E 33.0, buy rating; CEO sees 7% organic growth by 2028 driven by AI pharma spending.",
-      "drivers": [
-        "+9.6% 1M",
-        "P/E 33.0",
-        "AI-driven pharma spending",
-        "CEO growth outlook"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ABBV",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+17.4% YTD, +5.1% 1M, P/E 74.1, 2.6% dividend; buy consensus with strong pipeline momentum.",
-      "drivers": [
-        "+17.4% YTD",
-        "2.6% dividend",
-        "buy consensus",
-        "pipeline strength"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+22.6% YTD, +8.4% 1M, P/E 38.2, buy rating; iPhone Duo foldable launch and Siri AI catalyst despite lukewarm Pro preorders [fool.com](https://www.fool.com/investing/2026/09/16/opinion-iphone-18-pro-demand-is-already-a-problem-for-apple-stock/).",
-      "drivers": [
-        "+22.6% YTD",
-        "P/E 38.2",
-        "new product cycle",
-        "Siri AI catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "+9.1% YTD, +4.7% 1M, P/E 31.9, strong_buy consensus; resilient payment network growth in digital economy.",
-      "drivers": [
-        "+9.1% YTD",
-        "P/E 31.9",
-        "strong_buy consensus",
-        "payment network scale"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MRK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+37.9% YTD, +6.4% 1M, P/E 116.0, buy rating; oncology pipeline catalysts and blockchain pilot.",
-      "drivers": [
-        "+37.9% YTD",
-        "+6.4% 1M",
-        "buy rating",
-        "pipeline catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "KO",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+30.8% YTD, +2.6% 1M, P/E 26.8, 2.4% dividend; defensive consumer staple with strong return profile.",
-      "drivers": [
-        "+30.8% YTD",
-        "P/E 26.8",
-        "2.4% dividend",
-        "defensive growth"
       ]
     }
   ]

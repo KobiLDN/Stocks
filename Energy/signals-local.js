@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-18 13:11",
+  "updated": "2026-09-21 14:44",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "strong_buy",
+      "confidence": 0.917,
+      "rationale": "YTD +153.7%, 1M +19.36%, P/E 17.24, diesel tightness supports refining margins [wsj.com](https://www.wsj.com/finance/commodities-futures/oil-declines-as-concerns-over-extended-supply-disruptions-ease-f7ff8ec9)",
+      "drivers": [
+        "YTD +153.7%",
+        "1M +19.36%",
+        "diesel margin tailwind",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "strong_buy",
+      "confidence": 0.956,
+      "rationale": "YTD +160.28%, 1M +17.78%, P/E 14.73, strong refining momentum with diesel and jet fuel upside",
+      "drivers": [
+        "YTD +160.28%",
+        "1M +17.78%",
+        "P/E 14.73",
+        "refining margin catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +38.14%, P/E 20.16, dividend yield 3.4%, analyst score 1.72, bullish trade idea with $27B FCF [tradevae.com](https://www.tradevae.com/news/trade-ideas/Chevron-Trade-Idea-Buy-the-Integrated-Franchise-Bull-Case-Goes-Beyond-100-Oil/)",
+      "drivers": [
+        "YTD +38.14%",
+        "dividend yield 3.4%",
+        "analyst score 1.72",
+        "strong FCF generation"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +38.02%, P/E 11.37, dividend yield 4.67%, low short interest 0.22%, attractive value among majors",
+      "drivers": [
+        "P/E 11.37",
+        "dividend yield 4.67%",
+        "low short interest",
+        "YTD +38.02%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +39.33%, P/E 17.46, analyst buy, positive news sentiment 0.218, solid E&P exposure",
+      "drivers": [
+        "YTD +39.33%",
+        "P/E 17.46",
+        "analyst buy",
+        "news sentiment 0.218"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +36.01%, P/E 21.05, web search suggests 4% undervalued with strong production growth [simplywall.st](https://simplywall.st/stocks/us/energy/nyse-xom/exxonmobil-holdings/news/exxonmobil-holdings-xom-valuation-in-focus-after-morgan-stan)",
+      "drivers": [
+        "YTD +36.01%",
+        "undervalued 4%",
+        "production growth",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +85.64%, P/E 11.95, dividend yield 3.54%, strong YTD performance despite hold rating",
+      "drivers": [
+        "YTD +85.64%",
+        "P/E 11.95",
+        "dividend yield 3.54%",
+        "lithium project catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +29.04%, dividend yield 4.52%, low short interest 0.29%, but oil slide weighs [proactiveinvestors.com](https://www.proactiveinvestors.com/companies/news/1098806/bp-and-shell-fall-as-oil-slides-on-saudi-supply-recovery-and-iran-talks-1098806.html)",
+      "drivers": [
+        "dividend yield 4.52%",
+        "low short interest",
+        "YTD +29.04%",
+        "oil price headwind"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +28.75%, P/E 10.46, dividend yield 3.31%, cheap valuation despite negative news sentiment -0.451",
+      "drivers": [
+        "P/E 10.46",
+        "dividend yield 3.31%",
+        "YTD +28.75%",
+        "negative sentiment discount"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +9.03%, 1W +2.96%, analyst buy, utility with positive short-term momentum and stable income",
+      "drivers": [
+        "1W +2.96%",
+        "analyst buy",
+        "utility stability",
+        "YTD +9.03%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "buy rating score 1.94",
         "positive sentiment 0.185",
         "UK utility policy backdrop"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +41.5%, P/E 11.65, dividend yield 4.65%, analyst buy, low short interest 0.22%. Strong value-to-momentum balance.",
-      "drivers": [
-        "low P/E 11.65",
-        "high div yield 4.65%",
-        "YTD +41.5%",
-        "short interest 0.22%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SHEL",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +34.8%, P/E 10.67, div yield 3.24%, 1M +8%, positive news on $715M Constellation deal per [marketbeat.com], though RSI overbought at 72.1 per [journalarta.com].",
-      "drivers": [
-        "lowest P/E 10.67",
-        "1M +8.00%",
-        "div yield 3.24%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EOG",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "YTD +46.9%, P/E 11.96, div yield 2.75%, 1M +5.2%, analyst buy. Attractive valuation with strong momentum.",
-      "drivers": [
-        "P/E 11.96",
-        "YTD +46.9%",
-        "1W +5.77%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "COP",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +49.3%, 1M +10.7%, analyst score 1.74 (very bullish), P/E 18.1, perceived undervaluation highlighted by [simplywall.st].",
-      "drivers": [
-        "1M +10.71%",
-        "analyst score 1.74",
-        "YTD +49.3%",
-        "P/E 18.1"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +43.6%, div yield 3.36%, best analyst score 1.72, 1M +8.4%. Slight negative news sentiment but 52-week high momentum.",
-      "drivers": [
-        "analyst score 1.72",
-        "div yield 3.36%",
-        "YTD +43.6%",
-        "1M +8.37%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +35.9%, 1M +9.6%, high div yield 4.39%, short interest 0.29% very low, analyst buy. Solid income and momentum.",
-      "drivers": [
-        "div yield 4.39%",
-        "short interest 0.29%",
-        "1M +9.59%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +52%, 1M +8.1%, P/E 18.2, short interest 0.01% extremely low, analyst buy. Momentum with minimal bearish positioning.",
-      "drivers": [
-        "short interest 0.01%",
-        "YTD +52%",
-        "1M +8.08%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.857,
-      "rationale": "YTD +143.7%, 1M +14.4%, positive news sentiment 0.152, UBS bullish per [marketbeat.com]. P/E 16.0, but high short interest 3.99%.",
-      "drivers": [
-        "YTD +143.7%",
-        "1M +14.36%",
-        "news sentiment 0.152",
-        "P/E 16.0"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.904,
-      "rationale": "YTD +151.7%, 1M +15%, P/E 13.8, strong refining margins tailwind. However high short interest 3.14% and slightly negative news sentiment.",
-      "drivers": [
-        "YTD +151.7%",
-        "1M +15.02%",
-        "P/E 13.75",
-        "refining margin strength"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +92.6%, P/E 12.1, div yield 3.5%, 1M +9.4%, but analyst consensus hold (score 3.33) and short interest 2.48%.",
-      "drivers": [
-        "YTD +92.6%",
-        "P/E 12.07",
-        "div yield 3.5%",
-        "1M +9.40%"
       ]
     }
   ]
