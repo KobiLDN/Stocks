@@ -1,36 +1,36 @@
 window.PRICES_DATA = {
-  "updated": "2026-09-22 00:29",
-  "fx_gbp_usd": 1.3369,
+  "updated": "2026-09-22 07:33",
+  "fx_gbp_usd": 1.3373,
   "stocks": [
     {
       "ticker": "AAPL",
       "company_name": "Apple",
       "category": "mega-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "254",
+      "price_gbp": "253",
       "price_usd": 338.98,
       "change_1d": "+1.25%",
       "change_1w": "+1.77%",
       "change_1m": "+9.23%",
       "change_ytd": "+25.42%",
-      "return_1yr": "+31%",
+      "return_1yr": "+33%",
       "low_gbp": "182",
       "low_usd": 243.42,
       "high_gbp": "258",
       "high_usd": 344.57,
       "bar_pct": 94,
-      "market_cap_gbp_b": 3700.457,
-      "market_cap_usd_b": 4947.135,
+      "market_cap_gbp_b": 3699.369,
+      "market_cap_usd_b": 4947.136,
       "beta": 1.085,
       "pe_ratio": 38.92,
-      "avg_volume_m": 53.45,
+      "avg_volume_m": 53.29,
       "div_yield_pct": 32.0,
       "short_pct": 0.96,
       "analyst": "buy",
       "analyst_score": 2.2,
-      "vol_1d": 34913171,
-      "vol_1w": 225775671,
-      "vol_1m": 857546371,
+      "vol_1d": 34955500,
+      "vol_1w": 225973100,
+      "vol_1m": 857743800,
       "news": [
         {
           "title": "Meta stock jumps as Wells Fargo raises price target",
@@ -47,28 +47,28 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "SCHD\u2019s 0.06% Fee Hides $413,350 in Decade-Long Underperformance on a $500,000 Position",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/etf/2026/09/21/schds-0-06-fee-hides-413350-in-decade-long-underperformance-on-a-500000-position/",
-          "published": 1790029529,
-          "sentiment": -0.178
+          "title": "TSLA, SPCX, AAPL Could Be Next To \u2018Rip\u2019 After Meta\u2019s Muse Rally, Analyst Says \u2014 Here Are The Catalysts",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/tsla-spcx-aapl-next-to-rip-meta-muse-rally-analyst-here-are-the-catalysts/cZMPg4uRBe4",
+          "published": 1790056921,
+          "sentiment": 0.0
         },
         {
-          "title": "Meta Up 11% as Zuckerberg Bets Muse Will \u201cMake You Money and Save You Money\u201d",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/zuckerberg-bets-muse-will-make-you-money-and-save-you-money?ref=yahoofinance",
-          "published": 1790026468,
-          "sentiment": 0.494
+          "title": "Meta Stock Is Still Too Cheap",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/22/meta-stock-is-still-too-cheap/",
+          "published": 1790052602,
+          "sentiment": 0.0
         },
         {
-          "title": "Amazon kicks out Meta's Muse in split over AI shopping",
-          "publisher": "Axios Media",
-          "url": "https://www.axios.com/2026/09/21/amazon-meta-muse-ai-agentic-shopping#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-media",
-          "published": 1790026417,
-          "sentiment": 0.178
+          "title": "Meta Jumps 11% As Muse Shines and Investors Show an Appetite for Advancing AI",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/meta-stock-muse-ai-surge/",
+          "published": 1790051400,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.149
+      "news_sentiment": 0.05
     },
     {
       "ticker": "MSFT",
@@ -81,24 +81,24 @@ window.PRICES_DATA = {
       "change_1w": "-0.75%",
       "change_1m": "+2.93%",
       "change_ytd": "+6.73%",
-      "return_1yr": "-4%",
+      "return_1yr": "-1%",
       "low_gbp": "261",
       "low_usd": 349.2,
       "high_gbp": "414",
       "high_usd": 553.72,
       "bar_pct": 75,
-      "market_cap_gbp_b": 2786.097,
+      "market_cap_gbp_b": 2785.277,
       "market_cap_usd_b": 3724.728,
       "beta": 1.108,
       "pe_ratio": 27.91,
-      "avg_volume_m": 34.08,
+      "avg_volume_m": 33.81,
       "div_yield_pct": 79.0,
       "short_pct": 1.0,
       "analyst": "strong_buy",
       "analyst_score": 1.36,
-      "vol_1d": 26347908,
-      "vol_1w": 118198508,
-      "vol_1m": 424836008,
+      "vol_1d": 27873100,
+      "vol_1w": 119801900,
+      "vol_1m": 426439400,
       "news": [
         {
           "title": "Meta stock jumps as Wells Fargo raises price target",
@@ -108,65 +108,65 @@ window.PRICES_DATA = {
           "sentiment": 0.25
         },
         {
-          "title": "SCHD\u2019s 0.06% Fee Hides $413,350 in Decade-Long Underperformance on a $500,000 Position",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/etf/2026/09/21/schds-0-06-fee-hides-413350-in-decade-long-underperformance-on-a-500000-position/",
-          "published": 1790029529,
-          "sentiment": -0.178
-        },
-        {
-          "title": "3 U.S. Growth Stocks Facing The Biggest AI Spending Test Right Now",
+          "title": "Is STMicroelectronics (ENXTPA:STMPA) Doubling Down On Automotive Imaging To Sharpen Its Competitive Edge?",
           "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/3-u-growth-stocks-facing-221805235.html",
-          "published": 1790029085,
-          "sentiment": 0.382
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stmicroelectronics-enxtpa-stmpa-doubling-down-043434080.html",
+          "published": 1790051674,
+          "sentiment": 0.178
         },
         {
-          "title": "Microsoft (MSFT) Laps the Stock Market: Here's Why",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/microsoft-msft-laps-stock-market-214503698.html",
-          "published": 1790027103,
+          "title": "Microsoft\u2019s Higher Dividend Comes with a Modest Yield and Heavy AI Spending",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/microsoft-higher-dividend-comes-modest-015210981.html",
+          "published": 1790041930,
           "sentiment": 0.0
         },
         {
-          "title": "Microsoft (MSFT) Stock Looks Reasonable Despite Its 75% Five Year Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/microsoft-msft-stock-looks-reasonable-211138209.html",
-          "published": 1790025098,
+          "title": "Microsoft Just Hiked Its Dividend by 8%. How to Play the Stock Here.",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4720690/microsoft-just-hiked-its-dividend-by-8-how-to-play-the-stock-here",
+          "published": 1790033402,
+          "sentiment": 0.34
+        },
+        {
+          "title": "Dell Joined the S&P 100 This Week. Its Largest Outside Holder Kept Selling.",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/dell-joined-the-sp-100-this-week-its-largest-outside-holder-kept-selling?ref=yahoofinance",
+          "published": 1790032666,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.091
+      "news_sentiment": 0.154
     },
     {
       "ticker": "GOOGL",
       "company_name": "Alphabet (Google)",
       "category": "mega-cap",
       "exchange": "NASDAQ",
-      "price_gbp": "266",
+      "price_gbp": "265",
       "price_usd": 354.97,
       "change_1d": "+1.18%",
       "change_1w": "+1.60%",
       "change_1m": "+2.05%",
       "change_ytd": "+12.85%",
-      "return_1yr": "+38%",
+      "return_1yr": "+41%",
       "low_gbp": "176",
       "low_usd": 235.84,
       "high_gbp": "306",
       "high_usd": 408.61,
       "bar_pct": 69,
-      "market_cap_gbp_b": 3247.263,
-      "market_cap_usd_b": 4341.26,
+      "market_cap_gbp_b": 3246.307,
+      "market_cap_usd_b": 4341.259,
       "beta": 1.225,
       "pe_ratio": 17.82,
-      "avg_volume_m": 29.73,
+      "avg_volume_m": 29.37,
       "div_yield_pct": 25.0,
       "short_pct": 1.32,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
-      "vol_1d": 28211544,
-      "vol_1w": 135833544,
-      "vol_1m": 515553844,
+      "vol_1d": 30395000,
+      "vol_1w": 138122700,
+      "vol_1m": 517843000,
       "news": [
         {
           "title": "Warren Buffett will go down as the 'greatest investor of all time'",
@@ -183,28 +183,28 @@ window.PRICES_DATA = {
           "sentiment": 0.25
         },
         {
-          "title": "Stock Market Today, Sept. 21: Meta Surges on Excitement Over Muse Personal AI Agent",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/21/stock-market-today-sept-21-meta-surges-on-excitement-over-muse-personal-ai-agent/",
-          "published": 1790027036,
-          "sentiment": 0.494
+          "title": "Google Backs Nuclear Expansion at Georgia Power Plants",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/google-backs-nuclear-expansion-georgia-023155220.html",
+          "published": 1790044315,
+          "sentiment": -0.052
         },
         {
-          "title": "Amazon kicks out Meta's Muse in split over AI shopping",
-          "publisher": "Axios Media",
-          "url": "https://www.axios.com/2026/09/21/amazon-meta-muse-ai-agentic-shopping#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-media",
-          "published": 1790026417,
-          "sentiment": 0.178
+          "title": "Apple (AAPL) Eyes India Payments With Apple Pay Debut Next Month",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/apple-aapl-eyes-india-payments-002925640.html",
+          "published": 1790036965,
+          "sentiment": -0.103
         },
         {
-          "title": "Google just disclosed something troubling about its AI",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/technology/google-just-disclosed-something-troubling-about-its-ai",
-          "published": 1790025420,
-          "sentiment": -0.542
+          "title": "Google Fined By Irish Privacy Regulator For Location Data",
+          "publisher": "MediaPost",
+          "url": "https://www.mediapost.com/publications/article/418159/google-fined-by-irish-privacy-regulator-for-locati.html",
+          "published": 1790036807,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.203
+      "news_sentiment": 0.146
     },
     {
       "ticker": "AMZN",
@@ -217,24 +217,24 @@ window.PRICES_DATA = {
       "change_1w": "+1.94%",
       "change_1m": "-1.38%",
       "change_ytd": "+14.11%",
-      "return_1yr": "+11%",
+      "return_1yr": "+17%",
       "low_gbp": "147",
       "low_usd": 196.0,
       "high_gbp": "215",
       "high_usd": 287.2,
       "bar_pct": 68,
-      "market_cap_gbp_b": 2085.217,
-      "market_cap_usd_b": 2787.723,
+      "market_cap_gbp_b": 2084.603,
+      "market_cap_usd_b": 2787.722,
       "beta": 1.443,
       "pe_ratio": 20.79,
-      "avg_volume_m": 46.15,
+      "avg_volume_m": 45.75,
       "div_yield_pct": null,
       "short_pct": 0.94,
       "analyst": "strong_buy",
       "analyst_score": 1.32,
-      "vol_1d": 40769944,
-      "vol_1w": 193121544,
-      "vol_1m": 662205244,
+      "vol_1d": 42857800,
+      "vol_1w": 195335200,
+      "vol_1m": 664418900,
       "news": [
         {
           "title": "Meta stock jumps as Wells Fargo raises price target",
@@ -244,35 +244,35 @@ window.PRICES_DATA = {
           "sentiment": 0.25
         },
         {
-          "title": "Nasdaq Ends Nearly 3% Higher As AI Stocks Pop, AMD Enters $1 Trillion Club \u2014  AMD, ARM, META, AMZN, PSKY In Focus",
+          "title": "Paper Bottles Are Coming to Stores. Why They\u2019re More Than a Novelty.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/paper-water-bottle-pulpex-diageo-sustainability-066ded51?siteid=yhoof2&yptr=yahoo",
+          "published": 1790053200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "META Stock Rallies As Muse AI Tops App Charts \u2014 Exec Admits It\u2019s \u2018Heavily Inspired\u2019 By OpenClaw",
           "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-ends-nearly-3-higher-as-ai-stocks-pop/cZMRHqjRBIm",
-          "published": 1790028294,
-          "sentiment": 0.0
+          "url": "https://stocktwits.com/news-articles/markets/equity/meta-stock-rallies-as-muse-ai-tops-app-charts-exec-admits-it-s-heavily-inspired-by-open-claw/cZMPJD5RBIv",
+          "published": 1790047293,
+          "sentiment": 0.67
         },
         {
-          "title": "Amazon (AMZN) Laps the Stock Market: Here's Why",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-amzn-laps-stock-market-214505872.html",
-          "published": 1790027105,
-          "sentiment": 0.178
+          "title": "Amazon (AMZN) Bets Higher Pay Can Support its Next Phase of Growth",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amazon-amzn-bets-higher-pay-020006947.html",
+          "published": 1790042406,
+          "sentiment": 0.681
         },
         {
-          "title": "Amazon kicks out Meta's Muse in split over AI shopping",
-          "publisher": "Axios Media",
-          "url": "https://www.axios.com/2026/09/21/amazon-meta-muse-ai-agentic-shopping#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-media",
-          "published": 1790026417,
-          "sentiment": 0.178
-        },
-        {
-          "title": "Private-Equity Firms Buy Indie-Author Publisher Podium for More Than $400 Million",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/media/private-equity-firms-buy-indie-author-publisher-podium-for-more-than-400-million-33a209e3?siteid=yhoof2&yptr=yahoo",
-          "published": 1790026380,
-          "sentiment": 0.0
+          "title": "AI Investment Boom Is 'Massive' \u2014 Top Economist Says US Spending Is Moving Away From Homes and Toward Data Centers",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/technology/ai/articles/ai-investment-boom-massive-top-013013303.html",
+          "published": 1790040613,
+          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.121
+      "news_sentiment": 0.361
     },
     {
       "ticker": "META",
@@ -280,29 +280,29 @@ window.PRICES_DATA = {
       "category": "mega-cap",
       "exchange": "NASDAQ",
       "price_gbp": "554",
-      "price_usd": 741.24,
+      "price_usd": 741.25,
       "change_1d": "+10.87%",
-      "change_1w": "+11.36%",
-      "change_1m": "+32.60%",
-      "change_ytd": "+14.17%",
-      "return_1yr": "-13%",
+      "change_1w": "+11.45%",
+      "change_1m": "+32.70%",
+      "change_ytd": "+14.26%",
+      "return_1yr": "-2%",
       "low_gbp": "389",
       "low_usd": 520.26,
-      "high_gbp": "588",
-      "high_usd": 785.73,
-      "bar_pct": 83,
-      "market_cap_gbp_b": 1412.468,
-      "market_cap_usd_b": 1888.326,
+      "high_gbp": "576",
+      "high_usd": 770.6,
+      "bar_pct": 88,
+      "market_cap_gbp_b": 1412.053,
+      "market_cap_usd_b": 1888.327,
       "beta": 1.243,
       "pe_ratio": 27.91,
-      "avg_volume_m": 18.31,
+      "avg_volume_m": 18.84,
       "div_yield_pct": 32.0,
       "short_pct": 1.31,
       "analyst": "strong_buy",
       "analyst_score": 1.34,
-      "vol_1d": 48450536,
-      "vol_1w": 128647136,
-      "vol_1m": 408123236,
+      "vol_1d": 48572800,
+      "vol_1w": 128817800,
+      "vol_1m": 408293900,
       "news": [
         {
           "title": "Stock market today: Nasdaq surges 2% to record high, Dow and S&P 500 gain as chip stocks rally, oil  falls",
@@ -312,6 +312,13 @@ window.PRICES_DATA = {
           "sentiment": 0.527
         },
         {
+          "title": "Tech stocks rise, Bitcoin rallies as Treasury yields ease: AlphaCheck",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/tech-stocks-rise-bitcoin-rallies-as-treasury-yields-ease-alphacheck-135033093.html",
+          "published": 1789998633,
+          "sentiment": 0.511
+        },
+        {
           "title": "Trump and Xi dine with AI titans and Meta takes the stage: What to watch this week",
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/markets/article/trump-and-xi-dine-with-ai-titans-and-meta-takes-the-stage-what-to-watch-this-week-100000383.html",
@@ -319,28 +326,21 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Decibel hits $7 billion in total trading volume on Aptos",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/crypto/markets/decibel-hits-7-billion-in-total-trading-volume-on-aptos",
-          "published": 1790030593,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Shopify to Use Meta\u2019s Muse for Agentic Checkout",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/tech/shopify-to-use-metas-muse-for-agentic-checkout-d23947c0?siteid=yhoof2&yptr=yahoo",
-          "published": 1790029800,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Nasdaq Ends Nearly 3% Higher As AI Stocks Pop, AMD Enters $1 Trillion Club \u2014  AMD, ARM, META, AMZN, PSKY In Focus",
+          "title": "TSLA, SPCX, AAPL Could Be Next To \u2018Rip\u2019 After Meta\u2019s Muse Rally, Analyst Says \u2014 Here Are The Catalysts",
           "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-ends-nearly-3-higher-as-ai-stocks-pop/cZMRHqjRBIm",
-          "published": 1790028294,
+          "url": "https://stocktwits.com/news-articles/markets/equity/tsla-spcx-aapl-next-to-rip-meta-muse-rally-analyst-here-are-the-catalysts/cZMPg4uRBe4",
+          "published": 1790056921,
           "sentiment": 0.0
+        },
+        {
+          "title": "Intel (INTC) Sees AI CPU Demand Squeeze As CEO Flags 50% Fulfillment",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/intel-intc-sees-ai-cpu-051505418.html",
+          "published": 1790054105,
+          "sentiment": -0.128
         }
       ],
-      "news_sentiment": 0.105
+      "news_sentiment": 0.182
     },
     {
       "ticker": "NVDA",
@@ -353,24 +353,24 @@ window.PRICES_DATA = {
       "change_1w": "+7.78%",
       "change_1m": "+9.19%",
       "change_ytd": "+20.68%",
-      "return_1yr": "+21%",
+      "return_1yr": "+27%",
       "low_gbp": "123",
       "low_usd": 164.27,
       "high_gbp": "177",
       "high_usd": 236.54,
       "bar_pct": 87,
-      "market_cap_gbp_b": 4106.928,
+      "market_cap_gbp_b": 4105.72,
       "market_cap_usd_b": 5490.545,
       "beta": 2.217,
       "pe_ratio": 28.75,
-      "avg_volume_m": 129.29,
+      "avg_volume_m": 129.1,
       "div_yield_pct": 45.0,
       "short_pct": 1.29,
       "analyst": "strong_buy",
-      "analyst_score": 1.31,
-      "vol_1d": 109274173,
-      "vol_1w": 577772273,
-      "vol_1m": 2703808773,
+      "analyst_score": 1.3,
+      "vol_1d": 109479900,
+      "vol_1w": 578581900,
+      "vol_1m": 2704618400,
       "news": [
         {
           "title": "Could Nvidia's prospects in China shift following the Trump and Xi's meeting?",
@@ -387,28 +387,28 @@ window.PRICES_DATA = {
           "sentiment": -0.34
         },
         {
-          "title": "Why Strategy Stock Surged Today",
+          "title": "AMD joins trillion-dollar chipmaker club as AI demand surges",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/09/22/amd-joins-trillion-dollar-chipmaker-club-as-ai-demand-surges",
+          "published": 1790053248,
+          "sentiment": -0.128
+        },
+        {
+          "title": "Meta Stock Is Still Too Cheap",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/21/why-strategy-stock-surged-today/",
-          "published": 1790033022,
+          "url": "https://www.fool.com/investing/2026/09/22/meta-stock-is-still-too-cheap/",
+          "published": 1790052602,
           "sentiment": 0.0
         },
         {
-          "title": "Should You Buy Costco Stock Before Sept. 24? History Has a Clear Answer.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/21/should-you-buy-costco-stock-before-sept-24-history/",
-          "published": 1790032679,
-          "sentiment": 0.382
-        },
-        {
-          "title": "$500 a Month in Nvidia Stock Since ChatGPT Launched Is Now Worth About $79,000",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/21/usd500-a-month-in-nvidia-stock-since-chatgpt-launched-is-now-worth-about-usd79-000/",
-          "published": 1790032021,
-          "sentiment": 0.34
+          "title": "BABA Stock Spikes Overnight: Alibaba Takes On Nvidia With China's Most Powerful AI Chip Yet",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/baba-stock-spikes-overnight-alibaba-takes-on-nvidia-with-china-s-most-powerful-ai-chip-yet/cZMPOevRBeb",
+          "published": 1790052591,
+          "sentiment": 0.475
         }
       ],
-      "news_sentiment": 0.136
+      "news_sentiment": 0.061
     },
     {
       "ticker": "AMD",
@@ -421,24 +421,24 @@ window.PRICES_DATA = {
       "change_1w": "+24.75%",
       "change_1m": "+34.76%",
       "change_ytd": "+175.44%",
-      "return_1yr": "+250%",
+      "return_1yr": "+283%",
       "low_gbp": "116",
       "low_usd": 154.78,
-      "high_gbp": "437",
-      "high_usd": 584.73,
+      "high_gbp": "461",
+      "high_usd": 616.69,
       "bar_pct": 99,
-      "market_cap_gbp_b": 751.606,
+      "market_cap_gbp_b": 751.385,
       "market_cap_usd_b": 1004.821,
       "beta": 2.476,
       "pe_ratio": 157.02,
-      "avg_volume_m": 24.95,
+      "avg_volume_m": 25.24,
       "div_yield_pct": null,
       "short_pct": 2.57,
       "analyst": "strong_buy",
       "analyst_score": 1.49,
-      "vol_1d": 44156939,
-      "vol_1w": 143859039,
-      "vol_1m": 410948539,
+      "vol_1d": 44270000,
+      "vol_1w": 144053700,
+      "vol_1m": 411143200,
       "news": [
         {
           "title": "Stock market today: Nasdaq surges 2% to record high, Dow and S&P 500 gain as chip stocks rally, oil  falls",
@@ -448,35 +448,35 @@ window.PRICES_DATA = {
           "sentiment": 0.527
         },
         {
-          "title": "Dow Jones Futures: Falling Oil Prices, Yields Spark Market Rally; AMD, Intel, Micron, Nvidia, Sandisk Are Key Movers",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-oil-prices-treasury-yields-amd-intel-micron-nvidia-sandisk/?src=A00220&yptr=yahoo",
-          "published": 1790031162,
-          "sentiment": 0.077
+          "title": "AMD joins trillion-dollar chipmaker club as AI demand surges",
+          "publisher": "Euronews",
+          "url": "https://www.euronews.com/2026/09/22/amd-joins-trillion-dollar-chipmaker-club-as-ai-demand-surges",
+          "published": 1790053248,
+          "sentiment": -0.128
         },
         {
-          "title": "Advanced Micro Devices (AMD) Is Up 24.7% After Expanding Its Role In Regulated AI Infrastructure \u2013 Has The Bull Case Changed?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-amd-24-221840955.html",
-          "published": 1790029120,
-          "sentiment": 0.25
-        },
-        {
-          "title": "Nasdaq Ends Nearly 3% Higher As AI Stocks Pop, AMD Enters $1 Trillion Club \u2014  AMD, ARM, META, AMZN, PSKY In Focus",
+          "title": "Why Did AMD, WBD, MRNA Stocks Surge To 52-Week Highs Today?",
           "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/nasdaq-ends-nearly-3-higher-as-ai-stocks-pop/cZMRHqjRBIm",
-          "published": 1790028294,
+          "url": "https://stocktwits.com/news-articles/markets/equity/why-did-amd-wbd-mrna-stocks-surge-to-52-week-highs-today/cZMPBXGRBIy",
+          "published": 1790048364,
           "sentiment": 0.0
         },
         {
-          "title": "Stock Market Today, Sept. 21: Tech Strength Powers Nasdaq to Record Close",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/21/stock-market-today-sept-21-tech-strength-powers-nasdaq-to-record-close/",
-          "published": 1790025742,
-          "sentiment": 0.494
+          "title": "Dow Futures Slip While S&P 500, Nasdaq Futures Climb After AI Rally: GME, IBRX, AMD, PSKY Stocks In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/dow-futures-slip-while-s-and-p-500-nasdaq-futures-climb-after-ai-rally-gme-ibrx-amd-psky-stocks-in-focus/cZMPewURBIH",
+          "published": 1790045073,
+          "sentiment": 0.0
+        },
+        {
+          "title": "ARM, Intel, AMD Surge As Meta\u2019s Muse AI Fuels Fresh Chip Demand Bets: Retail Turns Extremely Bullish",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/arm-intel-amd-surge-as-meta-s-muse-ai-fuels-fresh-chip-demand-bets-retail-turns-extremely-bullish/cZMP4iNRBIq",
+          "published": 1790041851,
+          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.27
+      "news_sentiment": 0.12
     },
     {
       "ticker": "INTC",
@@ -489,24 +489,24 @@ window.PRICES_DATA = {
       "change_1w": "+25.30%",
       "change_1m": "+39.56%",
       "change_ytd": "+209.24%",
-      "return_1yr": "+278%",
-      "low_gbp": "21",
-      "low_usd": 28.73,
+      "return_1yr": "+315%",
+      "low_gbp": "22",
+      "low_usd": 28.82,
       "high_gbp": "106",
       "high_usd": 142.35,
       "bar_pct": 82,
-      "market_cap_gbp_b": 481.519,
-      "market_cap_usd_b": 643.742,
+      "market_cap_gbp_b": 481.377,
+      "market_cap_usd_b": 643.741,
       "beta": 2.231,
       "pe_ratio": null,
-      "avg_volume_m": 108.72,
+      "avg_volume_m": 109.72,
       "div_yield_pct": null,
       "short_pct": 2.88,
       "analyst": "buy",
       "analyst_score": 2.47,
-      "vol_1d": 188716510,
-      "vol_1w": 718044410,
-      "vol_1m": 2055068610,
+      "vol_1d": 190310700,
+      "vol_1w": 719956300,
+      "vol_1m": 2056980500,
       "news": [
         {
           "title": "Stock market today: Nasdaq surges 2% to record high, Dow and S&P 500 gain as chip stocks rally, oil  falls",
@@ -516,35 +516,35 @@ window.PRICES_DATA = {
           "sentiment": 0.527
         },
         {
+          "title": "Intel (INTC) Sees AI CPU Demand Squeeze As CEO Flags 50% Fulfillment",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/intel-intc-sees-ai-cpu-051505418.html",
+          "published": 1790054105,
+          "sentiment": -0.128
+        },
+        {
+          "title": "ARM, Intel, AMD Surge As Meta\u2019s Muse AI Fuels Fresh Chip Demand Bets: Retail Turns Extremely Bullish",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/arm-intel-amd-surge-as-meta-s-muse-ai-fuels-fresh-chip-demand-bets-retail-turns-extremely-bullish/cZMP4iNRBIq",
+          "published": 1790041851,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Why Intel, Arm, and Other AI Chip Stocks Soared Today",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/21/why-intel-arm-amd-ai-chip-stocks-soared-today/",
+          "published": 1790038998,
+          "sentiment": 0.0
+        },
+        {
           "title": "Dow Jones Futures: Falling Oil Prices, Yields Spark Market Rally; AMD, Intel, Micron, Nvidia, Sandisk Are Key Movers",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-oil-prices-treasury-yields-amd-intel-micron-nvidia-sandisk/?src=A00220&yptr=yahoo",
-          "published": 1790031162,
+          "published": 1790038768,
           "sentiment": 0.077
-        },
-        {
-          "title": "Stocks to Watch Recap: Paramount, Intel, Strategy, Critical Metals",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-21-2026/card/stocks-to-watch-warner-bros-intel-strategy-VwQlqTeLLc9SL0RAX8qF?siteid=yhoof2&yptr=yahoo",
-          "published": 1790025289,
-          "sentiment": -0.318
-        },
-        {
-          "title": "Update: Communication Services, Tech Heavyweights Push US Equity Indexes Higher as Crude Oil Slides With Treasury Yields",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/communication-services-tech-heavyweights-push-210945542.html",
-          "published": 1790024985,
-          "sentiment": -0.44
-        },
-        {
-          "title": "AMD Hits Milestone on Strong Day for Tech Stocks",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-21-2026/card/amd-hits-milestone-on-strong-day-for-tech-stocks-o7UlcpMFFVjyALTAvLTX?siteid=yhoof2&yptr=yahoo",
-          "published": 1790024801,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.071
+      "news_sentiment": 0.136
     },
     {
       "ticker": "TSM",
@@ -557,25 +557,32 @@ window.PRICES_DATA = {
       "change_1w": "+6.78%",
       "change_1m": "+8.83%",
       "change_ytd": "+40.37%",
-      "return_1yr": "+59%",
-      "low_gbp": "199",
-      "low_usd": 265.45,
+      "return_1yr": "+57%",
+      "low_gbp": "200",
+      "low_usd": 266.82,
       "high_gbp": "358",
       "high_usd": 479.0,
       "bar_pct": 84,
-      "market_cap_gbp_b": 1726.913,
+      "market_cap_gbp_b": 1726.405,
       "market_cap_usd_b": 2308.707,
       "beta": 1.247,
       "pe_ratio": 33.24,
-      "avg_volume_m": 12.51,
+      "avg_volume_m": 12.45,
       "div_yield_pct": 94.0,
       "short_pct": 0.62,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
-      "vol_1d": 9903605,
-      "vol_1w": 55179105,
-      "vol_1m": 196926805,
+      "vol_1d": 9917100,
+      "vol_1w": 55213400,
+      "vol_1m": 196961100,
       "news": [
+        {
+          "title": "Stocks rise on AI buzz, drop in oil prices",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-rise-ai-buzz-drop-023748822.html",
+          "published": 1790044668,
+          "sentiment": -0.273
+        },
         {
           "title": "3 Chip Stocks Set to Win TSMC\u2019s Packaging Boom",
           "publisher": "24/7 Wall St.",
@@ -603,16 +610,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/asml-holding-enxtam-asml-alliances-161313232.html",
           "published": 1790007193,
           "sentiment": 0.0
-        },
-        {
-          "title": "TSMC Gains as 88.7 Hectares Target Packaging Friction",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/articles/tsmc-gains-88-7-hectares-154356702.html",
-          "published": 1790005436,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.09
+      "news_sentiment": -0.033
     },
     {
       "ticker": "AVGO",
@@ -622,16 +622,16 @@ window.PRICES_DATA = {
       "price_gbp": "271",
       "price_usd": 362.66,
       "change_1d": "+1.60%",
-      "change_1w": "+5.20%",
-      "change_1m": "+1.09%",
-      "change_ytd": "+4.71%",
-      "return_1yr": "+6%",
+      "change_1w": "+5.40%",
+      "change_1m": "+1.27%",
+      "change_ytd": "+4.90%",
+      "return_1yr": "+7%",
       "low_gbp": "217",
       "low_usd": 289.96,
       "high_gbp": "370",
       "high_usd": 495.0,
       "bar_pct": 35,
-      "market_cap_gbp_b": 1294.941,
+      "market_cap_gbp_b": 1294.56,
       "market_cap_usd_b": 1731.204,
       "beta": 1.457,
       "pe_ratio": 46.32,
@@ -640,10 +640,17 @@ window.PRICES_DATA = {
       "short_pct": 1.08,
       "analyst": "strong_buy",
       "analyst_score": 1.26,
-      "vol_1d": 25837361,
-      "vol_1w": 142111761,
-      "vol_1m": 543390761,
+      "vol_1d": 26408400,
+      "vol_1w": 142767200,
+      "vol_1m": 544046200,
       "news": [
+        {
+          "title": "3 Stocks That Pay Dividends and Offer AI Exposure",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-pay-dividends-offer-233800366.html",
+          "published": 1790033880,
+          "sentiment": -0.103
+        },
         {
           "title": "NVIDIA Or Micron: Which Gets Paid More Safely For The AI Shortage?",
           "publisher": "Trefis",
@@ -671,16 +678,9 @@ window.PRICES_DATA = {
           "url": "https://beincrypto.com/amd-1-trillion-market-cap-nvidia/",
           "published": 1790018335,
           "sentiment": 0.0
-        },
-        {
-          "title": "Broadcom Edges Higher as AI Chips Target $21.7 Billion",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-edges-higher-ai-chips-184812869.html",
-          "published": 1790016492,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.189
+      "news_sentiment": 0.169
     },
     {
       "ticker": "QCOM",
@@ -693,13 +693,13 @@ window.PRICES_DATA = {
       "change_1w": "+7.82%",
       "change_1m": "+23.19%",
       "change_ytd": "+14.04%",
-      "return_1yr": "+5%",
+      "return_1yr": "+15%",
       "low_gbp": "91",
       "low_usd": 121.99,
       "high_gbp": "194",
       "high_usd": 259.92,
       "bar_pct": 52,
-      "market_cap_gbp_b": 155.172,
+      "market_cap_gbp_b": 155.126,
       "market_cap_usd_b": 207.449,
       "beta": 1.679,
       "pe_ratio": 22.22,
@@ -708,10 +708,31 @@ window.PRICES_DATA = {
       "short_pct": 3.53,
       "analyst": "hold",
       "analyst_score": 2.57,
-      "vol_1d": 18244261,
-      "vol_1w": 108561161,
-      "vol_1m": 290338561,
+      "vol_1d": 18391600,
+      "vol_1w": 108761100,
+      "vol_1m": 290538500,
       "news": [
+        {
+          "title": "Why Corning (GLW) Stock Is Trading Up Today",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-corning-glw-stock-trading-014225854.html",
+          "published": 1790041345,
+          "sentiment": 0.0
+        },
+        {
+          "title": "AMD, Intel, and Qualcomm Shares Skyrocket, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amd-intel-qualcomm-shares-skyrocket-002225901.html",
+          "published": 1790036545,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Trump, Xi Meet on S&P 500's Best Day Since Early August: Will Markets Stay Bullish?",
+          "publisher": "BeInCrypto",
+          "url": "https://beincrypto.com/trump-xi-summit-best-day/",
+          "published": 1790032800,
+          "sentiment": 0.637
+        },
         {
           "title": "Update: Nasdaq Composite Rallies to Record as AI Trade Lifts Chipmakers",
           "publisher": "MT Newswires",
@@ -725,60 +746,39 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/616014/how-much-of-microns-revenue-has-a-price-ceiling/2026-09-21",
           "published": 1790019990,
           "sentiment": 0.0
-        },
-        {
-          "title": "Microsoft's Nadella Is Joining Trump and Xi and Tech Giants Are Coming Too",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/articles/microsofts-nadella-joining-trump-xi-192151216.html",
-          "published": 1790018511,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Qualcomm Surges 7% as Amazon Validates Its Data-Center Pivot",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/qualcomm-surges-7-amazon-validates-190345932.html",
-          "published": 1790017425,
-          "sentiment": 0.477
-        },
-        {
-          "title": "Update: Equities Rise Intraday as Chip Stocks Rally",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/equities-rise-intraday-chip-stocks-175229305.html",
-          "published": 1790013149,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.095
+      "news_sentiment": 0.187
     },
     {
       "ticker": "ARM",
       "company_name": "Arm Holdings",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "242",
+      "price_gbp": "241",
       "price_usd": 322.9,
       "change_1d": "+17.21%",
       "change_1w": "+35.10%",
       "change_1m": "+35.23%",
       "change_ytd": "+181.44%",
-      "return_1yr": "+91%",
+      "return_1yr": "+129%",
       "low_gbp": "75",
       "low_usd": 100.02,
       "high_gbp": "339",
       "high_usd": 452.7,
       "bar_pct": 63,
-      "market_cap_gbp_b": 257.953,
+      "market_cap_gbp_b": 257.877,
       "market_cap_usd_b": 344.857,
       "beta": 3.89,
       "pe_ratio": 326.16,
-      "avg_volume_m": 5.44,
+      "avg_volume_m": 5.49,
       "div_yield_pct": null,
       "short_pct": 11.52,
       "analyst": "buy",
       "analyst_score": 1.95,
-      "vol_1d": 12889775,
-      "vol_1w": 32470275,
-      "vol_1m": 90658775,
+      "vol_1d": 12929000,
+      "vol_1w": 32529500,
+      "vol_1m": 90718000,
       "news": [
         {
           "title": "AMD stock soars to new record as semiconductors bounce: Chart of the Day",
@@ -788,35 +788,35 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Update: Communication Services, Tech Heavyweights Push US Equity Indexes Higher as Crude Oil Slides With Treasury Yields",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/communication-services-tech-heavyweights-push-210945542.html",
-          "published": 1790024985,
-          "sentiment": -0.44
+          "title": "ARM Stock Jumped 17% Yesterday After Its CEO Said Demand Is Off the Charts. Here\u2019s What Got Investors So Excited.",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/arm-stock-jumped-17-yesterday-after-its-ceo-said-demand-is-off-the-charts-heres-what-got-investors-so-excited?ref=yahoofinance",
+          "published": 1790055738,
+          "sentiment": 0.385
         },
         {
-          "title": "Meta\u2019s Muse AI Agent Triggers Intel, Chip Stock Rally. AMD Hits $1T Market Cap.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/intel-stock-price-arm-meta-muse-2a81cacf?siteid=yhoof2&yptr=yahoo",
-          "published": 1790023140,
+          "title": "ARM, Intel, AMD Surge As Meta\u2019s Muse AI Fuels Fresh Chip Demand Bets: Retail Turns Extremely Bullish",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/arm-intel-amd-surge-as-meta-s-muse-ai-fuels-fresh-chip-demand-bets-retail-turns-extremely-bullish/cZMP4iNRBIq",
+          "published": 1790041851,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Why Intel, Arm, and Other AI Chip Stocks Soared Today",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/21/why-intel-arm-amd-ai-chip-stocks-soared-today/",
+          "published": 1790038998,
           "sentiment": 0.0
         },
         {
-          "title": "Chip Stocks Rise As Four New Names Join SOX Index. AMD Breaks Out.",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/technology/chip-stocks-amd-stock-four-new-names-join-sox-index/?src=A00220&yptr=yahoo",
-          "published": 1790022808,
-          "sentiment": 0.296
-        },
-        {
-          "title": "US Equity Markets Higher as Tech, Communication Stocks Rise Amid Drop in Government Bond Yields, Crude Oil Prices",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-markets-higher-tech-202241405.html",
-          "published": 1790022161,
-          "sentiment": -0.7
+          "title": "Junk-Bond Market Gets AI Jolt from SoftBank",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/junk-bond-ai-softbank-36be982c?siteid=yhoof2&yptr=yahoo",
+          "published": 1790029740,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.169
+      "news_sentiment": 0.117
     },
     {
       "ticker": "ASML",
@@ -829,25 +829,39 @@ window.PRICES_DATA = {
       "change_1w": "+8.64%",
       "change_1m": "-1.66%",
       "change_ytd": "+47.75%",
-      "return_1yr": "+75%",
-      "low_gbp": "700",
+      "return_1yr": "+78%",
+      "low_gbp": "699",
       "low_usd": 935.41,
       "high_gbp": "1496",
       "high_usd": 1999.96,
       "bar_pct": 73,
-      "market_cap_gbp_b": 491.674,
+      "market_cap_gbp_b": 491.529,
       "market_cap_usd_b": 657.318,
       "beta": 1.363,
       "pe_ratio": 58.89,
-      "avg_volume_m": 1.65,
+      "avg_volume_m": 1.64,
       "div_yield_pct": 54.0,
       "short_pct": 0.4,
       "analyst": "strong_buy",
       "analyst_score": 1.4,
-      "vol_1d": 1309040,
-      "vol_1w": 8138540,
-      "vol_1m": 25466640,
+      "vol_1d": 1314400,
+      "vol_1w": 8143900,
+      "vol_1m": 25472000,
       "news": [
+        {
+          "title": "Morphotonics raises \u20ac40M to expand its display tech into data centers",
+          "publisher": "TechCrunch",
+          "url": "https://finance.yahoo.com/technology/articles/morphotonics-raises-40m-expand-display-060000218.html",
+          "published": 1790056800,
+          "sentiment": 0.318
+        },
+        {
+          "title": "Will AI Fears Destroy the Market?",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/videos/will-ai-fears-destroy-the-market/",
+          "published": 1790034713,
+          "sentiment": -0.743
+        },
         {
           "title": "ASML (ASML) Surpasses Market Returns: Some Facts Worth Knowing",
           "publisher": "Zacks",
@@ -868,23 +882,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/articles/asml-adds-1-110-euv-194501828.html",
           "published": 1790019901,
           "sentiment": 0.0
-        },
-        {
-          "title": "ASML Holding (ENXTAM:ASML) Alliances Put Valuation Back In Focus",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/asml-holding-enxtam-asml-alliances-161313232.html",
-          "published": 1790007193,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Chip Stocks Open Week With Early Gains",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-092126/card/chip-stocks-open-week-with-early-gains-SnhVvwnrAUtgIPETt6jo?siteid=yhoof2&yptr=yahoo",
-          "published": 1789981814,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.113
+      "news_sentiment": -0.04
     },
     {
       "ticker": "MU",
@@ -897,24 +897,24 @@ window.PRICES_DATA = {
       "change_1w": "+12.98%",
       "change_1m": "+14.67%",
       "change_ytd": "+231.16%",
-      "return_1yr": "+517%",
+      "return_1yr": "+527%",
       "low_gbp": "116",
       "low_usd": 154.65,
-      "high_gbp": "939",
+      "high_gbp": "938",
       "high_usd": 1255.0,
       "bar_pct": 81,
-      "market_cap_gbp_b": 881.923,
+      "market_cap_gbp_b": 881.663,
       "market_cap_usd_b": 1179.041,
       "beta": 2.222,
       "pe_ratio": 23.57,
-      "avg_volume_m": 39.08,
+      "avg_volume_m": 38.68,
       "div_yield_pct": 5.0,
       "short_pct": 2.64,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 27268696,
-      "vol_1w": 125664396,
-      "vol_1m": 502017596,
+      "vol_1d": 28060600,
+      "vol_1w": 126603400,
+      "vol_1m": 502956600,
       "news": [
         {
           "title": "Why Micron and Dell stocks may have more juice than Nvidia",
@@ -927,8 +927,15 @@ window.PRICES_DATA = {
           "title": "Dow Jones Futures: Falling Oil Prices, Yields Spark Market Rally; AMD, Intel, Micron, Nvidia, Sandisk Are Key Movers",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-oil-prices-treasury-yields-amd-intel-micron-nvidia-sandisk/?src=A00220&yptr=yahoo",
-          "published": 1790031162,
+          "published": 1790038768,
           "sentiment": 0.077
+        },
+        {
+          "title": "A $2.75 Billion Reason to Buy Micron Stock",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4719996/a-2-75-billion-reason-to-buy-micron-stock",
+          "published": 1790027966,
+          "sentiment": 0.0
         },
         {
           "title": "Micron (MU) Beats Stock Market Upswing: What Investors Need to Know",
@@ -943,16 +950,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/09/21/micron-stock-is-back-above-usd1-000-is-a-stock-split-coming/",
           "published": 1790024461,
           "sentiment": 0.0
-        },
-        {
-          "title": "Top Stock Picks for Week of September 21, 2026",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/top-stock-picks-week-september-204100839.html",
-          "published": 1790023260,
-          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.056
+      "news_sentiment": 0.015
     },
     {
       "ticker": "AMAT",
@@ -965,25 +965,32 @@ window.PRICES_DATA = {
       "change_1w": "+9.44%",
       "change_1m": "-4.12%",
       "change_ytd": "+73.28%",
-      "return_1yr": "+122%",
-      "low_gbp": "144",
-      "low_usd": 192.43,
+      "return_1yr": "+131%",
+      "low_gbp": "147",
+      "low_usd": 196.2,
       "high_gbp": "553",
       "high_usd": 739.67,
-      "bar_pct": 50,
-      "market_cap_gbp_b": 275.578,
+      "bar_pct": 49,
+      "market_cap_gbp_b": 275.497,
       "market_cap_usd_b": 368.42,
       "beta": 1.597,
       "pe_ratio": 40.02,
-      "avg_volume_m": 8.66,
+      "avg_volume_m": 8.64,
       "div_yield_pct": 48.0,
       "short_pct": 1.97,
       "analyst": "strong_buy",
       "analyst_score": 1.44,
-      "vol_1d": 9236109,
-      "vol_1w": 41583709,
-      "vol_1m": 133328809,
+      "vol_1d": 9478700,
+      "vol_1w": 41852500,
+      "vol_1m": 133597600,
       "news": [
+        {
+          "title": "Applied Materials Commits $5 Billion to India as Chip Manufacturing Expands",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/articles/applied-materials-commits-5-billion-014025894.html",
+          "published": 1790041225,
+          "sentiment": 0.128
+        },
         {
           "title": "Applied Materials Stock Jumped Nearly 7% in a Chip-Equipment Rally. Its $5 Billion India Plan Is the Longer Story",
           "publisher": "TIKR",
@@ -1011,16 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-wall-street-favorite-stocks-151825230.html",
           "published": 1790003905,
           "sentiment": 0.459
-        },
-        {
-          "title": "Applied Materials vs. Nvidia: Which Tech Stock Is a Better Buy in 2026?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/09/19/applied-materials-vs-nvidia-which-tech-stock-is-a-better-buy-in-2026/",
-          "published": 1789868101,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.22
+      "news_sentiment": 0.158
     },
     {
       "ticker": "ORCL",
@@ -1033,13 +1033,13 @@ window.PRICES_DATA = {
       "change_1w": "+2.60%",
       "change_1m": "+4.29%",
       "change_ytd": "-23.36%",
-      "return_1yr": "-55%",
+      "return_1yr": "-53%",
       "low_gbp": "86",
       "low_usd": 114.5,
-      "high_gbp": "246",
-      "high_usd": 329.5,
+      "high_gbp": "243",
+      "high_usd": 325.0,
       "bar_pct": 16,
-      "market_cap_gbp_b": 336.006,
+      "market_cap_gbp_b": 335.907,
       "market_cap_usd_b": 449.206,
       "beta": 1.732,
       "pe_ratio": 23.29,
@@ -1048,9 +1048,9 @@ window.PRICES_DATA = {
       "short_pct": 2.6,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 21730847,
-      "vol_1w": 154607747,
-      "vol_1m": 608205547,
+      "vol_1d": 22329400,
+      "vol_1w": 155315800,
+      "vol_1m": 608913600,
       "news": [
         {
           "title": "Who's really paying for the AI data center boom?",
@@ -1101,31 +1101,45 @@ window.PRICES_DATA = {
       "change_1w": "-8.71%",
       "change_1m": "+13.29%",
       "change_ytd": "-6.14%",
-      "return_1yr": "-5%",
+      "return_1yr": "-3%",
       "low_gbp": "109",
       "low_usd": 146.32,
       "high_gbp": "201",
       "high_usd": 269.11,
       "bar_pct": 73,
-      "market_cap_gbp_b": 145.541,
-      "market_cap_usd_b": 194.574,
+      "market_cap_gbp_b": 145.498,
+      "market_cap_usd_b": 194.573,
       "beta": 1.202,
       "pe_ratio": 21.65,
-      "avg_volume_m": 14.3,
+      "avg_volume_m": 14.14,
       "div_yield_pct": 74.0,
       "short_pct": 4.1,
       "analyst": "buy",
       "analyst_score": 1.73,
-      "vol_1d": 10030891,
-      "vol_1w": 69516691,
-      "vol_1m": 336000391,
+      "vol_1d": 10563800,
+      "vol_1w": 70064100,
+      "vol_1m": 336547800,
       "news": [
+        {
+          "title": "Snap\u2019s Specs Get an Enterprise Boost from Salesforce and Nvidia",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/technology/ai/articles/snap-specs-enterprise-boost-salesforce-014301685.html",
+          "published": 1790041381,
+          "sentiment": 0.402
+        },
         {
           "title": "How Far Could Zoom Communications Stock Fall In A Real Market Shock?",
           "publisher": "Trefis",
           "url": "https://www.trefis.com/articles/615991/how-far-could-zoom-communications-stock-fall-in-a-real-market-shock/2026-09-21",
           "published": 1790020455,
           "sentiment": -0.382
+        },
+        {
+          "title": "As Snap Partners With Nvidia on Its Specs, Here\u2019s How You Should Play SNAP Stock",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4717055/as-snap-partners-with-nvidia-on-its-specs-heres-how-you-should-play-snap-stock",
+          "published": 1790016121,
+          "sentiment": 0.34
         },
         {
           "title": "Snap Just Turned Its $2,195 Glasses Into an Nvidia AI Story",
@@ -1140,23 +1154,9 @@ window.PRICES_DATA = {
           "url": "https://www.barchart.com/story/news/4714440/alphabet-pushes-deeper-into-voice-ai-with-new-gemini-models",
           "published": 1790006634,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is It Too Late To Buy Microsoft Stock After Its Summer Run?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/615998/is-it-too-late-to-buy-microsoft-stock-after-its-summer-run/2026-09-21",
-          "published": 1790003628,
-          "sentiment": 0.0
-        },
-        {
-          "title": "NOW Rides on Strong Workflow Demand: Can It Outpace CRM & MSFT?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/articles/now-rides-strong-workflow-demand-144100921.html",
-          "published": 1790001660,
-          "sentiment": 0.421
         }
       ],
-      "news_sentiment": 0.008
+      "news_sentiment": 0.072
     },
     {
       "ticker": "ADBE",
@@ -1169,25 +1169,39 @@ window.PRICES_DATA = {
       "change_1w": "-6.05%",
       "change_1m": "-9.68%",
       "change_ytd": "-25.14%",
-      "return_1yr": "-32%",
+      "return_1yr": "-31%",
       "low_gbp": "142",
       "low_usd": 190.12,
       "high_gbp": "276",
       "high_usd": 368.73,
       "bar_pct": 33,
-      "market_cap_gbp_b": 74.19,
+      "market_cap_gbp_b": 74.168,
       "market_cap_usd_b": 99.184,
       "beta": 1.417,
       "pe_ratio": 13.92,
-      "avg_volume_m": 5.54,
+      "avg_volume_m": 5.49,
       "div_yield_pct": null,
       "short_pct": 4.89,
       "analyst": "hold",
       "analyst_score": 2.77,
-      "vol_1d": 4986671,
-      "vol_1w": 29650871,
-      "vol_1m": 110417371,
+      "vol_1d": 5179400,
+      "vol_1w": 29843600,
+      "vol_1m": 110610100,
       "news": [
+        {
+          "title": "Adobe (ADBE) Could Be 22% Undervalued As Acrobat AI Push Expands Its Platform",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-adbe-could-22-undervalued-002940227.html",
+          "published": 1790036980,
+          "sentiment": 0.103
+        },
+        {
+          "title": "Adobe (ADBE) Stock Still Looks Like A Bargain Following A 59% Slump",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/adobe-adbe-stock-still-looks-231655369.html",
+          "published": 1790032615,
+          "sentiment": 0.511
+        },
         {
           "title": "Adobe CEO Shantanu Narayen Sells $31.3 Million Stock",
           "publisher": "Motley Fool",
@@ -1208,23 +1222,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-microsoft-adobe-forecast-ai-132829225.html",
           "published": 1789997309,
           "sentiment": 0.0
-        },
-        {
-          "title": "Beat the Market Like Zacks: PBF, Palantir, Adobe in Focus",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/beat-market-zacks-pbf-palantir-121000661.html",
-          "published": 1789992600,
-          "sentiment": 0.361
-        },
-        {
-          "title": "A Pause on Advanced AI Is Wishful Thinking, But Adobe Stock Is a Buy Anyway",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/4693911/a-pause-on-advanced-ai-is-wishful-thinking-but-adobe-stock-is-a-buy-anyway",
-          "published": 1789819202,
-          "sentiment": 0.128
         }
       ],
-      "news_sentiment": 0.128
+      "news_sentiment": 0.153
     },
     {
       "ticker": "NOW",
@@ -1237,25 +1237,39 @@ window.PRICES_DATA = {
       "change_1w": "-3.28%",
       "change_1m": "+7.52%",
       "change_ytd": "-6.63%",
-      "return_1yr": "-29%",
+      "return_1yr": "-26%",
       "low_gbp": "61",
       "low_usd": 81.24,
       "high_gbp": "146",
       "high_usd": 194.73,
       "bar_pct": 50,
-      "market_cap_gbp_b": 106.472,
-      "market_cap_usd_b": 142.342,
+      "market_cap_gbp_b": 106.441,
+      "market_cap_usd_b": 142.343,
       "beta": 0.972,
       "pe_ratio": 86.05,
-      "avg_volume_m": 20.31,
+      "avg_volume_m": 20.09,
       "div_yield_pct": null,
       "short_pct": 2.94,
       "analyst": "strong_buy",
       "analyst_score": 1.43,
-      "vol_1d": 10742542,
-      "vol_1w": 64390542,
-      "vol_1m": 311500342,
+      "vol_1d": 10878400,
+      "vol_1w": 64546800,
+      "vol_1m": 311656600,
       "news": [
+        {
+          "title": "Strategy, CrowdStrike, MongoDB, ServiceNow, and Okta Shares Are Soaring, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/strategy-crowdstrike-mongodb-servicenow-okta-003025037.html",
+          "published": 1790037025,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Why ServiceNow Stock Inched Higher on Monday",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/21/why-servicenow-stock-inched-higher-on-monday/",
+          "published": 1790033500,
+          "sentiment": 0.0
+        },
         {
           "title": "SNX vs. NOW: Which Stock Is the Better Value Option?",
           "publisher": "Zacks",
@@ -1276,23 +1290,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/articles/strong-cloud-growth-sustain-atlassians-143800090.html",
           "published": 1790001480,
           "sentiment": 0.71
-        },
-        {
-          "title": "These 3 Agentic AI Stocks Have More Than Hype Behind Their Growth Stories",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/articles/these-3-agentic-ai-stocks-have-more-than-hype-behind-their-growth-stories/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1789821300,
-          "sentiment": 0.382
-        },
-        {
-          "title": "How Low Can UiPath Stock Go When Its Numbers Are Not The Problem?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/615833/how-low-can-uipath-stock-go-when-its-numbers-are-not-the-problem/2026-09-18",
-          "published": 1789769186,
-          "sentiment": 0.041
         }
       ],
-      "news_sentiment": 0.441
+      "news_sentiment": 0.415
     },
     {
       "ticker": "SNOW",
@@ -1305,25 +1305,32 @@ window.PRICES_DATA = {
       "change_1w": "+2.12%",
       "change_1m": "+5.15%",
       "change_ytd": "+56.61%",
-      "return_1yr": "+45%",
+      "return_1yr": "+52%",
       "low_gbp": "88",
       "low_usd": 118.3,
       "high_gbp": "288",
       "high_usd": 384.56,
       "bar_pct": 83,
-      "market_cap_gbp_b": 89.563,
+      "market_cap_gbp_b": 89.537,
       "market_cap_usd_b": 119.737,
       "beta": 1.328,
       "pe_ratio": null,
-      "avg_volume_m": 5.39,
+      "avg_volume_m": 5.35,
       "div_yield_pct": null,
       "short_pct": 5.25,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 3686505,
-      "vol_1w": 20023805,
-      "vol_1m": 111048005,
+      "vol_1d": 3690300,
+      "vol_1w": 20027600,
+      "vol_1m": 111051800,
       "news": [
+        {
+          "title": "Snowflake Stock Is Up 45% in a Year. Is It Too Late to Buy?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/snowflake-stock-is-up-45-in-a-year-is-it-too-late-to-buy?ref=yahoofinance",
+          "published": 1790033641,
+          "sentiment": 0.0
+        },
         {
           "title": "Sector Update: Tech Stocks Rise Late Afternoon",
           "publisher": "MT Newswires",
@@ -1351,13 +1358,6 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/articles/615888/what-happens-to-snowflake-stock-if-ai-keeps-costing-it-margin/2026-09-18",
           "published": 1789748064,
           "sentiment": 0.0
-        },
-        {
-          "title": "Braze Beat Expectations\u2014Now 2 SaaS Peers Are in Focus",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/articles/braze-beat-expectationsnow-2-saas-peers-are-in-focus/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1789741200,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.0
@@ -1376,21 +1376,21 @@ window.PRICES_DATA = {
       "return_1yr": "-57%",
       "low_gbp": "189",
       "low_usd": 252.84,
-      "high_gbp": "527",
-      "high_usd": 705.08,
+      "high_gbp": "526",
+      "high_usd": 703.96,
       "bar_pct": 11,
-      "market_cap_gbp_b": 60.791,
+      "market_cap_gbp_b": 60.773,
       "market_cap_usd_b": 81.271,
       "beta": 0.976,
       "pe_ratio": 18.48,
-      "avg_volume_m": 4.27,
+      "avg_volume_m": 4.22,
       "div_yield_pct": 182.0,
       "short_pct": 3.42,
       "analyst": "buy",
       "analyst_score": 2.06,
-      "vol_1d": 2875863,
-      "vol_1w": 20094463,
-      "vol_1m": 82407863,
+      "vol_1d": 2946900,
+      "vol_1w": 20165500,
+      "vol_1m": 82478900,
       "news": [
         {
           "title": "Bill Harris Launches AI Financial Advice App",
@@ -1435,37 +1435,51 @@ window.PRICES_DATA = {
       "company_name": "CrowdStrike",
       "category": "cybersecurity",
       "exchange": "NASDAQ",
-      "price_gbp": "187",
+      "price_gbp": "186",
       "price_usd": 249.35,
       "change_1d": "+5.15%",
       "change_1w": "+5.94%",
       "change_1m": "+30.77%",
       "change_ytd": "+119.90%",
-      "return_1yr": "+93%",
+      "return_1yr": "+106%",
       "low_gbp": "64",
       "low_usd": 85.68,
       "high_gbp": "187",
       "high_usd": 250.32,
       "bar_pct": 99,
-      "market_cap_gbp_b": 190.978,
+      "market_cap_gbp_b": 190.922,
       "market_cap_usd_b": 255.318,
       "beta": 1.255,
       "pe_ratio": 4987.0,
-      "avg_volume_m": 10.16,
+      "avg_volume_m": 10.15,
       "div_yield_pct": null,
       "short_pct": 2.41,
       "analyst": "buy",
       "analyst_score": 1.7,
-      "vol_1d": 13270075,
-      "vol_1w": 74020175,
-      "vol_1m": 259182375,
+      "vol_1d": 13361300,
+      "vol_1w": 74147300,
+      "vol_1m": 259309500,
       "news": [
+        {
+          "title": "Strategy, CrowdStrike, MongoDB, ServiceNow, and Okta Shares Are Soaring, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/strategy-crowdstrike-mongodb-servicenow-okta-003025037.html",
+          "published": 1790037025,
+          "sentiment": 0.296
+        },
         {
           "title": "3 U.S. Growth Stocks Facing The Biggest AI Spending Test Right Now",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/technology/ai/articles/3-u-growth-stocks-facing-221805235.html",
           "published": 1790029085,
           "sentiment": 0.382
+        },
+        {
+          "title": "How to Play CrowdStrike Stock at All-Time Highs",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/4718907/how-to-play-crowdstrike-stock-at-all-time-highs",
+          "published": 1790024045,
+          "sentiment": 0.34
         },
         {
           "title": "Here Are Stocks That Hit All-Time Highs Today",
@@ -1480,23 +1494,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/09/21/cybersecurity-stocks-extend-gains-on-ai-safety-warnings-crowdstrike-and-okta-rise-4-palo-alto-ticks-up/",
           "published": 1790010226,
           "sentiment": 0.572
-        },
-        {
-          "title": "Can Falcon Flex Momentum Keep Driving CrowdStrike's ARR Growth?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/falcon-flex-momentum-keep-driving-142300818.html",
-          "published": 1790000580,
-          "sentiment": 0.382
-        },
-        {
-          "title": "Zscaler's AI Bookings Jump 50%: Can AI Products Drive Growth?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/zscalers-ai-bookings-jump-50-130400163.html",
-          "published": 1789995840,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.344
+      "news_sentiment": 0.318
     },
     {
       "ticker": "PANW",
@@ -1509,13 +1509,13 @@ window.PRICES_DATA = {
       "change_1w": "-0.58%",
       "change_1m": "+5.94%",
       "change_ytd": "+107.26%",
-      "return_1yr": "+75%",
+      "return_1yr": "+83%",
       "low_gbp": "104",
       "low_usd": 139.57,
       "high_gbp": "298",
       "high_usd": 398.88,
       "bar_pct": 90,
-      "market_cap_gbp_b": 227.467,
+      "market_cap_gbp_b": 227.4,
       "market_cap_usd_b": 304.1,
       "beta": 0.908,
       "pe_ratio": 929.4,
@@ -1524,9 +1524,9 @@ window.PRICES_DATA = {
       "short_pct": 2.65,
       "analyst": "buy",
       "analyst_score": 1.69,
-      "vol_1d": 5136650,
-      "vol_1w": 36936850,
-      "vol_1m": 140609650,
+      "vol_1d": 5382300,
+      "vol_1w": 37192600,
+      "vol_1m": 140865400,
       "news": [
         {
           "title": "3 U.S. Growth Stocks Facing The Biggest AI Spending Test Right Now",
@@ -1577,25 +1577,32 @@ window.PRICES_DATA = {
       "change_1w": "+6.45%",
       "change_1m": "+25.44%",
       "change_ytd": "+79.41%",
-      "return_1yr": "+42%",
+      "return_1yr": "+58%",
       "low_gbp": "119",
       "low_usd": 158.83,
-      "high_gbp": "253",
-      "high_usd": 338.0,
+      "high_gbp": "264",
+      "high_usd": 352.45,
       "bar_pct": 99,
-      "market_cap_gbp_b": 93.666,
-      "market_cap_usd_b": 125.222,
+      "market_cap_gbp_b": 93.639,
+      "market_cap_usd_b": 125.223,
       "beta": 1.664,
       "pe_ratio": null,
-      "avg_volume_m": 3.44,
+      "avg_volume_m": 3.45,
       "div_yield_pct": null,
       "short_pct": 2.39,
       "analyst": "buy",
       "analyst_score": 1.94,
-      "vol_1d": 3854772,
-      "vol_1w": 16967972,
-      "vol_1m": 63385372,
+      "vol_1d": 3885700,
+      "vol_1w": 16998900,
+      "vol_1m": 63416300,
       "news": [
+        {
+          "title": "Cloudflare (NET) Shares Skyrocket, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cloudflare-net-shares-skyrocket-know-005425926.html",
+          "published": 1790038465,
+          "sentiment": 0.296
+        },
         {
           "title": "Here Are Stocks That Hit All-Time Highs Today",
           "publisher": "The Wall Street Journal",
@@ -1623,16 +1630,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/cloudflare-net-stock-looks-rich-151342641.html",
           "published": 1789917222,
           "sentiment": 0.71
-        },
-        {
-          "title": "Cloudflare\u2019s Insiders Just Sold $44 Million Into the Rally. Here\u2019s What Every Investors Need to Know.",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/cloudflares-insiders-just-sold-44-million-into-the-rally-heres-what-every-investors-need-to-know?ref=yahoofinance",
-          "published": 1789812609,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.187
+      "news_sentiment": 0.246
     },
     {
       "ticker": "FTNT",
@@ -1645,24 +1645,24 @@ window.PRICES_DATA = {
       "change_1w": "+2.97%",
       "change_1m": "+15.29%",
       "change_ytd": "+125.00%",
-      "return_1yr": "+100%",
+      "return_1yr": "+106%",
       "low_gbp": "55",
       "low_usd": 73.55,
       "high_gbp": "132",
       "high_usd": 176.1,
       "bar_pct": 99,
-      "market_cap_gbp_b": 96.169,
-      "market_cap_usd_b": 128.568,
+      "market_cap_gbp_b": 96.141,
+      "market_cap_usd_b": 128.569,
       "beta": 1.059,
       "pe_ratio": 61.7,
-      "avg_volume_m": 5.12,
+      "avg_volume_m": 5.08,
       "div_yield_pct": null,
       "short_pct": 2.23,
       "analyst": "hold",
       "analyst_score": 2.77,
-      "vol_1d": 3141693,
-      "vol_1w": 29646293,
-      "vol_1m": 93149793,
+      "vol_1d": 3176600,
+      "vol_1w": 29681200,
+      "vol_1m": 93184700,
       "news": [
         {
           "title": "Here Are Stocks That Hit All-Time Highs Today",
@@ -1713,25 +1713,32 @@ window.PRICES_DATA = {
       "change_1w": "-8.67%",
       "change_1m": "-8.31%",
       "change_ytd": "-19.38%",
-      "return_1yr": "-42%",
+      "return_1yr": "-40%",
       "low_gbp": "49",
       "low_usd": 65.08,
       "high_gbp": "93",
       "high_usd": 124.86,
       "bar_pct": 14,
-      "market_cap_gbp_b": 228.489,
+      "market_cap_gbp_b": 228.422,
       "market_cap_usd_b": 305.467,
       "beta": 1.526,
       "pe_ratio": 23.07,
-      "avg_volume_m": 39.98,
+      "avg_volume_m": 39.27,
       "div_yield_pct": null,
       "short_pct": 2.21,
       "analyst": "buy",
       "analyst_score": 1.8,
-      "vol_1d": 36838439,
-      "vol_1w": 232683539,
-      "vol_1m": 630429739,
+      "vol_1d": 36898100,
+      "vol_1w": 232882900,
+      "vol_1m": 630629100,
       "news": [
+        {
+          "title": "Paramount Could Acquire Warner Bros. Discovery Sooner Than Expected. Here\u2019s What That Means for Netflix Investors.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/09/21/paramount-could-acquire-warner-bros-discovery-sooner-than-expected-heres-what-that-means-for-netflix-investors/",
+          "published": 1790041400,
+          "sentiment": 0.0
+        },
         {
           "title": "Netflix (NFLX) Laps the Stock Market: Here's Why",
           "publisher": "Zacks",
@@ -1759,16 +1766,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/media-advertising/articles/paramount-settles-multistate-lawsuit-over-203000731.html",
           "published": 1790022600,
           "sentiment": -0.226
-        },
-        {
-          "title": "Paramount Deal Approval Puts Netflix Stock And Media Merger Winners In Focus",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/media-advertising/articles/paramount-deal-approval-puts-netflix-201505168.html",
-          "published": 1790021705,
-          "sentiment": 0.735
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": -0.02
     },
     {
       "ticker": "SHOP",
@@ -1781,25 +1781,32 @@ window.PRICES_DATA = {
       "change_1w": "+3.01%",
       "change_1m": "-7.93%",
       "change_ytd": "-12.26%",
-      "return_1yr": "-18%",
+      "return_1yr": "-8%",
       "low_gbp": "70",
       "low_usd": 94.0,
       "high_gbp": "136",
       "high_usd": 182.19,
       "bar_pct": 50,
-      "market_cap_gbp_b": 133.871,
+      "market_cap_gbp_b": 133.832,
       "market_cap_usd_b": 178.972,
       "beta": 2.616,
       "pe_ratio": 93.19,
-      "avg_volume_m": 9.18,
+      "avg_volume_m": 9.31,
       "div_yield_pct": null,
       "short_pct": 1.53,
       "analyst": "buy",
       "analyst_score": 1.69,
-      "vol_1d": 15964732,
-      "vol_1w": 46644532,
-      "vol_1m": 169685532,
+      "vol_1d": 16587900,
+      "vol_1w": 47267700,
+      "vol_1m": 170308700,
       "news": [
+        {
+          "title": "META Stock Rallies As Muse AI Tops App Charts \u2014 Exec Admits It\u2019s \u2018Heavily Inspired\u2019 By OpenClaw",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/meta-stock-rallies-as-muse-ai-tops-app-charts-exec-admits-it-s-heavily-inspired-by-open-claw/cZMPJD5RBIv",
+          "published": 1790047293,
+          "sentiment": 0.67
+        },
         {
           "title": "Shopify to Use Meta\u2019s Muse for Agentic Checkout",
           "publisher": "The Wall Street Journal",
@@ -1827,46 +1834,39 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/cathie-wood-makes-big-ai-183656436.html",
           "published": 1790015816,
           "sentiment": 0.0
-        },
-        {
-          "title": "How Far Could PayPal Stock Fall While Its Turnaround Plays Out?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/articles/616005/how-far-could-paypal-stock-fall-while-its-turnaround-plays-out/2026-09-21",
-          "published": 1790015073,
-          "sentiment": 0.25
         }
       ],
-      "news_sentiment": -0.009
+      "news_sentiment": 0.075
     },
     {
       "ticker": "SPOT",
       "company_name": "Spotify",
       "category": "consumer-platform",
       "exchange": "NYSE",
-      "price_gbp": "387",
+      "price_gbp": "386",
       "price_usd": 516.77,
       "change_1d": "+1.16%",
       "change_1w": "-7.11%",
       "change_1m": "-3.92%",
       "change_ytd": "-10.13%",
-      "return_1yr": "-31%",
+      "return_1yr": "-28%",
       "low_gbp": "303",
       "low_usd": 405.0,
-      "high_gbp": "554",
-      "high_usd": 740.2,
+      "high_gbp": "553",
+      "high_usd": 740.0,
       "bar_pct": 33,
-      "market_cap_gbp_b": 79.467,
-      "market_cap_usd_b": 106.239,
+      "market_cap_gbp_b": 79.444,
+      "market_cap_usd_b": 106.24,
       "beta": 1.586,
       "pe_ratio": 28.33,
-      "avg_volume_m": 1.74,
+      "avg_volume_m": 1.72,
       "div_yield_pct": null,
       "short_pct": 3.88,
       "analyst": "buy",
       "analyst_score": 1.55,
-      "vol_1d": 1509235,
-      "vol_1w": 7570035,
-      "vol_1m": 28876935,
+      "vol_1d": 1520200,
+      "vol_1w": 7581000,
+      "vol_1m": 28887900,
       "news": [
         {
           "title": "The 3 Tech Laggards Are Top Stock Picks, UBS Says",
@@ -1917,24 +1917,24 @@ window.PRICES_DATA = {
       "change_1w": "-2.46%",
       "change_1m": "-10.66%",
       "change_ytd": "-14.51%",
-      "return_1yr": "-29%",
+      "return_1yr": "-28%",
       "low_gbp": "49",
       "low_usd": 65.41,
       "high_gbp": "76",
-      "high_usd": 101.99,
+      "high_usd": 101.29,
       "bar_pct": 15,
-      "market_cap_gbp_b": 108.232,
+      "market_cap_gbp_b": 108.2,
       "market_cap_usd_b": 144.695,
       "beta": 1.159,
       "pe_ratio": 15.54,
-      "avg_volume_m": 19.35,
+      "avg_volume_m": 19.28,
       "div_yield_pct": null,
       "short_pct": 2.29,
       "analyst": "buy",
       "analyst_score": 1.58,
-      "vol_1d": 16631377,
-      "vol_1w": 90532477,
-      "vol_1m": 355528977,
+      "vol_1d": 16898100,
+      "vol_1w": 90835800,
+      "vol_1m": 355832300,
       "news": [
         {
           "title": "Auto & Transport Roundup: Market Talk",
@@ -1985,24 +1985,24 @@ window.PRICES_DATA = {
       "change_1w": "+1.27%",
       "change_1m": "+1.12%",
       "change_ytd": "+47.93%",
-      "return_1yr": "+62%",
+      "return_1yr": "+65%",
       "low_gbp": "50",
       "low_usd": 66.81,
-      "high_gbp": "98",
+      "high_gbp": "97",
       "high_usd": 130.37,
       "bar_pct": 70,
-      "market_cap_gbp_b": 328.702,
+      "market_cap_gbp_b": 328.605,
       "market_cap_usd_b": 439.441,
       "beta": 0.992,
       "pe_ratio": 33.47,
-      "avg_volume_m": 20.71,
+      "avg_volume_m": 20.73,
       "div_yield_pct": 153.0,
       "short_pct": 1.41,
       "analyst": "buy",
       "analyst_score": 1.82,
-      "vol_1d": 21354976,
-      "vol_1w": 109927976,
-      "vol_1m": 308003576,
+      "vol_1d": 21543500,
+      "vol_1w": 110151700,
+      "vol_1m": 308227300,
       "news": [
         {
           "title": "How Far Could Zoom Communications Stock Fall In A Real Market Shock?",
@@ -2053,25 +2053,32 @@ window.PRICES_DATA = {
       "change_1w": "+5.64%",
       "change_1m": "+4.09%",
       "change_ytd": "+9.07%",
-      "return_1yr": "-1%",
+      "return_1yr": "+0%",
       "low_gbp": "80",
       "low_usd": 106.37,
       "high_gbp": "155",
       "high_usd": 207.52,
       "bar_pct": 76,
-      "market_cap_gbp_b": 329.102,
+      "market_cap_gbp_b": 329.005,
       "market_cap_usd_b": 439.976,
       "beta": 1.621,
       "pe_ratio": 156.49,
-      "avg_volume_m": 39.35,
+      "avg_volume_m": 38.8,
       "div_yield_pct": null,
       "short_pct": 3.03,
       "analyst": "buy",
       "analyst_score": 1.81,
-      "vol_1d": 21901618,
-      "vol_1w": 137128518,
-      "vol_1m": 557809318,
+      "vol_1d": 21947600,
+      "vol_1w": 137248600,
+      "vol_1m": 557929400,
       "news": [
+        {
+          "title": "A Closer Look at the 'Big 3' Investing Styles",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/closer-look-big-3-investing-234400324.html",
+          "published": 1790034240,
+          "sentiment": 0.0
+        },
         {
           "title": "Palantir's Alex Karp says AI's biggest names may never IPO \u2014 the play is telling Washington 'nationalize us, please'",
           "publisher": "Moneywise",
@@ -2099,13 +2106,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/options/articles/palantir-stock-gets-bullish-options-191655049.html",
           "published": 1790018215,
           "sentiment": 0.296
-        },
-        {
-          "title": "Cathie Wood Makes Big AI Bet, Trims Bitcoin ETF",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/cathie-wood-makes-big-ai-183656436.html",
-          "published": 1790015816,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.114
