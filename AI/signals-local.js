@@ -1,9 +1,220 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-21 14:36",
+  "updated": "2026-09-23 13:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Up 585.6% YTD with 26.38% 1M momentum, P/E of 24, and a new Rosenblatt Buy initiation with $2,400 PT citing AI-driven NAND demand shift from commodity to critical infrastructure [cnbc.com].",
+      "drivers": [
+        "+585.6% YTD",
+        "+26.38% 1M",
+        "P/E 23.9",
+        "Rosenblatt Buy initiation $2,400 PT"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MXL",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Explosive +372.3% YTD, +39.3% 1M, and +30.3% 1W momentum with a positive news sentiment of 0.35, positioning it as a key AI infrastructure play in DSP semi space.",
+      "drivers": [
+        "+372.3% YTD",
+        "+39.3% 1M",
+        "+30.3% 1W",
+        "news sentiment 0.35"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.785,
+      "rationale": "Exceptional +131.6% YTD with +44.2% 1M momentum, a strong_buy analyst consensus (score 1.2), and 15.5% 1W gain, reflecting robust momentum in AI DSP semiconductors.",
+      "drivers": [
+        "+131.6% YTD",
+        "+44.2% 1M",
+        "analyst strong_buy",
+        "score 1.2"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.677,
+      "rationale": "Up 247.7% YTD, +20.4% 1M, P/E 23.6, strong_buy consensus, and positive read-through from Rosenblatt's bullish SNDK initiation and AI memory demand surge [247wallst.com].",
+      "drivers": [
+        "+247.7% YTD",
+        "+20.4% 1M",
+        "strong_buy consensus",
+        "P/E 23.6"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AXTI",
+      "signal": "strong_buy",
+      "confidence": 0.995,
+      "rationale": "Soared 364.1% YTD with eye-popping +34.8% 1W momentum and a +18.9% 1M gain, driving by S&P 600 addition and AI materials demand, despite high P/E of 2593.",
+      "drivers": [
+        "+364.1% YTD",
+        "+34.8% 1W",
+        "S&P 600 addition",
+        "AI materials demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HUT",
+      "signal": "strong_buy",
+      "confidence": 0.644,
+      "rationale": "Strong momentum with +107.9% YTD, +34.0% 1M, +22.4% 1W, strong_buy analyst consensus, and positive news sentiment 0.19 as it reframes its AI/data center strategy.",
+      "drivers": [
+        "+107.9% YTD",
+        "+34.0% 1M",
+        "+22.4% 1W",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Gained 13.5% YTD but surged 31.9% in 1M with 10% 1W momentum, strong_buy consensus, P/E 27.8, and strong news sentiment 0.18 supported by Muse AI/Shopify partnership.",
+      "drivers": [
+        "+31.9% 1M",
+        "+10.0% 1W",
+        "strong_buy consensus",
+        "P/E 27.8"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DELL",
+      "signal": "strong_buy",
+      "confidence": 0.911,
+      "rationale": "Spectacular +333.4% YTD with +26.7% 1M rally, P/E 31.9, even as a -4.86% 1D pullback and slightly negative sentiment present a potential entry point given massive AI server demand.",
+      "drivers": [
+        "+333.4% YTD",
+        "+26.7% 1M",
+        "P/E 31.9",
+        "AI server demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "IREN",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Up 13.7% YTD but with accelerating 21.9% 1M and 16.8% 1W momentum, buy rating, and positive news sentiment 0.18, though high beta 4.3 and short interest 24.5% add risk.",
+      "drivers": [
+        "+21.9% 1M",
+        "+16.8% 1W",
+        "buy rating",
+        "news sentiment 0.18"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SMCI",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Up 34.2% YTD with +18.1% 1M and +16.6% 1W momentum, P/E 12.7, positive sentiment 0.25, but a hold analyst consensus (score 2.84) caps conviction.",
+      "drivers": [
+        "+34.2% YTD",
+        "+18.1% 1M",
+        "P/E 12.7",
+        "sentiment 0.25"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+380.79%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +380.79% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +380.79% \u2265 182.9% SB"
+      ]
+    },
+    {
+      "ticker": "AAOI",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+170.20%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +170.20% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +170.20% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "WDC",
+      "signal": "buy",
+      "confidence": 0.881,
+      "ytd": "+147.79%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +147.79% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +147.79% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "signal": "buy",
+      "confidence": 0.864,
+      "ytd": "+144.92%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +144.92% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +144.92% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "STX",
+      "signal": "strong_buy",
+      "confidence": 0.603,
+      "ytd": "+220.69%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +220.69% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +220.69% \u2265 182.9% SB"
+      ]
+    },
+    {
+      "ticker": "VIAV",
+      "signal": "buy",
+      "confidence": 0.6,
+      "ytd": "+100.55%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +100.55% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +100.55% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 0.53,
+      "ytd": "+193.93%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +193.93% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +193.93% \u2265 182.9% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SNDK",
@@ -132,217 +343,6 @@ window.SIGNALS_DATA = {
         "222.23% YTD return",
         "low P/E 22.94",
         "strong news sentiment 0.318"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "285A",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+380.79%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +380.79% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +380.79% \u2265 182.9% SB"
-      ]
-    },
-    {
-      "ticker": "MRVL",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+173.64%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +173.64% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +173.64% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "AAOI",
-      "signal": "buy",
-      "confidence": 0.987,
-      "ytd": "+165.58%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +165.58% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +165.58% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "AXTI",
-      "signal": "strong_buy",
-      "confidence": 0.869,
-      "ytd": "+317.84%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +317.84% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +317.84% \u2265 182.9% SB"
-      ]
-    },
-    {
-      "ticker": "WDC",
-      "signal": "buy",
-      "confidence": 0.807,
-      "ytd": "+135.39%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +135.39% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +135.39% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "VIAV",
-      "signal": "buy",
-      "confidence": 0.565,
-      "ytd": "+94.82%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +94.82% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +94.82% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "STX",
-      "signal": "strong_buy",
-      "confidence": 0.545,
-      "ytd": "+199.40%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +199.40% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +199.40% \u2265 182.9% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.997,
-      "rationale": "Record high of $588, +364.62% YTD, P/E 32.78, with RBC initiating at $640 target on AI server beat; insider selling is a watch factor but momentum and earnings support the top rank.",
-      "drivers": [
-        "+365% YTD",
-        "record high $588",
-        "RBC $640 target",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+136.77% YTD and +31.77% in the last month with a strong_buy consensus (an_score 1.2) and positive news sentiment 0.267; high P/E of 111 is tempered by explosive growth in DSP semi solutions for AI.",
-      "drivers": [
-        "+32% 1-month",
-        "strong_buy consensus",
-        "an_score 1.2",
-        "positive sentiment 0.27"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "+169.73% YTD, +11.46% 1M, strong_buy consensus, and news that it is deepening AI infrastructure footprint; P/E of 76 is high but justified by vertical integration in data-center connectivity.",
-      "drivers": [
-        "+170% YTD",
-        "strong_buy",
-        "AI infrastructure expansion",
-        "news sentiment 0.17"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "+210.08% YTD, strong_buy rating, P/E only 20.96, and memory tightness driven by AI (HBM spillover); web search confirms tight supply but price growth is decelerating, keeping the call balanced.",
-      "drivers": [
-        "+210% YTD",
-        "P/E 21 low",
-        "strong_buy",
-        "memory supply tight"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "+25.5% in the last month, P/E 25.38, strong_buy consensus; relatively cheap among hyperscalers with fast momentum catching up after a slow YTD (+5.09%).",
-      "drivers": [
-        "+25% 1-month",
-        "P/E 25 cheap",
-        "strong_buy",
-        "recent momentum catch-up"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "+77.47% YTD, +12.63% 1M, strong_buy, and high short interest of 13.19% with positive news sentiment 0.311; AI compute growth story but lacks earnings.",
-      "drivers": [
-        "+77% YTD",
-        "strong_buy",
-        "short interest 13%",
-        "positive sentiment 0.31"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "WULF",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "Strong_buy consensus with an_score 1.25, +29.28% YTD, and very high short interest of 28.82% making it a squeeze candidate; high beta but no revenue visibility.",
-      "drivers": [
-        "strong_buy",
-        "high short 28.8%",
-        "AI compute",
-        "squeeze potential"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SMCI",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+30.33% YTD with a low P/E of 11.3, but analyst consensus holds at 2.84; rallying on broader AI hardware bid (web search 9/17) without company-specific catalyst.",
-      "drivers": [
-        "low P/E 11",
-        "+30% YTD",
-        "AI server rally",
-        "hold rating risk"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Strong_buy consensus, P/E 27.32, +5.91% YTD with steady +3.54% 1M; safe mega-cap with Azure AI growth but lacks near-term upside catalysts vs peers.",
-      "drivers": [
-        "strong_buy",
-        "low volatility",
-        "P/E 27",
-        "steady momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SMR",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "-44.57% YTD, hold rating, but high short interest of 17.6% and a +8.30% one-day bounce; nuclear SMR story is early-stage with very high risk and negative sentiment -0.015.",
-      "drivers": [
-        "high short 17.6%",
-        "potential turnaround",
-        "nuclear catalyst",
-        "very high risk"
       ]
     }
   ]

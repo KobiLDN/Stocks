@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-21 14:45",
+  "updated": "2026-09-23 13:42",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Up 214% YTD and 42% in the last month, driven by a 12% single-day surge on Muse-driven CPU demand; analyst price target raised to $145 per [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/09/23/analyst-gene-munster-says-tesla-nasdaq-tsla-spacex-spcx-and-apple-nasdaq-aapl-are-poised-to-follow-metas-ai-driven-surge/).",
+      "drivers": [
+        "+214% YTD",
+        "+42% 1M momentum",
+        "Muse AI CPU demand catalyst",
+        "Analyst PT raised to $145"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Soared 190% YTD and 38% in the past week as the CPU architecture IP provider benefits from agentic AI inference demand; short interest at 11.5% adds squeeze potential per [stockscreener.finance](https://stockscreener.finance/en/news/why-intel-arm-and-other-ai-chip-stocks-soared-today/).",
+      "drivers": [
+        "+190% YTD",
+        "+38% 1W momentum",
+        "Agentic AI CPU tailwind",
+        "High short interest squeeze risk"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "Up 179% YTD with a 37% monthly gain, crossing $1T market cap as the fourth US chipmaker to do so; Muse-driven CPU demand and 1:1 CPU-to-GPU ratio thesis support further upside per [gate.com](https://www.gate.com/blog/us-chip-stocks-surge-intc-qcom-ai-computing-rally-spreads).",
+      "drivers": [
+        "+179% YTD",
+        "+37% 1M momentum",
+        "$1T market cap milestone",
+        "CPU demand from AI agents"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Surged 32% in the past month after Muse AI hit 2.5M downloads and topped the App Store; Wells Fargo raised PT to $796, and the stock still trades at a reasonable P/E of 27.8 per [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/09/23/analyst-gene-munster-says-tesla-nasdaq-tsla-spacex-spcx-and-apple-nasdaq-aapl-are-poised-to-follow-metas-ai-driven-surge/).",
+      "drivers": [
+        "+32% 1M momentum",
+        "Muse AI 2.5M downloads",
+        "Wells Fargo PT $796",
+        "P/E 27.8 attractive"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Up 26% in the past month after announcing a $60B AI infrastructure partnership with Amazon; stock surged 9.3% in a single day, and the deal includes warrants at $161.26 per [gate.com](https://www.gate.com/blog/us-chip-stocks-surge-intc-qcom-ai-computing-rally-spreads).",
+      "drivers": [
+        "+26% 1M momentum",
+        "$60B Amazon AI partnership",
+        "9.3% single-day surge",
+        "Warrant floor at $161"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "rationale": "Up 43% YTD with 10.5% monthly momentum, controlling 72.5% of the foundry market; benefits from broad AI chip demand across all major customers and trades at a reasonable P/E of 33.1.",
+      "drivers": [
+        "+43% YTD",
+        "+10.5% 1M momentum",
+        "72.5% foundry market share",
+        "P/E 33.1 reasonable"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Up 21% YTD with 10% monthly momentum and a P/E of 28.9, the cheapest among AI leaders; analyst consensus is strong_buy with a score of 1.3, and GPU demand remains robust despite CPU rotation.",
+      "drivers": [
+        "+21% YTD",
+        "+10% 1M momentum",
+        "P/E 28.9 attractive",
+        "Strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Closed at a record $338.98 on iPhone Duo and Siri AI launches; up 26% YTD with a market cap approaching $5T, and Gene Munster sees a catalyst-driven rip higher per [theapplepost.com](https://www.theapplepost.com/2026/09/23/72606/apple-shares-close-at-record-high-following-iphone-duo-and-siri-ai-launches/).",
+      "drivers": [
+        "+26% YTD",
+        "Record close $338.98",
+        "iPhone Duo catalyst",
+        "Siri AI rollout"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TSLA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Down 14% YTD but up 9% in the past month; FSD v15 and Cybercab catalyst expected to drive a recovery per Munster, with robotaxi costs targeted at $0.30/mile per [foreignpolicyjournal.com](https://www.foreignpolicyjournal.com/2026/09/23/analyst-gene-munster-says-tesla-nasdaq-tsla-spacex-spcx-and-apple-nasdaq-aapl-are-poised-to-follow-metas-ai-driven-surge/).",
+      "drivers": [
+        "+9% 1M momentum",
+        "FSD v15 catalyst",
+        "Cybercab $0.30/mile cost",
+        "Recovery potential"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Up 11% YTD with 4.8% monthly momentum and a P/E of 35.4; strong buy analyst consensus and positive news sentiment of 0.068 support continued upside in life sciences tools.",
+      "drivers": [
+        "+11% YTD",
+        "+4.8% 1M momentum",
+        "P/E 35.4",
+        "Positive news sentiment"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMD",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "P/E 31.36",
         "dividend yield 1.99%",
         "defensive healthcare exposure"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "ARM surged 6.8% on CEO confidence in $2B AI chip demand, with YTD +130.89% and 1M +4.57% momentum; high beta 3.89 and short interest 11.52% add squeeze potential.",
-      "drivers": [
-        "YTD +130.89%",
-        "1D +6.81%",
-        "AI chip demand catalyst",
-        "high short interest"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "TSM gained 2.2% on 2nm win with MediaTek and raised FY guidance above 40%; YTD +35.68%, P/E 31.07, strong_buy consensus with 29% upside to price target.",
-      "drivers": [
-        "2nm win & expansion",
-        "FY guidance >40%",
-        "P/E 31.07",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.858,
-      "rationale": "AMD rose 5% on AI compute price hikes and data center revenue +107% YoY; YTD +143.92%, 1M +12.53%, strong_buy with $654 avg target.",
-      "drivers": [
-        "YTD +143.92%",
-        "1M +12.53%",
-        "AI compute pricing power",
-        "data center revenue surge"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "META posted 1M +25.50% momentum with P/E 25.38 and strong_buy consensus; YTD +5.09% but accelerating on AI/advertising tailwinds.",
-      "drivers": [
-        "1M +25.50%",
-        "P/E 25.38",
-        "strong_buy consensus",
-        "AI/advertising momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "TMO gained 1.8% with 1M +11.85% and 1W +9.23%, P/E 34.85, buy consensus; life sciences tools demand supports steady growth.",
-      "drivers": [
-        "1M +11.85%",
-        "1W +9.23%",
-        "P/E 34.85",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "JNJ YTD +32.42%, P/E 30.95, buy consensus, with 1.45% 1W gain; diversified healthcare and dividend yield 2.01% provide stability.",
-      "drivers": [
-        "YTD +32.42%",
-        "P/E 30.95",
-        "buy consensus",
-        "dividend yield 2.01%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CVX YTD +39.50%, P/E 20.36, buy consensus, with 3.73% 1M gain; energy price tailwinds and strong free cash flow support dividend yield 3.37%.",
-      "drivers": [
-        "YTD +39.50%",
-        "P/E 20.36",
-        "buy consensus",
-        "dividend yield 3.37%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "GOOGL YTD +10.43%, P/E 17.21, strong_buy consensus; low valuation relative to mega-cap tech, with AI agent infrastructure buildout.",
-      "drivers": [
-        "P/E 17.21",
-        "strong_buy consensus",
-        "YTD +10.43%",
-        "AI infrastructure theme"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "NVDA P/E 27.01, strong_buy consensus, YTD +16.42%; AI leader with data center demand intact despite flat 1M.",
-      "drivers": [
-        "P/E 27.01",
-        "strong_buy consensus",
-        "YTD +16.42%",
-        "AI leader"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AAPL YTD +24.69%, 1M +8.70%, P/E 38.17, buy consensus; iPhone 18 launch with AI features supports premium pricing and ecosystem lock-in.",
-      "drivers": [
-        "YTD +24.69%",
-        "1M +8.70%",
-        "iPhone 18 AI launch",
-        "buy consensus"
       ]
     }
   ]

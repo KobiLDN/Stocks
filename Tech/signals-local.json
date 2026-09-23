@@ -1,9 +1,154 @@
 {
-  "updated": "2026-09-21 14:42",
+  "updated": "2026-09-23 13:39",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "Meta is the epicentre of the AI-agent revolution \u2014 Muse topped the App Store, driving a 31.87% 1-month surge and a strong_buy consensus with a stellar 1.34 analyst score.",
+      "drivers": [
+        "+31.87% 1M momentum",
+        "strong_buy consensus, 1.34 an_score",
+        "Muse #1 App Store, news_s 0.182",
+        "AI monetization catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "Intel soared +41.94% in the past month and +27.51% in the past week on Muse-driven CPU demand; CEO Tan said Intel meets only 50% of customer demand, flagging a supply-constrained catalyst.",
+      "drivers": [
+        "+41.94% 1M, +27.51% 1W momentum",
+        "CEO: only 50% demand satisfied",
+        "buy consensus, 2.47 an_score",
+        "news_s 0.236, CPU shortage catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ARM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "ARM surged +39.54% in one month and +37.78% in one week, riding the CPU-demand wave from Muse; forecasts a server CPU market of $120B by 2030, with a buy consensus and positive news_s of 0.33.",
+      "drivers": [
+        "+39.54% 1M, +37.78% 1W",
+        "server CPU TAM $120B by 2030",
+        "buy consensus, 1.93 an_score",
+        "news_s 0.33, Muse catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "AMD crossed $1T market cap for the first time, with +179.13% YTD and +36.57% 1-month gains; strong_buy consensus and strong news sentiment (0.356) driven by its server CPU growth thesis.",
+      "drivers": [
+        "+179.13% YTD, +36.57% 1M",
+        "crossed $1T market cap",
+        "strong_buy consensus, 1.49 an_score",
+        "news_s 0.356, AI agent CPU demand"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Micron continues its impressive run with +247.72% YTD and +4.97% in a single day, driven by AI memory demand; strong_buy consensus (1.35) and a reasonable P/E of 23.58.",
+      "drivers": [
+        "+247.72% YTD, +20.40% 1M",
+        "P/E 23.58 reasonable",
+        "strong_buy consensus, 1.35 an_score",
+        "memory shortage catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "Qualcomm gained +25.75% in one month as it pushes into data-centre CPUs; cheap P/E of 22.23 and a 189bp dividend yield offer a compelling risk/reward entry despite a hold consensus.",
+      "drivers": [
+        "+25.75% 1M, +16.41% YTD",
+        "low P/E 22.23, div 189bp",
+        "data-centre CPU push catalyst",
+        "Muse-driven CPU demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "CrowdStrike posted +120.52% YTD and +31.14% 1-month returns, backed by a buy consensus and positive news_s of 0.178; extreme P/E (5001) flags overvaluation but AI-era cybersecurity demand keeps momentum strong.",
+      "drivers": [
+        "+120.52% YTD, +31.14% 1M",
+        "buy consensus, 1.70 an_score",
+        "news_s 0.178",
+        "AI cybersecurity demand catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Cloudflare gained +80.08% YTD and +25.91% in the past month, with a strong news_s of 0.355; the buy consensus (1.97) reflects confidence in its AI-driven edge compute growth.",
+      "drivers": [
+        "+80.08% YTD, +25.91% 1M",
+        "news_s 0.355 positive",
+        "buy consensus, 1.97 an_score",
+        "AI edge compute catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.738,
+      "rationale": "Fortinet has surged +123.75% YTD and +14.65% in the past month driven by AI security demand; a hold consensus (2.77) and low beta (1.059) temper risk, but momentum and news_s (0.149) remain supportive.",
+      "drivers": [
+        "+123.75% YTD, +14.65% 1M",
+        "beta 1.059 low volatility",
+        "news_s 0.149",
+        "AI cybersecurity demand"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Salesforce rebounded +11.78% in the past month despite a YTD dip; a buy consensus (1.73) and reasonable P/E of 21.64 support entry, while a new major product launch targets AI market share.",
+      "drivers": [
+        "+11.78% 1M rebound",
+        "buy consensus, 1.73 an_score",
+        "P/E 21.64 reasonable",
+        "new product launch catalyst"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.649,
+      "ytd": "+108.83%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +108.83% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +108.83% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MU",
@@ -132,184 +277,6 @@
         "P/E 21.8",
         "buy consensus",
         "enterprise AI opportunity"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.836,
-      "ytd": "+140.22%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +140.22% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +140.22% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.704,
-      "ytd": "+118.08%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +118.08% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +118.08% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.653,
-      "ytd": "+109.58%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +109.58% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +109.58% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.612,
-      "ytd": "+102.70%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +102.70% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +102.70% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "AMD is up +143.92% YTD with +12.53% 1M momentum, strong_buy consensus (an_score 1.26), and positive news sentiment 0.319, driven by AI accelerator demand and data center share gains.",
-      "drivers": [
-        "+143.92% YTD",
-        "+12.53% 1M momentum",
-        "strong_buy consensus 1.26",
-        "AI accelerator demand"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "INTC has surged +176.28% YTD with +12.52% 1M momentum, strong_buy consensus (an_score 1.26), and positive news sentiment, supported by foundry momentum and AI PC adoption.",
-      "drivers": [
-        "+176.28% YTD",
-        "+12.52% 1M momentum",
-        "strong_buy consensus 1.26",
-        "Foundry and AI PC catalysts"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "META is up +25.50% in 1M with strong_buy consensus (an_score 1.34) and positive news sentiment 0.057, driven by AI-driven ad targeting and Reels monetization.",
-      "drivers": [
-        "+25.50% 1M momentum",
-        "strong_buy consensus 1.34",
-        "AI ad targeting",
-        "Reels monetization"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "CRM has rebounded +24.03% in 1M, with buy consensus (an_score 1.75) and P/E 22.93, despite negative news sentiment -0.087, as AI-driven Agentforce adoption gains traction.",
-      "drivers": [
-        "+24.03% 1M momentum",
-        "P/E 22.93",
-        "buy consensus 1.75",
-        "Agentforce AI adoption"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.83,
-      "rationale": "QCOM is up +18.45% in 1M with buy consensus (an_score ~1.7) and positive news sentiment, driven by AI smartphone and automotive design wins.",
-      "drivers": [
-        "+18.45% 1M momentum",
-        "buy consensus ~1.7",
-        "AI smartphone growth",
-        "Automotive design wins"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NOW",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "NOW is up +15.88% in 1M with strong_buy consensus (an_score ~1.5) and positive news sentiment, driven by AI-powered workflow automation and strong enterprise demand.",
-      "drivers": [
-        "+15.88% 1M momentum",
-        "strong_buy consensus ~1.5",
-        "AI workflow automation",
-        "Enterprise demand"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "CRWD has strong momentum with +8.64% 1W and buy consensus (an_score ~1.7), positive news sentiment 0.025, driven by Falcon platform growth and AI-driven security demand.",
-      "drivers": [
-        "+8.64% 1W momentum",
-        "buy consensus ~1.7",
-        "Falcon platform growth",
-        "AI security demand"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "NET is up +70.36% YTD with +10.81% 1M momentum, buy consensus (an_score ~1.7), and positive news sentiment, driven by AI edge computing and cloud security expansion.",
-      "drivers": [
-        "+70.36% YTD",
-        "+10.81% 1M momentum",
-        "buy consensus ~1.7",
-        "AI edge computing"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "FTNT has positive momentum with +8.64% 1W, buy consensus (an_score ~1.7), and positive news sentiment 0.297, driven by secure networking and SASE growth.",
-      "drivers": [
-        "+8.64% 1W momentum",
-        "buy consensus ~1.7",
-        "SASE growth",
-        "Secure networking"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AAPL is up +24.69% YTD with +8.70% 1M momentum, buy consensus (an_score 2.2), and positive news sentiment 0.337, driven by AI features and services growth.",
-      "drivers": [
-        "+24.69% YTD",
-        "+8.70% 1M momentum",
-        "buy consensus 2.2",
-        "AI features and services"
       ]
     }
   ]

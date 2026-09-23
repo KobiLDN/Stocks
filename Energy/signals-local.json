@@ -1,9 +1,165 @@
 {
-  "updated": "2026-09-21 14:44",
+  "updated": "2026-09-23 13:41",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +36.55%, P/E 11.25, dividend yield 4.71%, and analyst score 1.67 (best in universe) make it the most attractive integrated major. Low short interest of 0.22% and strong fundamentals support upside despite neutral news sentiment.",
+      "drivers": [
+        "P/E 11.25",
+        "Dividend yield 4.71%",
+        "Analyst score 1.67",
+        "Short interest 0.22%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "YTD +33.46%, dividend yield 3.5%, and analyst score 1.72 with positive news sentiment of 0.141. Favored as a geopolitical hedge per [allmind.ai](https://allmind.ai/news/4df3afc1bbbeb9d3dc65ea547ce1d646d2302cca9f0bad580f5eeb65446ef9d0) with upstream exposure and lower regulatory risk than refiners.",
+      "drivers": [
+        "YTD +33.46%",
+        "Dividend 3.5%",
+        "Analyst score 1.72",
+        "Geopolitical hedge"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +27.92%, P/E 10.32, dividend yield 3.35%, and news sentiment 0.308. LNG Canada expansion talks with Abu Dhabi XRG per [gurufocus.com](https://www.gurufocus.com/news/9092154/shel-looks-125-overvalued-on-gf-value-as-dividend-sustainability-remains-strong) provide a strong catalyst, though GF Value suggests modest overvaluation.",
+      "drivers": [
+        "P/E 10.32",
+        "Dividend 3.35%",
+        "LNG Canada catalyst",
+        "News sentiment 0.308"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +76.04%, P/E 11.52, dividend yield 3.67%, and news sentiment 0.275. Strong YTD performance and LNG supply agreement with PTT expand Asian reach, but analyst consensus hold (score 3.0) tempers conviction.",
+      "drivers": [
+        "YTD +76.04%",
+        "P/E 11.52",
+        "Dividend 3.67%",
+        "LNG Asia expansion"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +4.13%, 1W +5.83%, dividend yield 2.77%, and analyst buy with score 1.94. Defensive UK utility with positive short-term momentum and stable cash flows, benefiting from power demand growth.",
+      "drivers": [
+        "1M +4.13%",
+        "1W +5.83%",
+        "Dividend 2.77%",
+        "Analyst score 1.94"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +31.78%, analyst score 1.60 (most bullish in universe), and news sentiment 0.222. Brazil seismic survey launch suggests 16% undervaluation per headline, but P/E 25.42 is elevated relative to peers.",
+      "drivers": [
+        "Analyst score 1.60",
+        "News sentiment 0.222",
+        "Undervaluation catalyst",
+        "YTD +31.78%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "YTD +32.00%, P/E 20.37, dividend yield 2.60%, and record oil output with lower spending. Low beta 0.175 and short interest 1.08% indicate stability, though P/E is higher than peers.",
+      "drivers": [
+        "YTD +32.00%",
+        "Record output",
+        "Beta 0.175",
+        "Short interest 1.08%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +32.40%, P/E 16.57, dividend yield 2.63%, and analyst buy with score 1.74. Strong YTD performance but 1W -11.29% reflects broader oil price weakness; still attractive long-term E&P exposure.",
+      "drivers": [
+        "YTD +32.40%",
+        "P/E 16.57",
+        "Analyst score 1.74",
+        "Dividend 2.63%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +34.73%, P/E 16.91, short interest 0.01%, and news sentiment 0.305. Trades below raised analyst targets per headline, offering potential upside, though 1W -11.35% shows near-term volatility.",
+      "drivers": [
+        "YTD +34.73%",
+        "Short interest 0.01%",
+        "News sentiment 0.305",
+        "Below analyst targets"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DNNGY",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1W +7.95%, 1D +2.42%, and YTD +8.03% with positive news sentiment 0.27. High short-term momentum and UK offshore wind tax resolution catalyst, but no PE and negative 1Y return of -45% add significant risk.",
+      "drivers": [
+        "1W +7.95%",
+        "1D +2.42%",
+        "UK wind tax catalyst",
+        "YTD +8.03%"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.827,
+      "ytd": "+138.71%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +138.71% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +138.71% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.784,
+      "ytd": "+131.52%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +131.52% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +131.52% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +288,6 @@
         "analyst buy",
         "utility stability",
         "YTD +9.03%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.914,
-      "rationale": "VLO has YTD +153.24%, 1M +17.85%, P/E 16.8, div yield 1.19%, analyst buy, and strong news sentiment 0.129. Refining margins remain elevated with Brent above $100.",
-      "drivers": [
-        "+153% YTD momentum",
-        "+17.85% 1M gain",
-        "P/E 16.8",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.945,
-      "rationale": "MPC shows YTD +158.48%, 1M +15.54%, 1W +7.53%, P/E 14.35, analyst buy, and positive news sentiment 0.153. Tight gasoline and diesel markets support refining margins.",
-      "drivers": [
-        "+158% YTD return",
-        "+15.54% 1M momentum",
-        "P/E 14.35",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "TTE has YTD +39.19%, 1Y +50%, P/E 11.36, high div yield 4.67%, analyst buy, and neutral news sentiment. Integrated oil major with low beta and strong dividend.",
-      "drivers": [
-        "P/E 11.36 (low)",
-        "div yield 4.67%",
-        "buy rating",
-        "+39% YTD"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "CVX has YTD +39.50%, 1M +3.73%, P/E 20.36, div yield 3.37%, best analyst score 1.72 (buy), and positive news sentiment 0.37. Venezuela operations offer upside.",
-      "drivers": [
-        "analyst score 1.72 (best)",
-        "news sentiment +0.37",
-        "+39.5% YTD",
-        "div yield 3.37%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "COP has YTD +40.77%, 1Y +44%, P/E 17.55, div yield 2.54%, analyst buy with score 1.74, and positive news sentiment 0.171. E&P exposure to strong oil prices.",
-      "drivers": [
-        "+40.8% YTD",
-        "analyst score 1.74",
-        "P/E 17.55",
-        "positive sentiment 0.171"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "EQNR has YTD +86.65%, 1M +5.95%, P/E 11.98, div yield 3.53%, but hold rating (score 3.33). News sentiment slightly positive 0.025; LNG expansion announced amid supply disruptions.",
-      "drivers": [
-        "+86.65% YTD",
-        "P/E 11.98",
-        "div yield 3.53%",
-        "LNG expansion catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "XOM has YTD +35.79%, 1Y +45%, P/E 21.01, div yield 2.52%, analyst buy, and news sentiment 0.031. Nearing potential Venezuela oil deal with 50B barrel fields.",
-      "drivers": [
-        "+35.8% YTD",
-        "div yield 2.52%",
-        "advancing Venezuela talks",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "SHEL has YTD +30.50%, 1M +4.14%, P/E 10.6 (low), div yield 3.27%, analyst buy, but negative news sentiment -0.167 due to LNG buffer warning. Low P/E provides value buffer.",
-      "drivers": [
-        "P/E 10.6 (lowest among majors)",
-        "div yield 3.27%",
-        "buy rating",
-        "+30.5% YTD"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BP has YTD +31.47%, 1M +4.63%, P/E 21.73, high div yield 4.45%, analyst buy, and slightly negative news sentiment -0.055. Attractive income but higher P/E.",
-      "drivers": [
-        "div yield 4.45%",
-        "+31.5% YTD",
-        "buy rating",
-        "+4.63% 1M"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SSE.L has YTD +11.50%, 1M +3.62%, 1W +5.20%, 1D +3.58%, P/E 23.69, div yield 2.86%, analyst buy (score 1.94), and positive news sentiment 0.185. Utility benefiting from UK policy support.",
-      "drivers": [
-        "+5.20% 1W momentum",
-        "buy rating score 1.94",
-        "positive sentiment 0.185",
-        "UK utility policy backdrop"
       ]
     }
   ]

@@ -1,9 +1,137 @@
 {
-  "updated": "2026-09-21 14:41",
+  "updated": "2026-09-23 13:37",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RKLB",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "1W +13.27%, record backlog $2.36B, Cantor Fitzgerald reiterates Overweight $122 target, Iridium acquisition catalyst.",
+      "drivers": [
+        "1W +13.27% momentum",
+        "Backlog $2.36B",
+        "Cantor Fitzgerald $122 PT",
+        "Iridium deal"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SPCX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "1M +14.61%, news sentiment 0.337, analyst buy, upcoming Starship orbital flight catalyst.",
+      "drivers": [
+        "1M +14.61% momentum",
+        "News sentiment 0.337",
+        "Analyst buy",
+        "Starship flight"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PLTR",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "1W +7.20%, YTD +10.20%, analyst buy, AI sovereignty strategy gaining traction.",
+      "drivers": [
+        "1W +7.20% momentum",
+        "YTD +10.20%",
+        "Analyst buy",
+        "AI sovereignty"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RR.L",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +23.80%, 1W +4.34%, analyst buy, nuclear energy and defence exposure.",
+      "drivers": [
+        "YTD +23.80%",
+        "1W +4.34% momentum",
+        "Analyst buy",
+        "Nuclear energy"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1W +8.37%, short interest 21.46% potential squeeze, space mobile direct-to-cell catalyst.",
+      "drivers": [
+        "1W +8.37% momentum",
+        "Short interest 21.46%",
+        "Space mobile catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Strong buy analyst consensus, YTD +7.46%, new naval and tactical contracts.",
+      "drivers": [
+        "Strong buy analyst",
+        "YTD +7.46%",
+        "New defence contracts"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +14.11%, P/E 25.36, analyst buy, positive news sentiment 0.252.",
+      "drivers": [
+        "YTD +14.11%",
+        "P/E 25.36",
+        "Analyst buy",
+        "News sentiment 0.252"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +29.47%, P/E 15.55, but hold rating limits upside conviction.",
+      "drivers": [
+        "YTD +29.47%",
+        "P/E 15.55",
+        "Hold rating"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1W +3.68%, news sentiment 0.35, analyst buy, recent analyst upgrades.",
+      "drivers": [
+        "1W +3.68% bounce",
+        "News sentiment 0.35",
+        "Analyst buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1W +2.53%, news sentiment 0.264, analyst buy, aerospace aftermarket strength.",
+      "drivers": [
+        "1W +2.53% momentum",
+        "News sentiment 0.264",
+        "Analyst buy"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,139 +260,6 @@
         "buy analyst consensus",
         "space sector diversification",
         "low short interest 2.76%"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SPCX",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "8% one-month momentum, Q2 revenue surged 92% YoY to $7.8B, Starlink users doubled to 12M, and Pentagon confirmed space-weapons budget with Golden Dome \u2014 all catalysts per [247wallst.com] and [gate.com].",
-      "drivers": [
-        "1M +8.00%",
-        "Q2 rev +92% YoY",
-        "Starship Flight 14 catalyst",
-        "Pentagon space weapons spend"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +18.16%, P/E 26.11, $1.5B CENTCOM contract award (Apollo), $32B backlog, and FY revenue grew 10.9% to $9.6B \u2014 see [insidermonkey.com].",
-      "drivers": [
-        "YTD +18.16%",
-        "$1.5B CENTCOM win",
-        "$32B backlog",
-        "P/E 26.11"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Top YTD performer at +33.42%, 1M +6.11%, P/E 15.47, and cited as best of the bunch in Q2 earnings.",
-      "drivers": [
-        "YTD +33.42%",
-        "1M +6.11%",
-        "P/E 15.47",
-        "Q2 earnings beat"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1W +6.26%, revenue up 93% YoY with 86% gross margin, commercial revenue surging $495M \u2014 despite high P/E 149, analyst consensus is buy per [fool.com].",
-      "drivers": [
-        "1W +6.26%",
-        "Rev +93% YoY",
-        "86% gross margin",
-        "Buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1W +4.24%, P/E 12.31, 3.01% dividend yield, and Golden Dome Space-Based Interceptor contract makes it a hidden beneficiary of declassified space-weapons budgets per [marketspectator.com].",
-      "drivers": [
-        "1W +4.24%",
-        "P/E 12.31",
-        "Golden Dome SBI contract",
-        "3.01% dividend yield"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +23.64%, 1W +3.48%, 1D +2.72%, P/E 41.11, strong UK defence momentum with no analyst rating but solid price action.",
-      "drivers": [
-        "YTD +23.64%",
-        "1W +3.48%",
-        "1D +2.72%",
-        "UK defence demand"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1W +9.46%, 1D +5.47%, analyst buy rating, space momentum from SpaceX catalyst spillover, though YTD -10.75% and high beta 2.61.",
-      "drivers": [
-        "1W +9.46%",
-        "1D +5.47%",
-        "Analyst buy",
-        "Space sector tailwind"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1W +11.09%, 1D +4.41% strong weekly snap-back, analyst buy, yet YTD -36.23% and no P/E; high short interest 11.21% could amplify gains.",
-      "drivers": [
-        "1W +11.09%",
-        "1D +4.41%",
-        "Analyst buy",
-        "Short interest 11.21%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "P/E 15.21 reasonable, analyst buy, YTD -6.99% but 1W +2.18%, defence drone exposure with manageable valuation.",
-      "drivers": [
-        "P/E 15.21",
-        "Analyst buy",
-        "1W +2.18%",
-        "Defence drone exposure"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Strong_buy analyst consensus (score 1.45), YTD +7.20%, P/E 31.14, low short 1.17%, steady defence prime subsidiary with growing backlog.",
-      "drivers": [
-        "Strong_buy consensus",
-        "YTD +7.20%",
-        "P/E 31.14",
-        "Low short interest 1.17%"
       ]
     }
   ]

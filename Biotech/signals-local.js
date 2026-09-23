@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-21 14:39",
+  "updated": "2026-09-23 13:36",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "+491% YTD, +31% 1M; Phase 3 INTerpath-001 melanoma data won ESMO Presidential Symposium slot Oct 24, with the stock surging 9% on the announcement alone [247wallst.com](https://247wallst.com/investing/2026/09/21/moderna-surges-9-as-phase-3-melanoma-data-wins-presidential-symposium-slot-merck-and-biontech-edge-higher/).",
+      "drivers": [
+        "+491% YTD",
+        "+31% 1M momentum",
+        "ESMO Presidential Symposium catalyst",
+        "Short interest 12%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+70.8% YTD, +19.3% 1M, analyst consensus strong_buy (score 1.46); strong momentum in oncology liquid biopsy testing with low short interest at 3.94%.",
+      "drivers": [
+        "+71% YTD",
+        "Strong_buy consensus",
+        "Low short interest 3.9%",
+        "High momentum 1M +19%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+84% YTD, +10.9% 1M; added to S&P 500 Equal Weight Index, shifting to larger fund mandates. Clinical genomics volumes and consumables mix support recurring revenue growth.",
+      "drivers": [
+        "+84% YTD",
+        "S&P 500 EW Index addition",
+        "Strong 1M +10.9%",
+        "P/E 45 justified by growth"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ALNY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "TTR franchise revenue >$1B in Q2; AMVUTTRA cardiomyopathy launch strong with 50%+ physician market share; generic tafamidis delayed to 2031. Pipeline catalysts include HD Phase I data in Oct 2026 [thelincolnianonline.com](https://www.thelincolnianonline.com/2026/09/23/alnylam-highlights-amvuttra-momentum-resets-2026-ttr-revenue-outlook.html).",
+      "drivers": [
+        "$1B+ TTR franchise Q2",
+        "Generic tafamidis delay 2031",
+        "HD pipeline catalyst Oct 2026",
+        "Buy consensus score 1.69"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+33.4% YTD, +6.6% 1M; P/E 18.3, low beta 0.42, positive news sentiment 0.30 \u2014 strong setup in oncology with manageable risk.",
+      "drivers": [
+        "+33% YTD",
+        "P/E 18.3 attractive",
+        "Positive sentiment 0.30",
+        "Low volatility beta 0.42"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+4.6% 1M, analyst consensus buy (score 1.72); EU support for two key drugs reinforces regulatory momentum, despite YTD dip of -6.75%.",
+      "drivers": [
+        "EU regulatory support",
+        "Buy consensus 1.72",
+        "1M +4.6% recovery",
+        "P/E 25.4 reasonable"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "RXRX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+25% 1W, +24.6% 1M; AI-driven drug discovery platform with high short interest 35% suggests potential squeeze risk, but fundamentals are exploratory.",
+      "drivers": [
+        "+25% 1W momentum",
+        "Short interest 35% squeeze risk",
+        "AI platform thesis",
+        "Positive sentiment 0.18"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PACB",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "+14.8% 1M, +9.7% 1W; small-cap genomics play with beta 2.31, high risk/reward. Recent momentum driven by long-term investor narrative despite negative YTD.",
+      "drivers": [
+        "+14.8% 1M momentum",
+        "High beta 2.31 risk/reward",
+        "Small-cap genomics",
+        "Buy consensus 2.12"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "+51.9% YTD, +22.2% 1M; high short interest 29.8% adds volatility, but recent momentum is strong. Fundamental concerns remain with negative sentiment.",
+      "drivers": [
+        "+52% YTD",
+        "+22% 1M momentum",
+        "Short interest 29.8%",
+        "High risk/reward profile"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SRPT",
+      "signal": "buy",
+      "confidence": 0.3,
+      "rationale": "+14.8% 1M, but YTD -2.4%, high short interest 27.9%, negative sentiment -0.19, and analyst hold rating (score 2.74). Risk of Duchenne pipeline setbacks limits upside.",
+      "drivers": [
+        "Short interest 27.9%",
+        "Negative sentiment -0.19",
+        "Hold consensus",
+        "YTD -2.4% negative"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTRA",
@@ -132,151 +265,6 @@ window.SIGNALS_DATA = {
         "P/E 29.59",
         "CF franchise strength",
         "pipeline catalysts"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+399.16%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +399.16% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +399.16% \u2265 182.9% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "NTRA is up +91% over 1Y and +60% YTD, with a +17.52% 1M momentum and a strong_buy analyst consensus (score 1.46). Positive news sentiment (0.338) and a new all-time high signal robust momentum.",
-      "drivers": [
-        "+91% 1Y return",
-        "+60% YTD",
-        "strong_buy consensus 1.46",
-        "New all-time high"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "EXEL shows +40% 1Y and +34.21% YTD with a +10.11% 1M gain, supported by a low P/E of 17.89 and positive news sentiment (0.084). The stock has strong momentum with reasonable valuation.",
-      "drivers": [
-        "+40% 1Y return",
-        "+34.21% YTD",
-        "P/E 17.89",
-        "Positive news sentiment 0.084"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "ILMN is up +123% 1Y and +82.49% YTD, with a +30.21% 1M surge and a +21.82% 1W gain. Despite a high P/E of 42.71, the strong momentum and positive news sentiment (0.164) support a buy.",
-      "drivers": [
-        "+123% 1Y return",
-        "+82.49% YTD",
-        "+30.21% 1M",
-        "Positive news sentiment 0.164"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CRSP",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "CRSP is up +8.22% 1M and +9.69% 1W, with a strong news sentiment of 0.398 and a buy analyst consensus (score 2.05). The gene-editing sector is gaining momentum, and the stock is rebounding from a -16% 1Y decline.",
-      "drivers": [
-        "+8.22% 1M",
-        "+9.69% 1W",
-        "News sentiment 0.398",
-        "Buy consensus 2.05"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "NVAX is up +40.25% YTD and +26.10% 1M, with a +7.53% 1W gain and a buy analyst consensus (score 2.33). The stock is benefiting from the cancer vaccine trade, though high short interest (29.77%) adds risk.",
-      "drivers": [
-        "+40.25% YTD",
-        "+26.10% 1M",
-        "Buy consensus 2.33",
-        "High short interest 29.77%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AZN is up +7.51% 1M and +5.70% 1W, with a positive news sentiment of 0.251 and a buy analyst consensus (score 1.72). The recent HER2-directed lung cancer Phase III success is a key catalyst.",
-      "drivers": [
-        "+7.51% 1M",
-        "+5.70% 1W",
-        "News sentiment 0.251",
-        "HER2 lung cancer Phase III success"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "RXRX is up +14.56% 1M and +12.03% 1W, with a +10.63% 1D gain and a strong_buy analyst consensus (score 1.43). Despite a -35% 1Y decline, the recent momentum and low market cap ($1.899B) offer upside potential.",
-      "drivers": [
-        "+14.56% 1M",
-        "+12.03% 1W",
-        "Strong_buy consensus 1.43",
-        "Low market cap $1.899B"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PACB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "PACB is up +21.05% 1M and +8.66% 1W, with a buy analyst consensus (score 2.12). The stock is rebounding from a -25% YTD decline, and the high short interest (18.34%) could fuel a short squeeze.",
-      "drivers": [
-        "+21.05% 1M",
-        "+8.66% 1W",
-        "Buy consensus 2.12",
-        "Short interest 18.34%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SRPT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SRPT is up +14.71% 1M, with a buy analyst consensus (score 1.74) and positive news sentiment (0.046). The stock is recovering from a -3% YTD decline, and the rare-disease pipeline offers long-term potential.",
-      "drivers": [
-        "+14.71% 1M",
-        "Buy consensus 1.74",
-        "Positive news sentiment 0.046",
-        "Rare-disease pipeline"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MRNA is up +40.25% YTD and +26.10% 1M, with a buy analyst consensus (score 2.33) and positive news sentiment (0.045). The cancer vaccine trade is a key catalyst, though high short interest (29.77%) adds risk.",
-      "drivers": [
-        "+40.25% YTD",
-        "+26.10% 1M",
-        "Buy consensus 2.33",
-        "Cancer vaccine trade"
       ]
     }
   ]
