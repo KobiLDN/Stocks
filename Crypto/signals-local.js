@@ -1,9 +1,141 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-23 13:39",
+  "updated": "2026-09-25 13:37",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "NEAR leads with +199% YTD and +142% 1m, boosted by Bitwise NEAR ETF approval and Ondo Finance partnership for tokenized stocks, despite neutral news sentiment of -0.026.",
+      "drivers": [
+        "+199% YTD",
+        "+142% 1m",
+        "Bitwise ETF approval",
+        "Ondo tokenized stocks"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "FET surged +15.6% 1d and +38% 1m on relief that its token was unaffected by a security incident, though news sentiment is -0.832; strong momentum and +16% YTD support the pick.",
+      "drivers": [
+        "+15.6% 1d",
+        "+38% 1m",
+        "relief rally after security clarification"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "MINA shows extreme momentum with +86% YTD, +129% 1m, and +46% 1w, driven by strong short-term buying despite a small $0.18B market cap.",
+      "drivers": [
+        "+86% YTD",
+        "+129% 1m",
+        "+46% 1w",
+        "small cap $0.18B"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AIOZ has +38% YTD, +120% 1m, and +61% 1w, reflecting massive short-term momentum on a tiny $0.15B market cap.",
+      "drivers": [
+        "+38% YTD",
+        "+120% 1m",
+        "+61% 1w",
+        "market cap $0.15B"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SUI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SUI is down -28% YTD but has strong recent momentum with +33% 1m, +31% 1w, and +5.7% 1d, supported by a $4.2B market cap and positive headline momentum.",
+      "drivers": [
+        "+33% 1m",
+        "+31% 1w",
+        "+5.7% 1d",
+        "market cap $4.2B"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AVAX has -17% YTD but strong weekly momentum (+29% 1w, +38% 1m) and positive news sentiment of 0.232, with a $4.5B market cap.",
+      "drivers": [
+        "+29% 1w",
+        "+38% 1m",
+        "news sentiment 0.232",
+        "market cap $4.5B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TAO",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TAO delivers +37% YTD, +29% 1m, and +24% 1w, with a solid $3.5B market cap and no negative news headwinds.",
+      "drivers": [
+        "+37% YTD",
+        "+29% 1m",
+        "+24% 1w",
+        "market cap $3.5B"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SOL is down -6.5% YTD but has +20% 1m, +10% 1w, positive news sentiment 0.094, and a large $68B market cap, offering relative stability.",
+      "drivers": [
+        "+20% 1m",
+        "+10% 1w",
+        "news sentiment 0.094",
+        "large cap $68B"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "XLM has +9% YTD, +20% 1m, +17% 1w, +8% 1d, and positive news sentiment of 0.22, with a $7.7B market cap.",
+      "drivers": [
+        "+9% YTD",
+        "+20% 1m",
+        "+17% 1w",
+        "news sentiment 0.22"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "LINK has +10% YTD, +18% 1m, +14% 1w, +7.9% 1d, and positive news sentiment 0.013, with a $10B market cap.",
+      "drivers": [
+        "+10% YTD",
+        "+18% 1m",
+        "+14% 1w",
+        "news sentiment 0.013"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BTC",
@@ -132,139 +264,6 @@ window.SIGNALS_DATA = {
         "AI agent payments news",
         "market cap $9.49B",
         "4-month high"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "NEAR leads with +183% YTD, +121% 1m, +76% 1w, and Intents volume nearing $30B with privacy features and milestone incentives driving fresh capital inflows [cointelegraph.com](https://cointelegraph.com/markets/near-price-surge-intents-zcash-privacy).",
-      "drivers": [
-        "+183% YTD",
-        "+121% 1m",
-        "Intents volume $29.3B",
-        "privacy & milestone catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AVAX",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "AVAX surged +47% 1m, +51% 1w, +15.6% 1d with a clean breakout above $10 on altcoin rotation and RWA narrative, part of a seven-token basket leading the rally [coinmarketcap.com](https://coinmarketcap.com/top-stories/6ab0acf4d28b6a241fa08d12/).",
-      "drivers": [
-        "+51% 1w",
-        "breakout above $10",
-        "altcoin rotation",
-        "RWA narrative"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SOL",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SOL hit a 7-month high above $110 with +19.8% 1m, +10.9% 1w, driven by the Alpenglow upgrade, SEC Innovation Exemption, and 12 consecutive weeks of ETF inflows [blockchain.news](https://blockchain.news/news/20260921-price-prediction-sol-breakout-or-bull-trap-116-or).",
-      "drivers": [
-        "Alpenglow upgrade Sep 28",
-        "ETF inflows $60.9M daily",
-        "7-month high",
-        "$66B market cap"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "MINA shows extreme momentum with +73% YTD, +130% 1m, +50.8% 1w, +26.5% 1d, reflecting strong privacy narrative demand despite a tiny $169M market cap.",
-      "drivers": [
-        "+130% 1m",
-        "+50.8% 1w",
-        "privacy narrative",
-        "small cap high beta"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SUI",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "SUI gained +34% 1w, +17.9% 1d, +15.3% 1m with a $4B market cap, riding the altcoin rotation wave as a newer L1 with strong weekly momentum.",
-      "drivers": [
-        "+34% 1w",
-        "+17.9% 1d",
-        "altcoin rotation",
-        "$4B market cap"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "TAO has +23% YTD, +17.5% 1m, +15.2% 1w, +6% 1d, benefiting from AI narrative tailwinds and a $3.1B market cap with consistent upward momentum.",
-      "drivers": [
-        "+23% YTD",
-        "+17.5% 1m",
-        "AI narrative",
-        "$3.1B market cap"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "RNDR rallied +36% YTD, +25% 1w, +14.6% 1d, +16.3% 1m, driven by AI/rendering demand and a $907M market cap, making it a high-beta AI play.",
-      "drivers": [
-        "+36% YTD",
-        "+25% 1w",
-        "AI/rendering narrative",
-        "$907M market cap"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "GRT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "GRT surged +32% 1m, +20.5% 1w, +9.9% 1d despite a -32% YTD, with AI indexing narrative and a small $247M cap offering catch-up potential.",
-      "drivers": [
-        "+32% 1m",
-        "+20.5% 1w",
-        "AI indexing",
-        "small cap recovery play"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "AIOZ posted +63.6% 1m, +27.5% 1w, +7.5% 1d with a tiny $118M cap, riding AI/DePIN hype and strong short-term momentum.",
-      "drivers": [
-        "+63.6% 1m",
-        "+27.5% 1w",
-        "AI/DePIN narrative",
-        "micro-cap momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DOT",
-      "signal": "buy",
-      "confidence": 0.58,
-      "rationale": "DOT has +20.6% 1m, +12.7% 1w, +5.95% 1d with the highest news sentiment at 0.494, and a $2B market cap making it a relatively safer altcoin rotation play.",
-      "drivers": [
-        "+20.6% 1m",
-        "news sentiment 0.494",
-        "altcoin rotation",
-        "$2B market cap"
       ]
     }
   ]

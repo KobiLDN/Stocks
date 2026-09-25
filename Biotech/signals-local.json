@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-23 13:36",
+  "updated": "2026-09-25 13:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "+640% 1Y, +531% YTD, positive news sentiment 0.169; Phase 3 INTerpath-001 melanoma data positive and UAE investment talks drove stock to 4-year high [insidermonkey.com](https://www.insidermonkey.com/news/moderna-inc-mrna-holds-high-level-investment-talks-with-uae-soars-to-4-year-peak-1844110/).",
+      "drivers": [
+        "extreme momentum",
+        "cancer vaccine catalyst",
+        "UAE investment talks",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+199% 1Y, +103.87% YTD, P/E 47.63; S&P 500 inclusion and raised full-year guidance drove strong institutional buying [tradingkey.com](https://www.tradingkey.com/news/market-movers/262185599-market-movers-ilmn-20260924).",
+      "drivers": [
+        "S&P 500 inclusion",
+        "raised guidance",
+        "strong momentum",
+        "institutional buying"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "+151% 1Y, +78.64% YTD, strong_buy analyst score 1.46, low short interest 3.43%; strong momentum with no earnings but high growth expectations.",
+      "drivers": [
+        "strong_buy consensus",
+        "low short interest",
+        "very high YTD return",
+        "genomics growth"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+65% 1Y, +27.30% YTD, P/E 40.49, analyst buy score 1.89; advancing at-home LEQEMBI pen and kidney disease data provide near-term catalysts.",
+      "drivers": [
+        "strong YTD return",
+        "low beta 0.171",
+        "analyst buy",
+        "LEQEMBI pen catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+48% 1Y, +32.97% YTD, P/E 17.83, positive news sentiment 0.241; reasonable valuation and solid momentum despite potential FDA delay for zanzalintinib.",
+      "drivers": [
+        "reasonable P/E",
+        "positive news sentiment",
+        "strong YTD",
+        "oncology pipeline"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ALNY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "-44% 1Y but +3.96% 1M, analyst buy score 1.69; AMVUTTRA momentum and upcoming Huntington's disease Phase 1 data in October provide catalysts [thelincolnianonline.com](https://www.thelincolnianonline.com/2026/09/23/alnylam-highlights-amvuttra-momentum-resets-2026-ttr-revenue-outlook.html).",
+      "drivers": [
+        "analyst buy",
+        "AMVUTTRA momentum",
+        "Huntington's catalyst",
+        "recent uptick"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AZN",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Strong_buy analyst, P/E 24.75, dividend yield 1.92%; negative YTD -8.75% offers value entry in a large-cap with precision medicine pipeline.",
+      "drivers": [
+        "strong_buy consensus",
+        "reasonable P/E",
+        "dividend yield",
+        "value entry"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+34% 1Y, +25.31% YTD, analyst buy score 1.70, low beta 0.35; solid large-cap with dividend yield 2.17% and consistent momentum.",
+      "drivers": [
+        "analyst buy",
+        "low beta",
+        "dividend yield",
+        "consistent YTD gain"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+41% 1Y, P/E 19.84, analyst buy score 1.93, low beta 0.193; undervalued relative to peers with strong fundamentals.",
+      "drivers": [
+        "low P/E",
+        "analyst buy",
+        "low beta",
+        "strong 1-year return"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+35% 1Y, +15.54% YTD, P/E 30.02, analyst buy score 1.66; stable large-cap with low beta 0.32 and positive news sentiment 0.224.",
+      "drivers": [
+        "analyst buy",
+        "low beta",
+        "positive news sentiment",
+        "stable growth"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MRNA",
@@ -132,139 +265,6 @@
         "Negative sentiment -0.19",
         "Hold consensus",
         "YTD -2.4% negative"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +61.42%, 1W +12.30%, strong_buy analyst consensus (score 1.46), positive news sentiment 0.178, and landmark lung cancer MRD data at IASLC 2026 driving momentum.",
-      "drivers": [
-        "+61% YTD",
-        "strong_buy consensus 1.46",
-        "lung cancer MRD data catalyst",
-        "low short interest 3.94%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +78.36%, 1M +16.89%, 1W +16.07%, boosted by S&P 500 re-inclusion and Q2 revenue beat of $1.16B (+9.5% YoY), though P/E 44.62 is elevated.",
-      "drivers": [
-        "+78% YTD",
-        "S&P 500 re-inclusion",
-        "Q2 revenue beat",
-        "NovaSeq X demand"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Recent CHMP backing for Enhertu (53% risk reduction in breast cancer) and Klygefa, plus FDA priority review for rare bone disease drug; P/E 25, analyst buy (score 1.72).",
-      "drivers": [
-        "CHMP backing for Enhertu/Klygefa",
-        "FDA priority review",
-        "P/E 25",
-        "buy consensus 1.72"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +33.91%, 1M +7.30%, P/E 18.35, low beta 0.422, and upcoming zanzalintinib launch with cabozantinib topping $3B in sales.",
-      "drivers": [
-        "+34% YTD",
-        "P/E 18.35",
-        "low beta 0.42",
-        "oncology pipeline catalysts"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +25.67%, 1W +5.03%, analyst buy (score 1.75), positive news sentiment 0.264, and Morgan Stanley highlighting its HIV prevention play.",
-      "drivers": [
-        "+26% YTD",
-        "buy consensus 1.75",
-        "HIV prevention focus",
-        "positive sentiment 0.264"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RXRX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1W +19.69%, 1D +7.89%, driven by AI drug platform progress and FAP Phase II data at Morgan Stanley conference; speculative with 35% short interest.",
-      "drivers": [
-        "+20% weekly",
-        "AI platform catalyst",
-        "FAP Phase II data",
-        "high short interest 35%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +41.80%, 1M +15.02%, 1W +7.32%, but high beta 2.45 and short interest 29.77% add risk; no P/E, analyst buy (score 2.33).",
-      "drivers": [
-        "+42% YTD",
-        "+15% monthly",
-        "high beta 2.45",
-        "short squeeze potential"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +7.23%, P/E 38.75, analyst buy (score 1.63), strong GLP-1 growth trajectory and positive news sentiment 0.292.",
-      "drivers": [
-        "P/E 38.75",
-        "buy consensus 1.63",
-        "GLP-1 franchise strength",
-        "positive sentiment 0.292"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BMY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +20.52%, P/E 13.89, low beta 0.227, positive news sentiment 0.443, and growing Wall Street bull case.",
-      "drivers": [
-        "P/E 13.89",
-        "low beta 0.23",
-        "+21% YTD",
-        "positive sentiment 0.443"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +12.43%, P/E 29.59, analyst buy (score 1.68), strong CF franchise and pipeline, though recent 1M -7.92% reflects some pullback.",
-      "drivers": [
-        "buy consensus 1.68",
-        "P/E 29.59",
-        "CF franchise strength",
-        "pipeline catalysts"
       ]
     }
   ]

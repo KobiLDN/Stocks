@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-23 13:41",
+  "updated": "2026-09-25 13:40",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "YTD +39.65%, P/E 11.47, dividend yield 4.62%, positive news sentiment 0.338, and HSBC upgrade to Buy with raised target to \u20ac93.",
+      "drivers": [
+        "YTD +39.65%",
+        "P/E 11.47",
+        "dividend yield 4.62%",
+        "HSBC upgrade"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +35.60%, P/E 19.76, dividend yield 3.46%, HSBC retained Buy with target raised to $250, low Middle East exposure.",
+      "drivers": [
+        "YTD +35.60%",
+        "HSBC target $250",
+        "low Middle East risk",
+        "analyst score 1.72"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +30.20%, P/E 10.56, dividend yield 3.28%, Morgan Stanley upgrade and strong Q2 earnings of $9.8B.",
+      "drivers": [
+        "YTD +30.20%",
+        "P/E 10.56",
+        "Morgan Stanley upgrade",
+        "strong Q2 earnings"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +28.55%, dividend yield 4.53%, HSBC upgrade to Buy with target raised to 640p, positive news sentiment 0.203.",
+      "drivers": [
+        "YTD +28.55%",
+        "dividend yield 4.53%",
+        "HSBC upgrade",
+        "news sentiment 0.203"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.832,
+      "rationale": "YTD +139.49%, 1M +10.16%, refining margin doubled to $36.33/bbl, positioned for Iran war supply crunch.",
+      "drivers": [
+        "YTD +139.49%",
+        "1M +10.16%",
+        "refining margin $36.33/bbl",
+        "Iran war beneficiary"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.805,
+      "rationale": "YTD +135.03%, 1M +12.47%, 1D +1.86%, strong refining momentum similar to MPC.",
+      "drivers": [
+        "YTD +135.03%",
+        "1M +12.47%",
+        "1D +1.86%",
+        "refining momentum"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +34.85%, record oil output, raised LNG target to 50M tons, dividend yield 2.56%.",
+      "drivers": [
+        "YTD +34.85%",
+        "record oil output",
+        "LNG target 50M tons",
+        "dividend yield 2.56%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +81.76%, P/E 11.64, dividend yield 3.64%, low beta -0.727 provides defensive diversification.",
+      "drivers": [
+        "YTD +81.76%",
+        "P/E 11.64",
+        "dividend yield 3.64%",
+        "low beta -0.727"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +38.90%, news sentiment 0.231, low short interest 0.02%, analyst buy rating.",
+      "drivers": [
+        "YTD +38.90%",
+        "news sentiment 0.231",
+        "short interest 0.02%",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +36.70%, analyst score 1.74 (bullish), Iran war beneficiary with low Middle East exposure.",
+      "drivers": [
+        "YTD +36.70%",
+        "analyst score 1.74",
+        "Iran war beneficiary",
+        "low Middle East exposure"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TTE",
@@ -132,162 +265,6 @@ window.SIGNALS_DATA = {
         "1D +2.42%",
         "UK wind tax catalyst",
         "YTD +8.03%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.827,
-      "ytd": "+138.71%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +138.71% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +138.71% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.784,
-      "ytd": "+131.52%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +131.52% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +131.52% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.917,
-      "rationale": "YTD +153.7%, 1M +19.36%, P/E 17.24, diesel tightness supports refining margins [wsj.com](https://www.wsj.com/finance/commodities-futures/oil-declines-as-concerns-over-extended-supply-disruptions-ease-f7ff8ec9)",
-      "drivers": [
-        "YTD +153.7%",
-        "1M +19.36%",
-        "diesel margin tailwind",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.956,
-      "rationale": "YTD +160.28%, 1M +17.78%, P/E 14.73, strong refining momentum with diesel and jet fuel upside",
-      "drivers": [
-        "YTD +160.28%",
-        "1M +17.78%",
-        "P/E 14.73",
-        "refining margin catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +38.14%, P/E 20.16, dividend yield 3.4%, analyst score 1.72, bullish trade idea with $27B FCF [tradevae.com](https://www.tradevae.com/news/trade-ideas/Chevron-Trade-Idea-Buy-the-Integrated-Franchise-Bull-Case-Goes-Beyond-100-Oil/)",
-      "drivers": [
-        "YTD +38.14%",
-        "dividend yield 3.4%",
-        "analyst score 1.72",
-        "strong FCF generation"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +38.02%, P/E 11.37, dividend yield 4.67%, low short interest 0.22%, attractive value among majors",
-      "drivers": [
-        "P/E 11.37",
-        "dividend yield 4.67%",
-        "low short interest",
-        "YTD +38.02%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +39.33%, P/E 17.46, analyst buy, positive news sentiment 0.218, solid E&P exposure",
-      "drivers": [
-        "YTD +39.33%",
-        "P/E 17.46",
-        "analyst buy",
-        "news sentiment 0.218"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +36.01%, P/E 21.05, web search suggests 4% undervalued with strong production growth [simplywall.st](https://simplywall.st/stocks/us/energy/nyse-xom/exxonmobil-holdings/news/exxonmobil-holdings-xom-valuation-in-focus-after-morgan-stan)",
-      "drivers": [
-        "YTD +36.01%",
-        "undervalued 4%",
-        "production growth",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +85.64%, P/E 11.95, dividend yield 3.54%, strong YTD performance despite hold rating",
-      "drivers": [
-        "YTD +85.64%",
-        "P/E 11.95",
-        "dividend yield 3.54%",
-        "lithium project catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +29.04%, dividend yield 4.52%, low short interest 0.29%, but oil slide weighs [proactiveinvestors.com](https://www.proactiveinvestors.com/companies/news/1098806/bp-and-shell-fall-as-oil-slides-on-saudi-supply-recovery-and-iran-talks-1098806.html)",
-      "drivers": [
-        "dividend yield 4.52%",
-        "low short interest",
-        "YTD +29.04%",
-        "oil price headwind"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +28.75%, P/E 10.46, dividend yield 3.31%, cheap valuation despite negative news sentiment -0.451",
-      "drivers": [
-        "P/E 10.46",
-        "dividend yield 3.31%",
-        "YTD +28.75%",
-        "negative sentiment discount"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +9.03%, 1W +2.96%, analyst buy, utility with positive short-term momentum and stable income",
-      "drivers": [
-        "1W +2.96%",
-        "analyst buy",
-        "utility stability",
-        "YTD +9.03%"
       ]
     }
   ]

@@ -1,9 +1,154 @@
 {
-  "updated": "2026-09-23 13:39",
+  "updated": "2026-09-25 13:36",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "META surged +14.05% in 1W on Muse AI agent, with P/E 28.01, strong_buy consensus, and news sentiment 0.383; strong YTD +19.86% and 1M +36.51% momentum.",
+      "drivers": [
+        "Muse AI catalyst",
+        "+36% 1-month momentum",
+        "strong_buy analyst consensus",
+        "P/E 28.01"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "CRWD hit a 52-week high after Nvidia partnership for SafeMind AI security, with 1M +40.07%, YTD +129%, and positive news sentiment 0.232; P/E is high at 8655.67 but structurally positioned.",
+      "drivers": [
+        "Nvidia AI partnership",
+        "+40% 1-month momentum",
+        "+129% YTD",
+        "news sentiment 0.232"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "AMD crossed $1T market cap on Meta Muse-driven CPU demand, with 1M +31.32%, YTD +181.59%, strong_buy consensus, and news sentiment 0.199; P/E 156.14.",
+      "drivers": [
+        "AI CPU demand surge",
+        "+181% YTD",
+        "strong_buy consensus",
+        "market cap >$1T"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "INTC rallied +17.09% in 1W on Muse CPU demand but only meets half of orders, with YTD +223.49%, analyst buy, and news sentiment 0.121; no P/E, but catalyst strong.",
+      "drivers": [
+        "AI CPU supply squeeze",
+        "+45% 1-month momentum",
+        "YTD +223%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "MU has YTD +242.77%, P/E 24.21, strong_buy consensus, and news sentiment 0.147; 1M +15.82% with analyst target $1,625 on memory cycle strength.",
+      "drivers": [
+        "Memory cycle recovery",
+        "P/E 24.21 reasonable",
+        "strong_buy consensus",
+        "YTD +243%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.996,
+      "rationale": "ARM gained +15.64% in 1W on agentic AI CPU demand, with YTD +167.01%, analyst buy, and news sentiment 0.166; P/E 344.2 reflects growth but short interest 10.69%.",
+      "drivers": [
+        "Agentic AI CPU story",
+        "+167% YTD",
+        "buy consensus",
+        "high short interest risk"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "NET rallied +29.27% in 1M and +10.53% in 1W, with YTD +83.05%, analyst buy, and news sentiment 0.11 on AI crawler controls; no P/E but strong momentum.",
+      "drivers": [
+        "AI data-moat narrative",
+        "+29% 1-month",
+        "YTD +83%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "PANW has YTD +117.38%, 1M +14.72%, analyst buy, and news sentiment 0.19; P/E 999.79 is high but justified by cybersecurity AI positioning.",
+      "drivers": [
+        "Cybersecurity AI leadership",
+        "+117% YTD",
+        "buy consensus",
+        "strong 1-month momentum"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "QCOM gained +21.65% in 1M with P/E 22.51, news sentiment 0.238 linked to Meta AI devices; YTD +14.06%, but analyst hold rating tempers conviction.",
+      "drivers": [
+        "Meta AI device catalyst",
+        "P/E 22.51 attractive",
+        "+22% 1-month",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "PLTR rose +11.50% in 1M and +9.28% in 1W, with YTD +14.73%, analyst buy, and high news sentiment 0.29; P/E 164.61 reflects AI platform growth expectations.",
+      "drivers": [
+        "AI platform growth",
+        "news sentiment 0.29",
+        "buy consensus",
+        "1-month +11.5%"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.772,
+      "ytd": "+129.42%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +129.42% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +129.42% \u2265 83.8% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "META",
@@ -132,151 +277,6 @@
         "buy consensus, 1.73 an_score",
         "P/E 21.64 reasonable",
         "new product launch catalyst"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.649,
-      "ytd": "+108.83%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +108.83% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +108.83% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +222.23%, P/E 22.94, strong_buy consensus, news sentiment 0.318, memory price surge catalysts from Intel CEO comments and supply tightness [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/262177719-fed-rate-hike-ai-stocks-rebound-nvda-mu-amd-chip-sector-rally-tradingkey).",
-      "drivers": [
-        "YTD return +222%",
-        "P/E 22.9",
-        "strong_buy consensus",
-        "memory demand catalysts"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "1M +21.93%, P/E 25.07, strong_buy, Wells Fargo PT hike to $796 on AI product momentum and Muse assistant traction ahead of Connect event [rallies.ai](https://rallies.ai/news/meta-rises-wells-fargo-hikes-pt-on-ai-product-momentum-d1e7263f3aff4d4b).",
-      "drivers": [
-        "1M momentum +22%",
-        "P/E 25.1",
-        "analyst PT upgrade",
-        "AI product catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 1.0,
-      "rationale": "YTD +175.77%, 1M +17.03%, analyst upgrades (Tigress PT $145, Northland Outperform), High-NA EUV progress, SK Hynix partnership talks [stockstotrade.com](https://stockstotrade.com/news/intel-corporation-intc-news-2026_09_21/).",
-      "drivers": [
-        "YTD return +176%",
-        "analyst upgrades",
-        "foundry execution",
-        "SK Hynix deal talks"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.898,
-      "rationale": "YTD +150.51%, 1M +20.02%, strong_buy, news sentiment 0.158, AI chip demand and data center growth [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/262177719-fed-rate-hike-ai-stocks-rebound-nvda-mu-amd-chip-sector-rally-tradingkey).",
-      "drivers": [
-        "YTD return +151%",
-        "1M momentum +20%",
-        "strong_buy consensus",
-        "AI chip demand"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +17.97%, P/E 28.1, strong_buy, AI spending expansion and lower Treasury yields supporting sector [reuters.com](https://www.reuters.com/business/wall-st-futures-rise-ai-stocks-gain-oil-prices-slide-2026-09-21/).",
-      "drivers": [
-        "P/E 28.1",
-        "strong_buy consensus",
-        "AI capex growth",
-        "macro tailwinds"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +37.07%, P/E 32.46, strong_buy, news sentiment 0.249, AI chip manufacturing leader benefiting from hyperscaler spending.",
-      "drivers": [
-        "YTD return +37%",
-        "P/E 32.5",
-        "strong_buy consensus",
-        "AI manufacturing leader"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +45.04%, P/E 57.81, strong_buy, news sentiment 0.216, EUV lithography demand driven by advanced chip nodes.",
-      "drivers": [
-        "YTD return +45%",
-        "strong_buy consensus",
-        "EUV demand",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +53.40%, strong_buy, cloud data platform growth and agentic AI adoption.",
-      "drivers": [
-        "YTD return +53%",
-        "strong_buy consensus",
-        "cloud growth",
-        "AI adoption"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +65.09%, analyst buy, news sentiment 0.278, cybersecurity demand and network edge expansion.",
-      "drivers": [
-        "YTD return +65%",
-        "buy consensus",
-        "positive sentiment",
-        "cybersecurity tailwinds"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1M +15.65%, P/E 21.79, analyst buy, enterprise software rebound and AI integration.",
-      "drivers": [
-        "1M momentum +16%",
-        "P/E 21.8",
-        "buy consensus",
-        "enterprise AI opportunity"
       ]
     }
   ]
