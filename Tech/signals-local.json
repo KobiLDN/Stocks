@@ -1,9 +1,176 @@
 {
-  "updated": "2026-09-25 13:36",
+  "updated": "2026-09-28 16:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AAPL",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "All-time high on iPhone Duo pre-order frenzy (pomegra.io); YTD +26.29%, P/E 39.1, news sentiment +0.205, analyst buy with score 2.2.",
+      "drivers": [
+        "iPhone Duo pre-order demand",
+        "all-time high near $245",
+        "strong YTD momentum",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Muse AI agent surpasses 3.4M downloads in 3 weeks (pomegra.io); YTD +11.10%, 1M +24.79%, P/E 27.17, analyst strong_buy with score 1.42.",
+      "drivers": [
+        "Muse AI adoption",
+        "analyst price targets $865-$950",
+        "strong 1M momentum",
+        "reasonable P/E"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Apple and Nvidia boost TSMC chip business; YTD +40.94%, P/E 33.28, strong_buy consensus (score 1.38), low short interest 0.57%.",
+      "drivers": [
+        "Apple/Nvidia demand",
+        "strong YTD return",
+        "low short interest",
+        "strong buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +232.73%, P/E 23.69 still reasonable, analyst strong_buy (score 1.37), 1M +12.44% momentum, despite slightly negative news sentiment -0.055.",
+      "drivers": [
+        "massive YTD gain",
+        "low P/E for growth",
+        "strong buy consensus",
+        "positive 1M momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +22.81%, P/E 29.29, strong_buy consensus (score 1.30), 1D +2.84% positive momentum, news sentiment +0.119.",
+      "drivers": [
+        "AI leader",
+        "reasonable P/E",
+        "strong buy consensus",
+        "positive short-term momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.732,
+      "rationale": "YTD +122.71%, 1M +15.63%, news sentiment +0.455 (highest in universe), analyst buy (score 1.70), though P/E extremely high at 8418.",
+      "drivers": [
+        "very high news sentiment",
+        "strong YTD and 1M momentum",
+        "cybersecurity demand",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "YTD +172.61%, 1M +30.85%, strong_buy consensus (score 1.49), news sentiment +0.243, but P/E 155.81 elevated.",
+      "drivers": [
+        "exceptional YTD return",
+        "strong 1M momentum",
+        "positive news sentiment",
+        "AI catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +76.37%, 1M +15.30%, analyst buy (score 1.97), but news sentiment -0.04 slightly negative and P/E null.",
+      "drivers": [
+        "strong YTD and 1M momentum",
+        "cybersecurity growth",
+        "buy consensus",
+        "cloud security demand"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.66,
+      "rationale": "YTD +110.67%, 1M +1.69%, news sentiment +0.319, analyst buy (score 1.71), but P/E 921.63 very high.",
+      "drivers": [
+        "strong YTD return",
+        "positive news sentiment",
+        "cybersecurity leader",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +51.43%, 1M +3.40%, strong_buy consensus (score 1.40), low short interest 0.38%, P/E 60.58 reasonable for semi equipment.",
+      "drivers": [
+        "strong YTD return",
+        "low short interest",
+        "strong buy consensus",
+        "semiconductor equipment demand"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.873,
+      "ytd": "+146.47%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +146.47% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +146.47% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.732,
+      "ytd": "+122.79%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +122.79% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +122.79% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.542,
+      "ytd": "+198.32%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +198.32% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +198.32% \u2265 182.9% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "META",
@@ -132,151 +299,6 @@
         "news sentiment 0.29",
         "buy consensus",
         "1-month +11.5%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.772,
-      "ytd": "+129.42%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +129.42% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +129.42% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Meta is the epicentre of the AI-agent revolution \u2014 Muse topped the App Store, driving a 31.87% 1-month surge and a strong_buy consensus with a stellar 1.34 analyst score.",
-      "drivers": [
-        "+31.87% 1M momentum",
-        "strong_buy consensus, 1.34 an_score",
-        "Muse #1 App Store, news_s 0.182",
-        "AI monetization catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "Intel soared +41.94% in the past month and +27.51% in the past week on Muse-driven CPU demand; CEO Tan said Intel meets only 50% of customer demand, flagging a supply-constrained catalyst.",
-      "drivers": [
-        "+41.94% 1M, +27.51% 1W momentum",
-        "CEO: only 50% demand satisfied",
-        "buy consensus, 2.47 an_score",
-        "news_s 0.236, CPU shortage catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "ARM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "ARM surged +39.54% in one month and +37.78% in one week, riding the CPU-demand wave from Muse; forecasts a server CPU market of $120B by 2030, with a buy consensus and positive news_s of 0.33.",
-      "drivers": [
-        "+39.54% 1M, +37.78% 1W",
-        "server CPU TAM $120B by 2030",
-        "buy consensus, 1.93 an_score",
-        "news_s 0.33, Muse catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "AMD crossed $1T market cap for the first time, with +179.13% YTD and +36.57% 1-month gains; strong_buy consensus and strong news sentiment (0.356) driven by its server CPU growth thesis.",
-      "drivers": [
-        "+179.13% YTD, +36.57% 1M",
-        "crossed $1T market cap",
-        "strong_buy consensus, 1.49 an_score",
-        "news_s 0.356, AI agent CPU demand"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Micron continues its impressive run with +247.72% YTD and +4.97% in a single day, driven by AI memory demand; strong_buy consensus (1.35) and a reasonable P/E of 23.58.",
-      "drivers": [
-        "+247.72% YTD, +20.40% 1M",
-        "P/E 23.58 reasonable",
-        "strong_buy consensus, 1.35 an_score",
-        "memory shortage catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Qualcomm gained +25.75% in one month as it pushes into data-centre CPUs; cheap P/E of 22.23 and a 189bp dividend yield offer a compelling risk/reward entry despite a hold consensus.",
-      "drivers": [
-        "+25.75% 1M, +16.41% YTD",
-        "low P/E 22.23, div 189bp",
-        "data-centre CPU push catalyst",
-        "Muse-driven CPU demand"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "CrowdStrike posted +120.52% YTD and +31.14% 1-month returns, backed by a buy consensus and positive news_s of 0.178; extreme P/E (5001) flags overvaluation but AI-era cybersecurity demand keeps momentum strong.",
-      "drivers": [
-        "+120.52% YTD, +31.14% 1M",
-        "buy consensus, 1.70 an_score",
-        "news_s 0.178",
-        "AI cybersecurity demand catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Cloudflare gained +80.08% YTD and +25.91% in the past month, with a strong news_s of 0.355; the buy consensus (1.97) reflects confidence in its AI-driven edge compute growth.",
-      "drivers": [
-        "+80.08% YTD, +25.91% 1M",
-        "news_s 0.355 positive",
-        "buy consensus, 1.97 an_score",
-        "AI edge compute catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.738,
-      "rationale": "Fortinet has surged +123.75% YTD and +14.65% in the past month driven by AI security demand; a hold consensus (2.77) and low beta (1.059) temper risk, but momentum and news_s (0.149) remain supportive.",
-      "drivers": [
-        "+123.75% YTD, +14.65% 1M",
-        "beta 1.059 low volatility",
-        "news_s 0.149",
-        "AI cybersecurity demand"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Salesforce rebounded +11.78% in the past month despite a YTD dip; a buy consensus (1.73) and reasonable P/E of 21.64 support entry, while a new major product launch targets AI market share.",
-      "drivers": [
-        "+11.78% 1M rebound",
-        "buy consensus, 1.73 an_score",
-        "P/E 21.64 reasonable",
-        "new product launch catalyst"
       ]
     }
   ]

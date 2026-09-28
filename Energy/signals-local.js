@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-25 13:40",
+  "updated": "2026-09-28 16:07",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "TotalEnergies targets $10B cash flow gain by 2030, plans >5% annual dividend growth through 2030 and $2.5B Q4 buybacks, with a P/E of 11.45, 4.66% yield, and analyst score of 1.67 (strong buy) [investing.com](https://uk.investing.com/news/stock-market-news/totalenergies-rises-after-dividend-buyback-plans-and-output-target-through-2035-4884906).",
+      "drivers": [
+        "P/E 11.45",
+        "div yield 4.66%",
+        "analyst score 1.67",
+        "dividend growth + buyback plan"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "BP",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "BP confirmed an 8-billion-barrel discovery offshore Brazil, raised its dividend 4% to a 4.57% yield, and JPMorgan upgraded to Overweight; shares are up 30% YTD with improving balance sheet and net debt falling [investingwithcolby.substack.com](https://investingwithcolby.substack.com/p/bp-wall-streets-most-boring-oil-major).",
+      "drivers": [
+        "8B barrel discovery",
+        "div yield 4.57%",
+        "JPM upgrade",
+        "YTD +30%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Chevron has a strong analyst consensus (score 1.72), YTD +36.9%, P/E 19.97, and a 3.48% dividend yield, with positive momentum supported by record refining margins across the sector [omanobserver.om](https://www.omanobserver.om/article/1196886/business/energy/cash-rich-oil-majors-face-post-iran-strategy-rethink).",
+      "drivers": [
+        "analyst score 1.72",
+        "YTD +36.9%",
+        "div yield 3.48%",
+        "record refining margins"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ExxonMobil's production in Guyana and Permian is at record levels, free cash flow expected to double by 2030, and the stock is up 35.5% YTD with a P/E of 20.97; technical setup shows rising moving averages and a 90% relative strength [simplywall.st](https://simplywall.st/stocks/us/energy/nyse-xom/exxonmobil-holdings/news/exxonmobil-holdings-xom-why-is-it-back-in-the-spotlight) [chartmill.com](https://www.chartmill.com/news/XOM/Chartmill-55438-ExxonMobil-NYSEXOM-Nears-Breakout-as-Technical-Strength-and-Setup-Quality-Align).",
+      "drivers": [
+        "Guyana + Permian record output",
+        "FCF doubling 2025-2030",
+        "YTD +35.5%",
+        "technical breakout setup"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Shell trades at a low P/E of 10.77 with a 3.26% yield, YTD +32.8%, and 1-month momentum of +7.2%; the stock benefits from strong LNG demand and integrated margins, though news sentiment is slightly negative.",
+      "drivers": [
+        "P/E 10.77",
+        "YTD +32.8%",
+        "1M +7.2%",
+        "div yield 3.26%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.825,
+      "rationale": "Valero has surged 138% YTD and 125% over 1 year, driven by record refining margins (crack spreads ~$63/bbl), with a P/E of 16.19 and positive news sentiment of 0.264; high short interest (3.91%) adds squeeze potential [omanobserver.om](https://www.omanobserver.om/article/1196886/business/energy/cash-rich-oil-majors-face-post-iran-strategy-rethink).",
+      "drivers": [
+        "YTD +138%",
+        "record crack spreads",
+        "news sentiment +0.264",
+        "short squeeze potential"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.841,
+      "rationale": "Marathon Petroleum is up 141% YTD and 100% over 1 year, with a P/E of 13.64 and 1-month momentum of +6.7%; refining margins remain elevated, though short interest is 3.19% and news sentiment slightly negative.",
+      "drivers": [
+        "YTD +141%",
+        "P/E 13.64",
+        "1M +6.7%",
+        "elevated refining margins"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Equinor has the highest YTD return among majors at +80.5%, a low P/E of 11.62, a 3.70% dividend yield, and very positive news sentiment of 0.462; however, analyst consensus is hold (score 3.0), capping conviction.",
+      "drivers": [
+        "YTD +80.5%",
+        "P/E 11.62",
+        "div yield 3.70%",
+        "news sentiment +0.462"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "EOG Resources offers a P/E of 10.99, a 2.91% yield, and YTD +35.1% with positive news sentiment of 0.214; 1-month momentum is slightly negative (-1.4%), but the stock remains a low-cost producer with strong free cash flow.",
+      "drivers": [
+        "P/E 10.99",
+        "YTD +35.1%",
+        "news sentiment +0.214",
+        "low-cost producer"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "SSE is a defensive UK utility with a 2.80% dividend yield, YTD +11.2%, and 1-year return of +43%; analyst consensus is buy (score 1.94) and news sentiment positive at 0.18, but lower momentum relative to oil peers.",
+      "drivers": [
+        "div yield 2.80%",
+        "analyst score 1.94",
+        "1Y +43%",
+        "defensive utility"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TTE",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "analyst score 1.74",
         "Iran war beneficiary",
         "low Middle East exposure"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +36.55%, P/E 11.25, dividend yield 4.71%, and analyst score 1.67 (best in universe) make it the most attractive integrated major. Low short interest of 0.22% and strong fundamentals support upside despite neutral news sentiment.",
-      "drivers": [
-        "P/E 11.25",
-        "Dividend yield 4.71%",
-        "Analyst score 1.67",
-        "Short interest 0.22%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "YTD +33.46%, dividend yield 3.5%, and analyst score 1.72 with positive news sentiment of 0.141. Favored as a geopolitical hedge per [allmind.ai](https://allmind.ai/news/4df3afc1bbbeb9d3dc65ea547ce1d646d2302cca9f0bad580f5eeb65446ef9d0) with upstream exposure and lower regulatory risk than refiners.",
-      "drivers": [
-        "YTD +33.46%",
-        "Dividend 3.5%",
-        "Analyst score 1.72",
-        "Geopolitical hedge"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +27.92%, P/E 10.32, dividend yield 3.35%, and news sentiment 0.308. LNG Canada expansion talks with Abu Dhabi XRG per [gurufocus.com](https://www.gurufocus.com/news/9092154/shel-looks-125-overvalued-on-gf-value-as-dividend-sustainability-remains-strong) provide a strong catalyst, though GF Value suggests modest overvaluation.",
-      "drivers": [
-        "P/E 10.32",
-        "Dividend 3.35%",
-        "LNG Canada catalyst",
-        "News sentiment 0.308"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +76.04%, P/E 11.52, dividend yield 3.67%, and news sentiment 0.275. Strong YTD performance and LNG supply agreement with PTT expand Asian reach, but analyst consensus hold (score 3.0) tempers conviction.",
-      "drivers": [
-        "YTD +76.04%",
-        "P/E 11.52",
-        "Dividend 3.67%",
-        "LNG Asia expansion"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +4.13%, 1W +5.83%, dividend yield 2.77%, and analyst buy with score 1.94. Defensive UK utility with positive short-term momentum and stable cash flows, benefiting from power demand growth.",
-      "drivers": [
-        "1M +4.13%",
-        "1W +5.83%",
-        "Dividend 2.77%",
-        "Analyst score 1.94"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +31.78%, analyst score 1.60 (most bullish in universe), and news sentiment 0.222. Brazil seismic survey launch suggests 16% undervaluation per headline, but P/E 25.42 is elevated relative to peers.",
-      "drivers": [
-        "Analyst score 1.60",
-        "News sentiment 0.222",
-        "Undervaluation catalyst",
-        "YTD +31.78%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "YTD +32.00%, P/E 20.37, dividend yield 2.60%, and record oil output with lower spending. Low beta 0.175 and short interest 1.08% indicate stability, though P/E is higher than peers.",
-      "drivers": [
-        "YTD +32.00%",
-        "Record output",
-        "Beta 0.175",
-        "Short interest 1.08%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +32.40%, P/E 16.57, dividend yield 2.63%, and analyst buy with score 1.74. Strong YTD performance but 1W -11.29% reflects broader oil price weakness; still attractive long-term E&P exposure.",
-      "drivers": [
-        "YTD +32.40%",
-        "P/E 16.57",
-        "Analyst score 1.74",
-        "Dividend 2.63%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +34.73%, P/E 16.91, short interest 0.01%, and news sentiment 0.305. Trades below raised analyst targets per headline, offering potential upside, though 1W -11.35% shows near-term volatility.",
-      "drivers": [
-        "YTD +34.73%",
-        "Short interest 0.01%",
-        "News sentiment 0.305",
-        "Below analyst targets"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DNNGY",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1W +7.95%, 1D +2.42%, and YTD +8.03% with positive news sentiment 0.27. High short-term momentum and UK offshore wind tax resolution catalyst, but no PE and negative 1Y return of -45% add significant risk.",
-      "drivers": [
-        "1W +7.95%",
-        "1D +2.42%",
-        "UK wind tax catalyst",
-        "YTD +8.03%"
       ]
     }
   ]

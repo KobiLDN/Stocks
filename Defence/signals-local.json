@@ -1,9 +1,141 @@
 {
-  "updated": "2026-09-25 13:35",
+  "updated": "2026-09-28 16:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +31.48%, P/E 15.35, 1M +4.56%, and a Wall Street Zen upgrade to strong-buy reinforce the attractive valuation and momentum.",
+      "drivers": [
+        "+31.48% YTD",
+        "P/E 15.35",
+        "1M +4.56%",
+        "Upgraded to strong-buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RKLB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +13.14%, 1W +4.24%, Cantor reiterates Overweight with $122 target, and pending Iridium acquisition, despite YTD -4.13%.",
+      "drivers": [
+        "1M +13.14%",
+        "1W +4.24%",
+        "Cantor Overweight",
+        "Iridium acquisition"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +14.55%, analyst score 1.56 (near strong-buy), news sentiment 0.266, and P/E 25.46 indicate solid fundamentals.",
+      "drivers": [
+        "YTD +14.55%",
+        "Analyst score 1.56",
+        "News sentiment 0.266",
+        "P/E 25.46"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +24.81%, analyst buy with score 1.6, news sentiment 0.271, and Healey's industrialisation plan support the pick.",
+      "drivers": [
+        "YTD +24.81%",
+        "Analyst score 1.6",
+        "News sentiment 0.271",
+        "Healey industrial plan"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +11.74%, 1W +2.45%, analyst buy, and expanding Maven contract, though P/E is elevated at 160.32.",
+      "drivers": [
+        "YTD +11.74%",
+        "1W +2.45%",
+        "Maven contract expansion",
+        "Analyst buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ASTS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1M +5.70% and German filing for 344-satellite BlueBird plan, but YTD -26.49% and very high short interest 21.84%.",
+      "drivers": [
+        "1M +5.70%",
+        "German 344-satellite filing",
+        "Short interest 21.84%",
+        "YTD -26.49%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SPCX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +4.25%, Starship first orbital launch achieved, analyst buy, but YTD -8.35% with upcoming lockup expiries.",
+      "drivers": [
+        "1M +4.25%",
+        "Starship orbital launch",
+        "Analyst buy",
+        "YTD -8.35%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AVAV",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1M +2.02% and $464.8M laser contract, yet YTD -41.09% and no P/E due to losses.",
+      "drivers": [
+        "1M +2.02%",
+        "$464.8M laser contract",
+        "YTD -41.09%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +13.30%, analyst buy, P/E 28.39, but 1M -2.79% and news sentiment 0.031.",
+      "drivers": [
+        "YTD +13.30%",
+        "Analyst buy",
+        "P/E 28.39",
+        "1M -2.79%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Strong-buy analyst score 1.45, YTD +6.59%, P/E 30.97, though 1M -4.39%.",
+      "drivers": [
+        "Strong-buy score 1.45",
+        "YTD +6.59%",
+        "P/E 30.97",
+        "1M -4.39%"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "RKLB",
@@ -132,134 +264,6 @@
         "direct-to-device technology",
         "no analyst coverage risk",
         "high short interest possible squeeze"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "RKLB",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "1W +13.27%, record backlog $2.36B, Cantor Fitzgerald reiterates Overweight $122 target, Iridium acquisition catalyst.",
-      "drivers": [
-        "1W +13.27% momentum",
-        "Backlog $2.36B",
-        "Cantor Fitzgerald $122 PT",
-        "Iridium deal"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SPCX",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "1M +14.61%, news sentiment 0.337, analyst buy, upcoming Starship orbital flight catalyst.",
-      "drivers": [
-        "1M +14.61% momentum",
-        "News sentiment 0.337",
-        "Analyst buy",
-        "Starship flight"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "1W +7.20%, YTD +10.20%, analyst buy, AI sovereignty strategy gaining traction.",
-      "drivers": [
-        "1W +7.20% momentum",
-        "YTD +10.20%",
-        "Analyst buy",
-        "AI sovereignty"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RR.L",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +23.80%, 1W +4.34%, analyst buy, nuclear energy and defence exposure.",
-      "drivers": [
-        "YTD +23.80%",
-        "1W +4.34% momentum",
-        "Analyst buy",
-        "Nuclear energy"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1W +8.37%, short interest 21.46% potential squeeze, space mobile direct-to-cell catalyst.",
-      "drivers": [
-        "1W +8.37% momentum",
-        "Short interest 21.46%",
-        "Space mobile catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Strong buy analyst consensus, YTD +7.46%, new naval and tactical contracts.",
-      "drivers": [
-        "Strong buy analyst",
-        "YTD +7.46%",
-        "New defence contracts"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +14.11%, P/E 25.36, analyst buy, positive news sentiment 0.252.",
-      "drivers": [
-        "YTD +14.11%",
-        "P/E 25.36",
-        "Analyst buy",
-        "News sentiment 0.252"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "YTD +29.47%, P/E 15.55, but hold rating limits upside conviction.",
-      "drivers": [
-        "YTD +29.47%",
-        "P/E 15.55",
-        "Hold rating"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1W +3.68%, news sentiment 0.35, analyst buy, recent analyst upgrades.",
-      "drivers": [
-        "1W +3.68% bounce",
-        "News sentiment 0.35",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1W +2.53%, news sentiment 0.264, analyst buy, aerospace aftermarket strength.",
-      "drivers": [
-        "1W +2.53% momentum",
-        "News sentiment 0.264",
-        "Analyst buy"
       ]
     }
   ]

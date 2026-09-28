@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-25 13:37",
+  "updated": "2026-09-28 16:06",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "NEAR has surged 7% on Bitwise spot ETF clearance (ticker NRR) with staking yield, +234.82% YTD and +178.48% 1M, plus a short squeeze adding fuel [coinmarketcap.com].",
+      "drivers": [
+        "ETF catalyst with staking",
+        "+234.82% YTD",
+        "short squeeze",
+        "positive news sentiment 0.045"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "HBAR",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "HBAR shows exceptional short-term momentum with +27.17% 1D, +30.40% 1W, and +57.91% 1M, market cap $5.21B, though no headline catalyst captured.",
+      "drivers": [
+        "+27.17% 1D",
+        "+30.40% 1W",
+        "+57.91% 1M",
+        "market cap $5.21B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ALGO",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "ALGO ripped 33% off lows, smart money 67% long on Binance Futures, +52.60% 1M and +16.74% 1W, pressing $0.13 resistance with strong trend [blockchain.news].",
+      "drivers": [
+        "smart money 67% long",
+        "+52.60% 1M",
+        "+16.74% 1W",
+        "technical breakout"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "GRT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "GRT surged 17.28% today with +87.73% 1M and +33.31% 1W, though RSI 85 signals overbought; strong buying pressure but caution on exhaustion [tradersunion.com].",
+      "drivers": [
+        "+87.73% 1M",
+        "+33.31% 1W",
+        "strong buying pressure",
+        "overbought RSI 85"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "MINA has +125.20% 1M and +91.15% YTD, with +18.19% 1W, small cap $186M offering high beta momentum play.",
+      "drivers": [
+        "+125.20% 1M",
+        "+91.15% YTD",
+        "small cap $186M",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SUI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SUI has +56.95% 1M and +11.40% 1W despite a 5.94% 1D pullback; news sentiment 0.176 and web notes make-or-break at $1.27 resistance [blockchain.news].",
+      "drivers": [
+        "+56.95% 1M",
+        "+11.40% 1W",
+        "news sentiment 0.176",
+        "key resistance test"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "FET shows +53.20% 1M and +10.55% 1W, AI narrative tailwind, market cap $526M, though 1D -5.50% reflects profit-taking.",
+      "drivers": [
+        "+53.20% 1M",
+        "+10.55% 1W",
+        "AI narrative",
+        "market cap $526M"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "AIOZ has +101.61% 1M and +35.08% YTD, small cap $150M with high volatility; 1D -3.35% but strong monthly trend.",
+      "drivers": [
+        "+101.61% 1M",
+        "+35.08% YTD",
+        "small cap $150M",
+        "high volatility"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "LINK offers solid momentum with +25.46% 1M, +10.00% 1W, and positive news sentiment 0.289; market cap $10.71B provides relative stability.",
+      "drivers": [
+        "+25.46% 1M",
+        "+10.00% 1W",
+        "news sentiment 0.289",
+        "market cap $10.71B"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "XLM has +22.28% 1M, +4.84% 1W, and +1.44% 1D, with market cap $7.64B and positive news sentiment 0.159, steady uptrend.",
+      "drivers": [
+        "+22.28% 1M",
+        "+4.84% 1W",
+        "market cap $7.64B",
+        "news sentiment 0.159"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NEAR",
@@ -131,139 +264,6 @@
         "+18% 1m",
         "+14% 1w",
         "news sentiment 0.013"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "BTC",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Bitcoin leads with +11.70% 1M, +13.93% 1W, positive news sentiment 0.262, and analyst declaring 'crypto winter is over' as BTC tops $86K.",
-      "drivers": [
-        "+13.93% 1W momentum",
-        "market cap $1,736B",
-        "positive news sentiment 0.262",
-        "anchor asset stability"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "NEAR has +197% YTD, +126% 1M, +92% 1W, with Ondo partnership adding 20 tokenized US stocks and Bitwise ETP surpassing $100M.",
-      "drivers": [
-        "+197% YTD",
-        "+126% 1M momentum",
-        "Ondo tokenized stocks partnership",
-        "institutional ETP >$100M"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MINA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "MINA surged +149% 1M, +79.64% 1W, +10.68% 1D, with a 26% daily spike to $0.1554 and active market participation of $4.58M volume.",
-      "drivers": [
-        "+149% 1M momentum",
-        "+79.64% 1W",
-        "26% daily surge",
-        "high volume $4.58M"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GRT",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "GRT gained +52.86% 1M, +53.38% 1W, +14.32% 1D, trading above all key moving averages with strong technical momentum and overbought signals.",
-      "drivers": [
-        "+52.86% 1M momentum",
-        "+14.32% 1D",
-        "above MA-20/50/200",
-        "overbought but strong trend"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "AVAX shows +49.66% 1M, +53.21% 1W, positive news sentiment 0.104, and a market cap of $4.96B, benefiting from broad altcoin rally.",
-      "drivers": [
-        "+49.66% 1M",
-        "+53.21% 1W",
-        "positive news sentiment 0.104",
-        "mid-cap liquidity"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "TAO has +44% YTD, +33.85% 1M, +45.29% 1W, with a market cap of $3.63B, riding the AI narrative and strong weekly momentum.",
-      "drivers": [
-        "+44% YTD",
-        "+45.29% 1W",
-        "AI narrative",
-        "market cap $3.63B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "RNDR gained +45% YTD, +26.37% 1M, +42.89% 1W, with a market cap of $0.97B, benefiting from AI and rendering demand.",
-      "drivers": [
-        "+45% YTD",
-        "+42.89% 1W",
-        "AI/rendering sector",
-        "market cap $0.97B"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SOL has +25.98% 1M, +22.29% 1W, market cap $69.75B, positive news sentiment 0.091, and strong ecosystem activity.",
-      "drivers": [
-        "+25.98% 1M",
-        "+22.29% 1W",
-        "large cap $69.75B",
-        "positive sentiment 0.091"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "AIOZ surged +126% 1M, +87% 1W, but -12.29% 1D; small cap $0.16B with extreme momentum but high volatility.",
-      "drivers": [
-        "+126% 1M momentum",
-        "+87% 1W",
-        "small cap $0.16B",
-        "high volatility risk"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ADA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "ADA gained +17.45% 1M, +32.37% 1W, with news of AI agent payments via x402, market cap $9.49B, and a 4-month high.",
-      "drivers": [
-        "+32.37% 1W",
-        "AI agent payments news",
-        "market cap $9.49B",
-        "4-month high"
       ]
     }
   ]
