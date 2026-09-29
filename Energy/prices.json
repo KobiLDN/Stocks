@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-28 21:44",
-  "fx_gbp_usd": 1.3255,
+  "updated": "2026-09-29 01:35",
+  "fx_gbp_usd": 1.3246,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,8 +19,8 @@
       "high_gbp": "133",
       "high_usd": 176.41,
       "bar_pct": 79,
-      "market_cap_gbp_b": 504.181,
-      "market_cap_usd_b": 668.267,
+      "market_cap_gbp_b": 504.502,
+      "market_cap_usd_b": 668.268,
       "beta": 0.175,
       "pe_ratio": 20.92,
       "avg_volume_m": 14.59,
@@ -28,10 +28,24 @@
       "short_pct": 1.08,
       "analyst": "buy",
       "analyst_score": 2.32,
-      "vol_1d": 12794297,
-      "vol_1w": 63034597,
-      "vol_1m": 291816397,
+      "vol_1d": 12798213,
+      "vol_1w": 63038513,
+      "vol_1m": 291820313,
       "news": [
+        {
+          "title": "Crescent Energy and Kosmos Energy Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/energy/articles/crescent-energy-kosmos-energy-stocks-223036276.html",
+          "published": 1790634636,
+          "sentiment": 0.494
+        },
+        {
+          "title": "Exxon Mobil Holdings (XOM) Gains As Market Dips: What You Should Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/exxon-mobil-holdings-xom-gains-204504735.html",
+          "published": 1790628304,
+          "sentiment": 0.34
+        },
         {
           "title": "TD Cowen highlights top oil stocks ahead of earnings season",
           "publisher": "Investing.com",
@@ -47,28 +61,14 @@
           "sentiment": 0.71
         },
         {
-          "title": "Why Your Energy Bill Is About to Skyrocket $1,465 a Year Higher \u2014 Unless This Happens",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/09/28/why-your-energy-bill-is-about-to-skyrocket-1465-a-year-higher-unless-this-happens/",
-          "published": 1790608495,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Update: US Equity Futures Drop Pre-Bell as Oil Prices Rise Amid US Rejection of Iran's Proposal to Reopen Strait of Hormuz",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-drop-pre-124651902.html",
-          "published": 1790599611,
-          "sentiment": -0.681
-        },
-        {
-          "title": "The Zacks Analyst Blog Highlights ExxonMobil, Automatic Data Processing and Cadence Design, BranchOut Food",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/zacks-analyst-blog-highlights-exxonmobil-061800247.html",
-          "published": 1790576280,
-          "sentiment": 0.0
+          "title": "Chevron, ExxonMobil Agree Potential Crude Supply to Vietnam",
+          "publisher": "Rigzone.com",
+          "url": "https://finance.yahoo.com/energy/articles/chevron-exxonmobil-agree-potential-crude-151710400.html",
+          "published": 1790608630,
+          "sentiment": -0.296
         }
       ],
-      "news_sentiment": 0.101
+      "news_sentiment": 0.29
     },
     {
       "ticker": "CVX",
@@ -87,8 +87,8 @@
       "high_gbp": "164",
       "high_usd": 217.78,
       "bar_pct": 84,
-      "market_cap_gbp_b": 305.418,
-      "market_cap_usd_b": 404.817,
+      "market_cap_gbp_b": 305.612,
+      "market_cap_usd_b": 404.816,
       "beta": 0.491,
       "pe_ratio": 19.84,
       "avg_volume_m": 8.77,
@@ -96,10 +96,17 @@
       "short_pct": 1.06,
       "analyst": "buy",
       "analyst_score": 1.72,
-      "vol_1d": 9495331,
-      "vol_1w": 43614331,
-      "vol_1m": 206357931,
+      "vol_1d": 9497551,
+      "vol_1w": 43616551,
+      "vol_1m": 206360151,
       "news": [
+        {
+          "title": "Crescent Energy and Kosmos Energy Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/energy/articles/crescent-energy-kosmos-energy-stocks-223036276.html",
+          "published": 1790634636,
+          "sentiment": 0.494
+        },
         {
           "title": "Stock Market Today: Dow Ends Lower But Nvidia Pops On This; Leisure Play Tests Entry, MongoDB Dives",
           "publisher": "Investor's Business Daily",
@@ -111,8 +118,15 @@
           "title": "Nvidia, Micron, Meta, Kodiak Sciences, MongoDB, SpaceX, and More Stocks That Explain Today\u2019s Market",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/stock-movers-4aac0ea6?siteid=yhoof2&yptr=yahoo",
-          "published": 1790614140,
+          "published": 1790627580,
           "sentiment": 0.0
+        },
+        {
+          "title": "Chevron, ExxonMobil Agree Potential Crude Supply to Vietnam",
+          "publisher": "Rigzone.com",
+          "url": "https://finance.yahoo.com/energy/articles/chevron-exxonmobil-agree-potential-crude-151710400.html",
+          "published": 1790608630,
+          "sentiment": -0.296
         },
         {
           "title": "Chevron Is Expanding Its Presence in the Mediterranean. Here's What It Means for CVX Stock.",
@@ -120,23 +134,9 @@
           "url": "https://www.fool.com/investing/2026/09/28/chevron-is-expanding-its-presence-in-mediterranean/",
           "published": 1790608380,
           "sentiment": 0.0
-        },
-        {
-          "title": "Chevron and Egypt Move to Speed Up Aphrodite Gas Project",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/chevron-egypt-move-speed-aphrodite-144800899.html",
-          "published": 1790606880,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Update: US Equity Futures Drop Pre-Bell as Oil Prices Rise Amid US Rejection of Iran's Proposal to Reopen Strait of Hormuz",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-drop-pre-124651902.html",
-          "published": 1790599611,
-          "sentiment": -0.681
         }
       ],
-      "news_sentiment": -0.064
+      "news_sentiment": 0.112
     },
     {
       "ticker": "SHEL",
@@ -155,7 +155,7 @@
       "high_gbp": "75",
       "high_usd": 99.15,
       "bar_pct": 91,
-      "market_cap_gbp_b": 207.596,
+      "market_cap_gbp_b": 207.728,
       "market_cap_usd_b": 275.158,
       "beta": -0.22,
       "pe_ratio": 10.66,
@@ -223,7 +223,7 @@
       "high_gbp": "36",
       "high_usd": 48.27,
       "bar_pct": 75,
-      "market_cap_gbp_b": 86.327,
+      "market_cap_gbp_b": 86.382,
       "market_cap_usd_b": 114.422,
       "beta": -0.22,
       "pe_ratio": 21.26,
@@ -232,9 +232,9 @@
       "short_pct": 0.28,
       "analyst": "buy",
       "analyst_score": 2.26,
-      "vol_1d": 7454117,
-      "vol_1w": 45778617,
-      "vol_1m": 196547017,
+      "vol_1d": 7458378,
+      "vol_1w": 45782878,
+      "vol_1m": 196551278,
       "news": [
         {
           "title": "Sector Update: Energy Stocks Higher Late Afternoon",
@@ -291,7 +291,7 @@
       "high_gbp": "71",
       "high_usd": 94.17,
       "bar_pct": 90,
-      "market_cap_gbp_b": 150.511,
+      "market_cap_gbp_b": 150.607,
       "market_cap_usd_b": 199.495,
       "beta": 0.06,
       "pe_ratio": 11.31,
@@ -300,9 +300,9 @@
       "short_pct": 0.22,
       "analyst": "buy",
       "analyst_score": 1.67,
-      "vol_1d": 2129016,
-      "vol_1w": 9042616,
-      "vol_1m": 31337116,
+      "vol_1d": 2129028,
+      "vol_1w": 9042628,
+      "vol_1m": 31337128,
       "news": [
         {
           "title": "Sector Update: Energy Stocks Higher Late Afternoon",
@@ -359,7 +359,7 @@
       "high_gbp": "35",
       "high_usd": 45.84,
       "bar_pct": 85,
-      "market_cap_gbp_b": 75.599,
+      "market_cap_gbp_b": 75.647,
       "market_cap_usd_b": 100.203,
       "beta": -0.727,
       "pe_ratio": 11.46,
@@ -368,10 +368,17 @@
       "short_pct": 2.39,
       "analyst": "hold",
       "analyst_score": 3.0,
-      "vol_1d": 4809953,
-      "vol_1w": 23282553,
-      "vol_1m": 70986353,
+      "vol_1d": 4810007,
+      "vol_1w": 23282607,
+      "vol_1m": 70986407,
       "news": [
+        {
+          "title": "Top Research Reports for Alphabet, Mastercard & AbbVie",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-alphabet-mastercard-194900973.html",
+          "published": 1790624940,
+          "sentiment": 0.202
+        },
         {
           "title": "TD Cowen highlights top oil stocks ahead of earnings season",
           "publisher": "Investing.com",
@@ -399,16 +406,9 @@
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-rise-premarket-132455527.html",
           "published": 1790601895,
           "sentiment": 0.273
-        },
-        {
-          "title": "Best Momentum Stock to Buy for September 28th",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/best-momentum-stock-buy-september-130000231.html",
-          "published": 1790600400,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.279
+      "news_sentiment": 0.192
     },
     {
       "ticker": "COP",
@@ -427,8 +427,8 @@
       "high_gbp": "107",
       "high_usd": 141.62,
       "bar_pct": 72,
-      "market_cap_gbp_b": 114.238,
-      "market_cap_usd_b": 151.417,
+      "market_cap_gbp_b": 114.31,
+      "market_cap_usd_b": 151.416,
       "beta": 0.134,
       "pe_ratio": 16.67,
       "avg_volume_m": 6.73,
@@ -436,9 +436,9 @@
       "short_pct": 1.34,
       "analyst": "buy",
       "analyst_score": 1.74,
-      "vol_1d": 6174617,
-      "vol_1w": 30747517,
-      "vol_1m": 138535517,
+      "vol_1d": 6175472,
+      "vol_1w": 30748372,
+      "vol_1m": 138536372,
       "news": [
         {
           "title": "What Happens To ExxonMobil Stock If Refining Profits Fade?",
@@ -495,7 +495,7 @@
       "high_gbp": "51",
       "high_usd": 67.45,
       "bar_pct": 60,
-      "market_cap_gbp_b": 42.31,
+      "market_cap_gbp_b": 42.337,
       "market_cap_usd_b": 56.08,
       "beta": 0.164,
       "pe_ratio": 16.55,
@@ -504,10 +504,17 @@
       "short_pct": 0.02,
       "analyst": "buy",
       "analyst_score": 2.31,
-      "vol_1d": 11849186,
-      "vol_1w": 48655586,
-      "vol_1m": 178019586,
+      "vol_1d": 11853189,
+      "vol_1w": 48659589,
+      "vol_1m": 178023589,
       "news": [
+        {
+          "title": "Occidental Petroleum (OXY) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/occidental-petroleum-oxy-sees-more-210005747.html",
+          "published": 1790629205,
+          "sentiment": 0.272
+        },
         {
           "title": "Investors Heavily Search Occidental Petroleum Corporation (OXY): Here is What You Need to Know",
           "publisher": "Zacks",
@@ -535,16 +542,9 @@
           "url": "https://247wallst.com/investing/2026/09/23/5-of-warren-buffetts-largest-holdings-keep-raising-their-dividends-every-year/",
           "published": 1790167830,
           "sentiment": 0.0
-        },
-        {
-          "title": "Occidental Now Trades Below Wall Street\u2019s Raised Targets. Here\u2019s Where the Stock Could Go",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/occidental-now-trades-below-wall-streets-raised-targets-heres-where-the-stock-could-go?ref=yahoofinance",
-          "published": 1790032102,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.147
+      "news_sentiment": 0.202
     },
     {
       "ticker": "EOG",
@@ -563,7 +563,7 @@
       "high_gbp": "116",
       "high_usd": 154.16,
       "bar_pct": 74,
-      "market_cap_gbp_b": 56.512,
+      "market_cap_gbp_b": 56.548,
       "market_cap_usd_b": 74.904,
       "beta": 0.272,
       "pe_ratio": 10.94,
@@ -572,9 +572,9 @@
       "short_pct": 3.3,
       "analyst": "buy",
       "analyst_score": 2.34,
-      "vol_1d": 2742798,
-      "vol_1w": 14011898,
-      "vol_1m": 67683098,
+      "vol_1d": 2742809,
+      "vol_1w": 14011909,
+      "vol_1m": 67683109,
       "news": [
         {
           "title": "COP vs. EOG: Which Energy Dividend Actually Survives the Next Oil Crash?",
@@ -631,8 +631,8 @@
       "high_gbp": "325",
       "high_usd": 431.08,
       "bar_pct": 85,
-      "market_cap_gbp_b": 85.776,
-      "market_cap_usd_b": 113.692,
+      "market_cap_gbp_b": 85.83,
+      "market_cap_usd_b": 113.691,
       "beta": 0.527,
       "pe_ratio": 13.5,
       "avg_volume_m": 2.53,
@@ -640,10 +640,24 @@
       "short_pct": 3.19,
       "analyst": "buy",
       "analyst_score": 2.32,
-      "vol_1d": 2655221,
-      "vol_1w": 15570821,
-      "vol_1m": 63035921,
+      "vol_1d": 2655821,
+      "vol_1w": 15571421,
+      "vol_1m": 63036521,
       "news": [
+        {
+          "title": "Crescent Energy and Kosmos Energy Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/energy/articles/crescent-energy-kosmos-energy-stocks-223036276.html",
+          "published": 1790634636,
+          "sentiment": 0.494
+        },
+        {
+          "title": "Marathon Petroleum (MPC) Dips More Than Broader Market: What You Should Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-dips-more-204504332.html",
+          "published": 1790628304,
+          "sentiment": 0.0
+        },
         {
           "title": "These Energy Stocks Just Delivered Massive September Gains",
           "publisher": "GuruFocus.com",
@@ -664,23 +678,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-stock-undervalued-124004873.html",
           "published": 1790599204,
           "sentiment": 0.0
-        },
-        {
-          "title": "VLO, MPC, PSX Stocks, Diesel Futures Climb Overnight: Trump Says US \u2018Very Seriously\u2019 Considering Diesel Export Ban",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/vlo-mpc-psx-stocks-diesel-futures-climb-overnight-trump-says-us-very-seriously-considering-diesel-export-ban/cZMSSFGRBfN",
-          "published": 1790572140,
-          "sentiment": -0.557
-        },
-        {
-          "title": "Goldman Sachs Bets this Refining Stock Will Soar Past its Record High",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/energy/articles/goldman-sachs-bets-refining-stock-050239726.html",
-          "published": 1790398959,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.065
+      "news_sentiment": 0.275
     },
     {
       "ticker": "VLO",
@@ -699,7 +699,7 @@
       "high_gbp": "316",
       "high_usd": 419.04,
       "bar_pct": 89,
-      "market_cap_gbp_b": 84.626,
+      "market_cap_gbp_b": 84.68,
       "market_cap_usd_b": 112.168,
       "beta": 0.568,
       "pe_ratio": 16.25,
@@ -708,10 +708,17 @@
       "short_pct": 3.91,
       "analyst": "buy",
       "analyst_score": 2.4,
-      "vol_1d": 3558163,
-      "vol_1w": 25633663,
-      "vol_1m": 80707563,
+      "vol_1d": 3559736,
+      "vol_1w": 25635236,
+      "vol_1m": 80709136,
       "news": [
+        {
+          "title": "Crescent Energy and Kosmos Energy Stocks Trade Up, What You Need To Know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/energy/articles/crescent-energy-kosmos-energy-stocks-223036276.html",
+          "published": 1790634636,
+          "sentiment": 0.494
+        },
         {
           "title": "These Energy Stocks Just Delivered Massive September Gains",
           "publisher": "GuruFocus.com",
@@ -739,16 +746,9 @@
           "url": "https://finance.yahoo.com/energy/articles/valero-energy-vlo-could-45-151431864.html",
           "published": 1790435671,
           "sentiment": 0.66
-        },
-        {
-          "title": "Valero (VLO) Stock Looks Expensive As Its 5x Run Draws Scrutiny",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/valero-vlo-stock-looks-expensive-041558703.html",
-          "published": 1790396158,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.285
+      "news_sentiment": 0.383
     },
     {
       "ticker": "SLB",
@@ -767,8 +767,8 @@
       "high_gbp": "46",
       "high_usd": 60.46,
       "bar_pct": 69,
-      "market_cap_gbp_b": 57.655,
-      "market_cap_usd_b": 76.419,
+      "market_cap_gbp_b": 57.691,
+      "market_cap_usd_b": 76.418,
       "beta": 0.774,
       "pe_ratio": 25.12,
       "avg_volume_m": 12.38,
@@ -776,9 +776,9 @@
       "short_pct": 4.67,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 13892141,
-      "vol_1w": 53644241,
-      "vol_1m": 286322141,
+      "vol_1d": 13892661,
+      "vol_1w": 53644761,
+      "vol_1m": 286322661,
       "news": [
         {
           "title": "SLB Secures Major Aramco Contracts, Expands Saudi Arabia Footprint",
@@ -835,19 +835,26 @@
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 50,
-      "market_cap_gbp_b": 20.44,
+      "market_cap_gbp_b": 20.453,
       "market_cap_usd_b": 27.092,
       "beta": 0.769,
-      "pe_ratio": 16.98,
+      "pe_ratio": 17.16,
       "avg_volume_m": 11.11,
       "div_yield_pct": 208.0,
       "short_pct": 5.67,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 10521729,
-      "vol_1w": 45936729,
-      "vol_1m": 217511029,
+      "vol_1d": 10524923,
+      "vol_1w": 45939923,
+      "vol_1m": 217514223,
       "news": [
+        {
+          "title": "Halliburton (HAL) Sees a More Significant Dip Than Broader Market: Some Facts to Know",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/halliburton-hal-sees-more-significant-211503184.html",
+          "published": 1790630103,
+          "sentiment": 0.272
+        },
         {
           "title": "Halliburton (HAL) Enters Venezuela\u2019s Oil Revival with Two New Deals",
           "publisher": "Insider Monkey",
@@ -875,16 +882,9 @@
           "url": "https://finance.yahoo.com/energy/articles/2-energy-stocks-worth-investigating-112854155.html",
           "published": 1790249334,
           "sentiment": 0.296
-        },
-        {
-          "title": "Halliburton on track to meet street expectations in Q3, UBS says",
-          "publisher": "Proactive",
-          "url": "https://www.proactiveinvestors.com/companies/news/1099008/halliburton-on-track-to-meet-street-expectations-in-q3-ubs-says-1099008.html",
-          "published": 1790193240,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.114
+      "news_sentiment": 0.168
     },
     {
       "ticker": "BKR",
@@ -903,7 +903,7 @@
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 50,
-      "market_cap_gbp_b": 42.779,
+      "market_cap_gbp_b": 42.806,
       "market_cap_usd_b": 56.701,
       "beta": 0.961,
       "pe_ratio": 18.37,
@@ -912,9 +912,9 @@
       "short_pct": 2.83,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 7020681,
-      "vol_1w": 38514681,
-      "vol_1m": 171679181,
+      "vol_1d": 7020689,
+      "vol_1w": 38514689,
+      "vol_1m": 171679189,
       "news": [
         {
           "title": "Here's Why You Should Add Baker Hughes Stock to Your Portfolio Now",
@@ -971,8 +971,8 @@
       "high_gbp": "75",
       "high_usd": 98.75,
       "bar_pct": 2,
-      "market_cap_gbp_b": 118.784,
-      "market_cap_usd_b": 157.442,
+      "market_cap_gbp_b": 118.86,
+      "market_cap_usd_b": 157.443,
       "beta": 0.644,
       "pe_ratio": 16.96,
       "avg_volume_m": 11.02,
@@ -980,10 +980,17 @@
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.9,
-      "vol_1d": 13631431,
-      "vol_1w": 67077831,
-      "vol_1m": 239676031,
+      "vol_1d": 13643386,
+      "vol_1w": 67089786,
+      "vol_1m": 239687986,
       "news": [
+        {
+          "title": "Dominion Energy (D) Stock Still Looks Discounted Following Its 65% Three Year Run",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/dominion-energy-d-stock-still-210940048.html",
+          "published": 1790629780,
+          "sentiment": 0.318
+        },
         {
           "title": "Rolls Royce Stock And 2 Top Nuclear Power Stocks",
           "publisher": "Simply Wall St.",
@@ -1011,16 +1018,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/nextera-energy-nee-behind-fresh-160859525.html",
           "published": 1790525339,
           "sentiment": 0.527
-        },
-        {
-          "title": "Anthropic Needs Gigawatts of Power It Doesn't Have. This Dividend-Paying Industrial Sells It.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/09/26/anthropic-gigawatt-power-dividend-industrial-stock/",
-          "published": 1790430600,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.443
+      "news_sentiment": 0.507
     },
     {
       "ticker": "SSE.L",
@@ -1028,19 +1028,19 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "25",
-      "price_usd": 32.58,
+      "price_usd": 32.56,
       "change_1d": "+0.08%",
       "change_1w": "-0.73%",
       "change_1m": "+0.37%",
       "change_ytd": "+10.20%",
       "return_1yr": "+43%",
       "low_gbp": "17",
-      "low_usd": 22.35,
+      "low_usd": 22.79,
       "high_gbp": "28",
-      "high_usd": 36.68,
-      "bar_pct": 71,
+      "high_usd": 36.66,
+      "bar_pct": 50,
       "market_cap_gbp_b": 0.297,
-      "market_cap_usd_b": 0.394,
+      "market_cap_usd_b": 0.393,
       "beta": 0.579,
       "pe_ratio": 23.41,
       "avg_volume_m": 2.75,
@@ -1048,9 +1048,9 @@
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.94,
-      "vol_1d": 1403824,
-      "vol_1w": 11613991,
-      "vol_1m": 50837934,
+      "vol_1d": 62,
+      "vol_1w": 10210229,
+      "vol_1m": 49434172,
       "news": [
         {
           "title": "3 UK Dividend Stocks With Defensive Cash Flows Worth A Closer Look",
@@ -1107,7 +1107,7 @@
       "high_gbp": "56",
       "high_usd": 73.74,
       "bar_pct": 11,
-      "market_cap_gbp_b": 3.074,
+      "market_cap_gbp_b": 3.076,
       "market_cap_usd_b": 4.074,
       "beta": 1.643,
       "pe_ratio": 30.6,
@@ -1116,9 +1116,9 @@
       "short_pct": 21.74,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 5249656,
-      "vol_1w": 25467156,
-      "vol_1m": 91896156,
+      "vol_1d": 5255883,
+      "vol_1w": 25473383,
+      "vol_1m": 91902383,
       "news": [
         {
           "title": "Enphase Energy (ENPH) Stock Looks Near Fair Value On Cash Flow",
@@ -1163,7 +1163,7 @@
       "company_name": "First Solar",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "130",
+      "price_gbp": "131",
       "price_usd": 172.97,
       "change_1d": "-2.83%",
       "change_1w": "-13.45%",
@@ -1175,8 +1175,8 @@
       "high_gbp": "242",
       "high_usd": 320.95,
       "bar_pct": 1,
-      "market_cap_gbp_b": 14.025,
-      "market_cap_usd_b": 18.589,
+      "market_cap_gbp_b": 14.034,
+      "market_cap_usd_b": 18.59,
       "beta": 1.733,
       "pe_ratio": 10.66,
       "avg_volume_m": 2.25,
@@ -1184,9 +1184,9 @@
       "short_pct": 12.8,
       "analyst": "buy",
       "analyst_score": 1.92,
-      "vol_1d": 2139359,
-      "vol_1w": 15822259,
-      "vol_1m": 49178459,
+      "vol_1d": 2238145,
+      "vol_1w": 15921045,
+      "vol_1m": 49277245,
       "news": [
         {
           "title": "First Solar Faces Pricing Pressure Amid High Inventory, Slow Project Starts, KeyBanc Says",
@@ -1243,7 +1243,7 @@
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 1,
-      "market_cap_gbp_b": 3.917,
+      "market_cap_gbp_b": 3.92,
       "market_cap_usd_b": 5.192,
       "beta": 1.158,
       "pe_ratio": null,
@@ -1252,9 +1252,9 @@
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 2008189,
-      "vol_1w": 8342289,
-      "vol_1m": 36172189,
+      "vol_1d": 2008194,
+      "vol_1w": 8342294,
+      "vol_1m": 36172194,
       "news": [
         {
           "title": "3 Reasons to Buy Brookfield Renewable Before September Ends",
@@ -1311,7 +1311,7 @@
       "high_gbp": "25",
       "high_usd": 33.02,
       "bar_pct": 4,
-      "market_cap_gbp_b": 20.243,
+      "market_cap_gbp_b": 20.256,
       "market_cap_usd_b": 26.831,
       "beta": 0.624,
       "pe_ratio": null,
