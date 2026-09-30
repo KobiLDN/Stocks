@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-28 16:06",
+  "updated": "2026-09-30 14:36",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "NEAR is the top pick with a massive +226% YTD and +166.58% 1-month return, supercharged by the launch of the first US spot NEAR ETF (Bitwise NRR) which includes a staking yield and a 2030 price target of $155.85, as reported by CoinMarketCap and BeInCrypto.",
+      "drivers": [
+        "ETF launch catalyst",
+        "+226% YTD",
+        "staking yield 5%",
+        "AI and Intents narrative"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SUI",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "SUI shows strong momentum with +61.44% 1-month return and +13.47% 1-week, a golden cross forming, open interest exceeding $1 billion, and Raoul Pal predicting elite status among smart contract platforms (Blockonomi).",
+      "drivers": [
+        "golden cross formation",
+        "OI >$1B",
+        "Raoul Pal endorsement",
+        "$1.00 support holds"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "AVAX surged +54.75% in the past month and +3.71% today, driven by Goldman Sachs bringing a $100B treasury fund to an AVAX-based network, a major institutional catalyst.",
+      "drivers": [
+        "Goldman Sachs $100B fund",
+        "+54.75% 1m",
+        "institutional adoption",
+        "positive news sentiment 0.052"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ALGO",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "ALGO offers a compelling risk/reward at $0.12 with +44.81% 1-month return, smart money accumulating per open interest surging 14.37%, and a 60% probability bull case targeting $0.14 (Blockchain.news).",
+      "drivers": [
+        "smart money loading",
+        "OI surge 14.37%",
+        "$0.12 critical support",
+        "bullish MA structure"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "MINA leads in YTD performance with +89% and an extraordinary +123.71% 1-month return, reflecting strong momentum despite a small $0.184B market cap and recent -6.08% daily dip.",
+      "drivers": [
+        "+89% YTD",
+        "+123.71% 1m",
+        "high beta small cap",
+        "momentum continuation"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "ICP combines +42.23% 1-month and +11.84% 1-week gains with a positive +20% YTD, indicating sustained upward momentum without notable negative news.",
+      "drivers": [
+        "+42.23% 1m",
+        "+11.84% 1w",
+        "+20% YTD",
+        "strong weekly momentum"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "GRT",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "GRT posted an impressive +74.05% 1-month gain on a low $0.312B market cap, capturing AI sector rotation; despite -14% YTD, short-term momentum is powerful.",
+      "drivers": [
+        "+74.05% 1m",
+        "low market cap $0.312B",
+        "AI sector tailwind",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DOT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "DOT rallies +44.53% in the past month and +2.81% today, recovering from a deeply oversold -33% YTD; the sharp bounce suggests a potential trend reversal.",
+      "drivers": [
+        "+44.53% 1m",
+        "oversold YTD -33%",
+        "trend reversal potential",
+        "infra category"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "AIOZ shows explosive +94.14% 1-month performance with $0.141B market cap, riding the AI narrative; recent -11.57% weekly pullback offers a dip entry opportunity.",
+      "drivers": [
+        "+94.14% 1m",
+        "AI sector play",
+        "small cap momentum",
+        "dip after run"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.66,
+      "rationale": "FET gains +45.08% in 1-month and +3.01% weekly, supported by the AI ecosystem theme; at $0.507B market cap it remains undervalued relative to peers.",
+      "drivers": [
+        "+45.08% 1m",
+        "AI narrative",
+        "undervalued cap $0.507B",
+        "positive momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NEAR",
@@ -132,138 +265,6 @@
         "+4.84% 1W",
         "market cap $7.64B",
         "news sentiment 0.159"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "NEAR leads with +199% YTD and +142% 1m, boosted by Bitwise NEAR ETF approval and Ondo Finance partnership for tokenized stocks, despite neutral news sentiment of -0.026.",
-      "drivers": [
-        "+199% YTD",
-        "+142% 1m",
-        "Bitwise ETF approval",
-        "Ondo tokenized stocks"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "FET",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "FET surged +15.6% 1d and +38% 1m on relief that its token was unaffected by a security incident, though news sentiment is -0.832; strong momentum and +16% YTD support the pick.",
-      "drivers": [
-        "+15.6% 1d",
-        "+38% 1m",
-        "relief rally after security clarification"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "MINA shows extreme momentum with +86% YTD, +129% 1m, and +46% 1w, driven by strong short-term buying despite a small $0.18B market cap.",
-      "drivers": [
-        "+86% YTD",
-        "+129% 1m",
-        "+46% 1w",
-        "small cap $0.18B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AIOZ has +38% YTD, +120% 1m, and +61% 1w, reflecting massive short-term momentum on a tiny $0.15B market cap.",
-      "drivers": [
-        "+38% YTD",
-        "+120% 1m",
-        "+61% 1w",
-        "market cap $0.15B"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SUI",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SUI is down -28% YTD but has strong recent momentum with +33% 1m, +31% 1w, and +5.7% 1d, supported by a $4.2B market cap and positive headline momentum.",
-      "drivers": [
-        "+33% 1m",
-        "+31% 1w",
-        "+5.7% 1d",
-        "market cap $4.2B"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "AVAX has -17% YTD but strong weekly momentum (+29% 1w, +38% 1m) and positive news sentiment of 0.232, with a $4.5B market cap.",
-      "drivers": [
-        "+29% 1w",
-        "+38% 1m",
-        "news sentiment 0.232",
-        "market cap $4.5B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TAO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "TAO delivers +37% YTD, +29% 1m, and +24% 1w, with a solid $3.5B market cap and no negative news headwinds.",
-      "drivers": [
-        "+37% YTD",
-        "+29% 1m",
-        "+24% 1w",
-        "market cap $3.5B"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SOL is down -6.5% YTD but has +20% 1m, +10% 1w, positive news sentiment 0.094, and a large $68B market cap, offering relative stability.",
-      "drivers": [
-        "+20% 1m",
-        "+10% 1w",
-        "news sentiment 0.094",
-        "large cap $68B"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "XLM has +9% YTD, +20% 1m, +17% 1w, +8% 1d, and positive news sentiment of 0.22, with a $7.7B market cap.",
-      "drivers": [
-        "+9% YTD",
-        "+20% 1m",
-        "+17% 1w",
-        "news sentiment 0.22"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "LINK has +10% YTD, +18% 1m, +14% 1w, +7.9% 1d, and positive news sentiment 0.013, with a $10B market cap.",
-      "drivers": [
-        "+10% YTD",
-        "+18% 1m",
-        "+14% 1w",
-        "news sentiment 0.013"
       ]
     }
   ]

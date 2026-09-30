@@ -1,9 +1,202 @@
 {
-  "updated": "2026-09-28 15:57",
+  "updated": "2026-09-30 14:28",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "META rallies 29% in September on Muse AI strength [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/meta-eyes-best-month-since-2013-on-muse-ai-strength/cZMFceURBhe), P/E 27, strong_buy consensus, Morningstar sees undervalued [simplywall.st](https://simplywall.st/stocks/us/media/nasdaq-meta/meta-platforms/news/meta-platforms-meta-enterprise-push-keeps-its-undervalued-na).",
+      "drivers": [
+        "+29% 1M momentum",
+        "strong_buy analyst",
+        "Muse AI catalyst",
+        "Morningstar undervalued"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MRVL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "MRVL +195% YTD, +24% 1M, strong_buy, Citi upgrade to $275 target ahead of Oct 6 Investor Day [fxleaders.com](https://www.fxleaders.com/news/2026/09/30/marvell-stock-citi-price-target-investor-day/).",
+      "drivers": [
+        "+195% YTD",
+        "Citi upgrade",
+        "strong_buy consensus",
+        "AI networking demand"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.831,
+      "rationale": "SMTC +35% 1M, +139% YTD, strong_buy with best analyst score 1.19, P/E 116.",
+      "drivers": [
+        "+35% 1M momentum",
+        "strong_buy (score 1.19)",
+        "+139% YTD"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MXL",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "MXL +55% 1M, +401% YTD, buy consensus, riding AI optical-chip rally [kalkine.com](https://kalkine.com/news/technology/maxlinear-nasdaqmxl-stock-rockets-on-the-sp-smallcap-600-as-it-rides-ai-and-optical-chip-momentum-without-company-specific-news).",
+      "drivers": [
+        "+55% 1M momentum",
+        "+401% YTD",
+        "AI optical-chip catalyst",
+        "buy analyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "VIAV",
+      "signal": "strong_buy",
+      "confidence": 0.778,
+      "rationale": "VIAV +15% 1W, +15% 1M, +130% YTD, strong_buy, beta 1.23.",
+      "drivers": [
+        "+15% 1W momentum",
+        "strong_buy consensus",
+        "+130% YTD"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AXTI",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "AXTI +366% YTD, +29% 1M, earnings estimates upgraded [simplywall.st](https://simplywall.st/stocks/us/semiconductors/nasdaq-axti/axt/news/why-axt-stock-is-gaining-attention-after-earnings-estimate-u), but P/E 2606 high risk.",
+      "drivers": [
+        "+366% YTD",
+        "earnings estimate upgrades",
+        "AI substrate demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "P",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "P +40% 1M, +17% 1W, +88% YTD, buy consensus, P/E 178.",
+      "drivers": [
+        "+40% 1M momentum",
+        "+17% 1W",
+        "buy analyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "KEYS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "KEYS +12% 1M, +75% YTD, P/E 49, buy consensus, beta 1.21.",
+      "drivers": [
+        "+75% YTD",
+        "P/E 49",
+        "buy analyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "DELL",
+      "signal": "strong_buy",
+      "confidence": 0.891,
+      "rationale": "DELL +326% YTD, +18% 1M, P/E 32, buy consensus, AI compute exposure.",
+      "drivers": [
+        "+326% YTD",
+        "AI compute play",
+        "buy analyst"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "MU +237% YTD, +11% 1M, P/E 24, strong_buy, memory leader with strong fundamentals.",
+      "drivers": [
+        "+237% YTD",
+        "P/E 24",
+        "strong_buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+528.46%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +528.46% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +528.46% \u2265 182.9% SB"
+      ]
+    },
+    {
+      "ticker": "285A",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+378.02%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +378.02% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +378.02% \u2265 182.9% SB"
+      ]
+    },
+    {
+      "ticker": "AAOI",
+      "signal": "buy",
+      "confidence": 0.92,
+      "ytd": "+154.22%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +154.22% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +154.22% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "LITE",
+      "signal": "buy",
+      "confidence": 0.907,
+      "ytd": "+152.13%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +152.13% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +152.13% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "WDC",
+      "signal": "buy",
+      "confidence": 0.846,
+      "ytd": "+141.85%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +141.85% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +141.85% \u2265 83.8% B"
+      ]
+    },
+    {
+      "ticker": "STX",
+      "signal": "strong_buy",
+      "confidence": 0.598,
+      "ytd": "+218.71%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +218.71% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +218.71% \u2265 182.9% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MXL",
@@ -132,217 +325,6 @@
         "+13.7% 1M momentum",
         "Buy consensus",
         "Memory upcycle"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "285A",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+369.96%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +369.96% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +369.96% \u2265 182.9% SB"
-      ]
-    },
-    {
-      "ticker": "AAOI",
-      "signal": "buy",
-      "confidence": 0.86,
-      "ytd": "+144.14%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +144.14% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +144.14% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "WDC",
-      "signal": "buy",
-      "confidence": 0.794,
-      "ytd": "+133.13%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +133.13% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +133.13% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "signal": "buy",
-      "confidence": 0.787,
-      "ytd": "+132.03%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +132.03% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +132.03% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "VIAV",
-      "signal": "buy",
-      "confidence": 0.689,
-      "ytd": "+115.59%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +115.59% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +115.59% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.636,
-      "ytd": "+232.69%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +232.69% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +232.69% \u2265 182.9% SB"
-      ]
-    },
-    {
-      "ticker": "STX",
-      "signal": "strong_buy",
-      "confidence": 0.571,
-      "ytd": "+208.74%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +208.74% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +208.74% \u2265 182.9% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "META surged +36.51% in 1M and +14.05% in 1W, with a low P/E of 28.01, strong_buy consensus (an_score 1.34), and positive news sentiment of 0.383, making it the best balanced pick.",
-      "drivers": [
-        "+36.51% 1M momentum",
-        "P/E 28.01",
-        "strong_buy consensus",
-        "news sentiment 0.383"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SMTC posted +36.84% 1M and +131.86% YTD, with the best analyst score (an_score 1.19) among strong_buy-rated stocks, though P/E of 112.58 is elevated.",
-      "drivers": [
-        "+36.84% 1M momentum",
-        "an_score 1.19 (best)",
-        "strong_buy consensus",
-        "+131.86% YTD"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SNDK",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "SNDK is up +537% YTD with a reasonable P/E of 24.63; Rosenblatt initiated with a buy and $2,400 target citing AI-driven NAND demand [cnbc.com], though short-term pullback (-3.55% 1D) tempers confidence.",
-      "drivers": [
-        "+537% YTD",
-        "P/E 24.63",
-        "Rosenblatt buy initiation",
-        "AI memory catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "MU gained +242.77% YTD and +15.82% 1M, with strong_buy consensus (an_score 1.37) and a P/E of 24.21; Citi raised its target to $1,300 ahead of Sept 30 earnings [tradingkey.com], though a USITC patent probe adds risk.",
-      "drivers": [
-        "+242.77% YTD",
-        "P/E 24.21",
-        "strong_buy consensus",
-        "Citi $1,300 target"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MXL",
-      "signal": "strong_buy",
-      "confidence": 0.986,
-      "rationale": "MXL soared +360.89% YTD with +28.56% 1M and +22.73% 1W momentum, supported by positive news sentiment of 0.351, but lacks earnings (P/E null) and has high beta of 3.945.",
-      "drivers": [
-        "+360.89% YTD",
-        "+28.56% 1M",
-        "news sentiment 0.351",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.884,
-      "rationale": "DELL is up +323.26% YTD with a P/E of 31.94 and analyst buy consensus; recent 1W pullback of -8.90% offers a better entry into the AI server theme.",
-      "drivers": [
-        "+323.26% YTD",
-        "P/E 31.94",
-        "AI server demand",
-        "recent pullback entry"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HUT",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "HUT rallied +98.05% YTD, +18.76% 1M, and +13.05% 1W, with a strong_buy consensus (an_score 1.38) and positive news sentiment of 0.109, though high beta of 5.976 indicates elevated risk.",
-      "drivers": [
-        "+98.05% YTD",
-        "+18.76% 1M",
-        "strong_buy consensus",
-        "AI compute momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AXTI",
-      "signal": "strong_buy",
-      "confidence": 0.964,
-      "rationale": "AXTI exploded +352.86% YTD with +12.53% 1M and +12.03% 1W, and analyst buy consensus, but an extreme P/E of 2530 signals caution; momentum remains strong.",
-      "drivers": [
-        "+352.86% YTD",
-        "+12.53% 1M",
-        "analyst buy",
-        "extreme momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "KEYS",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "KEYS delivered +73.07% YTD, +11.69% 1M, and +11.02% 1W, with a reasonable P/E of 47.86, analyst buy consensus, and positive news sentiment of 0.275.",
-      "drivers": [
-        "+73.07% YTD",
-        "+11.69% 1M",
-        "P/E 47.86",
-        "news sentiment 0.275"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "MRVL is up +190.11% YTD with the best analyst score (an_score 1.0) among strong_buy-rated stocks and high news sentiment of 0.372, though P/E of 86.32 is elevated.",
-      "drivers": [
-        "+190.11% YTD",
-        "an_score 1.0 (best)",
-        "strong_buy consensus",
-        "news sentiment 0.372"
       ]
     }
   ]

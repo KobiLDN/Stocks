@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-28 15:59",
+  "updated": "2026-09-30 14:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +81.14%, 1M +28.75%, strong_buy consensus with an_score 1.46, and robust short-term momentum from genomics tailwinds.",
+      "drivers": [
+        "YTD +81%",
+        "strong_buy consensus",
+        "1M momentum +28.8%",
+        "low short interest 3.43%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +102.46%, 1M +27.32%, P/E 50.65 reflecting growth, buy rating with an_score 2.43, and strong genomics sector positioning.",
+      "drivers": [
+        "YTD +102%",
+        "1M +27%",
+        "buy consensus",
+        "high revenue growth"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +34.58%, P/E 18.33 (reasonable), buy rating an_score 2.37, and consistent oncology momentum with low beta 0.422.",
+      "drivers": [
+        "P/E 18.3",
+        "YTD +35%",
+        "buy consensus",
+        "low beta"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +26.65%, buy rating an_score 1.70, large cap with 2.15% dividend yield and low beta 0.35, providing stability and income.",
+      "drivers": [
+        "buy consensus",
+        "dividend yield 2.15%",
+        "YTD +27%",
+        "low beta 0.35"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +27.70%, 1M +4.81%, P/E 40.4 (premium for pipeline), buy rating an_score 1.89, with recent neuroscience momentum.",
+      "drivers": [
+        "YTD +28%",
+        "1M +4.8%",
+        "buy consensus",
+        "P/E 40.4"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +16.50%, P/E 30.71, buy rating an_score 1.66, large cap with low beta 0.32 and strong CF franchise.",
+      "drivers": [
+        "buy consensus",
+        "P/E 30.7",
+        "low beta 0.32",
+        "stable large cap"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +10.18%, P/E 39.83, buy rating an_score 1.63, mega-cap with dominant metabolic portfolio and low short interest 0.84%.",
+      "drivers": [
+        "buy consensus",
+        "mega-cap",
+        "low short interest",
+        "metabolic leader"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RCUS",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "YTD +10.13%, strong_buy rating with an_score 1.43, oncology small-cap with high analyst conviction and recent 2.56% 1D gain.",
+      "drivers": [
+        "strong_buy consensus",
+        "an_score 1.43",
+        "YTD +10%",
+        "oncology catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +20.14%, P/E 14.06 (value), dividend yield 3.94%, buy rating an_score 2.46, offering income and reasonable valuation.",
+      "drivers": [
+        "P/E 14.1",
+        "dividend 3.94%",
+        "YTD +20%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +51.75%, 1M +15.47%, buy rating an_score 2.33, strong near-term momentum despite high short interest 30.43% and beta 2.45.",
+      "drivers": [
+        "YTD +52%",
+        "1M +15.5%",
+        "buy consensus",
+        "high momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+559.30%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +559.30% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +559.30% \u2265 182.9% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "GILD",
@@ -132,139 +277,6 @@ window.SIGNALS_DATA = {
         "buy consensus (2.33)",
         "high short interest 30.43%",
         "negative news sentiment -0.179"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "+640% 1Y, +531% YTD, positive news sentiment 0.169; Phase 3 INTerpath-001 melanoma data positive and UAE investment talks drove stock to 4-year high [insidermonkey.com](https://www.insidermonkey.com/news/moderna-inc-mrna-holds-high-level-investment-talks-with-uae-soars-to-4-year-peak-1844110/).",
-      "drivers": [
-        "extreme momentum",
-        "cancer vaccine catalyst",
-        "UAE investment talks",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+199% 1Y, +103.87% YTD, P/E 47.63; S&P 500 inclusion and raised full-year guidance drove strong institutional buying [tradingkey.com](https://www.tradingkey.com/news/market-movers/262185599-market-movers-ilmn-20260924).",
-      "drivers": [
-        "S&P 500 inclusion",
-        "raised guidance",
-        "strong momentum",
-        "institutional buying"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "+151% 1Y, +78.64% YTD, strong_buy analyst score 1.46, low short interest 3.43%; strong momentum with no earnings but high growth expectations.",
-      "drivers": [
-        "strong_buy consensus",
-        "low short interest",
-        "very high YTD return",
-        "genomics growth"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+65% 1Y, +27.30% YTD, P/E 40.49, analyst buy score 1.89; advancing at-home LEQEMBI pen and kidney disease data provide near-term catalysts.",
-      "drivers": [
-        "strong YTD return",
-        "low beta 0.171",
-        "analyst buy",
-        "LEQEMBI pen catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+48% 1Y, +32.97% YTD, P/E 17.83, positive news sentiment 0.241; reasonable valuation and solid momentum despite potential FDA delay for zanzalintinib.",
-      "drivers": [
-        "reasonable P/E",
-        "positive news sentiment",
-        "strong YTD",
-        "oncology pipeline"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ALNY",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "-44% 1Y but +3.96% 1M, analyst buy score 1.69; AMVUTTRA momentum and upcoming Huntington's disease Phase 1 data in October provide catalysts [thelincolnianonline.com](https://www.thelincolnianonline.com/2026/09/23/alnylam-highlights-amvuttra-momentum-resets-2026-ttr-revenue-outlook.html).",
-      "drivers": [
-        "analyst buy",
-        "AMVUTTRA momentum",
-        "Huntington's catalyst",
-        "recent uptick"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AZN",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Strong_buy analyst, P/E 24.75, dividend yield 1.92%; negative YTD -8.75% offers value entry in a large-cap with precision medicine pipeline.",
-      "drivers": [
-        "strong_buy consensus",
-        "reasonable P/E",
-        "dividend yield",
-        "value entry"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+34% 1Y, +25.31% YTD, analyst buy score 1.70, low beta 0.35; solid large-cap with dividend yield 2.17% and consistent momentum.",
-      "drivers": [
-        "analyst buy",
-        "low beta",
-        "dividend yield",
-        "consistent YTD gain"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+41% 1Y, P/E 19.84, analyst buy score 1.93, low beta 0.193; undervalued relative to peers with strong fundamentals.",
-      "drivers": [
-        "low P/E",
-        "analyst buy",
-        "low beta",
-        "strong 1-year return"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+35% 1Y, +15.54% YTD, P/E 30.02, analyst buy score 1.66; stable large-cap with low beta 0.32 and positive news sentiment 0.224.",
-      "drivers": [
-        "analyst buy",
-        "low beta",
-        "positive news sentiment",
-        "stable growth"
       ]
     }
   ]

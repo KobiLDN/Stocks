@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-28 16:07",
+  "updated": "2026-09-30 14:41",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "+171.88% YTD, P/E 156, AI catalyst via $8.2B World Labs acquisition bringing Fei-Fei Li as chief scientist [tomshardware.com](https://www.tomshardware.com/tech-industry/artificial-intelligence/amd-acquires-ai-legend-fei-fei-lis-world-labs-for-usd8-2-billion-imagenet-pioneer-will-become-amd-chief-scientist-as-the-chipmaker-brings-her-lab-in-house).",
+      "drivers": [
+        "YTD +172%",
+        "World Labs acquisition",
+        "Strong buy consensus",
+        "AI infrastructure tailwind"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+29.18% 1M, P/E 27, enterprise AI platform launch and Muse AI agent gaining traction [simplywall.st](https://simplywall.st/stocks/us/media/nasdaq-meta/meta-platforms/news/meta-platforms-meta-enterprise-push-keeps-its-undervalued-na).",
+      "drivers": [
+        "1M +29%",
+        "Enterprise AI platform",
+        "Strong buy",
+        "Muse AI agent"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+44.09% YTD, P/E 34, low short interest 0.57%, critical AI chip manufacturer with $3T market cap target.",
+      "drivers": [
+        "YTD +44%",
+        "Low short 0.57%",
+        "Strong buy",
+        "AI infrastructure"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+58.38% YTD, P/E 61, sole EUV lithography supplier for advanced chips, strong buy consensus.",
+      "drivers": [
+        "YTD +58%",
+        "Strong buy",
+        "Semiconductor equipment leader",
+        "Low short 0.38%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "INTC",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "+194.39% YTD, Edge AI ecosystem expansion with Advantech, but high short interest 3.01% and no P/E [simplywall.st](https://simplywall.st/stocks/us/semiconductors/nasdaq-intc/intel/news/intel-intc-just-drew-fresh-attention-so-what-is-the-market).",
+      "drivers": [
+        "YTD +194%",
+        "Edge AI ecosystem",
+        "Turnaround story",
+        "High short risk"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.93,
+      "rationale": "+155.97% YTD, data center royalty revenue +100%, AGI CPU pipeline >$2B, but P/E 285 and short 10.69% [tradingkey.com](https://www.tradingkey.com/analysis/stocks/us-stocks/262191810-arm-stock-forecast-ai-data-center-cpu-valuation-2026-tradingkey).",
+      "drivers": [
+        "YTD +156%",
+        "Data center royalty growth",
+        "AGI CPU demand",
+        "High short 10.7%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+15.02% YTD, +10.21% 1M, P/E 36.5, positive news sentiment 0.224, life sciences tools leader.",
+      "drivers": [
+        "1M +10%",
+        "Positive news sentiment",
+        "Buy consensus",
+        "Life sciences tools"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CAT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+38.98% YTD, +3.66% 1M, P/E 35, infrastructure and AI data center buildout beneficiary.",
+      "drivers": [
+        "YTD +39%",
+        "Infrastructure demand",
+        "Buy consensus",
+        "AI data center power"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+20.59% YTD, P/E 29, AI leader with strong buy consensus and data center growth tailwind.",
+      "drivers": [
+        "YTD +21%",
+        "AI leader",
+        "Strong buy",
+        "Data center growth"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "+8.39% YTD, P/E 17, attractive valuation, strong buy consensus, AI and cloud growth.",
+      "drivers": [
+        "Low P/E 17",
+        "Strong buy",
+        "AI and cloud growth",
+        "Positive news sentiment"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NVDA",
@@ -132,139 +265,6 @@
         "+17.54% 1M",
         "Buy consensus",
         "AI chip IP"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Surged +36.51% in 1M and +5.94% 1D on Muse AI agent launch; P/E 28.01 with strong_buy consensus (score 1.34) and JPMorgan raising PT to $920 [manilatimes.net](https://www.manilatimes.net/2026/09/25/business/sunday-business-it/meta-shares-soar-after-launch-of-muse-ai/2432811).",
-      "drivers": [
-        "+36.51% 1M momentum",
-        "Muse AI catalyst",
-        "strong_buy analyst consensus",
-        "P/E 28.01"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "Up +181.59% YTD and +31.32% 1M; crossed $1T market cap on AI CPU demand from Meta's Muse, strong_buy rating (score 1.49) despite high P/E 156 [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/amd-intc-stocks-extend-rally-as-meta-s-muse-fuels-bets-on-an-ai-agent-cpu-boom/cZMaHl9RBaJ).",
-      "drivers": [
-        "+181.59% YTD",
-        "$1T market cap",
-        "AI CPU demand",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Up +42.27% YTD and +4.86% 1W; P/E 33.22 with low short interest 0.57% and strong_buy analyst (score 1.38), benefiting from sustained AI chip demand.",
-      "drivers": [
-        "+42.27% YTD",
-        "low short interest 0.57%",
-        "strong_buy consensus",
-        "P/E 33.22"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Rallied +223.49% YTD and +17.09% 1W; Muse drives CPU supply crunch with Intel meeting only half of demand, but P/E is null and analyst score 2.47 indicates risk [simplywall.st](https://simplywall.st/stocks/us/semiconductors/nasdaq-intc/intel/news/intel-intc-faces-ai-cpu-crunch-as-it-fills-only-half-of-dema).",
-      "drivers": [
-        "+223.49% YTD",
-        "AI CPU supply crunch",
-        "Muse catalyst",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Up +48.72% YTD and +7.51% 1W; P/E 59.87 with strong_buy analyst (score 1.40) and low short 0.38%, critical to semiconductor equipment cycle.",
-      "drivers": [
-        "+48.72% YTD",
-        "strong_buy consensus",
-        "low short 0.38%",
-        "chip equipment leader"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Up +32.64% YTD with low beta 0.235 and P/E 31.26; dividend yield 1.99% and positive news sentiment 0.148, offering defensive stability.",
-      "drivers": [
-        "+32.64% YTD",
-        "beta 0.235",
-        "dividend yield 1.99%",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Up +35.60% YTD with P/E 19.76 and dividend yield 3.46%; low beta 0.491, attractive valuation in energy sector.",
-      "drivers": [
-        "+35.60% YTD",
-        "P/E 19.76",
-        "dividend yield 3.46%",
-        "low beta"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Up +14.81% YTD and +8.08% 1M; P/E 35.84 with analyst buy (score 1.52) and positive news sentiment 0.178, healthcare tailwinds.",
-      "drivers": [
-        "+8.08% 1M",
-        "analyst buy consensus",
-        "P/E 35.84",
-        "positive sentiment"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "KO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Up +29.94% YTD with beta 0.342 and dividend yield 2.41%; P/E 26.46, stable consumer staple with strong sentiment 0.212.",
-      "drivers": [
-        "+29.94% YTD",
-        "beta 0.342",
-        "dividend yield 2.41%",
-        "stable consumer staple"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "P/E 28.5 with strong_buy analyst (score 1.30) and low short 1.27%; YTD +19.20% with AI leader status and reasonable valuation.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 28.5",
-        "low short 1.27%",
-        "AI leader"
       ]
     }
   ]
