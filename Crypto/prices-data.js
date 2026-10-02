@@ -329,7 +329,7 @@ window.PRICES_DATA = {
       "market_cap_gbp_b": 3.489,
       "market_cap_usd_b": 4.622,
       "avg_volume_m": 1186.95,
-      "cmc_rank": 24,
+      "cmc_rank": 25,
       "beta": null,
       "pe_ratio": null,
       "div_yield_pct": null,
