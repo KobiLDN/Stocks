@@ -526,7 +526,7 @@ window.PRICES_DATA = {
       "change_1m": "-9.50%",
       "change_ytd": "+14.96%",
       "return_1yr": "+35%",
-      "low_gbp": "63",
+      "low_gbp": "62",
       "low_usd": 82.82,
       "high_gbp": "100",
       "high_usd": 132.6,

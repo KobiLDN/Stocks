@@ -937,7 +937,7 @@ window.PRICES_DATA = {
       "low_usd": 0.086006,
       "high_gbp": "0.4251",
       "high_usd": 0.563387,
-      "bar_pct": 10,
+      "bar_pct": 11,
       "market_cap_gbp_b": 0.023,
       "market_cap_usd_b": 0.031,
       "avg_volume_m": 11.43,
