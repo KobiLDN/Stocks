@@ -1,9 +1,158 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-30 14:36",
+  "updated": "2026-10-05 16:36",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "YTD +139.53%, 1M +29.33%, analyst buy; Q2 revenue beat at $1.47B, raised FY net-new ARR growth by 630bps, and TD Cowen raised PT to $280 on strong AI-driven demand.",
+      "drivers": [
+        "YTD +139.53%",
+        "1M +29.33%",
+        "earnings beat & raised guidance",
+        "AI cybersecurity demand"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +125.39%, 1M +19.97%, analyst buy; BTIG raised PT to $425 expecting >17% revenue growth and >26% NGS ARR growth, with platform shift to high-growth solutions.",
+      "drivers": [
+        "YTD +125.39%",
+        "1M +19.97%",
+        "BTIG PT raise to $425",
+        "platform growth catalysts"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +14.75%, 1M +21.44%, P/E 28.05, strong_buy consensus; solid momentum with reasonable valuation and strong fundamentals.",
+      "drivers": [
+        "1M +21.44%",
+        "P/E 28.05",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +100.79%, 1M +13.78%, P/E 46.42, strong_buy; strong momentum in semiconductor equipment with reasonable valuation.",
+      "drivers": [
+        "YTD +100.79%",
+        "1M +13.78%",
+        "P/E 46.42",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.94,
+      "rationale": "YTD +181.82%, 1M +24.53%, strong_buy; exceptional AI-driven growth though P/E 160.66 is elevated.",
+      "drivers": [
+        "YTD +181.82%",
+        "1M +24.53%",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +237.99%, P/E 14.33, strong_buy; outstanding returns with low P/E, strong momentum in memory and storage.",
+      "drivers": [
+        "YTD +237.99%",
+        "P/E 14.33",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +60.08%, 1M +5.06%, P/E 60.18, strong_buy; key lithography supplier benefiting from semiconductor capex cycle.",
+      "drivers": [
+        "YTD +60.08%",
+        "P/E 60.18",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +85.04%, 1M +27.58%, analyst buy; strong momentum in cloud security despite no P/E (negative earnings).",
+      "drivers": [
+        "YTD +85.04%",
+        "1M +27.58%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +17.69%, 1W +9.59%, analyst buy; recent momentum surge though YTD flat and P/E 106.63.",
+      "drivers": [
+        "1M +17.69%",
+        "1W +9.59%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.854,
+      "rationale": "YTD +165.25%, 1M +16.36%, analyst buy; very high momentum but P/E 313.74 and short interest 10.69% indicate risk.",
+      "drivers": [
+        "YTD +165.25%",
+        "1M +16.36%",
+        "buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+196.48%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +196.48% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +196.48% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.697,
+      "ytd": "+134.91%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +134.91% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +134.91% \u2265 96.7% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MU",
@@ -132,184 +281,6 @@ window.SIGNALS_DATA = {
         "P/E 28.4",
         "strong_buy",
         "low short 0.91%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.93,
-      "ytd": "+155.97%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +155.97% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +155.97% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.785,
-      "ytd": "+131.70%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +131.70% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +131.70% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.751,
-      "ytd": "+125.94%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +125.94% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +125.94% \u2265 83.8% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.695,
-      "ytd": "+116.54%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +116.54% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +116.54% \u2265 83.8% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AAPL",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "All-time high on iPhone Duo pre-order frenzy (pomegra.io); YTD +26.29%, P/E 39.1, news sentiment +0.205, analyst buy with score 2.2.",
-      "drivers": [
-        "iPhone Duo pre-order demand",
-        "all-time high near $245",
-        "strong YTD momentum",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Muse AI agent surpasses 3.4M downloads in 3 weeks (pomegra.io); YTD +11.10%, 1M +24.79%, P/E 27.17, analyst strong_buy with score 1.42.",
-      "drivers": [
-        "Muse AI adoption",
-        "analyst price targets $865-$950",
-        "strong 1M momentum",
-        "reasonable P/E"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Apple and Nvidia boost TSMC chip business; YTD +40.94%, P/E 33.28, strong_buy consensus (score 1.38), low short interest 0.57%.",
-      "drivers": [
-        "Apple/Nvidia demand",
-        "strong YTD return",
-        "low short interest",
-        "strong buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +232.73%, P/E 23.69 still reasonable, analyst strong_buy (score 1.37), 1M +12.44% momentum, despite slightly negative news sentiment -0.055.",
-      "drivers": [
-        "massive YTD gain",
-        "low P/E for growth",
-        "strong buy consensus",
-        "positive 1M momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +22.81%, P/E 29.29, strong_buy consensus (score 1.30), 1D +2.84% positive momentum, news sentiment +0.119.",
-      "drivers": [
-        "AI leader",
-        "reasonable P/E",
-        "strong buy consensus",
-        "positive short-term momentum"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.732,
-      "rationale": "YTD +122.71%, 1M +15.63%, news sentiment +0.455 (highest in universe), analyst buy (score 1.70), though P/E extremely high at 8418.",
-      "drivers": [
-        "very high news sentiment",
-        "strong YTD and 1M momentum",
-        "cybersecurity demand",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "YTD +172.61%, 1M +30.85%, strong_buy consensus (score 1.49), news sentiment +0.243, but P/E 155.81 elevated.",
-      "drivers": [
-        "exceptional YTD return",
-        "strong 1M momentum",
-        "positive news sentiment",
-        "AI catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +76.37%, 1M +15.30%, analyst buy (score 1.97), but news sentiment -0.04 slightly negative and P/E null.",
-      "drivers": [
-        "strong YTD and 1M momentum",
-        "cybersecurity growth",
-        "buy consensus",
-        "cloud security demand"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.66,
-      "rationale": "YTD +110.67%, 1M +1.69%, news sentiment +0.319, analyst buy (score 1.71), but P/E 921.63 very high.",
-      "drivers": [
-        "strong YTD return",
-        "positive news sentiment",
-        "cybersecurity leader",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +51.43%, 1M +3.40%, strong_buy consensus (score 1.40), low short interest 0.38%, P/E 60.58 reasonable for semi equipment.",
-      "drivers": [
-        "strong YTD return",
-        "low short interest",
-        "strong buy consensus",
-        "semiconductor equipment demand"
       ]
     }
   ]

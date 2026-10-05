@@ -1,9 +1,142 @@
 {
-  "updated": "2026-09-30 14:34",
+  "updated": "2026-10-05 16:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NTRA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong buy consensus with an analyst score of 1.39, YTD +82.00%, 1-month +28.49%, and low short interest of 3.43% indicate robust momentum and institutional support.",
+      "drivers": [
+        "strong_buy consensus",
+        "YTD +82%",
+        "low short interest 3.43%",
+        "1-month +28.49%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "ILMN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +106.24%, 1-month +31.28%, RBC upgraded price target to $310 with outperform rating, and EPS beat of $1.31 vs $1.23 consensus; PE 51.7 reflects growth premium.",
+      "drivers": [
+        "RBC upgrade to $310",
+        "EPS beat $1.31",
+        "YTD +106%",
+        "1-month +31.28%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "YTD +518.18% driven by phase 3 success of Intismeran Autogene + Keytruda in skin cancer, 1-month +35.94%; analyst hold (score 2.83) tempers enthusiasm but catalyst is strong.",
+      "drivers": [
+        "Phase 3 success with Keytruda",
+        "YTD +518%",
+        "1-month +35.94%",
+        "analyst hold rating"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +23.47%, PE 39.0, low beta 0.092, buy rating with analyst score 1.89, and low short interest 4.39% suggest steady growth with manageable risk.",
+      "drivers": [
+        "buy rating",
+        "low beta 0.092",
+        "YTD +23.47%",
+        "short interest 4.39%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +33.44%, PE 18.35 (reasonable valuation), buy rating, and 1-day +1.09% positive momentum; short interest 14.56% is elevated but manageable.",
+      "drivers": [
+        "PE 18.35",
+        "YTD +33.44%",
+        "buy rating",
+        "positive 1-day momentum"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Buy rating with analyst score 1.63, low short interest 0.84%, PE 38.42, and YTD +6.46% with 1-month +1.84%; strong fundamentals and low risk.",
+      "drivers": [
+        "buy rating",
+        "low short interest 0.84%",
+        "PE 38.42",
+        "YTD +6.46%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PACB",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1-month +98.86%, 1-week +53.51%, YTD +42.66% show extreme momentum; but no PE, high beta 2.194, and short interest 18.08% indicate high risk.",
+      "drivers": [
+        "1-month +98.86%",
+        "1-week +53.51%",
+        "high beta 2.194",
+        "short interest 18.08%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "RXRX",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "1-month +25.73%, 1-week +16.89%, YTD +2.98% with buy rating; but short interest 34.95% and negative 1-year return (-25%*) signal speculative recovery play.",
+      "drivers": [
+        "1-month +25.73%",
+        "1-week +16.89%",
+        "high short interest 34.95%",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NVAX",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD +48.39%, 1-month +3.83% with buy rating; but high beta 2.435, no PE, and short interest 30.43% reflect binary risk and volatility.",
+      "drivers": [
+        "YTD +48.39%",
+        "buy rating",
+        "high beta 2.435",
+        "short interest 30.43%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +24.61%, PE 24.85, low beta 0.407, and low short interest 2.6%; but hold rating (score 2.65), DCF overvaluation, and Medicare pricing headwinds temper upside.",
+      "drivers": [
+        "YTD +24.61%",
+        "PE 24.85",
+        "low short interest 2.6%",
+        "hold rating"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NTRA",
@@ -132,151 +265,6 @@
         "1M +15.5%",
         "buy consensus",
         "high momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+559.30%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +559.30% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +559.30% \u2265 182.9% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "GILD has +26% YTD, buy consensus (1.7), positive news sentiment 0.416, and raised 2026 guidance [GuruFocus.com](https://www.gurufocus.com/news/9099179/moderna-mrna-surges-29-amid-healthcare-sector-gains-on-september-27-2026). Low short interest 1.48% supports further upside.",
-      "drivers": [
-        "+26% YTD momentum",
-        "buy consensus (1.7)",
-        "positive news sentiment 0.416",
-        "low short interest 1.48%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NTRA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "NTRA shows +80.6% YTD, strong_buy consensus (1.46), low short interest 3.43%, and +26.7% 1-month momentum reflecting strong clinical and commercial traction.",
-      "drivers": [
-        "+80.6% YTD",
-        "strong_buy consensus (1.46)",
-        "low short interest 3.43%",
-        "+26.7% 1-month momentum"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MRNA surged +527% YTD with positive news sentiment 0.242; upcoming Phase 3 melanoma data and analyst defense of U.S. AI drug lead signal strong catalysts [Stocktwits](https://stocktwits.com/news-articles/markets/equity/mrna-stock-analyst-china-ai-drug-lead-baseless-moderna-cancer-data/cZMSV3BRBfx). High risk from hold consensus (2.74) and no P/E.",
-      "drivers": [
-        "+527% YTD momentum",
-        "upcoming Phase 3 melanoma catalyst",
-        "positive news sentiment 0.242",
-        "hold consensus (2.74) risk"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "LLY has +10.6% YTD, buy consensus (1.63), very positive news sentiment 0.407, low short 0.84%, and P/E 39.9 reflecting strong GLP-1 market position.",
-      "drivers": [
-        "+10.6% YTD",
-        "buy consensus (1.63)",
-        "positive news sentiment 0.407",
-        "low short interest 0.84%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "EXEL gained +32.7% YTD, has buy consensus (2.37), positive news sentiment 0.241, and profitable P/E 18.18, with reasonable short interest 14.56%.",
-      "drivers": [
-        "+32.7% YTD",
-        "profitable P/E 18.18",
-        "positive news sentiment 0.241",
-        "buy consensus (2.37)"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ILMN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ILMN rallied +101% YTD with buy consensus (2.43), strong +25.5% 1-month momentum, and P/E 50.4 reflecting growth expectations, though short interest is elevated at 11.47%.",
-      "drivers": [
-        "+101% YTD",
-        "+25.5% 1-month momentum",
-        "buy consensus (2.43)",
-        "elevated short interest 11.47%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "BIIB is up +27.5% YTD, buy consensus (1.89), P/E 40.35, with positive news sentiment 0.082 and moderate short interest 4.39%.",
-      "drivers": [
-        "+27.5% YTD",
-        "buy consensus (1.89)",
-        "P/E 40.35",
-        "moderate short interest 4.39%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ALNY",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "ALNY has negative YTD -37.1% but strong buy consensus (1.69) with 18/21 analysts bullish; recent +6.1% 1-month recovery suggests a contrarian opportunity despite negative news sentiment -0.191.",
-      "drivers": [
-        "strong buy consensus (1.69)",
-        "+6.1% 1-month recovery",
-        "negative news sentiment -0.191",
-        "YTD -37.1% contrarian"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "AZN is down -7.75% YTD but has buy consensus (1.72), P/E 25.02, dividend yield 1.9%, and positive news sentiment 0.188, offering stability and oncology pipeline strength.",
-      "drivers": [
-        "buy consensus (1.72)",
-        "P/E 25.02",
-        "dividend yield 1.9%",
-        "positive news sentiment 0.188"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NVAX",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "NVAX gained +45.4% YTD and +11.9% 1-month with buy consensus (2.33), but high short interest 30.43% and negative news sentiment -0.179 indicate speculative risk.",
-      "drivers": [
-        "+45.4% YTD",
-        "buy consensus (2.33)",
-        "high short interest 30.43%",
-        "negative news sentiment -0.179"
       ]
     }
   ]

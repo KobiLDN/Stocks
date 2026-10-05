@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-30 14:35",
+  "updated": "2026-10-05 16:35",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "RKLB",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Record 20-mission Synspective contract pushes backlog above 100 missions; Citi initiated Buy with $105 target; 1M +10.20%, analyst score 1.57. [kalkine.com](https://kalkine.com/news/industrials/rocket-lab-nasdaqrklb-stock-how-a-record-electron-deal-and-a-citi-buy-call-fired-up-shares) [defenseworld.net](https://www.defenseworld.net/2026/10/04/rocket-lab-nasdaqrklb-upgraded-at-citigroup.html)",
+      "drivers": [
+        "Record commercial contract",
+        "Citi Buy initiation",
+        "Backlog >100 missions",
+        "1M momentum +10.20%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SPCX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Morgan Stanley reiterates Overweight and $300 target; SpaceX rebrands AI unit to SpaceXSI; 1W +14.95%, 1D +5.09%, analyst score 1.68. [247wallst.com](https://247wallst.com/investing/2026/10/05/spacex-climbs-5-as-musk-renames-spacexai-to-spacexsi-morgan-stanley-reiterates-300-target-rocket-lab-slips-ast-spacemobile-nudges-higher/)",
+      "drivers": [
+        "Morgan Stanley $300 target",
+        "SpaceXSI rebrand catalyst",
+        "1W momentum +14.95%",
+        "Strong analyst consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Received $92M DoD payment under CDAO MSS Task Order; partnered with Armada for sovereign AI; 1M +10.74%, YTD +12.35%, analyst score 1.84. [tradersunion.com](https://tradersunion.com/news/stocks/show/3665705-palantir-gains-0-13percent-to-usd189-04/)",
+      "drivers": [
+        "$92M DoD contract payment",
+        "Sovereign AI partnership",
+        "1M momentum +10.74%",
+        "Analyst score 1.84"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CACI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +16.55%, PE 25.93, low beta 0.591, analyst score 1.56 (strong buy territory); consistent defence IT demand.",
+      "drivers": [
+        "YTD +16.55%",
+        "PE 25.93",
+        "Analyst score 1.56",
+        "Low beta 0.591"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "RR.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +23.87%, analyst score 1.6, beta 1.272; benefiting from European defence spending and engine aftermarket growth.",
+      "drivers": [
+        "YTD +23.87%",
+        "Analyst score 1.6",
+        "European defence tailwind",
+        "1Y return +28%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +26.23%, low PE 14.75, beta 0.309; attractive valuation despite hold rating (2.82); recent weakness may be entry point.",
+      "drivers": [
+        "YTD +26.23%",
+        "PE 14.75",
+        "Low beta 0.309",
+        "Value opportunity"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +10.82%, 1W +5.17%, beta 0.977; no analyst rating but positive momentum and defence electronics exposure.",
+      "drivers": [
+        "1W momentum +5.17%",
+        "YTD +10.82%",
+        "Defence electronics niche",
+        "Beta 0.977"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DRS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +7.37%, 1D +2.40%, low beta 0.16, short interest 1.28%; steady performer with embedded defence systems exposure.",
+      "drivers": [
+        "1D momentum +2.40%",
+        "YTD +7.37%",
+        "Low beta 0.16",
+        "Low short interest 1.28%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +7.36%, PE 23.85, analyst score 1.75 (buy); small-cap UK defence play with stable fundamentals.",
+      "drivers": [
+        "Analyst score 1.75",
+        "PE 23.85",
+        "YTD +7.36%",
+        "Small-cap defence"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "YTD +10.42%, PE 27.66, beta -0.044; low volatility UK defence stock with modest upside.",
+      "drivers": [
+        "YTD +10.42%",
+        "Low beta -0.044",
+        "PE 27.66",
+        "UK defence exposure"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SPCX",
@@ -132,138 +265,6 @@ window.SIGNALS_DATA = {
         "buy consensus (score 1.87)",
         "low short interest 1.01%",
         "low beta 0.287 (defensive)"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +31.48%, P/E 15.35, 1M +4.56%, and a Wall Street Zen upgrade to strong-buy reinforce the attractive valuation and momentum.",
-      "drivers": [
-        "+31.48% YTD",
-        "P/E 15.35",
-        "1M +4.56%",
-        "Upgraded to strong-buy"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +13.14%, 1W +4.24%, Cantor reiterates Overweight with $122 target, and pending Iridium acquisition, despite YTD -4.13%.",
-      "drivers": [
-        "1M +13.14%",
-        "1W +4.24%",
-        "Cantor Overweight",
-        "Iridium acquisition"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CACI",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +14.55%, analyst score 1.56 (near strong-buy), news sentiment 0.266, and P/E 25.46 indicate solid fundamentals.",
-      "drivers": [
-        "YTD +14.55%",
-        "Analyst score 1.56",
-        "News sentiment 0.266",
-        "P/E 25.46"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +24.81%, analyst buy with score 1.6, news sentiment 0.271, and Healey's industrialisation plan support the pick.",
-      "drivers": [
-        "YTD +24.81%",
-        "Analyst score 1.6",
-        "News sentiment 0.271",
-        "Healey industrial plan"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +11.74%, 1W +2.45%, analyst buy, and expanding Maven contract, though P/E is elevated at 160.32.",
-      "drivers": [
-        "YTD +11.74%",
-        "1W +2.45%",
-        "Maven contract expansion",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ASTS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1M +5.70% and German filing for 344-satellite BlueBird plan, but YTD -26.49% and very high short interest 21.84%.",
-      "drivers": [
-        "1M +5.70%",
-        "German 344-satellite filing",
-        "Short interest 21.84%",
-        "YTD -26.49%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SPCX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +4.25%, Starship first orbital launch achieved, analyst buy, but YTD -8.35% with upcoming lockup expiries.",
-      "drivers": [
-        "1M +4.25%",
-        "Starship orbital launch",
-        "Analyst buy",
-        "YTD -8.35%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1M +2.02% and $464.8M laser contract, yet YTD -41.09% and no P/E due to losses.",
-      "drivers": [
-        "1M +2.02%",
-        "$464.8M laser contract",
-        "YTD -41.09%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BA.L",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +13.30%, analyst buy, P/E 28.39, but 1M -2.79% and news sentiment 0.031.",
-      "drivers": [
-        "YTD +13.30%",
-        "Analyst buy",
-        "P/E 28.39",
-        "1M -2.79%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Strong-buy analyst score 1.45, YTD +6.59%, P/E 30.97, though 1M -4.39%.",
-      "drivers": [
-        "Strong-buy score 1.45",
-        "YTD +6.59%",
-        "P/E 30.97",
-        "1M -4.39%"
       ]
     }
   ]

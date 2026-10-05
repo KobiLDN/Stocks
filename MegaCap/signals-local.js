@@ -1,9 +1,165 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-09-30 14:41",
+  "updated": "2026-10-05 16:39",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.95,
+      "rationale": "Record high with $150B buyback authorization and Morgan Stanley top pick reinstatement [kalkine.com]; +25.83% YTD, P/E 29.97, strong_buy consensus.",
+      "drivers": [
+        "YTD +25.83%",
+        "P/E 29.97",
+        "strong_buy consensus",
+        "$150B buyback"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.941,
+      "rationale": "Stifel raised PT to $700 on server strength [investing.com]; +182% YTD, 1M +24.64%, strong_buy consensus.",
+      "drivers": [
+        "YTD +182%",
+        "1M +24.64%",
+        "strong_buy consensus",
+        "Stifel PT $700"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+21.11% 1M, +14.43% YTD, P/E 27.97, strong_buy consensus; ad recovery and AI investments.",
+      "drivers": [
+        "1M +21.11%",
+        "P/E 27.97",
+        "strong_buy consensus",
+        "YTD +14.43%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TSM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Musk confirms discussions with TSMC for Terafab chip venture [morningstar.com]; +51.4% YTD, 1M +9.66%, P/E 34.88.",
+      "drivers": [
+        "YTD +51.4%",
+        "1M +9.66%",
+        "P/E 34.88",
+        "Terafab discussions"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+60.08% YTD, 1M +5.06%, P/E 60.18, strong_buy consensus; EUV lithography monopoly benefits from AI chip demand.",
+      "drivers": [
+        "YTD +60.08%",
+        "P/E 60.18",
+        "strong_buy consensus",
+        "EUV monopoly"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+11.91% YTD, 1M +6.47%, P/E 29.3, strong_buy consensus; cloud and AI growth.",
+      "drivers": [
+        "YTD +11.91%",
+        "P/E 29.3",
+        "strong_buy consensus",
+        "1M +6.47%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TMO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+11.90% YTD, 1M +9.73%, P/E 35.59, buy consensus; life sciences tools demand.",
+      "drivers": [
+        "1M +9.73%",
+        "YTD +11.90%",
+        "P/E 35.59",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+23.50% YTD, 1M +5.56%, P/E 38.28, buy consensus; services growth and iPhone cycle.",
+      "drivers": [
+        "YTD +23.50%",
+        "P/E 38.28",
+        "buy consensus",
+        "1M +5.56%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "+9.54% YTD, P/E 17.29, strong_buy consensus; attractive valuation and AI search.",
+      "drivers": [
+        "P/E 17.29",
+        "strong_buy consensus",
+        "YTD +9.54%",
+        "low valuation"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CAT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+42.21% YTD, 1M +2.84%, P/E 36.44, buy consensus; infrastructure and data center power demand.",
+      "drivers": [
+        "YTD +42.21%",
+        "P/E 36.44",
+        "buy consensus",
+        "data center power"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+196.62%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +196.62% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +196.62% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.853,
+      "ytd": "+164.91%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +164.91% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +164.91% \u2265 96.7% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMD",
@@ -132,139 +288,6 @@ window.SIGNALS_DATA = {
         "Strong buy",
         "AI and cloud growth",
         "Positive news sentiment"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "NVDA is up +22.53% YTD with a P/E of 29.22, and J.P. Morgan sees the AI trade reviving after the pullback, with NVDA rising on its record $150B buyback [reuters.com](https://www.reuters.com/business/global-ai-trade-could-revive-after-recent-pullback-jp-morgan-says-2026-09-28/). Strong buy consensus (an_score 1.3) and positive news sentiment (0.119) support the pick.",
-      "drivers": [
-        "+22.53% YTD",
-        "P/E 29.22",
-        "Strong buy consensus",
-        "AI trade revival"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "META is up +24.64% in the last month, driven by the Muse AI agent's rapid adoption (3.4M downloads in 3 weeks) and multiple analyst price target hikes (TD Cowen $865, Canaccord $950) [pomegra.io](https://pomegra.io/briefs/2026-09-28-meta-stock-selloff-muse-ai). Despite a -3.74% 1-day dip, the strong buy consensus (an_score 1.42) and AI monetization potential make it a top pick.",
-      "drivers": [
-        "+24.64% 1M",
-        "Muse AI traction",
-        "Analyst PT hikes",
-        "Strong buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "AMD is up +171.26% YTD and +30.20% in the last month, with a strong buy consensus (an_score 1.49) and positive news sentiment (0.243). The AI infrastructure buildout and recent momentum make it a top pick despite a high P/E of 155.",
-      "drivers": [
-        "+171.26% YTD",
-        "+30.20% 1M",
-        "Strong buy consensus",
-        "AI momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "TSM is up +40.59% YTD with a P/E of 33.2 and a strong buy consensus (an_score 1.38). As the leading semiconductor foundry, it benefits from AI chip demand and the J.P. Morgan view that semis could re-engage [reuters.com](https://www.reuters.com/business/global-ai-trade-could-revive-after-recent-pullback-jp-morgan-says-2026-09-28/).",
-      "drivers": [
-        "+40.59% YTD",
-        "P/E 33.2",
-        "Strong buy consensus",
-        "AI foundry leader"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "AAPL hit an all-time high near $245 on the foldable iPhone Duo pre-order frenzy, with demand exceeding supply [pomegra.io](https://pomegra.io/news/aapl-hits-all-time-high-on-iphone-duo-pre-order-frenzy). Up +26.17% YTD with a buy consensus (an_score 2.2) and positive news sentiment (0.205).",
-      "drivers": [
-        "+26.17% YTD",
-        "iPhone Duo pre-orders",
-        "All-time high",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "QCOM surged past $201 on massive AI deals including a $60B AWS custom silicon partnership, with a 23% monthly jump [investing.com](https://uk.investing.com/news/stock-market-news/qualcomm-just-surged-past-201-on-massive-ai-deals-is-the-rally-justified-4885083). Despite a hold consensus (an_score 2.59), the AI catalysts and +15.21% 1M momentum make it attractive.",
-      "drivers": [
-        "+15.21% 1M",
-        "AWS AI deal",
-        "AI inference exposure",
-        "Positive news sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "TMO is up +13.82% YTD and +8.18% in the last month, with a buy consensus (an_score 1.52) and positive news sentiment (0.129). The healthcare turnaround narrative and strong momentum support the pick.",
-      "drivers": [
-        "+8.18% 1M",
-        "+13.82% YTD",
-        "Buy consensus",
-        "Healthcare turnaround"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "WMT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "WMT is up +5.84% in the last month with a buy consensus (an_score 1.53) and strong news sentiment (0.234). As a consumer staple, it offers defensive appeal amid macro uncertainty.",
-      "drivers": [
-        "+5.84% 1M",
-        "Buy consensus",
-        "Positive news sentiment",
-        "Defensive play"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "INTC is up +195.76% YTD and +30.18% in the last month, with a buy consensus (an_score 2.47) and positive news sentiment (0.153). The massive momentum and AI-driven demand outlook make it a high-risk, high-reward pick.",
-      "drivers": [
-        "+195.76% YTD",
-        "+30.18% 1M",
-        "AI demand",
-        "Positive news sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.864,
-      "rationale": "ARM is up +144.91% YTD and +17.54% in the last month, with a buy consensus (an_score 1.93) and positive news sentiment (0.138). Despite high volatility (beta 3.89) and short interest (10.69%), the AI chip IP story remains compelling.",
-      "drivers": [
-        "+144.91% YTD",
-        "+17.54% 1M",
-        "Buy consensus",
-        "AI chip IP"
       ]
     }
   ]
