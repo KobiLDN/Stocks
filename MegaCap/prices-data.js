@@ -1591,7 +1591,7 @@ window.PRICES_DATA = {
       "market_cap_usd_b": 334.263,
       "market_cap_gbp_b": 251.79,
       "beta": 0.58,
-      "pe_ratio": 13.96,
+      "pe_ratio": 13.97,
       "avg_volume_m": 1.34,
       "div_yield_pct": 388.0,
       "short_pct": null,
