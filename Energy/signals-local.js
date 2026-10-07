@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-10-05 16:38",
+  "updated": "2026-10-07 15:17",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.813,
+      "rationale": "VLO has +157% YTD, P/E 17.48, and strong refining margins driven by Middle East conflict, with 48.2% 3-month return and analyst buy consensus, though some see 16% overvaluation at $419.",
+      "drivers": [
+        "+157% YTD",
+        "record refining margins",
+        "48.2% 3-month return",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.852,
+      "rationale": "MPC leads with +165% YTD, +10.29% 1W, P/E 15.01, and tight refining capacity supporting earnings, but high short interest of 3.19% signals caution.",
+      "drivers": [
+        "+165% YTD",
+        "+10.29% 1W",
+        "P/E 15.01",
+        "tight refining capacity"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SHEL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "SHEL has record refining margin of $42/bbl in Q3 (vs $24 Q2), P/E 10.77, dividend yield 3.2%, and +32% YTD with strong momentum and positive news from Middle East conflict.",
+      "drivers": [
+        "record $42/bbl refining margin",
+        "P/E 10.77",
+        "dividend yield 3.2%",
+        "+32% YTD"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "XOM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "XOM has +36.8% YTD, P/E 21.17, dividend yield 2.5%, and Morgan Stanley sees potential to break record high, supported by strong fundamentals and low beta 0.209.",
+      "drivers": [
+        "+36.8% YTD",
+        "Morgan Stanley record high view",
+        "dividend yield 2.5%",
+        "low beta 0.209"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "CVX has +36.87% YTD, P/E 19.98, highest dividend yield 3.43% among majors, and best analyst score 1.72, though 1M momentum is slightly negative.",
+      "drivers": [
+        "+36.87% YTD",
+        "dividend yield 3.43%",
+        "analyst score 1.72",
+        "P/E 19.98"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "BP has +30.29% YTD, P/E 21.96, dividend yield 4.48%, low short interest 0.28%, and positive 1W momentum +3.42%.",
+      "drivers": [
+        "dividend yield 4.48%",
+        "low short interest 0.28%",
+        "+30.29% YTD",
+        "+3.42% 1W"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "EOG has +37.85% YTD, P/E 11.23, dividend yield 2.83%, and strong 1W momentum +3.31% with analyst buy consensus.",
+      "drivers": [
+        "+37.85% YTD",
+        "P/E 11.23",
+        "dividend yield 2.83%",
+        "+3.31% 1W"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "EQNR has +81.09% YTD, P/E 11.56, dividend yield 3.63%, and strong 1W momentum +4.04%, but analyst hold and high short interest 2.39% temper confidence.",
+      "drivers": [
+        "+81.09% YTD",
+        "P/E 11.56",
+        "dividend yield 3.63%",
+        "+4.04% 1W"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "OXY has +39.57% YTD, P/E 16.57, dividend yield 1.92%, and strong 1W momentum +6.17%, though 1M is negative and short interest is 2.96%.",
+      "drivers": [
+        "+39.57% YTD",
+        "+6.17% 1W",
+        "P/E 16.57",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "SSE.L has +10.82% YTD, P/E 23.54, dividend yield 2.78%, and positive 1M momentum +2.91% with analyst buy, offering stable utility exposure.",
+      "drivers": [
+        "+10.82% YTD",
+        "dividend yield 2.78%",
+        "+2.91% 1M",
+        "analyst buy"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MPC",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "+3.46% 1M",
         "2.81% dividend yield",
         "buy score 1.94"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "VLO leads with +138% YTD and +8.02% 1-month momentum, P/E 16.24, and positive news sentiment 0.367, driven by surging refining margins and TD Cowen's Q3 beat expectations for the sector.",
-      "drivers": [
-        "+138% YTD return",
-        "+8.02% 1-month gain",
-        "P/E 16.24",
-        "refining margin tailwind"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.836,
-      "rationale": "MPC shows +140% YTD and +5.01% 1-month momentum, P/E 13.5, with strong refining exposure and positive sentiment 0.121, benefiting from tight diesel markets.",
-      "drivers": [
-        "+140% YTD return",
-        "+5.01% 1-month gain",
-        "P/E 13.5",
-        "refining strength"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "SHEL has +29.57% YTD, +4.03% 1-month, low P/E 10.52, dividend yield 3.24%, and positive news sentiment 0.218, supported by LNG Canada expansion and technical uptrend.",
-      "drivers": [
-        "P/E 10.52",
-        "+4.03% 1-month gain",
-        "dividend yield 3.24%",
-        "LNG Canada expansion"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BP offers +25.97% YTD, dividend yield 4.54%, and a JPMorgan upgrade to overweight with 25% upside potential, citing restructuring and new CEO Meg O'Neill.",
-      "drivers": [
-        "JPMorgan upgrade to overweight",
-        "dividend yield 4.54%",
-        "+25.97% YTD",
-        "restructuring catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "XOM has +34.19% YTD, P/E 20.93, and TD Cowen raised its target to $180 with a Buy rating on expected Q3 refining beat, despite mixed news sentiment -0.08.",
-      "drivers": [
-        "TD Cowen $180 target",
-        "+34.19% YTD",
-        "P/E 20.93",
-        "Q3 refining beat expected"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "TTE trades at P/E 11.32 with a high dividend yield 4.69%, analyst score 1.67 (most bullish), and +33.29% YTD, backing new gas projects in Africa.",
-      "drivers": [
-        "P/E 11.32",
-        "dividend yield 4.69%",
-        "analyst score 1.67",
-        "Africa gas projects"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "CVX has +34.76% YTD, dividend yield 3.45%, analyst score 1.72, and strong fundamentals with P/E 19.88, though short-term momentum is slightly negative.",
-      "drivers": [
-        "+34.76% YTD",
-        "dividend yield 3.45%",
-        "analyst score 1.72",
-        "P/E 19.88"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "DNNGY",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "DNNGY has a strong_buy analyst consensus (score 1.0) and +2.33% YTD, despite -51% 1-year return, riding grid spending boom with potential turnaround.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "+2.33% YTD",
-        "grid spending boom",
-        "turnaround potential"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "COP shows +32.58% YTD, P/E 16.66, dividend yield 2.67%, and analyst score 1.74, with stable upstream production and positive 1-week momentum.",
-      "drivers": [
-        "+32.58% YTD",
-        "P/E 16.66",
-        "analyst score 1.74",
-        "stable upstream production"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "SSE.L has +9.25% YTD, dividend yield 2.79%, analyst score 1.94, and defensive cash flows from regulated utility operations, with positive news sentiment 0.18.",
-      "drivers": [
-        "+9.25% YTD",
-        "dividend yield 2.79%",
-        "defensive cash flows",
-        "regulated utility"
       ]
     }
   ]

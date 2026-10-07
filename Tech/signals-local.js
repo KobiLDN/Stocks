@@ -1,9 +1,173 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-10-05 16:36",
+  "updated": "2026-10-07 15:15",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.985,
+      "rationale": "YTD +190.61%, 1M +28.41%, strong_buy 1.49; Citi raised PT to $800 and Mizuho to $705 on agentic AI demand [tipranks.com](https://www.tipranks.com/news/amd-nvidia-or-meta-which-ai-stock-is-citis-top-pick-no-1-analyst-weighs-in).",
+      "drivers": [
+        "YTD +190.61%",
+        "1M +28.41%",
+        "Citi PT $800",
+        "Agentic AI tailwind"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +145.92%, 1M +32.78%, buy 1.72; Fal.Con Europe sold out with registrations up 60% [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/why-nvda-amd-crwd-stocks-surged-to-52-week-highs-today/cZDHyMrRBlM).",
+      "drivers": [
+        "YTD +145.92%",
+        "1M +32.78%",
+        "7-day streak",
+        "Fal.Con sold out"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +134.10%, 1M +24.61%, record close; TD Cowen raised PT to $440 [financefeeds.com](https://financefeeds.com/palo-alto-networks-panw-stock-419-91-up-3-23/).",
+      "drivers": [
+        "YTD +134.10%",
+        "1M +24.61%",
+        "Record high",
+        "PT $440"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NVDA",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +26.98%, P/E 30.25, strong_buy 1.3; SpaceX plans to buy chips, BNP PT $345 [tipranks.com](https://www.tipranks.com/news/nvidia-and-amd-stocks-what-drove-the-rally-and-which-stock-has-more-upside).",
+      "drivers": [
+        "P/E 30.25",
+        "Strong_buy 1.3",
+        "SpaceX demand",
+        "BNP PT $345"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +52.09%, 1M +10.16%, strong_buy 1.38; solid fundamentals with P/E 35.05.",
+      "drivers": [
+        "YTD +52.09%",
+        "1M +10.16%",
+        "Strong_buy 1.38",
+        "P/E 35.05"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +231.67%, P/E 14.31, strong_buy 1.37; attractive valuation despite recent pullback.",
+      "drivers": [
+        "YTD +231.67%",
+        "P/E 14.31",
+        "Strong_buy 1.37",
+        "Memory demand"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AMAT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +97.92%, 1M +12.16%, strong_buy 1.45; robust semi-cap equipment momentum.",
+      "drivers": [
+        "YTD +97.92%",
+        "1M +12.16%",
+        "Strong_buy 1.45"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +13.89%, 1M +20.54%, strong_buy 1.41; Muse AI agent driving infrastructure spend [tipranks.com](https://www.tipranks.com/news/amd-nvidia-or-meta-which-ai-stock-is-citis-top-pick-no-1-analyst-weighs-in).",
+      "drivers": [
+        "1M +20.54%",
+        "Strong_buy 1.41",
+        "P/E 27.96",
+        "Muse catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +58.36%, P/E 59.53, strong_buy 1.4; lithography leader with steady growth.",
+      "drivers": [
+        "YTD +58.36%",
+        "Strong_buy 1.4",
+        "P/E 59.53"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +81.11%, 1M +24.87%, buy 1.97; edge cloud growth despite no P/E.",
+      "drivers": [
+        "YTD +81.11%",
+        "1M +24.87%",
+        "Buy 1.97"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.96,
+      "ytd": "+185.68%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +185.68% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +185.68% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.846,
+      "ytd": "+163.71%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +163.71% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +163.71% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "signal": "buy",
+      "confidence": 0.753,
+      "ytd": "+145.60%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +145.60% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +145.60% \u2265 96.7% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CRWD",
@@ -125,162 +289,6 @@ window.SIGNALS_DATA = {
         "YTD +165.25%",
         "1M +16.36%",
         "buy consensus"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+196.48%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +196.48% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +196.48% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.697,
-      "ytd": "+134.91%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +134.91% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +134.91% \u2265 96.7% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "MU has +237.86% YTD, P/E 23.81, strong_buy consensus, and JPMorgan reiterated Overweight with $1,540 target ahead of Q4 earnings with 96% beat probability.",
-      "drivers": [
-        "+237.86% YTD",
-        "P/E 23.81",
-        "strong_buy consensus",
-        "JPMorgan $1,540 target"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "META has +29.18% 1M, P/E 26.95, strong_buy, and Muse AI enterprise push driving best month since 2013.",
-      "drivers": [
-        "+29.18% 1M",
-        "P/E 26.95",
-        "strong_buy",
-        "Muse AI catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "AMD has +171.88% YTD, +29.07% 1M, strong_buy, and $8.2B AI bet against Nvidia.",
-      "drivers": [
-        "+171.88% YTD",
-        "+29.07% 1M",
-        "strong_buy",
-        "$8.2B AI bet"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "AMAT has +91.11% YTD, +11.70% 1M, strong_buy, P/E 42, low short 1.78%.",
-      "drivers": [
-        "+91.11% YTD",
-        "+11.70% 1M",
-        "strong_buy",
-        "P/E 42"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "TSM has +44.09% YTD, +10.32% 1M, strong_buy, P/E 33.67, short 0.57%.",
-      "drivers": [
-        "+44.09% YTD",
-        "+10.32% 1M",
-        "strong_buy",
-        "low short 0.57%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "ASML has +58.38% YTD, +8.16% 1M, strong_buy, P/E 61.35, short 0.38%.",
-      "drivers": [
-        "+58.38% YTD",
-        "+8.16% 1M",
-        "strong_buy",
-        "short 0.38%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "NVDA has +20.59% YTD, strong_buy, P/E 28.91, short 1.27%, AI leader.",
-      "drivers": [
-        "+20.59% YTD",
-        "P/E 28.91",
-        "strong_buy",
-        "low short 1.27%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "INTC",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "INTC has +194.39% YTD, +29.52% 1M, buy consensus, Edge AI catalyst with Advantech, narrative fair value $500.93.",
-      "drivers": [
-        "+194.39% YTD",
-        "+29.52% 1M",
-        "Edge AI catalyst",
-        "narrative undervalued"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "NET has +79.71% YTD, +15.45% 1M, buy consensus, strong momentum in cybersecurity.",
-      "drivers": [
-        "+79.71% YTD",
-        "+15.45% 1M",
-        "buy consensus",
-        "cybersecurity growth"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "MSFT has +8.30% YTD, strong_buy, P/E 28.4, short 0.91%, stable AI momentum.",
-      "drivers": [
-        "+8.30% YTD",
-        "P/E 28.4",
-        "strong_buy",
-        "low short 0.91%"
       ]
     }
   ]

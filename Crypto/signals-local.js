@@ -1,9 +1,134 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-10-05 16:37",
+  "updated": "2026-10-07 15:16",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "NEAR has exceptional momentum with +242% YTD, +114% 1-month, and a spot ETF (NRR) launched on NYSE Arca attracting ~$60M AUM in its first week; co-founder Polosukhin announced expanding fiat and tokenized stock features, reinforcing the bullish narrative [coinmarketcap.com](https://coinmarketcap.com/top-stories/6ac5b6c4ab37453c382f7ef4/), [theblock.co](https://www.theblock.co/news/ecosystems/2026-10-07-nears-polosukhin-sees-shrinking-need-for-centralized-exchanges-as-onchain-tools-expand-417912).",
+      "drivers": [
+        "+242% YTD",
+        "+114% 1M",
+        "Spot ETF inflows $60M AUM",
+        "Expanding fiat/tokenized stocks"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NMR",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "NMR shows explosive momentum with +75% YTD, +79% 1-month, and +43% 1-week despite a small market cap of $128M, signaling high-beta AI catalyst.",
+      "drivers": [
+        "+75% YTD",
+        "+79% 1M",
+        "High beta small-cap AI"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "RNDR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "RNDR delivers strong fundamentals with +63% YTD, +36% 1-month, and +9% 1-week, while showing positive daily momentum (+2.2%) and a market cap of $1.09B.",
+      "drivers": [
+        "+63% YTD",
+        "+36% 1M",
+        "+9% 1W",
+        "Positive 1D momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AIOZ has strong momentum with +27% YTD, +74% 1-month, and near-flat 1-week (-0.3%) combined with a tiny $141M market cap, offering high upside in the AI subsector.",
+      "drivers": [
+        "+27% YTD",
+        "+74% 1M",
+        "Small cap AI growth"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AVAX has impressive 1-month momentum (+42%) and a reasonable $5B market cap despite a -9% YTD; it is a well-known L1 with potential for a breakout.",
+      "drivers": [
+        "+42% 1M",
+        "$5B market cap",
+        "L1 leader"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SUI",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "SUI has rallied +42% in the past month and has a $4.7B market cap; the recent 4-5% drop appears driven by market rotation and short positioning rather than a protocol issue, creating a potential entry [coinmarketcap.com](https://coinmarketcap.com/top-stories/6ac5b6c4ab37453c382f7ef4/).",
+      "drivers": [
+        "+42% 1M",
+        "Short-term dip entry",
+        "No protocol issue"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "FET",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "FET shows strong momentum with +16% YTD, +33% 1-month, and +5.4% 1-week, with a small $542M market cap in the AI subsector.",
+      "drivers": [
+        "+33% 1M",
+        "+5.4% 1W",
+        "AI narrative"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MINA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "MINA has exceptional YTD (+35%) and 1-month (+33%) returns, though a sharp 1-week decline (-29%) suggests high volatility; it remains an emerging L1 with potential.",
+      "drivers": [
+        "+35% YTD",
+        "+33% 1M",
+        "High volatility entry"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "GRT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "GRT has strong 1-month momentum (+46%) despite a -17% YTD, and a small $304M market cap in the AI/data indexing space, offering a recovery play.",
+      "drivers": [
+        "+46% 1M",
+        "AI infrastructure",
+        "Small cap recovery"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ALGO",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "ALGO is up +8% YTD and +26% in the past month, with a $1.1B market cap; it has an established L1 presence but faces short-term volatility.",
+      "drivers": [
+        "+26% 1M",
+        "$1.1B market cap",
+        "Established L1"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NEAR",
@@ -132,139 +257,6 @@ window.SIGNALS_DATA = {
         "mid-cap emerging L1",
         "positive YTD",
         "cooling short-term"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "NEAR is the top pick with a massive +226% YTD and +166.58% 1-month return, supercharged by the launch of the first US spot NEAR ETF (Bitwise NRR) which includes a staking yield and a 2030 price target of $155.85, as reported by CoinMarketCap and BeInCrypto.",
-      "drivers": [
-        "ETF launch catalyst",
-        "+226% YTD",
-        "staking yield 5%",
-        "AI and Intents narrative"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SUI",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "SUI shows strong momentum with +61.44% 1-month return and +13.47% 1-week, a golden cross forming, open interest exceeding $1 billion, and Raoul Pal predicting elite status among smart contract platforms (Blockonomi).",
-      "drivers": [
-        "golden cross formation",
-        "OI >$1B",
-        "Raoul Pal endorsement",
-        "$1.00 support holds"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "AVAX surged +54.75% in the past month and +3.71% today, driven by Goldman Sachs bringing a $100B treasury fund to an AVAX-based network, a major institutional catalyst.",
-      "drivers": [
-        "Goldman Sachs $100B fund",
-        "+54.75% 1m",
-        "institutional adoption",
-        "positive news sentiment 0.052"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "ALGO offers a compelling risk/reward at $0.12 with +44.81% 1-month return, smart money accumulating per open interest surging 14.37%, and a 60% probability bull case targeting $0.14 (Blockchain.news).",
-      "drivers": [
-        "smart money loading",
-        "OI surge 14.37%",
-        "$0.12 critical support",
-        "bullish MA structure"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "MINA leads in YTD performance with +89% and an extraordinary +123.71% 1-month return, reflecting strong momentum despite a small $0.184B market cap and recent -6.08% daily dip.",
-      "drivers": [
-        "+89% YTD",
-        "+123.71% 1m",
-        "high beta small cap",
-        "momentum continuation"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "ICP combines +42.23% 1-month and +11.84% 1-week gains with a positive +20% YTD, indicating sustained upward momentum without notable negative news.",
-      "drivers": [
-        "+42.23% 1m",
-        "+11.84% 1w",
-        "+20% YTD",
-        "strong weekly momentum"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "GRT",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "GRT posted an impressive +74.05% 1-month gain on a low $0.312B market cap, capturing AI sector rotation; despite -14% YTD, short-term momentum is powerful.",
-      "drivers": [
-        "+74.05% 1m",
-        "low market cap $0.312B",
-        "AI sector tailwind",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "DOT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "DOT rallies +44.53% in the past month and +2.81% today, recovering from a deeply oversold -33% YTD; the sharp bounce suggests a potential trend reversal.",
-      "drivers": [
-        "+44.53% 1m",
-        "oversold YTD -33%",
-        "trend reversal potential",
-        "infra category"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "AIOZ shows explosive +94.14% 1-month performance with $0.141B market cap, riding the AI narrative; recent -11.57% weekly pullback offers a dip entry opportunity.",
-      "drivers": [
-        "+94.14% 1m",
-        "AI sector play",
-        "small cap momentum",
-        "dip after run"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "FET",
-      "signal": "buy",
-      "confidence": 0.66,
-      "rationale": "FET gains +45.08% in 1-month and +3.01% weekly, supported by the AI ecosystem theme; at $0.507B market cap it remains undervalued relative to peers.",
-      "drivers": [
-        "+45.08% 1m",
-        "AI narrative",
-        "undervalued cap $0.507B",
-        "positive momentum"
       ]
     }
   ]
