@@ -1,5 +1,5 @@
 window.MARKET_DATA = {
-  "updated": "2026-10-08 01:26",
+  "updated": "2026-10-08 07:37",
   "spy": {
     "price": 777.22,
     "change_1d": -0.34,
@@ -10,7 +10,7 @@ window.MARKET_DATA = {
   },
   "qqq": {
     "price": 757.73,
-    "change_1d": -0.29,
+    "change_1d": -0.3,
     "change_1w": 2.43,
     "change_1m": 5.5,
     "change_ytd": 24.01,
