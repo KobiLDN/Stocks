@@ -1,9 +1,165 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-10-07 15:19",
+  "updated": "2026-10-27 06:20",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAP",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Cloud revenue +26%, backlog +28%, Goldman target \u20ac258, P/E 29.7, analyst buy.",
+      "drivers": [
+        "1M +13.97%",
+        "cloud backlog +28%",
+        "Goldman upgrade",
+        "P/E 29.7"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "XOM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +53.48%, 1M +13.55%, oil at $102/bbl, P/E 23.8, low beta 0.209.",
+      "drivers": [
+        "YTD +53.48%",
+        "1M +13.55%",
+        "oil price surge",
+        "low beta 0.209"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +52.98%, 1M +12.42%, Brent $116, P/E 22.3, dividend yield 305%.",
+      "drivers": [
+        "YTD +52.98%",
+        "1M +12.42%",
+        "Brent $116",
+        "dividend 305%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TSLA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +9.56%, 1W +6.40%, Barclays upgrade to $450, Robotaxi catalyst.",
+      "drivers": [
+        "1M +9.56%",
+        "1W +6.40%",
+        "Barclays upgrade",
+        "Robotaxi inflection"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "V",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +17.35%, 1M +9.90%, strong_buy consensus, P/E 34.4, beta 0.771.",
+      "drivers": [
+        "YTD +17.35%",
+        "1M +9.90%",
+        "strong_buy analyst",
+        "P/E 34.4"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "WMT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M +10.63%, YTD +7.36%, beta 0.578, P/E 43.6, analyst buy.",
+      "drivers": [
+        "1M +10.63%",
+        "beta 0.578",
+        "P/E 43.6",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +18.15%, 1M +8.91%, P/E 48.4, beta 0.87, analyst buy.",
+      "drivers": [
+        "YTD +18.15%",
+        "1M +8.91%",
+        "P/E 48.4",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "UNH",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +24.50%, 1M +8.70%, beta 0.615, dividend yield 222%.",
+      "drivers": [
+        "YTD +24.50%",
+        "1M +8.70%",
+        "beta 0.615",
+        "dividend 222%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +9.04%, YTD +10.41%, P/E 13.8, beta 0.595, analyst buy.",
+      "drivers": [
+        "1M +9.04%",
+        "P/E 13.8",
+        "beta 0.595",
+        "buy rating"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +18.97%, 1M +7.96%, GLP-1 tailwind, P/E 42.9, beta 0.453.",
+      "drivers": [
+        "YTD +18.97%",
+        "1M +7.96%",
+        "GLP-1 leader",
+        "P/E 42.9"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.712,
+      "ytd": "+137.74%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +137.74% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +137.74% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.671,
+      "ytd": "+129.74%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +129.74% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +129.74% \u2265 96.7% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMD",
@@ -132,139 +288,6 @@ window.SIGNALS_DATA = {
         "Buy analyst consensus",
         "P/E 36.42 moderate",
         "Life sciences secular growth"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Record high with $150B buyback authorization and Morgan Stanley top pick reinstatement [kalkine.com]; +25.83% YTD, P/E 29.97, strong_buy consensus.",
-      "drivers": [
-        "YTD +25.83%",
-        "P/E 29.97",
-        "strong_buy consensus",
-        "$150B buyback"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.941,
-      "rationale": "Stifel raised PT to $700 on server strength [investing.com]; +182% YTD, 1M +24.64%, strong_buy consensus.",
-      "drivers": [
-        "YTD +182%",
-        "1M +24.64%",
-        "strong_buy consensus",
-        "Stifel PT $700"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+21.11% 1M, +14.43% YTD, P/E 27.97, strong_buy consensus; ad recovery and AI investments.",
-      "drivers": [
-        "1M +21.11%",
-        "P/E 27.97",
-        "strong_buy consensus",
-        "YTD +14.43%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TSM",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Musk confirms discussions with TSMC for Terafab chip venture [morningstar.com]; +51.4% YTD, 1M +9.66%, P/E 34.88.",
-      "drivers": [
-        "YTD +51.4%",
-        "1M +9.66%",
-        "P/E 34.88",
-        "Terafab discussions"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "+60.08% YTD, 1M +5.06%, P/E 60.18, strong_buy consensus; EUV lithography monopoly benefits from AI chip demand.",
-      "drivers": [
-        "YTD +60.08%",
-        "P/E 60.18",
-        "strong_buy consensus",
-        "EUV monopoly"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+11.91% YTD, 1M +6.47%, P/E 29.3, strong_buy consensus; cloud and AI growth.",
-      "drivers": [
-        "YTD +11.91%",
-        "P/E 29.3",
-        "strong_buy consensus",
-        "1M +6.47%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TMO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+11.90% YTD, 1M +9.73%, P/E 35.59, buy consensus; life sciences tools demand.",
-      "drivers": [
-        "1M +9.73%",
-        "YTD +11.90%",
-        "P/E 35.59",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+23.50% YTD, 1M +5.56%, P/E 38.28, buy consensus; services growth and iPhone cycle.",
-      "drivers": [
-        "YTD +23.50%",
-        "P/E 38.28",
-        "buy consensus",
-        "1M +5.56%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "+9.54% YTD, P/E 17.29, strong_buy consensus; attractive valuation and AI search.",
-      "drivers": [
-        "P/E 17.29",
-        "strong_buy consensus",
-        "YTD +9.54%",
-        "low valuation"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CAT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+42.21% YTD, 1M +2.84%, P/E 36.44, buy consensus; infrastructure and data center power demand.",
-      "drivers": [
-        "YTD +42.21%",
-        "P/E 36.44",
-        "buy consensus",
-        "data center power"
       ]
     }
   ]
