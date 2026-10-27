@@ -40,8 +40,8 @@ OUTPUT_JSON       = "signals-local.json"
 OUTPUT_JS         = "signals-local.js"
 
 TEMPERATURE       = 0.3
-MAX_TOKENS        = 8192
-REQUEST_TIMEOUT_S = (15, 120)
+MAX_TOKENS        = 12288
+REQUEST_TIMEOUT_S = (15, 170) # (connect_s, read_s) — 15s to connect, 170s to read
 MAX_HEADLINES     = 1
 TOP_N             = 10
 RETRY_ON_BAD_JSON = 1
