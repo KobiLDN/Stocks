@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-30 00:10",
+  "updated": "2026-10-30 07:37",
   "spy": {
     "price": 769.36,
-    "change_1d": 0.01,
+    "change_1d": 0.0,
     "change_1w": 0.71,
     "change_1m": 0.68,
     "change_ytd": 13.5,
@@ -17,8 +17,8 @@
     "change_1y": 14.8
   },
   "vix": {
-    "level": 17.2,
-    "change_1d": 1.84,
+    "level": 18.45,
+    "change_1d": 7.21,
     "regime": "normal",
     "signal": "normal"
   },
