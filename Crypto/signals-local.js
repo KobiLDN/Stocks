@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-10-07 15:16",
+  "updated": "2026-10-30 13:54",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PEPE",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "+22% YTD, +14.58% 1M momentum, resilient during selloff with only -1.20% 1D, small cap $2B.",
+      "drivers": [
+        "+22% YTD",
+        "+14.58% 1M",
+        "resilient 1D -1.20%",
+        "meme coin momentum"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "+17% YTD, +0.77% 1W and +0.29% 1D showing relative strength, large cap $31.5B stablecoin hub.",
+      "drivers": [
+        "+17% YTD",
+        "+0.77% 1W",
+        "positive 1D",
+        "large cap stability"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NEAR",
+      "signal": "strong_buy",
+      "confidence": 0.947,
+      "rationale": "+183% YTD, strong AI narrative, despite -13% 1M pullback still up massively, $5.6B market cap.",
+      "drivers": [
+        "+183% YTD",
+        "AI narrative",
+        "$5.6B cap",
+        "pullback entry"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AGIX",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "+591% YTD, +2245% 1W extreme momentum, tiny cap high risk but explosive.",
+      "drivers": [
+        "+591% YTD",
+        "+2245% 1W",
+        "extreme momentum",
+        "high risk high reward"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "RNDR",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "+23% YTD, AI/rendering narrative, $0.8B cap, recent pullback may be entry.",
+      "drivers": [
+        "+23% YTD",
+        "AI narrative",
+        "$0.8B cap",
+        "pullback opportunity"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Largest cap $1.57T, bounced from $76k support after Binance hack, potential safe haven recovery.",
+      "drivers": [
+        "$1.57T market cap",
+        "bounced from $76k",
+        "safe haven",
+        "post-hack recovery"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Oversold RSI 29.86, $274B cap, likely to lead altcoin bounce post-hack.",
+      "drivers": [
+        "oversold RSI 29.86",
+        "$274B cap",
+        "altcoin leader",
+        "bounce candidate"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Bounced from $1.20 support, US spot ETF inflows $8.4M, helped freeze hack funds, $79.6B cap.",
+      "drivers": [
+        "bounced from $1.20",
+        "ETF inflows $8.4M",
+        "hack freeze help",
+        "$79.6B cap"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SOL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Bounced from $92 support, $57.7B cap, despite outflows may recover with market.",
+      "drivers": [
+        "bounced from $92",
+        "$57.7B cap",
+        "support level",
+        "market recovery"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Binance token, -5.02% 1D on hack, but exchange covering losses, $93.6B cap, contrarian bounce.",
+      "drivers": [
+        "$93.6B cap",
+        "hack impact -5.02%",
+        "loss coverage",
+        "contrarian play"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NEAR",
@@ -124,139 +257,6 @@ window.SIGNALS_DATA = {
         "+26% 1M",
         "$1.1B market cap",
         "Established L1"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "NEAR leads with +235% YTD and +130.73% 1-month momentum, catalyzed by the Bitwise spot NEAR ETF launch attracting ~$50M inflows and Grayscale highlighting AI tokens as the best-performing sector in September (+54% vs 24% broader market). [cryptonews.com](https://cryptonews.com/news/bitwise-near-protocol-etf/) [stocktwits.com](https://stocktwits.com/news-articles/markets/cryptocurrency/near-leads-ai-crypto-rally-as-grayscale-says-sector-gains-more-than-double-broader-market/cZDZLOVRB1d)",
-      "drivers": [
-        "+235% YTD",
-        "spot ETF catalyst",
-        "AI sector leader",
-        "Grayscale AI sector outperformance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "FET",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "FET surged 13% on the appointment of Jay Clayton as AI czar, with +54.38% 1-month and +7.10% 1-day gains, as capital rotates from DeFi into AI tokens amid a broader market decline. [cryptobuyingtips.com](https://cryptobuyingtips.com/articles/fet-rips-13-as-the-market-bets-on-the-new-ai-czar) [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/ai-tokens-price-prediction-capital-rotation-fuels-fet-virtual-and-near-rallies-202610051017)",
-      "drivers": [
-        "+54.38% 1m",
-        "AI czar catalyst",
-        "capital rotation to AI",
-        "bullish Fibonacci breakout"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SUI",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SUI gained +50.57% in the past month, with the network processing over $1 trillion in stablecoin transfers and Mysten Labs positioning it as global payment infrastructure, targeting $2 on a confirmed breakout above $1.27. [crypto.news](https://crypto.news/will-sui-price-reach-2-as-ai-and-stablecoin-use-grows/)",
-      "drivers": [
-        "+50.57% 1m",
-        "stablecoin volume >$1T",
-        "AI-agent payment narrative",
-        "technical breakout setup"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "MINA shows extreme momentum with +124.49% 1-month and +123.14% YTD, reflecting strong speculative interest in this small-cap emerging L1 ($0.217B market cap) with no specific negative catalysts.",
-      "drivers": [
-        "+124.49% 1m",
-        "+123.14% YTD",
-        "small-cap momentum",
-        "emerging L1 narrative"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AIOZ posted +102.59% 1-month gains and +32.97% YTD, riding the AI token wave as a decentralized content delivery network with strong near-term price action despite a small $0.148B market cap.",
-      "drivers": [
-        "+102.59% 1m",
-        "AI token rotation",
-        "decentralized CDN narrative",
-        "small-cap high beta"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "WLD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "WLD gained +42.60% in the past month and +18.03% YTD, with Grayscale noting a 47% September rally for Worldcoin as part of the AI crypto sector surge, supported by retail bullish sentiment.",
-      "drivers": [
-        "+42.60% 1m",
-        "Grayscale AI sector mention",
-        "retail bullish sentiment",
-        "identity/ai narrative"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "AVAX rallied +44.91% in the past month, making it one of the strongest large-cap L1s ($4.86B market cap) despite a negative YTD, driven by ecosystem developments and broader altcoin momentum.",
-      "drivers": [
-        "+44.91% 1m",
-        "large-cap L1",
-        "ecosystem momentum",
-        "altcoin rotation"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "RNDR shows solid gains of +55.01% YTD and +34.98% 1-month, benefiting from the AI narrative as a decentralized GPU rendering network, with a market cap of $1.033B providing relative stability.",
-      "drivers": [
-        "+55.01% YTD",
-        "AI rendering narrative",
-        "decent market cap",
-        "steady momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "GRT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "GRT surged +68.93% in the past month, the highest 1-month gain among AI tokens in the snapshot, though YTD remains negative at -11.40%; the momentum is speculative and tied to AI indexing demand.",
-      "drivers": [
-        "+68.93% 1m",
-        "AI indexing narrative",
-        "high short-term momentum",
-        "speculative rotation"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "ALGO gained +34.32% in the past month and +17.68% YTD, with a market cap of $1.175B, but recent 1-week and 1-day declines (-2.25%, -1.99%) suggest cooling momentum; still attractive as a mid-cap emerging L1.",
-      "drivers": [
-        "+34.32% 1m",
-        "mid-cap emerging L1",
-        "positive YTD",
-        "cooling short-term"
       ]
     }
   ]

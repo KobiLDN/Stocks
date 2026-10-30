@@ -1,9 +1,209 @@
 {
-  "updated": "2026-10-07 15:15",
+  "updated": "2026-10-30 13:54",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AAPL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Apple is at an all-time high of $348.91 (+29% YTD) ahead of its Q4 earnings on Nov 2, with strong product momentum from the new MacBook Pro with M5 chips and the foldable iPhone Duo, while Goldman Sachs raised its price target to $390 [invezz.com](https://invezz.com/news/2026/10/29/apple-stock-rises-as-new-macbook-launch-draws-analyst-support/).",
+      "drivers": [
+        "+29% YTD",
+        "P/E 40.01",
+        "analyst strong_buy",
+        "new product launches"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Microsoft shows strong fundamentals with a P/E of 27.67, a strong_buy analyst consensus (score 1.33), and +12.81% YTD, though recent 1-day dip of -2.96% offers a buying opportunity.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 27.67",
+        "+12.81% YTD",
+        "low beta 1.099"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Spotify has strong 1-month momentum of +14.33% and a 1-day gain of +3.96%, with a reasonable P/E of 33.96 and a buy analyst rating, indicating positive market sentiment.",
+      "drivers": [
+        "+14.33% 1M",
+        "+3.96% 1D",
+        "P/E 33.96",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "Shopify shows robust 1-month momentum of +12.54% and +6.16% YTD, with a buy analyst rating, though its high beta of 2.625 and P/E of 112.76 warrant caution.",
+      "drivers": [
+        "+12.54% 1M",
+        "+6.16% YTD",
+        "buy consensus",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "Intuit has a strong 1-day gain of +5.27% and 1-month momentum of +20.68%, with a reasonable P/E of 20.12 and a buy analyst rating, despite a -46.64% YTD decline.",
+      "drivers": [
+        "+20.68% 1M",
+        "+5.27% 1D",
+        "P/E 20.12",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Qualcomm has strong 1-week momentum of +7.28% and a 1-day gain of +3.00%, with a low P/E of 21.46 and a high dividend yield of 1.98%, though analyst consensus is hold.",
+      "drivers": [
+        "+7.28% 1W",
+        "+3.00% 1D",
+        "P/E 21.46",
+        "dividend yield 1.98%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ORCL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Oracle has strong 1-week momentum of +11.17% and a low P/E of 21.87, with a buy analyst rating, though its YTD performance is weak at -27.74%.",
+      "drivers": [
+        "+11.17% 1W",
+        "P/E 21.87",
+        "buy consensus",
+        "dividend yield 1.38%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Cisco has strong YTD performance of +44.68% and a 1-week gain of +3.53%, with a low beta of 0.979 and a solid dividend yield of 1.55%, supported by a buy analyst rating.",
+      "drivers": [
+        "+44.68% YTD",
+        "+3.53% 1W",
+        "dividend yield 1.55%",
+        "low beta 0.979"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "PLTR",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Palantir has positive 1-month momentum of +5.01% and +17.01% YTD, with a buy analyst rating, though its high P/E of 169.33 and beta of 1.602 indicate elevated risk.",
+      "drivers": [
+        "+17.01% YTD",
+        "+5.01% 1M",
+        "buy consensus",
+        "high momentum"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "Adobe shows a 1-day gain of +2.89% and 1-month momentum of +3.41%, with a low P/E of 13.85, though analyst consensus is hold and YTD is -25.56%.",
+      "drivers": [
+        "+3.41% 1M",
+        "+2.89% 1D",
+        "P/E 13.85",
+        "low valuation"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MU",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+196.42%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +196.42% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +196.42% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.793,
+      "ytd": "+153.47%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +153.47% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +153.47% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "signal": "buy",
+      "confidence": 0.692,
+      "ytd": "+133.80%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +133.80% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +133.80% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.674,
+      "ytd": "+130.30%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.30% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.30% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.58,
+      "ytd": "+112.17%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +112.17% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +112.17% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "ARM",
+      "signal": "buy",
+      "confidence": 0.514,
+      "ytd": "+99.40%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +99.40% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +99.40% \u2265 96.7% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMD",
@@ -129,166 +329,6 @@
         "YTD +81.11%",
         "1M +24.87%",
         "Buy 1.97"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.96,
-      "ytd": "+185.68%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +185.68% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +185.68% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.846,
-      "ytd": "+163.71%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +163.71% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +163.71% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "signal": "buy",
-      "confidence": 0.753,
-      "ytd": "+145.60%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +145.60% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +145.60% \u2265 96.7% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "YTD +139.53%, 1M +29.33%, analyst buy; Q2 revenue beat at $1.47B, raised FY net-new ARR growth by 630bps, and TD Cowen raised PT to $280 on strong AI-driven demand.",
-      "drivers": [
-        "YTD +139.53%",
-        "1M +29.33%",
-        "earnings beat & raised guidance",
-        "AI cybersecurity demand"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +125.39%, 1M +19.97%, analyst buy; BTIG raised PT to $425 expecting >17% revenue growth and >26% NGS ARR growth, with platform shift to high-growth solutions.",
-      "drivers": [
-        "YTD +125.39%",
-        "1M +19.97%",
-        "BTIG PT raise to $425",
-        "platform growth catalysts"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +14.75%, 1M +21.44%, P/E 28.05, strong_buy consensus; solid momentum with reasonable valuation and strong fundamentals.",
-      "drivers": [
-        "1M +21.44%",
-        "P/E 28.05",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +100.79%, 1M +13.78%, P/E 46.42, strong_buy; strong momentum in semiconductor equipment with reasonable valuation.",
-      "drivers": [
-        "YTD +100.79%",
-        "1M +13.78%",
-        "P/E 46.42",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.94,
-      "rationale": "YTD +181.82%, 1M +24.53%, strong_buy; exceptional AI-driven growth though P/E 160.66 is elevated.",
-      "drivers": [
-        "YTD +181.82%",
-        "1M +24.53%",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +237.99%, P/E 14.33, strong_buy; outstanding returns with low P/E, strong momentum in memory and storage.",
-      "drivers": [
-        "YTD +237.99%",
-        "P/E 14.33",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +60.08%, 1M +5.06%, P/E 60.18, strong_buy; key lithography supplier benefiting from semiconductor capex cycle.",
-      "drivers": [
-        "YTD +60.08%",
-        "P/E 60.18",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +85.04%, 1M +27.58%, analyst buy; strong momentum in cloud security despite no P/E (negative earnings).",
-      "drivers": [
-        "YTD +85.04%",
-        "1M +27.58%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1M +17.69%, 1W +9.59%, analyst buy; recent momentum surge though YTD flat and P/E 106.63.",
-      "drivers": [
-        "1M +17.69%",
-        "1W +9.59%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.854,
-      "rationale": "YTD +165.25%, 1M +16.36%, analyst buy; very high momentum but P/E 313.74 and short interest 10.69% indicate risk.",
-      "drivers": [
-        "YTD +165.25%",
-        "1M +16.36%",
-        "buy consensus"
       ]
     }
   ]

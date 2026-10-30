@@ -1,9 +1,176 @@
 {
-  "updated": "2026-10-07 15:17",
+  "updated": "2026-10-30 13:55",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "XOM",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "ExxonMobil beat Q3 estimates with adjusted EPS of $4.23 vs $4.08 expected, driven by record refining margins and strong production; YTD +52.44%, P/E 23.59, dividend yield 2.26%. [cnbc.com](https://www.cnbc.com/amp/2026/10/30/chevron-exxon-cvx-xom-earnings-q3-2026.html)",
+      "drivers": [
+        "+52.44% YTD return",
+        "+12.62% 1-month momentum",
+        "record refining profits",
+        "strong analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Chevron beat Q3 expectations with adjusted EPS of $5.28 vs $4.89 expected, as refining profits surged over 300%; YTD +52.61%, P/E 22.28, dividend yield 3.11%. [cnbc.com](https://www.cnbc.com/amp/2026/10/30/chevron-exxon-cvx-xom-earnings-q3-2026.html)",
+      "drivers": [
+        "+52.61% YTD return",
+        "+13.34% 1-month momentum",
+        "refining profit surge",
+        "low analyst score 1.69"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BP",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "BP's Q3 profit nearly quadrupled to $8.5B, beating $6.19B consensus, on surging refining margins; YTD +45.74%, P/E 24.8, dividend yield 4.05%. [cnbc.com](https://www.cnbc.com/2026/10/30/bp-earnings-oil-q3.html)",
+      "drivers": [
+        "+45.74% YTD return",
+        "+14.46% 1-month momentum",
+        "profit beat by 37%",
+        "high dividend yield 4.05%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "ConocoPhillips shows exceptional momentum with +19.88% 1-month and +58.57% YTD, P/E 19.87, dividend yield 2.24%, and strong analyst buy consensus at 1.90.",
+      "drivers": [
+        "+58.57% YTD return",
+        "+19.88% 1-month momentum",
+        "low analyst score 1.90",
+        "strong refining exposure"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "EOG Resources has strong momentum with +18.55% 1-month and +56.04% YTD, attractive P/E of 12.62, dividend yield 2.54%.",
+      "drivers": [
+        "+56.04% YTD return",
+        "+18.55% 1-month momentum",
+        "low P/E 12.62",
+        "high dividend yield 2.54%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Shell benefits from high refining margins like peers, with +46.64% YTD, +13.28% 1-month, low P/E 11.88, and dividend yield 2.97%.",
+      "drivers": [
+        "+46.64% YTD return",
+        "+13.28% 1-month momentum",
+        "low P/E 11.88",
+        "high dividend yield 2.97%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "SLB has strong weekly momentum (+8.60%), best analyst score (1.53) among oilfield services, P/E 26.12, dividend yield 2.19%.",
+      "drivers": [
+        "+8.60% 1-week momentum",
+        "best analyst score 1.53",
+        "+36.05% YTD return",
+        "strong oilfield services demand"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Halliburton shows strong 1-week (+8.17%) and 1-month (+12.89%) momentum, P/E 15.08, dividend yield 1.90%, analyst score 1.68.",
+      "drivers": [
+        "+12.89% 1-month momentum",
+        "+8.17% 1-week momentum",
+        "low analyst score 1.68",
+        "beneficiary of drilling activity"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Occidental has solid YTD (+50.76%) and 1-month (+13.90%) momentum, P/E 17.9, dividend yield 1.78%, analyst buy consensus.",
+      "drivers": [
+        "+50.76% YTD return",
+        "+13.90% 1-month momentum",
+        "low short interest 0.02%",
+        "analyst buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "TotalEnergies offers low P/E (9.38) and high dividend yield (4.31%), with +44.58% YTD and +9.98% 1-month momentum.",
+      "drivers": [
+        "low P/E 9.38",
+        "high dividend yield 4.31%",
+        "+44.58% YTD return",
+        "strong refining margins"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.853,
+      "ytd": "+164.95%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +164.95% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +164.95% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.704,
+      "ytd": "+136.08%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +136.08% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +136.08% \u2265 96.7% B"
+      ]
+    },
+    {
+      "ticker": "EQNR",
+      "signal": "buy",
+      "confidence": 0.519,
+      "ytd": "+100.33%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +100.33% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +100.33% \u2265 96.7% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLO",
@@ -132,139 +299,6 @@
         "dividend yield 2.78%",
         "+2.91% 1M",
         "analyst buy"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MPC",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "MPC leads with a staggering +161.75% YTD return, +7.42% 1M and +9.72% 1W momentum, supported by a P/E of 14.8 and a buy analyst consensus (score 2.37).",
-      "drivers": [
-        "+161.75% YTD",
-        "+7.42% 1M",
-        "P/E 14.8",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "VLO",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "VLO shows +153.08% YTD, +7.68% 1M and +5.83% 1W momentum, with a P/E of 17.19 and buy rating (score 2.4); diesel prices remain elevated at $6.34 per gallon, supporting refining margins.",
-      "drivers": [
-        "+153.08% YTD",
-        "+7.68% 1M",
-        "P/E 17.19",
-        "diesel price catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "CVX has a strong analyst score of 1.72 (most bullish among majors), a 3.44% dividend yield, and a 20-year 2.67 GW power deal with Microsoft for AI data centers, despite a slight -2.24% 1M dip.",
-      "drivers": [
-        "analyst score 1.72",
-        "3.44% dividend yield",
-        "Microsoft AI power deal",
-        "+35.24% YTD"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SHEL trades at a low P/E of 10.54 with a 3.25% yield, generated $21.4B in operating cash flow in Q2, and Morgan Stanley raised its price target to $101.30; YTD return is +30.01%.",
-      "drivers": [
-        "P/E 10.54",
-        "3.25% dividend yield",
-        "$21.4B operating cash flow",
-        "Morgan Stanley $101.30 target"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "EOG offers a low P/E of 11.09, a 2.89% dividend yield, and a +36.22% YTD return with positive 1W momentum of +1.38%, backed by a buy analyst consensus (score 2.34).",
-      "drivers": [
-        "P/E 11.09",
-        "2.89% dividend yield",
-        "+36.22% YTD",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "OXY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "OXY has a +40.20% YTD return, strong 1W momentum of +4.45%, a P/E of 16.65, and a buy analyst rating (score 2.23), benefiting from upstream production and Permian exposure.",
-      "drivers": [
-        "+40.20% YTD",
-        "+4.45% 1W",
-        "P/E 16.65",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "XOM is up +35.44% YTD with a 2.51% dividend yield, but faces a Supreme Court climate liability case and a recent neutral rating shift; still a buy with strong earnings and $17B free cash flow in Q2.",
-      "drivers": [
-        "+35.44% YTD",
-        "2.51% dividend yield",
-        "Supreme Court case risk",
-        "$17B free cash flow"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BP offers a high 4.5% dividend yield, +28.75% YTD, and a buy analyst consensus (score 2.16), though its P/E of 21.7 is elevated relative to peers.",
-      "drivers": [
-        "4.5% dividend yield",
-        "+28.75% YTD",
-        "buy consensus",
-        "P/E 21.7"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "EQNR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "EQNR has the highest YTD return at +77.34%, a low P/E of 11.51, and a 3.67% dividend yield, but carries a hold analyst rating (score 3.0) and recent negative 1M momentum of -2.93%.",
-      "drivers": [
-        "+77.34% YTD",
-        "P/E 11.51",
-        "3.67% dividend yield",
-        "hold rating"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "SSE.L provides utility stability with a +11.41% YTD, +3.46% 1M momentum, a 2.81% dividend yield, and a buy analyst score of 1.94, offering diversification from pure oil plays.",
-      "drivers": [
-        "+11.41% YTD",
-        "+3.46% 1M",
-        "2.81% dividend yield",
-        "buy score 1.94"
       ]
     }
   ]
