@@ -50,8 +50,8 @@ COINGECKO_IDS = {
     "PEPE": "pepe",
     # ── AI Tokens ─────────────────────────────────────────────────────────────
     "TAO":     "bittensor",             "FET":     "fetch-ai",
-    "RNDR":    "render-token",          "OCEAN":   "ocean-protocol",
-    "GRT":     "the-graph",            "AGIX":    "singularitynet",
+    "RNDR":    "render-token",
+    "GRT":     "the-graph",
     "NMR":     "numeraire",            "ALT":     "altlayer",
     "AIOZ":    "aioz-network",         "ARKM":    "arkham",
     "WLD":     "worldcoin-wld",        "NEAR":    "near",
@@ -59,15 +59,15 @@ COINGECKO_IDS = {
     "VIRTUAL": "virtual-protocol",
 }
 
-# CMC numeric IDs — used for OHLCV historical YTD fetch (avoids symbol ambiguity)
+# CMC numeric IDs — used for quotes and YTD history (symbols are ambiguous on CMC)
 CMC_IDS = {
     "BTC": 1,     "ETH": 1027,  "SOL": 5426,  "BNB": 1839,  "ADA": 2010,
     "AVAX": 5805, "XRP": 52,    "XLM": 512,   "TRX": 1958,  "SUI": 20947,
     "HBAR": 4642, "TON": 11419, "ALGO": 4031, "MINA": 20804,"POL": 28321,
     "DOT": 6636,  "LINK": 1975, "DOGE": 74,   "PEPE": 24478,
     # AI Tokens
-    "TAO": 22974, "FET": 3773,  "RNDR": 5690,  "OCEAN": 3911,
-    "GRT": 6719,  "AGIX": 6945, "NMR": 1732,   "ALT": 28067,
+    "TAO": 22974, "FET": 3773,  "RNDR": 5690,
+    "GRT": 6719,  "NMR": 1732,   "ALT": 28067,
     "AIOZ": 9444, "ARKM": 25691,"WLD": 13502,  "NEAR": 6535,
     "ICP": 8916,  "KAITO": 30999, "VIRTUAL": 29420,
 }
@@ -104,9 +104,7 @@ STOCKS = {
     "TAO":     ("TAO",     "TAO-USD",     "ai", "Crypto", "Bittensor"),
     "FET":     ("FET",     "FET-USD",     "ai", "Crypto", "ASI Alliance"),
     "RNDR":    ("RENDER",  "RNDR-USD",    "ai", "Crypto", "Render"),  # CMC symbol is RENDER post-rebrand
-    "OCEAN":   ("OCEAN",   "OCEAN-USD",   "ai", "Crypto", "Ocean Protocol"),
     "GRT":     ("GRT",     "GRT-USD",     "ai", "Crypto", "The Graph"),
-    "AGIX":    ("AGIX",    "AGIX-USD",    "ai", "Crypto", "SingularityNET"),
     "NMR":     ("NMR",     "NMR-USD",     "ai", "Crypto", "Numeraire"),
     "ALT":     ("ALT",     "ALT-USD",     "ai", "Crypto", "AltLayer"),
     "AIOZ":    ("AIOZ",    "AIOZ-USD",    "ai", "Crypto", "AIOZ Network"),
@@ -133,14 +131,23 @@ def get_fx_rates():
 
 def fetch_cmc_quotes():
     """
-    Single bulk call to CMC for all coins.
+    Single bulk call to CMC for all coins, by numeric ID (CMC_IDS).
     Returns dict: cmc_symbol → quote dict (price, changes, market_cap, volume).
+
+    Looked up by ID, not symbol: several coins share a symbol (e.g. AGIX), and a
+    symbol query returns whichever match CMC lists first, which flipped between
+    unrelated coins run to run. Each returned symbol is checked against the
+    expected one; a mismatch (wrong ID in CMC_IDS) is skipped with a warning
+    rather than published.
     """
-    cmc_symbols = list({v[0] for v in STOCKS.values()})
+    id_to_ticker = {str(CMC_IDS[t]): t for t in STOCKS if t in CMC_IDS}
+    missing = [t for t in STOCKS if t not in CMC_IDS]
+    if missing:
+        print(f"  WARNING: no CMC_IDS entry for {missing} — skipped")
     resp = requests.get(
         CMC_URL,
         headers={"X-CMC_PRO_API_KEY": CMC_API_KEY, "Accept": "application/json"},
-        params={"symbol": ",".join(cmc_symbols), "convert": "USD"},
+        params={"id": ",".join(id_to_ticker), "convert": "USD"},
         timeout=20,
     )
     resp.raise_for_status()
@@ -150,11 +157,17 @@ def fetch_cmc_quotes():
         raise RuntimeError(f"CMC API error: {data['status']}")
 
     quotes = {}
-    for sym, entries in data["data"].items():
-        # CMC returns a list when a symbol is ambiguous; take first entry
-        entry = entries[0] if isinstance(entries, list) else entries
+    for cmc_id, entry in data["data"].items():
+        ticker  = id_to_ticker.get(str(cmc_id))
+        if ticker is None:
+            continue
+        cmc_sym = STOCKS[ticker][0]
+        if entry.get("symbol", "").upper() != cmc_sym.upper():
+            print(f"  WARNING: CMC id {cmc_id} is {entry.get('symbol')} ({entry.get('name')}), "
+                  f"expected {cmc_sym} for {ticker} — skipped, fix CMC_IDS")
+            continue
         q = entry["quote"]["USD"]
-        quotes[sym] = {
+        quotes[cmc_sym] = {
             "price_usd":  q["price"],
             "change_1d":  q.get("percent_change_24h") or 0.0,
             "change_1w":  q.get("percent_change_7d")  or 0.0,
