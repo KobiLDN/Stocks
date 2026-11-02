@@ -70,7 +70,7 @@ CMC_IDS = {
     "TAO": 22974, "FET": 3773,  "RNDR": 5690,
     "GRT": 6719,  "NMR": 1732,   "ALT": 29073,
     "AIOZ": 9104, "ARKM": 27565,"WLD": 13502,  "NEAR": 6535,
-    "ICP": 8916,  "VIRTUAL": 29420,
+    "ICP": 8916,  "KAITO": 35763, "VIRTUAL": 29420,
 }
 
 # display ticker → (cmc_symbol, yf_symbol, category, exchange, company_name)
