@@ -2,9 +2,13 @@
 
 ## Backlog
 
-- **Crypto signals generator** — `Crypto_generate_signals_local.py` + entry in `generate-signals.yml`; DeepSeek via OpenRouter; coin-specific prompt context (tokenomics, chain activity, macro BTC cycle, category rotation)
+_Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44 stock calendar)._
 
 ## Done
+
+- **Crypto signals generator (issue #35)** — `Crypto/Crypto_generate_signals_local.py` runs in the scheduled `generate-signals.yml` loop with the other sectors; DeepSeek via OpenRouter produces Crypto top picks (`Crypto/signals-local.json`).
+
+- **Crypto prices by CoinMarketCap ID; AGIX/OCEAN dropped (PRs #49, #50, #52)** — quotes fetched by verified numeric ID instead of ambiguous symbol (fixes AGIX's fake −96%/+2,388% swings); corrected 6 wrong IDs; TON quoted under its new CMC symbol GRAM; deterministic best-rank symbol fallback for any coin without a working ID; KAITO's ID pinned; AGIX and OCEAN removed (merged into FET/ASI Alliance). 32 coins (`Crypto/Crypto_update_prices.py`).
 
 - **Sector median badges on the Stock Hub** — every sector card and All Sectors shows the 1D and 1W **median** move with breadth ("X/N up"); sector heatmap uses median instead of mean so a single outlier can't drag a sector; Mega-Cap added to the heatmap (`index.html`).
 
