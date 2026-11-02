@@ -6,6 +6,8 @@
 
 ## Done
 
+- **Sector median badges on the Stock Hub** — every sector card and All Sectors shows the 1D and 1W **median** move with breadth ("X/N up"); sector heatmap uses median instead of mean so a single outlier can't drag a sector; Mega-Cap added to the heatmap (`index.html`).
+
 - **Four-layer regime diagnostic (issue #33)** — hub regime banner now driven by a state machine: joint-decline override → VIX bracket → QQQ−SPY spread tiebreaker → asymmetric hysteresis (fast to alarm, slow to relax; 2-confirmation rule, state persisted in `market.json`); six descriptive banners (CORRECTION/CRISIS/UNCERTAIN/ROTATION/NORMAL/BULLISH), banner always reflects the hysteresis-filtered regime with raw + spread in the sub-line (`update_market.py`, `index.html`).
 
 - **All/heatmap crypto tiles → CoinGecko (issue #26)** — `COINGECKO_IDS` map (34 coins) + `tileUrl(d)` helper routes crypto tiles to CoinGecko, equities to Yahoo Finance; uses existing `d.data.sector === 'crypto'` tag (`All/heatmap.html`).
