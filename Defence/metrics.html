@@ -1,16 +1,38 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Defence &amp; Aerospace stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 29 stocks.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Defence &amp; Aerospace stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 29 stocks." name="description"/>
 <title>Defence &amp; Aerospace — Stock Metrics</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../shared.css">
-<script src="../shared.js" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../shared.css" rel="stylesheet"/>
+<script defer="" src="../shared.js"></script>
 <style>
-  .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filter-bar {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    padding: 10px 14px; border-top: 1px solid var(--border);
+    overflow-x: auto; scrollbar-width: none; flex-shrink: 0;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .search-count-bar {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 14px; flex-shrink: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .search-count-bar input {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 6px 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); outline: none; flex: 1; max-width: 360px;
+  }
+  .search-count-bar input:focus { border-color: var(--accent); }
+  .search-count-bar .row-count {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: var(--dim); white-space: nowrap; margin-left: auto;
+  }
   .filter-btn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; position: relative; }
   .filter-btn:hover { color: var(--accent); border-color: var(--accent); }
   .filter-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 700; }
@@ -56,14 +78,20 @@
   .filter-btn:hover[data-tooltip]::after,
   .filter-btn:hover[data-tooltip]::before { opacity: 1; }
 
-  .search-count-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-  #metrics-search { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 14px; width: 240px; outline: none; letter-spacing: 0.5px; }
-  #metrics-search:focus { border-color: var(--accent); }
-  #metrics-search::placeholder { color: var(--muted); }
   .row-count { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--muted); }
   .row-count span { color: var(--accent); font-weight: 700; }
 
   .table-wrap { overflow-x: auto; border: 1px solid var(--border); margin-bottom: 4px; }
+  th:first-child,
+  td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--bg);
+    border-right: 1px solid var(--border);
+  }
+  thead th:first-child { z-index: 3; background: var(--surface2); }
+  tbody tr:hover td:first-child { background: var(--surface); }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   thead { background: var(--surface2); }
   th { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -87,7 +115,7 @@
   .ticker-link:hover { text-decoration: underline; opacity: 0.85; }
   .company-cell { color: var(--muted); font-size: 12px; }
 
-  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; }
+  .cat-badge { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; letter-spacing: 0.5px; font-weight: 600; white-space: nowrap; }
   .cat-us-primes   { background: rgba(245,158,11,0.15);  color: var(--amber);  border: 1px solid rgba(245,158,11,0.35); }
   .cat-uk-european { background: rgba(255,215,0,0.1);    color: var(--gold);   border: 1px solid rgba(255,215,0,0.3); }
   .cat-cyber-intel { background: rgba(192,132,252,0.15); color: var(--purple); border: 1px solid rgba(192,132,252,0.3); }
@@ -118,6 +146,9 @@
     h1 { font-size: 26px; }
     th, td { padding: 8px 10px; }
     .company-cell { display: none; }
+    th:nth-child(2) { display: none; }
+    .filter-btn[data-tooltip]::after,
+    .filter-btn[data-tooltip]::before { display: none; }
   }
 
   /* ─── 3-Panel Layout ─── */
@@ -162,14 +193,6 @@
   .sub-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 700; }
   .sub-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; flex-shrink: 0; opacity: 0.5; }
   .sub-link.active .sub-dot { opacity: 1; }
-  .header-search { display: flex; flex-direction: column; gap: 4px; margin: 0 4px; }
-  .header-search .row-count { font-size: 10px; }
-  .mobile-chips {
-    display: none; gap: 6px; padding: 8px 12px; overflow-x: auto;
-    border-bottom: 1px solid var(--border); scrollbar-width: none;
-    background: var(--bg); flex-shrink: 0;
-  }
-  .mobile-chips::-webkit-scrollbar { display: none; }
   .chip {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border);
@@ -177,38 +200,18 @@
     flex-shrink: 0; transition: all 0.15s;
   }
   .chip.active { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 700; }
-  .hamburger {
-    display: none; width: 44px; height: 44px; border: 1px solid var(--border);
-    background: transparent; cursor: pointer; font-size: 18px;
-    align-items: center; justify-content: center; flex-shrink: 0;
-  }
+
   .drawer-overlay {
     display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
   }
   .drawer-overlay.open { display: block; }
   .drawer {
     position: absolute; top: 0; left: 0; bottom: 0;
-    width: 260px; background: var(--bg); border-right: 1px solid var(--accent);
+    width: 164px; background: var(--bg); border-right: 1px solid var(--accent);
     display: flex; overflow: hidden;
   }
   .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
   .drawer .nav-panel  { flex: 1; overflow-y: auto; }
-  .bottom-tabs {
-    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 250;
-    background: var(--bg); border-top: 1px solid var(--accent);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  .bottom-tabs-inner { display: flex; justify-content: space-around; align-items: stretch; }
-  .tab-btn {
-    flex: 1; display: flex; flex-direction: column; align-items: center;
-    gap: 2px; padding: 8px 4px 6px; background: none; border: none;
-    cursor: pointer; border-top: 2px solid transparent; transition: all 0.15s;
-    font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.5px;
-    text-transform: uppercase; color: var(--muted);
-  }
-  .tab-btn.active { color: var(--accent); border-top-color: var(--accent); }
-  .tab-btn:hover  { color: var(--accent); }
-  .tab-icon { font-size: 16px; line-height: 1; }
   @media (max-width: 900px) {
     .nav-panel { width: 52px; }
     .nav-label, .nav-arrow, .sub-label, .nav-sub { display: none !important; }
@@ -218,13 +221,9 @@
     #metrics-search { width: 160px; }
   }
   @media (max-width: 600px) {
-    body { padding-bottom: 56px; }
     body[data-layout="rail"] .left-rail { display: none; }
     .nav-panel { display: none !important; }
-    .hamburger { display: flex; }
-    .bottom-tabs { display: block; }
-    .mobile-chips { display: flex; }
-    .header-search { display: none; }
+
     .header-blocks { display: none; }
     .header-inner { padding: 10px 14px !important; gap: 12px; }
     .header-left { padding: 8px 14px; }
@@ -238,113 +237,79 @@
 </head>
 <body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
-
 <!-- Panel 1 -->
 <div class="left-rail">
-<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
-<a class="sector-pill" href="../All/metrics.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../AI/metrics.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Biotech/metrics.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill active" href="metrics.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Tech/metrics.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Crypto/metrics.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Energy/metrics.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
 </div>
-
 <!-- Panel 2 -->
 <div class="nav-panel">
-  <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
-  <div class="nav-item open" id="ni-metrics">
-    <button class="nav-link active" onclick="toggleNav('metrics')">
-      <span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span>
-    </button>
-    <div class="nav-sub">
-      <span class="sub-label">Category</span>
-      <a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
-      <a class="sub-link" onclick="setCategory('us-primes')"><span class="sub-dot"></span>US Prime</a>
-      <a class="sub-link" onclick="setCategory('uk-european')"><span class="sub-dot"></span>UK/European</a>
-      <a class="sub-link" onclick="setCategory('cyber-intel')"><span class="sub-dot"></span>Cyber/Intel</a>
-      <a class="sub-link" onclick="setCategory('drones')"><span class="sub-dot"></span>Drones</a>
-      <a class="sub-link" onclick="setCategory('space')"><span class="sub-dot"></span>Space</a>
-      <a class="sub-link" onclick="setCategory('weapons')"><span class="sub-dot"></span>Weapons</a>
-    </div>
-  </div>
-  <a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
-  <a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
-  <a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
-  <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
-  <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+<a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
+<div class="nav-item open" id="ni-metrics">
+<button class="nav-link active" onclick="toggleNav('metrics')">
+<span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span>
+</button>
+<div class="nav-sub">
+<span class="sub-label">Category</span>
+<a class="sub-link active" onclick="setCategory('all')"><span class="sub-dot"></span>All</a>
+<a class="sub-link" onclick="setCategory('us-primes')"><span class="sub-dot"></span>US Prime</a>
+<a class="sub-link" onclick="setCategory('uk-european')"><span class="sub-dot"></span>UK/European</a>
+<a class="sub-link" onclick="setCategory('cyber-intel')"><span class="sub-dot"></span>Cyber/Intel</a>
+<a class="sub-link" onclick="setCategory('drones')"><span class="sub-dot"></span>Drones</a>
+<a class="sub-link" onclick="setCategory('space')"><span class="sub-dot"></span>Space</a>
+<a class="sub-link" onclick="setCategory('weapons')"><span class="sub-dot"></span>Weapons</a>
 </div>
-
+</div>
+<a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
+<a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
+<a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
+<a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
+<a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+</div>
 <!-- Panel 3 -->
 <div class="right-side">
 <header>
-  <div class="header-inner">
-    <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
-    <div class="header-left">
-      <div class="header-label">// Market Intelligence</div>
-      <h1>Defence <span>Metrics</span></h1>
-      <div class="header-sub"><span id="stock-count">—</span> stocks · v1</div>
-    </div>
-    <div class="header-search">
-      <input type="text" id="metrics-search" placeholder="Search ticker or company..." oninput="filterMetrics(this.value)">
-      <span class="row-count">Showing <span id="metrics-count">—</span> stocks</span>
-    </div>
-    <div class="header-blocks">
-      <div class="header-block">
-        <div class="header-block-label">Prices Last Updated</div>
-        <div class="header-block-value" id="data-bar-ts">—</div>
-      </div>
-    </div>
-    <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
-  </div>
-</header>
-<div class="mobile-chips">
-  <button class="chip active" data-filter="all" onclick="setCategory('all')">All</button>
-  <button class="chip" data-filter="us-primes" onclick="setCategory('us-primes')">US Prime</button>
-  <button class="chip" data-filter="uk-european" onclick="setCategory('uk-european')">UK/European</button>
-  <button class="chip" data-filter="cyber-intel" onclick="setCategory('cyber-intel')">Cyber/Intel</button>
-  <button class="chip" data-filter="drones" onclick="setCategory('drones')">Drones</button>
-  <button class="chip" data-filter="space" onclick="setCategory('space')">Space</button>
-  <button class="chip" data-filter="weapons" onclick="setCategory('weapons')">Weapons</button>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+<div class="header-label">// Market Intelligence</div>
+<h1>Defence <span>Metrics</span></h1>
+<div class="header-sub"><span id="stock-count">—</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
+
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+<div class="filter-bar" id="filter-bar"></div><div class="search-count-bar"><input id="metrics-search" oninput="filterMetrics(this.value)" placeholder="Search ticker or company..." type="text"/><span class="row-count">Showing <span id="metrics-count">—</span> stocks</span></div></header>
+
 <div class="page-body">
 <div class="page-main">
 <div class="container">
-
-  <div class="table-wrap">
-    <table id="metrics-table">
-      <thead>
-        <tr>
-          <th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
-          <th class="sortable" onclick="sortMetrics('name', this)">Company</th>
-          <th class="sortable" onclick="sortMetrics('category', this)">Category</th>
-          <th class="sortable num-col" onclick="sortMetrics('price', this)" data-tip-title="Price" data-tip="Current share price converted to GBP. LSE stocks (BA.L, RR.L, QQ.L) are converted from pence.">Price</th>
-          <th class="sortable num-col sort-desc" onclick="sortMetrics('market_cap', this)" data-tip-title="Market Cap" data-tip="Total market value of all outstanding shares, converted to GBP. A rough measure of company size.">Market Cap</th>
-          <th class="sortable num-col" onclick="sortMetrics('ytd', this)" data-tip-title="YTD Return" data-tip="Year-to-date price change from the first trading day of 2026.">YTD</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1d', this)" data-tip-title="1-Day Return" data-tip="Price change over the last trading session.">1D</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1w', this)" data-tip-title="1-Week Return" data-tip="Price change over the last 5 trading days.">1W</th>
-          <th class="sortable num-col" onclick="sortMetrics('change_1m', this)" data-tip-title="1-Month Return" data-tip="Price change over the last month.">1M</th>
-          <th class="sortable num-col" onclick="sortMetrics('beta', this)" data-tip-title="Beta" data-tip="Measures how volatile a stock is relative to the broader market. Beta > 1 means it moves more than the market.">Beta</th>
-          <th class="sortable num-col" onclick="sortMetrics('pe_ratio', this)" data-tip-title="P/E Ratio" data-tip="Price-to-Earnings ratio. A high P/E means the market expects strong future growth. Loss-making companies show —.">P/E Ratio</th>
-          <th class="sortable num-col" onclick="sortMetrics('avg_volume', this)" data-tip-title="Avg Daily Volume" data-tip="Average number of shares traded per day over the past 3 months. Higher volume = better liquidity.">Avg Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1d', this)" data-tip-title="1-Day Volume" data-tip="Total shares traded in the most recent session. Compare to Avg Vol to spot unusual activity.">1D Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1w', this)" data-tip-title="1-Week Volume" data-tip="Total shares traded across the last 5 trading days.">1W Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('vol_1m', this)" data-tip-title="1-Month Volume" data-tip="Total shares traded over the past month (~20 trading days).">1M Vol</th>
-          <th class="sortable num-col" onclick="sortMetrics('div_yield', this)" data-tip-title="Dividend Yield" data-tip="Annual dividend as a percentage of share price. Defence primes and established contractors often pay dividends.">Div Yield</th>
-          <th class="sortable num-col" onclick="sortMetrics('short_pct', this)" data-tip-title="Short Interest" data-tip="Percentage of shares sold short. High short interest (above 10%) can signal bearish sentiment.">Short %</th>
-          <th class="sortable" onclick="sortMetrics('analyst_score', this)" data-tip-title="Analyst Rating" data-tip="Consensus recommendation from analysts, ranging from Strong Buy to Sell.">Analyst</th>
-        </tr>
-      </thead>
-      <tbody id="metrics-body"></tbody>
-    </table>
-  </div>
-
-
+<div class="table-wrap">
+<table id="metrics-table">
+<thead>
+<tr>
+<th class="sortable" onclick="sortMetrics('ticker', this)">Ticker</th>
+<th class="sortable" onclick="sortMetrics('name', this)">Company</th>
+<th class="sortable" onclick="sortMetrics('category', this)">Category</th>
+<th class="sortable num-col" data-tip="Current share price converted to GBP. LSE stocks (BA.L, RR.L, QQ.L) are converted from pence." data-tip-title="Price" onclick="sortMetrics('price', this)">Price</th>
+<th class="sortable num-col sort-desc" data-tip="Total market value of all outstanding shares, converted to GBP. A rough measure of company size." data-tip-title="Market Cap" onclick="sortMetrics('market_cap', this)">Market Cap</th>
+<th class="sortable num-col" data-tip="Year-to-date price change from the first trading day of 2026." data-tip-title="YTD Return" onclick="sortMetrics('ytd', this)">YTD</th>
+<th class="sortable num-col" data-tip="Price change over the last trading session." data-tip-title="1-Day Return" onclick="sortMetrics('change_1d', this)">1D</th>
+<th class="sortable num-col" data-tip="Price change over the last 5 trading days." data-tip-title="1-Week Return" onclick="sortMetrics('change_1w', this)">1W</th>
+<th class="sortable num-col" data-tip="Price change over the last month." data-tip-title="1-Month Return" onclick="sortMetrics('change_1m', this)">1M</th>
+<th class="sortable num-col" data-tip="Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market." data-tip-title="Beta" onclick="sortMetrics('beta', this)">Beta</th>
+<th class="sortable num-col" data-tip="Price-to-Earnings ratio. A high P/E means the market expects strong future growth. Loss-making companies show —." data-tip-title="P/E Ratio" onclick="sortMetrics('pe_ratio', this)">P/E Ratio</th>
+<th class="sortable num-col" data-tip="Average number of shares traded per day over the past 3 months. Higher volume = better liquidity." data-tip-title="Avg Daily Volume" onclick="sortMetrics('avg_volume', this)">Avg Vol</th>
+<th class="sortable num-col" data-tip="Total shares traded in the most recent session. Compare to Avg Vol to spot unusual activity." data-tip-title="1-Day Volume" onclick="sortMetrics('vol_1d', this)">1D Vol</th>
+<th class="sortable num-col" data-tip="Total shares traded across the last 5 trading days." data-tip-title="1-Week Volume" onclick="sortMetrics('vol_1w', this)">1W Vol</th>
+<th class="sortable num-col" data-tip="Total shares traded over the past month (~20 trading days)." data-tip-title="1-Month Volume" onclick="sortMetrics('vol_1m', this)">1M Vol</th>
+<th class="sortable num-col" data-tip="Annual dividend as a percentage of share price. Defence primes and established contractors often pay dividends." data-tip-title="Dividend Yield" onclick="sortMetrics('div_yield', this)">Div Yield</th>
+<th class="sortable num-col" data-tip="Percentage of shares sold short. High short interest (above 10%) can signal bearish sentiment." data-tip-title="Short Interest" onclick="sortMetrics('short_pct', this)">Short %</th>
+<th class="sortable" data-tip="Consensus recommendation from analysts, ranging from Strong Buy to Sell." data-tip-title="Analyst Rating" onclick="sortMetrics('analyst_score', this)">Analyst</th>
+</tr>
+</thead>
+<tbody id="metrics-body"></tbody>
+</table>
 </div>
-
-
+</div>
 <script src="prices-data.js"></script>
 <script>
   const NAMES = {
@@ -385,10 +350,18 @@
 
   function yahooUrl(ticker) { return 'https://finance.yahoo.com/quote/' + ticker + '/'; }
 
-  function fmtMarketCap(gbpB) {
-    if (gbpB === null || gbpB === undefined) return null;
-    if (gbpB >= 1) return '£' + gbpB.toFixed(1) + 'B';
-    return '£' + (gbpB * 1000).toFixed(0) + 'M';
+  function fmtUsd(v) {
+    const n = parseFloat(v);
+    if (isNaN(n)) return '—';
+    if (n >= 10) return String(Math.round(n));
+    if (n >= 1)  return n.toFixed(2);
+    return n.toFixed(3);
+  }
+
+  function fmtMarketCap(usdB) {
+    if (usdB === null || usdB === undefined) return null;
+    if (usdB >= 1) return '$' + usdB.toFixed(1) + 'B';
+    return '$' + (usdB * 1000).toFixed(0) + 'M';
   }
   function fmtVolume(m) { return m === null || m === undefined ? null : m.toFixed(1) + 'M'; }
   function fmtPct(v, d) { return v === null || v === undefined ? null : v.toFixed(d !== undefined ? d : 2) + '%'; }
@@ -459,7 +432,7 @@
       case 'category':     return s.category;
       case 'ytd':          return s.ytd !== null ? s.ytd : -Infinity;
       case 'price':        return s.price !== null ? s.price : -Infinity;
-      case 'market_cap':   return s.market_cap_gbp_b !== null ? s.market_cap_gbp_b : -Infinity;
+      case 'market_cap':   return s.market_cap_usd_b !== null ? s.market_cap_usd_b : -Infinity;
       case 'beta':         return s.beta !== null ? s.beta : -Infinity;
       case 'pe_ratio':     return s.pe_ratio !== null ? s.pe_ratio : -Infinity;
       case 'avg_volume':   return s.avg_volume_m !== null ? s.avg_volume_m : -Infinity;
@@ -502,8 +475,8 @@
       const change1dCell = changePct(s.change_1d);
       const change1wCell = changePct(s.change_1w);
       const change1mCell = changePct(s.change_1m);
-      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">£' + s.priceStr + '</span>' : dash();
-      const mcCell = s.market_cap_gbp_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_gbp_b) + '</span>' : dash();
+      const priceCell = (s.price !== null && s.priceStr) ? '<span class="num-cell">$' + s.priceStr + '</span>' : dash();
+      const mcCell = s.market_cap_usd_b !== null ? '<span class="num-cell">' + fmtMarketCap(s.market_cap_usd_b) + '</span>' : dash();
       const peCell = s.pe_ratio !== null ? '<span class="num-cell">' + fmtNum(s.pe_ratio, 1) + '</span>' : dash();
       const volCell = s.avg_volume_m !== null ? '<span class="num-cell">' + fmtVolume(s.avg_volume_m) + '</span>' : dash();
       const vol1dCell = s.vol_1d !== null ? '<span class="num-cell">' + fmtVolume(s.vol_1d / 1e6) + '</span>' : dash();
@@ -550,9 +523,9 @@
       ticker:           s.ticker,
       name:             NAMES[s.ticker] || s.ticker,
       category:         s.category,
-      priceStr:         (s.price_gbp !== undefined && s.price_gbp !== null) ? String(s.price_gbp) : null,
-      price:            (s.price_gbp !== undefined && s.price_gbp !== null && !isNaN(parseFloat(s.price_gbp))) ? parseFloat(s.price_gbp) : null,
-      market_cap_gbp_b: (s.market_cap_gbp_b !== undefined && s.market_cap_gbp_b !== null) ? parseFloat(s.market_cap_gbp_b) : null,
+      priceStr:         (s.price_usd !== undefined && s.price_usd !== null) ? fmtUsd(s.price_usd) : null,
+      price:            (s.price_usd !== undefined && s.price_usd !== null && !isNaN(parseFloat(s.price_usd))) ? parseFloat(s.price_usd) : null,
+      market_cap_usd_b: (s.market_cap_usd_b !== undefined && s.market_cap_usd_b !== null) ? parseFloat(s.market_cap_usd_b) : null,
       beta:             (s.beta !== undefined && s.beta !== null) ? parseFloat(s.beta) : null,
       pe_ratio:         (s.pe_ratio !== undefined && s.pe_ratio !== null) ? parseFloat(s.pe_ratio) : null,
       avg_volume_m:     (s.avg_volume_m !== undefined && s.avg_volume_m !== null) ? parseFloat(s.avg_volume_m) : null,
@@ -570,6 +543,7 @@
     }));
     buildFilterBar(stocks);
     renderTable();
+    const sc = document.getElementById('stock-count'); if (sc) sc.textContent = stocks.length;
   }
 
   if (window.PRICES_DATA) {
@@ -615,58 +589,14 @@
 </div><!-- /.page-main -->
 </div><!-- /.page-body -->
 </div><!-- /.right-side -->
-
 <!-- Drawer overlay (mobile) -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
 <div class="drawer">
 <div class="left-rail">
-<a class="sector-pill" href="../index.html"><span class="sector-pill-icon">⊞</span><span class="sector-pill-name">Stock Hub</span></a>
-<a class="sector-pill" href="../All/metrics.html"><span class="sector-pill-icon">🌐</span><span class="sector-pill-name">All Sectors</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../AI/metrics.html"><span class="sector-pill-icon">🤖</span><span class="sector-pill-name">AI Infra</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Biotech/metrics.html"><span class="sector-pill-icon">🧬</span><span class="sector-pill-name">Biotech</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill active" href="metrics.html"><span class="sector-pill-icon">🛡️</span><span class="sector-pill-name">Defence</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Tech/metrics.html"><span class="sector-pill-icon">💻</span><span class="sector-pill-name">Technology</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Crypto/metrics.html"><span class="sector-pill-icon">₿</span><span class="sector-pill-name">Crypto</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../Energy/metrics.html"><span class="sector-pill-icon">⚡</span><span class="sector-pill-name">Energy</span><span class="sector-pill-badge">Live</span></a>
-<a class="sector-pill" href="../rss.html"><span class="sector-pill-icon">📰</span><span class="sector-pill-name">RSS Feed</span></a>
 </div>
-<div class="nav-panel">
-  <a class="nav-link" href="index.html"><span class="nav-icon">📊</span><span class="nav-label">Dashboard</span></a>
-  <div class="nav-item open" id="ni-metrics-d">
-    <button class="nav-link active" onclick="toggleNav('metrics-d')">
-      <span class="nav-icon">📋</span><span class="nav-label">Metrics</span><span class="nav-arrow">▶</span>
-    </button>
-    <div class="nav-sub">
-      <span class="sub-label">Category</span>
-      <a class="sub-link active" onclick="setCategory('all');closeDrawer()"><span class="sub-dot"></span>All</a>
-      <a class="sub-link" onclick="setCategory('us-primes');closeDrawer()"><span class="sub-dot"></span>US Prime</a>
-      <a class="sub-link" onclick="setCategory('uk-european');closeDrawer()"><span class="sub-dot"></span>UK/European</a>
-      <a class="sub-link" onclick="setCategory('cyber-intel');closeDrawer()"><span class="sub-dot"></span>Cyber/Intel</a>
-      <a class="sub-link" onclick="setCategory('drones');closeDrawer()"><span class="sub-dot"></span>Drones</a>
-      <a class="sub-link" onclick="setCategory('space');closeDrawer()"><span class="sub-dot"></span>Space</a>
-      <a class="sub-link" onclick="setCategory('weapons');closeDrawer()"><span class="sub-dot"></span>Weapons</a>
-    </div>
-  </div>
-  <a class="nav-link" href="news.html"><span class="nav-icon">📰</span><span class="nav-label">News</span></a>
-  <a class="nav-link" href="signals.html"><span class="nav-icon">🎯</span><span class="nav-label">Signals</span></a>
-  <a class="nav-link" href="heatmap.html"><span class="nav-icon">🔥</span><span class="nav-label">Heatmap</span></a>
-  <a class="nav-link" href="charts.html"><span class="nav-icon">📈</span><span class="nav-label">Charts</span></a>
-  <a class="nav-link" href="calculator.html"><span class="nav-icon">🧮</span><span class="nav-label">What-If</span></a>
+<div class="nav-panel"></div>
 </div>
 </div>
-</div>
-
-<!-- Bottom tab bar (mobile) -->
-<div class="bottom-tabs">
-<div class="bottom-tabs-inner">
-<button class="tab-btn" onclick="window.location='index.html'"><span class="tab-icon">📊</span>Dashboard</button>
-<button class="tab-btn active" onclick="window.location='metrics.html'"><span class="tab-icon">📋</span>Metrics</button>
-<button class="tab-btn" onclick="window.location='news.html'"><span class="tab-icon">📰</span>News</button>
-<button class="tab-btn" onclick="window.location='signals.html'"><span class="tab-icon">🎯</span>Signals</button>
-<button class="tab-btn" onclick="window.location='heatmap.html'"><span class="tab-icon">🔥</span>Heatmap</button>
-<button class="tab-btn" onclick="window.location='charts.html'"><span class="tab-icon">📈</span>Charts</button>
-<button class="tab-btn" onclick="window.location='calculator.html'"><span class="tab-icon">🧮</span>What-If</button>
-</div>
-</div>
+  <script src="../nav.js"></script>
 </body>
 </html>
