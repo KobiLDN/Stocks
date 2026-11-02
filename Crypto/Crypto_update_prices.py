@@ -30,6 +30,7 @@ DASHBOARD_TITLE = "Crypto"
 # ── CoinMarketCap API ─────────────────────────────────────────────────────────
 CMC_API_KEY = os.environ.get("CMC_API_KEY", "")
 CMC_URL     = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
+CMC_URL_V2  = "https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest"
 
 COINGECKO_API_KEY  = os.environ.get("COINGECKO_API_KEY", "")
 COINGECKO_PRO_URL  = "https://pro-api.coingecko.com/api/v3"
@@ -63,13 +64,13 @@ COINGECKO_IDS = {
 CMC_IDS = {
     "BTC": 1,     "ETH": 1027,  "SOL": 5426,  "BNB": 1839,  "ADA": 2010,
     "AVAX": 5805, "XRP": 52,    "XLM": 512,   "TRX": 1958,  "SUI": 20947,
-    "HBAR": 4642, "TON": 11419, "ALGO": 4031, "MINA": 20804,"POL": 28321,
+    "HBAR": 4642, "TON": 11419, "ALGO": 4030, "MINA": 8646,"POL": 28321,
     "DOT": 6636,  "LINK": 1975, "DOGE": 74,   "PEPE": 24478,
     # AI Tokens
     "TAO": 22974, "FET": 3773,  "RNDR": 5690,
-    "GRT": 6719,  "NMR": 1732,   "ALT": 28067,
-    "AIOZ": 9444, "ARKM": 25691,"WLD": 13502,  "NEAR": 6535,
-    "ICP": 8916,  "KAITO": 30999, "VIRTUAL": 29420,
+    "GRT": 6719,  "NMR": 1732,   "ALT": 29073,
+    "AIOZ": 9104, "ARKM": 27565,"WLD": 13502,  "NEAR": 6535,
+    "ICP": 8916,  "VIRTUAL": 29420,
 }
 
 # display ticker → (cmc_symbol, yf_symbol, category, exchange, company_name)
@@ -90,7 +91,7 @@ STOCKS = {
     # ── Emerging ──────────────────────────────────────────────────────────────
     "SUI":  ("SUI",  "SUI20947-USD",  "emerging", "Crypto", "Sui"),
     "HBAR": ("HBAR", "HBAR-USD",      "emerging", "Crypto", "Hedera"),
-    "TON":  ("TON",  "TON11419-USD",  "emerging", "Crypto", "Toncoin"),
+    "TON":  ("GRAM", "TON11419-USD",  "emerging", "Crypto", "Toncoin"),
     "ALGO": ("ALGO", "ALGO-USD",      "emerging", "Crypto", "Algorand"),
     "MINA": ("MINA", "MINA-USD",      "emerging", "Crypto", "Mina"),
     # ── Infrastructure ────────────────────────────────────────────────────────
@@ -137,13 +138,10 @@ def fetch_cmc_quotes():
     Looked up by ID, not symbol: several coins share a symbol (e.g. AGIX), and a
     symbol query returns whichever match CMC lists first, which flipped between
     unrelated coins run to run. Each returned symbol is checked against the
-    expected one; a mismatch (wrong ID in CMC_IDS) is skipped with a warning
-    rather than published.
+    expected one; a mismatch (wrong ID in CMC_IDS) or a coin with no ID falls
+    back to a deterministic symbol lookup (_cmc_quotes_by_symbol) and is logged.
     """
     id_to_ticker = {str(CMC_IDS[t]): t for t in STOCKS if t in CMC_IDS}
-    missing = [t for t in STOCKS if t not in CMC_IDS]
-    if missing:
-        print(f"  WARNING: no CMC_IDS entry for {missing} — skipped")
     resp = requests.get(
         CMC_URL,
         headers={"X-CMC_PRO_API_KEY": CMC_API_KEY, "Accept": "application/json"},
@@ -164,7 +162,7 @@ def fetch_cmc_quotes():
         cmc_sym = STOCKS[ticker][0]
         if entry.get("symbol", "").upper() != cmc_sym.upper():
             print(f"  WARNING: CMC id {cmc_id} is {entry.get('symbol')} ({entry.get('name')}), "
-                  f"expected {cmc_sym} for {ticker} — skipped, fix CMC_IDS")
+                  f"expected {cmc_sym} for {ticker} — falling back to symbol lookup, fix CMC_IDS")
             continue
         q = entry["quote"]["USD"]
         quotes[cmc_sym] = {
@@ -173,6 +171,43 @@ def fetch_cmc_quotes():
             "change_1w":  q.get("percent_change_7d")  or 0.0,
             "change_1m":  q.get("percent_change_30d") or 0.0,
             # note: percent_change_90d NOT stored — it's not YTD, CoinGecko provides true YTD
+            "market_cap": q.get("market_cap"),
+            "volume_24h": q.get("volume_24h"),
+            "cmc_rank":   entry.get("cmc_rank"),
+        }
+
+    unresolved = {STOCKS[t][0] for t in STOCKS if STOCKS[t][0] not in quotes}
+    if unresolved:
+        quotes.update(_cmc_quotes_by_symbol(unresolved))
+    return quotes
+
+
+def _cmc_quotes_by_symbol(symbols):
+    """Fallback for coins without a working CMC id: query by symbol and, when the
+    symbol is shared, take the active match with the best (lowest) cmc_rank —
+    deterministic, unlike taking whichever entry CMC lists first."""
+    resp = requests.get(
+        CMC_URL_V2,
+        headers={"X-CMC_PRO_API_KEY": CMC_API_KEY, "Accept": "application/json"},
+        params={"symbol": ",".join(sorted(symbols)), "convert": "USD"},
+        timeout=20,
+    )
+    resp.raise_for_status()
+    quotes = {}
+    for sym, entries in resp.json().get("data", {}).items():
+        entries = [e for e in (entries if isinstance(entries, list) else [entries])
+                   if e.get("is_active", 1) and e.get("cmc_rank")]
+        if not entries:
+            continue
+        entry = min(entries, key=lambda e: e["cmc_rank"])
+        print(f"  NOTE: {sym} resolved by symbol -> CMC id {entry['id']} ({entry.get('name')}, "
+              f"rank {entry['cmc_rank']}) — pin this id in CMC_IDS")
+        q = entry["quote"]["USD"]
+        quotes[sym] = {
+            "price_usd":  q["price"],
+            "change_1d":  q.get("percent_change_24h") or 0.0,
+            "change_1w":  q.get("percent_change_7d")  or 0.0,
+            "change_1m":  q.get("percent_change_30d") or 0.0,
             "market_cap": q.get("market_cap"),
             "volume_24h": q.get("volume_24h"),
             "cmc_rank":   entry.get("cmc_rank"),
