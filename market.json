@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05 21:15",
+  "updated": "2026-11-06 01:09",
   "spy": {
     "price": 733.0,
     "change_1d": -4.44,
@@ -17,8 +17,8 @@
     "change_1y": 6.28
   },
   "vix": {
-    "level": 27.92,
-    "change_1d": 68.5,
+    "level": 28.18,
+    "change_1d": 70.07,
     "regime": "correction",
     "signal": "high_fear"
   },
