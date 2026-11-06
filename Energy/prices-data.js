@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-11-06 01:08",
-  "fx_gbp_usd": 1.3453,
+  "updated": "2026-11-06 07:37",
+  "fx_gbp_usd": 1.3402,
   "stocks": [
     {
       "ticker": "XOM",
@@ -14,23 +14,23 @@ window.PRICES_DATA = {
       "change_1m": "+0.50%",
       "change_ytd": "+37.48%",
       "return_1yr": "+48%",
-      "low_gbp": "84",
-      "low_usd": 113.64,
-      "high_gbp": "140",
+      "low_gbp": "85",
+      "low_usd": 114.19,
+      "high_gbp": "141",
       "high_usd": 188.5,
       "bar_pct": 69,
-      "market_cap_gbp_b": 501.238,
+      "market_cap_gbp_b": 503.119,
       "market_cap_usd_b": 674.296,
       "beta": 0.141,
       "pe_ratio": 17.01,
       "avg_volume_m": 13.62,
-      "div_yield_pct": 253.0,
+      "div_yield_pct": 259.0,
       "short_pct": 1.16,
       "analyst": "buy",
       "analyst_score": 2.42,
-      "vol_1d": 18743712,
-      "vol_1w": 94261012,
-      "vol_1m": 300432112,
+      "vol_1d": 18756200,
+      "vol_1w": 94273500,
+      "vol_1m": 300444600,
       "news": [
         {
           "title": "Targa Resources Corp. Q3 2026 Earnings Call Summary",
@@ -75,7 +75,7 @@ window.PRICES_DATA = {
       "company_name": "Chevron",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "158",
+      "price_gbp": "159",
       "price_usd": 212.93,
       "change_1d": "-1.73%",
       "change_1w": "-8.01%",
@@ -87,18 +87,18 @@ window.PRICES_DATA = {
       "high_gbp": "176",
       "high_usd": 236.48,
       "bar_pct": 74,
-      "market_cap_gbp_b": 308.807,
+      "market_cap_gbp_b": 309.966,
       "market_cap_usd_b": 415.426,
       "beta": 0.453,
       "pe_ratio": 15.63,
       "avg_volume_m": 8.42,
-      "div_yield_pct": 328.0,
+      "div_yield_pct": 334.0,
       "short_pct": 1.32,
       "analyst": "buy",
       "analyst_score": 1.69,
-      "vol_1d": 10169700,
-      "vol_1w": 49310700,
-      "vol_1m": 181333000,
+      "vol_1d": 10449000,
+      "vol_1w": 49590000,
+      "vol_1m": 181612300,
       "news": [
         {
           "title": "Top Stock Reports for Berkshire Hathaway, Micron & Chevron",
@@ -143,7 +143,7 @@ window.PRICES_DATA = {
       "company_name": "Shell",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "74",
+      "price_gbp": "75",
       "price_usd": 100.12,
       "change_1d": "-1.05%",
       "change_1w": "-7.01%",
@@ -152,22 +152,36 @@ window.PRICES_DATA = {
       "return_1yr": "+37%",
       "low_gbp": "51",
       "low_usd": 68.62,
-      "high_gbp": "81",
+      "high_gbp": "82",
       "high_usd": 109.37,
       "bar_pct": 77,
-      "market_cap_gbp_b": 210.886,
+      "market_cap_gbp_b": 211.678,
       "market_cap_usd_b": 283.697,
       "beta": -0.244,
       "pe_ratio": 8.69,
       "avg_volume_m": 6.09,
-      "div_yield_pct": 307.0,
+      "div_yield_pct": 312.0,
       "short_pct": 1.22,
       "analyst": "buy",
       "analyst_score": 2.19,
-      "vol_1d": 5208179,
-      "vol_1w": 33013658,
-      "vol_1m": 137703059,
+      "vol_1d": 5208056,
+      "vol_1w": 33033518,
+      "vol_1m": 137722919,
       "news": [
+        {
+          "title": "Teads Holding Co (TEAD) (Q3 2026) Earnings Call Highlights: CTV Surges 37% While Revenue Slides ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/teads-holding-co-tead-q3-051245103.html",
+          "published": 1793941965,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Hornbeck Offshore Services Inc (HOS) (Q3 2026) Earnings Call Highlights: Helix Merger Fuels $1. ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/hornbeck-offshore-services-inc-hos-011048272.html",
+          "published": 1793927448,
+          "sentiment": 0.0
+        },
         {
           "title": "Is ExxonMobil Holdings (XOM) Rethinking Its Portfolio With An Infineum Exit?",
           "publisher": "Simply Wall St.",
@@ -188,20 +202,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/chevrons-record-natural-gas-output-151500530.html",
           "published": 1793891700,
           "sentiment": 0.586
-        },
-        {
-          "title": "Shell And 2 Other British Undervalued Stocks To Watch",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/shell-2-other-british-undervalued-031448163.html",
-          "published": 1793848488,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Venture Global (VG) Begins Plaquemines LNG Commercial Operations With First Cargo Shipped",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/venture-global-vg-begins-plaquemines-221528203.html",
-          "published": 1793830528,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.232
@@ -223,19 +223,26 @@ window.PRICES_DATA = {
       "high_gbp": "38",
       "high_usd": 51.49,
       "bar_pct": 63,
-      "market_cap_gbp_b": 85.583,
+      "market_cap_gbp_b": 85.904,
       "market_cap_usd_b": 115.131,
       "beta": -0.254,
       "pe_ratio": 21.8,
       "avg_volume_m": 9.08,
-      "div_yield_pct": 456.0,
+      "div_yield_pct": 465.0,
       "short_pct": 0.37,
       "analyst": "buy",
       "analyst_score": 2.16,
-      "vol_1d": 9598907,
-      "vol_1w": 47341607,
-      "vol_1m": 214077807,
+      "vol_1d": 9600000,
+      "vol_1w": 47342700,
+      "vol_1m": 214078900,
       "news": [
+        {
+          "title": "Clean Energy Fuels Corp (CLNE) (Q3 2026) Earnings Call Highlights: Raised Guidance, Surging RNG ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/energy/articles/clean-energy-fuels-corp-clne-052748917.html",
+          "published": 1793942868,
+          "sentiment": 0.586
+        },
         {
           "title": "3 British Energy Stocks With Earnings Growth Over 60%",
           "publisher": "Simply Wall St.",
@@ -263,16 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/bp-reduces-stake-norwegian-producer-142702605.html",
           "published": 1793888822,
           "sentiment": 0.0
-        },
-        {
-          "title": "BP shares fall after $1.06 bln Aker BP stake sale",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/energy/articles/bp-shares-fall-1-06-084805620.html",
-          "published": 1793868485,
-          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.168
+      "news_sentiment": 0.226
     },
     {
       "ticker": "TTE",
@@ -286,24 +286,31 @@ window.PRICES_DATA = {
       "change_1m": "+5.68%",
       "change_ytd": "+36.46%",
       "return_1yr": "+48%",
-      "low_gbp": "45",
-      "low_usd": 61.05,
+      "low_gbp": "46",
+      "low_usd": 61.63,
       "high_gbp": "71",
       "high_usd": 95.78,
-      "bar_pct": 80,
-      "market_cap_gbp_b": 144.844,
-      "market_cap_usd_b": 194.853,
+      "bar_pct": 79,
+      "market_cap_gbp_b": 145.388,
+      "market_cap_usd_b": 194.854,
       "beta": 0.044,
       "pe_ratio": 8.86,
       "avg_volume_m": 1.81,
-      "div_yield_pct": 446.0,
+      "div_yield_pct": 456.0,
       "short_pct": 0.22,
       "analyst": "buy",
       "analyst_score": 1.89,
-      "vol_1d": 1647502,
-      "vol_1w": 8040102,
-      "vol_1m": 51377302,
+      "vol_1d": 1647500,
+      "vol_1w": 8040100,
+      "vol_1m": 51377300,
       "news": [
+        {
+          "title": "Clean Energy Fuels Corp (CLNE) (Q3 2026) Earnings Call Highlights: Raised Guidance, Surging RNG ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/energy/articles/clean-energy-fuels-corp-clne-052748917.html",
+          "published": 1793942868,
+          "sentiment": 0.586
+        },
         {
           "title": "Sempra's Q3 Earnings Outpace Estimates, Revenues Increase Y/Y",
           "publisher": "Zacks",
@@ -331,16 +338,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/zacks-analyst-blog-highlights-conocophillips-063800829.html",
           "published": 1793860680,
           "sentiment": 0.494
-        },
-        {
-          "title": "Finance firms lean into multiagent systems, model routing",
-          "publisher": "CIO Dive",
-          "url": "https://www.ciodive.com/news/finance-firms-lean-multiagent-systems-model-routing/873809/",
-          "published": 1793858400,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.217
+      "news_sentiment": 0.334
     },
     {
       "ticker": "EQNR",
@@ -356,22 +356,29 @@ window.PRICES_DATA = {
       "return_1yr": "+78%",
       "low_gbp": "17",
       "low_usd": 22.26,
-      "high_gbp": "36",
+      "high_gbp": "37",
       "high_usd": 49.08,
       "bar_pct": 76,
-      "market_cap_gbp_b": 74.846,
-      "market_cap_usd_b": 100.687,
+      "market_cap_gbp_b": 75.127,
+      "market_cap_usd_b": 100.688,
       "beta": -0.652,
       "pe_ratio": 8.83,
       "avg_volume_m": 3.69,
-      "div_yield_pct": 364.0,
+      "div_yield_pct": 367.0,
       "short_pct": 2.85,
       "analyst": "hold",
       "analyst_score": 3.0,
-      "vol_1d": 6735191,
-      "vol_1w": 27504791,
-      "vol_1m": 109800691,
+      "vol_1d": 6738200,
+      "vol_1w": 27507800,
+      "vol_1m": 109803700,
       "news": [
+        {
+          "title": "Orlen SA (PSKOF) (Q3 2026) Earnings Call Highlights: Record Revenue, Resilient Strategy, and ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/orlen-sa-pskof-q3-2026-031813655.html",
+          "published": 1793935093,
+          "sentiment": 0.0
+        },
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Fall in Thursday Trading",
           "publisher": "MT Newswires",
@@ -399,16 +406,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/world-indices/articles/european-equities-traded-us-american-161339370.html",
           "published": 1793808819,
           "sentiment": 0.0
-        },
-        {
-          "title": "Best Momentum Stocks to Buy for November 4th",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/best-momentum-stocks-buy-november-141500961.html",
-          "published": 1793801700,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": 0.0
     },
     {
       "ticker": "COP",
@@ -423,23 +423,30 @@ window.PRICES_DATA = {
       "change_ytd": "+43.17%",
       "return_1yr": "+60%",
       "low_gbp": "64",
-      "low_usd": 85.57,
+      "low_usd": 85.59,
       "high_gbp": "115",
       "high_usd": 154.28,
       "bar_pct": 73,
-      "market_cap_gbp_b": 120.968,
+      "market_cap_gbp_b": 121.422,
       "market_cap_usd_b": 162.734,
       "beta": 0.162,
-      "pe_ratio": 17.94,
+      "pe_ratio": 14.27,
       "avg_volume_m": 6.66,
       "div_yield_pct": 245.0,
       "short_pct": 1.55,
       "analyst": "buy",
       "analyst_score": 1.9,
-      "vol_1d": 9222911,
-      "vol_1w": 46108411,
-      "vol_1m": 149681411,
+      "vol_1d": 9227400,
+      "vol_1w": 46112900,
+      "vol_1m": 149685900,
       "news": [
+        {
+          "title": "ConocoPhillips (COP) (Q3 2026) Earnings Call Highlights: $4 Billion Free Cash Flow, 11% ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/energy/articles/conocophillips-cop-q3-2026-earnings-031728903.html",
+          "published": 1793935048,
+          "sentiment": 0.511
+        },
         {
           "title": "ConocoPhillips Q3 2026 Earnings Call Summary",
           "publisher": "Moby",
@@ -467,16 +474,9 @@ window.PRICES_DATA = {
           "url": "https://investorshub.advfn.com/market-news/article/39390/conocophillips-reports-higher-q3-earnings-as-oil-prices-support-profit-growth",
           "published": 1793891477,
           "sentiment": 0.802
-        },
-        {
-          "title": "ConocoPhillips Just Raised Its Dividend 11%. Is the Stock a Buy?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/05/conocophillips-just-raised-its-dividend-11-is-the-stock-a-buy/",
-          "published": 1793890066,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.299
+      "news_sentiment": 0.401
     },
     {
       "ticker": "OXY",
@@ -495,18 +495,18 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 61,
-      "market_cap_gbp_b": 41.88,
-      "market_cap_usd_b": 56.34,
+      "market_cap_gbp_b": 42.037,
+      "market_cap_usd_b": 56.339,
       "beta": 0.149,
       "pe_ratio": 16.01,
       "avg_volume_m": 8.6,
-      "div_yield_pct": 195.0,
+      "div_yield_pct": 199.0,
       "short_pct": 0.02,
       "analyst": "buy",
       "analyst_score": 2.21,
-      "vol_1d": 13243281,
-      "vol_1w": 55581881,
-      "vol_1m": 206024981,
+      "vol_1d": 13247000,
+      "vol_1w": 55585600,
+      "vol_1m": 206028700,
       "news": [
         {
           "title": "Occidental Petroleum (OXY) Stock Moves -1.69%: What You Should Know",
@@ -560,22 +560,36 @@ window.PRICES_DATA = {
       "return_1yr": "+40%",
       "low_gbp": "76",
       "low_usd": 101.59,
-      "high_gbp": "123",
+      "high_gbp": "124",
       "high_usd": 165.93,
       "bar_pct": 67,
-      "market_cap_gbp_b": 56.494,
+      "market_cap_gbp_b": 56.706,
       "market_cap_usd_b": 75.999,
       "beta": 0.269,
       "pe_ratio": 11.28,
       "avg_volume_m": 2.97,
-      "div_yield_pct": 277.0,
+      "div_yield_pct": 282.0,
       "short_pct": 3.67,
       "analyst": "buy",
       "analyst_score": 2.36,
-      "vol_1d": 5264353,
-      "vol_1w": 19192153,
-      "vol_1m": 65907053,
+      "vol_1d": 5265300,
+      "vol_1w": 19193100,
+      "vol_1m": 65908000,
       "news": [
+        {
+          "title": "Time to Cash Out? 4 Energy Stocks I'd Sell Before It's Too Late",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/05/time-to-cash-out-4-energy-stocks-id-sell-before-it/",
+          "published": 1793936100,
+          "sentiment": 0.273
+        },
+        {
+          "title": "EOG Resources Lifts Dividend 8% as Q3 Profit Surges 89%",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/eog-resources-lifts-dividend-8-024000468.html",
+          "published": 1793932800,
+          "sentiment": 0.44
+        },
         {
           "title": "Compared to Estimates, EOG Resources (EOG) Q3 Earnings: A Look at Key Metrics",
           "publisher": "Zacks",
@@ -596,54 +610,47 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/eog-resources-q3-earnings-snapshot-212119203.html",
           "published": 1793913679,
           "sentiment": 0.0
-        },
-        {
-          "title": "Are Investors Undervaluing Devon Energy (DVN) Right Now?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-devon-energy-dvn-134003264.html",
-          "published": 1793886003,
-          "sentiment": 0.273
-        },
-        {
-          "title": "EOG Resources Stock: Analyst Estimates & Ratings",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/8669470/eog-resources-stock-analyst-estimates-ratings",
-          "published": 1793880323,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.055
+      "news_sentiment": 0.143
     },
     {
       "ticker": "MPC",
       "company_name": "Marathon Petroleum",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "280",
+      "price_gbp": "282",
       "price_usd": 377.32,
       "change_1d": "-3.45%",
       "change_1w": "-12.76%",
       "change_1m": "-12.73%",
       "change_ytd": "+131.14%",
       "return_1yr": "+104%",
-      "low_gbp": "120",
+      "low_gbp": "121",
       "low_usd": 161.93,
-      "high_gbp": "367",
+      "high_gbp": "369",
       "high_usd": 493.98,
       "bar_pct": 65,
-      "market_cap_gbp_b": 76.37,
+      "market_cap_gbp_b": 76.657,
       "market_cap_usd_b": 102.738,
       "beta": 0.509,
       "pe_ratio": 7.48,
       "avg_volume_m": 2.56,
-      "div_yield_pct": 112.0,
+      "div_yield_pct": 117.0,
       "short_pct": 3.03,
       "analyst": "buy",
       "analyst_score": 2.39,
-      "vol_1d": 3224996,
-      "vol_1w": 14987096,
-      "vol_1m": 51325296,
+      "vol_1d": 3225600,
+      "vol_1w": 14987700,
+      "vol_1m": 51325900,
       "news": [
+        {
+          "title": "3 Refining Stocks To Watch As Cheaper Crude Tests Margins",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/3-refining-stocks-watch-cheaper-032523819.html",
+          "published": 1793935523,
+          "sentiment": -0.572
+        },
         {
           "title": "St. Paul Park refinery sold as part of $4.2B deal",
           "publisher": "Pioneer Press, St. Paul, Minn.",
@@ -671,23 +678,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/real-estate/articles/murphy-usas-55-store-pipeline-151300613.html",
           "published": 1793891580,
           "sentiment": 0.361
-        },
-        {
-          "title": "Are Investors Undervaluing Marathon Petroleum (MPC) Right Now?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-marathon-petroleum-mpc-134002792.html",
-          "published": 1793886002,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.149
+      "news_sentiment": 0.034
     },
     {
       "ticker": "VLO",
       "company_name": "Valero Energy",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "261",
+      "price_gbp": "262",
       "price_usd": 351.23,
       "change_1d": "-2.98%",
       "change_1w": "-8.67%",
@@ -696,22 +696,29 @@ window.PRICES_DATA = {
       "return_1yr": "+108%",
       "low_gbp": "119",
       "low_usd": 159.9,
-      "high_gbp": "343",
+      "high_gbp": "344",
       "high_usd": 461.52,
       "bar_pct": 63,
-      "market_cap_gbp_b": 72.813,
-      "market_cap_usd_b": 97.953,
+      "market_cap_gbp_b": 73.086,
+      "market_cap_usd_b": 97.952,
       "beta": 0.552,
       "pe_ratio": 7.99,
       "avg_volume_m": 3.07,
-      "div_yield_pct": 131.0,
+      "div_yield_pct": 137.0,
       "short_pct": 3.35,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 3878875,
-      "vol_1w": 20920175,
-      "vol_1m": 67410575,
+      "vol_1d": 3879800,
+      "vol_1w": 20921100,
+      "vol_1m": 67411500,
       "news": [
+        {
+          "title": "3 Refining Stocks To Watch As Cheaper Crude Tests Margins",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/3-refining-stocks-watch-cheaper-032523819.html",
+          "published": 1793935523,
+          "sentiment": -0.572
+        },
         {
           "title": "Can MPC's Gulf Coast Focus Fuel Stronger Future Refining Returns?",
           "publisher": "Zacks",
@@ -739,16 +746,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/best-growth-stocks-buy-november-061600368.html",
           "published": 1793859360,
           "sentiment": 0.778
-        },
-        {
-          "title": "\ud83c\udfa7 Listen: Global Conflicts Have Meant Huge Profits for U.S. Oil Refiners",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-04-2026/card/-listen-global-conflicts-have-meant-huge-profits-for-u-s-oil-refiners-MEZtjrrq74K4g0Tpw9N4?siteid=yhoof2&yptr=yahoo",
-          "published": 1793833202,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.354
+      "news_sentiment": 0.163
     },
     {
       "ticker": "SLB",
@@ -767,18 +767,18 @@ window.PRICES_DATA = {
       "high_gbp": "45",
       "high_usd": 60.46,
       "bar_pct": 58,
-      "market_cap_gbp_b": 54.465,
+      "market_cap_gbp_b": 54.67,
       "market_cap_usd_b": 73.27,
       "beta": 0.792,
       "pe_ratio": 24.1,
       "avg_volume_m": 12.48,
-      "div_yield_pct": 229.0,
+      "div_yield_pct": 238.0,
       "short_pct": 4.32,
       "analyst": "buy",
       "analyst_score": 1.53,
-      "vol_1d": 18777249,
-      "vol_1w": 72226149,
-      "vol_1m": 288189249,
+      "vol_1d": 18779900,
+      "vol_1w": 72228800,
+      "vol_1m": 288191900,
       "news": [
         {
           "title": "SLB: 3 Key Takeaways for Long-Term Investors",
@@ -832,21 +832,21 @@ window.PRICES_DATA = {
       "return_1yr": "+21%",
       "low_gbp": "19",
       "low_usd": 24.92,
-      "high_gbp": "32",
+      "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 37,
-      "market_cap_gbp_b": 19.626,
-      "market_cap_usd_b": 26.402,
+      "market_cap_gbp_b": 19.699,
+      "market_cap_usd_b": 26.401,
       "beta": 0.749,
       "pe_ratio": 13.41,
       "avg_volume_m": 10.4,
-      "div_yield_pct": 206.0,
+      "div_yield_pct": 213.0,
       "short_pct": 5.44,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 10591045,
-      "vol_1w": 51510345,
-      "vol_1m": 234486845,
+      "vol_1d": 10592400,
+      "vol_1w": 51511700,
+      "vol_1m": 234488200,
       "news": [
         {
           "title": "CLB Q3 Earnings Miss Estimates on Higher Costs and Disruptions",
@@ -900,21 +900,21 @@ window.PRICES_DATA = {
       "return_1yr": "+5%",
       "low_gbp": "33",
       "low_usd": 44.26,
-      "high_gbp": "52",
+      "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 7,
-      "market_cap_gbp_b": 34.105,
+      "market_cap_gbp_b": 34.233,
       "market_cap_usd_b": 45.88,
       "beta": 1.058,
       "pe_ratio": 15.88,
       "avg_volume_m": 7.45,
-      "div_yield_pct": 184.0,
+      "div_yield_pct": 199.0,
       "short_pct": 2.87,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 17512017,
-      "vol_1w": 58368817,
-      "vol_1m": 187230117,
+      "vol_1d": 17571300,
+      "vol_1w": 58428100,
+      "vol_1m": 187289400,
       "news": [
         {
           "title": "North America Enters Rig Addition Streak, BH Shows",
@@ -966,13 +966,13 @@ window.PRICES_DATA = {
       "change_1m": "+13.32%",
       "change_ytd": "+11.42%",
       "return_1yr": "+8%",
-      "low_gbp": "55",
+      "low_gbp": "56",
       "low_usd": 74.41,
-      "high_gbp": "73",
+      "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 57,
-      "market_cap_gbp_b": 137.585,
-      "market_cap_usd_b": 185.088,
+      "market_cap_gbp_b": 138.101,
+      "market_cap_usd_b": 185.087,
       "beta": 0.6,
       "pe_ratio": 15.9,
       "avg_volume_m": 11.98,
@@ -980,10 +980,24 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.91,
-      "vol_1d": 19273814,
-      "vol_1w": 96194314,
-      "vol_1m": 294393914,
+      "vol_1d": 19279100,
+      "vol_1w": 96199600,
+      "vol_1m": 294399200,
       "news": [
+        {
+          "title": "Is GE Vernova Stock A Real Bargain?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/gev/articles/622842/is-ge-vernova-stock-a-real-bargain/2026-11-05",
+          "published": 1793937623,
+          "sentiment": 0.202
+        },
+        {
+          "title": "Here Is What The Trailing P/E Misses About Constellation Energy Stock",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/ceg/articles/622938/here-is-what-the-trailing-p-e-misses-about-constellation-energy-stock/2026-11-05",
+          "published": 1793931289,
+          "sentiment": 0.052
+        },
         {
           "title": "Virginia Chamber of Commerce promotes study touting Dominion merger benefits",
           "publisher": "The Virginian-Pilot",
@@ -1004,23 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/coverage/better-buy/2026/11/05/ge-vernova-vs-nextera-energy-which-industrials-stock-is-a-better-buy-for-2027/",
           "published": 1793911031,
           "sentiment": 0.612
-        },
-        {
-          "title": "Where Will PG&E Stock Be In Three Years?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/stock/pcg/articles/622925/where-will-pge-stock-be-in-three-years/2026-11-05",
-          "published": 1793904282,
-          "sentiment": 0.0
-        },
-        {
-          "title": "NextEra Energy vs. Duke Energy: Which Dividend Utility Wins the AI Power Boom?",
-          "publisher": "Barchart",
-          "url": "https://www.barchart.com/story/news/8676696/nextera-energy-vs-duke-energy-which-dividend-utility-wins-the-ai-power-boom",
-          "published": 1793894530,
-          "sentiment": 0.784
         }
       ],
-      "news_sentiment": 0.469
+      "news_sentiment": 0.363
     },
     {
       "ticker": "SSE.L",
@@ -1028,23 +1028,23 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "27",
-      "price_usd": 35.68,
+      "price_usd": 35.54,
       "change_1d": "+0.65%",
       "change_1w": "+0.19%",
       "change_1m": "+7.54%",
       "change_ytd": "+18.89%",
       "return_1yr": "+38%",
       "low_gbp": "18",
-      "low_usd": 24.79,
+      "low_usd": 24.7,
       "high_gbp": "28",
-      "high_usd": 37.23,
+      "high_usd": 37.09,
       "bar_pct": 88,
       "market_cap_gbp_b": 0.322,
-      "market_cap_usd_b": 0.433,
+      "market_cap_usd_b": 0.432,
       "beta": 0.535,
-      "pe_ratio": 25.26,
+      "pe_ratio": 25.5,
       "avg_volume_m": 2.41,
-      "div_yield_pct": 262.0,
+      "div_yield_pct": 259.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.94,
@@ -1052,6 +1052,13 @@ window.PRICES_DATA = {
       "vol_1w": 11235527,
       "vol_1m": 54783569,
       "news": [
+        {
+          "title": "Howden Joinery (LSE:HWDN) Stock May Be Near Fair Value On Sales Growth",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/howden-joinery-lse-hwdn-stock-012017588.html",
+          "published": 1793928017,
+          "sentiment": 0.743
+        },
         {
           "title": "3 British Growth Stocks With Revenue Growth Over 14%",
           "publisher": "Simply Wall St.",
@@ -1079,16 +1086,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/m-p-evans-group-aim-231748519.html",
           "published": 1793747868,
           "sentiment": 0.0
-        },
-        {
-          "title": "Is ClevelandCliffs (CLF) Outperforming Other Basic Materials Stocks This Year?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/clevelandcliffs-clf-outperforming-other-basic-134002408.html",
-          "published": 1793713202,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.219
+      "news_sentiment": 0.368
     },
     {
       "ticker": "ENPH",
@@ -1107,7 +1107,7 @@ window.PRICES_DATA = {
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 10,
-      "market_cap_gbp_b": 2.849,
+      "market_cap_gbp_b": 2.86,
       "market_cap_usd_b": 3.833,
       "beta": 1.45,
       "pe_ratio": 43.24,
@@ -1116,9 +1116,9 @@ window.PRICES_DATA = {
       "short_pct": 26.75,
       "analyst": "buy",
       "analyst_score": 2.45,
-      "vol_1d": 11339932,
-      "vol_1w": 53786432,
-      "vol_1m": 177399932,
+      "vol_1d": 11356900,
+      "vol_1w": 53803400,
+      "vol_1m": 177416900,
       "news": [
         {
           "title": "Is First Solar Stock Still Worth Owning After Its Quarter?",
@@ -1170,12 +1170,12 @@ window.PRICES_DATA = {
       "change_1m": "+8.88%",
       "change_ytd": "-28.64%",
       "return_1yr": "-28%",
-      "low_gbp": "123",
+      "low_gbp": "124",
       "low_usd": 165.86,
       "high_gbp": "239",
       "high_usd": 320.95,
       "bar_pct": 19,
-      "market_cap_gbp_b": 15.64,
+      "market_cap_gbp_b": 15.699,
       "market_cap_usd_b": 21.04,
       "beta": 1.709,
       "pe_ratio": 11.32,
@@ -1184,10 +1184,17 @@ window.PRICES_DATA = {
       "short_pct": 14.1,
       "analyst": "buy",
       "analyst_score": 1.81,
-      "vol_1d": 6567834,
-      "vol_1w": 25640334,
-      "vol_1m": 61827834,
+      "vol_1d": 6575100,
+      "vol_1w": 25647600,
+      "vol_1m": 61835100,
       "news": [
+        {
+          "title": "First Solar (FSLR) Opens South Carolina Plant With New Jobs In Focus",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/first-solar-fslr-opens-south-012051206.html",
+          "published": 1793928051,
+          "sentiment": 0.0
+        },
         {
           "title": "Best Stocks to Buy for Rising Interest Rates",
           "publisher": "Kiplinger",
@@ -1215,16 +1222,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/first-solar-fslr-undervalued-following-171442315.html",
           "published": 1793898882,
           "sentiment": 0.572
-        },
-        {
-          "title": "First Solar Could Be a Winner From the Blue Wave",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/first-solar-stock-upgrade-midterm-elections-c4eeebbb?siteid=yhoof2&yptr=yahoo",
-          "published": 1793895000,
-          "sentiment": 0.586
         }
       ],
-      "news_sentiment": 0.437
+      "news_sentiment": 0.32
     },
     {
       "ticker": "BEPC",
@@ -1238,23 +1238,23 @@ window.PRICES_DATA = {
       "change_1m": "+5.46%",
       "change_ytd": "-19.14%",
       "return_1yr": "-29%",
-      "low_gbp": "20",
+      "low_gbp": "21",
       "low_usd": 27.57,
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 21,
-      "market_cap_gbp_b": 4.315,
+      "market_cap_gbp_b": 4.331,
       "market_cap_usd_b": 5.805,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 1.96,
-      "div_yield_pct": 497.0,
+      "div_yield_pct": 501.0,
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 3355269,
-      "vol_1w": 15034669,
-      "vol_1m": 54888169,
+      "vol_1d": 3366500,
+      "vol_1w": 15045900,
+      "vol_1m": 54899400,
       "news": [
         {
           "title": "I Love Brookfield Renewable for 1 Reason, and It\u2019s Not the Dividend",
@@ -1299,20 +1299,20 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.35",
-      "price_usd": 7.2,
-      "change_1d": "+2.13%",
-      "change_1w": "+8.76%",
-      "change_1m": "+7.62%",
-      "change_ytd": "+8.03%",
+      "price_gbp": "5.36",
+      "price_usd": 7.19,
+      "change_1d": "+1.99%",
+      "change_1w": "+8.61%",
+      "change_1m": "+7.47%",
+      "change_ytd": "+7.88%",
       "return_1yr": "+19%",
-      "low_gbp": "4.36",
-      "low_usd": 5.86,
-      "high_gbp": "6.72",
+      "low_gbp": "4.39",
+      "low_usd": 5.89,
+      "high_gbp": "6.75",
       "high_usd": 9.04,
-      "bar_pct": 42,
-      "market_cap_gbp_b": 21.212,
-      "market_cap_usd_b": 28.536,
+      "bar_pct": 41,
+      "market_cap_gbp_b": 21.262,
+      "market_cap_usd_b": 28.496,
       "beta": null,
       "pe_ratio": null,
       "avg_volume_m": 0.16,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 62962,
-      "vol_1w": 1019362,
-      "vol_1m": 5041162,
+      "vol_1d": 217900,
+      "vol_1w": 1174300,
+      "vol_1m": 5196100,
       "news": [
         {
           "title": "Orsted AS (DNNGY) (Q3 2026) Earnings Call Highlights: Strong Operational Momentum Offset by ...",
