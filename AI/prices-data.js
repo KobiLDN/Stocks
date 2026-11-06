@@ -2038,6 +2038,34 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/11/06/not-alphabet-not-meta-this-is-the-digital-ad-stock/",
           "published": 1793992800,
           "sentiment": 0.0
+        },
+        {
+          "title": "Microsoft and Google Face a New Bill as Data Centers \u201cHave to Pay Their Own Costs\u201d",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/microsoft-and-google-face-a-new-bill-as-data-centers-have-to-pay-their-own-costs?ref=yahoofinance&tlnk=yf-261106-5qc3f788",
+          "published": 1793993717,
+          "sentiment": -0.103
+        },
+        {
+          "title": "Qualcomm CEO: Its Data Center Ramp Is \u201cAll Supply Bound,\u201d Not Demand Bound",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/qualcomm-ceo-its-data-center-ramp-is-all-supply-bound-not-demand-bound?ref=yahoofinance&tlnk=yf-261106-qh2fx6f3",
+          "published": 1793993120,
+          "sentiment": 0.095
+        },
+        {
+          "title": "Not Alphabet. Not Meta. This Is the Digital Advertising Stock I'd Buy Right Now.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/06/not-alphabet-not-meta-this-is-the-digital-ad-stock/",
+          "published": 1793992800,
+          "sentiment": 0.0
+        },
+        {
+          "title": "The US adds in the latest  jobs report, markets try to bounce back from an awful sell-off",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/the-us-adds-in-the-latest-jobs-report-markets-try-to-bounce-back-from-an-awful-sell-off-190148849.html",
+          "published": 1793991708,
+          "sentiment": -0.459
         }
       ],
       "news_sentiment": 0.09
