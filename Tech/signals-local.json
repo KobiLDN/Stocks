@@ -1,9 +1,142 @@
 {
-  "updated": "2026-10-30 13:54",
+  "updated": "2026-11-06 14:51",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong buy consensus (an_score 1.39), PE 27.97, +14.04% YTD and positive news sentiment 0.152; web search confirms Azure +48% growth and record RPO, reinforcing AI monetisation.",
+      "drivers": [
+        "strong_buy 1.39",
+        "PE 27.97",
+        "+14.04% YTD",
+        "news_s 0.152"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Strong buy (1.34), PE 21.04, +14.88% YTD, +6.74% 1W and news_s 0.327; AWS +39.3% growth and $80B AI infrastructure loan are live catalysts.",
+      "drivers": [
+        "strong_buy 1.34",
+        "PE 21.04",
+        "+6.74% 1W",
+        "news_s 0.327"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "Buy (1.71), +25.87% 1M, +10.26% 1W, PE 37.44 and news_s 0.17; strong momentum and positive sentiment support the rank.",
+      "drivers": [
+        "+25.87% 1M",
+        "+10.26% 1W",
+        "PE 37.44",
+        "news_s 0.17"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.64,
+      "rationale": "Buy (2.06), +23.01% 1M, +7.14% 1W, PE 21.56 and beta 0.921; low-beta rebound from -42.83% YTD offers balanced value.",
+      "drivers": [
+        "+23.01% 1M",
+        "+7.14% 1W",
+        "PE 21.56",
+        "beta 0.921"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Buy (2.23), +27.34% YTD, +3.16% 1M and PE 38.33; record FY revenue and $5T valuation support, though news_s -0.08 and memory-cost warnings temper upside.",
+      "drivers": [
+        "+27.34% YTD",
+        "+3.16% 1M",
+        "PE 38.33",
+        "news_s -0.08"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "Buy (1.70), PE 20.35, news_s 0.316 and dividend 0.79%; attractive valuation with positive sentiment despite -1.15% 1M.",
+      "drivers": [
+        "PE 20.35",
+        "news_s 0.316",
+        "buy 1.70",
+        "div 0.79%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "UBER",
+      "signal": "buy",
+      "confidence": 0.52,
+      "rationale": "Buy (1.58), +4.62% 1W, news_s 0.125 and PE 40.46; improving short-term momentum and positive sentiment.",
+      "drivers": [
+        "+4.62% 1W",
+        "buy 1.58",
+        "news_s 0.125",
+        "PE 40.46"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.48,
+      "rationale": "Buy (our view), PE 13.76, +3.49% 1M and news_s 0.168; cheap valuation and stabilising momentum despite hold consensus (2.92).",
+      "drivers": [
+        "PE 13.76",
+        "+3.49% 1M",
+        "news_s 0.168",
+        "beta 1.383"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "Buy (1.92), +5.66% 1W and PE 18.95; low valuation, but news_s -0.148 and YTD -27.95 keep it lower.",
+      "drivers": [
+        "+5.66% 1W",
+        "PE 18.95",
+        "buy 1.92",
+        "news_s -0.148"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SHOP",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Buy (1.69), news_s 0.357 and Morgan Stanley sees a buying opportunity; but PE 88.19 and -13.87% 1W keep it at the bottom.",
+      "drivers": [
+        "news_s 0.357",
+        "buy 1.69",
+        "PE 88.19",
+        "-13.87% 1W"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AAPL",
@@ -132,203 +265,6 @@
         "+2.89% 1D",
         "P/E 13.85",
         "low valuation"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+196.42%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +196.42% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +196.42% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.793,
-      "ytd": "+153.47%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +153.47% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +153.47% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.692,
-      "ytd": "+133.80%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +133.80% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +133.80% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.674,
-      "ytd": "+130.30%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.30% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.30% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.58,
-      "ytd": "+112.17%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +112.17% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +112.17% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.514,
-      "ytd": "+99.40%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +99.40% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +99.40% \u2265 96.7% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.985,
-      "rationale": "YTD +190.61%, 1M +28.41%, strong_buy 1.49; Citi raised PT to $800 and Mizuho to $705 on agentic AI demand [tipranks.com](https://www.tipranks.com/news/amd-nvidia-or-meta-which-ai-stock-is-citis-top-pick-no-1-analyst-weighs-in).",
-      "drivers": [
-        "YTD +190.61%",
-        "1M +28.41%",
-        "Citi PT $800",
-        "Agentic AI tailwind"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +145.92%, 1M +32.78%, buy 1.72; Fal.Con Europe sold out with registrations up 60% [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/why-nvda-amd-crwd-stocks-surged-to-52-week-highs-today/cZDHyMrRBlM).",
-      "drivers": [
-        "YTD +145.92%",
-        "1M +32.78%",
-        "7-day streak",
-        "Fal.Con sold out"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +134.10%, 1M +24.61%, record close; TD Cowen raised PT to $440 [financefeeds.com](https://financefeeds.com/palo-alto-networks-panw-stock-419-91-up-3-23/).",
-      "drivers": [
-        "YTD +134.10%",
-        "1M +24.61%",
-        "Record high",
-        "PT $440"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NVDA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +26.98%, P/E 30.25, strong_buy 1.3; SpaceX plans to buy chips, BNP PT $345 [tipranks.com](https://www.tipranks.com/news/nvidia-and-amd-stocks-what-drove-the-rally-and-which-stock-has-more-upside).",
-      "drivers": [
-        "P/E 30.25",
-        "Strong_buy 1.3",
-        "SpaceX demand",
-        "BNP PT $345"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +52.09%, 1M +10.16%, strong_buy 1.38; solid fundamentals with P/E 35.05.",
-      "drivers": [
-        "YTD +52.09%",
-        "1M +10.16%",
-        "Strong_buy 1.38",
-        "P/E 35.05"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +231.67%, P/E 14.31, strong_buy 1.37; attractive valuation despite recent pullback.",
-      "drivers": [
-        "YTD +231.67%",
-        "P/E 14.31",
-        "Strong_buy 1.37",
-        "Memory demand"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AMAT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +97.92%, 1M +12.16%, strong_buy 1.45; robust semi-cap equipment momentum.",
-      "drivers": [
-        "YTD +97.92%",
-        "1M +12.16%",
-        "Strong_buy 1.45"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +13.89%, 1M +20.54%, strong_buy 1.41; Muse AI agent driving infrastructure spend [tipranks.com](https://www.tipranks.com/news/amd-nvidia-or-meta-which-ai-stock-is-citis-top-pick-no-1-analyst-weighs-in).",
-      "drivers": [
-        "1M +20.54%",
-        "Strong_buy 1.41",
-        "P/E 27.96",
-        "Muse catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +58.36%, P/E 59.53, strong_buy 1.4; lithography leader with steady growth.",
-      "drivers": [
-        "YTD +58.36%",
-        "Strong_buy 1.4",
-        "P/E 59.53"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +81.11%, 1M +24.87%, buy 1.97; edge cloud growth despite no P/E.",
-      "drivers": [
-        "YTD +81.11%",
-        "1M +24.87%",
-        "Buy 1.97"
       ]
     }
   ]

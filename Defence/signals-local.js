@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-10-30 13:53",
+  "updated": "2026-11-06 14:48",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "1M surge of +31.08%, low P/E of 13.87, positive news sentiment 0.147, and strong YTD return of +7.63% despite short interest of 6.3%.",
+      "drivers": [
+        "+31% 1-month momentum",
+        "P/E 13.87",
+        "positive news sentiment 0.147",
+        "YTD +7.63%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD return of +47.03%, 1M gain of +18.21%, low P/E of 17.14, and beta of 0.257 indicate strong momentum without excessive risk.",
+      "drivers": [
+        "YTD +47%",
+        "1M +18.21%",
+        "P/E 17.14",
+        "low beta 0.257"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "LHX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Q3 earnings beat, raised FY guidance, BofA PT increase to $375 (Buy), backlog >$53B; 1M +8.50% despite YTD -14.18%.",
+      "drivers": [
+        "Q3 beat & raised guidance",
+        "BofA PT $375",
+        "backlog $53B",
+        "1M +8.50%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +18.01%, P/E 20.46, analyst consensus buy, $122.4M Navy Trident II contract, but near-term -10.48% weekly pullback creates entry.",
+      "drivers": [
+        "YTD +18%",
+        "P/E 20.46",
+        "Navy contract win",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +9.73%, P/E 15.58, positive news sentiment 0.202, strong Q3 defense revenue growth offsetting YTD -16.25%.",
+      "drivers": [
+        "1M +9.73%",
+        "P/E 15.58",
+        "Q3 defense revenue growth",
+        "positive sentiment 0.202"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +8.72%, P/E 16.58, analyst buy, low beta -0.136; nuclear modernization programs seen as least at risk from budget cuts.",
+      "drivers": [
+        "1M +8.72%",
+        "P/E 16.58",
+        "nuclear program resilience",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +12.84%, P/E 15.33, analyst buy, reclaimed 200-day MA; YTD -2.02% shows recovery potential.",
+      "drivers": [
+        "1M +12.84%",
+        "P/E 15.33",
+        "reclaimed 200-day MA",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "QQ.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +18.16%, 1M +10.43%, P/E 26.25, analyst buy, strong UK defense exposure with positive news sentiment -0.12.",
+      "drivers": [
+        "YTD +18.16%",
+        "1M +10.43%",
+        "analyst buy",
+        "UK defense exposure"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "P/E 12.14 attractive, Q3 EPS beat $3.62 vs $3.05 est, backlog $49.6B, defense tech growth; Guggenheim reiterates Buy despite VA headwinds.",
+      "drivers": [
+        "P/E 12.14",
+        "Q3 EPS beat",
+        "backlog $49.6B",
+        "Guggenheim Buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Strong analyst consensus (score 1.42), positive news sentiment 0.251, partnership with AeroVironment on anti-drone lasers, P/E 24.26 reasonable.",
+      "drivers": [
+        "strong_buy consensus",
+        "anti-drone laser partnership",
+        "news sentiment 0.251",
+        "P/E 24.26"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "1M +18.60%",
         "P/E 17.6",
         "Hold rating"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PLTR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +14.42%, 1M +12.78%, P/E 165.58, analyst buy (score 1.84), and a new sovereign AI partnership with Armada positions Palantir for sustained defence and commercial AI revenue growth [simplywall.st](https://simplywall.st/stocks/us/software/nasdaq-pltr/palantir-technologies/news/sovereign-ai-deal-might-change-the-case-for-investing-in-pal).",
-      "drivers": [
-        "YTD +14.42%",
-        "1M +12.78% momentum",
-        "Sovereign AI catalyst",
-        "Analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RKLB",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "1M +13.95%, 1W +7.69%, analyst score 1.57 (buy), backlog exceeds 100 missions, and a potential NASA bulk-launch order could drive long-term revenue, despite CFO insider selling [tipranks.com](https://www.tipranks.com/news/why-space-stocks-spacex-and-rocket-lab-are-falling-today-october-7-and-what-wall-street-expects-next) [americanbankingnews.com](https://www.americanbankingnews.com/2026/10/07/rocket-lab-nasdaqrklb-stock-price-down-1-2-on-insider-selling.html).",
-      "drivers": [
-        "1M +13.95%",
-        "Backlog >100 missions",
-        "NASA bulk-order catalyst",
-        "Analyst buy (score 1.57)"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SPCX",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "1W +15.20%, 1M +12.02%, analyst score 1.69 (buy), strong buy consensus with 26/32 analysts recommending buy, and Starship Flight 14 success supports growth narrative despite macro headwinds [tipranks.com](https://www.tipranks.com/news/why-space-stocks-spacex-and-rocket-lab-are-falling-today-october-7-and-what-wall-street-expects-next).",
-      "drivers": [
-        "1W +15.20%",
-        "1M +12.02%",
-        "Starship progress",
-        "Strong buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "PL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1W +13.37%, 1D +5.08%, but YTD -9.02% and no analyst coverage; high beta 2.17 and short interest 9.68% add risk, yet strong short-term momentum suggests speculative upside.",
-      "drivers": [
-        "1W +13.37%",
-        "1D +5.08%",
-        "High beta 2.17",
-        "Speculative momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "RR.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +20.16%, 1-year +28%, analyst buy (score 1.6), P/E 39.95, but recent 1M -3.53% and 1W -2.90% show pullback; strong underlying defence and engine services demand supports long-term growth.",
-      "drivers": [
-        "YTD +20.16%",
-        "1-year +28%",
-        "Analyst buy (score 1.6)",
-        "Defence engine demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +24.38%, P/E 14.54, low beta 0.309, but analyst hold (score 2.82) and recent 1M -2.32% suggest caution; attractive valuation and strong YTD performance provide a defensive entry.",
-      "drivers": [
-        "YTD +24.38%",
-        "P/E 14.54",
-        "Low beta 0.309",
-        "Defensive valuation"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "DRS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +6.39%, low beta 0.16, short interest 1.28%, P/E 30.65, but no analyst coverage and low momentum (1M -0.43%); stable defence electronics exposure offers downside protection.",
-      "drivers": [
-        "YTD +6.39%",
-        "Low beta 0.16",
-        "Low short interest 1.28%",
-        "Defence electronics"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "YTD +8.90%, but no P/E (negative earnings), high short interest 9.57%, and no analyst coverage; recent 1M -0.79% and 1W +0.19% show stagnation, making it a high-risk turnaround play.",
-      "drivers": [
-        "YTD +8.90%",
-        "High short interest 9.57%",
-        "No P/E",
-        "Stagnant momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "Analyst buy (score 2.09), P/E 33.46, but YTD -18.79% and 1M -3.65% reflect weak momentum; large-cap aerospace supplier with low short interest 2.58% may appeal to value-oriented investors.",
-      "drivers": [
-        "Analyst buy (score 2.09)",
-        "P/E 33.46",
-        "Low short interest 2.58%",
-        "Negative YTD -18.79%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AVAV",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "Analyst buy (score 1.6), but YTD -43.97%, 1-year -65%, high short interest 11.76%, and no P/E; a potential contrarian bet on drone demand recovery, but near-term risks are elevated.",
-      "drivers": [
-        "Analyst buy (score 1.6)",
-        "YTD -43.97%",
-        "High short interest 11.76%",
-        "Drone demand recovery"
       ]
     }
   ]

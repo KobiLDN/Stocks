@@ -1,9 +1,144 @@
 {
-  "updated": "2026-10-30 13:54",
+  "updated": "2026-11-06 14:53",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PEPE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Best momentum in the universe: +21% YTD and +18% 1M while memecoin index gained 4% during the selloff, showing strong relative strength (PEPE +3% per web).",
+      "drivers": [
+        "+21% YTD",
+        "+18% 1M",
+        "memecoin resilience"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Best weekly gain in universe (+4.51%) despite broad market down 5%+, indicating accumulation; YTD -8% is less severe than most altcoins.",
+      "drivers": [
+        "+4.51% 1W",
+        "least negative weekly in universe",
+        "small-cap infra value"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Only asset with positive YTD (+12%) and flat daily (+0.02%) during the crash; stable relative strength among large cap payments.",
+      "drivers": [
+        "+12% YTD",
+        "+0.02% 1D",
+        "stable during selloff"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Only asset besides POL with positive weekly momentum (+2.36% 1W) and minimal YTD loss (-2.35%), showing contrarian strength.",
+      "drivers": [
+        "+2.36% 1W",
+        "-2.35% YTD",
+        "small cap resilience"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Relatively less downside than peers: daily -3.72% vs. ETH -8.31%; large cap L1 with $90B market cap offers stability.",
+      "drivers": [
+        "daily -3.72% vs -6%+ others",
+        "large cap stability",
+        "negative news sentiment -0.125 but not extreme"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DOT",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Daily decline (-3.32%) is among the smallest in the universe despite -49% YTD; potential mean reversion as sentiment already low.",
+      "drivers": [
+        "daily -3.32% best of large caps",
+        "oversold YTD -49%",
+        "infra category with pending upgrades"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD -12% is better than most altcoins; neutral news sentiment and strong Oracle network fundamentals provide a floor.",
+      "drivers": [
+        "YTD -12% less negative than peers",
+        "neutral news sentiment 0.0",
+        "infrastructure utility"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ALGO",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "YTD -16% is relatively mild for emerging category; weekly -2.29% shows less panic selling than larger altcoins.",
+      "drivers": [
+        "YTD -16%",
+        "weekly -2.29% moderate",
+        "small cap $0.845B with low sell pressure"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.3,
+      "rationale": "Bounced from $75.2k to $76.1k after $1B liquidations; still largest crypto by market cap ($1.5T) and historical recovery asset.",
+      "drivers": [
+        "bounce from $75.2k support",
+        "largest market cap $1.5T",
+        "negative news sentiment -0.013 but stable"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.25,
+      "rationale": "Despite -8.31% daily, weekly -1.34% is the best among major L1s; $270B market cap offers deep liquidity for contrarian entries.",
+      "drivers": [
+        "best weekly among L1s at -1.34%",
+        "large cap $270B value",
+        "oversold after -25% YTD"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "NEAR",
+      "signal": "buy",
+      "confidence": 0.639,
+      "ytd": "+141.09%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +141.09% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +141.09% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PEPE",
@@ -119,131 +254,6 @@
         "hack impact -5.02%",
         "loss coverage",
         "contrarian play"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEAR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "NEAR has exceptional momentum with +242% YTD, +114% 1-month, and a spot ETF (NRR) launched on NYSE Arca attracting ~$60M AUM in its first week; co-founder Polosukhin announced expanding fiat and tokenized stock features, reinforcing the bullish narrative [coinmarketcap.com](https://coinmarketcap.com/top-stories/6ac5b6c4ab37453c382f7ef4/), [theblock.co](https://www.theblock.co/news/ecosystems/2026-10-07-nears-polosukhin-sees-shrinking-need-for-centralized-exchanges-as-onchain-tools-expand-417912).",
-      "drivers": [
-        "+242% YTD",
-        "+114% 1M",
-        "Spot ETF inflows $60M AUM",
-        "Expanding fiat/tokenized stocks"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NMR",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "NMR shows explosive momentum with +75% YTD, +79% 1-month, and +43% 1-week despite a small market cap of $128M, signaling high-beta AI catalyst.",
-      "drivers": [
-        "+75% YTD",
-        "+79% 1M",
-        "High beta small-cap AI"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "RNDR delivers strong fundamentals with +63% YTD, +36% 1-month, and +9% 1-week, while showing positive daily momentum (+2.2%) and a market cap of $1.09B.",
-      "drivers": [
-        "+63% YTD",
-        "+36% 1M",
-        "+9% 1W",
-        "Positive 1D momentum"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AIOZ has strong momentum with +27% YTD, +74% 1-month, and near-flat 1-week (-0.3%) combined with a tiny $141M market cap, offering high upside in the AI subsector.",
-      "drivers": [
-        "+27% YTD",
-        "+74% 1M",
-        "Small cap AI growth"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AVAX has impressive 1-month momentum (+42%) and a reasonable $5B market cap despite a -9% YTD; it is a well-known L1 with potential for a breakout.",
-      "drivers": [
-        "+42% 1M",
-        "$5B market cap",
-        "L1 leader"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "SUI",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "SUI has rallied +42% in the past month and has a $4.7B market cap; the recent 4-5% drop appears driven by market rotation and short positioning rather than a protocol issue, creating a potential entry [coinmarketcap.com](https://coinmarketcap.com/top-stories/6ac5b6c4ab37453c382f7ef4/).",
-      "drivers": [
-        "+42% 1M",
-        "Short-term dip entry",
-        "No protocol issue"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "FET",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "FET shows strong momentum with +16% YTD, +33% 1-month, and +5.4% 1-week, with a small $542M market cap in the AI subsector.",
-      "drivers": [
-        "+33% 1M",
-        "+5.4% 1W",
-        "AI narrative"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MINA",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "MINA has exceptional YTD (+35%) and 1-month (+33%) returns, though a sharp 1-week decline (-29%) suggests high volatility; it remains an emerging L1 with potential.",
-      "drivers": [
-        "+35% YTD",
-        "+33% 1M",
-        "High volatility entry"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "GRT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "GRT has strong 1-month momentum (+46%) despite a -17% YTD, and a small $304M market cap in the AI/data indexing space, offering a recovery play.",
-      "drivers": [
-        "+46% 1M",
-        "AI infrastructure",
-        "Small cap recovery"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ALGO",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "ALGO is up +8% YTD and +26% in the past month, with a $1.1B market cap; it has an established L1 presence but faces short-term volatility.",
-      "drivers": [
-        "+26% 1M",
-        "$1.1B market cap",
-        "Established L1"
       ]
     }
   ]

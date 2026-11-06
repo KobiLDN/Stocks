@@ -1,9 +1,198 @@
 {
-  "updated": "2026-10-30 13:52",
+  "updated": "2026-11-06 14:47",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "YTD +14.88%, P/E 21.04, news_s +0.327 and strong_buy consensus; post-midterm rotation into hyperscalers reinforces pricing power from scarce data-center capacity ([investing.com](https://www.investing.com/news/stock-market-news/democrats-midterm-sweep-fuels-750-billion-big-tech-rally-5000648)).",
+      "drivers": [
+        "YTD +14.88%",
+        "1W +6.74%",
+        "P/E 21.04",
+        "news_s +0.327"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +14.04%, P/E 27.97, strong_buy with news_s +0.248; Microsoft rallied 6.68% on election-driven capacity constraints that boost existing cloud assets ([tradingview.com](https://www.tradingview.com/news/benzinga:fc2e852ff094b:0-microsoft-amazon-add-400-billion-in-market-value-as-analyst-sees-pricing-upside-from-data-center-constraints/)).",
+      "drivers": [
+        "P/E 27.97",
+        "1M +1.25%",
+        "strong_buy",
+        "news_s +0.248"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EQIX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +32.52%, strong_buy consensus, P/E 59.9 with only -4.77% 1M drawdown; existing data-center operators benefit from tighter new-build rules and pricing upside ([investing.com](https://www.investing.com/news/stock-market-news/massive-market-rotation-raises-question-is-the-sellai-trade-here-to-stay-5003152)).",
+      "drivers": [
+        "YTD +32.52%",
+        "1M -4.77% resilient",
+        "strong_buy",
+        "P/E 59.9"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "DLR",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "YTD +14.97%, strong_buy with news_s +0.136 and P/E 73.7; data-center REIT stands to gain from scarcity value of powered, operational facilities ([investing.com](https://www.investing.com/news/stock-market-news/massive-market-rotation-raises-question-is-the-sellai-trade-here-to-stay-5003152)).",
+      "drivers": [
+        "YTD +14.97%",
+        "strong_buy",
+        "news_s +0.136",
+        "low short 0.01%"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AMT",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "YTD +14.38% with strong 1M +17.73% momentum, P/E 27.32, buy consensus; infrastructure scarcity theme extends to tower/communications assets as data demand grows.",
+      "drivers": [
+        "1M +17.73%",
+        "1W +4.36%",
+        "P/E 27.32",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.64,
+      "rationale": "P/E 14.76 is attractively low, strong_buy consensus, 1W -0.44% shows relative stability; post-election rotation favors its existing cloud infrastructure despite YTD -10.16%.",
+      "drivers": [
+        "P/E 14.76",
+        "strong_buy",
+        "1W -0.44%",
+        "deep value"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.58,
+      "rationale": "P/E 20.64, strong_buy with news_s +0.201; gains from scarce AI compute even as 1M -18.11% reflects broader capex concerns and debt raise news ([cnbc.com](https://www.cnbc.com/2026/11/06/ai-data-center-midterms-selloff.html)).",
+      "drivers": [
+        "P/E 20.64",
+        "strong_buy",
+        "news_s +0.201",
+        "hyperscaler pricing power"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BEP",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +13.63%, 1M +4.15% and 1W +5.51% positive momentum, news_s +0.255; renewable infrastructure provides defensive cash flows amid AI power-demand uncertainty.",
+      "drivers": [
+        "1M +4.15%",
+        "1W +5.51%",
+        "news_s +0.255",
+        "YTD +13.63%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TLN",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "strong_buy consensus with news_s +0.227 despite YTD -20.29%; existing power capacity becomes more valuable if new data-center builds slow, though near-term momentum is weak.",
+      "drivers": [
+        "strong_buy",
+        "news_s +0.227",
+        "existing power asset",
+        "short 9.99%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "RR.",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD +3.57%, P/E 33.5, dividend yield 97 bps and buy consensus; nuclear operations add steady utility exposure, but 1M -16.13% and news_s -0.134 cap conviction.",
+      "drivers": [
+        "YTD +3.57%",
+        "P/E 33.5",
+        "dividend yield",
+        "buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.873,
+      "ytd": "+192.99%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +192.99% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +192.99% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.681,
+      "ytd": "+150.59%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +150.59% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +150.59% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "buy",
+      "confidence": 0.631,
+      "ytd": "+139.38%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +139.38% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +139.38% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "285A",
+      "signal": "buy",
+      "confidence": 0.567,
+      "ytd": "+125.34%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +125.34% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +125.34% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "AXTI",
+      "signal": "buy",
+      "confidence": 0.539,
+      "ytd": "+119.09%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +119.09% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +119.09% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VRT",
@@ -132,261 +321,6 @@
         "+4.85% 1M",
         "hold an_score 2.86",
         "-23.48% YTD"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 1.0,
-      "ytd": "+196.42%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +196.42% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +196.42% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "SNDK",
-      "signal": "strong_buy",
-      "confidence": 0.881,
-      "ytd": "+383.23%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +383.23% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +383.23% \u2265 217.6% SB"
-      ]
-    },
-    {
-      "ticker": "MRVL",
-      "signal": "buy",
-      "confidence": 0.748,
-      "ytd": "+144.67%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +144.67% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +144.67% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "STX",
-      "signal": "buy",
-      "confidence": 0.747,
-      "ytd": "+144.40%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +144.40% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +144.40% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "signal": "buy",
-      "confidence": 0.714,
-      "ytd": "+138.15%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +138.15% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +138.15% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "MXL",
-      "signal": "strong_buy",
-      "confidence": 0.659,
-      "ytd": "+286.87%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +286.87% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +286.87% \u2265 217.6% SB"
-      ]
-    },
-    {
-      "ticker": "DELL",
-      "signal": "strong_buy",
-      "confidence": 0.634,
-      "ytd": "+276.00%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +276.00% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +276.00% \u2265 217.6% SB"
-      ]
-    },
-    {
-      "ticker": "AXTI",
-      "signal": "strong_buy",
-      "confidence": 0.605,
-      "ytd": "+263.25%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +263.25% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +263.25% \u2265 217.6% SB"
-      ]
-    },
-    {
-      "ticker": "285A",
-      "signal": "strong_buy",
-      "confidence": 0.588,
-      "ytd": "+256.04%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +256.04% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +256.04% \u2265 217.6% SB"
-      ]
-    },
-    {
-      "ticker": "WDC",
-      "signal": "buy",
-      "confidence": 0.573,
-      "ytd": "+110.88%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +110.88% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +110.88% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "AAOI",
-      "signal": "buy",
-      "confidence": 0.517,
-      "ytd": "+99.97%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +99.97% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +99.97% \u2265 96.7% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRVL",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "MRVL +221.55% YTD, +27.33% 1M; TD Cowen upgraded to Buy with $350 PT after Investor Day raised FY28 revenue to $20B and FY31 target to $70-90B, signaling massive AI connectivity and custom chip growth (CNBC).",
-      "drivers": [
-        "YTD +221.55%",
-        "strong_buy consensus",
-        "1M +27.33%",
-        "analyst upgrades post-investor day"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SMTC",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "SMTC +162.02% YTD, +21.26% 1M, best an_score 1.19 (strong_buy), P/E 130.6 \u2013 high growth justified by DSP/semi demand in AI infrastructure.",
-      "drivers": [
-        "strong_buy consensus",
-        "1M +21.26%",
-        "YTD +162.02%",
-        "lowest an_score 1.19"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CRDO",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "CRDO +54.19% YTD, +31.64% 1M; revenue +115% YoY, trades at 31x forward earnings vs. peers over 60x \u2013 steep discount and strong buy consensus (24/7 Wall St.).",
-      "drivers": [
-        "1M +31.64%",
-        "strong_buy consensus",
-        "revenue +115% YoY",
-        "forward P/E discount to peers"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "VIAV",
-      "signal": "strong_buy",
-      "confidence": 0.854,
-      "rationale": "VIAV +165.23% YTD, +24.23% 1M, strong_buy an_score 1.38, test-equip plays critical role in validating AI optics \u2013 no P/E yet but momentum extremely strong.",
-      "drivers": [
-        "YTD +165.23%",
-        "strong_buy consensus",
-        "1M +24.23%",
-        "test-equip AI enabler"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MTSI",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "MTSI +100.43% YTD, +27.61% 1M; buy consensus with strong DSP/semi tailwinds; P/E 111.68 reflects premium but justified by 1W +23.36% acceleration.",
-      "drivers": [
-        "1M +27.61%",
-        "1W +23.36%",
-        "YTD +100.43%",
-        "DSP/semi growth"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "META +13.89% YTD, +20.54% 1M, strong_buy an_score 1.41, P/E 27.96 \u2013 hyperscaler AI spend beneficiary with strong momentum and low valuation relative to growth.",
-      "drivers": [
-        "1M +20.54%",
-        "strong_buy consensus",
-        "P/E 27.96 reasonable",
-        "hyperscaler AI spend"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "FN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "FN +2.03% YTD, but +17.50% 1M and +15.34% 1W with buy consensus; P/E 37.48 reasonable for fibre-optical AI connectivity play \u2013 recent momentum surge.",
-      "drivers": [
-        "1M +17.50%",
-        "1W +15.34%",
-        "P/E 37.48 attractive",
-        "fibre-optical growth catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "P",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "P +113.30% YTD, +45.54% 1M; buy consensus with memory and AI compute exposure \u2013 high P/E 201.64 but momentum extremely strong.",
-      "drivers": [
-        "1M +45.54%",
-        "YTD +113.30%",
-        "buy consensus",
-        "memory/data center play"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MXL",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MXL +490.49% YTD, +64.36% 1M; no P/E yet but buy consensus at an_score 1.82 \u2013 extreme momentum in DSP/semi needs to be traded carefully.",
-      "drivers": [
-        "YTD +490.49%",
-        "1M +64.36%",
-        "buy consensus",
-        "DSP/semi momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AXTI",
-      "signal": "strong_buy",
-      "confidence": 0.923,
-      "rationale": "AXTI +401.55% YTD, +20.85% 1M; no analyst rating but extreme price action in materials \u2013 P/E 2101.5 risky but short-term momentum is compelling.",
-      "drivers": [
-        "YTD +401.55%",
-        "1M +20.85%",
-        "materials AI enabler",
-        "extreme momentum"
       ]
     }
   ]

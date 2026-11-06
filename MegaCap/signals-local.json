@@ -1,9 +1,142 @@
 {
-  "updated": "2026-10-30 13:56",
+  "updated": "2026-11-06 14:58",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.9,
+      "rationale": "LLY shows +17.9% 1M momentum, +51% 1Y return, P/E 44.3, and benefits from GLP-1 drug market tailwind.",
+      "drivers": [
+        "+17.9% 1M momentum",
+        "+51% 1Y return",
+        "P/E 44.3",
+        "GLP-1 tailwind"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MA",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "MA has +15.94% 1M gain, strong_buy analyst consensus, P/E 34.32, and payment network growth tailwind.",
+      "drivers": [
+        "+15.94% 1M",
+        "strong_buy consensus",
+        "P/E 34.32",
+        "payment network growth"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "WMT",
+      "signal": "buy",
+      "confidence": 0.87,
+      "rationale": "WMT surged +19.14% in 1M, +27% 1Y, with P/E 46.28 and buy rating, reflecting retail strength.",
+      "drivers": [
+        "+19.14% 1M",
+        "+27% 1Y return",
+        "P/E 46.28",
+        "retail strength"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "V",
+      "signal": "strong_buy",
+      "confidence": 0.86,
+      "rationale": "V displays +14.02% 1M, +30% 1Y, strong_buy rating, P/E 34.3, and digital payments momentum.",
+      "drivers": [
+        "+14.02% 1M",
+        "+30% 1Y return",
+        "strong_buy rating",
+        "digital payments momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "COST gained +14.05% 1M, +25.44% YTD, P/E 51.33, buy rating, and resilient consumer demand.",
+      "drivers": [
+        "+14.05% 1M",
+        "+25.44% YTD",
+        "P/E 51.33",
+        "resilient consumer demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.84,
+      "rationale": "MSFT holds strong_buy with +14.04% YTD, P/E 27.97, and AI cloud capex tailwind.",
+      "drivers": [
+        "strong_buy consensus",
+        "+14.04% YTD",
+        "P/E 27.97",
+        "AI cloud capex tailwind"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.83,
+      "rationale": "AMZN has strong_buy, +14.88% YTD, P/E 21.04, and AI infrastructure investment theme.",
+      "drivers": [
+        "strong_buy consensus",
+        "+14.88% YTD",
+        "P/E 21.04",
+        "AI infrastructure theme"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SAP",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "SAP shows +15.71% 1M momentum, buy rating, P/E 30.33, and enterprise AI transformation catalyst.",
+      "drivers": [
+        "+15.71% 1M momentum",
+        "buy rating",
+        "P/E 30.33",
+        "enterprise AI catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "TMO",
+      "signal": "strong_buy",
+      "confidence": 0.81,
+      "rationale": "TMO has strong_buy, +14.56% YTD, P/E 35.7, and life sciences tools demand.",
+      "drivers": [
+        "strong_buy consensus",
+        "+14.56% YTD",
+        "P/E 35.7",
+        "life sciences demand"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "PG has +13.34% 1M, +21.27% YTD, P/E 25.17, buy rating, and consumer staples stability.",
+      "drivers": [
+        "+13.34% 1M",
+        "+21.27% YTD",
+        "P/E 25.17",
+        "consumer staples stability"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,173 +265,6 @@
         "strong_buy consensus",
         "low short 1.41%",
         "asset management tailwind"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.793,
-      "ytd": "+153.47%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +153.47% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +153.47% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "signal": "buy",
-      "confidence": 0.692,
-      "ytd": "+133.80%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +133.80% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +133.80% \u2265 96.7% B"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "signal": "buy",
-      "confidence": 0.514,
-      "ytd": "+99.40%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +99.40% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +99.40% \u2265 96.7% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAP",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Cloud revenue +26%, backlog +28%, Goldman target \u20ac258, P/E 29.7, analyst buy.",
-      "drivers": [
-        "1M +13.97%",
-        "cloud backlog +28%",
-        "Goldman upgrade",
-        "P/E 29.7"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XOM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +53.48%, 1M +13.55%, oil at $102/bbl, P/E 23.8, low beta 0.209.",
-      "drivers": [
-        "YTD +53.48%",
-        "1M +13.55%",
-        "oil price surge",
-        "low beta 0.209"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +52.98%, 1M +12.42%, Brent $116, P/E 22.3, dividend yield 305%.",
-      "drivers": [
-        "YTD +52.98%",
-        "1M +12.42%",
-        "Brent $116",
-        "dividend 305%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TSLA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +9.56%, 1W +6.40%, Barclays upgrade to $450, Robotaxi catalyst.",
-      "drivers": [
-        "1M +9.56%",
-        "1W +6.40%",
-        "Barclays upgrade",
-        "Robotaxi inflection"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +17.35%, 1M +9.90%, strong_buy consensus, P/E 34.4, beta 0.771.",
-      "drivers": [
-        "YTD +17.35%",
-        "1M +9.90%",
-        "strong_buy analyst",
-        "P/E 34.4"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "WMT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +10.63%, YTD +7.36%, beta 0.578, P/E 43.6, analyst buy.",
-      "drivers": [
-        "1M +10.63%",
-        "beta 0.578",
-        "P/E 43.6",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "COST",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +18.15%, 1M +8.91%, P/E 48.4, beta 0.87, analyst buy.",
-      "drivers": [
-        "YTD +18.15%",
-        "1M +8.91%",
-        "P/E 48.4",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "UNH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +24.50%, 1M +8.70%, beta 0.615, dividend yield 222%.",
-      "drivers": [
-        "YTD +24.50%",
-        "1M +8.70%",
-        "beta 0.615",
-        "dividend 222%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BRK-B",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +9.04%, YTD +10.41%, P/E 13.8, beta 0.595, analyst buy.",
-      "drivers": [
-        "1M +9.04%",
-        "P/E 13.8",
-        "beta 0.595",
-        "buy rating"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +18.97%, 1M +7.96%, GLP-1 tailwind, P/E 42.9, beta 0.453.",
-      "drivers": [
-        "YTD +18.97%",
-        "1M +7.96%",
-        "GLP-1 leader",
-        "P/E 42.9"
       ]
     }
   ]
