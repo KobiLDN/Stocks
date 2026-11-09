@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-06 14:48",
+  "updated": "2026-11-09 17:14",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.95,
+      "rationale": "LMT shows strong momentum (+13.45% 1M, +18.42% YTD, +25% 1Y) with a P/E of 20.53, low beta 0.081, positive news sentiment 0.225, and web-confirmed catalysts including a record $292B backlog and Q3 EPS beat of $7.97 vs $7.52 consensus [investing.com](https://www.investing.com/news/stock-market-news/up-26-in-october-as-boeing-stumbles-whats-powering-this-defense-contractor-4995043).",
+      "drivers": [
+        "+13.45% 1M momentum",
+        "P/E 20.53, beta 0.081",
+        "record $292B backlog",
+        "Q3 EPS beat"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "CACI has a strong_buy analyst rating, YTD +17.57%, P/E 25.94, low beta 0.535, positive news sentiment 0.186, and a headline about safe-and-steady stocks.",
+      "drivers": [
+        "strong_buy analyst",
+        "+17.57% YTD",
+        "P/E 25.94",
+        "news sentiment 0.186"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "DRS carries a strong_buy rating with the highest news sentiment 0.421, YTD +1.18%, P/E 25.74, low beta 0.16, and raised guidance per headline.",
+      "drivers": [
+        "strong_buy analyst",
+        "news sentiment 0.421",
+        "P/E 25.74",
+        "raised guidance"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LHX",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "LHX has strong 1M momentum +12.26%, Q3 EPS beat ($3.28 vs $2.95 consensus), analyst buy with an_score 1.95, and web-confirmed institutional investment and analyst upgrade [marketbeat.com](https://www.marketbeat.com/instant-alerts/filing-bryn-mawr-trust-advisors-llc-makes-new-investment-in-l3harris-technologies-inc-lhx-2026-11-09/).",
+      "drivers": [
+        "+12.26% 1M",
+        "Q3 EPS beat",
+        "analyst upgrade",
+        "institutional investment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "NOC offers a cheap P/E of 16.83, negative beta -0.136, positive news sentiment 0.242, 1M momentum +10.94%, and web-highlighted valuation upside with 13.2% fair value upside [investing.com](https://finance.yahoo.com/markets/stocks/articles/lmt-vs-noc-momentum-favors-155314177.html).",
+      "drivers": [
+        "P/E 16.83",
+        "beta -0.136",
+        "+10.94% 1M",
+        "13.2% fair value upside"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "HEI shows strong 1M momentum +13.99%, YTD +3.32%, positive news sentiment 0.271, analyst buy, and a P/E of 56.67 with low short interest 1.62%.",
+      "drivers": [
+        "+13.99% 1M",
+        "news sentiment 0.271",
+        "YTD +3.32%",
+        "short interest 1.62%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "GD has solid YTD +6.39%, 1M +8.33%, P/E 21.12, low beta 0.296, analyst buy, positive news sentiment 0.122, and low short interest 0.83%.",
+      "drivers": [
+        "+6.39% YTD",
+        "P/E 21.12",
+        "beta 0.296",
+        "short interest 0.83%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "TXT has strong 1M momentum +13.28%, P/E 15.11, analyst buy, positive news sentiment 0.18, and a headline about Kratos Q3 earnings beat.",
+      "drivers": [
+        "+13.28% 1M",
+        "P/E 15.11",
+        "news sentiment 0.18",
+        "Q3 earnings beat"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "LDOS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "LDOS has 1M momentum +10.52%, low P/E 12.02, positive news sentiment 0.16, and an earnings beat headline with rising profit outlook.",
+      "drivers": [
+        "+10.52% 1M",
+        "P/E 12.02",
+        "news sentiment 0.16",
+        "earnings beat"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "HII has strong 1M momentum +12.74%, P/E 16.08, low beta 0.147, positive news sentiment 0.202, and analyst buy rating.",
+      "drivers": [
+        "+12.74% 1M",
+        "P/E 16.08",
+        "beta 0.147",
+        "news sentiment 0.202"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BAH",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "anti-drone laser partnership",
         "news sentiment 0.251",
         "P/E 24.26"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Record $292B backlog and Q3 sales +11.3% drove +26.38% 1M surge; Morgan Stanley upgraded to Overweight with $835 PT, P/E 22.85, analyst buy. [247wallst.com](https://247wallst.com/investing/2026/10/29/lockheed-martin-is-up-27-in-october-take-profits-or-buy-more/) [finance.yahoo.com](https://finance.yahoo.com/markets/stocks/articles/lmt-stock-rises-overnight-analysts-043134018.html)",
-      "drivers": [
-        "YTD +31.82%",
-        "1M +26.38%",
-        "Record backlog $292B",
-        "Morgan Stanley upgrade"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LHX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Record backlog $53.2B, Q3 EPS +33% to $3.28, revenue +7%, raised FY26 guidance; UBS PT to $293, 1M +17.59%, P/E 28.07, analyst buy. [investors.l3harris.com](https://investors.l3harris.com/news/news-details/2026/L3Harris-Delivers-Record-Backlog-and-Strong-Third-Quarter-Results/default.aspx) [ng.investing.com](https://ng.investing.com/news/stock-market-news/ubs-raises-l3harris-stock-price-target-to-293-on-solid-quarter-93CH-2770935)",
-      "drivers": [
-        "Record backlog $53.2B",
-        "Q3 EPS +33%",
-        "Guidance raise",
-        "1M +17.59%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "HII",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Momentum accelerating with +14.16% 1D, +13.39% 1W, +18.40% 1M; P/E 18.84, buy consensus, YTD -8.49% offers entry.",
-      "drivers": [
-        "1D +14.16%",
-        "1W +13.39%",
-        "P/E 18.84",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Broad defense rally, +12.29% 1M, +3.80% 1D; P/E 22.62, buy rating, 0.82% short interest.",
-      "drivers": [
-        "1M +12.29%",
-        "P/E 22.62",
-        "Short interest 0.82%",
-        "Buy rating"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Up +16.32% 1M, P/E 17.75, beta -0.112 defensive, buy consensus; benefits from missile and space demand.",
-      "drivers": [
-        "1M +16.32%",
-        "P/E 17.75",
-        "Buy rating",
-        "Low beta"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Strong rebound +14.78% 1M, +12.07% 1W, +11.67% 1D; P/E 16.47, buy rating, YTD +0.54% shows catch-up potential.",
-      "drivers": [
-        "1M +14.78%",
-        "1D +11.67%",
-        "P/E 16.47",
-        "Buy rating"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "LDOS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "1M +15.75%, P/E 13.17 undervalued, buy consensus, YTD -22.42% offers recovery play.",
-      "drivers": [
-        "1M +15.75%",
-        "P/E 13.17",
-        "Buy rating",
-        "Low P/E"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "UK defense QinetiQ +21.20% YTD, +11.40% 1M, P/E 28.34, analyst buy score 1.75; small cap momentum.",
-      "drivers": [
-        "YTD +21.20%",
-        "1M +11.40%",
-        "Analyst buy 1.75",
-        "Momentum"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1M +21.33%, P/E 13.08 cheap, but hold consensus (2.6) and 6.3% short interest temper enthusiasm.",
-      "drivers": [
-        "1M +21.33%",
-        "P/E 13.08",
-        "Hold rating",
-        "Short interest 6.3%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "YTD +51.03%, 1M +18.60%, P/E 17.6, but hold consensus (2.8) and 5.81% short interest limit upside.",
-      "drivers": [
-        "YTD +51.03%",
-        "1M +18.60%",
-        "P/E 17.6",
-        "Hold rating"
       ]
     }
   ]

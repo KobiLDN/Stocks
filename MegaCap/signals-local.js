@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-06 14:58",
+  "updated": "2026-11-09 17:18",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "LLY +18.69% 1M, YTD +30.19%, 1Y +40%, with Canada Kisunla reimbursement approval and Jefferies PT raise to $1,700 [tipranks.com](https://www.tipranks.com/news/eli-lilly-stock-lly-rises-after-canada-approves-public-reimbursement-of-its-alzheimers-drug) [finance.yahoo.com](https://finance.yahoo.com/markets/stocks/articles/eli-lilly-shares-rise-2-132919155.html).",
+      "drivers": [
+        "+18.69% 1M",
+        "+30.19% YTD",
+        "GLP-1 & Alzheimer's catalysts",
+        "Buy consensus (1.61)"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "MCD +19.07% 1M, PT raised to $315 by Citi and BMO, Q3 EPS beat $3.57 vs $3.38 [americanbankingnews.com](https://www.americanbankingnews.com/2026/11/08/mcdonalds-nysemcd-price-target-raised-to-315-00.html).",
+      "drivers": [
+        "+19.07% 1M",
+        "PT raises to $315",
+        "Q3 EPS beat",
+        "Yield 2.79%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TM",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "TM +17.67% 1M, +11.35% 1W, PE 9.94, dividend yield 2.90%, analyst buy.",
+      "drivers": [
+        "Low PE 9.94",
+        "+17.67% 1M",
+        "Strong 1W momentum",
+        "Buy rating (1.75)"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MA",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "MA +11.44% 1M, YTD +17.34%, strong_buy consensus, low beta 0.77.",
+      "drivers": [
+        "+11.44% 1M",
+        "YTD +17.34%",
+        "Strong_buy (1.5)",
+        "Low beta 0.77"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BLK",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "BLK +12.19% 1M, YTD +13.75%, strong_buy, crypto ETF conversion catalysts.",
+      "drivers": [
+        "+12.19% 1M",
+        "YTD +13.75%",
+        "Strong_buy (1.39)",
+        "Yield 1.94%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "WMT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "WMT +11.75% 1M, YTD +11.05%, 1Y +23%, buy rating, positive news sentiment 0.249.",
+      "drivers": [
+        "+11.75% 1M",
+        "YTD +11.05%",
+        "1Y +23%",
+        "Positive news sentiment"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "COST +11.02% 1M, YTD +23.57%, 1Y +15%, digital sales growth.",
+      "drivers": [
+        "YTD +23.57%",
+        "+11.02% 1M",
+        "1Y +15%",
+        "Buy rating (1.93)"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "V",
+      "signal": "strong_buy",
+      "confidence": 0.74,
+      "rationale": "V +9.38% 1M, YTD +22.41%, 1Y +26%, strong_buy consensus.",
+      "drivers": [
+        "YTD +22.41%",
+        "1Y +26%",
+        "Strong_buy (1.5)",
+        "+9.38% 1M"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ABBV",
+      "signal": "buy",
+      "confidence": 0.66,
+      "rationale": "ABBV YTD +30.65%, 1Y +33%, 1M +5.86%, buy rating, 2.38% yield.",
+      "drivers": [
+        "YTD +30.65%",
+        "1Y +33%",
+        "1M +5.86%",
+        "Yield 2.38%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SONY +11.65% 1M, +5.57% 1W, PE 20.1, positive news sentiment 0.164.",
+      "drivers": [
+        "+11.65% 1M",
+        "+5.57% 1W",
+        "PE 20.1",
+        "News sentiment 0.164"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.543,
+      "ytd": "+119.98%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +119.98% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +119.98% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,139 +277,6 @@ window.SIGNALS_DATA = {
         "+21.27% YTD",
         "P/E 25.17",
         "consumer staples stability"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.92,
-      "rationale": "+27.77% YTD, +18.72% 1M, P/E 46.11. Record Q3 beat on GLP-1 sales (Mounjaro +65%, Zepbound +49%), third guidance raise, multiple analyst upgrades per [investing.com](https://www.investing.com/news/stock-market-news/why-is-eli-lilly-stock-gaining-3-today-93CH-4987456) and [cnbc.com](https://www.cnbc.com/investingclub/2026/10/29/were-raising-our-eli-lilly-price-target-as-obesity-drug-boom-continues.html).",
-      "drivers": [
-        "+27.77% YTD",
-        "+18.72% 1M",
-        "GLP-1 demand surge",
-        "analyst upgrades"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+13.61% YTD, +15.45% 1M, strong_buy consensus (score 1.45), low short interest 0.8%, P/E 34.97. Payment network benefiting from resilient consumer spending and cross-border volumes.",
-      "drivers": [
-        "+15.45% 1M",
-        "strong_buy consensus",
-        "low short 0.8%",
-        "payment network tailwind"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.84,
-      "rationale": "+19.20% YTD, +14.25% 1M, strong_buy consensus (score 1.45), low beta 0.771, P/E 33.32. Strong YTD performance and momentum in digital payments.",
-      "drivers": [
-        "+19.20% YTD",
-        "+14.25% 1M",
-        "strong_buy consensus",
-        "low beta 0.771"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "+52.61% YTD, +13.34% 1M, P/E 22.28, dividend yield 3.11%, low beta 0.523. Energy major benefiting from elevated oil prices and strong cash flows.",
-      "drivers": [
-        "+52.61% YTD",
-        "+13.34% 1M",
-        "div yield 3.11%",
-        "low beta 0.523"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "XOM",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+52.44% YTD, +12.62% 1M, P/E 23.59, dividend yield 2.26%, very low beta 0.209. Integrated energy leader with strong YTD momentum and defensive characteristics.",
-      "drivers": [
-        "+52.44% YTD",
-        "+12.62% 1M",
-        "low beta 0.209",
-        "div yield 2.26%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "UNH",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "+24.56% YTD, +11.94% 1M, P/E 23.45, dividend yield 2.28%, low beta 0.615. Managed care leader with strong YTD gains and resilient healthcare demand.",
-      "drivers": [
-        "+24.56% YTD",
-        "+11.94% 1M",
-        "P/E 23.45",
-        "div yield 2.28%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ABBV",
-      "signal": "buy",
-      "confidence": 0.77,
-      "rationale": "+30.61% YTD, +11.85% 1M, P/E 82.14 but low beta 0.228, dividend yield 2.42%. Pharma giant with strong YTD performance and low volatility.",
-      "drivers": [
-        "+30.61% YTD",
-        "+11.85% 1M",
-        "low beta 0.228",
-        "div yield 2.42%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "WMT",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "+16.68% 1M, +8.21% YTD, P/E 43.93, dividend yield 0.83%, analyst buy (score 1.51). Defensive consumer staple with strong recent momentum and resilient sales.",
-      "drivers": [
-        "+16.68% 1M",
-        "defensive consumer staple",
-        "analyst buy",
-        "low beta 0.578"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "+12.27% 1M, +0.51% YTD, P/E 29.15, low short interest 0.36%, analyst buy (score 1.62). Enterprise software leader with improving momentum and low bearish sentiment.",
-      "drivers": [
-        "+12.27% 1M",
-        "low short 0.36%",
-        "analyst buy",
-        "enterprise software"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BLK",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "+11.15% 1M, +10.18% YTD, strong_buy consensus (score 1.39), low short interest 1.41%, P/E 27.21. Asset manager benefiting from market gains and AUM growth.",
-      "drivers": [
-        "+11.15% 1M",
-        "strong_buy consensus",
-        "low short 1.41%",
-        "asset management tailwind"
       ]
     }
   ]

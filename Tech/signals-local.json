@@ -1,9 +1,165 @@
 {
-  "updated": "2026-11-06 14:51",
+  "updated": "2026-11-09 17:15",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "1W +9.99%, P/E 21.84, strong_buy analyst consensus, JPMorgan named it a top AI pick citing AWS 39% YoY growth and a $578B contracted backlog [investing.com](https://www.investing.com/news/stock-market-news/why-is-amazon-stock-rallying-today-93CH-5012665).",
+      "drivers": [
+        "1W momentum +9.99%",
+        "P/E 21.84 attractive",
+        "strong_buy consensus",
+        "AWS growth catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "1W +6.81%, P/E 28.26, strong_buy analyst score 1.38, news sentiment 0.194, and the stock is holding firm as a mega-cap cash flow leader [aephel.com](https://www.aephel.com/research/news/2026-11-09-apple-amazon-and-microsoft-hold-firm-as-a-damaged-market).",
+      "drivers": [
+        "1W momentum +6.81%",
+        "strong_buy consensus",
+        "P/E 28.26 reasonable",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +29.72%, 1W +3.63%, analyst buy, Evercore ISI raised PT to $380 citing Siri AI monetization potential and 550M+ compatible users [investing.com](https://www.investing.com/news/analyst-ratings/evercore-isi-raises-apple-stock-price-target-on-siri-ai-potential-93CH-5011228).",
+      "drivers": [
+        "YTD +29.72%",
+        "analyst PT raise to $380",
+        "Siri AI catalyst",
+        "strong cash flow margins"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "P/E 21.81, strong_buy analyst score 1.41, news sentiment 0.262, JPMorgan kept it as a top AI pick alongside Amazon with AI-driven ad improvements [cnbc.com](https://www.cnbc.com/2026/11/09/stock-market-movers-live-updates.html).",
+      "drivers": [
+        "P/E 21.81 low",
+        "strong_buy consensus",
+        "JPMorgan top pick",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +12.34%, analyst buy score 1.71, news sentiment 0.226, P/E 36.22, showing strong near-term momentum and positive analyst outlook.",
+      "drivers": [
+        "1M momentum +12.34%",
+        "analyst buy consensus",
+        "positive news sentiment",
+        "P/E 36.22 reasonable"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1W +10.35%, YTD +49.28%, analyst buy, strong short-term rebound despite negative news sentiment -0.051; AI demand and margins in focus from Q3 call.",
+      "drivers": [
+        "1W momentum +10.35%",
+        "YTD +49.28%",
+        "analyst buy",
+        "AI demand catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +96.98%, news sentiment 0.356 (highest in universe), analyst buy, though P/E 3727 is extreme; recent AI integrations drive security growth narrative.",
+      "drivers": [
+        "YTD +96.98%",
+        "highest news sentiment 0.356",
+        "analyst buy",
+        "AI security growth"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +82.15%, news sentiment 0.275, analyst buy, P/E 816 high but cybersecurity leader with strong long-term demand; recent pullback offers entry.",
+      "drivers": [
+        "YTD +82.15%",
+        "positive news sentiment",
+        "analyst buy",
+        "cybersecurity leader"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "YTD +30.14%, strong_buy analyst score 1.37, P/E 37.04, news sentiment 0.161; semiconductor equipment monopoly with long-term AI tailwinds despite 1M -15.33%.",
+      "drivers": [
+        "YTD +30.14%",
+        "strong_buy consensus",
+        "P/E 37.04",
+        "semiconductor equipment leader"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "YTD +23.62%, strong_buy analyst score 1.33, P/E 25.4, news sentiment 0.044; key AI chip manufacturer with solid fundamentals and attractive valuation.",
+      "drivers": [
+        "YTD +23.62%",
+        "strong_buy consensus",
+        "P/E 25.4 low",
+        "AI chip manufacturing"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MU",
+      "signal": "buy",
+      "confidence": 0.597,
+      "ytd": "+131.93%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +131.93% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +131.93% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.544,
+      "ytd": "+120.27%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +120.27% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +120.27% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSFT",
@@ -132,139 +288,6 @@
         "buy 1.69",
         "PE 88.19",
         "-13.87% 1W"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AAPL",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Apple is at an all-time high of $348.91 (+29% YTD) ahead of its Q4 earnings on Nov 2, with strong product momentum from the new MacBook Pro with M5 chips and the foldable iPhone Duo, while Goldman Sachs raised its price target to $390 [invezz.com](https://invezz.com/news/2026/10/29/apple-stock-rises-as-new-macbook-launch-draws-analyst-support/).",
-      "drivers": [
-        "+29% YTD",
-        "P/E 40.01",
-        "analyst strong_buy",
-        "new product launches"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Microsoft shows strong fundamentals with a P/E of 27.67, a strong_buy analyst consensus (score 1.33), and +12.81% YTD, though recent 1-day dip of -2.96% offers a buying opportunity.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 27.67",
-        "+12.81% YTD",
-        "low beta 1.099"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "Spotify has strong 1-month momentum of +14.33% and a 1-day gain of +3.96%, with a reasonable P/E of 33.96 and a buy analyst rating, indicating positive market sentiment.",
-      "drivers": [
-        "+14.33% 1M",
-        "+3.96% 1D",
-        "P/E 33.96",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SHOP",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Shopify shows robust 1-month momentum of +12.54% and +6.16% YTD, with a buy analyst rating, though its high beta of 2.625 and P/E of 112.76 warrant caution.",
-      "drivers": [
-        "+12.54% 1M",
-        "+6.16% YTD",
-        "buy consensus",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "Intuit has a strong 1-day gain of +5.27% and 1-month momentum of +20.68%, with a reasonable P/E of 20.12 and a buy analyst rating, despite a -46.64% YTD decline.",
-      "drivers": [
-        "+20.68% 1M",
-        "+5.27% 1D",
-        "P/E 20.12",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Qualcomm has strong 1-week momentum of +7.28% and a 1-day gain of +3.00%, with a low P/E of 21.46 and a high dividend yield of 1.98%, though analyst consensus is hold.",
-      "drivers": [
-        "+7.28% 1W",
-        "+3.00% 1D",
-        "P/E 21.46",
-        "dividend yield 1.98%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "ORCL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Oracle has strong 1-week momentum of +11.17% and a low P/E of 21.87, with a buy analyst rating, though its YTD performance is weak at -27.74%.",
-      "drivers": [
-        "+11.17% 1W",
-        "P/E 21.87",
-        "buy consensus",
-        "dividend yield 1.38%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Cisco has strong YTD performance of +44.68% and a 1-week gain of +3.53%, with a low beta of 0.979 and a solid dividend yield of 1.55%, supported by a buy analyst rating.",
-      "drivers": [
-        "+44.68% YTD",
-        "+3.53% 1W",
-        "dividend yield 1.55%",
-        "low beta 0.979"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "PLTR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Palantir has positive 1-month momentum of +5.01% and +17.01% YTD, with a buy analyst rating, though its high P/E of 169.33 and beta of 1.602 indicate elevated risk.",
-      "drivers": [
-        "+17.01% YTD",
-        "+5.01% 1M",
-        "buy consensus",
-        "high momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "Adobe shows a 1-day gain of +2.89% and 1-month momentum of +3.41%, with a low P/E of 13.85, though analyst consensus is hold and YTD is -25.56%.",
-      "drivers": [
-        "+3.41% 1M",
-        "+2.89% 1D",
-        "P/E 13.85",
-        "low valuation"
       ]
     }
   ]
