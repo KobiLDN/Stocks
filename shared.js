@@ -158,3 +158,35 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+// ── Data freshness warning ───────────────────────────────────────────────────
+// /health (functions/health.js) reports any data stream that missed its last
+// scheduled update. When one has, show a bar at the bottom of every page.
+function showFreshnessWarning() {
+  if (location.protocol === 'file:') return;
+  fetch('/health', { cache: 'no-store' })
+    .then(r => (r.status === 200 || r.status === 503) ? r.json() : null)
+    .then(h => {
+      if (!h || h.ok || !h.streams) return;
+      const fmt = iso => iso
+        ? new Date(iso).toLocaleString('en-GB', { timeZone: 'Europe/London', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
+        : 'never';
+      const stale = Object.values(h.streams).filter(s => s.stale);
+      const bar = document.createElement('div');
+      bar.id = 'freshness-warning';
+      bar.setAttribute('role', 'status');
+      bar.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:1000;background:#b45309;color:#fff;' +
+        'font:600 12px/1.4 "IBM Plex Mono",monospace;padding:8px 40px 8px 16px;box-shadow:0 -2px 8px rgba(0,0,0,.3)';
+      bar.textContent = '⚠ Data may be out of date — ' +
+        stale.map(s => s.label + ' last updated ' + fmt(s.as_of)).join(' · ');
+      const close = document.createElement('button');
+      close.textContent = '×';
+      close.setAttribute('aria-label', 'Dismiss');
+      close.style.cssText = 'position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:18px;cursor:pointer';
+      close.onclick = () => bar.remove();
+      bar.appendChild(close);
+      document.body.appendChild(bar);
+    })
+    .catch(() => {});
+}
+document.addEventListener('DOMContentLoaded', showFreshnessWarning);

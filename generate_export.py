@@ -6,6 +6,7 @@ If T212_API_KEY env var is set, portfolio positions are fetched and merged in.
 """
 import json, re, csv, os
 from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
@@ -223,9 +224,9 @@ csv_fields = PRICE_FIELDS + whatsit_fields + [
 os.makedirs(os.path.join(BASE, "exports"), exist_ok=True)
 
 now_utc  = datetime.now(tz=timezone.utc)
-uk_off   = timedelta(hours=1) if 3 < now_utc.month < 11 else timedelta(0)
-now_uk   = now_utc + uk_off
-tz_label = "BST" if uk_off else "GMT"
+LONDON   = ZoneInfo("Europe/London")
+now_uk   = now_utc.astimezone(LONDON)
+tz_label = now_uk.tzname()                         # "GMT" or "BST" on the real change dates
 date_str = now_utc.strftime("%Y-%m-%d")           # file names stay UTC date
 gen_str  = now_uk.strftime(f"%Y-%m-%d %H:%M {tz_label}")
 
@@ -268,13 +269,36 @@ def read_macro():
     except Exception:
         return None
 
+# ── Data freshness (as_of, ISO UTC) ──────────────────────────────────────────
+# The bots write London wall-clock strings ("YYYY-MM-DD HH:MM"). The oldest sector
+# is reported so a sector that failed to update shows up as old.
+def london_to_iso(value):
+    try:
+        local = datetime.strptime(str(value)[:16], "%Y-%m-%d %H:%M").replace(tzinfo=LONDON)
+        return local.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    except (TypeError, ValueError):
+        return None
+
+def oldest_iso(values):
+    isos = [london_to_iso(v) for v in values]
+    return None if not isos or None in isos else min(isos)
+
+macro_block = read_macro()
+as_of = {
+    "generated": now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
+    "prices":    oldest_iso([m["prices_updated"] for m in meta.values()]),
+    "signals":   oldest_iso([m["signals_updated"] for m in meta.values()]),
+    "market":    london_to_iso(macro_block.get("updated")) if macro_block else None,
+}
+
 # ── Write JSON ────────────────────────────────────────────────────────────────
 payload = {
     "generated":        gen_str,
+    "as_of":            as_of,
     "total":            len(all_stocks),
     "has_portfolio":    t212_data is not None,
     "sectors":          meta,
-    "macro":            read_macro(),
+    "macro":            macro_block,
     "momentum_picks":   compute_export_momentum(all_stocks),
     "stocks":           all_stocks,
 }

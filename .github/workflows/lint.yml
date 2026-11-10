@@ -23,6 +23,9 @@ jobs:
             -not -path "./exports/*" \
             | sort | xargs python -m py_compile && echo "All Python files OK"
 
+      - name: Freshness rules tests
+        run: node --test monitoring/freshness.test.js
+
       - name: JSON validity check
         run: |
           find . -name "*.json" \
