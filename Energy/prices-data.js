@@ -1,5 +1,5 @@
 window.PRICES_DATA = {
-  "updated": "2026-11-09 23:35",
+  "updated": "2026-11-10 02:56",
   "fx_gbp_usd": 1.3441,
   "stocks": [
     {
@@ -19,7 +19,7 @@ window.PRICES_DATA = {
       "high_gbp": "140",
       "high_usd": 188.5,
       "bar_pct": 68,
-      "market_cap_gbp_b": 499.932,
+      "market_cap_gbp_b": 499.946,
       "market_cap_usd_b": 671.97,
       "beta": 0.141,
       "pe_ratio": 16.95,
@@ -28,10 +28,24 @@ window.PRICES_DATA = {
       "short_pct": 1.16,
       "analyst": "buy",
       "analyst_score": 2.42,
-      "vol_1d": 17176328,
-      "vol_1w": 89070628,
-      "vol_1m": 293355028,
+      "vol_1d": 17181900,
+      "vol_1w": 89076200,
+      "vol_1m": 293360600,
       "news": [
+        {
+          "title": "Exxon Takes First Step Toward Investing in Venezuela",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/energy-oil/exxon-takes-first-step-toward-investing-in-venezuela-f8e0f5e0?siteid=yhoof2&yptr=yahoo",
+          "published": 1794272280,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Exxon and Chevron Are Near Record Highs. Here's What History Says Happens Next.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/exxon-and-chevron-are-near-record-highs-heres-what/",
+          "published": 1794267300,
+          "sentiment": 0.0
+        },
         {
           "title": "Exxon Mobil Stocks Move Lower 0.31% as Crude Slides Toward $87",
           "publisher": "GuruFocus.com",
@@ -52,23 +66,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/exxonmobil-xom-pauses-texas-hydrogen-180912852.html",
           "published": 1794247752,
           "sentiment": 0.0
-        },
-        {
-          "title": "Ondo tops $4B and tokenizes Anthropic as tZERO eyes $350M SPAC",
-          "publisher": "CoinDesk",
-          "url": "http://videos.coindesk.com/previews/kiQXqc97",
-          "published": 1794246549,
-          "sentiment": 0.511
-        },
-        {
-          "title": "What Mattered Most In Chevron's Latest Quarter?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/stock/cvx/articles/623636/what-mattered-most-in-chevrons-latest-quarter/2026-11-09",
-          "published": 1794228365,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.059
+      "news_sentiment": -0.043
     },
     {
       "ticker": "CVX",
@@ -87,7 +87,7 @@ window.PRICES_DATA = {
       "high_gbp": "176",
       "high_usd": 236.48,
       "bar_pct": 71,
-      "market_cap_gbp_b": 305.988,
+      "market_cap_gbp_b": 305.996,
       "market_cap_usd_b": 411.285,
       "beta": 0.453,
       "pe_ratio": 15.48,
@@ -96,10 +96,17 @@ window.PRICES_DATA = {
       "short_pct": 1.32,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 8876655,
-      "vol_1w": 46363855,
-      "vol_1m": 173449155,
+      "vol_1d": 9396900,
+      "vol_1w": 46884100,
+      "vol_1m": 173969400,
       "news": [
+        {
+          "title": "Exxon and Chevron Are Near Record Highs. Here's What History Says Happens Next.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/exxon-and-chevron-are-near-record-highs-heres-what/",
+          "published": 1794267300,
+          "sentiment": 0.0
+        },
         {
           "title": "Kent Companies joins Pay With Points",
           "publisher": "C-Store Dive",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-dividend-stocks-yields-4-110938370.html",
           "published": 1794222578,
           "sentiment": 0.0
-        },
-        {
-          "title": "What iShares Global Energy ETF (IXC) Sold: Exxon Mobil Leads on Nov. 5",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/energy/articles/ishares-global-energy-etf-ixc-110643860.html",
-          "published": 1794222403,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.034
+      "news_sentiment": -0.021
     },
     {
       "ticker": "SHEL",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "81",
       "high_usd": 109.37,
       "bar_pct": 74,
-      "market_cap_gbp_b": 208.31,
-      "market_cap_usd_b": 279.994,
+      "market_cap_gbp_b": 208.316,
+      "market_cap_usd_b": 279.995,
       "beta": -0.248,
       "pe_ratio": 8.58,
       "avg_volume_m": 6.06,
@@ -164,9 +164,9 @@ window.PRICES_DATA = {
       "short_pct": 1.22,
       "analyst": "buy",
       "analyst_score": 2.19,
-      "vol_1d": 5475608,
-      "vol_1w": 30897799,
-      "vol_1m": 118261029,
+      "vol_1d": 5474417,
+      "vol_1w": 31537031,
+      "vol_1m": 118900261,
       "news": [
         {
           "title": "3 British Undervalued Stocks Trading Up To 45% Below Cash Flow Value",
@@ -223,8 +223,8 @@ window.PRICES_DATA = {
       "high_gbp": "38",
       "high_usd": 51.49,
       "bar_pct": 62,
-      "market_cap_gbp_b": 85.445,
-      "market_cap_usd_b": 114.849,
+      "market_cap_gbp_b": 85.447,
+      "market_cap_usd_b": 114.848,
       "beta": -0.258,
       "pe_ratio": 21.75,
       "avg_volume_m": 9.19,
@@ -232,9 +232,9 @@ window.PRICES_DATA = {
       "short_pct": 0.37,
       "analyst": "buy",
       "analyst_score": 2.16,
-      "vol_1d": 8204101,
-      "vol_1w": 43985601,
-      "vol_1m": 191825001,
+      "vol_1d": 8204600,
+      "vol_1w": 43986100,
+      "vol_1m": 191825500,
       "news": [
         {
           "title": "BP Completes $6B Castrol Stake Sale: A Boost to Its Balance Sheet?",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "71",
       "high_usd": 95.78,
       "bar_pct": 77,
-      "market_cap_gbp_b": 143.742,
+      "market_cap_gbp_b": 143.746,
       "market_cap_usd_b": 193.207,
       "beta": 0.04,
       "pe_ratio": 8.78,
@@ -300,9 +300,9 @@ window.PRICES_DATA = {
       "short_pct": 0.22,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 1934337,
-      "vol_1w": 8538637,
-      "vol_1m": 40908737,
+      "vol_1d": 1934400,
+      "vol_1w": 8538700,
+      "vol_1m": 40908800,
       "news": [
         {
           "title": "CEG Q3 Earnings Beat on Calpine, Strong Commercial Performance",
@@ -359,7 +359,7 @@ window.PRICES_DATA = {
       "high_gbp": "37",
       "high_usd": 49.08,
       "bar_pct": 70,
-      "market_cap_gbp_b": 72.409,
+      "market_cap_gbp_b": 72.411,
       "market_cap_usd_b": 97.327,
       "beta": -0.658,
       "pe_ratio": 8.53,
@@ -368,9 +368,9 @@ window.PRICES_DATA = {
       "short_pct": 2.85,
       "analyst": "hold",
       "analyst_score": 3.29,
-      "vol_1d": 5360363,
-      "vol_1w": 29185663,
-      "vol_1m": 100484763,
+      "vol_1d": 5360800,
+      "vol_1w": 29186100,
+      "vol_1m": 100485200,
       "news": [
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Surge in Monday Trading",
@@ -427,8 +427,8 @@ window.PRICES_DATA = {
       "high_gbp": "115",
       "high_usd": 154.28,
       "bar_pct": 71,
-      "market_cap_gbp_b": 118.284,
-      "market_cap_usd_b": 158.988,
+      "market_cap_gbp_b": 118.288,
+      "market_cap_usd_b": 158.989,
       "beta": 0.162,
       "pe_ratio": 14.17,
       "avg_volume_m": 6.67,
@@ -436,9 +436,9 @@ window.PRICES_DATA = {
       "short_pct": 1.58,
       "analyst": "buy",
       "analyst_score": 1.87,
-      "vol_1d": 10110545,
-      "vol_1w": 47640245,
-      "vol_1m": 146909745,
+      "vol_1d": 10566400,
+      "vol_1w": 48096100,
+      "vol_1m": 147365600,
       "news": [
         {
           "title": "ConocoPhillips Trades at a Premium: Is It the Right Time to Buy?",
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "50",
       "high_usd": 67.45,
       "bar_pct": 59,
-      "market_cap_gbp_b": 41.469,
+      "market_cap_gbp_b": 41.47,
       "market_cap_usd_b": 55.739,
       "beta": 0.149,
       "pe_ratio": 15.84,
@@ -504,16 +504,23 @@ window.PRICES_DATA = {
       "short_pct": 0.02,
       "analyst": "buy",
       "analyst_score": 2.21,
-      "vol_1d": 11164066,
-      "vol_1w": 54002566,
-      "vol_1m": 193419866,
+      "vol_1d": 11183300,
+      "vol_1w": 54021800,
+      "vol_1m": 193439100,
       "news": [
         {
           "title": "Dow Jones Soars 1,132 Points As Amazon, Tesla Rally, But Nvidia Dives; CPI Inflation Report Next",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-amazon-tesla-nvidia-cpi-inflation-report/?src=A00220&yptr=yahoo",
-          "published": 1794266820,
+          "published": 1794277908,
           "sentiment": 0.09
+        },
+        {
+          "title": "Occidental (OXY) Reports Q3 Earnings: What Key Metrics Have to Say",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/occidental-oxy-reports-q3-earnings-233001301.html",
+          "published": 1794267001,
+          "sentiment": 0.0
         },
         {
           "title": "Occidental beats Q3 forecasts as production offsets lower crude prices",
@@ -535,13 +542,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/occidental-petroleum-oxy-q3-earnings-213503286.html",
           "published": 1794260103,
           "sentiment": 0.202
-        },
-        {
-          "title": "Occidental: Q3 Earnings Snapshot",
-          "publisher": "Associated Press",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/occidental-q3-earnings-snapshot-213411526.html",
-          "published": 1794260051,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.084
@@ -563,8 +563,8 @@ window.PRICES_DATA = {
       "high_gbp": "123",
       "high_usd": 165.93,
       "bar_pct": 73,
-      "market_cap_gbp_b": 57.256,
-      "market_cap_usd_b": 76.959,
+      "market_cap_gbp_b": 57.257,
+      "market_cap_usd_b": 76.958,
       "beta": 0.269,
       "pe_ratio": 9.58,
       "avg_volume_m": 3.0,
@@ -572,9 +572,9 @@ window.PRICES_DATA = {
       "short_pct": 3.7,
       "analyst": "buy",
       "analyst_score": 2.36,
-      "vol_1d": 5778933,
-      "vol_1w": 23884233,
-      "vol_1m": 66074533,
+      "vol_1d": 5779000,
+      "vol_1w": 23884300,
+      "vol_1m": 66074600,
       "news": [
         {
           "title": "ConocoPhillips Trades at a Premium: Is It the Right Time to Buy?",
@@ -631,7 +631,7 @@ window.PRICES_DATA = {
       "high_gbp": "368",
       "high_usd": 493.98,
       "bar_pct": 69,
-      "market_cap_gbp_b": 78.979,
+      "market_cap_gbp_b": 78.981,
       "market_cap_usd_b": 106.157,
       "beta": 0.509,
       "pe_ratio": 7.72,
@@ -640,9 +640,9 @@ window.PRICES_DATA = {
       "short_pct": 3.03,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 2656034,
-      "vol_1w": 15173634,
-      "vol_1m": 48248834,
+      "vol_1d": 2665500,
+      "vol_1w": 15183100,
+      "vol_1m": 48258300,
       "news": [
         {
           "title": "CNQ Q3 Earnings Beat on Strong Pricing and Record Thermal Output",
@@ -699,7 +699,7 @@ window.PRICES_DATA = {
       "high_gbp": "343",
       "high_usd": 461.52,
       "bar_pct": 65,
-      "market_cap_gbp_b": 74.02,
+      "market_cap_gbp_b": 74.022,
       "market_cap_usd_b": 99.492,
       "beta": 0.552,
       "pe_ratio": 8.11,
@@ -708,9 +708,9 @@ window.PRICES_DATA = {
       "short_pct": 3.35,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 3298311,
-      "vol_1w": 19044811,
-      "vol_1m": 64386411,
+      "vol_1d": 3391400,
+      "vol_1w": 19137900,
+      "vol_1m": 64479500,
       "news": [
         {
           "title": "Valero Energy Surges 113% YTD: Should Investors Bet on the Momentum?",
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "45",
       "high_usd": 60.46,
       "bar_pct": 61,
-      "market_cap_gbp_b": 55.324,
-      "market_cap_usd_b": 74.362,
+      "market_cap_gbp_b": 55.326,
+      "market_cap_usd_b": 74.363,
       "beta": 0.792,
       "pe_ratio": 24.46,
       "avg_volume_m": 12.69,
@@ -776,9 +776,9 @@ window.PRICES_DATA = {
       "short_pct": 4.32,
       "analyst": "buy",
       "analyst_score": 1.53,
-      "vol_1d": 9626008,
-      "vol_1w": 71701008,
-      "vol_1m": 262368508,
+      "vol_1d": 9652500,
+      "vol_1w": 71727500,
+      "vol_1m": 262395000,
       "news": [
         {
           "title": "SLB (SLB) Stock Still Looks Undervalued Despite Its 70% Run",
@@ -836,7 +836,7 @@ window.PRICES_DATA = {
       "high_usd": 43.59,
       "bar_pct": 37,
       "market_cap_gbp_b": 19.618,
-      "market_cap_usd_b": 26.369,
+      "market_cap_usd_b": 26.368,
       "beta": 0.749,
       "pe_ratio": 13.39,
       "avg_volume_m": 10.35,
@@ -844,9 +844,9 @@ window.PRICES_DATA = {
       "short_pct": 5.44,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 11274948,
-      "vol_1w": 52071248,
-      "vol_1m": 218509048,
+      "vol_1d": 11275500,
+      "vol_1w": 52071800,
+      "vol_1m": 218509600,
       "news": [
         {
           "title": "Are Wall Street Analysts Bullish on Halliburton Stock?",
@@ -903,7 +903,7 @@ window.PRICES_DATA = {
       "high_gbp": "52",
       "high_usd": 70.41,
       "bar_pct": 16,
-      "market_cap_gbp_b": 35.796,
+      "market_cap_gbp_b": 35.797,
       "market_cap_usd_b": 48.114,
       "beta": 1.058,
       "pe_ratio": 16.65,
@@ -912,9 +912,9 @@ window.PRICES_DATA = {
       "short_pct": 2.87,
       "analyst": "buy",
       "analyst_score": 1.56,
-      "vol_1d": 11479469,
-      "vol_1w": 63976269,
-      "vol_1m": 192781669,
+      "vol_1d": 11480300,
+      "vol_1w": 63977100,
+      "vol_1m": 192782500,
       "news": [
         {
           "title": "Core Natural Resources, Bristow Group, CVR Energy, Baker Hughes, and Oceaneering shares plummet, what you need to know",
@@ -971,7 +971,7 @@ window.PRICES_DATA = {
       "high_gbp": "73",
       "high_usd": 98.75,
       "bar_pct": 51,
-      "market_cap_gbp_b": 135.532,
+      "market_cap_gbp_b": 135.536,
       "market_cap_usd_b": 182.172,
       "beta": 0.6,
       "pe_ratio": 15.65,
@@ -980,9 +980,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.91,
-      "vol_1d": 12057286,
-      "vol_1w": 82083086,
-      "vol_1m": 276215286,
+      "vol_1d": 12058400,
+      "vol_1w": 82084200,
+      "vol_1m": 276216400,
       "news": [
         {
           "title": "People Pay the Power Bill Before Almost Anything Else. $45,000 in Each of These 3 Utilities Pays $5,915 a Year",
@@ -1028,17 +1028,17 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "27",
-      "price_usd": 36.04,
+      "price_usd": 36.03,
       "change_1d": "+1.59%",
       "change_1w": "+3.04%",
       "change_1m": "+9.25%",
       "change_ytd": "+20.19%",
       "return_1yr": "+36%",
-      "low_gbp": "18",
-      "low_usd": 24.77,
+      "low_gbp": "19",
+      "low_usd": 26.13,
       "high_gbp": "28",
       "high_usd": 37.2,
-      "bar_pct": 91,
+      "bar_pct": 89,
       "market_cap_gbp_b": 0.325,
       "market_cap_usd_b": 0.437,
       "beta": 0.534,
@@ -1116,9 +1116,9 @@ window.PRICES_DATA = {
       "short_pct": 26.75,
       "analyst": "buy",
       "analyst_score": 2.45,
-      "vol_1d": 8358236,
-      "vol_1w": 53464936,
-      "vol_1m": 176979836,
+      "vol_1d": 8526100,
+      "vol_1w": 53632800,
+      "vol_1m": 177147700,
       "news": [
         {
           "title": "Can First Solar Stock Fall 30%?",
@@ -1176,7 +1176,7 @@ window.PRICES_DATA = {
       "high_usd": 320.95,
       "bar_pct": 17,
       "market_cap_gbp_b": 15.322,
-      "market_cap_usd_b": 20.595,
+      "market_cap_usd_b": 20.594,
       "beta": 1.709,
       "pe_ratio": 11.08,
       "avg_volume_m": 2.4,
@@ -1184,9 +1184,9 @@ window.PRICES_DATA = {
       "short_pct": 14.1,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 4498387,
-      "vol_1w": 27487887,
-      "vol_1m": 63281687,
+      "vol_1d": 4504900,
+      "vol_1w": 27494400,
+      "vol_1m": 63288200,
       "news": [
         {
           "title": "Nvidia, AMD, CoreWeave, Coherent, First Solar, Trade Desk, and More Stocks That Explain Today\u2019s Market",
@@ -1252,9 +1252,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.86,
-      "vol_1d": 2090835,
-      "vol_1w": 14430335,
-      "vol_1m": 51498535,
+      "vol_1d": 2104600,
+      "vol_1w": 14444100,
+      "vol_1m": 51512300,
       "news": [
         {
           "title": "Brookfield Renewable Corp (BEPC) Q3 2026 Earnings Call Highlights: Record FFO Growth, $3 ...",
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "6.73",
       "high_usd": 9.04,
       "bar_pct": 46,
-      "market_cap_gbp_b": 21.672,
+      "market_cap_gbp_b": 21.673,
       "market_cap_usd_b": 29.13,
       "beta": 0.556,
       "pe_ratio": null,
