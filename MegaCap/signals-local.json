@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-09 17:18",
+  "updated": "2026-11-10 23:33",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Up 43% over 1 year and 33% YTD, with +21% 1-month momentum; Jefferies raised PT to $1,700 citing massive international obesity market potential, and positive trial data for Foundayo in sleep apnea plus Canadian reimbursement for Kisunla provide strong catalysts.",
+      "drivers": [
+        "+33% YTD",
+        "+21% 1M momentum",
+        "Jefferies PT $1,700",
+        "GLP-1 & Alzheimer's catalysts"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Up 16% over 1 year and +17.5% YTD with strong +12.75% 1-month momentum; low beta of 0.57 and P/E of 16.3 offer defensive appeal, supported by $9.6B in buybacks and positive news sentiment.",
+      "drivers": [
+        "+17.5% YTD",
+        "+12.8% 1M momentum",
+        "low beta 0.57",
+        "P/E 16.3"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "MA",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Up 17% over 1 year and +17.8% YTD with +10.8% 1-month momentum; strong_buy consensus with an_score 1.50, low short interest of 0.81%, and positive news sentiment of 0.224 amid record US credit card debt.",
+      "drivers": [
+        "+17.8% YTD",
+        "+10.8% 1M momentum",
+        "strong_buy consensus",
+        "low short 0.81%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BLK",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Up 12% over 1 year and +14.5% YTD with +12.8% 1-month momentum; strong_buy analyst consensus with an excellent an_score of 1.39 and positive news sentiment of 0.226.",
+      "drivers": [
+        "+14.5% YTD",
+        "+12.8% 1M momentum",
+        "strong_buy consensus",
+        "an_score 1.39"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Up 17% over 1 year and +25.5% YTD with +11.3% 1-month momentum; strong consumer spending backdrop and buy consensus with an_score 1.93, though P/E of 51.4 is elevated.",
+      "drivers": [
+        "+25.5% YTD",
+        "+11.3% 1M momentum",
+        "consumer spending tailwind",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "WMT",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "Up 21% over 1 year and +12% YTD with +11% 1-month momentum; strong news sentiment of 0.309 and buy consensus with an_score 1.51, benefiting from resilient US consumer and AI-driven logistics.",
+      "drivers": [
+        "+12% YTD",
+        "+11% 1M momentum",
+        "news sentiment 0.309",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "Down 8% over 1 year but +19.7% 1-month momentum signals a sharp reversal; P/E of 22.3 is reasonable with a 2.74% dividend yield, and news highlights a big bet on changing consumer habits.",
+      "drivers": [
+        "+19.7% 1M momentum",
+        "P/E 22.3",
+        "dividend yield 2.74%",
+        "turnaround catalyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Up 13% over 1 year and +22.4% YTD with +10.8% 1-month momentum; low beta of 0.36 and a 2.59% dividend yield provide stability, with buy consensus and an_score 2.08.",
+      "drivers": [
+        "+22.4% YTD",
+        "+10.8% 1M momentum",
+        "low beta 0.36",
+        "dividend yield 2.59%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "PEP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Down 2% over 1 year but +13.4% 1-month momentum shows recovery; attractive P/E of 18.1 and high dividend yield of 4.17% offer value, though analyst consensus is hold with an_score 2.71.",
+      "drivers": [
+        "+13.4% 1M momentum",
+        "P/E 18.1",
+        "dividend yield 4.17%",
+        "value play"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TM",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Up 6% over 1 year but +16.2% 1-month and +11.2% 1-week momentum; low P/E of 9.78 and 2.87% dividend yield, with positive news sentiment of 0.206 and very low short interest of 0.1%.",
+      "drivers": [
+        "+16.2% 1M momentum",
+        "P/E 9.78",
+        "dividend yield 2.87%",
+        "low short 0.1%"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.591,
+      "ytd": "+130.55%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.55% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.55% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,151 +277,6 @@
         "+5.57% 1W",
         "PE 20.1",
         "News sentiment 0.164"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.543,
-      "ytd": "+119.98%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +119.98% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +119.98% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "LLY shows +17.9% 1M momentum, +51% 1Y return, P/E 44.3, and benefits from GLP-1 drug market tailwind.",
-      "drivers": [
-        "+17.9% 1M momentum",
-        "+51% 1Y return",
-        "P/E 44.3",
-        "GLP-1 tailwind"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "MA has +15.94% 1M gain, strong_buy analyst consensus, P/E 34.32, and payment network growth tailwind.",
-      "drivers": [
-        "+15.94% 1M",
-        "strong_buy consensus",
-        "P/E 34.32",
-        "payment network growth"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "WMT",
-      "signal": "buy",
-      "confidence": 0.87,
-      "rationale": "WMT surged +19.14% in 1M, +27% 1Y, with P/E 46.28 and buy rating, reflecting retail strength.",
-      "drivers": [
-        "+19.14% 1M",
-        "+27% 1Y return",
-        "P/E 46.28",
-        "retail strength"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.86,
-      "rationale": "V displays +14.02% 1M, +30% 1Y, strong_buy rating, P/E 34.3, and digital payments momentum.",
-      "drivers": [
-        "+14.02% 1M",
-        "+30% 1Y return",
-        "strong_buy rating",
-        "digital payments momentum"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COST",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "COST gained +14.05% 1M, +25.44% YTD, P/E 51.33, buy rating, and resilient consumer demand.",
-      "drivers": [
-        "+14.05% 1M",
-        "+25.44% YTD",
-        "P/E 51.33",
-        "resilient consumer demand"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.84,
-      "rationale": "MSFT holds strong_buy with +14.04% YTD, P/E 27.97, and AI cloud capex tailwind.",
-      "drivers": [
-        "strong_buy consensus",
-        "+14.04% YTD",
-        "P/E 27.97",
-        "AI cloud capex tailwind"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.83,
-      "rationale": "AMZN has strong_buy, +14.88% YTD, P/E 21.04, and AI infrastructure investment theme.",
-      "drivers": [
-        "strong_buy consensus",
-        "+14.88% YTD",
-        "P/E 21.04",
-        "AI infrastructure theme"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SAP",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "SAP shows +15.71% 1M momentum, buy rating, P/E 30.33, and enterprise AI transformation catalyst.",
-      "drivers": [
-        "+15.71% 1M momentum",
-        "buy rating",
-        "P/E 30.33",
-        "enterprise AI catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TMO",
-      "signal": "strong_buy",
-      "confidence": 0.81,
-      "rationale": "TMO has strong_buy, +14.56% YTD, P/E 35.7, and life sciences tools demand.",
-      "drivers": [
-        "strong_buy consensus",
-        "+14.56% YTD",
-        "P/E 35.7",
-        "life sciences demand"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "PG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "PG has +13.34% 1M, +21.27% YTD, P/E 25.17, buy rating, and consumer staples stability.",
-      "drivers": [
-        "+13.34% 1M",
-        "+21.27% YTD",
-        "P/E 25.17",
-        "consumer staples stability"
       ]
     }
   ]

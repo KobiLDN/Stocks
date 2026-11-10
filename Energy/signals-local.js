@@ -1,9 +1,165 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-09 17:16",
+  "updated": "2026-11-10 23:33",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "EOG has strong momentum (+3.07% 1D, +1.35% 1M, +45.75% YTD), a low P/E of 9.78, and a 2.96% dividend yield. It just reported a massive Q3 earnings beat ($4.87 EPS vs $4.45 consensus) and raised its dividend 8%, with analysts lifting price targets despite falling oil prices.",
+      "drivers": [
+        "+3.07% 1D momentum",
+        "P/E 9.78",
+        "dividend yield 2.96%",
+        "Q3 earnings beat + dividend hike"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "ConocoPhillips shows solid YTD performance (+43.34%), a reasonable P/E of 14.29, and a 2.77% dividend yield. Q3 profit rose sharply to ~$4 billion, and the stock edged higher (+0.91% 1D) even as oil fell, indicating underlying strength.",
+      "drivers": [
+        "+43.34% YTD",
+        "P/E 14.29",
+        "dividend yield 2.77%",
+        "Q3 profit surge"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "TotalEnergies combines a low P/E of 8.77 with a high dividend yield of 4.56% and strong YTD return of +35.09%. Its 1M decline is only -0.58%, showing resilience, and news sentiment is positive at 0.285.",
+      "drivers": [
+        "P/E 8.77",
+        "dividend yield 4.56%",
+        "+35.09% YTD",
+        "resilient 1M performance"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "Chevron offers a compelling mix: P/E 15.51, dividend yield 3.38%, and +39.26% YTD. Its Vaca Muerta bet could fuel long-term growth, and the stock is showing early signs of stabilization (+0.23% 1D) after a weekly pullback.",
+      "drivers": [
+        "dividend yield 3.38%",
+        "+39.26% YTD",
+        "P/E 15.51",
+        "Vaca Muerta growth catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "SLB has a strong analyst consensus (buy, score 1.53) and positive news sentiment (0.196). It shows +2.34% 1M momentum and +26.19% YTD, with a P/E of 24.23 reflecting its premium position in oilfield services.",
+      "drivers": [
+        "analyst score 1.53 (strong buy)",
+        "+2.34% 1M momentum",
+        "+26.19% YTD",
+        "positive news sentiment"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "NextEra Energy has strong 1M momentum (+9.89%) and 1W momentum (+2.31%), with a P/E of 15.55 and dividend yield 2.87%. As a utility, it benefits from rate cuts and AI-driven power demand, with positive news sentiment (0.211).",
+      "drivers": [
+        "+9.89% 1M momentum",
+        "P/E 15.55",
+        "dividend yield 2.87%",
+        "AI power demand tailwind"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SSE has excellent momentum (+7.79% 1M, +3.45% 1W, +19.70% YTD) and a dividend yield of 2.59%. As a UK utility with renewable exposure, it benefits from stable regulated returns and positive news sentiment (0.219).",
+      "drivers": [
+        "+7.79% 1M momentum",
+        "+19.70% YTD",
+        "dividend yield 2.59%",
+        "regulated utility stability"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DNNGY",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "DNNGY has the strongest analyst consensus (strong_buy, score 1.0) and positive news sentiment (0.339). It shows strong momentum (+8.98% 1M, +7.35% 1W) and benefits from offshore wind operational milestones like Revolution Wind.",
+      "drivers": [
+        "analyst score 1.0 (strong_buy)",
+        "+8.98% 1M momentum",
+        "+7.35% 1W momentum",
+        "offshore wind catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Brookfield Renewable Corp has a high dividend yield of 4.92% and positive 1M momentum (+5.12%). Q3 earnings highlighted record FFO growth, and the stock offers clean energy exposure with a yield that compensates for its hold analyst rating.",
+      "drivers": [
+        "dividend yield 4.92%",
+        "+5.12% 1M momentum",
+        "record FFO growth",
+        "clean energy exposure"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "FSLR",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "First Solar has a low P/E of 10.47 and a strong analyst consensus (buy, score 1.75). Despite negative YTD performance, it shows early stabilization (+0.70% 1M) and benefits from US solar manufacturing tailwinds and IRA policy support.",
+      "drivers": [
+        "P/E 10.47",
+        "analyst score 1.75 (buy)",
+        "+0.70% 1M stabilization",
+        "US solar manufacturing tailwind"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.628,
+      "ytd": "+138.70%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +138.70% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +138.70% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.521,
+      "ytd": "+115.23%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +115.23% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +115.23% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "NEE",
@@ -132,162 +288,6 @@ window.SIGNALS_DATA = {
         "+7.63% 1M momentum",
         "news sentiment 0.204",
         "analyst hold"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.619,
-      "ytd": "+136.88%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +136.88% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +136.88% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.529,
-      "ytd": "+117.00%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +117.00% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +117.00% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Strongest short-term momentum with 1-month +13.32% and 1-week +7.44%, P/E 15.9 with 2.82% dividend yield, analyst buy consensus and positive news sentiment at 0.363.",
-      "drivers": [
-        "1-month momentum +13.32%",
-        "Low P/E 15.9",
-        "2.82% dividend yield",
-        "Positive news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "COP",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Reported Q3 adjusted EPS of $3.27 beating estimates, raised dividend 11%, P/E 14.27 with 2.45% yield and YTD +43.17%, strong free cash flow of $4 billion.",
-      "drivers": [
-        "Q3 EPS beat",
-        "11% dividend increase",
-        "P/E 14.27",
-        "YTD +43.17%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "William Blair upgraded to Outperform citing midterm results, P/E just 11.32 with 1-week momentum +10.67% and analyst score 1.81, though YTD -28.64% remains a risk.",
-      "drivers": [
-        "Analyst upgrade",
-        "Low P/E 11.32",
-        "1-week +10.67%",
-        "Consensus strong buy"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TTE",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Exceptional value with P/E 8.86 and 4.56% dividend yield, YTD +36.46% and 1-month +5.68%, analyst buy rating with news sentiment 0.334.",
-      "drivers": [
-        "P/E 8.86",
-        "Dividend yield 4.56%",
-        "YTD +36.46%",
-        "1-month momentum +5.68%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.79,
-      "rationale": "Q3 profit beat on record production and higher crude prices, raised dividend to $1.10 per share, P/E 11.28 with 2.82% yield and strong free cash flow of $2.18 billion.",
-      "drivers": [
-        "Q3 EPS beat",
-        "Record production",
-        "Dividend increase",
-        "P/E 11.28"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "CVX",
-      "signal": "strong_buy",
-      "confidence": 0.76,
-      "rationale": "Best analyst score in universe at 1.69 (buy), P/E 15.63 with 3.34% dividend yield, YTD +40.40% and positive news sentiment 0.349, despite recent 1-week pullback of -8.01%.",
-      "drivers": [
-        "Top analyst score 1.69",
-        "Dividend yield 3.34%",
-        "YTD +40.40%",
-        "Low beta 0.45"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "Attractive P/E of 8.69 with 3.12% dividend yield, YTD +36.35% and 1-month +2.56%, analyst buy consensus despite recent weekly decline of -7.01%.",
-      "drivers": [
-        "P/E 8.69",
-        "Dividend yield 3.12%",
-        "YTD +36.35%",
-        "Low valuation"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Solid 1-month momentum +7.54% and YTD +18.89%, news sentiment 0.368, analyst buy with P/E 25.5 and 2.59% dividend, steady UK utility exposure.",
-      "drivers": [
-        "1-month momentum +7.54%",
-        "YTD +18.89%",
-        "Positive news sentiment",
-        "Utility stability"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "DNNGY",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Strong recent momentum: 1-week +8.61% and 1-month +7.47%, YTD +7.88% with news sentiment 0.356, benefiting from clean energy tailwinds and operational momentum.",
-      "drivers": [
-        "1-week momentum +8.61%",
-        "1-month momentum +7.47%",
-        "Clean energy catalyst",
-        "Positive sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "High dividend yield of 5.01% with 1-week +5.68% and 1-month +5.46% momentum, news sentiment 0.344, though YTD -19.14% reflects prior weakness.",
-      "drivers": [
-        "Dividend yield 5.01%",
-        "1-week +5.68%",
-        "Renewable energy play",
-        "Positive sentiment"
       ]
     }
   ]
