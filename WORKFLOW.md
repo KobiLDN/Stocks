@@ -32,6 +32,13 @@ The Cloudflare PR preview only shows committed files. A change to bot-side Pytho
 
 Rule: when a PR changes bot-side code, **run the script on the PR branch and commit its regenerated output** (e.g. `market.json` / `market-data.js`) before review. The preview then shows the real behaviour of the new code on real data. If the container can't reach the data source (proxy blocks Yahoo), feed the bot's own last-committed data through the new logic instead.
 
+## Monitoring — is the data fresh?
+
+- **`/health`** (`functions/health.js`) returns 200 when every data stream (prices, market, news, signals, export) is up to date and 503 when one missed its last scheduled run. The body lists each stream's `as_of` and when it was last due.
+- The schedule and grace windows are in `monitoring/freshness.js`. **If a bot's schedule changes (cron-job.org or a workflow `cron:`), update it there too**, or `/health` will raise false alarms or miss real ones. Tests: `node --test monitoring/freshness.test.js` (also run in CI).
+- Every page shows an amber bar at the bottom when `/health` reports something stale.
+- Alerts come from an external uptime monitor polling `/health`, so they don't depend on GitHub or Cloudflare cron.
+
 ## Agora mode — deliberate before implementing
 
 For non-trivial designs, the user runs an **agora**: the plan is debated across multiple AIs (DeepSeek, Cerebras, Claude, …) before any code is written.

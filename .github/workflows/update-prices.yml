@@ -1,14 +1,14 @@
 name: Update Prices
 
 on:
+  # cron-job.org dispatches the runs at 07:30, 15:30 and 20:30 London time.
+  # These UTC crons are a fallback only, set an hour after the winter slots
+  # (two after the summer ones) so they never fire first; the freshness step
+  # below skips them when the dispatched run has already landed.
   schedule:
-    # Three times daily on weekdays (UTC)
-    # 08:00 UTC — 1h after UK open (08:00 BST → 09:00 BST)
-    # 14:30 UTC — 1h after US open (09:30 EDT → 15:30 BST)
-    # 20:30 UTC — after US close  (16:30 EDT → 21:30 BST)
-    - cron: '0 8 * * 1-5'
-    - cron: '30 14 * * 1-5'
-    - cron: '30 20 * * 1-5'
+    - cron: '30 8 * * 1-5'
+    - cron: '30 16 * * 1-5'
+    - cron: '30 21 * * 1-5'
   workflow_dispatch:
     inputs:
       sector:
