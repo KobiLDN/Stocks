@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-11-09 23:29",
-  "fx_gbp_usd": 1.3443,
+  "updated": "2026-11-10 02:50",
+  "fx_gbp_usd": 1.3442,
   "stocks": [
     {
       "ticker": "SNDK",
@@ -19,8 +19,8 @@ window.PRICES_DATA = {
       "high_gbp": "1751",
       "high_usd": 2354.39,
       "bar_pct": 32,
-      "market_cap_gbp_b": 93.836,
-      "market_cap_usd_b": 126.141,
+      "market_cap_gbp_b": 93.838,
+      "market_cap_usd_b": 126.142,
       "beta": null,
       "pe_ratio": 7.09,
       "avg_volume_m": 10.78,
@@ -28,10 +28,17 @@ window.PRICES_DATA = {
       "short_pct": 3.28,
       "analyst": "strong_buy",
       "analyst_score": 1.48,
-      "vol_1d": 13806837,
-      "vol_1w": 82313437,
-      "vol_1m": 229188737,
+      "vol_1d": 13848800,
+      "vol_1w": 82426500,
+      "vol_1m": 229301800,
       "news": [
+        {
+          "title": "Review & Preview: Dip Buyers Unite",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stocks-today-indexes-rise-investors-buy-tech-ai-dip-73965a23?siteid=yhoof2&yptr=yahoo",
+          "published": 1794272100,
+          "sentiment": 0.0
+        },
         {
           "title": "Intel took 25 years to get back to its dot-com peak \u2014 and lost it in 6 months: Chart of the Day",
           "publisher": "Yahoo Finance",
@@ -59,16 +66,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/sandisk-sndk-stock-looks-reasonable-191628354.html",
           "published": 1794251788,
           "sentiment": 0.0
-        },
-        {
-          "title": "SanDisk's 64% collapse: another leg down or buying opportunity?",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/investing/stocks/sndk-sandisks-64-percent-collapse-another-leg-down-or-golden-buying-opportunity",
-          "published": 1794250980,
-          "sentiment": -0.103
         }
       ],
-      "news_sentiment": -0.084
+      "news_sentiment": -0.064
     },
     {
       "ticker": "WDC",
@@ -87,8 +87,8 @@ window.PRICES_DATA = {
       "high_gbp": "595",
       "high_usd": 799.87,
       "bar_pct": 24,
-      "market_cap_gbp_b": 80.692,
-      "market_cap_usd_b": 108.472,
+      "market_cap_gbp_b": 80.693,
+      "market_cap_usd_b": 108.471,
       "beta": 2.344,
       "pe_ratio": 10.19,
       "avg_volume_m": 8.07,
@@ -96,10 +96,24 @@ window.PRICES_DATA = {
       "short_pct": 5.2,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 8376703,
-      "vol_1w": 51473003,
-      "vol_1m": 197174703,
+      "vol_1d": 8386500,
+      "vol_1w": 51511300,
+      "vol_1m": 197213000,
       "news": [
+        {
+          "title": "Review & Preview: Dip Buyers Unite",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stocks-today-indexes-rise-investors-buy-tech-ai-dip-73965a23?siteid=yhoof2&yptr=yahoo",
+          "published": 1794272100,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Western Digital or Micron? Jim Cramer Says \u201cI Think Micron\u2019s a Better Company.\u201d Here\u2019s the Test",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/western-digital-or-micron-jim-cramer-says-i-think-microns-a-better-company-heres-the-test?ref=yahoofinance&tlnk=yf-261109-x6xcjv7g",
+          "published": 1794270724,
+          "sentiment": 0.44
+        },
         {
           "title": "Arista Networks & 2 Momentum Stocks to Buy for Big Gains",
           "publisher": "Zacks",
@@ -120,53 +134,39 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/3-top-quantum-stocks-watch-141158992.html",
           "published": 1794233518,
           "sentiment": 0.527
-        },
-        {
-          "title": "Micron Has Lost Over 40% Since June. Where Does Its Price Target Stand Now?",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/09/micron-has-lost-over-40-since-june-where-does-its-price-target-stand-now/",
-          "published": 1794232037,
-          "sentiment": -0.318
-        },
-        {
-          "title": "Is Western Digital Emerging as a Big Winner in the AI Storage Boom?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/ai/articles/western-digital-emerging-big-winner-121600337.html",
-          "published": 1794226560,
-          "sentiment": 0.586
         }
       ],
-      "news_sentiment": 0.242
+      "news_sentiment": 0.277
     },
     {
       "ticker": "285A",
       "company_name": "Kioxia Holdings",
       "category": "memory",
       "exchange": "TSE",
-      "price_gbp": "39",
-      "price_usd": 52.57,
-      "change_1d": "-1.91%",
-      "change_1w": "-38.37%",
-      "change_1m": "-52.57%",
-      "change_ytd": "+119.81%",
-      "return_1yr": "+92%",
+      "price_gbp": "42",
+      "price_usd": 56.01,
+      "change_1d": "+6.81%",
+      "change_1w": "-21.97%",
+      "change_1m": "-41.69%",
+      "change_ytd": "+134.37%",
+      "return_1yr": "+87%",
       "low_gbp": "13",
-      "low_usd": 17.63,
+      "low_usd": 17.62,
       "high_gbp": "177",
-      "high_usd": 237.87,
-      "bar_pct": 16,
-      "market_cap_gbp_b": 62.496,
-      "market_cap_usd_b": 84.011,
+      "high_usd": 237.69,
+      "bar_pct": 17,
+      "market_cap_gbp_b": 66.587,
+      "market_cap_usd_b": 89.509,
       "beta": null,
-      "pe_ratio": 11.13,
-      "avg_volume_m": 87.23,
+      "pe_ratio": 11.86,
+      "avg_volume_m": 88.12,
       "div_yield_pct": 71.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.56,
-      "vol_1d": 140514100,
-      "vol_1w": 719140000,
-      "vol_1m": 1768965700,
+      "vol_1d": 64186700,
+      "vol_1w": 685493300,
+      "vol_1m": 1798037100,
       "news": [
         {
           "title": "Japan\u2019s Nikkei enters bear market as AI rout sends chip shares into sharp retreat",
@@ -223,8 +223,8 @@ window.PRICES_DATA = {
       "high_gbp": "934",
       "high_usd": 1255.0,
       "bar_pct": 51,
-      "market_cap_gbp_b": 617.067,
-      "market_cap_usd_b": 829.503,
+      "market_cap_gbp_b": 617.076,
+      "market_cap_usd_b": 829.504,
       "beta": 2.398,
       "pe_ratio": 9.86,
       "avg_volume_m": 27.78,
@@ -232,10 +232,24 @@ window.PRICES_DATA = {
       "short_pct": 2.0,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 31809245,
-      "vol_1w": 211639645,
-      "vol_1m": 642729845,
+      "vol_1d": 31935900,
+      "vol_1w": 211889100,
+      "vol_1m": 642979300,
       "news": [
+        {
+          "title": "Micron, FormFactor, Amkor, Teradyne, and Nvidia shares skyrocket, what you need to know",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/micron-formfactor-amkor-teradyne-nvidia-024536276.html",
+          "published": 1794278736,
+          "sentiment": 0.296
+        },
+        {
+          "title": "Western Digital or Micron? Jim Cramer Says \u201cI Think Micron\u2019s a Better Company.\u201d Here\u2019s the Test",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/western-digital-or-micron-jim-cramer-says-i-think-microns-a-better-company-heres-the-test?ref=yahoofinance&tlnk=yf-261109-x6xcjv7g",
+          "published": 1794270724,
+          "sentiment": 0.44
+        },
         {
           "title": "Why Micron Technology Stock Gained On Monday",
           "publisher": "Motley Fool",
@@ -256,23 +270,9 @@ window.PRICES_DATA = {
           "url": "https://www.kiplinger.com/investing/stocks/dow-adds-1-104-points-even-as-nvidia-stock-sinks-stock-market-today",
           "published": 1794258683,
           "sentiment": 0.0
-        },
-        {
-          "title": "Nvidia stock sinks 4% as chipmaker investigates CEO Jensen Huang's relationship with alleged Chinese spy",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/nvidia-stock-sinks-as-chipmaker-investigates-ceo-jensen-huangs-relationship-with-alleged-chinese-spy-130346548.html",
-          "published": 1794229426,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Is Micron a Millionaire-Maker Stock?",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/11/09/is-micron-a-millionaire-maker-stock/",
-          "published": 1794253800,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.076
+      "news_sentiment": 0.224
     },
     {
       "ticker": "STX",
@@ -291,7 +291,7 @@ window.PRICES_DATA = {
       "high_gbp": "852",
       "high_usd": 1145.0,
       "bar_pct": 30,
-      "market_cap_gbp_b": 86.434,
+      "market_cap_gbp_b": 86.435,
       "market_cap_usd_b": 116.19,
       "beta": 2.201,
       "pe_ratio": 26.54,
@@ -300,10 +300,17 @@ window.PRICES_DATA = {
       "short_pct": 3.43,
       "analyst": "strong_buy",
       "analyst_score": 1.42,
-      "vol_1d": 6059430,
-      "vol_1w": 35516630,
-      "vol_1m": 127319330,
+      "vol_1d": 6064100,
+      "vol_1w": 35521300,
+      "vol_1m": 127324000,
       "news": [
+        {
+          "title": "Review & Preview: Dip Buyers Unite",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stocks-today-indexes-rise-investors-buy-tech-ai-dip-73965a23?siteid=yhoof2&yptr=yahoo",
+          "published": 1794272100,
+          "sentiment": 0.0
+        },
         {
           "title": "Seagate Soars 10% in AI Rebound as Morgan Stanley Sees \u201cStrong Fundamentals and Weak Sentiment\u201d",
           "publisher": "TIKR",
@@ -331,13 +338,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/articles/stx-posts-record-q1-fy27-121300140.html",
           "published": 1794226380,
           "sentiment": 0.612
-        },
-        {
-          "title": "Seagate (STX) Stock Could Be Undervalued As Its Three Year Run Continues",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/seagate-stx-stock-could-undervalued-060655366.html",
-          "published": 1794204415,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.167
@@ -359,8 +359,8 @@ window.PRICES_DATA = {
       "high_gbp": "245",
       "high_usd": 329.88,
       "bar_pct": 32,
-      "market_cap_gbp_b": 103.479,
-      "market_cap_usd_b": 139.103,
+      "market_cap_gbp_b": 103.481,
+      "market_cap_usd_b": 139.104,
       "beta": 2.327,
       "pe_ratio": 50.86,
       "avg_volume_m": 23.9,
@@ -368,10 +368,31 @@ window.PRICES_DATA = {
       "short_pct": 3.28,
       "analyst": "strong_buy",
       "analyst_score": 1.39,
-      "vol_1d": 33417731,
-      "vol_1w": 219500031,
-      "vol_1m": 608709331,
+      "vol_1d": 33517400,
+      "vol_1w": 219705000,
+      "vol_1m": 608914300,
       "news": [
+        {
+          "title": "Stocks making big moves this week: Sprout Social, Redwire, Inspire Medical Systems, Fastly, and Marvell Technology",
+          "publisher": "StockStory",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stocks-making-big-moves-week-022936540.html",
+          "published": 1794277776,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Review & Preview: Dip Buyers Unite",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stocks-today-indexes-rise-investors-buy-tech-ai-dip-73965a23?siteid=yhoof2&yptr=yahoo",
+          "published": 1794272100,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Alphabet Almost Sets a Record No One Wants",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/alphabet-almost-sets-a-record-no-one-wants/",
+          "published": 1794271382,
+          "sentiment": -0.296
+        },
         {
           "title": "Why Marvell Technology Stock Fell Hard in October",
           "publisher": "Motley Fool",
@@ -385,30 +406,9 @@ window.PRICES_DATA = {
           "url": "https://www.tikr.com/blog/fabrinet-dropped-33-in-a-month-despite-a-record-quarter-time-to-sell-or-load-up?ref=yahoofinance&tlnk=yf-261109-w6f5mxvr",
           "published": 1794252886,
           "sentiment": 0.0
-        },
-        {
-          "title": "Marvell Sinks 36%, Lumentum Drops 31% on $115 Billion Deal: Is the Selloff Overdone?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/marvell-sinks-36-lumentum-drops-31-on-115-billion-deal-is-the-selloff-overdone?ref=yahoofinance&tlnk=yf-261109-m5w7p52w",
-          "published": 1794252823,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Marvell (MRVL) Stock Looks Undervalued After Its 166% Three Year Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-mrvl-stock-looks-undervalued-191647901.html",
-          "published": 1794251807,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Coherent Jumps 13% as Optical Stocks Extend AI Rebound; Lumentum Surges 11%, Applied Optoelectronics Rises 4%",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/09/coherent-jumps-13-as-optical-stocks-extend-ai-rebound-lumentum-surges-11-applied-optoelectronics-rises-4/",
-          "published": 1794239909,
-          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.015
+      "news_sentiment": 0.035
     },
     {
       "ticker": "P",
@@ -436,9 +436,9 @@ window.PRICES_DATA = {
       "short_pct": 3.84,
       "analyst": "buy",
       "analyst_score": 1.55,
-      "vol_1d": 2530988,
-      "vol_1w": 16596388,
-      "vol_1m": 71472988,
+      "vol_1d": 2531200,
+      "vol_1w": 16596600,
+      "vol_1m": 71473200,
       "news": [
         {
           "title": "Nvidia Stock Shock Has Investors Rethinking AI Infrastructure ETFs",
@@ -563,7 +563,7 @@ window.PRICES_DATA = {
       "high_gbp": "283",
       "high_usd": 380.78,
       "bar_pct": 31,
-      "market_cap_gbp_b": 72.769,
+      "market_cap_gbp_b": 72.77,
       "market_cap_usd_b": 97.821,
       "beta": 1.127,
       "pe_ratio": 26.99,
@@ -572,9 +572,9 @@ window.PRICES_DATA = {
       "short_pct": 3.75,
       "analyst": "buy",
       "analyst_score": 1.64,
-      "vol_1d": 6840580,
-      "vol_1w": 29524680,
-      "vol_1m": 80875180,
+      "vol_1d": 7331500,
+      "vol_1w": 30015600,
+      "vol_1m": 81366100,
       "news": [
         {
           "title": "Constellation Energy Corporation Q3 2026 Earnings Call Summary",
@@ -598,17 +598,17 @@ window.PRICES_DATA = {
           "sentiment": 0.273
         },
         {
+          "title": "Following Constellation Energy Earnings, Here's What Barchart Data Says Comes Next for CEG Stock",
+          "publisher": "Barchart",
+          "url": "https://www.barchart.com/story/news/8740901/following-constellation-energy-earnings-here-s-what-barchart-data-says-comes-next-for-ceg-stock",
+          "published": 1794253857,
+          "sentiment": 0.273
+        },
+        {
           "title": "Constellation Energy (CEG) Q3 2026 Earnings Call Transcript",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/earnings/call-transcripts/2026/11/09/constellation-energy-ceg-q3-2026-earnings-call-transcript/",
           "published": 1794250793,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Sector Update: Energy Stocks Higher Monday Afternoon",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-higher-monday-184627929.html",
-          "published": 1794249987,
           "sentiment": 0.273
         }
       ],
@@ -631,7 +631,7 @@ window.PRICES_DATA = {
       "high_gbp": "146",
       "high_usd": 196.8,
       "bar_pct": 27,
-      "market_cap_gbp_b": 33.772,
+      "market_cap_gbp_b": 33.773,
       "market_cap_usd_b": 45.399,
       "beta": 1.375,
       "pe_ratio": 18.02,
@@ -640,9 +640,9 @@ window.PRICES_DATA = {
       "short_pct": 3.43,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 7364286,
-      "vol_1w": 61541486,
-      "vol_1m": 154219486,
+      "vol_1d": 7371600,
+      "vol_1w": 61571500,
+      "vol_1m": 154249500,
       "news": [
         {
           "title": "NRG Soars 10% on $4 Billion Gas Plant Sale and $3 Billion Buyback Plan: \u201cUnlocking Substantial Value\u201d",
@@ -659,16 +659,16 @@ window.PRICES_DATA = {
           "sentiment": -0.382
         },
         {
-          "title": "Vistra and Constellation Both Fell Sharply After the Election. One Has Far More Exposure to Texas.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/11/09/vistra-and-constellation-both-fell-sharply-after-t/",
+          "title": "Data-Center Moratoriums? They Aren\u2019t Showing Up in Constellation Energy\u2019s Guidance.",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/constellation-energy-earnings-stock-price-89dc5612?siteid=yhoof2&yptr=yahoo",
           "published": 1794248700,
           "sentiment": 0.0
         },
         {
-          "title": "Data-Center Moratoriums? They Aren\u2019t Showing Up in Constellation Energy\u2019s Guidance.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/constellation-energy-earnings-stock-price-89dc5612?siteid=yhoof2&yptr=yahoo",
+          "title": "Vistra and Constellation Both Fell Sharply After the Election. One Has Far More Exposure to Texas.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/vistra-and-constellation-both-fell-sharply-after-t/",
           "published": 1794248700,
           "sentiment": 0.0
         },
@@ -708,9 +708,9 @@ window.PRICES_DATA = {
       "short_pct": 9.99,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 1190090,
-      "vol_1w": 9168890,
-      "vol_1m": 24573390,
+      "vol_1d": 1190400,
+      "vol_1w": 9169200,
+      "vol_1m": 24573700,
       "news": [
         {
           "title": "NRG Soars 10% on $4 Billion Gas Plant Sale and $3 Billion Buyback Plan: \u201cUnlocking Substantial Value\u201d",
@@ -768,7 +768,7 @@ window.PRICES_DATA = {
       "high_usd": 38.12,
       "bar_pct": 41,
       "market_cap_gbp_b": 15.862,
-      "market_cap_usd_b": 21.323,
+      "market_cap_usd_b": 21.322,
       "beta": 0.955,
       "pe_ratio": null,
       "avg_volume_m": 1.11,
@@ -776,9 +776,9 @@ window.PRICES_DATA = {
       "short_pct": 0.56,
       "analyst": "buy",
       "analyst_score": 2.18,
-      "vol_1d": 951003,
-      "vol_1w": 7368003,
-      "vol_1m": 28481403,
+      "vol_1d": 985700,
+      "vol_1w": 7402700,
+      "vol_1m": 28516100,
       "news": [
         {
           "title": "Brookfield Renewable Partners LP (BEP) (Q3 2026) Earnings Call Highlights: Record FFO, $3 ...",
@@ -844,9 +844,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.86,
-      "vol_1d": 2090835,
-      "vol_1w": 14430335,
-      "vol_1m": 51498535,
+      "vol_1d": 2104600,
+      "vol_1w": 14444100,
+      "vol_1m": 51512300,
       "news": [
         {
           "title": "Brookfield Renewable Corp (BEPC) Q3 2026 Earnings Call Highlights: Record FFO Growth, $3 ...",
@@ -903,8 +903,8 @@ window.PRICES_DATA = {
       "high_gbp": "890",
       "high_usd": 1195.94,
       "bar_pct": 45,
-      "market_cap_gbp_b": 163.291,
-      "market_cap_usd_b": 219.507,
+      "market_cap_gbp_b": 163.294,
+      "market_cap_usd_b": 219.508,
       "beta": 1.058,
       "pe_ratio": 21.77,
       "avg_volume_m": 2.66,
@@ -912,10 +912,24 @@ window.PRICES_DATA = {
       "short_pct": 2.79,
       "analyst": "strong_buy",
       "analyst_score": 1.45,
-      "vol_1d": 4344714,
-      "vol_1w": 28572714,
-      "vol_1m": 82907814,
+      "vol_1d": 4347200,
+      "vol_1w": 28575200,
+      "vol_1m": 82910300,
       "news": [
+        {
+          "title": "Alphabet Almost Sets a Record No One Wants",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/alphabet-almost-sets-a-record-no-one-wants/",
+          "published": 1794271382,
+          "sentiment": -0.296
+        },
+        {
+          "title": "GE Vernova Stock In Focus After Germany Wind Turbine Order",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-stock-focus-germany-001553145.html",
+          "published": 1794269753,
+          "sentiment": 0.0
+        },
         {
           "title": "X-Energy Can Construct Its First Nuclear Reactors, U.S. Says",
           "publisher": "Barrons.com",
@@ -936,23 +950,9 @@ window.PRICES_DATA = {
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-09-2026/card/industrials-push-stock-indexes-to-broad-based-rally-9byZnVAbDSw1nB5gbvdD?siteid=yhoof2&yptr=yahoo",
           "published": 1794256329,
           "sentiment": 0.0
-        },
-        {
-          "title": "Musk: \u201cSoftBank Is Defaulting on Their Turbine Orders.\u201d That\u2019s a Warning for GE Vernova",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/musk-softbank-is-defaulting-on-their-turbine-orders-thats-a-warning-for-ge-vernova?ref=yahoofinance&tlnk=yf-261109-f85xw8f3",
-          "published": 1794254012,
-          "sentiment": -0.34
-        },
-        {
-          "title": "Eaton Lost 23% in a Month. RBC Sees 58% Upside From Here",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/eaton-lost-23-in-a-month-rbc-sees-58-upside-from-here?ref=yahoofinance&tlnk=yf-261109-cx2p5v44",
-          "published": 1794253013,
-          "sentiment": -0.318
         }
       ],
-      "news_sentiment": -0.132
+      "news_sentiment": -0.059
     },
     {
       "ticker": "BWXT",
@@ -980,10 +980,17 @@ window.PRICES_DATA = {
       "short_pct": 4.64,
       "analyst": "buy",
       "analyst_score": 1.61,
-      "vol_1d": 1328571,
-      "vol_1w": 10674071,
-      "vol_1m": 27263771,
+      "vol_1d": 1328800,
+      "vol_1w": 10674300,
+      "vol_1m": 27264000,
       "news": [
+        {
+          "title": "Q3 Earnings Season Winners: 3 Companies Raising Guidance",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/q3-earnings-season-winners-3-001200950.html",
+          "published": 1794269520,
+          "sentiment": 0.477
+        },
         {
           "title": "BWX Technologies: 3 Key Takeaways for Long-Term Investors",
           "publisher": "Motley Fool",
@@ -1011,16 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/11/04/better-nuclear-energy-stock-to-buy-after-the-sell/",
           "published": 1793852400,
           "sentiment": 0.612
-        },
-        {
-          "title": "Why Is BWX Technologies (BWXT) Winning A $2.2 Billion Army Reactor Contract?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/why-bwx-technologies-bwxt-winning-151004100.html",
-          "published": 1793805004,
-          "sentiment": 0.527
         }
       ],
-      "news_sentiment": 0.312
+      "news_sentiment": 0.302
     },
     {
       "ticker": "SMR",
@@ -1048,9 +1048,9 @@ window.PRICES_DATA = {
       "short_pct": 24.84,
       "analyst": "hold",
       "analyst_score": 2.84,
-      "vol_1d": 34347195,
-      "vol_1w": 173304095,
-      "vol_1m": 641050295,
+      "vol_1d": 34400500,
+      "vol_1w": 173435600,
+      "vol_1m": 641181800,
       "news": [
         {
           "title": "NuScale Is Still Down 61% in 2026: Did Today Mark the Bottom for SMR Stock?",
@@ -1116,10 +1116,17 @@ window.PRICES_DATA = {
       "short_pct": 21.92,
       "analyst": "buy",
       "analyst_score": 2.12,
-      "vol_1d": 19899417,
-      "vol_1w": 87579717,
-      "vol_1m": 225034517,
+      "vol_1d": 19946000,
+      "vol_1w": 87661400,
+      "vol_1m": 225116200,
       "news": [
+        {
+          "title": "OKLO Stock Is On Track To Reverse 6 Weeks Of Losses, But This Analyst Warns Nuclear Euphoria Is Fading",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/oklo-stock-is-on-track-to-reverse-6-weeks-of-losses-but-this-analyst-warns-nuclear-euphoria-is-fading/cNGuGRmR97O",
+          "published": 1794273607,
+          "sentiment": 0.67
+        },
         {
           "title": "Should You Buy Oklo Stock While It's Under $30?",
           "publisher": "Motley Fool",
@@ -1147,16 +1154,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/oklo-seeing-solid-execution-shifts-163129393.html",
           "published": 1794241889,
           "sentiment": 0.153
-        },
-        {
-          "title": "H.C. Wainwright\u2019s $90 Target Says Oklo\u2019s Selloff Went Too Far",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/h-c-wainwrights-90-target-says-oklos-selloff-went-too-far?ref=yahoofinance&tlnk=yf-261109-fcgp8q9v",
-          "published": 1794241840,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.09
+      "news_sentiment": 0.224
     },
     {
       "ticker": "NNE",
@@ -1184,9 +1184,9 @@ window.PRICES_DATA = {
       "short_pct": 38.85,
       "analyst": "buy",
       "analyst_score": 1.56,
-      "vol_1d": 2821555,
-      "vol_1w": 14035855,
-      "vol_1m": 44887555,
+      "vol_1d": 2822100,
+      "vol_1w": 14036400,
+      "vol_1m": 44888100,
       "news": [
         {
           "title": "NuScale Is Still Down 61% in 2026: Did Today Mark the Bottom for SMR Stock?",
@@ -1243,19 +1243,26 @@ window.PRICES_DATA = {
       "high_gbp": "101",
       "high_usd": 135.24,
       "bar_pct": 13,
-      "market_cap_gbp_b": 24.419,
-      "market_cap_usd_b": 32.826,
+      "market_cap_gbp_b": 24.42,
+      "market_cap_usd_b": 32.827,
       "beta": 1.126,
-      "pe_ratio": 114.2,
+      "pe_ratio": 109.23,
       "avg_volume_m": 3.29,
       "div_yield_pct": 24.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.55,
-      "vol_1d": 3666386,
-      "vol_1w": 28844586,
-      "vol_1m": 86548286,
+      "vol_1d": 3710200,
+      "vol_1w": 28888400,
+      "vol_1m": 86592100,
       "news": [
+        {
+          "title": "3 Canadian Growth Stocks To Own In November 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-growth-stocks-own-001900465.html",
+          "published": 1794269940,
+          "sentiment": 0.382
+        },
         {
           "title": "UUUU Q3 Earnings Miss on Investment Losses, Uranium Sales Rise",
           "publisher": "Zacks",
@@ -1283,16 +1290,9 @@ window.PRICES_DATA = {
           "url": "https://www.marketbeat.com/articles/marketbeat-week-in-review-2026-11-2-11-6/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1794052800,
           "sentiment": 0.0
-        },
-        {
-          "title": "A $120 Billion Westinghouse Reactor Plan Is Taking Shape. Here\u2019s What History Says Happened the Last Time the U.S. Built Them.",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/11/07/a-usd120-billion-westinghouse-reactor-plan-is-taking-shape-here-s-what-history-says-happened-the-last-time-the-u-s-built-them/",
-          "published": 1794046982,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.048
+      "news_sentiment": 0.029
     },
     {
       "ticker": "UEC",
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": 15.41,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 8802189,
-      "vol_1w": 72253889,
-      "vol_1m": 224881689,
+      "vol_1d": 8812000,
+      "vol_1w": 72263700,
+      "vol_1m": 224891500,
       "news": [
         {
           "title": "Purepoint Uranium CEO explains why rising uranium prices aren't lifting stocks",
@@ -1388,9 +1388,9 @@ window.PRICES_DATA = {
       "short_pct": 30.28,
       "analyst": "buy",
       "analyst_score": 1.8,
-      "vol_1d": 1098721,
-      "vol_1w": 5578021,
-      "vol_1m": 20594921,
+      "vol_1d": 1099800,
+      "vol_1w": 5579100,
+      "vol_1m": 20596000,
       "news": [
         {
           "title": "UUUU Q3 Earnings Miss on Investment Losses, Uranium Sales Rise",
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "high_gbp": "283",
       "high_usd": 379.93,
       "bar_pct": 23,
-      "market_cap_gbp_b": 57.424,
+      "market_cap_gbp_b": 57.425,
       "market_cap_usd_b": 77.193,
       "beta": 2.108,
       "pe_ratio": 37.47,
@@ -1456,9 +1456,9 @@ window.PRICES_DATA = {
       "short_pct": 3.63,
       "analyst": "strong_buy",
       "analyst_score": 1.33,
-      "vol_1d": 7526647,
-      "vol_1w": 54455947,
-      "vol_1m": 180421547,
+      "vol_1d": 7551900,
+      "vol_1w": 54497400,
+      "vol_1m": 180463000,
       "news": [
         {
           "title": "Eaton Lost 23% in a Month. RBC Sees 58% Upside From Here",
@@ -1515,8 +1515,8 @@ window.PRICES_DATA = {
       "high_gbp": "356",
       "high_usd": 478.0,
       "bar_pct": 29,
-      "market_cap_gbp_b": 103.84,
-      "market_cap_usd_b": 139.589,
+      "market_cap_gbp_b": 103.841,
+      "market_cap_usd_b": 139.588,
       "beta": 1.139,
       "pe_ratio": 35.89,
       "avg_volume_m": 2.33,
@@ -1524,9 +1524,9 @@ window.PRICES_DATA = {
       "short_pct": 1.94,
       "analyst": "buy",
       "analyst_score": 1.54,
-      "vol_1d": 3549031,
-      "vol_1w": 24004531,
-      "vol_1m": 68941031,
+      "vol_1d": 3549800,
+      "vol_1w": 24005300,
+      "vol_1m": 68941800,
       "news": [
         {
           "title": "Industrials Push Stock Indexes to Broad-Based Rally",
@@ -1592,9 +1592,9 @@ window.PRICES_DATA = {
       "short_pct": 12.79,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 817866,
-      "vol_1w": 4916366,
-      "vol_1m": 16928466,
+      "vol_1d": 818000,
+      "vol_1w": 4916500,
+      "vol_1m": 16928600,
       "news": [
         {
           "title": "Powell Industries Stock Has The Bull Case Changed After Record Orders",
@@ -1651,7 +1651,7 @@ window.PRICES_DATA = {
       "high_gbp": "840",
       "high_usd": 1128.68,
       "bar_pct": 82,
-      "market_cap_gbp_b": 77.651,
+      "market_cap_gbp_b": 77.652,
       "market_cap_usd_b": 104.384,
       "beta": 0.966,
       "pe_ratio": 63.33,
@@ -1660,9 +1660,9 @@ window.PRICES_DATA = {
       "short_pct": 1.87,
       "analyst": "strong_buy",
       "analyst_score": 1.46,
-      "vol_1d": 836290,
-      "vol_1w": 4436890,
-      "vol_1m": 14185090,
+      "vol_1d": 836300,
+      "vol_1w": 4436900,
+      "vol_1m": 14185100,
       "news": [
         {
           "title": "Buy 5 Non-Tech Nasdaq Stocks to Enhance Your Portfolio Returns in Q4",
@@ -1720,7 +1720,7 @@ window.PRICES_DATA = {
       "high_usd": 208.14,
       "bar_pct": 55,
       "market_cap_gbp_b": 51.58,
-      "market_cap_usd_b": 69.337,
+      "market_cap_usd_b": 69.336,
       "beta": 1.002,
       "pe_ratio": 75.99,
       "avg_volume_m": 2.16,
@@ -1728,9 +1728,9 @@ window.PRICES_DATA = {
       "short_pct": 0.01,
       "analyst": "strong_buy",
       "analyst_score": 1.44,
-      "vol_1d": 2418114,
-      "vol_1w": 17863814,
-      "vol_1m": 55249014,
+      "vol_1d": 2418900,
+      "vol_1w": 17864600,
+      "vol_1m": 55249800,
       "news": [
         {
           "title": "What Is Digital Realty Trust (DLR) Signaling With Its Global AI Infrastructure Push?",
@@ -1787,7 +1787,7 @@ window.PRICES_DATA = {
       "high_gbp": "151",
       "high_usd": 202.5,
       "bar_pct": 68,
-      "market_cap_gbp_b": 65.204,
+      "market_cap_gbp_b": 65.205,
       "market_cap_usd_b": 87.652,
       "beta": 0.842,
       "pe_ratio": 26.62,
@@ -1796,9 +1796,9 @@ window.PRICES_DATA = {
       "short_pct": 1.68,
       "analyst": "buy",
       "analyst_score": 1.52,
-      "vol_1d": 2610070,
-      "vol_1w": 15835670,
-      "vol_1m": 72211870,
+      "vol_1d": 2680900,
+      "vol_1w": 15906500,
+      "vol_1m": 72282700,
       "news": [
         {
           "title": "American Tower Stock And 2 AI Power Plays Worth Watching",
@@ -1855,7 +1855,7 @@ window.PRICES_DATA = {
       "high_gbp": "304",
       "high_usd": 408.61,
       "bar_pct": 13,
-      "market_cap_gbp_b": 2635.278,
+      "market_cap_gbp_b": 2635.313,
       "market_cap_usd_b": 3542.516,
       "beta": 1.226,
       "pe_ratio": 15.05,
@@ -1864,47 +1864,47 @@ window.PRICES_DATA = {
       "short_pct": 1.33,
       "analyst": "strong_buy",
       "analyst_score": 1.34,
-      "vol_1d": 36238549,
-      "vol_1w": 212460049,
-      "vol_1m": 815020649,
+      "vol_1d": 36349900,
+      "vol_1w": 212633400,
+      "vol_1m": 815194000,
       "news": [
+        {
+          "title": "Is Wall Street Turning on AI?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/is-wall-street-turning-on-ai/",
+          "published": 1794275581,
+          "sentiment": 0.0
+        },
+        {
+          "title": "ASTS Stock Retreats On Q3 Sales Miss \u2013 But AST SpaceMobile\u2019s $1B Revenue Opportunity, AI Partnerships Keep Growth In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-q3-sales-miss-1b-revenue-opportunity-ai-partnerships-growth-focus/cNGuGazR97f",
+          "published": 1794274223,
+          "sentiment": 0.778
+        },
+        {
+          "title": "What Does Nvidia (NVDA) Need To Prove As AI Rivalry And CEO Scrutiny Build?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/does-nvidia-nvda-prove-ai-011637196.html",
+          "published": 1794273397,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Alphabet Almost Sets a Record No One Wants",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/alphabet-almost-sets-a-record-no-one-wants/",
+          "published": 1794271382,
+          "sentiment": -0.296
+        },
         {
           "title": "\u2018Big Short\u2019 Investor Steve Eisman Says OpenAI\u2019s Collapse Could Trigger an Immediate Recession",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/11/09/big-short-investor-steve-eisman-says-openais-collapse-could-trigger-an-immediate-recession/",
           "published": 1794265634,
           "sentiment": -0.718
-        },
-        {
-          "title": "Fervo Energy Co (FRVO) (Q3 2026) Earnings Call Highlights: First Geoblock Online, Google PPA ...",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/energy/articles/fervo-energy-co-frvo-q3-230444854.html",
-          "published": 1794265484,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Advanced Micro Devices (AMD) Lands EPYC Role In New AI Security System",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-amd-lands-220845589.html",
-          "published": 1794262125,
-          "sentiment": 0.527
-        },
-        {
-          "title": "Trade Desk\u2019s Earnings Beat Defies Analysts\u2019 \u2018Lost Year\u2019 Projections",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/trade-desk-earnings-stock-price-7ac7ae25?siteid=yhoof2&yptr=yahoo",
-          "published": 1794261960,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Berkshire Hathaway May Have Sold More Bank of America Stock in the Third Quarter",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/berkshire-hathaway-bank-of-america-stock-sales-alphabet-47a56bd6?siteid=yhoof2&yptr=yahoo",
-          "published": 1794261240,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.016
+      "news_sentiment": -0.047
     },
     {
       "ticker": "MSFT",
@@ -1923,8 +1923,8 @@ window.PRICES_DATA = {
       "high_gbp": "416",
       "high_usd": 559.15,
       "bar_pct": 93,
-      "market_cap_gbp_b": 3011.763,
-      "market_cap_usd_b": 4048.613,
+      "market_cap_gbp_b": 3011.803,
+      "market_cap_usd_b": 4048.612,
       "beta": 1.045,
       "pe_ratio": 28.45,
       "avg_volume_m": 23.16,
@@ -1932,47 +1932,47 @@ window.PRICES_DATA = {
       "short_pct": 0.88,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
-      "vol_1d": 25282835,
-      "vol_1w": 165547135,
-      "vol_1m": 537360335,
+      "vol_1d": 25295600,
+      "vol_1w": 165577900,
+      "vol_1m": 537391100,
       "news": [
+        {
+          "title": "Tech leads Asian stock rally as traders track Wall St rebound",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/markets/world-indices/articles/tech-leads-asian-stock-rally-023930562.html",
+          "published": 1794278370,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Alphabet Almost Sets a Record No One Wants",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/alphabet-almost-sets-a-record-no-one-wants/",
+          "published": 1794271382,
+          "sentiment": -0.296
+        },
+        {
+          "title": "Securitize to Acquire River One, Expanding Into $6 Trillion Asset-Backed Finance Market",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/securitize-to-acquire-river-one-expanding-into-6-trillion-asset-backed-finance-market-7783",
+          "published": 1794267060,
+          "sentiment": 0.077
+        },
+        {
+          "title": "Is Robinhood Stock Too Expensive?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/is-robinhood-stock-too-expensive/",
+          "published": 1794266822,
+          "sentiment": 0.0
+        },
         {
           "title": "\u2018Big Short\u2019 Investor Steve Eisman Says OpenAI\u2019s Collapse Could Trigger an Immediate Recession",
           "publisher": "24/7 Wall St.",
           "url": "https://247wallst.com/investing/2026/11/09/big-short-investor-steve-eisman-says-openais-collapse-could-trigger-an-immediate-recession/",
           "published": 1794265634,
           "sentiment": -0.718
-        },
-        {
-          "title": "Why the Jensen Huang scandal is a 'net loss for China'",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/why-the-jensen-huang-scandal-is-a-net-loss-for-china-221329322.html",
-          "published": 1794262409,
-          "sentiment": -0.637
-        },
-        {
-          "title": "Could IREN Actually Climb 117%? Or Is Cantor Fitzgerald Totally Wrong?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/could-iren-actually-climb-117-or-is-cantor-fitzgerald-totally-wrong?ref=yahoofinance&tlnk=yf-261109-4cgmr9mq",
-          "published": 1794258368,
-          "sentiment": -0.579
-        },
-        {
-          "title": "Bill Gates Microsoft Copilot AI Predicts a SOL Crypto Explosion",
-          "publisher": "99bitcoins",
-          "url": "https://99bitcoins.com/news/altcoins/bill-gates-microsoft-copilot-ai-predicts-sol-crypto-explosion/",
-          "published": 1794256672,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Adobe (ADBE) Expands AI Reach, Is The 25% Discount Too Wide?",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/adobe-adbe-expands-ai-reach-200712841.html",
-          "published": 1794254832,
-          "sentiment": 0.128
         }
       ],
-      "news_sentiment": -0.361
+      "news_sentiment": -0.187
     },
     {
       "ticker": "AMZN",
@@ -1991,8 +1991,8 @@ window.PRICES_DATA = {
       "high_gbp": "214",
       "high_usd": 287.2,
       "bar_pct": 78,
-      "market_cap_gbp_b": 2147.157,
-      "market_cap_usd_b": 2886.352,
+      "market_cap_gbp_b": 2147.185,
+      "market_cap_usd_b": 2886.351,
       "beta": 1.503,
       "pe_ratio": 21.58,
       "avg_volume_m": 38.72,
@@ -2000,9 +2000,9 @@ window.PRICES_DATA = {
       "short_pct": 0.95,
       "analyst": "strong_buy",
       "analyst_score": 1.33,
-      "vol_1d": 50588278,
-      "vol_1w": 309897878,
-      "vol_1m": 1018868678,
+      "vol_1d": 51419400,
+      "vol_1w": 310803400,
+      "vol_1m": 1019774200,
       "news": [
         {
           "title": "One nugget overlooked during the AI sell-off: token costs",
@@ -2019,28 +2019,28 @@ window.PRICES_DATA = {
           "sentiment": -0.34
         },
         {
-          "title": "\u2018Big Short\u2019 Investor Steve Eisman Says OpenAI\u2019s Collapse Could Trigger an Immediate Recession",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/09/big-short-investor-steve-eisman-says-openais-collapse-could-trigger-an-immediate-recession/",
-          "published": 1794265634,
-          "sentiment": -0.718
-        },
-        {
-          "title": "Trade Desk\u2019s Earnings Beat Defies Analysts\u2019 \u2018Lost Year\u2019 Projections",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/trade-desk-earnings-stock-price-7ac7ae25?siteid=yhoof2&yptr=yahoo",
-          "published": 1794261960,
+          "title": "Tech leads Asian stock rally as traders track Wall St rebound",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/markets/world-indices/articles/tech-leads-asian-stock-rally-023930562.html",
+          "published": 1794278370,
           "sentiment": 0.0
         },
         {
-          "title": "Jeff Bezos says your family is 'not going to need' 2 paychecks thanks to AI",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/technology/jeff-bezos-predictions-ai-impact-on-jobs",
-          "published": 1794261780,
-          "sentiment": 0.44
+          "title": "Dow Jones Soars 1,132 Points As Amazon, Tesla Rally, But Nvidia Dives; CPI Inflation Report Next",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-amazon-tesla-nvidia-cpi-inflation-report/?src=A00220&yptr=yahoo",
+          "published": 1794277908,
+          "sentiment": 0.09
+        },
+        {
+          "title": "Securitize to Acquire River One, Expanding Into $6 Trillion Asset-Backed Finance Market",
+          "publisher": "CryptoProwl",
+          "url": "https://www.cryptoprowl.com/releases/securitize-to-acquire-river-one-expanding-into-6-trillion-asset-backed-finance-market-7783",
+          "published": 1794267060,
+          "sentiment": 0.077
         }
       ],
-      "news_sentiment": -0.129
+      "news_sentiment": -0.04
     },
     {
       "ticker": "META",
@@ -2059,7 +2059,7 @@ window.PRICES_DATA = {
       "high_gbp": "580",
       "high_usd": 779.82,
       "bar_pct": 47,
-      "market_cap_gbp_b": 1219.904,
+      "market_cap_gbp_b": 1219.92,
       "market_cap_usd_b": 1639.876,
       "beta": 1.279,
       "pe_ratio": 21.88,
@@ -2068,10 +2068,17 @@ window.PRICES_DATA = {
       "short_pct": 1.28,
       "analyst": "strong_buy",
       "analyst_score": 1.41,
-      "vol_1d": 19066305,
-      "vol_1w": 109597905,
-      "vol_1m": 522330605,
+      "vol_1d": 19106400,
+      "vol_1w": 109661200,
+      "vol_1m": 522393900,
       "news": [
+        {
+          "title": "ASTS Stock Retreats On Q3 Sales Miss \u2013 But AST SpaceMobile\u2019s $1B Revenue Opportunity, AI Partnerships Keep Growth In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/asts-q3-sales-miss-1b-revenue-opportunity-ai-partnerships-growth-focus/cNGuGazR97f",
+          "published": 1794274223,
+          "sentiment": 0.778
+        },
         {
           "title": "Tech, Media & Telecom Roundup: Market Talk",
           "publisher": "The Wall Street Journal",
@@ -2099,16 +2106,9 @@ window.PRICES_DATA = {
           "url": "https://www.tikr.com/blog/trumps-former-ai-czar-says-i-get-really-worried-about-2028-thats-a-big-problem-for-nvidia?ref=yahoofinance&tlnk=yf-261109-7822xmhh",
           "published": 1794254197,
           "sentiment": -0.636
-        },
-        {
-          "title": "Eaton Lost 23% in a Month. RBC Sees 58% Upside From Here",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/eaton-lost-23-in-a-month-rbc-sees-58-upside-from-here?ref=yahoofinance&tlnk=yf-261109-cx2p5v44",
-          "published": 1794253013,
-          "sentiment": -0.318
         }
       ],
-      "news_sentiment": -0.433
+      "news_sentiment": -0.214
     },
     {
       "ticker": "IREN",
@@ -2136,9 +2136,9 @@ window.PRICES_DATA = {
       "short_pct": 24.26,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 85940163,
-      "vol_1w": 459306863,
-      "vol_1m": 1412522163,
+      "vol_1d": 86157500,
+      "vol_1w": 459905100,
+      "vol_1m": 1413120400,
       "news": [
         {
           "title": "Could IREN Actually Climb 117%? Or Is Cantor Fitzgerald Totally Wrong?",
@@ -2204,9 +2204,9 @@ window.PRICES_DATA = {
       "short_pct": 26.9,
       "analyst": "strong_buy",
       "analyst_score": 1.32,
-      "vol_1d": 12983015,
-      "vol_1w": 120974215,
-      "vol_1m": 379906815,
+      "vol_1d": 13878500,
+      "vol_1w": 121869700,
+      "vol_1m": 380802300,
       "news": [
         {
           "title": "Cipher Digital Rises 4%, Riot Up 6% as Morgan Stanley Calls Powered Shell Stocks a Buying Opportunity",
@@ -2272,9 +2272,9 @@ window.PRICES_DATA = {
       "short_pct": 30.2,
       "analyst": "strong_buy",
       "analyst_score": 1.28,
-      "vol_1d": 57090530,
-      "vol_1w": 380148030,
-      "vol_1m": 1139233930,
+      "vol_1d": 57123000,
+      "vol_1w": 380525200,
+      "vol_1m": 1139611100,
       "news": [
         {
           "title": "Cipher Digital Rises 4%, Riot Up 6% as Morgan Stanley Calls Powered Shell Stocks a Buying Opportunity",
@@ -2340,9 +2340,9 @@ window.PRICES_DATA = {
       "short_pct": 16.22,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 5379311,
-      "vol_1w": 52415911,
-      "vol_1m": 150795711,
+      "vol_1d": 5394800,
+      "vol_1w": 52431400,
+      "vol_1m": 150811200,
       "news": [
         {
           "title": "Riot Platforms, Other Powered Shell Providers Present Buying Opportunity, Morgan Stanley Says",
@@ -2399,8 +2399,8 @@ window.PRICES_DATA = {
       "high_gbp": "38",
       "high_usd": 51.4,
       "bar_pct": 29,
-      "market_cap_gbp_b": 14.025,
-      "market_cap_usd_b": 18.853,
+      "market_cap_gbp_b": 14.026,
+      "market_cap_usd_b": 18.854,
       "beta": 2.181,
       "pe_ratio": 6.03,
       "avg_volume_m": 43.86,
@@ -2408,9 +2408,9 @@ window.PRICES_DATA = {
       "short_pct": 13.54,
       "analyst": "hold",
       "analyst_score": 2.94,
-      "vol_1d": 41393777,
-      "vol_1w": 293941777,
-      "vol_1m": 878395377,
+      "vol_1d": 41596200,
+      "vol_1w": 294323100,
+      "vol_1m": 878776700,
       "news": [
         {
           "title": "DELL Rallies 130% in a Year: Can AI Momentum Fuel More Gains?",
@@ -2467,7 +2467,7 @@ window.PRICES_DATA = {
       "high_gbp": "443",
       "high_usd": 595.51,
       "bar_pct": 49,
-      "market_cap_gbp_b": 163.798,
+      "market_cap_gbp_b": 163.8,
       "market_cap_usd_b": 220.188,
       "beta": 1.436,
       "pe_ratio": 20.13,
@@ -2476,10 +2476,17 @@ window.PRICES_DATA = {
       "short_pct": 4.23,
       "analyst": "buy",
       "analyst_score": 1.83,
-      "vol_1d": 6675259,
-      "vol_1w": 44971959,
-      "vol_1m": 158076259,
+      "vol_1d": 6695300,
+      "vol_1w": 45004200,
+      "vol_1m": 158108500,
       "news": [
+        {
+          "title": "Will Cisco Systems (CSCO) Deliver the Strong Results the Market Needs to See?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/cisco-systems-csco-deliver-strong-221900491.html",
+          "published": 1794262740,
+          "sentiment": 0.511
+        },
         {
           "title": "DELL Rallies 130% in a Year: Can AI Momentum Fuel More Gains?",
           "publisher": "Zacks",
@@ -2507,16 +2514,9 @@ window.PRICES_DATA = {
           "url": "https://247wallst.com/investing/2026/11/08/americas-ai-spending-boom-just-crossed-a-staggering-1-trillion-milestone/",
           "published": 1794154533,
           "sentiment": 0.0
-        },
-        {
-          "title": "Celestica and Dell Just Dropped 22% in a Week. Is It Time to Sell, or Load Up?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/celestica-and-dell-just-dropped-22-in-a-week-is-it-time-to-sell-or-load-up?ref=yahoofinance&tlnk=yf-261108-cwqh6ppg",
-          "published": 1794103811,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.176
+      "news_sentiment": 0.278
     },
     {
       "ticker": "COHR",
@@ -2535,18 +2535,18 @@ window.PRICES_DATA = {
       "high_gbp": "327",
       "high_usd": 440.0,
       "bar_pct": 31,
-      "market_cap_gbp_b": 32.994,
+      "market_cap_gbp_b": 32.995,
       "market_cap_usd_b": 44.353,
       "beta": 2.234,
-      "pe_ratio": 46.62,
+      "pe_ratio": 39.93,
       "avg_volume_m": 7.55,
       "div_yield_pct": null,
       "short_pct": 4.61,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 14926300,
-      "vol_1w": 65936100,
-      "vol_1m": 191242400,
+      "vol_1d": 14957100,
+      "vol_1w": 66009900,
+      "vol_1m": 191316200,
       "news": [
         {
           "title": "Stock Market Today: Dow Jumps, These Stocks Test Entries; Warren Buffett Play Clears Buy Zone",
@@ -2603,8 +2603,8 @@ window.PRICES_DATA = {
       "high_gbp": "850",
       "high_usd": 1143.0,
       "bar_pct": 41,
-      "market_cap_gbp_b": 40.217,
-      "market_cap_usd_b": 54.062,
+      "market_cap_gbp_b": 40.218,
+      "market_cap_usd_b": 54.063,
       "beta": 1.645,
       "pe_ratio": null,
       "avg_volume_m": 5.29,
@@ -2612,10 +2612,24 @@ window.PRICES_DATA = {
       "short_pct": 8.57,
       "analyst": "buy",
       "analyst_score": 1.6,
-      "vol_1d": 5927927,
-      "vol_1w": 38070627,
-      "vol_1m": 136776627,
+      "vol_1d": 6043900,
+      "vol_1w": 38199500,
+      "vol_1m": 136905500,
       "news": [
+        {
+          "title": "Review & Preview: Dip Buyers Unite",
+          "publisher": "Barrons.com",
+          "url": "https://www.barrons.com/articles/stocks-today-indexes-rise-investors-buy-tech-ai-dip-73965a23?siteid=yhoof2&yptr=yahoo",
+          "published": 1794272100,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Alphabet Almost Sets a Record No One Wants",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/09/alphabet-almost-sets-a-record-no-one-wants/",
+          "published": 1794271382,
+          "sentiment": -0.296
+        },
         {
           "title": "Nvidia, AMD, CoreWeave, Coherent, First Solar, Trade Desk, and More Stocks That Explain Today\u2019s Market",
           "publisher": "Barrons.com",
@@ -2636,23 +2650,9 @@ window.PRICES_DATA = {
           "url": "https://www.tikr.com/blog/fabrinet-dropped-33-in-a-month-despite-a-record-quarter-time-to-sell-or-load-up?ref=yahoofinance&tlnk=yf-261109-w6f5mxvr",
           "published": 1794252886,
           "sentiment": 0.0
-        },
-        {
-          "title": "Marvell Sinks 36%, Lumentum Drops 31% on $115 Billion Deal: Is the Selloff Overdone?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/marvell-sinks-36-lumentum-drops-31-on-115-billion-deal-is-the-selloff-overdone?ref=yahoofinance&tlnk=yf-261109-m5w7p52w",
-          "published": 1794252823,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Marvell (MRVL) Stock Looks Undervalued After Its 166% Three Year Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-mrvl-stock-looks-undervalued-191647901.html",
-          "published": 1794251807,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.021
+      "news_sentiment": -0.08
     },
     {
       "ticker": "AAOI",
@@ -2680,9 +2680,9 @@ window.PRICES_DATA = {
       "short_pct": 18.74,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 15320599,
-      "vol_1w": 94289899,
-      "vol_1m": 289647299,
+      "vol_1d": 15523300,
+      "vol_1w": 94544400,
+      "vol_1m": 289901800,
       "news": [
         {
           "title": "Coherent Jumps 13% as Optical Stocks Extend AI Rebound; Lumentum Surges 11%, Applied Optoelectronics Rises 4%",
@@ -2748,9 +2748,9 @@ window.PRICES_DATA = {
       "short_pct": 6.95,
       "analyst": "buy",
       "analyst_score": 1.78,
-      "vol_1d": 1395882,
-      "vol_1w": 9371882,
-      "vol_1m": 25506182,
+      "vol_1d": 1396700,
+      "vol_1w": 9372700,
+      "vol_1m": 25507000,
       "news": [
         {
           "title": "Why Retail Investors Are Watching Nvidia Alternatives In AI Infrastructure",
@@ -2808,7 +2808,7 @@ window.PRICES_DATA = {
       "high_usd": 418.9,
       "bar_pct": 30,
       "market_cap_gbp_b": 13.067,
-      "market_cap_usd_b": 17.566,
+      "market_cap_usd_b": 17.565,
       "beta": 1.827,
       "pe_ratio": 53.36,
       "avg_volume_m": 1.52,
@@ -2816,9 +2816,9 @@ window.PRICES_DATA = {
       "short_pct": 4.01,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 3599694,
-      "vol_1w": 16866394,
-      "vol_1m": 44475394,
+      "vol_1d": 3600400,
+      "vol_1w": 16867100,
+      "vol_1m": 44476100,
       "news": [
         {
           "title": "MTSI Q3 CY2026 deep dive: robust growth met by market skepticism amid supply chain and end-market shifts",
@@ -2884,9 +2884,9 @@ window.PRICES_DATA = {
       "short_pct": 7.5,
       "analyst": "strong_buy",
       "analyst_score": 1.19,
-      "vol_1d": 2900617,
-      "vol_1w": 22497317,
-      "vol_1m": 81319217,
+      "vol_1d": 2906800,
+      "vol_1w": 22503500,
+      "vol_1m": 81325400,
       "news": [
         {
           "title": "Why Retail Investors Are Watching Nvidia Alternatives In AI Infrastructure",
@@ -2943,8 +2943,8 @@ window.PRICES_DATA = {
       "high_gbp": "230",
       "high_usd": 308.67,
       "bar_pct": 21,
-      "market_cap_gbp_b": 18.58,
-      "market_cap_usd_b": 24.976,
+      "market_cap_gbp_b": 18.581,
+      "market_cap_usd_b": 24.977,
       "beta": 3.292,
       "pe_ratio": 47.12,
       "avg_volume_m": 8.09,
@@ -2952,9 +2952,9 @@ window.PRICES_DATA = {
       "short_pct": 5.78,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 9110134,
-      "vol_1w": 52690234,
-      "vol_1m": 193463734,
+      "vol_1d": 9124500,
+      "vol_1w": 52732700,
+      "vol_1m": 193506200,
       "news": [
         {
           "title": "Credo Technology Group Holding (CRDO) Helped Set New AI Network Standards, Is The 44% Undervaluation Real?",
@@ -3020,9 +3020,9 @@ window.PRICES_DATA = {
       "short_pct": 6.88,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 2573881,
-      "vol_1w": 20238081,
-      "vol_1m": 79928381,
+      "vol_1d": 2579500,
+      "vol_1w": 20243700,
+      "vol_1m": 79934000,
       "news": [
         {
           "title": "MaxLinear (MXL) Stock Looks Fairly Valued Despite Its 275% Run",
@@ -3080,7 +3080,7 @@ window.PRICES_DATA = {
       "high_usd": 389.93,
       "bar_pct": 55,
       "market_cap_gbp_b": 36.597,
-      "market_cap_usd_b": 49.196,
+      "market_cap_usd_b": 49.195,
       "beta": 1.209,
       "pe_ratio": 39.1,
       "avg_volume_m": 1.33,
@@ -3088,9 +3088,9 @@ window.PRICES_DATA = {
       "short_pct": 1.45,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 1167439,
-      "vol_1w": 9098439,
-      "vol_1m": 31018839,
+      "vol_1d": 1192600,
+      "vol_1w": 9123600,
+      "vol_1m": 31044000,
       "news": [
         {
           "title": "3 Cash Rich AI Stocks Investors Are Watching As Debt Costs Rise",
@@ -3147,18 +3147,18 @@ window.PRICES_DATA = {
       "high_gbp": "45",
       "high_usd": 60.43,
       "bar_pct": 37,
-      "market_cap_gbp_b": 5.85,
-      "market_cap_usd_b": 7.864,
+      "market_cap_gbp_b": 5.851,
+      "market_cap_usd_b": 7.865,
       "beta": 1.314,
-      "pe_ratio": 123.0,
+      "pe_ratio": 110.28,
       "avg_volume_m": 5.45,
       "div_yield_pct": null,
       "short_pct": 4.91,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
-      "vol_1d": 9702518,
-      "vol_1w": 60966418,
-      "vol_1m": 143507618,
+      "vol_1d": 9702900,
+      "vol_1w": 60966800,
+      "vol_1m": 143508000,
       "news": [
         {
           "title": "The top 5 analyst questions from Viavi Solutions\u2019s Q3 CY2026 earnings call",
@@ -3224,9 +3224,9 @@ window.PRICES_DATA = {
       "short_pct": 19.07,
       "analyst": "buy",
       "analyst_score": 1.67,
-      "vol_1d": 10566383,
-      "vol_1w": 68648583,
-      "vol_1m": 244344583,
+      "vol_1d": 10616800,
+      "vol_1w": 68747800,
+      "vol_1m": 244443800,
       "news": [
         {
           "title": "4 Strong Buy AI Stocks to Consider Amid the Tech Selloff: CLS, DELL, TER & AXTI",
