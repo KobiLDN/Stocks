@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Branch tip at job start, not the triggering commit: a run queued behind
+          # another bot must build on that bot's push, or it conflicts (21 Sept, #54)
+          ref: ${{ github.ref }}
 
       - uses: actions/setup-python@v5
         with:
