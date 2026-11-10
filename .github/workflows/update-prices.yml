@@ -38,6 +38,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Branch tip at job start, not the triggering commit: a run queued behind
+          # another bot must build on that bot's push, or it conflicts (21 Sept, #54)
+          ref: ${{ github.ref }}
+
+      # cron-job.org dispatches the price runs; this schedule is only a fallback.
+      # A scheduled run that finds every sector updated in the last 4h skips, so
+      # it no longer duplicates the dispatched run. 4h < the shortest gap between
+      # dispatched runs (5h), so a missed dispatch is still covered.
+      - name: Skip if prices are already fresh (scheduled runs only)
+        id: fresh
+        if: github.event_name == 'schedule'
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo
+          ldn = ZoneInfo("Europe/London")
+          now = datetime.now(ldn)
+          oldest = min(
+              datetime.strptime(json.load(open(f"{s}/prices.json"))["updated"], "%Y-%m-%d %H:%M").replace(tzinfo=ldn)
+              for s in ["AI", "Biotech", "Defence", "Tech", "Crypto", "Energy", "MegaCap"]
+          )
+          skip = now - oldest < timedelta(hours=4)
+          print(f"Oldest sector update {oldest:%Y-%m-%d %H:%M} London ({now - oldest} ago) -> {'skip' if skip else 'run'}")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"skip={'true' if skip else 'false'}\n")
+          PY
 
       - uses: actions/setup-python@v5
         with:
@@ -45,6 +73,7 @@ jobs:
           cache: pip
 
       - name: Run price updaters
+        if: steps.fresh.outputs.skip != 'true'
         env:
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
@@ -59,12 +88,13 @@ jobs:
           done
 
       - name: Run market updater (SPY/QQQ/VIX)
-        if: github.event_name == 'schedule' || inputs.sector == 'all'
+        if: steps.fresh.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.sector == 'all')
         run: |
           pip install -q yfinance
           python update_market.py
 
       - name: Commit and push if changed
+        if: steps.fresh.outputs.skip != 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
