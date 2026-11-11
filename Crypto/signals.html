@@ -662,14 +662,18 @@
     feed.innerHTML = html;
   }
 
-  if (window.SIGNALS_DATA) {
-    renderSignals(window.SIGNALS_DATA);
-  } else {
-    fetch('signals-local.json')
-      .then(r => r.ok ? r.json() : Promise.reject())
-      .then(data => renderSignals(data))
-      .catch(() => renderSignals(null));
-  }
+  // Render once the page has finished loading: fmtDate() lives in nav.js, which loads at the
+  // end of <body>. Calling it straight away threw and left the page empty (since 8 Jul).
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.SIGNALS_DATA) {
+      renderSignals(window.SIGNALS_DATA);
+    } else {
+      fetch('signals-local.json')
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(data => renderSignals(data))
+        .catch(() => renderSignals(null));
+    }
+  });
 
   function toggleHow(header) {
     header.classList.toggle('open');

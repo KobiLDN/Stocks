@@ -156,6 +156,11 @@
   margin-bottom: 24px;
 }
 
+/* Phones: keep the All Sectors link + theme button at their own width (the box was
+   squeezed to nothing, pushing the button off screen); the title wraps instead */
+@media (max-width: 600px) {
+  .sector-switcher { flex: 0 0 auto; }
+}
 </style>
 </head>
 <body>

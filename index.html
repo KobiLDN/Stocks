@@ -618,11 +618,19 @@
     .hub-section-hdr-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
     .hub-section-hdr-line { flex: 1; height: 1px; background: var(--border); }
 
+    /* Section titles are real headings (h2, sector cards h3) for screen readers; keep them
+       looking exactly as before by cancelling the browser's default heading margin/weight */
+    /* :where() has zero specificity, so each class's own margin/weight still wins */
+    :where(h2.sec-hdr-label, h2.hub-section-hdr-label, h2.top-panel-title, h2.section-label, h3.card-name) { margin: 0; font-weight: inherit; }
+
     @media (max-width: 900px) {
       h1 { font-size: 22px; }
       .header-sub { font-size: 9px; }
     }
     @media (max-width: 640px) {
+      /* let the title block shrink and wrap so the theme button stays on screen */
+      .header-brand { flex-shrink: 1; min-width: 0; }
+      .header-sub { white-space: normal; overflow-wrap: anywhere; }
       .hamburger { display: flex; }
       .left-rail { display: none; }
       .drawer-overlay.open .left-rail { display: flex !important; }
@@ -788,7 +796,7 @@
       </div>
 
       <div class="sec-hdr">
-        <span class="sec-hdr-label">Live Charts</span>
+        <h2 class="sec-hdr-label">Live Charts</h2>
         <div class="tv-tf-group" id="tv-tf-group">
           <button class="tv-tf-btn" data-tf="1D" onclick="setTvTimeframe('1D')">1D</button>
           <button class="tv-tf-btn active" data-tf="1W" onclick="setTvTimeframe('1W')">1W</button>
@@ -815,13 +823,13 @@
         </div>
       </div>
 
-      <div class="sec-hdr"><span class="sec-hdr-label">Sector Heatmap · 1-Day Median</span><span class="sec-hdr-line"></span></div>
+      <div class="sec-hdr"><h2 class="sec-hdr-label">Sector Heatmap · 1-Day Median</h2><span class="sec-hdr-line"></span></div>
       <div class="sector-heatmap" id="sector-heatmap-1d"></div>
 
-      <div class="sec-hdr"><span class="sec-hdr-label">Sector Heatmap · 1-Week Median</span><span class="sec-hdr-line"></span></div>
+      <div class="sec-hdr"><h2 class="sec-hdr-label">Sector Heatmap · 1-Week Median</h2><span class="sec-hdr-line"></span></div>
       <div class="sector-heatmap" id="sector-heatmap"></div>
 
-      <div class="sec-hdr"><span class="sec-hdr-label" id="leaders-hdr">Market Leaders · Top 1W</span><span class="sec-hdr-line"></span></div>
+      <div class="sec-hdr"><h2 class="sec-hdr-label" id="leaders-hdr">Market Leaders · Top 1W</h2><span class="sec-hdr-line"></span></div>
       <div class="movers-grid">
         <div>
           <div class="mover-wrap">
@@ -840,11 +848,11 @@
 
     </section>
     <!-- ═══ Hub section ═══ -->
-    <div class="hub-section-hdr"><span class="hub-section-hdr-label">// Stock Hub</span><span class="hub-section-hdr-line"></span></div>
+    <div class="hub-section-hdr"><h2 class="hub-section-hdr-label">// Stock Hub</h2><span class="hub-section-hdr-line"></span></div>
 
     <div class="top-panel">
       <div class="top-panel-header">
-        <span class="top-panel-title">// Top 20 Signals</span>
+        <h2 class="top-panel-title">// Top 20 Signals</h2>
         <span class="top-panel-sub">Ranked by confidence across all sectors</span>
       </div>
       <table class="top-table">
@@ -863,7 +871,7 @@
       </table>
     </div>
 
-    <div class="section-label">// Sectors</div>
+    <h2 class="section-label">// Sectors</h2>
     <div class="card-grid">
 
       <a class="card live" href="AI/index.html">
@@ -872,7 +880,7 @@
           <div class="sector-stats" id="stats-AI"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">AI Infrastructure</div>
+        <h3 class="card-name">AI Infrastructure</h3>
         <div class="card-desc">48 stocks across compute, memory, power, optical, and semiconductor categories.</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='AI/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -892,7 +900,7 @@
           <div class="sector-stats" id="stats-Defence"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">Defence</div>
+        <h3 class="card-name">Defence</h3>
         <div class="card-desc">28 stocks across US primes, UK/European, cyber/intel, drones, space and weapons systems.</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Defence/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -912,7 +920,7 @@
           <div class="sector-stats" id="stats-Biotech"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">Biotech</div>
+        <h3 class="card-name">Biotech</h3>
         <div class="card-desc">30 stocks across large-cap pharma, gene editing, genomics, oncology, mRNA, rare disease, metabolic, and neuroscience.</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Biotech/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -932,7 +940,7 @@
           <div class="sector-stats" id="stats-Tech"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">Technology</div>
+        <h3 class="card-name">Technology</h3>
         <div class="card-desc">31 stocks across mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, and hardware/infra.</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Tech/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -952,7 +960,7 @@
           <div class="sector-stats" id="stats-Crypto"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">Crypto</div>
+        <h3 class="card-name">Crypto</h3>
         <div class="card-desc">31 coins across Bitcoin, Layer 1 (ETH/SOL/BNB), Payments (XRP/XLM/TRX), Emerging (SUI/HBAR/TON), Infrastructure (POL/DOT/LINK), Meme (DOGE/PEPE), and AI tokens (TAO/FET/RNDR/NEAR).</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Crypto/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -972,7 +980,7 @@
           <div class="sector-stats" id="stats-Energy"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">Energy</div>
+        <h3 class="card-name">Energy</h3>
         <div class="card-desc">20 stocks across Oil Majors (XOM/CVX/SHEL/BP), E&amp;P/Refining (COP/OXY/EOG), Oilfield Services (SLB/HAL/BKR), Utilities (NEE/SSE), and Clean Energy (ENPH/FSLR/BEPC/DNNGY).</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='Energy/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -992,7 +1000,7 @@
           <div class="sector-stats" id="stats-MegaCap"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">Mega-Cap</div>
+        <h3 class="card-name">Mega-Cap</h3>
         <div class="card-desc">50 stocks across Big Tech (AAPL/MSFT/NVDA/GOOGL/META), Financials (JPM/V/MA/BLK), Healthcare (LLY/UNH/ABBV), Consumer (WMT/COST/MCD), Energy &amp; Industrial (XOM/CAT/GE), Tech &amp; Semis (AMD/AVGO/TSM/ASML), and Global Growth (2222.SR/NVO/BABA/SAP).</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='MegaCap/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -1012,7 +1020,7 @@
           <div class="sector-stats" id="stats-All"></div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">All Sectors</div>
+        <h3 class="card-name">All Sectors</h3>
         <div class="card-desc">240 stocks &amp; coins across AI, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap — combined dashboard, heatmap, signals, and What-If calculator.</div>
         <div class="picks-section" onclick="event.preventDefault(); event.stopPropagation(); location.href='All/signals.html'">
           <div class="picks-header">// Top Signals</div>
@@ -1031,7 +1039,7 @@
           <div class="card-icon">📰</div>
           <span class="badge badge-live">Live</span>
         </div>
-        <div class="card-name">News Feed</div>
+        <h3 class="card-name">News Feed</h3>
         <div class="card-desc">FT · Reuters · BBC · Guardian — aggregated business news, VADER sentiment scored, refreshed 3× daily.</div>
         <div class="picks-section" style="margin-top:0" onclick="event.preventDefault(); event.stopPropagation(); location.href='news.html'">
           <div class="picks-header">// Latest Headlines</div>

@@ -857,3 +857,10 @@ footer {
 }
 .drawer-overlay .drawer .nav-panel .nav-icon  { font-size: 16px; }
 .drawer-overlay .drawer .nav-panel .nav-label { display: block !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 64px; }
+
+/* Phones: let the header's title block shrink and wrap, so the theme button stays on
+   screen (it was pushed off the right edge on most pages at 390px) */
+@media (max-width: 600px) {
+  .header-left { flex-shrink: 1; min-width: 0; }
+  .header-sub { white-space: normal; overflow-wrap: anywhere; }
+}
