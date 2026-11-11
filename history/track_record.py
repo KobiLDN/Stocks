@@ -31,6 +31,8 @@ UTC = dt.timezone.utc
 BUFFER = dt.timedelta(minutes=5)
 HORIZONS = (("1w", 7), ("1m", 30), ("3m", 91))
 MAX_EXIT_GAP = dt.timedelta(days=7)    # exit bar this far before the target = data gap, not a result
+MAX_ENTRY_DELAY = dt.timedelta(days=10)  # first price this long after the signal = data gap (TON's Yahoo
+                                         # history starts in Nov), not a purchase; allows long holidays
 BUY_SIDE = ("strong_buy", "buy")
 BENCHMARK = "SPY"
 # Signals whose inputs were wrong at the time: listed, never scored.
@@ -120,6 +122,8 @@ def measure(generated, series, spy, now):
     if i is None:
         late = generated.date().isoformat() >= complete_through(series.exchange, now)
         return None, {}, "awaiting entry" if late else "no price data"
+    if series.opens[i] - generated > MAX_ENTRY_DELAY:
+        return None, {}, "no price data around the signal date"
     entry = {"date": series.dates[i], "price": series.bars[i][1]}
     si = spy.first_open_after(series.opens[i], strict=False) if spy else None
     ready_through = min(complete_through(series.exchange, now), complete_through("Index", now))

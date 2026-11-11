@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How every AI and momentum buy signal performed against the S&P 500 at 1 week, 1 month and 3 months.">
+<title>Track Record</title>
+<script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<script src="AI/prices-data.js"></script>
+<script src="shared.js" defer></script>
+<style>
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .dim { color: var(--muted); }
+
+  /* Verdict cards */
+  .verdict-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .verdict-grid { grid-template-columns: 1fr; } }
+  .verdict-card { background: var(--surface); border: 1px solid var(--border); padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+  .verdict-horizon { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+  .verdict-big { font-family: 'IBM Plex Mono', monospace; font-size: 34px; font-weight: 700; line-height: 1; }
+  .verdict-big-label { font-size: 12px; color: var(--muted); margin-top: -4px; }
+  .verdict-line { font-size: 14px; }
+  .verdict-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; border-top: 1px solid var(--border); padding-top: 10px; }
+  .vs-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+  .vs-value { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 700; }
+
+  /* Plain-English findings */
+  .findings { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 14px 20px; margin-top: 16px; }
+  .findings ul { margin: 0; padding-left: 18px; }
+  .findings li { font-size: 14px; line-height: 1.6; margin: 4px 0; }
+
+  /* Horizon switch */
+  .horizon-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 4px 0 12px; }
+
+  /* Breakdown tables */
+  .bd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 1100px) { .bd-grid { grid-template-columns: 1fr; } }
+  .bd-card { background: var(--surface); border: 1px solid var(--border); overflow-x: auto; }
+  .bd-title { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); padding: 10px 14px; border-bottom: 1px solid var(--border); background: var(--surface2); }
+  table.tr-table { width: 100%; border-collapse: collapse; }
+  .tr-table th { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); text-align: right; padding: 8px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .tr-table th:first-child, .tr-table td:first-child { text-align: left; }
+  .tr-table td { font-size: 14px; padding: 7px 12px; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; font-family: 'IBM Plex Mono', monospace; }
+  .tr-table td:first-child { font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; }
+  .tr-table tr:last-child td { border-bottom: none; }
+  .tr-table tr.small td { opacity: 0.55; }
+  .bar-cell { width: 120px; }
+  .xbar { position: relative; height: 10px; background: var(--surface2); }
+  .xbar span { position: absolute; top: 0; bottom: 0; }
+  .xbar .mid { left: 50%; width: 1px; background: var(--border); }
+
+  /* All-signals table */
+  .sig-controls { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 10px; }
+  .sig-controls .filter-group { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+  .sig-controls input[type=text] { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 6px 10px; min-width: 200px; outline: none; }
+  .sig-controls input[type=text]:focus { border-color: var(--accent); }
+  .sig-wrap { background: var(--surface); border: 1px solid var(--border); overflow-x: auto; }
+  .sig-table td { font-size: 13px; }
+  .sig-table th.sortable { cursor: pointer; }
+  .sig-table th.sortable:hover, .sig-table th.sorted { color: var(--accent); }
+  .tkr { font-weight: 700; }
+  .tkr-name { display: block; font-size: 11px; font-weight: 400; color: var(--muted); max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+  .sig-pill { font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 6px; border: 1px solid currentColor; }
+  .sig-strong_buy { color: var(--green); }
+  .sig-buy { color: var(--accent); }
+  .note-cell { font-family: 'IBM Plex Sans', sans-serif !important; font-size: 12px !important; color: var(--muted); text-align: left !important; white-space: normal !important; }
+  .more-row { display: flex; justify-content: center; gap: 12px; align-items: center; padding: 12px; }
+  .more-btn { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 7px 16px; border: 1px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer; }
+  .more-btn:hover { background: var(--accent); color: var(--bg); }
+
+  /* Method */
+  .method { background: var(--surface); border: 1px solid var(--border); padding: 14px 20px; font-size: 14px; line-height: 1.7; }
+  .method ul { margin: 6px 0; padding-left: 18px; }
+
+  .drawer-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4); }
+  .drawer-overlay.open { display: block; }
+  .drawer { position: fixed; top: 36px; left: 0; bottom: 0; width: 92px; background: var(--bg); border-right: 1px solid var(--accent); overflow-y: auto; z-index: 301; padding: 8px 6px; display: flex; flex-direction: column; gap: 4px; }
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .verdict-big { font-size: 28px; }
+    .header-left { flex-shrink: 1; min-width: 0; }
+    .header-sub { white-space: normal; }
+    .section-hdr { flex-wrap: wrap; }
+    .section-hdr-count { white-space: normal; }
+    .sig-controls input[type=text] { min-width: 0; width: 100%; }
+  }
+</style>
+</head>
+<body data-layout="rail">
+
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail"></div>
+<div class="right-side">
+<header>
+  <div class="header-inner">
+  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+  <div class="header-left">
+    <div class="header-label">// Do the signals work?</div>
+    <h1>Track <span>Record</span></h1>
+    <div class="header-sub" id="tr-sub">Every buy signal, scored against the S&amp;P 500 · loading…</div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+</header>
+
+<div class="page-main">
+<div class="container" id="tr-root">
+
+  <div class="section-hdr"><span class="section-hdr-label">The verdict</span><span class="section-hdr-line"></span><span class="section-hdr-count" id="verdict-count"></span></div>
+  <div class="verdict-grid" id="verdict-grid"><div class="empty-state">Loading track record…</div></div>
+  <div class="findings" id="findings" style="display:none"><ul id="findings-list"></ul></div>
+
+  <div class="section-hdr"><span class="section-hdr-label">What works, what doesn't</span><span class="section-hdr-line"></span></div>
+  <div class="horizon-bar">
+    <span class="sort-label">Held for</span>
+    <div class="sort-group" id="horizon-group">
+      <button class="sort-btn" data-h="1w">1 week</button>
+      <button class="sort-btn" data-h="1m">1 month</button>
+      <button class="sort-btn active" data-h="3m">3 months</button>
+    </div>
+    <span class="dim mono" style="font-size:11px">Faded rows: fewer than 30 signals, so treat with care.</span>
+  </div>
+  <div class="bd-grid" id="bd-grid"></div>
+
+  <div class="section-hdr"><span class="section-hdr-label">Every signal</span><span class="section-hdr-line"></span><span class="section-hdr-count" id="sig-count"></span></div>
+  <div class="sig-controls">
+    <div class="filter-group" id="f-sector"></div>
+    <div class="filter-group" id="f-kind"></div>
+    <div class="filter-group" id="f-signal"></div>
+    <input type="text" id="f-search" placeholder="Search ticker or name…" oninput="renderSignals(true)">
+  </div>
+  <div class="sig-wrap">
+    <table class="tr-table sig-table" id="sig-table"><thead></thead><tbody></tbody></table>
+    <div class="more-row" id="more-row"></div>
+  </div>
+
+  <div class="section-hdr"><span class="section-hdr-label">How it's measured</span><span class="section-hdr-line"></span></div>
+  <div class="method" id="method"></div>
+
+</div><!-- /.container -->
+
+<footer>
+  Track record rebuilt nightly from the history database · <span id="tr-footer">—</span>
+</footer>
+</div><!-- /.page-main -->
+</div><!-- /.right-side -->
+
+<script>
+const HORIZONS = [['1w', '1 week'], ['1m', '1 month'], ['3m', '3 months']];
+const SECTOR_LABEL = { AI: 'AI', Biotech: 'Biotech', Crypto: 'Crypto', Defence: 'Defence', Energy: 'Energy', MegaCap: 'Mega-Cap', Tech: 'Technology' };
+const SIGNAL_LABEL = { strong_buy: 'Strong buy', buy: 'Buy', hold: 'Hold', sell: 'Sell', strong_sell: 'Strong sell' };
+const KIND_LABEL = { ai: 'AI pick', momentum: 'Momentum screen' };
+const CONF_ORDER = ['90%+', '80%+', '70%+', '60%+', 'under 60%', 'unknown'];
+const SMALL = 30;
+const PAGE = 150;
+
+let TR = null, IX = {}, horizon = '3m';
+const state = { sector: 'all', kind: 'all', signal: 'all', sort: 'entry_date', dir: -1, shown: PAGE };   // newest with a result first
+
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+function pct(v, dp = 2) { return v == null ? '—' : (v > 0 ? '+' : '') + v.toFixed(dp) + '%'; }
+function cls(v) { return v == null ? 'dim' : v > 0 ? 'pos' : v < 0 ? 'neg' : ''; }
+function monthLabel(m) { const [y, mo] = m.split('-'); return new Date(Date.UTC(+y, +mo - 1, 1)).toLocaleString('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' }); }
+function ukDate(d) { if (!d) return '—'; const [y, m, day] = d.slice(0, 10).split('-'); return `${day}/${m}/${y.slice(2)}`; }
+function stamp(iso) { try { return new Date(iso).toLocaleString('en-GB', { timeZone: 'Europe/London', day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }); } catch (e) { return iso; } }
+
+/* ── Verdict ─────────────────────────────────────────────────────────── */
+function verdictText(s) {
+  if (!s) return 'Not enough finished signals yet.';
+  const e = s.excess;
+  const lead = e >= 0.5 ? `Beat the S&P 500 by ${e.toFixed(2)}% on average`
+             : e <= -0.5 ? `Trailed the S&P 500 by ${Math.abs(e).toFixed(2)}% on average`
+             : 'Roughly matched the S&P 500 on average';
+  return `${lead}, and beat it in ${s.beat_spy.toFixed(0)}% of signals.`;
+}
+
+function renderVerdict() {
+  const all = (TR.summary.all || {})['buy signals'] || {};
+  document.getElementById('verdict-grid').innerHTML = HORIZONS.map(([h, label]) => {
+    const s = all[h];
+    if (!s) return `<div class="verdict-card"><div class="verdict-horizon">Held ${label}</div><div class="verdict-line dim">No finished ${label} windows yet.</div></div>`;
+    return `<div class="verdict-card">
+      <div class="verdict-horizon">Held ${label}</div>
+      <div class="verdict-big ${cls(s.excess)}">${pct(s.excess)}</div>
+      <div class="verdict-big-label">average vs the S&amp;P 500</div>
+      <div class="verdict-line">${verdictText(s)}</div>
+      <div class="verdict-stats">
+        <div><div class="vs-label">Signals</div><div class="vs-value">${s.n.toLocaleString('en-GB')}</div></div>
+        <div><div class="vs-label">Beat S&amp;P 500</div><div class="vs-value ${s.beat_spy >= 50 ? 'pos' : 'neg'}">${s.beat_spy.toFixed(1)}%</div></div>
+        <div><div class="vs-label">Avg return</div><div class="vs-value ${cls(s.avg)}">${pct(s.avg)}</div></div>
+        <div><div class="vs-label">S&amp;P 500 same windows</div><div class="vs-value ${cls(s.spy)}">${pct(s.spy)}</div></div>
+        <div><div class="vs-label">Median vs S&amp;P</div><div class="vs-value ${cls(s.median_excess)}">${pct(s.median_excess)}</div></div>
+      </div>
+    </div>`;
+  }).join('');
+  const c = TR.counts;
+  document.getElementById('verdict-count').textContent =
+    `${c.signals.toLocaleString('en-GB')} signals · ${c.scored.toLocaleString('en-GB')} scored · ${c.pending} still running`;
+}
+
+/* ── Findings: plain-English, computed from the data ─────────────────── */
+function renderFindings() {
+  const S = TR.summary, out = [];
+  const all = (S.all || {})['buy signals'] || {};
+  const h = all['3m'] && all['3m'].n >= 500 ? '3m' : '1m';
+  const hl = h === '3m' ? '3 months' : '1 month';
+  const get = (g, k) => ((S[g] || {})[k] || {})[h];
+  const ok = s => s && s.n >= SMALL;
+  const vs = e => `${pct(e)} against the S&amp;P 500`;
+
+  if (all[h]) out.push(`Over ${hl}, buy signals returned <b>${pct(all[h].avg)}</b> against the S&amp;P 500's ${pct(all[h].spy)} over the same windows, beating it in ${all[h].beat_spy.toFixed(0)}% of cases.`);
+
+  const sb = get('by_signal', 'strong_buy'), b = get('by_signal', 'buy');
+  if (ok(sb) && ok(b)) {
+    const better = sb.excess > b.excess;
+    out.push(`<b>"Strong buy" did ${better ? 'better' : 'worse'} than plain "buy"</b>: ${pct(sb.excess)} vs ${pct(b.excess)} against the S&amp;P 500.`);
+  }
+
+  const confs = CONF_ORDER.map(k => [k, get('by_confidence', k)]).filter(([, s]) => ok(s));
+  if (confs.length >= 3) {
+    const top = confs.find(([k]) => k === '90%+');
+    const ranked = [...confs].sort((a, b) => b[1].excess - a[1].excess);
+    if (top) {
+      const pos = ranked.findIndex(([k]) => k === '90%+');
+      const where = pos === 0 ? 'did best' : pos === ranked.length - 1 ? 'did worst' : 'were middling';
+      out.push(`<b>The AI's most confident picks (90%+) ${where}</b>: ${vs(top[1].excess)}. Higher confidence ${pos === 0 ? 'has' : 'has not'} meant better results so far.`);
+    }
+  }
+
+  const ai = get('by_kind', 'ai'), mo = get('by_kind', 'momentum');
+  if (ok(ai) && ok(mo)) out.push(`AI picks: ${vs(ai.excess)}. Momentum-screen picks: ${pct(mo.excess)}.`);
+
+  const secs = Object.keys(S.by_sector || {}).map(k => [k, get('by_sector', k)]).filter(([, s]) => ok(s)).sort((a, b) => b[1].excess - a[1].excess);
+  if (secs.length >= 2) {
+    const [bk, bs] = secs[0], [wk, ws] = secs[secs.length - 1];
+    out.push(`Best sector: <b>${SECTOR_LABEL[bk] || bk}</b> (${vs(bs.excess)}, beating it ${bs.beat_spy.toFixed(0)}% of the time). Worst: <b>${SECTOR_LABEL[wk] || wk}</b> (${pct(ws.excess)}, beating it ${ws.beat_spy.toFixed(0)}% of the time).`);
+    const skew = secs.find(([, s]) => s.excess > 2 && s.median_excess < s.excess / 4);
+    if (skew) out.push(`${SECTOR_LABEL[skew[0]] || skew[0]}'s average is lifted by a few big winners: its median signal is only ${pct(skew[1].median_excess)} vs the S&amp;P 500.`);
+  }
+
+  const list = document.getElementById('findings-list');
+  list.innerHTML = out.map(t => `<li>${t}</li>`).join('');
+  document.getElementById('findings').style.display = out.length ? '' : 'none';
+}
+
+/* ── Breakdown tables ────────────────────────────────────────────────── */
+function bdTable(title, group, order, labeller) {
+  const G = TR.summary[group] || {};
+  let keys = Object.keys(G);
+  if (order) keys = order.filter(k => G[k]).concat(keys.filter(k => !order.includes(k)));
+  const rows = keys.map(k => [k, (G[k] || {})[horizon]]).filter(([, s]) => s);
+  if (!rows.length) return '';
+  const maxAbs = Math.max(5, ...rows.map(([, s]) => Math.abs(s.excess)));
+  const body = rows.map(([k, s]) => {
+    const w = Math.min(50, Math.abs(s.excess) / maxAbs * 50);
+    const bar = s.excess >= 0
+      ? `<span style="left:50%;width:${w}%;background:var(--green)"></span>`
+      : `<span style="left:${50 - w}%;width:${w}%;background:var(--red)"></span>`;
+    return `<tr class="${s.n < SMALL ? 'small' : ''}">
+      <td>${esc(labeller ? labeller(k) : k)}</td>
+      <td>${s.n.toLocaleString('en-GB')}</td>
+      <td class="${cls(s.avg)}">${pct(s.avg)}</td>
+      <td class="${cls(s.excess)}"><b>${pct(s.excess)}</b></td>
+      <td class="${cls(s.median_excess)}">${pct(s.median_excess)}</td>
+      <td class="${s.beat_spy >= 50 ? 'pos' : 'neg'}">${s.beat_spy.toFixed(0)}%</td>
+      <td class="bar-cell"><div class="xbar"><span class="mid"></span>${bar}</div></td>
+    </tr>`;
+  }).join('');
+  return `<div class="bd-card"><div class="bd-title">${title}</div>
+    <table class="tr-table"><thead><tr><th></th><th>Signals</th><th>Avg</th><th>vs S&amp;P</th><th>Median vs S&amp;P</th><th>Beat S&amp;P</th><th></th></tr></thead>
+    <tbody>${body}</tbody></table></div>`;
+}
+
+function renderBreakdown() {
+  const months = Object.keys(TR.summary.by_month || {}).sort();
+  document.getElementById('bd-grid').innerHTML = [
+    bdTable('Signal strength', 'by_signal', ['strong_buy', 'buy', 'hold'], k => SIGNAL_LABEL[k] || k),
+    bdTable('Source', 'by_kind', ['ai', 'momentum'], k => KIND_LABEL[k] || k),
+    bdTable('Sector', 'by_sector', Object.keys(SECTOR_LABEL), k => SECTOR_LABEL[k] || k),
+    bdTable('AI confidence', 'by_confidence', CONF_ORDER, k => k === 'unknown' ? 'Not given' : k),
+    bdTable('Month the signal was made', 'by_month', months, monthLabel),
+  ].join('');
+}
+
+/* ── Every signal ────────────────────────────────────────────────────── */
+const SIG_COLS = [
+  ['time_utc', 'Signal date', true], ['sector', 'Sector', true, 'l'], ['ticker', 'Stock', true, 'l'], ['signal', 'Signal', true, 'l'],
+  ['confidence', 'Conf.', true], ['entry_date', 'Bought', true],
+  ['r1w', '1W', true], ['x1w', 'vs S&P', true], ['r1m', '1M', true], ['x1m', 'vs S&P', true],
+  ['r3m', '3M', true], ['x3m', 'vs S&P', true],
+];
+
+function filters() {
+  const mk = (id, key, opts) => {
+    document.getElementById(id).innerHTML = opts.map(([v, l]) =>
+      `<button class="filter-btn${state[key] === v ? ' active' : ''}" onclick="setFilter('${key}','${v}')">${l}</button>`).join('');
+  };
+  const sectors = [...new Set(TR.rows.map(r => r[IX.sector]))].sort();
+  mk('f-sector', 'sector', [['all', 'All sectors'], ...sectors.map(s => [s, SECTOR_LABEL[s] || s])]);
+  mk('f-kind', 'kind', [['all', 'All sources'], ['ai', 'AI'], ['momentum', 'Momentum']]);
+  mk('f-signal', 'signal', [['all', 'All signals'], ['strong_buy', 'Strong buy'], ['buy', 'Buy']]);
+}
+function setFilter(key, v) { state[key] = v; filters(); renderSignals(true); }
+function setSort(col) {
+  if (state.sort === col) state.dir = -state.dir; else { state.sort = col; state.dir = col === 'ticker' || col === 'sector' ? 1 : -1; }
+  renderSignals(true);
+}
+
+function renderSignals(reset) {
+  if (reset) state.shown = PAGE;
+  const q = document.getElementById('f-search').value.trim().toLowerCase();
+  const names = TR.names || {};
+  let rows = TR.rows.filter(r =>
+    (state.sector === 'all' || r[IX.sector] === state.sector) &&
+    (state.kind === 'all' || r[IX.kind] === state.kind) &&
+    (state.signal === 'all' || r[IX.signal] === state.signal) &&
+    (!q || r[IX.ticker].toLowerCase().includes(q) || (names[r[IX.ticker]] || '').toLowerCase().includes(q)));
+  const k = IX[state.sort], d = state.dir;
+  rows.sort((a, b) => {
+    const x = a[k], y = b[k];
+    if (x == null && y == null) return 0;
+    if (x == null) return 1;
+    if (y == null) return -1;
+    return (x < y ? -1 : x > y ? 1 : 0) * d;
+  });
+  document.querySelector('#sig-table thead').innerHTML = '<tr>' + SIG_COLS.map(([c, l, s, align]) =>
+    `<th class="${s ? 'sortable' : ''}${state.sort === c ? ' sorted' : ''}" ${align === 'l' ? 'style="text-align:left"' : ''} ${s ? `onclick="setSort('${c}')"` : ''}>${l}${state.sort === c ? (d > 0 ? ' ▲' : ' ▼') : ''}</th>`).join('') + '</tr>';
+  const cell = (r, c) => {
+    const v = r[IX[c]];
+    if (v != null) return `<td class="${cls(v)}">${pct(v)}</td>`;
+    return `<td class="dim">${r[IX.entry_date] ? '…' : ''}</td>`;
+  };
+  const html = rows.slice(0, state.shown).map(r => {
+    const t = r[IX.ticker], note = r[IX.note];
+    const lead = `<td>${ukDate(r[IX.time_utc])}</td>
+      <td style="font-family:'IBM Plex Sans',sans-serif;text-align:left">${esc(SECTOR_LABEL[r[IX.sector]] || r[IX.sector])}</td>
+      <td style="text-align:left"><span class="tkr">${esc(t)}</span><span class="tkr-name">${esc(names[t] || '')}${r[IX.kind] === 'momentum' ? ' · momentum' : ''}</span></td>
+      <td style="text-align:left"><span class="sig-pill sig-${esc(r[IX.signal])}">${esc(SIGNAL_LABEL[r[IX.signal]] || r[IX.signal])}</span></td>
+      <td>${r[IX.confidence] == null ? '—' : Math.round(r[IX.confidence] * 100) + '%'}</td>`;
+    if (note && !r[IX.entry_date]) return `<tr>${lead}<td class="note-cell" colspan="7">${esc(note === 'awaiting entry' ? 'Waiting for the next market open' : note)}</td></tr>`;
+    return `<tr>${lead}<td>${ukDate(r[IX.entry_date])}</td>${['r1w', 'x1w', 'r1m', 'x1m', 'r3m', 'x3m'].map(c => cell(r, c)).join('')}</tr>`;
+  }).join('');
+  document.querySelector('#sig-table tbody').innerHTML = html || '<tr><td colspan="12" class="dim" style="text-align:center;padding:20px">No signals match these filters.</td></tr>';
+  document.getElementById('sig-count').textContent = `${rows.length.toLocaleString('en-GB')} signals · … = still running`;
+  const left = rows.length - state.shown;
+  document.getElementById('more-row').innerHTML = left > 0
+    ? `<span class="dim mono" style="font-size:11px">Showing ${state.shown.toLocaleString('en-GB')} of ${rows.length.toLocaleString('en-GB')}</span><button class="more-btn" onclick="state.shown+=${PAGE * 2};renderSignals(false)">Show more</button>`
+    : '';
+}
+
+/* ── Method ──────────────────────────────────────────────────────────── */
+function renderMethod() {
+  const r = TR.rules, c = TR.counts;
+  const prov = {};
+  TR.rows.forEach(x => { prov[x[IX.provenance]] = (prov[x[IX.provenance]] || 0) + 1; });
+  const provText = Object.keys(prov).length === 1 && prov.live
+    ? 'All signals here are <b>live</b>: each was published on the site at the time it was made. None are backtests.'
+    : 'Signals are labelled live (published at the time) or backtest (worked out afterwards on past data): ' + Object.entries(prov).map(([k, v]) => `${v} ${k}`).join(', ') + '.';
+  document.getElementById('method').innerHTML = `
+    <ul>
+      <li><b>Every signal counts</b>, including a stock picked again in a later run (each pick is scored from its own date). Only buy signals are in the summaries.</li>
+      <li><b>Bought at</b> the ${esc(r.entry)}.</li>
+      <li><b>Sold at</b> the ${esc(r.exit)}.</li>
+      <li><b>Return</b> is the ${esc(r.return)}. London stocks are measured in pence, so currency moves are not included.</li>
+      <li><b>Compared with</b> ${esc(r.benchmark)}: bought at the first S&amp;P 500 open at or after the stock's purchase, sold on the same day.</li>
+      <li>${provText}</li>
+      <li>Not scored: ${c.pending} signals whose windows haven't finished (shown as …), ${c.no_data} with no price data, ${c.unreliable} with unreliable prices (listed with the reason).</li>
+      <li>Averages can be pulled up or down by a few big moves, so the median is shown too. With ${c.scored.toLocaleString('en-GB')} signals over about ${Math.max(1, Math.round((new Date(TR.data_through) - new Date(TR.first_signal.slice(0, 10))) / 2.6e9))} months, this is an early read, not proof.</li>
+    </ul>`;
+}
+
+function init(data) {
+  TR = data;
+  TR.columns.forEach((c, i) => { IX[c] = i; });
+  document.getElementById('tr-sub').innerHTML =
+    `Every buy signal since ${ukDate(TR.first_signal)}, scored against the S&amp;P 500 · prices to ${ukDate(TR.data_through)} · updated <span id="data-bar-ts">${stamp(TR.generated_utc)}</span>`;
+  document.getElementById('tr-footer').textContent = 'updated ' + stamp(TR.generated_utc);
+  document.querySelectorAll('#horizon-group .sort-btn').forEach(b => b.onclick = () => {
+    horizon = b.dataset.h;
+    document.querySelectorAll('#horizon-group .sort-btn').forEach(x => x.classList.toggle('active', x === b));
+    renderBreakdown();
+  });
+  renderVerdict(); renderFindings(); renderBreakdown(); filters(); renderSignals(true); renderMethod();
+}
+
+fetch('track-record.json', { cache: 'no-cache' })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(init)
+  .catch(() => {
+    document.getElementById('verdict-grid').innerHTML =
+      '<div class="empty-state">The track record isn\'t available yet. It is rebuilt every night after the evening export.</div>';
+  });
+</script>
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+  <div class="drawer left-rail"></div>
+</div>
+<script>
+function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+</script>
+  <script src="nav.js"></script>
+</body>
+</html>
