@@ -109,7 +109,9 @@ def get_metrics(yahoo_symbol, special, gbp_usd, gbp_jpy):
         # Market cap — convert to GBP billions
         mc_raw = info.get('marketCap')
         if mc_raw and mc_raw > 0:
-            mc_gbp = to_gbp(mc_raw, special, gbp_usd, gbp_jpy)
+            # Yahoo gives LSE market caps in GBP — only the share price is in pence —
+            # so don't divide by 100 (BAE showed £0.56B instead of £56B)
+            mc_gbp = mc_raw if special == "lse_pence" else to_gbp(mc_raw, special, gbp_usd, gbp_jpy)
             mc_gbp_b = round(mc_gbp / 1e9, 3)
         else:
             mc_gbp_b = None
@@ -125,7 +127,9 @@ def get_metrics(yahoo_symbol, special, gbp_usd, gbp_jpy):
         avg_volume_m = round(avg_vol / 1e6, 2) if avg_vol and avg_vol > 0 else None
 
         dy_raw = info.get('dividendYield')
-        div_yield_pct = round(float(dy_raw) * 100, 3) if dy_raw and float(dy_raw) > 0 else None
+        # Yahoo's dividendYield is already a percentage (0.31 = 0.31%); multiplying by 100
+        # showed Apple at 31% and BAE at 196%
+        div_yield_pct = round(float(dy_raw), 3) if dy_raw and float(dy_raw) > 0 else None
 
         sp_raw = info.get('shortPercentOfFloat')
         short_pct = round(float(sp_raw) * 100, 2) if sp_raw and float(sp_raw) > 0 else None

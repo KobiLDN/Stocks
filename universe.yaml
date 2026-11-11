@@ -196,7 +196,7 @@ assets:
   "ADA":     {"name": "Cardano", "exchange": "Crypto", "yahoo": "ADA-USD", "cmc_symbol": "ADA", "cmc_id": 2010, "coingecko": "cardano"}
   "AIOZ":    {"name": "AIOZ Network", "exchange": "Crypto", "yahoo": "AIOZ-USD", "cmc_symbol": "AIOZ", "cmc_id": 9104, "coingecko": "aioz-network"}
   "ALGO":    {"name": "Algorand", "exchange": "Crypto", "yahoo": "ALGO-USD", "cmc_symbol": "ALGO", "cmc_id": 4030, "coingecko": "algorand"}
-  "ALT":     {"name": "AltLayer", "exchange": "Crypto", "yahoo": "ALT-USD", "cmc_symbol": "ALT", "cmc_id": 29073, "coingecko": "altlayer"}
+  "ALT":     {"name": "AltLayer", "exchange": "Crypto", "yahoo": "ALT29073-USD", "cmc_symbol": "ALT", "cmc_id": 29073, "coingecko": "altlayer"}
   "ARKM":    {"name": "Arkham", "exchange": "Crypto", "yahoo": "ARKM-USD", "cmc_symbol": "ARKM", "cmc_id": 27565, "coingecko": "arkham"}
   "AVAX":    {"name": "Avalanche", "exchange": "Crypto", "yahoo": "AVAX-USD", "cmc_symbol": "AVAX", "cmc_id": 5805, "coingecko": "avalanche-2"}
   "BNB":     {"name": "BNB", "exchange": "Crypto", "yahoo": "BNB-USD", "cmc_symbol": "BNB", "cmc_id": 1839, "coingecko": "binancecoin"}
@@ -205,7 +205,7 @@ assets:
   "DOT":     {"name": "Polkadot", "exchange": "Crypto", "yahoo": "DOT-USD", "cmc_symbol": "DOT", "cmc_id": 6636, "coingecko": "polkadot"}
   "ETH":     {"name": "Ethereum", "exchange": "Crypto", "yahoo": "ETH-USD", "cmc_symbol": "ETH", "cmc_id": 1027, "coingecko": "ethereum"}
   "FET":     {"name": "ASI Alliance", "exchange": "Crypto", "yahoo": "FET-USD", "cmc_symbol": "FET", "cmc_id": 3773, "coingecko": "fetch-ai"}
-  "GRT":     {"name": "The Graph", "exchange": "Crypto", "yahoo": "GRT-USD", "cmc_symbol": "GRT", "cmc_id": 6719, "coingecko": "the-graph"}
+  "GRT":     {"name": "The Graph", "exchange": "Crypto", "yahoo": "GRT6719-USD", "cmc_symbol": "GRT", "cmc_id": 6719, "coingecko": "the-graph"}
   "HBAR":    {"name": "Hedera", "exchange": "Crypto", "yahoo": "HBAR-USD", "cmc_symbol": "HBAR", "cmc_id": 4642, "coingecko": "hedera-hashgraph"}
   "ICP":     {"name": "Internet Computer", "exchange": "Crypto", "yahoo": "ICP-USD", "cmc_symbol": "ICP", "cmc_id": 8916, "coingecko": "internet-computer"}
   "KAITO":   {"name": "Kaito", "exchange": "Crypto", "yahoo": "KAITO-USD", "cmc_symbol": "KAITO", "cmc_id": 35763, "coingecko": "kaito"}
@@ -214,11 +214,11 @@ assets:
   "NEAR":    {"name": "NEAR Protocol", "exchange": "Crypto", "yahoo": "NEAR-USD", "cmc_symbol": "NEAR", "cmc_id": 6535, "coingecko": "near"}
   "NMR":     {"name": "Numeraire", "exchange": "Crypto", "yahoo": "NMR-USD", "cmc_symbol": "NMR", "cmc_id": 1732, "coingecko": "numeraire"}
   "PEPE":    {"name": "Pepe", "exchange": "Crypto", "yahoo": "PEPE24478-USD", "cmc_symbol": "PEPE", "cmc_id": 24478, "coingecko": "pepe"}
-  "POL":     {"name": "Polygon (MATIC)", "exchange": "Crypto", "yahoo": "POL-USD", "cmc_symbol": "POL", "cmc_id": 28321, "coingecko": "polygon-ecosystem-token"}
-  "RNDR":    {"name": "Render", "exchange": "Crypto", "yahoo": "RNDR-USD", "cmc_symbol": "RENDER", "cmc_id": 5690, "coingecko": "render-token"}
+  "POL":     {"name": "Polygon (MATIC)", "exchange": "Crypto", "yahoo": "POL28321-USD", "cmc_symbol": "POL", "cmc_id": 28321, "coingecko": "polygon-ecosystem-token"}
+  "RNDR":    {"name": "Render", "exchange": "Crypto", "yahoo": "RENDER-USD", "cmc_symbol": "RENDER", "cmc_id": 5690, "coingecko": "render-token"}
   "SOL":     {"name": "Solana", "exchange": "Crypto", "yahoo": "SOL-USD", "cmc_symbol": "SOL", "cmc_id": 5426, "coingecko": "solana"}
   "SUI":     {"name": "Sui", "exchange": "Crypto", "yahoo": "SUI20947-USD", "cmc_symbol": "SUI", "cmc_id": 20947, "coingecko": "sui"}
-  "TAO":     {"name": "Bittensor", "exchange": "Crypto", "yahoo": "TAO-USD", "cmc_symbol": "TAO", "cmc_id": 22974, "coingecko": "bittensor"}
+  "TAO":     {"name": "Bittensor", "exchange": "Crypto", "yahoo": "TAO22974-USD", "cmc_symbol": "TAO", "cmc_id": 22974, "coingecko": "bittensor"}
   "TON":     {"name": "Toncoin", "exchange": "Crypto", "yahoo": "TON11419-USD", "cmc_symbol": "GRAM", "cmc_id": 11419, "coingecko": "the-open-network"}
   "TRX":     {"name": "TRON", "exchange": "Crypto", "yahoo": "TRX-USD", "cmc_symbol": "TRX", "cmc_id": 1958, "coingecko": "tron"}
   "VIRTUAL": {"name": "Virtuals Protocol", "exchange": "Crypto", "yahoo": "VIRTUAL-USD", "cmc_symbol": "VIRTUAL", "cmc_id": 29420, "coingecko": "virtual-protocol"}
