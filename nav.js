@@ -6,6 +6,7 @@
 const _RAIL_ITEMS = [
   { key: 'hub',     label: 'Stock Hub',   icon: '⊞',  path: 'index.html',        badge: null },
   { key: 'rss',     label: 'News Feed',   icon: '📰', path: 'news.html',          badge: null },
+  { key: 'track',   label: 'Track Record', icon: '🏁', path: 'track-record.html', badge: null },
   { key: 'all',     label: 'All Sectors', icon: '🌐', path: 'All/index.html',     badge: null },
   { key: 'AI',      label: 'AI',          icon: '🤖', path: 'AI/index.html',      badge: null },
   { key: 'Biotech', label: 'Biotech',     icon: '🧬', path: 'Biotech/index.html', badge: null },
@@ -39,9 +40,10 @@ function buildNav() {
 
   const isHub = !sector && !inAll && (parts.length === 0 || file === 'index.html');
   const isRSS = !sector && !inAll && file === 'news.html';
+  const isTrack = !sector && !inAll && (file === 'track-record.html' || file === 'track-record');
   const root  = (sector || inAll) ? '../' : '';
 
-  const activeKey = isHub ? 'hub' : isRSS ? 'rss' : inAll ? 'all' : sector;
+  const activeKey = isHub ? 'hub' : isRSS ? 'rss' : isTrack ? 'track' : inAll ? 'all' : sector;
 
   const onSubPage = (sector || inAll) && file !== 'index.html';
   const railHTML = _RAIL_ITEMS.map(p => {

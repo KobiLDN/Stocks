@@ -348,6 +348,18 @@ class TrackRecordRules(unittest.TestCase):
         self.assertIsInstance(res["1m"], tuple)
         self.assertEqual(res["3m"], "pending")
 
+    def test_late_first_price_is_a_gap_not_a_purchase(self):
+        stock = tr.Series("Crypto", _days("2026-11-11", 3))                  # history starts months later
+        spy = tr.Series("Index", _days("2026-06-01", 170))
+        entry, res, note = tr.measure(_dt.datetime(2026, 6, 2, 8, 0, tzinfo=UTC), stock, spy,
+                                      _dt.datetime(2026, 11, 13, 22, 0, tzinfo=UTC))
+        self.assertIsNone(entry)
+        self.assertEqual(note, "no price data around the signal date")
+        holiday = tr.Series("TADAWUL", [("2026-06-01", 10, 10), ("2026-06-10", 11, 11), ("2026-06-11", 11, 12)])
+        entry, _, _ = tr.measure(_dt.datetime(2026, 6, 1, 9, 0, tzinfo=UTC), holiday, spy,
+                                 _dt.datetime(2026, 6, 20, 22, 0, tzinfo=UTC))
+        self.assertEqual(entry["date"], "2026-06-10")                         # 9-day holiday is still a purchase
+
     def test_summary(self):
         st = tr.summarise([(0.10, 0.02), (-0.05, 0.01), (0.03, 0.03)])
         self.assertEqual(st["n"], 3)
