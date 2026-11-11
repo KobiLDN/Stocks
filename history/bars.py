@@ -47,18 +47,26 @@ def sig(x, digits=10):
 
 
 def instruments(universe):
-    """{yahoo symbol: (asset_id, special)} — one entry per instrument, plus benchmarks."""
+    """{yahoo symbol: (asset_id, special, fallbacks)} — one entry per instrument, plus benchmarks.
+    Crypto fallbacks: Yahoo lists coins whose ticker clashes as SYMBOL<cmc id>-USD (SUI20947-USD)."""
     out = {}
     for aid, a in universe["assets"].items():
-        out.setdefault(a["yahoo"], (aid, a.get("special")))
+        alts = []
+        if a["exchange"] == "Crypto":
+            sym = a.get("cmc_symbol") or aid
+            if a.get("cmc_id"):
+                alts.append(f"{sym}{a['cmc_id']}-USD")
+            alts.append(f"{sym}-USD")
+        out.setdefault(a["yahoo"], (aid, a.get("special"), [x for x in alts if x != a["yahoo"]]))
     for aid, _name, yahoo in BENCHMARKS:
-        out.setdefault(yahoo, (aid, None))
+        out.setdefault(yahoo, (aid, None, []))
     return out
 
 
 # ── Pure transform (tested without network) ───────────────────────────────────
-def _scale(x, f):
-    return None if x is None or x != x else sig(x * f)
+def _scale(x, f, digits=7):
+    """Yahoo prices are float32 (~7 significant digits): 25.62 arrives as 25.62000084."""
+    return None if x is None or x != x else sig(x * f, digits)
 
 
 def to_raw(rows):
@@ -75,11 +83,11 @@ def to_raw(rows):
     for (d, o, h, l, c, v, split, div), f in zip(rows, factors):
         if c is None or c != c:
             continue                               # no trade data for this row: leave the gap
-        bars.append((d, _scale(o, f), _scale(h, f), _scale(l, f), _scale(c, f), _scale(v, 1 / f)))
+        bars.append((d, _scale(o, f), _scale(h, f), _scale(l, f), _scale(c, f), _scale(v, 1 / f, 15)))
         if split and split > 0 and split != 1:
             splits.append((d, sig(split)))
         if div and div == div and div > 0:
-            divs.append((d, sig(div * f)))
+            divs.append((d, sig(div * f, 7)))
     return bars, splits, divs
 
 
@@ -98,6 +106,13 @@ def jump_flags(bars, split_dates):
                 flags.append((d1, "split_like_jump", f"close {c0:g} -> {c1:g} (x{r:.4g}) ~ {k}:1, no split recorded"))
                 break
     return flags
+
+
+def coarse(bars, min_bars=5):
+    """True when a series barely moves at all — Yahoo rounds some tiny coins (PEPE) so hard
+    that every day shows the same price, which makes the bars useless for returns."""
+    closes = [b[4] for b in bars if b[4]]
+    return len(closes) >= min_bars and len(set(closes)) <= 2
 
 
 # ── yfinance adapter ──────────────────────────────────────────────────────────
@@ -178,18 +193,29 @@ def main(argv=None):
             if written + len(pending["bars"]) >= args.budget:
                 print(f"  budget reached after {i - 1} instruments — run again to continue")
                 break
-            aid, special = insts[symbol]
-            try:
-                rows, currency = fetch(symbol, start, end)
-            except Exception as e:      # one bad ticker must not stop the rest
-                failed.append(f"{symbol}: {e}")
-                continue
-            finally:
-                time.sleep(0.3)
-            bars, splits, divs = to_raw(rows)
+            aid, special, alts = insts[symbol]
+            bars, splits, divs, currency, used, error = [], [], [], None, symbol, None
+            for candidate in [symbol] + alts:
+                try:
+                    rows, currency = fetch(candidate, start, end)
+                except Exception as e:      # one bad ticker must not stop the rest
+                    error = f"{candidate}: {e}"
+                    continue
+                finally:
+                    time.sleep(0.3)
+                bars, splits, divs = to_raw(rows)
+                if bars:
+                    used = candidate
+                    break
             if not bars:
-                empty.append(symbol)
+                (failed if error else empty).append(error or symbol)
                 continue
+            if used != symbol:              # stored under our symbol; fix universe.yaml to silence
+                pending["flags"].append([symbol, today.isoformat(), "yahoo_symbol",
+                                         f"no data for {symbol}; fetched as {used}", run_id])
+            if coarse(bars):
+                pending["flags"].append([symbol, today.isoformat(), "coarse_prices",
+                                         f"only {len(set(b[4] for b in bars))} distinct closes in {len(bars)} days", run_id])
             if not currency:
                 currency = "USD" if aid not in universe["assets"] else FALLBACK_CURRENCY.get(special, "USD")
                 pending["flags"].append([symbol, today.isoformat(), "currency_missing", f"assumed {currency}", run_id])

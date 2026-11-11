@@ -189,6 +189,23 @@ class RawBars(unittest.TestCase):
         normal = [("d1", 0, 0, 0, 100.0, 0), ("d2", 0, 0, 0, 103.0, 0)]
         self.assertEqual(bars.jump_flags(normal, set()), [])
 
+    def test_coarse_series(self):
+        flat = [(f"d{i}", 0, 0, 0, 5e-06, 0) for i in range(6)]
+        self.assertTrue(bars.coarse(flat))
+        self.assertFalse(bars.coarse(flat[:3]))                                    # too few days to judge
+        b, _, _ = bars.to_raw(self.ROWS)
+        self.assertFalse(bars.coarse(b))
+
+    def test_float32_noise_rounded(self):
+        b, _, _ = bars.to_raw([("2026-01-01", 25.62000084, 26.0, 25.5, 26.02000046, 10517133, 0, 0)])
+        self.assertEqual((b[0][1], b[0][4], b[0][5]), (25.62, 26.02, 10517133.0))
+
+    def test_crypto_fallback_symbols(self):
+        inst = bars.instruments(db.load_universe())
+        self.assertEqual(inst["GRT-USD"][2], ["GRT6719-USD"])                     # plain symbol is ours already
+        self.assertEqual(inst["SUI20947-USD"][2], ["SUI-USD"])
+        self.assertEqual(inst["AAPL"][2], [])
+
     def test_instruments_dedupe_shared_symbols(self):
         u = db.load_universe()
         inst = bars.instruments(u)
@@ -222,6 +239,16 @@ class BarsJob(Base):
         self.run_bars("--days", "400", "--only", "AAPL,MSFT,NVDA")
         self.assertEqual(self.count("daily_bars"), 6)                             # only the third fetched
         self.assertEqual(self.count("meta", "WHERE key LIKE 'backfill:%'"), 3)
+
+    def test_crypto_falls_back_and_flags(self):
+        real = self.fake_fetch
+        def fetch(symbol, start, end):
+            return ([], None) if symbol == "GRT-USD" else real(symbol, start, end)
+        with mock.patch.object(bars, "fetch", side_effect=fetch), mock.patch.object(bars.time, "sleep"):
+            self.assertEqual(bars.main(["--only", "GRT-USD"]), 0)
+        self.assertEqual(self.count("daily_bars", "WHERE symbol = 'GRT-USD'"), 2)   # stored under our symbol
+        flag = self.h.run("SELECT detail FROM data_flags WHERE kind = 'yahoo_symbol'")[0]["detail"]
+        self.assertIn("GRT6719-USD", flag)
 
     def test_mostly_failing_run_is_red(self):
         with mock.patch.object(bars, "fetch", side_effect=RuntimeError("yahoo down")), mock.patch.object(bars.time, "sleep"):
