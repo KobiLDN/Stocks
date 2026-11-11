@@ -11,28 +11,7 @@ This file is for any AI or human contributor working in this repo.
 
 ## Repo structure & workflow (READ THIS)
 
-**Single-folder setup since 2026-06-21.** The root `../AGENTS.md`, `../WORKFLOW.md`, and `../branches.md` are canonical — read those. Summary:
-
-```
-G:\My Drive\coding\ai\Stocks\        ← plain container (no .git)
-                       └── STOCKSDev\    ← the ONLY local folder, works on `dev`
-```
-
-- **`STOCKSDev` (on `dev`) = where all work happens.** Edit here, commit, `git push origin dev`.
-- **`main` is remote-only** — the live site, never checked out locally. Read it via the Cloudflare URL, `git show origin/main:<path>`, or `git diff origin/main`.
-- **Deploy:** `git push origin dev:main` — only on explicit "go" / "push to all".
-
-`dev` auto-deploys a preview to **https://dev.stocks-4qw.pages.dev** (~30–60s).
-
-### If dev and main diverge
-
-Usually the price bot committed to `main` in between. Fix:
-
-```
-git fetch origin
-git rebase origin/main
-git push origin dev
-```
+The root [`../AGENTS.md`](../AGENTS.md) and [`../WORKFLOW.md`](../WORKFLOW.md) are canonical — read those. Everything runs in the cloud: code changes go on a short-lived branch + PR, merging to `main` is going live, and bots push data straight to `main`. There is no local folder and no `dev` branch.
 
 ## After every edit
 

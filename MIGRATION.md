@@ -1,3 +1,5 @@
+> **Historical — superseded Nov 2026.** Nothing runs locally any more: no `STOCKSDev/`, no `dev` branch. Current process: `WORKFLOW.md`. Kept only as a reference for migrating other projects.
+
 # Migration plan — collapse to a single local folder
 
 **Status:** ✅ DONE 2026-06-21 — migrated to **Model (A) LIGHT**. Single folder `STOCKSDev/` on `dev`; `main` is remote-only; `STOCKSMain/` clone removed. Cross-device branch `claude/magical-davinci-zYLYI` kept. The plan/prompt below is retained for reference (and for the football-analyser migration).

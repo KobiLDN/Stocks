@@ -44,7 +44,7 @@ All AI pages load `../shared.css` for shared styles (reset, body, ticker tape, h
 
 ## Local development
 
-All work happens in the `STOCKSDev` clone. See [../AGENTS.md](../AGENTS.md) and [../WORKFLOW.md](../WORKFLOW.md).
+Everything runs in the cloud (branch + PR, merge = live). See [../AGENTS.md](../AGENTS.md) and [../WORKFLOW.md](../WORKFLOW.md).
 
 To run the price updater locally:
 ```
