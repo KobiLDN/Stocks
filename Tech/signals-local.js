@@ -1,9 +1,165 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-10 23:32",
+  "updated": "2026-11-11 08:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "AWS revenue grew 39.3% YoY (fastest in 5 years), backlog hit $578B, and JPMorgan added it to its focus list citing 40%+ AWS growth in 2027-2028. Stock up 8.05% in 1 week, P/E 21.9, analyst score 1.33 (strong_buy).",
+      "drivers": [
+        "AWS 39.3% YoY growth",
+        "$578B backlog",
+        "JPMorgan focus list addition",
+        "1-week momentum +8.05%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "Strong buy consensus (an_score 1.38), positive news sentiment 0.203, P/E 27.83 is reasonable for mega-cap, and the company is challenging proposed U.S. import curbs on Chinese optical stocks, protecting its supply chain.",
+      "drivers": [
+        "Strong buy consensus 1.38",
+        "Positive news sentiment 0.203",
+        "Reasonable P/E 27.83",
+        "Supply chain protection catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Goldman Sachs called chip stocks oversold and recommends buying; Broadcom has the best analyst score in the universe (1.24, strong_buy), up 2.94% today, with a reasonable P/E of 42.4 for a semiconductor leader.",
+      "drivers": [
+        "Best analyst score 1.24",
+        "Goldman Sachs oversold call",
+        "Today's bounce +2.94%",
+        "P/E 42.4 reasonable"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "Strong 1-month momentum (+14.64%) and positive news sentiment (0.255). P/E 36.94 is reasonable for a growth platform, and the stock is up 5.43% YTD with analyst consensus at buy (1.71).",
+      "drivers": [
+        "1-month momentum +14.64%",
+        "Positive news sentiment 0.255",
+        "YTD gain +5.43%",
+        "Buy consensus"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "QCOM",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Attractive P/E of 13.66, strong 1-week momentum (+5.53%), and today's gain (+1.17%). Despite hold consensus (2.62), the valuation is compelling for a semiconductor leader with a 2.12% dividend yield.",
+      "drivers": [
+        "Low P/E 13.66",
+        "1-week momentum +5.53%",
+        "Dividend yield 2.12%",
+        "Today's gain +1.17%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Strong 1-month momentum (+11.26%) despite YTD decline. P/E 20.68 is reasonable, dividend yield 1.62% provides income, and the stock is up today (+0.87%) with buy consensus (2.06).",
+      "drivers": [
+        "1-month momentum +11.26%",
+        "Reasonable P/E 20.68",
+        "Dividend yield 1.62%",
+        "Buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Strong 1-week momentum (+5.00%) and YTD gain (+28.95%). P/E 38.81 is elevated but justified by mega-cap stability. JPMorgan reiterated overweight, noting iPhone Duo delivery times unchanged. Negative news sentiment (-0.124) is a minor concern.",
+      "drivers": [
+        "1-week momentum +5.00%",
+        "YTD gain +28.95%",
+        "JPMorgan overweight reiteration",
+        "iPhone Duo demand stable"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "UBER",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Positive news sentiment (0.341) is among the highest in the universe, 1-week momentum +5.18%, and buy consensus (1.57). P/E 41.21 is elevated but reflects growth expectations from platform expansion.",
+      "drivers": [
+        "High news sentiment 0.341",
+        "1-week momentum +5.18%",
+        "Buy consensus 1.57",
+        "Platform expansion catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ADBE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "P/E of 13.22 is deeply undervalued for a software leader, and the company is expanding its AI partnership and workspace reach. Negative YTD (-28.98%) and hold consensus (2.97) are risks, but the valuation is compelling.",
+      "drivers": [
+        "Low P/E 13.22",
+        "AI partnership expansion",
+        "Deep value opportunity",
+        "Workspace reach growth"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "CRM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "P/E of 19.53 is attractive for enterprise software, with buy consensus (1.68) and slightly positive news sentiment (0.021). YTD decline (-15.25%) and 1-month weakness (-8.74%) are risks, but valuation offers upside.",
+      "drivers": [
+        "Attractive P/E 19.53",
+        "Buy consensus 1.68",
+        "Positive news sentiment 0.021",
+        "Valuation upside potential"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.591,
+      "ytd": "+130.55%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.55% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.55% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "buy",
+      "confidence": 0.589,
+      "ytd": "+130.06%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.06% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.06% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMZN",
@@ -132,162 +288,6 @@ window.SIGNALS_DATA = {
         "buy consensus (1.68)",
         "AI agent catalyst",
         "enterprise demand"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.595,
-      "ytd": "+131.44%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +131.44% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +131.44% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 0.588,
-      "ytd": "+129.99%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +129.99% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +129.99% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "1W +9.99%, P/E 21.84, strong_buy analyst consensus, JPMorgan named it a top AI pick citing AWS 39% YoY growth and a $578B contracted backlog [investing.com](https://www.investing.com/news/stock-market-news/why-is-amazon-stock-rallying-today-93CH-5012665).",
-      "drivers": [
-        "1W momentum +9.99%",
-        "P/E 21.84 attractive",
-        "strong_buy consensus",
-        "AWS growth catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "1W +6.81%, P/E 28.26, strong_buy analyst score 1.38, news sentiment 0.194, and the stock is holding firm as a mega-cap cash flow leader [aephel.com](https://www.aephel.com/research/news/2026-11-09-apple-amazon-and-microsoft-hold-firm-as-a-damaged-market).",
-      "drivers": [
-        "1W momentum +6.81%",
-        "strong_buy consensus",
-        "P/E 28.26 reasonable",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +29.72%, 1W +3.63%, analyst buy, Evercore ISI raised PT to $380 citing Siri AI monetization potential and 550M+ compatible users [investing.com](https://www.investing.com/news/analyst-ratings/evercore-isi-raises-apple-stock-price-target-on-siri-ai-potential-93CH-5011228).",
-      "drivers": [
-        "YTD +29.72%",
-        "analyst PT raise to $380",
-        "Siri AI catalyst",
-        "strong cash flow margins"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "META",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "P/E 21.81, strong_buy analyst score 1.41, news sentiment 0.262, JPMorgan kept it as a top AI pick alongside Amazon with AI-driven ad improvements [cnbc.com](https://www.cnbc.com/2026/11/09/stock-market-movers-live-updates.html).",
-      "drivers": [
-        "P/E 21.81 low",
-        "strong_buy consensus",
-        "JPMorgan top pick",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +12.34%, analyst buy score 1.71, news sentiment 0.226, P/E 36.22, showing strong near-term momentum and positive analyst outlook.",
-      "drivers": [
-        "1M momentum +12.34%",
-        "analyst buy consensus",
-        "positive news sentiment",
-        "P/E 36.22 reasonable"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "1W +10.35%, YTD +49.28%, analyst buy, strong short-term rebound despite negative news sentiment -0.051; AI demand and margins in focus from Q3 call.",
-      "drivers": [
-        "1W momentum +10.35%",
-        "YTD +49.28%",
-        "analyst buy",
-        "AI demand catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +96.98%, news sentiment 0.356 (highest in universe), analyst buy, though P/E 3727 is extreme; recent AI integrations drive security growth narrative.",
-      "drivers": [
-        "YTD +96.98%",
-        "highest news sentiment 0.356",
-        "analyst buy",
-        "AI security growth"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +82.15%, news sentiment 0.275, analyst buy, P/E 816 high but cybersecurity leader with strong long-term demand; recent pullback offers entry.",
-      "drivers": [
-        "YTD +82.15%",
-        "positive news sentiment",
-        "analyst buy",
-        "cybersecurity leader"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ASML",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "YTD +30.14%, strong_buy analyst score 1.37, P/E 37.04, news sentiment 0.161; semiconductor equipment monopoly with long-term AI tailwinds despite 1M -15.33%.",
-      "drivers": [
-        "YTD +30.14%",
-        "strong_buy consensus",
-        "P/E 37.04",
-        "semiconductor equipment leader"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TSM",
-      "signal": "strong_buy",
-      "confidence": 0.5,
-      "rationale": "YTD +23.62%, strong_buy analyst score 1.33, P/E 25.4, news sentiment 0.044; key AI chip manufacturer with solid fundamentals and attractive valuation.",
-      "drivers": [
-        "YTD +23.62%",
-        "strong_buy consensus",
-        "P/E 25.4 low",
-        "AI chip manufacturing"
       ]
     }
   ]

@@ -1,9 +1,165 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-10 23:33",
+  "updated": "2026-11-11 08:06",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "EOG beat Q3 EPS by $0.42 and raised dividend 7.8%, with YTD +45.74%, P/E 9.78, and a new LNG gas supply agreement expanding international exposure.",
+      "drivers": [
+        "EPS beat $4.87 vs $4.45",
+        "dividend increase 7.8%",
+        "LNG supply agreement",
+        "YTD +45.74%"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SLB",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "SLB won Lyra field and Crescent Petroleum contracts, trades 20% below fair value at $49.92, with analyst consensus score 1.53 (strong buy) and 1m +2.32%.",
+      "drivers": [
+        "contract wins offshore Norway",
+        "20% undervalued per DCF",
+        "analyst score 1.53",
+        "1m +2.32%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "DNNGY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "DNNGY has strong_buy analyst consensus (score 1.0), YTD +7.43%, 1m +8.98%, and positive news sentiment 0.339, with Revolution Wind reaching full operations.",
+      "drivers": [
+        "strong_buy consensus",
+        "1m +8.98%",
+        "news sentiment 0.339",
+        "Revolution Wind operational"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "TotalEnergies offers YTD +35.12%, low P/E 8.77, high dividend yield 4.60%, and stable beta 0.04 with positive news sentiment 0.285.",
+      "drivers": [
+        "P/E 8.77",
+        "dividend yield 4.60%",
+        "YTD +35.12%",
+        "low beta 0.04"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ConocoPhillips has YTD +43.31%, P/E 14.29, dividend yield 2.74%, and raised its dividend by more than 10% recently, with analyst buy consensus.",
+      "drivers": [
+        "YTD +43.31%",
+        "dividend increase >10%",
+        "P/E 14.29",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "NextEra Energy shows strong 1m +9.88% momentum, P/E 15.54, dividend yield 2.89%, and positive news sentiment 0.211 as a utility with renewable growth.",
+      "drivers": [
+        "1m +9.88%",
+        "P/E 15.54",
+        "dividend yield 2.89%",
+        "utility growth"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "SSE has YTD +19.70%, 1m +7.79%, dividend yield 2.57%, and positive news sentiment 0.314, with a buy analyst consensus score of 1.88.",
+      "drivers": [
+        "1m +7.79%",
+        "YTD +19.70%",
+        "news sentiment 0.314",
+        "analyst score 1.88"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Chevron has YTD +39.27%, P/E 15.51, dividend yield 3.37%, and a strong analyst score of 1.62, though recent 1w -6.24% reflects oil price headwinds.",
+      "drivers": [
+        "YTD +39.27%",
+        "dividend yield 3.37%",
+        "analyst score 1.62",
+        "P/E 15.51"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "OXY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Occidental has YTD +36.14%, P/E 12.67, and low short interest 0.02%, with a 1d +1.79% bounce and analyst buy consensus.",
+      "drivers": [
+        "YTD +36.14%",
+        "P/E 12.67",
+        "short interest 0.02%",
+        "1d +1.79%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Shell has YTD +32.47%, low P/E 8.44, dividend yield 3.21%, and positive news sentiment 0.216, though recent 1w -6.65% shows sector weakness.",
+      "drivers": [
+        "P/E 8.44",
+        "dividend yield 3.21%",
+        "YTD +32.47%",
+        "news sentiment 0.216"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.627,
+      "ytd": "+138.63%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +138.63% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +138.63% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.522,
+      "ytd": "+115.29%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +115.29% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +115.29% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "EOG",
@@ -132,162 +288,6 @@ window.SIGNALS_DATA = {
         "analyst score 1.75 (buy)",
         "+0.70% 1M stabilization",
         "US solar manufacturing tailwind"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.628,
-      "ytd": "+138.70%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +138.70% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +138.70% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.521,
-      "ytd": "+115.23%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +115.23% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +115.23% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "NEE shows strong momentum with +13.16% 1M and +2.98% 1W, P/E 15.78, dividend yield 2.87%, and positive news sentiment of 0.272, making it a defensive utility play amid oil price volatility.",
-      "drivers": [
-        "+13.16% 1M momentum",
-        "P/E 15.78",
-        "dividend yield 2.87%",
-        "positive news sentiment 0.272"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SSE.L has strong momentum with +9.33% 1M and +3.11% 1W, YTD +20.28%, P/E 25.55, dividend yield 2.59%, and analyst buy consensus, benefiting from utility stability.",
-      "drivers": [
-        "+9.33% 1M momentum",
-        "YTD +20.28%",
-        "analyst buy",
-        "dividend yield 2.59%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "DNNGY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "DNNGY has exceptional momentum with +11.72% 1M and +9.88% 1W, YTD +10.13%, and strong news sentiment of 0.339, reflecting clean energy tailwinds.",
-      "drivers": [
-        "+11.72% 1M momentum",
-        "+9.88% 1W momentum",
-        "news sentiment 0.339",
-        "YTD +10.13%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SLB",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "SLB has the best analyst score (1.53) with buy consensus, +27.51% YTD, P/E 24.48, dividend yield 2.36%, and positive news sentiment 0.196; web search highlights contract wins and data center growth, with 17% upside to fair value.",
-      "drivers": [
-        "analyst score 1.53 (strong buy)",
-        "YTD +27.51%",
-        "contract wins & data center growth",
-        "17% undervalued per web search"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "TTE offers attractive value with P/E 8.79, dividend yield 4.60%, YTD +35.42%, and 1M +2.28%, supported by analyst buy consensus and positive news sentiment 0.152.",
-      "drivers": [
-        "P/E 8.79",
-        "dividend yield 4.60%",
-        "YTD +35.42%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "COP has strong YTD return of +42.84%, P/E 14.24, dividend yield 2.73%, and analyst buy consensus; recent Q3 earnings beat per web search supports fundamentals.",
-      "drivers": [
-        "YTD +42.84%",
-        "P/E 14.24",
-        "analyst buy",
-        "Q3 earnings beat"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "EOG shows solid value with P/E 9.49, dividend yield 2.99%, YTD +41.34%, and analyst buy consensus, despite slight 1M decline of -0.16%.",
-      "drivers": [
-        "P/E 9.49",
-        "dividend yield 2.99%",
-        "YTD +41.34%",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "CVX has strong YTD +39.13%, P/E 15.49, dividend yield 3.35%, and analyst buy score of 1.62; near-term weakness (-1.03% 1D) is a buying opportunity.",
-      "drivers": [
-        "YTD +39.13%",
-        "dividend yield 3.35%",
-        "analyst score 1.62",
-        "P/E 15.49"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "FSLR has positive short-term momentum (+7.72% 1M, +5.21% 1W), low P/E of 11.08, analyst buy consensus, and news sentiment 0.223, despite YTD -30.18%.",
-      "drivers": [
-        "+7.72% 1M momentum",
-        "P/E 11.08",
-        "analyst buy",
-        "news sentiment 0.223"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BEPC offers high dividend yield of 4.94%, positive momentum (+7.63% 1M, +4.42% 1W), and news sentiment 0.204, but analyst hold and negative YTD -17.53% limit upside.",
-      "drivers": [
-        "dividend yield 4.94%",
-        "+7.63% 1M momentum",
-        "news sentiment 0.204",
-        "analyst hold"
       ]
     }
   ]

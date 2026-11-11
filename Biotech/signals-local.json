@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-10 23:32",
+  "updated": "2026-11-11 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +33.22%, 1M +21.11%, P/E 46.49, analyst buy (1.61), news sentiment 0.288 \u2014 strong obesity pipeline momentum and positive sentiment.",
+      "drivers": [
+        "strong 1M momentum",
+        "buy consensus",
+        "positive news sentiment",
+        "obesity pipeline catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "YTD +43.05%, 1M +13.59%, analyst buy (1.68), news sentiment 0.275 \u2014 robust momentum with positive analyst and news backdrop.",
+      "drivers": [
+        "strong YTD return",
+        "buy consensus",
+        "positive news sentiment",
+        "HIV/oncology pipeline"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +44.90%, 1M +11.41%, P/E 26.97, Q3 revenue $10.4B (+8%), Repatha sales +37% \u2014 strong fundamentals and pipeline progress [amgen.com](https://www.amgen.com/newsroom/press-releases/2026/11/amgen-reports-third-quarter-2026-financial-results).",
+      "drivers": [
+        "strong Q3 beat",
+        "Repatha growth",
+        "pipeline catalysts (MariTide)",
+        "positive momentum"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +18.46%, 1M +20.09%, P/E 20.25, analyst buy (1.79), news sentiment 0.198 \u2014 strong recent momentum and reasonable valuation.",
+      "drivers": [
+        "strong 1M momentum",
+        "low P/E",
+        "buy consensus",
+        "positive sentiment"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +61.96%, 1M +17.99%, P/E 20.76, analyst buy (2.41) \u2014 exceptional YTD return with upcoming FDA decision on Zanza as next cancer franchise.",
+      "drivers": [
+        "exceptional YTD return",
+        "upcoming FDA catalyst",
+        "reasonable P/E",
+        "oncology pipeline"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "YTD +2.17%, 1M +15.45%, P/E 26.0, analyst buy (1.62), news sentiment 0.074 \u2014 strong 1M momentum and reaffirmed guidance with pipeline strength.",
+      "drivers": [
+        "strong 1M momentum",
+        "buy consensus",
+        "reaffirmed guidance",
+        "pipeline strength"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +42.42%, 1M +10.39%, P/E 109.63, analyst buy (1.78), news sentiment 0.076 \u2014 strong YTD driven by Leqembi launch and Alzheimer's market.",
+      "drivers": [
+        "strong YTD return",
+        "Leqembi launch catalyst",
+        "buy consensus",
+        "Alzheimer's market"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "YTD +14.03%, 1M +27.57%, analyst strong_buy (1.17), news sentiment -0.055 \u2014 exceptional 1M momentum and strongest analyst conviction in the universe.",
+      "drivers": [
+        "strong 1M momentum",
+        "strong_buy consensus",
+        "rare disease catalyst",
+        "high analyst conviction"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.73,
+      "rationale": "YTD +21.18%, 1M +8.07%, P/E 35.26, analyst buy (1.62), news sentiment 0.233 \u2014 solid momentum with leading CF franchise and pipeline expansion.",
+      "drivers": [
+        "solid YTD and 1M",
+        "buy consensus",
+        "positive sentiment",
+        "CF franchise strength"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BMY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +21.27%, 1M +9.07%, P/E 13.92, analyst buy (2.5), dividend yield 4.01% \u2014 attractive valuation and high dividend despite slightly negative sentiment.",
+      "drivers": [
+        "low P/E",
+        "high dividend yield",
+        "strong YTD",
+        "buy consensus"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+712.80%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +712.80% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +712.80% \u2265 256.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "GILD",
@@ -132,151 +277,6 @@
         "analyst 'buy' consensus 1.62",
         "UK-listed category relevance",
         "oncology pipeline strength"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+714.26%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +714.26% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +714.26% \u2265 256.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "rationale": "MRNA has surged ~780% YTD and +23% in the last week, driven by a Q3 earnings beat ($0.38 vs -$1.10 expected) and positive Phase 3 melanoma trial results for its personalized cancer vaccine with Merck. [zacks.com](https://finance.yahoo.com/markets/stocks/articles/zacks-investment-ideas-feature-highlights-092000899.html?.tsrc=rss)",
-      "drivers": [
-        "+780% YTD",
-        "Q3 EPS beat by 134%",
-        "Phase 3 melanoma vaccine catalyst",
-        "raised FY2026 revenue guidance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMGN",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "AMGN is up +42.67% YTD and +10.42% in the last month, with Q3 revenue of $10.4B (+8% YoY) beating estimates by 4.14%, and raised FY2026 guidance to $38.9-$39.7B. [amgen.com](https://investors.amgen.com/news-releases/news-release-details/amgen-reports-third-quarter-2026-financial-results/)",
-      "drivers": [
-        "+42.67% YTD",
-        "Q3 revenue beat by 4.14%",
-        "raised FY2026 guidance",
-        "Wells Fargo PT raised to $460"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "EXEL has gained +60.78% YTD and +17.06% in the last month, with a P/E of 20.98 and positive news sentiment of 0.102, supported by strong international revenue trends.",
-      "drivers": [
-        "+60.78% YTD",
-        "P/E 20.98",
-        "positive news sentiment 0.102",
-        "strong international revenue"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "LLY is up +29.98% YTD and +18.50% in the last month, with a P/E of 45.36 and analyst consensus 'buy' (score 1.61), driven by expanding digital access to obesity drugs and strong metabolic pipeline.",
-      "drivers": [
-        "+29.98% YTD",
-        "analyst consensus buy (1.61)",
-        "obesity drug access expansion",
-        "strong metabolic pipeline"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "REGN has rallied +21.84% in the last month and +17.62% YTD, with a P/E of 20.11 and analyst consensus 'buy' (score 1.79), supported by an extended BARDA deal and positive Libtayo long-term data.",
-      "drivers": [
-        "+21.84% 1-month",
-        "P/E 20.11",
-        "BARDA deal extension",
-        "Libtayo long-term data"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "GILD is up +40.76% YTD and +11.23% in the last month, with a low beta of 0.372, analyst consensus 'buy' (score 1.68), and positive news sentiment of 0.256, offering steady income with a 1.97% dividend yield.",
-      "drivers": [
-        "+40.76% YTD",
-        "analyst consensus buy (1.68)",
-        "positive news sentiment 0.256",
-        "low beta 0.372"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "BIIB has surged +42.69% YTD and +12.41% in the last month, with a 1-year return of +59%, though its P/E of 109.84 is elevated; analyst consensus 'buy' (score 1.78) and positive news sentiment of 0.076 support the momentum.",
-      "drivers": [
-        "+42.69% YTD",
-        "1-year return +59%",
-        "analyst consensus buy (1.78)",
-        "positive news sentiment 0.076"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "COAG",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "COAG has gained +36.18% YTD and an impressive +46.43% in the last month, with a 1-year return of +44%, though lacking analyst coverage and P/E; recent Russell index inclusion adds visibility.",
-      "drivers": [
-        "+46.43% 1-month",
-        "+36.18% YTD",
-        "Russell index inclusion",
-        "rare disease orphan drug focus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "LEGN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "LEGN is up +29.85% in the last month and +14.59% in the last week, with a YTD gain of +12.40%, though it has a negative 1-year return of -26%; analyst consensus 'buy' (score 2.15) and a $2B fund buying interest provide catalysts.",
-      "drivers": [
-        "+29.85% 1-month",
-        "+14.59% 1-week",
-        "analyst consensus buy (2.15)",
-        "institutional buying interest"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "AZN has risen +16.95% in the last month and +3.25% YTD, with a P/E of 26.63, analyst consensus 'buy' (score 1.60), and positive news sentiment of 0.233, supported by a strong oncology pipeline.",
-      "drivers": [
-        "+16.95% 1-month",
-        "analyst consensus buy (1.60)",
-        "positive news sentiment 0.233",
-        "strong oncology pipeline"
       ]
     }
   ]

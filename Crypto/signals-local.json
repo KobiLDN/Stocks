@@ -1,9 +1,125 @@
 {
-  "updated": "2026-11-10 23:32",
+  "updated": "2026-11-11 08:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PEPE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "PEPE shows +31% YTD and +23.9% 1M, defying the broad sell-off that pushed Bitcoin below $74k [investing.com](https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-74k-as-hot-cpi-data-spurs-rate-hike-bets-5017791).",
+      "drivers": [
+        "+31% YTD",
+        "+23.9% 1M",
+        "bucking market downturn"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "RNDR",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "RNDR posts +22.6% YTD and +2.9% 1W, while AI tokens face headwinds from Nvidia investigation [kucoin.com](https://www.kucoin.com/news/articles/crypto-daily-market-report-november-11-2026).",
+      "drivers": [
+        "+22.6% YTD",
+        "+2.9% 1W",
+        "AI narrative"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TON",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "TON surges +5.5% in 24h despite $732M in liquidations [tradingview.com](https://www.tradingview.com/news/cryptonews:6946095ba094b:0-live-bitcoin-price-cooked-gensler-2-0-fears-as-fed-blocks-crypto-bank/), signaling potential reversal.",
+      "drivers": [
+        "+5.5% 1D",
+        "resilience amid liquidations"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "ICP gains +5.1% 1D and +0.3% 1W, with only -10.3% YTD, showing relative strength as Bitcoin falls [investing.com](https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-74k-as-hot-cpi-data-spurs-rate-hike-bets-5017791).",
+      "drivers": [
+        "+5.1% 1D",
+        "+0.3% 1W",
+        "mild YTD decline"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AVAX edges +0.3% 1D and benefits from NYSE tokenization catalyst, despite -31% YTD and Fed rate hike fears [tradingview.com](https://www.tradingview.com/news/cryptonews:6946095ba094b:0-live-bitcoin-price-cooked-gensler-2-0-fears-as-fed-blocks-crypto-bank/).",
+      "drivers": [
+        "+0.3% 1D",
+        "NYSE tokenization catalyst"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "TRX holds +11.6% YTD, though news sentiment is -0.27 due to T3 disbandment, while broader market drops [kucoin.com](https://www.kucoin.com/news/articles/crypto-daily-market-report-november-11-2026).",
+      "drivers": [
+        "+11.6% YTD",
+        "large market cap $30B"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BNB news sentiment +0.33, highest among majors, and market cap $89B offers relative safety as crypto markets tumble [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/cryptocurrencies-price-prediction-pi-dogecoin-bitcoin-asian-wrap-11-november-202611110559).",
+      "drivers": [
+        "news sentiment +0.33",
+        "large cap $89B"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "LINK news sentiment +0.17 with Moody's test catalyst, and -15.5% YTD is moderate in risk-off environment [epileptic.news](https://epileptic.news/pulse/).",
+      "drivers": [
+        "news sentiment +0.17",
+        "Moody's test catalyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "POL -12.5% YTD is the mildest among infra tokens, with relatively low downside amid ETF outflows [kucoin.com](https://www.kucoin.com/news/articles/crypto-daily-market-report-november-11-2026).",
+      "drivers": [
+        "-12.5% YTD",
+        "infra stability"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NEAR",
+      "signal": "buy",
+      "confidence": 0.626,
+      "rationale": "NEAR +138% YTD is exceptional, but -38% 1M and negative sentiment -0.49 indicate high risk despite bearish news [epileptic.news](https://epileptic.news/pulse/).",
+      "drivers": [
+        "+138% YTD",
+        "high risk recent momentum"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PEPE",
@@ -131,144 +247,6 @@
         "Visa stablecoin program catalyst",
         "institutional adoption",
         "oversold -18.83% 1M"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "NEAR",
-      "signal": "buy",
-      "confidence": 0.613,
-      "ytd": "+135.46%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +135.46% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +135.46% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PEPE",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "PEPE is one of only five top-100 coins up >1% in 24h (+3.32%), with +30% YTD, +30% 1M, and +10% 1W momentum; web search confirms derivatives volume surged 95% with short squeeze activity, making it the strongest momentum outlier in a risk-off market [coindesk.com](https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors) [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/a-trillion-dollar-rebound-bitcoin-strategy-and-pepe-why-the-relief-rally-still-needs-proof-202611091629).",
-      "drivers": [
-        "+30% YTD",
-        "+30% 1M",
-        "+10% 1W",
-        "short squeeze dynamics"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "RNDR is one of only five top-100 coins up >1% in 24h (+3.12%), with +25% YTD and +4% 1W, showing resilience amid broad market selloff; AI narrative and low market cap ($0.83B) offer asymmetric upside [coindesk.com](https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors).",
-      "drivers": [
-        "+25% YTD",
-        "+4% 1W",
-        "AI narrative",
-        "low market cap"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "AVAX shows strong short-term momentum with +7.68% 1D and +3.19% 1W, bucking the market downtrend; news of NYSE settling tokenized stocks on Avalanche blockchain provides a major institutional catalyst [coindesk.com](https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors).",
-      "drivers": [
-        "+7.68% 1D",
-        "+3.19% 1W",
-        "NYSE tokenized stocks catalyst"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TRX is the only asset in the universe with positive YTD (+12%) and 1Y (+12%), and minimal 1W decline (-0.45%), demonstrating relative strength; its stablecoin volume and payment use case provide defensive utility in a risk-off environment.",
-      "drivers": [
-        "+12% YTD",
-        "+12% 1Y",
-        "relative strength",
-        "stablecoin volume"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BTC holds near $75K support despite $1.15B in liquidations and $1.28B ETF outflows; Strategy's continued accumulation (1,036 BTC at $79K avg) and positive news sentiment (0.219) support a floor, with potential for relief rally if $75.5K resistance reclaims [theblock.co](https://www.theblock.co/news/markets/2026-11-09-bitcoin-loses-50-week-moving-average-as-24-hour-crypto-long-liquidations-top-1-billion-436102) [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/a-trillion-dollar-rebound-bitcoin-strategy-and-pepe-why-the-relief-rally-still-needs-proof-202611091629).",
-      "drivers": [
-        "$75K support",
-        "Strategy accumulation",
-        "positive news sentiment 0.219"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "POL shows positive 1D (+0.81%) and 1W (+1.83%) momentum, with a relatively mild -10% 1Y decline; as Polygon's infrastructure token, it benefits from L2 scaling demand and low market cap ($0.97B) offers value.",
-      "drivers": [
-        "+1.83% 1W",
-        "mild -10% 1Y",
-        "L2 scaling narrative"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "LINK has positive news sentiment (0.191) and a relatively modest -12% 1Y decline, with oracle network dominance providing a fundamental moat; the broader market selloff creates a potential entry point for a blue-chip infrastructure asset.",
-      "drivers": [
-        "positive news sentiment 0.191",
-        "oracle dominance",
-        "modest -12% 1Y"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "BNB shows resilience with a -1.26% 1D decline versus -4.75% for ETH, and a -8.31% 1M versus -15% for ETH; its large market cap ($90.5B) and Binance ecosystem support provide relative safety in a downturn.",
-      "drivers": [
-        "relative resilience vs ETH",
-        "large market cap $90.5B",
-        "Binance ecosystem"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "DOGE",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "DOGE has positive news sentiment (0.092) and a -1.53% 1D decline, less severe than many peers; its meme-coin liquidity and retail following could benefit from a risk-on reversal if BTC stabilizes.",
-      "drivers": [
-        "positive news sentiment 0.092",
-        "meme-coin liquidity",
-        "potential reversal play"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "ETH is deeply oversold with -28% YTD and -15% 1M, and funding has flipped negative (shorts paying longs), which historically precedes squeezes; Bitmine's continued accumulation and $365M weekly ETF outflows suggest capitulation may be near [coindesk.com](https://www.coindesk.com/markets/2026/11/09/tech-selloff-weighs-on-crypto-majors) [economictimes.com](https://economictimes.indiatimes.com/markets/cryptocurrency/crypto-news/bitcoin-trades-near-75000-as-etf-outflows-and-us-monetary-tightening-fears-weigh-on-crypto-sentiment/articleshow/135679294.cms).",
-      "drivers": [
-        "oversold -28% YTD",
-        "negative funding",
-        "capitulation signals"
       ]
     }
   ]

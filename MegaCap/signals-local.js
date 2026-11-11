@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-10 23:33",
+  "updated": "2026-11-11 08:06",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.95,
+      "rationale": "Eli Lilly shows exceptional momentum with +33.22% YTD and +21.11% 1-month return, supported by Jefferies raising its price target to $1,700 on GLP-1 obesity market potential and positive Foundayo sleep apnea trial results.",
+      "drivers": [
+        "+33.22% YTD",
+        "+21.11% 1M",
+        "P/E 46.49",
+        "Jefferies $1,700 target"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "MA",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Mastercard delivers strong momentum (+17.75% YTD, +10.71% 1M) with a strong_buy analyst consensus, P/E 34.48, and benefits from record US credit card debt and consumer spending trends.",
+      "drivers": [
+        "+17.75% YTD",
+        "+10.71% 1M",
+        "strong_buy analyst",
+        "P/E 34.48"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "V",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Visa posts +23.05% YTD and +8.87% 1M, strong_buy rating, low beta of 0.786, and tailwinds from digital payment adoption and consumer spending.",
+      "drivers": [
+        "+23.05% YTD",
+        "+8.87% 1M",
+        "strong_buy",
+        "beta 0.786"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BLK",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "BlackRock gains +14.48% YTD and +12.75% 1M, strong_buy analyst, P/E 27.83, and benefits from rising asset management fees and market gains.",
+      "drivers": [
+        "+14.48% YTD",
+        "+12.75% 1M",
+        "strong_buy",
+        "P/E 27.83"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Costco shows +25.50% YTD and +11.29% 1M, buy rating, P/E 51.36, and strong consumer spending trends supporting retail warehouse model.",
+      "drivers": [
+        "+25.50% YTD",
+        "+11.29% 1M",
+        "buy analyst",
+        "news sentiment 0.262"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "WMT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Walmart delivers +12.05% YTD and +11.03% 1M, buy rating, P/E 45.49, and high news sentiment of 0.305 reflecting resilient consumer demand.",
+      "drivers": [
+        "+12.05% YTD",
+        "+11.03% 1M",
+        "news sentiment 0.305",
+        "buy analyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Berkshire Hathaway posts +17.41% YTD and +12.70% 1M, buy rating, low beta of 0.571, and diversified exposure to insurance, railroads, and energy.",
+      "drivers": [
+        "+17.41% YTD",
+        "+12.70% 1M",
+        "beta 0.571",
+        "buy analyst"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Johnson & Johnson achieves +37.59% YTD and +6.46% 1M, buy rating, very low beta of 0.2, and strong pharmaceutical pipeline including GLP-1 and medical devices.",
+      "drivers": [
+        "+37.59% YTD",
+        "+6.46% 1M",
+        "beta 0.2",
+        "buy analyst"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Amazon gains +19.59% YTD and +4.37% 1M, strong_buy analyst, P/E 21.9, and benefits from AI cloud infrastructure spending and e-commerce growth.",
+      "drivers": [
+        "+19.59% YTD",
+        "+4.37% 1M",
+        "strong_buy",
+        "P/E 21.9"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Toyota shows strong recent momentum with +16.27% 1M and +11.28% 1W, buy rating, low P/E of 9.79 suggesting value, and positive news sentiment of 0.274.",
+      "drivers": [
+        "+16.27% 1M",
+        "+11.28% 1W",
+        "P/E 9.79",
+        "news sentiment 0.274"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.591,
+      "ytd": "+130.55%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.55% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.55% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,151 +277,6 @@ window.SIGNALS_DATA = {
         "P/E 9.78",
         "dividend yield 2.87%",
         "low short 0.1%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.591,
-      "ytd": "+130.55%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.55% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.55% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "LLY +18.69% 1M, YTD +30.19%, 1Y +40%, with Canada Kisunla reimbursement approval and Jefferies PT raise to $1,700 [tipranks.com](https://www.tipranks.com/news/eli-lilly-stock-lly-rises-after-canada-approves-public-reimbursement-of-its-alzheimers-drug) [finance.yahoo.com](https://finance.yahoo.com/markets/stocks/articles/eli-lilly-shares-rise-2-132919155.html).",
-      "drivers": [
-        "+18.69% 1M",
-        "+30.19% YTD",
-        "GLP-1 & Alzheimer's catalysts",
-        "Buy consensus (1.61)"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MCD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "MCD +19.07% 1M, PT raised to $315 by Citi and BMO, Q3 EPS beat $3.57 vs $3.38 [americanbankingnews.com](https://www.americanbankingnews.com/2026/11/08/mcdonalds-nysemcd-price-target-raised-to-315-00.html).",
-      "drivers": [
-        "+19.07% 1M",
-        "PT raises to $315",
-        "Q3 EPS beat",
-        "Yield 2.79%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TM",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "TM +17.67% 1M, +11.35% 1W, PE 9.94, dividend yield 2.90%, analyst buy.",
-      "drivers": [
-        "Low PE 9.94",
-        "+17.67% 1M",
-        "Strong 1W momentum",
-        "Buy rating (1.75)"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "MA +11.44% 1M, YTD +17.34%, strong_buy consensus, low beta 0.77.",
-      "drivers": [
-        "+11.44% 1M",
-        "YTD +17.34%",
-        "Strong_buy (1.5)",
-        "Low beta 0.77"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BLK",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "BLK +12.19% 1M, YTD +13.75%, strong_buy, crypto ETF conversion catalysts.",
-      "drivers": [
-        "+12.19% 1M",
-        "YTD +13.75%",
-        "Strong_buy (1.39)",
-        "Yield 1.94%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "WMT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "WMT +11.75% 1M, YTD +11.05%, 1Y +23%, buy rating, positive news sentiment 0.249.",
-      "drivers": [
-        "+11.75% 1M",
-        "YTD +11.05%",
-        "1Y +23%",
-        "Positive news sentiment"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "COST",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "COST +11.02% 1M, YTD +23.57%, 1Y +15%, digital sales growth.",
-      "drivers": [
-        "YTD +23.57%",
-        "+11.02% 1M",
-        "1Y +15%",
-        "Buy rating (1.93)"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.74,
-      "rationale": "V +9.38% 1M, YTD +22.41%, 1Y +26%, strong_buy consensus.",
-      "drivers": [
-        "YTD +22.41%",
-        "1Y +26%",
-        "Strong_buy (1.5)",
-        "+9.38% 1M"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ABBV",
-      "signal": "buy",
-      "confidence": 0.66,
-      "rationale": "ABBV YTD +30.65%, 1Y +33%, 1M +5.86%, buy rating, 2.38% yield.",
-      "drivers": [
-        "YTD +30.65%",
-        "1Y +33%",
-        "1M +5.86%",
-        "Yield 2.38%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SONY",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "SONY +11.65% 1M, +5.57% 1W, PE 20.1, positive news sentiment 0.164.",
-      "drivers": [
-        "+11.65% 1M",
-        "+5.57% 1W",
-        "PE 20.1",
-        "News sentiment 0.164"
       ]
     }
   ]
