@@ -8,6 +8,7 @@
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../shared.css" rel="stylesheet"/>
+<script src="../asset-links.js"></script>
 <script defer="" src="../shared.js"></script>
 <style>
   .filter-bar {
@@ -524,8 +525,6 @@ const SECTOR_LABELS = {
   'megacap': 'Mega-Cap',
 };
 
-const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
 function returnClass(retStr) {
   const n = parseFloat(String(retStr).replace(/[^0-9.-]/g, ''));
@@ -562,7 +561,7 @@ function buildTable(stocks) {
     tr.dataset.changeYtd = s.change_ytd;
     tr.dataset.barPct    = s.bar_pct;
     tr.innerHTML =
-      '<td><a class="ticker-link" href="' + yahooUrl(s.ticker) + '" target="_blank">' +
+      '<td><a class="ticker-link" href="' + assetUrl(s.ticker) + '" target="_blank">' +
         '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
         '<div class="exchange-badge">' + exDisp + '</div></td>' +
       '<td>' + (s.company_name || s.ticker) + '</td>' +

@@ -122,7 +122,7 @@ Stocks/
 
 ## Adding a stock to an existing sector
 
-1. **`universe.yaml`** (repo root, the master list): if the asset is new, add it under `assets` (`name`, `exchange`, `yahoo`, plus `special` / `speculative` / crypto IDs if needed); then add `["TICKER", "category"]` to each sector it belongs to under `sectors`. Run `python universe.py` to check it. The price scripts no longer hold their own lists.
+1. **`universe.yaml`** (repo root, the master list): if the asset is new, add it under `assets` (`name`, `exchange`, `yahoo`, plus `special` / `speculative` / crypto IDs if needed); then add `["TICKER", "category"]` to each sector it belongs to under `sectors`. Run `python universe.py --write-links` to regenerate `asset-links.js` (where each ticker links to: CoinGecko for coins, Yahoo with the right suffix otherwise), then `python universe.py` to check both. CI fails if `asset-links.js` is stale. The price scripts no longer hold their own lists.
 2. **`index.html`** — add one entry to `NOTES` dict: `'TICKER': 'Key angle / editorial note.'`
 3. **`charts.html`** — add one entry to `TV_MAP` **only if** the TradingView symbol differs from `EXCHANGE:TICKER` (e.g. LSE stocks: `'BA.L': 'LSE:BA.'`)
 4. Run `[Sector]_update_prices.py` — `prices-data.js` regenerates and all pages update automatically

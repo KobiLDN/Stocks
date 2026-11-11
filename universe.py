@@ -94,6 +94,32 @@ def validate():
     return errors
 
 
+LINKS_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "asset-links.js")
+
+
+def links_js():
+    """asset-links.js: where each ticker links to — CoinGecko for coins, Yahoo (with the right
+    exchange suffix, e.g. AZN -> AZN.L) for everything else. Generated; pages include it."""
+    u = load()
+    cg, yh = {}, {}
+    for t, a in sorted({**(u.get("retired") or {}), **u["assets"]}.items()):
+        if a["exchange"] == "Crypto" and a.get("coingecko"):
+            cg[t] = a["coingecko"]
+        elif a["yahoo"] != t:
+            yh[t] = a["yahoo"]
+    import json
+    return (
+        "/* asset-links.js — GENERATED from universe.yaml by `python universe.py --write-links`.\n"
+        "   Do not edit by hand; CI fails if it is out of date. */\n"
+        f"const ASSET_COINGECKO = {json.dumps(cg, sort_keys=True)};\n"
+        f"const ASSET_YAHOO = {json.dumps(yh, sort_keys=True)};\n"
+        "function assetUrl(t) {\n"
+        "  if (ASSET_COINGECKO[t]) return 'https://www.coingecko.com/en/coins/' + ASSET_COINGECKO[t];\n"
+        "  return 'https://finance.yahoo.com/quote/' + encodeURIComponent(ASSET_YAHOO[t] || t) + '/';\n"
+        "}\n"
+    )
+
+
 def all_assets():
     """assets + retired: every asset any signal has ever named (history / track record)."""
     u = load()
@@ -101,7 +127,15 @@ def all_assets():
 
 
 if __name__ == "__main__":
+    if "--write-links" in sys.argv:
+        with open(LINKS_JS, "w", encoding="utf-8") as f:
+            f.write(links_js())
+        print(f"wrote {os.path.basename(LINKS_JS)}")
+        sys.exit(0)
     problems = validate()
+    current = open(LINKS_JS, encoding="utf-8").read() if os.path.exists(LINKS_JS) else ""
+    if current != links_js():
+        problems.append("asset-links.js is out of date — run: python universe.py --write-links")
     for p in problems:
         print("ERROR:", p)
     u = load()
