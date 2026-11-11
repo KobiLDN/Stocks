@@ -1,0 +1,527 @@
+# Master list of every tracked asset — the single source of truth (rebuild step 2, #54).
+#
+# assets:  one entry per asset, listed once even if it is in several sectors.
+#   name, exchange, yahoo (Yahoo Finance symbol)
+#   special: lse_pence (London price in pence) | jpy | sar — price conversion handling
+#   speculative: true — flagged as speculative on the sector pages
+#   crypto only: cmc_symbol, cmc_id (CoinMarketCap numeric ID), coingecko (CoinGecko ID)
+#
+# sectors: each sector's members in display order, as [ticker, category in that sector].
+#
+# Adding a stock: add it under assets (if new), then add [ticker, category] to each sector it belongs to.
+# Checked by `python universe.py` (also run in CI).
+
+assets:
+  "2222.SR": {"name": "Saudi Aramco", "exchange": "TADAWUL", "yahoo": "2222.SR", "special": "sar"}
+  "285A":    {"name": "Kioxia Holdings", "exchange": "TSE", "yahoo": "285A.T", "special": "jpy"}
+  "AAOI":    {"name": "Applied Optoelectronics", "exchange": "NASDAQ", "yahoo": "AAOI"}
+  "AAPL":    {"name": "Apple", "exchange": "NASDAQ", "yahoo": "AAPL"}
+  "ABBV":    {"name": "AbbVie", "exchange": "NYSE", "yahoo": "ABBV"}
+  "ABT":     {"name": "Abbott Laboratories", "exchange": "NYSE", "yahoo": "ABT"}
+  "ADBE":    {"name": "Adobe", "exchange": "NASDAQ", "yahoo": "ADBE"}
+  "ALNY":    {"name": "Alnylam Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "ALNY"}
+  "AMAT":    {"name": "Applied Materials", "exchange": "NASDAQ", "yahoo": "AMAT"}
+  "AMD":     {"name": "Advanced Micro Devices", "exchange": "NASDAQ", "yahoo": "AMD"}
+  "AMGN":    {"name": "Amgen", "exchange": "NASDAQ", "yahoo": "AMGN"}
+  "AMT":     {"name": "American Tower", "exchange": "NYSE", "yahoo": "AMT"}
+  "AMZN":    {"name": "Amazon", "exchange": "NASDAQ", "yahoo": "AMZN"}
+  "ARM":     {"name": "Arm Holdings", "exchange": "NASDAQ", "yahoo": "ARM"}
+  "ASML":    {"name": "ASML Holding", "exchange": "NASDAQ", "yahoo": "ASML"}
+  "ASTS":    {"name": "AST SpaceMobile", "exchange": "NASDAQ", "yahoo": "ASTS"}
+  "AVAV":    {"name": "AeroVironment", "exchange": "NASDAQ", "yahoo": "AVAV"}
+  "AVGO":    {"name": "Broadcom", "exchange": "NASDAQ", "yahoo": "AVGO"}
+  "AXON":    {"name": "Axon Enterprise", "exchange": "NASDAQ", "yahoo": "AXON"}
+  "AXTI":    {"name": "AXT Inc", "exchange": "NASDAQ", "yahoo": "AXTI"}
+  "AZN":     {"name": "AstraZeneca", "exchange": "LSE", "yahoo": "AZN.L", "special": "lse_pence"}
+  "BA":      {"name": "Boeing", "exchange": "NYSE", "yahoo": "BA"}
+  "BA.L":    {"name": "BAE Systems", "exchange": "LSE", "yahoo": "BA.L", "special": "lse_pence"}
+  "BABA":    {"name": "Alibaba Group", "exchange": "NYSE", "yahoo": "BABA"}
+  "BAC":     {"name": "Bank of America", "exchange": "NYSE", "yahoo": "BAC"}
+  "BAH":     {"name": "Booz Allen Hamilton", "exchange": "NYSE", "yahoo": "BAH"}
+  "BEAM":    {"name": "Beam Therapeutics", "exchange": "NASDAQ", "yahoo": "BEAM"}
+  "BEP":     {"name": "Brookfield Renewable", "exchange": "NYSE", "yahoo": "BEP"}
+  "BEPC":    {"name": "Brookfield Renewable Corp", "exchange": "NYSE", "yahoo": "BEPC"}
+  "BIIB":    {"name": "Biogen", "exchange": "NASDAQ", "yahoo": "BIIB"}
+  "BKR":     {"name": "Baker Hughes", "exchange": "NASDAQ", "yahoo": "BKR"}
+  "BLK":     {"name": "BlackRock", "exchange": "NYSE", "yahoo": "BLK"}
+  "BMRN":    {"name": "BioMarin Pharmaceutical", "exchange": "NASDAQ", "yahoo": "BMRN"}
+  "BMY":     {"name": "Bristol-Myers Squibb", "exchange": "NYSE", "yahoo": "BMY"}
+  "BNTX":    {"name": "BioNTech", "exchange": "NASDAQ", "yahoo": "BNTX"}
+  "BP":      {"name": "BP p.l.c.", "exchange": "NYSE", "yahoo": "BP"}
+  "BRK-B":   {"name": "Berkshire Hathaway B", "exchange": "NYSE", "yahoo": "BRK-B"}
+  "BWXT":    {"name": "BWX Technologies", "exchange": "NYSE", "yahoo": "BWXT"}
+  "CACI":    {"name": "CACI International", "exchange": "NYSE", "yahoo": "CACI"}
+  "CAT":     {"name": "Caterpillar", "exchange": "NYSE", "yahoo": "CAT"}
+  "CCJ":     {"name": "Cameco Corporation", "exchange": "NYSE", "yahoo": "CCJ"}
+  "CEG":     {"name": "Constellation Energy", "exchange": "NASDAQ", "yahoo": "CEG"}
+  "COAG":    {"name": "Hemab Therapeutics", "exchange": "NASDAQ", "yahoo": "COAG"}
+  "COHR":    {"name": "Coherent Corp", "exchange": "NYSE", "yahoo": "COHR"}
+  "COP":     {"name": "ConocoPhillips", "exchange": "NYSE", "yahoo": "COP"}
+  "CORZ":    {"name": "Core Scientific", "exchange": "NASDAQ", "yahoo": "CORZ", "speculative": true}
+  "COST":    {"name": "Costco", "exchange": "NASDAQ", "yahoo": "COST"}
+  "CRDO":    {"name": "Credo Technology", "exchange": "NASDAQ", "yahoo": "CRDO"}
+  "CRM":     {"name": "Salesforce", "exchange": "NYSE", "yahoo": "CRM"}
+  "CRSP":    {"name": "CRISPR Therapeutics", "exchange": "NASDAQ", "yahoo": "CRSP"}
+  "CRWD":    {"name": "CrowdStrike", "exchange": "NASDAQ", "yahoo": "CRWD"}
+  "CSCO":    {"name": "Cisco Systems", "exchange": "NASDAQ", "yahoo": "CSCO"}
+  "CVX":     {"name": "Chevron", "exchange": "NYSE", "yahoo": "CVX"}
+  "DELL":    {"name": "Dell Technologies", "exchange": "NYSE", "yahoo": "DELL"}
+  "DLR":     {"name": "Digital Realty", "exchange": "NYSE", "yahoo": "DLR"}
+  "DNNGY":   {"name": "\u00d8rsted", "exchange": "NASDAQ", "yahoo": "DNNGY"}
+  "DRS":     {"name": "Leonardo DRS", "exchange": "NYSE", "yahoo": "DRS"}
+  "EDIT":    {"name": "Editas Medicine", "exchange": "NASDAQ", "yahoo": "EDIT", "speculative": true}
+  "ENPH":    {"name": "Enphase Energy", "exchange": "NASDAQ", "yahoo": "ENPH"}
+  "EOG":     {"name": "EOG Resources", "exchange": "NYSE", "yahoo": "EOG"}
+  "EQIX":    {"name": "Equinix", "exchange": "NASDAQ", "yahoo": "EQIX"}
+  "EQNR":    {"name": "Equinor", "exchange": "NYSE", "yahoo": "EQNR"}
+  "ETN":     {"name": "Eaton Corporation", "exchange": "NYSE", "yahoo": "ETN"}
+  "EXEL":    {"name": "Exelixis", "exchange": "NASDAQ", "yahoo": "EXEL"}
+  "FN":      {"name": "Fabrinet", "exchange": "NYSE", "yahoo": "FN"}
+  "FSLR":    {"name": "First Solar", "exchange": "NASDAQ", "yahoo": "FSLR"}
+  "FTNT":    {"name": "Fortinet", "exchange": "NASDAQ", "yahoo": "FTNT"}
+  "GD":      {"name": "General Dynamics", "exchange": "NYSE", "yahoo": "GD"}
+  "GE":      {"name": "GE Aerospace", "exchange": "NYSE", "yahoo": "GE"}
+  "GEV":     {"name": "GE Vernova", "exchange": "NYSE", "yahoo": "GEV"}
+  "GILD":    {"name": "Gilead Sciences", "exchange": "NASDAQ", "yahoo": "GILD"}
+  "GOOGL":   {"name": "Alphabet (Google)", "exchange": "NASDAQ", "yahoo": "GOOGL"}
+  "GS":      {"name": "Goldman Sachs", "exchange": "NYSE", "yahoo": "GS"}
+  "GSK":     {"name": "GSK", "exchange": "LSE", "yahoo": "GSK.L", "special": "lse_pence"}
+  "HAL":     {"name": "Halliburton", "exchange": "NYSE", "yahoo": "HAL"}
+  "HEI":     {"name": "HEICO Corporation", "exchange": "NYSE", "yahoo": "HEI"}
+  "HII":     {"name": "Huntington Ingalls Industries", "exchange": "NYSE", "yahoo": "HII"}
+  "HON":     {"name": "Honeywell", "exchange": "NASDAQ", "yahoo": "HON"}
+  "HSBC":    {"name": "HSBC Holdings", "exchange": "NYSE", "yahoo": "HSBC"}
+  "HUT":     {"name": "Hut 8 Mining", "exchange": "NASDAQ", "yahoo": "HUT"}
+  "ILMN":    {"name": "Illumina", "exchange": "NASDAQ", "yahoo": "ILMN"}
+  "INCY":    {"name": "Incyte", "exchange": "NASDAQ", "yahoo": "INCY"}
+  "INTC":    {"name": "Intel", "exchange": "NASDAQ", "yahoo": "INTC"}
+  "INTU":    {"name": "Intuit", "exchange": "NASDAQ", "yahoo": "INTU"}
+  "IONS":    {"name": "Ionis Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "IONS"}
+  "IREN":    {"name": "Iris Energy", "exchange": "NASDAQ", "yahoo": "IREN", "speculative": true}
+  "JNJ":     {"name": "Johnson & Johnson", "exchange": "NYSE", "yahoo": "JNJ"}
+  "JPM":     {"name": "JPMorgan Chase", "exchange": "NYSE", "yahoo": "JPM"}
+  "KEYS":    {"name": "Keysight Technologies", "exchange": "NYSE", "yahoo": "KEYS"}
+  "KO":      {"name": "Coca-Cola", "exchange": "NYSE", "yahoo": "KO"}
+  "KTOS":    {"name": "Kratos Defense", "exchange": "NASDAQ", "yahoo": "KTOS"}
+  "LDOS":    {"name": "Leidos Holdings", "exchange": "NYSE", "yahoo": "LDOS"}
+  "LEGN":    {"name": "Legend Biotech", "exchange": "NASDAQ", "yahoo": "LEGN"}
+  "LEU":     {"name": "Centrus Energy", "exchange": "NYSE", "yahoo": "LEU"}
+  "LHX":     {"name": "L3Harris Technologies", "exchange": "NYSE", "yahoo": "LHX"}
+  "LITE":    {"name": "Lumentum Holdings", "exchange": "NASDAQ", "yahoo": "LITE"}
+  "LLY":     {"name": "Eli Lilly", "exchange": "NYSE", "yahoo": "LLY"}
+  "LMT":     {"name": "Lockheed Martin", "exchange": "NYSE", "yahoo": "LMT"}
+  "MA":      {"name": "Mastercard", "exchange": "NYSE", "yahoo": "MA"}
+  "MCD":     {"name": "McDonald's", "exchange": "NYSE", "yahoo": "MCD"}
+  "META":    {"name": "Meta Platforms", "exchange": "NASDAQ", "yahoo": "META"}
+  "MPC":     {"name": "Marathon Petroleum", "exchange": "NYSE", "yahoo": "MPC"}
+  "MRCY":    {"name": "Mercury Systems", "exchange": "NASDAQ", "yahoo": "MRCY"}
+  "MRK":     {"name": "Merck", "exchange": "NYSE", "yahoo": "MRK"}
+  "MRNA":    {"name": "Moderna", "exchange": "NASDAQ", "yahoo": "MRNA"}
+  "MRVL":    {"name": "Marvell Technology", "exchange": "NASDAQ", "yahoo": "MRVL"}
+  "MSFT":    {"name": "Microsoft", "exchange": "NASDAQ", "yahoo": "MSFT"}
+  "MTSI":    {"name": "MACOM Technology", "exchange": "NASDAQ", "yahoo": "MTSI"}
+  "MU":      {"name": "Micron Technology", "exchange": "NASDAQ", "yahoo": "MU"}
+  "MXL":     {"name": "MaxLinear", "exchange": "NASDAQ", "yahoo": "MXL"}
+  "NEE":     {"name": "NextEra Energy", "exchange": "NYSE", "yahoo": "NEE"}
+  "NET":     {"name": "Cloudflare", "exchange": "NYSE", "yahoo": "NET"}
+  "NFLX":    {"name": "Netflix", "exchange": "NASDAQ", "yahoo": "NFLX"}
+  "NKE":     {"name": "Nike", "exchange": "NYSE", "yahoo": "NKE"}
+  "NNE":     {"name": "NANO Nuclear Energy", "exchange": "NASDAQ", "yahoo": "NNE", "speculative": true}
+  "NOC":     {"name": "Northrop Grumman", "exchange": "NYSE", "yahoo": "NOC"}
+  "NOW":     {"name": "ServiceNow", "exchange": "NYSE", "yahoo": "NOW"}
+  "NTLA":    {"name": "Intellia Therapeutics", "exchange": "NASDAQ", "yahoo": "NTLA"}
+  "NTRA":    {"name": "Natera", "exchange": "NASDAQ", "yahoo": "NTRA"}
+  "NVAX":    {"name": "Novavax", "exchange": "NASDAQ", "yahoo": "NVAX", "speculative": true}
+  "NVDA":    {"name": "NVIDIA", "exchange": "NASDAQ", "yahoo": "NVDA"}
+  "NVO":     {"name": "Novo Nordisk", "exchange": "NYSE", "yahoo": "NVO"}
+  "OKLO":    {"name": "Oklo Inc", "exchange": "NYSE", "yahoo": "OKLO", "speculative": true}
+  "OLN":     {"name": "Olin Corporation", "exchange": "NYSE", "yahoo": "OLN"}
+  "ORCL":    {"name": "Oracle", "exchange": "NYSE", "yahoo": "ORCL"}
+  "OXY":     {"name": "Occidental Petroleum", "exchange": "NYSE", "yahoo": "OXY"}
+  "P":       {"name": "Everpure", "exchange": "NYSE", "yahoo": "P"}
+  "PACB":    {"name": "Pacific Biosciences", "exchange": "NASDAQ", "yahoo": "PACB", "speculative": true}
+  "PANW":    {"name": "Palo Alto Networks", "exchange": "NASDAQ", "yahoo": "PANW"}
+  "PEP":     {"name": "PepsiCo", "exchange": "NASDAQ", "yahoo": "PEP"}
+  "PG":      {"name": "Procter & Gamble", "exchange": "NYSE", "yahoo": "PG"}
+  "PL":      {"name": "Planet Labs", "exchange": "NYSE", "yahoo": "PL"}
+  "PLTR":    {"name": "Palantir Technologies", "exchange": "NASDAQ", "yahoo": "PLTR"}
+  "POWL":    {"name": "Powell Industries", "exchange": "NASDAQ", "yahoo": "POWL"}
+  "QCOM":    {"name": "Qualcomm", "exchange": "NASDAQ", "yahoo": "QCOM"}
+  "QQ.L":    {"name": "QinetiQ Group", "exchange": "LSE", "yahoo": "QQ.L", "special": "lse_pence"}
+  "RCAT":    {"name": "Red Cat Holdings", "exchange": "NASDAQ", "yahoo": "RCAT"}
+  "RCUS":    {"name": "Arcus Biosciences", "exchange": "NYSE", "yahoo": "RCUS", "speculative": true}
+  "REGN":    {"name": "Regeneron Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "REGN"}
+  "RKLB":    {"name": "Rocket Lab USA", "exchange": "NASDAQ", "yahoo": "RKLB"}
+  "RR.":     {"name": "Rolls-Royce Holdings", "exchange": "LSE", "yahoo": "RR.L", "special": "lse_pence"}
+  "RR.L":    {"name": "Rolls-Royce Holdings", "exchange": "LSE", "yahoo": "RR.L", "special": "lse_pence"}
+  "RTX":     {"name": "RTX Corporation", "exchange": "NYSE", "yahoo": "RTX"}
+  "RXRX":    {"name": "Recursion Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "RXRX", "speculative": true}
+  "SAIC":    {"name": "Science Applications International", "exchange": "NYSE", "yahoo": "SAIC"}
+  "SAP":     {"name": "SAP SE", "exchange": "NYSE", "yahoo": "SAP"}
+  "SHEL":    {"name": "Shell", "exchange": "NYSE", "yahoo": "SHEL"}
+  "SHOP":    {"name": "Shopify", "exchange": "NYSE", "yahoo": "SHOP"}
+  "SLB":     {"name": "SLB (Schlumberger)", "exchange": "NYSE", "yahoo": "SLB"}
+  "SMCI":    {"name": "Super Micro Computer", "exchange": "NASDAQ", "yahoo": "SMCI"}
+  "SMR":     {"name": "NuScale Power", "exchange": "NYSE", "yahoo": "SMR", "speculative": true}
+  "SMTC":    {"name": "Semtech", "exchange": "NASDAQ", "yahoo": "SMTC"}
+  "SNDK":    {"name": "SanDisk Corporation", "exchange": "NASDAQ", "yahoo": "SNDK"}
+  "SNOW":    {"name": "Snowflake", "exchange": "NYSE", "yahoo": "SNOW"}
+  "SONY":    {"name": "Sony Group", "exchange": "NYSE", "yahoo": "SONY"}
+  "SPCX":    {"name": "SpaceX", "exchange": "NASDAQ", "yahoo": "SPCX"}
+  "SPOT":    {"name": "Spotify", "exchange": "NYSE", "yahoo": "SPOT"}
+  "SRPT":    {"name": "Sarepta Therapeutics", "exchange": "NASDAQ", "yahoo": "SRPT"}
+  "SSE.L":   {"name": "SSE plc", "exchange": "LSE", "yahoo": "SSE.L", "special": "lse_pence"}
+  "STX":     {"name": "Seagate Technology", "exchange": "NASDAQ", "yahoo": "STX"}
+  "TDG":     {"name": "TransDigm Group", "exchange": "NYSE", "yahoo": "TDG"}
+  "TLN":     {"name": "Talen Energy", "exchange": "NASDAQ", "yahoo": "TLN"}
+  "TM":      {"name": "Toyota Motor", "exchange": "NYSE", "yahoo": "TM"}
+  "TMO":     {"name": "Thermo Fisher Scientific", "exchange": "NYSE", "yahoo": "TMO"}
+  "TSLA":    {"name": "Tesla", "exchange": "NASDAQ", "yahoo": "TSLA"}
+  "TSM":     {"name": "Taiwan Semiconductor", "exchange": "NYSE", "yahoo": "TSM"}
+  "TTE":     {"name": "TotalEnergies", "exchange": "NYSE", "yahoo": "TTE"}
+  "TXT":     {"name": "Textron", "exchange": "NYSE", "yahoo": "TXT"}
+  "UBER":    {"name": "Uber", "exchange": "NYSE", "yahoo": "UBER"}
+  "UEC":     {"name": "Uranium Energy Corp", "exchange": "NYSE", "yahoo": "UEC"}
+  "UNH":     {"name": "UnitedHealth Group", "exchange": "NYSE", "yahoo": "UNH"}
+  "V":       {"name": "Visa", "exchange": "NYSE", "yahoo": "V"}
+  "VIAV":    {"name": "Viavi Solutions", "exchange": "NASDAQ", "yahoo": "VIAV"}
+  "VLO":     {"name": "Valero Energy", "exchange": "NYSE", "yahoo": "VLO"}
+  "VRT":     {"name": "Vertiv Holdings", "exchange": "NYSE", "yahoo": "VRT"}
+  "VRTX":    {"name": "Vertex Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "VRTX"}
+  "VST":     {"name": "Vistra Corp", "exchange": "NYSE", "yahoo": "VST"}
+  "WDC":     {"name": "Western Digital", "exchange": "NASDAQ", "yahoo": "WDC"}
+  "WMT":     {"name": "Walmart", "exchange": "NYSE", "yahoo": "WMT"}
+  "WULF":    {"name": "TeraWulf", "exchange": "NASDAQ", "yahoo": "WULF", "speculative": true}
+  "XOM":     {"name": "ExxonMobil", "exchange": "NYSE", "yahoo": "XOM"}
+  "ADA":     {"name": "Cardano", "exchange": "Crypto", "yahoo": "ADA-USD", "cmc_symbol": "ADA", "cmc_id": 2010, "coingecko": "cardano"}
+  "AIOZ":    {"name": "AIOZ Network", "exchange": "Crypto", "yahoo": "AIOZ-USD", "cmc_symbol": "AIOZ", "cmc_id": 9104, "coingecko": "aioz-network"}
+  "ALGO":    {"name": "Algorand", "exchange": "Crypto", "yahoo": "ALGO-USD", "cmc_symbol": "ALGO", "cmc_id": 4030, "coingecko": "algorand"}
+  "ALT":     {"name": "AltLayer", "exchange": "Crypto", "yahoo": "ALT-USD", "cmc_symbol": "ALT", "cmc_id": 29073, "coingecko": "altlayer"}
+  "ARKM":    {"name": "Arkham", "exchange": "Crypto", "yahoo": "ARKM-USD", "cmc_symbol": "ARKM", "cmc_id": 27565, "coingecko": "arkham"}
+  "AVAX":    {"name": "Avalanche", "exchange": "Crypto", "yahoo": "AVAX-USD", "cmc_symbol": "AVAX", "cmc_id": 5805, "coingecko": "avalanche-2"}
+  "BNB":     {"name": "BNB", "exchange": "Crypto", "yahoo": "BNB-USD", "cmc_symbol": "BNB", "cmc_id": 1839, "coingecko": "binancecoin"}
+  "BTC":     {"name": "Bitcoin", "exchange": "Crypto", "yahoo": "BTC-USD", "cmc_symbol": "BTC", "cmc_id": 1, "coingecko": "bitcoin"}
+  "DOGE":    {"name": "Dogecoin", "exchange": "Crypto", "yahoo": "DOGE-USD", "cmc_symbol": "DOGE", "cmc_id": 74, "coingecko": "dogecoin"}
+  "DOT":     {"name": "Polkadot", "exchange": "Crypto", "yahoo": "DOT-USD", "cmc_symbol": "DOT", "cmc_id": 6636, "coingecko": "polkadot"}
+  "ETH":     {"name": "Ethereum", "exchange": "Crypto", "yahoo": "ETH-USD", "cmc_symbol": "ETH", "cmc_id": 1027, "coingecko": "ethereum"}
+  "FET":     {"name": "ASI Alliance", "exchange": "Crypto", "yahoo": "FET-USD", "cmc_symbol": "FET", "cmc_id": 3773, "coingecko": "fetch-ai"}
+  "GRT":     {"name": "The Graph", "exchange": "Crypto", "yahoo": "GRT-USD", "cmc_symbol": "GRT", "cmc_id": 6719, "coingecko": "the-graph"}
+  "HBAR":    {"name": "Hedera", "exchange": "Crypto", "yahoo": "HBAR-USD", "cmc_symbol": "HBAR", "cmc_id": 4642, "coingecko": "hedera-hashgraph"}
+  "ICP":     {"name": "Internet Computer", "exchange": "Crypto", "yahoo": "ICP-USD", "cmc_symbol": "ICP", "cmc_id": 8916, "coingecko": "internet-computer"}
+  "KAITO":   {"name": "Kaito", "exchange": "Crypto", "yahoo": "KAITO-USD", "cmc_symbol": "KAITO", "cmc_id": 35763, "coingecko": "kaito"}
+  "LINK":    {"name": "Chainlink", "exchange": "Crypto", "yahoo": "LINK-USD", "cmc_symbol": "LINK", "cmc_id": 1975, "coingecko": "chainlink"}
+  "MINA":    {"name": "Mina", "exchange": "Crypto", "yahoo": "MINA-USD", "cmc_symbol": "MINA", "cmc_id": 8646, "coingecko": "mina-protocol"}
+  "NEAR":    {"name": "NEAR Protocol", "exchange": "Crypto", "yahoo": "NEAR-USD", "cmc_symbol": "NEAR", "cmc_id": 6535, "coingecko": "near"}
+  "NMR":     {"name": "Numeraire", "exchange": "Crypto", "yahoo": "NMR-USD", "cmc_symbol": "NMR", "cmc_id": 1732, "coingecko": "numeraire"}
+  "PEPE":    {"name": "Pepe", "exchange": "Crypto", "yahoo": "PEPE24478-USD", "cmc_symbol": "PEPE", "cmc_id": 24478, "coingecko": "pepe"}
+  "POL":     {"name": "Polygon (MATIC)", "exchange": "Crypto", "yahoo": "POL-USD", "cmc_symbol": "POL", "cmc_id": 28321, "coingecko": "polygon-ecosystem-token"}
+  "RNDR":    {"name": "Render", "exchange": "Crypto", "yahoo": "RNDR-USD", "cmc_symbol": "RENDER", "cmc_id": 5690, "coingecko": "render-token"}
+  "SOL":     {"name": "Solana", "exchange": "Crypto", "yahoo": "SOL-USD", "cmc_symbol": "SOL", "cmc_id": 5426, "coingecko": "solana"}
+  "SUI":     {"name": "Sui", "exchange": "Crypto", "yahoo": "SUI20947-USD", "cmc_symbol": "SUI", "cmc_id": 20947, "coingecko": "sui"}
+  "TAO":     {"name": "Bittensor", "exchange": "Crypto", "yahoo": "TAO-USD", "cmc_symbol": "TAO", "cmc_id": 22974, "coingecko": "bittensor"}
+  "TON":     {"name": "Toncoin", "exchange": "Crypto", "yahoo": "TON11419-USD", "cmc_symbol": "GRAM", "cmc_id": 11419, "coingecko": "the-open-network"}
+  "TRX":     {"name": "TRON", "exchange": "Crypto", "yahoo": "TRX-USD", "cmc_symbol": "TRX", "cmc_id": 1958, "coingecko": "tron"}
+  "VIRTUAL": {"name": "Virtuals Protocol", "exchange": "Crypto", "yahoo": "VIRTUAL-USD", "cmc_symbol": "VIRTUAL", "cmc_id": 29420, "coingecko": "virtual-protocol"}
+  "WLD":     {"name": "Worldcoin", "exchange": "Crypto", "yahoo": "WLD-USD", "cmc_symbol": "WLD", "cmc_id": 13502, "coingecko": "worldcoin-wld"}
+  "XLM":     {"name": "Stellar", "exchange": "Crypto", "yahoo": "XLM-USD", "cmc_symbol": "XLM", "cmc_id": 512, "coingecko": "stellar"}
+  "XRP":     {"name": "XRP", "exchange": "Crypto", "yahoo": "XRP-USD", "cmc_symbol": "XRP", "cmc_id": 52, "coingecko": "ripple"}
+
+sectors:
+  AI:
+    - ["SNDK", "memory"]
+    - ["WDC", "memory"]
+    - ["285A", "memory"]
+    - ["MU", "memory"]
+    - ["STX", "memory"]
+    - ["MRVL", "memory"]
+    - ["P", "memory"]
+
+    - ["RR.", "nuclear-ops"]
+    - ["CEG", "nuclear-ops"]
+    - ["VST", "nuclear-ops"]
+    - ["TLN", "nuclear-ops"]
+    - ["BEP", "nuclear-ops"]
+    - ["BEPC", "nuclear-ops"]
+
+    - ["GEV", "smr"]
+    - ["BWXT", "smr"]
+    - ["SMR", "smr"]
+    - ["OKLO", "smr"]
+    - ["NNE", "smr"]
+
+    - ["CCJ", "uranium"]
+    - ["UEC", "uranium"]
+    - ["LEU", "uranium"]
+
+    - ["VRT", "power-infra"]
+    - ["ETN", "power-infra"]
+    - ["POWL", "power-infra"]
+
+    - ["EQIX", "dc-operators"]
+    - ["DLR", "dc-operators"]
+    - ["AMT", "dc-operators"]
+
+    - ["GOOGL", "hyperscalers"]
+    - ["MSFT", "hyperscalers"]
+    - ["AMZN", "hyperscalers"]
+    - ["META", "hyperscalers"]
+
+    - ["IREN", "ai-compute"]
+    - ["CORZ", "ai-compute"]
+    - ["WULF", "ai-compute"]
+    - ["HUT", "ai-compute"]
+    - ["SMCI", "ai-compute"]
+    - ["DELL", "ai-compute"]
+
+    - ["COHR", "fibre-optical"]
+    - ["LITE", "fibre-optical"]
+    - ["AAOI", "fibre-optical"]
+    - ["FN", "fibre-optical"]
+
+    - ["MTSI", "dsp-semi"]
+    - ["SMTC", "dsp-semi"]
+    - ["CRDO", "dsp-semi"]
+    - ["MXL", "dsp-semi"]
+
+    - ["KEYS", "test-equip"]
+    - ["VIAV", "test-equip"]
+
+    - ["AXTI", "materials"]
+
+  Biotech:
+    - ["AMGN", "large-cap"]
+    - ["GILD", "large-cap"]
+    - ["REGN", "large-cap"]
+    - ["VRTX", "large-cap"]
+    - ["BIIB", "large-cap"]
+    - ["BMY", "large-cap"]
+
+    - ["AZN", "uk-listed"]
+    - ["GSK", "uk-listed"]
+
+    - ["CRSP", "gene-editing"]
+    - ["BEAM", "gene-editing"]
+    - ["NTLA", "gene-editing"]
+    - ["EDIT", "gene-editing"]
+
+    - ["ILMN", "genomics"]
+    - ["PACB", "genomics"]
+    - ["NTRA", "genomics"]
+    - ["RXRX", "genomics"]
+
+    - ["INCY", "oncology"]
+    - ["EXEL", "oncology"]
+    - ["ALNY", "oncology"]
+    - ["RCUS", "oncology"]
+
+    - ["MRNA", "mrna"]
+    - ["BNTX", "mrna"]
+    - ["NVAX", "mrna"]
+
+    - ["BMRN", "rare-disease"]
+    - ["SRPT", "rare-disease"]
+    - ["COAG", "rare-disease"]
+
+    - ["NVO", "metabolic"]
+    - ["LLY", "metabolic"]
+
+    - ["LEGN", "neuroscience"]
+    - ["IONS", "neuroscience"]
+
+  Defence:
+    - ["LMT", "us-primes"]
+    - ["RTX", "us-primes"]
+    - ["NOC", "us-primes"]
+    - ["GD", "us-primes"]
+    - ["HII", "us-primes"]
+    - ["LHX", "us-primes"]
+    - ["BA", "us-primes"]
+
+    - ["BA.L", "uk-european"]
+    - ["RR.L", "uk-european"]
+    - ["QQ.L", "uk-european"]
+
+    - ["PLTR", "cyber-intel"]
+    - ["LDOS", "cyber-intel"]
+    - ["CACI", "cyber-intel"]
+    - ["SAIC", "cyber-intel"]
+    - ["BAH", "cyber-intel"]
+
+    - ["AVAV", "drones"]
+    - ["KTOS", "drones"]
+    - ["RCAT", "drones"]
+    - ["TXT", "drones"]
+
+    - ["SPCX", "space"]
+    - ["RKLB", "space"]
+    - ["PL", "space"]
+    - ["ASTS", "space"]
+
+    - ["TDG", "weapons"]
+    - ["HEI", "weapons"]
+    - ["AXON", "weapons"]
+    - ["OLN", "weapons"]
+    - ["MRCY", "weapons"]
+    - ["DRS", "weapons"]
+
+  Tech:
+    - ["AAPL", "mega-cap"]
+    - ["MSFT", "mega-cap"]
+    - ["GOOGL", "mega-cap"]
+    - ["AMZN", "mega-cap"]
+    - ["META", "mega-cap"]
+
+    - ["NVDA", "semiconductors"]
+    - ["AMD", "semiconductors"]
+    - ["INTC", "semiconductors"]
+    - ["TSM", "semiconductors"]
+    - ["AVGO", "semiconductors"]
+    - ["QCOM", "semiconductors"]
+    - ["ARM", "semiconductors"]
+    - ["ASML", "semiconductors"]
+    - ["MU", "semiconductors"]
+    - ["AMAT", "semiconductors"]
+
+    - ["ORCL", "enterprise-software"]
+    - ["CRM", "enterprise-software"]
+    - ["ADBE", "enterprise-software"]
+    - ["NOW", "enterprise-software"]
+    - ["SNOW", "enterprise-software"]
+    - ["INTU", "enterprise-software"]
+
+    - ["CRWD", "cybersecurity"]
+    - ["PANW", "cybersecurity"]
+    - ["NET", "cybersecurity"]
+    - ["FTNT", "cybersecurity"]
+
+    - ["NFLX", "consumer-platform"]
+    - ["SHOP", "consumer-platform"]
+    - ["SPOT", "consumer-platform"]
+    - ["UBER", "consumer-platform"]
+
+    - ["CSCO", "hardware-infra"]
+    - ["PLTR", "hardware-infra"]
+
+  Crypto:
+    - ["BTC", "bitcoin"]
+
+    - ["ETH", "layer1"]
+    - ["SOL", "layer1"]
+    - ["BNB", "layer1"]
+    - ["ADA", "layer1"]
+    - ["AVAX", "layer1"]
+
+    - ["XRP", "payments"]
+    - ["XLM", "payments"]
+    - ["TRX", "payments"]
+
+    - ["SUI", "emerging"]
+    - ["HBAR", "emerging"]
+    - ["TON", "emerging"]
+    - ["ALGO", "emerging"]
+    - ["MINA", "emerging"]
+
+    - ["POL", "infra"]
+    - ["DOT", "infra"]
+    - ["LINK", "infra"]
+
+    - ["DOGE", "meme"]
+    - ["PEPE", "meme"]
+
+    - ["TAO", "ai"]
+    - ["FET", "ai"]
+    - ["RNDR", "ai"]
+    - ["GRT", "ai"]
+    - ["NMR", "ai"]
+    - ["ALT", "ai"]
+    - ["AIOZ", "ai"]
+    - ["ARKM", "ai"]
+    - ["WLD", "ai"]
+    - ["NEAR", "ai"]
+    - ["ICP", "ai"]
+    - ["KAITO", "ai"]
+    - ["VIRTUAL", "ai"]
+
+  Energy:
+    - ["XOM", "oil-majors"]
+    - ["CVX", "oil-majors"]
+    - ["SHEL", "oil-majors"]
+    - ["BP", "oil-majors"]
+    - ["TTE", "oil-majors"]
+    - ["EQNR", "oil-majors"]
+
+    - ["COP", "ep-refining"]
+    - ["OXY", "ep-refining"]
+    - ["EOG", "ep-refining"]
+    - ["MPC", "ep-refining"]
+    - ["VLO", "ep-refining"]
+
+    - ["SLB", "oilfield-services"]
+    - ["HAL", "oilfield-services"]
+    - ["BKR", "oilfield-services"]
+
+    - ["NEE", "utilities"]
+    - ["SSE.L", "utilities"]
+
+    - ["ENPH", "clean-energy"]
+    - ["FSLR", "clean-energy"]
+    - ["BEPC", "clean-energy"]
+    - ["DNNGY", "clean-energy"]
+
+  MegaCap:
+    - ["AAPL", "big-tech"]
+    - ["MSFT", "big-tech"]
+    - ["NVDA", "big-tech"]
+    - ["GOOGL", "big-tech"]
+    - ["META", "big-tech"]
+    - ["AMZN", "big-tech"]
+    - ["TSLA", "big-tech"]
+    - ["NFLX", "big-tech"]
+
+    - ["JPM", "financials"]
+    - ["BAC", "financials"]
+    - ["BRK-B", "financials"]
+    - ["V", "financials"]
+    - ["MA", "financials"]
+    - ["GS", "financials"]
+    - ["BLK", "financials"]
+
+    - ["LLY", "healthcare"]
+    - ["UNH", "healthcare"]
+    - ["JNJ", "healthcare"]
+    - ["ABBV", "healthcare"]
+    - ["MRK", "healthcare"]
+    - ["TMO", "healthcare"]
+    - ["ABT", "healthcare"]
+
+    - ["PG", "consumer"]
+    - ["KO", "consumer"]
+    - ["PEP", "consumer"]
+    - ["MCD", "consumer"]
+    - ["NKE", "consumer"]
+    - ["WMT", "consumer"]
+    - ["COST", "consumer"]
+
+    - ["XOM", "energy-industrial"]
+    - ["CVX", "energy-industrial"]
+    - ["CAT", "energy-industrial"]
+    - ["HON", "energy-industrial"]
+    - ["GE", "energy-industrial"]
+    - ["RTX", "energy-industrial"]
+    - ["BA", "energy-industrial"]
+
+    - ["AMD", "tech-semis"]
+    - ["QCOM", "tech-semis"]
+    - ["AVGO", "tech-semis"]
+    - ["TSM", "tech-semis"]
+    - ["ASML", "tech-semis"]
+    - ["ARM", "tech-semis"]
+    - ["INTC", "tech-semis"]
+
+    - ["2222.SR", "global-growth"]
+    - ["BABA", "global-growth"]
+    - ["SAP", "global-growth"]
+    - ["SONY", "global-growth"]
+    - ["TM", "global-growth"]
+    - ["NVO", "global-growth"]
+    - ["HSBC", "global-growth"]

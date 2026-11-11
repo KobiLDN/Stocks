@@ -23,6 +23,11 @@ jobs:
             -not -path "./exports/*" \
             | sort | xargs python -m py_compile && echo "All Python files OK"
 
+      - name: Master list (universe.yaml) check
+        run: |
+          pip install -q pyyaml
+          python universe.py
+
       - name: Freshness rules tests
         run: node --test monitoring/freshness.test.js
 

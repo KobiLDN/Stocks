@@ -11,6 +11,12 @@ import contextlib
 import io
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import os
+import sys
+
+# universe.yaml (repo root) is the master list of tracked assets
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from universe import sector_stocks  # noqa: E402
 
 # News sentiment is keyless (VADER, local). It is strictly secondary —
 # a missing/broken VADER must never break the price update, so the import
@@ -27,33 +33,7 @@ DASHBOARD_TITLE = "Energy Stock Dashboard"
 
 # ticker → (yahoo_symbol, category, exchange, special, company_name)
 # special: None | "lse_pence"
-STOCKS = {
-    # oil-majors
-    "XOM":   ("XOM",   "oil-majors",        "NYSE",   None,        "ExxonMobil"),
-    "CVX":   ("CVX",   "oil-majors",        "NYSE",   None,        "Chevron"),
-    "SHEL":  ("SHEL",  "oil-majors",        "NYSE",   None,        "Shell"),
-    "BP":    ("BP",    "oil-majors",        "NYSE",   None,        "BP p.l.c."),
-    "TTE":   ("TTE",   "oil-majors",        "NYSE",   None,        "TotalEnergies"),
-    "EQNR":  ("EQNR",  "oil-majors",        "NYSE",   None,        "Equinor"),
-    # ep-refining
-    "COP":   ("COP",   "ep-refining",       "NYSE",   None,        "ConocoPhillips"),
-    "OXY":   ("OXY",   "ep-refining",       "NYSE",   None,        "Occidental Petroleum"),
-    "EOG":   ("EOG",   "ep-refining",       "NYSE",   None,        "EOG Resources"),
-    "MPC":   ("MPC",   "ep-refining",       "NYSE",   None,        "Marathon Petroleum"),
-    "VLO":   ("VLO",   "ep-refining",       "NYSE",   None,        "Valero Energy"),
-    # oilfield-services
-    "SLB":   ("SLB",   "oilfield-services", "NYSE",   None,        "SLB (Schlumberger)"),
-    "HAL":   ("HAL",   "oilfield-services", "NYSE",   None,        "Halliburton"),
-    "BKR":   ("BKR",   "oilfield-services", "NASDAQ", None,        "Baker Hughes"),
-    # utilities
-    "NEE":   ("NEE",   "utilities",         "NYSE",   None,        "NextEra Energy"),
-    "SSE.L": ("SSE.L", "utilities",         "LSE",    "lse_pence", "SSE plc"),
-    # clean-energy
-    "ENPH":  ("ENPH",  "clean-energy",      "NASDAQ", None,        "Enphase Energy"),
-    "FSLR":  ("FSLR",  "clean-energy",      "NASDAQ", None,        "First Solar"),
-    "BEPC":  ("BEPC",  "clean-energy",      "NYSE",   None,        "Brookfield Renewable Corp"),
-    "DNNGY": ("DNNGY", "clean-energy",      "NASDAQ", None,        "Ørsted"),
-}
+STOCKS = sector_stocks("Energy")   # from universe.yaml
 
 
 def get_fx_rates():

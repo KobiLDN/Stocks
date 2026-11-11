@@ -11,6 +11,12 @@ import contextlib
 import io
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import os
+import sys
+
+# universe.yaml (repo root) is the master list of tracked assets
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from universe import sector_stocks, speculative  # noqa: E402
 
 # News sentiment is keyless (VADER, local). It is strictly secondary —
 # a missing/broken VADER must never break the price update, so the import
@@ -26,59 +32,10 @@ JS_FILE   = "prices-data.js"
 
 # ticker → (yahoo_symbol, category, exchange, special, company_name)
 # special: None | "lse_pence" | "jpy"
-STOCKS = {
-    "SNDK":  ("SNDK",   "memory",        "NASDAQ", None,        "SanDisk Corporation"),
-    "WDC":   ("WDC",    "memory",        "NASDAQ", None,        "Western Digital"),
-    "285A":  ("285A.T", "memory",        "TSE",    "jpy",       "Kioxia Holdings"),
-    "MU":    ("MU",     "memory",        "NASDAQ", None,        "Micron Technology"),
-    "STX":   ("STX",    "memory",        "NASDAQ", None,        "Seagate Technology"),
-    "MRVL":  ("MRVL",   "memory",        "NASDAQ", None,        "Marvell Technology"),
-    "P":     ("P",      "memory",        "NYSE",   None,        "Everpure"),
-    "RR.":   ("RR.L",   "nuclear-ops",   "LSE",    "lse_pence", "Rolls-Royce Holdings"),
-    "CEG":   ("CEG",    "nuclear-ops",   "NASDAQ", None,        "Constellation Energy"),
-    "VST":   ("VST",    "nuclear-ops",   "NYSE",   None,        "Vistra Corp"),
-    "TLN":   ("TLN",    "nuclear-ops",   "NASDAQ", None,        "Talen Energy"),
-    "BEP":   ("BEP",    "nuclear-ops",   "NYSE",   None,        "Brookfield Renewable"),
-    "BEPC":  ("BEPC",   "nuclear-ops",   "NYSE",   None,        "Brookfield Renewable Corp"),
-    "GEV":   ("GEV",    "smr",           "NYSE",   None,        "GE Vernova"),
-    "BWXT":  ("BWXT",   "smr",           "NYSE",   None,        "BWX Technologies"),
-    "SMR":   ("SMR",    "smr",           "NYSE",   None,        "NuScale Power"),
-    "OKLO":  ("OKLO",   "smr",           "NYSE",   None,        "Oklo Inc"),
-    "NNE":   ("NNE",    "smr",           "NASDAQ", None,        "NANO Nuclear Energy"),
-    "CCJ":   ("CCJ",    "uranium",       "NYSE",   None,        "Cameco Corporation"),
-    "UEC":   ("UEC",    "uranium",       "NYSE",   None,        "Uranium Energy Corp"),
-    "LEU":   ("LEU",    "uranium",       "NYSE",   None,        "Centrus Energy"),
-    "VRT":   ("VRT",    "power-infra",   "NYSE",   None,        "Vertiv Holdings"),
-    "ETN":   ("ETN",    "power-infra",   "NYSE",   None,        "Eaton Corporation"),
-    "POWL":  ("POWL",   "power-infra",   "NASDAQ", None,        "Powell Industries"),
-    "EQIX":  ("EQIX",   "dc-operators",  "NASDAQ", None,        "Equinix"),
-    "DLR":   ("DLR",    "dc-operators",  "NYSE",   None,        "Digital Realty"),
-    "AMT":   ("AMT",    "dc-operators",  "NYSE",   None,        "American Tower"),
-    "GOOGL": ("GOOGL",  "hyperscalers",  "NASDAQ", None,        "Alphabet (Google)"),
-    "MSFT":  ("MSFT",   "hyperscalers",  "NASDAQ", None,        "Microsoft"),
-    "AMZN":  ("AMZN",   "hyperscalers",  "NASDAQ", None,        "Amazon"),
-    "META":  ("META",   "hyperscalers",  "NASDAQ", None,        "Meta Platforms"),
-    "IREN":  ("IREN",   "ai-compute",    "NASDAQ", None,        "Iris Energy"),
-    "CORZ":  ("CORZ",   "ai-compute",    "NASDAQ", None,        "Core Scientific"),
-    "WULF":  ("WULF",   "ai-compute",    "NASDAQ", None,        "TeraWulf"),
-    "HUT":   ("HUT",    "ai-compute",    "NASDAQ", None,        "Hut 8 Mining"),
-    "SMCI":  ("SMCI",   "ai-compute",    "NASDAQ", None,        "Super Micro Computer"),
-    "DELL":  ("DELL",   "ai-compute",    "NYSE",   None,        "Dell Technologies"),
-    "COHR":  ("COHR",   "fibre-optical", "NYSE",   None,        "Coherent Corp"),
-    "LITE":  ("LITE",   "fibre-optical", "NASDAQ", None,        "Lumentum Holdings"),
-    "AAOI":  ("AAOI",   "fibre-optical", "NASDAQ", None,        "Applied Optoelectronics"),
-    "FN":    ("FN",     "fibre-optical", "NYSE",   None,        "Fabrinet"),
-    "MTSI":  ("MTSI",   "dsp-semi",      "NASDAQ", None,        "MACOM Technology"),
-    "SMTC":  ("SMTC",   "dsp-semi",      "NASDAQ", None,        "Semtech"),
-    "CRDO":  ("CRDO",   "dsp-semi",      "NASDAQ", None,        "Credo Technology"),
-    "MXL":   ("MXL",    "dsp-semi",      "NASDAQ", None,        "MaxLinear"),
-    "KEYS":  ("KEYS",   "test-equip",    "NYSE",   None,        "Keysight Technologies"),
-    "VIAV":  ("VIAV",   "test-equip",    "NASDAQ", None,        "Viavi Solutions"),
-    "AXTI":  ("AXTI",   "materials",     "NASDAQ", None,        "AXT Inc"),
-}
+STOCKS = sector_stocks("AI")   # from universe.yaml
 
 # Speculative tickers — show return from 52wk low with asterisk
-SPECULATIVE = {"OKLO", "NNE", "SMR", "IREN", "CORZ", "WULF"}
+SPECULATIVE = speculative("AI")   # from universe.yaml
 
 
 def get_fx_rates():
