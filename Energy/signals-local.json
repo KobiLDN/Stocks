@@ -1,9 +1,165 @@
 {
-  "updated": "2026-11-11 08:06",
+  "updated": "2026-11-11 19:31",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "EOG has the best near-term setup: +47.5% YTD, +4.25% 1W, P/E 9.9 and 2.9% dividend, and Q3 EPS of $4.87 beat the $4.41 consensus while the dividend was raised 8% ([investing.com](https://uk.investing.com/news/stock-market-news/why-is-eog-resources-stock-rallying-today-93CH-4965557)).",
+      "drivers": [
+        "Q3 EPS beat and record production",
+        "+4.25% 1W / +47.5% YTD",
+        "P/E 9.9 with 2.9% yield",
+        "8% dividend raise and new LNG deal"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "CVX",
+      "signal": "strong_buy",
+      "confidence": 0.83,
+      "rationale": "Chevron is the most balanced major: +40.2% YTD, P/E 15.6, 3.37% dividend and the strongest analyst score among majors at 1.62.",
+      "drivers": [
+        "+40.2% YTD",
+        "P/E 15.6",
+        "3.37% dividend yield",
+        "Analyst score 1.62"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "COP",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "COP combines +45.0% YTD with P/E 14.5, 2.74% dividend and a one-day bounce of +1.17%; its 17.5% payout-hike headline reinforces shareholder returns.",
+      "drivers": [
+        "+45.0% YTD",
+        "P/E 14.5",
+        "17.5% payout hike headline",
+        "1D +1.17%"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "TotalEnergies screens as deep value: P/E 8.8, 4.6% dividend, +35.1% YTD and a very low 0.04 beta.",
+      "drivers": [
+        "P/E 8.8",
+        "4.6% dividend yield",
+        "+35.1% YTD",
+        "Beta 0.04"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "SLB keeps the best analyst score in the universe (1.53, buy), +4.2% 1M and ~25% consensus upside despite sector oil headwinds; recent Norway subsea awards add backlog momentum ([longbridge.com](https://longbridge.com/en/news/304725889)).",
+      "drivers": [
+        "Analyst score 1.53",
+        "+4.2% 1M",
+        "Consensus PT ~25% upside",
+        "Norway subsea contract awards"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "DNNGY",
+      "signal": "buy",
+      "confidence": 0.71,
+      "rationale": "DNNGY carries a rare strong_buy consensus (score 1.0) with +8.2% 1M momentum and news of Revolution Wind reaching full commercial operations supporting growth.",
+      "drivers": [
+        "Analyst score 1.0 (strong_buy)",
+        "+8.2% 1M",
+        "Revolution Wind full commercial ops",
+        "YTD +6.7%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "SSE.L shows strong momentum in utilities: +20.5% YTD, +8.5% 1M, +2.6% 1W, with buy consensus and news sentiment 0.361.",
+      "drivers": [
+        "+8.5% 1M momentum",
+        "+20.5% YTD",
+        "News sentiment 0.361",
+        "Buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SHEL",
+      "signal": "buy",
+      "confidence": 0.64,
+      "rationale": "Shell offers value at P/E 8.5, 3.21% dividend and +32.9% YTD, with positive news sentiment 0.303; the -4.2% 1W is a pullback in a strong uptrend.",
+      "drivers": [
+        "P/E 8.5",
+        "+32.9% YTD",
+        "3.21% dividend yield",
+        "News sentiment 0.303"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.61,
+      "rationale": "BP has the highest news sentiment in the snapshot (0.495), a 4.66% dividend and +30.8% YTD, with a +1.18% 1D bounce as oil firms; P/E 22 is the main drag.",
+      "drivers": [
+        "News sentiment 0.495",
+        "4.66% dividend yield",
+        "+30.8% YTD",
+        "1D +1.18%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "Halliburton is a value recovery play at P/E 13.8, 2.13% dividend and +2.81% 1D; Barclays trimmed its target to $53 but keeps Overweight ([tipranks.com](https://www.tipranks.com/news/the-fly/halliburton-price-target-lowered-to-53-from-55-at-barclays-thefly-news)).",
+      "drivers": [
+        "P/E 13.8",
+        "1D +2.81%",
+        "Analyst score 1.68",
+        "Barclays Overweight"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.649,
+      "ytd": "+143.32%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +143.32% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +143.32% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.549,
+      "ytd": "+121.30%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +121.30% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +121.30% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "EOG",
@@ -132,162 +288,6 @@
         "dividend yield 3.21%",
         "YTD +32.47%",
         "news sentiment 0.216"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.627,
-      "ytd": "+138.63%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +138.63% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +138.63% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.522,
-      "ytd": "+115.29%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +115.29% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +115.29% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "EOG",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "EOG has strong momentum (+3.07% 1D, +1.35% 1M, +45.75% YTD), a low P/E of 9.78, and a 2.96% dividend yield. It just reported a massive Q3 earnings beat ($4.87 EPS vs $4.45 consensus) and raised its dividend 8%, with analysts lifting price targets despite falling oil prices.",
-      "drivers": [
-        "+3.07% 1D momentum",
-        "P/E 9.78",
-        "dividend yield 2.96%",
-        "Q3 earnings beat + dividend hike"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "ConocoPhillips shows solid YTD performance (+43.34%), a reasonable P/E of 14.29, and a 2.77% dividend yield. Q3 profit rose sharply to ~$4 billion, and the stock edged higher (+0.91% 1D) even as oil fell, indicating underlying strength.",
-      "drivers": [
-        "+43.34% YTD",
-        "P/E 14.29",
-        "dividend yield 2.77%",
-        "Q3 profit surge"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "TotalEnergies combines a low P/E of 8.77 with a high dividend yield of 4.56% and strong YTD return of +35.09%. Its 1M decline is only -0.58%, showing resilience, and news sentiment is positive at 0.285.",
-      "drivers": [
-        "P/E 8.77",
-        "dividend yield 4.56%",
-        "+35.09% YTD",
-        "resilient 1M performance"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Chevron offers a compelling mix: P/E 15.51, dividend yield 3.38%, and +39.26% YTD. Its Vaca Muerta bet could fuel long-term growth, and the stock is showing early signs of stabilization (+0.23% 1D) after a weekly pullback.",
-      "drivers": [
-        "dividend yield 3.38%",
-        "+39.26% YTD",
-        "P/E 15.51",
-        "Vaca Muerta growth catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "SLB has a strong analyst consensus (buy, score 1.53) and positive news sentiment (0.196). It shows +2.34% 1M momentum and +26.19% YTD, with a P/E of 24.23 reflecting its premium position in oilfield services.",
-      "drivers": [
-        "analyst score 1.53 (strong buy)",
-        "+2.34% 1M momentum",
-        "+26.19% YTD",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "NextEra Energy has strong 1M momentum (+9.89%) and 1W momentum (+2.31%), with a P/E of 15.55 and dividend yield 2.87%. As a utility, it benefits from rate cuts and AI-driven power demand, with positive news sentiment (0.211).",
-      "drivers": [
-        "+9.89% 1M momentum",
-        "P/E 15.55",
-        "dividend yield 2.87%",
-        "AI power demand tailwind"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SSE has excellent momentum (+7.79% 1M, +3.45% 1W, +19.70% YTD) and a dividend yield of 2.59%. As a UK utility with renewable exposure, it benefits from stable regulated returns and positive news sentiment (0.219).",
-      "drivers": [
-        "+7.79% 1M momentum",
-        "+19.70% YTD",
-        "dividend yield 2.59%",
-        "regulated utility stability"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "DNNGY",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "DNNGY has the strongest analyst consensus (strong_buy, score 1.0) and positive news sentiment (0.339). It shows strong momentum (+8.98% 1M, +7.35% 1W) and benefits from offshore wind operational milestones like Revolution Wind.",
-      "drivers": [
-        "analyst score 1.0 (strong_buy)",
-        "+8.98% 1M momentum",
-        "+7.35% 1W momentum",
-        "offshore wind catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Brookfield Renewable Corp has a high dividend yield of 4.92% and positive 1M momentum (+5.12%). Q3 earnings highlighted record FFO growth, and the stock offers clean energy exposure with a yield that compensates for its hold analyst rating.",
-      "drivers": [
-        "dividend yield 4.92%",
-        "+5.12% 1M momentum",
-        "record FFO growth",
-        "clean energy exposure"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "FSLR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "First Solar has a low P/E of 10.47 and a strong analyst consensus (buy, score 1.75). Despite negative YTD performance, it shows early stabilization (+0.70% 1M) and benefits from US solar manufacturing tailwinds and IRA policy support.",
-      "drivers": [
-        "P/E 10.47",
-        "analyst score 1.75 (buy)",
-        "+0.70% 1M stabilization",
-        "US solar manufacturing tailwind"
       ]
     }
   ]

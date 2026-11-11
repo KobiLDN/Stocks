@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-11 08:02",
+  "updated": "2026-11-11 19:28",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EXEL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "EXEL has surged +60.88% YTD and +17.20% in the last month, with a P/E of 20.99 and a pending FDA decision for Zanza as a next cancer franchise, supported by strong buy analyst consensus.",
+      "drivers": [
+        "+60.88% YTD",
+        "P/E 20.99",
+        "FDA decision catalyst for Zanza",
+        "strong_buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "LLY has gained +32.58% YTD and +20.53% in the last month, with a P/E of 46.27, positive news sentiment of 0.245, and strong momentum in the metabolic/obesity space.",
+      "drivers": [
+        "+32.58% YTD",
+        "+20.53% 1-month momentum",
+        "positive news sentiment 0.245",
+        "metabolic/obesity leader"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "REGN has rallied +21.99% in the last month and +34% over 1 year, with a P/E of 20.57, positive news sentiment of 0.155, and promising CIDEBsiRNA liver disease data catalysts.",
+      "drivers": [
+        "+21.99% 1-month momentum",
+        "P/E 20.57",
+        "positive news sentiment 0.155",
+        "CIDEBsiRNA liver disease data catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "AMGN has delivered +44.16% YTD and +10.85% in the last month, with a P/E of 26.83, a 2.17% dividend yield, and positive late-stage trial data for dazodalibep in Sj\u00f6gren's disease.",
+      "drivers": [
+        "+44.16% YTD",
+        "P/E 26.83",
+        "positive late-stage Sj\u00f6gren's trial data",
+        "2.17% dividend yield"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "GILD has gained +41.77% YTD and +12.57% in the last month, with a buy analyst rating, positive news sentiment of 0.274, and low short interest of 1.72%.",
+      "drivers": [
+        "+41.77% YTD",
+        "+12.57% 1-month momentum",
+        "positive news sentiment 0.274",
+        "low short interest 1.72%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "BIIB has surged +41.92% YTD and +10.01% in the last month, with a buy analyst rating and positive Leqembi launch momentum, though P/E of 109.25 is elevated.",
+      "drivers": [
+        "+41.92% YTD",
+        "+10.01% 1-month momentum",
+        "buy analyst rating",
+        "Leqembi launch catalyst"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AZN has gained +15.55% in the last month and +2.25% YTD, with a P/E of 26.02, positive news sentiment of 0.234, and a buy analyst rating.",
+      "drivers": [
+        "+15.55% 1-month momentum",
+        "P/E 26.02",
+        "positive news sentiment 0.234",
+        "buy analyst rating"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "COAG has rallied +28.33% in the last month and +14.71% YTD, with a strong_buy analyst consensus (score 1.17) and a rare-disease pipeline catalyst.",
+      "drivers": [
+        "+28.33% 1-month momentum",
+        "strong_buy analyst consensus (1.17)",
+        "rare-disease pipeline catalyst",
+        "+14.71% YTD"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "INCY has gained +20.45% YTD and +9.70% in the last month, with a buy analyst rating, though P/E of 62.33 is high and news sentiment is slightly negative at -0.188.",
+      "drivers": [
+        "+20.45% YTD",
+        "+9.70% 1-month momentum",
+        "buy analyst rating",
+        "oncology pipeline"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "rationale": "MRNA has exploded +698.83% YTD and +15.34% in the last month, but has a hold analyst rating (score 2.91), negative news sentiment of -0.161, and no P/E, indicating high risk.",
+      "drivers": [
+        "+698.83% YTD",
+        "+15.34% 1-month momentum",
+        "mRNA platform momentum",
+        "high risk/high reward"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,151 +265,6 @@ window.SIGNALS_DATA = {
         "high dividend yield",
         "strong YTD",
         "buy consensus"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+712.80%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +712.80% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +712.80% \u2265 256.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "+43% YTD, analyst 'buy' consensus (1.68), and highest news sentiment (0.275) among large caps signal strong momentum and favorable outlook.",
-      "drivers": [
-        "+43% YTD return",
-        "analyst 'buy' consensus 1.68",
-        "news sentiment 0.275",
-        "1M momentum +13.7%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "+33% YTD, +21% 1M momentum, analyst 'buy' (1.61), and high news sentiment (0.288) reflect leadership in the high-growth metabolic sector.",
-      "drivers": [
-        "+21% 1M momentum",
-        "analyst 'buy' consensus 1.61",
-        "news sentiment 0.288",
-        "metabolic sector leadership"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "+20% 1M momentum, analyst 'buy' (1.79), positive news sentiment (0.198), and strong Q3 revenue growth (+36%) per web search.",
-      "drivers": [
-        "+20.3% 1M momentum",
-        "Q3 revenue +36% (web)",
-        "analyst 'buy' consensus 1.79",
-        "debt-free balance sheet"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+21% YTD, analyst 'buy' (1.62), high news sentiment (0.233), and strong rare-disease pipeline justify the premium P/E of 35.",
-      "drivers": [
-        "analyst 'buy' consensus 1.62",
-        "news sentiment 0.233",
-        "+21% YTD return",
-        "rare-disease pipeline strength"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+45% YTD, +11.5% 1M momentum, and MariTide obesity pipeline catalyst (per web) offset a 'hold' analyst consensus (2.71).",
-      "drivers": [
-        "+45% YTD return",
-        "MariTide pipeline catalyst (web)",
-        "+11.5% 1M momentum",
-        "Q3 EPS beat (web)"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+60% 1-year and +42.5% YTD returns with analyst 'buy' (1.78), though a very high P/E (109.7) signals valuation risk.",
-      "drivers": [
-        "+60% 1-year return",
-        "analyst 'buy' consensus 1.78",
-        "+42.5% YTD return",
-        "neuroscience sector focus"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+62% YTD, +18% 1M momentum, analyst 'buy' (2.41), and positive news sentiment (0.102) in the oncology space.",
-      "drivers": [
-        "+62% YTD return",
-        "+18% 1M momentum",
-        "oncology sector catalyst",
-        "news sentiment 0.102"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Analyst 'strong_buy' (1.17) and +27% 1M momentum are unmatched, despite short-term volatility (-10% 1W) and negative news sentiment (-0.055).",
-      "drivers": [
-        "analyst 'strong_buy' 1.17",
-        "+27.2% 1M momentum",
-        "rare disease catalyst",
-        "+26% 1-year return"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BEAM",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Analyst 'strong_buy' (1.33), positive news sentiment (0.137), and a pivotal sickle cell trial success (per web) provide a strong catalyst.",
-      "drivers": [
-        "analyst 'strong_buy' 1.33",
-        "pivotal trial success (web)",
-        "news sentiment 0.137",
-        "gene-editing platform catalyst"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+15.4% 1M momentum, analyst 'buy' (1.62), and relevance as a UK-listed stock make it a solid pick despite a modest +2.2% YTD.",
-      "drivers": [
-        "+15.4% 1M momentum",
-        "analyst 'buy' consensus 1.62",
-        "UK-listed category relevance",
-        "oncology pipeline strength"
       ]
     }
   ]

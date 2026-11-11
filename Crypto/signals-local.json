@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-11 08:05",
+  "updated": "2026-11-11 19:30",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TON",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "TON shows strong short-term momentum with +9.51% 1D and +3.06% 1W gains, bucking the broader market downtrend, and has a relatively modest -11.71% 1M decline compared to peers.",
+      "drivers": [
+        "+9.51% 1D gain",
+        "+3.06% 1W gain",
+        "resilient vs. market",
+        "no negative news sentiment"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AVAX",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "AVAX gained +5.72% 1D and only -1.70% 1W, with positive news sentiment of 0.147 and a mention in a Charles Schwab crypto expansion report, signaling institutional interest.",
+      "drivers": [
+        "+5.72% 1D gain",
+        "positive news sentiment 0.147",
+        "institutional interest (Schwab)",
+        "resilient 1W performance"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PEPE",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "PEPE has exceptional YTD return of +23.20% and 1M return of +21.75%, with only a minor -1.35% 1W dip, indicating strong momentum despite a -5.68% 1D pullback.",
+      "drivers": [
+        "+23.20% YTD",
+        "+21.75% 1M gain",
+        "strong momentum",
+        "low market cap $2.1B"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Bitcoin gained +2.04% 1D and is testing its 200-day moving average near $73,200; ETF outflows slowed to $95M from $430M, and positive news sentiment of 0.032 supports a potential bounce.",
+      "drivers": [
+        "+2.04% 1D gain",
+        "ETF outflow slowing",
+        "near 200-day MA support",
+        "positive news sentiment 0.032"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BNB shows relative strength with -3.93% 1W and -7.44% 1M declines, outperforming most large-cap altcoins, and has a large market cap of $90.4B with positive news sentiment of 0.031.",
+      "drivers": [
+        "-3.93% 1W (resilient)",
+        "large market cap $90.4B",
+        "positive news sentiment 0.031",
+        "outperforming peers"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "TRX is the only asset with positive YTD (+11.13%) and 1Y (+11%) returns, with a modest -1.27% 1W decline, though negative news sentiment of -0.542 tempers conviction.",
+      "drivers": [
+        "+11.13% YTD",
+        "+11% 1Y return",
+        "resilient 1W -1.27%",
+        "negative news sentiment -0.542"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "LINK gained +3.35% 1D and has positive news sentiment of 0.097, with a mention in a Charles Schwab crypto expansion report, though -8.63% 1W and -18.19% 1M show recent weakness.",
+      "drivers": [
+        "+3.35% 1D gain",
+        "positive news sentiment 0.097",
+        "institutional interest (Schwab)",
+        "moderate 1Y return -14%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Ether gained +3.40% 1D and has positive news sentiment of 0.099, but -13.83% 1W and -16.56% 1M reflect heavy selling; large market cap of $255.4B provides relative safety.",
+      "drivers": [
+        "+3.40% 1D gain",
+        "positive news sentiment 0.099",
+        "large market cap $255.4B",
+        "oversold 1M -16.56%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "POL gained +4.06% 1D and has a relatively mild -11.03% YTD and -11% 1Y return, with neutral news sentiment of 0.0 and a mention in Visa's stablecoin program.",
+      "drivers": [
+        "+4.06% 1D gain",
+        "mild YTD -11.03%",
+        "neutral news sentiment 0.0",
+        "Visa stablecoin mention"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DOGE",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "DOGE gained +3.50% 1D and has positive news sentiment of 0.076, but -9.69% 1W and whale dumping of 750M tokens over the past week weigh on near-term outlook.",
+      "drivers": [
+        "+3.50% 1D gain",
+        "positive news sentiment 0.076",
+        "whale selling pressure",
+        "large market cap $10.8B"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "NEAR",
+      "signal": "buy",
+      "confidence": 0.675,
+      "ytd": "+149.13%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +149.13% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +149.13% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PEPE",
@@ -115,138 +260,6 @@
       "drivers": [
         "+138% YTD",
         "high risk recent momentum"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PEPE",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "PEPE shows exceptional momentum with +29.88% YTD, +24.97% 1M, +8.25% 1W, and +1.94% 1D, making it the strongest performing asset in the universe despite the broader market sell-off triggered by hot CPI data and ETF outflows.",
-      "drivers": [
-        "+29.88% YTD",
-        "+24.97% 1M",
-        "+8.25% 1W",
-        "positive momentum decoupled from macro"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "TRX is the only asset in the universe with positive YTD (+11.75%) and 1Y (+12%) returns, and it posted a +0.44% 1D gain while most assets fell, demonstrating strong relative strength and defensive characteristics.",
-      "drivers": [
-        "+11.75% YTD",
-        "+12% 1Y",
-        "+0.44% 1D gain vs market decline",
-        "defensive relative strength"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "TON surged +8.61% in the last 24 hours, the best 1D performance in the universe, indicating strong buying interest and potential decoupling from the broader market weakness driven by inflation fears.",
-      "drivers": [
-        "+8.61% 1D",
-        "strongest 1D gain in universe",
-        "potential decoupling from macro"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "RNDR has strong YTD (+22.60%) and 1Y (+23%) returns, and a +4.69% 1W gain, showing resilience and positive momentum in the AI narrative despite the broader market downturn.",
-      "drivers": [
-        "+22.60% YTD",
-        "+23% 1Y",
-        "+4.69% 1W",
-        "AI narrative resilience"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BNB has the highest news sentiment score in the universe (+0.222) and relatively mild drawdowns (-10.20% 1M, -3.33% 1W) compared to peers, suggesting underlying support and positive sentiment.",
-      "drivers": [
-        "news sentiment +0.222",
-        "mild 1M decline -10.20%",
-        "large cap $88.9B",
-        "positive headline sentiment"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "LINK has positive news sentiment (+0.173) driven by Moody's testing multichain credit rating distribution via Chainlink, and its 1Y return of -15% is better than most altcoins, indicating relative strength.",
-      "drivers": [
-        "news sentiment +0.173",
-        "Moody's Chainlink integration",
-        "1Y return -15% vs peers",
-        "infrastructure narrative"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Despite macro headwinds (hot CPI, ETF outflows, regulatory uncertainty), Bitcoin remains the reference asset with the largest market cap ($1.48T) and is near key support at $73K; a bounce from here could lead the market higher.",
-      "drivers": [
-        "largest market cap $1.48T",
-        "near 200-day MA support at $73K",
-        "potential bounce catalyst",
-        "reference asset status"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "POL shows relatively mild losses (-1.06% 1D, -4.23% 1W, -15.27% 1M) and a 1Y return of -13% which is among the best in the infra category, suggesting it is holding up better than peers in the sell-off.",
-      "drivers": [
-        "mild 1D decline -1.06%",
-        "1Y return -13% (best in infra)",
-        "relatively resilient",
-        "low market cap $0.93B"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "DOGE",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "DOGE has positive news sentiment (+0.13) and a large market cap ($10.6B) in the meme category, and while down -42% YTD, it could see a relief rally if Bitcoin stabilizes given its high beta to BTC.",
-      "drivers": [
-        "news sentiment +0.13",
-        "large meme market cap $10.6B",
-        "potential relief rally",
-        "high beta to BTC"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "ETH is the largest smart contract platform by market cap ($251B) and has a positive catalyst with Monad becoming a settlement option in Visa's stablecoin program, though it is down -18.83% 1M and -3.43% 1D.",
-      "drivers": [
-        "largest L1 market cap $251B",
-        "Visa stablecoin program catalyst",
-        "institutional adoption",
-        "oversold -18.83% 1M"
       ]
     }
   ]

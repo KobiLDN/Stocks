@@ -1,9 +1,209 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-11 08:02",
+  "updated": "2026-11-11 19:26",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "AWS grew 39% in Q3, its fastest in five years, with a $578B backlog; JPMorgan added AMZN to its Focus List citing 40%+ AWS growth expected in 2027-2028, and the stock rallied 4.7% on Nov 9 after the post-earnings selloff created a buying opportunity [investing.com](https://www.investing.com/news/stock-market-news/why-is-amazon-stock-rallying-today-93CH-5012665). P/E of 21.53 and strong_buy consensus support the pick.",
+      "drivers": [
+        "AWS 39% growth",
+        "$578B backlog",
+        "JPMorgan Focus List",
+        "P/E 21.53"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "EQIX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +42.40%, 1M +3.79%, strong_buy consensus with an_score 1.46, and Deutsche Bank calls it a Top Pick. P/E of 64.37 is elevated but supported by data center demand tailwinds.",
+      "drivers": [
+        "YTD +42.40%",
+        "1M +3.79%",
+        "Deutsche Bank Top Pick",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "COHR",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "1W +24.07%, 1D +11.18%, Bernstein's $350 target says the selloff went too far. News sentiment positive at 0.262 and strong_buy consensus. CoreWeave earnings reignited the AI trade, lifting optical stocks [yahoo.com](https://finance.yahoo.com/technology/ai/articles/mu-amd-avgo-other-chip-134142335.html).",
+      "drivers": [
+        "1W +24.07%",
+        "Bernstein $350 target",
+        "news_s 0.262",
+        "CoreWeave catalyst"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "WULF",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "1W +17.22%, 1D +8.42%, YTD +7.65%, strong_buy consensus with best an_score of 1.28. News sentiment 0.273 and CoreWeave's results revived AI data center trade [yahoo.com](https://finance.yahoo.com/technology/ai/articles/mu-amd-avgo-other-chip-134142335.html). High short interest 28.61% adds squeeze potential.",
+      "drivers": [
+        "1W +17.22%",
+        "an_score 1.28",
+        "news_s 0.273",
+        "short squeeze potential"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TLN",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "1W +17.22%, 1D +6.06%, strong_buy consensus, news sentiment 0.382. Nuclear-ops play benefiting from AI power demand narrative.",
+      "drivers": [
+        "1W +17.22%",
+        "news_s 0.382",
+        "strong_buy consensus",
+        "AI power demand"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MTSI",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "YTD +46.95%, 1W +10.28%, 1D +13.52%, strong_buy consensus, news sentiment 0.313. DSP semi exposed to AI infrastructure buildout.",
+      "drivers": [
+        "YTD +46.95%",
+        "1W +10.28%",
+        "news_s 0.313",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SMTC",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "YTD +71.72%, 1W +16.47%, 1D +11.65%, strong_buy consensus with best an_score of 1.19. High P/E 85.59 but momentum and analyst support strong.",
+      "drivers": [
+        "YTD +71.72%",
+        "1W +16.47%",
+        "an_score 1.19",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "DLR",
+      "signal": "strong_buy",
+      "confidence": 0.63,
+      "rationale": "YTD +19.24%, strong_buy consensus, news sentiment 0.241, low short interest 0.01%. P/E 76.43 but data center REIT with 2.7% dividend yield offers stability.",
+      "drivers": [
+        "YTD +19.24%",
+        "news_s 0.241",
+        "low short interest",
+        "2.7% dividend yield"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "AMT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +11.77%, 1M +3.84%, P/E 26.69, dividend yield 3.76%. Buy consensus with an_score 1.52. Data center tower exposure with reasonable valuation.",
+      "drivers": [
+        "YTD +11.77%",
+        "P/E 26.69",
+        "3.76% dividend yield",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BEP",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +13.18%, 1M +4.92%, dividend yield 5.21%, low short interest 0.71%. News sentiment 0.279. Renewable energy play benefiting from AI power demand.",
+      "drivers": [
+        "YTD +13.18%",
+        "5.21% dividend yield",
+        "news_s 0.279",
+        "low short interest"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MXL",
+      "signal": "buy",
+      "confidence": 1.0,
+      "ytd": "+240.90%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +240.90% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +240.90% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.914,
+      "ytd": "+202.01%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +202.01% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +202.01% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "AXTI",
+      "signal": "buy",
+      "confidence": 0.869,
+      "ytd": "+192.06%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +192.06% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +192.06% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "signal": "buy",
+      "confidence": 0.728,
+      "ytd": "+160.94%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +160.94% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +160.94% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "285A",
+      "signal": "buy",
+      "confidence": 0.694,
+      "ytd": "+153.41%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +153.41% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +153.41% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "SNDK",
+      "signal": "strong_buy",
+      "confidence": 0.512,
+      "ytd": "+262.64%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +262.64% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +262.64% \u2265 256.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMZN",
@@ -132,206 +332,6 @@ window.SIGNALS_DATA = {
         "strong_buy consensus",
         "news sentiment 0.313",
         "dip buying opportunity"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.961,
-      "ytd": "+212.45%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +212.45% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +212.45% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "MXL",
-      "signal": "buy",
-      "confidence": 0.864,
-      "ytd": "+190.82%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +190.82% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +190.82% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "DELL",
-      "signal": "buy",
-      "confidence": 0.744,
-      "ytd": "+164.40%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +164.40% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +164.40% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "285A",
-      "signal": "buy",
-      "confidence": 0.694,
-      "ytd": "+153.41%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +153.41% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +153.41% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "AXTI",
-      "signal": "buy",
-      "confidence": 0.609,
-      "ytd": "+134.55%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +134.55% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +134.55% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 0.589,
-      "ytd": "+130.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.06% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.06% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "AWS revenue surged 39.3% YoY to $46B, backlog hit $578B, and JPMorgan added it to the Focus List citing 40%+ AWS growth in 2027-2028; YTD +19.70%, 1W +8.15%, P/E 21.92, news sentiment +0.304.",
-      "drivers": [
-        "AWS 39.3% YoY growth",
-        "$578B backlog",
-        "JPMorgan Focus List addition",
-        "YTD +19.70%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "EQIX",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "YTD +39.39%, 1M +1.60%, 1W +3.42%, strong_buy consensus with an_score 1.46, low short interest 1.87%, and a 1.96% dividend yield; data center demand remains robust.",
-      "drivers": [
-        "YTD +39.39%",
-        "strong_buy consensus",
-        "low short interest 1.87%",
-        "1.96% dividend yield"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "DLR",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +19.00%, 1M +0.34%, 1W +0.29%, strong_buy consensus with an_score 1.44, near-zero short interest 0.01%, and a 2.71% dividend yield; stable data center REIT momentum.",
-      "drivers": [
-        "YTD +19.00%",
-        "strong_buy consensus",
-        "short interest 0.01%",
-        "2.71% dividend yield"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AMT",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +12.32%, 1M +4.35%, 1W +1.71%, buy consensus with an_score 1.52, low beta 0.842, and a 3.79% dividend yield; tower REIT benefiting from AI-driven connectivity demand.",
-      "drivers": [
-        "YTD +12.32%",
-        "1M +4.35%",
-        "low beta 0.842",
-        "3.79% dividend yield"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +13.37%, 1W +2.27%, strong_buy consensus with an_score 1.38, low short interest 0.88%, P/E 27.81, and positive news sentiment 0.133; Azure growth remains a key catalyst.",
-      "drivers": [
-        "YTD +13.37%",
-        "strong_buy consensus",
-        "short interest 0.88%",
-        "Azure growth catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BEP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +11.61%, 1M +3.45%, buy consensus, low beta 0.955, very low short interest 0.56%, and a 5.03% dividend yield; record FFO growth reported in Q3 2026.",
-      "drivers": [
-        "YTD +11.61%",
-        "low beta 0.955",
-        "short interest 0.56%",
-        "5.03% dividend yield"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "1M +5.17%, 1W +0.21%, news sentiment +0.204, and a 4.92% dividend yield; Q3 earnings highlighted record FFO, but YTD -20.31% and hold rating cap conviction.",
-      "drivers": [
-        "1M +5.17%",
-        "positive news sentiment +0.204",
-        "4.92% dividend yield",
-        "Q3 record FFO"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TLN",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Strong_buy consensus with an_score 1.50, 1W +1.01%, and low valuation relative to peers; nuclear operator with AI power demand tailwinds, though YTD -9.03% and high short interest 9.99% add risk.",
-      "drivers": [
-        "strong_buy consensus",
-        "AI power demand tailwind",
-        "1W +1.01%",
-        "high short interest 9.99%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "WULF",
-      "signal": "strong_buy",
-      "confidence": 0.5,
-      "rationale": "Strong_buy consensus with best an_score 1.29 in AI-compute, 1D +1.33%, 1W +0.28%, but YTD -1.37%, high beta 4.279, and short interest 30.03% indicate extreme risk.",
-      "drivers": [
-        "strong_buy consensus (an_score 1.29)",
-        "1D +1.33%",
-        "high beta 4.279",
-        "short interest 30.03%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RR.",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "YTD +11.19%, 1W +5.57%, 1D +0.65%, buy consensus, low beta 1.291, and a 0.95% dividend yield; nuclear operations exposure with modest positive momentum.",
-      "drivers": [
-        "YTD +11.19%",
-        "1W +5.57%",
-        "buy consensus",
-        "low beta 1.291"
       ]
     }
   ]

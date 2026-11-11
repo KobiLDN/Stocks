@@ -1,9 +1,142 @@
 {
-  "updated": "2026-11-11 08:04",
+  "updated": "2026-11-11 19:29",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Up 18.80% in 1M and 24.56% YTD with P/E 21.6; recent $694M hypersonics contract and record $292B backlog reinforce momentum [simplywall.st](https://simplywall.st/stocks/us/capital-goods/nyse-lmt/lockheed-martin/news/lockheed-martin-lmt-is-back-in-the-spotlight-what-is-catchin).",
+      "drivers": [
+        "+18.80% 1M momentum",
+        "+24.56% YTD return",
+        "P/E 21.6",
+        "record backlog & hypersonics contract"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NOC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+12.87% 1M, P/E 17.28, record $2.1B backlog; geopolitical tailwinds from Russia-Ukraine headlines [globaltradersacademy.com](https://globaltradersacademy.com/articles/russia-ukraine-headlines-put-defense-stocks-in-focus-ita-0-9-lmt-2-5).",
+      "drivers": [
+        "+12.87% 1M",
+        "P/E 17.28",
+        "record $2.1B backlog",
+        "geopolitical tailwinds"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+20.78% YTD, strong_buy analyst consensus, news sentiment 0.186, P/E 26.65.",
+      "drivers": [
+        "+20.78% YTD",
+        "strong_buy consensus",
+        "news sentiment 0.186",
+        "P/E 26.65"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "strong_buy analyst, highest news sentiment 0.421, P/E 27.15, low beta 0.16.",
+      "drivers": [
+        "strong_buy consensus",
+        "news sentiment 0.421",
+        "P/E 27.15",
+        "low beta 0.16"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Exceptional +52.70% YTD and +69% 1Y return, P/E 17.8, strong 1M momentum +14.63%.",
+      "drivers": [
+        "+52.70% YTD",
+        "+69% 1Y return",
+        "P/E 17.8",
+        "+14.63% 1M"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MRCY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Strong recent momentum with +22.17% 1W and +4.74% 1D, +15.31% YTD, analyst buy.",
+      "drivers": [
+        "+22.17% 1W",
+        "+15.31% YTD",
+        "analyst buy",
+        "+4.74% 1D"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+16.72% 1M, news sentiment 0.271, analyst buy, P/E 57.79.",
+      "drivers": [
+        "+16.72% 1M",
+        "news sentiment 0.271",
+        "analyst buy",
+        "P/E 57.79"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+18.72% 1M, news sentiment 0.202, P/E 16.88, analyst buy.",
+      "drivers": [
+        "+18.72% 1M",
+        "news sentiment 0.202",
+        "P/E 16.88",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "RKLB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Explosive +28.30% 1W and +8.87% 1D, +25% 1Y return, analyst buy.",
+      "drivers": [
+        "+28.30% 1W",
+        "+8.87% 1D",
+        "+25% 1Y",
+        "analyst buy"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+13.78% 1M, P/E 15.51, analyst buy, reasonable valuation.",
+      "drivers": [
+        "+13.78% 1M",
+        "P/E 15.51",
+        "analyst buy",
+        "reasonable valuation"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -132,139 +265,6 @@
         "+15.35% 1-month",
         "P/E 26.75",
         "low beta 0.337"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "YTD +23.46%, 1M +17.76%, P/E 21.4, analyst buy, news sentiment 0.016; secured $694M hypersonics contract and raised 2026 guidance, with fair value estimated at $791 vs $603 close [simplywall.st](https://simplywall.st/stocks/us/capital-goods/nyse-lmt/lockheed-martin/news/lockheed-martin-lmt-is-back-in-the-spotlight-what-is-catchin).",
-      "drivers": [
-        "+23.5% YTD",
-        "P/E 21.4",
-        "$694M hypersonics contract",
-        "raised guidance"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LHX",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "1M +15.82%, P/E 25.7, analyst buy (score 1.91), news sentiment -0.014; Q3 earnings beat, raised FY2026 guidance, BofA raised target to $375, backlog $53B [investing.com](https://www.investing.com/news/analyst-ratings/bofa-raises-l3harris-stock-price-target-to-375-on-earnings-beat-93CH-4994255).",
-      "drivers": [
-        "+15.8% 1M",
-        "P/E 25.7",
-        "earnings beat",
-        "$53B backlog"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "HII",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1M +18.79%, YTD -9.24%, P/E 16.9, analyst buy, news sentiment 0.202; strong momentum and low valuation with positive sentiment.",
-      "drivers": [
-        "+18.8% 1M",
-        "P/E 16.9",
-        "positive news sentiment 0.20",
-        "low beta 0.15"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "1M +13.28%, YTD -5.05%, P/E 17.3, analyst buy (score 1.92), news sentiment 0.14; attractive valuation with positive momentum and low beta.",
-      "drivers": [
-        "+13.3% 1M",
-        "P/E 17.3",
-        "analyst buy",
-        "low beta -0.14"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "YTD +20.71%, 1M +5.59%, P/E 26.6, analyst strong_buy (score 1.47), news sentiment 0.186; strong analyst consensus and solid YTD performance.",
-      "drivers": [
-        "+20.7% YTD",
-        "strong_buy analyst",
-        "P/E 26.6",
-        "positive sentiment 0.19"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +8.24%, 1M +7.42%, P/E 32.6, analyst buy (score 1.92), news sentiment 0.358; $340B backlog fuels demand, positive sentiment.",
-      "drivers": [
-        "+8.2% YTD",
-        "P/E 32.6",
-        "$340B backlog",
-        "news sentiment 0.36"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "GD",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +9.14%, 1M +9.73%, P/E 21.7, analyst buy, news sentiment 0.176; solid fundamentals and positive momentum.",
-      "drivers": [
-        "+9.1% YTD",
-        "P/E 21.7",
-        "positive sentiment 0.18",
-        "low short 0.83%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +5.05%, 1M +16.36%, P/E 57.6, analyst buy, news sentiment 0.271; strong momentum but elevated P/E, positive sentiment supports.",
-      "drivers": [
-        "+16.4% 1M",
-        "news sentiment 0.27",
-        "analyst buy",
-        "low short 1.62%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +52.45%, 1M +14.45%, P/E 17.8, analyst hold (score 2.8), news sentiment 0.064; exceptional YTD return and low P/E but hold rating and high short interest 5.81%.",
-      "drivers": [
-        "+52.5% YTD",
-        "P/E 17.8",
-        "strong momentum",
-        "high short 5.81%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "1M +18.97%, YTD +5.56%, P/E 13.6, analyst hold (score 2.6), news sentiment 0.114; low P/E value play with strong 1M momentum but high short interest 6.3%.",
-      "drivers": [
-        "+19.0% 1M",
-        "P/E 13.6",
-        "dividend yield 2.72%",
-        "high short 6.3%"
       ]
     }
   ]

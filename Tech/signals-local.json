@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-11 08:05",
+  "updated": "2026-11-11 19:30",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "+31.15% YTD, within ~0.3% of its $355.38 record, with live catalysts: reclaimed $5T market cap, $7.5B bond raise for buybacks, agent-like Siri AI push, China AI approval, and a Q4 beat ($2.10 EPS vs $1.99) ([benzinga.com](https://www.benzinga.com/markets/tech/26/11/63157383/whats-going-on-with-apple-stock-wednesday-4), [marketbeat.com](https://www.marketbeat.com/instant-alerts/consensus-apple-inc-nasdaq-aapl-stock-has-consensus-target-price-of-34374-according-to-analysts-2026-11-11/)). P/E 39.48 and news sentiment 0.111.",
+      "drivers": [
+        "+31.15% YTD near all-time high",
+        "$5T market cap reclaimed",
+        "EPS beat $2.10 vs $1.99",
+        "Siri agentic AI + China approval"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strongest analyst score in the universe (strong_buy 1.24) and a +9.24% 1W / +6.14% 1D rebound as Goldman Sachs calls chip stocks 'oversold' amid the AI-trade bounce ([apnews.com](https://apnews.com/article/stock-markets-ai-earnings-oil-297d040c83844a9563327340b370c24e)). P/E 45.42 and YTD +2.85% leave valuation room vs AI peers.",
+      "drivers": [
+        "strong_buy 1.24 (best in universe)",
+        "+9.24% 1W rebound",
+        "Goldman 'oversold' call",
+        "P/E 45.42"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "+31.11% YTD on record NT$586.9B October revenue (+3.37% on the print), with a reasonable P/E 26.95 and strong_buy 1.33. Foundational AI/compute demand keeps momentum durable.",
+      "drivers": [
+        "+31.11% YTD",
+        "Record NT$586.9B October revenue",
+        "strong_buy 1.33",
+        "P/E 26.95"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Mega-cap value with +17.55% YTD, P/E 21.52, strong_buy 1.33 and positive +2.59% 1M momentum; cloud/AI growth plus retail economics support a balanced risk/reward.",
+      "drivers": [
+        "P/E 21.52",
+        "strong_buy 1.33",
+        "+17.55% YTD",
+        "+2.59% 1M momentum"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AMD",
+      "signal": "strong_buy",
+      "confidence": 0.683,
+      "rationale": "Explosive +150.84% YTD with a +14.69% 1W / +7.91% 1D rebound as the AI chip trade revives; strong_buy 1.40 supports the trend, though P/E 119.78 caps conviction.",
+      "drivers": [
+        "+150.84% YTD",
+        "+14.69% 1W rebound",
+        "strong_buy 1.40",
+        "AI chip trade revival"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Top-tier strong_buy 1.38 and a reasonable P/E 27.21 for an AI mega-cap, but -6.19% 1W shows it testing $518 support after last week's $559.15 high ([bifu.co](https://www.bifu.co/news/detail/broader-market-gains-contrast-with-divergent-moves-in-several-major-technology-stocks)).",
+      "drivers": [
+        "strong_buy 1.38",
+        "P/E 27.21",
+        "Testing $518 support zone",
+        "news sentiment 0.089"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.62,
+      "rationale": "+34.44% YTD with the best semi news sentiment at 0.214 and strong_buy 1.37; the -11.04% 1M pullback offers an entry into the lithography monopoly at P/E 38.26.",
+      "drivers": [
+        "+34.44% YTD",
+        "news sentiment 0.214",
+        "strong_buy 1.37",
+        "P/E 38.26"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ORCL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+8.85% 1D / +5.44% 1W rebound after the CFO said cloud demand is strong and touted growth targets; news sentiment 0.229 and P/E 20.45 make the -32.45% YTD discount compelling.",
+      "drivers": [
+        "+8.85% 1D bounce",
+        "CFO 'cloud demand strong'",
+        "news sentiment 0.229",
+        "P/E 20.45"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "Highest news sentiment in the snapshot at 0.439 with +12.93% 1M momentum and a fund-initiation headline; buy 1.71 and P/E 36.39 reflect improving profitability.",
+      "drivers": [
+        "news sentiment 0.439 (top)",
+        "+12.93% 1M momentum",
+        "buy 1.71",
+        "institutional fund initiation"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Outlier +21.21% 1W momentum with +64.84% YTD on the 'rails for AI agents' narrative; buy 1.91 and news sentiment 0.135, while a lack of trailing earnings keeps the rank modest.",
+      "drivers": [
+        "+21.21% 1W momentum",
+        "+64.84% YTD",
+        "AI agent infrastructure narrative",
+        "buy 1.91"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MU",
+      "signal": "buy",
+      "confidence": 0.729,
+      "ytd": "+161.16%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +161.16% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +161.16% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMZN",
@@ -132,162 +277,6 @@
         "Buy consensus 1.68",
         "Positive news sentiment 0.021",
         "Valuation upside potential"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.591,
-      "ytd": "+130.55%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.55% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.55% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 0.589,
-      "ytd": "+130.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.06% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.06% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "Strong momentum (+8.09% 1W, +4.41% 1M, +19.63% YTD), P/E 21.91, analyst consensus strong_buy (score 1.33), and positive news sentiment 0.304. JPMorgan named it a top AI pick citing AWS revenue growth of 40%+ in 2027-2028 and a $1 trillion revenue target, while AWS Q3 grew 39.3% YoY with a $578B backlog.",
-      "drivers": [
-        "+8.09% 1W momentum",
-        "P/E 21.91 attractive",
-        "strong_buy consensus",
-        "AWS 40%+ growth outlook"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AAPL",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Best-performing Mag 7 stock YTD (+29.09%), strong 1W momentum (+5.12%), analyst buy consensus (score 2.22). Evercore raised target to $380 on Siri AI potential, and China cleared Apple Intelligence for tablets/laptops, expanding a key market.",
-      "drivers": [
-        "+29.09% YTD leader",
-        "+5.12% 1W momentum",
-        "Evercore $380 target",
-        "China AI approval"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Exceptional 1M momentum (+14.43%), positive YTD (+5.23%), P/E 36.87, analyst buy consensus (score 1.71), and strong news sentiment 0.255. Top founder-run stock with earnings growth over 15%.",
-      "drivers": [
-        "+14.43% 1M momentum",
-        "positive news sentiment 0.255",
-        "earnings growth >15%",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Strong analyst consensus strong_buy (score 1.38), positive news sentiment 0.133, P/E 27.81 reasonable, and 1W momentum +2.29%. Despite slight 1D dip, fundamentals and AI positioning remain robust.",
-      "drivers": [
-        "strong_buy consensus (1.38)",
-        "P/E 27.81",
-        "positive news sentiment 0.133",
-        "AI leadership"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Best analyst score in universe (1.24, strong_buy), positive news sentiment 0.117, and 1D bounce +2.96%. Goldman Sachs called chip stocks oversold and recommended AVGO. P/E 42.41 reflects premium for AI networking leadership.",
-      "drivers": [
-        "best analyst score 1.24",
-        "+2.96% 1D bounce",
-        "Goldman Sachs buy call",
-        "AI networking leader"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Attractive P/E 13.7, strong 1W momentum +5.84%, 1D gain +1.46%, and YTD positive +2.18%. China Android recovery noted by CEO, though Apple revenue loss remains a headwind. High dividend yield 2.15% adds income appeal.",
-      "drivers": [
-        "P/E 13.7 value",
-        "+5.84% 1W momentum",
-        "China Android recovery",
-        "2.15% dividend yield"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong 1M momentum (+11.18%) despite YTD decline, P/E 20.67 reasonable, analyst buy consensus (score 2.06). Dividend yield 1.63% provides downside cushion. Financial software demand remains resilient.",
-      "drivers": [
-        "+11.18% 1M momentum",
-        "P/E 20.67",
-        "1.63% dividend yield",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "UBER",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Highest news sentiment in universe (0.381), strong 1W momentum +5.21%, analyst buy consensus (score 1.57). P/E 41.21 reflects growth expectations in mobility and delivery. Positive macro backdrop for platform demand.",
-      "drivers": [
-        "highest news sentiment 0.381",
-        "+5.21% 1W momentum",
-        "buy consensus (1.57)",
-        "platform demand growth"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Low P/E 13.21 offers deep value, positive news sentiment 0.059, and 1M momentum nearly flat (-0.67%) indicating stabilization. Analyst hold consensus (score 2.97) is cautious, but valuation and AI integration potential provide upside.",
-      "drivers": [
-        "P/E 13.21 value",
-        "stabilizing momentum",
-        "AI integration potential",
-        "positive news sentiment"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "CRM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "P/E 19.52 reasonable, positive news sentiment 0.08, and analyst buy consensus (score 1.68). Despite recent weakness (-8.78% 1M), AI agent and enterprise software demand remain catalysts. Dividend yield 0.82% adds modest income.",
-      "drivers": [
-        "P/E 19.52",
-        "buy consensus (1.68)",
-        "AI agent catalyst",
-        "enterprise demand"
       ]
     }
   ]
