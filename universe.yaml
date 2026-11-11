@@ -8,6 +8,10 @@
 #
 # sectors: each sector's members in display order, as [ticker, category in that sector].
 #
+# retired: assets no longer on any page but named by past signals. Kept only so the
+#   track record can still price those signals ("every signal counts", #54). Same fields
+#   as assets; never shown on the site.
+#
 # Adding a stock: add it under assets (if new), then add [ticker, category] to each sector it belongs to.
 # Checked by `python universe.py` (also run in CI).
 
@@ -525,3 +529,18 @@ sectors:
     - ["TM", "global-growth"]
     - ["NVO", "global-growth"]
     - ["HSBC", "global-growth"]
+
+retired:
+  # Crypto sector's first run (2 Jun 2026), before it switched from crypto stocks to coins
+  "ARKB":    {"name": "ARK 21Shares Bitcoin ETF", "exchange": "NYSE", "yahoo": "ARKB"}
+  "BITO":    {"name": "ProShares Bitcoin Strategy ETF", "exchange": "NYSE", "yahoo": "BITO"}
+  "CIFR":    {"name": "Cipher Mining", "exchange": "NASDAQ", "yahoo": "CIFR"}
+  "CLSK":    {"name": "CleanSpark", "exchange": "NASDAQ", "yahoo": "CLSK"}
+  "COIN":    {"name": "Coinbase", "exchange": "NASDAQ", "yahoo": "COIN"}
+  "HOOD":    {"name": "Robinhood", "exchange": "NASDAQ", "yahoo": "HOOD"}
+  "MARA":    {"name": "MARA Holdings", "exchange": "NASDAQ", "yahoo": "MARA"}
+  "RIOT":    {"name": "Riot Platforms", "exchange": "NASDAQ", "yahoo": "RIOT"}
+  # Coins dropped or renamed
+  "MATIC":   {"name": "Polygon (old MATIC)", "exchange": "Crypto", "yahoo": "MATIC-USD", "cmc_symbol": "MATIC", "coingecko": "matic-network"}
+  "OCEAN":   {"name": "Ocean Protocol", "exchange": "Crypto", "yahoo": "OCEAN-USD", "cmc_symbol": "OCEAN", "coingecko": "ocean-protocol"}
+  "AGIX":    {"name": "SingularityNET", "exchange": "Crypto", "yahoo": "AGIX-USD", "cmc_symbol": "AGIX", "coingecko": "singularitynet"}

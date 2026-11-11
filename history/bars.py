@@ -50,7 +50,7 @@ def instruments(universe):
     """{yahoo symbol: (asset_id, special, fallbacks)} — one entry per instrument, plus benchmarks.
     Crypto fallbacks: Yahoo lists coins whose ticker clashes as SYMBOL<cmc id>-USD (SUI20947-USD)."""
     out = {}
-    for aid, a in universe["assets"].items():
+    for aid, a in {**universe["assets"], **(universe.get("retired") or {})}.items():
         alts = []
         if a["exchange"] == "Crypto":
             sym = a.get("cmc_symbol") or aid

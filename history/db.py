@@ -202,6 +202,19 @@ class History:
                  "ON CONFLICT(key) DO UPDATE SET value = excluded.value")
         return True
 
+    def fetch_all(self, table, pk, columns="*", page=5000):
+        """Every row of `table`, paged by primary key (no OFFSET, so each row is read once)."""
+        out, last = [], None
+        while True:
+            where = ""
+            if last is not None:
+                where = f"WHERE ({', '.join(pk)}) > ({', '.join(lit(last[c]) for c in pk)}) "
+            rows = self.run(f"SELECT {columns} FROM {table} {where}ORDER BY {', '.join(pk)} LIMIT {page}")
+            out += rows
+            if len(rows) < page:
+                return out
+            last = rows[-1]
+
     def write(self, table, columns, rows, on_conflict=""):
         rows = list(rows)
         for stmt in insert_statements(table, columns, rows, on_conflict):
@@ -232,7 +245,8 @@ class History:
             return False
         now = iso(utc_now())
         asset_rows = []
-        for aid, a in universe["assets"].items():
+        # retired: no longer on any page, but still named by past signals (track record)
+        for aid, a in {**(universe.get("retired") or {}), **universe["assets"]}.items():
             kind = "crypto" if a["exchange"] == "Crypto" else "equity"
             asset_rows.append([aid, a["name"], a["exchange"], kind, a["yahoo"], a.get("special"),
                                a.get("cmc_symbol"), a.get("cmc_id"), a.get("coingecko"), now])

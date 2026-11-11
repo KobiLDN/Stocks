@@ -12,7 +12,7 @@ import json
 import os
 import sys
 
-from history.db import HistoryError, connect, lit, upsert_clause
+from history.db import HistoryError, connect, upsert_clause
 
 PAGE = 5000
 # table -> primary key columns (must match schema.sql)
@@ -35,20 +35,11 @@ def dump(h, out_dir):
     os.makedirs(out_dir, exist_ok=True)
     counts = {}
     for table, pk in TABLES.items():
-        n, last = 0, None
+        rows = h.fetch_all(table, pk, page=PAGE)
         with gzip.open(os.path.join(out_dir, f"{table}.ndjson.gz"), "wt", encoding="utf-8") as f:
-            while True:
-                where = ""
-                if last is not None:
-                    where = f"WHERE ({', '.join(pk)}) > ({', '.join(lit(last[c]) for c in pk)}) "
-                rows = h.run(f"SELECT * FROM {table} {where}ORDER BY {', '.join(pk)} LIMIT {PAGE}")
-                for r in rows:
-                    f.write(json.dumps(r, sort_keys=True) + "\n")
-                n += len(rows)
-                if len(rows) < PAGE:
-                    break
-                last = rows[-1]
-        counts[table] = n
+            for r in rows:
+                f.write(json.dumps(r, sort_keys=True) + "\n")
+        counts[table] = len(rows)
     with open(os.path.join(out_dir, "manifest.json"), "w", encoding="utf-8") as f:
         json.dump({"tables": counts}, f, indent=2)
     return counts

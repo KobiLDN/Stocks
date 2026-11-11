@@ -101,34 +101,53 @@ def record_prices(h, universe, run_id):
 
 
 # ── Signals ───────────────────────────────────────────────────────────────────
+def normalise_signal(v):
+    """'strong_buy' / 'STRONG BUY' / 'Buy' -> 'strong_buy' / 'buy'."""
+    return str(v or "").strip().lower().replace(" ", "_").replace("-", "_")
+
+
+def rows_from_signal_file(sector, data, run_id, provenance="live"):
+    """One signals-local.json -> (signal_run row, signal rows), or None if it isn't a real run
+    (placeholder files have no parseable 'updated'). Shared by the live recorder and the git import."""
+    generated = london_to_iso((data or {}).get("updated"))
+    if not generated:
+        return None
+    srid = f"{sector}:{generated}"
+    run = [srid, sector, generated, data.get("model"), provenance, run_id]
+    sigs = []
+    for kind, key in (("ai", "picks"), ("momentum", "momentum_picks")):
+        seen = set()
+        for i, p in enumerate(data.get(key) or []):
+            t = p.get("ticker")
+            if not t or t in seen:
+                continue
+            seen.add(t)
+            drivers = p.get("drivers")
+            sigs.append([srid, kind, t, p.get("rank", i + 1), normalise_signal(p.get("signal")), num(p.get("confidence")),
+                         p.get("rationale"), json.dumps(drivers) if drivers is not None else None])
+    return run, sigs
+
+
 def signal_rows(universe, run_id):
     runs, sigs = [], []
     for sector in universe["sectors"]:
-        data = read_json(f"{sector}/signals-local.json")
-        generated = london_to_iso((data or {}).get("updated"))
-        if not generated:
+        got = rows_from_signal_file(sector, read_json(f"{sector}/signals-local.json"), run_id)
+        if not got:
             print(f"  WARNING: {sector}/signals-local.json missing or has no 'updated'")
             continue
-        srid = f"{sector}:{generated}"
-        runs.append([srid, sector, generated, data.get("model"), "live", run_id])
-        for kind, key in (("ai", "picks"), ("momentum", "momentum_picks")):
-            seen = set()
-            for i, p in enumerate(data.get(key) or []):
-                t = p.get("ticker")
-                if not t or t in seen:
-                    continue
-                seen.add(t)
-                drivers = p.get("drivers")
-                sigs.append([srid, kind, t, p.get("rank", i + 1), str(p.get("signal") or ""), num(p.get("confidence")),
-                             p.get("rationale"), json.dumps(drivers) if drivers is not None else None])
+        runs.append(got[0])
+        sigs += got[1]
     return runs, sigs
+
+
+SIGNAL_RUN_COLS = ["signal_run_id", "sector", "generated_utc", "model", "provenance", "run_id"]
+SIGNAL_COLS = ["signal_run_id", "kind", "asset_id", "rank", "signal", "confidence", "rationale", "drivers"]
 
 
 def record_signals(h, universe, run_id):
     runs, sigs = signal_rows(universe, run_id)
-    h.write("signal_runs", ["signal_run_id", "sector", "generated_utc", "model", "provenance", "run_id"], runs, on_conflict="IGNORE")
-    return h.write("signals", ["signal_run_id", "kind", "asset_id", "rank", "signal", "confidence", "rationale", "drivers"],
-                   sigs, on_conflict="IGNORE")
+    h.write("signal_runs", SIGNAL_RUN_COLS, runs, on_conflict="IGNORE")
+    return h.write("signals", SIGNAL_COLS, sigs, on_conflict="IGNORE")
 
 
 # ── CLI ───────────────────────────────────────────────────────────────────────

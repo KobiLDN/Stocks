@@ -23,6 +23,10 @@ on:
         description: 'Also take a backup now (normally Fridays only)'
         type: boolean
         default: false
+      import_signals:
+        description: 'One-off: import every past signal run from git history'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -44,6 +48,9 @@ jobs:
       D1_API_TOKEN: ${{ secrets.D1_API_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # the signal import reads every past version of */signals-local.json
+          fetch-depth: ${{ inputs.import_signals && '0' || '1' }}
 
       - uses: actions/setup-python@v5
         with:
@@ -52,6 +59,10 @@ jobs:
 
       - name: Install deps
         run: pip install -q -r history/requirements.txt
+
+      - name: Import past signals from git (one-off)
+        if: inputs.import_signals
+        run: python -m history.import_signals
 
       - name: Daily bars
         run: |
@@ -89,3 +100,54 @@ jobs:
           name: history-backup-${{ github.run_id }}
           path: backup/
           retention-days: 90
+
+  # Track record (#54 step 8): score every signal against SPY from the history DB and
+  # publish track-record.json for the page. main only — it pushes to main like the other bots.
+  publish:
+    needs: bars
+    if: always() && github.ref == 'refs/heads/main' && needs.bars.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: production
+    permissions:
+      contents: write
+    concurrency:
+      group: push-to-main
+      cancel-in-progress: false
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      D1_API_TOKEN: ${{ secrets.D1_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install deps
+        run: pip install -q -r history/requirements.txt
+
+      - name: Build track record
+        run: python -m history.track_record --out track-record.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add track-record.json
+          if git diff --cached --quiet -- track-record.json; then
+            echo "Track record unchanged."
+          else
+            git commit -m "Update track record — $(date -u '+%Y-%m-%d %H:%M UTC')"
+            for i in 1 2 3 4; do
+              git fetch origin main
+              git merge -X ours origin/main --no-edit
+              git push origin HEAD:main && break
+              echo "Push attempt $i failed, retrying..."
+              sleep $((2 ** i))
+            done
+          fi
