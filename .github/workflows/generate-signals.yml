@@ -1,9 +1,8 @@
 name: Generate Signals
 
 on:
-  schedule:
-    # Mon/Wed/Fri at 07:00 UTC (08:00 BST / 03:00 ET)
-    - cron: '0 7 * * 1,3,5'
+  # Started by cron-job.org (stocks-signals): Mon/Wed/Fri 08:00 London.
+  # No GitHub schedule; missed runs are caught by /health.
   workflow_dispatch:
     inputs:
       sector:

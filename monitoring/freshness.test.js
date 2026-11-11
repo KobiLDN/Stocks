@@ -40,11 +40,19 @@ test('fresh, stale and missing as_of', () => {
   assert.equal(evaluate(now, { prices: null }, { prices: STREAMS.prices }).ok, false);
 });
 
-test('signals allow for GitHub schedule delays', () => {
+test('signals: Mon/Wed/Fri 08:00 London with 60 min grace', () => {
   const s = { signals: STREAMS.signals };
-  // Wed 07:00 run: still inside the grace window at 18:00 Wed -> Monday's data is fine
-  assert.equal(evaluate(Z('2026-11-11T18:00:00Z'), { signals: Z('2026-11-09T17:10:00Z') }, s).ok, true);
-  // Thursday morning: Wednesday's run is now overdue -> stale if it never landed
-  assert.equal(evaluate(Z('2026-11-12T09:00:00Z'), { signals: Z('2026-11-09T17:10:00Z') }, s).ok, false);
-  assert.equal(evaluate(Z('2026-11-12T09:00:00Z'), { signals: Z('2026-11-11T12:00:00Z') }, s).ok, true);
+  // Wed 08:45: inside the grace window for today's run -> Monday's data is still fine
+  assert.equal(evaluate(Z('2026-11-11T08:45:00Z'), { signals: Z('2026-11-09T08:10:00Z') }, s).ok, true);
+  // Wed 09:05: today's run is overdue -> stale if it never landed
+  assert.equal(evaluate(Z('2026-11-11T09:05:00Z'), { signals: Z('2026-11-09T08:10:00Z') }, s).ok, false);
+  assert.equal(evaluate(Z('2026-11-11T09:05:00Z'), { signals: Z('2026-11-11T08:09:00Z') }, s).ok, true);
+  // Tuesday: last due run is Monday's
+  assert.equal(lastDueSlot(STREAMS.signals, Z('2026-11-10T12:00:00Z')), Z('2026-11-09T08:00:00Z'));
+});
+
+test('export: 21:30 London; Saturday still expects Friday night', () => {
+  assert.equal(lastDueSlot(STREAMS.export, Z('2026-11-14T10:00:00Z')), Z('2026-11-13T21:30:00Z'));
+  // summer: 21:30 London = 20:30 UTC
+  assert.equal(lastDueSlot(STREAMS.export, Z('2026-07-01T21:20:00Z')), Z('2026-07-01T20:30:00Z'));
 });

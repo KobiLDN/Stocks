@@ -1,11 +1,9 @@
 name: Generate RSS News Feed
 
 on:
-  schedule:
-    # Mon–Fri: 08:05, 14:35, 20:35 UTC
-    - cron: '5 8 * * 1-5'
-    - cron: '35 14 * * 1-5'
-    - cron: '35 20 * * 1-5'
+  # Started by cron-job.org (stocks-news): Mon–Fri 08:35, 15:35, 20:35 London.
+  # No GitHub schedule: it ran hours late and duplicated the dispatched run.
+  # Missed runs are caught by /health (monitoring/freshness.js).
   workflow_dispatch:
 
 permissions:
