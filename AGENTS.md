@@ -4,11 +4,11 @@ This file is for any AI or human contributor working in this repo.
 
 ## Session role
 
-This session manages **Stocks only**. Portfolio is a separate Claude session at `G:\My Drive\coding\ai\portfolio\`.
+This session manages **Stocks only**. The portfolio dashboard is a separate project in the private repo `KobiLDN/portfolio-private` — see [Portfolio dashboard](#portfolio-dashboard-separate-private-repo) for what it reads from this site.
 
-**Single-folder setup (migrated 2026-06-21):** there is now ONE local folder — `STOCKSDev/`, working on `dev`. `main` is a **remote-only** branch (the live site); it is never checked out locally. Deploy with `git push origin dev:main` only on explicit "go" / "push to all". The old `STOCKSMain/` clone has been removed — to read live without checking it out, use the Cloudflare URL, `git show origin/main:<path>`, or `git diff origin/main`.
+**Everything runs in the cloud** (since Nov 2026). Code is edited in the web Claude container, the bots run on GitHub Actions (started by cron-job.org — see `WORKFLOW.md`), and the site is served by Cloudflare Pages. Nothing runs on a local PC: there are no `.bat` files, no local clones and no `dev` branch.
 
-Worktrees are disabled (`"worktree": false` in `.claude/settings.json`) — sessions open directly in `STOCKSDev/`.
+Worktrees are disabled (`"worktree": false` in `.claude/settings.json`).
 
 ## BRANCH RULES — READ BEFORE TOUCHING ANYTHING
 
@@ -141,15 +141,11 @@ When adding a new sector, complete every item in this checklist — in order:
 5. **`update-prices.yml`** — add sector to `workflow_dispatch` dropdown options; add `Install deps` and `Run price updater` steps with `if:` condition; add files to `git add` and `git diff` in the commit step
 6. **`generate-signals.yml`** — same: dropdown option, steps with `if:` condition, git add/diff paths
 
-**Bat files**
-7. **`update_all_prices.bat`** — add `[N/N]` entry for new sector
-8. **`generate_all_signals.bat`** — add `[N/N]` entry for new sector
-
 **Sector switcher on existing pages**
-9. Run `add_sector_switcher.py` (or equivalent batch edit) to add the new sector's card to all existing sector pages
+7. Run `add_sector_switcher.py` (or equivalent batch edit) to add the new sector's card to all existing sector pages
 
 **Docs**
-10. Add row to `CHANGELOG.md`; update `FEATURES.md` (move from Backlog → Done, update description)
+8. Add row to `CHANGELOG.md`; update `FEATURES.md` (move from Backlog → Done, update description)
 
 ## Data export pipeline
 
@@ -163,7 +159,7 @@ When adding a new sector, complete every item in this checklist — in order:
 | `exports/manifest.json` | List of all available snapshots (newest first); loaded by the export page to build the date dropdown |
 | `exports/index.html` | Export page — loads manifest, date selector, Copy JSON/CSV buttons |
 | `exports/YYYY-MM-DD-portfolio.json` | **LOCAL ONLY** — market data + T212 positions merged; gitignored, never committed |
-| `.github/workflows/generate-export.yml` | Runs `generate_export.py` at 22:00 UTC (23:00 BST) weekdays — 30 min after evening price update |
+| `.github/workflows/generate-export.yml` | Runs `generate_export.py` Mon–Fri 21:30 London, started by cron-job.org (`stocks-export`) — one hour after the evening price run |
 
 **Adding new fields to the export:** edit the `PRICE_FIELDS` list and/or `csv_fields` list in `generate_export.py`. The manifest entry only needs `date`, `generated`, `total`, `json`, `csv`.
 
@@ -184,35 +180,18 @@ When adding a new sector, complete every item in this checklist — in order:
 
 Results appear in `signals-local.json` per sector under the `momentum` key and are displayed inline on each sector's `signals.html` below the AI picks, labelled `// Momentum Screener`.
 
-## Local portfolio snapshot (container-level — never in git)
+## Portfolio dashboard (separate private repo)
 
-`G:\My Drive\coding\ai\portfolio\Portfolio-Local\` is outside both git repos — nothing here can ever be committed or reach GitHub.
+The portfolio dashboard and daily email live in the **private** repo `KobiLDN/portfolio-private` (its own `AGENTS.md` describes the dashboard). It runs on GitHub Actions (`daily-portfolio.yml`), started by cron-job.org — 07:30 daily, 09:00 + 15:30 weekdays (London). T212 keys are secrets there, never here.
 
-| File | Purpose |
+**What it reads from this site — keep these stable** (the rebuild in #54 must serve them at the same URLs):
+
+| URL | Fields used |
 |---|---|
-| `.key` | `KEY_ID:SECRET_KEY` — T212 Basic auth credentials |
-| `portfolio.py` | Fetches live T212 positions + loads the latest export (from the live site / repo); merges and writes all outputs |
-| `run.bat` | Double-click to run `portfolio.py` |
-| `portfolio.html` | Output — full dashboard (open in browser); 1920px max-width |
-| `portfolio_analysis.json` | Output — AI prompt data (also embedded in HTML for Copy AI Prompt button) |
-| `portfolio_history.json` | Cumulative value history — one record appended per run; powers the chart |
+| `https://stocks-4qw.pages.dev/exports/manifest.json` | `snapshots[].json` — newest first; the latest plus the last 7 days of snapshots |
+| `https://stocks-4qw.pages.dev/exports/<date>.json` | `stocks[]` (`ticker`, `signal`, price/return fields), `momentum_picks[]`, `macro` (SPY / QQQ / VIX incl. `vix.signal`) |
 
-**`portfolio.html` dashboard layout** (1920px max-width):
-- **Cards column** — Total Value / Invested / Free Cash / T212 P&L (USD-based) / Real P&L GBP (incl. FX drag = `total_value − free_cash − invested`) / Today's Movers
-- **Sector allocation blocks** — equal-width variable-height bar blocks; biggest sector tallest; 1D weighted-avg return floats above each block in green/red; sorted biggest→smallest; per-sector colours (AI=green, Biotech=purple, Crypto=orange, Defence=red, Energy=yellow, Tech=blue)
-- **Portfolio value chart** — line chart of `total_value` + `invested` over time from `portfolio_history.json`
-- **Holdings heatmap** — squarified treemap (`chartjs-chart-treemap`); tiles sized by 1D% magnitude, coloured by 1D direction
-- **Holdings table** — Qty / Avg £ / Bought (cost basis) / Current / P&L / 1D–YTD / Vol / Signal — sortable, pinnable rows
-- **Picks table** — signal picks not held; filter by sector + signal; pinnable rows; STRONG BUY auto-sorts to top
-
-**T212 ticker aliases:** T212's API sometimes returns non-standard tickers (e.g. `HUTMF` for NYSE-listed `HUT`). The `TICKER_ALIASES` dict in `portfolio.py` remaps these before the universe lookup. Add entries here whenever T212's API ticker differs from the live export ticker:
-```python
-TICKER_ALIASES = {
-    "HUTMF": "HUT",   # T212 returns HUTMF; tracked in export as HUT (NASDAQ)
-}
-```
-
-**Workflow:** run `run.bat` after 21:30 BST (evening price update is fresh, export runs at 22:00 UTC / 23:00 BST) → merges live T212 positions with all sector data + signal picks → open `portfolio.html` in browser, or paste `portfolio_analysis.json` to any AI for analysis.
+A BUY only counts on the dashboard if it has held across the last 7 days of exports (`SIGNAL_WINDOW_DAYS = 7`, needs ≥ 3 exports). Renaming an export field, or a missed export, shows up there — check `portfolio.py` before changing `generate_export.py` output.
 
 ## GitHub Actions
 
@@ -235,7 +214,7 @@ Current approved exceptions:
 - **`CMC_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinMarketCap free tier for real-time prices (bulk call, all 34 coins in one request).
 - **`COINGECKO_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinGecko Demo/Pro for true YTD (Jan 1 → today) + 52-week high/low + volume. Falls back to public endpoint if key absent.
 - **`COINSTATS_API_KEY`** (GitHub Actions secret) — Crypto sector only; CoinStats API for news fallback when yfinance returns 0 headlines (e.g. POL, MINA, HBAR). Free tier, credit-based. Falls back to unauthenticated public endpoint if key absent.
-- **T212 credentials** (local only — **never a GitHub secret**) — used by `generate_export.py` and `G:\My Drive\coding\ai\portfolio\Portfolio-Local\portfolio.py`. Stored as `KEY_ID:SECRET_KEY` in `G:\My Drive\coding\ai\portfolio\Portfolio-Local\.key`. Never committed, never used in CI, never goes online.
+- **T212 credentials** — **never in this repo, not even as a secret** (this repo is public). They live only as Actions secrets in the private `portfolio-private` repo. `generate_export.py` still has an optional T212 merge (`T212_API_KEY`), but no Stocks workflow sets it, so committed exports never contain positions.
 
 **Removed exception (2026-06-06):** `STOCKDATA_API_KEY` — StockData.org was added as Crypto primary news source but hit its 500 req/day free cap immediately with 34 coins. CryptoPanic moved to paid-only. Reverted to **yfinance → CoinStats** cascade (both free, no key).
 

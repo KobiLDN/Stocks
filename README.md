@@ -67,18 +67,17 @@ A multi-sector stock research platform. Each sector tracks a curated universe of
 │   ├── generate-export.yml    ← export: 22:00 UTC weekdays
 │   └── generate-news-feed.yml ← News feed: 3× daily weekdays
 ├── AGENTS.md               ← contributor guide (read first)
-├── WORKFLOW.md             ← dev → main shipping process
+├── WORKFLOW.md             ← branch → PR → main shipping process, monitoring, scheduling
 ├── CHANGELOG.md            ← change history (newest first)
 ├── FEATURES.md             ← backlog + done
-├── branches.md             ← branch map + "push to all" convention
-└── MIGRATION.md            ← single-folder migration plan + reference prompt
+└── MIGRATION.md            ← historical: June 2026 single-folder migration (superseded)
 ```
 
 ## Development
 
 See [AGENTS.md](AGENTS.md) and [WORKFLOW.md](WORKFLOW.md).
 
-Single-folder setup — one local clone (`STOCKSDev/`) on `dev`. `main` is the live site (remote-only). Deploy with `git push origin dev:main` on explicit go.
+Everything runs in the cloud: edits in the web Claude container, bots on GitHub Actions (started by cron-job.org), site on Cloudflare Pages. Code changes go on a short-lived branch + PR; merging the PR to `main` is going live.
 
 ## License
 
