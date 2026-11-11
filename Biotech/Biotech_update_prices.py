@@ -11,6 +11,12 @@ import contextlib
 import io
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import os
+import sys
+
+# universe.yaml (repo root) is the master list of tracked assets
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from universe import sector_stocks, speculative  # noqa: E402
 
 try:
     from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -23,50 +29,10 @@ JS_FILE   = "prices-data.js"
 
 # ticker → (yahoo_symbol, category, exchange, special, company_name)
 # special: None | "lse_pence"
-STOCKS = {
-    # Large Cap Biotech
-    "AMGN":  ("AMGN",  "large-cap",    "NASDAQ", None,        "Amgen"),
-    "GILD":  ("GILD",  "large-cap",    "NASDAQ", None,        "Gilead Sciences"),
-    "REGN":  ("REGN",  "large-cap",    "NASDAQ", None,        "Regeneron Pharmaceuticals"),
-    "VRTX":  ("VRTX",  "large-cap",    "NASDAQ", None,        "Vertex Pharmaceuticals"),
-    "BIIB":  ("BIIB",  "large-cap",    "NASDAQ", None,        "Biogen"),
-    "BMY":   ("BMY",   "large-cap",    "NYSE",   None,        "Bristol-Myers Squibb"),
-    # UK Listed
-    "AZN":   ("AZN.L", "uk-listed",    "LSE",    "lse_pence", "AstraZeneca"),
-    "GSK":   ("GSK.L", "uk-listed",    "LSE",    "lse_pence", "GSK"),
-    # Gene Editing
-    "CRSP":  ("CRSP",  "gene-editing", "NASDAQ", None,        "CRISPR Therapeutics"),
-    "BEAM":  ("BEAM",  "gene-editing", "NASDAQ", None,        "Beam Therapeutics"),
-    "NTLA":  ("NTLA",  "gene-editing", "NASDAQ", None,        "Intellia Therapeutics"),
-    "EDIT":  ("EDIT",  "gene-editing", "NASDAQ", None,        "Editas Medicine"),
-    # Genomics / Tools
-    "ILMN":  ("ILMN",  "genomics",     "NASDAQ", None,        "Illumina"),
-    "PACB":  ("PACB",  "genomics",     "NASDAQ", None,        "Pacific Biosciences"),
-    "NTRA":  ("NTRA",  "genomics",     "NASDAQ", None,        "Natera"),
-    "RXRX":  ("RXRX",  "genomics",     "NASDAQ", None,        "Recursion Pharmaceuticals"),
-    # Oncology
-    "INCY":  ("INCY",  "oncology",     "NASDAQ", None,        "Incyte"),
-    "EXEL":  ("EXEL",  "oncology",     "NASDAQ", None,        "Exelixis"),
-    "ALNY":  ("ALNY",  "oncology",     "NASDAQ", None,        "Alnylam Pharmaceuticals"),
-    "RCUS":  ("RCUS",  "oncology",     "NYSE",   None,        "Arcus Biosciences"),
-    # mRNA / Vaccines
-    "MRNA":  ("MRNA",  "mrna",         "NASDAQ", None,        "Moderna"),
-    "BNTX":  ("BNTX",  "mrna",         "NASDAQ", None,        "BioNTech"),
-    "NVAX":  ("NVAX",  "mrna",         "NASDAQ", None,        "Novavax"),
-    # Rare Disease
-    "BMRN":  ("BMRN",  "rare-disease", "NASDAQ", None,        "BioMarin Pharmaceutical"),
-    "SRPT":  ("SRPT",  "rare-disease", "NASDAQ", None,        "Sarepta Therapeutics"),
-    "COAG":  ("COAG",  "rare-disease", "NASDAQ", None,        "Hemab Therapeutics"),
-    # Metabolic
-    "NVO":   ("NVO",   "metabolic",    "NYSE",   None,        "Novo Nordisk"),
-    "LLY":   ("LLY",   "metabolic",    "NYSE",   None,        "Eli Lilly"),
-    # Neuroscience
-    "LEGN":  ("LEGN",  "neuroscience", "NASDAQ", None,        "Legend Biotech"),
-    "IONS":  ("IONS",  "neuroscience", "NASDAQ", None,        "Ionis Pharmaceuticals"),
-}
+STOCKS = sector_stocks("Biotech")   # from universe.yaml
 
 # Speculative tickers — show return from 52wk low with asterisk
-SPECULATIVE = {"NVAX", "EDIT", "PACB", "RXRX", "RCUS"}
+SPECULATIVE = speculative("Biotech")   # from universe.yaml
 
 
 def get_fx_rates():

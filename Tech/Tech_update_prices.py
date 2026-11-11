@@ -11,6 +11,12 @@ import contextlib
 import io
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import os
+import sys
+
+# universe.yaml (repo root) is the master list of tracked assets
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from universe import sector_stocks  # noqa: E402
 
 try:
     from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -24,39 +30,7 @@ JS_FILE   = "prices-data.js"
 DASHBOARD_TITLE = "Technology"
 
 # ticker → (yahoo_symbol, category, exchange, special, company_name)
-STOCKS = {
-    "AAPL":  ("AAPL",  "mega-cap",             "NASDAQ", None, "Apple"),
-    "MSFT":  ("MSFT",  "mega-cap",             "NASDAQ", None, "Microsoft"),
-    "GOOGL": ("GOOGL", "mega-cap",             "NASDAQ", None, "Alphabet (Google)"),
-    "AMZN":  ("AMZN",  "mega-cap",             "NASDAQ", None, "Amazon"),
-    "META":  ("META",  "mega-cap",             "NASDAQ", None, "Meta Platforms"),
-    "NVDA":  ("NVDA",  "semiconductors",       "NASDAQ", None, "NVIDIA"),
-    "AMD":   ("AMD",   "semiconductors",       "NASDAQ", None, "Advanced Micro Devices"),
-    "INTC":  ("INTC",  "semiconductors",       "NASDAQ", None, "Intel"),
-    "TSM":   ("TSM",   "semiconductors",       "NYSE",   None, "Taiwan Semiconductor"),
-    "AVGO":  ("AVGO",  "semiconductors",       "NASDAQ", None, "Broadcom"),
-    "QCOM":  ("QCOM",  "semiconductors",       "NASDAQ", None, "Qualcomm"),
-    "ARM":   ("ARM",   "semiconductors",       "NASDAQ", None, "Arm Holdings"),
-    "ASML":  ("ASML",  "semiconductors",       "NASDAQ", None, "ASML Holding"),
-    "MU":    ("MU",    "semiconductors",       "NASDAQ", None, "Micron Technology"),
-    "AMAT":  ("AMAT",  "semiconductors",       "NASDAQ", None, "Applied Materials"),
-    "ORCL":  ("ORCL",  "enterprise-software",  "NYSE",   None, "Oracle"),
-    "CRM":   ("CRM",   "enterprise-software",  "NYSE",   None, "Salesforce"),
-    "ADBE":  ("ADBE",  "enterprise-software",  "NASDAQ", None, "Adobe"),
-    "NOW":   ("NOW",   "enterprise-software",  "NYSE",   None, "ServiceNow"),
-    "SNOW":  ("SNOW",  "enterprise-software",  "NYSE",   None, "Snowflake"),
-    "INTU":  ("INTU",  "enterprise-software",  "NASDAQ", None, "Intuit"),
-    "CRWD":  ("CRWD",  "cybersecurity",        "NASDAQ", None, "CrowdStrike"),
-    "PANW":  ("PANW",  "cybersecurity",        "NASDAQ", None, "Palo Alto Networks"),
-    "NET":   ("NET",   "cybersecurity",        "NYSE",   None, "Cloudflare"),
-    "FTNT":  ("FTNT",  "cybersecurity",        "NASDAQ", None, "Fortinet"),
-    "NFLX":  ("NFLX",  "consumer-platform",   "NASDAQ", None, "Netflix"),
-    "SHOP":  ("SHOP",  "consumer-platform",   "NYSE",   None, "Shopify"),
-    "SPOT":  ("SPOT",  "consumer-platform",   "NYSE",   None, "Spotify"),
-    "UBER":  ("UBER",  "consumer-platform",   "NYSE",   None, "Uber"),
-    "CSCO":  ("CSCO",  "hardware-infra",      "NASDAQ", None, "Cisco Systems"),
-    "PLTR":  ("PLTR",  "hardware-infra",      "NASDAQ", None, "Palantir Technologies"),
-}
+STOCKS = sector_stocks("Tech")   # from universe.yaml
 
 
 def get_fx_rates():

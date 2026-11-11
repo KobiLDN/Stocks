@@ -11,6 +11,12 @@ import contextlib
 import io
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import os
+import sys
+
+# universe.yaml (repo root) is the master list of tracked assets
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from universe import sector_stocks  # noqa: E402
 
 # News sentiment is keyless (VADER, local). It is strictly secondary —
 # a missing/broken VADER must never break the price update, so the import
@@ -27,43 +33,7 @@ DASHBOARD_TITLE = "Defence Stock Dashboard"
 
 # ticker → (yahoo_symbol, category, exchange, special, company_name)
 # special: None | "lse_pence"
-STOCKS = {
-    # us-primes
-    "LMT":   ("LMT",   "us-primes",   "NYSE",   None,        "Lockheed Martin"),
-    "RTX":   ("RTX",   "us-primes",   "NYSE",   None,        "RTX Corporation"),
-    "NOC":   ("NOC",   "us-primes",   "NYSE",   None,        "Northrop Grumman"),
-    "GD":    ("GD",    "us-primes",   "NYSE",   None,        "General Dynamics"),
-    "HII":   ("HII",   "us-primes",   "NYSE",   None,        "Huntington Ingalls Industries"),
-    "LHX":   ("LHX",   "us-primes",   "NYSE",   None,        "L3Harris Technologies"),
-    "BA":    ("BA",    "us-primes",   "NYSE",   None,        "Boeing"),
-    # uk-european
-    "BA.L":  ("BA.L",  "uk-european", "LSE",    "lse_pence", "BAE Systems"),
-    "RR.L":  ("RR.L",  "uk-european", "LSE",    "lse_pence", "Rolls-Royce Holdings"),
-    "QQ.L":  ("QQ.L",  "uk-european", "LSE",    "lse_pence", "QinetiQ Group"),
-    # cyber-intel
-    "PLTR":  ("PLTR",  "cyber-intel", "NASDAQ", None,        "Palantir Technologies"),
-    "LDOS":  ("LDOS",  "cyber-intel", "NYSE",   None,        "Leidos Holdings"),
-    "CACI":  ("CACI",  "cyber-intel", "NYSE",   None,        "CACI International"),
-    "SAIC":  ("SAIC",  "cyber-intel", "NYSE",   None,        "Science Applications International"),
-    "BAH":   ("BAH",   "cyber-intel", "NYSE",   None,        "Booz Allen Hamilton"),
-    # drones
-    "AVAV":  ("AVAV",  "drones",      "NASDAQ", None,        "AeroVironment"),
-    "KTOS":  ("KTOS",  "drones",      "NASDAQ", None,        "Kratos Defense"),
-    "RCAT":  ("RCAT",  "drones",      "NASDAQ", None,        "Red Cat Holdings"),
-    "TXT":   ("TXT",   "drones",      "NYSE",   None,        "Textron"),
-    # space
-    "SPCX":  ("SPCX",  "space",       "NASDAQ", None,        "SpaceX"),
-    "RKLB":  ("RKLB",  "space",       "NASDAQ", None,        "Rocket Lab USA"),
-    "PL":    ("PL",    "space",       "NYSE",   None,        "Planet Labs"),
-    "ASTS":  ("ASTS",  "space",       "NASDAQ", None,        "AST SpaceMobile"),
-    # weapons
-    "TDG":   ("TDG",   "weapons",     "NYSE",   None,        "TransDigm Group"),
-    "HEI":   ("HEI",   "weapons",     "NYSE",   None,        "HEICO Corporation"),
-    "AXON":  ("AXON",  "weapons",     "NASDAQ", None,        "Axon Enterprise"),
-    "OLN":   ("OLN",   "weapons",     "NYSE",   None,        "Olin Corporation"),
-    "MRCY":  ("MRCY",  "weapons",     "NASDAQ", None,        "Mercury Systems"),
-    "DRS":   ("DRS",   "weapons",     "NYSE",   None,        "Leonardo DRS"),
-}
+STOCKS = sector_stocks("Defence")   # from universe.yaml
 
 
 def get_fx_rates():

@@ -11,6 +11,12 @@ import contextlib
 import io
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import os
+import sys
+
+# universe.yaml (repo root) is the master list of tracked assets
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from universe import sector_stocks  # noqa: E402
 
 # News sentiment is keyless (VADER, local). It is strictly secondary —
 # a missing/broken VADER must never break the price update, so the import
@@ -28,65 +34,7 @@ DASHBOARD_TITLE = "Global Mega-Cap Leaders Dashboard"
 # ticker → (yahoo_symbol, category, exchange, special, company_name)
 # special: None | "sar"
 # "sar": price from yfinance is in SAR, multiply by sar_usd to get USD
-STOCKS = {
-    # big-tech
-    "AAPL":    ("AAPL",    "big-tech",          "NASDAQ",  None,  "Apple"),
-    "MSFT":    ("MSFT",    "big-tech",          "NASDAQ",  None,  "Microsoft"),
-    "NVDA":    ("NVDA",    "big-tech",          "NASDAQ",  None,  "NVIDIA"),
-    "GOOGL":   ("GOOGL",   "big-tech",          "NASDAQ",  None,  "Alphabet"),
-    "META":    ("META",    "big-tech",          "NASDAQ",  None,  "Meta Platforms"),
-    "AMZN":    ("AMZN",    "big-tech",          "NASDAQ",  None,  "Amazon"),
-    "TSLA":    ("TSLA",    "big-tech",          "NASDAQ",  None,  "Tesla"),
-    "NFLX":    ("NFLX",    "big-tech",          "NASDAQ",  None,  "Netflix"),
-    # financials
-    "JPM":     ("JPM",     "financials",         "NYSE",    None,  "JPMorgan Chase"),
-    "BAC":     ("BAC",     "financials",         "NYSE",    None,  "Bank of America"),
-    "BRK-B":   ("BRK-B",   "financials",         "NYSE",    None,  "Berkshire Hathaway B"),
-    "V":       ("V",       "financials",         "NYSE",    None,  "Visa"),
-    "MA":      ("MA",      "financials",         "NYSE",    None,  "Mastercard"),
-    "GS":      ("GS",      "financials",         "NYSE",    None,  "Goldman Sachs"),
-    "BLK":     ("BLK",     "financials",         "NYSE",    None,  "BlackRock"),
-    # healthcare
-    "LLY":     ("LLY",     "healthcare",         "NYSE",    None,  "Eli Lilly"),
-    "UNH":     ("UNH",     "healthcare",         "NYSE",    None,  "UnitedHealth Group"),
-    "JNJ":     ("JNJ",     "healthcare",         "NYSE",    None,  "Johnson & Johnson"),
-    "ABBV":    ("ABBV",    "healthcare",         "NYSE",    None,  "AbbVie"),
-    "MRK":     ("MRK",     "healthcare",         "NYSE",    None,  "Merck"),
-    "TMO":     ("TMO",     "healthcare",         "NYSE",    None,  "Thermo Fisher Scientific"),
-    "ABT":     ("ABT",     "healthcare",         "NYSE",    None,  "Abbott Laboratories"),
-    # consumer
-    "PG":      ("PG",      "consumer",           "NYSE",    None,  "Procter & Gamble"),
-    "KO":      ("KO",      "consumer",           "NYSE",    None,  "Coca-Cola"),
-    "PEP":     ("PEP",     "consumer",           "NASDAQ",  None,  "PepsiCo"),
-    "MCD":     ("MCD",     "consumer",           "NYSE",    None,  "McDonald's"),
-    "NKE":     ("NKE",     "consumer",           "NYSE",    None,  "Nike"),
-    "WMT":     ("WMT",     "consumer",           "NYSE",    None,  "Walmart"),
-    "COST":    ("COST",    "consumer",           "NASDAQ",  None,  "Costco"),
-    # energy-industrial
-    "XOM":     ("XOM",     "energy-industrial",  "NYSE",    None,  "ExxonMobil"),
-    "CVX":     ("CVX",     "energy-industrial",  "NYSE",    None,  "Chevron"),
-    "CAT":     ("CAT",     "energy-industrial",  "NYSE",    None,  "Caterpillar"),
-    "HON":     ("HON",     "energy-industrial",  "NASDAQ",  None,  "Honeywell"),
-    "GE":      ("GE",      "energy-industrial",  "NYSE",    None,  "GE Aerospace"),
-    "RTX":     ("RTX",     "energy-industrial",  "NYSE",    None,  "RTX Corp"),
-    "BA":      ("BA",      "energy-industrial",  "NYSE",    None,  "Boeing"),
-    # tech-semis
-    "AMD":     ("AMD",     "tech-semis",         "NASDAQ",  None,  "Advanced Micro Devices"),
-    "QCOM":    ("QCOM",    "tech-semis",         "NASDAQ",  None,  "Qualcomm"),
-    "AVGO":    ("AVGO",    "tech-semis",         "NASDAQ",  None,  "Broadcom"),
-    "TSM":     ("TSM",     "tech-semis",         "NYSE",    None,  "Taiwan Semiconductor"),
-    "ASML":    ("ASML",    "tech-semis",         "NASDAQ",  None,  "ASML Holding"),
-    "ARM":     ("ARM",     "tech-semis",         "NASDAQ",  None,  "Arm Holdings"),
-    "INTC":    ("INTC",    "tech-semis",         "NASDAQ",  None,  "Intel"),
-    # global-growth
-    "2222.SR": ("2222.SR", "global-growth",      "TADAWUL", "sar", "Saudi Aramco"),
-    "BABA":    ("BABA",    "global-growth",      "NYSE",    None,  "Alibaba Group"),
-    "SAP":     ("SAP",     "global-growth",      "NYSE",    None,  "SAP SE"),
-    "SONY":    ("SONY",    "global-growth",      "NYSE",    None,  "Sony Group"),
-    "TM":      ("TM",      "global-growth",      "NYSE",    None,  "Toyota Motor"),
-    "NVO":     ("NVO",     "global-growth",      "NYSE",    None,  "Novo Nordisk"),
-    "HSBC":    ("HSBC",    "global-growth",      "NYSE",    None,  "HSBC Holdings"),
-}
+STOCKS = sector_stocks("MegaCap")   # from universe.yaml
 
 
 def get_fx_rates():

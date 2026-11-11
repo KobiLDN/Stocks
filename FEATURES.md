@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **Master asset list — `universe.yaml` (#54 step 2)** — every tracked asset defined once with its sector memberships and per-sector category; all 7 price scripts read it via `universe.py`; adding a stock is one file edit (`universe.yaml`, `universe.py`).
+
 - **Data freshness monitoring (#54 step 1)** — `/health` reports per-stream freshness (200 ok / 503 stale) for an external uptime monitor; amber warning bar on every page when data misses its scheduled update; export carries ISO `as_of` timestamps (`functions/health.js`, `monitoring/freshness.js`, `shared.js`, `generate_export.py`).
 
 - **Crypto signals generator (issue #35)** — `Crypto/Crypto_generate_signals_local.py` runs in the scheduled `generate-signals.yml` loop with the other sectors; DeepSeek via OpenRouter produces Crypto top picks (`Crypto/signals-local.json`).

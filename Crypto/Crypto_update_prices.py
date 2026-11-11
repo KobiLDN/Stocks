@@ -14,6 +14,11 @@ import requests
 import yfinance as yf
 from datetime import datetime
 from zoneinfo import ZoneInfo
+import sys
+
+# universe.yaml (repo root) is the master list of tracked assets
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from universe import crypto_ids, sector_stocks  # noqa: E402
 
 try:
     from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -38,84 +43,13 @@ COINGECKO_DEMO_URL = "https://api.coingecko.com/api/v3"
 COINSTATS_API_KEY  = os.environ.get("COINSTATS_API_KEY", "")
 
 # CoinGecko IDs — used for true YTD (Jan 1 → today) via /coins/{id}/history
-COINGECKO_IDS = {
-    "BTC":  "bitcoin",                  "ETH":  "ethereum",
-    "SOL":  "solana",                   "BNB":  "binancecoin",
-    "ADA":  "cardano",                  "AVAX": "avalanche-2",
-    "XRP":  "ripple",                   "XLM":  "stellar",
-    "TRX":  "tron",                     "SUI":  "sui",
-    "HBAR": "hedera-hashgraph",         "TON":  "the-open-network",
-    "ALGO": "algorand",                 "MINA": "mina-protocol",
-    "POL":  "polygon-ecosystem-token",  "DOT":  "polkadot",
-    "LINK": "chainlink",                "DOGE": "dogecoin",
-    "PEPE": "pepe",
-    # ── AI Tokens ─────────────────────────────────────────────────────────────
-    "TAO":     "bittensor",             "FET":     "fetch-ai",
-    "RNDR":    "render-token",
-    "GRT":     "the-graph",
-    "NMR":     "numeraire",            "ALT":     "altlayer",
-    "AIOZ":    "aioz-network",         "ARKM":    "arkham",
-    "WLD":     "worldcoin-wld",        "NEAR":    "near",
-    "ICP":     "internet-computer",    "KAITO":   "kaito",
-    "VIRTUAL": "virtual-protocol",
-}
+COINGECKO_IDS, CMC_IDS = crypto_ids("Crypto")   # from universe.yaml
 
 # CMC numeric IDs — used for quotes and YTD history (symbols are ambiguous on CMC)
-CMC_IDS = {
-    "BTC": 1,     "ETH": 1027,  "SOL": 5426,  "BNB": 1839,  "ADA": 2010,
-    "AVAX": 5805, "XRP": 52,    "XLM": 512,   "TRX": 1958,  "SUI": 20947,
-    "HBAR": 4642, "TON": 11419, "ALGO": 4030, "MINA": 8646,"POL": 28321,
-    "DOT": 6636,  "LINK": 1975, "DOGE": 74,   "PEPE": 24478,
-    # AI Tokens
-    "TAO": 22974, "FET": 3773,  "RNDR": 5690,
-    "GRT": 6719,  "NMR": 1732,   "ALT": 29073,
-    "AIOZ": 9104, "ARKM": 27565,"WLD": 13502,  "NEAR": 6535,
-    "ICP": 8916,  "KAITO": 35763, "VIRTUAL": 29420,
-}
 
 # display ticker → (cmc_symbol, yf_symbol, category, exchange, company_name)
 # cmc_symbol: what CMC knows it as (MATIC rebranded to POL on CMC)
-STOCKS = {
-    # ── Bitcoin ───────────────────────────────────────────────────────────────
-    "BTC":  ("BTC",  "BTC-USD",       "bitcoin",  "Crypto", "Bitcoin"),
-    # ── Layer 1 ───────────────────────────────────────────────────────────────
-    "ETH":  ("ETH",  "ETH-USD",       "layer1",   "Crypto", "Ethereum"),
-    "SOL":  ("SOL",  "SOL-USD",       "layer1",   "Crypto", "Solana"),
-    "BNB":  ("BNB",  "BNB-USD",       "layer1",   "Crypto", "BNB"),
-    "ADA":  ("ADA",  "ADA-USD",       "layer1",   "Crypto", "Cardano"),
-    "AVAX": ("AVAX", "AVAX-USD",      "layer1",   "Crypto", "Avalanche"),
-    # ── Payments ──────────────────────────────────────────────────────────────
-    "XRP":  ("XRP",  "XRP-USD",       "payments", "Crypto", "XRP"),
-    "XLM":  ("XLM",  "XLM-USD",       "payments", "Crypto", "Stellar"),
-    "TRX":  ("TRX",  "TRX-USD",       "payments", "Crypto", "TRON"),
-    # ── Emerging ──────────────────────────────────────────────────────────────
-    "SUI":  ("SUI",  "SUI20947-USD",  "emerging", "Crypto", "Sui"),
-    "HBAR": ("HBAR", "HBAR-USD",      "emerging", "Crypto", "Hedera"),
-    "TON":  ("GRAM", "TON11419-USD",  "emerging", "Crypto", "Toncoin"),
-    "ALGO": ("ALGO", "ALGO-USD",      "emerging", "Crypto", "Algorand"),
-    "MINA": ("MINA", "MINA-USD",      "emerging", "Crypto", "Mina"),
-    # ── Infrastructure ────────────────────────────────────────────────────────
-    "POL":  ("POL",  "POL-USD",       "infra",    "Crypto", "Polygon (MATIC)"),
-    "DOT":  ("DOT",  "DOT-USD",       "infra",    "Crypto", "Polkadot"),
-    "LINK": ("LINK", "LINK-USD",      "infra",    "Crypto", "Chainlink"),
-    # ── Meme ──────────────────────────────────────────────────────────────────
-    "DOGE": ("DOGE", "DOGE-USD",      "meme",     "Crypto", "Dogecoin"),
-    "PEPE": ("PEPE", "PEPE24478-USD", "meme",     "Crypto", "Pepe"),
-    # ── AI Tokens ─────────────────────────────────────────────────────────────
-    "TAO":     ("TAO",     "TAO-USD",     "ai", "Crypto", "Bittensor"),
-    "FET":     ("FET",     "FET-USD",     "ai", "Crypto", "ASI Alliance"),
-    "RNDR":    ("RENDER",  "RNDR-USD",    "ai", "Crypto", "Render"),  # CMC symbol is RENDER post-rebrand
-    "GRT":     ("GRT",     "GRT-USD",     "ai", "Crypto", "The Graph"),
-    "NMR":     ("NMR",     "NMR-USD",     "ai", "Crypto", "Numeraire"),
-    "ALT":     ("ALT",     "ALT-USD",     "ai", "Crypto", "AltLayer"),
-    "AIOZ":    ("AIOZ",    "AIOZ-USD",    "ai", "Crypto", "AIOZ Network"),
-    "ARKM":    ("ARKM",    "ARKM-USD",    "ai", "Crypto", "Arkham"),
-    "WLD":     ("WLD",     "WLD-USD",     "ai", "Crypto", "Worldcoin"),
-    "NEAR":    ("NEAR",    "NEAR-USD",    "ai", "Crypto", "NEAR Protocol"),
-    "ICP":     ("ICP",     "ICP-USD",     "ai", "Crypto", "Internet Computer"),
-    "KAITO":   ("KAITO",   "KAITO-USD",   "ai", "Crypto", "Kaito"),
-    "VIRTUAL": ("VIRTUAL", "VIRTUAL-USD", "ai", "Crypto", "Virtuals Protocol"),
-}
+STOCKS = sector_stocks("Crypto")   # from universe.yaml
 
 
 def get_fx_rates():
