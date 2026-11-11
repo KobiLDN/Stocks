@@ -1,9 +1,1 @@
-{
-  "worktree": false,
-  "permissions": {
-    "allow": [
-      "Bash(git push --force-with-lease origin dev)",
-      "Bash(git rebase --exec * origin/main)"
-    ]
-  }
-}
+{"worktree": false}
