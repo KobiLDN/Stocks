@@ -39,6 +39,23 @@ Rule: when a PR changes bot-side code, **run the script on the PR branch and com
 - Every page shows an amber bar at the bottom when `/health` reports something stale.
 - Alerts come from an external uptime monitor polling `/health`, so they don't depend on GitHub or Cloudflare cron.
 
+## Scheduling — cron-job.org starts every bot
+
+All four bots are started by cron-job.org (London time) through GitHub's `workflow_dispatch` API, because GitHub's own scheduler started runs 1.5–5 hours late on average (up to 12).
+
+| cron-job.org job | Workflow | When (London) |
+|---|---|---|
+| `cron-job-stocks07:30am` / `15:30pm` / `20pm` | `update-prices.yml` | Mon–Fri 07:30, 15:30, 20:30 |
+| `stocks-signals` | `generate-signals.yml` (body `{"ref":"main","inputs":{"sector":"all"}}`) | Mon, Wed, Fri 08:00 |
+| `stocks-news` | `generate-news-feed.yml` | Mon–Fri 08:35, 15:35, 20:35 |
+| `stocks-export` | `generate-export.yml` | Mon–Fri 21:30 |
+
+- Each job: `POST https://api.github.com/repos/KobiLDN/Stocks/actions/workflows/<file>/dispatches`, headers `Authorization: Bearer <token>`, `Accept: application/vnd.github+json`, `X-GitHub-Api-Version: 2022-11-28`, and "notify on failure" switched on.
+- Token: fine-grained, Actions read/write on `Stocks` + `portfolio-private` only, no expiry. It lives only in cron-job.org.
+- Only `update-prices.yml` keeps a GitHub `schedule:`, as a fallback that skips when prices are under 4h old. The others have none.
+- **Changing a time in cron-job.org? Update `monitoring/freshness.js` too.**
+- GitHub marks API version `2022-11-28` deprecated, with a sunset of **10 March 2028**. Before then, update the `X-GitHub-Api-Version` header on every job.
+
 ## Agora mode — deliberate before implementing
 
 For non-trivial designs, the user runs an **agora**: the plan is debated across multiple AIs (DeepSeek, Cerebras, Claude, …) before any code is written.

@@ -3,15 +3,15 @@
 // but the stream's as_of is older than that slot.
 
 export const STREAMS = {
-  // cron-job.org dispatches the price run in London time; it starts within seconds.
-  prices:  { label: 'Prices',                tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['07:30', '15:30', '20:30'], graceMin: 45 },
-  market:  { label: 'Market (SPY/QQQ/VIX)',  tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['07:30', '15:30', '20:30'], graceMin: 45 },
-  // GitHub's own schedule (UTC) starts these hours late (measured Nov 2026:
-  // news max 7.9h, signals max 12.2h, export max 7.9h). Tighten to ~45 min
-  // once cron-job.org dispatches them too.
-  news:    { label: 'News feed',             tz: 'UTC', days: [1, 2, 3, 4, 5], times: ['08:05', '14:35', '20:35'], graceMin: 510 },
-  signals: { label: 'AI signals',            tz: 'UTC', days: [1, 3, 5],       times: ['07:00'],                   graceMin: 780 },
-  export:  { label: 'Daily export',          tz: 'UTC', days: [1, 2, 3, 4, 5], times: ['22:00'],                   graceMin: 510 },
+  // All bots are started by cron-job.org in London time (jobs: cron-job-stocks*,
+  // stocks-news, stocks-signals, stocks-export). Keep these slots in sync with it.
+  // Grace covers run time plus queueing behind another bot (measured Nov 2026:
+  // prices ~8 min, news up to 27 min, signals up to 22 min, export <1 min).
+  prices:  { label: 'Prices',               tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['07:30', '15:30', '20:30'], graceMin: 45 },
+  market:  { label: 'Market (SPY/QQQ/VIX)', tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['07:30', '15:30', '20:30'], graceMin: 45 },
+  news:    { label: 'News feed',            tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['08:35', '15:35', '20:35'], graceMin: 45 },
+  signals: { label: 'AI signals',           tz: 'Europe/London', days: [1, 3, 5],       times: ['08:00'],                   graceMin: 60 },
+  export:  { label: 'Daily export',         tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['21:30'],                   graceMin: 45 },
 };
 
 function tzParts(ms, tz) {

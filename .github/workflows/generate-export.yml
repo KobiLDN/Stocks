@@ -1,9 +1,8 @@
 name: Generate Export
 
 on:
-  schedule:
-    # 22:00 UTC weekdays — 30 min after the evening price update (21:30 UTC)
-    - cron: '0 22 * * 1-5'
+  # Started by cron-job.org (stocks-export): Mon–Fri 21:30 London, after the
+  # 20:30 price run. No GitHub schedule; missed runs are caught by /health.
   workflow_dispatch:
 
 permissions:
