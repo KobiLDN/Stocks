@@ -8,6 +8,7 @@
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../asset-links.js"></script>
 <script src="../shared.js" defer></script>
 <style>
 
@@ -239,8 +240,6 @@
     ai:'AI Infra', biotech:'Biotech', defence:'Defence',
     tech:'Tech', crypto:'Crypto', energy:'Energy', megacap:'Mega-Cap',
   };
-  const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-  function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
   function fmtUsd(val) {
     if (val >= 1000) return '$' + val.toLocaleString('en-US', { maximumFractionDigits: 0 });
@@ -308,7 +307,7 @@
       const ytdCls   = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
       const sLabel   = SECTOR_LABELS[s.sector] || s.sector;
       return `<tr>
-        <td class="ticker-cell"><a href="${yahooUrl(s.ticker)}" target="_blank" class="ticker-link">${s.ticker}</a></td>
+        <td class="ticker-cell"><a href="${assetUrl(s.ticker)}" target="_blank" class="ticker-link">${s.ticker}</a></td>
         <td class="company-cell">${s.name}</td>
         <td><span class="sector-badge sector-${s.sector}">${sLabel}</span></td>
         <td><span class="${ytdCls}">${s.ytdPct >= 0 ? '+' : ''}${s.ytdPct.toFixed(2)}%</span></td>

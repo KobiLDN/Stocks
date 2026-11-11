@@ -8,6 +8,7 @@
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../asset-links.js"></script>
 <script src="../shared.js" defer></script>
 <style>
   .filter-bar {
@@ -310,8 +311,6 @@
     'tech':'Tech','crypto':'Crypto','energy':'Energy','megacap':'Mega-Cap',
   };
 
-  const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-  function yahooUrl(t) { return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[t] || t) + '/'; }
 
   function fmtUsd(v) {
     const n = parseFloat(v);
@@ -433,7 +432,7 @@
       const divCell   = s.div_yield_pct !== null ? '<span class="num-cell">' + fmtPct(s.div_yield_pct, 2) + '</span>' : dash();
       const shortCell = s.short_pct !== null ? '<span class="num-cell">' + fmtPct(s.short_pct, 1) + '</span>' : dash();
       return '<tr>' +
-        '<td class="ticker-cell"><a href="' + yahooUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
+        '<td class="ticker-cell"><a href="' + assetUrl(s.ticker) + '" target="_blank" class="ticker-link">' + s.ticker + '</a></td>' +
         '<td class="company-cell">' + s.name + '</td>' +
         '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
         '<td><span class="sector-badge sector-' + s.sector + '">' + sectorLabel + '</span></td>' +

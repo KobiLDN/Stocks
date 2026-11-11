@@ -8,6 +8,7 @@
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../asset-links.js"></script>
 <script src="../shared.js" defer></script>
 <style>
   /* Sector filter active colours (All-specific) */
@@ -194,9 +195,6 @@
   function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
-  function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + encodeURIComponent(ticker);
-  }
 
   function setSector(sector, btn) {
     activeSector = sector;
@@ -264,7 +262,7 @@
         '<div class="sent-bar ' + sc + '"></div>' +
         '<div class="news-body">' +
           '<div class="news-meta-top">' +
-            '<a class="news-ticker" href="' + yahooUrl(n.ticker) + '" target="_blank" rel="noopener">' + esc(n.ticker) + '</a>' +
+            '<a class="news-ticker" href="' + assetUrl(n.ticker) + '" target="_blank" rel="noopener">' + esc(n.ticker) + '</a>' +
             '<span class="news-sector-badge sect-' + n.sector + '">' + esc(slabel) + '</span>' +
             '<span class="news-time">' + timeAgo(n.ts) + '</span>' +
           '</div>' +
