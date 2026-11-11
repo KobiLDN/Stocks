@@ -30,6 +30,9 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    # D1 secrets live in the `production` environment, which only `main` may use.
+    # Branch runs get `preview` (no secrets): history goes to a throwaway local file.
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -79,3 +82,11 @@ jobs:
               sleep 10
             done
           fi
+
+      # Dual-write (#54 step 3): signals are stored once and never changed (track record).
+      - name: Record history (D1)
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+          D1_API_TOKEN: ${{ secrets.D1_API_TOKEN }}
+        run: python -m history.snapshot signals
