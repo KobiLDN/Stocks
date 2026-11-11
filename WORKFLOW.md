@@ -56,6 +56,24 @@ All four bots are started by cron-job.org (London time) through GitHub's `workfl
 - **Changing a time in cron-job.org? Update `monitoring/freshness.js` too.**
 - GitHub marks API version `2022-11-28` deprecated, with a sunset of **10 March 2028**. Before then, update the `X-GitHub-Api-Version` header on every job.
 
+## History database — Cloudflare D1 (rebuild step 3, #54)
+
+D1 keeps **history only**; the site never reads it. Every bot still publishes its files exactly as before — history is written *after* the push, so D1 can never delay or break the live site.
+
+| Tables | Written by | When |
+|---|---|---|
+| `price_snapshots`, `market_snapshots` | `update-prices.yml` → `python -m history.snapshot prices` | after each price run's push |
+| `signal_runs`, `signals` (write-once, `provenance = live`) | `generate-signals.yml` → `python -m history.snapshot signals` | after each signal run |
+| `daily_bars` (raw OHLCV), `corporate_actions`, `data_flags` | `update-history.yml` → `python -m history.bars` | automatically after the evening export; re-fetches the last 10 days |
+| backup | `update-history.yml` | Fridays → 90-day artifact `history-backup-<run>` |
+
+- **Secrets** `CLOUDFLARE_ACCOUNT_ID`, `D1_DATABASE_ID`, `D1_API_TOKEN` live only in the GitHub **`production`** environment, limited to the `main` branch. Branch runs get `preview` (no secrets) and write a throwaway local SQLite file, so a branch can never touch production history. On `main` without the secrets, the history steps warn and skip.
+- **Raw prices:** `daily_bars` stores prices *before* split/dividend adjustment, in the instrument's own currency (`GBp` = pence for LSE). Adjust when reading, using `corporate_actions`.
+- **Backfill** (once): run *Update History* by hand with `days = 400`. It is resumable — if it stops at the budget, run it again the next day (D1 free plan: 100k rows written/day; normal daily use is ~3k).
+- **Restore:** download a backup artifact, then `python -m history.backup restore <folder>` (local SQLite by default; set the three secrets as environment variables to restore into D1).
+- **Data flags** (`data_flags`): `split_like_jump`, `unit_jump` (pence/pounds), `currency_mismatch`, `yahoo_symbol` (fetched under a fallback Yahoo symbol — fix `universe.yaml`), `coarse_prices` (Yahoo rounds the coin so hard the bars are useless — PEPE).
+- **Schema changes:** edit `history/schema.sql` (statements must stay idempotent) and bump `SCHEMA_VERSION` in `history/db.py`. Tests: `python -m unittest discover -s history -t .` (also in CI).
+
 ## Agora mode — deliberate before implementing
 
 For non-trivial designs, the user runs an **agora**: the plan is debated across multiple AIs (DeepSeek, Cerebras, Claude, …) before any code is written.

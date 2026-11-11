@@ -165,6 +165,10 @@ When adding a new sector, complete every item in this checklist — in order:
 
 **Top-level export keys:** in addition to `stocks[]`, the export JSON has a `momentum_picks[]` array built by `compute_export_momentum()` in `generate_export.py`. This mirrors the per-sector `momentum_screener.py` logic but runs cross-sector over all 7 sectors at export time.
 
+## History database (D1)
+
+Prices, market, signals and end-of-day bars are also written to a Cloudflare D1 database (`history/`) — **history only, the site never reads it**. See `WORKFLOW.md` → *History database* for what writes what, the secrets, backfill, backup/restore and data flags. Adding a stock needs nothing extra: history reads `universe.yaml`.
+
 ## Momentum screener
 
 `momentum_screener.py` lives at the repo root and is imported by each sector's `[Sector]_generate_signals_local.py` via `from momentum_screener import momentum_signal`.

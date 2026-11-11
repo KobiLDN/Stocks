@@ -5,8 +5,6 @@ name: Update History
 # hand with days=400 once to backfill a year; it is resumable — re-run if the budget
 # stops it early (D1 free plan: 100k rows written per day).
 on:
-  push:                        # TEMP: branch test run, removed before merge
-    branches: [feat/d1-history]
   workflow_run:
     workflows: ["Generate Export"]
     types: [completed]
@@ -72,7 +70,6 @@ jobs:
                       "SELECT currency, COUNT(DISTINCT symbol) FROM daily_bars GROUP BY 1",
                       "SELECT symbol, date, open, close, volume, currency FROM daily_bars WHERE symbol IN ('AAPL','BA.L','BTC-USD','PEPE24478-USD','^VIX','2222.SR') ORDER BY symbol, date DESC",
                       "SELECT * FROM corporate_actions ORDER BY date DESC LIMIT 15",
-                      "SELECT symbol, COUNT(*), MAX(close) FROM daily_bars WHERE symbol IN ('ALT-USD','GRT-USD','POL-USD','RNDR-USD','TAO-USD') GROUP BY 1",
                       "SELECT * FROM data_flags LIMIT 20"):
               print(sql); [print("  ", r) for r in con.execute(sql).fetchall()]
           PY
