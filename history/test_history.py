@@ -202,9 +202,11 @@ class RawBars(unittest.TestCase):
 
     def test_crypto_fallback_symbols(self):
         inst = bars.instruments(db.load_universe())
-        self.assertEqual(inst["GRT-USD"][2], ["GRT6719-USD"])                     # plain symbol is ours already
-        self.assertEqual(inst["SUI20947-USD"][2], ["SUI-USD"])
+        self.assertEqual(inst["GRT6719-USD"][2], ["GRT-USD"])                     # ours is the id form already
         self.assertEqual(inst["AAPL"][2], [])
+        fake = {"assets": {"XYZ": {"name": "X", "exchange": "Crypto", "yahoo": "XYZ-USD",
+                                   "cmc_symbol": "XYZ", "cmc_id": 123}}, "sectors": {}}
+        self.assertEqual(bars.instruments(fake)["XYZ-USD"][2], ["XYZ123-USD"])
 
     def test_instruments_dedupe_shared_symbols(self):
         u = db.load_universe()
@@ -243,12 +245,12 @@ class BarsJob(Base):
     def test_crypto_falls_back_and_flags(self):
         real = self.fake_fetch
         def fetch(symbol, start, end):
-            return ([], None) if symbol == "GRT-USD" else real(symbol, start, end)
+            return ([], None) if symbol == "SUI20947-USD" else real(symbol, start, end)
         with mock.patch.object(bars, "fetch", side_effect=fetch), mock.patch.object(bars.time, "sleep"):
-            self.assertEqual(bars.main(["--only", "GRT-USD"]), 0)
-        self.assertEqual(self.count("daily_bars", "WHERE symbol = 'GRT-USD'"), 2)   # stored under our symbol
+            self.assertEqual(bars.main(["--only", "SUI20947-USD"]), 0)
+        self.assertEqual(self.count("daily_bars", "WHERE symbol = 'SUI20947-USD'"), 2)   # stored under our symbol
         flag = self.h.run("SELECT detail FROM data_flags WHERE kind = 'yahoo_symbol'")[0]["detail"]
-        self.assertIn("GRT6719-USD", flag)
+        self.assertIn("fetched as SUI-USD", flag)
 
     def test_mostly_failing_run_is_red(self):
         with mock.patch.object(bars, "fetch", side_effect=RuntimeError("yahoo down")), mock.patch.object(bars.time, "sleep"):

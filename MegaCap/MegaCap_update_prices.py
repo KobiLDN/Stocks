@@ -128,7 +128,9 @@ def get_metrics(yahoo_symbol, special, gbp_usd, sar_usd):
         avg_volume_m = round(avg_vol / 1e6, 2) if avg_vol and avg_vol > 0 else None
 
         dy_raw = info.get('dividendYield')
-        div_yield_pct = round(float(dy_raw) * 100, 3) if dy_raw and float(dy_raw) > 0 else None
+        # Yahoo's dividendYield is already a percentage (0.31 = 0.31%); multiplying by 100
+        # showed Apple at 31% and BAE at 196%
+        div_yield_pct = round(float(dy_raw), 3) if dy_raw and float(dy_raw) > 0 else None
 
         sp_raw = info.get('shortPercentOfFloat')
         short_pct = round(float(sp_raw) * 100, 2) if sp_raw and float(sp_raw) > 0 else None
