@@ -85,7 +85,19 @@ def validate():
             used.add(t)
     for t in sorted(set(assets) - used):
         errors.append(f"{t}: in assets but in no sector")
+    for t, a in (u.get("retired") or {}).items():
+        if t in assets:
+            errors.append(f"{t}: in both assets and retired")
+        for field in ("name", "exchange", "yahoo"):
+            if not a.get(field):
+                errors.append(f"retired {t}: missing {field}")
     return errors
+
+
+def all_assets():
+    """assets + retired: every asset any signal has ever named (history / track record)."""
+    u = load()
+    return {**(u.get("retired") or {}), **u["assets"]}
 
 
 if __name__ == "__main__":
@@ -93,6 +105,6 @@ if __name__ == "__main__":
     for p in problems:
         print("ERROR:", p)
     u = load()
-    print(f"{len(u['assets'])} assets, {sum(len(m) for m in u['sectors'].values())} sector memberships"
+    print(f"{len(u['assets'])} assets (+{len(u.get('retired') or {})} retired), {sum(len(m) for m in u['sectors'].values())} sector memberships"
           f" across {len(u['sectors'])} sectors — {'OK' if not problems else f'{len(problems)} problem(s)'}")
     sys.exit(1 if problems else 0)

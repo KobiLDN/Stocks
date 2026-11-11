@@ -72,7 +72,7 @@ class Schema(Base):
 
     def test_universe_sync(self):
         self.assertTrue(self.h.sync_universe(self.universe, db.BENCHMARKS))
-        n_assets = len(self.universe["assets"]) + len(db.BENCHMARKS)
+        n_assets = len(self.universe["assets"]) + len(self.universe.get("retired") or {}) + len(db.BENCHMARKS)
         self.assertEqual(self.count("assets"), n_assets)
         self.assertEqual(self.count("asset_sectors"), sum(len(m) for m in self.universe["sectors"].values()))
         self.assertFalse(self.h.sync_universe(self.universe, db.BENCHMARKS))   # unchanged -> skipped
@@ -281,3 +281,118 @@ class Backup(Base):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+# ── Track record ──────────────────────────────────────────────────────────────
+import datetime as _dt  # noqa: E402
+
+from history import import_signals, track_record as tr  # noqa: E402
+
+UTC = _dt.timezone.utc
+
+
+def _days(start, n, price=100.0, step=1.0):
+    """n consecutive calendar days of bars: (date, open, close), close = open + step."""
+    d0 = _dt.date.fromisoformat(start)
+    return [((d0 + _dt.timedelta(days=k)).isoformat(), price + k * step, price + k * step + step) for k in range(n)]
+
+
+class TrackRecordRules(unittest.TestCase):
+    def test_open_times(self):
+        self.assertEqual(tr.open_utc("2026-11-11", "NYSE").hour, 14)          # 09:30 EST = 14:30 UTC
+        self.assertEqual(tr.open_utc("2026-07-01", "NASDAQ").hour, 13)        # 09:30 EDT = 13:30 UTC
+        self.assertEqual(tr.open_utc("2026-07-01", "LSE").hour, 7)            # 08:00 BST
+        self.assertEqual(tr.open_utc("2026-07-01", "Crypto").hour, 0)
+        self.assertEqual(tr.open_utc("2026-07-01", "TSE").hour, 0)            # 09:00 JST = 00:00 UTC
+
+    def test_entry_is_strictly_after_the_signal(self):
+        signal = _dt.datetime(2026, 7, 1, 7, 0, tzinfo=UTC)                   # 08:00 London, LSE opens 08:00
+        lse = tr.Series("LSE", _days("2026-07-01", 5))
+        self.assertEqual(lse.dates[lse.first_open_after(signal + tr.BUFFER)], "2026-07-02")
+        us = tr.Series("NYSE", _days("2026-07-01", 5))
+        self.assertEqual(us.dates[us.first_open_after(signal + tr.BUFFER)], "2026-07-01")   # opens 13:30 UTC
+        coin = tr.Series("Crypto", _days("2026-07-01", 5))
+        self.assertEqual(coin.dates[coin.first_open_after(signal + tr.BUFFER)], "2026-07-02")
+
+    def test_split_and_dividend(self):
+        bars = [("2026-01-01", 100.0, 100.0), ("2026-01-02", 101, 102), ("2026-01-03", 51, 52), ("2026-01-04", 53, 55)]
+        s = tr.Series("NYSE", bars, splits={"2026-01-03": 2.0}, dividends={"2026-01-04": 1.0, "2026-01-01": 9.0})
+        # 1 share -> 2 shares on the split; dividend 1.0 x 2 shares; the entry-day dividend is not ours
+        self.assertAlmostEqual(s.total_return(0, 3), (55 * 2 + 2) / 100 - 1)
+
+    def test_complete_through(self):
+        now = _dt.datetime(2026, 11, 11, 22, 0, tzinfo=UTC)
+        self.assertEqual(tr.complete_through("NYSE", now), "2026-11-11")       # closed 21:00 UTC
+        self.assertEqual(tr.complete_through("Crypto", now), "2026-11-10")     # today's UTC bar still forming
+        early = _dt.datetime(2026, 11, 11, 20, 0, tzinfo=UTC)
+        self.assertEqual(tr.complete_through("NYSE", early), "2026-11-10")
+
+    def test_measure_pending_and_scored(self):
+        stock = tr.Series("NYSE", _days("2026-06-01", 60, step=1.0))
+        spy = tr.Series("Index", _days("2026-06-01", 60, step=0.5))
+        signal = _dt.datetime(2026, 6, 1, 7, 0, tzinfo=UTC)
+        now = _dt.datetime(2026, 7, 30, 22, 0, tzinfo=UTC)
+        entry, res, note = tr.measure(signal, stock, spy, now)
+        self.assertEqual(entry["date"], "2026-06-01")
+        r, s = res["1w"]
+        self.assertAlmostEqual(r, (100 + 7 + 1) / 100 - 1)                    # close on 06-08 = 108
+        self.assertAlmostEqual(s, (100 + 3.5 + 0.5) / 100 - 1)
+        self.assertIsInstance(res["1m"], tuple)
+        self.assertEqual(res["3m"], "pending")
+
+    def test_summary(self):
+        st = tr.summarise([(0.10, 0.02), (-0.05, 0.01), (0.03, 0.03)])
+        self.assertEqual(st["n"], 3)
+        self.assertEqual(st["beat_spy"], 33.3)
+        self.assertEqual(st["excess"], round((0.08 - 0.06 + 0) / 3 * 100, 2))
+
+
+class TrackRecordBuild(Base):
+    def test_end_to_end(self):
+        h = self.h
+        h.sync_universe(self.universe, db.BENCHMARKS)
+        bars_rows = []
+        for sym, step in (("AAPL", 1.0), ("SPY", 0.5), ("PEPE24478-USD", 0.0)):
+            for d, o, c in _days("2026-06-01", 150, step=step):
+                bars_rows.append([sym, d, o, o, o, c, 1000, "USD", "r"])
+        h.write("daily_bars", bars.BAR_COLS, bars_rows)
+        h.write("data_flags", bars.FLAG_COLS, [["PEPE24478-USD", "2026-11-01", "coarse_prices", "x", "r"]])
+        h.write("signal_runs", snapshot.SIGNAL_RUN_COLS, [["AI:2026-06-01T07:00:00Z", "AI", "2026-06-01T07:00:00Z", "m", "live", "git:abc"],
+                                                         ["Crypto:2026-10-25T07:00:00Z", "Crypto", "2026-10-25T07:00:00Z", "m", "live", "r"]])
+        h.write("signals", snapshot.SIGNAL_COLS, [
+            ["AI:2026-06-01T07:00:00Z", "ai", "AAPL", 1, "strong_buy", 0.95, "x", None],
+            ["AI:2026-06-01T07:00:00Z", "momentum", "AAPL", 1, "buy", 0.7, "x", None],
+            ["AI:2026-06-01T07:00:00Z", "ai", "NOPE", 2, "buy", 0.6, "x", None],
+            ["Crypto:2026-10-25T07:00:00Z", "ai", "PEPE", 1, "buy", 0.8, "x", None],
+        ])
+        out = tr.build(*tr.load(h), now=_dt.datetime(2026, 11, 1, 22, 0, tzinfo=UTC))
+        self.assertEqual(out["counts"], {"signals": 4, "scored": 2, "pending": 0, "no_data": 1, "unreliable": 1})
+        allbuy = out["summary"]["all"]["buy signals"]
+        self.assertEqual(allbuy["3m"]["n"], 2)
+        self.assertGreater(allbuy["1w"]["excess"], 0)                          # AAPL rose twice as fast as SPY
+        cols = out["columns"]
+        rows = {(r[cols.index("ticker")], r[cols.index("kind")]): r for r in out["rows"]}
+        self.assertEqual(rows[("NOPE", "ai")][cols.index("note")], "no price data")
+        self.assertEqual(rows[("PEPE", "ai")][cols.index("note")], "unreliable price")
+        aapl = rows[("AAPL", "ai")]
+        self.assertEqual(aapl[cols.index("entry_date")], "2026-06-01")
+        self.assertEqual(aapl[cols.index("provenance")], "live")
+        self.assertEqual(out["names"]["AAPL"], "Apple")
+        json.dumps(out)                                                       # serialisable
+
+
+class ImportSignals(unittest.TestCase):
+    def test_git_history(self):
+        if subprocess_shallow():
+            self.skipTest("shallow clone")
+        runs, sigs, skipped = import_signals.collect(db.load_universe()["sectors"], warn=lambda *_: None)
+        self.assertGreater(len(runs), 400)
+        self.assertTrue(all(r[4] == "live" and r[5].startswith("git:") for r in runs))
+        self.assertEqual(len({r[0] for r in runs}), len(runs))
+        self.assertTrue(all(s[4] in ("buy", "strong_buy", "hold", "sell", "strong_sell") for s in sigs))
+
+
+def subprocess_shallow():
+    import subprocess
+    out = subprocess.run(["git", "rev-parse", "--is-shallow-repository"], capture_output=True, text=True, cwd=db.ROOT)
+    return out.stdout.strip() != "false"

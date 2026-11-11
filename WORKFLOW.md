@@ -66,11 +66,15 @@ D1 keeps **history only**; the site never reads it. Every bot still publishes it
 | `signal_runs`, `signals` (write-once, `provenance = live`) | `generate-signals.yml` → `python -m history.snapshot signals` | after each signal run |
 | `daily_bars` (raw OHLCV), `corporate_actions`, `data_flags` | `update-history.yml` → `python -m history.bars` | automatically after the evening export; re-fetches the last 10 days |
 | backup | `update-history.yml` | Fridays → 90-day artifact `history-backup-<run>` |
+| `track-record.json` (published file, not a table) | `update-history.yml` → `publish` job → `python -m history.track_record` | after the nightly bars; pushed to `main` like the other bots |
+| past signals (one-off) | *Update History* run by hand with `import_signals` ticked → `python -m history.import_signals` | every committed `*/signals-local.json` since May 2026, `provenance = live`, `run_id = git:<sha>` |
 
 - **Secrets** `CLOUDFLARE_ACCOUNT_ID`, `D1_DATABASE_ID`, `D1_API_TOKEN` live only in the GitHub **`production`** environment, limited to the `main` branch. Branch runs get `preview` (no secrets) and write a throwaway local SQLite file, so a branch can never touch production history. On `main` without the secrets, the history steps warn and skip.
 - **Raw prices:** `daily_bars` stores prices *before* split/dividend adjustment, in the instrument's own currency (`GBp` = pence for LSE). Adjust when reading, using `corporate_actions`.
 - **Backfill** (once): run *Update History* by hand with `days = 400`. It is resumable — if it stops at the budget, run it again the next day (D1 free plan: 100k rows written/day; normal daily use is ~3k).
 - **Restore:** download a backup artifact, then `python -m history.backup restore <folder>` (local SQLite by default; set the three secrets as environment variables to restore into D1).
+- **Track record rules** (`history/track_record.py`, agreed in #54): every signal counts; entry = first market open more than 5 min after the signal on the stock's own exchange (crypto: next 00:00 UTC); exits = close on or before entry + 7 / 30 / 91 days; return includes splits and cash dividends, in the stock's own currency; benchmark = SPY over the same window. Unfinished windows are pending; coarse or missing prices are listed but not scored.
+- **Retired assets** (`universe.yaml` → `retired:`): tickers no longer on any page but named by past signals, kept only so those signals can still be priced.
 - **Data flags** (`data_flags`): `split_like_jump`, `unit_jump` (pence/pounds), `currency_mismatch`, `yahoo_symbol` (fetched under a fallback Yahoo symbol — fix `universe.yaml`), `coarse_prices` (Yahoo rounds the coin so hard the bars are useless — PEPE).
 - **Schema changes:** edit `history/schema.sql` (statements must stay idempotent) and bump `SCHEMA_VERSION` in `history/db.py`. Tests: `python -m unittest discover -s history -t .` (also in CI).
 
