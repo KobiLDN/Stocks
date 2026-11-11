@@ -1,0 +1,91 @@
+name: Update History
+
+# End-of-day daily bars into the history database (#54 step 3), plus a weekly backup.
+# Starts by itself after the evening export (no cron-job.org job needed). Run it by
+# hand with days=400 once to backfill a year; it is resumable — re-run if the budget
+# stops it early (D1 free plan: 100k rows written per day).
+on:
+  workflow_run:
+    workflows: ["Generate Export"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Days of daily bars to fetch (10 = nightly, 400 = one-off backfill)'
+        default: '10'
+      budget:
+        description: 'Max bar rows this run (D1 free plan allows 100k writes/day)'
+        default: '80000'
+      only:
+        description: 'Only these Yahoo symbols, comma-separated (blank = all)'
+        default: ''
+      backup:
+        description: 'Also take a backup now (normally Fridays only)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: history
+  cancel-in-progress: false
+
+jobs:
+  bars:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    # D1 secrets live in `production`, which only `main` may use. workflow_run
+    # events always run on main; branch dispatches get `preview` and a local file.
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      D1_API_TOKEN: ${{ secrets.D1_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install deps
+        run: pip install -q -r history/requirements.txt
+
+      - name: Daily bars
+        run: |
+          ARGS="--days ${{ inputs.days || '10' }} --budget ${{ inputs.budget || '80000' }}"
+          if [ -n "${{ inputs.only }}" ]; then ARGS="$ARGS --only ${{ inputs.only }}"; fi
+          python -m history.bars $ARGS
+
+      # Branch runs write a local file: show what landed so a PR can be checked.
+      - name: Show sample (branch runs only)
+        if: github.ref != 'refs/heads/main'
+        run: |
+          python - <<'PY'
+          import sqlite3
+          con = sqlite3.connect("history/history.sqlite")
+          for sql in ("SELECT COUNT(*), COUNT(DISTINCT symbol), MIN(date), MAX(date) FROM daily_bars",
+                      "SELECT currency, COUNT(DISTINCT symbol) FROM daily_bars GROUP BY 1",
+                      "SELECT symbol, date, open, close, volume, currency FROM daily_bars WHERE symbol IN ('AAPL','BA.L','BTC-USD','PEPE24478-USD','^VIX','2222.SR') ORDER BY symbol, date DESC",
+                      "SELECT * FROM corporate_actions ORDER BY date DESC LIMIT 15",
+                      "SELECT * FROM data_flags LIMIT 20"):
+              print(sql); [print("  ", r) for r in con.execute(sql).fetchall()]
+          PY
+
+      - name: Weekly backup (Fridays, or when asked)
+        if: always()
+        run: |
+          if [ "$(date -u +%u)" = "5" ] || [ "${{ inputs.backup }}" = "true" ]; then
+            python -m history.backup dump backup
+          else
+            echo "Not Friday — no backup."
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always() && hashFiles('backup/manifest.json') != ''
+        with:
+          name: history-backup-${{ github.run_id }}
+          path: backup/
+          retention-days: 90

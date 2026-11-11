@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **History database — D1 (#54 step 3a)** — every price run, market snapshot and signal is kept in Cloudflare D1, plus raw end-of-day bars, splits/dividends and data-quality flags; weekly backup; the groundwork for the track record (#54 step 8)
+
 - **Cloud-only repo** — local-PC leftovers removed (`.bat` files, `branches.md`, `STOCKSDev`/`dev` instructions); `AGENTS.md` documents what the cloud portfolio (`portfolio-private`) reads from this site so the rebuild keeps those URLs and fields stable
 
 - **Master asset list — `universe.yaml` (#54 step 2)** — every tracked asset defined once with its sector memberships and per-sector category; all 7 price scripts read it via `universe.py`; adding a stock is one file edit (`universe.yaml`, `universe.py`).

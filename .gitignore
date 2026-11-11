@@ -40,3 +40,6 @@ exports/*-portfolio.json
 exports/*-portfolio.csv
 
 .wrangler/
+
+# History database: local SQLite used by tests and branch runs (production is Cloudflare D1)
+history/*.sqlite
