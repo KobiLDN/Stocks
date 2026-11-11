@@ -108,11 +108,25 @@ def jump_flags(bars, split_dates):
     return flags
 
 
+COARSE_TICK = 0.01   # price steps of 1%+ of the price make returns meaningless
+
+
+def coarse_closes(closes, min_bars=5):
+    """True when Yahoo rounds a series so hard that returns are meaningless: PEPE (~$0.000005)
+    only moves in $0.000001 steps, i.e. 20% jumps. Either almost no distinct prices, or the
+    smallest step between distinct prices is 1%+ of the typical price."""
+    closes = [c for c in closes if c]
+    if len(closes) < min_bars:
+        return False
+    levels = sorted(set(closes))
+    if len(levels) <= 2:
+        return True
+    step = min(b - a for a, b in zip(levels, levels[1:]))
+    return step / sorted(closes)[len(closes) // 2] >= COARSE_TICK
+
+
 def coarse(bars, min_bars=5):
-    """True when a series barely moves at all — Yahoo rounds some tiny coins (PEPE) so hard
-    that every day shows the same price, which makes the bars useless for returns."""
-    closes = [b[4] for b in bars if b[4]]
-    return len(closes) >= min_bars and len(set(closes)) <= 2
+    return coarse_closes([b[4] for b in bars], min_bars)
 
 
 # ── yfinance adapter ──────────────────────────────────────────────────────────
