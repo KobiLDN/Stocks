@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11 13:09",
-  "fx_gbp_usd": 1.3308,
+  "updated": "2026-11-11 13:45",
+  "fx_gbp_usd": 1.3298,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -19,7 +19,7 @@
       "high_gbp": "267",
       "high_usd": 355.38,
       "bar_pct": 94,
-      "market_cap_gbp_b": 3805.599,
+      "market_cap_gbp_b": 3808.638,
       "market_cap_usd_b": 5064.611,
       "beta": 1.089,
       "pe_ratio": 38.81,
@@ -82,13 +82,13 @@
       "change_1m": "-1.48%",
       "change_ytd": "+13.45%",
       "return_1yr": "+4%",
-      "low_gbp": "262",
+      "low_gbp": "263",
       "low_usd": 349.2,
       "high_gbp": "420",
       "high_usd": 559.15,
       "bar_pct": 88,
-      "market_cap_gbp_b": 2975.095,
-      "market_cap_usd_b": 3959.35,
+      "market_cap_gbp_b": 2977.47,
+      "market_cap_usd_b": 3959.349,
       "beta": 1.045,
       "pe_ratio": 27.83,
       "avg_volume_m": 23.13,
@@ -101,10 +101,17 @@
       "vol_1m": 564335000,
       "news": [
         {
+          "title": "Anthropic's new Claude product drop just sent a message to these 3 tech stocks",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/article/anthropics-new-claude-product-drop-just-sent-a-message-to-these-3-tech-stocks-133421409.html",
+          "published": 1794404061,
+          "sentiment": -0.273
+        },
+        {
           "title": "Dow Jones Futures Rise, Techs Jump On CoreWeave Earnings; Look For This Bullish Market Signal",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-treasury-yields-nvidia-coreweave/?src=A00220&yptr=yahoo",
-          "published": 1794401712,
+          "published": 1794402260,
           "sentiment": 0.0
         },
         {
@@ -127,16 +134,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/mcgraw-hill-mh-stock-looks-120945696.html",
           "published": 1794398985,
           "sentiment": 0.0
-        },
-        {
-          "title": "Why CoreWeave Matters So Much for the AI Trade",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-11-2026/card/why-coreweave-matters-so-much-for-the-ai-trade-e9lJO4vRmShS0odLRxRN?siteid=yhoof2&yptr=yahoo",
-          "published": 1794398402,
-          "sentiment": 0.026
         }
       ],
-      "news_sentiment": 0.199
+      "news_sentiment": 0.139
     },
     {
       "ticker": "GOOGL",
@@ -150,12 +150,12 @@
       "change_1m": "-18.52%",
       "change_ytd": "-8.63%",
       "return_1yr": "+0%",
-      "low_gbp": "203",
+      "low_gbp": "204",
       "low_usd": 270.7,
       "high_gbp": "307",
       "high_usd": 408.61,
       "bar_pct": 12,
-      "market_cap_gbp_b": 2654.769,
+      "market_cap_gbp_b": 2656.889,
       "market_cap_usd_b": 3533.05,
       "beta": 1.226,
       "pe_ratio": 15.01,
@@ -168,6 +168,13 @@
       "vol_1w": 206099200,
       "vol_1m": 843634300,
       "news": [
+        {
+          "title": "3 Beaten-Down Stocks With a Real Catalyst for a Comeback",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/11/11/3-beaten-down-stocks-with-a-real-catalyst-for-a-comeback/",
+          "published": 1794403756,
+          "sentiment": 0.0
+        },
         {
           "title": "Why open-source AI models aren't actually cheaper to run: Vinod Khosla",
           "publisher": "Yahoo Finance Video",
@@ -195,16 +202,9 @@
           "url": "https://finance.yahoo.com/technology/ai/articles/google-targets-americas-medical-bills-120642841.html",
           "published": 1794398802,
           "sentiment": 0.0
-        },
-        {
-          "title": "Anthropic is hiding its best AI: Fable 5.2 and the IPO",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/anthropic-hiding-best-ai-fable-120000011.html",
-          "published": 1794398400,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.138
+      "news_sentiment": 0.046
     },
     {
       "ticker": "AMZN",
@@ -223,7 +223,7 @@
       "high_gbp": "216",
       "high_usd": 287.2,
       "bar_pct": 82,
-      "market_cap_gbp_b": 2200.846,
+      "market_cap_gbp_b": 2202.603,
       "market_cap_usd_b": 2928.955,
       "beta": 1.503,
       "pe_ratio": 21.9,
@@ -291,7 +291,7 @@
       "high_gbp": "586",
       "high_usd": 779.82,
       "bar_pct": 47,
-      "market_cap_gbp_b": 1232.258,
+      "market_cap_gbp_b": 1233.242,
       "market_cap_usd_b": 1639.928,
       "beta": 1.279,
       "pe_ratio": 21.88,
@@ -312,35 +312,35 @@
           "sentiment": 0.0
         },
         {
+          "title": "Meta Fined by Brazil Electoral Court for Allegedly Failing to Provide Equal Content During Presidential Campaign",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/media-advertising/articles/meta-fined-brazil-electoral-court-132424108.html",
+          "published": 1794403464,
+          "sentiment": -0.511
+        },
+        {
+          "title": "Top 3 Value Stocks To Watch In November 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-value-stocks-watch-130909150.html",
+          "published": 1794402549,
+          "sentiment": 0.494
+        },
+        {
+          "title": "David Tepper Bought CoreWeave Before It Fell 51%. Is He Wrong, or Early?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/david-tepper-bought-coreweave-before-it-fell-51-is-he-wrong-or-early?ref=yahoofinance&tlnk=yf-261111-hj589vr2",
+          "published": 1794402351,
+          "sentiment": -0.477
+        },
+        {
           "title": "3 Great Founder Led Stocks To Own In November 2026",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/3-great-founder-led-stocks-121211987.html",
           "published": 1794399131,
           "sentiment": 0.625
-        },
-        {
-          "title": "Data Centers Will Prevail Despite All the Opposition. How to Play It With Options.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/data-centers-will-prevail-despite-all-the-opposition-how-to-play-it-with-options-087b19b2?siteid=yhoof2&yptr=yahoo",
-          "published": 1794395700,
-          "sentiment": 0.34
-        },
-        {
-          "title": "State Street Comm Services SPDR (XLC) Sells $29.9 Million of Meta on Monday",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-comm-services-spdr-110439330.html",
-          "published": 1794395079,
-          "sentiment": 0.0
-        },
-        {
-          "title": "CoreWeave Earnings Were Strong. Investors Remain Antsy as Stock Rises.",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/coreweave-earnings-stock-price-7c0a24d8?siteid=yhoof2&yptr=yahoo",
-          "published": 1794393300,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.295
+      "news_sentiment": 0.026
     },
     {
       "ticker": "NVDA",
@@ -354,13 +354,13 @@
       "change_1m": "-25.38%",
       "change_ytd": "-10.36%",
       "return_1yr": "-13%",
-      "low_gbp": "123",
+      "low_gbp": "124",
       "low_usd": 164.27,
       "high_gbp": "183",
       "high_usd": 243.37,
       "bar_pct": 6,
-      "market_cap_gbp_b": 3064.39,
-      "market_cap_usd_b": 4078.186,
+      "market_cap_gbp_b": 3066.837,
+      "market_cap_usd_b": 4078.187,
       "beta": 2.247,
       "pe_ratio": 21.35,
       "avg_volume_m": 127.85,
@@ -372,6 +372,13 @@
       "vol_1w": 1524692400,
       "vol_1m": 3243296300,
       "news": [
+        {
+          "title": "'Icarus' rise and fall': Analyst downgrades Nvidia stock amid Jensen Huang woes, highlights risks",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/icarus-rise-and-fall-analyst-downgrades-nvidia-stock-amid-jensen-huang-woes-highlights-risks-131204555.html",
+          "published": 1794402724,
+          "sentiment": -0.612
+        },
         {
           "title": "Why open-source AI models aren't actually cheaper to run: Vinod Khosla",
           "publisher": "Yahoo Finance Video",
@@ -394,21 +401,14 @@
           "sentiment": -0.44
         },
         {
-          "title": "Nvidia\u2019s chips are powering China\u2019s AI revolution",
-          "publisher": "The Telegraph",
-          "url": "https://uk.finance.yahoo.com/news/nvidia-chips-powering-china-ai-130000071.html",
-          "published": 1794402000,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Buy, Sell, or Hold? Wednesday\u2019s Top Upgrades and Downgrades: Akamai Technologies, Apple, BILL Holdings, Corning, Form Factor, Guidewire Software, NVIDIA, Riot Platforms, Toast, and More",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/11/buy-sell-or-hold-wednesdays-top-upgrades-and-downgrades-akamai-technologies-apple-bill-holdings-corning-form-factor-guidewire-software-nvidia-riot-platforms-toast-and-more/",
-          "published": 1794401832,
-          "sentiment": -0.421
+          "title": "Standard Chartered Sees 50x Gains Ahead for This Surging Crypto. Here's Why It Could Be Worth a Closer Look.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/11/standard-chartered-sees-50x-gains-ahead-crypto/",
+          "published": 1794404100,
+          "sentiment": 0.511
         }
       ],
-      "news_sentiment": -0.172
+      "news_sentiment": -0.108
     },
     {
       "ticker": "AMD",
@@ -422,12 +422,12 @@
       "change_1m": "-13.30%",
       "change_ytd": "+130.55%",
       "return_1yr": "+99%",
-      "low_gbp": "141",
+      "low_gbp": "142",
       "low_usd": 188.22,
       "high_gbp": "495",
       "high_usd": 658.52,
       "bar_pct": 70,
-      "market_cap_gbp_b": 634.933,
+      "market_cap_gbp_b": 635.44,
       "market_cap_usd_b": 844.989,
       "beta": 2.542,
       "pe_ratio": 110.09,
@@ -446,6 +446,13 @@
           "url": "https://finance.yahoo.com/markets/article/goldman-sachs-calls-chip-stocks-oversold-here-are-the-names-it-says-to-buy-165654250.html",
           "published": 1794329594,
           "sentiment": 0.0
+        },
+        {
+          "title": "Server CPU strength persists as AMD and Arm gain share: UBS",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/technology/articles/server-cpu-strength-persists-amd-132222608.html",
+          "published": 1794403342,
+          "sentiment": 0.832
         },
         {
           "title": "Nvidia, chip stocks rebound premarket after CoreWeave lifts revenue outlook",
@@ -467,16 +474,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/social-buzz-wallstreetbets-stocks-advance-114134140.html",
           "published": 1794397294,
           "sentiment": 0.0
-        },
-        {
-          "title": "Latest News In AI Chips - Advancing Data Centers with AMD's New EPYC Processors",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/technology/ai/articles/latest-news-ai-chips-advancing-113735186.html",
-          "published": 1794397055,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.166
     },
     {
       "ticker": "INTC",
@@ -495,8 +495,8 @@
       "high_gbp": "107",
       "high_usd": 142.35,
       "bar_pct": 23,
-      "market_cap_gbp_b": 232.156,
-      "market_cap_usd_b": 308.96,
+      "market_cap_gbp_b": 232.342,
+      "market_cap_usd_b": 308.961,
       "beta": 2.426,
       "pe_ratio": null,
       "avg_volume_m": 116.03,
@@ -508,6 +508,13 @@
       "vol_1w": 881622100,
       "vol_1m": 3127625200,
       "news": [
+        {
+          "title": "Server CPU strength persists as AMD and Arm gain share: UBS",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/technology/articles/server-cpu-strength-persists-amd-132222608.html",
+          "published": 1794403342,
+          "sentiment": 0.832
+        },
         {
           "title": "Nvidia, chip stocks rebound premarket after CoreWeave lifts revenue outlook",
           "publisher": "Investing.com",
@@ -535,16 +542,9 @@
           "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-11-2026/card/stocks-to-watch-coreweave-nvidia-tsmc-EbakJv4ZyAl7obXOSamP?siteid=yhoof2&yptr=yahoo",
           "published": 1794393067,
           "sentiment": 0.0
-        },
-        {
-          "title": "\u201cDemand Is Higher Than Supply\u201d: AMD Has Ripped 141% in 2026. Is It Too Late to Buy?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/demand-is-higher-than-supply-amd-has-ripped-141-in-2026-is-it-too-late-to-buy?ref=yahoofinance&tlnk=yf-261111-hfx46hx6",
-          "published": 1794382514,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.0
+      "news_sentiment": 0.166
     },
     {
       "ticker": "TSM",
@@ -558,12 +558,12 @@
       "change_1m": "-10.77%",
       "change_ytd": "+25.03%",
       "return_1yr": "+36%",
-      "low_gbp": "200",
+      "low_gbp": "201",
       "low_usd": 266.82,
-      "high_gbp": "366",
+      "high_gbp": "367",
       "high_usd": 487.47,
       "bar_pct": 59,
-      "market_cap_gbp_b": 1545.149,
+      "market_cap_gbp_b": 1546.383,
       "market_cap_usd_b": 2056.333,
       "beta": 1.233,
       "pe_ratio": 25.7,
@@ -576,6 +576,20 @@
       "vol_1w": 111393700,
       "vol_1m": 324449100,
       "news": [
+        {
+          "title": "TSMC plans up to $1bn investment in Anthropic, OpenAI",
+          "publisher": "Investment Monitor",
+          "url": "https://www.investmentmonitor.ai/news/tsmc-plans-1bn-investment-anthropic-openai/",
+          "published": 1794403722,
+          "sentiment": 0.0
+        },
+        {
+          "title": "David Tepper Bought CoreWeave Before It Fell 51%. Is He Wrong, or Early?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/david-tepper-bought-coreweave-before-it-fell-51-is-he-wrong-or-early?ref=yahoofinance&tlnk=yf-261111-hj589vr2",
+          "published": 1794402351,
+          "sentiment": -0.477
+        },
         {
           "title": "How $300,000 in EWT Ends Up With $60,924 in a Single Chipmaker",
           "publisher": "24/7 Wall St.",
@@ -596,30 +610,16 @@
           "url": "https://investorshub.advfn.com/market-news/article/39744/tsmc-approves-up-to-1-billion-investment-in-anthropic-and-openai-as-october-sales-rise-60",
           "published": 1794395721,
           "sentiment": 0.402
-        },
-        {
-          "title": "ETFs Are Buying Taiwan Semiconductor (TSM) on Nov. 9",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/etfs-buying-taiwan-semiconductor-tsm-110148103.html",
-          "published": 1794394908,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Chip Stocks Jump as CoreWeave Eases AI Fears",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/livecoverage/stock-market-news-today-111126/card/chip-stocks-jump-as-coreweave-eases-ai-fears-f6YiuMeXX1AlFa0X6Nmb?siteid=yhoof2&yptr=yahoo",
-          "published": 1794393552,
-          "sentiment": -0.128
         }
       ],
-      "news_sentiment": 0.055
+      "news_sentiment": -0.015
     },
     {
       "ticker": "AVGO",
       "company_name": "Broadcom",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "249",
+      "price_gbp": "250",
       "price_usd": 331.98,
       "change_1d": "-2.21%",
       "change_1w": "-0.05%",
@@ -631,7 +631,7 @@
       "high_gbp": "372",
       "high_usd": 495.0,
       "bar_pct": 21,
-      "market_cap_gbp_b": 1190.797,
+      "market_cap_gbp_b": 1191.748,
       "market_cap_usd_b": 1584.75,
       "beta": 1.508,
       "pe_ratio": 42.4,
@@ -649,6 +649,13 @@
           "publisher": "Yahoo Finance",
           "url": "https://finance.yahoo.com/markets/article/goldman-sachs-calls-chip-stocks-oversold-here-are-the-names-it-says-to-buy-165654250.html",
           "published": 1794329594,
+          "sentiment": 0.0
+        },
+        {
+          "title": "4 Dividend Stocks That Can Thrive Under a Democratic Congress",
+          "publisher": "24/7 Wall St.",
+          "url": "https://247wallst.com/investing/2026/11/11/4-dividend-stocks-that-can-thrive-under-a-democratic-congress/",
+          "published": 1794402698,
           "sentiment": 0.0
         },
         {
@@ -671,16 +678,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-tech-select-spdr-110443420.html",
           "published": 1794395083,
           "sentiment": 0.0
-        },
-        {
-          "title": "US High Relative Profitability (DUHP) Adds Broadcom and Micron on Nov. 9",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/us-high-relative-profitability-duhp-110435180.html",
-          "published": 1794395075,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.055
+      "news_sentiment": 0.0
     },
     {
       "ticker": "QCOM",
@@ -699,8 +699,8 @@
       "high_gbp": "195",
       "high_usd": 259.92,
       "bar_pct": 37,
-      "market_cap_gbp_b": 139.52,
-      "market_cap_usd_b": 185.678,
+      "market_cap_gbp_b": 139.631,
+      "market_cap_usd_b": 185.677,
       "beta": 1.762,
       "pe_ratio": 13.66,
       "avg_volume_m": 12.53,
@@ -734,21 +734,21 @@
           "sentiment": 0.0
         },
         {
+          "title": "Sandisk Sinks 24% in a Week on \u201cIndustry-Wide Memory Dynamics\u201d: Time to Sell, or Load Up?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/sandisk-sinks-24-in-a-week-on-industry-wide-memory-dynamics-time-to-sell-or-load-up?ref=yahoofinance&tlnk=yf-261111-cqrh6hh8",
+          "published": 1794368579,
+          "sentiment": 0.0
+        },
+        {
           "title": "What Would It Take For AMD Stock To Move Higher?",
           "publisher": "Trefis",
           "url": "https://www.trefis.com/stock/amd/articles/623964/what-would-it-take-for-amd-stock-to-move-higher/2026-11-10",
           "published": 1794359384,
           "sentiment": 0.0
-        },
-        {
-          "title": "Prediction: This Underrated Semiconductor Stock Will Jump 187% in 3 Years",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/11/10/prediction-this-underrated-semiconductor-stock-will-jump-187-in-3-years/",
-          "published": 1794345242,
-          "sentiment": -0.625
         }
       ],
-      "news_sentiment": -0.033
+      "news_sentiment": 0.092
     },
     {
       "ticker": "ARM",
@@ -767,8 +767,8 @@
       "high_gbp": "340",
       "high_usd": 452.7,
       "bar_pct": 23,
-      "market_cap_gbp_b": 145.92,
-      "market_cap_usd_b": 194.195,
+      "market_cap_gbp_b": 146.036,
+      "market_cap_usd_b": 194.194,
       "beta": 3.939,
       "pe_ratio": 208.61,
       "avg_volume_m": 5.15,
@@ -780,6 +780,13 @@
       "vol_1w": 41207300,
       "vol_1m": 127821700,
       "news": [
+        {
+          "title": "Server CPU strength persists as AMD and Arm gain share: UBS",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/technology/articles/server-cpu-strength-persists-amd-132222608.html",
+          "published": 1794403342,
+          "sentiment": 0.832
+        },
         {
           "title": "Arm Sinks 10% in a Week on Phone Royalties and SoftBank: \u201cCircular Financing Concerns\u201d",
           "publisher": "TIKR",
@@ -807,23 +814,16 @@
           "url": "https://www.barchart.com/story/news/8756548/dont-chase-the-arm-stock-dip-yet-what-patient-investors-should-wait-for-before-they-buy",
           "published": 1794317514,
           "sentiment": 0.0
-        },
-        {
-          "title": "ARM Just Dropped 13% After Earnings. Is It Time to Sell, or Load Up?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/arm-just-dropped-13-after-earnings-is-it-time-to-sell-or-load-up?ref=yahoofinance&tlnk=yf-261110-j7c8438c",
-          "published": 1794316090,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.04
+      "news_sentiment": 0.126
     },
     {
       "ticker": "ASML",
       "company_name": "ASML Holding",
       "category": "semiconductors",
       "exchange": "NASDAQ",
-      "price_gbp": "1133",
+      "price_gbp": "1134",
       "price_usd": 1507.85,
       "change_1d": "-1.32%",
       "change_1w": "-2.85%",
@@ -832,11 +832,11 @@
       "return_1yr": "+45%",
       "low_gbp": "711",
       "low_usd": 946.11,
-      "high_gbp": "1503",
+      "high_gbp": "1504",
       "high_usd": 1999.96,
       "bar_pct": 53,
-      "market_cap_gbp_b": 436.683,
-      "market_cap_usd_b": 581.151,
+      "market_cap_gbp_b": 437.032,
+      "market_cap_usd_b": 581.152,
       "beta": 1.333,
       "pe_ratio": 37.1,
       "avg_volume_m": 1.44,
@@ -900,11 +900,11 @@
       "return_1yr": "+196%",
       "low_gbp": "145",
       "low_usd": 192.59,
-      "high_gbp": "943",
+      "high_gbp": "944",
       "high_usd": 1255.0,
       "bar_pct": 50,
-      "market_cap_gbp_b": 616.461,
-      "market_cap_usd_b": 820.406,
+      "market_cap_gbp_b": 616.954,
+      "market_cap_usd_b": 820.407,
       "beta": 2.398,
       "pe_ratio": 9.76,
       "avg_volume_m": 27.83,
@@ -971,8 +971,8 @@
       "high_gbp": "556",
       "high_usd": 739.67,
       "bar_pct": 32,
-      "market_cap_gbp_b": 222.146,
-      "market_cap_usd_b": 295.639,
+      "market_cap_gbp_b": 222.323,
+      "market_cap_usd_b": 295.638,
       "beta": 1.673,
       "pe_ratio": 32.14,
       "avg_volume_m": 7.26,
@@ -1039,8 +1039,8 @@
       "high_gbp": "188",
       "high_usd": 250.25,
       "bar_pct": 6,
-      "market_cap_gbp_b": 276.389,
-      "market_cap_usd_b": 367.827,
+      "market_cap_gbp_b": 276.61,
+      "market_cap_usd_b": 367.828,
       "beta": 1.778,
       "pe_ratio": 18.49,
       "avg_volume_m": 33.51,
@@ -1095,7 +1095,7 @@
       "company_name": "Salesforce",
       "category": "enterprise-software",
       "exchange": "NYSE",
-      "price_gbp": "160",
+      "price_gbp": "161",
       "price_usd": 213.48,
       "change_1d": "+0.18%",
       "change_1w": "-3.92%",
@@ -1107,7 +1107,7 @@
       "high_gbp": "202",
       "high_usd": 269.11,
       "bar_pct": 55,
-      "market_cap_gbp_b": 132.018,
+      "market_cap_gbp_b": 132.124,
       "market_cap_usd_b": 175.694,
       "beta": 1.233,
       "pe_ratio": 19.53,
@@ -1175,7 +1175,7 @@
       "high_gbp": "273",
       "high_usd": 362.71,
       "bar_pct": 27,
-      "market_cap_gbp_b": 69.223,
+      "market_cap_gbp_b": 69.278,
       "market_cap_usd_b": 92.124,
       "beta": 1.383,
       "pe_ratio": 13.22,
@@ -1240,10 +1240,10 @@
       "return_1yr": "-42%",
       "low_gbp": "61",
       "low_usd": 81.24,
-      "high_gbp": "131",
+      "high_gbp": "132",
       "high_usd": 175.0,
       "bar_pct": 20,
-      "market_cap_gbp_b": 77.686,
+      "market_cap_gbp_b": 77.748,
       "market_cap_usd_b": 103.387,
       "beta": 0.984,
       "pe_ratio": 71.66,
@@ -1311,7 +1311,7 @@
       "high_gbp": "289",
       "high_usd": 384.56,
       "bar_pct": 67,
-      "market_cap_gbp_b": 78.405,
+      "market_cap_gbp_b": 78.468,
       "market_cap_usd_b": 104.344,
       "beta": 1.322,
       "pe_ratio": null,
@@ -1379,7 +1379,7 @@
       "high_gbp": "513",
       "high_usd": 682.27,
       "bar_pct": 20,
-      "market_cap_gbp_b": 68.362,
+      "market_cap_gbp_b": 68.416,
       "market_cap_usd_b": 90.978,
       "beta": 0.921,
       "pe_ratio": 20.68,
@@ -1447,8 +1447,8 @@
       "high_gbp": "216",
       "high_usd": 286.99,
       "bar_pct": 70,
-      "market_cap_gbp_b": 173.699,
-      "market_cap_usd_b": 231.164,
+      "market_cap_gbp_b": 173.837,
+      "market_cap_usd_b": 231.163,
       "beta": 1.15,
       "pe_ratio": 3762.67,
       "avg_volume_m": 10.06,
@@ -1515,7 +1515,7 @@
       "high_gbp": "325",
       "high_usd": 432.33,
       "bar_pct": 64,
-      "market_cap_gbp_b": 200.707,
+      "market_cap_gbp_b": 200.867,
       "market_cap_usd_b": 267.107,
       "beta": 0.97,
       "pe_ratio": 815.9,
@@ -1580,10 +1580,10 @@
       "return_1yr": "+36%",
       "low_gbp": "119",
       "low_usd": 158.83,
-      "high_gbp": "278",
+      "high_gbp": "279",
       "high_usd": 370.35,
       "bar_pct": 69,
-      "market_cap_gbp_b": 82.352,
+      "market_cap_gbp_b": 82.418,
       "market_cap_usd_b": 109.597,
       "beta": 1.367,
       "pe_ratio": null,
@@ -1651,8 +1651,8 @@
       "high_gbp": "148",
       "high_usd": 197.13,
       "bar_pct": 40,
-      "market_cap_gbp_b": 68.219,
-      "market_cap_usd_b": 90.788,
+      "market_cap_gbp_b": 68.274,
+      "market_cap_usd_b": 90.789,
       "beta": 1.04,
       "pe_ratio": 40.38,
       "avg_volume_m": 4.74,
@@ -1719,8 +1719,8 @@
       "high_gbp": "88",
       "high_usd": 116.73,
       "bar_pct": 3,
-      "market_cap_gbp_b": 195.191,
-      "market_cap_usd_b": 259.766,
+      "market_cap_gbp_b": 195.347,
+      "market_cap_usd_b": 259.767,
       "beta": 1.606,
       "pe_ratio": 18.28,
       "avg_volume_m": 36.78,
@@ -1787,7 +1787,7 @@
       "high_gbp": "136",
       "high_usd": 180.88,
       "bar_pct": 61,
-      "market_cap_gbp_b": 141.729,
+      "market_cap_gbp_b": 141.842,
       "market_cap_usd_b": 188.617,
       "beta": 2.664,
       "pe_ratio": 89.94,
@@ -1850,12 +1850,12 @@
       "change_1m": "+14.64%",
       "change_ytd": "+5.43%",
       "return_1yr": "-6%",
-      "low_gbp": "304",
+      "low_gbp": "305",
       "low_usd": 405.0,
-      "high_gbp": "502",
+      "high_gbp": "503",
       "high_usd": 668.49,
       "bar_pct": 76,
-      "market_cap_gbp_b": 93.621,
+      "market_cap_gbp_b": 93.696,
       "market_cap_usd_b": 124.594,
       "beta": 1.464,
       "pe_ratio": 36.94,
@@ -1923,7 +1923,7 @@
       "high_gbp": "72",
       "high_usd": 95.18,
       "bar_pct": 19,
-      "market_cap_gbp_b": 107.478,
+      "market_cap_gbp_b": 107.564,
       "market_cap_usd_b": 143.035,
       "beta": 1.308,
       "pe_ratio": 41.21,
@@ -1936,6 +1936,13 @@
       "vol_1w": 116830200,
       "vol_1m": 405277100,
       "news": [
+        {
+          "title": "David Tepper Bought CoreWeave Before It Fell 51%. Is He Wrong, or Early?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/david-tepper-bought-coreweave-before-it-fell-51-is-he-wrong-or-early?ref=yahoofinance&tlnk=yf-261111-hj589vr2",
+          "published": 1794402351,
+          "sentiment": -0.477
+        },
         {
           "title": "Musk: Cybercab Will Do \u201ca Majority of All Passenger Miles.\u201d Uber\u2019s Tiny Margin Is the Target",
           "publisher": "TIKR",
@@ -1963,16 +1970,9 @@
           "url": "https://www.trefis.com/stock/uber/articles/623983/is-uber-stock-paying-you-enough-for-the-swings/2026-11-10",
           "published": 1794357247,
           "sentiment": 0.0
-        },
-        {
-          "title": "Nvidia in the hot seat, Anthropic to test the IPO market, hotter-than-expected US inflation",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/nvidia-in-the-hot-seat-anthropic-to-test-the-ipo-market-hotter-than-expected-us-inflation-184626512.html",
-          "published": 1794336386,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.202
+      "news_sentiment": 0.107
     },
     {
       "ticker": "CSCO",
@@ -1991,8 +1991,8 @@
       "high_gbp": "98",
       "high_usd": 130.37,
       "bar_pct": 45,
-      "market_cap_gbp_b": 290.769,
-      "market_cap_usd_b": 386.965,
+      "market_cap_gbp_b": 291.001,
+      "market_cap_usd_b": 386.964,
       "beta": 1.002,
       "pe_ratio": 29.47,
       "avg_volume_m": 18.72,
@@ -2004,6 +2004,13 @@
       "vol_1w": 128189400,
       "vol_1m": 408114000,
       "news": [
+        {
+          "title": "Top 3 Value Stocks To Watch In November 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/top-3-value-stocks-watch-130909150.html",
+          "published": 1794402549,
+          "sentiment": 0.494
+        },
         {
           "title": "Cisco\u2019s chief will terminate a meeting if you use certain acronyms in his presence\u2014he says new hires \u2018feel too stupid to ask\u2019 what they mean",
           "publisher": "Fortune",
@@ -2031,16 +2038,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/buy-sell-hold-cisco-systems-192200624.html",
           "published": 1794338520,
           "sentiment": 0.0
-        },
-        {
-          "title": "APPS Q2 Earnings Beat Estimates on Strong Ad Growth, Guidance Up",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/apps-q2-earnings-beat-estimates-191200244.html",
-          "published": 1794337920,
-          "sentiment": 0.71
         }
       ],
-      "news_sentiment": 0.078
+      "news_sentiment": 0.035
     },
     {
       "ticker": "PLTR",
@@ -2059,7 +2059,7 @@
       "high_gbp": "160",
       "high_usd": 212.94,
       "bar_pct": 59,
-      "market_cap_gbp_b": 305.652,
+      "market_cap_gbp_b": 305.896,
       "market_cap_usd_b": 406.771,
       "beta": 1.61,
       "pe_ratio": 118.89,

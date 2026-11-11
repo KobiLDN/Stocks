@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-11 13:14",
-  "fx_gbp_usd": 1.3308,
+  "updated": "2026-11-11 13:50",
+  "fx_gbp_usd": 1.3295,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,7 +19,7 @@
       "high_gbp": "142",
       "high_usd": 188.5,
       "bar_pct": 68,
-      "market_cap_gbp_b": 504.155,
+      "market_cap_gbp_b": 504.652,
       "market_cap_usd_b": 670.91,
       "beta": 0.141,
       "pe_ratio": 16.92,
@@ -35,16 +35,23 @@
         {
           "title": "Oil giant Exxon plots Venezuela return ahead of Democrat crackdown",
           "publisher": "The Telegraph",
-          "url": "https://uk.finance.yahoo.com/news/oil-giant-exxon-plots-venezuela-083000426.html",
+          "url": "https://www.telegraph.co.uk/business/2026/11/11/oil-giant-exxon-plots-venezuela-return-emocrat-crackdown/",
           "published": 1794385800,
           "sentiment": 0.0
         },
         {
           "title": "Oil giant Exxon plots Venezuela return ahead of Democrat crackdown",
           "publisher": "The Telegraph",
-          "url": "https://www.telegraph.co.uk/business/2026/11/11/oil-giant-exxon-plots-venezuela-return-emocrat-crackdown/",
+          "url": "https://uk.finance.yahoo.com/news/oil-giant-exxon-plots-venezuela-083000426.html",
           "published": 1794385800,
           "sentiment": 0.0
+        },
+        {
+          "title": "ExxonMobil Is Up 43% in a Year. Will Its \u201cLasting Improvements\u201d Outlast the Iran War?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/exxonmobil-is-up-43-in-a-year-will-its-lasting-improvements-outlast-the-iran-war?ref=yahoofinance&tlnk=yf-261111-r9xchhvr",
+          "published": 1794368415,
+          "sentiment": -0.599
         },
         {
           "title": "A Venezuelan Billionaire Just Shared The Details Behind Trump\u2019s \u201cBiggest Oil Deal In World History.\u201d Here\u2019s What It Means For A 68 Year Old With A $2.4M Portfolio Heavily Invested In Energy Stocks",
@@ -59,16 +66,9 @@
           "url": "https://247wallst.com/investing/2026/11/10/treasuries-now-offer-2-66-above-inflation-are-dividend-stocks-in-trouble/",
           "published": 1794338274,
           "sentiment": -0.202
-        },
-        {
-          "title": "Oil Prices Just Fell to Their Lowest Since August as Trump Says the Iran War Is \u2018Effectively Over\u2019",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/10/oil-prices-just-fell-to-their-lowest-since-august-as-trump-says-the-iran-war-is-effectively-over/",
-          "published": 1794335693,
-          "sentiment": -0.758
         }
       ],
-      "news_sentiment": -0.084
+      "news_sentiment": -0.052
     },
     {
       "ticker": "CVX",
@@ -87,7 +87,7 @@
       "high_gbp": "178",
       "high_usd": 236.48,
       "bar_pct": 72,
-      "market_cap_gbp_b": 309.705,
+      "market_cap_gbp_b": 310.01,
       "market_cap_usd_b": 412.143,
       "beta": 0.453,
       "pe_ratio": 15.51,
@@ -100,6 +100,13 @@
       "vol_1w": 49557300,
       "vol_1m": 184015400,
       "news": [
+        {
+          "title": "ExxonMobil Is Up 43% in a Year. Will Its \u201cLasting Improvements\u201d Outlast the Iran War?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/exxonmobil-is-up-43-in-a-year-will-its-lasting-improvements-outlast-the-iran-war?ref=yahoofinance&tlnk=yf-261111-r9xchhvr",
+          "published": 1794368415,
+          "sentiment": -0.599
+        },
         {
           "title": "What Ranger Energy Services (RNGR) Said on Its Q3 Earnings Call",
           "publisher": "MarketBeat",
@@ -127,16 +134,9 @@
           "url": "https://247wallst.com/investing/2026/11/10/oil-prices-just-fell-to-their-lowest-since-august-as-trump-says-the-iran-war-is-effectively-over/",
           "published": 1794335693,
           "sentiment": -0.758
-        },
-        {
-          "title": "Chevron Expands Namibia Ties With QatarEnergy Offshore Stake Deal",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/chevron-expands-namibia-ties-qatarenergy-181600970.html",
-          "published": 1794334560,
-          "sentiment": 0.103
         }
       ],
-      "news_sentiment": -0.05
+      "news_sentiment": -0.19
     },
     {
       "ticker": "SHEL",
@@ -155,7 +155,7 @@
       "high_gbp": "82",
       "high_usd": 109.37,
       "bar_pct": 70,
-      "market_cap_gbp_b": 206.832,
+      "market_cap_gbp_b": 207.036,
       "market_cap_usd_b": 275.244,
       "beta": -0.248,
       "pe_ratio": 8.44,
@@ -174,6 +174,13 @@
           "url": "https://decrypt.co/383000/kraken-parent-payward-brings-200-uk-and-eu-stocks-onchain-as-xstocks",
           "published": 1794401184,
           "sentiment": 0.0
+        },
+        {
+          "title": "FTSE 100 today: Stocks rise as oil rebounds; Spirax tops gainers",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ftse-100-today-stocks-rise-084246110.html",
+          "published": 1794386566,
+          "sentiment": 0.511
         },
         {
           "title": "Did First Half Earnings Just Shift DCC Energy (LSE:DCC) Investment Narrative?",
@@ -195,23 +202,16 @@
           "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-climbs-sinking-crude-091048234.html",
           "published": 1794301848,
           "sentiment": 0.128
-        },
-        {
-          "title": "3 British Undervalued Stocks Trading Up To 45% Below Cash Flow Value",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-british-undervalued-stocks-trading-181134707.html",
-          "published": 1794247894,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.216
+      "news_sentiment": 0.25
     },
     {
       "ticker": "BP",
       "company_name": "BP p.l.c.",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "33",
+      "price_gbp": "34",
       "price_usd": 44.58,
       "change_1d": "-0.14%",
       "change_1w": "-6.32%",
@@ -223,7 +223,7 @@
       "high_gbp": "39",
       "high_usd": 51.49,
       "bar_pct": 62,
-      "market_cap_gbp_b": 86.283,
+      "market_cap_gbp_b": 86.368,
       "market_cap_usd_b": 114.822,
       "beta": -0.258,
       "pe_ratio": 21.75,
@@ -236,6 +236,13 @@
       "vol_1w": 44661200,
       "vol_1m": 199276600,
       "news": [
+        {
+          "title": "FTSE 100 today: Stocks rise as oil rebounds; Spirax tops gainers",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ftse-100-today-stocks-rise-084246110.html",
+          "published": 1794386566,
+          "sentiment": 0.511
+        },
         {
           "title": "FTSE 100 edges down as falling oil weigh on energy majors amid hot U.S. CPI",
           "publisher": "Investing.com",
@@ -263,16 +270,9 @@
           "url": "https://finance.yahoo.com/energy/articles/clean-energy-fuels-corp-clne-052748917.html",
           "published": 1793942868,
           "sentiment": 0.586
-        },
-        {
-          "title": "3 British Energy Stocks With Earnings Growth Over 60%",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/3-british-energy-stocks-earnings-211322595.html",
-          "published": 1793913202,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.455
+      "news_sentiment": 0.443
     },
     {
       "ticker": "TTE",
@@ -291,7 +291,7 @@
       "high_gbp": "72",
       "high_usd": 95.78,
       "bar_pct": 77,
-      "market_cap_gbp_b": 144.826,
+      "market_cap_gbp_b": 144.969,
       "market_cap_usd_b": 192.729,
       "beta": 0.04,
       "pe_ratio": 8.77,
@@ -359,8 +359,8 @@
       "high_gbp": "37",
       "high_usd": 49.08,
       "bar_pct": 69,
-      "market_cap_gbp_b": 72.332,
-      "market_cap_usd_b": 96.257,
+      "market_cap_gbp_b": 72.403,
+      "market_cap_usd_b": 96.256,
       "beta": -0.658,
       "pe_ratio": 8.44,
       "avg_volume_m": 3.88,
@@ -427,7 +427,7 @@
       "high_gbp": "116",
       "high_usd": 154.28,
       "bar_pct": 73,
-      "market_cap_gbp_b": 120.467,
+      "market_cap_gbp_b": 120.586,
       "market_cap_usd_b": 160.313,
       "beta": 0.162,
       "pe_ratio": 14.29,
@@ -495,7 +495,7 @@
       "high_gbp": "51",
       "high_usd": 67.45,
       "bar_pct": 63,
-      "market_cap_gbp_b": 42.753,
+      "market_cap_gbp_b": 42.795,
       "market_cap_usd_b": 56.894,
       "beta": 0.149,
       "pe_ratio": 12.67,
@@ -563,7 +563,7 @@
       "high_gbp": "125",
       "high_usd": 165.93,
       "bar_pct": 78,
-      "market_cap_gbp_b": 59.031,
+      "market_cap_gbp_b": 59.089,
       "market_cap_usd_b": 78.556,
       "beta": 0.269,
       "pe_ratio": 9.78,
@@ -628,11 +628,11 @@
       "return_1yr": "+98%",
       "low_gbp": "122",
       "low_usd": 161.93,
-      "high_gbp": "371",
+      "high_gbp": "372",
       "high_usd": 493.98,
       "bar_pct": 69,
-      "market_cap_gbp_b": 79.704,
-      "market_cap_usd_b": 106.067,
+      "market_cap_gbp_b": 79.783,
+      "market_cap_usd_b": 106.068,
       "beta": 0.509,
       "pe_ratio": 7.72,
       "avg_volume_m": 2.55,
@@ -699,8 +699,8 @@
       "high_gbp": "347",
       "high_usd": 461.52,
       "bar_pct": 63,
-      "market_cap_gbp_b": 73.497,
-      "market_cap_usd_b": 97.807,
+      "market_cap_gbp_b": 73.57,
+      "market_cap_usd_b": 97.808,
       "beta": 0.552,
       "pe_ratio": 7.98,
       "avg_volume_m": 3.09,
@@ -755,7 +755,7 @@
       "company_name": "SLB (Schlumberger)",
       "category": "oilfield-services",
       "exchange": "NYSE",
-      "price_gbp": "37",
+      "price_gbp": "38",
       "price_usd": 49.9,
       "change_1d": "-0.20%",
       "change_1w": "-4.28%",
@@ -767,7 +767,7 @@
       "high_gbp": "45",
       "high_usd": 60.46,
       "bar_pct": 59,
-      "market_cap_gbp_b": 55.347,
+      "market_cap_gbp_b": 55.402,
       "market_cap_usd_b": 73.654,
       "beta": 0.792,
       "pe_ratio": 24.22,
@@ -835,7 +835,7 @@
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 37,
-      "market_cap_gbp_b": 19.802,
+      "market_cap_gbp_b": 19.822,
       "market_cap_usd_b": 26.352,
       "beta": 0.749,
       "pe_ratio": 13.39,
@@ -903,7 +903,7 @@
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 13,
-      "market_cap_gbp_b": 35.648,
+      "market_cap_gbp_b": 35.683,
       "market_cap_usd_b": 47.439,
       "beta": 1.058,
       "pe_ratio": 16.42,
@@ -971,7 +971,7 @@
       "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 49,
-      "market_cap_gbp_b": 135.963,
+      "market_cap_gbp_b": 136.097,
       "market_cap_usd_b": 180.934,
       "beta": 0.6,
       "pe_ratio": 15.54,
@@ -1028,29 +1028,29 @@
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "27",
-      "price_usd": 35.66,
-      "change_1d": "+0.00%",
-      "change_1w": "+2.29%",
-      "change_1m": "+8.20%",
-      "change_ytd": "+20.15%",
+      "price_usd": 35.7,
+      "change_1d": "+0.19%",
+      "change_1w": "+2.48%",
+      "change_1m": "+8.40%",
+      "change_ytd": "+20.37%",
       "return_1yr": "+16%",
       "low_gbp": "20",
-      "low_usd": 27.28,
+      "low_usd": 27.25,
       "high_gbp": "28",
-      "high_usd": 36.83,
-      "bar_pct": 88,
-      "market_cap_gbp_b": 0.325,
-      "market_cap_usd_b": 0.432,
+      "high_usd": 36.79,
+      "bar_pct": 89,
+      "market_cap_gbp_b": 0.326,
+      "market_cap_usd_b": 0.433,
       "beta": 0.534,
-      "pe_ratio": 25.52,
+      "pe_ratio": 25.57,
       "avg_volume_m": 2.39,
       "div_yield_pct": 257.0,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.88,
-      "vol_1d": 211759,
-      "vol_1w": 8848372,
-      "vol_1m": 50064786,
+      "vol_1d": 240960,
+      "vol_1w": 8877573,
+      "vol_1m": 50093987,
       "news": [
         {
           "title": "3 British Growth Stocks With Earnings Growth Up To 47%",
@@ -1107,7 +1107,7 @@
       "high_gbp": "55",
       "high_usd": 73.74,
       "bar_pct": 8,
-      "market_cap_gbp_b": 2.748,
+      "market_cap_gbp_b": 2.751,
       "market_cap_usd_b": 3.657,
       "beta": 1.45,
       "pe_ratio": 41.25,
@@ -1175,8 +1175,8 @@
       "high_gbp": "241",
       "high_usd": 320.95,
       "bar_pct": 10,
-      "market_cap_gbp_b": 14.617,
-      "market_cap_usd_b": 19.452,
+      "market_cap_gbp_b": 14.632,
+      "market_cap_usd_b": 19.453,
       "beta": 1.709,
       "pe_ratio": 10.47,
       "avg_volume_m": 2.46,
@@ -1243,7 +1243,7 @@
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 18,
-      "market_cap_gbp_b": 4.297,
+      "market_cap_gbp_b": 4.301,
       "market_cap_usd_b": 5.718,
       "beta": 1.126,
       "pe_ratio": null,
@@ -1299,7 +1299,7 @@
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.38",
+      "price_gbp": "5.39",
       "price_usd": 7.16,
       "change_1d": "-2.59%",
       "change_1w": "+7.35%",
@@ -1308,10 +1308,10 @@
       "return_1yr": "+9%",
       "low_gbp": "4.43",
       "low_usd": 5.89,
-      "high_gbp": "6.79",
+      "high_gbp": "6.80",
       "high_usd": 9.04,
       "bar_pct": 40,
-      "market_cap_gbp_b": 21.324,
+      "market_cap_gbp_b": 21.345,
       "market_cap_usd_b": 28.377,
       "beta": 0.556,
       "pe_ratio": null,
