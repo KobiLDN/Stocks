@@ -24,6 +24,7 @@ import statistics
 import sys
 from zoneinfo import ZoneInfo
 
+from history.bars import coarse_closes
 from history.db import HistoryError, connect_for_bot, iso, load_universe, utc_now
 
 UTC = dt.timezone.utc
@@ -32,6 +33,10 @@ HORIZONS = (("1w", 7), ("1m", 30), ("3m", 91))
 MAX_EXIT_GAP = dt.timedelta(days=7)    # exit bar this far before the target = data gap, not a result
 BUY_SIDE = ("strong_buy", "buy")
 BENCHMARK = "SPY"
+# Signals whose inputs were wrong at the time: listed, never scored.
+UNRELIABLE = {
+    "AGIX": "wrong coin priced (several coins share AGIX; fixed in #49)",
+}
 
 # Regular session open / close, local time
 SESSIONS = {
@@ -198,8 +203,10 @@ def build(assets, runs, signals, bars, splits, divs, coarse, now):
         symbol = a["yahoo"] if a else None
         generated = parse_utc(run["generated_utc"])
         note = ""
-        if symbol in coarse:
-            entry, res, note = None, {}, "unreliable price"
+        if s["asset_id"] in UNRELIABLE:
+            entry, res, note = None, {}, UNRELIABLE[s["asset_id"]]
+        elif symbol in coarse or (symbol in bars and coarse_closes([b["close"] for b in bars[symbol]], 10)):
+            entry, res, note = None, {}, "unreliable price (Yahoo rounds it too coarsely)"
         else:
             entry, res, note = measure(generated, series_for(symbol, a["exchange"]) if a else None, spy, now)
         cells = []
@@ -227,7 +234,7 @@ def build(assets, runs, signals, bars, splits, divs, coarse, now):
                 add("by_sector", run["sector"], name, v)
                 add("by_confidence", confidence_bucket(s["confidence"]), name, v)
                 add("by_month", run["generated_utc"][:7], name, v)
-        if note == "unreliable price":
+        if note.startswith(("unreliable", "wrong")):
             counts["unreliable"] += 1
         elif scored:
             counts["scored"] += 1

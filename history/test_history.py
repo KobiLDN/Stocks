@@ -196,6 +196,14 @@ class RawBars(unittest.TestCase):
         b, _, _ = bars.to_raw(self.ROWS)
         self.assertFalse(bars.coarse(b))
 
+    def test_coarse_by_step_size(self):
+        pepe = [5e-06, 4e-06, 5e-06, 6e-06, 5e-06, 4e-06, 5e-06, 6e-06, 7e-06, 5e-06]   # moves in 20% steps
+        self.assertTrue(bars.coarse_closes(pepe))
+        btc = [73708.88, 74026.92, 75223.15, 74584.65, 75747.58, 75746.93]
+        self.assertFalse(bars.coarse_closes(btc))
+        pence = [1909.0, 1925.0, 1913.0, 1846.0, 1880.5, 1988.0]                        # BAE in pence
+        self.assertFalse(bars.coarse_closes(pence))
+
     def test_float32_noise_rounded(self):
         b, _, _ = bars.to_raw([("2026-01-01", 25.62000084, 26.0, 25.5, 26.02000046, 10517133, 0, 0)])
         self.assertEqual((b[0][1], b[0][4], b[0][5]), (25.62, 26.02, 10517133.0))
@@ -352,11 +360,12 @@ class TrackRecordBuild(Base):
         h = self.h
         h.sync_universe(self.universe, db.BENCHMARKS)
         bars_rows = []
-        for sym, step in (("AAPL", 1.0), ("SPY", 0.5), ("PEPE24478-USD", 0.0)):
+        for sym, step in (("AAPL", 1.0), ("SPY", 0.5)):
             for d, o, c in _days("2026-06-01", 150, step=step):
                 bars_rows.append([sym, d, o, o, o, c, 1000, "USD", "r"])
+        for k, (d, _o, _c) in enumerate(_days("2026-06-01", 150)):              # 20% steps, no flag needed
+            bars_rows.append(["PEPE24478-USD", d, 5e-06, 5e-06, 5e-06, (4e-06, 5e-06, 6e-06)[k % 3], 1, "USD", "r"])
         h.write("daily_bars", bars.BAR_COLS, bars_rows)
-        h.write("data_flags", bars.FLAG_COLS, [["PEPE24478-USD", "2026-11-01", "coarse_prices", "x", "r"]])
         h.write("signal_runs", snapshot.SIGNAL_RUN_COLS, [["AI:2026-06-01T07:00:00Z", "AI", "2026-06-01T07:00:00Z", "m", "live", "git:abc"],
                                                          ["Crypto:2026-10-25T07:00:00Z", "Crypto", "2026-10-25T07:00:00Z", "m", "live", "r"]])
         h.write("signals", snapshot.SIGNAL_COLS, [
@@ -364,16 +373,18 @@ class TrackRecordBuild(Base):
             ["AI:2026-06-01T07:00:00Z", "momentum", "AAPL", 1, "buy", 0.7, "x", None],
             ["AI:2026-06-01T07:00:00Z", "ai", "NOPE", 2, "buy", 0.6, "x", None],
             ["Crypto:2026-10-25T07:00:00Z", "ai", "PEPE", 1, "buy", 0.8, "x", None],
+            ["Crypto:2026-10-25T07:00:00Z", "ai", "AGIX", 2, "strong_buy", 1.0, "x", None],
         ])
         out = tr.build(*tr.load(h), now=_dt.datetime(2026, 11, 1, 22, 0, tzinfo=UTC))
-        self.assertEqual(out["counts"], {"signals": 4, "scored": 2, "pending": 0, "no_data": 1, "unreliable": 1})
+        self.assertEqual(out["counts"], {"signals": 5, "scored": 2, "pending": 0, "no_data": 1, "unreliable": 2})
         allbuy = out["summary"]["all"]["buy signals"]
         self.assertEqual(allbuy["3m"]["n"], 2)
         self.assertGreater(allbuy["1w"]["excess"], 0)                          # AAPL rose twice as fast as SPY
         cols = out["columns"]
         rows = {(r[cols.index("ticker")], r[cols.index("kind")]): r for r in out["rows"]}
         self.assertEqual(rows[("NOPE", "ai")][cols.index("note")], "no price data")
-        self.assertEqual(rows[("PEPE", "ai")][cols.index("note")], "unreliable price")
+        self.assertTrue(rows[("PEPE", "ai")][cols.index("note")].startswith("unreliable price"))
+        self.assertIn("#49", rows[("AGIX", "ai")][cols.index("note")])
         aapl = rows[("AAPL", "ai")]
         self.assertEqual(aapl[cols.index("entry_date")], "2026-06-01")
         self.assertEqual(aapl[cols.index("provenance")], "live")
