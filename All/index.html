@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../shared.css" rel="stylesheet"/>
 <script src="../asset-links.js"></script>
+<script src="../sector-data.js"></script>
 <script defer="" src="../shared.js"></script>
 <style>
   .filter-bar {
@@ -434,86 +435,8 @@
 </div>
 </div>
 <script>
-const NOTES = {
-  'SNDK': 'NAND pure-play. AI storage supercycle. Spun off WDC 2025.',
-  'WDC':  'HDD duopoly. Fully committed to hyperscalers through FY end.',
-  '285A': "SNDK's JV partner. Pure NAND play. Japan listed — needs specialist broker. US OTC: KXIAY (T212 ISA alias).",
-  'MU':   'DRAM + NAND + HBM. Sold out of HBM for all of 2026. 11.5x fwd P/E.',
-  'STX':  'HDD duopoly with WDC. AI data centre mass storage.',
-  'MRVL': 'Custom silicon + AI networking. 800G/1.6T optical interconnects.',
-  'P':    'Formerly Pure Storage (PSTG). Rebranded to Everpure, ticker changed to P, Apr 2026.',
-  'RR.':  'UK SMR contract signed Apr 2026. Wylfa, Anglesey — 3 units. Also jets + defence.',
-  'CEG':  'Largest US nuclear operator. 21 reactors. 20yr deals with Meta & Microsoft.',
-  'VST':  'Nuclear + gas + retail. 6.5GW nuclear capacity. 5M retail customers.',
-  'TLN':  '1,920MW to AWS through 2042. Data centre campus on-site.',
-  'BEP':  "51% owner of Westinghouse — services 50% of world's nuclear plants.",
-  'BEPC': 'Corporate share class of BEP. Same Westinghouse exposure.',
-  'GEV':  'BWRX-300 SMR — first in Western hemisphere (Ontario). GE Hitachi JV.',
-  'BWXT': 'Sole US Navy reactor maker. "Foundry for SMRs." $7.3B backlog, +50% YoY.',
-  'SMR':  'Only NRC-certified SMR design. 77MWe modules. TVA 6GW deal. Speculative.',
-  'OKLO': 'Sam Altman-backed. Fast-fission + waste recycling.',
-  'NNE':  'Microreactors: KRONOS, ZEUS, LOKI. Space nuclear mandate catalyst. Pre-revenue.',
-  'CCJ':  "World's largest uranium miner. Also 49% owner of Westinghouse.",
-  'UEC':  'US-focused uranium miner. Lower entry price. Higher volatility.',
-  'LEU':  'Only licensed US supplier of HALEU fuel for advanced reactors. Strategic monopoly.',
-  'VRT':  'Data centre cooling & power management. Every AI data centre needs this.',
-  'ETN':  'Electrical components & transformers. Grid infrastructure backbone.',
-  'POWL': 'Switchgear & electrical infrastructure. Less-known but strong AI tailwind.',
-  'EQIX': 'Largest global colocation provider. 260+ data centres, 70 metros worldwide.',
-  'DLR':  'Major DC REIT. 300+ facilities across 25 countries.',
-  'AMT':  'Tower REIT expanding into edge compute. 220,000+ sites globally.',
-  'GOOGL':'Google Cloud + TPU AI chips. $75B capex planned for 2026 data centres.',
-  'MSFT': 'Azure + OpenAI partnership. $80B data centre capex in 2026.',
-  'AMZN': 'AWS dominates cloud AI infra. Trainium & Inferentia custom AI chips.',
-  'META': '$65B AI capex 2026. Llama open-source models. Building 2GW data centre campus.',
-  'IREN': 'Pivoting from Bitcoin mining to AI GPU compute. Renewable-powered data centres.',
-  'CORZ': 'Crypto→AI pivot. 200MW CoreWeave HPC deal. Emerged from bankruptcy 2023.',
-  'WULF': 'Nuclear-powered Bitcoin/AI compute. 95% zero-carbon. Building HPC capacity.',
-  'HUT':  'Bitcoin mining + AI compute pivot. US HPC expansion. High volatility.',
-  'SMCI': 'AI server manufacturer. Top Nvidia GPU server integrator.',
-  'DELL': 'AI server & storage giant. PowerEdge AI servers. $10B+ AI infrastructure backlog.',
-  'COHR': '800G/1.6T optical transceivers & components. Largest vertically integrated photonics vendor.',
-  'LITE': 'High-power lasers & optical components. 3D sensing + datacoms lasers.',
-  'AAOI': 'Pure-play 400G/800G datacenter transceivers. Small-cap AI data centre concentration.',
-  'FN':   'Contract manufacturer of optical/photonic products. Makes 800G modules for Nvidia, Cisco.',
-  'MTSI': 'RF & microwave ICs. 800G/1.6T PAM4 DSPs enabling high-speed data centre interconnects.',
-  'SMTC': 'ClearEdge DSP for 100G–400G optical links + LoRa IoT.',
-  'CRDO': 'High-speed SerDes & Active Electrical Cables for AI cluster interconnects.',
-  'MXL':  'High-speed broadband & data centre connectivity ICs.',
-  'KEYS': 'Electronic test & measurement leader. Hyperscaler R&D and 800G/1.6T buildout.',
-  'VIAV': 'Fibre optic test, inspection & network instruments.',
-  'AXTI': 'InP & GaAs compound semiconductor substrates. Critical raw material for photonics.',
-};
-
-const CAT_COLORS = {
-  'memory':        'var(--purple)',
-  'nuclear-ops':   'var(--accent2)',
-  'smr':           'var(--green)',
-  'uranium':       'var(--gold)',
-  'power-infra':   'var(--accent)',
-  'dc-operators':  'var(--blue)',
-  'hyperscalers':  'var(--indigo)',
-  'ai-compute':    'var(--rose)',
-  'fibre-optical': 'var(--teal)',
-  'dsp-semi':      'var(--amber)',
-  'test-equip':    'var(--slate)',
-  'materials':     'var(--lime)',
-};
-
-const CAT_LABELS = {
-  'memory':        'Memory',
-  'nuclear-ops':   'Nuclear Ops',
-  'smr':           'SMR Builder',
-  'uranium':       'Uranium',
-  'power-infra':   'Power Infra',
-  'dc-operators':  'DC Operator',
-  'hyperscalers':  'Hyperscaler',
-  'ai-compute':    'AI Compute',
-  'fibre-optical': 'Fibre / Optical',
-  'dsp-semi':      'DSP / Semi',
-  'test-equip':    'Test Equipment',
-  'materials':     'Materials',
-};
+// Notes, category colours and labels come from sector-data.js (generated from site/sectors.yaml)
+const NOTES = SECTOR_DATA.notes, CAT_COLORS = SECTOR_DATA.catColors, CAT_LABELS = SECTOR_DATA.catLabels;
 
 const SECTOR_LABELS = {
   'ai':      'AI Infra',
@@ -583,7 +506,7 @@ function buildTable(stocks) {
         '</div>' +
         '<span class="range-label" style="text-align:right">$' + fmtUsd(s.high_usd) + '</span>' +
       '</div></td>' +
-      '<td><span class="notes-text">' + (NOTES[s.ticker] || '') + '</span></td>';
+      '<td><span class="notes-text">' + ((NOTES[s.sector] || {})[s.ticker] || '') + '</span></td>';
     tbody.appendChild(tr);
   });
 }
