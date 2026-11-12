@@ -43,3 +43,4 @@ exports/*-portfolio.csv
 
 # History database: local SQLite used by tests and branch runs (production is Cloudflare D1)
 history/*.sqlite
+node_modules/
