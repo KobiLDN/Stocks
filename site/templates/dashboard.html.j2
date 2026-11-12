@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--
+=============================================================
+  AI INFRASTRUCTURE STOCK DASHBOARD
+  Last updated: 2026-04-19
+  FX Rate used: £1 = $1.3457
+
+  FOR CLAUDE CODE — HOW TO UPDATE THIS FILE:
+  1. Search the web for current prices for each ticker below
+  2. Update the FX rate (£1 = $X) in the header-sub div and this comment
+  3. For each stock row, update:
+     - data-price-usd="..."   → raw USD price (used for reference)
+     - The visible price in <span class="price">$XXX</span>
+     - The 1yr return in the return span
+     - The range-fill width="X%" and range-dot left="X%" 
+       (position = (current - 52wk_low) / (52wk_high - 52wk_low) * 100)
+     - 52wk low/high labels
+  4. Update "Last updated" date in this comment and in .header-sub
+
+  TICKERS TO FETCH (with Yahoo Finance symbols):
+  MEMORY/STORAGE:
+    SNDK   → SNDK       (NASDAQ)
+    WDC    → WDC        (NASDAQ)
+    285A   → 285A.T     (Tokyo — convert JPY→GBP)
+    MU     → MU         (NASDAQ)
+    STX    → STX        (NASDAQ)
+    MRVL   → MRVL       (NASDAQ)
+    P      → P          (NYSE)  [formerly PSTG / Pure Storage, rebranded to Everpure Apr 2026]
+
+  NUCLEAR OPERATORS:
+    RR.    → RR.L       (LSE — already in GBp, divide by 100 for £)
+    CEG    → CEG        (NASDAQ)
+    VST    → VST        (NYSE)
+    TLN    → TLN        (NYSE)
+    BEP    → BEP        (NYSE)
+
+  SMR BUILDERS:
+    GEV    → GEV        (NYSE)
+    BWXT   → BWXT       (NYSE)
+    SMR    → SMR        (NYSE)
+    OKLO   → OKLO       (NYSE)
+    NNE    → NNE        (NASDAQ)
+
+  URANIUM:
+    CCJ    → CCJ        (NYSE)
+    UEC    → UEC        (NYSE)
+    LEU    → LEU        (NYSE)
+
+  POWER INFRASTRUCTURE:
+    VRT    → VRT        (NYSE)
+    ETN    → ETN        (NYSE)
+    POWL   → POWL       (NASDAQ)
+
+  FIBRE / OPTICAL:
+    COHR   → COHR       (NYSE)
+    LITE   → LITE       (NASDAQ)
+    AAOI   → AAOI       (NASDAQ)
+    FN     → FN         (NYSE)
+
+  DSP / SEMICONDUCTOR:
+    MTSI   → MTSI       (NASDAQ)
+    SMTC   → SMTC       (NASDAQ)
+    CRDO   → CRDO       (NASDAQ)
+    MXL    → MXL        (NASDAQ)
+
+  TEST EQUIPMENT:
+    KEYS   → KEYS       (NYSE)
+    VIAV   → VIAV       (NASDAQ)
+
+  MATERIALS:
+    AXTI   → AXTI       (NASDAQ)
+=============================================================
+-->
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="{{ s.meta_description|safe }}">
+<title>{{ s.title|safe }}</title>
+<script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../shared.css" rel="stylesheet"/>
+<script src="../asset-links.js"></script>
+<script defer="" src="../shared.js"></script>
+<style>{{ css|safe }}</style>
+</head>
+<body data-layout="rail">
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<!-- Panel 1: Sector switcher (full height) -->
+<div class="left-rail">
+</div>
+<!-- Panel 2: Nav panel with accordion category filter -->
+<div class="nav-panel"></div>
+<!-- Panel 3: Right side (header + content) -->
+<div class="right-side">
+<header>
+<div class="header-inner">
+<button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+<div class="header-left">
+    <div class="header-label">// Market Intelligence</div>
+    <h1><span>{{ s.h1|safe }}</span></h1>
+    <div class="header-sub"><span id="sector-count">{{ s.count }}</span> {{ s.unit }} · Last updated <span id="data-bar-ts">—</span></div>
+</div>
+<button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+</div>
+<div class="filter-bar">
+<button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
+{% for c in s.chips %}<button class="chip" data-filter="{{ c.id }}" onclick="filterChip('{{ c.id }}',this)">{{ c.label|safe }}</button>
+{% endfor %}</div>
+<div class="search-count-bar">
+<input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
+<span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
+</div>
+</header>
+<div class="page-body">
+<div class="page-main">
+<div class="container">
+<div class="table-wrap">
+<table id="stock-table">
+<thead>
+<tr>
+<th class="sortable" onclick="sortTable('ticker', this)">Ticker</th>
+<th class="sortable" onclick="sortTable('company', this)">Company</th>
+<th class="sortable" onclick="sortTable('cat', this)">Category</th>
+<th class="sortable" onclick="sortTable('price', this)">Price ($)</th>
+<th class="sortable" onclick="sortTable('return', this)">1yr Return</th><th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
+<th class="sortable" onclick="sortTable('range', this)">52-Week Range</th>
+<th class="sortable" onclick="sortTable('angle', this)">Key Angle</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+<script src="prices-data.js"></script>
+<script>
+/* ── Stock data dictionaries ── */
+const NOTES = {
+{% for c in s.notes %}  '{{ c.id }}': {{ c.text|tojson }},
+{% endfor %}};
+
+const CAT_COLORS = {
+{% for c in s.cat_colors %}  '{{ c.id }}': {{ c.value|tojson }},
+{% endfor %}};
+
+const CAT_LABELS = {
+{% for c in s.cat_labels %}  '{{ c.id }}': {{ c.label|tojson }},
+{% endfor %}};
+
+
+function returnClass(retStr) {
+  const n = parseFloat(String(retStr).replace(/[^0-9.-]/g, ''));
+  if (isNaN(n)) return 'return-modest';
+  if (n >= 200) return 'return-mega';
+  if (n >= 50)  return 'return-positive';
+  return 'return-modest';
+}
+
+function pillClass(v) {
+  const n = parseFloat(v); return n > 0 ? 'pos' : n < 0 ? 'neg' : 'flat';
+}
+
+function ytdClass(v) {
+  const n = parseFloat(v); return n > 0 ? 'ytd-pos' : n < 0 ? 'ytd-neg' : 'ytd-flat';
+}
+
+function buildTable(stocks) {
+  const tbody = document.querySelector('#stock-table tbody');
+  tbody.innerHTML = '';
+  stocks.forEach(s => {
+    const color    = CAT_COLORS[s.category] || 'var(--text)';
+    const catLabel = CAT_LABELS[s.category] || s.category;
+    const retCls   = returnClass(s.return_1yr);
+    const exDisp   = s.exchange === 'TSE' ? 'TSE (Tokyo)' : s.exchange;
+    const tr = document.createElement('tr');
+    tr.dataset.ticker    = s.ticker;
+    tr.dataset.cat       = s.category;
+    tr.dataset.exchange  = s.exchange;
+    tr.dataset.priceGbp  = s.price_gbp;
+    tr.dataset.priceUsd  = s.price_usd;
+    tr.dataset.return    = s.return_1yr;
+    tr.dataset.changeYtd = s.change_ytd;
+    tr.dataset.barPct    = s.bar_pct;
+    tr.innerHTML =
+      '<td><a class="ticker-link" href="' + assetUrl(s.ticker) + '" target="_blank">' +
+        '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
+        '<div class="exchange-badge">' + exDisp + '</div></td>' +
+      '<td>' + (s.company_name || s.ticker) + '</td>' +
+      '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
+      '<td><span class="price">$' + fmtUsd(s.price_usd) + '</span>' +
+        '<div class="change-pills">' +
+          '<span class="cpill ' + pillClass(s.change_1d) + '">' + s.change_1d + ' 1D</span>' +
+          '<span class="cpill ' + pillClass(s.change_1w) + '">' + s.change_1w + ' 1W</span>' +
+          '<span class="cpill ' + pillClass(s.change_1m) + '">' + s.change_1m + ' 1M</span>' +
+        '</div></td>' +
+      '<td><span class="' + retCls + '">' + s.return_1yr + '</span></td>' +
+      '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + s.change_ytd + '</span></td>' +
+      '<td><div class="range-wrap">' +
+        '<span class="range-label">$' + fmtUsd(s.low_usd) + '</span>' +
+        '<div class="range-bar-bg">' +
+          '<div class="range-fill" style="width:' + s.bar_pct + '%"></div>' +
+          '<div class="range-dot" style="left:' + s.bar_pct + '%"></div>' +
+        '</div>' +
+        '<span class="range-label" style="text-align:right">$' + fmtUsd(s.high_usd) + '</span>' +
+      '</div></td>' +
+      '<td><span class="notes-text">' + (NOTES[s.ticker] || '') + '</span></td>';
+    tbody.appendChild(tr);
+  });
+  // Update header + count from prices-data.js
+  const tot = document.getElementById('total-count');
+  if (tot) tot.textContent = stocks.length;
+  const sc = document.getElementById('stock-count');
+  if (sc) sc.textContent = stocks.length;
+  if (window.PRICES_DATA) {
+    const lu = document.getElementById('last-updated');
+    if (lu) lu.textContent = window.PRICES_DATA.updated || '—';
+  }
+}
+
+/* ── Sort + filter (unchanged) ── */
+let sortState = { col: null, dir: 1 };
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
+    buildTable(window.PRICES_DATA.stocks);
+  }
+  const returnTh = document.querySelector('th[onclick*="\'return\'"]');
+  sortState.col = 'return';
+  sortTable('return', returnTh);
+  applyFilters();
+});
+
+function sortTable(col, th) {
+  const tbody = document.querySelector('#stock-table tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  if (sortState.col === col) { sortState.dir *= -1; } else { sortState.col = col; sortState.dir = 1; }
+  document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+  th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+  rows.sort((a, b) => {
+    let av, bv;
+    if (col === 'ticker')  { av = a.dataset.ticker;  bv = b.dataset.ticker; }
+    if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
+    if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
+    if (col === 'price')   { av = parseFloat(a.dataset.priceUsd); bv = parseFloat(b.dataset.priceUsd); return (av - bv) * sortState.dir; }
+    if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
+    if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
+    if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
+    if (col === 'angle')   { av = a.querySelector('td:nth-child(8)').textContent.trim(); bv = b.querySelector('td:nth-child(8)').textContent.trim(); }
+    return av.localeCompare(bv) * sortState.dir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+
+let currentCat = 'all';
+
+function applyFilters() {
+  const query = document.getElementById('stock-search').value.toLowerCase().trim();
+  const rows  = document.querySelectorAll('#stock-table tbody tr');
+  let visible = 0;
+  rows.forEach(row => {
+    const matchCat    = currentCat === 'all' || row.dataset.cat === currentCat;
+    const matchSearch = !query
+      || row.dataset.ticker.toLowerCase().includes(query)
+      || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
+    if (matchCat && matchSearch) { row.classList.remove('hidden'); visible++; }
+    else { row.classList.add('hidden'); }
+  });
+  document.getElementById('visible-count').textContent = visible;
+}
+
+function filterTable(cat, btn) {
+  if (btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  currentCat = cat;
+  applyFilters();
+}
+
+function filterNav(cat, el) {
+  document.querySelectorAll('.sub-link').forEach(l => l.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.filter === cat));
+  currentCat = cat;
+  applyFilters();
+}
+
+function filterChip(cat, el) {
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('#ni-dashboard .sub-link, #ni-dashboard-d .sub-link').forEach(l => {
+    const m = l.getAttribute('onclick') && l.getAttribute('onclick').match(/'([^',]+)'/);
+    l.classList.toggle('active', !!(m && m[1] === cat));
+  });
+  currentCat = cat;
+  applyFilters();
+}
+
+function toggleNav(id) {
+  const item = document.getElementById('ni-' + id);
+  if (!item) return;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+
+function searchTable() { applyFilters(); }
+</script>
+</div><!-- /.container -->
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
+</div><!-- /.right-side -->
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
+<div class="left-rail">
+</div>
+<div class="nav-panel"></div>
+</div>
+</div>
+  <script src="../nav.js"></script>
+</body>
+</html>
