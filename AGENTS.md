@@ -153,10 +153,11 @@ When adding a new sector, complete every item in this checklist — in order:
 
 ## Page templates (generated pages)
 
-Rebuild step 5 (#73) moves repeated pages onto templates, one page type at a time. **Generated so far: the 7 sector Signals pages** (`AI|Biotech|Crypto|Defence|Energy|MegaCap|Tech/signals.html`).
+Rebuild step 5 (#73) moves repeated pages onto templates, one page type at a time. **Generated so far: the 7 sector Signals pages and the 7 sector Metrics pages** (`AI|Biotech|Crypto|Defence|Energy|MegaCap|Tech/signals.html` and `…/metrics.html`; templates `site/templates/signals.html.j2` and `metrics.html.j2`). Per-sector Metrics values (column tooltips as base + overrides, category labels/tooltips, search wording, the page's own `names` list) live under `metrics:` in `site/sectors.yaml`.
 
 - **Don't edit a generated page by hand** — it starts with a `GENERATED` comment. Edit `site/templates/signals.html.j2` (shared layout, styles, script) or `site/sectors.yaml` (per-sector title, description, category colours and labels, "how it works" text, disclaimer), then run `pip install jinja2 pyyaml && python site/build.py` and commit the result. CI runs `python site/build.py --check` and fails if a generated page is stale.
-- Ticker names in the pages' fallback list come from `universe.yaml`.
+- Signals pages' fallback ticker names come from `universe.yaml`. **Metrics pages keep their own hand-kept `names` list** (it wins over the data's company names on screen, so changing it changes visible names); moving them to `universe.yaml` is a separate, visible change.
+- Ticker links use the shared `assetUrl()` from `asset-links.js`.
 - Generated files are committed, so Cloudflare still serves plain static files and PR previews work as before (no Cloudflare build setting involved).
 - **Adding a sector:** add its block under `signals:` in `site/sectors.yaml`, run the build.
 - Check a conversion by loading the old and new page in a browser and comparing every element's text, styles and size (the 11 Nov Signals conversion matched exactly apart from deliberate fixes).

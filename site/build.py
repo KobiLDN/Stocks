@@ -44,6 +44,14 @@ def render_all():
         names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = tpl.render(s=s, sector=sector, names_json=names)
         out[f"{sector}/signals.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="signals.html.j2"), 1)
+    mtpl = env.get_template("metrics.html.j2")
+    base_tips = sectors["metrics_base_tips"]
+    for sector, s in sectors["metrics"].items():
+        tip = lambda key, s=s: {**base_tips[key], **s["tip_overrides"].get(key, {})}
+        # Metrics shows these hand-kept names (they win over the data's company names), so keep them exactly
+        names = json.dumps(s["names"], ensure_ascii=False, indent=4).replace("\n", "\n  ")
+        html = mtpl.render(s=s, sector=sector, tip=tip, names_json=names)
+        out[f"{sector}/metrics.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="metrics.html.j2"), 1)
     return out
 
 
