@@ -30,6 +30,7 @@ const MUST_RENDER = [
   [/^All\/signals\.html$/, '#signals-root', 'the signal picks'],
   [/\/signals\.html$/, '#signals-feed', 'the signal picks'],
   [/^track-record\.html$/, '.verdict-card', 'the verdict cards'],
+  [/^glossary\.html$/, '#glossary', 'the glossary entries'],
 ];
 
 function pages(dir = ROOT, out = []) {
