@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ s.meta_description|safe }}">
+<title>{{ s.page_title|safe }} — Charts</title>
+<script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<script src="../shared.js" defer></script>
+<style>
+{{ s.sector_css|safe }}
+
+
+  /* ─── 3-Panel Layout ─── */
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  .nav-panel {
+    width: 148px; flex-shrink: 0; border-right: 1px solid var(--border);
+    background: var(--bg); display: flex; flex-direction: column;
+    padding: 8px 0; overflow-y: auto; scrollbar-width: none;
+  }
+  .nav-panel::-webkit-scrollbar { display: none; }
+  .nav-item { display: flex; flex-direction: column; }
+  .nav-panel .nav-link {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; padding: 10px 14px; color: var(--dim);
+    border: none; border-left: 2px solid transparent; text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: all 0.15s;
+    cursor: pointer; background: none; width: 100%; text-align: left;
+  }
+  .nav-panel .nav-link.active { color: var(--accent); border-left-color: var(--accent); background: var(--surface2); }
+  .nav-panel .nav-link:hover  { color: var(--accent); background: var(--surface2); }
+  .nav-icon  { font-size: 14px; flex-shrink: 0; }
+  .nav-label { flex: 1; white-space: nowrap; }
+
+  .drawer-overlay {
+    display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4);
+  }
+  .drawer-overlay.open { display: block; }
+  .drawer {
+    position: absolute; top: 0; left: 0; bottom: 0;
+    width: 164px; background: var(--bg); border-right: 1px solid var(--accent);
+    display: flex; overflow: hidden;
+  }
+  .drawer .left-rail { border-right: 1px solid var(--border); overflow-y: auto; flex-shrink: 0; }
+  .drawer .nav-panel  { flex: 1; overflow-y: auto; }
+  @media (max-width: 900px) {
+    .nav-panel { width: 52px; }
+    .nav-label { display: none !important; }
+    .nav-panel .nav-link { padding: 12px 0; justify-content: center; border-left: none; }
+    .nav-icon { font-size: 18px; }
+  }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .nav-panel { display: none !important; }
+
+    .header-inner { padding: 10px 14px !important; gap: 12px; }
+    .header-left { padding: 8px 14px; }
+    h1 { font-size: 20px; }
+    .header-label { font-size: 9px; }
+    .header-sub { font-size: 9px; }
+    .container { padding: 12px 14px; }
+  }
+</style>
+</head>
+<body data-layout="rail">
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+
+<!-- Panel 1: Sector switcher -->
+<div class="left-rail">
+</div>
+
+<!-- Panel 2: Nav panel -->
+<div class="nav-panel"></div>
+
+<!-- Panel 3: Right side -->
+<div class="right-side">
+<header>
+  <div class="header-inner">
+  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+  <div class="header-left">
+    <div class="header-label">// Market Intelligence</div>
+    <h1>{{ s.h1|safe }} <span>Charts</span></h1>
+    <div class="header-sub">{{ s.count }} {{ s.unit }} · Last updated <span id="data-bar-ts">—</span></div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+  <div class="chart-controls">
+    <div class="toolbar-inner">
+      <!-- Category row (grid mode only) -->
+      <div class="toolbar-row" id="cat-row" style="display:none">
+        <span class="toolbar-label">Category</span>
+        <div id="cat-toolbar-btns" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+      </div>
+      <!-- Controls row -->
+      <div class="toolbar-row">
+        <div class="toolbar-group">
+          <span class="toolbar-label">View</span>
+          <button class="tool-btn active" id="btn-single" onclick="setView('single')">Single</button>
+          <button class="tool-btn" id="btn-grid" onclick="setView('grid')">Category Grid</button>
+        </div>
+        <div class="divider"></div>
+        <div class="toolbar-group">
+          <span class="toolbar-label">Period</span>
+          <button class="tool-btn{% if s.default_tf == '1W' %} active{% endif %}" onclick="setTimeframe('1W', this)">1W</button>
+          <button class="tool-btn" onclick="setTimeframe('1M', this)">1M</button>
+          <button class="tool-btn{% if s.default_tf == '12M' %} active{% endif %}" id="tf-active" onclick="setTimeframe('12M', this)">1Y</button>
+          <button class="tool-btn" onclick="setTimeframe('60M', this)">5Y</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="page-body">
+<div class="page-main">
+<div class="container" style="padding-left:0;padding-right:0;max-width:100%;">
+
+<!-- SINGLE VIEW -->
+<div id="single-view">
+  <button class="sidebar-toggle" id="sidebar-toggle" onclick="toggleSidebar()">☰ Select Stock ▾</button>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-title">Select Stock</div>
+    <div id="sidebar-stocks"></div>
+  </aside>
+
+  <main class="chart-area">
+    <div class="chart-header">
+      <div style="display:flex;align-items:baseline;">
+        <span class="chart-ticker" id="chart-ticker">{{ s.chart_ticker|safe }}</span>
+        <span class="chart-name" id="chart-name">{{ s.chart_name|safe }}</span>
+      </div>
+    </div>
+    <div class="chart-widget" id="single-widget"></div>
+    <div class="chart-note">Charts powered by TradingView · requires internet connection{{ s.note_suffix }}</div>
+  </main>
+</div>
+
+<!-- GRID VIEW -->
+<div id="grid-view">
+  <div class="grid-heading" id="grid-heading">Select a category above</div>
+  <div class="chart-grid" id="chart-grid"></div>
+  <div class="chart-note" style="margin-top:16px;">Charts powered by TradingView · requires internet connection{{ s.note_suffix }}</div>
+</div>
+
+<script src="https://s3.tradingview.com/tv.js"></script>
+<script src="prices-data.js"></script>
+<script>
+  /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
+  const TV_MAP = {{ '{' }}{{ s.tv_map_js|safe }}
+  };
+
+  /* Category display config for charts */
+  const CHART_CATS = {{ '{' }}{{ s.chart_cats_js|safe }}
+  };
+
+  function buildSidebar(stocks) {
+    if (!stocks || !stocks.length) return;
+
+    /* Build _chartCats from prices-data */
+    window._chartCats = {};
+    const catOrder = Object.keys(CHART_CATS);
+    catOrder.forEach(catKey => {
+      const cfg = CHART_CATS[catKey];
+      const catStocks = stocks.filter(s => s.category === catKey);
+      if (!catStocks.length) return;
+      window._chartCats[catKey] = {
+        label:  cfg.label,
+        color:  cfg.color,
+        stocks: catStocks.map(s => {
+          const exchange = s.exchange === 'TSE' ? 'TSE' : s.exchange;
+          const tvSym = TV_MAP[s.ticker] || (exchange + ':' + s.ticker);
+          return { tv: tvSym, ticker: s.ticker, name: s.company_name || s.ticker };
+        }),
+      };
+    });
+
+    /* Populate sidebar */
+    const container = document.getElementById('sidebar-stocks');
+    container.innerHTML = '';
+    catOrder.forEach(catKey => {
+      const cat = window._chartCats[catKey];
+      if (!cat) return;
+      const cfg = CHART_CATS[catKey];
+      const clsSuffix = CLS_SUFFIX[catKey] || catKey;
+      const label = document.createElement('span');
+      label.className = 'cat-label ' + clsSuffix;
+      label.textContent = cfg.label;
+      container.appendChild(label);
+      cat.stocks.forEach(st => {
+        const btn = document.createElement('button');
+        btn.className = 'stock-btn';
+        btn.dataset.tv   = st.tv;
+        btn.dataset.name = st.name;
+        btn.onclick = function() { loadSingle(this); };
+        btn.innerHTML = '<span class="btn-ticker" style="color:' + cfg.color + '">' + st.ticker + '</span><span class="btn-name">' + st.name + '</span>';
+        container.appendChild(btn);
+      });
+    });
+
+    /* Populate category toolbar */
+    const toolbar = document.getElementById('cat-toolbar-btns');
+    toolbar.innerHTML = '';
+    catOrder.forEach(catKey => {
+      if (!window._chartCats[catKey]) return;
+      const cfg = CHART_CATS[catKey];
+      const btn = document.createElement('button');
+      btn.className = 'cat-btn';
+      btn.textContent = cfg.btnLabel;
+      if (cfg.tooltip) btn.setAttribute('data-tooltip', cfg.tooltip);
+      btn.onclick = function() { setCategory(catKey, this); };
+      toolbar.appendChild(btn);
+    });
+  }
+
+  const tfMap = {
+    '1W':  { interval: '60', range: '5D' },
+    '1M':  { interval: 'D',  range: '1M' },
+    '12M': { interval: 'W',  range: '12M' },
+    '60M': { interval: 'M',  range: '60M' },
+  };
+
+  let currentView      = 'grid';
+  let currentSymbol    = '{{ s.symbol }}';
+  let currentName      = '{{ s.symbol_name|safe }}';
+  let currentTimeframe = '{{ s.default_tf }}';
+  let currentCategory  = null;
+
+  /* ---- TIMEFRAME ---- */
+  function setTimeframe(tf, btn) {
+    document.querySelectorAll('.toolbar-group .tool-btn').forEach(b => {
+      if (['1W','1M','1Y','5Y'].includes(b.textContent)) b.classList.remove('active');
+    });
+    btn.classList.add('active');
+    currentTimeframe = tf;
+    if (currentView === 'single') buildSingle();
+    else if (currentCategory)    buildGrid(currentCategory);
+  }
+
+  /* ---- VIEW TOGGLE ---- */
+  function setView(view) {
+    currentView = view;
+    document.getElementById('btn-single').classList.toggle('active', view === 'single');
+    document.getElementById('btn-grid').classList.toggle('active', view === 'grid');
+    document.getElementById('single-view').style.display = view === 'single' ? 'grid' : 'none';
+    document.getElementById('grid-view').style.display   = view === 'grid'   ? 'block' : 'none';
+    document.getElementById('cat-row').style.display     = view === 'grid'   ? 'flex' : 'none';
+  }
+
+  /* ---- SINGLE CHART ---- */
+  const NO_EMBED = {{ '{' }}{{ s.no_embed_js|safe }}
+  };
+  const CLS_SUFFIX = {{ s.cls_suffix|tojson }};
+
+  function fallbackHtml(tv) {
+    return `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;font-family:'IBM Plex Mono',monospace;">
+      <div style="font-size:13px;color:var(--muted);">Embedded chart not available for this symbol</div>
+      <a href="${NO_EMBED[tv]}" target="_blank" style="font-size:12px;color:var(--accent);border:1px solid var(--accent);padding:8px 20px;text-decoration:none;letter-spacing:1px;">View on TradingView ↗</a>
+    </div>`;
+  }
+
+  function buildSingle() {
+    const widget = document.getElementById('single-widget');
+    if (NO_EMBED[currentSymbol]) { widget.innerHTML = fallbackHtml(currentSymbol); return; }
+    widget.innerHTML = '';
+    const tf = tfMap[currentTimeframe];
+    new TradingView.widget({
+      container_id: 'single-widget',
+      symbol: currentSymbol,
+      interval: tf.interval,
+      range: tf.range,
+      timezone: 'Europe/London',
+      theme: 'dark',
+      style: '1',
+      locale: 'en',
+      enable_publishing: false,
+      hide_side_toolbar: false,
+      allow_symbol_change: false,
+      save_image: false,
+      height: 580,
+      width: '100%',
+      backgroundColor: '#000000',
+      gridColor: 'rgba(0,212,255,0.04)',
+    });
+  }
+
+  function loadSingle(btn) {
+    document.querySelectorAll('.stock-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentSymbol = btn.dataset.tv;
+    currentName   = btn.dataset.name;
+    document.getElementById('chart-ticker').textContent = btn.querySelector('.btn-ticker').textContent;
+    document.getElementById('chart-name').textContent   = btn.dataset.name;
+    buildSingle();
+    // Auto-close sidebar on mobile after selection
+    const sidebar = document.getElementById('sidebar');
+    const toggle  = document.getElementById('sidebar-toggle');
+    if (sidebar && window.innerWidth <= 768) {
+      sidebar.classList.remove('open');
+      toggle.textContent = '☰ Select Stock ▾';
+    }
+  }
+
+  /* ---- CATEGORY GRID ---- */
+  function setCategory(cat, btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => {
+      b.className = b.className.replace(/active-\S+/g, '').trim();
+    });
+    btn.classList.add('active-' + cat);
+    currentCategory = cat;
+    buildGrid(cat);
+  }
+
+  function buildGrid(cat) {
+    const data = window._chartCats[cat];
+    const tf   = tfMap[currentTimeframe];
+    const grid = document.getElementById('chart-grid');
+    const heading = document.getElementById('grid-heading');
+
+    heading.innerHTML = `<span>${data.label}</span> — ${data.stocks.length} stocks`;
+    grid.innerHTML = '';
+
+    data.stocks.forEach((stock, i) => {
+      const containerId = `grid-chart-${i}`;
+      const card = document.createElement('div');
+      card.className = 'grid-card';
+      card.innerHTML = `
+        <div class="grid-card-header">
+          <span class="grid-ticker" style="color:${data.color}">${stock.ticker}</span>
+          <span class="grid-name">${stock.name}</span>
+        </div>
+        <div id="${containerId}" style="height:320px;"></div>
+      `;
+      grid.appendChild(card);
+
+      if (NO_EMBED[stock.tv]) {
+        document.getElementById(containerId).innerHTML = fallbackHtml(stock.tv);
+        return;
+      }
+
+      // Stagger widget creation to avoid overwhelming the browser
+      setTimeout(() => {
+        new TradingView.widget({
+          container_id: containerId,
+          symbol: stock.tv,
+          interval: tf.interval,
+          range: tf.range,
+          timezone: 'Europe/London',
+          theme: 'dark',
+          style: '1',
+          locale: 'en',
+          enable_publishing: false,
+          hide_top_bar: false,
+          hide_side_toolbar: true,
+          allow_symbol_change: false,
+          save_image: false,
+          height: 320,
+          width: '100%',
+          backgroundColor: '#000000',
+          gridColor: 'rgba(0,212,255,0.04)',
+        });
+      }, i * 150);
+    });
+  }
+
+  /* ---- MOBILE SIDEBAR TOGGLE ---- */
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const btn = document.getElementById('sidebar-toggle');
+    sidebar.classList.toggle('open');
+    btn.textContent = sidebar.classList.contains('open') ? '✕ Close ▴' : '☰ Select Stock ▾';
+  }
+
+  /* ---- INIT ---- */
+  window.addEventListener('load', () => {
+    if (window.PRICES_DATA && window.PRICES_DATA.stocks) {
+      buildSidebar(window.PRICES_DATA.stocks);
+    }
+    setView('grid');
+    const firstCatBtn = document.querySelector('.cat-btn');
+    if (firstCatBtn) {
+      const firstCatKey = Object.keys(window._chartCats || {})[0] || 'memory';
+      setCategory(firstCatKey, firstCatBtn);
+    }
+  });
+
+  function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+</script>
+</div><!-- /.container -->
+</div><!-- /.page-main -->
+</div><!-- /.page-body -->
+</div><!-- /.right-side -->
+
+<!-- Drawer overlay (mobile) -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+<div class="drawer">
+<div class="left-rail">
+</div>
+<div class="nav-panel"></div>
+</div>
+</div>
+
+  <script src="../nav.js"></script>
+</body>
+</html>
