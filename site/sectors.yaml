@@ -1,0 +1,491 @@
+signals:
+  AI:
+    page_title: AI Infrastructure
+    meta_description: AI-generated weekly top 10 buy signals for AI infrastructure stocks, ranked by momentum, fundamentals, and news sentiment.
+    h1: AI
+    categories:
+    - id: memory
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: nuclear-ops
+      rgb: 255,107,53
+      bg: '0.1'
+      color: var(--accent2)
+      border: '0.25'
+    - id: smr
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: uranium
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.25'
+    - id: power-infra
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: dc-operators
+      rgb: 68,136,255
+      bg: '0.1'
+      color: var(--blue)
+      border: '0.25'
+    - id: hyperscalers
+      rgb: 167,139,250
+      bg: '0.1'
+      color: var(--indigo)
+      border: '0.25'
+    - id: ai-compute
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: fibre-optical
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: dsp-semi
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: test-equip
+      rgb: 148,163,184
+      bg: '0.1'
+      color: var(--slate)
+      border: '0.25'
+    - id: materials
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    cat_labels:
+    - id: memory
+      label: Memory
+    - id: nuclear-ops
+      label: Nuclear
+    - id: smr
+      label: SMR
+    - id: uranium
+      label: Uranium
+    - id: power-infra
+      label: Power
+    - id: dc-operators
+      label: Data Centres
+    - id: hyperscalers
+      label: Hyperscalers
+    - id: ai-compute
+      label: AI Compute
+    - id: fibre-optical
+      label: Fibre/Optical
+    - id: dsp-semi
+      label: DSP/Semi
+    - id: test-equip
+      label: Test Equip
+    - id: materials
+      label: Materials
+    how_titles:
+    - Live price &amp; news data
+    - Web search for live catalysts
+    - AI ranking via DeepSeek
+    - Mon/Wed/Fri refresh via GitHub Actions
+    how:
+    - GitHub Actions runs <code>AI_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 48 stocks via Yahoo Finance.
+    - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing deal announcements, analyst upgrades, earnings surprises and price target changes that happened since the last data pull.
+    - <code>AI_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
+    - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python AI_generate_signals_local.py</code> locally to generate fresh signals on demand.
+    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
+    refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python AI_generate_signals_local.py</code> locally
+  Biotech:
+    page_title: Biotech
+    meta_description: AI-generated weekly top 10 buy signals for biotech stocks, ranked by momentum, fundamentals, and news sentiment.
+    h1: Biotech
+    categories:
+    - id: large-cap
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: uk-listed
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.25'
+    - id: gene-editing
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: genomics
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: oncology
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: mrna
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: rare-disease
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: metabolic
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    - id: neuroscience
+      rgb: 167,139,250
+      bg: '0.1'
+      color: var(--indigo)
+      border: '0.25'
+    cat_labels:
+    - id: large-cap
+      label: Large Cap
+    - id: uk-listed
+      label: UK Listed
+    - id: gene-editing
+      label: Gene Editing
+    - id: genomics
+      label: Genomics
+    - id: oncology
+      label: Oncology
+    - id: mrna
+      label: mRNA
+    - id: rare-disease
+      label: Rare Disease
+    - id: metabolic
+      label: Metabolic
+    - id: neuroscience
+      label: Neuroscience
+    how_titles:
+    - Live price &amp; news data
+    - Web search for live catalysts
+    - AI ranking via DeepSeek
+    - Mon/Wed/Fri refresh via GitHub Actions
+    how:
+    - GitHub Actions runs <code>Biotech_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all tracked biotech stocks via Yahoo Finance.
+    - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing FDA decisions, clinical trial results, analyst upgrades, deal announcements and PDUFA dates that happened since the last data pull.
+    - <code>Biotech_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus, biotech-specific catalysts and live news, then returns a ranked top 10 in JSON.
+    - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Biotech_generate_signals_local.py</code> locally to generate fresh signals on demand.
+    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Biotech stocks carry binary event risk — FDA decisions and trial results can move prices dramatically in either direction. Signals are one input among many — always do your own research before making any investment decision.
+    refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Biotech_generate_signals_local.py</code> locally
+  Crypto:
+    page_title: Crypto
+    meta_description: AI-generated top 10 buy signals for crypto coins, ranked by momentum, fundamentals, and news sentiment across Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins.
+    h1: Crypto
+    categories:
+    - id: bitcoin
+      rgb: 251,146,60
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: layer1
+      rgb: 2,132,199
+      bg: '0.12'
+      color: var(--accent)
+      border: '0.3'
+    - id: payments
+      rgb: 79,70,229
+      bg: '0.15'
+      color: var(--indigo)
+      border: '0.35'
+    - id: emerging
+      rgb: 13,148,136
+      bg: '0.12'
+      color: var(--teal)
+      border: '0.3'
+    - id: meme
+      rgb: 180,83,9
+      bg: '0.12'
+      color: var(--gold)
+      border: '0.3'
+    - id: ai
+      rgb: 139,92,246
+      bg: '0.12'
+      color: '#a78bfa'
+      border: '0.3'
+    - id: infra
+      rgb: 22,163,74
+      bg: '0.12'
+      color: var(--green)
+      border: '0.3'
+    cat_labels:
+    - id: bitcoin
+      label: Bitcoin
+    - id: layer1
+      label: Layer 1
+    - id: payments
+      label: Payments
+    - id: emerging
+      label: Emerging
+    - id: infra
+      label: Infra
+    - id: meme
+      label: Meme
+    - id: ai
+      label: AI Tokens
+    how_titles:
+    - Live price &amp; news data
+    - Web search for live catalysts
+    - AI ranking via DeepSeek
+    - Mon/Wed/Fri refresh via GitHub Actions
+    how:
+    - GitHub Actions runs <code>Crypto_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 19 coins via Yahoo Finance.
+    - Before ranking, the model is directed to search online for the latest news on the top highest-momentum assets — surfacing Bitcoin price moves, Layer 1 ecosystem news, Payments network updates, Emerging L1 developments, regulatory news, and exchange volume shifts.
+    - <code>Crypto_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each coin across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
+    - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Crypto_generate_signals_local.py</code> locally to generate fresh signals on demand.
+    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
+    refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Crypto_generate_signals_local.py</code> locally
+  Defence:
+    page_title: Defence &amp; Aerospace
+    meta_description: AI-generated weekly top 10 buy signals for Defence &amp; Aerospace stocks, ranked by momentum, fundamentals, and news sentiment.
+    h1: Defence
+    categories:
+    - id: us-primes
+      rgb: 245,158,11
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: uk-european
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.3'
+    - id: cyber-intel
+      rgb: 192,132,252
+      bg: '0.15'
+      color: var(--purple)
+      border: '0.3'
+    - id: drones
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.3'
+    - id: space
+      rgb: 68,136,255
+      bg: '0.1'
+      color: var(--blue)
+      border: '0.3'
+    - id: weapons
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.3'
+    cat_labels:
+    - id: us-primes
+      label: US Prime
+    - id: uk-european
+      label: UK/European
+    - id: cyber-intel
+      label: Cyber/Intel
+    - id: drones
+      label: Drones
+    - id: space
+      label: Space
+    - id: weapons
+      label: Weapons
+    how_titles:
+    - Live price &amp; news data
+    - Web search for live catalysts
+    - AI ranking via DeepSeek
+    - Mon/Wed/Fri refresh via GitHub Actions
+    how:
+    - GitHub Actions runs <code>Defence_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 29 stocks via Yahoo Finance.
+    - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing contract wins, government budget announcements, geopolitical escalation events, export licence approvals and earnings beats on defence revenues.
+    - <code>Defence_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
+    - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Defence_generate_signals_local.py</code> locally to generate fresh signals on demand.
+    disclaimer: Defence stocks can be sensitive to geopolitical events, government budget cycles and export licence decisions — always do your own research before making any investment decision. The model can be wrong, biased toward recent momentum, or inconsistent run-to-run.
+    refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Defence_generate_signals_local.py</code> locally
+  Energy:
+    page_title: Energy
+    meta_description: AI-generated weekly top 10 buy signals for Energy stocks, ranked by momentum, fundamentals, and news sentiment.
+    h1: Energy
+    categories:
+    - id: oil-majors
+      rgb: 245,158,11
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: ep-refining
+      rgb: 255,107,53
+      bg: '0.15'
+      color: var(--accent2)
+      border: '0.35'
+    - id: oilfield-services
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: utilities
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: clean-energy
+      rgb: 163,230,53
+      bg: '0.12'
+      color: var(--lime)
+      border: '0.3'
+    cat_labels:
+    - id: oil-majors
+      label: Oil Majors
+    - id: ep-refining
+      label: E&P / Refining
+    - id: oilfield-services
+      label: Oilfield Svcs
+    - id: utilities
+      label: Utilities
+    - id: clean-energy
+      label: Clean Energy
+    how_titles:
+    - Live price &amp; news data
+    - Web search for live catalysts
+    - AI ranking via DeepSeek
+    - Mon/Wed/Fri refresh via GitHub Actions
+    how:
+    - GitHub Actions runs <code>Energy_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 20 energy stocks via Yahoo Finance.
+    - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing oil price moves, OPEC+ decisions, LNG contract wins, refining margin data, renewable energy capacity additions and earnings beats.
+    - <code>Energy_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
+    - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Energy_generate_signals_local.py</code> locally to generate fresh signals on demand.
+    disclaimer: Energy stocks are highly sensitive to crude oil and natural gas prices, OPEC+ decisions, refining margins, and the energy transition — always do your own research before making any investment decision. The model can be wrong, biased toward recent momentum, or inconsistent run-to-run.
+    refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Energy_generate_signals_local.py</code> locally
+  MegaCap:
+    page_title: Mega-Cap
+    meta_description: AI-generated weekly top 10 buy signals for Global Mega-Cap Leaders, ranked by momentum, fundamentals, and news sentiment.
+    h1: Mega-Cap
+    categories:
+    - id: big-tech
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: financials
+      rgb: 245,158,11
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: healthcare
+      rgb: 163,230,53
+      bg: '0.12'
+      color: var(--lime)
+      border: '0.3'
+    - id: consumer
+      rgb: 255,107,53
+      bg: '0.15'
+      color: var(--accent2)
+      border: '0.35'
+    - id: energy-industrial
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: tech-semis
+      rgb: 167,139,250
+      bg: '0.12'
+      color: '#a78bfa'
+      border: '0.3'
+    - id: global-growth
+      rgb: 244,114,182
+      bg: '0.12'
+      color: '#f472b6'
+      border: '0.3'
+    cat_labels:
+    - id: big-tech
+      label: Big Tech
+    - id: financials
+      label: Financials
+    - id: healthcare
+      label: Healthcare
+    - id: consumer
+      label: Consumer
+    - id: energy-industrial
+      label: Energy & Industrial
+    - id: tech-semis
+      label: Tech & Semis
+    - id: global-growth
+      label: Global Growth
+    how_titles:
+    - Live price &amp; news data
+    - Web search for live catalysts
+    - AI ranking via DeepSeek
+    - Mon/Wed/Fri refresh via GitHub Actions
+    how:
+    - GitHub Actions runs <code>MegaCap_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 50 mega-cap stocks via Yahoo Finance.
+    - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing earnings beats, product launches, AI infrastructure spending, M&amp;A activity, regulatory developments, and macro rate moves.
+    - <code>MegaCap_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
+    - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python MegaCap_generate_signals_local.py</code> locally to generate fresh signals on demand.
+    disclaimer: Mega-cap stocks can be sensitive to macro interest rates, AI capex cycles, regulatory shifts, and global growth — always do your own research before making any investment decision. The model can be wrong, biased toward recent momentum, or inconsistent run-to-run.
+    refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python MegaCap_generate_signals_local.py</code> locally
+  Tech:
+    page_title: Technology
+    meta_description: AI-generated top 10 buy signals for technology stocks, ranked by momentum, fundamentals, and news sentiment.
+    h1: Technology
+    categories:
+    - id: mega-cap
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: semiconductors
+      rgb: 192,132,252
+      bg: '0.15'
+      color: var(--purple)
+      border: '0.3'
+    - id: enterprise-software
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: cybersecurity
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: consumer-platform
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.3'
+    - id: hardware-infra
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    cat_labels:
+    - id: mega-cap
+      label: Mega Cap
+    - id: semiconductors
+      label: Semiconductors
+    - id: enterprise-software
+      label: Enterprise SW
+    - id: cybersecurity
+      label: Cybersecurity
+    - id: consumer-platform
+      label: Consumer/Platform
+    - id: hardware-infra
+      label: Hardware/Infra
+    how_titles:
+    - Live price &amp; news data
+    - Web search for live catalysts
+    - AI ranking via DeepSeek
+    - Mon/Wed/Fri refresh via GitHub Actions
+    how:
+    - GitHub Actions runs <code>Tech_update_prices.py</code> daily. It fetches live prices, 1D/1W/1M/YTD returns, P/E, short interest, analyst scores and up to 5 recent headlines with sentiment scores for all 31 stocks via Yahoo Finance.
+    - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing deal announcements, analyst upgrades, earnings surprises and price target changes that happened since the last data pull.
+    - <code>Tech_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
+    - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Tech_generate_signals_local.py</code> locally to generate fresh signals on demand.
+    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
+    refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Tech_generate_signals_local.py</code> locally

@@ -151,6 +151,16 @@ When adding a new sector, complete every item in this checklist — in order:
 **Docs**
 8. Add row to `CHANGELOG.md`; update `FEATURES.md` (move from Backlog → Done, update description)
 
+## Page templates (generated pages)
+
+Rebuild step 5 (#73) moves repeated pages onto templates, one page type at a time. **Generated so far: the 7 sector Signals pages** (`AI|Biotech|Crypto|Defence|Energy|MegaCap|Tech/signals.html`).
+
+- **Don't edit a generated page by hand** — it starts with a `GENERATED` comment. Edit `site/templates/signals.html.j2` (shared layout, styles, script) or `site/sectors.yaml` (per-sector title, description, category colours and labels, "how it works" text, disclaimer), then run `pip install jinja2 pyyaml && python site/build.py` and commit the result. CI runs `python site/build.py --check` and fails if a generated page is stale.
+- Ticker names in the pages' fallback list come from `universe.yaml`.
+- Generated files are committed, so Cloudflare still serves plain static files and PR previews work as before (no Cloudflare build setting involved).
+- **Adding a sector:** add its block under `signals:` in `site/sectors.yaml`, run the build.
+- Check a conversion by loading the old and new page in a browser and comparing every element's text, styles and size (the 11 Nov Signals conversion matched exactly apart from deliberate fixes).
+
 ## Data export pipeline
 
 `generate_export.py` (repo root) builds a full cross-sector snapshot and must be kept in sync with `prices-data.js` field names.

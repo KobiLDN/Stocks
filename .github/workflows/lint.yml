@@ -28,6 +28,11 @@ jobs:
           pip install -q pyyaml
           python universe.py
 
+      - name: Generated pages are up to date (site/build.py)
+        run: |
+          pip install -q pyyaml jinja2
+          python site/build.py --check
+
       - name: Freshness rules tests
         run: node --test monitoring/freshness.test.js
 
