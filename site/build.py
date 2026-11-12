@@ -66,6 +66,11 @@ def render_all():
     for sector, s in sectors["charts"].items():
         html = htpl.render(s=s, sector=sector)
         out[f"{sector}/charts.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="charts.html.j2"), 1)
+    hmtpl = env.get_template("heatmap.html.j2")
+    for sector, s in sectors["heatmap"].items():
+        names = json.dumps(s["names"], ensure_ascii=False, indent=2)
+        html = hmtpl.render(s=s, sector=sector, names_json=names)
+        out[f"{sector}/heatmap.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="heatmap.html.j2"), 1)
     return out
 
 

@@ -3045,3 +3045,493 @@ charts:
     no_embed_js: ''
     cls_suffix: {}
     sector_css: "  .cat-btn.active-mega-cap            { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }\n  .cat-btn.active-semiconductors      { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }\n  .cat-btn.active-enterprise-software { background: var(--blue);    border-color: var(--blue);    color: var(--bg); }\n  .cat-btn.active-cybersecurity       { background: var(--green);   border-color: var(--green);   color: var(--bg); }\n  .cat-btn.active-consumer-platform   { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }\n  .cat-btn.active-hardware-infra      { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }\n  .cat-label.mega-cap            { color: var(--accent); }\n  .cat-label.semiconductors      { color: var(--rose); }\n  .cat-label.enterprise-software { color: var(--blue); }\n  .cat-label.cybersecurity       { color: var(--green); }\n  .cat-label.consumer-platform   { color: var(--purple); }\n  .cat-label.hardware-infra      { color: var(--amber); }"
+heatmap:
+  AI:
+    page_title: AI Infrastructure
+    meta_description: AI infrastructure stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 48 stocks at a glance.
+    h1: AI
+    unit: stocks
+    all_label: All Stocks
+    cat_label: By Sector
+    count: 48
+    n_cats: 12
+    cat_order:
+    - hyperscalers
+    - ai-compute
+    - memory
+    - dc-operators
+    - nuclear-ops
+    - smr
+    - power-infra
+    - uranium
+    - fibre-optical
+    - dsp-semi
+    - test-equip
+    - materials
+    metrics_cfg_js: "\n  '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },\n  '1w':  { field: 'change_1w',  label: '1W',    threshold: 10 },\n  '1m':  { field: 'change_1m',  label: '1M',    threshold: 20 },\n  'ytd': { field: 'change_ytd', label: 'YTD',   threshold: 40 },\n  '1y':  { field: 'return_1yr', label: '1Y',    threshold: 60 },"
+    cat_labels:
+    - id: memory
+      label: Memory / Storage
+    - id: nuclear-ops
+      label: Nuclear Operators
+    - id: smr
+      label: SMR Builders
+    - id: uranium
+      label: Uranium
+    - id: power-infra
+      label: Power Infrastructure
+    - id: dc-operators
+      label: Data Centre Ops
+    - id: hyperscalers
+      label: Hyperscalers
+    - id: ai-compute
+      label: AI Compute
+    - id: fibre-optical
+      label: Fibre / Optical
+    - id: dsp-semi
+      label: DSP / Semi
+    - id: test-equip
+      label: Test Equipment
+    - id: materials
+      label: Materials
+    names:
+      SNDK: SanDisk Corporation
+      WDC: Western Digital
+      285A: Kioxia Holdings
+      MU: Micron Technology
+      STX: Seagate Technology
+      MRVL: Marvell Technology
+      P: Everpure
+      RR.: Rolls-Royce
+      CEG: Constellation Energy
+      VST: Vistra Corp
+      TLN: Talen Energy
+      BEP: Brookfield Renewable
+      BEPC: Brookfield Renewable Corp
+      GEV: GE Vernova
+      BWXT: BWX Technologies
+      SMR: NuScale Power
+      OKLO: Oklo Inc
+      NNE: NANO Nuclear
+      CCJ: Cameco
+      UEC: Uranium Energy
+      LEU: Centrus Energy
+      VRT: Vertiv Holdings
+      ETN: Eaton Corporation
+      POWL: Powell Industries
+      EQIX: Equinix
+      DLR: Digital Realty
+      AMT: American Tower
+      GOOGL: Alphabet
+      MSFT: Microsoft
+      AMZN: Amazon
+      META: Meta Platforms
+      IREN: Iris Energy
+      CORZ: Core Scientific
+      WULF: TeraWulf
+      HUT: Hut 8 Mining
+      SMCI: Super Micro Computer
+      DELL: Dell Technologies
+      COHR: Coherent Corp
+      LITE: Lumentum
+      AAOI: Applied Optoelectronics
+      FN: Fabrinet
+      MTSI: MACOM Technology
+      SMTC: Semtech
+      CRDO: Credo Technology
+      MXL: MaxLinear
+      KEYS: Keysight Technologies
+      VIAV: Viavi Solutions
+      AXTI: AXT Inc
+  Biotech:
+    page_title: Biotech
+    meta_description: Biotech stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 30 stocks at a glance.
+    h1: Biotech
+    unit: stocks
+    all_label: All Stocks
+    cat_label: By Category
+    count: 30
+    n_cats: 9
+    cat_order:
+    - large-cap
+    - uk-listed
+    - gene-editing
+    - genomics
+    - oncology
+    - mrna
+    - rare-disease
+    - metabolic
+    - neuroscience
+    metrics_cfg_js: "\n  '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },\n  '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },\n  '1m':  { field: 'change_1m',  label: '1M',  threshold: 20 },\n  'ytd': { field: 'change_ytd', label: 'YTD', threshold: 40 },\n  '1y':  { field: 'return_1yr', label: '1Y',  threshold: 60 },"
+    cat_labels:
+    - id: large-cap
+      label: Large Cap Biotech
+    - id: uk-listed
+      label: UK Listed
+    - id: gene-editing
+      label: Gene Editing
+    - id: genomics
+      label: Genomics / Tools
+    - id: oncology
+      label: Oncology
+    - id: mrna
+      label: mRNA / Vaccines
+    - id: rare-disease
+      label: Rare Disease
+    - id: metabolic
+      label: Metabolic
+    - id: neuroscience
+      label: Neuroscience
+    names:
+      AMGN: Amgen
+      GILD: Gilead Sciences
+      REGN: Regeneron Pharmaceuticals
+      VRTX: Vertex Pharmaceuticals
+      BIIB: Biogen
+      BMY: Bristol-Myers Squibb
+      AZN: AstraZeneca
+      GSK: GSK plc
+      CRSP: CRISPR Therapeutics
+      BEAM: Beam Therapeutics
+      NTLA: Intellia Therapeutics
+      EDIT: Editas Medicine
+      ILMN: Illumina
+      PACB: Pacific Biosciences
+      NTRA: Natera
+      RXRX: Recursion Pharmaceuticals
+      INCY: Incyte Corporation
+      EXEL: Exelixis
+      ALNY: Alnylam Pharmaceuticals
+      RCUS: Arcus Biosciences
+      MRNA: Moderna
+      BNTX: BioNTech
+      NVAX: Novavax
+      BMRN: BioMarin Pharmaceutical
+      SRPT: Sarepta Therapeutics
+      COAG: Hemab Therapeutics
+      NVO: Novo Nordisk
+      LLY: Eli Lilly
+      LEGN: Legend Biotech
+      IONS: Ionis Pharmaceuticals
+  Crypto:
+    page_title: Crypto
+    meta_description: Crypto heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across 31 coins at a glance.
+    h1: Crypto
+    unit: coins
+    all_label: All Stocks
+    cat_label: By Category
+    count: 32
+    n_cats: 7
+    cat_order:
+    - bitcoin
+    - layer1
+    - payments
+    - emerging
+    - infra
+    - meme
+    - ai
+    metrics_cfg_js: "\n  '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },\n  '1w':  { field: 'change_1w',  label: '1W',    threshold: 10 },\n  '1m':  { field: 'change_1m',  label: '1M',    threshold: 20 },\n  'ytd': { field: 'change_ytd', label: 'YTD',   threshold: 40 },\n  '1y':  { field: 'return_1yr', label: '1Y',    threshold: 60 },"
+    cat_labels:
+    - id: bitcoin
+      label: Bitcoin
+    - id: layer1
+      label: Layer 1
+    - id: payments
+      label: Payments
+    - id: emerging
+      label: Emerging
+    - id: infra
+      label: Infra
+    - id: meme
+      label: Meme
+    - id: ai
+      label: AI Tokens
+    names:
+      BTC: Bitcoin
+      ETH: Ethereum
+      SOL: Solana
+      BNB: BNB
+      ADA: Cardano
+      AVAX: Avalanche
+      XRP: XRP
+      XLM: Stellar
+      TRX: TRON
+      SUI: Sui
+      HBAR: Hedera
+      TON: Toncoin
+      ALGO: Algorand
+      MINA: Mina
+      POL: Polygon
+      DOT: Polkadot
+      LINK: Chainlink
+      DOGE: Dogecoin
+      PEPE: Pepe
+      TAO: Bittensor
+      FET: ASI Alliance
+      RNDR: Render
+      OCEAN: Ocean Protocol
+      GRT: The Graph
+      AGIX: SingularityNET
+      NMR: Numeraire
+      ALT: AltLayer
+      AIOZ: AIOZ Network
+      ARKM: Arkham
+      WLD: Worldcoin
+      NEAR: NEAR Protocol
+      ICP: Internet Computer
+      KAITO: Kaito
+      VIRTUAL: Virtuals Protocol
+  Defence:
+    page_title: Defence &amp; Aerospace
+    meta_description: Defence &amp; Aerospace stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 29 stocks at a glance.
+    h1: Defence
+    unit: stocks
+    all_label: All Stocks
+    cat_label: By Sector
+    count: 29
+    n_cats: 6
+    cat_order:
+    - us-primes
+    - uk-european
+    - cyber-intel
+    - drones
+    - space
+    - weapons
+    metrics_cfg_js: "\n  '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },\n  '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },\n  '1m':  { field: 'change_1m',  label: '1M',  threshold: 20 },\n  'ytd': { field: 'change_ytd', label: 'YTD', threshold: 40 },\n  '1y':  { field: 'return_1yr', label: '1Y',  threshold: 60 },"
+    cat_labels:
+    - id: us-primes
+      label: US Prime Contractors
+    - id: uk-european
+      label: UK / European
+    - id: cyber-intel
+      label: Cyber / Intelligence
+    - id: drones
+      label: Drones / Autonomy
+    - id: space
+      label: Space Defence
+    - id: weapons
+      label: Weapons / Systems
+    names:
+      LMT: Lockheed Martin
+      RTX: RTX Corporation
+      NOC: Northrop Grumman
+      GD: General Dynamics
+      HII: Huntington Ingalls
+      LHX: L3Harris Technologies
+      BA: Boeing
+      BA.L: BAE Systems
+      RR.L: Rolls-Royce
+      QQ.L: QinetiQ Group
+      PLTR: Palantir Technologies
+      LDOS: Leidos Holdings
+      CACI: CACI International
+      SAIC: Science Applications Intl
+      BAH: Booz Allen Hamilton
+      AVAV: AeroVironment
+      KTOS: Kratos Defense
+      RCAT: Red Cat Holdings
+      TXT: Textron
+      SPCX: SpaceX
+      RKLB: Rocket Lab
+      PL: Planet Labs
+      ASTS: AST SpaceMobile
+      TDG: TransDigm Group
+      HEI: HEICO Corporation
+      AXON: Axon Enterprise
+      OLN: Olin Corporation
+      MRCY: Mercury Systems
+      DRS: Leonardo DRS
+  Energy:
+    page_title: Energy
+    meta_description: Energy stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 20 stocks at a glance.
+    h1: Energy
+    unit: stocks
+    all_label: All Stocks
+    cat_label: By Sector
+    count: 20
+    n_cats: 5
+    cat_order:
+    - oil-majors
+    - ep-refining
+    - oilfield-services
+    - utilities
+    - clean-energy
+    metrics_cfg_js: "\n  '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },\n  '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },\n  '1m':  { field: 'change_1m',  label: '1M',  threshold: 20 },\n  'ytd': { field: 'change_ytd', label: 'YTD', threshold: 40 },\n  '1y':  { field: 'return_1yr', label: '1Y',  threshold: 60 },"
+    cat_labels:
+    - id: oil-majors
+      label: Oil Majors
+    - id: ep-refining
+      label: E&P / Refining
+    - id: oilfield-services
+      label: Oilfield Services
+    - id: utilities
+      label: Utilities
+    - id: clean-energy
+      label: Clean Energy
+    names:
+      XOM: ExxonMobil
+      CVX: Chevron
+      SHEL: Shell
+      BP: BP p.l.c.
+      TTE: TotalEnergies
+      EQNR: Equinor
+      COP: ConocoPhillips
+      OXY: Occidental Petroleum
+      EOG: EOG Resources
+      MPC: Marathon Petroleum
+      VLO: Valero Energy
+      SLB: SLB (Schlumberger)
+      HAL: Halliburton
+      BKR: Baker Hughes
+      NEE: NextEra Energy
+      SSE.L: SSE plc
+      ENPH: Enphase Energy
+      FSLR: First Solar
+      BEPC: Brookfield Renewable
+      DNNGY: Ørsted
+  MegaCap:
+    page_title: Mega-Cap
+    meta_description: Mega-cap stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 50 mega-cap stocks at a glance.
+    h1: Mega-Cap
+    unit: stocks
+    all_label: All Stocks
+    cat_label: By Category
+    count: 50
+    n_cats: 7
+    cat_order:
+    - big-tech
+    - financials
+    - healthcare
+    - consumer
+    - energy-industrial
+    - tech-semis
+    - global-growth
+    metrics_cfg_js: "\n  '1d':  { field: 'change_1d',  label: '1D',  threshold: 5  },\n  '1w':  { field: 'change_1w',  label: '1W',  threshold: 10 },\n  '1m':  { field: 'change_1m',  label: '1M',  threshold: 20 },\n  'ytd': { field: 'change_ytd', label: 'YTD', threshold: 40 },\n  '1y':  { field: 'return_1yr', label: '1Y',  threshold: 60 },"
+    cat_labels:
+    - id: big-tech
+      label: Big Tech
+    - id: financials
+      label: Financials
+    - id: healthcare
+      label: Healthcare
+    - id: consumer
+      label: Consumer
+    - id: energy-industrial
+      label: Energy & Industrial
+    - id: tech-semis
+      label: Tech & Semis
+    - id: global-growth
+      label: Global Growth
+    names:
+      AAPL: Apple Inc.
+      MSFT: Microsoft Corporation
+      NVDA: NVIDIA Corporation
+      GOOGL: Alphabet Inc.
+      META: Meta Platforms
+      AMZN: Amazon.com
+      TSLA: Tesla
+      NFLX: Netflix
+      JPM: JPMorgan Chase
+      BAC: Bank of America
+      BRK-B: Berkshire Hathaway B
+      V: Visa Inc.
+      MA: Mastercard
+      GS: Goldman Sachs
+      BLK: BlackRock
+      LLY: Eli Lilly
+      UNH: UnitedHealth Group
+      JNJ: Johnson & Johnson
+      ABBV: AbbVie
+      MRK: Merck
+      TMO: Thermo Fisher Scientific
+      ABT: Abbott Laboratories
+      PG: Procter & Gamble
+      KO: Coca-Cola
+      PEP: PepsiCo
+      MCD: ''
+      NKE: Nike
+      WMT: Walmart
+      COST: Costco
+      XOM: ExxonMobil
+      CVX: Chevron
+      CAT: Caterpillar
+      HON: Honeywell
+      GE: GE Aerospace
+      RTX: RTX Corp
+      BA: Boeing
+      AMD: Advanced Micro Devices
+      QCOM: Qualcomm
+      AVGO: Broadcom
+      TSM: Taiwan Semiconductor
+      ASML: ASML Holding
+      ARM: Arm Holdings
+      INTC: Intel
+      2222.SR: Saudi Aramco
+      BABA: Alibaba Group
+      SAP: SAP SE
+      SONY: Sony Group
+      TM: Toyota Motor
+      NVO: Novo Nordisk
+      HSBC: HSBC Holdings
+  Tech:
+    page_title: Technology
+    meta_description: Technology stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 31 stocks at a glance.
+    h1: Technology
+    unit: stocks
+    all_label: All Stocks
+    cat_label: By Category
+    count: 31
+    n_cats: 6
+    cat_order:
+    - mega-cap
+    - semiconductors
+    - enterprise-software
+    - cybersecurity
+    - consumer-platform
+    - hardware-infra
+    metrics_cfg_js: "\n  '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },\n  '1w':  { field: 'change_1w',  label: '1W',    threshold: 10 },\n  '1m':  { field: 'change_1m',  label: '1M',    threshold: 20 },\n  'ytd': { field: 'change_ytd', label: 'YTD',   threshold: 40 },\n  '1y':  { field: 'return_1yr', label: '1Y',    threshold: 60 },"
+    cat_labels:
+    - id: mega-cap
+      label: Mega Cap
+    - id: semiconductors
+      label: Semiconductors
+    - id: enterprise-software
+      label: Enterprise Software
+    - id: cybersecurity
+      label: Cybersecurity
+    - id: consumer-platform
+      label: Consumer / Platform
+    - id: hardware-infra
+      label: Hardware / Infra
+    names:
+      AAPL: Apple
+      MSFT: Microsoft
+      GOOGL: Alphabet (Google)
+      AMZN: Amazon
+      META: Meta Platforms
+      NVDA: NVIDIA
+      AMD: Advanced Micro Devices
+      INTC: Intel
+      TSM: Taiwan Semiconductor
+      AVGO: Broadcom
+      QCOM: Qualcomm
+      ARM: Arm Holdings
+      ASML: ASML Holding
+      MU: Micron Technology
+      AMAT: Applied Materials
+      ORCL: Oracle
+      CRM: Salesforce
+      ADBE: Adobe
+      NOW: ServiceNow
+      SNOW: Snowflake
+      INTU: Intuit
+      CRWD: CrowdStrike
+      PANW: Palo Alto Networks
+      NET: Cloudflare
+      FTNT: Fortinet
+      NFLX: Netflix
+      SHOP: Shopify
+      SPOT: Spotify
+      UBER: Uber
+      CSCO: Cisco Systems
+      PLTR: Palantir Technologies
