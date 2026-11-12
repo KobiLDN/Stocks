@@ -52,6 +52,11 @@ def render_all():
         names = json.dumps(s["names"], ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = mtpl.render(s=s, sector=sector, tip=tip, names_json=names)
         out[f"{sector}/metrics.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="metrics.html.j2"), 1)
+    ntpl = env.get_template("news.html.j2")
+    for sector, s in sectors["news"].items():
+        names = json.dumps(s["names"], ensure_ascii=False, indent=4).replace("\n", "\n  ")
+        html = ntpl.render(s=s, sector=sector, names_json=names)
+        out[f"{sector}/news.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="news.html.j2"), 1)
     return out
 
 
