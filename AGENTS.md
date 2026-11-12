@@ -126,7 +126,7 @@ Stocks/
 
 1. **`universe.yaml`** (repo root, the master list): if the asset is new, add it under `assets` (`name`, `exchange`, `yahoo`, plus `special` / `speculative` / crypto IDs if needed); then add `["TICKER", "category"]` to each sector it belongs to under `sectors`. Run `python universe.py --write-links` to regenerate `asset-links.js` (where each ticker links to: CoinGecko for coins, Yahoo with the right suffix otherwise), then `python universe.py` to check both. CI fails if `asset-links.js` is stale. The price scripts no longer hold their own lists.
 2. **Dashboard note** — the sector dashboards (`*/index.html`) are generated. In `site/sectors.yaml` → `dashboard:` → the sector → `notes:`, add `- {id: TICKER, text: "Key angle / editorial note."}`.
-3. **Page name lists** — Metrics, News, Calculator and Heatmap each keep a `names:` list in `site/sectors.yaml` (under `metrics:` / `news:` / `calculator:` / `heatmap:`, per sector); add the company name to each. (Moving these onto `universe.yaml` is an open decision, #73.)
+3. **Company names and counts** — come from `universe.yaml` automatically (every page type), including the stock counts in page descriptions. Nothing to edit.
 3b. **Charts** — in `site/sectors.yaml` → `charts:` → the sector → `tv_map_js:`, add `'TICKER': 'EXCHANGE:SYMBOL'` **only if** the TradingView symbol differs from `EXCHANGE:TICKER` (e.g. `'BA.L': 'LSE:BA.'`). The header count updates itself from `universe.yaml`.
 3c. Run `python site/build.py` and commit the regenerated pages; CI fails if you forget.
 4. Run `[Sector]_update_prices.py` — `prices-data.js` regenerates and all pages update automatically

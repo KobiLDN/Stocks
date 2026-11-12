@@ -33,6 +33,11 @@ def sector_names(universe, sector):
     return {t: universe["assets"][t]["name"] for t, _ in universe["sectors"][sector]}
 
 
+def with_count(s, universe, sector):
+    """Fill {count} in a page description with the sector's size from universe.yaml."""
+    return {**s, "meta_description": s["meta_description"].replace("{count}", str(len(universe["sectors"][sector])))}
+
+
 def render_all():
     """{relative output path: file text} for every generated page."""
     sectors, universe = load()
@@ -47,19 +52,20 @@ def render_all():
     mtpl = env.get_template("metrics.html.j2")
     base_tips = sectors["metrics_base_tips"]
     for sector, s in sectors["metrics"].items():
+        s = with_count(s, universe, sector)
         tip = lambda key, s=s: {**base_tips[key], **s["tip_overrides"].get(key, {})}
-        # Metrics shows these hand-kept names (they win over the data's company names), so keep them exactly
-        names = json.dumps(s["names"], ensure_ascii=False, indent=4).replace("\n", "\n  ")
+        names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = mtpl.render(s=s, sector=sector, tip=tip, names_json=names)
         out[f"{sector}/metrics.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="metrics.html.j2"), 1)
     ntpl = env.get_template("news.html.j2")
     for sector, s in sectors["news"].items():
-        names = json.dumps(s["names"], ensure_ascii=False, indent=4).replace("\n", "\n  ")
+        s = with_count(s, universe, sector)
+        names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = ntpl.render(s=s, sector=sector, names_json=names)
         out[f"{sector}/news.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="news.html.j2"), 1)
     ctpl = env.get_template("calculator.html.j2")
     for sector, s in sectors["calculator"].items():
-        names = json.dumps(s["names"], ensure_ascii=False, indent=4).replace("\n", "\n  ")
+        names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = ctpl.render(s=s, sector=sector, names_json=names)
         out[f"{sector}/calculator.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="calculator.html.j2"), 1)
     htpl = env.get_template("charts.html.j2")
@@ -68,7 +74,7 @@ def render_all():
         out[f"{sector}/charts.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="charts.html.j2"), 1)
     hmtpl = env.get_template("heatmap.html.j2")
     for sector, s in sectors["heatmap"].items():
-        names = json.dumps(s["names"], ensure_ascii=False, indent=2)
+        names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=2)
         html = hmtpl.render(s=s, sector=sector, names_json=names)
         out[f"{sector}/heatmap.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="heatmap.html.j2"), 1)
     dtpl = env.get_template("dashboard.html.j2")
