@@ -62,6 +62,10 @@ def render_all():
         names = json.dumps(s["names"], ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = ctpl.render(s=s, sector=sector, names_json=names)
         out[f"{sector}/calculator.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="calculator.html.j2"), 1)
+    htpl = env.get_template("charts.html.j2")
+    for sector, s in sectors["charts"].items():
+        html = htpl.render(s=s, sector=sector)
+        out[f"{sector}/charts.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="charts.html.j2"), 1)
     return out
 
 

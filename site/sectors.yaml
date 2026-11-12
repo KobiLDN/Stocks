@@ -2907,3 +2907,141 @@ calculator:
       UBER: Uber
       CSCO: Cisco Systems
       PLTR: Palantir Technologies
+charts:
+  AI:
+    page_title: AI Infrastructure
+    meta_description: 1-year price history charts for all 48 AI infrastructure stocks. Filter by category.
+    h1: AI
+    unit: stocks
+    old_count: 48
+    count: 48
+    chart_ticker: SNDK
+    chart_name: SanDisk Corporation
+    symbol: NASDAQ:SNDK
+    symbol_name: SanDisk Corporation
+    default_tf: 1W
+    note_suffix: ''
+    tv_map_js: "\n    '285A': 'TSE:285A',\n    'RR.':  'LSE:RR.',\n    'UEC':  'AMEX:UEC',\n    'P':    'NYSE:P',\n    'TLN':  'NASDAQ:TLN',"
+    chart_cats_js: "\n    'memory':        { key: 'memory',        label: '\U0001F9E0 Memory / Storage',   color: 'var(--purple)',  btnLabel: 'Memory',          tooltip: 'DRAM, NAND flash & storage hardware — the memory layer that feeds AI accelerators' },\n    'nuclear-ops':   { key: 'nuclear-ops',   label: '⚡ Nuclear Operators',   color: 'var(--accent2)', btnLabel: 'Nuclear',         tooltip: 'Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres' },\n    'smr':           { key: 'smr',           label: '⚛️ SMR Builders',        color: 'var(--green)',   btnLabel: 'SMR',             tooltip: 'Small Modular Reactor developers — compact next-gen nuclear designed for on-site data centre power' },\n    'uranium':       { key: 'uranium',       label: '☢️ Uranium',             color: 'var(--gold)',    btnLabel: 'Uranium',         tooltip: 'Uranium miners & enrichers — upstream fuel supply benefiting from the nuclear power revival' },\n    'power-infra':   { key: 'power-infra',   label: '\U0001F50B Power Infra',         color: 'var(--accent)',  btnLabel: 'Power',           tooltip: 'Switchgear, transformers & power management — the grid buildout infrastructure behind every data centre' },\n    'dc-operators':  { key: 'dc-operators',  label: '\U0001F3E2 Data Centres',        color: 'var(--blue)',    btnLabel: 'Data Centres',    tooltip: 'Companies that own and operate the physical data centre facilities where AI compute is housed' },\n    'hyperscalers':  { key: 'hyperscalers',  label: '☁️ Hyperscalers',        color: 'var(--indigo)',  btnLabel: 'Hyperscalers',    tooltip: 'Mega cloud platforms (AWS, Azure, Google) building AI infrastructure at planetary scale' },\n    'ai-compute':    { key: 'ai-compute',    label: '\U0001F5A5️ AI Compute',          color: 'var(--rose)',    btnLabel: 'AI Compute',      tooltip: 'GPU and AI accelerator makers — the silicon that runs AI training and inference workloads' },\n    'fibre-optical': { key: 'fibre-optical', label: '\U0001F310 Fibre / Optical',     color: 'var(--teal)',    btnLabel: 'Fibre/Optical',   tooltip: 'High-speed optical networking and fibre interconnects — the data links between and within data centres' },\n    'dsp-semi':      { key: 'dsp-semi',      label: '\U0001F50C DSP / Semi',          color: 'var(--amber)',   btnLabel: 'DSP/Semi',        tooltip: 'Specialised semiconductors for digital signal processing and high-speed networking silicon' },\n    'test-equip':    { key: 'test-equip',    label: '\U0001F52C Test Equipment',      color: 'var(--slate)',   btnLabel: 'Test Equip',      tooltip: 'Electronic test & measurement gear used to validate chips, networks and power systems' },\n    'materials':     { key: 'materials',     label: '⚗️ Materials',           color: 'var(--lime)',    btnLabel: 'Materials',       tooltip: 'Specialty substrates and compound semiconductors used in chip and optical component manufacturing' },"
+    no_embed_js: "\n    'NYSE:P': 'https://www.tradingview.com/symbols/NYSE-P/',"
+    cls_suffix:
+      nuclear-ops: nuclear
+      power-infra: power
+      dc-operators: dc
+      hyperscalers: hyper
+      ai-compute: compute
+      fibre-optical: fibre
+      dsp-semi: dsp
+      test-equip: test
+    sector_css: "  .cat-btn.active-memory        { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }\n  .cat-btn.active-nuclear-ops   { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }\n  .cat-btn.active-smr           { background: var(--green);   border-color: var(--green);   color: var(--bg); }\n  .cat-btn.active-uranium       { background: var(--gold);    border-color: var(--gold);    color: var(--bg); }\n  .cat-btn.active-power-infra   { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }\n  .cat-btn.active-dc-operators  { background: var(--blue);    border-color: var(--blue);    color: var(--bg); }\n  .cat-btn.active-hyperscalers  { background: var(--indigo);  border-color: var(--indigo);  color: var(--bg); }\n  .cat-btn.active-ai-compute    { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }\n  .cat-btn.active-fibre-optical { background: var(--teal);    border-color: var(--teal);    color: var(--bg); }\n  .cat-btn.active-dsp-semi      { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }\n  .cat-btn.active-test-equip    { background: var(--slate);   border-color: var(--slate);   color: var(--bg); }\n  .cat-btn.active-materials     { background: var(--lime);    border-color: var(--lime);    color: var(--bg); }\n  .cat-label.memory     { color: var(--purple); }\n  .cat-label.nuclear    { color: var(--accent2); }\n  .cat-label.smr        { color: var(--green); }\n  .cat-label.uranium    { color: var(--gold); }\n  .cat-label.power      { color: var(--accent); }\n  .cat-label.dc         { color: var(--blue); }\n  .cat-label.hyper      { color: var(--indigo); }\n  .cat-label.compute    { color: var(--rose); }\n  .cat-label.fibre      { color: var(--teal); }\n  .cat-label.dsp        { color: var(--amber); }\n  .cat-label.test       { color: var(--slate); }\n  .cat-label.materials  { color: var(--lime); }"
+  Biotech:
+    page_title: Biotech
+    meta_description: 1-year price history charts for all 30 biotech stocks. Filter by category.
+    h1: Biotech
+    unit: stocks
+    old_count: 30
+    count: 30
+    chart_ticker: AMGN
+    chart_name: Amgen
+    symbol: NASDAQ:AMGN
+    symbol_name: Amgen
+    default_tf: 1W
+    note_suffix: ''
+    tv_map_js: "\n    'AZN': 'LSE:AZN',\n    'GSK': 'LSE:GSK',"
+    chart_cats_js: "\n    'large-cap':    { label: '\U0001F48A Large Cap Biotech',  color: 'var(--accent)',  btnLabel: 'Large Cap',     tooltip: 'Established pharma/biotech giants with diversified pipelines and multi-billion market caps' },\n    'uk-listed':    { label: '\U0001F1EC\U0001F1E7 UK Listed',          color: 'var(--gold)',    btnLabel: 'UK Listed',     tooltip: 'UK-listed companies traded on the London Stock Exchange — prices shown in GBP' },\n    'gene-editing': { label: '✂️ Gene Editing',        color: 'var(--green)',   btnLabel: 'Gene Editing',  tooltip: 'Companies using CRISPR and base editing to directly modify DNA — high risk, high reward pipeline plays' },\n    'genomics':     { label: '\U0001F9EC Genomics / Tools',    color: 'var(--teal)',    btnLabel: 'Genomics',      tooltip: 'Genome sequencing platforms and bioinformatics — the tools that read and interpret DNA' },\n    'oncology':     { label: '\U0001F3AF Oncology',            color: 'var(--rose)',    btnLabel: 'Oncology',      tooltip: 'Cancer-focused biotechs — targeted therapies, immunotherapies and ADCs across tumour types' },\n    'mrna':         { label: '\U0001F489 mRNA / Vaccines',     color: 'var(--purple)',  btnLabel: 'mRNA',          tooltip: 'mRNA platform companies — technology that programs cells to produce therapeutic proteins or immune responses' },\n    'rare-disease': { label: '\U0001F52C Rare Disease',        color: 'var(--amber)',   btnLabel: 'Rare Disease',  tooltip: 'Biotechs targeting rare (orphan) diseases — smaller patient populations but faster FDA pathways and pricing power' },\n    'metabolic':    { label: '⚖️ Metabolic',           color: 'var(--lime)',    btnLabel: 'Metabolic',     tooltip: 'Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders' },\n    'neuroscience': { label: '\U0001F9E0 Neuroscience',        color: 'var(--indigo)',  btnLabel: 'Neuroscience',  tooltip: 'Neurology and CNS-focused biotechs — Alzheimer\\'s, ALS, depression and other brain & nervous system disorders' },"
+    no_embed_js: ''
+    cls_suffix: {}
+    sector_css: "  .cat-btn.active-large-cap    { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }\n  .cat-btn.active-uk-listed    { background: var(--gold);    border-color: var(--gold);    color: var(--bg); }\n  .cat-btn.active-gene-editing { background: var(--green);   border-color: var(--green);   color: var(--bg); }\n  .cat-btn.active-genomics     { background: var(--teal);    border-color: var(--teal);    color: var(--bg); }\n  .cat-btn.active-oncology     { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }\n  .cat-btn.active-mrna         { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }\n  .cat-btn.active-rare-disease { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }\n  .cat-btn.active-metabolic    { background: var(--lime);    border-color: var(--lime);    color: var(--bg); }\n  .cat-btn.active-neuroscience { background: var(--indigo);  border-color: var(--indigo);  color: var(--bg); }\n  .cat-label.large-cap    { color: var(--accent); }\n  .cat-label.uk-listed    { color: var(--gold); }\n  .cat-label.gene-editing { color: var(--green); }\n  .cat-label.genomics     { color: var(--teal); }\n  .cat-label.oncology     { color: var(--rose); }\n  .cat-label.mrna         { color: var(--purple); }\n  .cat-label.rare-disease { color: var(--amber); }\n  .cat-label.metabolic    { color: var(--lime); }\n  .cat-label.neuroscience { color: var(--indigo); }"
+  Crypto:
+    page_title: Crypto
+    meta_description: 1-year price history charts for 19 coins including Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins. Filter by category.
+    h1: Crypto
+    unit: coins
+    old_count: 19
+    count: 32
+    chart_ticker: BTC
+    chart_name: Bitcoin
+    symbol: CRYPTO:BTCUSD
+    symbol_name: Bitcoin
+    default_tf: 1W
+    note_suffix: ''
+    tv_map_js: "\n    'BTC':  'CRYPTO:BTCUSD',\n    'ETH':  'CRYPTO:ETHUSD',\n    'SOL':  'CRYPTO:SOLUSD',\n    'BNB':  'CRYPTO:BNBUSD',\n    'ADA':  'CRYPTO:ADAUSD',\n    'AVAX': 'CRYPTO:AVAXUSD',\n    'XRP':  'CRYPTO:XRPUSD',\n    'XLM':  'CRYPTO:XLMUSD',\n    'TRX':  'CRYPTO:TRXUSD',\n    'SUI':  'CRYPTO:SUIUSD',\n    'HBAR': 'CRYPTO:HBARUSD',\n    'TON':  'CRYPTO:TONUSD',\n    'ALGO': 'CRYPTO:ALGOUSD',\n    'MINA': 'CRYPTO:MINAUSD',\n    'POL':     'CRYPTO:MATICUSD',\n    'DOT':     'CRYPTO:DOTUSD',\n    'LINK':    'CRYPTO:LINKUSD',\n    'DOGE':    'CRYPTO:DOGEUSD',\n    'PEPE':    'CRYPTO:PEPEUSD',\n    'TAO':     'CRYPTO:TAOUSD',\n    'FET':     'CRYPTO:FETUSD',\n    'RNDR':    'CRYPTO:RNDRUSD',\n    'OCEAN':   'CRYPTO:OCEANUSD',\n    'GRT':     'CRYPTO:GRTUSD',\n    'AGIX':    'CRYPTO:AGIXUSD',\n    'NMR':     'CRYPTO:NMRUSD',\n    'ALT':     'CRYPTO:ALTUSD',\n    'AIOZ':    'CRYPTO:AIOZUSD',\n    'ARKM':    'CRYPTO:ARKMUSD',\n    'WLD':     'CRYPTO:WLDUSD',\n    'NEAR':    'CRYPTO:NEARUSD',\n    'ICP':     'CRYPTO:ICPUSD',\n    'KAITO':   'CRYPTO:KAITOUSD',\n    'VIRTUAL': 'CRYPTO:VIRTUALUSD',"
+    chart_cats_js: "\n    'bitcoin':  { key: 'bitcoin',  label: '₿ Bitcoin',  color: 'var(--amber)',  btnLabel: 'Bitcoin',  tooltip: 'Bitcoin — BTC: the original and largest cryptocurrency', },\n    'layer1':   { key: 'layer1',   label: '⛓️ Layer 1',  color: 'var(--accent)', btnLabel: 'Layer 1',  tooltip: 'Layer 1 — ETH, SOL, BNB, ADA, AVAX: major smart-contract platforms', },\n    'payments': { key: 'payments', label: '\U0001F4B8 Payments', color: 'var(--indigo)', btnLabel: 'Payments', tooltip: 'Payments — XRP, XLM (Stellar), TRX (TRON): fast cross-border settlement networks', },\n    'emerging': { key: 'emerging', label: '\U0001F680 Emerging', color: 'var(--teal)',   btnLabel: 'Emerging', tooltip: 'Emerging — SUI, HBAR, TON, ALGO, MINA: newer and niche blockchain platforms', },\n    'infra':    { key: 'infra',    label: '\U0001F527 Infra',    color: 'var(--green)',  btnLabel: 'Infra',    tooltip: 'Infrastructure — POL (Polygon), DOT (Polkadot), LINK (Chainlink): scaling, interoperability, oracle', },\n    'meme':     { key: 'meme',     label: '\U0001F415 Meme',     color: 'var(--gold)',   btnLabel: 'Meme',     tooltip: 'Meme coins — DOGE, PEPE: community-driven high-volatility tokens', },\n    'ai':       { key: 'ai',       label: '\U0001F916 AI Tokens', color: '#a78bfa',      btnLabel: 'AI Tokens', tooltip: 'AI Tokens — TAO, FET, RNDR, NEAR, ICP, GRT, OCEAN, AGIX, NMR, ALT, AIOZ, ARKM, WLD, KAITO, VIRTUAL: decentralised AI infrastructure', },"
+    no_embed_js: ''
+    cls_suffix: {}
+    sector_css: "  .cat-btn.active-bitcoin { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }\n  .cat-btn.active-layer1  { background: var(--accent); border-color: var(--accent); color: var(--bg); }\n  .cat-btn.active-payments{ background: var(--indigo); border-color: var(--indigo); color: var(--bg); }\n  .cat-btn.active-emerging{ background: var(--teal);   border-color: var(--teal);   color: var(--bg); }\n  .cat-btn.active-meme    { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }\n  .cat-btn.active-infra   { background: var(--green);  border-color: var(--green);  color: var(--bg); }\n  .cat-label.bitcoin { color: var(--amber); }\n  .cat-label.layer1  { color: var(--accent); }\n  .cat-label.payments{ color: var(--indigo); }\n  .cat-label.emerging{ color: var(--teal); }\n  .cat-label.meme    { color: var(--gold); }\n  .cat-label.infra   { color: var(--green); }"
+  Defence:
+    page_title: Defence &amp; Aerospace
+    meta_description: 1-year price history charts for all 29 Defence &amp; Aerospace stocks. Filter by category.
+    h1: Defence
+    unit: stocks
+    old_count: 29
+    count: 29
+    chart_ticker: LMT
+    chart_name: Lockheed Martin
+    symbol: NYSE:LMT
+    symbol_name: Lockheed Martin
+    default_tf: 1W
+    note_suffix: ''
+    tv_map_js: "\n    'BA.L': 'LSE:BA.',\n    'RR.L': 'LSE:RR.',\n    'QQ.L': 'LSE:QQ.',\n    'PLTR': 'NASDAQ:PLTR',"
+    chart_cats_js: "\n    'us-primes':   { label: '\U0001F1FA\U0001F1F8 US Primes',       color: 'var(--amber)',  btnLabel: 'US Prime',      tooltip: 'Major US defence prime contractors — Lockheed, RTX, Northrop, General Dynamics, Huntington Ingalls, L3Harris, Boeing' },\n    'uk-european': { label: '\U0001F1EC\U0001F1E7 UK / European',    color: 'var(--gold)',   btnLabel: 'UK/European',   tooltip: 'UK and European defence majors — BAE Systems, Rolls-Royce, QinetiQ' },\n    'cyber-intel': { label: '\U0001F510 Cyber / Intel',     color: 'var(--purple)', btnLabel: 'Cyber/Intel',   tooltip: 'Cyber, intelligence and government IT services — Palantir, Leidos, CACI, SAIC, Booz Allen Hamilton' },\n    'drones':      { label: '\U0001F681 Drones / UAS',      color: 'var(--teal)',   btnLabel: 'Drones',        tooltip: 'Drone and autonomous systems manufacturers — AeroVironment, Kratos, Red Cat, Textron' },\n    'space':       { label: '\U0001F680 Space',             color: 'var(--blue)',   btnLabel: 'Space',         tooltip: 'Space and satellite defence plays — SpaceX, Rocket Lab, Planet Labs, AST SpaceMobile' },\n    'weapons':     { label: '\U0001F3AF Weapons / Systems', color: 'var(--rose)',   btnLabel: 'Weapons',       tooltip: 'Weapons, defence electronics and systems — TransDigm, HEICO, Axon, Olin, Mercury Systems, Leonardo DRS' },"
+    no_embed_js: ''
+    cls_suffix:
+      us-primes: primes
+      uk-european: uk
+      cyber-intel: cyber
+    sector_css: "  .cat-btn.active-us-primes   { background: var(--amber);  border-color: var(--amber);  color: var(--bg); }\n  .cat-btn.active-uk-european { background: var(--gold);   border-color: var(--gold);   color: var(--bg); }\n  .cat-btn.active-cyber-intel { background: var(--purple); border-color: var(--purple); color: var(--text); }\n  .cat-btn.active-drones      { background: var(--teal);   border-color: var(--teal);   color: var(--bg); }\n  .cat-btn.active-space       { background: var(--blue);   border-color: var(--blue);   color: var(--text); }\n  .cat-btn.active-weapons     { background: var(--rose);   border-color: var(--rose);   color: var(--bg); }\n  .cat-label.primes  { color: var(--amber); }\n  .cat-label.uk      { color: var(--gold); }\n  .cat-label.cyber   { color: var(--purple); }\n  .cat-label.drones  { color: var(--teal); }\n  .cat-label.space   { color: var(--blue); }\n  .cat-label.weapons { color: var(--rose); }"
+  Energy:
+    page_title: Energy
+    meta_description: Price history charts for all 20 Energy stocks. Filter by category.
+    h1: Energy
+    unit: stocks
+    old_count: 20
+    count: 20
+    chart_ticker: XOM
+    chart_name: ExxonMobil
+    symbol: NYSE:XOM
+    symbol_name: ExxonMobil
+    default_tf: 12M
+    note_suffix: ' · date range from Jan 2026'
+    tv_map_js: "\n    'SSE.L': 'LSE:SSE.',"
+    chart_cats_js: "\n    'oil-majors':        { label: '\U0001F6E2️ Oil Majors',          color: 'var(--amber)',   btnLabel: 'Oil Majors',       tooltip: 'Major integrated oil & gas companies — ExxonMobil, Chevron, Shell, BP, TotalEnergies, Equinor' },\n    'ep-refining':       { label: '⛽ E&P / Refining',       color: 'var(--accent2)', btnLabel: 'E&P/Refining',     tooltip: 'Exploration, production and refining companies — ConocoPhillips, Occidental, EOG Resources, Marathon Petroleum, Valero Energy' },\n    'oilfield-services': { label: '\U0001F527 Oilfield Services',    color: 'var(--accent)',  btnLabel: 'Oilfield Svcs',    tooltip: 'Oilfield services and equipment providers — SLB, Halliburton, Baker Hughes' },\n    'utilities':         { label: '⚡ Utilities',            color: 'var(--green)',   btnLabel: 'Utilities',        tooltip: 'Electric and gas utility companies — NextEra Energy, SSE plc' },\n    'clean-energy':      { label: '\U0001F331 Clean Energy',         color: 'var(--lime)',    btnLabel: 'Clean Energy',     tooltip: 'Renewable and clean energy companies — Enphase Energy, First Solar, Brookfield Renewable, Ørsted' },"
+    no_embed_js: ''
+    cls_suffix: {}
+    sector_css: "  .cat-btn.active-oil-majors        { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }\n  .cat-btn.active-ep-refining       { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }\n  .cat-btn.active-oilfield-services { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }\n  .cat-btn.active-utilities         { background: var(--green);   border-color: var(--green);   color: var(--bg); }\n  .cat-btn.active-clean-energy      { background: var(--lime);    border-color: var(--lime);    color: var(--bg); }\n  .cat-label.oil-majors        { color: var(--amber); }\n  .cat-label.ep-refining       { color: var(--accent2); }\n  .cat-label.oilfield-services { color: var(--accent); }\n  .cat-label.utilities         { color: var(--green); }\n  .cat-label.clean-energy      { color: var(--lime); }"
+  MegaCap:
+    page_title: Mega-Cap
+    meta_description: Price history charts for all 50 Global Mega-Cap Leaders stocks. Filter by category.
+    h1: Mega-Cap
+    unit: stocks
+    old_count: 50
+    count: 50
+    chart_ticker: AAPL
+    chart_name: Apple
+    symbol: NASDAQ:AAPL
+    symbol_name: Apple
+    default_tf: 12M
+    note_suffix: ' · date range from Jan 2026'
+    tv_map_js: "\n    'BRK-B':   'NYSE:BRK.B',\n    '2222.SR': 'TADAWUL:2222',"
+    chart_cats_js: "\n    'big-tech':          { label: '\U0001F4BB Big Tech',            color: 'var(--accent)',  btnLabel: 'Big Tech',         tooltip: 'Largest technology platform companies — Apple, Microsoft, NVIDIA, Alphabet, Meta, Amazon, Tesla, Netflix' },\n    'financials':        { label: '\U0001F3E6 Financials',          color: 'var(--amber)',   btnLabel: 'Financials',       tooltip: 'Global financial institutions — JPMorgan Chase, Bank of America, Berkshire Hathaway, Visa, Mastercard, Goldman Sachs, BlackRock' },\n    'healthcare':        { label: '\U0001F48A Healthcare',          color: 'var(--lime)',    btnLabel: 'Healthcare',       tooltip: 'Leading pharma and healthcare companies — Eli Lilly, UnitedHealth, J&J, AbbVie, Merck, Thermo Fisher, Abbott' },\n    'consumer':          { label: '\U0001F6CD️ Consumer',            color: 'var(--accent2)', btnLabel: 'Consumer',         tooltip: 'Global consumer brands — Procter & Gamble, Coca-Cola, PepsiCo, McDonald\\'s, Nike, Walmart, Costco' },\n    'energy-industrial': { label: '⚙️ Energy & Industrial', color: 'var(--green)',   btnLabel: 'Energy/Industrial',tooltip: 'Energy majors and industrials — ExxonMobil, Chevron, Caterpillar, Honeywell, GE Aerospace, RTX Corp, Boeing' },\n    'tech-semis':        { label: '\U0001F52C Tech & Semis',        color: '#a78bfa',        btnLabel: 'Tech/Semis',       tooltip: 'Semiconductor and chip companies — AMD, Qualcomm, Broadcom, TSMC, ASML, Arm Holdings, Intel' },\n    'global-growth':     { label: '\U0001F30F Global Growth',       color: '#f472b6',        btnLabel: 'Global Growth',    tooltip: 'International growth leaders — Saudi Aramco, Alibaba, SAP, Sony, Toyota, Novo Nordisk, HSBC' },"
+    no_embed_js: ''
+    cls_suffix: {}
+    sector_css: "  .cat-btn.active-big-tech          { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }\n  .cat-btn.active-financials        { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }\n  .cat-btn.active-healthcare        { background: var(--lime);    border-color: var(--lime);    color: var(--bg); }\n  .cat-btn.active-consumer          { background: var(--accent2); border-color: var(--accent2); color: var(--bg); }\n  .cat-btn.active-energy-industrial { background: var(--green);   border-color: var(--green);   color: var(--bg); }\n  .cat-btn.active-tech-semis        { background: #a78bfa;        border-color: #a78bfa;        color: var(--bg); }\n  .cat-btn.active-global-growth     { background: #f472b6;        border-color: #f472b6;        color: var(--bg); }\n  .cat-label.big-tech          { color: var(--accent); }\n  .cat-label.financials        { color: var(--amber); }\n  .cat-label.healthcare        { color: var(--lime); }\n  .cat-label.consumer          { color: var(--accent2); }\n  .cat-label.energy-industrial { color: var(--green); }\n  .cat-label.tech-semis        { color: #a78bfa; }\n  .cat-label.global-growth     { color: #f472b6; }"
+  Tech:
+    page_title: Technology
+    meta_description: 1-year price history charts for all 31 technology stocks. Filter by category.
+    h1: Technology
+    unit: stocks
+    old_count: 31
+    count: 31
+    chart_ticker: AAPL
+    chart_name: Apple
+    symbol: NASDAQ:AAPL
+    symbol_name: Apple
+    default_tf: 1W
+    note_suffix: ''
+    tv_map_js: ''
+    chart_cats_js: "\n    'mega-cap': {\n      key: 'mega-cap',\n      label: '\U0001F3C6 Mega Cap',\n      color: 'var(--accent)',\n      btnLabel: 'Mega Cap',\n      tooltip: 'The five largest US technology companies by market cap — Apple, Microsoft, Alphabet, Amazon, Meta',\n    },\n    'semiconductors': {\n      key: 'semiconductors',\n      label: '\U0001F52C Semiconductors',\n      color: 'var(--rose)',\n      btnLabel: 'Semiconductors',\n      tooltip: 'Chip designers and manufacturers powering AI, mobile, networking and data centre workloads',\n    },\n    'enterprise-software': {\n      key: 'enterprise-software',\n      label: '\U0001F5A5️ Enterprise Software',\n      color: 'var(--blue)',\n      btnLabel: 'Enterprise SW',\n      tooltip: 'Cloud and SaaS platforms serving enterprise customers — databases, CRM, ERP and analytics',\n    },\n    'cybersecurity': {\n      key: 'cybersecurity',\n      label: '\U0001F512 Cybersecurity',\n      color: 'var(--green)',\n      btnLabel: 'Cybersecurity',\n      tooltip: 'Next-generation security platforms protecting endpoints, networks and cloud infrastructure',\n    },\n    'consumer-platform': {\n      key: 'consumer-platform',\n      label: '\U0001F4F1 Consumer / Platform',\n      color: 'var(--purple)',\n      btnLabel: 'Consumer',\n      tooltip: 'Consumer-facing tech platforms — streaming, e-commerce, ride-sharing and music',\n    },\n    'hardware-infra': {\n      key: 'hardware-infra',\n      label: '\U0001F3D7️ Hardware / Infra',\n      color: 'var(--amber)',\n      btnLabel: 'Hardware',\n      tooltip: 'Networking hardware and data infrastructure — Cisco and Palantir serving enterprise and government',\n    },"
+    no_embed_js: ''
+    cls_suffix: {}
+    sector_css: "  .cat-btn.active-mega-cap            { background: var(--accent);  border-color: var(--accent);  color: var(--bg); }\n  .cat-btn.active-semiconductors      { background: var(--rose);    border-color: var(--rose);    color: var(--bg); }\n  .cat-btn.active-enterprise-software { background: var(--blue);    border-color: var(--blue);    color: var(--bg); }\n  .cat-btn.active-cybersecurity       { background: var(--green);   border-color: var(--green);   color: var(--bg); }\n  .cat-btn.active-consumer-platform   { background: var(--purple);  border-color: var(--purple);  color: var(--bg); }\n  .cat-btn.active-hardware-infra      { background: var(--amber);   border-color: var(--amber);   color: var(--bg); }\n  .cat-label.mega-cap            { color: var(--accent); }\n  .cat-label.semiconductors      { color: var(--rose); }\n  .cat-label.enterprise-software { color: var(--blue); }\n  .cat-label.cybersecurity       { color: var(--green); }\n  .cat-label.consumer-platform   { color: var(--purple); }\n  .cat-label.hardware-infra      { color: var(--amber); }"
