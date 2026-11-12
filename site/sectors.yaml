@@ -2237,3 +2237,673 @@ news:
       UBER: Uber
       CSCO: Cisco Systems
       PLTR: Palantir Technologies
+calculator:
+  AI:
+    page_title: AI Infrastructure
+    meta_description: What-If investment calculator — see what $100 to $10,000 invested in AI infrastructure stocks at the start of 2026 is worth today.
+    h1: AI
+    h1_word: What-If
+    unit: stocks
+    categories:
+    - id: memory
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: nuclear-ops
+      rgb: 255,107,53
+      bg: '0.1'
+      color: var(--accent2)
+      border: '0.25'
+    - id: smr
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: uranium
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.25'
+    - id: power-infra
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: dc-operators
+      rgb: 68,136,255
+      bg: '0.1'
+      color: var(--blue)
+      border: '0.25'
+    - id: hyperscalers
+      rgb: 167,139,250
+      bg: '0.1'
+      color: var(--indigo)
+      border: '0.25'
+    - id: ai-compute
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: fibre-optical
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: dsp-semi
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: test-equip
+      rgb: 148,163,184
+      bg: '0.1'
+      color: var(--slate)
+      border: '0.25'
+    - id: materials
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    cat_labels:
+    - id: memory
+      label: Memory
+    - id: nuclear-ops
+      label: Nuclear
+    - id: smr
+      label: SMR
+    - id: uranium
+      label: Uranium
+    - id: power-infra
+      label: Power
+    - id: dc-operators
+      label: Data Centres
+    - id: hyperscalers
+      label: Hyperscalers
+    - id: ai-compute
+      label: AI Compute
+    - id: fibre-optical
+      label: Fibre/Optical
+    - id: dsp-semi
+      label: DSP/Semi
+    - id: test-equip
+      label: Test Equip
+    - id: materials
+      label: Materials
+    names:
+      SNDK: SanDisk Corporation
+      WDC: Western Digital
+      285A: Kioxia Holdings
+      MU: Micron Technology
+      STX: Seagate Technology
+      MRVL: Marvell Technology
+      PSTG: Everpure
+      RR.: Rolls-Royce
+      CEG: Constellation Energy
+      VST: Vistra Corp
+      TLN: Talen Energy
+      BEP: Brookfield Renewable
+      BEPC: Brookfield Renewable Corp
+      GEV: GE Vernova
+      BWXT: BWX Technologies
+      SMR: NuScale Power
+      OKLO: Oklo Inc
+      NNE: NANO Nuclear
+      CCJ: Cameco
+      UEC: Uranium Energy
+      LEU: Centrus Energy
+      VRT: Vertiv Holdings
+      ETN: Eaton Corporation
+      POWL: Powell Industries
+      EQIX: Equinix
+      DLR: Digital Realty
+      AMT: American Tower
+      GOOGL: Alphabet
+      MSFT: Microsoft
+      AMZN: Amazon
+      META: Meta Platforms
+      IREN: Iris Energy
+      CORZ: Core Scientific
+      WULF: TeraWulf
+      HUT: Hut 8 Mining
+      SMCI: Super Micro Computer
+      DELL: Dell Technologies
+      COHR: Coherent Corp
+      LITE: Lumentum
+      AAOI: Applied Optoelectronics
+      FN: Fabrinet
+      MTSI: MACOM Technology
+      SMTC: Semtech
+      CRDO: Credo Technology
+      MXL: MaxLinear
+      KEYS: Keysight Technologies
+      VIAV: Viavi Solutions
+      AXTI: AXT Inc
+  Biotech:
+    page_title: Biotech
+    meta_description: What-If investment calculator — see what $100 to $10,000 invested in biotech stocks at the start of 2026 is worth today.
+    h1: Biotech
+    h1_word: Calculator
+    unit: stocks
+    categories:
+    - id: large-cap
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: uk-listed
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.25'
+    - id: gene-editing
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: genomics
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: oncology
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: mrna
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: rare-disease
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: metabolic
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    - id: neuroscience
+      rgb: 167,139,250
+      bg: '0.1'
+      color: var(--indigo)
+      border: '0.25'
+    cat_labels:
+    - id: large-cap
+      label: Large Cap
+    - id: uk-listed
+      label: UK Listed
+    - id: gene-editing
+      label: Gene Editing
+    - id: genomics
+      label: Genomics
+    - id: oncology
+      label: Oncology
+    - id: mrna
+      label: mRNA
+    - id: rare-disease
+      label: Rare Disease
+    - id: metabolic
+      label: Metabolic
+    - id: neuroscience
+      label: Neuroscience
+    names:
+      AMGN: Amgen
+      GILD: Gilead Sciences
+      REGN: Regeneron Pharmaceuticals
+      VRTX: Vertex Pharmaceuticals
+      BIIB: Biogen
+      BMY: Bristol-Myers Squibb
+      AZN: AstraZeneca
+      GSK: GSK plc
+      CRSP: CRISPR Therapeutics
+      BEAM: Beam Therapeutics
+      NTLA: Intellia Therapeutics
+      EDIT: Editas Medicine
+      ILMN: Illumina
+      PACB: Pacific Biosciences
+      NTRA: Natera
+      RXRX: Recursion Pharmaceuticals
+      INCY: Incyte Corporation
+      EXEL: Exelixis
+      ALNY: Alnylam Pharmaceuticals
+      RCUS: Arcus Biosciences
+      MRNA: Moderna
+      BNTX: BioNTech
+      NVAX: Novavax
+      BMRN: BioMarin Pharmaceutical
+      SRPT: Sarepta Therapeutics
+      COAG: Hemab Therapeutics
+      NVO: Novo Nordisk
+      LLY: Eli Lilly
+      LEGN: Legend Biotech
+      IONS: Ionis Pharmaceuticals
+  Crypto:
+    page_title: Crypto
+    meta_description: What-If investment calculator — see what $100 to $10,000 invested in crypto coins at the start of 2026 is worth today. Covers Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins.
+    h1: Crypto
+    h1_word: Calculator
+    unit: coins
+    categories:
+    - id: bitcoin
+      rgb: 251,146,60
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: layer1
+      rgb: 2,132,199
+      bg: '0.12'
+      color: var(--accent)
+      border: '0.3'
+    - id: payments
+      rgb: 79,70,229
+      bg: '0.15'
+      color: var(--indigo)
+      border: '0.35'
+    - id: emerging
+      rgb: 13,148,136
+      bg: '0.12'
+      color: var(--teal)
+      border: '0.3'
+    - id: meme
+      rgb: 180,83,9
+      bg: '0.12'
+      color: var(--gold)
+      border: '0.3'
+    - id: ai
+      rgb: 139,92,246
+      bg: '0.12'
+      color: '#a78bfa'
+      border: '0.3'
+    - id: infra
+      rgb: 22,163,74
+      bg: '0.12'
+      color: var(--green)
+      border: '0.3'
+    cat_labels:
+    - id: bitcoin
+      label: Bitcoin
+    - id: layer1
+      label: Layer 1
+    - id: payments
+      label: Payments
+    - id: emerging
+      label: Emerging
+    - id: infra
+      label: Infra
+    - id: meme
+      label: Meme
+    - id: ai
+      label: AI Tokens
+    names:
+      BTC: Bitcoin
+      ETH: Ethereum
+      SOL: Solana
+      BNB: BNB
+      ADA: Cardano
+      AVAX: Avalanche
+      XRP: XRP
+      XLM: Stellar
+      TRX: TRON
+      SUI: Sui
+      HBAR: Hedera
+      TON: Toncoin
+      ALGO: Algorand
+      MINA: Mina
+      POL: Polygon
+      DOT: Polkadot
+      LINK: Chainlink
+      DOGE: Dogecoin
+      PEPE: Pepe
+      TAO: Bittensor
+      FET: ASI Alliance
+      RNDR: Render
+      OCEAN: Ocean Protocol
+      GRT: The Graph
+      AGIX: SingularityNET
+      NMR: Numeraire
+      ALT: AltLayer
+      AIOZ: AIOZ Network
+      ARKM: Arkham
+      WLD: Worldcoin
+      NEAR: NEAR Protocol
+      ICP: Internet Computer
+      KAITO: Kaito
+      VIRTUAL: Virtuals Protocol
+  Defence:
+    page_title: Defence &amp; Aerospace
+    meta_description: What-If investment calculator — see what $100 to $10,000 invested in Defence &amp; Aerospace stocks at the start of 2026 is worth today.
+    h1: Defence
+    h1_word: Calculator
+    unit: stocks
+    categories:
+    - id: us-primes
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: uk-european
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.25'
+    - id: cyber-intel
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: drones
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: space
+      rgb: 68,136,255
+      bg: '0.1'
+      color: var(--blue)
+      border: '0.25'
+    - id: weapons
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    cat_labels:
+    - id: us-primes
+      label: US Prime
+    - id: uk-european
+      label: UK/European
+    - id: cyber-intel
+      label: Cyber/Intel
+    - id: drones
+      label: Drones
+    - id: space
+      label: Space
+    - id: weapons
+      label: Weapons
+    names:
+      LMT: Lockheed Martin
+      RTX: RTX Corporation
+      NOC: Northrop Grumman
+      GD: General Dynamics
+      HII: Huntington Ingalls
+      LHX: L3Harris Technologies
+      BA: Boeing
+      BA.L: BAE Systems
+      RR.L: Rolls-Royce
+      QQ.L: QinetiQ Group
+      PLTR: Palantir Technologies
+      LDOS: Leidos Holdings
+      CACI: CACI International
+      SAIC: SAIC
+      BAH: Booz Allen Hamilton
+      AVAV: AeroVironment
+      KTOS: Kratos Defense
+      RCAT: Red Cat Holdings
+      TXT: Textron
+      SPCX: SpaceX
+      RKLB: Rocket Lab
+      PL: Planet Labs
+      ASTS: AST SpaceMobile
+      TDG: TransDigm Group
+      HEI: HEICO Corporation
+      AXON: Axon Enterprise
+      OLN: Olin Corporation
+      MRCY: Mercury Systems
+      DRS: Leonardo DRS
+  Energy:
+    page_title: Energy
+    meta_description: What-If investment calculator — see what $100 to $10,000 invested in Energy stocks at the start of 2026 is worth today.
+    h1: Energy
+    h1_word: Calculator
+    unit: stocks
+    categories:
+    - id: oil-majors
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: ep-refining
+      rgb: 0,212,255
+      bg: '0.08'
+      color: var(--accent2)
+      border: '0.2'
+    - id: oilfield-services
+      rgb: 0,212,255
+      bg: '0.08'
+      color: var(--accent)
+      border: '0.2'
+    - id: utilities
+      rgb: 34,197,94
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: clean-energy
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    cat_labels:
+    - id: oil-majors
+      label: Oil Majors
+    - id: ep-refining
+      label: E&P/Refining
+    - id: oilfield-services
+      label: Oilfield Svcs
+    - id: utilities
+      label: Utilities
+    - id: clean-energy
+      label: Clean Energy
+    names:
+      XOM: ExxonMobil
+      CVX: Chevron
+      SHEL: Shell
+      BP: BP p.l.c.
+      TTE: TotalEnergies
+      EQNR: Equinor
+      COP: ConocoPhillips
+      OXY: Occidental Petroleum
+      EOG: EOG Resources
+      MPC: Marathon Petroleum
+      VLO: Valero Energy
+      SLB: SLB (Schlumberger)
+      HAL: Halliburton
+      BKR: Baker Hughes
+      NEE: NextEra Energy
+      SSE.L: SSE plc
+      ENPH: Enphase Energy
+      FSLR: First Solar
+      BEPC: Brookfield Renewable Corp
+      DNNGY: Ørsted
+  MegaCap:
+    page_title: Mega-Cap
+    meta_description: What-If investment calculator — see what $100 to $10,000 invested in Global Mega-Cap Leaders stocks at the start of 2026 is worth today.
+    h1: Mega-Cap
+    h1_word: Calculator
+    unit: stocks
+    categories:
+    - id: big-tech
+      rgb: 0,212,255
+      bg: '0.08'
+      color: var(--accent)
+      border: '0.2'
+    - id: financials
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: healthcare
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    - id: consumer
+      rgb: 255,120,50
+      bg: '0.1'
+      color: var(--accent2)
+      border: '0.25'
+    - id: energy-industrial
+      rgb: 34,197,94
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: tech-semis
+      rgb: 167,139,250
+      bg: '0.1'
+      color: '#a78bfa'
+      border: '0.25'
+    - id: global-growth
+      rgb: 244,114,182
+      bg: '0.1'
+      color: '#f472b6'
+      border: '0.25'
+    cat_labels:
+    - id: big-tech
+      label: Big Tech
+    - id: financials
+      label: Financials
+    - id: healthcare
+      label: Healthcare
+    - id: consumer
+      label: Consumer
+    - id: energy-industrial
+      label: Energy/Ind.
+    - id: tech-semis
+      label: Tech/Semis
+    - id: global-growth
+      label: Global Growth
+    names:
+      AAPL: Apple
+      MSFT: Microsoft
+      NVDA: NVIDIA
+      GOOGL: Alphabet
+      META: Meta Platforms
+      AMZN: Amazon
+      TSLA: Tesla
+      NFLX: Netflix
+      JPM: JPMorgan Chase
+      BAC: Bank of America
+      BRK-B: Berkshire Hathaway B
+      V: Visa
+      MA: Mastercard
+      GS: Goldman Sachs
+      BLK: BlackRock
+      LLY: Eli Lilly
+      UNH: UnitedHealth Group
+      JNJ: Johnson & Johnson
+      ABBV: AbbVie
+      MRK: Merck
+      TMO: Thermo Fisher Scientific
+      ABT: Abbott Laboratories
+      PG: Procter & Gamble
+      KO: Coca-Cola
+      PEP: PepsiCo
+      MCD: ''
+      NKE: Nike
+      WMT: Walmart
+      COST: Costco
+      XOM: ExxonMobil
+      CVX: Chevron
+      CAT: Caterpillar
+      HON: Honeywell
+      GE: GE Aerospace
+      RTX: RTX Corp
+      BA: Boeing
+      AMD: Advanced Micro Devices
+      QCOM: Qualcomm
+      AVGO: Broadcom
+      TSM: Taiwan Semiconductor
+      ASML: ASML Holding
+      ARM: Arm Holdings
+      INTC: Intel
+      2222.SR: Saudi Aramco
+      BABA: Alibaba Group
+      SAP: SAP SE
+      SONY: Sony Group
+      TM: Toyota Motor
+      NVO: Novo Nordisk
+      HSBC: HSBC Holdings
+  Tech:
+    page_title: Technology
+    meta_description: What-If investment calculator — see what $100 to $10,000 invested in technology stocks at the start of 2026 is worth today.
+    h1: Technology
+    h1_word: Calculator
+    unit: stocks
+    categories:
+    - id: mega-cap
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: semiconductors
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: enterprise-software
+      rgb: 68,136,255
+      bg: '0.1'
+      color: var(--blue)
+      border: '0.25'
+    - id: cybersecurity
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: consumer-platform
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: hardware-infra
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    cat_labels:
+    - id: mega-cap
+      label: Mega Cap
+    - id: semiconductors
+      label: Semiconductors
+    - id: enterprise-software
+      label: Enterprise SW
+    - id: cybersecurity
+      label: Cybersecurity
+    - id: consumer-platform
+      label: Consumer
+    - id: hardware-infra
+      label: Hardware
+    names:
+      AAPL: Apple
+      MSFT: Microsoft
+      GOOGL: Alphabet (Google)
+      AMZN: Amazon
+      META: Meta Platforms
+      NVDA: NVIDIA
+      AMD: Advanced Micro Devices
+      INTC: Intel
+      TSM: Taiwan Semiconductor
+      AVGO: Broadcom
+      QCOM: Qualcomm
+      ARM: Arm Holdings
+      ASML: ASML Holding
+      MU: Micron Technology
+      AMAT: Applied Materials
+      ORCL: Oracle
+      CRM: Salesforce
+      ADBE: Adobe
+      NOW: ServiceNow
+      SNOW: Snowflake
+      INTU: Intuit
+      CRWD: CrowdStrike
+      PANW: Palo Alto Networks
+      NET: Cloudflare
+      FTNT: Fortinet
+      NFLX: Netflix
+      SHOP: Shopify
+      SPOT: Spotify
+      UBER: Uber
+      CSCO: Cisco Systems
+      PLTR: Palantir Technologies
