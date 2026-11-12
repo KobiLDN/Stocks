@@ -3535,3 +3535,870 @@ heatmap:
       UBER: Uber
       CSCO: Cisco Systems
       PLTR: Palantir Technologies
+dashboard:
+  AI:
+    title: AI Infrastructure Investment Universe
+    meta_description: AI infrastructure stock dashboard — live prices, 52-week range, and momentum for 48 stocks across 12 categories including semiconductors, nuclear power, data centres, and memory.
+    h1: AI
+    unit: stocks
+    count: 48
+    chips:
+    - id: memory
+      label: Memory
+    - id: nuclear-ops
+      label: Nuclear
+    - id: smr
+      label: SMR
+    - id: uranium
+      label: Uranium
+    - id: power-infra
+      label: Power
+    - id: dc-operators
+      label: Data Centres
+    - id: hyperscalers
+      label: Hyperscalers
+    - id: ai-compute
+      label: AI Compute
+    - id: fibre-optical
+      label: Fibre/Optical
+    - id: dsp-semi
+      label: DSP/Semi
+    - id: test-equip
+      label: Test Equip
+    - id: materials
+      label: Materials
+    cat_colors:
+    - id: memory
+      value: var(--purple)
+    - id: nuclear-ops
+      value: var(--accent2)
+    - id: smr
+      value: var(--green)
+    - id: uranium
+      value: var(--gold)
+    - id: power-infra
+      value: var(--accent)
+    - id: dc-operators
+      value: var(--blue)
+    - id: hyperscalers
+      value: var(--indigo)
+    - id: ai-compute
+      value: var(--rose)
+    - id: fibre-optical
+      value: var(--teal)
+    - id: dsp-semi
+      value: var(--amber)
+    - id: test-equip
+      value: var(--slate)
+    - id: materials
+      value: var(--lime)
+    cat_labels:
+    - id: memory
+      label: Memory
+    - id: nuclear-ops
+      label: Nuclear Ops
+    - id: smr
+      label: SMR Builder
+    - id: uranium
+      label: Uranium
+    - id: power-infra
+      label: Power Infra
+    - id: dc-operators
+      label: DC Operator
+    - id: hyperscalers
+      label: Hyperscaler
+    - id: ai-compute
+      label: AI Compute
+    - id: fibre-optical
+      label: Fibre / Optical
+    - id: dsp-semi
+      label: DSP / Semi
+    - id: test-equip
+      label: Test Equipment
+    - id: materials
+      label: Materials
+    notes:
+    - id: SNDK
+      text: NAND pure-play. AI storage supercycle. Spun off WDC 2025.
+    - id: WDC
+      text: HDD duopoly. Fully committed to hyperscalers through FY end.
+    - id: 285A
+      text: 'SNDK''s JV partner. Pure NAND play. Japan listed — needs specialist broker. US OTC: KXIAY (T212 ISA alias).'
+    - id: MU
+      text: DRAM + NAND + HBM. Sold out of HBM for all of 2026. 11.5x fwd P/E.
+    - id: STX
+      text: HDD duopoly with WDC. AI data centre mass storage.
+    - id: MRVL
+      text: Custom silicon + AI networking. 800G/1.6T optical interconnects.
+    - id: P
+      text: Formerly Pure Storage (PSTG). Rebranded to Everpure, ticker changed to P, Apr 2026. AI data management platform.
+    - id: RR.
+      text: UK SMR contract signed Apr 2026. Wylfa, Anglesey — 3 units. Also jets + defence.
+    - id: CEG
+      text: Largest US nuclear operator. 21 reactors. 20yr deals with Meta & Microsoft.
+    - id: VST
+      text: Nuclear + gas + retail. 6.5GW nuclear capacity. 5M retail customers.
+    - id: TLN
+      text: 1,920MW to AWS through 2042. Data centre campus on-site.
+    - id: BEP
+      text: 51% owner of Westinghouse — services 50% of world's nuclear plants.
+    - id: BEPC
+      text: Corporate share class of BEP. Same Westinghouse exposure. More liquid than LP units.
+    - id: GEV
+      text: BWRX-300 SMR — first in Western hemisphere (Ontario). GE Hitachi JV.
+    - id: BWXT
+      text: Sole US Navy reactor maker. "Foundry for SMRs." $7.3B backlog, +50% YoY.
+    - id: SMR
+      text: Only NRC-certified SMR design. 77MWe modules. TVA 6GW deal. Speculative.
+    - id: OKLO
+      text: Sam Altman-backed. Fast-fission + waste recycling. -75% from ATH of $189.
+    - id: NNE
+      text: 'Microreactors: KRONOS, ZEUS, LOKI. Space nuclear mandate catalyst. Pre-revenue.'
+    - id: CCJ
+      text: World's largest uranium miner. Also 49% owner of Westinghouse.
+    - id: UEC
+      text: US-focused uranium miner. Lower entry price. Higher volatility.
+    - id: LEU
+      text: Only licensed US supplier of HALEU fuel for advanced reactors. Strategic monopoly.
+    - id: VRT
+      text: Data centre cooling & power management. Every AI data centre needs this.
+    - id: ETN
+      text: Electrical components & transformers. Grid infrastructure backbone.
+    - id: POWL
+      text: Switchgear & electrical infrastructure. Less-known but strong AI tailwind.
+    - id: EQIX
+      text: Largest global colocation provider. 260+ data centres, 70 metros worldwide.
+    - id: DLR
+      text: Major DC REIT. 300+ facilities across 25 countries. AI demand driving occupancy.
+    - id: AMT
+      text: Tower REIT expanding into edge compute. 220,000+ sites globally.
+    - id: GOOGL
+      text: Google Cloud + TPU AI chips. $75B capex planned for 2026 data centres.
+    - id: MSFT
+      text: Azure + OpenAI partnership. $80B data centre capex in 2026. Copilot monetisation.
+    - id: AMZN
+      text: AWS dominates cloud AI infra. Trainium & Inferentia custom AI chips. Bedrock platform.
+    - id: META
+      text: $65B AI capex 2026. Llama open-source models. Building 2GW data centre campus.
+    - id: IREN
+      text: Pivoting from Bitcoin mining to AI GPU compute. Renewable-powered data centres.
+    - id: CORZ
+      text: Crypto→AI pivot. 200MW CoreWeave HPC deal. Emerged from bankruptcy 2023.
+    - id: WULF
+      text: Nuclear-powered Bitcoin/AI compute. 95% zero-carbon. Building HPC capacity.
+    - id: HUT
+      text: Bitcoin mining + AI compute pivot. US HPC expansion. High volatility.
+    - id: SMCI
+      text: AI server manufacturer. Top Nvidia GPU server integrator. Accounting controversy overhang.
+    - id: DELL
+      text: AI server & storage giant. PowerEdge AI servers. $10B+ AI infrastructure backlog.
+    - id: COHR
+      text: 800G/1.6T optical transceivers & components. Largest vertically integrated photonics vendor.
+    - id: LITE
+      text: High-power lasers & optical components. 3D sensing + datacoms lasers for AI hyperscaler buildout.
+    - id: AAOI
+      text: Pure-play 400G/800G datacenter transceivers. Small-cap with high AI data centre concentration.
+    - id: FN
+      text: Contract manufacturer of optical/photonic products. Makes 800G modules for Nvidia, Cisco, Ciena.
+    - id: MTSI
+      text: RF & microwave ICs. 800G/1.6T PAM4 DSPs enabling high-speed data centre optical interconnects.
+    - id: SMTC
+      text: ClearEdge DSP for 100G–400G optical links + LoRa IoT. Data centre signal processing silicon.
+    - id: CRDO
+      text: High-speed SerDes & Active Electrical Cables for AI cluster interconnects. 800G/1.6T pure-play semi.
+    - id: MXL
+      text: High-speed broadband & data centre connectivity ICs. Restructuring with AI optics tailwind.
+    - id: KEYS
+      text: Electronic test & measurement leader. Hyperscaler R&D and 800G/1.6T network buildout drives demand.
+    - id: VIAV
+      text: Fibre optic test, inspection & network instruments. Deployed in all major 400G/800G rollouts globally.
+    - id: AXTI
+      text: InP & GaAs compound semiconductor substrates. Critical raw material for optical transceivers & photonics.
+  Biotech:
+    title: Biotech Stock Dashboard
+    meta_description: Biotech stock dashboard — live prices, 52-week range, and momentum for 30 stocks across 9 categories including gene editing, genomics, oncology, and mRNA.
+    h1: Biotech
+    unit: stocks
+    count: 30
+    chips:
+    - id: large-cap
+      label: Large Cap
+    - id: uk-listed
+      label: UK Listed
+    - id: gene-editing
+      label: Gene Editing
+    - id: genomics
+      label: Genomics
+    - id: oncology
+      label: Oncology
+    - id: mrna
+      label: mRNA
+    - id: rare-disease
+      label: Rare Disease
+    - id: metabolic
+      label: Metabolic
+    - id: neuroscience
+      label: Neuroscience
+    cat_colors:
+    - id: large-cap
+      value: var(--accent)
+    - id: uk-listed
+      value: var(--gold)
+    - id: gene-editing
+      value: var(--green)
+    - id: genomics
+      value: var(--teal)
+    - id: oncology
+      value: var(--rose)
+    - id: mrna
+      value: var(--purple)
+    - id: rare-disease
+      value: var(--amber)
+    - id: metabolic
+      value: var(--lime)
+    - id: neuroscience
+      value: var(--indigo)
+    cat_labels:
+    - id: large-cap
+      label: Large Cap
+    - id: uk-listed
+      label: UK Listed
+    - id: gene-editing
+      label: Gene Editing
+    - id: genomics
+      label: Genomics
+    - id: oncology
+      label: Oncology
+    - id: mrna
+      label: mRNA
+    - id: rare-disease
+      label: Rare Disease
+    - id: metabolic
+      label: Metabolic
+    - id: neuroscience
+      label: Neuroscience
+    notes:
+    - id: AMGN
+      text: Diversified biotech giant. Inflammation, oncology & bone health. Strong cash generation.
+    - id: GILD
+      text: HIV/HBV dominance. Oncology pivot via Kite Pharma CAR-T. Lenacapavir long-acting HIV.
+    - id: REGN
+      text: Dupixent blockbuster growing fast across 7 indications. Oncology & eye disease pipeline.
+    - id: VRTX
+      text: CF monopoly via Trikafta. Pain pipeline (VX-548) next major catalyst. High-margin business.
+    - id: BIIB
+      text: Leqembi (Alzheimer's) first mover. MS franchise. Acquired SAGE neuroscience portfolio.
+    - id: BMY
+      text: Revlimid cliff navigated. Opdivo/Eliquis franchise. Cardiovascular & oncology pipeline strong.
+    - id: AZN
+      text: Oncology powerhouse. Tagrisso, Lynparza & Calquence driving double-digit sales growth.
+    - id: GSK
+      text: Shingrix vaccine + RSV (Arexvy). Specialty medicines pivot. HIV franchise via ViiV.
+    - id: CRSP
+      text: Casgevy — world's first approved CRISPR therapy (sickle cell & beta-thal). Pure-play gene editing.
+    - id: BEAM
+      text: Base editing pioneer — more precise than CRISPR. Blood disorders & liver disease clinical stage.
+    - id: NTLA
+      text: In vivo CRISPR editing. TTR amyloidosis & liver targets. Regeneron partnership validates platform.
+    - id: EDIT
+      text: Retinal disease (EDIT-301) focus. Lower-cost CRISPR approach. Speculative clinical stage.
+    - id: ILMN
+      text: Sequencing monopoly. NovaSeq X drives cost-per-genome down. AI integration accelerating.
+    - id: PACB
+      text: Long-read HiFi sequencing complements short-read. Complex genomics & rare disease niche.
+    - id: NTRA
+      text: Liquid biopsy leader. Signatera MRD monitoring + Panorama NIPT. Oncology expansion.
+    - id: RXRX
+      text: AI-first drug discovery platform. NVIDIA partnership. Biological foundation model at scale.
+    - id: INCY
+      text: Jakafi cash cow. Opzelura (atopic derm) growing fast. Deep oncology & inflammation pipeline.
+    - id: EXEL
+      text: Cabometyx for renal & liver cancer. Profitability inflection. BMS partnership royalties growing.
+    - id: ALNY
+      text: RNAi therapy pioneer. Leqvio (cholesterol, Novartis) + TTR franchise. Platform validated.
+    - id: RCUS
+      text: ARC-7 combo (zimberelimab + domvanalimab) Phase 3 pivotal data. Gilead partnership backing.
+    - id: MRNA
+      text: Post-COVID pivot. RSV mResvia approved. Personalised cancer vaccine (mRNA-4157) Phase 3.
+    - id: BNTX
+      text: BNT111 melanoma vaccine + oncology pipeline beyond COVID. EU-listed biotech platform.
+    - id: NVAX
+      text: Protein-subunit COVID + combo flu/COVID nuvaxovid. Sanofi partnership provides revenue floor.
+    - id: BMRN
+      text: PKU, MPS & achondroplasia. Voxzogo (dwarfism) growing. Steady orphan drug cash generation.
+    - id: SRPT
+      text: Duchenne muscular dystrophy leader. Elevidys gene therapy approved. Exon-skipping franchise.
+    - id: COAG
+      text: Rare bleeding disorders. Haemophilia A/B and von Willebrand disease pipeline. Recent IPO.
+    - id: NVO
+      text: Ozempic/Wegovy GLP-1 duopoly. Obesity mega-trend. CagriSema next-gen combination.
+    - id: LLY
+      text: Mounjaro/Zepbound GLP-1. Donanemab (Alzheimer's) approved. Most valuable pharma company.
+    - id: LEGN
+      text: Carvykti (myeloma CAR-T) with J&J. Cell therapy pure-play. Best-in-class response rates.
+    - id: IONS
+      text: Antisense oligonucleotide (ASO) platform. Spinraza (SMA) + 40-drug pipeline across CNS & rare disease.
+  Crypto:
+    title: Crypto — Dashboard
+    meta_description: Crypto dashboard — live prices, 52-week range, and momentum for 19 coins across Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme.
+    h1: Crypto
+    unit: coins
+    count: 32
+    chips:
+    - id: bitcoin
+      label: Bitcoin
+    - id: layer1
+      label: Layer 1
+    - id: payments
+      label: Payments
+    - id: emerging
+      label: Emerging
+    - id: infra
+      label: Infra
+    - id: meme
+      label: Meme
+    - id: ai
+      label: AI Tokens
+    cat_colors:
+    - id: bitcoin
+      value: var(--amber)
+    - id: layer1
+      value: var(--accent)
+    - id: payments
+      value: var(--indigo)
+    - id: emerging
+      value: var(--teal)
+    - id: infra
+      value: var(--green)
+    - id: meme
+      value: var(--gold)
+    - id: ai
+      value: '#a78bfa'
+    cat_labels:
+    - id: bitcoin
+      label: Bitcoin
+    - id: layer1
+      label: Layer 1
+    - id: payments
+      label: Payments
+    - id: emerging
+      label: Emerging
+    - id: infra
+      label: Infra
+    - id: meme
+      label: Meme
+    - id: ai
+      label: AI Tokens
+    notes:
+    - id: BTC
+      text: Bitcoin — the original decentralised digital currency. Largest crypto asset by market cap. Hard-capped at 21 million coins.
+    - id: ETH
+      text: Ethereum — the leading smart-contract platform. Proof-of-stake since the Merge (2022). Home to the majority of DeFi, NFT, and L2 activity.
+    - id: SOL
+      text: Solana — high-throughput L1. Fast, low-cost transactions via proof-of-history. Growing DeFi and consumer app ecosystem.
+    - id: BNB
+      text: BNB — native token of BNB Chain. Used for trading fee discounts on Binance and powering the BSC DeFi ecosystem.
+    - id: ADA
+      text: Cardano — peer-reviewed proof-of-stake L1. Academic, rigorous development approach. Growing DeFi ecosystem via Plutus smart contracts.
+    - id: AVAX
+      text: Avalanche — high-speed L1 with subnet architecture. Sub-second finality. Competing with Ethereum for institutional DeFi and gaming.
+    - id: XRP
+      text: XRP — Ripple Labs payment token. Designed for fast, low-cost cross-border settlement. SEC lawsuit resolved; growing institutional adoption.
+    - id: XLM
+      text: Stellar — open-source payment network for cross-border transactions. XLM token. Backed by Stellar Development Foundation; IBM World Wire partner.
+    - id: TRX
+      text: TRON — high-throughput blockchain. Largest USDT settlement network by volume. Focus on digital content, DeFi, and stablecoin payments.
+    - id: SUI
+      text: Sui — Move-based L1 from Mysten Labs (ex-Diem/Facebook). Parallel transaction execution for high throughput. Focus on gaming and consumer apps.
+    - id: HBAR
+      text: Hedera — enterprise-grade public ledger using hashgraph consensus. Governed by Google, IBM, Boeing and others. Fast, energy-efficient, low fees.
+    - id: TON
+      text: Toncoin — The Open Network. Telegram-backed blockchain with 900M+ Telegram users as potential on-ramp. Native payments and mini-apps in Telegram.
+    - id: ALGO
+      text: Algorand — pure proof-of-stake L1. Instant finality, carbon-negative. Used for CBDC pilots and real-world asset tokenisation. Academic origins.
+    - id: MINA
+      text: Mina Protocol — the world's lightest blockchain (~22KB constant size). ZK-proofs maintain chain state. Focus on privacy and decentralised identity.
+    - id: POL
+      text: Polygon — Ethereum L2 and scaling network. PoS chain and zkEVM rollup. Token rebranded from MATIC to POL in 2024. Large enterprise and gaming adoption.
+    - id: DOT
+      text: Polkadot — multi-chain relay network enabling blockchain interoperability. Parachain architecture. Web3 Foundation-backed. Substrate framework.
+    - id: LINK
+      text: Chainlink — the leading decentralised oracle network. Connects smart contracts to real-world data, APIs, and off-chain computation. Critical DeFi infrastructure.
+    - id: DOGE
+      text: Dogecoin — the original meme coin. Strong retail community. Accepted by Tesla and SpaceX. Elon Musk endorsements drive recurring price action.
+    - id: PEPE
+      text: Pepe — Ethereum-based meme token inspired by Pepe the Frog. Launched April 2023. No utility — pure community and speculative momentum play.
+    - id: TAO
+      text: Bittensor — decentralised AI/ML marketplace where models compete and earn TAO for providing intelligence. Largest AI crypto by market cap (~$3.4B).
+    - id: FET
+      text: Artificial Superintelligence Alliance (ASI) — merger of Fetch.ai, SingularityNET, and Ocean Protocol. Autonomous AI agents for DeFi, data markets, and automation.
+    - id: RNDR
+      text: Render Network — decentralised GPU marketplace for AI rendering, inference, and 3D visual compute. Artists and AI workloads rent GPU power from node operators.
+    - id: OCEAN
+      text: Ocean Protocol — data marketplace enabling secure sharing and monetisation of datasets. Critical infrastructure for training AI models at scale.
+    - id: GRT
+      text: The Graph — "Google for Web3". Decentralised indexing protocol providing structured on-chain data essential for AI analytics and on-chain intelligence.
+    - id: AGIX
+      text: SingularityNET — AGI research and AI services marketplace co-founded by Ben Goertzel. Developers publish and monetise AI algorithms as microservices.
+    - id: NMR
+      text: Numeraire — Numerai hedge fund token. Data scientists stake NMR when submitting AI predictions to a global tournament; correct predictions earn returns.
+    - id: ALT
+      text: AltLayer — AI-powered rollup infrastructure using restaking. Enables one-click deployment of verifiable rollup networks for developers and enterprises.
+    - id: AIOZ
+      text: AIOZ Network — decentralised AI and media streaming CDN. GPU node operators earn AIOZ for streaming video and handling AI compute workloads.
+    - id: ARKM
+      text: Arkham Intelligence — on-chain analytics and intelligence exchange. ARKM tokens used to buy and sell intelligence on crypto wallets and entities.
+    - id: WLD
+      text: Worldcoin — Sam Altman's identity and AI project. Uses iris biometrics (the Orb device) to verify humanhood as AI becomes indistinguishable from people.
+    - id: NEAR
+      text: NEAR Protocol — AI-ready Layer 1 with chain abstraction. Positions itself as the execution layer for autonomous AI agents operating across multiple blockchains.
+    - id: ICP
+      text: Internet Computer — Dfinity's blockchain that runs AI models and smart contracts directly on-chain without traditional cloud infrastructure.
+    - id: KAITO
+      text: Kaito — AI-powered crypto research and intelligence platform. Aggregates and ranks the most relevant information across Web3 using AI.
+    - id: VIRTUAL
+      text: Virtuals Protocol — tokenised AI agent economies. Each AI agent has an economic identity, can earn revenue, and is co-owned by its community via token.
+  Defence:
+    title: Defence &amp; Aerospace — Dashboard
+    meta_description: Defence &amp; Aerospace stock dashboard — live prices, 52-week range, and momentum for 29 stocks across 6 categories including US primes, cyber, drones, and space.
+    h1: Defence
+    unit: stocks
+    count: 29
+    chips:
+    - id: us-primes
+      label: US Prime
+    - id: uk-european
+      label: UK/European
+    - id: cyber-intel
+      label: Cyber/Intel
+    - id: drones
+      label: Drones
+    - id: space
+      label: Space
+    - id: weapons
+      label: Weapons
+    cat_colors:
+    - id: us-primes
+      value: var(--amber)
+    - id: uk-european
+      value: var(--gold)
+    - id: cyber-intel
+      value: var(--purple)
+    - id: drones
+      value: var(--teal)
+    - id: space
+      value: var(--blue)
+    - id: weapons
+      value: var(--rose)
+    cat_labels:
+    - id: us-primes
+      label: US Primes
+    - id: uk-european
+      label: UK/European
+    - id: cyber-intel
+      label: Cyber / Intel
+    - id: drones
+      label: Drones
+    - id: space
+      label: Space
+    - id: weapons
+      label: Weapons / Systems
+    notes:
+    - id: LMT
+      text: F-35 programme, classified US government contracts, space systems.
+    - id: RTX
+      text: Missiles, radar, jet engines (Pratt & Whitney). Patriot air defence beneficiary.
+    - id: NOC
+      text: B-21 Raider stealth bomber, space systems, electronic warfare.
+    - id: GD
+      text: Gulfstream jets, submarines, combat vehicles, IT services.
+    - id: HII
+      text: US Navy's only nuclear-powered aircraft carrier builder.
+    - id: LHX
+      text: Communications, electronic warfare, sensor systems.
+    - id: BA
+      text: F-15/F-18 jets, KC-46 tanker, Space Launch System. Turnaround story.
+    - id: BA.L
+      text: Europe's largest defence company. Ships, aircraft, cyber. NATO spending tailwind.
+    - id: RR.L
+      text: Defence jet engines (Typhoon, F-35B), SMR developer, naval propulsion.
+    - id: QQ.L
+      text: UK/US defence R&D, test & evaluation, autonomous systems.
+    - id: PLTR
+      text: AI-powered data analytics for US/UK military and intelligence agencies.
+    - id: LDOS
+      text: US federal IT, cybersecurity, health IT. Large Pentagon contract base.
+    - id: CACI
+      text: Intelligence community IT, cyber, enterprise IT for US DoD.
+    - id: SAIC
+      text: Defence IT and engineering services, C4ISR systems integration.
+    - id: BAH
+      text: Government consulting, cyber, AI for US national security agencies.
+    - id: AVAV
+      text: Switchblade loitering munitions, Puma & Raven tactical UAS. Ukraine demand.
+    - id: KTOS
+      text: Affordable unmanned combat aerial vehicles (UCAV), hypersonic targets.
+    - id: RCAT
+      text: Small attack drones (Black Widow), counter-drone systems for US Army.
+    - id: TXT
+      text: Bell helicopters, Cessna aircraft, armed drones, combat vehicles.
+    - id: SPCX
+      text: Largest IPO in history. Falcon 9 + Starship launch vehicles, Starlink satellite internet, Dragon spacecraft. Founded 2002 by Elon Musk.
+    - id: RKLB
+      text: Electron small-sat launcher, Neutron medium-lift, space systems for DoD/NRO.
+    - id: PL
+      text: Daily earth imagery constellation. Intelligence and defence earth observation contracts.
+    - id: ASTS
+      text: Space-based broadband direct-to-device. US government communications contracts.
+    - id: TDG
+      text: Proprietary aerospace components. Near-monopoly aftermarket pricing power.
+    - id: HEI
+      text: FAA-approved aerospace parts. Military/commercial MRO compound compounder.
+    - id: AXON
+      text: Tasers, bodycams, AI-powered public safety platform. Growing military/border use.
+    - id: OLN
+      text: Winchester Ammunition — small-calibre military and commercial rounds supplier.
+    - id: MRCY
+      text: Mission-critical processing for radar, EW, sensor fusion in US military platforms.
+    - id: DRS
+      text: US Army ground vehicle electronics, thermal imaging, naval power systems.
+  Energy:
+    title: Energy — Dashboard
+    meta_description: Energy stock dashboard — live prices, 52-week range, and momentum for 20 stocks across 5 categories including oil majors, E&amp;P, oilfield services, utilities and clean energy.
+    h1: Energy
+    unit: stocks
+    count: 20
+    chips:
+    - id: oil-majors
+      label: Oil Majors
+    - id: ep-refining
+      label: E&amp;P / Refining
+    - id: oilfield-services
+      label: Oilfield Services
+    - id: utilities
+      label: Utilities
+    - id: clean-energy
+      label: Clean Energy
+    cat_colors:
+    - id: oil-majors
+      value: var(--amber)
+    - id: ep-refining
+      value: var(--accent2)
+    - id: oilfield-services
+      value: var(--accent)
+    - id: utilities
+      value: var(--green)
+    - id: clean-energy
+      value: var(--lime)
+    cat_labels:
+    - id: oil-majors
+      label: Oil Majors
+    - id: ep-refining
+      label: E&P / Refining
+    - id: oilfield-services
+      label: Oilfield Services
+    - id: utilities
+      label: Utilities
+    - id: clean-energy
+      label: Clean Energy
+    notes:
+    - id: XOM
+      text: World's largest publicly traded oil company. Permian Basin growth, LNG expansion, chemical diversification.
+    - id: CVX
+      text: Major US oil & gas supermajor. Strong Permian Basin position, Tengiz project in Kazakhstan.
+    - id: SHEL
+      text: Global LNG leader and integrated energy major. Transitioning toward gas and low-carbon energy.
+    - id: BP
+      text: UK-based oil major. High dividend yield, restructuring toward cleaner energy and gas.
+    - id: TTE
+      text: French supermajor with strong LNG, offshore deepwater, and growing renewables portfolio.
+    - id: EQNR
+      text: Norwegian state-controlled energy company. North Sea operator, growing offshore wind.
+    - id: COP
+      text: Pure-play E&P company. Low-cost Permian and Alaskan assets, disciplined capital returns.
+    - id: OXY
+      text: Permian Basin pure-play E&P backed by Berkshire Hathaway. Carbon capture initiatives.
+    - id: EOG
+      text: Top-tier US shale E&P. Premium drilling inventory, high returns, growing dividends.
+    - id: MPC
+      text: Leading US petroleum refiner. Gulf Coast and Midwest assets. MPLX MLP distribution.
+    - id: VLO
+      text: Largest US independent refiner. Diversified refinery footprint, renewable diesel growth.
+    - id: SLB
+      text: World's largest oilfield services company. Digital solutions, reservoir characterisation.
+    - id: HAL
+      text: Second-largest oilfield services firm. Completion and production services, digital.
+    - id: BKR
+      text: Diversified energy tech and oilfield services. LNG and industrial energy solutions.
+    - id: NEE
+      text: World's largest renewable energy company. Florida utility plus vast wind and solar portfolio.
+    - id: SSE.L
+      text: UK integrated energy company. Networks, renewables (wind), and electricity transmission.
+    - id: ENPH
+      text: Leading microinverter maker for residential solar. IQ system, battery storage expansion.
+    - id: FSLR
+      text: US-based thin-film solar panel manufacturer. Beneficiary of US IRA incentives.
+    - id: BEPC
+      text: Brookfield Renewable Corp — global hydro, wind, solar and battery storage operator.
+    - id: DNNGY
+      text: Danish offshore wind giant (Ørsted). Pioneer in large-scale offshore wind development.
+  MegaCap:
+    title: Mega-Cap — Dashboard
+    meta_description: Global Mega-Cap Leaders dashboard — live prices, 52-week range, and momentum for 50 mega-cap stocks across 7 categories including Big Tech, Financials, Healthcare, Consumer, Energy &amp; Industrial, Tech &amp; Semis, and Global Growth.
+    h1: Mega-Cap
+    unit: stocks
+    count: 50
+    chips:
+    - id: big-tech
+      label: Big Tech
+    - id: financials
+      label: Financials
+    - id: healthcare
+      label: Healthcare
+    - id: consumer
+      label: Consumer
+    - id: energy-industrial
+      label: Energy &amp; Industrial
+    - id: tech-semis
+      label: Tech &amp; Semis
+    - id: global-growth
+      label: Global Growth
+    cat_colors:
+    - id: big-tech
+      value: var(--accent)
+    - id: financials
+      value: var(--amber)
+    - id: healthcare
+      value: var(--lime)
+    - id: consumer
+      value: var(--accent2)
+    - id: energy-industrial
+      value: var(--green)
+    - id: tech-semis
+      value: '#a78bfa'
+    - id: global-growth
+      value: '#f472b6'
+    cat_labels:
+    - id: big-tech
+      label: Big Tech
+    - id: financials
+      label: Financials
+    - id: healthcare
+      label: Healthcare
+    - id: consumer
+      label: Consumer
+    - id: energy-industrial
+      label: Energy & Industrial
+    - id: tech-semis
+      label: Tech & Semis
+    - id: global-growth
+      label: Global Growth
+    notes:
+    - id: AAPL
+      text: Largest company by market cap. iPhone, Mac, services (App Store, iCloud). Massive buyback program and growing services margin.
+    - id: MSFT
+      text: Azure cloud hyperscaler. Copilot AI across Office 365. GitHub, LinkedIn, Xbox, and enterprise software dominance.
+    - id: NVDA
+      text: Dominant AI GPU maker. H100/B100 data centre infrastructure demand. CUDA moat and software ecosystem.
+    - id: GOOGL
+      text: Search and advertising dominance. YouTube, Google Cloud (GCP), Waymo. DeepMind AI research leadership.
+    - id: META
+      text: Facebook/Instagram/WhatsApp ad empire. Llama AI models, Ray-Ban glasses, and Reality Labs AR/VR investment.
+    - id: AMZN
+      text: AWS cloud leader. E-commerce marketplace and Prime ecosystem. Advertising and logistics vertical integration.
+    - id: TSLA
+      text: EV market pioneer. Full Self-Driving (FSD) software, energy storage (Megapack), Optimus humanoid robot.
+    - id: NFLX
+      text: Global streaming leader. Ad-supported tier growth, live events (NFL, WWE), and password-sharing crackdown payoff.
+    - id: JPM
+      text: Largest US bank by assets. Investment banking, wealth management, Chase consumer banking, JPM Coin.
+    - id: BAC
+      text: Major US retail bank with Merrill Lynch wealth management. AI-driven efficiency (Erica), strong deposit base.
+    - id: BRK-B
+      text: Berkshire Hathaway B shares. Buffett's diversified conglomerate — BNSF, GEICO, energy, and equity portfolio.
+    - id: V
+      text: Visa payment network. Secular cashless shift. High-margin, high-volume cross-border transaction volumes.
+    - id: MA
+      text: Mastercard global payments. Premium positioning, strong data analytics, and emerging market penetration.
+    - id: GS
+      text: Goldman Sachs. Investment banking, equity underwriting, asset and wealth management, and market-making.
+    - id: BLK
+      text: BlackRock — world's largest asset manager. iShares ETF dominance, Aladdin risk platform, Preqin alt-data.
+    - id: LLY
+      text: Eli Lilly — GLP-1 revolution leader. Mounjaro/Zepbound for weight loss, Verzenio for breast cancer.
+    - id: UNH
+      text: UnitedHealth Group — largest US health insurer. Optum health services, pharmacy benefit management.
+    - id: JNJ
+      text: Johnson & Johnson — MedTech and pharma post-Kenvue. Stelara successor drugs, surgical robotics.
+    - id: ABBV
+      text: AbbVie — Humira successor drugs Skyrizi and Rinvoq. Neuroscience and oncology pipeline depth.
+    - id: MRK
+      text: Merck — Keytruda cancer immunotherapy franchise. Gardasil HPV vaccine, diabetes (Januvia).
+    - id: TMO
+      text: Thermo Fisher Scientific — life science tools, instruments, and clinical research services.
+    - id: ABT
+      text: Abbott Laboratories — FreeStyle Libre CGM, heart devices (structural heart), and nutritional products.
+    - id: PG
+      text: Procter & Gamble — Tide, Gillette, Pampers, Oral-B. Global pricing power and defensive cash flow.
+    - id: KO
+      text: Coca-Cola — iconic brand, 200+ markets. Dividend Aristocrat, beverages portfolio beyond cola.
+    - id: PEP
+      text: PepsiCo — Frito-Lay snacks, Gatorade, Quaker. Diversified food and beverage revenue with pricing power.
+    - id: MCD
+      text: McDonald's — global QSR franchise. Tech-driven loyalty programme, delivery, AI drive-thru ordering.
+    - id: NKE
+      text: Nike — global athletic footwear and apparel leader. DTC expansion and direct digital channel.
+    - id: WMT
+      text: Walmart — omnichannel retail. Walmart+ membership, advertising revenue, and fintech growth.
+    - id: COST
+      text: Costco — membership warehouse model. Extremely high renewal rates, private-label Kirkland brand.
+    - id: XOM
+      text: ExxonMobil — Permian Basin growth, Pioneer acquisition, LNG capacity expansion and low-carbon investments.
+    - id: CVX
+      text: Chevron — Permian Basin, Hess acquisition, disciplined capital returns and cash flow generation.
+    - id: CAT
+      text: Caterpillar — construction and mining equipment. Benefiting from infrastructure spending and commodity demand.
+    - id: HON
+      text: Honeywell — aerospace avionics, building automation, industrial software (Process Solutions).
+    - id: GE
+      text: GE Aerospace — jet engines (LEAP, GEnx), defense, and power systems after conglomerate split.
+    - id: RTX
+      text: RTX Corp (Raytheon) — Patriot missiles, Pratt & Whitney engines, Collins aerospace systems.
+    - id: BA
+      text: Boeing — 737 MAX recovery, 777X programme, defense satellites, and services revenue.
+    - id: AMD
+      text: Advanced Micro Devices — EPYC server CPUs, Instinct MI300 AI GPUs competing with NVIDIA.
+    - id: QCOM
+      text: Qualcomm — Snapdragon mobile SoCs, automotive semiconductor platform, IoT.
+    - id: AVGO
+      text: Broadcom — networking ASICs, VMware cloud, and AI custom chip (XPU) partnerships with hyperscalers.
+    - id: TSM
+      text: Taiwan Semiconductor — world's largest contract chip foundry. Apple, NVIDIA, AMD, Qualcomm as clients.
+    - id: ASML
+      text: ASML — sole maker of EUV lithography machines. Monopoly on leading-edge chip production tooling.
+    - id: ARM
+      text: Arm Holdings — CPU architecture IP licensing. Dominant in mobile; expanding into data centre and IoT.
+    - id: INTC
+      text: Intel — x86 CPUs (Core Ultra), foundry services recovery. Competing vs AMD and custom silicon.
+    - id: 2222.SR
+      text: Saudi Aramco — world's largest oil company by production and reserves. Saudi state-controlled, massive dividend.
+    - id: BABA
+      text: Alibaba Group — Taobao/Tmall e-commerce, Alibaba Cloud (AliCloud), Cainiao logistics.
+    - id: SAP
+      text: SAP SE — enterprise ERP software leader. S/4HANA cloud migration driving ARR growth.
+    - id: SONY
+      text: Sony Group — PlayStation gaming (PS5), music IP, entertainment, and CMOS image sensors.
+    - id: TM
+      text: Toyota Motor — largest automaker by volume. Hybrid (Prius) and solid-state battery hydrogen strategy.
+    - id: NVO
+      text: Novo Nordisk — Ozempic and Wegovy GLP-1 franchise for diabetes and obesity. Pipeline depth.
+    - id: HSBC
+      text: HSBC Holdings — global bank, Asia-focused. Wealth management in Hong Kong and Singapore.
+  Tech:
+    title: Technology — Dashboard
+    meta_description: Technology stock dashboard — live prices, 52-week range, and momentum for 31 stocks across mega-cap, semiconductors, enterprise software, cybersecurity, consumer platforms, and hardware/infrastructure.
+    h1: Technology
+    unit: stocks
+    count: 31
+    chips:
+    - id: mega-cap
+      label: Mega Cap
+    - id: semiconductors
+      label: Semiconductors
+    - id: enterprise-software
+      label: Enterprise SW
+    - id: cybersecurity
+      label: Cybersecurity
+    - id: consumer-platform
+      label: Consumer/Platform
+    - id: hardware-infra
+      label: Hardware/Infra
+    cat_colors:
+    - id: mega-cap
+      value: var(--accent)
+    - id: semiconductors
+      value: var(--purple)
+    - id: enterprise-software
+      value: var(--teal)
+    - id: cybersecurity
+      value: var(--rose)
+    - id: consumer-platform
+      value: var(--gold)
+    - id: hardware-infra
+      value: var(--amber)
+    cat_labels:
+    - id: mega-cap
+      label: Mega Cap
+    - id: semiconductors
+      label: Semiconductors
+    - id: enterprise-software
+      label: Enterprise SW
+    - id: cybersecurity
+      label: Cybersecurity
+    - id: consumer-platform
+      label: Consumer / Platform
+    - id: hardware-infra
+      label: Hardware / Infra
+    notes:
+    - id: AAPL
+      text: iPhone, Mac, Services. Largest company by market cap. AI features rolling into iOS.
+    - id: MSFT
+      text: Azure cloud + OpenAI partnership. $80B data centre capex in 2026. Copilot monetisation.
+    - id: GOOGL
+      text: Google Search + YouTube + Cloud. TPU AI chips. $75B capex planned for 2026.
+    - id: AMZN
+      text: AWS dominates cloud AI infra. Trainium & Inferentia custom chips. Bedrock platform.
+    - id: META
+      text: $65B AI capex 2026. Llama open-source models. 3.2B daily active users across apps.
+    - id: NVDA
+      text: Dominant GPU maker for AI training & inference. Blackwell architecture. H100/H200/B200.
+    - id: AMD
+      text: MI300X AI accelerator competing with NVDA. EPYC server CPUs gaining data centre share.
+    - id: INTC
+      text: Foundry turnaround story. Gaudi AI chips. 18A process node for 2025. Deep value/high risk.
+    - id: TSM
+      text: Manufactures 90%+ of world's advanced chips. Sole fab for Apple, NVDA, AMD, ARM.
+    - id: AVGO
+      text: Custom AI silicon (XPUs) for Google & Meta. Networking ASICs. VMware acquisition.
+    - id: QCOM
+      text: Mobile SoC leader (Snapdragon). On-device AI chips. Automotive & IoT expansion.
+    - id: ARM
+      text: CPU architecture licensor. Every smartphone and most data centre CPUs use ARM designs.
+    - id: ASML
+      text: Only maker of EUV lithography machines. Monopoly on cutting-edge chipmaking equipment.
+    - id: MU
+      text: DRAM + NAND + HBM. Sold out of HBM for all of 2026. Critical AI memory supplier.
+    - id: AMAT
+      text: Semiconductor process equipment. Deposition, etch, metrology. AI chip capex tailwind.
+    - id: ORCL
+      text: Cloud database & ERP. Multi-cloud AI infrastructure. 70+ data centres. $100B+ backlog.
+    - id: CRM
+      text: Salesforce AI CRM platform. Agentforce AI agents. $50B ARR target. Enterprise SaaS.
+    - id: ADBE
+      text: Creative Cloud + Document Cloud. Firefly generative AI. PDF/document AI dominance.
+    - id: NOW
+      text: AI-native enterprise workflow automation. Platform of record for IT, HR, finance.
+    - id: SNOW
+      text: Data cloud platform. Cortex AI for enterprise data. Marketplace ecosystem.
+    - id: INTU
+      text: TurboTax, QuickBooks, Credit Karma. AI-driven financial management for SMBs & consumers.
+    - id: CRWD
+      text: Falcon platform AI-native cybersecurity. 29,000+ customers. ~18% endpoint market share.
+    - id: PANW
+      text: Platformisation of enterprise security. SASE + XDR + cloud security. $15B+ ARR.
+    - id: NET
+      text: Edge cloud platform. Zero Trust security + CDN + AI Gateway. 20% of internet traffic.
+    - id: FTNT
+      text: FortiGate firewall leader. Full security stack from SASE to OT/IoT. 700,000+ customers.
+    - id: NFLX
+      text: 300M+ subscribers. AI-driven content recommendations. Ad-supported tier growing fast.
+    - id: SHOP
+      text: E-commerce platform for 5M+ merchants. Shopify Payments + Fulfillment + AI tools.
+    - id: SPOT
+      text: 600M+ users. Podcast + audiobook expansion. AI DJ and personalisation features.
+    - id: UBER
+      text: Rides + delivery + freight. Path to profitability. Autonomous vehicle partnerships.
+    - id: CSCO
+      text: Enterprise networking + security. AI data centre switching (Silicon One). Splunk acquisition.
+    - id: PLTR
+      text: AI-powered data analytics for US/UK military, intelligence, and commercial clients.

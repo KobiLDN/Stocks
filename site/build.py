@@ -71,6 +71,12 @@ def render_all():
         names = json.dumps(s["names"], ensure_ascii=False, indent=2)
         html = hmtpl.render(s=s, sector=sector, names_json=names)
         out[f"{sector}/heatmap.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="heatmap.html.j2"), 1)
+    dtpl = env.get_template("dashboard.html.j2")
+    for sector, s in sectors["dashboard"].items():
+        with open(os.path.join(HERE, "css", "dashboard", f"{sector}.css"), encoding="utf-8") as f:
+            css = f.read()
+        html = dtpl.render(s=s, sector=sector, css=css)
+        out[f"{sector}/index.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="dashboard.html.j2"), 1)
     return out
 
 
