@@ -489,3 +489,963 @@ signals:
     - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Tech_generate_signals_local.py</code> locally to generate fresh signals on demand.
     disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
     refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Tech_generate_signals_local.py</code> locally
+metrics_base_tips:
+  price:
+    tip: Current share price converted to GBP.
+    title: Price
+  market_cap:
+    tip: Total market value of all outstanding shares, converted to GBP billions.
+    title: Market Cap
+  ytd:
+    tip: Year-to-date price change from the first trading day of 2026.
+    title: YTD Return
+  change_1d:
+    tip: Price change over the last trading session.
+    title: 1-Day Return
+  change_1w:
+    tip: Price change over the last 5 trading days.
+    title: 1-Week Return
+  change_1m:
+    tip: Price change over the last month.
+    title: 1-Month Return
+  beta:
+    tip: Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market.
+    title: Beta
+  pe_ratio:
+    tip: Price-to-Earnings ratio. A high P/E means the market expects strong future growth. Loss-making companies show —.
+    title: P/E Ratio
+  avg_volume:
+    tip: Average number of shares traded per day over the past 3 months. Higher volume = better liquidity.
+    title: Avg Daily Volume
+  vol_1d:
+    tip: Total shares traded in the most recent session. Compare to Avg Vol to spot unusual activity.
+    title: 1-Day Volume
+  vol_1w:
+    tip: Total shares traded across the last 5 trading days.
+    title: 1-Week Volume
+  vol_1m:
+    tip: Total shares traded over the past month (~20 trading days).
+    title: 1-Month Volume
+  div_yield:
+    tip: Annual dividend paid as a percentage of the current share price.
+    title: Dividend Yield
+  short_pct:
+    tip: Percentage of shares sold short. High short interest (above 10%) can signal bearish sentiment.
+    title: Short Interest
+  analyst_score:
+    tip: Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell.
+    title: Analyst Rating
+metrics:
+  AI:
+    page_title: AI Infrastructure
+    meta_description: AI infrastructure stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 48 stocks.
+    h1: AI
+    search_placeholder: Search ticker or company...
+    unit: stocks
+    categories:
+    - id: memory
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: nuclear-ops
+      rgb: 255,107,53
+      bg: '0.1'
+      color: var(--accent2)
+      border: '0.25'
+    - id: smr
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: uranium
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.25'
+    - id: power-infra
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: dc-operators
+      rgb: 68,136,255
+      bg: '0.1'
+      color: var(--blue)
+      border: '0.25'
+    - id: hyperscalers
+      rgb: 167,139,250
+      bg: '0.1'
+      color: var(--indigo)
+      border: '0.25'
+    - id: ai-compute
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: fibre-optical
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: dsp-semi
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: test-equip
+      rgb: 148,163,184
+      bg: '0.1'
+      color: var(--slate)
+      border: '0.25'
+    - id: materials
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    cat_labels:
+    - id: memory
+      label: Memory
+    - id: nuclear-ops
+      label: Nuclear
+    - id: smr
+      label: SMR
+    - id: uranium
+      label: Uranium
+    - id: power-infra
+      label: Power
+    - id: dc-operators
+      label: Data Centres
+    - id: hyperscalers
+      label: Hyperscalers
+    - id: ai-compute
+      label: AI Compute
+    - id: fibre-optical
+      label: Fibre/Optical
+    - id: dsp-semi
+      label: DSP/Semi
+    - id: test-equip
+      label: Test Equip
+    - id: materials
+      label: Materials
+    cat_tooltips:
+    - id: memory
+      text: DRAM, NAND flash & storage hardware — the memory layer that feeds AI accelerators
+    - id: nuclear-ops
+      text: Utilities operating nuclear power plants — clean 24/7 baseload electricity for data centres
+    - id: smr
+      text: Small Modular Reactor developers — compact next-gen nuclear designed for on-site data centre power
+    - id: uranium
+      text: Uranium miners & enrichers — upstream fuel supply benefiting from the nuclear power revival
+    - id: power-infra
+      text: Switchgear, transformers & power management — the grid buildout infrastructure behind every data centre
+    - id: dc-operators
+      text: Companies that own and operate the physical data centre facilities where AI compute is housed
+    - id: hyperscalers
+      text: Mega cloud platforms (AWS, Azure, Google) building AI infrastructure at planetary scale
+    - id: ai-compute
+      text: GPU and AI accelerator makers — the silicon that runs AI training and inference workloads
+    - id: fibre-optical
+      text: High-speed optical networking and fibre interconnects — the data links between and within data centres
+    - id: dsp-semi
+      text: Specialised semiconductors for digital signal processing and high-speed networking silicon
+    - id: test-equip
+      text: Electronic test & measurement gear used to validate chips, networks and power systems
+    - id: materials
+      text: Specialty substrates and compound semiconductors used in chip and optical component manufacturing
+    tip_overrides:
+      price:
+        title: Price
+        tip: Current share price converted to GBP. The live price the rest of this dashboard's calculations are based on.
+      market_cap:
+        title: Market Cap
+        tip: Total market value of all outstanding shares, converted to GBP. A rough measure of company size — larger cap generally means more stable, smaller cap means higher growth potential but more risk.
+      ytd:
+        title: YTD Return
+        tip: Year-to-date price change from the first trading day of 2026. Shows how much the stock has gained or lost since January — the core performance measure for this dashboard.
+      beta:
+        title: Beta
+        tip: Measures how volatile a stock is relative to the broader market. Beta &gt; 1 means it moves more than the market — higher reward but higher risk. Beta &lt; 1 means it's more stable. Most AI infrastructure stocks are high beta.
+      pe_ratio:
+        title: P/E Ratio
+        tip: Price-to-Earnings ratio — how much investors pay per $1 of profit. A high P/E means the market expects strong future growth. Loss-making companies (common in this sector) show — as there are no earnings to divide by.
+      avg_volume:
+        title: Avg Daily Volume
+        tip: Average number of shares traded per day over the past 3 months. Higher volume means it's easier to buy or sell without moving the price — a sign of liquidity and investor interest.
+      vol_1d:
+        title: 1-Day Volume
+        tip: Total number of shares traded in the most recent trading session. Compare to Avg Vol to see if today was unusually busy — a spike often signals news, earnings, or a big price move.
+      vol_1w:
+        title: 1-Week Volume
+        tip: Total shares traded across the last 5 trading days. Higher than usual weekly volume can indicate growing investor interest or a reaction to recent news.
+      vol_1m:
+        title: 1-Month Volume
+        tip: Total shares traded over the past month (approx. 20 trading days). Useful for spotting longer-term shifts in investor attention compared to the 3-month average.
+      div_yield:
+        title: Dividend Yield
+        tip: Annual dividend paid as a percentage of the current share price. Most high-growth AI infrastructure stocks reinvest profits rather than pay dividends, so this is — for the majority. REITs and utilities tend to pay more.
+      short_pct:
+        title: Short Interest
+        tip: Percentage of available shares currently sold short — investors betting the price will fall. High short interest (above 10%) can signal bearish sentiment, but can also lead to a short squeeze if the stock rises sharply.
+      analyst_score:
+        title: Analyst Rating
+        tip: Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell. Based on the average of all analyst ratings covering the stock. Take with a pinch of salt — analysts are often slow to downgrade.
+    names:
+      SNDK: SanDisk Corporation
+      WDC: Western Digital
+      285A: Kioxia Holdings
+      MU: Micron Technology
+      STX: Seagate Technology
+      MRVL: Marvell Technology
+      P: Everpure
+      RR.: Rolls-Royce
+      CEG: Constellation Energy
+      VST: Vistra Corp
+      TLN: Talen Energy
+      BEP: Brookfield Renewable
+      BEPC: Brookfield Renewable Corp
+      GEV: GE Vernova
+      BWXT: BWX Technologies
+      SMR: NuScale Power
+      OKLO: Oklo Inc
+      NNE: NANO Nuclear
+      CCJ: Cameco
+      UEC: Uranium Energy
+      LEU: Centrus Energy
+      VRT: Vertiv Holdings
+      ETN: Eaton Corporation
+      POWL: Powell Industries
+      EQIX: Equinix
+      DLR: Digital Realty
+      AMT: American Tower
+      GOOGL: Alphabet
+      MSFT: Microsoft
+      AMZN: Amazon
+      META: Meta Platforms
+      IREN: Iris Energy
+      CORZ: Core Scientific
+      WULF: TeraWulf
+      HUT: Hut 8 Mining
+      SMCI: Super Micro Computer
+      DELL: Dell Technologies
+      COHR: Coherent Corp
+      LITE: Lumentum
+      AAOI: Applied Optoelectronics
+      FN: Fabrinet
+      MTSI: MACOM Technology
+      SMTC: Semtech
+      CRDO: Credo Technology
+      MXL: MaxLinear
+      KEYS: Keysight Technologies
+      VIAV: Viavi Solutions
+      AXTI: AXT Inc
+  Biotech:
+    page_title: Biotech
+    meta_description: Biotech stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 30 stocks.
+    h1: Biotech
+    search_placeholder: Search ticker or company...
+    unit: stocks
+    categories:
+    - id: large-cap
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: uk-listed
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.25'
+    - id: gene-editing
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: genomics
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: oncology
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: mrna
+      rgb: 192,132,252
+      bg: '0.1'
+      color: var(--purple)
+      border: '0.25'
+    - id: rare-disease
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    - id: metabolic
+      rgb: 163,230,53
+      bg: '0.1'
+      color: var(--lime)
+      border: '0.25'
+    - id: neuroscience
+      rgb: 167,139,250
+      bg: '0.1'
+      color: var(--indigo)
+      border: '0.25'
+    cat_labels:
+    - id: large-cap
+      label: Large Cap
+    - id: uk-listed
+      label: UK Listed
+    - id: gene-editing
+      label: Gene Editing
+    - id: genomics
+      label: Genomics
+    - id: oncology
+      label: Oncology
+    - id: mrna
+      label: mRNA
+    - id: rare-disease
+      label: Rare Disease
+    - id: metabolic
+      label: Metabolic
+    - id: neuroscience
+      label: Neuroscience
+    cat_tooltips:
+    - id: large-cap
+      text: Established pharma/biotech giants with diversified pipelines and multi-billion market caps
+    - id: uk-listed
+      text: UK-listed companies traded on the London Stock Exchange — prices shown in GBP
+    - id: gene-editing
+      text: Companies using CRISPR and base editing to directly modify DNA — high risk, high reward pipeline plays
+    - id: genomics
+      text: Genome sequencing platforms and bioinformatics — the tools that read and interpret DNA
+    - id: oncology
+      text: Cancer-focused biotechs — targeted therapies, immunotherapies and ADCs across tumour types
+    - id: mrna
+      text: mRNA platform companies — technology that programs cells to produce therapeutic proteins or immune responses
+    - id: rare-disease
+      text: Biotechs targeting rare (orphan) diseases — smaller patient populations but faster FDA pathways and pricing power
+    - id: metabolic
+      text: Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders
+    - id: neuroscience
+      text: Neurology and CNS-focused biotechs — Alzheimer\'s, ALS, depression and other brain & nervous system disorders
+    tip_overrides:
+      market_cap:
+        title: Market Cap
+        tip: Total market value of all outstanding shares, converted to GBP.
+      pe_ratio:
+        title: P/E Ratio
+        tip: Price-to-Earnings ratio. Many biotech companies are pre-profit, so this will show — for those.
+      avg_volume:
+        title: Avg Daily Volume
+        tip: Average number of shares traded per day over the past 3 months.
+      vol_1d:
+        title: 1-Day Volume
+        tip: Total number of shares traded in the most recent trading session.
+      vol_1m:
+        title: 1-Month Volume
+        tip: Total shares traded over the past month (approx. 20 trading days).
+      div_yield:
+        title: Dividend Yield
+        tip: Annual dividend paid as a percentage of the current share price. Most biotech companies do not pay dividends.
+      short_pct:
+        title: Short Interest
+        tip: Percentage of available shares currently sold short. High short interest is common in speculative biotech names.
+    names:
+      AMGN: Amgen
+      GILD: Gilead Sciences
+      REGN: Regeneron Pharmaceuticals
+      VRTX: Vertex Pharmaceuticals
+      BIIB: Biogen
+      BMY: Bristol-Myers Squibb
+      AZN: AstraZeneca
+      GSK: GSK plc
+      CRSP: CRISPR Therapeutics
+      BEAM: Beam Therapeutics
+      NTLA: Intellia Therapeutics
+      EDIT: Editas Medicine
+      ILMN: Illumina
+      PACB: Pacific Biosciences
+      NTRA: Natera
+      RXRX: Recursion Pharmaceuticals
+      INCY: Incyte Corporation
+      EXEL: Exelixis
+      ALNY: Alnylam Pharmaceuticals
+      RCUS: Arcus Biosciences
+      MRNA: Moderna
+      BNTX: BioNTech
+      NVAX: Novavax
+      BMRN: BioMarin Pharmaceutical
+      SRPT: Sarepta Therapeutics
+      COAG: Hemab Therapeutics
+      NVO: Novo Nordisk
+      LLY: Eli Lilly
+      LEGN: Legend Biotech
+      IONS: Ionis Pharmaceuticals
+  Crypto:
+    page_title: Crypto
+    meta_description: Crypto fundamentals — market cap, beta, volume data for 19 coins across Bitcoin, Layer 1, Payments, Emerging L1s, Infrastructure, and Meme. Market cap and volume data for all coins.
+    h1: Crypto
+    search_placeholder: Search ticker or company...
+    unit: stocks
+    categories:
+    - id: bitcoin
+      rgb: 251,146,60
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: layer1
+      rgb: 2,132,199
+      bg: '0.12'
+      color: var(--accent)
+      border: '0.3'
+    - id: payments
+      rgb: 79,70,229
+      bg: '0.15'
+      color: var(--indigo)
+      border: '0.35'
+    - id: emerging
+      rgb: 13,148,136
+      bg: '0.12'
+      color: var(--teal)
+      border: '0.3'
+    - id: meme
+      rgb: 180,83,9
+      bg: '0.12'
+      color: var(--gold)
+      border: '0.3'
+    - id: ai
+      rgb: 139,92,246
+      bg: '0.12'
+      color: '#a78bfa'
+      border: '0.3'
+    - id: infra
+      rgb: 22,163,74
+      bg: '0.12'
+      color: var(--green)
+      border: '0.3'
+    cat_labels:
+    - id: bitcoin
+      label: Bitcoin
+    - id: layer1
+      label: Layer 1
+    - id: payments
+      label: Payments
+    - id: emerging
+      label: Emerging
+    - id: infra
+      label: Infra
+    - id: meme
+      label: Meme
+    - id: ai
+      label: AI Tokens
+    cat_tooltips:
+    - id: bitcoin
+      text: 'Bitcoin — BTC: the original and largest cryptocurrency'
+    - id: layer1
+      text: 'Layer 1 — ETH, SOL, BNB, ADA, AVAX: major smart-contract platforms'
+    - id: payments
+      text: 'Payments — XRP, XLM (Stellar), TRX (TRON): fast cross-border settlement networks'
+    - id: emerging
+      text: 'Emerging — SUI, HBAR, TON, ALGO, MINA: newer and niche blockchain platforms'
+    - id: infra
+      text: 'Infrastructure — POL (Polygon), DOT (Polkadot), LINK (Chainlink): scaling, interoperability, oracle'
+    - id: meme
+      text: 'Meme — DOGE, PEPE: community-driven high-volatility tokens'
+    - id: ai
+      text: 'AI Tokens — TAO, FET (ASI Alliance), RNDR, NEAR, ICP, GRT, OCEAN, AGIX, NMR, ALT, AIOZ, ARKM, WLD, KAITO, VIRTUAL: decentralised AI infrastructure'
+    tip_overrides:
+      pe_ratio:
+        title: P/E Ratio
+        tip: Price-to-Earnings ratio — how much investors pay per $1 of profit.
+      avg_volume:
+        title: Avg Daily Volume (7d)
+        tip: 7-day average 24h trading volume (CoinGecko), in USD millions.
+      vol_1d:
+        title: 1-Day Volume
+        tip: Most recent day's trading volume (CoinGecko), in USD millions.
+      vol_1w:
+        title: 7-Day Volume
+        tip: Cumulative trading volume over the past 7 days (CoinGecko), in USD millions.
+      vol_1m:
+        title: 30-Day Volume
+        tip: Cumulative trading volume over the past 30 days (CoinGecko), in USD millions.
+      short_pct:
+        title: Short Interest
+        tip: Percentage of available shares currently sold short.
+    names:
+      BTC: Bitcoin
+      ETH: Ethereum
+      SOL: Solana
+      BNB: BNB
+      ADA: Cardano
+      AVAX: Avalanche
+      XRP: XRP
+      XLM: Stellar
+      TRX: TRON
+      SUI: Sui
+      HBAR: Hedera
+      TON: Toncoin
+      ALGO: Algorand
+      MINA: Mina
+      POL: Polygon
+      DOT: Polkadot
+      LINK: Chainlink
+      DOGE: Dogecoin
+      PEPE: Pepe
+      TAO: Bittensor
+      FET: ASI Alliance
+      RNDR: Render
+      OCEAN: Ocean Protocol
+      GRT: The Graph
+      AGIX: SingularityNET
+      NMR: Numeraire
+      ALT: AltLayer
+      AIOZ: AIOZ Network
+      ARKM: Arkham
+      WLD: Worldcoin
+      NEAR: NEAR Protocol
+      ICP: Internet Computer
+      KAITO: Kaito
+      VIRTUAL: Virtuals Protocol
+  Defence:
+    page_title: Defence &amp; Aerospace
+    meta_description: Defence &amp; Aerospace stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 29 stocks.
+    h1: Defence
+    search_placeholder: Search ticker or company...
+    unit: stocks
+    categories:
+    - id: us-primes
+      rgb: 245,158,11
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: uk-european
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.3'
+    - id: cyber-intel
+      rgb: 192,132,252
+      bg: '0.15'
+      color: var(--purple)
+      border: '0.3'
+    - id: drones
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.3'
+    - id: space
+      rgb: 68,136,255
+      bg: '0.1'
+      color: var(--blue)
+      border: '0.3'
+    - id: weapons
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.3'
+    cat_labels:
+    - id: us-primes
+      label: US Prime
+    - id: uk-european
+      label: UK/European
+    - id: cyber-intel
+      label: Cyber/Intel
+    - id: drones
+      label: Drones
+    - id: space
+      label: Space
+    - id: weapons
+      label: Weapons
+    cat_tooltips:
+    - id: us-primes
+      text: Major US defence prime contractors — Lockheed, RTX, Northrop, General Dynamics, Huntington Ingalls, L3Harris, Boeing
+    - id: uk-european
+      text: UK and European defence majors — BAE Systems, Rolls-Royce, QinetiQ
+    - id: cyber-intel
+      text: Cyber, intelligence and government IT services — Palantir, Leidos, CACI, SAIC, Booz Allen Hamilton
+    - id: drones
+      text: Drone and autonomous systems manufacturers — AeroVironment, Kratos, Red Cat, Textron
+    - id: space
+      text: Space and satellite defence plays — Rocket Lab, Planet Labs, AST SpaceMobile
+    - id: weapons
+      text: Weapons, defence electronics and systems — TransDigm, HEICO, Axon, Olin, Mercury Systems, Leonardo DRS
+    tip_overrides:
+      price:
+        title: Price
+        tip: Current share price converted to GBP. LSE stocks (BA.L, RR.L, QQ.L) are converted from pence.
+      market_cap:
+        title: Market Cap
+        tip: Total market value of all outstanding shares, converted to GBP. A rough measure of company size.
+      div_yield:
+        title: Dividend Yield
+        tip: Annual dividend as a percentage of share price. Defence primes and established contractors often pay dividends.
+      analyst_score:
+        title: Analyst Rating
+        tip: Consensus recommendation from analysts, ranging from Strong Buy to Sell.
+    names:
+      LMT: Lockheed Martin
+      RTX: RTX Corporation
+      NOC: Northrop Grumman
+      GD: General Dynamics
+      HII: Huntington Ingalls
+      LHX: L3Harris Technologies
+      BA: Boeing
+      BA.L: BAE Systems
+      RR.L: Rolls-Royce
+      QQ.L: QinetiQ Group
+      PLTR: Palantir Technologies
+      LDOS: Leidos Holdings
+      CACI: CACI International
+      SAIC: Science Applications Intl
+      BAH: Booz Allen Hamilton
+      AVAV: AeroVironment
+      KTOS: Kratos Defense
+      RCAT: Red Cat Holdings
+      TXT: Textron
+      SPCX: SpaceX
+      RKLB: Rocket Lab
+      PL: Planet Labs
+      ASTS: AST SpaceMobile
+      TDG: TransDigm Group
+      HEI: HEICO Corporation
+      AXON: Axon Enterprise
+      OLN: Olin Corporation
+      MRCY: Mercury Systems
+      DRS: Leonardo DRS
+  Energy:
+    page_title: Energy
+    meta_description: Energy stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 20 stocks.
+    h1: Energy
+    search_placeholder: Search ticker or company...
+    unit: stocks
+    categories:
+    - id: oil-majors
+      rgb: 245,158,11
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: ep-refining
+      rgb: 255,107,53
+      bg: '0.15'
+      color: var(--accent2)
+      border: '0.35'
+    - id: oilfield-services
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: utilities
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: clean-energy
+      rgb: 163,230,53
+      bg: '0.12'
+      color: var(--lime)
+      border: '0.3'
+    cat_labels:
+    - id: oil-majors
+      label: Oil Majors
+    - id: ep-refining
+      label: E&P / Refining
+    - id: oilfield-services
+      label: Oilfield Svcs
+    - id: utilities
+      label: Utilities
+    - id: clean-energy
+      label: Clean Energy
+    cat_tooltips:
+    - id: oil-majors
+      text: Vertically integrated supermajors — ExxonMobil, Chevron, Shell, BP, TotalEnergies, Equinor
+    - id: ep-refining
+      text: Exploration, production and refining companies — ConocoPhillips, OXY, EOG, Marathon, Valero
+    - id: oilfield-services
+      text: Equipment and services for oil and gas drilling — SLB, Halliburton, Baker Hughes
+    - id: utilities
+      text: Power generation and grid utilities — NextEra Energy (US) and SSE (UK)
+    - id: clean-energy
+      text: Renewable energy developers and equipment — Enphase, First Solar, Brookfield Renewable, Ørsted
+    tip_overrides:
+      price:
+        title: Price
+        tip: Current share price converted to GBP. SSE.L is converted from pence (÷100).
+      market_cap:
+        title: Market Cap
+        tip: Total market value of all outstanding shares, converted to GBP. A rough measure of company size.
+      div_yield:
+        title: Dividend Yield
+        tip: Annual dividend as a percentage of share price. Energy majors and utilities typically pay meaningful dividends.
+      analyst_score:
+        title: Analyst Rating
+        tip: Consensus recommendation from analysts, ranging from Strong Buy to Sell.
+    names:
+      XOM: ExxonMobil
+      CVX: Chevron
+      SHEL: Shell
+      BP: BP p.l.c.
+      TTE: TotalEnergies
+      EQNR: Equinor
+      COP: ConocoPhillips
+      OXY: Occidental Petroleum
+      EOG: EOG Resources
+      MPC: Marathon Petroleum
+      VLO: Valero Energy
+      SLB: SLB (Schlumberger)
+      HAL: Halliburton
+      BKR: Baker Hughes
+      NEE: NextEra Energy
+      SSE.L: SSE plc
+      ENPH: Enphase Energy
+      FSLR: First Solar
+      BEPC: Brookfield Renewable
+      DNNGY: Ørsted
+  MegaCap:
+    page_title: Mega-Cap
+    meta_description: Mega-cap stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 50 stocks across 7 categories.
+    h1: Mega-Cap
+    search_placeholder: Search ticker or company...
+    unit: stocks
+    categories:
+    - id: big-tech
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: financials
+      rgb: 245,158,11
+      bg: '0.15'
+      color: var(--amber)
+      border: '0.35'
+    - id: healthcare
+      rgb: 163,230,53
+      bg: '0.12'
+      color: var(--lime)
+      border: '0.3'
+    - id: consumer
+      rgb: 255,107,53
+      bg: '0.15'
+      color: var(--accent2)
+      border: '0.35'
+    - id: energy-industrial
+      rgb: 0,230,118
+      bg: '0.1'
+      color: var(--green)
+      border: '0.25'
+    - id: tech-semis
+      rgb: 167,139,250
+      bg: '0.12'
+      color: '#a78bfa'
+      border: '0.3'
+    - id: global-growth
+      rgb: 244,114,182
+      bg: '0.12'
+      color: '#f472b6'
+      border: '0.3'
+    cat_labels:
+    - id: big-tech
+      label: Big Tech
+    - id: financials
+      label: Financials
+    - id: healthcare
+      label: Healthcare
+    - id: consumer
+      label: Consumer
+    - id: energy-industrial
+      label: Energy & Industrial
+    - id: tech-semis
+      label: Tech & Semis
+    - id: global-growth
+      label: Global Growth
+    cat_tooltips:
+    - id: big-tech
+      text: Large-cap technology companies — Apple, Microsoft, NVIDIA, Alphabet, Meta, Amazon, Tesla, Netflix
+    - id: financials
+      text: Major financial institutions — JPMorgan, Bank of America, Berkshire, Visa, Mastercard, Goldman Sachs, BlackRock
+    - id: healthcare
+      text: Healthcare and pharma leaders — Eli Lilly, UnitedHealth, J&J, AbbVie, Merck, Thermo Fisher, Abbott
+    - id: consumer
+      text: Consumer brands and retail — Procter & Gamble, Coca-Cola, PepsiCo, McDonald\'s, Nike, Walmart, Costco
+    - id: energy-industrial
+      text: Energy and industrial companies — ExxonMobil, Chevron, Caterpillar, Honeywell, GE Aerospace, RTX, Boeing
+    - id: tech-semis
+      text: Technology and semiconductor companies — AMD, Qualcomm, Broadcom, TSMC, ASML, Arm, Intel
+    - id: global-growth
+      text: Global growth stocks — Saudi Aramco, Alibaba, SAP, Sony, Toyota, Novo Nordisk, HSBC
+    tip_overrides:
+      price:
+        title: Price
+        tip: Current share price converted to USD.
+      market_cap:
+        title: Market Cap
+        tip: Total market value of all outstanding shares in USD. A rough measure of company size.
+      div_yield:
+        title: Dividend Yield
+        tip: Annual dividend as a percentage of share price. Many mega-cap stocks pay meaningful dividends.
+      analyst_score:
+        title: Analyst Rating
+        tip: Consensus recommendation from analysts, ranging from Strong Buy to Sell.
+    names:
+      AAPL: Apple Inc.
+      MSFT: Microsoft Corporation
+      NVDA: NVIDIA Corporation
+      GOOGL: Alphabet Inc.
+      META: Meta Platforms
+      AMZN: Amazon.com
+      TSLA: Tesla
+      NFLX: Netflix
+      JPM: JPMorgan Chase
+      BAC: Bank of America
+      BRK-B: Berkshire Hathaway B
+      V: Visa Inc.
+      MA: Mastercard
+      GS: Goldman Sachs
+      BLK: BlackRock
+      LLY: Eli Lilly
+      UNH: UnitedHealth Group
+      JNJ: Johnson & Johnson
+      ABBV: AbbVie
+      MRK: Merck
+      TMO: Thermo Fisher Scientific
+      ABT: Abbott Laboratories
+      PG: Procter & Gamble
+      KO: Coca-Cola
+      PEP: PepsiCo
+      MCD: ''
+      NKE: Nike
+      WMT: Walmart
+      COST: Costco
+      XOM: ExxonMobil
+      CVX: Chevron
+      CAT: Caterpillar
+      HON: Honeywell
+      GE: GE Aerospace
+      RTX: RTX Corp
+      BA: Boeing
+      AMD: Advanced Micro Devices
+      QCOM: Qualcomm
+      AVGO: Broadcom
+      TSM: Taiwan Semiconductor
+      ASML: ASML Holding
+      ARM: Arm Holdings
+      INTC: Intel
+      2222.SR: Saudi Aramco
+      BABA: Alibaba Group
+      SAP: SAP SE
+      SONY: Sony Group
+      TM: Toyota Motor
+      NVO: Novo Nordisk
+      HSBC: HSBC Holdings
+  Tech:
+    page_title: Technology
+    meta_description: Technology stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 31 stocks.
+    h1: Technology
+    search_placeholder: Search ticker or company...
+    unit: stocks
+    categories:
+    - id: mega-cap
+      rgb: 0,212,255
+      bg: '0.1'
+      color: var(--accent)
+      border: '0.25'
+    - id: semiconductors
+      rgb: 192,132,252
+      bg: '0.15'
+      color: var(--purple)
+      border: '0.3'
+    - id: enterprise-software
+      rgb: 45,212,191
+      bg: '0.1'
+      color: var(--teal)
+      border: '0.25'
+    - id: cybersecurity
+      rgb: 251,113,133
+      bg: '0.1'
+      color: var(--rose)
+      border: '0.25'
+    - id: consumer-platform
+      rgb: 255,215,0
+      bg: '0.1'
+      color: var(--gold)
+      border: '0.3'
+    - id: hardware-infra
+      rgb: 245,158,11
+      bg: '0.1'
+      color: var(--amber)
+      border: '0.25'
+    cat_labels:
+    - id: mega-cap
+      label: Mega Cap
+    - id: semiconductors
+      label: Semiconductors
+    - id: enterprise-software
+      label: Enterprise SW
+    - id: cybersecurity
+      label: Cybersecurity
+    - id: consumer-platform
+      label: Consumer/Platform
+    - id: hardware-infra
+      label: Hardware/Infra
+    cat_tooltips:
+    - id: mega-cap
+      text: 'The 5 largest tech companies by market cap: Apple, Microsoft, Alphabet, Amazon, Meta'
+    - id: semiconductors
+      text: Chip designers and equipment makers powering AI and consumer tech
+    - id: enterprise-software
+      text: Cloud SaaS platforms transforming how businesses operate
+    - id: cybersecurity
+      text: Platforms protecting enterprises from modern cyber threats
+    - id: consumer-platform
+      text: Consumer-facing tech platforms with massive user bases
+    - id: hardware-infra
+      text: Networking hardware and AI platform infrastructure
+    tip_overrides:
+      pe_ratio:
+        title: P/E Ratio
+        tip: Price-to-Earnings ratio — how much investors pay per $1 of profit.
+      avg_volume:
+        title: Avg Daily Volume
+        tip: Average number of shares traded per day over the past 3 months.
+      vol_1d:
+        title: 1-Day Volume
+        tip: Total number of shares traded in the most recent trading session.
+      vol_1m:
+        title: 1-Month Volume
+        tip: Total shares traded over the past month.
+      short_pct:
+        title: Short Interest
+        tip: Percentage of available shares currently sold short.
+    names:
+      AAPL: Apple
+      MSFT: Microsoft
+      GOOGL: Alphabet (Google)
+      AMZN: Amazon
+      META: Meta Platforms
+      NVDA: NVIDIA
+      AMD: Advanced Micro Devices
+      INTC: Intel
+      TSM: Taiwan Semiconductor
+      AVGO: Broadcom
+      QCOM: Qualcomm
+      ARM: Arm Holdings
+      ASML: ASML Holding
+      MU: Micron Technology
+      AMAT: Applied Materials
+      ORCL: Oracle
+      CRM: Salesforce
+      ADBE: Adobe
+      NOW: ServiceNow
+      SNOW: Snowflake
+      INTU: Intuit
+      CRWD: CrowdStrike
+      PANW: Palo Alto Networks
+      NET: Cloudflare
+      FTNT: Fortinet
+      NFLX: Netflix
+      SHOP: Shopify
+      SPOT: Spotify
+      UBER: Uber
+      CSCO: Cisco Systems
+      PLTR: Palantir Technologies
