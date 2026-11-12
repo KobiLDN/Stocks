@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-11-11 23:02",
-  "fx_gbp_usd": 1.328,
+  "updated": "2026-11-12 07:37",
+  "fx_gbp_usd": 1.3266,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,56 +19,56 @@ window.PRICES_DATA = {
       "high_gbp": "142",
       "high_usd": 188.5,
       "bar_pct": 71,
-      "market_cap_gbp_b": 512.069,
-      "market_cap_usd_b": 680.048,
+      "market_cap_gbp_b": 512.633,
+      "market_cap_usd_b": 680.047,
       "beta": 0.141,
       "pe_ratio": 17.15,
       "avg_volume_m": 13.61,
-      "div_yield_pct": 2.6,
+      "div_yield_pct": 2.57,
       "short_pct": 1.25,
       "analyst": "buy",
       "analyst_score": 2.42,
-      "vol_1d": 13214216,
-      "vol_1w": 76552416,
-      "vol_1m": 318067516,
+      "vol_1d": 13376700,
+      "vol_1w": 76714900,
+      "vol_1m": 318230000,
       "news": [
+        {
+          "title": "Exxon, Chevron, and Shell Just Reported. Here's What Each One Said About Where Oil Goes Next.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/11/exxon-chevron-and-shell-just-reported-heres-what-e/",
+          "published": 1794454500,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Should You Pick Occidental Stock Over Its Competitors?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/oxy/articles/624270/should-you-pick-occidental-stock-over-its-competitors/2026-11-11",
+          "published": 1794446820,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Who Will Buy Sable\u2019s Oil if California Keeps Closing Refineries?",
+          "publisher": "Oilprice.com",
+          "url": "https://finance.yahoo.com/energy/articles/buy-sable-oil-california-keeps-010000630.html",
+          "published": 1794445200,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Exxon files legal challenge to EU carbon capture law, FT reports",
+          "publisher": "Reuters",
+          "url": "https://finance.yahoo.com/news/exxon-files-legal-challenge-eu-225812897.html",
+          "published": 1794437892,
+          "sentiment": 0.202
+        },
         {
           "title": "Exclusive-Exxon assessing 7 areas in Venezuela for possible energy projects, sources say",
           "publisher": "Reuters",
           "url": "https://finance.yahoo.com/news/exclusive-exxon-assessing-7-areas-221224099.html",
           "published": 1794435144,
           "sentiment": 0.273
-        },
-        {
-          "title": "Exxon vs. Chevron: 45 and 39 Straight Years of Raises. Which Oil Dividend Wins the Next Decade?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/exxon-vs-chevron-45-and-39-straight-years-of-raises-which-oil-dividend-wins-the-next-decade?ref=yahoofinancedividend&tlnk=yf-261111-j7j52h54",
-          "published": 1794426652,
-          "sentiment": 0.681
-        },
-        {
-          "title": "ExxonMobil (XOM) Stock May Be 24% Undervalued Despite Venezuela Oil Deal",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/exxonmobil-xom-stock-may-24-181015023.html",
-          "published": 1794420615,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Exxon's CEO Just Abruptly Walked Away From Global Climate Talks",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/energy/articles/exxons-ceo-just-abruptly-walked-163126377.html",
-          "published": 1794414686,
-          "sentiment": 0.0
-        },
-        {
-          "title": "TRGP Q3 Earnings Beat on Permian Growth and Higher Fees",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/trgp-q3-earnings-beat-permian-161100033.html",
-          "published": 1794413460,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.267
+      "news_sentiment": 0.095
     },
     {
       "ticker": "CVX",
@@ -87,56 +87,56 @@ window.PRICES_DATA = {
       "high_gbp": "178",
       "high_usd": 236.48,
       "bar_pct": 74,
-      "market_cap_gbp_b": 313.367,
-      "market_cap_usd_b": 416.164,
+      "market_cap_gbp_b": 313.712,
+      "market_cap_usd_b": 416.163,
       "beta": 0.453,
-      "pe_ratio": 15.66,
+      "pe_ratio": 15.51,
       "avg_volume_m": 8.48,
-      "div_yield_pct": 3.37,
+      "div_yield_pct": 3.34,
       "short_pct": 1.35,
       "analyst": "buy",
       "analyst_score": 1.62,
-      "vol_1d": 5590724,
-      "vol_1w": 43564224,
-      "vol_1m": 189606124,
+      "vol_1d": 6296200,
+      "vol_1w": 44269700,
+      "vol_1m": 190311600,
       "news": [
         {
-          "title": "Exxon vs. Chevron: 45 and 39 Straight Years of Raises. Which Oil Dividend Wins the Next Decade?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/exxon-vs-chevron-45-and-39-straight-years-of-raises-which-oil-dividend-wins-the-next-decade?ref=yahoofinancedividend&tlnk=yf-261111-j7j52h54",
-          "published": 1794426652,
-          "sentiment": 0.681
+          "title": "Exxon, Chevron, and Shell Just Reported. Here's What Each One Said About Where Oil Goes Next.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/11/exxon-chevron-and-shell-just-reported-heres-what-e/",
+          "published": 1794454500,
+          "sentiment": 0.0
         },
         {
-          "title": "TRGP Q3 Earnings Beat on Permian Growth and Higher Fees",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/trgp-q3-earnings-beat-permian-161100033.html",
-          "published": 1794413460,
-          "sentiment": 0.382
+          "title": "How Chevron Is Maintaining Prominence in the Permian Basin",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/video/chevron-maintaining-prominence-permian-basin-023318841.html",
+          "published": 1794450798,
+          "sentiment": 0.0
         },
         {
-          "title": "Chevron (CVX) Could Be 76% Below Fair Value As Q3 Earnings Reset Valuation",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/chevron-cvx-could-76-below-161005971.html",
-          "published": 1794413405,
-          "sentiment": 0.572
+          "title": "Patience Is Paying Off for Chevron in Venezuela",
+          "publisher": "Bloomberg",
+          "url": "https://finance.yahoo.com/video/patience-paying-off-chevron-venezuela-023223570.html",
+          "published": 1794450743,
+          "sentiment": 0.0
         },
         {
-          "title": "Better Dividend Stock: Chevron vs. Duke Energy",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/better-dividend-stock-chevron-vs-duke-energy?ref=yahoofinancedividend&tlnk=yf-261111-vhgqjrfx",
-          "published": 1794407759,
-          "sentiment": 0.612
+          "title": "Should You Pick Occidental Stock Over Its Competitors?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/oxy/articles/624270/should-you-pick-occidental-stock-over-its-competitors/2026-11-11",
+          "published": 1794446820,
+          "sentiment": 0.0
         },
         {
-          "title": "Inflation Is Running Above 3%. These 3 Energy Dividend Stocks Can Keep Up.",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/11/inflation-is-running-above-3-these-3-energy-dividend-stocks-can-keep-up/",
-          "published": 1794407571,
-          "sentiment": 0.273
+          "title": "Market Chatter: Microsoft Wants to Power Data Centers Without Subsidies or Higher Costs for Others",
+          "publisher": "MT Newswires",
+          "url": "https://finance.yahoo.com/technology/articles/market-chatter-microsoft-wants-power-000818359.html",
+          "published": 1794442098,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.504
+      "news_sentiment": 0.0
     },
     {
       "ticker": "SHEL",
@@ -155,19 +155,26 @@ window.PRICES_DATA = {
       "high_gbp": "82",
       "high_usd": 109.37,
       "bar_pct": 72,
-      "market_cap_gbp_b": 208.513,
-      "market_cap_usd_b": 276.913,
+      "market_cap_gbp_b": 208.743,
+      "market_cap_usd_b": 276.914,
       "beta": -0.248,
-      "pe_ratio": 8.49,
+      "pe_ratio": 8.44,
       "avg_volume_m": 6.13,
-      "div_yield_pct": 3.21,
+      "div_yield_pct": 3.19,
       "short_pct": 1.01,
       "analyst": "buy",
       "analyst_score": 2.19,
-      "vol_1d": 4692485,
-      "vol_1w": 28474097,
-      "vol_1m": 130241093,
+      "vol_1d": 4692382,
+      "vol_1w": 28474293,
+      "vol_1m": 130241289,
       "news": [
+        {
+          "title": "Exxon, Chevron, and Shell Just Reported. Here's What Each One Said About Where Oil Goes Next.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/11/exxon-chevron-and-shell-just-reported-heres-what-e/",
+          "published": 1794454500,
+          "sentiment": 0.0
+        },
         {
           "title": "3 British Value Stocks To Watch In November 2026",
           "publisher": "Simply Wall St.",
@@ -195,16 +202,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/did-first-half-earnings-just-211158837.html",
           "published": 1794345118,
           "sentiment": 0.273
-        },
-        {
-          "title": "3 British Undervalued Stocks Trading Up To 46% Below Cash Flow Value",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/3-british-undervalued-stocks-trading-191024463.html",
-          "published": 1794337824,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": 0.345
+      "news_sentiment": 0.277
     },
     {
       "ticker": "BP",
@@ -223,18 +223,18 @@ window.PRICES_DATA = {
       "high_gbp": "39",
       "high_usd": 51.49,
       "bar_pct": 66,
-      "market_cap_gbp_b": 87.779,
+      "market_cap_gbp_b": 87.876,
       "market_cap_usd_b": 116.574,
       "beta": -0.258,
       "pe_ratio": 22.08,
       "avg_volume_m": 9.22,
-      "div_yield_pct": 4.66,
+      "div_yield_pct": 4.59,
       "short_pct": 0.31,
       "analyst": "buy",
       "analyst_score": 2.16,
-      "vol_1d": 5221317,
-      "vol_1w": 37498217,
-      "vol_1m": 204497917,
+      "vol_1d": 5223400,
+      "vol_1w": 37500300,
+      "vol_1m": 204500000,
       "news": [
         {
           "title": "FTSE 100 today: Stocks gain as oil rebounds; Spirax tops gainers",
@@ -291,18 +291,18 @@ window.PRICES_DATA = {
       "high_gbp": "72",
       "high_usd": 95.78,
       "bar_pct": 77,
-      "market_cap_gbp_b": 145.255,
+      "market_cap_gbp_b": 145.415,
       "market_cap_usd_b": 192.904,
       "beta": 0.04,
       "pe_ratio": 8.78,
       "avg_volume_m": 1.84,
-      "div_yield_pct": 4.6,
+      "div_yield_pct": 4.57,
       "short_pct": 0.19,
       "analyst": "buy",
       "analyst_score": 2.0,
-      "vol_1d": 948966,
-      "vol_1w": 6880566,
-      "vol_1m": 43114066,
+      "vol_1d": 949000,
+      "vol_1w": 6880600,
+      "vol_1m": 43114100,
       "news": [
         {
           "title": "CEG Q3 Earnings Beat on Calpine, Strong Commercial Performance",
@@ -359,18 +359,18 @@ window.PRICES_DATA = {
       "high_gbp": "37",
       "high_usd": 49.08,
       "bar_pct": 71,
-      "market_cap_gbp_b": 73.638,
+      "market_cap_gbp_b": 73.719,
       "market_cap_usd_b": 97.794,
       "beta": -0.658,
       "pe_ratio": 8.57,
       "avg_volume_m": 3.88,
-      "div_yield_pct": 3.83,
+      "div_yield_pct": 3.77,
       "short_pct": 2.69,
       "analyst": "hold",
       "analyst_score": 3.29,
-      "vol_1d": 2115923,
-      "vol_1w": 25804223,
-      "vol_1m": 108807423,
+      "vol_1d": 2116000,
+      "vol_1w": 25804300,
+      "vol_1m": 108807500,
       "news": [
         {
           "title": "European Equities Traded in the US as American Depositary Receipts Decline in Tuesday Trading",
@@ -427,19 +427,26 @@ window.PRICES_DATA = {
       "high_gbp": "116",
       "high_usd": 154.28,
       "bar_pct": 76,
-      "market_cap_gbp_b": 122.735,
-      "market_cap_usd_b": 162.997,
+      "market_cap_gbp_b": 122.87,
+      "market_cap_usd_b": 162.996,
       "beta": 0.162,
       "pe_ratio": 14.53,
       "avg_volume_m": 6.77,
-      "div_yield_pct": 2.74,
+      "div_yield_pct": 2.7,
       "short_pct": 1.35,
       "analyst": "buy",
       "analyst_score": 1.93,
-      "vol_1d": 4760939,
-      "vol_1w": 41355539,
-      "vol_1m": 161271139,
+      "vol_1d": 5000100,
+      "vol_1w": 41594700,
+      "vol_1m": 161510300,
       "news": [
+        {
+          "title": "Should You Pick Occidental Stock Over Its Competitors?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/oxy/articles/624270/should-you-pick-occidental-stock-over-its-competitors/2026-11-11",
+          "published": 1794446820,
+          "sentiment": 0.0
+        },
         {
           "title": "4 Dividend Stocks Just Gave Shareholders a Raise. One Hiked Its Payout 17.5%",
           "publisher": "24/7 Wall St.",
@@ -467,16 +474,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/stock/cvx/articles/623939/is-chevron-stock-a-real-bargain/2026-11-10",
           "published": 1794333903,
           "sentiment": 0.202
-        },
-        {
-          "title": "ConocoPhillips Just Raised Its Dividend 10.7%. Does Its Free Cash Flow Cover the 2.5% Yield?",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/conocophillips-just-raised-its-dividend-10-7-does-its-free-cash-flow-cover-the-2-5-yield?ref=yahoofinancedividend&tlnk=yf-261110-98mmhc98",
-          "published": 1794322721,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.197
+      "news_sentiment": 0.095
     },
     {
       "ticker": "OXY",
@@ -495,19 +495,26 @@ window.PRICES_DATA = {
       "high_gbp": "51",
       "high_usd": 67.45,
       "bar_pct": 64,
-      "market_cap_gbp_b": 43.097,
+      "market_cap_gbp_b": 43.144,
       "market_cap_usd_b": 57.234,
       "beta": 0.149,
       "pe_ratio": 12.75,
       "avg_volume_m": 8.75,
-      "div_yield_pct": 1.97,
+      "div_yield_pct": 1.96,
       "short_pct": 0.02,
       "analyst": "buy",
       "analyst_score": 2.21,
-      "vol_1d": 17718347,
-      "vol_1w": 67994147,
-      "vol_1m": 227960347,
+      "vol_1d": 17863800,
+      "vol_1w": 68139600,
+      "vol_1m": 228105800,
       "news": [
+        {
+          "title": "Should You Pick Occidental Stock Over Its Competitors?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/oxy/articles/624270/should-you-pick-occidental-stock-over-its-competitors/2026-11-11",
+          "published": 1794446820,
+          "sentiment": 0.0
+        },
         {
           "title": "Occidental Petroleum Unveils Bold $6 Billion Debt Plan",
           "publisher": "GuruFocus.com",
@@ -535,13 +542,6 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/earnings/call-transcripts/2026/11/10/occidental-petroleum-oxy-q3-2026-earnings-call-transcript/",
           "published": 1794372714,
           "sentiment": 0.0
-        },
-        {
-          "title": "What Occidental Petroleum (OXY) Said on Its Q3 Earnings Call",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/transcript-what-occidental-petroleum-oxy-said-on-its-q3-earnings-call-2026-11-10/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1794348884,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.109
@@ -558,24 +558,31 @@ window.PRICES_DATA = {
       "change_1m": "+2.85%",
       "change_ytd": "+47.91%",
       "return_1yr": "+39%",
-      "low_gbp": "76",
+      "low_gbp": "77",
       "low_usd": 101.59,
       "high_gbp": "125",
       "high_usd": 165.93,
       "bar_pct": 81,
-      "market_cap_gbp_b": 60.034,
+      "market_cap_gbp_b": 60.1,
       "market_cap_usd_b": 79.727,
       "beta": 0.269,
       "pe_ratio": 9.93,
       "avg_volume_m": 3.06,
-      "div_yield_pct": 2.9,
+      "div_yield_pct": 2.86,
       "short_pct": 3.62,
       "analyst": "buy",
       "analyst_score": 2.36,
-      "vol_1d": 3129272,
-      "vol_1w": 23071372,
-      "vol_1m": 73536972,
+      "vol_1d": 3130600,
+      "vol_1w": 23072700,
+      "vol_1m": 73538300,
       "news": [
+        {
+          "title": "Should You Pick Occidental Stock Over Its Competitors?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/oxy/articles/624270/should-you-pick-occidental-stock-over-its-competitors/2026-11-11",
+          "published": 1794446820,
+          "sentiment": 0.0
+        },
         {
           "title": "EOG\u2019s 8% Dividend Raise Is a Bet on Surviving Any Oil Cycle",
           "publisher": "24/7 Wall St.",
@@ -603,13 +610,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/conocophillips-trades-premium-time-buy-170300578.html",
           "published": 1794243780,
           "sentiment": 0.0
-        },
-        {
-          "title": "5 Oil Stocks Could Turn $500,000 Into $14,000 a Year in Dividend Income",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/09/5-oil-stocks-could-turn-500000-into-14000-a-year-in-dividend-income/",
-          "published": 1794235040,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.182
@@ -619,7 +619,7 @@ window.PRICES_DATA = {
       "company_name": "Marathon Petroleum",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "303",
+      "price_gbp": "304",
       "price_usd": 402.84,
       "change_1d": "+3.36%",
       "change_1w": "+2.59%",
@@ -631,19 +631,26 @@ window.PRICES_DATA = {
       "high_gbp": "372",
       "high_usd": 493.98,
       "bar_pct": 73,
-      "market_cap_gbp_b": 82.593,
+      "market_cap_gbp_b": 82.684,
       "market_cap_usd_b": 109.687,
       "beta": 0.509,
       "pe_ratio": 7.98,
       "avg_volume_m": 2.55,
-      "div_yield_pct": 1.13,
+      "div_yield_pct": 1.09,
       "short_pct": 2.73,
       "analyst": "buy",
       "analyst_score": 2.33,
-      "vol_1d": 1766497,
-      "vol_1w": 12338997,
-      "vol_1m": 52227597,
+      "vol_1d": 1857700,
+      "vol_1w": 12430200,
+      "vol_1m": 52318800,
       "news": [
+        {
+          "title": "Is Marathon Petroleum (MPC) Too Pricey For Its Future Cash Flow?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/marathon-petroleum-mpc-too-pricey-071435697.html",
+          "published": 1794467675,
+          "sentiment": 0.0
+        },
         {
           "title": "Here is What to Know Beyond Why Marathon Petroleum Corporation (MPC) is a Trending Stock",
           "publisher": "Zacks",
@@ -671,16 +678,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/economy/policy/articles/boe-rate-peak-4-25-092907206.html",
           "published": 1794389347,
           "sentiment": 0.0
-        },
-        {
-          "title": "Zacks Investment Ideas feature highlights: CVR Energy, Delek US, Northern Oil and Gas and Marathon Petroleum",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/energy/articles/zacks-investment-ideas-feature-highlights-053300546.html",
-          "published": 1794375180,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.157
+      "news_sentiment": 0.102
     },
     {
       "ticker": "VLO",
@@ -694,23 +694,23 @@ window.PRICES_DATA = {
       "change_1m": "-16.58%",
       "change_ytd": "+123.27%",
       "return_1yr": "+98%",
-      "low_gbp": "120",
+      "low_gbp": "121",
       "low_usd": 159.9,
       "high_gbp": "348",
       "high_usd": 461.52,
       "bar_pct": 68,
-      "market_cap_gbp_b": 76.378,
+      "market_cap_gbp_b": 76.462,
       "market_cap_usd_b": 101.433,
       "beta": 0.552,
       "pe_ratio": 8.27,
       "avg_volume_m": 3.09,
-      "div_yield_pct": 1.37,
+      "div_yield_pct": 1.32,
       "short_pct": 2.9,
       "analyst": "buy",
       "analyst_score": 2.5,
-      "vol_1d": 2232625,
-      "vol_1w": 16050525,
-      "vol_1m": 69922125,
+      "vol_1d": 2233700,
+      "vol_1w": 16051600,
+      "vol_1m": 69923200,
       "news": [
         {
           "title": "Will Wider Heavy Crude Discounts Strengthen Phillips 66's Margins?",
@@ -767,18 +767,18 @@ window.PRICES_DATA = {
       "high_gbp": "46",
       "high_usd": 60.46,
       "bar_pct": 63,
-      "market_cap_gbp_b": 56.639,
-      "market_cap_usd_b": 75.219,
+      "market_cap_gbp_b": 56.701,
+      "market_cap_usd_b": 75.218,
       "beta": 0.792,
       "pe_ratio": 24.74,
       "avg_volume_m": 12.7,
-      "div_yield_pct": 2.36,
+      "div_yield_pct": 2.32,
       "short_pct": 4.46,
       "analyst": "buy",
       "analyst_score": 1.53,
-      "vol_1d": 7033654,
-      "vol_1w": 59384554,
-      "vol_1m": 278799254,
+      "vol_1d": 7037600,
+      "vol_1w": 59388500,
+      "vol_1m": 278803200,
       "news": [
         {
           "title": "SLB (SLB) Stock Still Looks Undervalued Despite Its 70% Run",
@@ -835,18 +835,18 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 43,
-      "market_cap_gbp_b": 20.509,
+      "market_cap_gbp_b": 20.532,
       "market_cap_usd_b": 27.237,
       "beta": 0.749,
       "pe_ratio": 13.84,
       "avg_volume_m": 10.38,
-      "div_yield_pct": 2.13,
+      "div_yield_pct": 2.07,
       "short_pct": 5.39,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 6775785,
-      "vol_1w": 44352985,
-      "vol_1m": 233818385,
+      "vol_1d": 6779400,
+      "vol_1w": 44356600,
+      "vol_1m": 233822000,
       "news": [
         {
           "title": "Are Wall Street Analysts Bullish on Halliburton Stock?",
@@ -903,18 +903,18 @@ window.PRICES_DATA = {
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 20,
-      "market_cap_gbp_b": 36.948,
-      "market_cap_usd_b": 49.068,
+      "market_cap_gbp_b": 36.988,
+      "market_cap_usd_b": 49.067,
       "beta": 1.058,
       "pe_ratio": 16.98,
       "avg_volume_m": 7.93,
-      "div_yield_pct": 1.93,
+      "div_yield_pct": 1.86,
       "short_pct": 2.79,
       "analyst": "buy",
       "analyst_score": 1.56,
-      "vol_1d": 9065225,
-      "vol_1w": 62876125,
-      "vol_1m": 213960125,
+      "vol_1d": 9835200,
+      "vol_1w": 63646100,
+      "vol_1m": 214730100,
       "news": [
         {
           "title": "Baker Hughes (BKR) Lands Cronos Deal On A Fair Value Story Under Pressure",
@@ -971,56 +971,56 @@ window.PRICES_DATA = {
       "high_gbp": "74",
       "high_usd": 98.75,
       "bar_pct": 48,
-      "market_cap_gbp_b": 135.8,
-      "market_cap_usd_b": 180.348,
+      "market_cap_gbp_b": 135.949,
+      "market_cap_usd_b": 180.347,
       "beta": 0.6,
       "pe_ratio": 15.49,
       "avg_volume_m": 12.13,
-      "div_yield_pct": 2.89,
+      "div_yield_pct": 2.9,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.91,
-      "vol_1d": 10212502,
-      "vol_1w": 64674202,
-      "vol_1m": 297676202,
+      "vol_1d": 10218400,
+      "vol_1w": 64680100,
+      "vol_1m": 297682100,
       "news": [
+        {
+          "title": "NextEra Energy (NEE) Draws Fresh Virginia Questions Over Merger Consumer Protections",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/nextera-energy-nee-draws-fresh-010909823.html",
+          "published": 1794445749,
+          "sentiment": 0.527
+        },
+        {
+          "title": "What Is The Biggest Threat To Vistra Stock?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/vst/articles/624307/what-is-the-biggest-threat-to-vistra-stock/2026-11-11",
+          "published": 1794445184,
+          "sentiment": -0.527
+        },
+        {
+          "title": "What Could Send Constellation Energy Stock Higher?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/ceg/articles/624309/what-could-send-constellation-energy-stock-higher/2026-11-11",
+          "published": 1794444271,
+          "sentiment": 0.273
+        },
+        {
+          "title": "NextEra Energy (NEE) Could Be 8% Undervalued After Dominion Merger Scrutiny",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/nextera-energy-nee-could-8-001740714.html",
+          "published": 1794442660,
+          "sentiment": 0.273
+        },
         {
           "title": "Investors Heavily Search NextEra Energy, Inc. (NEE): Here is What You Need to Know",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/investors-heavily-search-nextera-energy-202120458.html",
           "published": 1794428480,
           "sentiment": 0.273
-        },
-        {
-          "title": "Constellation Energy\u2019s Dividend Is Small. AI Power Demand Could Change That",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/11/constellation-energys-dividend-is-small-ai-power-demand-could-change-that/",
-          "published": 1794421035,
-          "sentiment": -0.128
-        },
-        {
-          "title": "State Street Utilities SPDR (XLU) Buys $76 Million More NextEra on Monday",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-utilities-spdr-xlu-110336513.html",
-          "published": 1794395016,
-          "sentiment": 0.0
-        },
-        {
-          "title": "People Pay the Power Bill Before Almost Anything Else. $45,000 in Each of These 3 Utilities Pays $5,915 a Year",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/09/people-pay-the-power-bill-before-almost-anything-else-45000-in-each-of-these-3-utilities-pays-5915-a-year/",
-          "published": 1794262465,
-          "sentiment": -0.103
-        },
-        {
-          "title": "Can DTE Energy Stock Jump 40%?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/stock/dte/articles/623655/can-dte-energy-stock-jump-40/2026-11-09",
-          "published": 1794228361,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": 0.063
+      "news_sentiment": 0.164
     },
     {
       "ticker": "SSE.L",
@@ -1028,19 +1028,19 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "27",
-      "price_usd": 35.7,
+      "price_usd": 35.66,
       "change_1d": "+0.30%",
       "change_1w": "+2.60%",
       "change_1m": "+8.52%",
       "change_ytd": "+20.51%",
       "return_1yr": "+16%",
       "low_gbp": "20",
-      "low_usd": 27.22,
+      "low_usd": 27.19,
       "high_gbp": "28",
-      "high_usd": 36.75,
+      "high_usd": 36.71,
       "bar_pct": 89,
       "market_cap_gbp_b": 32.627,
-      "market_cap_usd_b": 43.33,
+      "market_cap_usd_b": 43.282,
       "beta": 0.534,
       "pe_ratio": 25.6,
       "avg_volume_m": 2.39,
@@ -1107,7 +1107,7 @@ window.PRICES_DATA = {
       "high_gbp": "56",
       "high_usd": 73.74,
       "bar_pct": 9,
-      "market_cap_gbp_b": 2.82,
+      "market_cap_gbp_b": 2.823,
       "market_cap_usd_b": 3.745,
       "beta": 1.45,
       "pe_ratio": 42.24,
@@ -1116,9 +1116,9 @@ window.PRICES_DATA = {
       "short_pct": 24.85,
       "analyst": "buy",
       "analyst_score": 2.45,
-      "vol_1d": 3805065,
-      "vol_1w": 37436765,
-      "vol_1m": 187176065,
+      "vol_1d": 3822000,
+      "vol_1w": 37453700,
+      "vol_1m": 187193000,
       "news": [
         {
           "title": "Enphase Energy (ENPH) Could Be 32% Undervalued As Shipments Put Valuation Back In Focus",
@@ -1175,7 +1175,7 @@ window.PRICES_DATA = {
       "high_gbp": "242",
       "high_usd": 320.95,
       "bar_pct": 8,
-      "market_cap_gbp_b": 14.415,
+      "market_cap_gbp_b": 14.431,
       "market_cap_usd_b": 19.144,
       "beta": 1.709,
       "pe_ratio": 10.3,
@@ -1184,9 +1184,9 @@ window.PRICES_DATA = {
       "short_pct": 13.66,
       "analyst": "buy",
       "analyst_score": 1.75,
-      "vol_1d": 3517083,
-      "vol_1w": 22641083,
-      "vol_1m": 70705683,
+      "vol_1d": 3522300,
+      "vol_1w": 22646300,
+      "vol_1m": 70710900,
       "news": [
         {
           "title": "First Solar Stock: Is Wall Street Bullish or Bearish?",
@@ -1243,18 +1243,18 @@ window.PRICES_DATA = {
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 21,
-      "market_cap_gbp_b": 4.373,
-      "market_cap_usd_b": 5.808,
+      "market_cap_gbp_b": 4.377,
+      "market_cap_usd_b": 5.806,
       "beta": 1.126,
       "pe_ratio": null,
       "avg_volume_m": 2.0,
-      "div_yield_pct": 5.09,
+      "div_yield_pct": 5.01,
       "short_pct": null,
       "analyst": "hold",
       "analyst_score": 2.86,
-      "vol_1d": 1568187,
-      "vol_1w": 11611887,
-      "vol_1m": 55250787,
+      "vol_1d": 1573400,
+      "vol_1w": 11617100,
+      "vol_1m": 55256000,
       "news": [
         {
           "title": "Brookfield Renewable Corp (BEPC) Q3 2026 Earnings Call Highlights: Record FFO Growth, $3 ...",
@@ -1299,7 +1299,7 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.33",
+      "price_gbp": "5.34",
       "price_usd": 7.08,
       "change_1d": "-1.12%",
       "change_1w": "+0.14%",
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "6.81",
       "high_usd": 9.04,
       "bar_pct": 38,
-      "market_cap_gbp_b": 21.129,
+      "market_cap_gbp_b": 21.152,
       "market_cap_usd_b": 28.06,
       "beta": 0.556,
       "pe_ratio": null,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "strong_buy",
       "analyst_score": 1.0,
-      "vol_1d": 52932,
-      "vol_1w": 635632,
-      "vol_1m": 5141032,
+      "vol_1d": 159000,
+      "vol_1w": 741700,
+      "vol_1m": 5247100,
       "news": [
         {
           "title": "Eversource\u2019s financial risk eases as Revolution Wind hits full commercial operations: CEO",
