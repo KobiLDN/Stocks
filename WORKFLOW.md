@@ -56,6 +56,12 @@ All four bots are started by cron-job.org (London time) through GitHub's `workfl
 - **Changing a time in cron-job.org? Update `monitoring/freshness.js` too.**
 - GitHub marks API version `2022-11-28` deprecated, with a sunset of **10 March 2028**. Before then, update the `X-GitHub-Api-Version` header on every job.
 
+## PR checks — what CI runs
+
+`lint.yml` runs on every branch and PR: Python syntax, `python universe.py` (master list + generated links), the freshness tests, the history tests, **the page check**, and JSON validity.
+
+**Page check** (`monitoring/page-check.mjs`): loads every page in a headless browser at desktop and phone width and fails on a script error, a local file that 404s, sideways scrolling or an off-screen light/dark button on a phone, or a page that should show picks/verdicts but is empty. Outside sites are blocked, so a slow CDN can't fail a PR (the two outside libraries, TradingView and d3, are expected to be missing). Run it by hand: `node monitoring/page-check.mjs` (needs `playwright`). Known fallbacks it tolerates are listed at the top of the script. Add a page that must draw something to `MUST_RENDER`. It would have caught the empty Signals pages (#68) the day they broke.
+
 ## History database — Cloudflare D1 (rebuild step 3, #54)
 
 D1 keeps **history only**; the site never reads it. Every bot still publishes its files exactly as before — history is written *after* the push, so D1 can never delay or break the live site.

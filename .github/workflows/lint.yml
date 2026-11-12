@@ -36,6 +36,12 @@ jobs:
           pip install -q pyyaml requests
           python -m unittest discover -s history -t .
 
+      - name: Page check (every page loads, no script errors, fits a phone)
+        run: |
+          npm install --prefix monitoring --no-save playwright@1.63.0
+          ./monitoring/node_modules/.bin/playwright install --with-deps chromium
+          node monitoring/page-check.mjs
+
       - name: JSON validity check
         run: |
           find . -name "*.json" \
