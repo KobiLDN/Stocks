@@ -538,7 +538,7 @@ metrics_base_tips:
 metrics:
   AI:
     page_title: AI Infrastructure
-    meta_description: AI infrastructure stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 48 stocks.
+    meta_description: AI infrastructure stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for {count} stocks.
     h1: AI
     search_placeholder: Search ticker or company...
     unit: stocks
@@ -690,58 +690,9 @@ metrics:
       analyst_score:
         title: Analyst Rating
         tip: Consensus recommendation from Wall Street analysts, ranging from Strong Buy to Sell. Based on the average of all analyst ratings covering the stock. Take with a pinch of salt — analysts are often slow to downgrade.
-    names:
-      SNDK: SanDisk Corporation
-      WDC: Western Digital
-      285A: Kioxia Holdings
-      MU: Micron Technology
-      STX: Seagate Technology
-      MRVL: Marvell Technology
-      P: Everpure
-      RR.: Rolls-Royce
-      CEG: Constellation Energy
-      VST: Vistra Corp
-      TLN: Talen Energy
-      BEP: Brookfield Renewable
-      BEPC: Brookfield Renewable Corp
-      GEV: GE Vernova
-      BWXT: BWX Technologies
-      SMR: NuScale Power
-      OKLO: Oklo Inc
-      NNE: NANO Nuclear
-      CCJ: Cameco
-      UEC: Uranium Energy
-      LEU: Centrus Energy
-      VRT: Vertiv Holdings
-      ETN: Eaton Corporation
-      POWL: Powell Industries
-      EQIX: Equinix
-      DLR: Digital Realty
-      AMT: American Tower
-      GOOGL: Alphabet
-      MSFT: Microsoft
-      AMZN: Amazon
-      META: Meta Platforms
-      IREN: Iris Energy
-      CORZ: Core Scientific
-      WULF: TeraWulf
-      HUT: Hut 8 Mining
-      SMCI: Super Micro Computer
-      DELL: Dell Technologies
-      COHR: Coherent Corp
-      LITE: Lumentum
-      AAOI: Applied Optoelectronics
-      FN: Fabrinet
-      MTSI: MACOM Technology
-      SMTC: Semtech
-      CRDO: Credo Technology
-      MXL: MaxLinear
-      KEYS: Keysight Technologies
-      VIAV: Viavi Solutions
-      AXTI: AXT Inc
   Biotech:
     page_title: Biotech
-    meta_description: Biotech stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 30 stocks.
+    meta_description: Biotech stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for {count} stocks.
     h1: Biotech
     search_placeholder: Search ticker or company...
     unit: stocks
@@ -851,40 +802,9 @@ metrics:
       short_pct:
         title: Short Interest
         tip: Percentage of available shares currently sold short. High short interest is common in speculative biotech names.
-    names:
-      AMGN: Amgen
-      GILD: Gilead Sciences
-      REGN: Regeneron Pharmaceuticals
-      VRTX: Vertex Pharmaceuticals
-      BIIB: Biogen
-      BMY: Bristol-Myers Squibb
-      AZN: AstraZeneca
-      GSK: GSK plc
-      CRSP: CRISPR Therapeutics
-      BEAM: Beam Therapeutics
-      NTLA: Intellia Therapeutics
-      EDIT: Editas Medicine
-      ILMN: Illumina
-      PACB: Pacific Biosciences
-      NTRA: Natera
-      RXRX: Recursion Pharmaceuticals
-      INCY: Incyte Corporation
-      EXEL: Exelixis
-      ALNY: Alnylam Pharmaceuticals
-      RCUS: Arcus Biosciences
-      MRNA: Moderna
-      BNTX: BioNTech
-      NVAX: Novavax
-      BMRN: BioMarin Pharmaceutical
-      SRPT: Sarepta Therapeutics
-      COAG: Hemab Therapeutics
-      NVO: Novo Nordisk
-      LLY: Eli Lilly
-      LEGN: Legend Biotech
-      IONS: Ionis Pharmaceuticals
   Crypto:
     page_title: Crypto
-    meta_description: Crypto fundamentals — market cap, beta, volume data for 19 coins across Bitcoin, Layer 1, Payments, Emerging L1s, Infrastructure, and Meme. Market cap and volume data for all coins.
+    meta_description: Crypto fundamentals — market cap, beta, volume data for {count} coins across Bitcoin, Layer 1, Payments, Emerging L1s, Infrastructure, and Meme. Market cap and volume data for all coins.
     h1: Crypto
     search_placeholder: Search ticker or company...
     unit: stocks
@@ -973,44 +893,9 @@ metrics:
       short_pct:
         title: Short Interest
         tip: Percentage of available shares currently sold short.
-    names:
-      BTC: Bitcoin
-      ETH: Ethereum
-      SOL: Solana
-      BNB: BNB
-      ADA: Cardano
-      AVAX: Avalanche
-      XRP: XRP
-      XLM: Stellar
-      TRX: TRON
-      SUI: Sui
-      HBAR: Hedera
-      TON: Toncoin
-      ALGO: Algorand
-      MINA: Mina
-      POL: Polygon
-      DOT: Polkadot
-      LINK: Chainlink
-      DOGE: Dogecoin
-      PEPE: Pepe
-      TAO: Bittensor
-      FET: ASI Alliance
-      RNDR: Render
-      OCEAN: Ocean Protocol
-      GRT: The Graph
-      AGIX: SingularityNET
-      NMR: Numeraire
-      ALT: AltLayer
-      AIOZ: AIOZ Network
-      ARKM: Arkham
-      WLD: Worldcoin
-      NEAR: NEAR Protocol
-      ICP: Internet Computer
-      KAITO: Kaito
-      VIRTUAL: Virtuals Protocol
   Defence:
     page_title: Defence &amp; Aerospace
-    meta_description: Defence &amp; Aerospace stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 29 stocks.
+    meta_description: Defence &amp; Aerospace stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for {count} stocks.
     h1: Defence
     search_placeholder: Search ticker or company...
     unit: stocks
@@ -1084,39 +969,9 @@ metrics:
       analyst_score:
         title: Analyst Rating
         tip: Consensus recommendation from analysts, ranging from Strong Buy to Sell.
-    names:
-      LMT: Lockheed Martin
-      RTX: RTX Corporation
-      NOC: Northrop Grumman
-      GD: General Dynamics
-      HII: Huntington Ingalls
-      LHX: L3Harris Technologies
-      BA: Boeing
-      BA.L: BAE Systems
-      RR.L: Rolls-Royce
-      QQ.L: QinetiQ Group
-      PLTR: Palantir Technologies
-      LDOS: Leidos Holdings
-      CACI: CACI International
-      SAIC: Science Applications Intl
-      BAH: Booz Allen Hamilton
-      AVAV: AeroVironment
-      KTOS: Kratos Defense
-      RCAT: Red Cat Holdings
-      TXT: Textron
-      SPCX: SpaceX
-      RKLB: Rocket Lab
-      PL: Planet Labs
-      ASTS: AST SpaceMobile
-      TDG: TransDigm Group
-      HEI: HEICO Corporation
-      AXON: Axon Enterprise
-      OLN: Olin Corporation
-      MRCY: Mercury Systems
-      DRS: Leonardo DRS
   Energy:
     page_title: Energy
-    meta_description: Energy stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 20 stocks.
+    meta_description: Energy stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for {count} stocks.
     h1: Energy
     search_placeholder: Search ticker or company...
     unit: stocks
@@ -1181,30 +1036,9 @@ metrics:
       analyst_score:
         title: Analyst Rating
         tip: Consensus recommendation from analysts, ranging from Strong Buy to Sell.
-    names:
-      XOM: ExxonMobil
-      CVX: Chevron
-      SHEL: Shell
-      BP: BP p.l.c.
-      TTE: TotalEnergies
-      EQNR: Equinor
-      COP: ConocoPhillips
-      OXY: Occidental Petroleum
-      EOG: EOG Resources
-      MPC: Marathon Petroleum
-      VLO: Valero Energy
-      SLB: SLB (Schlumberger)
-      HAL: Halliburton
-      BKR: Baker Hughes
-      NEE: NextEra Energy
-      SSE.L: SSE plc
-      ENPH: Enphase Energy
-      FSLR: First Solar
-      BEPC: Brookfield Renewable
-      DNNGY: Ørsted
   MegaCap:
     page_title: Mega-Cap
-    meta_description: Mega-cap stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 50 stocks across 7 categories.
+    meta_description: Mega-cap stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for {count} stocks across 7 categories.
     h1: Mega-Cap
     search_placeholder: Search ticker or company...
     unit: stocks
@@ -1287,60 +1121,9 @@ metrics:
       analyst_score:
         title: Analyst Rating
         tip: Consensus recommendation from analysts, ranging from Strong Buy to Sell.
-    names:
-      AAPL: Apple Inc.
-      MSFT: Microsoft Corporation
-      NVDA: NVIDIA Corporation
-      GOOGL: Alphabet Inc.
-      META: Meta Platforms
-      AMZN: Amazon.com
-      TSLA: Tesla
-      NFLX: Netflix
-      JPM: JPMorgan Chase
-      BAC: Bank of America
-      BRK-B: Berkshire Hathaway B
-      V: Visa Inc.
-      MA: Mastercard
-      GS: Goldman Sachs
-      BLK: BlackRock
-      LLY: Eli Lilly
-      UNH: UnitedHealth Group
-      JNJ: Johnson & Johnson
-      ABBV: AbbVie
-      MRK: Merck
-      TMO: Thermo Fisher Scientific
-      ABT: Abbott Laboratories
-      PG: Procter & Gamble
-      KO: Coca-Cola
-      PEP: PepsiCo
-      MCD: ''
-      NKE: Nike
-      WMT: Walmart
-      COST: Costco
-      XOM: ExxonMobil
-      CVX: Chevron
-      CAT: Caterpillar
-      HON: Honeywell
-      GE: GE Aerospace
-      RTX: RTX Corp
-      BA: Boeing
-      AMD: Advanced Micro Devices
-      QCOM: Qualcomm
-      AVGO: Broadcom
-      TSM: Taiwan Semiconductor
-      ASML: ASML Holding
-      ARM: Arm Holdings
-      INTC: Intel
-      2222.SR: Saudi Aramco
-      BABA: Alibaba Group
-      SAP: SAP SE
-      SONY: Sony Group
-      TM: Toyota Motor
-      NVO: Novo Nordisk
-      HSBC: HSBC Holdings
   Tech:
     page_title: Technology
-    meta_description: Technology stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for 31 stocks.
+    meta_description: Technology stock fundamentals — P/E ratios, market cap, beta, analyst ratings, short interest, and volume data for {count} stocks.
     h1: Technology
     search_placeholder: Search ticker or company...
     unit: stocks
@@ -1417,42 +1200,10 @@ metrics:
       short_pct:
         title: Short Interest
         tip: Percentage of available shares currently sold short.
-    names:
-      AAPL: Apple
-      MSFT: Microsoft
-      GOOGL: Alphabet (Google)
-      AMZN: Amazon
-      META: Meta Platforms
-      NVDA: NVIDIA
-      AMD: Advanced Micro Devices
-      INTC: Intel
-      TSM: Taiwan Semiconductor
-      AVGO: Broadcom
-      QCOM: Qualcomm
-      ARM: Arm Holdings
-      ASML: ASML Holding
-      MU: Micron Technology
-      AMAT: Applied Materials
-      ORCL: Oracle
-      CRM: Salesforce
-      ADBE: Adobe
-      NOW: ServiceNow
-      SNOW: Snowflake
-      INTU: Intuit
-      CRWD: CrowdStrike
-      PANW: Palo Alto Networks
-      NET: Cloudflare
-      FTNT: Fortinet
-      NFLX: Netflix
-      SHOP: Shopify
-      SPOT: Spotify
-      UBER: Uber
-      CSCO: Cisco Systems
-      PLTR: Palantir Technologies
 news:
   AI:
     page_title: AI Infrastructure
-    meta_description: Latest news and sentiment analysis across 48 AI infrastructure stocks. Filter by category and sort by recency or sentiment score.
+    meta_description: Latest news and sentiment analysis across {count} AI infrastructure stocks. Filter by category and sort by recency or sentiment score.
     h1: AI
     search_placeholder: Search ticker, company or headline...
     default_window: day
@@ -1568,58 +1319,9 @@ news:
       text: Electronic test &amp; measurement gear used to validate chips, networks and power systems
     - id: materials
       text: Specialty substrates and compound semiconductors used in chip and optical component manufacturing
-    names:
-      SNDK: SanDisk Corporation
-      WDC: Western Digital
-      285A: Kioxia Holdings
-      MU: Micron Technology
-      STX: Seagate Technology
-      MRVL: Marvell Technology
-      PSTG: Everpure
-      RR.: Rolls-Royce
-      CEG: Constellation Energy
-      VST: Vistra Corp
-      TLN: Talen Energy
-      BEP: Brookfield Renewable
-      BEPC: Brookfield Renewable Corp
-      GEV: GE Vernova
-      BWXT: BWX Technologies
-      SMR: NuScale Power
-      OKLO: Oklo Inc
-      NNE: NANO Nuclear
-      CCJ: Cameco
-      UEC: Uranium Energy
-      LEU: Centrus Energy
-      VRT: Vertiv Holdings
-      ETN: Eaton Corporation
-      POWL: Powell Industries
-      EQIX: Equinix
-      DLR: Digital Realty
-      AMT: American Tower
-      GOOGL: Alphabet
-      MSFT: Microsoft
-      AMZN: Amazon
-      META: Meta Platforms
-      IREN: Iris Energy
-      CORZ: Core Scientific
-      WULF: TeraWulf
-      HUT: Hut 8 Mining
-      SMCI: Super Micro Computer
-      DELL: Dell Technologies
-      COHR: Coherent Corp
-      LITE: Lumentum
-      AAOI: Applied Optoelectronics
-      FN: Fabrinet
-      MTSI: MACOM Technology
-      SMTC: Semtech
-      CRDO: Credo Technology
-      MXL: MaxLinear
-      KEYS: Keysight Technologies
-      VIAV: Viavi Solutions
-      AXTI: AXT Inc
   Biotech:
     page_title: Biotech
-    meta_description: Latest news and sentiment analysis across 30 biotech stocks. Filter by category and sort by recency or sentiment score.
+    meta_description: Latest news and sentiment analysis across {count} biotech stocks. Filter by category and sort by recency or sentiment score.
     h1: Biotech
     search_placeholder: Search ticker, company or headline...
     default_window: day
@@ -1708,40 +1410,9 @@ news:
       text: Companies developing treatments for metabolic conditions — obesity, diabetes, liver disease and lipid disorders
     - id: neuroscience
       text: Neurology and CNS-focused biotechs — Alzheimer\'s, ALS, depression and other brain &amp; nervous system disorders
-    names:
-      AMGN: Amgen
-      GILD: Gilead Sciences
-      REGN: Regeneron Pharmaceuticals
-      VRTX: Vertex Pharmaceuticals
-      BIIB: Biogen
-      BMY: Bristol-Myers Squibb
-      AZN: AstraZeneca
-      GSK: GSK plc
-      CRSP: CRISPR Therapeutics
-      BEAM: Beam Therapeutics
-      NTLA: Intellia Therapeutics
-      EDIT: Editas Medicine
-      ILMN: Illumina
-      PACB: Pacific Biosciences
-      NTRA: Natera
-      RXRX: Recursion Pharmaceuticals
-      INCY: Incyte Corporation
-      EXEL: Exelixis
-      ALNY: Alnylam Pharmaceuticals
-      RCUS: Arcus Biosciences
-      MRNA: Moderna
-      BNTX: BioNTech
-      NVAX: Novavax
-      BMRN: BioMarin Pharmaceutical
-      SRPT: Sarepta Therapeutics
-      COAG: Hemab Therapeutics
-      NVO: Novo Nordisk
-      LLY: Eli Lilly
-      LEGN: Legend Biotech
-      IONS: Ionis Pharmaceuticals
   Crypto:
     page_title: Crypto
-    meta_description: Latest news and sentiment analysis across 19 coins including Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins. Filter by category and sort by recency or sentiment score.
+    meta_description: Latest news and sentiment analysis across {count} coins including Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins. Filter by category and sort by recency or sentiment score.
     h1: Crypto
     search_placeholder: Search ticker, company or headline...
     default_window: week
@@ -1812,44 +1483,9 @@ news:
       text: 'Meme — DOGE, PEPE: community-driven high-volatility tokens'
     - id: ai
       text: 'AI Tokens — TAO, FET (ASI Alliance), RNDR, NEAR, ICP, GRT, OCEAN, AGIX, NMR, ALT, AIOZ, ARKM, WLD, KAITO, VIRTUAL: decentralised AI infrastructure'
-    names:
-      BTC: Bitcoin
-      ETH: Ethereum
-      SOL: Solana
-      BNB: BNB
-      ADA: Cardano
-      AVAX: Avalanche
-      XRP: XRP
-      XLM: Stellar
-      TRX: TRON
-      SUI: Sui
-      HBAR: Hedera
-      TON: Toncoin
-      ALGO: Algorand
-      MINA: Mina
-      POL: Polygon
-      DOT: Polkadot
-      LINK: Chainlink
-      DOGE: Dogecoin
-      PEPE: Pepe
-      TAO: Bittensor
-      FET: ASI Alliance
-      RNDR: Render
-      OCEAN: Ocean Protocol
-      GRT: The Graph
-      AGIX: SingularityNET
-      NMR: Numeraire
-      ALT: AltLayer
-      AIOZ: AIOZ Network
-      ARKM: Arkham
-      WLD: Worldcoin
-      NEAR: NEAR Protocol
-      ICP: Internet Computer
-      KAITO: Kaito
-      VIRTUAL: Virtuals Protocol
   Defence:
     page_title: Defence &amp; Aerospace
-    meta_description: Latest news and sentiment analysis across 29 Defence &amp; Aerospace stocks. Filter by category and sort by recency or sentiment score.
+    meta_description: Latest news and sentiment analysis across {count} Defence &amp; Aerospace stocks. Filter by category and sort by recency or sentiment score.
     h1: Defence
     search_placeholder: Search ticker, company or headline...
     default_window: day
@@ -1911,39 +1547,9 @@ news:
       text: Space and satellite defence — Rocket Lab, Planet Labs, AST SpaceMobile
     - id: weapons
       text: Weapons systems and defence components — TransDigm, HEICO, Axon, Olin, Mercury Systems, Leonardo DRS
-    names:
-      LMT: Lockheed Martin
-      RTX: RTX Corporation
-      NOC: Northrop Grumman
-      GD: General Dynamics
-      HII: Huntington Ingalls
-      LHX: L3Harris Technologies
-      BA: Boeing
-      BA.L: BAE Systems
-      RR.L: Rolls-Royce
-      QQ.L: QinetiQ Group
-      PLTR: Palantir Technologies
-      LDOS: Leidos Holdings
-      CACI: CACI International
-      SAIC: Science Applications Intl
-      BAH: Booz Allen Hamilton
-      AVAV: AeroVironment
-      KTOS: Kratos Defense
-      RCAT: Red Cat Holdings
-      TXT: Textron
-      SPCX: SpaceX
-      RKLB: Rocket Lab
-      PL: Planet Labs
-      ASTS: AST SpaceMobile
-      TDG: TransDigm Group
-      HEI: HEICO Corporation
-      AXON: Axon Enterprise
-      OLN: Olin Corporation
-      MRCY: Mercury Systems
-      DRS: Leonardo DRS
   Energy:
     page_title: Energy
-    meta_description: Latest news and sentiment analysis across 20 Energy stocks. Filter by category and sort by recency or sentiment score.
+    meta_description: Latest news and sentiment analysis across {count} Energy stocks. Filter by category and sort by recency or sentiment score.
     h1: Energy
     search_placeholder: Search ticker, company or headline...
     default_window: day
@@ -1996,30 +1602,9 @@ news:
       text: Power generation and grid utilities — NextEra Energy (US) and SSE (UK)
     - id: clean-energy
       text: Renewable energy developers and equipment — Enphase, First Solar, Brookfield Renewable, Ørsted
-    names:
-      XOM: ExxonMobil
-      CVX: Chevron
-      SHEL: Shell
-      BP: BP p.l.c.
-      TTE: TotalEnergies
-      EQNR: Equinor
-      COP: ConocoPhillips
-      OXY: Occidental Petroleum
-      EOG: EOG Resources
-      MPC: Marathon Petroleum
-      VLO: Valero Energy
-      SLB: SLB (Schlumberger)
-      HAL: Halliburton
-      BKR: Baker Hughes
-      NEE: NextEra Energy
-      SSE.L: SSE plc
-      ENPH: Enphase Energy
-      FSLR: First Solar
-      BEPC: Brookfield Renewable
-      DNNGY: Ørsted
   MegaCap:
     page_title: Mega-Cap
-    meta_description: Latest news and sentiment analysis across 50 Mega-Cap stocks. Filter by category and sort by recency or sentiment score.
+    meta_description: Latest news and sentiment analysis across {count} Mega-Cap stocks. Filter by category and sort by recency or sentiment score.
     h1: Mega-Cap
     search_placeholder: Search ticker, company or headline...
     default_window: day
@@ -2090,60 +1675,9 @@ news:
       text: Technology and semiconductor companies — AMD, Qualcomm, Broadcom, TSMC, ASML, Arm, Intel
     - id: global-growth
       text: Global growth stocks — Saudi Aramco, Alibaba, SAP, Sony, Toyota, Novo Nordisk, HSBC
-    names:
-      AAPL: Apple Inc.
-      MSFT: Microsoft Corporation
-      NVDA: NVIDIA Corporation
-      GOOGL: Alphabet Inc.
-      META: Meta Platforms
-      AMZN: Amazon.com
-      TSLA: Tesla
-      NFLX: Netflix
-      JPM: JPMorgan Chase
-      BAC: Bank of America
-      BRK-B: Berkshire Hathaway B
-      V: Visa Inc.
-      MA: Mastercard
-      GS: Goldman Sachs
-      BLK: BlackRock
-      LLY: Eli Lilly
-      UNH: UnitedHealth Group
-      JNJ: Johnson & Johnson
-      ABBV: AbbVie
-      MRK: Merck
-      TMO: Thermo Fisher Scientific
-      ABT: Abbott Laboratories
-      PG: Procter & Gamble
-      KO: Coca-Cola
-      PEP: PepsiCo
-      MCD: ''
-      NKE: Nike
-      WMT: Walmart
-      COST: Costco
-      XOM: ExxonMobil
-      CVX: Chevron
-      CAT: Caterpillar
-      HON: Honeywell
-      GE: GE Aerospace
-      RTX: RTX Corp
-      BA: Boeing
-      AMD: Advanced Micro Devices
-      QCOM: Qualcomm
-      AVGO: Broadcom
-      TSM: Taiwan Semiconductor
-      ASML: ASML Holding
-      ARM: Arm Holdings
-      INTC: Intel
-      2222.SR: Saudi Aramco
-      BABA: Alibaba Group
-      SAP: SAP SE
-      SONY: Sony Group
-      TM: Toyota Motor
-      NVO: Novo Nordisk
-      HSBC: HSBC Holdings
   Tech:
     page_title: Technology
-    meta_description: Latest news and sentiment analysis across 31 technology stocks. Filter by category and sort by recency or sentiment score.
+    meta_description: Latest news and sentiment analysis across {count} technology stocks. Filter by category and sort by recency or sentiment score.
     h1: Technology
     search_placeholder: Search ticker, company or headline...
     default_window: day
@@ -2205,38 +1739,6 @@ news:
       text: Consumer-facing tech platforms with massive user bases
     - id: hardware-infra
       text: Networking hardware and AI platform infrastructure
-    names:
-      AAPL: Apple
-      MSFT: Microsoft
-      GOOGL: Alphabet (Google)
-      AMZN: Amazon
-      META: Meta Platforms
-      NVDA: NVIDIA
-      AMD: Advanced Micro Devices
-      INTC: Intel
-      TSM: Taiwan Semiconductor
-      AVGO: Broadcom
-      QCOM: Qualcomm
-      ARM: Arm Holdings
-      ASML: ASML Holding
-      MU: Micron Technology
-      AMAT: Applied Materials
-      ORCL: Oracle
-      CRM: Salesforce
-      ADBE: Adobe
-      NOW: ServiceNow
-      SNOW: Snowflake
-      INTU: Intuit
-      CRWD: CrowdStrike
-      PANW: Palo Alto Networks
-      NET: Cloudflare
-      FTNT: Fortinet
-      NFLX: Netflix
-      SHOP: Shopify
-      SPOT: Spotify
-      UBER: Uber
-      CSCO: Cisco Systems
-      PLTR: Palantir Technologies
 calculator:
   AI:
     page_title: AI Infrastructure
@@ -2330,55 +1832,6 @@ calculator:
       label: Test Equip
     - id: materials
       label: Materials
-    names:
-      SNDK: SanDisk Corporation
-      WDC: Western Digital
-      285A: Kioxia Holdings
-      MU: Micron Technology
-      STX: Seagate Technology
-      MRVL: Marvell Technology
-      PSTG: Everpure
-      RR.: Rolls-Royce
-      CEG: Constellation Energy
-      VST: Vistra Corp
-      TLN: Talen Energy
-      BEP: Brookfield Renewable
-      BEPC: Brookfield Renewable Corp
-      GEV: GE Vernova
-      BWXT: BWX Technologies
-      SMR: NuScale Power
-      OKLO: Oklo Inc
-      NNE: NANO Nuclear
-      CCJ: Cameco
-      UEC: Uranium Energy
-      LEU: Centrus Energy
-      VRT: Vertiv Holdings
-      ETN: Eaton Corporation
-      POWL: Powell Industries
-      EQIX: Equinix
-      DLR: Digital Realty
-      AMT: American Tower
-      GOOGL: Alphabet
-      MSFT: Microsoft
-      AMZN: Amazon
-      META: Meta Platforms
-      IREN: Iris Energy
-      CORZ: Core Scientific
-      WULF: TeraWulf
-      HUT: Hut 8 Mining
-      SMCI: Super Micro Computer
-      DELL: Dell Technologies
-      COHR: Coherent Corp
-      LITE: Lumentum
-      AAOI: Applied Optoelectronics
-      FN: Fabrinet
-      MTSI: MACOM Technology
-      SMTC: Semtech
-      CRDO: Credo Technology
-      MXL: MaxLinear
-      KEYS: Keysight Technologies
-      VIAV: Viavi Solutions
-      AXTI: AXT Inc
   Biotech:
     page_title: Biotech
     meta_description: What-If investment calculator — see what $100 to $10,000 invested in biotech stocks at the start of 2026 is worth today.
@@ -2450,37 +1903,6 @@ calculator:
       label: Metabolic
     - id: neuroscience
       label: Neuroscience
-    names:
-      AMGN: Amgen
-      GILD: Gilead Sciences
-      REGN: Regeneron Pharmaceuticals
-      VRTX: Vertex Pharmaceuticals
-      BIIB: Biogen
-      BMY: Bristol-Myers Squibb
-      AZN: AstraZeneca
-      GSK: GSK plc
-      CRSP: CRISPR Therapeutics
-      BEAM: Beam Therapeutics
-      NTLA: Intellia Therapeutics
-      EDIT: Editas Medicine
-      ILMN: Illumina
-      PACB: Pacific Biosciences
-      NTRA: Natera
-      RXRX: Recursion Pharmaceuticals
-      INCY: Incyte Corporation
-      EXEL: Exelixis
-      ALNY: Alnylam Pharmaceuticals
-      RCUS: Arcus Biosciences
-      MRNA: Moderna
-      BNTX: BioNTech
-      NVAX: Novavax
-      BMRN: BioMarin Pharmaceutical
-      SRPT: Sarepta Therapeutics
-      COAG: Hemab Therapeutics
-      NVO: Novo Nordisk
-      LLY: Eli Lilly
-      LEGN: Legend Biotech
-      IONS: Ionis Pharmaceuticals
   Crypto:
     page_title: Crypto
     meta_description: What-If investment calculator — see what $100 to $10,000 invested in crypto coins at the start of 2026 is worth today. Covers Bitcoin, Layer 1 blockchains, Payments, Emerging L1s, Infrastructure, and Meme coins.
@@ -2538,41 +1960,6 @@ calculator:
       label: Meme
     - id: ai
       label: AI Tokens
-    names:
-      BTC: Bitcoin
-      ETH: Ethereum
-      SOL: Solana
-      BNB: BNB
-      ADA: Cardano
-      AVAX: Avalanche
-      XRP: XRP
-      XLM: Stellar
-      TRX: TRON
-      SUI: Sui
-      HBAR: Hedera
-      TON: Toncoin
-      ALGO: Algorand
-      MINA: Mina
-      POL: Polygon
-      DOT: Polkadot
-      LINK: Chainlink
-      DOGE: Dogecoin
-      PEPE: Pepe
-      TAO: Bittensor
-      FET: ASI Alliance
-      RNDR: Render
-      OCEAN: Ocean Protocol
-      GRT: The Graph
-      AGIX: SingularityNET
-      NMR: Numeraire
-      ALT: AltLayer
-      AIOZ: AIOZ Network
-      ARKM: Arkham
-      WLD: Worldcoin
-      NEAR: NEAR Protocol
-      ICP: Internet Computer
-      KAITO: Kaito
-      VIRTUAL: Virtuals Protocol
   Defence:
     page_title: Defence &amp; Aerospace
     meta_description: What-If investment calculator — see what $100 to $10,000 invested in Defence &amp; Aerospace stocks at the start of 2026 is worth today.
@@ -2623,36 +2010,6 @@ calculator:
       label: Space
     - id: weapons
       label: Weapons
-    names:
-      LMT: Lockheed Martin
-      RTX: RTX Corporation
-      NOC: Northrop Grumman
-      GD: General Dynamics
-      HII: Huntington Ingalls
-      LHX: L3Harris Technologies
-      BA: Boeing
-      BA.L: BAE Systems
-      RR.L: Rolls-Royce
-      QQ.L: QinetiQ Group
-      PLTR: Palantir Technologies
-      LDOS: Leidos Holdings
-      CACI: CACI International
-      SAIC: SAIC
-      BAH: Booz Allen Hamilton
-      AVAV: AeroVironment
-      KTOS: Kratos Defense
-      RCAT: Red Cat Holdings
-      TXT: Textron
-      SPCX: SpaceX
-      RKLB: Rocket Lab
-      PL: Planet Labs
-      ASTS: AST SpaceMobile
-      TDG: TransDigm Group
-      HEI: HEICO Corporation
-      AXON: Axon Enterprise
-      OLN: Olin Corporation
-      MRCY: Mercury Systems
-      DRS: Leonardo DRS
   Energy:
     page_title: Energy
     meta_description: What-If investment calculator — see what $100 to $10,000 invested in Energy stocks at the start of 2026 is worth today.
@@ -2696,27 +2053,6 @@ calculator:
       label: Utilities
     - id: clean-energy
       label: Clean Energy
-    names:
-      XOM: ExxonMobil
-      CVX: Chevron
-      SHEL: Shell
-      BP: BP p.l.c.
-      TTE: TotalEnergies
-      EQNR: Equinor
-      COP: ConocoPhillips
-      OXY: Occidental Petroleum
-      EOG: EOG Resources
-      MPC: Marathon Petroleum
-      VLO: Valero Energy
-      SLB: SLB (Schlumberger)
-      HAL: Halliburton
-      BKR: Baker Hughes
-      NEE: NextEra Energy
-      SSE.L: SSE plc
-      ENPH: Enphase Energy
-      FSLR: First Solar
-      BEPC: Brookfield Renewable Corp
-      DNNGY: Ørsted
   MegaCap:
     page_title: Mega-Cap
     meta_description: What-If investment calculator — see what $100 to $10,000 invested in Global Mega-Cap Leaders stocks at the start of 2026 is worth today.
@@ -2774,57 +2110,6 @@ calculator:
       label: Tech/Semis
     - id: global-growth
       label: Global Growth
-    names:
-      AAPL: Apple
-      MSFT: Microsoft
-      NVDA: NVIDIA
-      GOOGL: Alphabet
-      META: Meta Platforms
-      AMZN: Amazon
-      TSLA: Tesla
-      NFLX: Netflix
-      JPM: JPMorgan Chase
-      BAC: Bank of America
-      BRK-B: Berkshire Hathaway B
-      V: Visa
-      MA: Mastercard
-      GS: Goldman Sachs
-      BLK: BlackRock
-      LLY: Eli Lilly
-      UNH: UnitedHealth Group
-      JNJ: Johnson & Johnson
-      ABBV: AbbVie
-      MRK: Merck
-      TMO: Thermo Fisher Scientific
-      ABT: Abbott Laboratories
-      PG: Procter & Gamble
-      KO: Coca-Cola
-      PEP: PepsiCo
-      MCD: ''
-      NKE: Nike
-      WMT: Walmart
-      COST: Costco
-      XOM: ExxonMobil
-      CVX: Chevron
-      CAT: Caterpillar
-      HON: Honeywell
-      GE: GE Aerospace
-      RTX: RTX Corp
-      BA: Boeing
-      AMD: Advanced Micro Devices
-      QCOM: Qualcomm
-      AVGO: Broadcom
-      TSM: Taiwan Semiconductor
-      ASML: ASML Holding
-      ARM: Arm Holdings
-      INTC: Intel
-      2222.SR: Saudi Aramco
-      BABA: Alibaba Group
-      SAP: SAP SE
-      SONY: Sony Group
-      TM: Toyota Motor
-      NVO: Novo Nordisk
-      HSBC: HSBC Holdings
   Tech:
     page_title: Technology
     meta_description: What-If investment calculator — see what $100 to $10,000 invested in technology stocks at the start of 2026 is worth today.
@@ -2875,38 +2160,6 @@ calculator:
       label: Consumer
     - id: hardware-infra
       label: Hardware
-    names:
-      AAPL: Apple
-      MSFT: Microsoft
-      GOOGL: Alphabet (Google)
-      AMZN: Amazon
-      META: Meta Platforms
-      NVDA: NVIDIA
-      AMD: Advanced Micro Devices
-      INTC: Intel
-      TSM: Taiwan Semiconductor
-      AVGO: Broadcom
-      QCOM: Qualcomm
-      ARM: Arm Holdings
-      ASML: ASML Holding
-      MU: Micron Technology
-      AMAT: Applied Materials
-      ORCL: Oracle
-      CRM: Salesforce
-      ADBE: Adobe
-      NOW: ServiceNow
-      SNOW: Snowflake
-      INTU: Intuit
-      CRWD: CrowdStrike
-      PANW: Palo Alto Networks
-      NET: Cloudflare
-      FTNT: Fortinet
-      NFLX: Netflix
-      SHOP: Shopify
-      SPOT: Spotify
-      UBER: Uber
-      CSCO: Cisco Systems
-      PLTR: Palantir Technologies
 charts:
   AI:
     page_title: AI Infrastructure
@@ -3094,55 +2347,6 @@ heatmap:
       label: Test Equipment
     - id: materials
       label: Materials
-    names:
-      SNDK: SanDisk Corporation
-      WDC: Western Digital
-      285A: Kioxia Holdings
-      MU: Micron Technology
-      STX: Seagate Technology
-      MRVL: Marvell Technology
-      P: Everpure
-      RR.: Rolls-Royce
-      CEG: Constellation Energy
-      VST: Vistra Corp
-      TLN: Talen Energy
-      BEP: Brookfield Renewable
-      BEPC: Brookfield Renewable Corp
-      GEV: GE Vernova
-      BWXT: BWX Technologies
-      SMR: NuScale Power
-      OKLO: Oklo Inc
-      NNE: NANO Nuclear
-      CCJ: Cameco
-      UEC: Uranium Energy
-      LEU: Centrus Energy
-      VRT: Vertiv Holdings
-      ETN: Eaton Corporation
-      POWL: Powell Industries
-      EQIX: Equinix
-      DLR: Digital Realty
-      AMT: American Tower
-      GOOGL: Alphabet
-      MSFT: Microsoft
-      AMZN: Amazon
-      META: Meta Platforms
-      IREN: Iris Energy
-      CORZ: Core Scientific
-      WULF: TeraWulf
-      HUT: Hut 8 Mining
-      SMCI: Super Micro Computer
-      DELL: Dell Technologies
-      COHR: Coherent Corp
-      LITE: Lumentum
-      AAOI: Applied Optoelectronics
-      FN: Fabrinet
-      MTSI: MACOM Technology
-      SMTC: Semtech
-      CRDO: Credo Technology
-      MXL: MaxLinear
-      KEYS: Keysight Technologies
-      VIAV: Viavi Solutions
-      AXTI: AXT Inc
   Biotech:
     page_title: Biotech
     meta_description: Biotech stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 30 stocks at a glance.
@@ -3182,37 +2386,6 @@ heatmap:
       label: Metabolic
     - id: neuroscience
       label: Neuroscience
-    names:
-      AMGN: Amgen
-      GILD: Gilead Sciences
-      REGN: Regeneron Pharmaceuticals
-      VRTX: Vertex Pharmaceuticals
-      BIIB: Biogen
-      BMY: Bristol-Myers Squibb
-      AZN: AstraZeneca
-      GSK: GSK plc
-      CRSP: CRISPR Therapeutics
-      BEAM: Beam Therapeutics
-      NTLA: Intellia Therapeutics
-      EDIT: Editas Medicine
-      ILMN: Illumina
-      PACB: Pacific Biosciences
-      NTRA: Natera
-      RXRX: Recursion Pharmaceuticals
-      INCY: Incyte Corporation
-      EXEL: Exelixis
-      ALNY: Alnylam Pharmaceuticals
-      RCUS: Arcus Biosciences
-      MRNA: Moderna
-      BNTX: BioNTech
-      NVAX: Novavax
-      BMRN: BioMarin Pharmaceutical
-      SRPT: Sarepta Therapeutics
-      COAG: Hemab Therapeutics
-      NVO: Novo Nordisk
-      LLY: Eli Lilly
-      LEGN: Legend Biotech
-      IONS: Ionis Pharmaceuticals
   Crypto:
     page_title: Crypto
     meta_description: Crypto heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across 31 coins at a glance.
@@ -3246,41 +2419,6 @@ heatmap:
       label: Meme
     - id: ai
       label: AI Tokens
-    names:
-      BTC: Bitcoin
-      ETH: Ethereum
-      SOL: Solana
-      BNB: BNB
-      ADA: Cardano
-      AVAX: Avalanche
-      XRP: XRP
-      XLM: Stellar
-      TRX: TRON
-      SUI: Sui
-      HBAR: Hedera
-      TON: Toncoin
-      ALGO: Algorand
-      MINA: Mina
-      POL: Polygon
-      DOT: Polkadot
-      LINK: Chainlink
-      DOGE: Dogecoin
-      PEPE: Pepe
-      TAO: Bittensor
-      FET: ASI Alliance
-      RNDR: Render
-      OCEAN: Ocean Protocol
-      GRT: The Graph
-      AGIX: SingularityNET
-      NMR: Numeraire
-      ALT: AltLayer
-      AIOZ: AIOZ Network
-      ARKM: Arkham
-      WLD: Worldcoin
-      NEAR: NEAR Protocol
-      ICP: Internet Computer
-      KAITO: Kaito
-      VIRTUAL: Virtuals Protocol
   Defence:
     page_title: Defence &amp; Aerospace
     meta_description: Defence &amp; Aerospace stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 29 stocks at a glance.
@@ -3311,36 +2449,6 @@ heatmap:
       label: Space Defence
     - id: weapons
       label: Weapons / Systems
-    names:
-      LMT: Lockheed Martin
-      RTX: RTX Corporation
-      NOC: Northrop Grumman
-      GD: General Dynamics
-      HII: Huntington Ingalls
-      LHX: L3Harris Technologies
-      BA: Boeing
-      BA.L: BAE Systems
-      RR.L: Rolls-Royce
-      QQ.L: QinetiQ Group
-      PLTR: Palantir Technologies
-      LDOS: Leidos Holdings
-      CACI: CACI International
-      SAIC: Science Applications Intl
-      BAH: Booz Allen Hamilton
-      AVAV: AeroVironment
-      KTOS: Kratos Defense
-      RCAT: Red Cat Holdings
-      TXT: Textron
-      SPCX: SpaceX
-      RKLB: Rocket Lab
-      PL: Planet Labs
-      ASTS: AST SpaceMobile
-      TDG: TransDigm Group
-      HEI: HEICO Corporation
-      AXON: Axon Enterprise
-      OLN: Olin Corporation
-      MRCY: Mercury Systems
-      DRS: Leonardo DRS
   Energy:
     page_title: Energy
     meta_description: Energy stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 20 stocks at a glance.
@@ -3368,27 +2476,6 @@ heatmap:
       label: Utilities
     - id: clean-energy
       label: Clean Energy
-    names:
-      XOM: ExxonMobil
-      CVX: Chevron
-      SHEL: Shell
-      BP: BP p.l.c.
-      TTE: TotalEnergies
-      EQNR: Equinor
-      COP: ConocoPhillips
-      OXY: Occidental Petroleum
-      EOG: EOG Resources
-      MPC: Marathon Petroleum
-      VLO: Valero Energy
-      SLB: SLB (Schlumberger)
-      HAL: Halliburton
-      BKR: Baker Hughes
-      NEE: NextEra Energy
-      SSE.L: SSE plc
-      ENPH: Enphase Energy
-      FSLR: First Solar
-      BEPC: Brookfield Renewable
-      DNNGY: Ørsted
   MegaCap:
     page_title: Mega-Cap
     meta_description: Mega-cap stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 50 mega-cap stocks at a glance.
@@ -3422,57 +2509,6 @@ heatmap:
       label: Tech & Semis
     - id: global-growth
       label: Global Growth
-    names:
-      AAPL: Apple Inc.
-      MSFT: Microsoft Corporation
-      NVDA: NVIDIA Corporation
-      GOOGL: Alphabet Inc.
-      META: Meta Platforms
-      AMZN: Amazon.com
-      TSLA: Tesla
-      NFLX: Netflix
-      JPM: JPMorgan Chase
-      BAC: Bank of America
-      BRK-B: Berkshire Hathaway B
-      V: Visa Inc.
-      MA: Mastercard
-      GS: Goldman Sachs
-      BLK: BlackRock
-      LLY: Eli Lilly
-      UNH: UnitedHealth Group
-      JNJ: Johnson & Johnson
-      ABBV: AbbVie
-      MRK: Merck
-      TMO: Thermo Fisher Scientific
-      ABT: Abbott Laboratories
-      PG: Procter & Gamble
-      KO: Coca-Cola
-      PEP: PepsiCo
-      MCD: ''
-      NKE: Nike
-      WMT: Walmart
-      COST: Costco
-      XOM: ExxonMobil
-      CVX: Chevron
-      CAT: Caterpillar
-      HON: Honeywell
-      GE: GE Aerospace
-      RTX: RTX Corp
-      BA: Boeing
-      AMD: Advanced Micro Devices
-      QCOM: Qualcomm
-      AVGO: Broadcom
-      TSM: Taiwan Semiconductor
-      ASML: ASML Holding
-      ARM: Arm Holdings
-      INTC: Intel
-      2222.SR: Saudi Aramco
-      BABA: Alibaba Group
-      SAP: SAP SE
-      SONY: Sony Group
-      TM: Toyota Motor
-      NVO: Novo Nordisk
-      HSBC: HSBC Holdings
   Tech:
     page_title: Technology
     meta_description: Technology stock heatmap — visualise 1D, 1W, 1M, YTD, and 1-year performance across all 31 stocks at a glance.
@@ -3503,38 +2539,6 @@ heatmap:
       label: Consumer / Platform
     - id: hardware-infra
       label: Hardware / Infra
-    names:
-      AAPL: Apple
-      MSFT: Microsoft
-      GOOGL: Alphabet (Google)
-      AMZN: Amazon
-      META: Meta Platforms
-      NVDA: NVIDIA
-      AMD: Advanced Micro Devices
-      INTC: Intel
-      TSM: Taiwan Semiconductor
-      AVGO: Broadcom
-      QCOM: Qualcomm
-      ARM: Arm Holdings
-      ASML: ASML Holding
-      MU: Micron Technology
-      AMAT: Applied Materials
-      ORCL: Oracle
-      CRM: Salesforce
-      ADBE: Adobe
-      NOW: ServiceNow
-      SNOW: Snowflake
-      INTU: Intuit
-      CRWD: CrowdStrike
-      PANW: Palo Alto Networks
-      NET: Cloudflare
-      FTNT: Fortinet
-      NFLX: Netflix
-      SHOP: Shopify
-      SPOT: Spotify
-      UBER: Uber
-      CSCO: Cisco Systems
-      PLTR: Palantir Technologies
 dashboard:
   AI:
     title: AI Infrastructure Investment Universe
