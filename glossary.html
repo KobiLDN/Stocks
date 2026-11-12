@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Plain-English meanings of every stock term, column and signal used on Stocks Hub: 52-week range, P/E, beta, VIX, confidence and more.">
+<title>Glossary</title>
+<script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<script src="AI/prices-data.js"></script>
+<script src="shared.js" defer></script>
+<style>
+  .gl-search { font-family: 'IBM Plex Mono', monospace; font-size: 13px; background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 9px 12px; width: 100%; max-width: 420px; outline: none; }
+  .gl-search:focus { border-color: var(--accent); }
+  .gl-bar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-bottom: 8px; }
+  .gl-jump { display: flex; flex-wrap: wrap; gap: 6px; }
+  .gl-note { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 10px 16px; font-size: 13px; line-height: 1.6; margin-bottom: 4px; }
+  .gl-group { margin: 0 0 8px; }
+  .gl-list { margin: 0; background: var(--surface); border: 1px solid var(--border); }
+  .gl-item { padding: 14px 18px; border-bottom: 1px solid var(--border); scroll-margin-top: 80px; }
+  .gl-item:last-child { border-bottom: none; }
+  .gl-item:target { background: var(--surface2); box-shadow: inset 3px 0 0 var(--accent); }
+  .gl-item h3 { font-family: 'IBM Plex Sans', sans-serif; font-size: 16px; font-weight: 700; margin: 0 0 4px; color: var(--text); }
+  .gl-item h3 .gl-also { font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 400; color: var(--muted); margin-left: 8px; }
+  .gl-item p { font-size: 14px; line-height: 1.65; margin: 4px 0; max-width: 90ch; }
+  .gl-where { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .gl-item a { color: var(--accent); }
+  .gl-empty { padding: 24px; text-align: center; color: var(--muted); }
+  mark { background: var(--accent); color: var(--bg); padding: 0 2px; }
+  .drawer-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4); }
+  .drawer-overlay.open { display: block; }
+  .drawer { position: fixed; top: 36px; left: 0; bottom: 0; width: 92px; background: var(--bg); border-right: 1px solid var(--accent); overflow-y: auto; z-index: 301; padding: 8px 6px; display: flex; flex-direction: column; gap: 4px; }
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .header-left { flex-shrink: 1; min-width: 0; }
+    .header-sub { white-space: normal; }
+  }
+</style>
+</head>
+<body data-layout="rail">
+
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail"></div>
+<div class="right-side">
+<header>
+  <div class="header-inner">
+  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+  <div class="header-left">
+    <div class="header-label">// What does that mean?</div>
+    <h1>Glos<span>sary</span></h1>
+    <div class="header-sub">Plain-English meanings of the terms, columns and signals used on this site</div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+</header>
+
+<div class="page-main">
+<div class="container">
+
+  <div class="gl-note">For learning and research, not financial advice. Definitions describe how <b>this site</b> calculates things, which can differ slightly from the textbook version.</div>
+
+  <div class="section-hdr"><span class="section-hdr-label">Find a term</span><span class="section-hdr-line"></span><span class="section-hdr-count" id="gl-count"></span></div>
+  <div class="gl-bar">
+    <input class="gl-search" id="gl-search" type="search" placeholder="Search, e.g. 52 week, beta, VIX…" aria-label="Search the glossary" oninput="render()">
+    <div class="gl-jump" id="gl-jump"></div>
+  </div>
+
+  <div id="glossary"></div>
+
+</div><!-- /.container -->
+
+<footer>Glossary · definitions match how Stocks Hub calculates each figure</footer>
+</div><!-- /.page-main -->
+</div><!-- /.right-side -->
+
+<script>
+// Each entry: id (the #link anchor), term, also (other names it appears under), text (paragraphs), where (on this site).
+const GROUPS = [
+  { title: 'Price and performance', terms: [
+    { id: 'returns', term: '1D · 1W · 1M · YTD · 1Y', also: 'return, change, 1yr Return',
+      text: ['How much the price changed over the last trading day (1D), the last 5 trading days (1W), the last month (1M), since the first trading day of this year (YTD, "year to date"), and over the last 12 months (1Y).',
+             'Green is up, red is down. These are price changes in the stock\'s own currency.'],
+      where: 'Every table; Metrics page' },
+    { id: 'vs-spy', term: 'vs SPY (vs S&P 500)', also: 'excess return, beat the market',
+      text: ['A stock\'s change minus the S&P 500\'s change over the same period, in percentage points. +3.0% means it beat the market by 3 points; −2.0% means it trailed by 2.',
+             'On the hub (Market Leaders) it compares 1-week moves. On the <a href="track-record.html">Track Record</a> it compares each signal over the whole holding period.'],
+      where: 'Hub: Market Leaders; Track Record' },
+    { id: 'range52', term: '52-Week Range', also: 'yearly high and low, range bar',
+      text: ['The lowest and highest prices over the past year. The bar shows where today\'s price sits between them: far left means near its yearly low, far right means near its yearly high.',
+             'It is context, not a prediction. A stock near its high can keep rising, and one near its low can keep falling. The bar never quite touches the ends (it stays between 1% and 99%).'],
+      where: 'Dashboard tables' },
+    { id: 'multiplier', term: 'Multiplier', also: 'what-if, $100 invested',
+      text: ['What $1 put in on the first trading day of the year is worth now: 1 plus the YTD change. 1.25× means up 25%; 0.80× means down 20%.',
+             'The What-If pages use the same idea for $100, $1,000 and $10,000 over different time periods. They show what past price changes would have done, ignoring fees, tax and exchange rates, and say nothing about the future.'],
+      where: 'Calculator (What-If) pages' },
+  ]},
+  { title: 'Company size, trading and valuation', terms: [
+    { id: 'market-cap', term: 'Market Cap', also: 'market capitalisation, Mkt Cap',
+      text: ['The total market value of all a company\'s shares: share price × number of shares, shown in billions ($B or £B). A rough measure of size: bigger usually means steadier, smaller usually means faster-growing and riskier.',
+             'Crypto shows the coin\'s market cap as reported by CoinMarketCap.'],
+      where: 'Metrics; heatmap tooltips' },
+    { id: 'volume', term: 'Volume · Avg Vol', also: '1D Vol, 1W Vol, 1M Vol',
+      text: ['The number of shares traded. 1D Vol is the latest session, 1W Vol the last 5 sessions, 1M Vol the last month. Avg Vol is the typical daily amount over the past 3 months, in millions.',
+             'Compare 1D Vol with Avg Vol: a much busier day often means news. High volume also means the stock is easy to buy and sell without moving the price.'],
+      where: 'Metrics page' },
+    { id: 'pe', term: 'P/E Ratio', also: 'price to earnings, PE',
+      text: ['The share price divided by the company\'s profit per share over the last year: roughly how many dollars investors pay for each $1 of yearly profit. A high P/E means the market expects strong growth; a low one means it expects little (or sees risk).',
+             'Companies that make a loss have no P/E and show —. Coins have none either.'],
+      where: 'Metrics page' },
+    { id: 'beta', term: 'Beta', also: 'volatility',
+      text: ['How much a stock tends to move compared with the overall market. 1.0 moves with the market; 1.5 moves about half as much again (up and down); 0.5 moves about half as much; below 0 tends to move the opposite way.',
+             'Higher beta means higher potential reward and bigger swings. It looks backwards and can change.'],
+      where: 'Metrics page' },
+    { id: 'dividend', term: 'Div Yield', also: 'dividend yield',
+      text: ['The cash a company pays its shareholders each year as a percentage of today\'s share price. A 3% yield means about $3 a year for every $100 invested. Many growth companies pay nothing and show —.',
+             'A very high yield can be a warning sign (the price may have fallen, and the payout may be cut).'],
+      where: 'Metrics page' },
+    { id: 'short', term: 'Short %', also: 'short interest',
+      text: ['The share of a company\'s tradable shares that investors have borrowed and sold, betting the price will fall. Above about 10% means many people expect a drop, but it can also fuel a sudden jump (a "short squeeze") if the price rises.'],
+      where: 'Metrics page' },
+    { id: 'analyst', term: 'Analyst rating', also: 'analyst consensus',
+      text: ['The average recommendation from professional analysts who cover the stock, from Strong Buy to Sell. Treat it with care: analysts are often slow to downgrade, and the AI signals use it as just one input.'],
+      where: 'Metrics page' },
+  ]},
+  { title: 'Signals', terms: [
+    { id: 'signal', term: 'Signal (Strong buy · Buy)', also: 'AI pick, top signals',
+      text: ['The label on a stock the system likes. An AI model picks the top 10 stocks in each sector three times a week (Monday, Wednesday, Friday), reading prices, returns, valuation, analyst views and news. It labels each Strong buy or Buy.',
+             'A signal is a starting point for your own research, not advice. How these labels have actually performed is on the <a href="track-record.html">Track Record</a> page, and so far "Strong buy" has done worse than "Buy".'],
+      where: 'Hub; Signals pages' },
+    { id: 'conf', term: 'Conf (Confidence)', also: 'confidence score',
+      text: ['The AI model\'s own guess at how sure it is about a pick, from 0 to 100%. It is <b>not</b> a measured chance that the stock will go up. 90% does not mean "wins 9 times out of 10".',
+             'So far the most confident picks (90%+) have not done better than the less confident ones; over 3 months they did worse. See the <a href="track-record.html">Track Record</a>. For momentum picks the number comes from a formula based on how much the stock has already risen this year.'],
+      where: 'Hub tables; Signals pages' },
+    { id: 'rank', term: 'Rank (#)', also: 'rank change, ↑',
+      text: ['A pick\'s position in the sector\'s top-10 list: 1 is the AI\'s favourite. An arrow like ↑3 means it moved up 3 places since the previous run.'],
+      where: 'Signals pages' },
+    { id: 'momentum', term: 'Momentum screen', also: 'momentum pick',
+      text: ['A simple rule, not the AI: it flags stocks that have already risen a lot, roughly +50% so far this year for a Buy and +100% for a Strong buy (or +200% / +500% over a year), with thresholds that differ slightly by sector. It lists those the AI didn\'t pick, and if the AI did pick one it raises the label to Strong buy.',
+             'Chasing big winners is risky: they can fall as fast as they rose. On the Track Record, momentum picks have trailed the market.'],
+      where: 'Signals pages; Track Record' },
+    { id: 'sentiment', term: 'News sentiment', also: 'VADER, sent',
+      text: ['A score from −1 (very negative) to +1 (very positive) for recent headlines about a stock, worked out by a simple word-based tool (VADER). It does not understand the articles, so jokes, sarcasm and context fool it. Treat it as a weak hint.'],
+      where: 'News pages; signals input' },
+    { id: 'track-record', term: 'Track Record', also: 'how did the signals do',
+      text: ['The honest scorecard: every buy signal since 23 May 2026, bought at the next market open and compared with the S&P 500 after 1 week, 1 month and 3 months. Every signal counts, including repeats. <a href="track-record.html">Open it</a>.'],
+      where: 'Left menu' },
+  ]},
+  { title: 'Sectors and the market', terms: [
+    { id: 'median', term: 'Median', also: 'average, middle',
+      text: ['The middle value when you line everything up in order. The hub uses the median change for each sector instead of the average, so one stock that jumps 40% can\'t make a whole sector look strong.'],
+      where: 'Hub heatmaps; sector cards' },
+    { id: 'breadth', term: 'Breadth (X/N up)', also: 'advancers',
+      text: ['How many of a sector\'s N stocks rose over the period. "8/10 up" is a broad rise; "2/10 up" means a couple of stocks are doing the lifting.'],
+      where: 'Hub sector cards' },
+    { id: 'heatmap', term: 'Heatmap', also: 'tile',
+      text: ['Each stock is a tile. Colour shows direction (green up, red down); on the sector Heatmap pages the tile\'s size shows how big the move was. Use the buttons to switch which period or measure it shows.'],
+      where: 'Hub; Heatmap pages' },
+    { id: 'spy-qqq', term: 'SPY · QQQ', also: 'S&P 500, Nasdaq-100, the market',
+      text: ['Two funds used as yardsticks for "the market". SPY follows the S&P 500: the 500 largest US companies. QQQ follows the Nasdaq-100: the 100 biggest companies on the Nasdaq, heavy in technology.'],
+      where: 'Hub top cards' },
+    { id: 'vix', term: 'VIX', also: 'fear index, volatility',
+      text: ['The market\'s "fear gauge": how much movement options traders expect in the S&P 500 over the next 30 days. On this site, below 15 is calm, 15–25 normal, 25–30 high fear and over 30 extreme fear. It tends to jump when shares fall sharply.'],
+      where: 'Hub top card' },
+    { id: 'regime', term: 'Market regime', also: 'banner, spread',
+      text: ['The coloured banner at the top of the hub: a one-line read of the market\'s mood from SPY, QQQ and the VIX. The spread is QQQ\'s 1-week change minus SPY\'s.',
+             '<b>Correction</b>: SPY and QQQ both down 3% or more in a week. <b>Crisis</b>: VIX 22 or higher. <b>Uncertain</b>: VIX 16–22 and QQQ lagging SPY by 2 points or more. <b>Rotation</b>: VIX 16–22 and QQQ ahead by 2 or more. <b>Bullish</b>: VIX under 16 and both up on the week. <b>Normal</b>: anything else.',
+             'The banner doesn\'t flip on a single reading: a new mood has to show up again before it changes, to stop it jumping back and forth.'],
+      where: 'Hub banner' },
+  ]},
+  { title: 'Data and units', terms: [
+    { id: 'pence', term: 'Pence and pounds (£)', also: 'GBp, London, currency',
+      text: ['London-listed shares are quoted by the exchange in pence (100p = £1). The site converts them to pounds. US prices are in dollars, and the £ columns convert dollars at the day\'s exchange rate. Japanese and Saudi stocks are converted from yen and riyals.'],
+      where: 'All price columns' },
+    { id: 'crypto', term: 'Crypto columns', also: 'coins, P/E not available',
+      text: ['Coins have no profits, dividends or analysts, so P/E, Beta, Div Yield, Short % and Analyst show —. Prices and market caps come from CoinMarketCap; the 52-week range and volume come from CoinGecko. Coin names link to CoinGecko.'],
+      where: 'Crypto pages' },
+    { id: 'freshness', term: 'Last updated · amber bar', also: 'stale data, as of',
+      text: ['Prices refresh three times each weekday (07:30, 15:30 and 20:30 London time), news three times, AI signals Monday, Wednesday and Friday at 08:00, and the daily export at 21:30. Weekends only crypto moves, so equity prices stay as at Friday\'s close.',
+             'If a scheduled update was missed, an amber bar appears at the bottom of the page saying which data may be out of date.'],
+      where: 'Page headers; bottom bar' },
+    { id: 'exchange', term: 'Exchange badge', also: 'NYSE, NASDAQ, LSE, TSE, TADAWUL',
+      text: ['The market a stock trades on: NYSE and NASDAQ (US), LSE (London), TSE (Tokyo), TADAWUL (Saudi Arabia). Crypto trades around the clock on many venues.'],
+      where: 'Under each ticker' },
+  ]},
+];
+
+const esc = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const strip = s => s.replace(/<[^>]+>/g, '');
+
+function render() {
+  // Forgiving search: ignore hyphens/punctuation and match every word, so "52 week range" finds "52-Week Range"
+  const norm = x => x.toLowerCase().replace(/\//g, '').replace(/[-–—·()&]/g, ' ').replace(/\s+/g, ' ').trim();
+  const q = norm(document.getElementById('gl-search').value);
+  const words = q ? q.split(' ') : [];
+  const root = document.getElementById('glossary');
+  let shown = 0, total = 0, html = '';
+  const card = t => `
+        <div class="gl-item" id="${t.id}">
+          <h3>${esc(t.term)}${t.also ? `<span class="gl-also">also: ${esc(t.also)}</span>` : ''}</h3>
+          ${t.text.map(p => `<p>${p}</p>`).join('')}
+          ${t.where ? `<div class="gl-where">Seen on: ${esc(t.where)}</div>` : ''}
+        </div>`;
+  const group = (title, items) => `<div class="gl-group"><div class="section-hdr"><h2 class="section-hdr-label" style="margin:0;font-weight:inherit">${esc(title)}</h2><span class="section-hdr-line"></span><span class="section-hdr-count">${items.length}</span></div>
+      <div class="gl-list">${items.map(card).join('')}</div></div>`;
+  GROUPS.forEach(g => { total += g.terms.length; });
+  if (!q) {
+    GROUPS.forEach(g => { html += group(g.title, g.terms); });
+    shown = total;
+  } else {
+    // one list: entries whose name matches come first, then ones that only mention the words in their text
+    const hits = [];
+    GROUPS.forEach(g => g.terms.forEach(t => {
+      const head = norm(t.term + ' ' + (t.also || ''));
+      const hay = norm(t.term + ' ' + (t.also || '') + ' ' + t.text.map(strip).join(' '));
+      if (words.every(w => hay.includes(w))) hits.push([words.every(w => head.includes(w)) ? 0 : 1, t]);
+    }));
+    hits.sort((a, b) => a[0] - b[0]);
+    shown = hits.length;
+    if (hits.length) html = group('Results', hits.map(h => h[1]));
+  }
+  root.innerHTML = html || '<div class="gl-list"><div class="gl-empty">Nothing matches that. Try a shorter word, or a column name like "Beta".</div></div>';
+  document.getElementById('gl-count').textContent = q ? `${shown} of ${total} terms` : `${total} terms`;
+}
+
+document.getElementById('gl-jump').innerHTML = GROUPS.map(g =>
+  `<a class="filter-btn" href="#${g.terms[0].id}" style="text-decoration:none">${esc(g.title)}</a>`).join('');
+render();
+// Deep links such as glossary.html#conf: the entries are drawn by the script above, so scroll once they exist.
+if (location.hash) { const el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) setTimeout(() => el.scrollIntoView(), 50); }
+</script>
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+  <div class="drawer left-rail"></div>
+</div>
+<script>
+function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+</script>
+  <script src="nav.js"></script>
+</body>
+</html>

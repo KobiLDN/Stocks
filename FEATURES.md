@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **Glossary (#71)** — plain-English meanings of every term, column and signal on the site, searchable, linked from "Conf"/"Confidence"; left-menu item under Technology
+
 - **Track Record page (#54 step 8)** — how every AI and momentum buy signal did against the S&P 500 at 1W / 1M / 3M: verdict, plain-English findings, breakdowns (strength, source, sector, confidence, month) and a searchable table of every signal; rebuilt nightly from the history database
 
 - **History database — D1 (#54 step 3a)** — every price run, market snapshot and signal is kept in Cloudflare D1, plus raw end-of-day bars, splits/dividends and data-quality flags; weekly backup; the groundwork for the track record (#54 step 8)

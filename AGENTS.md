@@ -104,6 +104,8 @@ Stocks/
 - Left-rail active pill: `market.html` → `href="market.html"` active, RSS → `href="rss.html"` active
 - Cross-sector JS fetches use root-relative paths: `'AI/prices-data.js'` not `'../AI/prices-data.js'`
 
+**`glossary.html`** (left-rail leaf page, 📖 below Technology): every definition is one entry in the `GROUPS` array in the page; entries have an `id` for deep links (`glossary.html#conf`). **When you add a column, metric or signal type to the site, add its glossary entry in the same PR**, and write it from how the code really computes it.
+
 **`track-record.html`** (left-rail leaf page, rail item 🏁 *Track Record* in `nav.js`) reads `track-record.json`, which `update-history.yml` rebuilds nightly from the history database (`history/track_record.py`). The page only reads that file. Its plain-English findings are computed from the data in the browser, so they stay true as results change. Don't hard-code conclusions.
 
 ## Data architecture — how pages get their data
