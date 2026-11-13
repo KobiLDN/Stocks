@@ -494,6 +494,8 @@
     { key: 'megacap', path: '../MegaCap/prices-data.js'  },
   ];
 
+  // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
+  window.addEventListener('DOMContentLoaded', () => {
   Promise.all(SECTORS.map(async sd => {
     try {
       const text = await fetch(sd.path).then(r => r.text());
@@ -511,6 +513,7 @@
   buildMetrics(stocks);
   buildTape(stocks);
 });
+  });
 
   const tooltip = document.getElementById('col-tooltip');
   const tipTitle = tooltip.querySelector('.tip-title');

@@ -302,6 +302,8 @@
     });
   }
 
+  // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
+  window.addEventListener('DOMContentLoaded', () => {
   Promise.all(SECTOR_META.map(async sd => {
     try {
       const text  = await fetch(sd.path).then(r => r.text());
@@ -316,6 +318,7 @@
   })).then(() => {
     buildTape(SECTOR_META.flatMap(sd => sectorStocks[sd.key] || []));
     render();
+  });
   });
 
   function openDrawer() {

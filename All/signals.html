@@ -364,7 +364,8 @@
     if (box) box.classList.toggle('open');
   }
 
-  Promise.all(SECTOR_DEFS.map(async sd => {
+  // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
+  window.addEventListener('DOMContentLoaded', () => Promise.all(SECTOR_DEFS.map(async sd => {
     const [pricesText, signalsJson] = await Promise.all([
       fetch(sd.pricesPath).then(r => r.text()).catch(() => ''),
       fetch(sd.signalsPath).then(r => r.json()).catch(() => null),
@@ -394,7 +395,7 @@
     const sigTsEl = document.getElementById('signals-ts');
     if (sigTsEl) sigTsEl.textContent = fmtDate(sigUpdated);
     renderAll();
-  });
+  }));
 
   function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
   function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
