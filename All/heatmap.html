@@ -442,6 +442,8 @@ const SECTOR_PATHS = [
   { key: 'megacap', path: '../MegaCap/prices-data.js'  },
 ];
 
+// Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
+window.addEventListener('DOMContentLoaded', () => {
 Promise.all(SECTOR_PATHS.map(async sd => {
   try {
     const text = await fetch(sd.path).then(r => r.text());
@@ -471,6 +473,7 @@ Promise.all(SECTOR_PATHS.map(async sd => {
 
   let t;
   window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => renderAll2(activeMetric), 280); });
+});
 });
 
 window._onThemeChange = () => renderAll2(activeMetric);

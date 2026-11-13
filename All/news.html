@@ -287,6 +287,8 @@
     { key: 'megacap', path: '../MegaCap/prices-data.js'  },
   ];
 
+  // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
+  window.addEventListener('DOMContentLoaded', () => {
   Promise.all(SECTORS.map(async sd => {
     try {
       const text  = await fetch(sd.path).then(r => r.text());
@@ -323,6 +325,7 @@
     if (sc) sc.textContent = new Set(allNews.map(n => n.ticker).filter(Boolean)).size;
     buildTape(results.flatMap(r => r.stocks));
     applyFilters();
+  });
   });
 
   function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
