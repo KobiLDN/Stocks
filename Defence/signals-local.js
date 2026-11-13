@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-11 19:29",
+  "updated": "2026-11-13 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "LMT has strong momentum (+19.85% 1M, +23.73% YTD) with a low 0.081 beta and a 21.45 P/E; a $694M Air Force hypersonic contract and raised 2026 guidance add catalyst support [simplywall.st](https://simplywall.st/stocks/us/capital-goods/nyse-lmt/lockheed-martin/news/lockheed-martin-lmt-is-back-in-the-spotlight-what-is-catchin), while post-midterm budget risk is the key offset [investing.com](https://www.investing.com/news/stock-market-news/why-is-lockheed-martin-stock-sliding-today-93CH-5000338).",
+      "drivers": [
+        "+19.85% 1M",
+        "beta 0.081 | PE 21.45",
+        "$694M hypersonic award",
+        "raised FY2026 guidance"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "LHX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "LHX is rebounding (+15.81% 1M, +5.32% 1W) after a Q3 EPS beat ($3.28 vs $2.96 est) and record $53.2B backlog, with FY26 EPS guidance raised to $12.25-$12.35 [ainvest.com](https://www.ainvest.com/news/l3harris-tops-volume-charts-defense-giant-balances-record-backlog-cash-flow-pivot-2611/).",
+      "drivers": [
+        "+15.81% 1M",
+        "PE 25.31 | analyst 1.91",
+        "record $53.2B backlog",
+        "FY26 EPS guide raised"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "CACI has the strongest analyst signal in the cyber-intel group (strong_buy, score 1.47) with +19.81% YTD, +6.51% 1W and positive news sentiment 0.186.",
+      "drivers": [
+        "strong_buy 1.47",
+        "+19.81% YTD",
+        "1W +6.51%",
+        "news_s +0.186"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "SAIC is the top YTD performer (+51.42%) with +13.45% 1M, a reasonable 17.65 P/E and positive news sentiment 0.17, though analyst coverage is absent.",
+      "drivers": [
+        "+51.42% YTD",
+        "1M +13.45%",
+        "PE 17.65",
+        "news_s +0.17"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "NOC is a value-plus-momentum pick at 17.33 P/E with +14.07% 1M, +4.55% 1W and positive news sentiment 0.191.",
+      "drivers": [
+        "P/E 17.33",
+        "1M +14.07%",
+        "1W +4.55%",
+        "news_s +0.191"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.63,
+      "rationale": "HII has a strong rebound (+19.58% 1M, +6.54% 1W) at a 16.6 P/E with a 1.83% dividend and positive news sentiment 0.16.",
+      "drivers": [
+        "+19.58% 1M",
+        "P/E 16.6",
+        "1W +6.54%",
+        "news_s +0.16"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "DRS",
+      "signal": "strong_buy",
+      "confidence": 0.66,
+      "rationale": "DRS combines the best analyst score (strong_buy 1.42) with the highest news sentiment in the group (0.333), plus +8.33% 1W and a low 0.16 beta.",
+      "drivers": [
+        "strong_buy 1.42",
+        "news_s +0.333",
+        "1W +8.33%",
+        "beta 0.16"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TXT offers a low 15.16 P/E with +13.26% 1M momentum and raised earnings guidance, though 1W momentum is slightly negative at -1.08%.",
+      "drivers": [
+        "P/E 15.16",
+        "1M +13.26%",
+        "raised EPS guidance",
+        "YTD -3.08%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "HEI has solid momentum (+14.42% 1M, +3.72% 1W) and positive news sentiment 0.111, but its 56.59 P/E caps upside.",
+      "drivers": [
+        "+14.42% 1M",
+        "1W +3.72%",
+        "news_s +0.111",
+        "P/E 56.59"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BAH is a cheap high-momentum play (+20.36% 1M, 13.42 P/E, 2.73% yield) but the hold consensus (2.60) makes it the least compelling of the list.",
+      "drivers": [
+        "+20.36% 1M",
+        "P/E 13.42",
+        "div 2.73%",
+        "hold consensus 2.60"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "P/E 15.51",
         "analyst buy",
         "reasonable valuation"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SAIC has delivered exceptional momentum with +52.71% YTD and +65% 1-year returns, supported by a low P/E of 17.8 and positive news sentiment of 0.064.",
-      "drivers": [
-        "+52.71% YTD",
-        "P/E 17.8",
-        "low beta 0.257",
-        "positive momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Lockheed Martin shows strong momentum with +23.53% YTD and +17.82% 1-month gain, a low P/E of 21.42, and a recent $694M hypersonics contract win boosting visibility.",
-      "drivers": [
-        "+23.53% YTD",
-        "P/E 21.42",
-        "$694M hypersonics contract",
-        "low beta 0.081"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "LHX",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "L3Harris surged 4.44% on Nov 9 after Q3 earnings beat with $6.07B revenue and a record $53.2B backlog, plus analyst upgrades from BofA and Morgan Stanley.",
-      "drivers": [
-        "+15.83% 1-month",
-        "record $53.2B backlog",
-        "Q3 earnings beat",
-        "analyst upgrades"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "HII",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "HII has strong 1-month momentum of +18.76% and a low P/E of 16.89, with positive news sentiment of 0.202, though short interest is elevated at 4.58%.",
-      "drivers": [
-        "+18.76% 1-month",
-        "P/E 16.89",
-        "positive news sentiment 0.202",
-        "low beta 0.147"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Booz Allen Hamilton has strong 1-month momentum of +18.73% and a low P/E of 13.57, with positive news sentiment of 0.114, though short interest is high at 6.3%.",
-      "drivers": [
-        "+18.73% 1-month",
-        "P/E 13.57",
-        "positive news sentiment 0.114",
-        "low beta 0.282"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "HEICO has strong 1-month momentum of +16.16% and positive news sentiment of 0.271, but a high P/E of 57.52 tempers the outlook.",
-      "drivers": [
-        "+16.16% 1-month",
-        "positive news sentiment 0.271",
-        "low short interest 1.62%",
-        "moderate beta 1.089"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Textron shows solid 1-month momentum of +14.57% and a low P/E of 15.62, with positive news sentiment of 0.117, though YTD is flat at -0.20%.",
-      "drivers": [
-        "+14.57% 1-month",
-        "P/E 15.62",
-        "positive news sentiment 0.117",
-        "low beta 0.88"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NOC",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Northrop Grumman has strong 1-month momentum of +13.12% and a low P/E of 17.32, with analyst consensus at buy, though YTD is negative at -5.18%.",
-      "drivers": [
-        "+13.12% 1-month",
-        "P/E 17.32",
-        "low beta -0.136",
-        "analyst buy consensus"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Olin has strong 1-month momentum of +18.97% and Q3 earnings turned positive with net income of $14.4M, but a high short interest of 15.25% and negative news sentiment of -0.043 add risk.",
-      "drivers": [
-        "+18.97% 1-month",
-        "Q3 net income $14.4M",
-        "high short interest 15.25%",
-        "negative news sentiment -0.043"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "QQ.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "QinetiQ has strong momentum with +20.41% YTD and +15.35% 1-month, a low P/E of 26.75, and positive news sentiment of -0.12, but small market cap of $0.036B limits liquidity.",
-      "drivers": [
-        "+20.41% YTD",
-        "+15.35% 1-month",
-        "P/E 26.75",
-        "low beta 0.337"
       ]
     }
   ]

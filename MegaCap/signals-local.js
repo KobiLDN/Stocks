@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-11 19:31",
+  "updated": "2026-11-13 08:06",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "strong_buy",
+      "confidence": 0.92,
+      "rationale": "YTD +32.75%, 1M +22.35%, P/E 46.33, short interest collapsed 24% in a week to 0.6% after Q3 EPS beat ($7.48 vs $5.71 est.) and Mounjaro/Zepbound sales surged 65%/49%.",
+      "drivers": [
+        "+32.75% YTD",
+        "Q3 EPS beat by $1.77",
+        "short interest 0.6%",
+        "Jefferies PT $1,700"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "JNJ",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "YTD +38.93%, 1M +14.04%, hit 52-week high $286.08 on positive Caplyta Phase 3 results and upcoming ASH blood cancer data; low beta 0.20 provides defensive quality.",
+      "drivers": [
+        "+38.93% YTD",
+        "52-week high $286.08",
+        "Caplyta trial success",
+        "low beta 0.20"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +28.57%, 1M +14.58%, record high $1,102.84 after announcing $30 special dividend ($13.3B payout) and $4B buyback; Mizuho noted dividend exceeded expectations.",
+      "drivers": [
+        "+28.57% YTD",
+        "$30 special dividend",
+        "record high $1,102.84",
+        "Mizuho upgrade"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BLK",
+      "signal": "strong_buy",
+      "confidence": 0.84,
+      "rationale": "YTD +13.97%, 1M +14.12%, analyst consensus strong_buy (score 1.39), Barclays and Citi boosted stakes in BlackRock's Bitcoin fund, benefiting from AI and ETF inflows.",
+      "drivers": [
+        "+14.12% 1M",
+        "strong_buy consensus",
+        "Bitcoin fund inflows",
+        "AUM growth tailwind"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "YTD +18.71%, 1M +13.30%, P/E 16.51, low beta 0.571, hit record highs; Warren Buffett's conglomerate benefits from insurance float, buybacks, and diversified earnings.",
+      "drivers": [
+        "+18.71% YTD",
+        "record highs",
+        "P/E 16.51",
+        "low beta 0.57"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "WMT",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +12.62%, 1M +12.39%, news sentiment 0.395 (highest in consumer), P/E 45.72 reflects defensive premium; strong consumer spending backdrop supports retail leader.",
+      "drivers": [
+        "+12.39% 1M",
+        "news sentiment 0.395",
+        "defensive retail leader",
+        "consumer spending tailwind"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "PEP",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "1M +11.75%, P/E 17.89, dividend yield 4.16% (highest in consumer staples), analyst hold consensus but attractive valuation after YTD +3.07% lag; defensive income play.",
+      "drivers": [
+        "+11.75% 1M",
+        "dividend yield 4.16%",
+        "P/E 17.89",
+        "defensive staples"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TM",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "1M +11.11%, P/E 9.56 (cheapest in universe), dividend yield 2.99%, news sentiment 0.301; attractive value play with hybrid/EV momentum and weak JPY tailwind for earnings.",
+      "drivers": [
+        "P/E 9.56",
+        "dividend yield 2.99%",
+        "JPY tailwind",
+        "value play"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "YTD +21.95%, 1M +10.52%, dividend yield 2.59%, beta 0.361; strong consumer staples momentum with pricing power and consistent demand despite macro uncertainty.",
+      "drivers": [
+        "+21.95% YTD",
+        "dividend yield 2.59%",
+        "low beta 0.36",
+        "pricing power"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "1M +16.04%, P/E 21.65, dividend yield 2.82%, Dividend King with 50 years of raises; YTD -8% offers recovery potential as consumer spending holds up.",
+      "drivers": [
+        "+16.04% 1M",
+        "Dividend King 50yr",
+        "dividend yield 2.82%",
+        "recovery play"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.733,
+      "ytd": "+161.91%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +161.91% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +161.91% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,151 +277,6 @@ window.SIGNALS_DATA = {
         "dividend yield 4.12%",
         "low P/E 17.82",
         "defensive consumer staple"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.682,
-      "ytd": "+150.78%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +150.78% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +150.78% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.95,
-      "rationale": "Eli Lilly shows exceptional momentum with +33.22% YTD and +21.11% 1-month return, supported by Jefferies raising its price target to $1,700 on GLP-1 obesity market potential and positive Foundayo sleep apnea trial results.",
-      "drivers": [
-        "+33.22% YTD",
-        "+21.11% 1M",
-        "P/E 46.49",
-        "Jefferies $1,700 target"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Mastercard delivers strong momentum (+17.75% YTD, +10.71% 1M) with a strong_buy analyst consensus, P/E 34.48, and benefits from record US credit card debt and consumer spending trends.",
-      "drivers": [
-        "+17.75% YTD",
-        "+10.71% 1M",
-        "strong_buy analyst",
-        "P/E 34.48"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Visa posts +23.05% YTD and +8.87% 1M, strong_buy rating, low beta of 0.786, and tailwinds from digital payment adoption and consumer spending.",
-      "drivers": [
-        "+23.05% YTD",
-        "+8.87% 1M",
-        "strong_buy",
-        "beta 0.786"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BLK",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "BlackRock gains +14.48% YTD and +12.75% 1M, strong_buy analyst, P/E 27.83, and benefits from rising asset management fees and market gains.",
-      "drivers": [
-        "+14.48% YTD",
-        "+12.75% 1M",
-        "strong_buy",
-        "P/E 27.83"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COST",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Costco shows +25.50% YTD and +11.29% 1M, buy rating, P/E 51.36, and strong consumer spending trends supporting retail warehouse model.",
-      "drivers": [
-        "+25.50% YTD",
-        "+11.29% 1M",
-        "buy analyst",
-        "news sentiment 0.262"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "WMT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Walmart delivers +12.05% YTD and +11.03% 1M, buy rating, P/E 45.49, and high news sentiment of 0.305 reflecting resilient consumer demand.",
-      "drivers": [
-        "+12.05% YTD",
-        "+11.03% 1M",
-        "news sentiment 0.305",
-        "buy analyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BRK-B",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Berkshire Hathaway posts +17.41% YTD and +12.70% 1M, buy rating, low beta of 0.571, and diversified exposure to insurance, railroads, and energy.",
-      "drivers": [
-        "+17.41% YTD",
-        "+12.70% 1M",
-        "beta 0.571",
-        "buy analyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Johnson & Johnson achieves +37.59% YTD and +6.46% 1M, buy rating, very low beta of 0.2, and strong pharmaceutical pipeline including GLP-1 and medical devices.",
-      "drivers": [
-        "+37.59% YTD",
-        "+6.46% 1M",
-        "beta 0.2",
-        "buy analyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Amazon gains +19.59% YTD and +4.37% 1M, strong_buy analyst, P/E 21.9, and benefits from AI cloud infrastructure spending and e-commerce growth.",
-      "drivers": [
-        "+19.59% YTD",
-        "+4.37% 1M",
-        "strong_buy",
-        "P/E 21.9"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Toyota shows strong recent momentum with +16.27% 1M and +11.28% 1W, buy rating, low P/E of 9.79 suggesting value, and positive news sentiment of 0.274.",
-      "drivers": [
-        "+16.27% 1M",
-        "+11.28% 1W",
-        "P/E 9.79",
-        "news sentiment 0.274"
       ]
     }
   ]

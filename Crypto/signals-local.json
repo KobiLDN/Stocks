@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-11 19:30",
+  "updated": "2026-11-13 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PEPE",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "PEPE is the only asset with positive 1M momentum (+9.94%) and positive YTD (+14.10%), and despite a -6.05% 1W dip, it bounced +2.85% today, showing relative strength in a broad selloff where high-beta memecoins typically lead reversals.",
+      "drivers": [
+        "+9.94% 1M momentum",
+        "+14.10% YTD",
+        "+2.85% 1D bounce",
+        "high-beta reversal candidate"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TRX is the only asset with positive 1Y return (+9%) and positive YTD (+9.32%), with a relatively mild -6.31% 1M drawdown, and the Tron-Tether-Chainalysis crime task force news signals institutional utility.",
+      "drivers": [
+        "+9% 1Y return",
+        "+9.32% YTD",
+        "mild -6.31% 1M",
+        "institutional crime task force news"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ICP shows strong short-term momentum with +8.39% 1W and +2.05% 1D, and a relatively mild -8% 1Y decline, making it a standout in the AI category amid the Nvidia-driven tech selloff.",
+      "drivers": [
+        "+8.39% 1W momentum",
+        "+2.05% 1D gain",
+        "mild -8% 1Y",
+        "AI narrative resilience"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "TON",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TON has strong 1W momentum (+6.12%) and a moderate -16.08% 1M, with no negative news sentiment, positioning it as a relative safe haven in the emerging category.",
+      "drivers": [
+        "+6.12% 1W momentum",
+        "no negative news sentiment",
+        "moderate -16.08% 1M",
+        "emerging category resilience"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AVAX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "AVAX is the only asset with positive 1W momentum (+1.02%) and a positive news sentiment score (0.027), supported by the NYSE tokenized securities platform news using its blockchain.",
+      "drivers": [
+        "+1.02% 1W gain",
+        "positive news sentiment 0.027",
+        "NYSE tokenized platform catalyst",
+        "moderate -18.60% 1M"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "POL has the best 1D performance among infra assets (+1.49%), positive news sentiment (0.08), and a relatively mild -12.36% 1M, making it a defensive infra pick.",
+      "drivers": [
+        "+1.49% 1D gain",
+        "positive news sentiment 0.08",
+        "mild -12.36% 1M",
+        "infra category strength"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "LINK has a moderate -1.58% 1D and -6.95% 1W, with a -18.58% YTD that is less severe than most peers, and neutral news sentiment (-0.065) suggesting no acute downside catalyst.",
+      "drivers": [
+        "moderate -1.58% 1D",
+        "mild -6.95% 1W",
+        "neutral news sentiment -0.065",
+        "less severe -18.58% YTD"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "BTC is the reference asset with the largest market cap ($1,384.8B) and has fallen to $68,857, a level that historically attracts dip-buying, despite -6.26% 1D and negative sentiment (-0.271).",
+      "drivers": [
+        "largest market cap $1,384.8B",
+        "dip to $68,857 support",
+        "historical dip-buying zone",
+        "negative sentiment -0.271"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "ETH has a large market cap ($237B) and a -5.26% 1D that is less severe than BTC, with near-neutral news sentiment (-0.024), offering relative stability in the layer1 category.",
+      "drivers": [
+        "large market cap $237B",
+        "mild -5.26% 1D vs BTC",
+        "near-neutral sentiment -0.024",
+        "layer1 stability"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.3,
+      "rationale": "BNB has a large market cap ($83.35B) and a -5.89% 1D that is in line with the market, with a -14.52% 1M that is less severe than many altcoins, though negative sentiment (-0.153) limits upside.",
+      "drivers": [
+        "large market cap $83.35B",
+        "mild -5.89% 1D",
+        "moderate -14.52% 1M",
+        "negative sentiment -0.153"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "NEAR",
+      "signal": "buy",
+      "confidence": 0.604,
+      "ytd": "+133.36%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +133.36% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +133.36% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TON",
@@ -132,134 +277,6 @@
         "positive news sentiment 0.076",
         "whale selling pressure",
         "large market cap $10.8B"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "NEAR",
-      "signal": "buy",
-      "confidence": 0.675,
-      "ytd": "+149.13%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +149.13% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +149.13% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PEPE",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "PEPE shows +31% YTD and +23.9% 1M, defying the broad sell-off that pushed Bitcoin below $74k [investing.com](https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-74k-as-hot-cpi-data-spurs-rate-hike-bets-5017791).",
-      "drivers": [
-        "+31% YTD",
-        "+23.9% 1M",
-        "bucking market downturn"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RNDR",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "RNDR posts +22.6% YTD and +2.9% 1W, while AI tokens face headwinds from Nvidia investigation [kucoin.com](https://www.kucoin.com/news/articles/crypto-daily-market-report-november-11-2026).",
-      "drivers": [
-        "+22.6% YTD",
-        "+2.9% 1W",
-        "AI narrative"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "TON surges +5.5% in 24h despite $732M in liquidations [tradingview.com](https://www.tradingview.com/news/cryptonews:6946095ba094b:0-live-bitcoin-price-cooked-gensler-2-0-fears-as-fed-blocks-crypto-bank/), signaling potential reversal.",
-      "drivers": [
-        "+5.5% 1D",
-        "resilience amid liquidations"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "ICP gains +5.1% 1D and +0.3% 1W, with only -10.3% YTD, showing relative strength as Bitcoin falls [investing.com](https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-74k-as-hot-cpi-data-spurs-rate-hike-bets-5017791).",
-      "drivers": [
-        "+5.1% 1D",
-        "+0.3% 1W",
-        "mild YTD decline"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AVAX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "AVAX edges +0.3% 1D and benefits from NYSE tokenization catalyst, despite -31% YTD and Fed rate hike fears [tradingview.com](https://www.tradingview.com/news/cryptonews:6946095ba094b:0-live-bitcoin-price-cooked-gensler-2-0-fears-as-fed-blocks-crypto-bank/).",
-      "drivers": [
-        "+0.3% 1D",
-        "NYSE tokenization catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "TRX holds +11.6% YTD, though news sentiment is -0.27 due to T3 disbandment, while broader market drops [kucoin.com](https://www.kucoin.com/news/articles/crypto-daily-market-report-november-11-2026).",
-      "drivers": [
-        "+11.6% YTD",
-        "large market cap $30B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "BNB news sentiment +0.33, highest among majors, and market cap $89B offers relative safety as crypto markets tumble [fxstreet.com](https://www.fxstreet.com/cryptocurrencies/news/cryptocurrencies-price-prediction-pi-dogecoin-bitcoin-asian-wrap-11-november-202611110559).",
-      "drivers": [
-        "news sentiment +0.33",
-        "large cap $89B"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "LINK news sentiment +0.17 with Moody's test catalyst, and -15.5% YTD is moderate in risk-off environment [epileptic.news](https://epileptic.news/pulse/).",
-      "drivers": [
-        "news sentiment +0.17",
-        "Moody's test catalyst"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "POL -12.5% YTD is the mildest among infra tokens, with relatively low downside amid ETF outflows [kucoin.com](https://www.kucoin.com/news/articles/crypto-daily-market-report-november-11-2026).",
-      "drivers": [
-        "-12.5% YTD",
-        "infra stability"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "NEAR",
-      "signal": "buy",
-      "confidence": 0.626,
-      "rationale": "NEAR +138% YTD is exceptional, but -38% 1M and negative sentiment -0.49 indicate high risk despite bearish news [epileptic.news](https://epileptic.news/pulse/).",
-      "drivers": [
-        "+138% YTD",
-        "high risk recent momentum"
       ]
     }
   ]
