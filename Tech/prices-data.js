@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-11-13 02:05",
-  "fx_gbp_usd": 1.3239,
+  "updated": "2026-11-13 07:32",
+  "fx_gbp_usd": 1.3234,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -10,16 +10,16 @@ window.PRICES_DATA = {
       "price_gbp": "268",
       "price_usd": 354.88,
       "change_1d": "-0.17%",
-      "change_1w": "+3.11%",
-      "change_1m": "+3.99%",
-      "change_ytd": "+31.30%",
+      "change_1w": "+3.19%",
+      "change_1m": "+4.07%",
+      "change_ytd": "+31.40%",
       "return_1yr": "+30%",
       "low_gbp": "184",
       "low_usd": 243.42,
-      "high_gbp": "269",
-      "high_usd": 355.91,
-      "bar_pct": 99,
-      "market_cap_gbp_b": 3895.58,
+      "high_gbp": "272",
+      "high_usd": 359.37,
+      "bar_pct": 96,
+      "market_cap_gbp_b": 3896.921,
       "market_cap_usd_b": 5157.181,
       "beta": 1.089,
       "pe_ratio": 39.52,
@@ -28,47 +28,47 @@ window.PRICES_DATA = {
       "short_pct": 1.0,
       "analyst": "buy",
       "analyst_score": 2.18,
-      "vol_1d": 30897281,
-      "vol_1w": 188563781,
-      "vol_1m": 1091899981,
+      "vol_1d": 31796600,
+      "vol_1w": 189463100,
+      "vol_1m": 1092799300,
       "news": [
         {
-          "title": "Jensen Huang vs. Steve Jobs: Can Nvidia also thrive without its visionary?",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/jensen-huang-vs-steve-jobs-can-nvidia-also-thrive-without-its-visionary-144638496.html",
-          "published": 1794494798,
-          "sentiment": -0.417
+          "title": "Fallout from the Nvidia scandal may dampen the exuberance around the AI boom",
+          "publisher": "Associated Press",
+          "url": "https://finance.yahoo.com/technology/ai/articles/fallout-nvidia-scandal-may-dampen-050149172.html",
+          "published": 1794546109,
+          "sentiment": -0.44
         },
         {
-          "title": "Tony Robbins: How to make yourself irreplaceable in the AI era",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/tony-robbins-yourself-irreplaceable-ai-120000200.html",
-          "published": 1794484800,
+          "title": "Michael Burry Sees A \u2018Mechanical Bid\u2019 Under NVDA Stock \u2013 Even As He Questions Nvidia\u2019s Succession Plan And Asia Sales",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-mechanical-bid-nvda-stock-questions-nvidia-succession-plan-asia-sales/cNbbpPXR9O1",
+          "published": 1794543194,
+          "sentiment": 0.202
+        },
+        {
+          "title": "3 Warren Buffett Stocks Just Closed at Record Highs. Here's the One I'd Still Buy Now.",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/12/3-warren-buffett-stocks-just-closed-at-record-highs-here-s-the-one-i-d-still-buy-now/",
+          "published": 1794543122,
           "sentiment": 0.0
         },
         {
-          "title": "Tony Robbins: 4 rules the world's greatest investors follow",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/tony-robbins-4-rules-the-worlds-greatest-investors-follow-155143166.html",
-          "published": 1794481200,
-          "sentiment": 0.637
-        },
-        {
-          "title": "Apple rises 26 places on the Roundtable 100",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/crypto/markets/apple-rises-26-places-on-the-roundtable-100",
-          "published": 1794525600,
+          "title": "Dow, S&P 500, Nasdaq Futures Edge Higher As Markets Attempt To Recover From Nvidia Rout: SLS, MSFT, CADL, MSTR In Focus",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-edge-higher-as-markets-attempt-to-recover-from-nvidia-rout-sls-msft-cadl-mstr-in-focus/cNbb8QDR9OW",
+          "published": 1794539265,
           "sentiment": 0.0
         },
         {
-          "title": "Google's Next Big AI Push Has Apple in the Picture",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/googles-next-big-ai-push-230445065.html",
-          "published": 1794524685,
+          "title": "They Were the Indispensable CEOs\u2014Until They Weren\u2019t",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/they-were-the-indispensable-ceosuntil-they-werent-1bb8a52c?siteid=yhoof2&yptr=yahoo",
+          "published": 1794538800,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.044
+      "news_sentiment": -0.048
     },
     {
       "ticker": "MSFT",
@@ -84,11 +84,11 @@ window.PRICES_DATA = {
       "return_1yr": "+4%",
       "low_gbp": "264",
       "low_usd": 349.2,
-      "high_gbp": "422",
+      "high_gbp": "423",
       "high_usd": 559.15,
       "bar_pct": 83,
-      "market_cap_gbp_b": 2933.782,
-      "market_cap_usd_b": 3883.9,
+      "market_cap_gbp_b": 2934.791,
+      "market_cap_usd_b": 3883.899,
       "beta": 1.045,
       "pe_ratio": 27.3,
       "avg_volume_m": 23.13,
@@ -96,10 +96,17 @@ window.PRICES_DATA = {
       "short_pct": 0.82,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
-      "vol_1d": 17899545,
-      "vol_1w": 126211045,
-      "vol_1m": 593035245,
+      "vol_1d": 18586800,
+      "vol_1w": 126898300,
+      "vol_1m": 593722500,
       "news": [
+        {
+          "title": "Microsoft outage disrupts Outlook, Teams, and Copilot for users 'in any region'",
+          "publisher": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/article/microsoft-outage-disrupts-outlook-teams-and-copilot-for-users-in-any-region-212333470.html",
+          "published": 1794518613,
+          "sentiment": 0.0
+        },
         {
           "title": "Bill Ackman says Microsoft's position is 'really, really strong' as Anthropic pushes into enterprise software",
           "publisher": "Yahoo Finance",
@@ -115,28 +122,21 @@ window.PRICES_DATA = {
           "sentiment": 0.34
         },
         {
-          "title": "Microsoft outage disrupts Outlook, Teams, and Copilot for users 'in any region'",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/article/microsoft-outage-disrupts-outlook-teams-and-copilot-for-users-in-any-region-212333470.html",
-          "published": 1794518613,
+          "title": "Microsoft Working to Fix Widespread Outage",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/tech/microsoft-working-to-fix-widespread-outage-8df67a4e?siteid=yhoof2&yptr=yahoo",
+          "published": 1794548400,
           "sentiment": 0.0
         },
         {
-          "title": "Grand Theft Auto VI Makes Take-Two Stock Look Like a Steal",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/buy-take-two-stock-grand-theft-auto-vi-1b7b9907?siteid=yhoof2&yptr=yahoo",
-          "published": 1794533700,
-          "sentiment": 0.318
-        },
-        {
-          "title": "What Cerebras Systems (CBRS) Said on Its Q3 Earnings Call",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/transcript-what-cerebras-systems-cbrs-said-on-its-q3-earnings-call-2026-11-12/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1794532470,
+          "title": "Microsoft (MSFT) Unveiled An Enterprise AI Agent Platform",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/microsoft-msft-unveiled-enterprise-ai-051528313.html",
+          "published": 1794546928,
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.251
+      "news_sentiment": 0.187
     },
     {
       "ticker": "GOOGL",
@@ -150,61 +150,61 @@ window.PRICES_DATA = {
       "change_1m": "-15.57%",
       "change_ytd": "-5.04%",
       "return_1yr": "+5%",
-      "low_gbp": "204",
+      "low_gbp": "205",
       "low_usd": 270.7,
       "high_gbp": "309",
       "high_usd": 408.61,
       "bar_pct": 20,
-      "market_cap_gbp_b": 2773.883,
-      "market_cap_usd_b": 3672.217,
+      "market_cap_gbp_b": 2774.838,
+      "market_cap_usd_b": 3672.218,
       "beta": 1.226,
       "pe_ratio": 15.6,
       "avg_volume_m": 29.25,
-      "div_yield_pct": 0.3,
+      "div_yield_pct": 0.29,
       "short_pct": 1.49,
       "analyst": "strong_buy",
       "analyst_score": 1.34,
-      "vol_1d": 35166591,
-      "vol_1w": 162529991,
-      "vol_1m": 885951791,
+      "vol_1d": 35346300,
+      "vol_1w": 162709700,
+      "vol_1m": 886131500,
       "news": [
+        {
+          "title": "3 Undervalued Stocks To Own In November 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-undervalued-stocks-own-november-043427585.html",
+          "published": 1794544467,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Michael Burry Sees A \u2018Mechanical Bid\u2019 Under NVDA Stock \u2013 Even As He Questions Nvidia\u2019s Succession Plan And Asia Sales",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-mechanical-bid-nvda-stock-questions-nvidia-succession-plan-asia-sales/cNbbpPXR9O1",
+          "published": 1794543194,
+          "sentiment": 0.202
+        },
+        {
+          "title": "American Electric Power Company (AEP) Stock Looks Above Fair Value On Dividends",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/american-electric-power-company-aep-032122538.html",
+          "published": 1794540082,
+          "sentiment": 0.572
+        },
+        {
+          "title": "Should You Buy Alphabet Stock Now That Google Will Let Customers Run Its AI Chips in Their Own Data Centers?",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/investing/2026/11/12/should-you-buy-alphabet-stock-now-that-google-will-let-customers-run-its-ai-chips-in-their-own-data-centers/",
+          "published": 1794535442,
+          "sentiment": 0.0
+        },
         {
           "title": "TeraWulf Stock Fell 24% in a Month. Lucid Capital Still Sees 67% Upside",
           "publisher": "TIKR",
           "url": "https://www.tikr.com/blog/terawulf-stock-fell-24-in-a-month-lucid-capital-still-sees-67-upside?ref=yahoofinance&tlnk=yf-261112-6xjf7mcf",
           "published": 1794529435,
           "sentiment": 0.0
-        },
-        {
-          "title": "Your Customers Are Asking AI About Your Company. Here\u2019s How to Audit What It Says.",
-          "publisher": "Entrepreneur",
-          "url": "https://www.entrepreneur.com/business-news/your-customers-are-asking-ai-about-your-company-heres-how-to-audit-what-it-says",
-          "published": 1794528000,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Alphabet Draws $5 Billion in Orders as AI Frenzy Builds",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/alphabet-draws-5-billion-orders-230559734.html",
-          "published": 1794524759,
-          "sentiment": -0.318
-        },
-        {
-          "title": "Google's Next Big AI Push Has Apple in the Picture",
-          "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/technology/ai/articles/googles-next-big-ai-push-230445065.html",
-          "published": 1794524685,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Can Huang's Exit Create Chip Competition",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/video/huangs-exit-create-chip-competition-230039379.html",
-          "published": 1794524439,
-          "sentiment": 0.273
         }
       ],
-      "news_sentiment": -0.009
+      "news_sentiment": 0.155
     },
     {
       "ticker": "AMZN",
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "217",
       "high_usd": 287.2,
       "bar_pct": 78,
-      "market_cap_gbp_b": 2184.429,
+      "market_cap_gbp_b": 2185.181,
       "market_cap_usd_b": 2891.866,
       "beta": 1.503,
       "pe_ratio": 21.62,
@@ -231,48 +231,48 @@ window.PRICES_DATA = {
       "div_yield_pct": null,
       "short_pct": 0.96,
       "analyst": "strong_buy",
-      "analyst_score": 1.33,
-      "vol_1d": 33764492,
-      "vol_1w": 204770792,
-      "vol_1m": 1103976192,
+      "analyst_score": 1.32,
+      "vol_1d": 34396400,
+      "vol_1w": 205402700,
+      "vol_1m": 1104608100,
       "news": [
         {
-          "title": "LiveOne Inc (LVO) (Q2 2027) Earnings Call Highlights: Record EBITDA, Major B2B Partnerships and ...",
+          "title": "What Could American Electric Power Company (AEP) Gain From 12 Indiana SMRs?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/could-american-electric-power-company-051740491.html",
+          "published": 1794547060,
+          "sentiment": 0.527
+        },
+        {
+          "title": "Laird Superfood Inc (LSF) (Q3 2026) Earnings Call Highlights: Net Sales Surge 225% to $42 ...",
           "publisher": "GuruFocus.com",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/liveone-inc-lvo-q2-2027-010439618.html",
-          "published": 1794531879,
+          "url": "https://finance.yahoo.com/markets/stocks/articles/laird-superfood-inc-lsf-q3-050154562.html",
+          "published": 1794546114,
           "sentiment": 0.0
         },
         {
-          "title": "PwC spots a major shift in retirement money",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/retirement/pwc-pension-funds-ai-investments",
-          "published": 1794528000,
-          "sentiment": 0.0
+          "title": "Cathie Wood Boosts Bets On 2 AI Firms Amid Nvidia\u2019s Huang Upheaval \u2014 Here\u2019s How Her Trading Week Unfolded",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-bets-2-ai-firms-nvidia-huang-upheaval-how-trading-week-unfolded/cNbbpHTR9Ol",
+          "published": 1794544907,
+          "sentiment": 0.318
         },
         {
-          "title": "Cerebras Adds Microsoft Partnership to Diversify Beyond OpenAI",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/cerebras-earnings-stock-price-3bad09cc?siteid=yhoof2&yptr=yahoo",
-          "published": 1794524520,
-          "sentiment": 0.0
-        },
-        {
-          "title": "e.l.f. Beauty vs. lululemon athletica: Which Consumer Goods Stock Is a Better Buy for 2027?",
+          "title": "If an AI Bubble Triggers a Bear Market, History Says This Is the Best Move Investors Can Make",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/better-buy/2026/11/12/elf-beauty-vs-lululemon-athletica-which-consumer-goods-stock-is-a-better-buy-for-2027/",
-          "published": 1794524018,
-          "sentiment": 0.772
+          "url": "https://www.fool.com/investing/2026/11/12/if-an-ai-bubble-triggers-a-bear-market-history-say/",
+          "published": 1794543600,
+          "sentiment": 0.637
         },
         {
-          "title": "How Nvidia's stock decline might impact your 401(k) and portfolio",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/how-nvidias-stock-decline-might-impact-your-401k-and-portfolio-221925275.html",
-          "published": 1794521965,
-          "sentiment": 0.0
+          "title": "Michael Burry Sees A \u2018Mechanical Bid\u2019 Under NVDA Stock \u2013 Even As He Questions Nvidia\u2019s Succession Plan And Asia Sales",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-mechanical-bid-nvda-stock-questions-nvidia-succession-plan-asia-sales/cNbbpPXR9O1",
+          "published": 1794543194,
+          "sentiment": 0.202
         }
       ],
-      "news_sentiment": 0.154
+      "news_sentiment": 0.337
     },
     {
       "ticker": "META",
@@ -291,25 +291,39 @@ window.PRICES_DATA = {
       "high_gbp": "589",
       "high_usd": 779.82,
       "bar_pct": 40,
-      "market_cap_gbp_b": 1204.412,
-      "market_cap_usd_b": 1594.466,
+      "market_cap_gbp_b": 1204.827,
+      "market_cap_usd_b": 1594.467,
       "beta": 1.279,
       "pe_ratio": 21.28,
       "avg_volume_m": 21.16,
-      "div_yield_pct": 0.33,
+      "div_yield_pct": 0.34,
       "short_pct": 3.41,
       "analyst": "strong_buy",
       "analyst_score": 1.41,
-      "vol_1d": 10253879,
-      "vol_1w": 73761879,
-      "vol_1m": 536461479,
+      "vol_1d": 10282600,
+      "vol_1w": 73790600,
+      "vol_1m": 536490200,
       "news": [
+        {
+          "title": "Michael Burry Sees A \u2018Mechanical Bid\u2019 Under NVDA Stock \u2013 Even As He Questions Nvidia\u2019s Succession Plan And Asia Sales",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/michael-burry-mechanical-bid-nvda-stock-questions-nvidia-succession-plan-asia-sales/cNbbpPXR9O1",
+          "published": 1794543194,
+          "sentiment": 0.202
+        },
         {
           "title": "Grand Theft Auto VI Makes Take-Two Stock Look Like a Steal",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/buy-take-two-stock-grand-theft-auto-vi-1b7b9907?siteid=yhoof2&yptr=yahoo",
           "published": 1794533700,
           "sentiment": 0.318
+        },
+        {
+          "title": "AI Bots Are Using Credit Cards. Banks Are Racing to Keep Up.",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/finance/ai-bots-are-using-credit-cards-banks-are-racing-to-keep-up-c30dda30?siteid=yhoof2&yptr=yahoo",
+          "published": 1794531600,
+          "sentiment": 0.382
         },
         {
           "title": "Anthropic\u2019s $500 Billion Question",
@@ -324,23 +338,9 @@ window.PRICES_DATA = {
           "url": "https://www.tikr.com/blog/musk-spacex-makes-compute-actually-usable-in-2-months-3x-faster-than-rivals?ref=yahoofinance&tlnk=yf-261112-j4mj678g",
           "published": 1794522029,
           "sentiment": 0.0
-        },
-        {
-          "title": "What ERock (EROC) Said on Its Q3 Earnings Call",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/transcript-what-erock-eroc-said-on-its-q3-earnings-call-2026-11-12/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1794521688,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Nvidia CEO Jensen Huang Resigns\u2014and the Stock Is Falling",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/nvidia-stock-price-huang-affair-ceo-ouster-26c99dad?siteid=yhoof2&yptr=yahoo",
-          "published": 1794520500,
-          "sentiment": -0.153
         }
       ],
-      "news_sentiment": 0.033
+      "news_sentiment": 0.18
     },
     {
       "ticker": "NVDA",
@@ -354,23 +354,23 @@ window.PRICES_DATA = {
       "change_1m": "-27.28%",
       "change_ytd": "-11.79%",
       "return_1yr": "-7%",
-      "low_gbp": "124",
-      "low_usd": 164.27,
+      "low_gbp": "112",
+      "low_usd": 148.8,
       "high_gbp": "184",
       "high_usd": 243.37,
-      "bar_pct": 2,
-      "market_cap_gbp_b": 3031.292,
-      "market_cap_usd_b": 4012.989,
+      "bar_pct": 18,
+      "market_cap_gbp_b": 3032.336,
+      "market_cap_usd_b": 4012.99,
       "beta": 2.247,
       "pe_ratio": 21.01,
       "avg_volume_m": 131.49,
-      "div_yield_pct": 0.58,
+      "div_yield_pct": 0.6,
       "short_pct": 1.21,
-      "analyst": "strong_buy",
-      "analyst_score": 1.39,
-      "vol_1d": 740019481,
-      "vol_1w": 2151439081,
-      "vol_1m": 4254513781,
+      "analyst": "buy",
+      "analyst_score": 1.59,
+      "vol_1d": 742789000,
+      "vol_1w": 2154208600,
+      "vol_1m": 4257283300,
       "news": [
         {
           "title": "Nvidia market cap plunges $490 billion following former CEO Huang's affair scandals",
@@ -401,14 +401,14 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "How Jensen's exit will help the US in the AI race vs. China: Roubini",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/how-jensens-exit-will-help-the-us-in-the-ai-race-vs-china-roubini-204733072.html",
-          "published": 1794516000,
-          "sentiment": 0.402
+          "title": "Asian markets turn negative as early rally fades after Huang downfall",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/tech-firms-extend-rally-asia-024621637.html",
+          "published": 1794554389,
+          "sentiment": -0.572
         }
       ],
-      "news_sentiment": 0.022
+      "news_sentiment": -0.173
     },
     {
       "ticker": "AMD",
@@ -424,10 +424,10 @@ window.PRICES_DATA = {
       "return_1yr": "+123%",
       "low_gbp": "142",
       "low_usd": 188.22,
-      "high_gbp": "497",
+      "high_gbp": "498",
       "high_usd": 658.52,
       "bar_pct": 84,
-      "market_cap_gbp_b": 725.112,
+      "market_cap_gbp_b": 725.362,
       "market_cap_usd_b": 959.943,
       "beta": 2.542,
       "pe_ratio": 125.06,
@@ -435,10 +435,10 @@ window.PRICES_DATA = {
       "div_yield_pct": null,
       "short_pct": 2.36,
       "analyst": "strong_buy",
-      "analyst_score": 1.4,
-      "vol_1d": 55014886,
-      "vol_1w": 245067586,
-      "vol_1m": 735734886,
+      "analyst_score": 1.35,
+      "vol_1d": 55161000,
+      "vol_1w": 245213700,
+      "vol_1m": 735881000,
       "news": [
         {
           "title": "AMD, Broadcom stocks jump as Nvidia CEO Jensen Huang resigns",
@@ -462,21 +462,21 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "AMD CEO Dr. Lisa Su continues making the 'right, big bets'",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/amd-ceo-dr-lisa-su-continues-making-the-right-big-bets-152305265.html",
-          "published": 1794496985,
+          "title": "Dow Jones Futures Rise After Market Weathers Nvidia CEO Huang's Exit, Surging Yields",
+          "publisher": "Investor's Business Daily",
+          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-ceo-huang-exit-surging-yields-spacex-tesla-merger-deal/?src=A00220&yptr=yahoo",
+          "published": 1794542201,
           "sentiment": 0.0
         },
         {
-          "title": "Why AMD CEO Lisa Su is Yahoo Finance's 'CEO of the Year'",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/technology/article/why-amd-ceo-lisa-su-is-yahoo-finances-ceo-of-the-year-120000902.html",
-          "published": 1794484800,
-          "sentiment": 0.0
+          "title": "Why Are Advanced Micro Devices (AMD) Shares Drawing Fresh AI Attention?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-advanced-micro-devices-amd-232725137.html",
+          "published": 1794526045,
+          "sentiment": 0.67
         }
       ],
-      "news_sentiment": -0.014
+      "news_sentiment": 0.12
     },
     {
       "ticker": "INTC",
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "108",
       "high_usd": 142.35,
       "bar_pct": 26,
-      "market_cap_gbp_b": 245.705,
+      "market_cap_gbp_b": 245.79,
       "market_cap_usd_b": 325.278,
       "beta": 2.426,
       "pe_ratio": null,
@@ -504,9 +504,9 @@ window.PRICES_DATA = {
       "short_pct": 2.88,
       "analyst": "hold",
       "analyst_score": 2.51,
-      "vol_1d": 79464205,
-      "vol_1w": 635265805,
-      "vol_1m": 3266696905,
+      "vol_1d": 79987700,
+      "vol_1w": 635789300,
+      "vol_1m": 3267220400,
       "news": [
         {
           "title": "Intel CEO Lip-Bu Tan on turnaround efforts amid stock slump: 'I feel called to do this'",
@@ -523,28 +523,28 @@ window.PRICES_DATA = {
           "sentiment": 0.402
         },
         {
+          "title": "Fallout from the Nvidia scandal may dampen the exuberance around the AI boom",
+          "publisher": "Associated Press",
+          "url": "https://finance.yahoo.com/technology/ai/articles/fallout-nvidia-scandal-may-dampen-050149172.html",
+          "published": 1794546109,
+          "sentiment": -0.44
+        },
+        {
+          "title": "Adobe And 2 More Undervalued Tech Stocks To Watch",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/articles/adobe-2-more-undervalued-tech-021250861.html",
+          "published": 1794535970,
+          "sentiment": 0.0
+        },
+        {
           "title": "Why Are Advanced Micro Devices (AMD) Shares Drawing Fresh AI Attention?",
           "publisher": "Simply Wall St.",
           "url": "https://finance.yahoo.com/markets/stocks/articles/why-advanced-micro-devices-amd-232725137.html",
           "published": 1794526045,
           "sentiment": 0.67
-        },
-        {
-          "title": "Wall Street ends lower as Nvidia CEO resigns; US yields up",
-          "publisher": "Reuters",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/asian-stocks-fragile-nvidia-plummets-015524144.html",
-          "published": 1794523052,
-          "sentiment": -0.542
-        },
-        {
-          "title": "Applied Materials\u2019 Beat Gets a Lukewarm Reception as Nvidia Fallout Lingers",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/applied-materials-earnings-stock-price-66c09c50?siteid=yhoof2&yptr=yahoo",
-          "published": 1794522060,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.106
+      "news_sentiment": 0.126
     },
     {
       "ticker": "TSM",
@@ -563,19 +563,26 @@ window.PRICES_DATA = {
       "high_gbp": "368",
       "high_usd": 487.47,
       "bar_pct": 63,
-      "market_cap_gbp_b": 1588.591,
-      "market_cap_usd_b": 2103.063,
+      "market_cap_gbp_b": 1589.137,
+      "market_cap_usd_b": 2103.062,
       "beta": 1.233,
       "pe_ratio": 26.28,
       "avg_volume_m": 11.45,
-      "div_yield_pct": 0.91,
+      "div_yield_pct": 0.93,
       "short_pct": 0.66,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
-      "vol_1d": 11308972,
-      "vol_1w": 79742572,
-      "vol_1m": 341477972,
+      "vol_1d": 11331300,
+      "vol_1w": 79764900,
+      "vol_1m": 341500300,
       "news": [
+        {
+          "title": "Asian shares are mixed as investors assess impact of Nvidia's fallout on global AI development",
+          "publisher": "Associated Press",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/asian-shares-mixed-investors-assess-053708191.html",
+          "published": 1794548228,
+          "sentiment": 0.296
+        },
         {
           "title": "Bernstein\u2019s Mark Li Raised His Taiwan Semiconductor Manufacturing (TSM) Target to $600. Here\u2019s What Changed",
           "publisher": "Insider Monkey",
@@ -603,16 +610,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-guarantee-not-worth-worth-211525178.html",
           "published": 1794518125,
           "sentiment": 0.304
-        },
-        {
-          "title": "Ranking NVIDIA, Taiwan Semiconductor And Other AI Compute Stocks",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/videos/ranking-nvidia-taiwan-semiconductor-and-other-ai-compute-stocks/",
-          "published": 1794511603,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.106
+      "news_sentiment": 0.165
     },
     {
       "ticker": "AVGO",
@@ -631,18 +631,18 @@ window.PRICES_DATA = {
       "high_gbp": "374",
       "high_usd": 495.0,
       "bar_pct": 36,
-      "market_cap_gbp_b": 1313.83,
-      "market_cap_usd_b": 1739.32,
+      "market_cap_gbp_b": 1314.282,
+      "market_cap_usd_b": 1739.319,
       "beta": 1.508,
       "pe_ratio": 46.53,
       "avg_volume_m": 24.77,
-      "div_yield_pct": 0.75,
+      "div_yield_pct": 0.71,
       "short_pct": 1.11,
       "analyst": "strong_buy",
       "analyst_score": 1.24,
-      "vol_1d": 43502367,
-      "vol_1w": 174714467,
-      "vol_1m": 603808367,
+      "vol_1d": 43622200,
+      "vol_1w": 174834300,
+      "vol_1m": 603928200,
       "news": [
         {
           "title": "AMD, Broadcom stocks jump as Nvidia CEO Jensen Huang resigns",
@@ -652,35 +652,35 @@ window.PRICES_DATA = {
           "sentiment": -0.318
         },
         {
-          "title": "5 Best Growth Stocks for the Next 5 Years",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/5-best-growth-stocks-next-231119066.html",
-          "published": 1794525079,
-          "sentiment": 0.778
+          "title": "Broadcom (AVGO) Stock Gets A Fresh AI Opening After Rival CEO Exit",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-avgo-stock-gets-fresh-071030042.html",
+          "published": 1794553830,
+          "sentiment": 0.318
         },
         {
-          "title": "Can Huang's Exit Create Chip Competition",
-          "publisher": "Bloomberg",
-          "url": "https://finance.yahoo.com/video/huangs-exit-create-chip-competition-230039379.html",
-          "published": 1794524439,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Now Comes the Hard Part for the Stock Market",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/nvidia-jensen-huang-stock-market-ai-trade-outlook-25292506?siteid=yhoof2&yptr=yahoo",
-          "published": 1794523980,
-          "sentiment": -0.103
-        },
-        {
-          "title": "Stock Market Today, Nov. 12: Nvidia CEO's Stunning Exit Sends Wall Street Lower as Rivals Surge",
+          "title": "Broadcom Stock Just Jumped More Than 20% in 4 Days. It Has Done That Only 6 Other Times Since 2009.",
           "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/12/stock-market-today-nov-12-nvidia-ceo-s-stunning-exit-sends-wall-street-lower-as-rivals-surge/",
-          "published": 1794523502,
-          "sentiment": 0.103
+          "url": "https://www.fool.com/investing/2026/11/13/broadcom-stock-just-jumped-more-than-20-in-4-days-it-has-done-that-only-6-other-times-since-2009/",
+          "published": 1794551042,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Cathie Wood Sees Nvidia\u2019s CAGR Slowing To 25% From 50% Over The Next Five Years: \u2018You\u2019ve Got Powerful Forces Like Elon Musk\u2019",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-nvidia-five-year-annual-return-tesla-elson-musk/cNbbALkR9Om",
+          "published": 1794546173,
+          "sentiment": 0.649
+        },
+        {
+          "title": "Fallout from the Nvidia scandal may dampen the exuberance around the AI boom",
+          "publisher": "Associated Press",
+          "url": "https://finance.yahoo.com/technology/ai/articles/fallout-nvidia-scandal-may-dampen-050149172.html",
+          "published": 1794546109,
+          "sentiment": -0.44
         }
       ],
-      "news_sentiment": 0.147
+      "news_sentiment": 0.042
     },
     {
       "ticker": "QCOM",
@@ -699,7 +699,7 @@ window.PRICES_DATA = {
       "high_gbp": "196",
       "high_usd": 259.92,
       "bar_pct": 40,
-      "market_cap_gbp_b": 143.173,
+      "market_cap_gbp_b": 143.222,
       "market_cap_usd_b": 189.54,
       "beta": 1.762,
       "pe_ratio": 13.95,
@@ -708,47 +708,47 @@ window.PRICES_DATA = {
       "short_pct": 3.03,
       "analyst": "hold",
       "analyst_score": 2.62,
-      "vol_1d": 8963500,
-      "vol_1w": 69158000,
-      "vol_1m": 312456100,
+      "vol_1d": 8969600,
+      "vol_1w": 69164100,
+      "vol_1m": 312462200,
       "news": [
         {
-          "title": "Qualcomm CEO: AI won't replace your smartphone anytime soon",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/technology/article/qualcomm-ceo-ai-wont-replace-your-smartphone-anytime-soon-150140110.html",
-          "published": 1794495700,
+          "title": "Arm Is Up 77% Even As Profit Fell",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/arm-77-even-profit-fell-211120456.html",
+          "published": 1794517880,
+          "sentiment": 0.44
+        },
+        {
+          "title": "Qualcomm's $5 Billion Data Center Ramp Puts Execution in Focus Now",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/technology/articles/qualcomms-5-billion-data-center-174700875.html",
+          "published": 1794505620,
           "sentiment": 0.0
         },
         {
-          "title": "Qualcomm CEO on tech stock meltdown: 'There is no AI correction' for us",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/technology/article/qualcomm-ceo-on-tech-stock-meltdown-there-is-no-ai-correction-for-us-142155683.html",
-          "published": 1794493315,
-          "sentiment": -0.296
+          "title": "Is Intel Stock Paying You Enough For The Swings?",
+          "publisher": "Trefis",
+          "url": "https://www.trefis.com/stock/intc/articles/624584/is-intel-stock-paying-you-enough-for-the-swings/2026-11-12",
+          "published": 1794504739,
+          "sentiment": 0.0
         },
         {
-          "title": "Qualcomm CEO on $15B data-center goal: 'We're very confident'",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/qualcomm-ceo-on-15b-data-center-goal-were-very-confident-134257800.html",
-          "published": 1794490977,
-          "sentiment": 0.541
+          "title": "Is Qualcomm Stock Worth Buying as Diversification Meets Margin Risk?",
+          "publisher": "Zacks",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/qualcomm-stock-worth-buying-diversification-172700159.html",
+          "published": 1794504420,
+          "sentiment": -0.052
         },
         {
-          "title": "Qualcomm CEO: Elon Musk is serious about SpaceX's cellular network ambitions",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/markets/stocks/article/qualcomm-ceo-elon-musk-is-serious-about-spacexs-cellular-network-ambitions-133405046.html",
-          "published": 1794490445,
-          "sentiment": -0.077
-        },
-        {
-          "title": "Qualcomm CEO on SpaceX deal: 'It's a great partnership' that will drive 'innovation'",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/qualcomm-ceo-on-spacex-deal-its-a-great-partnership-that-will-drive-innovation-132448818.html",
-          "published": 1794489888,
-          "sentiment": 0.772
+          "title": "Tom Lee Says Jensen Huang Exit Doesn\u2019t Change His Bullish Tech Outlook: AVGO, AMD Stocks Lead Chip Rally",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/tom-lee-jensen-huang-exit-no-impact-on-tech-amd-avgo-stocks-lead-chip-rally/cNGCcGiR9aH",
+          "published": 1794504123,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.188
+      "news_sentiment": 0.078
     },
     {
       "ticker": "ARM",
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "342",
       "high_usd": 452.7,
       "bar_pct": 28,
-      "market_cap_gbp_b": 161.471,
-      "market_cap_usd_b": 213.764,
+      "market_cap_gbp_b": 161.527,
+      "market_cap_usd_b": 213.765,
       "beta": 3.939,
       "pe_ratio": 229.63,
       "avg_volume_m": 5.2,
@@ -776,15 +776,15 @@ window.PRICES_DATA = {
       "short_pct": 10.71,
       "analyst": "buy",
       "analyst_score": 1.93,
-      "vol_1d": 3946336,
-      "vol_1w": 27684936,
-      "vol_1m": 134990236,
+      "vol_1d": 3949000,
+      "vol_1w": 27687600,
+      "vol_1m": 134992900,
       "news": [
         {
-          "title": "Who could replace the departed Jensen Huang as Nvidia CEO?",
+          "title": "Who is Colette Kress, interim Nvidia CEO after Jensen Huang exit?",
           "publisher": "The Guardian",
           "url": "https://finance.yahoo.com/technology/articles/could-replace-departed-jensen-huang-000357633.html",
-          "published": 1794528237,
+          "published": 1794538926,
           "sentiment": 0.0
         },
         {
@@ -835,18 +835,18 @@ window.PRICES_DATA = {
       "high_gbp": "1511",
       "high_usd": 1999.96,
       "bar_pct": 52,
-      "market_cap_gbp_b": 435.861,
-      "market_cap_usd_b": 577.017,
+      "market_cap_gbp_b": 436.011,
+      "market_cap_usd_b": 577.016,
       "beta": 1.333,
       "pe_ratio": 36.84,
       "avg_volume_m": 1.44,
-      "div_yield_pct": 0.61,
+      "div_yield_pct": 0.62,
       "short_pct": 0.3,
       "analyst": "strong_buy",
       "analyst_score": 1.37,
-      "vol_1d": 1827870,
-      "vol_1w": 8911170,
-      "vol_1m": 40593570,
+      "vol_1d": 1828900,
+      "vol_1w": 8912200,
+      "vol_1m": 40594600,
       "news": [
         {
           "title": "5 Unrivaled Stocks to Buy for the Next Decade",
@@ -898,23 +898,23 @@ window.PRICES_DATA = {
       "change_1m": "-16.22%",
       "change_ytd": "+153.32%",
       "return_1yr": "+242%",
-      "low_gbp": "145",
+      "low_gbp": "146",
       "low_usd": 192.59,
       "high_gbp": "948",
       "high_usd": 1255.0,
       "bar_pct": 57,
-      "market_cap_gbp_b": 682.381,
+      "market_cap_gbp_b": 682.616,
       "market_cap_usd_b": 903.373,
       "beta": 2.398,
       "pe_ratio": 10.74,
       "avg_volume_m": 27.83,
-      "div_yield_pct": 0.07,
+      "div_yield_pct": 0.08,
       "short_pct": 2.07,
       "analyst": "strong_buy",
       "analyst_score": 1.35,
-      "vol_1d": 26957110,
-      "vol_1w": 169150110,
-      "vol_1m": 711321810,
+      "vol_1d": 27122300,
+      "vol_1w": 169315300,
+      "vol_1m": 711487000,
       "news": [
         {
           "title": "5 Best Growth Stocks for the Next 5 Years",
@@ -971,25 +971,46 @@ window.PRICES_DATA = {
       "high_gbp": "559",
       "high_usd": 739.67,
       "bar_pct": 33,
-      "market_cap_gbp_b": 228.364,
+      "market_cap_gbp_b": 228.443,
       "market_cap_usd_b": 302.321,
       "beta": 1.673,
-      "pe_ratio": 32.87,
+      "pe_ratio": 30.19,
       "avg_volume_m": 7.26,
-      "div_yield_pct": 0.54,
+      "div_yield_pct": 0.56,
       "short_pct": 1.83,
       "analyst": "strong_buy",
-      "analyst_score": 1.41,
-      "vol_1d": 8856734,
-      "vol_1w": 43069134,
-      "vol_1m": 198016034,
+      "analyst_score": 1.43,
+      "vol_1d": 9120200,
+      "vol_1w": 43332600,
+      "vol_1m": 198279500,
       "news": [
         {
-          "title": "Dow Jones Futures Rise After Market Weathers Nvidia CEO Huang's Exit, Surging Yields; SpaceX-Tesla Merger Deal Close",
+          "title": "Applied Materials Inc (AMAT) (Q4 2026) Earnings Call Highlights: Record $10. ...",
+          "publisher": "GuruFocus.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/applied-materials-inc-amat-q4-050510098.html",
+          "published": 1794546310,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Dow Jones Futures Rise After Market Weathers Nvidia CEO Huang's Exit, Surging Yields",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-ceo-huang-exit-surging-yields-spacex-tesla-merger-deal/?src=A00220&yptr=yahoo",
-          "published": 1794534924,
+          "published": 1794542201,
           "sentiment": 0.0
+        },
+        {
+          "title": "AMAT CEO Says Chip Demand Robust, Adds \u2018Multiyear\u2019 Fab Investments Are Needed \u2013 Shares See Modest Rise After Sharp Run-Up",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/amat-ceo-says-chip-demand-robust-adds-multiyear-fab-investments-are-needed-shares-see-modest-rise-after-sharp-run-up/cNbboB2R9O0",
+          "published": 1794541349,
+          "sentiment": 0.727
+        },
+        {
+          "title": "Applied Materials (AMAT) Stock Rises As Strong AI Demand Eases Hardware Slowdown Fears",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/applied-materials-amat-stock-rises-031945022.html",
+          "published": 1794539985,
+          "sentiment": 0.318
         },
         {
           "title": "What Applied Materials (AMAT) Said on Its Q4 Earnings Call",
@@ -997,30 +1018,9 @@ window.PRICES_DATA = {
           "url": "https://www.marketbeat.com/instant-alerts/transcript-what-applied-materials-amat-said-on-its-q4-earnings-call-2026-11-12/?utm_source=yahoofinance&utm_medium=yahoofinance",
           "published": 1794528872,
           "sentiment": 0.0
-        },
-        {
-          "title": "Applied Materials Inc. Q4 2026 Earnings Call: Live Updates of $AMAT Earnings, Stock Forecast",
-          "publisher": "TheStreet",
-          "url": "https://www.thestreet.com/latest-news/applied-materials-amat-q4-2026-earnings-call-stock-updates",
-          "published": 1794526804,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Applied Materials\u2019 Beat Gets a Lukewarm Reception as Nvidia Fallout Lingers",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/applied-materials-earnings-stock-price-66c09c50?siteid=yhoof2&yptr=yahoo",
-          "published": 1794522060,
-          "sentiment": 0.0
-        },
-        {
-          "title": "Applied Materials Beats Fiscal Q4 Targets On Strong Chip-Gear Sales",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/news/technology/applied-materials-amat-stock-fiscal-q4-2026-earnings/?src=A00220&yptr=yahoo",
-          "published": 1794520842,
-          "sentiment": 0.511
         }
       ],
-      "news_sentiment": 0.102
+      "news_sentiment": 0.209
     },
     {
       "ticker": "ORCL",
@@ -1034,23 +1034,23 @@ window.PRICES_DATA = {
       "change_1m": "-11.24%",
       "change_ytd": "-34.18%",
       "return_1yr": "-41%",
-      "low_gbp": "82",
+      "low_gbp": "83",
       "low_usd": 109.21,
       "high_gbp": "189",
       "high_usd": 250.25,
       "bar_pct": 13,
-      "market_cap_gbp_b": 299.347,
+      "market_cap_gbp_b": 299.45,
       "market_cap_usd_b": 396.292,
       "beta": 1.778,
       "pe_ratio": 19.92,
       "avg_volume_m": 33.44,
-      "div_yield_pct": 1.56,
+      "div_yield_pct": 1.57,
       "short_pct": 2.48,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
-      "vol_1d": 22446154,
-      "vol_1w": 159964654,
-      "vol_1m": 962106354,
+      "vol_1d": 22500500,
+      "vol_1w": 160019000,
+      "vol_1m": 962160700,
       "news": [
         {
           "title": "5 Best AI Stocks to Buy After Wells Fargo\u2019s Outlook Upgrade",
@@ -1097,7 +1097,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "164",
       "price_usd": 217.57,
-      "change_1d": "-0.03%",
+      "change_1d": "+0.00%",
       "change_1w": "-2.18%",
       "change_1m": "-8.59%",
       "change_ytd": "-13.63%",
@@ -1107,8 +1107,8 @@ window.PRICES_DATA = {
       "high_gbp": "203",
       "high_usd": 269.11,
       "bar_pct": 58,
-      "market_cap_gbp_b": 135.257,
-      "market_cap_usd_b": 179.061,
+      "market_cap_gbp_b": 135.303,
+      "market_cap_usd_b": 179.06,
       "beta": 1.233,
       "pe_ratio": 19.91,
       "avg_volume_m": 11.31,
@@ -1116,16 +1116,16 @@ window.PRICES_DATA = {
       "short_pct": 3.68,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 3638844,
-      "vol_1w": 31096144,
-      "vol_1m": 163049044,
+      "vol_1d": 3640400,
+      "vol_1w": 31097700,
+      "vol_1m": 163050600,
       "news": [
         {
-          "title": "Tony Robbins: 4 rules the world's greatest investors follow",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/tony-robbins-4-rules-the-worlds-greatest-investors-follow-155143166.html",
-          "published": 1794481200,
-          "sentiment": 0.637
+          "title": "Did AI Platform Growth Just Shift Salesforce's (CRM) Investment Narrative?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/did-ai-platform-growth-just-043459296.html",
+          "published": 1794544499,
+          "sentiment": 0.382
         },
         {
           "title": "Should You Buy HubSpot Stock For Its Cash?",
@@ -1156,7 +1156,7 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.236
+      "news_sentiment": 0.185
     },
     {
       "ticker": "ADBE",
@@ -1175,8 +1175,8 @@ window.PRICES_DATA = {
       "high_gbp": "274",
       "high_usd": 362.71,
       "bar_pct": 28,
-      "market_cap_gbp_b": 70.128,
-      "market_cap_usd_b": 92.839,
+      "market_cap_gbp_b": 70.153,
+      "market_cap_usd_b": 92.84,
       "beta": 1.383,
       "pe_ratio": 13.32,
       "avg_volume_m": 4.63,
@@ -1184,10 +1184,17 @@ window.PRICES_DATA = {
       "short_pct": 4.83,
       "analyst": "hold",
       "analyst_score": 2.97,
-      "vol_1d": 3550642,
-      "vol_1w": 17388242,
-      "vol_1m": 93606042,
+      "vol_1d": 3551400,
+      "vol_1w": 17389000,
+      "vol_1m": 93606800,
       "news": [
+        {
+          "title": "Adobe And 2 More Undervalued Tech Stocks To Watch",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/technology/articles/adobe-2-more-undervalued-tech-021250861.html",
+          "published": 1794535970,
+          "sentiment": 0.0
+        },
         {
           "title": "Adobe makes major change creators will notice as Citi flags \u2018hard reset\u2019",
           "publisher": "TheStreet",
@@ -1215,13 +1222,6 @@ window.PRICES_DATA = {
           "url": "https://www.cfodive.com/news/hubspot-names-new-ceo-cfo-company-re-founding/874544/",
           "published": 1794511699,
           "sentiment": 0.0
-        },
-        {
-          "title": "The Big Short Investor Is Buying This Stock At a 50% Discount",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/12/the-big-short-investor-is-buying-this-stock-at-a-50-discount/",
-          "published": 1794501257,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.0
@@ -1243,7 +1243,7 @@ window.PRICES_DATA = {
       "high_gbp": "132",
       "high_usd": 175.0,
       "bar_pct": 21,
-      "market_cap_gbp_b": 78.919,
+      "market_cap_gbp_b": 78.946,
       "market_cap_usd_b": 104.477,
       "beta": 0.984,
       "pe_ratio": 72.42,
@@ -1252,9 +1252,9 @@ window.PRICES_DATA = {
       "short_pct": 2.62,
       "analyst": "strong_buy",
       "analyst_score": 1.45,
-      "vol_1d": 9683167,
-      "vol_1w": 71457167,
-      "vol_1m": 446107967,
+      "vol_1d": 10865300,
+      "vol_1w": 72639300,
+      "vol_1m": 447290100,
       "news": [
         {
           "title": "ServiceNow (NOW) Trades 42% Below Its High. Here\u2019s Why Argus Still Rates It a Buy",
@@ -1308,10 +1308,10 @@ window.PRICES_DATA = {
       "return_1yr": "+17%",
       "low_gbp": "89",
       "low_usd": 118.3,
-      "high_gbp": "290",
+      "high_gbp": "291",
       "high_usd": 384.56,
       "bar_pct": 68,
-      "market_cap_gbp_b": 79.602,
+      "market_cap_gbp_b": 79.629,
       "market_cap_usd_b": 105.381,
       "beta": 1.322,
       "pe_ratio": null,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": 5.06,
       "analyst": "strong_buy",
       "analyst_score": 1.46,
-      "vol_1d": 2376105,
-      "vol_1w": 19944105,
-      "vol_1m": 106207005,
+      "vol_1d": 2376500,
+      "vol_1w": 19944500,
+      "vol_1m": 106207400,
       "news": [
         {
           "title": "3 AI Infrastructure Stocks To Watch As Nvidia Chip Curbs Reshape Cloud Spending",
@@ -1376,21 +1376,21 @@ window.PRICES_DATA = {
       "return_1yr": "-47%",
       "low_gbp": "191",
       "low_usd": 252.84,
-      "high_gbp": "515",
+      "high_gbp": "516",
       "high_usd": 682.27,
       "bar_pct": 20,
-      "market_cap_gbp_b": 68.667,
-      "market_cap_usd_b": 90.905,
+      "market_cap_gbp_b": 68.691,
+      "market_cap_usd_b": 90.906,
       "beta": 0.921,
       "pe_ratio": 20.67,
       "avg_volume_m": 3.63,
-      "div_yield_pct": 1.61,
+      "div_yield_pct": 1.62,
       "short_pct": 3.82,
       "analyst": "buy",
       "analyst_score": 2.06,
-      "vol_1d": 1689438,
-      "vol_1w": 12765738,
-      "vol_1m": 68707738,
+      "vol_1d": 1707100,
+      "vol_1w": 12783400,
+      "vol_1m": 68725400,
       "news": [
         {
           "title": "Marvell makes major board move ahead of $115 billion AI deal",
@@ -1447,7 +1447,7 @@ window.PRICES_DATA = {
       "high_gbp": "217",
       "high_usd": 286.99,
       "bar_pct": 72,
-      "market_cap_gbp_b": 177.793,
+      "market_cap_gbp_b": 177.854,
       "market_cap_usd_b": 235.372,
       "beta": 1.15,
       "pe_ratio": 4597.4,
@@ -1456,9 +1456,9 @@ window.PRICES_DATA = {
       "short_pct": 2.18,
       "analyst": "buy",
       "analyst_score": 1.66,
-      "vol_1d": 6169956,
-      "vol_1w": 39236856,
-      "vol_1m": 216344956,
+      "vol_1d": 6234600,
+      "vol_1w": 39301500,
+      "vol_1m": 216409600,
       "news": [
         {
           "title": "Why CrowdStrike CEO George Kurtz is looking forward to Anthropic and OpenAI going public",
@@ -1515,7 +1515,7 @@ window.PRICES_DATA = {
       "high_gbp": "327",
       "high_usd": 432.33,
       "bar_pct": 63,
-      "market_cap_gbp_b": 199.477,
+      "market_cap_gbp_b": 199.546,
       "market_cap_usd_b": 264.079,
       "beta": 0.97,
       "pe_ratio": 806.65,
@@ -1524,9 +1524,9 @@ window.PRICES_DATA = {
       "short_pct": 2.54,
       "analyst": "buy",
       "analyst_score": 1.69,
-      "vol_1d": 6007159,
-      "vol_1w": 27830359,
-      "vol_1m": 141355559,
+      "vol_1d": 6025900,
+      "vol_1w": 27849100,
+      "vol_1m": 141374300,
       "news": [
         {
           "title": "Palo Alto Networks (PANW): Its AI Security Tool Became the Company\u2019s Fastest Product Ramp",
@@ -1583,7 +1583,7 @@ window.PRICES_DATA = {
       "high_gbp": "280",
       "high_usd": 370.35,
       "bar_pct": 75,
-      "market_cap_gbp_b": 86.224,
+      "market_cap_gbp_b": 86.254,
       "market_cap_usd_b": 114.148,
       "beta": 1.367,
       "pe_ratio": null,
@@ -1592,9 +1592,9 @@ window.PRICES_DATA = {
       "short_pct": 2.77,
       "analyst": "buy",
       "analyst_score": 1.89,
-      "vol_1d": 3458923,
-      "vol_1w": 28330323,
-      "vol_1m": 96024323,
+      "vol_1d": 3460600,
+      "vol_1w": 28332000,
+      "vol_1m": 96026000,
       "news": [
         {
           "title": "Is Penguin Solutions Stock a Buy After a 162% Rally in a Year?",
@@ -1651,7 +1651,7 @@ window.PRICES_DATA = {
       "high_gbp": "149",
       "high_usd": 197.13,
       "bar_pct": 45,
-      "market_cap_gbp_b": 71.892,
+      "market_cap_gbp_b": 71.917,
       "market_cap_usd_b": 95.175,
       "beta": 1.04,
       "pe_ratio": 42.33,
@@ -1660,9 +1660,9 @@ window.PRICES_DATA = {
       "short_pct": 1.97,
       "analyst": "hold",
       "analyst_score": 2.88,
-      "vol_1d": 3706191,
-      "vol_1w": 27730391,
-      "vol_1m": 138620991,
+      "vol_1d": 3708000,
+      "vol_1w": 27732200,
+      "vol_1m": 138622800,
       "news": [
         {
           "title": "Fortinet (FTNT) Leans Into AI Security Following Stronger 2026 Outlook And Valuation Debate",
@@ -1716,11 +1716,11 @@ window.PRICES_DATA = {
       "return_1yr": "-44%",
       "low_gbp": "46",
       "low_usd": 61.39,
-      "high_gbp": "88",
-      "high_usd": 116.73,
+      "high_gbp": "87",
+      "high_usd": 115.25,
       "bar_pct": 2,
-      "market_cap_gbp_b": 194.452,
-      "market_cap_usd_b": 257.426,
+      "market_cap_gbp_b": 194.518,
+      "market_cap_usd_b": 257.425,
       "beta": 1.606,
       "pe_ratio": 18.12,
       "avg_volume_m": 36.92,
@@ -1728,9 +1728,9 @@ window.PRICES_DATA = {
       "short_pct": 2.25,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 31229289,
-      "vol_1w": 159264189,
-      "vol_1m": 1030818689,
+      "vol_1d": 31363500,
+      "vol_1w": 159398400,
+      "vol_1m": 1030952900,
       "news": [
         {
           "title": "Billionaire investor Bill Ackman on why he's staying bullish on Netflix",
@@ -1787,7 +1787,7 @@ window.PRICES_DATA = {
       "high_gbp": "137",
       "high_usd": 180.88,
       "bar_pct": 61,
-      "market_cap_gbp_b": 142.641,
+      "market_cap_gbp_b": 142.69,
       "market_cap_usd_b": 188.836,
       "beta": 2.664,
       "pe_ratio": 90.05,
@@ -1796,9 +1796,9 @@ window.PRICES_DATA = {
       "short_pct": 1.57,
       "analyst": "buy",
       "analyst_score": 1.69,
-      "vol_1d": 4637919,
-      "vol_1w": 30105219,
-      "vol_1m": 202138919,
+      "vol_1d": 4924500,
+      "vol_1w": 30391800,
+      "vol_1m": 202425500,
       "news": [
         {
           "title": "RBC\u2019s Paul Treiber Held Firm on Shopify (SHOP) After a Slight Miss. Here\u2019s the AI Pitch",
@@ -1852,10 +1852,10 @@ window.PRICES_DATA = {
       "return_1yr": "-6%",
       "low_gbp": "306",
       "low_usd": 405.0,
-      "high_gbp": "505",
-      "high_usd": 668.49,
-      "bar_pct": 73,
-      "market_cap_gbp_b": 92.917,
+      "high_gbp": "495",
+      "high_usd": 654.68,
+      "bar_pct": 78,
+      "market_cap_gbp_b": 92.949,
       "market_cap_usd_b": 123.009,
       "beta": 1.464,
       "pe_ratio": 36.47,
@@ -1864,9 +1864,9 @@ window.PRICES_DATA = {
       "short_pct": 1.94,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 1000397,
-      "vol_1w": 6839797,
-      "vol_1m": 42926297,
+      "vol_1d": 1003100,
+      "vol_1w": 6842500,
+      "vol_1m": 42929000,
       "news": [
         {
           "title": "Here is What to Know Beyond Why Spotify Technology (SPOT) is a Trending Stock",
@@ -1920,11 +1920,11 @@ window.PRICES_DATA = {
       "return_1yr": "-23%",
       "low_gbp": "48",
       "low_usd": 64.04,
-      "high_gbp": "71",
-      "high_usd": 94.06,
-      "bar_pct": 17,
-      "market_cap_gbp_b": 106.61,
-      "market_cap_usd_b": 141.136,
+      "high_gbp": "70",
+      "high_usd": 92.92,
+      "bar_pct": 18,
+      "market_cap_gbp_b": 106.647,
+      "market_cap_usd_b": 141.137,
       "beta": 1.308,
       "pe_ratio": 40.66,
       "avg_volume_m": 17.33,
@@ -1932,23 +1932,16 @@ window.PRICES_DATA = {
       "short_pct": 2.3,
       "analyst": "buy",
       "analyst_score": 1.58,
-      "vol_1d": 13828329,
-      "vol_1w": 79241629,
-      "vol_1m": 422986129,
+      "vol_1d": 13843500,
+      "vol_1w": 79256800,
+      "vol_1m": 423001300,
       "news": [
         {
-          "title": "Tony Robbins: How to make yourself irreplaceable in the AI era",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/tony-robbins-yourself-irreplaceable-ai-120000200.html",
-          "published": 1794484800,
+          "title": "They Were the Indispensable CEOs\u2014Until They Weren\u2019t",
+          "publisher": "The Wall Street Journal",
+          "url": "https://www.wsj.com/business/they-were-the-indispensable-ceosuntil-they-werent-1bb8a52c?siteid=yhoof2&yptr=yahoo",
+          "published": 1794538800,
           "sentiment": 0.0
-        },
-        {
-          "title": "Tony Robbins: 4 rules the world's greatest investors follow",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/tony-robbins-4-rules-the-worlds-greatest-investors-follow-155143166.html",
-          "published": 1794481200,
-          "sentiment": 0.637
         },
         {
           "title": "He\u2019s Betting Against Uber\u2019s Entire Business Model",
@@ -1970,9 +1963,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/norwest-pushes-deeper-ai-4b-151814201.html",
           "published": 1794496694,
           "sentiment": 0.0
+        },
+        {
+          "title": "You can now book a parking spot on Uber",
+          "publisher": "Yahoo Personal Finance",
+          "url": "https://finance.yahoo.com/personal-finance/credit-cards/article/you-can-now-book-a-parking-spot-on-uber-150714181.html",
+          "published": 1794496034,
+          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.127
+      "news_sentiment": 0.0
     },
     {
       "ticker": "CSCO",
@@ -1988,27 +1988,41 @@ window.PRICES_DATA = {
       "return_1yr": "+30%",
       "low_gbp": "55",
       "low_usd": 72.8,
-      "high_gbp": "98",
+      "high_gbp": "99",
       "high_usd": 130.37,
       "bar_pct": 51,
-      "market_cap_gbp_b": 303.797,
-      "market_cap_usd_b": 402.183,
+      "market_cap_gbp_b": 303.902,
+      "market_cap_usd_b": 402.184,
       "beta": 1.002,
-      "pe_ratio": 30.63,
+      "pe_ratio": 27.13,
       "avg_volume_m": 18.45,
-      "div_yield_pct": 1.67,
+      "div_yield_pct": 1.65,
       "short_pct": 1.55,
       "analyst": "buy",
       "analyst_score": 1.86,
-      "vol_1d": 25504322,
-      "vol_1w": 105829622,
-      "vol_1m": 438235422,
+      "vol_1d": 26336500,
+      "vol_1w": 106661800,
+      "vol_1m": 439067600,
       "news": [
         {
-          "title": "Dow Jones Futures Rise After Market Weathers Nvidia CEO Huang's Exit, Surging Yields; SpaceX-Tesla Merger Deal Close",
+          "title": "Cisco (CSCO) Q1 2027 Earnings Call Transcript",
+          "publisher": "Motley Fool",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/11/13/cisco-csco-q1-2027-earnings-call-transcript/",
+          "published": 1794547215,
+          "sentiment": 0.0
+        },
+        {
+          "title": "\u2018Still Early In Networking Super Cycle\u2019: Cisco Delivers Beat And Raise Quarter But Shares Drop Amid Nvidia-Linked Volatility",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/still-early-in-networking-super-cycle-cisco-delivers-beat-and-raise-quarter-but-shares-drop-amid-nvidia-linked-volatility/cNbbAvIR9OZ",
+          "published": 1794547146,
+          "sentiment": 0.382
+        },
+        {
+          "title": "Dow Jones Futures Rise After Market Weathers Nvidia CEO Huang's Exit, Surging Yields",
           "publisher": "Investor's Business Daily",
           "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-ceo-huang-exit-surging-yields-spacex-tesla-merger-deal/?src=A00220&yptr=yahoo",
-          "published": 1794534924,
+          "published": 1794542201,
           "sentiment": 0.0
         },
         {
@@ -2024,23 +2038,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/cisco-systems-delivers-record-q1-232900099.html",
           "published": 1794526140,
           "sentiment": 0.0
-        },
-        {
-          "title": "Colette Kress named Nvidia interim CEO as Jensen Huang's abrupt resignation raises investor concerns",
-          "publisher": "Fox Business",
-          "url": "https://www.foxbusiness.com/markets/colette-kress-named-nvidia-interim-ceo-jensen-huangs-abrupt-resignation-raises-investor-concerns",
-          "published": 1794520213,
-          "sentiment": -0.296
-        },
-        {
-          "title": "Cisco Systems Raises Outlook On Soaring Revenue, Profit",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/business/earnings/cisco-systems-raises-outlook-on-soaring-revenue-profit-7efeabd0?siteid=yhoof2&yptr=yahoo",
-          "published": 1794520200,
-          "sentiment": 0.44
         }
       ],
-      "news_sentiment": 0.029
+      "news_sentiment": 0.076
     },
     {
       "ticker": "PLTR",
@@ -2059,8 +2059,8 @@ window.PRICES_DATA = {
       "high_gbp": "161",
       "high_usd": 212.94,
       "bar_pct": 61,
-      "market_cap_gbp_b": 312.286,
-      "market_cap_usd_b": 413.421,
+      "market_cap_gbp_b": 312.394,
+      "market_cap_usd_b": 413.422,
       "beta": 1.61,
       "pe_ratio": 120.83,
       "avg_volume_m": 26.26,
@@ -2068,10 +2068,17 @@ window.PRICES_DATA = {
       "short_pct": 2.6,
       "analyst": "buy",
       "analyst_score": 1.85,
-      "vol_1d": 12382352,
-      "vol_1w": 96281852,
-      "vol_1m": 577835552,
+      "vol_1d": 12406100,
+      "vol_1w": 96305600,
+      "vol_1m": 577859300,
       "news": [
+        {
+          "title": "Cathie Wood Boosts Bets On 2 AI Firms Amid Nvidia\u2019s Huang Upheaval \u2014 Here\u2019s How Her Trading Week Unfolded",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/cathie-wood-bets-2-ai-firms-nvidia-huang-upheaval-how-trading-week-unfolded/cNbbpHTR9Ol",
+          "published": 1794544907,
+          "sentiment": 0.318
+        },
         {
           "title": "IPO Edge NYSE Firesides Scheduled for Monday, December 7",
           "publisher": "IPO-Edge.com",
@@ -2099,16 +2106,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/ai/articles/palantir-pltr-faces-european-rival-180906023.html",
           "published": 1794506946,
           "sentiment": 0.128
-        },
-        {
-          "title": "Palantir\u2019s Growth Story Could Be Just Getting Started",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/12/palantirs-growth-story-could-be-just-getting-started/",
-          "published": 1794501215,
-          "sentiment": 0.382
         }
       ],
-      "news_sentiment": 0.182
+      "news_sentiment": 0.169
     }
   ]
 };
