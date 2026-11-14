@@ -1,0 +1,27 @@
+name: Research fetch (branch only)
+
+# Research only, never on main: fetch 5 years of prices for the trader-rule backtest and
+# commit them to this research branch. No secrets used.
+on:
+  push:
+    branches: ['research/**']
+    paths: ['research/fetch_prices.py', '.github/workflows/research-fetch.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install yfinance pandas pyyaml
+      - run: python research/fetch_prices.py
+      - run: |
+          git config user.name "research-bot"
+          git config user.email "research-bot@users.noreply.github.com"
+          git add research/data
+          git commit -m "Research data: 5y daily prices (branch only)" && git push || echo "nothing to commit"
