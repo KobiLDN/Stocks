@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-13 08:04",
+  "updated": "2026-11-16 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Lockheed Martin has surged +14.13% in the past month, driven by a Q3 earnings beat ($7.97 EPS vs $7.52 consensus) and a record $292B backlog, with Guggenheim initiating at Buy with a $735 target [wallstreettoday.com](https://wallstreettoday.com/article-lmt-guggenheim-just-made-a-bold-bet-on-lockheed-martin.html). Its P/E of 21.17 is below the industry average, and free cash flow grew +28.8% YoY, making it a cash-rich prime contractor leading the defense rotation [chartmill.com](https://www.chartmill.com/news/LMT/Chartmill-58706-Defense-Stocks-Quiet-Rotation-Cash-Rich-Prime-Contractors-Lead-as-Defense-Tech-Lags).",
+      "drivers": [
+        "+14.13% 1M momentum",
+        "P/E 21.17 below industry avg",
+        "Record $292B backlog",
+        "Guggenheim Buy $735 target"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "NOC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Northrop Grumman has gained +11.04% in the past month with a low P/E of 17.37 and a positive news sentiment of 0.168, reflecting its role as a stable prime contractor with healthy ROE of 24.19% and modest valuation [chartmill.com](https://www.chartmill.com/news/LMT/Chartmill-58706-Defense-Stocks-Quiet-Rotation-Cash-Rich-Prime-Contractors-Lead-as-Defense-Tech-Lags).",
+      "drivers": [
+        "+11.04% 1M momentum",
+        "P/E 17.37 attractive",
+        "ROE 24.19%",
+        "Positive news sentiment 0.168"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Huntington Ingalls has rallied +15.77% in the past month, trading at a low P/E of 16.49 with a dividend yield of 1.84%, making it a value play among defense primes with strong recent momentum.",
+      "drivers": [
+        "+15.77% 1M momentum",
+        "P/E 16.49 low",
+        "Dividend yield 1.84%",
+        "Positive news sentiment 0.141"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "LHX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "L3Harris has gained +14.67% in the past month, with operating margins up +18.6% YoY and free cash flow growth of +89.1%, signaling a strong turnaround story within the defense rotation [chartmill.com](https://www.chartmill.com/news/LMT/Chartmill-58706-Defense-Stocks-Quiet-Rotation-Cash-Rich-Prime-Contractors-Lead-as-Defense-Tech-Lags).",
+      "drivers": [
+        "+14.67% 1M momentum",
+        "FCF growth +89.1% YoY",
+        "Operating margin +18.6%",
+        "Analyst consensus buy"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SAIC has delivered a stellar +50.42% YTD return and +14.19% in the past month, with a low P/E of 17.53 and positive news sentiment of 0.17, reflecting strong momentum and reasonable valuation.",
+      "drivers": [
+        "+50.42% YTD return",
+        "+14.19% 1M momentum",
+        "P/E 17.53 low",
+        "Positive news sentiment 0.17"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Textron has gained +13.35% in the past month, trading at a low P/E of 15.04 with positive news sentiment of 0.144, making it an attractive value play in the drones category with solid momentum.",
+      "drivers": [
+        "+13.35% 1M momentum",
+        "P/E 15.04 low",
+        "Positive news sentiment 0.144",
+        "Analyst consensus buy"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "HEICO has gained +13.93% in the past month with a positive news sentiment of 0.111, reflecting strong momentum in the weapons/systems category despite a higher P/E of 56.7.",
+      "drivers": [
+        "+13.93% 1M momentum",
+        "Positive news sentiment 0.111",
+        "Analyst consensus buy",
+        "Market cap $47.5B"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TransDigm has gained +9.69% in the past month with a positive news sentiment of 0.099, and its +1.19% one-day gain shows recent strength, though its P/E of 34.28 is elevated.",
+      "drivers": [
+        "+9.69% 1M momentum",
+        "+1.19% 1D gain",
+        "Positive news sentiment 0.099",
+        "Analyst consensus buy"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Booz Allen Hamilton has surged +20.79% in the past month, trading at a low P/E of 13.39 with a dividend yield of 2.74%, but its high short interest of 6.14% and hold analyst consensus temper conviction.",
+      "drivers": [
+        "+20.79% 1M momentum",
+        "P/E 13.39 low",
+        "Dividend yield 2.74%",
+        "Short interest 6.14%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "OLN",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Olin has gained +16.17% in the past month, but its negative news sentiment of -0.043, high short interest of 14.08%, and hold analyst consensus make it a speculative pick with momentum only.",
+      "drivers": [
+        "+16.17% 1M momentum",
+        "Short interest 14.08%",
+        "Negative news sentiment -0.043",
+        "Analyst consensus hold"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LMT",
@@ -132,139 +265,6 @@ window.SIGNALS_DATA = {
         "P/E 13.42",
         "div 2.73%",
         "hold consensus 2.60"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Up 18.80% in 1M and 24.56% YTD with P/E 21.6; recent $694M hypersonics contract and record $292B backlog reinforce momentum [simplywall.st](https://simplywall.st/stocks/us/capital-goods/nyse-lmt/lockheed-martin/news/lockheed-martin-lmt-is-back-in-the-spotlight-what-is-catchin).",
-      "drivers": [
-        "+18.80% 1M momentum",
-        "+24.56% YTD return",
-        "P/E 21.6",
-        "record backlog & hypersonics contract"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "NOC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+12.87% 1M, P/E 17.28, record $2.1B backlog; geopolitical tailwinds from Russia-Ukraine headlines [globaltradersacademy.com](https://globaltradersacademy.com/articles/russia-ukraine-headlines-put-defense-stocks-in-focus-ita-0-9-lmt-2-5).",
-      "drivers": [
-        "+12.87% 1M",
-        "P/E 17.28",
-        "record $2.1B backlog",
-        "geopolitical tailwinds"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CACI",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+20.78% YTD, strong_buy analyst consensus, news sentiment 0.186, P/E 26.65.",
-      "drivers": [
-        "+20.78% YTD",
-        "strong_buy consensus",
-        "news sentiment 0.186",
-        "P/E 26.65"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "DRS",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "strong_buy analyst, highest news sentiment 0.421, P/E 27.15, low beta 0.16.",
-      "drivers": [
-        "strong_buy consensus",
-        "news sentiment 0.421",
-        "P/E 27.15",
-        "low beta 0.16"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Exceptional +52.70% YTD and +69% 1Y return, P/E 17.8, strong 1M momentum +14.63%.",
-      "drivers": [
-        "+52.70% YTD",
-        "+69% 1Y return",
-        "P/E 17.8",
-        "+14.63% 1M"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "MRCY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong recent momentum with +22.17% 1W and +4.74% 1D, +15.31% YTD, analyst buy.",
-      "drivers": [
-        "+22.17% 1W",
-        "+15.31% YTD",
-        "analyst buy",
-        "+4.74% 1D"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+16.72% 1M, news sentiment 0.271, analyst buy, P/E 57.79.",
-      "drivers": [
-        "+16.72% 1M",
-        "news sentiment 0.271",
-        "analyst buy",
-        "P/E 57.79"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "HII",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+18.72% 1M, news sentiment 0.202, P/E 16.88, analyst buy.",
-      "drivers": [
-        "+18.72% 1M",
-        "news sentiment 0.202",
-        "P/E 16.88",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RKLB",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Explosive +28.30% 1W and +8.87% 1D, +25% 1Y return, analyst buy.",
-      "drivers": [
-        "+28.30% 1W",
-        "+8.87% 1D",
-        "+25% 1Y",
-        "analyst buy"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+13.78% 1M, P/E 15.51, analyst buy, reasonable valuation.",
-      "drivers": [
-        "+13.78% 1M",
-        "P/E 15.51",
-        "analyst buy",
-        "reasonable valuation"
       ]
     }
   ]

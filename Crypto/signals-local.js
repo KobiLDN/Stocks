@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-13 08:04",
+  "updated": "2026-11-16 08:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TRX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "TRX is the only asset with positive YTD (+6.50%) and 1-year (+6%) returns, showing relative strength amid a market-wide downturn with Fear & Greed at 10.",
+      "drivers": [
+        "+6.5% YTD",
+        "positive 1-year return",
+        "lowest drawdown in universe",
+        "stable payment chain use case"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "XLM has the best 1-week performance (-3.78%) among major caps, with a -31% 1-year return that is less severe than peers, and a $4.9B market cap offering relative value.",
+      "drivers": [
+        "best 1-week return in top 20",
+        "moderate 1-year drawdown",
+        "low market cap relative to XRP",
+        "payment/settlement narrative"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "BTC is the reference asset with $1.3T market cap; recent dip to $62k triggered whale accumulation (47k BTC added by large wallets) and short squeeze potential with $265M in short liquidations.",
+      "drivers": [
+        "largest market cap",
+        "whale accumulation at lows",
+        "short squeeze catalyst",
+        "mean-reversion potential to $70-72k"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "ICP shows strong 1-day momentum (+1.90%) and the best 1-week performance (-3.29%) among AI tokens, with a -21% 1-year return that is relatively resilient.",
+      "drivers": [
+        "+1.9% 1-day gain",
+        "best 1-week in AI category",
+        "resilient 1-year return",
+        "AI narrative catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "LINK has a -25% 1-year return, better than most altcoins, with a $6.8B market cap and neutral news sentiment (-0.065), positioning it as a relative safe haven in infrastructure.",
+      "drivers": [
+        "moderate 1-year drawdown",
+        "large market cap in infra",
+        "neutral news sentiment",
+        "oracle network utility"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "POL has the best 1-year return (-21%) among all infra assets, with a -15.09% 1-month decline that is less severe than peers, and zero news sentiment indicating no negative catalyst.",
+      "drivers": [
+        "best 1-year return in infra",
+        "moderate 1-month decline",
+        "neutral news sentiment",
+        "Polygon stablecoin expansion"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "TON",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "TON is the only asset with a positive 1-week return (+5.59%) in the entire universe, signaling strong relative momentum despite a -36% 1-year return.",
+      "drivers": [
+        "only positive 1-week return",
+        "emerging L1 narrative",
+        "Telegram ecosystem catalyst",
+        "low market cap $3B"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "ETH",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "ETH has the second-largest market cap ($222B) and saw whale buying (72k ETH at $1,936), with a +1.71% 1-day gain and potential mean-reversion to $2,050-2,100.",
+      "drivers": [
+        "whale accumulation at lows",
+        "large market cap",
+        "mean-reversion potential",
+        "ETF outflows may reverse"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "BNB has a $77.9B market cap and a -31% 1-year return that is better than most L1s, with a +0.49% 1-day gain and resilience despite negative news sentiment.",
+      "drivers": [
+        "large market cap",
+        "moderate 1-year drawdown",
+        "exchange token utility",
+        "Binance ecosystem"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.3,
+      "rationale": "PEPE has the best 1-year return (-7%) among memes and a relatively mild 1-month decline (-5.79%), with a $1.56B market cap offering high-beta upside if sentiment improves.",
+      "drivers": [
+        "best 1-year return in memes",
+        "mild 1-month decline",
+        "high-beta recovery play",
+        "low market cap"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "PEPE",
@@ -132,151 +265,6 @@ window.SIGNALS_DATA = {
         "mild -5.89% 1D",
         "moderate -14.52% 1M",
         "negative sentiment -0.153"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "NEAR",
-      "signal": "buy",
-      "confidence": 0.604,
-      "ytd": "+133.36%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +133.36% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +133.36% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TON",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "TON shows strong short-term momentum with +9.51% 1D and +3.06% 1W gains, bucking the broader market downtrend, and has a relatively modest -11.71% 1M decline compared to peers.",
-      "drivers": [
-        "+9.51% 1D gain",
-        "+3.06% 1W gain",
-        "resilient vs. market",
-        "no negative news sentiment"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AVAX",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "AVAX gained +5.72% 1D and only -1.70% 1W, with positive news sentiment of 0.147 and a mention in a Charles Schwab crypto expansion report, signaling institutional interest.",
-      "drivers": [
-        "+5.72% 1D gain",
-        "positive news sentiment 0.147",
-        "institutional interest (Schwab)",
-        "resilient 1W performance"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PEPE",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "PEPE has exceptional YTD return of +23.20% and 1M return of +21.75%, with only a minor -1.35% 1W dip, indicating strong momentum despite a -5.68% 1D pullback.",
-      "drivers": [
-        "+23.20% YTD",
-        "+21.75% 1M gain",
-        "strong momentum",
-        "low market cap $2.1B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Bitcoin gained +2.04% 1D and is testing its 200-day moving average near $73,200; ETF outflows slowed to $95M from $430M, and positive news sentiment of 0.032 supports a potential bounce.",
-      "drivers": [
-        "+2.04% 1D gain",
-        "ETF outflow slowing",
-        "near 200-day MA support",
-        "positive news sentiment 0.032"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BNB shows relative strength with -3.93% 1W and -7.44% 1M declines, outperforming most large-cap altcoins, and has a large market cap of $90.4B with positive news sentiment of 0.031.",
-      "drivers": [
-        "-3.93% 1W (resilient)",
-        "large market cap $90.4B",
-        "positive news sentiment 0.031",
-        "outperforming peers"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TRX is the only asset with positive YTD (+11.13%) and 1Y (+11%) returns, with a modest -1.27% 1W decline, though negative news sentiment of -0.542 tempers conviction.",
-      "drivers": [
-        "+11.13% YTD",
-        "+11% 1Y return",
-        "resilient 1W -1.27%",
-        "negative news sentiment -0.542"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "LINK gained +3.35% 1D and has positive news sentiment of 0.097, with a mention in a Charles Schwab crypto expansion report, though -8.63% 1W and -18.19% 1M show recent weakness.",
-      "drivers": [
-        "+3.35% 1D gain",
-        "positive news sentiment 0.097",
-        "institutional interest (Schwab)",
-        "moderate 1Y return -14%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Ether gained +3.40% 1D and has positive news sentiment of 0.099, but -13.83% 1W and -16.56% 1M reflect heavy selling; large market cap of $255.4B provides relative safety.",
-      "drivers": [
-        "+3.40% 1D gain",
-        "positive news sentiment 0.099",
-        "large market cap $255.4B",
-        "oversold 1M -16.56%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "POL gained +4.06% 1D and has a relatively mild -11.03% YTD and -11% 1Y return, with neutral news sentiment of 0.0 and a mention in Visa's stablecoin program.",
-      "drivers": [
-        "+4.06% 1D gain",
-        "mild YTD -11.03%",
-        "neutral news sentiment 0.0",
-        "Visa stablecoin mention"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "DOGE",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "DOGE gained +3.50% 1D and has positive news sentiment of 0.076, but -9.69% 1W and whale dumping of 750M tokens over the past week weigh on near-term outlook.",
-      "drivers": [
-        "+3.50% 1D gain",
-        "positive news sentiment 0.076",
-        "whale selling pressure",
-        "large market cap $10.8B"
       ]
     }
   ]
