@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-11-17 04:08",
-  "fx_gbp_usd": 1.3193,
+  "updated": "2026-11-17 07:32",
+  "fx_gbp_usd": 1.3196,
   "stocks": [
     {
       "ticker": "AAPL",
@@ -14,17 +14,17 @@ window.PRICES_DATA = {
       "change_1m": "+2.95%",
       "change_ytd": "+30.63%",
       "return_1yr": "+33%",
-      "low_gbp": "185",
+      "low_gbp": "184",
       "low_usd": 243.42,
       "high_gbp": "273",
       "high_usd": 360.83,
       "bar_pct": 93,
-      "market_cap_gbp_b": 3885.857,
-      "market_cap_usd_b": 5126.664,
+      "market_cap_gbp_b": 3884.934,
+      "market_cap_usd_b": 5126.663,
       "beta": 1.089,
-      "pe_ratio": 39.68,
+      "pe_ratio": 39.29,
       "avg_volume_m": 42.76,
-      "div_yield_pct": 0.3,
+      "div_yield_pct": 0.31,
       "short_pct": 1.0,
       "analyst": "buy",
       "analyst_score": 2.18,
@@ -47,6 +47,13 @@ window.PRICES_DATA = {
           "sentiment": -0.459
         },
         {
+          "title": "Gene Munster Says Nvidia Could Be the Next Apple if Investors \u2018Sleep Well at Night\u2019",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/gene-munster-says-nvidia-could-032355214.html",
+          "published": 1794885835,
+          "sentiment": 0.273
+        },
+        {
           "title": "David Tepper\u2019s Appaloosa Goes Big on SpaceX, While Slashing Alphabet Stake",
           "publisher": "Barrons.com",
           "url": "https://www.barrons.com/articles/david-tepper-appaloosa-spacex-alphabet-holdings-0d829940?siteid=yhoof2&yptr=yahoo",
@@ -59,16 +66,9 @@ window.PRICES_DATA = {
           "url": "https://stocktwits.com/news-articles/markets/equity/berkshire-boosts-lennar-starts-bending-spoons-trims-bank-of-america-in-q3/cNbJ2orR9g1",
           "published": 1794870167,
           "sentiment": 0.318
-        },
-        {
-          "title": "Huang\u2019s \u2018trillion-dollar dinners\u2019 with Taiwan chip bosses were Nvidia\u2019s secret weapon. Now he\u2019s out. Can he be replaced?",
-          "publisher": "Moneywise",
-          "url": "https://finance.yahoo.com/technology/articles/huang-trillion-dollar-dinners-taiwan-230000506.html",
-          "published": 1794870000,
-          "sentiment": -0.296
         }
       ],
-      "news_sentiment": -0.142
+      "news_sentiment": -0.028
     },
     {
       "ticker": "MSFT",
@@ -87,12 +87,12 @@ window.PRICES_DATA = {
       "high_gbp": "424",
       "high_usd": 559.15,
       "bar_pct": 80,
-      "market_cap_gbp_b": 2915.679,
+      "market_cap_gbp_b": 2914.987,
       "market_cap_usd_b": 3846.695,
       "beta": 1.045,
       "pe_ratio": 27.03,
       "avg_volume_m": 23.22,
-      "div_yield_pct": 0.75,
+      "div_yield_pct": 0.76,
       "short_pct": 0.82,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
@@ -100,6 +100,13 @@ window.PRICES_DATA = {
       "vol_1w": 131049700,
       "vol_1m": 554994500,
       "news": [
+        {
+          "title": "Elite Undervalued Stocks To Own In November 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/elite-undervalued-stocks-own-november-043945272.html",
+          "published": 1794890385,
+          "sentiment": 0.0
+        },
         {
           "title": "Bill Ackman Adds More To Netflix In Q3; Exits Hertz, Cuts Microsoft",
           "publisher": "Stocktwits",
@@ -127,13 +134,6 @@ window.PRICES_DATA = {
           "url": "https://www.barrons.com/articles/outages-jpmorgan-chase-bank-of-america-wells-fargo-stocks-0faf523e?siteid=yhoof2&yptr=yahoo",
           "published": 1794867480,
           "sentiment": -0.477
-        },
-        {
-          "title": "Nvidia is not considering rehiring Jensen Huang, and Amazon's data center gets bought",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/nvidia-is-not-considering-rehiring-jensen-huang-and-amazons-data-center-gets-bought-221405344.html",
-          "published": 1794867245,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.155
@@ -155,12 +155,12 @@ window.PRICES_DATA = {
       "high_gbp": "310",
       "high_usd": 408.61,
       "bar_pct": 9,
-      "market_cap_gbp_b": 2643.84,
-      "market_cap_usd_b": 3488.054,
+      "market_cap_gbp_b": 2643.212,
+      "market_cap_usd_b": 3488.053,
       "beta": 1.226,
-      "pe_ratio": 15.44,
+      "pe_ratio": 14.82,
       "avg_volume_m": 29.73,
-      "div_yield_pct": 0.3,
+      "div_yield_pct": 0.31,
       "short_pct": 1.49,
       "analyst": "strong_buy",
       "analyst_score": 1.34,
@@ -223,10 +223,10 @@ window.PRICES_DATA = {
       "high_gbp": "218",
       "high_usd": 287.2,
       "bar_pct": 68,
-      "market_cap_gbp_b": 2112.528,
-      "market_cap_usd_b": 2787.087,
+      "market_cap_gbp_b": 2112.026,
+      "market_cap_usd_b": 2787.086,
       "beta": 1.503,
-      "pe_ratio": 21.55,
+      "pe_ratio": 20.84,
       "avg_volume_m": 39.3,
       "div_yield_pct": null,
       "short_pct": 0.96,
@@ -244,6 +244,20 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
+          "title": "Amazon Sold $5 Billion of Data Centers at a \u201c7% Cap Rate.\u201d That\u2019s a Big Problem for Digital Realty and Equinix",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/amazon-sold-5-billion-of-data-centers-at-a-7-cap-rate-thats-a-big-problem-for-digital-realty-and-equinix?ref=yahoofinance&tlnk=yf-261117-4vwrqjqw",
+          "published": 1794897213,
+          "sentiment": -0.25
+        },
+        {
+          "title": "Elite Undervalued Stocks To Own In November 2026",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/elite-undervalued-stocks-own-november-043945272.html",
+          "published": 1794890385,
+          "sentiment": 0.0
+        },
+        {
           "title": "Delta CEO: Most airlines touting Starlink \u201chaven\u2019t even started yet\u201d",
           "publisher": "Fortune",
           "url": "https://finance.yahoo.com/video/delta-ceo-most-airlines-touting-030013371.html",
@@ -256,23 +270,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/boeing-ba-ula-rocket-failure-001959401.html",
           "published": 1794874799,
           "sentiment": -0.511
-        },
-        {
-          "title": "Your $300,000 in XLY Holds $125,585 in Amazon and Tesla Alone",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/etf/2026/11/16/your-300000-in-xly-holds-125585-in-amazon-and-tesla-alone/",
-          "published": 1794870199,
-          "sentiment": -0.077
-        },
-        {
-          "title": "Stock Market Today, Nov. 16: Amazon Falls on New AI Chip Export Rule and Leo Satellite Launch Failure",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/16/stock-market-today-nov-16-amazon-falls-on-new-ai-chip-export-rule-and-leo-satellite-launch-failure/",
-          "published": 1794867633,
-          "sentiment": -0.382
         }
       ],
-      "news_sentiment": -0.243
+      "news_sentiment": -0.201
     },
     {
       "ticker": "META",
@@ -291,12 +291,12 @@ window.PRICES_DATA = {
       "high_gbp": "591",
       "high_usd": 779.82,
       "bar_pct": 41,
-      "market_cap_gbp_b": 1213.703,
+      "market_cap_gbp_b": 1213.415,
       "market_cap_usd_b": 1601.255,
       "beta": 1.279,
-      "pe_ratio": 21.89,
+      "pe_ratio": 21.37,
       "avg_volume_m": 21.24,
-      "div_yield_pct": 0.33,
+      "div_yield_pct": 0.34,
       "short_pct": 3.41,
       "analyst": "strong_buy",
       "analyst_score": 1.42,
@@ -359,12 +359,12 @@ window.PRICES_DATA = {
       "high_gbp": "184",
       "high_usd": 243.37,
       "bar_pct": 8,
-      "market_cap_gbp_b": 2857.784,
-      "market_cap_usd_b": 3770.313,
+      "market_cap_gbp_b": 2857.105,
+      "market_cap_usd_b": 3770.312,
       "beta": 2.247,
-      "pe_ratio": 20.6,
+      "pe_ratio": 19.74,
       "avg_volume_m": 146.13,
-      "div_yield_pct": 0.61,
+      "div_yield_pct": 0.64,
       "short_pct": 1.21,
       "analyst": "buy",
       "analyst_score": 1.69,
@@ -401,10 +401,10 @@ window.PRICES_DATA = {
           "sentiment": -0.44
         },
         {
-          "title": "Should Nvidia bring Jensen Huang back, as Silicon Valley's elite are demanding?",
-          "publisher": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/technology/article/should-nvidia-bring-jensen-huang-back-as-silicon-valleys-elite-are-demanding-200000408.html",
-          "published": 1794859200,
+          "title": "Asian stocks sink as scandal-hit Nvidia's earnings loom",
+          "publisher": "AFP",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/asian-stocks-sink-scandal-hit-023848163.html",
+          "published": 1794899656,
           "sentiment": -0.226
         }
       ],
@@ -427,10 +427,10 @@ window.PRICES_DATA = {
       "high_gbp": "499",
       "high_usd": 658.52,
       "bar_pct": 67,
-      "market_cap_gbp_b": 626.889,
+      "market_cap_gbp_b": 626.74,
       "market_cap_usd_b": 827.063,
       "beta": 2.542,
-      "pe_ratio": 114.09,
+      "pe_ratio": 107.75,
       "avg_volume_m": 24.66,
       "div_yield_pct": null,
       "short_pct": 2.36,
@@ -455,28 +455,28 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "Dow Jones Futures: AMD, Nvidia, Micron Lead AI Trade Lower With Nvidia Earnings On Deck",
-          "publisher": "Investor's Business Daily",
-          "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-nvidia-stock-nvda-nvidia-earnings-next/?src=A00220&yptr=yahoo",
-          "published": 1794885617,
-          "sentiment": -0.296
+          "title": "3 Growth Stocks To Watch With Earnings Growth Over 18%",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-growth-stocks-watch-earnings-071146596.html",
+          "published": 1794899506,
+          "sentiment": 0.637
         },
         {
-          "title": "Is NVIDIA\u2019s Turmoil Advanced Micro Devices\u2019 (AMD) Biggest Opening Yet?",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-turmoil-advanced-micro-devices-031446562.html",
-          "published": 1794885286,
-          "sentiment": -0.128
+          "title": "AMD Stock Gets A New EPYC Launch And Quantum Computing Push",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/amd-stock-gets-epyc-launch-051204297.html",
+          "published": 1794892324,
+          "sentiment": 0.0
         },
         {
-          "title": "1 Number Reveals Which Is the Better Buy Between Nvidia and AMD",
-          "publisher": "Motley Fool",
-          "url": "https://www.fool.com/investing/2026/11/16/1-number-reveals-which-is-the-better-buy-between-nvidia-and-amd/",
-          "published": 1794882122,
-          "sentiment": 0.494
+          "title": "AMD, MU, SKHY, AVGO: Chip Stocks Ease Overnight After Selloff On New US Chip Restrictions Targeting China",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/amd-mu-skhy-avgo-chip-stocks-ease-overnight-after-selloff-on-new-us-chip-restrictions-targeting-china/cNba10cR9gA",
+          "published": 1794888260,
+          "sentiment": 0.361
         }
       ],
-      "news_sentiment": 0.019
+      "news_sentiment": 0.205
     },
     {
       "ticker": "INTC",
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "108",
       "high_usd": 142.35,
       "bar_pct": 21,
-      "market_cap_gbp_b": 223.467,
+      "market_cap_gbp_b": 223.414,
       "market_cap_usd_b": 294.823,
       "beta": 2.426,
       "pe_ratio": null,
@@ -530,21 +530,21 @@ window.PRICES_DATA = {
           "sentiment": -0.226
         },
         {
+          "title": "AMD, MU, SKHY, AVGO: Chip Stocks Ease Overnight After Selloff On New US Chip Restrictions Targeting China",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/amd-mu-skhy-avgo-chip-stocks-ease-overnight-after-selloff-on-new-us-chip-restrictions-targeting-china/cNba10cR9gA",
+          "published": 1794888260,
+          "sentiment": 0.361
+        },
+        {
           "title": "SPCX Stock Dethrones Intel As Nvidia\u2019s Biggest Holding \u2014 Druckenmiller Buys In And Tepper Ups His Stake Over 1,600%",
           "publisher": "Stocktwits",
           "url": "https://stocktwits.com/news-articles/markets/equity/spcx-stock-dethrones-intel-nvidia-biggest-holding-druckenmiller-buys-in-tepper-ups-stake/cNba0UWR9gq",
           "published": 1794887150,
           "sentiment": 0.0
-        },
-        {
-          "title": "Intel Sits 61% Below the Peak When Jim Cramer Called It His Favorite",
-          "publisher": "BeInCrypto",
-          "url": "https://beincrypto.com/intel-below-peak-jim-cramer-favorite/",
-          "published": 1794882669,
-          "sentiment": 0.459
         }
       ],
-      "news_sentiment": 0.047
+      "news_sentiment": 0.027
     },
     {
       "ticker": "TSM",
@@ -563,12 +563,12 @@ window.PRICES_DATA = {
       "high_gbp": "369",
       "high_usd": 487.47,
       "bar_pct": 48,
-      "market_cap_gbp_b": 1468.103,
-      "market_cap_usd_b": 1936.888,
+      "market_cap_gbp_b": 1467.755,
+      "market_cap_usd_b": 1936.889,
       "beta": 1.233,
-      "pe_ratio": 25.84,
+      "pe_ratio": 24.2,
       "avg_volume_m": 11.57,
-      "div_yield_pct": 0.95,
+      "div_yield_pct": 1.01,
       "short_pct": 0.66,
       "analyst": "strong_buy",
       "analyst_score": 1.38,
@@ -631,12 +631,12 @@ window.PRICES_DATA = {
       "high_gbp": "375",
       "high_usd": 495.0,
       "bar_pct": 21,
-      "market_cap_gbp_b": 1206.331,
-      "market_cap_usd_b": 1591.529,
+      "market_cap_gbp_b": 1206.044,
+      "market_cap_usd_b": 1591.528,
       "beta": 1.508,
       "pe_ratio": 42.58,
       "avg_volume_m": 25.28,
-      "div_yield_pct": 0.75,
+      "div_yield_pct": 0.78,
       "short_pct": 1.11,
       "analyst": "strong_buy",
       "analyst_score": 1.27,
@@ -652,6 +652,20 @@ window.PRICES_DATA = {
           "sentiment": 0.026
         },
         {
+          "title": "AMD, MU, SKHY, AVGO: Chip Stocks Ease Overnight After Selloff On New US Chip Restrictions Targeting China",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/amd-mu-skhy-avgo-chip-stocks-ease-overnight-after-selloff-on-new-us-chip-restrictions-targeting-china/cNba10cR9gA",
+          "published": 1794888260,
+          "sentiment": 0.361
+        },
+        {
+          "title": "Anthropic IPO Overvalued? Hardly. Valuation Is \u201cAbout Where Broadcom and AMD Trade,\u201d Says Scott Galloway",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/anthropic-ipo-overvalued-hardly-valuation-is-about-where-broadcom-and-amd-trade-says-scott-galloway?ref=yahoofinance&tlnk=yf-261117-hcmrcr5h",
+          "published": 1794879154,
+          "sentiment": 0.0
+        },
+        {
           "title": "Why Broadcom Stock Got Mashed on Monday",
           "publisher": "Motley Fool",
           "url": "https://www.fool.com/investing/2026/11/16/why-broadcom-stock-got-mashed-on-monday/",
@@ -664,23 +678,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/11/16/broadcom-vs-nvidia-which-semiconductor-stock-is-the-better-ai-buy-over-the-next-3-years/",
           "published": 1794874922,
           "sentiment": 0.44
-        },
-        {
-          "title": "Broadcom Is \u201cthe Best Play\u201d on Nvidia\u2019s CEO Exit, One Investor Argues. The Reason Is China",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/broadcom-is-the-best-play-on-nvidias-ceo-exit-one-investor-argues-the-reason-is-china?ref=yahoofinance&tlnk=yf-261116-w5j2pv86",
-          "published": 1794870779,
-          "sentiment": 0.382
-        },
-        {
-          "title": "David Tepper\u2019s Appaloosa Goes Big on SpaceX, While Slashing Alphabet Stake",
-          "publisher": "Barrons.com",
-          "url": "https://www.barrons.com/articles/david-tepper-appaloosa-spacex-alphabet-holdings-0d829940?siteid=yhoof2&yptr=yahoo",
-          "published": 1794870540,
-          "sentiment": -0.273
         }
       ],
-      "news_sentiment": 0.115
+      "news_sentiment": 0.165
     },
     {
       "ticker": "QCOM",
@@ -699,12 +699,12 @@ window.PRICES_DATA = {
       "high_gbp": "197",
       "high_usd": 259.92,
       "bar_pct": 34,
-      "market_cap_gbp_b": 136.674,
+      "market_cap_gbp_b": 136.642,
       "market_cap_usd_b": 180.316,
       "beta": 1.762,
-      "pe_ratio": 13.58,
+      "pe_ratio": 13.27,
       "avg_volume_m": 12.73,
-      "div_yield_pct": 2.13,
+      "div_yield_pct": 2.18,
       "short_pct": 3.03,
       "analyst": "hold",
       "analyst_score": 2.62,
@@ -767,10 +767,10 @@ window.PRICES_DATA = {
       "high_gbp": "343",
       "high_usd": 452.7,
       "bar_pct": 21,
-      "market_cap_gbp_b": 141.97,
-      "market_cap_usd_b": 187.303,
+      "market_cap_gbp_b": 141.937,
+      "market_cap_usd_b": 187.304,
       "beta": 3.939,
-      "pe_ratio": 218.81,
+      "pe_ratio": 201.21,
       "avg_volume_m": 5.24,
       "div_yield_pct": null,
       "short_pct": 10.71,
@@ -835,12 +835,12 @@ window.PRICES_DATA = {
       "high_gbp": "1516",
       "high_usd": 1999.96,
       "bar_pct": 44,
-      "market_cap_gbp_b": 410.973,
+      "market_cap_gbp_b": 410.875,
       "market_cap_usd_b": 542.202,
       "beta": 1.333,
-      "pe_ratio": 36.79,
+      "pe_ratio": 34.62,
       "avg_volume_m": 1.46,
-      "div_yield_pct": 0.62,
+      "div_yield_pct": 0.66,
       "short_pct": 0.3,
       "analyst": "strong_buy",
       "analyst_score": 1.37,
@@ -903,10 +903,10 @@ window.PRICES_DATA = {
       "high_gbp": "951",
       "high_usd": 1255.0,
       "bar_pct": 50,
-      "market_cap_gbp_b": 616.621,
+      "market_cap_gbp_b": 616.474,
       "market_cap_usd_b": 813.516,
       "beta": 2.398,
-      "pe_ratio": 10.47,
+      "pe_ratio": 9.67,
       "avg_volume_m": 27.69,
       "div_yield_pct": 0.08,
       "short_pct": 2.07,
@@ -916,6 +916,20 @@ window.PRICES_DATA = {
       "vol_1w": 147404500,
       "vol_1m": 639955600,
       "news": [
+        {
+          "title": "\u201cWhat Would It Take\u201d for Investors to Finally Admit that Micron Is Poised to Win for the Long Term?",
+          "publisher": "TIKR",
+          "url": "https://www.tikr.com/blog/what-would-it-take-for-investors-to-finally-admit-that-micron-is-poised-to-win-for-the-long-term?ref=yahoofinance&tlnk=yf-261117-rprf3fh3",
+          "published": 1794898178,
+          "sentiment": 0.765
+        },
+        {
+          "title": "AMD, MU, SKHY, AVGO: Chip Stocks Ease Overnight After Selloff On New US Chip Restrictions Targeting China",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/amd-mu-skhy-avgo-chip-stocks-ease-overnight-after-selloff-on-new-us-chip-restrictions-targeting-china/cNba10cR9gA",
+          "published": 1794888260,
+          "sentiment": 0.361
+        },
         {
           "title": "Dow Jones Futures: AMD, Nvidia, Micron Lead AI Trade Lower With Nvidia Earnings On Deck",
           "publisher": "Investor's Business Daily",
@@ -936,23 +950,9 @@ window.PRICES_DATA = {
           "url": "https://www.fool.com/investing/2026/11/16/4-chip-stocks-down-as-much-as-36-from-their-highs-to-buy-and-hold-for-the-next-decade/",
           "published": 1794870062,
           "sentiment": 0.0
-        },
-        {
-          "title": "Stocks to Watch Recap: Robinhood, Nvidia, SpaceX, L3Harris",
-          "publisher": "The Wall Street Journal",
-          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-16-2026/card/stocks-to-watch-nvidia-intel-spacex-QOpa7fFDgsDwemeMk9Sf?siteid=yhoof2&yptr=yahoo",
-          "published": 1794869384,
-          "sentiment": 0.0
-        },
-        {
-          "title": "5 Unstoppable Stocks to Buy According to Analysts",
-          "publisher": "Insider Monkey",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/5-unstoppable-stocks-buy-according-220213130.html",
-          "published": 1794866533,
-          "sentiment": -0.202
         }
       ],
-      "news_sentiment": -0.159
+      "news_sentiment": 0.107
     },
     {
       "ticker": "AMAT",
@@ -971,12 +971,12 @@ window.PRICES_DATA = {
       "high_gbp": "561",
       "high_usd": 739.67,
       "bar_pct": 26,
-      "market_cap_gbp_b": 210.683,
+      "market_cap_gbp_b": 210.633,
       "market_cap_usd_b": 277.957,
       "beta": 1.673,
-      "pe_ratio": 29.36,
+      "pe_ratio": 27.75,
       "avg_volume_m": 7.19,
-      "div_yield_pct": 0.57,
+      "div_yield_pct": 0.61,
       "short_pct": 1.83,
       "analyst": "strong_buy",
       "analyst_score": 1.48,
@@ -1039,12 +1039,12 @@ window.PRICES_DATA = {
       "high_gbp": "190",
       "high_usd": 250.25,
       "bar_pct": 7,
-      "market_cap_gbp_b": 281.425,
+      "market_cap_gbp_b": 281.358,
       "market_cap_usd_b": 371.288,
       "beta": 1.778,
-      "pe_ratio": 19.65,
+      "pe_ratio": 18.67,
       "avg_volume_m": 33.4,
-      "div_yield_pct": 1.6,
+      "div_yield_pct": 1.68,
       "short_pct": 2.48,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
@@ -1107,12 +1107,12 @@ window.PRICES_DATA = {
       "high_gbp": "204",
       "high_usd": 269.11,
       "bar_pct": 56,
-      "market_cap_gbp_b": 134.013,
+      "market_cap_gbp_b": 133.981,
       "market_cap_usd_b": 176.805,
       "beta": 1.233,
       "pe_ratio": 19.66,
       "avg_volume_m": 11.08,
-      "div_yield_pct": 0.81,
+      "div_yield_pct": 0.82,
       "short_pct": 3.68,
       "analyst": "buy",
       "analyst_score": 1.68,
@@ -1175,10 +1175,10 @@ window.PRICES_DATA = {
       "high_gbp": "275",
       "high_usd": 362.71,
       "bar_pct": 32,
-      "market_cap_gbp_b": 72.57,
+      "market_cap_gbp_b": 72.553,
       "market_cap_usd_b": 95.743,
       "beta": 1.383,
-      "pe_ratio": 13.57,
+      "pe_ratio": 13.74,
       "avg_volume_m": 4.6,
       "div_yield_pct": null,
       "short_pct": 4.83,
@@ -1243,8 +1243,8 @@ window.PRICES_DATA = {
       "high_gbp": "133",
       "high_usd": 175.0,
       "bar_pct": 19,
-      "market_cap_gbp_b": 78.175,
-      "market_cap_usd_b": 103.137,
+      "market_cap_gbp_b": 78.157,
+      "market_cap_usd_b": 103.138,
       "beta": 0.984,
       "pe_ratio": 71.49,
       "avg_volume_m": 15.66,
@@ -1301,7 +1301,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "213",
       "price_usd": 280.54,
-      "change_1d": "-2.65%",
+      "change_1d": "-2.74%",
       "change_1w": "-3.64%",
       "change_1m": "-11.04%",
       "change_ytd": "+29.45%",
@@ -1311,7 +1311,7 @@ window.PRICES_DATA = {
       "high_gbp": "291",
       "high_usd": 384.56,
       "bar_pct": 61,
-      "market_cap_gbp_b": 75.02,
+      "market_cap_gbp_b": 75.002,
       "market_cap_usd_b": 98.975,
       "beta": 1.322,
       "pe_ratio": null,
@@ -1369,7 +1369,7 @@ window.PRICES_DATA = {
       "exchange": "NASDAQ",
       "price_gbp": "262",
       "price_usd": 345.56,
-      "change_1d": "+1.56%",
+      "change_1d": "+1.50%",
       "change_1w": "+2.17%",
       "change_1m": "+6.12%",
       "change_ytd": "-44.33%",
@@ -1379,12 +1379,12 @@ window.PRICES_DATA = {
       "high_gbp": "517",
       "high_usd": 682.27,
       "bar_pct": 22,
-      "market_cap_gbp_b": 69.996,
-      "market_cap_usd_b": 92.347,
+      "market_cap_gbp_b": 69.979,
+      "market_cap_usd_b": 92.346,
       "beta": 0.921,
       "pe_ratio": 20.99,
       "avg_volume_m": 3.56,
-      "div_yield_pct": 1.62,
+      "div_yield_pct": 1.6,
       "short_pct": 3.82,
       "analyst": "buy",
       "analyst_score": 2.06,
@@ -1444,10 +1444,10 @@ window.PRICES_DATA = {
       "return_1yr": "+71%",
       "low_gbp": "65",
       "low_usd": 85.68,
-      "high_gbp": "218",
+      "high_gbp": "217",
       "high_usd": 286.99,
       "bar_pct": 68,
-      "market_cap_gbp_b": 173.236,
+      "market_cap_gbp_b": 173.195,
       "market_cap_usd_b": 228.553,
       "beta": 1.15,
       "pe_ratio": 4464.2,
@@ -1515,10 +1515,10 @@ window.PRICES_DATA = {
       "high_gbp": "328",
       "high_usd": 432.33,
       "bar_pct": 60,
-      "market_cap_gbp_b": 196.167,
-      "market_cap_usd_b": 258.806,
+      "market_cap_gbp_b": 196.12,
+      "market_cap_usd_b": 258.805,
       "beta": 0.97,
-      "pe_ratio": 810.49,
+      "pe_ratio": 790.23,
       "avg_volume_m": 6.1,
       "div_yield_pct": null,
       "short_pct": 2.54,
@@ -1571,7 +1571,7 @@ window.PRICES_DATA = {
       "company_name": "Cloudflare",
       "category": "cybersecurity",
       "exchange": "NYSE",
-      "price_gbp": "223",
+      "price_gbp": "222",
       "price_usd": 293.59,
       "change_1d": "-3.24%",
       "change_1w": "-0.05%",
@@ -1583,8 +1583,8 @@ window.PRICES_DATA = {
       "high_gbp": "281",
       "high_usd": 370.35,
       "bar_pct": 64,
-      "market_cap_gbp_b": 79.754,
-      "market_cap_usd_b": 105.221,
+      "market_cap_gbp_b": 79.735,
+      "market_cap_usd_b": 105.22,
       "beta": 1.367,
       "pe_ratio": null,
       "avg_volume_m": 3.42,
@@ -1651,8 +1651,8 @@ window.PRICES_DATA = {
       "high_gbp": "149",
       "high_usd": 197.13,
       "bar_pct": 40,
-      "market_cap_gbp_b": 68.648,
-      "market_cap_usd_b": 90.568,
+      "market_cap_gbp_b": 68.631,
+      "market_cap_usd_b": 90.567,
       "beta": 1.04,
       "pe_ratio": 40.28,
       "avg_volume_m": 4.76,
@@ -1714,15 +1714,15 @@ window.PRICES_DATA = {
       "change_1m": "-13.03%",
       "change_ytd": "-33.23%",
       "return_1yr": "-44%",
-      "low_gbp": "47",
-      "low_usd": 61.39,
+      "low_gbp": "46",
+      "low_usd": 60.48,
       "high_gbp": "87",
       "high_usd": 115.25,
       "bar_pct": 1,
-      "market_cap_gbp_b": 189.083,
+      "market_cap_gbp_b": 189.038,
       "market_cap_usd_b": 249.46,
       "beta": 1.606,
-      "pe_ratio": 17.97,
+      "pe_ratio": 17.56,
       "avg_volume_m": 36.92,
       "div_yield_pct": null,
       "short_pct": 2.25,
@@ -1732,6 +1732,13 @@ window.PRICES_DATA = {
       "vol_1w": 160958300,
       "vol_1m": 951322000,
       "news": [
+        {
+          "title": "NFLX Stock Edges Higher Overnight: Evercore Swaps Netflix For Spotify On Top Picks List",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/nflx-stock-edges-higher-overnight-evercore-swaps-netflix-for-spotify-on-top-picks-list/cNbaShNR9gu",
+          "published": 1794890471,
+          "sentiment": 0.202
+        },
         {
           "title": "Netflix Stock Now Trades at a 70% Discount to Its Peak Valuation, and One Number Is to Blame",
           "publisher": "Motley Fool",
@@ -1759,16 +1766,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/etfs-buying-netflix-nflx-nov-110111950.html",
           "published": 1794826871,
           "sentiment": 0.0
-        },
-        {
-          "title": "Trump Backs a Hollywood Tax Break So Movies \u201cMust Stay in America.\u201d Netflix and Disney Could Gain",
-          "publisher": "TIKR",
-          "url": "https://www.tikr.com/blog/trump-backs-a-hollywood-tax-break-so-movies-must-stay-in-america-netflix-and-disney-could-gain?ref=yahoofinance&tlnk=yf-261116-9x4j4cjp",
-          "published": 1794822801,
-          "sentiment": 0.494
         }
       ],
-      "news_sentiment": 0.073
+      "news_sentiment": 0.015
     },
     {
       "ticker": "SHOP",
@@ -1787,10 +1787,10 @@ window.PRICES_DATA = {
       "high_gbp": "137",
       "high_usd": 180.88,
       "bar_pct": 62,
-      "market_cap_gbp_b": 144.136,
+      "market_cap_gbp_b": 144.102,
       "market_cap_usd_b": 190.161,
       "beta": 2.664,
-      "pe_ratio": 90.13,
+      "pe_ratio": 90.68,
       "avg_volume_m": 8.7,
       "div_yield_pct": null,
       "short_pct": 1.57,
@@ -1852,13 +1852,13 @@ window.PRICES_DATA = {
       "return_1yr": "-4%",
       "low_gbp": "307",
       "low_usd": 405.0,
-      "high_gbp": "489",
-      "high_usd": 644.57,
-      "bar_pct": 86,
-      "market_cap_gbp_b": 95.297,
-      "market_cap_usd_b": 125.727,
+      "high_gbp": "486",
+      "high_usd": 641.66,
+      "bar_pct": 87,
+      "market_cap_gbp_b": 95.274,
+      "market_cap_usd_b": 125.726,
       "beta": 1.464,
-      "pe_ratio": 37.35,
+      "pe_ratio": 37.28,
       "avg_volume_m": 1.64,
       "div_yield_pct": null,
       "short_pct": 1.94,
@@ -1913,7 +1913,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "53",
       "price_usd": 69.99,
-      "change_1d": "+1.41%",
+      "change_1d": "+1.38%",
       "change_1w": "-1.66%",
       "change_1m": "+0.04%",
       "change_ytd": "-15.53%",
@@ -1923,10 +1923,10 @@ window.PRICES_DATA = {
       "high_gbp": "70",
       "high_usd": 92.92,
       "bar_pct": 21,
-      "market_cap_gbp_b": 108.323,
-      "market_cap_usd_b": 142.912,
+      "market_cap_gbp_b": 108.298,
+      "market_cap_usd_b": 142.913,
       "beta": 1.308,
-      "pe_ratio": 40.93,
+      "pe_ratio": 41.17,
       "avg_volume_m": 17.36,
       "div_yield_pct": null,
       "short_pct": 2.3,
@@ -1991,12 +1991,12 @@ window.PRICES_DATA = {
       "high_gbp": "99",
       "high_usd": 130.37,
       "bar_pct": 38,
-      "market_cap_gbp_b": 282.058,
+      "market_cap_gbp_b": 281.991,
       "market_cap_usd_b": 372.123,
       "beta": 1.002,
-      "pe_ratio": 25.41,
+      "pe_ratio": 25.14,
       "avg_volume_m": 17.89,
-      "div_yield_pct": 1.76,
+      "div_yield_pct": 1.78,
       "short_pct": 1.55,
       "analyst": "buy",
       "analyst_score": 1.86,
@@ -2019,13 +2019,6 @@ window.PRICES_DATA = {
           "sentiment": 0.0
         },
         {
-          "title": "A high-stakes week for tech: Anthropic IPO and Nvidia earnings",
-          "publisher": "Yahoo Finance Video",
-          "url": "https://finance.yahoo.com/video/a-high-stakes-week-for-tech-anthropic-ipo-and-nvidia-earnings-151159744.html",
-          "published": 1794841919,
-          "sentiment": 0.0
-        },
-        {
           "title": "NVIDIA: The Most Important Earnings Chart This Week",
           "publisher": "Zacks",
           "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-most-important-earnings-chart-220100357.html",
@@ -2038,6 +2031,13 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/technology/articles/cisco-systems-csco-tied-faa-211414950.html",
           "published": 1794863654,
           "sentiment": -0.637
+        },
+        {
+          "title": "A high-stakes week for tech: Anthropic IPO and Nvidia earnings",
+          "publisher": "Yahoo Finance Video",
+          "url": "https://finance.yahoo.com/video/a-high-stakes-week-for-tech-anthropic-ipo-and-nvidia-earnings-151159744.html",
+          "published": 1794841919,
+          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.029
@@ -2059,10 +2059,10 @@ window.PRICES_DATA = {
       "high_gbp": "161",
       "high_usd": 212.94,
       "bar_pct": 51,
-      "market_cap_gbp_b": 292.925,
-      "market_cap_usd_b": 386.46,
+      "market_cap_gbp_b": 292.855,
+      "market_cap_usd_b": 386.459,
       "beta": 1.61,
-      "pe_ratio": 112.95,
+      "pe_ratio": 117.93,
       "avg_volume_m": 25.74,
       "div_yield_pct": null,
       "short_pct": 2.6,
