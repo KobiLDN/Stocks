@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-16 08:02",
+  "updated": "2026-11-18 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Strong 1-month momentum of +16.05%, YTD +4.70%, P/E 36.69, analyst buy with score 1.71, and positive news sentiment 0.284.",
+      "drivers": [
+        "+16.05% 1M momentum",
+        "YTD +4.70%",
+        "analyst buy 1.71",
+        "news sentiment 0.284"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.88,
+      "rationale": "Positive 1W (+2.90%) and 1D (+2.43%) momentum, strong_buy analyst consensus (1.27), news sentiment 0.221, and catalyst from Nvidia earnings beat lifting semiconductor peers.",
+      "drivers": [
+        "+2.90% 1W momentum",
+        "strong_buy 1.27",
+        "news sentiment 0.221",
+        "Nvidia earnings beat catalyst"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.87,
+      "rationale": "Strong_buy analyst consensus (1.32), YTD +13.86%, P/E 20.85, positive news sentiment 0.137, and bullish commentary comparing Anthropic IPO to Amazon's IPO.",
+      "drivers": [
+        "strong_buy 1.32",
+        "YTD +13.86%",
+        "P/E 20.85",
+        "positive news sentiment 0.137"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MU",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Exceptional YTD return of +126.03%, low P/E of 9.58, strong_buy consensus (1.35), and positive news sentiment 0.117 despite recent pullback.",
+      "drivers": [
+        "YTD +126.03%",
+        "P/E 9.58",
+        "strong_buy 1.35",
+        "news sentiment 0.117"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +93.64%, analyst buy (1.66), news sentiment 0.144, and recent Frost Radar honor highlighting AI agent risk mitigation.",
+      "drivers": [
+        "YTD +93.64%",
+        "analyst buy 1.66",
+        "news sentiment 0.144",
+        "Frost Radar honor"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +45.29%, analyst buy (1.89), news sentiment 0.153, and significant fund buying despite a recent outage.",
+      "drivers": [
+        "YTD +45.29%",
+        "analyst buy 1.89",
+        "news sentiment 0.153",
+        "fund buying interest"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +30.30%, P/E 39.19, analyst buy (2.18), news sentiment 0.074, and recent all-time high despite two service outages in a week.",
+      "drivers": [
+        "YTD +30.30%",
+        "P/E 39.19",
+        "analyst buy 2.18",
+        "all-time high"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "CSCO",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +26.72%, P/E 25.3, analyst buy (1.86), news sentiment 0.192, and CEO commentary on AI industry being 'bigger than one person'.",
+      "drivers": [
+        "YTD +26.72%",
+        "P/E 25.3",
+        "analyst buy 1.86",
+        "news sentiment 0.192"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "SNOW",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +25.95%, strong_buy consensus (1.39), news sentiment 0.162, and strong guidance despite profitability concerns.",
+      "drivers": [
+        "YTD +25.95%",
+        "strong_buy 1.39",
+        "news sentiment 0.162",
+        "strong guidance"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "Low P/E of 14.63, strong_buy consensus (1.34), high news sentiment 0.405, and undervalued status despite YTD decline of -10.92%.",
+      "drivers": [
+        "P/E 14.63",
+        "strong_buy 1.34",
+        "news sentiment 0.405",
+        "undervalued"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.567,
+      "ytd": "+125.27%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +125.27% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +125.27% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AAPL",
@@ -132,162 +277,6 @@
         "P/E 27.34",
         "YTD +11.47%",
         "Microsoft Ignite catalyst"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 0.665,
-      "ytd": "+146.93%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +146.93% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +146.93% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.629,
-      "ytd": "+138.99%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +138.99% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +138.99% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMD",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "AMD surged +44.73% in the past week and +161.91% YTD, with analyst upgrades citing potential gains from Nvidia's leadership turmoil; William Blair upgraded to outperform, noting AMD can benefit from custom programs and CPU attach [cnbc.com](https://www.cnbc.com/2026/11/12/big-wall-street-analyst-calls-thursday-like-nvidia.html).",
-      "drivers": [
-        "+44.73% 1W momentum",
-        "+161.91% YTD",
-        "analyst upgrade to outperform",
-        "Nvidia turmoil beneficiary"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Broadcom jumped +24.98% in the past week amid Nvidia's fallout, with a strong_buy consensus (an_score 1.24) and a reasonable P/E of 46.53 for a semiconductor leader; news highlights Broadcom as a key beneficiary of AI infrastructure demand.",
-      "drivers": [
-        "+24.98% 1W momentum",
-        "strong_buy consensus (1.24)",
-        "AI infrastructure beneficiary",
-        "P/E 46.53"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Amazon gained +10.74% since Nov 1, trading at 21.4x trailing earnings (cheaper than Walmart), with AWS revenue accelerating 39.3% YoY to $46B and a $578B backlog; analysts maintain strong_buy with median PT $326.99 [investing.com](https://www.investing.com/news/stock-market-news/at-21x-earnings-amazon-is-cheaper-than-walmart-and-surging-5021515).",
-      "drivers": [
-        "+3.43% 1M momentum",
-        "P/E 21.62 (attractive)",
-        "AWS revenue +39.3% YoY",
-        "strong_buy consensus (1.32)"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AAPL",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Apple hit a record high near $355, called a 'safe haven' by Bernstein with a $380 PT; YTD +31.40%, 1M +4.07%, with strong pricing power and AI expansion under CEO Ternus [investors.com](https://www.investors.com/news/technology/apple-stock-called-safe-haven-hits-record-high/).",
-      "drivers": [
-        "+31.40% YTD",
-        "record high",
-        "Bernstein outperform rating",
-        "AI strategy expansion"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "Microsoft has a strong_buy consensus (an_score 1.38), P/E 27.3, and positive news sentiment 0.187 despite a recent outage; its AI leadership via Copilot and Azure positions it for long-term growth.",
-      "drivers": [
-        "strong_buy consensus (1.38)",
-        "P/E 27.3 (reasonable)",
-        "positive news sentiment 0.187",
-        "AI/cloud leadership"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Qualcomm rallied +13.01% in the past week, with a low P/E of 13.95 and a 2.08% dividend yield; it offers value in the semiconductor space with potential upside from diversification beyond mobile.",
-      "drivers": [
-        "+13.01% 1W momentum",
-        "P/E 13.95 (low)",
-        "dividend yield 2.08%",
-        "value play in semis"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Spotify gained +13.47% in the past month with positive news sentiment 0.351; its strong user growth and podcast/AI investments support a buy rating despite a slight 1W dip.",
-      "drivers": [
-        "+13.47% 1M momentum",
-        "news sentiment 0.351",
-        "strong user growth",
-        "AI/podcast expansion"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Intuit surged +12.84% in the past month despite a -45.20% YTD decline, offering a contrarian opportunity with a P/E of 20.67 and a 1.62% dividend yield; potential turnaround play.",
-      "drivers": [
-        "+12.84% 1M momentum",
-        "P/E 20.67 (value)",
-        "dividend yield 1.62%",
-        "contrarian turnaround"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Adobe trades at a low P/E of 13.32 with a -28.43% YTD decline, making it an undervalued pick; recent stability (+0.96% 1M) and AI integration in creative tools could drive recovery.",
-      "drivers": [
-        "P/E 13.32 (deep value)",
-        "AI integration in products",
-        "potential recovery play",
-        "low valuation"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "UBER",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Uber shows slight 1W positive momentum (+0.49%) with a buy consensus (an_score 1.58) and P/E 40.66; its platform strength and autonomous vehicle partnerships offer long-term upside.",
-      "drivers": [
-        "buy consensus (1.58)",
-        "platform strength",
-        "autonomous vehicle exposure",
-        "moderate valuation"
       ]
     }
   ]

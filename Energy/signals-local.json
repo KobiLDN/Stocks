@@ -1,9 +1,165 @@
 {
-  "updated": "2026-11-16 08:03",
+  "updated": "2026-11-18 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Record Q3 production and free cash flow of $2.2B, raised dividend 8% to $4.40 annual rate, and P/E of 10.0 with 2.84% yield offer compelling value; new JKM-linked LNG contract expands premium market exposure.",
+      "drivers": [
+        "+49% YTD",
+        "P/E 10.0",
+        "dividend yield 2.84%",
+        "record Q3 results"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "TTE",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "YTD +39%, P/E 9.02, dividend yield 4.41%, and low short interest of 0.19% reflect strong fundamentals; positive 1W momentum of +2.87% and 1M of +0.50% show resilience.",
+      "drivers": [
+        "+39% YTD",
+        "P/E 9.02",
+        "dividend yield 4.41%",
+        "low short interest 0.19%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +48.39%, P/E 14.7, and 1W momentum of +3.55% signal strength; analyst consensus is buy with score 2.07 and news sentiment positive at 0.108.",
+      "drivers": [
+        "+48% YTD",
+        "P/E 14.7",
+        "1W momentum +3.55%",
+        "buy consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Beat Q3 profit estimates on strong North America demand, Middle East activity recovering, and analyst score of 1.53 (strong buy); P/E 23.76 reflects premium but 1Y return +39% justifies it.",
+      "drivers": [
+        "analyst score 1.53",
+        "1Y return +39%",
+        "Q3 earnings beat",
+        "Middle East recovery"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +42.51%, P/E 15.87, dividend yield 3.28%, and analyst score 1.62 (buy); 1W momentum of +2.32% and low short interest of 1.35% support stability.",
+      "drivers": [
+        "+42.5% YTD",
+        "P/E 15.87",
+        "dividend yield 3.28%",
+        "analyst score 1.62"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Record \u00a32.6B H1 investment (+63% YoY) and \u00a333B infrastructure plan accelerating; YTD +18.53%, analyst score 1.88 (buy), and news sentiment 0.284 reflect strong utility growth.",
+      "drivers": [
+        "record \u00a32.6B investment",
+        "YTD +18.53%",
+        "analyst score 1.88",
+        "news sentiment 0.284"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +6.59%, 1M momentum +8.00%, P/E 15.21, and dividend yield 2.92% offer attractive entry; analyst score 1.91 (buy) and utility sector tailwinds from grid investment.",
+      "drivers": [
+        "1M momentum +8.00%",
+        "P/E 15.21",
+        "dividend yield 2.92%",
+        "analyst score 1.91"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Q3 adjusted EPS $4.23, free cash flow $19.1B, and $20B buyback plan for 2027; YTD +39.94%, P/E 17.2, and dividend yield 2.56% with 44-year dividend growth streak.",
+      "drivers": [
+        "Q3 adj EPS $4.23",
+        "YTD +39.94%",
+        "P/E 17.2",
+        "$20B buyback plan"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Analyst score 1.68 (buy), P/E 13.43, and news sentiment 0.123 positive; mid-single-digit revenue growth forecast for 2027 on Middle East recovery and inventory rebuilding.",
+      "drivers": [
+        "analyst score 1.68",
+        "P/E 13.43",
+        "news sentiment 0.123",
+        "2027 growth outlook"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "DNNGY",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Analyst score 1.0 (strong_buy), news sentiment 0.339, and 1M momentum +11.85% despite YTD +3.38%; Revolution Wind reaching full operations reduces financial risk.",
+      "drivers": [
+        "analyst score 1.0",
+        "news sentiment 0.339",
+        "1M momentum +11.85%",
+        "Revolution Wind operational"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.644,
+      "ytd": "+142.34%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +142.34% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +142.34% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "VLO",
+      "signal": "buy",
+      "confidence": 0.558,
+      "ytd": "+123.31%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +123.31% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +123.31% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "EOG",
@@ -132,162 +288,6 @@
         "Positive news sentiment",
         "Record FFO growth",
         "Q3 earnings beat"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.697,
-      "ytd": "+154.01%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +154.01% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +154.01% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.603,
-      "ytd": "+133.17%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +133.17% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +133.17% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +37.69%, P/E 8.94, dividend yield 4.46% \u2014 strong earnings with refining margins quadrupled to $33.2/bbl, and low valuation supports upside.",
-      "drivers": [
-        "Low P/E 8.94",
-        "High dividend 4.46%",
-        "Strong earnings beat",
-        "Positive 1m momentum +0.67%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +49.69%, 1w +7.41%, P/E 10.05, dividend 2.83% \u2014 strong momentum and low P/E, with Bernstein favoring gassy E&P stocks.",
-      "drivers": [
-        "Strong YTD +49.69%",
-        "Low P/E 10.05",
-        "1w momentum +7.41%",
-        "Dividend 2.83%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +28.72%, 1m +4.39%, analyst score 1.53 (strong buy) \u2014 won Aker BP subsea contract and data center growth suggests 18% undervaluation per Simply Wall St.",
-      "drivers": [
-        "Analyst score 1.53",
-        "1m momentum +4.39%",
-        "Aker BP contract win",
-        "Data center revenue growth"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +20.55%, 1m +8.56%, news sentiment 0.378 \u2014 strong momentum and positive sentiment as a British utility with growth prospects.",
-      "drivers": [
-        "1m momentum +8.56%",
-        "News sentiment 0.378",
-        "YTD +20.55%",
-        "Analyst buy"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +7.69%, 1m +9.04%, P/E 15.37, dividend 2.92% \u2014 strong recent momentum and attractive yield in a rate-sensitive utility.",
-      "drivers": [
-        "1m momentum +9.04%",
-        "Dividend 2.92%",
-        "P/E 15.37",
-        "Positive news sentiment 0.283"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "DNNGY",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +5.03%, 1m +7.36%, analyst strong_buy with score 1.0 and news sentiment 0.339 \u2014 Revolution Wind reaching full operations is a catalyst.",
-      "drivers": [
-        "Strong_buy analyst consensus",
-        "1m momentum +7.36%",
-        "News sentiment 0.339",
-        "Revolution Wind catalyst"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "YTD +42.65%, P/E 15.88, dividend 3.29%, analyst score 1.62 \u2014 strong fundamentals but Bernstein cut target to $233; still attractive yield.",
-      "drivers": [
-        "YTD +42.65%",
-        "Dividend 3.29%",
-        "Low beta 0.453",
-        "Analyst buy rating"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SHEL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +35.30%, P/E 8.56, dividend 3.17% \u2014 record refining margins of $42/bbl drove earnings beat, but 1m momentum negative -3.54%.",
-      "drivers": [
-        "Low P/E 8.56",
-        "Dividend 3.17%",
-        "Record refining margins",
-        "Earnings beat"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.692,
-      "rationale": "YTD +152.90%, P/E 8.18, 1w +9.42% \u2014 massive YTD gain but 1m -13.45% pullback; low P/E and high beta offer rebound potential.",
-      "drivers": [
-        "YTD +152.90%",
-        "P/E 8.18",
-        "1w bounce +9.42%",
-        "High beta 0.509"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.589,
-      "rationale": "YTD +130.17%, P/E 8.53, 1w +6.75% \u2014 similar to MPC with deep 1m pullback -17.86%; news sentiment 0.314 supports recovery.",
-      "drivers": [
-        "YTD +130.17%",
-        "P/E 8.53",
-        "1w momentum +6.75%",
-        "News sentiment 0.314"
       ]
     }
   ]
