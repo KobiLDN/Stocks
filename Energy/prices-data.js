@@ -1,6 +1,6 @@
 window.PRICES_DATA = {
-  "updated": "2026-11-18 03:10",
-  "fx_gbp_usd": 1.3198,
+  "updated": "2026-11-18 07:37",
+  "fx_gbp_usd": 1.3173,
   "stocks": [
     {
       "ticker": "XOM",
@@ -19,7 +19,7 @@ window.PRICES_DATA = {
       "high_gbp": "143",
       "high_usd": 188.5,
       "bar_pct": 71,
-      "market_cap_gbp_b": 516.824,
+      "market_cap_gbp_b": 517.772,
       "market_cap_usd_b": 682.087,
       "beta": 0.141,
       "pe_ratio": 17.2,
@@ -84,11 +84,11 @@ window.PRICES_DATA = {
       "return_1yr": "+41%",
       "low_gbp": "111",
       "low_usd": 146.49,
-      "high_gbp": "179",
+      "high_gbp": "180",
       "high_usd": 236.48,
       "bar_pct": 77,
-      "market_cap_gbp_b": 319.545,
-      "market_cap_usd_b": 421.725,
+      "market_cap_gbp_b": 320.131,
+      "market_cap_usd_b": 421.724,
       "beta": 0.453,
       "pe_ratio": 15.87,
       "avg_volume_m": 8.47,
@@ -100,6 +100,13 @@ window.PRICES_DATA = {
       "vol_1w": 37471200,
       "vol_1m": 180426300,
       "news": [
+        {
+          "title": "Here Are the Current Berkshire Hathaway Stock Holdings",
+          "publisher": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/stocks/warren-buffett-stocks-berkshire-hathaway-portfolio",
+          "published": 1794971605,
+          "sentiment": 0.0
+        },
         {
           "title": "Chevron Says AI Has Already Captured Over $100 Million in Value. Here's Where It Might Find an Even Bigger Payoff.",
           "publisher": "Motley Fool",
@@ -127,16 +134,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/chevrons-5-billion-gulf-oil-174239048.html",
           "published": 1794937359,
           "sentiment": 0.0
-        },
-        {
-          "title": "4 High-Yield Energy Stocks That Pay Roth IRA Investors Tax-Free Income",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/17/4-high-yield-energy-stocks-that-pay-roth-ira-investors-tax-free-income/",
-          "published": 1794935756,
-          "sentiment": 0.178
         }
       ],
-      "news_sentiment": 0.098
+      "news_sentiment": 0.063
     },
     {
       "ticker": "SHEL",
@@ -155,8 +155,8 @@ window.PRICES_DATA = {
       "high_gbp": "83",
       "high_usd": 109.37,
       "bar_pct": 70,
-      "market_cap_gbp_b": 208.193,
-      "market_cap_usd_b": 274.766,
+      "market_cap_gbp_b": 208.574,
+      "market_cap_usd_b": 274.765,
       "beta": -0.248,
       "pe_ratio": 8.44,
       "avg_volume_m": 6.1,
@@ -223,7 +223,7 @@ window.PRICES_DATA = {
       "high_gbp": "39",
       "high_usd": 51.49,
       "bar_pct": 64,
-      "market_cap_gbp_b": 87.529,
+      "market_cap_gbp_b": 87.69,
       "market_cap_usd_b": 115.518,
       "beta": -0.258,
       "pe_ratio": 21.88,
@@ -236,6 +236,20 @@ window.PRICES_DATA = {
       "vol_1w": 24174500,
       "vol_1m": 174992700,
       "news": [
+        {
+          "title": "Equinor (OB:EQNR) Marks First Seabed Monitoring At UK Endurance CO2 Store",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-ob-eqnr-marks-first-061538703.html",
+          "published": 1794982538,
+          "sentiment": 0.0
+        },
+        {
+          "title": "What Does BP (LSE:BP.) Endurance Role Mean For Its Low Carbon Shift?",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/does-bp-lse-bp-endurance-043519274.html",
+          "published": 1794976519,
+          "sentiment": -0.273
+        },
         {
           "title": "3 Classic Value Stocks for Your Short List",
           "publisher": "Zacks",
@@ -256,30 +270,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/heres-why-bps-partial-aker-150700719.html",
           "published": 1794928020,
           "sentiment": 0.0
-        },
-        {
-          "title": "Trading at just 8x P/E with 464% EPS growth: Is Valero a bargain?",
-          "publisher": "Investing.com",
-          "url": "https://finance.yahoo.com/energy/articles/trading-just-8x-p-e-075724462.html",
-          "published": 1794902244,
-          "sentiment": 0.527
-        },
-        {
-          "title": "Shell vs. BP: One Oil Giant Offers a Higher Yield, but the Other Has a Safer Dividend",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/16/shell-vs-bp-one-oil-giant-offers-a-higher-yield-but-the-other-has-a-safer-dividend/",
-          "published": 1794853051,
-          "sentiment": 0.572
         }
       ],
-      "news_sentiment": 0.439
+      "news_sentiment": 0.165
     },
     {
       "ticker": "TTE",
       "company_name": "TotalEnergies",
       "category": "oil-majors",
       "exchange": "NYSE",
-      "price_gbp": "68",
+      "price_gbp": "69",
       "price_usd": 90.4,
       "change_1d": "+0.51%",
       "change_1w": "+2.87%",
@@ -291,8 +291,8 @@ window.PRICES_DATA = {
       "high_gbp": "73",
       "high_usd": 95.78,
       "bar_pct": 84,
-      "market_cap_gbp_b": 150.22,
-      "market_cap_usd_b": 198.255,
+      "market_cap_gbp_b": 150.496,
+      "market_cap_usd_b": 198.256,
       "beta": 0.04,
       "pe_ratio": 9.02,
       "avg_volume_m": 1.81,
@@ -304,6 +304,13 @@ window.PRICES_DATA = {
       "vol_1w": 4180200,
       "vol_1m": 32700400,
       "news": [
+        {
+          "title": "Equinor (OB:EQNR) Marks First Seabed Monitoring At UK Endurance CO2 Store",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-ob-eqnr-marks-first-061538703.html",
+          "published": 1794982538,
+          "sentiment": 0.0
+        },
         {
           "title": "Bet on These 5 Low-Leverage Stocks as NVIDIA Crisis Drags Market",
           "publisher": "Zacks",
@@ -331,13 +338,6 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/exxonmobils-longtail-project-unlock-guyanas-161700877.html",
           "published": 1794845820,
           "sentiment": 0.382
-        },
-        {
-          "title": "TotalEnergies (ENXTPA:TTE) Locks In 15 Year LNG Supply Deal",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/energy/articles/totalenergies-enxtpa-tte-locks-15-141409417.html",
-          "published": 1794838449,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": -0.233
@@ -359,8 +359,8 @@ window.PRICES_DATA = {
       "high_gbp": "37",
       "high_usd": 49.08,
       "bar_pct": 72,
-      "market_cap_gbp_b": 74.297,
-      "market_cap_usd_b": 98.055,
+      "market_cap_gbp_b": 74.433,
+      "market_cap_usd_b": 98.054,
       "beta": -0.658,
       "pe_ratio": 8.6,
       "avg_volume_m": 3.93,
@@ -372,6 +372,27 @@ window.PRICES_DATA = {
       "vol_1w": 15500700,
       "vol_1m": 101533400,
       "news": [
+        {
+          "title": "Equinor (OB:EQNR) Trades At A 5% Premium On Ex Dividend Move",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/equinor-ob-eqnr-trades-5-071058577.html",
+          "published": 1794985858,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Equinor (OB:EQNR) Marks First Seabed Monitoring At UK Endurance CO2 Store",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/energy/articles/equinor-ob-eqnr-marks-first-061538703.html",
+          "published": 1794982538,
+          "sentiment": 0.0
+        },
+        {
+          "title": "Equinor (OB:EQNR) Stock Could Be Cheap Based On Future Cash Flow",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/equinor-ob-eqnr-stock-could-052044288.html",
+          "published": 1794979244,
+          "sentiment": 0.0
+        },
         {
           "title": "Equinor Hit by Cyberattack but Oil and Gas Production Remains Unaffected",
           "publisher": "Oilprice.com",
@@ -385,30 +406,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/european-equities-traded-us-american-162006772.html",
           "published": 1794932406,
           "sentiment": 0.0
-        },
-        {
-          "title": "Sector Update: Energy Stocks Advance Premarket Tuesday",
-          "publisher": "MT Newswires",
-          "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-advance-premarket-142445991.html",
-          "published": 1794925485,
-          "sentiment": 0.273
-        },
-        {
-          "title": "Standard Lithium Q3 Earnings Call Highlights",
-          "publisher": "MarketBeat",
-          "url": "https://www.marketbeat.com/instant-alerts/transcript-standard-lithium-q3-earnings-call-highlights-2026-11-16/?utm_source=yahoofinance&utm_medium=yahoofinance",
-          "published": 1794881666,
-          "sentiment": 0.0
-        },
-        {
-          "title": "4 High-Yield Big Oil Stocks Built to Keep Paying Dividends as Crude Prices Fall",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/16/4-high-yield-big-oil-stocks-built-to-keep-paying-dividends-as-crude-prices-fall/",
-          "published": 1794860247,
-          "sentiment": -0.572
         }
       ],
-      "news_sentiment": -0.06
+      "news_sentiment": 0.0
     },
     {
       "ticker": "COP",
@@ -427,8 +427,8 @@ window.PRICES_DATA = {
       "high_gbp": "117",
       "high_usd": 154.28,
       "bar_pct": 78,
-      "market_cap_gbp_b": 124.956,
-      "market_cap_usd_b": 164.913,
+      "market_cap_gbp_b": 125.185,
+      "market_cap_usd_b": 164.912,
       "beta": 0.162,
       "pe_ratio": 14.7,
       "avg_volume_m": 6.75,
@@ -495,7 +495,7 @@ window.PRICES_DATA = {
       "high_gbp": "51",
       "high_usd": 67.45,
       "bar_pct": 62,
-      "market_cap_gbp_b": 42.821,
+      "market_cap_gbp_b": 42.9,
       "market_cap_usd_b": 56.514,
       "beta": 0.149,
       "pe_ratio": 12.59,
@@ -508,6 +508,13 @@ window.PRICES_DATA = {
       "vol_1w": 65015000,
       "vol_1m": 230713600,
       "news": [
+        {
+          "title": "Here Are the Current Berkshire Hathaway Stock Holdings",
+          "publisher": "Kiplinger",
+          "url": "https://www.kiplinger.com/investing/stocks/warren-buffett-stocks-berkshire-hathaway-portfolio",
+          "published": 1794971605,
+          "sentiment": 0.0
+        },
         {
           "title": "5 Oil and Gas Stocks That Crushed Third-Quarter Earnings Estimates",
           "publisher": "Oilprice.com",
@@ -535,23 +542,16 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/energy/articles/sector-energy-stocks-retreat-afternoon-205814412.html",
           "published": 1794862694,
           "sentiment": 0.44
-        },
-        {
-          "title": "Could Occidental Petroleum Be The Value Stock For Your Portfolio?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/stock/oxy/articles/625150/could-occidental-petroleum-be-the-value-stock-for-your-portfolio/2026-11-16",
-          "published": 1794862505,
-          "sentiment": 0.34
         }
       ],
-      "news_sentiment": -0.06
+      "news_sentiment": -0.128
     },
     {
       "ticker": "EOG",
       "company_name": "EOG Resources",
       "category": "ep-refining",
       "exchange": "NYSE",
-      "price_gbp": "117",
+      "price_gbp": "118",
       "price_usd": 154.91,
       "change_1d": "+1.07%",
       "change_1w": "+2.24%",
@@ -563,12 +563,12 @@ window.PRICES_DATA = {
       "high_gbp": "126",
       "high_usd": 165.93,
       "bar_pct": 83,
-      "market_cap_gbp_b": 60.858,
-      "market_cap_usd_b": 80.318,
+      "market_cap_gbp_b": 60.97,
+      "market_cap_usd_b": 80.319,
       "beta": 0.269,
       "pe_ratio": 10.0,
       "avg_volume_m": 3.11,
-      "div_yield_pct": 2.83,
+      "div_yield_pct": 2.84,
       "short_pct": 3.62,
       "analyst": "buy",
       "analyst_score": 2.36,
@@ -576,6 +576,20 @@ window.PRICES_DATA = {
       "vol_1w": 15148000,
       "vol_1m": 69620300,
       "news": [
+        {
+          "title": "EOG Resources (EOG) Stock May Be 50% Undervalued As Record Output Lifts Dividend",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/eog-resources-eog-stock-may-070730112.html",
+          "published": 1794985650,
+          "sentiment": 0.0
+        },
+        {
+          "title": "EOG Resources (EOG) Lifts Dividend And Output On An Undervalued View",
+          "publisher": "Simply Wall St.",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/eog-resources-eog-lifts-dividend-061638768.html",
+          "published": 1794982598,
+          "sentiment": 0.0
+        },
         {
           "title": "EOG vs. ConocoPhillips: The Better Bet as Oil Prices Stay Elevated",
           "publisher": "Zacks",
@@ -596,23 +610,9 @@ window.PRICES_DATA = {
           "url": "https://finance.yahoo.com/markets/stocks/articles/investors-undervaluing-eog-resources-eog-134003188.html",
           "published": 1794922803,
           "sentiment": 0.0
-        },
-        {
-          "title": "Could Occidental Petroleum Be The Value Stock For Your Portfolio?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/stock/oxy/articles/625150/could-occidental-petroleum-be-the-value-stock-for-your-portfolio/2026-11-16",
-          "published": 1794862505,
-          "sentiment": 0.34
-        },
-        {
-          "title": "What Is Devon Getting For All That Spending?",
-          "publisher": "Trefis",
-          "url": "https://www.trefis.com/stock/dvn/articles/625257/what-is-devon-getting-for-all-that-spending/2026-11-16",
-          "published": 1794845588,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": 0.045
+      "news_sentiment": -0.023
     },
     {
       "ticker": "MPC",
@@ -628,11 +628,11 @@ window.PRICES_DATA = {
       "return_1yr": "+101%",
       "low_gbp": "123",
       "low_usd": 161.93,
-      "high_gbp": "374",
+      "high_gbp": "375",
       "high_usd": 493.98,
       "bar_pct": 70,
-      "market_cap_gbp_b": 81.619,
-      "market_cap_usd_b": 107.718,
+      "market_cap_gbp_b": 81.768,
+      "market_cap_usd_b": 107.717,
       "beta": 0.509,
       "pe_ratio": 7.84,
       "avg_volume_m": 2.51,
@@ -699,7 +699,7 @@ window.PRICES_DATA = {
       "high_gbp": "350",
       "high_usd": 461.52,
       "bar_pct": 68,
-      "market_cap_gbp_b": 76.87,
+      "market_cap_gbp_b": 77.011,
       "market_cap_usd_b": 101.45,
       "beta": 0.552,
       "pe_ratio": 8.27,
@@ -757,7 +757,7 @@ window.PRICES_DATA = {
       "exchange": "NYSE",
       "price_gbp": "37",
       "price_usd": 48.95,
-      "change_1d": "-2.10%",
+      "change_1d": "-2.23%",
       "change_1w": "-1.90%",
       "change_1m": "-0.29%",
       "change_ytd": "+23.77%",
@@ -767,8 +767,8 @@ window.PRICES_DATA = {
       "high_gbp": "46",
       "high_usd": 60.46,
       "bar_pct": 55,
-      "market_cap_gbp_b": 54.746,
-      "market_cap_usd_b": 72.252,
+      "market_cap_gbp_b": 54.846,
+      "market_cap_usd_b": 72.251,
       "beta": 0.792,
       "pe_ratio": 23.76,
       "avg_volume_m": 12.65,
@@ -835,10 +835,10 @@ window.PRICES_DATA = {
       "high_gbp": "33",
       "high_usd": 43.59,
       "bar_pct": 38,
-      "market_cap_gbp_b": 20.036,
+      "market_cap_gbp_b": 20.073,
       "market_cap_usd_b": 26.443,
       "beta": 0.749,
-      "pe_ratio": 13.66,
+      "pe_ratio": 13.43,
       "avg_volume_m": 10.37,
       "div_yield_pct": 2.09,
       "short_pct": 5.39,
@@ -903,8 +903,8 @@ window.PRICES_DATA = {
       "high_gbp": "53",
       "high_usd": 70.41,
       "bar_pct": 12,
-      "market_cap_gbp_b": 35.712,
-      "market_cap_usd_b": 47.131,
+      "market_cap_gbp_b": 35.778,
+      "market_cap_usd_b": 47.132,
       "beta": 1.058,
       "pe_ratio": 16.31,
       "avg_volume_m": 8.05,
@@ -971,8 +971,8 @@ window.PRICES_DATA = {
       "high_gbp": "75",
       "high_usd": 98.75,
       "bar_pct": 41,
-      "market_cap_gbp_b": 134.156,
-      "market_cap_usd_b": 177.055,
+      "market_cap_gbp_b": 134.402,
+      "market_cap_usd_b": 177.054,
       "beta": 0.6,
       "pe_ratio": 15.21,
       "avg_volume_m": 12.31,
@@ -1028,21 +1028,21 @@ window.PRICES_DATA = {
       "category": "utilities",
       "exchange": "LSE",
       "price_gbp": "26",
-      "price_usd": 34.89,
+      "price_usd": 34.83,
       "change_1d": "-1.86%",
       "change_1w": "-0.97%",
       "change_1m": "+5.55%",
       "change_ytd": "+18.53%",
       "return_1yr": "+21%",
       "low_gbp": "21",
-      "low_usd": 27.4,
+      "low_usd": 27.35,
       "high_gbp": "28",
-      "high_usd": 36.52,
+      "high_usd": 36.46,
       "bar_pct": 82,
       "market_cap_gbp_b": 32.093,
-      "market_cap_usd_b": 42.355,
+      "market_cap_usd_b": 42.278,
       "beta": 0.534,
-      "pe_ratio": 25.18,
+      "pe_ratio": 24.71,
       "avg_volume_m": 2.36,
       "div_yield_pct": 2.51,
       "short_pct": null,
@@ -1095,19 +1095,19 @@ window.PRICES_DATA = {
       "company_name": "Enphase Energy",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "17",
+      "price_gbp": "18",
       "price_usd": 23.06,
       "change_1d": "-7.17%",
       "change_1w": "-16.57%",
       "change_1m": "-24.71%",
       "change_ytd": "-31.67%",
       "return_1yr": "-10%",
-      "low_gbp": "18",
-      "low_usd": 23.83,
+      "low_gbp": "17",
+      "low_usd": 23.03,
       "high_gbp": "56",
       "high_usd": 73.74,
       "bar_pct": 1,
-      "market_cap_gbp_b": 2.312,
+      "market_cap_gbp_b": 2.316,
       "market_cap_usd_b": 3.051,
       "beta": 1.45,
       "pe_ratio": 34.42,
@@ -1120,6 +1120,13 @@ window.PRICES_DATA = {
       "vol_1w": 22049300,
       "vol_1m": 175204900,
       "news": [
+        {
+          "title": "Enphase Energy (ENPH) Hits New Record Low. Why Investors Are Losing Confidence",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-enph-hits-record-044822269.html",
+          "published": 1794977302,
+          "sentiment": 0.178
+        },
         {
           "title": "Solar Stocks Rebound After A Brutal Rout: Is The Worst Over For ENPH, FSLR, CSIQ, SEDG Stocks?",
           "publisher": "Stocktwits",
@@ -1147,16 +1154,9 @@ window.PRICES_DATA = {
           "url": "https://www.trefis.com/stock/fslr/articles/624933/how-low-can-first-solar-stock-go/2026-11-13",
           "published": 1794592481,
           "sentiment": -0.273
-        },
-        {
-          "title": "Enphase Energy, Inc. (ENPH) is Attracting Investor Attention: Here is What You Should Know",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/enphase-energy-inc-enph-attracting-130004437.html",
-          "published": 1794574804,
-          "sentiment": 0.637
         }
       ],
-      "news_sentiment": -0.151
+      "news_sentiment": -0.243
     },
     {
       "ticker": "FSLR",
@@ -1170,12 +1170,12 @@ window.PRICES_DATA = {
       "change_1m": "-10.96%",
       "change_ytd": "-44.24%",
       "return_1yr": "-36%",
-      "low_gbp": "123",
-      "low_usd": 162.19,
-      "high_gbp": "243",
+      "low_gbp": "115",
+      "low_usd": 151.69,
+      "high_gbp": "244",
       "high_usd": 320.95,
       "bar_pct": 1,
-      "market_cap_gbp_b": 12.458,
+      "market_cap_gbp_b": 12.481,
       "market_cap_usd_b": 16.442,
       "beta": 1.709,
       "pe_ratio": 8.85,
@@ -1243,7 +1243,7 @@ window.PRICES_DATA = {
       "high_gbp": "34",
       "high_usd": 45.18,
       "bar_pct": 17,
-      "market_cap_gbp_b": 4.303,
+      "market_cap_gbp_b": 4.311,
       "market_cap_usd_b": 5.679,
       "beta": 1.126,
       "pe_ratio": null,
@@ -1299,20 +1299,20 @@ window.PRICES_DATA = {
       "company_name": "\u00d8rsted",
       "category": "clean-energy",
       "exchange": "NASDAQ",
-      "price_gbp": "5.22",
+      "price_gbp": "5.23",
       "price_usd": 6.89,
       "change_1d": "-1.15%",
       "change_1w": "-3.77%",
       "change_1m": "+11.85%",
       "change_ytd": "+3.38%",
       "return_1yr": "+7%",
-      "low_gbp": "4.46",
+      "low_gbp": "4.47",
       "low_usd": 5.89,
-      "high_gbp": "6.85",
+      "high_gbp": "6.86",
       "high_usd": 9.04,
       "bar_pct": 32,
-      "market_cap_gbp_b": 20.691,
-      "market_cap_usd_b": 27.307,
+      "market_cap_gbp_b": 20.728,
+      "market_cap_usd_b": 27.306,
       "beta": 0.556,
       "pe_ratio": null,
       "avg_volume_m": 0.17,
@@ -1320,9 +1320,9 @@ window.PRICES_DATA = {
       "short_pct": null,
       "analyst": "strong_buy",
       "analyst_score": 1.0,
-      "vol_1d": 15947,
-      "vol_1w": 552847,
-      "vol_1m": 4436347,
+      "vol_1d": 118600,
+      "vol_1w": 655500,
+      "vol_1m": 4539000,
       "news": [
         {
           "title": "Eversource\u2019s financial risk eases as Revolution Wind hits full commercial operations: CEO",
