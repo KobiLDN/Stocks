@@ -1,30 +1,30 @@
 {
-  "updated": "2026-11-18 07:37",
+  "updated": "2026-11-18 15:38",
   "spy": {
-    "price": 732.44,
-    "change_1d": -1.09,
-    "change_1w": -2.33,
-    "change_1m": -4.04,
-    "change_ytd": 8.05,
-    "change_1y": 12.16
+    "price": 730.4,
+    "change_1d": -0.96,
+    "change_1w": -3.87,
+    "change_1m": -4.71,
+    "change_ytd": 7.75,
+    "change_1y": 11.85
   },
   "qqq": {
-    "price": 656.95,
-    "change_1d": -0.84,
-    "change_1w": -2.64,
-    "change_1m": -7.45,
-    "change_ytd": 7.51,
-    "change_1y": 10.69
+    "price": 657.21,
+    "change_1d": -1.3,
+    "change_1w": -4.8,
+    "change_1m": -8.51,
+    "change_ytd": 7.56,
+    "change_1y": 10.73
   },
   "vix": {
-    "level": 25.46,
-    "change_1d": 11.28,
-    "regime": "crisis",
-    "signal": "high_fear"
+    "level": 24.22,
+    "change_1d": -4.83,
+    "regime": "correction",
+    "signal": "normal"
   },
-  "market_regime": "crisis",
-  "raw_regime": "crisis",
-  "spread_1w": -0.31,
+  "market_regime": "correction",
+  "raw_regime": "correction",
+  "spread_1w": -0.93,
   "pending_regime": null,
   "consecutive_count": 0
 }
