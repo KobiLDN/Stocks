@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-18 08:04",
+  "updated": "2026-11-20 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "COST has strong momentum (+10.14% 1M, +28.76% YTD) and is benefiting from panic-buying after tech outages, with Mizuho estimating U.S. comps rose 11-12% in late October and raising its price target to $1,150 [cnbc.com](https://www.cnbc.com/2026/11/18/tech-outage-costco-panic-buying.html).",
+      "drivers": [
+        "+10.14% 1M momentum",
+        "panic-buying tailwind from tech outages",
+        "Mizuho price target raise to $1,150",
+        "strong buy consensus"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "WMT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "WMT narrowly beat Q3 estimates (EPS $0.65 vs $0.64) and raised full-year guidance, with global e-commerce surging 17% and U.S. ad sales up 37%, while the stock is up ~13% YTD [cnbc.com](https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html).",
+      "drivers": [
+        "+6.95% 1M momentum",
+        "Q3 earnings beat & raised guidance",
+        "e-commerce +17% growth",
+        "strong_buy consensus"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "PG has strong YTD performance (+21.82%) and a low beta of 0.36, with Wells Fargo raising its price target to $188 after a Q3 beat ($2.00 EPS vs $1.89 est.) and 4% revenue growth [marketbeat.com](https://www.marketbeat.com/instant-alerts/analyst-wells-fargo-company-issues-positive-forecast-for-procter-gamble-nyse-pg-stock-price-2026-11-18/).",
+      "drivers": [
+        "+21.82% YTD",
+        "low beta 0.36",
+        "Wells Fargo price target raise to $188",
+        "Q3 earnings beat"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "MCD shows strong 1M momentum (+10.48%) and is trading below its historical P/E (21.4x vs 22x avg), with KeyBanc reiterating an Overweight rating and a $307 target on a new value platform [investing.com](https://www.investing.com/news/analyst-ratings/keybanc-reiterates-mcdonalds-stock-rating-on-value-platform-outlook-93CH-5036022).",
+      "drivers": [
+        "+10.48% 1M momentum",
+        "P/E below historical average",
+        "KeyBanc Overweight rating",
+        "new value platform catalyst"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "LLY has strong YTD performance (+25.82%) and positive news sentiment (0.298), with Jefferies having Wall Street's highest price target on the stock, supported by GLP-1 drug market leadership.",
+      "drivers": [
+        "+25.82% YTD",
+        "positive news sentiment 0.298",
+        "Jefferies highest price target",
+        "GLP-1 market leader"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "BRK-B has solid YTD return (+15.13%) and strong 1M momentum (+5.97%), with a low beta of 0.57 and positive news sentiment (0.377), offering defensive exposure amid tech weakness.",
+      "drivers": [
+        "+15.13% YTD",
+        "+5.97% 1M momentum",
+        "low beta 0.57",
+        "positive news sentiment 0.377"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "SONY has strong 1M momentum (+7.89%) and 1W momentum (+2.03%), with a low short interest of 0.25% and a reasonable P/E of 20.76, benefiting from the anticipated GTA VI release catalyst.",
+      "drivers": [
+        "+7.89% 1M momentum",
+        "low short interest 0.25%",
+        "GTA VI release catalyst",
+        "reasonable P/E 20.76"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "TM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TM has strong 1M momentum (+7.35%) and an attractive P/E of 9.62 with a 2.97% dividend yield, and Moody's recently upgraded its outlook to positive, projecting modest EBIT margin expansion.",
+      "drivers": [
+        "+7.35% 1M momentum",
+        "low P/E 9.62",
+        "2.97% dividend yield",
+        "Moody's outlook upgrade to positive"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "GE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "GE has strong 1M momentum (+6.34%) and a buy consensus with a favorable analyst score of 1.52, supported by aerospace demand and positive news sentiment (0.172).",
+      "drivers": [
+        "+6.34% 1M momentum",
+        "buy consensus",
+        "positive news sentiment 0.172",
+        "aerospace demand tailwind"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "2222.SR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Saudi Aramco has strong YTD performance (+16.65%) and 1M momentum (+3.95%), with a low P/E of 14.24 and a high dividend yield of 5.13%, offering defensive income exposure.",
+      "drivers": [
+        "+16.65% YTD",
+        "+3.95% 1M momentum",
+        "low P/E 14.24",
+        "high dividend yield 5.13%"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.538,
+      "ytd": "+118.91%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +118.91% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +118.91% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -132,151 +277,6 @@
         "Analyst strong_buy score 1.27",
         "AI infrastructure tailwind",
         "Positive news sentiment 0.221"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.567,
-      "ytd": "+125.27%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +125.27% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +125.27% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Up 19.6% in 1M and 34.4% YTD; Q3 revenue beat by ~$1.8B, China approved oral GLP-1 orforglipron, short interest collapsed 24% in a week to 0.6%, and Jefferies raised target to $1,700 [stockopedia.com](https://www.stockopedia.com/share-prices/eli-lilly-and-NYQ:LLY/news/mapping-the-market-eli-lilly-shares-ready-to-rally-again-01a1d490-fe92-7552-978f-697b4f0f333d/) [ortex.news](https://ortex.news/articles/212990/lillys-short-sellers-retreat-after-blowout-quarter).",
-      "drivers": [
-        "+19.6% 1M momentum",
-        "Q3 revenue beat by 8%",
-        "China oral GLP-1 approval",
-        "short interest 0.6%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "BRK-B",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Up 12.7% in 1M and 19.3% YTD; low beta of 0.57 and P/E of 16.6 provide defensive growth exposure amid macro uncertainty.",
-      "drivers": [
-        "+12.7% 1M momentum",
-        "low beta 0.57",
-        "P/E 16.6",
-        "YTD +19.3%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "COST",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Up 12.8% in 1M and 30.2% YTD; strong consumer spending backdrop supports membership-based retail model with 0.53% dividend yield.",
-      "drivers": [
-        "+12.8% 1M momentum",
-        "YTD +30.2%",
-        "consumer spending tailwind",
-        "low short interest 1.78%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BLK",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Up 13.9% in 1M and 14.6% YTD; record inflows and strong_buy analyst consensus (score 1.39) with 1.87% dividend yield.",
-      "drivers": [
-        "+13.9% 1M momentum",
-        "record inflows",
-        "analyst score 1.39",
-        "dividend yield 1.87%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "JNJ",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Up 12.5% in 1M and 40.0% YTD; low beta of 0.20 and 1.88% yield, with positive Phase 3 Caplyta data and potential Ollin Biosciences acquisition [wallstreettoday.com](https://wallstreettoday.com/article-lly-the-top-8-healthcare-stocks-for-the-week-of-november-13-2026.html).",
-      "drivers": [
-        "+12.5% 1M momentum",
-        "YTD +40.0%",
-        "low beta 0.20",
-        "positive pipeline news"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "PEP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Up 12.5% in 1M with a 4.07% dividend yield and P/E of 18.3; attractive value in consumer staples as defensive play.",
-      "drivers": [
-        "+12.5% 1M momentum",
-        "dividend yield 4.07%",
-        "P/E 18.3",
-        "defensive sector"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "MCD",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Up 14.1% in 1M despite -8.6% YTD; P/E of 21.5 and 2.84% yield offer value entry as menu innovation and value positioning drive recovery.",
-      "drivers": [
-        "+14.1% 1M momentum",
-        "P/E 21.5",
-        "dividend yield 2.84%",
-        "menu innovation catalyst"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "WMT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Up 10.3% in 1M and 14.3% YTD; P/E of 46.4 reflects premium for retail dominance, supported by consumer health and low short interest of 1.65%.",
-      "drivers": [
-        "+10.3% 1M momentum",
-        "YTD +14.3%",
-        "low short interest 1.65%",
-        "consumer spending tailwind"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "TM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Up 12.6% in 1M with a low P/E of 9.7 and 2.95% dividend yield; attractive valuation in global auto sector despite -2.5% YTD.",
-      "drivers": [
-        "+12.6% 1M momentum",
-        "P/E 9.7",
-        "dividend yield 2.95%",
-        "low short interest 0.15%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "SONY",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Up 11.1% in 1M and 4.6% YTD; P/E of 20.2 with positive news sentiment of 0.307 and low short interest of 0.25%.",
-      "drivers": [
-        "+11.1% 1M momentum",
-        "P/E 20.2",
-        "news sentiment 0.307",
-        "low short interest 0.25%"
       ]
     }
   ]

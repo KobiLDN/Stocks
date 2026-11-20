@@ -1,9 +1,165 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-18 08:04",
+  "updated": "2026-11-20 08:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "CrowdStrike has surged +114.7% YTD and +7.1% in the past month, with positive news sentiment (0.054) driven by its new Apple device automation tie-up via Falcon Foundry. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "+114.7% YTD",
+        "+7.1% 1M momentum",
+        "positive news sentiment 0.054",
+        "Apple automation partnership"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "Palo Alto Networks has gained +101.7% YTD and +12.1% in the past week, supported by strong news sentiment (0.13) and CEO commentary that AI security could be bigger than current business. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "+101.7% YTD",
+        "+12.1% 1W momentum",
+        "news sentiment 0.13",
+        "AI security growth narrative"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Cloudflare is up +54.9% YTD and +4.1% in the past month, with a positive news sentiment of 0.193 and a buy analyst consensus. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "+54.9% YTD",
+        "+4.1% 1M momentum",
+        "news sentiment 0.193",
+        "buy analyst consensus"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Spotify has rallied +10.98% in the past month despite a slight YTD gain of +1.54%, with positive news sentiment (0.193) and a buy analyst rating. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "+10.98% 1M momentum",
+        "news sentiment 0.193",
+        "buy analyst rating",
+        "CFO growth plan outlined"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.72,
+      "rationale": "Broadcom shows a strong_buy analyst consensus (score 1.27) and modest +3.67% 1M momentum, with a P/E of 44.27 and positive sentiment on AI competition dynamics. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "strong_buy consensus (1.27)",
+        "+3.67% 1M momentum",
+        "AI infrastructure exposure",
+        "P/E 44.27"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Apple is up +29.3% YTD and +2.94% in the past month, with a massive $5.07T market cap and buy analyst consensus, despite a slight negative news sentiment (-0.053) from recent outage. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "+29.3% YTD",
+        "+2.94% 1M momentum",
+        "buy analyst consensus",
+        "AI agent job listing"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "Amazon has a strong_buy analyst consensus (score 1.32) and +13.63% YTD return, with a reasonable P/E of 20.81 and exposure to AI through Anthropic. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "strong_buy consensus (1.32)",
+        "+13.63% YTD",
+        "P/E 20.81",
+        "AI/Anthropic exposure"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Microsoft holds a strong_buy analyst consensus (score 1.38) and a low P/E of 26.01, though recent momentum is negative (-6.13% 1M) due to tech sector weakness. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "strong_buy consensus (1.38)",
+        "P/E 26.01",
+        "0.77% dividend yield",
+        "AI/cloud leadership"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "INTU",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Intuit reported Q1 FY27 revenue up 12% to $4.4B and non-GAAP EPS up 56% to $2.91, with a low P/E of 18.83 and a 1.76% dividend yield, despite a -50% YTD decline. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "Q1 revenue +12% to $4.4B",
+        "non-GAAP EPS +56% to $2.91",
+        "P/E 18.83",
+        "Mailchimp sale for $3.68B"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "UBER",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Uber has a buy analyst consensus (score 1.59) and positive news sentiment (0.097), though YTD performance is -20.83% and 1M momentum is -4.84%. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
+      "drivers": [
+        "buy analyst consensus (1.59)",
+        "news sentiment 0.097",
+        "P/E 38.59",
+        "platform growth potential"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MU",
+      "signal": "buy",
+      "confidence": 0.539,
+      "ytd": "+119.06%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +119.06% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +119.06% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "signal": "buy",
+      "confidence": 0.538,
+      "ytd": "+118.91%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +118.91% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +118.91% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SPOT",
@@ -132,151 +288,6 @@ window.SIGNALS_DATA = {
         "strong_buy 1.34",
         "news sentiment 0.405",
         "undervalued"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.567,
-      "ytd": "+125.27%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +125.27% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +125.27% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AAPL",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Record close at $356.27, +31.92% YTD, P/E 39.67, with strong safe-haven rotation from AI sell-off and positive analyst consensus (buy, an_score 2.18). [stocktwits.com](https://stocktwits.com/news-articles/markets/equity/aapl-stock-posted-best-week-in-4-months-amid-nvidia-disruption-apple-reportedly-plans-smart-glasses-to-rival-meta-next-year/cNb7iIhR9X0)",
-      "drivers": [
-        "+31.92% YTD",
-        "record close $356.27",
-        "safe-haven rotation",
-        "smart glasses catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Strong YTD return of +17.73%, P/E 21.56, positive news sentiment 0.403, and strong_buy analyst consensus (an_score 1.32) despite satellite setback.",
-      "drivers": [
-        "+17.73% YTD",
-        "P/E 21.56",
-        "news sentiment 0.403",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Impressive 1-month momentum of +16.92%, YTD +6.54%, P/E 37.33, with positive 1D move of +2.18% and buy analyst consensus (an_score 1.71).",
-      "drivers": [
-        "+16.92% 1M",
-        "YTD +6.54%",
-        "P/E 37.33",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Strong 1-month rebound of +10.07%, P/E 20.76, beta 0.921 (low risk), with buy analyst consensus (an_score 2.06) and positive news sentiment 0.013.",
-      "drivers": [
-        "+10.07% 1M",
-        "P/E 20.76",
-        "low beta 0.921",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "UBER",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Positive 1-week momentum of +1.60%, P/E 40.99, buy analyst consensus (an_score 1.59), with news sentiment 0.011 and potential catalyst from CEO return discussions.",
-      "drivers": [
-        "+1.60% 1W",
-        "P/E 40.99",
-        "buy consensus",
-        "catalyst from CEO news"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "ADBE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Positive 1-week momentum of +1.58%, P/E 13.57 (attractive), news sentiment 0.212, and 1D gain of +1.55% despite hold analyst consensus (an_score 2.97).",
-      "drivers": [
-        "P/E 13.57",
-        "news sentiment 0.212",
-        "+1.58% 1W",
-        "attractive valuation"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AVGO",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Strong 1-week rebound of +18.16%, strong_buy analyst consensus (an_score 1.27), P/E 44.32, with positive news sentiment 0.025 despite 1D pullback.",
-      "drivers": [
-        "+18.16% 1W",
-        "strong_buy consensus",
-        "P/E 44.32",
-        "news sentiment 0.025"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "QCOM",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Positive 1-week momentum of +4.27%, P/E 13.58 (low), dividend yield 2.13%, news sentiment 0.262, despite hold analyst consensus (an_score 2.62).",
-      "drivers": [
-        "P/E 13.58",
-        "div yield 2.13%",
-        "news sentiment 0.262",
-        "+4.27% 1W"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "ORCL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Strong 1-week rebound of +7.97%, P/E 19.65, strong_buy analyst consensus (an_score 1.5), news sentiment 0.228, despite YTD decline of -35.09%.",
-      "drivers": [
-        "+7.97% 1W",
-        "P/E 19.65",
-        "strong_buy consensus",
-        "news sentiment 0.228"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "MSFT",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "Strong_buy analyst consensus (an_score 1.38), P/E 27.34, YTD +11.47%, with upcoming Microsoft Ignite catalyst despite negative 1-week momentum of -1.27%.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 27.34",
-        "YTD +11.47%",
-        "Microsoft Ignite catalyst"
       ]
     }
   ]

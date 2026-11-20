@@ -1,9 +1,142 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-18 08:04",
+  "updated": "2026-11-20 08:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "TRX is the only asset with positive YTD (+8.83%) and 1-year (+9%) returns, minimal 1W drawdown (-0.44%) and 1D drop (-1.00%), and a market cap of $29.4B, showing relative strength amid broad market weakness.",
+      "drivers": [
+        "+8.83% YTD",
+        "+9% 1Y return",
+        "lowest 1W drawdown -0.44%",
+        "market cap $29.4B"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "XLM has a positive news sentiment of 0.113 and a relatively mild 1Y return of -33% compared to peers, with a 1D drop of -2.24% and 1W drop of -7.78% showing resilience in a risk-off environment.",
+      "drivers": [
+        "news sentiment 0.113",
+        "1Y return -33%",
+        "1W drawdown -7.78%",
+        "market cap $4.75B"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "XRP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "XRP has a large market cap of $61.1B and a relatively contained 1W drop of -6.59% and 1D drop of -1.68%, though news sentiment is negative (-0.099) and YTD is -47.67%.",
+      "drivers": [
+        "market cap $61.1B",
+        "1W drawdown -6.59%",
+        "1D drop -1.68%",
+        "large-cap relative stability"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "BNB has a large market cap of $74.9B and a 1Y return of -34%, better than most L1s, with a 1D drop of -3.09% and 1W drop of -10.09%, though news sentiment is negative (-0.116).",
+      "drivers": [
+        "market cap $74.9B",
+        "1Y return -34%",
+        "1D drop -3.09%",
+        "large-cap relative strength"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TON",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "TON has a moderate 1D drop of -1.33% and a market cap of $2.9B, with a 1Y return of -39% and 1M drop of -25.32%, showing some resilience in the emerging category.",
+      "drivers": [
+        "1D drop -1.33%",
+        "market cap $2.9B",
+        "1Y return -39%",
+        "emerging category resilience"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "POL has a relatively better 1Y return of -22% and YTD of -21.66% compared to most altcoins, with a 1M drop of -18.09% and 1W drop of -10.02%, supported by recent network upgrade and payment license news.",
+      "drivers": [
+        "1Y return -22%",
+        "YTD -21.66%",
+        "network upgrade catalyst",
+        "payment license expansion news"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "BTC has the largest market cap at $1,237.9B and is near a 5-month low at $61,544, with a 1Y return of -30% and YTD of -29.68%, but institutional rotation post-Anthropic IPO could support a gradual recovery.",
+      "drivers": [
+        "market cap $1,237.9B",
+        "near 5-month low",
+        "post-IPO rotation catalyst",
+        "1Y return -30%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "PEPE has a relatively better 1Y return of -11% and YTD of -11.01% compared to most assets, with a market cap of $1.5B, though 1W drop of -22.01% and 1D drop of -5.64% indicate high short-term volatility.",
+      "drivers": [
+        "1Y return -11%",
+        "YTD -11.01%",
+        "market cap $1.5B",
+        "high short-term volatility"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "RNDR",
+      "signal": "buy",
+      "confidence": 0.3,
+      "rationale": "RNDR has a positive 1Y return of +6% and YTD of +6.30%, with a market cap of $0.76B, though 1M drop of -27.20% and 1D drop of -5.07% show recent weakness amid AI sector rout.",
+      "drivers": [
+        "+6% 1Y return",
+        "+6.30% YTD",
+        "market cap $0.76B",
+        "AI sector exposure"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.25,
+      "rationale": "ICP has a 1Y return of -25% and YTD of -25.24%, with a market cap of $1.2B, and recent news of topping 319 billion transactions and 5,236 TPS shows network activity, though 1W drop of -18.73% and 1D drop of -6.21% indicate ongoing weakness.",
+      "drivers": [
+        "1Y return -25%",
+        "319B transactions milestone",
+        "5,236 TPS",
+        "market cap $1.2B"
+      ]
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TRX",
@@ -132,151 +265,6 @@ window.SIGNALS_DATA = {
         "-8.34% 1M (resilient)",
         "high risk -28.93% 1W",
         "low market cap $1.55B"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "NEAR",
-      "signal": "buy",
-      "confidence": 0.559,
-      "ytd": "+123.49%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +123.49% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +123.49% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TRX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "TRX is the only asset with positive YTD (+6.50%) and 1-year (+6%) returns, showing relative strength amid a market-wide downturn with Fear & Greed at 10.",
-      "drivers": [
-        "+6.5% YTD",
-        "positive 1-year return",
-        "lowest drawdown in universe",
-        "stable payment chain use case"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "XLM has the best 1-week performance (-3.78%) among major caps, with a -31% 1-year return that is less severe than peers, and a $4.9B market cap offering relative value.",
-      "drivers": [
-        "best 1-week return in top 20",
-        "moderate 1-year drawdown",
-        "low market cap relative to XRP",
-        "payment/settlement narrative"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BTC is the reference asset with $1.3T market cap; recent dip to $62k triggered whale accumulation (47k BTC added by large wallets) and short squeeze potential with $265M in short liquidations.",
-      "drivers": [
-        "largest market cap",
-        "whale accumulation at lows",
-        "short squeeze catalyst",
-        "mean-reversion potential to $70-72k"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "ICP shows strong 1-day momentum (+1.90%) and the best 1-week performance (-3.29%) among AI tokens, with a -21% 1-year return that is relatively resilient.",
-      "drivers": [
-        "+1.9% 1-day gain",
-        "best 1-week in AI category",
-        "resilient 1-year return",
-        "AI narrative catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "LINK has a -25% 1-year return, better than most altcoins, with a $6.8B market cap and neutral news sentiment (-0.065), positioning it as a relative safe haven in infrastructure.",
-      "drivers": [
-        "moderate 1-year drawdown",
-        "large market cap in infra",
-        "neutral news sentiment",
-        "oracle network utility"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "POL has the best 1-year return (-21%) among all infra assets, with a -15.09% 1-month decline that is less severe than peers, and zero news sentiment indicating no negative catalyst.",
-      "drivers": [
-        "best 1-year return in infra",
-        "moderate 1-month decline",
-        "neutral news sentiment",
-        "Polygon stablecoin expansion"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "TON is the only asset with a positive 1-week return (+5.59%) in the entire universe, signaling strong relative momentum despite a -36% 1-year return.",
-      "drivers": [
-        "only positive 1-week return",
-        "emerging L1 narrative",
-        "Telegram ecosystem catalyst",
-        "low market cap $3B"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "ETH",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "ETH has the second-largest market cap ($222B) and saw whale buying (72k ETH at $1,936), with a +1.71% 1-day gain and potential mean-reversion to $2,050-2,100.",
-      "drivers": [
-        "whale accumulation at lows",
-        "large market cap",
-        "mean-reversion potential",
-        "ETF outflows may reverse"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "BNB has a $77.9B market cap and a -31% 1-year return that is better than most L1s, with a +0.49% 1-day gain and resilience despite negative news sentiment.",
-      "drivers": [
-        "large market cap",
-        "moderate 1-year drawdown",
-        "exchange token utility",
-        "Binance ecosystem"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "PEPE has the best 1-year return (-7%) among memes and a relatively mild 1-month decline (-5.79%), with a $1.56B market cap offering high-beta upside if sentiment improves.",
-      "drivers": [
-        "best 1-year return in memes",
-        "mild 1-month decline",
-        "high-beta recovery play",
-        "low market cap"
       ]
     }
   ]

@@ -1,9 +1,154 @@
 {
-  "updated": "2026-11-18 08:04",
+  "updated": "2026-11-20 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "DNNGY",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Strong_buy analyst consensus (score 1.0) and highest news sentiment (0.339) support a buy, with +7.11% 1-month momentum and Revolution Wind reaching full commercial operations.",
+      "drivers": [
+        "strong_buy analyst (1.0)",
+        "news sentiment 0.339",
+        "+7.11% 1M momentum",
+        "Revolution Wind catalyst"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "SLB",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +21.11% and 1-year +38% with a strong analyst score of 1.53 and dividend yield 2.46%, supported by a recent dividend announcement [finance.yahoo.com](https://finance.yahoo.com/quote/SLB/news/).",
+      "drivers": [
+        "YTD +21.11%",
+        "1-year +38%",
+        "analyst score 1.53",
+        "dividend 2.46%"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +43.79% and 1-year +41% with an 8% dividend increase to $4.40 annual rate, record production, and strong free cash flow of $2.2B [investors.eogresources.com](https://investors.eogresources.com/2026-11-05-EOG-Resources-Reports-Third-Quarter-2026-Results-and-Raises-Regular-Dividend-8).",
+      "drivers": [
+        "YTD +43.79%",
+        "dividend +8%",
+        "record production",
+        "free cash flow $2.2B"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +37.29% and 1-year +37% with a low analyst score of 1.62, dividend yield 3.46%, and positive news sentiment 0.265.",
+      "drivers": [
+        "YTD +37.29%",
+        "analyst score 1.62",
+        "dividend 3.46%",
+        "news sentiment 0.265"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +32.62% and 1-year +37% with a high dividend yield of 4.54%, low P/E of 8.61, and minimal short interest of 0.19%.",
+      "drivers": [
+        "dividend 4.54%",
+        "P/E 8.61",
+        "short interest 0.19%",
+        "YTD +32.62%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +43.61% and 1-year +54% with a positive 1-day move (+0.21%), analyst score 2.07, and low short interest 1.35%.",
+      "drivers": [
+        "YTD +43.61%",
+        "1-year +54%",
+        "1D +0.21%",
+        "short interest 1.35%"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1-month momentum +6.25% and DOJ closing antitrust probe on its Dominion deal provide a catalyst, with analyst score 1.91 and dividend yield 2.94%.",
+      "drivers": [
+        "1M +6.25%",
+        "DOJ probe closed",
+        "analyst 1.91",
+        "dividend 2.94%"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Record \u00a32.6bn investment (up 63%) and adjusted operating profit up 68% drive momentum, with YTD +14.95%, analyst score 1.88, and dividend 2.64% [sse.com](https://www.sse.com/news-and-views/2026/11/sse-invests-record-26bn-as-33bn-electricity-infrastructure-plan-gathers-pace/).",
+      "drivers": [
+        "record \u00a32.6bn investment",
+        "YTD +14.95%",
+        "analyst 1.88",
+        "dividend 2.64%"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Egypt 50-well contract and 27% undervaluation per analyst targets, with YTD +8.68%, 1-year +23%, and analyst score 1.68 [simplywall.st](https://simplywall.st/stocks/us/energy/nyse-hal/halliburton/news/halliburton-hal-what-is-behind-the-fresh-attention).",
+      "drivers": [
+        "Egypt 50-well contract",
+        "27% undervalued",
+        "analyst 1.68",
+        "1-year +23%"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "BP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Highest dividend yield in universe at 4.81% with YTD +26.51%, low short interest 0.31%, and portfolio streamlining catalyst.",
+      "drivers": [
+        "dividend 4.81%",
+        "YTD +26.51%",
+        "short interest 0.31%",
+        "portfolio streamlining"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.57,
+      "ytd": "+126.01%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +126.01% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +126.01% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "EOG",
@@ -132,162 +277,6 @@
         "news sentiment 0.339",
         "1M momentum +11.85%",
         "Revolution Wind operational"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.644,
-      "ytd": "+142.34%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +142.34% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +142.34% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "VLO",
-      "signal": "buy",
-      "confidence": 0.558,
-      "ytd": "+123.31%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +123.31% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +123.31% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "EOG",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "EOG has strong momentum (+52.29% YTD, +7.61% 1W, +3.37% 1M), a low P/E of 10.22, and recently beat Q3 earnings estimates by $0.42 EPS; Barclays raised its price target to $168 and UBS to $190, with a consensus 'Buy' rating.",
-      "drivers": [
-        "+52.29% YTD",
-        "P/E 10.22",
-        "Q3 EPS beat",
-        "Price target raised to $168"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SLB",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "SLB shows strong momentum (+30.64% YTD, +6.51% 1M, +3.51% 1W) with a 'Strong Buy' consensus (an_score 1.53) and recently won a subsea contract for the Lyra field from Aker BP; analysts see 21% upside to a mean target of $62.61.",
-      "drivers": [
-        "+30.64% YTD",
-        "Strong Buy consensus",
-        "Aker BP contract win",
-        "21% upside to target"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "TotalEnergies offers a compelling mix of momentum (+39.52% YTD, +1.23% 1M, +3.32% 1W), a low P/E of 9.06, and a 'Buy' consensus (an_score 2.0) with very low short interest of 0.19%.",
-      "drivers": [
-        "+39.52% YTD",
-        "P/E 9.06",
-        "Low short interest 0.19%",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Chevron has strong YTD performance (+44.98%), a low P/E of 16.14, and positive news sentiment (0.314) with a 'Buy' consensus (an_score 1.62) and low short interest of 1.35%.",
-      "drivers": [
-        "+44.98% YTD",
-        "P/E 16.14",
-        "Positive news sentiment",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "ConocoPhillips has excellent momentum (+50.38% YTD, +4.41% 1W, +1.59% 1D) with a reasonable P/E of 14.99, a 2.61% dividend yield, and a 'Buy' consensus (an_score 2.07).",
-      "drivers": [
-        "+50.38% YTD",
-        "P/E 14.99",
-        "Dividend yield 2.61%",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Halliburton shows strong short-term momentum (+6.09% 1W, +3.11% 1D) and a low P/E of 14.19, with a 'Buy' consensus (an_score 1.68) and a recent 50-well programme agreement with Egypt's EGPC.",
-      "drivers": [
-        "+6.09% 1W",
-        "P/E 14.19",
-        "Buy consensus",
-        "Egypt well programme"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "SSE has solid momentum (+22.48% YTD, +8.67% 1M, +3.13% 1W) with a 'Buy' consensus (an_score 1.88), a 2.51% dividend yield, and positive news sentiment (0.288).",
-      "drivers": [
-        "+22.48% YTD",
-        "+8.67% 1M",
-        "Dividend yield 2.51%",
-        "Buy consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "NextEra Energy has strong one-month momentum (+8.61%) and a low P/E of 15.34, with a 'Buy' consensus (an_score 1.91) and positive news sentiment (0.158).",
-      "drivers": [
-        "+8.61% 1M",
-        "P/E 15.34",
-        "Buy consensus",
-        "Positive news sentiment"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "DNNGY",
-      "signal": "strong_buy",
-      "confidence": 0.62,
-      "rationale": "DNNGY has strong one-month momentum (+12.08%) and the most bullish analyst consensus in the universe ('strong_buy', an_score 1.0), with positive news sentiment (0.339) and Revolution Wind reaching full commercial operations.",
-      "drivers": [
-        "+12.08% 1M",
-        "Strong Buy consensus",
-        "Positive news sentiment",
-        "Revolution Wind operational"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Brookfield Renewable Corp shows strong one-month momentum (+9.06%) with positive news sentiment (0.204) and record FFO growth reported in Q3 2026 earnings, though it has a 'hold' consensus (an_score 2.86).",
-      "drivers": [
-        "+9.06% 1M",
-        "Positive news sentiment",
-        "Record FFO growth",
-        "Q3 earnings beat"
       ]
     }
   ]

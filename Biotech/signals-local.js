@@ -1,9 +1,154 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-18 08:03",
+  "updated": "2026-11-20 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "REGN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Regeneron's FDA approval of Livsayis (cemdisiran) for gMG and positive ASH data for Ordspono/Lynozyfic drive strong momentum (+14.35% 1M, +19.40% YTD) with a P/E of 20.41 and positive news sentiment of 0.279.",
+      "drivers": [
+        "FDA approval for Livsayis in gMG",
+        "Positive ASH data for Ordspono/Lynozyfic",
+        "Strong 1M momentum +14.35%",
+        "Attractive P/E 20.41"
+      ]
+    },
+    {
+      "rank": 2,
+      "ticker": "AMGN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Amgen's positive Phase 3 results for dazodalibep in Sj\u00f6gren's disease and Piper Sandler price target raise to $542 highlight pipeline potential, with a P/E of 25.44 and strong YTD return of +36.67%.",
+      "drivers": [
+        "Phase 3 success for dazodalibep in Sj\u00f6gren's",
+        "Piper Sandler target raise to $542",
+        "YTD +36.67%",
+        "P/E 25.44"
+      ]
+    },
+    {
+      "rank": 3,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "BioMarin's revenue growth of 60% since 2023 and Amicus acquisition ahead of schedule support a positive outlook, with 1M momentum of +8.82%, 1W momentum of +8.32%, and analyst consensus 'buy' (score 1.68).",
+      "drivers": [
+        "Revenue up 60% since 2023",
+        "Amicus acquisition ahead of schedule",
+        "1M momentum +8.82%",
+        "Analyst consensus 'buy'"
+      ]
+    },
+    {
+      "rank": 4,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Gilead's strong YTD return of +39.41% and 1M momentum of +6.40% are supported by positive news sentiment of 0.172 and a 'buy' analyst rating (score 1.68), with HIV prevention expansion as a key catalyst.",
+      "drivers": [
+        "YTD +39.41%",
+        "1M momentum +6.40%",
+        "HIV prevention expansion",
+        "Analyst 'buy' rating"
+      ]
+    },
+    {
+      "rank": 5,
+      "ticker": "VRTX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Vertex's strong fundamentals with a P/E of 33.5, low beta of 0.28, and analyst consensus 'buy' (score 1.62) are supported by positive news sentiment of 0.218 and YTD return of +15.16%.",
+      "drivers": [
+        "Analyst consensus 'buy'",
+        "Low beta 0.28",
+        "Positive news sentiment 0.218",
+        "YTD +15.16%"
+      ]
+    },
+    {
+      "rank": 6,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Eli Lilly's YTD return of +25.82% and 1M momentum of +5.38% are backed by strong news sentiment of 0.298 and a 'buy' analyst rating (score 1.65), with Jefferies' highest target on the stock.",
+      "drivers": [
+        "YTD +25.82%",
+        "1M momentum +5.38%",
+        "Jefferies highest target",
+        "Analyst 'buy' rating"
+      ]
+    },
+    {
+      "rank": 7,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Exelixis shows exceptional YTD return of +51.06% and 1Y return of +63%, with a P/E of 19.71 and positive news sentiment of 0.116, though high short interest of 14.42% adds risk.",
+      "drivers": [
+        "YTD +51.06%",
+        "1Y return +63%",
+        "P/E 19.71",
+        "Positive news sentiment 0.116"
+      ]
+    },
+    {
+      "rank": 8,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Biogen's 1Y return of +49% and YTD of +38.98% are strong, with a low beta of 0.086 and analyst 'buy' rating (score 1.78), though a high P/E of 106.98 and short interest of 4.11% warrant caution.",
+      "drivers": [
+        "1Y return +49%",
+        "YTD +38.98%",
+        "Low beta 0.086",
+        "Analyst 'buy' rating"
+      ]
+    },
+    {
+      "rank": 9,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "COAG has strong 1M momentum of +16.65% and 1W momentum of +1.22%, with a 'strong_buy' analyst consensus (score 1.14) and YTD return of +17.24%, though lack of P/E and beta data adds uncertainty.",
+      "drivers": [
+        "1M momentum +16.65%",
+        "Analyst 'strong_buy' consensus",
+        "YTD +17.24%",
+        "Pivotal SOLARA trial"
+      ]
+    },
+    {
+      "rank": 10,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "AstraZeneca's 1M momentum of +7.29% and P/E of 24.96 are supported by a 'buy' analyst rating (score 1.62), though YTD is slightly negative at -2.10% and news sentiment is negative at -0.098.",
+      "drivers": [
+        "1M momentum +7.29%",
+        "P/E 24.96",
+        "Analyst 'buy' rating",
+        "Large-cap stability"
+      ]
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+545.92%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +545.92% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +545.92% \u2265 256.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "REGN",
@@ -132,151 +277,6 @@ window.SIGNALS_DATA = {
         "analyst consensus buy (score 1.68)",
         "$2.6B sales potential from pipeline",
         "attractive market cap $11.3B"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+570.12%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +570.12% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +570.12% \u2265 256.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "LLY shows strong momentum (+19.57% 1M, +34.42% YTD) with a P/E of 46.85, positive analyst consensus (buy, an_score 1.65), and recent news highlights three upcoming FDA decisions that could act as catalysts.",
-      "drivers": [
-        "+19.57% 1M momentum",
-        "buy analyst consensus (1.65)",
-        "upcoming FDA catalysts",
-        "low short interest 0.81%"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "REGN",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "REGN has exceptional 1M momentum (+22.75%) and a low P/E of 21.12, supported by a buy analyst consensus (an_score 1.79) and low beta of 0.095, indicating strong risk-adjusted performance.",
-      "drivers": [
-        "+22.75% 1M momentum",
-        "low P/E 21.12",
-        "buy analyst consensus (1.79)",
-        "low beta 0.095"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "EXEL has outstanding YTD performance (+58.33%) and a reasonable P/E of 20.66, with two major catalysts expected by March 2027, though high short interest (14.42%) and negative news sentiment (-0.309) warrant caution.",
-      "drivers": [
-        "+58.33% YTD return",
-        "P/E 20.66",
-        "two major catalysts by March 2027",
-        "high short interest 14.42%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "AZN surged +17.54% in the last month after strong Q3 earnings (revenue $16.2B, core EPS $2.79 beating estimates), with a buy analyst consensus (an_score 1.62) and a P/E of 26.53.",
-      "drivers": [
-        "+17.54% 1M momentum",
-        "Q3 earnings beat (revenue $16.2B)",
-        "buy analyst consensus (1.62)",
-        "P/E 26.53"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "GILD has strong YTD performance (+40.71%) and a buy analyst consensus (an_score 1.68), with positive news sentiment (0.249) and low short interest (1.72%), though P/E is not available.",
-      "drivers": [
-        "+40.71% YTD return",
-        "buy analyst consensus (1.68)",
-        "positive news sentiment 0.249",
-        "low short interest 1.72%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "AMGN has strong YTD momentum (+45.04%) and positive Phase 3 results for dazodalibep in Sj\u00f6gren's disease, with a P/E of 27.0 and a hold analyst consensus (an_score 2.71).",
-      "drivers": [
-        "+45.04% YTD return",
-        "positive Phase 3 dazodalibep results",
-        "P/E 27.0",
-        "low beta 0.417"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "BIIB shows strong YTD momentum (+42.50%) and a buy analyst consensus (an_score 1.78), but has a high P/E of 109.7 and elevated short interest (4.11%), indicating some risk.",
-      "drivers": [
-        "+42.50% YTD return",
-        "buy analyst consensus (1.78)",
-        "high P/E 109.7",
-        "short interest 4.11%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "NVO",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "NVO has attractive valuation with a P/E of 10.51 and a 4.32% dividend yield, with positive 1M momentum (+9.21%) and low short interest (1.21%), though YTD is negative (-16.57%).",
-      "drivers": [
-        "low P/E 10.51",
-        "dividend yield 4.32%",
-        "+9.21% 1M momentum",
-        "low short interest 1.21%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "GSK",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "GSK offers a solid dividend yield of 3.56% with a P/E of 17.86 and positive news sentiment (0.136), though YTD return is modest (+4.40%) and analyst consensus is hold (an_score 2.61).",
-      "drivers": [
-        "dividend yield 3.56%",
-        "P/E 17.86",
-        "positive news sentiment 0.136",
-        "+9.05% 1M momentum"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "COAG has exceptional 1M momentum (+36.47%) and a strong_buy analyst consensus (an_score 1.14), with a pivotal SOLARA trial catalyst, but high volatility (-16.65% 1W) and no P/E data add risk.",
-      "drivers": [
-        "+36.47% 1M momentum",
-        "strong_buy analyst consensus (1.14)",
-        "pivotal SOLARA trial catalyst",
-        "high weekly volatility -16.65%"
       ]
     }
   ]
