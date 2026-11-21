@@ -203,6 +203,8 @@ Results appear in `signals-local.json` per sector under the `momentum` key and a
 
 **Since #70 (variant `live-2`) the screen never changes an AI pick.** It used to upgrade `buy` → `strong_buy` and raise confidence; now `signal_meta.annotate_momentum()` only records `pre_momentum_label` (the AI's label), `post_momentum_label` (the same), `momentum_label` and `momentum_score` on each pick. Every run also carries `variant`, `prompt_version`, `code_commit` and `input_version` from `signal_meta.run_meta()`. **Bump `signal_meta.VARIANT` whenever the signal recipe changes on purpose**, so the track record can compare versions. Tell the portfolio via `FROM_STOCKS.md` (portfolio repo) before changing what `signal` means.
 
+**Shadow trial (#92, until 20 Feb 2027).** Every live run also calls the AI once more with `signal_meta.SHADOW_ADDENDUM` appended ("be wary of stocks that have just jumped"), and writes `<Sector>/signals-shadow.json` (variant `shadow-runup-1`). Shadow picks are recorded in D1 under `<sector>:<time>:shadow-runup-1` but are **never shown, exported or counted** in live track-record figures; `track_record.shadow_result()` applies the frozen rule from #92 and reveals the result only on the decision date. Don't change the addendum, the rule or `track_record.SHADOW` while the trial runs: that would void it. A failed shadow call is logged and skipped; it can't affect the live run.
+
 ## Portfolio dashboard (separate private repo)
 
 The portfolio dashboard and daily email live in the **private** repo `KobiLDN/portfolio-private` (its own `AGENTS.md` describes the dashboard). It runs on GitHub Actions (`daily-portfolio.yml`), started by cron-job.org — 07:30 daily, 09:00 + 15:30 weekdays (London). T212 keys are secrets there, never here.
