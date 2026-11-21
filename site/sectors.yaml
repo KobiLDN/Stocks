@@ -99,7 +99,7 @@ signals:
     - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing deal announcements, analyst upgrades, earnings surprises and price target changes that happened since the last data pull.
     - <code>AI_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
     - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python AI_generate_signals_local.py</code> locally to generate fresh signals on demand.
-    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
+    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Signals are one input among many — always do your own research before making any investment decision.
     refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python AI_generate_signals_local.py</code> locally
   Biotech:
     page_title: Biotech
@@ -247,7 +247,7 @@ signals:
     - Before ranking, the model is directed to search online for the latest news on the top highest-momentum assets — surfacing Bitcoin price moves, Layer 1 ecosystem news, Payments network updates, Emerging L1 developments, regulatory news, and exchange volume shifts.
     - <code>Crypto_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each coin across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
     - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Crypto_generate_signals_local.py</code> locally to generate fresh signals on demand.
-    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
+    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Signals are one input among many — always do your own research before making any investment decision.
     refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Crypto_generate_signals_local.py</code> locally
   Defence:
     page_title: Defence &amp; Aerospace
@@ -487,7 +487,7 @@ signals:
     - Before ranking, the model is directed to search online for the latest news on the top 10 highest-momentum stocks — surfacing deal announcements, analyst upgrades, earnings surprises and price target changes that happened since the last data pull.
     - <code>Tech_generate_signals_local.py</code> sends the full dataset to <code>deepseek/deepseek-v4-flash</code> via OpenRouter with the web search plugin enabled. The model scores each stock across momentum, fundamentals, analyst consensus and live news sentiment, then returns a ranked top 10 in JSON.
     - The full pipeline runs automatically every Monday, Wednesday and Friday. You can also trigger it manually from the GitHub Actions tab, or run <code>python Tech_generate_signals_local.py</code> locally to generate fresh signals on demand.
-    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
+    disclaimer: The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Signals are one input among many — always do your own research before making any investment decision.
     refresh_note: Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Tech_generate_signals_local.py</code> locally
 metrics_base_tips:
   price:

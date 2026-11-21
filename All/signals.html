@@ -259,10 +259,10 @@
     html += '</div></div>';
 
     html += '<div class="how-toggle" onclick="toggleHow(this)"><span class="toggle-icon">▶</span> How it works</div>';
-    html += '<div class="how-box"><strong>Model:</strong> ' + esc(model) + '. Scores each stock on momentum (1M + 3M return), fundamental quality (P/E, growth, margins) and recent news sentiment. Picks are updated 3× daily at 08:00, 14:30 and 20:30 UTC on weekdays. <strong>Not financial advice.</strong></div>';
+    html += '<div class="how-box"><strong>Model:</strong> ' + esc(model) + '. Scores each stock on momentum (1M + 3M return), fundamental quality (P/E, growth, margins) and recent news sentiment. Picks are updated Monday, Wednesday and Friday at 08:00 London time. They are candidates to research, not recommendations: so far they have roughly matched the S&amp;P 500 (see the <a href="../track-record.html">Track Record</a>). <strong>Not financial advice.</strong></div>';
 
     if (picks.length) {
-      html += '<div class="section-label">Top Picks</div>';
+      html += '<div class="section-label">AI candidates</div>';
       html += '<div class="picks-grid">';
       picks.forEach((p, i) => {
         const name = nameMap[p.ticker] || p.ticker;
@@ -289,7 +289,7 @@
 
     if (momentum.length) {
       html += '<div class="momentum-section">';
-      html += '<div class="section-label">Momentum Screener</div>';
+      html += '<div class="section-label" title="Not picked by the AI: listed only because they have already risen a lot. On the track record these did worst.">Already up a lot — not buy signals</div>';
       html += '<div class="momentum-grid">';
       momentum.forEach(p => {
         const name = nameMap[p.ticker] || p.ticker;
@@ -322,8 +322,8 @@
     if (!allMomentum.length) return '';
 
     let html = '<div class="sector-block">';
-    html += '<div class="sector-heading"><div><h2>All Sectors <span style="color:var(--accent)">Momentum Screener</span></h2>';
-    html += '<div class="sector-meta">' + allMomentum.length + ' stocks across all sectors</div></div></div>';
+    html += '<div class="sector-heading"><div><h2>All Sectors <span style="color:var(--accent)">Already up a lot</span></h2>';
+    html += '<div class="sector-meta">' + allMomentum.length + ' stocks flagged only for big recent gains. Not buy signals: on the track record, buying straight after a big run-up did worst.</div></div></div>';
     html += '<div class="momentum-grid">';
     allMomentum.forEach(p => {
       const name = p.nameMap[p.ticker] || p.ticker;

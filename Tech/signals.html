@@ -99,6 +99,9 @@
     white-space: nowrap;
   }
   .signal-strong_buy { background: rgba(0,230,118,0.18); color: var(--green); border: 1px solid rgba(0,230,118,0.45); }
+  .signal-runup      { background: rgba(255,171,64,0.12); color: var(--amber); border: 1px solid rgba(255,171,64,0.4); }
+  .signals-note { font-size: 13px; color: var(--muted); margin: 0 0 14px; line-height: 1.5; }
+  .signals-note a { color: var(--accent); }
   .signal-buy        { background: rgba(163,230,53,0.15); color: var(--lime);  border: 1px solid rgba(163,230,53,0.4); }
 
   .conf-wrap {
@@ -431,7 +434,7 @@
       </div>
 
       <div class="how-footer-note">
-        <span>Not financial advice.</span> The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Confidence scores are the model's own estimate, not a guarantee. Signals are one input among many — always do your own research before making any investment decision.
+        <span>Not financial advice.</span> The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. Signals are one input among many — always do your own research before making any investment decision.
       </div>
 
       <div class="how-refresh-note">Auto-refreshed Mon / Wed / Fri · 08:00 BST (07:00 UTC) · GitHub Actions · or run <code>python Tech_generate_signals_local.py</code> locally</div>
@@ -497,10 +500,6 @@
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
-  function signalLabel(s) {
-    return (s || '').replace('_', ' ').toUpperCase();
-  }
-
   /* Build a ticker -> category map from prices-data.js so the
      category badge is correct even if the signals payload didn't
      carry it (it currently doesn't). */
@@ -550,7 +549,8 @@
       data.previous_picks.forEach(p => { prevRank[p.ticker] = p.rank; });
     }
 
-    let html = data.picks.map(p => {
+    let html = '<p class="signals-note">AI candidates to research, not recommendations. So far, picks have roughly matched the S&amp;P 500 rather than beaten it — see the <a href="../track-record.html">Track Record</a>.</p>';
+    html += data.picks.map(p => {
       const t = p.ticker || '';
       const name = nameFor[t] || NAMES[t] || t;
       const cat  = catFor[t] || '';
@@ -558,10 +558,6 @@
       const catBadge = cat
         ? '<span class="cat-badge cat-' + cat + '">' + catLabel + '</span>'
         : '';
-
-      const signalCls = 'signal-' + (p.signal || '');
-      const conf = Math.max(0, Math.min(1, Number(p.confidence) || 0));
-      const confPct = Math.round(conf * 100) + '%';
 
       const drivers = (Array.isArray(p.drivers) ? p.drivers : [])
         .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
@@ -587,12 +583,7 @@
             '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
             '<span class="company">' + escapeHtml(name) + '</span>' +
             catBadge +
-            '<span class="signal-pill ' + signalCls + '">' + escapeHtml(signalLabel(p.signal)) + '</span>' +
-          '</div>' +
-          '<div class="conf-wrap">' +
-            '<a class="conf-label" href="../glossary.html#conf" title="The AI\'s own guess, not a measured chance. Click for details." style="text-decoration:underline dotted;text-underline-offset:3px;color:inherit">Confidence</a>' +
-            '<div class="conf-bar"><div class="conf-fill" style="width:' + confPct + '"></div></div>' +
-            '<span class="conf-pct">' + confPct + '</span>' +
+            '<span class="signal-pill signal-buy">BUY</span>' +
           '</div>' +
           '<div class="rationale">' + escapeHtml(p.rationale || '') + '</div>' +
           (drivers ? '<div class="drivers">' + drivers + '</div>' : '') +
@@ -602,7 +593,8 @@
 
     const momPicks = Array.isArray(data.momentum_picks) ? data.momentum_picks : [];
     if (momPicks.length) {
-      html += '<div class="momentum-divider">// Momentum Screener</div>';
+      html += '<div class="momentum-divider">// Already up a lot — not buy signals</div>' +
+        '<p class="signals-note">These weren\'t picked by the AI. They\'re listed only because they\'ve risen 50%+ this year or 200%+ in a year. On the track record, stocks bought straight after a big run-up did worst.</p>';
       html += momPicks.map((p, i) => {
         const t = p.ticker || '';
         const name = nameFor[t] || NAMES[t] || t;
@@ -611,9 +603,6 @@
         const catBadge = cat
           ? '<span class="cat-badge cat-' + cat + '">' + catLabel + '</span>'
           : '';
-        const signalCls = 'signal-' + (p.signal || '');
-        const conf = Math.max(0, Math.min(1, Number(p.confidence) || 0));
-        const confPct = Math.round(conf * 100) + '%';
         const drivers = (Array.isArray(p.drivers) ? p.drivers : [])
           .map(d => '<span class="driver-chip">' + escapeHtml(d) + '</span>')
           .join('');
@@ -624,12 +613,7 @@
               '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
               '<span class="company">' + escapeHtml(name) + '</span>' +
               catBadge +
-              '<span class="signal-pill ' + signalCls + '">' + escapeHtml(signalLabel(p.signal)) + '</span>' +
-            '</div>' +
-            '<div class="conf-wrap">' +
-              '<a class="conf-label" href="../glossary.html#conf" title="The AI\'s own guess, not a measured chance. Click for details." style="text-decoration:underline dotted;text-underline-offset:3px;color:inherit">Confidence</a>' +
-              '<div class="conf-bar"><div class="conf-fill" style="width:' + confPct + '"></div></div>' +
-              '<span class="conf-pct">' + confPct + '</span>' +
+              '<span class="signal-pill signal-runup" title="Flagged only because it has already risen a lot. Not a buy signal: on the track record these did worst.">UP A LOT</span>' +
             '</div>' +
             '<div class="rationale">' + escapeHtml(p.rationale || '') + '</div>' +
             (drivers ? '<div class="drivers">' + drivers + '</div>' : '') +
