@@ -1,13 +1,209 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-21 22:33",
+  "updated": "2026-11-21 22:58",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "c3dc41ba267d",
-  "code_commit": "9210dadafdfb",
+  "code_commit": "5e79e7837456",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Positive 1-month momentum (+3.70%) and 1-day gain (+1.69%) amid broad sell-off, low beta (0.842), strong buy consensus, and high dividend yield (3.95%) with positive news sentiment (0.315).",
+      "drivers": [
+        "+3.70% 1M momentum",
+        "low beta 0.842",
+        "strong_buy consensus",
+        "3.95% dividend yield"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "EQIX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong YTD return (+29.29%), strong_buy analyst consensus, positive news sentiment (0.234), and resilient data center demand despite macro headwinds.",
+      "drivers": [
+        "+29.29% YTD",
+        "strong_buy consensus",
+        "news sentiment 0.234",
+        "data center demand"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Modest YTD gain (+3.30%), low beta (1.045), reasonable P/E (25.29), strong_buy consensus, and hyperscaler stability amid AI infrastructure sell-off.",
+      "drivers": [
+        "P/E 25.29",
+        "low beta 1.045",
+        "strong_buy consensus",
+        "+3.30% YTD"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Attractive P/E (19.95), positive YTD (+8.97%), strong_buy consensus, and dominant cloud/AI position; slight negative news sentiment (-0.051) offset by fundamentals.",
+      "drivers": [
+        "P/E 19.95",
+        "+8.97% YTD",
+        "strong_buy consensus",
+        "cloud/AI dominance"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "RR.",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Positive YTD (+6.32%), strong_buy consensus, reasonable P/E (35.35), and nuclear energy exposure benefiting from data center power demand.",
+      "drivers": [
+        "+6.32% YTD",
+        "strong_buy consensus",
+        "P/E 35.35",
+        "nuclear energy catalyst"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "BEP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Positive YTD (+7.99%), low beta (0.955), high dividend yield (5.22%), buy consensus, and positive news sentiment (0.261) as a defensive energy play.",
+      "drivers": [
+        "+7.99% YTD",
+        "5.22% dividend yield",
+        "low beta 0.955",
+        "news sentiment 0.261"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Very low P/E (13.85) among hyperscalers, strong_buy consensus, and potential value opportunity despite negative YTD (-15.66%); positive news sentiment (0.173).",
+      "drivers": [
+        "P/E 13.85",
+        "strong_buy consensus",
+        "news sentiment 0.173",
+        "value opportunity"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Massive YTD gain (+119.84%) and $95B AI server backlog, but recent sharp decline (-19.30% 1W) due to Nvidia overhang; buy consensus and upcoming earnings catalyst on Nov 24.",
+      "drivers": [
+        "+119.84% YTD",
+        "$95B AI backlog",
+        "buy consensus",
+        "earnings catalyst Nov 24"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": "buy",
+      "momentum_score": 0.542
+    },
+    {
+      "rank": 9,
+      "ticker": "CEG",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Attractive P/E (19.08), positive news sentiment (0.339), buy consensus, and Barclays sees 45% upside; negative YTD (-34.79%) but nuclear power demand for AI is a long-term driver.",
+      "drivers": [
+        "P/E 19.08",
+        "news sentiment 0.339",
+        "Barclays 45% upside",
+        "nuclear AI demand"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "VST",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Low P/E (15.57), strong_buy consensus, positive news sentiment (0.267), and nuclear operations exposure; negative YTD (-29.94%) but potential rebound as AI power needs grow.",
+      "drivers": [
+        "P/E 15.57",
+        "strong_buy consensus",
+        "news sentiment 0.267",
+        "nuclear power catalyst"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.59,
+      "ytd": "+130.32%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.32% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.32% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "buy",
+      "confidence": 0.561,
+      "ytd": "+123.93%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +123.93% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +123.93% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMZN",
@@ -177,159 +373,6 @@ window.SIGNALS_DATA = {
       "post_momentum_label": "buy",
       "momentum_label": null,
       "momentum_score": null
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.59,
-      "ytd": "+130.32%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.32% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.32% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "MXL",
-      "signal": "buy",
-      "confidence": 0.561,
-      "ytd": "+123.93%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +123.93% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +123.93% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "EQIX",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Record Q3 annualized bookings of $533M (+35% YoY) and raised 2026 guidance underscore surging AI demand; Raymond James reiterated Strong Buy with $250 target, and Mizuho sees 25%+ upside with an Outperform rating. [investing.com](https://www.investing.com/news/analyst-ratings/raymond-james-reiterates-strong-buy-on-equinix-stock-250-target-93CH-5032996) [investing.com](https://www.investing.com/news/stock-market-news/equinix-gains-as-record-bookings-bolster-ai-data-centre-growth-outlook-4996822)",
-      "drivers": [
-        "+35% YoY bookings growth",
-        "raised FY2026 guidance",
-        "strong_buy consensus",
-        "positive news sentiment 0.103"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "AWS net sales surged 39% YoY to $46B, the fastest growth in nearly five years, with operating margin hitting a record 13.9%; strong_buy consensus and a P/E of 20.8 offer compelling value for a hyperscaler. [ir.aboutamazon.com](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/)",
-      "drivers": [
-        "AWS +39% YoY",
-        "record operating margin 13.9%",
-        "P/E 20.8",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "CORZ",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Q3 colocation revenue surged nearly 60% sequentially to $215.4M, with Adjusted EBITDA more than tripling to $133.6M and margins expanding to 57%; strong_buy consensus with a top analyst score of 1.32. [investors.corescientific.com](https://investors.corescientific.com/news-events/press-releases/detail/146/core-scientific-announces-third-quarter-2026-results)",
-      "drivers": [
-        "colocation revenue +60% QoQ",
-        "Adjusted EBITDA tripled",
-        "margin 57%",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "DLR",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD return of +14.55% with near-zero short interest (0.01%) and a strong_buy consensus; the 2.8% dividend yield adds income stability while data center demand remains robust.",
-      "drivers": [
-        "+14.55% YTD",
-        "short interest 0.01%",
-        "strong_buy consensus",
-        "dividend yield 2.8%"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AMT",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Positive news sentiment of 0.269 and a strong_buy consensus support the stock; a P/E of 25.5 and a 3.95% dividend yield provide a balanced risk/reward profile in the DC operator space.",
-      "drivers": [
-        "news sentiment 0.269",
-        "strong_buy consensus",
-        "P/E 25.5",
-        "dividend yield 3.95%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BEP",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Up +6.31% in the past month and +11.29% YTD, with a low beta of 0.955 and a high dividend yield of 5.13%; short interest is minimal at 0.71%, indicating limited bearish pressure.",
-      "drivers": [
-        "+6.31% 1M momentum",
-        "beta 0.955",
-        "dividend yield 5.13%",
-        "short interest 0.71%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Up +6.65% in the past month with a 5.05% dividend yield, but a hold consensus (an_score 2.86) and negative YTD performance (-21.23%) temper conviction; included for its recent momentum and yield.",
-      "drivers": [
-        "+6.65% 1M momentum",
-        "dividend yield 5.05%",
-        "hold consensus"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TLN",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Positive 1M momentum (+1.85%) and strong_buy consensus despite a high short interest of 10.86%; news sentiment of 0.227 suggests improving sentiment around nuclear operations.",
-      "drivers": [
-        "+1.85% 1M momentum",
-        "strong_buy consensus",
-        "news sentiment 0.227"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "CEG",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "P/E of 20.3 is attractive for a nuclear operator, and news sentiment of 0.176 is positive; the -30.78% YTD decline may offer a contrarian entry, supported by a buy consensus.",
-      "drivers": [
-        "P/E 20.3",
-        "news sentiment 0.176",
-        "buy consensus"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "RR.",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "Strong_buy consensus with a 0.9% dividend yield and positive news sentiment of 0.095; the +10.79% YTD return and low beta of 1.291 provide stability in the nuclear operations category.",
-      "drivers": [
-        "strong_buy consensus",
-        "dividend yield 0.9%",
-        "beta 1.291",
-        "news sentiment 0.095"
-      ]
     }
   ]
 };

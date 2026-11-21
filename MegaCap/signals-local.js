@@ -1,13 +1,186 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-21 22:34",
+  "updated": "2026-11-21 23:05",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "4fe5ed0c16db",
-  "code_commit": "9210dadafdfb",
+  "code_commit": "5e79e7837456",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "COST",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +29.74%, 1M +10.56%, P/E 53.09 \u2014 strong momentum driven by a $30 special dividend ($13.3B payout), outage-driven demand surge per Mizuho, and a reauthorized $4B buyback [investor.costco.com](https://investor.costco.com/news/news-details/2026/Costco-Wholesale-Corporation-Declares-30-Special-Cash-Dividend-and-Reauthorizes-Stock-Repurchase-Program/default.aspx) [investing.com](https://www.investing.com/news/stock-market-news/costco-sees-demand-lift-from-outagedriven-stockpiling-mizuho-says-5034318).",
+      "drivers": [
+        "+29.74% YTD",
+        "+10.56% 1M",
+        "$30 special dividend",
+        "outage-driven demand"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "KO",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "YTD +43.05%, 1Y +32%, P/E 28.61, low beta 0.27 \u2014 exceptional defensive momentum with strong consumer staples demand and a 2.21% dividend yield.",
+      "drivers": [
+        "+43.05% YTD",
+        "+32% 1Y",
+        "low beta 0.27",
+        "2.21% dividend yield"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +22.92%, 1M +8.70%, P/E 25.51, dividend yield 2.59% \u2014 strong consumer staples momentum with positive news sentiment (0.329) and reliable income.",
+      "drivers": [
+        "+22.92% YTD",
+        "+8.70% 1M",
+        "2.59% dividend yield",
+        "positive news sentiment 0.329"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "JNJ",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD +32.54%, 1Y +31%, 1M +4.92%, P/E 41.04 \u2014 strong healthcare momentum bolstered by the $2.2B acquisition of Ollin Biosciences for a Phase 3 bispecific antibody in ophthalmology [jnj.com](https://www.jnj.com/media-center/press-releases/johnson-johnson-to-acquire-ollin-biosciences-and-late-stage-bispecific-antibody-with-best-in-class-potential-in-ophthalmology).",
+      "drivers": [
+        "+32.54% YTD",
+        "+31% 1Y",
+        "+4.92% 1M",
+        "Ollin Biosciences acquisition"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +25.45%, 1Y +28%, 1M +6.14%, P/E 43.72 \u2014 GLP-1 leader with strong momentum and low beta 0.39, supported by ObesityWeek catalysts and pipeline optimism.",
+      "drivers": [
+        "+25.45% YTD",
+        "+28% 1Y",
+        "+6.14% 1M",
+        "GLP-1 market leader"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "WMT",
+      "signal": "strong_buy",
+      "confidence": 0.79,
+      "rationale": "YTD +14.19%, 1M +8.62%, P/E 46.36, analyst consensus strong_buy (score 1.50) \u2014 defensive retail giant with positive news sentiment (0.382) and resilient consumer spending trends.",
+      "drivers": [
+        "+14.19% YTD",
+        "+8.62% 1M",
+        "strong_buy consensus",
+        "positive news sentiment 0.382"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "YTD +14.72%, 1Y +13%, 1M +5.75%, P/E 15.95 \u2014 diversified conglomerate with low beta 0.57, benefiting from recent portfolio moves (Lennar stake increase, IPO position).",
+      "drivers": [
+        "+14.72% YTD",
+        "+13% 1Y",
+        "+5.75% 1M",
+        "low beta 0.57"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "YTD +5.45%, 1M +8.73%, P/E 20.37 \u2014 positive momentum after London tribunal rejected a \u00a32B PlayStation Store claim, with SMBC Nikko raising target to \u00a55,000 and lifting profit forecasts [ad-hoc-news.de](https://www.ad-hoc-news.de/boerse/news/corporate-news/sony-group-stock-london-tribunal-rejects-playstation-store-claim/70541703).",
+      "drivers": [
+        "+8.73% 1M",
+        "PlayStation claim dismissed",
+        "SMBC Nikko target raise",
+        "low short interest 0.25%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "TM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +6.48%, P/E 9.46, dividend yield 2.97%, low beta 0.37 \u2014 attractive valuation with Moody's positive outlook upgrade and projected EBIT margin expansion.",
+      "drivers": [
+        "+6.48% 1M",
+        "P/E 9.46",
+        "2.97% dividend yield",
+        "Moody's positive outlook"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +10.96%, P/E 21.62, dividend yield 2.83% \u2014 strong short-term momentum despite Citigroup downgrade to Hold; EPS beat ($3.57 vs $3.38) and improving US comps support a buy at current levels [marketbeat.com](https://www.marketbeat.com/instant-alerts/analyst-mcdonalds-nyse-mcd-stock-rating-cut-to-hold-at-citigroup-2026-11-20/).",
+      "drivers": [
+        "+10.96% 1M",
+        "EPS beat $3.57 vs $3.38",
+        "2.83% dividend yield",
+        "improving US comps"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LLY",
@@ -177,139 +350,6 @@ window.SIGNALS_DATA = {
       "post_momentum_label": "buy",
       "momentum_label": null,
       "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "COST",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "COST has strong momentum (+10.14% 1M, +28.76% YTD) and is benefiting from panic-buying after tech outages, with Mizuho estimating U.S. comps rose 11-12% in late October and raising its price target to $1,150 [cnbc.com](https://www.cnbc.com/2026/11/18/tech-outage-costco-panic-buying.html).",
-      "drivers": [
-        "+10.14% 1M momentum",
-        "panic-buying tailwind from tech outages",
-        "Mizuho price target raise to $1,150",
-        "strong buy consensus"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "WMT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "WMT narrowly beat Q3 estimates (EPS $0.65 vs $0.64) and raised full-year guidance, with global e-commerce surging 17% and U.S. ad sales up 37%, while the stock is up ~13% YTD [cnbc.com](https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html).",
-      "drivers": [
-        "+6.95% 1M momentum",
-        "Q3 earnings beat & raised guidance",
-        "e-commerce +17% growth",
-        "strong_buy consensus"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "PG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "PG has strong YTD performance (+21.82%) and a low beta of 0.36, with Wells Fargo raising its price target to $188 after a Q3 beat ($2.00 EPS vs $1.89 est.) and 4% revenue growth [marketbeat.com](https://www.marketbeat.com/instant-alerts/analyst-wells-fargo-company-issues-positive-forecast-for-procter-gamble-nyse-pg-stock-price-2026-11-18/).",
-      "drivers": [
-        "+21.82% YTD",
-        "low beta 0.36",
-        "Wells Fargo price target raise to $188",
-        "Q3 earnings beat"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MCD",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "MCD shows strong 1M momentum (+10.48%) and is trading below its historical P/E (21.4x vs 22x avg), with KeyBanc reiterating an Overweight rating and a $307 target on a new value platform [investing.com](https://www.investing.com/news/analyst-ratings/keybanc-reiterates-mcdonalds-stock-rating-on-value-platform-outlook-93CH-5036022).",
-      "drivers": [
-        "+10.48% 1M momentum",
-        "P/E below historical average",
-        "KeyBanc Overweight rating",
-        "new value platform catalyst"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "LLY has strong YTD performance (+25.82%) and positive news sentiment (0.298), with Jefferies having Wall Street's highest price target on the stock, supported by GLP-1 drug market leadership.",
-      "drivers": [
-        "+25.82% YTD",
-        "positive news sentiment 0.298",
-        "Jefferies highest price target",
-        "GLP-1 market leader"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BRK-B",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BRK-B has solid YTD return (+15.13%) and strong 1M momentum (+5.97%), with a low beta of 0.57 and positive news sentiment (0.377), offering defensive exposure amid tech weakness.",
-      "drivers": [
-        "+15.13% YTD",
-        "+5.97% 1M momentum",
-        "low beta 0.57",
-        "positive news sentiment 0.377"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "SONY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "SONY has strong 1M momentum (+7.89%) and 1W momentum (+2.03%), with a low short interest of 0.25% and a reasonable P/E of 20.76, benefiting from the anticipated GTA VI release catalyst.",
-      "drivers": [
-        "+7.89% 1M momentum",
-        "low short interest 0.25%",
-        "GTA VI release catalyst",
-        "reasonable P/E 20.76"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "TM",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "TM has strong 1M momentum (+7.35%) and an attractive P/E of 9.62 with a 2.97% dividend yield, and Moody's recently upgraded its outlook to positive, projecting modest EBIT margin expansion.",
-      "drivers": [
-        "+7.35% 1M momentum",
-        "low P/E 9.62",
-        "2.97% dividend yield",
-        "Moody's outlook upgrade to positive"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "GE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "GE has strong 1M momentum (+6.34%) and a buy consensus with a favorable analyst score of 1.52, supported by aerospace demand and positive news sentiment (0.172).",
-      "drivers": [
-        "+6.34% 1M momentum",
-        "buy consensus",
-        "positive news sentiment 0.172",
-        "aerospace demand tailwind"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "2222.SR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Saudi Aramco has strong YTD performance (+16.65%) and 1M momentum (+3.95%), with a low P/E of 14.24 and a high dividend yield of 5.13%, offering defensive income exposure.",
-      "drivers": [
-        "+16.65% YTD",
-        "+3.95% 1M momentum",
-        "low P/E 14.24",
-        "high dividend yield 5.13%"
-      ]
     }
   ]
 };

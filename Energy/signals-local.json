@@ -1,13 +1,198 @@
 {
-  "updated": "2026-11-21 22:34",
+  "updated": "2026-11-21 23:03",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "89e4d70158c0",
-  "code_commit": "9210dadafdfb",
+  "code_commit": "5e79e7837456",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "NEE is up +6.60% in the past month, the strongest short-term momentum in the universe, with a P/E of 15.04, a 2.98% dividend yield, and a buy analyst consensus (score 1.91).",
+      "drivers": [
+        "+6.60% 1-month momentum",
+        "P/E 15.04",
+        "dividend yield 2.98%",
+        "buy analyst consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TTE has a low P/E of 8.5, a high dividend yield of 4.58%, and a buy analyst consensus (score 2.0), with a relatively modest -5.69% 1-month decline versus peers.",
+      "drivers": [
+        "P/E 8.5",
+        "dividend yield 4.58%",
+        "buy analyst consensus",
+        "moderate 1-month decline"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "COP has a strong +44.81% YTD return, a P/E of 14.34, and a buy analyst consensus (score 2.07), with positive news sentiment of 0.338 and a +0.87% 1-day gain.",
+      "drivers": [
+        "+44.81% YTD",
+        "P/E 14.34",
+        "buy analyst consensus",
+        "positive news sentiment 0.338"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "EOG has a +42.94% YTD return, a low P/E of 9.59, a 2.94% dividend yield, and a buy analyst consensus (score 2.36), despite elevated short interest of 3.62%.",
+      "drivers": [
+        "+42.94% YTD",
+        "P/E 9.59",
+        "dividend yield 2.94%",
+        "buy analyst consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CVX has a +38.53% YTD return, a P/E of 15.3, a 3.45% dividend yield, and a strong buy analyst consensus (score 1.62), with a +0.78% 1-day bounce.",
+      "drivers": [
+        "+38.53% YTD",
+        "P/E 15.3",
+        "dividend yield 3.45%",
+        "strong buy consensus score 1.62"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "XOM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "XOM has a +33.90% YTD return, a P/E of 16.46, a 2.69% dividend yield, and a buy analyst consensus (score 2.42), though it fell -9.60% in the past month amid oil price declines.",
+      "drivers": [
+        "+33.90% YTD",
+        "P/E 16.46",
+        "dividend yield 2.69%",
+        "buy analyst consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "SSE.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "SSE.L has a +14.50% YTD return, a buy analyst consensus (score 1.88), and reported record \u00a32.6bn H1 investment, though its P/E of 22.21 is elevated and news sentiment is slightly negative at -0.144.",
+      "drivers": [
+        "+14.50% YTD",
+        "buy analyst consensus",
+        "record \u00a32.6bn H1 investment",
+        "P/E 22.21"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "DNNGY",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "DNNGY has a strong_buy analyst consensus (score 1.0), positive news sentiment of 0.339, and a +1.11% 1-month gain, though its P/E is null and YTD is -4.28%.",
+      "drivers": [
+        "strong_buy analyst consensus",
+        "news sentiment 0.339",
+        "+1.11% 1-month gain",
+        "YTD -4.28%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "HAL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "HAL has a buy analyst consensus (score 1.68), a P/E of 12.83, and a +4.57% YTD return, but has fallen -10.18% in the past month and has high short interest of 5.39%.",
+      "drivers": [
+        "buy analyst consensus",
+        "P/E 12.83",
+        "+4.57% YTD",
+        "high short interest 5.39%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "BEPC offers a high dividend yield of 5.15% and positive news sentiment of 0.258, but has a hold analyst consensus (score 2.86) and a -23.43% YTD return.",
+      "drivers": [
+        "dividend yield 5.15%",
+        "news sentiment 0.258",
+        "hold analyst consensus",
+        "YTD -23.43%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.568,
+      "ytd": "+125.56%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +125.56% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +125.56% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TTE",
@@ -177,151 +362,6 @@
       "post_momentum_label": "buy",
       "momentum_label": null,
       "momentum_score": null
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.568,
-      "ytd": "+125.56%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +125.56% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +125.56% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "DNNGY",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Strong_buy analyst consensus (score 1.0) and highest news sentiment (0.339) support a buy, with +7.11% 1-month momentum and Revolution Wind reaching full commercial operations.",
-      "drivers": [
-        "strong_buy analyst (1.0)",
-        "news sentiment 0.339",
-        "+7.11% 1M momentum",
-        "Revolution Wind catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "SLB",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +21.11% and 1-year +38% with a strong analyst score of 1.53 and dividend yield 2.46%, supported by a recent dividend announcement [finance.yahoo.com](https://finance.yahoo.com/quote/SLB/news/).",
-      "drivers": [
-        "YTD +21.11%",
-        "1-year +38%",
-        "analyst score 1.53",
-        "dividend 2.46%"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +43.79% and 1-year +41% with an 8% dividend increase to $4.40 annual rate, record production, and strong free cash flow of $2.2B [investors.eogresources.com](https://investors.eogresources.com/2026-11-05-EOG-Resources-Reports-Third-Quarter-2026-Results-and-Raises-Regular-Dividend-8).",
-      "drivers": [
-        "YTD +43.79%",
-        "dividend +8%",
-        "record production",
-        "free cash flow $2.2B"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +37.29% and 1-year +37% with a low analyst score of 1.62, dividend yield 3.46%, and positive news sentiment 0.265.",
-      "drivers": [
-        "YTD +37.29%",
-        "analyst score 1.62",
-        "dividend 3.46%",
-        "news sentiment 0.265"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +32.62% and 1-year +37% with a high dividend yield of 4.54%, low P/E of 8.61, and minimal short interest of 0.19%.",
-      "drivers": [
-        "dividend 4.54%",
-        "P/E 8.61",
-        "short interest 0.19%",
-        "YTD +32.62%"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +43.61% and 1-year +54% with a positive 1-day move (+0.21%), analyst score 2.07, and low short interest 1.35%.",
-      "drivers": [
-        "YTD +43.61%",
-        "1-year +54%",
-        "1D +0.21%",
-        "short interest 1.35%"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "1-month momentum +6.25% and DOJ closing antitrust probe on its Dominion deal provide a catalyst, with analyst score 1.91 and dividend yield 2.94%.",
-      "drivers": [
-        "1M +6.25%",
-        "DOJ probe closed",
-        "analyst 1.91",
-        "dividend 2.94%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SSE.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Record \u00a32.6bn investment (up 63%) and adjusted operating profit up 68% drive momentum, with YTD +14.95%, analyst score 1.88, and dividend 2.64% [sse.com](https://www.sse.com/news-and-views/2026/11/sse-invests-record-26bn-as-33bn-electricity-infrastructure-plan-gathers-pace/).",
-      "drivers": [
-        "record \u00a32.6bn investment",
-        "YTD +14.95%",
-        "analyst 1.88",
-        "dividend 2.64%"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "HAL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Egypt 50-well contract and 27% undervaluation per analyst targets, with YTD +8.68%, 1-year +23%, and analyst score 1.68 [simplywall.st](https://simplywall.st/stocks/us/energy/nyse-hal/halliburton/news/halliburton-hal-what-is-behind-the-fresh-attention).",
-      "drivers": [
-        "Egypt 50-well contract",
-        "27% undervalued",
-        "analyst 1.68",
-        "1-year +23%"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Highest dividend yield in universe at 4.81% with YTD +26.51%, low short interest 0.31%, and portfolio streamlining catalyst.",
-      "drivers": [
-        "dividend 4.81%",
-        "YTD +26.51%",
-        "short interest 0.31%",
-        "portfolio streamlining"
-      ]
     }
   ]
 }

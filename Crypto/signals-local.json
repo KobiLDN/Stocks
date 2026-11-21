@@ -1,13 +1,186 @@
 {
-  "updated": "2026-11-21 22:34",
+  "updated": "2026-11-21 23:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "b5edfdd40218",
-  "code_commit": "9210dadafdfb",
+  "code_commit": "5e79e7837456",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Only asset with positive YTD (+6.07%), least negative 1D (-2.36%), positive news sentiment (0.099), and live catalysts like USDD GasFree transfers and Pulsar TRON deposits [coinmarketcap.com](https://coinmarketcap.com/cmc-ai/tron/latest-updates/).",
+      "drivers": [
+        "Positive YTD return",
+        "Best 1D momentum",
+        "Positive news sentiment",
+        "Payment utility catalysts"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "BTC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Bounced 9% from $55k low to reclaim $60k after $1.8B liquidation flush; recovery depends on tech stocks stabilizing but short-term forced selling cleared [coindesk.com](https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open).",
+      "drivers": [
+        "9% bounce from low",
+        "Liquidation flush cleared",
+        "Key support retested",
+        "ETF flows pending"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Strategic pivot to acquire payment licenses ($50-100M) and SoFiUSD launch on Polygon; despite -25% YTD, 1D -4.11% is relatively resilient and catalysts are tangible [coinmarketcap.com](https://coinmarketcap.com/cmc-ai/polygon-ecosystem-token/latest-updates/).",
+      "drivers": [
+        "Payment license acquisition plans",
+        "SoFiUSD stablecoin launch",
+        "Network upgrade completed",
+        "Relatively resilient 1D"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Best 1W momentum among high-momentum tickers (-8.40%) and second-best YTD (-18.48%) after TRX; AI sector exposure with small cap offers asymmetric upside.",
+      "drivers": [
+        "Best 1W momentum",
+        "Second-best YTD",
+        "AI sector tailwind",
+        "Small cap potential"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "Second-best YTD (-15.03%) and relatively mild 1D (-3.29%); meme coin with high beta could rally sharply if risk appetite returns.",
+      "drivers": [
+        "Second-best YTD",
+        "Mild 1D decline",
+        "High beta meme",
+        "Low market cap"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Relatively resilient 1D (-3.83%) and 1W (-12.04%) among infra assets; no specific catalyst but oracle network demand is steady.",
+      "drivers": [
+        "Resilient 1D",
+        "Infra category",
+        "Oracle network demand",
+        "Moderate drawdown"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "Payment asset with 1D -4.53% and 1W -11.95%, less severe than peers; no catalyst but Stellar's cross-border focus may benefit from regulatory clarity.",
+      "drivers": [
+        "Less severe 1W",
+        "Payment category",
+        "Cross-border focus",
+        "Low price"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.3,
+      "rationale": "Large-cap L1 with -6.45% 1D and -14.38% 1W; negative news sentiment (-0.116) but BNB chain ecosystem remains active.",
+      "drivers": [
+        "Large cap stability",
+        "Ecosystem activity",
+        "Negative sentiment priced in",
+        "Binance support"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "TON",
+      "signal": "buy",
+      "confidence": 0.25,
+      "rationale": "Emerging L1 with -6.20% 1D and -11.93% 1W; no recent news but Telegram integration provides long-term optionality.",
+      "drivers": [
+        "Telegram integration",
+        "Emerging L1",
+        "Moderate 1W",
+        "Low market cap"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.2,
+      "rationale": "AI category asset with -6.80% 1D and -30.11% YTD; no catalyst but AI narrative could revive if tech stocks stabilize.",
+      "drivers": [
+        "AI narrative",
+        "Low price",
+        "High beta",
+        "Potential catalyst from AI sector"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TRX",
@@ -177,139 +350,6 @@
       "post_momentum_label": "buy",
       "momentum_label": null,
       "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TRX",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "TRX is the only asset with positive YTD (+8.83%) and 1-year (+9%) returns, minimal 1W drawdown (-0.44%) and 1D drop (-1.00%), and a market cap of $29.4B, showing relative strength amid broad market weakness.",
-      "drivers": [
-        "+8.83% YTD",
-        "+9% 1Y return",
-        "lowest 1W drawdown -0.44%",
-        "market cap $29.4B"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "XLM has a positive news sentiment of 0.113 and a relatively mild 1Y return of -33% compared to peers, with a 1D drop of -2.24% and 1W drop of -7.78% showing resilience in a risk-off environment.",
-      "drivers": [
-        "news sentiment 0.113",
-        "1Y return -33%",
-        "1W drawdown -7.78%",
-        "market cap $4.75B"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "XRP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "XRP has a large market cap of $61.1B and a relatively contained 1W drop of -6.59% and 1D drop of -1.68%, though news sentiment is negative (-0.099) and YTD is -47.67%.",
-      "drivers": [
-        "market cap $61.1B",
-        "1W drawdown -6.59%",
-        "1D drop -1.68%",
-        "large-cap relative stability"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "BNB has a large market cap of $74.9B and a 1Y return of -34%, better than most L1s, with a 1D drop of -3.09% and 1W drop of -10.09%, though news sentiment is negative (-0.116).",
-      "drivers": [
-        "market cap $74.9B",
-        "1Y return -34%",
-        "1D drop -3.09%",
-        "large-cap relative strength"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "TON has a moderate 1D drop of -1.33% and a market cap of $2.9B, with a 1Y return of -39% and 1M drop of -25.32%, showing some resilience in the emerging category.",
-      "drivers": [
-        "1D drop -1.33%",
-        "market cap $2.9B",
-        "1Y return -39%",
-        "emerging category resilience"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "POL has a relatively better 1Y return of -22% and YTD of -21.66% compared to most altcoins, with a 1M drop of -18.09% and 1W drop of -10.02%, supported by recent network upgrade and payment license news.",
-      "drivers": [
-        "1Y return -22%",
-        "YTD -21.66%",
-        "network upgrade catalyst",
-        "payment license expansion news"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "BTC has the largest market cap at $1,237.9B and is near a 5-month low at $61,544, with a 1Y return of -30% and YTD of -29.68%, but institutional rotation post-Anthropic IPO could support a gradual recovery.",
-      "drivers": [
-        "market cap $1,237.9B",
-        "near 5-month low",
-        "post-IPO rotation catalyst",
-        "1Y return -30%"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "PEPE has a relatively better 1Y return of -11% and YTD of -11.01% compared to most assets, with a market cap of $1.5B, though 1W drop of -22.01% and 1D drop of -5.64% indicate high short-term volatility.",
-      "drivers": [
-        "1Y return -11%",
-        "YTD -11.01%",
-        "market cap $1.5B",
-        "high short-term volatility"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "RNDR",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "RNDR has a positive 1Y return of +6% and YTD of +6.30%, with a market cap of $0.76B, though 1M drop of -27.20% and 1D drop of -5.07% show recent weakness amid AI sector rout.",
-      "drivers": [
-        "+6% 1Y return",
-        "+6.30% YTD",
-        "market cap $0.76B",
-        "AI sector exposure"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.25,
-      "rationale": "ICP has a 1Y return of -25% and YTD of -25.24%, with a market cap of $1.2B, and recent news of topping 319 billion transactions and 5,236 TPS shows network activity, though 1W drop of -18.73% and 1D drop of -6.21% indicate ongoing weakness.",
-      "drivers": [
-        "1Y return -25%",
-        "319B transactions milestone",
-        "5,236 TPS",
-        "market cap $1.2B"
-      ]
     }
   ]
 }

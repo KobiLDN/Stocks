@@ -1,6 +1,181 @@
 {
-  "updated": null,
+  "updated": "2026-11-21 22:59",
+  "model": "deepseek/deepseek-v4-flash",
   "variant": "shadow-runup-1",
-  "note": "Shadow trial (#92): picks from the trial prompt. Stored, not shown. Filled by the next signals run.",
-  "picks": []
+  "prompt_version": "4884f63fff1c",
+  "code_commit": "5e79e7837456",
+  "input_version": "2026-11-11",
+  "shadow_of": "live-2",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Strong buy consensus (score 1.38) with reasonable P/E 25.29 and positive news sentiment 0.04; YTD +3.30% holds up better than peers amid market selloff.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 25.29",
+        "positive news sentiment",
+        "relative YTD strength"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong buy (score 1.32) with low P/E 19.95 and YTD +8.97%; recent 1M decline of -5.93% offers entry point.",
+      "drivers": [
+        "low P/E 19.95",
+        "strong_buy consensus",
+        "YTD positive",
+        "moderate 1M decline"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong buy (score 1.27) with positive news sentiment 0.173; YTD -11.95% and 1M -9.88% reflect AI trade pullback but fundamentals intact.",
+      "drivers": [
+        "strongest analyst score 1.27",
+        "positive news sentiment",
+        "AI trade dip",
+        "P/E 38.88"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "GOOGL",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Strong buy (score 1.34) with very low P/E 13.85 and positive news sentiment 0.173; YTD -15.66% offers deep value.",
+      "drivers": [
+        "low P/E 13.85",
+        "strong_buy consensus",
+        "positive news sentiment",
+        "deep value"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "META",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Strong buy (score 1.42) with low P/E 19.13 and positive news sentiment 0.081; YTD -13.55% and 1M -19.60% create buying opportunity.",
+      "drivers": [
+        "low P/E 19.13",
+        "strong_buy consensus",
+        "positive news sentiment",
+        "buy on weakness"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "TSM",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong buy (score 1.38) with P/E 20.66 and YTD +0.50%; 1M -26.21% is severe but fundamentals strong as key chipmaker.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 20.66",
+        "YTD flat",
+        "semiconductor leader"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "ASML",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong buy (score 1.37) with P/E 31.16 and YTD +9.47%; 1M -24.38% is overdone given monopoly in lithography.",
+      "drivers": [
+        "strong_buy consensus",
+        "YTD positive",
+        "monopoly position",
+        "1M decline overdone"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Buy consensus with positive news sentiment 0.153 and 1M +9.84% relative strength; audiobook expansion to 21 new markets is a catalyst.",
+      "drivers": [
+        "positive 1M momentum",
+        "product expansion catalyst",
+        "positive news sentiment",
+        "P/E 35.16"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "UBER",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Buy consensus (score 1.59) with positive news sentiment 0.158; Q3 revenue beat and autonomous vehicle investments support long-term.",
+      "drivers": [
+        "Q3 revenue beat",
+        "autonomous vehicle investments",
+        "positive news sentiment",
+        "P/E 37.34"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "ORCL",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Strong buy (score 1.50) with very low P/E 15.86 and highest news sentiment 0.31; YTD -47.60% is extreme but value play.",
+      "drivers": [
+        "low P/E 15.86",
+        "strong_buy consensus",
+        "highest news sentiment",
+        "deep value"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ]
 }

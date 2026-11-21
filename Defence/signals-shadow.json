@@ -1,6 +1,181 @@
 {
-  "updated": null,
+  "updated": "2026-11-21 22:59",
+  "model": "deepseek/deepseek-v4-flash",
   "variant": "shadow-runup-1",
-  "note": "Shadow trial (#92): picks from the trial prompt. Stored, not shown. Filled by the next signals run.",
-  "picks": []
+  "prompt_version": "c272a21ee8f9",
+  "code_commit": "5e79e7837456",
+  "input_version": "2026-11-11",
+  "shadow_of": "live-2",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "LMT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Record $292B backlog (3.7x sales), Q3 EPS beat ($7.97 vs $7.52 est), $740M in new contract awards this week, and a 2.5% dividend yield with a P/E of 20.1 \u2014 below the S&P 500 average. The stock's 1M gain of +2.5% is modest, not overextended, and the recent dip below the 200-day MA offers an attractive entry.",
+      "drivers": [
+        "$292B backlog (3.7x sales)",
+        "Q3 EPS beat +$0.45",
+        "$740M weekly contract awards",
+        "P/E 20.1, below S&P 500"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "YTD return of +42.4% and 1M momentum of +4.0% driven by a new Army/Navy group leadership appointment and strong backlog. P/E of 16.6 is attractive for a cyber-intel contractor, and the stock has room to run as the new leadership focuses on accelerating growth.",
+      "drivers": [
+        "YTD +42.4%",
+        "P/E 16.6",
+        "New Army/Navy leadership",
+        "1M momentum +4.0%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "1M momentum of +8.7% is the strongest in the cyber-intel group, yet the stock is still flat YTD (-1.7%). P/E of 12.6 is the cheapest in the sector, and the 2.9% dividend yield provides downside protection. The run-up is a risk, but the valuation is compelling.",
+      "drivers": [
+        "1M momentum +8.7%",
+        "P/E 12.6 (sector low)",
+        "Dividend yield 2.9%",
+        "Flat YTD, room to run"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Secured $120M+ in Rolling Airframe Missile contracts this week, with a strong analyst consensus (buy, score 1.92) and positive news sentiment of 0.239. P/E of 30.9 is elevated but justified by a $257B market cap and consistent defence revenue growth.",
+      "drivers": [
+        "$120M+ missile contracts",
+        "Analyst consensus buy",
+        "News sentiment +0.239",
+        "Large-cap stability"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M momentum of +8.2% is strong, but the stock is down YTD (-1.9%) and has a high P/E of 53.8. The run-up is a risk, but HEICO's niche in aerospace components and aftermarket parts provides a fundamental catalyst not fully priced in. Proceed with caution.",
+      "drivers": [
+        "1M momentum +8.2%",
+        "Niche aerospace components",
+        "YTD -1.9% (not overextended)",
+        "High P/E risk noted"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1M momentum of +3.0% with a P/E of 14.3, making it one of the cheapest defence plays. The $1.2B sale of its industrial business to a PE buyer streamlines the focus on aerospace/defence. Analyst consensus is buy, and the stock is flat YTD.",
+      "drivers": [
+        "P/E 14.3 (cheap)",
+        "$1.2B industrial sale",
+        "1M momentum +3.0%",
+        "Flat YTD"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD -18.9% but 1M momentum of +2.3% suggests a turnaround. P/E of 15.1 is low, and the 2.0% dividend yield provides a floor. Short interest of 4.8% is high, but the stock is a key Navy shipbuilder with a solid backlog.",
+      "drivers": [
+        "P/E 15.1 (low)",
+        "1M momentum +2.3%",
+        "Dividend yield 2.0%",
+        "Key Navy shipbuilder"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "LHX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD -16.9% but 1M momentum of +0.95% shows stabilisation. P/E of 23.3 is reasonable for a defence electronics prime, and analyst consensus is buy (score 1.91). The stock is a value play in a sector with strong secular tailwinds.",
+      "drivers": [
+        "YTD -16.9% (value play)",
+        "P/E 23.3",
+        "Analyst consensus buy",
+        "Defence electronics exposure"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "TDG",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "YTD -17.5% and 1M momentum of -0.7%, but the stock beat Q3 expectations and has a P/E of 31.6. TransDigm's monopoly-like position in aerospace components provides a fundamental catalyst, though the recent weakness is a concern.",
+      "drivers": [
+        "Q3 earnings beat",
+        "Monopoly aerospace components",
+        "YTD -17.5% (discount)",
+        "P/E 31.6"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "OLN",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "1M momentum of +1.7% with a 4.9% dividend yield and a new business structure for OlinHuntsman designed for higher value. P/E is negative due to losses, but the chemicals/defence exposure and yield make it a speculative turnaround play.",
+      "drivers": [
+        "Dividend yield 4.9%",
+        "OlinHuntsman restructuring",
+        "1M momentum +1.7%",
+        "Speculative turnaround"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ]
 }

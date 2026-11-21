@@ -1,6 +1,181 @@
 {
-  "updated": null,
+  "updated": "2026-11-21 23:05",
+  "model": "deepseek/deepseek-v4-flash",
   "variant": "shadow-runup-1",
-  "note": "Shadow trial (#92): picks from the trial prompt. Stored, not shown. Filled by the next signals run.",
-  "picks": []
+  "prompt_version": "b00fa6ad3c60",
+  "code_commit": "5e79e7837456",
+  "input_version": "2026-11-11",
+  "shadow_of": "live-2",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "JNJ has +32.5% YTD, P/E 41, and announced a $2.2B acquisition of Ollin Biosciences for a Phase 3 bispecific antibody in ophthalmology (Nov. 16). Low beta 0.2 and 2% dividend add defensiveness.",
+      "drivers": [
+        "YTD +32.5%",
+        "P/E 41.0",
+        "Ollin acquisition catalyst",
+        "low beta 0.2"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "COST has +10.6% 1M, YTD +29.7%, and Mizuho noted an 8.1% October comp ex-fuel with outage-driven stockpiling tailwinds. P/E 53 is high but momentum strong.",
+      "drivers": [
+        "1M +10.6%",
+        "YTD +29.7%",
+        "outage-driven demand boost",
+        "P/E 53"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "SONY +8.7% 1M, P/E 20.4, with a London tribunal rejecting a \u00a32B PlayStation claim and SMBC Nikko raising target to \u00a55,000. Positive legal catalyst and low valuation.",
+      "drivers": [
+        "1M +8.7%",
+        "P/E 20.4",
+        "PlayStation legal win",
+        "target raised to \u00a55,000"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "WMT",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "WMT +8.6% 1M, YTD +14.2%, with strong_buy consensus (score 1.50) and very positive news sentiment 0.38. High P/E 46 but resilient consumer spending supports growth.",
+      "drivers": [
+        "1M +8.6%",
+        "analyst strong_buy 1.50",
+        "news sentiment +0.38",
+        "consumer spending tailwind"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "PG +8.7% 1M, YTD +22.9%, P/E 25.5, dividend 2.6%, and announced up to $10B in productivity savings (2027-30). Positive cost-cutting catalyst supports margin expansion.",
+      "drivers": [
+        "1M +8.7%",
+        "YTD +22.9%",
+        "$10B productivity savings",
+        "dividend 2.6%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "TM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "TM +6.5% 1M, P/E only 9.5, dividend 3.0%, and Moody's upgraded outlook to positive with EBIT margin expansion. Cheap valuation and positive credit catalyst.",
+      "drivers": [
+        "P/E 9.5",
+        "dividend 3.0%",
+        "Moody's upgrade",
+        "1M +6.5%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "LLY +6.1% 1M, YTD +25.5%, P/E 43.7, beta 0.39, leader in GLP-1 drugs. Run-up is moderate; obesity drug pipeline supports long-term growth.",
+      "drivers": [
+        "YTD +25.5%",
+        "P/E 43.7",
+        "GLP-1 market leader",
+        "beta 0.39"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "BRK-B +5.8% 1M, YTD +14.7%, P/E 16, beta 0.57. Strong value play with diversified holdings and low volatility. No specific catalyst but steady performance.",
+      "drivers": [
+        "P/E 16",
+        "beta 0.57",
+        "1M +5.8%",
+        "YTD +14.7%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "KO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "KO +4.7% 1M, YTD +43.1%, P/E 28.6, dividend 2.2%, beta 0.27. Strong YTD performance with defensive characteristics, but 1M momentum is modest.",
+      "drivers": [
+        "YTD +43.1%",
+        "dividend 2.2%",
+        "beta 0.27",
+        "P/E 28.6"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "MCD +11% 1M, but Citigroup downgraded to Hold (Nov. 20) citing revenue miss ($7.16B vs $7.28B). EPS beat ($3.57 vs $3.38) and low P/E 21.6 provide some offset, but caution warranted.",
+      "drivers": [
+        "1M +11%",
+        "P/E 21.6",
+        "Citi downgrade to Hold",
+        "revenue miss"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ]
 }

@@ -1,13 +1,182 @@
 {
-  "updated": "2026-11-21 22:34",
+  "updated": "2026-11-21 22:59",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "fa47e5f40c28",
-  "code_commit": "9210dadafdfb",
+  "code_commit": "5e79e7837456",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PANW",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Palo Alto Networks has +91% YTD, +6.54% 1W momentum, and rising cyber budgets amid AI threats, with CEO Nikesh Arora highlighting an Applied Compute bet that could dwarf its core cybersecurity business.",
+      "drivers": [
+        "+91% YTD",
+        "+6.54% 1W",
+        "rising cyber budgets",
+        "Applied Compute catalyst"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "CRWD",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "CrowdStrike has +102% YTD, +1.25% 1W, and a potential buyout catalyst (Zscaler reports), though P/E is extreme at 3824; near-term momentum and M&A speculation drive the pick.",
+      "drivers": [
+        "+102% YTD",
+        "+1.25% 1W",
+        "buyout speculation",
+        "strong momentum"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Spotify has +9.84% 1M momentum, positive news sentiment 0.153, and a reasonable P/E of 35.16, with institutional buying ($14.6M in ETFs) supporting near-term upside.",
+      "drivers": [
+        "+9.84% 1M",
+        "positive news sentiment 0.153",
+        "institutional buying",
+        "reasonable P/E 35"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Apple has +26.84% YTD, a $5T market cap, and a new CEO driving hardware focus, but near-term headwinds include -3.85% 1W, a P/E of 38.15, and a service outage; still a quality hold with buyback support.",
+      "drivers": [
+        "+26.84% YTD",
+        "$5T market cap",
+        "new CEO catalyst",
+        "buyback support"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "AMZN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Amazon has +17% 1Y, a P/E of 19.95, and strong_buy analyst consensus (score 1.32), but recent -7.44% 1W reflects market weakness; AWS and AI spending remain long-term drivers.",
+      "drivers": [
+        "P/E 19.95",
+        "strong_buy consensus",
+        "AWS growth",
+        "AI spending"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Microsoft has strong_buy consensus (score 1.38), a P/E of 25.29, and positive news sentiment 0.04, but -7.33% 1W and -8.91% 1M reflect recent pullback; Azure and AI agent adoption are catalysts.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 25.29",
+        "Azure growth",
+        "AI agent adoption"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Cloudflare has +40% YTD, positive news sentiment 0.233, and a buy analyst rating, but -10.09% 1W and no P/E (negative earnings) add risk; cybersecurity tailwinds support the pick.",
+      "drivers": [
+        "+40% YTD",
+        "positive news sentiment 0.233",
+        "cybersecurity tailwinds"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Netflix has a P/E of 16.4 and buy analyst consensus, but -37.65% YTD and -8.72% 1W reflect significant decline; potential for recovery on content slate and ad-tier growth.",
+      "drivers": [
+        "P/E 16.4",
+        "buy consensus",
+        "ad-tier growth potential"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "UBER",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Uber has a buy analyst consensus (score 1.59) and positive news sentiment 0.158, but -23.40% YTD and -8.93% 1W show weakness; mobility and delivery growth are long-term drivers.",
+      "drivers": [
+        "buy consensus",
+        "positive news sentiment 0.158",
+        "mobility growth"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "AVGO",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Broadcom has strong_buy consensus (score 1.27) and positive news sentiment 0.173, but -11.95% YTD and -12.28% 1W reflect semiconductor sell-off; AI networking and custom chip demand are catalysts.",
+      "drivers": [
+        "strong_buy consensus",
+        "positive news sentiment 0.173",
+        "AI chip demand"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SPOT",
@@ -177,139 +346,6 @@
       "post_momentum_label": "strong_buy",
       "momentum_label": null,
       "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "CrowdStrike has surged +114.7% YTD and +7.1% in the past month, with positive news sentiment (0.054) driven by its new Apple device automation tie-up via Falcon Foundry. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "+114.7% YTD",
-        "+7.1% 1M momentum",
-        "positive news sentiment 0.054",
-        "Apple automation partnership"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "PANW",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "Palo Alto Networks has gained +101.7% YTD and +12.1% in the past week, supported by strong news sentiment (0.13) and CEO commentary that AI security could be bigger than current business. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "+101.7% YTD",
-        "+12.1% 1W momentum",
-        "news sentiment 0.13",
-        "AI security growth narrative"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "Cloudflare is up +54.9% YTD and +4.1% in the past month, with a positive news sentiment of 0.193 and a buy analyst consensus. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "+54.9% YTD",
-        "+4.1% 1M momentum",
-        "news sentiment 0.193",
-        "buy analyst consensus"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Spotify has rallied +10.98% in the past month despite a slight YTD gain of +1.54%, with positive news sentiment (0.193) and a buy analyst rating. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "+10.98% 1M momentum",
-        "news sentiment 0.193",
-        "buy analyst rating",
-        "CFO growth plan outlined"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "Broadcom shows a strong_buy analyst consensus (score 1.27) and modest +3.67% 1M momentum, with a P/E of 44.27 and positive sentiment on AI competition dynamics. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "strong_buy consensus (1.27)",
-        "+3.67% 1M momentum",
-        "AI infrastructure exposure",
-        "P/E 44.27"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Apple is up +29.3% YTD and +2.94% in the past month, with a massive $5.07T market cap and buy analyst consensus, despite a slight negative news sentiment (-0.053) from recent outage. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "+29.3% YTD",
-        "+2.94% 1M momentum",
-        "buy analyst consensus",
-        "AI agent job listing"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "Amazon has a strong_buy analyst consensus (score 1.32) and +13.63% YTD return, with a reasonable P/E of 20.81 and exposure to AI through Anthropic. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "strong_buy consensus (1.32)",
-        "+13.63% YTD",
-        "P/E 20.81",
-        "AI/Anthropic exposure"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.65,
-      "rationale": "Microsoft holds a strong_buy analyst consensus (score 1.38) and a low P/E of 26.01, though recent momentum is negative (-6.13% 1M) due to tech sector weakness. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "strong_buy consensus (1.38)",
-        "P/E 26.01",
-        "0.77% dividend yield",
-        "AI/cloud leadership"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "INTU",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Intuit reported Q1 FY27 revenue up 12% to $4.4B and non-GAAP EPS up 56% to $2.91, with a low P/E of 18.83 and a 1.76% dividend yield, despite a -50% YTD decline. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "Q1 revenue +12% to $4.4B",
-        "non-GAAP EPS +56% to $2.91",
-        "P/E 18.83",
-        "Mailchimp sale for $3.68B"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "UBER",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Uber has a buy analyst consensus (score 1.59) and positive news sentiment (0.097), though YTD performance is -20.83% and 1M momentum is -4.84%. [investors.intuit.com](https://investors.intuit.com/news-events/press-releases/detail/1331/intuit-reports-first-quarter-results-and-enters-agreement-to-sell-mailchimp-to-bending-spoons)",
-      "drivers": [
-        "buy analyst consensus (1.59)",
-        "news sentiment 0.097",
-        "P/E 38.59",
-        "platform growth potential"
-      ]
     }
   ]
 }
