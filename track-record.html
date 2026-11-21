@@ -156,6 +156,8 @@ const HORIZONS = [['1w', '1 week'], ['1m', '1 month'], ['3m', '3 months']];
 const SECTOR_LABEL = { AI: 'AI', Biotech: 'Biotech', Crypto: 'Crypto', Defence: 'Defence', Energy: 'Energy', MegaCap: 'Mega-Cap', Tech: 'Technology' };
 const SIGNAL_LABEL = { strong_buy: 'Strong buy', buy: 'Buy', hold: 'Hold', sell: 'Sell', strong_sell: 'Strong sell' };
 const KIND_LABEL = { ai: 'AI pick', momentum: 'Momentum screen' };
+const BASELINE_LABEL = { ai_picks: 'AI picks', random: 'Random pick from the same sector', momentum_rule: 'Momentum rule (top 10 by 6-month return)' };
+const VARIANT_LABEL = { 'live-1': 'Before 21 Nov 2026 (with momentum upgrade)', 'live-2': 'From 21 Nov 2026 (AI label only)' };
 const CONF_ORDER = ['90%+', '80%+', '70%+', '60%+', 'under 60%', 'unknown'];
 const SMALL = 30;
 const PAGE = 150;
@@ -233,6 +235,16 @@ function renderFindings() {
     }
   }
 
+  const bai = get('baselines', 'ai_picks'), brand = get('baselines', 'random'), bmom = get('baselines', 'momentum_rule');
+  if (ok(bai) && ok(brand)) {
+    const beat = bai.median_excess > brand.median_excess;
+    out.push(`<b>Against a free alternative:</b> the AI's typical pick did ${pct(bai.median_excess)} against the S&amp;P 500, `
+      + `while picking at random from the same sector lists did ${pct(brand.median_excess)}`
+      + (ok(bmom) ? ` and a simple momentum rule did ${pct(bmom.median_excess)}` : '')
+      + `. So the AI ${beat ? 'has chosen better than random from its lists' : 'has not chosen better than random from its lists'} so far`
+      + (ok(bmom) && bmom.median_excess > bai.median_excess ? `, but <b>the free momentum rule did better than the AI</b>.` : '.'));
+  }
+
   const ai = get('by_kind', 'ai'), mo = get('by_kind', 'momentum');
   if (ok(ai) && ok(mo)) out.push(`AI picks: ${vs(ai.excess)}. Momentum-screen picks: ${pct(mo.excess)}.`);
 
@@ -280,11 +292,13 @@ function bdTable(title, group, order, labeller) {
 function renderBreakdown() {
   const months = Object.keys(TR.summary.by_month || {}).sort();
   document.getElementById('bd-grid').innerHTML = [
+    bdTable('AI picks vs free alternatives (same sectors, same dates)', 'baselines', ['ai_picks', 'random', 'momentum_rule'], k => BASELINE_LABEL[k] || k),
     bdTable('Signal strength', 'by_signal', ['strong_buy', 'buy', 'hold'], k => SIGNAL_LABEL[k] || k),
     bdTable('Source', 'by_kind', ['ai', 'momentum'], k => KIND_LABEL[k] || k),
     bdTable('Sector', 'by_sector', Object.keys(SECTOR_LABEL), k => SECTOR_LABEL[k] || k),
     bdTable('AI confidence', 'by_confidence', CONF_ORDER, k => k === 'unknown' ? 'Not given' : k),
     bdTable('Month the signal was made', 'by_month', months, monthLabel),
+    bdTable('Signal recipe (AI picks)', 'by_variant', ['live-1', 'live-2'], k => VARIANT_LABEL[k] || k),
   ].join('');
 }
 
@@ -369,6 +383,7 @@ function renderMethod() {
       <li><b>Sold at</b> the ${esc(r.exit)}.</li>
       <li><b>Return</b> is the ${esc(r.return)}. London stocks are measured in pence, so currency moves are not included.</li>
       <li><b>Compared with</b> ${esc(r.benchmark)}: bought at the first S&amp;P 500 open at or after the stock's purchase, sold on the same day.</li>
+      ${r.baselines ? `<li><b>Free alternatives:</b> for every AI run, on the same date and with the same buy/sell rules, the page also scores <b>every stock in that sector</b> (what picking at random from the same list would give) and the sector's <b>10 stocks with the best 6-month return, skipping the latest month</b> (a textbook momentum rule). If the AI can't beat these, it isn't adding anything. Sector lists are today's, so stocks added later count from the start.</li>` : ''}
       <li>${provText}</li>
       <li>Not scored: ${c.pending} signals whose windows haven't finished (shown as …), ${c.no_data} with no price data, ${c.unreliable} with unreliable prices (listed with the reason).</li>
       <li>Averages can be pulled up or down by a few big moves, so the median is shown too. With ${c.scored.toLocaleString('en-GB')} signals over about ${Math.max(1, Math.round((new Date(TR.data_through) - new Date(TR.first_signal.slice(0, 10))) / 2.6e9))} months, this is an early read, not proof.</li>

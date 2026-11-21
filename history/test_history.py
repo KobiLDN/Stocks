@@ -453,6 +453,31 @@ class TrackRecordBuild(Base):
         json.dumps(out)                                                       # serialisable
 
 
+class TrackRecordBaselines(unittest.TestCase):
+    """#70: AI picks are compared with a random pick from the same sector and a simple momentum rule."""
+    def test_random_and_momentum_baselines(self):
+        def bars_for(step):
+            return [{"date": d, "open": o, "close": c, "currency": "USD"} for d, o, c in _days("2026-01-01", 260, step=step)]
+        assets = {t: {"asset_id": t, "yahoo": t, "exchange": "Crypto", "name": t} for t in ("UP", "FLAT", "DOWN")}
+        assets["SPY"] = {"asset_id": "SPY", "yahoo": "SPY", "exchange": "Crypto", "name": "SPY"}
+        bars_ = {"UP": bars_for(1.0), "FLAT": bars_for(0.01), "DOWN": bars_for(-0.2), "SPY": bars_for(0.1)}
+        gen = "2026-08-01T07:00:00Z"                                       # ~212 days of history before it
+        runs = {"T:1": {"signal_run_id": "T:1", "sector": "T", "generated_utc": gen, "provenance": "live", "variant": "live-2"}}
+        signals = [{"signal_run_id": "T:1", "kind": "ai", "asset_id": "FLAT", "rank": 1, "signal": "buy", "confidence": 0.5}]
+        members = {"T": ["UP", "FLAT", "DOWN"]}
+        with mock.patch.object(tr, "MOMENTUM_PICKS", 1):
+            out = tr.build(assets, runs, signals, bars_, {}, {}, set(), members, now=_dt.datetime(2026, 9, 20, tzinfo=UTC))
+        b = out["summary"]["baselines"]
+        self.assertEqual(b["ai_picks"]["1w"]["n"], 1)
+        self.assertEqual(b["random"]["1w"]["n"], 3)                        # every stock in the sector
+        self.assertEqual(b["momentum_rule"]["1w"]["n"], 1)                 # the single best 6-1 month stock...
+        self.assertGreater(b["momentum_rule"]["1w"]["avg"], b["ai_picks"]["1w"]["avg"])   # ...is UP, which beat FLAT
+        self.assertEqual(out["summary"]["by_variant"]["live-2"]["1w"]["n"], 1)
+        ser = tr.Series("Crypto", [(x["date"], x["open"], x["close"]) for x in bars_["UP"]])
+        self.assertGreater(tr.momentum_score(ser, tr.parse_utc(gen)), 0)
+        self.assertIsNone(tr.momentum_score(ser, tr.parse_utc("2026-03-01T07:00:00Z")))   # too little history
+
+
 class ImportSignals(unittest.TestCase):
     def test_git_history(self):
         if subprocess_shallow():
