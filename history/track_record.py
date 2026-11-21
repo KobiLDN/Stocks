@@ -176,10 +176,37 @@ def load(h):
     for a in h.fetch_all("corporate_actions", ["symbol", "date", "kind"]):
         (splits if a["kind"] == "split" else divs).setdefault(a["symbol"], {})[a["date"]] = a["value"]
     coarse = {f["symbol"] for f in h.fetch_all("data_flags", ["symbol", "date", "kind"]) if f["kind"] == "coarse_prices"}
-    return assets, runs, signals, bars, splits, divs, coarse
+    members = {}
+    for m in h.fetch_all("asset_sectors", ["asset_id", "sector"]):
+        members.setdefault(m["sector"], []).append(m["asset_id"])
+    return assets, runs, signals, bars, splits, divs, coarse, members
 
 
-def build(assets, runs, signals, bars, splits, divs, coarse, now):
+# Free alternatives the AI is compared with (#70): for every AI run, on the same date and with the same entry/exit rules,
+#   random  every stock in that run's sector (= the average result of picking at random from the same list)
+#   momentum_rule  the sector's 10 stocks with the best 6-month return skipping the latest month (the textbook momentum rule)
+MOMENTUM_PICKS = 10
+MOM_LONG, MOM_SKIP = 126, 21      # trading days: ~6 months back, skipping the latest ~1 month
+
+
+def momentum_score(series, generated):
+    """6-1 month price return known before the signal (closes only, splits adjusted), or None if history is too short."""
+    if series is None:
+        return None
+    j = series.last_close_on_or_before((generated.date() - dt.timedelta(days=1)).isoformat())
+    if j is None or j - MOM_LONG < 0:
+        return None
+    a, b = j - MOM_LONG, j - MOM_SKIP
+    if series.bars[a][2] is None or series.bars[b][2] is None or not series.bars[a][2]:
+        return None
+    shares = 1.0
+    for d, f in series.splits.items():
+        if series.dates[a] < d <= series.dates[b]:
+            shares *= f
+    return series.bars[b][2] * shares / series.bars[a][2] - 1
+
+
+def build(assets, runs, signals, bars, splits, divs, coarse, members, now):
     series_cache = {}
 
     def series_for(symbol, exchange):
@@ -238,6 +265,12 @@ def build(assets, runs, signals, bars, splits, divs, coarse, now):
                 add("by_sector", run["sector"], name, v)
                 add("by_confidence", confidence_bucket(s["confidence"]), name, v)
                 add("by_month", run["generated_utc"][:7], name, v)
+        if s["kind"] == "ai" and s["signal"] in BUY_SIDE:
+            for name, _ in HORIZONS:
+                v = res.get(name)
+                if isinstance(v, tuple):
+                    add("baselines", "ai_picks", name, v)
+                    add("by_variant", run.get("variant") or "live-1", name, v)
         if note.startswith(("unreliable", "wrong")):
             counts["unreliable"] += 1
         elif scored:
@@ -246,6 +279,32 @@ def build(assets, runs, signals, bars, splits, divs, coarse, now):
             counts["pending"] += 1
         else:
             counts["no_data"] += 1
+
+    # Baselines: once per AI run, over the same sector's stocks on the same date
+    ai_runs = sorted({s["signal_run_id"] for s in signals if s["kind"] == "ai"} & set(runs))
+    for rid in ai_runs if members else []:
+        run = runs[rid]
+        if run.get("provenance") != "live":
+            continue
+        generated = parse_utc(run["generated_utc"])
+        scored = []
+        for aid in members.get(run["sector"], []):
+            a = assets.get(aid)
+            if not a or aid in UNRELIABLE or a["yahoo"] in coarse:
+                continue
+            ser = series_for(a["yahoo"], a["exchange"])
+            if ser is None:
+                continue
+            _entry, res, _note = measure(generated, ser, spy, now)
+            scored.append((momentum_score(ser, generated), res))
+            for name, _ in HORIZONS:
+                if isinstance(res.get(name), tuple):
+                    add("baselines", "random", name, res[name])
+        ranked = sorted((x for x in scored if x[0] is not None), key=lambda x: -x[0])[:MOMENTUM_PICKS]
+        for _score, res in ranked:
+            for name, _ in HORIZONS:
+                if isinstance(res.get(name), tuple):
+                    add("baselines", "momentum_rule", name, res[name])
 
     summary = {g: {k: {h: summarise(v) for h, v in hs.items()} for k, hs in keys.items()} for g, keys in groups.items()}
     names = {aid: a["name"] for aid, a in assets.items()}
@@ -261,6 +320,9 @@ def build(assets, runs, signals, bars, splits, divs, coarse, now):
             "return": "price change plus splits and cash dividends (not reinvested), in the stock's own currency",
             "benchmark": "SPY over the same window",
             "counting": "every signal counts, including a stock picked again in later runs",
+            "baselines": "for every AI run, on the same date: 'random' scores every stock in that sector (picking at random from the same list); "
+                         "'momentum_rule' scores the sector's 10 stocks with the best 6-month return skipping the latest month. "
+                         "Same entry, exit and benchmark rules. Sector lists are today's.",
         },
         "counts": counts,
         "summary": summary,
