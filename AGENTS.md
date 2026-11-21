@@ -201,6 +201,8 @@ Prices, market, signals and end-of-day bars are also written to a Cloudflare D1 
 
 Results appear in `signals-local.json` per sector under the `momentum` key and are displayed inline on each sector's `signals.html` below the AI picks, labelled `// Momentum Screener`.
 
+**Since #70 (variant `live-2`) the screen never changes an AI pick.** It used to upgrade `buy` → `strong_buy` and raise confidence; now `signal_meta.annotate_momentum()` only records `pre_momentum_label` (the AI's label), `post_momentum_label` (the same), `momentum_label` and `momentum_score` on each pick. Every run also carries `variant`, `prompt_version`, `code_commit` and `input_version` from `signal_meta.run_meta()`. **Bump `signal_meta.VARIANT` whenever the signal recipe changes on purpose**, so the track record can compare versions. Tell the portfolio via `FROM_STOCKS.md` (portfolio repo) before changing what `signal` means.
+
 ## Portfolio dashboard (separate private repo)
 
 The portfolio dashboard and daily email live in the **private** repo `KobiLDN/portfolio-private` (its own `AGENTS.md` describes the dashboard). It runs on GitHub Actions (`daily-portfolio.yml`), started by cron-job.org — 07:30 daily, 09:00 + 15:30 weekdays (London). T212 keys are secrets there, never here.

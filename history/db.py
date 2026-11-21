@@ -27,7 +27,21 @@ import uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-SCHEMA_VERSION = "1"
+SCHEMA_VERSION = "2"
+
+# Column additions after v1, applied in order to a database at an older version. schema.sql keeps the
+# v1 shape, so a fresh database goes through exactly the same steps as the live one.
+MIGRATIONS = {
+    "2": [  # #70: tag each signal run with its recipe; keep the AI's own label next to the momentum screen's
+        "ALTER TABLE signal_runs ADD COLUMN variant TEXT",
+        "ALTER TABLE signal_runs ADD COLUMN prompt_version TEXT",
+        "ALTER TABLE signal_runs ADD COLUMN code_commit TEXT",
+        "ALTER TABLE signal_runs ADD COLUMN input_version TEXT",
+        "ALTER TABLE signals ADD COLUMN pre_momentum_label TEXT",
+        "ALTER TABLE signals ADD COLUMN momentum_label TEXT",
+        "ALTER TABLE signals ADD COLUMN momentum_score REAL",
+    ],
+}
 MAX_STATEMENT_BYTES = 90_000   # D1's limit is 100 KB per statement
 
 # Not in any sector, but needed for history: the track record is measured against
@@ -198,6 +212,15 @@ class History:
             return False
         for stmt in schema_statements():
             self.run(stmt)
+        for version in sorted(MIGRATIONS, key=int):
+            if current is not None and int(version) <= int(current):
+                continue
+            for stmt in MIGRATIONS[version]:
+                try:
+                    self.run(stmt)
+                except (HistoryError, sqlite3.Error) as e:
+                    if "duplicate column" not in str(e).lower():   # already applied (re-run after a partial failure)
+                        raise
         self.run(f"INSERT INTO meta (key, value) VALUES ('schema_version', {lit(SCHEMA_VERSION)}) "
                  "ON CONFLICT(key) DO UPDATE SET value = excluded.value")
         return True

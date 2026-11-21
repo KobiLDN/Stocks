@@ -113,7 +113,8 @@ def rows_from_signal_file(sector, data, run_id, provenance="live"):
     if not generated:
         return None
     srid = f"{sector}:{generated}"
-    run = [srid, sector, generated, data.get("model"), provenance, run_id]
+    run = [srid, sector, generated, data.get("model"), provenance, run_id,
+           data.get("variant"), data.get("prompt_version"), data.get("code_commit"), data.get("input_version")]
     sigs = []
     for kind, key in (("ai", "picks"), ("momentum", "momentum_picks")):
         seen = set()
@@ -123,8 +124,12 @@ def rows_from_signal_file(sector, data, run_id, provenance="live"):
                 continue
             seen.add(t)
             drivers = p.get("drivers")
+            pre = p.get("pre_momentum_label")
             sigs.append([srid, kind, t, p.get("rank", i + 1), normalise_signal(p.get("signal")), num(p.get("confidence")),
-                         p.get("rationale"), json.dumps(drivers) if drivers is not None else None])
+                         p.get("rationale"), json.dumps(drivers) if drivers is not None else None,
+                         normalise_signal(pre) if pre else None,
+                         normalise_signal(p["momentum_label"]) if p.get("momentum_label") else None,
+                         num(p.get("momentum_score"))])
     return run, sigs
 
 
@@ -140,8 +145,10 @@ def signal_rows(universe, run_id):
     return runs, sigs
 
 
-SIGNAL_RUN_COLS = ["signal_run_id", "sector", "generated_utc", "model", "provenance", "run_id"]
-SIGNAL_COLS = ["signal_run_id", "kind", "asset_id", "rank", "signal", "confidence", "rationale", "drivers"]
+SIGNAL_RUN_COLS = ["signal_run_id", "sector", "generated_utc", "model", "provenance", "run_id",
+                   "variant", "prompt_version", "code_commit", "input_version"]
+SIGNAL_COLS = ["signal_run_id", "kind", "asset_id", "rank", "signal", "confidence", "rationale", "drivers",
+               "pre_momentum_label", "momentum_label", "momentum_score"]
 
 
 def record_signals(h, universe, run_id):

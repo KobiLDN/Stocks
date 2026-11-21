@@ -30,6 +30,7 @@ import requests
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
 from momentum_screener import compute_momentum_picks
+from signal_meta import annotate_momentum, run_meta
 
 # ---- Configuration --------------------------------------------------------
 
@@ -328,22 +329,17 @@ def write_outputs(picks, stocks, now_str):
         except Exception:
             pass
 
-    # --- momentum post-processing (additive — never downgrades AI signals) ---
+    # --- momentum screen: annotate only (#70 removed the upgrade; the AI's own label stands) ---
     existing_tickers = {p['ticker'] for p in picks}
     momentum_picks, upgrades = compute_momentum_picks(stocks, existing_tickers)
-    for p in picks:
-        if p['ticker'] in upgrades:
-            m_signal, m_conf = upgrades[p['ticker']]
-            if m_conf > p['confidence']:
-                p['confidence'] = m_conf
-            if m_signal == 'strong_buy' and p['signal'] == 'buy':
-                p['signal'] = 'strong_buy'
+    annotate_momentum(picks, upgrades)
 
     out = {
         "updated":        now_str,
         "model":          MODEL,
         "endpoint":       ENDPOINT,
         "source":         "openrouter",
+        **run_meta(SYSTEM_PROMPT, build_user_prompt),
         "picks":          picks,
         "momentum_picks": momentum_picks,
         "previous_picks": previous_picks,

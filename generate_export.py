@@ -72,7 +72,8 @@ def load_signals(sector):
     path = os.path.join(BASE, sector, "signals-local.json")
     try:
         data = json.load(open(path, encoding="utf-8"))
-        return {p["ticker"]: p for p in data.get("picks", [])}, data.get("updated", "")
+        variant = data.get("variant") or "live-1"   # runs before #70 carry no tag: they used the momentum upgrade
+        return {p["ticker"]: {**p, "variant": variant} for p in data.get("picks", [])}, data.get("updated", "")
     except Exception:
         return {}, ""
 
@@ -205,6 +206,12 @@ for sector in SECTORS:
         row["signal_confidence"] = sig.get("confidence")
         row["signal_rationale"]  = sig.get("rationale", "")
         row["signal_drivers"]    = "; ".join(sig.get("drivers", []))
+        # #70: the AI's own label, what the momentum screen thinks, and which recipe made the signal.
+        # Since variant live-2, signal == pre_momentum_label (no upgrade).
+        row["pre_momentum_label"] = sig.get("pre_momentum_label") if sig else None
+        row["momentum_label"]     = sig.get("momentum_label") if sig else None
+        row["momentum_score"]     = sig.get("momentum_score") if sig else None
+        row["signal_variant"]     = sig.get("variant") if sig else None
 
         all_stocks.append(row)
 
@@ -219,6 +226,7 @@ csv_fields = PRICE_FIELDS + whatsit_fields + [
     "news2_title", "news2_publisher", "news2_date", "news2_sentiment",
     "news3_title", "news3_publisher", "news3_date", "news3_sentiment",
     "signal_rank", "signal", "signal_confidence", "signal_rationale", "signal_drivers",
+    "pre_momentum_label", "momentum_label", "momentum_score", "signal_variant",
 ]
 
 os.makedirs(os.path.join(BASE, "exports"), exist_ok=True)

@@ -77,6 +77,29 @@ class Schema(Base):
         self.assertEqual(self.count("asset_sectors"), sum(len(m) for m in self.universe["sectors"].values()))
         self.assertFalse(self.h.sync_universe(self.universe, db.BENCHMARKS))   # unchanged -> skipped
 
+    def test_migrates_a_v1_database(self):
+        """A database created before #70 (schema v1) gains the new columns, keeps its rows, and can't be migrated twice."""
+        path = os.path.join(self.tmp, "old.sqlite")
+        con = sqlite3.connect(path)
+        for stmt in db.schema_statements():
+            con.execute(stmt)
+        con.execute("INSERT INTO meta (key, value) VALUES ('schema_version', '1')")
+        con.execute("INSERT INTO signal_runs VALUES ('AI:x', 'AI', '2026-06-01T07:00:00Z', 'm', 'live', 'r')")
+        con.commit(); con.close()
+        with mock.patch.dict(os.environ, {"HISTORY_SQLITE": path}):
+            h = db.connect()
+            self.assertTrue(h.ensure_schema())
+            self.assertFalse(h.ensure_schema())
+            row = h.run("SELECT * FROM signal_runs")[0]
+            self.assertEqual(row["sector"], "AI")
+            self.assertIsNone(row["variant"])
+            cols = {r["name"] for r in h.run("PRAGMA table_info(signals)")}
+            self.assertTrue({"pre_momentum_label", "momentum_label", "momentum_score"} <= cols)
+
+    def test_fresh_database_has_new_columns(self):
+        cols = {r["name"] for r in self.h.run("PRAGMA table_info(signal_runs)")}
+        self.assertTrue({"variant", "prompt_version", "code_commit", "input_version"} <= cols)
+
     def test_benchmarks_do_not_clash_with_universe(self):
         for aid, _n, yahoo in db.BENCHMARKS:
             self.assertNotIn(aid, self.universe["assets"])
@@ -122,6 +145,32 @@ class Snapshot(Base):
         self.assertEqual(snapshot.london_to_iso("2026-07-01 08:00"), "2026-07-01T07:00:00Z")   # BST
         self.assertEqual(snapshot.london_to_iso("2026-11-11 08:00 GMT"), "2026-11-11T08:00:00Z")
         self.assertIsNone(snapshot.london_to_iso("soon"))
+
+    def test_signal_file_carries_run_tags_and_labels(self):
+        data = {"updated": "2026-11-23 08:00 GMT", "model": "m", "variant": "live-2", "prompt_version": "abc123",
+                "code_commit": "deadbeef", "input_version": "2026-11-11",
+                "picks": [{"ticker": "NVDA", "rank": 1, "signal": "buy", "confidence": 0.8, "pre_momentum_label": "buy",
+                           "post_momentum_label": "buy", "momentum_label": "strong_buy", "momentum_score": 0.9}],
+                "momentum_picks": []}
+        run, sigs = snapshot.rows_from_signal_file("AI", data, "r")
+        self.assertEqual(dict(zip(snapshot.SIGNAL_RUN_COLS, run))["variant"], "live-2")
+        row = dict(zip(snapshot.SIGNAL_COLS, sigs[0]))
+        self.assertEqual((row["signal"], row["pre_momentum_label"], row["momentum_label"], row["momentum_score"]),
+                         ("buy", "buy", "strong_buy", 0.9))
+        old = {"updated": "2026-06-01 08:00", "picks": [{"ticker": "NVDA", "signal": "strong_buy"}]}   # pre-#70 file
+        run, sigs = snapshot.rows_from_signal_file("AI", old, "r")
+        self.assertEqual(len(run), len(snapshot.SIGNAL_RUN_COLS)); self.assertEqual(len(sigs[0]), len(snapshot.SIGNAL_COLS))
+        self.assertIsNone(dict(zip(snapshot.SIGNAL_COLS, sigs[0]))["pre_momentum_label"])
+
+    def test_momentum_no_longer_upgrades(self):
+        import signal_meta
+        picks = [{"ticker": "A", "signal": "buy", "confidence": 0.6}, {"ticker": "B", "signal": "strong_buy", "confidence": 0.9}]
+        signal_meta.annotate_momentum(picks, {"A": ("strong_buy", 0.95)})
+        self.assertEqual((picks[0]["signal"], picks[0]["confidence"]), ("buy", 0.6))     # label and confidence untouched
+        self.assertEqual((picks[0]["momentum_label"], picks[0]["momentum_score"]), ("strong_buy", 0.95))
+        self.assertIsNone(picks[1]["momentum_label"])
+        meta = signal_meta.run_meta("prompt", signal_meta.run_meta)
+        self.assertEqual(meta["variant"], "live-2"); self.assertEqual(len(meta["prompt_version"]), 12)
 
     def test_num(self):
         self.assertEqual(snapshot.num("-0.11%"), -0.11)
@@ -378,14 +427,14 @@ class TrackRecordBuild(Base):
         for k, (d, _o, _c) in enumerate(_days("2026-06-01", 150)):              # 20% steps, no flag needed
             bars_rows.append(["PEPE24478-USD", d, 5e-06, 5e-06, 5e-06, (4e-06, 5e-06, 6e-06)[k % 3], 1, "USD", "r"])
         h.write("daily_bars", bars.BAR_COLS, bars_rows)
-        h.write("signal_runs", snapshot.SIGNAL_RUN_COLS, [["AI:2026-06-01T07:00:00Z", "AI", "2026-06-01T07:00:00Z", "m", "live", "git:abc"],
-                                                         ["Crypto:2026-10-25T07:00:00Z", "Crypto", "2026-10-25T07:00:00Z", "m", "live", "r"]])
+        h.write("signal_runs", snapshot.SIGNAL_RUN_COLS, [["AI:2026-06-01T07:00:00Z", "AI", "2026-06-01T07:00:00Z", "m", "live", "git:abc", None, None, None, None],
+                                                         ["Crypto:2026-10-25T07:00:00Z", "Crypto", "2026-10-25T07:00:00Z", "m", "live", "r", None, None, None, None]])
         h.write("signals", snapshot.SIGNAL_COLS, [
-            ["AI:2026-06-01T07:00:00Z", "ai", "AAPL", 1, "strong_buy", 0.95, "x", None],
-            ["AI:2026-06-01T07:00:00Z", "momentum", "AAPL", 1, "buy", 0.7, "x", None],
-            ["AI:2026-06-01T07:00:00Z", "ai", "NOPE", 2, "buy", 0.6, "x", None],
-            ["Crypto:2026-10-25T07:00:00Z", "ai", "PEPE", 1, "buy", 0.8, "x", None],
-            ["Crypto:2026-10-25T07:00:00Z", "ai", "AGIX", 2, "strong_buy", 1.0, "x", None],
+            ["AI:2026-06-01T07:00:00Z", "ai", "AAPL", 1, "strong_buy", 0.95, "x", None, None, None, None],
+            ["AI:2026-06-01T07:00:00Z", "momentum", "AAPL", 1, "buy", 0.7, "x", None, None, None, None],
+            ["AI:2026-06-01T07:00:00Z", "ai", "NOPE", 2, "buy", 0.6, "x", None, None, None, None],
+            ["Crypto:2026-10-25T07:00:00Z", "ai", "PEPE", 1, "buy", 0.8, "x", None, None, None, None],
+            ["Crypto:2026-10-25T07:00:00Z", "ai", "AGIX", 2, "strong_buy", 1.0, "x", None, None, None, None],
         ])
         out = tr.build(*tr.load(h), now=_dt.datetime(2026, 11, 1, 22, 0, tzinfo=UTC))
         self.assertEqual(out["counts"], {"signals": 5, "scored": 2, "pending": 0, "no_data": 1, "unreliable": 2})
