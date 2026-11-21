@@ -113,6 +113,8 @@ def rows_from_signal_file(sector, data, run_id, provenance="live"):
     if not generated:
         return None
     srid = f"{sector}:{generated}"
+    if str(data.get("variant") or "").startswith("shadow"):     # shadow trial (#92): its own run id, same sector/time
+        srid += f":{data['variant']}"
     run = [srid, sector, generated, data.get("model"), provenance, run_id,
            data.get("variant"), data.get("prompt_version"), data.get("code_commit"), data.get("input_version")]
     sigs = []
@@ -142,6 +144,10 @@ def signal_rows(universe, run_id):
             continue
         runs.append(got[0])
         sigs += got[1]
+        shadow = rows_from_signal_file(sector, read_json(f"{sector}/signals-shadow.json"), run_id)   # #92; absent/empty = skip
+        if shadow:
+            runs.append(shadow[0])
+            sigs += shadow[1]
     return runs, sigs
 
 

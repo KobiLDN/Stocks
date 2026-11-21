@@ -63,16 +63,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           SECTOR="${{ inputs.sector }}"
           LABEL="${SECTOR:-all sectors}"
-          if git diff --quiet -- AI/signals-local.json AI/signals-local.js Biotech/signals-local.json Biotech/signals-local.js Defence/signals-local.json Defence/signals-local.js Tech/signals-local.json Tech/signals-local.js Crypto/signals-local.json Crypto/signals-local.js Energy/signals-local.json Energy/signals-local.js MegaCap/signals-local.json MegaCap/signals-local.js; then
+          if git diff --quiet -- AI/signals-local.json AI/signals-local.js AI/signals-shadow.json Biotech/signals-local.json Biotech/signals-local.js Biotech/signals-shadow.json Defence/signals-local.json Defence/signals-local.js Defence/signals-shadow.json Tech/signals-local.json Tech/signals-local.js Tech/signals-shadow.json Crypto/signals-local.json Crypto/signals-local.js Crypto/signals-shadow.json Energy/signals-local.json Energy/signals-local.js Energy/signals-shadow.json MegaCap/signals-local.json MegaCap/signals-local.js MegaCap/signals-shadow.json; then
             echo "No signal changes."
           else
-            git add AI/signals-local.json AI/signals-local.js
-            git add Biotech/signals-local.json Biotech/signals-local.js
-            git add Defence/signals-local.json Defence/signals-local.js
-            git add Tech/signals-local.json Tech/signals-local.js
-            git add Crypto/signals-local.json Crypto/signals-local.js
-            git add Energy/signals-local.json Energy/signals-local.js
-            git add MegaCap/signals-local.json MegaCap/signals-local.js
+            git add AI/signals-local.json AI/signals-local.js AI/signals-shadow.json
+            git add Biotech/signals-local.json Biotech/signals-local.js Biotech/signals-shadow.json
+            git add Defence/signals-local.json Defence/signals-local.js Defence/signals-shadow.json
+            git add Tech/signals-local.json Tech/signals-local.js Tech/signals-shadow.json
+            git add Crypto/signals-local.json Crypto/signals-local.js Crypto/signals-shadow.json
+            git add Energy/signals-local.json Energy/signals-local.js Energy/signals-shadow.json
+            git add MegaCap/signals-local.json MegaCap/signals-local.js MegaCap/signals-shadow.json
             git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
               git fetch origin main

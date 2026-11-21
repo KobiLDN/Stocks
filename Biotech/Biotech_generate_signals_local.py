@@ -30,7 +30,7 @@ import requests
 import sys as _sys, os as _os
 _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
 from momentum_screener import compute_momentum_picks
-from signal_meta import annotate_momentum, run_meta
+from signal_meta import annotate_momentum, run_meta, run_shadow
 
 # ---- Configuration --------------------------------------------------------
 
@@ -389,6 +389,9 @@ def main():
 
     now_str = datetime.now(ZoneInfo("Europe/London")).strftime("%Y-%m-%d %H:%M")
     write_outputs(picks, stocks, now_str)
+    # Shadow trial (#92): same inputs, extra prompt line; stored, never shown. Can't affect the live run.
+    run_shadow(api_key, call_api, parse_picks, SYSTEM_PROMPT, build_user_prompt, user_prompt,
+               valid_tickers, stocks, now_str, MODEL)
 
     print("\nTop 10 picks:")
     for p in picks:
