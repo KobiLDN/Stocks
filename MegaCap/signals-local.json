@@ -1,9 +1,186 @@
 {
-  "updated": "2026-11-20 08:04",
+  "updated": "2026-11-21 22:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
+  "variant": "live-2",
+  "prompt_version": "4fe5ed0c16db",
+  "code_commit": "9210dadafdfb",
+  "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LLY",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Up 25% YTD with 39% Q3 revenue growth, Bank of America raised its price target to $1,600 (19% upside) citing pipeline beyond obesity, and 2026 revenue guidance raised to $91-92B.",
+      "drivers": [
+        "+25% YTD",
+        "P/E 43.7",
+        "BofA $1,600 PT",
+        "39% revenue growth"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "COST",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Up 30% YTD with +10.6% 1-month momentum, Mizuho notes 8.1% October comp sales growth and demand lift from outage-driven stockpiling, plus a $30 special dividend declared.",
+      "drivers": [
+        "+30% YTD",
+        "+10.6% 1M",
+        "$30 special dividend",
+        "8.1% comp sales growth"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "KO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Up 43% YTD, the best in the consumer category, with a low beta of 0.27, 2.2% dividend yield, and strong 1-month momentum of +4.7%.",
+      "drivers": [
+        "+43% YTD",
+        "beta 0.27",
+        "2.2% dividend yield",
+        "+4.7% 1M"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "JNJ",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Up 33% YTD with +4.9% 1-month momentum, low beta of 0.20, 2.0% dividend yield, and positive news sentiment in a defensive sector.",
+      "drivers": [
+        "+33% YTD",
+        "beta 0.20",
+        "2.0% dividend yield",
+        "+4.9% 1M"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Up 23% YTD with +8.7% 1-month momentum, targeting up to $10B in productivity savings through 2030, and a 2.6% dividend yield.",
+      "drivers": [
+        "+23% YTD",
+        "+8.7% 1M",
+        "$10B productivity target",
+        "2.6% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "WMT",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Up 14% YTD with +8.6% 1-month momentum, strong_buy analyst consensus (score 1.50), positive news sentiment of 0.38, and a $1T+ market cap.",
+      "drivers": [
+        "+14% YTD",
+        "+8.6% 1M",
+        "strong_buy consensus",
+        "news sentiment 0.38"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "BRK-B",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Up 15% YTD with +5.8% 1-month momentum, low beta of 0.57, P/E of 15.95, and recent activist stake increases by Greg Abel signal value orientation.",
+      "drivers": [
+        "+15% YTD",
+        "+5.8% 1M",
+        "beta 0.57",
+        "P/E 15.95"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Up 5.5% YTD with +8.7% 1-month momentum, positive news sentiment of 0.23, and low short interest of 0.25%, benefiting from GTA 6 release tailwinds.",
+      "drivers": [
+        "+8.7% 1M",
+        "short interest 0.25%",
+        "news sentiment 0.23",
+        "GTA 6 catalyst"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "TM",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Up 7% 1-year with +6.5% 1-month momentum, low P/E of 9.46, 3.0% dividend yield, and Moody's upgraded outlook to positive on EBIT margin expansion.",
+      "drivers": [
+        "P/E 9.46",
+        "3.0% dividend yield",
+        "+6.5% 1M",
+        "Moody's positive outlook"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Down 8% YTD but +11% 1-month momentum, Q3 EPS beat ($3.57 vs $3.38 est), low beta of 0.43, and 2.8% dividend yield with improving US comps.",
+      "drivers": [
+        "+11% 1M",
+        "EPS beat $3.57",
+        "beta 0.43",
+        "2.8% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "COST",
@@ -132,151 +309,6 @@
         "+3.95% 1M momentum",
         "low P/E 14.24",
         "high dividend yield 5.13%"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.538,
-      "ytd": "+118.91%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +118.91% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +118.91% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "LLY",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "+31.82% YTD, +14.26% 1M, P/E 45.94, multiple analyst upgrades including Barclays to $1,550 and Jefferies to $1,700, Q3 EPS beat at $7.48 vs $5.71 expected, GLP-1 tailwind [investing.com](https://investing.com/news/analyst-ratings/rbc-capital-reiterates-eli-lilly-stock-rating-on-pipeline-focus-93CH-5033060).",
-      "drivers": [
-        "+31.82% YTD",
-        "+14.26% 1M momentum",
-        "Analyst upgrades to $1,550-$1,700",
-        "Q3 EPS beat $7.48 vs $5.71"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "JNJ",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "+36.57% YTD, +9.82% 1M, beta 0.2, P/E 42.29, strong healthcare demand and low volatility.",
-      "drivers": [
-        "+36.57% YTD",
-        "+9.82% 1M momentum",
-        "Beta 0.2 low risk",
-        "Positive news sentiment 0.292"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "KO",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "+45.70% YTD, +5.75% 1M, beta 0.269, P/E 29.14, consumer staples resilience and strong dividend yield 2.15%.",
-      "drivers": [
-        "+45.70% YTD",
-        "+5.75% 1M momentum",
-        "Beta 0.269 low volatility",
-        "Dividend yield 2.15%"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "COST",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+30.68% YTD, +11.67% 1M, +4.12% 1W, P/E 53.47, strong retail momentum and consumer staples exposure.",
-      "drivers": [
-        "+30.68% YTD",
-        "+11.67% 1M momentum",
-        "+4.12% 1W momentum",
-        "Consumer staples sector tailwind"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "PG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+24.62% YTD, +9.62% 1M, P/E 25.86, dividend yield 2.52%, low beta 0.361, consistent consumer demand.",
-      "drivers": [
-        "+24.62% YTD",
-        "+9.62% 1M momentum",
-        "Dividend yield 2.52%",
-        "Beta 0.361 low risk"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "WMT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "+13.81% YTD, +7.43% 1M, analyst strong_buy, P/E 46.2, market cap $1.01T, retail giant with stable growth.",
-      "drivers": [
-        "+13.81% YTD",
-        "+7.43% 1M momentum",
-        "Analyst strong_buy rating",
-        "Market cap $1.01T stability"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BRK-B",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+18.10% YTD, +10.25% 1M, P/E 16.42, low beta 0.571, diversified holdings and positive news sentiment.",
-      "drivers": [
-        "+18.10% YTD",
-        "+10.25% 1M momentum",
-        "P/E 16.42 attractive valuation",
-        "Beta 0.571 low volatility"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "MA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "+15.41% YTD, +4.76% 1M, analyst strong_buy, P/E 33.79, payment network growth and low beta 0.77.",
-      "drivers": [
-        "+15.41% YTD",
-        "+4.76% 1M momentum",
-        "Analyst strong_buy",
-        "Beta 0.77 low risk"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "V",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "+21.23% YTD, +3.63% 1M, analyst strong_buy, P/E 33.83, but negative news sentiment -0.157. Still strong fundamentals.",
-      "drivers": [
-        "+21.23% YTD",
-        "Analyst strong_buy",
-        "P/E 33.83",
-        "Beta 0.786"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Recent momentum +2.10% 1M, +2.90% 1W, +2.43% 1D, best analyst score 1.27, AI infrastructure tailwind, despite -1.19% YTD.",
-      "drivers": [
-        "+2.10% 1M momentum",
-        "Analyst strong_buy score 1.27",
-        "AI infrastructure tailwind",
-        "Positive news sentiment 0.221"
       ]
     }
   ]

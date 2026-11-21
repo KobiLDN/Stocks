@@ -1,9 +1,186 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-20 08:03",
+  "updated": "2026-11-21 22:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
+  "variant": "live-2",
+  "prompt_version": "b5edfdd40218",
+  "code_commit": "9210dadafdfb",
+  "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Only asset with positive YTD (+6.07%) and 1-year return (+6%), positive news sentiment (0.099), and treasury buying by Tron Inc. at $0.3218, while BTC bounces 9% from lows to $60k+.",
+      "drivers": [
+        "positive YTD and 1Y return",
+        "positive news sentiment 0.099",
+        "corporate treasury accumulation",
+        "BTC recovery tailwind"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "BTC",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "Rebounded 9% from $55,130 low to reclaim $60,000; forced selling eased after $1.8B liquidation cleared largest futures cluster, though YTD -33.11% and news sentiment -0.34 remain headwinds.",
+      "drivers": [
+        "9% bounce from low to $60k+",
+        "forced selling cluster cleared",
+        "largest market cap $1177.6B",
+        "institutional ETF flows key catalyst"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "XLM",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Relatively resilient with -37% YTD vs peers, -4.53% 1D loss smaller than most, and neutral news sentiment (0.0); Stellar's payment focus benefits from stablecoin integration trends.",
+      "drivers": [
+        "relatively mild YTD decline -37%",
+        "smaller 1D loss -4.53%",
+        "neutral news sentiment",
+        "payment utility narrative"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD -30.43% and 1Y -30% are among the best in infra category; 1D -3.83% shows relative strength; Chainlink's oracle dominance and institutional adoption provide a floor.",
+      "drivers": [
+        "best YTD in infra category -30.43%",
+        "relative 1D strength -3.83%",
+        "oracle market leader",
+        "institutional adoption catalyst"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD -25.02% is the best in the entire universe; Polygon targets payment licenses with $50-100M spend and SoFiUSD launch on network, though 1D -4.11% and neutral news sentiment (0.0) temper near-term.",
+      "drivers": [
+        "best YTD in universe -25.02%",
+        "payment license acquisition plan",
+        "SoFiUSD stablecoin launch",
+        "network upgrade completed"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD -15.03% and 1Y -15% are strong relative to most assets; memecoin social sentiment can spike on BTC recovery; 1D -3.29% shows less downside than peers.",
+      "drivers": [
+        "strong YTD -15.03% vs peers",
+        "memecoin sentiment catalyst",
+        "smaller 1D loss -3.29%",
+        "high beta to BTC bounce"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "BNB",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD -38.10% and 1Y -38% are better than most L1s; large market cap $70.3B provides stability; BNB chain ecosystem and Binance exchange support offer a floor despite -0.116 news sentiment.",
+      "drivers": [
+        "better YTD than ETH/SOL/ADA",
+        "large market cap $70.3B",
+        "exchange and ecosystem support",
+        "relative value in L1s"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "TON",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "YTD -42.61% and 1Y -43% are mid-range; Telegram integration and growing user base provide long-term potential; 1D -6.20% reflects broad selloff but no specific negative catalyst.",
+      "drivers": [
+        "Telegram ecosystem integration",
+        "growing user base",
+        "mid-range YTD performance",
+        "no specific negative catalyst"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD -18.48% and 1Y -18% are among the best in the AI category; decentralized content delivery network thesis; 1D -5.21% and small market cap $0.09B increase risk.",
+      "drivers": [
+        "strong YTD -18.48% in AI category",
+        "decentralized CDN thesis",
+        "small market cap risk/reward",
+        "AI narrative tailwind"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.35,
+      "rationale": "YTD -30.11% and 1Y -30% are better than most AI tokens; Internet Computer's unique architecture and developer grants provide a differentiated thesis; 1D -6.80% reflects broad weakness.",
+      "drivers": [
+        "better YTD than most AI tokens",
+        "unique blockchain architecture",
+        "developer grant ecosystem",
+        "differentiated AI thesis"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TRX",
@@ -132,139 +309,6 @@ window.SIGNALS_DATA = {
         "319B transactions milestone",
         "5,236 TPS",
         "market cap $1.2B"
-      ]
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TRX",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "TRX is the only asset with positive YTD (+8.88%) and 1-year (+9%) returns, showing strong relative strength; its 1D gain of +1.12% and USDT supply on Tron reaching $94.21B (54% of total) confirm robust on-chain utility.",
-      "drivers": [
-        "+8.88% YTD",
-        "+9% 1-year return",
-        "USDT supply $94.21B on Tron",
-        "positive 1D momentum"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "RNDR",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "RNDR has the second-best YTD (+11.78%) and 1-year (+12%) returns in the universe, with a strong 1D bounce of +3.63% indicating renewed momentum in the AI narrative.",
-      "drivers": [
-        "+11.78% YTD",
-        "+12% 1-year return",
-        "+3.63% 1D gain",
-        "AI sector catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "XLM shows resilience with a 1W decline of only -2.64% (best among majors) and a 1D gain of +2.58%, while its -30% YTD is less severe than most peers, suggesting relative strength in payments.",
-      "drivers": [
-        "-2.64% 1W (best in category)",
-        "+2.58% 1D gain",
-        "moderate -30% YTD",
-        "payments narrative"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "XRP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "XRP gained +3.39% in 1D and is approaching $1, with a 1W decline of only -6.24% showing relative outperformance; its $63B market cap provides stability in a volatile market.",
-      "drivers": [
-        "+3.39% 1D gain",
-        "near $1 price level",
-        "-6.24% 1W (resilient)",
-        "large cap $63B"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TON gained +3.42% in 1D, the strongest among emerging L1s, with a 1W decline of -7.13% that is better than peers like SUI (-10.87%) and HBAR (-12.20%), indicating relative momentum.",
-      "drivers": [
-        "+3.42% 1D gain",
-        "best 1D in emerging category",
-        "-7.13% 1W (resilient)",
-        "Telegram ecosystem catalyst"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "POL has the best 1-year return among infra tokens at -18% and a 1D gain of +1.57%, with a 1W decline of -6.78% that is the best in its category, suggesting a potential bottom.",
-      "drivers": [
-        "-18% 1-year (best in infra)",
-        "+1.57% 1D gain",
-        "-6.78% 1W (best in infra)",
-        "low market cap $0.87B"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Bitcoin is near $64,600 with a 1D gain of +0.02%, and Glassnode notes capitulation signs with bids outweighing offers 2.3:1 within 5% of price; however, ETF outflows of $240M and a -12.41% 1W decline temper confidence.",
-      "drivers": [
-        "$64,600 price level",
-        "capitulation signs (Glassnode)",
-        "bids/offers ratio 2.3:1",
-        "ETF outflows -$240M"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "SOL",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "SOL gained +2.92% in 1D, one of the strongest among L1s, and its 1W decline of -9.44% is better than ETH (-12.06%) and BNB (-12.85%), though YTD of -39.75% remains weak.",
-      "drivers": [
-        "+2.92% 1D gain",
-        "-9.44% 1W (outperforms ETH/BNB)",
-        "large cap $44.4B",
-        "relative L1 strength"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "BNB has a 1M decline of -18.55%, the best among L1s, and a $77.9B market cap provides stability; news of Binance Pay Later spending up to $1,000 supports utility, though sentiment is negative at -0.298.",
-      "drivers": [
-        "-18.55% 1M (best in L1)",
-        "large cap $77.9B",
-        "Binance Pay Later catalyst",
-        "negative sentiment -0.298"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "PEPE has a 1-year return of only -7%, the best among memes, and a 1M decline of -8.34% is far better than DOGE (-25.47%); however, a 1W drop of -28.93% and 1D loss of -3.85% signal high risk.",
-      "drivers": [
-        "-7% 1-year (best in meme)",
-        "-8.34% 1M (resilient)",
-        "high risk -28.93% 1W",
-        "low market cap $1.55B"
       ]
     }
   ]

@@ -1,9 +1,198 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-20 08:02",
+  "updated": "2026-11-21 22:33",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
+  "variant": "live-2",
+  "prompt_version": "14bafcc0c883",
+  "code_commit": "9210dadafdfb",
+  "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "REGN",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "REGN has strong 1M momentum (+14.39%), a low P/E of 20.35, positive news sentiment of 0.279, and just received FDA approval for Livsayis (cemdisiran) in gMG, a first-in-class siRNA therapy with a boxed warning for serious infections, plus promising ASH data for Ordspono and Lynozyfic.",
+      "drivers": [
+        "FDA approval for Livsayis in gMG",
+        "Strong 1M momentum +14.39%",
+        "Low P/E 20.35",
+        "Positive news sentiment 0.279"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "GILD",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "GILD shows strong YTD performance (+39.33%), 1M momentum (+8.37%), positive news sentiment (0.117), and a buy analyst consensus (score 1.68), with a low beta of 0.372 and low short interest of 1.72%.",
+      "drivers": [
+        "Strong YTD +39.33%",
+        "1M momentum +8.37%",
+        "Buy analyst consensus",
+        "Low short interest 1.72%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "AMGN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "AMGN has strong YTD returns (+36.47%), a reasonable P/E of 25.25, and positive Phase 3 results for dazodalibep in Sj\u00f6gren's disease, with Piper Sandler raising its price target to $542 on pipeline potential, though 1W momentum is slightly negative (-5.91%).",
+      "drivers": [
+        "Positive Phase 3 dazodalibep data",
+        "Strong YTD +36.47%",
+        "Piper Sandler price target raise",
+        "Reasonable P/E 25.25"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "BIIB",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "BIIB has exceptional YTD performance (+40.36%), 1M momentum (+3.57%), and a buy analyst consensus (score 1.78), though its P/E of 108.05 is elevated and short interest is 4.11%.",
+      "drivers": [
+        "Strong YTD +40.36%",
+        "1M momentum +3.57%",
+        "Buy analyst consensus",
+        "Elevated P/E 108.05"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "LLY",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "LLY shows solid YTD gains (+25.45%), 1M momentum (+6.14%), a buy analyst consensus (score 1.65), and recent deal activity targeting blood cancer via Calytrix, though its P/E of 43.72 is high.",
+      "drivers": [
+        "Solid YTD +25.45%",
+        "1M momentum +6.14%",
+        "Buy analyst consensus",
+        "Recent Calytrix deal for blood cancer"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "EXEL",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "EXEL has strong YTD performance (+48.30%), a low P/E of 19.35, positive news sentiment (0.116), and a buy analyst consensus, though short interest is elevated at 14.42%.",
+      "drivers": [
+        "Strong YTD +48.30%",
+        "Low P/E 19.35",
+        "Positive news sentiment 0.116",
+        "Elevated short interest 14.42%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "AZN has positive 1M momentum (+6.29%), a buy analyst consensus (score 1.62), and a reasonable P/E of 25.16, though YTD is slightly negative (-1.31%) and news sentiment is slightly negative (-0.063).",
+      "drivers": [
+        "1M momentum +6.29%",
+        "Buy analyst consensus",
+        "Reasonable P/E 25.16",
+        "Slightly negative YTD -1.31%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "COAG has strong 1M momentum (+11.18%), a strong_buy analyst consensus (score 1.14), and positive YTD (+15.56%), though it lacks a P/E and has no recent news sentiment data.",
+      "drivers": [
+        "Strong_buy analyst consensus",
+        "1M momentum +11.18%",
+        "Positive YTD +15.56%",
+        "No P/E available"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BMRN shows strong 1M momentum (+9.42%), positive 1W momentum (+5.56%), positive news sentiment (0.163), and a buy analyst consensus (score 1.68), though it has no P/E and short interest is 7.31%.",
+      "drivers": [
+        "1M momentum +9.42%",
+        "1W momentum +5.56%",
+        "Positive news sentiment 0.163",
+        "Buy analyst consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "INCY",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "INCY has positive YTD (+13.03%), 1M momentum (+1.05%), and a buy analyst consensus (score 2.18), though its P/E of 58.48 is high and short interest is elevated at 8.87%.",
+      "drivers": [
+        "Positive YTD +13.03%",
+        "1M momentum +1.05%",
+        "Buy analyst consensus",
+        "Elevated P/E 58.48"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MRNA",
+      "signal": "strong_buy",
+      "confidence": 1.0,
+      "ytd": "+531.89%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +531.89% YTD exceeds strong buy threshold.",
+      "drivers": [
+        "YTD +531.89% \u2265 256.5% SB"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "REGN",
@@ -132,151 +321,6 @@ window.SIGNALS_DATA = {
         "P/E 24.96",
         "Analyst 'buy' rating",
         "Large-cap stability"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MRNA",
-      "signal": "strong_buy",
-      "confidence": 1.0,
-      "ytd": "+545.92%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +545.92% YTD exceeds strong buy threshold.",
-      "drivers": [
-        "YTD +545.92% \u2265 256.5% SB"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "REGN",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Strong 1M momentum (+22.47%), positive news sentiment (0.298) driven by EU Libtayo flexible dosing approval and analyst consensus fair value suggesting 2% undervaluation at $957.76; P/E 21.17 is reasonable for a large-cap biotech with a deep late-stage pipeline.",
-      "drivers": [
-        "+22.47% 1M momentum",
-        "positive news sentiment 0.298",
-        "P/E 21.17",
-        "EU Libtayo dosing flexibility catalyst"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AMGN",
-      "signal": "buy",
-      "confidence": 0.82,
-      "rationale": "Exceptional YTD (+42.63%) and 1Y (+34%) returns, strong Q3 beat (EPS $6.45 vs $5.79 est) and positive Phase 3 dazodalibep data in Sj\u00f6gren's disease; P/E 26.55 is justified by 8% revenue growth and a promising late-stage pipeline.",
-      "drivers": [
-        "+42.63% YTD",
-        "Q3 EPS beat $6.45 vs $5.79",
-        "positive Phase 3 dazodalibep data",
-        "P/E 26.55"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "GILD",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Strong YTD (+42.54%) and 1M (+11.23%) momentum, analyst consensus 'buy' with a favourable score of 1.68, and a low beta of 0.372 providing defensive characteristics; P/E is null but the company generates substantial cash flow.",
-      "drivers": [
-        "+42.54% YTD",
-        "+11.23% 1M momentum",
-        "analyst consensus buy (score 1.68)",
-        "low beta 0.372"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "LLY",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "Strong YTD (+31.82%) and 1M (+14.26%) momentum, positive news sentiment (0.249) with Barclays seeing 9% upside, and a dominant position in the metabolic/GIP-1 space; P/E 45.94 is elevated but reflects strong growth expectations.",
-      "drivers": [
-        "+31.82% YTD",
-        "+14.26% 1M momentum",
-        "positive news sentiment 0.249",
-        "dominant metabolic portfolio"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "EXEL",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Outstanding YTD (+57.18%) and 1Y (+57%) returns, strong 1M momentum (+9.29%), and a reasonable P/E of 20.51; despite negative news sentiment (-0.309), the pipeline drug potential and analyst buy consensus support continued upside.",
-      "drivers": [
-        "+57.18% YTD",
-        "+9.29% 1M momentum",
-        "P/E 20.51",
-        "pipeline catalyst potential"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "BIIB",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "Strong YTD (+41.04%) and 1Y (+49%) returns, positive news sentiment (0.076) with upcoming joint lupus trial results, and analyst consensus 'buy' (score 1.78); high P/E of 108.57 is a risk but reflects pipeline optionality.",
-      "drivers": [
-        "+41.04% YTD",
-        "+49% 1Y return",
-        "upcoming lupus trial catalyst",
-        "analyst consensus buy (score 1.78)"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "VRTX",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Solid YTD (+18.15%) and 1M (+6.42%) momentum, analyst consensus 'buy' with the best score in the large-cap group (1.62), and a P/E of 34.38 reflecting a strong CF franchise and upcoming kidney drug decision on Nov 30.",
-      "drivers": [
-        "analyst consensus strong buy (score 1.62)",
-        "P/E 34.38",
-        "upcoming kidney drug PDUFA Nov 30",
-        "stable CF franchise"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Strong 1M momentum (+11.31%) recovering from a flat YTD (+1.56%), analyst consensus 'buy' (score 1.62), and a reasonable P/E of 25.75 with a 1.7% dividend yield; the recent pullback offers an attractive entry point.",
-      "drivers": [
-        "+11.31% 1M momentum",
-        "analyst consensus buy (score 1.62)",
-        "P/E 25.75",
-        "recent pullback entry opportunity"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "Strong 1M momentum (+21.72%) and the best analyst consensus in the universe ('strong_buy', score 1.14) driven by the pivotal SOLARA trial progress; small-cap risk but high upside potential in rare disease with no P/E constraint.",
-      "drivers": [
-        "+21.72% 1M momentum",
-        "strong_buy consensus (score 1.14)",
-        "pivotal SOLARA trial catalyst",
-        "rare disease orphan drug potential"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Positive 1M momentum (+7.02%) and 1W (+2.42%), analyst consensus 'buy' (score 1.68), and a $2.6B sales potential from Amicus drugs and VOXZOGO expansion; valuation is attractive with a market cap of $11.3B and no P/E constraint due to negative earnings.",
-      "drivers": [
-        "+7.02% 1M momentum",
-        "analyst consensus buy (score 1.68)",
-        "$2.6B sales potential from pipeline",
-        "attractive market cap $11.3B"
       ]
     }
   ]

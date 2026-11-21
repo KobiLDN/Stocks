@@ -1,9 +1,186 @@
 {
-  "updated": "2026-11-20 08:03",
+  "updated": "2026-11-21 22:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
+  "variant": "live-2",
+  "prompt_version": "fa47e5f40c28",
+  "code_commit": "9210dadafdfb",
+  "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SPOT is the only stock in the universe with positive 1-month momentum (+9.84%) and a YTD gain (+0.35%), supported by a positive news sentiment of 0.153 and a reasonable P/E of 35.16.",
+      "drivers": [
+        "+9.84% 1-month momentum",
+        "positive news sentiment 0.153",
+        "P/E 35.16",
+        "YTD positive"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "PANW",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "PANW has strong YTD performance (+91.40%) and positive 1-week momentum (+6.54%), with a beta of 0.97 indicating lower volatility, and CEO commentary on rising cyber budgets amid AI threats.",
+      "drivers": [
+        "+91.40% YTD",
+        "+6.54% 1-week momentum",
+        "beta 0.97",
+        "rising cyber budgets"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "CRWD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "CRWD has exceptional YTD return (+102.34%) and positive 1-week momentum (+1.25%), with a beta of 1.15, though the P/E is very high at 3824, reflecting growth expectations.",
+      "drivers": [
+        "+102.34% YTD",
+        "+1.25% 1-week momentum",
+        "beta 1.15",
+        "strong YTD performance"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AAPL has a strong YTD gain of +26.84% and a market cap over $5 trillion, with a beta of 1.089 and a P/E of 38.15, though recent 1-week decline of -3.85% and negative news sentiment (-0.146) temper near-term outlook.",
+      "drivers": [
+        "+26.84% YTD",
+        "market cap $4.978T",
+        "beta 1.089",
+        "P/E 38.15"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "AMZN has a solid YTD return of +8.97%, a low P/E of 19.95, and a strong_buy analyst consensus (score 1.32), though the 1-week decline of -7.44% and negative news sentiment (-0.051) are concerns.",
+      "drivers": [
+        "+8.97% YTD",
+        "P/E 19.95",
+        "strong_buy consensus 1.32",
+        "beta 1.503"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "MSFT has a low P/E of 25.29, a strong_buy analyst consensus (score 1.38), and a dividend yield of 0.79%, but the 1-month decline of -8.91% and 1-week decline of -7.33% indicate recent weakness.",
+      "drivers": [
+        "P/E 25.29",
+        "strong_buy consensus 1.38",
+        "dividend yield 0.79%",
+        "beta 1.045"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "UBER",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "UBER has a buy analyst consensus (score 1.59), positive news sentiment of 0.158, and a beta of 1.308, but the YTD decline of -23.40% and 1-week drop of -8.93% are significant headwinds.",
+      "drivers": [
+        "buy consensus 1.59",
+        "positive news sentiment 0.158",
+        "beta 1.308",
+        "P/E 37.34"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "NET",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "NET has a strong YTD return of +40.27% and positive news sentiment of 0.233, with a buy analyst consensus (score 1.89), but the 1-week decline of -10.09% and 1-month decline of -10.50% are concerning.",
+      "drivers": [
+        "+40.27% YTD",
+        "positive news sentiment 0.233",
+        "buy consensus 1.89",
+        "beta 1.367"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "NFLX",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "NFLX has a low P/E of 16.4 and a buy analyst consensus (score 1.92), but the YTD decline of -37.65% and 1-week drop of -8.72% reflect significant recent weakness.",
+      "drivers": [
+        "P/E 16.4",
+        "buy consensus 1.92",
+        "beta 1.606",
+        "YTD -37.65%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "AVGO",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "AVGO has a strong_buy analyst consensus (score 1.27), positive news sentiment of 0.173, and a dividend yield of 0.75%, but the 1-week decline of -12.28% and YTD decline of -11.95% are notable risks.",
+      "drivers": [
+        "strong_buy consensus 1.27",
+        "positive news sentiment 0.173",
+        "dividend yield 0.75%",
+        "beta 1.508"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CRWD",
@@ -132,162 +309,6 @@
         "news sentiment 0.097",
         "P/E 38.59",
         "platform growth potential"
-      ]
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MU",
-      "signal": "buy",
-      "confidence": 0.539,
-      "ytd": "+119.06%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +119.06% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +119.06% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "signal": "buy",
-      "confidence": 0.538,
-      "ytd": "+118.91%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +118.91% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +118.91% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Strong 1-month momentum of +16.05%, YTD +4.70%, P/E 36.69, analyst buy with score 1.71, and positive news sentiment 0.284.",
-      "drivers": [
-        "+16.05% 1M momentum",
-        "YTD +4.70%",
-        "analyst buy 1.71",
-        "news sentiment 0.284"
-      ]
-    },
-    {
-      "rank": 2,
-      "ticker": "AVGO",
-      "signal": "strong_buy",
-      "confidence": 0.88,
-      "rationale": "Positive 1W (+2.90%) and 1D (+2.43%) momentum, strong_buy analyst consensus (1.27), news sentiment 0.221, and catalyst from Nvidia earnings beat lifting semiconductor peers.",
-      "drivers": [
-        "+2.90% 1W momentum",
-        "strong_buy 1.27",
-        "news sentiment 0.221",
-        "Nvidia earnings beat catalyst"
-      ]
-    },
-    {
-      "rank": 3,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.87,
-      "rationale": "Strong_buy analyst consensus (1.32), YTD +13.86%, P/E 20.85, positive news sentiment 0.137, and bullish commentary comparing Anthropic IPO to Amazon's IPO.",
-      "drivers": [
-        "strong_buy 1.32",
-        "YTD +13.86%",
-        "P/E 20.85",
-        "positive news sentiment 0.137"
-      ]
-    },
-    {
-      "rank": 4,
-      "ticker": "MU",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Exceptional YTD return of +126.03%, low P/E of 9.58, strong_buy consensus (1.35), and positive news sentiment 0.117 despite recent pullback.",
-      "drivers": [
-        "YTD +126.03%",
-        "P/E 9.58",
-        "strong_buy 1.35",
-        "news sentiment 0.117"
-      ]
-    },
-    {
-      "rank": 5,
-      "ticker": "CRWD",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +93.64%, analyst buy (1.66), news sentiment 0.144, and recent Frost Radar honor highlighting AI agent risk mitigation.",
-      "drivers": [
-        "YTD +93.64%",
-        "analyst buy 1.66",
-        "news sentiment 0.144",
-        "Frost Radar honor"
-      ]
-    },
-    {
-      "rank": 6,
-      "ticker": "NET",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "YTD +45.29%, analyst buy (1.89), news sentiment 0.153, and significant fund buying despite a recent outage.",
-      "drivers": [
-        "YTD +45.29%",
-        "analyst buy 1.89",
-        "news sentiment 0.153",
-        "fund buying interest"
-      ]
-    },
-    {
-      "rank": 7,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +30.30%, P/E 39.19, analyst buy (2.18), news sentiment 0.074, and recent all-time high despite two service outages in a week.",
-      "drivers": [
-        "YTD +30.30%",
-        "P/E 39.19",
-        "analyst buy 2.18",
-        "all-time high"
-      ]
-    },
-    {
-      "rank": 8,
-      "ticker": "CSCO",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "YTD +26.72%, P/E 25.3, analyst buy (1.86), news sentiment 0.192, and CEO commentary on AI industry being 'bigger than one person'.",
-      "drivers": [
-        "YTD +26.72%",
-        "P/E 25.3",
-        "analyst buy 1.86",
-        "news sentiment 0.192"
-      ]
-    },
-    {
-      "rank": 9,
-      "ticker": "SNOW",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "YTD +25.95%, strong_buy consensus (1.39), news sentiment 0.162, and strong guidance despite profitability concerns.",
-      "drivers": [
-        "YTD +25.95%",
-        "strong_buy 1.39",
-        "news sentiment 0.162",
-        "strong guidance"
-      ]
-    },
-    {
-      "rank": 10,
-      "ticker": "GOOGL",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "Low P/E of 14.63, strong_buy consensus (1.34), high news sentiment 0.405, and undervalued status despite YTD decline of -10.92%.",
-      "drivers": [
-        "P/E 14.63",
-        "strong_buy 1.34",
-        "news sentiment 0.405",
-        "undervalued"
       ]
     }
   ]
