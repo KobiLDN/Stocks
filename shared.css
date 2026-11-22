@@ -215,6 +215,10 @@ h1 span { color: var(--accent); }
 .sector-pill:hover { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
 .sector-pill.active { border-color: var(--accent); color: var(--accent); background: var(--surface2); pointer-events: none; }
 .sector-pill-icon  { font-size: 18px; line-height: 1; }
+/* Rail section headings: Markets / Sectors / Themes (#88) */
+.rail-section { margin: 8px 0 1px; padding-top: 6px; border-top: 1px solid var(--border);
+  font-family: 'IBM Plex Mono', monospace; font-size: 7px; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--muted); text-align: center; }
 .sector-pill-name  { white-space: nowrap; text-align: center; }
 .sector-pill-badge { font-size: 7px; padding: 1px 4px;
                      background: rgba(0,230,118,0.1); color: var(--green);

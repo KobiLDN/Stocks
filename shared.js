@@ -84,7 +84,8 @@ function buildStickyTop() {
 function buildDashboardHeader() {
   const parts = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
   const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy', 'MegaCap'];
-  const sector = SECTORS.find(s => parts[0] === s) || null;
+  const groupPath = (parts[0] === 'markets' || parts[0] === 'sectors') && parts[1] ? parts[0] + '/' + parts[1] : null;
+  const sector = SECTORS.find(s => parts[0] === s) || (groupPath ? parts[1] : null);   // #88 group pages count too
   const inAll  = parts[0] === 'All';
   const rawFile = parts[parts.length - 1] || '';
   // Treat sector-name-as-last-segment (trailing-slash URLs) as index.html
@@ -92,10 +93,10 @@ function buildDashboardHeader() {
   // Normalise extensionless "clean" URLs (Cloudflare Pages): /AI/index → 'index.html'
   const _KNOWN_PAGES2 = ['index', 'metrics', 'news', 'signals', 'heatmap', 'charts', 'calculator'];
   const _extRawFile = _KNOWN_PAGES2.includes(rawFile) ? rawFile + '.html' : rawFile;
-  const file = (rawFile === '' || SECTORS2.includes(rawFile) || rawFile === 'All') ? 'index.html' : _extRawFile;
+  const file = (rawFile === '' || SECTORS2.includes(rawFile) || rawFile === 'All' || (groupPath && parts.length === 2)) ? 'index.html' : _extRawFile;
   if (file !== 'index.html' || (!sector && !inAll)) return;
 
-  const railItem = _RAIL_ITEMS.find(r => r.key === (sector || 'all'));
+  const railItem = _RAIL_ITEMS.find(r => groupPath ? r.group === groupPath : r.key === (sector || 'all'));
   const name     = railItem ? railItem.label : (sector || 'All');
   const words    = name.split(' ');
   const titleHTML = words.length > 1

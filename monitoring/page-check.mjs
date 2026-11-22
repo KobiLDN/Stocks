@@ -31,6 +31,9 @@ const MUST_RENDER = [
   [/\/signals\.html$/, '#signals-feed', 'the signal picks'],
   [/^track-record\.html$/, '.verdict-card', 'the verdict cards'],
   [/^glossary\.html$/, '#glossary', 'the glossary entries'],
+  // #88 market and sector pages: their tables are built from the group's own prices-data.js
+  [/^(markets|sectors)\/[^/]+\/index\.html$/, '#stock-table tbody tr', 'the stock table'],
+  [/^(markets|sectors)\/[^/]+\/metrics\.html$/, '#metrics-body tr', 'the metrics table'],
 ];
 
 function pages(dir = ROOT, out = []) {

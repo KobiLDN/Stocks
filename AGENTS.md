@@ -124,13 +124,23 @@ Stocks/
 
 ### Market and sector groups (#88)
 
-`update_group_prices.py` (run by `update-prices.yml` after the theme price scripts, 3× a day) prices every stock in the 3 index markets (`sp500`, `nasdaq100`, `ftse100`) and the 11 sectors, and writes one compact file per group, `groups/<id>/prices-data.js` (ids: the market ids, and sector names as slugs such as `health-care`). The format is the sector pages' `window.PRICES_DATA` plus `fx` and, per stock, `markets`, `sector`, `industry`, `themes`, `t212`, `currency` and `price_as_of`. `category` is the sector on market pages and the industry on sector pages (Health Care: its 4 industry groups). Each page will load only its own group's file.
+**`groups_config.py`** is the one definition of the 14 groups, shared by the price bot and the page builder so they can't disagree:
+- **Groups and paths:** markets `sp500`, `nasdaq100`, `ftse100` live in `markets/<id>/`; the 11 sectors in `sectors/<slug>/` (e.g. `sectors/health-care/`).
+- **One entry per listing:** RR. and RR.L are one share, so a group keeps RR.L.
+- **Categories:** the sector on market pages. On sector pages, the industry: Health Care uses its 4 groups; the others show the 7 commonest industries (9 above 80 stocks) and put the rest under "Other". ICB/Yahoo industry names are mapped to the GICS ones first (`INDUSTRY_ALIASES`).
+- **Colours, and the TradingView symbol** for the charts page.
+
+**Prices:** `update_group_prices.py` (run by `update-prices.yml` after the theme price scripts, 3× a day) prices every stock in the groups and writes one compact `prices-data.js` into each group's folder, next to its pages. The format is the sector pages' `window.PRICES_DATA` plus `fx` and, per stock, `markets`, `sector`, `industry`, `themes`, `t212`, `currency` and `price_as_of`. Each page loads only its own group's file.
+
+**Pages:** `site/build.py` renders 6 page types per group (no Signals page until the groups get signal runs, #88 PR 8) from the same templates as the themes. The pages are two folders deep, so templates take `root` (`../` for themes, `../../` for groups); the group settings are generated in `group_configs()`, with shared wording from the Tech pages. Group dashboards add a "not on T212" mark and a "Hide stocks not on T212" box (`{% if s.t212 is defined %}` blocks, so the theme pages are unchanged).
+
+**Menu:** `nav.js` lists Markets (S&P 500, Nasdaq-100, FTSE 100, Crypto), Sectors (11) and Themes (AI, Biotech, Defence, Energy, Mega-Cap, Tech), with section headings (`.rail-section` in `shared.css`). Add a group to `_RAIL_SECTIONS` there.
 
 - **Prices:** batched 1-year daily downloads (100 symbols a call). A stock missing from a batch, or a day behind its own exchange, is fetched again on its own; a bar with no close takes the live quote's price.
 - **Currency:** converted to GBP/USD with the day's FX; GBp, EUR, JPY and SAR (pegged to USD) are handled.
 - **Fundamentals:** at most once a day per stock, in `groups/fundamentals.json`, time-boxed to 15 min a run, with backoff.
 - **Failures:** a stock that fails keeps its last good row (`price_as_of` shows its age). If more than half fail, nothing is written and the step fails, but it can't block the theme prices.
-- **News:** not fetched for the groups yet (`news: []`); per #88 it will cover signal picks and big movers only.
+- **News:** not fetched for the groups yet (`news: []`, and the group News pages say so); per #88 it will cover signal picks and big movers only.
 - **Freshness:** `groups/status.json` is part of `/health`'s Prices stream.
 
 ## Adding a stock to an existing sector
