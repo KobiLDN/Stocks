@@ -41,6 +41,9 @@ jobs:
           pip install -q pyyaml requests
           python -m unittest discover -s history -t .
 
+      - name: Export contract test (fields the portfolio reads)
+        run: python -m unittest monitoring/test_export_contract.py
+
       - name: Page check (every page loads, no script errors, fits a phone)
         run: |
           npm install --prefix monitoring --no-save playwright@1.63.0

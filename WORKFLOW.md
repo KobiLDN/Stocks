@@ -58,7 +58,7 @@ All four bots are started by cron-job.org (London time) through GitHub's `workfl
 
 ## PR checks — what CI runs
 
-`lint.yml` runs on every branch and PR: Python syntax, `python universe.py` (master list + generated links), the freshness tests, the history tests, **the page check**, and JSON validity.
+`lint.yml` runs on every branch and PR: Python syntax, `python universe.py` (master list + generated links), the freshness tests, the history tests, the export contract test (`monitoring/test_export_contract.py`: fields the portfolio reads must not disappear or change type), **the page check**, and JSON validity.
 
 **Generated pages** (`site/build.py --check`): some pages are generated from templates (see AGENTS.md → *Page templates*). CI fails if a generated page doesn't match what the template and config produce, so a hand edit to a generated file can't slip in.
 
