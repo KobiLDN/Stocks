@@ -9,7 +9,8 @@ Groups (one data file each, holding only its own stocks, so a page loads only wh
 Coins keep their own Crypto/ price script; the theme groups (AI, Defence, ...) keep theirs for now.
 
 How it stays light on Yahoo (#88 "Revised plan", point 5):
-  - prices: one batched daily-history download per BATCH symbols (1 year, adjusted), 3x a day with
+  - prices: one batched daily-history download per BATCH symbols (1 year; adjusted close, raw
+    close where Yahoo leaves the adjusted one empty), 3x a day with
     the other price bots;
   - fundamentals (market cap, P/E, beta, analyst view, ...): Ticker.info at most once a day per
     stock, cached in groups/fundamentals.json; a run spends at most --fundamentals-minutes on them
@@ -133,8 +134,41 @@ def stats(bars, today):
     }
 
 
-def fetch_prices(symbols, today):
-    """{yahoo symbol: stats} via batched downloads; failed batches retried with backoff."""
+def laggards(stats_by_symbol, exchange_of):
+    """Symbols whose newest bar is behind the newest bar of their own exchange (a batched download
+    sometimes leaves out a stock's latest day: SanDisk, 22 Nov 2026)."""
+    newest = {}
+    for y, s in stats_by_symbol.items():
+        e = exchange_of[y]
+        newest[e] = max(newest.get(e, ""), s["price_as_of"])
+    return sorted(y for y, s in stats_by_symbol.items() if s["price_as_of"] < newest[exchange_of[y]])
+
+
+def _bars(df):
+    """Rows -> bars. Close = the dividend/split-adjusted close, or the raw close where Yahoo left
+    the adjusted one empty (SanDisk's 20 Nov 2026 bar). For recent days the two are the same:
+    adjustment only rewrites older prices."""
+    out = []
+    for ts, r in df.iterrows():
+        adj = r.get("Adj Close")
+        close = adj if adj is not None and adj == adj else r["Close"]
+        out.append((ts.date(), r["High"], r["Low"], close, r["Volume"]))
+    return out
+
+
+def fill_last_close(bars, last_price):
+    """Yahoo sometimes publishes a day's bar with open/high/low/volume but no close (SanDisk,
+    20 Nov 2026). If the newest bar is like that, its close is the live quote's last price."""
+    if bars and last_price and bars[-1][3] != bars[-1][3] and bars[-1][1] == bars[-1][1]:
+        d, hi, lo, _, v = bars[-1]
+        if lo <= last_price <= hi:                  # only if it fits that day's range
+            bars = bars[:-1] + [(d, hi, lo, float(last_price), v)]
+    return bars
+
+
+def fetch_prices(symbols, today, exchange_of):
+    """{yahoo symbol: stats} via batched downloads; failed batches retried with backoff; stocks
+    missing from a batch or a day behind their exchange are fetched again on their own."""
     import yfinance as yf
     out = {}
     for start in range(0, len(symbols), BATCH):
@@ -142,7 +176,7 @@ def fetch_prices(symbols, today):
         for attempt in range(4):
             try:
                 df = yf.download(chunk, period="1y", interval="1d", group_by="ticker",
-                                 auto_adjust=True, progress=False, threads=True)
+                                 auto_adjust=False, progress=False, threads=True)
                 break
             except Exception as e:
                 print(f"  batch {start // BATCH + 1}: {str(e)[:80]} — retrying")
@@ -152,7 +186,7 @@ def fetch_prices(symbols, today):
         for y in chunk:
             try:
                 d = df[y] if len(chunk) > 1 else df
-                bars = [(ts.date(), r["High"], r["Low"], r["Close"], r["Volume"]) for ts, r in d.iterrows()]
+                bars = _bars(d)
             except KeyError:
                 continue
             s = stats(bars, today)
@@ -160,6 +194,19 @@ def fetch_prices(symbols, today):
                 out[y] = s
         print(f"  prices {min(start + BATCH, len(symbols))}/{len(symbols)}: {len(out)} ok so far")
         time.sleep(1 + random.random())
+    again = sorted(set(symbols) - set(out)) + laggards(out, exchange_of)
+    for y in again:
+        try:
+            tk = yf.Ticker(y)
+            bars = fill_last_close(_bars(tk.history(period="1y", auto_adjust=False)), tk.fast_info.last_price)
+            s = stats(bars, today)
+        except Exception:
+            s = None
+        if s and (y not in out or s["price_as_of"] > out[y]["price_as_of"]):
+            out[y] = s
+        time.sleep(0.3 + random.random() * 0.3)
+    behind = laggards(out, exchange_of)
+    print(f"  re-fetched {len(again)} on their own; still a day or more behind: {behind or 'none'}")
     return out
 
 
@@ -303,7 +350,7 @@ def main(argv=None):
 
     fx = get_fx()
     print("  FX per £1:", {k: round(v, 4) for k, v in fx.items()})
-    prices = fetch_prices(symbols, now.date())
+    prices = fetch_prices(symbols, now.date(), {a["yahoo"]: a["exchange"] for a in assets.values()})
     if len(prices) < len(symbols) * 0.5:     # Yahoo down: keep every file as it is, fail the run
         print(f"ERROR: only {len(prices)}/{len(symbols)} prices — nothing written")
         sys.exit(1)

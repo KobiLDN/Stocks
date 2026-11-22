@@ -54,6 +54,27 @@ class Stats(unittest.TestCase):
         self.assertIsNone(gp.stats(b[:1], b[0][0]))
 
 
+class Laggards(unittest.TestCase):
+    def test_behind_own_exchange_only(self):
+        st = {"A": {"price_as_of": "2026-11-20"}, "B": {"price_as_of": "2026-11-19"},
+              "C": {"price_as_of": "2026-11-22"}}                     # C: Saudi, trades on Sundays
+        self.assertEqual(gp.laggards(st, {"A": "NYSE", "B": "NASDAQ", "C": "TADAWUL"}), [])
+        self.assertEqual(gp.laggards(st, {"A": "NYSE", "B": "NYSE", "C": "TADAWUL"}), ["B"])
+
+
+class FillClose(unittest.TestCase):
+    def test_missing_close_filled_from_quote(self):
+        b = bars([94.39])
+        b.append((b[0][0] + timedelta(days=1), 90.67, 78.25, NAN, 127147042))
+        filled = gp.fill_last_close(b, 79.24)
+        self.assertEqual(filled[-1][3], 79.24)
+        self.assertEqual(gp.stats(filled, filled[-1][0])["price_as_of"], filled[-1][0].isoformat())
+
+    def test_quote_outside_day_range_ignored(self):
+        b = bars([94.39]) + [(date(2026, 1, 5), 90.67, 78.25, NAN, 1)]
+        self.assertTrue(gp.fill_last_close(b, 120.0)[-1][3] != gp.fill_last_close(b, 120.0)[-1][3])
+
+
 class Money(unittest.TestCase):
     def test_to_gbp(self):
         self.assertEqual(gp.to_gbp_factor("GBp", FX), 0.01)
