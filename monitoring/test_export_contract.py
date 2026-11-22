@@ -25,7 +25,7 @@ def read_json(path):
 
 
 CONTRACT = read_json(os.path.join(ROOT, "monitoring", "export-contract.json"))
-THEMES = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
+THEMES = ["AI", "Crypto", "Defence"]   # folders with files (#88 retired Biotech, Energy, Mega-Cap, Tech)
 
 TYPES = {
     "str": lambda v: isinstance(v, str),

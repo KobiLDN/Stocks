@@ -213,13 +213,18 @@ class AllFile(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d, unittest.mock.patch.object(gp, "ROOT", d):
             os.makedirs(os.path.join(d, "Crypto"))
             with open(os.path.join(d, "Crypto", "prices-data.js"), "w") as f:
-                f.write('window.PRICES_DATA = {"stocks":[{"ticker":"BTC","price_usd":90000}]};\n')
-            gp.write_all({}, {"AAPL": {"ticker": "AAPL", "sector": "Technology", "themes": ["Tech"]}},
+                f.write('window.PRICES_DATA = {"stocks":[{"ticker":"BTC","price_usd":90000,"news":[{"title":"b"}]}]};\n')
+            gp.write_all({}, {"AAPL": {"ticker": "AAPL", "sector": "Technology", "themes": ["Tech"], "news": [{"title": "a"}]},
+                              "IBM": {"ticker": "IBM", "sector": "Technology", "themes": [], "news": []}},
                          "2026-11-22 18:00", {"USD": 1.3})
             raw = open(os.path.join(d, gp.ALL_PATH)).read()
+            news_raw = open(os.path.join(d, gp.NEWS_ALL_PATH)).read()
         data = json.loads(re.sub(r"^window\.ALL_DATA = ", "", raw).rstrip().rstrip(";"))
-        self.assertEqual([r["ticker"] for r in data["stocks"]], ["AAPL", "BTC"])
-        self.assertEqual(data["count"], 2)
+        self.assertEqual([r["ticker"] for r in data["stocks"]], ["AAPL", "IBM", "BTC"])
+        self.assertEqual(data["count"], 3)
+        self.assertNotIn("news", data["stocks"][0])                     # the big file stays small
+        news = json.loads(re.sub(r"^window\.NEWS_DATA = ", "", news_raw).rstrip().rstrip(";"))
+        self.assertEqual([(r["ticker"], r["themes"]) for r in news["stocks"]], [("AAPL", ["tech"]), ("BTC", ["crypto"])])
 
 
 class Categories(unittest.TestCase):

@@ -52,6 +52,16 @@ def crypto_ids(sector="Crypto"):
     return coingecko, cmc
 
 
+# Theme folders retired on 22 Nov 2026 (#88): no pages, price script or signal run of their own. Their
+# membership stays under `sectors:` (the themes filter on the All pages).
+RETIRED_FOLDERS = {"Biotech", "Energy", "MegaCap", "Tech"}
+
+
+def theme_folders():
+    """Themes that still have their own folder: pages, prices.json, signals."""
+    return [t for t in load()["sectors"] if t not in RETIRED_FOLDERS]
+
+
 # The 11 standard sectors (#88). Pages say "Sector"; sector_src says where each came from.
 SECTORS = [
     "Communication Services", "Consumer Discretionary", "Consumer Staples", "Energy", "Financials",

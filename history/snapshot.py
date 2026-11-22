@@ -56,10 +56,17 @@ PRICE_COLS = ["asset_id", "as_of_utc", "sector", "price_usd", "price_gbp",
               "change_1d_pct", "market_cap_usd_b", "volume_1d", "run_id"]
 
 
+def live_folders(universe):
+    """Theme folders that still publish files (#88 retired Biotech, Energy, Mega-Cap and Tech)."""
+    sys.path.insert(0, ROOT)
+    import universe as u  # noqa: E402
+    return [s for s in universe["sectors"] if s not in u.RETIRED_FOLDERS]
+
+
 def price_files(universe):
     """[(label, prices dict)]: the theme folders' prices.json, then (#88) every market/sector group's
     prices-data.js, so picks from the group runs can be scored too."""
-    out = [(sector, read_json(f"{sector}/prices.json")) for sector in universe["sectors"]]
+    out = [(sector, read_json(f"{sector}/prices.json")) for sector in live_folders(universe)]
     out += [(gid, read_js_data(f"{path}/prices-data.js")) for path, gid in group_signal_files()]
     return out
 
@@ -150,7 +157,7 @@ def universe_rows(signal_run_id, prices, source):
 
 def signal_rows(universe, run_id):
     runs, sigs, members = [], [], []
-    for sector in universe["sectors"]:
+    for sector in live_folders(universe):
         got = rows_from_signal_file(sector, read_json(f"{sector}/signals-local.json"), run_id)
         if not got:
             print(f"  WARNING: {sector}/signals-local.json missing or has no 'updated'")

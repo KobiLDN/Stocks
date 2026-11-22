@@ -35,11 +35,11 @@ const _RAIL_SECTIONS = [
   ]},
   { title: 'Themes', items: [
     { key: 'AI',      label: 'AI',       icon: '🤖', theme: 'AI' },
-    { key: 'Biotech', label: 'Biotech',  icon: '🧬', theme: 'Biotech' },
+    { key: 'Biotech', label: 'Biotech', icon: '🧬', allTheme: 'biotech' },   // folder retired (#88): All pages with the theme filter
     { key: 'Defence', label: 'Defence',  icon: '🛡️', theme: 'Defence' },
-    { key: 'Energy',  label: 'Energy',   icon: '⚡', theme: 'Energy' },
-    { key: 'MegaCap', label: 'Mega-Cap', icon: '🌍', theme: 'MegaCap' },
-    { key: 'Tech',    label: 'Tech',     icon: '🖥️', theme: 'Tech' },
+    { key: 'Energy', label: 'Energy', icon: '⚡', allTheme: 'energy' },   // folder retired (#88): All pages with the theme filter
+    { key: 'MegaCap', label: 'Mega-Cap', icon: '🌍', allTheme: 'megacap' },   // folder retired (#88): All pages with the theme filter
+    { key: 'Tech', label: 'Tech', icon: '🖥️', allTheme: 'tech' },   // folder retired (#88): All pages with the theme filter
   ]},
 ];
 const _RAIL_BOTTOM = [
@@ -47,7 +47,8 @@ const _RAIL_BOTTOM = [
 ];
 // Flat list (shared.js looks up a page's label here)
 const _RAIL_ITEMS = [..._RAIL_TOP, ..._RAIL_SECTIONS.flatMap(s => s.items), ..._RAIL_BOTTOM]
-  .map(p => ({ badge: null, ...p, path: p.path || (p.group ? p.group + '/index.html' : p.theme + '/index.html') }));
+  .map(p => ({ badge: null, ...p,
+    path: p.path || (p.group ? p.group + '/index.html' : p.allTheme ? 'All/index.html?theme=' + p.allTheme : p.theme + '/index.html') }));
 
 const _SECTOR_PAGES = [
   { key: 'dashboard',  label: 'Dashboard', icon: '📊', file: 'index.html' },
@@ -87,11 +88,13 @@ function buildNav() {
   const isGlossary = !inSection && (file === 'glossary.html' || file === 'glossary');
   const groupItem = group && _RAIL_ITEMS.find(p => p.group === group);
   const activeKey = isHub ? 'hub' : isRSS ? 'rss' : isTrack ? 'track' : isGlossary ? 'glossary'
-    : inAll ? 'all' : groupItem ? groupItem.key : theme;
+    : inAll ? ((_RAIL_ITEMS.find(p => p.allTheme && p.allTheme === new URLSearchParams(location.search).get('theme')) || {}).key || 'all')
+    : groupItem ? groupItem.key : theme;
   const onSubPage = inSection && file !== 'index.html';
 
   // On a sub-page, switching group keeps the page type (metrics -> metrics) where the target has it
   const hrefFor = p => {
+    if (p.allTheme) return root + 'All/' + (onSubPage ? file : 'index.html') + '?theme=' + p.allTheme;
     if (onSubPage && p.group) return root + p.group + '/' + (_GROUP_NO_PAGES.includes(file) ? 'index.html' : file);
     if (onSubPage && (p.theme || p.key === 'all')) return root + (p.key === 'all' ? 'All' : p.theme) + '/' + file;
     return root + p.path;

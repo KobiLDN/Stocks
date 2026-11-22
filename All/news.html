@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Latest news and sentiment across 242 stocks — AI, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap sectors.">
+<meta name="description" content="Latest headlines and sentiment for the stocks on the site, with market, sector and theme filters.">
 <title>All Sectors — News</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../asset-links.js"></script>
+<script src="../all-filters.js"></script>
 <script src="../shared.js" defer></script>
 <style>
   /* Sector filter active colours (All-specific) */
@@ -123,16 +124,7 @@
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
 
-  <div class="filter-bar" id="filter-bar">
-    <button class="filter-btn active" data-sector="all"     onclick="setSector('all',this)">All</button>
-    <button class="filter-btn"        data-sector="ai"      onclick="setSector('ai',this)">AI Infra</button>
-    <button class="filter-btn"        data-sector="biotech" onclick="setSector('biotech',this)">Biotech</button>
-    <button class="filter-btn"        data-sector="defence" onclick="setSector('defence',this)">Defence</button>
-    <button class="filter-btn"        data-sector="tech"    onclick="setSector('tech',this)">Tech</button>
-    <button class="filter-btn"        data-sector="crypto"  onclick="setSector('crypto',this)">Crypto</button>
-    <button class="filter-btn"        data-sector="energy"  onclick="setSector('energy',this)">Energy</button>
-    <button class="filter-btn"        data-sector="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="setSector('megacap',this)">Mega-Cap</button>
-  </div>
+  <div class="filter-bar af-bar" id="af-bar"></div>
 
 <div class="controls-row">
 <span class="sort-label">Sort</span>
@@ -166,15 +158,10 @@
 <script>
   let allNews      = [];
   let filteredNews = [];
-  let activeSector = 'all';
   let activeSort   = 'newest';
   let activeWindow = 'day';
   let activeQuery  = '';
 
-  const SECTOR_LABELS = {
-    'ai':'AI Infra','biotech':'Biotech','defence':'Defence',
-    'tech':'Tech','crypto':'Crypto','energy':'Energy','megacap':'Mega-Cap',
-  };
 
   function sentClass(score) {
     if (score === null || score === undefined) return 'sent-neu';
@@ -196,12 +183,6 @@
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
-  function setSector(sector, btn) {
-    activeSector = sector;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    applyFilters();
-  }
   function setSort(mode, btn) {
     activeSort = mode;
     document.querySelectorAll('#sort-group .sort-btn').forEach(b => b.classList.remove('active'));
@@ -222,7 +203,7 @@
   function applyFilters() {
     let items = allNews.slice();
 
-    if (activeSector !== 'all') items = items.filter(n => n.sector === activeSector);
+    items = items.filter(n => afMatch(n.stock));     // market / sector / theme / T212 (all-filters.js)
 
     const now = Date.now() / 1000;
     if (activeWindow === 'day')  items = items.filter(n => now - n.ts < 86400);
@@ -257,13 +238,13 @@
 
     feed.innerHTML = filteredNews.map(n => {
       const sc     = sentClass(n.sent);
-      const slabel = SECTOR_LABELS[n.sector] || n.sector;
+      const slabel = n.sector || 'Crypto';
       return '<div class="news-card">' +
         '<div class="sent-bar ' + sc + '"></div>' +
         '<div class="news-body">' +
           '<div class="news-meta-top">' +
             '<a class="news-ticker" href="' + assetUrl(n.ticker) + '" target="_blank" rel="noopener">' + esc(n.ticker) + '</a>' +
-            '<span class="news-sector-badge sect-' + n.sector + '">' + esc(slabel) + '</span>' +
+            '<span class="news-sector-badge">' + esc(slabel) + '</span>' +
             '<span class="news-time">' + timeAgo(n.ts) + '</span>' +
           '</div>' +
           (n.url
@@ -277,55 +258,25 @@
     }).join('');
   }
 
-  const SECTORS = [
-    { key: 'ai',      path: '../AI/prices-data.js'      },
-    { key: 'biotech', path: '../Biotech/prices-data.js'  },
-    { key: 'defence', path: '../Defence/prices-data.js'  },
-    { key: 'tech',    path: '../Tech/prices-data.js'     },
-    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
-    { key: 'energy',  path: '../Energy/prices-data.js'   },
-    { key: 'megacap', path: '../MegaCap/prices-data.js'  },
-  ];
-
-  // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
+  /* #88: one file, All/news-data.js (written by update_group_prices.py): every stock and coin with
+     headlines, with the fields the shared filters need. */
   window.addEventListener('DOMContentLoaded', () => {
-  Promise.all(SECTORS.map(async sd => {
-    try {
-      const text  = await fetch(sd.path).then(r => r.text());
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (!match) return { news: [], stocks: [] };
-      const data  = JSON.parse(match[1]);
-
-      // Populate data-bar-ts from first sector that has an updated field
-      if (data.updated) {
-        const el = document.getElementById('data-bar-ts');
-        if (el && el.textContent === '—') el.textContent = data.updated;
-      }
-
-      const items = [];
-      (data.stocks || []).forEach(s => {
-        (s.news || []).forEach(n => {
-          items.push({
-            ticker:  s.ticker,
-            company: s.company_name || '',
-            sector:  sd.key,
-            headline: n.headline || n.title || '',
-            url:     n.url || '',
-            ts:      n.published_at || n.published || 0,
-            sent:    n.sentiment_score !== undefined ? n.sentiment_score : (n.sentiment !== undefined ? n.sentiment : null),
-            publisher: n.publisher || n.source || '',
-          });
-        });
-      });
-      return { news: items, stocks: data.stocks || [] };
-    } catch(e) { return { news: [], stocks: [] }; }
-  })).then(results => {
-    allNews = results.flatMap(r => r.news);
+    const data = window.NEWS_DATA || { stocks: [] };
+    const el = document.getElementById('data-bar-ts');
+    if (el && data.updated) el.textContent = typeof fmtDate === 'function' ? fmtDate(data.updated) : data.updated;
+    allNews = [];
+    data.stocks.forEach(s => (s.news || []).forEach(n => allNews.push({
+      ticker: s.ticker, company: s.company_name || '', sector: s.sector, stock: s,
+      headline: n.headline || n.title || '', url: n.url || '',
+      ts: n.published_at || n.published || 0,
+      sent: n.sentiment_score !== undefined ? n.sentiment_score : (n.sentiment !== undefined ? n.sentiment : null),
+      publisher: n.publisher || n.source || '',
+    })));
     const sc = document.getElementById('all-stock-count');
-    if (sc) sc.textContent = new Set(allNews.map(n => n.ticker).filter(Boolean)).size;
-    buildTape(results.flatMap(r => r.stocks));
+    if (sc) sc.textContent = data.stocks.length;
+    if (typeof buildTape === 'function' && window.ALL_DATA) buildTape(window.ALL_DATA.stocks.slice(0, 80));
+    afBuildBar(document.getElementById('af-bar'), applyFilters);
     applyFilters();
-  });
   });
 
   function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
@@ -352,6 +303,8 @@
 </div>
 </div>
 
+  <script src="all-data.js"></script>
+  <script src="news-data.js"></script>
   <script src="../nav.js"></script>
 </body>
 </html>

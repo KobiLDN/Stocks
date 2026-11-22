@@ -1,6 +1,0 @@
-yfinance
-beautifulsoup4
-tzdata
-vaderSentiment
-requests
-pyyaml

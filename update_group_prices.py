@@ -428,6 +428,7 @@ def previous_stats(group):
 
 # ── All pages: every stock in one file (#88 PR 7) ────────────────────────────────
 ALL_PATH = "All/all-data.js"
+NEWS_ALL_PATH = "All/news-data.js"      # only the stocks with headlines, for All News
 # universe.yaml theme names -> the keys the All pages use (and sector-data.js's notes)
 THEME_KEYS = {"AI": "ai", "Biotech": "biotech", "Crypto": "crypto", "Defence": "defence",
               "Energy": "energy", "MegaCap": "megacap", "Tech": "tech"}
@@ -441,7 +442,7 @@ def all_row(r, sector_slug=None):
     return out
 
 
-def crypto_rows():
+def crypto_rows(keep_news=False):
     """The Crypto page's own rows (CoinMarketCap/CoinGecko prices), as All rows."""
     try:
         raw = open(os.path.join(ROOT, "Crypto", "prices-data.js"), encoding="utf-8").read()
@@ -452,6 +453,8 @@ def crypto_rows():
     for r in data.get("stocks", []):
         row = all_row({**r, "themes": ["Crypto"], "markets": ["crypto"], "sector": None, "t212": "no",
                        "currency": "USD"}, "crypto")
+        if keep_news:
+            row["news"] = r.get("news") or []
         out.append(row)
     return out
 
@@ -462,6 +465,25 @@ def write_all(gs, all_rows, updated, fx):
     os.makedirs(os.path.join(ROOT, "All"), exist_ok=True)
     with open(os.path.join(ROOT, ALL_PATH), "w", encoding="utf-8") as f:
         f.write(f"window.ALL_DATA = {json.dumps(data, separators=(',', ':'))};\n")
+    write_all_news(all_rows, updated)
+
+
+NEWS_KEEP_FIELDS = ("ticker", "company_name", "sector", "markets", "themes", "t212")
+
+
+def write_all_news(all_rows, updated):
+    """All/news-data.js: every stock (and coin) with headlines, with what the All filters need."""
+    rows = []
+    for _, r in sorted(all_rows.items()):
+        if r.get("news"):
+            row = all_row(r)
+            rows.append({**{k: row.get(k) for k in NEWS_KEEP_FIELDS}, "news": r["news"]})
+    for r in crypto_rows(keep_news=True):
+        if r.get("news"):
+            rows.append({**{k: r.get(k) for k in NEWS_KEEP_FIELDS}, "news": r["news"]})
+    data = {"updated": updated, "count": len(rows), "stocks": rows}
+    with open(os.path.join(ROOT, NEWS_ALL_PATH), "w", encoding="utf-8") as f:
+        f.write(f"window.NEWS_DATA = {json.dumps(data, separators=(',', ':'))};\n")
 
 
 def main(argv=None):
