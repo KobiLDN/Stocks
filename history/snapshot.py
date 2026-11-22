@@ -157,7 +157,36 @@ def signal_rows(universe, run_id):
             runs.append(shadow[0])
             sigs += shadow[1]
             members += universe_rows(shadow[0][0], prices, "live")
+    # #88: the market and sector groups' own runs. The S&P 500 / Nasdaq-100 files are derived from the
+    # sector runs ("derived": true) and skipped, so no pick is counted twice.
+    for path, gid in group_signal_files():
+        data = read_json(f"{path}/signals-local.json")
+        if not data or data.get("derived"):
+            continue
+        got = rows_from_signal_file(gid, data, run_id)
+        if not got:
+            continue
+        runs.append(got[0])
+        sigs += got[1]
+        members += universe_rows(got[0][0], read_js_data(f"{path}/prices-data.js"), "live")
     return runs, sigs, members
+
+
+def group_signal_files():
+    """[(folder, group id)] for every market/sector group (groups_config.py, repo root)."""
+    sys.path.insert(0, ROOT)
+    import groups_config  # noqa: E402
+    return [(g["path"], g["id"]) for g in groups_config.all_groups()]
+
+
+def read_js_data(rel):
+    """window.X = {...}; files (the group price files) -> dict, or None."""
+    try:
+        with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
+            raw = f.read()
+        return json.loads(raw[raw.index("=") + 1:].strip().rstrip(";"))
+    except (OSError, ValueError):
+        return None
 
 
 SIGNAL_RUN_COLS = ["signal_run_id", "sector", "generated_utc", "model", "provenance", "run_id",

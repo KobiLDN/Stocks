@@ -91,7 +91,9 @@ def render_all():
 
 # ── Market and sector group pages (#88) ─────────────────────────────────────────
 GROUP_PAGES = [("dashboard", "index.html"), ("metrics", "metrics.html"), ("news", "news.html"),
-               ("calculator", "calculator.html"), ("charts", "charts.html"), ("heatmap", "heatmap.html")]
+               ("signals", "signals.html"), ("calculator", "calculator.html"), ("charts", "charts.html"),
+               ("heatmap", "heatmap.html")]
+DERIVED_SIGNALS = {"sp500", "nasdaq100"}     # generate_group_signals.py: picks from the sector runs
 CHART_DEFAULT = {"sp500": "AAPL", "nasdaq100": "NVDA", "ftse100": "AZN"}
 
 
@@ -145,6 +147,29 @@ def group_configs(g, assets, base):
                    "old_count": n, "chart_ticker": first, "chart_name": assets[first]["name"], "symbol": tv[first],
                    "symbol_name": assets[first]["name"], "default_tf": "1W", "note_suffix": "", "tv_map_js": tv_map,
                    "chart_cats_js": chart_cats, "no_embed_js": "", "cls_suffix": {}, "sector_css": chart_css},
+        "signals": {**common, "meta_description": (f"AI signals for the {name}: the sector runs' picks that are members."
+                                                    if g["id"] in DERIVED_SIGNALS else
+                                                    f"AI-generated top 10 buy signals for the {n} stocks in the {name}."),
+                    "categories": rgba, "cat_labels": labels, "how_titles": [
+                        "Live price data", "Web search for live catalysts",
+                        "Picks from the sector runs" if g["id"] in DERIVED_SIGNALS else "AI ranking via DeepSeek",
+                        "Mon/Wed/Fri refresh via GitHub Actions"],
+                    "how": [
+                        f"<code>update_group_prices.py</code> prices all {n} stocks three times a day: 1D/1W/1M/YTD and 1-year returns, "
+                        "market cap, P/E, beta, dividend yield, short interest and the analyst view.",
+                        "Before ranking, the model is told to search online for the latest news on the group's ten biggest "
+                        "one-month movers, so its reasons can cite live catalysts.",
+                        (f"The {name} is too big for one AI prompt, and narrowing it by recent strength first would favour "
+                         "stocks that have just run up. So this page shows the picks of the 11 sector runs that are "
+                         f"{name} members, best first by the AI's confidence." if g["id"] in DERIVED_SIGNALS else
+                         f"<code>generate_group_signals.py</code> sends every {name} stock to <code>deepseek/deepseek-v4-flash</code> "
+                         "via OpenRouter, which returns its top 10 with a reason for each. The momentum screen only adds notes; "
+                         "it never changes the AI's pick."),
+                        "Runs every Monday, Wednesday and Friday morning, after the prices update. Every run is recorded "
+                        "with the list of stocks it could choose from, so the Track Record can judge it fairly."],
+                    "disclaimer": "The model can be wrong, biased toward recent momentum, or inconsistent run-to-run. "
+                                  "Signals are one input among many — always do your own research before making any investment decision.",
+                    "refresh_note": "Auto-refreshed Mon / Wed / Fri · 08:00 London · GitHub Actions"},
         "heatmap": {**common, "meta_description": f"{name} heatmap: 1D, 1W, 1M, YTD and 1-year moves for all {n} stocks.",
                     "all_label": "All Stocks", "cat_label": f"By {what.capitalize()}", "n_cats": len(cats),
                     "cat_order": [c for c, _ in cats], "metrics_cfg_js": base["heatmap"]["metrics_cfg_js"],

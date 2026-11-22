@@ -221,6 +221,22 @@ class Snapshot(Base):
         self.assertEqual(self.count("signals"), n)
         self.assertEqual(self.count("run_universe"), u)
 
+    def test_group_runs_recorded_derived_skipped(self):
+        """#88 PR 8: a sector run is recorded with its own list; the derived S&P 500 file is not (no double count)."""
+        pick = {"rank": 1, "ticker": "XOM", "signal": "buy", "confidence": 0.8, "rationale": "r", "drivers": []}
+        files = {"sectors/energy/signals-local.json": {"updated": "2026-11-23 08:00", "variant": "live-2", "picks": [pick]},
+                 "markets/sp500/signals-local.json": {"updated": "2026-11-23 08:00", "derived": True, "picks": [pick]}}
+        real = snapshot.read_json
+        with mock.patch.object(snapshot, "read_json", side_effect=lambda rel: files[rel] if rel in files else real(rel)), \
+             mock.patch.object(snapshot, "group_signal_files", return_value=[("sectors/energy", "energy"), ("markets/sp500", "sp500")]), \
+             mock.patch.object(snapshot, "read_js_data", return_value={"stocks": [{"ticker": "XOM"}, {"ticker": "CVX"}]}):
+            runs, sigs, members = snapshot.signal_rows(self.universe, "r")
+        ids = [r[0] for r in runs]
+        self.assertIn("energy:2026-11-23T08:00:00Z", ids)
+        self.assertFalse(any(i.startswith("sp500:") for i in ids))
+        self.assertEqual(sorted(m[1] for m in members if m[0] == "energy:2026-11-23T08:00:00Z"), ["CVX", "XOM"])
+        self.assertEqual(sum(1 for x in sigs if x[0] == "energy:2026-11-23T08:00:00Z"), 1)
+
     def test_run_universe_is_the_prices_file(self):
         """#88: each run's list of choosable stocks = the tickers in that sector's prices.json."""
         runs, _sigs, members = snapshot.signal_rows(self.universe, "r")

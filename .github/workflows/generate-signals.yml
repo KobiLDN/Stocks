@@ -19,12 +19,14 @@ on:
           - Crypto
           - Energy
           - MegaCap
+          - groups
 
 permissions:
   contents: write
 
 concurrency:
-  group: push-to-main
+  # main shares the bots' push lock; a branch run (it commits to its own branch) must not hold it up
+  group: ${{ github.ref == 'refs/heads/main' && 'push-to-main' || format('signals-{0}', github.ref) }}
   cancel-in-progress: false
 
 jobs:
@@ -46,6 +48,7 @@ jobs:
           cache: pip
 
       - name: Generate signals
+        if: inputs.sector != 'groups'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
@@ -57,13 +60,29 @@ jobs:
             fi
           done
 
+      # #88: the 11 sectors and the FTSE 100 (one AI run each, 4 at a time), then the S&P 500 and
+      # Nasdaq-100 pages derived from the sector runs. A failure here can't stop the theme signals
+      # above from being published; a failed group keeps its previous picks.
+      - name: Generate group signals (sectors + FTSE 100)
+        if: inputs.sector == 'all' || inputs.sector == 'groups' || github.event_name == 'schedule'
+        continue-on-error: true
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          pip install -q requests pyyaml tzdata
+          python generate_group_signals.py
+
       - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           SECTOR="${{ inputs.sector }}"
           LABEL="${SECTOR:-all sectors}"
-          if git diff --quiet -- AI/signals-local.json AI/signals-local.js AI/signals-shadow.json Biotech/signals-local.json Biotech/signals-local.js Biotech/signals-shadow.json Defence/signals-local.json Defence/signals-local.js Defence/signals-shadow.json Tech/signals-local.json Tech/signals-local.js Tech/signals-shadow.json Crypto/signals-local.json Crypto/signals-local.js Crypto/signals-shadow.json Energy/signals-local.json Energy/signals-local.js Energy/signals-shadow.json MegaCap/signals-local.json MegaCap/signals-local.js MegaCap/signals-shadow.json; then
+          # main pushes to main; a branch run commits its output to its own branch (WORKFLOW.md
+          # "Bot-code changes": the PR preview then shows real picks)
+          TARGET="${{ github.ref_name }}"
+          for f in markets/*/signals-local.js* sectors/*/signals-local.js*; do [ -e "$f" ] && git add "$f"; done
+          if git diff --cached --quiet && git diff --quiet -- AI/signals-local.json AI/signals-local.js AI/signals-shadow.json Biotech/signals-local.json Biotech/signals-local.js Biotech/signals-shadow.json Defence/signals-local.json Defence/signals-local.js Defence/signals-shadow.json Tech/signals-local.json Tech/signals-local.js Tech/signals-shadow.json Crypto/signals-local.json Crypto/signals-local.js Crypto/signals-shadow.json Energy/signals-local.json Energy/signals-local.js Energy/signals-shadow.json MegaCap/signals-local.json MegaCap/signals-local.js MegaCap/signals-shadow.json; then
             echo "No signal changes."
           else
             git add AI/signals-local.json AI/signals-local.js AI/signals-shadow.json
@@ -75,9 +94,9 @@ jobs:
             git add MegaCap/signals-local.json MegaCap/signals-local.js MegaCap/signals-shadow.json
             git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
-              git fetch origin main
-              git merge -X ours origin/main --no-edit
-              git push origin HEAD:main && break
+              git fetch origin "$TARGET"
+              git merge -X ours "origin/$TARGET" --no-edit
+              git push origin "HEAD:$TARGET" && break
               echo "Push attempt $i failed, retrying..."
               sleep 10
             done

@@ -138,6 +138,8 @@ Stocks/
 
 **Home page:** "Markets & Sectors" tiles (median 1D / 1W per market and sector, from `All/all-data.js`, each linking to its page) sit above the theme tiles. `index.html` doesn't load `shared.css`, so a rail style added there must be copied into its own `<style>` (as `.rail-section` is).
 
+**Signal runs for the groups (#88 PR 8):** `generate_group_signals.py` runs one AI call per sector (11) and for the FTSE 100, 4 at a time, in `generate-signals.yml` after the theme runs (Mon/Wed/Fri). Same model, pick format, variant tags and momentum notes as the theme runs; the prompt is built from the group's name, categories and a one-line "what matters" (`GROUP_FACTORS`). Output: `<group path>/signals-local.json` + `.js`. The **S&P 500 and Nasdaq-100 have no run of their own** (revised plan, point 1): their Signals pages show the sector runs' picks that are members, ordered by confidence, each tagged with its sector and rank (`"derived": true`). `history.snapshot signals` records the group runs with their stock lists and skips derived files. A branch run of the workflow commits to its own branch, never to `main`.
+
 **Menu:** `nav.js` lists Markets (S&P 500, Nasdaq-100, FTSE 100, Crypto), Sectors (11) and Themes (AI, Biotech, Defence, Energy, Mega-Cap, Tech), with section headings (`.rail-section` in `shared.css`). Add a group to `_RAIL_SECTIONS` there.
 
 - **Prices:** batched 1-year daily downloads (100 symbols a call). A stock missing from a batch, or a day behind its own exchange, is fetched again on its own; a bar with no close takes the live quote's price.
