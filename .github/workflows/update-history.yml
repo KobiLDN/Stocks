@@ -94,7 +94,7 @@ jobs:
             echo "Not Friday — no backup."
           fi
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always() && hashFiles('backup/manifest.json') != ''
         with:
           name: history-backup-${{ github.run_id }}
