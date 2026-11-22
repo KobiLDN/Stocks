@@ -2,10 +2,11 @@
 
 ## Backlog
 
-- **#88 follow-ups:** PR 10 (track record in GBP, vs local index for UK picks, quarterly run review)
 - Open ideas live in GitHub issues (#40 influencer tweets, #44 stock calendar).
 
 ## Done
+
+- **Track record in pounds, UK picks vs the FTSE 100, run review (#88 phase 1, PR 10)** — every window also in £; London picks vs ISF; each run vs random from its own list, flagged for the quarterly review
 
 - **Biotech, Energy, Mega-Cap and Tech folders retired (#88 follow-up)** — pages redirect to the All pages with the theme filter, price scripts stopped, All News from one file with the shared filters
 

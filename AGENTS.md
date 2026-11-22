@@ -106,7 +106,7 @@ Stocks/
 
 **`glossary.html`** (left-rail leaf page, 📖 below Technology): every definition is one entry in the `GROUPS` array in the page; entries have an `id` for deep links (`glossary.html#conf`). **When you add a column, metric or signal type to the site, add its glossary entry in the same PR**, and write it from how the code really computes it.
 
-**`track-record.html`** (left-rail leaf page, rail item 🏁 *Track Record* in `nav.js`) reads `track-record.json`, which `update-history.yml` rebuilds nightly from the history database (`history/track_record.py`). The page only reads that file. Its plain-English findings are computed from the data in the browser, so they stay true as results change. Don't hard-code conclusions.
+**`track-record.html`** (left-rail leaf page, rail item 🏁 *Track Record* in `nav.js`) reads `track-record.json`, which `update-history.yml` rebuilds nightly from the history database (`history/track_record.py`). The page only reads that file. Its plain-English findings are computed from the data in the browser, so they stay true as results change. Don't hard-code conclusions. Since #88 PR 10 it also shows returns **in pounds** (stock and SPY converted at the entry and exit days' closing rates: `history.db.BENCHMARKS` adds GBPUSD=X, GBPEUR=X, GBPJPY=X; SAR is pegged to the dollar), **London picks vs the FTSE 100** (ISF.L, same window), and the **run review**: each signal run's AI picks vs every stock in its own list, per run date, 1-month excess; a run with at least 10 finished run dates whose median date is behind random is flagged for the owner's quarterly review (`run_review` in the JSON). Nothing pauses a run automatically.
 
 ## Data architecture — how pages get their data
 

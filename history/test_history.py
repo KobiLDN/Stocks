@@ -537,6 +537,66 @@ class TrackRecordBaselines(unittest.TestCase):
         self.assertIsNone(tr.momentum_score(ser, tr.parse_utc("2026-03-01T07:00:00Z")))   # too little history
 
 
+class PoundsLocalAndReview(unittest.TestCase):
+    """#88 PR 10: returns in pounds, London picks vs the FTSE 100, and the run review."""
+    def test_to_gbp(self):
+        fx = {"GBPUSD": tr.Series("Index", [("2026-07-01", 1.25, 1.25), ("2026-07-31", 1.30, 1.30)])}
+        # +10% in dollars while the pound rose 4%: less in pounds
+        self.assertAlmostEqual(tr.to_gbp(0.10, "USD", "2026-07-01", "2026-07-31", fx), 1.10 * 1.25 / 1.30 - 1)
+        self.assertAlmostEqual(tr.to_gbp(0.10, "SAR", "2026-07-01", "2026-07-31", fx), 1.10 * 1.25 / 1.30 - 1)   # pegged
+        self.assertEqual(tr.to_gbp(0.10, "GBp", "2026-07-01", "2026-07-31", fx), 0.10)
+        self.assertIsNone(tr.to_gbp(0.10, "EUR", "2026-07-01", "2026-07-31", fx))                 # no rate: not scored
+        self.assertIsNone(tr.to_gbp(0.10, "USD", "2026-06-01", "2026-07-31", fx))                 # rate missing that day
+
+    def _world(self, behind):
+        """A sector T with stocks UP (rises) and FLAT; 12 AI runs pick FLAT (behind) or UP (ahead)."""
+        def bars_for(sym, step, price=100.0, ccy="USD"):
+            return [{"date": d, "open": o, "close": c, "currency": ccy} for d, o, c in _days("2026-01-01", 300, price, step)]
+        assets = {"UP": {"asset_id": "UP", "yahoo": "UP", "exchange": "NYSE", "name": "Up"},
+                  "FLAT": {"asset_id": "FLAT", "yahoo": "FLAT", "exchange": "NYSE", "name": "Flat"},
+                  "LON": {"asset_id": "LON", "yahoo": "LON.L", "exchange": "LSE", "name": "London"},
+                  "SPY": {"asset_id": "SPY", "yahoo": "SPY", "exchange": "Index", "name": "SPY"}}
+        bars_ = {"UP": bars_for("UP", 1.0), "FLAT": bars_for("FLAT", 0.01), "SPY": bars_for("SPY", 0.1),
+                 "LON.L": bars_for("LON.L", 0.5, ccy="GBp"), "ISF.L": bars_for("ISF.L", 0.01, ccy="GBp"),
+                 "GBPUSD=X": bars_for("GBPUSD=X", 0.00001, price=1.25)}
+        runs, signals = {}, []
+        for k in range(12):
+            gen = (_dt.date(2026, 5, 1) + _dt.timedelta(days=3 * k)).isoformat() + "T07:00:00Z"
+            rid = f"T:{gen}"
+            runs[rid] = {"signal_run_id": rid, "sector": "T", "generated_utc": gen, "provenance": "live", "variant": "live-2"}
+            signals.append({"signal_run_id": rid, "kind": "ai", "asset_id": "FLAT" if behind else "UP", "rank": 1,
+                            "signal": "buy", "confidence": 0.5})
+            signals.append({"signal_run_id": rid, "kind": "ai", "asset_id": "LON", "rank": 2, "signal": "buy", "confidence": 0.5})
+        members = {"T": ["UP", "FLAT", "LON"]}
+        return assets, runs, signals, bars_, members
+
+    def test_gbp_and_local_summaries(self):
+        assets, runs, signals, bars_, members = self._world(behind=False)
+        out = tr.build(assets, runs, signals, bars_, {}, {}, set(), members, now=_dt.datetime(2026, 9, 1, tzinfo=UTC))
+        S = out["summary"]
+        usd, gbp = S["all"]["buy signals"]["1m"], S["in_gbp"]["buy signals"]["1m"]
+        self.assertEqual(usd["n"], gbp["n"])                       # flat pound: same windows, same numbers
+        self.assertAlmostEqual(usd["excess"], gbp["excess"], places=1)
+        loc = S["vs_local"]
+        self.assertEqual(loc["vs FTSE 100"]["1m"]["n"], 12)          # only the London pick, once per run
+        self.assertGreater(loc["vs FTSE 100"]["1m"]["excess"], 0)    # LON rose, ISF flat
+
+    def test_review_flags_only_after_enough_dates(self):
+        assets, runs, signals, bars_, members = self._world(behind=True)
+        rv = tr.build(assets, runs, signals, bars_, {}, {}, set(), members, now=_dt.datetime(2026, 9, 1, tzinfo=UTC))["run_review"]
+        t = next(r for r in rv["runs"] if r["run"] == "T")
+        self.assertEqual(t["dates"], 12)
+        self.assertEqual(t["status"], "behind random")             # FLAT + LON vs the whole list incl. UP
+        self.assertLess(t["diff_median"], 0)
+        self.assertEqual(rv["next_review"], "2026-10-01")
+        few = {k: v for k, v in list(runs.items())[:5]}
+        rv = tr.build(assets, few, [x for x in signals if x["signal_run_id"] in few], bars_, {}, {}, set(), members,
+                      now=_dt.datetime(2026, 9, 1, tzinfo=UTC))["run_review"]
+        self.assertEqual(rv["runs"][0]["status"], "too few dates")
+        ahead = tr.build(*self._world(behind=False)[:4], {}, {}, set(), members, now=_dt.datetime(2026, 9, 1, tzinfo=UTC))
+        self.assertEqual(ahead["run_review"]["runs"][0]["status"], "ahead of random")
+
+
 class PastShadowRuns(unittest.TestCase):
     """#92 ended (22 Nov 2026): the shadow picks already stored stay in D1 but are never counted."""
     def test_past_shadow_picks_kept_out(self):

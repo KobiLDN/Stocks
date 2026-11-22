@@ -54,6 +54,11 @@ BENCHMARKS = [
     ("SPY", "SPDR S&P 500 ETF", "SPY"),
     ("QQQ", "Invesco QQQ Trust", "QQQ"),
     ("VIX", "CBOE Volatility Index", "^VIX"),
+    # #88 PR 10: returns in pounds (daily FX: units of each currency per £1) and UK picks vs the FTSE 100
+    ("ISF", "iShares Core FTSE 100 UCITS ETF", "ISF.L"),
+    ("GBPUSD", "Pound / US dollar", "GBPUSD=X"),
+    ("GBPEUR", "Pound / euro", "GBPEUR=X"),
+    ("GBPJPY", "Pound / yen", "GBPJPY=X"),
 ]
 
 
