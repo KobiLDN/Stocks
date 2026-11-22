@@ -205,6 +205,15 @@ class Snapshot(Base):
         runs = self.h.run("SELECT status FROM runs WHERE bot = 'prices'")
         self.assertEqual([r["status"] for r in runs], ["complete", "complete"])
 
+    def test_group_stocks_get_prices(self):
+        """#88: a stock only in a market/sector group (not in any theme) still gets price history,
+        so the group runs' picks can be scored."""
+        rows = snapshot.price_rows(self.universe, "r", warn=lambda *_: None)
+        themed = {t for members in self.universe["sectors"].values() for t, _ in members}
+        only_group = {r[0] for r in rows} - themed
+        self.assertGreater(len(only_group), 300)
+        self.assertTrue({r[2] for r in rows} & {"sp500", "ftse100"})
+
     def test_every_published_row_maps_to_the_universe(self):
         warnings = []
         snapshot.price_rows(self.universe, "r", warn=warnings.append)
@@ -528,61 +537,31 @@ class TrackRecordBaselines(unittest.TestCase):
         self.assertIsNone(tr.momentum_score(ser, tr.parse_utc("2026-03-01T07:00:00Z")))   # too little history
 
 
-class ShadowTrial(unittest.TestCase):
-    """#92: shadow picks are stored apart, never counted live, and judged only by the frozen rule."""
-    def _world(self):
+class PastShadowRuns(unittest.TestCase):
+    """#92 ended (22 Nov 2026): the shadow picks already stored stay in D1 but are never counted."""
+    def test_past_shadow_picks_kept_out(self):
         def bars_for(step):
             return [{"date": d, "open": o, "close": c, "currency": "USD"} for d, o, c in _days("2026-01-01", 300, step=step)]
         assets = {t: {"asset_id": t, "yahoo": t, "exchange": "Crypto", "name": t} for t in ("UP", "FLAT", "SPY")}
         bars_ = {"UP": bars_for(1.0), "FLAT": bars_for(0.01), "SPY": bars_for(0.1)}
         runs, signals = {}, []
-        for k in range(30):                                     # 30 run dates, live picks FLAT, shadow picks UP
+        for k in range(5):
             gen = (_dt.date(2026, 6, 1) + _dt.timedelta(days=2 * k)).isoformat() + "T07:00:00Z"
             runs[f"T:{gen}"] = {"signal_run_id": f"T:{gen}", "sector": "T", "generated_utc": gen, "provenance": "live", "variant": "live-2"}
             runs[f"T:{gen}:shadow-runup-1"] = {"signal_run_id": f"T:{gen}:shadow-runup-1", "sector": "T", "generated_utc": gen,
                                                "provenance": "live", "variant": "shadow-runup-1"}
             signals.append({"signal_run_id": f"T:{gen}", "kind": "ai", "asset_id": "FLAT", "rank": 1, "signal": "buy", "confidence": 0.5})
             signals.append({"signal_run_id": f"T:{gen}:shadow-runup-1", "kind": "ai", "asset_id": "UP", "rank": 1, "signal": "buy", "confidence": 0.5})
-        return assets, runs, signals, bars_
-
-    def test_shadow_kept_out_and_judged_only_at_decision(self):
-        assets, runs, signals, bars_ = self._world()
-        before = tr.build(assets, runs, signals, bars_, {}, {}, set(), {"T": ["UP", "FLAT"]}, now=_dt.datetime(2026, 10, 25, tzinfo=UTC))
-        self.assertEqual(before["counts"]["signals"], 30)                       # only the live picks are counted
-        self.assertTrue(all(r[3] == "FLAT" for r in before["rows"]))
-        st = before["summary"]["shadow_trial"]
-        self.assertEqual(st["status"], "running")
-        self.assertNotIn("median_diff", st)                                     # no peeking before the decision date
-        self.assertEqual(st["dates_collected"], 30)
-        with mock.patch.dict(tr.SHADOW, {"decision_date": "2026-10-01"}):
-            after = tr.build(assets, runs, signals, bars_, {}, {}, set(), {"T": ["UP", "FLAT"]}, now=_dt.datetime(2026, 10, 25, tzinfo=UTC))
-        st = after["summary"]["shadow_trial"]
-        self.assertEqual(st["status"], "decided")
-        self.assertGreater(st["median_diff"], 0)
-        self.assertTrue(st["switch"])                                           # UP beat FLAT on every date
-
-    def test_shadow_needs_enough_dates(self):
-        out = tr.shadow_result({"2026-12-01": [([0.01], [0.02])]}, _dt.datetime(2027, 3, 1, tzinfo=UTC))
-        self.assertEqual(out["status"], "running")                              # 1 of 24 dates, even after the date
+        out = tr.build(assets, runs, signals, bars_, {}, {}, set(), {"T": ["UP", "FLAT"]}, now=_dt.datetime(2026, 10, 25, tzinfo=UTC))
+        self.assertEqual(out["counts"]["signals"], 5)
+        self.assertTrue(all(r[3] == "FLAT" for r in out["rows"]))
+        self.assertNotIn("shadow_trial", out["summary"])
 
     def test_shadow_file_gets_its_own_run_id(self):
         data = {"updated": "2026-11-23 08:00 GMT", "variant": "shadow-runup-1", "picks": [{"ticker": "NVDA", "signal": "buy"}]}
         run, _ = snapshot.rows_from_signal_file("AI", data, "r")
         self.assertEqual(run[0], "AI:2026-11-23T08:00:00Z:shadow-runup-1")
         self.assertIsNone(snapshot.rows_from_signal_file("AI", {"updated": None, "picks": []}, "r"))   # the placeholder
-
-    def test_failed_shadow_never_breaks_the_live_run(self):
-        import signal_meta
-        def boom(*a):
-            raise SystemExit("OpenRouter returned 500")
-        self.assertIsNone(signal_meta.run_shadow("k", boom, None, "p", signal_meta.run_meta, "u", set(), [], "now", "m", self_tmp := tempfile.mkdtemp()))
-        self.assertFalse(os.path.exists(os.path.join(self_tmp, signal_meta.SHADOW_FILE)))
-        ok = signal_meta.run_shadow("k", lambda *a: "x", lambda c, v: [{"rank": 1, "ticker": "A", "signal": "buy", "confidence": 0.5}],
-                                    "p", signal_meta.run_meta, "u", {"A"}, [], "2026-11-23 08:00", "m", self_tmp)
-        self.assertEqual(ok["variant"], "shadow-runup-1")
-        self.assertIn("one-month run-up", signal_meta.SHADOW_ADDENDUM)
-        with open(os.path.join(self_tmp, signal_meta.SHADOW_FILE)) as f:
-            self.assertEqual(json.load(f)["picks"][0]["ticker"], "A")
 
 
 class ImportSignals(unittest.TestCase):

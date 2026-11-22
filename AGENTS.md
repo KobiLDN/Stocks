@@ -199,8 +199,8 @@ Rebuild step 5 (#73) moves repeated pages onto templates, one page type at a tim
 
 | File | Purpose |
 |---|---|
-| `generate_export.py` | Reads all 7 `prices-data.js` + `signals-local.json` files; writes dated snapshot + updates manifest; optionally merges T212 portfolio |
-| `exports/YYYY-MM-DD.json` | Daily market snapshot — `stocks[]` includes `change_1y` (1-year price change %); top-level `momentum_picks[]` lists cross-sector momentum screener picks |
+| `generate_export.py` | One row per stock (~720): the 11 `sectors/*/prices-data.js` files + `Crypto/prices-data.js`; news from the theme price files; signals from every live run (AI, Defence, Crypto, the 11 sectors, the FTSE 100; derived S&P 500 / Nasdaq-100 files skipped). Writes dated snapshot + updates manifest; optionally merges T212 portfolio |
+| `exports/YYYY-MM-DD.json` | Daily market snapshot (compact JSON) — `stocks[]`: `sector` is the official sector (`Crypto` for coins), plus `industry`, `currency`, `themes`, `markets`, `t212`, `change_1y`; a stock picked by several runs appears once, with every pick in `picked_by[]` and its strongest (highest confidence, then rank) in `signal*` / `signal_run`. Top level: `signal_runs{}` (one entry per live run), `momentum_picks[]` |
 | `exports/YYYY-MM-DD.csv` | Same data in CSV format |
 | `exports/manifest.json` | List of all available snapshots (newest first); loaded by the export page to build the date dropdown |
 | `exports/index.html` | Export page — loads manifest, date selector, Copy JSON/CSV buttons |
@@ -211,7 +211,7 @@ Rebuild step 5 (#73) moves repeated pages onto templates, one page type at a tim
 
 **Adding new fields to the export:** edit the `PRICE_FIELDS` list and/or `csv_fields` list in `generate_export.py`. The manifest entry only needs `date`, `generated`, `total`, `json`, `csv`.
 
-**Top-level export keys:** in addition to `stocks[]`, the export JSON has a `momentum_picks[]` array built by `compute_export_momentum()` in `generate_export.py`. This mirrors the per-sector `momentum_screener.py` logic but runs cross-sector over all 7 sectors at export time.
+**Top-level export keys:** in addition to `stocks[]`, the export JSON has a `momentum_picks[]` array built by `compute_export_momentum()` in `generate_export.py`. This mirrors the per-sector `momentum_screener.py` logic but runs over every stock at export time.
 
 ## History database (D1)
 
@@ -234,7 +234,7 @@ Results appear in `signals-local.json` per sector under the `momentum` key and a
 
 **Since #70 (variant `live-2`) the screen never changes an AI pick.** It used to upgrade `buy` → `strong_buy` and raise confidence; now `signal_meta.annotate_momentum()` only records `pre_momentum_label` (the AI's label), `post_momentum_label` (the same), `momentum_label` and `momentum_score` on each pick. Every run also carries `variant`, `prompt_version`, `code_commit` and `input_version` from `signal_meta.run_meta()`. **Bump `signal_meta.VARIANT` whenever the signal recipe changes on purpose**, so the track record can compare versions. Tell the portfolio via `FROM_STOCKS.md` (portfolio repo) before changing what `signal` means.
 
-**Shadow trial (#92, until 20 Feb 2027).** Every live run also calls the AI once more with `signal_meta.SHADOW_ADDENDUM` appended ("be wary of stocks that have just jumped"), and writes `<Sector>/signals-shadow.json` (variant `shadow-runup-1`). Shadow picks are recorded in D1 under `<sector>:<time>:shadow-runup-1` but are **never shown, exported or counted** in live track-record figures; `track_record.shadow_result()` applies the frozen rule from #92 and reveals the result only on the decision date. Don't change the addendum, the rule or `track_record.SHADOW` while the trial runs: that would void it. A failed shadow call is logged and skipped; it can't affect the live run.
+**Shadow trial (#92): ended by the owner on 22 Nov 2026.** Its past picks stay in D1 under `<sector>:<time>:shadow-runup-1`; `track_record.is_shadow()` keeps them out of every figure. No run makes a shadow call any more.
 
 ## Portfolio dashboard (separate private repo)
 
@@ -245,7 +245,7 @@ The portfolio dashboard and daily email live in the **private** repo `KobiLDN/po
 | URL | Fields used |
 |---|---|
 | `https://stocks-4qw.pages.dev/exports/manifest.json` | `snapshots[].json` — newest first; the latest plus the last 7 days of snapshots |
-| `https://stocks-4qw.pages.dev/exports/<date>.json` | `stocks[]` (`ticker`, `signal`, price/return fields), `momentum_picks[]`, `macro` (SPY / QQQ / VIX incl. `vix.signal`) |
+| `https://stocks-4qw.pages.dev/exports/<date>.json` | `stocks[]` (`ticker`, `sector`, `signal`, price/return fields; since #88 also `themes`, `markets`, `t212`, `picked_by`), `momentum_picks[]`, `macro` (SPY / QQQ / VIX incl. `vix.signal`) |
 
 A BUY only counts on the dashboard if it has held across the last 7 days of exports (`SIGNAL_WINDOW_DAYS = 7`, needs ≥ 3 exports). Renaming an export field, or a missed export, shows up there — check `portfolio.py` before changing `generate_export.py` output.
 

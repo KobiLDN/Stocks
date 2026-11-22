@@ -664,13 +664,9 @@
 
 <script src="Biotech/prices-data.js"></script>
 <script>window.__pd_Biotech = window.PRICES_DATA;</script>
-<script src="Biotech/signals-local.js"></script>
-<script>window.__sd_Biotech = window.SIGNALS_DATA;</script>
 
 <script src="Tech/prices-data.js"></script>
 <script>window.__pd_Tech = window.PRICES_DATA;</script>
-<script src="Tech/signals-local.js"></script>
-<script>window.__sd_Tech = window.SIGNALS_DATA;</script>
 
 <script src="Crypto/prices-data.js"></script>
 <script>window.__pd_Crypto = window.PRICES_DATA;</script>
@@ -679,13 +675,9 @@
 
 <script src="Energy/prices-data.js"></script>
 <script>window.__pd_Energy = window.PRICES_DATA;</script>
-<script src="Energy/signals-local.js"></script>
-<script>window.__sd_Energy = window.SIGNALS_DATA;</script>
 
 <script src="MegaCap/prices-data.js"></script>
 <script>window.__pd_MegaCap = window.PRICES_DATA;</script>
-<script src="MegaCap/signals-local.js"></script>
-<script>window.__sd_MegaCap = window.SIGNALS_DATA;</script>
 
 <script>
 // Aggregate all sector stocks for ticker tape
@@ -1421,12 +1413,13 @@
     const SECTORS = [
       { id: 'AI',      signals: 'AI/signals-local.json',      prices: 'AI/prices-data.js' },
       { id: 'Defence', signals: 'Defence/signals-local.json', prices: 'Defence/prices-data.js' },
-      { id: 'Biotech', signals: 'Biotech/signals-local.json', prices: 'Biotech/prices-data.js' },
-      { id: 'Tech',    signals: 'Tech/signals-local.json',    prices: 'Tech/prices-data.js' },
+      { id: 'Biotech', prices: 'Biotech/prices-data.js', from: { name: 'Health Care run', path: 'sectors/health-care' } },
+      { id: 'Tech',    prices: 'Tech/prices-data.js',    from: { name: 'Technology run',  path: 'sectors/technology' } },
       { id: 'Crypto',  signals: 'Crypto/signals-local.json',  prices: 'Crypto/prices-data.js' },
-      { id: 'Energy',  signals: 'Energy/signals-local.json',  prices: 'Energy/prices-data.js' },
-      { id: 'MegaCap', signals: 'MegaCap/signals-local.json', prices: 'MegaCap/prices-data.js' },
+      { id: 'Energy',  prices: 'Energy/prices-data.js',  from: { name: 'Energy sector run', path: 'sectors/energy' } },
+      { id: 'MegaCap', prices: 'MegaCap/prices-data.js', from: { name: 'S&P 500 picks',     path: 'markets/sp500' } },
     ];
+    // #88: these four themes' own signal runs were retired; their cards show the run that replaced them
 
     function priceMapFromData(data) {
       const map = {};
@@ -1446,6 +1439,20 @@
     }
 
     async function fetchSector(s) {
+      if (s.from) {
+        const [sigData, own, theirs] = await Promise.all([
+          fetch(s.from.path + '/signals-local.json').then(r => r.json()).catch(() => ({})),
+          fetchPriceMap(s.id, s.prices),
+          fetchPriceMap('', s.from.path + '/prices-data.js'),
+        ]);
+        const head = document.querySelector('#picks-' + s.id)?.closest('.picks-section');
+        if (head) {
+          head.querySelector('.picks-header').textContent = '// Top Signals · ' + s.from.name;
+          head.setAttribute('onclick', `event.preventDefault(); event.stopPropagation(); location.href='${s.from.path}/signals.html'`);
+        }
+        return { id: s.id, picks: (sigData.picks || []).slice(0, 10), priceMap: own.map, pickMap: theirs.map,
+                 link: s.from.path + '/signals.html', updated: own.updated };
+      }
       // Preloaded via <script> tags — works on file://
       const preloadedSig = window['__sd_' + s.id];
       if (preloadedSig) {
@@ -1495,11 +1502,11 @@
       // Flatten all picks, one row per ticker (its best rank in any sector), best rank first, take 20.
       // Not ranked by the AI's confidence: on the track record it didn't predict results (#70).
       const byTicker = {};
-      allSectors.forEach(({ id, picks, priceMap }) => {
+      allSectors.forEach(({ id, picks, priceMap, pickMap, link }) => {
         picks.forEach(p => {
           const existing = byTicker[p.ticker];
           if (!existing || (p.rank || 99) < (existing.pick.rank || 99)) {
-            byTicker[p.ticker] = { sector: id, pick: p, stock: priceMap[p.ticker] || {} };
+            byTicker[p.ticker] = { sector: id, link, pick: p, stock: (pickMap || priceMap)[p.ticker] || {} };
           }
         });
       });
@@ -1508,8 +1515,8 @@
       const top20 = all.slice(0, 20);
       if (!top20.length) { el.innerHTML = '<tr><td colspan="8" class="pt-empty">No signals yet</td></tr>'; return; }
       el.innerHTML = top20.map((item, i) => {
-        const { sector, pick: p, stock: s } = item;
-        const sectorLink = `${sector}/signals.html`;
+        const { sector, link, pick: p, stock: s } = item;
+        const sectorLink = link || `${sector}/signals.html`;
         return `<tr onclick="location.href='${sectorLink}'" style="cursor:pointer">
           <td class="top-rank" data-val="${i + 1}">${i + 1}</td>
           <td data-val="${p.ticker}">
@@ -1551,15 +1558,15 @@
 
     async function init() {
       const [marketResults, hubResults] = await Promise.all([initMarket(), Promise.all(SECTORS.map(fetchSector))]);
-      hubResults.forEach(({ id, picks, priceMap }) => {
-        renderCardPicks(id, picks, priceMap);
+      hubResults.forEach(({ id, picks, priceMap, pickMap }) => {
+        renderCardPicks(id, picks, pickMap || priceMap);
         renderSectorStats(id, priceMap);
       });
 
       // All Sectors card: each ticker's best rank across sectors, best first
       const combinedMap = {}, byTicker = {};
-      hubResults.forEach(({ picks, priceMap }) => {
-        Object.assign(combinedMap, priceMap);
+      hubResults.forEach(({ picks, priceMap, pickMap }) => {
+        Object.assign(combinedMap, pickMap || {}, priceMap);
         picks.forEach(p => {
           const ex = byTicker[p.ticker];
           if (!ex || (p.rank || 99) < (ex.rank || 99)) byTicker[p.ticker] = p;

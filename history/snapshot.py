@@ -1,6 +1,6 @@
 """Copy what a bot just published into the history database (dual-write, #54 step 3).
 
-    python -m history.snapshot prices    # after update-prices: every */prices.json + market.json
+    python -m history.snapshot prices    # after update-prices: every */prices.json, the group price files + market.json
     python -m history.snapshot signals   # after generate-signals: every */signals-local.json
 
 It reads the files the bot wrote, so the bots themselves are unchanged. Rows are keyed
@@ -56,23 +56,30 @@ PRICE_COLS = ["asset_id", "as_of_utc", "sector", "price_usd", "price_gbp",
               "change_1d_pct", "market_cap_usd_b", "volume_1d", "run_id"]
 
 
+def price_files(universe):
+    """[(label, prices dict)]: the theme folders' prices.json, then (#88) every market/sector group's
+    prices-data.js, so picks from the group runs can be scored too."""
+    out = [(sector, read_json(f"{sector}/prices.json")) for sector in universe["sectors"]]
+    out += [(gid, read_js_data(f"{path}/prices-data.js")) for path, gid in group_signal_files()]
+    return out
+
+
 def price_rows(universe, run_id, warn=print):
     rows, seen = [], set()
-    for sector in universe["sectors"]:
-        data = read_json(f"{sector}/prices.json")
+    for sector, data in price_files(universe):
         if not data:
-            warn(f"  WARNING: {sector}/prices.json missing")
+            warn(f"  WARNING: {sector}: prices file missing")
             continue
         as_of = london_to_iso(data.get("updated"))
         if not as_of:
-            warn(f"  WARNING: {sector}/prices.json has no usable 'updated' ({data.get('updated')!r})")
+            warn(f"  WARNING: {sector}: prices file has no usable 'updated' ({data.get('updated')!r})")
             continue
         for s in data.get("stocks", []):
             aid = s.get("ticker")
             if aid not in universe["assets"]:
                 warn(f"  WARNING: {sector}: {aid!r} is not in universe.yaml — skipped")
                 continue
-            if (aid, as_of) in seen:      # same asset in two sectors updated in the same minute
+            if (aid, as_of) in seen:      # same asset in two files updated in the same minute
                 continue
             seen.add((aid, as_of))
             rows.append([aid, as_of, sector, num(s.get("price_usd")), num(s.get("price_gbp")),
@@ -152,11 +159,6 @@ def signal_rows(universe, run_id):
         runs.append(got[0])
         sigs += got[1]
         members += universe_rows(got[0][0], prices, "live")
-        shadow = rows_from_signal_file(sector, read_json(f"{sector}/signals-shadow.json"), run_id)   # #92; absent/empty = skip
-        if shadow:
-            runs.append(shadow[0])
-            sigs += shadow[1]
-            members += universe_rows(shadow[0][0], prices, "live")
     # #88: the market and sector groups' own runs. The S&P 500 / Nasdaq-100 files are derived from the
     # sector runs ("derived": true) and skipped, so no pick is counted twice.
     for path, gid in group_signal_files():

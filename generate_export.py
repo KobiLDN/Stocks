@@ -1,16 +1,25 @@
 """
-generate_export.py — combines all sector data into a dated snapshot + updates manifest
+generate_export.py — every stock on the site in one dated snapshot + updates manifest
 Run: python generate_export.py  (from repo root)
 Also called by .github/workflows/generate-export.yml after each evening price update.
 If T212_API_KEY env var is set, portfolio positions are fetched and merged in.
+
+Since #88 (Nov 2026): one row per stock, read from the 11 sector groups' price files plus Crypto.
+`sector` is the stock's official sector ("Crypto" for coins); `themes`, `markets` and `t212` say
+where else it belongs. Signals come from every live run (the themes that kept a run, the 11 sector
+runs and the FTSE 100 run); a stock picked by several runs appears once, with all of them in
+`picked_by` and its strongest pick in the `signal*` fields. News comes from the theme price files.
 """
-import json, re, csv, os
+import json, re, csv, os, glob
 from datetime import datetime, timezone, timedelta
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
-SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
 BASE    = os.path.dirname(os.path.abspath(__file__))
+# Themes that still have their own signal run (#88 retired Biotech, Energy, Mega-Cap and Tech)
+THEME_RUNS = ["AI", "Defence", "Crypto"]
+# Theme price files: news headlines, and Crypto's rows (coins are in no sector group)
+THEMES = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
 
 # T212 ticker → canonical universe ticker (OTC / ADR aliases)
 TICKER_ALIASES = {
@@ -68,14 +77,39 @@ def parse_prices(path):
     json_str = re.sub(r'^\s*window\.PRICES_DATA\s*=\s*', '', raw).rstrip().rstrip(';')
     return json.loads(json_str)
 
-def load_signals(sector):
-    path = os.path.join(BASE, sector, "signals-local.json")
+def read_json(path):
     try:
-        data = json.load(open(path, encoding="utf-8"))
-        variant = data.get("variant") or "live-1"   # runs before #70 carry no tag: they used the momentum upgrade
-        return {p["ticker"]: {**p, "variant": variant} for p in data.get("picks", [])}, data.get("updated", "")
+        return json.load(open(path, encoding="utf-8"))
     except Exception:
-        return {}, ""
+        return None
+
+def signal_runs():
+    """[(run name, signals file dict)] for every live run. The S&P 500 / Nasdaq-100 files are
+    derived from the sector runs ("derived": true) and skipped, so no pick is counted twice."""
+    runs = []
+    for theme in THEME_RUNS:
+        data = read_json(os.path.join(BASE, theme, "signals-local.json"))
+        if data:
+            runs.append((theme, data))
+    for path in sorted(glob.glob(os.path.join(BASE, "sectors", "*", "signals-local.json")) +
+                       glob.glob(os.path.join(BASE, "markets", "*", "signals-local.json"))):
+        data = read_json(path)
+        if data and not data.get("derived"):
+            runs.append((data.get("group_name") or os.path.basename(os.path.dirname(path)), data))
+    return runs
+
+def yahoo_aliases():
+    """{site ticker: Yahoo symbol} from asset-links.js (generated from universe.yaml), e.g. RR. -> RR.L:
+    a theme run may name a stock by a ticker the sector files list under its Yahoo symbol."""
+    try:
+        raw = open(os.path.join(BASE, "asset-links.js"), encoding="utf-8").read()
+        return json.loads(re.search(r"const ASSET_YAHOO = (\{.*?\});", raw).group(1))
+    except Exception:
+        return {}
+
+def best_pick(picks):
+    """The strongest of one stock's picks: highest confidence, then best rank."""
+    return min(picks, key=lambda p: (-(p.get("confidence") or 0), p.get("rank") or 99))
 
 def to_pct(val):
     if val in (None, "", "N/A"):
@@ -165,20 +199,33 @@ def compute_export_momentum(stocks):
 
 all_stocks, meta = [], {}
 
-for sector in SECTORS:
-    prices = parse_prices(os.path.join(BASE, sector, "prices-data.js"))
-    signals, sig_updated = load_signals(sector)
-    meta[sector] = {
-        "prices_updated":  prices.get("updated"),
-        "signals_updated": sig_updated,
-        "fx_gbp_usd":      prices.get("fx_gbp_usd"),
-    }
+# ── Rows: one per stock ───────────────────────────────────────────────────────
+sources = [(os.path.basename(os.path.dirname(p)), p) for p in sorted(glob.glob(os.path.join(BASE, "sectors", "*", "prices-data.js")))]
+sources.append(("Crypto", os.path.join(BASE, "Crypto", "prices-data.js")))
+news = {}
+for theme in THEMES:
+    path = os.path.join(BASE, theme, "prices-data.js")
+    if os.path.exists(path):
+        for s in parse_prices(path).get("stocks", []):
+            if s.get("news") and s["ticker"] not in news:
+                news[s["ticker"]] = s["news"]
 
+seen = set()
+for name, path in sources:
+    prices = parse_prices(path)
+    meta[name] = {"prices_updated": prices.get("updated"), "fx_gbp_usd": prices.get("fx_gbp_usd")}
     for s in prices.get("stocks", []):
-        row = {"sector": sector}
-        for k in PRICE_FIELDS:
-            if k != "sector":
-                row[k] = s.get(k)
+        if s["ticker"] in seen:
+            continue
+        seen.add(s["ticker"])
+        crypto = name == "Crypto"
+        row = {k: s.get(k) for k in PRICE_FIELDS}
+        row["sector"]   = "Crypto" if crypto else s.get("sector")
+        row["industry"] = None if crypto else s.get("industry")
+        row["currency"] = "USD" if crypto else s.get("currency")
+        row["themes"]   = ["crypto"] if crypto else [t.lower() for t in s.get("themes") or []]
+        row["markets"]  = ["crypto"] if crypto else list(s.get("markets") or [])
+        row["t212"]     = None if crypto else s.get("t212")
         row["change_1y"] = s.get("return_1yr")  # alias expected by portfolio session
 
         for label, field in PERIODS:
@@ -189,31 +236,49 @@ for sector in SECTORS:
                 row[f"val_{amt}_{label}"]    = val
                 row[f"profit_{amt}_{label}"] = profit
 
-        for i, n in enumerate(s.get("news", [])[:3], 1):
+        items = (s.get("news") or news.get(s["ticker"]) or [])[:3]
+        for i, n in enumerate(items, 1):
             ts = n.get("published", 0)
             date = datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d") if ts else ""
             row[f"news{i}_title"]     = n.get("title", "")
             row[f"news{i}_publisher"] = n.get("publisher", "")
             row[f"news{i}_date"]      = date
             row[f"news{i}_sentiment"] = n.get("sentiment")
-        for i in range(len(s.get("news", [])[:3]) + 1, 4):
+        for i in range(len(items) + 1, 4):
             row[f"news{i}_title"] = row[f"news{i}_publisher"] = row[f"news{i}_date"] = ""
             row[f"news{i}_sentiment"] = None
-
-        sig = signals.get(s["ticker"], {})
-        row["signal_rank"]       = sig.get("rank")
-        row["signal"]            = sig.get("signal")
-        row["signal_confidence"] = sig.get("confidence")
-        row["signal_rationale"]  = sig.get("rationale", "")
-        row["signal_drivers"]    = "; ".join(sig.get("drivers", []))
-        # #70: the AI's own label, what the momentum screen thinks, and which recipe made the signal.
-        # Since variant live-2, signal == pre_momentum_label (no upgrade).
-        row["pre_momentum_label"] = sig.get("pre_momentum_label") if sig else None
-        row["momentum_label"]     = sig.get("momentum_label") if sig else None
-        row["momentum_score"]     = sig.get("momentum_score") if sig else None
-        row["signal_variant"]     = sig.get("variant") if sig else None
-
         all_stocks.append(row)
+
+# ── Signals: every live run; one stock once, with every run that picked it ────
+runs_meta, picks_by_ticker = {}, {}
+alias = yahoo_aliases()
+for run, data in signal_runs():
+    variant = data.get("variant") or "live-1"   # runs before #70 carry no tag: they used the momentum upgrade
+    runs_meta[run] = {"signals_updated": data.get("updated", ""), "model": data.get("model"),
+                      "variant": variant, "picks": len(data.get("picks") or [])}
+    for p in data.get("picks") or []:
+        picks_by_ticker.setdefault(alias.get(p["ticker"], p["ticker"]), []).append({**p, "run": run, "variant": variant})
+
+for row in all_stocks:
+    picks = picks_by_ticker.pop(alias.get(row["ticker"], row["ticker"]), [])
+    sig = best_pick(picks) if picks else {}
+    row["signal_rank"]       = sig.get("rank")
+    row["signal"]            = sig.get("signal")
+    row["signal_confidence"] = sig.get("confidence")
+    row["signal_rationale"]  = sig.get("rationale", "")
+    row["signal_drivers"]    = "; ".join(sig.get("drivers", []))
+    # #70: the AI's own label, what the momentum screen thinks, and which recipe made the signal.
+    # Since variant live-2, signal == pre_momentum_label (no upgrade).
+    row["pre_momentum_label"] = sig.get("pre_momentum_label") if sig else None
+    row["momentum_label"]     = sig.get("momentum_label") if sig else None
+    row["momentum_score"]     = sig.get("momentum_score") if sig else None
+    row["signal_variant"]     = sig.get("variant") if sig else None
+    row["signal_run"]         = sig.get("run") if sig else None
+    row["picked_by"] = [{"run": p["run"], "rank": p.get("rank"), "signal": p.get("signal"),
+                         "confidence": p.get("confidence")}
+                        for p in sorted(picks, key=lambda p: (-(p.get("confidence") or 0), p.get("rank") or 99))]
+if picks_by_ticker:
+    print(f"  WARNING: picks for stocks with no price row: {sorted(picks_by_ticker)}")
 
 whatsit_fields = []
 for label, _ in PERIODS:
@@ -221,12 +286,13 @@ for label, _ in PERIODS:
     for amt in AMOUNTS:
         whatsit_fields += [f"val_{amt}_{label}", f"profit_{amt}_{label}"]
 
-csv_fields = PRICE_FIELDS + whatsit_fields + [
+csv_fields = PRICE_FIELDS + ["industry", "currency", "themes", "markets", "t212"] + whatsit_fields + [
     "news1_title", "news1_publisher", "news1_date", "news1_sentiment",
     "news2_title", "news2_publisher", "news2_date", "news2_sentiment",
     "news3_title", "news3_publisher", "news3_date", "news3_sentiment",
     "signal_rank", "signal", "signal_confidence", "signal_rationale", "signal_drivers",
     "pre_momentum_label", "momentum_label", "momentum_score", "signal_variant",
+    "signal_run", "picked_by",
 ]
 
 os.makedirs(os.path.join(BASE, "exports"), exist_ok=True)
@@ -295,7 +361,7 @@ macro_block = read_macro()
 as_of = {
     "generated": now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
     "prices":    oldest_iso([m["prices_updated"] for m in meta.values()]),
-    "signals":   oldest_iso([m["signals_updated"] for m in meta.values()]),
+    "signals":   oldest_iso([m["signals_updated"] for m in runs_meta.values()]),
     "market":    london_to_iso(macro_block.get("updated")) if macro_block else None,
 }
 
@@ -305,7 +371,8 @@ payload = {
     "as_of":            as_of,
     "total":            len(all_stocks),
     "has_portfolio":    t212_data is not None,
-    "sectors":          meta,
+    "sectors":          meta,          # price files: the 11 sector groups + Crypto
+    "signal_runs":      runs_meta,     # every live signal run (#88)
     "macro":            macro_block,
     "momentum_picks":   compute_export_momentum(all_stocks),
     "stocks":           all_stocks,
@@ -314,7 +381,7 @@ if t212_data:
     payload["portfolio"] = t212_data
 
 with open(out_json, "w", encoding="utf-8") as f:
-    json.dump(payload, f, indent=2)
+    json.dump(payload, f, separators=(",", ":"))   # compact: ~720 rows (#88)
 
 # ── Write CSV ─────────────────────────────────────────────────────────────────
 portfolio_fields = [
@@ -326,7 +393,9 @@ all_csv_fields = csv_fields + portfolio_fields
 with open(out_csv, "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=all_csv_fields, extrasaction="ignore")
     w.writeheader()
-    w.writerows(all_stocks)
+    for row in all_stocks:      # lists as text in the CSV: "ai|defence", "Technology #3|AI #1"
+        w.writerow({**row, "themes": "|".join(row["themes"]), "markets": "|".join(row["markets"]),
+                    "picked_by": "|".join(f"{p['run']} #{p['rank']}" for p in row["picked_by"])})
 
 # ── Update manifest (market-data snapshots only, not portfolio runs) ──────────
 if update_manifest:
