@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **All Heatmap / What-If / Charts and home page summaries (#88 phase 1, PR 7b)** — heatmap by sector, biggest first, sized by market cap, with filters; What-If with filters and paging; Charts with sector views; Markets & Sectors tiles on the home page
+
 - **All Stocks for ~720 stocks (#88 phase 1, PR 7a)** — one data file, market/sector/theme/T212 filters and search kept in the URL, 50 rows at a time on the All Dashboard and Metrics; 2-second phone speed limit in the page check
 
 - **Market and sector pages (#88 phase 1, PR 6)** — S&P 500, Nasdaq-100, FTSE 100 and the 11 sectors, each with Dashboard, Metrics, News, Heatmap, Charts and What-If; Markets / Sectors / Themes menu; "not on T212" mark and filter; Health Care industry filter
