@@ -50,7 +50,16 @@ class Names(unittest.TestCase):
         self.assertFalse(names_agree("Talen Energy", "Talon Capital"))
 
     def test_norm(self):
-        self.assertEqual(norm_name("Johnson & Johnson"), "johnson and johnson")
+        self.assertEqual(norm_name("Johnson & Johnson"), "johnson johnson")
+        self.assertEqual(norm_name("D. R. Horton"), norm_name("DR Horton"))
+        self.assertEqual(norm_name("U.S. Bancorp"), "us bancorp")
+        self.assertEqual(norm_name("Bank of America"), "bank of america")
+
+    def test_ticker_match_allows_renamed_company(self):
+        from universe_classify import first_word_agrees
+        self.assertTrue(first_word_agrees("Franklin Resources", "Franklin Templeton"))
+        self.assertFalse(first_word_agrees("Talen Energy", "Talon Capital"))
+        self.assertFalse(first_word_agrees("GE Aerospace", "GE HealthCare"))   # too short to trust
 
 
 class Classify(unittest.TestCase):

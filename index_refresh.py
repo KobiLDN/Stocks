@@ -181,8 +181,16 @@ def main(argv=None):
         if assets[t]["exchange"] != "Crypto":
             assets[t]["markets"] = sorted(m) or None
 
-    added = {}
+    added, unretired = {}, []
+    retired_now = u.get("retired") or {}
     for y, m in sorted(joiners.items()):
+        back = [t for t, a in retired_now.items() if a["yahoo"] == y]
+        if back:                         # rejoined (Coinbase, Robinhood: old Crypto stocks, now S&P 500)
+            t = back[0]
+            assets[t] = {**retired_now[t], "markets": sorted(m)}
+            unretired.append(t)
+            added[t] = uc.yahoo_info(y)
+            continue
         t = new_asset_id(y, assets)
         info = uc.yahoo_info(y)
         exchange = "LSE" if y.endswith(".L") else YAHOO_EXCHANGE.get(info.get("exchange"))
@@ -206,10 +214,12 @@ def main(argv=None):
                                   yahoo=lambda y: seen.get(y) or uc.yahoo_info(y))
     for t, up in updates.items():
         assets[t].update(up)
-    uc.write_universe(assets, retire=retire, retire_note=f"Left every index and theme (index refresh {today})" if retire else None)
+    uc.write_universe(assets, retire=retire, unretire=unretired,
+                      retire_note=f"Left every index and theme (index refresh {today})" if retire else None)
     for line in report:
         print(" ", line)
-    print(f"universe.yaml: +{len(added)} new, {len(retire)} retired"
+    print(f"universe.yaml: +{len(added) - len(unretired)} new, {len(unretired)} back from retired"
+          + (f" ({', '.join(unretired)})" if unretired else "") + f", {len(retire)} retired"
           + (f" ({', '.join(sorted(retire))})" if retire else ""))
     problems = universe.validate()
     for p in problems:

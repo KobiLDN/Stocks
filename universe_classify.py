@@ -82,10 +82,23 @@ _TRANSLIT = str.maketrans({"ø": "o", "æ": "ae", "å": "a", "ß": "ss", "é": "
 
 
 def norm_name(name):
-    s = (name or "").lower().translate(_TRANSLIT).replace("&", " and ").replace(".com", "")
+    s = (name or "").lower().translate(_TRANSLIT).replace(".com", "").replace(".", "")
     s = re.sub(r"[^\w\s]", " ", s)
-    s = re.sub(_SUFFIXES, " ", s)
-    return " ".join(s.split())
+    s = re.sub(_SUFFIXES + r"|\band\b", " ", s)
+    words, out = s.split(), []
+    for w in words:                     # initials: "d r horton" / "dr horton" -> "dr horton"
+        if len(w) == 1 and out and len(out[-1]) <= 2 and out[-1].isalpha() and out[-1] not in ("of",):
+            out[-1] += w
+        else:
+            out.append(w)
+    return " ".join(out)
+
+
+def first_word_agrees(a, b):
+    """Same first word of 4+ letters: enough alongside a ticker match (Franklin Resources = Franklin
+    Templeton, Deckers Brands = Deckers Outdoor), not on its own."""
+    wa, wb = norm_name(a).split()[:1], norm_name(b).split()[:1]
+    return bool(wa) and wa == wb and len(wa[0]) >= 4
 
 
 def names_agree(a, b):
@@ -109,6 +122,10 @@ ISIN_PINS = {
     "HEI":   ("US4228061093", "HEICO common share; T212 ticker HEICO_US_EQ (HEI/A is the A share)"),
     "HUT":   ("US44812J1043", "Hut 8 Corp (renamed from Hut 8 Mining); T212 HUTMF_US_EQ"),
     "IREN":  ("AU0000185993", "IREN (renamed from Iris Energy); T212 IREN_US_EQ"),
+    "BNY":   ("US0640581007", "BNY Mellon; T212 still uses the old ticker BK_US_EQ"),
+    "FERG":  ("US31488V1070", "Ferguson Enterprises; T212 FERGY_US_EQ 'Ferguson'"),
+    "MRSH":  ("US5717481023", "Marsh McLennan; T212 still uses the old ticker MMC_US_EQ"),
+    "WAB":   ("US9297401088", "Wabtec; T212 WAB_US_EQ under its full name Westinghouse Air Brake"),
 }
 
 
@@ -222,7 +239,7 @@ class Catalogue:
         """ISIN of a T212 instrument with our ticker, if its name agrees. (isin, how)."""
         for t in dict.fromkeys(self.candidates(asset)):
             i = self.by_ticker.get(t)
-            if i and names_agree(i["name"], asset["name"]):
+            if i and (names_agree(i["name"], asset["name"]) or first_word_agrees(i["name"], asset["name"])):
                 return i["isin"], f"t212 ticker {t}"
             if i:
                 print(f"  {asset['yahoo']}: T212 {t} is '{i['name']}', not '{asset['name']}' — ignored")
@@ -342,7 +359,7 @@ def asset_line(t, a):
     return f'  {(json.dumps(t) + ":").ljust(10)} {json.dumps(row)}'
 
 
-def write_universe(assets, retire=None, retire_note=None):
+def write_universe(assets, retire=None, retire_note=None, unretire=()):
     """Rewrite the assets block (stocks sorted, then coins in their existing order) and append any
     newly retired assets to the retired block. Every other line of universe.yaml is kept as is."""
     lines = open(universe.PATH, encoding="utf-8").read().split("\n")
@@ -360,6 +377,10 @@ def write_universe(assets, retire=None, retire_note=None):
     body = [asset_line(t, assets[t]) for t in stocks + coins]
     tail = [l for l in lines[a0 + 1:a1] if not l.startswith('  "')]   # blank lines / comments after the list
     out = lines[:a0 + 1] + body + tail + lines[a1:]
+    if unretire:                    # back in use: drop their retired lines
+        r = out.index("retired:")
+        drop = tuple(f"  {json.dumps(t)}:" for t in unretire)
+        out = out[:r] + [l for l in out[r:] if not l.startswith(drop)]
     if retire:
         lines = out
         starts = {l.split(":")[0]: i for i, l in enumerate(lines) if re.match(r"^[a-z_]+:", l)}

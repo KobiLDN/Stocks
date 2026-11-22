@@ -130,7 +130,9 @@ def validate():
         if isin is None and a.get("t212") != "unknown":
             errors.append(f"{t}: no ISIN, so t212 must be unknown")
         other = seen_isin.get(isin)
-        if isin and other and assets[other]["yahoo"] != a["yahoo"]:
+        # one ISIN may appear twice only as the same listing (RR./RR.L) or on two exchanges (CCEP on
+        # Nasdaq and CCEP.L in London: one security, two venues)
+        if isin and other and assets[other]["yahoo"] != a["yahoo"] and assets[other]["exchange"] == a["exchange"]:
             errors.append(f"{t}: same ISIN as {other}")
         seen_isin.setdefault(isin, t)
     for isin, ov in (u.get("sector_overrides") or {}).items():
