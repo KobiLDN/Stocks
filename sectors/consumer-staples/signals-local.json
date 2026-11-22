@@ -1,0 +1,187 @@
+{
+  "updated": "2026-11-22 19:30",
+  "model": "deepseek/deepseek-v4-flash",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "source": "openrouter",
+  "group": "consumer-staples",
+  "group_name": "Consumer Staples",
+  "group_kind": "sector",
+  "variant": "live-2",
+  "prompt_version": "c71ebe21e58a",
+  "code_commit": "cbe66841efe7",
+  "input_version": "2026-11-11",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "WMT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Q3 FY27 earnings beat with revenue +5.2% and operating income +16%, driving strong momentum (+14.19% YTD, +8.62% 1-month). Analyst consensus 'buy' (1.55) and raised FY27 outlook reinforce fundamental strength.",
+      "drivers": [
+        "Q3 revenue +5.2%",
+        "operating income +16%",
+        "raised FY27 outlook",
+        "analyst score 1.55"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "CLX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Q1 FY27 adjusted EPS +82% beat expectations, Evercore ISI upgraded citing turnaround potential; PE 18.84 is cheap vs staples average and dividend yield 4.77% is attractive. Strong 1-month momentum +25.34%.",
+      "drivers": [
+        "Q1 adjusted EPS +82%",
+        "Evercore upgrade to In Line",
+        "PE 18.84",
+        "dividend 4.77%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "KO",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Top-line momentum with YTD +43.05% and 1-year +36%, supported by analyst consensus 'buy' (1.69). PE 28.61 is reasonable for a defensive staple with consistent brand power.",
+      "drivers": [
+        "YTD +43.05%",
+        "analyst score 1.69",
+        "PE 28.61",
+        "1-year +36%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "MDLZ",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong YTD +26.77% with PE 20.91, solid dividend 3.14%, and analyst 'buy' (1.83). Snacking demand remains resilient, underpinned by pricing power and portfolio strength.",
+      "drivers": [
+        "YTD +26.77%",
+        "analyst score 1.83",
+        "PE 20.91",
+        "dividend 3.14%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "PM",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +17.83%, PE 26.87, analyst 'buy' (1.76) with smoke-free portfolio driving growth. Dividend 3.48% and low short interest of 0.96% add downside protection.",
+      "drivers": [
+        "YTD +17.83%",
+        "analyst score 1.76",
+        "PE 26.87",
+        "low short interest 0.96%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "MO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +36.97% with PE 15.44 and high dividend yield 5.93% make it a value-income play. Analyst 'hold' (2.64) is cautious but recent momentum and low beta (0.463) favor stability.",
+      "drivers": [
+        "YTD +36.97%",
+        "PE 15.44",
+        "dividend 5.93%",
+        "beta 0.463"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +22.92%, PE 25.51, analyst 'buy' (2.12) with strong brand portfolio. 1-month +8.70% momentum and very low short interest 0.97% indicate confident positioning.",
+      "drivers": [
+        "YTD +22.92%",
+        "PE 25.51",
+        "analyst score 2.12",
+        "short interest 0.97%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "TGT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +70.73% with PE only 15.41, suggesting undervaluation relative to earnings growth. Analyst 'buy' (2.49) and 1-month +9.59% momentum reflect strong retail execution.",
+      "drivers": [
+        "YTD +70.73%",
+        "PE 15.41",
+        "analyst score 2.49",
+        "1-month +9.59%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "KDP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +28.58% and analyst 'buy' (1.85) with diversified beverage portfolio. PE 31.39 is higher but justified by consistent growth and dividend 2.64%.",
+      "drivers": [
+        "YTD +28.58%",
+        "analyst score 1.85",
+        "PE 31.39",
+        "dividend 2.64%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "CCEP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +34.21% with PE 22.3 and analyst 'buy' (2.0). Strong 1-month +6.20% momentum and exposure to European beverage markets with solid free cash flow.",
+      "drivers": [
+        "YTD +34.21%",
+        "PE 22.3",
+        "analyst score 2.0",
+        "1-month +6.20%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": []
+}

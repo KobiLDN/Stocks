@@ -1,0 +1,232 @@
+window.SIGNALS_DATA = {
+  "updated": "2026-11-22 19:30",
+  "model": "deepseek/deepseek-v4-flash",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "source": "openrouter",
+  "group": "technology",
+  "group_name": "Technology",
+  "group_kind": "sector",
+  "variant": "live-2",
+  "prompt_version": "b4154877e4e9",
+  "code_commit": "cbe66841efe7",
+  "input_version": "2026-11-11",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "CDW",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +23.42%, P/E 18.88, analyst buy; Q3 net sales surged 17.7% YoY driven by AI adoption [investor.cdw.com].",
+      "drivers": [
+        "Strong YTD return",
+        "Reasonable P/E",
+        "Earnings beat with AI catalyst",
+        "Analyst buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "MSI",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +37.66%, 1M +11.27%, P/E 41.85, analyst buy; strong momentum with low beta 0.87.",
+      "drivers": [
+        "High YTD return",
+        "Positive 1-month momentum",
+        "Low beta",
+        "Analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +42.44%, P/E 16.6, beta 0.26; strong fundamentals with no analyst coverage but low valuation.",
+      "drivers": [
+        "Very high YTD return",
+        "Low P/E",
+        "Low beta",
+        "Strong 1-month gain"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "VRSN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +29.11%, 1M +0.14%, P/E 33.03, analyst buy; stable performance with low beta 0.67.",
+      "drivers": [
+        "Strong YTD return",
+        "Low beta",
+        "Analyst buy",
+        "Stable short-term"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "GEN",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +14.14%, 1M +21.52%, P/E 14.82, analyst buy; exceptional 1-month momentum with low P/E.",
+      "drivers": [
+        "Strong 1-month momentum",
+        "Low P/E",
+        "Analyst buy",
+        "Positive YTD"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "ROP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +6.62%, 1M +15.66%, P/E 18.2, beta 0.66; solid 1-month gain and low valuation.",
+      "drivers": [
+        "Positive 1-month momentum",
+        "Low P/E",
+        "Low beta",
+        "Analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +5.45%, 1M +8.73%, 1W +0.81%, P/E 20.37, analyst buy; positive short-term moves and reasonable P/E.",
+      "drivers": [
+        "Positive 1-week and 1-month",
+        "Reasonable P/E",
+        "Low short interest",
+        "Analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "PTC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +14.70%, P/E 21.85, acquisition by Schneider Electric announced [ptc.com]; catalyst but analyst hold.",
+      "drivers": [
+        "Acquisition catalyst",
+        "Positive YTD",
+        "Reasonable P/E",
+        "Low beta"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "TYL",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1M +7.63%, P/E 50.49, analyst buy; positive momentum but high P/E and negative YTD -7.20%.",
+      "drivers": [
+        "Positive 1-month momentum",
+        "Analyst buy",
+        "Low beta",
+        "High P/E"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "AUTO.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "1M +1.89%, P/E 15.43, analyst buy; low P/E but negative YTD -6.10% and recent weakness.",
+      "drivers": [
+        "Low P/E",
+        "Analyst buy",
+        "Positive 1-month",
+        "Negative YTD"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.59,
+      "ytd": "+130.32%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.32% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.32% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "OKTA",
+      "signal": "buy",
+      "confidence": 0.583,
+      "ytd": "+128.91%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +128.91% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +128.91% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "buy",
+      "confidence": 0.561,
+      "ytd": "+123.93%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +123.93% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +123.93% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.542,
+      "ytd": "+119.84%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +119.84% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +119.84% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": []
+};

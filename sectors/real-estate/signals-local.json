@@ -1,0 +1,187 @@
+{
+  "updated": "2026-11-22 19:30",
+  "model": "deepseek/deepseek-v4-flash",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "source": "openrouter",
+  "group": "real-estate",
+  "group_name": "Real Estate",
+  "group_kind": "sector",
+  "variant": "live-2",
+  "prompt_version": "330c3d13b57d",
+  "code_commit": "cbe66841efe7",
+  "input_version": "2026-11-11",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "KIM",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Record occupancy of 96.6%, 6.8% FFO growth and raised 2026 outlook drove YTD +30.82% and 1M +11.66%; P/E 23.71 and dividend 4.41% with strong analyst buy consensus.",
+      "drivers": [
+        "record occupancy",
+        "6.8% FFO growth",
+        "raised 2026 guidance",
+        "strong 1M momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "SPG",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +26.05% and 1M +9.15% momentum with attractive P/E of 16.2, well below sector average; dividend 4.1% and strong retail fundamentals.",
+      "drivers": [
+        "low P/E 16.2",
+        "strong YTD",
+        "retail REIT momentum",
+        "solid dividend"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "EXR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "1M +10.75% and YTD +22.37% momentum on self-storage demand, P/E 31.49, dividend 4.18%, analyst buy rating.",
+      "drivers": [
+        "1M +10.75%",
+        "strong YTD",
+        "self-storage demand",
+        "buy rating"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "VICI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Q3 AFFO per share +4.3% YoY, $2B share repurchase authorized, low P/E 11.2 and high dividend 7.6%, raised AFFO guidance; 1M +4.54%.",
+      "drivers": [
+        "low P/E 11.2",
+        "7.6% dividend yield",
+        "$2B buyback",
+        "raised AFFO guidance"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "PSA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +29.70% and 1M +9.09% with P/E 34.22, dividend 3.69%, analyst buy; strong self-storage sector tailwinds.",
+      "drivers": [
+        "YTD +29.70%",
+        "1M +9.09%",
+        "self-storage leader",
+        "buy rating"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "DOC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "YTD +26.00% and 1M +4.64% with dividend 6.34%, P/E 35.63; health care REIT demand supported by aging demographics.",
+      "drivers": [
+        "YTD +26.00%",
+        "6.34% dividend yield",
+        "health care REIT",
+        "positive momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "BXP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "S&P outlook revised to stable from negative on improving occupancy (89.4%) and reduced leverage (debt/EBITDA 8.0x); 1M +4.43%, P/E 18.34.",
+      "drivers": [
+        "S&P outlook upgrade",
+        "occupancy improving",
+        "P/E 18.34",
+        "asset sales progress"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "AMT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Deutsche Bank top pick with Buy rating and $222 PT, citing best-in-class U.S. portfolio and 6.2% AFFO CAGR; strong buy consensus (score 1.5), YTD +8.61%.",
+      "drivers": [
+        "Deutsche top pick",
+        "strong buy consensus",
+        "AFFO growth 6.2%",
+        "diversified international"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "LAND.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "YTD +11.50%, 1M +5.58%, low P/E 10.46 and dividend 5.97%; UK REIT benefiting from repricing and demand for prime offices.",
+      "drivers": [
+        "low P/E 10.46",
+        "5.97% dividend",
+        "UK REIT momentum",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "O",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +5.84%, 1M +5.34%, P/E 39.75 but dividend 5.67%; defensive triple-net REIT with stable cash flows but hold consensus and elevated valuation.",
+      "drivers": [
+        "5.67% dividend yield",
+        "triple-net stability",
+        "lower beta 0.65",
+        "hold rating"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": []
+}
