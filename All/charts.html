@@ -8,6 +8,7 @@
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="all-data.js"></script>
 <script src="../shared.js" defer></script>
 <style>
   .tool-btn.active-all     { background: var(--accent);  border-color: var(--accent);  color: var(--bg); font-weight:700; }
@@ -99,7 +100,7 @@
   <div class="chart-controls">
     <div class="toolbar-inner">
       <div class="toolbar-row">
-        <span class="toolbar-label">Sector</span>
+        <span class="toolbar-label">Theme</span>
         <button class="tool-btn active-all" data-sector="all"     onclick="setSector('all',this)">All</button>
         <button class="tool-btn"            data-sector="ai"      onclick="setSector('ai',this)">AI Infra</button>
         <button class="tool-btn"            data-sector="biotech" onclick="setSector('biotech',this)">Biotech</button>
@@ -108,6 +109,9 @@
         <button class="tool-btn"            data-sector="crypto"  onclick="setSector('crypto',this)">Crypto</button>
         <button class="tool-btn"            data-sector="energy"  onclick="setSector('energy',this)">Energy</button>
         <button class="tool-btn"            data-sector="megacap" onclick="setSector('megacap',this)">Mega-Cap</button>
+      </div>
+      <div class="toolbar-row" id="std-sector-row">
+        <span class="toolbar-label">Sector</span>
       </div>
       <div class="toolbar-row">
         <span class="toolbar-label">Period</span>
@@ -138,6 +142,14 @@
     { key: 'energy',  label: '⚡ Energy',             color: 'var(--amber)',   path: '../Energy/prices-data.js'   },
     { key: 'megacap', label: '💎 Mega-Cap',           color: '#f472b6',        path: '../MegaCap/prices-data.js'  },
   ];
+  // #88: the 11 standard sectors as single-group views (the 6 biggest companies each)
+  const STD_SECTORS = [
+    ['technology', '💻 Technology'], ['health-care', '⚕️ Health Care'], ['financials', '🏦 Financials'],
+    ['consumer-discretionary', '🛍️ Consumer Discretionary'], ['communication-services', '📡 Communication Services'],
+    ['industrials', '🏭 Industrials'], ['consumer-staples', '🛒 Consumer Staples'], ['energy-sector', '🛢️ Energy'],
+    ['utilities', '💡 Utilities'], ['real-estate', '🏢 Real Estate'], ['materials', '⛏️ Materials'],
+  ].map(([key, label]) => ({ key, label, color: 'var(--accent)', std: true }));
+  const slugOf = v => String(v || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
   // Known symbols that need explicit exchange prefix or differ from EXCHANGE:TICKER
   const TV_OVERRIDES = {
@@ -202,8 +214,14 @@
 
   function tvSym(stock) {
     if (TV_OVERRIDES[stock.ticker]) return TV_OVERRIDES[stock.ticker];
-    if (stock.exchange) return stock.exchange + ':' + stock.ticker;
-    return stock.ticker;
+    const t = String(stock.ticker);
+    if (stock.exchange === 'LSE') {                  // ULVR.L -> LSE:ULVR, BT-A.L -> LSE:BT.A, BA.L -> LSE:BA.
+      const epic = t.replace(/\.L$/, '').replace(/-/g, '.');
+      return 'LSE:' + epic + (epic.length < 3 ? '.' : '');
+    }
+    if (stock.exchange === 'TADAWUL') return 'TADAWUL:' + t.split('.')[0];
+    if (stock.exchange) return stock.exchange + ':' + t.replace(/-/g, '.');   // BRK-B -> NYSE:BRK.B
+    return t;
   }
 
   function setSector(key, btn) {
@@ -211,7 +229,7 @@
     document.querySelectorAll('[data-sector]').forEach(b => {
       b.className = 'tool-btn';
     });
-    btn.classList.add('active-' + key);
+    btn.classList.add(btn.dataset.std ? 'active' : 'active-' + key);
     render();
   }
 
@@ -227,7 +245,7 @@
     const { interval, range } = TF_MAP[activePeriod];
     const toShow = activeSector === 'all'
       ? SECTOR_META
-      : SECTOR_META.filter(s => s.key === activeSector);
+      : [...SECTOR_META, ...STD_SECTORS].filter(s => s.key === activeSector);
 
     const widgets = [];
     let html = '';
@@ -304,21 +322,24 @@
 
   // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
   window.addEventListener('DOMContentLoaded', () => {
-  Promise.all(SECTOR_META.map(async sd => {
-    try {
-      const text  = await fetch(sd.path).then(r => r.text());
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (!match) return;
-      const data  = JSON.parse(match[1]);
-      const sorted = (data.stocks || []).sort((a, b) => (b.market_cap_usd_b || 0) - (a.market_cap_usd_b || 0));
-      sectorStocks[sd.key] = sorted.slice(0, 3);
-    } catch(e) {
-      sectorStocks[sd.key] = [];
-    }
-  })).then(() => {
-    buildTape(SECTOR_META.flatMap(sd => sectorStocks[sd.key] || []));
+    // One data file for every stock (All/all-data.js, #88): the 3 biggest per theme, the 6 biggest per sector
+    const stocks = ((window.ALL_DATA || {}).stocks || []).slice()
+      .sort((a, b) => (b.market_cap_usd_b || 0) - (a.market_cap_usd_b || 0));
+    SECTOR_META.forEach(sd => { sectorStocks[sd.key] = stocks.filter(s => (s.themes || []).includes(sd.key)).slice(0, 3); });
+    STD_SECTORS.forEach(sd => {
+      const want = sd.key === 'energy-sector' ? 'energy' : sd.key;
+      sectorStocks[sd.key] = stocks.filter(s => slugOf(s.sector) === want).slice(0, 6);
+    });
+    const row = document.getElementById('std-sector-row');
+    STD_SECTORS.forEach(sd => {
+      const b = document.createElement('button');
+      b.className = 'tool-btn'; b.dataset.sector = sd.key; b.dataset.std = '1';
+      b.textContent = sd.label.replace(/^\S+\s/, '');
+      b.onclick = () => setSector(sd.key, b);
+      row.appendChild(b);
+    });
+    buildTape(stocks.slice(0, 60));
     render();
-  });
   });
 
   function openDrawer() {

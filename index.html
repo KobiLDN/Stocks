@@ -462,6 +462,10 @@
     .sector-pill:hover { color: var(--accent); border-color: var(--accent); background: var(--surface2); }
     .sector-pill.active { border-color: var(--accent); color: var(--accent); background: var(--surface2); }
     .sector-pill-icon { font-size: 18px; line-height: 1; }
+    /* Rail section headings: Markets / Sectors / Themes (#88); this page doesn't load shared.css */
+    .rail-section { margin: 8px 0 1px; padding-top: 6px; border-top: 1px solid var(--border);
+      font-family: 'IBM Plex Mono', monospace; font-size: 7px; letter-spacing: 1.4px;
+      text-transform: uppercase; color: var(--muted); text-align: center; }
     .sector-pill-name { white-space: nowrap; text-align: center; }
     .sector-pill-badge {
       font-size: 7px; padding: 1px 4px;
@@ -761,7 +765,7 @@
       <div class="header-brand">
         <div class="header-label">// Market Intelligence</div>
         <h1>Stocks <span>Hub</span></h1>
-        <div class="header-sub"><span id="hub-stock-count">—</span> stocks · <span id="hub-sector-count">—</span> sectors · Last updated <span id="hub-updated-ts">—</span></div>
+        <div class="header-sub"><span id="hub-stock-count">—</span> stocks · 3 markets, 11 sectors, <span id="hub-sector-count">—</span> themes · Last updated <span id="hub-updated-ts">—</span></div>
       </div>
 
       <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" style="flex-shrink:0;">☾</button>
@@ -825,10 +829,16 @@
         </div>
       </div>
 
-      <div class="sec-hdr"><h2 class="sec-hdr-label">Sector Heatmap · 1-Day Median</h2><span class="sec-hdr-line"></span></div>
+      <div class="sec-hdr"><h2 class="sec-hdr-label">Markets &amp; Sectors · 1-Day Median</h2><span class="sec-hdr-line"></span></div>
+      <div class="sector-heatmap" id="group-heatmap-1d"></div>
+
+      <div class="sec-hdr"><h2 class="sec-hdr-label">Markets &amp; Sectors · 1-Week Median</h2><span class="sec-hdr-line"></span></div>
+      <div class="sector-heatmap" id="group-heatmap-1w"></div>
+
+      <div class="sec-hdr"><h2 class="sec-hdr-label">Theme Heatmap · 1-Day Median</h2><span class="sec-hdr-line"></span></div>
       <div class="sector-heatmap" id="sector-heatmap-1d"></div>
 
-      <div class="sec-hdr"><h2 class="sec-hdr-label">Sector Heatmap · 1-Week Median</h2><span class="sec-hdr-line"></span></div>
+      <div class="sec-hdr"><h2 class="sec-hdr-label">Theme Heatmap · 1-Week Median</h2><span class="sec-hdr-line"></span></div>
       <div class="sector-heatmap" id="sector-heatmap"></div>
 
       <div class="sec-hdr"><h2 class="sec-hdr-label" id="leaders-hdr">Market Leaders · Top 1W</h2><span class="sec-hdr-line"></span></div>
@@ -1321,20 +1331,51 @@
       } catch (e) { el.innerHTML = '<div class="pt-empty">Could not load</div>'; }
     }
 
+    // One tile per group: median move (an outlier can't drag it), tinted by size, linking to the group's page
+    function heatmapTiles(results, field, meta) {
+      return results.map(r => {
+        const vals = r.stocks.map(s => pctNum(s[field])).filter(v => v !== null);
+        const avg = median(vals);
+        const cls = pctCls(avg), mag = avg === null ? 0 : Math.min(Math.abs(avg) / 10, 1);
+        const rgb = avg === null ? '100,116,139' : avg >= 0 ? '0,230,118' : '255,68,68';
+        return `<a class="sh-tile" href="${r.page}" style="background:rgba(${rgb},${(0.05 + mag * 0.10).toFixed(3)});border-left-color:rgb(${rgb});">` +
+          `<span class="sh-name">${r.icon} ${r.label}</span><span class="sh-pct ${cls}">${pctStr(avg)}</span>` +
+          `<span class="sh-meta">${vals.length} stocks · ${meta}</span></a>`;
+      }).join('');
+    }
+
     function renderSectorHeatmap(results) {
-      function heatmapTiles(field, meta) {
-        return results.map(r => {
-          const vals = r.stocks.map(s => pctNum(s[field])).filter(v => v !== null);
-          const avg = median(vals);
-          const cls = pctCls(avg), mag = avg === null ? 0 : Math.min(Math.abs(avg) / 10, 1);
-          const rgb = avg === null ? '100,116,139' : avg >= 0 ? '0,230,118' : '255,68,68';
-          return `<a class="sh-tile" href="${r.page}" style="background:rgba(${rgb},${(0.05 + mag * 0.10).toFixed(3)});border-left-color:rgb(${rgb});">` +
-            `<span class="sh-name">${r.icon} ${r.label}</span><span class="sh-pct ${cls}">${pctStr(avg)}</span>` +
-            `<span class="sh-meta">${vals.length} stocks · ${meta}</span></a>`;
-        }).join('');
+      document.getElementById('sector-heatmap-1d').innerHTML = heatmapTiles(results, 'change_1d', 'median 1D');
+      document.getElementById('sector-heatmap').innerHTML    = heatmapTiles(results, 'change_1w', 'median 1W');
+    }
+
+    // #88: the index markets and the 11 standard sectors, from the one file that holds every stock
+    const GROUP_TILES = [
+      { label: 'S&P 500',    icon: '🇺🇸', page: 'markets/sp500/index.html',     f: s => (s.markets || []).includes('sp500') },
+      { label: 'Nasdaq-100', icon: '📟', page: 'markets/nasdaq100/index.html', f: s => (s.markets || []).includes('nasdaq100') },
+      { label: 'FTSE 100',   icon: '🇬🇧', page: 'markets/ftse100/index.html',  f: s => (s.markets || []).includes('ftse100') },
+      { label: 'Crypto',     icon: '₿',  page: 'Crypto/index.html',            f: s => (s.markets || []).includes('crypto') },
+      ...[['Technology', '💻'], ['Health Care', '⚕️'], ['Financials', '🏦'], ['Consumer Discretionary', '🛍️'],
+          ['Communication Services', '📡'], ['Industrials', '🏭'], ['Consumer Staples', '🛒'], ['Energy', '🛢️'],
+          ['Utilities', '💡'], ['Real Estate', '🏢'], ['Materials', '⛏️']].map(([name, icon]) => ({
+        label: name, icon, page: 'sectors/' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-') + '/index.html',
+        f: s => s.sector === name })),
+    ];
+
+    async function renderGroupHeatmap() {
+      const one = document.getElementById('group-heatmap-1d'), week = document.getElementById('group-heatmap-1w');
+      if (!one || !week) return;
+      try {
+        const text = await fetch('All/all-data.js').then(r => r.text());
+        const data = JSON.parse(text.replace(/^\s*window\.ALL_DATA\s*=\s*/, '').replace(/;\s*$/, ''));
+        const stocks = data.stocks || [];
+        const sc = document.getElementById('hub-stock-count'); if (sc && stocks.length) sc.textContent = stocks.length;
+        const results = GROUP_TILES.map(g => ({ ...g, stocks: stocks.filter(g.f) }));
+        one.innerHTML  = heatmapTiles(results, 'change_1d', 'median 1D');
+        week.innerHTML = heatmapTiles(results, 'change_1w', 'median 1W');
+      } catch (e) {
+        one.innerHTML = week.innerHTML = '<div class="pt-empty">Could not load</div>';
       }
-      document.getElementById('sector-heatmap-1d').innerHTML = heatmapTiles('change_1d', 'median 1D');
-      document.getElementById('sector-heatmap').innerHTML    = heatmapTiles('change_1w', 'median 1W');
     }
 
     function moverRow(s, spy1w) {
@@ -1533,12 +1574,13 @@
       renderTop20(hubResults);
       initTopSort();
       renderNewsCard();
+      renderGroupHeatmap();
       const dates = [...hubResults.map(r => r.updated), ...marketResults.map(r => r.updated)].filter(Boolean).sort();
       if (window.MARKET_DATA && window.MARKET_DATA.updated) dates.push(window.MARKET_DATA.updated);
       const latest = dates[dates.length - 1];
       const totalStocks = new Set(hubResults.flatMap(r => Object.keys(r.priceMap))).size;
       const scEl = document.getElementById('hub-stock-count');
-      if (scEl) scEl.textContent = totalStocks;
+      if (scEl && scEl.textContent === '—') scEl.textContent = totalStocks;   // the All file's count (every stock) wins
       const secEl = document.getElementById('hub-sector-count');
       if (secEl) secEl.textContent = hubResults.length;
       const elUp = document.getElementById('hub-updated-ts');

@@ -9,6 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
 <script src="../asset-links.js"></script>
+<script src="../all-filters.js"></script>
+<script src="all-data.js"></script>
 <script src="../shared.js" defer></script>
 <style>
 
@@ -193,18 +195,9 @@
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 
-<div class="filter-bar">
-    <button class="filter-btn active" data-filter="all" onclick="setSector('all',this)">All</button>
-    <button class="filter-btn" data-filter="ai" onclick="setSector('ai',this)">AI Infra</button>
-    <button class="filter-btn" data-filter="biotech" onclick="setSector('biotech',this)">Biotech</button>
-    <button class="filter-btn" data-filter="defence" onclick="setSector('defence',this)">Defence</button>
-    <button class="filter-btn" data-filter="tech" onclick="setSector('tech',this)">Tech</button>
-    <button class="filter-btn" data-filter="crypto" onclick="setSector('crypto',this)">Crypto</button>
-    <button class="filter-btn" data-filter="energy" onclick="setSector('energy',this)">Energy</button>
-    <button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="setSector('megacap',this)">Mega-Cap</button>
-  </div>
+<div class="filter-bar af-bar" id="af-bar"></div>
   <div class="search-count-bar">
-    <input type="text" id="calc-search" placeholder="Search ticker or company..." oninput="filterCalc(this.value)">
+    <input type="text" id="calc-search" placeholder="Search ticker or company...">
     <span class="row-count">Showing <span id="calc-count">—</span> stocks</span>
   </div>
 </header>
@@ -232,6 +225,7 @@
       <tfoot id="calc-foot"></tfoot>
     </table>
   </div>
+  <div class="af-more-wrap"><button class="af-more" id="af-more" type="button" hidden>Show 50 more</button></div>
 
 </div>
 
@@ -270,30 +264,21 @@
   }
 
   let sortState    = { col: 'ytd', dir: -1 };
-  let activeSector = 'all';
-  let searchQ      = '';
+  const PAGE = 50;
+  let shown = PAGE;
+  const escH = v => String(v == null ? '' : v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
   function sortCalc(col, th) {
     if (sortState.col === col) sortState.dir *= -1;
     else { sortState.col = col; sortState.dir = (col === 'ytd' || col === 'mult' || col === 'v100' || col === 'v1k' || col === 'v10k') ? -1 : 1; }
     document.querySelectorAll('#calc-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
     th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-    renderTable();
-  }
-
-  function filterCalc(query) { searchQ = query.toLowerCase().trim(); renderTable(); }
-
-  function setSector(sector, btn) {
-    activeSector = sector;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+    shown = PAGE;
     renderTable();
   }
 
   function renderTable() {
-    let data = window._calcData || [];
-    if (activeSector !== 'all') data = data.filter(s => s.sector === activeSector);
-    if (searchQ) data = data.filter(s => s.ticker.toLowerCase().includes(searchQ) || s.name.toLowerCase().includes(searchQ));
+    const data = (window._calcData || []).filter(afMatch);
 
     const sorted = [...data].sort((a, b) => {
       if (sortState.col === 'ticker') return a.ticker.localeCompare(b.ticker) * sortState.dir;
@@ -301,15 +286,17 @@
     });
 
     document.getElementById('calc-count').textContent = sorted.length;
+    const more = document.getElementById('af-more'), left = sorted.length - shown;
+    more.hidden = left <= 0;
+    more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' not shown)';
 
     const body = document.getElementById('calc-body');
-    body.innerHTML = sorted.map(s => {
+    body.innerHTML = sorted.slice(0, shown).map(s => {
       const ytdCls   = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
-      const sLabel   = SECTOR_LABELS[s.sector] || s.sector;
       return `<tr>
-        <td class="ticker-cell"><a href="${assetUrl(s.ticker)}" target="_blank" class="ticker-link">${s.ticker}</a></td>
-        <td class="company-cell">${s.name}</td>
-        <td><span class="sector-badge sector-${s.sector}">${sLabel}</span></td>
+        <td class="ticker-cell"><a href="${assetUrl(s.ticker)}" target="_blank" rel="noopener" class="ticker-link">${escH(s.ticker)}</a></td>
+        <td class="company-cell">${escH(s.name)}</td>
+        <td><span class="sector-badge">${escH(s.sectorName)}</span></td>
         <td><span class="${ytdCls}">${s.ytdPct >= 0 ? '+' : ''}${s.ytdPct.toFixed(2)}%</span></td>
         ${multCell(s.ytdPct)}
         ${invCell(100, s.ytdPct)}
@@ -340,7 +327,12 @@
       .map(s => ({
         ticker:  s.ticker,
         name:    s.company_name || s.ticker,
-        sector:  s.sector || '',
+        company_name: s.company_name || s.ticker,
+        sector:  s.sector,
+        sectorName: s.sector || ((s.markets || []).includes('crypto') ? 'Crypto' : '—'),
+        markets: s.markets || [],
+        themes:  s.themes || [],
+        t212:    s.t212,
         ytdPct:  parseFloat(s.change_ytd) || 0,
       }))
       .filter(s => s.ytdPct !== 0);
@@ -348,35 +340,18 @@
     renderTable();
   }
 
-  const SECTORS = [
-    { key: 'ai',      path: '../AI/prices-data.js'      },
-    { key: 'biotech', path: '../Biotech/prices-data.js'  },
-    { key: 'defence', path: '../Defence/prices-data.js'  },
-    { key: 'tech',    path: '../Tech/prices-data.js'     },
-    { key: 'crypto',  path: '../Crypto/prices-data.js'   },
-    { key: 'energy',  path: '../Energy/prices-data.js'   },
-    { key: 'megacap', path: '../MegaCap/prices-data.js'  },
-  ];
-
   // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
   window.addEventListener('DOMContentLoaded', () => {
-  Promise.all(SECTORS.map(async sd => {
-    try {
-      const text  = await fetch(sd.path).then(r => r.text());
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (!match) return { stocks: [], updated: null };
-      const data  = JSON.parse(match[1]);
-      return { stocks: (data.stocks || []).map(s => ({ ...s, sector: sd.key })), updated: data.updated || null };
-    } catch(e) { return { stocks: [], updated: null }; }
-  })).then(results => {
-  const seen = new Set();
-  const stocks = results.flatMap(r => r.stocks).filter(s => { if (seen.has(s.ticker)) return false; seen.add(s.ticker); return true; });
-  const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = stocks.length;
-  const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
-  const tsEl = document.getElementById('data-bar-ts'); if (tsEl) tsEl.textContent = fmtDate(updated);
-  buildCalc(stocks);
-  buildTape(stocks);
-});
+    const data = window.ALL_DATA || {};
+    const stocks = data.stocks || [];
+    const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = stocks.length;
+    const tsEl = document.getElementById('data-bar-ts'); if (tsEl && data.updated) tsEl.textContent = fmtDate(data.updated);
+    const again = () => { shown = PAGE; renderTable(); };
+    afBuildBar(document.getElementById('af-bar'), again);
+    afHookSearch(document.getElementById('calc-search'), again);
+    document.getElementById('af-more').onclick = () => { shown += PAGE; renderTable(); };
+    buildCalc(stocks);
+    buildTape([...stocks].sort((a, b) => (b.market_cap_usd_b || 0) - (a.market_cap_usd_b || 0)).slice(0, 60));
   });
 
   function openDrawer() {
