@@ -28,6 +28,7 @@ TABLES = {
     "signal_runs": ["signal_run_id"],
     "signals": ["signal_run_id", "kind", "asset_id"],
     "market_snapshots": ["as_of_utc"],
+    "run_universe": ["signal_run_id", "asset_id"],
 }
 
 

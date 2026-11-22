@@ -4,7 +4,8 @@
 
 The signal bot has committed */signals-local.json on every run since May 2026, so each
 committed version is one signal run that was published live at the time: provenance = 'live',
-and run_id = 'git:<commit sha>' records where it came from. Placeholder files (no parseable
+and run_id = 'git:<commit sha>' records where it came from. The same commit's <Sector>/prices.json
+is the list of stocks that run could choose from (run_universe, source 'git', #88). Placeholder files (no parseable
 'updated') are skipped. Idempotent — the same keys as the live recorder with INSERT OR IGNORE,
 so runs already recorded live are left alone. Needs full history (checkout fetch-depth: 0).
 """
@@ -14,7 +15,7 @@ import sys
 from datetime import datetime, timedelta
 
 from history.db import ROOT, HistoryError, connect_for_bot, load_universe
-from history.snapshot import SIGNAL_COLS, SIGNAL_RUN_COLS, rows_from_signal_file
+from history.snapshot import RUN_UNIVERSE_COLS, SIGNAL_COLS, SIGNAL_RUN_COLS, rows_from_signal_file, universe_rows
 
 
 def git(*args):
@@ -27,8 +28,15 @@ def versions(path):
     return [tuple(line.split(" ", 1)) for line in lines if line.strip()]
 
 
+def prices_at(sha, sector):
+    try:
+        return json.loads(git("show", f"{sha}:{sector}/prices.json"))
+    except (subprocess.CalledProcessError, ValueError):
+        return None
+
+
 def collect(sectors, warn=print):
-    runs, sigs, seen, skipped = [], [], set(), 0
+    runs, sigs, members, seen, skipped = [], [], [], set(), 0
     for sector in sectors:
         path = f"{sector}/signals-local.json"
         for sha, committed in versions(path):
@@ -52,7 +60,8 @@ def collect(sectors, warn=print):
                 continue
             runs.append(run)
             sigs += rows
-    return runs, sigs, skipped
+            members += universe_rows(run[0], prices_at(sha, sector), "git")
+    return runs, sigs, members, skipped
 
 
 def main():
@@ -65,16 +74,19 @@ def main():
         return 0
     print(f"History → {h.db.name}")
     h.ensure_schema()
-    runs, sigs, skipped = collect(universe["sectors"])
+    runs, sigs, members, skipped = collect(universe["sectors"])
     run_id = h.begin_run("import_signals")
     try:
         h.write("signal_runs", SIGNAL_RUN_COLS, runs, on_conflict="IGNORE")
         h.write("signals", SIGNAL_COLS, sigs, on_conflict="IGNORE")
+        h.write("run_universe", RUN_UNIVERSE_COLS, members, on_conflict="IGNORE")
     except Exception as e:
         h.finish_run(run_id, "failed", note=str(e)[:500])
         raise
-    h.finish_run(run_id, note=f"{len(runs)} runs, {len(sigs)} signals from git; {skipped} placeholder versions skipped")
-    print(f"  {len(runs)} signal runs, {len(sigs)} signals offered ({skipped} placeholder versions skipped), {h.calls} calls")
+    h.finish_run(run_id, note=f"{len(runs)} runs, {len(sigs)} signals, {len(members)} run-universe rows from git; "
+                              f"{skipped} placeholder versions skipped")
+    print(f"  {len(runs)} signal runs, {len(sigs)} signals, {len(members)} run-universe rows offered "
+          f"({skipped} placeholder versions skipped), {h.calls} calls")
     return 0
 
 

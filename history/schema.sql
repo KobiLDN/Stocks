@@ -123,6 +123,10 @@ CREATE TABLE IF NOT EXISTS signals (
   PRIMARY KEY (signal_run_id, kind, asset_id)
 ) WITHOUT ROWID;
 
+-- run_universe (migration 3 in db.py, #88): one row per stock a signal run could choose from, i.e. the
+-- stocks in <Sector>/prices.json when it ran. source = 'live' (recorded with the run) or 'git' (rebuilt
+-- from the prices.json committed with a past run). Written once, never changed.
+
 -- SPY / QQQ / VIX and the regime, one row per published market.json.
 CREATE TABLE IF NOT EXISTS market_snapshots (
   as_of_utc     TEXT PRIMARY KEY,

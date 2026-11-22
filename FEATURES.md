@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **Point-in-time lists for the track record (#88 phase 1, PR 5)** — D1 `run_universe` records the stocks each signal run could choose from (live + rebuilt from git); the random and momentum baselines use it instead of today's lists
+
 - **Prices for the market and sector groups (#88 phase 1, PR 4)** — `update_group_prices.py`: 689 stocks in 14 groups, batched downloads, daily FX, fundamentals once a day, last good value kept; one data file per group in `groups/`
 
 - **Index members in the master list (#88 phase 1, PR 3)** — S&P 500, Nasdaq-100 and FTSE 100 (721 assets in all), refreshed quarterly from Wikipedia by `index_refresh.py` with row-count, known-member and churn checks, dated snapshots in `index_members/`, and two-refresh leavers

@@ -27,7 +27,7 @@ import uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-SCHEMA_VERSION = "2"
+SCHEMA_VERSION = "3"
 
 # Column additions after v1, applied in order to a database at an older version. schema.sql keeps the
 # v1 shape, so a fresh database goes through exactly the same steps as the live one.
@@ -40,6 +40,10 @@ MIGRATIONS = {
         "ALTER TABLE signals ADD COLUMN pre_momentum_label TEXT",
         "ALTER TABLE signals ADD COLUMN momentum_label TEXT",
         "ALTER TABLE signals ADD COLUMN momentum_score REAL",
+    ],
+    "3": [  # #88: the stocks each signal run could choose from (point-in-time list for the random baseline)
+        "CREATE TABLE IF NOT EXISTS run_universe (signal_run_id TEXT NOT NULL, asset_id TEXT NOT NULL, "
+        "source TEXT NOT NULL, PRIMARY KEY (signal_run_id, asset_id)) WITHOUT ROWID",
     ],
 }
 MAX_STATEMENT_BYTES = 90_000   # D1's limit is 100 KB per statement
