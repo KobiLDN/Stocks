@@ -73,6 +73,10 @@ def isin_ok(isin):
     return (10 - total % 10) % 10 == int(isin[-1])
 
 
+# Index markets (#88): an asset's `markets` lists the indexes it is in (index_refresh.py keeps them
+# up to date). The Crypto market is the Crypto group under sectors, not listed here.
+MARKETS = ["ftse100", "nasdaq100", "sp500"]
+
 CURRENCIES = {"USD", "GBp", "GBP", "EUR", "CHF", "JPY", "HKD", "CAD", "AUD", "KRW", "INR", "SAR", "DKK"}
 
 # Health Care pages' industry filter (#88): industry text (GICS sub-industry, ICB sector or Yahoo
@@ -126,7 +130,9 @@ def validate():
         if isin is None and a.get("t212") != "unknown":
             errors.append(f"{t}: no ISIN, so t212 must be unknown")
         other = seen_isin.get(isin)
-        if isin and other and assets[other]["yahoo"] != a["yahoo"]:
+        # one ISIN may appear twice only as the same listing (RR./RR.L) or on two exchanges (CCEP on
+        # Nasdaq and CCEP.L in London: one security, two venues)
+        if isin and other and assets[other]["yahoo"] != a["yahoo"] and assets[other]["exchange"] == a["exchange"]:
             errors.append(f"{t}: same ISIN as {other}")
         seen_isin.setdefault(isin, t)
     for isin, ov in (u.get("sector_overrides") or {}).items():
@@ -148,8 +154,17 @@ def validate():
                 errors.append(f"{s}: {t} has no category")
             seen.add(t)
             used.add(t)
-    for t in sorted(set(assets) - used):
-        errors.append(f"{t}: in assets but in no sector")
+    in_market = set()
+    for t, a in assets.items():
+        m = a.get("markets")
+        if m is None:
+            continue
+        if not isinstance(m, list) or not m or m != sorted(set(m)) or not set(m) <= set(MARKETS):
+            errors.append(f"{t}: markets must be a sorted list from {MARKETS}, got {m!r}")
+        else:
+            in_market.add(t)
+    for t in sorted(set(assets) - used - in_market):
+        errors.append(f"{t}: in assets but in no sector and no market")
     for t, a in (u.get("retired") or {}).items():
         if t in assets:
             errors.append(f"{t}: in both assets and retired")

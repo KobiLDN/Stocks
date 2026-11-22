@@ -1,0 +1,508 @@
+{
+ "index": "ftse100",
+ "date": "2026-11-22",
+ "source": "en.wikipedia.org",
+ "count": 100,
+ "members": [
+  {
+   "yahoo": "AAF.L",
+   "name": "Airtel Africa",
+   "isin": "GB00BKDRYJ47"
+  },
+  {
+   "yahoo": "AAL.L",
+   "name": "Anglo American plc",
+   "isin": "GB00BTK05J60"
+  },
+  {
+   "yahoo": "ABDN.L",
+   "name": "Aberdeen Group",
+   "isin": "GB00BF8Q6K64"
+  },
+  {
+   "yahoo": "ABF.L",
+   "name": "Associated British Foods",
+   "isin": "GB0006731235"
+  },
+  {
+   "yahoo": "ADM.L",
+   "name": "Admiral Group",
+   "isin": "GB00B02J6398"
+  },
+  {
+   "yahoo": "ALW.L",
+   "name": "Alliance Witan",
+   "isin": "GB00B11V7W98"
+  },
+  {
+   "yahoo": "ANTO.L",
+   "name": "Antofagasta plc",
+   "isin": "GB0000456144"
+  },
+  {
+   "yahoo": "AUTO.L",
+   "name": "Autotrader Group",
+   "isin": "GB00BVYVFW23"
+  },
+  {
+   "yahoo": "AV.L",
+   "name": "Aviva",
+   "isin": "GB00BPQY8M80"
+  },
+  {
+   "yahoo": "AZN.L",
+   "name": "AstraZeneca",
+   "isin": "GB0009895292"
+  },
+  {
+   "yahoo": "BA.L",
+   "name": "BAE Systems",
+   "isin": "GB0002634946"
+  },
+  {
+   "yahoo": "BAB.L",
+   "name": "Babcock International",
+   "isin": "GB0009697037"
+  },
+  {
+   "yahoo": "BARC.L",
+   "name": "Barclays",
+   "isin": "GB0031348658"
+  },
+  {
+   "yahoo": "BATS.L",
+   "name": "British American Tobacco",
+   "isin": "GB0002875804"
+  },
+  {
+   "yahoo": "BBOX.L",
+   "name": "Tritax Big Box REIT",
+   "isin": "GB00BG49KP99"
+  },
+  {
+   "yahoo": "BBY.L",
+   "name": "Balfour Beatty",
+   "isin": "GB0000961622"
+  },
+  {
+   "yahoo": "BGEO.L",
+   "name": "Lion Finance Group",
+   "isin": "GB00BF4HYT85"
+  },
+  {
+   "yahoo": "BLND.L",
+   "name": "British Land",
+   "isin": "GB0001367019"
+  },
+  {
+   "yahoo": "BNZL.L",
+   "name": "Bunzl",
+   "isin": "GB00B0744B38"
+  },
+  {
+   "yahoo": "BP.L",
+   "name": "BP",
+   "isin": "GB0007980591"
+  },
+  {
+   "yahoo": "BRBY.L",
+   "name": "Burberry Group",
+   "isin": "GB0031743007"
+  },
+  {
+   "yahoo": "BT-A.L",
+   "name": "BT Group",
+   "isin": "GB0030913577"
+  },
+  {
+   "yahoo": "BTRW.L",
+   "name": "Barratt Redrow",
+   "isin": "GB0000811801"
+  },
+  {
+   "yahoo": "CCC.L",
+   "name": "Computacenter",
+   "isin": "GB00BV9FP302"
+  },
+  {
+   "yahoo": "CCEP.L",
+   "name": "Coca-Cola Europacific Partners",
+   "isin": "GB00BDCPN049"
+  },
+  {
+   "yahoo": "CCH.L",
+   "name": "Coca-Cola HBC",
+   "isin": "CH0198251305"
+  },
+  {
+   "yahoo": "CNA.L",
+   "name": "Centrica",
+   "isin": "GB00B033F229"
+  },
+  {
+   "yahoo": "CPG.L",
+   "name": "Compass Group",
+   "isin": "GB00BD6K4575"
+  },
+  {
+   "yahoo": "CRDA.L",
+   "name": "Croda International",
+   "isin": "GB00BJFFLV09"
+  },
+  {
+   "yahoo": "CTEC.L",
+   "name": "Convatec",
+   "isin": "GB00BD3VFW73"
+  },
+  {
+   "yahoo": "DCC.L",
+   "name": "DCC Energy",
+   "isin": "IE0002424939"
+  },
+  {
+   "yahoo": "DGE.L",
+   "name": "Diageo",
+   "isin": "GB0002374006"
+  },
+  {
+   "yahoo": "DPLM.L",
+   "name": "Diploma",
+   "isin": "GB0001826634"
+  },
+  {
+   "yahoo": "EDV.L",
+   "name": "Endeavour Mining",
+   "isin": "GB00BL6K5J42"
+  },
+  {
+   "yahoo": "EXPN.L",
+   "name": "Experian",
+   "isin": "GB00B19NLV48"
+  },
+  {
+   "yahoo": "EZJ.L",
+   "name": "EasyJet",
+   "isin": "GB00B7KR2P84"
+  },
+  {
+   "yahoo": "FCIT.L",
+   "name": "F & C Investment Trust",
+   "isin": "GB00BS88V647"
+  },
+  {
+   "yahoo": "FRES.L",
+   "name": "Fresnillo plc",
+   "isin": "GB00B2QPKJ12"
+  },
+  {
+   "yahoo": "GAW.L",
+   "name": "Games Workshop",
+   "isin": "GB0003718474"
+  },
+  {
+   "yahoo": "GLEN.L",
+   "name": "Glencore",
+   "isin": "JE00B4T3BW64"
+  },
+  {
+   "yahoo": "GSK.L",
+   "name": "GSK plc",
+   "isin": "GB00BN7SWP63"
+  },
+  {
+   "yahoo": "HLMA.L",
+   "name": "Halma plc",
+   "isin": "GB0004052071"
+  },
+  {
+   "yahoo": "HLN.L",
+   "name": "Haleon",
+   "isin": "GB00BMX86B70"
+  },
+  {
+   "yahoo": "HSBA.L",
+   "name": "HSBC",
+   "isin": "GB0005405286"
+  },
+  {
+   "yahoo": "HSX.L",
+   "name": "Hiscox",
+   "isin": "BMG4593F1389"
+  },
+  {
+   "yahoo": "HWDN.L",
+   "name": "Howdens Joinery",
+   "isin": "GB0005576813"
+  },
+  {
+   "yahoo": "IAG.L",
+   "name": "International Airlines Group",
+   "isin": "ES0177542018"
+  },
+  {
+   "yahoo": "ICG.L",
+   "name": "ICG",
+   "isin": "GB00BYT1DJ19"
+  },
+  {
+   "yahoo": "IGG.L",
+   "name": "IG Group",
+   "isin": "GB00B06QFB75"
+  },
+  {
+   "yahoo": "IHG.L",
+   "name": "IHG Hotels & Resorts",
+   "isin": "GB00BHJYC057"
+  },
+  {
+   "yahoo": "III.L",
+   "name": "3i",
+   "isin": "GB00B1YW4409"
+  },
+  {
+   "yahoo": "IMB.L",
+   "name": "Imperial Brands",
+   "isin": "GB0004544929"
+  },
+  {
+   "yahoo": "IMI.L",
+   "name": "IMI",
+   "isin": "GB00BGLP8L22"
+  },
+  {
+   "yahoo": "INF.L",
+   "name": "Informa",
+   "isin": "GB00BMJ6DW54"
+  },
+  {
+   "yahoo": "INVP.L",
+   "name": "Investec",
+   "isin": "GB00B17BBQ50"
+  },
+  {
+   "yahoo": "ITH.L",
+   "name": "Ithaca Energy",
+   "isin": "GB00BPJHV584"
+  },
+  {
+   "yahoo": "ITRK.L",
+   "name": "Intertek",
+   "isin": "GB0031638363"
+  },
+  {
+   "yahoo": "JD.L",
+   "name": "JD Sports",
+   "isin": "GB00BM8Q5M07"
+  },
+  {
+   "yahoo": "KGF.L",
+   "name": "Kingfisher plc",
+   "isin": "GB0033195214"
+  },
+  {
+   "yahoo": "LAND.L",
+   "name": "Land Securities",
+   "isin": "GB00BYW0PQ60"
+  },
+  {
+   "yahoo": "LGEN.L",
+   "name": "Legal & General",
+   "isin": "GB0005603997"
+  },
+  {
+   "yahoo": "LLOY.L",
+   "name": "Lloyds Banking Group",
+   "isin": "GB0008706128"
+  },
+  {
+   "yahoo": "LMP.L",
+   "name": "LondonMetric Property",
+   "isin": "GB00B4WFW713"
+  },
+  {
+   "yahoo": "LSEG.L",
+   "name": "London Stock Exchange Group",
+   "isin": "GB00B0SWJX34"
+  },
+  {
+   "yahoo": "MKS.L",
+   "name": "Marks & Spencer",
+   "isin": "GB0031274896"
+  },
+  {
+   "yahoo": "MNG.L",
+   "name": "M&G",
+   "isin": "GB00BKFB1C65"
+  },
+  {
+   "yahoo": "MRO.L",
+   "name": "Melrose Industries",
+   "isin": "GB00BNGDN821"
+  },
+  {
+   "yahoo": "MTLN.L",
+   "name": "Metlen Energy & Metals",
+   "isin": "GB00BTQGS779"
+  },
+  {
+   "yahoo": "NG.L",
+   "name": "National Grid plc",
+   "isin": "GB00BDR05C01"
+  },
+  {
+   "yahoo": "NWG.L",
+   "name": "NatWest Group",
+   "isin": "GB00BM8PJY71"
+  },
+  {
+   "yahoo": "NXT.L",
+   "name": "Next plc",
+   "isin": "GB0032089863"
+  },
+  {
+   "yahoo": "PCT.L",
+   "name": "Polar Capital Technology Trust",
+   "isin": "GB00BR3YV268"
+  },
+  {
+   "yahoo": "PRU.L",
+   "name": "Prudential plc",
+   "isin": "GB0007099541"
+  },
+  {
+   "yahoo": "PSH.L",
+   "name": "Pershing Square Holdings",
+   "isin": "GG00BPFJTF46"
+  },
+  {
+   "yahoo": "PSON.L",
+   "name": "Pearson plc",
+   "isin": "GB0006776081"
+  },
+  {
+   "yahoo": "REL.L",
+   "name": "RELX",
+   "isin": "GB00B2B0DG97"
+  },
+  {
+   "yahoo": "RIO.L",
+   "name": "Rio Tinto",
+   "isin": "GB0007188757"
+  },
+  {
+   "yahoo": "RKT.L",
+   "name": "Reckitt",
+   "isin": "GB00BSZBP530"
+  },
+  {
+   "yahoo": "RR.L",
+   "name": "Rolls-Royce Holdings",
+   "isin": "GB00B63H8491"
+  },
+  {
+   "yahoo": "RTO.L",
+   "name": "Rentokil Initial",
+   "isin": "GB00B082RF11"
+  },
+  {
+   "yahoo": "SBRY.L",
+   "name": "Sainsbury's",
+   "isin": "GB00B019KW72"
+  },
+  {
+   "yahoo": "SDLF.L",
+   "name": "Standard Life",
+   "isin": "GB00BGXQNP29"
+  },
+  {
+   "yahoo": "SGE.L",
+   "name": "Sage Group",
+   "isin": "GB00B8C3BL03"
+  },
+  {
+   "yahoo": "SGRO.L",
+   "name": "Segro",
+   "isin": "GB00B5ZN1N88"
+  },
+  {
+   "yahoo": "SHEL.L",
+   "name": "Shell plc",
+   "isin": "GB00BP6MXD84"
+  },
+  {
+   "yahoo": "SMIN.L",
+   "name": "Smiths Group",
+   "isin": "GB00B1WY2338"
+  },
+  {
+   "yahoo": "SMT.L",
+   "name": "Scottish Mortgage Investment Trust",
+   "isin": "GB00BLDYK618"
+  },
+  {
+   "yahoo": "SN.L",
+   "name": "Smith & Nephew",
+   "isin": "GB0009223206"
+  },
+  {
+   "yahoo": "SPX.L",
+   "name": "Spirax Group",
+   "isin": "GB00BWFGQN14"
+  },
+  {
+   "yahoo": "SSE.L",
+   "name": "SSE plc",
+   "isin": "GB0007908733"
+  },
+  {
+   "yahoo": "STAN.L",
+   "name": "Standard Chartered",
+   "isin": "GB0004082847"
+  },
+  {
+   "yahoo": "STJ.L",
+   "name": "St. James's Place",
+   "isin": "GB0007669376"
+  },
+  {
+   "yahoo": "SVT.L",
+   "name": "Severn Trent",
+   "isin": "GB00B1FH8J72"
+  },
+  {
+   "yahoo": "TSCO.L",
+   "name": "Tesco",
+   "isin": "GB00BLGZ9862"
+  },
+  {
+   "yahoo": "ULVR.L",
+   "name": "Unilever",
+   "isin": "GB00BVZK7T90"
+  },
+  {
+   "yahoo": "UU.L",
+   "name": "United Utilities",
+   "isin": "GB00B39J2M42"
+  },
+  {
+   "yahoo": "VOD.L",
+   "name": "Vodafone Group",
+   "isin": "GB00BH4HKS39"
+  },
+  {
+   "yahoo": "WEIR.L",
+   "name": "Weir",
+   "isin": "GB0009465807"
+  },
+  {
+   "yahoo": "WPP.L",
+   "name": "WPP",
+   "isin": "JE00B8KF9B49"
+  },
+  {
+   "yahoo": "WTB.L",
+   "name": "Whitbread",
+   "isin": "GB00B1KJJ408"
+  }
+ ]
+}

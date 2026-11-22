@@ -52,7 +52,7 @@ All four bots are started by cron-job.org (London time) through GitHub's `workfl
 
 - Each job: `POST https://api.github.com/repos/KobiLDN/Stocks/actions/workflows/<file>/dispatches`, headers `Authorization: Bearer <token>`, `Accept: application/vnd.github+json`, `X-GitHub-Api-Version: 2022-11-28`, and "notify on failure" switched on.
 - Token: fine-grained, Actions read/write on `Stocks` + `portfolio-private` only, no expiry. It lives only in cron-job.org.
-- Only `update-prices.yml` keeps a GitHub `schedule:`, as a fallback that skips when prices are under 4h old. The others have none.
+- Only `update-prices.yml` keeps a GitHub `schedule:`, as a fallback that skips when prices are under 4h old, plus the quarterly `refresh-index-members.yml` (2 Jan/Apr/Jul/Oct, #88), where a late start doesn't matter. The others have none.
 - **Changing a time in cron-job.org? Update `monitoring/freshness.js` too.**
 - GitHub marks API version `2022-11-28` deprecated, with a sunset of **10 March 2028**. Before then, update the `X-GitHub-Api-Version` header on every job.
 

@@ -1,0 +1,78 @@
+name: Refresh Index Members
+
+# Quarterly (#88): fetch the S&P 500, Nasdaq-100 and FTSE 100 member lists from Wikipedia, check them
+# (row count, known members, at most 10% churn), keep a dated snapshot, and update universe.yaml.
+# Runs on the 2nd of Jan/Apr/Jul/Oct, after the March/June/September/December index reviews.
+# GitHub's scheduler can start hours late; for a quarterly job that doesn't matter, so this one
+# uses it rather than cron-job.org. Also run by hand (Actions -> Run workflow).
+# On a branch it only checks and uploads the result; only main pushes.
+on:
+  schedule:
+    - cron: '17 6 2 1,4,7,10 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # main shares the bots' push lock; a branch run (check only) must never hold it up
+  group: ${{ github.ref == 'refs/heads/main' && 'push-to-main' || format('index-refresh-{0}', github.ref) }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install deps
+        run: pip install -q pyyaml requests pandas lxml yfinance
+
+      - name: Refresh members
+        # No T212 catalogue here (it is private): new stocks get t212 "unknown" until a
+        # session re-runs universe_classify.py with it.
+        run: python index_refresh.py
+
+      - name: Regenerate links and check
+        id: check
+        if: always()
+        run: |
+          python universe.py --write-links
+          python universe.py
+
+      - name: Upload result (branch runs)
+        if: always() && github.ref != 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: index-refresh-${{ github.run_id }}
+          path: |
+            universe.yaml
+            asset-links.js
+            index_members/
+
+      - name: Commit and push if changed
+        # Also after a rejected index (the others' updates and the rejected list's log are kept), but
+        # never if universe.yaml fails its own check.
+        if: always() && steps.check.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add universe.yaml asset-links.js index_members/
+          if git diff --staged --quiet; then
+            echo "No membership changes."
+          else
+            git commit -m "Refresh index members — $(date -u '+%Y-%m-%d %H:%M UTC')"
+            for i in 1 2 3; do
+              git fetch origin main
+              git merge -X ours origin/main --no-edit
+              git push origin HEAD:main && break
+              echo "Push attempt $i failed, retrying..."
+              sleep 10
+            done
+          fi
