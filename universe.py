@@ -76,6 +76,7 @@ def isin_ok(isin):
 # Index markets (#88): an asset's `markets` lists the indexes it is in (index_refresh.py keeps them
 # up to date). The Crypto market is the Crypto group under sectors, not listed here.
 MARKETS = ["ftse100", "nasdaq100", "sp500"]
+MARKETS_ORDER = ["sp500", "nasdaq100", "ftse100"]   # how menus list them
 
 CURRENCIES = {"USD", "GBp", "GBP", "EUR", "CHF", "JPY", "HKD", "CAD", "AUD", "KRW", "INR", "SAR", "DKK"}
 

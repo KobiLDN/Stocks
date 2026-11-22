@@ -80,10 +80,20 @@
 <title>{{ s.title|safe }}</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../shared.css" rel="stylesheet"/>
-<script src="../asset-links.js"></script>
-<script defer="" src="../shared.js"></script>
+<link href="{{ root }}shared.css" rel="stylesheet"/>
+<script src="{{ root }}asset-links.js"></script>
+<script defer="" src="{{ root }}shared.js"></script>
 <style>{{ css|safe }}</style>
+{% if s.t212 is defined %}
+<style>
+/* #88: stocks Trading 212 doesn't offer (matched by ISIN; yes/no only, never "ISA") */
+.t212-no { display: inline-block; margin-top: 3px; font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+  letter-spacing: .03em; padding: 1px 5px; border-radius: 3px; color: var(--muted);
+  border: 1px dashed var(--border); white-space: nowrap; }
+.t212-toggle { display: inline-flex; align-items: center; gap: 6px; margin-left: 8px; font-size: 11px;
+  color: var(--muted); cursor: pointer; white-space: nowrap; }
+</style>
+{% endif %}
 </head>
 <body data-layout="rail">
 <div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
@@ -107,7 +117,8 @@
 <div class="filter-bar">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
 {% for c in s.chips %}<button class="chip" data-filter="{{ c.id }}" onclick="filterChip('{{ c.id }}',this)">{{ c.label|safe }}</button>
-{% endfor %}</div>
+{% endfor %}{% if s.t212 is defined %}<label class="t212-toggle" title="Trading 212 offers most ordinary shares on major exchanges; this hides the ones it doesn't list"><input type="checkbox" id="hide-t212" onchange="applyFilters()"> Hide stocks not on T212</label>
+{% endif %}</div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
@@ -183,10 +194,14 @@ function buildTable(stocks) {
     tr.dataset.return    = s.return_1yr;
     tr.dataset.changeYtd = s.change_ytd;
     tr.dataset.barPct    = s.bar_pct;
-    tr.innerHTML =
+{% if s.t212 is defined %}    tr.dataset.t212      = s.t212 || 'unknown';
+{% endif %}    tr.innerHTML =
       '<td><a class="ticker-link" href="' + assetUrl(s.ticker) + '" target="_blank">' +
         '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
-        '<div class="exchange-badge">' + exDisp + '</div></td>' +
+{% if s.t212 is defined %}        '<div class="exchange-badge">' + exDisp + '</div>' +
+        (s.t212 === 'no' ? '<span class="t212-no" title="Trading 212 doesn\'t offer this stock">not on T212</span>' : '') + '</td>' +
+{% else %}        '<div class="exchange-badge">' + exDisp + '</div></td>' +
+{% endif %}
       '<td>' + (s.company_name || s.ticker) + '</td>' +
       '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
       '<td><span class="price">$' + fmtUsd(s.price_usd) + '</span>' +
@@ -261,6 +276,9 @@ function applyFilters() {
   let visible = 0;
   rows.forEach(row => {
     const matchCat    = currentCat === 'all' || row.dataset.cat === currentCat;
+{% if s.t212 is defined %}    const hideT212 = document.getElementById('hide-t212');
+    if (hideT212 && hideT212.checked && row.dataset.t212 === 'no') { row.classList.add('hidden'); return; }
+{% endif %}
     const matchSearch = !query
       || row.dataset.ticker.toLowerCase().includes(query)
       || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
@@ -323,6 +341,6 @@ function searchTable() { applyFilters(); }
 <div class="nav-panel"></div>
 </div>
 </div>
-  <script src="../nav.js"></script>
+  <script src="{{ root }}nav.js"></script>
 </body>
 </html>

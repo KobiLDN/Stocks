@@ -8,8 +8,8 @@
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="signals-local.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../shared.css">
-<script src="../shared.js" defer></script>
+<link rel="stylesheet" href="{{ root }}shared.css">
+<script src="{{ root }}shared.js" defer></script>
 <style>
 
   /* Signal cards */
@@ -507,7 +507,7 @@
       data.previous_picks.forEach(p => { prevRank[p.ticker] = p.rank; });
     }
 
-    let html = '<p class="signals-note">AI candidates to research, not recommendations. So far, picks have roughly matched the S&amp;P 500 rather than beaten it — see the <a href="../track-record.html">Track Record</a>.</p>';
+    let html = '<p class="signals-note">AI candidates to research, not recommendations. So far, picks have roughly matched the S&amp;P 500 rather than beaten it — see the <a href="{{ root }}track-record.html">Track Record</a>.</p>';
     html += data.picks.map(p => {
       const t = p.ticker || '';
       const name = nameFor[t] || NAMES[t] || t;
@@ -619,6 +619,6 @@
 </div>
 </div>
 
-  <script src="../nav.js"></script>
+  <script src="{{ root }}nav.js"></script>
 </body>
 </html>

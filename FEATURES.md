@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **Market and sector pages (#88 phase 1, PR 6)** — S&P 500, Nasdaq-100, FTSE 100 and the 11 sectors, each with Dashboard, Metrics, News, Heatmap, Charts and What-If; Markets / Sectors / Themes menu; "not on T212" mark and filter; Health Care industry filter
+
 - **Point-in-time lists for the track record (#88 phase 1, PR 5)** — D1 `run_universe` records the stocks each signal run could choose from (live + rebuilt from git); the random and momentum baselines use it instead of today's lists
 
 - **Prices for the market and sector groups (#88 phase 1, PR 4)** — `update_group_prices.py`: 689 stocks in 14 groups, batched downloads, daily FX, fundamentals once a day, last good value kept; one data file per group in `groups/`

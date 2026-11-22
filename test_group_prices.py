@@ -6,6 +6,7 @@ Run: python -m unittest test_group_prices.py   (also run in CI)
 import unittest
 from datetime import date, datetime, timedelta, timezone
 
+import groups_config as gc
 import update_group_prices as gp
 
 FX = {"USD": 1.25, "EUR": 1.15, "JPY": 190.0}
@@ -125,18 +126,64 @@ class Groups(unittest.TestCase):
             "AZN": {"exchange": "LSE", "markets": ["ftse100"], "sector": "Health Care"},
             "X": {"exchange": "NYSE", "sector": "Unclassified"},
         }
-        g = gp.groups(assets, {})
+        g = gp.groups(assets)
         self.assertEqual(g["sp500"]["tickers"], ["AAPL"])
         self.assertEqual(g["ftse100"]["tickers"], ["AZN"])
         self.assertEqual(g["technology"]["tickers"], ["AAPL"])
         self.assertEqual(g["health-care"]["tickers"], ["AZN"])
+        self.assertEqual(g["health-care"]["path"], "sectors/health-care")
+        self.assertEqual(g["sp500"]["path"], "markets/sp500")
         self.assertNotIn("X", {t for v in g.values() for t in v["tickers"]})
         self.assertEqual(len(g), 14)
+        self.assertEqual(list(g)[:3], ["sp500", "nasdaq100", "ftse100"])
 
-    def test_category(self):
-        self.assertEqual(gp.category_for({"kind": "market", "name": "S&P 500"}, {"sector": "Real Estate"}), "real-estate")
-        self.assertEqual(gp.category_for({"kind": "sector", "name": "Health Care"}, {"industry": "Biotechnology"}), "biotechnology")
-        self.assertEqual(gp.category_for({"kind": "sector", "name": "Energy"}, {"industry": "Oil & Gas"}), "oil-gas")
+
+class Categories(unittest.TestCase):
+    """groups_config: one category list shared by the price data and the pages."""
+    def test_market_and_health_care(self):
+        mkt = {"kind": "market", "name": "S&P 500", "tickers": ["A", "B", "C"]}
+        assets = {"A": {"sector": "Real Estate"}, "B": {"sector": "Technology"}, "C": {"sector": "Technology"}}
+        self.assertEqual(gc.categories(mkt, assets), [("technology", "Technology"), ("real-estate", "Real Estate")])
+        self.assertEqual(gc.category_of(mkt, assets["A"]), "real-estate")
+        hc = {"kind": "sector", "name": "Health Care", "tickers": ["X", "Y"]}
+        hca = {"X": {"industry": "Biotechnology"}, "Y": {"industry": "Medical Devices"}}
+        self.assertEqual(gc.categories(hc, hca), [("biotechnology", "Biotechnology"), ("equipment-services", "Equipment & Services")])
+
+    def test_top_industries_aliases_and_other(self):
+        names = ["Aerospace & Defense", "Aerospace and Defense"] + [f"Ind {i}" for i in range(9)]
+        assets = {str(i): {"industry": n} for i, n in enumerate(names)}
+        assets["0b"] = {"industry": "Aerospace & Defense"}
+        grp = {"kind": "sector", "name": "Industrials", "tickers": list(assets)}
+        cats = gc.categories(grp, assets)
+        self.assertEqual(cats[0], ("aerospace-defense", "Aerospace & Defense"))    # ICB name merged: 3 stocks
+        self.assertEqual(len(cats), gc.TOP_INDUSTRIES + 1)                         # 7 + Other
+        self.assertEqual(cats[-1], ("other", "Other"))
+        self.assertEqual(gc.category_of(grp, {"industry": "Ind 8"}, cats), "other")
+        self.assertEqual(gc.colours(cats)["other"][0], "slate")
+
+    def test_one_entry_per_listing(self):
+        assets = {"RR.": {"exchange": "LSE", "yahoo": "RR.L", "markets": ["ftse100"], "sector": "Industrials"},
+                  "RR.L": {"exchange": "LSE", "yahoo": "RR.L", "markets": ["ftse100"], "sector": "Industrials"}}
+        g = {x["id"]: x for x in gc.all_groups(assets)}
+        self.assertEqual(g["ftse100"]["tickers"], ["RR.L"])
+        self.assertEqual(g["industrials"]["tickers"], ["RR.L"])
+        real = {x["id"]: x for x in gc.all_groups()}
+        self.assertEqual(len(real["ftse100"]["tickers"]), 100)
+
+    def test_every_real_stock_lands_in_a_listed_category(self):
+        assets = gc.universe.load()["assets"]
+        for g in gc.all_groups(assets):
+            cats = gc.categories(g, assets)
+            ids = {c for c, _ in cats}
+            for t in g["tickers"]:
+                self.assertIn(gc.category_of(g, assets[t], cats), ids, (g["id"], t))
+
+    def test_tradingview(self):
+        self.assertEqual(gc.tradingview_symbol("BA.L", {"exchange": "LSE", "yahoo": "BA.L"}), "LSE:BA.")
+        self.assertEqual(gc.tradingview_symbol("ULVR.L", {"exchange": "LSE", "yahoo": "ULVR.L"}), "LSE:ULVR")
+        self.assertEqual(gc.tradingview_symbol("BT-A.L", {"exchange": "LSE", "yahoo": "BT-A.L"}), "LSE:BT.A")
+        self.assertEqual(gc.tradingview_symbol("BRK-B", {"exchange": "NYSE", "yahoo": "BRK-B"}), "NYSE:BRK.B")
+        self.assertEqual(gc.tradingview_symbol("285A", {"exchange": "TSE", "yahoo": "285A.T"}), "TSE:285A")
 
 
 if __name__ == "__main__":

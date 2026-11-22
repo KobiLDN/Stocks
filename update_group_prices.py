@@ -3,9 +3,10 @@
     python update_group_prices.py                 # prices + due fundamentals, write groups/
     python update_group_prices.py --no-fundamentals
 
-Groups (one data file each, holding only its own stocks, so a page loads only what it shows):
-  markets  sp500, nasdaq100, ftse100       (universe.yaml `markets`)
-  sectors  the 11 standard sectors         (universe.yaml `sector`; Unclassified stocks are left out)
+Groups (one data file each, next to the group's pages, holding only its own stocks), from
+groups_config.py:
+  markets  sp500, nasdaq100, ftse100  -> markets/<id>/prices-data.js
+  sectors  the 11 standard sectors    -> sectors/<slug>/prices-data.js (Unclassified stocks left out)
 Coins keep their own Crypto/ price script; the theme groups (AI, Defence, ...) keep theirs for now.
 
 How it stays light on Yahoo (#88 "Revised plan", point 5):
@@ -18,7 +19,7 @@ How it stays light on Yahoo (#88 "Revised plan", point 5):
   - jittered backoff on errors (429s); a stock that fails keeps its last good row (price_as_of
     says how old it is) instead of dropping off the page.
 
-Writes groups/<id>/prices-data.js (window.PRICES_DATA = {...}, the format the sector pages read,
+Writes <group path>/prices-data.js (window.PRICES_DATA = {...}, the format the sector pages read,
 plus fx, and per stock: markets, sector, industry, themes, t212, currency, price_as_of) and
 groups/status.json (updated time and counts; read by /health).
 """
@@ -32,6 +33,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
+import groups_config
 import universe
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -41,24 +43,11 @@ BATCH = 100
 FUND_MAX_AGE = timedelta(hours=20)
 STALE_AFTER = timedelta(days=7)          # newest bar older than this = no usable price this run
 LONDON = ZoneInfo("Europe/London")
-MARKET_NAMES = {"sp500": "S&P 500", "nasdaq100": "Nasdaq-100", "ftse100": "FTSE 100"}
 
 
-def slug(name):
-    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
-
-
-def groups(assets, sectors):
-    """{group id: {"name", "kind", "tickers": [...]}}. themes: {ticker: [theme, ...]}."""
-    out = {}
-    for m in universe.MARKETS:
-        out[m] = {"name": MARKET_NAMES[m], "kind": "market",
-                  "tickers": sorted(t for t, a in assets.items() if m in (a.get("markets") or []))}
-    for s in universe.SECTORS:
-        out[slug(s)] = {"name": s, "kind": "sector",
-                        "tickers": sorted(t for t, a in assets.items()
-                                          if a["exchange"] != "Crypto" and a.get("sector") == s)}
-    return out
+def groups(assets):
+    """{group id: group} from groups_config (shared with the page builder)."""
+    return {g["id"]: g for g in groups_config.all_groups(assets)}
 
 
 # ── FX ─────────────────────────────────────────────────────────────────────────
@@ -310,18 +299,9 @@ def make_row(t, a, s, f, fx, themes, category):
     }
 
 
-def category_for(group, a):
-    """Market pages colour stocks by sector; sector pages by industry (Health Care: its 4 groups)."""
-    if group["kind"] == "market":
-        return slug(a.get("sector") or "Unclassified")
-    if group["name"] == "Health Care":
-        return slug(universe.health_group(a.get("industry")))
-    return slug(a.get("industry") or "Other")
-
-
-def previous_stats(gid):
-    """Last good stats per ticker from the group's current file (kept when Yahoo fails)."""
-    path = os.path.join(OUT, gid, "prices-data.js")
+def previous_stats(group):
+    """Last good rows per ticker from the group's current file (kept when Yahoo fails)."""
+    path = os.path.join(ROOT, group["path"], "prices-data.js")
     try:
         raw = open(path, encoding="utf-8").read()
         data = json.loads(re.sub(r"^\s*window\.PRICES_DATA\s*=\s*", "", raw).rstrip().rstrip(";"))
@@ -342,7 +322,7 @@ def main(argv=None):
     for theme, members in u["sectors"].items():
         for t, _ in members:
             themes.setdefault(t, []).append(theme)
-    gs = groups(assets, u["sectors"])
+    gs = groups(assets)
     in_groups = sorted({t for g in gs.values() for t in g["tickers"]})
     symbols = sorted({assets[t]["yahoo"] for t in in_groups})
     now = datetime.now(timezone.utc)
@@ -370,23 +350,26 @@ def main(argv=None):
     updated = now.astimezone(LONDON).strftime("%Y-%m-%d %H:%M")
     status = {"updated": updated, "fx": fx, "groups": {}, "missing": []}
     for gid, g in gs.items():
-        kept = previous_stats(gid)
+        kept = previous_stats(g)
+        cats = groups_config.categories(g, assets)
         rows = []
         for t in g["tickers"]:
             a = assets[t]
             s = prices.get(a["yahoo"])
             if s:
-                rows.append(make_row(t, a, s, cache.get(a["yahoo"]) or {}, fx, themes, category_for(g, a)))
+                rows.append(make_row(t, a, s, cache.get(a["yahoo"]) or {}, fx, themes,
+                                     groups_config.category_of(g, a, cats)))
             elif t in kept:                       # Yahoo failed this run: keep the last good row
                 rows.append(kept[t])
                 status["missing"].append(t)
         data = {"updated": updated, "group": gid, "name": g["name"], "kind": g["kind"],
                 "fx_gbp_usd": round(fx["USD"], 4), "fx": {k: round(v, 4) for k, v in fx.items()},
                 "stocks": rows}
-        os.makedirs(os.path.join(OUT, gid), exist_ok=True)
-        with open(os.path.join(OUT, gid, "prices-data.js"), "w", encoding="utf-8") as f:
+        os.makedirs(os.path.join(ROOT, g["path"]), exist_ok=True)
+        with open(os.path.join(ROOT, g["path"], "prices-data.js"), "w", encoding="utf-8") as f:
             f.write(f"window.PRICES_DATA = {json.dumps(data, separators=(',', ':'))};\n")
-        status["groups"][gid] = {"name": g["name"], "kind": g["kind"], "stocks": len(rows), "members": len(g["tickers"])}
+        status["groups"][gid] = {"name": g["name"], "kind": g["kind"], "path": g["path"],
+                                 "stocks": len(rows), "members": len(g["tickers"])}
     status["missing"] = sorted(set(status["missing"]))
     with open(os.path.join(OUT, "status.json"), "w", encoding="utf-8") as f:
         json.dump(status, f, indent=1)
