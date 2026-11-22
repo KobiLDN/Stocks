@@ -145,6 +145,7 @@ Stocks/
 - **Prices:** batched 1-year daily downloads (100 symbols a call). A stock missing from a batch, or a day behind its own exchange, is fetched again on its own; a bar with no close takes the live quote's price.
 - **Currency:** converted to GBP/USD with the day's FX; GBp, EUR, JPY and SAR (pegged to USD) are handled.
 - **Fundamentals:** at most once a day per stock, in `groups/fundamentals.json`, time-boxed to 15 min a run, with backoff.
+- **News:** Yahoo headlines + VADER sentiment for every live run's picks, each group's 5 biggest risers and fallers, then the theme stocks (in that order); at most every 6 h per stock, in `groups/news.json`, time-boxed to 6 min a run; lists older than 7 days are hidden.
 - **Failures:** a stock that fails keeps its last good row (`price_as_of` shows its age). If more than half fail, nothing is written and the step fails, but it can't block the theme prices.
 - **News:** not fetched for the groups yet (`news: []`, and the group News pages say so); per #88 it will cover signal picks and big movers only.
 - **Freshness:** `groups/status.json` is part of `/health`'s Prices stream.
