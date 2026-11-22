@@ -74,7 +74,7 @@ assets:
   "COAG":    {"name": "Hemab Therapeutics", "exchange": "NASDAQ", "yahoo": "COAG", "isin": "US4234941031", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
   "COHR":    {"name": "Coherent Corp", "exchange": "NYSE", "yahoo": "COHR", "isin": "US19247G1076", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Electronic Components", "t212": "yes"}
   "COP":     {"name": "ConocoPhillips", "exchange": "NYSE", "yahoo": "COP", "isin": "US20825C1045", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Exploration & Production", "t212": "yes"}
-  "CORZ":    {"name": "Core Scientific", "exchange": "NASDAQ", "yahoo": "CORZ", "speculative": true, "isin": "US21874A1060", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Software - Infrastructure", "t212": "yes"}
+  "CORZ":    {"name": "Core Scientific", "exchange": "NASDAQ", "yahoo": "CORZ", "speculative": true, "isin": "US21874A1060", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
   "COST":    {"name": "Costco", "exchange": "NASDAQ", "yahoo": "COST", "isin": "US22160K1051", "currency": "USD", "sector": "Consumer Staples", "sector_src": "gics", "industry": "Consumer Staples Merchandise Retail", "t212": "yes"}
   "CRDO":    {"name": "Credo Technology", "exchange": "NASDAQ", "yahoo": "CRDO", "isin": "KYG254571055", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
   "CRM":     {"name": "Salesforce", "exchange": "NYSE", "yahoo": "CRM", "isin": "US79466L3024", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Application Software", "t212": "yes"}
@@ -108,13 +108,13 @@ assets:
   "HII":     {"name": "Huntington Ingalls Industries", "exchange": "NYSE", "yahoo": "HII", "isin": "US4464131063", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
   "HON":     {"name": "Honeywell", "exchange": "NASDAQ", "yahoo": "HON", "isin": "US4385162056", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Industrial Conglomerates", "t212": "yes"}
   "HSBC":    {"name": "HSBC Holdings", "exchange": "NYSE", "yahoo": "HSBC", "isin": "US4042804066", "currency": "USD", "sector": "Financials", "sector_src": "yahoo", "industry": "Banks - Diversified", "t212": "yes"}
-  "HUT":     {"name": "Hut 8 Mining", "exchange": "NASDAQ", "yahoo": "HUT", "isin": "US44812J1043", "currency": "USD", "sector": "Financials", "sector_src": "yahoo", "industry": "Capital Markets", "t212": "yes"}
+  "HUT":     {"name": "Hut 8 Mining", "exchange": "NASDAQ", "yahoo": "HUT", "isin": "US44812J1043", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
   "ILMN":    {"name": "Illumina", "exchange": "NASDAQ", "yahoo": "ILMN", "isin": "US4523271090", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Life Sciences Tools & Services", "t212": "yes"}
   "INCY":    {"name": "Incyte", "exchange": "NASDAQ", "yahoo": "INCY", "isin": "US45337C1027", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
   "INTC":    {"name": "Intel", "exchange": "NASDAQ", "yahoo": "INTC", "isin": "US4581401001", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
   "INTU":    {"name": "Intuit", "exchange": "NASDAQ", "yahoo": "INTU", "isin": "US4612021034", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Application Software", "t212": "yes"}
   "IONS":    {"name": "Ionis Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "IONS", "isin": "US4622221004", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
-  "IREN":    {"name": "Iris Energy", "exchange": "NASDAQ", "yahoo": "IREN", "speculative": true, "isin": "AU0000185993", "currency": "USD", "sector": "Financials", "sector_src": "yahoo", "industry": "Capital Markets", "t212": "yes"}
+  "IREN":    {"name": "Iris Energy", "exchange": "NASDAQ", "yahoo": "IREN", "speculative": true, "isin": "AU0000185993", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
   "JNJ":     {"name": "Johnson & Johnson", "exchange": "NYSE", "yahoo": "JNJ", "isin": "US4781601046", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Pharmaceuticals", "t212": "yes"}
   "JPM":     {"name": "JPMorgan Chase", "exchange": "NYSE", "yahoo": "JPM", "isin": "US46625H1005", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Diversified Banks", "t212": "yes"}
   "KEYS":    {"name": "Keysight Technologies", "exchange": "NYSE", "yahoo": "KEYS", "isin": "US49338L1035", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Electronic Equipment & Instruments", "t212": "yes"}
@@ -208,7 +208,7 @@ assets:
   "VST":     {"name": "Vistra Corp", "exchange": "NYSE", "yahoo": "VST", "isin": "US92840M1027", "currency": "USD", "sector": "Utilities", "sector_src": "gics", "industry": "Electric Utilities", "t212": "yes"}
   "WDC":     {"name": "Western Digital", "exchange": "NASDAQ", "yahoo": "WDC", "isin": "US9581021055", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
   "WMT":     {"name": "Walmart", "exchange": "NYSE", "yahoo": "WMT", "isin": "US9311421039", "currency": "USD", "sector": "Consumer Staples", "sector_src": "gics", "industry": "Consumer Staples Merchandise Retail", "t212": "yes"}
-  "WULF":    {"name": "TeraWulf", "exchange": "NASDAQ", "yahoo": "WULF", "speculative": true, "isin": "US88080T1043", "currency": "USD", "sector": "Financials", "sector_src": "yahoo", "industry": "Capital Markets", "t212": "yes"}
+  "WULF":    {"name": "TeraWulf", "exchange": "NASDAQ", "yahoo": "WULF", "speculative": true, "isin": "US88080T1043", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
   "XOM":     {"name": "ExxonMobil", "exchange": "NYSE", "yahoo": "XOM", "isin": "US30233Q1085", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Integrated Oil & Gas", "t212": "yes"}
   "ADA":     {"name": "Cardano", "exchange": "Crypto", "yahoo": "ADA-USD", "cmc_symbol": "ADA", "cmc_id": 2010, "coingecko": "cardano", "currency": "USD", "t212": "no"}
   "AIOZ":    {"name": "AIOZ Network", "exchange": "Crypto", "yahoo": "AIOZ-USD", "cmc_symbol": "AIOZ", "cmc_id": 9104, "coingecko": "aioz-network", "currency": "USD", "t212": "no"}
@@ -557,3 +557,11 @@ retired:
   "MATIC":   {"name": "Polygon (old MATIC)", "exchange": "Crypto", "yahoo": "MATIC-USD", "cmc_symbol": "MATIC", "coingecko": "matic-network"}
   "OCEAN":   {"name": "Ocean Protocol", "exchange": "Crypto", "yahoo": "OCEAN-USD", "cmc_symbol": "OCEAN", "coingecko": "ocean-protocol"}
   "AGIX":    {"name": "SingularityNET", "exchange": "Crypto", "yahoo": "AGIX-USD", "cmc_symbol": "AGIX", "coingecko": "singularitynet"}
+
+sector_overrides:
+  # Data-centre operators (bitcoin mining, increasingly AI hosting): Yahoo splits them between Financials
+  # and Technology; owner decision 22 Nov 2026 (#95): all Technology. Not in the S&P 500, so no GICS label.
+  "US44812J1043": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "Hut 8: data centres / bitcoin mining; Yahoo says Financials"}
+  "AU0000185993": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "IREN: data centres / AI hosting; Yahoo says Financials"}
+  "US88080T1043": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "TeraWulf: data centres / AI hosting; Yahoo says Financials"}
+  "US21874A1060": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "Core Scientific: data centres / AI hosting; pinned so it stays with the other three"}
