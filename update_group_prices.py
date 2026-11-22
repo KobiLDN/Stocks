@@ -310,6 +310,44 @@ def previous_stats(group):
         return {}
 
 
+# ── All pages: every stock in one file (#88 PR 7) ────────────────────────────────
+ALL_PATH = "All/all-data.js"
+# universe.yaml theme names -> the keys the All pages use (and sector-data.js's notes)
+THEME_KEYS = {"AI": "ai", "Biotech": "biotech", "Crypto": "crypto", "Defence": "defence",
+              "Energy": "energy", "MegaCap": "megacap", "Tech": "tech"}
+ALL_DROP = ("news", "news_sentiment", "low_gbp", "high_gbp", "price_gbp")   # unused there; keeps the file small
+
+
+def all_row(r, sector_slug=None):
+    out = {k: v for k, v in r.items() if k not in ALL_DROP}
+    out["themes"] = [THEME_KEYS.get(x, x.lower()) for x in r.get("themes") or []]
+    out["category"] = sector_slug or groups_config.slug(r.get("sector") or "")
+    return out
+
+
+def crypto_rows():
+    """The Crypto page's own rows (CoinMarketCap/CoinGecko prices), as All rows."""
+    try:
+        raw = open(os.path.join(ROOT, "Crypto", "prices-data.js"), encoding="utf-8").read()
+        data = json.loads(re.sub(r"^\s*window\.PRICES_DATA\s*=\s*", "", raw).rstrip().rstrip(";"))
+    except (OSError, ValueError):
+        return []
+    out = []
+    for r in data.get("stocks", []):
+        row = all_row({**r, "themes": ["Crypto"], "markets": ["crypto"], "sector": None, "t212": "no",
+                       "currency": "USD"}, "crypto")
+        out.append(row)
+    return out
+
+
+def write_all(gs, all_rows, updated, fx):
+    rows = [all_row(r) for _, r in sorted(all_rows.items())] + crypto_rows()
+    data = {"updated": updated, "fx_gbp_usd": round(fx["USD"], 4), "count": len(rows), "stocks": rows}
+    os.makedirs(os.path.join(ROOT, "All"), exist_ok=True)
+    with open(os.path.join(ROOT, ALL_PATH), "w", encoding="utf-8") as f:
+        f.write(f"window.ALL_DATA = {json.dumps(data, separators=(',', ':'))};\n")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--no-fundamentals", action="store_true")
@@ -318,10 +356,14 @@ def main(argv=None):
 
     u = universe.load()
     assets = {t: a for t, a in u["assets"].items() if a["exchange"] != "Crypto"}
-    themes = {}
+    # themes per listing: RR. (AI) and RR.L (Defence) are one share, so RR.L carries both
+    by_yahoo = {}
     for theme, members in u["sectors"].items():
         for t, _ in members:
-            themes.setdefault(t, []).append(theme)
+            y = u["assets"][t]["yahoo"]
+            if theme not in by_yahoo.setdefault(y, []):
+                by_yahoo[y].append(theme)
+    themes = {t: by_yahoo.get(a["yahoo"], []) for t, a in u["assets"].items()}
     gs = groups(assets)
     in_groups = sorted({t for g in gs.values() for t in g["tickers"]})
     symbols = sorted({assets[t]["yahoo"] for t in in_groups})
@@ -349,6 +391,7 @@ def main(argv=None):
 
     updated = now.astimezone(LONDON).strftime("%Y-%m-%d %H:%M")
     status = {"updated": updated, "fx": fx, "groups": {}, "missing": []}
+    all_rows = {}
     for gid, g in gs.items():
         kept = previous_stats(g)
         cats = groups_config.categories(g, assets)
@@ -362,6 +405,8 @@ def main(argv=None):
             elif t in kept:                       # Yahoo failed this run: keep the last good row
                 rows.append(kept[t])
                 status["missing"].append(t)
+        if g["kind"] == "sector":                  # every stock is in exactly one sector group
+            all_rows.update({r["ticker"]: r for r in rows})
         data = {"updated": updated, "group": gid, "name": g["name"], "kind": g["kind"],
                 "fx_gbp_usd": round(fx["USD"], 4), "fx": {k: round(v, 4) for k, v in fx.items()},
                 "stocks": rows}
@@ -371,6 +416,8 @@ def main(argv=None):
         status["groups"][gid] = {"name": g["name"], "kind": g["kind"], "path": g["path"],
                                  "stocks": len(rows), "members": len(g["tickers"])}
     status["missing"] = sorted(set(status["missing"]))
+    write_all(gs, all_rows, updated, fx)
+    status["all"] = {"path": ALL_PATH, "stocks": len(all_rows)}
     with open(os.path.join(OUT, "status.json"), "w", encoding="utf-8") as f:
         json.dump(status, f, indent=1)
         f.write("\n")

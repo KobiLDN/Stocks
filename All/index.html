@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="All sectors combined stock dashboard — live prices, 52-week range, and momentum for 242 stocks across AI Infrastructure, Biotech, Defence, Tech, Crypto, Energy, and Mega-Cap." name="description"/>
-<title>All Sectors — Dashboard</title>
+<meta content="Every stock on the site in one table: the S&amp;P 500, Nasdaq-100 and FTSE 100 members plus crypto. Filter by market, sector or theme, and hide stocks not on Trading 212." name="description"/>
+<title>All Stocks — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="../shared.css" rel="stylesheet"/>
 <script src="../asset-links.js"></script>
 <script src="../sector-data.js"></script>
+<script src="../all-filters.js"></script>
 <script defer="" src="../shared.js"></script>
 <style>
   .filter-bar {
@@ -270,6 +271,10 @@
     to   { opacity: 1; transform: translateX(0); }
   }
   tbody tr { animation: rowIn 0.3s ease both; }
+  #stock-tbody.af-ready tr { animation: none; }
+  /* ~720 rows, 9 columns: give the note room so rows don't grow tall; the table scrolls sideways */
+  #stock-table .notes-text { display: block; min-width: 260px; max-width: 360px; font-size: 12px; line-height: 1.4; }
+  #stock-table td:nth-child(4) { min-width: 90px; }   /* only the first load slides in; filtering doesn't replay it */
   tbody tr:nth-child(1)  { animation-delay: 0.05s; }
   tbody tr:nth-child(2)  { animation-delay: 0.08s; }
   tbody tr:nth-child(3)  { animation-delay: 0.11s; }
@@ -390,23 +395,14 @@
 <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
-    <h1>All <span>Sectors</span></h1>
-    <div class="header-sub"><span id="sector-count">191</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <h1>All <span>Stocks</span></h1>
+    <div class="header-sub"><span id="sector-count">—</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
-<div class="filter-bar">
-<button class="filter-btn active" data-filter="all" onclick="filterTable('all', this)">All</button>
-<button class="filter-btn" data-filter="ai" data-tooltip="Semiconductors, nuclear power, data centres and AI infrastructure — 48 stocks" onclick="filterTable('ai', this)">AI Infra</button>
-<button class="filter-btn" data-filter="biotech" data-tooltip="Biotechnology, genomics and pharmaceutical companies" onclick="filterTable('biotech', this)">Biotech</button>
-<button class="filter-btn" data-filter="defence" data-tooltip="Defence, aerospace and security companies" onclick="filterTable('defence', this)">Defence</button>
-<button class="filter-btn" data-filter="tech" data-tooltip="Technology sector — software, hardware and services" onclick="filterTable('tech', this)">Tech</button>
-<button class="filter-btn" data-filter="crypto" data-tooltip="Cryptocurrency, blockchain and digital asset companies" onclick="filterTable('crypto', this)">Crypto</button>
-<button class="filter-btn" data-filter="energy" data-tooltip="Energy sector — oil, gas, renewables and utilities" onclick="filterTable('energy', this)">Energy</button>
-<button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="filterTable('megacap', this)">Mega-Cap</button>
-</div>
+<div class="filter-bar af-bar" id="af-bar"></div>
 <div class="search-count-bar">
-<input id="stock-search" oninput="applyFilters()" placeholder="Search ticker or company..." type="text"/>
+<input id="stock-search" placeholder="Search ticker or company..." type="text"/>
 <span class="row-count">Showing <span id="visible-count">—</span> of <span id="total-count">—</span> stocks</span>
 </div>
 </header>
@@ -419,8 +415,8 @@
 <tr>
 <th class="sortable" onclick="sortTable('ticker', this)">Ticker</th>
 <th class="sortable" onclick="sortTable('company', this)">Company</th>
-<th class="sortable" onclick="sortTable('cat', this)">Category</th>
 <th class="sortable" onclick="sortTable('sector', this)">Sector</th>
+<th class="sortable" onclick="sortTable('themes', this)">Themes</th>
 <th class="sortable" onclick="sortTable('price', this)">Price ($)</th>
 <th class="sortable" onclick="sortTable('return', this)">1yr Return</th>
 <th class="sortable" onclick="sortTable('ytd', this)">YTD</th>
@@ -429,193 +425,125 @@
 </tr>
 </thead>
 <tbody id="stock-tbody">
-<tr><td colspan="9" style="text-align:center;padding:40px;color:var(--muted);font-family:'IBM Plex Mono',monospace;">Loading all sectors…</td></tr>
+<tr><td colspan="9" style="text-align:center;padding:40px;color:var(--muted);font-family:'IBM Plex Mono',monospace;">Loading…</td></tr>
 </tbody>
 </table>
 </div>
+<div class="af-more-wrap"><button class="af-more" id="af-more" type="button" hidden>Show 50 more</button></div>
 </div>
+<script src="all-data.js"></script>
 <script>
-// Notes, category colours and labels come from sector-data.js (generated from site/sectors.yaml)
-const NOTES = SECTOR_DATA.notes, CAT_COLORS = SECTOR_DATA.catColors, CAT_LABELS = SECTOR_DATA.catLabels;
+/* All stocks (#88): one data file (all-data.js), filters in all-filters.js, 50 rows at a time.
+   Rows are drawn from an array, not sorted in the DOM, so ~720 stocks stay quick on a phone. */
+const NOTES = SECTOR_DATA.notes;
+const STOCKS = (window.ALL_DATA && window.ALL_DATA.stocks) || [];
+const PAGE = 50;
+let shown = PAGE;
+let sortState = { col: 'return', dir: -1 };
 
-const SECTOR_LABELS = {
-  'ai':      'AI Infra',
-  'biotech': 'Biotech',
-  'defence': 'Defence',
-  'tech':    'Tech',
-  'crypto':  'Crypto',
-  'energy':  'Energy',
-  'megacap': 'Mega-Cap',
+// One colour per standard sector (same order as the sector pages' palette)
+const SECTOR_COLOR = {
+  'Technology': 'var(--accent)', 'Health Care': 'var(--purple)', 'Financials': 'var(--teal)',
+  'Consumer Discretionary': 'var(--rose)', 'Communication Services': 'var(--blue)', 'Industrials': 'var(--green)',
+  'Consumer Staples': 'var(--amber)', 'Energy': 'var(--gold)', 'Utilities': 'var(--lime)',
+  'Real Estate': 'var(--indigo)', 'Materials': 'var(--red)',
 };
-
+const num = v => { const n = parseFloat(String(v).replace(/[^0-9.-]/g, '')); return isNaN(n) ? -Infinity : n; };
+const esc = v => String(v == null ? '' : v).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 function returnClass(retStr) {
-  const n = parseFloat(String(retStr).replace(/[^0-9.-]/g, ''));
-  if (isNaN(n)) return 'return-modest';
+  const n = num(retStr);
   if (n >= 200) return 'return-mega';
   if (n >= 50)  return 'return-positive';
   return 'return-modest';
 }
-
-function pillClass(v) {
-  const n = parseFloat(v); return n > 0 ? 'pos' : n < 0 ? 'neg' : 'flat';
+function pillClass(v) { const n = parseFloat(v); return n > 0 ? 'pos' : n < 0 ? 'neg' : 'flat'; }
+function ytdClass(v)  { const n = parseFloat(v); return n > 0 ? 'ytd-pos' : n < 0 ? 'ytd-neg' : 'ytd-flat'; }
+function noteFor(s) {
+  for (const t of s.themes || []) { const n = (NOTES[t] || {})[s.ticker]; if (n) return n; }
+  return '';
 }
+function sectorLabel(s) { return s.sector || (s.markets || []).includes('crypto') && 'Crypto' || '—'; }
 
-function ytdClass(v) {
-  const n = parseFloat(v); return n > 0 ? 'ytd-pos' : n < 0 ? 'ytd-neg' : 'ytd-flat';
-}
-
-function buildTable(stocks) {
-  const tbody = document.getElementById('stock-tbody');
-  tbody.innerHTML = '';
-  stocks.forEach(s => {
-    const color    = CAT_COLORS[s.category] || (s.sectorColor || 'var(--text)');
-    const catLabel = CAT_LABELS[s.category] || s.category;
-    const retCls   = returnClass(s.return_1yr);
-    const exDisp   = s.exchange === 'TSE' ? 'TSE (Tokyo)' : (s.exchange || '');
-    const tr = document.createElement('tr');
-    tr.dataset.ticker    = s.ticker;
-    tr.dataset.cat       = s.category;
-    tr.dataset.sector    = s.sector || '';
-    tr.dataset.exchange  = s.exchange || '';
-    tr.dataset.priceGbp  = s.price_gbp;
-    tr.dataset.priceUsd  = s.price_usd;
-    tr.dataset.return    = s.return_1yr;
-    tr.dataset.changeYtd = s.change_ytd;
-    tr.dataset.barPct    = s.bar_pct;
-    tr.innerHTML =
-      '<td><a class="ticker-link" href="' + assetUrl(s.ticker) + '" target="_blank">' +
-        '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
-        '<div class="exchange-badge">' + exDisp + '</div></td>' +
-      '<td>' + (s.company_name || s.ticker) + '</td>' +
-      '<td><span class="cat-badge cat-' + s.category + '">' + catLabel + '</span></td>' +
-      '<td><span class="sector-badge sector-' + (s.sector || '') + '">' + (SECTOR_LABELS[s.sector] || s.sector || '—') + '</span></td>' +
-      '<td><span class="price">$' + fmtUsd(s.price_usd) + '</span>' +
-        '<div class="change-pills">' +
-          '<span class="cpill ' + pillClass(s.change_1d) + '">' + s.change_1d + ' 1D</span>' +
-          '<span class="cpill ' + pillClass(s.change_1w) + '">' + s.change_1w + ' 1W</span>' +
-          '<span class="cpill ' + pillClass(s.change_1m) + '">' + s.change_1m + ' 1M</span>' +
-        '</div></td>' +
-      '<td><span class="' + retCls + '">' + s.return_1yr + '</span></td>' +
-      '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + s.change_ytd + '</span></td>' +
-      '<td><div class="range-wrap">' +
-        '<span class="range-label">$' + fmtUsd(s.low_usd) + '</span>' +
-        '<div class="range-bar-bg">' +
-          '<div class="range-fill" style="width:' + s.bar_pct + '%"></div>' +
-          '<div class="range-dot" style="left:' + s.bar_pct + '%"></div>' +
-        '</div>' +
-        '<span class="range-label" style="text-align:right">$' + fmtUsd(s.high_usd) + '</span>' +
+function rowHTML(s) {
+  const color = SECTOR_COLOR[s.sector] || 'var(--gold)';
+  const exDisp = s.exchange === 'TSE' ? 'TSE (Tokyo)' : (s.exchange || '');
+  const themes = (s.themes || []).map(t => '<span class="af-tag">' + esc(AF_THEME_LABEL[t] || t) + '</span>').join('');
+  const t212 = s.t212 === 'no' ? '<span class="af-t212-no" title="Trading 212 doesn\'t offer this">not on T212</span>' : '';
+  return '<tr>' +
+    '<td><a class="ticker-link" href="' + assetUrl(s.ticker) + '" target="_blank" rel="noopener">' +
+      '<div class="ticker" style="color:' + color + '">' + esc(s.ticker) + '</div></a>' +
+      '<div class="exchange-badge">' + esc(exDisp) + '</div>' + t212 + '</td>' +
+    '<td>' + esc(s.company_name || s.ticker) + '</td>' +
+    '<td><span class="sector-badge" style="color:' + color + ';border-color:' + color + '">' + esc(sectorLabel(s)) + '</span></td>' +
+    '<td>' + (themes || '<span class="af-none">—</span>') + '</td>' +
+    '<td><span class="price">$' + fmtUsd(s.price_usd) + '</span>' +
+      '<div class="change-pills">' +
+        '<span class="cpill ' + pillClass(s.change_1d) + '">' + esc(s.change_1d) + ' 1D</span>' +
+        '<span class="cpill ' + pillClass(s.change_1w) + '">' + esc(s.change_1w) + ' 1W</span>' +
+        '<span class="cpill ' + pillClass(s.change_1m) + '">' + esc(s.change_1m) + ' 1M</span>' +
       '</div></td>' +
-      '<td><span class="notes-text">' + ((NOTES[s.sector] || {})[s.ticker] || '') + '</span></td>';
-    tbody.appendChild(tr);
-  });
+    '<td><span class="' + returnClass(s.return_1yr) + '">' + esc(s.return_1yr) + '</span></td>' +
+    '<td><span class="ytd-return ' + ytdClass(s.change_ytd) + '">' + esc(s.change_ytd) + '</span></td>' +
+    '<td><div class="range-wrap">' +
+      '<span class="range-label">$' + fmtUsd(s.low_usd) + '</span>' +
+      '<div class="range-bar-bg">' +
+        '<div class="range-fill" style="width:' + s.bar_pct + '%"></div>' +
+        '<div class="range-dot" style="left:' + s.bar_pct + '%"></div>' +
+      '</div>' +
+      '<span class="range-label" style="text-align:right">$' + fmtUsd(s.high_usd) + '</span>' +
+    '</div></td>' +
+    '<td><span class="notes-text">' + esc(noteFor(s)) + '</span></td>' +
+  '</tr>';
 }
 
-let sortState = { col: null, dir: 1 };
+const SORT_KEY = {
+  ticker: s => s.ticker, company: s => s.company_name || s.ticker, sector: s => sectorLabel(s),
+  themes: s => (s.themes || []).join(' ') || '~', price: s => num(s.price_usd), return: s => num(s.return_1yr),
+  ytd: s => num(s.change_ytd), range: s => num(s.bar_pct), angle: s => noteFor(s) || '~',
+};
 
 function sortTable(col, th) {
-  const tbody = document.getElementById('stock-tbody');
-  const rows = Array.from(tbody.querySelectorAll('tr'));
-  if (sortState.col === col) { sortState.dir *= -1; } else { sortState.col = col; sortState.dir = 1; }
+  if (sortState.col === col) sortState.dir *= -1;
+  else { sortState.col = col; sortState.dir = (col === 'ticker' || col === 'company' || col === 'sector' || col === 'themes' || col === 'angle') ? 1 : -1; }
   document.querySelectorAll('thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
   if (th) th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-  rows.sort((a, b) => {
-    let av, bv;
-    if (col === 'ticker')  { av = a.dataset.ticker;  bv = b.dataset.ticker; }
-    if (col === 'company') { av = a.querySelector('td:nth-child(2)').textContent.trim(); bv = b.querySelector('td:nth-child(2)').textContent.trim(); }
-    if (col === 'cat')     { av = a.dataset.cat;     bv = b.dataset.cat; }
-    if (col === 'sector')  { av = a.dataset.sector;  bv = b.dataset.sector; }
-    if (col === 'price')   { av = parseFloat(a.dataset.priceUsd); bv = parseFloat(b.dataset.priceUsd); return (av - bv) * sortState.dir; }
-    if (col === 'return')  { av = parseFloat(a.dataset.return.replace(/[^0-9.-]/g,'')); bv = parseFloat(b.dataset.return.replace(/[^0-9.-]/g,'')); return (av - bv) * sortState.dir; }
-    if (col === 'ytd')     { av = parseFloat(a.dataset.changeYtd); bv = parseFloat(b.dataset.changeYtd); return (av - bv) * sortState.dir; }
-    if (col === 'range')   { av = parseFloat(a.dataset.barPct); bv = parseFloat(b.dataset.barPct); return (av - bv) * sortState.dir; }
-    if (col === 'angle')   { av = a.querySelector('td:nth-child(9)').textContent.trim(); bv = b.querySelector('td:nth-child(9)').textContent.trim(); }
-    if (typeof av === 'string') return av.localeCompare(bv) * sortState.dir;
-    return 0;
+  shown = PAGE;
+  render();
+}
+
+function render() {
+  const key = SORT_KEY[sortState.col] || SORT_KEY.return;
+  const list = STOCKS.filter(afMatch).sort((a, b) => {
+    const av = key(a), bv = key(b);
+    return (typeof av === 'string' ? av.localeCompare(bv) : av - bv) * sortState.dir;
   });
-  rows.forEach(r => tbody.appendChild(r));
-}
-
-let currentSector = 'all';
-
-function applyFilters() {
-  const query = document.getElementById('stock-search').value.toLowerCase().trim();
-  const rows  = document.querySelectorAll('#stock-table tbody tr');
-  let visible = 0;
-  rows.forEach(row => {
-    if (!row.dataset.ticker) return;
-    const matchSector = currentSector === 'all' || row.dataset.sector === currentSector;
-    const matchSearch = !query
-      || row.dataset.ticker.toLowerCase().includes(query)
-      || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
-    if (matchSector && matchSearch) { row.classList.remove('hidden'); visible++; }
-    else { row.classList.add('hidden'); }
-  });
-  document.getElementById('visible-count').textContent = visible;
-}
-
-function filterTable(sector, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentSector = sector;
-  applyFilters();
-}
-
-/* ── Multi-sector data loading ── */
-const SECTORS = [
-  { key: 'ai',      label: 'AI Infrastructure', color: 'var(--accent)',  path: '../AI/prices-data.js'      },
-  { key: 'biotech', label: 'Biotech',            color: 'var(--green)',   path: '../Biotech/prices-data.js'  },
-  { key: 'defence', label: 'Defence',            color: 'var(--rose)',    path: '../Defence/prices-data.js'  },
-  { key: 'tech',    label: 'Technology',         color: 'var(--indigo)',  path: '../Tech/prices-data.js'     },
-  { key: 'crypto',  label: 'Crypto',             color: 'var(--gold)',    path: '../Crypto/prices-data.js'   },
-  { key: 'energy',  label: 'Energy',             color: 'var(--amber)',   path: '../Energy/prices-data.js'   },
-  { key: 'megacap', label: 'Mega-Cap',           color: '#f472b6',        path: '../MegaCap/prices-data.js'  },
-];
-
-async function loadAllSectors() {
-  const results = await Promise.all(SECTORS.map(async sd => {
-    try {
-      const text = await fetch(sd.path).then(r => r.text());
-      const match = text.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (!match) return { ...sd, stocks: [], updated: null, fx: null };
-      const data = JSON.parse(match[1]);
-      return {
-        ...sd,
-        stocks: (data.stocks || []).map(s => ({
-          ...s,
-          sector: sd.key,
-          sectorLabel: sd.label,
-          sectorColor: sd.color,
-        })),
-        updated: data.updated,
-        fx: data.fx_gbp_usd,
-      };
-    } catch(e) {
-      return { ...sd, stocks: [], updated: null, fx: null };
-    }
-  }));
-  const seen = new Set();
-  const allStocks = results.flatMap(r => r.stocks).filter(s => { if (seen.has(s.ticker)) return false; seen.add(s.ticker); return true; });
-  const updated = results.map(r => r.updated).filter(Boolean).sort().pop() || '—';
-  const fx = results.find(r => r.fx)?.fx || 1.32;
-  return { stocks: allStocks, updated, fx_gbp_usd: fx };
+  const tbody = document.getElementById('stock-tbody');
+  tbody.innerHTML = list.length
+    ? list.slice(0, shown).map(rowHTML).join('')
+    : '<tr><td colspan="9" class="af-empty">No stocks match these filters.</td></tr>';
+  document.getElementById('visible-count').textContent = list.length;
+  const more = document.getElementById('af-more');
+  const left = list.length - shown;
+  more.hidden = left <= 0;
+  more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' not shown)';
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  loadAllSectors().then(data => {
-    const tsEl = document.getElementById('last-updated-label');
-    if (tsEl && data.updated) tsEl.innerHTML = ' &nbsp;·&nbsp; Last updated ' + fmtDate(data.updated);
-    document.getElementById('total-count').textContent = data.stocks.length;
-    const sc = document.getElementById('all-stock-count'); if (sc) sc.textContent = new Set(data.stocks.map(s => s.ticker)).size;
-    const headerSc = document.getElementById('sector-count'); if (headerSc) headerSc.textContent = data.stocks.length;
-    const headerTs = document.getElementById('data-bar-ts'); if (headerTs && data.updated) headerTs.textContent = fmtDate(data.updated);
-    buildTable(data.stocks);
-    const returnTh = document.querySelector('th[onclick*="\'return\'"]');
-    sortState.col = 'return';
-    sortTable('return', returnTh);
-    applyFilters();
-    buildTape(data.stocks);
-  });
+  const data = window.ALL_DATA || {};
+  const updated = data.updated;
+  document.getElementById('total-count').textContent = STOCKS.length;
+  const headerSc = document.getElementById('sector-count'); if (headerSc) headerSc.textContent = STOCKS.length;
+  const headerTs = document.getElementById('data-bar-ts'); if (headerTs && updated) headerTs.textContent = fmtDate(updated);
+  afBuildBar(document.getElementById('af-bar'), () => { shown = PAGE; render(); });
+  afHookSearch(document.getElementById('stock-search'), () => { shown = PAGE; render(); });
+  document.getElementById('af-more').onclick = () => { shown += PAGE; render(); };
+  const th = document.querySelector('th[onclick*="\'return\'"]');
+  if (th) th.classList.add('sort-desc');
+  render();
+  setTimeout(() => document.getElementById('stock-tbody').classList.add('af-ready'), 1500);
+  // ticker tape: the 60 largest companies (the full list would be ~1,400 tape items)
+  buildTape([...STOCKS].sort((a, b) => (b.market_cap_usd_b || 0) - (a.market_cap_usd_b || 0)).slice(0, 60));
 });
   function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
   function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }

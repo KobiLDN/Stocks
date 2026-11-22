@@ -26,6 +26,13 @@ const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'applic
   '.csv': 'text/csv', '.svg': 'image/svg+xml', '.png': 'image/png', '.ico': 'image/x-icon' };
 
 // Things a page must have drawn by the time it has loaded (page-specific, kept deliberately small).
+// Speed (#88): at phone size every page must be usable within SPEED_LIMIT_MS: loaded, and its
+// must-render content drawn. The CPU is slowed CPU_SLOWDOWN times to stand in for a mid-range phone
+// (the local server makes the network instant, so this measures the page's own work).
+const SPEED_LIMIT_MS = 2000;
+const CPU_SLOWDOWN = Number(process.env.PAGE_CHECK_CPU || 4);
+const timings = [];
+
 const MUST_RENDER = [
   [/^All\/signals\.html$/, '#signals-root', 'the signal picks'],
   [/\/signals\.html$/, '#signals-feed', 'the signal picks'],
@@ -34,6 +41,8 @@ const MUST_RENDER = [
   // #88 market and sector pages: their tables are built from the group's own prices-data.js
   [/^(markets|sectors)\/[^/]+\/index\.html$/, '#stock-table tbody tr', 'the stock table'],
   [/^(markets|sectors)\/[^/]+\/metrics\.html$/, '#metrics-body tr', 'the metrics table'],
+  [/^All\/index\.html$/, '#stock-tbody tr', 'the stock table'],
+  [/^All\/metrics\.html$/, '#metrics-body tr', 'the metrics table'],
 ];
 
 function pages(dir = ROOT, out = []) {
@@ -74,7 +83,23 @@ for (const [label, width] of [['desktop', 1440], ['phone', 390]]) {
       if (!ext) fail(tag, `script error: ${e.message}`);
     });
     page.on('response', r => { if (r.url().startsWith(base) && r.status() >= 400 && !FUNCTION_URLS.has(new URL(r.url()).pathname) && !OPTIONAL.some(re => re.test(new URL(r.url()).pathname))) fail(tag, `${r.status()} for ${r.url().slice(base.length - 1)}`); });
+    const phone = width <= 600;
+    if (phone) {
+      const cdp = await ctx.newCDPSession(page);
+      await cdp.send('Emulation.setCPUThrottlingRate', { rate: CPU_SLOWDOWN });
+    }
+    const t0 = Date.now();
     await page.goto(base + p, { waitUntil: 'load' });
+    if (phone) {
+      const rule = MUST_RENDER.find(([re]) => re.test(p));
+      if (rule) {
+        await page.waitForFunction(s => { const e = document.querySelector(s); return e && e.innerText.trim().length > 0; },
+                                   rule[1], { timeout: SPEED_LIMIT_MS * 3 }).catch(() => {});
+      }
+      const ms = Date.now() - t0;
+      timings.push([ms, p]);
+      if (ms > SPEED_LIMIT_MS) fail(tag, `took ${ms} ms to be usable at phone size (limit ${SPEED_LIMIT_MS} ms, CPU ${CPU_SLOWDOWN}x slower)`);
+    }
     await page.waitForTimeout(500);
     const r = await page.evaluate(() => {
       const toggle = [...document.querySelectorAll('.theme-toggle')].find(e => e.offsetParent !== null);
@@ -99,6 +124,8 @@ for (const [label, width] of [['desktop', 1440], ['phone', 390]]) {
 
 await browser.close();
 server.close();
+timings.sort((a, b) => b[0] - a[0]);
+console.log(`Slowest at phone size (CPU ${CPU_SLOWDOWN}x slower): ` + timings.slice(0, 6).map(([ms, p]) => `${p} ${ms} ms`).join(', '));
 console.log(`Page check: ${list.length} pages × 2 sizes, ${failures.length} problem(s)`);
 for (const f of failures) console.log('  FAIL ' + f);
 process.exit(failures.length ? 1 : 0);
