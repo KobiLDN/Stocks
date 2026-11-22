@@ -31,7 +31,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: push-to-main
+  # main shares the bots' push lock; a branch run (it commits to its own branch) must not hold it up
+  group: ${{ github.ref == 'refs/heads/main' && 'push-to-main' || format('prices-{0}', github.ref) }}
   cancel-in-progress: false
 
 jobs:
@@ -103,7 +104,7 @@ jobs:
         if: steps.fresh.outputs.skip != 'true' && (github.event_name == 'schedule' || inputs.sector == 'all' || inputs.sector == 'groups')
         continue-on-error: true
         run: |
-          pip install -q yfinance pandas pyyaml requests
+          pip install -q yfinance pandas pyyaml requests vaderSentiment
           python update_group_prices.py
 
       - name: Commit and push if changed
@@ -113,6 +114,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           SECTOR="${{ inputs.sector }}"
           LABEL="${SECTOR:-all sectors}"
+          # main pushes to main; a branch run commits its output to its own branch (WORKFLOW.md
+          # "Bot-code changes"). It used to push every run to main, branch code included.
+          TARGET="${{ github.ref_name }}"
           if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json Energy/prices.json Energy/prices-data.js MegaCap/prices.json MegaCap/prices-data.js market.json market-data.js && [ -z "$(git status --porcelain -- groups/ markets/ sectors/ All/all-data.js)" ]; then
             echo "No price changes."
           else
@@ -127,9 +131,9 @@ jobs:
             git add groups/ markets/*/prices-data.js sectors/*/prices-data.js All/all-data.js
             git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
-              git fetch origin main
-              git merge -X ours origin/main --no-edit
-              git push origin HEAD:main && break
+              git fetch origin "$TARGET"
+              git merge -X ours "origin/$TARGET" --no-edit
+              git push origin "HEAD:$TARGET" && break
               echo "Push attempt $i failed, retrying..."
               sleep 10
             done
