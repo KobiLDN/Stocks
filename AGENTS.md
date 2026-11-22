@@ -178,6 +178,8 @@ Rebuild step 5 (#73) moves repeated pages onto templates, one page type at a tim
 | `exports/YYYY-MM-DD-portfolio.json` | **LOCAL ONLY** — market data + T212 positions merged; gitignored, never committed |
 | `.github/workflows/generate-export.yml` | Runs `generate_export.py` Mon–Fri 21:30 London, started by cron-job.org (`stocks-export`) — one hour after the evening price run |
 
+**Export contract test (#88):** `monitoring/export-contract.json` lists every export field the portfolio reads (from its `FROM_PORTFOLIO.md`), with allowed types. `monitoring/test_export_contract.py` rebuilds the export from the committed data in a temporary folder and fails CI if one of those fields disappears or changes type. If `FROM_PORTFOLIO.md` names a new field, add it to the contract. Change or remove a field only with a `FROM_STOCKS.md` note first, and update the contract in the same PR.
+
 **Adding new fields to the export:** edit the `PRICE_FIELDS` list and/or `csv_fields` list in `generate_export.py`. The manifest entry only needs `date`, `generated`, `total`, `json`, `csv`.
 
 **Top-level export keys:** in addition to `stocks[]`, the export JSON has a `momentum_picks[]` array built by `compute_export_momentum()` in `generate_export.py`. This mirrors the per-sector `momentum_screener.py` logic but runs cross-sector over all 7 sectors at export time.

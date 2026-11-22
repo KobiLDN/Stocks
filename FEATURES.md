@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **Export contract test (#88 phase 1, PR 1)** — CI fails if an export field the portfolio reads disappears or changes type (`monitoring/export-contract.json`, `monitoring/test_export_contract.py`); the guard for the phase 1 export changes
+
 - **Glossary (#71)** — plain-English meanings of every term, column and signal on the site, searchable, linked from "Conf"/"Confidence"; left-menu item under Technology
 
 - **Track Record page (#54 step 8)** — how every AI and momentum buy signal did against the S&P 500 at 1W / 1M / 3M: verdict, plain-English findings, breakdowns (strength, source, sector, confidence, month) and a searchable table of every signal; rebuilt nightly from the history database
