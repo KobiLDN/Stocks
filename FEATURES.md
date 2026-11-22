@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **All Stocks for ~720 stocks (#88 phase 1, PR 7a)** — one data file, market/sector/theme/T212 filters and search kept in the URL, 50 rows at a time on the All Dashboard and Metrics; 2-second phone speed limit in the page check
+
 - **Market and sector pages (#88 phase 1, PR 6)** — S&P 500, Nasdaq-100, FTSE 100 and the 11 sectors, each with Dashboard, Metrics, News, Heatmap, Charts and What-If; Markets / Sectors / Themes menu; "not on T212" mark and filter; Health Care industry filter
 
 - **Point-in-time lists for the track record (#88 phase 1, PR 5)** — D1 `run_universe` records the stocks each signal run could choose from (live + rebuilt from git); the random and momentum baselines use it instead of today's lists

@@ -4,6 +4,7 @@ grouping and the once-a-day fundamentals schedule. No network.
 Run: python -m unittest test_group_prices.py   (also run in CI)
 """
 import unittest
+import unittest.mock
 from datetime import date, datetime, timedelta, timezone
 
 import groups_config as gc
@@ -136,6 +137,37 @@ class Groups(unittest.TestCase):
         self.assertNotIn("X", {t for v in g.values() for t in v["tickers"]})
         self.assertEqual(len(g), 14)
         self.assertEqual(list(g)[:3], ["sp500", "nasdaq100", "ftse100"])
+
+
+class AllFile(unittest.TestCase):
+    """All/all-data.js (#88 PR 7): every stock once, theme keys the All pages use, small rows."""
+    def test_all_row(self):
+        r = {"ticker": "MU", "sector": "Technology", "themes": ["AI", "Tech", "MegaCap"], "news": [1],
+             "news_sentiment": 0.1, "price_gbp": "1", "low_gbp": "1", "high_gbp": "1", "price_usd": 1.0}
+        out = gp.all_row(r)
+        self.assertEqual(out["themes"], ["ai", "tech", "megacap"])
+        self.assertEqual(out["category"], "technology")
+        for k in gp.ALL_DROP:
+            self.assertNotIn(k, out)
+        self.assertEqual(out["price_usd"], 1.0)
+
+    def test_crypto_rows_from_the_crypto_page(self):
+        rows = gp.crypto_rows()
+        self.assertGreater(len(rows), 20)
+        self.assertTrue(all(r["markets"] == ["crypto"] and r["themes"] == ["crypto"] and r["t212"] == "no" for r in rows))
+
+    def test_written_file(self):
+        import json, re, tempfile, os
+        with tempfile.TemporaryDirectory() as d, unittest.mock.patch.object(gp, "ROOT", d):
+            os.makedirs(os.path.join(d, "Crypto"))
+            with open(os.path.join(d, "Crypto", "prices-data.js"), "w") as f:
+                f.write('window.PRICES_DATA = {"stocks":[{"ticker":"BTC","price_usd":90000}]};\n')
+            gp.write_all({}, {"AAPL": {"ticker": "AAPL", "sector": "Technology", "themes": ["Tech"]}},
+                         "2026-11-22 18:00", {"USD": 1.3})
+            raw = open(os.path.join(d, gp.ALL_PATH)).read()
+        data = json.loads(re.sub(r"^window\.ALL_DATA = ", "", raw).rstrip().rstrip(";"))
+        self.assertEqual([r["ticker"] for r in data["stocks"]], ["AAPL", "BTC"])
+        self.assertEqual(data["count"], 2)
 
 
 class Categories(unittest.TestCase):

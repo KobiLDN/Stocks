@@ -134,6 +134,8 @@ Stocks/
 
 **Pages:** `site/build.py` renders 6 page types per group (no Signals page until the groups get signal runs, #88 PR 8) from the same templates as the themes. The pages are two folders deep, so templates take `root` (`../` for themes, `../../` for groups); the group settings are generated in `group_configs()`, with shared wording from the Tech pages. Group dashboards add a "not on T212" mark and a "Hide stocks not on T212" box (`{% if s.t212 is defined %}` blocks, so the theme pages are unchanged).
 
+**All pages (#88 PR 7):** `update_group_prices.py` also writes `All/all-data.js` (`window.ALL_DATA`): every stock once, ~720 rows including the coins from `Crypto/prices-data.js`, with `markets`, `sector`, `themes` (keys `ai`, `megacap`, ...) and `t212`. The All Dashboard and All Metrics pages load only that file and use `all-filters.js`: market / sector / theme selects, "Hide stocks not on T212", debounced search, all kept in the URL (`All/?theme=ai`, `?market=ftse100&t212=1`), and they draw 50 rows at a time ("Show 50 more"). Use the same script for the other All pages.
+
 **Menu:** `nav.js` lists Markets (S&P 500, Nasdaq-100, FTSE 100, Crypto), Sectors (11) and Themes (AI, Biotech, Defence, Energy, Mega-Cap, Tech), with section headings (`.rail-section` in `shared.css`). Add a group to `_RAIL_SECTIONS` there.
 
 - **Prices:** batched 1-year daily downloads (100 symbols a call). A stock missing from a batch, or a day behind its own exchange, is fetched again on its own; a bar with no close takes the live quote's price.

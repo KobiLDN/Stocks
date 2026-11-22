@@ -11,7 +11,7 @@ const _RAIL_TOP = [
   { key: 'hub',   label: 'Stock Hub',    icon: '⊞',  path: 'index.html' },
   { key: 'rss',   label: 'News Feed',    icon: '📰', path: 'news.html' },
   { key: 'track', label: 'Track Record', icon: '🏁', path: 'track-record.html' },
-  { key: 'all',   label: 'All Sectors',  icon: '🌐', path: 'All/index.html' },
+  { key: 'all',   label: 'All Stocks',   icon: '🌐', path: 'All/index.html' },
 ];
 const _RAIL_SECTIONS = [
   { title: 'Markets', items: [
