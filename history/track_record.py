@@ -25,7 +25,7 @@ import sys
 from zoneinfo import ZoneInfo
 
 from history.bars import coarse_closes
-from history.db import HistoryError, connect_for_bot, iso, load_universe, utc_now
+from history.db import BENCHMARKS, HistoryError, connect_for_bot, iso, load_universe, utc_now
 
 UTC = dt.timezone.utc
 BUFFER = dt.timedelta(minutes=5)
@@ -114,8 +114,10 @@ class Series:
         return (self.bars[j][2] * shares + cash) / self.bars[i][1] - 1
 
 
-def measure(generated, series, spy, now):
-    """-> (entry, {horizon: (stock return, spy return) | 'pending' | None}, note)"""
+def measure(generated, series, spy, now, windows=None):
+    """-> (entry, {horizon: (stock return, spy return) | 'pending' | None}, note)
+    windows: optional dict, filled with {horizon: (i, j, target)} (entry bar, exit bar, target date) for
+    each finished window, so callers can price the same window in pounds or against another benchmark."""
     if series is None or not series.bars:
         return None, {}, "no price data"
     i = series.first_open_after(generated + BUFFER)
@@ -140,7 +142,44 @@ def measure(generated, series, spy, now):
             out[name] = None
             continue
         out[name] = (series.total_return(i, j), spy.total_return(si, sj))
+        if windows is not None:
+            windows[name] = (i, j, target)
     return entry, out, ""
+
+
+# ── Pounds and local benchmarks (#88 PR 10) ───────────────────────────────────
+LOCAL_BENCH = {"LSE": ("ISF", "LSE")}          # London listings vs the FTSE 100 (iShares ISF.L)
+FX = {"USD": ("GBPUSD", 1.0), "SAR": ("GBPUSD", 3.75), "EUR": ("GBPEUR", 1.0), "JPY": ("GBPJPY", 1.0)}  # SAR is pegged
+POUNDS = ("GBP", "GBp")
+REVIEW_MIN_DATES = 10                          # run dates with a finished 1-month result before a run is judged
+
+
+def window_return(bench, start_open, target):
+    """A benchmark's return from its first open at or after `start_open` to its close on or before `target`."""
+    if bench is None:
+        return None
+    i = bench.first_open_after(start_open, strict=False)
+    j = bench.last_close_on_or_before(target)
+    if i is None or j is None or j < i:
+        return None
+    return bench.total_return(i, j)
+
+
+def to_gbp(ret, currency, d0, d1, fx):
+    """A return in `currency` -> the same holding's return in pounds, using the closes on d0 (entry) and d1
+    (exit) of that currency's rate per £1. None if the currency or a rate is missing."""
+    if currency in POUNDS:
+        return ret
+    pair = FX.get(currency or "USD")
+    ser = fx.get(pair[0]) if pair else None
+    if ser is None:
+        return None
+    a, b = ser.last_close_on_or_before(d0), ser.last_close_on_or_before(d1)
+    if a is None or b is None or not ser.bars[b][2]:
+        return None
+    if dt.date.fromisoformat(d0) - dt.date.fromisoformat(ser.dates[a]) > MAX_EXIT_GAP:
+        return None
+    return (1 + ret) * ser.bars[a][2] / ser.bars[b][2] - 1      # units per £ up = that currency weaker
 
 
 def summarise(pairs):
@@ -232,6 +271,10 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
     spy_asset = assets.get(BENCHMARK) or {"yahoo": BENCHMARK, "exchange": "Index"}
     spy = series_for(spy_asset["yahoo"], spy_asset["exchange"])
     currency = {s: (rows[-1]["currency"] if rows else None) for s, rows in bars.items()}
+    bench_yahoo = {aid: yahoo for aid, _name, yahoo in BENCHMARKS}
+    fx = {pair: series_for(bench_yahoo[pair], "Index") for pair in {p for p, _ in FX.values()}}
+    local = {ex: series_for(bench_yahoo[aid], bex) for ex, (aid, bex) in LOCAL_BENCH.items()}
+    ai_1m, random_1m = {}, {}      # run id -> 1-month excesses vs SPY (AI buy picks; every stock in its list)
 
     rows, groups = [], {}
     def add(group, key, horizon, pair):
@@ -254,7 +297,24 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
         elif symbol in coarse or (symbol in bars and coarse_closes([b["close"] for b in bars[symbol]], 10)):
             entry, res, note = None, {}, "unreliable price (Yahoo rounds it too coarsely)"
         else:
-            entry, res, note = measure(generated, series_for(symbol, a["exchange"]) if a else None, spy, now)
+            ser = series_for(symbol, a["exchange"]) if a else None
+            windows = {}
+            entry, res, note = measure(generated, ser, spy, now, windows)
+            if s["signal"] in BUY_SIDE:
+                for name, (i, j, target) in windows.items():
+                    r, sp = res[name]
+                    d0, d1 = ser.dates[i], ser.dates[j]
+                    rg, sg = to_gbp(r, currency.get(symbol), d0, d1, fx), to_gbp(sp, "USD", d0, d1, fx)
+                    if rg is not None and sg is not None:
+                        add("in_gbp", "buy signals", name, (rg, sg))
+                    bench = local.get(a["exchange"])
+                    if bench is not None:
+                        b = window_return(bench, ser.opens[i], target)
+                        if b is not None:
+                            add("vs_local", "vs FTSE 100", name, (r, b))
+                            add("vs_local", "vs S&P 500", name, (r, sp))
+                if s["kind"] == "ai" and isinstance(res.get("1m"), tuple) and run.get("provenance") == "live":
+                    ai_1m.setdefault(s["signal_run_id"], []).append(res["1m"][0] - res["1m"][1])
         cells = []
         for name, _ in HORIZONS:
             v = res.get(name)
@@ -315,6 +375,8 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                 continue
             _entry, res, _note = measure(generated, ser, spy, now)
             scored.append((momentum_score(ser, generated), res))
+            if isinstance(res.get("1m"), tuple):
+                random_1m.setdefault(rid, []).append(res["1m"][0] - res["1m"][1])
             for name, _ in HORIZONS:
                 if isinstance(res.get(name), tuple):
                     add("baselines", "random", name, res[name])
@@ -325,6 +387,7 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                     add("baselines", "momentum_rule", name, res[name])
 
     summary = {g: {k: {h: summarise(v) for h, v in hs.items()} for k, hs in keys.items()} for g, keys in groups.items()}
+    review = run_review(runs, ai_1m, random_1m, now)
     names = {aid: a["name"] for aid, a in assets.items()}
     return {
         "generated_utc": iso(now),
@@ -338,6 +401,12 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
             "return": "price change plus splits and cash dividends (not reinvested), in the stock's own currency",
             "benchmark": "SPY over the same window",
             "counting": "every signal counts, including a stock picked again in later runs",
+            "in_gbp": "the same windows with the stock and SPY both converted to pounds at that day's closing exchange rate "
+                      "(entry and exit dates); London stocks are already in pounds",
+            "vs_local": "London-listed picks are also compared with the FTSE 100 (iShares ISF.L) over the same window",
+            "run_review": f"each signal run's AI picks vs picking at random from the same list, per run date, 1-month excess vs SPY; "
+                          f"a run is judged once it has {REVIEW_MIN_DATES} run dates with a finished result and flagged if its "
+                          "typical date is behind random. Flags are for the owner's quarterly review; no run is paused automatically.",
             "baselines": "for every AI run, on the same date: 'random' scores every stock in that sector (picking at random from the same list); "
                          "'momentum_rule' scores the sector's 10 stocks with the best 6-month return skipping the latest month. "
                          "Same entry, exit and benchmark rules. Each run uses the list of stocks it could choose from "
@@ -345,11 +414,52 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
         },
         "counts": {**counts, "baseline_lists": lists},
         "summary": summary,
+        "run_review": review,
         "columns": ["time_utc", "sector", "kind", "ticker", "signal", "confidence", "rank", "provenance",
                     "entry_date", "entry_price", "currency", "r1w", "x1w", "r1m", "x1m", "r3m", "x3m", "note"],
         "rows": rows,
         "names": {t: names[t] for t in sorted({r[3] for r in rows}) if t in names},
     }
+
+
+def next_quarter(now):
+    q = (now.month - 1) // 3 + 1
+    y, m = (now.year + 1, 1) if q == 4 else (now.year, 3 * q + 1)
+    return dt.date(y, m, 1).isoformat()
+
+
+def run_review(runs, ai_1m, random_1m, now):
+    """Per signal run (sector / group / theme): on each run date, the AI picks' mean 1-month excess minus every
+    stock in its list's mean. Judged once REVIEW_MIN_DATES dates are finished; behind random = flagged."""
+    per = {}
+    for rid, ai in ai_1m.items():
+        rnd = random_1m.get(rid)
+        if not ai or not rnd:
+            continue
+        run = runs[rid]
+        day = run["generated_utc"][:10]
+        per.setdefault(run["sector"], {}).setdefault(day, []).append(
+            (statistics.fmean(ai), statistics.fmean(rnd)))
+    latest = max((r["generated_utc"] for r in runs.values() if r.get("provenance") == "live" and not is_shadow(r)), default="")
+    last_run = {}
+    for r in runs.values():
+        if r.get("provenance") == "live" and not is_shadow(r):
+            last_run[r["sector"]] = max(last_run.get(r["sector"], ""), r["generated_utc"])
+    pct = lambda x: round(x * 100, 2)
+    out = []
+    for sector, days in per.items():
+        rows = [(statistics.fmean(a for a, _ in v), statistics.fmean(b for _, b in v)) for v in days.values()]
+        diffs = [a - b for a, b in rows]
+        n = len(rows)
+        med = statistics.median(diffs)
+        status = "too few dates" if n < REVIEW_MIN_DATES else ("behind random" if med < 0 else "ahead of random")
+        active = bool(latest) and (parse_utc(latest) - parse_utc(last_run.get(sector, latest))).days <= 14
+        out.append({"run": sector, "dates": n, "ai_median": pct(statistics.median(a for a, _ in rows)),
+                    "random_median": pct(statistics.median(b for _, b in rows)), "diff_median": pct(med),
+                    "dates_behind": sum(d < 0 for d in diffs), "status": status, "active": active,
+                    "last_run": last_run.get(sector, "")[:10]})
+    out.sort(key=lambda x: (not x["active"], x["status"] != "behind random", -x["dates"], x["run"]))
+    return {"horizon": "1m", "min_dates": REVIEW_MIN_DATES, "next_review": next_quarter(now), "runs": out}
 
 
 def main(argv=None):

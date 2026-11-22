@@ -128,6 +128,9 @@
   </div>
   <div class="bd-grid" id="bd-grid"></div>
 
+  <div class="section-hdr"><span class="section-hdr-label">Run review</span><span class="section-hdr-line"></span><span class="section-hdr-count" id="review-count"></span></div>
+  <div class="bd-card" id="run-review"></div>
+
   <div class="section-hdr"><span class="section-hdr-label">Every signal</span><span class="section-hdr-line"></span><span class="section-hdr-count" id="sig-count"></span></div>
   <div class="sig-controls">
     <div class="filter-group" id="f-sector"></div>
@@ -153,7 +156,10 @@
 
 <script>
 const HORIZONS = [['1w', '1 week'], ['1m', '1 month'], ['3m', '3 months']];
-const SECTOR_LABEL = { AI: 'AI', Biotech: 'Biotech', Crypto: 'Crypto', Defence: 'Defence', Energy: 'Energy', MegaCap: 'Mega-Cap', Tech: 'Technology' };
+const SECTOR_LABEL = { AI: 'AI', Biotech: 'Biotech', Crypto: 'Crypto', Defence: 'Defence', Energy: 'Energy', MegaCap: 'Mega-Cap', Tech: 'Tech (theme)',
+  ftse100: 'FTSE 100', 'communication-services': 'Communication Services', 'consumer-discretionary': 'Consumer Discretionary',
+  'consumer-staples': 'Consumer Staples', energy: 'Energy (sector)', financials: 'Financials', 'health-care': 'Health Care',
+  industrials: 'Industrials', materials: 'Materials', 'real-estate': 'Real Estate', technology: 'Technology', utilities: 'Utilities' };
 const SIGNAL_LABEL = { strong_buy: 'Strong buy', buy: 'Buy', hold: 'Hold', sell: 'Sell', strong_sell: 'Strong sell' };
 const KIND_LABEL = { ai: 'AI pick', momentum: 'Momentum screen' };
 const BASELINE_LABEL = { ai_picks: 'AI picks', random: 'Random pick from the same sector', momentum_rule: 'Momentum rule (top 10 by 6-month return)' };
@@ -256,13 +262,21 @@ function renderFindings() {
     if (skew) out.push(`${SECTOR_LABEL[skew[0]] || skew[0]}'s average is lifted by a few big winners: its median signal is only ${pct(skew[1].median_excess)} vs the S&amp;P 500.`);
   }
 
+  const gbp = ((S.in_gbp || {})['buy signals'] || {})[h];
+  if (ok(gbp) && all[h]) out.push(`<b>In pounds</b> (what a UK investor saw): buy signals did ${pct(gbp.excess)} against the S&amp;P 500 in pounds over ${hl}, versus ${pct(all[h].excess)} with no currency conversion.`);
+  const ftse = ((S.vs_local || {})['vs FTSE 100'] || {})[h];
+  if (ok(ftse)) out.push(`<b>London-listed picks</b> did ${pct(ftse.excess)} against the FTSE 100 over ${hl}.`);
+  const flagged = ((TR.run_review || {}).runs || []).filter(r => r.active && r.status === 'behind random');
+  if (flagged.length) out.push(`<b>Run review:</b> ${flagged.map(r => esc(SECTOR_LABEL[r.run] || r.run)).join(', ')} ${flagged.length > 1 ? 'have' : 'has'} picked worse than random from ${flagged.length > 1 ? 'their' : 'its'} own list on a typical run date, flagged for review on ${ukDate(TR.run_review.next_review)}.`);
+
   const list = document.getElementById('findings-list');
   list.innerHTML = out.map(t => `<li>${t}</li>`).join('');
   document.getElementById('findings').style.display = out.length ? '' : 'none';
 }
 
 /* ── Breakdown tables ────────────────────────────────────────────────── */
-function bdTable(title, group, order, labeller) {
+function bdTable(title, group, order, labeller, bench) {
+  const vsLabel = bench || 'S&amp;P';
   const G = TR.summary[group] || {};
   let keys = Object.keys(G);
   if (order) keys = order.filter(k => G[k]).concat(keys.filter(k => !order.includes(k)));
@@ -285,7 +299,7 @@ function bdTable(title, group, order, labeller) {
     </tr>`;
   }).join('');
   return `<div class="bd-card"><div class="bd-title">${title}</div>
-    <table class="tr-table"><thead><tr><th></th><th>Signals</th><th>Avg</th><th>vs S&amp;P</th><th>Median vs S&amp;P</th><th>Beat S&amp;P</th><th></th></tr></thead>
+    <table class="tr-table"><thead><tr><th></th><th>Signals</th><th>Avg</th><th>vs ${vsLabel}</th><th>Median vs ${vsLabel}</th><th>Beat ${vsLabel}</th><th></th></tr></thead>
     <tbody>${body}</tbody></table></div>`;
 }
 
@@ -299,7 +313,34 @@ function renderBreakdown() {
     bdTable('AI confidence', 'by_confidence', CONF_ORDER, k => k === 'unknown' ? 'Not given' : k),
     bdTable('Month the signal was made', 'by_month', months, monthLabel),
     bdTable('Signal recipe (AI picks)', 'by_variant', ['live-1', 'live-2'], k => VARIANT_LABEL[k] || k),
+    bdTable('In pounds (stock and S&amp;P 500 both converted to £)', 'in_gbp', ['buy signals'], k => k === 'buy signals' ? 'Buy signals, in £' : k, 'S&amp;P in £'),
+    bdTable('London-listed picks: vs the FTSE 100 and vs the S&amp;P 500', 'vs_local', ['vs FTSE 100', 'vs S&P 500'],
+            k => k === 'vs FTSE 100' ? 'Against the FTSE 100 (ISF)' : 'Same picks against the S&P 500', 'index'),
   ].join('');
+}
+
+/* ── Run review (#88): each run vs picking at random from its own list ─── */
+const REVIEW_LABEL = { 'behind random': 'Behind random: review', 'ahead of random': 'Ahead of random', 'too few dates': 'Too early to judge' };
+function renderReview() {
+  const R = TR.run_review, el = document.getElementById('run-review');
+  if (!R || !R.runs || !R.runs.length) { el.innerHTML = '<div class="empty-state">No finished 1-month results yet.</div>'; return; }
+  const flagged = R.runs.filter(r => r.active && r.status === 'behind random');
+  document.getElementById('review-count').textContent =
+    `${flagged.length} of ${R.runs.filter(r => r.active).length} live runs flagged · next review ${ukDate(R.next_review)}`;
+  const body = R.runs.map(r => `<tr class="${r.status === 'too few dates' ? 'small' : ''}">
+      <td>${esc(SECTOR_LABEL[r.run] || r.run)}${r.active ? '' : ' <span class="dim">(retired)</span>'}</td>
+      <td>${r.dates}</td>
+      <td class="${cls(r.ai_median)}">${pct(r.ai_median)}</td>
+      <td class="${cls(r.random_median)}">${pct(r.random_median)}</td>
+      <td class="${cls(r.diff_median)}"><b>${pct(r.diff_median)}</b></td>
+      <td>${r.dates_behind} of ${r.dates}</td>
+      <td class="${r.status === 'behind random' ? 'neg' : r.status === 'ahead of random' ? 'pos' : 'dim'}">${REVIEW_LABEL[r.status] || r.status}</td>
+    </tr>`).join('');
+  el.innerHTML = `<div class="bd-title">Each signal run vs picking at random from its own list (1 month, vs S&amp;P 500)</div>
+    <table class="tr-table"><thead><tr><th>Run</th><th>Run dates</th><th>AI picks</th><th>Random</th><th>AI minus random</th><th>Dates behind</th><th>Status</th></tr></thead>
+    <tbody>${body}</tbody></table>
+    <div class="dim" style="font-size:12px;padding:10px 14px">Typical (median) run date. A run is judged once it has ${R.min_dates} run dates with a finished 1-month result.
+    Flags are for the owner's quarterly review; no run is paused automatically.</div>`;
 }
 
 /* ── Every signal ────────────────────────────────────────────────────── */
@@ -381,7 +422,10 @@ function renderMethod() {
       <li><b>Every signal counts</b>, including a stock picked again in a later run (each pick is scored from its own date). Only buy signals are in the summaries.</li>
       <li><b>Bought at</b> the ${esc(r.entry)}.</li>
       <li><b>Sold at</b> the ${esc(r.exit)}.</li>
-      <li><b>Return</b> is the ${esc(r.return)}. London stocks are measured in pence, so currency moves are not included.</li>
+      <li><b>Return</b> is the ${esc(r.return)}. London stocks are measured in pence, so currency moves are not included in the main figures.</li>
+      ${r.in_gbp ? `<li><b>In pounds:</b> ${esc(r.in_gbp)}. This is what a UK investor would have seen.</li>` : ''}
+      ${r.vs_local ? `<li><b>Local index:</b> ${esc(r.vs_local)}, since a UK stock can lag the S&amp;P 500 just because the UK market did.</li>` : ''}
+      ${r.run_review ? `<li><b>Run review:</b> ${esc(r.run_review)}</li>` : ''}
       <li><b>Compared with</b> ${esc(r.benchmark)}: bought at the first S&amp;P 500 open at or after the stock's purchase, sold on the same day.</li>
       ${r.baselines ? `<li><b>Free alternatives:</b> for every AI run, on the same date and with the same buy/sell rules, the page also scores <b>every stock in that sector</b> (what picking at random from the same list would give) and the sector's <b>10 stocks with the best 6-month return, skipping the latest month</b> (a textbook momentum rule). If the AI can't beat these, it isn't adding anything. ${(() => { const L = c.baseline_lists; if (!L) return "Sector lists are today's, so stocks added later count from the start."; const n = L.own + L.today; return L.today === 0 ? `Each run is compared with the exact list of stocks it could choose from that day (all ${n} runs).` : `${L.own.toLocaleString('en-GB')} of ${n.toLocaleString('en-GB')} runs are compared with the exact list of stocks they could choose from that day; the other ${L.today.toLocaleString('en-GB')}, from before those lists were recorded, use today's list, so stocks added later count from the start.`; })()}</li>` : ''}
       <li>${provText}</li>
@@ -401,7 +445,7 @@ function init(data) {
     document.querySelectorAll('#horizon-group .sort-btn').forEach(x => x.classList.toggle('active', x === b));
     renderBreakdown();
   });
-  renderVerdict(); renderFindings(); renderBreakdown(); filters(); renderSignals(true); renderMethod();
+  renderVerdict(); renderFindings(); renderBreakdown(); renderReview(); filters(); renderSignals(true); renderMethod();
 }
 
 fetch('track-record.json', { cache: 'no-cache' })
