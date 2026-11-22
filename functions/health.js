@@ -19,7 +19,8 @@ export async function onRequestGet({ request, env }) {
   };
 
   const [prices, signals, market, news, manifest] = await Promise.all([
-    Promise.all(SECTORS.map(s => getJson(`/${s}/prices.json`))),
+    // the theme groups' price files, plus the market + sector groups' (#88: groups/status.json)
+    Promise.all([...SECTORS.map(s => `/${s}/prices.json`), '/groups/status.json'].map(getJson)),
     Promise.all(SECTORS.map(s => getJson(`/${s}/signals-local.json`))),
     getJson('/market.json'),
     getJson('/News/news-feed.json'),
