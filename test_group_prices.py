@@ -120,6 +120,58 @@ class Schedule(unittest.TestCase):
         self.assertEqual(gp.due(cache, ["A", "B", "C", "D"], now), ["D", "C", "B"])
 
 
+class News(unittest.TestCase):
+    NOW = datetime(2026, 11, 23, 12, 0, tzinfo=timezone.utc)
+
+    def test_parse_both_shapes(self):
+        new = [{"content": {"title": "Up big", "provider": {"displayName": "Reuters"},
+                            "canonicalUrl": {"url": "https://x/1"}, "pubDate": "2026-11-23T08:00:00Z"}}]
+        old = [{"title": "Down", "publisher": "FT", "link": "https://x/2", "providerPublishTime": 1700000000}, "junk", {}]
+        items, agg = gp.parse_news(new + old, None)
+        self.assertEqual([i["title"] for i in items], ["Up big", "Down"])
+        self.assertEqual(items[0]["published"], int(datetime(2026, 11, 23, 8, tzinfo=timezone.utc).timestamp()))
+        self.assertEqual(items[1]["publisher"], "FT")
+        self.assertIsNone(agg)                                   # no analyser: headlines kept, no sentiment
+
+    def test_order_picks_then_movers_then_themes(self):
+        assets = {t: {"yahoo": t + ".Y"} for t in "ABCDEFG"}
+        prices = {a["yahoo"]: {"change_1d": i} for i, a in enumerate(assets.values())}
+        g = {"tickers": list("ABCDEFG")}
+        with unittest.mock.patch.object(gp, "MOVERS_PER_GROUP", 1):
+            order = gp.news_wanted({"x": g}, assets, prices, picks={"D", "ZZ"}, themed={"C", "A"})
+        self.assertEqual(order, ["D.Y", "A.Y", "G.Y", "C.Y"])   # pick, faller, riser, theme (A already in)
+
+    def test_refresh_due_only_and_keeps_old_on_failure(self):
+        fresh = (self.NOW - timedelta(hours=1)).isoformat()
+        old = (self.NOW - timedelta(hours=9)).isoformat()
+        cache = {"A": {"fetched": fresh, "news": [{"title": "kept"}]},
+                 "B": {"fetched": old, "news": [{"title": "old B"}]},
+                 "C": {"fetched": old, "news": [{"title": "old C"}]}}
+        calls = []
+        def fetch(y):
+            calls.append(y)
+            if y == "C":
+                raise RuntimeError("429")
+            return [{"title": "new " + y}]
+        with unittest.mock.patch.object(gp.time, "sleep"):
+            gp.refresh_news(cache, ["A", "B", "C", "D"], self.NOW, 1, fetch=fetch, analyzer=object())
+        self.assertEqual(calls, ["B", "C", "D"])                # A was fresh
+        self.assertEqual(cache["B"]["news"][0]["title"], "new B")
+        self.assertEqual(cache["C"]["news"][0]["title"], "old C")   # failed: last good headlines stay
+        self.assertEqual(cache["D"]["fetched"], self.NOW.isoformat(timespec="seconds"))
+
+    def test_old_cache_not_shown(self):
+        cache = {"A": {"fetched": (self.NOW - timedelta(days=8)).isoformat(), "news": [{"title": "x"}], "sentiment": 0.1},
+                 "B": {"fetched": (self.NOW - timedelta(days=1)).isoformat(), "news": [{"title": "y"}], "sentiment": 0.2}}
+        self.assertEqual(gp.news_for(cache, "A", self.NOW), ([], None))
+        self.assertEqual(gp.news_for(cache, "B", self.NOW), ([{"title": "y"}], 0.2))
+        self.assertEqual(gp.news_for(cache, "Z", self.NOW), ([], None))
+
+    def test_live_picks_read_every_run(self):
+        picks = gp.live_picks()
+        self.assertGreater(len(picks), 100)                      # 14 run files, ~150 picks
+
+
 class Groups(unittest.TestCase):
     def test_groups(self):
         assets = {

@@ -19,6 +19,11 @@ How it stays light on Yahoo (#88 "Revised plan", point 5):
   - jittered backoff on errors (429s); a stock that fails keeps its last good row (price_as_of
     says how old it is) instead of dropping off the page.
 
+  - news headlines (#88 follow-up): Ticker.news for the stocks people look at, in this order: every
+    live signal run's picks, each group's biggest movers of the day, then the theme stocks; at most
+    every NEWS_MAX_AGE per stock, cached in groups/news.json; a run spends at most --news-minutes on
+    them. Headlines older than NEWS_KEEP are dropped from the pages.
+
 Writes <group path>/prices-data.js (window.PRICES_DATA = {...}, the format the sector pages read,
 plus fx, and per stock: markets, sector, industry, themes, t212, currency, price_as_of) and
 groups/status.json (updated time and counts; read by /health).
@@ -41,6 +46,11 @@ OUT = os.path.join(ROOT, "groups")
 FUND_PATH = os.path.join(OUT, "fundamentals.json")
 BATCH = 100
 FUND_MAX_AGE = timedelta(hours=20)
+NEWS_PATH = os.path.join(OUT, "news.json")
+NEWS_MAX_AGE = timedelta(hours=6)
+NEWS_KEEP = timedelta(days=7)            # a cached headline list older than this is not shown
+NEWS_ITEMS = 5
+MOVERS_PER_GROUP = 5                     # biggest risers and fallers per group get headlines
 STALE_AFTER = timedelta(days=7)          # newest bar older than this = no usable price this run
 LONDON = ZoneInfo("Europe/London")
 
@@ -259,6 +269,112 @@ def refresh_fundamentals(cache, symbols, currencies, now, minutes):
           f"{max(0, len(todo) - done - failed)} left for the next run")
 
 
+# ── news headlines (cached; picks and movers first) ─────────────────────────────
+def parse_news(raw, analyzer, max_items=NEWS_ITEMS):
+    """yfinance Ticker.news (old or new shape) -> ([{title, publisher, url, published, sentiment}], average)."""
+    items = []
+    for n in (raw or [])[:max_items]:
+        if not isinstance(n, dict):
+            continue
+        c = n.get("content")
+        if isinstance(c, dict):
+            title, pub = c.get("title"), (c.get("provider") or {}).get("displayName")
+            url = (c.get("canonicalUrl") or {}).get("url") or (c.get("clickThroughUrl") or {}).get("url")
+            ts = c.get("pubDate") or c.get("displayTime")
+            try:
+                pub_ts = int(datetime.fromisoformat(ts.replace("Z", "+00:00")).timestamp()) if ts else None
+            except ValueError:
+                pub_ts = None
+        else:
+            title, pub, url, pub_ts = n.get("title"), n.get("publisher"), n.get("link"), n.get("providerPublishTime")
+        if not title:
+            continue
+        score = None
+        if analyzer is not None:
+            try:
+                score = round(analyzer.polarity_scores(title)["compound"], 3)
+            except Exception:
+                score = None
+        items.append({"title": title, "publisher": pub, "url": url, "published": pub_ts, "sentiment": score})
+    scored = [i["sentiment"] for i in items if i["sentiment"] is not None]
+    return items, (round(sum(scored) / len(scored), 3) if scored else None)
+
+
+def live_picks(root=ROOT):
+    """Tickers picked by any live signal run: the theme runs that remain + every group run's file."""
+    import glob
+    out = set()
+    paths = [os.path.join(root, t, "signals-local.json") for t in ("AI", "Defence")]
+    paths += glob.glob(os.path.join(root, "sectors", "*", "signals-local.json"))
+    paths += glob.glob(os.path.join(root, "markets", "*", "signals-local.json"))
+    for path in paths:
+        try:
+            data = json.load(open(path, encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        out.update(p["ticker"] for p in data.get("picks") or [] if p.get("ticker"))
+    return out
+
+
+def news_wanted(gs, assets, prices, picks, themed):
+    """Yahoo symbols in priority order: picks, then each group's biggest movers, then theme stocks."""
+    order = []
+    def add(t):
+        a = assets.get(t)
+        if a and a["yahoo"] in prices and a["yahoo"] not in order:
+            order.append(a["yahoo"])
+    for t in sorted(picks):
+        add(t)
+    for g in gs.values():
+        moves = sorted((prices[assets[t]["yahoo"]]["change_1d"], t) for t in g["tickers"] if assets[t]["yahoo"] in prices)
+        for _m, t in moves[:MOVERS_PER_GROUP] + moves[-MOVERS_PER_GROUP:]:
+            add(t)
+    for t in sorted(themed):
+        add(t)
+    return order
+
+
+def refresh_news(cache, wanted, now, minutes, fetch=None, analyzer=None):
+    """Fetch headlines for `wanted` symbols whose cache is missing or older than NEWS_MAX_AGE, in order,
+    until the time budget runs out. A failed fetch keeps the old headlines."""
+    if fetch is None:
+        import yfinance as yf
+        fetch = lambda y: yf.Ticker(y).news
+    if analyzer is None:
+        try:
+            from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+            analyzer = SentimentIntensityAnalyzer()
+        except ImportError:
+            print("  [vaderSentiment not installed: headlines kept, sentiment skipped]")
+    def age(y):
+        f = (cache.get(y) or {}).get("fetched")
+        return now - datetime.fromisoformat(f) if f else timedelta.max
+    todo = [y for y in wanted if age(y) > NEWS_MAX_AGE]
+    stop = time.monotonic() + minutes * 60
+    done = failed = 0
+    for y in todo:
+        if time.monotonic() > stop:
+            break
+        try:
+            items, agg = parse_news(fetch(y), analyzer)
+            cache[y] = {"fetched": now.isoformat(timespec="seconds"), "news": items, "sentiment": agg}
+            done += 1
+        except Exception:
+            failed += 1
+            time.sleep(2 + random.random())
+        time.sleep(0.2 + random.random() * 0.3)
+    print(f"  news: {len(wanted)} wanted, {len(todo)} due, {done} fetched, {failed} failed, "
+          f"{max(0, len(todo) - done - failed)} left for the next run")
+
+
+def news_for(cache, yahoo, now):
+    """(headlines, average sentiment) to show, or ([], None) if none or too old."""
+    c = cache.get(yahoo) or {}
+    if not c.get("fetched") or now - datetime.fromisoformat(c["fetched"]) > NEWS_KEEP:
+        return [], None
+    return c.get("news") or [], c.get("sentiment")
+
+
 # ── rows ───────────────────────────────────────────────────────────────────────
 def fmt_gbp(v):
     return str(round(v)) if v >= 10 else (f"{v:.2f}" if v >= 1 else f"{v:.3f}")
@@ -352,6 +468,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--no-fundamentals", action="store_true")
     ap.add_argument("--fundamentals-minutes", type=float, default=15)
+    ap.add_argument("--no-news", action="store_true")
+    ap.add_argument("--news-minutes", type=float, default=6)
     args = ap.parse_args(argv)
 
     u = universe.load()
@@ -389,6 +507,18 @@ def main(argv=None):
             json.dump(dict(sorted(cache.items())), f, separators=(",", ":"))
             f.write("\n")
 
+    try:
+        news = json.load(open(NEWS_PATH, encoding="utf-8"))
+    except (OSError, ValueError):
+        news = {}
+    if not args.no_news:
+        themed = {t for t, a in assets.items() if themes.get(t)}
+        refresh_news(news, news_wanted(gs, assets, prices, live_picks(), themed), now, args.news_minutes)
+        news = {y: c for y, c in news.items() if now - datetime.fromisoformat(c["fetched"]) <= NEWS_KEEP}
+        with open(NEWS_PATH, "w", encoding="utf-8") as f:
+            json.dump(dict(sorted(news.items())), f, separators=(",", ":"))
+            f.write("\n")
+
     updated = now.astimezone(LONDON).strftime("%Y-%m-%d %H:%M")
     status = {"updated": updated, "fx": fx, "groups": {}, "missing": []}
     all_rows = {}
@@ -400,8 +530,10 @@ def main(argv=None):
             a = assets[t]
             s = prices.get(a["yahoo"])
             if s:
-                rows.append(make_row(t, a, s, cache.get(a["yahoo"]) or {}, fx, themes,
-                                     groups_config.category_of(g, a, cats)))
+                row = make_row(t, a, s, cache.get(a["yahoo"]) or {}, fx, themes,
+                               groups_config.category_of(g, a, cats))
+                row["news"], row["news_sentiment"] = news_for(news, a["yahoo"], now)
+                rows.append(row)
             elif t in kept:                       # Yahoo failed this run: keep the last good row
                 rows.append(kept[t])
                 status["missing"].append(t)
