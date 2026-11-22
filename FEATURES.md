@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **ISIN, sector and "on T212" for every asset (#88 phase 1, PR 2)** — `universe_classify.py` fills `isin`, `currency`, `sector`/`industry` and `t212` in `universe.yaml` from Wikipedia's index tables, Yahoo and the private T212 catalogue (matched by ISIN; only yes/no is stored); validated in CI
+
 - **Export contract test (#88 phase 1, PR 1)** — CI fails if an export field the portfolio reads disappears or changes type (`monitoring/export-contract.json`, `monitoring/test_export_contract.py`); the guard for the phase 1 export changes
 
 - **Glossary (#71)** — plain-English meanings of every term, column and signal on the site, searchable, linked from "Conf"/"Confidence"; left-menu item under Technology

@@ -5,6 +5,15 @@
 #   special: lse_pence (London price in pence) | jpy | sar — price conversion handling
 #   speculative: true — flagged as speculative on the sector pages
 #   crypto only: cmc_symbol, cmc_id (CoinMarketCap numeric ID), coingecko (CoinGecko ID)
+#   Written by `python universe_classify.py --catalogue <t212-instruments.json>` (#88); don't hand-edit,
+#   change the sources/pins/overrides instead:
+#   isin        ISIN (check digit verified); stocks only, may be missing
+#   currency    quote currency, as Yahoo gives it (GBp = pence)
+#   sector      one of the 11 standard sectors, or Unclassified; sector_src says where it came from:
+#               gics (Wikipedia S&P 500 table) | icb (FTSE 100 ICB sector, mapped) | yahoo | override
+#   industry    the source's own finer label (GICS sub-industry, ICB sector or Yahoo industry)
+#   t212        on Trading 212: yes | no | unknown — matched by ISIN against the private T212
+#               catalogue (portfolio repo); only this flag is stored here, never the catalogue
 #
 # sectors: each sector's members in display order, as [ticker, category in that sector].
 #
@@ -12,223 +21,227 @@
 #   track record can still price those signals ("every signal counts", #54). Same fields
 #   as assets; never shown on the site.
 #
-# Adding a stock: add it under assets (if new), then add [ticker, category] to each sector it belongs to.
+# Adding a stock: add it under assets (if new), then add [ticker, category] to each sector it belongs to,
+#   then run universe_classify.py (above) to fill in its ISIN, currency, sector and t212.
+#
+# sector_overrides: (optional) ISIN -> {sector, industry?, reason}; wins over every sector source.
+#
 # Checked by `python universe.py` (also run in CI).
 
 assets:
-  "2222.SR": {"name": "Saudi Aramco", "exchange": "TADAWUL", "yahoo": "2222.SR", "special": "sar"}
-  "285A":    {"name": "Kioxia Holdings", "exchange": "TSE", "yahoo": "285A.T", "special": "jpy"}
-  "AAOI":    {"name": "Applied Optoelectronics", "exchange": "NASDAQ", "yahoo": "AAOI"}
-  "AAPL":    {"name": "Apple", "exchange": "NASDAQ", "yahoo": "AAPL"}
-  "ABBV":    {"name": "AbbVie", "exchange": "NYSE", "yahoo": "ABBV"}
-  "ABT":     {"name": "Abbott Laboratories", "exchange": "NYSE", "yahoo": "ABT"}
-  "ADBE":    {"name": "Adobe", "exchange": "NASDAQ", "yahoo": "ADBE"}
-  "ALNY":    {"name": "Alnylam Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "ALNY"}
-  "AMAT":    {"name": "Applied Materials", "exchange": "NASDAQ", "yahoo": "AMAT"}
-  "AMD":     {"name": "Advanced Micro Devices", "exchange": "NASDAQ", "yahoo": "AMD"}
-  "AMGN":    {"name": "Amgen", "exchange": "NASDAQ", "yahoo": "AMGN"}
-  "AMT":     {"name": "American Tower", "exchange": "NYSE", "yahoo": "AMT"}
-  "AMZN":    {"name": "Amazon", "exchange": "NASDAQ", "yahoo": "AMZN"}
-  "ARM":     {"name": "Arm Holdings", "exchange": "NASDAQ", "yahoo": "ARM"}
-  "ASML":    {"name": "ASML Holding", "exchange": "NASDAQ", "yahoo": "ASML"}
-  "ASTS":    {"name": "AST SpaceMobile", "exchange": "NASDAQ", "yahoo": "ASTS"}
-  "AVAV":    {"name": "AeroVironment", "exchange": "NASDAQ", "yahoo": "AVAV"}
-  "AVGO":    {"name": "Broadcom", "exchange": "NASDAQ", "yahoo": "AVGO"}
-  "AXON":    {"name": "Axon Enterprise", "exchange": "NASDAQ", "yahoo": "AXON"}
-  "AXTI":    {"name": "AXT Inc", "exchange": "NASDAQ", "yahoo": "AXTI"}
-  "AZN":     {"name": "AstraZeneca", "exchange": "LSE", "yahoo": "AZN.L", "special": "lse_pence"}
-  "BA":      {"name": "Boeing", "exchange": "NYSE", "yahoo": "BA"}
-  "BA.L":    {"name": "BAE Systems", "exchange": "LSE", "yahoo": "BA.L", "special": "lse_pence"}
-  "BABA":    {"name": "Alibaba Group", "exchange": "NYSE", "yahoo": "BABA"}
-  "BAC":     {"name": "Bank of America", "exchange": "NYSE", "yahoo": "BAC"}
-  "BAH":     {"name": "Booz Allen Hamilton", "exchange": "NYSE", "yahoo": "BAH"}
-  "BEAM":    {"name": "Beam Therapeutics", "exchange": "NASDAQ", "yahoo": "BEAM"}
-  "BEP":     {"name": "Brookfield Renewable", "exchange": "NYSE", "yahoo": "BEP"}
-  "BEPC":    {"name": "Brookfield Renewable Corp", "exchange": "NYSE", "yahoo": "BEPC"}
-  "BIIB":    {"name": "Biogen", "exchange": "NASDAQ", "yahoo": "BIIB"}
-  "BKR":     {"name": "Baker Hughes", "exchange": "NASDAQ", "yahoo": "BKR"}
-  "BLK":     {"name": "BlackRock", "exchange": "NYSE", "yahoo": "BLK"}
-  "BMRN":    {"name": "BioMarin Pharmaceutical", "exchange": "NASDAQ", "yahoo": "BMRN"}
-  "BMY":     {"name": "Bristol-Myers Squibb", "exchange": "NYSE", "yahoo": "BMY"}
-  "BNTX":    {"name": "BioNTech", "exchange": "NASDAQ", "yahoo": "BNTX"}
-  "BP":      {"name": "BP p.l.c.", "exchange": "NYSE", "yahoo": "BP"}
-  "BRK-B":   {"name": "Berkshire Hathaway B", "exchange": "NYSE", "yahoo": "BRK-B"}
-  "BWXT":    {"name": "BWX Technologies", "exchange": "NYSE", "yahoo": "BWXT"}
-  "CACI":    {"name": "CACI International", "exchange": "NYSE", "yahoo": "CACI"}
-  "CAT":     {"name": "Caterpillar", "exchange": "NYSE", "yahoo": "CAT"}
-  "CCJ":     {"name": "Cameco Corporation", "exchange": "NYSE", "yahoo": "CCJ"}
-  "CEG":     {"name": "Constellation Energy", "exchange": "NASDAQ", "yahoo": "CEG"}
-  "COAG":    {"name": "Hemab Therapeutics", "exchange": "NASDAQ", "yahoo": "COAG"}
-  "COHR":    {"name": "Coherent Corp", "exchange": "NYSE", "yahoo": "COHR"}
-  "COP":     {"name": "ConocoPhillips", "exchange": "NYSE", "yahoo": "COP"}
-  "CORZ":    {"name": "Core Scientific", "exchange": "NASDAQ", "yahoo": "CORZ", "speculative": true}
-  "COST":    {"name": "Costco", "exchange": "NASDAQ", "yahoo": "COST"}
-  "CRDO":    {"name": "Credo Technology", "exchange": "NASDAQ", "yahoo": "CRDO"}
-  "CRM":     {"name": "Salesforce", "exchange": "NYSE", "yahoo": "CRM"}
-  "CRSP":    {"name": "CRISPR Therapeutics", "exchange": "NASDAQ", "yahoo": "CRSP"}
-  "CRWD":    {"name": "CrowdStrike", "exchange": "NASDAQ", "yahoo": "CRWD"}
-  "CSCO":    {"name": "Cisco Systems", "exchange": "NASDAQ", "yahoo": "CSCO"}
-  "CVX":     {"name": "Chevron", "exchange": "NYSE", "yahoo": "CVX"}
-  "DELL":    {"name": "Dell Technologies", "exchange": "NYSE", "yahoo": "DELL"}
-  "DLR":     {"name": "Digital Realty", "exchange": "NYSE", "yahoo": "DLR"}
-  "DNNGY":   {"name": "\u00d8rsted", "exchange": "NASDAQ", "yahoo": "DNNGY"}
-  "DRS":     {"name": "Leonardo DRS", "exchange": "NYSE", "yahoo": "DRS"}
-  "EDIT":    {"name": "Editas Medicine", "exchange": "NASDAQ", "yahoo": "EDIT", "speculative": true}
-  "ENPH":    {"name": "Enphase Energy", "exchange": "NASDAQ", "yahoo": "ENPH"}
-  "EOG":     {"name": "EOG Resources", "exchange": "NYSE", "yahoo": "EOG"}
-  "EQIX":    {"name": "Equinix", "exchange": "NASDAQ", "yahoo": "EQIX"}
-  "EQNR":    {"name": "Equinor", "exchange": "NYSE", "yahoo": "EQNR"}
-  "ETN":     {"name": "Eaton Corporation", "exchange": "NYSE", "yahoo": "ETN"}
-  "EXEL":    {"name": "Exelixis", "exchange": "NASDAQ", "yahoo": "EXEL"}
-  "FN":      {"name": "Fabrinet", "exchange": "NYSE", "yahoo": "FN"}
-  "FSLR":    {"name": "First Solar", "exchange": "NASDAQ", "yahoo": "FSLR"}
-  "FTNT":    {"name": "Fortinet", "exchange": "NASDAQ", "yahoo": "FTNT"}
-  "GD":      {"name": "General Dynamics", "exchange": "NYSE", "yahoo": "GD"}
-  "GE":      {"name": "GE Aerospace", "exchange": "NYSE", "yahoo": "GE"}
-  "GEV":     {"name": "GE Vernova", "exchange": "NYSE", "yahoo": "GEV"}
-  "GILD":    {"name": "Gilead Sciences", "exchange": "NASDAQ", "yahoo": "GILD"}
-  "GOOGL":   {"name": "Alphabet (Google)", "exchange": "NASDAQ", "yahoo": "GOOGL"}
-  "GS":      {"name": "Goldman Sachs", "exchange": "NYSE", "yahoo": "GS"}
-  "GSK":     {"name": "GSK", "exchange": "LSE", "yahoo": "GSK.L", "special": "lse_pence"}
-  "HAL":     {"name": "Halliburton", "exchange": "NYSE", "yahoo": "HAL"}
-  "HEI":     {"name": "HEICO Corporation", "exchange": "NYSE", "yahoo": "HEI"}
-  "HII":     {"name": "Huntington Ingalls Industries", "exchange": "NYSE", "yahoo": "HII"}
-  "HON":     {"name": "Honeywell", "exchange": "NASDAQ", "yahoo": "HON"}
-  "HSBC":    {"name": "HSBC Holdings", "exchange": "NYSE", "yahoo": "HSBC"}
-  "HUT":     {"name": "Hut 8 Mining", "exchange": "NASDAQ", "yahoo": "HUT"}
-  "ILMN":    {"name": "Illumina", "exchange": "NASDAQ", "yahoo": "ILMN"}
-  "INCY":    {"name": "Incyte", "exchange": "NASDAQ", "yahoo": "INCY"}
-  "INTC":    {"name": "Intel", "exchange": "NASDAQ", "yahoo": "INTC"}
-  "INTU":    {"name": "Intuit", "exchange": "NASDAQ", "yahoo": "INTU"}
-  "IONS":    {"name": "Ionis Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "IONS"}
-  "IREN":    {"name": "Iris Energy", "exchange": "NASDAQ", "yahoo": "IREN", "speculative": true}
-  "JNJ":     {"name": "Johnson & Johnson", "exchange": "NYSE", "yahoo": "JNJ"}
-  "JPM":     {"name": "JPMorgan Chase", "exchange": "NYSE", "yahoo": "JPM"}
-  "KEYS":    {"name": "Keysight Technologies", "exchange": "NYSE", "yahoo": "KEYS"}
-  "KO":      {"name": "Coca-Cola", "exchange": "NYSE", "yahoo": "KO"}
-  "KTOS":    {"name": "Kratos Defense", "exchange": "NASDAQ", "yahoo": "KTOS"}
-  "LDOS":    {"name": "Leidos Holdings", "exchange": "NYSE", "yahoo": "LDOS"}
-  "LEGN":    {"name": "Legend Biotech", "exchange": "NASDAQ", "yahoo": "LEGN"}
-  "LEU":     {"name": "Centrus Energy", "exchange": "NYSE", "yahoo": "LEU"}
-  "LHX":     {"name": "L3Harris Technologies", "exchange": "NYSE", "yahoo": "LHX"}
-  "LITE":    {"name": "Lumentum Holdings", "exchange": "NASDAQ", "yahoo": "LITE"}
-  "LLY":     {"name": "Eli Lilly", "exchange": "NYSE", "yahoo": "LLY"}
-  "LMT":     {"name": "Lockheed Martin", "exchange": "NYSE", "yahoo": "LMT"}
-  "MA":      {"name": "Mastercard", "exchange": "NYSE", "yahoo": "MA"}
-  "MCD":     {"name": "McDonald's", "exchange": "NYSE", "yahoo": "MCD"}
-  "META":    {"name": "Meta Platforms", "exchange": "NASDAQ", "yahoo": "META"}
-  "MPC":     {"name": "Marathon Petroleum", "exchange": "NYSE", "yahoo": "MPC"}
-  "MRCY":    {"name": "Mercury Systems", "exchange": "NASDAQ", "yahoo": "MRCY"}
-  "MRK":     {"name": "Merck", "exchange": "NYSE", "yahoo": "MRK"}
-  "MRNA":    {"name": "Moderna", "exchange": "NASDAQ", "yahoo": "MRNA"}
-  "MRVL":    {"name": "Marvell Technology", "exchange": "NASDAQ", "yahoo": "MRVL"}
-  "MSFT":    {"name": "Microsoft", "exchange": "NASDAQ", "yahoo": "MSFT"}
-  "MTSI":    {"name": "MACOM Technology", "exchange": "NASDAQ", "yahoo": "MTSI"}
-  "MU":      {"name": "Micron Technology", "exchange": "NASDAQ", "yahoo": "MU"}
-  "MXL":     {"name": "MaxLinear", "exchange": "NASDAQ", "yahoo": "MXL"}
-  "NEE":     {"name": "NextEra Energy", "exchange": "NYSE", "yahoo": "NEE"}
-  "NET":     {"name": "Cloudflare", "exchange": "NYSE", "yahoo": "NET"}
-  "NFLX":    {"name": "Netflix", "exchange": "NASDAQ", "yahoo": "NFLX"}
-  "NKE":     {"name": "Nike", "exchange": "NYSE", "yahoo": "NKE"}
-  "NNE":     {"name": "NANO Nuclear Energy", "exchange": "NASDAQ", "yahoo": "NNE", "speculative": true}
-  "NOC":     {"name": "Northrop Grumman", "exchange": "NYSE", "yahoo": "NOC"}
-  "NOW":     {"name": "ServiceNow", "exchange": "NYSE", "yahoo": "NOW"}
-  "NTLA":    {"name": "Intellia Therapeutics", "exchange": "NASDAQ", "yahoo": "NTLA"}
-  "NTRA":    {"name": "Natera", "exchange": "NASDAQ", "yahoo": "NTRA"}
-  "NVAX":    {"name": "Novavax", "exchange": "NASDAQ", "yahoo": "NVAX", "speculative": true}
-  "NVDA":    {"name": "NVIDIA", "exchange": "NASDAQ", "yahoo": "NVDA"}
-  "NVO":     {"name": "Novo Nordisk", "exchange": "NYSE", "yahoo": "NVO"}
-  "OKLO":    {"name": "Oklo Inc", "exchange": "NYSE", "yahoo": "OKLO", "speculative": true}
-  "OLN":     {"name": "Olin Corporation", "exchange": "NYSE", "yahoo": "OLN"}
-  "ORCL":    {"name": "Oracle", "exchange": "NYSE", "yahoo": "ORCL"}
-  "OXY":     {"name": "Occidental Petroleum", "exchange": "NYSE", "yahoo": "OXY"}
-  "P":       {"name": "Everpure", "exchange": "NYSE", "yahoo": "P"}
-  "PACB":    {"name": "Pacific Biosciences", "exchange": "NASDAQ", "yahoo": "PACB", "speculative": true}
-  "PANW":    {"name": "Palo Alto Networks", "exchange": "NASDAQ", "yahoo": "PANW"}
-  "PEP":     {"name": "PepsiCo", "exchange": "NASDAQ", "yahoo": "PEP"}
-  "PG":      {"name": "Procter & Gamble", "exchange": "NYSE", "yahoo": "PG"}
-  "PL":      {"name": "Planet Labs", "exchange": "NYSE", "yahoo": "PL"}
-  "PLTR":    {"name": "Palantir Technologies", "exchange": "NASDAQ", "yahoo": "PLTR"}
-  "POWL":    {"name": "Powell Industries", "exchange": "NASDAQ", "yahoo": "POWL"}
-  "QCOM":    {"name": "Qualcomm", "exchange": "NASDAQ", "yahoo": "QCOM"}
-  "QQ.L":    {"name": "QinetiQ Group", "exchange": "LSE", "yahoo": "QQ.L", "special": "lse_pence"}
-  "RCAT":    {"name": "Red Cat Holdings", "exchange": "NASDAQ", "yahoo": "RCAT"}
-  "RCUS":    {"name": "Arcus Biosciences", "exchange": "NYSE", "yahoo": "RCUS", "speculative": true}
-  "REGN":    {"name": "Regeneron Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "REGN"}
-  "RKLB":    {"name": "Rocket Lab USA", "exchange": "NASDAQ", "yahoo": "RKLB"}
-  "RR.":     {"name": "Rolls-Royce Holdings", "exchange": "LSE", "yahoo": "RR.L", "special": "lse_pence"}
-  "RR.L":    {"name": "Rolls-Royce Holdings", "exchange": "LSE", "yahoo": "RR.L", "special": "lse_pence"}
-  "RTX":     {"name": "RTX Corporation", "exchange": "NYSE", "yahoo": "RTX"}
-  "RXRX":    {"name": "Recursion Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "RXRX", "speculative": true}
-  "SAIC":    {"name": "Science Applications International", "exchange": "NYSE", "yahoo": "SAIC"}
-  "SAP":     {"name": "SAP SE", "exchange": "NYSE", "yahoo": "SAP"}
-  "SHEL":    {"name": "Shell", "exchange": "NYSE", "yahoo": "SHEL"}
-  "SHOP":    {"name": "Shopify", "exchange": "NYSE", "yahoo": "SHOP"}
-  "SLB":     {"name": "SLB (Schlumberger)", "exchange": "NYSE", "yahoo": "SLB"}
-  "SMCI":    {"name": "Super Micro Computer", "exchange": "NASDAQ", "yahoo": "SMCI"}
-  "SMR":     {"name": "NuScale Power", "exchange": "NYSE", "yahoo": "SMR", "speculative": true}
-  "SMTC":    {"name": "Semtech", "exchange": "NASDAQ", "yahoo": "SMTC"}
-  "SNDK":    {"name": "SanDisk Corporation", "exchange": "NASDAQ", "yahoo": "SNDK"}
-  "SNOW":    {"name": "Snowflake", "exchange": "NYSE", "yahoo": "SNOW"}
-  "SONY":    {"name": "Sony Group", "exchange": "NYSE", "yahoo": "SONY"}
-  "SPCX":    {"name": "SpaceX", "exchange": "NASDAQ", "yahoo": "SPCX"}
-  "SPOT":    {"name": "Spotify", "exchange": "NYSE", "yahoo": "SPOT"}
-  "SRPT":    {"name": "Sarepta Therapeutics", "exchange": "NASDAQ", "yahoo": "SRPT"}
-  "SSE.L":   {"name": "SSE plc", "exchange": "LSE", "yahoo": "SSE.L", "special": "lse_pence"}
-  "STX":     {"name": "Seagate Technology", "exchange": "NASDAQ", "yahoo": "STX"}
-  "TDG":     {"name": "TransDigm Group", "exchange": "NYSE", "yahoo": "TDG"}
-  "TLN":     {"name": "Talen Energy", "exchange": "NASDAQ", "yahoo": "TLN"}
-  "TM":      {"name": "Toyota Motor", "exchange": "NYSE", "yahoo": "TM"}
-  "TMO":     {"name": "Thermo Fisher Scientific", "exchange": "NYSE", "yahoo": "TMO"}
-  "TSLA":    {"name": "Tesla", "exchange": "NASDAQ", "yahoo": "TSLA"}
-  "TSM":     {"name": "Taiwan Semiconductor", "exchange": "NYSE", "yahoo": "TSM"}
-  "TTE":     {"name": "TotalEnergies", "exchange": "NYSE", "yahoo": "TTE"}
-  "TXT":     {"name": "Textron", "exchange": "NYSE", "yahoo": "TXT"}
-  "UBER":    {"name": "Uber", "exchange": "NYSE", "yahoo": "UBER"}
-  "UEC":     {"name": "Uranium Energy Corp", "exchange": "NYSE", "yahoo": "UEC"}
-  "UNH":     {"name": "UnitedHealth Group", "exchange": "NYSE", "yahoo": "UNH"}
-  "V":       {"name": "Visa", "exchange": "NYSE", "yahoo": "V"}
-  "VIAV":    {"name": "Viavi Solutions", "exchange": "NASDAQ", "yahoo": "VIAV"}
-  "VLO":     {"name": "Valero Energy", "exchange": "NYSE", "yahoo": "VLO"}
-  "VRT":     {"name": "Vertiv Holdings", "exchange": "NYSE", "yahoo": "VRT"}
-  "VRTX":    {"name": "Vertex Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "VRTX"}
-  "VST":     {"name": "Vistra Corp", "exchange": "NYSE", "yahoo": "VST"}
-  "WDC":     {"name": "Western Digital", "exchange": "NASDAQ", "yahoo": "WDC"}
-  "WMT":     {"name": "Walmart", "exchange": "NYSE", "yahoo": "WMT"}
-  "WULF":    {"name": "TeraWulf", "exchange": "NASDAQ", "yahoo": "WULF", "speculative": true}
-  "XOM":     {"name": "ExxonMobil", "exchange": "NYSE", "yahoo": "XOM"}
-  "ADA":     {"name": "Cardano", "exchange": "Crypto", "yahoo": "ADA-USD", "cmc_symbol": "ADA", "cmc_id": 2010, "coingecko": "cardano"}
-  "AIOZ":    {"name": "AIOZ Network", "exchange": "Crypto", "yahoo": "AIOZ-USD", "cmc_symbol": "AIOZ", "cmc_id": 9104, "coingecko": "aioz-network"}
-  "ALGO":    {"name": "Algorand", "exchange": "Crypto", "yahoo": "ALGO-USD", "cmc_symbol": "ALGO", "cmc_id": 4030, "coingecko": "algorand"}
-  "ALT":     {"name": "AltLayer", "exchange": "Crypto", "yahoo": "ALT29073-USD", "cmc_symbol": "ALT", "cmc_id": 29073, "coingecko": "altlayer"}
-  "ARKM":    {"name": "Arkham", "exchange": "Crypto", "yahoo": "ARKM-USD", "cmc_symbol": "ARKM", "cmc_id": 27565, "coingecko": "arkham"}
-  "AVAX":    {"name": "Avalanche", "exchange": "Crypto", "yahoo": "AVAX-USD", "cmc_symbol": "AVAX", "cmc_id": 5805, "coingecko": "avalanche-2"}
-  "BNB":     {"name": "BNB", "exchange": "Crypto", "yahoo": "BNB-USD", "cmc_symbol": "BNB", "cmc_id": 1839, "coingecko": "binancecoin"}
-  "BTC":     {"name": "Bitcoin", "exchange": "Crypto", "yahoo": "BTC-USD", "cmc_symbol": "BTC", "cmc_id": 1, "coingecko": "bitcoin"}
-  "DOGE":    {"name": "Dogecoin", "exchange": "Crypto", "yahoo": "DOGE-USD", "cmc_symbol": "DOGE", "cmc_id": 74, "coingecko": "dogecoin"}
-  "DOT":     {"name": "Polkadot", "exchange": "Crypto", "yahoo": "DOT-USD", "cmc_symbol": "DOT", "cmc_id": 6636, "coingecko": "polkadot"}
-  "ETH":     {"name": "Ethereum", "exchange": "Crypto", "yahoo": "ETH-USD", "cmc_symbol": "ETH", "cmc_id": 1027, "coingecko": "ethereum"}
-  "FET":     {"name": "ASI Alliance", "exchange": "Crypto", "yahoo": "FET-USD", "cmc_symbol": "FET", "cmc_id": 3773, "coingecko": "fetch-ai"}
-  "GRT":     {"name": "The Graph", "exchange": "Crypto", "yahoo": "GRT6719-USD", "cmc_symbol": "GRT", "cmc_id": 6719, "coingecko": "the-graph"}
-  "HBAR":    {"name": "Hedera", "exchange": "Crypto", "yahoo": "HBAR-USD", "cmc_symbol": "HBAR", "cmc_id": 4642, "coingecko": "hedera-hashgraph"}
-  "ICP":     {"name": "Internet Computer", "exchange": "Crypto", "yahoo": "ICP-USD", "cmc_symbol": "ICP", "cmc_id": 8916, "coingecko": "internet-computer"}
-  "KAITO":   {"name": "Kaito", "exchange": "Crypto", "yahoo": "KAITO-USD", "cmc_symbol": "KAITO", "cmc_id": 35763, "coingecko": "kaito"}
-  "LINK":    {"name": "Chainlink", "exchange": "Crypto", "yahoo": "LINK-USD", "cmc_symbol": "LINK", "cmc_id": 1975, "coingecko": "chainlink"}
-  "MINA":    {"name": "Mina", "exchange": "Crypto", "yahoo": "MINA-USD", "cmc_symbol": "MINA", "cmc_id": 8646, "coingecko": "mina-protocol"}
-  "NEAR":    {"name": "NEAR Protocol", "exchange": "Crypto", "yahoo": "NEAR-USD", "cmc_symbol": "NEAR", "cmc_id": 6535, "coingecko": "near"}
-  "NMR":     {"name": "Numeraire", "exchange": "Crypto", "yahoo": "NMR-USD", "cmc_symbol": "NMR", "cmc_id": 1732, "coingecko": "numeraire"}
-  "PEPE":    {"name": "Pepe", "exchange": "Crypto", "yahoo": "PEPE24478-USD", "cmc_symbol": "PEPE", "cmc_id": 24478, "coingecko": "pepe"}
-  "POL":     {"name": "Polygon (MATIC)", "exchange": "Crypto", "yahoo": "POL28321-USD", "cmc_symbol": "POL", "cmc_id": 28321, "coingecko": "polygon-ecosystem-token"}
-  "RNDR":    {"name": "Render", "exchange": "Crypto", "yahoo": "RENDER-USD", "cmc_symbol": "RENDER", "cmc_id": 5690, "coingecko": "render-token"}
-  "SOL":     {"name": "Solana", "exchange": "Crypto", "yahoo": "SOL-USD", "cmc_symbol": "SOL", "cmc_id": 5426, "coingecko": "solana"}
-  "SUI":     {"name": "Sui", "exchange": "Crypto", "yahoo": "SUI20947-USD", "cmc_symbol": "SUI", "cmc_id": 20947, "coingecko": "sui"}
-  "TAO":     {"name": "Bittensor", "exchange": "Crypto", "yahoo": "TAO22974-USD", "cmc_symbol": "TAO", "cmc_id": 22974, "coingecko": "bittensor"}
-  "TON":     {"name": "Toncoin", "exchange": "Crypto", "yahoo": "TON11419-USD", "cmc_symbol": "GRAM", "cmc_id": 11419, "coingecko": "the-open-network"}
-  "TRX":     {"name": "TRON", "exchange": "Crypto", "yahoo": "TRX-USD", "cmc_symbol": "TRX", "cmc_id": 1958, "coingecko": "tron"}
-  "VIRTUAL": {"name": "Virtuals Protocol", "exchange": "Crypto", "yahoo": "VIRTUAL-USD", "cmc_symbol": "VIRTUAL", "cmc_id": 29420, "coingecko": "virtual-protocol"}
-  "WLD":     {"name": "Worldcoin", "exchange": "Crypto", "yahoo": "WLD-USD", "cmc_symbol": "WLD", "cmc_id": 13502, "coingecko": "worldcoin-wld"}
-  "XLM":     {"name": "Stellar", "exchange": "Crypto", "yahoo": "XLM-USD", "cmc_symbol": "XLM", "cmc_id": 512, "coingecko": "stellar"}
-  "XRP":     {"name": "XRP", "exchange": "Crypto", "yahoo": "XRP-USD", "cmc_symbol": "XRP", "cmc_id": 52, "coingecko": "ripple"}
+  "2222.SR": {"name": "Saudi Aramco", "exchange": "TADAWUL", "yahoo": "2222.SR", "special": "sar", "isin": "SA14TG012N13", "currency": "SAR", "sector": "Energy", "sector_src": "yahoo", "industry": "Oil & Gas Integrated", "t212": "no"}
+  "285A":    {"name": "Kioxia Holdings", "exchange": "TSE", "yahoo": "285A.T", "special": "jpy", "isin": "JP3236330001", "currency": "JPY", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
+  "AAOI":    {"name": "Applied Optoelectronics", "exchange": "NASDAQ", "yahoo": "AAOI", "isin": "US03823U1025", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Communication Equipment", "t212": "yes"}
+  "AAPL":    {"name": "Apple", "exchange": "NASDAQ", "yahoo": "AAPL", "isin": "US0378331005", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
+  "ABBV":    {"name": "AbbVie", "exchange": "NYSE", "yahoo": "ABBV", "isin": "US00287Y1091", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "ABT":     {"name": "Abbott Laboratories", "exchange": "NYSE", "yahoo": "ABT", "isin": "US0028241000", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Health Care Equipment", "t212": "yes"}
+  "ADBE":    {"name": "Adobe", "exchange": "NASDAQ", "yahoo": "ADBE", "isin": "US00724F1012", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Application Software", "t212": "yes"}
+  "ALNY":    {"name": "Alnylam Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "ALNY", "isin": "US02043Q1076", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "AMAT":    {"name": "Applied Materials", "exchange": "NASDAQ", "yahoo": "AMAT", "isin": "US0382221051", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductor Materials & Equipment", "t212": "yes"}
+  "AMD":     {"name": "Advanced Micro Devices", "exchange": "NASDAQ", "yahoo": "AMD", "isin": "US0079031078", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "AMGN":    {"name": "Amgen", "exchange": "NASDAQ", "yahoo": "AMGN", "isin": "US0311621009", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "AMT":     {"name": "American Tower", "exchange": "NYSE", "yahoo": "AMT", "isin": "US03027X1000", "currency": "USD", "sector": "Real Estate", "sector_src": "gics", "industry": "Telecom Tower REITs", "t212": "yes"}
+  "AMZN":    {"name": "Amazon", "exchange": "NASDAQ", "yahoo": "AMZN", "isin": "US0231351067", "currency": "USD", "sector": "Consumer Discretionary", "sector_src": "gics", "industry": "Broadline Retail", "t212": "yes"}
+  "ARM":     {"name": "Arm Holdings", "exchange": "NASDAQ", "yahoo": "ARM", "isin": "US0420682058", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
+  "ASML":    {"name": "ASML Holding", "exchange": "NASDAQ", "yahoo": "ASML", "isin": "USN070592100", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductor Equipment & Materials", "t212": "yes"}
+  "ASTS":    {"name": "AST SpaceMobile", "exchange": "NASDAQ", "yahoo": "ASTS", "isin": "US00217D1000", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Communication Equipment", "t212": "yes"}
+  "AVAV":    {"name": "AeroVironment", "exchange": "NASDAQ", "yahoo": "AVAV", "isin": "US0080731088", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "AVGO":    {"name": "Broadcom", "exchange": "NASDAQ", "yahoo": "AVGO", "isin": "US11135F1012", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "AXON":    {"name": "Axon Enterprise", "exchange": "NASDAQ", "yahoo": "AXON", "isin": "US05464C1018", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "AXTI":    {"name": "AXT Inc", "exchange": "NASDAQ", "yahoo": "AXTI", "isin": "US00246W1036", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductor Equipment & Materials", "t212": "yes"}
+  "AZN":     {"name": "AstraZeneca", "exchange": "LSE", "yahoo": "AZN.L", "special": "lse_pence", "isin": "GB0009895292", "currency": "GBp", "sector": "Health Care", "sector_src": "icb", "industry": "Pharmaceuticals, Biotechnology and Marijuana Producers", "t212": "yes"}
+  "BA":      {"name": "Boeing", "exchange": "NYSE", "yahoo": "BA", "isin": "US0970231058", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "BA.L":    {"name": "BAE Systems", "exchange": "LSE", "yahoo": "BA.L", "special": "lse_pence", "isin": "GB0002634946", "currency": "GBp", "sector": "Industrials", "sector_src": "icb", "industry": "Aerospace and Defense", "t212": "yes"}
+  "BABA":    {"name": "Alibaba Group", "exchange": "NYSE", "yahoo": "BABA", "isin": "US01609W1027", "currency": "USD", "sector": "Consumer Discretionary", "sector_src": "yahoo", "industry": "Internet Retail", "t212": "yes"}
+  "BAC":     {"name": "Bank of America", "exchange": "NYSE", "yahoo": "BAC", "isin": "US0605051046", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Diversified Banks", "t212": "yes"}
+  "BAH":     {"name": "Booz Allen Hamilton", "exchange": "NYSE", "yahoo": "BAH", "isin": "US0995021062", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Consulting Services", "t212": "yes"}
+  "BEAM":    {"name": "Beam Therapeutics", "exchange": "NASDAQ", "yahoo": "BEAM", "isin": "US07373V1052", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "BEP":     {"name": "Brookfield Renewable", "exchange": "NYSE", "yahoo": "BEP", "currency": "USD", "sector": "Utilities", "sector_src": "yahoo", "industry": "Utilities - Renewable", "t212": "unknown"}
+  "BEPC":    {"name": "Brookfield Renewable Corp", "exchange": "NYSE", "yahoo": "BEPC", "isin": "CA11285B1085", "currency": "USD", "sector": "Utilities", "sector_src": "yahoo", "industry": "Utilities - Renewable", "t212": "yes"}
+  "BIIB":    {"name": "Biogen", "exchange": "NASDAQ", "yahoo": "BIIB", "isin": "US09062X1037", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "BKR":     {"name": "Baker Hughes", "exchange": "NASDAQ", "yahoo": "BKR", "isin": "US05722G1004", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Equipment & Services", "t212": "yes"}
+  "BLK":     {"name": "BlackRock", "exchange": "NYSE", "yahoo": "BLK", "isin": "US09290D1019", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Asset Management & Custody Banks", "t212": "yes"}
+  "BMRN":    {"name": "BioMarin Pharmaceutical", "exchange": "NASDAQ", "yahoo": "BMRN", "isin": "US09061G1013", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "BMY":     {"name": "Bristol-Myers Squibb", "exchange": "NYSE", "yahoo": "BMY", "isin": "US1101221083", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Pharmaceuticals", "t212": "yes"}
+  "BNTX":    {"name": "BioNTech", "exchange": "NASDAQ", "yahoo": "BNTX", "isin": "US09075V1026", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "BP":      {"name": "BP p.l.c.", "exchange": "NYSE", "yahoo": "BP", "isin": "US0556221044", "currency": "USD", "sector": "Energy", "sector_src": "yahoo", "industry": "Oil & Gas Integrated", "t212": "yes"}
+  "BRK-B":   {"name": "Berkshire Hathaway B", "exchange": "NYSE", "yahoo": "BRK-B", "isin": "US0846707026", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Multi-Sector Holdings", "t212": "yes"}
+  "BWXT":    {"name": "BWX Technologies", "exchange": "NYSE", "yahoo": "BWXT", "isin": "US05605H1005", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "CACI":    {"name": "CACI International", "exchange": "NYSE", "yahoo": "CACI", "isin": "US1271903049", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Information Technology Services", "t212": "yes"}
+  "CAT":     {"name": "Caterpillar", "exchange": "NYSE", "yahoo": "CAT", "isin": "US1491231015", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Construction Machinery & Heavy Transportation Equipment", "t212": "yes"}
+  "CCJ":     {"name": "Cameco Corporation", "exchange": "NYSE", "yahoo": "CCJ", "isin": "CA13321L1085", "currency": "USD", "sector": "Energy", "sector_src": "yahoo", "industry": "Uranium", "t212": "yes"}
+  "CEG":     {"name": "Constellation Energy", "exchange": "NASDAQ", "yahoo": "CEG", "isin": "US21037T1097", "currency": "USD", "sector": "Utilities", "sector_src": "gics", "industry": "Electric Utilities", "t212": "yes"}
+  "COAG":    {"name": "Hemab Therapeutics", "exchange": "NASDAQ", "yahoo": "COAG", "isin": "US4234941031", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "COHR":    {"name": "Coherent Corp", "exchange": "NYSE", "yahoo": "COHR", "isin": "US19247G1076", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Electronic Components", "t212": "yes"}
+  "COP":     {"name": "ConocoPhillips", "exchange": "NYSE", "yahoo": "COP", "isin": "US20825C1045", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Exploration & Production", "t212": "yes"}
+  "CORZ":    {"name": "Core Scientific", "exchange": "NASDAQ", "yahoo": "CORZ", "speculative": true, "isin": "US21874A1060", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
+  "COST":    {"name": "Costco", "exchange": "NASDAQ", "yahoo": "COST", "isin": "US22160K1051", "currency": "USD", "sector": "Consumer Staples", "sector_src": "gics", "industry": "Consumer Staples Merchandise Retail", "t212": "yes"}
+  "CRDO":    {"name": "Credo Technology", "exchange": "NASDAQ", "yahoo": "CRDO", "isin": "KYG254571055", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
+  "CRM":     {"name": "Salesforce", "exchange": "NYSE", "yahoo": "CRM", "isin": "US79466L3024", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Application Software", "t212": "yes"}
+  "CRSP":    {"name": "CRISPR Therapeutics", "exchange": "NASDAQ", "yahoo": "CRSP", "isin": "CH0334081137", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "CRWD":    {"name": "CrowdStrike", "exchange": "NASDAQ", "yahoo": "CRWD", "isin": "US22788C1053", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Systems Software", "t212": "yes"}
+  "CSCO":    {"name": "Cisco Systems", "exchange": "NASDAQ", "yahoo": "CSCO", "isin": "US17275R1023", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Communications Equipment", "t212": "yes"}
+  "CVX":     {"name": "Chevron", "exchange": "NYSE", "yahoo": "CVX", "isin": "US1667641005", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Integrated Oil & Gas", "t212": "yes"}
+  "DELL":    {"name": "Dell Technologies", "exchange": "NYSE", "yahoo": "DELL", "isin": "US24703L2025", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
+  "DLR":     {"name": "Digital Realty", "exchange": "NYSE", "yahoo": "DLR", "isin": "US2538681030", "currency": "USD", "sector": "Real Estate", "sector_src": "gics", "industry": "Data Center REITs", "t212": "yes"}
+  "DNNGY":   {"name": "\u00d8rsted", "exchange": "NASDAQ", "yahoo": "DNNGY", "isin": "US68750L1026", "currency": "USD", "sector": "Utilities", "sector_src": "yahoo", "industry": "Utilities - Renewable", "t212": "yes"}
+  "DRS":     {"name": "Leonardo DRS", "exchange": "NYSE", "yahoo": "DRS", "isin": "US52661A1088", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "EDIT":    {"name": "Editas Medicine", "exchange": "NASDAQ", "yahoo": "EDIT", "speculative": true, "isin": "US28106W1036", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "ENPH":    {"name": "Enphase Energy", "exchange": "NASDAQ", "yahoo": "ENPH", "isin": "US29355A1079", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Solar", "t212": "yes"}
+  "EOG":     {"name": "EOG Resources", "exchange": "NYSE", "yahoo": "EOG", "isin": "US26875P1012", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Exploration & Production", "t212": "yes"}
+  "EQIX":    {"name": "Equinix", "exchange": "NASDAQ", "yahoo": "EQIX", "isin": "US29444U7000", "currency": "USD", "sector": "Real Estate", "sector_src": "gics", "industry": "Data Center REITs", "t212": "yes"}
+  "EQNR":    {"name": "Equinor", "exchange": "NYSE", "yahoo": "EQNR", "isin": "US29446M1027", "currency": "USD", "sector": "Energy", "sector_src": "yahoo", "industry": "Oil & Gas Integrated", "t212": "yes"}
+  "ETN":     {"name": "Eaton Corporation", "exchange": "NYSE", "yahoo": "ETN", "isin": "IE00B8KQN827", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Electrical Components & Equipment", "t212": "yes"}
+  "EXEL":    {"name": "Exelixis", "exchange": "NASDAQ", "yahoo": "EXEL", "isin": "US30161Q1040", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "FN":      {"name": "Fabrinet", "exchange": "NYSE", "yahoo": "FN", "isin": "KYG3323L1005", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Electronic Components", "t212": "yes"}
+  "FSLR":    {"name": "First Solar", "exchange": "NASDAQ", "yahoo": "FSLR", "isin": "US3364331070", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "FTNT":    {"name": "Fortinet", "exchange": "NASDAQ", "yahoo": "FTNT", "isin": "US34959E1091", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Systems Software", "t212": "yes"}
+  "GD":      {"name": "General Dynamics", "exchange": "NYSE", "yahoo": "GD", "isin": "US3695501086", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "GE":      {"name": "GE Aerospace", "exchange": "NYSE", "yahoo": "GE", "isin": "US3696043013", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "GEV":     {"name": "GE Vernova", "exchange": "NYSE", "yahoo": "GEV", "isin": "US36828A1016", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Heavy Electrical Equipment", "t212": "yes"}
+  "GILD":    {"name": "Gilead Sciences", "exchange": "NASDAQ", "yahoo": "GILD", "isin": "US3755581036", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "GOOGL":   {"name": "Alphabet (Google)", "exchange": "NASDAQ", "yahoo": "GOOGL", "isin": "US02079K3059", "currency": "USD", "sector": "Communication Services", "sector_src": "gics", "industry": "Interactive Media & Services", "t212": "yes"}
+  "GS":      {"name": "Goldman Sachs", "exchange": "NYSE", "yahoo": "GS", "isin": "US38141G1040", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Investment Banking & Brokerage", "t212": "yes"}
+  "GSK":     {"name": "GSK", "exchange": "LSE", "yahoo": "GSK.L", "special": "lse_pence", "isin": "GB00BN7SWP63", "currency": "GBp", "sector": "Health Care", "sector_src": "icb", "industry": "Pharmaceuticals, Biotechnology and Marijuana Producers", "t212": "yes"}
+  "HAL":     {"name": "Halliburton", "exchange": "NYSE", "yahoo": "HAL", "isin": "US4062161017", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Equipment & Services", "t212": "yes"}
+  "HEI":     {"name": "HEICO Corporation", "exchange": "NYSE", "yahoo": "HEI", "isin": "US4228061093", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "HII":     {"name": "Huntington Ingalls Industries", "exchange": "NYSE", "yahoo": "HII", "isin": "US4464131063", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "HON":     {"name": "Honeywell", "exchange": "NASDAQ", "yahoo": "HON", "isin": "US4385162056", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Industrial Conglomerates", "t212": "yes"}
+  "HSBC":    {"name": "HSBC Holdings", "exchange": "NYSE", "yahoo": "HSBC", "isin": "US4042804066", "currency": "USD", "sector": "Financials", "sector_src": "yahoo", "industry": "Banks - Diversified", "t212": "yes"}
+  "HUT":     {"name": "Hut 8 Mining", "exchange": "NASDAQ", "yahoo": "HUT", "isin": "US44812J1043", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
+  "ILMN":    {"name": "Illumina", "exchange": "NASDAQ", "yahoo": "ILMN", "isin": "US4523271090", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Life Sciences Tools & Services", "t212": "yes"}
+  "INCY":    {"name": "Incyte", "exchange": "NASDAQ", "yahoo": "INCY", "isin": "US45337C1027", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "INTC":    {"name": "Intel", "exchange": "NASDAQ", "yahoo": "INTC", "isin": "US4581401001", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "INTU":    {"name": "Intuit", "exchange": "NASDAQ", "yahoo": "INTU", "isin": "US4612021034", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Application Software", "t212": "yes"}
+  "IONS":    {"name": "Ionis Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "IONS", "isin": "US4622221004", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "IREN":    {"name": "Iris Energy", "exchange": "NASDAQ", "yahoo": "IREN", "speculative": true, "isin": "AU0000185993", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
+  "JNJ":     {"name": "Johnson & Johnson", "exchange": "NYSE", "yahoo": "JNJ", "isin": "US4781601046", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Pharmaceuticals", "t212": "yes"}
+  "JPM":     {"name": "JPMorgan Chase", "exchange": "NYSE", "yahoo": "JPM", "isin": "US46625H1005", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Diversified Banks", "t212": "yes"}
+  "KEYS":    {"name": "Keysight Technologies", "exchange": "NYSE", "yahoo": "KEYS", "isin": "US49338L1035", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Electronic Equipment & Instruments", "t212": "yes"}
+  "KO":      {"name": "Coca-Cola", "exchange": "NYSE", "yahoo": "KO", "isin": "US1912161007", "currency": "USD", "sector": "Consumer Staples", "sector_src": "gics", "industry": "Soft Drinks & Non-alcoholic Beverages", "t212": "yes"}
+  "KTOS":    {"name": "Kratos Defense", "exchange": "NASDAQ", "yahoo": "KTOS", "isin": "US50077B2079", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "LDOS":    {"name": "Leidos Holdings", "exchange": "NYSE", "yahoo": "LDOS", "isin": "US5253271028", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Diversified Support Services", "t212": "yes"}
+  "LEGN":    {"name": "Legend Biotech", "exchange": "NASDAQ", "yahoo": "LEGN", "isin": "US52490G1022", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "LEU":     {"name": "Centrus Energy", "exchange": "NYSE", "yahoo": "LEU", "isin": "US15643U1043", "currency": "USD", "sector": "Energy", "sector_src": "yahoo", "industry": "Uranium", "t212": "yes"}
+  "LHX":     {"name": "L3Harris Technologies", "exchange": "NYSE", "yahoo": "LHX", "isin": "US5024311095", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "LITE":    {"name": "Lumentum Holdings", "exchange": "NASDAQ", "yahoo": "LITE", "isin": "US55024U1097", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Communications Equipment", "t212": "yes"}
+  "LLY":     {"name": "Eli Lilly", "exchange": "NYSE", "yahoo": "LLY", "isin": "US5324571083", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Pharmaceuticals", "t212": "yes"}
+  "LMT":     {"name": "Lockheed Martin", "exchange": "NYSE", "yahoo": "LMT", "isin": "US5398301094", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "MA":      {"name": "Mastercard", "exchange": "NYSE", "yahoo": "MA", "isin": "US57636Q1040", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Transaction & Payment Processing Services", "t212": "yes"}
+  "MCD":     {"name": "McDonald's", "exchange": "NYSE", "yahoo": "MCD", "isin": "US5801351017", "currency": "USD", "sector": "Consumer Discretionary", "sector_src": "gics", "industry": "Restaurants", "t212": "yes"}
+  "META":    {"name": "Meta Platforms", "exchange": "NASDAQ", "yahoo": "META", "isin": "US30303M1027", "currency": "USD", "sector": "Communication Services", "sector_src": "gics", "industry": "Interactive Media & Services", "t212": "yes"}
+  "MPC":     {"name": "Marathon Petroleum", "exchange": "NYSE", "yahoo": "MPC", "isin": "US56585A1025", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Refining & Marketing", "t212": "yes"}
+  "MRCY":    {"name": "Mercury Systems", "exchange": "NASDAQ", "yahoo": "MRCY", "isin": "US5893781089", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "MRK":     {"name": "Merck", "exchange": "NYSE", "yahoo": "MRK", "isin": "US58933Y1055", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Pharmaceuticals", "t212": "yes"}
+  "MRNA":    {"name": "Moderna", "exchange": "NASDAQ", "yahoo": "MRNA", "isin": "US60770K1079", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "MRVL":    {"name": "Marvell Technology", "exchange": "NASDAQ", "yahoo": "MRVL", "isin": "US5738741041", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "MSFT":    {"name": "Microsoft", "exchange": "NASDAQ", "yahoo": "MSFT", "isin": "US5949181045", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Systems Software", "t212": "yes"}
+  "MTSI":    {"name": "MACOM Technology", "exchange": "NASDAQ", "yahoo": "MTSI", "isin": "US55405Y1001", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
+  "MU":      {"name": "Micron Technology", "exchange": "NASDAQ", "yahoo": "MU", "isin": "US5951121038", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "MXL":     {"name": "MaxLinear", "exchange": "NASDAQ", "yahoo": "MXL", "isin": "US57776J1007", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
+  "NEE":     {"name": "NextEra Energy", "exchange": "NYSE", "yahoo": "NEE", "isin": "US65339F1012", "currency": "USD", "sector": "Utilities", "sector_src": "gics", "industry": "Multi-Utilities", "t212": "yes"}
+  "NET":     {"name": "Cloudflare", "exchange": "NYSE", "yahoo": "NET", "isin": "US18915M1071", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Software - Infrastructure", "t212": "yes"}
+  "NFLX":    {"name": "Netflix", "exchange": "NASDAQ", "yahoo": "NFLX", "isin": "US64110L1061", "currency": "USD", "sector": "Communication Services", "sector_src": "gics", "industry": "Movies & Entertainment", "t212": "yes"}
+  "NKE":     {"name": "Nike", "exchange": "NYSE", "yahoo": "NKE", "isin": "US6541061031", "currency": "USD", "sector": "Consumer Discretionary", "sector_src": "gics", "industry": "Apparel, Accessories & Luxury Goods", "t212": "yes"}
+  "NNE":     {"name": "NANO Nuclear Energy", "exchange": "NASDAQ", "yahoo": "NNE", "speculative": true, "isin": "US63010H1086", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Specialty Industrial Machinery", "t212": "yes"}
+  "NOC":     {"name": "Northrop Grumman", "exchange": "NYSE", "yahoo": "NOC", "isin": "US6668071029", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "NOW":     {"name": "ServiceNow", "exchange": "NYSE", "yahoo": "NOW", "isin": "US81762P1021", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Systems Software", "t212": "yes"}
+  "NTLA":    {"name": "Intellia Therapeutics", "exchange": "NASDAQ", "yahoo": "NTLA", "isin": "US45826J1051", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "NTRA":    {"name": "Natera", "exchange": "NASDAQ", "yahoo": "NTRA", "isin": "US6323071042", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Diagnostics & Research", "t212": "yes"}
+  "NVAX":    {"name": "Novavax", "exchange": "NASDAQ", "yahoo": "NVAX", "speculative": true, "isin": "US6700024010", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "NVDA":    {"name": "NVIDIA", "exchange": "NASDAQ", "yahoo": "NVDA", "isin": "US67066G1040", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "NVO":     {"name": "Novo Nordisk", "exchange": "NYSE", "yahoo": "NVO", "isin": "US6701002056", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Drug Manufacturers - General", "t212": "yes"}
+  "OKLO":    {"name": "Oklo Inc", "exchange": "NYSE", "yahoo": "OKLO", "speculative": true, "isin": "US02156V1098", "currency": "USD", "sector": "Utilities", "sector_src": "yahoo", "industry": "Utilities - Independent Power Producers", "t212": "yes"}
+  "OLN":     {"name": "Olin Corporation", "exchange": "NYSE", "yahoo": "OLN", "isin": "US6806652052", "currency": "USD", "sector": "Materials", "sector_src": "yahoo", "industry": "Chemicals", "t212": "yes"}
+  "ORCL":    {"name": "Oracle", "exchange": "NYSE", "yahoo": "ORCL", "isin": "US68389X1054", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Application Software", "t212": "yes"}
+  "OXY":     {"name": "Occidental Petroleum", "exchange": "NYSE", "yahoo": "OXY", "isin": "US6745991058", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Exploration & Production", "t212": "yes"}
+  "P":       {"name": "Everpure", "exchange": "NYSE", "yahoo": "P", "isin": "US74624M1027", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
+  "PACB":    {"name": "Pacific Biosciences", "exchange": "NASDAQ", "yahoo": "PACB", "speculative": true, "isin": "US69404D1081", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Medical Devices", "t212": "yes"}
+  "PANW":    {"name": "Palo Alto Networks", "exchange": "NASDAQ", "yahoo": "PANW", "isin": "US6974351057", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Systems Software", "t212": "yes"}
+  "PEP":     {"name": "PepsiCo", "exchange": "NASDAQ", "yahoo": "PEP", "isin": "US7134481081", "currency": "USD", "sector": "Consumer Staples", "sector_src": "gics", "industry": "Soft Drinks & Non-alcoholic Beverages", "t212": "yes"}
+  "PG":      {"name": "Procter & Gamble", "exchange": "NYSE", "yahoo": "PG", "isin": "US7427181091", "currency": "USD", "sector": "Consumer Staples", "sector_src": "gics", "industry": "Personal Care Products", "t212": "yes"}
+  "PL":      {"name": "Planet Labs", "exchange": "NYSE", "yahoo": "PL", "isin": "US72703X1063", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "PLTR":    {"name": "Palantir Technologies", "exchange": "NASDAQ", "yahoo": "PLTR", "isin": "US69608A1088", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Application Software", "t212": "yes"}
+  "POWL":    {"name": "Powell Industries", "exchange": "NASDAQ", "yahoo": "POWL", "isin": "US7391281067", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Electrical Equipment & Parts", "t212": "yes"}
+  "QCOM":    {"name": "Qualcomm", "exchange": "NASDAQ", "yahoo": "QCOM", "isin": "US7475251036", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Semiconductors", "t212": "yes"}
+  "QQ.L":    {"name": "QinetiQ Group", "exchange": "LSE", "yahoo": "QQ.L", "special": "lse_pence", "isin": "GB00B0WMWD03", "currency": "GBp", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "RCAT":    {"name": "Red Cat Holdings", "exchange": "NASDAQ", "yahoo": "RCAT", "isin": "US75644T1007", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "RCUS":    {"name": "Arcus Biosciences", "exchange": "NYSE", "yahoo": "RCUS", "speculative": true, "isin": "US03969F1093", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "REGN":    {"name": "Regeneron Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "REGN", "isin": "US75886F1075", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "RKLB":    {"name": "Rocket Lab USA", "exchange": "NASDAQ", "yahoo": "RKLB", "isin": "US7731211089", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "RR.":     {"name": "Rolls-Royce Holdings", "exchange": "LSE", "yahoo": "RR.L", "special": "lse_pence", "isin": "GB00B63H8491", "currency": "GBp", "sector": "Industrials", "sector_src": "icb", "industry": "Aerospace and Defense", "t212": "yes"}
+  "RR.L":    {"name": "Rolls-Royce Holdings", "exchange": "LSE", "yahoo": "RR.L", "special": "lse_pence", "isin": "GB00B63H8491", "currency": "GBp", "sector": "Industrials", "sector_src": "icb", "industry": "Aerospace and Defense", "t212": "yes"}
+  "RTX":     {"name": "RTX Corporation", "exchange": "NYSE", "yahoo": "RTX", "isin": "US75513E1010", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "RXRX":    {"name": "Recursion Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "RXRX", "speculative": true, "isin": "US75629V1044", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "SAIC":    {"name": "Science Applications International", "exchange": "NYSE", "yahoo": "SAIC", "isin": "US8086251076", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Information Technology Services", "t212": "yes"}
+  "SAP":     {"name": "SAP SE", "exchange": "NYSE", "yahoo": "SAP", "isin": "US8030542042", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Software - Application", "t212": "yes"}
+  "SHEL":    {"name": "Shell", "exchange": "NYSE", "yahoo": "SHEL", "isin": "US7802593050", "currency": "USD", "sector": "Energy", "sector_src": "yahoo", "industry": "Oil & Gas Integrated", "t212": "yes"}
+  "SHOP":    {"name": "Shopify", "exchange": "NYSE", "yahoo": "SHOP", "isin": "CA82509L1076", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Software - Application", "t212": "yes"}
+  "SLB":     {"name": "SLB (Schlumberger)", "exchange": "NYSE", "yahoo": "SLB", "isin": "AN8068571086", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Equipment & Services", "t212": "yes"}
+  "SMCI":    {"name": "Super Micro Computer", "exchange": "NASDAQ", "yahoo": "SMCI", "isin": "US86800U3023", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
+  "SMR":     {"name": "NuScale Power", "exchange": "NYSE", "yahoo": "SMR", "speculative": true, "isin": "US67079K1007", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Specialty Industrial Machinery", "t212": "yes"}
+  "SMTC":    {"name": "Semtech", "exchange": "NASDAQ", "yahoo": "SMTC", "isin": "US8168501018", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
+  "SNDK":    {"name": "SanDisk Corporation", "exchange": "NASDAQ", "yahoo": "SNDK", "isin": "US80004C2008", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
+  "SNOW":    {"name": "Snowflake", "exchange": "NYSE", "yahoo": "SNOW", "isin": "US8334451098", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Software - Application", "t212": "yes"}
+  "SONY":    {"name": "Sony Group", "exchange": "NYSE", "yahoo": "SONY", "isin": "US8356993076", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Consumer Electronics", "t212": "yes"}
+  "SPCX":    {"name": "SpaceX", "exchange": "NASDAQ", "yahoo": "SPCX", "isin": "US84615Q1031", "currency": "USD", "sector": "Industrials", "sector_src": "yahoo", "industry": "Aerospace & Defense", "t212": "yes"}
+  "SPOT":    {"name": "Spotify", "exchange": "NYSE", "yahoo": "SPOT", "isin": "LU1778762911", "currency": "USD", "sector": "Communication Services", "sector_src": "yahoo", "industry": "Internet Content & Information", "t212": "yes"}
+  "SRPT":    {"name": "Sarepta Therapeutics", "exchange": "NASDAQ", "yahoo": "SRPT", "isin": "US8036071004", "currency": "USD", "sector": "Health Care", "sector_src": "yahoo", "industry": "Biotechnology", "t212": "yes"}
+  "SSE.L":   {"name": "SSE plc", "exchange": "LSE", "yahoo": "SSE.L", "special": "lse_pence", "isin": "GB0007908733", "currency": "GBp", "sector": "Utilities", "sector_src": "icb", "industry": "Electricity", "t212": "yes"}
+  "STX":     {"name": "Seagate Technology", "exchange": "NASDAQ", "yahoo": "STX", "isin": "IE00BKVD2N49", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
+  "TDG":     {"name": "TransDigm Group", "exchange": "NYSE", "yahoo": "TDG", "isin": "US8936411003", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "TLN":     {"name": "Talen Energy", "exchange": "NASDAQ", "yahoo": "TLN", "isin": "US87422Q1094", "currency": "USD", "sector": "Utilities", "sector_src": "yahoo", "industry": "Utilities - Independent Power Producers", "t212": "yes"}
+  "TM":      {"name": "Toyota Motor", "exchange": "NYSE", "yahoo": "TM", "isin": "US8923313071", "currency": "USD", "sector": "Consumer Discretionary", "sector_src": "yahoo", "industry": "Auto Manufacturers", "t212": "yes"}
+  "TMO":     {"name": "Thermo Fisher Scientific", "exchange": "NYSE", "yahoo": "TMO", "isin": "US8835561023", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Life Sciences Tools & Services", "t212": "yes"}
+  "TSLA":    {"name": "Tesla", "exchange": "NASDAQ", "yahoo": "TSLA", "isin": "US88160R1014", "currency": "USD", "sector": "Consumer Discretionary", "sector_src": "gics", "industry": "Automobile Manufacturers", "t212": "yes"}
+  "TSM":     {"name": "Taiwan Semiconductor", "exchange": "NYSE", "yahoo": "TSM", "isin": "US8740391003", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Semiconductors", "t212": "yes"}
+  "TTE":     {"name": "TotalEnergies", "exchange": "NYSE", "yahoo": "TTE", "isin": "FR0000120271", "currency": "USD", "sector": "Energy", "sector_src": "yahoo", "industry": "Oil & Gas Integrated", "t212": "yes"}
+  "TXT":     {"name": "Textron", "exchange": "NYSE", "yahoo": "TXT", "isin": "US8832031012", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Aerospace & Defense", "t212": "yes"}
+  "UBER":    {"name": "Uber", "exchange": "NYSE", "yahoo": "UBER", "isin": "US90353T1007", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Passenger Ground Transportation", "t212": "yes"}
+  "UEC":     {"name": "Uranium Energy Corp", "exchange": "NYSE", "yahoo": "UEC", "isin": "US9168961038", "currency": "USD", "sector": "Energy", "sector_src": "yahoo", "industry": "Uranium", "t212": "yes"}
+  "UNH":     {"name": "UnitedHealth Group", "exchange": "NYSE", "yahoo": "UNH", "isin": "US91324P1021", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Managed Health Care", "t212": "yes"}
+  "V":       {"name": "Visa", "exchange": "NYSE", "yahoo": "V", "isin": "US92826C8394", "currency": "USD", "sector": "Financials", "sector_src": "gics", "industry": "Transaction & Payment Processing Services", "t212": "yes"}
+  "VIAV":    {"name": "Viavi Solutions", "exchange": "NASDAQ", "yahoo": "VIAV", "isin": "US9255501051", "currency": "USD", "sector": "Technology", "sector_src": "yahoo", "industry": "Communication Equipment", "t212": "yes"}
+  "VLO":     {"name": "Valero Energy", "exchange": "NYSE", "yahoo": "VLO", "isin": "US91913Y1001", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Oil & Gas Refining & Marketing", "t212": "yes"}
+  "VRT":     {"name": "Vertiv Holdings", "exchange": "NYSE", "yahoo": "VRT", "isin": "US92537N1081", "currency": "USD", "sector": "Industrials", "sector_src": "gics", "industry": "Electrical Components & Equipment", "t212": "yes"}
+  "VRTX":    {"name": "Vertex Pharmaceuticals", "exchange": "NASDAQ", "yahoo": "VRTX", "isin": "US92532F1003", "currency": "USD", "sector": "Health Care", "sector_src": "gics", "industry": "Biotechnology", "t212": "yes"}
+  "VST":     {"name": "Vistra Corp", "exchange": "NYSE", "yahoo": "VST", "isin": "US92840M1027", "currency": "USD", "sector": "Utilities", "sector_src": "gics", "industry": "Electric Utilities", "t212": "yes"}
+  "WDC":     {"name": "Western Digital", "exchange": "NASDAQ", "yahoo": "WDC", "isin": "US9581021055", "currency": "USD", "sector": "Technology", "sector_src": "gics", "industry": "Technology Hardware, Storage & Peripherals", "t212": "yes"}
+  "WMT":     {"name": "Walmart", "exchange": "NYSE", "yahoo": "WMT", "isin": "US9311421039", "currency": "USD", "sector": "Consumer Staples", "sector_src": "gics", "industry": "Consumer Staples Merchandise Retail", "t212": "yes"}
+  "WULF":    {"name": "TeraWulf", "exchange": "NASDAQ", "yahoo": "WULF", "speculative": true, "isin": "US88080T1043", "currency": "USD", "sector": "Technology", "sector_src": "override", "industry": "Data Centers & Crypto Mining", "t212": "yes"}
+  "XOM":     {"name": "ExxonMobil", "exchange": "NYSE", "yahoo": "XOM", "isin": "US30233Q1085", "currency": "USD", "sector": "Energy", "sector_src": "gics", "industry": "Integrated Oil & Gas", "t212": "yes"}
+  "ADA":     {"name": "Cardano", "exchange": "Crypto", "yahoo": "ADA-USD", "cmc_symbol": "ADA", "cmc_id": 2010, "coingecko": "cardano", "currency": "USD", "t212": "no"}
+  "AIOZ":    {"name": "AIOZ Network", "exchange": "Crypto", "yahoo": "AIOZ-USD", "cmc_symbol": "AIOZ", "cmc_id": 9104, "coingecko": "aioz-network", "currency": "USD", "t212": "no"}
+  "ALGO":    {"name": "Algorand", "exchange": "Crypto", "yahoo": "ALGO-USD", "cmc_symbol": "ALGO", "cmc_id": 4030, "coingecko": "algorand", "currency": "USD", "t212": "no"}
+  "ALT":     {"name": "AltLayer", "exchange": "Crypto", "yahoo": "ALT29073-USD", "cmc_symbol": "ALT", "cmc_id": 29073, "coingecko": "altlayer", "currency": "USD", "t212": "no"}
+  "ARKM":    {"name": "Arkham", "exchange": "Crypto", "yahoo": "ARKM-USD", "cmc_symbol": "ARKM", "cmc_id": 27565, "coingecko": "arkham", "currency": "USD", "t212": "no"}
+  "AVAX":    {"name": "Avalanche", "exchange": "Crypto", "yahoo": "AVAX-USD", "cmc_symbol": "AVAX", "cmc_id": 5805, "coingecko": "avalanche-2", "currency": "USD", "t212": "no"}
+  "BNB":     {"name": "BNB", "exchange": "Crypto", "yahoo": "BNB-USD", "cmc_symbol": "BNB", "cmc_id": 1839, "coingecko": "binancecoin", "currency": "USD", "t212": "no"}
+  "BTC":     {"name": "Bitcoin", "exchange": "Crypto", "yahoo": "BTC-USD", "cmc_symbol": "BTC", "cmc_id": 1, "coingecko": "bitcoin", "currency": "USD", "t212": "no"}
+  "DOGE":    {"name": "Dogecoin", "exchange": "Crypto", "yahoo": "DOGE-USD", "cmc_symbol": "DOGE", "cmc_id": 74, "coingecko": "dogecoin", "currency": "USD", "t212": "no"}
+  "DOT":     {"name": "Polkadot", "exchange": "Crypto", "yahoo": "DOT-USD", "cmc_symbol": "DOT", "cmc_id": 6636, "coingecko": "polkadot", "currency": "USD", "t212": "no"}
+  "ETH":     {"name": "Ethereum", "exchange": "Crypto", "yahoo": "ETH-USD", "cmc_symbol": "ETH", "cmc_id": 1027, "coingecko": "ethereum", "currency": "USD", "t212": "no"}
+  "FET":     {"name": "ASI Alliance", "exchange": "Crypto", "yahoo": "FET-USD", "cmc_symbol": "FET", "cmc_id": 3773, "coingecko": "fetch-ai", "currency": "USD", "t212": "no"}
+  "GRT":     {"name": "The Graph", "exchange": "Crypto", "yahoo": "GRT6719-USD", "cmc_symbol": "GRT", "cmc_id": 6719, "coingecko": "the-graph", "currency": "USD", "t212": "no"}
+  "HBAR":    {"name": "Hedera", "exchange": "Crypto", "yahoo": "HBAR-USD", "cmc_symbol": "HBAR", "cmc_id": 4642, "coingecko": "hedera-hashgraph", "currency": "USD", "t212": "no"}
+  "ICP":     {"name": "Internet Computer", "exchange": "Crypto", "yahoo": "ICP-USD", "cmc_symbol": "ICP", "cmc_id": 8916, "coingecko": "internet-computer", "currency": "USD", "t212": "no"}
+  "KAITO":   {"name": "Kaito", "exchange": "Crypto", "yahoo": "KAITO-USD", "cmc_symbol": "KAITO", "cmc_id": 35763, "coingecko": "kaito", "currency": "USD", "t212": "no"}
+  "LINK":    {"name": "Chainlink", "exchange": "Crypto", "yahoo": "LINK-USD", "cmc_symbol": "LINK", "cmc_id": 1975, "coingecko": "chainlink", "currency": "USD", "t212": "no"}
+  "MINA":    {"name": "Mina", "exchange": "Crypto", "yahoo": "MINA-USD", "cmc_symbol": "MINA", "cmc_id": 8646, "coingecko": "mina-protocol", "currency": "USD", "t212": "no"}
+  "NEAR":    {"name": "NEAR Protocol", "exchange": "Crypto", "yahoo": "NEAR-USD", "cmc_symbol": "NEAR", "cmc_id": 6535, "coingecko": "near", "currency": "USD", "t212": "no"}
+  "NMR":     {"name": "Numeraire", "exchange": "Crypto", "yahoo": "NMR-USD", "cmc_symbol": "NMR", "cmc_id": 1732, "coingecko": "numeraire", "currency": "USD", "t212": "no"}
+  "PEPE":    {"name": "Pepe", "exchange": "Crypto", "yahoo": "PEPE24478-USD", "cmc_symbol": "PEPE", "cmc_id": 24478, "coingecko": "pepe", "currency": "USD", "t212": "no"}
+  "POL":     {"name": "Polygon (MATIC)", "exchange": "Crypto", "yahoo": "POL28321-USD", "cmc_symbol": "POL", "cmc_id": 28321, "coingecko": "polygon-ecosystem-token", "currency": "USD", "t212": "no"}
+  "RNDR":    {"name": "Render", "exchange": "Crypto", "yahoo": "RENDER-USD", "cmc_symbol": "RENDER", "cmc_id": 5690, "coingecko": "render-token", "currency": "USD", "t212": "no"}
+  "SOL":     {"name": "Solana", "exchange": "Crypto", "yahoo": "SOL-USD", "cmc_symbol": "SOL", "cmc_id": 5426, "coingecko": "solana", "currency": "USD", "t212": "no"}
+  "SUI":     {"name": "Sui", "exchange": "Crypto", "yahoo": "SUI20947-USD", "cmc_symbol": "SUI", "cmc_id": 20947, "coingecko": "sui", "currency": "USD", "t212": "no"}
+  "TAO":     {"name": "Bittensor", "exchange": "Crypto", "yahoo": "TAO22974-USD", "cmc_symbol": "TAO", "cmc_id": 22974, "coingecko": "bittensor", "currency": "USD", "t212": "no"}
+  "TON":     {"name": "Toncoin", "exchange": "Crypto", "yahoo": "TON11419-USD", "cmc_symbol": "GRAM", "cmc_id": 11419, "coingecko": "the-open-network", "currency": "USD", "t212": "no"}
+  "TRX":     {"name": "TRON", "exchange": "Crypto", "yahoo": "TRX-USD", "cmc_symbol": "TRX", "cmc_id": 1958, "coingecko": "tron", "currency": "USD", "t212": "no"}
+  "VIRTUAL": {"name": "Virtuals Protocol", "exchange": "Crypto", "yahoo": "VIRTUAL-USD", "cmc_symbol": "VIRTUAL", "cmc_id": 29420, "coingecko": "virtual-protocol", "currency": "USD", "t212": "no"}
+  "WLD":     {"name": "Worldcoin", "exchange": "Crypto", "yahoo": "WLD-USD", "cmc_symbol": "WLD", "cmc_id": 13502, "coingecko": "worldcoin-wld", "currency": "USD", "t212": "no"}
+  "XLM":     {"name": "Stellar", "exchange": "Crypto", "yahoo": "XLM-USD", "cmc_symbol": "XLM", "cmc_id": 512, "coingecko": "stellar", "currency": "USD", "t212": "no"}
+  "XRP":     {"name": "XRP", "exchange": "Crypto", "yahoo": "XRP-USD", "cmc_symbol": "XRP", "cmc_id": 52, "coingecko": "ripple", "currency": "USD", "t212": "no"}
 
 sectors:
   AI:
@@ -544,3 +557,11 @@ retired:
   "MATIC":   {"name": "Polygon (old MATIC)", "exchange": "Crypto", "yahoo": "MATIC-USD", "cmc_symbol": "MATIC", "coingecko": "matic-network"}
   "OCEAN":   {"name": "Ocean Protocol", "exchange": "Crypto", "yahoo": "OCEAN-USD", "cmc_symbol": "OCEAN", "coingecko": "ocean-protocol"}
   "AGIX":    {"name": "SingularityNET", "exchange": "Crypto", "yahoo": "AGIX-USD", "cmc_symbol": "AGIX", "coingecko": "singularitynet"}
+
+sector_overrides:
+  # Data-centre operators (bitcoin mining, increasingly AI hosting): Yahoo splits them between Financials
+  # and Technology; owner decision 22 Nov 2026 (#95): all Technology. Not in the S&P 500, so no GICS label.
+  "US44812J1043": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "Hut 8: data centres / bitcoin mining; Yahoo says Financials"}
+  "AU0000185993": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "IREN: data centres / AI hosting; Yahoo says Financials"}
+  "US88080T1043": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "TeraWulf: data centres / AI hosting; Yahoo says Financials"}
+  "US21874A1060": {"sector": "Technology", "industry": "Data Centers & Crypto Mining", "reason": "Core Scientific: data centres / AI hosting; pinned so it stays with the other three"}
