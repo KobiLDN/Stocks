@@ -662,22 +662,25 @@
 <script src="Defence/signals-local.js"></script>
 <script>window.__sd_Defence = window.SIGNALS_DATA;</script>
 
-<script src="Biotech/prices-data.js"></script>
-<script>window.__pd_Biotech = window.PRICES_DATA;</script>
 
-<script src="Tech/prices-data.js"></script>
-<script>window.__pd_Tech = window.PRICES_DATA;</script>
 
 <script src="Crypto/prices-data.js"></script>
 <script>window.__pd_Crypto = window.PRICES_DATA;</script>
 <script src="Crypto/signals-local.js"></script>
 <script>window.__sd_Crypto = window.SIGNALS_DATA;</script>
 
-<script src="Energy/prices-data.js"></script>
-<script>window.__pd_Energy = window.PRICES_DATA;</script>
 
-<script src="MegaCap/prices-data.js"></script>
-<script>window.__pd_MegaCap = window.PRICES_DATA;</script>
+
+<!-- #88: the Biotech, Energy, Mega-Cap and Tech folders were retired; their cards use the All file's theme tags -->
+<script src="All/all-data.js"></script>
+<script>
+(function() {
+  const all = (window.ALL_DATA && window.ALL_DATA.stocks) || [];
+  for (const [id, key] of [['Biotech', 'biotech'], ['Tech', 'tech'], ['Energy', 'energy'], ['MegaCap', 'megacap']]) {
+    window['__pd_' + id] = { updated: window.ALL_DATA && window.ALL_DATA.updated, stocks: all.filter(s => (s.themes || []).includes(key)) };
+  }
+})();
+</script>
 
 <script>
 // Aggregate all sector stocks for ticker tape
@@ -713,7 +716,7 @@
         <span class="sector-pill-name">AI Infra</span>
         <span class="sector-pill-badge">Live</span>
       </a>
-      <a class="sector-pill" href="Biotech/index.html">
+      <a class="sector-pill" href="All/index.html?theme=biotech">
         <span class="sector-pill-icon">🧬</span>
         <span class="sector-pill-name">Biotech</span>
         <span class="sector-pill-badge">Live</span>
@@ -723,7 +726,7 @@
         <span class="sector-pill-name">Defence</span>
         <span class="sector-pill-badge">Live</span>
       </a>
-      <a class="sector-pill" href="Tech/index.html">
+      <a class="sector-pill" href="All/index.html?theme=tech">
         <span class="sector-pill-icon">💻</span>
         <span class="sector-pill-name">Technology</span>
         <span class="sector-pill-badge">Live</span>
@@ -733,7 +736,7 @@
         <span class="sector-pill-name">Crypto</span>
         <span class="sector-pill-badge">Live</span>
       </a>
-      <a class="sector-pill" href="Energy/index.html">
+      <a class="sector-pill" href="All/index.html?theme=energy">
         <span class="sector-pill-icon">⚡</span>
         <span class="sector-pill-name">Energy</span>
         <span class="sector-pill-badge">Live</span>
@@ -918,7 +921,7 @@
         </div>
       </a>
 
-      <a class="card live" href="Biotech/index.html">
+      <a class="card live" href="All/index.html?theme=biotech">
         <div class="card-top">
           <div class="card-icon">🧬</div>
           <div class="sector-stats" id="stats-Biotech"></div>
@@ -938,7 +941,7 @@
         </div>
       </a>
 
-      <a class="card live" href="Tech/index.html">
+      <a class="card live" href="All/index.html?theme=tech">
         <div class="card-top">
           <div class="card-icon">💻</div>
           <div class="sector-stats" id="stats-Tech"></div>
@@ -978,7 +981,7 @@
         </div>
       </a>
 
-      <a class="card live" href="Energy/index.html">
+      <a class="card live" href="All/index.html?theme=energy">
         <div class="card-top">
           <div class="card-icon">⚡</div>
           <div class="sector-stats" id="stats-Energy"></div>
@@ -998,7 +1001,7 @@
         </div>
       </a>
 
-      <a class="card live" href="MegaCap/index.html">
+      <a class="card live" href="All/index.html?theme=megacap">
         <div class="card-top">
           <div class="card-icon">🌍</div>
           <div class="sector-stats" id="stats-MegaCap"></div>
@@ -1094,7 +1097,7 @@
           <span class="sector-pill-name">AI Infra</span>
           <span class="sector-pill-badge">Live</span>
         </a>
-        <a class="sector-pill" href="Biotech/index.html">
+        <a class="sector-pill" href="All/index.html?theme=biotech">
           <span class="sector-pill-icon">🧬</span>
           <span class="sector-pill-name">Biotech</span>
           <span class="sector-pill-badge">Live</span>
@@ -1104,7 +1107,7 @@
           <span class="sector-pill-name">Defence</span>
           <span class="sector-pill-badge">Live</span>
         </a>
-        <a class="sector-pill" href="Tech/index.html">
+        <a class="sector-pill" href="All/index.html?theme=tech">
           <span class="sector-pill-icon">💻</span>
           <span class="sector-pill-name">Technology</span>
           <span class="sector-pill-badge">Live</span>
@@ -1114,7 +1117,7 @@
           <span class="sector-pill-name">Crypto</span>
           <span class="sector-pill-badge">Live</span>
         </a>
-        <a class="sector-pill" href="Energy/index.html">
+        <a class="sector-pill" href="All/index.html?theme=energy">
           <span class="sector-pill-icon">⚡</span>
           <span class="sector-pill-name">Energy</span>
           <span class="sector-pill-badge">Live</span>
@@ -1145,12 +1148,12 @@
        ═══════════════════════════════════════════════════════════════ */
     const MARKET_SECTORS = [
       { key: 'ai',      label: 'AI Infra',   icon: '🤖', cls: 'sec-ai',      page: 'AI/index.html',      path: 'AI/prices-data.js'      },
-      { key: 'biotech', label: 'Biotech',    icon: '🧬', cls: 'sec-biotech', page: 'Biotech/index.html', path: 'Biotech/prices-data.js' },
+      { key: 'biotech', label: 'Biotech',    icon: '🧬', cls: 'sec-biotech', page: 'All/index.html?theme=biotech', path: 'Biotech/prices-data.js' },
       { key: 'defence', label: 'Defence',    icon: '🛡️', cls: 'sec-defence', page: 'Defence/index.html', path: 'Defence/prices-data.js' },
-      { key: 'tech',    label: 'Technology', icon: '💻', cls: 'sec-tech',    page: 'Tech/index.html',    path: 'Tech/prices-data.js'    },
+      { key: 'tech',    label: 'Technology', icon: '💻', cls: 'sec-tech',    page: 'All/index.html?theme=tech',    path: 'Tech/prices-data.js'    },
       { key: 'crypto',  label: 'Crypto',     icon: '₿',  cls: 'sec-crypto',  page: 'Crypto/index.html',  path: 'Crypto/prices-data.js'  },
-      { key: 'energy',  label: 'Energy',     icon: '⚡', cls: 'sec-energy',  page: 'Energy/index.html',  path: 'Energy/prices-data.js'  },
-      { key: 'megacap', label: 'Mega-Cap',   icon: '🌍', cls: 'sec-megacap', page: 'MegaCap/index.html', path: 'MegaCap/prices-data.js' },
+      { key: 'energy',  label: 'Energy',     icon: '⚡', cls: 'sec-energy',  page: 'All/index.html?theme=energy',  path: 'Energy/prices-data.js'  },
+      { key: 'megacap', label: 'Mega-Cap',   icon: '🌍', cls: 'sec-megacap', page: 'All/index.html?theme=megacap', path: 'MegaCap/prices-data.js' },
     ];
     // Crypto tickers need CoinGecko, not Yahoo — same map as Crypto/index.html
     const COINGECKO_IDS = {
@@ -1358,8 +1361,8 @@
       const one = document.getElementById('group-heatmap-1d'), week = document.getElementById('group-heatmap-1w');
       if (!one || !week) return;
       try {
-        const text = await fetch('All/all-data.js').then(r => r.text());
-        const data = JSON.parse(text.replace(/^\s*window\.ALL_DATA\s*=\s*/, '').replace(/;\s*$/, ''));
+        const data = window.ALL_DATA || JSON.parse((await fetch('All/all-data.js').then(r => r.text()))
+          .replace(/^\s*window\.ALL_DATA\s*=\s*/, '').replace(/;\s*$/, ''));
         const stocks = data.stocks || [];
         const sc = document.getElementById('hub-stock-count'); if (sc && stocks.length) sc.textContent = stocks.length;
         const results = GROUP_TILES.map(g => ({ ...g, stocks: stocks.filter(g.f) }));

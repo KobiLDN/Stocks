@@ -39,33 +39,52 @@ def with_count(s, universe, sector):
     return {**s, "meta_description": s["meta_description"].replace("{count}", str(len(universe["sectors"][sector])))}
 
 
-# #88: these themes' own signal runs were retired (22 Nov 2026). Their past picks stay in the track record;
-# the Signals page sends visitors to the run that replaced it.
+# #88: the Biotech, Energy, Mega-Cap and Tech folders were retired (22 Nov 2026). Each of their pages
+# becomes a redirect: Signals to the run that replaced theirs, every other page to the same All page with
+# the theme filter on (old bookmarks keep working). Their past picks stay in the track record.
 RETIRED_SIGNALS = {
     "Biotech": ("sectors/health-care/signals.html", "Health Care"),
     "Energy": ("sectors/energy/signals.html", "Energy sector"),
     "MegaCap": ("markets/sp500/signals.html", "S&amp;P 500"),
     "Tech": ("sectors/technology/signals.html", "Technology"),
 }
+RETIRED_THEMES = {"Biotech": ("biotech", "Biotech"), "Energy": ("energy", "Energy"),
+                  "MegaCap": ("megacap", "Mega-Cap"), "Tech": ("tech", "Tech")}
+PAGE_NAMES = {"index.html": "Dashboard", "metrics.html": "Metrics", "news.html": "News", "heatmap.html": "Heatmap",
+              "charts.html": "Charts", "calculator.html": "What-If"}
 
 
-def retired_signals_page(sector, target, name):
-    url = "../" + target
+def redirect_page(title, url, message):
     return (
         "<!DOCTYPE html>\n" + BANNER.format(tpl="(redirect in build.py)") +
         '<html lang="en">\n<head>\n<meta charset="UTF-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
-        f'<title>{sector} Signals moved</title>\n'
+        f'<title>{title}</title>\n'
         f'<meta http-equiv="refresh" content="0; url={url}">\n'
         f'<link rel="canonical" href="{url}">\n'
-        f'<script>location.replace({json.dumps(url)});</script>\n'
+        f'<script>location.replace({json.dumps(url)} + (location.hash || ""));</script>\n'
         '<style>body{font-family:system-ui,sans-serif;background:#f8fafc;color:#0f172a;padding:40px 16px}'
         '@media (prefers-color-scheme:dark){body{background:#0f172a;color:#e2e8f0}a{color:#7dd3fc}}</style>\n'
-        '</head>\n<body>\n'
-        f'<p>The {sector} signal run was retired on 22 Nov 2026. Its picks now come from the '
-        f'<a href="{url}">{name} Signals</a> page. Past {sector} picks stay in the '
-        '<a href="../track-record.html">Track Record</a>.</p>\n</body>\n</html>\n'
+        f'</head>\n<body>\n<p>{message}</p>\n</body>\n</html>\n'
     )
+
+
+def retired_pages():
+    out = {}
+    for sector, (target, name) in RETIRED_SIGNALS.items():
+        url = "../" + target
+        out[f"{sector}/signals.html"] = redirect_page(
+            f"{sector} Signals moved", url,
+            f'The {sector} signal run was retired on 22 Nov 2026. Its picks now come from the '
+            f'<a href="{url}">{name} Signals</a> page. Past {sector} picks stay in the '
+            '<a href="../track-record.html">Track Record</a>.')
+    for sector, (key, label) in RETIRED_THEMES.items():
+        for file, page in PAGE_NAMES.items():
+            url = f"../All/{file}?theme={key}"
+            out[f"{sector}/{file}"] = redirect_page(
+                f"{label} {page} moved", url,
+                f'The {label} pages are now a filter on every page: see <a href="{url}">All Stocks, {label} only</a>.')
+    return out
 
 
 def render_all():
@@ -74,11 +93,10 @@ def render_all():
     env = Environment(loader=FileSystemLoader(os.path.join(HERE, "templates")), undefined=StrictUndefined,
                       trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
     out = {}
+    out.update(retired_pages())
     tpl = env.get_template("signals.html.j2")
-    for sector, (target, name) in RETIRED_SIGNALS.items():
-        out[f"{sector}/signals.html"] = retired_signals_page(sector, target, name)
     for sector, s in sectors["signals"].items():
-        if sector in RETIRED_SIGNALS:
+        if sector in RETIRED_THEMES:
             continue
         names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = tpl.render(s=s, sector=sector, names_json=names, root="../")
@@ -86,6 +104,8 @@ def render_all():
     mtpl = env.get_template("metrics.html.j2")
     base_tips = sectors["metrics_base_tips"]
     for sector, s in sectors["metrics"].items():
+        if sector in RETIRED_THEMES:
+            continue
         s = with_count(s, universe, sector)
         tip = lambda key, s=s: {**base_tips[key], **s["tip_overrides"].get(key, {})}
         names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
@@ -93,26 +113,36 @@ def render_all():
         out[f"{sector}/metrics.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="metrics.html.j2"), 1)
     ntpl = env.get_template("news.html.j2")
     for sector, s in sectors["news"].items():
+        if sector in RETIRED_THEMES:
+            continue
         s = with_count(s, universe, sector)
         names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = ntpl.render(s=s, sector=sector, names_json=names, root="../")
         out[f"{sector}/news.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="news.html.j2"), 1)
     ctpl = env.get_template("calculator.html.j2")
     for sector, s in sectors["calculator"].items():
+        if sector in RETIRED_THEMES:
+            continue
         names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = ctpl.render(s=s, sector=sector, names_json=names, root="../")
         out[f"{sector}/calculator.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="calculator.html.j2"), 1)
     htpl = env.get_template("charts.html.j2")
     for sector, s in sectors["charts"].items():
+        if sector in RETIRED_THEMES:
+            continue
         html = htpl.render(s=s, sector=sector, root="../")
         out[f"{sector}/charts.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="charts.html.j2"), 1)
     hmtpl = env.get_template("heatmap.html.j2")
     for sector, s in sectors["heatmap"].items():
+        if sector in RETIRED_THEMES:
+            continue
         names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=2)
         html = hmtpl.render(s=s, sector=sector, names_json=names, root="../")
         out[f"{sector}/heatmap.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="heatmap.html.j2"), 1)
     dtpl = env.get_template("dashboard.html.j2")
     for sector, s in sectors["dashboard"].items():
+        if sector in RETIRED_THEMES:
+            continue
         with open(os.path.join(HERE, "css", "dashboard", f"{sector}.css"), encoding="utf-8") as f:
             css = f.read()
         html = dtpl.render(s=s, sector=sector, css=css, root="../")

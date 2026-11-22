@@ -19,12 +19,8 @@ on:
         options:
           - all
           - AI
-          - Biotech
           - Defence
-          - Tech
           - Crypto
-          - Energy
-          - MegaCap
           - groups
 
 permissions:
@@ -64,7 +60,7 @@ jobs:
           now = datetime.now(ldn)
           oldest = min(
               datetime.strptime(json.load(open(f"{s}/prices.json"))["updated"], "%Y-%m-%d %H:%M").replace(tzinfo=ldn)
-              for s in ["AI", "Biotech", "Defence", "Tech", "Crypto", "Energy", "MegaCap"]
+              for s in ["AI", "Defence", "Crypto"]
           )
           skip = now - oldest < timedelta(hours=4)
           print(f"Oldest sector update {oldest:%Y-%m-%d %H:%M} London ({now - oldest} ago) -> {'skip' if skip else 'run'}")
@@ -85,7 +81,9 @@ jobs:
           COINSTATS_API_KEY: ${{ secrets.COINSTATS_API_KEY }}
         run: |
           SECTOR="${{ inputs.sector }}"
-          for s in AI Biotech Defence Tech Crypto Energy MegaCap; do
+          # Theme folders with their own price script. Biotech, Energy, Mega-Cap and Tech were retired (#88):
+          # their stocks are priced by update_group_prices.py and shown on the All pages with a theme filter.
+          for s in AI Defence Crypto; do
             if [[ "${{ github.event_name }}" == "schedule" || "$SECTOR" == "all" || "$SECTOR" == "$s" ]]; then
               pip install -q -r $s/requirements.txt
               (cd $s && python ${s}_update_prices.py)
@@ -117,18 +115,14 @@ jobs:
           # main pushes to main; a branch run commits its output to its own branch (WORKFLOW.md
           # "Bot-code changes"). It used to push every run to main, branch code included.
           TARGET="${{ github.ref_name }}"
-          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Biotech/index.html Biotech/prices.json Biotech/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Tech/prices.json Tech/prices-data.js Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json Energy/prices.json Energy/prices-data.js MegaCap/prices.json MegaCap/prices-data.js market.json market-data.js && [ -z "$(git status --porcelain -- groups/ markets/ sectors/ All/all-data.js)" ]; then
+          if git diff --quiet -- AI/index.html AI/prices.json AI/prices-data.js Defence/index.html Defence/prices.json Defence/prices-data.js Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json market.json market-data.js && [ -z "$(git status --porcelain -- groups/ markets/ sectors/ All/all-data.js All/news-data.js)" ]; then
             echo "No price changes."
           else
             git add AI/index.html AI/prices.json AI/prices-data.js
-            git add Biotech/index.html Biotech/prices.json Biotech/prices-data.js
             git add Defence/index.html Defence/prices.json Defence/prices-data.js
-            git add Tech/prices.json Tech/prices-data.js
             git add Crypto/prices.json Crypto/prices-data.js Crypto/ytd_cache.json
-            git add Energy/prices.json Energy/prices-data.js
-            git add MegaCap/prices.json MegaCap/prices-data.js
             git add market.json market-data.js
-            git add groups/ markets/*/prices-data.js sectors/*/prices-data.js All/all-data.js
+            git add groups/ markets/*/prices-data.js sectors/*/prices-data.js All/all-data.js All/news-data.js
             git commit -m "Update prices — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
               git fetch origin "$TARGET"

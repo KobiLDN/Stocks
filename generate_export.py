@@ -8,7 +8,8 @@ Since #88 (Nov 2026): one row per stock, read from the 11 sector groups' price f
 `sector` is the stock's official sector ("Crypto" for coins); `themes`, `markets` and `t212` say
 where else it belongs. Signals come from every live run (the themes that kept a run, the 11 sector
 runs and the FTSE 100 run); a stock picked by several runs appears once, with all of them in
-`picked_by` and its strongest pick in the `signal*` fields. News comes from the theme price files.
+`picked_by` and its strongest pick in the `signal*` fields. News comes from the group price files
+(update_group_prices.py), then the theme price files.
 """
 import json, re, csv, os, glob
 from datetime import datetime, timezone, timedelta
@@ -18,8 +19,8 @@ from pathlib import Path
 BASE    = os.path.dirname(os.path.abspath(__file__))
 # Themes that still have their own signal run (#88 retired Biotech, Energy, Mega-Cap and Tech)
 THEME_RUNS = ["AI", "Defence", "Crypto"]
-# Theme price files: news headlines, and Crypto's rows (coins are in no sector group)
-THEMES = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
+# Theme price files: extra news headlines, and Crypto's rows (coins are in no sector group)
+THEMES = ["AI", "Crypto", "Defence"]
 
 # T212 ticker → canonical universe ticker (OTC / ADR aliases)
 TICKER_ALIASES = {

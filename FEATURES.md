@@ -2,10 +2,12 @@
 
 ## Backlog
 
-- **#88 follow-ups:** retired theme folders (Biotech, Energy, Mega-Cap, Tech) → All pages with the theme filter, and stop their price bots; PR 10 (track record in GBP, vs local index for UK picks, quarterly run review)
+- **#88 follow-ups:** PR 10 (track record in GBP, vs local index for UK picks, quarterly run review)
 - Open ideas live in GitHub issues (#40 influencer tweets, #44 stock calendar).
 
 ## Done
+
+- **Biotech, Energy, Mega-Cap and Tech folders retired (#88 follow-up)** — pages redirect to the All pages with the theme filter, price scripts stopped, All News from one file with the shared filters
 
 - **Headlines on the market and sector News pages (#88 follow-up)** — picks, biggest movers and theme stocks, cached in `groups/news.json`, refreshed at most every 6 h
 
