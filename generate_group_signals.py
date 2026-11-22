@@ -296,7 +296,7 @@ def run_group(group, assets, api_key, now_str, call=call_api):
 def derive_market(market, groups, assets, now_str):
     """The sector runs' picks that are members of `market`, best first (confidence, then sector rank)."""
     members = set(groups[market]["tickers"])
-    picks, sources, latest = [], [], None
+    picks, sources, latest, model = [], [], None, None
     for g in groups.values():
         if g["kind"] != "sector":
             continue
@@ -305,6 +305,7 @@ def derive_market(market, groups, assets, now_str):
         except (OSError, ValueError):
             continue
         sources.append(g["id"])
+        model = model or data.get("model")
         latest = max(latest or "", data.get("updated") or "")
         for p in data.get("picks") or []:
             if p["ticker"] in members:
@@ -314,6 +315,7 @@ def derive_market(market, groups, assets, now_str):
         p["rank"] = i
     path = os.path.join(ROOT, groups[market]["path"])
     out = {"updated": latest or now_str, "derived": True, "derived_from": sources,
+           "model": model or MODEL,
            "group": market, "group_name": groups[market]["name"], "group_kind": "market",
            "note": f"Picks from the 11 sector runs that are members of the {groups[market]['name']}; "
                    "no separate AI run (too many stocks for one prompt).",

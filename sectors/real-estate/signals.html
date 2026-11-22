@@ -384,7 +384,7 @@
 <div class="header-left">
 <div class="header-label">// Market Intelligence</div>
 <h1>Real Estate <span>Signals</span></h1>
-<div class="header-sub">Top 10 ranked picks · AI-generated · powered by <span class="model" id="model-name">—</span> · Last updated <span id="signals-ts">—</span></div>
+<div class="header-sub"><span id="pick-count">Top 10 ranked picks</span> · AI-generated · powered by <span class="model" id="model-name">—</span> · Last updated <span id="signals-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -546,6 +546,7 @@
 
     tsEl.textContent    = fmtDate(data.updated) || '—';
     modelEl.textContent = data.model   || 'local model';
+    if (data.derived) document.getElementById('pick-count').textContent = (data.picks || []).length + ' picks from the sector runs';
 
     const catFor  = tickerCategoryMap();
     const nameFor = tickerNameMap();
