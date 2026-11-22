@@ -25,7 +25,7 @@ import sys
 from zoneinfo import ZoneInfo
 
 from history.bars import coarse_closes
-from history.db import BENCHMARKS, HistoryError, connect_for_bot, iso, load_universe, utc_now
+from history.db import BENCHMARKS, ROOT, HistoryError, connect_for_bot, iso, load_universe, utc_now
 
 UTC = dt.timezone.utc
 BUFFER = dt.timedelta(minutes=5)
@@ -387,7 +387,7 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                     add("baselines", "momentum_rule", name, res[name])
 
     summary = {g: {k: {h: summarise(v) for h, v in hs.items()} for k, hs in keys.items()} for g, keys in groups.items()}
-    review = run_review(runs, ai_1m, random_1m, now)
+    review = run_review(runs, ai_1m, random_1m, now, retired_runs())
     names = {aid: a["name"] for aid, a in assets.items()}
     return {
         "generated_utc": iso(now),
@@ -405,8 +405,8 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                       "(entry and exit dates); London stocks are already in pounds",
             "vs_local": "London-listed picks are also compared with the FTSE 100 (iShares ISF.L) over the same window",
             "run_review": f"each signal run's AI picks vs picking at random from the same list, per run date, 1-month excess vs SPY; "
-                          f"a run is judged once it has {REVIEW_MIN_DATES} run dates with a finished result and flagged if its "
-                          "typical date is behind random. Flags are for the owner's quarterly review; no run is paused automatically.",
+                          f"a run is judged once it has {REVIEW_MIN_DATES} run dates with a finished result and flagged when its average "
+                          "and most of its run dates are behind random ('mixed' when they disagree). Flags are for the owner's quarterly review; no run is paused automatically.",
             "baselines": "for every AI run, on the same date: 'random' scores every stock in that sector (picking at random from the same list); "
                          "'momentum_rule' scores the sector's 10 stocks with the best 6-month return skipping the latest month. "
                          "Same entry, exit and benchmark rules. Each run uses the list of stocks it could choose from "
@@ -422,25 +422,34 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
     }
 
 
+def retired_runs():
+    """Signal runs that no longer run (#88): the retired theme folders."""
+    try:
+        sys.path.insert(0, ROOT)
+        import universe  # noqa: E402
+        return set(universe.RETIRED_FOLDERS)
+    except ImportError:
+        return set()
+
+
 def next_quarter(now):
     q = (now.month - 1) // 3 + 1
     y, m = (now.year + 1, 1) if q == 4 else (now.year, 3 * q + 1)
     return dt.date(y, m, 1).isoformat()
 
 
-def run_review(runs, ai_1m, random_1m, now):
-    """Per signal run (sector / group / theme): on each run date, the AI picks' mean 1-month excess minus every
-    stock in its list's mean. Judged once REVIEW_MIN_DATES dates are finished; behind random = flagged."""
+def run_review(runs, ai_1m, random_1m, now, retired=()):
+    """Per signal run (sector / group / theme): on each run date, the AI picks' mean 1-month excess and every
+    stock in its list's mean. Judged once REVIEW_MIN_DATES dates are finished. Averages over dates, so
+    AI minus random adds up; 'behind' needs the average AND most dates behind, 'ahead' both ahead."""
     per = {}
     for rid, ai in ai_1m.items():
         rnd = random_1m.get(rid)
         if not ai or not rnd:
             continue
         run = runs[rid]
-        day = run["generated_utc"][:10]
-        per.setdefault(run["sector"], {}).setdefault(day, []).append(
+        per.setdefault(run["sector"], {}).setdefault(run["generated_utc"][:10], []).append(
             (statistics.fmean(ai), statistics.fmean(rnd)))
-    latest = max((r["generated_utc"] for r in runs.values() if r.get("provenance") == "live" and not is_shadow(r)), default="")
     last_run = {}
     for r in runs.values():
         if r.get("provenance") == "live" and not is_shadow(r):
@@ -449,16 +458,22 @@ def run_review(runs, ai_1m, random_1m, now):
     out = []
     for sector, days in per.items():
         rows = [(statistics.fmean(a for a, _ in v), statistics.fmean(b for _, b in v)) for v in days.values()]
-        diffs = [a - b for a, b in rows]
         n = len(rows)
-        med = statistics.median(diffs)
-        status = "too few dates" if n < REVIEW_MIN_DATES else ("behind random" if med < 0 else "ahead of random")
-        active = bool(latest) and (parse_utc(latest) - parse_utc(last_run.get(sector, latest))).days <= 14
-        out.append({"run": sector, "dates": n, "ai_median": pct(statistics.median(a for a, _ in rows)),
-                    "random_median": pct(statistics.median(b for _, b in rows)), "diff_median": pct(med),
-                    "dates_behind": sum(d < 0 for d in diffs), "status": status, "active": active,
-                    "last_run": last_run.get(sector, "")[:10]})
-    out.sort(key=lambda x: (not x["active"], x["status"] != "behind random", -x["dates"], x["run"]))
+        ai_avg, rnd_avg = statistics.fmean(a for a, _ in rows), statistics.fmean(b for _, b in rows)
+        behind = sum(a < b for a, b in rows)
+        if n < REVIEW_MIN_DATES:
+            status = "too few dates"
+        elif ai_avg < rnd_avg and behind * 2 > n:
+            status = "behind random"
+        elif ai_avg > rnd_avg and behind * 2 < n:
+            status = "ahead of random"
+        else:
+            status = "mixed"
+        out.append({"run": sector, "dates": n, "ai_avg": pct(ai_avg), "random_avg": pct(rnd_avg),
+                    "diff_avg": pct(ai_avg - rnd_avg), "dates_behind": behind, "status": status,
+                    "active": sector not in retired, "last_run": last_run.get(sector, "")[:10]})
+    order = {"behind random": 0, "mixed": 1, "ahead of random": 2, "too few dates": 3}
+    out.sort(key=lambda x: (not x["active"], order[x["status"]], x["run"]))
     return {"horizon": "1m", "min_dates": REVIEW_MIN_DATES, "next_review": next_quarter(now), "runs": out}
 
 
