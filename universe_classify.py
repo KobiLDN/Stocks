@@ -170,7 +170,8 @@ def yahoo_info(symbol):
     for attempt in range(4):
         try:
             i = yf.Ticker(symbol).info or {}
-            return {"sector": i.get("sector"), "industry": i.get("industry"), "currency": i.get("currency")}
+            return {"sector": i.get("sector"), "industry": i.get("industry"), "currency": i.get("currency"),
+                    "exchange": i.get("exchange"), "name": i.get("longName") or i.get("shortName")}
         except Exception as e:  # 429s and proxy hiccups: jittered backoff
             if attempt == 3:
                 print(f"  yahoo {symbol}: {str(e)[:80]}")
@@ -252,8 +253,10 @@ def resolve_isins(equities, isin_from_index, catalogue, currencies, wiki_isin, r
             isins[t], how[t] = a["isin"], "kept"
         elif isin_from_index.get(a["yahoo"]):
             isins[t], how[t] = isin_from_index[a["yahoo"]], "index table"
-        else:
+        elif catalogue:
             isins[t], how[t] = catalogue.by_ticker_match(a)
+        else:
+            isins[t], how[t] = None, "no catalogue"
     taken = {}
     for t, v in isins.items():
         if v:
@@ -261,7 +264,7 @@ def resolve_isins(equities, isin_from_index, catalogue, currencies, wiki_isin, r
     for t, a in equities.items():
         if isins[t]:
             continue
-        v, h = catalogue.by_name_match(a, currencies.get(t))
+        v, h = catalogue.by_name_match(a, currencies.get(t)) if catalogue else (None, "no catalogue")
         if v and v in taken and equities[taken[v]]["yahoo"] != a["yahoo"]:
             report.append(f"{t}: name match gave {v}, which is {taken[v]}'s — dropped")
             v, h = None, "name clash"
@@ -283,7 +286,9 @@ def resolve_isins(equities, isin_from_index, catalogue, currencies, wiki_isin, r
 
 
 def classify(assets, tables, catalogue, overrides, yahoo=yahoo_info, wiki_isin=wikipedia_isin):
-    """Return {ticker: {field: value}} updates and a list of report lines. Pure apart from the lookups."""
+    """Return {ticker: {field: value}} updates and a list of report lines. Pure apart from the lookups.
+    catalogue=None (the CI bot, which can't read the private repo): existing t212 flags are kept, and
+    new stocks get "unknown" until a session with the catalogue re-runs this."""
     sp = {r["yahoo"]: r for r in tables["sp500"]}
     ft = {r["yahoo"]: r for r in tables["ftse"]}
     isin_from_index = {r["yahoo"]: r["isin"] for k in ("ndx", "ftse") for r in tables[k] if isin_ok(r.get("isin"))}
@@ -316,36 +321,65 @@ def classify(assets, tables, catalogue, overrides, yahoo=yahoo_info, wiki_isin=w
         if not sector:
             report.append(f"{t}: no sector found — Unclassified")
             sector, src = "Unclassified", None
-        on = "unknown" if not isin else ("yes" if isin in catalogue.isins else "no")
+        if catalogue is None:
+            on = a.get("t212") or "unknown"
+        else:
+            on = "unknown" if not isin else ("yes" if isin in catalogue.isins else "no")
         updates[t] = {"isin": isin, "currency": currencies[t], "sector": sector, "sector_src": src,
                       "industry": industry, "t212": on}
     return updates, report
 
 
-FIELD_ORDER = ["isin", "currency", "sector", "sector_src", "industry", "t212"]
+FIELD_ORDER = ["markets", "isin", "currency", "sector", "sector_src", "industry", "t212"]
+
+
+def asset_line(t, a):
+    """One asset as universe.yaml writes it: unmanaged keys in their order, then FIELD_ORDER."""
+    row = {k: v for k, v in a.items() if k not in FIELD_ORDER}
+    for k in FIELD_ORDER:
+        if a.get(k) is not None:
+            row[k] = a[k]
+    return f'  {(json.dumps(t) + ":").ljust(10)} {json.dumps(row)}'
+
+
+def write_universe(assets, retire=None, retire_note=None):
+    """Rewrite the assets block (stocks sorted, then coins in their existing order) and append any
+    newly retired assets to the retired block. Every other line of universe.yaml is kept as is."""
+    lines = open(universe.PATH, encoding="utf-8").read().split("\n")
+    starts = {l.split(":")[0]: i for i, l in enumerate(lines) if re.match(r"^[a-z_]+:", l)}
+    order = sorted(starts, key=starts.get)
+
+    def block(name):
+        i = starts[name]
+        nxt = [starts[o] for o in order if starts[o] > i]
+        return i, (min(nxt) if nxt else len(lines))
+
+    stocks = sorted(t for t, a in assets.items() if a["exchange"] != "Crypto")
+    coins = [t for t, a in assets.items() if a["exchange"] == "Crypto"]
+    a0, a1 = block("assets")
+    body = [asset_line(t, assets[t]) for t in stocks + coins]
+    tail = [l for l in lines[a0 + 1:a1] if not l.startswith('  "')]   # blank lines / comments after the list
+    out = lines[:a0 + 1] + body + tail + lines[a1:]
+    if retire:
+        lines = out
+        starts = {l.split(":")[0]: i for i, l in enumerate(lines) if re.match(r"^[a-z_]+:", l)}
+        order = sorted(starts, key=starts.get)
+        r0, r1 = block("retired")
+        end = r1
+        while end > r0 + 1 and not lines[end - 1].strip():
+            end -= 1
+        add = ([f"  # {retire_note}"] if retire_note else []) + [asset_line(t, a) for t, a in retire.items()]
+        out = lines[:end] + add + lines[end:]
+    with open(universe.PATH, "w", encoding="utf-8") as f:
+        f.write("\n".join(out))
+    universe._cache = None
 
 
 def apply(updates):
-    """Rewrite universe.yaml's asset lines in place (same one-line layout), adding/refreshing FIELD_ORDER."""
-    text = open(universe.PATH, encoding="utf-8").read()
+    """Merge classify() updates into the assets and rewrite universe.yaml."""
     u = universe.load()
-    out = []
-    section = None
-    for line in text.split("\n"):
-        if re.match(r"^[a-z_]+:", line):
-            section = line.split(":")[0]
-        m = re.match(r'^  "([^"]+)":', line)
-        if section == "assets" and m and m.group(1) in updates:
-            t = m.group(1)
-            a = {k: v for k, v in u["assets"][t].items() if k not in FIELD_ORDER}
-            for k in FIELD_ORDER:
-                v = updates[t].get(k)
-                if v is not None:
-                    a[k] = v
-            line = f'  {(json.dumps(t) + ":").ljust(10)} {json.dumps(a)}'
-        out.append(line)
-    with open(universe.PATH, "w", encoding="utf-8") as f:
-        f.write("\n".join(out))
+    assets = {t: {**a, **{k: v for k, v in updates.get(t, {}).items()}} for t, a in u["assets"].items()}
+    write_universe(assets)
 
 
 def main():
