@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-22 19:30",
+  "updated": "2026-11-22 21:14",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "a61923d8bba5",
-  "code_commit": "cbe66841efe7",
+  "code_commit": "40bbd8be3a67",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VZ",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +22.34%, P/E 11.86, dividend yield 6.09%, low beta 0.26, and positive 1D move (+1.62%) on Friday; strong defensive income play with solid momentum.",
+      "drivers": [
+        "YTD +22.34%",
+        "P/E 11.86",
+        "div yield 6.09%",
+        "low beta 0.26"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "CMCSA",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Upgraded to Buy by Seeking Alpha with $28.33 target (14% upside), P/E 7.88, dividend 5.3%, and 1M +12.77% momentum; spin-off catalyst for NBCUniversal/Sky.",
+      "drivers": [
+        "upgrade to Buy",
+        "P/E 7.88",
+        "div yield 5.3%",
+        "1M +12.77%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "DIS",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +6.29%, P/E 20.96, analyst consensus buy (score 1.53), and 1M +5.50%; strong content pipeline and theme park recovery support steady growth.",
+      "drivers": [
+        "YTD +6.29%",
+        "analyst buy score 1.53",
+        "1M +5.50%",
+        "P/E 20.96"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "TMUS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Q3 EPS beat by 11.4%, raised guidance, $10.3B buybacks YTD, P/E 15.97, and InvestingPro fair value $226.48 (38% upside); SpaceX risk priced in.",
+      "drivers": [
+        "Q3 EPS beat 11.4%",
+        "P/E 15.97",
+        "38% upside to fair value",
+        "strong buybacks"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "SPOT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +9.84%, YTD +0.35%, analyst buy (score 1.71), P/E 35.16; advertising and subscriber growth momentum with improving margins.",
+      "drivers": [
+        "1M +9.84%",
+        "analyst buy score 1.71",
+        "subscriber growth",
+        "improving margins"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "TTWO",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Strongest analyst consensus (score 1.21), upcoming GTA VI catalyst, 1M +1.86%, and P/E negative due to investment cycle; high upside if game releases succeed.",
+      "drivers": [
+        "strong_buy score 1.21",
+        "GTA VI catalyst",
+        "1M +1.86%",
+        "low valuation on forward earnings"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "AAF.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "BofA double-upgraded to Buy with 23% upside, 17% revenue CAGR forecast, P/E 18.28, dividend 2%; data and fintech penetration growth catalysts.",
+      "drivers": [
+        "BofA double upgrade",
+        "17% revenue CAGR",
+        "P/E 18.28",
+        "data/fintech growth"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "BT-A.L",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +15.57%, P/E 16.33, dividend 3.92%, low beta 0.503; stable telecom with decent yield but analyst consensus hold limits upside.",
+      "drivers": [
+        "YTD +15.57%",
+        "P/E 16.33",
+        "div yield 3.92%",
+        "low beta 0.503"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "APP",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "1M +30.01% bounce from deep YTD loss (-43.67%), P/E 23.45, analyst buy (score 1.58); high beta 2.498 and short interest 3.83% add risk/reward appeal.",
+      "drivers": [
+        "1M +30.01%",
+        "analyst buy score 1.58",
+        "P/E 23.45",
+        "high beta 2.498"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "CHTR",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "1M +20.02% rebound, P/E 12.1, but YTD -38.49%, short interest 44.95% (squeeze potential), analyst hold; high risk but cheap on earnings.",
+      "drivers": [
+        "1M +20.02%",
+        "P/E 12.1",
+        "short interest 44.95%",
+        "potential squeeze"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TMUS",
@@ -181,7 +354,5 @@ window.SIGNALS_DATA = {
       "momentum_label": null,
       "momentum_score": null
     }
-  ],
-  "momentum_picks": [],
-  "previous_picks": []
+  ]
 };

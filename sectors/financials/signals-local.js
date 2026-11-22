@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-22 19:30",
+  "updated": "2026-11-22 21:14",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "13f4d223d3f4",
-  "code_commit": "cbe66841efe7",
+  "code_commit": "40bbd8be3a67",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CBOE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+45% YTD, record Q3 EPS $4.08 (+43%), raised revenue growth guidance to 'high teens', extended S&P license through 2051 [cboe.com](https://ir.cboe.com/news/news-details/2026/Cboe-Global-Markets-Reports-Results-for-Third-Quarter-2026/default.aspx).",
+      "drivers": [
+        "+45% YTD",
+        "record Q3 EPS +43%",
+        "raised guidance",
+        "low beta 0.36"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "AIZ",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+35% YTD, +11% 1M, P/E 14.9, strong_buy analyst consensus (1.43), low beta 0.51.",
+      "drivers": [
+        "+35% YTD",
+        "strong_buy consensus",
+        "P/E 14.9",
+        "low beta 0.51"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "ACGL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+16% YTD, +8.5% 1M, P/E 8.9, buy rating, low beta 0.19, attractive valuation.",
+      "drivers": [
+        "P/E 8.9",
+        "low beta 0.19",
+        "+16% YTD",
+        "buy rating"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "AON",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Completed $17B USI acquisition establishing premier middle-market platform, +13.4% 1M, P/E 18.2, buy rating [aon.mediaroom.com](https://aon.mediaroom.com/2026-11-16-Aon-Completes-Acquisition-of-USI-to-Establish-the-Premier-U-S-Middle-Market-Platform).",
+      "drivers": [
+        "$17B USI acquisition",
+        "+13.4% 1M",
+        "P/E 18.2",
+        "buy rating"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "LSEG.L",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "+10% YTD, +10% 1M, strong_buy analyst (1.5), P/E 34.8 but strong franchise and data business.",
+      "drivers": [
+        "strong_buy consensus",
+        "+10% 1M",
+        "P/E 34.8",
+        "data & analytics leader"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "GPN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+23% YTD, +10% 1M, +10% 1D, buy rating, but high trailing P/E 164; momentum strong.",
+      "drivers": [
+        "+23% YTD",
+        "+10% 1M",
+        "buy rating",
+        "strong momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "JKHY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+11.7% 1M, buy rating (1.76), P/E 23.5, steady performer in payment processing.",
+      "drivers": [
+        "+11.7% 1M",
+        "buy rating 1.76",
+        "P/E 23.5",
+        "stable business"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "TRV",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+39% YTD, P/E 10.3, low beta 0.40, strong value with solid underwriting.",
+      "drivers": [
+        "+39% YTD",
+        "P/E 10.3",
+        "low beta 0.40",
+        "strong value"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "ALL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+33% YTD, P/E 6.06, low beta 0.12, very cheap valuation despite hold rating.",
+      "drivers": [
+        "+33% YTD",
+        "P/E 6.06",
+        "low beta 0.12",
+        "cheap valuation"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "EG",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+28% YTD, +6.9% 1M, P/E 8.9, buy rating, good value in reinsurance.",
+      "drivers": [
+        "+28% YTD",
+        "P/E 8.9",
+        "buy rating",
+        "value in reinsurance"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AIZ",
@@ -181,7 +354,5 @@ window.SIGNALS_DATA = {
       "momentum_label": null,
       "momentum_score": null
     }
-  ],
-  "momentum_picks": [],
-  "previous_picks": []
+  ]
 };
