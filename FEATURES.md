@@ -2,9 +2,12 @@
 
 ## Backlog
 
-_Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44 stock calendar)._
+- **#88 follow-ups:** retired theme folders (Biotech, Energy, Mega-Cap, Tech) → All pages with the theme filter, and stop their price bots; news headlines for picks and big movers in the group price files; PR 10 (track record in GBP, vs local index for UK picks, quarterly run review)
+- Open ideas live in GitHub issues (#40 influencer tweets, #44 stock calendar).
 
 ## Done
+
+- **15 live signal runs, every stock once in the export (#88 phase 1, PR 8b)** — Biotech, Energy, Mega-Cap and Tech runs retired (pages redirect to their replacements), shadow trial removed, All Signals merges every run, export has one row per stock with official sector, themes, markets, T212 and `picked_by`
 
 - **Signal runs for the sectors and the FTSE 100 (#88 phase 1, PR 8a)** — 12 new AI runs Mon/Wed/Fri, Signals pages for all 14 groups (S&P 500 / Nasdaq-100 from the sector runs' picks), recorded in history with their stock lists
 

@@ -13,12 +13,8 @@ on:
         options:
           - all
           - AI
-          - Biotech
           - Defence
-          - Tech
           - Crypto
-          - Energy
-          - MegaCap
           - groups
 
 permissions:
@@ -47,13 +43,15 @@ jobs:
           python-version: '3.12'
           cache: pip
 
+      # Themes that keep their own run. Biotech, Energy, Mega-Cap and Tech were retired (#88): the
+      # Health Care, Energy and Technology sector runs and the S&P 500 page replace them.
       - name: Generate signals
         if: inputs.sector != 'groups'
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           SECTOR="${{ inputs.sector }}"
-          for s in AI Biotech Defence Tech Crypto Energy MegaCap; do
+          for s in AI Defence Crypto; do
             if [[ "${{ github.event_name }}" == "schedule" || "$SECTOR" == "all" || "$SECTOR" == "$s" ]]; then
               pip install -q -r $s/requirements.txt
               (cd $s && python ${s}_generate_signals_local.py)
@@ -82,16 +80,11 @@ jobs:
           # "Bot-code changes": the PR preview then shows real picks)
           TARGET="${{ github.ref_name }}"
           for f in markets/*/signals-local.js* sectors/*/signals-local.js*; do [ -e "$f" ] && git add "$f"; done
-          if git diff --cached --quiet && git diff --quiet -- AI/signals-local.json AI/signals-local.js AI/signals-shadow.json Biotech/signals-local.json Biotech/signals-local.js Biotech/signals-shadow.json Defence/signals-local.json Defence/signals-local.js Defence/signals-shadow.json Tech/signals-local.json Tech/signals-local.js Tech/signals-shadow.json Crypto/signals-local.json Crypto/signals-local.js Crypto/signals-shadow.json Energy/signals-local.json Energy/signals-local.js Energy/signals-shadow.json MegaCap/signals-local.json MegaCap/signals-local.js MegaCap/signals-shadow.json; then
+          FILES="AI/signals-local.json AI/signals-local.js Defence/signals-local.json Defence/signals-local.js Crypto/signals-local.json Crypto/signals-local.js"
+          if git diff --cached --quiet && git diff --quiet -- $FILES; then
             echo "No signal changes."
           else
-            git add AI/signals-local.json AI/signals-local.js AI/signals-shadow.json
-            git add Biotech/signals-local.json Biotech/signals-local.js Biotech/signals-shadow.json
-            git add Defence/signals-local.json Defence/signals-local.js Defence/signals-shadow.json
-            git add Tech/signals-local.json Tech/signals-local.js Tech/signals-shadow.json
-            git add Crypto/signals-local.json Crypto/signals-local.js Crypto/signals-shadow.json
-            git add Energy/signals-local.json Energy/signals-local.js Energy/signals-shadow.json
-            git add MegaCap/signals-local.json MegaCap/signals-local.js MegaCap/signals-shadow.json
+            git add $FILES
             git commit -m "Update signals — ${LABEL} ($(date -u '+%Y-%m-%d %H:%M UTC'))"
             for i in 1 2 3; do
               git fetch origin "$TARGET"

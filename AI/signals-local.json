@@ -1,13 +1,205 @@
 {
-  "updated": "2026-11-21 22:58",
+  "updated": "2026-11-22 21:13",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "c3dc41ba267d",
-  "code_commit": "5e79e7837456",
+  "code_commit": "40bbd8be3a67",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AMZN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Low P/E of 19.95, strong buy consensus, and Amazon's AWS revenue grew 39% YoY to $184B annualized run rate, reinforcing AI infrastructure demand [ir.aboutamazon.com](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/).",
+      "drivers": [
+        "P/E 19.95",
+        "YTD +8.97%",
+        "AWS revenue +39% YoY",
+        "strong_buy consensus"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "EQIX",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Strong YTD return of +29.29%, strong buy analyst consensus, and positive news sentiment of 0.234 driven by Nordic data center investments.",
+      "drivers": [
+        "YTD +29.29%",
+        "strong_buy consensus",
+        "news_s 0.234",
+        "PE 58.15"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "AMT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Positive short-term momentum with 1M +3.70%, low PE of 25.95, strong buy consensus, and high dividend yield of 3.95% with very positive news sentiment of 0.315.",
+      "drivers": [
+        "1M +3.70%",
+        "P/E 25.95",
+        "div 3.95%",
+        "news_s 0.315"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "MSFT",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Stable YTD return of +3.30%, reasonable P/E of 25.29, strong buy consensus, and low short interest of 0.82%.",
+      "drivers": [
+        "P/E 25.29",
+        "YTD +3.30%",
+        "strong_buy consensus",
+        "short 0.82%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "BEP",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Positive YTD return of +7.99%, high dividend yield of 5.22%, buy consensus, and positive news sentiment of 0.261.",
+      "drivers": [
+        "YTD +7.99%",
+        "div 5.22%",
+        "buy consensus",
+        "news_s 0.261"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "DLR",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Strong buy consensus, low short interest of 0.01%, and positive YTD return of +6.94% despite high P/E of 68.55.",
+      "drivers": [
+        "strong_buy consensus",
+        "short 0.01%",
+        "YTD +6.94%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "RR.",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Strong buy consensus, moderate P/E of 35.35, and positive YTD return of +6.32%.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 35.35",
+        "YTD +6.32%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Very high YTD return of +119.84%, low P/E of 16.16, and upcoming earnings catalyst with reports of server price hikes of up to 45% potentially boosting margins [benzinga.com](https://www.benzinga.com/markets/equities/26/11/63517315/dell-and-hp-enterprise-earnings-in-focus-as-reports-point-to-server-price-hikes-on-signed-deals).",
+      "drivers": [
+        "YTD +119.84%",
+        "P/E 16.16",
+        "server price hikes catalyst",
+        "earnings Nov 24"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": "buy",
+      "momentum_score": 0.542
+    },
+    {
+      "rank": 9,
+      "ticker": "TLN",
+      "signal": "strong_buy",
+      "confidence": 0.5,
+      "rationale": "Strong buy consensus despite negative YTD of -16.08%, positive news sentiment of 0.218, and potential for turnaround with long-term PJM deals.",
+      "drivers": [
+        "strong_buy consensus",
+        "news_s 0.218",
+        "PJM deals catalyst"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "BEPC",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "High dividend yield of 5.15% and positive news sentiment of 0.258, though analyst consensus is hold and YTD is -23.43%.",
+      "drivers": [
+        "div 5.15%",
+        "news_s 0.258",
+        "YTD -23.43%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.59,
+      "ytd": "+130.32%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +130.32% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +130.32% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "buy",
+      "confidence": 0.561,
+      "ytd": "+123.93%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +123.93% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +123.93% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "AMT",
@@ -175,202 +367,6 @@
       ],
       "pre_momentum_label": "strong_buy",
       "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.59,
-      "ytd": "+130.32%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.32% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.32% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "MXL",
-      "signal": "buy",
-      "confidence": 0.561,
-      "ytd": "+123.93%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +123.93% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +123.93% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "AMZN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Amazon is in advanced stages of a $7.5B deal for AI startup Decart, per the FT, reinforcing hyperscaler AI demand; P/E of 19.95 is attractive for a mega-cap with +8.97% YTD and strong_buy consensus at 1.32.",
-      "drivers": [
-        "$7.5B Decart acquisition talks",
-        "P/E 19.95",
-        "strong_buy consensus 1.32",
-        "+8.97% YTD"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "MSFT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Microsoft trades at a reasonable P/E of 25.29 with a 0.79% dividend yield and strong_buy consensus (1.38); its +3.30% YTD and low beta of 1.045 offer relative stability amid the AI sell-off.",
-      "drivers": [
-        "P/E 25.29",
-        "strong_buy consensus 1.38",
-        "beta 1.045",
-        "dividend yield 0.79%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "EQIX",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Equinix has strong_buy consensus (1.46), +29.29% YTD, and a 2.03% dividend yield; its Nordic data center investment supports long-term AI demand, and the -2.20% 1-month decline is mild vs peers.",
-      "drivers": [
-        "strong_buy consensus 1.46",
-        "+29.29% YTD",
-        "dividend yield 2.03%",
-        "resilient -2.20% 1M"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "AMT",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "American Tower offers a 3.95% dividend yield, strong_buy consensus (1.50), and positive 1-day momentum (+1.69%) with a low beta of 0.842; +8.61% YTD and P/E 25.95 provide defensive appeal.",
-      "drivers": [
-        "dividend yield 3.95%",
-        "strong_buy consensus 1.50",
-        "beta 0.842",
-        "+1.69% 1D"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "DELL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Dell has a massive $95B AI backlog, trades at just 16.16x P/E with +119.84% YTD, and analysts see upside despite recent cuts; news of a fair value trim to $578.88 still implies significant upside from $278.",
-      "drivers": [
-        "$95B AI backlog",
-        "P/E 16.16",
-        "+119.84% YTD",
-        "analyst fair value $578.88"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": "buy",
-      "momentum_score": 0.542
-    },
-    {
-      "rank": 6,
-      "ticker": "DLR",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "Digital Realty has strong_buy consensus (1.44), a 2.80% dividend yield, and near-zero short interest (0.01%); its +6.94% YTD and low beta of 1.002 offer stability in a volatile AI infrastructure landscape.",
-      "drivers": [
-        "strong_buy consensus 1.44",
-        "dividend yield 2.80%",
-        "short interest 0.01%",
-        "beta 1.002"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "RR.",
-      "signal": "strong_buy",
-      "confidence": 0.55,
-      "rationale": "Rolls-Royce has strong_buy consensus (1.50), a 0.90% dividend yield, and modest -3.78% 1-month decline; its nuclear operations exposure to AI energy demand supports a +6.32% YTD return.",
-      "drivers": [
-        "strong_buy consensus 1.50",
-        "dividend yield 0.90%",
-        "+6.32% YTD",
-        "nuclear energy catalyst"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "BEP",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Brookfield Renewable Partners offers a high 5.22% dividend yield with a low beta of 0.955 and positive news sentiment of 0.261; its +7.99% YTD and minimal 1-month decline (-0.17%) show resilience.",
-      "drivers": [
-        "dividend yield 5.22%",
-        "beta 0.955",
-        "news sentiment 0.261",
-        "+7.99% YTD"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "TLN",
-      "signal": "strong_buy",
-      "confidence": 0.45,
-      "rationale": "Talen Energy has strong_buy consensus (1.50) and positive news sentiment (0.218); its long-term PJM deals lock in AI-driven power demand, though high short interest (10.86%) and negative YTD (-16.08%) add risk.",
-      "drivers": [
-        "strong_buy consensus 1.50",
-        "news sentiment 0.218",
-        "PJM long-term deals",
-        "AI power demand catalyst"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "BEPC",
-      "signal": "buy",
-      "confidence": 0.3,
-      "rationale": "Brookfield Renewable Corp has a 5.15% dividend yield and positive news sentiment (0.258), but hold consensus (2.86) and -23.43% YTD limit conviction; included for yield and slight 1-month positive momentum (+0.30%).",
-      "drivers": [
-        "dividend yield 5.15%",
-        "news sentiment 0.258",
-        "+0.30% 1M",
-        "yield defense"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
       "momentum_label": null,
       "momentum_score": null
     }

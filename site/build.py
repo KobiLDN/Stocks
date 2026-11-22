@@ -39,6 +39,35 @@ def with_count(s, universe, sector):
     return {**s, "meta_description": s["meta_description"].replace("{count}", str(len(universe["sectors"][sector])))}
 
 
+# #88: these themes' own signal runs were retired (22 Nov 2026). Their past picks stay in the track record;
+# the Signals page sends visitors to the run that replaced it.
+RETIRED_SIGNALS = {
+    "Biotech": ("sectors/health-care/signals.html", "Health Care"),
+    "Energy": ("sectors/energy/signals.html", "Energy sector"),
+    "MegaCap": ("markets/sp500/signals.html", "S&amp;P 500"),
+    "Tech": ("sectors/technology/signals.html", "Technology"),
+}
+
+
+def retired_signals_page(sector, target, name):
+    url = "../" + target
+    return (
+        "<!DOCTYPE html>\n" + BANNER.format(tpl="(redirect in build.py)") +
+        '<html lang="en">\n<head>\n<meta charset="UTF-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+        f'<title>{sector} Signals moved</title>\n'
+        f'<meta http-equiv="refresh" content="0; url={url}">\n'
+        f'<link rel="canonical" href="{url}">\n'
+        f'<script>location.replace({json.dumps(url)});</script>\n'
+        '<style>body{font-family:system-ui,sans-serif;background:#f8fafc;color:#0f172a;padding:40px 16px}'
+        '@media (prefers-color-scheme:dark){body{background:#0f172a;color:#e2e8f0}a{color:#7dd3fc}}</style>\n'
+        '</head>\n<body>\n'
+        f'<p>The {sector} signal run was retired on 22 Nov 2026. Its picks now come from the '
+        f'<a href="{url}">{name} Signals</a> page. Past {sector} picks stay in the '
+        '<a href="../track-record.html">Track Record</a>.</p>\n</body>\n</html>\n'
+    )
+
+
 def render_all():
     """{relative output path: file text} for every generated page."""
     sectors, universe = load()
@@ -46,7 +75,11 @@ def render_all():
                       trim_blocks=True, lstrip_blocks=True, keep_trailing_newline=True)
     out = {}
     tpl = env.get_template("signals.html.j2")
+    for sector, (target, name) in RETIRED_SIGNALS.items():
+        out[f"{sector}/signals.html"] = retired_signals_page(sector, target, name)
     for sector, s in sectors["signals"].items():
+        if sector in RETIRED_SIGNALS:
+            continue
         names = json.dumps(sector_names(universe, sector), ensure_ascii=False, indent=4).replace("\n", "\n  ")
         html = tpl.render(s=s, sector=sector, names_json=names, root="../")
         out[f"{sector}/signals.html"] = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + BANNER.format(tpl="signals.html.j2"), 1)

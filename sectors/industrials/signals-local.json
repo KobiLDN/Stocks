@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22 19:30",
+  "updated": "2026-11-22 21:14",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,177 @@
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "9a9dfb9de059",
-  "code_commit": "cbe66841efe7",
+  "code_commit": "40bbd8be3a67",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SWK",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "SWK has a strong YTD return of +43.72%, a P/E of 19.11, and a dividend yield of 3.15%, with a 1-month gain of +11.71%.",
+      "drivers": [
+        "+43.72% YTD",
+        "P/E 19.11",
+        "dividend yield 3.15%",
+        "1-month +11.71%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "MAS",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "MAS has a YTD return of +30.35%, a P/E of 17.92, and a 1-month gain of +11.21%, supported by a buy analyst consensus.",
+      "drivers": [
+        "+30.35% YTD",
+        "P/E 17.92",
+        "1-month +11.21%",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "PNR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "PNR shows a strong 1-month rebound of +30.47% and a P/E of 18.7, with a buy analyst consensus.",
+      "drivers": [
+        "1-month +30.47%",
+        "P/E 18.7",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "VLTO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "VLTO has a YTD return of +18.92%, a 1-month gain of +15.12%, and a P/E of 28.8, with a buy analyst consensus.",
+      "drivers": [
+        "+18.92% YTD",
+        "1-month +15.12%",
+        "P/E 28.8",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "ROL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "ROL has a 1-month gain of +13.65% and a dividend yield of 2.12%, with a buy analyst consensus.",
+      "drivers": [
+        "1-month +13.65%",
+        "dividend yield 2.12%",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "CPRT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CPRT has a 1-month gain of +12.69%, a P/E of 20.06, and a buy analyst consensus.",
+      "drivers": [
+        "1-month +12.69%",
+        "P/E 20.06",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "FER",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "FER has a 1-month gain of +16.49% and a dividend yield of 3.84%, with a P/E of 31.51.",
+      "drivers": [
+        "1-month +16.49%",
+        "dividend yield 3.84%",
+        "P/E 31.51"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "RTO.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "RTO.L has a 1-month gain of +16.68% and a dividend yield of 2.56%, with a buy analyst consensus.",
+      "drivers": [
+        "1-month +16.68%",
+        "dividend yield 2.56%",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "ALLE",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "ALLE has a YTD return of +15.42%, a 1-month gain of +15.48%, and a P/E of 22.84, with a buy analyst consensus.",
+      "drivers": [
+        "+15.42% YTD",
+        "1-month +15.48%",
+        "P/E 22.84",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "LUV",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "LUV has a YTD return of +8.16%, a 1-month gain of +10.53%, and a P/E of 21.5, with a buy analyst consensus.",
+      "drivers": [
+        "+8.16% YTD",
+        "1-month +10.53%",
+        "P/E 21.5",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "VLTO",
@@ -171,7 +339,5 @@
       "momentum_label": null,
       "momentum_score": null
     }
-  ],
-  "momentum_picks": [],
-  "previous_picks": []
+  ]
 }

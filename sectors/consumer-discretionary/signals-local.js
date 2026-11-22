@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-22 19:30",
+  "updated": "2026-11-22 21:14",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "4e30491874a3",
-  "code_commit": "cbe66841efe7",
+  "code_commit": "40bbd8be3a67",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "LOW",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Lowe's beat Q3 estimates with adj. EPS of $3.10 vs $2.88 expected and raised full-year sales guidance to ~$92.5B; +12.35% in the past month, P/E 18.5, and a 2.26% dividend yield offer compelling value.",
+      "drivers": [
+        "earnings beat",
+        "raised guidance",
+        "strong 1M momentum",
+        "attractive P/E"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "HD",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Home Depot posted a 2.2% comp sales beat vs Lowe's 1.8%, with stronger operating margins of 12.6% and a 2.75% dividend yield; +7.93% 1M, P/E 23.5, and analyst consensus 'buy'.",
+      "drivers": [
+        "comp sales beat",
+        "superior margins",
+        "dividend yield",
+        "positive 1M momentum"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "CMG",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "Chipotle surged +26.42% in the past month after Q3 comps rose 2.1% vs 1.5% consensus and September comps accelerated to +3.8%; P/E 33.2 reflects premium but momentum is strong.",
+      "drivers": [
+        "comp sales beat",
+        "strong 1M momentum",
+        "positive transaction growth",
+        "September acceleration"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "McDonald's gained +10.96% in the past month, offers a 2.83% dividend yield, low beta of 0.43, and a reasonable P/E of 21.6; analyst consensus 'buy' with defensive appeal.",
+      "drivers": [
+        "strong 1M momentum",
+        "dividend yield",
+        "low beta",
+        "defensive positioning"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "MGM",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "MGM Resorts reported record quarterly revenue in Macau with 17.1% market share and a favorable October rebound in Las Vegas; +12.09% 1M, P/E 12.5, and analyst 'buy' rating.",
+      "drivers": [
+        "record Macau revenue",
+        "October rebound",
+        "low P/E",
+        "strong 1M momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "TSCO",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "Tractor Supply reported Q3 net sales +5.1% to $3.91B, reaffirmed FY outlook, and saw sequential improvement in comps through the quarter; +17.59% 1M, P/E 20.7, and a 2.5% dividend yield.",
+      "drivers": [
+        "sales growth",
+        "sequential comp improvement",
+        "strong 1M momentum",
+        "dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "PHM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "PulteGroup gained +10.43% in the past month, trades at a low P/E of 13.3 with a 0.87% dividend yield, and benefits from resilient housing demand despite rate headwinds.",
+      "drivers": [
+        "strong 1M momentum",
+        "low P/E",
+        "housing demand resilience",
+        "positive YTD"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "DPZ",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Domino's rose +12.04% in the past month, offers a 2.28% dividend yield, P/E 19.2, and analyst 'buy' consensus; value-oriented menu supports traffic in a cautious consumer environment.",
+      "drivers": [
+        "strong 1M momentum",
+        "dividend yield",
+        "value positioning",
+        "reasonable P/E"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "KGF.L",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Kingfisher gained +10.35% in the past month, YTD +19.96%, with a 3.27% dividend yield and P/E 21.1; benefits from home improvement demand in Europe.",
+      "drivers": [
+        "strong 1M momentum",
+        "high dividend yield",
+        "positive YTD",
+        "home improvement demand"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "CVNA",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Carvana gained +7.87% in the past month despite high short interest of 12.1% and beta of 3.65; analyst 'buy' consensus and potential for used-car demand recovery support the pick.",
+      "drivers": [
+        "positive 1M momentum",
+        "analyst consensus",
+        "used-car demand recovery",
+        "high short interest"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "LOW",
@@ -181,7 +354,5 @@ window.SIGNALS_DATA = {
       "momentum_label": null,
       "momentum_score": null
     }
-  ],
-  "momentum_picks": [],
-  "previous_picks": []
+  ]
 };

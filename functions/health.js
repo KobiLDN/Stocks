@@ -4,6 +4,8 @@
 import { evaluate, parseAsOf } from '../monitoring/freshness.js';
 
 const SECTORS = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy', 'MegaCap'];
+// themes that still have their own signal run (#88 retired Biotech, Energy, Mega-Cap and Tech)
+const THEME_SIGNALS = ['AI', 'Defence', 'Crypto'];
 // #88: the groups with their own signal runs (generate_group_signals.py)
 const GROUP_SIGNALS = ['markets/ftse100', ...['communication-services', 'consumer-discretionary', 'consumer-staples',
   'energy', 'financials', 'health-care', 'industrials', 'materials', 'real-estate', 'technology', 'utilities']
@@ -25,7 +27,7 @@ export async function onRequestGet({ request, env }) {
   const [prices, signals, market, news, manifest] = await Promise.all([
     // the theme groups' price files, plus the market + sector groups' (#88: groups/status.json)
     Promise.all([...SECTORS.map(s => `/${s}/prices.json`), '/groups/status.json'].map(getJson)),
-    Promise.all([...SECTORS, ...GROUP_SIGNALS].map(s => getJson(`/${s}/signals-local.json`))),
+    Promise.all([...THEME_SIGNALS, ...GROUP_SIGNALS].map(s => getJson(`/${s}/signals-local.json`))),
     getJson('/market.json'),
     getJson('/News/news-feed.json'),
     getJson('/exports/manifest.json'),

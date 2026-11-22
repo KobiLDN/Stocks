@@ -7,6 +7,7 @@ monitoring/export-contract.json. Fails if a field the portfolio reads disappears
 Run: python -m unittest monitoring/test_export_contract.py   (also run in CI)
 """
 import copy
+import glob
 import json
 import os
 import shutil
@@ -24,7 +25,7 @@ def read_json(path):
 
 
 CONTRACT = read_json(os.path.join(ROOT, "monitoring", "export-contract.json"))
-SECTORS = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
+THEMES = ["AI", "Biotech", "Crypto", "Defence", "Energy", "MegaCap", "Tech"]
 
 TYPES = {
     "str": lambda v: isinstance(v, str),
@@ -76,16 +77,28 @@ def check_export(payload, manifest):
     elif picks:
         errors += check_rows(picks, CONTRACT["momentum_picks[]"], "momentum_picks")
     errors += check_macro(payload.get("macro"), CONTRACT["macro (keys in any case)"])
+    runs = payload.get("signal_runs")
+    if not isinstance(runs, dict) or not runs:
+        errors.append("signal_runs: missing")
+    else:
+        errors += check_rows(list(runs.values()), CONTRACT["signal_runs (object, one entry per live run)"], "signal_runs")
     return errors
 
 
 def build_export(workdir):
     """Run generate_export.py on a copy of the committed inputs; return (payload, manifest)."""
     shutil.copy(os.path.join(ROOT, "generate_export.py"), workdir)
-    for sector in SECTORS:
-        os.makedirs(os.path.join(workdir, sector))
+    for theme in THEMES:
+        os.makedirs(os.path.join(workdir, theme))
         for name in ("prices-data.js", "signals-local.json"):
-            shutil.copy(os.path.join(ROOT, sector, name), os.path.join(workdir, sector))
+            shutil.copy(os.path.join(ROOT, theme, name), os.path.join(workdir, theme))
+    # #88: the market and sector groups' price and signal files
+    for path in glob.glob(os.path.join(ROOT, "markets", "*", "*")) + glob.glob(os.path.join(ROOT, "sectors", "*", "*")):
+        if os.path.basename(path) in ("prices-data.js", "signals-local.json"):
+            rel = os.path.relpath(path, ROOT)
+            os.makedirs(os.path.join(workdir, os.path.dirname(rel)), exist_ok=True)
+            shutil.copy(path, os.path.join(workdir, rel))
+    shutil.copy(os.path.join(ROOT, "asset-links.js"), workdir)
     shutil.copy(os.path.join(ROOT, "market.json"), workdir)
     os.makedirs(os.path.join(workdir, "exports"))
     shutil.copy(os.path.join(ROOT, "exports", "manifest.json"), os.path.join(workdir, "exports"))
@@ -136,6 +149,30 @@ class ExportContract(unittest.TestCase):
         broken = copy.deepcopy(self.payload)
         del broken["macro"]["vix"]
         self.assertIn("macro.vix: missing", check_export(broken, self.manifest))
+
+    # #88: one row per stock; every live run's picks land on a row; derived market pages not counted
+    def test_one_row_per_stock(self):
+        tickers = [s["ticker"] for s in self.payload["stocks"]]
+        self.assertEqual(len(tickers), len(set(tickers)))
+        self.assertGreater(len(tickers), 600)
+
+    def test_every_pick_lands_once(self):
+        offered = sum(r["picks"] for r in self.payload["signal_runs"].values())
+        attached = sum(len(s["picked_by"]) for s in self.payload["stocks"])
+        self.assertEqual(attached, offered)
+        self.assertNotIn("S&P 500", self.payload["signal_runs"])
+        for s in self.payload["stocks"]:
+            if s["picked_by"]:
+                self.assertEqual(s["signal_run"], s["picked_by"][0]["run"])
+                self.assertEqual(s["signal_confidence"], s["picked_by"][0]["confidence"])
+            else:
+                self.assertIsNone(s["signal"])
+
+    def test_sector_is_official(self):
+        allowed = {"Communication Services", "Consumer Discretionary", "Consumer Staples", "Energy", "Financials",
+                   "Health Care", "Industrials", "Materials", "Real Estate", "Technology", "Utilities", "Crypto",
+                   "Unclassified"}
+        self.assertLessEqual({s["sector"] for s in self.payload["stocks"]}, allowed)
 
     def test_macro_keys_any_case(self):
         upper = copy.deepcopy(self.payload)

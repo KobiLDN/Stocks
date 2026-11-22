@@ -1,53 +1,179 @@
 {
-  "about": "Fields the portfolio project (KobiLDN/portfolio-private) reads from the daily export, copied from its FROM_PORTFOLIO.md (note of 2026-11-13) plus the #70 fields announced in FROM_STOCKS.md on 2026-11-21. monitoring/test_export_contract.py rebuilds the export from the committed data and fails if any of these disappears or changes type. Types: str, number, bool, null, object, list. Update this file only together with a FROM_STOCKS.md note, and when FROM_PORTFOLIO.md lists a new field.",
+  "about": "Fields the portfolio project (KobiLDN/portfolio-private) reads from the daily export, copied from its FROM_PORTFOLIO.md (note of 2026-11-13) plus the #70 fields announced in FROM_STOCKS.md on 2026-11-21 and the #88 fields announced on 2026-11-22. monitoring/test_export_contract.py rebuilds the export from the committed data and fails if any of these disappears or changes type. Types: str, number, bool, null, object, list. Update this file only together with a FROM_STOCKS.md note, and when FROM_PORTFOLIO.md lists a new field.",
   "manifest": {
     "snapshots[]": {
-      "date": ["str"],
-      "json": ["str"]
+      "date": [
+        "str"
+      ],
+      "json": [
+        "str"
+      ]
     }
   },
   "stocks[]": {
-    "ticker": ["str"],
-    "company_name": ["str"],
-    "sector": ["str"],
-    "signal": ["str", "null"],
-    "signal_confidence": ["number", "null"],
-    "signal_rationale": ["str"],
-    "beta": ["number", "null"],
-    "pe_ratio": ["number", "null"],
-    "pct_1d": ["number", "null"],
-    "pct_1w": ["number", "null"],
-    "pct_1m": ["number", "null"],
-    "pct_ytd": ["number", "null"],
-    "pct_1y": ["number", "null"],
-    "change_1d": ["str", "null"],
-    "change_1w": ["str", "null"],
-    "change_ytd": ["str", "null"],
-    "change_1y": ["str", "null"],
-    "pre_momentum_label": ["str", "null"],
-    "momentum_label": ["str", "null"],
-    "momentum_score": ["number", "null"],
-    "signal_variant": ["str", "null"]
+    "ticker": [
+      "str"
+    ],
+    "company_name": [
+      "str"
+    ],
+    "sector": [
+      "str"
+    ],
+    "signal": [
+      "str",
+      "null"
+    ],
+    "signal_confidence": [
+      "number",
+      "null"
+    ],
+    "signal_rationale": [
+      "str"
+    ],
+    "beta": [
+      "number",
+      "null"
+    ],
+    "pe_ratio": [
+      "number",
+      "null"
+    ],
+    "pct_1d": [
+      "number",
+      "null"
+    ],
+    "pct_1w": [
+      "number",
+      "null"
+    ],
+    "pct_1m": [
+      "number",
+      "null"
+    ],
+    "pct_ytd": [
+      "number",
+      "null"
+    ],
+    "pct_1y": [
+      "number",
+      "null"
+    ],
+    "change_1d": [
+      "str",
+      "null"
+    ],
+    "change_1w": [
+      "str",
+      "null"
+    ],
+    "change_ytd": [
+      "str",
+      "null"
+    ],
+    "change_1y": [
+      "str",
+      "null"
+    ],
+    "pre_momentum_label": [
+      "str",
+      "null"
+    ],
+    "momentum_label": [
+      "str",
+      "null"
+    ],
+    "momentum_score": [
+      "number",
+      "null"
+    ],
+    "signal_variant": [
+      "str",
+      "null"
+    ],
+    "industry": [
+      "str",
+      "null"
+    ],
+    "currency": [
+      "str",
+      "null"
+    ],
+    "themes": [
+      "list"
+    ],
+    "markets": [
+      "list"
+    ],
+    "t212": [
+      "str",
+      "null"
+    ],
+    "signal_run": [
+      "str",
+      "null"
+    ],
+    "picked_by": [
+      "list"
+    ]
   },
   "momentum_picks[]": {
-    "ticker": ["str"],
-    "signal": ["str"]
+    "ticker": [
+      "str"
+    ],
+    "signal": [
+      "str"
+    ]
   },
   "macro (keys in any case)": {
     "spy": {
-      "change_1d": ["number", "null"],
-      "change_1w": ["number", "null"],
-      "change_ytd": ["number", "null"]
+      "change_1d": [
+        "number",
+        "null"
+      ],
+      "change_1w": [
+        "number",
+        "null"
+      ],
+      "change_ytd": [
+        "number",
+        "null"
+      ]
     },
     "qqq": {
-      "change_1d": ["number", "null"],
-      "change_1w": ["number", "null"],
-      "change_ytd": ["number", "null"]
+      "change_1d": [
+        "number",
+        "null"
+      ],
+      "change_1w": [
+        "number",
+        "null"
+      ],
+      "change_ytd": [
+        "number",
+        "null"
+      ]
     },
     "vix": {
-      "level": ["number", "null"],
-      "change_1d": ["number", "null"],
-      "signal": ["str"]
+      "level": [
+        "number",
+        "null"
+      ],
+      "change_1d": [
+        "number",
+        "null"
+      ],
+      "signal": [
+        "str"
+      ]
     }
+  },
+  "signal_runs (object, one entry per live run)": {
+    "signals_updated": [
+      "str"
+    ],
+    "variant": [
+      "str"
+    ]
   }
 }

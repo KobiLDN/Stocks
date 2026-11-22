@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI stock picks across all 7 sectors — momentum screener, top picks and previous signals for 242 stocks.">
+<meta name="description" content="Every AI pick on the site in one list: the 11 sector runs, the FTSE 100, AI, Defence and Crypto. A stock picked by several runs shows once.">
 <title>All Sectors — Signals</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared.css">
+<script src="../asset-links.js"></script>
+<script src="../all-filters.js"></script>
 <script src="../shared.js" defer></script>
 <style>
   .filter-bar { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -181,21 +183,12 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>All <span>Signals</span></h1>
-    <div class="header-sub">AI top picks across 6 sectors · momentum screener · Last updated <span id="signals-ts">—</span></div>
+    <div class="header-sub"><span id="pick-total">—</span> stocks picked by 15 AI runs · each stock once · Last updated <span id="signals-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 
-<div class="filter-bar">
-    <button class="filter-btn active" data-filter="all" onclick="filterSectors('all',this)">All Sectors</button>
-    <button class="filter-btn" data-filter="ai" onclick="filterSectors('ai',this)">AI Infra</button>
-    <button class="filter-btn" data-filter="biotech" onclick="filterSectors('biotech',this)">Biotech</button>
-    <button class="filter-btn" data-filter="defence" onclick="filterSectors('defence',this)">Defence</button>
-    <button class="filter-btn" data-filter="tech" onclick="filterSectors('tech',this)">Tech</button>
-    <button class="filter-btn" data-filter="crypto" onclick="filterSectors('crypto',this)">Crypto</button>
-    <button class="filter-btn" data-filter="energy" onclick="filterSectors('energy',this)">Energy</button>
-    <button class="filter-btn" data-filter="megacap" data-tooltip="Global Mega-Cap Leaders — 50 large-cap stocks across Big Tech, Financials, Healthcare, Consumer, and more" onclick="filterSectors('megacap',this)">Mega-Cap</button>
-  </div>
+<div class="filter-bar af-bar" id="af-bar"></div>
 </header>
 <div class="page-body">
 <div class="page-main">
@@ -208,153 +201,63 @@
   </div>
 </div>
 
+<script src="all-data.js"></script>
 <script>
-  const SECTOR_DEFS = [
-    { key: 'ai',      label: 'AI Infrastructure', icon: '🤖', pricesPath: '../AI/prices-data.js',      signalsPath: '../AI/signals-local.json'      },
-    { key: 'biotech', label: 'Biotech',            icon: '🧬', pricesPath: '../Biotech/prices-data.js',  signalsPath: '../Biotech/signals-local.json'  },
-    { key: 'defence', label: 'Defence',            icon: '🛡️', pricesPath: '../Defence/prices-data.js',  signalsPath: '../Defence/signals-local.json'  },
-    { key: 'tech',    label: 'Technology',         icon: '💻', pricesPath: '../Tech/prices-data.js',     signalsPath: '../Tech/signals-local.json'     },
-    { key: 'crypto',  label: 'Crypto',             icon: '₿',  pricesPath: '../Crypto/prices-data.js',   signalsPath: '../Crypto/signals-local.json'   },
-    { key: 'energy',  label: 'Energy',             icon: '⚡', pricesPath: '../Energy/prices-data.js',   signalsPath: '../Energy/signals-local.json'   },
-    { key: 'megacap', label: 'Mega-Cap',           icon: '💎', pricesPath: '../MegaCap/prices-data.js',  signalsPath: '../MegaCap/signals-local.json'  },
+  /* #88: every live signal run, merged. A stock picked by several runs shows once, with every run that
+     picked it; its strongest pick (highest confidence, then best rank) leads. The S&P 500 / Nasdaq-100
+     pages are derived from the sector runs, so they are not read here. */
+  const RUNS = [
+    { name: 'AI', path: '../AI' }, { name: 'Defence', path: '../Defence' }, { name: 'Crypto', path: '../Crypto' },
+    { name: 'FTSE 100', path: '../markets/ftse100' },
+    ...['Communication Services', 'Consumer Discretionary', 'Consumer Staples', 'Energy', 'Financials', 'Health Care',
+        'Industrials', 'Materials', 'Real Estate', 'Technology', 'Utilities']
+      .map(n => ({ name: n, path: '../sectors/' + n.toLowerCase().replace(/[^a-z0-9]+/g, '-') })),
   ];
+  const key = t => (typeof ASSET_YAHOO !== 'undefined' && ASSET_YAHOO[t]) || t;
+  const STOCK = {};
+  ((window.ALL_DATA && window.ALL_DATA.stocks) || []).forEach(s => { STOCK[key(s.ticker)] = s; });
+  let merged = [], momentum = [];
 
-  let activeSectorFilter = 'all';
-  let loadedData = [];
+  function esc(s) { return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  const pill = sig => sig === 'strong_buy' ? 'STRONG BUY' : String(sig || '').replace('_', ' ').toUpperCase();
 
-  function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-
-  function filterSectors(key, btn) {
-    activeSectorFilter = key;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderAll();
-  }
-
-  function rankDelta(ticker, picks, prev) {
-    const curRank  = picks.findIndex(p => p.ticker === ticker);
-    const prevRank = prev.findIndex(p => p.ticker === ticker);
-    if (prevRank === -1) return '<span class="rank-delta delta-new">NEW</span>';
-    const diff = prevRank - curRank;
-    if (diff > 0) return '<span class="rank-delta delta-up">&#8593;' + diff + '</span>';
-    if (diff < 0) return '<span class="rank-delta delta-down">&#8595;' + Math.abs(diff) + '</span>';
-    return '<span class="delta-same">—</span>';
-  }
-
-  function renderSectorBlock(sd) {
-    const { key, label, icon, signals, nameMap, catMap } = sd;
-    if (!signals) return '<div class="sector-block" data-sector="' + key + '"><div class="sector-heading"><span class="sector-heading-icon">' + icon + '</span><div><h2>' + esc(label) + '</h2><div class="sector-meta">Signals unavailable</div></div></div></div>';
-
-    const picks = signals.picks || [];
-    const prev  = signals.previous_picks || [];
-    const momentum = signals.momentum_picks || [];
-    const model = signals.model || 'claude-3-7-sonnet';
-    const updated = signals.updated || '';
-
-    let html = '<div class="sector-block" data-sector="' + key + '">';
-    html += '<div class="sector-heading">';
-    html += '<span class="sector-heading-icon">' + icon + '</span>';
-    html += '<div><h2>' + esc(label) + ' <span style="color:var(--accent)">Signals</span></h2>';
-    if (updated) html += '<div class="sector-meta">Updated ' + esc(updated) + ' · ' + esc(model) + '</div>';
-    html += '</div></div>';
-
-    html += '<div class="how-toggle" onclick="toggleHow(this)"><span class="toggle-icon">▶</span> How it works</div>';
-    html += '<div class="how-box"><strong>Model:</strong> ' + esc(model) + '. Scores each stock on momentum (1M + 3M return), fundamental quality (P/E, growth, margins) and recent news sentiment. Picks are updated Monday, Wednesday and Friday at 08:00 London time. They are candidates to research, not recommendations: so far they have roughly matched the S&amp;P 500 (see the <a href="../track-record.html">Track Record</a>). <strong>Not financial advice.</strong></div>';
-
-    if (picks.length) {
-      html += '<div class="section-label">AI candidates</div>';
-      html += '<div class="picks-grid">';
-      picks.forEach((p, i) => {
-        const name = nameMap[p.ticker] || p.ticker;
-        const cat  = catMap[p.ticker] || '';
-        const delta = rankDelta(p.ticker, picks, prev);
-        html += '<div class="signal-card">';
-        html += '<div class="rank-num">' + (i + 1) + '</div>';
-        html += '<div class="signal-body">';
-        html += '<div class="signal-ticker">' + esc(p.ticker) + '</div>';
-        html += '<div class="signal-name">' + esc(name) + '</div>';
-        html += '<div class="signal-badges">';
-        if (cat) html += '<span class="cat-badge cat-' + esc(cat) + '">' + esc(cat) + '</span>';
-        html += '<span class="sector-badge sector-' + key + '">' + esc(label) + '</span>';
-        html += '<span class="signal-pill">' + delta + '</span>';
-        html += '</div>';
-        if (p.score !== undefined) html += '<div class="signal-score">Score: <span>' + p.score + '</span></div>';
-        if (p.reason) html += '<div class="signal-score">' + esc(p.reason) + '</div>';
-        html += '</div></div>';
-      });
-      html += '</div>';
-    } else {
-      html += '<div class="empty-block">No picks available for this sector.</div>';
-    }
-
-    if (momentum.length) {
-      html += '<div class="momentum-section">';
-      html += '<div class="section-label" title="Not picked by the AI: listed only because they have already risen a lot. On the track record these did worst.">Already up a lot — not buy signals</div>';
-      html += '<div class="momentum-grid">';
-      momentum.forEach(p => {
-        const name = nameMap[p.ticker] || p.ticker;
-        const cat  = catMap[p.ticker] || '';
-        html += '<div class="momentum-card">';
-        html += '<div class="momentum-ticker">' + esc(p.ticker) + '</div>';
-        html += '<div class="momentum-name">' + esc(name) + '</div>';
-        html += '<div class="momentum-badges">';
-        if (cat) html += '<span class="cat-badge cat-' + esc(cat) + '">' + esc(cat) + '</span>';
-        html += '<span class="sector-badge sector-' + key + '">' + esc(label) + '</span>';
-        html += '</div>';
-        if (p.score !== undefined) html += '<div class="momentum-score">Momentum: <span>' + p.score + '</span></div>';
-        html += '</div>';
-      });
-      html += '</div></div>';
-    }
-
-    html += '</div>';
-    return html;
-  }
-
-  function renderCombinedMomentum(data) {
-    const allMomentum = [];
-    data.forEach(sd => {
-      if (!sd.signals) return;
-      (sd.signals.momentum_picks || []).forEach(p => {
-        allMomentum.push({ ...p, sectorKey: sd.key, sectorLabel: sd.label, nameMap: sd.nameMap, catMap: sd.catMap });
-      });
-    });
-    if (!allMomentum.length) return '';
-
-    let html = '<div class="sector-block">';
-    html += '<div class="sector-heading"><div><h2>All Sectors <span style="color:var(--accent)">Already up a lot</span></h2>';
-    html += '<div class="sector-meta">' + allMomentum.length + ' stocks flagged only for big recent gains. Not buy signals: on the track record, buying straight after a big run-up did worst.</div></div></div>';
-    html += '<div class="momentum-grid">';
-    allMomentum.forEach(p => {
-      const name = p.nameMap[p.ticker] || p.ticker;
-      const cat  = p.catMap[p.ticker] || '';
-      html += '<div class="momentum-card">';
-      html += '<div class="momentum-ticker">' + esc(p.ticker) + '</div>';
-      html += '<div class="momentum-name">' + esc(name) + '</div>';
-      html += '<div class="momentum-badges">';
-      if (cat) html += '<span class="cat-badge cat-' + esc(cat) + '">' + esc(cat) + '</span>';
-      html += '<span class="sector-badge sector-' + p.sectorKey + '">' + esc(p.sectorLabel) + '</span>';
-      html += '</div>';
-      if (p.score !== undefined) html += '<div class="momentum-score">Momentum: <span>' + p.score + '</span></div>';
-      html += '</div>';
-    });
-    html += '</div></div>';
-    return html;
+  function card(m, i) {
+    const s = m.stock || {}, best = m.picks[0];
+    let h = '<div class="signal-card">';
+    h += '<div class="rank-num">' + (i + 1) + '</div><div class="signal-body">';
+    h += '<div class="signal-ticker"><a href="' + esc(assetUrl(m.ticker)) + '" target="_blank" rel="noopener">' + esc(m.ticker) + '</a></div>';
+    h += '<div class="signal-name">' + esc(s.company_name || m.ticker) + '</div>';
+    h += '<div class="signal-badges">';
+    if (s.sector) h += '<span class="sector-badge">' + esc(s.sector) + '</span>';
+    h += '<span class="cat-badge">' + esc(pill(best.signal)) + ' · ' + Math.round((best.confidence || 0) * 100) + '%</span>';
+    if (s.t212 === 'no') h += '<span class="cat-badge" title="Trading 212 does not list this stock">not on T212</span>';
+    h += '</div>';
+    h += '<div class="signal-score">Picked by: ' + m.picks.map(p =>
+      '<a href="' + esc(p.path) + '/signals.html">' + esc(p.run) + ' #' + esc(p.rank) + '</a>').join(' · ') + '</div>';
+    if (best.rationale) h += '<div class="signal-score">' + esc(best.rationale) + '</div>';
+    h += '</div></div>';
+    return h;
   }
 
   function renderAll() {
     const root = document.getElementById('signals-root');
-    const visible = activeSectorFilter === 'all'
-      ? loadedData
-      : loadedData.filter(sd => sd.key === activeSectorFilter);
-    if (!visible.length) { root.innerHTML = '<div class="empty-block">No data loaded yet.</div>'; return; }
-
-    let html = '';
-    if (activeSectorFilter === 'all') {
-      html += renderCombinedMomentum(loadedData);
-      html += '<hr style="border:none;border-top:1px solid var(--border);margin:32px 0;">';
+    const shown = merged.filter(m => afMatch(m.stock || { ticker: m.ticker, markets: [], themes: [] }));
+    document.getElementById('pick-total').textContent = merged.length;
+    let html = '<div class="how-toggle" onclick="toggleHow(this)"><span class="toggle-icon">▶</span> How it works</div>';
+    html += '<div class="how-box">Each of the 15 AI runs picks up to 10 stocks from its own list: the 11 sectors, the FTSE 100, and the AI, Defence and Crypto themes. '
+      + 'Picks are updated Monday, Wednesday and Friday at 08:00 London time. A stock picked by several runs shows once; the run most confident about it comes first. '
+      + 'The S&amp;P 500 and Nasdaq-100 pages show the sector runs’ picks that are members, so they are not separate runs. '
+      + 'These are candidates to research, not recommendations: so far picks have roughly matched the S&amp;P 500 (see the <a href="../track-record.html">Track Record</a>). <strong>Not financial advice.</strong></div>';
+    html += '<div class="section-label">AI candidates (' + shown.length + (shown.length !== merged.length ? ' of ' + merged.length : '') + ')</div>';
+    html += shown.length ? '<div class="picks-grid">' + shown.map(card).join('') + '</div>'
+                         : '<div class="empty-block">No picks match these filters.</div>';
+    const mom = momentum.filter(m => afMatch(m.stock || { ticker: m.ticker, markets: [], themes: [] }));
+    if (mom.length) {
+      html += '<div class="momentum-section"><div class="section-label" title="Not picked by the AI: listed only because they have already risen a lot. On the track record these did worst.">Already up a lot — not buy signals</div><div class="momentum-grid">';
+      html += mom.map(m => '<div class="momentum-card"><div class="momentum-ticker">' + esc(m.ticker) + '</div><div class="momentum-name">'
+        + esc((m.stock || {}).company_name || m.ticker) + '</div><div class="momentum-score">' + esc(m.runs.join(' · ')) + '</div></div>').join('');
+      html += '</div></div>';
     }
-    html += visible.map(renderSectorBlock).join('');
     root.innerHTML = html;
   }
 
@@ -365,35 +268,32 @@
   }
 
   // Wait for shared.js (deferred) and nav.js: buildTape and fmtDate live there (same bug as #68)
-  window.addEventListener('DOMContentLoaded', () => Promise.all(SECTOR_DEFS.map(async sd => {
-    const [pricesText, signalsJson] = await Promise.all([
-      fetch(sd.pricesPath).then(r => r.text()).catch(() => ''),
-      fetch(sd.signalsPath).then(r => r.json()).catch(() => null),
-    ]);
-
-    const nameMap = {}, catMap = {};
-    let priceStocks = [];
-    if (pricesText) {
-      const match = pricesText.match(/window\.PRICES_DATA\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
-      if (match) {
-        try {
-          const data = JSON.parse(match[1]);
-          priceStocks = data.stocks || [];
-          priceStocks.forEach(s => {
-            nameMap[s.ticker] = s.company_name || s.ticker;
-            catMap[s.ticker]  = s.category || '';
-          });
-        } catch(e) {}
-      }
-    }
-
-    return { ...sd, signals: signalsJson, nameMap, catMap, stocks: priceStocks };
-  })).then(results => {
-    loadedData = results;
-    buildTape(results.flatMap(r => r.stocks || []));
-    const sigUpdated = results.map(r => r.signals?.updated).filter(Boolean).sort().pop() || '—';
+  window.addEventListener('DOMContentLoaded', () => Promise.all(RUNS.map(r =>
+    fetch(r.path + '/signals-local.json').then(x => x.json()).then(d => ({ ...r, data: d })).catch(() => ({ ...r, data: null }))
+  )).then(results => {
+    const byKey = {}, momByKey = {};
+    results.forEach(r => {
+      if (!r.data) return;
+      (r.data.picks || []).forEach(p => {
+        const k = key(p.ticker);
+        (byKey[k] = byKey[k] || { ticker: p.ticker, stock: STOCK[k], picks: [] }).picks.push({ ...p, run: r.name, path: r.path });
+      });
+      (r.data.momentum_picks || []).forEach(p => {
+        const k = key(p.ticker);
+        (momByKey[k] = momByKey[k] || { ticker: p.ticker, stock: STOCK[k], runs: [] }).runs.push(r.name);
+      });
+    });
+    const strength = p => [-(p.confidence || 0), p.rank || 99];
+    const cmp = (a, b) => { const x = strength(a), y = strength(b); return x[0] - y[0] || x[1] - y[1]; };
+    merged = Object.values(byKey);
+    merged.forEach(m => m.picks.sort(cmp));
+    merged.sort((a, b) => cmp(a.picks[0], b.picks[0]) || b.picks.length - a.picks.length || a.ticker.localeCompare(b.ticker));
+    momentum = Object.values(momByKey).filter(m => !byKey[key(m.ticker)]);
+    if (typeof buildTape === 'function') buildTape(((window.ALL_DATA || {}).stocks || []).slice(0, 80));
+    const sigUpdated = results.map(r => r.data?.updated).filter(Boolean).sort().pop() || '—';
     const sigTsEl = document.getElementById('signals-ts');
-    if (sigTsEl) sigTsEl.textContent = fmtDate(sigUpdated);
+    if (sigTsEl) sigTsEl.textContent = typeof fmtDate === 'function' ? fmtDate(sigUpdated) : sigUpdated;
+    afBuildBar(document.getElementById('af-bar'), renderAll);
     renderAll();
   }));
 

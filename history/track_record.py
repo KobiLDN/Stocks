@@ -190,38 +190,12 @@ def load(h):
 #   momentum_rule  the sector's 10 stocks with the best 6-month return skipping the latest month (the textbook momentum rule)
 MOMENTUM_PICKS = 10
 
-# Shadow trial (#92): frozen rule. Paired per run date, 1-month median excess, shadow minus live.
-SHADOW = {"variant": "shadow-runup-1", "min_dates": 24, "decision_date": "2027-02-20", "interval": 0.80, "horizon": "1m"}
-
-
+# Shadow trial (#92, ended 22 Nov 2026 by the owner): its picks stay in D1 under their own run ids
+# and are kept out of every figure.
 def is_shadow(run):
     return str((run or {}).get("variant") or "").startswith("shadow")
 
 
-def shadow_result(pairs_by_date, now, boot=2000, seed=92):
-    """pairs_by_date: {run date: [(live 1m excesses, shadow 1m excesses), ...] per sector run}. Progress only until the
-    decision date and the minimum number of completed dates are both reached; then the frozen test (#92)."""
-    import random
-    diffs = {}
-    for day, runs_ in pairs_by_date.items():
-        per_run = [statistics.median(sh) - statistics.median(lv) for lv, sh in runs_ if lv and sh]
-        if per_run:
-            diffs[day] = statistics.fmean(per_run)
-    out = {"variant": SHADOW["variant"], "rule": "median over run dates of (shadow minus live) median 1-month excess vs SPY; "
-           "switch only if positive and its 80% interval (resampling run dates) excludes zero",
-           "min_dates": SHADOW["min_dates"], "decision_date": SHADOW["decision_date"],
-           "dates_collected": len(pairs_by_date), "dates_complete": len(diffs)}
-    if now.date().isoformat() < SHADOW["decision_date"] or len(diffs) < SHADOW["min_dates"]:
-        out["status"] = "running"                               # no result shown before the decision: no peeking
-        return out
-    vals = list(diffs.values())
-    rng = random.Random(seed)
-    meds = sorted(statistics.median(rng.choices(vals, k=len(vals))) for _ in range(boot))
-    lo, hi = meds[int(boot * (1 - SHADOW["interval"]) / 2)], meds[int(boot * (1 + SHADOW["interval"]) / 2) - 1]
-    med = statistics.median(vals)
-    out.update(status="decided", median_diff=round(med * 100, 2), interval=[round(lo * 100, 2), round(hi * 100, 2)],
-               switch=bool(med > 0 and lo > 0))
-    return out
 MOM_LONG, MOM_SKIP = 126, 21      # trading days: ~6 months back, skipping the latest ~1 month
 
 
@@ -264,21 +238,11 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
         groups.setdefault(group, {}).setdefault(key, {}).setdefault(horizon, []).append(pair)
 
     counts = {"signals": 0, "scored": 0, "pending": 0, "no_data": 0, "unreliable": 0}
-    shadow_scores = {}     # (sector, generated_utc) -> {"live": [...], "shadow": [...]} 1-month excesses (#92)
     for s in sorted(signals, key=lambda x: (runs.get(x["signal_run_id"], {}).get("generated_utc", ""), x["kind"], x["rank"] or 0)):
         run = runs.get(s["signal_run_id"])
         if not run:
             continue
         if is_shadow(run):                                      # never in live rows, counts or summaries
-            if s["kind"] == "ai":
-                a = assets.get(s["asset_id"])
-                if a and s["asset_id"] not in UNRELIABLE and a["yahoo"] not in coarse:
-                    _e, res, _n = measure(parse_utc(run["generated_utc"]), series_for(a["yahoo"], a["exchange"]), spy, now)
-                    v = res.get(SHADOW["horizon"])
-                    slot = shadow_scores.setdefault((run["sector"], run["generated_utc"]), {"live": [], "shadow": [], "ok": False})
-                    slot["shadow_seen"] = True
-                    if isinstance(v, tuple):
-                        slot["shadow"].append(v[0] - v[1])
             continue
         counts["signals"] += 1
         a = assets.get(s["asset_id"])
@@ -316,10 +280,6 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                 add("by_sector", run["sector"], name, v)
                 add("by_confidence", confidence_bucket(s["confidence"]), name, v)
                 add("by_month", run["generated_utc"][:7], name, v)
-        if s["kind"] == "ai":
-            v = res.get(SHADOW["horizon"])
-            if isinstance(v, tuple):
-                shadow_scores.setdefault((run["sector"], run["generated_utc"]), {"live": [], "shadow": [], "ok": False})["live"].append(v[0] - v[1])
         if s["kind"] == "ai" and s["signal"] in BUY_SIDE:
             for name, _ in HORIZONS:
                 v = res.get(name)
@@ -365,11 +325,6 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                     add("baselines", "momentum_rule", name, res[name])
 
     summary = {g: {k: {h: summarise(v) for h, v in hs.items()} for k, hs in keys.items()} for g, keys in groups.items()}
-    by_date = {}
-    for (sector, gen), sc in shadow_scores.items():
-        if sc.get("shadow_seen"):                               # only live runs that had a shadow twin
-            by_date.setdefault(gen[:10], []).append((sc["live"], sc["shadow"]))
-    summary["shadow_trial"] = shadow_result(by_date, now)
     names = {aid: a["name"] for aid, a in assets.items()}
     return {
         "generated_utc": iso(now),

@@ -1,13 +1,182 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-21 22:59",
+  "updated": "2026-11-22 21:14",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "665993b81bb4",
-  "code_commit": "5e79e7837456",
+  "code_commit": "40bbd8be3a67",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "SAIC",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "YTD +42.44%, P/E 16.6, positive news sentiment 0.177, recent leadership appointment and upcoming earnings call provide catalysts.",
+      "drivers": [
+        "strong YTD return",
+        "low P/E",
+        "positive news sentiment",
+        "leadership change catalyst"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +3.05%, P/E 30.92, news sentiment 0.239, Q3 revenue +11% and EPS +33%, backlog $340B, dividend raised.",
+      "drivers": [
+        "strong Q3 earnings beat",
+        "huge $340B backlog",
+        "commercial diversification",
+        "dividend growth"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +15.83%, P/E 20.08, news sentiment 0.233, $1.53B Trident II contract, backlog $292B.",
+      "drivers": [
+        "strong YTD return",
+        "contract win catalyst",
+        "large backlog",
+        "low P/E"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "CACI",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +9.38%, analyst strong_buy, P/E 24.13, news sentiment 0.186.",
+      "drivers": [
+        "positive YTD return",
+        "strong analyst consensus",
+        "reasonable P/E",
+        "positive news sentiment"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +3.03%, P/E 14.32, analyst buy, $1.2B PE sale for industrial business.",
+      "drivers": [
+        "positive 1M momentum",
+        "low P/E",
+        "divestiture catalyst",
+        "analyst buy rating"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "1M +8.71%, P/E 12.58, dividend yield 2.86%.",
+      "drivers": [
+        "strong 1M momentum",
+        "low P/E",
+        "high dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "HEI",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1M +8.21%, P/E 53.8, Q3 GAAP net income $35M vs $31M, grid investments.",
+      "drivers": [
+        "strong 1M momentum",
+        "earnings growth",
+        "grid resilience investments"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "RR.L",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "YTD +6.32%, analyst strong_buy, P/E 35.35, news sentiment 0.095.",
+      "drivers": [
+        "positive YTD return",
+        "strong analyst consensus",
+        "positive news sentiment"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "BA.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "YTD +3.44%, P/E 25.91, analyst buy, dividend yield 2.07%.",
+      "drivers": [
+        "positive YTD return",
+        "analyst buy rating",
+        "dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "YTD +1.25%, P/E 20.1, analyst buy, low beta 0.296.",
+      "drivers": [
+        "stable YTD return",
+        "low P/E",
+        "low beta",
+        "analyst buy rating"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SAIC",
@@ -166,179 +335,6 @@ window.SIGNALS_DATA = {
         "+1.74% 1-month",
         "4.91% dividend yield",
         "OlinHuntsman restructuring catalyst"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SAIC has surged +42.44% YTD and +68% over one year, with a low P/E of 16.6 and positive news sentiment of 0.177, supported by a new leadership appointment to drive Army and Navy business growth.",
-      "drivers": [
-        "+42.44% YTD",
-        "P/E 16.6",
-        "positive news sentiment 0.177",
-        "new leadership for Army/Navy"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "LMT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Lockheed Martin has a +15.83% YTD return, P/E of 20.08, and positive news sentiment of 0.233, with recent $740M in contract awards and a record $292B backlog supporting future revenue.",
-      "drivers": [
-        "+15.83% YTD",
-        "P/E 20.08",
-        "$740M contract awards",
-        "$292B backlog"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Booz Allen Hamilton shows strong short-term momentum with +8.71% in the past month, a low P/E of 12.58, and a 2.86% dividend yield, though high short interest of 6.17% warrants caution.",
-      "drivers": [
-        "+8.71% 1M",
-        "P/E 12.58",
-        "dividend yield 2.86%",
-        "high short interest 6.17%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "HEICO has gained +8.21% in the past month and +9% over one year, with a beta of 1.089 and positive momentum, though its P/E of 53.8 is elevated.",
-      "drivers": [
-        "+8.21% 1M",
-        "+9% 1Y",
-        "beta 1.089",
-        "elevated P/E 53.8"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Textron has +3.03% monthly momentum, a low P/E of 14.32, and a recent $1.2B divestiture of its industrial business, though news sentiment is slightly negative at -0.104.",
-      "drivers": [
-        "+3.03% 1M",
-        "P/E 14.32",
-        "$1.2B divestiture",
-        "negative news sentiment -0.104"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "HII",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Huntington Ingalls has a low P/E of 15.1, a 1.97% dividend yield, and positive news sentiment of 0.127, but its -18.87% YTD decline and high short interest of 4.78% add risk.",
-      "drivers": [
-        "P/E 15.1",
-        "dividend yield 1.97%",
-        "positive news sentiment 0.127",
-        "high short interest 4.78%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "RTX has a buy analyst consensus with a score of 1.92, positive news sentiment of 0.239, and recent missile contract wins, but its P/E of 30.92 and -3.87% weekly decline are concerns.",
-      "drivers": [
-        "buy consensus score 1.92",
-        "positive news sentiment 0.239",
-        "missile contract wins",
-        "P/E 30.92"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "LHX",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "L3Harris has a buy consensus with a score of 1.91, a 1.95% dividend yield, and +0.95% monthly momentum, but its -16.91% YTD and negative news sentiment of -0.023 are headwinds.",
-      "drivers": [
-        "buy consensus score 1.91",
-        "dividend yield 1.95%",
-        "+0.95% 1M",
-        "negative news sentiment -0.023"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "TransDigm has a buy consensus with a score of 2.09 and positive news sentiment of 0.127, but its -17.47% YTD, P/E of 31.57, and -7.89% weekly drop indicate near-term weakness.",
-      "drivers": [
-        "buy consensus score 2.09",
-        "positive news sentiment 0.127",
-        "-17.47% YTD",
-        "P/E 31.57"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "Olin has a high dividend yield of 4.91% and +1.74% monthly momentum, but its -27.62% YTD, negative news sentiment of -0.043, and high short interest of 14.08% make it a speculative pick.",
-      "drivers": [
-        "dividend yield 4.91%",
-        "+1.74% 1M",
-        "negative news sentiment -0.043",
-        "high short interest 14.08%"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",
