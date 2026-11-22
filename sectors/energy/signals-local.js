@@ -1,0 +1,199 @@
+window.SIGNALS_DATA = {
+  "updated": "2026-11-22 19:30",
+  "model": "deepseek/deepseek-v4-flash",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "source": "openrouter",
+  "group": "energy",
+  "group_name": "Energy",
+  "group_kind": "sector",
+  "variant": "live-2",
+  "prompt_version": "e29bd4c54e92",
+  "code_commit": "cbe66841efe7",
+  "input_version": "2026-11-11",
+  "picks": [
+    {
+      "rank": 1,
+      "ticker": "TRGP",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Strongest analyst consensus (score 1.27), YTD +51.81% with a moderate 1M pullback of -5.47%, and fresh catalysts from Q3 earnings beat, record Permian volumes, and a 20% dividend hike for 2027.",
+      "drivers": [
+        "Analyst score 1.27 (best in sector)",
+        "YTD +51.81%",
+        "Dividend growth +20% expected",
+        "Record volumes and ExxonMobil agreements"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "EOG",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "YTD +42.94%, P/E 9.59, and strong Q3 results with an 8% dividend raise to $4.40 annualized, $2.2B free cash flow, and record oil volumes beat guidance.",
+      "drivers": [
+        "P/E 9.59 (low)",
+        "Dividend raised 8%",
+        "Free cash flow $2.2B",
+        "Record production beat"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +44.81%, P/E 14.34, beta 0.162, and a buy consensus; recent 1M decline of -5.94% offers a pullback entry into a high-quality E&P with 2.73% dividend yield.",
+      "drivers": [
+        "YTD +44.81%",
+        "P/E 14.34",
+        "Beta 0.162 (low risk)",
+        "Dividend yield 2.73%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "YTD +38.53%, P/E 15.3, dividend yield 3.42%, and a strong buy consensus (score 1.62) for this integrated major; 1M retreat of -7.35% makes it more attractive.",
+      "drivers": [
+        "YTD +38.53%",
+        "Dividend yield 3.42%",
+        "Analyst score 1.62 (buy)",
+        "P/E 15.3 reasonable"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +31.00%, P/E 8.5, dividend yield 4.63%, beta near zero (0.04), and a buy consensus; the 1M decline of -5.69% offers a solid entry into a low-risk integrated oil stock.",
+      "drivers": [
+        "P/E 8.5 (lowest in group)",
+        "Dividend yield 4.63%",
+        "Beta 0.04 (defensive)",
+        "Analyst buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "SHEL.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "YTD +29.58%, P/E 8.14, dividend yield 3.34%, and a buy consensus; 1M decline of -8.55% provides a pullback opportunity into a cash-generative integrated major.",
+      "drivers": [
+        "P/E 8.14 (low)",
+        "YTD +29.58%",
+        "Dividend yield 3.34%",
+        "Beta -0.248 (negative correlation)"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "OKE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +19.13%, P/E 13.1, dividend yield 5.07%, and a buy consensus; the 1M retreat of -8.39% offers a higher-yielding midstream entry with $53B market cap and strong fee-based cash flows.",
+      "drivers": [
+        "Dividend yield 5.07% (high)",
+        "P/E 13.1",
+        "YTD +19.13%",
+        "Midstream stability"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "EQT",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "Strong_buy consensus (score 1.5) with fresh catalysts from Q3 results, the Range Resources acquisition, and a 10-year LNG deal with Ignitis; YTD -7.45% is a contrarian entry at P/E 11.59.",
+      "drivers": [
+        "Strong_buy consensus (1.5)",
+        "Range Resources acquisition catalyst",
+        "LNG sales agreement",
+        "P/E 11.59"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "2222.SR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +15.68%, P/E 14.12, dividend yield 5.13%, and a buy consensus; Q3 results showed 234% YoY downstream EBIT growth and a 3.5% base dividend increase, supported by $1694B market cap and near-zero beta.",
+      "drivers": [
+        "Dividend yield 5.13%",
+        "Beta -0.022 (defensive)",
+        "Downstream EBIT +234% YoY",
+        "Market cap $1694B (mega-cap)"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "DVN",
+      "signal": "strong_buy",
+      "confidence": 0.55,
+      "rationale": "Strong_buy consensus (score 1.32) with YTD +11.77%, P/E 9.75, and dividend yield 3.08%; the 1M sell-off of -16.70% creates a deep-value opportunity in a cash-flow-generative E&P.",
+      "drivers": [
+        "Strong_buy consensus (1.32)",
+        "P/E 9.75 (cheap)",
+        "Dividend yield 3.08%",
+        "YTD +11.77%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.568,
+      "ytd": "+125.56%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +125.56% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +125.56% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": []
+};

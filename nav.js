@@ -58,8 +58,8 @@ const _SECTOR_PAGES = [
   { key: 'charts',     label: 'Charts',    icon: '📈', file: 'charts.html' },
   { key: 'calculator', label: 'What-If',   icon: '🧮', file: 'calculator.html' },
 ];
-// Market and sector groups have no Signals page yet (their signal runs come with #88 step 8)
-const _GROUP_NO_PAGES = ['signals.html'];
+// Page types a market/sector group doesn't have (none since #88 PR 8 gave them signal runs)
+const _GROUP_NO_PAGES = [];
 const _THEMES = ['AI', 'Biotech', 'Defence', 'Tech', 'Crypto', 'Energy', 'MegaCap'];
 const _KNOWN_PAGES = ['index', 'metrics', 'news', 'signals', 'heatmap', 'charts', 'calculator'];
 
