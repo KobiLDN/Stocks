@@ -17,7 +17,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: push-to-main
+  # main shares the bots' push lock; a branch run (check only) must never hold it up
+  group: ${{ github.ref == 'refs/heads/main' && 'push-to-main' || format('index-refresh-{0}', github.ref) }}
   cancel-in-progress: false
 
 jobs:
