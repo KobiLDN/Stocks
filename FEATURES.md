@@ -6,6 +6,8 @@ _Nothing queued — open ideas live in GitHub issues (#40 influencer tweets, #44
 
 ## Done
 
+- **Prices for the market and sector groups (#88 phase 1, PR 4)** — `update_group_prices.py`: 689 stocks in 14 groups, batched downloads, daily FX, fundamentals once a day, last good value kept; one data file per group in `groups/`
+
 - **Index members in the master list (#88 phase 1, PR 3)** — S&P 500, Nasdaq-100 and FTSE 100 (721 assets in all), refreshed quarterly from Wikipedia by `index_refresh.py` with row-count, known-member and churn checks, dated snapshots in `index_members/`, and two-refresh leavers
 
 - **ISIN, sector and "on T212" for every asset (#88 phase 1, PR 2)** — `universe_classify.py` fills `isin`, `currency`, `sector`/`industry` and `t212` in `universe.yaml` from Wikipedia's index tables, Yahoo and the private T212 catalogue (matched by ISIN; only yes/no is stored); validated in CI

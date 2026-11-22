@@ -122,6 +122,17 @@ Stocks/
 | `charts.html` | `prices-data.js` | Sidebar built via `buildSidebar()` |
 | `signals.html` | `signals-local.json` | Separate AI-generated file |
 
+### Market and sector groups (#88)
+
+`update_group_prices.py` (run by `update-prices.yml` after the theme price scripts, 3× a day) prices every stock in the 3 index markets (`sp500`, `nasdaq100`, `ftse100`) and the 11 sectors, and writes one compact file per group, `groups/<id>/prices-data.js` (ids: the market ids, and sector names as slugs such as `health-care`). The format is the sector pages' `window.PRICES_DATA` plus `fx` and, per stock, `markets`, `sector`, `industry`, `themes`, `t212`, `currency` and `price_as_of`. `category` is the sector on market pages and the industry on sector pages (Health Care: its 4 industry groups). Each page will load only its own group's file.
+
+- **Prices:** batched 1-year daily downloads (100 symbols a call). A stock missing from a batch, or a day behind its own exchange, is fetched again on its own; a bar with no close takes the live quote's price.
+- **Currency:** converted to GBP/USD with the day's FX; GBp, EUR, JPY and SAR (pegged to USD) are handled.
+- **Fundamentals:** at most once a day per stock, in `groups/fundamentals.json`, time-boxed to 15 min a run, with backoff.
+- **Failures:** a stock that fails keeps its last good row (`price_as_of` shows its age). If more than half fail, nothing is written and the step fails, but it can't block the theme prices.
+- **News:** not fetched for the groups yet (`news: []`); per #88 it will cover signal picks and big movers only.
+- **Freshness:** `groups/status.json` is part of `/health`'s Prices stream.
+
 ## Adding a stock to an existing sector
 
 1. **`universe.yaml`** (repo root, the master list): if the asset is new, add it under `assets` (`name`, `exchange`, `yahoo`, plus `special` / `speculative` / crypto IDs if needed); then add `["TICKER", "category"]` to each sector it belongs to under `sectors`. Run `python universe.py --write-links` to regenerate `asset-links.js` (where each ticker links to: CoinGecko for coins, Yahoo with the right suffix otherwise), then `python universe.py` to check both. CI fails if `asset-links.js` is stale. The price scripts no longer hold their own lists.
