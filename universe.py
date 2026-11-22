@@ -6,6 +6,7 @@ hard-coded STOCKS dicts used to have, so their logic is unchanged.
 Run `python universe.py` to validate the file (also run in CI).
 """
 import os
+import re
 import sys
 
 import yaml
@@ -51,6 +52,45 @@ def crypto_ids(sector="Crypto"):
     return coingecko, cmc
 
 
+# The 11 standard sectors (#88). Pages say "Sector"; sector_src says where each came from.
+SECTORS = [
+    "Communication Services", "Consumer Discretionary", "Consumer Staples", "Energy", "Financials",
+    "Health Care", "Industrials", "Materials", "Real Estate", "Technology", "Utilities",
+]
+# ISIN─────────────────────────────────────────────────────────────────────
+ISIN_RE = re.compile(r"^[A-Z]{2}[A-Z0-9]{9}[0-9]$")
+
+
+def isin_ok(isin):
+    """Format + check digit (ISO 6166: letters -> numbers, then Luhn)."""
+    if not isinstance(isin, str) or not ISIN_RE.match(isin):
+        return False
+    digits = "".join(str(int(c, 36)) for c in isin[:-1])
+    total = 0
+    for i, d in enumerate(reversed(digits)):
+        n = int(d) * (2 if i % 2 == 0 else 1)
+        total += n // 10 + n % 10
+    return (10 - total % 10) % 10 == int(isin[-1])
+
+
+CURRENCIES = {"USD", "GBp", "GBP", "EUR", "CHF", "JPY", "HKD", "CAD", "AUD", "KRW", "INR", "SAR", "DKK"}
+
+# Health Care pages' industry filter (#88): industry text (GICS sub-industry, ICB sector or Yahoo
+# industry) -> one of four groups.
+HEALTH_GROUPS = ["Biotechnology", "Pharmaceuticals", "Life Sciences Tools", "Equipment & Services"]
+
+
+def health_group(industry):
+    s = (industry or "").lower()
+    if "biotech" in s and "pharma" not in s:
+        return "Biotechnology"
+    if "pharma" in s or "drug manufacturers" in s:
+        return "Pharmaceuticals"
+    if "life sciences" in s or "diagnostics" in s:
+        return "Life Sciences Tools"
+    return "Equipment & Services"
+
+
 def validate():
     """Return a list of problems (empty = valid)."""
     u = load()
@@ -67,6 +107,31 @@ def validate():
             for field in ("cmc_symbol", "coingecko"):
                 if not a.get(field):
                     errors.append(f"{t}: crypto asset missing {field}")
+    # #88 fields: written by universe_classify.py
+    seen_isin = {}
+    for t, a in assets.items():
+        if a.get("t212") not in ("yes", "no", "unknown"):
+            errors.append(f"{t}: t212 must be yes | no | unknown, got {a.get('t212')!r}")
+        if a.get("currency") not in CURRENCIES:
+            errors.append(f"{t}: unknown currency {a.get('currency')!r}")
+        if a.get("exchange") == "Crypto":
+            continue
+        if a.get("sector") not in SECTORS + ["Unclassified"]:
+            errors.append(f"{t}: unknown sector {a.get('sector')!r}")
+        if a.get("sector_src") not in ("gics", "icb", "yahoo", "override", None):
+            errors.append(f"{t}: unknown sector_src {a.get('sector_src')!r}")
+        isin = a.get("isin")
+        if isin is not None and not isin_ok(isin):
+            errors.append(f"{t}: ISIN {isin} fails its check digit")
+        if isin is None and a.get("t212") != "unknown":
+            errors.append(f"{t}: no ISIN, so t212 must be unknown")
+        other = seen_isin.get(isin)
+        if isin and other and assets[other]["yahoo"] != a["yahoo"]:
+            errors.append(f"{t}: same ISIN as {other}")
+        seen_isin.setdefault(isin, t)
+    for isin, ov in (u.get("sector_overrides") or {}).items():
+        if not isin_ok(isin) or ov.get("sector") not in SECTORS or not ov.get("reason"):
+            errors.append(f"sector_overrides {isin}: need a valid ISIN, one of the 11 sectors, and a reason")
     used = set()
     for s, members in sectors.items():
         seen = set()

@@ -25,8 +25,9 @@ jobs:
 
       - name: Master list (universe.yaml) check
         run: |
-          pip install -q pyyaml
+          pip install -q pyyaml requests
           python universe.py
+          python -m unittest test_universe.py
 
       - name: Generated pages are up to date (site/build.py)
         run: |
