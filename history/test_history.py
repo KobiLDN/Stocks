@@ -95,6 +95,19 @@ class Schema(Base):
             self.assertIsNone(row["variant"])
             cols = {r["name"] for r in h.run("PRAGMA table_info(signals)")}
             self.assertTrue({"pre_momentum_label", "momentum_label", "momentum_score"} <= cols)
+            self.assertEqual(h.run("SELECT COUNT(*) AS n FROM run_universe")[0]["n"], 0)     # migration 3 (#88)
+
+    def test_migrates_a_v2_database(self):
+        """A v2 database (live since #70) gains run_universe and keeps everything else."""
+        path = os.path.join(self.tmp, "v2.sqlite")
+        with mock.patch.dict(os.environ, {"HISTORY_SQLITE": path}):
+            h = db.connect()
+            with mock.patch.object(db, "SCHEMA_VERSION", "2"), mock.patch.dict(db.MIGRATIONS, clear=False) as m:
+                m.pop("3", None)
+                h.ensure_schema()
+            self.assertNotIn("run_universe", {r["name"] for r in h.run("SELECT name FROM sqlite_master WHERE type = 'table'")})
+            self.assertTrue(h.ensure_schema())
+            self.assertIn("run_universe", {r["name"] for r in h.run("SELECT name FROM sqlite_master WHERE type = 'table'")})
 
     def test_fresh_database_has_new_columns(self):
         cols = {r["name"] for r in self.h.run("PRAGMA table_info(signal_runs)")}
@@ -202,8 +215,21 @@ class Snapshot(Base):
         n = self.count("signals")
         self.assertGreater(n, 0)
         self.assertEqual(self.count("signal_runs", "WHERE provenance <> 'live'"), 0)
+        u = self.count("run_universe")
+        self.assertGreater(u, 0)
         snapshot.main(["x", "signals"])
         self.assertEqual(self.count("signals"), n)
+        self.assertEqual(self.count("run_universe"), u)
+
+    def test_run_universe_is_the_prices_file(self):
+        """#88: each run's list of choosable stocks = the tickers in that sector's prices.json."""
+        runs, _sigs, members = snapshot.signal_rows(self.universe, "r")
+        ai = next(r[0] for r in runs if r[1] == "AI" and not str(r[6] or "").startswith("shadow"))
+        got = sorted(m[1] for m in members if m[0] == ai)
+        want = sorted(s["ticker"] for s in snapshot.read_json("AI/prices.json")["stocks"])
+        self.assertEqual(got, want)
+        self.assertTrue(all(m[2] == "live" for m in members))
+        self.assertEqual(snapshot.universe_rows("X:1", None, "git"), [])
 
 
 class RawBars(unittest.TestCase):
@@ -437,7 +463,8 @@ class TrackRecordBuild(Base):
             ["Crypto:2026-10-25T07:00:00Z", "ai", "AGIX", 2, "strong_buy", 1.0, "x", None, None, None, None],
         ])
         out = tr.build(*tr.load(h), now=_dt.datetime(2026, 11, 1, 22, 0, tzinfo=UTC))
-        self.assertEqual(out["counts"], {"signals": 5, "scored": 2, "pending": 0, "no_data": 1, "unreliable": 2})
+        self.assertEqual(out["counts"], {"signals": 5, "scored": 2, "pending": 0, "no_data": 1, "unreliable": 2,
+                                         "baseline_lists": {"own": 0, "today": 2}})
         allbuy = out["summary"]["all"]["buy signals"]
         self.assertEqual(allbuy["3m"]["n"], 2)
         self.assertGreater(allbuy["1w"]["excess"], 0)                          # AAPL rose twice as fast as SPY
@@ -473,6 +500,13 @@ class TrackRecordBaselines(unittest.TestCase):
         self.assertEqual(b["momentum_rule"]["1w"]["n"], 1)                 # the single best 6-1 month stock...
         self.assertGreater(b["momentum_rule"]["1w"]["avg"], b["ai_picks"]["1w"]["avg"])   # ...is UP, which beat FLAT
         self.assertEqual(out["summary"]["by_variant"]["live-2"]["1w"]["n"], 1)
+        # #88: with the run's own recorded list (here without UP), the baselines use that list, not today's
+        with mock.patch.object(tr, "MOMENTUM_PICKS", 1):
+            own = tr.build(assets, runs, signals, bars_, {}, {}, set(), members, run_members={"T:1": ["FLAT", "DOWN"]},
+                           now=_dt.datetime(2026, 9, 20, tzinfo=UTC))
+        self.assertEqual(own["summary"]["baselines"]["random"]["1w"]["n"], 2)
+        self.assertEqual(own["counts"]["baseline_lists"], {"own": 1, "today": 0})
+        self.assertEqual(out["counts"]["baseline_lists"], {"own": 0, "today": 1})
         ser = tr.Series("Crypto", [(x["date"], x["open"], x["close"]) for x in bars_["UP"]])
         self.assertGreater(tr.momentum_score(ser, tr.parse_utc(gen)), 0)
         self.assertIsNone(tr.momentum_score(ser, tr.parse_utc("2026-03-01T07:00:00Z")))   # too little history
@@ -539,8 +573,11 @@ class ImportSignals(unittest.TestCase):
     def test_git_history(self):
         if subprocess_shallow():
             self.skipTest("shallow clone")
-        runs, sigs, skipped = import_signals.collect(db.load_universe()["sectors"], warn=lambda *_: None)
+        runs, sigs, members, skipped = import_signals.collect(db.load_universe()["sectors"], warn=lambda *_: None)
         self.assertGreater(len(runs), 400)
+        with_list = {m[0] for m in members}
+        self.assertGreater(len(with_list), len(runs) * 0.9)          # nearly every past run has its prices.json
+        self.assertTrue(all(m[2] == "git" for m in members))
         self.assertTrue(all(r[4] == "live" and r[5].startswith("git:") for r in runs))
         self.assertEqual(len({r[0] for r in runs}), len(runs))
         self.assertTrue(all(s[4] in ("buy", "strong_buy", "hold", "sell", "strong_sell") for s in sigs))

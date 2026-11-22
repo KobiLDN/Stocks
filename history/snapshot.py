@@ -135,31 +135,42 @@ def rows_from_signal_file(sector, data, run_id, provenance="live"):
     return run, sigs
 
 
+def universe_rows(signal_run_id, prices, source):
+    """The stocks a run could choose from = the tickers in the prices.json its prompt was built from."""
+    tickers = sorted({s.get("ticker") for s in (prices or {}).get("stocks") or [] if s.get("ticker")})
+    return [[signal_run_id, t, source] for t in tickers]
+
+
 def signal_rows(universe, run_id):
-    runs, sigs = [], []
+    runs, sigs, members = [], [], []
     for sector in universe["sectors"]:
         got = rows_from_signal_file(sector, read_json(f"{sector}/signals-local.json"), run_id)
         if not got:
             print(f"  WARNING: {sector}/signals-local.json missing or has no 'updated'")
             continue
+        prices = read_json(f"{sector}/prices.json")
         runs.append(got[0])
         sigs += got[1]
+        members += universe_rows(got[0][0], prices, "live")
         shadow = rows_from_signal_file(sector, read_json(f"{sector}/signals-shadow.json"), run_id)   # #92; absent/empty = skip
         if shadow:
             runs.append(shadow[0])
             sigs += shadow[1]
-    return runs, sigs
+            members += universe_rows(shadow[0][0], prices, "live")
+    return runs, sigs, members
 
 
 SIGNAL_RUN_COLS = ["signal_run_id", "sector", "generated_utc", "model", "provenance", "run_id",
                    "variant", "prompt_version", "code_commit", "input_version"]
 SIGNAL_COLS = ["signal_run_id", "kind", "asset_id", "rank", "signal", "confidence", "rationale", "drivers",
                "pre_momentum_label", "momentum_label", "momentum_score"]
+RUN_UNIVERSE_COLS = ["signal_run_id", "asset_id", "source"]
 
 
 def record_signals(h, universe, run_id):
-    runs, sigs = signal_rows(universe, run_id)
+    runs, sigs, members = signal_rows(universe, run_id)
     h.write("signal_runs", SIGNAL_RUN_COLS, runs, on_conflict="IGNORE")
+    h.write("run_universe", RUN_UNIVERSE_COLS, members, on_conflict="IGNORE")
     return h.write("signals", SIGNAL_COLS, sigs, on_conflict="IGNORE")
 
 

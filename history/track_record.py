@@ -179,7 +179,10 @@ def load(h):
     members = {}
     for m in h.fetch_all("asset_sectors", ["asset_id", "sector"]):
         members.setdefault(m["sector"], []).append(m["asset_id"])
-    return assets, runs, signals, bars, splits, divs, coarse, members
+    run_members = {}
+    for m in h.fetch_all("run_universe", ["signal_run_id", "asset_id"], "signal_run_id, asset_id"):
+        run_members.setdefault(m["signal_run_id"], []).append(m["asset_id"])
+    return assets, runs, signals, bars, splits, divs, coarse, members, run_members
 
 
 # Free alternatives the AI is compared with (#70): for every AI run, on the same date and with the same entry/exit rules,
@@ -239,7 +242,10 @@ def momentum_score(series, generated):
     return series.bars[b][2] * shares / series.bars[a][2] - 1
 
 
-def build(assets, runs, signals, bars, splits, divs, coarse, members, now):
+def build(assets, runs, signals, bars, splits, divs, coarse, members, run_members=None, now=None):
+    """members: today's list per sector; run_members: the list each signal run actually had (#88).
+    The baselines use the run's own list, and today's only for runs recorded before that existed."""
+    run_members = run_members or {}
     series_cache = {}
 
     def series_for(symbol, exchange):
@@ -331,13 +337,16 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, now):
 
     # Baselines: once per AI run, over the same sector's stocks on the same date
     ai_runs = sorted(r for r in {s["signal_run_id"] for s in signals if s["kind"] == "ai"} & set(runs) if not is_shadow(runs[r]))
-    for rid in ai_runs if members else []:
+    lists = {"own": 0, "today": 0}
+    for rid in ai_runs if (members or run_members) else []:
         run = runs[rid]
         if run.get("provenance") != "live":
             continue
         generated = parse_utc(run["generated_utc"])
         scored = []
-        for aid in members.get(run["sector"], []):
+        candidates = run_members.get(rid)
+        lists["own" if candidates else "today"] += 1
+        for aid in candidates or members.get(run["sector"], []):
             a = assets.get(aid)
             if not a or aid in UNRELIABLE or a["yahoo"] in coarse:
                 continue
@@ -376,9 +385,10 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, now):
             "counting": "every signal counts, including a stock picked again in later runs",
             "baselines": "for every AI run, on the same date: 'random' scores every stock in that sector (picking at random from the same list); "
                          "'momentum_rule' scores the sector's 10 stocks with the best 6-month return skipping the latest month. "
-                         "Same entry, exit and benchmark rules. Sector lists are today's.",
+                         "Same entry, exit and benchmark rules. Each run uses the list of stocks it could choose from "
+                         "that day; runs from before those lists were recorded use today's list.",
         },
-        "counts": counts,
+        "counts": {**counts, "baseline_lists": lists},
         "summary": summary,
         "columns": ["time_utc", "sector", "kind", "ticker", "signal", "confidence", "rank", "provenance",
                     "entry_date", "entry_price", "currency", "r1w", "x1w", "r1m", "x1m", "r3m", "x3m", "note"],

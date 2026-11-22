@@ -24,7 +24,7 @@ on:
         type: boolean
         default: false
       import_signals:
-        description: 'One-off: import every past signal run from git history'
+        description: 'Import every past signal run, and the list of stocks it could choose from, from git history (safe to re-run)'
         type: boolean
         default: false
 
