@@ -317,9 +317,10 @@ def derive_market(market, groups, assets, now_str):
     out = {"updated": latest or now_str, "derived": True, "derived_from": sources,
            "model": model or MODEL,
            "group": market, "group_name": groups[market]["name"], "group_kind": "market",
-           "note": (f"Picks from the 11 sector runs that are members of the {groups[market]['name']}; "
-                    + ("no Europe AI run of its own yet (it waits for the run review)." if market == "europe"
-                       else "no separate AI run (too many stocks for one prompt).")),
+           "note": ("The 11 sector runs' picks that are European (Euro Stoxx 50, DAX, CAC 40 or SMI); no Europe AI run "
+                    "of its own yet (it waits for the run review)." if market == "europe" else
+                    f"Picks from the 11 sector runs that are members of the {groups[market]['name']}; "
+                    "no separate AI run (too many stocks for one prompt)."),
            "picks": picks, "momentum_picks": [], "previous_picks": previous(path)}
     write_signals(path, out)
     return out

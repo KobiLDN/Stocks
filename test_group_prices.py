@@ -187,8 +187,9 @@ class Groups(unittest.TestCase):
         self.assertEqual(g["health-care"]["path"], "sectors/health-care")
         self.assertEqual(g["sp500"]["path"], "markets/sp500")
         self.assertNotIn("X", {t for v in g.values() for t in v["tickers"]})
-        self.assertEqual(len(g), 14)
-        self.assertEqual(list(g)[:3], ["sp500", "nasdaq100", "ftse100"])
+        self.assertEqual(len(g), 15)                       # 3 index markets + Europe (#110) + 11 sectors
+        self.assertEqual(list(g)[:4], ["sp500", "nasdaq100", "ftse100", "europe"])
+        self.assertEqual(g["europe"]["tickers"], [])        # no European stock in this test list
 
 
 class AllFile(unittest.TestCase):
