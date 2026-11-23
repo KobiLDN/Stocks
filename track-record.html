@@ -314,8 +314,9 @@ function renderBreakdown() {
     bdTable('Month the signal was made', 'by_month', months, monthLabel),
     bdTable('Signal recipe (AI picks)', 'by_variant', ['live-1', 'live-2'], k => VARIANT_LABEL[k] || k),
     bdTable('In pounds (stock and S&amp;P 500 both converted to £)', 'in_gbp', ['buy signals'], k => k === 'buy signals' ? 'Buy signals, in £' : k, 'S&amp;P in £'),
-    bdTable('London-listed picks: vs the FTSE 100 and vs the S&amp;P 500', 'vs_local', ['vs FTSE 100', 'vs S&P 500'],
-            k => k === 'vs FTSE 100' ? 'Against the FTSE 100 (ISF)' : 'Same picks against the S&P 500', 'index'),
+    bdTable('Picks vs their own market (and the same picks vs the S&amp;P 500)', 'vs_local',
+            ['vs FTSE 100', 'vs S&P 500', 'Eurozone picks vs Euro Stoxx 50', 'Eurozone picks vs S&P 500', 'Swiss picks vs SMI', 'Swiss picks vs S&P 500'],
+            k => ({ 'vs FTSE 100': 'London picks vs the FTSE 100 (ISF)', 'vs S&P 500': 'London picks vs the S&P 500' })[k] || k, 'index'),
   ].join('');
 }
 

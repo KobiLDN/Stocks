@@ -156,7 +156,7 @@ def render_all():
 GROUP_PAGES = [("dashboard", "index.html"), ("metrics", "metrics.html"), ("news", "news.html"),
                ("signals", "signals.html"), ("calculator", "calculator.html"), ("charts", "charts.html"),
                ("heatmap", "heatmap.html")]
-DERIVED_SIGNALS = {"sp500", "nasdaq100"}     # generate_group_signals.py: picks from the sector runs
+DERIVED_SIGNALS = {"sp500", "nasdaq100", "europe"}     # generate_group_signals.py: picks from the sector runs
 CHART_DEFAULT = {"sp500": "AAPL", "nasdaq100": "NVDA", "ftse100": "AZN"}
 
 
@@ -175,6 +175,8 @@ def group_configs(g, assets, base):
     kind_word = "index" if g["kind"] == "market" else "sector"
     common = {"page_title": name, "h1": name, "unit": "stocks", "count": n, "t212": True,
               "group_kind": g["kind"]}
+    if g.get("indexes"):                         # Europe (#110): filter by index
+        common["index_filter"] = [(k, gc.INDEX_LABELS[k]) for k in g["indexes"]]
     by_cat = {}
     for t in g["tickers"]:
         by_cat.setdefault(gc.category_of(g, assets[t], cats), []).append(t)

@@ -810,6 +810,7 @@
       ticker:           s.ticker,
       name:             NAMES[s.ticker] || s.ticker,
       category:         s.category,
+      markets:          s.markets || [],
       priceStr:         (s.price_usd !== undefined && s.price_usd !== null) ? fmtUsd(s.price_usd) : null,
       price:            (s.price_usd !== undefined && s.price_usd !== null && !isNaN(parseFloat(s.price_usd))) ? parseFloat(s.price_usd) : null,
       market_cap_usd_b: (s.market_cap_usd_b !== undefined && s.market_cap_usd_b !== null) ? parseFloat(s.market_cap_usd_b) : null,

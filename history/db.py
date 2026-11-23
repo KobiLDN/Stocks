@@ -59,6 +59,10 @@ BENCHMARKS = [
     ("GBPUSD", "Pound / US dollar", "GBPUSD=X"),
     ("GBPEUR", "Pound / euro", "GBPEUR=X"),
     ("GBPJPY", "Pound / yen", "GBPJPY=X"),
+    # Europe (#110): Swiss francs for the pounds view; eurozone picks vs the Euro Stoxx 50, Swiss vs the SMI
+    ("GBPCHF", "Pound / Swiss franc", "GBPCHF=X"),
+    ("SX5E", "iShares Core EURO STOXX 50 UCITS ETF (DE)", "EXW1.DE"),
+    ("SMI", "iShares SMI ETF (CH)", "CSSMI.SW"),
 ]
 
 

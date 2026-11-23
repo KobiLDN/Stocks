@@ -117,7 +117,8 @@
 <div class="filter-bar">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
 {% for c in s.chips %}<button class="chip" data-filter="{{ c.id }}" onclick="filterChip('{{ c.id }}',this)">{{ c.label|safe }}</button>
-{% endfor %}{% if s.t212 is defined %}<label class="t212-toggle" title="Trading 212 offers most ordinary shares on major exchanges; this hides the ones it doesn't list"><input type="checkbox" id="hide-t212" onchange="applyFilters()"> Hide stocks not on T212</label>
+{% endfor %}{% if s.index_filter is defined %}<label class="t212-toggle">Index <select id="index-filter" onchange="applyFilters()"><option value="">All</option>{% for k, l in s.index_filter %}<option value="{{ k }}">{{ l }}</option>{% endfor %}</select></label>
+{% endif %}{% if s.t212 is defined %}<label class="t212-toggle" title="Trading 212 offers most ordinary shares on major exchanges; this hides the ones it doesn't list"><input type="checkbox" id="hide-t212" onchange="applyFilters()"> Hide stocks not on T212</label>
 {% endif %}</div>
 <div class="search-count-bar">
 <input id="stock-search" oninput="searchTable(this.value)" placeholder="Search ticker or company..." type="text"/>
@@ -195,6 +196,7 @@ function buildTable(stocks) {
     tr.dataset.changeYtd = s.change_ytd;
     tr.dataset.barPct    = s.bar_pct;
 {% if s.t212 is defined %}    tr.dataset.t212      = s.t212 || 'unknown';
+{% endif %}{% if s.index_filter is defined %}    tr.dataset.markets   = (s.markets || []).join(' ');
 {% endif %}    tr.innerHTML =
       '<td><a class="ticker-link" href="' + assetUrl(s.ticker) + '" target="_blank">' +
         '<div class="ticker" style="color:' + color + '">' + s.ticker + '</div></a>' +
@@ -276,7 +278,9 @@ function applyFilters() {
   let visible = 0;
   rows.forEach(row => {
     const matchCat    = currentCat === 'all' || row.dataset.cat === currentCat;
-{% if s.t212 is defined %}    const hideT212 = document.getElementById('hide-t212');
+{% if s.index_filter is defined %}    const idx = document.getElementById('index-filter').value;
+    if (idx && !(row.dataset.markets || '').split(' ').includes(idx)) { row.classList.add('hidden'); return; }
+{% endif %}{% if s.t212 is defined %}    const hideT212 = document.getElementById('hide-t212');
     if (hideT212 && hideT212.checked && row.dataset.t212 === 'no') { row.classList.add('hidden'); return; }
 {% endif %}
     const matchSearch = !query
