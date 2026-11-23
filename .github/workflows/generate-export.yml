@@ -9,7 +9,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: push-to-main
+  # main shares the bots' push lock; a branch run (it commits to its own branch) must not hold it up
+  group: ${{ github.ref == 'refs/heads/main' && 'push-to-main' || format('generate-export-{0}', github.ref) }}
   cancel-in-progress: false
 
 jobs:
@@ -47,9 +48,9 @@ jobs:
           else
             git commit -m "Update export — $(date -u '+%Y-%m-%d %H:%M UTC')"
             for i in 1 2 3; do
-              git fetch origin main
-              git merge -X ours origin/main --no-edit
-              git push origin HEAD:main && break
+              git fetch origin "${{ github.ref_name }}"
+              git merge -X ours "origin/${{ github.ref_name }}" --no-edit
+              git push origin "HEAD:${{ github.ref_name }}" && break
               echo "Push attempt $i failed, retrying..."
               sleep 10
             done
