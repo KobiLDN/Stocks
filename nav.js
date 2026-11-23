@@ -19,6 +19,7 @@ const _RAIL_SECTIONS = [
     { key: 'sp500',     label: 'S&P 500',    icon: '🇺🇸', group: 'markets/sp500' },
     { key: 'nasdaq100', label: 'Nasdaq-100', icon: '📟', group: 'markets/nasdaq100' },
     { key: 'ftse100',   label: 'FTSE 100',   icon: '🇬🇧', group: 'markets/ftse100' },
+    { key: 'europe',    label: 'Europe',     icon: '🇪🇺', group: 'markets/europe' },
     { key: 'Crypto',    label: 'Crypto',     icon: '₿',  theme: 'Crypto' },
   ]},
   { title: 'Sectors', items: [

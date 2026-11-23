@@ -42,7 +42,7 @@ REQUEST_TIMEOUT_S = (15, 170)
 TOP_N = 10
 RETRY_ON_BAD_JSON = 1
 RUN_GROUPS = [groups_config.slug(s) for s in universe.SECTORS] + ["ftse100"]
-DERIVED = ["sp500", "nasdaq100"]
+DERIVED = ["sp500", "nasdaq100", "europe"]
 
 # One line of what matters most in each group, for the prompt
 GROUP_FACTORS = {
@@ -317,8 +317,9 @@ def derive_market(market, groups, assets, now_str):
     out = {"updated": latest or now_str, "derived": True, "derived_from": sources,
            "model": model or MODEL,
            "group": market, "group_name": groups[market]["name"], "group_kind": "market",
-           "note": f"Picks from the 11 sector runs that are members of the {groups[market]['name']}; "
-                   "no separate AI run (too many stocks for one prompt).",
+           "note": (f"Picks from the 11 sector runs that are members of the {groups[market]['name']}; "
+                    + ("no Europe AI run of its own yet (it waits for the run review)." if market == "europe"
+                       else "no separate AI run (too many stocks for one prompt).")),
            "picks": picks, "momentum_picks": [], "previous_picks": previous(path)}
     write_signals(path, out)
     return out

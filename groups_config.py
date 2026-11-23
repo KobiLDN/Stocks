@@ -5,6 +5,7 @@ Shared by the price bot (update_group_prices.py: each stock's `category`) and th
 worked out from universe.yaml alone.
 
   markets  sp500, nasdaq100, ftse100 -> pages in markets/<id>/;  categories = the 11 sectors
+           europe (#110): Euro Stoxx 50 + DAX + CAC 40 + SMI members, one group with an index filter
   sectors  the 11 standard sectors   -> pages in sectors/<slug>/; categories = industries:
            Health Care uses its 4 groups (owner decision, #88); the others show their TOP_INDUSTRIES
            commonest industries (9 above 80 stocks) and put the rest under "Other" (Industrials alone
@@ -15,8 +16,10 @@ from collections import Counter
 
 import universe
 
-MARKET_NAMES = {"sp500": "S&P 500", "nasdaq100": "Nasdaq-100", "ftse100": "FTSE 100"}
-MARKET_ICONS = {"sp500": "🇺🇸", "nasdaq100": "📟", "ftse100": "🇬🇧"}
+MARKET_NAMES = {"sp500": "S&P 500", "nasdaq100": "Nasdaq-100", "ftse100": "FTSE 100", "europe": "Europe"}
+MARKET_ICONS = {"sp500": "🇺🇸", "nasdaq100": "📟", "ftse100": "🇬🇧", "europe": "🇪🇺"}
+# Phase 2 (#110): one Europe group for four indexes; its pages filter by index (owner decision)
+INDEX_LABELS = {"eurostoxx50": "Euro Stoxx 50", "dax": "DAX", "cac40": "CAC 40", "smi": "SMI"}
 SECTOR_ICONS = {
     "Communication Services": "📡", "Consumer Discretionary": "🛍️", "Consumer Staples": "🛒", "Energy": "🛢️",
     "Financials": "🏦", "Health Care": "⚕️", "Industrials": "🏭", "Materials": "⛏️", "Real Estate": "🏢",
@@ -53,6 +56,10 @@ def all_groups(assets=None):
     for m in universe.MARKETS_ORDER:
         out.append({"id": m, "name": MARKET_NAMES[m], "kind": "market", "path": f"markets/{m}", "icon": MARKET_ICONS[m],
                     "tickers": sorted(t for t, a in stocks.items() if m in (a.get("markets") or []))})
+    europe = set(universe.EUROPE_MARKETS)
+    out.append({"id": "europe", "name": MARKET_NAMES["europe"], "kind": "market", "path": "markets/europe",
+                "icon": MARKET_ICONS["europe"], "indexes": universe.EUROPE_MARKETS,
+                "tickers": sorted(t for t, a in stocks.items() if europe & set(a.get("markets") or []))})
     for s in universe.SECTORS:
         out.append({"id": slug(s), "name": s, "kind": "sector", "path": f"sectors/{slug(s)}", "icon": SECTOR_ICONS[s],
                     "tickers": sorted(t for t, a in stocks.items() if a.get("sector") == s)})

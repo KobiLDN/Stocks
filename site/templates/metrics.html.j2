@@ -365,7 +365,8 @@
 </div>
 <div class="filter-bar" id="filter-bar"></div>
 <div class="search-count-bar">
-<input type="text" id="metrics-search" placeholder="{{ s.search_placeholder|safe }}" oninput="filterMetrics(this.value)">
+{% if s.index_filter is defined %}<select id="index-filter" onchange="renderTable()" style="margin-right:8px"><option value="">All indexes</option>{% for k, l in s.index_filter %}<option value="{{ k }}">{{ l }}</option>{% endfor %}</select>
+{% endif %}<input type="text" id="metrics-search" placeholder="{{ s.search_placeholder|safe }}" oninput="filterMetrics(this.value)">
 <span class="row-count">Showing <span id="metrics-count">—</span> {{ s.unit }}</span>
 </div>
 </header>
@@ -561,6 +562,10 @@
       data = data.filter(s => s.category === activeCategory);
     }
 
+{% if s.index_filter is defined %}    // Index filter (Europe, #110)
+    const idx = document.getElementById('index-filter').value;
+    if (idx) data = data.filter(s => s.markets.includes(idx));
+{% endif %}
     // Search filter
     if (searchQuery) {
       data = data.filter(s =>
@@ -679,6 +684,7 @@
       ticker:           s.ticker,
       name:             NAMES[s.ticker] || s.ticker,
       category:         s.category,
+      markets:          s.markets || [],
       priceStr:         (s.price_usd !== undefined && s.price_usd !== null) ? fmtUsd(s.price_usd) : null,
       price:            (s.price_usd !== undefined && s.price_usd !== null && !isNaN(parseFloat(s.price_usd))) ? parseFloat(s.price_usd) : null,
       market_cap_usd_b: (s.market_cap_usd_b !== undefined && s.market_cap_usd_b !== null) ? parseFloat(s.market_cap_usd_b) : null,

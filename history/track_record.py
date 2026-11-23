@@ -156,8 +156,15 @@ def measure(generated, series, spy, now, windows=None):
 
 
 # ── Pounds and local benchmarks (#88 PR 10) ───────────────────────────────────
-LOCAL_BENCH = {"LSE": ("ISF", "LSE")}          # London listings vs the FTSE 100 (iShares ISF.L)
-FX = {"USD": ("GBPUSD", 1.0), "SAR": ("GBPUSD", 3.75), "EUR": ("GBPEUR", 1.0), "JPY": ("GBPJPY", 1.0)}  # SAR is pegged
+# Listings compared with their own market too: exchange -> (benchmark asset, its exchange, summary keys).
+# London: the FTSE 100 (iShares ISF.L). Europe (#110): eurozone exchanges vs the Euro Stoxx 50 (EXW1.DE),
+# Zurich vs the SMI (CSSMI.SW). Both are dividend-paying funds, like ISF.
+_EURO = ("SX5E", "XETRA", "Eurozone picks vs Euro Stoxx 50", "Eurozone picks vs S&P 500")
+LOCAL_BENCH = {"LSE": ("ISF", "LSE", "vs FTSE 100", "vs S&P 500"),
+               "XETRA": _EURO, "EURONEXT": _EURO, "MIL": _EURO, "BME": _EURO, "HEL": _EURO,
+               "SIX": ("SMI", "SIX", "Swiss picks vs SMI", "Swiss picks vs S&P 500")}
+FX = {"USD": ("GBPUSD", 1.0), "SAR": ("GBPUSD", 3.75), "EUR": ("GBPEUR", 1.0), "JPY": ("GBPJPY", 1.0),
+      "CHF": ("GBPCHF", 1.0)}  # SAR is pegged
 POUNDS = ("GBP", "GBp")
 REVIEW_MIN_DATES = 10                          # run dates with a finished 1-month result before a run is judged
 
@@ -281,7 +288,7 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
     currency = {s: (rows[-1]["currency"] if rows else None) for s, rows in bars.items()}
     bench_yahoo = {aid: yahoo for aid, _name, yahoo in BENCHMARKS}
     fx = {pair: series_for(bench_yahoo[pair], "Index") for pair in {p for p, _ in FX.values()}}
-    local = {ex: series_for(bench_yahoo[aid], bex) for ex, (aid, bex) in LOCAL_BENCH.items()}
+    local = {ex: (series_for(bench_yahoo[aid], bex), k_local, k_spy) for ex, (aid, bex, k_local, k_spy) in LOCAL_BENCH.items()}
     ai_1m, random_1m = {}, {}      # run id -> 1-month excesses vs SPY (AI buy picks; every stock in its list)
 
     rows, groups = [], {}
@@ -315,12 +322,12 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                     rg, sg = to_gbp(r, currency.get(symbol), d0, d1, fx), to_gbp(sp, "USD", d0, d1, fx)
                     if rg is not None and sg is not None:
                         add("in_gbp", "buy signals", name, (rg, sg))
-                    bench = local.get(a["exchange"])
+                    bench, k_local, k_spy = local.get(a["exchange"], (None, None, None))
                     if bench is not None:
                         b = window_return(bench, ser.opens[i], target)
                         if b is not None:
-                            add("vs_local", "vs FTSE 100", name, (r, b))
-                            add("vs_local", "vs S&P 500", name, (r, sp))
+                            add("vs_local", k_local, name, (r, b))
+                            add("vs_local", k_spy, name, (r, sp))
                 if s["kind"] == "ai" and isinstance(res.get("1m"), tuple) and run.get("provenance") == "live":
                     ai_1m.setdefault(s["signal_run_id"], []).append(res["1m"][0] - res["1m"][1])
         cells = []
@@ -412,7 +419,8 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
             "counting": "every signal counts, including a stock picked again in later runs",
             "in_gbp": "the same windows with the stock and SPY both converted to pounds at that day's closing exchange rate "
                       "(entry and exit dates); London stocks are already in pounds",
-            "vs_local": "London-listed picks are also compared with the FTSE 100 (iShares ISF.L) over the same window",
+            "vs_local": "London-listed picks are also compared with the FTSE 100 (iShares ISF.L), eurozone picks with the "
+                        "Euro Stoxx 50 (EXW1.DE) and Swiss picks with the SMI (CSSMI.SW), over the same window",
             "run_review": f"each signal run's AI picks vs picking at random from the same list, per run date, 1-month excess vs SPY; "
                           f"a run is judged once it has {REVIEW_MIN_DATES} run dates with a finished result and flagged when its average "
                           "and most of its run dates are behind random ('mixed' when they disagree). Flags are for the owner's quarterly review; no run is paused automatically.",
