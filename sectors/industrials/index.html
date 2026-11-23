@@ -77,7 +77,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Industrials dashboard: live prices, 52-week ranges and returns for all 116 stocks in the sector.">
+<meta name="description" content="Industrials dashboard: live prices, 52-week ranges and returns for all 136 stocks in the sector.">
 <title>Industrials — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -511,11 +511,11 @@
   /* this group's categories (#88) */
   .cat-aerospace-defense { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
   .cat-industrial-machinery-supplies-components { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
-  .cat-building-products { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
-  .cat-electrical-components-equipment { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-industrial-support-services { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-air-freight-logistics { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
-  .cat-construction-engineering { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-electrical-components-equipment { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .cat-building-products { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
+  .cat-construction-engineering { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-industrial-support-services { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-air-freight-logistics { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
   .cat-construction-machinery-heavy-transportation-equipment { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
   .cat-environmental-facilities-services { background: rgba(163,230,53,0.1); color: var(--lime); border: 1px solid rgba(163,230,53,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
@@ -544,7 +544,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1><span>Industrials</span></h1>
-    <div class="header-sub"><span id="sector-count">116</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="sector-count">136</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -552,11 +552,11 @@
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
 <button class="chip" data-filter="aerospace-defense" onclick="filterChip('aerospace-defense',this)">Aerospace & Defense</button>
 <button class="chip" data-filter="industrial-machinery-supplies-components" onclick="filterChip('industrial-machinery-supplies-components',this)">Industrial Machinery & Supplies & Components</button>
-<button class="chip" data-filter="building-products" onclick="filterChip('building-products',this)">Building Products</button>
 <button class="chip" data-filter="electrical-components-equipment" onclick="filterChip('electrical-components-equipment',this)">Electrical Components & Equipment</button>
+<button class="chip" data-filter="building-products" onclick="filterChip('building-products',this)">Building Products</button>
+<button class="chip" data-filter="construction-engineering" onclick="filterChip('construction-engineering',this)">Construction & Engineering</button>
 <button class="chip" data-filter="industrial-support-services" onclick="filterChip('industrial-support-services',this)">Industrial Support Services</button>
 <button class="chip" data-filter="air-freight-logistics" onclick="filterChip('air-freight-logistics',this)">Air Freight & Logistics</button>
-<button class="chip" data-filter="construction-engineering" onclick="filterChip('construction-engineering',this)">Construction & Engineering</button>
 <button class="chip" data-filter="construction-machinery-heavy-transportation-equipment" onclick="filterChip('construction-machinery-heavy-transportation-equipment',this)">Construction Machinery & Heavy Transportation Equipment</button>
 <button class="chip" data-filter="environmental-facilities-services" onclick="filterChip('environmental-facilities-services',this)">Environmental & Facilities Services</button>
 <button class="chip" data-filter="other" onclick="filterChip('other',this)">Other</button>
@@ -597,11 +597,11 @@ const NOTES = {
 const CAT_COLORS = {
   'aerospace-defense': "var(--accent)",
   'industrial-machinery-supplies-components': "var(--purple)",
-  'building-products': "var(--teal)",
-  'electrical-components-equipment': "var(--rose)",
-  'industrial-support-services': "var(--blue)",
-  'air-freight-logistics': "var(--green)",
-  'construction-engineering': "var(--amber)",
+  'electrical-components-equipment': "var(--teal)",
+  'building-products': "var(--rose)",
+  'construction-engineering': "var(--blue)",
+  'industrial-support-services': "var(--green)",
+  'air-freight-logistics': "var(--amber)",
   'construction-machinery-heavy-transportation-equipment': "var(--gold)",
   'environmental-facilities-services': "var(--lime)",
   'other': "var(--slate)",
@@ -610,11 +610,11 @@ const CAT_COLORS = {
 const CAT_LABELS = {
   'aerospace-defense': "Aerospace \u0026 Defense",
   'industrial-machinery-supplies-components': "Industrial Machinery \u0026 Supplies \u0026 Components",
-  'building-products': "Building Products",
   'electrical-components-equipment': "Electrical Components \u0026 Equipment",
+  'building-products': "Building Products",
+  'construction-engineering': "Construction \u0026 Engineering",
   'industrial-support-services': "Industrial Support Services",
   'air-freight-logistics': "Air Freight \u0026 Logistics",
-  'construction-engineering': "Construction \u0026 Engineering",
   'construction-machinery-heavy-transportation-equipment': "Construction Machinery \u0026 Heavy Transportation Equipment",
   'environmental-facilities-services': "Environmental \u0026 Facilities Services",
   'other': "Other",

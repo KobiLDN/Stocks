@@ -37,9 +37,25 @@ PAGES = {
     "sp500": "List_of_S%26P_500_companies",
     "ndx": "List_of_NASDAQ-100_companies",
     "ftse": "FTSE_100_Index",
+    # phase 2 (#110): Europe
+    "sx5e": "Euro_Stoxx_50",
+    "dax": "DAX",
+    "cac": "CAC_40",
+    "smi": "Swiss_Market_Index",
 }
+EU_TABLES = ("sx5e", "dax", "cac", "smi")
+# Yahoo suffix -> exchange name in universe.yaml, and the letter T212 adds to the ticker (ADSd_EQ, SANe_EQ)
+EU_EXCHANGES = {"DE": ("XETRA", "d"), "PA": ("EURONEXT", "p"), "AS": ("EURONEXT", "a"), "BR": ("EURONEXT", "b"),
+                "MI": ("MIL", "m"), "MC": ("BME", "e"), "HE": ("HEL", "h"), "SW": ("SIX", "s")}
 
-GICS_TO_SECTOR = {s: s for s in SECTORS} | {"Information Technology": "Technology"}
+
+def eu_exchange(yahoo):
+    """Exchange name for a European Yahoo symbol (ADS.DE -> XETRA), or None."""
+    suffix = yahoo.rsplit(".", 1)[-1] if "." in yahoo else ""
+    return EU_EXCHANGES.get(suffix, (None,))[0]
+
+GICS_TO_SECTOR = {s: s for s in SECTORS} | {"Information Technology": "Technology",
+                                             "Communication": "Communication Services"}   # Euro Stoxx 50 table
 YAHOO_TO_SECTOR = {
     "Technology": "Technology", "Healthcare": "Health Care", "Financial Services": "Financials",
     "Consumer Cyclical": "Consumer Discretionary", "Consumer Defensive": "Consumer Staples",
@@ -126,6 +142,12 @@ ISIN_PINS = {
     "FERG":  ("US31488V1070", "Ferguson Enterprises; T212 FERGY_US_EQ 'Ferguson'"),
     "MRSH":  ("US5717481023", "Marsh McLennan; T212 still uses the old ticker MMC_US_EQ"),
     "WAB":   ("US9297401088", "Wabtec; T212 WAB_US_EQ under its full name Westinghouse Air Brake"),
+    # Europe (#110), checked 23 Nov 2026 against the T212 catalogue (legal names don't match the index names)
+    "BBVA.MC": ("ES0113211835", "BBVA; T212 BBVAe_EQ as Banco Bilbao Vizcaya Argentaria"),
+    "BMW.DE":  ("DE0005190003", "BMW; T212 BMWd_EQ as Bayerische Motoren Werke"),
+    "DHL.DE":  ("DE0005552004", "DHL Group; T212 still uses the old ticker DPWd_EQ"),
+    "MUV2.DE": ("DE0008430026", "Munich Re; T212 MUV2d_EQ as Muenchener Rueckversicherungs-Gesellschaft"),
+    "UCG.MI":  ("IT0005239360", "UniCredit Milan share; the name match picked the US ADR; not in the T212 catalogue"),
 }
 
 
@@ -179,6 +201,30 @@ def index_tables(pages=None):
                  "sector_raw": None, "industry_raw": None} for _, r in nd.iterrows()],
         "ftse": [{"yahoo": lse_yahoo(r["Ticker"]), "name": r["Company"], "isin": r["ISIN"],
                   "sector_raw": r[ft_sector], "industry_raw": r[ft_sector]} for _, r in ft.iterrows()],
+        **europe_tables(pages),
+    }
+
+
+def _clean(v):
+    return None if v is None or (isinstance(v, float) and v != v) else str(v).strip()
+
+
+def europe_tables(pages):
+    """Euro Stoxx 50, DAX, CAC 40, SMI (#110). The tables give Yahoo-style tickers (ADS.DE) except the
+    SMI's (NOVN -> NOVN.SW). Only the Euro Stoxx 50 gives a sector (GICS names); the CAC 40 gives a GICS
+    sub-industry. The rest come from Yahoo in classify()."""
+    sx = _table_with(read_tables(pages["sx5e"]), "Ticker", "Name", "Sector")
+    dax = _table_with(read_tables(pages["dax"]), "Ticker", "Company")
+    cac = _table_with(read_tables(pages["cac"]), "Company", "Ticker", "GICS Sub-Industry")
+    smi = _table_with(read_tables(pages["smi"]), "Name", "Sector", "Ticker")
+    row = lambda y, name, sector=None, industry=None: {"yahoo": y, "name": _clean(name), "isin": None,
+                                                         "sector_raw": _clean(sector), "industry_raw": _clean(industry)}
+    return {
+        "sx5e": [row(_clean(r["Ticker"]), r["Name"], r["Sector"]) for _, r in sx.iterrows() if _clean(r["Ticker"])],
+        "dax": [row(_clean(r["Ticker"]), r["Company"]) for _, r in dax.iterrows() if _clean(r["Ticker"])],
+        "cac": [row(_clean(r["Ticker"]), r["Company"], None, r["GICS Sub-Industry"]) for _, r in cac.iterrows()
+                if _clean(r["Ticker"])],
+        "smi": [row(_clean(r["Ticker"]) + ".SW", r["Name"]) for _, r in smi.iterrows() if _clean(r["Ticker"])],
     }
 
 
@@ -233,6 +279,11 @@ class Catalogue:
             return [y[:-2].replace("-", ".") + "l_EQ", y[:-2].replace("-", "_") + "l_EQ"]
         if asset["exchange"] in ("NYSE", "NASDAQ"):
             return [y.replace("-", "_") + "_US_EQ", y.replace("-", "") + "_US_EQ"]
+        if "." in y and y.rsplit(".", 1)[1] in EU_EXCHANGES:     # ADS.DE -> ADSd_EQ; others as a fallback
+            root, suffix = y.rsplit(".", 1)
+            root = root.replace("-", "")
+            first = EU_EXCHANGES[suffix][1]
+            return [root + first + "_EQ"] + [root + x + "_EQ" for x in "dpaebmhs" if x != first] + [root + "_BE_EQ"]
         return []
 
     def by_ticker_match(self, asset):
@@ -308,6 +359,12 @@ def classify(assets, tables, catalogue, overrides, yahoo=yahoo_info, wiki_isin=w
     new stocks get "unknown" until a session with the catalogue re-runs this."""
     sp = {r["yahoo"]: r for r in tables["sp500"]}
     ft = {r["yahoo"]: r for r in tables["ftse"]}
+    eu = {}                                   # Euro Stoxx 50 first: it is the only one with a sector
+    for k in EU_TABLES:
+        for r in tables.get(k) or []:
+            old = eu.setdefault(r["yahoo"], dict(r))
+            for f in ("sector_raw", "industry_raw"):
+                old[f] = old.get(f) or r.get(f)
     isin_from_index = {r["yahoo"]: r["isin"] for k in ("ndx", "ftse") for r in tables[k] if isin_ok(r.get("isin"))}
     updates, report = {}, []
     equities = {t: a for t, a in assets.items() if a["exchange"] != "Crypto"}
@@ -317,7 +374,7 @@ def classify(assets, tables, catalogue, overrides, yahoo=yahoo_info, wiki_isin=w
     info, currencies = {}, {}
     for t, a in equities.items():
         y = a["yahoo"]
-        if not a.get("currency") or (y not in sp and y not in ft):
+        if not a.get("currency") or (y not in sp and y not in ft and not GICS_TO_SECTOR.get((eu.get(y) or {}).get("sector_raw"))):
             info[t] = yahoo(y)
         currencies[t] = a.get("currency") or info.get(t, {}).get("currency")
     isins = resolve_isins(equities, isin_from_index, catalogue, currencies, wiki_isin, report)
@@ -329,9 +386,14 @@ def classify(assets, tables, catalogue, overrides, yahoo=yahoo_info, wiki_isin=w
             sector, src, industry = ICB_TO_SECTOR.get(ft[y]["sector_raw"]), "icb", ft[y]["industry_raw"]
             if not sector:
                 report.append(f"{t}: ICB sector '{ft[y]['sector_raw']}' not in ICB_TO_SECTOR")
+        elif GICS_TO_SECTOR.get((eu.get(y) or {}).get("sector_raw")):
+            i = info.get(t, {})
+            sector, src = GICS_TO_SECTOR[eu[y]["sector_raw"]], "gics"
+            industry = eu[y].get("industry_raw") or i.get("industry")
         else:
             i = info.get(t, {})
-            sector, src, industry = YAHOO_TO_SECTOR.get(i.get("sector")), "yahoo", i.get("industry")
+            sector, src = YAHOO_TO_SECTOR.get(i.get("sector")), "yahoo"
+            industry = (eu.get(y) or {}).get("industry_raw") or i.get("industry")     # CAC 40: GICS sub-industry
         ov = overrides.get(isin) if isin else None
         if ov:
             sector, src, industry = ov["sector"], "override", ov.get("industry", industry)

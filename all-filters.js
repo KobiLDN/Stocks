@@ -5,7 +5,8 @@
    and an old theme page can send its visitors to All with its theme already chosen. */
 
 const AF_MARKETS = [
-  ['sp500', 'S&P 500'], ['nasdaq100', 'Nasdaq-100'], ['ftse100', 'FTSE 100'], ['crypto', 'Crypto'],
+  ['sp500', 'S&P 500'], ['nasdaq100', 'Nasdaq-100'], ['ftse100', 'FTSE 100'],
+  ['eurostoxx50', 'Euro Stoxx 50'], ['dax', 'DAX'], ['cac40', 'CAC 40'], ['smi', 'SMI'], ['crypto', 'Crypto'],
 ];
 const AF_SECTORS = [
   'Communication Services', 'Consumer Discretionary', 'Consumer Staples', 'Energy', 'Financials',

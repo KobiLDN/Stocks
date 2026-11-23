@@ -105,7 +105,9 @@
   .cat-independent-power-producers-energy-traders { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
   .cat-renewable-electricity { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
   .cat-gas-utilities { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-water-utilities { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
+  .cat-utilities-diversified { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
   .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-flat { color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
@@ -303,11 +305,15 @@
  "DUK": "Duke Energy",
  "ED": "Consolidated Edison",
  "EIX": "Edison International",
+ "ENEL.MI": "Enel",
+ "ENGI.PA": "Engie",
+ "EOAN.DE": "E.ON",
  "ES": "Eversource Energy",
  "ETR": "Entergy",
  "EVRG": "Evergy",
  "EXC": "Exelon",
  "FE": "FirstEnergy",
+ "IBE.MC": "Iberdrola",
  "LNT": "Alliant Energy",
  "MTLN.L": "Metlen Energy & Metals",
  "NEE": "NextEra Energy",
@@ -319,6 +325,7 @@
  "PEG": "Public Service Enterprise Group",
  "PNW": "Pinnacle West Capital",
  "PPL": "PPL Corporation",
+ "RWE.DE": "RWE",
  "SO": "Southern Company",
  "SRE": "Sempra",
  "SSE.L": "SSE plc",
@@ -336,7 +343,9 @@
     'independent-power-producers-energy-traders': 'Independent Power Producers & Energy Traders',
     'renewable-electricity': 'Renewable Electricity',
     'gas-utilities': 'Gas Utilities',
-    'water-utilities': 'Water Utilities',
+    'other': 'Other',
+    'utilities-diversified': 'Utilities - Diversified',
+    'other': 'Other',
   };
 
   function fmtUsd(val) {

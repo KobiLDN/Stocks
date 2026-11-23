@@ -49,6 +49,13 @@ SESSIONS = {
     "LSE":     ("Europe/London", (8, 0), (16, 30)),
     "TSE":     ("Asia/Tokyo", (9, 0), (15, 30)),
     "TADAWUL": ("Asia/Riyadh", (10, 0), (15, 0)),
+    # Europe (#110): continuous trading 09:00-17:30 local; Helsinki 10:00-18:30 local (same hours in UTC)
+    "XETRA":    ("Europe/Berlin", (9, 0), (17, 30)),
+    "EURONEXT": ("Europe/Paris", (9, 0), (17, 30)),
+    "MIL":      ("Europe/Rome", (9, 0), (17, 30)),
+    "BME":      ("Europe/Madrid", (9, 0), (17, 30)),
+    "HEL":      ("Europe/Helsinki", (10, 0), (18, 30)),
+    "SIX":      ("Europe/Zurich", (9, 0), (17, 30)),
     "Crypto":  ("UTC", (0, 0), (24, 0)),                 # daily bar = one UTC day
 }
 

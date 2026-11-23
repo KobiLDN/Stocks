@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Communication Services heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 30 stocks.">
+<meta name="description" content="Communication Services heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 34 stocks.">
 <title>Communication Services — Heatmap</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -83,7 +83,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Communication Services <span>Heatmap</span></h1>
-    <div class="header-sub"><span id="hm-stock-count">30</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="hm-stock-count">34</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -114,7 +114,7 @@
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">30 stocks</span>
+    <span class="section-hdr-count" id="hm-all-count">34 stocks</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
@@ -140,9 +140,11 @@ const NAMES = {
  "CHTR": "Charter Communications",
  "CMCSA": "Comcast",
  "DIS": "Walt Disney Company (The)",
+ "DTE.DE": "Deutsche Telekom",
  "ECHO": "EchoStar",
  "FOX": "Fox Corporation (Class B)",
  "FOXA": "Fox Corporation (Class A)",
+ "G24.DE": "Scout24",
  "GOOG": "Alphabet Inc. (Class C)",
  "GOOGL": "Alphabet (Google)",
  "INF.L": "Informa",
@@ -153,7 +155,9 @@ const NAMES = {
  "NWS": "News Corp (Class B)",
  "NWSA": "News Corp (Class A)",
  "OMC": "Omnicom Group",
+ "ORA.PA": "Orange",
  "PSON.L": "Pearson plc",
+ "PUB.PA": "Publicis",
  "RDDT": "Reddit",
  "SKYD": "Skydance",
  "SPOT": "Spotify",
@@ -170,15 +174,15 @@ const CAT_LABELS = {
   'interactive-media-services': 'Interactive Media & Services',
   'integrated-telecommunication-services': 'Integrated Telecommunication Services',
   'movies-entertainment': 'Movies & Entertainment',
-  'media': 'Media',
   'advertising': 'Advertising',
+  'media': 'Media',
   'broadcasting': 'Broadcasting',
   'cable-satellite': 'Cable & Satellite',
   'other': 'Other',
 };
 
 /* Category display order */
-const CAT_ORDER = ['interactive-media-services', 'integrated-telecommunication-services', 'movies-entertainment', 'media', 'advertising', 'broadcasting', 'cable-satellite', 'other'];
+const CAT_ORDER = ['interactive-media-services', 'integrated-telecommunication-services', 'movies-entertainment', 'advertising', 'media', 'broadcasting', 'cable-satellite', 'other'];
 
 const METRICS_CFG = {
   '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Industrials heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 116 stocks.">
+<meta name="description" content="Industrials heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 136 stocks.">
 <title>Industrials — Heatmap</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -83,7 +83,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Industrials <span>Heatmap</span></h1>
-    <div class="header-sub"><span id="hm-stock-count">116</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="hm-stock-count">136</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -114,7 +114,7 @@
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">116 stocks</span>
+    <span class="section-hdr-count" id="hm-all-count">136 stocks</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
@@ -134,7 +134,9 @@
 <script>
 /* ── Lookups ── */
 const NAMES = {
+ "ABBN.SW": "ABB Ltd",
  "ADP": "Automatic Data Processing",
+ "AIR.PA": "Airbus",
  "ALLE": "Allegion",
  "AME": "Ametek",
  "AOS": "A. O. Smith",
@@ -148,6 +150,7 @@ const NAMES = {
  "BE": "Bloom Energy",
  "BNZL.L": "Bunzl",
  "BR": "Broadridge Financial Solutions",
+ "BVI.PA": "Bureau Veritas",
  "BWXT": "BWX Technologies",
  "CARR": "Carrier Global",
  "CAT": "Caterpillar",
@@ -160,12 +163,17 @@ const NAMES = {
  "DCC.L": "DCC Energy",
  "DD": "DuPont",
  "DE": "Deere & Company",
+ "DG.PA": "Vinci",
+ "DHL.DE": "Deutsche Post",
  "DOV": "Dover Corporation",
  "DPLM.L": "Diploma",
  "DRS": "Leonardo DRS",
+ "DTG.DE": "Daimler Truck",
  "EFX": "Equifax",
  "EME": "Emcor",
  "EMR": "Emerson Electric",
+ "EN.PA": "Bouygues",
+ "ENR.DE": "Siemens Energy",
  "ETN": "Eaton Corporation",
  "EXPD": "Expeditors International",
  "EXPN.L": "Experian",
@@ -174,16 +182,20 @@ const NAMES = {
  "FDXF": "FedEx Freight",
  "FER": "Ferrovial",
  "FERG": "Ferguson Enterprises",
+ "FGR.PA": "Eiffage",
  "FIX": "Comfort Systems USA",
  "FTV": "Fortive",
+ "G1A.DE": "GEA Group",
  "GD": "General Dynamics",
  "GE": "GE Aerospace",
+ "GEBN.SW": "Geberit AG",
  "GEV": "GE Vernova",
  "GNRC": "Generac",
  "GWW": "W. W. Grainger",
  "HEI": "HEICO Corporation",
  "HII": "Huntington Ingalls Industries",
  "HLMA.L": "Halma plc",
+ "HO.PA": "Thales",
  "HON": "Honeywell",
  "HONA": "Honeywell Aerospace",
  "HUBB": "Hubbell Incorporated",
@@ -201,11 +213,13 @@ const NAMES = {
  "LHX": "L3Harris Technologies",
  "LII": "Lennox International",
  "LMT": "Lockheed Martin",
+ "LR.PA": "Legrand",
  "LUV": "Southwest Airlines",
  "MAS": "Masco",
  "MMM": "3M",
  "MRCY": "Mercury Systems",
  "MRO.L": "Melrose Industries",
+ "MTX.DE": "MTU Aero Engines",
  "NDSN": "Nordson Corporation",
  "NNE": "NANO Nuclear Energy",
  "NOC": "Northrop Grumman",
@@ -221,6 +235,7 @@ const NAMES = {
  "PWR": "Quanta Services",
  "QQ.L": "QinetiQ Group",
  "RCAT": "Red Cat Holdings",
+ "RHM.DE": "Rheinmetall",
  "RKLB": "Rocket Lab USA",
  "ROK": "Rockwell Automation",
  "ROL": "Rollins, Inc.",
@@ -228,11 +243,15 @@ const NAMES = {
  "RSG": "Republic Services",
  "RTO.L": "Rentokil Initial",
  "RTX": "RTX Corporation",
+ "SAF.PA": "Safran",
+ "SGO.PA": "Saint-Gobain",
+ "SIE.DE": "Siemens",
  "SMIN.L": "Smiths Group",
  "SMR": "NuScale Power",
  "SNA": "Snap-on",
  "SPCX": "SpaceX",
  "SPX.L": "Spirax Group",
+ "SU.PA": "Schneider Electric",
  "SWK": "Stanley Black & Decker",
  "TDG": "TransDigm Group",
  "TRI": "Thomson Reuters",
@@ -243,6 +262,7 @@ const NAMES = {
  "UNP": "Union Pacific Corporation",
  "UPS": "United Parcel Service",
  "URI": "United Rentals",
+ "VIE.PA": "Veolia",
  "VLTO": "Veralto",
  "VRSK": "Verisk Analytics",
  "VRT": "Vertiv Holdings",
@@ -255,18 +275,18 @@ const NAMES = {
 const CAT_LABELS = {
   'aerospace-defense': 'Aerospace & Defense',
   'industrial-machinery-supplies-components': 'Industrial Machinery & Supplies & Components',
-  'building-products': 'Building Products',
   'electrical-components-equipment': 'Electrical Components & Equipment',
+  'building-products': 'Building Products',
+  'construction-engineering': 'Construction & Engineering',
   'industrial-support-services': 'Industrial Support Services',
   'air-freight-logistics': 'Air Freight & Logistics',
-  'construction-engineering': 'Construction & Engineering',
   'construction-machinery-heavy-transportation-equipment': 'Construction Machinery & Heavy Transportation Equipment',
   'environmental-facilities-services': 'Environmental & Facilities Services',
   'other': 'Other',
 };
 
 /* Category display order */
-const CAT_ORDER = ['aerospace-defense', 'industrial-machinery-supplies-components', 'building-products', 'electrical-components-equipment', 'industrial-support-services', 'air-freight-logistics', 'construction-engineering', 'construction-machinery-heavy-transportation-equipment', 'environmental-facilities-services', 'other'];
+const CAT_ORDER = ['aerospace-defense', 'industrial-machinery-supplies-components', 'electrical-components-equipment', 'building-products', 'construction-engineering', 'industrial-support-services', 'air-freight-logistics', 'construction-machinery-heavy-transportation-equipment', 'environmental-facilities-services', 'other'];
 
 const METRICS_CFG = {
   '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },

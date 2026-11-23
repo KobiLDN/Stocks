@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 83 Health Care stocks, by industry.">
+<meta name="description" content="1-year price charts for all 99 Health Care stocks, by industry.">
 <title>Health Care — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -91,7 +91,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Health Care <span>Charts</span></h1>
-    <div class="header-sub">83 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">99 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -158,8 +158,24 @@
 <script>
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
+    "ALC.SW": "SIX:ALC",
+    "ARGX.BR": "EURONEXT:ARGX",
+    "BAYN.DE": "XETR:BAYN",
     "CTEC.L": "LSE:CTEC",
+    "EL.PA": "EURONEXT:EL",
+    "ERF.PA": "EURONEXT:ERF",
+    "FME.DE": "XETR:FME",
+    "FRE.DE": "XETR:FRE",
+    "GALD.SW": "SIX:GALD",
     "HLN.L": "LSE:HLN",
+    "LONN.SW": "SIX:LONN",
+    "MRK.DE": "XETR:MRK",
+    "NOVN.SW": "SIX:NOVN",
+    "QIA.DE": "XETR:QIA",
+    "ROP.SW": "SIX:ROP",
+    "SAN.PA": "EURONEXT:SAN",
+    "SDZ.SW": "SIX:SDZ",
+    "SHL.DE": "XETR:SHL",
     "SN.L": "LSE:SN.",
   };
 

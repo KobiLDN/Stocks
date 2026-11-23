@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI-generated top 10 buy signals for the 63 stocks in the Consumer Discretionary.">
+<meta name="description" content="AI-generated top 10 buy signals for the 81 stocks in the Consumer Discretionary.">
 <title>Consumer Discretionary — Signals</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="signals-local.js"></script>
@@ -83,13 +83,15 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-hotels-resorts-cruise-lines { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .cat-restaurants { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
-  .cat-broadline-retail { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
-  .cat-apparel-accessories-luxury-goods { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-automobile-manufacturers { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-automobile-manufacturers { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-hotels-resorts-cruise-lines { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
+  .cat-apparel-accessories-luxury-goods { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .cat-broadline-retail { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
+  .cat-restaurants { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
   .cat-homebuilding { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
   .cat-retailers { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-travel-and-leisure { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
   .signal-pill {
     margin-left: auto;
@@ -407,7 +409,7 @@
         <div class="how-step-num">1</div>
         <div class="how-step-text">
           <h4>Live price data</h4>
-          <p><code>update_group_prices.py</code> prices all 63 stocks three times a day: 1D/1W/1M/YTD and 1-year returns, market cap, P/E, beta, dividend yield, short interest and the analyst view.</p>
+          <p><code>update_group_prices.py</code> prices all 81 stocks three times a day: 1D/1W/1M/YTD and 1-year returns, market cap, P/E, beta, dividend yield, short interest and the analyst view.</p>
         </div>
       </div>
 
@@ -450,16 +452,21 @@
 <script>
   const NAMES = {
  "ABNB": "Airbnb",
+ "AC.PA": "Accor",
+ "ADS.DE": "Adidas",
  "AMZN": "Amazon",
  "APTV": "Aptiv",
  "AZO": "AutoZone",
  "BABA": "Alibaba Group",
  "BBY": "Best Buy",
  "BKNG": "Booking Holdings",
+ "BMW.DE": "BMW",
  "BRBY.L": "Burberry Group",
  "BTRW.L": "Barratt Redrow",
  "CCL": "Carnival Corporation",
+ "CFR.SW": "Compagnie Financière Richemont SA",
  "CMG": "Chipotle Mexican Grill",
+ "CON.DE": "Continental",
  "CPG.L": "Compass Group",
  "CVNA": "Carvana",
  "DASH": "DoorDash",
@@ -481,47 +488,62 @@
  "HWDN.L": "Howdens Joinery",
  "IAG.L": "International Airlines Group",
  "IHG.L": "IHG Hotels & Resorts",
+ "ITX.MC": "Inditex",
  "JD.L": "JD Sports",
+ "KER.PA": "Kering",
  "KGF.L": "Kingfisher plc",
  "LEN": "Lennar",
  "LOW": "Lowe's",
  "LULU": "Lululemon Athletica",
  "LVS": "Las Vegas Sands",
  "MAR": "Marriott International",
+ "MBG.DE": "Mercedes-Benz Group",
+ "MC.PA": "LVMH",
  "MCD": "McDonald's",
  "MELI": "Mercado Libre",
  "MGM": "MGM Resorts",
+ "ML.PA": "Michelin",
  "NCLH": "Norwegian Cruise Line Holdings",
  "NKE": "Nike",
  "NVR": "NVR, Inc.",
  "NXT.L": "Next plc",
  "ORLY": "O'Reilly Automotive",
+ "PAH3.DE": "Porsche SE",
  "PDD": "PDD Holdings",
  "PHM": "PulteGroup",
+ "PRX.AS": "Prosus",
+ "RACE.MI": "Ferrari",
  "RCL": "Royal Caribbean Group",
  "RL": "Ralph Lauren Corporation",
+ "RMS.PA": "Hermès",
+ "RNO.PA": "Renault",
  "ROST": "Ross Stores",
  "SBUX": "Starbucks",
+ "STLAP.PA": "Stellantis",
  "TJX": "TJX Companies",
  "TM": "Toyota Motor",
  "TPR": "Tapestry, Inc.",
  "TSCO": "Tractor Supply",
  "TSLA": "Tesla",
  "ULTA": "Ulta Beauty",
+ "VOW3.DE": "Volkswagen Group",
  "WSM": "Williams-Sonoma, Inc.",
  "WTB.L": "Whitbread",
  "WYNN": "Wynn Resorts",
- "YUM": "Yum! Brands"
+ "YUM": "Yum! Brands",
+ "ZAL.DE": "Zalando"
 };
 
   const CAT_LABELS = {
-    'hotels-resorts-cruise-lines': 'Hotels, Resorts & Cruise Lines',
-    'restaurants': 'Restaurants',
-    'broadline-retail': 'Broadline Retail',
-    'apparel-accessories-luxury-goods': 'Apparel, Accessories & Luxury Goods',
     'automobile-manufacturers': 'Automobile Manufacturers',
+    'hotels-resorts-cruise-lines': 'Hotels, Resorts & Cruise Lines',
+    'apparel-accessories-luxury-goods': 'Apparel, Accessories & Luxury Goods',
+    'broadline-retail': 'Broadline Retail',
+    'other': 'Other',
+    'restaurants': 'Restaurants',
     'homebuilding': 'Homebuilding',
     'retailers': 'Retailers',
+    'travel-and-leisure': 'Travel and Leisure',
     'other': 'Other',
   };
 

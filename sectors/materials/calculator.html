@@ -103,10 +103,10 @@
   .cat-specialty-chemicals { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
   .cat-paper-plastic-packaging-products-materials { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
   .cat-diversified-metals-mining { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
-  .cat-construction-materials { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-gold { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-chemicals { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
-  .cat-fertilizers-agricultural-chemicals { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-building-materials { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
+  .cat-construction-materials { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-gold { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-industrial-gases { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
   .ytd-pos  { color: var(--green); font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
   .ytd-neg  { color: var(--red);   font-family: 'IBM Plex Mono', monospace; font-weight: 700; }
@@ -289,12 +289,16 @@
   /* ---- DATA ---- */
   const NAMES = {
  "AAL.L": "Anglo American plc",
+ "AI.PA": "Air Liquide",
  "ALB": "Albemarle Corporation",
  "AMCR": "Amcor",
+ "AMRZ.SW": "Amrize AG",
  "ANTO.L": "Antofagasta plc",
  "APD": "Air Products",
  "AVY": "Avery Dennison",
  "BALL": "Ball Corporation",
+ "BAS.DE": "BASF",
+ "BNR.DE": "Brenntag",
  "CF": "CF Industries",
  "CRDA.L": "Croda International",
  "CRH": "CRH plc",
@@ -303,13 +307,17 @@
  "EDV.L": "Endeavour Mining",
  "FCX": "Freeport-McMoRan",
  "FRES.L": "Fresnillo plc",
+ "GIVN.SW": "Givaudan SA",
  "GLEN.L": "Glencore",
+ "HEI.DE": "Heidelberg Materials",
+ "HOLN.SW": "Holcim Limited",
  "IFF": "International Flavors & Fragrances",
  "IP": "International Paper",
  "LIN": "Linde plc",
  "LYB": "LyondellBasell",
  "MLM": "Martin Marietta Materials",
  "MOS": "Mosaic Company (The)",
+ "MT.AS": "ArcelorMittal",
  "NEM": "Newmont",
  "NUE": "Nucor",
  "OLN": "Olin Corporation",
@@ -317,8 +325,10 @@
  "PPG": "PPG Industries",
  "RIO.L": "Rio Tinto",
  "SHW": "Sherwin-Williams",
+ "SIKA.SW": "Sika AG",
  "STLD": "Steel Dynamics",
  "SW": "Smurfit Westrock",
+ "SY1.DE": "Symrise",
  "VMC": "Vulcan Materials Company"
 };
 
@@ -326,10 +336,10 @@
     'specialty-chemicals': 'Specialty Chemicals',
     'paper-plastic-packaging-products-materials': 'Paper & Plastic Packaging Products & Materials',
     'diversified-metals-mining': 'Diversified Metals & Mining',
+    'building-materials': 'Building Materials',
     'construction-materials': 'Construction Materials',
     'gold': 'Gold',
-    'chemicals': 'Chemicals',
-    'fertilizers-agricultural-chemicals': 'Fertilizers & Agricultural Chemicals',
+    'industrial-gases': 'Industrial Gases',
     'other': 'Other',
   };
 

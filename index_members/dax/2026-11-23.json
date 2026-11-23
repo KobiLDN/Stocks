@@ -1,0 +1,208 @@
+{
+ "index": "dax",
+ "date": "2026-11-23",
+ "source": "en.wikipedia.org",
+ "count": 40,
+ "members": [
+  {
+   "yahoo": "ADS.DE",
+   "name": "Adidas",
+   "isin": null
+  },
+  {
+   "yahoo": "AIR.PA",
+   "name": "Airbus",
+   "isin": null
+  },
+  {
+   "yahoo": "ALV.DE",
+   "name": "Allianz",
+   "isin": null
+  },
+  {
+   "yahoo": "BAS.DE",
+   "name": "BASF",
+   "isin": null
+  },
+  {
+   "yahoo": "BAYN.DE",
+   "name": "Bayer",
+   "isin": null
+  },
+  {
+   "yahoo": "BEI.DE",
+   "name": "Beiersdorf",
+   "isin": null
+  },
+  {
+   "yahoo": "BMW.DE",
+   "name": "BMW",
+   "isin": null
+  },
+  {
+   "yahoo": "BNR.DE",
+   "name": "Brenntag",
+   "isin": null
+  },
+  {
+   "yahoo": "CBK.DE",
+   "name": "Commerzbank",
+   "isin": null
+  },
+  {
+   "yahoo": "CON.DE",
+   "name": "Continental",
+   "isin": null
+  },
+  {
+   "yahoo": "DB1.DE",
+   "name": "Deutsche Börse",
+   "isin": null
+  },
+  {
+   "yahoo": "DBK.DE",
+   "name": "Deutsche Bank",
+   "isin": null
+  },
+  {
+   "yahoo": "DHL.DE",
+   "name": "Deutsche Post",
+   "isin": null
+  },
+  {
+   "yahoo": "DTE.DE",
+   "name": "Deutsche Telekom",
+   "isin": null
+  },
+  {
+   "yahoo": "DTG.DE",
+   "name": "Daimler Truck",
+   "isin": null
+  },
+  {
+   "yahoo": "ENR.DE",
+   "name": "Siemens Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "EOAN.DE",
+   "name": "E.ON",
+   "isin": null
+  },
+  {
+   "yahoo": "FME.DE",
+   "name": "Fresenius Medical Care",
+   "isin": null
+  },
+  {
+   "yahoo": "FRE.DE",
+   "name": "Fresenius",
+   "isin": null
+  },
+  {
+   "yahoo": "G1A.DE",
+   "name": "GEA Group",
+   "isin": null
+  },
+  {
+   "yahoo": "G24.DE",
+   "name": "Scout24",
+   "isin": null
+  },
+  {
+   "yahoo": "HEI.DE",
+   "name": "Heidelberg Materials",
+   "isin": null
+  },
+  {
+   "yahoo": "HEN3.DE",
+   "name": "Henkel",
+   "isin": null
+  },
+  {
+   "yahoo": "HNR1.DE",
+   "name": "Hannover Re",
+   "isin": null
+  },
+  {
+   "yahoo": "IFX.DE",
+   "name": "Infineon Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "MBG.DE",
+   "name": "Mercedes-Benz Group",
+   "isin": null
+  },
+  {
+   "yahoo": "MRK.DE",
+   "name": "Merck",
+   "isin": null
+  },
+  {
+   "yahoo": "MTX.DE",
+   "name": "MTU Aero Engines",
+   "isin": null
+  },
+  {
+   "yahoo": "MUV2.DE",
+   "name": "Munich Re",
+   "isin": null
+  },
+  {
+   "yahoo": "PAH3.DE",
+   "name": "Porsche SE",
+   "isin": null
+  },
+  {
+   "yahoo": "QIA.DE",
+   "name": "Qiagen",
+   "isin": null
+  },
+  {
+   "yahoo": "RHM.DE",
+   "name": "Rheinmetall",
+   "isin": null
+  },
+  {
+   "yahoo": "RWE.DE",
+   "name": "RWE",
+   "isin": null
+  },
+  {
+   "yahoo": "SAP.DE",
+   "name": "SAP",
+   "isin": null
+  },
+  {
+   "yahoo": "SHL.DE",
+   "name": "Siemens Healthineers",
+   "isin": null
+  },
+  {
+   "yahoo": "SIE.DE",
+   "name": "Siemens",
+   "isin": null
+  },
+  {
+   "yahoo": "SY1.DE",
+   "name": "Symrise",
+   "isin": null
+  },
+  {
+   "yahoo": "VNA.DE",
+   "name": "Vonovia",
+   "isin": null
+  },
+  {
+   "yahoo": "VOW3.DE",
+   "name": "Volkswagen Group",
+   "isin": null
+  },
+  {
+   "yahoo": "ZAL.DE",
+   "name": "Zalando",
+   "isin": null
+  }
+ ]
+}

@@ -77,7 +77,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Technology dashboard: live prices, 52-week ranges and returns for all 108 stocks in the sector.">
+<meta name="description" content="Technology dashboard: live prices, 52-week ranges and returns for all 116 stocks in the sector.">
 <title>Technology — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -514,8 +514,8 @@
   .cat-technology-hardware-storage-peripherals { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
   .cat-communications-equipment { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
   .cat-systems-software { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-semiconductor-materials-equipment { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
-  .cat-it-consulting-other-services { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-it-consulting-other-services { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-semiconductor-materials-equipment { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
   .cat-data-centers-crypto-mining { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
   .cat-electronic-components { background: rgba(163,230,53,0.1); color: var(--lime); border: 1px solid rgba(163,230,53,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
@@ -544,7 +544,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1><span>Technology</span></h1>
-    <div class="header-sub"><span id="sector-count">108</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="sector-count">116</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -555,8 +555,8 @@
 <button class="chip" data-filter="technology-hardware-storage-peripherals" onclick="filterChip('technology-hardware-storage-peripherals',this)">Technology Hardware, Storage & Peripherals</button>
 <button class="chip" data-filter="communications-equipment" onclick="filterChip('communications-equipment',this)">Communications Equipment</button>
 <button class="chip" data-filter="systems-software" onclick="filterChip('systems-software',this)">Systems Software</button>
-<button class="chip" data-filter="semiconductor-materials-equipment" onclick="filterChip('semiconductor-materials-equipment',this)">Semiconductor Materials & Equipment</button>
 <button class="chip" data-filter="it-consulting-other-services" onclick="filterChip('it-consulting-other-services',this)">IT Consulting & Other Services</button>
+<button class="chip" data-filter="semiconductor-materials-equipment" onclick="filterChip('semiconductor-materials-equipment',this)">Semiconductor Materials & Equipment</button>
 <button class="chip" data-filter="data-centers-crypto-mining" onclick="filterChip('data-centers-crypto-mining',this)">Data Centers & Crypto Mining</button>
 <button class="chip" data-filter="electronic-components" onclick="filterChip('electronic-components',this)">Electronic Components</button>
 <button class="chip" data-filter="other" onclick="filterChip('other',this)">Other</button>
@@ -600,8 +600,8 @@ const CAT_COLORS = {
   'technology-hardware-storage-peripherals': "var(--teal)",
   'communications-equipment': "var(--rose)",
   'systems-software': "var(--blue)",
-  'semiconductor-materials-equipment': "var(--green)",
-  'it-consulting-other-services': "var(--amber)",
+  'it-consulting-other-services': "var(--green)",
+  'semiconductor-materials-equipment': "var(--amber)",
   'data-centers-crypto-mining': "var(--gold)",
   'electronic-components': "var(--lime)",
   'other': "var(--slate)",
@@ -613,8 +613,8 @@ const CAT_LABELS = {
   'technology-hardware-storage-peripherals': "Technology Hardware, Storage \u0026 Peripherals",
   'communications-equipment': "Communications Equipment",
   'systems-software': "Systems Software",
-  'semiconductor-materials-equipment': "Semiconductor Materials \u0026 Equipment",
   'it-consulting-other-services': "IT Consulting \u0026 Other Services",
+  'semiconductor-materials-equipment': "Semiconductor Materials \u0026 Equipment",
   'data-centers-crypto-mining': "Data Centers \u0026 Crypto Mining",
   'electronic-components': "Electronic Components",
   'other': "Other",

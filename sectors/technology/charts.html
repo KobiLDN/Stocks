@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 108 Technology stocks, by industry.">
+<meta name="description" content="1-year price charts for all 116 Technology stocks, by industry.">
 <title>Technology — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
   .cat-btn.active-technology-hardware-storage-peripherals { background: var(--teal); border-color: var(--teal); color: var(--bg); }
   .cat-btn.active-communications-equipment { background: var(--rose); border-color: var(--rose); color: var(--bg); }
   .cat-btn.active-systems-software { background: var(--blue); border-color: var(--blue); color: var(--bg); }
-  .cat-btn.active-semiconductor-materials-equipment { background: var(--green); border-color: var(--green); color: var(--bg); }
-  .cat-btn.active-it-consulting-other-services { background: var(--amber); border-color: var(--amber); color: var(--bg); }
+  .cat-btn.active-it-consulting-other-services { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-semiconductor-materials-equipment { background: var(--amber); border-color: var(--amber); color: var(--bg); }
   .cat-btn.active-data-centers-crypto-mining { background: var(--gold); border-color: var(--gold); color: var(--bg); }
   .cat-btn.active-electronic-components { background: var(--lime); border-color: var(--lime); color: var(--bg); }
   .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
@@ -26,8 +26,8 @@
   .cat-label.technology-hardware-storage-peripherals { color: var(--teal); }
   .cat-label.communications-equipment { color: var(--rose); }
   .cat-label.systems-software { color: var(--blue); }
-  .cat-label.semiconductor-materials-equipment { color: var(--green); }
-  .cat-label.it-consulting-other-services { color: var(--amber); }
+  .cat-label.it-consulting-other-services { color: var(--green); }
+  .cat-label.semiconductor-materials-equipment { color: var(--amber); }
   .cat-label.data-centers-crypto-mining { color: var(--gold); }
   .cat-label.electronic-components { color: var(--lime); }
   .cat-label.other { color: var(--slate); }
@@ -103,7 +103,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Technology <span>Charts</span></h1>
-    <div class="header-sub">108 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">116 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -170,10 +170,18 @@
 <script>
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
+    "ASML.AS": "EURONEXT:ASML",
     "AUTO.L": "LSE:AUTO",
+    "CAP.PA": "EURONEXT:CAP",
     "CCC.L": "LSE:CCC",
+    "DSY.PA": "EURONEXT:DSY",
+    "IFX.DE": "XETR:IFX",
+    "LOGN.SW": "SIX:LOGN",
+    "NOKIA.HE": "OMXHEX:NOKIA",
     "REL.L": "LSE:REL",
+    "SAP.DE": "XETR:SAP",
     "SGE.L": "LSE:SGE",
+    "STMPA.PA": "EURONEXT:STMPA",
   };
 
   /* Category display config for charts */
@@ -213,19 +221,19 @@
       btnLabel: "Systems Software",
       tooltip: "Technology: Systems Software",
     },
-    'semiconductor-materials-equipment': {
-      key: 'semiconductor-materials-equipment',
-      label: "Semiconductor Materials & Equipment",
-      color: 'var(--green)',
-      btnLabel: "Semiconductor Materials & Equipment",
-      tooltip: "Technology: Semiconductor Materials & Equipment",
-    },
     'it-consulting-other-services': {
       key: 'it-consulting-other-services',
       label: "IT Consulting & Other Services",
-      color: 'var(--amber)',
+      color: 'var(--green)',
       btnLabel: "IT Consulting & Other Services",
       tooltip: "Technology: IT Consulting & Other Services",
+    },
+    'semiconductor-materials-equipment': {
+      key: 'semiconductor-materials-equipment',
+      label: "Semiconductor Materials & Equipment",
+      color: 'var(--amber)',
+      btnLabel: "Semiconductor Materials & Equipment",
+      tooltip: "Technology: Semiconductor Materials & Equipment",
     },
     'data-centers-crypto-mining': {
       key: 'data-centers-crypto-mining',

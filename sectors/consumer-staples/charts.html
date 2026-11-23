@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 45 Consumer Staples stocks, by industry.">
+<meta name="description" content="1-year price charts for all 54 Consumer Staples stocks, by industry.">
 <title>Consumer Staples — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -99,7 +99,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Consumer Staples <span>Charts</span></h1>
-    <div class="header-sub">45 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">54 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -145,8 +145,8 @@
   <main class="chart-area">
     <div class="chart-header">
       <div style="display:flex;align-items:baseline;">
-        <span class="chart-ticker" id="chart-ticker">GIS</span>
-        <span class="chart-name" id="chart-name">General Mills</span>
+        <span class="chart-ticker" id="chart-ticker">BN.PA</span>
+        <span class="chart-name" id="chart-name">Danone</span>
       </div>
     </div>
     <div class="chart-widget" id="single-widget"></div>
@@ -167,13 +167,22 @@
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
     "ABF.L": "LSE:ABF",
+    "ABI.BR": "EURONEXT:ABI",
+    "AD.AS": "EURONEXT:AD",
     "BATS.L": "LSE:BATS",
+    "BEI.DE": "XETR:BEI",
     "BF-B": "NYSE:BF.B",
+    "BN.PA": "EURONEXT:BN",
+    "CA.PA": "EURONEXT:CA",
     "CCEP.L": "LSE:CCEP",
     "CCH.L": "LSE:CCH",
     "DGE.L": "LSE:DGE",
+    "HEN3.DE": "XETR:HEN3",
     "IMB.L": "LSE:IMB",
     "MKS.L": "LSE:MKS",
+    "NESN.SW": "SIX:NESN",
+    "OR.PA": "EURONEXT:OR",
+    "RI.PA": "EURONEXT:RI",
     "RKT.L": "LSE:RKT",
     "SBRY.L": "LSE:SBRY",
     "TSCO.L": "LSE:TSCO",
@@ -307,8 +316,8 @@
   };
 
   let currentView      = 'grid';
-  let currentSymbol    = 'NYSE:GIS';
-  let currentName      = 'General Mills';
+  let currentSymbol    = 'EURONEXT:BN';
+  let currentName      = 'Danone';
   let currentTimeframe = '1W';
   let currentCategory  = null;
 

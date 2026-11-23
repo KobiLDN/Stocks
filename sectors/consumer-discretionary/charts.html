@@ -4,28 +4,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 63 Consumer Discretionary stocks, by industry.">
+<meta name="description" content="1-year price charts for all 81 Consumer Discretionary stocks, by industry.">
 <title>Consumer Discretionary — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../shared.css">
 <script src="../../shared.js" defer></script>
 <style>
-  .cat-btn.active-hotels-resorts-cruise-lines { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-  .cat-btn.active-restaurants { background: var(--purple); border-color: var(--purple); color: var(--bg); }
-  .cat-btn.active-broadline-retail { background: var(--teal); border-color: var(--teal); color: var(--bg); }
-  .cat-btn.active-apparel-accessories-luxury-goods { background: var(--rose); border-color: var(--rose); color: var(--bg); }
-  .cat-btn.active-automobile-manufacturers { background: var(--blue); border-color: var(--blue); color: var(--bg); }
+  .cat-btn.active-automobile-manufacturers { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .cat-btn.active-hotels-resorts-cruise-lines { background: var(--purple); border-color: var(--purple); color: var(--bg); }
+  .cat-btn.active-apparel-accessories-luxury-goods { background: var(--teal); border-color: var(--teal); color: var(--bg); }
+  .cat-btn.active-broadline-retail { background: var(--rose); border-color: var(--rose); color: var(--bg); }
+  .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
+  .cat-btn.active-restaurants { background: var(--blue); border-color: var(--blue); color: var(--bg); }
   .cat-btn.active-homebuilding { background: var(--green); border-color: var(--green); color: var(--bg); }
   .cat-btn.active-retailers { background: var(--amber); border-color: var(--amber); color: var(--bg); }
+  .cat-btn.active-travel-and-leisure { background: var(--gold); border-color: var(--gold); color: var(--bg); }
   .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
-  .cat-label.hotels-resorts-cruise-lines { color: var(--accent); }
-  .cat-label.restaurants { color: var(--purple); }
-  .cat-label.broadline-retail { color: var(--teal); }
-  .cat-label.apparel-accessories-luxury-goods { color: var(--rose); }
-  .cat-label.automobile-manufacturers { color: var(--blue); }
+  .cat-label.automobile-manufacturers { color: var(--accent); }
+  .cat-label.hotels-resorts-cruise-lines { color: var(--purple); }
+  .cat-label.apparel-accessories-luxury-goods { color: var(--teal); }
+  .cat-label.broadline-retail { color: var(--rose); }
+  .cat-label.other { color: var(--slate); }
+  .cat-label.restaurants { color: var(--blue); }
   .cat-label.homebuilding { color: var(--green); }
   .cat-label.retailers { color: var(--amber); }
+  .cat-label.travel-and-leisure { color: var(--gold); }
   .cat-label.other { color: var(--slate); }
 
 
@@ -99,7 +103,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Consumer Discretionary <span>Charts</span></h1>
-    <div class="header-sub">63 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">81 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -145,8 +149,8 @@
   <main class="chart-area">
     <div class="chart-header">
       <div style="display:flex;align-items:baseline;">
-        <span class="chart-ticker" id="chart-ticker">ABNB</span>
-        <span class="chart-name" id="chart-name">Airbnb</span>
+        <span class="chart-ticker" id="chart-ticker">F</span>
+        <span class="chart-name" id="chart-name">Ford Motor Company</span>
       </div>
     </div>
     <div class="chart-widget" id="single-widget"></div>
@@ -166,56 +170,81 @@
 <script>
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
+    "AC.PA": "EURONEXT:AC",
+    "ADS.DE": "XETR:ADS",
+    "BMW.DE": "XETR:BMW",
     "BRBY.L": "LSE:BRBY",
     "BTRW.L": "LSE:BTRW",
+    "CFR.SW": "SIX:CFR",
+    "CON.DE": "XETR:CON",
     "CPG.L": "LSE:CPG",
     "EZJ.L": "LSE:EZJ",
     "GAW.L": "LSE:GAW",
     "HWDN.L": "LSE:HWDN",
     "IAG.L": "LSE:IAG",
     "IHG.L": "LSE:IHG",
+    "ITX.MC": "BME:ITX",
     "JD.L": "LSE:JD.",
+    "KER.PA": "EURONEXT:KER",
     "KGF.L": "LSE:KGF",
+    "MBG.DE": "XETR:MBG",
+    "MC.PA": "EURONEXT:MC",
+    "ML.PA": "EURONEXT:ML",
     "NXT.L": "LSE:NXT",
+    "PAH3.DE": "XETR:PAH3",
+    "PRX.AS": "EURONEXT:PRX",
+    "RACE.MI": "MIL:RACE",
+    "RMS.PA": "EURONEXT:RMS",
+    "RNO.PA": "EURONEXT:RNO",
+    "STLAP.PA": "EURONEXT:STLAP",
+    "VOW3.DE": "XETR:VOW3",
     "WTB.L": "LSE:WTB",
+    "ZAL.DE": "XETR:ZAL",
   };
 
   /* Category display config for charts */
   const CHART_CATS = {
+    'automobile-manufacturers': {
+      key: 'automobile-manufacturers',
+      label: "Automobile Manufacturers",
+      color: 'var(--accent)',
+      btnLabel: "Automobile Manufacturers",
+      tooltip: "Consumer Discretionary: Automobile Manufacturers",
+    },
     'hotels-resorts-cruise-lines': {
       key: 'hotels-resorts-cruise-lines',
       label: "Hotels, Resorts & Cruise Lines",
-      color: 'var(--accent)',
+      color: 'var(--purple)',
       btnLabel: "Hotels, Resorts & Cruise Lines",
       tooltip: "Consumer Discretionary: Hotels, Resorts & Cruise Lines",
-    },
-    'restaurants': {
-      key: 'restaurants',
-      label: "Restaurants",
-      color: 'var(--purple)',
-      btnLabel: "Restaurants",
-      tooltip: "Consumer Discretionary: Restaurants",
-    },
-    'broadline-retail': {
-      key: 'broadline-retail',
-      label: "Broadline Retail",
-      color: 'var(--teal)',
-      btnLabel: "Broadline Retail",
-      tooltip: "Consumer Discretionary: Broadline Retail",
     },
     'apparel-accessories-luxury-goods': {
       key: 'apparel-accessories-luxury-goods',
       label: "Apparel, Accessories & Luxury Goods",
-      color: 'var(--rose)',
+      color: 'var(--teal)',
       btnLabel: "Apparel, Accessories & Luxury Goods",
       tooltip: "Consumer Discretionary: Apparel, Accessories & Luxury Goods",
     },
-    'automobile-manufacturers': {
-      key: 'automobile-manufacturers',
-      label: "Automobile Manufacturers",
+    'broadline-retail': {
+      key: 'broadline-retail',
+      label: "Broadline Retail",
+      color: 'var(--rose)',
+      btnLabel: "Broadline Retail",
+      tooltip: "Consumer Discretionary: Broadline Retail",
+    },
+    'other': {
+      key: 'other',
+      label: "Other",
+      color: 'var(--slate)',
+      btnLabel: "Other",
+      tooltip: "Consumer Discretionary: Other",
+    },
+    'restaurants': {
+      key: 'restaurants',
+      label: "Restaurants",
       color: 'var(--blue)',
-      btnLabel: "Automobile Manufacturers",
-      tooltip: "Consumer Discretionary: Automobile Manufacturers",
+      btnLabel: "Restaurants",
+      tooltip: "Consumer Discretionary: Restaurants",
     },
     'homebuilding': {
       key: 'homebuilding',
@@ -230,6 +259,13 @@
       color: 'var(--amber)',
       btnLabel: "Retailers",
       tooltip: "Consumer Discretionary: Retailers",
+    },
+    'travel-and-leisure': {
+      key: 'travel-and-leisure',
+      label: "Travel and Leisure",
+      color: 'var(--gold)',
+      btnLabel: "Travel and Leisure",
+      tooltip: "Consumer Discretionary: Travel and Leisure",
     },
     'other': {
       key: 'other',
@@ -307,8 +343,8 @@
   };
 
   let currentView      = 'grid';
-  let currentSymbol    = 'NASDAQ:ABNB';
-  let currentName      = 'Airbnb';
+  let currentSymbol    = 'NYSE:F';
+  let currentName      = 'Ford Motor Company';
   let currentTimeframe = '1W';
   let currentCategory  = null;
 

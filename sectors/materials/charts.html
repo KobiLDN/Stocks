@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 32 Materials stocks, by industry.">
+<meta name="description" content="1-year price charts for all 42 Materials stocks, by industry.">
 <title>Materials — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -14,18 +14,18 @@
   .cat-btn.active-specialty-chemicals { background: var(--accent); border-color: var(--accent); color: var(--bg); }
   .cat-btn.active-paper-plastic-packaging-products-materials { background: var(--purple); border-color: var(--purple); color: var(--bg); }
   .cat-btn.active-diversified-metals-mining { background: var(--teal); border-color: var(--teal); color: var(--bg); }
-  .cat-btn.active-construction-materials { background: var(--rose); border-color: var(--rose); color: var(--bg); }
-  .cat-btn.active-gold { background: var(--blue); border-color: var(--blue); color: var(--bg); }
-  .cat-btn.active-chemicals { background: var(--green); border-color: var(--green); color: var(--bg); }
-  .cat-btn.active-fertilizers-agricultural-chemicals { background: var(--amber); border-color: var(--amber); color: var(--bg); }
+  .cat-btn.active-building-materials { background: var(--rose); border-color: var(--rose); color: var(--bg); }
+  .cat-btn.active-construction-materials { background: var(--blue); border-color: var(--blue); color: var(--bg); }
+  .cat-btn.active-gold { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-industrial-gases { background: var(--amber); border-color: var(--amber); color: var(--bg); }
   .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
   .cat-label.specialty-chemicals { color: var(--accent); }
   .cat-label.paper-plastic-packaging-products-materials { color: var(--purple); }
   .cat-label.diversified-metals-mining { color: var(--teal); }
-  .cat-label.construction-materials { color: var(--rose); }
-  .cat-label.gold { color: var(--blue); }
-  .cat-label.chemicals { color: var(--green); }
-  .cat-label.fertilizers-agricultural-chemicals { color: var(--amber); }
+  .cat-label.building-materials { color: var(--rose); }
+  .cat-label.construction-materials { color: var(--blue); }
+  .cat-label.gold { color: var(--green); }
+  .cat-label.industrial-gases { color: var(--amber); }
   .cat-label.other { color: var(--slate); }
 
 
@@ -99,7 +99,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Materials <span>Charts</span></h1>
-    <div class="header-sub">32 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">42 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -167,12 +167,22 @@
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
     "AAL.L": "LSE:AAL",
+    "AI.PA": "EURONEXT:AI",
+    "AMRZ.SW": "SIX:AMRZ",
     "ANTO.L": "LSE:ANTO",
+    "BAS.DE": "XETR:BAS",
+    "BNR.DE": "XETR:BNR",
     "CRDA.L": "LSE:CRDA",
     "EDV.L": "LSE:EDV",
     "FRES.L": "LSE:FRES",
+    "GIVN.SW": "SIX:GIVN",
     "GLEN.L": "LSE:GLEN",
+    "HEI.DE": "XETR:HEI",
+    "HOLN.SW": "SIX:HOLN",
+    "MT.AS": "EURONEXT:MT",
     "RIO.L": "LSE:RIO",
+    "SIKA.SW": "SIX:SIKA",
+    "SY1.DE": "XETR:SY1",
   };
 
   /* Category display config for charts */
@@ -198,33 +208,33 @@
       btnLabel: "Diversified Metals & Mining",
       tooltip: "Materials: Diversified Metals & Mining",
     },
+    'building-materials': {
+      key: 'building-materials',
+      label: "Building Materials",
+      color: 'var(--rose)',
+      btnLabel: "Building Materials",
+      tooltip: "Materials: Building Materials",
+    },
     'construction-materials': {
       key: 'construction-materials',
       label: "Construction Materials",
-      color: 'var(--rose)',
+      color: 'var(--blue)',
       btnLabel: "Construction Materials",
       tooltip: "Materials: Construction Materials",
     },
     'gold': {
       key: 'gold',
       label: "Gold",
-      color: 'var(--blue)',
+      color: 'var(--green)',
       btnLabel: "Gold",
       tooltip: "Materials: Gold",
     },
-    'chemicals': {
-      key: 'chemicals',
-      label: "Chemicals",
-      color: 'var(--green)',
-      btnLabel: "Chemicals",
-      tooltip: "Materials: Chemicals",
-    },
-    'fertilizers-agricultural-chemicals': {
-      key: 'fertilizers-agricultural-chemicals',
-      label: "Fertilizers & Agricultural Chemicals",
+    'industrial-gases': {
+      key: 'industrial-gases',
+      label: "Industrial Gases",
       color: 'var(--amber)',
-      btnLabel: "Fertilizers & Agricultural Chemicals",
-      tooltip: "Materials: Fertilizers & Agricultural Chemicals",
+      btnLabel: "Industrial Gases",
+      tooltip: "Materials: Industrial Gases",
     },
     'other': {
       key: 'other',

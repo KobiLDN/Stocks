@@ -1,0 +1,108 @@
+{
+ "index": "smi",
+ "date": "2026-11-23",
+ "source": "en.wikipedia.org",
+ "count": 20,
+ "members": [
+  {
+   "yahoo": "ABBN.SW",
+   "name": "ABB Ltd",
+   "isin": null
+  },
+  {
+   "yahoo": "ALC.SW",
+   "name": "Alcon Inc",
+   "isin": null
+  },
+  {
+   "yahoo": "AMRZ.SW",
+   "name": "Amrize AG",
+   "isin": null
+  },
+  {
+   "yahoo": "CFR.SW",
+   "name": "Compagnie Financière Richemont SA",
+   "isin": null
+  },
+  {
+   "yahoo": "GALD.SW",
+   "name": "Galderma",
+   "isin": null
+  },
+  {
+   "yahoo": "GEBN.SW",
+   "name": "Geberit AG",
+   "isin": null
+  },
+  {
+   "yahoo": "GIVN.SW",
+   "name": "Givaudan SA",
+   "isin": null
+  },
+  {
+   "yahoo": "HOLN.SW",
+   "name": "Holcim Limited",
+   "isin": null
+  },
+  {
+   "yahoo": "LOGN.SW",
+   "name": "Logitech International SA",
+   "isin": null
+  },
+  {
+   "yahoo": "LONN.SW",
+   "name": "Lonza Group AG",
+   "isin": null
+  },
+  {
+   "yahoo": "NESN.SW",
+   "name": "Nestlé SA",
+   "isin": null
+  },
+  {
+   "yahoo": "NOVN.SW",
+   "name": "Novartis International AG",
+   "isin": null
+  },
+  {
+   "yahoo": "PGHN.SW",
+   "name": "Partners Group Holding AG",
+   "isin": null
+  },
+  {
+   "yahoo": "ROP.SW",
+   "name": "Roche Holding AG",
+   "isin": null
+  },
+  {
+   "yahoo": "SDZ.SW",
+   "name": "Sandoz",
+   "isin": null
+  },
+  {
+   "yahoo": "SIKA.SW",
+   "name": "Sika AG",
+   "isin": null
+  },
+  {
+   "yahoo": "SLHN.SW",
+   "name": "Swiss Life Holding AG",
+   "isin": null
+  },
+  {
+   "yahoo": "SREN.SW",
+   "name": "Swiss Reinsurance Company Ltd",
+   "isin": null
+  },
+  {
+   "yahoo": "UBSG.SW",
+   "name": "UBS Group AG",
+   "isin": null
+  },
+  {
+   "yahoo": "ZURN.SW",
+   "name": "Zurich Insurance Group AG",
+   "isin": null
+  }
+ ]
+}

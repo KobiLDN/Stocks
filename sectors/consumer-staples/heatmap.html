@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Consumer Staples heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 45 stocks.">
+<meta name="description" content="Consumer Staples heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 54 stocks.">
 <title>Consumer Staples — Heatmap</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -83,7 +83,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Consumer Staples <span>Heatmap</span></h1>
-    <div class="header-sub"><span id="hm-stock-count">45</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="hm-stock-count">54</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -114,7 +114,7 @@
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">45 stocks</span>
+    <span class="section-hdr-count" id="hm-all-count">54 stocks</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
@@ -135,10 +135,15 @@
 /* ── Lookups ── */
 const NAMES = {
  "ABF.L": "Associated British Foods",
+ "ABI.BR": "Anheuser-Busch InBev",
+ "AD.AS": "Ahold Delhaize",
  "ADM": "Archer Daniels Midland",
  "BATS.L": "British American Tobacco",
+ "BEI.DE": "Beiersdorf",
  "BF-B": "Brown–Forman",
  "BG": "Bunge Global",
+ "BN.PA": "Danone",
+ "CA.PA": "Carrefour",
  "CASY": "Casey's",
  "CCEP": "Coca-Cola Europacific Partners",
  "CCEP.L": "Coca-Cola Europacific Partners",
@@ -152,6 +157,7 @@ const NAMES = {
  "DLTR": "Dollar Tree",
  "EL": "Estée Lauder Companies (The)",
  "GIS": "General Mills",
+ "HEN3.DE": "Henkel",
  "HRL": "Hormel Foods",
  "HSY": "Hershey Company (The)",
  "IMB.L": "Imperial Brands",
@@ -165,9 +171,12 @@ const NAMES = {
  "MKS.L": "Marks & Spencer",
  "MNST": "Monster Beverage",
  "MO": "Altria",
+ "NESN.SW": "Nestlé SA",
+ "OR.PA": "L'Oréal",
  "PEP": "PepsiCo",
  "PG": "Procter & Gamble",
  "PM": "Philip Morris International",
+ "RI.PA": "Pernod Ricard",
  "RKT.L": "Reckitt",
  "SBRY.L": "Sainsbury's",
  "SJM": "J.M. Smucker Company (The)",

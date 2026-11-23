@@ -1,0 +1,513 @@
+{
+ "index": "nasdaq100",
+ "date": "2026-11-23",
+ "source": "en.wikipedia.org",
+ "count": 101,
+ "members": [
+  {
+   "yahoo": "AAPL",
+   "name": "Apple Inc.",
+   "isin": "US0378331005"
+  },
+  {
+   "yahoo": "ABNB",
+   "name": "Airbnb",
+   "isin": "US0090661010"
+  },
+  {
+   "yahoo": "ADBE",
+   "name": "Adobe Inc.",
+   "isin": "US00724F1012"
+  },
+  {
+   "yahoo": "ADI",
+   "name": "Analog Devices",
+   "isin": "US0326541051"
+  },
+  {
+   "yahoo": "ADP",
+   "name": "Automatic Data Processing",
+   "isin": "US0530151036"
+  },
+  {
+   "yahoo": "ADSK",
+   "name": "Autodesk",
+   "isin": "US0527691069"
+  },
+  {
+   "yahoo": "AEP",
+   "name": "American Electric Power",
+   "isin": "US0255371017"
+  },
+  {
+   "yahoo": "ALAB",
+   "name": "Astera Labs",
+   "isin": "US04626A1034"
+  },
+  {
+   "yahoo": "ALNY",
+   "name": "Alnylam Pharmaceuticals",
+   "isin": "US02043Q1076"
+  },
+  {
+   "yahoo": "AMAT",
+   "name": "Applied Materials",
+   "isin": "US0382221051"
+  },
+  {
+   "yahoo": "AMD",
+   "name": "Advanced Micro Devices",
+   "isin": "US0079031078"
+  },
+  {
+   "yahoo": "AMGN",
+   "name": "Amgen",
+   "isin": "US0311621009"
+  },
+  {
+   "yahoo": "AMZN",
+   "name": "Amazon",
+   "isin": "US0231351067"
+  },
+  {
+   "yahoo": "APP",
+   "name": "AppLovin",
+   "isin": "US03831W1080"
+  },
+  {
+   "yahoo": "ARM",
+   "name": "Arm Holdings",
+   "isin": "US0420682058"
+  },
+  {
+   "yahoo": "ASML",
+   "name": "ASML Holding",
+   "isin": "USN070592100"
+  },
+  {
+   "yahoo": "AVGO",
+   "name": "Broadcom",
+   "isin": "US11135F1012"
+  },
+  {
+   "yahoo": "AXON",
+   "name": "Axon Enterprise",
+   "isin": "US05464C1018"
+  },
+  {
+   "yahoo": "BKNG",
+   "name": "Booking Holdings",
+   "isin": "US09857L1089"
+  },
+  {
+   "yahoo": "BKR",
+   "name": "Baker Hughes",
+   "isin": "US05722G1004"
+  },
+  {
+   "yahoo": "CCEP",
+   "name": "Coca-Cola Europacific Partners",
+   "isin": "GB00BDCPN049"
+  },
+  {
+   "yahoo": "CDNS",
+   "name": "Cadence Design Systems",
+   "isin": "US1273871087"
+  },
+  {
+   "yahoo": "CEG",
+   "name": "Constellation Energy",
+   "isin": "US21037T1097"
+  },
+  {
+   "yahoo": "CMCSA",
+   "name": "Comcast",
+   "isin": "US20030N1019"
+  },
+  {
+   "yahoo": "COST",
+   "name": "Costco",
+   "isin": "US22160K1051"
+  },
+  {
+   "yahoo": "CPRT",
+   "name": "Copart",
+   "isin": "US2172041061"
+  },
+  {
+   "yahoo": "CRWD",
+   "name": "CrowdStrike",
+   "isin": "US22788C1053"
+  },
+  {
+   "yahoo": "CRWV",
+   "name": "CoreWeave",
+   "isin": "US21873S1087"
+  },
+  {
+   "yahoo": "CSCO",
+   "name": "Cisco",
+   "isin": "US17275R1023"
+  },
+  {
+   "yahoo": "CSX",
+   "name": "CSX Corporation",
+   "isin": "US1264081035"
+  },
+  {
+   "yahoo": "CTAS",
+   "name": "Cintas",
+   "isin": "US1729081059"
+  },
+  {
+   "yahoo": "DASH",
+   "name": "DoorDash",
+   "isin": "US25809K1051"
+  },
+  {
+   "yahoo": "DDOG",
+   "name": "Datadog",
+   "isin": "US23804L1035"
+  },
+  {
+   "yahoo": "DXCM",
+   "name": "DexCom",
+   "isin": "US2521311074"
+  },
+  {
+   "yahoo": "EXC",
+   "name": "Exelon",
+   "isin": "US30161N1019"
+  },
+  {
+   "yahoo": "FANG",
+   "name": "Diamondback Energy",
+   "isin": "US25278X1090"
+  },
+  {
+   "yahoo": "FAST",
+   "name": "Fastenal",
+   "isin": "US3119001044"
+  },
+  {
+   "yahoo": "FER",
+   "name": "Ferrovial",
+   "isin": "NL0015001FS8"
+  },
+  {
+   "yahoo": "FTNT",
+   "name": "Fortinet",
+   "isin": "US34959E1091"
+  },
+  {
+   "yahoo": "GEHC",
+   "name": "GE HealthCare",
+   "isin": "US36266G1076"
+  },
+  {
+   "yahoo": "GILD",
+   "name": "Gilead Sciences",
+   "isin": "US3755581036"
+  },
+  {
+   "yahoo": "GOOG",
+   "name": "Alphabet Inc. (Class C)",
+   "isin": "US02079K1079"
+  },
+  {
+   "yahoo": "GOOGL",
+   "name": "Alphabet Inc. (Class A)",
+   "isin": "US02079K3059"
+  },
+  {
+   "yahoo": "HON",
+   "name": "Honeywell Technologies",
+   "isin": "US4385162056"
+  },
+  {
+   "yahoo": "HONA",
+   "name": "Honeywell Aerospace",
+   "isin": "US43849R1059"
+  },
+  {
+   "yahoo": "IDXX",
+   "name": "Idexx Laboratories",
+   "isin": "US45168D1046"
+  },
+  {
+   "yahoo": "INTC",
+   "name": "Intel",
+   "isin": "US4581401001"
+  },
+  {
+   "yahoo": "INTU",
+   "name": "Intuit",
+   "isin": "US4612021034"
+  },
+  {
+   "yahoo": "ISRG",
+   "name": "Intuitive Surgical",
+   "isin": "US46120E6023"
+  },
+  {
+   "yahoo": "KDP",
+   "name": "Keurig Dr Pepper",
+   "isin": "US49271V1008"
+  },
+  {
+   "yahoo": "KLAC",
+   "name": "KLA Corporation",
+   "isin": "US4824801009"
+  },
+  {
+   "yahoo": "LIN",
+   "name": "Linde plc",
+   "isin": "IE000S9YS762"
+  },
+  {
+   "yahoo": "LITE",
+   "name": "Lumentum",
+   "isin": "US55024U1097"
+  },
+  {
+   "yahoo": "LRCX",
+   "name": "Lam Research",
+   "isin": "US5128073062"
+  },
+  {
+   "yahoo": "MAR",
+   "name": "Marriott International",
+   "isin": "US5719032022"
+  },
+  {
+   "yahoo": "MCHP",
+   "name": "Microchip Technology",
+   "isin": "US5950171042"
+  },
+  {
+   "yahoo": "MDLZ",
+   "name": "Mondelez International",
+   "isin": "US6092071058"
+  },
+  {
+   "yahoo": "MELI",
+   "name": "Mercado Libre",
+   "isin": "US58733R1023"
+  },
+  {
+   "yahoo": "META",
+   "name": "Meta Platforms",
+   "isin": "US30303M1027"
+  },
+  {
+   "yahoo": "MNST",
+   "name": "Monster Beverage",
+   "isin": "US61174X1090"
+  },
+  {
+   "yahoo": "MPWR",
+   "name": "Monolithic Power Systems",
+   "isin": "US6098391054"
+  },
+  {
+   "yahoo": "MRNA",
+   "name": "Moderna",
+   "isin": "US60770K1079"
+  },
+  {
+   "yahoo": "MRVL",
+   "name": "Marvell Technology",
+   "isin": "US5738741041"
+  },
+  {
+   "yahoo": "MSFT",
+   "name": "Microsoft",
+   "isin": "US5949181045"
+  },
+  {
+   "yahoo": "MSTR",
+   "name": "MicroStrategy",
+   "isin": "US5949724083"
+  },
+  {
+   "yahoo": "MU",
+   "name": "Micron Technology",
+   "isin": "US5951121038"
+  },
+  {
+   "yahoo": "NBIS",
+   "name": "Nebius Group",
+   "isin": "NL0009805522"
+  },
+  {
+   "yahoo": "NFLX",
+   "name": "Netflix, Inc.",
+   "isin": "US64110L1061"
+  },
+  {
+   "yahoo": "NVDA",
+   "name": "Nvidia",
+   "isin": "US67066G1040"
+  },
+  {
+   "yahoo": "NXPI",
+   "name": "NXP Semiconductors",
+   "isin": "NL0009538784"
+  },
+  {
+   "yahoo": "ODFL",
+   "name": "Old Dominion Freight Line",
+   "isin": "US6795801009"
+  },
+  {
+   "yahoo": "ORLY",
+   "name": "O'Reilly Automotive",
+   "isin": "US67103H1077"
+  },
+  {
+   "yahoo": "PANW",
+   "name": "Palo Alto Networks",
+   "isin": "US6974351057"
+  },
+  {
+   "yahoo": "PAYX",
+   "name": "Paychex",
+   "isin": "US7043261079"
+  },
+  {
+   "yahoo": "PCAR",
+   "name": "Paccar",
+   "isin": "US6937181088"
+  },
+  {
+   "yahoo": "PDD",
+   "name": "PDD Holdings",
+   "isin": "US7223041028"
+  },
+  {
+   "yahoo": "PEP",
+   "name": "PepsiCo",
+   "isin": "US7134481081"
+  },
+  {
+   "yahoo": "PLTR",
+   "name": "Palantir Technologies",
+   "isin": "US69608A1088"
+  },
+  {
+   "yahoo": "PYPL",
+   "name": "PayPal",
+   "isin": "US70450Y1038"
+  },
+  {
+   "yahoo": "QCOM",
+   "name": "Qualcomm",
+   "isin": "US7475251036"
+  },
+  {
+   "yahoo": "REGN",
+   "name": "Regeneron Pharmaceuticals",
+   "isin": "US75886F1075"
+  },
+  {
+   "yahoo": "RKLB",
+   "name": "Rocket Lab",
+   "isin": "US7731211089"
+  },
+  {
+   "yahoo": "ROP",
+   "name": "Roper Technologies",
+   "isin": "US7766961061"
+  },
+  {
+   "yahoo": "ROST",
+   "name": "Ross Stores",
+   "isin": "US7782961038"
+  },
+  {
+   "yahoo": "SBUX",
+   "name": "Starbucks",
+   "isin": "US8552441094"
+  },
+  {
+   "yahoo": "SHOP",
+   "name": "Shopify",
+   "isin": "CA82509L1076"
+  },
+  {
+   "yahoo": "SNDK",
+   "name": "Sandisk",
+   "isin": "US80004C2008"
+  },
+  {
+   "yahoo": "SNPS",
+   "name": "Synopsys",
+   "isin": "US8716071076"
+  },
+  {
+   "yahoo": "SPCX",
+   "name": "SpaceX",
+   "isin": "US84615Q1031"
+  },
+  {
+   "yahoo": "STX",
+   "name": "Seagate Technology",
+   "isin": "IE00BKVD2N49"
+  },
+  {
+   "yahoo": "TER",
+   "name": "Teradyne",
+   "isin": "US8807701029"
+  },
+  {
+   "yahoo": "TMUS",
+   "name": "T-Mobile US",
+   "isin": "US8725901040"
+  },
+  {
+   "yahoo": "TRI",
+   "name": "Thomson Reuters",
+   "isin": "CA8849038812"
+  },
+  {
+   "yahoo": "TSLA",
+   "name": "Tesla, Inc.",
+   "isin": "US88160R1014"
+  },
+  {
+   "yahoo": "TTWO",
+   "name": "Take-Two Interactive",
+   "isin": "US8740541094"
+  },
+  {
+   "yahoo": "TXN",
+   "name": "Texas Instruments",
+   "isin": "US8825081040"
+  },
+  {
+   "yahoo": "VRTX",
+   "name": "Vertex Pharmaceuticals",
+   "isin": "US92532F1003"
+  },
+  {
+   "yahoo": "WDAY",
+   "name": "Workday, Inc.",
+   "isin": "US98138H1014"
+  },
+  {
+   "yahoo": "WDC",
+   "name": "Western Digital",
+   "isin": "US9581021055"
+  },
+  {
+   "yahoo": "WMT",
+   "name": "Walmart",
+   "isin": "US9311421039"
+  },
+  {
+   "yahoo": "XEL",
+   "name": "Xcel Energy",
+   "isin": "US98389B1008"
+  }
+ ]
+}

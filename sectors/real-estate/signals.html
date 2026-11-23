@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI-generated top 10 buy signals for the 35 stocks in the Real Estate.">
+<meta name="description" content="AI-generated top 10 buy signals for the 37 stocks in the Real Estate.">
 <title>Real Estate — Signals</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="signals-local.js"></script>
@@ -83,13 +83,13 @@
     letter-spacing: 0.5px;
     font-weight: 600;
   }
-  .cat-multi-family-residential-reits { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .cat-real-estate-investment-trusts { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
-  .cat-retail-reits { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .cat-retail-reits { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-multi-family-residential-reits { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
+  .cat-real-estate-investment-trusts { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
   .cat-health-care-reits { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-telecom-tower-reits { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-data-center-reits { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
-  .cat-hotel-resort-reits { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-real-estate-services { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-telecom-tower-reits { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-data-center-reits { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
   .signal-pill {
     margin-left: auto;
@@ -407,7 +407,7 @@
         <div class="how-step-num">1</div>
         <div class="how-step-text">
           <h4>Live price data</h4>
-          <p><code>update_group_prices.py</code> prices all 35 stocks three times a day: 1D/1W/1M/YTD and 1-year returns, market cap, P/E, beta, dividend yield, short interest and the analyst view.</p>
+          <p><code>update_group_prices.py</code> prices all 37 stocks three times a day: 1D/1W/1M/YTD and 1-year returns, market cap, P/E, beta, dividend yield, short interest and the analyst view.</p>
         </div>
       </div>
 
@@ -479,21 +479,23 @@
  "SGRO.L": "Segro",
  "SPG": "Simon Property Group",
  "UDR": "UDR, Inc.",
+ "URW.PA": "Unibail-Rodamco-Westfield",
  "VICI": "Vici Properties",
  "VMRK": "Vivmark Residential",
+ "VNA.DE": "Vonovia",
  "VTR": "Ventas",
  "WELL": "Welltower",
  "WY": "Weyerhaeuser"
 };
 
   const CAT_LABELS = {
+    'retail-reits': 'Retail REITs',
     'multi-family-residential-reits': 'Multi-Family Residential REITs',
     'real-estate-investment-trusts': 'Real Estate Investment Trusts',
-    'retail-reits': 'Retail REITs',
     'health-care-reits': 'Health Care REITs',
+    'real-estate-services': 'Real Estate Services',
     'telecom-tower-reits': 'Telecom Tower REITs',
     'data-center-reits': 'Data Center REITs',
-    'hotel-resort-reits': 'Hotel & Resort REITs',
     'other': 'Other',
   };
 

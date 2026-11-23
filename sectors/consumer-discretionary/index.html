@@ -77,7 +77,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Consumer Discretionary dashboard: live prices, 52-week ranges and returns for all 63 stocks in the sector.">
+<meta name="description" content="Consumer Discretionary dashboard: live prices, 52-week ranges and returns for all 81 stocks in the sector.">
 <title>Consumer Discretionary — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -509,13 +509,15 @@
 
 
   /* this group's categories (#88) */
-  .cat-hotels-resorts-cruise-lines { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .cat-restaurants { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
-  .cat-broadline-retail { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
-  .cat-apparel-accessories-luxury-goods { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-automobile-manufacturers { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-automobile-manufacturers { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-hotels-resorts-cruise-lines { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
+  .cat-apparel-accessories-luxury-goods { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .cat-broadline-retail { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
+  .cat-restaurants { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
   .cat-homebuilding { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
   .cat-retailers { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-travel-and-leisure { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
 </style>
 <style>
@@ -542,19 +544,21 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1><span>Consumer Discretionary</span></h1>
-    <div class="header-sub"><span id="sector-count">63</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="sector-count">81</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 <div class="filter-bar">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
-<button class="chip" data-filter="hotels-resorts-cruise-lines" onclick="filterChip('hotels-resorts-cruise-lines',this)">Hotels, Resorts & Cruise Lines</button>
-<button class="chip" data-filter="restaurants" onclick="filterChip('restaurants',this)">Restaurants</button>
-<button class="chip" data-filter="broadline-retail" onclick="filterChip('broadline-retail',this)">Broadline Retail</button>
-<button class="chip" data-filter="apparel-accessories-luxury-goods" onclick="filterChip('apparel-accessories-luxury-goods',this)">Apparel, Accessories & Luxury Goods</button>
 <button class="chip" data-filter="automobile-manufacturers" onclick="filterChip('automobile-manufacturers',this)">Automobile Manufacturers</button>
+<button class="chip" data-filter="hotels-resorts-cruise-lines" onclick="filterChip('hotels-resorts-cruise-lines',this)">Hotels, Resorts & Cruise Lines</button>
+<button class="chip" data-filter="apparel-accessories-luxury-goods" onclick="filterChip('apparel-accessories-luxury-goods',this)">Apparel, Accessories & Luxury Goods</button>
+<button class="chip" data-filter="broadline-retail" onclick="filterChip('broadline-retail',this)">Broadline Retail</button>
+<button class="chip" data-filter="other" onclick="filterChip('other',this)">Other</button>
+<button class="chip" data-filter="restaurants" onclick="filterChip('restaurants',this)">Restaurants</button>
 <button class="chip" data-filter="homebuilding" onclick="filterChip('homebuilding',this)">Homebuilding</button>
 <button class="chip" data-filter="retailers" onclick="filterChip('retailers',this)">Retailers</button>
+<button class="chip" data-filter="travel-and-leisure" onclick="filterChip('travel-and-leisure',this)">Travel and Leisure</button>
 <button class="chip" data-filter="other" onclick="filterChip('other',this)">Other</button>
 <label class="t212-toggle" title="Trading 212 offers most ordinary shares on major exchanges; this hides the ones it doesn't list"><input type="checkbox" id="hide-t212" onchange="applyFilters()"> Hide stocks not on T212</label>
 </div>
@@ -591,24 +595,28 @@ const NOTES = {
 };
 
 const CAT_COLORS = {
-  'hotels-resorts-cruise-lines': "var(--accent)",
-  'restaurants': "var(--purple)",
-  'broadline-retail': "var(--teal)",
-  'apparel-accessories-luxury-goods': "var(--rose)",
-  'automobile-manufacturers': "var(--blue)",
+  'automobile-manufacturers': "var(--accent)",
+  'hotels-resorts-cruise-lines': "var(--purple)",
+  'apparel-accessories-luxury-goods': "var(--teal)",
+  'broadline-retail': "var(--rose)",
+  'other': "var(--slate)",
+  'restaurants': "var(--blue)",
   'homebuilding': "var(--green)",
   'retailers': "var(--amber)",
+  'travel-and-leisure': "var(--gold)",
   'other': "var(--slate)",
 };
 
 const CAT_LABELS = {
-  'hotels-resorts-cruise-lines': "Hotels, Resorts \u0026 Cruise Lines",
-  'restaurants': "Restaurants",
-  'broadline-retail': "Broadline Retail",
-  'apparel-accessories-luxury-goods': "Apparel, Accessories \u0026 Luxury Goods",
   'automobile-manufacturers': "Automobile Manufacturers",
+  'hotels-resorts-cruise-lines': "Hotels, Resorts \u0026 Cruise Lines",
+  'apparel-accessories-luxury-goods': "Apparel, Accessories \u0026 Luxury Goods",
+  'broadline-retail': "Broadline Retail",
+  'other': "Other",
+  'restaurants': "Restaurants",
   'homebuilding': "Homebuilding",
   'retailers': "Retailers",
+  'travel-and-leisure': "Travel and Leisure",
   'other': "Other",
 };
 

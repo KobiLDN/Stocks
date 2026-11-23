@@ -122,6 +122,35 @@ class Classify(unittest.TestCase):
         self.assertEqual(up["XYZ"]["sector"], "Unclassified")
 
 
+class Europe(unittest.TestCase):
+    """Phase 2 (#110): Euro Stoxx 50 / DAX / CAC 40 / SMI members."""
+    def test_exchange_and_t212_ticker(self):
+        import universe_classify as uc
+        self.assertEqual([uc.eu_exchange(y) for y in ("SAP.DE", "MC.PA", "ASML.AS", "NOVN.SW", "NDA-FI.HE", "AAPL")],
+                         ["XETRA", "EURONEXT", "EURONEXT", "SIX", "HEL", None])
+        c = catalogue()
+        self.assertEqual(c.candidates({"yahoo": "SAN.MC", "exchange": "BME"})[0], "SANe_EQ")        # Santander, Madrid
+        self.assertEqual(c.candidates({"yahoo": "SAN.PA", "exchange": "EURONEXT"})[0], "SANp_EQ")   # Sanofi, Paris
+
+    def test_sector_from_euro_stoxx_and_industry_from_cac(self):
+        tables = {**TABLES,
+                  "sx5e": [{"yahoo": "DTE.DE", "name": "Deutsche Telekom", "isin": None, "sector_raw": "Communication", "industry_raw": None}],
+                  "dax": [{"yahoo": "DTE.DE", "name": "Deutsche Telekom", "isin": None, "sector_raw": None, "industry_raw": None}],
+                  "cac": [{"yahoo": "AI.PA", "name": "Air Liquide", "isin": None, "sector_raw": None, "industry_raw": "Industrial Gases"}],
+                  "smi": []}
+        assets = {"DTE.DE": {"name": "Deutsche Telekom", "exchange": "XETRA", "yahoo": "DTE.DE"},
+                  "AI.PA": {"name": "Air Liquide", "exchange": "EURONEXT", "yahoo": "AI.PA"}}
+        cat = catalogue({"ticker": "DTEd_EQ", "isin": "DE0005557508", "name": "Deutsche Telekom", "currency": "EUR"},
+                        {"ticker": "AIp_EQ", "isin": "FR0000120073", "name": "Air Liquide", "currency": "EUR"})
+        up, _ = classify(assets, tables, cat, {}, yahoo=lambda y: {"sector": "Basic Materials", "industry": "Chemicals",
+                                                                   "currency": "EUR"}, wiki_isin=lambda n: None)
+        self.assertEqual((up["DTE.DE"]["sector"], up["DTE.DE"]["sector_src"]), ("Communication Services", "gics"))
+        self.assertEqual((up["AI.PA"]["sector"], up["AI.PA"]["sector_src"], up["AI.PA"]["industry"]),
+                         ("Materials", "yahoo", "Industrial Gases"))      # CAC's GICS sub-industry beats Yahoo's
+        self.assertEqual((up["DTE.DE"]["isin"], up["DTE.DE"]["t212"]), ("DE0005557508", "yes"))
+        self.assertEqual(up["AI.PA"]["currency"], "EUR")
+
+
 class HealthGroups(unittest.TestCase):
     def test_groups(self):
         self.assertEqual(health_group("Biotechnology"), "Biotechnology")

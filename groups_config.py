@@ -148,6 +148,10 @@ def colours(cats):
     return out
 
 
+# TradingView's exchange prefixes for the European exchanges (#110)
+TV_EUROPE = {"XETRA": "XETR", "EURONEXT": "EURONEXT", "MIL": "MIL", "BME": "BME", "HEL": "OMXHEX", "SIX": "SIX"}
+
+
 def tradingview_symbol(t, a):
     """TradingView symbol for the charts page. LSE: the EPIC, with a trailing dot when it is
     shorter than 3 letters (BA. for BAE, RR. for Rolls-Royce); US class shares use a dot (BRK.B)."""
@@ -159,4 +163,6 @@ def tradingview_symbol(t, a):
         return f"TSE:{y.split('.')[0]}"
     if a["exchange"] == "TADAWUL":
         return f"TADAWUL:{y.split('.')[0]}"
+    if a["exchange"] in TV_EUROPE:                     # SAP.DE -> XETR:SAP, NDA-FI.HE -> OMXHEX:NDA_FI
+        return f"{TV_EUROPE[a['exchange']]}:{y.rsplit('.', 1)[0].replace('-', '_')}"
     return f"{a['exchange']}:{y.replace('-', '.')}"

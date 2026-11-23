@@ -4,28 +4,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 35 Real Estate stocks, by industry.">
+<meta name="description" content="1-year price charts for all 37 Real Estate stocks, by industry.">
 <title>Real Estate — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../shared.css">
 <script src="../../shared.js" defer></script>
 <style>
-  .cat-btn.active-multi-family-residential-reits { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-  .cat-btn.active-real-estate-investment-trusts { background: var(--purple); border-color: var(--purple); color: var(--bg); }
-  .cat-btn.active-retail-reits { background: var(--teal); border-color: var(--teal); color: var(--bg); }
+  .cat-btn.active-retail-reits { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .cat-btn.active-multi-family-residential-reits { background: var(--purple); border-color: var(--purple); color: var(--bg); }
+  .cat-btn.active-real-estate-investment-trusts { background: var(--teal); border-color: var(--teal); color: var(--bg); }
   .cat-btn.active-health-care-reits { background: var(--rose); border-color: var(--rose); color: var(--bg); }
-  .cat-btn.active-telecom-tower-reits { background: var(--blue); border-color: var(--blue); color: var(--bg); }
-  .cat-btn.active-data-center-reits { background: var(--green); border-color: var(--green); color: var(--bg); }
-  .cat-btn.active-hotel-resort-reits { background: var(--amber); border-color: var(--amber); color: var(--bg); }
+  .cat-btn.active-real-estate-services { background: var(--blue); border-color: var(--blue); color: var(--bg); }
+  .cat-btn.active-telecom-tower-reits { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-data-center-reits { background: var(--amber); border-color: var(--amber); color: var(--bg); }
   .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
-  .cat-label.multi-family-residential-reits { color: var(--accent); }
-  .cat-label.real-estate-investment-trusts { color: var(--purple); }
-  .cat-label.retail-reits { color: var(--teal); }
+  .cat-label.retail-reits { color: var(--accent); }
+  .cat-label.multi-family-residential-reits { color: var(--purple); }
+  .cat-label.real-estate-investment-trusts { color: var(--teal); }
   .cat-label.health-care-reits { color: var(--rose); }
-  .cat-label.telecom-tower-reits { color: var(--blue); }
-  .cat-label.data-center-reits { color: var(--green); }
-  .cat-label.hotel-resort-reits { color: var(--amber); }
+  .cat-label.real-estate-services { color: var(--blue); }
+  .cat-label.telecom-tower-reits { color: var(--green); }
+  .cat-label.data-center-reits { color: var(--amber); }
   .cat-label.other { color: var(--slate); }
 
 
@@ -99,7 +99,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Real Estate <span>Charts</span></h1>
-    <div class="header-sub">35 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">37 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -145,8 +145,8 @@
   <main class="chart-area">
     <div class="chart-header">
       <div style="display:flex;align-items:baseline;">
-        <span class="chart-ticker" id="chart-ticker">CPT</span>
-        <span class="chart-name" id="chart-name">Camden Property Trust</span>
+        <span class="chart-ticker" id="chart-ticker">FRT</span>
+        <span class="chart-name" id="chart-name">Federal Realty Investment Trust</span>
       </div>
     </div>
     <div class="chart-widget" id="single-widget"></div>
@@ -171,30 +171,32 @@
     "LAND.L": "LSE:LAND",
     "LMP.L": "LSE:LMP",
     "SGRO.L": "LSE:SGRO",
+    "URW.PA": "EURONEXT:URW",
+    "VNA.DE": "XETR:VNA",
   };
 
   /* Category display config for charts */
   const CHART_CATS = {
+    'retail-reits': {
+      key: 'retail-reits',
+      label: "Retail REITs",
+      color: 'var(--accent)',
+      btnLabel: "Retail REITs",
+      tooltip: "Real Estate: Retail REITs",
+    },
     'multi-family-residential-reits': {
       key: 'multi-family-residential-reits',
       label: "Multi-Family Residential REITs",
-      color: 'var(--accent)',
+      color: 'var(--purple)',
       btnLabel: "Multi-Family Residential REITs",
       tooltip: "Real Estate: Multi-Family Residential REITs",
     },
     'real-estate-investment-trusts': {
       key: 'real-estate-investment-trusts',
       label: "Real Estate Investment Trusts",
-      color: 'var(--purple)',
+      color: 'var(--teal)',
       btnLabel: "Real Estate Investment Trusts",
       tooltip: "Real Estate: Real Estate Investment Trusts",
-    },
-    'retail-reits': {
-      key: 'retail-reits',
-      label: "Retail REITs",
-      color: 'var(--teal)',
-      btnLabel: "Retail REITs",
-      tooltip: "Real Estate: Retail REITs",
     },
     'health-care-reits': {
       key: 'health-care-reits',
@@ -203,26 +205,26 @@
       btnLabel: "Health Care REITs",
       tooltip: "Real Estate: Health Care REITs",
     },
+    'real-estate-services': {
+      key: 'real-estate-services',
+      label: "Real Estate Services",
+      color: 'var(--blue)',
+      btnLabel: "Real Estate Services",
+      tooltip: "Real Estate: Real Estate Services",
+    },
     'telecom-tower-reits': {
       key: 'telecom-tower-reits',
       label: "Telecom Tower REITs",
-      color: 'var(--blue)',
+      color: 'var(--green)',
       btnLabel: "Telecom Tower REITs",
       tooltip: "Real Estate: Telecom Tower REITs",
     },
     'data-center-reits': {
       key: 'data-center-reits',
       label: "Data Center REITs",
-      color: 'var(--green)',
+      color: 'var(--amber)',
       btnLabel: "Data Center REITs",
       tooltip: "Real Estate: Data Center REITs",
-    },
-    'hotel-resort-reits': {
-      key: 'hotel-resort-reits',
-      label: "Hotel & Resort REITs",
-      color: 'var(--amber)',
-      btnLabel: "Hotel & Resort REITs",
-      tooltip: "Real Estate: Hotel & Resort REITs",
     },
     'other': {
       key: 'other',
@@ -300,8 +302,8 @@
   };
 
   let currentView      = 'grid';
-  let currentSymbol    = 'NYSE:CPT';
-  let currentName      = 'Camden Property Trust';
+  let currentSymbol    = 'NYSE:FRT';
+  let currentName      = 'Federal Realty Investment Trust';
   let currentTimeframe = '1W';
   let currentCategory  = null;
 

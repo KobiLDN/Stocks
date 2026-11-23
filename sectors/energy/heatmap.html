@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Energy heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 32 stocks.">
+<meta name="description" content="Energy heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 34 stocks.">
 <title>Energy — Heatmap</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -83,7 +83,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Energy <span>Heatmap</span></h1>
-    <div class="header-sub"><span id="hm-stock-count">32</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="hm-stock-count">34</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -114,7 +114,7 @@
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">32 stocks</span>
+    <span class="section-hdr-count" id="hm-all-count">34 stocks</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
@@ -122,7 +122,7 @@
   <div class="section-hdr" style="margin-top:48px;">
     <span class="section-hdr-label">By Industry</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-cat-count">6 categories</span>
+    <span class="section-hdr-count" id="hm-cat-count">7 categories</span>
   </div>
   <div id="sectors-container"></div>
 
@@ -143,6 +143,7 @@ const NAMES = {
  "COP": "ConocoPhillips",
  "CVX": "Chevron",
  "DVN": "Devon Energy",
+ "ENI.MI": "Eni",
  "EOG": "EOG Resources",
  "EQNR": "Equinor",
  "EQT": "EQT Corporation",
@@ -162,6 +163,7 @@ const NAMES = {
  "TPL": "Texas Pacific Land Corporation",
  "TRGP": "Targa Resources",
  "TTE": "TotalEnergies",
+ "TTE.PA": "TotalEnergies",
  "UEC": "Uranium Energy Corp",
  "VLO": "Valero Energy",
  "WMB": "Williams Companies",
@@ -175,10 +177,11 @@ const CAT_LABELS = {
   'coal-consumable-fuels': 'Coal & Consumable Fuels',
   'oil-gas-equipment-services': 'Oil & Gas Equipment & Services',
   'oil-gas-refining-marketing': 'Oil & Gas Refining & Marketing',
+  'other': 'Other',
 };
 
 /* Category display order */
-const CAT_ORDER = ['integrated-oil-gas', 'oil-gas-exploration-production', 'oil-gas-storage-transportation', 'coal-consumable-fuels', 'oil-gas-equipment-services', 'oil-gas-refining-marketing'];
+const CAT_ORDER = ['integrated-oil-gas', 'oil-gas-exploration-production', 'oil-gas-storage-transportation', 'coal-consumable-fuels', 'oil-gas-equipment-services', 'oil-gas-refining-marketing', 'other'];
 
 const METRICS_CFG = {
   '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 116 Industrials stocks, by industry.">
+<meta name="description" content="1-year price charts for all 136 Industrials stocks, by industry.">
 <title>Industrials — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,21 +13,21 @@
 <style>
   .cat-btn.active-aerospace-defense { background: var(--accent); border-color: var(--accent); color: var(--bg); }
   .cat-btn.active-industrial-machinery-supplies-components { background: var(--purple); border-color: var(--purple); color: var(--bg); }
-  .cat-btn.active-building-products { background: var(--teal); border-color: var(--teal); color: var(--bg); }
-  .cat-btn.active-electrical-components-equipment { background: var(--rose); border-color: var(--rose); color: var(--bg); }
-  .cat-btn.active-industrial-support-services { background: var(--blue); border-color: var(--blue); color: var(--bg); }
-  .cat-btn.active-air-freight-logistics { background: var(--green); border-color: var(--green); color: var(--bg); }
-  .cat-btn.active-construction-engineering { background: var(--amber); border-color: var(--amber); color: var(--bg); }
+  .cat-btn.active-electrical-components-equipment { background: var(--teal); border-color: var(--teal); color: var(--bg); }
+  .cat-btn.active-building-products { background: var(--rose); border-color: var(--rose); color: var(--bg); }
+  .cat-btn.active-construction-engineering { background: var(--blue); border-color: var(--blue); color: var(--bg); }
+  .cat-btn.active-industrial-support-services { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-air-freight-logistics { background: var(--amber); border-color: var(--amber); color: var(--bg); }
   .cat-btn.active-construction-machinery-heavy-transportation-equipment { background: var(--gold); border-color: var(--gold); color: var(--bg); }
   .cat-btn.active-environmental-facilities-services { background: var(--lime); border-color: var(--lime); color: var(--bg); }
   .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
   .cat-label.aerospace-defense { color: var(--accent); }
   .cat-label.industrial-machinery-supplies-components { color: var(--purple); }
-  .cat-label.building-products { color: var(--teal); }
-  .cat-label.electrical-components-equipment { color: var(--rose); }
-  .cat-label.industrial-support-services { color: var(--blue); }
-  .cat-label.air-freight-logistics { color: var(--green); }
-  .cat-label.construction-engineering { color: var(--amber); }
+  .cat-label.electrical-components-equipment { color: var(--teal); }
+  .cat-label.building-products { color: var(--rose); }
+  .cat-label.construction-engineering { color: var(--blue); }
+  .cat-label.industrial-support-services { color: var(--green); }
+  .cat-label.air-freight-logistics { color: var(--amber); }
   .cat-label.construction-machinery-heavy-transportation-equipment { color: var(--gold); }
   .cat-label.environmental-facilities-services { color: var(--lime); }
   .cat-label.other { color: var(--slate); }
@@ -103,7 +103,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Industrials <span>Charts</span></h1>
-    <div class="header-sub">116 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">136 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -149,8 +149,8 @@
   <main class="chart-area">
     <div class="chart-header">
       <div style="display:flex;align-items:baseline;">
-        <span class="chart-ticker" id="chart-ticker">AVAV</span>
-        <span class="chart-name" id="chart-name">AeroVironment</span>
+        <span class="chart-ticker" id="chart-ticker">AIR.PA</span>
+        <span class="chart-name" id="chart-name">Airbus</span>
       </div>
     </div>
     <div class="chart-widget" id="single-widget"></div>
@@ -170,22 +170,42 @@
 <script>
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
+    "ABBN.SW": "SIX:ABBN",
+    "AIR.PA": "EURONEXT:AIR",
     "BA.L": "LSE:BA.",
     "BAB.L": "LSE:BAB",
     "BBY.L": "LSE:BBY",
     "BNZL.L": "LSE:BNZL",
+    "BVI.PA": "EURONEXT:BVI",
     "DCC.L": "LSE:DCC",
+    "DG.PA": "EURONEXT:DG",
+    "DHL.DE": "XETR:DHL",
     "DPLM.L": "LSE:DPLM",
+    "DTG.DE": "XETR:DTG",
+    "EN.PA": "EURONEXT:EN",
+    "ENR.DE": "XETR:ENR",
     "EXPN.L": "LSE:EXPN",
+    "FGR.PA": "EURONEXT:FGR",
+    "G1A.DE": "XETR:G1A",
+    "GEBN.SW": "SIX:GEBN",
     "HLMA.L": "LSE:HLMA",
+    "HO.PA": "EURONEXT:HO",
     "IMI.L": "LSE:IMI",
     "ITRK.L": "LSE:ITRK",
+    "LR.PA": "EURONEXT:LR",
     "MRO.L": "LSE:MRO",
+    "MTX.DE": "XETR:MTX",
     "QQ.L": "LSE:QQ.",
+    "RHM.DE": "XETR:RHM",
     "RR.L": "LSE:RR.",
     "RTO.L": "LSE:RTO",
+    "SAF.PA": "EURONEXT:SAF",
+    "SGO.PA": "EURONEXT:SGO",
+    "SIE.DE": "XETR:SIE",
     "SMIN.L": "LSE:SMIN",
     "SPX.L": "LSE:SPX",
+    "SU.PA": "EURONEXT:SU",
+    "VIE.PA": "EURONEXT:VIE",
     "WEIR.L": "LSE:WEIR",
   };
 
@@ -205,40 +225,40 @@
       btnLabel: "Industrial Machinery & Supplies & Components",
       tooltip: "Industrials: Industrial Machinery & Supplies & Components",
     },
-    'building-products': {
-      key: 'building-products',
-      label: "Building Products",
-      color: 'var(--teal)',
-      btnLabel: "Building Products",
-      tooltip: "Industrials: Building Products",
-    },
     'electrical-components-equipment': {
       key: 'electrical-components-equipment',
       label: "Electrical Components & Equipment",
-      color: 'var(--rose)',
+      color: 'var(--teal)',
       btnLabel: "Electrical Components & Equipment",
       tooltip: "Industrials: Electrical Components & Equipment",
+    },
+    'building-products': {
+      key: 'building-products',
+      label: "Building Products",
+      color: 'var(--rose)',
+      btnLabel: "Building Products",
+      tooltip: "Industrials: Building Products",
+    },
+    'construction-engineering': {
+      key: 'construction-engineering',
+      label: "Construction & Engineering",
+      color: 'var(--blue)',
+      btnLabel: "Construction & Engineering",
+      tooltip: "Industrials: Construction & Engineering",
     },
     'industrial-support-services': {
       key: 'industrial-support-services',
       label: "Industrial Support Services",
-      color: 'var(--blue)',
+      color: 'var(--green)',
       btnLabel: "Industrial Support Services",
       tooltip: "Industrials: Industrial Support Services",
     },
     'air-freight-logistics': {
       key: 'air-freight-logistics',
       label: "Air Freight & Logistics",
-      color: 'var(--green)',
+      color: 'var(--amber)',
       btnLabel: "Air Freight & Logistics",
       tooltip: "Industrials: Air Freight & Logistics",
-    },
-    'construction-engineering': {
-      key: 'construction-engineering',
-      label: "Construction & Engineering",
-      color: 'var(--amber)',
-      btnLabel: "Construction & Engineering",
-      tooltip: "Industrials: Construction & Engineering",
     },
     'construction-machinery-heavy-transportation-equipment': {
       key: 'construction-machinery-heavy-transportation-equipment',
@@ -330,8 +350,8 @@
   };
 
   let currentView      = 'grid';
-  let currentSymbol    = 'NASDAQ:AVAV';
-  let currentName      = 'AeroVironment';
+  let currentSymbol    = 'EURONEXT:AIR';
+  let currentName      = 'Airbus';
   let currentTimeframe = '1W';
   let currentCategory  = null;
 

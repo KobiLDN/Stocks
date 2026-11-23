@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 102 Financials stocks, by industry.">
+<meta name="description" content="1-year price charts for all 125 Financials stocks, by industry.">
 <title>Financials — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -14,22 +14,22 @@
   .cat-btn.active-diversified-banks { background: var(--accent); border-color: var(--accent); color: var(--bg); }
   .cat-btn.active-asset-management-custody-banks { background: var(--purple); border-color: var(--purple); color: var(--bg); }
   .cat-btn.active-investment-banking-brokerage { background: var(--teal); border-color: var(--teal); color: var(--bg); }
-  .cat-btn.active-property-casualty-insurance { background: var(--rose); border-color: var(--rose); color: var(--bg); }
-  .cat-btn.active-financial-exchanges-data { background: var(--blue); border-color: var(--blue); color: var(--bg); }
-  .cat-btn.active-life-health-insurance { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
+  .cat-btn.active-financial-exchanges-data { background: var(--rose); border-color: var(--rose); color: var(--bg); }
+  .cat-btn.active-life-health-insurance { background: var(--blue); border-color: var(--blue); color: var(--bg); }
+  .cat-btn.active-property-casualty-insurance { background: var(--green); border-color: var(--green); color: var(--bg); }
   .cat-btn.active-transaction-payment-processing-services { background: var(--amber); border-color: var(--amber); color: var(--bg); }
-  .cat-btn.active-insurance-brokers { background: var(--gold); border-color: var(--gold); color: var(--bg); }
-  .cat-btn.active-regional-banks { background: var(--lime); border-color: var(--lime); color: var(--bg); }
+  .cat-btn.active-regional-banks { background: var(--gold); border-color: var(--gold); color: var(--bg); }
   .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
   .cat-label.diversified-banks { color: var(--accent); }
   .cat-label.asset-management-custody-banks { color: var(--purple); }
   .cat-label.investment-banking-brokerage { color: var(--teal); }
-  .cat-label.property-casualty-insurance { color: var(--rose); }
-  .cat-label.financial-exchanges-data { color: var(--blue); }
-  .cat-label.life-health-insurance { color: var(--green); }
+  .cat-label.other { color: var(--slate); }
+  .cat-label.financial-exchanges-data { color: var(--rose); }
+  .cat-label.life-health-insurance { color: var(--blue); }
+  .cat-label.property-casualty-insurance { color: var(--green); }
   .cat-label.transaction-payment-processing-services { color: var(--amber); }
-  .cat-label.insurance-brokers { color: var(--gold); }
-  .cat-label.regional-banks { color: var(--lime); }
+  .cat-label.regional-banks { color: var(--gold); }
   .cat-label.other { color: var(--slate); }
 
 
@@ -103,7 +103,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Financials <span>Charts</span></h1>
-    <div class="header-sub">102 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">125 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -171,31 +171,54 @@
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
     "ABDN.L": "LSE:ABDN",
+    "ACA.PA": "EURONEXT:ACA",
     "ADM.L": "LSE:ADM",
+    "ADYEN.AS": "EURONEXT:ADYEN",
+    "ALV.DE": "XETR:ALV",
     "ALW.L": "LSE:ALW",
     "AV.L": "LSE:AV.",
     "BARC.L": "LSE:BARC",
+    "BBVA.MC": "BME:BBVA",
     "BGEO.L": "LSE:BGEO",
+    "BNP.PA": "EURONEXT:BNP",
     "BRK-B": "NYSE:BRK.B",
+    "CBK.DE": "XETR:CBK",
+    "CS.PA": "EURONEXT:CS",
+    "DB1.DE": "XETR:DB1",
+    "DBK.DE": "XETR:DBK",
+    "ENX.PA": "EURONEXT:ENX",
     "FCIT.L": "LSE:FCIT",
+    "GLE.PA": "EURONEXT:GLE",
+    "HNR1.DE": "XETR:HNR1",
     "HSBA.L": "LSE:HSBA",
     "HSX.L": "LSE:HSX",
     "ICG.L": "LSE:ICG",
     "IGG.L": "LSE:IGG",
     "III.L": "LSE:III",
+    "INGA.AS": "EURONEXT:INGA",
     "INVP.L": "LSE:INVP",
+    "ISP.MI": "MIL:ISP",
     "LGEN.L": "LSE:LGEN",
     "LLOY.L": "LSE:LLOY",
     "LSEG.L": "LSE:LSEG",
     "MNG.L": "LSE:MNG",
+    "MUV2.DE": "XETR:MUV2",
+    "NDA-FI.HE": "OMXHEX:NDA_FI",
     "NWG.L": "LSE:NWG",
     "PCT.L": "LSE:PCT",
+    "PGHN.SW": "SIX:PGHN",
     "PRU.L": "LSE:PRU",
     "PSH.L": "LSE:PSH",
+    "SAN.MC": "BME:SAN",
     "SDLF.L": "LSE:SDLF",
+    "SLHN.SW": "SIX:SLHN",
     "SMT.L": "LSE:SMT",
+    "SREN.SW": "SIX:SREN",
     "STAN.L": "LSE:STAN",
     "STJ.L": "LSE:STJ",
+    "UBSG.SW": "SIX:UBSG",
+    "UCG.MI": "MIL:UCG",
+    "ZURN.SW": "SIX:ZURN",
   };
 
   /* Category display config for charts */
@@ -221,26 +244,33 @@
       btnLabel: "Investment Banking & Brokerage",
       tooltip: "Financials: Investment Banking & Brokerage",
     },
-    'property-casualty-insurance': {
-      key: 'property-casualty-insurance',
-      label: "Property & Casualty Insurance",
-      color: 'var(--rose)',
-      btnLabel: "Property & Casualty Insurance",
-      tooltip: "Financials: Property & Casualty Insurance",
+    'other': {
+      key: 'other',
+      label: "Other",
+      color: 'var(--slate)',
+      btnLabel: "Other",
+      tooltip: "Financials: Other",
     },
     'financial-exchanges-data': {
       key: 'financial-exchanges-data',
       label: "Financial Exchanges & Data",
-      color: 'var(--blue)',
+      color: 'var(--rose)',
       btnLabel: "Financial Exchanges & Data",
       tooltip: "Financials: Financial Exchanges & Data",
     },
     'life-health-insurance': {
       key: 'life-health-insurance',
       label: "Life & Health Insurance",
-      color: 'var(--green)',
+      color: 'var(--blue)',
       btnLabel: "Life & Health Insurance",
       tooltip: "Financials: Life & Health Insurance",
+    },
+    'property-casualty-insurance': {
+      key: 'property-casualty-insurance',
+      label: "Property & Casualty Insurance",
+      color: 'var(--green)',
+      btnLabel: "Property & Casualty Insurance",
+      tooltip: "Financials: Property & Casualty Insurance",
     },
     'transaction-payment-processing-services': {
       key: 'transaction-payment-processing-services',
@@ -249,17 +279,10 @@
       btnLabel: "Transaction & Payment Processing Services",
       tooltip: "Financials: Transaction & Payment Processing Services",
     },
-    'insurance-brokers': {
-      key: 'insurance-brokers',
-      label: "Insurance Brokers",
-      color: 'var(--gold)',
-      btnLabel: "Insurance Brokers",
-      tooltip: "Financials: Insurance Brokers",
-    },
     'regional-banks': {
       key: 'regional-banks',
       label: "Regional Banks",
-      color: 'var(--lime)',
+      color: 'var(--gold)',
       btnLabel: "Regional Banks",
       tooltip: "Financials: Regional Banks",
     },
