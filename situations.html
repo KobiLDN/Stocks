@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Stocks with an unresolved event that could move the price a lot: what could happen, how likely each outcome is, and how far the price might move. Every flag is scored after 30 days.">
+<title>Situations</title>
+<script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<script src="asset-links.js"></script>
+<script src="all-filters.js"></script>
+<script src="shared.js" defer></script>
+<style>
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .pos { color: var(--green); }
+  .neg { color: var(--red); }
+  .dim { color: var(--muted); }
+
+  .intro { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); padding: 14px 20px; font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+  .intro p { margin: 4px 0; }
+
+  .score-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 8px; }
+  @media (max-width: 900px) { .score-grid { grid-template-columns: 1fr 1fr; } }
+  .score-card { background: var(--surface); border: 1px solid var(--border); padding: 12px 14px; }
+  .score-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+  .score-value { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 700; margin-top: 4px; }
+  .score-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  .sit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 12px; }
+  @media (max-width: 600px) { .sit-grid { grid-template-columns: 1fr; } }
+  .sit-card { background: var(--surface); border: 1px solid var(--border); padding: 14px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .sit-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .sit-ticker { font-family: 'IBM Plex Mono', monospace; font-weight: 700; font-size: 15px; color: var(--text); text-decoration: none; }
+  .sit-ticker:hover { color: var(--accent); }
+  .sit-name { font-size: 13px; color: var(--muted); }
+  .chip { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; border: 1px solid var(--border); padding: 2px 6px; color: var(--muted); }
+  .chip.type { color: var(--accent); border-color: var(--accent); }
+  .sit-title { font-weight: 700; font-size: 15px; line-height: 1.35; }
+  .sit-summary { font-size: 13px; line-height: 1.5; color: var(--text); }
+  .outcomes { display: flex; flex-direction: column; gap: 5px; }
+  .oc { display: grid; grid-template-columns: 1fr 44px 58px; gap: 8px; align-items: center; font-size: 12px; }
+  .oc-label { position: relative; padding: 3px 6px; overflow: hidden; }
+  .oc-bar { position: absolute; left: 0; top: 0; bottom: 0; background: var(--surface2); z-index: 0; }
+  .oc-text { position: relative; z-index: 1; }
+  .oc-p, .oc-m { font-family: 'IBM Plex Mono', monospace; text-align: right; }
+  .sit-foot { display: flex; gap: 12px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; }
+  .sit-foot b { color: var(--text); }
+  .empty-state { padding: 40px; text-align: center; color: var(--muted); }
+
+  .drawer-overlay { display: none; position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,0.4); }
+  .drawer-overlay.open { display: block; }
+  .drawer { position: fixed; top: 36px; left: 0; bottom: 0; width: 92px; background: var(--bg); border-right: 1px solid var(--accent); overflow-y: auto; z-index: 301; padding: 8px 6px; display: flex; flex-direction: column; gap: 4px; }
+  body[data-layout="rail"] { flex-direction: row; }
+  .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+  @media (max-width: 600px) {
+    body[data-layout="rail"] .left-rail { display: none; }
+    .header-left { flex-shrink: 1; min-width: 0; }
+    .header-sub { white-space: normal; }
+    .section-hdr { flex-wrap: wrap; }
+    .section-hdr-count { white-space: normal; }
+  }
+</style>
+</head>
+<body data-layout="rail">
+
+<div id="ticker-tape"><div class="tape-track" id="tape-track"></div></div>
+<div class="left-rail"></div>
+<div class="right-side">
+<header>
+  <div class="header-inner">
+  <button class="hamburger" id="hamburger" onclick="openDrawer()">☰</button>
+  <div class="header-left">
+    <div class="header-label">// Something is about to be decided</div>
+    <h1><span>Situations</span></h1>
+    <div class="header-sub"><span id="sit-count">—</span> open situations · checked after every price update · Last updated <span id="data-bar-ts">—</span></div>
+  </div>
+  <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
+  </div>
+  <div class="filter-bar af-bar" id="af-bar"></div>
+</header>
+
+<div class="page-main">
+<div class="container">
+
+  <div class="intro">
+    <p><b>What this is:</b> stocks where something that could move the price a lot has not been decided yet:
+      a leadership fight, a takeover bid, a regulator's or court's decision, a trial readout, results after a big run.
+      For each one the AI lists what could happen, how likely each outcome is, and roughly how far the price might move.</p>
+    <p><b>What it isn't:</b> a forecast of which way a stock will go. Nobody outside the room knows that. The odds
+      are the AI's estimate, and every first flag is scored after 30 days on the
+      <a href="track-record.html">Track Record</a>, so you can see whether to trust them. Not financial advice.</p>
+  </div>
+
+  <div class="section-hdr"><span class="section-hdr-label">Are the odds any good?</span><span class="section-hdr-line"></span><span class="section-hdr-count" id="score-count"></span></div>
+  <div class="score-grid" id="score-grid"><div class="empty-state">Loading…</div></div>
+
+  <div class="section-hdr"><span class="section-hdr-label">Open situations</span><span class="section-hdr-line"></span><span class="section-hdr-count" id="shown-count"></span></div>
+  <div class="sit-grid" id="sit-grid"><div class="empty-state">Loading situations…</div></div>
+
+</div>
+</div>
+</div>
+
+<script src="All/all-data.js"></script>
+<script src="situations/situations-data.js" onerror="window.SITUATIONS_DATA = null"></script>
+<script>
+  const STOCK = {};
+  ((window.ALL_DATA || {}).stocks || []).forEach(s => { STOCK[s.ticker] = s; });
+  const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const pctStr = (v, dp = 0) => v == null ? '—' : (v > 0 ? '+' : '') + Number(v).toFixed(dp) + '%';
+  const cls = v => v == null ? 'dim' : v > 0 ? 'pos' : v < 0 ? 'neg' : '';
+  const ukDate = d => { if (!d) return '—'; const [y, m, day] = d.slice(0, 10).split('-'); return `${day}/${m}/${y.slice(2)}`; };
+  const LEAN = { up: 'leans up', down: 'leans down', 'either way': 'could go either way' };
+
+  function card(s) {
+    const st = STOCK[s.ticker] || {};
+    const labels = (window.SITUATIONS_DATA || {}).type_labels || {};
+    const since = st.price_usd && s.price_at_flag ? (st.price_usd / s.price_at_flag - 1) * 100 : null;
+    const oc = s.outcomes.map(o => `<div class="oc">
+        <div class="oc-label"><span class="oc-bar" style="width:${Math.round(o.probability * 100)}%"></span><span class="oc-text">${esc(o.label)}</span></div>
+        <div class="oc-p">${Math.round(o.probability * 100)}%</div>
+        <div class="oc-m ${cls(o.move_pct)}">${pctStr(o.move_pct)}</div>
+      </div>`).join('');
+    return `<div class="sit-card">
+      <div class="sit-top">
+        <a class="sit-ticker" href="${esc(assetUrl(s.ticker))}" target="_blank" rel="noopener">${esc(s.ticker)}</a>
+        <span class="sit-name">${esc(st.company_name || '')}</span>
+        <span class="chip type">${esc(labels[s.type] || s.type)}</span>
+        ${st.sector ? `<span class="chip">${esc(st.sector)}</span>` : ''}
+      </div>
+      <div class="sit-title">${esc(s.title)}</div>
+      <div class="sit-summary">${esc(s.summary)}</div>
+      <div class="outcomes">
+        <div class="oc dim mono" style="font-size:10px;letter-spacing:1px"><div>IF THIS HAPPENS</div><div class="oc-p">CHANCE</div><div class="oc-m">PRICE, 1M</div></div>
+        ${oc}
+      </div>
+      <div class="sit-foot">
+        <span>10%+ move: <b>${Math.round(s.p_big * 100)}%</b></span>
+        <span>${LEAN[s.lean] || s.lean}</span>
+        ${s.key_date ? `<span>decision due <b>${ukDate(s.key_date)}</b></span>` : ''}
+        <span>flagged ${ukDate(s.first_flagged)}${since == null ? '' : ` · since then <b class="${cls(since)}">${pctStr(since, 1)}</b>`}</span>
+      </div>
+    </div>`;
+  }
+
+  function render() {
+    const D = window.SITUATIONS_DATA;
+    const grid = document.getElementById('sit-grid');
+    if (!D) { grid.innerHTML = '<div class="empty-state">No situations yet. The first check runs after the next price update.</div>'; return; }
+    const shown = D.situations.filter(s => afMatch(STOCK[s.ticker] || { ticker: s.ticker, markets: [], themes: [] }));
+    document.getElementById('sit-count').textContent = D.count;
+    document.getElementById('shown-count').textContent = shown.length === D.count ? `${D.count} · most likely big moves first` : `${shown.length} of ${D.count} match the filters`;
+    grid.innerHTML = shown.length ? shown.map(card).join('') : '<div class="empty-state">No open situations match these filters.</div>';
+  }
+
+  function renderScore(S) {
+    const el = document.getElementById('score-grid');
+    if (!S || !S.scored) {
+      const due = S && S.first_due ? ` The first flags are scored on ${ukDate(S.first_due)}.` : '';
+      el.innerHTML = `<div class="score-card" style="grid-column:1/-1"><div class="score-note" style="font-size:14px;color:var(--text)">
+        Too early to say: each flag is scored 30 days after it was first made.${due}
+        ${S && S.flags ? ` ${S.flags} flags so far.` : ''}</div></div>`;
+      return;
+    }
+    document.getElementById('score-count').textContent = `${S.scored} scored · ${S.pending} still running`;
+    const better = S.brier_base != null && S.brier < S.brier_base;
+    el.innerHTML = `
+      <div class="score-card"><div class="score-label">Said a 10%+ move was likely</div><div class="score-value">${S.predicted_big}%</div>
+        <div class="score-note">average stated chance</div></div>
+      <div class="score-card"><div class="score-label">A 10%+ move happened</div><div class="score-value">${S.actual_big}%</div>
+        <div class="score-note">of flagged stocks within 30 days</div></div>
+      <div class="score-card"><div class="score-label">Any stock, same 30 days</div><div class="score-value">${S.base_rate ?? '—'}%</div>
+        <div class="score-note">moved 10%+ (the base rate)</div></div>
+      <div class="score-card"><div class="score-label">Direction right</div><div class="score-value">${S.direction.right ?? '—'}${S.direction.right == null ? '' : '%'}</div>
+        <div class="score-note">of ${S.direction.n} flags that leaned up or down</div></div>
+      <div class="score-card" style="grid-column:1/-1"><div class="score-note" style="font-size:13px;color:var(--text)">
+        ${better ? '<b>So far the odds beat the base rate</b>' : '<b>So far the odds do not beat the base rate</b>'}
+        (accuracy score ${S.brier} vs ${S.brier_base ?? '—'} for "every stock has the same chance"; lower is better).
+        ${S.scored < 50 ? 'Fewer than 50 scored flags: an early read, not proof.' : ''}</div></div>`;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const D = window.SITUATIONS_DATA;
+    const ts = document.getElementById('data-bar-ts');
+    if (ts && D && D.updated) ts.textContent = typeof fmtDate === 'function' ? fmtDate(D.updated) : D.updated;
+    if (typeof buildTape === 'function' && D) buildTape(D.situations.map(s => STOCK[s.ticker]).filter(Boolean));
+    afBuildBar(document.getElementById('af-bar'), render);
+    render();
+    fetch('track-record.json').then(r => r.json()).then(t => renderScore(t.situations)).catch(() => renderScore(null));
+  });
+</script>
+
+<div class="drawer-overlay" id="drawer-overlay" onclick="if(event.target===this)closeDrawer()">
+  <div class="drawer left-rail"></div>
+</div>
+<script>
+function openDrawer()  { document.getElementById('drawer-overlay').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-overlay').classList.remove('open'); }
+</script>
+  <script src="nav.js"></script>
+</body>
+</html>

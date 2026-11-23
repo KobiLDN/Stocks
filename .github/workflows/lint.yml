@@ -27,7 +27,7 @@ jobs:
         run: |
           pip install -q pyyaml requests
           python universe.py
-          python -m unittest test_universe.py test_index_refresh.py test_group_prices.py test_group_signals.py
+          python -m unittest test_universe.py test_index_refresh.py test_group_prices.py test_group_signals.py test_situations.py
 
       - name: Generated pages are up to date (site/build.py)
         run: |

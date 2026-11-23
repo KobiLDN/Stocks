@@ -11,6 +11,7 @@ const _RAIL_TOP = [
   { key: 'hub',   label: 'Stock Hub',    icon: '⊞',  path: 'index.html' },
   { key: 'rss',   label: 'News Feed',    icon: '📰', path: 'news.html' },
   { key: 'track', label: 'Track Record', icon: '🏁', path: 'track-record.html' },
+  { key: 'situations', label: 'Situations', icon: '🧭', path: 'situations.html' },
   { key: 'all',   label: 'All Stocks',   icon: '🌐', path: 'All/index.html' },
 ];
 const _RAIL_SECTIONS = [
@@ -85,9 +86,10 @@ function buildNav() {
   const isHub = !inSection && file === 'index.html';
   const isRSS = !inSection && file === 'news.html';
   const isTrack = !inSection && (file === 'track-record.html' || file === 'track-record');
+  const isSituations = !inSection && (file === 'situations.html' || file === 'situations');
   const isGlossary = !inSection && (file === 'glossary.html' || file === 'glossary');
   const groupItem = group && _RAIL_ITEMS.find(p => p.group === group);
-  const activeKey = isHub ? 'hub' : isRSS ? 'rss' : isTrack ? 'track' : isGlossary ? 'glossary'
+  const activeKey = isHub ? 'hub' : isRSS ? 'rss' : isTrack ? 'track' : isSituations ? 'situations' : isGlossary ? 'glossary'
     : inAll ? ((_RAIL_ITEMS.find(p => p.allTheme && p.allTheme === new URLSearchParams(location.search).get('theme')) || {}).key || 'all')
     : groupItem ? groupItem.key : theme;
   const onSubPage = inSection && file !== 'index.html';

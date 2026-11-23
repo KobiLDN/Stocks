@@ -612,6 +612,31 @@ class PoundsLocalAndReview(unittest.TestCase):
         self.assertEqual(ahead["run_review"]["runs"][0]["status"], "ahead of random")
 
 
+class Situations(unittest.TestCase):
+    """generate_situations.py flags, scored 30 days on against the base rate."""
+    def test_scored_against_base_rate(self):
+        def bars_for(step, price=100.0):
+            return [{"date": d, "open": o, "close": c, "currency": "USD"} for d, o, c in _days("2026-01-01", 300, price, step)]
+        assets = {"JUMP": {"asset_id": "JUMP", "yahoo": "JUMP", "exchange": "NYSE", "name": "J"},
+                  "FLAT": {"asset_id": "FLAT", "yahoo": "FLAT", "exchange": "NYSE", "name": "F"},
+                  "SPY": {"asset_id": "SPY", "yahoo": "SPY", "exchange": "Index", "name": "SPY", "kind": "benchmark"}}
+        bars_ = {"JUMP": bars_for(2.0), "FLAT": bars_for(0.01), "SPY": bars_for(0.1)}
+        flags = [{"id": "JUMP:takeover", "date": "2026-05-01", "ticker": "JUMP", "p_big": 0.9, "lean": "up"},
+                 {"id": "FLAT:legal", "date": "2026-05-01", "ticker": "FLAT", "p_big": 0.6, "lean": "down"},
+                 {"id": "JUMP:results", "date": "2026-08-25", "ticker": "JUMP", "p_big": 0.5, "lean": "either way"}]
+        out = tr.build(assets, {}, [], bars_, {}, {}, set(), {}, now=_dt.datetime(2026, 9, 1, tzinfo=UTC),
+                       situation_flags=flags)["situations"]
+        self.assertEqual((out["scored"], out["pending"]), (2, 1))       # the August flag's month isn't over
+        self.assertEqual(out["actual_big"], 50.0)                        # JUMP moved 10%+, FLAT didn't
+        self.assertEqual(out["predicted_big"], 75.0)
+        self.assertEqual(out["base_rate"], 50.0)                         # of the two stocks, one moved that much
+        self.assertEqual(out["direction"], {"n": 2, "right": 50.0})      # up was right, down was wrong (FLAT rose a bit)
+        self.assertAlmostEqual(out["brier"], ((0.9 - 1) ** 2 + (0.6 - 0) ** 2) / 2, places=4)
+        self.assertEqual(out["first_due"], "2026-05-31")
+        empty = tr.build(assets, {}, [], bars_, {}, {}, set(), {}, now=_dt.datetime(2026, 9, 1, tzinfo=UTC))["situations"]
+        self.assertEqual((empty["flags"], empty["scored"]), (0, 0))
+
+
 class PastShadowRuns(unittest.TestCase):
     """#92 ended (22 Nov 2026): the shadow picks already stored stay in D1 but are never counted."""
     def test_past_shadow_picks_kept_out(self):
