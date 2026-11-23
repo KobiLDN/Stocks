@@ -126,8 +126,9 @@ Stocks/
 
 ### Market and sector groups (#88)
 
-**`groups_config.py`** is the one definition of the 14 groups, shared by the price bot and the page builder so they can't disagree:
+**`groups_config.py`** is the one definition of the 15 groups, shared by the price bot and the page builder so they can't disagree:
 - **Groups and paths:** markets `sp500`, `nasdaq100`, `ftse100` live in `markets/<id>/`; the 11 sectors in `sectors/<slug>/` (e.g. `sectors/health-care/`).
+- **Europe (#110, phase 2):** one group `europe` at `markets/europe/` holds the members of four indexes: `universe.EUROPE_MARKETS` = `eurostoxx50`, `dax`, `cac40`, `smi` (each stock keeps its own index tags in `markets`). Its Dashboard and Metrics have an **Index** filter (template option `index_filter`, Europe only). Its Signals page is *derived* (the sector runs' European picks, like S&P 500 / Nasdaq-100); there is **no Europe AI run** until the run review shows the runs are worth it. The four index ids are in `universe.MARKETS` but not in `MARKETS_ORDER`, so they get no page sets of their own. Exchanges `XETRA`, `EURONEXT`, `MIL`, `BME`, `HEL`, `SIX` (suffix → exchange and T212 letter in `universe_classify.EU_EXCHANGES`; trading hours in `history/track_record.SESSIONS`); currencies EUR and CHF. Both listings are kept when a company also trades in the US (ASML and ASML.AS).
 - **One entry per listing:** RR. and RR.L are one share, so a group keeps RR.L.
 - **Categories:** the sector on market pages. On sector pages, the industry: Health Care uses its 4 groups; the others show the 7 commonest industries (9 above 80 stocks) and put the rest under "Other". ICB/Yahoo industry names are mapped to the GICS ones first (`INDUSTRY_ALIASES`).
 - **Colours, and the TradingView symbol** for the charts page.
@@ -142,7 +143,7 @@ Stocks/
 
 **Signal runs for the groups (#88 PR 8):** `generate_group_signals.py` runs one AI call per sector (11) and for the FTSE 100, 4 at a time, in `generate-signals.yml` after the theme runs (Mon/Wed/Fri). Same model, pick format, variant tags and momentum notes as the theme runs; the prompt is built from the group's name, categories and a one-line "what matters" (`GROUP_FACTORS`). Output: `<group path>/signals-local.json` + `.js`. The **S&P 500 and Nasdaq-100 have no run of their own** (revised plan, point 1): their Signals pages show the sector runs' picks that are members, ordered by confidence, each tagged with its sector and rank (`"derived": true`). `history.snapshot signals` records the group runs with their stock lists and skips derived files. A branch run of the workflow commits to its own branch, never to `main`.
 
-**Menu:** `nav.js` lists Markets (S&P 500, Nasdaq-100, FTSE 100, Crypto), Sectors (11) and Themes (AI, Biotech, Defence, Energy, Mega-Cap, Tech; Biotech, Energy, Mega-Cap and Tech open the All pages with that theme filter, keeping the page type), with section headings (`.rail-section` in `shared.css`). Add a group to `_RAIL_SECTIONS` there.
+**Menu:** `nav.js` lists Markets (S&P 500, Nasdaq-100, FTSE 100, Europe, Crypto), Sectors (11) and Themes (AI, Biotech, Defence, Energy, Mega-Cap, Tech; Biotech, Energy, Mega-Cap and Tech open the All pages with that theme filter, keeping the page type), with section headings (`.rail-section` in `shared.css`). Add a group to `_RAIL_SECTIONS` there.
 
 - **Prices:** batched 1-year daily downloads (100 symbols a call). A stock missing from a batch, or a day behind its own exchange, is fetched again on its own; a bar with no close takes the live quote's price.
 - **Currency:** converted to GBP/USD with the day's FX; GBp, EUR, JPY and SAR (pegged to USD) are handled.
