@@ -2,9 +2,21 @@
 
 ## Backlog
 
-- Open ideas live in GitHub issues (#40 influencer tweets, #44 stock calendar).
+**Waiting on data (nothing to build until then):**
+- **~23 Dec 2026: first Situations scores.** Flags are scored 30 days after they are first made (`situations` block in `track-record.json`). Check whether the AI's chance of a 10%+ move was too confident (it often says 80–100%); if so, consider telling it so in the prompt.
+- **1 Jan 2027: first quarterly run review** (Track Record → Run review). Owner decides what to do about flagged runs (as of 23 Nov: AI and Crypto behind random, Defence mixed). The 12 group runs (11 sectors + FTSE 100) get their first 1-month results around 23 Dec; until then only the 1-week early read.
+- **Europe AI run (#110):** only if the review shows the runs add value.
+- **Phase 3 markets** (Nikkei 225, Hang Seng, TSX 60, ASX 50, KOSPI 50, Nifty 50, Tadawul; #88): pages any time, AI runs only if the review says so. Check first: how many of those stocks Trading 212 offers, and page speed (S&P 500 Metrics is already 1.4–1.5 s of the 2 s phone limit).
+
+**Other ideas:** GitHub issues #40 (influencer tweets), #44 (stock calendar).
 
 ## Done
+
+- **Europe (#110, phase 2)** — 117 Euro Stoxx 50 / DAX / CAC 40 / SMI stocks in the master list, sector pages, sector runs and export; one Europe page set with an index filter; track record vs Euro Stoxx 50 / SMI and in £
+
+- **Situations page** — unresolved events with the AI's odds of each outcome, after every price run; every first flag scored after 30 days against the base rate; watched by `/health`
+
+- **Run review 1-week early read** — new runs show AI vs random at 1 week from their first week (never sets the status)
 
 - **Track record in pounds, UK picks vs the FTSE 100, run review (#88 phase 1, PR 10)** — every window also in £; London picks vs ISF; each run vs random from its own list, flagged for the quarterly review
 
