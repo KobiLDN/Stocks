@@ -97,5 +97,16 @@
 "p_up": 0.7,
 "expected_move": 3.5,
 "lean": "up"
+},
+{
+"id": "NRG:regulatory",
+"date": "2026-11-23",
+"ticker": "NRG",
+"type": "regulatory",
+"price_usd": 94.1,
+"p_big": 0.25,
+"p_up": 0.75,
+"expected_move": 0.2,
+"lean": "up"
 }
 ]
