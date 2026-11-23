@@ -1,13 +1,13 @@
 {
- "updated": "2026-11-23 15:36",
+ "updated": "2026-11-23 19:19",
  "fx": {
-  "USD": 1.3043080568313599,
-  "EUR": 1.194700002670288,
-  "JPY": 207.9029998779297,
+  "USD": 1.3030674457550049,
+  "EUR": 1.1952999830245972,
+  "JPY": 207.24400329589844,
   "CHF": 1.104490041732788,
-  "CAD": 1.8733799457550049,
-  "AUD": 1.9652999639511108,
-  "HKD": 10.230999946594238
+  "CAD": 1.876829981803894,
+  "AUD": 1.9655200242996216,
+  "HKD": 10.217000007629395
  },
  "groups": {
   "sp500": {
@@ -35,83 +35,83 @@
    "name": "Communication Services",
    "kind": "sector",
    "path": "sectors/communication-services",
-   "stocks": 30,
-   "members": 30
+   "stocks": 34,
+   "members": 34
   },
   "consumer-discretionary": {
    "name": "Consumer Discretionary",
    "kind": "sector",
    "path": "sectors/consumer-discretionary",
-   "stocks": 63,
-   "members": 63
+   "stocks": 81,
+   "members": 81
   },
   "consumer-staples": {
    "name": "Consumer Staples",
    "kind": "sector",
    "path": "sectors/consumer-staples",
-   "stocks": 45,
-   "members": 45
+   "stocks": 54,
+   "members": 54
   },
   "energy": {
    "name": "Energy",
    "kind": "sector",
    "path": "sectors/energy",
-   "stocks": 32,
-   "members": 32
+   "stocks": 34,
+   "members": 34
   },
   "financials": {
    "name": "Financials",
    "kind": "sector",
    "path": "sectors/financials",
-   "stocks": 102,
-   "members": 102
+   "stocks": 125,
+   "members": 125
   },
   "health-care": {
    "name": "Health Care",
    "kind": "sector",
    "path": "sectors/health-care",
-   "stocks": 83,
-   "members": 83
+   "stocks": 99,
+   "members": 99
   },
   "industrials": {
    "name": "Industrials",
    "kind": "sector",
    "path": "sectors/industrials",
-   "stocks": 116,
-   "members": 116
+   "stocks": 136,
+   "members": 136
   },
   "materials": {
    "name": "Materials",
    "kind": "sector",
    "path": "sectors/materials",
-   "stocks": 32,
-   "members": 32
+   "stocks": 42,
+   "members": 42
   },
   "real-estate": {
    "name": "Real Estate",
    "kind": "sector",
    "path": "sectors/real-estate",
-   "stocks": 35,
-   "members": 35
+   "stocks": 37,
+   "members": 37
   },
   "technology": {
    "name": "Technology",
    "kind": "sector",
    "path": "sectors/technology",
-   "stocks": 108,
-   "members": 108
+   "stocks": 116,
+   "members": 116
   },
   "utilities": {
    "name": "Utilities",
    "kind": "sector",
    "path": "sectors/utilities",
-   "stocks": 42,
-   "members": 42
+   "stocks": 47,
+   "members": 47
   }
  },
  "missing": [],
  "all": {
   "path": "All/all-data.js",
-  "stocks": 688
+  "stocks": 805
  }
 }
