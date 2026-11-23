@@ -38,6 +38,7 @@
   .chip.type { color: var(--accent); border-color: var(--accent); }
   .sit-title { font-weight: 700; font-size: 15px; line-height: 1.35; }
   .sit-summary { font-size: 13px; line-height: 1.5; color: var(--text); }
+  .sit-source { font-size: 12px; color: var(--muted); font-style: italic; }
   .outcomes { display: flex; flex-direction: column; gap: 5px; }
   .oc { display: grid; grid-template-columns: 1fr 44px 58px; gap: 8px; align-items: center; font-size: 12px; }
   .oc-label { position: relative; padding: 3px 6px; overflow: hidden; }
@@ -131,6 +132,7 @@
       </div>
       <div class="sit-title">${esc(s.title)}</div>
       <div class="sit-summary">${esc(s.summary)}</div>
+      ${s.source ? `<div class="sit-source">Based on: “${esc(s.source)}”</div>` : ''}
       <div class="outcomes">
         <div class="oc dim mono" style="font-size:10px;letter-spacing:1px"><div>IF THIS HAPPENS</div><div class="oc-p">CHANCE</div><div class="oc-m">PRICE, 1M</div></div>
         ${oc}

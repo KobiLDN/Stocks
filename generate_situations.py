@@ -116,6 +116,7 @@ Reply with ONLY this JSON:
 {{"situations": [{{"ticker": "...", "type": "one of the types", "title": "under 80 characters",
   "summary": "under 240 characters: what is unresolved and why it matters",
   "key_date": "YYYY-MM-DD or null (when it should be decided, if known)",
+  "source": "the headline above that this is based on, copied exactly",
   "outcomes": [{{"label": "under 60 characters", "probability": 0.0, "move_pct": 0.0}}]}}]}}
 An empty list is a fine answer."""
 
@@ -132,8 +133,10 @@ def user_prompt(batch, stocks, news_by_ticker, now):
     return "\n".join(lines)
 
 
-def clean(obj, allowed):
-    """AI reply -> valid situations. Bad ones are dropped one by one, never the whole reply."""
+def clean(obj, allowed, headlines=None):
+    """AI reply -> valid situations. Bad ones are dropped one by one, never the whole reply.
+    headlines: {ticker: [titles given]}; `source` is kept only if it is one of them (the card quotes it)."""
+    headlines = headlines or {}
     out = []
     for s in (obj or {}).get("situations") or []:
         if not isinstance(s, dict) or s.get("ticker") not in allowed:
@@ -154,7 +157,10 @@ def clean(obj, allowed):
         kd = s.get("key_date")
         kd = kd if isinstance(kd, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", kd) else None
         typ = s.get("type") if s.get("type") in TYPES else "other"
-        out.append({"ticker": s["ticker"], "type": typ, "title": str(s.get("title") or "").strip()[:100],
+        src = str(s.get("source") or "").strip()
+        given = headlines.get(s["ticker"]) or []
+        src = next((h for h in given if src and (h == src or h.lower().startswith(src.lower()[:40]))), None)
+        out.append({"ticker": s["ticker"], "type": typ, "source": src, "title": str(s.get("title") or "").strip()[:100],
                     "summary": str(s.get("summary") or "").strip()[:300], "key_date": kd,
                     "outcomes": sorted(outs, key=lambda o: -o["probability"]), **odds(outs)})
     return out
@@ -177,7 +183,8 @@ def ask(batch, stocks, news_by_ticker, now, call):
     except json.JSONDecodeError:
         print(f"  batch {batch[0]}..: reply was not JSON, skipped")
         return []
-    return clean(obj, set(batch))
+    given = {t: [n["title"] for n in recent(news_by_ticker.get(t), now)] for t in batch}
+    return clean(obj, set(batch), given)
 
 
 # ── state ─────────────────────────────────────────────────────────────────────

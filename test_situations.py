@@ -63,6 +63,15 @@ class Cleaning(unittest.TestCase):
         self.assertEqual(nv["lean"], "up")
         self.assertAlmostEqual(nv["expected_move"], 0.5 * 25 - 0.3 * 10 + 0.2 * 2, places=1)
 
+    def test_source_must_be_a_given_headline(self):
+        base = {"type": "takeover", "outcomes": [{"label": "a", "probability": .5, "move_pct": 10}, {"label": "b", "probability": .5, "move_pct": -5}]}
+        reply = {"situations": [{**base, "ticker": "GPN", "source": "GTCR considers potential takeover of Global Payments"},
+                                {**base, "ticker": "CRWD", "source": "A headline nobody gave it"}]}
+        got = {s["ticker"]: s for s in gs.clean(reply, {"GPN", "CRWD"},
+                                                 {"GPN": ["GTCR considers potential takeover of Global Payments"], "CRWD": ["x"]})}
+        self.assertEqual(got["GPN"]["source"], "GTCR considers potential takeover of Global Payments")
+        self.assertIsNone(got["CRWD"]["source"])          # not quoted: the card shows no source line
+
     def test_lean(self):
         self.assertEqual(gs.odds([{"probability": 0.5, "move_pct": 20}, {"probability": 0.5, "move_pct": -20}])["lean"], "either way")
         self.assertEqual(gs.odds([{"probability": 0.3, "move_pct": 20}, {"probability": 0.7, "move_pct": -5}])["lean"], "down")
