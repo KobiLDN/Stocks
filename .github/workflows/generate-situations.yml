@@ -8,8 +8,6 @@ on:
     workflows: ["Update Prices"]
     types: [completed]
   workflow_dispatch:
-  push:                                   # TEMPORARY: branch test run, removed before merge
-    branches: [feat/situations]
 
 permissions:
   contents: write
@@ -22,7 +20,7 @@ concurrency:
 jobs:
   generate:
     # workflow_run fires for price runs on any branch; only main's results feed the live page
-    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.conclusion == 'success')
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
