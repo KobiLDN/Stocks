@@ -267,7 +267,7 @@ function renderFindings() {
   const ftse = ((S.vs_local || {})['vs FTSE 100'] || {})[h];
   if (ok(ftse)) out.push(`<b>London-listed picks</b> did ${pct(ftse.excess)} against the FTSE 100 over ${hl}.`);
   const flagged = ((TR.run_review || {}).runs || []).filter(r => r.active && r.status === 'behind random');
-  if (flagged.length) out.push(`<b>Run review:</b> ${flagged.map(r => esc(SECTOR_LABEL[r.run] || r.run)).join(', ')} ${flagged.length > 1 ? 'have' : 'has'} picked worse than random from ${flagged.length > 1 ? 'their' : 'its'} own list on a typical run date, flagged for review on ${ukDate(TR.run_review.next_review)}.`);
+  if (flagged.length) out.push(`<b>Run review:</b> ${flagged.map(r => esc(SECTOR_LABEL[r.run] || r.run)).join(', ')} ${flagged.length > 1 ? 'have' : 'has'} picked worse than random from ${flagged.length > 1 ? 'their' : 'its'} own list, on average and on most run dates: flagged for review on ${ukDate(TR.run_review.next_review)}.`);
 
   const list = document.getElementById('findings-list');
   list.innerHTML = out.map(t => `<li>${t}</li>`).join('');
@@ -320,7 +320,7 @@ function renderBreakdown() {
 }
 
 /* ── Run review (#88): each run vs picking at random from its own list ─── */
-const REVIEW_LABEL = { 'behind random': 'Behind random: review', 'ahead of random': 'Ahead of random', 'too few dates': 'Too early to judge' };
+const REVIEW_LABEL = { 'behind random': 'Behind random: review', 'ahead of random': 'Ahead of random', mixed: 'Mixed', 'too few dates': 'Too early to judge' };
 function renderReview() {
   const R = TR.run_review, el = document.getElementById('run-review');
   if (!R || !R.runs || !R.runs.length) { el.innerHTML = '<div class="empty-state">No finished 1-month results yet.</div>'; return; }
@@ -330,16 +330,17 @@ function renderReview() {
   const body = R.runs.map(r => `<tr class="${r.status === 'too few dates' ? 'small' : ''}">
       <td>${esc(SECTOR_LABEL[r.run] || r.run)}${r.active ? '' : ' <span class="dim">(retired)</span>'}</td>
       <td>${r.dates}</td>
-      <td class="${cls(r.ai_median)}">${pct(r.ai_median)}</td>
-      <td class="${cls(r.random_median)}">${pct(r.random_median)}</td>
-      <td class="${cls(r.diff_median)}"><b>${pct(r.diff_median)}</b></td>
+      <td class="${cls(r.ai_avg)}">${pct(r.ai_avg)}</td>
+      <td class="${cls(r.random_avg)}">${pct(r.random_avg)}</td>
+      <td class="${cls(r.diff_avg)}"><b>${pct(r.diff_avg)}</b></td>
       <td>${r.dates_behind} of ${r.dates}</td>
       <td class="${r.status === 'behind random' ? 'neg' : r.status === 'ahead of random' ? 'pos' : 'dim'}">${REVIEW_LABEL[r.status] || r.status}</td>
     </tr>`).join('');
   el.innerHTML = `<div class="bd-title">Each signal run vs picking at random from its own list (1 month, vs S&amp;P 500)</div>
-    <table class="tr-table"><thead><tr><th>Run</th><th>Run dates</th><th>AI picks</th><th>Random</th><th>AI minus random</th><th>Dates behind</th><th>Status</th></tr></thead>
+    <table class="tr-table"><thead><tr><th>Run</th><th>Run dates</th><th>AI picks (avg)</th><th>Random (avg)</th><th>AI minus random</th><th>Dates behind</th><th>Status</th></tr></thead>
     <tbody>${body}</tbody></table>
-    <div class="dim" style="font-size:12px;padding:10px 14px">Typical (median) run date. A run is judged once it has ${R.min_dates} run dates with a finished 1-month result.
+    <div class="dim" style="font-size:12px;padding:10px 14px">Averages over run dates. A run is judged once it has ${R.min_dates} run dates with a finished 1-month result:
+    behind (or ahead) when its average and most of its run dates agree, mixed when they don't.
     Flags are for the owner's quarterly review; no run is paused automatically.</div>`;
 }
 

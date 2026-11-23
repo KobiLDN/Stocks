@@ -570,6 +570,16 @@ class PoundsLocalAndReview(unittest.TestCase):
         members = {"T": ["UP", "FLAT", "LON"]}
         return assets, runs, signals, bars_, members
 
+    def test_mixed_when_average_and_dates_disagree(self):
+        days = {f"R:2026-0{1 + k // 28}-{1 + k % 28:02d}T07:00:00Z": None for k in range(12)}
+        runs = {rid: {"sector": "R", "generated_utc": rid[2:], "provenance": "live"} for rid in days}
+        ai, rnd = {}, {}
+        for k, rid in enumerate(days):        # 8 dates slightly behind, 4 far ahead: average ahead, most dates behind
+            ai[rid], rnd[rid] = ([0.0], [0.01]) if k < 8 else ([0.20], [0.0])
+        r = tr.run_review(runs, ai, rnd, _dt.datetime(2026, 3, 1, tzinfo=UTC))["runs"][0]
+        self.assertEqual((r["status"], r["dates_behind"]), ("mixed", 8))
+        self.assertGreater(r["diff_avg"], 0)
+
     def test_gbp_and_local_summaries(self):
         assets, runs, signals, bars_, members = self._world(behind=False)
         out = tr.build(assets, runs, signals, bars_, {}, {}, set(), members, now=_dt.datetime(2026, 9, 1, tzinfo=UTC))
@@ -587,7 +597,12 @@ class PoundsLocalAndReview(unittest.TestCase):
         t = next(r for r in rv["runs"] if r["run"] == "T")
         self.assertEqual(t["dates"], 12)
         self.assertEqual(t["status"], "behind random")             # FLAT + LON vs the whole list incl. UP
-        self.assertLess(t["diff_median"], 0)
+        self.assertLess(t["diff_avg"], 0)
+        self.assertAlmostEqual(t["diff_avg"], round(t["ai_avg"] - t["random_avg"], 2), places=1)   # adds up
+        self.assertTrue(t["active"])
+        with mock.patch.object(tr, "retired_runs", lambda: {"T"}):
+            gone = tr.build(assets, runs, signals, bars_, {}, {}, set(), members, now=_dt.datetime(2026, 9, 1, tzinfo=UTC))
+        self.assertFalse(gone["run_review"]["runs"][0]["active"])
         self.assertEqual(rv["next_review"], "2026-10-01")
         few = {k: v for k, v in list(runs.items())[:5]}
         rv = tr.build(assets, few, [x for x in signals if x["signal_run_id"] in few], bars_, {}, {}, set(), members,
