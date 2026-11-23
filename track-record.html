@@ -331,17 +331,19 @@ function renderReview() {
   const body = R.runs.map(r => `<tr class="${r.status === 'too few dates' ? 'small' : ''}">
       <td>${esc(SECTOR_LABEL[r.run] || r.run)}${r.active ? '' : ' <span class="dim">(retired)</span>'}</td>
       <td>${r.dates}</td>
-      <td class="${cls(r.ai_avg)}">${pct(r.ai_avg)}</td>
-      <td class="${cls(r.random_avg)}">${pct(r.random_avg)}</td>
-      <td class="${cls(r.diff_avg)}"><b>${pct(r.diff_avg)}</b></td>
+      <td class="${cls(r.ai_avg)}">${r.ai_avg == null ? '—' : pct(r.ai_avg)}</td>
+      <td class="${cls(r.random_avg)}">${r.random_avg == null ? '—' : pct(r.random_avg)}</td>
+      <td class="${cls(r.diff_avg)}"><b>${r.diff_avg == null ? '—' : pct(r.diff_avg)}</b></td>
       <td>${r.dates_behind} of ${r.dates}</td>
+      <td class="dim" title="Average of the AI picks minus random at 1 week, over ${r.early_1w ? r.early_1w.dates : 0} run dates. An early, weak read: one week is mostly noise.">${r.early_1w ? `<span class="${cls(r.early_1w.diff_avg)}">${pct(r.early_1w.diff_avg)}</span> <span class="dim">(${r.early_1w.dates})</span>` : '—'}</td>
       <td class="${r.status === 'behind random' ? 'neg' : r.status === 'ahead of random' ? 'pos' : 'dim'}">${REVIEW_LABEL[r.status] || r.status}</td>
     </tr>`).join('');
   el.innerHTML = `<div class="bd-title">Each signal run vs picking at random from its own list (1 month, vs S&amp;P 500)</div>
-    <table class="tr-table"><thead><tr><th>Run</th><th>Run dates</th><th>AI picks (avg)</th><th>Random (avg)</th><th>AI minus random</th><th>Dates behind</th><th>Status</th></tr></thead>
+    <table class="tr-table"><thead><tr><th>Run</th><th>Run dates</th><th>AI picks (avg)</th><th>Random (avg)</th><th>AI minus random</th><th>Dates behind</th><th title="AI minus random after 1 week, and over how many run dates">1 week (early read)</th><th>Status</th></tr></thead>
     <tbody>${body}</tbody></table>
     <div class="dim" style="font-size:12px;padding:10px 14px">Averages over run dates. A run is judged once it has ${R.min_dates} run dates with a finished 1-month result:
     behind (or ahead) when its average and most of its run dates agree, mixed when they don't.
+    The 1-week column is an early read for new runs: one week is mostly noise, so it never sets the status.
     Flags are for the owner's quarterly review; no run is paused automatically.</div>`;
 }
 

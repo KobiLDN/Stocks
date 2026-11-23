@@ -56,3 +56,12 @@ test('export: 21:30 London; Saturday still expects Friday night', () => {
   // summer: 21:30 London = 20:30 UTC
   assert.equal(lastDueSlot(STREAMS.export, Z('2026-07-01T21:20:00Z')), Z('2026-07-01T20:30:00Z'));
 });
+
+test('situations: after each price run, 75 min grace; stale when it missed one', () => {
+  const now = Z('2026-11-24T09:00:00Z');                       // Tue 09:00 London: 07:30 slot + 75 min has passed
+  assert.equal(lastDueSlot(STREAMS.situations, now), Z('2026-11-24T07:30:00Z'));
+  const fresh = evaluate(now, { situations: Z('2026-11-24T07:48:00Z') }, { situations: STREAMS.situations });
+  const stale = evaluate(now, { situations: Z('2026-11-23T20:40:00Z') }, { situations: STREAMS.situations });
+  assert.equal(fresh.streams.situations.stale, false);
+  assert.equal(stale.streams.situations.stale, true);
+});

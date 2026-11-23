@@ -12,6 +12,8 @@ export const STREAMS = {
   news:    { label: 'News feed',            tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['08:35', '15:35', '20:35'], graceMin: 45 },
   signals: { label: 'AI signals',           tz: 'Europe/London', days: [1, 3, 5],       times: ['08:00'],                   graceMin: 60 },
   export:  { label: 'Daily export',         tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['21:30'],                   graceMin: 45 },
+  // generate-situations.yml runs after each price run (workflow_run): price slot + its own few minutes
+  situations: { label: 'Situations',        tz: 'Europe/London', days: [1, 2, 3, 4, 5], times: ['07:30', '15:30', '20:30'], graceMin: 75 },
 };
 
 function tzParts(ms, tz) {

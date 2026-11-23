@@ -24,13 +24,14 @@ export async function onRequestGet({ request, env }) {
     return ms.some(v => v === null) ? null : Math.min(...ms);
   };
 
-  const [prices, signals, market, news, manifest] = await Promise.all([
+  const [prices, signals, market, news, manifest, situations] = await Promise.all([
     // the theme groups' price files, plus the market + sector groups' (#88: groups/status.json)
     Promise.all([...SECTORS.map(s => `/${s}/prices.json`), '/groups/status.json'].map(getJson)),
     Promise.all([...THEME_SIGNALS, ...GROUP_SIGNALS].map(s => getJson(`/${s}/signals-local.json`))),
     getJson('/market.json'),
     getJson('/News/news-feed.json'),
     getJson('/exports/manifest.json'),
+    getJson('/situations/situations.json'),
   ]);
 
   const result = evaluate(Date.now(), {
@@ -39,6 +40,7 @@ export async function onRequestGet({ request, env }) {
     market:  parseAsOf(market && market.updated),
     news:    parseAsOf(news && news.generated_utc),
     export:  parseAsOf(manifest && manifest.snapshots && manifest.snapshots[0] && manifest.snapshots[0].generated),
+    situations: parseAsOf(situations && situations.updated),
   });
 
   return new Response(JSON.stringify(result, null, 2), {

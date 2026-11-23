@@ -598,6 +598,8 @@ class PoundsLocalAndReview(unittest.TestCase):
         self.assertEqual(t["dates"], 12)
         self.assertEqual(t["status"], "behind random")             # FLAT + LON vs the whole list incl. UP
         self.assertLess(t["diff_avg"], 0)
+        self.assertEqual(t["early_1w"]["dates"], 12)              # 1-week early read alongside
+        self.assertAlmostEqual(t["early_1w"]["diff_avg"], round(t["early_1w"]["ai_avg"] - t["early_1w"]["random_avg"], 2), places=1)
         self.assertAlmostEqual(t["diff_avg"], round(t["ai_avg"] - t["random_avg"], 2), places=1)   # adds up
         self.assertTrue(t["active"])
         with mock.patch.object(tr, "retired_runs", lambda: {"T"}):

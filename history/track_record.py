@@ -290,6 +290,7 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
     fx = {pair: series_for(bench_yahoo[pair], "Index") for pair in {p for p, _ in FX.values()}}
     local = {ex: (series_for(bench_yahoo[aid], bex), k_local, k_spy) for ex, (aid, bex, k_local, k_spy) in LOCAL_BENCH.items()}
     ai_1m, random_1m = {}, {}      # run id -> 1-month excesses vs SPY (AI buy picks; every stock in its list)
+    ai_1w, random_1w = {}, {}      # the same at 1 week: the early read for new runs
 
     rows, groups = [], {}
     def add(group, key, horizon, pair):
@@ -328,8 +329,10 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                         if b is not None:
                             add("vs_local", k_local, name, (r, b))
                             add("vs_local", k_spy, name, (r, sp))
-                if s["kind"] == "ai" and isinstance(res.get("1m"), tuple) and run.get("provenance") == "live":
-                    ai_1m.setdefault(s["signal_run_id"], []).append(res["1m"][0] - res["1m"][1])
+                if s["kind"] == "ai" and run.get("provenance") == "live":
+                    for h, store in (("1m", ai_1m), ("1w", ai_1w)):
+                        if isinstance(res.get(h), tuple):
+                            store.setdefault(s["signal_run_id"], []).append(res[h][0] - res[h][1])
         cells = []
         for name, _ in HORIZONS:
             v = res.get(name)
@@ -390,8 +393,9 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                 continue
             _entry, res, _note = measure(generated, ser, spy, now)
             scored.append((momentum_score(ser, generated), res))
-            if isinstance(res.get("1m"), tuple):
-                random_1m.setdefault(rid, []).append(res["1m"][0] - res["1m"][1])
+            for h, store in (("1m", random_1m), ("1w", random_1w)):
+                if isinstance(res.get(h), tuple):
+                    store.setdefault(rid, []).append(res[h][0] - res[h][1])
             for name, _ in HORIZONS:
                 if isinstance(res.get(name), tuple):
                     add("baselines", "random", name, res[name])
@@ -402,7 +406,7 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
                     add("baselines", "momentum_rule", name, res[name])
 
     summary = {g: {k: {h: summarise(v) for h, v in hs.items()} for k, hs in keys.items()} for g, keys in groups.items()}
-    review = run_review(runs, ai_1m, random_1m, now, retired_runs())
+    review = run_review(runs, ai_1m, random_1m, now, retired_runs(), early=(ai_1w, random_1w))
     situations = score_situations(situation_flags or [], assets, series_for, now)
     names = {aid: a["name"] for aid, a in assets.items()}
     return {
@@ -546,27 +550,45 @@ def next_quarter(now):
     return dt.date(y, m, 1).isoformat()
 
 
-def run_review(runs, ai_1m, random_1m, now, retired=()):
-    """Per signal run (sector / group / theme): on each run date, the AI picks' mean 1-month excess and every
-    stock in its list's mean. Judged once REVIEW_MIN_DATES dates are finished. Averages over dates, so
-    AI minus random adds up; 'behind' needs the average AND most dates behind, 'ahead' both ahead."""
+def per_date(runs, ai, rnd):
+    """{run: {run date: [(AI mean excess, list mean excess) per run that day]}}."""
     per = {}
-    for rid, ai in ai_1m.items():
-        rnd = random_1m.get(rid)
-        if not ai or not rnd:
+    for rid, xs in ai.items():
+        ys = rnd.get(rid)
+        if not xs or not ys:
             continue
         run = runs[rid]
         per.setdefault(run["sector"], {}).setdefault(run["generated_utc"][:10], []).append(
-            (statistics.fmean(ai), statistics.fmean(rnd)))
+            (statistics.fmean(xs), statistics.fmean(ys)))
+    return per
+
+
+def run_review(runs, ai_1m, random_1m, now, retired=(), early=None):
+    """Per signal run (sector / group / theme): on each run date, the AI picks' mean 1-month excess and every
+    stock in its list's mean. Judged once REVIEW_MIN_DATES dates are finished. Averages over dates, so
+    AI minus random adds up; 'behind' needs the average AND most dates behind, 'ahead' both ahead."""
+    per = per_date(runs, ai_1m, random_1m)
+    week = per_date(runs, *early) if early else {}
     last_run = {}
     for r in runs.values():
         if r.get("provenance") == "live" and not is_shadow(r):
             last_run[r["sector"]] = max(last_run.get(r["sector"], ""), r["generated_utc"])
     pct = lambda x: round(x * 100, 2)
     out = []
-    for sector, days in per.items():
+    for sector in sorted(set(per) | set(week)):
+        days = per.get(sector, {})
         rows = [(statistics.fmean(a for a, _ in v), statistics.fmean(b for _, b in v)) for v in days.values()]
+        wk = [(statistics.fmean(a for a, _ in v), statistics.fmean(b for _, b in v)) for v in week.get(sector, {}).values()]
+        early_read = ({"dates": len(wk), "ai_avg": pct(statistics.fmean(a for a, _ in wk)),
+                       "random_avg": pct(statistics.fmean(b for _, b in wk)),
+                       "diff_avg": pct(statistics.fmean(a - b for a, b in wk)),
+                       "dates_behind": sum(a < b for a, b in wk)} if wk else None)
         n = len(rows)
+        if not rows:                               # new run: only the early read so far
+            out.append({"run": sector, "dates": 0, "ai_avg": None, "random_avg": None, "diff_avg": None,
+                        "dates_behind": 0, "status": "too few dates", "active": sector not in retired,
+                        "last_run": last_run.get(sector, "")[:10], "early_1w": early_read})
+            continue
         ai_avg, rnd_avg = statistics.fmean(a for a, _ in rows), statistics.fmean(b for _, b in rows)
         behind = sum(a < b for a, b in rows)
         if n < REVIEW_MIN_DATES:
@@ -579,7 +601,8 @@ def run_review(runs, ai_1m, random_1m, now, retired=()):
             status = "mixed"
         out.append({"run": sector, "dates": n, "ai_avg": pct(ai_avg), "random_avg": pct(rnd_avg),
                     "diff_avg": pct(ai_avg - rnd_avg), "dates_behind": behind, "status": status,
-                    "active": sector not in retired, "last_run": last_run.get(sector, "")[:10]})
+                    "active": sector not in retired, "last_run": last_run.get(sector, "")[:10],
+                    "early_1w": early_read})
     order = {"behind random": 0, "mixed": 1, "ahead of random": 2, "too few dates": 3}
     out.sort(key=lambda x: (not x["active"], order[x["status"]], x["run"]))
     return {"horizon": "1m", "min_dates": REVIEW_MIN_DATES, "next_review": next_quarter(now), "runs": out}
