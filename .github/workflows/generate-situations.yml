@@ -1,0 +1,59 @@
+name: Generate Situations
+
+# Stocks with an unresolved event that could move the price a lot, with the AI's odds
+# (generate_situations.py -> situations/, read by situations.html). Runs after every price update
+# on main (07:30, 15:30, 20:30 London), so news shows up within the hour.
+on:
+  workflow_run:
+    workflows: ["Update Prices"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # main shares the bots' push lock; a branch run (it commits to its own branch) must not hold it up
+  group: ${{ github.ref == 'refs/heads/main' && 'push-to-main' || format('situations-{0}', github.ref) }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    # workflow_run fires for price runs on any branch; only main's results feed the live page
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Find situations
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          pip install -q requests pyyaml tzdata
+          python generate_situations.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          TARGET="${{ github.ref_name }}"
+          git add situations/
+          if git diff --cached --quiet; then
+            echo "No situation changes."
+          else
+            git commit -m "Update situations — $(date -u '+%Y-%m-%d %H:%M UTC')"
+            for i in 1 2 3; do
+              git fetch origin "$TARGET"
+              git merge -X ours "origin/$TARGET" --no-edit
+              git push origin "HEAD:$TARGET" && break
+              echo "Push attempt $i failed, retrying..."
+              sleep 10
+            done
+          fi

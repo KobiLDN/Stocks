@@ -20,6 +20,7 @@ import argparse
 import bisect
 import datetime as dt
 import json
+import os
 import statistics
 import sys
 from zoneinfo import ZoneInfo
@@ -255,7 +256,7 @@ def momentum_score(series, generated):
     return series.bars[b][2] * shares / series.bars[a][2] - 1
 
 
-def build(assets, runs, signals, bars, splits, divs, coarse, members, run_members=None, now=None):
+def build(assets, runs, signals, bars, splits, divs, coarse, members, run_members=None, now=None, situation_flags=None):
     """members: today's list per sector; run_members: the list each signal run actually had (#88).
     The baselines use the run's own list, and today's only for runs recorded before that existed."""
     run_members = run_members or {}
@@ -388,6 +389,7 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
 
     summary = {g: {k: {h: summarise(v) for h, v in hs.items()} for k, hs in keys.items()} for g, keys in groups.items()}
     review = run_review(runs, ai_1m, random_1m, now, retired_runs())
+    situations = score_situations(situation_flags or [], assets, series_for, now)
     names = {aid: a["name"] for aid, a in assets.items()}
     return {
         "generated_utc": iso(now),
@@ -415,11 +417,102 @@ def build(assets, runs, signals, bars, splits, divs, coarse, members, run_member
         "counts": {**counts, "baseline_lists": lists},
         "summary": summary,
         "run_review": review,
+        "situations": situations,
         "columns": ["time_utc", "sector", "kind", "ticker", "signal", "confidence", "rank", "provenance",
                     "entry_date", "entry_price", "currency", "r1w", "x1w", "r1m", "x1m", "r3m", "x3m", "note"],
         "rows": rows,
         "names": {t: names[t] for t in sorted({r[3] for r in rows}) if t in names},
     }
+
+
+# ── Situations (generate_situations.py): were the odds right? ─────────────────
+SITUATION_DAYS = 30
+SITUATION_BIG = 0.10
+
+
+def close_return(series, i, j):
+    """Close at bar i to close at bar j, splits and cash dividends counted (like total_return, close-based)."""
+    d0, d1 = series.dates[i], series.dates[j]
+    shares, cash = 1.0, 0.0
+    for d in sorted(set(series.splits) | set(series.dividends)):
+        if d0 < d <= d1:
+            shares *= series.splits.get(d, 1.0)
+            cash += series.dividends.get(d, 0.0) * shares
+    return (series.bars[j][2] * shares + cash) / series.bars[i][2] - 1
+
+
+def month_move(series, date, now):
+    """Return from the close on/before `date` to the close on/before date + 30 days; 'pending' or None."""
+    if series is None:
+        return None
+    target = (dt.date.fromisoformat(date) + dt.timedelta(days=SITUATION_DAYS)).isoformat()
+    if target > complete_through(series.exchange, now):
+        return "pending"
+    i, j = series.last_close_on_or_before(date), series.last_close_on_or_before(target)
+    if i is None or j is None or j <= i or not series.bars[i][2]:
+        return None
+    if dt.date.fromisoformat(date) - dt.date.fromisoformat(series.dates[i]) > MAX_EXIT_GAP:
+        return None
+    return close_return(series, i, j)
+
+
+def score_situations(flags, assets, series_for, now):
+    """Each first flag: did a 10%+ move happen within 30 days (vs the stated chance), and which way?
+    Base rate: how often any stock on the site moved that much over the same 30 days."""
+    by_ticker = {aid: a for aid, a in assets.items()}
+    scored, pending, base_cache = [], 0, {}
+    for f in flags:
+        a = by_ticker.get(f.get("ticker"))
+        r = month_move(series_for(a["yahoo"], a["exchange"]), f["date"], now) if a else None
+        if r == "pending":
+            pending += 1
+            continue
+        if r is None:
+            continue
+        if f["date"] not in base_cache:
+            moves = [month_move(series_for(x["yahoo"], x["exchange"]), f["date"], now) for x in assets.values()
+                     if x.get("kind") != "benchmark"]
+            moves = [m for m in moves if isinstance(m, float)]
+            base_cache[f["date"]] = sum(abs(m) >= SITUATION_BIG for m in moves) / len(moves) if moves else None
+        scored.append((f, r, base_cache[f["date"]]))
+    out = {"days": SITUATION_DAYS, "big_move_pct": SITUATION_BIG * 100, "flags": len(flags), "pending": pending,
+           "scored": len(scored),
+           "first_due": min(((dt.date.fromisoformat(f["date"]) + dt.timedelta(days=SITUATION_DAYS)).isoformat()
+                             for f in flags), default=None)}
+    if not scored:
+        return out
+    big = [abs(r) >= SITUATION_BIG for _f, r, _b in scored]
+    ps = [f["p_big"] for f, _r, _b in scored]
+    bases = [b for _f, _r, b in scored if b is not None]
+    base = statistics.fmean(bases) if bases else None
+    brier = statistics.fmean((p - y) ** 2 for p, y in zip(ps, big))
+    leaned = [(f, r) for f, r, _b in scored if f.get("lean") in ("up", "down")]
+    buckets = []
+    for lo, hi in ((0, .2), (.2, .4), (.4, .6), (.6, .8), (.8, 1.01)):
+        xs = [(p, y) for p, y in zip(ps, big) if lo <= p < hi]
+        if xs:
+            buckets.append({"range": f"{int(lo * 100)}–{min(100, int(hi * 100))}%", "n": len(xs),
+                            "predicted": round(100 * statistics.fmean(p for p, _ in xs), 1),
+                            "actual": round(100 * sum(y for _, y in xs) / len(xs), 1)})
+    out.update({
+        "predicted_big": round(100 * statistics.fmean(ps), 1),
+        "actual_big": round(100 * sum(big) / len(big), 1),
+        "base_rate": round(100 * base, 1) if base is not None else None,
+        "brier": round(brier, 4),
+        "brier_base": round(statistics.fmean((base - y) ** 2 for y in big), 4) if base is not None else None,
+        "direction": {"n": len(leaned), "right": round(100 * sum((r > 0) == (f["lean"] == "up") for f, r in leaned)
+                                                       / len(leaned), 1) if leaned else None},
+        "calibration": buckets,
+    })
+    return out
+
+
+def load_flags():
+    try:
+        with open(os.path.join(ROOT, "situations", "flags.json"), encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return []
 
 
 def retired_runs():
@@ -487,7 +580,7 @@ def main(argv=None):
         return 0
     print(f"History ← {h.db.name}")
     h.ensure_schema()
-    result = build(*load(h), now=utc_now())
+    result = build(*load(h), now=utc_now(), situation_flags=load_flags())
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(result, f, separators=(",", ":"))
     c = result["counts"]
