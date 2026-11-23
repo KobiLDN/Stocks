@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23 18:46",
+ "updated": "2026-11-23 18:47",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 8,
+ "count": 9,
  "situations": [
   {
    "ticker": "NBIS",
@@ -48,6 +48,72 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 103.07
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": null,
+   "title": "GTCR explores potential takeover of Global Payments",
+   "summary": "GTCR, the largest shareholder, filed a Schedule 13D stating it may propose to buy Global Payments. No definitive decision has been made, and financing remains a key hurdle. The stock rose 10% on the news but still trades well below the reported $50 billion enterprise value.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "GTCR does not submit a formal proposal",
+     "probability": 0.5,
+     "move_pct": -15.0
+    },
+    {
+     "label": "GTCR submits and completes a buyout",
+     "probability": 0.25,
+     "move_pct": 25.0
+    },
+    {
+     "label": "GTCR submits a bid but it fails or is rejected",
+     "probability": 0.25,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.25,
+   "expected_move": -3.8,
+   "lean": "down",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-23",
+   "price_at_flag": 92.44
+  },
+  {
+   "ticker": "LITE",
+   "type": "takeover",
+   "source": "Lumentum’s CEO Says “the Laws of Physics Are Working in Favor of Fiber.” Marvell Holders Are Buying It Cheap",
+   "title": "Marvell-Lumentum merger pending regulatory approval",
+   "summary": "Marvell's all-stock acquisition of Lumentum, valued at ~$115B, is not yet closed. The deal needs regulatory approvals, including China's, and is expected to close in H1 2028. If blocked, Marvell owes Lumentum a $3.2B fee. Lumentum trades at a 16% discount to the deal value, reflecting uncertainty.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Deal closes as expected",
+     "probability": 0.7,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Deal blocked or delayed",
+     "probability": 0.2,
+     "move_pct": -30.0
+    },
+    {
+     "label": "Marvell stock moves significantly before close",
+     "probability": 0.1,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.7,
+   "expected_move": 3.5,
+   "lean": "up",
+   "id": "LITE:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-23",
+   "price_at_flag": 561.64
   },
   {
    "ticker": "RXRX",
@@ -146,38 +212,6 @@
    "price_at_flag": 207.63
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "title": "EU opens antitrust probe into CCEP",
-   "summary": "The European Commission has opened an antitrust investigation into Coca-Cola Europacific Partners over cross-border beverage trade practices. The probe could lead to fines or forced changes to business practices, creating uncertainty for the stock.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Formal charges, moderate remedies",
-     "probability": 0.5,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Probe closed with no action",
-     "probability": 0.3,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Heavy fines and structural remedies",
-     "probability": 0.2,
-     "move_pct": -20.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.3,
-   "expected_move": -7.5,
-   "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 115.04
-  },
-  {
    "ticker": "EQNR",
    "type": "regulatory",
    "title": "Bay du Nord project approved, FID pending",
@@ -210,38 +244,6 @@
    "price_at_flag": 38.59
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "title": "GTCR potential takeover of Global Payments",
-   "summary": "GTCR is reportedly considering a $50 billion buyout bid for Global Payments. The deal is not yet agreed or accepted, and the outcome is unresolved.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Takeover bid accepted",
-     "probability": 0.35,
-     "move_pct": 25.0
-    },
-    {
-     "label": "Takeover talks collapse",
-     "probability": 0.35,
-     "move_pct": -15.0
-    },
-    {
-     "label": "No deal, stock drifts",
-     "probability": 0.3,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.35,
-   "expected_move": 2.0,
-   "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 92.44
-  },
-  {
    "ticker": "SMTC",
    "type": "results",
    "title": "Semtech Q3 earnings report due after close",
@@ -272,6 +274,34 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 104.16
+  },
+  {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Commission opens anti-trust probe into CCEP",
+   "title": "EU Commission opens anti-trust probe into CCEP",
+   "summary": "The European Commission has opened an antitrust investigation into Coca-Cola Europacific Partners over cross-border beverage trade practices. The outcome of the probe could lead to fines or forced changes in business practices, impacting the company's European operations.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Probe results in minor remedies or no action",
+     "probability": 0.6,
+     "move_pct": -2.0
+    },
+    {
+     "label": "Probe results in significant fines or operational changes",
+     "probability": 0.4,
+     "move_pct": -12.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0,
+   "expected_move": -6.0,
+   "lean": "down",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-23",
+   "price_at_flag": 115.04
   }
  ]
 }

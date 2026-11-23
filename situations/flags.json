@@ -86,5 +86,16 @@
 "p_up": 0.4,
 "expected_move": -2.0,
 "lean": "down"
+},
+{
+"id": "LITE:takeover",
+"date": "2026-11-23",
+"ticker": "LITE",
+"type": "takeover",
+"price_usd": 561.64,
+"p_big": 1.0,
+"p_up": 0.7,
+"expected_move": 3.5,
+"lean": "up"
 }
 ]
