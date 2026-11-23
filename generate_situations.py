@@ -248,10 +248,15 @@ def main(argv=None, call=None, now=None):
     cands = [t for _, t in candidates(stocks, news_by_ticker, open_tickers, now) if t in stocks]
     print(f"{len(stocks)} stocks, {len(news_by_ticker)} with headlines → {len(cands)} candidates: {', '.join(cands[:25])}"
           f"{' …' if len(cands) > 25 else ''}")
-    if args.dry_run or not cands:
+    if args.dry_run:
+        return 0
+    from generate_group_signals import MODEL
+    if not cands:                         # quiet day: still save, so /health sees the run happened
+        situations, _ = merge(previous, [], stocks, now)
+        write(situations, load_json(os.path.join(OUT, "flags.json"), []), now, MODEL)
+        print(f"no candidates; {len(situations)} still open")
         return 0
 
-    from generate_group_signals import MODEL
     if call is None:
         from generate_group_signals import call_api, load_api_key
         key = load_api_key()

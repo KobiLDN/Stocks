@@ -125,6 +125,18 @@ class EndToEnd(unittest.TestCase):
         self.assertEqual(flags[0]["price_usd"], 168.8)
         self.assertTrue(js.startswith("window.SITUATIONS_DATA = "))
 
+    def test_quiet_day_still_saves(self):
+        with tempfile.TemporaryDirectory() as d:
+            os.makedirs(os.path.join(d, "All"))
+            open(os.path.join(d, "All", "all-data.js"), "w").write('window.ALL_DATA = {"stocks":[{"ticker":"KO","change_1d":"+0.1%"}]};\n')
+            open(os.path.join(d, "All", "news-data.js"), "w").write('window.NEWS_DATA = {"stocks":[]};\n')
+            def never(sp, up):
+                raise AssertionError("no AI call on a quiet day")
+            with unittest.mock.patch.object(gs, "ROOT", d), unittest.mock.patch.object(gs, "OUT", os.path.join(d, "situations")):
+                self.assertEqual(gs.main([], call=never, now=NOW), 0)
+                data = json.load(open(os.path.join(d, "situations", "situations.json")))
+        self.assertEqual((data["count"], data["updated"]), (0, "2026-11-23 16:00"))   # /health sees a fresh run
+
     def test_all_calls_fail_keeps_previous(self):
         with tempfile.TemporaryDirectory() as d:
             os.makedirs(os.path.join(d, "All"))
