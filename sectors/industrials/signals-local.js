@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-22 21:14",
+  "updated": "2026-11-23 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "9a9dfb9de059",
-  "code_commit": "40bbd8be3a67",
+  "code_commit": "a06724890bf5",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "PNR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Pentair has surged +30.47% in the past month, signaling a powerful reversal from a -34% 1-year decline; with a P/E of 18.7 and a beta of 1.01, it offers a compelling risk/reward entry point.",
+      "drivers": [
+        "+30.47% 1M momentum",
+        "P/E 18.7 attractive",
+        "beta 1.01 moderate",
+        "reversal from deep 1Y loss"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "RTO.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Rentokil Initial has rallied +16.68% in the last month and +2.00% in the past week, showing strong near-term momentum; its P/E of 40.8 is elevated but the buy consensus and 2.56% dividend yield support a positive outlook.",
+      "drivers": [
+        "+16.68% 1M momentum",
+        "buy consensus",
+        "2.56% dividend yield",
+        "positive weekly trend"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "FER",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Ferrovial has gained +16.49% in the past month, driven by infrastructure spending tailwinds; a 3.84% dividend yield and low short interest of 1.08% add to its defensive appeal.",
+      "drivers": [
+        "+16.49% 1M momentum",
+        "3.84% dividend yield",
+        "low short interest 1.08%",
+        "infrastructure catalyst"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "ALLE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Allegion has jumped +15.48% in the past month and carries a buy analyst consensus with a score of 1.91; its P/E of 22.84 is reasonable for the building products sector.",
+      "drivers": [
+        "+15.48% 1M momentum",
+        "buy consensus (score 1.91)",
+        "P/E 22.84 reasonable",
+        "building products sector"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "VLTO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Veralto has rallied +15.12% in the past month and is up +18.92% YTD, supported by strong fundamentals in environmental services; its beta of 0.666 offers stability.",
+      "drivers": [
+        "+15.12% 1M momentum",
+        "+18.92% YTD",
+        "beta 0.666 low volatility",
+        "environmental services sector"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "ROL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Rollins has bounced +13.65% in the past month, recovering from a -36% 1-year decline; the buy consensus and 2.12% dividend yield provide a margin of safety.",
+      "drivers": [
+        "+13.65% 1M momentum",
+        "buy consensus",
+        "2.12% dividend yield",
+        "recovery from deep 1Y loss"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "CPRT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Copart has surged +12.69% in the past month, with a P/E of 20.06 and a buy consensus; its strong YTD performance of -17.69% is misleading given the recent momentum shift.",
+      "drivers": [
+        "+12.69% 1M momentum",
+        "P/E 20.06 attractive",
+        "buy consensus",
+        "recent momentum shift"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "SWK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Stanley Black & Decker has soared +11.71% in the past month and +43.72% YTD, driven by operational improvements; a P/E of 19.11 and 3.15% dividend yield offer strong value.",
+      "drivers": [
+        "+11.71% 1M momentum",
+        "+43.72% YTD",
+        "P/E 19.11 low",
+        "3.15% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "MAS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Masco has gained +11.21% in the past month and +30.35% YTD, with a P/E of 17.92 and a buy consensus; the building products sector benefits from housing demand.",
+      "drivers": [
+        "+11.21% 1M momentum",
+        "+30.35% YTD",
+        "P/E 17.92 low",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "LUV",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Southwest Airlines has rallied +10.53% in the past month and is up +37% over 1 year, supported by strong travel demand; a P/E of 21.5 and buy consensus make it a solid pick.",
+      "drivers": [
+        "+10.53% 1M momentum",
+        "+37% 1Y return",
+        "P/E 21.5 reasonable",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SWK",
@@ -170,169 +343,6 @@ window.SIGNALS_DATA = {
         "1-month +10.53%",
         "P/E 21.5",
         "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VLTO",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "+18.92% YTD, +15.12% 1M, P/E 28.8, analyst buy score 1.82",
-      "drivers": [
-        "Strong YTD & 1M momentum",
-        "Low beta 0.67",
-        "Analyst consensus buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "MAS",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+30.35% YTD, P/E 17.92, +11.21% 1M, analyst buy score 2.5",
-      "drivers": [
-        "Strong YTD return",
-        "Low P/E 17.92",
-        "Recent 1M momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "ALLE",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+15.42% YTD, +15.48% 1M, P/E 22.84, analyst buy score 1.91",
-      "drivers": [
-        "Strong 1M gain",
-        "Reasonable valuation",
-        "Analyst buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "LUV",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "+37% 1Y, +10.53% 1M, P/E 21.5, analyst buy score 2.46",
-      "drivers": [
-        "Strong 1-year return",
-        "Positive 1M momentum",
-        "Reasonable P/E"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "PNR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+30.47% 1M reversal, P/E 18.7, analyst buy score 2.06",
-      "drivers": [
-        "Massive 1M bounce",
-        "Low P/E 18.7",
-        "Buy analyst rating"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "SWK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+43.72% YTD, P/E 19.11, +11.71% 1M, hold rating but strong fundamentals",
-      "drivers": [
-        "Excellent YTD performance",
-        "Low P/E",
-        "Strong 1M momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "CPRT",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+12.69% 1M, P/E 20.06, analyst buy score 2.33",
-      "drivers": [
-        "1M momentum",
-        "Reasonable P/E",
-        "Analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "RTO.L",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "+16.68% 1M, analyst buy score 1.7, div yield 2.56%",
-      "drivers": [
-        "Strong 1M recovery",
-        "Low beta 0.46",
-        "Good analyst score"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "FER",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "+16.49% 1M, div yield 3.84%, low short interest 1.08%",
-      "drivers": [
-        "Solid 1M gain",
-        "High dividend yield",
-        "Low short interest"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "ROL",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "+13.65% 1M, P/E 34.7, analyst buy score 2.47",
-      "drivers": [
-        "1M bounce",
-        "Low beta 0.72",
-        "Analyst buy"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

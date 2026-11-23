@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-22 21:14",
+  "updated": "2026-11-23 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "c71ebe21e58a",
-  "code_commit": "40bbd8be3a67",
+  "code_commit": "a06724890bf5",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "WMT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Q3 FY27 revenue +5.2%, operating income +16%, raised outlook; P/E 46 but analyst consensus best at 1.55.",
+      "drivers": [
+        "Q3 beat & raised guidance",
+        "strong omnichannel growth",
+        "low short interest 1.65%",
+        "analyst consensus strong_buy"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "TGT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+70.73% YTD, P/E 15.41, analyst buy; strong momentum with low valuation.",
+      "drivers": [
+        "exceptional YTD return",
+        "low P/E 15.4",
+        "strong retail execution",
+        "analyst buy consensus"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "KO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+43% YTD, P/E 28.6, analyst buy; defensive growth with low beta 0.27.",
+      "drivers": [
+        "strong YTD momentum",
+        "low beta defensive",
+        "high analyst conviction",
+        "low short interest 1.11%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "MO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+37% YTD, P/E 15.44, dividend yield 5.93%; attractive income with low valuation.",
+      "drivers": [
+        "high dividend yield",
+        "low P/E",
+        "strong YTD performance",
+        "low short interest"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "MDLZ",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+26.77% YTD, P/E 20.91, analyst buy; solid branded food portfolio.",
+      "drivers": [
+        "consistent YTD growth",
+        "reasonable P/E",
+        "buy analyst consensus",
+        "low short interest 2.6%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "CHD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+35.76% YTD, P/E 34, analyst buy; strong household products momentum.",
+      "drivers": [
+        "strong YTD return",
+        "positive analyst rating",
+        "low beta 0.45",
+        "momentum in household products"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "TSN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Q4 EPS beat, beef improvement catalyst; +16.49% 1M, P/E 50 but turnaround story.",
+      "drivers": [
+        "earnings beat & beef recovery",
+        "strong 1M momentum",
+        "improving industry economics",
+        "dividend yield 3.19%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "CLX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Q1 FY27 sales +33%, adjusted EPS +82%; +25% 1M, P/E 18.8, but input cost headwinds.",
+      "drivers": [
+        "strong earnings beat",
+        "GOJO acquisition synergies",
+        "high short interest potential squeeze",
+        "reasonable P/E"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+22.92% YTD, P/E 25.5, analyst buy; stable defensive giant with low short interest.",
+      "drivers": [
+        "solid YTD performance",
+        "low short interest 0.97%",
+        "buy analyst consensus",
+        "defensive staple"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "STZ",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "P/E 12.7, analyst buy, dividend 2.9%; value play with moderate momentum.",
+      "drivers": [
+        "low P/E value",
+        "buy analyst rating",
+        "decent dividend yield",
+        "positive 1M momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TGT",
@@ -175,179 +348,6 @@ window.SIGNALS_DATA = {
         "1Y +35%",
         "P/E 16.8",
         "momentum recovery"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "WMT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Q3 FY27 earnings beat with revenue +5.2% and operating income +16%, driving strong momentum (+14.19% YTD, +8.62% 1-month). Analyst consensus 'buy' (1.55) and raised FY27 outlook reinforce fundamental strength.",
-      "drivers": [
-        "Q3 revenue +5.2%",
-        "operating income +16%",
-        "raised FY27 outlook",
-        "analyst score 1.55"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "CLX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Q1 FY27 adjusted EPS +82% beat expectations, Evercore ISI upgraded citing turnaround potential; PE 18.84 is cheap vs staples average and dividend yield 4.77% is attractive. Strong 1-month momentum +25.34%.",
-      "drivers": [
-        "Q1 adjusted EPS +82%",
-        "Evercore upgrade to In Line",
-        "PE 18.84",
-        "dividend 4.77%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "KO",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Top-line momentum with YTD +43.05% and 1-year +36%, supported by analyst consensus 'buy' (1.69). PE 28.61 is reasonable for a defensive staple with consistent brand power.",
-      "drivers": [
-        "YTD +43.05%",
-        "analyst score 1.69",
-        "PE 28.61",
-        "1-year +36%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "MDLZ",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Strong YTD +26.77% with PE 20.91, solid dividend 3.14%, and analyst 'buy' (1.83). Snacking demand remains resilient, underpinned by pricing power and portfolio strength.",
-      "drivers": [
-        "YTD +26.77%",
-        "analyst score 1.83",
-        "PE 20.91",
-        "dividend 3.14%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "PM",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +17.83%, PE 26.87, analyst 'buy' (1.76) with smoke-free portfolio driving growth. Dividend 3.48% and low short interest of 0.96% add downside protection.",
-      "drivers": [
-        "YTD +17.83%",
-        "analyst score 1.76",
-        "PE 26.87",
-        "low short interest 0.96%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "MO",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +36.97% with PE 15.44 and high dividend yield 5.93% make it a value-income play. Analyst 'hold' (2.64) is cautious but recent momentum and low beta (0.463) favor stability.",
-      "drivers": [
-        "YTD +36.97%",
-        "PE 15.44",
-        "dividend 5.93%",
-        "beta 0.463"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "PG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +22.92%, PE 25.51, analyst 'buy' (2.12) with strong brand portfolio. 1-month +8.70% momentum and very low short interest 0.97% indicate confident positioning.",
-      "drivers": [
-        "YTD +22.92%",
-        "PE 25.51",
-        "analyst score 2.12",
-        "short interest 0.97%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "TGT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +70.73% with PE only 15.41, suggesting undervaluation relative to earnings growth. Analyst 'buy' (2.49) and 1-month +9.59% momentum reflect strong retail execution.",
-      "drivers": [
-        "YTD +70.73%",
-        "PE 15.41",
-        "analyst score 2.49",
-        "1-month +9.59%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "KDP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +28.58% and analyst 'buy' (1.85) with diversified beverage portfolio. PE 31.39 is higher but justified by consistent growth and dividend 2.64%.",
-      "drivers": [
-        "YTD +28.58%",
-        "analyst score 1.85",
-        "PE 31.39",
-        "dividend 2.64%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "CCEP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +34.21% with PE 22.3 and analyst 'buy' (2.0). Strong 1-month +6.20% momentum and exposure to European beverage markets with solid free cash flow.",
-      "drivers": [
-        "YTD +34.21%",
-        "PE 22.3",
-        "analyst score 2.0",
-        "1-month +6.20%"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",
