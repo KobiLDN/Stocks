@@ -1,0 +1,90 @@
+[
+{
+"id": "GPN:takeover",
+"date": "2026-11-23",
+"ticker": "GPN",
+"type": "takeover",
+"price_usd": 92.44,
+"p_big": 0.7,
+"p_up": 0.35,
+"expected_move": 2.0,
+"lean": "down"
+},
+{
+"id": "CRWD:takeover",
+"date": "2026-11-23",
+"ticker": "CRWD",
+"type": "takeover",
+"price_usd": 207.63,
+"p_big": 0.8,
+"p_up": 0.5,
+"expected_move": -0.5,
+"lean": "either way"
+},
+{
+"id": "RXRX:regulatory",
+"date": "2026-11-23",
+"ticker": "RXRX",
+"type": "regulatory",
+"price_usd": 2.7,
+"p_big": 1.0,
+"p_up": 0.4,
+"expected_move": -2.0,
+"lean": "down"
+},
+{
+"id": "NBIS:regulatory",
+"date": "2026-11-23",
+"ticker": "NBIS",
+"type": "regulatory",
+"price_usd": 103.07,
+"p_big": 1.0,
+"p_up": 0.3,
+"expected_move": -11.5,
+"lean": "down"
+},
+{
+"id": "SMTC:results",
+"date": "2026-11-23",
+"ticker": "SMTC",
+"type": "results",
+"price_usd": 104.16,
+"p_big": 0.6,
+"p_up": 0.4,
+"expected_move": 0.0,
+"lean": "down"
+},
+{
+"id": "CCEP.L:regulatory",
+"date": "2026-11-23",
+"ticker": "CCEP.L",
+"type": "regulatory",
+"price_usd": 115.04,
+"p_big": 0.7,
+"p_up": 0.3,
+"expected_move": -7.5,
+"lean": "down"
+},
+{
+"id": "WULF:activist",
+"date": "2026-11-23",
+"ticker": "WULF",
+"type": "activist",
+"price_usd": 11.56,
+"p_big": 1.0,
+"p_up": 0.3,
+"expected_move": -1.0,
+"lean": "down"
+},
+{
+"id": "EQNR:regulatory",
+"date": "2026-11-23",
+"ticker": "EQNR",
+"type": "regulatory",
+"price_usd": 38.59,
+"p_big": 0.7,
+"p_up": 0.4,
+"expected_move": -2.0,
+"lean": "down"
+}
+]
