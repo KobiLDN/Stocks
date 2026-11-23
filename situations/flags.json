@@ -108,5 +108,38 @@
 "p_up": 0.75,
 "expected_move": 0.2,
 "lean": "up"
+},
+{
+"id": "DELL:results",
+"date": "2026-11-23",
+"ticker": "DELL",
+"type": "results",
+"price_usd": 338.38,
+"p_big": 0.6,
+"p_up": 0.8,
+"expected_move": 3.8,
+"lean": "up"
+},
+{
+"id": "MU:results",
+"date": "2026-11-23",
+"ticker": "MU",
+"type": "results",
+"price_usd": 710.42,
+"p_big": 0.7,
+"p_up": 0.5,
+"expected_move": -0.5,
+"lean": "either way"
+},
+{
+"id": "TPL:takeover",
+"date": "2026-11-23",
+"ticker": "TPL",
+"type": "takeover",
+"price_usd": 259.71,
+"p_big": 0,
+"p_up": 0.9,
+"expected_move": 1.1,
+"lean": "up"
 }
 ]
