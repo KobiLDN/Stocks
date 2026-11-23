@@ -1,0 +1,258 @@
+{
+ "index": "eurostoxx50",
+ "date": "2026-11-23",
+ "source": "en.wikipedia.org",
+ "count": 50,
+ "members": [
+  {
+   "yahoo": "ABI.BR",
+   "name": "Anheuser-Busch InBev",
+   "isin": null
+  },
+  {
+   "yahoo": "AD.AS",
+   "name": "Ahold Delhaize",
+   "isin": null
+  },
+  {
+   "yahoo": "ADS.DE",
+   "name": "Adidas",
+   "isin": null
+  },
+  {
+   "yahoo": "ADYEN.AS",
+   "name": "Adyen",
+   "isin": null
+  },
+  {
+   "yahoo": "AI.PA",
+   "name": "Air Liquide",
+   "isin": null
+  },
+  {
+   "yahoo": "AIR.PA",
+   "name": "Airbus",
+   "isin": null
+  },
+  {
+   "yahoo": "ALV.DE",
+   "name": "Allianz",
+   "isin": null
+  },
+  {
+   "yahoo": "ARGX.BR",
+   "name": "Argenx",
+   "isin": null
+  },
+  {
+   "yahoo": "ASML.AS",
+   "name": "ASML Holding",
+   "isin": null
+  },
+  {
+   "yahoo": "BAS.DE",
+   "name": "BASF",
+   "isin": null
+  },
+  {
+   "yahoo": "BAYN.DE",
+   "name": "Bayer",
+   "isin": null
+  },
+  {
+   "yahoo": "BBVA.MC",
+   "name": "BBVA",
+   "isin": null
+  },
+  {
+   "yahoo": "BMW.DE",
+   "name": "BMW",
+   "isin": null
+  },
+  {
+   "yahoo": "BN.PA",
+   "name": "Danone",
+   "isin": null
+  },
+  {
+   "yahoo": "BNP.PA",
+   "name": "BNP Paribas",
+   "isin": null
+  },
+  {
+   "yahoo": "CS.PA",
+   "name": "Axa",
+   "isin": null
+  },
+  {
+   "yahoo": "DB1.DE",
+   "name": "Deutsche Börse",
+   "isin": null
+  },
+  {
+   "yahoo": "DBK.DE",
+   "name": "Deutsche Bank",
+   "isin": null
+  },
+  {
+   "yahoo": "DG.PA",
+   "name": "Vinci SA",
+   "isin": null
+  },
+  {
+   "yahoo": "DHL.DE",
+   "name": "Deutsche Post",
+   "isin": null
+  },
+  {
+   "yahoo": "DTE.DE",
+   "name": "Deutsche Telekom",
+   "isin": null
+  },
+  {
+   "yahoo": "EL.PA",
+   "name": "EssilorLuxottica",
+   "isin": null
+  },
+  {
+   "yahoo": "ENEL.MI",
+   "name": "Enel",
+   "isin": null
+  },
+  {
+   "yahoo": "ENGI.PA",
+   "name": "Engie",
+   "isin": null
+  },
+  {
+   "yahoo": "ENI.MI",
+   "name": "Eni",
+   "isin": null
+  },
+  {
+   "yahoo": "ENR.DE",
+   "name": "Siemens Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "IBE.MC",
+   "name": "Iberdrola",
+   "isin": null
+  },
+  {
+   "yahoo": "IFX.DE",
+   "name": "Infineon Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "INGA.AS",
+   "name": "ING Group",
+   "isin": null
+  },
+  {
+   "yahoo": "ISP.MI",
+   "name": "Intesa Sanpaolo",
+   "isin": null
+  },
+  {
+   "yahoo": "ITX.MC",
+   "name": "Inditex",
+   "isin": null
+  },
+  {
+   "yahoo": "MBG.DE",
+   "name": "Mercedes-Benz Group",
+   "isin": null
+  },
+  {
+   "yahoo": "MC.PA",
+   "name": "LVMH Moët Hennessy Louis Vuitton",
+   "isin": null
+  },
+  {
+   "yahoo": "MUV2.DE",
+   "name": "Munich Re",
+   "isin": null
+  },
+  {
+   "yahoo": "NDA-FI.HE",
+   "name": "Nordea",
+   "isin": null
+  },
+  {
+   "yahoo": "NOKIA.HE",
+   "name": "Nokia",
+   "isin": null
+  },
+  {
+   "yahoo": "OR.PA",
+   "name": "L'Oréal",
+   "isin": null
+  },
+  {
+   "yahoo": "PRX.AS",
+   "name": "Prosus",
+   "isin": null
+  },
+  {
+   "yahoo": "RACE.MI",
+   "name": "Ferrari",
+   "isin": null
+  },
+  {
+   "yahoo": "RHM.DE",
+   "name": "Rheinmetall",
+   "isin": null
+  },
+  {
+   "yahoo": "RMS.PA",
+   "name": "Hermès",
+   "isin": null
+  },
+  {
+   "yahoo": "SAF.PA",
+   "name": "Safran",
+   "isin": null
+  },
+  {
+   "yahoo": "SAN.MC",
+   "name": "Banco Santander",
+   "isin": null
+  },
+  {
+   "yahoo": "SAN.PA",
+   "name": "Sanofi",
+   "isin": null
+  },
+  {
+   "yahoo": "SAP.DE",
+   "name": "SAP",
+   "isin": null
+  },
+  {
+   "yahoo": "SGO.PA",
+   "name": "Saint-Gobain",
+   "isin": null
+  },
+  {
+   "yahoo": "SIE.DE",
+   "name": "Siemens",
+   "isin": null
+  },
+  {
+   "yahoo": "SU.PA",
+   "name": "Schneider Electric",
+   "isin": null
+  },
+  {
+   "yahoo": "TTE.PA",
+   "name": "TotalEnergies",
+   "isin": null
+  },
+  {
+   "yahoo": "UCG.MI",
+   "name": "UniCredit",
+   "isin": null
+  }
+ ]
+}

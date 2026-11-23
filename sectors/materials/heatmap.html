@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Materials heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 32 stocks.">
+<meta name="description" content="Materials heatmap: 1D, 1W, 1M, YTD and 1-year moves for all 42 stocks.">
 <title>Materials — Heatmap</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -83,7 +83,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Materials <span>Heatmap</span></h1>
-    <div class="header-sub"><span id="hm-stock-count">32</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="hm-stock-count">42</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -114,7 +114,7 @@
   <div class="section-hdr">
     <span class="section-hdr-label">All Stocks</span>
     <div class="section-hdr-line"></div>
-    <span class="section-hdr-count" id="hm-all-count">32 stocks</span>
+    <span class="section-hdr-count" id="hm-all-count">42 stocks</span>
   </div>
   <div class="map-wrap" id="map-all"></div>
 
@@ -135,12 +135,16 @@
 /* ── Lookups ── */
 const NAMES = {
  "AAL.L": "Anglo American plc",
+ "AI.PA": "Air Liquide",
  "ALB": "Albemarle Corporation",
  "AMCR": "Amcor",
+ "AMRZ.SW": "Amrize AG",
  "ANTO.L": "Antofagasta plc",
  "APD": "Air Products",
  "AVY": "Avery Dennison",
  "BALL": "Ball Corporation",
+ "BAS.DE": "BASF",
+ "BNR.DE": "Brenntag",
  "CF": "CF Industries",
  "CRDA.L": "Croda International",
  "CRH": "CRH plc",
@@ -149,13 +153,17 @@ const NAMES = {
  "EDV.L": "Endeavour Mining",
  "FCX": "Freeport-McMoRan",
  "FRES.L": "Fresnillo plc",
+ "GIVN.SW": "Givaudan SA",
  "GLEN.L": "Glencore",
+ "HEI.DE": "Heidelberg Materials",
+ "HOLN.SW": "Holcim Limited",
  "IFF": "International Flavors & Fragrances",
  "IP": "International Paper",
  "LIN": "Linde plc",
  "LYB": "LyondellBasell",
  "MLM": "Martin Marietta Materials",
  "MOS": "Mosaic Company (The)",
+ "MT.AS": "ArcelorMittal",
  "NEM": "Newmont",
  "NUE": "Nucor",
  "OLN": "Olin Corporation",
@@ -163,8 +171,10 @@ const NAMES = {
  "PPG": "PPG Industries",
  "RIO.L": "Rio Tinto",
  "SHW": "Sherwin-Williams",
+ "SIKA.SW": "Sika AG",
  "STLD": "Steel Dynamics",
  "SW": "Smurfit Westrock",
+ "SY1.DE": "Symrise",
  "VMC": "Vulcan Materials Company"
 };
 
@@ -172,15 +182,15 @@ const CAT_LABELS = {
   'specialty-chemicals': 'Specialty Chemicals',
   'paper-plastic-packaging-products-materials': 'Paper & Plastic Packaging Products & Materials',
   'diversified-metals-mining': 'Diversified Metals & Mining',
+  'building-materials': 'Building Materials',
   'construction-materials': 'Construction Materials',
   'gold': 'Gold',
-  'chemicals': 'Chemicals',
-  'fertilizers-agricultural-chemicals': 'Fertilizers & Agricultural Chemicals',
+  'industrial-gases': 'Industrial Gases',
   'other': 'Other',
 };
 
 /* Category display order */
-const CAT_ORDER = ['specialty-chemicals', 'paper-plastic-packaging-products-materials', 'diversified-metals-mining', 'construction-materials', 'gold', 'chemicals', 'fertilizers-agricultural-chemicals', 'other'];
+const CAT_ORDER = ['specialty-chemicals', 'paper-plastic-packaging-products-materials', 'diversified-metals-mining', 'building-materials', 'construction-materials', 'gold', 'industrial-gases', 'other'];
 
 const METRICS_CFG = {
   '1d':  { field: 'change_1d',  label: '1D',    threshold: 5  },

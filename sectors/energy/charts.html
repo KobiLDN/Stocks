@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 32 Energy stocks, by industry.">
+<meta name="description" content="1-year price charts for all 34 Energy stocks, by industry.">
 <title>Energy — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -17,12 +17,14 @@
   .cat-btn.active-coal-consumable-fuels { background: var(--rose); border-color: var(--rose); color: var(--bg); }
   .cat-btn.active-oil-gas-equipment-services { background: var(--blue); border-color: var(--blue); color: var(--bg); }
   .cat-btn.active-oil-gas-refining-marketing { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
   .cat-label.integrated-oil-gas { color: var(--accent); }
   .cat-label.oil-gas-exploration-production { color: var(--purple); }
   .cat-label.oil-gas-storage-transportation { color: var(--teal); }
   .cat-label.coal-consumable-fuels { color: var(--rose); }
   .cat-label.oil-gas-equipment-services { color: var(--blue); }
   .cat-label.oil-gas-refining-marketing { color: var(--green); }
+  .cat-label.other { color: var(--slate); }
 
 
   /* ─── 3-Panel Layout ─── */
@@ -95,7 +97,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Energy <span>Charts</span></h1>
-    <div class="header-sub">32 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">34 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -164,8 +166,10 @@
   const TV_MAP = {
     "2222.SR": "TADAWUL:2222",
     "BP.L": "LSE:BP.",
+    "ENI.MI": "MIL:ENI",
     "ITH.L": "LSE:ITH",
     "SHEL.L": "LSE:SHEL",
+    "TTE.PA": "EURONEXT:TTE",
   };
 
   /* Category display config for charts */
@@ -211,6 +215,13 @@
       color: 'var(--green)',
       btnLabel: "Oil & Gas Refining & Marketing",
       tooltip: "Energy: Oil & Gas Refining & Marketing",
+    },
+    'other': {
+      key: 'other',
+      label: "Other",
+      color: 'var(--slate)',
+      btnLabel: "Other",
+      tooltip: "Energy: Other",
     },
   };
 

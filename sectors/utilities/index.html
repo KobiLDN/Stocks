@@ -77,7 +77,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Utilities dashboard: live prices, 52-week ranges and returns for all 42 stocks in the sector.">
+<meta name="description" content="Utilities dashboard: live prices, 52-week ranges and returns for all 47 stocks in the sector.">
 <title>Utilities — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -514,7 +514,9 @@
   .cat-independent-power-producers-energy-traders { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
   .cat-renewable-electricity { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
   .cat-gas-utilities { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-water-utilities { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
+  .cat-utilities-diversified { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
 </style>
 <style>
 /* #88: stocks Trading 212 doesn't offer (matched by ISIN; yes/no only, never "ISA") */
@@ -540,7 +542,7 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1><span>Utilities</span></h1>
-    <div class="header-sub"><span id="sector-count">42</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="sector-count">47</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
@@ -551,7 +553,9 @@
 <button class="chip" data-filter="independent-power-producers-energy-traders" onclick="filterChip('independent-power-producers-energy-traders',this)">Independent Power Producers & Energy Traders</button>
 <button class="chip" data-filter="renewable-electricity" onclick="filterChip('renewable-electricity',this)">Renewable Electricity</button>
 <button class="chip" data-filter="gas-utilities" onclick="filterChip('gas-utilities',this)">Gas Utilities</button>
-<button class="chip" data-filter="water-utilities" onclick="filterChip('water-utilities',this)">Water Utilities</button>
+<button class="chip" data-filter="other" onclick="filterChip('other',this)">Other</button>
+<button class="chip" data-filter="utilities-diversified" onclick="filterChip('utilities-diversified',this)">Utilities - Diversified</button>
+<button class="chip" data-filter="other" onclick="filterChip('other',this)">Other</button>
 <label class="t212-toggle" title="Trading 212 offers most ordinary shares on major exchanges; this hides the ones it doesn't list"><input type="checkbox" id="hide-t212" onchange="applyFilters()"> Hide stocks not on T212</label>
 </div>
 <div class="search-count-bar">
@@ -592,7 +596,9 @@ const CAT_COLORS = {
   'independent-power-producers-energy-traders': "var(--teal)",
   'renewable-electricity': "var(--rose)",
   'gas-utilities': "var(--blue)",
-  'water-utilities': "var(--green)",
+  'other': "var(--slate)",
+  'utilities-diversified': "var(--green)",
+  'other': "var(--slate)",
 };
 
 const CAT_LABELS = {
@@ -601,7 +607,9 @@ const CAT_LABELS = {
   'independent-power-producers-energy-traders': "Independent Power Producers \u0026 Energy Traders",
   'renewable-electricity': "Renewable Electricity",
   'gas-utilities': "Gas Utilities",
-  'water-utilities': "Water Utilities",
+  'other': "Other",
+  'utilities-diversified': "Utilities - Diversified",
+  'other': "Other",
 };
 
 

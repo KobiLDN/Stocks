@@ -1,4 +1,5 @@
-"""Index membership refresh (#88): S&P 500, Nasdaq-100 and FTSE 100 members -> universe.yaml.
+"""Index membership refresh (#88, #110): S&P 500, Nasdaq-100, FTSE 100, Euro Stoxx 50, DAX, CAC 40 and
+SMI members -> universe.yaml.
 
     python index_refresh.py                      # fetch, check, snapshot, update universe.yaml
     python index_refresh.py --catalogue PATH     # also set the "on T212" flag for new stocks
@@ -34,12 +35,20 @@ INDEXES = {           # market id -> key in universe_classify.index_tables()
     "sp500": "sp500",
     "nasdaq100": "ndx",
     "ftse100": "ftse",
+    "eurostoxx50": "sx5e",      # phase 2 (#110): one Europe group, index tags kept per stock
+    "dax": "dax",
+    "cac40": "cac",
+    "smi": "smi",
 }
-MIN_ROWS = {"sp500": 480, "nasdaq100": 95, "ftse100": 95}
+MIN_ROWS = {"sp500": 480, "nasdaq100": 95, "ftse100": 95, "eurostoxx50": 48, "dax": 38, "cac40": 38, "smi": 19}
 KNOWN = {
     "sp500": {"AAPL", "MSFT", "JPM", "XOM", "JNJ"},
     "nasdaq100": {"AAPL", "MSFT", "NVDA", "AMZN", "COST"},
     "ftse100": {"AZN.L", "HSBA.L", "SHEL.L", "ULVR.L", "BP.L"},
+    "eurostoxx50": {"SAP.DE", "ASML.AS", "MC.PA", "SIE.DE", "TTE.PA"},
+    "dax": {"SAP.DE", "SIE.DE", "ALV.DE", "DTE.DE", "BAS.DE"},
+    "cac40": {"MC.PA", "OR.PA", "TTE.PA", "SAN.PA", "AIR.PA"},
+    "smi": {"NESN.SW", "NOVN.SW", "ROP.SW", "UBSG.SW", "ABBN.SW"},
 }
 MAX_CHURN = 0.10
 # Yahoo's exchange codes -> the exchange names universe.yaml uses
@@ -193,7 +202,7 @@ def main(argv=None):
             continue
         t = new_asset_id(y, assets)
         info = uc.yahoo_info(y)
-        exchange = "LSE" if y.endswith(".L") else YAHOO_EXCHANGE.get(info.get("exchange"))
+        exchange = "LSE" if y.endswith(".L") else (uc.eu_exchange(y) or YAHOO_EXCHANGE.get(info.get("exchange")))
         if not exchange:
             print(f"  {y}: unknown Yahoo exchange {info.get('exchange')!r} — recorded as NYSE, check it")
             exchange = "NYSE"

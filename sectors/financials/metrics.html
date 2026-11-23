@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Financials stock fundamentals: P/E, market cap, beta, volume and analyst views for 102 stocks.">
+<meta name="description" content="Financials stock fundamentals: P/E, market cap, beta, volume and analyst views for 125 stocks.">
 <title>Financials — Stock Metrics</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -201,12 +201,12 @@
   .cat-diversified-banks { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
   .cat-asset-management-custody-banks { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
   .cat-investment-banking-brokerage { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
-  .cat-property-casualty-insurance { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-financial-exchanges-data { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-life-health-insurance { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
+  .cat-financial-exchanges-data { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
+  .cat-life-health-insurance { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-property-casualty-insurance { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
   .cat-transaction-payment-processing-services { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
-  .cat-insurance-brokers { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
-  .cat-regional-banks { background: rgba(163,230,53,0.1); color: var(--lime); border: 1px solid rgba(163,230,53,0.25); }
+  .cat-regional-banks { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
   /* Numeric cells */
   .num-cell {
@@ -418,13 +418,16 @@
   /* ---- DATA ---- */
   const NAMES = {
  "ABDN.L": "Aberdeen Group",
+ "ACA.PA": "Crédit Agricole",
  "ACGL": "Arch Capital Group",
  "ADM.L": "Admiral Group",
+ "ADYEN.AS": "Adyen",
  "AFL": "Aflac",
  "AIG": "American International Group",
  "AIZ": "Assurant",
  "AJG": "Arthur J. Gallagher & Co.",
  "ALL": "Allstate",
+ "ALV.DE": "Allianz",
  "ALW.L": "Alliance Witan",
  "AMP": "Ameriprise Financial",
  "AON": "Aon plc",
@@ -434,15 +437,18 @@
  "AXP": "American Express",
  "BAC": "Bank of America",
  "BARC.L": "Barclays",
+ "BBVA.MC": "BBVA",
  "BEN": "Franklin Resources",
  "BGEO.L": "Lion Finance Group",
  "BLK": "BlackRock",
+ "BNP.PA": "BNP Paribas",
  "BNY": "BNY Mellon",
  "BRK-B": "Berkshire Hathaway B",
  "BRO": "Brown & Brown",
  "BX": "Blackstone Inc.",
  "C": "Citigroup",
  "CB": "Chubb Limited",
+ "CBK.DE": "Commerzbank",
  "CBOE": "Cboe Global Markets",
  "CFG": "Citizens Financial Group",
  "CINF": "Cincinnati Financial",
@@ -450,7 +456,11 @@
  "COF": "Capital One",
  "COIN": "Coinbase",
  "CPAY": "Corpay",
+ "CS.PA": "Axa",
+ "DB1.DE": "Deutsche Börse",
+ "DBK.DE": "Deutsche Bank",
  "EG": "Everest Group",
+ "ENX.PA": "Euronext",
  "ERIE": "Erie Indemnity",
  "FCIT.L": "F & C Investment Trust",
  "FDS": "FactSet",
@@ -458,10 +468,12 @@
  "FISV": "Fiserv",
  "FITB": "Fifth Third Bancorp",
  "GL": "Globe Life",
+ "GLE.PA": "Société Générale",
  "GPN": "Global Payments",
  "GS": "Goldman Sachs",
  "HBAN": "Huntington Bancshares",
  "HIG": "Hartford (The)",
+ "HNR1.DE": "Hannover Re",
  "HOOD": "Robinhood",
  "HSBA.L": "HSBC",
  "HSBC": "HSBC Holdings",
@@ -471,7 +483,9 @@
  "ICG.L": "ICG",
  "IGG.L": "IG Group",
  "III.L": "3i",
+ "INGA.AS": "ING Group",
  "INVP.L": "Investec",
+ "ISP.MI": "Intesa Sanpaolo",
  "IVZ": "Invesco",
  "JKHY": "Jack Henry & Associates",
  "JPM": "JPMorgan Chase",
@@ -489,11 +503,14 @@
  "MS": "Morgan Stanley",
  "MSCI": "MSCI",
  "MTB": "M&T Bank",
+ "MUV2.DE": "Munich Re",
+ "NDA-FI.HE": "Nordea",
  "NDAQ": "Nasdaq, Inc.",
  "NTRS": "Northern Trust",
  "NWG.L": "NatWest Group",
  "PCT.L": "Polar Capital Technology Trust",
  "PFG": "Principal Financial Group",
+ "PGHN.SW": "Partners Group Holding AG",
  "PGR": "Progressive Corporation",
  "PNC": "PNC Financial Services",
  "PRU": "Prudential Financial",
@@ -502,10 +519,13 @@
  "PYPL": "PayPal",
  "RF": "Regions Financial Corporation",
  "RJF": "Raymond James Financial",
+ "SAN.MC": "Banco Santander",
  "SCHW": "Charles Schwab Corporation",
  "SDLF.L": "Standard Life",
+ "SLHN.SW": "Swiss Life Holding AG",
  "SMT.L": "Scottish Mortgage Investment Trust",
  "SPGI": "S&P Global",
+ "SREN.SW": "Swiss Reinsurance Company Ltd",
  "STAN.L": "Standard Chartered",
  "STJ.L": "St. James's Place",
  "STT": "State Street Corporation",
@@ -513,23 +533,26 @@
  "TFC": "Truist Financial",
  "TROW": "T. Rowe Price",
  "TRV": "Travelers Companies (The)",
+ "UBSG.SW": "UBS Group AG",
+ "UCG.MI": "UniCredit",
  "USB": "U.S. Bancorp",
  "V": "Visa",
  "WFC": "Wells Fargo",
  "WRB": "W. R. Berkley Corporation",
  "WTW": "Willis Towers Watson",
- "XYZ": "Block, Inc."
+ "XYZ": "Block, Inc.",
+ "ZURN.SW": "Zurich Insurance Group AG"
 };
 
   const CAT_LABELS = {
     'diversified-banks': 'Diversified Banks',
     'asset-management-custody-banks': 'Asset Management & Custody Banks',
     'investment-banking-brokerage': 'Investment Banking & Brokerage',
-    'property-casualty-insurance': 'Property & Casualty Insurance',
+    'other': 'Other',
     'financial-exchanges-data': 'Financial Exchanges & Data',
     'life-health-insurance': 'Life & Health Insurance',
+    'property-casualty-insurance': 'Property & Casualty Insurance',
     'transaction-payment-processing-services': 'Transaction & Payment Processing Services',
-    'insurance-brokers': 'Insurance Brokers',
     'regional-banks': 'Regional Banks',
     'other': 'Other',
   };
@@ -538,11 +561,11 @@
     'diversified-banks': 'Financials: Diversified Banks',
     'asset-management-custody-banks': 'Financials: Asset Management & Custody Banks',
     'investment-banking-brokerage': 'Financials: Investment Banking & Brokerage',
-    'property-casualty-insurance': 'Financials: Property & Casualty Insurance',
+    'other': 'Financials: Other',
     'financial-exchanges-data': 'Financials: Financial Exchanges & Data',
     'life-health-insurance': 'Financials: Life & Health Insurance',
+    'property-casualty-insurance': 'Financials: Property & Casualty Insurance',
     'transaction-payment-processing-services': 'Financials: Transaction & Payment Processing Services',
-    'insurance-brokers': 'Financials: Insurance Brokers',
     'regional-banks': 'Financials: Regional Banks',
     'other': 'Financials: Other',
   };

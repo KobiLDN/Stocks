@@ -102,11 +102,11 @@
   }
   .cat-aerospace-defense { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
   .cat-industrial-machinery-supplies-components { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
-  .cat-building-products { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
-  .cat-electrical-components-equipment { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-industrial-support-services { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-air-freight-logistics { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
-  .cat-construction-engineering { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-electrical-components-equipment { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .cat-building-products { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
+  .cat-construction-engineering { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-industrial-support-services { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-air-freight-logistics { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
   .cat-construction-machinery-heavy-transportation-equipment { background: rgba(255,215,0,0.1); color: var(--gold); border: 1px solid rgba(255,215,0,0.25); }
   .cat-environmental-facilities-services { background: rgba(163,230,53,0.1); color: var(--lime); border: 1px solid rgba(163,230,53,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
@@ -290,7 +290,9 @@
 <script>
   /* ---- DATA ---- */
   const NAMES = {
+ "ABBN.SW": "ABB Ltd",
  "ADP": "Automatic Data Processing",
+ "AIR.PA": "Airbus",
  "ALLE": "Allegion",
  "AME": "Ametek",
  "AOS": "A. O. Smith",
@@ -304,6 +306,7 @@
  "BE": "Bloom Energy",
  "BNZL.L": "Bunzl",
  "BR": "Broadridge Financial Solutions",
+ "BVI.PA": "Bureau Veritas",
  "BWXT": "BWX Technologies",
  "CARR": "Carrier Global",
  "CAT": "Caterpillar",
@@ -316,12 +319,17 @@
  "DCC.L": "DCC Energy",
  "DD": "DuPont",
  "DE": "Deere & Company",
+ "DG.PA": "Vinci",
+ "DHL.DE": "Deutsche Post",
  "DOV": "Dover Corporation",
  "DPLM.L": "Diploma",
  "DRS": "Leonardo DRS",
+ "DTG.DE": "Daimler Truck",
  "EFX": "Equifax",
  "EME": "Emcor",
  "EMR": "Emerson Electric",
+ "EN.PA": "Bouygues",
+ "ENR.DE": "Siemens Energy",
  "ETN": "Eaton Corporation",
  "EXPD": "Expeditors International",
  "EXPN.L": "Experian",
@@ -330,16 +338,20 @@
  "FDXF": "FedEx Freight",
  "FER": "Ferrovial",
  "FERG": "Ferguson Enterprises",
+ "FGR.PA": "Eiffage",
  "FIX": "Comfort Systems USA",
  "FTV": "Fortive",
+ "G1A.DE": "GEA Group",
  "GD": "General Dynamics",
  "GE": "GE Aerospace",
+ "GEBN.SW": "Geberit AG",
  "GEV": "GE Vernova",
  "GNRC": "Generac",
  "GWW": "W. W. Grainger",
  "HEI": "HEICO Corporation",
  "HII": "Huntington Ingalls Industries",
  "HLMA.L": "Halma plc",
+ "HO.PA": "Thales",
  "HON": "Honeywell",
  "HONA": "Honeywell Aerospace",
  "HUBB": "Hubbell Incorporated",
@@ -357,11 +369,13 @@
  "LHX": "L3Harris Technologies",
  "LII": "Lennox International",
  "LMT": "Lockheed Martin",
+ "LR.PA": "Legrand",
  "LUV": "Southwest Airlines",
  "MAS": "Masco",
  "MMM": "3M",
  "MRCY": "Mercury Systems",
  "MRO.L": "Melrose Industries",
+ "MTX.DE": "MTU Aero Engines",
  "NDSN": "Nordson Corporation",
  "NNE": "NANO Nuclear Energy",
  "NOC": "Northrop Grumman",
@@ -377,6 +391,7 @@
  "PWR": "Quanta Services",
  "QQ.L": "QinetiQ Group",
  "RCAT": "Red Cat Holdings",
+ "RHM.DE": "Rheinmetall",
  "RKLB": "Rocket Lab USA",
  "ROK": "Rockwell Automation",
  "ROL": "Rollins, Inc.",
@@ -384,11 +399,15 @@
  "RSG": "Republic Services",
  "RTO.L": "Rentokil Initial",
  "RTX": "RTX Corporation",
+ "SAF.PA": "Safran",
+ "SGO.PA": "Saint-Gobain",
+ "SIE.DE": "Siemens",
  "SMIN.L": "Smiths Group",
  "SMR": "NuScale Power",
  "SNA": "Snap-on",
  "SPCX": "SpaceX",
  "SPX.L": "Spirax Group",
+ "SU.PA": "Schneider Electric",
  "SWK": "Stanley Black & Decker",
  "TDG": "TransDigm Group",
  "TRI": "Thomson Reuters",
@@ -399,6 +418,7 @@
  "UNP": "Union Pacific Corporation",
  "UPS": "United Parcel Service",
  "URI": "United Rentals",
+ "VIE.PA": "Veolia",
  "VLTO": "Veralto",
  "VRSK": "Verisk Analytics",
  "VRT": "Vertiv Holdings",
@@ -411,11 +431,11 @@
   const CAT_LABELS = {
     'aerospace-defense': 'Aerospace & Defense',
     'industrial-machinery-supplies-components': 'Industrial Machinery & Supplies & Components',
-    'building-products': 'Building Products',
     'electrical-components-equipment': 'Electrical Components & Equipment',
+    'building-products': 'Building Products',
+    'construction-engineering': 'Construction & Engineering',
     'industrial-support-services': 'Industrial Support Services',
     'air-freight-logistics': 'Air Freight & Logistics',
-    'construction-engineering': 'Construction & Engineering',
     'construction-machinery-heavy-transportation-equipment': 'Construction Machinery & Heavy Transportation Equipment',
     'environmental-facilities-services': 'Environmental & Facilities Services',
     'other': 'Other',

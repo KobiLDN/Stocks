@@ -220,6 +220,8 @@
       return 'LSE:' + epic + (epic.length < 3 ? '.' : '');
     }
     if (stock.exchange === 'TADAWUL') return 'TADAWUL:' + t.split('.')[0];
+    const EU = { XETRA: 'XETR', EURONEXT: 'EURONEXT', MIL: 'MIL', BME: 'BME', HEL: 'OMXHEX', SIX: 'SIX' };   // #110
+    if (EU[stock.exchange]) return EU[stock.exchange] + ':' + t.replace(/\.[A-Z]+$/, '').replace(/-/g, '_');
     if (stock.exchange) return stock.exchange + ':' + t.replace(/-/g, '.');   // BRK-B -> NYSE:BRK.B
     return t;
   }

@@ -1,0 +1,2523 @@
+{
+ "index": "sp500",
+ "date": "2026-11-23",
+ "source": "en.wikipedia.org",
+ "count": 503,
+ "members": [
+  {
+   "yahoo": "A",
+   "name": "Agilent Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "AAPL",
+   "name": "Apple Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "ABBV",
+   "name": "AbbVie",
+   "isin": null
+  },
+  {
+   "yahoo": "ABNB",
+   "name": "Airbnb",
+   "isin": null
+  },
+  {
+   "yahoo": "ABT",
+   "name": "Abbott Laboratories",
+   "isin": null
+  },
+  {
+   "yahoo": "ACGL",
+   "name": "Arch Capital Group",
+   "isin": null
+  },
+  {
+   "yahoo": "ACN",
+   "name": "Accenture",
+   "isin": null
+  },
+  {
+   "yahoo": "ADBE",
+   "name": "Adobe Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "ADI",
+   "name": "Analog Devices",
+   "isin": null
+  },
+  {
+   "yahoo": "ADM",
+   "name": "Archer Daniels Midland",
+   "isin": null
+  },
+  {
+   "yahoo": "ADP",
+   "name": "Automatic Data Processing",
+   "isin": null
+  },
+  {
+   "yahoo": "ADSK",
+   "name": "Autodesk",
+   "isin": null
+  },
+  {
+   "yahoo": "AEE",
+   "name": "Ameren",
+   "isin": null
+  },
+  {
+   "yahoo": "AEP",
+   "name": "American Electric Power",
+   "isin": null
+  },
+  {
+   "yahoo": "AES",
+   "name": "AES Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "AFL",
+   "name": "Aflac",
+   "isin": null
+  },
+  {
+   "yahoo": "AIG",
+   "name": "American International Group",
+   "isin": null
+  },
+  {
+   "yahoo": "AIZ",
+   "name": "Assurant",
+   "isin": null
+  },
+  {
+   "yahoo": "AJG",
+   "name": "Arthur J. Gallagher & Co.",
+   "isin": null
+  },
+  {
+   "yahoo": "AKAM",
+   "name": "Akamai Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "ALB",
+   "name": "Albemarle Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "ALGN",
+   "name": "Align Technology",
+   "isin": null
+  },
+  {
+   "yahoo": "ALL",
+   "name": "Allstate",
+   "isin": null
+  },
+  {
+   "yahoo": "ALLE",
+   "name": "Allegion",
+   "isin": null
+  },
+  {
+   "yahoo": "AMAT",
+   "name": "Applied Materials",
+   "isin": null
+  },
+  {
+   "yahoo": "AMCR",
+   "name": "Amcor",
+   "isin": null
+  },
+  {
+   "yahoo": "AMD",
+   "name": "Advanced Micro Devices",
+   "isin": null
+  },
+  {
+   "yahoo": "AME",
+   "name": "Ametek",
+   "isin": null
+  },
+  {
+   "yahoo": "AMGN",
+   "name": "Amgen",
+   "isin": null
+  },
+  {
+   "yahoo": "AMP",
+   "name": "Ameriprise Financial",
+   "isin": null
+  },
+  {
+   "yahoo": "AMT",
+   "name": "American Tower",
+   "isin": null
+  },
+  {
+   "yahoo": "AMZN",
+   "name": "Amazon",
+   "isin": null
+  },
+  {
+   "yahoo": "ANET",
+   "name": "Arista Networks",
+   "isin": null
+  },
+  {
+   "yahoo": "AON",
+   "name": "Aon plc",
+   "isin": null
+  },
+  {
+   "yahoo": "AOS",
+   "name": "A. O. Smith",
+   "isin": null
+  },
+  {
+   "yahoo": "APA",
+   "name": "APA Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "APD",
+   "name": "Air Products",
+   "isin": null
+  },
+  {
+   "yahoo": "APH",
+   "name": "Amphenol",
+   "isin": null
+  },
+  {
+   "yahoo": "APO",
+   "name": "Apollo Global Management",
+   "isin": null
+  },
+  {
+   "yahoo": "APP",
+   "name": "AppLovin",
+   "isin": null
+  },
+  {
+   "yahoo": "APTV",
+   "name": "Aptiv",
+   "isin": null
+  },
+  {
+   "yahoo": "ARE",
+   "name": "Alexandria Real Estate Equities",
+   "isin": null
+  },
+  {
+   "yahoo": "ARES",
+   "name": "Ares Management",
+   "isin": null
+  },
+  {
+   "yahoo": "ATO",
+   "name": "Atmos Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "AVGO",
+   "name": "Broadcom",
+   "isin": null
+  },
+  {
+   "yahoo": "AVY",
+   "name": "Avery Dennison",
+   "isin": null
+  },
+  {
+   "yahoo": "AWK",
+   "name": "American Water Works",
+   "isin": null
+  },
+  {
+   "yahoo": "AXON",
+   "name": "Axon Enterprise",
+   "isin": null
+  },
+  {
+   "yahoo": "AXP",
+   "name": "American Express",
+   "isin": null
+  },
+  {
+   "yahoo": "AZO",
+   "name": "AutoZone",
+   "isin": null
+  },
+  {
+   "yahoo": "BA",
+   "name": "Boeing",
+   "isin": null
+  },
+  {
+   "yahoo": "BAC",
+   "name": "Bank of America",
+   "isin": null
+  },
+  {
+   "yahoo": "BALL",
+   "name": "Ball Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "BAX",
+   "name": "Baxter International",
+   "isin": null
+  },
+  {
+   "yahoo": "BBY",
+   "name": "Best Buy",
+   "isin": null
+  },
+  {
+   "yahoo": "BDX",
+   "name": "Becton Dickinson",
+   "isin": null
+  },
+  {
+   "yahoo": "BE",
+   "name": "Bloom Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "BEN",
+   "name": "Franklin Resources",
+   "isin": null
+  },
+  {
+   "yahoo": "BF-B",
+   "name": "Brown–Forman",
+   "isin": null
+  },
+  {
+   "yahoo": "BG",
+   "name": "Bunge Global",
+   "isin": null
+  },
+  {
+   "yahoo": "BIIB",
+   "name": "Biogen",
+   "isin": null
+  },
+  {
+   "yahoo": "BKNG",
+   "name": "Booking Holdings",
+   "isin": null
+  },
+  {
+   "yahoo": "BKR",
+   "name": "Baker Hughes",
+   "isin": null
+  },
+  {
+   "yahoo": "BLK",
+   "name": "BlackRock",
+   "isin": null
+  },
+  {
+   "yahoo": "BMY",
+   "name": "Bristol Myers Squibb",
+   "isin": null
+  },
+  {
+   "yahoo": "BNY",
+   "name": "BNY Mellon",
+   "isin": null
+  },
+  {
+   "yahoo": "BR",
+   "name": "Broadridge Financial Solutions",
+   "isin": null
+  },
+  {
+   "yahoo": "BRK-B",
+   "name": "Berkshire Hathaway",
+   "isin": null
+  },
+  {
+   "yahoo": "BRO",
+   "name": "Brown & Brown",
+   "isin": null
+  },
+  {
+   "yahoo": "BSX",
+   "name": "Boston Scientific",
+   "isin": null
+  },
+  {
+   "yahoo": "BX",
+   "name": "Blackstone Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "BXP",
+   "name": "BXP, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "C",
+   "name": "Citigroup",
+   "isin": null
+  },
+  {
+   "yahoo": "CAH",
+   "name": "Cardinal Health",
+   "isin": null
+  },
+  {
+   "yahoo": "CARR",
+   "name": "Carrier Global",
+   "isin": null
+  },
+  {
+   "yahoo": "CASY",
+   "name": "Casey's",
+   "isin": null
+  },
+  {
+   "yahoo": "CAT",
+   "name": "Caterpillar Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "CB",
+   "name": "Chubb Limited",
+   "isin": null
+  },
+  {
+   "yahoo": "CBOE",
+   "name": "Cboe Global Markets",
+   "isin": null
+  },
+  {
+   "yahoo": "CBRE",
+   "name": "CBRE Group",
+   "isin": null
+  },
+  {
+   "yahoo": "CCI",
+   "name": "Crown Castle",
+   "isin": null
+  },
+  {
+   "yahoo": "CCL",
+   "name": "Carnival Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "CDNS",
+   "name": "Cadence Design Systems",
+   "isin": null
+  },
+  {
+   "yahoo": "CDW",
+   "name": "CDW Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "CEG",
+   "name": "Constellation Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "CF",
+   "name": "CF Industries",
+   "isin": null
+  },
+  {
+   "yahoo": "CFG",
+   "name": "Citizens Financial Group",
+   "isin": null
+  },
+  {
+   "yahoo": "CHD",
+   "name": "Church & Dwight",
+   "isin": null
+  },
+  {
+   "yahoo": "CHRW",
+   "name": "C.H. Robinson",
+   "isin": null
+  },
+  {
+   "yahoo": "CHTR",
+   "name": "Charter Communications",
+   "isin": null
+  },
+  {
+   "yahoo": "CI",
+   "name": "Cigna",
+   "isin": null
+  },
+  {
+   "yahoo": "CIEN",
+   "name": "Ciena",
+   "isin": null
+  },
+  {
+   "yahoo": "CINF",
+   "name": "Cincinnati Financial",
+   "isin": null
+  },
+  {
+   "yahoo": "CL",
+   "name": "Colgate-Palmolive",
+   "isin": null
+  },
+  {
+   "yahoo": "CLX",
+   "name": "Clorox",
+   "isin": null
+  },
+  {
+   "yahoo": "CMCSA",
+   "name": "Comcast",
+   "isin": null
+  },
+  {
+   "yahoo": "CME",
+   "name": "CME Group",
+   "isin": null
+  },
+  {
+   "yahoo": "CMG",
+   "name": "Chipotle Mexican Grill",
+   "isin": null
+  },
+  {
+   "yahoo": "CMI",
+   "name": "Cummins",
+   "isin": null
+  },
+  {
+   "yahoo": "CMS",
+   "name": "CMS Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "CNC",
+   "name": "Centene Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "CNP",
+   "name": "CenterPoint Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "COF",
+   "name": "Capital One",
+   "isin": null
+  },
+  {
+   "yahoo": "COHR",
+   "name": "Coherent Corp.",
+   "isin": null
+  },
+  {
+   "yahoo": "COIN",
+   "name": "Coinbase",
+   "isin": null
+  },
+  {
+   "yahoo": "COO",
+   "name": "Cooper Companies (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "COP",
+   "name": "ConocoPhillips",
+   "isin": null
+  },
+  {
+   "yahoo": "COR",
+   "name": "Cencora",
+   "isin": null
+  },
+  {
+   "yahoo": "COST",
+   "name": "Costco",
+   "isin": null
+  },
+  {
+   "yahoo": "CPAY",
+   "name": "Corpay",
+   "isin": null
+  },
+  {
+   "yahoo": "CPRT",
+   "name": "Copart",
+   "isin": null
+  },
+  {
+   "yahoo": "CPT",
+   "name": "Camden Property Trust",
+   "isin": null
+  },
+  {
+   "yahoo": "CRH",
+   "name": "CRH plc",
+   "isin": null
+  },
+  {
+   "yahoo": "CRL",
+   "name": "Charles River Laboratories",
+   "isin": null
+  },
+  {
+   "yahoo": "CRM",
+   "name": "Salesforce",
+   "isin": null
+  },
+  {
+   "yahoo": "CRWD",
+   "name": "CrowdStrike",
+   "isin": null
+  },
+  {
+   "yahoo": "CSCO",
+   "name": "Cisco",
+   "isin": null
+  },
+  {
+   "yahoo": "CSGP",
+   "name": "CoStar Group",
+   "isin": null
+  },
+  {
+   "yahoo": "CSX",
+   "name": "CSX Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "CTAS",
+   "name": "Cintas",
+   "isin": null
+  },
+  {
+   "yahoo": "CTSH",
+   "name": "Cognizant",
+   "isin": null
+  },
+  {
+   "yahoo": "CVNA",
+   "name": "Carvana",
+   "isin": null
+  },
+  {
+   "yahoo": "CVS",
+   "name": "CVS Health",
+   "isin": null
+  },
+  {
+   "yahoo": "CVX",
+   "name": "Chevron Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "D",
+   "name": "Dominion Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "DAL",
+   "name": "Delta Air Lines",
+   "isin": null
+  },
+  {
+   "yahoo": "DASH",
+   "name": "DoorDash",
+   "isin": null
+  },
+  {
+   "yahoo": "DD",
+   "name": "DuPont",
+   "isin": null
+  },
+  {
+   "yahoo": "DDOG",
+   "name": "Datadog",
+   "isin": null
+  },
+  {
+   "yahoo": "DE",
+   "name": "Deere & Company",
+   "isin": null
+  },
+  {
+   "yahoo": "DECK",
+   "name": "Deckers Brands",
+   "isin": null
+  },
+  {
+   "yahoo": "DELL",
+   "name": "Dell Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "DG",
+   "name": "Dollar General",
+   "isin": null
+  },
+  {
+   "yahoo": "DGX",
+   "name": "Quest Diagnostics",
+   "isin": null
+  },
+  {
+   "yahoo": "DHI",
+   "name": "D. R. Horton",
+   "isin": null
+  },
+  {
+   "yahoo": "DHR",
+   "name": "Danaher Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "DIS",
+   "name": "Walt Disney Company (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "DLR",
+   "name": "Digital Realty",
+   "isin": null
+  },
+  {
+   "yahoo": "DLTR",
+   "name": "Dollar Tree",
+   "isin": null
+  },
+  {
+   "yahoo": "DOC",
+   "name": "Healthpeak Properties",
+   "isin": null
+  },
+  {
+   "yahoo": "DOV",
+   "name": "Dover Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "DOW",
+   "name": "Dow Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "DPZ",
+   "name": "Domino's",
+   "isin": null
+  },
+  {
+   "yahoo": "DRI",
+   "name": "Darden Restaurants",
+   "isin": null
+  },
+  {
+   "yahoo": "DTE",
+   "name": "DTE Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "DUK",
+   "name": "Duke Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "DVA",
+   "name": "DaVita",
+   "isin": null
+  },
+  {
+   "yahoo": "DVN",
+   "name": "Devon Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "DXCM",
+   "name": "Dexcom",
+   "isin": null
+  },
+  {
+   "yahoo": "EBAY",
+   "name": "eBay Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "ECHO",
+   "name": "EchoStar",
+   "isin": null
+  },
+  {
+   "yahoo": "ECL",
+   "name": "Ecolab",
+   "isin": null
+  },
+  {
+   "yahoo": "ED",
+   "name": "Consolidated Edison",
+   "isin": null
+  },
+  {
+   "yahoo": "EFX",
+   "name": "Equifax",
+   "isin": null
+  },
+  {
+   "yahoo": "EG",
+   "name": "Everest Group",
+   "isin": null
+  },
+  {
+   "yahoo": "EIX",
+   "name": "Edison International",
+   "isin": null
+  },
+  {
+   "yahoo": "EL",
+   "name": "Estée Lauder Companies (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "ELV",
+   "name": "Elevance Health",
+   "isin": null
+  },
+  {
+   "yahoo": "EME",
+   "name": "Emcor",
+   "isin": null
+  },
+  {
+   "yahoo": "EMR",
+   "name": "Emerson Electric",
+   "isin": null
+  },
+  {
+   "yahoo": "EOG",
+   "name": "EOG Resources",
+   "isin": null
+  },
+  {
+   "yahoo": "EQIX",
+   "name": "Equinix",
+   "isin": null
+  },
+  {
+   "yahoo": "EQT",
+   "name": "EQT Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "ERIE",
+   "name": "Erie Indemnity",
+   "isin": null
+  },
+  {
+   "yahoo": "ES",
+   "name": "Eversource Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "ESS",
+   "name": "Essex Property Trust",
+   "isin": null
+  },
+  {
+   "yahoo": "ETN",
+   "name": "Eaton Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "ETR",
+   "name": "Entergy",
+   "isin": null
+  },
+  {
+   "yahoo": "EVRG",
+   "name": "Evergy",
+   "isin": null
+  },
+  {
+   "yahoo": "EW",
+   "name": "Edwards Lifesciences",
+   "isin": null
+  },
+  {
+   "yahoo": "EXC",
+   "name": "Exelon",
+   "isin": null
+  },
+  {
+   "yahoo": "EXE",
+   "name": "Expand Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "EXPD",
+   "name": "Expeditors International",
+   "isin": null
+  },
+  {
+   "yahoo": "EXPE",
+   "name": "Expedia Group",
+   "isin": null
+  },
+  {
+   "yahoo": "EXR",
+   "name": "Extra Space Storage",
+   "isin": null
+  },
+  {
+   "yahoo": "F",
+   "name": "Ford Motor Company",
+   "isin": null
+  },
+  {
+   "yahoo": "FANG",
+   "name": "Diamondback Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "FAST",
+   "name": "Fastenal",
+   "isin": null
+  },
+  {
+   "yahoo": "FCX",
+   "name": "Freeport-McMoRan",
+   "isin": null
+  },
+  {
+   "yahoo": "FDS",
+   "name": "FactSet",
+   "isin": null
+  },
+  {
+   "yahoo": "FDX",
+   "name": "FedEx",
+   "isin": null
+  },
+  {
+   "yahoo": "FDXF",
+   "name": "FedEx Freight",
+   "isin": null
+  },
+  {
+   "yahoo": "FE",
+   "name": "FirstEnergy",
+   "isin": null
+  },
+  {
+   "yahoo": "FERG",
+   "name": "Ferguson Enterprises",
+   "isin": null
+  },
+  {
+   "yahoo": "FFIV",
+   "name": "F5, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "FICO",
+   "name": "Fair Isaac",
+   "isin": null
+  },
+  {
+   "yahoo": "FIS",
+   "name": "Fidelity National Information Services",
+   "isin": null
+  },
+  {
+   "yahoo": "FISV",
+   "name": "Fiserv",
+   "isin": null
+  },
+  {
+   "yahoo": "FITB",
+   "name": "Fifth Third Bancorp",
+   "isin": null
+  },
+  {
+   "yahoo": "FIX",
+   "name": "Comfort Systems USA",
+   "isin": null
+  },
+  {
+   "yahoo": "FLEX",
+   "name": "Flex Ltd.",
+   "isin": null
+  },
+  {
+   "yahoo": "FOX",
+   "name": "Fox Corporation (Class B)",
+   "isin": null
+  },
+  {
+   "yahoo": "FOXA",
+   "name": "Fox Corporation (Class A)",
+   "isin": null
+  },
+  {
+   "yahoo": "FRT",
+   "name": "Federal Realty Investment Trust",
+   "isin": null
+  },
+  {
+   "yahoo": "FSLR",
+   "name": "First Solar",
+   "isin": null
+  },
+  {
+   "yahoo": "FTNT",
+   "name": "Fortinet",
+   "isin": null
+  },
+  {
+   "yahoo": "FTV",
+   "name": "Fortive",
+   "isin": null
+  },
+  {
+   "yahoo": "GD",
+   "name": "General Dynamics",
+   "isin": null
+  },
+  {
+   "yahoo": "GDDY",
+   "name": "GoDaddy",
+   "isin": null
+  },
+  {
+   "yahoo": "GE",
+   "name": "GE Aerospace",
+   "isin": null
+  },
+  {
+   "yahoo": "GEHC",
+   "name": "GE HealthCare",
+   "isin": null
+  },
+  {
+   "yahoo": "GEN",
+   "name": "Gen Digital",
+   "isin": null
+  },
+  {
+   "yahoo": "GEV",
+   "name": "GE Vernova",
+   "isin": null
+  },
+  {
+   "yahoo": "GILD",
+   "name": "Gilead Sciences",
+   "isin": null
+  },
+  {
+   "yahoo": "GIS",
+   "name": "General Mills",
+   "isin": null
+  },
+  {
+   "yahoo": "GL",
+   "name": "Globe Life",
+   "isin": null
+  },
+  {
+   "yahoo": "GLW",
+   "name": "Corning Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "GM",
+   "name": "General Motors",
+   "isin": null
+  },
+  {
+   "yahoo": "GNRC",
+   "name": "Generac",
+   "isin": null
+  },
+  {
+   "yahoo": "GOOG",
+   "name": "Alphabet Inc. (Class C)",
+   "isin": null
+  },
+  {
+   "yahoo": "GOOGL",
+   "name": "Alphabet Inc. (Class A)",
+   "isin": null
+  },
+  {
+   "yahoo": "GPC",
+   "name": "Genuine Parts Company",
+   "isin": null
+  },
+  {
+   "yahoo": "GPN",
+   "name": "Global Payments",
+   "isin": null
+  },
+  {
+   "yahoo": "GRMN",
+   "name": "Garmin",
+   "isin": null
+  },
+  {
+   "yahoo": "GS",
+   "name": "Goldman Sachs",
+   "isin": null
+  },
+  {
+   "yahoo": "GWW",
+   "name": "W. W. Grainger",
+   "isin": null
+  },
+  {
+   "yahoo": "HAL",
+   "name": "Halliburton",
+   "isin": null
+  },
+  {
+   "yahoo": "HAS",
+   "name": "Hasbro",
+   "isin": null
+  },
+  {
+   "yahoo": "HBAN",
+   "name": "Huntington Bancshares",
+   "isin": null
+  },
+  {
+   "yahoo": "HCA",
+   "name": "HCA Healthcare",
+   "isin": null
+  },
+  {
+   "yahoo": "HD",
+   "name": "Home Depot (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "HIG",
+   "name": "Hartford (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "HII",
+   "name": "Huntington Ingalls Industries",
+   "isin": null
+  },
+  {
+   "yahoo": "HLT",
+   "name": "Hilton Worldwide",
+   "isin": null
+  },
+  {
+   "yahoo": "HON",
+   "name": "Honeywell Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "HONA",
+   "name": "Honeywell Aerospace",
+   "isin": null
+  },
+  {
+   "yahoo": "HOOD",
+   "name": "Robinhood Markets",
+   "isin": null
+  },
+  {
+   "yahoo": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "isin": null
+  },
+  {
+   "yahoo": "HPQ",
+   "name": "HP Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "HRL",
+   "name": "Hormel Foods",
+   "isin": null
+  },
+  {
+   "yahoo": "HSIC",
+   "name": "Henry Schein",
+   "isin": null
+  },
+  {
+   "yahoo": "HST",
+   "name": "Host Hotels & Resorts",
+   "isin": null
+  },
+  {
+   "yahoo": "HSY",
+   "name": "Hershey Company (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "HUBB",
+   "name": "Hubbell Incorporated",
+   "isin": null
+  },
+  {
+   "yahoo": "HUM",
+   "name": "Humana",
+   "isin": null
+  },
+  {
+   "yahoo": "HWM",
+   "name": "Howmet Aerospace",
+   "isin": null
+  },
+  {
+   "yahoo": "IBKR",
+   "name": "Interactive Brokers",
+   "isin": null
+  },
+  {
+   "yahoo": "IBM",
+   "name": "IBM",
+   "isin": null
+  },
+  {
+   "yahoo": "ICE",
+   "name": "Intercontinental Exchange",
+   "isin": null
+  },
+  {
+   "yahoo": "IDXX",
+   "name": "Idexx Laboratories",
+   "isin": null
+  },
+  {
+   "yahoo": "IEX",
+   "name": "IDEX Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "IFF",
+   "name": "International Flavors & Fragrances",
+   "isin": null
+  },
+  {
+   "yahoo": "ILMN",
+   "name": "Illumina, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "INCY",
+   "name": "Incyte",
+   "isin": null
+  },
+  {
+   "yahoo": "INTC",
+   "name": "Intel",
+   "isin": null
+  },
+  {
+   "yahoo": "INTU",
+   "name": "Intuit",
+   "isin": null
+  },
+  {
+   "yahoo": "INVH",
+   "name": "Invitation Homes",
+   "isin": null
+  },
+  {
+   "yahoo": "IP",
+   "name": "International Paper",
+   "isin": null
+  },
+  {
+   "yahoo": "IQV",
+   "name": "IQVIA",
+   "isin": null
+  },
+  {
+   "yahoo": "IR",
+   "name": "Ingersoll Rand",
+   "isin": null
+  },
+  {
+   "yahoo": "IRM",
+   "name": "Iron Mountain",
+   "isin": null
+  },
+  {
+   "yahoo": "ISRG",
+   "name": "Intuitive Surgical",
+   "isin": null
+  },
+  {
+   "yahoo": "IT",
+   "name": "Gartner",
+   "isin": null
+  },
+  {
+   "yahoo": "ITW",
+   "name": "Illinois Tool Works",
+   "isin": null
+  },
+  {
+   "yahoo": "IVZ",
+   "name": "Invesco",
+   "isin": null
+  },
+  {
+   "yahoo": "J",
+   "name": "Jacobs Solutions",
+   "isin": null
+  },
+  {
+   "yahoo": "JBHT",
+   "name": "J.B. Hunt",
+   "isin": null
+  },
+  {
+   "yahoo": "JBL",
+   "name": "Jabil",
+   "isin": null
+  },
+  {
+   "yahoo": "JCI",
+   "name": "Johnson Controls",
+   "isin": null
+  },
+  {
+   "yahoo": "JKHY",
+   "name": "Jack Henry & Associates",
+   "isin": null
+  },
+  {
+   "yahoo": "JNJ",
+   "name": "Johnson & Johnson",
+   "isin": null
+  },
+  {
+   "yahoo": "JPM",
+   "name": "JPMorgan Chase",
+   "isin": null
+  },
+  {
+   "yahoo": "KDP",
+   "name": "Keurig Dr Pepper",
+   "isin": null
+  },
+  {
+   "yahoo": "KEY",
+   "name": "KeyCorp",
+   "isin": null
+  },
+  {
+   "yahoo": "KEYS",
+   "name": "Keysight Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "KHC",
+   "name": "Kraft Heinz",
+   "isin": null
+  },
+  {
+   "yahoo": "KIM",
+   "name": "Kimco Realty",
+   "isin": null
+  },
+  {
+   "yahoo": "KKR",
+   "name": "KKR & Co.",
+   "isin": null
+  },
+  {
+   "yahoo": "KLAC",
+   "name": "KLA Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "KMB",
+   "name": "Kimberly-Clark",
+   "isin": null
+  },
+  {
+   "yahoo": "KMI",
+   "name": "Kinder Morgan",
+   "isin": null
+  },
+  {
+   "yahoo": "KO",
+   "name": "Coca-Cola Company (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "KR",
+   "name": "Kroger",
+   "isin": null
+  },
+  {
+   "yahoo": "L",
+   "name": "Loews Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "LDOS",
+   "name": "Leidos",
+   "isin": null
+  },
+  {
+   "yahoo": "LEN",
+   "name": "Lennar",
+   "isin": null
+  },
+  {
+   "yahoo": "LH",
+   "name": "Labcorp",
+   "isin": null
+  },
+  {
+   "yahoo": "LHX",
+   "name": "L3Harris",
+   "isin": null
+  },
+  {
+   "yahoo": "LII",
+   "name": "Lennox International",
+   "isin": null
+  },
+  {
+   "yahoo": "LIN",
+   "name": "Linde plc",
+   "isin": null
+  },
+  {
+   "yahoo": "LITE",
+   "name": "Lumentum",
+   "isin": null
+  },
+  {
+   "yahoo": "LLY",
+   "name": "Lilly (Eli)",
+   "isin": null
+  },
+  {
+   "yahoo": "LMT",
+   "name": "Lockheed Martin",
+   "isin": null
+  },
+  {
+   "yahoo": "LNT",
+   "name": "Alliant Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "LOW",
+   "name": "Lowe's",
+   "isin": null
+  },
+  {
+   "yahoo": "LRCX",
+   "name": "Lam Research",
+   "isin": null
+  },
+  {
+   "yahoo": "LULU",
+   "name": "Lululemon Athletica",
+   "isin": null
+  },
+  {
+   "yahoo": "LUV",
+   "name": "Southwest Airlines",
+   "isin": null
+  },
+  {
+   "yahoo": "LVS",
+   "name": "Las Vegas Sands",
+   "isin": null
+  },
+  {
+   "yahoo": "LYB",
+   "name": "LyondellBasell",
+   "isin": null
+  },
+  {
+   "yahoo": "LYV",
+   "name": "Live Nation Entertainment",
+   "isin": null
+  },
+  {
+   "yahoo": "MA",
+   "name": "Mastercard",
+   "isin": null
+  },
+  {
+   "yahoo": "MAA",
+   "name": "Mid-America Apartment Communities",
+   "isin": null
+  },
+  {
+   "yahoo": "MAR",
+   "name": "Marriott International",
+   "isin": null
+  },
+  {
+   "yahoo": "MAS",
+   "name": "Masco",
+   "isin": null
+  },
+  {
+   "yahoo": "MCD",
+   "name": "McDonald's",
+   "isin": null
+  },
+  {
+   "yahoo": "MCHP",
+   "name": "Microchip Technology",
+   "isin": null
+  },
+  {
+   "yahoo": "MCK",
+   "name": "McKesson",
+   "isin": null
+  },
+  {
+   "yahoo": "MCO",
+   "name": "Moody's Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "MDLZ",
+   "name": "Mondelez International",
+   "isin": null
+  },
+  {
+   "yahoo": "MDT",
+   "name": "Medtronic",
+   "isin": null
+  },
+  {
+   "yahoo": "MET",
+   "name": "MetLife",
+   "isin": null
+  },
+  {
+   "yahoo": "META",
+   "name": "Meta Platforms",
+   "isin": null
+  },
+  {
+   "yahoo": "MGM",
+   "name": "MGM Resorts",
+   "isin": null
+  },
+  {
+   "yahoo": "MKC",
+   "name": "McCormick & Company",
+   "isin": null
+  },
+  {
+   "yahoo": "MLM",
+   "name": "Martin Marietta Materials",
+   "isin": null
+  },
+  {
+   "yahoo": "MMM",
+   "name": "3M",
+   "isin": null
+  },
+  {
+   "yahoo": "MNST",
+   "name": "Monster Beverage",
+   "isin": null
+  },
+  {
+   "yahoo": "MO",
+   "name": "Altria",
+   "isin": null
+  },
+  {
+   "yahoo": "MOS",
+   "name": "Mosaic Company (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "MPC",
+   "name": "Marathon Petroleum",
+   "isin": null
+  },
+  {
+   "yahoo": "MPWR",
+   "name": "Monolithic Power Systems",
+   "isin": null
+  },
+  {
+   "yahoo": "MRK",
+   "name": "Merck & Co.",
+   "isin": null
+  },
+  {
+   "yahoo": "MRNA",
+   "name": "Moderna",
+   "isin": null
+  },
+  {
+   "yahoo": "MRSH",
+   "name": "Marsh McLennan",
+   "isin": null
+  },
+  {
+   "yahoo": "MRVL",
+   "name": "Marvell Technology",
+   "isin": null
+  },
+  {
+   "yahoo": "MS",
+   "name": "Morgan Stanley",
+   "isin": null
+  },
+  {
+   "yahoo": "MSCI",
+   "name": "MSCI",
+   "isin": null
+  },
+  {
+   "yahoo": "MSFT",
+   "name": "Microsoft",
+   "isin": null
+  },
+  {
+   "yahoo": "MSI",
+   "name": "Motorola Solutions",
+   "isin": null
+  },
+  {
+   "yahoo": "MTB",
+   "name": "M&T Bank",
+   "isin": null
+  },
+  {
+   "yahoo": "MTD",
+   "name": "Mettler Toledo",
+   "isin": null
+  },
+  {
+   "yahoo": "MU",
+   "name": "Micron Technology",
+   "isin": null
+  },
+  {
+   "yahoo": "NCLH",
+   "name": "Norwegian Cruise Line Holdings",
+   "isin": null
+  },
+  {
+   "yahoo": "NDAQ",
+   "name": "Nasdaq, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "NDSN",
+   "name": "Nordson Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "NEE",
+   "name": "NextEra Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "NEM",
+   "name": "Newmont",
+   "isin": null
+  },
+  {
+   "yahoo": "NFLX",
+   "name": "Netflix",
+   "isin": null
+  },
+  {
+   "yahoo": "NI",
+   "name": "NiSource",
+   "isin": null
+  },
+  {
+   "yahoo": "NKE",
+   "name": "Nike, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "NOC",
+   "name": "Northrop Grumman",
+   "isin": null
+  },
+  {
+   "yahoo": "NOW",
+   "name": "ServiceNow",
+   "isin": null
+  },
+  {
+   "yahoo": "NRG",
+   "name": "NRG Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "NSC",
+   "name": "Norfolk Southern",
+   "isin": null
+  },
+  {
+   "yahoo": "NTAP",
+   "name": "NetApp",
+   "isin": null
+  },
+  {
+   "yahoo": "NTRS",
+   "name": "Northern Trust",
+   "isin": null
+  },
+  {
+   "yahoo": "NUE",
+   "name": "Nucor",
+   "isin": null
+  },
+  {
+   "yahoo": "NVDA",
+   "name": "Nvidia",
+   "isin": null
+  },
+  {
+   "yahoo": "NVR",
+   "name": "NVR, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "NWS",
+   "name": "News Corp (Class B)",
+   "isin": null
+  },
+  {
+   "yahoo": "NWSA",
+   "name": "News Corp (Class A)",
+   "isin": null
+  },
+  {
+   "yahoo": "NXPI",
+   "name": "NXP Semiconductors",
+   "isin": null
+  },
+  {
+   "yahoo": "O",
+   "name": "Realty Income",
+   "isin": null
+  },
+  {
+   "yahoo": "ODFL",
+   "name": "Old Dominion",
+   "isin": null
+  },
+  {
+   "yahoo": "OKE",
+   "name": "Oneok",
+   "isin": null
+  },
+  {
+   "yahoo": "OKTA",
+   "name": "Okta, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "OMC",
+   "name": "Omnicom Group",
+   "isin": null
+  },
+  {
+   "yahoo": "ON",
+   "name": "ON Semiconductor",
+   "isin": null
+  },
+  {
+   "yahoo": "ORCL",
+   "name": "Oracle Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "ORLY",
+   "name": "O'Reilly Automotive",
+   "isin": null
+  },
+  {
+   "yahoo": "OTIS",
+   "name": "Otis Worldwide",
+   "isin": null
+  },
+  {
+   "yahoo": "OXY",
+   "name": "Occidental Petroleum",
+   "isin": null
+  },
+  {
+   "yahoo": "P",
+   "name": "Everpure",
+   "isin": null
+  },
+  {
+   "yahoo": "PANW",
+   "name": "Palo Alto Networks",
+   "isin": null
+  },
+  {
+   "yahoo": "PAYX",
+   "name": "Paychex",
+   "isin": null
+  },
+  {
+   "yahoo": "PCAR",
+   "name": "Paccar",
+   "isin": null
+  },
+  {
+   "yahoo": "PCG",
+   "name": "PG&E Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "PEG",
+   "name": "Public Service Enterprise Group",
+   "isin": null
+  },
+  {
+   "yahoo": "PEP",
+   "name": "PepsiCo",
+   "isin": null
+  },
+  {
+   "yahoo": "PFE",
+   "name": "Pfizer",
+   "isin": null
+  },
+  {
+   "yahoo": "PFG",
+   "name": "Principal Financial Group",
+   "isin": null
+  },
+  {
+   "yahoo": "PG",
+   "name": "Procter & Gamble",
+   "isin": null
+  },
+  {
+   "yahoo": "PGR",
+   "name": "Progressive Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "PH",
+   "name": "Parker Hannifin",
+   "isin": null
+  },
+  {
+   "yahoo": "PHM",
+   "name": "PulteGroup",
+   "isin": null
+  },
+  {
+   "yahoo": "PKG",
+   "name": "Packaging Corporation of America",
+   "isin": null
+  },
+  {
+   "yahoo": "PLD",
+   "name": "Prologis",
+   "isin": null
+  },
+  {
+   "yahoo": "PLTR",
+   "name": "Palantir Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "PM",
+   "name": "Philip Morris International",
+   "isin": null
+  },
+  {
+   "yahoo": "PNC",
+   "name": "PNC Financial Services",
+   "isin": null
+  },
+  {
+   "yahoo": "PNR",
+   "name": "Pentair",
+   "isin": null
+  },
+  {
+   "yahoo": "PNW",
+   "name": "Pinnacle West Capital",
+   "isin": null
+  },
+  {
+   "yahoo": "PODD",
+   "name": "Insulet Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "PPG",
+   "name": "PPG Industries",
+   "isin": null
+  },
+  {
+   "yahoo": "PPL",
+   "name": "PPL Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "PRU",
+   "name": "Prudential Financial",
+   "isin": null
+  },
+  {
+   "yahoo": "PSA",
+   "name": "Public Storage",
+   "isin": null
+  },
+  {
+   "yahoo": "PSX",
+   "name": "Phillips 66",
+   "isin": null
+  },
+  {
+   "yahoo": "PTC",
+   "name": "PTC Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "PWR",
+   "name": "Quanta Services",
+   "isin": null
+  },
+  {
+   "yahoo": "PYPL",
+   "name": "PayPal",
+   "isin": null
+  },
+  {
+   "yahoo": "Q",
+   "name": "Qnity Electronics",
+   "isin": null
+  },
+  {
+   "yahoo": "QCOM",
+   "name": "Qualcomm",
+   "isin": null
+  },
+  {
+   "yahoo": "RCL",
+   "name": "Royal Caribbean Group",
+   "isin": null
+  },
+  {
+   "yahoo": "RDDT",
+   "name": "Reddit",
+   "isin": null
+  },
+  {
+   "yahoo": "REG",
+   "name": "Regency Centers",
+   "isin": null
+  },
+  {
+   "yahoo": "REGN",
+   "name": "Regeneron Pharmaceuticals",
+   "isin": null
+  },
+  {
+   "yahoo": "RF",
+   "name": "Regions Financial Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "RJF",
+   "name": "Raymond James Financial",
+   "isin": null
+  },
+  {
+   "yahoo": "RL",
+   "name": "Ralph Lauren Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "RMD",
+   "name": "ResMed",
+   "isin": null
+  },
+  {
+   "yahoo": "ROK",
+   "name": "Rockwell Automation",
+   "isin": null
+  },
+  {
+   "yahoo": "ROL",
+   "name": "Rollins, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "ROP",
+   "name": "Roper Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "ROST",
+   "name": "Ross Stores",
+   "isin": null
+  },
+  {
+   "yahoo": "RSG",
+   "name": "Republic Services",
+   "isin": null
+  },
+  {
+   "yahoo": "RTX",
+   "name": "RTX Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "RVTY",
+   "name": "Revvity",
+   "isin": null
+  },
+  {
+   "yahoo": "SBAC",
+   "name": "SBA Communications",
+   "isin": null
+  },
+  {
+   "yahoo": "SBUX",
+   "name": "Starbucks",
+   "isin": null
+  },
+  {
+   "yahoo": "SCHW",
+   "name": "Charles Schwab Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "SHW",
+   "name": "Sherwin-Williams",
+   "isin": null
+  },
+  {
+   "yahoo": "SJM",
+   "name": "J.M. Smucker Company (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "SKYD",
+   "name": "Skydance",
+   "isin": null
+  },
+  {
+   "yahoo": "SLB",
+   "name": "Schlumberger",
+   "isin": null
+  },
+  {
+   "yahoo": "SMCI",
+   "name": "Supermicro",
+   "isin": null
+  },
+  {
+   "yahoo": "SNA",
+   "name": "Snap-on",
+   "isin": null
+  },
+  {
+   "yahoo": "SNDK",
+   "name": "Sandisk",
+   "isin": null
+  },
+  {
+   "yahoo": "SNPS",
+   "name": "Synopsys",
+   "isin": null
+  },
+  {
+   "yahoo": "SO",
+   "name": "Southern Company",
+   "isin": null
+  },
+  {
+   "yahoo": "SOLV",
+   "name": "Solventum",
+   "isin": null
+  },
+  {
+   "yahoo": "SPG",
+   "name": "Simon Property Group",
+   "isin": null
+  },
+  {
+   "yahoo": "SPGI",
+   "name": "S&P Global",
+   "isin": null
+  },
+  {
+   "yahoo": "SRE",
+   "name": "Sempra",
+   "isin": null
+  },
+  {
+   "yahoo": "STE",
+   "name": "Steris",
+   "isin": null
+  },
+  {
+   "yahoo": "STLD",
+   "name": "Steel Dynamics",
+   "isin": null
+  },
+  {
+   "yahoo": "STT",
+   "name": "State Street Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "STX",
+   "name": "Seagate Technology",
+   "isin": null
+  },
+  {
+   "yahoo": "STZ",
+   "name": "Constellation Brands",
+   "isin": null
+  },
+  {
+   "yahoo": "SW",
+   "name": "Smurfit Westrock",
+   "isin": null
+  },
+  {
+   "yahoo": "SWK",
+   "name": "Stanley Black & Decker",
+   "isin": null
+  },
+  {
+   "yahoo": "SWKS",
+   "name": "Skyworks Solutions",
+   "isin": null
+  },
+  {
+   "yahoo": "SYF",
+   "name": "Synchrony Financial",
+   "isin": null
+  },
+  {
+   "yahoo": "SYK",
+   "name": "Stryker Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "SYY",
+   "name": "Sysco",
+   "isin": null
+  },
+  {
+   "yahoo": "T",
+   "name": "AT&T",
+   "isin": null
+  },
+  {
+   "yahoo": "TDG",
+   "name": "TransDigm Group",
+   "isin": null
+  },
+  {
+   "yahoo": "TDY",
+   "name": "Teledyne Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "TECH",
+   "name": "Bio-Techne",
+   "isin": null
+  },
+  {
+   "yahoo": "TEL",
+   "name": "TE Connectivity",
+   "isin": null
+  },
+  {
+   "yahoo": "TER",
+   "name": "Teradyne",
+   "isin": null
+  },
+  {
+   "yahoo": "TFC",
+   "name": "Truist Financial",
+   "isin": null
+  },
+  {
+   "yahoo": "TGT",
+   "name": "Target Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "TJX",
+   "name": "TJX Companies",
+   "isin": null
+  },
+  {
+   "yahoo": "TKO",
+   "name": "TKO Group Holdings",
+   "isin": null
+  },
+  {
+   "yahoo": "TMO",
+   "name": "Thermo Fisher Scientific",
+   "isin": null
+  },
+  {
+   "yahoo": "TMUS",
+   "name": "T-Mobile US",
+   "isin": null
+  },
+  {
+   "yahoo": "TPL",
+   "name": "Texas Pacific Land Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "TPR",
+   "name": "Tapestry, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "TRGP",
+   "name": "Targa Resources",
+   "isin": null
+  },
+  {
+   "yahoo": "TRMB",
+   "name": "Trimble Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "TROW",
+   "name": "T. Rowe Price",
+   "isin": null
+  },
+  {
+   "yahoo": "TRV",
+   "name": "Travelers Companies (The)",
+   "isin": null
+  },
+  {
+   "yahoo": "TSCO",
+   "name": "Tractor Supply",
+   "isin": null
+  },
+  {
+   "yahoo": "TSLA",
+   "name": "Tesla, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "TSN",
+   "name": "Tyson Foods",
+   "isin": null
+  },
+  {
+   "yahoo": "TT",
+   "name": "Trane Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "TTWO",
+   "name": "Take-Two Interactive",
+   "isin": null
+  },
+  {
+   "yahoo": "TWLO",
+   "name": "Twilio",
+   "isin": null
+  },
+  {
+   "yahoo": "TXN",
+   "name": "Texas Instruments",
+   "isin": null
+  },
+  {
+   "yahoo": "TXT",
+   "name": "Textron",
+   "isin": null
+  },
+  {
+   "yahoo": "TYL",
+   "name": "Tyler Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "UAL",
+   "name": "United Airlines Holdings",
+   "isin": null
+  },
+  {
+   "yahoo": "UBER",
+   "name": "Uber",
+   "isin": null
+  },
+  {
+   "yahoo": "UDR",
+   "name": "UDR, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "UHS",
+   "name": "Universal Health Services",
+   "isin": null
+  },
+  {
+   "yahoo": "ULTA",
+   "name": "Ulta Beauty",
+   "isin": null
+  },
+  {
+   "yahoo": "UNH",
+   "name": "UnitedHealth Group",
+   "isin": null
+  },
+  {
+   "yahoo": "UNP",
+   "name": "Union Pacific Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "UPS",
+   "name": "United Parcel Service",
+   "isin": null
+  },
+  {
+   "yahoo": "URI",
+   "name": "United Rentals",
+   "isin": null
+  },
+  {
+   "yahoo": "USB",
+   "name": "U.S. Bancorp",
+   "isin": null
+  },
+  {
+   "yahoo": "V",
+   "name": "Visa Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "VEEV",
+   "name": "Veeva Systems",
+   "isin": null
+  },
+  {
+   "yahoo": "VICI",
+   "name": "Vici Properties",
+   "isin": null
+  },
+  {
+   "yahoo": "VLO",
+   "name": "Valero Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "VLTO",
+   "name": "Veralto",
+   "isin": null
+  },
+  {
+   "yahoo": "VMC",
+   "name": "Vulcan Materials Company",
+   "isin": null
+  },
+  {
+   "yahoo": "VMRK",
+   "name": "Vivmark Residential",
+   "isin": null
+  },
+  {
+   "yahoo": "VRSK",
+   "name": "Verisk Analytics",
+   "isin": null
+  },
+  {
+   "yahoo": "VRSN",
+   "name": "Verisign",
+   "isin": null
+  },
+  {
+   "yahoo": "VRT",
+   "name": "Vertiv",
+   "isin": null
+  },
+  {
+   "yahoo": "VRTX",
+   "name": "Vertex Pharmaceuticals",
+   "isin": null
+  },
+  {
+   "yahoo": "VST",
+   "name": "Vistra Corp.",
+   "isin": null
+  },
+  {
+   "yahoo": "VTR",
+   "name": "Ventas",
+   "isin": null
+  },
+  {
+   "yahoo": "VTRS",
+   "name": "Viatris",
+   "isin": null
+  },
+  {
+   "yahoo": "VYLR",
+   "name": "Vylor",
+   "isin": null
+  },
+  {
+   "yahoo": "VZ",
+   "name": "Verizon",
+   "isin": null
+  },
+  {
+   "yahoo": "WAB",
+   "name": "Wabtec",
+   "isin": null
+  },
+  {
+   "yahoo": "WAT",
+   "name": "Waters Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "WDAY",
+   "name": "Workday, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "WDC",
+   "name": "Western Digital",
+   "isin": null
+  },
+  {
+   "yahoo": "WEC",
+   "name": "WEC Energy Group",
+   "isin": null
+  },
+  {
+   "yahoo": "WELL",
+   "name": "Welltower",
+   "isin": null
+  },
+  {
+   "yahoo": "WFC",
+   "name": "Wells Fargo",
+   "isin": null
+  },
+  {
+   "yahoo": "WM",
+   "name": "Waste Management",
+   "isin": null
+  },
+  {
+   "yahoo": "WMB",
+   "name": "Williams Companies",
+   "isin": null
+  },
+  {
+   "yahoo": "WMT",
+   "name": "Walmart",
+   "isin": null
+  },
+  {
+   "yahoo": "WRB",
+   "name": "W. R. Berkley Corporation",
+   "isin": null
+  },
+  {
+   "yahoo": "WSM",
+   "name": "Williams-Sonoma, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "WST",
+   "name": "West Pharmaceutical Services",
+   "isin": null
+  },
+  {
+   "yahoo": "WTW",
+   "name": "Willis Towers Watson",
+   "isin": null
+  },
+  {
+   "yahoo": "WY",
+   "name": "Weyerhaeuser",
+   "isin": null
+  },
+  {
+   "yahoo": "WYNN",
+   "name": "Wynn Resorts",
+   "isin": null
+  },
+  {
+   "yahoo": "XEL",
+   "name": "Xcel Energy",
+   "isin": null
+  },
+  {
+   "yahoo": "XOM",
+   "name": "ExxonMobil",
+   "isin": null
+  },
+  {
+   "yahoo": "XYL",
+   "name": "Xylem Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "XYZ",
+   "name": "Block, Inc.",
+   "isin": null
+  },
+  {
+   "yahoo": "YUM",
+   "name": "Yum! Brands",
+   "isin": null
+  },
+  {
+   "yahoo": "ZBH",
+   "name": "Zimmer Biomet",
+   "isin": null
+  },
+  {
+   "yahoo": "ZBRA",
+   "name": "Zebra Technologies",
+   "isin": null
+  },
+  {
+   "yahoo": "ZTS",
+   "name": "Zoetis",
+   "isin": null
+  }
+ ]
+}

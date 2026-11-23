@@ -77,7 +77,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Real Estate dashboard: live prices, 52-week ranges and returns for all 35 stocks in the sector.">
+<meta name="description" content="Real Estate dashboard: live prices, 52-week ranges and returns for all 37 stocks in the sector.">
 <title>Real Estate — Dashboard</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&amp;family=IBM+Plex+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -509,13 +509,13 @@
 
 
   /* this group's categories (#88) */
-  .cat-multi-family-residential-reits { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
-  .cat-real-estate-investment-trusts { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
-  .cat-retail-reits { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
+  .cat-retail-reits { background: rgba(0,212,255,0.1); color: var(--accent); border: 1px solid rgba(0,212,255,0.25); }
+  .cat-multi-family-residential-reits { background: rgba(192,132,252,0.1); color: var(--purple); border: 1px solid rgba(192,132,252,0.25); }
+  .cat-real-estate-investment-trusts { background: rgba(45,212,191,0.1); color: var(--teal); border: 1px solid rgba(45,212,191,0.25); }
   .cat-health-care-reits { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
-  .cat-telecom-tower-reits { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
-  .cat-data-center-reits { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
-  .cat-hotel-resort-reits { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
+  .cat-real-estate-services { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
+  .cat-telecom-tower-reits { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-data-center-reits { background: rgba(245,158,11,0.1); color: var(--amber); border: 1px solid rgba(245,158,11,0.25); }
   .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
 </style>
 <style>
@@ -542,19 +542,19 @@
 <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1><span>Real Estate</span></h1>
-    <div class="header-sub"><span id="sector-count">35</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub"><span id="sector-count">37</span> stocks · Last updated <span id="data-bar-ts">—</span></div>
 </div>
 <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
 </div>
 <div class="filter-bar">
 <button class="chip active" data-filter="all" onclick="filterChip('all',this)">All</button>
+<button class="chip" data-filter="retail-reits" onclick="filterChip('retail-reits',this)">Retail REITs</button>
 <button class="chip" data-filter="multi-family-residential-reits" onclick="filterChip('multi-family-residential-reits',this)">Multi-Family Residential REITs</button>
 <button class="chip" data-filter="real-estate-investment-trusts" onclick="filterChip('real-estate-investment-trusts',this)">Real Estate Investment Trusts</button>
-<button class="chip" data-filter="retail-reits" onclick="filterChip('retail-reits',this)">Retail REITs</button>
 <button class="chip" data-filter="health-care-reits" onclick="filterChip('health-care-reits',this)">Health Care REITs</button>
+<button class="chip" data-filter="real-estate-services" onclick="filterChip('real-estate-services',this)">Real Estate Services</button>
 <button class="chip" data-filter="telecom-tower-reits" onclick="filterChip('telecom-tower-reits',this)">Telecom Tower REITs</button>
 <button class="chip" data-filter="data-center-reits" onclick="filterChip('data-center-reits',this)">Data Center REITs</button>
-<button class="chip" data-filter="hotel-resort-reits" onclick="filterChip('hotel-resort-reits',this)">Hotel & Resort REITs</button>
 <button class="chip" data-filter="other" onclick="filterChip('other',this)">Other</button>
 <label class="t212-toggle" title="Trading 212 offers most ordinary shares on major exchanges; this hides the ones it doesn't list"><input type="checkbox" id="hide-t212" onchange="applyFilters()"> Hide stocks not on T212</label>
 </div>
@@ -591,24 +591,24 @@ const NOTES = {
 };
 
 const CAT_COLORS = {
-  'multi-family-residential-reits': "var(--accent)",
-  'real-estate-investment-trusts': "var(--purple)",
-  'retail-reits': "var(--teal)",
+  'retail-reits': "var(--accent)",
+  'multi-family-residential-reits': "var(--purple)",
+  'real-estate-investment-trusts': "var(--teal)",
   'health-care-reits': "var(--rose)",
-  'telecom-tower-reits': "var(--blue)",
-  'data-center-reits': "var(--green)",
-  'hotel-resort-reits': "var(--amber)",
+  'real-estate-services': "var(--blue)",
+  'telecom-tower-reits': "var(--green)",
+  'data-center-reits': "var(--amber)",
   'other': "var(--slate)",
 };
 
 const CAT_LABELS = {
+  'retail-reits': "Retail REITs",
   'multi-family-residential-reits': "Multi-Family Residential REITs",
   'real-estate-investment-trusts': "Real Estate Investment Trusts",
-  'retail-reits': "Retail REITs",
   'health-care-reits': "Health Care REITs",
+  'real-estate-services': "Real Estate Services",
   'telecom-tower-reits': "Telecom Tower REITs",
   'data-center-reits': "Data Center REITs",
-  'hotel-resort-reits': "Hotel \u0026 Resort REITs",
   'other': "Other",
 };
 

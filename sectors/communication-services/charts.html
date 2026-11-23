@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 30 Communication Services stocks, by industry.">
+<meta name="description" content="1-year price charts for all 34 Communication Services stocks, by industry.">
 <title>Communication Services — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -14,16 +14,16 @@
   .cat-btn.active-interactive-media-services { background: var(--accent); border-color: var(--accent); color: var(--bg); }
   .cat-btn.active-integrated-telecommunication-services { background: var(--purple); border-color: var(--purple); color: var(--bg); }
   .cat-btn.active-movies-entertainment { background: var(--teal); border-color: var(--teal); color: var(--bg); }
-  .cat-btn.active-media { background: var(--rose); border-color: var(--rose); color: var(--bg); }
-  .cat-btn.active-advertising { background: var(--blue); border-color: var(--blue); color: var(--bg); }
+  .cat-btn.active-advertising { background: var(--rose); border-color: var(--rose); color: var(--bg); }
+  .cat-btn.active-media { background: var(--blue); border-color: var(--blue); color: var(--bg); }
   .cat-btn.active-broadcasting { background: var(--green); border-color: var(--green); color: var(--bg); }
   .cat-btn.active-cable-satellite { background: var(--amber); border-color: var(--amber); color: var(--bg); }
   .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
   .cat-label.interactive-media-services { color: var(--accent); }
   .cat-label.integrated-telecommunication-services { color: var(--purple); }
   .cat-label.movies-entertainment { color: var(--teal); }
-  .cat-label.media { color: var(--rose); }
-  .cat-label.advertising { color: var(--blue); }
+  .cat-label.advertising { color: var(--rose); }
+  .cat-label.media { color: var(--blue); }
   .cat-label.broadcasting { color: var(--green); }
   .cat-label.cable-satellite { color: var(--amber); }
   .cat-label.other { color: var(--slate); }
@@ -99,7 +99,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Communication Services <span>Charts</span></h1>
-    <div class="header-sub">30 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">34 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -145,8 +145,8 @@
   <main class="chart-area">
     <div class="chart-header">
       <div style="display:flex;align-items:baseline;">
-        <span class="chart-ticker" id="chart-ticker">GOOG</span>
-        <span class="chart-name" id="chart-name">Alphabet Inc. (Class C)</span>
+        <span class="chart-ticker" id="chart-ticker">G24.DE</span>
+        <span class="chart-name" id="chart-name">Scout24</span>
       </div>
     </div>
     <div class="chart-widget" id="single-widget"></div>
@@ -168,8 +168,12 @@
   const TV_MAP = {
     "AAF.L": "LSE:AAF",
     "BT-A.L": "LSE:BT.A",
+    "DTE.DE": "XETR:DTE",
+    "G24.DE": "XETR:G24",
     "INF.L": "LSE:INF",
+    "ORA.PA": "EURONEXT:ORA",
     "PSON.L": "LSE:PSON",
+    "PUB.PA": "EURONEXT:PUB",
     "VOD.L": "LSE:VOD",
     "WPP.L": "LSE:WPP",
   };
@@ -197,19 +201,19 @@
       btnLabel: "Movies & Entertainment",
       tooltip: "Communication Services: Movies & Entertainment",
     },
-    'media': {
-      key: 'media',
-      label: "Media",
-      color: 'var(--rose)',
-      btnLabel: "Media",
-      tooltip: "Communication Services: Media",
-    },
     'advertising': {
       key: 'advertising',
       label: "Advertising",
-      color: 'var(--blue)',
+      color: 'var(--rose)',
       btnLabel: "Advertising",
       tooltip: "Communication Services: Advertising",
+    },
+    'media': {
+      key: 'media',
+      label: "Media",
+      color: 'var(--blue)',
+      btnLabel: "Media",
+      tooltip: "Communication Services: Media",
     },
     'broadcasting': {
       key: 'broadcasting',
@@ -301,8 +305,8 @@
   };
 
   let currentView      = 'grid';
-  let currentSymbol    = 'NASDAQ:GOOG';
-  let currentName      = 'Alphabet Inc. (Class C)';
+  let currentSymbol    = 'XETR:G24';
+  let currentName      = 'Scout24';
   let currentTimeframe = '1W';
   let currentCategory  = null;
 

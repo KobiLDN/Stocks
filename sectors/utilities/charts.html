@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="1-year price charts for all 42 Utilities stocks, by industry.">
+<meta name="description" content="1-year price charts for all 47 Utilities stocks, by industry.">
 <title>Utilities — Charts</title>
 <script>if(localStorage.getItem('theme')==='dark'||(localStorage.getItem('theme')===null&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.setAttribute('data-theme','dark');</script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -16,13 +16,17 @@
   .cat-btn.active-independent-power-producers-energy-traders { background: var(--teal); border-color: var(--teal); color: var(--bg); }
   .cat-btn.active-renewable-electricity { background: var(--rose); border-color: var(--rose); color: var(--bg); }
   .cat-btn.active-gas-utilities { background: var(--blue); border-color: var(--blue); color: var(--bg); }
-  .cat-btn.active-water-utilities { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
+  .cat-btn.active-utilities-diversified { background: var(--green); border-color: var(--green); color: var(--bg); }
+  .cat-btn.active-other { background: var(--slate); border-color: var(--slate); color: var(--bg); }
   .cat-label.multi-utilities { color: var(--accent); }
   .cat-label.electric-utilities { color: var(--purple); }
   .cat-label.independent-power-producers-energy-traders { color: var(--teal); }
   .cat-label.renewable-electricity { color: var(--rose); }
   .cat-label.gas-utilities { color: var(--blue); }
-  .cat-label.water-utilities { color: var(--green); }
+  .cat-label.other { color: var(--slate); }
+  .cat-label.utilities-diversified { color: var(--green); }
+  .cat-label.other { color: var(--slate); }
 
 
   /* ─── 3-Panel Layout ─── */
@@ -95,7 +99,7 @@
   <div class="header-left">
     <div class="header-label">// Market Intelligence</div>
     <h1>Utilities <span>Charts</span></h1>
-    <div class="header-sub">42 stocks · Last updated <span id="data-bar-ts">—</span></div>
+    <div class="header-sub">47 stocks · Last updated <span id="data-bar-ts">—</span></div>
   </div>
   <button aria-label="Toggle theme" class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">☾</button>
   </div>
@@ -163,8 +167,13 @@
   /* TradingView symbols that differ from EXCHANGE:TICKER pattern */
   const TV_MAP = {
     "CNA.L": "LSE:CNA",
+    "ENEL.MI": "MIL:ENEL",
+    "ENGI.PA": "EURONEXT:ENGI",
+    "EOAN.DE": "XETR:EOAN",
+    "IBE.MC": "BME:IBE",
     "MTLN.L": "LSE:MTLN",
     "NG.L": "LSE:NG.",
+    "RWE.DE": "XETR:RWE",
     "SSE.L": "LSE:SSE",
     "SVT.L": "LSE:SVT",
     "UU.L": "LSE:UU.",
@@ -207,12 +216,26 @@
       btnLabel: "Gas Utilities",
       tooltip: "Utilities: Gas Utilities",
     },
-    'water-utilities': {
-      key: 'water-utilities',
-      label: "Water Utilities",
+    'other': {
+      key: 'other',
+      label: "Other",
+      color: 'var(--slate)',
+      btnLabel: "Other",
+      tooltip: "Utilities: Other",
+    },
+    'utilities-diversified': {
+      key: 'utilities-diversified',
+      label: "Utilities - Diversified",
       color: 'var(--green)',
-      btnLabel: "Water Utilities",
-      tooltip: "Utilities: Water Utilities",
+      btnLabel: "Utilities - Diversified",
+      tooltip: "Utilities: Utilities - Diversified",
+    },
+    'other': {
+      key: 'other',
+      label: "Other",
+      color: 'var(--slate)',
+      btnLabel: "Other",
+      tooltip: "Utilities: Other",
     },
   };
 

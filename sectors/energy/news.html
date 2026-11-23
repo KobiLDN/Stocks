@@ -19,6 +19,7 @@
   .cat-coal-consumable-fuels { background: rgba(251,113,133,0.1); color: var(--rose); border: 1px solid rgba(251,113,133,0.25); }
   .cat-oil-gas-equipment-services { background: rgba(68,136,255,0.1); color: var(--blue); border: 1px solid rgba(68,136,255,0.25); }
   .cat-oil-gas-refining-marketing { background: rgba(0,230,118,0.1); color: var(--green); border: 1px solid rgba(0,230,118,0.25); }
+  .cat-other { background: rgba(148,163,184,0.1); color: var(--slate); border: 1px solid rgba(148,163,184,0.25); }
   /* ─── 3-Panel Layout ─── */
   body[data-layout="rail"] { flex-direction: row; }
   .right-side { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
@@ -181,6 +182,7 @@
  "COP": "ConocoPhillips",
  "CVX": "Chevron",
  "DVN": "Devon Energy",
+ "ENI.MI": "Eni",
  "EOG": "EOG Resources",
  "EQNR": "Equinor",
  "EQT": "EQT Corporation",
@@ -200,6 +202,7 @@
  "TPL": "Texas Pacific Land Corporation",
  "TRGP": "Targa Resources",
  "TTE": "TotalEnergies",
+ "TTE.PA": "TotalEnergies",
  "UEC": "Uranium Energy Corp",
  "VLO": "Valero Energy",
  "WMB": "Williams Companies",
@@ -213,6 +216,7 @@
     'coal-consumable-fuels': 'Coal & Consumable Fuels',
     'oil-gas-equipment-services': 'Oil & Gas Equipment & Services',
     'oil-gas-refining-marketing': 'Oil & Gas Refining & Marketing',
+    'other': 'Other',
   };
 
   const CAT_TOOLTIPS = {
@@ -222,6 +226,7 @@
     'coal-consumable-fuels': 'Energy: Coal & Consumable Fuels',
     'oil-gas-equipment-services': 'Energy: Oil & Gas Equipment & Services',
     'oil-gas-refining-marketing': 'Energy: Oil & Gas Refining & Marketing',
+    'other': 'Energy: Other',
   };
 
 
