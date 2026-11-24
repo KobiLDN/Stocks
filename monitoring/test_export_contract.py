@@ -168,6 +168,13 @@ class ExportContract(unittest.TestCase):
             else:
                 self.assertIsNone(s["signal"])
 
+    def test_isin_valid_where_present(self):
+        sys.path.insert(0, ROOT)
+        from universe import isin_ok
+        isins = [s["isin"] for s in self.payload["stocks"] if s["isin"] is not None]
+        self.assertTrue(all(isin_ok(i) for i in isins))
+        self.assertTrue(all(s["isin"] is None for s in self.payload["stocks"] if s["sector"] == "Crypto"))
+
     def test_sector_is_official(self):
         allowed = {"Communication Services", "Consumer Discretionary", "Consumer Staples", "Energy", "Financials",
                    "Health Care", "Industrials", "Materials", "Real Estate", "Technology", "Utilities", "Crypto",

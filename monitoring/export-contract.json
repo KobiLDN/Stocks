@@ -1,5 +1,5 @@
 {
-  "about": "Fields the portfolio project (KobiLDN/portfolio-private) reads from the daily export, copied from its FROM_PORTFOLIO.md (note of 2026-11-13) plus the #70 fields announced in FROM_STOCKS.md on 2026-11-21 and the #88 fields announced on 2026-11-22. monitoring/test_export_contract.py rebuilds the export from the committed data and fails if any of these disappears or changes type. Types: str, number, bool, null, object, list. Update this file only together with a FROM_STOCKS.md note, and when FROM_PORTFOLIO.md lists a new field.",
+  "about": "Fields the portfolio project (KobiLDN/portfolio-private) reads from the daily export, copied from its FROM_PORTFOLIO.md (note of 2026-11-13) plus the #70 fields announced in FROM_STOCKS.md on 2026-11-21 the #88 fields announced on 2026-11-22 and isin (2026-11-24). monitoring/test_export_contract.py rebuilds the export from the committed data and fails if any of these disappears or changes type. Types: str, number, bool, null, object, list. Update this file only together with a FROM_STOCKS.md note, and when FROM_PORTFOLIO.md lists a new field.",
   "manifest": {
     "snapshots[]": {
       "date": [
@@ -115,6 +115,10 @@
     ],
     "picked_by": [
       "list"
+    ],
+    "isin": [
+      "str",
+      "null"
     ]
   },
   "momentum_picks[]": {

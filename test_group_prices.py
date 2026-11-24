@@ -87,7 +87,7 @@ class Money(unittest.TestCase):
 
     def test_row_pence_and_market_cap(self):
         a = {"name": "Unilever", "exchange": "LSE", "currency": "GBp", "markets": ["ftse100"],
-             "sector": "Consumer Staples", "industry": "Personal Goods", "t212": "yes"}
+             "sector": "Consumer Staples", "industry": "Personal Goods", "t212": "yes", "isin": "GB00B10RZP78"}
         s = gp.stats(bars([4800 + i for i in range(30)]), date(2026, 2, 13))
         f = {"market_cap": 120e9, "market_cap_currency": "GBP", "pe_ratio": 20.0}
         r = gp.make_row("ULVR.L", a, s, f, FX, {}, "consumer-staples")
@@ -96,6 +96,8 @@ class Money(unittest.TestCase):
         self.assertEqual(r["market_cap_gbp_b"], 120.0)            # GBP cap: not divided by 100
         self.assertEqual(r["markets"], ["ftse100"])
         self.assertEqual(r["news"], [])
+        self.assertEqual(r["isin"], "GB00B10RZP78")                  # for the export (portfolio request)
+        self.assertNotIn("isin", gp.all_row(r))                     # the big All file stays small
 
     def test_fundamentals_from_info(self):
         f = gp.fundamentals_from_info({"marketCap": 3e12, "trailingPE": 30.123, "beta": -0.2,
