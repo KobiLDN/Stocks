@@ -251,5 +251,126 @@
 "p_up": 0.6,
 "expected_move": -2.5,
 "lean": "up"
+},
+{
+"id": "MBG.DE:activist",
+"date": "2026-11-24",
+"ticker": "MBG.DE",
+"type": "activist",
+"price_usd": 40.88,
+"p_big": 0.3,
+"p_up": 0.5,
+"expected_move": -1.7,
+"lean": "either way"
+},
+{
+"id": "WULF:financing",
+"date": "2026-11-24",
+"ticker": "WULF",
+"type": "financing",
+"price_usd": 9.65,
+"p_big": 0.8,
+"p_up": 0.4,
+"expected_move": 0.2,
+"lean": "down"
+},
+{
+"id": "RXRX:trial",
+"date": "2026-11-24",
+"ticker": "RXRX",
+"type": "trial",
+"price_usd": 2.65,
+"p_big": 1.0,
+"p_up": 0.3,
+"expected_move": -4.0,
+"lean": "down"
+},
+{
+"id": "CRWD:leadership",
+"date": "2026-11-24",
+"ticker": "CRWD",
+"type": "leadership",
+"price_usd": 209.74,
+"p_big": 0.7,
+"p_up": 0.4,
+"expected_move": 1.5,
+"lean": "down"
+},
+{
+"id": "IP:other",
+"date": "2026-11-24",
+"ticker": "IP",
+"type": "other",
+"price_usd": 29.86,
+"p_big": 0.6,
+"p_up": 0.4,
+"expected_move": 3.0,
+"lean": "down"
+},
+{
+"id": "CORZ:regulatory",
+"date": "2026-11-24",
+"ticker": "CORZ",
+"type": "regulatory",
+"price_usd": 11.19,
+"p_big": 0.6,
+"p_up": 0.75,
+"expected_move": 5.8,
+"lean": "up"
+},
+{
+"id": "AVGO:leadership",
+"date": "2026-11-24",
+"ticker": "AVGO",
+"type": "leadership",
+"price_usd": 303.94,
+"p_big": 0.6,
+"p_up": 0.4,
+"expected_move": -1.0,
+"lean": "down"
+},
+{
+"id": "BAYN.DE:legal",
+"date": "2026-11-24",
+"ticker": "BAYN.DE",
+"type": "legal",
+"price_usd": 58.07,
+"p_big": 0.3,
+"p_up": 0.5,
+"expected_move": -1.5,
+"lean": "either way"
+},
+{
+"id": "DASH:financing",
+"date": "2026-11-24",
+"ticker": "DASH",
+"type": "financing",
+"price_usd": 161.44,
+"p_big": 1.0,
+"p_up": 0.6,
+"expected_move": 1.0,
+"lean": "up"
+},
+{
+"id": "DG:regulatory",
+"date": "2026-11-24",
+"ticker": "DG",
+"type": "regulatory",
+"price_usd": 139.51,
+"p_big": 0.3,
+"p_up": 0.2,
+"expected_move": -3.5,
+"lean": "down"
+},
+{
+"id": "TSM:regulatory",
+"date": "2026-11-24",
+"ticker": "TSM",
+"type": "regulatory",
+"price_usd": 344.48,
+"p_big": 0.2,
+"p_up": 0.5,
+"expected_move": -1.0,
+"lean": "either way"
 }
 ]

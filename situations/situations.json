@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 07:37",
+ "updated": "2026-11-24 15:40",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 23,
+ "count": 34,
  "situations": [
   {
    "ticker": "NBIS",
@@ -48,6 +48,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 103.07
+  },
+  {
+   "ticker": "RXRX",
+   "type": "trial",
+   "source": "Recursion Pharmaceuticals Reaches FDA Agreement on Key Endpoint for Phase III FAP Trial",
+   "title": "Recursion Phase III FAP Trial Readout",
+   "summary": "Recursion reached an FDA agreement on a key endpoint for its Phase III FAP trial. The trial results are the major pending catalyst.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Trial fails",
+     "probability": 0.4,
+     "move_pct": -70.0
+    },
+    {
+     "label": "Trial succeeds",
+     "probability": 0.3,
+     "move_pct": 100.0
+    },
+    {
+     "label": "Trial mixed or ambiguous",
+     "probability": 0.3,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.3,
+   "expected_move": -4.0,
+   "lean": "down",
+   "id": "RXRX:trial",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 2.65
   },
   {
    "ticker": "LITE",
@@ -115,6 +148,39 @@
    "price_at_flag": 2.7
   },
   {
+   "ticker": "DASH",
+   "type": "financing",
+   "source": null,
+   "title": "DoorDash secures loan for Instacart acquisition",
+   "summary": "DoorDash secured a $1.79 billion loan facility for its Instacart acquisition. The unresolved issue is whether the acquisition closes successfully and delivers expected synergies, or faces regulatory hurdles or integration challenges.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Acquisition closes, positive outlook",
+     "probability": 0.6,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Regulatory or integration issues",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Deal fails or terms renegotiated",
+     "probability": 0.1,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.6,
+   "expected_move": 1.0,
+   "lean": "up",
+   "id": "DASH:financing",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 161.44
+  },
+  {
    "ticker": "WULF",
    "type": "activist",
    "title": "TeraWulf CEO won't rush Muskie lease deal",
@@ -145,6 +211,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 11.56
+  },
+  {
+   "ticker": "AAL.L",
+   "type": "takeover",
+   "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
+   "title": "Anglo American De Beers Exit Talks",
+   "summary": "Angola is pricing a 10% De Beers stake, indicating Anglo American's exit from the diamond business is progressing but the terms and final deal are pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Successful exit at good price",
+     "probability": 0.6,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Exit delayed or fails",
+     "probability": 0.3,
+     "move_pct": -12.0
+    },
+    {
+     "label": "Exit at poor price",
+     "probability": 0.1,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.9,
+   "p_up": 0.6,
+   "expected_move": 1.9,
+   "lean": "up",
+   "id": "AAL.L:takeover",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 41.5
   },
   {
    "ticker": "ASTS",
@@ -212,37 +311,70 @@
    "price_at_flag": 207.63
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
-   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
-   "summary": "The EU Commission opened an antitrust probe into CCEP over cross-border beverage trade. The outcome is unresolved and could lead to fines or restrictions.",
+   "ticker": "WULF",
+   "type": "financing",
+   "source": null,
+   "title": "TeraWulf Muskie Lease Decision",
+   "summary": "TeraWulf CEO stated he won't rush a Muskie lease, citing dilution risk. The decision on whether and how to proceed with the lease is pending.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Fine or restrictions imposed",
+     "label": "Lease signed on favorable terms",
+     "probability": 0.4,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Lease delayed or abandoned",
+     "probability": 0.4,
+     "move_pct": -12.0
+    },
+    {
+     "label": "Lease signed on dilutive terms",
+     "probability": 0.2,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.8,
+   "p_up": 0.4,
+   "expected_move": 0.2,
+   "lean": "down",
+   "id": "WULF:financing",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 9.65
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "GTCR considers potential takeover of Global Payments",
+   "title": "GTCR Takeover Interest in GPN",
+   "summary": "GTCR is considering a potential takeover of Global Payments. The outcome of these considerations is pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Takeover talks fall through",
      "probability": 0.5,
      "move_pct": -10.0
     },
     {
-     "label": "Probe dropped with minor changes",
+     "label": "Takeover bid materializes and accepted",
      "probability": 0.3,
-     "move_pct": 5.0
+     "move_pct": 20.0
     },
     {
-     "label": "Severe penalties or breakup",
+     "label": "Interest fades, no formal bid",
      "probability": 0.2,
-     "move_pct": -20.0
+     "move_pct": -5.0
     }
    ],
-   "p_big": 0.7,
+   "p_big": 0.8,
    "p_up": 0.3,
-   "expected_move": -7.5,
+   "expected_move": 0.0,
    "lean": "down",
-   "id": "CCEP.L:regulatory",
+   "id": "GPN:takeover",
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-24",
-   "price_at_flag": 115.04
+   "price_at_flag": 92.44
   },
   {
    "ticker": "EQNR",
@@ -277,37 +409,37 @@
    "price_at_flag": 38.59
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": "Global Payments (GPN) Gets a Potential Lifeline as New Takeover Buzz Heats Up",
-   "title": "GTCR potential takeover of Global Payments",
-   "summary": "GTCR is reportedly considering a $50 billion takeover bid for Global Payments. The deal is not yet agreed or accepted, creating a pending situation.",
+   "ticker": "CRWD",
+   "type": "leadership",
+   "source": "CrowdStrike Bets Two Top Dogs Beat One",
+   "title": "CrowdStrike dual leadership structure pending",
+   "summary": "CrowdStrike is betting on a 'two top dogs' leadership model. The market is assessing the impact of this co-CEO or dual-leadership strategy on execution and culture.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Takeover agreed at premium",
+     "label": "Dual leadership succeeds, stock gains",
      "probability": 0.4,
      "move_pct": 15.0
     },
     {
-     "label": "Takeover talks collapse",
+     "label": "Dual leadership creates friction, stock drops",
      "probability": 0.3,
-     "move_pct": -12.0
+     "move_pct": -15.0
     },
     {
-     "label": "No deal, stock drifts",
+     "label": "Status quo maintained, stock stable",
      "probability": 0.3,
-     "move_pct": -2.0
+     "move_pct": 0.0
     }
    ],
    "p_big": 0.7,
    "p_up": 0.4,
-   "expected_move": 1.8,
+   "expected_move": 1.5,
    "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
+   "id": "CRWD:leadership",
+   "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
-   "price_at_flag": 92.44
+   "price_at_flag": 209.74
   },
   {
    "ticker": "MU",
@@ -411,35 +543,68 @@
   {
    "ticker": "NTRA",
    "type": "leadership",
-   "source": "Natera Targets $6 Billion in Revenue by 2029, Banking on Signatera Growth",
-   "title": "New CEO Solomon Moshkevich's first full-year guidance test",
-   "summary": "Surprise CEO change on Nov 5 sent stock down 37% from high. New CEO's first full-year 2027 guidance in early 2025 is the next major test of investor confidence and execution credibility.",
-   "key_date": "2027-02-01",
+   "source": "Cathie Wood Just Sold $12 Million of Natera",
+   "title": "Natera CEO's first full-year guidance pending",
+   "summary": "New CEO Solomon Moshkevich's surprise appointment and $6B 2029 target have not yet been validated. The market awaits his first full-year guidance in the Q4 report early next year.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "Guidance meets or beats elevated expectations",
+     "label": "Guidance meets consensus, stock stabilizes",
      "probability": 0.4,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Guidance in line with lowered expectations",
-     "probability": 0.35,
      "move_pct": 5.0
     },
     {
-     "label": "Guidance disappoints, growth concerns persist",
+     "label": "Strong guidance, stock rallies",
+     "probability": 0.35,
+     "move_pct": 30.0
+    },
+    {
+     "label": "Guidance disappoints, stock falls",
      "probability": 0.25,
      "move_pct": -20.0
     }
    ],
-   "p_big": 0.65,
+   "p_big": 0.6,
    "p_up": 0.75,
-   "expected_move": 2.8,
+   "expected_move": 7.5,
    "lean": "up",
    "id": "NTRA:leadership",
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 292.39
+  },
+  {
+   "ticker": "CORZ",
+   "type": "regulatory",
+   "source": null,
+   "title": "Texas ERCOT December 10 power decision",
+   "summary": "Core Scientific awaits ERCOT's December 10 decision on 6.5 GW of Texas data center load. Approval could unlock major buildout; denial would strand contracted power and impair growth.",
+   "key_date": "2026-12-10",
+   "outcomes": [
+    {
+     "label": "Partial approval",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Approval of most load",
+     "probability": 0.35,
+     "move_pct": 25.0
+    },
+    {
+     "label": "Denial or major cuts",
+     "probability": 0.25,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.75,
+   "expected_move": 5.8,
+   "lean": "up",
+   "id": "CORZ:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 11.19
   },
   {
    "ticker": "INTC",
@@ -508,34 +673,6 @@
    "price_at_flag": 41.06
   },
   {
-   "ticker": "D",
-   "type": "regulatory",
-   "source": null,
-   "title": "State regulatory decision on NextEra-Dominion merger pending",
-   "summary": "State hearings continue after DOJ closed antitrust probe. The outcome of state approval for the merger could significantly impact Dominion's stock price.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "State approves merger",
-     "probability": 0.6,
-     "move_pct": 10.0
-    },
-    {
-     "label": "State denies merger",
-     "probability": 0.4,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.6,
-   "expected_move": 4.0,
-   "lean": "up",
-   "id": "D:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 66.79
-  },
-  {
    "ticker": "DELL",
    "type": "results",
    "source": "Dell, HPE results to put AI demand to the test after tech rout",
@@ -567,6 +704,72 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 338.38
+  },
+  {
+   "ticker": "IP",
+   "type": "other",
+   "source": "International Paper clears EMEA unit spin-off and plans London delisting",
+   "title": "International Paper EMEA spin-off pending",
+   "summary": "IP scrapped a sale of its European packaging business for a spin-off, disappointing the market. The execution of the spin-off and London delisting are now pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off execution successful, stock recovers",
+     "probability": 0.4,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Spin-off proceeds as planned, stock stable",
+     "probability": 0.4,
+     "move_pct": 0.0
+    },
+    {
+     "label": "Spin-off faces execution issues, stock falls",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.4,
+   "expected_move": 3.0,
+   "lean": "down",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 29.86
+  },
+  {
+   "ticker": "AVGO",
+   "type": "leadership",
+   "source": null,
+   "title": "Nvidia CEO reinstatement impact on Broadcom",
+   "summary": "Nvidia's reinstatement of Jensen Huang as CEO on Nov 23 caused a 31% surge, but the stock is now giving back gains. The unresolved question is whether this leadership change stabilizes Nvidia and the broader AI trade, or if overhangs remain, affecting Broadcom as a key AI infrastructure partner.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "AI trade stabilizes, Broadcom recovers",
+     "probability": 0.4,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Continued volatility and uncertainty",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Further sell-off on renewed AI concerns",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.4,
+   "expected_move": -1.0,
+   "lean": "down",
+   "id": "AVGO:leadership",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 303.94
   },
   {
    "ticker": "SMTC",
@@ -634,37 +837,159 @@
    "price_at_flag": 165.05
   },
   {
-   "ticker": "AAL.L",
-   "type": "takeover",
-   "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
-   "title": "Anglo American's De Beers sale to consortium pending",
-   "summary": "Anglo American's sale of its 85% De Beers stake to the Global Diamond Consortium is not yet final. Angola's $180M for 10% and Botswana's bid for up to 30% are still being negotiated, with binding agreements and regulatory approvals outstanding.",
+   "ticker": "D",
+   "type": "regulatory",
+   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
+   "title": "Dominion Energy State Hearings",
+   "summary": "While the DOJ closed its antitrust probe, state hearings regarding Dominion are continuing. The outcome of these hearings is pending.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Deal completed on current terms",
+     "label": "Favorable state ruling",
      "probability": 0.6,
      "move_pct": 5.0
     },
     {
-     "label": "Deal renegotiated or delayed",
-     "probability": 0.25,
+     "label": "Unfavorable state ruling",
+     "probability": 0.4,
      "move_pct": -10.0
-    },
-    {
-     "label": "Deal collapses, De Beers stays",
-     "probability": 0.15,
-     "move_pct": -20.0
     }
    ],
    "p_big": 0.4,
    "p_up": 0.6,
-   "expected_move": -2.5,
+   "expected_move": -1.0,
    "lean": "up",
-   "id": "AAL.L:takeover",
+   "id": "D:regulatory",
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
-   "price_at_flag": 41.5
+   "price_at_flag": 66.79
+  },
+  {
+   "ticker": "NEE",
+   "type": "regulatory",
+   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
+   "title": "NextEra Energy State Hearings",
+   "summary": "The DOJ closed its antitrust probe into NextEra and Dominion, but state hearings continue. The outcome of these hearings is pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Favorable state ruling",
+     "probability": 0.6,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Unfavorable state ruling",
+     "probability": 0.4,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0.6,
+   "expected_move": -1.0,
+   "lean": "up",
+   "id": "NEE:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 83.97
+  },
+  {
+   "ticker": "DG",
+   "type": "regulatory",
+   "source": null,
+   "title": "Dollar General faces pricing lawsuit from New Mexico",
+   "summary": "New Mexico joined a federal lawsuit accusing Dollar General of overcharging customers, with a majority of states now battling the company over pricing practices. The unresolved issue is the outcome of these legal actions and potential fines or settlements.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Settlement or fine, limited impact",
+     "probability": 0.5,
+     "move_pct": -3.0
+    },
+    {
+     "label": "Broader regulatory action or penalties",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Dismissal or favorable ruling",
+     "probability": 0.2,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.2,
+   "expected_move": -3.5,
+   "lean": "down",
+   "id": "DG:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 139.51
+  },
+  {
+   "ticker": "MBG.DE",
+   "type": "activist",
+   "source": "German strikes hit Mercedes and BMW",
+   "title": "IG Metall Pay Dispute and Strike Risk",
+   "summary": "IG Metall and employers are in a pay dispute. Strikes are ongoing. The next negotiation round is in Mannheim. Failure could escalate strikes, impacting production.",
+   "key_date": "2026-11-26",
+   "outcomes": [
+    {
+     "label": "Deal reached, moderate wage increase",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "No deal, strikes escalate",
+     "probability": 0.3,
+     "move_pct": -12.0
+    },
+    {
+     "label": "No deal, limited strikes continue",
+     "probability": 0.2,
+     "move_pct": -3.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.5,
+   "expected_move": -1.7,
+   "lean": "either way",
+   "id": "MBG.DE:activist",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 40.88
+  },
+  {
+   "ticker": "BAYN.DE",
+   "type": "legal",
+   "source": null,
+   "title": "Bayer Roundup settlement approval and new study",
+   "summary": "Bayer received judge approval for a $7.25 billion Roundup settlement, but a new study re-raising cancer links creates uncertainty. The unresolved issue is whether the settlement holds and ends major litigation, or if new evidence leads to further lawsuits or appeals.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Settlement holds, litigation risk reduced",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "New study triggers additional lawsuits",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Settlement challenged or modified",
+     "probability": 0.2,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.5,
+   "expected_move": -1.5,
+   "lean": "either way",
+   "id": "BAYN.DE:legal",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 58.07
   },
   {
    "ticker": "NRG",
@@ -700,70 +1025,98 @@
    "price_at_flag": 94.1
   },
   {
-   "ticker": "NEE",
+   "ticker": "CCEP.L",
    "type": "regulatory",
-   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
-   "title": "NextEra-Dominion merger awaits state and federal approvals",
-   "summary": "DOJ closed antitrust probe, but merger still needs approval from FERC, NRC, and state regulators in VA, NC, SC. State hearings ongoing; outcome uncertain.",
+   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
+   "title": "EU Antitrust Probe into CCEP",
+   "summary": "The EU Commission has opened an antitrust probe into CCEP over cross-border beverage trade. The investigation outcome is pending.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "All approvals granted",
-     "probability": 0.5,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Delayed or conditional approval",
-     "probability": 0.3,
+     "label": "Minor fine or operational tweaks",
+     "probability": 0.7,
      "move_pct": -3.0
     },
     {
-     "label": "Blocked by one or more regulators",
+     "label": "Major restrictions or fine",
      "probability": 0.2,
-     "move_pct": -12.0
+     "move_pct": -15.0
+    },
+    {
+     "label": "Probe dismissed",
+     "probability": 0.1,
+     "move_pct": 5.0
     }
    ],
    "p_big": 0.2,
-   "p_up": 0.5,
-   "expected_move": -0.8,
-   "lean": "either way",
-   "id": "NEE:regulatory",
-   "first_flagged": "2026-11-24",
+   "p_up": 0.1,
+   "expected_move": -4.6,
+   "lean": "down",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
    "last_seen": "2026-11-24",
-   "price_at_flag": 83.97
+   "price_at_flag": 115.04
   },
   {
    "ticker": "TPL",
    "type": "takeover",
-   "source": "Texas Pacific Land to Buy EagleRock, Expanding Permian Land and Water Footprint",
-   "title": "Texas Pacific Land to acquire EagleRock in all-stock deal",
-   "summary": "Pending EagleRock shareholder vote and HSR clearance for $3B all-stock merger. Deal expected to close H1 2027. EagleRock holders with >50% voting power already support it.",
-   "key_date": "2027-06-30",
+   "source": "Texas Pacific Land agrees $3bn all-stock acquisition of EagleRock",
+   "title": "Texas Pacific Land EagleRock Merger",
+   "summary": "TPL agreed to acquire EagleRock Land in an all-stock deal. The transaction is pending shareholder and regulatory approval.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "Deal closes as expected",
-     "probability": 0.85,
-     "move_pct": 2.0
-    },
-    {
-     "label": "Deal blocked or delayed",
-     "probability": 0.1,
-     "move_pct": -8.0
-    },
-    {
-     "label": "Improved terms or competing bid",
-     "probability": 0.05,
+     "label": "Deal closes successfully",
+     "probability": 0.8,
      "move_pct": 5.0
+    },
+    {
+     "label": "Deal blocked or renegotiated",
+     "probability": 0.2,
+     "move_pct": -15.0
     }
    ],
-   "p_big": 0,
-   "p_up": 0.9,
-   "expected_move": 1.1,
+   "p_big": 0.2,
+   "p_up": 0.8,
+   "expected_move": 1.0,
    "lean": "up",
    "id": "TPL:takeover",
    "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
+   "last_seen": "2026-11-24",
    "price_at_flag": 259.71
+  },
+  {
+   "ticker": "TSM",
+   "type": "regulatory",
+   "source": null,
+   "title": "TSMC weighs $22.6 billion Texas chip plant, seeks tax breaks",
+   "summary": "TSMC is considering a $22.6 billion Texas chip plant and seeking tax breaks. The unresolved issue is whether the company proceeds with the investment, which would boost US chip production, or faces delays or changes due to regulatory or financial considerations.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Investment approved, plant proceeds",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Delays or reduced scope",
+     "probability": 0.3,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Project canceled or moved",
+     "probability": 0.2,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.2,
+   "p_up": 0.5,
+   "expected_move": -1.0,
+   "lean": "either way",
+   "id": "TSM:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 344.48
   }
  ]
 }
