@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 15:40",
+ "updated": "2026-11-24 19:49",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 34,
+ "count": 38,
  "situations": [
   {
    "ticker": "NBIS",
@@ -48,6 +48,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 103.07
+  },
+  {
+   "ticker": "IREN",
+   "type": "financing",
+   "source": "IREN (NASDAQ:IREN) Pitches Two Vast Australian AI Data Center Projects",
+   "title": "IREN's Australian AI projects face make-or-break moment",
+   "summary": "IREN pitched two massive Australian AI data center projects amid a steep stock decline and market skepticism about neocloud viability. Securing a customer or funding is critical.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Projects delayed or scaled back",
+     "probability": 0.45,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Projects fail or company distress",
+     "probability": 0.3,
+     "move_pct": -40.0
+    },
+    {
+     "label": "Major customer or funding secured",
+     "probability": 0.25,
+     "move_pct": 40.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.25,
+   "expected_move": -8.8,
+   "lean": "down",
+   "id": "IREN:financing",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 12.85
   },
   {
    "ticker": "RXRX",
@@ -116,38 +149,6 @@
    "price_at_flag": 561.64
   },
   {
-   "ticker": "RXRX",
-   "type": "regulatory",
-   "title": "FDA agreement on Phase III FAP trial endpoint",
-   "summary": "Recursion Pharmaceuticals reached an FDA agreement on a key endpoint for its Phase III FAP trial. The trial outcome is pending, and success or failure will significantly impact the stock.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Phase III trial success",
-     "probability": 0.4,
-     "move_pct": 50.0
-    },
-    {
-     "label": "Phase III trial failure",
-     "probability": 0.4,
-     "move_pct": -50.0
-    },
-    {
-     "label": "Delayed or mixed results",
-     "probability": 0.2,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.4,
-   "expected_move": -2.0,
-   "lean": "down",
-   "id": "RXRX:regulatory",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 2.7
-  },
-  {
    "ticker": "DASH",
    "type": "financing",
    "source": null,
@@ -179,6 +180,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 161.44
+  },
+  {
+   "ticker": "RXRX",
+   "type": "regulatory",
+   "source": null,
+   "title": "FDA agreement on Phase III FAP trial endpoint",
+   "summary": "Recursion Pharmaceuticals reached an FDA agreement on a key endpoint for its Phase III FAP trial, a critical regulatory milestone that could determine trial success and drug approval prospects.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Trial results mixed, further studies needed",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Trial meets endpoint, approval path clear",
+     "probability": 0.3,
+     "move_pct": 50.0
+    },
+    {
+     "label": "Trial fails endpoint",
+     "probability": 0.3,
+     "move_pct": -40.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.3,
+   "expected_move": -1.0,
+   "lean": "down",
+   "id": "RXRX:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 2.7
   },
   {
    "ticker": "WULF",
@@ -246,37 +280,37 @@
    "price_at_flag": 41.5
   },
   {
-   "ticker": "ASTS",
+   "ticker": "NEE",
    "type": "regulatory",
-   "source": "AST SpaceMobile Stock Gets FCC Approval for Direct to Device Service",
-   "title": "FCC approval for AST SpaceMobile direct-to-device service",
-   "summary": "AST SpaceMobile received FCC approval for its direct-to-device service. The approval is a key regulatory milestone, but the market impact and execution risks remain.",
+   "source": null,
+   "title": "NextEra-Dominion merger awaits state approval",
+   "summary": "DOJ closed its antitrust probe, but the merger still needs approval from the Virginia Corporation Commission and FERC. State hearings are ongoing.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Successful commercial launch",
-     "probability": 0.4,
-     "move_pct": 20.0
+     "label": "Merger approved",
+     "probability": 0.65,
+     "move_pct": 15.0
     },
     {
-     "label": "Delays or technical issues",
-     "probability": 0.4,
-     "move_pct": -15.0
-    },
-    {
-     "label": "Competition limits adoption",
+     "label": "Merger blocked",
      "probability": 0.2,
-     "move_pct": -5.0
+     "move_pct": -20.0
+    },
+    {
+     "label": "Merger delayed with conditions",
+     "probability": 0.15,
+     "move_pct": 5.0
     }
    ],
-   "p_big": 0.8,
-   "p_up": 0.4,
-   "expected_move": 1.0,
-   "lean": "down",
-   "id": "ASTS:regulatory",
+   "p_big": 0.85,
+   "p_up": 0.8,
+   "expected_move": 6.5,
+   "lean": "up",
+   "id": "NEE:regulatory",
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
-   "price_at_flag": 25.67
+   "price_at_flag": 83.97
   },
   {
    "ticker": "CRWD",
@@ -344,37 +378,37 @@
    "price_at_flag": 9.65
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": "GTCR considers potential takeover of Global Payments",
-   "title": "GTCR Takeover Interest in GPN",
-   "summary": "GTCR is considering a potential takeover of Global Payments. The outcome of these considerations is pending.",
-   "key_date": null,
+   "ticker": "NRG",
+   "type": "product",
+   "source": "Why Did NRG Stock Jump?",
+   "title": "NRG expects data center project deal by year-end",
+   "summary": "Management expects approved agreements and an announcement on a 1.2 GW Texas data center project by end of 2026. This is a major catalyst for the stock.",
+   "key_date": "2026-12-31",
    "outcomes": [
     {
-     "label": "Takeover talks fall through",
-     "probability": 0.5,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Takeover bid materializes and accepted",
-     "probability": 0.3,
+     "label": "Deal announced on schedule",
+     "probability": 0.6,
      "move_pct": 20.0
     },
     {
-     "label": "Interest fades, no formal bid",
-     "probability": 0.2,
+     "label": "Deal delayed into 2027",
+     "probability": 0.25,
      "move_pct": -5.0
+    },
+    {
+     "label": "Deal falls through",
+     "probability": 0.15,
+     "move_pct": -25.0
     }
    ],
-   "p_big": 0.8,
-   "p_up": 0.3,
-   "expected_move": 0.0,
-   "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
+   "p_big": 0.75,
+   "p_up": 0.6,
+   "expected_move": 7.0,
+   "lean": "up",
+   "id": "NRG:product",
+   "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
-   "price_at_flag": 92.44
+   "price_at_flag": 91.9
   },
   {
    "ticker": "EQNR",
@@ -673,6 +707,39 @@
    "price_at_flag": 41.06
   },
   {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": null,
+   "title": "GTCR considers potential takeover of Global Payments",
+   "summary": "Reports indicate GTCR is evaluating a takeover of Global Payments, an unresolved bid that could lead to a premium offer or collapse, driving significant stock movement.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Takeover talks continue without bid",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Firm takeover bid announced",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Takeover talks collapse",
+     "probability": 0.3,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.7,
+   "expected_move": 5.0,
+   "lean": "up",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 92.44
+  },
+  {
    "ticker": "DELL",
    "type": "results",
    "source": "Dell, HPE results to put AI demand to the test after tech rout",
@@ -704,6 +771,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 338.38
+  },
+  {
+   "ticker": "MRVL",
+   "type": "results",
+   "source": "Generate A Return From Marvell Stock, Set For A Large Post-Earnings Swing",
+   "title": "Marvell Q3 earnings report due Dec 1",
+   "summary": "Marvell reports fiscal Q3 results on Dec 1 after close. Options market implies a 20% move. The stock has fallen 43% in a month amid Lumentum deal dilution concerns and chip sector volatility. Earnings will test AI custom silicon and data center revenue growth.",
+   "key_date": "2026-12-01",
+   "outcomes": [
+    {
+     "label": "In-line results, no guidance change",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Beat on revenue and margin guidance",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Miss on revenue or margin, guidance cut",
+     "probability": 0.3,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.3,
+   "expected_move": -3.5,
+   "lean": "down",
+   "id": "MRVL:results",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 132.32
   },
   {
    "ticker": "IP",
@@ -804,6 +904,72 @@
    "price_at_flag": 104.16
   },
   {
+   "ticker": "DG",
+   "type": "results",
+   "source": null,
+   "title": "Dollar General Q3 earnings report on Dec 3",
+   "summary": "Dollar General reports fiscal Q3 earnings on Dec 3 after an analyst upgrade and strong competitor results; guidance will be key for the stock's direction.",
+   "key_date": "2026-12-03",
+   "outcomes": [
+    {
+     "label": "In line with estimates and maintain guidance",
+     "probability": 0.45,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Beat estimates and raise guidance",
+     "probability": 0.35,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Miss estimates and lower guidance",
+     "probability": 0.2,
+     "move_pct": -18.0
+    }
+   ],
+   "p_big": 0.55,
+   "p_up": 0.8,
+   "expected_move": 2.5,
+   "lean": "up",
+   "id": "DG:results",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 137.9
+  },
+  {
+   "ticker": "ASTS",
+   "type": "regulatory",
+   "source": null,
+   "title": "FCC approval for direct-to-device service",
+   "summary": "AST SpaceMobile received FCC approval to offer direct-to-device satellite service, a key regulatory green light that enables commercial launch and revenue generation.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Service launches with moderate uptake",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Commercial launch successful, strong demand",
+     "probability": 0.3,
+     "move_pct": 30.0
+    },
+    {
+     "label": "Technical or competitive hurdles delay rollout",
+     "probability": 0.2,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.8,
+   "expected_move": 7.5,
+   "lean": "up",
+   "id": "ASTS:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 25.67
+  },
+  {
    "ticker": "NVDA",
    "type": "legal",
    "source": "Jensen Huang is back: Does Washington have a seat in the boardroom?",
@@ -863,34 +1029,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 66.79
-  },
-  {
-   "ticker": "NEE",
-   "type": "regulatory",
-   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
-   "title": "NextEra Energy State Hearings",
-   "summary": "The DOJ closed its antitrust probe into NextEra and Dominion, but state hearings continue. The outcome of these hearings is pending.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Favorable state ruling",
-     "probability": 0.6,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Unfavorable state ruling",
-     "probability": 0.4,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 0.4,
-   "p_up": 0.6,
-   "expected_move": -1.0,
-   "lean": "up",
-   "id": "NEE:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 83.97
   },
   {
    "ticker": "DG",
@@ -1027,30 +1165,30 @@
   {
    "ticker": "CCEP.L",
    "type": "regulatory",
-   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
-   "title": "EU Antitrust Probe into CCEP",
-   "summary": "The EU Commission has opened an antitrust probe into CCEP over cross-border beverage trade. The investigation outcome is pending.",
+   "source": null,
+   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
+   "summary": "The EU Commission opened an antitrust investigation into CCEP over cross-border beverage trade restrictions, which could lead to fines or forced changes to business practices.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Minor fine or operational tweaks",
-     "probability": 0.7,
-     "move_pct": -3.0
+     "label": "Probe closed with no action",
+     "probability": 0.4,
+     "move_pct": 2.0
     },
     {
-     "label": "Major restrictions or fine",
+     "label": "Minor remedies or fine",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Major fine or structural remedy",
      "probability": 0.2,
      "move_pct": -15.0
-    },
-    {
-     "label": "Probe dismissed",
-     "probability": 0.1,
-     "move_pct": 5.0
     }
    ],
    "p_big": 0.2,
-   "p_up": 0.1,
-   "expected_move": -4.6,
+   "p_up": 0.4,
+   "expected_move": -4.2,
    "lean": "down",
    "id": "CCEP.L:regulatory",
    "first_flagged": "2026-11-23",

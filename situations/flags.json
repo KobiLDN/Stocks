@@ -372,5 +372,49 @@
 "p_up": 0.5,
 "expected_move": -1.0,
 "lean": "either way"
+},
+{
+"id": "DG:results",
+"date": "2026-11-24",
+"ticker": "DG",
+"type": "results",
+"price_usd": 137.9,
+"p_big": 0.55,
+"p_up": 0.8,
+"expected_move": 2.5,
+"lean": "up"
+},
+{
+"id": "NRG:product",
+"date": "2026-11-24",
+"ticker": "NRG",
+"type": "product",
+"price_usd": 91.9,
+"p_big": 0.75,
+"p_up": 0.6,
+"expected_move": 7.0,
+"lean": "up"
+},
+{
+"id": "IREN:financing",
+"date": "2026-11-24",
+"ticker": "IREN",
+"type": "financing",
+"price_usd": 12.85,
+"p_big": 1.0,
+"p_up": 0.25,
+"expected_move": -8.8,
+"lean": "down"
+},
+{
+"id": "MRVL:results",
+"date": "2026-11-24",
+"ticker": "MRVL",
+"type": "results",
+"price_usd": 132.32,
+"p_big": 0.6,
+"p_up": 0.3,
+"expected_move": -3.5,
+"lean": "down"
 }
 ]
