@@ -207,5 +207,38 @@
 "p_up": 0.5,
 "expected_move": 2.5,
 "lean": "either way"
+},
+{
+"id": "INTC:leadership",
+"date": "2026-11-24",
+"ticker": "INTC",
+"type": "leadership",
+"price_usd": 59.66,
+"p_big": 0.6,
+"p_up": 0.6,
+"expected_move": 5.5,
+"lean": "up"
+},
+{
+"id": "ASTS:regulatory",
+"date": "2026-11-24",
+"ticker": "ASTS",
+"type": "regulatory",
+"price_usd": 25.67,
+"p_big": 1.0,
+"p_up": 0.3,
+"expected_move": -2.5,
+"lean": "down"
+},
+{
+"id": "AAL.L:other",
+"date": "2026-11-24",
+"ticker": "AAL.L",
+"type": "other",
+"price_usd": 41.5,
+"p_big": 0.65,
+"p_up": 0.75,
+"expected_move": 4.0,
+"lean": "up"
 }
 ]
