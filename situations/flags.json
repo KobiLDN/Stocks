@@ -240,5 +240,16 @@
 "p_up": 0.75,
 "expected_move": 4.0,
 "lean": "up"
+},
+{
+"id": "AAL.L:takeover",
+"date": "2026-11-24",
+"ticker": "AAL.L",
+"type": "takeover",
+"price_usd": 41.5,
+"p_big": 0.4,
+"p_up": 0.6,
+"expected_move": -2.5,
+"lean": "up"
 }
 ]

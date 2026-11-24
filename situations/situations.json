@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 05:27",
+ "updated": "2026-11-24 07:37",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 22,
+ "count": 23,
  "situations": [
   {
    "ticker": "NBIS",
@@ -83,39 +83,6 @@
    "price_at_flag": 561.64
   },
   {
-   "ticker": "ASTS",
-   "type": "regulatory",
-   "source": "AST SpaceMobile Stock Gets FCC Approval for Direct to Device Service",
-   "title": "AST SpaceMobile gets FCC approval for direct-to-device service",
-   "summary": "FCC approval granted, but competitive threat from Starlink's 40x upgrade and execution risks remain. Market reaction mixed.",
-   "key_date": "2026-11-24",
-   "outcomes": [
-    {
-     "label": "Launch delayed or technical issues",
-     "probability": 0.4,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Service launch successful, strong demand",
-     "probability": 0.3,
-     "move_pct": 20.0
-    },
-    {
-     "label": "Starlink competition limits uptake",
-     "probability": 0.3,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.3,
-   "expected_move": -2.5,
-   "lean": "down",
-   "id": "ASTS:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 25.67
-  },
-  {
    "ticker": "RXRX",
    "type": "regulatory",
    "title": "FDA agreement on Phase III FAP trial endpoint",
@@ -180,6 +147,39 @@
    "price_at_flag": 11.56
   },
   {
+   "ticker": "ASTS",
+   "type": "regulatory",
+   "source": "AST SpaceMobile Stock Gets FCC Approval for Direct to Device Service",
+   "title": "FCC approval for AST SpaceMobile direct-to-device service",
+   "summary": "AST SpaceMobile received FCC approval for its direct-to-device service. The approval is a key regulatory milestone, but the market impact and execution risks remain.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Successful commercial launch",
+     "probability": 0.4,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Delays or technical issues",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Competition limits adoption",
+     "probability": 0.2,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.8,
+   "p_up": 0.4,
+   "expected_move": 1.0,
+   "lean": "down",
+   "id": "ASTS:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 25.67
+  },
+  {
    "ticker": "CRWD",
    "type": "takeover",
    "title": "CrowdStrike acquisition of Zscaler",
@@ -212,6 +212,39 @@
    "price_at_flag": 207.63
   },
   {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
+   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
+   "summary": "The EU Commission opened an antitrust probe into CCEP over cross-border beverage trade. The outcome is unresolved and could lead to fines or restrictions.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Fine or restrictions imposed",
+     "probability": 0.5,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Probe dropped with minor changes",
+     "probability": 0.3,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Severe penalties or breakup",
+     "probability": 0.2,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.3,
+   "expected_move": -7.5,
+   "lean": "down",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 115.04
+  },
+  {
    "ticker": "EQNR",
    "type": "regulatory",
    "title": "Bay du Nord project approved, FID pending",
@@ -242,6 +275,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 38.59
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "Global Payments (GPN) Gets a Potential Lifeline as New Takeover Buzz Heats Up",
+   "title": "GTCR potential takeover of Global Payments",
+   "summary": "GTCR is reportedly considering a $50 billion takeover bid for Global Payments. The deal is not yet agreed or accepted, creating a pending situation.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Takeover agreed at premium",
+     "probability": 0.4,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Takeover talks collapse",
+     "probability": 0.3,
+     "move_pct": -12.0
+    },
+    {
+     "label": "No deal, stock drifts",
+     "probability": 0.3,
+     "move_pct": -2.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.4,
+   "expected_move": 1.8,
+   "lean": "down",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 92.44
   },
   {
    "ticker": "MU",
@@ -503,39 +569,6 @@
    "price_at_flag": 338.38
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": null,
-   "title": "GTCR explores potential $50B take-private of Global Payments",
-   "summary": "GTCR, Global Payments' largest shareholder, is exploring a take-private bid valued at ~$50B including debt. No definitive decision has been made, and GTCR is working with other PE firms for financing. The deal is uncertain after a prior consortium with CD&R fell apart.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No news / stalemate",
-     "probability": 0.4,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Takeover talks collapse",
-     "probability": 0.35,
-     "move_pct": -15.0
-    },
-    {
-     "label": "Take-private deal agreed",
-     "probability": 0.25,
-     "move_pct": 20.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.25,
-   "expected_move": -2.2,
-   "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 92.44
-  },
-  {
    "ticker": "SMTC",
    "type": "results",
    "title": "Semtech Q3 earnings report due after close",
@@ -601,37 +634,37 @@
    "price_at_flag": 165.05
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": null,
-   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
-   "summary": "The European Commission has opened an antitrust investigation into CCEP over cross-border beverage trade practices. The probe could result in fines or forced changes to business operations, impacting profitability. Outcome is pending and uncertain.",
+   "ticker": "AAL.L",
+   "type": "takeover",
+   "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
+   "title": "Anglo American's De Beers sale to consortium pending",
+   "summary": "Anglo American's sale of its 85% De Beers stake to the Global Diamond Consortium is not yet final. Angola's $180M for 10% and Botswana's bid for up to 30% are still being negotiated, with binding agreements and regulatory approvals outstanding.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Probe closed with no action",
-     "probability": 0.4,
+     "label": "Deal completed on current terms",
+     "probability": 0.6,
      "move_pct": 5.0
     },
     {
-     "label": "Fines or remedies imposed",
-     "probability": 0.3,
+     "label": "Deal renegotiated or delayed",
+     "probability": 0.25,
      "move_pct": -10.0
     },
     {
-     "label": "Long investigation, no near-term resolution",
-     "probability": 0.3,
-     "move_pct": -2.0
+     "label": "Deal collapses, De Beers stays",
+     "probability": 0.15,
+     "move_pct": -20.0
     }
    ],
-   "p_big": 0.3,
-   "p_up": 0.4,
-   "expected_move": -1.6,
-   "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
+   "p_big": 0.4,
+   "p_up": 0.6,
+   "expected_move": -2.5,
+   "lean": "up",
+   "id": "AAL.L:takeover",
+   "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
-   "price_at_flag": 115.04
+   "price_at_flag": 41.5
   },
   {
    "ticker": "NRG",
