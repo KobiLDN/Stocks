@@ -141,5 +141,71 @@
 "p_up": 0.9,
 "expected_move": 1.1,
 "lean": "up"
+},
+{
+"id": "MBG.DE:other",
+"date": "2026-11-24",
+"ticker": "MBG.DE",
+"type": "other",
+"price_usd": 41.06,
+"p_big": 0.6,
+"p_up": 0.4,
+"expected_move": -5.5,
+"lean": "down"
+},
+{
+"id": "NVDA:legal",
+"date": "2026-11-24",
+"ticker": "NVDA",
+"type": "legal",
+"price_usd": 165.05,
+"p_big": 0.5,
+"p_up": 0.5,
+"expected_move": -7.0,
+"lean": "either way"
+},
+{
+"id": "NTRA:leadership",
+"date": "2026-11-24",
+"ticker": "NTRA",
+"type": "leadership",
+"price_usd": 292.39,
+"p_big": 0.65,
+"p_up": 0.75,
+"expected_move": 2.8,
+"lean": "up"
+},
+{
+"id": "D:regulatory",
+"date": "2026-11-24",
+"ticker": "D",
+"type": "regulatory",
+"price_usd": 66.79,
+"p_big": 0.6,
+"p_up": 0.6,
+"expected_move": 4.0,
+"lean": "up"
+},
+{
+"id": "NEE:regulatory",
+"date": "2026-11-24",
+"ticker": "NEE",
+"type": "regulatory",
+"price_usd": 83.97,
+"p_big": 0.4,
+"p_up": 0.6,
+"expected_move": -1.0,
+"lean": "up"
+},
+{
+"id": "285A:activist",
+"date": "2026-11-24",
+"ticker": "285A",
+"type": "activist",
+"price_usd": 49.76,
+"p_big": 1.0,
+"p_up": 0.5,
+"expected_move": 2.5,
+"lean": "either way"
 }
 ]

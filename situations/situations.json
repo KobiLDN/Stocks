@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23 20:36",
+ "updated": "2026-11-24 03:09",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 13,
+ "count": 19,
  "situations": [
   {
    "ticker": "NBIS",
@@ -81,6 +81,34 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 561.64
+  },
+  {
+   "ticker": "285A",
+   "type": "activist",
+   "source": null,
+   "title": "SK Hynix weighs converting Kioxia bonds to shares",
+   "summary": "SK Hynix is considering converting its bonds into Kioxia equity, which could change ownership structure and signal confidence. Decision pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Conversion announced",
+     "probability": 0.5,
+     "move_pct": 15.0
+    },
+    {
+     "label": "No conversion",
+     "probability": 0.5,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.5,
+   "expected_move": 2.5,
+   "lean": "either way",
+   "id": "285A:activist",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 49.76
   },
   {
    "ticker": "RXRX",
@@ -179,39 +207,6 @@
    "price_at_flag": 207.63
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": "GTCR considers potential takeover of Global Payments",
-   "title": "GTCR explores potential takeover of Global Payments",
-   "summary": "Private equity firm GTCR, the largest shareholder, filed that it may propose to acquire Global Payments. No definitive decision has been made. The stock jumped 10% on the news but the outcome is uncertain.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No bid",
-     "probability": 0.6,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Bid announced but lower/rejected",
-     "probability": 0.25,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Successful takeover at premium",
-     "probability": 0.15,
-     "move_pct": 30.0
-    }
-   ],
-   "p_big": 0.75,
-   "p_up": 0.15,
-   "expected_move": -2.8,
-   "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 92.44
-  },
-  {
    "ticker": "EQNR",
    "type": "regulatory",
    "title": "Bay du Nord project approved, FID pending",
@@ -242,6 +237,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 38.59
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": null,
+   "title": "GTCR explores $50B take-private bid for Global Payments",
+   "summary": "GTCR, Global Payments' largest shareholder, confirmed in an SEC filing it is evaluating a potential acquisition. The deal is preliminary and not yet decided, with GTCR needing partners and financing.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "GTCR abandons bid or fails to secure partners",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "GTCR secures financing and makes formal bid",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Another bidder emerges or talks extend",
+     "probability": 0.3,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.6,
+   "expected_move": 1.5,
+   "lean": "up",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 92.44
   },
   {
    "ticker": "MU",
@@ -275,6 +303,100 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 710.42
+  },
+  {
+   "ticker": "NTRA",
+   "type": "leadership",
+   "source": "Natera Targets $6 Billion in Revenue by 2029, Banking on Signatera Growth",
+   "title": "New CEO Solomon Moshkevich's first full-year guidance test",
+   "summary": "Surprise CEO change on Nov 5 sent stock down 37% from high. New CEO's first full-year 2027 guidance in early 2025 is the next major test of investor confidence and execution credibility.",
+   "key_date": "2027-02-01",
+   "outcomes": [
+    {
+     "label": "Guidance meets or beats elevated expectations",
+     "probability": 0.4,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Guidance in line with lowered expectations",
+     "probability": 0.35,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Guidance disappoints, growth concerns persist",
+     "probability": 0.25,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.65,
+   "p_up": 0.75,
+   "expected_move": 2.8,
+   "lean": "up",
+   "id": "NTRA:leadership",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 292.39
+  },
+  {
+   "ticker": "MBG.DE",
+   "type": "other",
+   "source": "German strikes hit Mercedes and BMW",
+   "title": "German union strikes hit Mercedes-Benz production",
+   "summary": "IG Metall union has extended walkouts at Mercedes and BMW plants; unresolved wage negotiations could disrupt production and impact earnings.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Quick resolution with wage deal",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Prolonged strike lasting weeks",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Escalation to broader industry strikes",
+     "probability": 0.3,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.4,
+   "expected_move": -5.5,
+   "lean": "down",
+   "id": "MBG.DE:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 41.06
+  },
+  {
+   "ticker": "D",
+   "type": "regulatory",
+   "source": null,
+   "title": "State regulatory decision on NextEra-Dominion merger pending",
+   "summary": "State hearings continue after DOJ closed antitrust probe. The outcome of state approval for the merger could significantly impact Dominion's stock price.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "State approves merger",
+     "probability": 0.6,
+     "move_pct": 10.0
+    },
+    {
+     "label": "State denies merger",
+     "probability": 0.4,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.6,
+   "expected_move": 4.0,
+   "lean": "up",
+   "id": "D:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 66.79
   },
   {
    "ticker": "DELL",
@@ -342,32 +464,98 @@
    "price_at_flag": 104.16
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Commission opens anti-trust probe into CCEP",
-   "title": "EU Commission opens anti-trust probe into CCEP",
-   "summary": "The European Commission has opened an antitrust investigation into Coca-Cola Europacific Partners over cross-border beverage trade practices. The outcome of the probe could lead to fines or forced changes in business practices, impacting the company's European operations.",
+   "ticker": "NVDA",
+   "type": "legal",
+   "source": "Jensen Huang is back: Does Washington have a seat in the boardroom?",
+   "title": "Congressional probes into Nvidia's China chip sales and board reversal",
+   "summary": "US lawmakers plan interviews and investigations into how restricted AI chips reached China and the board's sudden reversal; outcomes could lead to new export restrictions or fines.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Probe results in minor remedies or no action",
-     "probability": 0.6,
-     "move_pct": -2.0
+     "label": "No major action from probes",
+     "probability": 0.5,
+     "move_pct": 5.0
     },
     {
-     "label": "Probe results in significant fines or operational changes",
-     "probability": 0.4,
-     "move_pct": -12.0
+     "label": "New export restrictions or fines",
+     "probability": 0.3,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Broad regulatory crackdown on AI chips",
+     "probability": 0.2,
+     "move_pct": -25.0
     }
    ],
-   "p_big": 0.4,
-   "p_up": 0,
-   "expected_move": -6.0,
+   "p_big": 0.5,
+   "p_up": 0.5,
+   "expected_move": -7.0,
+   "lean": "either way",
+   "id": "NVDA:legal",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 165.05
+  },
+  {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
+   "title": "EU opens antitrust probe into Coca-Cola Europacific Partners",
+   "summary": "The European Commission opened an antitrust investigation into CCEP over potential cross-border trade restrictions. The probe is unresolved and could lead to fines or forced changes.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "EU imposes fines and remedies",
+     "probability": 0.5,
+     "move_pct": -10.0
+    },
+    {
+     "label": "EU finds no violation, case closed",
+     "probability": 0.3,
+     "move_pct": 5.0
+    },
+    {
+     "label": "EU issues formal charges, long investigation",
+     "probability": 0.2,
+     "move_pct": -3.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.3,
+   "expected_move": -4.1,
    "lean": "down",
    "id": "CCEP.L:regulatory",
    "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
+   "last_seen": "2026-11-24",
    "price_at_flag": 115.04
+  },
+  {
+   "ticker": "NEE",
+   "type": "regulatory",
+   "source": null,
+   "title": "State regulatory decision on NextEra-Dominion merger pending",
+   "summary": "State hearings continue after DOJ closed antitrust probe. The outcome of state approval for the merger could significantly impact NextEra's stock price.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "State approves merger",
+     "probability": 0.6,
+     "move_pct": 5.0
+    },
+    {
+     "label": "State denies merger",
+     "probability": 0.4,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0.6,
+   "expected_move": -1.0,
+   "lean": "up",
+   "id": "NEE:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 83.97
   },
   {
    "ticker": "NRG",
