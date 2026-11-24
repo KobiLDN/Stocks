@@ -416,5 +416,27 @@
 "p_up": 0.3,
 "expected_move": -3.5,
 "lean": "down"
+},
+{
+"id": "IP:regulatory",
+"date": "2026-11-24",
+"ticker": "IP",
+"type": "regulatory",
+"price_usd": 30.3,
+"p_big": 0.05,
+"p_up": 0.85,
+"expected_move": 0.7,
+"lean": "up"
+},
+{
+"id": "NVDA:regulatory",
+"date": "2026-11-24",
+"ticker": "NVDA",
+"type": "regulatory",
+"price_usd": 152.63,
+"p_big": 0.7,
+"p_up": 0.5,
+"expected_move": 1.4,
+"lean": "either way"
 }
 ]

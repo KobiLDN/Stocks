@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 19:49",
+ "updated": "2026-11-24 20:37",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 38,
+ "count": 40,
  "situations": [
   {
    "ticker": "NBIS",
@@ -147,6 +147,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 561.64
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "GTCR considers potential takeover of Global Payments",
+   "title": "GTCR considering potential takeover of Global Payments",
+   "summary": "GTCR is evaluating a bid for Global Payments. Stock rose on buzz. If a deal emerges, shares could jump to offer price; if talks fail, the premium could evaporate.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Talks end with no deal",
+     "probability": 0.5,
+     "move_pct": -12.0
+    },
+    {
+     "label": "Deal announced at significant premium",
+     "probability": 0.4,
+     "move_pct": 18.0
+    },
+    {
+     "label": "Alternative bidder emerges",
+     "probability": 0.1,
+     "move_pct": 20.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.5,
+   "expected_move": 3.2,
+   "lean": "either way",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 92.44
   },
   {
    "ticker": "DASH",
@@ -313,38 +346,6 @@
    "price_at_flag": 83.97
   },
   {
-   "ticker": "CRWD",
-   "type": "takeover",
-   "title": "CrowdStrike acquisition of Zscaler",
-   "summary": "CrowdStrike announced a $44B deal to acquire Zscaler. The deal is pending regulatory and shareholder approval, with integration risks.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Deal approved, synergies expected",
-     "probability": 0.5,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Regulatory hurdles delay or block",
-     "probability": 0.3,
-     "move_pct": -15.0
-    },
-    {
-     "label": "Deal renegotiated lower",
-     "probability": 0.2,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.8,
-   "p_up": 0.5,
-   "expected_move": -0.5,
-   "lean": "either way",
-   "id": "CRWD:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 207.63
-  },
-  {
    "ticker": "WULF",
    "type": "financing",
    "source": null,
@@ -476,37 +477,37 @@
    "price_at_flag": 209.74
   },
   {
-   "ticker": "MU",
-   "type": "results",
-   "source": "Micron Soars 20% as Citi Says Ending Nvidia’s Financing Would Cut DRAM Demand Only 12%",
-   "title": "Micron Q1 FY2027 earnings report on Dec 17",
-   "summary": "Micron reports Dec 17. Revenue and gross margin guidance will test whether memory prices and take-or-pay contracts are holding, after a 20% rally on Citi's Nvidia financing analysis and CEO's contract comments.",
-   "key_date": "2026-12-17",
+   "ticker": "NVDA",
+   "type": "regulatory",
+   "source": null,
+   "title": "Jensen Huang congressional grilling pending",
+   "summary": "NVIDIA CEO Jensen Huang faces congressional hearing with GOP skeptics. Outcome could affect AI trade sentiment and regulatory risk perception for NVIDIA.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "Revenue and margin meet or beat guidance",
+     "label": "Huang successfully defends company",
      "probability": 0.5,
      "move_pct": 10.0
     },
     {
-     "label": "Revenue in line, margin slightly below",
+     "label": "Mixed outcome with some risk flagged",
      "probability": 0.3,
-     "move_pct": -5.0
+     "move_pct": -2.0
     },
     {
-     "label": "Revenue or margin miss significantly",
+     "label": "Hearing reveals significant regulatory risk",
      "probability": 0.2,
-     "move_pct": -20.0
+     "move_pct": -15.0
     }
    ],
    "p_big": 0.7,
    "p_up": 0.5,
-   "expected_move": -0.5,
+   "expected_move": 1.4,
    "lean": "either way",
-   "id": "MU:results",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 710.42
+   "id": "NVDA:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 152.63
   },
   {
    "ticker": "285A",
@@ -542,37 +543,37 @@
    "price_at_flag": 49.76
   },
   {
-   "ticker": "AAL.L",
-   "type": "other",
-   "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
-   "title": "Anglo American De Beers exit talks with Angola",
-   "summary": "Angola has set a $180mn price for a 10% De Beers stake as Anglo American continues exit negotiations. The outcome of these talks could significantly impact Anglo American's valuation and restructuring plans.",
-   "key_date": null,
+   "ticker": "DELL",
+   "type": "results",
+   "source": "Is Gross Profit Dell Stock's Real Test Tonight?",
+   "title": "Dell Technologies earnings report due tonight",
+   "summary": "Dell reports fiscal Q3 earnings after close. Stock fell 12% today on anticipation. A beat could reverse losses; a miss may deepen selloff.",
+   "key_date": "2026-11-24",
    "outcomes": [
     {
-     "label": "Successful sale at favorable terms",
-     "probability": 0.4,
+     "label": "Earnings beat expectations",
+     "probability": 0.35,
      "move_pct": 15.0
     },
     {
-     "label": "Sale at lower price or delayed",
+     "label": "Earnings in line with expectations",
      "probability": 0.35,
-     "move_pct": 5.0
+     "move_pct": 2.0
     },
     {
-     "label": "Talks collapse, no deal",
-     "probability": 0.25,
-     "move_pct": -15.0
+     "label": "Earnings miss expectations",
+     "probability": 0.3,
+     "move_pct": -12.0
     }
    ],
    "p_big": 0.65,
-   "p_up": 0.75,
-   "expected_move": 4.0,
+   "p_up": 0.7,
+   "expected_move": 2.4,
    "lean": "up",
-   "id": "AAL.L:other",
-   "first_flagged": "2026-11-24",
+   "id": "DELL:results",
+   "first_flagged": "2026-11-23",
    "last_seen": "2026-11-24",
-   "price_at_flag": 41.5
+   "price_at_flag": 338.38
   },
   {
    "ticker": "NTRA",
@@ -707,72 +708,6 @@
    "price_at_flag": 41.06
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": null,
-   "title": "GTCR considers potential takeover of Global Payments",
-   "summary": "Reports indicate GTCR is evaluating a takeover of Global Payments, an unresolved bid that could lead to a premium offer or collapse, driving significant stock movement.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Takeover talks continue without bid",
-     "probability": 0.4,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Firm takeover bid announced",
-     "probability": 0.3,
-     "move_pct": 20.0
-    },
-    {
-     "label": "Takeover talks collapse",
-     "probability": 0.3,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.7,
-   "expected_move": 5.0,
-   "lean": "up",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 92.44
-  },
-  {
-   "ticker": "DELL",
-   "type": "results",
-   "source": "Dell, HPE results to put AI demand to the test after tech rout",
-   "title": "Dell Q3 earnings report amid AI demand test",
-   "summary": "Dell reports quarterly earnings; results will test AI server demand after tech rout and Super Micro price hike reports.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Beat expectations",
-     "probability": 0.4,
-     "move_pct": 15.0
-    },
-    {
-     "label": "In-line results",
-     "probability": 0.4,
-     "move_pct": 2.0
-    },
-    {
-     "label": "Miss expectations",
-     "probability": 0.2,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.8,
-   "expected_move": 3.8,
-   "lean": "up",
-   "id": "DELL:results",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 338.38
-  },
-  {
    "ticker": "MRVL",
    "type": "results",
    "source": "Generate A Return From Marvell Stock, Set For A Large Post-Earnings Swing",
@@ -806,6 +741,39 @@
    "price_at_flag": 132.32
   },
   {
+   "ticker": "MU",
+   "type": "results",
+   "source": null,
+   "title": "Micron Q1 FY2027 earnings due in December",
+   "summary": "Micron reports Q1 FY2027 results in December. Stock down 30% in month. Guidance and margin will test if AI memory demand is peaking. Consensus expects revenue above management's own range.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "In-line with guidance",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Beat on revenue and margin",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Miss on revenue or margin",
+     "probability": 0.3,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.3,
+   "expected_move": -3.5,
+   "lean": "down",
+   "id": "MU:results",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 710.42
+  },
+  {
    "ticker": "IP",
    "type": "other",
    "source": "International Paper clears EMEA unit spin-off and plans London delisting",
@@ -837,6 +805,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 29.86
+  },
+  {
+   "ticker": "AAL.L",
+   "type": "other",
+   "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
+   "title": "Anglo American's De Beers stake sale negotiations",
+   "summary": "Angola set $180M price for 10% of De Beers as Anglo American continues exit talks. Outcome of sale price and terms could significantly affect Anglo's restructuring value.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Sale at discount or neutral terms",
+     "probability": 0.4,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Sale at premium to Angola price",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Sale collapses or is significantly delayed",
+     "probability": 0.3,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.7,
+   "expected_move": 2.3,
+   "lean": "up",
+   "id": "AAL.L:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 41.5
   },
   {
    "ticker": "AVGO",
@@ -1003,6 +1004,67 @@
    "price_at_flag": 165.05
   },
   {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
+   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
+   "summary": "EU Commission opened formal investigation into CCEP over cross-border beverage trade restrictions. Outcome could bring fines or remedies; uncertainty may weigh on stock.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Probe closes with minor or no action",
+     "probability": 0.6,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Significant fines or restrictions imposed",
+     "probability": 0.4,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0.6,
+   "expected_move": -3.0,
+   "lean": "up",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 115.04
+  },
+  {
+   "ticker": "CRWD",
+   "type": "takeover",
+   "source": null,
+   "title": "CrowdStrike-Zscaler merger pending closure",
+   "summary": "CrowdStrike agreed to acquire Zscaler for $43.9B. Deal faces regulatory scrutiny and shareholder votes. Stock has declined on concerns about deal value and synergies.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Deal approved and closed",
+     "probability": 0.6,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Deal blocked or terminated",
+     "probability": 0.2,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Deal renegotiated at lower price",
+     "probability": 0.2,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0.6,
+   "expected_move": -2.0,
+   "lean": "up",
+   "id": "CRWD:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 207.63
+  },
+  {
    "ticker": "D",
    "type": "regulatory",
    "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
@@ -1163,39 +1225,6 @@
    "price_at_flag": 94.1
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": null,
-   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
-   "summary": "The EU Commission opened an antitrust investigation into CCEP over cross-border beverage trade restrictions, which could lead to fines or forced changes to business practices.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Probe closed with no action",
-     "probability": 0.4,
-     "move_pct": 2.0
-    },
-    {
-     "label": "Minor remedies or fine",
-     "probability": 0.4,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Major fine or structural remedy",
-     "probability": 0.2,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.2,
-   "p_up": 0.4,
-   "expected_move": -4.2,
-   "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 115.04
-  },
-  {
    "ticker": "TPL",
    "type": "takeover",
    "source": "Texas Pacific Land agrees $3bn all-stock acquisition of EagleRock",
@@ -1255,6 +1284,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 344.48
+  },
+  {
+   "ticker": "IP",
+   "type": "regulatory",
+   "source": null,
+   "title": "International Paper spin-off of EMEA business (DS Smith) pending completion",
+   "summary": "Board approved spin-off of EMEA packaging into DS Smith plc, retaining 19.9% stake. Completion expected Dec 7 subject to regulatory approvals and SEC filing. Stock may react to execution risk.",
+   "key_date": "2026-12-07",
+   "outcomes": [
+    {
+     "label": "Spin-off completes as planned",
+     "probability": 0.85,
+     "move_pct": 3.0
+    },
+    {
+     "label": "Spin-off delayed due to regulatory issues",
+     "probability": 0.1,
+     "move_pct": -8.0
+    },
+    {
+     "label": "Spin-off cancelled",
+     "probability": 0.05,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.05,
+   "p_up": 0.85,
+   "expected_move": 0.7,
+   "lean": "up",
+   "id": "IP:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-24",
+   "price_at_flag": 30.3
   }
  ]
 }
