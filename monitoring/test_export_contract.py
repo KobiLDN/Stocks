@@ -174,6 +174,8 @@ class ExportContract(unittest.TestCase):
         isins = [s["isin"] for s in self.payload["stocks"] if s["isin"] is not None]
         self.assertTrue(all(isin_ok(i) for i in isins))
         self.assertTrue(all(s["isin"] is None for s in self.payload["stocks"] if s["sector"] == "Crypto"))
+        equities = [s for s in self.payload["stocks"] if s["sector"] != "Crypto"]
+        self.assertGreater(len(isins) / len(equities), 0.95)       # portfolio matches holdings on it
 
     def test_sector_is_official(self):
         allowed = {"Communication Services", "Consumer Discretionary", "Consumer Staples", "Energy", "Financials",
