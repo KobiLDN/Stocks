@@ -227,6 +227,7 @@ for name, path in sources:
         row["themes"]   = ["crypto"] if crypto else [t.lower() for t in s.get("themes") or []]
         row["markets"]  = ["crypto"] if crypto else list(s.get("markets") or [])
         row["t212"]     = None if crypto else s.get("t212")
+        row["isin"]     = None if crypto else s.get("isin")       # portfolio request, 24 Nov 2026
         row["change_1y"] = s.get("return_1yr")  # alias expected by portfolio session
 
         for label, field in PERIODS:
@@ -287,7 +288,7 @@ for label, _ in PERIODS:
     for amt in AMOUNTS:
         whatsit_fields += [f"val_{amt}_{label}", f"profit_{amt}_{label}"]
 
-csv_fields = PRICE_FIELDS + ["industry", "currency", "themes", "markets", "t212"] + whatsit_fields + [
+csv_fields = PRICE_FIELDS + ["industry", "currency", "themes", "markets", "t212", "isin"] + whatsit_fields + [
     "news1_title", "news1_publisher", "news1_date", "news1_sentiment",
     "news2_title", "news2_publisher", "news2_date", "news2_sentiment",
     "news3_title", "news3_publisher", "news3_date", "news3_sentiment",

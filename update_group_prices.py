@@ -410,7 +410,7 @@ def make_row(t, a, s, f, fx, themes, category):
         "vol_1d": s["vol_1d"], "vol_1w": s["vol_1w"], "vol_1m": s["vol_1m"],
         "news": [], "news_sentiment": None,
         "markets": a.get("markets") or [], "sector": a.get("sector"), "industry": a.get("industry"),
-        "themes": themes.get(t, []), "t212": a.get("t212"), "currency": a["currency"],
+        "themes": themes.get(t, []), "t212": a.get("t212"), "isin": a.get("isin"), "currency": a["currency"],
         "price_as_of": s["price_as_of"],
     }
 
@@ -432,7 +432,7 @@ NEWS_ALL_PATH = "All/news-data.js"      # only the stocks with headlines, for Al
 # universe.yaml theme names -> the keys the All pages use (and sector-data.js's notes)
 THEME_KEYS = {"AI": "ai", "Biotech": "biotech", "Crypto": "crypto", "Defence": "defence",
               "Energy": "energy", "MegaCap": "megacap", "Tech": "tech"}
-ALL_DROP = ("news", "news_sentiment", "low_gbp", "high_gbp", "price_gbp")   # unused there; keeps the file small
+ALL_DROP = ("news", "news_sentiment", "low_gbp", "high_gbp", "price_gbp", "isin")   # unused there; keeps the file small
 
 
 def all_row(r, sector_slug=None):
