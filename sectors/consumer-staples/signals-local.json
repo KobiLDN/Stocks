@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23 08:04",
+  "updated": "2026-11-25 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -7,10 +7,183 @@
   "group_name": "Consumer Staples",
   "group_kind": "sector",
   "variant": "live-2",
-  "prompt_version": "c71ebe21e58a",
-  "code_commit": "a06724890bf5",
+  "prompt_version": "c3e2187306ff",
+  "code_commit": "d7455adaad79",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "DLTR",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Revenue up 6.9% to $5.1B, comp sales +4.6% with traffic accelerating 3.8%; raised FY2026 adjusted EPS outlook to $8.05-$8.25, P/E 16.9, +46% 1Y return.",
+      "drivers": [
+        "Strong Q3 earnings beat",
+        "Raised guidance",
+        "Accelerating traffic growth",
+        "Attractive P/E 16.9"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "TGT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Q3 EPS $2.65 vs $1.51 YoY, net sales +7.1%, comp sales +5.6% with 5% traffic growth; raised full-year sales guidance to ~6%, P/E 15.6.",
+      "drivers": [
+        "Exceptional earnings beat",
+        "Strong traffic and sales growth",
+        "Raised guidance",
+        "Low P/E 15.6"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "WMT",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Q3 revenue +5.2% to $188.8B, raised FY2027 sales growth forecast to 4.9%-5.2%, analyst consensus strong_buy (score 1.55), +25% 1Y return.",
+      "drivers": [
+        "Revenue beat and raised guidance",
+        "Strong analyst consensus",
+        "Market leader in retail",
+        "Solid YTD momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "COST",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "P/E 52.9 is elevated but +32% YTD, +26% 1Y return, low short interest 1.78%, analyst buy consensus, strong membership model.",
+      "drivers": [
+        "Strong YTD momentum",
+        "Low short interest",
+        "Analyst buy consensus",
+        "Premium brand strength"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "CLX",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Q1 EPS beat ($1.55 vs $1.07), +24.9% 1M momentum, P/E 18.7, dividend yield 4.8%, ERP implementation largely behind, margins rebuilding.",
+      "drivers": [
+        "Earnings beat",
+        "Strong 1M momentum",
+        "Attractive P/E and yield",
+        "Operational turnaround"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "TSN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "+12.5% 1M momentum, +15% 1Y return, P/E 49.2 but improving volume trends, dividend yield 3.3%, analyst hold but improving fundamentals.",
+      "drivers": [
+        "Strong 1M momentum",
+        "Solid YTD return",
+        "Dividend yield 3.3%",
+        "Volume recovery"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "HRL",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+11.1% 1M momentum, +7% 1Y return, dividend yield 5.07%, P/E 37.2 but value brand strength, improving volume trends.",
+      "drivers": [
+        "Strong 1M momentum",
+        "High dividend yield",
+        "Brand strength",
+        "Volume recovery"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "DG",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "+35% 1Y return, +8% 1M momentum, P/E 17.4, low beta 0.19, analyst buy consensus, dollar store resilience.",
+      "drivers": [
+        "Strong 1Y return",
+        "Low P/E",
+        "Analyst buy consensus",
+        "Defensive retail"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "HEN3.DE",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+28% 1Y return, +9.5% 1M momentum, P/E 18.5, dividend yield 2.4%, analyst hold but strong brand portfolio.",
+      "drivers": [
+        "Strong 1Y return",
+        "Good 1M momentum",
+        "Reasonable P/E",
+        "Brand strength"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "BN.PA",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+9.5% 1M momentum, P/E 22.7, dividend yield 3.3%, analyst buy consensus, low beta 0.16, defensive staple.",
+      "drivers": [
+        "Strong 1M momentum",
+        "Analyst buy consensus",
+        "Dividend yield",
+        "Defensive positioning"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "WMT",
@@ -175,179 +348,6 @@
         "buy analyst rating",
         "decent dividend yield",
         "positive 1M momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TGT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "TGT surged +96% over 1Y and +70.73% YTD, with Q3 EPS of $2.65 beating last year's $1.51, driven by 5.6% comparable sales growth and raised full-year guidance [corporate.target.com](https://corporate.target.com/press/release/2026/11/target-corporation-reports-third-quarter-earnings).",
-      "drivers": [
-        "+96% 1Y return",
-        "Q3 EPS $2.65 vs $1.51 YoY",
-        "raised FY guidance",
-        "P/E 15.4"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "WMT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "WMT reported Q3 revenue +5.2% to $188.8B, adjusted EPS $0.65, raised FY27 outlook, and eCommerce grew 17% globally [corporate.walmart.com](https://corporate.walmart.com/content/dam/corporate/documents/newsroom/2026/11/q3-fy27-earnings/q3-fy27-earnings-release.pdf).",
-      "drivers": [
-        "Q3 revenue $188.8B +5.2%",
-        "raised FY27 outlook",
-        "eCommerce +17%",
-        "strong analyst score 1.55"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "TSN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "TSN rallied +16.49% in 1M and +10.71% in 1W after reporting Q4 adjusted EPS $0.61 and strong Prepared Foods growth, despite chicken headwinds [tysonfoods.com](https://www.tysonfoods.com/news/news-releases/2026/11/tyson-foods-reports-fourth-quarter-2026-results).",
-      "drivers": [
-        "+16.49% 1M momentum",
-        "Q4 adj EPS $0.61",
-        "Prepared Foods growth",
-        "P/E 50.9"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "COST",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "COST gained +23% 1Y and +29.74% YTD, with a 1M surge of +10.56%, supported by low short interest of 1.78% and a strong buy consensus.",
-      "drivers": [
-        "+29.74% YTD",
-        "1M +10.56%",
-        "low short interest 1.78%",
-        "strong buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "CLX",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "CLX jumped +25.34% in 1M, has a reasonable P/E of 18.84, and offers a high dividend yield of 4.77%, making it a compelling value play with recent momentum.",
-      "drivers": [
-        "1M +25.34%",
-        "P/E 18.8",
-        "dividend yield 4.77%",
-        "momentum reversal"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "HRL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "HRL surged +15.17% in 1M and +6.56% in 1W, with a +10% 1Y return and a high dividend yield of 4.97%, signaling renewed investor interest.",
-      "drivers": [
-        "1M +15.17%",
-        "1W +6.56%",
-        "dividend yield 4.97%",
-        "positive momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "PG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "PG delivered +22.92% YTD and +8.70% in 1M, with a low beta of 0.36, minimal short interest of 0.97%, and a solid buy rating from analysts.",
-      "drivers": [
-        "+22.92% YTD",
-        "1M +8.70%",
-        "low short interest 0.97%",
-        "low beta 0.36"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "GIS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "GIS reversed sharply with +9.73% in 1M and +4.14% in 1W, despite a -21% 1Y decline, and offers a high dividend yield of 6.83% with a P/E near zero.",
-      "drivers": [
-        "1M +9.73%",
-        "1W +4.14%",
-        "dividend yield 6.83%",
-        "deep value reversal"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "STZ",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "STZ gained +8.32% in 1M, has an attractive P/E of 12.7, and a dividend yield of 2.9%, with a buy rating from analysts.",
-      "drivers": [
-        "1M +8.32%",
-        "P/E 12.7",
-        "dividend yield 2.9%",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "DLTR",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "DLTR rallied +9.95% in 1M and +35% over 1Y, with a P/E of 16.8, though it carries higher short interest of 6.68% and a hold rating.",
-      "drivers": [
-        "1M +9.95%",
-        "1Y +35%",
-        "P/E 16.8",
-        "momentum recovery"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

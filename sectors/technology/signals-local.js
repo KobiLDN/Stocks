@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-23 08:04",
+  "updated": "2026-11-25 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -7,10 +7,227 @@ window.SIGNALS_DATA = {
   "group_name": "Technology",
   "group_kind": "sector",
   "variant": "live-2",
-  "prompt_version": "b4154877e4e9",
-  "code_commit": "a06724890bf5",
+  "prompt_version": "8c04eef4e420",
+  "code_commit": "d7455adaad79",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "MSI",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "MSI has strong momentum with +40.27% YTD, +9.16% 1M, and a recent 11% dividend increase, supported by a buy analyst consensus (score 1.64) and low beta of 0.87.",
+      "drivers": [
+        "+40.27% YTD",
+        "+9.16% 1M",
+        "11% dividend hike",
+        "low beta 0.87"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "GEN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "GEN shows strong recent momentum with +23.20% 1M and +17.11% YTD, a low P/E of 15.25, and a buy analyst consensus (score 2.09), offering value in cybersecurity.",
+      "drivers": [
+        "+23.20% 1M",
+        "P/E 15.25",
+        "low valuation",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "ROP",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "ROP has solid momentum with +7.89% 1M and +10.48% YTD, a reasonable P/E of 18.13, low beta of 0.66, and a buy analyst consensus (score 2.37).",
+      "drivers": [
+        "+7.89% 1M",
+        "P/E 18.13",
+        "low beta 0.66",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "VRSN",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "VRSN has strong momentum with +33.48% YTD, +3.03% 1M, and +3.78% 1W, low beta of 0.67, and a buy analyst consensus (score 2.00).",
+      "drivers": [
+        "+33.48% YTD",
+        "+3.03% 1M",
+        "low beta 0.67",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "SONY",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "SONY shows positive momentum with +7.38% YTD, +6.76% 1M, and +4.16% 1W, a reasonable P/E of 20.78, low beta of 0.84, and a buy analyst consensus (score 1.75).",
+      "drivers": [
+        "+6.76% 1M",
+        "P/E 20.78",
+        "low beta 0.84",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "ADSK",
+      "signal": "strong_buy",
+      "confidence": 0.7,
+      "rationale": "ADSK has a strong_buy analyst consensus (score 1.50) and positive short-term momentum with +2.51% 1M and +0.19% 1W, despite a -10.82% YTD.",
+      "drivers": [
+        "strong_buy consensus",
+        "+2.51% 1M",
+        "analyst score 1.50"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "TYL",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "TYL has strong recent momentum with +6.76% 1M and +0.75% 1W, low beta of 0.73, and a buy analyst consensus (score 1.61), despite a -5.36% YTD.",
+      "drivers": [
+        "+6.76% 1M",
+        "low beta 0.73",
+        "buy consensus",
+        "analyst score 1.61"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "MPWR",
+      "signal": "strong_buy",
+      "confidence": 0.65,
+      "rationale": "MPWR has a strong_buy analyst consensus (score 1.19), strong YTD return of +27.75%, and positive 1M momentum of +1.96%, though recent 1D/1W pullbacks are notable.",
+      "drivers": [
+        "strong_buy consensus",
+        "+27.75% YTD",
+        "+1.96% 1M",
+        "analyst score 1.19"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "AAPL",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "AAPL shows steady momentum with +31.10% YTD, +3.03% 1M, and +0.61% 1W, low beta of 1.09, low short interest of 1.0%, and a buy analyst consensus (score 2.18).",
+      "drivers": [
+        "+31.10% YTD",
+        "+3.03% 1M",
+        "low short interest 1.0%",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "AUTO.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "AUTO.L has positive momentum with +4.24% 1M and +1.81% 1D, a low P/E of 15.49, low beta of 0.81, and a buy analyst consensus (score 2.47).",
+      "drivers": [
+        "+4.24% 1M",
+        "P/E 15.49",
+        "low beta 0.81",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "OKTA",
+      "signal": "buy",
+      "confidence": 0.619,
+      "ytd": "+136.87%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +136.87% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +136.87% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "DELL",
+      "signal": "buy",
+      "confidence": 0.604,
+      "ytd": "+133.48%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +133.48% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +133.48% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "SNDK",
+      "signal": "buy",
+      "confidence": 0.573,
+      "ytd": "+126.57%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +126.57% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +126.57% \u2265 110.5% B"
+      ]
+    },
+    {
+      "ticker": "MXL",
+      "signal": "buy",
+      "confidence": 0.572,
+      "ytd": "+126.31%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +126.31% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +126.31% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "MSI",
@@ -175,224 +392,6 @@ window.SIGNALS_DATA = {
         "P/E 15.43",
         "dividend yield 2.15%",
         "buy analyst consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "SNDK",
-      "signal": "buy",
-      "confidence": 0.59,
-      "ytd": "+130.32%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +130.32% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +130.32% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "OKTA",
-      "signal": "buy",
-      "confidence": 0.583,
-      "ytd": "+128.91%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +128.91% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +128.91% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "MXL",
-      "signal": "buy",
-      "confidence": 0.561,
-      "ytd": "+123.93%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +123.93% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +123.93% \u2265 110.5% B"
-      ]
-    },
-    {
-      "ticker": "DELL",
-      "signal": "buy",
-      "confidence": 0.542,
-      "ytd": "+119.84%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +119.84% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +119.84% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "MSI",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Motorola Solutions has strong momentum with +37.66% YTD, +11.27% 1M, a low beta of 0.869, and a buy consensus (score 1.64). Recent earnings showed robust demand for public safety and enterprise communications.",
-      "drivers": [
-        "+37.66% YTD",
-        "+11.27% 1M",
-        "low beta 0.869",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "CDW",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "CDW reported Q3 2026 net sales up 17.7% YoY to $6.75B, driven by AI adoption and broad-based demand, with P/E of 18.88 and +23.42% YTD. [businesswire.com](https://www.businesswire.com/news/home/20261104005821/en/)",
-      "drivers": [
-        "+17.7% Q3 sales growth",
-        "AI adoption catalyst",
-        "P/E 18.88",
-        "+23.42% YTD"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "VRSN",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "Verisign shows resilience with +29.11% YTD, +0.14% 1M, low beta of 0.67, and a buy consensus. Steady domain registry revenue and low volatility support a defensive profile.",
-      "drivers": [
-        "+29.11% YTD",
-        "low beta 0.67",
-        "buy consensus",
-        "defensive revenue"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "ROP",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "Roper Technologies has +6.62% YTD, +15.66% 1M, P/E of 18.2, and a low beta of 0.662. Diversified software and industrial portfolio with steady cash flows.",
-      "drivers": [
-        "+15.66% 1M",
-        "P/E 18.2",
-        "low beta 0.662",
-        "diversified portfolio"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "SONY",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Sony Group has +5.45% YTD, +8.73% 1M, P/E of 20.37, and a low beta of 0.843. Strength in gaming, entertainment, and image sensors with low short interest of 0.25%.",
-      "drivers": [
-        "+8.73% 1M",
-        "P/E 20.37",
-        "low short 0.25%",
-        "diversified media/tech"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "TYL",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "Tyler Technologies has +7.63% 1M, low beta of 0.732, and a buy consensus (score 1.61). Government software demand is stable and recurring, with YTD -7.20% offering a potential entry.",
-      "drivers": [
-        "+7.63% 1M",
-        "low beta 0.732",
-        "buy consensus",
-        "government software demand"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "GEN",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "Gen Digital has +14.14% YTD, +21.52% 1M, P/E of 14.82, and a buy consensus. Cybersecurity demand and low valuation support upside.",
-      "drivers": [
-        "+21.52% 1M",
-        "P/E 14.82",
-        "buy consensus",
-        "cybersecurity demand"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "PTC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "PTC has +14.70% YTD, +0.37% 1M, P/E of 21.85, and a low beta of 0.91. The acquisition by Schneider Electric at a premium provides a near-term catalyst. [ptc.com](https://www.ptc.com/en/news/2026/earnings-results-q4-fy26)",
-      "drivers": [
-        "+14.70% YTD",
-        "acquisition premium",
-        "low beta 0.91",
-        "P/E 21.85"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "SAIC",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "SAIC has +42.44% YTD, +4.04% 1M, P/E of 16.6, and a very low beta of 0.257. Government IT services demand is stable, with strong YTD performance.",
-      "drivers": [
-        "+42.44% YTD",
-        "P/E 16.6",
-        "low beta 0.257",
-        "government IT demand"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "AUTO.L",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Autotrader Group has +1.89% 1M, P/E of 15.43, and a 2.15% dividend yield. UK digital auto marketplace with stable cash flows and low beta of 0.807.",
-      "drivers": [
-        "+1.89% 1M",
-        "P/E 15.43",
-        "dividend 2.15%",
-        "low beta 0.807"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

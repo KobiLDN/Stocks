@@ -1,13 +1,178 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-23 08:04",
+  "updated": "2026-11-25 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "b5edfdd40218",
-  "code_commit": "a06724890bf5",
+  "code_commit": "d7455adaad79",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "TRX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Only asset with positive YTD (+8.43%) and stable weekly momentum (-0.42%), supported by positive news sentiment (0.181) and $29.3B market cap.",
+      "drivers": [
+        "+8.43% YTD",
+        "stable weekly -0.42%",
+        "positive news sentiment 0.181",
+        "large market cap $29.3B"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "PEPE",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Relatively mild YTD decline (-13.75%) and whale accumulation of $10.5M signal dip-buying interest, with $1.44B market cap.",
+      "drivers": [
+        "-13.75% YTD (mild)",
+        "whale buying $10.5M dip",
+        "moderate market cap $1.44B"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "ALGO",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Weekly momentum nearly flat (-1.45%) suggests stabilization, with YTD -28.93% less severe than peers and $0.71B market cap.",
+      "drivers": [
+        "weekly -1.45% (stable)",
+        "YTD -28.93% moderate",
+        "small market cap $0.71B"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "POL",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Monthly decline of -14.91% is relatively mild, YTD -25.15% moderate, and positive news sentiment (0.088) with $0.8B market cap.",
+      "drivers": [
+        "-14.91% 1m (mild)",
+        "YTD -25.15% moderate",
+        "positive news sentiment 0.088"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "LINK",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Despite -28.29% YTD and negative sentiment (-0.201), Fidelity listing and CustodySync launch ([coinstats.app](https://coinstats.app/ai/a/latest-news-for-chainlink)) provide institutional catalysts, with $6.7B market cap.",
+      "drivers": [
+        "Fidelity listing catalyst",
+        "CustodySync launch",
+        "large market cap $6.7B",
+        "YTD -28.29% moderate"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "ICP",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "ChatGPT deployment integration and Pakistan sovereign beta ([coinmarketcap.com](https://coinmarketcap.com/cmc-ai/internet-computer/latest-updates/)) offer real-world use cases, with YTD -30.68% and $1.1B market cap.",
+      "drivers": [
+        "ChatGPT integration catalyst",
+        "Pakistan sovereign beta",
+        "YTD -30.68% moderate"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "RNDR",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "Near-flat YTD (-2.6%) is best after TRX/NEAR, though recent monthly decline (-25.9%) is sharp; $0.7B market cap.",
+      "drivers": [
+        "-2.6% YTD (near flat)",
+        "monthly decline -25.9%",
+        "moderate market cap $0.7B"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "NMR",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD -24.4% is moderate but very small market cap ($0.055B) limits upside; recent momentum in line with broader market.",
+      "drivers": [
+        "YTD -24.4% moderate",
+        "very small market cap $0.055B",
+        "recent momentum -24.83% 1m"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "AIOZ",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD -18.16% is relatively strong among AI tokens, but small market cap ($0.092B) and recent decline limit appeal.",
+      "drivers": [
+        "YTD -18.16% strong",
+        "small market cap $0.092B",
+        "monthly decline -26.48%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "TAO",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "YTD -19.44% is moderate with $2.07B market cap, but recent monthly decline (-29.19%) is steep.",
+      "drivers": [
+        "YTD -19.44% moderate",
+        "market cap $2.07B",
+        "monthly decline -29.19%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "BTC",
@@ -172,179 +337,6 @@ window.SIGNALS_DATA = {
         "-22.21% YTD outperforms infra peers",
         "-13.08% 1M relatively mild",
         "L2 scaling narrative"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "TRX",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "TRX is the only asset in the universe with positive YTD (+6.07%) and 1-year (+6%) returns, and it has the smallest drawdowns across all timeframes (1D -2.36%, 1W -3.10%, 1M -8.63%). News sentiment is positive at 0.099, supported by USDD's GasFree integration on TRON improving payment usability [coinmarketcap.com](https://coinmarketcap.com/cmc-ai/tron/latest-updates/).",
-      "drivers": [
-        "Positive YTD and 1-year returns",
-        "Best relative momentum in a bear market",
-        "Positive news sentiment 0.099",
-        "GasFree stablecoin transfer catalyst"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "BNB",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "BNB has the second-best 1M return (-27.94%) among large caps and a $70.3B market cap, with a 1D drop of -6.45% that is less severe than ETH or SOL. Recent news shows BNB surged 3.02% on Sunday, outperforming most peers [investing.com](https://www.investing.com/news/cryptocurrency-news/bitcoin-struggles-below-60000-as-mining-profits-plunge-security-risks-grow-5043790).",
-      "drivers": [
-        "Relatively strong 1M momentum",
-        "Large cap stability at $70.3B",
-        "Recent outperformance vs peers",
-        "Binance ecosystem support"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "XLM",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "XLM shows a 1-year return of -37%, which is better than XRP (-51%) and most L1s, with a 1D decline of -4.53% that is relatively contained. Its $4.5B market cap and payments focus provide a defensive profile amid the selloff.",
-      "drivers": [
-        "Above-average 1-year return vs peers",
-        "Contained 1D drawdown",
-        "Payments narrative resilience",
-        "Moderate market cap"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "LINK",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "LINK has a 1-year return of -30%, outperforming most infra and L1 assets, with a 1D drop of -3.83% that is among the smallest in the universe. Its $6.3B market cap and oracle network demand provide a fundamental floor.",
-      "drivers": [
-        "Best 1-year return in infra category",
-        "Low 1D drawdown",
-        "Oracle network utility",
-        "Decent market cap"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "POL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "POL has a 1-year return of -25%, the best in the entire universe after TRX, and a 1M decline of -19.10% that is less severe than most. Polygon's plan to spend $50-100M on payment licenses is a bullish catalyst for adoption [coinmarketcap.com](https://coinmarketcap.com/cmc-ai/polygon-ecosystem-token/latest-updates/).",
-      "drivers": [
-        "Best 1-year return among all assets except TRX",
-        "Payment license acquisition catalyst",
-        "Relatively mild 1M drawdown",
-        "SoFiUSD launch on Polygon"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "BTC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "BTC has rebounded 9% from its low of $55,130 to reclaim $60,000, with $1.8B in leveraged positions liquidated, removing forced selling pressure [coindesk.com](https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open). Despite -33% YTD, it remains the reference asset with $1.18T market cap and potential for stabilization.",
-      "drivers": [
-        "9% bounce from low",
-        "Liquidation cleanup reduces downside",
-        "Largest market cap at $1.18T",
-        "Potential for institutional flow recovery"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "PEPE",
-      "signal": "buy",
-      "confidence": 0.45,
-      "rationale": "PEPE has a 1-year return of -15%, the second-best in the universe after TRX, and a 1M decline of -24.04% that is less severe than DOGE (-32.69%). Its $1.4B market cap and meme coin volatility could lead to sharp bounces if risk appetite returns.",
-      "drivers": [
-        "Strong 1-year return vs meme peers",
-        "Better 1M momentum than DOGE",
-        "Low absolute price for speculation",
-        "Meme coin bounce potential"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "AIOZ",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "AIOZ has a 1-year return of -18%, better than most AI tokens, and a 1M decline of -29.04% that is relatively contained. Its $0.09B market cap and AI narrative offer high-beta upside if the sector recovers.",
-      "drivers": [
-        "Above-average 1-year return in AI category",
-        "Contained 1M drawdown",
-        "AI narrative catalyst",
-        "Small cap for high beta"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "TON",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "TON has a 1-year return of -43%, which is better than many L1s like ADA (-57%) and AVAX (-48%), with a 1M decline of -29.06% that is in line with the broader market. Its $2.7B market cap and Telegram integration provide a unique user base.",
-      "drivers": [
-        "Relative outperformance vs other L1s",
-        "Telegram ecosystem integration",
-        "Moderate market cap",
-        "Potential for adoption growth"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "ICP",
-      "signal": "buy",
-      "confidence": 0.35,
-      "rationale": "ICP has a 1-year return of -30%, matching LINK's performance, with a 1D drop of -6.80% that is typical for the sector. Its $1.1B market cap and AI/cloud computing narrative could attract interest if tech stabilizes.",
-      "drivers": [
-        "Decent 1-year return vs AI peers",
-        "AI and cloud computing narrative",
-        "Moderate market cap",
-        "Potential for sector rotation"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",
