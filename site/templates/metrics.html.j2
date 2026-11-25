@@ -365,7 +365,7 @@
 </div>
 <div class="filter-bar" id="filter-bar"></div>
 <div class="search-count-bar">
-{% if s.index_filter is defined %}<select id="index-filter" onchange="renderTable()" style="margin-right:8px"><option value="">All indexes</option>{% for k, l in s.index_filter %}<option value="{{ k }}">{{ l }}</option>{% endfor %}</select>
+{% if s.index_filter is defined %}<select id="index-filter" onchange="shown = PAGE; renderTable()" style="margin-right:8px"><option value="">All indexes</option>{% for k, l in s.index_filter %}<option value="{{ k }}">{{ l }}</option>{% endfor %}</select>
 {% endif %}<input type="text" id="metrics-search" placeholder="{{ s.search_placeholder|safe }}" oninput="filterMetrics(this.value)">
 <span class="row-count">Showing <span id="metrics-count">—</span> {{ s.unit }}</span>
 </div>
@@ -402,6 +402,7 @@
       <tbody id="metrics-body"></tbody>
     </table>
   </div>
+  <div class="af-more-wrap"><button class="af-more" id="af-more" type="button" hidden>Show 50 more</button></div>
 
 </div>
 
@@ -483,6 +484,9 @@
   let sortState = { col: 'market_cap', dir: -1 };
   let activeCategory = 'all';
   let searchQuery = '';
+  // 50 rows at a time, like the All pages (#122): keeps the big markets inside the phone speed limit
+  const PAGE = 50;
+  let shown = PAGE;
 
   /* ---- SORT ---- */
   function sortMetrics(col, th) {
@@ -495,17 +499,20 @@
     }
     document.querySelectorAll('#metrics-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
     th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
+    shown = PAGE;
     renderTable();
   }
 
   /* ---- FILTER ---- */
   function filterMetrics(query) {
     searchQuery = query.toLowerCase().trim();
+    shown = PAGE;
     renderTable();
   }
 
   function setCategory(cat) {
     activeCategory = cat;
+    shown = PAGE;
     document.querySelectorAll('.filter-btn').forEach(b => {
       b.classList.toggle('active', b.dataset.cat === cat);
     });
@@ -588,7 +595,13 @@
     document.getElementById('metrics-count').textContent = sorted.length;
 
     const body = document.getElementById('metrics-body');
-    body.innerHTML = sorted.map(s => {
+    const more = document.getElementById('af-more');
+    const left = sorted.length - shown;
+    more.hidden = left <= 0;
+    more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' not shown)';
+    more.onclick = () => { shown += PAGE; renderTable(); };
+
+    body.innerHTML = sorted.slice(0, shown).map(s => {
       const catLabel = CAT_LABELS[s.category] || s.category;
 
       const ytdCls = s.ytd === null ? '' : s.ytd > 0 ? 'ytd-pos' : s.ytd < 0 ? 'ytd-neg' : 'ytd-flat';
