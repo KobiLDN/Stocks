@@ -74,6 +74,36 @@ class GroupRuns(unittest.TestCase):
             gs.run_group(self.groups["energy"], self.assets, "k", "now", call=bad)
         self.assertEqual(len(calls), 1 + gs.RETRY_ON_BAD_JSON)
 
+    def test_two_bad_replies_then_a_good_one(self):
+        """25 Nov 2026: replies cut off at the length limit; the third try still gives the run its picks."""
+        tries, good = [], fake_ai({})
+        def flaky(*a):
+            tries.append(1)
+            if len(tries) < 3:
+                raise ValueError("reply cut off at the length limit (12288 tokens)")
+            return good(*a)
+        out = gs.run_group(self.groups["energy"], self.assets, "k", "2026-11-25 08:00", call=flaky)
+        self.assertEqual((len(tries), len(out["picks"])), (3, 10))
+
+    def test_cut_off_reply_is_an_error(self):
+        """call_api turns finish_reason 'length' into a retryable error."""
+        import unittest.mock
+        class R:
+            status_code = 200
+            def json(self):
+                return {"choices": [{"finish_reason": "length", "message": {"content": '{"picks": [{"rank'}}],
+                        "usage": {"prompt_tokens": 9000, "completion_tokens": 12288,
+                                  "completion_tokens_details": {"reasoning_tokens": 12000}}}
+        sent = {}
+        def post(url, headers=None, timeout=None, data=None):
+            sent.update(json.loads(data))
+            return R()
+        with unittest.mock.patch.object(gs.requests, "post", post):
+            with self.assertRaises(ValueError) as e:
+                gs.call_api("k", "sys", "user", "Technology")
+        self.assertIn("length limit", str(e.exception))
+        self.assertNotIn("reasoning", sent)                          # not honoured for this model (25 Nov test)
+
     def test_ticker_outside_the_group_is_rejected(self):
         reply = json.dumps({"picks": [{"ticker": "BTC", "signal": "buy", "confidence": 1}] * 10})
         with self.assertRaises(ValueError):

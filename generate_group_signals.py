@@ -38,9 +38,12 @@ ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "deepseek/deepseek-v4-flash"
 TEMPERATURE = 0.3
 MAX_TOKENS = 12288
+# 25 Nov 2026: about half the group runs now get cut off at MAX_TOKENS (long thinking plus a long answer)
+# on the first try; a retry nearly always works. A thinking cap (OpenRouter reasoning.max_tokens) was tried
+# and is not honoured for this model, so it is not sent. The log shows thinking tokens and why a reply stopped.
 REQUEST_TIMEOUT_S = (15, 170)
 TOP_N = 10
-RETRY_ON_BAD_JSON = 1
+RETRY_ON_BAD_JSON = 2          # up to 3 tries: a bad reply is usually a one-off
 RUN_GROUPS = [groups_config.slug(s) for s in universe.SECTORS] + ["ftse100"]
 DERIVED = ["sp500", "nasdaq100", "europe"]
 
@@ -203,9 +206,14 @@ def call_api(api_key, sys_prompt, user_prompt, label):
         raise RunFailed(f"OpenRouter returned {r.status_code}: {r.text[:300]}")
     data = r.json()
     usage = data.get("usage", {})
+    choice = data["choices"][0]
+    reasoning = (usage.get("completion_tokens_details") or {}).get("reasoning_tokens")
     print(f"  [{label}] HTTP 200 in {time.time() - t0:.0f}s, tokens in={usage.get('prompt_tokens')} "
-          f"out={usage.get('completion_tokens')}")
-    content = (data["choices"][0]["message"].get("content") or "").strip()
+          f"out={usage.get('completion_tokens')}" + (f" (thinking {reasoning})" if reasoning else "")
+          + f", stop={choice.get('finish_reason')}")
+    content = (choice["message"].get("content") or "").strip()
+    if choice.get("finish_reason") == "length":
+        raise ValueError(f"reply cut off at the length limit ({usage.get('completion_tokens')} tokens)")
     if not content:
         raise ValueError("empty reply")
     return content
