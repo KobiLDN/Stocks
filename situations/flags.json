@@ -581,5 +581,27 @@
 "p_up": 0.2,
 "expected_move": -2.0,
 "lean": "down"
+},
+{
+"id": "ASTS:product",
+"date": "2026-11-25",
+"ticker": "ASTS",
+"type": "product",
+"price_usd": 25.62,
+"p_big": 1.0,
+"p_up": 0.4,
+"expected_move": -2.0,
+"lean": "down"
+},
+{
+"id": "BMY:regulatory",
+"date": "2026-11-25",
+"ticker": "BMY",
+"type": "regulatory",
+"price_usd": 61.6,
+"p_big": 0.2,
+"p_up": 0.4,
+"expected_move": -1.8,
+"lean": "down"
 }
 ]

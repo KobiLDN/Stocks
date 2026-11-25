@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25 18:48",
+ "updated": "2026-11-25 20:38",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 53,
+ "count": 55,
  "situations": [
   {
    "ticker": "NBIS",
@@ -116,6 +116,39 @@
    "price_at_flag": 1.73
   },
   {
+   "ticker": "LITE",
+   "type": "takeover",
+   "source": null,
+   "title": "Marvell acquisition of Lumentum pending regulatory and shareholder approval",
+   "summary": "Lumentum's stock is trading at an 18% discount to the implied value of the all-stock Marvell deal, reflecting risks from a long regulatory review, shareholder opposition, and Marvell's own price decline.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Deal closes as expected",
+     "probability": 0.65,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Deal renegotiated or delayed",
+     "probability": 0.25,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Deal blocked or terminated",
+     "probability": 0.1,
+     "move_pct": -30.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.65,
+   "expected_move": 4.2,
+   "lean": "up",
+   "id": "LITE:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 561.64
+  },
+  {
    "ticker": "RXRX",
    "type": "trial",
    "source": "Recursion Pharmaceuticals Reaches FDA Agreement on Key Endpoint for Phase III FAP Trial",
@@ -149,39 +182,6 @@
    "price_at_flag": 2.65
   },
   {
-   "ticker": "LITE",
-   "type": "takeover",
-   "source": "Lumentum’s CEO Says “the Laws of Physics Are Working in Favor of Fiber.” Marvell Holders Are Buying It Cheap",
-   "title": "Marvell-Lumentum merger pending regulatory approval",
-   "summary": "Marvell's all-stock acquisition of Lumentum, valued at ~$115B, is not yet closed. The deal needs regulatory approvals, including China's, and is expected to close in H1 2028. If blocked, Marvell owes Lumentum a $3.2B fee. Lumentum trades at a 16% discount to the deal value, reflecting uncertainty.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Deal closes as expected",
-     "probability": 0.7,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Deal blocked or delayed",
-     "probability": 0.2,
-     "move_pct": -30.0
-    },
-    {
-     "label": "Marvell stock moves significantly before close",
-     "probability": 0.1,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.7,
-   "expected_move": 3.5,
-   "lean": "up",
-   "id": "LITE:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 561.64
-  },
-  {
    "ticker": "AAL.L",
    "type": "takeover",
    "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
@@ -213,6 +213,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 41.5
+  },
+  {
+   "ticker": "ASTS",
+   "type": "product",
+   "source": "ASTS Stock Eyes Worst Month Since 2024: Bulls Cheer Director’s Dip Buy And Bet On A Launch-Fueled Comeback",
+   "title": "AST SpaceMobile satellite launch schedule",
+   "summary": "AST SpaceMobile's stock is highly dependent on its satellite launch schedule. A director recently bought shares, but the company faces significant cash burn and execution risk.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Successful launch and deployment",
+     "probability": 0.4,
+     "move_pct": 30.0
+    },
+    {
+     "label": "Launch delays announced",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Launch failure",
+     "probability": 0.2,
+     "move_pct": -40.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.4,
+   "expected_move": -2.0,
+   "lean": "down",
+   "id": "ASTS:product",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 25.62
   },
   {
    "ticker": "DASH",
@@ -346,39 +379,6 @@
    "price_at_flag": 91.9
   },
   {
-   "ticker": "TPL",
-   "type": "takeover",
-   "source": "Texas Pacific Land agrees $3bn all-stock acquisition of EagleRock",
-   "title": "EagleRock Merger Pending Approvals",
-   "summary": "Texas Pacific Land agreed to acquire EagleRock Land in an all-stock deal. The merger requires shareholder and regulatory approvals, with uncertain market reception.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Merger closes",
-     "probability": 0.6,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Merger fails",
-     "probability": 0.3,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Renegotiated terms",
-     "probability": 0.1,
-     "move_pct": 0.0
-    }
-   ],
-   "p_big": 0.9,
-   "p_up": 0.3,
-   "expected_move": -1.5,
-   "lean": "down",
-   "id": "TPL:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 259.71
-  },
-  {
    "ticker": "NEE",
    "type": "regulatory",
    "source": null,
@@ -476,39 +476,6 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-25",
    "price_at_flag": 134.18
-  },
-  {
-   "ticker": "MBG.DE",
-   "type": "activist",
-   "source": "German strikes hit Mercedes and BMW",
-   "title": "IG Metall Strike at Mercedes Plants",
-   "summary": "IG Metall union has extended walkouts at German car plants, disrupting Mercedes-Benz production. The strike's duration is uncertain and could significantly impact Q4 earnings.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Strike prolonged",
-     "probability": 0.5,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Strike resolved quickly",
-     "probability": 0.3,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Strike escalates",
-     "probability": 0.2,
-     "move_pct": -20.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.3,
-   "expected_move": -7.5,
-   "lean": "down",
-   "id": "MBG.DE:activist",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 40.88
   },
   {
    "ticker": "DASH",
@@ -609,6 +576,39 @@
    "price_at_flag": 209.74
   },
   {
+   "ticker": "IP",
+   "type": "other",
+   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
+   "title": "IP's DS Smith spin-off execution",
+   "summary": "International Paper is spinning off its EMEA packaging business (DS Smith). The execution and valuation of the spin-off are pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off successful, unlocks value",
+     "probability": 0.5,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Spin-off faces delays/valuation issues",
+     "probability": 0.3,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Spin-off cancelled",
+     "probability": 0.2,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.5,
+   "expected_move": 1.5,
+   "lean": "either way",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 29.86
+  },
+  {
    "ticker": "TSM",
    "type": "regulatory",
    "source": "TSMC Stocks Slide 6.65% as Taiwan Lands on US Tariff List",
@@ -640,39 +640,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 344.48
-  },
-  {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": "GTCR considers potential takeover of Global Payments",
-   "title": "GTCR considers potential takeover of Global Payments",
-   "summary": "GTCR is reportedly considering a takeover of Global Payments, which could lead to a premium offer or fall through, impacting the stock.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Takeover talks collapse",
-     "probability": 0.4,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Takeover announced at premium",
-     "probability": 0.3,
-     "move_pct": 20.0
-    },
-    {
-     "label": "No deal, stock drifts",
-     "probability": 0.3,
-     "move_pct": -2.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.3,
-   "expected_move": 1.4,
-   "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 92.44
   },
   {
    "ticker": "CORZ",
@@ -739,39 +706,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 49.76
-  },
-  {
-   "ticker": "IP",
-   "type": "other",
-   "source": "International Paper (IP) Faces A Fresh Valuation Test On DS Smith Spin Off",
-   "title": "DS Smith spin-off valuation test",
-   "summary": "International Paper's spin-off of its EMEA packaging business (DS Smith) faces a fresh valuation test as it advances with board approval.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Spin-off completed, value unlocked",
-     "probability": 0.5,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Spin-off delayed or challenged",
-     "probability": 0.3,
-     "move_pct": -8.0
-    },
-    {
-     "label": "Spin-off canceled",
-     "probability": 0.2,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.5,
-   "expected_move": -0.4,
-   "lean": "either way",
-   "id": "IP:other",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 29.86
   },
   {
    "ticker": "DELL",
@@ -1203,6 +1137,39 @@
    "price_at_flag": 137.9
   },
   {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "GTCR considers potential takeover of Global Payments",
+   "title": "GTCR considers potential takeover of GPN",
+   "summary": "Private equity firm GTCR is considering a potential takeover of Global Payments, creating uncertainty.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No bid materializes",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Formal bid announced",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Takeover talks collapse",
+     "probability": 0.3,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.3,
+   "expected_move": -0.5,
+   "lean": "down",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 92.44
+  },
+  {
    "ticker": "NTRA",
    "type": "trial",
    "source": "What Could Natera (NTRA) Gain From Its New Colorectal Cancer Trial Collaboration?",
@@ -1433,6 +1400,39 @@
    "price_at_flag": 77.95
   },
   {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Commission opens anti-trust probe into CCEP",
+   "title": "EU antitrust probe into CCEP",
+   "summary": "EU Commission opened an antitrust probe into CCEP over cross-border trade restrictions. Outcome could involve fines or business practice changes.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Fines and business restrictions",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Probe closed without action",
+     "probability": 0.3,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Minor remedies required",
+     "probability": 0.3,
+     "move_pct": -2.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0.3,
+   "expected_move": -3.1,
+   "lean": "down",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 115.04
+  },
+  {
    "ticker": "CRWD",
    "type": "takeover",
    "source": null,
@@ -1565,37 +1565,70 @@
    "price_at_flag": 41.15
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
-   "title": "EU antitrust probe into cross-border trade",
-   "summary": "The EU opened an antitrust probe into Coca-Cola Europacific Partners over cross-border beverage trade, which could lead to fines or operational changes.",
+   "ticker": "MBG.DE",
+   "type": "activist",
+   "source": null,
+   "title": "IG Metall wage dispute threatens production",
+   "summary": "IG Metall union demands 5% pay rise; strikes are escalating. Resolution of the wage deal is pending and could impact costs and production.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Probe resolved with minor remedies",
+     "label": "Moderate wage deal reached",
      "probability": 0.5,
-     "move_pct": 3.0
+     "move_pct": 5.0
     },
     {
-     "label": "Significant fines or restrictions imposed",
+     "label": "Prolonged strike disrupts output",
      "probability": 0.3,
-     "move_pct": -12.0
+     "move_pct": -10.0
     },
     {
-     "label": "Probe dropped or no action",
+     "label": "Costly settlement for Mercedes",
      "probability": 0.2,
-     "move_pct": 8.0
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.5,
+   "expected_move": -1.5,
+   "lean": "either way",
+   "id": "MBG.DE:activist",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 40.88
+  },
+  {
+   "ticker": "TPL",
+   "type": "takeover",
+   "source": "Texas Pacific Land agrees $3bn all-stock acquisition of EagleRock",
+   "title": "TPL's $3B EagleRock acquisition pending",
+   "summary": "TPL agreed to acquire EagleRock Land for $3B in stock. Deal requires regulatory and shareholder approval.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Deal closes successfully",
+     "probability": 0.7,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Shareholders reject deal",
+     "probability": 0.2,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Deal blocked by regulators",
+     "probability": 0.1,
+     "move_pct": -15.0
     }
    ],
    "p_big": 0.3,
    "p_up": 0.7,
-   "expected_move": -0.5,
+   "expected_move": 0.0,
    "lean": "up",
-   "id": "CCEP.L:regulatory",
+   "id": "TPL:takeover",
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-25",
-   "price_at_flag": 115.04
+   "price_at_flag": 259.71
   },
   {
    "ticker": "NRG",
@@ -1631,32 +1664,65 @@
    "price_at_flag": 94.1
   },
   {
-   "ticker": "D",
+   "ticker": "BMY",
    "type": "regulatory",
-   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
-   "title": "NextEra-Dominion merger awaits FERC and state approvals",
-   "summary": "DOJ closed its antitrust probe, but the $66.8B merger still needs approval from FERC, Virginia SCC, and other state regulators. Hearings are ongoing, and customer benefit quantification is contested.",
+   "source": null,
+   "title": "Bristol-Myers reports mixed Phase 3 results for Sotyktu in lupus",
+   "summary": "Bristol-Myers Squibb announced mixed Phase 3 trial results for Sotyktu in systemic lupus erythematosus, leaving the drug's approval path uncertain and a key readout for the pipeline.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Approved by all regulators",
+     "label": "Positive full data supports filing",
+     "probability": 0.4,
+     "move_pct": 8.0
+    },
+    {
+     "label": "Mixed data leads to delay",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Negative data ends program",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.2,
+   "p_up": 0.4,
+   "expected_move": -1.8,
+   "lean": "down",
+   "id": "BMY:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 61.6
+  },
+  {
+   "ticker": "D",
+   "type": "regulatory",
+   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
+   "title": "State hearings on Dominion/NextEra deal",
+   "summary": "While the DOJ closed its antitrust probe, state hearings on the NextEra-Dominion deal continue, with the outcome still pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "State approves deal",
      "probability": 0.6,
      "move_pct": 5.0
     },
     {
-     "label": "Approved with conditions",
-     "probability": 0.25,
-     "move_pct": 2.0
+     "label": "State blocks deal",
+     "probability": 0.2,
+     "move_pct": -10.0
     },
     {
-     "label": "Rejected or blocked",
-     "probability": 0.15,
-     "move_pct": -10.0
+     "label": "State imposes conditions",
+     "probability": 0.2,
+     "move_pct": -2.0
     }
    ],
-   "p_big": 0.15,
-   "p_up": 0.85,
-   "expected_move": 2.0,
+   "p_big": 0.2,
+   "p_up": 0.6,
+   "expected_move": 0.6,
    "lean": "up",
    "id": "D:regulatory",
    "first_flagged": "2026-11-24",
@@ -1666,30 +1732,30 @@
   {
    "ticker": "ULVR.L",
    "type": "regulatory",
-   "source": "Update: McCormick Offers to Sell Colman's Brand to Hurdle British Competition Rules",
-   "title": "McCormick sale of Colman's to clear UK merger concerns",
-   "summary": "McCormick offered to sell Colman's brand to address UK competition concerns over its acquisition of Unilever foods business, pending regulator approval.",
+   "source": "U.K. Regulator Says McCormick Sale of Colman’s Could Address Unilever Foods Merger Concerns",
+   "title": "UK regulator reviews Unilever/McCormick deal",
+   "summary": "UK competition regulator has concerns about the Unilever foods acquisition. McCormick offered to sell Colman's to address them.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Regulator approves deal with sale",
+     "label": "Deal cleared with Colman's sale",
      "probability": 0.6,
      "move_pct": 5.0
     },
     {
-     "label": "Regulator demands further concessions",
-     "probability": 0.3,
-     "move_pct": -5.0
+     "label": "Deal blocked",
+     "probability": 0.2,
+     "move_pct": -10.0
     },
     {
-     "label": "Deal blocked",
-     "probability": 0.1,
-     "move_pct": -10.0
+     "label": "Further concessions required",
+     "probability": 0.2,
+     "move_pct": -3.0
     }
    ],
-   "p_big": 0.1,
+   "p_big": 0.2,
    "p_up": 0.6,
-   "expected_move": 0.5,
+   "expected_move": 0.4,
    "lean": "up",
    "id": "ULVR.L:regulatory",
    "first_flagged": "2026-11-25",
