@@ -548,5 +548,16 @@
 "p_up": 0.3,
 "expected_move": -5.5,
 "lean": "down"
+},
+{
+"id": "ULVR.L:regulatory",
+"date": "2026-11-25",
+"ticker": "ULVR.L",
+"type": "regulatory",
+"price_usd": 66.15,
+"p_big": 0,
+"p_up": 0.7,
+"expected_move": 1.1,
+"lean": "up"
 }
 ]
