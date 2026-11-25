@@ -38,10 +38,9 @@ ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "deepseek/deepseek-v4-flash"
 TEMPERATURE = 0.3
 MAX_TOKENS = 12288
-# 25 Nov 2026: four runs spent the whole MAX_TOKENS before answering (empty or cut-off reply) and needed
-# the retry. Cap the model's thinking so the answer always has room; OpenRouter ignores this for models
-# that don't reason.
-REASONING_MAX_TOKENS = 4000
+# 25 Nov 2026: about half the group runs now get cut off at MAX_TOKENS (long thinking plus a long answer)
+# on the first try; a retry nearly always works. A thinking cap (OpenRouter reasoning.max_tokens) was tried
+# and is not honoured for this model, so it is not sent. The log shows thinking tokens and why a reply stopped.
 REQUEST_TIMEOUT_S = (15, 170)
 TOP_N = 10
 RETRY_ON_BAD_JSON = 2          # up to 3 tries: a bad reply is usually a one-off
@@ -192,7 +191,6 @@ def call_api(api_key, sys_prompt, user_prompt, label):
         "model": MODEL,
         "messages": [{"role": "system", "content": sys_prompt}, {"role": "user", "content": user_prompt}],
         "temperature": TEMPERATURE, "max_tokens": MAX_TOKENS,
-        "reasoning": {"max_tokens": REASONING_MAX_TOKENS},
         "response_format": {"type": "json_object"}, "stream": False,
         "plugins": [{"id": "web", "max_results": 5}],
     }

@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-25 09:34",
+  "updated": "2026-11-25 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,182 +8,9 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "9ed05f9e4441",
-  "code_commit": "98da0a8638bd",
+  "code_commit": "d7455adaad79",
   "input_version": "2026-11-11",
   "picks": [
-    {
-      "rank": 1,
-      "ticker": "REGN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Q3 revenues surged 36% to $5.1B, EPS $20.07 non-GAAP (+70% YoY), with Dupixent +35% and EYLEA HD +62%; P/E 20.8 is attractive for this growth. [globenewswire.com]",
-      "drivers": [
-        "+36% revenue growth Q3",
-        "P/E 20.8",
-        "+22% 1M momentum",
-        "FDA approval Pasatru"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "IDXX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Q3 revenue +10% to $1.21B, EPS $4.01 (+18%), raised FY26 guidance to $4.74-4.77B; strong volume and 1,900 inVue Dx placements. [ir.idexx.com]",
-      "drivers": [
-        "+10% Q3 revenue growth",
-        "raised FY26 guidance",
-        "+25% 1M momentum",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "COAG",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Initiated Phase 3 for sutazomic, presented Phase 2b data; analyst score 1.14 (strong_buy), +27% YTD and +20% 1M momentum. [benzinga.com]",
-      "drivers": [
-        "Phase 3 initiation",
-        "analyst strong_buy 1.14",
-        "+27% YTD",
-        "small cap catalyst"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Q3 EPS $0.38 vs -$1.25 expected, revenue $1.31B (+29%), raised FY26 growth outlook to 15-25% from up to 10%. [cnbc.com]",
-      "drivers": [
-        "Q3 earnings beat",
-        "raised FY26 guidance",
-        "+637% YTD momentum",
-        "new product launches"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": "strong_buy",
-      "momentum_score": 1.0
-    },
-    {
-      "rank": 5,
-      "ticker": "LH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +51%, 1M +14%, P/E 30.5, analyst buy score 1.59; strong revenue growth and margin expansion.",
-      "drivers": [
-        "+51% YTD",
-        "+14% 1M",
-        "P/E 30.5",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "BMRN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +12%, 1M +19%, 1W +13%, analyst buy score 1.68; strong near-term momentum with improving fundamentals.",
-      "drivers": [
-        "+19% 1M momentum",
-        "+13% 1W",
-        "analyst buy",
-        "P/E improving"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "EW",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +24%, 1M +17%, analyst buy score 1.53; strong momentum in structural heart despite P/E 61.",
-      "drivers": [
-        "+24% YTD",
-        "+17% 1M",
-        "analyst buy",
-        "market leader"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "SAN.PA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +9%, 1M +14%, dividend yield 4.85%, analyst buy; expanded collaboration with Regeneron adds pipeline value. [globenewswire.com]",
-      "drivers": [
-        "+14% 1M",
-        "dividend 4.85%",
-        "Regeneron collaboration",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "A",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Q4 FY26 revenue $2.04B (+9.6%), non-GAAP EPS $1.86 (+17%), FY27 guidance $8.0-8.15B; P/E 34.7, analyst buy. [investor.agilent.com]",
-      "drivers": [
-        "+9.6% Q4 revenue",
-        "raised FY27 guidance",
-        "+34% YTD",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "BAYN.DE",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +40%, 1M +16%, analyst buy score 1.89; strong YTD performance despite recent weekly pullback of -7%.",
-      "drivers": [
-        "+40% YTD",
-        "+16% 1M",
-        "analyst buy",
-        "turnaround potential"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
     {
       "rank": 1,
       "ticker": "REGN",
@@ -348,6 +175,179 @@ window.SIGNALS_DATA = {
         "1M +14.32%",
         "low beta 0.26",
         "P/E 26.96"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
+    {
+      "rank": 1,
+      "ticker": "IDXX",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Q3 EPS $4.01 beat estimates, revenue +10% YoY, raised FY guidance, 1M +22.17% momentum.",
+      "drivers": [
+        "Q3 EPS beat",
+        "raised FY guidance",
+        "1M +22.17%",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "GEHC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "BTIG raised PT to $91, Q3 EPS $1.34 beat, revenue +7.2% YoY, P/E 17.05 attractive.",
+      "drivers": [
+        "BTIG upgrade",
+        "Q3 earnings beat",
+        "P/E 17.05",
+        "1M +16.92%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "EU approved Libtayo extended dosing, 1M +14.39%, P/E 20.35, low beta 0.095.",
+      "drivers": [
+        "EU Libtayo approval",
+        "1M +14.39%",
+        "P/E 20.35",
+        "low beta"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "BDX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Q4 EPS $4.15 beat, FY27 EPS guidance $13.10-$13.30, 1M +9.49%, YTD +41.54%.",
+      "drivers": [
+        "Q4 earnings beat",
+        "FY27 guidance",
+        "1M +9.49%",
+        "YTD +41.54%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "CTEC.L",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Upgraded FY revenue growth to 6.25%-7%, shares up 8.91%, strong buy consensus.",
+      "drivers": [
+        "upgraded revenue outlook",
+        "strong buy consensus",
+        "1M +10.75%",
+        "shares up 8.91%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "LH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +46.97%, 1M +13.40%, P/E 30.09, analyst buy consensus.",
+      "drivers": [
+        "YTD +46.97%",
+        "1M +13.40%",
+        "analyst buy",
+        "P/E 30.09"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "EW",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +15.21%, YTD +19.36%, analyst buy, strong momentum in medical devices.",
+      "drivers": [
+        "1M +15.21%",
+        "YTD +19.36%",
+        "analyst buy",
+        "momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "STE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +15.78%, P/E 30.34, analyst buy, YTD +3.44% with recent acceleration.",
+      "drivers": [
+        "1M +15.78%",
+        "analyst buy",
+        "P/E 30.34",
+        "recent acceleration"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "COAG",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Strong buy consensus (score 1.14), 1M +11.18%, YTD +15.56%, small-cap biotech catalyst.",
+      "drivers": [
+        "strong buy consensus",
+        "1M +11.18%",
+        "YTD +15.56%",
+        "small-cap"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "BMRN",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "1M +9.42%, analyst buy, low beta 0.226, YTD +1.61% with improving momentum.",
+      "drivers": [
+        "1M +9.42%",
+        "analyst buy",
+        "low beta",
+        "improving momentum"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

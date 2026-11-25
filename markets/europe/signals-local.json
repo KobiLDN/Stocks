@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25 09:34",
+  "updated": "2026-11-25 08:02",
   "derived": true,
   "derived_from": [
     "communication-services",
@@ -20,149 +20,6 @@
   "group_kind": "market",
   "note": "The 11 sector runs' picks that are European (Euro Stoxx 50, DAX, CAC 40 or SMI); no Europe AI run of its own yet (it waits for the run review).",
   "picks": [
-    {
-      "rank": 1,
-      "ticker": "AI.PA",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Air Liquide has a strong_buy consensus (score 1.45), +32.6% YTD, and +7% 1M. Its P/E of 33.9 is elevated but justified by consistent growth and low beta of 0.62.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "+32.6% YTD",
-        "+7% 1M momentum",
-        "low beta 0.62"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 4
-    },
-    {
-      "rank": 2,
-      "ticker": "HEI.DE",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Heidelberg Materials surged +21% in the past month, with a P/E of 15.5 and a buy rating. The strong short-term momentum and reasonable valuation signal a turnaround.",
-      "drivers": [
-        "+21% 1M momentum",
-        "P/E 15.5",
-        "buy analyst consensus",
-        "YTD -18.3% recovery play"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 3
-    },
-    {
-      "rank": 3,
-      "ticker": "ENGI.PA",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Q3 EBIT beat expectations, guided to upper end of full-year, infrastructure earnings +62%, P/E 15.12, div 5.56%.",
-      "drivers": [
-        "Q3 EBIT beat",
-        "Infrastructure earnings +62%",
-        "Guidance upgrade",
-        "Analyst buy score 1.53"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "utilities",
-      "from_group_name": "Utilities",
-      "group_rank": 4
-    },
-    {
-      "rank": 4,
-      "ticker": "SAN.PA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +9%, 1M +14%, dividend yield 4.85%, analyst buy; expanded collaboration with Regeneron adds pipeline value. [globenewswire.com]",
-      "drivers": [
-        "+14% 1M",
-        "dividend 4.85%",
-        "Regeneron collaboration",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 8
-    },
-    {
-      "rank": 5,
-      "ticker": "HEN3.DE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Henkel +28% 1Y, +27.4% YTD, +9.5% 1M, P/E 18.47, dividend 2.41%; steady momentum and reasonable valuation.",
-      "drivers": [
-        "+28% 1-year",
-        "+27.4% YTD",
-        "P/E 18.47",
-        "dividend 2.41%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 6
-    },
-    {
-      "rank": 6,
-      "ticker": "BAYN.DE",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "YTD +40%, 1M +16%, analyst buy score 1.89; strong YTD performance despite recent weekly pullback of -7%.",
-      "drivers": [
-        "+40% YTD",
-        "+16% 1M",
-        "analyst buy",
-        "turnaround potential"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 10
-    },
-    {
-      "rank": 7,
-      "ticker": "BN.PA",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Danone -9% 1Y but +9.5% 1M, P/E 22.72, dividend 3.3%, analyst buy (score 2.0); turnaround play with value.",
-      "drivers": [
-        "+9.5% 1-month",
-        "P/E 22.72",
-        "dividend 3.3%",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 9
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TTE.PA",
@@ -343,5 +200,7 @@
       "from_group_name": "Consumer Staples",
       "group_rank": 10
     }
-  ]
+  ],
+  "momentum_picks": [],
+  "previous_picks": []
 }

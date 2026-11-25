@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-25 09:34",
+  "updated": "2026-11-25 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,182 +8,9 @@ window.SIGNALS_DATA = {
   "group_kind": "market",
   "variant": "live-2",
   "prompt_version": "87a913ffdecb",
-  "code_commit": "98da0a8638bd",
+  "code_commit": "d7455adaad79",
   "input_version": "2026-11-11",
   "picks": [
-    {
-      "rank": 1,
-      "ticker": "IAG.L",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "IAG delivered record Q3 revenue and strong cash generation, with net debt falling to \u20ac4.2B and a \u20ac1.5B buyback underway; P/E of 8.1 and +10.65% 1M momentum make it compelling.",
-      "drivers": [
-        "P/E 8.1",
-        "+10.65% 1M",
-        "record Q3 revenue",
-        "\u20ac1.5B buyback"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "HSX.L",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Hiscox has +40.95% YTD and +49% 1Y return, with a P/E of 14.01 and buy consensus; strong momentum and attractive valuation.",
-      "drivers": [
-        "+40.95% YTD",
-        "P/E 14.01",
-        "buy consensus",
-        "low beta 0.37"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "CTEC.L",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Convatec shows strong recent momentum (+9.80% 1M, +6.41% 1W) and a strong_buy analyst consensus (score 1.4), supported by healthcare sector stability.",
-      "drivers": [
-        "strong_buy consensus",
-        "+9.80% 1M",
-        "+6.41% 1W",
-        "healthcare defensive"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "AZN",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "AstraZeneca has +8.39% 1M momentum, a low beta of 0.155, and a strong buy consensus (score 1.62); P/E of 25.9 is reasonable for a pharma leader.",
-      "drivers": [
-        "+8.39% 1M",
-        "beta 0.155",
-        "buy consensus 1.62",
-        "P/E 25.9"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "MKS.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Marks & Spencer has +37.78% YTD and +39% 1Y return, with a very low P/E of 0.36 and buy consensus; strong retail turnaround momentum.",
-      "drivers": [
-        "+37.78% YTD",
-        "P/E 0.36",
-        "buy consensus",
-        "strong 1Y return"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "LSEG.L",
-      "signal": "strong_buy",
-      "confidence": 0.72,
-      "rationale": "London Stock Exchange Group has a strong_buy consensus (score 1.5), +6.66% 1M momentum, and a P/E of 35.37 reflecting its data and analytics growth.",
-      "drivers": [
-        "strong_buy consensus",
-        "+6.66% 1M",
-        "P/E 35.37",
-        "low beta 0.37"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "RR.L",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Rolls-Royce has a strong_buy consensus (score 1.5), +5.47% 1M momentum, and +27% 1Y return; P/E of 36.73 reflects aerospace recovery.",
-      "drivers": [
-        "strong_buy consensus",
-        "+5.47% 1M",
-        "+27% 1Y",
-        "aerospace recovery"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "TSCO.L",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Tesco has +24.33% YTD, +3.00% 1M momentum, a P/E of 18.38, and buy consensus; defensive staple with steady growth.",
-      "drivers": [
-        "+24.33% YTD",
-        "P/E 18.38",
-        "buy consensus",
-        "consumer staple"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "UU.L",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "United Utilities has +28.97% YTD, +3.25% 1M momentum, a P/E of 14.66, and buy consensus; regulated utility with attractive dividend yield of 3.51%.",
-      "drivers": [
-        "+28.97% YTD",
-        "P/E 14.66",
-        "buy consensus",
-        "dividend 3.51%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "DGE.L",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Diageo has +18.82% YTD, +7.55% 1M momentum, and buy consensus; P/E of 32.1 is elevated but supported by premium brand strength.",
-      "drivers": [
-        "+18.82% YTD",
-        "+7.55% 1M",
-        "buy consensus",
-        "premium spirits"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
     {
       "rank": 1,
       "ticker": "IAG.L",
@@ -348,6 +175,179 @@ window.SIGNALS_DATA = {
         "+8.39% 1M",
         "low beta 0.155",
         "P/E 25.9"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
+    {
+      "rank": 1,
+      "ticker": "LSEG.L",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "LSEG delivered record Q3 with total income +8.8%, raised full-year guidance, and plans \u00a31.0-1.5bn buybacks in 2027; P/E 34.76, YTD +9.76%.",
+      "drivers": [
+        "Q3 revenue +8.8% YoY",
+        "raised FY guidance",
+        "\u00a31.0-1.5bn buyback plan",
+        "strong_buy consensus"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "CCEP.L",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "CCEP has strong momentum with YTD +35.12%, 1M +6.69%, and Barclays raised price target to 124; P/E 22.99, dividend yield 2.14%.",
+      "drivers": [
+        "YTD +35.12%",
+        "Barclays PT raised to 124",
+        "1M +6.69%",
+        "low beta 0.46"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "CTEC.L",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Convatec shows strong analyst support (strong_buy, score 1.42) and recent momentum with 1M +10.75% and 1W +2.94%; P/E 53.16 reflects premium but growth justifies.",
+      "drivers": [
+        "strong_buy consensus",
+        "1M +10.75%",
+        "YTD +10.96%",
+        "low beta 0.73"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "MKS.L",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "M&S has exceptional YTD +38.39% and 1Y +36%, with strong sales growth +15.4% and forward P/E 12.0x; analyst consensus is Buy.",
+      "drivers": [
+        "YTD +38.39%",
+        "sales growth +15.4%",
+        "forward P/E 12.0x",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "KGF.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Kingfisher shows strong momentum with 1M +10.35% and YTD +19.96%, low debt/equity 38.3%, and dividend yield 3.27%; P/E 21.08.",
+      "drivers": [
+        "1M +10.35%",
+        "YTD +19.96%",
+        "low debt/equity 38.3%",
+        "dividend yield 3.27%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "DGE.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Diageo has solid YTD +16.98% and 1M +8.01%, with low beta 0.37 and buy consensus; P/E 31.86 reflects premium for defensive staples.",
+      "drivers": [
+        "YTD +16.98%",
+        "1M +8.01%",
+        "low beta 0.37",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "AZN",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "AstraZeneca has strong analyst support (buy, score 1.62), 1M +6.33%, and low beta 0.155; P/E 25.16 is reasonable for a pharma giant.",
+      "drivers": [
+        "buy consensus (score 1.62)",
+        "1M +6.33%",
+        "low beta 0.155",
+        "large cap defensive"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "RTO.L",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Rentokil shows strong reversal with 1M +16.68% and 1W +2.00%, supported by buy consensus; P/E 40.8 is elevated but momentum is positive.",
+      "drivers": [
+        "1M +16.68%",
+        "1W +2.00%",
+        "buy consensus",
+        "momentum reversal"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "III.L",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "3i has attractive valuation with P/E 7.02, YTD -21.48% but 1M +8.39% showing recovery; dividend yield 3.35% and buy consensus.",
+      "drivers": [
+        "P/E 7.02",
+        "1M +8.39%",
+        "dividend yield 3.35%",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "BAB.L",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Babcock has strong analyst support (buy, score 1.82) and 1M +7.11% despite YTD -20.54%; P/E 25.29, potential turnaround play.",
+      "drivers": [
+        "buy consensus (score 1.82)",
+        "1M +7.11%",
+        "defence sector tailwind",
+        "turnaround potential"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

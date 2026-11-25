@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25 09:34",
+  "updated": "2026-11-25 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,194 +8,9 @@
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "44ecb1fc9975",
-  "code_commit": "98da0a8638bd",
+  "code_commit": "d7455adaad79",
   "input_version": "2026-11-11",
   "picks": [
-    {
-      "rank": 1,
-      "ticker": "TRGP",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "YTD +54%, P/E 24.5, strong_buy consensus. Q3 adj. EBITDA $1.5B (+18% YoY), 20% dividend increase for 2027, and new Permian midstream deals with ExxonMobil [targaresources.com].",
-      "drivers": [
-        "strong_buy consensus (1.27)",
-        "YTD +54%",
-        "Q3 EBITDA +18% YoY",
-        "20% dividend hike for 2027"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "WMB",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +11%, P/E 25.8, strong_buy consensus. Q3 adj. EBITDA $2.04B (+6% YoY), closed Momentum Midstream acquisition, and expanded storage/pipeline projects [investor.williams.com].",
-      "drivers": [
-        "strong_buy consensus (1.40)",
-        "Q3 EBITDA +6% YoY",
-        "Momentum Midstream acquisition",
-        "storage expansion"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "2222.SR",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "YTD +16%, P/E 14.1, div 5.2%, beta -0.02. Q3 adj. net income $31.2B (+9% YoY), base dividend +3.5%, and Shaheen petrochemical project inaugurated [aramco.com].",
-      "drivers": [
-        "div yield 5.2%",
-        "Q3 net income +9% YoY",
-        "Shaheen project catalyst",
-        "low beta -0.02"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "TTE",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "YTD +31%, P/E 8.4, div 4.7%, beta 0.04. Low valuation and high dividend provide defensive appeal amid sector pullback.",
-      "drivers": [
-        "P/E 8.4",
-        "div yield 4.7%",
-        "YTD +31%",
-        "low beta 0.04"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +39%, P/E 15.1, div 3.5%, beta 0.45. Solid integrated major with strong YTD returns and reasonable valuation.",
-      "drivers": [
-        "YTD +39%",
-        "div yield 3.5%",
-        "P/E 15.1",
-        "beta 0.45"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +41%, P/E 9.4, div 3.0%, beta 0.27. Low P/E and strong YTD performance with capital discipline.",
-      "drivers": [
-        "P/E 9.4",
-        "YTD +41%",
-        "div yield 3.0%",
-        "beta 0.27"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +43%, P/E 13.9, div 2.8%, beta 0.16. Strong YTD and 1-year returns with low beta and reasonable valuation.",
-      "drivers": [
-        "YTD +43%",
-        "P/E 13.9",
-        "beta 0.16",
-        "1-year +60%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "KMI",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +16%, P/E 18.9, div 3.9%, beta 0.57. Stable midstream cash flows with attractive dividend yield.",
-      "drivers": [
-        "div yield 3.9%",
-        "YTD +16%",
-        "P/E 18.9",
-        "beta 0.57"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "OKE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +20%, P/E 13.0, div 5.1%, beta 0.74. High dividend yield and reasonable P/E in midstream space.",
-      "drivers": [
-        "div yield 5.1%",
-        "P/E 13.0",
-        "YTD +20%",
-        "beta 0.74"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "EQT",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "YTD -7%, P/E 11.5, strong_buy consensus. Q3 free cash flow $283M, announced Range Resources acquisition and 10-year LNG deal with Ignitis [ir.eqt.com]. Turnaround catalyst.",
-      "drivers": [
-        "strong_buy consensus (1.50)",
-        "P/E 11.5",
-        "Range Resources acquisition",
-        "LNG sales agreement"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [
-    {
-      "ticker": "MPC",
-      "signal": "buy",
-      "confidence": 0.535,
-      "ytd": "+118.17%",
-      "ret_1y": "",
-      "rationale": "Momentum screener: +118.17% YTD exceeds buy threshold.",
-      "drivers": [
-        "YTD +118.17% \u2265 110.5% B"
-      ]
-    }
-  ],
-  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TRGP",
@@ -363,6 +178,191 @@
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [
+    {
+      "ticker": "MPC",
+      "signal": "buy",
+      "confidence": 0.535,
+      "ytd": "+118.17%",
+      "ret_1y": "",
+      "rationale": "Momentum screener: +118.17% YTD exceeds buy threshold.",
+      "drivers": [
+        "YTD +118.17% \u2265 110.5% B"
+      ]
+    }
+  ],
+  "previous_picks": [
+    {
+      "rank": 1,
+      "ticker": "TRGP",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Targa reported Q3 adjusted EBITDA of $1.5B (+18% YoY), raised 2027 dividend by 20% to $6.00/share, and secured long-term ExxonMobil midstream agreements; YTD +51.81%, P/E 24.63, analyst strong_buy with score 1.27.",
+      "drivers": [
+        "+51.81% YTD",
+        "strong_buy consensus",
+        "20% dividend increase",
+        "record Permian volumes"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "EOG reported record Q3 production, $2.2B free cash flow, raised dividend 8% to $4.40 annual rate, and signed JKM-linked LNG gas sales agreement; P/E 9.59, YTD +42.94%, strong capital returns.",
+      "drivers": [
+        "+42.94% YTD",
+        "P/E 9.59",
+        "8% dividend increase",
+        "record production & FCF"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "2222.SR",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Aramco reported Q3 adjusted net income of $31.2B (+9% YoY), raised base dividend 3.5% to $21.9B, and commenced Zuluf crude increment; YTD +15.42%, P/E 14.12, 5.13% yield, near-zero beta.",
+      "drivers": [
+        "+15.42% YTD",
+        "P/E 14.12",
+        "5.13% dividend yield",
+        "strong Q3 earnings"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "TTE",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "TotalEnergies has a low P/E of 8.5, 4.63% dividend yield, YTD +31%, and low beta of 0.04; integrated model provides stability with strong upstream and downstream exposure.",
+      "drivers": [
+        "P/E 8.5",
+        "4.63% dividend yield",
+        "+31% YTD",
+        "low beta 0.04"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ConocoPhillips has strong YTD +44.81%, P/E 14.34, 2.73% yield, and low short interest of 1.35%; benefits from high oil prices and capital discipline.",
+      "drivers": [
+        "+44.81% YTD",
+        "P/E 14.34",
+        "low short interest 1.35%",
+        "strong 1-year return +60%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Chevron offers YTD +38.53%, P/E 15.3, 3.42% dividend yield, and analyst buy consensus with score 1.62; integrated major with strong balance sheet and shareholder returns.",
+      "drivers": [
+        "+38.53% YTD",
+        "3.42% dividend yield",
+        "buy consensus",
+        "low beta 0.453"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "OKE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Oneok has YTD +19.13%, P/E 13.1, and a high 5.07% dividend yield; midstream exposure provides stable fee-based cash flows with low volatility.",
+      "drivers": [
+        "5.07% dividend yield",
+        "P/E 13.1",
+        "+19.13% YTD",
+        "midstream stability"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "SHEL.L",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Shell plc has YTD +29.58%, P/E 8.14, 3.34% yield, and negative beta of -0.248; strong cash generation and buyback program support upside.",
+      "drivers": [
+        "P/E 8.14",
+        "+29.58% YTD",
+        "3.34% dividend yield",
+        "negative beta"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "APA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "APA reported Q3 free cash flow of $699M, raised full-year FCF outlook to ~$2.9B, and lowered net debt target to $2B; YTD +82.64%, P/E 7.32, but high short interest of 9.07% adds risk.",
+      "drivers": [
+        "+82.64% YTD",
+        "P/E 7.32",
+        "raised FCF guidance",
+        "debt reduction"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "EQT",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "EQT has a strong_buy analyst consensus with score 1.5, P/E 11.59, and YTD -7.45%; natural gas price recovery potential and cost discipline make it a contrarian pick.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 11.59",
+        "natural gas exposure",
+        "contrarian value"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
       "momentum_label": null,
       "momentum_score": null
     }

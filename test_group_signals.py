@@ -86,7 +86,7 @@ class GroupRuns(unittest.TestCase):
         self.assertEqual((len(tries), len(out["picks"])), (3, 10))
 
     def test_cut_off_reply_is_an_error(self):
-        """call_api turns finish_reason 'length' into a retryable error and asks for capped thinking."""
+        """call_api turns finish_reason 'length' into a retryable error."""
         import unittest.mock
         class R:
             status_code = 200
@@ -102,7 +102,7 @@ class GroupRuns(unittest.TestCase):
             with self.assertRaises(ValueError) as e:
                 gs.call_api("k", "sys", "user", "Technology")
         self.assertIn("length limit", str(e.exception))
-        self.assertEqual(sent["reasoning"], {"max_tokens": gs.REASONING_MAX_TOKENS})
+        self.assertNotIn("reasoning", sent)                          # not honoured for this model (25 Nov test)
 
     def test_ticker_outside_the_group_is_rejected(self):
         reply = json.dumps({"picks": [{"ticker": "BTC", "signal": "buy", "confidence": 1}] * 10})

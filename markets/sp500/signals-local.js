@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-25 09:34",
+  "updated": "2026-11-25 08:02",
   "derived": true,
   "derived_from": [
     "communication-services",
@@ -20,1805 +20,6 @@ window.SIGNALS_DATA = {
   "group_kind": "market",
   "note": "Picks from the 11 sector runs that are members of the S&P 500; no separate AI run (too many stocks for one prompt).",
   "picks": [
-    {
-      "rank": 1,
-      "ticker": "TRGP",
-      "signal": "strong_buy",
-      "confidence": 0.95,
-      "rationale": "YTD +54%, P/E 24.5, strong_buy consensus. Q3 adj. EBITDA $1.5B (+18% YoY), 20% dividend increase for 2027, and new Permian midstream deals with ExxonMobil [targaresources.com].",
-      "drivers": [
-        "strong_buy consensus (1.27)",
-        "YTD +54%",
-        "Q3 EBITDA +18% YoY",
-        "20% dividend hike for 2027"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 1
-    },
-    {
-      "rank": 2,
-      "ticker": "AIZ",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "+37% YTD, P/E 15, strong_buy consensus, strong 1m momentum of +12%.",
-      "drivers": [
-        "+37% YTD",
-        "P/E 15",
-        "strong_buy consensus",
-        "1m +12%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 1
-    },
-    {
-      "rank": 3,
-      "ticker": "PPG",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "PPG reported record Q3 EPS of $2.25, raised full-year guidance to $7.90-$8.10, and organic sales grew 5% YoY. With +11% 1M momentum, P/E 16.9, and a buy consensus, it offers strong value and growth.",
-      "drivers": [
-        "+11% 1M momentum",
-        "P/E 16.9",
-        "record Q3 EPS and raised guidance",
-        "buy analyst consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 1
-    },
-    {
-      "rank": 4,
-      "ticker": "TGT",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "Target surged +110% 1Y, +81% YTD, with Q3 comp sales +5.6% and EPS $2.65 vs $1.51, raised full-year guidance; P/E 15.63 is attractive for the growth.",
-      "drivers": [
-        "+110% 1-year return",
-        "Q3 earnings beat",
-        "raised FY guidance",
-        "P/E 15.63"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 1
-    },
-    {
-      "rank": 5,
-      "ticker": "UPS",
-      "signal": "buy",
-      "confidence": 0.9,
-      "rationale": "UPS beat Q3 earnings with $1.69 adj. EPS vs $1.63 est., raised full-year guidance to ~$92.6B revenue; P/E 20.9, 6.05% dividend, +12.1% 1M momentum.",
-      "drivers": [
-        "earnings beat & raised guidance",
-        "P/E 20.9",
-        "6.05% dividend yield",
-        "+12.1% 1-month return"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 1
-    },
-    {
-      "rank": 6,
-      "ticker": "VZ",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +24.13% and 1-year +24%, with a low P/E of 11.85, high dividend yield of 6.09%, and beta of 0.26, indicating strong value and stability.",
-      "drivers": [
-        "+24% YTD return",
-        "P/E 11.85",
-        "dividend yield 6.09%",
-        "low beta 0.26"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 1
-    },
-    {
-      "rank": 7,
-      "ticker": "WMB",
-      "signal": "strong_buy",
-      "confidence": 0.9,
-      "rationale": "YTD +11%, P/E 25.8, strong_buy consensus. Q3 adj. EBITDA $2.04B (+6% YoY), closed Momentum Midstream acquisition, and expanded storage/pipeline projects [investor.williams.com].",
-      "drivers": [
-        "strong_buy consensus (1.40)",
-        "Q3 EBITDA +6% YoY",
-        "Momentum Midstream acquisition",
-        "storage expansion"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 2
-    },
-    {
-      "rank": 8,
-      "ticker": "EXR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Q3 Core FFO +4.3% YoY, same-store NOI +4.6%, occupancy 94.0%, and net income +50% per share; YTD +25.5% with 1M +10.8% momentum [extraspace.com](https://news.extraspace.com/press-releases/press-release-details/2026/Extra-Space-Storage-Inc--Reports-2026-Third-Quarter-Results/default.aspx).",
-      "drivers": [
-        "+25.5% YTD",
-        "Core FFO +4.3% YoY",
-        "same-store NOI +4.6%",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 1
-    },
-    {
-      "rank": 9,
-      "ticker": "LNT",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Q3 EPS $1.52 vs $1.09, raised guidance to top half, 19% capex increase to $15.9B, P/E 20.19, YTD +14.1%.",
-      "drivers": [
-        "Q3 EPS beat",
-        "Capex +19% to $15.9B",
-        "Rate stability through 2030",
-        "Analyst buy score 2.0"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "utilities",
-      "from_group_name": "Utilities",
-      "group_rank": 1
-    },
-    {
-      "rank": 10,
-      "ticker": "MSI",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "MSI has strong momentum with +9.16% 1M and +40.27% YTD, supported by a Q3 earnings beat (sales +12%) and an 11% dividend increase, with a P/E of 42.63 and a buy rating.",
-      "drivers": [
-        "+9.16% 1M",
-        "+40.27% YTD",
-        "P/E 42.63",
-        "earnings beat & dividend hike"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 1
-    },
-    {
-      "rank": 11,
-      "ticker": "REGN",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Q3 revenues surged 36% to $5.1B, EPS $20.07 non-GAAP (+70% YoY), with Dupixent +35% and EYLEA HD +62%; P/E 20.8 is attractive for this growth. [globenewswire.com]",
-      "drivers": [
-        "+36% revenue growth Q3",
-        "P/E 20.8",
-        "+22% 1M momentum",
-        "FDA approval Pasatru"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 1
-    },
-    {
-      "rank": 12,
-      "ticker": "CPAY",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "+49% YTD, P/E 24, buy consensus, strong 1m momentum of +12%.",
-      "drivers": [
-        "+49% YTD",
-        "P/E 24",
-        "buy consensus",
-        "1m +12%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 2
-    },
-    {
-      "rank": 13,
-      "ticker": "CRH",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "CRH has a strong_buy consensus (score 1.35), +10% 1M rebound, and a reasonable P/E of 17.4 despite a YTD decline. Recent momentum and low valuation make it attractive.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "+10% 1M momentum",
-        "P/E 17.4",
-        "YTD -24.8% offers value entry"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 2
-    },
-    {
-      "rank": 14,
-      "ticker": "DLTR",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Dollar Tree reported Q3 revenue +6.9%, comp sales +4.6%, raised FY adjusted EPS to $8.05-$8.25; stock +46% 1Y, +23.8% 1M, P/E 16.94.",
-      "drivers": [
-        "Q3 revenue +6.9%",
-        "raised FY EPS outlook",
-        "+23.8% 1-month",
-        "P/E 16.94"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 2
-    },
-    {
-      "rank": 15,
-      "ticker": "LYV",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Exceptional 1-year return of +42% and YTD +26.37%, with strong recent momentum (1M +6.40%, 1W +4.16%) and a buy analyst consensus (score 1.64).",
-      "drivers": [
-        "+42% 1-year return",
-        "+26.37% YTD",
-        "buy analyst",
-        "1M +6.40%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 2
-    },
-    {
-      "rank": 16,
-      "ticker": "MAS",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "Masco has strong YTD +34.3%, P/E 18.5, +13.1% 1M momentum, and analyst buy consensus.",
-      "drivers": [
-        "YTD +34.3%",
-        "P/E 18.5",
-        "+13.1% 1-month return",
-        "low valuation"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 2
-    },
-    {
-      "rank": 17,
-      "ticker": "KIM",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Record portfolio occupancy 96.6%, same-property NOI +4.9%, FFO per share +6.8% YoY, and raised 2026 guidance; YTD +33% with 1M +9% [kimcorealty.com](https://investors.kimcorealty.com/news/detail/606/kimco-realty-announces-third-quarter-2026-results).",
-      "drivers": [
-        "+33% YTD",
-        "record occupancy 96.6%",
-        "FFO +6.8% YoY",
-        "raised guidance"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 2
-    },
-    {
-      "rank": 18,
-      "ticker": "DRI",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+38% 1Y, +32% YTD, P/E 22.55, low beta 0.634, strong momentum in restaurants.",
-      "drivers": [
-        "+38% 1Y return",
-        "+32% YTD",
-        "P/E 22.55",
-        "low beta 0.634"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 1
-    },
-    {
-      "rank": 19,
-      "ticker": "GEN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "GEN shows exceptional near-term momentum with +23.20% 1M and +17.11% YTD, a low P/E of 15.25, and a buy rating, making it a resilient value play amid tech sell-offs.",
-      "drivers": [
-        "+23.20% 1M",
-        "+17.11% YTD",
-        "P/E 15.25",
-        "buy rating"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 2
-    },
-    {
-      "rank": 20,
-      "ticker": "IDXX",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Q3 revenue +10% to $1.21B, EPS $4.01 (+18%), raised FY26 guidance to $4.74-4.77B; strong volume and 1,900 inVue Dx placements. [ir.idexx.com]",
-      "drivers": [
-        "+10% Q3 revenue growth",
-        "raised FY26 guidance",
-        "+25% 1M momentum",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 2
-    },
-    {
-      "rank": 21,
-      "ticker": "RCL",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+22% 1Y, +14% YTD, +13.4% 1M, P/E 18.17, analyst buy consensus 1.52, cruise demand catalyst.",
-      "drivers": [
-        "+22% 1Y",
-        "+13.4% 1M",
-        "P/E 18.17",
-        "buy consensus 1.52"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 2
-    },
-    {
-      "rank": 22,
-      "ticker": "GPN",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+26% YTD, 1m +15%, Q3 adjusted EPS beat, raised synergy outlook to $650M.",
-      "drivers": [
-        "+26% YTD",
-        "1m +15%",
-        "earnings beat",
-        "raised synergy outlook"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 3
-    },
-    {
-      "rank": 23,
-      "ticker": "TTWO",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Best analyst score of 1.21 (strong_buy) and accelerating short-term momentum with 1W +8.08% and 1D +5.28%.",
-      "drivers": [
-        "analyst score 1.21",
-        "1W +8.08%",
-        "1D +5.28%",
-        "strong_buy signal"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 3
-    },
-    {
-      "rank": 24,
-      "ticker": "VLTO",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Veralto shows +15.2% 1M, YTD +21.4%, P/E 29.1, analyst buy, and low beta 0.67.",
-      "drivers": [
-        "+15.2% 1-month return",
-        "YTD +21.4%",
-        "low beta 0.67",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 3
-    },
-    {
-      "rank": 25,
-      "ticker": "WEC",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Q3 net income $1.18/share vs $0.83, raised guidance to $5.60-$5.64, P/E 21.32, YTD +14.8%.",
-      "drivers": [
-        "Q3 EPS beat",
-        "Guidance raised",
-        "Retail electricity deliveries +3.3%",
-        "Analyst buy"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "utilities",
-      "from_group_name": "Utilities",
-      "group_rank": 3
-    },
-    {
-      "rank": 26,
-      "ticker": "WMT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Walmart beat Q3 estimates (EPS $0.65 vs $0.64), raised annual guidance, e-commerce +17%; +25% 1Y, P/E 46.95 but strong buy consensus (score 1.55).",
-      "drivers": [
-        "Q3 EPS beat",
-        "raised FY guidance",
-        "e-commerce +17%",
-        "analyst score 1.55"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 3
-    },
-    {
-      "rank": 27,
-      "ticker": "MRSH",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+19% YTD, P/E 25, buy consensus, strong 1m momentum of +9.5%.",
-      "drivers": [
-        "+19% YTD",
-        "P/E 25",
-        "buy consensus",
-        "1m +9.5%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 4
-    },
-    {
-      "rank": 28,
-      "ticker": "DIS",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Solid double-digit YTD (+10.37%) and 1-year (+20%) returns, strong recent momentum (1M +10.97%, 1W +4.76%), and a favourable analyst score of 1.56.",
-      "drivers": [
-        "+10.37% YTD",
-        "+20% 1-year",
-        "analyst score 1.56",
-        "1M +10.97%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 5
-    },
-    {
-      "rank": 29,
-      "ticker": "ICE",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "+10% YTD, record North American power futures OI catalyst, buy consensus.",
-      "drivers": [
-        "+10% YTD",
-        "record power futures OI",
-        "buy consensus",
-        "1m +9.3%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 5
-    },
-    {
-      "rank": 30,
-      "ticker": "NUE",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Nucor is rated strong_buy (score 1.47), with +47.6% YTD and a low P/E of 15.8. Despite a slight 1M dip, the steelmaker's strong fundamentals and analyst support stand out.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "+47.6% YTD",
-        "P/E 15.8",
-        "low short interest 2.58%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 5
-    },
-    {
-      "rank": 31,
-      "ticker": "AMT",
-      "signal": "strong_buy",
-      "confidence": 0.8,
-      "rationale": "Proposed $525M settlement with DISH/EchoStar enhances financial flexibility; strong_buy rating, P/E 25.25, YTD +7.8% [americantower.gcs-web.com](https://americantower.gcs-web.com/news-releases/news-release-details/american-tower-announces-proposed-settlement-dishechostar).",
-      "drivers": [
-        "$525M settlement",
-        "strong_buy rating",
-        "P/E 25.25",
-        "telecom tower demand"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 7
-    },
-    {
-      "rank": 32,
-      "ticker": "PSA",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "YTD +32.3%, 1M +8.1%, P/E 34.75 with 3.6% dividend; self-storage tailwinds mirroring EXR's strong Q3 results.",
-      "drivers": [
-        "+32.3% YTD",
-        "1M +8.1%",
-        "self-storage demand",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 3
-    },
-    {
-      "rank": 33,
-      "ticker": "SPG",
-      "signal": "buy",
-      "confidence": 0.76,
-      "rationale": "YTD +29.1%, 1M +8.1%, P/E 16.39 (lowest among top retail REITs), 4.1% dividend; strong consumer spending supports mall traffic.",
-      "drivers": [
-        "+29.1% YTD",
-        "P/E 16.39",
-        "1M +8.1%",
-        "retail strength"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 4
-    },
-    {
-      "rank": 34,
-      "ticker": "ROP",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "ROP has positive momentum with +7.89% 1M and +10.48% YTD, a low beta of 0.66, a reasonable P/E of 18.13, and a buy rating, offering defensive growth.",
-      "drivers": [
-        "+7.89% 1M",
-        "+10.48% YTD",
-        "P/E 18.13",
-        "beta 0.66"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 3
-    },
-    {
-      "rank": 35,
-      "ticker": "COST",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Costco +32% YTD, +11.8% 1M, P/E 52.89 but consistent growth and low short interest 1.78%; analyst buy consensus.",
-      "drivers": [
-        "+32% YTD",
-        "+11.8% 1-month",
-        "low short interest 1.78%",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 4
-    },
-    {
-      "rank": 36,
-      "ticker": "PNR",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Pentair surged +29.1% in 1M, P/E 19.1, analyst buy, despite YTD -31.4% offering a value rebound play.",
-      "drivers": [
-        "+29.1% 1-month return",
-        "P/E 19.1",
-        "value rebound",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 4
-    },
-    {
-      "rank": 37,
-      "ticker": "TKO",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong analyst consensus (strong_buy, score 1.41) and robust 1-month momentum of +10.64%, with a 1-day gain of +2.33%.",
-      "drivers": [
-        "strong_buy analyst",
-        "1M +10.64%",
-        "score 1.41",
-        "1D +2.33%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 4
-    },
-    {
-      "rank": 38,
-      "ticker": "CVX",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +39%, P/E 15.1, div 3.5%, beta 0.45. Solid integrated major with strong YTD returns and reasonable valuation.",
-      "drivers": [
-        "YTD +39%",
-        "div yield 3.5%",
-        "P/E 15.1",
-        "beta 0.45"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 5
-    },
-    {
-      "rank": 39,
-      "ticker": "LH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "YTD +51%, 1M +14%, P/E 30.5, analyst buy score 1.59; strong revenue growth and margin expansion.",
-      "drivers": [
-        "+51% YTD",
-        "+14% 1M",
-        "P/E 30.5",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 5
-    },
-    {
-      "rank": 40,
-      "ticker": "AON",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Completed USI acquisition, 1m +13.8%, P/E 18, buy consensus.",
-      "drivers": [
-        "USI acquisition completed",
-        "1m +13.8%",
-        "P/E 18",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 6
-    },
-    {
-      "rank": 41,
-      "ticker": "EQIX",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "YTD +31.2%, 1Y +34%, strong_buy rating; data center REIT benefiting from AI/cloud demand despite high P/E of 60.",
-      "drivers": [
-        "+31.2% YTD",
-        "strong_buy rating",
-        "data center demand",
-        "1Y +34%"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 8
-    },
-    {
-      "rank": 42,
-      "ticker": "A",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Q4 FY26 revenue $2.04B (+9.6%), non-GAAP EPS $1.86 (+17%), FY27 guidance $8.0-8.15B; P/E 34.7, analyst buy. [investor.agilent.com]",
-      "drivers": [
-        "+9.6% Q4 revenue",
-        "raised FY27 guidance",
-        "+34% YTD",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 9
-    },
-    {
-      "rank": 43,
-      "ticker": "BLK",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong_buy consensus, P/E 26, YTD +7.4%, asset management leader.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 26",
-        "YTD +7.4%",
-        "market leader"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 9
-    },
-    {
-      "rank": 44,
-      "ticker": "MSCI",
-      "signal": "strong_buy",
-      "confidence": 0.75,
-      "rationale": "Strong_buy consensus, YTD +13.8%, 1m +3%, P/E 33.",
-      "drivers": [
-        "strong_buy consensus",
-        "YTD +13.8%",
-        "1m +3%",
-        "P/E 33"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 10
-    },
-    {
-      "rank": 45,
-      "ticker": "DOC",
-      "signal": "buy",
-      "confidence": 0.74,
-      "rationale": "YTD +33.4%, 1M +5.8%, 1W +4.7%, dividend 6.1%; health care REIT benefiting from aging demographics and stable occupancy.",
-      "drivers": [
-        "+33.4% YTD",
-        "1M +5.8%",
-        "dividend 6.1%",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 5
-    },
-    {
-      "rank": 46,
-      "ticker": "VICI",
-      "signal": "buy",
-      "confidence": 0.72,
-      "rationale": "P/E 11.19 (cheapest in peer group), dividend 7.6%, 1M +3.1%, 1D +2.5%; experiential REIT with high yield and buy rating.",
-      "drivers": [
-        "P/E 11.19",
-        "dividend 7.6%",
-        "1M +3.1%",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 6
-    },
-    {
-      "rank": 47,
-      "ticker": "CMG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+30.4% 1M, P/E 33.88, analyst buy, strong short-term momentum despite flat YTD.",
-      "drivers": [
-        "+30.4% 1M",
-        "P/E 33.88",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 3
-    },
-    {
-      "rank": 48,
-      "ticker": "TSCO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+22% 1M, P/E 20.2, low beta 0.484, defensive retailer with dividend 2.56%.",
-      "drivers": [
-        "+22% 1M",
-        "P/E 20.2",
-        "low beta 0.484",
-        "div 2.56%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 4
-    },
-    {
-      "rank": 49,
-      "ticker": "VRSN",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "VRSN has strong YTD performance (+33.48%) and positive 1M (+3.03%) and 1W (+3.78%) moves, with a low beta of 0.67, a P/E of 33.79, and a buy rating.",
-      "drivers": [
-        "+33.48% YTD",
-        "+3.03% 1M",
-        "beta 0.67",
-        "buy rating"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 4
-    },
-    {
-      "rank": 50,
-      "ticker": "DG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Dollar General +35% 1Y, +8% 1M, P/E 17.43, dividend 1.76%, analyst buy (score 2.34); value and momentum play.",
-      "drivers": [
-        "+35% 1-year",
-        "+8% 1-month",
-        "P/E 17.43",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 5
-    },
-    {
-      "rank": 51,
-      "ticker": "ES",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Updated 2026 guidance to $4.62-$4.70, reaffirmed 5-7% long-term growth, P/E 18.85, YTD +10.5%.",
-      "drivers": [
-        "Guidance updated",
-        "Long-term growth 5-7%",
-        "Div yield 4.41%",
-        "Analyst hold but improving"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "utilities",
-      "from_group_name": "Utilities",
-      "group_rank": 5
-    },
-    {
-      "rank": 52,
-      "ticker": "IR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Ingersoll Rand gained +11.3% 1M, P/E 23.5, YTD +4.1%, analyst buy, with steady momentum.",
-      "drivers": [
-        "+11.3% 1-month return",
-        "P/E 23.5",
-        "analyst buy",
-        "steady momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 5
-    },
-    {
-      "rank": 53,
-      "ticker": "LOW",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+16.6% 1M, P/E 18.97, low beta 0.811, home improvement demand, analyst buy.",
-      "drivers": [
-        "+16.6% 1M",
-        "P/E 18.97",
-        "low beta 0.811",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 5
-    },
-    {
-      "rank": 54,
-      "ticker": "DUK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +15.4%, 1M +6.1%, P/E 18.85, div 3.35%, analyst buy score 2.13, large cap stable.",
-      "drivers": [
-        "YTD +15.4%",
-        "P/E 18.85",
-        "Div yield 3.35%",
-        "Analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "utilities",
-      "from_group_name": "Utilities",
-      "group_rank": 6
-    },
-    {
-      "rank": 55,
-      "ticker": "ECL",
-      "signal": "strong_buy",
-      "confidence": 0.7,
-      "rationale": "Ecolab has a strong_buy consensus (score 1.42), +6.3% 1M, and +17.9% YTD. Recent quarterly results showed accelerating sales, though RSI of 78.6 suggests overbought conditions.",
-      "drivers": [
-        "strong_buy analyst consensus",
-        "+6.3% 1M momentum",
-        "+17.9% YTD",
-        "accelerating sales growth"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 6
-    },
-    {
-      "rank": 56,
-      "ticker": "EOG",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +41%, P/E 9.4, div 3.0%, beta 0.27. Low P/E and strong YTD performance with capital discipline.",
-      "drivers": [
-        "P/E 9.4",
-        "YTD +41%",
-        "div yield 3.0%",
-        "beta 0.27"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 6
-    },
-    {
-      "rank": 57,
-      "ticker": "COP",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +43%, P/E 13.9, div 2.8%, beta 0.16. Strong YTD and 1-year returns with low beta and reasonable valuation.",
-      "drivers": [
-        "YTD +43%",
-        "P/E 13.9",
-        "beta 0.16",
-        "1-year +60%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 7
-    },
-    {
-      "rank": 58,
-      "ticker": "JKHY",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "+0.6% YTD, 1m +9.2%, P/E 23.6, buy consensus, low beta 0.54.",
-      "drivers": [
-        "1m +9.2%",
-        "P/E 23.6",
-        "buy consensus",
-        "low beta 0.54"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "financials",
-      "from_group_name": "Financials",
-      "group_rank": 7
-    },
-    {
-      "rank": 59,
-      "ticker": "T",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Attractive valuation with P/E 11.93 and dividend yield 4.98%, plus strong recent momentum (1M +9.74%, 1D +2.60%) and a buy analyst rating.",
-      "drivers": [
-        "P/E 11.93",
-        "dividend 4.98%",
-        "1M +9.74%",
-        "buy analyst"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 7
-    },
-    {
-      "rank": 60,
-      "ticker": "CMCSA",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Low P/E of 7.82 and high dividend yield of 5.34% provide a strong value proposition, with a 1-month surge of +15.10% and low beta of 0.707.",
-      "drivers": [
-        "P/E 7.82",
-        "dividend 5.34%",
-        "1M +15.10%",
-        "low beta 0.707"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 8
-    },
-    {
-      "rank": 61,
-      "ticker": "FRT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "YTD +17.2%, P/E 22.11, dividend 4.2%, short interest 0.03% (near zero); retail REIT with stable occupancy and analyst buy (1.89).",
-      "drivers": [
-        "+17.2% YTD",
-        "short interest 0.03%",
-        "P/E 22.11",
-        "analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 10
-    },
-    {
-      "rank": 62,
-      "ticker": "WY",
-      "signal": "strong_buy",
-      "confidence": 0.68,
-      "rationale": "Strong_buy rating (score 1.5), 1M +3.2%, 1D +2.3%, dividend 4.3%; timber REIT undervalued with YTD -12.8% offering turnaround potential.",
-      "drivers": [
-        "strong_buy rating",
-        "1M +3.2%",
-        "dividend 4.3%",
-        "value play"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "real-estate",
-      "from_group_name": "Real Estate",
-      "group_rank": 9
-    },
-    {
-      "rank": 63,
-      "ticker": "MRNA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Q3 EPS $0.38 vs -$1.25 expected, revenue $1.31B (+29%), raised FY26 growth outlook to 15-25% from up to 10%. [cnbc.com]",
-      "drivers": [
-        "Q3 earnings beat",
-        "raised FY26 guidance",
-        "+637% YTD momentum",
-        "new product launches"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": "strong_buy",
-      "momentum_score": 1.0,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 4
-    },
-    {
-      "rank": 64,
-      "ticker": "AAPL",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "AAPL shows steady gains with +31.10% YTD, +3.03% 1M, and +1.43% 1D, supported by a low beta of 1.09, a P/E of 38.87, and a buy rating.",
-      "drivers": [
-        "+31.10% YTD",
-        "+3.03% 1M",
-        "beta 1.09",
-        "buy rating"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 6
-    },
-    {
-      "rank": 65,
-      "ticker": "CPRT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Copart +11.0% 1M, P/E 20.4, analyst buy, though YTD -14.4% offers a contrarian entry.",
-      "drivers": [
-        "+11.0% 1-month return",
-        "P/E 20.4",
-        "analyst buy",
-        "contrarian value"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 6
-    },
-    {
-      "rank": 66,
-      "ticker": "TPR",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "+16.3% 1M, P/E 16.28, analyst buy, luxury goods with pricing power.",
-      "drivers": [
-        "+16.3% 1M",
-        "P/E 16.28",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 6
-    },
-    {
-      "rank": 67,
-      "ticker": "EW",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +24%, 1M +17%, analyst buy score 1.53; strong momentum in structural heart despite P/E 61.",
-      "drivers": [
-        "+24% YTD",
-        "+17% 1M",
-        "analyst buy",
-        "market leader"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "health-care",
-      "from_group_name": "Health Care",
-      "group_rank": 7
-    },
-    {
-      "rank": 68,
-      "ticker": "KMI",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +16%, P/E 18.9, div 3.9%, beta 0.57. Stable midstream cash flows with attractive dividend yield.",
-      "drivers": [
-        "div yield 3.9%",
-        "YTD +16%",
-        "P/E 18.9",
-        "beta 0.57"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 8
-    },
-    {
-      "rank": 69,
-      "ticker": "VMC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Vulcan Materials gained +9% in the past month and +3.5% in the past week, with a P/E of 33.4. No analyst rating, but strong recent momentum and construction demand support the pick.",
-      "drivers": [
-        "+9% 1M momentum",
-        "+3.5% 1W momentum",
-        "P/E 33.4",
-        "YTD -2% near breakeven"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 8
-    },
-    {
-      "rank": 70,
-      "ticker": "EVRG",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +23.4%, 1M +3.9%, P/E 19.38, div 3.32%, analyst buy score 1.81.",
-      "drivers": [
-        "YTD +23.4%",
-        "P/E 19.38",
-        "Div yield 3.32%",
-        "Analyst buy"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "utilities",
-      "from_group_name": "Utilities",
-      "group_rank": 9
-    },
-    {
-      "rank": 71,
-      "ticker": "MLM",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Martin Marietta Materials has a buy consensus, +4.4% 1M and +4.3% 1W momentum. P/E of 38.9 is elevated, but the stock is recovering from YTD losses of -16.7%.",
-      "drivers": [
-        "+4.4% 1M momentum",
-        "+4.3% 1W momentum",
-        "buy analyst consensus",
-        "YTD -16.7% recovery potential"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 9
-    },
-    {
-      "rank": 72,
-      "ticker": "OKE",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "YTD +20%, P/E 13.0, div 5.1%, beta 0.74. High dividend yield and reasonable P/E in midstream space.",
-      "drivers": [
-        "div yield 5.1%",
-        "P/E 13.0",
-        "YTD +20%",
-        "beta 0.74"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 9
-    },
-    {
-      "rank": 73,
-      "ticker": "TMUS",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Solid 1-month momentum of +13.86%, a buy analyst rating (score 1.61), and low beta of 0.378 indicate stability and growth potential.",
-      "drivers": [
-        "1M +13.86%",
-        "buy analyst",
-        "beta 0.378",
-        "score 1.61"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 10
-    },
-    {
-      "rank": 74,
-      "ticker": "APP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Explosive 1-month rebound of +46.16% and a buy analyst rating (score 1.58) signal a potential turnaround despite negative YTD.",
-      "drivers": [
-        "1M +46.16%",
-        "buy analyst",
-        "score 1.58",
-        "1D +1.92%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 6
-    },
-    {
-      "rank": 75,
-      "ticker": "ADSK",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "ADSK has a strong_buy analyst consensus (score 1.5) and recent positive momentum (+2.51% 1M, +0.19% 1W), with a P/E of 33.12, despite a negative YTD of -10.82%.",
-      "drivers": [
-        "strong_buy rating",
-        "+2.51% 1M",
-        "P/E 33.12",
-        "analyst score 1.5"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 7
-    },
-    {
-      "rank": 76,
-      "ticker": "DPZ",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "+13.8% 1M, P/E 19.57, dividend 2.24%, analyst buy, value in restaurants.",
-      "drivers": [
-        "+13.8% 1M",
-        "P/E 19.57",
-        "div 2.24%",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 7
-    },
-    {
-      "rank": 77,
-      "ticker": "TSN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Tyson Foods +15% 1Y, +12.5% 1M, dividend 3.3%, P/E 49.18 but recent momentum strong; analyst hold but improving fundamentals.",
-      "drivers": [
-        "+12.5% 1-month",
-        "dividend 3.3%",
-        "recent momentum",
-        "P/E 49.18"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 7
-    },
-    {
-      "rank": 78,
-      "ticker": "AWK",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "YTD +18.5%, 1M +6.8%, P/E 25.48, div 2.43%, strong momentum in regulated water.",
-      "drivers": [
-        "YTD +18.5%",
-        "1M +6.8%",
-        "Regulated water utility",
-        "Analyst hold"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "utilities",
-      "from_group_name": "Utilities",
-      "group_rank": 8
-    },
-    {
-      "rank": 79,
-      "ticker": "WYNN",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "strong_buy consensus (score 1.29), +13.7% 1M, P/E 23.54, Macau recovery catalyst.",
-      "drivers": [
-        "strong_buy consensus",
-        "+13.7% 1M",
-        "P/E 23.54"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 8
-    },
-    {
-      "rank": 80,
-      "ticker": "CHTR",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Recent 1-month surge of +32.97% and 1-day +6.21%, supported by a new operating model targeting $2B in cost savings and strong mobile subscriber growth.",
-      "drivers": [
-        "1M +32.97%",
-        "1D +6.21%",
-        "cost savings catalyst",
-        "mobile subscriber growth"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "communication-services",
-      "from_group_name": "Communication Services",
-      "group_rank": 9
-    },
-    {
-      "rank": 81,
-      "ticker": "EQT",
-      "signal": "strong_buy",
-      "confidence": 0.6,
-      "rationale": "YTD -7%, P/E 11.5, strong_buy consensus. Q3 free cash flow $283M, announced Range Resources acquisition and 10-year LNG deal with Ignitis [ir.eqt.com]. Turnaround catalyst.",
-      "drivers": [
-        "strong_buy consensus (1.50)",
-        "P/E 11.5",
-        "Range Resources acquisition",
-        "LNG sales agreement"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "energy",
-      "from_group_name": "Energy",
-      "group_rank": 10
-    },
-    {
-      "rank": 82,
-      "ticker": "DD",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "DuPont +10.6% 1M, YTD +24.5%, analyst buy, but P/E 52.7 is elevated; growth priced in.",
-      "drivers": [
-        "+10.6% 1-month return",
-        "YTD +24.5%",
-        "analyst buy",
-        "high P/E 52.7"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 8
-    },
-    {
-      "rank": 83,
-      "ticker": "HRL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Hormel Foods +7% 1Y, +11.1% 1M, dividend 5.07%, P/E 37.23; high yield and recent uptick in momentum.",
-      "drivers": [
-        "+11.1% 1-month",
-        "dividend 5.07%",
-        "P/E 37.23"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 8
-    },
-    {
-      "rank": 84,
-      "ticker": "TYL",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TYL has positive 1M (+6.76%) and 1W (+0.75%) moves, a low beta of 0.73, a buy rating, and a P/E of 50.78, with YTD -5.36% but recent uptick.",
-      "drivers": [
-        "+6.76% 1M",
-        "beta 0.73",
-        "buy rating",
-        "P/E 50.78"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 8
-    },
-    {
-      "rank": 85,
-      "ticker": "MGM",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "+20.3% 1M, low P/E 12.96, but Morgan Stanley cut target to $28 and Q3 miss; high short interest 17.42%.",
-      "drivers": [
-        "+20.3% 1M",
-        "P/E 12.96",
-        "high short 17.42%",
-        "analyst mixed"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 9
-    },
-    {
-      "rank": 86,
-      "ticker": "ROL",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Rollins +10.8% 1M, analyst buy, but P/E 35.0 and short interest 9.25% indicate risk.",
-      "drivers": [
-        "+10.8% 1-month return",
-        "analyst buy",
-        "high short interest 9.25%",
-        "P/E 35.0"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "industrials",
-      "from_group_name": "Industrials",
-      "group_rank": 9
-    },
-    {
-      "rank": 87,
-      "ticker": "CDW",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "CDW has stable momentum with +0.57% 1M and +0.67% 1W, a strong YTD of +25.23%, a low P/E of 19.84, and a buy rating, offering consistent performance.",
-      "drivers": [
-        "+25.23% YTD",
-        "P/E 19.84",
-        "buy rating",
-        "stable 1M/1W"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "technology",
-      "from_group_name": "Technology",
-      "group_rank": 10
-    },
-    {
-      "rank": 88,
-      "ticker": "CLX",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Clorox +24.9% 1M, P/E 18.72, dividend 4.8%, Q1 earnings beat; analyst hold but strong short-term catalyst from earnings.",
-      "drivers": [
-        "+24.9% 1-month",
-        "dividend 4.8%",
-        "Q1 earnings beat",
-        "P/E 18.72"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-staples",
-      "from_group_name": "Consumer Staples",
-      "group_rank": 10
-    },
-    {
-      "rank": 89,
-      "ticker": "SHW",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Sherwin-Williams reported Q3 sales up 7.9% and narrowed FY26 EPS guidance to $11.85-$12.15. With +5.4% 1M and a buy rating, but RSI of 71.4 signals overbought risk.",
-      "drivers": [
-        "+5.4% 1M momentum",
-        "Q3 sales +7.9%",
-        "buy analyst consensus",
-        "RSI 71.4 overbought caution"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "materials",
-      "from_group_name": "Materials",
-      "group_rank": 10
-    },
-    {
-      "rank": 90,
-      "ticker": "CVNA",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "+16.5% 1M, but high beta 3.65, P/E 32.6, short interest 12.1%, risky momentum play.",
-      "drivers": [
-        "+16.5% 1M",
-        "high beta 3.65",
-        "P/E 32.6",
-        "short 12.1%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null,
-      "from_group": "consumer-discretionary",
-      "from_group_name": "Consumer Discretionary",
-      "group_rank": 10
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TRGP",
@@ -3576,6 +1777,1829 @@ window.SIGNALS_DATA = {
       "momentum_score": null,
       "from_group": "materials",
       "from_group_name": "Materials",
+      "group_rank": 10
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
+    {
+      "rank": 1,
+      "ticker": "MSI",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "MSI delivered Q3 revenue up 12% YoY to $3.4B, raised full-year guidance, and reported a record backlog of $16.6B (+14% YoY) [motorolasolutions.com]. With +11.27% 1M, +37.66% YTD, and a P/E of 41.85 supported by strong demand, it is the top pick.",
+      "drivers": [
+        "+11.27% 1M momentum",
+        "record backlog $16.6B",
+        "raised FY guidance",
+        "strong_buy analyst consensus"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "technology",
+      "from_group_name": "Technology",
+      "group_rank": 1
+    },
+    {
+      "rank": 2,
+      "ticker": "TRGP",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Targa reported Q3 adjusted EBITDA of $1.5B (+18% YoY), raised 2027 dividend by 20% to $6.00/share, and secured long-term ExxonMobil midstream agreements; YTD +51.81%, P/E 24.63, analyst strong_buy with score 1.27.",
+      "drivers": [
+        "+51.81% YTD",
+        "strong_buy consensus",
+        "20% dividend increase",
+        "record Permian volumes"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "energy",
+      "from_group_name": "Energy",
+      "group_rank": 1
+    },
+    {
+      "rank": 3,
+      "ticker": "WMT",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "Q3 FY27 revenue +5.2%, operating income +16%, raised outlook; P/E 46 but analyst consensus best at 1.55.",
+      "drivers": [
+        "Q3 beat & raised guidance",
+        "strong omnichannel growth",
+        "low short interest 1.65%",
+        "analyst consensus strong_buy"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 1
+    },
+    {
+      "rank": 4,
+      "ticker": "CBOE",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "CBOE has +45% YTD and +43% 1-year return, with record Q3 2026 EPS of $4.08 (+43% YoY) and net revenue up 18% driven by 24% index options volume growth; the extended S&P license through 2051 and SEC approval for KPI event contracts provide durable growth catalysts [ir.cboe.com](https://ir.cboe.com/news/news-details/2026/Cboe-Global-Markets-Reports-Results-for-Third-Quarter-2026/default.aspx).",
+      "drivers": [
+        "+45% YTD",
+        "record Q3 EPS +43% YoY",
+        "S&P license extended to 2051",
+        "low beta 0.36"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 1
+    },
+    {
+      "rank": 5,
+      "ticker": "CRH",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "CRH has a strong_buy consensus (an_score 1.35), a P/E of 16.58, and a new $6B buyback program through 2030, with Q3 2026 revenues up 3% to $11.4B and a positive 2027 outlook [crh.com](https://www.crh.com/media/press-releases/2026/crh-reports-third-quarter-2026-results/).",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 16.58",
+        "new $6B buyback",
+        "positive 2027 outlook"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 1
+    },
+    {
+      "rank": 6,
+      "ticker": "HD",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Home Depot beat Q3 estimates with EPS of $3.86 vs $3.84 expected and revenue of $43.4B vs $42.8B, comps rose 2.2% and full-year sales guidance was raised to ~+4.5% [cnbc.com](https://www.cnbc.com/2026/11/17/home-depot-hd-q3-earnings-2026.html). With a P/E of 23.54, 2.75% dividend yield, and low short interest of 1.29%, it offers a balanced risk/reward.",
+      "drivers": [
+        "Q3 earnings beat",
+        "raised full-year guidance",
+        "low short interest 1.29%",
+        "2.75% dividend yield"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 1
+    },
+    {
+      "rank": 7,
+      "ticker": "IDXX",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "Q3 EPS $4.01 beat estimates, revenue +10% YoY, raised FY guidance, 1M +22.17% momentum.",
+      "drivers": [
+        "Q3 EPS beat",
+        "raised FY guidance",
+        "1M +22.17%",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "health-care",
+      "from_group_name": "Health Care",
+      "group_rank": 1
+    },
+    {
+      "rank": 8,
+      "ticker": "KIM",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Kimco Realty delivered 6.8% FFO growth and record portfolio occupancy of 96.6% in Q3 2026, with same-property NOI accelerating 4.9% YoY, and raised full-year guidance for the third consecutive year [kimcorealty.com](https://investors.kimcorealty.com/news/detail/606/kimco-realty-announces-third-quarter-2026-results). The stock is up +31% YTD and +11.66% in the last month, with a P/E of 23.7 and a buy consensus.",
+      "drivers": [
+        "+31% YTD",
+        "+11.66% 1M",
+        "record 96.6% occupancy",
+        "raised 2026 guidance"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 1
+    },
+    {
+      "rank": 9,
+      "ticker": "VZ",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "VZ has strong YTD momentum (+22.34%), a low P/E of 11.86, and a high dividend yield of 6.09%, with a beta of 0.26 providing stability. Recent news highlights a SpaceX competitive threat, but Raymond James calls near-term concerns 'overblown' and Morningstar notes Verizon's network advantage, supporting a resilient outlook.",
+      "drivers": [
+        "+22.34% YTD return",
+        "P/E 11.86",
+        "Dividend yield 6.09%",
+        "Low beta 0.26"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
+      "group_rank": 1
+    },
+    {
+      "rank": 10,
+      "ticker": "WEC",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "WEC reported a strong Q3 beat (EPS $1.18 vs $0.83 last year) and raised 2026 guidance to $5.60-$5.64, with YTD +13.73% and 1M +8.78% momentum. P/E 21.29 is reasonable for a regulated utility with 3.25% yield.",
+      "drivers": [
+        "Q3 earnings beat",
+        "raised guidance",
+        "strong 1M momentum",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 1
+    },
+    {
+      "rank": 11,
+      "ticker": "EOG",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "EOG reported record Q3 production, $2.2B free cash flow, raised dividend 8% to $4.40 annual rate, and signed JKM-linked LNG gas sales agreement; P/E 9.59, YTD +42.94%, strong capital returns.",
+      "drivers": [
+        "+42.94% YTD",
+        "P/E 9.59",
+        "8% dividend increase",
+        "record production & FCF"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "energy",
+      "from_group_name": "Energy",
+      "group_rank": 2
+    },
+    {
+      "rank": 12,
+      "ticker": "GEN",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "GEN shows exceptional near-term momentum with +21.52% 1M and +14.14% YTD, combined with a low P/E of 14.82 and a buy rating. Its cybersecurity focus benefits from rising digital threats.",
+      "drivers": [
+        "+21.52% 1M momentum",
+        "P/E 14.82",
+        "low beta 1.237",
+        "buy analyst consensus"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "technology",
+      "from_group_name": "Technology",
+      "group_rank": 2
+    },
+    {
+      "rank": 13,
+      "ticker": "TGT",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+70.73% YTD, P/E 15.41, analyst buy; strong momentum with low valuation.",
+      "drivers": [
+        "exceptional YTD return",
+        "low P/E 15.4",
+        "strong retail execution",
+        "analyst buy consensus"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 2
+    },
+    {
+      "rank": 14,
+      "ticker": "ECL",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Ecolab has a strong_buy consensus (an_score 1.42), a 1-month gain of +2.29%, and a YTD return of +13.11%, with a reasonable P/E of 40.1 for a specialty chemical leader.",
+      "drivers": [
+        "strong_buy consensus",
+        "1M +2.29%",
+        "YTD +13.11%",
+        "P/E 40.1"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 2
+    },
+    {
+      "rank": 15,
+      "ticker": "AIZ",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Assurant has +42% 1-year return and +34.6% YTD, with a strong analyst consensus (score 1.43) and a P/E of 14.9, supported by robust momentum (+11.4% 1M).",
+      "drivers": [
+        "+42% 1Y return",
+        "strong_buy consensus (1.43)",
+        "P/E 14.9",
+        "+11.4% 1M"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 2
+    },
+    {
+      "rank": 16,
+      "ticker": "DUK",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Duke Energy has solid YTD +14.37% and 1M +8.46% gains, a low P/E of 19.03, and a 3.34% dividend yield. Analyst consensus is buy, with no negative catalysts.",
+      "drivers": [
+        "strong YTD and 1M returns",
+        "low P/E 19.03",
+        "buy rating",
+        "3.34% yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 2
+    },
+    {
+      "rank": 17,
+      "ticker": "GEHC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "BTIG raised PT to $91, Q3 EPS $1.34 beat, revenue +7.2% YoY, P/E 17.05 attractive.",
+      "drivers": [
+        "BTIG upgrade",
+        "Q3 earnings beat",
+        "P/E 17.05",
+        "1M +16.92%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "health-care",
+      "from_group_name": "Health Care",
+      "group_rank": 2
+    },
+    {
+      "rank": 18,
+      "ticker": "LOW",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Lowe's posted a strong Q3 beat with EPS of $3.10 vs $2.88 expected and revenue of $22.76B vs $22.41B, comps rose 1.8% and full-year sales guidance was raised to ~$92.5B [cnbc.com](https://www.cnbc.com/2026/11/18/lowes-low-q3-2026-earnings.html). Trading at a P/E of 18.53 with a 2.26% dividend yield and +12.35% one-month momentum.",
+      "drivers": [
+        "Q3 earnings beat",
+        "raised full-year sales guidance",
+        "P/E 18.53",
+        "+12.35% 1M momentum"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 2
+    },
+    {
+      "rank": 19,
+      "ticker": "SPG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Simon Property Group has strong momentum with +26% YTD and +9.15% in the last month, a low P/E of 16.2, and a 4.1% dividend yield, supported by resilient retail demand.",
+      "drivers": [
+        "+26% YTD",
+        "+9.15% 1M",
+        "P/E 16.2",
+        "4.1% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 2
+    },
+    {
+      "rank": 20,
+      "ticker": "KO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "+43% YTD, P/E 28.6, analyst buy; defensive growth with low beta 0.27.",
+      "drivers": [
+        "strong YTD momentum",
+        "low beta defensive",
+        "high analyst conviction",
+        "low short interest 1.11%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 3
+    },
+    {
+      "rank": 21,
+      "ticker": "REGN",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "EU approved Libtayo extended dosing, 1M +14.39%, P/E 20.35, low beta 0.095.",
+      "drivers": [
+        "EU Libtayo approval",
+        "1M +14.39%",
+        "P/E 20.35",
+        "low beta"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "health-care",
+      "from_group_name": "Health Care",
+      "group_rank": 3
+    },
+    {
+      "rank": 22,
+      "ticker": "ROP",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "ROP gained +15.66% in the past month and +6.62% YTD, with a reasonable P/E of 18.2 and low beta of 0.662. Its diversified software and industrial portfolio offers stability and growth.",
+      "drivers": [
+        "+15.66% 1M momentum",
+        "P/E 18.2",
+        "low beta 0.662",
+        "buy analyst consensus"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "technology",
+      "from_group_name": "Technology",
+      "group_rank": 3
+    },
+    {
+      "rank": 23,
+      "ticker": "PPG",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "PPG reported record Q3 2026 EPS of $2.12 (+8% YoY), raised full-year adjusted EPS guidance to $7.90-$8.10, and has a P/E of 16.45 with a 1-month gain of +6.94% [news.ppg.com](https://news.ppg.com/Press-Releases/news-details/2026/PPG-reports-record-third-quarter-2026-EPS-and-raises-midpoint-of-full-year-EPS-guidance/default.aspx).",
+      "drivers": [
+        "record Q3 EPS",
+        "raised FY guidance",
+        "P/E 16.45",
+        "1M +6.94%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 3
+    },
+    {
+      "rank": 24,
+      "ticker": "XEL",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Xcel Energy carries a strong_buy analyst consensus (score 1.45), YTD +8.65%, 1M +3.28%, and a P/E of 18.48 with 2.99% yield. The strong analyst backing and reasonable valuation make it attractive.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 18.48",
+        "positive YTD",
+        "low beta 0.345"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 3
+    },
+    {
+      "rank": 25,
+      "ticker": "PNR",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Pentair has surged +30.47% in the past month, signaling a powerful reversal from a -34% 1-year decline; with a P/E of 18.7 and a beta of 1.01, it offers a compelling risk/reward entry point.",
+      "drivers": [
+        "+30.47% 1M momentum",
+        "P/E 18.7 attractive",
+        "beta 1.01 moderate",
+        "reversal from deep 1Y loss"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 1
+    },
+    {
+      "rank": 26,
+      "ticker": "ACGL",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Arch Capital has a low P/E of 8.9, +18% 1-year return, and very low beta of 0.19, with +8.5% 1M momentum and a buy analyst consensus (score 2.3).",
+      "drivers": [
+        "P/E 8.9",
+        "low beta 0.19",
+        "+8.5% 1M",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 3
+    },
+    {
+      "rank": 27,
+      "ticker": "MGM",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "MGM Resorts reported Q3 results with MGM China achieving record quarterly revenue and market share of 17.1%, and October Las Vegas results rebounded favorably [mgmresorts.com](https://investors.mgmresorts.com/2026-10-28-MGM-RESORTS-INTERNATIONAL-REPORTS-THIRD-QUARTER-2026-FINANCIAL-AND-OPERATING-RESULTS). With a P/E of 12.45, +12.09% one-month momentum, and an amended voting agreement clearing the way for share buybacks [yahoo.com](https://finance.yahoo.com/markets/stocks/articles/why-mgm-resorts-mgm-stock-220419076.html), it is undervalued.",
+      "drivers": [
+        "record MGM China revenue",
+        "P/E 12.45",
+        "+12.09% 1M momentum",
+        "share buyback catalyst"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 3
+    },
+    {
+      "rank": 28,
+      "ticker": "PSA",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Public Storage has rallied +29.7% YTD and +9.09% in the last month, with a P/E of 34.2 and a 3.69% dividend yield, benefiting from strong self-storage demand.",
+      "drivers": [
+        "+29.7% YTD",
+        "+9.09% 1M",
+        "P/E 34.2",
+        "3.69% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 3
+    },
+    {
+      "rank": 29,
+      "ticker": "BDX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Q4 EPS $4.15 beat, FY27 EPS guidance $13.10-$13.30, 1M +9.49%, YTD +41.54%.",
+      "drivers": [
+        "Q4 earnings beat",
+        "FY27 guidance",
+        "1M +9.49%",
+        "YTD +41.54%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "health-care",
+      "from_group_name": "Health Care",
+      "group_rank": 4
+    },
+    {
+      "rank": 30,
+      "ticker": "EVRG",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Evergy leads the group with YTD +21.58% and 1M +4.21%, a P/E of 19.14, and a 3.36% dividend. Analyst consensus is buy (1.81), and the stock has strong momentum.",
+      "drivers": [
+        "top YTD return 21.58%",
+        "buy rating",
+        "P/E 19.14",
+        "3.36% yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 4
+    },
+    {
+      "rank": 31,
+      "ticker": "MO",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+37% YTD, P/E 15.44, dividend yield 5.93%; attractive income with low valuation.",
+      "drivers": [
+        "high dividend yield",
+        "low P/E",
+        "strong YTD performance",
+        "low short interest"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 4
+    },
+    {
+      "rank": 32,
+      "ticker": "SHW",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Sherwin-Williams reported Q3 2026 net sales up 7.9% to $6.86B, narrowed adjusted EPS guidance to $11.85-$12.15, and has a 1-month gain of +0.96% with a buy consensus [investors.sherwin-williams.com](https://investors.sherwin-williams.com/press-releases/press-release-details/2026/The-Sherwin-Williams-Company-Reports-2026-Third-Quarter-Financial-Results/).",
+      "drivers": [
+        "Q3 sales +7.9%",
+        "narrowed EPS guidance",
+        "1M +0.96%",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 4
+    },
+    {
+      "rank": 33,
+      "ticker": "COP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "ConocoPhillips has strong YTD +44.81%, P/E 14.34, 2.73% yield, and low short interest of 1.35%; benefits from high oil prices and capital discipline.",
+      "drivers": [
+        "+44.81% YTD",
+        "P/E 14.34",
+        "low short interest 1.35%",
+        "strong 1-year return +60%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "energy",
+      "from_group_name": "Energy",
+      "group_rank": 5
+    },
+    {
+      "rank": 34,
+      "ticker": "VICI",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "VICI Properties raised AFFO guidance for 2026 and announced a new $500M unsecured term loan at an effective fixed rate of ~5.20% to refinance higher-cost debt, while the stock trades at a low P/E of 11.2 and offers a 7.6% dividend yield [viciproperties.com](https://investors.viciproperties.com/news-releases/news-release-details/vici-properties-inc-announces-new-500-million-5-year-unsecured).",
+      "drivers": [
+        "P/E 11.2",
+        "7.6% dividend yield",
+        "AFFO guidance raised",
+        "refinancing at lower rate"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 5
+    },
+    {
+      "rank": 35,
+      "ticker": "CVX",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Chevron offers YTD +38.53%, P/E 15.3, 3.42% dividend yield, and analyst buy consensus with score 1.62; integrated major with strong balance sheet and shareholder returns.",
+      "drivers": [
+        "+38.53% YTD",
+        "3.42% dividend yield",
+        "buy consensus",
+        "low beta 0.453"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "energy",
+      "from_group_name": "Energy",
+      "group_rank": 6
+    },
+    {
+      "rank": 36,
+      "ticker": "LIN",
+      "signal": "buy",
+      "confidence": 0.73,
+      "rationale": "Linde has a buy consensus (an_score 1.62), a 1-month gain of +0.45%, YTD +18.33%, and a P/E of 33.39, with a massive $230.8B market cap and low short interest of 1.45%.",
+      "drivers": [
+        "buy consensus",
+        "1M +0.45%",
+        "YTD +18.33%",
+        "low short 1.45%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 5
+    },
+    {
+      "rank": 37,
+      "ticker": "NEE",
+      "signal": "buy",
+      "confidence": 0.73,
+      "rationale": "NextEra Energy offers a low P/E of 15.04, YTD +5.36%, and 1M +6.60% momentum. Analyst consensus is buy (1.91) and the 2.99% yield adds income appeal.",
+      "drivers": [
+        "low P/E 15.04",
+        "positive 1M momentum",
+        "buy consensus",
+        "2.99% yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 5
+    },
+    {
+      "rank": 38,
+      "ticker": "ALLE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Allegion has jumped +15.48% in the past month and carries a buy analyst consensus with a score of 1.91; its P/E of 22.84 is reasonable for the building products sector.",
+      "drivers": [
+        "+15.48% 1M momentum",
+        "buy consensus (score 1.91)",
+        "P/E 22.84 reasonable",
+        "building products sector"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 4
+    },
+    {
+      "rank": 39,
+      "ticker": "EXR",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Extra Space Storage is up +22.4% YTD and +10.75% in the last month, with a P/E of 31.5 and a 4.18% dividend yield, reflecting strong self-storage fundamentals.",
+      "drivers": [
+        "+22.4% YTD",
+        "+10.75% 1M",
+        "P/E 31.5",
+        "4.18% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 4
+    },
+    {
+      "rank": 40,
+      "ticker": "FISV",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Fiserv surged 12% after Q3 earnings beat, raised Project Elevate savings target to $1B (from $500M), and announced a $500M buyback; despite a -14.8% YTD, the +15.9% 1M rebound and cost-saving catalysts are compelling [finance.yahoo.com](https://finance.yahoo.com/markets/stocks/articles/fisv-stock-surges-earnings-beat-173900579.html).",
+      "drivers": [
+        "+15.9% 1M",
+        "Project Elevate savings doubled to $1B",
+        "$500M buyback planned",
+        "Q3 earnings beat"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 4
+    },
+    {
+      "rank": 41,
+      "ticker": "PHM",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "PulteGroup shows strong momentum with +10.43% one-month gain and +5.38% YTD, trading at an attractive P/E of 13.32 with a beta of 1.179. The homebuilding sector benefits from resilient demand despite higher mortgage rates.",
+      "drivers": [
+        "P/E 13.32",
+        "+10.43% 1M momentum",
+        "+5.38% YTD",
+        "homebuilding demand resilience"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 4
+    },
+    {
+      "rank": 42,
+      "ticker": "T",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "T has a low P/E of 11.93, a high dividend yield of 4.98%, and positive short-term momentum (+2.11% 1D, +1.83% 1M). Analyst consensus is 'buy' with a score of 2.08, and the stock offers defensive income in a volatile sector.",
+      "drivers": [
+        "Dividend yield 4.98%",
+        "P/E 11.93",
+        "+1.83% 1M return",
+        "Analyst consensus 'buy'"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
+      "group_rank": 4
+    },
+    {
+      "rank": 43,
+      "ticker": "AON",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Aon completed the $17B USI acquisition, creating the premier U.S. middle-market platform with $3B annual revenue and $395M expected synergies; +13.4% 1M momentum reflects strategic optimism despite Fitch's negative outlook on leverage [aon.mediaroom.com](https://aon.mediaroom.com/2026-11-16-Aon-Completes-Acquisition-of-USI-to-Establish-the-Premier-U-S-Middle-Market-Platform).",
+      "drivers": [
+        "+13.4% 1M",
+        "$17B USI acquisition closed",
+        "$395M expected synergies",
+        "buy consensus (2.14)"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 5
+    },
+    {
+      "rank": 44,
+      "ticker": "MCD",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "McDonald's has +10.96% one-month momentum and a low beta of 0.431, trading at a P/E of 21.62 with a 2.83% dividend yield. Its defensive qualities and global pricing power make it attractive in a cautious consumer environment.",
+      "drivers": [
+        "+10.96% 1M momentum",
+        "low beta 0.431",
+        "2.83% dividend yield",
+        "defensive consumer staple"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 5
+    },
+    {
+      "rank": 45,
+      "ticker": "MDLZ",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+26.77% YTD, P/E 20.91, analyst buy; solid branded food portfolio.",
+      "drivers": [
+        "consistent YTD growth",
+        "reasonable P/E",
+        "buy analyst consensus",
+        "low short interest 2.6%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 5
+    },
+    {
+      "rank": 46,
+      "ticker": "VLTO",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Veralto has rallied +15.12% in the past month and is up +18.92% YTD, supported by strong fundamentals in environmental services; its beta of 0.666 offers stability.",
+      "drivers": [
+        "+15.12% 1M momentum",
+        "+18.92% YTD",
+        "beta 0.666 low volatility",
+        "environmental services sector"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 5
+    },
+    {
+      "rank": 47,
+      "ticker": "CDW",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "CDW shows steady gains (+2.21% 1M, +23.42% YTD) with a P/E of 18.88 and a buy rating. Its IT solutions distribution benefits from enterprise digital transformation.",
+      "drivers": [
+        "+23.42% YTD",
+        "P/E 18.88",
+        "low beta 0.924",
+        "buy analyst consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "technology",
+      "from_group_name": "Technology",
+      "group_rank": 6
+    },
+    {
+      "rank": 48,
+      "ticker": "DOC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Healthpeak Properties has gained +26% YTD and +4.64% in the last month, with a 6.34% dividend yield, driven by strong healthcare real estate demand.",
+      "drivers": [
+        "+26% YTD",
+        "+4.64% 1M",
+        "6.34% dividend yield",
+        "healthcare REIT momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 6
+    },
+    {
+      "rank": 49,
+      "ticker": "LH",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +46.97%, 1M +13.40%, P/E 30.09, analyst buy consensus.",
+      "drivers": [
+        "YTD +46.97%",
+        "1M +13.40%",
+        "analyst buy",
+        "P/E 30.09"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "health-care",
+      "from_group_name": "Health Care",
+      "group_rank": 6
+    },
+    {
+      "rank": 50,
+      "ticker": "LNT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Alliant Energy shows YTD +12.60% and 1M +5.52%, with a P/E of 19.95 and 2.99% yield. Analyst consensus is buy (2.0), though short interest is elevated at 12.59%.",
+      "drivers": [
+        "strong YTD and 1M",
+        "buy rating",
+        "P/E 19.95",
+        "2.99% yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 6
+    },
+    {
+      "rank": 51,
+      "ticker": "OKE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Oneok has YTD +19.13%, P/E 13.1, and a high 5.07% dividend yield; midstream exposure provides stable fee-based cash flows with low volatility.",
+      "drivers": [
+        "5.07% dividend yield",
+        "P/E 13.1",
+        "+19.13% YTD",
+        "midstream stability"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "energy",
+      "from_group_name": "Energy",
+      "group_rank": 7
+    },
+    {
+      "rank": 52,
+      "ticker": "SWK",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Stanley Black & Decker has soared +11.71% in the past month and +43.72% YTD, driven by operational improvements; a P/E of 19.11 and 3.15% dividend yield offer strong value.",
+      "drivers": [
+        "+11.71% 1M momentum",
+        "+43.72% YTD",
+        "P/E 19.11 low",
+        "3.15% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 8
+    },
+    {
+      "rank": 53,
+      "ticker": "AVY",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "Avery Dennison has a strong buy consensus (an_score 1.55), a 1-month gain of +1.18%, a P/E of 19.6, and a YTD return of +1.01%.",
+      "drivers": [
+        "strong buy consensus",
+        "1M +1.18%",
+        "P/E 19.6",
+        "low beta 0.776"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 7
+    },
+    {
+      "rank": 54,
+      "ticker": "CMCSA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "CMCSA has a very low P/E of 7.88 and a high dividend yield of 5.30%, with a 1M return of +12.77%. Despite a Bernstein price target cut due to SpaceX competition, the stock is cheap and offers strong income, with analyst consensus 'hold' but a score of 2.63.",
+      "drivers": [
+        "P/E 7.88",
+        "Dividend yield 5.30%",
+        "+12.77% 1M return",
+        "Low valuation"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
+      "group_rank": 5
+    },
+    {
+      "rank": 55,
+      "ticker": "CHD",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+35.76% YTD, P/E 34, analyst buy; strong household products momentum.",
+      "drivers": [
+        "strong YTD return",
+        "positive analyst rating",
+        "low beta 0.45",
+        "momentum in household products"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 6
+    },
+    {
+      "rank": 56,
+      "ticker": "DPZ",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Domino's has +12.04% one-month momentum and a P/E of 19.21, with a 2.28% dividend yield. Its value-oriented menu and delivery model are well-positioned for budget-conscious consumers.",
+      "drivers": [
+        "+12.04% 1M momentum",
+        "P/E 19.21",
+        "2.28% dividend yield",
+        "value menu appeal"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 6
+    },
+    {
+      "rank": 57,
+      "ticker": "CPRT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Copart has surged +12.69% in the past month, with a P/E of 20.06 and a buy consensus; its strong YTD performance of -17.69% is misleading given the recent momentum shift.",
+      "drivers": [
+        "+12.69% 1M momentum",
+        "P/E 20.06 attractive",
+        "buy consensus",
+        "recent momentum shift"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 7
+    },
+    {
+      "rank": 58,
+      "ticker": "ED",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Consolidated Edison has exceptional YTD +23.23% and 1M +7.54%, a low P/E of 19.16, and 2.97% yield. Despite a hold rating (3.21), the momentum and valuation are compelling.",
+      "drivers": [
+        "YTD +23.23%",
+        "1M +7.54%",
+        "P/E 19.16",
+        "low beta 0.223"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 7
+    },
+    {
+      "rank": 59,
+      "ticker": "EW",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +15.21%, YTD +19.36%, analyst buy, strong momentum in medical devices.",
+      "drivers": [
+        "1M +15.21%",
+        "YTD +19.36%",
+        "analyst buy",
+        "momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "health-care",
+      "from_group_name": "Health Care",
+      "group_rank": 7
+    },
+    {
+      "rank": 60,
+      "ticker": "JKHY",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Jack Henry has a buy consensus (score 1.76), +11.7% 1M momentum, and a low beta of 0.54, with a P/E of 23.5 and a 1.4% dividend yield, offering defensive growth in payments tech.",
+      "drivers": [
+        "+11.7% 1M",
+        "buy consensus (1.76)",
+        "low beta 0.54",
+        "P/E 23.5"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 7
+    },
+    {
+      "rank": 61,
+      "ticker": "O",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Realty Income is up +5.84% YTD and +5.34% in the last month, with a 5.67% dividend yield and a low beta of 0.65, offering defensive income in a stable retail environment.",
+      "drivers": [
+        "+5.84% YTD",
+        "+5.34% 1M",
+        "5.67% dividend yield",
+        "beta 0.65"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 7
+    },
+    {
+      "rank": 62,
+      "ticker": "TSCO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Tractor Supply has strong +17.59% one-month momentum and +5.46% one-week gain, trading at a P/E of 20.67 with a 2.5% dividend yield. Its focus on rural and hobby-farm customers provides a stable revenue base.",
+      "drivers": [
+        "+17.59% 1M momentum",
+        "+5.46% 1W momentum",
+        "P/E 20.67",
+        "2.5% dividend yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 7
+    },
+    {
+      "rank": 63,
+      "ticker": "TYL",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "TYL gained +7.63% in the past month despite a -7.20% YTD, with a P/E of 50.49 reflecting its niche in government software. Analyst consensus is buy, and low beta (0.732) adds stability.",
+      "drivers": [
+        "+7.63% 1M momentum",
+        "low beta 0.732",
+        "buy analyst consensus",
+        "government software niche"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "technology",
+      "from_group_name": "Technology",
+      "group_rank": 7
+    },
+    {
+      "rank": 64,
+      "ticker": "STE",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +15.78%, P/E 30.34, analyst buy, YTD +3.44% with recent acceleration.",
+      "drivers": [
+        "1M +15.78%",
+        "analyst buy",
+        "P/E 30.34",
+        "recent acceleration"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "health-care",
+      "from_group_name": "Health Care",
+      "group_rank": 8
+    },
+    {
+      "rank": 65,
+      "ticker": "VMC",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Vulcan Materials has a 1-month gain of +2.54%, a P/E of 32.06, and a YTD return of -6.74%, with potential upside from infrastructure demand.",
+      "drivers": [
+        "1M +2.54%",
+        "P/E 32.06",
+        "infrastructure demand",
+        "low beta 0.994"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 8
+    },
+    {
+      "rank": 66,
+      "ticker": "APA",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "APA reported Q3 free cash flow of $699M, raised full-year FCF outlook to ~$2.9B, and lowered net debt target to $2B; YTD +82.64%, P/E 7.32, but high short interest of 9.07% adds risk.",
+      "drivers": [
+        "+82.64% YTD",
+        "P/E 7.32",
+        "raised FCF guidance",
+        "debt reduction"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "energy",
+      "from_group_name": "Energy",
+      "group_rank": 9
+    },
+    {
+      "rank": 67,
+      "ticker": "MAS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Masco has gained +11.21% in the past month and +30.35% YTD, with a P/E of 17.92 and a buy consensus; the building products sector benefits from housing demand.",
+      "drivers": [
+        "+11.21% 1M momentum",
+        "+30.35% YTD",
+        "P/E 17.92 low",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 9
+    },
+    {
+      "rank": 68,
+      "ticker": "EIX",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "Edison International trades at a very low P/E of 6.61 with a high dividend yield of 5.64%. YTD +7.90% and 1M +8.83% show solid momentum, though analyst consensus is hold (3.19).",
+      "drivers": [
+        "very low P/E 6.61",
+        "high yield 5.64%",
+        "strong 1M momentum",
+        "value play"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 8
+    },
+    {
+      "rank": 69,
+      "ticker": "DIS",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "DIS has a solid YTD return of +6.29% and a 1M return of +5.50%, with a P/E of 20.96 and a strong analyst consensus 'buy' (score 1.53). The company benefits from theme park demand and streaming growth, though beta of 1.426 adds some risk.",
+      "drivers": [
+        "+6.29% YTD return",
+        "+5.50% 1M return",
+        "Analyst consensus 'buy'",
+        "P/E 20.96"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
+      "group_rank": 6
+    },
+    {
+      "rank": 70,
+      "ticker": "ROL",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Rollins has bounced +13.65% in the past month, recovering from a -36% 1-year decline; the buy consensus and 2.12% dividend yield provide a margin of safety.",
+      "drivers": [
+        "+13.65% 1M momentum",
+        "buy consensus",
+        "2.12% dividend yield",
+        "recovery from deep 1Y loss"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 6
+    },
+    {
+      "rank": 71,
+      "ticker": "TSN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Q4 EPS beat, beef improvement catalyst; +16.49% 1M, P/E 50 but turnaround story.",
+      "drivers": [
+        "earnings beat & beef recovery",
+        "strong 1M momentum",
+        "improving industry economics",
+        "dividend yield 3.19%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 7
+    },
+    {
+      "rank": 72,
+      "ticker": "BXP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "BXP's outlook was revised to stable from negative by S&P on solid operating results and reduced leverage, with occupancy improving to 89.4% and $1.37B of asset sales executed [spglobal.com](https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3660814). The stock is up +4.43% in the last month and has a P/E of 18.3.",
+      "drivers": [
+        "outlook revised to stable",
+        "P/E 18.3",
+        "+4.43% 1M",
+        "asset sales $1.37B"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 8
+    },
+    {
+      "rank": 73,
+      "ticker": "CMG",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Chipotle has +26.42% one-month momentum and a P/E of 33.22, reflecting strong brand loyalty and pricing power. Despite a higher valuation, its recent surge indicates positive sentiment and operational strength.",
+      "drivers": [
+        "+26.42% 1M momentum",
+        "brand pricing power",
+        "P/E 33.22",
+        "strong consumer demand"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 8
+    },
+    {
+      "rank": 74,
+      "ticker": "ERIE",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Erie Indemnity has +11.6% 1M momentum, a low beta of 0.22, and a 2.2% dividend yield, with a P/E of 24.7 and YTD +0.4%, showing steady performance in insurance brokerage.",
+      "drivers": [
+        "+11.6% 1M",
+        "low beta 0.22",
+        "dividend yield 2.2%",
+        "P/E 24.7"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 8
+    },
+    {
+      "rank": 75,
+      "ticker": "PTC",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "PTC is being acquired by Schneider Electric, providing a clear upside catalyst [ptc.com]. With +14.70% YTD, P/E 21.85, and flat 1M (+0.37%), the acquisition premium offers a near-term opportunity.",
+      "drivers": [
+        "acquisition by Schneider Electric",
+        "+14.70% YTD",
+        "P/E 21.85",
+        "low beta 0.91"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "technology",
+      "from_group_name": "Technology",
+      "group_rank": 8
+    },
+    {
+      "rank": 76,
+      "ticker": "D",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Dominion Energy has YTD +15.36% and 1M +6.34%, a P/E of 21.87, and a 4.03% dividend yield. Analyst consensus is hold (2.56), but the income and momentum are attractive.",
+      "drivers": [
+        "YTD +15.36%",
+        "4.03% yield",
+        "positive 1M",
+        "hold consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 9
+    },
+    {
+      "rank": 77,
+      "ticker": "GPN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Global Payments has +22.8% YTD and +27% 1-year return, with +9.9% 1M and a +10% 1D surge, though a high P/E of 164 and short interest of 6.5% warrant caution; buy consensus (score 2.19).",
+      "drivers": [
+        "+22.8% YTD",
+        "+9.9% 1M",
+        "buy consensus (2.19)",
+        "+27% 1Y"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "financials",
+      "from_group_name": "Financials",
+      "group_rank": 9
+    },
+    {
+      "rank": 78,
+      "ticker": "VRSN",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "VRSN has strong YTD performance (+29.11%) and a low beta of 0.67, with a P/E of 33.03. Its domain registry monopoly provides predictable revenue and a buy rating.",
+      "drivers": [
+        "+29.11% YTD",
+        "low beta 0.67",
+        "buy analyst consensus",
+        "stable domain registry business"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "technology",
+      "from_group_name": "Technology",
+      "group_rank": 9
+    },
+    {
+      "rank": 79,
+      "ticker": "EQT",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "EQT has a strong_buy analyst consensus with score 1.5, P/E 11.59, and YTD -7.45%; natural gas price recovery potential and cost discipline make it a contrarian pick.",
+      "drivers": [
+        "strong_buy consensus",
+        "P/E 11.59",
+        "natural gas exposure",
+        "contrarian value"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "energy",
+      "from_group_name": "Energy",
+      "group_rank": 10
+    },
+    {
+      "rank": 80,
+      "ticker": "LUV",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Southwest Airlines has rallied +10.53% in the past month and is up +37% over 1 year, supported by strong travel demand; a P/E of 21.5 and buy consensus make it a solid pick.",
+      "drivers": [
+        "+10.53% 1M momentum",
+        "+37% 1Y return",
+        "P/E 21.5 reasonable",
+        "buy consensus"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "industrials",
+      "from_group_name": "Industrials",
+      "group_rank": 10
+    },
+    {
+      "rank": 81,
+      "ticker": "EXC",
+      "signal": "buy",
+      "confidence": 0.58,
+      "rationale": "Exelon reported Q3 adjusted EPS of $0.87 above expectations and narrowed 2026 guidance to $2.85-$2.91. YTD +6.94% and 1M +6.16%, P/E 17.85, 3.68% yield. [exeloncorp.com](https://www.exeloncorp.com/newsroom/exelon-reports-third-quarter-2026-results)",
+      "drivers": [
+        "Q3 earnings beat",
+        "narrowed guidance",
+        "P/E 17.85",
+        "3.68% yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "utilities",
+      "from_group_name": "Utilities",
+      "group_rank": 10
+    },
+    {
+      "rank": 82,
+      "ticker": "TMUS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "TMUS has a 1M return of +7.71% and a P/E of 15.97, with a low beta of 0.378. Despite SpaceX competition concerns, Raymond James upgraded TMUS to 'Outperform' and set a $170 price target, citing overblown fears. Analyst consensus is 'buy' with a score of 1.61.",
+      "drivers": [
+        "+7.71% 1M return",
+        "P/E 15.97",
+        "Low beta 0.378",
+        "Raymond James upgrade"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
+      "group_rank": 7
+    },
+    {
+      "rank": 83,
+      "ticker": "CLX",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Q1 FY27 sales +33%, adjusted EPS +82%; +25% 1M, P/E 18.8, but input cost headwinds.",
+      "drivers": [
+        "strong earnings beat",
+        "GOJO acquisition synergies",
+        "high short interest potential squeeze",
+        "reasonable P/E"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 8
+    },
+    {
+      "rank": 84,
+      "ticker": "CCI",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Crown Castle is up +4.77% in the last month despite a -3.46% YTD, with a 5.16% dividend yield and a P/E of 33.1, supported by tower leasing demand.",
+      "drivers": [
+        "+4.77% 1M",
+        "5.16% dividend yield",
+        "tower demand",
+        "P/E 33.1"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "real-estate",
+      "from_group_name": "Real Estate",
+      "group_rank": 9
+    },
+    {
+      "rank": 85,
+      "ticker": "CVNA",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Carvana has +7.87% one-month momentum despite a high beta of 3.65 and short interest of 12.1%, trading at a P/E of 30.7. The used-car market recovery and improving operational efficiency support a speculative buy.",
+      "drivers": [
+        "+7.87% 1M momentum",
+        "used-car market recovery",
+        "high beta 3.65",
+        "short interest 12.1%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-discretionary",
+      "from_group_name": "Consumer Discretionary",
+      "group_rank": 10
+    },
+    {
+      "rank": 86,
+      "ticker": "MOS",
+      "signal": "buy",
+      "confidence": 0.55,
+      "rationale": "Mosaic has a 1-month gain of +5.54% and a buy consensus (an_score 2.5), with a dividend yield of 4.72% and a low market cap of $5.9B, though short interest is high at 15.59%.",
+      "drivers": [
+        "1M +5.54%",
+        "buy consensus",
+        "dividend yield 4.72%",
+        "low market cap"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "materials",
+      "from_group_name": "Materials",
+      "group_rank": 10
+    },
+    {
+      "rank": 87,
+      "ticker": "OMC",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "OMC has strong YTD (+8.02%) and 1Y (+18%) returns, with a 1M return of +5.81%. The P/E of 86.04 is very high, but the dividend yield of 3.76% and analyst consensus 'buy' (score 2.08) provide some support. Advertising spend recovery is a catalyst.",
+      "drivers": [
+        "+8.02% YTD return",
+        "+18% 1Y return",
+        "Dividend yield 3.76%",
+        "Analyst consensus 'buy'"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
+      "group_rank": 8
+    },
+    {
+      "rank": 88,
+      "ticker": "PG",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "+22.92% YTD, P/E 25.5, analyst buy; stable defensive giant with low short interest.",
+      "drivers": [
+        "solid YTD performance",
+        "low short interest 0.97%",
+        "buy analyst consensus",
+        "defensive staple"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 9
+    },
+    {
+      "rank": 89,
+      "ticker": "TTWO",
+      "signal": "strong_buy",
+      "confidence": 0.45,
+      "rationale": "TTWO has the strongest analyst consensus in the sector ('strong_buy', score 1.21), with a 1M return of +1.86%. The stock has no P/E due to negative earnings, but upcoming game releases (e.g., GTA VI) are key catalysts. High short interest of 4.99% adds risk.",
+      "drivers": [
+        "Analyst consensus 'strong_buy'",
+        "Score 1.21",
+        "+1.86% 1M return",
+        "Upcoming game catalysts"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
+      "group_rank": 9
+    },
+    {
+      "rank": 90,
+      "ticker": "STZ",
+      "signal": "buy",
+      "confidence": 0.45,
+      "rationale": "P/E 12.7, analyst buy, dividend 2.9%; value play with moderate momentum.",
+      "drivers": [
+        "low P/E value",
+        "buy analyst rating",
+        "decent dividend yield",
+        "positive 1M momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "consumer-staples",
+      "from_group_name": "Consumer Staples",
+      "group_rank": 10
+    },
+    {
+      "rank": 91,
+      "ticker": "APP",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "APP has explosive 1M momentum (+30.01%) despite a -43.67% YTD decline, with a P/E of 23.45 and analyst consensus 'buy' (score 1.58). The stock is highly volatile (beta 2.498) and has high short interest (3.83%), but the recent rally suggests a turnaround in advertising demand.",
+      "drivers": [
+        "+30.01% 1M return",
+        "Analyst consensus 'buy'",
+        "P/E 23.45",
+        "High beta 2.498"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null,
+      "from_group": "communication-services",
+      "from_group_name": "Communication Services",
       "group_rank": 10
     }
   ]
