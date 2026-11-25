@@ -504,5 +504,49 @@
 "p_up": 0.75,
 "expected_move": 2.4,
 "lean": "up"
+},
+{
+"id": "INTC:regulatory",
+"date": "2026-11-25",
+"ticker": "INTC",
+"type": "regulatory",
+"price_usd": 54.8,
+"p_big": 0.6,
+"p_up": 0.2,
+"expected_move": -3.0,
+"lean": "down"
+},
+{
+"id": "CORZ:other",
+"date": "2026-11-25",
+"ticker": "CORZ",
+"type": "other",
+"price_usd": 10.99,
+"p_big": 0.7,
+"p_up": 0.6,
+"expected_move": 0.6,
+"lean": "up"
+},
+{
+"id": "TSLA:takeover",
+"date": "2026-11-25",
+"ticker": "TSLA",
+"type": "takeover",
+"price_usd": 384.68,
+"p_big": 0.7,
+"p_up": 0.3,
+"expected_move": -1.5,
+"lean": "down"
+},
+{
+"id": "RCAT:regulatory",
+"date": "2026-11-25",
+"ticker": "RCAT",
+"type": "regulatory",
+"price_usd": 1.73,
+"p_big": 0.7,
+"p_up": 0.3,
+"expected_move": -5.5,
+"lean": "down"
 }
 ]

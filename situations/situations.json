@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25 04:30",
+ "updated": "2026-11-25 07:41",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 46,
+ "count": 50,
  "situations": [
   {
    "ticker": "NBIS",
@@ -81,39 +81,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 12.85
-  },
-  {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": "GTCR considers potential takeover of Global Payments",
-   "title": "GTCR Takeover Bid for Global Payments",
-   "summary": "GTCR is reportedly considering a takeover of Global Payments. Talks are ongoing, and the outcome could lead to a premium acquisition or a drop if no deal.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No deal, stock corrects",
-     "probability": 0.5,
-     "move_pct": -12.0
-    },
-    {
-     "label": "Takeover agreed at premium",
-     "probability": 0.3,
-     "move_pct": 20.0
-    },
-    {
-     "label": "Competing bid emerges",
-     "probability": 0.2,
-     "move_pct": 25.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.5,
-   "expected_move": 5.0,
-   "lean": "either way",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 92.44
   },
   {
    "ticker": "RXRX",
@@ -313,6 +280,39 @@
    "price_at_flag": 11.56
   },
   {
+   "ticker": "NRG",
+   "type": "product",
+   "source": "Why Did NRG Stock Jump?",
+   "title": "NRG data center deal pending",
+   "summary": "NRG expects to announce approved agreements for a 1.2 GW data center project in Texas by year-end.",
+   "key_date": "2026-12-31",
+   "outcomes": [
+    {
+     "label": "Deal announced successfully",
+     "probability": 0.5,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Deal delayed",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Deal falls through",
+     "probability": 0.2,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.5,
+   "expected_move": 0.5,
+   "lean": "either way",
+   "id": "NRG:product",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 91.9
+  },
+  {
    "ticker": "TPL",
    "type": "takeover",
    "source": "Texas Pacific Land agrees $3bn all-stock acquisition of EagleRock",
@@ -412,39 +412,6 @@
    "price_at_flag": 9.65
   },
   {
-   "ticker": "NRG",
-   "type": "product",
-   "source": "Why Did NRG Stock Jump?",
-   "title": "NRG expects data center project deal by year-end",
-   "summary": "Management expects approved agreements and an announcement on a 1.2 GW Texas data center project by end of 2026. This is a major catalyst for the stock.",
-   "key_date": "2026-12-31",
-   "outcomes": [
-    {
-     "label": "Deal announced on schedule",
-     "probability": 0.6,
-     "move_pct": 20.0
-    },
-    {
-     "label": "Deal delayed into 2027",
-     "probability": 0.25,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Deal falls through",
-     "probability": 0.15,
-     "move_pct": -25.0
-    }
-   ],
-   "p_big": 0.75,
-   "p_up": 0.6,
-   "expected_move": 7.0,
-   "lean": "up",
-   "id": "NRG:product",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 91.9
-  },
-  {
    "ticker": "DG",
    "type": "legal",
    "source": "Dollar General Accused of Overcharging Millions at Checkout: Could It Be Happening to You?",
@@ -509,6 +476,72 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 40.88
+  },
+  {
+   "ticker": "RCAT",
+   "type": "regulatory",
+   "source": "Red Cat Sinks 9%, Unusual Machines Slides 7%, Ondas Drops 4%: Is the Pentagon’s Reported Push to Bring In General Motors and Ford a Threat to Drone Stocks?",
+   "title": "Pentagon drone policy shift",
+   "summary": "Pentagon reportedly pushing to bring in GM and Ford for drones, threatening existing drone stocks like Red Cat.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Pentagon confirms new entrants",
+     "probability": 0.4,
+     "move_pct": -25.0
+    },
+    {
+     "label": "Pentagon denies/backs off",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Status quo / no decision",
+     "probability": 0.3,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.3,
+   "expected_move": -5.5,
+   "lean": "down",
+   "id": "RCAT:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 1.73
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": null,
+   "title": "GTCR considers potential takeover",
+   "summary": "GTCR is considering a potential takeover of Global Payments. Deal structure and price are unresolved, could lead to premium or collapse.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No deal, stock falls back",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Takeover at premium",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Takeover at lower price",
+     "probability": 0.3,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.6,
+   "expected_move": 3.5,
+   "lean": "up",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 92.44
   },
   {
    "ticker": "DASH",
@@ -607,6 +640,105 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 209.74
+  },
+  {
+   "ticker": "TSLA",
+   "type": "takeover",
+   "source": "Tesla's $3.5 trillion merger talks have a surprising catch",
+   "title": "Tesla-SpaceX merger talks",
+   "summary": "Reports suggest Tesla and SpaceX are in merger talks. The outcome is unresolved and could significantly impact Tesla's valuation.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Merger denied/talks collapse",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Merger announced",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Talks continue without conclusion",
+     "probability": 0.3,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.3,
+   "expected_move": -1.5,
+   "lean": "down",
+   "id": "TSLA:takeover",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 384.68
+  },
+  {
+   "ticker": "CORZ",
+   "type": "other",
+   "source": null,
+   "title": "Analyst margin cuts and fair value drop",
+   "summary": "Core Scientific's fair value moved lower as analysts cut margin assumptions, with stock down 19% in a week. Pending resolution on whether demand or cost pressures persist.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Further analyst downgrades",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Demand recovers, margins stabilize",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "No change, sideways",
+     "probability": 0.3,
+     "move_pct": 2.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.6,
+   "expected_move": 0.6,
+   "lean": "up",
+   "id": "CORZ:other",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 10.99
+  },
+  {
+   "ticker": "IP",
+   "type": "other",
+   "source": null,
+   "title": "DS Smith spin-off valuation test",
+   "summary": "International Paper faces a fresh valuation test on its DS Smith spin-off, with board approval obtained. Market reaction to spin-off terms and execution is pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off creates value",
+     "probability": 0.4,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Spin-off disappoints",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Delays or complications",
+     "probability": 0.3,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.4,
+   "expected_move": -0.5,
+   "lean": "down",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 29.86
   },
   {
    "ticker": "285A",
@@ -904,6 +1036,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-24",
    "price_at_flag": 710.42
+  },
+  {
+   "ticker": "INTC",
+   "type": "regulatory",
+   "source": null,
+   "title": "US stake in Nvidia and chip export rules",
+   "summary": "Trump floated US government taking a stake in Nvidia, similar to Intel in 2025, and lawmakers are scrutinizing Nvidia's China chip access. Intel's fate tied to potential policy shifts.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No stake, but export rules tighten",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "No policy change",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "US takes stake in Nvidia, boosts Intel",
+     "probability": 0.2,
+     "move_pct": 15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.2,
+   "expected_move": -3.0,
+   "lean": "down",
+   "id": "INTC:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 54.8
   },
   {
    "ticker": "AAL.L",
@@ -1268,39 +1433,6 @@
    "price_at_flag": 77.95
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Commission opens anti-trust probe into CCEP",
-   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
-   "summary": "The EU Commission opened an antitrust probe into CCEP over cross-border beverage trade, with an unresolved outcome that could lead to fines or operational changes.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Probe concludes with minor remedies",
-     "probability": 0.6,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Significant fines or restrictions",
-     "probability": 0.3,
-     "move_pct": -20.0
-    },
-    {
-     "label": "Probe dropped",
-     "probability": 0.1,
-     "move_pct": 10.0
-    }
-   ],
-   "p_big": 0.4,
-   "p_up": 0.1,
-   "expected_move": -8.0,
-   "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 115.04
-  },
-  {
    "ticker": "CRWD",
    "type": "takeover",
    "source": null,
@@ -1334,32 +1466,37 @@
    "price_at_flag": 207.63
   },
   {
-   "ticker": "D",
+   "ticker": "CCEP.L",
    "type": "regulatory",
-   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
-   "title": "Dominion Energy State Hearings",
-   "summary": "While the DOJ closed its antitrust probe, state hearings regarding Dominion are continuing. The outcome of these hearings is pending.",
+   "source": null,
+   "title": "EU antitrust probe into cross-border trade",
+   "summary": "EU Commission opened an antitrust probe into Coca-Cola Europacific Partners over cross-border beverage trade restrictions. Outcome could impact operations and fines.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Favorable state ruling",
-     "probability": 0.6,
+     "label": "Probe dismissed or minor fine",
+     "probability": 0.4,
      "move_pct": 5.0
     },
     {
-     "label": "Unfavorable state ruling",
-     "probability": 0.4,
-     "move_pct": -10.0
+     "label": "Significant fine or restrictions",
+     "probability": 0.3,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Settlement with moderate impact",
+     "probability": 0.3,
+     "move_pct": -5.0
     }
    ],
-   "p_big": 0.4,
-   "p_up": 0.6,
-   "expected_move": -1.0,
-   "lean": "up",
-   "id": "D:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 66.79
+   "p_big": 0.3,
+   "p_up": 0.4,
+   "expected_move": -4.0,
+   "lean": "down",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 115.04
   },
   {
    "ticker": "DG",
@@ -1461,37 +1598,37 @@
    "price_at_flag": 344.48
   },
   {
-   "ticker": "IP",
-   "type": "other",
-   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
-   "title": "DS Smith Spin-Off Pending Completion",
-   "summary": "International Paper's board approved the spin-off of its EMEA packaging business into DS Smith plc, expected Dec 7. Regulatory approvals and conditions remain, with potential impact on debt and focus.",
-   "key_date": "2026-12-07",
+   "ticker": "D",
+   "type": "regulatory",
+   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
+   "title": "NextEra-Dominion merger awaits FERC and state approvals",
+   "summary": "DOJ closed its antitrust probe, but the $66.8B merger still needs approval from FERC, Virginia SCC, and other state regulators. Hearings are ongoing, and customer benefit quantification is contested.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "Spin-off completes",
-     "probability": 0.85,
+     "label": "Approved by all regulators",
+     "probability": 0.6,
      "move_pct": 5.0
     },
     {
-     "label": "Spin-off delayed",
-     "probability": 0.1,
-     "move_pct": -5.0
+     "label": "Approved with conditions",
+     "probability": 0.25,
+     "move_pct": 2.0
     },
     {
-     "label": "Spin-off cancelled",
-     "probability": 0.05,
-     "move_pct": -15.0
+     "label": "Rejected or blocked",
+     "probability": 0.15,
+     "move_pct": -10.0
     }
    ],
-   "p_big": 0.05,
+   "p_big": 0.15,
    "p_up": 0.85,
-   "expected_move": 3.0,
+   "expected_move": 2.0,
    "lean": "up",
-   "id": "IP:other",
+   "id": "D:regulatory",
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
-   "price_at_flag": 29.86
+   "price_at_flag": 66.79
   },
   {
    "ticker": "IP",
