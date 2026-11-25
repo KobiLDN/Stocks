@@ -24,7 +24,7 @@ jobs:
           # another bot must build on that bot's push, or it conflicts (21 Sept, #54)
           ref: ${{ github.ref }}
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
