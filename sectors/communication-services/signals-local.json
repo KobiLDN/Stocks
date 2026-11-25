@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25 08:02",
+  "updated": "2026-11-25 09:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "deab76e93e7e",
-  "code_commit": "d7455adaad79",
+  "code_commit": "98da0a8638bd",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "VZ",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "YTD +24.13% and 1-year +24%, with a low P/E of 11.85, high dividend yield of 6.09%, and beta of 0.26, indicating strong value and stability.",
+      "drivers": [
+        "+24% YTD return",
+        "P/E 11.85",
+        "dividend yield 6.09%",
+        "low beta 0.26"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "LYV",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Exceptional 1-year return of +42% and YTD +26.37%, with strong recent momentum (1M +6.40%, 1W +4.16%) and a buy analyst consensus (score 1.64).",
+      "drivers": [
+        "+42% 1-year return",
+        "+26.37% YTD",
+        "buy analyst",
+        "1M +6.40%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "TTWO",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Best analyst score of 1.21 (strong_buy) and accelerating short-term momentum with 1W +8.08% and 1D +5.28%.",
+      "drivers": [
+        "analyst score 1.21",
+        "1W +8.08%",
+        "1D +5.28%",
+        "strong_buy signal"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "TKO",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong analyst consensus (strong_buy, score 1.41) and robust 1-month momentum of +10.64%, with a 1-day gain of +2.33%.",
+      "drivers": [
+        "strong_buy analyst",
+        "1M +10.64%",
+        "score 1.41",
+        "1D +2.33%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "DIS",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Solid double-digit YTD (+10.37%) and 1-year (+20%) returns, strong recent momentum (1M +10.97%, 1W +4.76%), and a favourable analyst score of 1.56.",
+      "drivers": [
+        "+10.37% YTD",
+        "+20% 1-year",
+        "analyst score 1.56",
+        "1M +10.97%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "APP",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Explosive 1-month rebound of +46.16% and a buy analyst rating (score 1.58) signal a potential turnaround despite negative YTD.",
+      "drivers": [
+        "1M +46.16%",
+        "buy analyst",
+        "score 1.58",
+        "1D +1.92%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "T",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Attractive valuation with P/E 11.93 and dividend yield 4.98%, plus strong recent momentum (1M +9.74%, 1D +2.60%) and a buy analyst rating.",
+      "drivers": [
+        "P/E 11.93",
+        "dividend 4.98%",
+        "1M +9.74%",
+        "buy analyst"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "CMCSA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Low P/E of 7.82 and high dividend yield of 5.34% provide a strong value proposition, with a 1-month surge of +15.10% and low beta of 0.707.",
+      "drivers": [
+        "P/E 7.82",
+        "dividend 5.34%",
+        "1M +15.10%",
+        "low beta 0.707"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "CHTR",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Recent 1-month surge of +32.97% and 1-day +6.21%, supported by a new operating model targeting $2B in cost savings and strong mobile subscriber growth.",
+      "drivers": [
+        "1M +32.97%",
+        "1D +6.21%",
+        "cost savings catalyst",
+        "mobile subscriber growth"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "TMUS",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Solid 1-month momentum of +13.86%, a buy analyst rating (score 1.61), and low beta of 0.378 indicate stability and growth potential.",
+      "drivers": [
+        "1M +13.86%",
+        "buy analyst",
+        "beta 0.378",
+        "score 1.61"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "TTWO",
@@ -175,179 +348,6 @@
         "+6.40% 1M",
         "buy analyst",
         "beta 1.16"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "VZ",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "VZ has strong YTD momentum (+22.34%), a low P/E of 11.86, and a high dividend yield of 6.09%, with a beta of 0.26 providing stability. Recent news highlights a SpaceX competitive threat, but Raymond James calls near-term concerns 'overblown' and Morningstar notes Verizon's network advantage, supporting a resilient outlook.",
-      "drivers": [
-        "+22.34% YTD return",
-        "P/E 11.86",
-        "Dividend yield 6.09%",
-        "Low beta 0.26"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "SPOT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "SPOT shows positive 1M momentum (+9.84%) and near-flat YTD (+0.35%), with strong Q3 2026 earnings: Premium Subscribers grew 9% Y/Y to 306M and revenue rose 16% Y/Y to \u20ac5.0B, beating expectations. Analyst consensus is 'buy' with a score of 1.71.",
-      "drivers": [
-        "+9.84% 1M return",
-        "Q3 revenue +16% Y/Y",
-        "306M Premium Subscribers",
-        "Analyst consensus 'buy'"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "BT-A.L",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "BT-A.L has delivered a strong first half with revenue up 1% to \u00a38.8B and EBITDA up 1%, while reiterating full-year guidance and an increased interim dividend. YTD return is +15.57% with a P/E of 16.33 and a dividend yield of 3.92%.",
-      "drivers": [
-        "+15.57% YTD return",
-        "P/E 16.33",
-        "Dividend yield 3.92%",
-        "Strong H1 results"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "T",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "T has a low P/E of 11.93, a high dividend yield of 4.98%, and positive short-term momentum (+2.11% 1D, +1.83% 1M). Analyst consensus is 'buy' with a score of 2.08, and the stock offers defensive income in a volatile sector.",
-      "drivers": [
-        "Dividend yield 4.98%",
-        "P/E 11.93",
-        "+1.83% 1M return",
-        "Analyst consensus 'buy'"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "CMCSA",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "CMCSA has a very low P/E of 7.88 and a high dividend yield of 5.30%, with a 1M return of +12.77%. Despite a Bernstein price target cut due to SpaceX competition, the stock is cheap and offers strong income, with analyst consensus 'hold' but a score of 2.63.",
-      "drivers": [
-        "P/E 7.88",
-        "Dividend yield 5.30%",
-        "+12.77% 1M return",
-        "Low valuation"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "DIS",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "DIS has a solid YTD return of +6.29% and a 1M return of +5.50%, with a P/E of 20.96 and a strong analyst consensus 'buy' (score 1.53). The company benefits from theme park demand and streaming growth, though beta of 1.426 adds some risk.",
-      "drivers": [
-        "+6.29% YTD return",
-        "+5.50% 1M return",
-        "Analyst consensus 'buy'",
-        "P/E 20.96"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "TMUS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "TMUS has a 1M return of +7.71% and a P/E of 15.97, with a low beta of 0.378. Despite SpaceX competition concerns, Raymond James upgraded TMUS to 'Outperform' and set a $170 price target, citing overblown fears. Analyst consensus is 'buy' with a score of 1.61.",
-      "drivers": [
-        "+7.71% 1M return",
-        "P/E 15.97",
-        "Low beta 0.378",
-        "Raymond James upgrade"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "OMC",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "OMC has strong YTD (+8.02%) and 1Y (+18%) returns, with a 1M return of +5.81%. The P/E of 86.04 is very high, but the dividend yield of 3.76% and analyst consensus 'buy' (score 2.08) provide some support. Advertising spend recovery is a catalyst.",
-      "drivers": [
-        "+8.02% YTD return",
-        "+18% 1Y return",
-        "Dividend yield 3.76%",
-        "Analyst consensus 'buy'"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "TTWO",
-      "signal": "strong_buy",
-      "confidence": 0.45,
-      "rationale": "TTWO has the strongest analyst consensus in the sector ('strong_buy', score 1.21), with a 1M return of +1.86%. The stock has no P/E due to negative earnings, but upcoming game releases (e.g., GTA VI) are key catalysts. High short interest of 4.99% adds risk.",
-      "drivers": [
-        "Analyst consensus 'strong_buy'",
-        "Score 1.21",
-        "+1.86% 1M return",
-        "Upcoming game catalysts"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "APP",
-      "signal": "buy",
-      "confidence": 0.4,
-      "rationale": "APP has explosive 1M momentum (+30.01%) despite a -43.67% YTD decline, with a P/E of 23.45 and analyst consensus 'buy' (score 1.58). The stock is highly volatile (beta 2.498) and has high short interest (3.83%), but the recent rally suggests a turnaround in advertising demand.",
-      "drivers": [
-        "+30.01% 1M return",
-        "Analyst consensus 'buy'",
-        "P/E 23.45",
-        "High beta 2.498"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-25 08:02",
+  "updated": "2026-11-25 09:34",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "53fa603d7844",
-  "code_commit": "d7455adaad79",
+  "code_commit": "98da0a8638bd",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "EXR",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Q3 Core FFO +4.3% YoY, same-store NOI +4.6%, occupancy 94.0%, and net income +50% per share; YTD +25.5% with 1M +10.8% momentum [extraspace.com](https://news.extraspace.com/press-releases/press-release-details/2026/Extra-Space-Storage-Inc--Reports-2026-Third-Quarter-Results/default.aspx).",
+      "drivers": [
+        "+25.5% YTD",
+        "Core FFO +4.3% YoY",
+        "same-store NOI +4.6%",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "KIM",
+      "signal": "strong_buy",
+      "confidence": 0.82,
+      "rationale": "Record portfolio occupancy 96.6%, same-property NOI +4.9%, FFO per share +6.8% YoY, and raised 2026 guidance; YTD +33% with 1M +9% [kimcorealty.com](https://investors.kimcorealty.com/news/detail/606/kimco-realty-announces-third-quarter-2026-results).",
+      "drivers": [
+        "+33% YTD",
+        "record occupancy 96.6%",
+        "FFO +6.8% YoY",
+        "raised guidance"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "PSA",
+      "signal": "buy",
+      "confidence": 0.78,
+      "rationale": "YTD +32.3%, 1M +8.1%, P/E 34.75 with 3.6% dividend; self-storage tailwinds mirroring EXR's strong Q3 results.",
+      "drivers": [
+        "+32.3% YTD",
+        "1M +8.1%",
+        "self-storage demand",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "SPG",
+      "signal": "buy",
+      "confidence": 0.76,
+      "rationale": "YTD +29.1%, 1M +8.1%, P/E 16.39 (lowest among top retail REITs), 4.1% dividend; strong consumer spending supports mall traffic.",
+      "drivers": [
+        "+29.1% YTD",
+        "P/E 16.39",
+        "1M +8.1%",
+        "retail strength"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "DOC",
+      "signal": "buy",
+      "confidence": 0.74,
+      "rationale": "YTD +33.4%, 1M +5.8%, 1W +4.7%, dividend 6.1%; health care REIT benefiting from aging demographics and stable occupancy.",
+      "drivers": [
+        "+33.4% YTD",
+        "1M +5.8%",
+        "dividend 6.1%",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "VICI",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "P/E 11.19 (cheapest in peer group), dividend 7.6%, 1M +3.1%, 1D +2.5%; experiential REIT with high yield and buy rating.",
+      "drivers": [
+        "P/E 11.19",
+        "dividend 7.6%",
+        "1M +3.1%",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "AMT",
+      "signal": "strong_buy",
+      "confidence": 0.8,
+      "rationale": "Proposed $525M settlement with DISH/EchoStar enhances financial flexibility; strong_buy rating, P/E 25.25, YTD +7.8% [americantower.gcs-web.com](https://americantower.gcs-web.com/news-releases/news-release-details/american-tower-announces-proposed-settlement-dishechostar).",
+      "drivers": [
+        "$525M settlement",
+        "strong_buy rating",
+        "P/E 25.25",
+        "telecom tower demand"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "EQIX",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "YTD +31.2%, 1Y +34%, strong_buy rating; data center REIT benefiting from AI/cloud demand despite high P/E of 60.",
+      "drivers": [
+        "+31.2% YTD",
+        "strong_buy rating",
+        "data center demand",
+        "1Y +34%"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "WY",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "Strong_buy rating (score 1.5), 1M +3.2%, 1D +2.3%, dividend 4.3%; timber REIT undervalued with YTD -12.8% offering turnaround potential.",
+      "drivers": [
+        "strong_buy rating",
+        "1M +3.2%",
+        "dividend 4.3%",
+        "value play"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "FRT",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +17.2%, P/E 22.11, dividend 4.2%, short interest 0.03% (near zero); retail REIT with stable occupancy and analyst buy (1.89).",
+      "drivers": [
+        "+17.2% YTD",
+        "short interest 0.03%",
+        "P/E 22.11",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "KIM",
@@ -175,179 +348,6 @@ window.SIGNALS_DATA = {
         "P/E 10.46",
         "5.93% dividend yield",
         "UK property recovery"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "KIM",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "Kimco Realty delivered 6.8% FFO growth and record portfolio occupancy of 96.6% in Q3 2026, with same-property NOI accelerating 4.9% YoY, and raised full-year guidance for the third consecutive year [kimcorealty.com](https://investors.kimcorealty.com/news/detail/606/kimco-realty-announces-third-quarter-2026-results). The stock is up +31% YTD and +11.66% in the last month, with a P/E of 23.7 and a buy consensus.",
-      "drivers": [
-        "+31% YTD",
-        "+11.66% 1M",
-        "record 96.6% occupancy",
-        "raised 2026 guidance"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "SPG",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Simon Property Group has strong momentum with +26% YTD and +9.15% in the last month, a low P/E of 16.2, and a 4.1% dividend yield, supported by resilient retail demand.",
-      "drivers": [
-        "+26% YTD",
-        "+9.15% 1M",
-        "P/E 16.2",
-        "4.1% dividend yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "PSA",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Public Storage has rallied +29.7% YTD and +9.09% in the last month, with a P/E of 34.2 and a 3.69% dividend yield, benefiting from strong self-storage demand.",
-      "drivers": [
-        "+29.7% YTD",
-        "+9.09% 1M",
-        "P/E 34.2",
-        "3.69% dividend yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "EXR",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Extra Space Storage is up +22.4% YTD and +10.75% in the last month, with a P/E of 31.5 and a 4.18% dividend yield, reflecting strong self-storage fundamentals.",
-      "drivers": [
-        "+22.4% YTD",
-        "+10.75% 1M",
-        "P/E 31.5",
-        "4.18% dividend yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "VICI",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "VICI Properties raised AFFO guidance for 2026 and announced a new $500M unsecured term loan at an effective fixed rate of ~5.20% to refinance higher-cost debt, while the stock trades at a low P/E of 11.2 and offers a 7.6% dividend yield [viciproperties.com](https://investors.viciproperties.com/news-releases/news-release-details/vici-properties-inc-announces-new-500-million-5-year-unsecured).",
-      "drivers": [
-        "P/E 11.2",
-        "7.6% dividend yield",
-        "AFFO guidance raised",
-        "refinancing at lower rate"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "DOC",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Healthpeak Properties has gained +26% YTD and +4.64% in the last month, with a 6.34% dividend yield, driven by strong healthcare real estate demand.",
-      "drivers": [
-        "+26% YTD",
-        "+4.64% 1M",
-        "6.34% dividend yield",
-        "healthcare REIT momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "O",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Realty Income is up +5.84% YTD and +5.34% in the last month, with a 5.67% dividend yield and a low beta of 0.65, offering defensive income in a stable retail environment.",
-      "drivers": [
-        "+5.84% YTD",
-        "+5.34% 1M",
-        "5.67% dividend yield",
-        "beta 0.65"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "BXP",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "BXP's outlook was revised to stable from negative by S&P on solid operating results and reduced leverage, with occupancy improving to 89.4% and $1.37B of asset sales executed [spglobal.com](https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3660814). The stock is up +4.43% in the last month and has a P/E of 18.3.",
-      "drivers": [
-        "outlook revised to stable",
-        "P/E 18.3",
-        "+4.43% 1M",
-        "asset sales $1.37B"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "CCI",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Crown Castle is up +4.77% in the last month despite a -3.46% YTD, with a 5.16% dividend yield and a P/E of 33.1, supported by tower leasing demand.",
-      "drivers": [
-        "+4.77% 1M",
-        "5.16% dividend yield",
-        "tower demand",
-        "P/E 33.1"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "LAND.L",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Land Securities is up +11.5% YTD and +5.58% in the last month, with a low P/E of 10.5 and a 5.97% dividend yield, benefiting from UK office and retail recovery.",
-      "drivers": [
-        "+11.5% YTD",
-        "+5.58% 1M",
-        "P/E 10.5",
-        "5.97% dividend yield"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",
