@@ -10,6 +10,7 @@
 <script src="signals-local.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../shared.css">
+<script src="../../asset-links.js"></script>
 <script src="../../shared.js" defer></script>
 <style>
 
@@ -504,11 +505,6 @@
     'other': 'Other',
   };
 
-  const YAHOO_SUFFIX = { 'RR.': 'RR.L', '285A': '285A.T' };
-  function yahooUrl(ticker) {
-    return 'https://finance.yahoo.com/quote/' + (YAHOO_SUFFIX[ticker] || ticker) + '/';
-  }
-
   function escapeHtml(s) {
     return String(s == null ? '' : s)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -598,7 +594,7 @@
         '<div class="rank-rail"><span class="rank-num">' + (p.rank || '') + '</span>' + deltaBadge + '</div>' +
         '<div class="card-body">' +
           '<div class="card-top">' +
-            '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
+            '<a class="ticker" href="' + assetUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
             '<span class="company">' + escapeHtml(name) + '</span>' +
             catBadge +
             (p.from_group_name ? '<span class="driver-chip" title="Picked by the ' + escapeHtml(p.from_group_name) + ' sector run">from ' + escapeHtml(p.from_group_name) + ' #' + p.group_rank + '</span>' : '') +
@@ -629,7 +625,7 @@
           '<div class="rank-rail"><span class="rank-num">' + (i + 1) + '</span></div>' +
           '<div class="card-body">' +
             '<div class="card-top">' +
-              '<a class="ticker" href="' + yahooUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
+              '<a class="ticker" href="' + assetUrl(t) + '" target="_blank" rel="noopener">' + escapeHtml(t) + '</a>' +
               '<span class="company">' + escapeHtml(name) + '</span>' +
               catBadge +
               '<span class="signal-pill signal-runup" title="Flagged only because it has already risen a lot. Not a buy signal: on the track record these did worst.">UP A LOT</span>' +
