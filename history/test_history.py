@@ -382,6 +382,23 @@ class Backup(Base):
             b = other.run(f"SELECT * FROM {table} ORDER BY 1, 2")
             self.assertEqual(a, b, table)
 
+    def test_verify_passes_then_catches_a_damaged_backup(self):
+        """#72: the Friday backup restores itself into a throwaway file and checks the row counts."""
+        snapshot.main(["x", "prices"])
+        out = os.path.join(self.tmp, "dump")
+        backup.dump(self.h, out)
+        with mock.patch.dict(os.environ, {"CLOUDFLARE_ACCOUNT_ID": "x", "D1_DATABASE_ID": "x", "D1_API_TOKEN": "x"}):
+            self.assertEqual(backup.verify(out), [])            # D1 secrets set: still a local throwaway file
+            self.assertEqual(backup.main(["x", "verify", out]), 0)
+        with gzip.open(os.path.join(out, "price_snapshots.ndjson.gz"), "rt") as f:
+            lines = f.readlines()
+        with gzip.open(os.path.join(out, "price_snapshots.ndjson.gz"), "wt") as f:
+            f.writelines(lines[:-3])                             # a truncated table
+        problems = backup.verify(out)
+        self.assertEqual(len(problems), 1)
+        self.assertIn("price_snapshots", problems[0])
+        self.assertEqual(backup.main(["x", "verify", out]), 1)
+
     def test_tables_match_schema(self):
         tables = {r["name"] for r in self.h.run("SELECT name FROM sqlite_master WHERE type = 'table'")}
         self.assertEqual(tables, set(backup.TABLES))
