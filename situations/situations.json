@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25 15:48",
+ "updated": "2026-11-25 18:48",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 51,
+ "count": 53,
  "situations": [
   {
    "ticker": "NBIS",
@@ -81,6 +81,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 12.85
+  },
+  {
+   "ticker": "RCAT",
+   "type": "regulatory",
+   "source": "Red Cat Sinks 9%, Unusual Machines Slides 7%, Ondas Drops 4%: Is the Pentagon’s Reported Push to Bring In General Motors and Ford a Threat to Drone Stocks?",
+   "title": "Pentagon May Bring GM/Ford into Drone Production",
+   "summary": "Reports indicate the Pentagon is considering General Motors and Ford for drone manufacturing, threatening existing suppliers like Red Cat. A decision is pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Pentagon includes GM/Ford",
+     "probability": 0.5,
+     "move_pct": -30.0
+    },
+    {
+     "label": "Pentagon sticks with current suppliers",
+     "probability": 0.3,
+     "move_pct": 40.0
+    },
+    {
+     "label": "Mixed outcome or delay",
+     "probability": 0.2,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.3,
+   "expected_move": -5.0,
+   "lean": "down",
+   "id": "RCAT:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 1.73
   },
   {
    "ticker": "RXRX",
@@ -478,72 +511,6 @@
    "price_at_flag": 40.88
   },
   {
-   "ticker": "RCAT",
-   "type": "regulatory",
-   "source": "Red Cat Sinks 9%, Unusual Machines Slides 7%, Ondas Drops 4%: Is the Pentagon’s Reported Push to Bring In General Motors and Ford a Threat to Drone Stocks?",
-   "title": "Pentagon drone policy shift",
-   "summary": "Pentagon reportedly pushing to bring in GM and Ford for drones, threatening existing drone stocks like Red Cat.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Pentagon confirms new entrants",
-     "probability": 0.4,
-     "move_pct": -25.0
-    },
-    {
-     "label": "Pentagon denies/backs off",
-     "probability": 0.3,
-     "move_pct": 20.0
-    },
-    {
-     "label": "Status quo / no decision",
-     "probability": 0.3,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.3,
-   "expected_move": -5.5,
-   "lean": "down",
-   "id": "RCAT:regulatory",
-   "first_flagged": "2026-11-25",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 1.73
-  },
-  {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": null,
-   "title": "GTCR considers potential takeover",
-   "summary": "GTCR is considering a potential takeover of Global Payments. Deal structure and price are unresolved, could lead to premium or collapse.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No deal, stock falls back",
-     "probability": 0.4,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Takeover at premium",
-     "probability": 0.3,
-     "move_pct": 20.0
-    },
-    {
-     "label": "Takeover at lower price",
-     "probability": 0.3,
-     "move_pct": 5.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.6,
-   "expected_move": 3.5,
-   "lean": "up",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 92.44
-  },
-  {
    "ticker": "DASH",
    "type": "takeover",
    "source": "DoorDash Shares Climb 6.39% After Securing $1.79 Billion Loan Facility for Instacart Acquisition",
@@ -642,6 +609,72 @@
    "price_at_flag": 209.74
   },
   {
+   "ticker": "TSM",
+   "type": "regulatory",
+   "source": "TSMC Stocks Slide 6.65% as Taiwan Lands on US Tariff List",
+   "title": "US Tariffs on Taiwan Proposed, Impact on TSMC",
+   "summary": "Taiwan was added to a US tariff list, but the final decision and implementation details are pending. This could significantly affect TSMC's exports to the US.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Tariffs imposed as proposed",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Tariffs reduced or exempted",
+     "probability": 0.3,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Tariffs delayed or negotiated",
+     "probability": 0.3,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.6,
+   "expected_move": -1.5,
+   "lean": "up",
+   "id": "TSM:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 344.48
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "GTCR considers potential takeover of Global Payments",
+   "title": "GTCR considers potential takeover of Global Payments",
+   "summary": "GTCR is reportedly considering a takeover of Global Payments, which could lead to a premium offer or fall through, impacting the stock.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Takeover talks collapse",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Takeover announced at premium",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "No deal, stock drifts",
+     "probability": 0.3,
+     "move_pct": -2.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.3,
+   "expected_move": 1.4,
+   "lean": "down",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 92.44
+  },
+  {
    "ticker": "CORZ",
    "type": "other",
    "source": null,
@@ -675,39 +708,6 @@
    "price_at_flag": 10.99
   },
   {
-   "ticker": "IP",
-   "type": "other",
-   "source": null,
-   "title": "DS Smith spin-off valuation test",
-   "summary": "International Paper faces a fresh valuation test on its DS Smith spin-off, with board approval obtained. Market reaction to spin-off terms and execution is pending.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Spin-off creates value",
-     "probability": 0.4,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Spin-off disappoints",
-     "probability": 0.3,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Delays or complications",
-     "probability": 0.3,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.4,
-   "expected_move": -0.5,
-   "lean": "down",
-   "id": "IP:other",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 29.86
-  },
-  {
    "ticker": "285A",
    "type": "activist",
    "source": "SK Hynix to Be Kioxia’s Top Shareholder",
@@ -739,6 +739,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 49.76
+  },
+  {
+   "ticker": "IP",
+   "type": "other",
+   "source": "International Paper (IP) Faces A Fresh Valuation Test On DS Smith Spin Off",
+   "title": "DS Smith spin-off valuation test",
+   "summary": "International Paper's spin-off of its EMEA packaging business (DS Smith) faces a fresh valuation test as it advances with board approval.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off completed, value unlocked",
+     "probability": 0.5,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Spin-off delayed or challenged",
+     "probability": 0.3,
+     "move_pct": -8.0
+    },
+    {
+     "label": "Spin-off canceled",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.5,
+   "expected_move": -0.4,
+   "lean": "either way",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 29.86
   },
   {
    "ticker": "DELL",
@@ -1137,6 +1170,39 @@
    "price_at_flag": 303.94
   },
   {
+   "ticker": "DG",
+   "type": "results",
+   "source": null,
+   "title": "Dollar General Q3 Earnings Due Dec 3",
+   "summary": "DG reports Q3 earnings on Dec 3. Recent analyst upgrade and sector strength have lifted stock. Results and guidance will be key. Ongoing government lawsuit threat adds uncertainty.",
+   "key_date": "2026-12-03",
+   "outcomes": [
+    {
+     "label": "In-line results",
+     "probability": 0.4,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Beat and raise guidance",
+     "probability": 0.3,
+     "move_pct": 12.0
+    },
+    {
+     "label": "Miss and lower guidance",
+     "probability": 0.3,
+     "move_pct": -12.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.7,
+   "expected_move": 0.8,
+   "lean": "up",
+   "id": "DG:results",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 137.9
+  },
+  {
    "ticker": "NTRA",
    "type": "trial",
    "source": "What Could Natera (NTRA) Gain From Its New Colorectal Cancer Trial Collaboration?",
@@ -1200,39 +1266,6 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 104.16
-  },
-  {
-   "ticker": "DG",
-   "type": "results",
-   "source": null,
-   "title": "Dollar General Q3 earnings report on Dec 3",
-   "summary": "Dollar General reports fiscal Q3 earnings on Dec 3 after an analyst upgrade and strong competitor results; guidance will be key for the stock's direction.",
-   "key_date": "2026-12-03",
-   "outcomes": [
-    {
-     "label": "In line with estimates and maintain guidance",
-     "probability": 0.45,
-     "move_pct": 2.0
-    },
-    {
-     "label": "Beat estimates and raise guidance",
-     "probability": 0.35,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Miss estimates and lower guidance",
-     "probability": 0.2,
-     "move_pct": -18.0
-    }
-   ],
-   "p_big": 0.55,
-   "p_up": 0.8,
-   "expected_move": 2.5,
-   "lean": "up",
-   "id": "DG:results",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 137.9
   },
   {
    "ticker": "FCX",
@@ -1433,37 +1466,37 @@
    "price_at_flag": 207.63
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": null,
-   "title": "EU antitrust probe into cross-border trade",
-   "summary": "EU Commission opened an antitrust probe into Coca-Cola Europacific Partners over cross-border beverage trade restrictions. Outcome could impact operations and fines.",
+   "ticker": "TSLA",
+   "type": "other",
+   "source": "Tesla and SpaceX stocks sink as merger concerns mount",
+   "title": "Tesla-SpaceX Merger Speculation",
+   "summary": "Growing concerns about a potential merger or acquisition between Tesla and SpaceX are weighing on both stocks. No official proposal has been made, but the situation is unresolved.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Probe dismissed or minor fine",
-     "probability": 0.4,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Significant fine or restrictions",
-     "probability": 0.3,
-     "move_pct": -15.0
-    },
-    {
-     "label": "Settlement with moderate impact",
-     "probability": 0.3,
+     "label": "No merger, speculation fades",
+     "probability": 0.6,
      "move_pct": -5.0
+    },
+    {
+     "label": "Merger announced",
+     "probability": 0.2,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Other corporate action",
+     "probability": 0.2,
+     "move_pct": -10.0
     }
    ],
-   "p_big": 0.3,
-   "p_up": 0.4,
-   "expected_move": -4.0,
+   "p_big": 0.4,
+   "p_up": 0.2,
+   "expected_move": -2.0,
    "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
+   "id": "TSLA:other",
+   "first_flagged": "2026-11-25",
    "last_seen": "2026-11-25",
-   "price_at_flag": 115.04
+   "price_at_flag": 366.18
   },
   {
    "ticker": "DG",
@@ -1499,6 +1532,72 @@
    "price_at_flag": 139.51
   },
   {
+   "ticker": "MBG.DE",
+   "type": "regulatory",
+   "source": null,
+   "title": "EU hybrid import cap and US House letter deadline",
+   "summary": "The EU capped hybrid imports from Dec 1, aiding Mercedes, but a US House letter on Chinese ties requires a reply by Dec 1, posing tariff risk.",
+   "key_date": "2026-12-01",
+   "outcomes": [
+    {
+     "label": "US letter resolved favorably",
+     "probability": 0.6,
+     "move_pct": 5.0
+    },
+    {
+     "label": "US letter leads to tariffs or restrictions",
+     "probability": 0.3,
+     "move_pct": -15.0
+    },
+    {
+     "label": "No resolution by Dec 1, uncertainty persists",
+     "probability": 0.1,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.6,
+   "expected_move": -2.0,
+   "lean": "up",
+   "id": "MBG.DE:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 41.15
+  },
+  {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
+   "title": "EU antitrust probe into cross-border trade",
+   "summary": "The EU opened an antitrust probe into Coca-Cola Europacific Partners over cross-border beverage trade, which could lead to fines or operational changes.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Probe resolved with minor remedies",
+     "probability": 0.5,
+     "move_pct": 3.0
+    },
+    {
+     "label": "Significant fines or restrictions imposed",
+     "probability": 0.3,
+     "move_pct": -12.0
+    },
+    {
+     "label": "Probe dropped or no action",
+     "probability": 0.2,
+     "move_pct": 8.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.7,
+   "expected_move": -0.5,
+   "lean": "up",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 115.04
+  },
+  {
    "ticker": "NRG",
    "type": "regulatory",
    "source": null,
@@ -1532,39 +1631,6 @@
    "price_at_flag": 94.1
   },
   {
-   "ticker": "TSM",
-   "type": "regulatory",
-   "source": null,
-   "title": "TSMC weighs $22.6 billion Texas chip plant, seeks tax breaks",
-   "summary": "TSMC is considering a $22.6 billion Texas chip plant and seeking tax breaks. The unresolved issue is whether the company proceeds with the investment, which would boost US chip production, or faces delays or changes due to regulatory or financial considerations.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Investment approved, plant proceeds",
-     "probability": 0.5,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Delays or reduced scope",
-     "probability": 0.3,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Project canceled or moved",
-     "probability": 0.2,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 0.2,
-   "p_up": 0.5,
-   "expected_move": -1.0,
-   "lean": "either way",
-   "id": "TSM:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 344.48
-  },
-  {
    "ticker": "D",
    "type": "regulatory",
    "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
@@ -1596,6 +1662,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 66.79
+  },
+  {
+   "ticker": "ULVR.L",
+   "type": "regulatory",
+   "source": "Update: McCormick Offers to Sell Colman's Brand to Hurdle British Competition Rules",
+   "title": "McCormick sale of Colman's to clear UK merger concerns",
+   "summary": "McCormick offered to sell Colman's brand to address UK competition concerns over its acquisition of Unilever foods business, pending regulator approval.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Regulator approves deal with sale",
+     "probability": 0.6,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Regulator demands further concessions",
+     "probability": 0.3,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Deal blocked",
+     "probability": 0.1,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.1,
+   "p_up": 0.6,
+   "expected_move": 0.5,
+   "lean": "up",
+   "id": "ULVR.L:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 66.15
   },
   {
    "ticker": "IP",
@@ -1662,34 +1761,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 41.06
-  },
-  {
-   "ticker": "ULVR.L",
-   "type": "regulatory",
-   "source": null,
-   "title": "CMA considers McCormick's Colman's sale remedy for Unilever deal",
-   "summary": "UK CMA is consulting on McCormick's offer to sell Colman's to resolve competition concerns in dry ingredient mixes and sauces. If accepted, the $65B merger clears; if rejected, it goes to phase 2 investigation.",
-   "key_date": "2026-12-23",
-   "outcomes": [
-    {
-     "label": "CMA accepts remedy, deal clears",
-     "probability": 0.7,
-     "move_pct": 5.0
-    },
-    {
-     "label": "CMA rejects remedy, phase 2 referral",
-     "probability": 0.3,
-     "move_pct": -8.0
-    }
-   ],
-   "p_big": 0,
-   "p_up": 0.7,
-   "expected_move": 1.1,
-   "lean": "up",
-   "id": "ULVR.L:regulatory",
-   "first_flagged": "2026-11-25",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 66.15
   }
  ]
 }
