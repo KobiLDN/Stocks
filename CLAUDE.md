@@ -40,6 +40,7 @@ The owner's **manager** session (`stocks/cloud`) plans, keeps the owner's Decisi
 - **Open issues labelled `decided` are the owner's decisions.** At every session start, list them and work through them, oldest first.
 - **Close each one with the PR that does it** (`Closes #N` in the PR body), following the usual branch → PR → checks routine.
 - **If a `decided` issue looks wrong or risky, ask the owner in chat before doing it.** Examples: it contradicts an earlier decision, could break the portfolio export, or would expose account data.
+- **Tell the manager (#124).** When you finish a `decided` issue, or need the owner's answer on one, schedule a one-off message into the manager session `session_01J3rTmQA4upC5aXGozbqGyJ` (stocks/cloud): a scheduled task with `persistent_session_id`, about 2 minutes ahead. One line only, e.g. `stocks: #122 done (PR #125)` or `stocks: #122 needs an answer, see the issue`; details stay in the issue. The manager checks the work, puts any question on the owner's Decision Desk and replies through the issue.
 - **Planning and owner decisions belong to the manager**, not here. Ideas or open questions found while building go to the manager as issue comments, or to the owner in chat, not into new `decided` issues.
 - **These rules still apply:** the portfolio notes channel (technical notes only) and no account data in this public repo.
 
