@@ -34,14 +34,14 @@ Rule: when a PR changes bot-side code, **run the script on the PR branch and com
 
 ## Monitoring — is the data fresh?
 
-- **`/health`** (`functions/health.js`) returns 200 when every data stream (prices, market, news, signals, export) is up to date and 503 when one missed its last scheduled run. The body lists each stream's `as_of` and when it was last due.
+- **`/health`** (`functions/health.js`) returns 200 when every data stream (prices, market, news, signals, export, situations) is up to date and 503 when one missed its last scheduled run. The body lists each stream's `as_of` and when it was last due.
 - The schedule and grace windows are in `monitoring/freshness.js`. **If a bot's schedule changes (cron-job.org or a workflow `cron:`), update it there too**, or `/health` will raise false alarms or miss real ones. Tests: `node --test monitoring/freshness.test.js` (also run in CI).
 - Every page shows an amber bar at the bottom when `/health` reports something stale.
 - Alerts come from an external uptime monitor polling `/health`, so they don't depend on GitHub or Cloudflare cron.
 
 ## Scheduling — cron-job.org starts every bot
 
-All four bots are started by cron-job.org (London time) through GitHub's `workflow_dispatch` API, because GitHub's own scheduler started runs 1.5–5 hours late on average (up to 12).
+The four scheduled bots are started by cron-job.org (London time) through GitHub's `workflow_dispatch` API (Situations and History follow them by `workflow_run`), because GitHub's own scheduler started runs 1.5–5 hours late on average (up to 12).
 
 | cron-job.org job | Workflow | When (London) |
 |---|---|---|
@@ -49,6 +49,8 @@ All four bots are started by cron-job.org (London time) through GitHub's `workfl
 | `stocks-signals` | `generate-signals.yml` (body `{"ref":"main","inputs":{"sector":"all"}}`) | Mon, Wed, Fri 08:00 |
 | `stocks-news` | `generate-news-feed.yml` | Mon–Fri 08:35, 15:35, 20:35 |
 | `stocks-export` | `generate-export.yml` | Mon–Fri 21:30 |
+| *(no job: workflow_run)* | `generate-situations.yml` | after each `update-prices.yml` run on `main` |
+| *(no job: workflow_run)* | `update-history.yml` | after each `generate-export.yml` run |
 
 - Each job: `POST https://api.github.com/repos/KobiLDN/Stocks/actions/workflows/<file>/dispatches`, headers `Authorization: Bearer <token>`, `Accept: application/vnd.github+json`, `X-GitHub-Api-Version: 2022-11-28`, and "notify on failure" switched on.
 - Token: fine-grained, Actions read/write on `Stocks` + `portfolio-private` only, no expiry. It lives only in cron-job.org.
@@ -70,16 +72,17 @@ D1 keeps **history only**; the site never reads it. Every bot still publishes it
 
 | Tables | Written by | When |
 |---|---|---|
-| `price_snapshots`, `market_snapshots` | `update-prices.yml` → `python -m history.snapshot prices` | after each price run's push |
+| `price_snapshots`, `market_snapshots` | `update-prices.yml` → `python -m history.snapshot prices` | after each price run's push (the theme folders' `prices.json` and every market/sector group's `prices-data.js`) |
 | `signal_runs`, `signals` (write-once, `provenance = live`) | `generate-signals.yml` → `python -m history.snapshot signals` | after each signal run |
 | `daily_bars` (raw OHLCV), `corporate_actions`, `data_flags` | `update-history.yml` → `python -m history.bars` | automatically after the evening export; re-fetches the last 10 days |
 | backup | `update-history.yml` | Fridays → 90-day artifact `history-backup-<run>` |
 | `track-record.json` (published file, not a table) | `update-history.yml` → `publish` job → `python -m history.track_record` | after the nightly bars; pushed to `main` like the other bots |
 | past signals (one-off) | *Update History* run by hand with `import_signals` ticked → `python -m history.import_signals` | every committed `*/signals-local.json` since May 2026, `provenance = live`, `run_id = git:<sha>`; plus each run's `run_universe` from the same commit's `prices.json` (#88) |
-| `run_universe` (write-once) | `generate-signals.yml` → `python -m history.snapshot signals` | the stocks each signal run could choose from = its sector's `prices.json` tickers at the time (#88). The track record's random and momentum baselines use it; runs without one fall back to today's list |
+| `run_universe` (write-once) | `generate-signals.yml` → `python -m history.snapshot signals` | the stocks each signal run could choose from = its theme's `prices.json` or its group's `prices-data.js` tickers at the time (#88). The track record's random and momentum baselines use it; runs without one fall back to today's list |
 
 - **Secrets** `CLOUDFLARE_ACCOUNT_ID`, `D1_DATABASE_ID`, `D1_API_TOKEN` live only in the GitHub **`production`** environment, limited to the `main` branch. Branch runs get `preview` (no secrets) and write a throwaway local SQLite file, so a branch can never touch production history. On `main` without the secrets, the history steps warn and skip.
 - **Raw prices:** `daily_bars` stores prices *before* split/dividend adjustment, in the instrument's own currency (`GBp` = pence for LSE). Adjust when reading, using `corporate_actions`.
+- **Benchmarks** (`history.db.BENCHMARKS`): SPY, QQQ, VIX, plus for the track record's pounds and local-index views ISF.L (FTSE 100), EXW1.DE (Euro Stoxx 50), CSSMI.SW (SMI) and GBPUSD/GBPEUR/GBPJPY/GBPCHF. A new one needs a one-off backfill: *Update History* with `days = 400` and `only = <its Yahoo symbol>`.
 - **Backfill** (once): run *Update History* by hand with `days = 400`. It is resumable — if it stops at the budget, run it again the next day (D1 free plan: 100k rows written/day; normal daily use is ~3k).
 - **Restore:** download a backup artifact, then `python -m history.backup restore <folder>` (local SQLite by default; set the three secrets as environment variables to restore into D1).
 - **Point-in-time lists (#88):** a signal run's baseline is scored over `run_universe` (what it could choose from that day), so a stock added to a group later doesn't change how old runs are judged. Index membership history is kept separately as dated snapshots in `index_members/` (git).

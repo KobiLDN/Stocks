@@ -3,6 +3,7 @@
 ## Backlog
 
 **Waiting on data (nothing to build until then):**
+- **Watch the AI runs' "cut off" retries** (from 25 Nov 2026 about half the group runs need a retry; each gets 3 tries). If a run fails all 3, decide: higher `MAX_TOKENS` (cost) or thinking off (new recipe/variant). See AGENTS.md → AI signal runs.
 - **~23 Dec 2026: first Situations scores.** Flags are scored 30 days after they are first made (`situations` block in `track-record.json`). Check whether the AI's chance of a 10%+ move was too confident (it often says 80–100%); if so, consider telling it so in the prompt.
 - **1 Jan 2027: first quarterly run review** (Track Record → Run review). Owner decides what to do about flagged runs (as of 23 Nov: AI and Crypto behind random, Defence mixed). The 12 group runs (11 sectors + FTSE 100) get their first 1-month results around 23 Dec; until then only the 1-week early read.
 - **Europe AI run (#110):** only if the review shows the runs add value.
@@ -11,6 +12,12 @@
 **Other ideas:** GitHub issues #40 (influencer tweets), #44 (stock calendar).
 
 ## Done
+
+- **Docs refresh (25 Nov 2026)** — README rewritten for the current site; AGENTS.md site map, AI signal runs and branch-run rules; WORKFLOW.md schedule (Situations, History) and benchmarks; glossary: Situations, Run review, Europe, new exchanges
+
+- **AI runs retry replies cut off at the length limit** — 3 tries, log shows thinking tokens and why a reply stopped
+
+- **Export `isin`** — portfolio request; matches T212 holdings by ISIN
 
 - **Europe (#110, phase 2)** — 117 Euro Stoxx 50 / DAX / CAC 40 / SMI stocks in the master list, sector pages, sector runs and export; one Europe page set with an index filter; track record vs Euro Stoxx 50 / SMI and in £
 

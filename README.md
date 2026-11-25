@@ -1,83 +1,64 @@
 # Stocks Hub
 
-A multi-sector stock research platform. Each sector tracks a curated universe of stocks in USD with live prices, fundamentals, news sentiment, and AI-generated signals.
+A stock research site: about 840 stocks and coins across the US, UK and Europe, with live prices,
+fundamentals, headlines, AI picks that are scored against the S&P 500 and against picking at random,
+and a Situations page for unresolved events that could move a stock a lot.
 
-**Live: [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/)** &nbsp;·&nbsp; **Dev preview: [dev.stocks-4qw.pages.dev](https://dev.stocks-4qw.pages.dev/)**
+**Live: [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/)**
 
-## Sectors & Pages
+## What's on the site
 
-| Sector | Stocks | Status | URL |
-|---|---|---|---|
-| AI Infrastructure | 48 (12 categories) | Live | [stocks-4qw.pages.dev/AI/](https://stocks-4qw.pages.dev/AI/) |
-| Biotech | 30 (9 categories) | Live | [stocks-4qw.pages.dev/Biotech/](https://stocks-4qw.pages.dev/Biotech/) |
-| Defence & Aerospace | 29 (6 categories) | Live | [stocks-4qw.pages.dev/Defence/](https://stocks-4qw.pages.dev/Defence/) |
-| Technology | 31 (6 categories) | Live | [stocks-4qw.pages.dev/Tech/](https://stocks-4qw.pages.dev/Tech/) |
-| Crypto | 33 (7 categories) | Live | [stocks-4qw.pages.dev/Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
-| Energy | 20 (5 categories) | Live | [stocks-4qw.pages.dev/Energy/](https://stocks-4qw.pages.dev/Energy/) |
-| Global Mega-Cap Leaders | 50 (7 categories) | Live | [stocks-4qw.pages.dev/MegaCap/](https://stocks-4qw.pages.dev/MegaCap/) |
-| All Sectors | 242 stocks combined | Live | [stocks-4qw.pages.dev/All/](https://stocks-4qw.pages.dev/All/) |
+**Markets** (each with Dashboard, Metrics, News, Signals, Heatmap, Charts and What-If pages)
 
-## Top-level pages
-
-| Page | Description | URL |
+| Market | Stocks | URL |
 |---|---|---|
-| Hub | Sector cards + Top 20 signals panel | [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/) |
-| Market | Regime banner, SPY/QQQ/VIX cards + charts, sector heatmap, Leaders/Fallers | [stocks-4qw.pages.dev/market](https://stocks-4qw.pages.dev/market) |
-| News Feed | Cross-sector news feed | [stocks-4qw.pages.dev/news](https://stocks-4qw.pages.dev/news) |
-| Exports | Daily JSON/CSV snapshots | [stocks-4qw.pages.dev/exports/](https://stocks-4qw.pages.dev/exports/) |
+| S&P 500 | 503 | [markets/sp500/](https://stocks-4qw.pages.dev/markets/sp500/) |
+| Nasdaq-100 | 101 | [markets/nasdaq100/](https://stocks-4qw.pages.dev/markets/nasdaq100/) |
+| FTSE 100 | 100 | [markets/ftse100/](https://stocks-4qw.pages.dev/markets/ftse100/) |
+| Europe (Euro Stoxx 50, DAX, CAC 40, SMI; index filter) | 117 | [markets/europe/](https://stocks-4qw.pages.dev/markets/europe/) |
+| Crypto | 32 coins | [Crypto/](https://stocks-4qw.pages.dev/Crypto/) |
 
-## Repo structure
+**Sectors:** the 11 standard sectors (Technology, Health Care, Financials, …) at `sectors/<slug>/`,
+same 7 page types. **Themes:** AI and Defence have their own folders; Biotech, Energy, Mega-Cap and Tech
+are filters on the All pages (their old URLs redirect there).
 
-```
-├── index.html              ← hub landing page (sector cards + top 20 signals panel)
-├── market.html             ← Market overview page (regime banner, SPY/QQQ/VIX, heatmap)
-├── news.html               ← cross-sector news feed page (FT · Reuters · BBC · Guardian · sentiment scored)
-├── shared.css              ← shared stylesheet loaded by all sector pages
-├── shared.js               ← shared JS (toggleTheme, buildTape, buildNav, buildDashboardHeader, buildDataBar)
-├── momentum_screener.py    ← cross-sector momentum screener (1Y + YTD thresholds)
-├── update_market.py        ← fetches SPY/QQQ/VIX via yfinance → market-data.js + market.json
-├── generate_export.py      ← builds daily JSON/CSV snapshot across all sectors
-├── market-data.js          ← generated market data (SPY/QQQ/VIX, regime, timestamps)
-├── market.json             ← same data as JSON; consumed by generate_export.py as the `macro` block
-│                               Fields: SPY/QQQ price + 1D/1W/1M/YTD/1Y changes; VIX level/1D/regime/signal
-├── rss-data.js             ← generated RSS feed data
-├── exports/                ← dated market snapshots (JSON + CSV); served via Pages
-├── All/                    ← All Sectors suite (192 stocks; aggregates all 6 sectors)
-│   ├── index.html          ← combined dashboard with sector filter + search
-│   ├── metrics.html        ← combined fundamentals table
-│   ├── news.html           ← combined news feed
-│   ├── signals.html        ← cross-sector AI signals + combined momentum screener
-│   ├── heatmap.html        ← combined heatmap (drawSplit gainers/losers)
-│   ├── charts.html         ← 6×3 sector grid (top 3 by market cap, 1W/1Y/5Y)
-│   └── calculator.html     ← combined What-If calculator (7 sectors)
-├── AI/                     ← AI Infrastructure sector (48 stocks, 12 categories)
-│   ├── index.html          ← CANONICAL reference for typography/UI standards
-│   ├── AI_update_prices.py
-│   ├── AI_generate_signals_local.py
-│   └── ...
-├── Biotech/                ← Biotech sector (30 stocks, 9 categories)
-├── Defence/                ← Defence & Aerospace sector (29 stocks, 6 categories)
-├── Tech/                   ← Technology sector (31 stocks, 6 categories)
-├── Crypto/                 ← Crypto sector (34 coins, 7 categories)
-├── Energy/                 ← Energy sector (20 stocks, 5 categories)
-├── MegaCap/                ← Global Mega-Cap Leaders sector (50 stocks, 7 categories)
-├── .github/workflows/
-│   ├── update-prices.yml      ← prices: 3× daily weekdays (08:00/14:30/20:30 UTC)
-│   ├── generate-signals.yml   ← signals: Mon/Wed/Fri 07:00 UTC via OpenRouter
-│   ├── generate-export.yml    ← export: 22:00 UTC weekdays
-│   └── generate-news-feed.yml ← News feed: 3× daily weekdays
-├── AGENTS.md               ← contributor guide (read first)
-├── WORKFLOW.md             ← branch → PR → main shipping process, monitoring, scheduling
-├── CHANGELOG.md            ← change history (newest first)
-├── FEATURES.md             ← backlog + done
-└── MIGRATION.md            ← historical: June 2026 single-folder migration (superseded)
-```
+**All Stocks** ([All/](https://stocks-4qw.pages.dev/All/)): every stock in one place, with market, sector,
+theme and "on Trading 212" filters kept in the URL.
+
+**Other pages**
+
+| Page | What | URL |
+|---|---|---|
+| Stock Hub | Market overview, group heatmap, top picks | [stocks-4qw.pages.dev](https://stocks-4qw.pages.dev/) |
+| Situations | Unresolved events with the AI's odds of each outcome; scored after 30 days | [situations.html](https://stocks-4qw.pages.dev/situations.html) |
+| Track Record | Every pick scored at 1 week / 1 month / 3 months vs the S&P 500, in £, vs local indexes, and each AI run vs random | [track-record.html](https://stocks-4qw.pages.dev/track-record.html) |
+| News Feed | Business news (FT, Reuters, BBC, Guardian), sentiment scored | [news.html](https://stocks-4qw.pages.dev/news.html) |
+| Exports | Daily JSON/CSV snapshot (one row per stock), read by the private portfolio project | [exports/](https://stocks-4qw.pages.dev/exports/) |
+| Health | Freshness of every data stream (200 ok / 503 stale) | [/health](https://stocks-4qw.pages.dev/health) |
+
+## How it works
+
+- **`universe.yaml`** is the master list: every stock with its index memberships, ISIN, currency, official
+  sector, industry and "on T212" flag. `index_refresh.py` updates the index lists from Wikipedia each quarter.
+- **Bots** on GitHub Actions, started by cron-job.org (London time):
+  - prices 07:30 / 15:30 / 20:30 weekdays (`update-prices.yml`: the theme folders + `update_group_prices.py`
+    for every market and sector group, with headlines);
+  - Situations after each price run (`generate-situations.yml`);
+  - AI picks Mon / Wed / Fri 08:00 (`generate-signals.yml`: 15 runs — 11 sectors, FTSE 100, AI, Defence,
+    Crypto; S&P 500, Nasdaq-100 and Europe pages show the sector runs' picks);
+  - news feed, daily export 21:30, history + track record after the export.
+- **History** (Cloudflare D1, `history/`): prices, every pick and the list each run chose from, so the track
+  record is point-in-time.
+- **Pages** are static files on Cloudflare Pages. Repeated pages are generated from templates by
+  `site/build.py` (CI fails if a generated page is out of date); a page check loads every page at desktop and
+  phone size and enforces a 2-second phone speed limit.
 
 ## Development
 
-See [AGENTS.md](AGENTS.md) and [WORKFLOW.md](WORKFLOW.md).
+Read [CLAUDE.md](CLAUDE.md), [AGENTS.md](AGENTS.md) (how each part works), [WORKFLOW.md](WORKFLOW.md)
+(branch → PR → main), [CHANGELOG.md](CHANGELOG.md) and [FEATURES.md](FEATURES.md) (what's next).
 
-Everything runs in the cloud: edits in the web Claude container, bots on GitHub Actions (started by cron-job.org), site on Cloudflare Pages. Code changes go on a short-lived branch + PR; merging the PR to `main` is going live.
+Everything runs in the cloud: code changes go on a short-lived branch + PR; merging to `main` is going live.
 
 ## License
 
