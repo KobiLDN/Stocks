@@ -2,8 +2,11 @@
 
     python -m history.backup dump backup/          # every table -> backup/<table>.ndjson.gz
     python -m history.backup restore backup/       # load a dump into the configured DB
+    python -m history.backup verify backup/        # restore into a throwaway SQLite file, compare row counts
 
-update-history.yml dumps every Friday and keeps it as a 90-day GitHub artifact.
+update-history.yml dumps every Friday, verifies the dump (#72, #122) and keeps it as a 90-day GitHub artifact.
+`verify` never touches the configured database: it always restores into a temporary SQLite file, even
+when the D1 secrets are set, and fails if any table's row count differs from manifest.json.
 Restore defaults to a local SQLite file; set the D1 secrets to restore into D1.
 Reads page by primary key (no OFFSET), so a dump reads each row once.
 """
@@ -65,10 +68,38 @@ def restore(h, in_dir):
     return counts
 
 
+def verify(in_dir):
+    """Restore a dump into a throwaway SQLite file and compare each table's row count with manifest.json.
+    Returns a list of problems (empty = the backup restores completely)."""
+    import tempfile
+    with open(os.path.join(in_dir, "manifest.json"), encoding="utf-8") as f:
+        expected = json.load(f)["tables"]
+    with tempfile.TemporaryDirectory() as tmp:
+        h = connect(sqlite_path=os.path.join(tmp, "verify.sqlite"))
+        restore(h, in_dir)
+        problems = []
+        for table in TABLES:
+            got = h.run(f"SELECT COUNT(*) AS n FROM {table}")[0]["n"]
+            want = expected.get(table)
+            print(f"  {table:18} manifest {want!s:>8}  restored {got:>8}")
+            if want is None:
+                problems.append(f"{table}: missing from manifest.json")
+            elif got != want:
+                problems.append(f"{table}: manifest says {want} rows, restore gave {got}")
+    return problems
+
+
 def main(argv):
-    if len(argv) != 3 or argv[1] not in ("dump", "restore"):
+    if len(argv) != 3 or argv[1] not in ("dump", "restore", "verify"):
         print(__doc__)
         return 2
+    if argv[1] == "verify":
+        problems = verify(argv[2])
+        for p in problems:
+            print("ERROR:", p)
+        print("backup verified: every table restores with the manifest's row count" if not problems else
+              f"backup FAILED verification: {len(problems)} problem(s)")
+        return 1 if problems else 0
     h = connect()
     print(f"History ← {h.db.name}" if argv[1] == "dump" else f"History → {h.db.name}")
     counts = dump(h, argv[2]) if argv[1] == "dump" else restore(h, argv[2])

@@ -90,6 +90,9 @@ jobs:
         run: |
           if [ "$(date -u +%u)" = "5" ] || [ "${{ inputs.backup }}" = "true" ]; then
             python -m history.backup dump backup
+            # #72: a backup that can't be restored is no backup. Restore it into a throwaway SQLite file
+            # (never the live DB) and fail the run if any table's row count differs from the manifest.
+            python -m history.backup verify backup
           else
             echo "Not Friday — no backup."
           fi

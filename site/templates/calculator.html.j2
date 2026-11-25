@@ -274,6 +274,7 @@
       <tfoot id="calc-foot"></tfoot>
     </table>
   </div>
+<div class="af-more-wrap"><button class="af-more" id="af-more" type="button" hidden>Show 50 more</button></div>
 
 </div>
 
@@ -322,10 +323,14 @@
     else { sortState.col = col; sortState.dir = (col === 'ytd' || col === 'mult') ? -1 : 1; }
     document.querySelectorAll('#calc-table thead th').forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
     th.classList.add(sortState.dir === 1 ? 'sort-asc' : 'sort-desc');
-    renderTable(window._calcData);
+    shown = PAGE;
+    applyFilters();
   }
 
   /* ---- FILTER ---- */
+  // 50 rows at a time, like the All pages (#122): keeps the big markets inside the phone speed limit
+  const PAGE = 50;
+  let shown = PAGE;
   let activeCategory = 'all';
   let activeQuery    = '';
 
@@ -342,6 +347,7 @@
 
   function setCategory(cat) {
     activeCategory = cat;
+    shown = PAGE;
     document.querySelectorAll('#filter-bar .filter-btn').forEach(b =>
       b.classList.toggle('active', b.dataset.cat === cat));
     applyFilters();
@@ -349,6 +355,7 @@
 
   function filterCalc(query) {
     activeQuery = query.toLowerCase().trim();
+    shown = PAGE;
     applyFilters();
   }
 
@@ -361,6 +368,14 @@
   }
 
   /* ---- RENDER ---- */
+  function showMore(total) {
+    const more = document.getElementById('af-more');
+    const left = total - shown;
+    more.hidden = left <= 0;
+    more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' not shown)';
+    more.onclick = () => { shown += PAGE; applyFilters(); };
+  }
+
   function renderTable(data) {
     const sorted = [...data].sort((a, b) => {
       if (sortState.col === 'ticker') return a.ticker.localeCompare(b.ticker) * sortState.dir;
@@ -369,7 +384,7 @@
 
     document.getElementById('calc-count').textContent = data.length;
     const body = document.getElementById('calc-body');
-    body.innerHTML = sorted.map(s => {
+    body.innerHTML = sorted.slice(0, shown).map(s => {
       const ytdCls = s.ytdPct > 0 ? 'ytd-pos' : s.ytdPct < 0 ? 'ytd-neg' : 'ytd-flat';
       const catLabel = CAT_LABELS[s.category] || s.category;
       return `<tr>
@@ -383,6 +398,8 @@
         ${invCell(10000, s.ytdPct)}
       </tr>`;
     }).join('');
+
+    showMore(sorted.length);
 
     // Totals
     const totals = [100, 1000, 10000].map(inv => {

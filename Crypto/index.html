@@ -568,6 +568,7 @@
 </tbody>
 </table>
 </div>
+<div class="af-more-wrap"><button class="af-more" id="af-more" type="button" onclick="showMoreRows()" hidden>Show 50 more</button></div>
 </div>
 <script src="prices-data.js"></script>
 <script>
@@ -709,7 +710,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const returnTh = document.querySelector('th[onclick*="\'return\'"]');
   sortState.col = 'return';
   sortTable('return', returnTh);
-  applyFilters();
 });
 
 function sortTable(col, th) {
@@ -731,11 +731,27 @@ function sortTable(col, th) {
     return av.localeCompare(bv) * sortState.dir;
   });
   rows.forEach(r => tbody.appendChild(r));
+  applyFilters();
 }
 
 let currentCat = 'all';
 
+// 50 rows at a time, like the All pages (#122): keeps the big markets inside the phone speed limit.
+// Every filter or sort change starts again from the first 50; "Show more" adds 50.
+const PAGE = 50;
+let shown = PAGE;
+
 function applyFilters() {
+  shown = PAGE;
+  paintRows();
+}
+
+function showMoreRows() {
+  shown += PAGE;
+  paintRows();
+}
+
+function paintRows() {
   const query = document.getElementById('stock-search').value.toLowerCase().trim();
   const rows  = document.querySelectorAll('#stock-table tbody tr');
   let visible = 0;
@@ -744,10 +760,14 @@ function applyFilters() {
     const matchSearch = !query
       || row.dataset.ticker.toLowerCase().includes(query)
       || row.querySelector('td:nth-child(2)').textContent.toLowerCase().includes(query);
-    if (matchCat && matchSearch) { row.classList.remove('hidden'); visible++; }
+    if (matchCat && matchSearch) { visible++; row.classList.toggle('hidden', visible > shown); }
     else { row.classList.add('hidden'); }
   });
   document.getElementById('visible-count').textContent = visible;
+  const more = document.getElementById('af-more');
+  const left = visible - shown;
+  more.hidden = left <= 0;
+  more.textContent = 'Show ' + Math.min(PAGE, left) + ' more (' + left + ' not shown)';
 }
 
 function filterTable(cat, btn) {
