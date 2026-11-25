@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24 20:37",
+ "updated": "2026-11-25 01:08",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 40,
+ "count": 46,
  "situations": [
   {
    "ticker": "NBIS",
@@ -149,37 +149,37 @@
    "price_at_flag": 561.64
   },
   {
-   "ticker": "GPN",
+   "ticker": "AAL.L",
    "type": "takeover",
-   "source": "GTCR considers potential takeover of Global Payments",
-   "title": "GTCR considering potential takeover of Global Payments",
-   "summary": "GTCR is evaluating a bid for Global Payments. Stock rose on buzz. If a deal emerges, shares could jump to offer price; if talks fail, the premium could evaporate.",
+   "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
+   "title": "De Beers sale to GDC pending",
+   "summary": "Anglo American's sale of its De Beers stake to the Global Diamond Consortium is not finalized. Negotiations over price, ownership, and regulatory approvals are ongoing.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Talks end with no deal",
-     "probability": 0.5,
-     "move_pct": -12.0
-    },
-    {
-     "label": "Deal announced at significant premium",
+     "label": "Deal closes on favorable terms",
      "probability": 0.4,
-     "move_pct": 18.0
+     "move_pct": 15.0
     },
     {
-     "label": "Alternative bidder emerges",
-     "probability": 0.1,
-     "move_pct": 20.0
+     "label": "Deal closes with diluted terms / delays",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Deal collapses",
+     "probability": 0.2,
+     "move_pct": -25.0
     }
    ],
    "p_big": 1.0,
-   "p_up": 0.5,
-   "expected_move": 3.2,
-   "lean": "either way",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 92.44
+   "p_up": 0.4,
+   "expected_move": -3.0,
+   "lean": "down",
+   "id": "AAL.L:takeover",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 41.5
   },
   {
    "ticker": "DASH",
@@ -278,39 +278,6 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-23",
    "price_at_flag": 11.56
-  },
-  {
-   "ticker": "AAL.L",
-   "type": "takeover",
-   "source": "Angola puts $180mn price on 10% De Beers stake as Anglo American exit talks continue",
-   "title": "Anglo American De Beers Exit Talks",
-   "summary": "Angola is pricing a 10% De Beers stake, indicating Anglo American's exit from the diamond business is progressing but the terms and final deal are pending.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Successful exit at good price",
-     "probability": 0.6,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Exit delayed or fails",
-     "probability": 0.3,
-     "move_pct": -12.0
-    },
-    {
-     "label": "Exit at poor price",
-     "probability": 0.1,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.9,
-   "p_up": 0.6,
-   "expected_move": 1.9,
-   "lean": "up",
-   "id": "AAL.L:takeover",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 41.5
   },
   {
    "ticker": "NEE",
@@ -412,6 +379,72 @@
    "price_at_flag": 91.9
   },
   {
+   "ticker": "DG",
+   "type": "legal",
+   "source": "Dollar General Accused of Overcharging Millions at Checkout: Could It Be Happening to You?",
+   "title": "Overcharging investigation / lawsuit",
+   "summary": "Dollar General faces accusations of systematic overcharging at checkout. A pending investigation or class-action lawsuit could result in significant fines or settlement costs.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Settlement reached",
+     "probability": 0.5,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Investigation clears DG",
+     "probability": 0.3,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Major legal ruling against DG",
+     "probability": 0.2,
+     "move_pct": -25.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.3,
+   "expected_move": -8.5,
+   "lean": "down",
+   "id": "DG:legal",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 134.18
+  },
+  {
+   "ticker": "DASH",
+   "type": "takeover",
+   "source": "DoorDash Shares Climb 6.39% After Securing $1.79 Billion Loan Facility for Instacart Acquisition",
+   "title": "Instacart acquisition pending close",
+   "summary": "DoorDash's acquisition of Instacart is pending finalization. Regulatory approval and integration risks are unresolved, creating uncertainty about the combined company's prospects.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Acquisition closes smoothly",
+     "probability": 0.6,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Acquisition closes with conditions",
+     "probability": 0.3,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Acquisition blocked",
+     "probability": 0.1,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.6,
+   "expected_move": 2.5,
+   "lean": "up",
+   "id": "DASH:takeover",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 160.13
+  },
+  {
    "ticker": "EQNR",
    "type": "regulatory",
    "title": "Bay du Nord project approved, FID pending",
@@ -475,39 +508,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 209.74
-  },
-  {
-   "ticker": "NVDA",
-   "type": "regulatory",
-   "source": null,
-   "title": "Jensen Huang congressional grilling pending",
-   "summary": "NVIDIA CEO Jensen Huang faces congressional hearing with GOP skeptics. Outcome could affect AI trade sentiment and regulatory risk perception for NVIDIA.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Huang successfully defends company",
-     "probability": 0.5,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Mixed outcome with some risk flagged",
-     "probability": 0.3,
-     "move_pct": -2.0
-    },
-    {
-     "label": "Hearing reveals significant regulatory risk",
-     "probability": 0.2,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.5,
-   "expected_move": 1.4,
-   "lean": "either way",
-   "id": "NVDA:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 152.63
   },
   {
    "ticker": "285A",
@@ -574,6 +574,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-24",
    "price_at_flag": 338.38
+  },
+  {
+   "ticker": "BAYN.DE",
+   "type": "legal",
+   "source": "Bayer Clears Major Roundup Hurdle, but a New Study Raises Cancer Link Again",
+   "title": "New Roundup cancer link study impact",
+   "summary": "A new study has raised the cancer link to Roundup again, potentially reopening or strengthening legal challenges against Bayer that were thought to be subsiding.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Study dismissed by courts",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Study leads to new lawsuits",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Study triggers regulatory review",
+     "probability": 0.2,
+     "move_pct": -30.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.4,
+   "expected_move": -10.0,
+   "lean": "down",
+   "id": "BAYN.DE:legal",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 58.07
   },
   {
    "ticker": "NTRA",
@@ -840,6 +873,72 @@
    "price_at_flag": 41.5
   },
   {
+   "ticker": "NVDA",
+   "type": "regulatory",
+   "source": "Huang faces 3 camps of GOP skeptics ahead of congressional grilling",
+   "title": "Jensen Huang congressional grilling",
+   "summary": "Jensen Huang is set to face congressional grilling from GOP skeptics. The outcome could impact AI export policy and Nvidia's business prospects.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Hearing goes well, eases fears",
+     "probability": 0.4,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Hearing is inconclusive",
+     "probability": 0.4,
+     "move_pct": 0.0
+    },
+    {
+     "label": "Hearing leads to negative policy",
+     "probability": 0.2,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.4,
+   "expected_move": 2.0,
+   "lean": "down",
+   "id": "NVDA:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 152.63
+  },
+  {
+   "ticker": "AVGO",
+   "type": "results",
+   "source": null,
+   "title": "Broadcom Q4 earnings and 2027 AI revenue outlook",
+   "summary": "Broadcom reports Dec 9; key test is 2027 AI revenue guidance and any comment on Google TPU order cuts. Stock down ~12% in a week on AI trade fears.",
+   "key_date": "2026-12-09",
+   "outcomes": [
+    {
+     "label": "In-line guidance, no clarity on Google",
+     "probability": 0.4,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Weak guidance or confirmed Google cuts",
+     "probability": 0.35,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Strong guidance, Google order confirmed stable",
+     "probability": 0.25,
+     "move_pct": 12.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.65,
+   "expected_move": -1.4,
+   "lean": "up",
+   "id": "AVGO:results",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 301.08
+  },
+  {
    "ticker": "AVGO",
    "type": "leadership",
    "source": null,
@@ -871,6 +970,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 303.94
+  },
+  {
+   "ticker": "NTRA",
+   "type": "trial",
+   "source": "What Could Natera (NTRA) Gain From Its New Colorectal Cancer Trial Collaboration?",
+   "title": "Colorectal cancer trial collaboration outcome",
+   "summary": "Natera's new colorectal cancer trial collaboration is pending results. Success could expand its Signatera market, while failure would disappoint growth expectations.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Trial yields mixed data",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Trial yields strong positive data",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Trial fails / data is negative",
+     "probability": 0.3,
+     "move_pct": -25.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.7,
+   "expected_move": 0.5,
+   "lean": "up",
+   "id": "NTRA:trial",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 298.83
   },
   {
    "ticker": "SMTC",
@@ -936,6 +1068,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 137.9
+  },
+  {
+   "ticker": "FCX",
+   "type": "other",
+   "source": "Why Copper Producer Chile Is Missing Out on Surging Prices",
+   "title": "Copper price volatility and Freeport exposure",
+   "summary": "FCX surged 8% on Nov 24 but is down 24% in a month. Copper prices are volatile amid trade policy uncertainty and China demand concerns.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Copper stabilizes, stock range-bound",
+     "probability": 0.45,
+     "move_pct": 3.0
+    },
+    {
+     "label": "Copper prices rebound on supply cuts",
+     "probability": 0.3,
+     "move_pct": 12.0
+    },
+    {
+     "label": "Further copper price decline",
+     "probability": 0.25,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.55,
+   "p_up": 0.75,
+   "expected_move": 2.4,
+   "lean": "up",
+   "id": "FCX:other",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 49.71
   },
   {
    "ticker": "ASTS",
@@ -1004,31 +1169,102 @@
    "price_at_flag": 165.05
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
-   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
-   "summary": "EU Commission opened formal investigation into CCEP over cross-border beverage trade restrictions. Outcome could bring fines or remedies; uncertainty may weigh on stock.",
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "GTCR considers potential takeover of Global Payments",
+   "title": "GTCR considers potential takeover of Global Payments",
+   "summary": "GTCR is reportedly considering a takeover of Global Payments, an unresolved bid that could significantly impact the stock price if confirmed or rejected.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Probe closes with minor or no action",
-     "probability": 0.6,
-     "move_pct": 5.0
+     "label": "No bid materializes",
+     "probability": 0.5,
+     "move_pct": -5.0
     },
     {
-     "label": "Significant fines or restrictions imposed",
-     "probability": 0.4,
-     "move_pct": -15.0
+     "label": "Takeover bid announced",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Rumors denied",
+     "probability": 0.2,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.3,
+   "expected_move": 1.5,
+   "lean": "down",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 92.44
+  },
+  {
+   "ticker": "SNDK",
+   "type": "results",
+   "source": "Why Sandisk Stock Plunged Today",
+   "title": "SanDisk post-earnings selloff and memory cycle outlook",
+   "summary": "SanDisk plunged 17% on Nov 24 after earnings; stock down 50% in a month. The memory cycle outlook and AI demand for storage are unresolved.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Stabilization at lower levels, no catalyst",
+     "probability": 0.5,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Further downgrades and demand weakness",
+     "probability": 0.3,
+     "move_pct": -12.0
+    },
+    {
+     "label": "Memory cycle recovery narrative gains traction",
+     "probability": 0.2,
+     "move_pct": 15.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.7,
+   "expected_move": 0.4,
+   "lean": "up",
+   "id": "SNDK:results",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-25",
+   "price_at_flag": 77.95
+  },
+  {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Commission opens anti-trust probe into CCEP",
+   "title": "EU antitrust probe into Coca-Cola Europacific Partners",
+   "summary": "The EU Commission opened an antitrust probe into CCEP over cross-border beverage trade, with an unresolved outcome that could lead to fines or operational changes.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Probe concludes with minor remedies",
+     "probability": 0.6,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Significant fines or restrictions",
+     "probability": 0.3,
+     "move_pct": -20.0
+    },
+    {
+     "label": "Probe dropped",
+     "probability": 0.1,
+     "move_pct": 10.0
     }
    ],
    "p_big": 0.4,
-   "p_up": 0.6,
-   "expected_move": -3.0,
-   "lean": "up",
+   "p_up": 0.1,
+   "expected_move": -8.0,
+   "lean": "down",
    "id": "CCEP.L:regulatory",
    "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-24",
+   "last_seen": "2026-11-25",
    "price_at_flag": 115.04
   },
   {
@@ -1157,39 +1393,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 40.88
-  },
-  {
-   "ticker": "BAYN.DE",
-   "type": "legal",
-   "source": null,
-   "title": "Bayer Roundup settlement approval and new study",
-   "summary": "Bayer received judge approval for a $7.25 billion Roundup settlement, but a new study re-raising cancer links creates uncertainty. The unresolved issue is whether the settlement holds and ends major litigation, or if new evidence leads to further lawsuits or appeals.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Settlement holds, litigation risk reduced",
-     "probability": 0.5,
-     "move_pct": 5.0
-    },
-    {
-     "label": "New study triggers additional lawsuits",
-     "probability": 0.3,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Settlement challenged or modified",
-     "probability": 0.2,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.3,
-   "p_up": 0.5,
-   "expected_move": -1.5,
-   "lean": "either way",
-   "id": "BAYN.DE:legal",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 58.07
   },
   {
    "ticker": "NRG",

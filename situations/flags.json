@@ -438,5 +438,71 @@
 "p_up": 0.5,
 "expected_move": 1.4,
 "lean": "either way"
+},
+{
+"id": "DASH:takeover",
+"date": "2026-11-25",
+"ticker": "DASH",
+"type": "takeover",
+"price_usd": 160.13,
+"p_big": 0.7,
+"p_up": 0.6,
+"expected_move": 2.5,
+"lean": "up"
+},
+{
+"id": "NTRA:trial",
+"date": "2026-11-25",
+"ticker": "NTRA",
+"type": "trial",
+"price_usd": 298.83,
+"p_big": 0.6,
+"p_up": 0.7,
+"expected_move": 0.5,
+"lean": "up"
+},
+{
+"id": "DG:legal",
+"date": "2026-11-25",
+"ticker": "DG",
+"type": "legal",
+"price_usd": 134.18,
+"p_big": 0.7,
+"p_up": 0.3,
+"expected_move": -8.5,
+"lean": "down"
+},
+{
+"id": "AVGO:results",
+"date": "2026-11-25",
+"ticker": "AVGO",
+"type": "results",
+"price_usd": 301.08,
+"p_big": 0.6,
+"p_up": 0.65,
+"expected_move": -1.4,
+"lean": "up"
+},
+{
+"id": "SNDK:results",
+"date": "2026-11-25",
+"ticker": "SNDK",
+"type": "results",
+"price_usd": 77.95,
+"p_big": 0.5,
+"p_up": 0.7,
+"expected_move": 0.4,
+"lean": "up"
+},
+{
+"id": "FCX:other",
+"date": "2026-11-25",
+"ticker": "FCX",
+"type": "other",
+"price_usd": 49.71,
+"p_big": 0.55,
+"p_up": 0.75,
+"expected_move": 2.4,
+"lean": "up"
 }
 ]
