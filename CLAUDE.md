@@ -34,10 +34,20 @@ The private portfolio project (`KobiLDN/portfolio-private`) reads this site's da
 
 This repo is **public**. Never copy holdings, balances or other account data from the portfolio repo into anything here, including issues, commits and docs.
 
+## Manager session (owner decision, #120)
+
+The owner's **manager** session (`stocks/cloud`) plans, keeps the owner's Decision Desk and checks both projects each weekday at 08:20 UK. It doesn't write code. This session is the **Stocks builder**:
+- **Open issues labelled `decided` are the owner's decisions.** At every session start, list them and work through them, oldest first.
+- **Close each one with the PR that does it** (`Closes #N` in the PR body), following the usual branch → PR → checks routine.
+- **If a `decided` issue looks wrong or risky, ask the owner in chat before doing it.** Examples: it contradicts an earlier decision, could break the portfolio export, or would expose account data.
+- **Planning and owner decisions belong to the manager**, not here. Ideas or open questions found while building go to the manager as issue comments, or to the owner in chat, not into new `decided` issues.
+- **These rules still apply:** the portfolio notes channel (technical notes only) and no account data in this public repo.
+
 ## Read order at session start
 
 1. `CLAUDE.md` (this file)
 1b. `FROM_PORTFOLIO.md` on `main` in `KobiLDN/portfolio-private` (see above), if that repo is attached to the session
+1c. Open issues labelled `decided` in this repo (see "Manager session")
 2. `AGENTS.md`
 3. `WORKFLOW.md`
 4. `CHANGELOG.md` (newest entry first)
