@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26 18:36",
+ "updated": "2026-11-26 20:37",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -348,34 +348,6 @@
    "price_at_flag": 161.44
   },
   {
-   "ticker": "IMB.L",
-   "type": "takeover",
-   "source": "Altria Considers $157 Billion Tobacco Tie-Up With Imperial Brands",
-   "title": "Altria considers $157 billion tobacco tie-up with Imperial Brands",
-   "summary": "Altria is reportedly considering a massive merger with Imperial Brands, which could reshape the tobacco industry. The talks are preliminary and may not lead to a deal.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No deal",
-     "probability": 0.7,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Deal agreed at premium",
-     "probability": 0.3,
-     "move_pct": 20.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.3,
-   "expected_move": -1.0,
-   "lean": "down",
-   "id": "IMB.L:takeover",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 45.27
-  },
-  {
    "ticker": "RXRX",
    "type": "regulatory",
    "source": null,
@@ -706,6 +678,39 @@
    "price_at_flag": 10.99
   },
   {
+   "ticker": "IP",
+   "type": "other",
+   "source": null,
+   "title": "IP advances EMEA packaging spin-off with board approval",
+   "summary": "International Paper's board approved spinning off its EMEA packaging business. The spin-off is pending shareholder and regulatory approvals, and its structure and valuation are unresolved. Success could unlock value; failure or poor terms could hurt.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off completed, value unlocked",
+     "probability": 0.5,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Spin-off delayed or modified",
+     "probability": 0.3,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Spin-off cancelled",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.5,
+   "expected_move": 0.5,
+   "lean": "either way",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 29.86
+  },
+  {
    "ticker": "285A",
    "type": "activist",
    "source": "SK Hynix to Be Kioxia’s Top Shareholder",
@@ -937,32 +942,37 @@
    "price_at_flag": 710.42
   },
   {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
-   "title": "EU opens antitrust probe into Coca-Cola Europacific Partners",
-   "summary": "The European Commission has launched an antitrust investigation into Coca-Cola Europacific Partners over alleged cross-border trade restrictions. The probe could result in fines or changes to business practices, creating uncertainty for the bottler.",
+   "ticker": "IMB.L",
+   "type": "takeover",
+   "source": null,
+   "title": "Altria considers $157B tie-up with Imperial Brands",
+   "summary": "Reports that Altria is considering a merger with Imperial Brands have driven the stock to multi-year highs. The deal is not confirmed and faces regulatory and valuation hurdles. If it falls through, the stock could correct sharply.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Fine or remedies imposed",
-     "probability": 0.6,
-     "move_pct": -10.0
+     "label": "Talks continue without deal",
+     "probability": 0.4,
+     "move_pct": -5.0
     },
     {
-     "label": "Investigation closed with no action",
-     "probability": 0.4,
-     "move_pct": 5.0
+     "label": "Deal announced at premium",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Deal collapses",
+     "probability": 0.3,
+     "move_pct": -20.0
     }
    ],
    "p_big": 0.6,
-   "p_up": 0.4,
-   "expected_move": -4.0,
+   "p_up": 0.3,
+   "expected_move": -3.5,
    "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
+   "id": "IMB.L:takeover",
+   "first_flagged": "2026-11-26",
    "last_seen": "2026-11-26",
-   "price_at_flag": 115.04
+   "price_at_flag": 45.27
   },
   {
    "ticker": "INTC",
@@ -1592,6 +1602,39 @@
    "price_at_flag": 40.88
   },
   {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": null,
+   "title": "EU antitrust probe into CCEP cross-border trade",
+   "summary": "The EU Commission opened an antitrust probe into Coca-Cola Europacific Partners over cross-border beverage trade restrictions. The investigation is unresolved and could lead to fines or forced changes to business practices, impacting margins and growth.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Probe closed with minor remedies",
+     "probability": 0.5,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Significant fines and business restrictions",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "No action taken",
+     "probability": 0.2,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.7,
+   "expected_move": -1.0,
+   "lean": "up",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 115.04
+  },
+  {
    "ticker": "GPN",
    "type": "takeover",
    "source": "GTCR considers potential takeover of Global Payments",
@@ -1618,39 +1661,6 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-26",
    "price_at_flag": 92.44
-  },
-  {
-   "ticker": "CBK.DE",
-   "type": "takeover",
-   "source": "UniCredit Seeks Commerzbank Chair Role for CEO Orcel After Takeover Clears Final Hurdle",
-   "title": "UniCredit seeks Commerzbank chair role after takeover clears final hurdle",
-   "summary": "UniCredit has cleared all regulatory hurdles for its takeover of Commerzbank and is now pushing for a management shake-up, including replacing the chairman and CEO. The vote for a new supervisory board is expected in January, creating uncertainty about the bank's leadership and strategy.",
-   "key_date": "2027-01-01",
-   "outcomes": [
-    {
-     "label": "Smooth transition with UniCredit control",
-     "probability": 0.5,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Resistance leads to prolonged battle",
-     "probability": 0.3,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Compromise with partial changes",
-     "probability": 0.2,
-     "move_pct": 0.0
-    }
-   ],
-   "p_big": 0.3,
-   "p_up": 0.5,
-   "expected_move": -0.5,
-   "lean": "either way",
-   "id": "CBK.DE:takeover",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 36.35
   },
   {
    "ticker": "TPL",
@@ -1846,37 +1856,37 @@
    "price_at_flag": 344.48
   },
   {
-   "ticker": "IP",
-   "type": "other",
-   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
-   "title": "IP advances EMEA packaging business spin-off",
-   "summary": "International Paper received board approval to spin off its EMEA packaging business. The spin-off is pending completion; valuation and separation details are unresolved.",
-   "key_date": null,
+   "ticker": "CBK.DE",
+   "type": "takeover",
+   "source": null,
+   "title": "UniCredit seeks Commerzbank board control after takeover",
+   "summary": "UniCredit has cleared all regulatory hurdles for its Commerzbank takeover and now seeks to replace 9 of 10 shareholder supervisory board members, with CEO Orcel as chairman. The EGM vote is expected in January 2027, and the outcome will determine management control and integration pace.",
+   "key_date": "2027-01-31",
    "outcomes": [
     {
-     "label": "Spin-off completed as planned",
-     "probability": 0.7,
+     "label": "UniCredit wins board control, smooth integration",
+     "probability": 0.6,
      "move_pct": 5.0
     },
     {
-     "label": "Spin-off delayed or modified",
-     "probability": 0.2,
-     "move_pct": -5.0
+     "label": "Partial board changes, some resistance from Commerzbank",
+     "probability": 0.3,
+     "move_pct": -3.0
     },
     {
-     "label": "Spin-off cancelled",
+     "label": "UniCredit fails to secure board majority, deal stalls",
      "probability": 0.1,
-     "move_pct": -10.0
+     "move_pct": -15.0
     }
    ],
    "p_big": 0.1,
-   "p_up": 0.7,
-   "expected_move": 1.5,
+   "p_up": 0.6,
+   "expected_move": 0.6,
    "lean": "up",
-   "id": "IP:other",
-   "first_flagged": "2026-11-24",
+   "id": "CBK.DE:takeover",
+   "first_flagged": "2026-11-26",
    "last_seen": "2026-11-26",
-   "price_at_flag": 29.86
+   "price_at_flag": 36.35
   },
   {
    "ticker": "IP",
