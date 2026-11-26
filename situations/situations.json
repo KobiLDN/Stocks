@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26 00:45",
+ "updated": "2026-11-26 03:43",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 53,
+ "count": 55,
  "situations": [
   {
    "ticker": "WULF",
@@ -216,6 +216,44 @@
    "price_at_flag": 41.5
   },
   {
+   "ticker": "TSLA",
+   "type": "takeover",
+   "source": "Tesla and SpaceX stocks sink as merger concerns mount",
+   "title": "Tesla-SpaceX merger talks and EU FSD vote delay",
+   "summary": "Tesla and SpaceX are in merger talks with a target signing date before year-end, but investor pushback and dilution concerns are high. Separately, EU FSD approval vote postponed to Dec 15.",
+   "key_date": "2026-12-15",
+   "outcomes": [
+    {
+     "label": "Merger agreed on unfavorable terms or collapses",
+     "probability": 0.35,
+     "move_pct": -20.0
+    },
+    {
+     "label": "Merger agreed on favorable terms for TSLA",
+     "probability": 0.25,
+     "move_pct": 15.0
+    },
+    {
+     "label": "No deal; EU FSD approved Dec 15",
+     "probability": 0.25,
+     "move_pct": 10.0
+    },
+    {
+     "label": "No deal; EU FSD denied or delayed further",
+     "probability": 0.15,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.5,
+   "expected_move": -2.2,
+   "lean": "either way",
+   "id": "TSLA:takeover",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 384.68
+  },
+  {
    "ticker": "ASTS",
    "type": "product",
    "source": "ASTS Stock Eyes Worst Month Since 2024: Bulls Cheer Director’s Dip Buy And Bet On A Launch-Fueled Comeback",
@@ -381,37 +419,37 @@
    "price_at_flag": 83.97
   },
   {
-   "ticker": "IP",
-   "type": "other",
-   "source": null,
-   "title": "International Paper EMEA packaging spin-off decision",
-   "summary": "IP board approved spin-off of EMEA packaging business; execution details and final structure pending. Spin-off could unlock value or face operational risks.",
+   "ticker": "ASML",
+   "type": "regulatory",
+   "source": "ASML Holding (ENXTAM:ASML) Faces Dutch Pushback On New US China Chip Curbs",
+   "title": "Dutch pushback on new US China chip curbs",
+   "summary": "The Netherlands is pushing back against new US export restrictions on chip equipment to China, which could limit ASML's sales. The outcome of this diplomatic dispute is unresolved and could significantly impact ASML's revenue outlook.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Spin-off completed successfully",
-     "probability": 0.7,
+     "label": "Restrictions eased or delayed",
+     "probability": 0.4,
      "move_pct": 10.0
     },
     {
-     "label": "Spin-off delayed or challenged",
-     "probability": 0.2,
-     "move_pct": -5.0
+     "label": "Restrictions enforced as proposed",
+     "probability": 0.4,
+     "move_pct": -15.0
     },
     {
-     "label": "Spin-off abandoned",
-     "probability": 0.1,
-     "move_pct": -15.0
+     "label": "No change or minor adjustments",
+     "probability": 0.2,
+     "move_pct": -2.0
     }
    ],
    "p_big": 0.8,
-   "p_up": 0.7,
-   "expected_move": 4.5,
-   "lean": "up",
-   "id": "IP:other",
-   "first_flagged": "2026-11-24",
+   "p_up": 0.4,
+   "expected_move": -2.4,
+   "lean": "down",
+   "id": "ASML:regulatory",
+   "first_flagged": "2026-11-26",
    "last_seen": "2026-11-26",
-   "price_at_flag": 29.86
+   "price_at_flag": 1303.08
   },
   {
    "ticker": "WULF",
@@ -1239,39 +1277,6 @@
    "price_at_flag": 25.67
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": null,
-   "title": "GTCR considers potential takeover of Global Payments",
-   "summary": "Reports that GTCR is evaluating a potential acquisition of Global Payments. Deal terms and likelihood uncertain; if confirmed, could lead to premium bid.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No bid materializes",
-     "probability": 0.5,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Bid at moderate premium",
-     "probability": 0.35,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Bid at high premium",
-     "probability": 0.15,
-     "move_pct": 30.0
-    }
-   ],
-   "p_big": 0.5,
-   "p_up": 0.5,
-   "expected_move": 7.2,
-   "lean": "either way",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 92.44
-  },
-  {
    "ticker": "NVDA",
    "type": "legal",
    "source": "Jensen Huang is back: Does Washington have a seat in the boardroom?",
@@ -1305,39 +1310,6 @@
    "price_at_flag": 165.05
   },
   {
-   "ticker": "TSLA",
-   "type": "takeover",
-   "source": "Tesla and SpaceX stocks sink as merger concerns mount",
-   "title": "Tesla-SpaceX Merger Concerns",
-   "summary": "Reports of a potential merger between Tesla and SpaceX are causing stock volatility; the outcome is unresolved and could significantly impact Tesla's valuation.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No decision",
-     "probability": 0.5,
-     "move_pct": -3.0
-    },
-    {
-     "label": "Merger rejected",
-     "probability": 0.3,
-     "move_pct": 12.0
-    },
-    {
-     "label": "Merger announced",
-     "probability": 0.2,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.5,
-   "p_up": 0.3,
-   "expected_move": -0.9,
-   "lean": "down",
-   "id": "TSLA:takeover",
-   "first_flagged": "2026-11-25",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 384.68
-  },
-  {
    "ticker": "SNDK",
    "type": "results",
    "source": "Why Sandisk Stock Plunged Today",
@@ -1369,6 +1341,39 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-25",
    "price_at_flag": 77.95
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "GTCR considers potential takeover of Global Payments",
+   "title": "GTCR considers potential takeover of Global Payments",
+   "summary": "Reports indicate GTCR is evaluating a potential acquisition of Global Payments. A deal is not confirmed, and the outcome could significantly impact the stock.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No deal announced",
+     "probability": 0.5,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Acquisition at premium",
+     "probability": 0.4,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Lower offer or regulatory hurdles",
+     "probability": 0.1,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0.5,
+   "expected_move": 6.0,
+   "lean": "either way",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 92.44
   },
   {
    "ticker": "CRWD",
@@ -1635,6 +1640,39 @@
    "price_at_flag": 61.6
   },
   {
+   "ticker": "CRM",
+   "type": "results",
+   "source": "Salesforce earnings to put Bank of America’s growth outlook to the test",
+   "title": "Salesforce earnings to test growth outlook",
+   "summary": "Salesforce reports earnings soon, and the results will test whether its growth can justify its valuation after an AI-led selloff. The market is uncertain about its performance, making this a pending event.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Earnings in line with muted outlook",
+     "probability": 0.5,
+     "move_pct": -3.0
+    },
+    {
+     "label": "Earnings beat and strong guidance",
+     "probability": 0.3,
+     "move_pct": 8.0
+    },
+    {
+     "label": "Earnings miss and weak guidance",
+     "probability": 0.2,
+     "move_pct": -12.0
+    }
+   ],
+   "p_big": 0.2,
+   "p_up": 0.3,
+   "expected_move": -1.5,
+   "lean": "down",
+   "id": "CRM:results",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 197.21
+  },
+  {
    "ticker": "D",
    "type": "regulatory",
    "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
@@ -1699,6 +1737,39 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-25",
    "price_at_flag": 66.15
+  },
+  {
+   "ticker": "IP",
+   "type": "other",
+   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
+   "title": "International Paper EMEA packaging spin-off pending",
+   "summary": "IP's board approved spinning off its EMEA packaging business. The spin-off details and valuation are unresolved, affecting shareholder value.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off completed as planned",
+     "probability": 0.7,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Spin-off delayed or modified",
+     "probability": 0.2,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Spin-off cancelled",
+     "probability": 0.1,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.1,
+   "p_up": 0.7,
+   "expected_move": 1.5,
+   "lean": "up",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 29.86
   },
   {
    "ticker": "IP",

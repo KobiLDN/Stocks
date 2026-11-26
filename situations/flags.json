@@ -625,5 +625,27 @@
 "p_up": 0.3,
 "expected_move": -0.5,
 "lean": "down"
+},
+{
+"id": "ASML:regulatory",
+"date": "2026-11-26",
+"ticker": "ASML",
+"type": "regulatory",
+"price_usd": 1303.08,
+"p_big": 0.8,
+"p_up": 0.4,
+"expected_move": -2.4,
+"lean": "down"
+},
+{
+"id": "CRM:results",
+"date": "2026-11-26",
+"ticker": "CRM",
+"type": "results",
+"price_usd": 197.21,
+"p_big": 0.2,
+"p_up": 0.3,
+"expected_move": -1.5,
+"lean": "down"
 }
 ]
