@@ -680,5 +680,16 @@
 "p_up": 0.6,
 "expected_move": 6.0,
 "lean": "up"
+},
+{
+"id": "NVDA:leadership",
+"date": "2026-11-26",
+"ticker": "NVDA",
+"type": "leadership",
+"price_usd": 149.3,
+"p_big": 1.0,
+"p_up": 0.6,
+"expected_move": -2.0,
+"lean": "up"
 }
 ]

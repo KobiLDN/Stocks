@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26 15:50",
+ "updated": "2026-11-26 18:36",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 58,
+ "count": 59,
  "situations": [
   {
    "ticker": "WULF",
@@ -82,39 +82,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 12.85
-  },
-  {
-   "ticker": "IMB.L",
-   "type": "takeover",
-   "source": "Altria Considers $157 Billion Tobacco Tie-Up With Imperial Brands",
-   "title": "Altria and Japan Tobacco consider bids for Imperial Brands",
-   "summary": "Altria confirmed it is considering a potential takeover of Imperial Brands, and Japan Tobacco is also studying a deal. No offer has been made, and talks are ongoing.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Bid announced (Altria or JT)",
-     "probability": 0.4,
-     "move_pct": 15.0
-    },
-    {
-     "label": "No bid, talks collapse",
-     "probability": 0.4,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Rival bid or higher offer",
-     "probability": 0.2,
-     "move_pct": 20.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.6,
-   "expected_move": 6.0,
-   "lean": "up",
-   "id": "IMB.L:takeover",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 45.27
   },
   {
    "ticker": "RCAT",
@@ -320,6 +287,34 @@
    "price_at_flag": 25.62
   },
   {
+   "ticker": "NVDA",
+   "type": "leadership",
+   "source": "Jensen Huang 'absolutely could be fired again,' legal expert says",
+   "title": "Jensen Huang's future as Nvidia CEO uncertain after return",
+   "summary": "Jensen Huang has returned as CEO of Nvidia, but there are reports that he could be fired again, creating uncertainty about the company's leadership and direction.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Huang remains CEO, stability returns",
+     "probability": 0.6,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Huang is fired or leaves",
+     "probability": 0.4,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.6,
+   "expected_move": -2.0,
+   "lean": "up",
+   "id": "NVDA:leadership",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 149.3
+  },
+  {
    "ticker": "DASH",
    "type": "financing",
    "source": null,
@@ -351,6 +346,34 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 161.44
+  },
+  {
+   "ticker": "IMB.L",
+   "type": "takeover",
+   "source": "Altria Considers $157 Billion Tobacco Tie-Up With Imperial Brands",
+   "title": "Altria considers $157 billion tobacco tie-up with Imperial Brands",
+   "summary": "Altria is reportedly considering a massive merger with Imperial Brands, which could reshape the tobacco industry. The talks are preliminary and may not lead to a deal.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No deal",
+     "probability": 0.7,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Deal agreed at premium",
+     "probability": 0.3,
+     "move_pct": 20.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.3,
+   "expected_move": -1.0,
+   "lean": "down",
+   "id": "IMB.L:takeover",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 45.27
   },
   {
    "ticker": "RXRX",
@@ -450,6 +473,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 83.97
+  },
+  {
+   "ticker": "ASML",
+   "type": "regulatory",
+   "source": "Dutch minister says US chip curbs bill would hurt Europe",
+   "title": "US MATCH Act threatens ASML China sales",
+   "summary": "Dutch minister warns US chip curbs bill (MATCH Act) would hurt Europe. ASML has 20% China exposure. Unresolved: whether the bill passes and restricts ASML's China business.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Bill passes, China sales restricted",
+     "probability": 0.4,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Bill fails or is watered down",
+     "probability": 0.4,
+     "move_pct": 10.0
+    },
+    {
+     "label": "ASML diversifies, limited impact",
+     "probability": 0.2,
+     "move_pct": 0.0
+    }
+   ],
+   "p_big": 0.8,
+   "p_up": 0.4,
+   "expected_move": -2.0,
+   "lean": "down",
+   "id": "ASML:regulatory",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 1303.08
   },
   {
    "ticker": "TSLA",
@@ -881,6 +937,34 @@
    "price_at_flag": 710.42
   },
   {
+   "ticker": "CCEP.L",
+   "type": "regulatory",
+   "source": "EU Probes Coca-Cola Bottler, Citing Antitrust Concerns",
+   "title": "EU opens antitrust probe into Coca-Cola Europacific Partners",
+   "summary": "The European Commission has launched an antitrust investigation into Coca-Cola Europacific Partners over alleged cross-border trade restrictions. The probe could result in fines or changes to business practices, creating uncertainty for the bottler.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Fine or remedies imposed",
+     "probability": 0.6,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Investigation closed with no action",
+     "probability": 0.4,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.4,
+   "expected_move": -4.0,
+   "lean": "down",
+   "id": "CCEP.L:regulatory",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 115.04
+  },
+  {
    "ticker": "INTC",
    "type": "regulatory",
    "source": null,
@@ -1077,6 +1161,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 303.94
+  },
+  {
+   "ticker": "MBG.DE",
+   "type": "regulatory",
+   "source": null,
+   "title": "EU hybrid import cap impact on Mercedes-Benz",
+   "summary": "EU caps hybrid imports from Dec 1, 2026, protecting European automakers. Mercedes-Benz benefits, but JPMorgan cut price target. Unresolved: how the cap affects sales and margins.",
+   "key_date": "2026-12-01",
+   "outcomes": [
+    {
+     "label": "Cap boosts sales and margins",
+     "probability": 0.4,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Cap has limited impact, earnings weak",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "US tariffs escalate, offsetting cap",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.4,
+   "expected_move": -1.0,
+   "lean": "down",
+   "id": "MBG.DE:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 41.15
   },
   {
    "ticker": "DG",
@@ -1279,10 +1396,10 @@
   {
    "ticker": "MRVL",
    "type": "results",
-   "source": null,
-   "title": "Marvell reports earnings Tuesday",
-   "summary": "Marvell Technology reports earnings on Tuesday. The stock has dropped 44% in the past month, and the results will test whether the selloff is overdone or justified.",
-   "key_date": "2026-11-27",
+   "source": "Marvell Reports Tuesday. How Often Has It Dropped 10%?",
+   "title": "Marvell earnings due amid AI selloff",
+   "summary": "Marvell reports earnings on Nov 26. Stock down 44% in a month. Unresolved: whether results and guidance can reverse the AI sector selloff.",
+   "key_date": "2026-11-26",
    "outcomes": [
     {
      "label": "In-line results, cautious outlook",
@@ -1290,19 +1407,19 @@
      "move_pct": -5.0
     },
     {
-     "label": "Beat and raise guidance",
+     "label": "Strong results, guidance beats",
      "probability": 0.3,
-     "move_pct": 10.0
+     "move_pct": 15.0
     },
     {
-     "label": "Miss and cut guidance",
+     "label": "Miss, guidance cut",
      "probability": 0.2,
-     "move_pct": -15.0
+     "move_pct": -20.0
     }
    ],
    "p_big": 0.5,
    "p_up": 0.3,
-   "expected_move": -2.5,
+   "expected_move": -2.0,
    "lean": "down",
    "id": "MRVL:results",
    "first_flagged": "2026-11-24",
@@ -1409,169 +1526,37 @@
    "price_at_flag": 366.18
   },
   {
-   "ticker": "ASML",
-   "type": "regulatory",
-   "source": null,
-   "title": "MATCH Act could restrict ASML's China sales",
-   "summary": "The MATCH Act, a US bill to tighten chip export curbs, is being debated. A Dutch lawmaker warned it would be 'disastrous for ASML' as China represents 20% of sales.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Bill passes, restrictions tighten",
-     "probability": 0.4,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Bill fails or is watered down",
-     "probability": 0.4,
-     "move_pct": 8.0
-    },
-    {
-     "label": "No decision in next month",
-     "probability": 0.2,
-     "move_pct": 0.0
-    }
-   ],
-   "p_big": 0.4,
-   "p_up": 0.4,
-   "expected_move": -0.8,
-   "lean": "down",
-   "id": "ASML:regulatory",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 1303.08
-  },
-  {
    "ticker": "DG",
    "type": "regulatory",
-   "source": null,
-   "title": "Dollar General faces pricing lawsuit from New Mexico",
-   "summary": "New Mexico joined a federal lawsuit accusing Dollar General of overcharging customers, with a majority of states now battling the company over pricing practices. The unresolved issue is the outcome of these legal actions and potential fines or settlements.",
+   "source": "Dollar General (DG) Is Being Sued By 20 States Over Alleged Deceptive Pricing",
+   "title": "Dollar General sued by 20 states over pricing",
+   "summary": "20 states sue Dollar General for alleged deceptive pricing practices. Unresolved: outcome of lawsuit, potential fines or changes in pricing strategy.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Settlement or fine, limited impact",
-     "probability": 0.5,
+     "label": "Settlement with minor fine",
+     "probability": 0.6,
      "move_pct": -3.0
     },
     {
-     "label": "Broader regulatory action or penalties",
+     "label": "Large fine, forced policy change",
      "probability": 0.3,
-     "move_pct": -10.0
+     "move_pct": -15.0
     },
     {
-     "label": "Dismissal or favorable ruling",
-     "probability": 0.2,
+     "label": "Dismissed, no impact",
+     "probability": 0.1,
      "move_pct": 5.0
     }
    ],
    "p_big": 0.3,
-   "p_up": 0.2,
-   "expected_move": -3.5,
+   "p_up": 0.1,
+   "expected_move": -5.8,
    "lean": "down",
    "id": "DG:regulatory",
    "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
+   "last_seen": "2026-11-26",
    "price_at_flag": 139.51
-  },
-  {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Commission opens anti-trust probe into CCEP",
-   "title": "EU antitrust probe into CCEP cross-border practices",
-   "summary": "The European Commission opened a formal investigation on 23 Nov 2026 into whether CCEP abused its dominant position to hinder cross-border trade of soft drinks. Outcome could include fines up to 10% of turnover or remedies, with no set deadline.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Long investigation, no near-term impact",
-     "probability": 0.5,
-     "move_pct": -2.0
-    },
-    {
-     "label": "Fines/remedies imposed",
-     "probability": 0.3,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Case closed with no action",
-     "probability": 0.2,
-     "move_pct": 5.0
-    }
-   ],
-   "p_big": 0.3,
-   "p_up": 0.2,
-   "expected_move": -3.0,
-   "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 115.04
-  },
-  {
-   "ticker": "CBK.DE",
-   "type": "takeover",
-   "source": null,
-   "title": "UniCredit takeover of Commerzbank clears final hurdle",
-   "summary": "UniCredit secured final Polish approval for its takeover bid. The deal is now fully cleared, but Commerzbank shareholders must still vote on the offer, and the outcome is uncertain.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Takeover completed at offered price",
-     "probability": 0.7,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Shareholders reject or delay deal",
-     "probability": 0.2,
-     "move_pct": -15.0
-    },
-    {
-     "label": "Improved offer emerges",
-     "probability": 0.1,
-     "move_pct": 20.0
-    }
-   ],
-   "p_big": 0.3,
-   "p_up": 0.8,
-   "expected_move": 2.5,
-   "lean": "up",
-   "id": "CBK.DE:takeover",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 36.35
-  },
-  {
-   "ticker": "MBG.DE",
-   "type": "regulatory",
-   "source": null,
-   "title": "EU hybrid import cap and US House letter deadline",
-   "summary": "The EU capped hybrid imports from Dec 1, aiding Mercedes, but a US House letter on Chinese ties requires a reply by Dec 1, posing tariff risk.",
-   "key_date": "2026-12-01",
-   "outcomes": [
-    {
-     "label": "US letter resolved favorably",
-     "probability": 0.6,
-     "move_pct": 5.0
-    },
-    {
-     "label": "US letter leads to tariffs or restrictions",
-     "probability": 0.3,
-     "move_pct": -15.0
-    },
-    {
-     "label": "No resolution by Dec 1, uncertainty persists",
-     "probability": 0.1,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.3,
-   "p_up": 0.6,
-   "expected_move": -2.0,
-   "lean": "up",
-   "id": "MBG.DE:regulatory",
-   "first_flagged": "2026-11-25",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 41.15
   },
   {
    "ticker": "MBG.DE",
@@ -1607,11 +1592,72 @@
    "price_at_flag": 40.88
   },
   {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": "GTCR considers potential takeover of Global Payments",
+   "title": "GTCR considers potential takeover of Global Payments",
+   "summary": "Private equity firm GTCR is reportedly considering a takeover of Global Payments, which could lead to a bid. The uncertainty around a potential acquisition is driving stock movement.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No bid or bid falls through",
+     "probability": 0.7,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Takeover bid materializes at premium",
+     "probability": 0.3,
+     "move_pct": 15.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.3,
+   "expected_move": 1.0,
+   "lean": "down",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 92.44
+  },
+  {
+   "ticker": "CBK.DE",
+   "type": "takeover",
+   "source": "UniCredit Seeks Commerzbank Chair Role for CEO Orcel After Takeover Clears Final Hurdle",
+   "title": "UniCredit seeks Commerzbank chair role after takeover clears final hurdle",
+   "summary": "UniCredit has cleared all regulatory hurdles for its takeover of Commerzbank and is now pushing for a management shake-up, including replacing the chairman and CEO. The vote for a new supervisory board is expected in January, creating uncertainty about the bank's leadership and strategy.",
+   "key_date": "2027-01-01",
+   "outcomes": [
+    {
+     "label": "Smooth transition with UniCredit control",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Resistance leads to prolonged battle",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Compromise with partial changes",
+     "probability": 0.2,
+     "move_pct": 0.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.5,
+   "expected_move": -0.5,
+   "lean": "either way",
+   "id": "CBK.DE:takeover",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 36.35
+  },
+  {
    "ticker": "TPL",
    "type": "takeover",
-   "source": "Texas Pacific Land agrees $3bn all-stock acquisition of EagleRock",
-   "title": "TPL's $3B EagleRock acquisition pending",
-   "summary": "TPL agreed to acquire EagleRock Land for $3B in stock. Deal requires regulatory and shareholder approval.",
+   "source": "Texas Pacific Land's $3B EagleRock Deal Expands Permian Footprint",
+   "title": "Texas Pacific Land agrees $3bn acquisition of EagleRock Land",
+   "summary": "Texas Pacific Land has agreed to acquire EagleRock Land in an all-stock deal, but the transaction is pending regulatory and shareholder approvals. The outcome could affect TPL's stock price.",
    "key_date": null,
    "outcomes": [
     {
@@ -1620,57 +1666,19 @@
      "move_pct": 5.0
     },
     {
-     "label": "Shareholders reject deal",
-     "probability": 0.2,
+     "label": "Deal blocked or renegotiated",
+     "probability": 0.3,
      "move_pct": -10.0
-    },
-    {
-     "label": "Deal blocked by regulators",
-     "probability": 0.1,
-     "move_pct": -15.0
     }
    ],
    "p_big": 0.3,
    "p_up": 0.7,
-   "expected_move": 0.0,
+   "expected_move": 0.5,
    "lean": "up",
    "id": "TPL:takeover",
    "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 259.71
-  },
-  {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": "GTCR considers potential takeover of Global Payments",
-   "title": "GTCR considers potential takeover of Global Payments",
-   "summary": "Reports indicate GTCR is evaluating a potential acquisition of Global Payments. A deal could offer a premium, but talks may fall through or face regulatory hurdles.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No deal, stock drifts",
-     "probability": 0.4,
-     "move_pct": -2.0
-    },
-    {
-     "label": "Talks break down",
-     "probability": 0.35,
-     "move_pct": -8.0
-    },
-    {
-     "label": "Acquisition announced at premium",
-     "probability": 0.25,
-     "move_pct": 15.0
-    }
-   ],
-   "p_big": 0.25,
-   "p_up": 0.25,
-   "expected_move": 0.2,
-   "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
    "last_seen": "2026-11-26",
-   "price_at_flag": 92.44
+   "price_at_flag": 259.71
   },
   {
    "ticker": "DG",
@@ -1704,6 +1712,39 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-26",
    "price_at_flag": 134.18
+  },
+  {
+   "ticker": "ULVR.L",
+   "type": "regulatory",
+   "source": "Fragrance Giants Handed $630 Million in EU, U.K. Antitrust Fines",
+   "title": "Unilever exposure to fragrance cartel fines",
+   "summary": "Fragrance giants Givaudan, Firmenich, IFF fined $630M for cartel. Unilever is a major customer; fines may raise input costs or lead to supplier changes. Unresolved: impact on Unilever's supply costs and margins.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Cost pass-through successful",
+     "probability": 0.5,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Margins squeezed, earnings miss",
+     "probability": 0.3,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Supplier disruption, legal costs",
+     "probability": 0.2,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.2,
+   "p_up": 0.5,
+   "expected_move": -2.5,
+   "lean": "either way",
+   "id": "ULVR.L:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 66.15
   },
   {
    "ticker": "BMY",
@@ -1803,39 +1844,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-26",
    "price_at_flag": 344.48
-  },
-  {
-   "ticker": "ULVR.L",
-   "type": "regulatory",
-   "source": "U.K. Regulator Says McCormick Sale of Colman’s Could Address Unilever Foods Merger Concerns",
-   "title": "UK regulator reviews Unilever/McCormick deal",
-   "summary": "UK competition regulator has concerns about the Unilever foods acquisition. McCormick offered to sell Colman's to address them.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Deal cleared with Colman's sale",
-     "probability": 0.6,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Deal blocked",
-     "probability": 0.2,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Further concessions required",
-     "probability": 0.2,
-     "move_pct": -3.0
-    }
-   ],
-   "p_big": 0.2,
-   "p_up": 0.6,
-   "expected_move": 0.4,
-   "lean": "up",
-   "id": "ULVR.L:regulatory",
-   "first_flagged": "2026-11-25",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 66.15
   },
   {
    "ticker": "IP",
