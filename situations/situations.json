@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25 20:38",
+ "updated": "2026-11-26 00:45",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,39 +15,40 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 55,
+ "count": 53,
  "situations": [
   {
-   "ticker": "NBIS",
-   "type": "regulatory",
-   "title": "New US curbs on neocloud chip access in Southeast Asia",
-   "summary": "US rules announced Nov 23 restrict AI chip shipments to four Southeast Asian countries and crack down on data centers giving Chinese firms remote access to restricted hardware, effective February 2027. Nebius has operations in Singapore, making it directly exposed. The scope and enforcement details ",
-   "key_date": "2027-02-01",
+   "ticker": "WULF",
+   "type": "activist",
+   "source": "TeraWulf’s CEO Says Anthropic Won’t “Walk Away From Deals.” Junk-Rating Talk Tests That",
+   "title": "TeraWulf's $19B Anthropic deal faces funding and rating risk",
+   "summary": "TeraWulf's massive GPU hosting deal with Anthropic is under scrutiny as debt markets tighten and a junk rating is discussed. The CEO claims Anthropic won't walk away, but the financing structure and Google's guarantee create unresolved risk.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "Moderate restrictions, some delays",
-     "probability": 0.5,
+     "label": "Deal renegotiated or delayed",
+     "probability": 0.4,
      "move_pct": -15.0
     },
     {
-     "label": "Rules narrowly enforced, minimal impact",
+     "label": "Deal closes as planned",
      "probability": 0.3,
-     "move_pct": 10.0
+     "move_pct": 20.0
     },
     {
-     "label": "Broad crackdown, major business disruption",
-     "probability": 0.2,
-     "move_pct": -35.0
+     "label": "Deal collapses or financing fails",
+     "probability": 0.3,
+     "move_pct": -40.0
     }
    ],
    "p_big": 1.0,
    "p_up": 0.3,
-   "expected_move": -11.5,
+   "expected_move": -12.0,
    "lean": "down",
-   "id": "NBIS:regulatory",
+   "id": "WULF:activist",
    "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 103.07
+   "last_seen": "2026-11-26",
+   "price_at_flag": 11.56
   },
   {
    "ticker": "IREN",
@@ -314,38 +315,6 @@
    "price_at_flag": 2.7
   },
   {
-   "ticker": "WULF",
-   "type": "activist",
-   "title": "TeraWulf CEO won't rush Muskie lease deal",
-   "summary": "TeraWulf's CEO stated he won't rush a lease deal for the Muskie site in a 'terrible market', while peers Applied Digital and Core Scientific have secured or are pursuing large hyperscaler leases. The stock surged on sector news but the CEO's caution creates uncertainty about the company's own deal t",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "No lease, market improves slowly",
-     "probability": 0.5,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Muskie lease signed within 3 months",
-     "probability": 0.3,
-     "move_pct": 30.0
-    },
-    {
-     "label": "No lease, market deteriorates",
-     "probability": 0.2,
-     "move_pct": -25.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.3,
-   "expected_move": -1.0,
-   "lean": "down",
-   "id": "WULF:activist",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 11.56
-  },
-  {
    "ticker": "NRG",
    "type": "product",
    "source": "Why Did NRG Stock Jump?",
@@ -412,6 +381,39 @@
    "price_at_flag": 83.97
   },
   {
+   "ticker": "IP",
+   "type": "other",
+   "source": null,
+   "title": "International Paper EMEA packaging spin-off decision",
+   "summary": "IP board approved spin-off of EMEA packaging business; execution details and final structure pending. Spin-off could unlock value or face operational risks.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off completed successfully",
+     "probability": 0.7,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Spin-off delayed or challenged",
+     "probability": 0.2,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Spin-off abandoned",
+     "probability": 0.1,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.8,
+   "p_up": 0.7,
+   "expected_move": 4.5,
+   "lean": "up",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 29.86
+  },
+  {
    "ticker": "WULF",
    "type": "financing",
    "source": null,
@@ -443,6 +445,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 9.65
+  },
+  {
+   "ticker": "TSM",
+   "type": "policy",
+   "source": "Trump heads to Arizona next week for a high-stakes expansion of TSMC's computer chip factories",
+   "title": "Trump's Arizona visit signals pending TSMC expansion decision",
+   "summary": "Trump heads to Arizona next week for a high-stakes expansion of TSMC's chip factories. The outcome of this visit — including potential government incentives, tariff exemptions, or regulatory approvals — is unresolved and could significantly impact TSMC's US manufacturing plans.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Expansion approved with incentives",
+     "probability": 0.4,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Expansion delayed or scaled back",
+     "probability": 0.35,
+     "move_pct": -10.0
+    },
+    {
+     "label": "No clear outcome or negative surprise",
+     "probability": 0.25,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.75,
+   "p_up": 0.4,
+   "expected_move": -0.8,
+   "lean": "down",
+   "id": "TSM:policy",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 342.34
   },
   {
    "ticker": "DG",
@@ -511,38 +546,6 @@
    "price_at_flag": 160.13
   },
   {
-   "ticker": "EQNR",
-   "type": "regulatory",
-   "title": "Bay du Nord project approved, FID pending",
-   "summary": "Canada and Newfoundland approved the $14B Bay du Nord offshore oil project development plan, but final investment decision (FID) is still pending. Equinor also recently contained a cyberattack. The stock has fallen sharply amid broader energy weakness.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "FID approved within 6 months",
-     "probability": 0.4,
-     "move_pct": 10.0
-    },
-    {
-     "label": "FID delayed or cancelled",
-     "probability": 0.3,
-     "move_pct": -15.0
-    },
-    {
-     "label": "No news, market focus elsewhere",
-     "probability": 0.3,
-     "move_pct": -5.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.4,
-   "expected_move": -2.0,
-   "lean": "down",
-   "id": "EQNR:regulatory",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 38.59
-  },
-  {
    "ticker": "CRWD",
    "type": "leadership",
    "source": "CrowdStrike Bets Two Top Dogs Beat One",
@@ -574,39 +577,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 209.74
-  },
-  {
-   "ticker": "IP",
-   "type": "other",
-   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
-   "title": "IP's DS Smith spin-off execution",
-   "summary": "International Paper is spinning off its EMEA packaging business (DS Smith). The execution and valuation of the spin-off are pending.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Spin-off successful, unlocks value",
-     "probability": 0.5,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Spin-off faces delays/valuation issues",
-     "probability": 0.3,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Spin-off cancelled",
-     "probability": 0.2,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.5,
-   "expected_move": 1.5,
-   "lean": "either way",
-   "id": "IP:other",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 29.86
   },
   {
    "ticker": "TSM",
@@ -873,6 +843,39 @@
    "price_at_flag": 59.66
   },
   {
+   "ticker": "MU",
+   "type": "results",
+   "source": "Is Micron Cheap Only If Its Record Margin Lasts?",
+   "title": "Micron's December earnings report to test record margins",
+   "summary": "Micron reports fiscal Q1 results in December. Consensus revenue estimate of $63.8B sits above management's $60-63B guide, so a beat is priced in. The key unresolved question is whether record 74.6% operating margins can hold as memory price increases slow.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Revenue in line, margins slip",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Revenue misses or margins drop sharply",
+     "probability": 0.35,
+     "move_pct": -20.0
+    },
+    {
+     "label": "Revenue beats and margins hold",
+     "probability": 0.25,
+     "move_pct": 15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.25,
+   "expected_move": -5.2,
+   "lean": "down",
+   "id": "MU:results",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 710.42
+  },
+  {
    "ticker": "MRVL",
    "type": "results",
    "source": "Generate A Return From Marvell Stock, Set For A Large Post-Earnings Swing",
@@ -904,39 +907,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 132.32
-  },
-  {
-   "ticker": "MU",
-   "type": "results",
-   "source": null,
-   "title": "Micron Q1 FY2027 earnings due in December",
-   "summary": "Micron reports Q1 FY2027 results in December. Stock down 30% in month. Guidance and margin will test if AI memory demand is peaking. Consensus expects revenue above management's own range.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "In-line with guidance",
-     "probability": 0.4,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Beat on revenue and margin",
-     "probability": 0.3,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Miss on revenue or margin",
-     "probability": 0.3,
-     "move_pct": -20.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.3,
-   "expected_move": -3.5,
-   "lean": "down",
-   "id": "MU:results",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 710.42
   },
   {
    "ticker": "INTC",
@@ -1137,37 +1107,37 @@
    "price_at_flag": 137.9
   },
   {
-   "ticker": "GPN",
-   "type": "takeover",
-   "source": "GTCR considers potential takeover of Global Payments",
-   "title": "GTCR considers potential takeover of GPN",
-   "summary": "Private equity firm GTCR is considering a potential takeover of Global Payments, creating uncertainty.",
+   "ticker": "NBIS",
+   "type": "financing",
+   "source": null,
+   "title": "Neocloud financing fears after HPE warning",
+   "summary": "HPE CEO said it hasn't financed neocloud/high-risk customers, reigniting fears about Nebius's ability to fund $27B capex. Stock near 52-wk low. Resolution unclear.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "No bid materializes",
+     "label": "No new financing news, stock drifts",
      "probability": 0.4,
      "move_pct": -5.0
     },
     {
-     "label": "Formal bid announced",
+     "label": "Financing concerns ease, sector recovers",
      "probability": 0.3,
-     "move_pct": 15.0
+     "move_pct": 30.0
     },
     {
-     "label": "Takeover talks collapse",
+     "label": "Further negative financing news",
      "probability": 0.3,
-     "move_pct": -10.0
+     "move_pct": -25.0
     }
    ],
    "p_big": 0.6,
    "p_up": 0.3,
    "expected_move": -0.5,
    "lean": "down",
-   "id": "GPN:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 92.44
+   "id": "NBIS:financing",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 84.99
   },
   {
    "ticker": "NTRA",
@@ -1201,38 +1171,6 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-25",
    "price_at_flag": 298.83
-  },
-  {
-   "ticker": "SMTC",
-   "type": "results",
-   "title": "Semtech Q3 earnings report due after close",
-   "summary": "Semtech reports fiscal Q3 earnings after market close on Nov 23. The stock has fallen sharply from its 52-week high amid supply chain concerns and analyst target cuts. The report will test whether the AI data center growth story remains intact.",
-   "key_date": "2026-11-23",
-   "outcomes": [
-    {
-     "label": "Beat and raise guidance",
-     "probability": 0.4,
-     "move_pct": 15.0
-    },
-    {
-     "label": "In-line results, cautious outlook",
-     "probability": 0.4,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Miss and cut guidance",
-     "probability": 0.2,
-     "move_pct": -20.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.4,
-   "expected_move": 0.0,
-   "lean": "down",
-   "id": "SMTC:results",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 104.16
   },
   {
    "ticker": "FCX",
@@ -1299,6 +1237,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 25.67
+  },
+  {
+   "ticker": "GPN",
+   "type": "takeover",
+   "source": null,
+   "title": "GTCR considers potential takeover of Global Payments",
+   "summary": "Reports that GTCR is evaluating a potential acquisition of Global Payments. Deal terms and likelihood uncertain; if confirmed, could lead to premium bid.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No bid materializes",
+     "probability": 0.5,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Bid at moderate premium",
+     "probability": 0.35,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Bid at high premium",
+     "probability": 0.15,
+     "move_pct": 30.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.5,
+   "expected_move": 7.2,
+   "lean": "either way",
+   "id": "GPN:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 92.44
   },
   {
    "ticker": "NVDA",
@@ -1398,39 +1369,6 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-25",
    "price_at_flag": 77.95
-  },
-  {
-   "ticker": "CCEP.L",
-   "type": "regulatory",
-   "source": "EU Commission opens anti-trust probe into CCEP",
-   "title": "EU antitrust probe into CCEP",
-   "summary": "EU Commission opened an antitrust probe into CCEP over cross-border trade restrictions. Outcome could involve fines or business practice changes.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Fines and business restrictions",
-     "probability": 0.4,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Probe closed without action",
-     "probability": 0.3,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Minor remedies required",
-     "probability": 0.3,
-     "move_pct": -2.0
-    }
-   ],
-   "p_big": 0.4,
-   "p_up": 0.3,
-   "expected_move": -3.1,
-   "lean": "down",
-   "id": "CCEP.L:regulatory",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 115.04
   },
   {
    "ticker": "CRWD",
@@ -1631,37 +1569,37 @@
    "price_at_flag": 259.71
   },
   {
-   "ticker": "NRG",
+   "ticker": "CCEP.L",
    "type": "regulatory",
    "source": null,
-   "title": "NRG's $4B asset sale to LS Power needs approvals",
-   "summary": "NRG agreed to sell 4.9 GW of gas plants to LS Power for $4B. Closing in Q2 2027 requires HSR, FERC, and NYSPSC approvals. If blocked or delayed, the planned buybacks and debt reduction could be jeopardized.",
-   "key_date": "2027-06-30",
+   "title": "EU antitrust probe into CCEP cross-border practices",
+   "summary": "EC opened formal investigation into CCEP for potentially hindering cross-border trade of soft drinks in 8 EU countries. Outcome uncertain; could lead to fines or behavioral remedies.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "Approvals granted, deal closes on time",
-     "probability": 0.75,
+     "label": "Investigation closed with no action",
+     "probability": 0.4,
      "move_pct": 5.0
     },
     {
-     "label": "Regulatory delay or conditions imposed",
-     "probability": 0.15,
-     "move_pct": -10.0
+     "label": "Minor remedies or fine",
+     "probability": 0.4,
+     "move_pct": -5.0
     },
     {
-     "label": "Deal blocked or renegotiated lower",
-     "probability": 0.1,
-     "move_pct": -20.0
+     "label": "Significant fine or structural remedy",
+     "probability": 0.2,
+     "move_pct": -15.0
     }
    ],
-   "p_big": 0.25,
-   "p_up": 0.75,
-   "expected_move": 0.2,
-   "lean": "up",
-   "id": "NRG:regulatory",
+   "p_big": 0.2,
+   "p_up": 0.4,
+   "expected_move": -3.0,
+   "lean": "down",
+   "id": "CCEP.L:regulatory",
    "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-23",
-   "price_at_flag": 94.1
+   "last_seen": "2026-11-26",
+   "price_at_flag": 115.04
   },
   {
    "ticker": "BMY",

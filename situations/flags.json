@@ -603,5 +603,27 @@
 "p_up": 0.4,
 "expected_move": -1.8,
 "lean": "down"
+},
+{
+"id": "TSM:policy",
+"date": "2026-11-26",
+"ticker": "TSM",
+"type": "policy",
+"price_usd": 342.34,
+"p_big": 0.75,
+"p_up": 0.4,
+"expected_move": -0.8,
+"lean": "down"
+},
+{
+"id": "NBIS:financing",
+"date": "2026-11-26",
+"ticker": "NBIS",
+"type": "financing",
+"price_usd": 84.99,
+"p_big": 0.6,
+"p_up": 0.3,
+"expected_move": -0.5,
+"lean": "down"
 }
 ]
