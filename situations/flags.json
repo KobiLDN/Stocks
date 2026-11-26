@@ -647,5 +647,38 @@
 "p_up": 0.3,
 "expected_move": -1.5,
 "lean": "down"
+},
+{
+"id": "CBK.DE:takeover",
+"date": "2026-11-26",
+"ticker": "CBK.DE",
+"type": "takeover",
+"price_usd": 36.35,
+"p_big": 0.3,
+"p_up": 0.8,
+"expected_move": 2.5,
+"lean": "up"
+},
+{
+"id": "TSLA:regulatory",
+"date": "2026-11-26",
+"ticker": "TSLA",
+"type": "regulatory",
+"price_usd": 380.14,
+"p_big": 0.8,
+"p_up": 0.35,
+"expected_move": -0.7,
+"lean": "down"
+},
+{
+"id": "IMB.L:takeover",
+"date": "2026-11-26",
+"ticker": "IMB.L",
+"type": "takeover",
+"price_usd": 45.27,
+"p_big": 1.0,
+"p_up": 0.6,
+"expected_move": 6.0,
+"lean": "up"
 }
 ]

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26 07:41",
+ "updated": "2026-11-26 15:50",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 55,
+ "count": 58,
  "situations": [
   {
    "ticker": "WULF",
@@ -82,6 +82,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 12.85
+  },
+  {
+   "ticker": "IMB.L",
+   "type": "takeover",
+   "source": "Altria Considers $157 Billion Tobacco Tie-Up With Imperial Brands",
+   "title": "Altria and Japan Tobacco consider bids for Imperial Brands",
+   "summary": "Altria confirmed it is considering a potential takeover of Imperial Brands, and Japan Tobacco is also studying a deal. No offer has been made, and talks are ongoing.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Bid announced (Altria or JT)",
+     "probability": 0.4,
+     "move_pct": 15.0
+    },
+    {
+     "label": "No bid, talks collapse",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Rival bid or higher offer",
+     "probability": 0.2,
+     "move_pct": 20.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.6,
+   "expected_move": 6.0,
+   "lean": "up",
+   "id": "IMB.L:takeover",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 45.27
   },
   {
    "ticker": "RCAT",
@@ -419,37 +452,37 @@
    "price_at_flag": 83.97
   },
   {
-   "ticker": "ASML",
+   "ticker": "TSLA",
    "type": "regulatory",
-   "source": "ASML Holding (ENXTAM:ASML) Faces Dutch Pushback On New US China Chip Curbs",
-   "title": "Dutch pushback on new US China chip curbs",
-   "summary": "The Netherlands is pushing back against new US export restrictions on chip equipment to China, which could limit ASML's sales. The outcome of this diplomatic dispute is unresolved and could significantly impact ASML's revenue outlook.",
+   "source": null,
+   "title": "Tesla's self-driving expansion in Europe faces crucial test",
+   "summary": "European regulators are evaluating Tesla's self-driving technology for broader deployment. A decision could allow expansion or impose restrictions, affecting autonomous driving prospects.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Restrictions eased or delayed",
-     "probability": 0.4,
-     "move_pct": 10.0
+     "label": "Restrictions or delays imposed",
+     "probability": 0.45,
+     "move_pct": -10.0
     },
     {
-     "label": "Restrictions enforced as proposed",
-     "probability": 0.4,
-     "move_pct": -15.0
+     "label": "Approval for expansion",
+     "probability": 0.35,
+     "move_pct": 12.0
     },
     {
-     "label": "No change or minor adjustments",
+     "label": "No decision announced",
      "probability": 0.2,
      "move_pct": -2.0
     }
    ],
    "p_big": 0.8,
-   "p_up": 0.4,
-   "expected_move": -2.4,
+   "p_up": 0.35,
+   "expected_move": -0.7,
    "lean": "down",
-   "id": "ASML:regulatory",
+   "id": "TSLA:regulatory",
    "first_flagged": "2026-11-26",
    "last_seen": "2026-11-26",
-   "price_at_flag": 1303.08
+   "price_at_flag": 380.14
   },
   {
    "ticker": "WULF",
@@ -518,39 +551,6 @@
    "price_at_flag": 342.34
   },
   {
-   "ticker": "DG",
-   "type": "legal",
-   "source": "Dollar General Accused of Overcharging Millions at Checkout: Could It Be Happening to You?",
-   "title": "Overcharging investigation / lawsuit",
-   "summary": "Dollar General faces accusations of systematic overcharging at checkout. A pending investigation or class-action lawsuit could result in significant fines or settlement costs.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Settlement reached",
-     "probability": 0.5,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Investigation clears DG",
-     "probability": 0.3,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Major legal ruling against DG",
-     "probability": 0.2,
-     "move_pct": -25.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.3,
-   "expected_move": -8.5,
-   "lean": "down",
-   "id": "DG:legal",
-   "first_flagged": "2026-11-25",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 134.18
-  },
-  {
    "ticker": "DASH",
    "type": "takeover",
    "source": "DoorDash Shares Climb 6.39% After Securing $1.79 Billion Loan Facility for Instacart Acquisition",
@@ -615,39 +615,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-24",
    "price_at_flag": 209.74
-  },
-  {
-   "ticker": "TSM",
-   "type": "regulatory",
-   "source": "TSMC Stocks Slide 6.65% as Taiwan Lands on US Tariff List",
-   "title": "US Tariffs on Taiwan Proposed, Impact on TSMC",
-   "summary": "Taiwan was added to a US tariff list, but the final decision and implementation details are pending. This could significantly affect TSMC's exports to the US.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Tariffs imposed as proposed",
-     "probability": 0.4,
-     "move_pct": -15.0
-    },
-    {
-     "label": "Tariffs reduced or exempted",
-     "probability": 0.3,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Tariffs delayed or negotiated",
-     "probability": 0.3,
-     "move_pct": 5.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.6,
-   "expected_move": -1.5,
-   "lean": "up",
-   "id": "TSM:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 344.48
   },
   {
    "ticker": "CORZ",
@@ -912,39 +879,6 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-26",
    "price_at_flag": 710.42
-  },
-  {
-   "ticker": "MRVL",
-   "type": "results",
-   "source": "Generate A Return From Marvell Stock, Set For A Large Post-Earnings Swing",
-   "title": "Marvell Q3 earnings report due Dec 1",
-   "summary": "Marvell reports fiscal Q3 results on Dec 1 after close. Options market implies a 20% move. The stock has fallen 43% in a month amid Lumentum deal dilution concerns and chip sector volatility. Earnings will test AI custom silicon and data center revenue growth.",
-   "key_date": "2026-12-01",
-   "outcomes": [
-    {
-     "label": "In-line results, no guidance change",
-     "probability": 0.4,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Beat on revenue and margin guidance",
-     "probability": 0.3,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Miss on revenue or margin, guidance cut",
-     "probability": 0.3,
-     "move_pct": -20.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.3,
-   "expected_move": -3.5,
-   "lean": "down",
-   "id": "MRVL:results",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-24",
-   "price_at_flag": 132.32
   },
   {
    "ticker": "INTC",
@@ -1343,6 +1277,39 @@
    "price_at_flag": 165.05
   },
   {
+   "ticker": "MRVL",
+   "type": "results",
+   "source": null,
+   "title": "Marvell reports earnings Tuesday",
+   "summary": "Marvell Technology reports earnings on Tuesday. The stock has dropped 44% in the past month, and the results will test whether the selloff is overdone or justified.",
+   "key_date": "2026-11-27",
+   "outcomes": [
+    {
+     "label": "In-line results, cautious outlook",
+     "probability": 0.5,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Beat and raise guidance",
+     "probability": 0.3,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Miss and cut guidance",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.3,
+   "expected_move": -2.5,
+   "lean": "down",
+   "id": "MRVL:results",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 132.32
+  },
+  {
    "ticker": "SNDK",
    "type": "results",
    "source": "Why Sandisk Stock Plunged Today",
@@ -1442,6 +1409,39 @@
    "price_at_flag": 366.18
   },
   {
+   "ticker": "ASML",
+   "type": "regulatory",
+   "source": null,
+   "title": "MATCH Act could restrict ASML's China sales",
+   "summary": "The MATCH Act, a US bill to tighten chip export curbs, is being debated. A Dutch lawmaker warned it would be 'disastrous for ASML' as China represents 20% of sales.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Bill passes, restrictions tighten",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Bill fails or is watered down",
+     "probability": 0.4,
+     "move_pct": 8.0
+    },
+    {
+     "label": "No decision in next month",
+     "probability": 0.2,
+     "move_pct": 0.0
+    }
+   ],
+   "p_big": 0.4,
+   "p_up": 0.4,
+   "expected_move": -0.8,
+   "lean": "down",
+   "id": "ASML:regulatory",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 1303.08
+  },
+  {
    "ticker": "DG",
    "type": "regulatory",
    "source": null,
@@ -1506,6 +1506,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-26",
    "price_at_flag": 115.04
+  },
+  {
+   "ticker": "CBK.DE",
+   "type": "takeover",
+   "source": null,
+   "title": "UniCredit takeover of Commerzbank clears final hurdle",
+   "summary": "UniCredit secured final Polish approval for its takeover bid. The deal is now fully cleared, but Commerzbank shareholders must still vote on the offer, and the outcome is uncertain.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Takeover completed at offered price",
+     "probability": 0.7,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Shareholders reject or delay deal",
+     "probability": 0.2,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Improved offer emerges",
+     "probability": 0.1,
+     "move_pct": 20.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.8,
+   "expected_move": 2.5,
+   "lean": "up",
+   "id": "CBK.DE:takeover",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 36.35
   },
   {
    "ticker": "MBG.DE",
@@ -1640,6 +1673,39 @@
    "price_at_flag": 92.44
   },
   {
+   "ticker": "DG",
+   "type": "legal",
+   "source": null,
+   "title": "Dollar General sued by 20 states over deceptive pricing",
+   "summary": "20 states filed a lawsuit alleging Dollar General engaged in deceptive pricing practices. The outcome could lead to fines or changes in pricing policies, impacting earnings.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Settlement with moderate fine",
+     "probability": 0.6,
+     "move_pct": -3.0
+    },
+    {
+     "label": "Dismissal or small fine",
+     "probability": 0.2,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Large fine or policy changes",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.2,
+   "p_up": 0.2,
+   "expected_move": -3.8,
+   "lean": "down",
+   "id": "DG:legal",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 134.18
+  },
+  {
    "ticker": "BMY",
    "type": "regulatory",
    "source": null,
@@ -1704,6 +1770,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 66.79
+  },
+  {
+   "ticker": "TSM",
+   "type": "regulatory",
+   "source": null,
+   "title": "TSM may make Texas plant conditional on subsidies",
+   "summary": "Taiwan Semiconductor is considering making its $22.6B Texas fab conditional on US CHIPS Act funding or regulatory approvals. A decision could impact expansion plans and sentiment.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Proceeds without conditions",
+     "probability": 0.4,
+     "move_pct": 8.0
+    },
+    {
+     "label": "Makes it conditional (e.g., requires subsidies)",
+     "probability": 0.4,
+     "move_pct": -2.0
+    },
+    {
+     "label": "Delays or cancels expansion",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.2,
+   "p_up": 0.4,
+   "expected_move": -0.6,
+   "lean": "down",
+   "id": "TSM:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-26",
+   "price_at_flag": 344.48
   },
   {
    "ticker": "ULVR.L",
