@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-26 00:37",
-  "fx_gbp_usd": 1.3113,
+  "updated": "2026-11-26 07:32",
+  "fx_gbp_usd": 1.3112,
   "stocks": [
     {
       "ticker": "LMT",
@@ -19,18 +19,18 @@
       "high_gbp": "528",
       "high_usd": 692.0,
       "bar_pct": 64,
-      "market_cap_gbp_b": 105.566,
+      "market_cap_gbp_b": 105.57,
       "market_cap_usd_b": 138.427,
       "beta": 0.081,
       "pe_ratio": 21.28,
       "avg_volume_m": 1.3,
-      "div_yield_pct": 2.45,
+      "div_yield_pct": 2.4,
       "short_pct": 1.46,
       "analyst": "buy",
       "analyst_score": 2.12,
-      "vol_1d": 1544914,
-      "vol_1w": 6379014,
-      "vol_1m": 33794114,
+      "vol_1d": 1545000,
+      "vol_1w": 6379100,
+      "vol_1m": 33794200,
       "news": [
         {
           "title": "Top Research Reports for CrowdStrike, Lockheed Martin & S&P",
@@ -87,8 +87,8 @@
       "high_gbp": "173",
       "high_usd": 226.88,
       "bar_pct": 49,
-      "market_cap_gbp_b": 201.899,
-      "market_cap_usd_b": 264.747,
+      "market_cap_gbp_b": 201.906,
+      "market_cap_usd_b": 264.746,
       "beta": 0.282,
       "pe_ratio": 31.9,
       "avg_volume_m": 4.66,
@@ -96,10 +96,17 @@
       "short_pct": 1.14,
       "analyst": "buy",
       "analyst_score": 1.96,
-      "vol_1d": 4292780,
-      "vol_1w": 23910180,
-      "vol_1m": 119174680,
+      "vol_1d": 4508300,
+      "vol_1w": 24125700,
+      "vol_1m": 119390200,
       "news": [
+        {
+          "title": "RTX, NOC Stocks Head For Green Week: RTX, Northrop Grumman Land $3.6B Navy Contracts For F-35 Engines, Military Communications",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/rtx-noc-stocks-head-for-green-week-rtx-northrop-grumman-navy-contracts-f-35-engines-military-communications/cNbx9TUR9ZO",
+          "published": 1795668855,
+          "sentiment": 0.0
+        },
         {
           "title": "National Presto (NPK) Stock Is Up 8.5% Today Without Company News",
           "publisher": "GuruFocus.com",
@@ -127,13 +134,6 @@
           "url": "https://www.trefis.com/stock/tdg/articles/628314/what-are-transdigm-investors-betting-on/2026-11-24",
           "published": 1795542435,
           "sentiment": 0.0
-        },
-        {
-          "title": "RTX (RTX) Stock Looks Fully Priced Despite Its 161% Five Year Run",
-          "publisher": "Simply Wall St.",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/rtx-rtx-stock-looks-fully-171257801.html",
-          "published": 1795540377,
-          "sentiment": 0.0
         }
       ],
       "news_sentiment": 0.0
@@ -155,19 +155,26 @@
       "high_gbp": "590",
       "high_usd": 774.0,
       "bar_pct": 28,
-      "market_cap_gbp_b": 60.214,
-      "market_cap_usd_b": 78.958,
+      "market_cap_gbp_b": 60.217,
+      "market_cap_usd_b": 78.959,
       "beta": -0.136,
       "pe_ratio": 17.54,
       "avg_volume_m": 0.93,
-      "div_yield_pct": 1.79,
+      "div_yield_pct": 1.78,
       "short_pct": 1.55,
       "analyst": "buy",
       "analyst_score": 1.89,
-      "vol_1d": 580942,
-      "vol_1w": 3826542,
-      "vol_1m": 20049242,
+      "vol_1d": 583000,
+      "vol_1w": 3828600,
+      "vol_1m": 20051300,
       "news": [
+        {
+          "title": "RTX, NOC Stocks Head For Green Week: RTX, Northrop Grumman Land $3.6B Navy Contracts For F-35 Engines, Military Communications",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/rtx-noc-stocks-head-for-green-week-rtx-northrop-grumman-navy-contracts-f-35-engines-military-communications/cNbx9TUR9ZO",
+          "published": 1795668855,
+          "sentiment": 0.0
+        },
         {
           "title": "Northrop Grumman (NOC) Just Sparked A Bigger Question",
           "publisher": "Simply Wall St.",
@@ -195,16 +202,9 @@
           "url": "https://finance.yahoo.com/markets/stocks/articles/counter-drone-demand-strengthen-northrop-144300822.html",
           "published": 1795531380,
           "sentiment": 0.527
-        },
-        {
-          "title": "Can Redwire's ELSA Contract Expand Its Satellite Power Business?",
-          "publisher": "Zacks",
-          "url": "https://finance.yahoo.com/technology/articles/redwires-elsa-contract-expand-satellite-135200140.html",
-          "published": 1795528320,
-          "sentiment": 0.318
         }
       ],
-      "news_sentiment": 0.289
+      "news_sentiment": 0.225
     },
     {
       "ticker": "GD",
@@ -223,18 +223,18 @@
       "high_gbp": "305",
       "high_usd": 400.0,
       "bar_pct": 57,
-      "market_cap_gbp_b": 74.243,
+      "market_cap_gbp_b": 74.246,
       "market_cap_usd_b": 97.354,
       "beta": 0.296,
       "pe_ratio": 21.2,
       "avg_volume_m": 1.25,
-      "div_yield_pct": 1.81,
+      "div_yield_pct": 1.77,
       "short_pct": 1.02,
       "analyst": "buy",
       "analyst_score": 2.12,
-      "vol_1d": 1225848,
-      "vol_1w": 5219648,
-      "vol_1m": 28462548,
+      "vol_1d": 1225900,
+      "vol_1w": 5219700,
+      "vol_1m": 28462600,
       "news": [
         {
           "title": "Loar Holdings (LOAR) Stock Is Up 5.6% Today Without Company News",
@@ -296,13 +296,13 @@
       "beta": 0.147,
       "pe_ratio": 16.12,
       "avg_volume_m": 0.51,
-      "div_yield_pct": 1.93,
+      "div_yield_pct": 1.88,
       "short_pct": 4.16,
       "analyst": "buy",
       "analyst_score": 2.08,
-      "vol_1d": 272367,
-      "vol_1w": 1703667,
-      "vol_1m": 11990667,
+      "vol_1d": 272600,
+      "vol_1w": 1703900,
+      "vol_1m": 11990900,
       "news": [
         {
           "title": "Can Advanced Submarine R&D Support HII's Long-Term Growth?",
@@ -359,18 +359,18 @@
       "high_gbp": "289",
       "high_usd": 379.23,
       "bar_pct": 20,
-      "market_cap_gbp_b": 37.188,
+      "market_cap_gbp_b": 37.189,
       "market_cap_usd_b": 48.764,
       "beta": 0.455,
       "pe_ratio": 24.38,
       "avg_volume_m": 1.69,
-      "div_yield_pct": 1.94,
+      "div_yield_pct": 1.91,
       "short_pct": 2.54,
       "analyst": "buy",
       "analyst_score": 1.88,
-      "vol_1d": 722040,
-      "vol_1w": 5835640,
-      "vol_1m": 40232840,
+      "vol_1d": 722100,
+      "vol_1w": 5835700,
+      "vol_1m": 40232900,
       "news": [
         {
           "title": "L3Harris Technologies Stock Outlook: Is Wall Street Bullish or Bearish?",
@@ -427,7 +427,7 @@
       "high_gbp": "194",
       "high_usd": 254.35,
       "bar_pct": 9,
-      "market_cap_gbp_b": 99.43,
+      "market_cap_gbp_b": 99.434,
       "market_cap_usd_b": 130.381,
       "beta": 1.331,
       "pe_ratio": 16.98,
@@ -436,9 +436,9 @@
       "short_pct": 0.02,
       "analyst": "strong_buy",
       "analyst_score": 1.39,
-      "vol_1d": 5937765,
-      "vol_1w": 37768965,
-      "vol_1m": 235569765,
+      "vol_1d": 6088400,
+      "vol_1w": 37919600,
+      "vol_1m": 235720400,
       "news": [
         {
           "title": "Walmart Quivers As Trump Doubles Down On Tariffs; Its Dow Peers Shrug",
@@ -496,11 +496,11 @@
       "high_usd": 30.95,
       "bar_pct": 37,
       "market_cap_gbp_b": 53.741,
-      "market_cap_usd_b": 70.47,
+      "market_cap_usd_b": 70.467,
       "beta": -0.056,
       "pe_ratio": 26.27,
       "avg_volume_m": 5.12,
-      "div_yield_pct": 2.04,
+      "div_yield_pct": 2.06,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 2.25,
@@ -564,11 +564,11 @@
       "high_usd": 20.8,
       "bar_pct": 44,
       "market_cap_gbp_b": 102.383,
-      "market_cap_usd_b": 134.253,
+      "market_cap_usd_b": 134.248,
       "beta": 1.291,
       "pe_ratio": 34.76,
       "avg_volume_m": 19.48,
-      "div_yield_pct": 0.92,
+      "div_yield_pct": 0.96,
       "short_pct": null,
       "analyst": "strong_buy",
       "analyst_score": 1.5,
@@ -620,7 +620,7 @@
       "category": "uk-european",
       "exchange": "LSE",
       "price_gbp": "4.57",
-      "price_usd": 6.0,
+      "price_usd": 5.99,
       "change_1d": "-1.76%",
       "change_1w": "-5.26%",
       "change_1m": "-11.31%",
@@ -636,7 +636,7 @@
       "beta": 0.337,
       "pe_ratio": null,
       "avg_volume_m": 1.37,
-      "div_yield_pct": 2.37,
+      "div_yield_pct": 2.41,
       "short_pct": null,
       "analyst": "buy",
       "analyst_score": 1.92,
@@ -699,7 +699,7 @@
       "high_gbp": "162",
       "high_usd": 212.94,
       "bar_pct": 54,
-      "market_cap_gbp_b": 300.598,
+      "market_cap_gbp_b": 300.61,
       "market_cap_usd_b": 394.17,
       "beta": 1.61,
       "pe_ratio": 115.2,
@@ -708,10 +708,17 @@
       "short_pct": 2.5,
       "analyst": "buy",
       "analyst_score": 1.76,
-      "vol_1d": 21352431,
-      "vol_1w": 132140231,
-      "vol_1m": 573560531,
+      "vol_1d": 21407000,
+      "vol_1w": 132194800,
+      "vol_1m": 573615100,
       "news": [
+        {
+          "title": "Michael Burry Says His Portfolio Was Discussed 'About the Time the Market Reversed Off Its Lows': He Is 'Temporarily Almost Entirely Long'",
+          "publisher": "Benzinga",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/michael-burry-says-portfolio-discussed-025825540.html",
+          "published": 1795661905,
+          "sentiment": -0.202
+        },
         {
           "title": "Are You Overpaying For Palantir Stock Versus Its Rivals?",
           "publisher": "Trefis",
@@ -739,16 +746,9 @@
           "url": "https://beincrypto.com/michael-burry-stock-market-recovery-thanksgiving-crash/",
           "published": 1795637255,
           "sentiment": 0.0
-        },
-        {
-          "title": "Peter Thiel Buys $122M of PLTR After Years Of Selling \u2014 And He Could Buy Millions More Shares",
-          "publisher": "Benzinga Prediction Markets",
-          "url": "https://www.benzinga.com/markets/prediction-markets/26/11/63645021/peter-thiel-palantir-stock-purchase?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral",
-          "published": 1795630722,
-          "sentiment": 0.36
         }
       ],
-      "news_sentiment": 0.072
+      "news_sentiment": -0.04
     },
     {
       "ticker": "LDOS",
@@ -767,18 +767,18 @@
       "high_gbp": "156",
       "high_usd": 205.0,
       "bar_pct": 30,
-      "market_cap_gbp_b": 12.152,
+      "market_cap_gbp_b": 12.153,
       "market_cap_usd_b": 15.935,
       "beta": 0.544,
       "pe_ratio": 11.67,
       "avg_volume_m": 1.15,
-      "div_yield_pct": 1.34,
+      "div_yield_pct": 1.32,
       "short_pct": 3.36,
       "analyst": "buy",
       "analyst_score": 2.41,
-      "vol_1d": 606118,
-      "vol_1w": 4997318,
-      "vol_1m": 25225218,
+      "vol_1d": 671800,
+      "vol_1w": 5063000,
+      "vol_1m": 25290900,
       "news": [
         {
           "title": "Can Leidos Holdings (LDOS) Justify Its Price On Earnings?",
@@ -836,7 +836,7 @@
       "high_usd": 694.01,
       "bar_pct": 71,
       "market_cap_gbp_b": 10.488,
-      "market_cap_usd_b": 13.753,
+      "market_cap_usd_b": 13.752,
       "beta": 0.535,
       "pe_ratio": 25.42,
       "avg_volume_m": 0.24,
@@ -844,9 +844,9 @@
       "short_pct": 4.74,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 139446,
-      "vol_1w": 742446,
-      "vol_1m": 4845146,
+      "vol_1d": 139400,
+      "vol_1w": 742400,
+      "vol_1m": 4845100,
       "news": [
         {
           "title": "Can CACI International (CACI) Still Trade Below Fair Value?",
@@ -908,13 +908,13 @@
       "beta": 0.257,
       "pe_ratio": 17.32,
       "avg_volume_m": 0.46,
-      "div_yield_pct": 1.02,
+      "div_yield_pct": 1.0,
       "short_pct": 5.8,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 367469,
-      "vol_1w": 2120969,
-      "vol_1m": 9705869,
+      "vol_1d": 367700,
+      "vol_1w": 2121200,
+      "vol_1m": 9706100,
       "news": [
         {
           "title": "Nutanix (NTNX) Q1 Earnings and Revenues Surpass Estimates",
@@ -971,18 +971,18 @@
       "high_gbp": "83",
       "high_usd": 109.1,
       "bar_pct": 57,
-      "market_cap_gbp_b": 7.951,
-      "market_cap_usd_b": 10.426,
+      "market_cap_gbp_b": 7.952,
+      "market_cap_usd_b": 10.427,
       "beta": 0.282,
       "pe_ratio": 13.65,
       "avg_volume_m": 1.8,
-      "div_yield_pct": 2.8,
+      "div_yield_pct": 2.68,
       "short_pct": 6.27,
       "analyst": "hold",
       "analyst_score": 2.6,
-      "vol_1d": 1362194,
-      "vol_1w": 6901394,
-      "vol_1m": 46466094,
+      "vol_1d": 1452700,
+      "vol_1w": 6991900,
+      "vol_1m": 46556600,
       "news": [
         {
           "title": "Enigmatig (EGG) Stock Is Up 21.3% Today Without Company News",
@@ -1034,8 +1034,8 @@
       "change_1m": "-27.17%",
       "change_ytd": "-64.34%",
       "return_1yr": "-68%",
-      "low_gbp": "66",
-      "low_usd": 86.2,
+      "low_gbp": "64",
+      "low_usd": 84.27,
       "high_gbp": "311",
       "high_usd": 408.25,
       "bar_pct": 2,
@@ -1048,9 +1048,9 @@
       "short_pct": 14.54,
       "analyst": "buy",
       "analyst_score": 1.64,
-      "vol_1d": 1239467,
-      "vol_1w": 7406867,
-      "vol_1m": 31341067,
+      "vol_1d": 1240400,
+      "vol_1w": 7407800,
+      "vol_1m": 31342000,
       "news": [
         {
           "title": "Can AeroVironment's Taiwan MOU Broaden Its Uncrewed Systems Reach?",
@@ -1116,9 +1116,9 @@
       "short_pct": 5.78,
       "analyst": "strong_buy",
       "analyst_score": 1.31,
-      "vol_1d": 4426573,
-      "vol_1w": 25898973,
-      "vol_1m": 116906673,
+      "vol_1d": 4428800,
+      "vol_1w": 25901200,
+      "vol_1m": 116908900,
       "news": [
         {
           "title": "Can AeroVironment's Taiwan MOU Broaden Its Uncrewed Systems Reach?",
@@ -1170,8 +1170,8 @@
       "change_1m": "-60.00%",
       "change_ytd": "-80.79%",
       "return_1yr": "-76%",
-      "low_gbp": "1.26",
-      "low_usd": 1.65,
+      "low_gbp": "1.19",
+      "low_usd": 1.56,
       "high_gbp": "14",
       "high_usd": 18.78,
       "bar_pct": 1,
@@ -1184,9 +1184,9 @@
       "short_pct": 28.97,
       "analyst": "strong_buy",
       "analyst_score": 1.43,
-      "vol_1d": 7646880,
-      "vol_1w": 56287780,
-      "vol_1m": 204967280,
+      "vol_1d": 8336600,
+      "vol_1w": 56977500,
+      "vol_1m": 205657000,
       "news": [
         {
           "title": "Unusual Machines Is Down 47% in a Month. Can UMAC Stock Hit Oppenheimer\u2019s $30 Target by 2030?",
@@ -1244,7 +1244,7 @@
       "high_usd": 101.57,
       "bar_pct": 30,
       "market_cap_gbp_b": 10.449,
-      "market_cap_usd_b": 13.702,
+      "market_cap_usd_b": 13.701,
       "beta": 0.88,
       "pe_ratio": 14.55,
       "avg_volume_m": 1.85,
@@ -1252,9 +1252,9 @@
       "short_pct": 5.36,
       "analyst": "buy",
       "analyst_score": 2.19,
-      "vol_1d": 2776626,
-      "vol_1w": 10421126,
-      "vol_1m": 45585726,
+      "vol_1d": 2818100,
+      "vol_1w": 10462600,
+      "vol_1m": 45627200,
       "news": [
         {
           "title": "Can Jet Aviation's Singapore Expansion Support GD's Growth?",
@@ -1311,18 +1311,18 @@
       "high_gbp": "172",
       "high_usd": 225.64,
       "bar_pct": 19,
-      "market_cap_gbp_b": 1319.903,
+      "market_cap_gbp_b": 1319.955,
       "market_cap_usd_b": 1730.771,
       "beta": null,
       "pe_ratio": 554.09,
-      "avg_volume_m": 97.1,
+      "avg_volume_m": 97.11,
       "div_yield_pct": null,
       "short_pct": 2.0,
       "analyst": "buy",
       "analyst_score": 1.68,
-      "vol_1d": 146929059,
-      "vol_1w": 591338759,
-      "vol_1m": 2418307659,
+      "vol_1d": 147273500,
+      "vol_1w": 591683200,
+      "vol_1m": 2418652100,
       "news": [
         {
           "title": "SpaceX, Elon Musk to give one share each to active Trump Accounts",
@@ -1346,21 +1346,21 @@
           "sentiment": 0.0
         },
         {
-          "title": "SPCX Stock Rebounds From 9% Drop: SpaceX Pledges Shares To Trump Accounts And Wins FCC Starmind Nod",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/spcx-stock-rebounds-from-9-drop-space-x-pledges-shares-to-trump-accounts-and-wins-fcc-starmind-nod/cNbx2umR9m6",
-          "published": 1795652561,
-          "sentiment": 0.586
+          "title": "Musk makes $18 billion SpaceX stock pledge for every kid in America",
+          "publisher": "Axios",
+          "url": "https://www.axios.com/2026/11/26/musk-spacex-shares-trump-accounts#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI",
+          "published": 1795671542,
+          "sentiment": 0.0
         },
         {
-          "title": "S&P 500, Nasdaq End Lower But Dow Rebounds As Traders Rotate Out Of AI \u2014 NVDA, SPCX, PANW  In Focus",
-          "publisher": "Stocktwits",
-          "url": "https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-end-lower-but-dow-rebounds-as-traders-rotate-out-of-ai-nvda-spcx-panw-in-focus/cNbx21AR9mC",
-          "published": 1795651790,
-          "sentiment": -0.153
+          "title": "Musk says every U.S. child will receive two SpaceX shares",
+          "publisher": "Investing.com",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/musk-says-every-u-child-053639491.html",
+          "published": 1795671399,
+          "sentiment": 0.296
         }
       ],
-      "news_sentiment": 0.227
+      "news_sentiment": 0.2
     },
     {
       "ticker": "RKLB",
@@ -1379,19 +1379,26 @@
       "high_gbp": "115",
       "high_usd": 151.0,
       "bar_pct": 6,
-      "market_cap_gbp_b": 24.131,
+      "market_cap_gbp_b": 24.132,
       "market_cap_usd_b": 31.643,
       "beta": 3.176,
       "pe_ratio": null,
-      "avg_volume_m": 19.7,
+      "avg_volume_m": 19.71,
       "div_yield_pct": null,
       "short_pct": 7.23,
       "analyst": "buy",
       "analyst_score": 1.77,
-      "vol_1d": 19770843,
-      "vol_1w": 91114643,
-      "vol_1m": 433915743,
+      "vol_1d": 19815400,
+      "vol_1w": 91159200,
+      "vol_1m": 433960300,
       "news": [
+        {
+          "title": "RKLB Stock Rebounds Into Thanksgiving: CFO, COO And Other Execs Sell Nearly $4M In Shares Ahead Of Electron Launch",
+          "publisher": "Stocktwits",
+          "url": "https://stocktwits.com/news-articles/markets/equity/rklb-stock-cfo-coo-other-execs-sell-shares-ahead-of-electron-launch/cNbx33ZR9ZR",
+          "published": 1795657814,
+          "sentiment": 0.296
+        },
         {
           "title": "SPCX Stock Rebounds From 9% Drop: SpaceX Pledges Shares To Trump Accounts And Wins FCC Starmind Nod",
           "publisher": "Stocktwits",
@@ -1419,16 +1426,9 @@
           "url": "https://www.tikr.com/blog/mizuho-calls-rocket-labs-business-model-among-our-favorites-it-still-sees-6-downside?ref=yahoofinance&tlnk=yf-261125-4ffhq3f5",
           "published": 1795626319,
           "sentiment": -0.25
-        },
-        {
-          "title": "I\u2019m Buying SpaceX Because There\u2019s a Reasonable Case for $200 by January",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/25/im-buying-spacex-because-theres-a-reasonable-case-for-200-by-january/",
-          "published": 1795621507,
-          "sentiment": 0.0
         }
       ],
-      "news_sentiment": -0.076
+      "news_sentiment": -0.017
     },
     {
       "ticker": "PL",
@@ -1442,11 +1442,11 @@
       "change_1m": "-22.89%",
       "change_ytd": "-48.02%",
       "return_1yr": "-9%",
-      "low_gbp": "7.89",
-      "low_usd": 10.35,
+      "low_gbp": "7.41",
+      "low_usd": 9.71,
       "high_gbp": "39",
       "high_usd": 51.76,
-      "bar_pct": 1,
+      "bar_pct": 2,
       "market_cap_gbp_b": 2.944,
       "market_cap_usd_b": 3.86,
       "beta": 2.27,
@@ -1456,9 +1456,9 @@
       "short_pct": 11.63,
       "analyst": "buy",
       "analyst_score": 1.85,
-      "vol_1d": 6685104,
-      "vol_1w": 38078004,
-      "vol_1m": 169000504,
+      "vol_1d": 6687800,
+      "vol_1w": 38080700,
+      "vol_1m": 169003200,
       "news": [
         {
           "title": "How Big Could Planet Labs Stock's Next Fall Be?",
@@ -1511,7 +1511,7 @@
       "change_ytd": "-68.83%",
       "return_1yr": "-57%",
       "low_gbp": "17",
-      "low_usd": 22.52,
+      "low_usd": 22.5,
       "high_gbp": "102",
       "high_usd": 133.86,
       "bar_pct": 3,
@@ -1524,10 +1524,17 @@
       "short_pct": 23.83,
       "analyst": "buy",
       "analyst_score": 2.38,
-      "vol_1d": 26322800,
-      "vol_1w": 103243600,
-      "vol_1m": 437450000,
+      "vol_1d": 26439000,
+      "vol_1w": 103359800,
+      "vol_1m": 437566200,
       "news": [
+        {
+          "title": "AST SpaceMobile (ASTS) Stages Impressive Comeback From Record Low",
+          "publisher": "Insider Monkey",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/ast-spacemobile-asts-stages-impressive-060124396.html",
+          "published": 1795672884,
+          "sentiment": 0.296
+        },
         {
           "title": "SPCX Stock Rebounds From 9% Drop: SpaceX Pledges Shares To Trump Accounts And Wins FCC Starmind Nod",
           "publisher": "Stocktwits",
@@ -1555,16 +1562,9 @@
           "url": "https://stocktwits.com/news-articles/markets/equity/firefly-could-fill-large-supply-gaps-in-launch-market-says-needham-analyst-sees-over-100-upside-potential-in-fly-stock/cNbHjilR9mk",
           "published": 1795619548,
           "sentiment": 0.0
-        },
-        {
-          "title": "SpaceX Slides 5% as Gary Black Warns a Tesla Bid Could Push It Below $100; Rocket Lab and AST SpaceMobile Drop 4%",
-          "publisher": "24/7 Wall St.",
-          "url": "https://247wallst.com/investing/2026/11/25/spacex-slides-5-as-gary-black-warns-a-tesla-bid-could-push-it-below-100-rocket-lab-and-ast-spacemobile-drop-4/",
-          "published": 1795616238,
-          "sentiment": -0.361
         }
       ],
-      "news_sentiment": 0.084
+      "news_sentiment": 0.215
     },
     {
       "ticker": "TDG",
@@ -1583,8 +1583,8 @@
       "high_gbp": "1116",
       "high_usd": 1463.03,
       "bar_pct": 20,
-      "market_cap_gbp_b": 47.906,
-      "market_cap_usd_b": 62.818,
+      "market_cap_gbp_b": 47.908,
+      "market_cap_usd_b": 62.819,
       "beta": 0.948,
       "pe_ratio": 32.41,
       "avg_volume_m": 0.39,
@@ -1592,9 +1592,9 @@
       "short_pct": 2.81,
       "analyst": "buy",
       "analyst_score": 2.09,
-      "vol_1d": 369617,
-      "vol_1w": 2030317,
-      "vol_1m": 9728817,
+      "vol_1d": 369600,
+      "vol_1w": 2030300,
+      "vol_1m": 9728800,
       "news": [
         {
           "title": "What Are TransDigm Investors Betting On?",
@@ -1651,8 +1651,8 @@
       "high_gbp": "287",
       "high_usd": 376.86,
       "bar_pct": 67,
-      "market_cap_gbp_b": 35.86,
-      "market_cap_usd_b": 47.023,
+      "market_cap_gbp_b": 35.861,
+      "market_cap_usd_b": 47.022,
       "beta": 1.089,
       "pe_ratio": 56.08,
       "avg_volume_m": 0.48,
@@ -1660,9 +1660,9 @@
       "short_pct": 2.46,
       "analyst": "none",
       "analyst_score": null,
-      "vol_1d": 346869,
-      "vol_1w": 2170569,
-      "vol_1m": 9874869,
+      "vol_1d": 346900,
+      "vol_1w": 2170600,
+      "vol_1m": 9874900,
       "news": [
         {
           "title": "What Are TransDigm Investors Betting On?",
@@ -1719,7 +1719,7 @@
       "high_gbp": "507",
       "high_usd": 665.07,
       "bar_pct": 14,
-      "market_cap_gbp_b": 21.304,
+      "market_cap_gbp_b": 21.305,
       "market_cap_usd_b": 27.936,
       "beta": 1.468,
       "pe_ratio": 110.31,
@@ -1728,9 +1728,9 @@
       "short_pct": 7.45,
       "analyst": "buy",
       "analyst_score": 1.71,
-      "vol_1d": 2022901,
-      "vol_1w": 8877401,
-      "vol_1m": 39434401,
+      "vol_1d": 2023100,
+      "vol_1w": 8877600,
+      "vol_1m": 39434600,
       "news": [
         {
           "title": "Axon Enterprise vs. Palantir Technologies: Which Law Enforcement Stock Is a Better Buy for 2027?",
@@ -1792,13 +1792,13 @@
       "beta": 1.135,
       "pe_ratio": null,
       "avg_volume_m": 3.6,
-      "div_yield_pct": 5.06,
+      "div_yield_pct": 4.75,
       "short_pct": 13.78,
       "analyst": "hold",
       "analyst_score": 2.88,
-      "vol_1d": 2994677,
-      "vol_1w": 15446277,
-      "vol_1m": 78925977,
+      "vol_1d": 2994700,
+      "vol_1w": 15446300,
+      "vol_1m": 78926000,
       "news": [
         {
           "title": "Olin (OLN) Stock Still Trades At A Discount Despite A 70% Slump",
@@ -1864,9 +1864,9 @@
       "short_pct": 10.25,
       "analyst": "buy",
       "analyst_score": 1.92,
-      "vol_1d": 551541,
-      "vol_1w": 2622741,
-      "vol_1m": 17884441,
+      "vol_1d": 551500,
+      "vol_1w": 2622700,
+      "vol_1m": 17884400,
       "news": [
         {
           "title": "Profit Returns For Mercury Systems (MRCY) As 2027 Revenue Outlook Rises",
@@ -1923,18 +1923,18 @@
       "high_gbp": "39",
       "high_usd": 50.59,
       "bar_pct": 11,
-      "market_cap_gbp_b": 6.744,
-      "market_cap_usd_b": 8.843,
+      "market_cap_gbp_b": 6.745,
+      "market_cap_usd_b": 8.844,
       "beta": 0.16,
       "pe_ratio": 24.39,
       "avg_volume_m": 1.17,
-      "div_yield_pct": 1.1,
+      "div_yield_pct": 1.09,
       "short_pct": 1.56,
       "analyst": "strong_buy",
       "analyst_score": 1.42,
-      "vol_1d": 656748,
-      "vol_1w": 4945448,
-      "vol_1m": 32545848,
+      "vol_1d": 656700,
+      "vol_1w": 4945400,
+      "vol_1m": 32545800,
       "news": [
         {
           "title": "Leonardo DRS, Inc. (DRS) Forms 'Hammer Chart Pattern': Time for Bottom Fishing?",
