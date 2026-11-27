@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27 18:24",
+ "updated": "2026-11-27 20:38",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -49,72 +49,6 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-26",
    "price_at_flag": 11.56
-  },
-  {
-   "ticker": "BEAM",
-   "type": "regulatory",
-   "source": "Beam Therapeutics Targets Sickle Cell Filing as Early as December, Advances Gene-Editing Pipeline",
-   "title": "Beam Therapeutics sickle cell filing decision due in December",
-   "summary": "Beam Therapeutics targets filing for its gene-editing sickle cell therapy as early as December 2026. The FDA's acceptance and review timeline will determine the stock's near-term direction, with potential for 84% upside if successful.",
-   "key_date": "2026-12-31",
-   "outcomes": [
-    {
-     "label": "Filing submitted and accepted by FDA",
-     "probability": 0.6,
-     "move_pct": 30.0
-    },
-    {
-     "label": "Filing delayed or rejected",
-     "probability": 0.3,
-     "move_pct": -20.0
-    },
-    {
-     "label": "Company announces additional data needed",
-     "probability": 0.1,
-     "move_pct": -35.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.6,
-   "expected_move": 8.5,
-   "lean": "up",
-   "id": "BEAM:regulatory",
-   "first_flagged": "2026-11-27",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 23.48
-  },
-  {
-   "ticker": "IMB.L",
-   "type": "takeover",
-   "source": "Altria’s Potential Acquisition Of Imperial Brands Is ‘No Doubt Accretive,’ Says Stifel",
-   "title": "Altria potential acquisition of Imperial Brands",
-   "summary": "Altria is reportedly considering acquiring Imperial Brands, with Stifel calling the deal 'no doubt accretive.' The unresolved event is whether a formal bid will be made and at what price, which could significantly move Imperial Brands shares.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Altria makes formal bid above current price",
-     "probability": 0.4,
-     "move_pct": 15.0
-    },
-    {
-     "label": "No bid, talks collapse",
-     "probability": 0.4,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Another bidder emerges",
-     "probability": 0.2,
-     "move_pct": 20.0
-    }
-   ],
-   "p_big": 1.0,
-   "p_up": 0.6,
-   "expected_move": 6.0,
-   "lean": "up",
-   "id": "IMB.L:takeover",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 45.27
   },
   {
    "ticker": "RCAT",
@@ -381,6 +315,72 @@
    "price_at_flag": 91.9
   },
   {
+   "ticker": "BEAM",
+   "type": "regulatory",
+   "source": "Beam Therapeutics Targets Sickle Cell Filing as Early as December, Advances Gene-Editing Pipeline",
+   "title": "Beam Therapeutics Targets Sickle Cell Filing in December",
+   "summary": "Beam plans to file for FDA approval of its sickle cell treatment as early as December, a key regulatory milestone that could significantly impact the stock price.",
+   "key_date": "2026-12-01",
+   "outcomes": [
+    {
+     "label": "Filing submitted successfully",
+     "probability": 0.6,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Filing delayed",
+     "probability": 0.3,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Filing submitted with mixed data",
+     "probability": 0.1,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.9,
+   "p_up": 0.7,
+   "expected_move": 5.0,
+   "lean": "up",
+   "id": "BEAM:regulatory",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 23.48
+  },
+  {
+   "ticker": "IP",
+   "type": "other",
+   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
+   "title": "International Paper EMEA Spin-Off Pending",
+   "summary": "International Paper is spinning off its EMEA packaging business after board approval; the spin-off's execution could affect valuation.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off completed",
+     "probability": 0.7,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Spin-off delayed",
+     "probability": 0.2,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Spin-off cancelled",
+     "probability": 0.1,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.8,
+   "p_up": 0.7,
+   "expected_move": 4.5,
+   "lean": "up",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 29.86
+  },
+  {
    "ticker": "STLAP.PA",
    "type": "legal",
    "source": "Why Is Stellantis (BIT:STLAM) Fighting Over Its Brampton Plant Sale?",
@@ -579,6 +579,39 @@
    "price_at_flag": 10.99
   },
   {
+   "ticker": "TPL",
+   "type": "takeover",
+   "source": "Texas Pacific Land to acquire EagleRock in $3bn transaction",
+   "title": "Texas Pacific Land's $3B EagleRock Acquisition Pending",
+   "summary": "The acquisition of EagleRock Land is agreed but subject to approvals; its completion or failure could move TPL stock.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Deal closes",
+     "probability": 0.5,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Deal delayed",
+     "probability": 0.3,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Deal fails",
+     "probability": 0.2,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.7,
+   "p_up": 0.5,
+   "expected_move": -0.5,
+   "lean": "either way",
+   "id": "TPL:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 259.71
+  },
+  {
    "ticker": "BAYN.DE",
    "type": "legal",
    "source": "Bayer Clears Major Roundup Hurdle, but a New Study Raises Cancer Link Again",
@@ -643,6 +676,72 @@
    "first_flagged": "2026-11-27",
    "last_seen": "2026-11-27",
    "price_at_flag": 30.53
+  },
+  {
+   "ticker": "IMB.L",
+   "type": "takeover",
+   "source": "Altria’s Potential Acquisition Of Imperial Brands Is ‘No Doubt Accretive,’ Says Stifel",
+   "title": "Altria Potential Acquisition of Imperial Brands",
+   "summary": "Altria is reportedly considering acquiring Imperial Brands; the outcome of talks could lead to a large move in Imperial's stock.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Talks continue",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Acquisition agreed",
+     "probability": 0.3,
+     "move_pct": 30.0
+    },
+    {
+     "label": "Talks break down",
+     "probability": 0.3,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.7,
+   "expected_move": 5.0,
+   "lean": "up",
+   "id": "IMB.L:takeover",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 45.27
+  },
+  {
+   "ticker": "CRDO",
+   "type": "results",
+   "source": "Credo Technology Ahead of Q2 Earnings: How to Approach the Stock Now?",
+   "title": "Credo Technology Q2 Earnings Upcoming",
+   "summary": "Credo Technology is set to report Q2 earnings amid uncertainty after a Marvell settlement; results could swing the stock.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Earnings in line",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Earnings beat expectations",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Earnings miss",
+     "probability": 0.3,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.7,
+   "expected_move": 3.5,
+   "lean": "up",
+   "id": "CRDO:results",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 110.79
   },
   {
    "ticker": "INTC",
@@ -775,39 +874,6 @@
    "first_flagged": "2026-11-27",
    "last_seen": "2026-11-27",
    "price_at_flag": 396.85
-  },
-  {
-   "ticker": "CRDO",
-   "type": "results",
-   "source": "Credo Technology Group Holding (CRDO) Could Be 50% Below Fair Value After Marvell Settlement",
-   "title": "Credo Q2 earnings report due",
-   "summary": "Credo Technology reports Q2 earnings soon. The stock is down 36% in a month after a Marvell settlement. Analysts suggest it could be 50% below fair value, but cash flow and sales trends will determine if the selloff is overdone.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "In-line results, cautious outlook",
-     "probability": 0.4,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Strong earnings, guidance raised",
-     "probability": 0.3,
-     "move_pct": 15.0
-    },
-    {
-     "label": "Miss and weak guidance",
-     "probability": 0.3,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.6,
-   "p_up": 0.3,
-   "expected_move": -2.0,
-   "lean": "down",
-   "id": "CRDO:results",
-   "first_flagged": "2026-11-27",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 110.79
   },
   {
    "ticker": "NVDA",
@@ -1201,6 +1267,39 @@
    "price_at_flag": 77.95
   },
   {
+   "ticker": "DG",
+   "type": "results",
+   "source": "Dollar General (DG) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
+   "title": "Dollar General Q3 Earnings Report",
+   "summary": "Dollar General reports Q3 earnings next week; results and guidance will indicate consumer spending trends and may drive a significant move.",
+   "key_date": "2026-12-03",
+   "outcomes": [
+    {
+     "label": "In-line results",
+     "probability": 0.5,
+     "move_pct": 2.0
+    },
+    {
+     "label": "Beat and raise guidance",
+     "probability": 0.25,
+     "move_pct": 12.0
+    },
+    {
+     "label": "Miss and cut guidance",
+     "probability": 0.25,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.75,
+   "expected_move": 0.2,
+   "lean": "up",
+   "id": "DG:results",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 137.9
+  },
+  {
    "ticker": "TSLA",
    "type": "other",
    "source": "Tesla and SpaceX stocks sink as merger concerns mount",
@@ -1465,67 +1564,6 @@
    "price_at_flag": 40.88
   },
   {
-   "ticker": "TPL",
-   "type": "takeover",
-   "source": "Texas Pacific Land to acquire EagleRock in $3bn transaction",
-   "title": "Texas Pacific Land's $3B EagleRock acquisition pending",
-   "summary": "Stock down 20% in month. Deal signed Nov 24 needs approvals; could reshape Permian footprint.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Deal approved, synergies expected",
-     "probability": 0.7,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Deal blocked or delayed",
-     "probability": 0.3,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 0.3,
-   "p_up": 0.7,
-   "expected_move": 0.5,
-   "lean": "up",
-   "id": "TPL:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 259.71
-  },
-  {
-   "ticker": "DG",
-   "type": "results",
-   "source": "Dollar General (DG) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
-   "title": "Dollar General Q3 earnings due next week",
-   "summary": "Dollar General reports Q3 earnings in the week starting Nov 30. The stock is up 10% in a month but still below highs. Results will show if cost cuts and traffic gains are offsetting margin pressure from inflation and shrink.",
-   "key_date": "2026-11-30",
-   "outcomes": [
-    {
-     "label": "In-line results",
-     "probability": 0.5,
-     "move_pct": 2.0
-    },
-    {
-     "label": "Beat and raised guidance",
-     "probability": 0.25,
-     "move_pct": 8.0
-    },
-    {
-     "label": "Miss or lowered outlook",
-     "probability": 0.25,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 0.25,
-   "p_up": 0.75,
-   "expected_move": 0.5,
-   "lean": "up",
-   "id": "DG:results",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 137.9
-  },
-  {
    "ticker": "DG",
    "type": "legal",
    "source": null,
@@ -1656,39 +1694,6 @@
    "first_flagged": "2026-11-26",
    "last_seen": "2026-11-27",
    "price_at_flag": 36.35
-  },
-  {
-   "ticker": "IP",
-   "type": "other",
-   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
-   "title": "International Paper EMEA packaging spin-off completion",
-   "summary": "International Paper's board approved the spin-off of its EMEA packaging business. The unresolved event is the final separation and listing, which will test the valuation of the remaining company and unlock shareholder value.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Spin-off completed as planned",
-     "probability": 0.7,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Spin-off delayed or modified",
-     "probability": 0.2,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Spin-off cancelled",
-     "probability": 0.1,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.1,
-   "p_up": 0.7,
-   "expected_move": 1.0,
-   "lean": "up",
-   "id": "IP:other",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 29.86
   },
   {
    "ticker": "TPL",
