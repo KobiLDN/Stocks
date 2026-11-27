@@ -823,5 +823,27 @@
 "p_up": 0.6,
 "expected_move": 7.0,
 "lean": "up"
+},
+{
+"id": "APP:takeover",
+"date": "2026-11-27",
+"ticker": "APP",
+"type": "takeover",
+"price_usd": 396.85,
+"p_big": 0.6,
+"p_up": 0.7,
+"expected_move": 2.3,
+"lean": "up"
+},
+{
+"id": "STLAP.PA:legal",
+"date": "2026-11-27",
+"ticker": "STLAP.PA",
+"type": "legal",
+"price_usd": 3.94,
+"p_big": 0.8,
+"p_up": 0.4,
+"expected_move": -2.4,
+"lean": "down"
 }
 ]
