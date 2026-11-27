@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27 07:41",
+ "updated": "2026-11-27 15:50",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 44,
+ "count": 54,
  "situations": [
   {
    "ticker": "WULF",
@@ -49,6 +49,72 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-26",
    "price_at_flag": 11.56
+  },
+  {
+   "ticker": "IMB.L",
+   "type": "takeover",
+   "source": "Altria’s Potential Acquisition Of Imperial Brands Is ‘No Doubt Accretive,’ Says Stifel",
+   "title": "Altria potential acquisition of Imperial Brands",
+   "summary": "Stifel calls deal 'accretive'. No formal bid yet; speculation active. Stock up 26% in week.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No bid; speculation fades",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Formal bid announced",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Rival bid emerges",
+     "probability": 0.3,
+     "move_pct": 15.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.6,
+   "expected_move": 6.5,
+   "lean": "up",
+   "id": "IMB.L:takeover",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 45.27
+  },
+  {
+   "ticker": "BEAM",
+   "type": "regulatory",
+   "source": "Beam Therapeutics Targets Sickle Cell Filing as Early as December, Advances Gene-Editing Pipeline",
+   "title": "Beam Therapeutics sickle cell filing decision",
+   "summary": "Beam targets filing for its sickle cell gene-editing therapy as early as December. FDA acceptance and timeline will determine path to market for this high-risk pipeline asset.",
+   "key_date": "2026-12-31",
+   "outcomes": [
+    {
+     "label": "Filing accepted, standard review",
+     "probability": 0.4,
+     "move_pct": 10.0
+    },
+    {
+     "label": "Filing accepted, priority review",
+     "probability": 0.3,
+     "move_pct": 30.0
+    },
+    {
+     "label": "Filing delayed or rejected",
+     "probability": 0.3,
+     "move_pct": -25.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.7,
+   "expected_move": 5.5,
+   "lean": "up",
+   "id": "BEAM:regulatory",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 23.48
   },
   {
    "ticker": "RCAT",
@@ -115,6 +181,39 @@
    "first_flagged": "2026-11-23",
    "last_seen": "2026-11-25",
    "price_at_flag": 561.64
+  },
+  {
+   "ticker": "CORZ",
+   "type": "regulatory",
+   "source": "CoreWeave’s Default Odds Hit a Record. Core Scientific Has a Big Problem",
+   "title": "Core Scientific faces risk from CoreWeave default odds",
+   "summary": "CoreWeave's default odds hit a record, posing a major problem for Core Scientific as a key customer. The unresolved risk is whether CoreWeave will default on contracts, impacting Core Scientific's revenue and stock.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "CoreWeave avoids default, contracts hold",
+     "probability": 0.4,
+     "move_pct": 15.0
+    },
+    {
+     "label": "CoreWeave restructures or delays payments",
+     "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "CoreWeave defaults, contracts break",
+     "probability": 0.2,
+     "move_pct": -30.0
+    }
+   ],
+   "p_big": 1.0,
+   "p_up": 0.4,
+   "expected_move": -4.0,
+   "lean": "down",
+   "id": "CORZ:regulatory",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 11.1
   },
   {
    "ticker": "AAL.L",
@@ -282,37 +381,32 @@
    "price_at_flag": 91.9
   },
   {
-   "ticker": "IMB.L",
+   "ticker": "CBK.DE",
    "type": "takeover",
-   "source": "Marlboro Maker Altria Eyes Takeover Of $34 Billion Tobacco Giant. It Has Until Christmas Eve To Decide.",
-   "title": "Altria takeover bid for Imperial Brands pending",
-   "summary": "Altria has until Dec 24 to decide whether to make a firm offer for Imperial Brands. The outcome could significantly affect IMB's share price.",
-   "key_date": "2026-12-24",
+   "source": "UniCredit Seeks Commerzbank Chair Role for CEO Orcel After Takeover Clears Final Hurdle",
+   "title": "UniCredit seeks chair role; integration near final",
+   "summary": "UniCredit cleared hurdles, now aims for CEO Orcel as chair. Control and strategy change pending.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "No offer",
-     "probability": 0.5,
-     "move_pct": -15.0
-    },
-    {
-     "label": "Firm offer made",
-     "probability": 0.4,
+     "label": "Integration successful, cost savings",
+     "probability": 0.6,
      "move_pct": 10.0
     },
     {
-     "label": "Deadline extended",
-     "probability": 0.1,
-     "move_pct": -5.0
+     "label": "Regulatory/political pushback",
+     "probability": 0.4,
+     "move_pct": -15.0
     }
    ],
-   "p_big": 0.9,
-   "p_up": 0.4,
-   "expected_move": -4.0,
-   "lean": "down",
-   "id": "IMB.L:takeover",
+   "p_big": 1.0,
+   "p_up": 0.6,
+   "expected_move": 0.0,
+   "lean": "up",
+   "id": "CBK.DE:takeover",
    "first_flagged": "2026-11-26",
    "last_seen": "2026-11-27",
-   "price_at_flag": 45.27
+   "price_at_flag": 36.35
   },
   {
    "ticker": "GPN",
@@ -480,39 +574,6 @@
    "price_at_flag": 10.99
   },
   {
-   "ticker": "IP",
-   "type": "other",
-   "source": null,
-   "title": "IP advances EMEA packaging spin-off with board approval",
-   "summary": "International Paper's board approved spinning off its EMEA packaging business. The spin-off is pending shareholder and regulatory approvals, and its structure and valuation are unresolved. Success could unlock value; failure or poor terms could hurt.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Spin-off completed, value unlocked",
-     "probability": 0.5,
-     "move_pct": 10.0
-    },
-    {
-     "label": "Spin-off delayed or modified",
-     "probability": 0.3,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Spin-off cancelled",
-     "probability": 0.2,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.7,
-   "p_up": 0.5,
-   "expected_move": 0.5,
-   "lean": "either way",
-   "id": "IP:other",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 29.86
-  },
-  {
    "ticker": "BAYN.DE",
    "type": "legal",
    "source": "Bayer Clears Major Roundup Hurdle, but a New Study Raises Cancer Link Again",
@@ -546,37 +607,37 @@
    "price_at_flag": 58.07
   },
   {
-   "ticker": "MU",
-   "type": "results",
-   "source": "Is Micron Cheap Only If Its Record Margin Lasts?",
-   "title": "Micron's December earnings report to test record margins",
-   "summary": "Micron reports fiscal Q1 results in December. Consensus revenue estimate of $63.8B sits above management's $60-63B guide, so a beat is priced in. The key unresolved question is whether record 74.6% operating margins can hold as memory price increases slow.",
+   "ticker": "KTOS",
+   "type": "product",
+   "source": "Kratos Defense & Security Solutions (KTOS) Locks In Offshore Launch Access Starting In 2027",
+   "title": "Kratos offshore launch access from 2027",
+   "summary": "Kratos locked in offshore launch access starting in 2027, but the stock is down 62% YTD and 26% in a month. ETF selling has changed the investment story. The launch deal's revenue impact and timing are uncertain.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Revenue in line, margins slip",
+     "label": "Delays or limited near-term impact",
      "probability": 0.4,
      "move_pct": -5.0
     },
     {
-     "label": "Revenue misses or margins drop sharply",
-     "probability": 0.35,
-     "move_pct": -20.0
+     "label": "Launch deal accelerates revenue",
+     "probability": 0.3,
+     "move_pct": 20.0
     },
     {
-     "label": "Revenue beats and margins hold",
-     "probability": 0.25,
-     "move_pct": 15.0
+     "label": "Further contract wins or losses",
+     "probability": 0.3,
+     "move_pct": 10.0
     }
    ],
    "p_big": 0.6,
-   "p_up": 0.25,
-   "expected_move": -5.2,
-   "lean": "down",
-   "id": "MU:results",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 710.42
+   "p_up": 0.6,
+   "expected_move": 7.0,
+   "lean": "up",
+   "id": "KTOS:product",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 30.53
   },
   {
    "ticker": "INTC",
@@ -612,6 +673,105 @@
    "price_at_flag": 54.8
   },
   {
+   "ticker": "CRM",
+   "type": "results",
+   "source": "Down 26% This Year, Is It Time to Buy Salesforce Stock Before Earnings?",
+   "title": "Salesforce Q3 earnings on Dec 2 after market close",
+   "summary": "Options imply ~11% move. Wall Street watches organic growth, Agentforce adoption, margins. Stock down 26% YTD.",
+   "key_date": "2026-12-02",
+   "outcomes": [
+    {
+     "label": "In-line results and guidance",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Beat and raise guidance",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Miss and cut guidance",
+     "probability": 0.3,
+     "move_pct": -12.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.7,
+   "expected_move": 2.9,
+   "lean": "up",
+   "id": "CRM:results",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 197.21
+  },
+  {
+   "ticker": "HPE",
+   "type": "results",
+   "source": "HPE CEO Antonio Neri reveals 3 drivers behind its raised outlook",
+   "title": "HPE outlook after raised guidance",
+   "summary": "HPE raised its outlook but the stock is down 29% in a month. CEO Antonio Neri cited three drivers for momentum. The market is skeptical about sustainability of AI server demand and margin pressure. Next earnings will test the narrative.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Mixed results, AI spending questioned",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Strong demand, margins hold",
+     "probability": 0.3,
+     "move_pct": 12.0
+    },
+    {
+     "label": "Guidance cut, margin compression",
+     "probability": 0.3,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.3,
+   "expected_move": -2.9,
+   "lean": "down",
+   "id": "HPE:results",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 42.7
+  },
+  {
+   "ticker": "CRDO",
+   "type": "results",
+   "source": "Credo Technology Group Holding (CRDO) Could Be 50% Below Fair Value After Marvell Settlement",
+   "title": "Credo Q2 earnings report due",
+   "summary": "Credo Technology reports Q2 earnings soon. The stock is down 36% in a month after a Marvell settlement. Analysts suggest it could be 50% below fair value, but cash flow and sales trends will determine if the selloff is overdone.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "In-line results, cautious outlook",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Strong earnings, guidance raised",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Miss and weak guidance",
+     "probability": 0.3,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.3,
+   "expected_move": -2.0,
+   "lean": "down",
+   "id": "CRDO:results",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 110.79
+  },
+  {
    "ticker": "NVDA",
    "type": "regulatory",
    "source": "Huang faces 3 camps of GOP skeptics ahead of congressional grilling",
@@ -645,37 +805,37 @@
    "price_at_flag": 152.63
   },
   {
-   "ticker": "CRM",
+   "ticker": "MRVL",
    "type": "results",
-   "source": "Salesforce earnings to put Bank of America’s growth outlook to the test",
-   "title": "Salesforce earnings to test growth outlook",
-   "summary": "Salesforce reports earnings soon after an AI-driven sell-off. Results and guidance will determine if the stock is mispriced; expectations are for growth validation.",
+   "source": "MRVL to Post Q3 Earnings: Time to Buy, Sell or Hold the Stock?",
+   "title": "Marvell Q3 earnings scheduled soon",
+   "summary": "Stock down 45% in month. Earnings readout on AI demand and custom chips. Options imply big move.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "In-line results, cautious outlook",
+     "label": "In-line results",
      "probability": 0.4,
-     "move_pct": -3.0
+     "move_pct": 5.0
     },
     {
-     "label": "Beat and raise guidance",
+     "label": "Beat on AI strength",
      "probability": 0.3,
-     "move_pct": 10.0
+     "move_pct": 12.0
     },
     {
-     "label": "Miss and lower guidance",
+     "label": "Miss on demand weakness",
      "probability": 0.3,
-     "move_pct": -12.0
+     "move_pct": -15.0
     }
    ],
    "p_big": 0.6,
-   "p_up": 0.3,
-   "expected_move": -1.8,
-   "lean": "down",
-   "id": "CRM:results",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-26",
-   "price_at_flag": 197.21
+   "p_up": 0.7,
+   "expected_move": 1.1,
+   "lean": "up",
+   "id": "MRVL:results",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 132.32
   },
   {
    "ticker": "MBG.DE",
@@ -777,39 +937,6 @@
    "price_at_flag": 298.83
   },
   {
-   "ticker": "MRVL",
-   "type": "results",
-   "source": "Marvell Options Price In 16% Earnings-Day Stock Swing",
-   "title": "Marvell Q3 earnings report due next week",
-   "summary": "Marvell reports earnings on Dec 1; options imply a 16% swing. The stock has dropped 44% in a month amid the AI selloff, making the report a key catalyst.",
-   "key_date": "2026-12-01",
-   "outcomes": [
-    {
-     "label": "In-line results, cautious outlook",
-     "probability": 0.45,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Miss and cut guidance",
-     "probability": 0.3,
-     "move_pct": -18.0
-    },
-    {
-     "label": "Beat and raise guidance",
-     "probability": 0.25,
-     "move_pct": 12.0
-    }
-   ],
-   "p_big": 0.55,
-   "p_up": 0.25,
-   "expected_move": -4.6,
-   "lean": "down",
-   "id": "MRVL:results",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 132.32
-  },
-  {
    "ticker": "AVGO",
    "type": "results",
    "source": "Goldman Sachs resets Broadcom's 12-month price target before earnings",
@@ -874,6 +1001,133 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-25",
    "price_at_flag": 49.71
+  },
+  {
+   "ticker": "MU",
+   "type": "results",
+   "source": "Down 50%, is Micron stock a bargain buy or a value trap?",
+   "title": "Micron FQ1 2027 earnings on Dec 17",
+   "summary": "Micron reports fiscal Q1 2027 earnings on Dec 17. The stock is down 35% in a month on oversupply fears, but CEO sees tightening supply in 2027-28. Results and guidance will test whether AI memory demand can sustain margins.",
+   "key_date": "2026-12-17",
+   "outcomes": [
+    {
+     "label": "In-line results, cautious outlook",
+     "probability": 0.45,
+     "move_pct": 3.0
+    },
+    {
+     "label": "Miss, margin warning",
+     "probability": 0.3,
+     "move_pct": -12.0
+    },
+    {
+     "label": "Strong beat, bullish guidance",
+     "probability": 0.25,
+     "move_pct": 15.0
+    }
+   ],
+   "p_big": 0.55,
+   "p_up": 0.7,
+   "expected_move": 1.5,
+   "lean": "up",
+   "id": "MU:results",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 710.42
+  },
+  {
+   "ticker": "285A",
+   "type": "product",
+   "source": "Kioxia Stock Has Soared 21% in Two Days After an Nvidia SSD Test",
+   "title": "Kioxia Nvidia SSD test outcome",
+   "summary": "Kioxia stock surged 21% in two days after an Nvidia SSD test. The unresolved event is whether Nvidia will formally qualify Kioxia as a supplier, which could unlock significant revenue.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Positive test results, no commitment",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Nvidia qualification confirmed",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "Test fails or Nvidia chooses rival",
+     "probability": 0.2,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.8,
+   "expected_move": 5.5,
+   "lean": "up",
+   "id": "285A:product",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 48.64
+  },
+  {
+   "ticker": "UCG.MI",
+   "type": "takeover",
+   "source": "UniCredit Seeks Commerzbank Chair Role for CEO Orcel After Takeover Clears Final Hurdle",
+   "title": "UniCredit seeks Commerzbank chair role after final approval",
+   "summary": "UniCredit has secured final Polish approval for its Commerzbank takeover bid and now seeks a board chair role for CEO Orcel, but the integration terms and leadership structure are still unresolved.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Smooth integration, Orcel gets chair",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Regulatory or board pushback delays deal",
+     "probability": 0.3,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Deal blocked or restructured",
+     "probability": 0.2,
+     "move_pct": -20.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.5,
+   "expected_move": -4.5,
+   "lean": "either way",
+   "id": "UCG.MI:takeover",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 84.19
+  },
+  {
+   "ticker": "D",
+   "type": "regulatory",
+   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
+   "title": "State hearings continue after DOJ closes probe",
+   "summary": "DOJ closed NextEra-Dominion antitrust probe but state hearings remain unresolved. Could affect merger terms.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "State approvals granted",
+     "probability": 0.5,
+     "move_pct": 8.0
+    },
+    {
+     "label": "State rejects or imposes conditions",
+     "probability": 0.5,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.5,
+   "expected_move": -1.0,
+   "lean": "either way",
+   "id": "D:regulatory",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 66.79
   },
   {
    "ticker": "SNDK",
@@ -1041,6 +1295,105 @@
    "price_at_flag": 139.51
   },
   {
+   "ticker": "BMY",
+   "type": "regulatory",
+   "source": "Bristol Myers' Sotyktu Delivers Mixed Phase III Lupus Study Results",
+   "title": "Bristol Myers' Sotyktu faces FDA path after mixed lupus results",
+   "summary": "Bristol Myers' Sotyktu met primary endpoint in one Phase 3 lupus trial but failed in another due to high placebo response. The company will discuss data with health authorities; FDA approval path is uncertain.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "FDA requires additional trial",
+     "probability": 0.4,
+     "move_pct": -5.0
+    },
+    {
+     "label": "FDA accepts filing, path clear",
+     "probability": 0.3,
+     "move_pct": 8.0
+    },
+    {
+     "label": "FDA rejects or delays significantly",
+     "probability": 0.3,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.3,
+   "expected_move": -4.1,
+   "lean": "down",
+   "id": "BMY:regulatory",
+   "first_flagged": "2026-11-25",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 61.6
+  },
+  {
+   "ticker": "CRWD",
+   "type": "regulatory",
+   "source": null,
+   "title": "CrowdStrike patch speed under scrutiny",
+   "summary": "Cisco's Jeetu Patel stated exploits arrive in 10-15 minutes but patches take 45 days, referencing CrowdStrike. This highlights ongoing scrutiny of CrowdStrike's response times after its July outage. The stock is down 21% in a month.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No regulatory action, confidence returns",
+     "probability": 0.5,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Regulatory probe or customer losses",
+     "probability": 0.3,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Industry-wide patch standards imposed",
+     "probability": 0.2,
+     "move_pct": -8.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.5,
+   "expected_move": -3.6,
+   "lean": "either way",
+   "id": "CRWD:regulatory",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 211.9
+  },
+  {
+   "ticker": "CPAY",
+   "type": "leadership",
+   "source": "Corpay CEO Ron Clarke Unloads $85.3 Million of Stock Outside a 10b5-1 Plan",
+   "title": "CEO sells $85M stock outside 10b5-1 plan",
+   "summary": "Corpay CEO Ron Clarke sold $85.3 million of stock outside a 10b5-1 plan. This insider sale raises questions about his confidence in the company's outlook, especially after Corpay's $1.1B investment in BILL. The stock is up 52% YTD.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "No follow-up, stock drifts",
+     "probability": 0.4,
+     "move_pct": -2.0
+    },
+    {
+     "label": "CEO explains sale, confidence restored",
+     "probability": 0.3,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Further insider selling or negative news",
+     "probability": 0.3,
+     "move_pct": -12.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.3,
+   "expected_move": -2.9,
+   "lean": "down",
+   "id": "CPAY:leadership",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 457.98
+  },
+  {
    "ticker": "MBG.DE",
    "type": "activist",
    "source": null,
@@ -1072,6 +1425,62 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 40.88
+  },
+  {
+   "ticker": "IP",
+   "type": "other",
+   "source": "IP Advances EMEA Packaging Business Spin-Off With Board Approval",
+   "title": "EMEA packaging spin-off board approved",
+   "summary": "Board approved spin-off; completion pending. Could unlock value or face headwinds.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Spin-off completed as planned",
+     "probability": 0.7,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Spin-off delayed or challenged",
+     "probability": 0.3,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.7,
+   "expected_move": 0.5,
+   "lean": "up",
+   "id": "IP:other",
+   "first_flagged": "2026-11-24",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 29.86
+  },
+  {
+   "ticker": "TPL",
+   "type": "takeover",
+   "source": "Texas Pacific Land to acquire EagleRock in $3bn transaction",
+   "title": "Texas Pacific Land's $3B EagleRock acquisition pending",
+   "summary": "Stock down 20% in month. Deal signed Nov 24 needs approvals; could reshape Permian footprint.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Deal approved, synergies expected",
+     "probability": 0.7,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Deal blocked or delayed",
+     "probability": 0.3,
+     "move_pct": -10.0
+    }
+   ],
+   "p_big": 0.3,
+   "p_up": 0.7,
+   "expected_move": 0.5,
+   "lean": "up",
+   "id": "TPL:takeover",
+   "first_flagged": "2026-11-23",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 259.71
   },
   {
    "ticker": "DG",
@@ -1140,72 +1549,6 @@
    "price_at_flag": 66.15
   },
   {
-   "ticker": "BMY",
-   "type": "regulatory",
-   "source": null,
-   "title": "Bristol-Myers reports mixed Phase 3 results for Sotyktu in lupus",
-   "summary": "Bristol-Myers Squibb announced mixed Phase 3 trial results for Sotyktu in systemic lupus erythematosus, leaving the drug's approval path uncertain and a key readout for the pipeline.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Positive full data supports filing",
-     "probability": 0.4,
-     "move_pct": 8.0
-    },
-    {
-     "label": "Mixed data leads to delay",
-     "probability": 0.4,
-     "move_pct": -5.0
-    },
-    {
-     "label": "Negative data ends program",
-     "probability": 0.2,
-     "move_pct": -15.0
-    }
-   ],
-   "p_big": 0.2,
-   "p_up": 0.4,
-   "expected_move": -1.8,
-   "lean": "down",
-   "id": "BMY:regulatory",
-   "first_flagged": "2026-11-25",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 61.6
-  },
-  {
-   "ticker": "TPL",
-   "type": "takeover",
-   "source": "Texas Pacific Land to acquire EagleRock in $3bn transaction",
-   "title": "Texas Pacific Land-EagleRock merger pending",
-   "summary": "Texas Pacific Land has agreed to acquire EagleRock in a $3bn deal, pending regulatory and shareholder approvals. The outcome could impact TPL's stock.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "Merger closes",
-     "probability": 0.7,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Merger blocked",
-     "probability": 0.2,
-     "move_pct": -10.0
-    },
-    {
-     "label": "Merger delayed",
-     "probability": 0.1,
-     "move_pct": -2.0
-    }
-   ],
-   "p_big": 0.2,
-   "p_up": 0.7,
-   "expected_move": 1.3,
-   "lean": "up",
-   "id": "TPL:takeover",
-   "first_flagged": "2026-11-23",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 259.71
-  },
-  {
    "ticker": "DG",
    "type": "results",
    "source": "Dollar General (DG) Earnings Expected to Grow: What to Know Ahead of Next Week's Release",
@@ -1239,39 +1582,6 @@
    "price_at_flag": 137.9
   },
   {
-   "ticker": "D",
-   "type": "regulatory",
-   "source": "DOJ closes NextEra-Dominion antitrust probe as state hearings continue",
-   "title": "State hearings on Dominion/NextEra deal",
-   "summary": "While the DOJ closed its antitrust probe, state hearings on the NextEra-Dominion deal continue, with the outcome still pending.",
-   "key_date": null,
-   "outcomes": [
-    {
-     "label": "State approves deal",
-     "probability": 0.6,
-     "move_pct": 5.0
-    },
-    {
-     "label": "State blocks deal",
-     "probability": 0.2,
-     "move_pct": -10.0
-    },
-    {
-     "label": "State imposes conditions",
-     "probability": 0.2,
-     "move_pct": -2.0
-    }
-   ],
-   "p_big": 0.2,
-   "p_up": 0.6,
-   "expected_move": 0.6,
-   "lean": "up",
-   "id": "D:regulatory",
-   "first_flagged": "2026-11-24",
-   "last_seen": "2026-11-25",
-   "price_at_flag": 66.79
-  },
-  {
    "ticker": "TSM",
    "type": "regulatory",
    "source": null,
@@ -1303,39 +1613,6 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-26",
    "price_at_flag": 344.48
-  },
-  {
-   "ticker": "CBK.DE",
-   "type": "takeover",
-   "source": null,
-   "title": "UniCredit seeks Commerzbank board control after takeover",
-   "summary": "UniCredit has cleared all regulatory hurdles for its €39bn takeover of Commerzbank and is now pushing to replace 9 of 10 shareholder representatives on the supervisory board, with CEO Orcel as chairman. The EGM vote is expected in January, and UniCredit also wants to remove some management board mem",
-   "key_date": "2027-01-15",
-   "outcomes": [
-    {
-     "label": "UniCredit wins full board control",
-     "probability": 0.65,
-     "move_pct": 5.0
-    },
-    {
-     "label": "Compromise with some board changes",
-     "probability": 0.25,
-     "move_pct": -2.0
-    },
-    {
-     "label": "UniCredit's proposals rejected or delayed",
-     "probability": 0.1,
-     "move_pct": -10.0
-    }
-   ],
-   "p_big": 0.1,
-   "p_up": 0.65,
-   "expected_move": 1.8,
-   "lean": "up",
-   "id": "CBK.DE:takeover",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 36.35
   },
   {
    "ticker": "TPL",
@@ -1402,6 +1679,39 @@
    "first_flagged": "2026-11-24",
    "last_seen": "2026-11-25",
    "price_at_flag": 41.06
+  },
+  {
+   "ticker": "COST",
+   "type": "results",
+   "source": "12 Big Funds Bought Costco Wholesale Last Quarter, While 7 Sold. Who’s Right?",
+   "title": "Costco Q1 report tests membership growth",
+   "summary": "Costco's first-quarter report in mid-December is the first without a fee increase boost. Paid member growth slowed to 3.8% in Q4 from 5.2% in Q1. The stock trades at 48x forward earnings, above its 5-year average of 43x, making membership trends a key test.",
+   "key_date": "2026-12-15",
+   "outcomes": [
+    {
+     "label": "Member growth accelerates or holds",
+     "probability": 0.4,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Member growth slows further",
+     "probability": 0.3,
+     "move_pct": -8.0
+    },
+    {
+     "label": "In-line results, multiple compresses",
+     "probability": 0.3,
+     "move_pct": -3.0
+    }
+   ],
+   "p_big": 0,
+   "p_up": 0.4,
+   "expected_move": -1.3,
+   "lean": "down",
+   "id": "COST:results",
+   "first_flagged": "2026-11-27",
+   "last_seen": "2026-11-27",
+   "price_at_flag": 1097.97
   },
   {
    "ticker": "NEE",
