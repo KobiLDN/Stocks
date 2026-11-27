@@ -691,5 +691,27 @@
 "p_up": 0.6,
 "expected_move": -2.0,
 "lean": "up"
+},
+{
+"id": "GPN:activist",
+"date": "2026-11-27",
+"ticker": "GPN",
+"type": "activist",
+"price_usd": 96.03,
+"p_big": 0.35,
+"p_up": 0.55,
+"expected_move": 2.2,
+"lean": "either way"
+},
+{
+"id": "TPL:other",
+"date": "2026-11-27",
+"ticker": "TPL",
+"type": "other",
+"price_usd": 261.37,
+"p_big": 0.1,
+"p_up": 0.7,
+"expected_move": -1.0,
+"lean": "up"
 }
 ]
