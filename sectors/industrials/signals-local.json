@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25 08:02",
+  "updated": "2026-11-27 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "0ac5c5450567",
-  "code_commit": "d7455adaad79",
+  "code_commit": "4cd9431a7ce1",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "UPS",
+      "signal": "buy",
+      "confidence": 0.82,
+      "rationale": "Q3 adj EPS of $1.69 beat the $1.63 consensus and UPS raised FY26 EPS guidance to ~$7.28 ([about.ups.com](https://about.ups.com/us/en/newsroom/press-releases/financials/ups-releases-3q-2026-earnings.html)); shares are +12.8% over 1M at 21.5x P/E with a 5.89% yield.",
+      "drivers": [
+        "Q3 EPS beat",
+        "raised FY26 guide",
+        "+12.8% 1M",
+        "5.89% yield"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "PWR",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "+28.7% YTD with a strong_buy 1.44 consensus; grid and infrastructure backlog supports the 51.2x P/E despite a -6.2% 1W pullback.",
+      "drivers": [
+        "+28.7% YTD",
+        "strong_buy 1.44",
+        "infrastructure backlog",
+        "P/E 51.2"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "WAB",
+      "signal": "strong_buy",
+      "confidence": 0.76,
+      "rationale": "+33.6% YTD, 35.7x P/E and strong_buy 1.42; rail equipment demand and margin execution remain supportive after a modest +3.7% 1M move.",
+      "drivers": [
+        "+33.6% YTD",
+        "strong_buy 1.42",
+        "rail demand",
+        "P/E 35.7"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "DAL",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "+21.4% YTD at 16.6x P/E with strong_buy 1.32; airline capacity discipline and a 1.04% yield support the risk/reward.",
+      "drivers": [
+        "+21.4% YTD",
+        "P/E 16.6",
+        "strong_buy 1.32",
+        "1.04% yield"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "BBY.L",
+      "signal": "strong_buy",
+      "confidence": 0.73,
+      "rationale": "+24.4% YTD at 17.0x P/E with strong_buy 1.40; UK/US infrastructure and defence-linked construction exposure supports backlog visibility.",
+      "drivers": [
+        "+24.4% YTD",
+        "P/E 17.0",
+        "strong_buy 1.40",
+        "infrastructure exposure"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "BVI.PA",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "+22.7% YTD and +9.3% 1M at 28.5x P/E; buy 1.65 consensus and a 3.08% yield reflect testing/inspection recurring revenue and backlog.",
+      "drivers": [
+        "+22.7% YTD",
+        "+9.3% 1M",
+        "3.08% yield",
+        "buy 1.65"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "FIX",
+      "signal": "strong_buy",
+      "confidence": 0.68,
+      "rationale": "Strong_buy 1.46 and 23.8x P/E; the -11.6% 1M pullback in data-center mechanical services offers a better entry despite +9.8% YTD.",
+      "drivers": [
+        "strong_buy 1.46",
+        "P/E 23.8",
+        "-11.6% 1M pullback",
+        "data-center exposure"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "FERG",
+      "signal": "buy",
+      "confidence": 0.67,
+      "rationale": "+15.9% YTD and +12.4% 1M at 24.3x P/E; buy 1.79 consensus and distribution leverage to US repair/infrastructure demand.",
+      "drivers": [
+        "+12.4% 1M",
+        "+15.9% YTD",
+        "P/E 24.3",
+        "buy 1.79"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "VLTO",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "+22.6% YTD, +16.3% 1M and 29.7x P/E; buy 1.82 and low beta 0.67 with recurring water-quality revenue.",
+      "drivers": [
+        "+16.3% 1M",
+        "+22.6% YTD",
+        "beta 0.67",
+        "buy 1.82"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "PNR",
+      "signal": "buy",
+      "confidence": 0.62,
+      "rationale": "Pentair's +32.0% 1M rebound follows a new research note ([frontierpicks.com](https://frontierpicks.com/latest/)); 19.9x P/E and buy 2.06, though YTD -29.9% keeps it contrarian.",
+      "drivers": [
+        "+32.0% 1M",
+        "P/E 19.9",
+        "new research note",
+        "YTD -29.9%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "UPS",
@@ -175,179 +348,6 @@
         "div yield 3.7%",
         "infrastructure exposure",
         "low beta 0.76"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "PNR",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Pentair has surged +30.47% in the past month, signaling a powerful reversal from a -34% 1-year decline; with a P/E of 18.7 and a beta of 1.01, it offers a compelling risk/reward entry point.",
-      "drivers": [
-        "+30.47% 1M momentum",
-        "P/E 18.7 attractive",
-        "beta 1.01 moderate",
-        "reversal from deep 1Y loss"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "RTO.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Rentokil Initial has rallied +16.68% in the last month and +2.00% in the past week, showing strong near-term momentum; its P/E of 40.8 is elevated but the buy consensus and 2.56% dividend yield support a positive outlook.",
-      "drivers": [
-        "+16.68% 1M momentum",
-        "buy consensus",
-        "2.56% dividend yield",
-        "positive weekly trend"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "FER",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Ferrovial has gained +16.49% in the past month, driven by infrastructure spending tailwinds; a 3.84% dividend yield and low short interest of 1.08% add to its defensive appeal.",
-      "drivers": [
-        "+16.49% 1M momentum",
-        "3.84% dividend yield",
-        "low short interest 1.08%",
-        "infrastructure catalyst"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "ALLE",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Allegion has jumped +15.48% in the past month and carries a buy analyst consensus with a score of 1.91; its P/E of 22.84 is reasonable for the building products sector.",
-      "drivers": [
-        "+15.48% 1M momentum",
-        "buy consensus (score 1.91)",
-        "P/E 22.84 reasonable",
-        "building products sector"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "VLTO",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Veralto has rallied +15.12% in the past month and is up +18.92% YTD, supported by strong fundamentals in environmental services; its beta of 0.666 offers stability.",
-      "drivers": [
-        "+15.12% 1M momentum",
-        "+18.92% YTD",
-        "beta 0.666 low volatility",
-        "environmental services sector"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "ROL",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Rollins has bounced +13.65% in the past month, recovering from a -36% 1-year decline; the buy consensus and 2.12% dividend yield provide a margin of safety.",
-      "drivers": [
-        "+13.65% 1M momentum",
-        "buy consensus",
-        "2.12% dividend yield",
-        "recovery from deep 1Y loss"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "CPRT",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Copart has surged +12.69% in the past month, with a P/E of 20.06 and a buy consensus; its strong YTD performance of -17.69% is misleading given the recent momentum shift.",
-      "drivers": [
-        "+12.69% 1M momentum",
-        "P/E 20.06 attractive",
-        "buy consensus",
-        "recent momentum shift"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "SWK",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Stanley Black & Decker has soared +11.71% in the past month and +43.72% YTD, driven by operational improvements; a P/E of 19.11 and 3.15% dividend yield offer strong value.",
-      "drivers": [
-        "+11.71% 1M momentum",
-        "+43.72% YTD",
-        "P/E 19.11 low",
-        "3.15% dividend yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "MAS",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Masco has gained +11.21% in the past month and +30.35% YTD, with a P/E of 17.92 and a buy consensus; the building products sector benefits from housing demand.",
-      "drivers": [
-        "+11.21% 1M momentum",
-        "+30.35% YTD",
-        "P/E 17.92 low",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "LUV",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Southwest Airlines has rallied +10.53% in the past month and is up +37% over 1 year, supported by strong travel demand; a P/E of 21.5 and buy consensus make it a solid pick.",
-      "drivers": [
-        "+10.53% 1M momentum",
-        "+37% 1Y return",
-        "P/E 21.5 reasonable",
-        "buy consensus"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

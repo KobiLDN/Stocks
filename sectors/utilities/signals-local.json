@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25 08:02",
+  "updated": "2026-11-27 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,180 @@
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "113ef2be8a9c",
-  "code_commit": "d7455adaad79",
+  "code_commit": "4cd9431a7ce1",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "AEE",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "+16.30% YTD, P/E 19.98, Morgan Stanley raised target to $119 [marketbeat.com], strong earnings guidance 8-10% CAGR through 2031 [amereninvestors.com].",
+      "drivers": [
+        "+16.30% YTD",
+        "P/E 19.98",
+        "analyst buy",
+        "price target raised"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "SSE.L",
+      "signal": "strong_buy",
+      "confidence": 0.9,
+      "rationale": "+17.68% YTD, P/E 22.9, record \u00a32.6bn investment, maintained FY27 EPS guidance 168-193p [sse.com].",
+      "drivers": [
+        "+17.68% YTD",
+        "record \u00a32.6bn investment",
+        "analyst buy",
+        "strong EPS guidance"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "DUK",
+      "signal": "buy",
+      "confidence": 0.85,
+      "rationale": "+16.23% YTD, P/E 19.34, beta 0.308, analyst buy.",
+      "drivers": [
+        "+16.23% YTD",
+        "P/E 19.34",
+        "low beta 0.308",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "WEC",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+15.69% YTD, +8.05% 1M, P/E 21.65, analyst buy.",
+      "drivers": [
+        "+15.69% YTD",
+        "+8.05% 1M",
+        "P/E 21.65",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "EVRG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+24.19% YTD, P/E 19.55, analyst buy score 1.81.",
+      "drivers": [
+        "+24.19% YTD",
+        "P/E 19.55",
+        "analyst buy",
+        "strong YTD"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "UU.L",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+30.38% YTD, P/E 14.97, analyst buy.",
+      "drivers": [
+        "+30.38% YTD",
+        "P/E 14.97",
+        "analyst buy",
+        "strong momentum"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "XEL",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "+11.13% YTD, P/E 18.91, analyst strong_buy score 1.45.",
+      "drivers": [
+        "+11.13% YTD",
+        "P/E 18.91",
+        "analyst strong_buy",
+        "low beta 0.345"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "NI",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+9.87% YTD, analyst buy score 1.65, low short interest 5.13%.",
+      "drivers": [
+        "+9.87% YTD",
+        "analyst buy score 1.65",
+        "low short interest 5.13%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "ETR",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "+17.12% YTD, analyst buy score 1.71, low beta 0.427.",
+      "drivers": [
+        "+17.12% YTD",
+        "analyst buy score 1.71",
+        "low beta 0.427"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "BEP",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "+12.92% YTD, +6.62% 1M, dividend yield 5.15%, analyst buy.",
+      "drivers": [
+        "+12.92% YTD",
+        "dividend yield 5.15%",
+        "analyst buy",
+        "low short interest 0.69%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "SSE.L",
@@ -175,179 +346,6 @@
         "dividend yield 5.56%",
         "strong buy consensus (1.53)",
         "+11.91% YTD"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "WEC",
-      "signal": "buy",
-      "confidence": 0.85,
-      "rationale": "WEC reported a strong Q3 beat (EPS $1.18 vs $0.83 last year) and raised 2026 guidance to $5.60-$5.64, with YTD +13.73% and 1M +8.78% momentum. P/E 21.29 is reasonable for a regulated utility with 3.25% yield.",
-      "drivers": [
-        "Q3 earnings beat",
-        "raised guidance",
-        "strong 1M momentum",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "DUK",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Duke Energy has solid YTD +14.37% and 1M +8.46% gains, a low P/E of 19.03, and a 3.34% dividend yield. Analyst consensus is buy, with no negative catalysts.",
-      "drivers": [
-        "strong YTD and 1M returns",
-        "low P/E 19.03",
-        "buy rating",
-        "3.34% yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "XEL",
-      "signal": "strong_buy",
-      "confidence": 0.78,
-      "rationale": "Xcel Energy carries a strong_buy analyst consensus (score 1.45), YTD +8.65%, 1M +3.28%, and a P/E of 18.48 with 2.99% yield. The strong analyst backing and reasonable valuation make it attractive.",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 18.48",
-        "positive YTD",
-        "low beta 0.345"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "EVRG",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Evergy leads the group with YTD +21.58% and 1M +4.21%, a P/E of 19.14, and a 3.36% dividend. Analyst consensus is buy (1.81), and the stock has strong momentum.",
-      "drivers": [
-        "top YTD return 21.58%",
-        "buy rating",
-        "P/E 19.14",
-        "3.36% yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "NEE",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "NextEra Energy offers a low P/E of 15.04, YTD +5.36%, and 1M +6.60% momentum. Analyst consensus is buy (1.91) and the 2.99% yield adds income appeal.",
-      "drivers": [
-        "low P/E 15.04",
-        "positive 1M momentum",
-        "buy consensus",
-        "2.99% yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "LNT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Alliant Energy shows YTD +12.60% and 1M +5.52%, with a P/E of 19.95 and 2.99% yield. Analyst consensus is buy (2.0), though short interest is elevated at 12.59%.",
-      "drivers": [
-        "strong YTD and 1M",
-        "buy rating",
-        "P/E 19.95",
-        "2.99% yield"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "ED",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Consolidated Edison has exceptional YTD +23.23% and 1M +7.54%, a low P/E of 19.16, and 2.97% yield. Despite a hold rating (3.21), the momentum and valuation are compelling.",
-      "drivers": [
-        "YTD +23.23%",
-        "1M +7.54%",
-        "P/E 19.16",
-        "low beta 0.223"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "EIX",
-      "signal": "buy",
-      "confidence": 0.62,
-      "rationale": "Edison International trades at a very low P/E of 6.61 with a high dividend yield of 5.64%. YTD +7.90% and 1M +8.83% show solid momentum, though analyst consensus is hold (3.19).",
-      "drivers": [
-        "very low P/E 6.61",
-        "high yield 5.64%",
-        "strong 1M momentum",
-        "value play"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "D",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Dominion Energy has YTD +15.36% and 1M +6.34%, a P/E of 21.87, and a 4.03% dividend yield. Analyst consensus is hold (2.56), but the income and momentum are attractive.",
-      "drivers": [
-        "YTD +15.36%",
-        "4.03% yield",
-        "positive 1M",
-        "hold consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "EXC",
-      "signal": "buy",
-      "confidence": 0.58,
-      "rationale": "Exelon reported Q3 adjusted EPS of $0.87 above expectations and narrowed 2026 guidance to $2.85-$2.91. YTD +6.94% and 1M +6.16%, P/E 17.85, 3.68% yield. [exeloncorp.com](https://www.exeloncorp.com/newsroom/exelon-reports-third-quarter-2026-results)",
-      "drivers": [
-        "Q3 earnings beat",
-        "narrowed guidance",
-        "P/E 17.85",
-        "3.68% yield"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

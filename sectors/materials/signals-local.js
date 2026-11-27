@@ -1,5 +1,5 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-25 08:02",
+  "updated": "2026-11-27 08:04",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
@@ -8,9 +8,182 @@ window.SIGNALS_DATA = {
   "group_kind": "sector",
   "variant": "live-2",
   "prompt_version": "8974d2a17c03",
-  "code_commit": "d7455adaad79",
+  "code_commit": "4cd9431a7ce1",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "CRH",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "CRH has a strong_buy consensus (an_score 1.35), a reasonable P/E of 18.32, and a +14.37% 1-month rebound. The Q3 2026 report showed resilient demand and a new $6B buyback program, while the Arcosa acquisition strengthens its aggregates position.",
+      "drivers": [
+        "strong_buy consensus (1.35)",
+        "P/E 18.32",
+        "+14.37% 1M momentum",
+        "new $6B buyback program"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "PPG",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "PPG reported record Q3 2026 EPS of $2.25 (+6% YoY) and raised full-year guidance. With a P/E of 17.5, +22.36% YTD, and strong organic sales growth of 5%, the company is executing well across aerospace and architectural coatings.",
+      "drivers": [
+        "record Q3 EPS $2.25",
+        "P/E 17.5",
+        "+22.36% YTD",
+        "raised FY guidance"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "SHW",
+      "signal": "buy",
+      "confidence": 0.75,
+      "rationale": "Sherwin-Williams shows solid momentum with +7.96% 1M and +11.16% YTD, supported by a buy consensus (an_score 2.07) and a P/E of 33.21. The company benefits from strong demand in architectural and industrial coatings.",
+      "drivers": [
+        "+7.96% 1M momentum",
+        "buy consensus (2.07)",
+        "P/E 33.21",
+        "+11.16% YTD"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "VMC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Vulcan Materials has a +11.49% 1M rebound and a P/E of 34.44, with YTD nearly flat at +0.19%. The company is well-positioned for infrastructure spending and benefits from pricing discipline in aggregates.",
+      "drivers": [
+        "+11.49% 1M rebound",
+        "P/E 34.44",
+        "infrastructure tailwinds",
+        "aggregates pricing power"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "HEI.DE",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "Heidelberg Materials has a strong +24.01% 1M surge, a reasonable P/E of 16.3, and a buy consensus (an_score 1.78). The company is benefiting from pricing actions and cost discipline in a challenging environment.",
+      "drivers": [
+        "+24.01% 1M surge",
+        "P/E 16.3",
+        "buy consensus (1.78)",
+        "pricing discipline"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "HOLN.SW",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Holcim shows a +11.25% 1M gain and a buy consensus (an_score 1.89). Despite a high P/E of 108.4, the company is a leader in building materials with strong exposure to infrastructure and sustainability trends.",
+      "drivers": [
+        "+11.25% 1M gain",
+        "buy consensus (1.89)",
+        "building materials leader",
+        "infrastructure exposure"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "SIKA.SW",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "Sika has a +8.36% 1M move, +19.31% YTD, and a buy consensus (an_score 2.0). With a P/E of 29.4, the company benefits from strong demand in construction chemicals and a global footprint.",
+      "drivers": [
+        "+8.36% 1M move",
+        "+19.31% YTD",
+        "buy consensus (2.0)",
+        "construction chemicals demand"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "AI.PA",
+      "signal": "strong_buy",
+      "confidence": 0.6,
+      "rationale": "Air Liquide has a strong_buy consensus (an_score 1.45), +33.18% YTD, and a P/E of 34.25. The company is a leader in industrial gases with stable demand and a strong pricing environment.",
+      "drivers": [
+        "strong_buy consensus (1.45)",
+        "+33.18% YTD",
+        "P/E 34.25",
+        "industrial gases leader"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "AMRZ.SW",
+      "signal": "buy",
+      "confidence": 0.5,
+      "rationale": "Amrize AG has a +9.65% 1M and +7.30% 1W momentum, with a P/E of 20.37. Despite a hold consensus (an_score 2.75), the recent price action and reasonable valuation make it an attractive turnaround play.",
+      "drivers": [
+        "+9.65% 1M momentum",
+        "P/E 20.37",
+        "recent price recovery",
+        "turnaround potential"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "MOS",
+      "signal": "buy",
+      "confidence": 0.4,
+      "rationale": "Mosaic has a +14.91% 1M rebound and a buy consensus (an_score 2.5). Despite a Q3 loss and phosphate uncertainty, the company is reducing costs and refinancing debt, with a 4.32% dividend yield providing a floor.",
+      "drivers": [
+        "+14.91% 1M rebound",
+        "buy consensus (2.5)",
+        "4.32% dividend yield",
+        "cost reduction efforts"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "CRH",
@@ -175,179 +348,6 @@ window.SIGNALS_DATA = {
         "dividend yield 4.38%",
         "cost reduction progress",
         "sulfur contract settlement"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "CRH",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "CRH has a strong_buy consensus (an_score 1.35), a P/E of 16.58, and a new $6B buyback program through 2030, with Q3 2026 revenues up 3% to $11.4B and a positive 2027 outlook [crh.com](https://www.crh.com/media/press-releases/2026/crh-reports-third-quarter-2026-results/).",
-      "drivers": [
-        "strong_buy consensus",
-        "P/E 16.58",
-        "new $6B buyback",
-        "positive 2027 outlook"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "ECL",
-      "signal": "strong_buy",
-      "confidence": 0.82,
-      "rationale": "Ecolab has a strong_buy consensus (an_score 1.42), a 1-month gain of +2.29%, and a YTD return of +13.11%, with a reasonable P/E of 40.1 for a specialty chemical leader.",
-      "drivers": [
-        "strong_buy consensus",
-        "1M +2.29%",
-        "YTD +13.11%",
-        "P/E 40.1"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "PPG",
-      "signal": "buy",
-      "confidence": 0.78,
-      "rationale": "PPG reported record Q3 2026 EPS of $2.12 (+8% YoY), raised full-year adjusted EPS guidance to $7.90-$8.10, and has a P/E of 16.45 with a 1-month gain of +6.94% [news.ppg.com](https://news.ppg.com/Press-Releases/news-details/2026/PPG-reports-record-third-quarter-2026-EPS-and-raises-midpoint-of-full-year-EPS-guidance/default.aspx).",
-      "drivers": [
-        "record Q3 EPS",
-        "raised FY guidance",
-        "P/E 16.45",
-        "1M +6.94%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "SHW",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Sherwin-Williams reported Q3 2026 net sales up 7.9% to $6.86B, narrowed adjusted EPS guidance to $11.85-$12.15, and has a 1-month gain of +0.96% with a buy consensus [investors.sherwin-williams.com](https://investors.sherwin-williams.com/press-releases/press-release-details/2026/The-Sherwin-Williams-Company-Reports-2026-Third-Quarter-Financial-Results/).",
-      "drivers": [
-        "Q3 sales +7.9%",
-        "narrowed EPS guidance",
-        "1M +0.96%",
-        "buy consensus"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "LIN",
-      "signal": "buy",
-      "confidence": 0.73,
-      "rationale": "Linde has a buy consensus (an_score 1.62), a 1-month gain of +0.45%, YTD +18.33%, and a P/E of 33.39, with a massive $230.8B market cap and low short interest of 1.45%.",
-      "drivers": [
-        "buy consensus",
-        "1M +0.45%",
-        "YTD +18.33%",
-        "low short 1.45%"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "CRDA.L",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Croda International has a buy consensus (an_score 1.71), a 1-month gain of +5.71%, and a YTD return of +39.80%, though its P/E of 67.23 is elevated.",
-      "drivers": [
-        "buy consensus",
-        "1M +5.71%",
-        "YTD +39.80%",
-        "strong momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "AVY",
-      "signal": "buy",
-      "confidence": 0.68,
-      "rationale": "Avery Dennison has a strong buy consensus (an_score 1.55), a 1-month gain of +1.18%, a P/E of 19.6, and a YTD return of +1.01%.",
-      "drivers": [
-        "strong buy consensus",
-        "1M +1.18%",
-        "P/E 19.6",
-        "low beta 0.776"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "VMC",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "Vulcan Materials has a 1-month gain of +2.54%, a P/E of 32.06, and a YTD return of -6.74%, with potential upside from infrastructure demand.",
-      "drivers": [
-        "1M +2.54%",
-        "P/E 32.06",
-        "infrastructure demand",
-        "low beta 0.994"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Olin has a 1-month gain of +1.74% and is merging with Huntsman to form OlinHuntsman, expected to close early 2027, creating a cost leader in chemicals [huntsman.com](https://www.huntsman.com/investors/newsroom/news-releases/detail/637/olin-and-huntsman-announce-business-structure-for).",
-      "drivers": [
-        "1M +1.74%",
-        "merger catalyst",
-        "cost leader potential",
-        "low market cap $1.7B"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "MOS",
-      "signal": "buy",
-      "confidence": 0.55,
-      "rationale": "Mosaic has a 1-month gain of +5.54% and a buy consensus (an_score 2.5), with a dividend yield of 4.72% and a low market cap of $5.9B, though short interest is high at 15.59%.",
-      "drivers": [
-        "1M +5.54%",
-        "buy consensus",
-        "dividend yield 4.72%",
-        "low market cap"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",

@@ -1,13 +1,186 @@
 window.SIGNALS_DATA = {
-  "updated": "2026-11-25 08:01",
+  "updated": "2026-11-27 08:02",
   "model": "deepseek/deepseek-v4-flash",
   "endpoint": "https://openrouter.ai/api/v1/chat/completions",
   "source": "openrouter",
   "variant": "live-2",
   "prompt_version": "665993b81bb4",
-  "code_commit": "d7455adaad79",
+  "code_commit": "4cd9431a7ce1",
   "input_version": "2026-11-11",
   "picks": [
+    {
+      "rank": 1,
+      "ticker": "HEI",
+      "signal": "strong_buy",
+      "confidence": 0.85,
+      "rationale": "Q3 FY2026 net sales surged 23% to $1.41B, EPS $1.67 beat, and Cook Defence acquisition expands military vehicle track systems; 1M +8.64%, P/E 56 but strong organic growth (12-18%) justifies premium [kalkine.com](https://kalkine.com/news/industrials/third-quarter-fiscal-2026-results-senior-notes-offering-and-cook-defence-acquisition-heico-nysehei-stock-sees-elevated-volume).",
+      "drivers": [
+        "Q3 earnings beat",
+        "Cook Defence acquisition",
+        "1M momentum +8.64%",
+        "strong organic growth"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 2,
+      "ticker": "HII",
+      "signal": "buy",
+      "confidence": 0.8,
+      "rationale": "Awarded largest international unmanned systems contract ($186M) by UK MoD for REMUS 620 UUVs; 1M +6.51%, P/E 16.12, analyst buy, and stock outperformed on Nov 25 [hii.com](https://www.hii.com/news/hii-awarded-largest-international-unmanned-systems-contract-in-company-history-by-uk-ministry-of-defence) [marketwatch.com](https://www.marketwatch.com/data-news/huntington-ingalls-industries-inc-stock-outperforms-competitors-on-strong-trading-day-ce3e87d8-99480e3ccef4).",
+      "drivers": [
+        "UK MoD UUV contract $186M",
+        "1M momentum +6.51%",
+        "low P/E 16.12",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 3,
+      "ticker": "LHX",
+      "signal": "strong_buy",
+      "confidence": 0.78,
+      "rationale": "Citigroup initiated with Buy and $348 target (33.7% upside), Q3 EPS $3.28 beat vs $2.95, revenue $6.07B (+7.1% YoY); 1M +0.64%, P/E 24.38, analyst consensus buy [marketbeat.com](https://www.marketbeat.com/instant-alerts/analyst-l3harris-technologies-nyse-lhx-stock-rated-buy-in-new-coverage-at-citigroup-2026-11-09/).",
+      "drivers": [
+        "Citigroup Buy initiation",
+        "Q3 earnings beat",
+        "revenue growth 7.1%",
+        "analyst consensus buy"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 4,
+      "ticker": "RR.L",
+      "signal": "strong_buy",
+      "confidence": 0.75,
+      "rationale": "Strong buy analyst consensus (score 1.5), 1M +4.83%, YTD +8.15%, positive news sentiment 0.168, and European defence spending tailwinds support long-term backlog growth.",
+      "drivers": [
+        "strong_buy consensus",
+        "1M momentum +4.83%",
+        "European defence tailwinds",
+        "positive sentiment 0.168"
+      ],
+      "pre_momentum_label": "strong_buy",
+      "post_momentum_label": "strong_buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 5,
+      "ticker": "BAH",
+      "signal": "buy",
+      "confidence": 0.72,
+      "rationale": "1M +6.18%, 1W +4.59%, P/E 13.65 (attractive), golden cross signal, dividend yield 2.68%, and news sentiment 0.199; cyber-intel exposure benefits from rising government IT spending.",
+      "drivers": [
+        "1M momentum +6.18%",
+        "low P/E 13.65",
+        "golden cross signal",
+        "dividend yield 2.68%"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 6,
+      "ticker": "SAIC",
+      "signal": "buy",
+      "confidence": 0.7,
+      "rationale": "YTD +48.57%, P/E 17.3, appointed Jeffrey Little to lead Army/Navy business strengthening customer relationships; 1D +2.52%, news sentiment 0.075 [saic.gcs-web.com](https://saic.gcs-web.com/news-releases/news-release-details/saic-appoints-jeffrey-little-lead-its-army-and-navy-business).",
+      "drivers": [
+        "YTD +48.57%",
+        "new Army/Navy leadership",
+        "low P/E 17.3",
+        "defence IT demand"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 7,
+      "ticker": "GD",
+      "signal": "buy",
+      "confidence": 0.68,
+      "rationale": "1D +2.48%, 1W +3.22%, YTD +6.81%, P/E 21.2, analyst buy, positive news sentiment 0.282, and strong backlog from submarines and combat vehicles.",
+      "drivers": [
+        "1D momentum +2.48%",
+        "positive sentiment 0.282",
+        "analyst buy",
+        "submarine/vehicle backlog"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 8,
+      "ticker": "TXT",
+      "signal": "buy",
+      "confidence": 0.65,
+      "rationale": "1M +3.55%, P/E 14.55 (value), analyst buy, special-mission aircraft demand supports growth; 1D -0.47% but short-term pullback offers entry.",
+      "drivers": [
+        "1M momentum +3.55%",
+        "low P/E 14.55",
+        "analyst buy",
+        "special-mission aircraft demand"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 9,
+      "ticker": "LMT",
+      "signal": "buy",
+      "confidence": 0.63,
+      "rationale": "YTD +22.74%, P/E 21.28, low beta 0.081, dividend yield 2.4%, analyst buy, positive news sentiment 0.222; prime defence contractor with stable cash flows.",
+      "drivers": [
+        "YTD +22.74%",
+        "low beta 0.081",
+        "dividend yield 2.4%",
+        "analyst buy"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    },
+    {
+      "rank": 10,
+      "ticker": "RTX",
+      "signal": "buy",
+      "confidence": 0.6,
+      "rationale": "Awarded Next Generation Nuclear Cruise Missile work for Navy, analyst buy (score 1.96), positive news sentiment 0.132, P/E 31.9 but strong backlog; 1D +0.44%.",
+      "drivers": [
+        "nuclear cruise missile contract",
+        "analyst buy",
+        "positive sentiment 0.132",
+        "defence backlog"
+      ],
+      "pre_momentum_label": "buy",
+      "post_momentum_label": "buy",
+      "momentum_label": null,
+      "momentum_score": null
+    }
+  ],
+  "momentum_picks": [],
+  "previous_picks": [
     {
       "rank": 1,
       "ticker": "HEI",
@@ -172,179 +345,6 @@ window.SIGNALS_DATA = {
         "deeply discounted after 70% slump",
         "key ammunition component supplier",
         "potential defense spending boost"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    }
-  ],
-  "momentum_picks": [],
-  "previous_picks": [
-    {
-      "rank": 1,
-      "ticker": "SAIC",
-      "signal": "strong_buy",
-      "confidence": 0.85,
-      "rationale": "SAIC has strong momentum (+42.44% YTD, +4.04% 1M), a low P/E of 16.6, and positive news sentiment of 0.177, with a recent leadership appointment to drive Army and Navy growth [saic.gcs-web.com](https://saic.gcs-web.com/news-releases/news-release-details/saic-appoints-jeffrey-little-lead-its-army-and-navy-business).",
-      "drivers": [
-        "+42.44% YTD",
-        "P/E 16.6",
-        "news sentiment 0.177",
-        "leadership catalyst"
-      ],
-      "pre_momentum_label": "strong_buy",
-      "post_momentum_label": "strong_buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 2,
-      "ticker": "LMT",
-      "signal": "buy",
-      "confidence": 0.8,
-      "rationale": "Lockheed Martin has a record $292B backlog driven by missile defense, a P/E of 20.08, and a 2.55% dividend yield, though recent price weakness (-5.12% 1W) and F-35 delivery risks temper near-term upside [marketbeat.com](https://www.marketbeat.com/articles/lockheed-martins-record-292-billion-backlog-comes-with-a-delivery-test/).",
-      "drivers": [
-        "$292B backlog",
-        "P/E 20.08",
-        "dividend 2.55%",
-        "missile defense growth"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 3,
-      "ticker": "BAH",
-      "signal": "buy",
-      "confidence": 0.75,
-      "rationale": "Booz Allen Hamilton shows strong 1M momentum (+8.71%), a low P/E of 12.58, and a 2.91% dividend yield, with analyst sentiment suggesting 8% undervaluation as an AI growth story builds.",
-      "drivers": [
-        "+8.71% 1M",
-        "P/E 12.58",
-        "dividend 2.91%",
-        "AI growth narrative"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 4,
-      "ticker": "HEI",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "HEICO has strong 1M momentum (+8.21%) and a beta of 1.089, but a high P/E of 53.8 and negative news sentiment (-0.035) warrant caution; still attractive for its niche in aerospace components.",
-      "drivers": [
-        "+8.21% 1M",
-        "beta 1.089",
-        "niche aerospace",
-        "positive momentum"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 5,
-      "ticker": "TXT",
-      "signal": "buy",
-      "confidence": 0.7,
-      "rationale": "Textron has a low P/E of 14.32, positive 1M momentum (+3.03%), and a recent $1.2B industrial divestiture to focus on core aerospace, though news sentiment is slightly negative (-0.104).",
-      "drivers": [
-        "P/E 14.32",
-        "+3.03% 1M",
-        "divestiture catalyst",
-        "defense exposure"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 6,
-      "ticker": "RTX",
-      "signal": "buy",
-      "confidence": 0.65,
-      "rationale": "RTX has a moderate P/E of 30.92, positive news sentiment of 0.301, and a new propeller MRO facility in India to support growth, but YTD returns are modest (+3.05%) and 1W performance is weak (-3.87%).",
-      "drivers": [
-        "news sentiment 0.301",
-        "India MRO expansion",
-        "defense backlog",
-        "moderate valuation"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 7,
-      "ticker": "HII",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "Huntington Ingalls has a low P/E of 15.1, a 2.01% dividend yield, and positive 1M momentum (+2.33%), but YTD is down -18.87% and short interest is elevated at 4.78%, indicating some risk.",
-      "drivers": [
-        "P/E 15.1",
-        "dividend 2.01%",
-        "+2.33% 1M",
-        "Pentagon contract exposure"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 8,
-      "ticker": "LHX",
-      "signal": "buy",
-      "confidence": 0.6,
-      "rationale": "L3Harris has a P/E of 23.27, positive 1M momentum (+0.95%), and a 'Moderate Buy' consensus with a $340.93 price target, but YTD is down -16.91% and 1W performance is weak (-8.25%).",
-      "drivers": [
-        "P/E 23.27",
-        "+0.95% 1M",
-        "analyst price target $340.93",
-        "defense diversification"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 9,
-      "ticker": "OLN",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "Olin has a high dividend yield of 5.27%, positive 1M momentum (+1.74%), and a low market cap of $1.73B, but a negative P/E, high short interest of 14.08%, and negative news sentiment (-0.043) make it a high-risk pick.",
-      "drivers": [
-        "dividend 5.27%",
-        "+1.74% 1M",
-        "low market cap",
-        "high short interest"
-      ],
-      "pre_momentum_label": "buy",
-      "post_momentum_label": "buy",
-      "momentum_label": null,
-      "momentum_score": null
-    },
-    {
-      "rank": 10,
-      "ticker": "TDG",
-      "signal": "buy",
-      "confidence": 0.5,
-      "rationale": "TransDigm has a P/E of 31.57, positive news sentiment of 0.127, and is noted as a space stock to watch, but YTD is down -17.47% and 1W performance is weak (-7.89%), limiting near-term appeal.",
-      "drivers": [
-        "P/E 31.57",
-        "news sentiment 0.127",
-        "space exposure",
-        "aerospace aftermarket"
       ],
       "pre_momentum_label": "buy",
       "post_momentum_label": "buy",
