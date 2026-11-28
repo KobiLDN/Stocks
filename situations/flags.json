@@ -856,5 +856,49 @@
 "p_up": 0.6,
 "expected_move": 3.5,
 "lean": "up"
+},
+{
+"id": "NBIS:regulatory",
+"date": "2026-11-28",
+"ticker": "NBIS",
+"type": "regulatory",
+"price_usd": 89.46,
+"p_big": 0.5,
+"p_up": 0.3,
+"expected_move": -1.5,
+"lean": "down"
+},
+{
+"id": "TRGP:takeover",
+"date": "2026-11-28",
+"ticker": "TRGP",
+"type": "takeover",
+"price_usd": 280.55,
+"p_big": 0.7,
+"p_up": 0.7,
+"expected_move": 4.5,
+"lean": "up"
+},
+{
+"id": "UBER:takeover",
+"date": "2026-11-28",
+"ticker": "UBER",
+"type": "takeover",
+"price_usd": 66.63,
+"p_big": 0.2,
+"p_up": 0.6,
+"expected_move": -1.0,
+"lean": "up"
+},
+{
+"id": "INTC:regulatory",
+"date": "2026-11-28",
+"ticker": "INTC",
+"type": "regulatory",
+"price_usd": 57.4,
+"p_big": 0.8,
+"p_up": 0.5,
+"expected_move": 0.5,
+"lean": "either way"
 }
 ]

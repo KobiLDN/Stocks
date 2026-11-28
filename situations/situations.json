@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28 00:11",
+ "updated": "2026-11-28 03:37",
  "model": "deepseek/deepseek-v4-flash",
  "big_move_pct": 10.0,
  "type_labels": {
@@ -15,7 +15,7 @@
   "activist": "Activist investor",
   "other": "Other"
  },
- "count": 43,
+ "count": 47,
  "situations": [
   {
    "ticker": "WULF",
@@ -51,65 +51,65 @@
    "price_at_flag": 11.56
   },
   {
-   "ticker": "BEAM",
+   "ticker": "CORZ",
    "type": "regulatory",
-   "source": "Beam Therapeutics Targets Sickle Cell Filing as Early as December, Advances Gene-Editing Pipeline",
-   "title": "Beam Therapeutics Sickle Cell Filing Decision",
-   "summary": "Beam targets filing for its sickle cell disease therapy with the FDA as early as December 2026. The outcome will determine if the therapy enters the regulatory review process, a key catalyst for the stock.",
-   "key_date": "2026-12-31",
+   "source": "CoreWeave’s Default Odds Hit a Record. Core Scientific Has a Big Problem",
+   "title": "CoreWeave default risk threatens Core Scientific revenue",
+   "summary": "CoreWeave's credit default swap implies a 68% chance of default within five years. Core Scientific gets 84% of its revenue from CoreWeave, which leases 590 MW. A CoreWeave default or restructuring would devastate CORZ's cash flow and ability to service its $4.41B debt.",
+   "key_date": null,
    "outcomes": [
     {
-     "label": "Filing submitted in December",
+     "label": "CoreWeave remains current, AMD leases ramp",
      "probability": 0.6,
-     "move_pct": 25.0
+     "move_pct": 10.0
     },
     {
-     "label": "Filing delayed beyond December",
-     "probability": 0.3,
-     "move_pct": -15.0
+     "label": "CoreWeave defaults or restructures",
+     "probability": 0.25,
+     "move_pct": -50.0
     },
     {
-     "label": "Filing abandoned or negative data",
-     "probability": 0.1,
-     "move_pct": -40.0
+     "label": "CoreWeave struggles but avoids default, AMD delayed",
+     "probability": 0.15,
+     "move_pct": -20.0
     }
    ],
    "p_big": 1.0,
    "p_up": 0.6,
-   "expected_move": 6.5,
+   "expected_move": -9.5,
    "lean": "up",
-   "id": "BEAM:regulatory",
+   "id": "CORZ:regulatory",
    "first_flagged": "2026-11-27",
    "last_seen": "2026-11-28",
-   "price_at_flag": 23.48
+   "price_at_flag": 11.1
   },
   {
    "ticker": "IMB.L",
    "type": "takeover",
-   "source": "Altria’s Potential Acquisition Of Imperial Brands Is ‘No Doubt Accretive,’ Says Stifel",
-   "title": "Altria Potential Acquisition of Imperial Brands",
-   "summary": "Altria is reportedly considering an acquisition of Imperial Brands, with analysts calling it accretive. The deal is unresolved and could significantly impact Imperial Brands' share price.",
+   "source": null,
+   "title": "Altria Explores $30 Billion Acquisition of Imperial Brands",
+   "summary": "Altria is reportedly exploring an acquisition of Imperial Brands. Stock jumped 13% on news; deal terms still uncertain.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Acquisition announced",
+     "label": "Acquisition at premium ~$50",
+     "probability": 0.5,
+     "move_pct": 15.0
+    },
+    {
+     "label": "No deal announced",
      "probability": 0.4,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Counterbid or higher offer",
+     "probability": 0.1,
      "move_pct": 20.0
-    },
-    {
-     "label": "Takeover talks confirmed, no deal yet",
-     "probability": 0.3,
-     "move_pct": 10.0
-    },
-    {
-     "label": "No acquisition, talks end",
-     "probability": 0.3,
-     "move_pct": -15.0
     }
    ],
    "p_big": 1.0,
-   "p_up": 0.7,
-   "expected_move": 6.5,
+   "p_up": 0.6,
+   "expected_move": 5.5,
    "lean": "up",
    "id": "IMB.L:takeover",
    "first_flagged": "2026-11-26",
@@ -150,37 +150,37 @@
    "price_at_flag": 1.73
   },
   {
-   "ticker": "CORZ",
+   "ticker": "BEAM",
    "type": "regulatory",
-   "source": "CoreWeave’s Default Odds Hit a Record. Core Scientific Has a Big Problem",
-   "title": "Core Scientific faces risk from CoreWeave default odds",
-   "summary": "CoreWeave's default odds hit a record, posing a major problem for Core Scientific as a key customer. The unresolved risk is whether CoreWeave will default on contracts, impacting Core Scientific's revenue and stock.",
-   "key_date": null,
+   "source": null,
+   "title": "Beam Therapeutics Targets Sickle Cell Filing in December",
+   "summary": "Beam plans to file for regulatory approval of gene-editing therapy for sickle cell disease as early as December; filing is a key catalyst.",
+   "key_date": "2026-12-01",
    "outcomes": [
     {
-     "label": "CoreWeave avoids default, contracts hold",
-     "probability": 0.4,
+     "label": "Filing on schedule",
+     "probability": 0.6,
      "move_pct": 15.0
     },
     {
-     "label": "CoreWeave restructures or delays payments",
-     "probability": 0.4,
+     "label": "Filing delayed",
+     "probability": 0.3,
      "move_pct": -10.0
     },
     {
-     "label": "CoreWeave defaults, contracts break",
-     "probability": 0.2,
-     "move_pct": -30.0
+     "label": "Negative data or setback",
+     "probability": 0.1,
+     "move_pct": -25.0
     }
    ],
    "p_big": 1.0,
-   "p_up": 0.4,
-   "expected_move": -4.0,
-   "lean": "down",
-   "id": "CORZ:regulatory",
+   "p_up": 0.6,
+   "expected_move": 3.5,
+   "lean": "up",
+   "id": "BEAM:regulatory",
    "first_flagged": "2026-11-27",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 11.1
+   "last_seen": "2026-11-28",
+   "price_at_flag": 23.48
   },
   {
    "ticker": "SNDK",
@@ -376,6 +376,39 @@
    "price_at_flag": 92.44
   },
   {
+   "ticker": "INTC",
+   "type": "regulatory",
+   "source": "Intel Stocks Climb 2.86% as Court Filings Detail Washington's 10% Stake Push",
+   "title": "Washington's 10% stake push in Intel",
+   "summary": "Court filings detail that the U.S. government is pushing for a 10% stake in Intel. This unresolved regulatory intervention could reshape Intel's strategy and valuation.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Stake push fails, Intel remains independent",
+     "probability": 0.5,
+     "move_pct": -10.0
+    },
+    {
+     "label": "Government takes stake, funding secured",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Partial deal, conditions attached",
+     "probability": 0.2,
+     "move_pct": 5.0
+    }
+   ],
+   "p_big": 0.8,
+   "p_up": 0.5,
+   "expected_move": 0.5,
+   "lean": "either way",
+   "id": "INTC:regulatory",
+   "first_flagged": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_at_flag": 57.4
+  },
+  {
    "ticker": "TSM",
    "type": "policy",
    "source": "Trump heads to Arizona next week for a high-stakes expansion of TSMC's computer chip factories",
@@ -442,37 +475,37 @@
    "price_at_flag": 10.99
   },
   {
-   "ticker": "ASML",
-   "type": "regulatory",
-   "source": "Netherlands will ask Washington not to enforce MATCH Act, minister says",
-   "title": "US decision on MATCH Act enforcement for ASML",
-   "summary": "Netherlands asks US to waive MATCH Act enforcement on ASML exports to China; decision could impact ASML's China revenue significantly.",
+   "ticker": "TRGP",
+   "type": "takeover",
+   "source": "Targa Resources (TRGP) Stock Could Be 47% Undervalued On Permian Deal Talks",
+   "title": "Potential Acquisition of Kinetik (KNTK)",
+   "summary": "Targa Resources is reportedly in talks to acquire Kinetik. A deal or failure could significantly impact TRGP stock.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "US grants waiver",
+     "label": "Favorable deal announced",
      "probability": 0.4,
-     "move_pct": 10.0
+     "move_pct": 15.0
     },
     {
-     "label": "US enforces strictly",
+     "label": "Less favorable deal announced",
      "probability": 0.3,
-     "move_pct": -15.0
+     "move_pct": 5.0
     },
     {
-     "label": "Partial restrictions or delay",
+     "label": "Deal falls through",
      "probability": 0.3,
-     "move_pct": -5.0
+     "move_pct": -10.0
     }
    ],
    "p_big": 0.7,
-   "p_up": 0.4,
-   "expected_move": -2.0,
-   "lean": "down",
-   "id": "ASML:regulatory",
-   "first_flagged": "2026-11-26",
-   "last_seen": "2026-11-27",
-   "price_at_flag": 1303.08
+   "p_up": 0.7,
+   "expected_move": 4.5,
+   "lean": "up",
+   "id": "TRGP:takeover",
+   "first_flagged": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_at_flag": 280.55
   },
   {
    "ticker": "TSLA",
@@ -609,25 +642,25 @@
   {
    "ticker": "CRDO",
    "type": "results",
-   "source": "Credo Technology Ahead of Q2 Earnings: How to Approach the Stock Now?",
-   "title": "Credo Technology Q2 Earnings Upcoming",
-   "summary": "Credo Technology is set to report Q2 earnings amid uncertainty after a Marvell settlement; results could swing the stock.",
+   "source": null,
+   "title": "Credo Technology Q2 FY2027 Earnings Report",
+   "summary": "Credo Technology reports Q2 earnings soon. Stock down 33% in a month; earnings could trigger double-digit move.",
    "key_date": null,
    "outcomes": [
     {
-     "label": "Earnings in line",
+     "label": "In-line results",
      "probability": 0.4,
      "move_pct": 5.0
     },
     {
-     "label": "Earnings beat expectations",
+     "label": "Beat and raise guidance",
      "probability": 0.3,
-     "move_pct": 20.0
+     "move_pct": 25.0
     },
     {
-     "label": "Earnings miss",
+     "label": "Miss and lower guidance",
      "probability": 0.3,
-     "move_pct": -15.0
+     "move_pct": -20.0
     }
    ],
    "p_big": 0.6,
@@ -636,7 +669,7 @@
    "lean": "up",
    "id": "CRDO:results",
    "first_flagged": "2026-11-27",
-   "last_seen": "2026-11-27",
+   "last_seen": "2026-11-28",
    "price_at_flag": 110.79
   },
   {
@@ -770,6 +803,39 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-26",
    "price_at_flag": 41.15
+  },
+  {
+   "ticker": "ASML",
+   "type": "regulatory",
+   "source": null,
+   "title": "Dutch Government Pushes Back on US Export Curbs on ASML",
+   "summary": "Dutch lawmakers resist tighter US export controls on ASML's China sales. Policy decision could impact revenue outlook.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Status quo maintained",
+     "probability": 0.4,
+     "move_pct": -2.0
+    },
+    {
+     "label": "Export restrictions eased",
+     "probability": 0.3,
+     "move_pct": 15.0
+    },
+    {
+     "label": "Further restrictions imposed",
+     "probability": 0.3,
+     "move_pct": -15.0
+    }
+   ],
+   "p_big": 0.6,
+   "p_up": 0.3,
+   "expected_move": -0.8,
+   "lean": "down",
+   "id": "ASML:regulatory",
+   "first_flagged": "2026-11-26",
+   "last_seen": "2026-11-28",
+   "price_at_flag": 1303.08
   },
   {
    "ticker": "NBIS",
@@ -935,6 +1001,39 @@
    "first_flagged": "2026-11-27",
    "last_seen": "2026-11-27",
    "price_at_flag": 84.19
+  },
+  {
+   "ticker": "NBIS",
+   "type": "regulatory",
+   "source": "Nvidia, CoreWeave Face New U.S. Restrictions on China AI Chip Access",
+   "title": "U.S. AI Chip Export Restrictions on Neocloud",
+   "summary": "New U.S. restrictions on AI chip exports to China are pending, which could severely limit Nebius' GPU supply and affect its business. Decision timing unknown.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Moderate restrictions as feared",
+     "probability": 0.5,
+     "move_pct": -5.0
+    },
+    {
+     "label": "Less severe restrictions",
+     "probability": 0.3,
+     "move_pct": 20.0
+    },
+    {
+     "label": "More severe restrictions",
+     "probability": 0.2,
+     "move_pct": -25.0
+    }
+   ],
+   "p_big": 0.5,
+   "p_up": 0.3,
+   "expected_move": -1.5,
+   "lean": "down",
+   "id": "NBIS:regulatory",
+   "first_flagged": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_at_flag": 89.46
   },
   {
    "ticker": "D",
@@ -1227,6 +1326,39 @@
    "first_flagged": "2026-11-25",
    "last_seen": "2026-11-26",
    "price_at_flag": 66.15
+  },
+  {
+   "ticker": "UBER",
+   "type": "takeover",
+   "source": "Uber takeover bid for Delivery Hero clears key shareholder hurdle",
+   "title": "Delivery Hero Acquisition Progress",
+   "summary": "Uber's takeover bid for Delivery Hero cleared a key shareholder hurdle but still needs regulatory approval. Outcome pending.",
+   "key_date": null,
+   "outcomes": [
+    {
+     "label": "Deal completes as expected",
+     "probability": 0.6,
+     "move_pct": 5.0
+    },
+    {
+     "label": "Deal blocked by regulators",
+     "probability": 0.2,
+     "move_pct": -15.0
+    },
+    {
+     "label": "Deal renegotiated downward",
+     "probability": 0.2,
+     "move_pct": -5.0
+    }
+   ],
+   "p_big": 0.2,
+   "p_up": 0.6,
+   "expected_move": -1.0,
+   "lean": "up",
+   "id": "UBER:takeover",
+   "first_flagged": "2026-11-28",
+   "last_seen": "2026-11-28",
+   "price_at_flag": 66.63
   },
   {
    "ticker": "TSM",
