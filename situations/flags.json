@@ -845,5 +845,16 @@
 "p_up": 0.4,
 "expected_move": -2.4,
 "lean": "down"
+},
+{
+"id": "SNDK:other",
+"date": "2026-11-28",
+"ticker": "SNDK",
+"type": "other",
+"price_usd": 85.36,
+"p_big": 1.0,
+"p_up": 0.6,
+"expected_move": 3.5,
+"lean": "up"
 }
 ]
